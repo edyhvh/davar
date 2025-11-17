@@ -1,0 +1,466 @@
+{
+  "schema_version": "2.0.0",
+  "language": {
+    "code": "es",
+    "name": "Spanish",
+    "variant": "neutral"
+  },
+  "style": {
+    "name": "Academic Spanish Transliteration",
+    "name_native": "Transliteración Académica del Hebreo",
+    "description": "Sistema de transliteración académica basado en estándares SBL y Brill para pronunciar palabras hebreas y arameas bíblicas. Sílaba tónica en MAYÚSCULAS.",
+    "system": "sbl_general_purpose",
+    "strict": false,
+    "dagesh": true,
+    "qamatz_qatan": false,
+    "sheva": "vocal",
+    "stress_mark": "uppercase"
+  },
+  "rules": {
+    "consonants": {
+      "א": "",
+      "ב": "v",
+      "ג": "g",
+      "ד": "d",
+      "ה": "h",
+      "ו": "v",
+      "ז": "s",
+      "ח": "j",
+      "ט": "t",
+      "י": "y",
+      "כ": "c",
+      "ל": "l",
+      "מ": "m",
+      "נ": "n",
+      "ס": "s",
+      "ע": "",
+      "פ": "f",
+      "צ": "ts",
+      "ק": "k",
+      "ר": "r",
+      "ש": "sh",
+      "ת": "t",
+      "ך": "kh",
+      "ם": "m",
+      "ן": "n",
+      "ף": "f",
+      "ץ": "ts"
+    },
+    "vowels_nikud": {
+      "ָ": "a",
+      "ַ": "a",
+      "ֵ": "e",
+      "ֶ": "e",
+      "ִ": "i",
+      "ֹ": "o",
+      "ֻ": "u",
+      "וּ": "u",
+      "ְ": "e"
+    },
+    "composite": {
+      "וֹ": "o",
+      "וּ": "u",
+      "יִ": "i",
+      "ֵי": "ei",
+      "ֶי": "ei",
+      "ָי": "ai",
+      "ַי": "ai",
+      "ִי": "i",
+      "ֹי": "oi",
+      "ֻי": "ui"
+    },
+    "post_processing": [
+      "apply_dagesh_rules",
+      "normalize_composites",
+      "remove_duplicate_consonants",
+      "lowercase_rest"
+    ]
+  },
+  "stress": {
+    "default": "penultimate",
+    "exceptions": {}
+  },
+  "workflow": {
+    "use_strongs_reference": true,
+    "pron_parsing": {
+      "enabled": true,
+      "syllable_separator": "-",
+      "stress_marker": "'"
+    },
+    "xlit_reference": {
+      "enabled": true
+    },
+    "validation_mode": "strict",
+    "fallback_behavior": "use_generated"
+  },
+  "transliteration_systems": {
+    "sbl_general_purpose": {
+      "name": "SBL General Purpose",
+      "description": "Simplified academic transliteration following SBL guidelines",
+      "source": "https://github.com/charlesLoder/hebrew-transliteration",
+      "features": {
+        "vocal_sheva": "e",
+        "qamats_qatan": false,
+        "dagesh_strong": true,
+        "long_vowels": true
+      }
+    },
+    "brill_simplified": {
+      "name": "Brill Simplified",
+      "description": "Simplified version of Brill academic transliteration",
+      "source": "https://github.com/charlesLoder/hebrew-transliteration",
+      "features": {
+        "vocal_sheva": "ᵉ",
+        "qamats_qatan": true,
+        "dagesh_strong": true,
+        "long_vowels": true,
+        "special_chars": true
+      }
+    }
+  },
+  "system_variations": {},
+  "examples": {
+    "H1": {
+      "hebrew": "אָב",
+      "translit": "av",
+      "stress_syllable": 1,
+      "guide": "AV",
+      "guide_full": {
+        "reference": "padre",
+        "stress_note": "acento en AV",
+        "phonetic_notes": [
+          "א omitida (aleph muda)"
+        ]
+      }
+    },
+    "H2": {
+      "hebrew": "אַב",
+      "translit": "ab",
+      "stress_syllable": 1,
+      "guide": "AB",
+      "guide_full": {
+        "reference": "ab",
+        "stress_note": "acento en AB",
+        "phonetic_notes": [
+          "אַב arameo"
+        ]
+      }
+    },
+    "H3": {
+      "hebrew": "גַּם",
+      "translit": "gam",
+      "stress_syllable": 1,
+      "guide": "GAM",
+      "guide_full": {
+        "reference": "también",
+        "stress_note": "acento en GAM",
+        "phonetic_notes": [
+          "ג suena como 'g'"
+        ]
+      }
+    },
+    "H4": {
+      "hebrew": "דָּם",
+      "translit": "dam",
+      "stress_syllable": 1,
+      "guide": "DAM",
+      "guide_full": {
+        "reference": "sangre",
+        "stress_note": "acento en DAM",
+        "phonetic_notes": [
+          "ד suena como 'd'"
+        ]
+      }
+    },
+    "H5": {
+      "hebrew": "הוּא",
+      "translit": "hu",
+      "stress_syllable": 2,
+      "guide": "hu",
+      "guide_full": {
+        "reference": "él",
+        "stress_note": "acento en último",
+        "phonetic_notes": [
+          "ה suena como 'h'"
+        ]
+      }
+    },
+    "H6": {
+      "hebrew": "וְ",
+      "translit": "ve",
+      "stress_syllable": 1,
+      "guide": "VE",
+      "guide_full": {
+        "reference": "y",
+        "stress_note": "conjunción",
+        "phonetic_notes": [
+          "Notas fonéticas para H6"
+        ]
+      }
+    },
+    "H7": {
+      "hebrew": "זֶה",
+      "translit": "ze",
+      "stress_syllable": 1,
+      "guide": "ZE",
+      "guide_full": {
+        "reference": "este",
+        "stress_note": "acento en ZE",
+        "phonetic_notes": [
+          "ז suena como 's' en español"
+        ]
+      }
+    },
+    "H8": {
+      "hebrew": "חַי",
+      "translit": "khai",
+      "stress_syllable": 1,
+      "guide": "KHAI",
+      "guide_full": {
+        "reference": "vivo",
+        "stress_note": "acento en KHAI",
+        "phonetic_notes": [
+          "ח suena como 'kh'"
+        ]
+      }
+    },
+    "H9": {
+      "hebrew": "טוֹב",
+      "translit": "tov",
+      "stress_syllable": 1,
+      "guide": "TOV",
+      "guide_full": {
+        "reference": "bueno",
+        "stress_note": "acento en TOV",
+        "phonetic_notes": [
+          "ט suena como 't'"
+        ]
+      }
+    },
+    "H10": {
+      "hebrew": "יָד",
+      "translit": "yad",
+      "stress_syllable": 1,
+      "guide": "YAD",
+      "guide_full": {
+        "reference": "mano",
+        "stress_note": "acento en YAD",
+        "phonetic_notes": [
+          "Notas fonéticas para H10"
+        ]
+      }
+    },
+    "H11": {
+      "hebrew": "כֹּה",
+      "translit": "kho",
+      "stress_syllable": 1,
+      "guide": "KHO",
+      "guide_full": {
+        "reference": "así",
+        "stress_note": "acento en KHO",
+        "phonetic_notes": [
+          "כּ suena como 'k' (kaf con dagesh), כ sin dagesh suena como 'c'"
+        ]
+      }
+    },
+    "H12": {
+      "hebrew": "לֵב",
+      "translit": "lev",
+      "stress_syllable": 1,
+      "guide": "LEV",
+      "guide_full": {
+        "reference": "corazón",
+        "stress_note": "acento en LEV",
+        "phonetic_notes": [
+          "Notas fonéticas para H12"
+        ]
+      }
+    },
+    "H13": {
+      "hebrew": "מַיִם",
+      "translit": "mayim",
+      "stress_syllable": 1,
+      "guide": "MA-yim",
+      "guide_full": {
+        "reference": "agua",
+        "stress_note": "acento en MA",
+        "phonetic_notes": [
+          "מַיִם con diptongo"
+        ]
+      }
+    },
+    "H14": {
+      "hebrew": "נַחַל",
+      "translit": "nakhal",
+      "stress_syllable": 2,
+      "guide": "na-KHAL",
+      "guide_full": {
+        "reference": "río",
+        "stress_note": "acento en KHAL",
+        "phonetic_notes": [
+          "נַחַל con acento en segunda sílaba"
+        ]
+      }
+    },
+    "H15": {
+      "hebrew": "סֵפֶר",
+      "translit": "sefer",
+      "stress_syllable": 1,
+      "guide": "SE-fer",
+      "guide_full": {
+        "reference": "libro",
+        "stress_note": "acento en SE",
+        "phonetic_notes": [
+          "Notas fonéticas para H15"
+        ]
+      }
+    },
+    "H16": {
+      "hebrew": "עַיִן",
+      "translit": "ayin",
+      "stress_syllable": 2,
+      "guide": "a-YIN",
+      "guide_full": {
+        "reference": "ojo",
+        "stress_note": "acento en YIN",
+        "phonetic_notes": [
+          "עַיִן omitida (ayin muda)"
+        ]
+      }
+    },
+    "H17": {
+      "hebrew": "פֶּה",
+      "translit": "pe",
+      "stress_syllable": 1,
+      "guide": "PE",
+      "guide_full": {
+        "reference": "boca",
+        "stress_note": "acento en PE",
+        "phonetic_notes": [
+          "פּ suena como 'p' (pe con dagesh)"
+        ]
+      }
+    },
+    "H18": {
+      "hebrew": "צַדִּיק",
+      "translit": "tsadik",
+      "stress_syllable": 1,
+      "guide": "TSA-dik",
+      "guide_full": {
+        "reference": "justo",
+        "stress_note": "acento en TSA",
+        "phonetic_notes": [
+          "צַדִּיק con 'ts'"
+        ]
+      }
+    },
+    "H19": {
+      "hebrew": "קֹדֶשׁ",
+      "translit": "qodesh",
+      "stress_syllable": 1,
+      "guide": "QO-desh",
+      "guide_full": {
+        "reference": "santo",
+        "stress_note": "acento en QO",
+        "phonetic_notes": [
+          "Notas fonéticas para H19"
+        ]
+      }
+    },
+    "H20": {
+      "hebrew": "רֹאשׁ",
+      "translit": "rosh",
+      "stress_syllable": 1,
+      "guide": "ROSH",
+      "guide_full": {
+        "reference": "cabeza",
+        "stress_note": "acento en ROSH",
+        "phonetic_notes": [
+          "רֹאשׁ con 'sh'"
+        ]
+      }
+    },
+    "H21": {
+      "hebrew": "שָׁלוֹם",
+      "translit": "shalom",
+      "stress_syllable": 2,
+      "guide": "sha-LOM",
+      "guide_full": {
+        "reference": "paz",
+        "stress_note": "acento en LOM",
+        "phonetic_notes": [
+          "שׁ suena como 'sh'"
+        ]
+      }
+    },
+    "H22": {
+      "hebrew": "תּוֹרָה",
+      "translit": "tora",
+      "stress_syllable": 2,
+      "guide": "to-RA",
+      "guide_full": {
+        "reference": "ley",
+        "stress_note": "acento en RA",
+        "phonetic_notes": [
+          "תּ suena como 't'"
+        ]
+      }
+    },
+    "H23": {
+      "hebrew": "מֶלֶךְ",
+      "translit": "melekh",
+      "stress_syllable": 1,
+      "guide": "ME-lekh",
+      "guide_full": {
+        "reference": "rey",
+        "stress_note": "acento en ME",
+        "phonetic_notes": [
+          "ך suena como 'kh' (kaf sofit)"
+        ]
+      }
+    },
+    "H24": {
+      "hebrew": "סוֹף",
+      "translit": "sof",
+      "stress_syllable": 1,
+      "guide": "SOF",
+      "guide_full": {
+        "reference": "fin",
+        "stress_note": "acento en SOF",
+        "phonetic_notes": [
+          "ף suena como 'f' (pe sofit)"
+        ]
+      }
+    }
+  },
+  "llm_data": {
+    "language_adaptation": {
+      "description": "This is the UNIVERSAL BASE SCHEMA. To create a language-specific schema:",
+      "steps": [
+        "1. Copy this file to 'schemas/{LANGUAGE_CODE}.jsonc'",
+        "2. Replace all {LANGUAGE_*} placeholders with actual values for the target language",
+        "3. Adapt consonant/vowel mappings to target language phonetics",
+        "4. Generate native name and description using LLM",
+        "5. Test with Hebrew words and verify pronunciation accuracy",
+        "6. Validate that all 22+ examples work correctly"
+      ],
+      "placeholders_to_replace": [
+        "{LANGUAGE_CODE}",
+        "{LANGUAGE_NAME}",
+        "{LANGUAGE_VARIANT}",
+        "{LLM_GENERATED_NATIVE_NAME}",
+        "{LLM_GENERATED_DESCRIPTION}",
+        "{LANGUAGE_EXAMPLE_*}",
+        "{LANGUAGE_VOWEL_SOUND}"
+      ]
+    }
+  },
+  "validation": {
+    "status": "generated_from_base",
+    "reviewer": "es.py",
+    "reviewed_at": "2025-11-14",
+    "based_on": "SCHEMA.jsonc with SBL General Purpose system",
+    "purpose": "Spanish language-specific academic transliteration schema",
+    "usage": "Academic Hebrew transliteration for Spanish speakers"
+  }
+}
