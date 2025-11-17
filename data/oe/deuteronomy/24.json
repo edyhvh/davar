@@ -1,0 +1,2467 @@
+[
+  {
+    "chapter": 24,
+    "verse": 1,
+    "hebrew": "כִּֽי יִקַּ֥ח אִ֛ישׁ אִשָּׁ֖ה וּ/בְעָלָ֑/הּ וְ/הָיָ֞ה אִם לֹ֧א תִמְצָא חֵ֣ן בְּ/עֵינָ֗י/ו כִּי מָ֤צָא בָ/הּ֙ עֶרְוַ֣ת דָּבָ֔ר וְ/כָ֨תַב לָ֜/הּ סֵ֤פֶר כְּרִיתֻת֙ וְ/נָתַ֣ן בְּ/יָדָ֔/הּ וְ/שִׁלְּחָ֖/הּ מִ/בֵּיתֽ/וֹ",
+    "hebrew_no_nikud": "כי יקח איש אשה ו/בעל/ה ו/היה אם לא תמצא חן ב/עיני/ו כי מצא ב/ה ערות דבר ו/כתב ל/ה ספר כריתת ו/נתן ב/יד/ה ו/שלח/ה מ/בית/ו",
+    "words": [
+      {
+        "text": "כִּֽי",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "יִקַּ֥ח",
+        "text_no_nikud": "יקח",
+        "lemma": "H3947",
+        "strong": "H3947",
+        "morph": "HVqi3ms"
+      },
+      {
+        "text": "אִ֛ישׁ",
+        "text_no_nikud": "איש",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "אִשָּׁ֖ה",
+        "text_no_nikud": "אשה",
+        "lemma": "H802",
+        "strong": "H802",
+        "morph": "HNcfsa"
+      },
+      {
+        "text": "וּ/בְעָלָ֑/הּ",
+        "text_no_nikud": "ו/בעל/ה",
+        "lemma": "Hc/H1166",
+        "strong": "Hc/H1166",
+        "morph": "HC/Vqq3ms/Sp3fs"
+      },
+      {
+        "text": "וְ/הָיָ֞ה",
+        "text_no_nikud": "ו/היה",
+        "lemma": "Hc/H1961",
+        "strong": "Hc/H1961",
+        "morph": "HC/Vqq3ms"
+      },
+      {
+        "text": "אִם",
+        "text_no_nikud": "אם",
+        "lemma": "H518",
+        "strong": "H518",
+        "morph": "HC"
+      },
+      {
+        "text": "לֹ֧א",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "תִמְצָא",
+        "text_no_nikud": "תמצא",
+        "lemma": "H4672",
+        "strong": "H4672",
+        "morph": "HVqi3fs"
+      },
+      {
+        "text": "חֵ֣ן",
+        "text_no_nikud": "חן",
+        "lemma": "H2580",
+        "strong": "H2580",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "בְּ/עֵינָ֗י/ו",
+        "text_no_nikud": "ב/עיני/ו",
+        "lemma": "Hb/H5869",
+        "strong": "Hb/H5869",
+        "morph": "HR/Ncbdc/Sp3ms"
+      },
+      {
+        "text": "כִּי",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "מָ֤צָא",
+        "text_no_nikud": "מצא",
+        "lemma": "H4672",
+        "strong": "H4672",
+        "morph": "HVqp3ms"
+      },
+      {
+        "text": "בָ/הּ֙",
+        "text_no_nikud": "ב/ה",
+        "lemma": "Hb",
+        "strong": "Hb",
+        "morph": "HR/Sp3fs"
+      },
+      {
+        "text": "עֶרְוַ֣ת",
+        "text_no_nikud": "ערות",
+        "lemma": "H6172",
+        "strong": "H6172",
+        "morph": "HNcfsc"
+      },
+      {
+        "text": "דָּבָ֔ר",
+        "text_no_nikud": "דבר",
+        "lemma": "H1697",
+        "strong": "H1697",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "וְ/כָ֨תַב",
+        "text_no_nikud": "ו/כתב",
+        "lemma": "Hc/H3789",
+        "strong": "Hc/H3789",
+        "morph": "HC/Vqq3ms"
+      },
+      {
+        "text": "לָ֜/הּ",
+        "text_no_nikud": "ל/ה",
+        "lemma": "Hl",
+        "strong": "Hl",
+        "morph": "HR/Sp3fs"
+      },
+      {
+        "text": "סֵ֤פֶר",
+        "text_no_nikud": "ספר",
+        "lemma": "H5612",
+        "strong": "H5612",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "כְּרִיתֻת֙",
+        "text_no_nikud": "כריתת",
+        "lemma": "H3748",
+        "strong": "H3748",
+        "morph": "HNcfsa"
+      },
+      {
+        "text": "וְ/נָתַ֣ן",
+        "text_no_nikud": "ו/נתן",
+        "lemma": "Hc/H5414",
+        "strong": "Hc/H5414",
+        "morph": "HC/Vqq3ms"
+      },
+      {
+        "text": "בְּ/יָדָ֔/הּ",
+        "text_no_nikud": "ב/יד/ה",
+        "lemma": "Hb/H3027",
+        "strong": "Hb/H3027",
+        "morph": "HR/Ncbsc/Sp3fs"
+      },
+      {
+        "text": "וְ/שִׁלְּחָ֖/הּ",
+        "text_no_nikud": "ו/שלח/ה",
+        "lemma": "Hc/H7971",
+        "strong": "Hc/H7971",
+        "morph": "HC/Vpq3ms/Sp3fs"
+      },
+      {
+        "text": "מִ/בֵּיתֽ/וֹ",
+        "text_no_nikud": "מ/בית/ו",
+        "lemma": "Hm/H1004",
+        "strong": "Hm/H1004",
+        "morph": "HR/Ncmsc/Sp3ms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 2,
+    "hebrew": "וְ/יָצְאָ֖ה מִ/בֵּית֑/וֹ וְ/הָלְכָ֖ה וְ/הָיְתָ֥ה לְ/אִישׁ אַחֵֽר",
+    "hebrew_no_nikud": "ו/יצאה מ/בית/ו ו/הלכה ו/היתה ל/איש אחר",
+    "words": [
+      {
+        "text": "וְ/יָצְאָ֖ה",
+        "text_no_nikud": "ו/יצאה",
+        "lemma": "Hc/H3318",
+        "strong": "Hc/H3318",
+        "morph": "HC/Vqq3fs"
+      },
+      {
+        "text": "מִ/בֵּית֑/וֹ",
+        "text_no_nikud": "מ/בית/ו",
+        "lemma": "Hm/H1004",
+        "strong": "Hm/H1004",
+        "morph": "HR/Ncmsc/Sp3ms"
+      },
+      {
+        "text": "וְ/הָלְכָ֖ה",
+        "text_no_nikud": "ו/הלכה",
+        "lemma": "Hc/H1980",
+        "strong": "Hc/H1980",
+        "morph": "HC/Vqq3fs"
+      },
+      {
+        "text": "וְ/הָיְתָ֥ה",
+        "text_no_nikud": "ו/היתה",
+        "lemma": "Hc/H1961",
+        "strong": "Hc/H1961",
+        "morph": "HC/Vqq3fs"
+      },
+      {
+        "text": "לְ/אִישׁ",
+        "text_no_nikud": "ל/איש",
+        "lemma": "Hl/H376",
+        "strong": "Hl/H376",
+        "morph": "HR/Ncmsa"
+      },
+      {
+        "text": "אַחֵֽר",
+        "text_no_nikud": "אחר",
+        "lemma": "H312",
+        "strong": "H312",
+        "morph": "HAamsa"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 3,
+    "hebrew": "וּ/שְׂנֵאָ/הּ֮ הָ/אִ֣ישׁ הָ/אַחֲרוֹן֒ וְ/כָ֨תַב לָ֜/הּ סֵ֤פֶר כְּרִיתֻת֙ וְ/נָתַ֣ן בְּ/יָדָ֔/הּ וְ/שִׁלְּחָ֖/הּ מִ/בֵּית֑/וֹ א֣וֹ כִ֤י יָמוּת֙ הָ/אִ֣ישׁ הָ/אַחֲר֔וֹן אֲשֶׁר לְקָחָ֥/הּ ל֖/וֹ לְ/אִשָּֽׁה",
+    "hebrew_no_nikud": "ו/שנא/ה ה/איש ה/אחרון ו/כתב ל/ה ספר כריתת ו/נתן ב/יד/ה ו/שלח/ה מ/בית/ו או כי ימות ה/איש ה/אחרון אשר לקח/ה ל/ו ל/אשה",
+    "words": [
+      {
+        "text": "וּ/שְׂנֵאָ/הּ֮",
+        "text_no_nikud": "ו/שנא/ה",
+        "lemma": "Hc/H8130",
+        "strong": "Hc/H8130",
+        "morph": "HC/Vqq3ms/Sp3fs"
+      },
+      {
+        "text": "הָ/אִ֣ישׁ",
+        "text_no_nikud": "ה/איש",
+        "lemma": "Hd/H376",
+        "strong": "Hd/H376",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "הָ/אַחֲרוֹן֒",
+        "text_no_nikud": "ה/אחרון",
+        "lemma": "Hd/H314",
+        "strong": "Hd/H314",
+        "morph": "HTd/Aamsa"
+      },
+      {
+        "text": "וְ/כָ֨תַב",
+        "text_no_nikud": "ו/כתב",
+        "lemma": "Hc/H3789",
+        "strong": "Hc/H3789",
+        "morph": "HC/Vqq3ms"
+      },
+      {
+        "text": "לָ֜/הּ",
+        "text_no_nikud": "ל/ה",
+        "lemma": "Hl",
+        "strong": "Hl",
+        "morph": "HR/Sp3fs"
+      },
+      {
+        "text": "סֵ֤פֶר",
+        "text_no_nikud": "ספר",
+        "lemma": "H5612",
+        "strong": "H5612",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "כְּרִיתֻת֙",
+        "text_no_nikud": "כריתת",
+        "lemma": "H3748",
+        "strong": "H3748",
+        "morph": "HNcfsa"
+      },
+      {
+        "text": "וְ/נָתַ֣ן",
+        "text_no_nikud": "ו/נתן",
+        "lemma": "Hc/H5414",
+        "strong": "Hc/H5414",
+        "morph": "HC/Vqq3ms"
+      },
+      {
+        "text": "בְּ/יָדָ֔/הּ",
+        "text_no_nikud": "ב/יד/ה",
+        "lemma": "Hb/H3027",
+        "strong": "Hb/H3027",
+        "morph": "HR/Ncbsc/Sp3fs"
+      },
+      {
+        "text": "וְ/שִׁלְּחָ֖/הּ",
+        "text_no_nikud": "ו/שלח/ה",
+        "lemma": "Hc/H7971",
+        "strong": "Hc/H7971",
+        "morph": "HC/Vpq3ms/Sp3fs"
+      },
+      {
+        "text": "מִ/בֵּית֑/וֹ",
+        "text_no_nikud": "מ/בית/ו",
+        "lemma": "Hm/H1004",
+        "strong": "Hm/H1004",
+        "morph": "HR/Ncmsc/Sp3ms"
+      },
+      {
+        "text": "א֣וֹ",
+        "text_no_nikud": "או",
+        "lemma": "H176",
+        "strong": "H176",
+        "morph": "HC"
+      },
+      {
+        "text": "כִ֤י",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "יָמוּת֙",
+        "text_no_nikud": "ימות",
+        "lemma": "H4191",
+        "strong": "H4191",
+        "morph": "HVqi3ms"
+      },
+      {
+        "text": "הָ/אִ֣ישׁ",
+        "text_no_nikud": "ה/איש",
+        "lemma": "Hd/H376",
+        "strong": "Hd/H376",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "הָ/אַחֲר֔וֹן",
+        "text_no_nikud": "ה/אחרון",
+        "lemma": "Hd/H314",
+        "strong": "Hd/H314",
+        "morph": "HTd/Aamsa"
+      },
+      {
+        "text": "אֲשֶׁר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "לְקָחָ֥/הּ",
+        "text_no_nikud": "לקח/ה",
+        "lemma": "H3947",
+        "strong": "H3947",
+        "morph": "HVqp3ms/Sp3fs"
+      },
+      {
+        "text": "ל֖/וֹ",
+        "text_no_nikud": "ל/ו",
+        "lemma": "Hl",
+        "strong": "Hl",
+        "morph": "HR/Sp3ms"
+      },
+      {
+        "text": "לְ/אִשָּֽׁה",
+        "text_no_nikud": "ל/אשה",
+        "lemma": "Hl/H802",
+        "strong": "Hl/H802",
+        "morph": "HR/Ncfsa"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 4,
+    "hebrew": "לֹא יוּכַ֣ל בַּעְלָ֣/הּ הָ/רִאשׁ֣וֹן אֲשֶֽׁר שִׁ֠לְּחָ/הּ לָ/שׁ֨וּב לְ/קַחְתָּ֜/הּ לִ/הְי֧וֹת ל֣/וֹ לְ/אִשָּׁ֗ה אַחֲרֵי֙ אֲשֶׁ֣ר הֻטַּמָּ֔אָה כִּֽי תוֹעֵבָ֥ה הִ֖וא לִ/פְנֵ֣י יְהוָ֑ה וְ/לֹ֤א תַחֲטִיא֙ אֶת הָ/אָ֔רֶץ אֲשֶׁר֙ יְהוָ֣ה אֱלֹהֶ֔י/ךָ נֹתֵ֥ן לְ/ךָ֖ נַחֲלָֽה",
+    "hebrew_no_nikud": "לא יוכל בעל/ה ה/ראשון אשר שלח/ה ל/שוב ל/קחת/ה ל/היות ל/ו ל/אשה אחרי אשר הטמאה כי תועבה הוא ל/פני יהוה ו/לא תחטיא את ה/ארץ אשר יהוה אלהי/ך נתן ל/ך נחלה",
+    "words": [
+      {
+        "text": "לֹא",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "יוּכַ֣ל",
+        "text_no_nikud": "יוכל",
+        "lemma": "H3201",
+        "strong": "H3201",
+        "morph": "HVqi3ms"
+      },
+      {
+        "text": "בַּעְלָ֣/הּ",
+        "text_no_nikud": "בעל/ה",
+        "lemma": "H1167",
+        "strong": "H1167",
+        "morph": "HNcmsc/Sp3fs"
+      },
+      {
+        "text": "הָ/רִאשׁ֣וֹן",
+        "text_no_nikud": "ה/ראשון",
+        "lemma": "Hd/H7223",
+        "strong": "Hd/H7223",
+        "morph": "HTd/Aomsa"
+      },
+      {
+        "text": "אֲשֶֽׁר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "שִׁ֠לְּחָ/הּ",
+        "text_no_nikud": "שלח/ה",
+        "lemma": "H7971",
+        "strong": "H7971",
+        "morph": "HVpp3ms/Sp3fs"
+      },
+      {
+        "text": "לָ/שׁ֨וּב",
+        "text_no_nikud": "ל/שוב",
+        "lemma": "Hl/H7725",
+        "strong": "Hl/H7725",
+        "morph": "HR/Vqc"
+      },
+      {
+        "text": "לְ/קַחְתָּ֜/הּ",
+        "text_no_nikud": "ל/קחת/ה",
+        "lemma": "Hl/H3947",
+        "strong": "Hl/H3947",
+        "morph": "HR/Vqc/Sp3fs"
+      },
+      {
+        "text": "לִ/הְי֧וֹת",
+        "text_no_nikud": "ל/היות",
+        "lemma": "Hl/H1961",
+        "strong": "Hl/H1961",
+        "morph": "HR/Vqc"
+      },
+      {
+        "text": "ל֣/וֹ",
+        "text_no_nikud": "ל/ו",
+        "lemma": "Hl",
+        "strong": "Hl",
+        "morph": "HR/Sp3ms"
+      },
+      {
+        "text": "לְ/אִשָּׁ֗ה",
+        "text_no_nikud": "ל/אשה",
+        "lemma": "Hl/H802",
+        "strong": "Hl/H802",
+        "morph": "HR/Ncfsa"
+      },
+      {
+        "text": "אַחֲרֵי֙",
+        "text_no_nikud": "אחרי",
+        "lemma": "H310",
+        "strong": "H310",
+        "morph": "HR"
+      },
+      {
+        "text": "אֲשֶׁ֣ר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "הֻטַּמָּ֔אָה",
+        "text_no_nikud": "הטמאה",
+        "lemma": "H2930",
+        "strong": "H2930",
+        "morph": "HVup3fs"
+      },
+      {
+        "text": "כִּֽי",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "תוֹעֵבָ֥ה",
+        "text_no_nikud": "תועבה",
+        "lemma": "H8441",
+        "strong": "H8441",
+        "morph": "HNcfsa"
+      },
+      {
+        "text": "הִ֖וא",
+        "text_no_nikud": "הוא",
+        "lemma": "H1931",
+        "strong": "H1931",
+        "morph": "HPp3fs"
+      },
+      {
+        "text": "לִ/פְנֵ֣י",
+        "text_no_nikud": "ל/פני",
+        "lemma": "Hl/H6440",
+        "strong": "Hl/H6440",
+        "morph": "HR/Ncbpc"
+      },
+      {
+        "text": "יְהוָ֑ה",
+        "text_no_nikud": "יהוה",
+        "lemma": "H3068",
+        "strong": "H3068",
+        "morph": "HNp"
+      },
+      {
+        "text": "וְ/לֹ֤א",
+        "text_no_nikud": "ו/לא",
+        "lemma": "Hc/H3808",
+        "strong": "Hc/H3808",
+        "morph": "HC/Tn"
+      },
+      {
+        "text": "תַחֲטִיא֙",
+        "text_no_nikud": "תחטיא",
+        "lemma": "H2398",
+        "strong": "H2398",
+        "morph": "HVhi2ms"
+      },
+      {
+        "text": "אֶת",
+        "text_no_nikud": "את",
+        "lemma": "H853",
+        "strong": "H853",
+        "morph": "HTo"
+      },
+      {
+        "text": "הָ/אָ֔רֶץ",
+        "text_no_nikud": "ה/ארץ",
+        "lemma": "Hd/H776",
+        "strong": "Hd/H776",
+        "morph": "HTd/Ncbsa"
+      },
+      {
+        "text": "אֲשֶׁר֙",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "יְהוָ֣ה",
+        "text_no_nikud": "יהוה",
+        "lemma": "H3068",
+        "strong": "H3068",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֱלֹהֶ֔י/ךָ",
+        "text_no_nikud": "אלהי/ך",
+        "lemma": "H430",
+        "strong": "H430",
+        "morph": "HNcmpc/Sp2ms"
+      },
+      {
+        "text": "נֹתֵ֥ן",
+        "text_no_nikud": "נתן",
+        "lemma": "H5414",
+        "strong": "H5414",
+        "morph": "HVqrmsa"
+      },
+      {
+        "text": "לְ/ךָ֖",
+        "text_no_nikud": "ל/ך",
+        "lemma": "Hl",
+        "strong": "Hl",
+        "morph": "HR/Sp2ms"
+      },
+      {
+        "text": "נַחֲלָֽה",
+        "text_no_nikud": "נחלה",
+        "lemma": "H5159",
+        "strong": "H5159",
+        "morph": "HNcfsa"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 5,
+    "hebrew": "כִּֽי יִקַּ֥ח אִישׁ֙ אִשָּׁ֣ה חֲדָשָׁ֔ה לֹ֤א יֵצֵא֙ בַּ/צָּבָ֔א וְ/לֹא יַעֲבֹ֥ר עָלָ֖י/ו לְ/כָל דָּבָ֑ר נָקִ֞י יִהְיֶ֤ה לְ/בֵית/וֹ֙ שָׁנָ֣ה אֶחָ֔ת וְ/שִׂמַּ֖ח אֶת אִשְׁתּ֥/וֹ אֲשֶׁר לָקָֽח",
+    "hebrew_no_nikud": "כי יקח איש אשה חדשה לא יצא ב/צבא ו/לא יעבר עלי/ו ל/כל דבר נקי יהיה ל/בית/ו שנה אחת ו/שמח את אשת/ו אשר לקח",
+    "words": [
+      {
+        "text": "כִּֽי",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "יִקַּ֥ח",
+        "text_no_nikud": "יקח",
+        "lemma": "H3947",
+        "strong": "H3947",
+        "morph": "HVqi3ms"
+      },
+      {
+        "text": "אִישׁ֙",
+        "text_no_nikud": "איש",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "אִשָּׁ֣ה",
+        "text_no_nikud": "אשה",
+        "lemma": "H802",
+        "strong": "H802",
+        "morph": "HNcfsa"
+      },
+      {
+        "text": "חֲדָשָׁ֔ה",
+        "text_no_nikud": "חדשה",
+        "lemma": "H2319",
+        "strong": "H2319",
+        "morph": "HAafsa"
+      },
+      {
+        "text": "לֹ֤א",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "יֵצֵא֙",
+        "text_no_nikud": "יצא",
+        "lemma": "H3318",
+        "strong": "H3318",
+        "morph": "HVqi3ms"
+      },
+      {
+        "text": "בַּ/צָּבָ֔א",
+        "text_no_nikud": "ב/צבא",
+        "lemma": "Hb/H6635",
+        "strong": "Hb/H6635",
+        "morph": "HRd/Ncbsa"
+      },
+      {
+        "text": "וְ/לֹא",
+        "text_no_nikud": "ו/לא",
+        "lemma": "Hc/H3808",
+        "strong": "Hc/H3808",
+        "morph": "HC/Tn"
+      },
+      {
+        "text": "יַעֲבֹ֥ר",
+        "text_no_nikud": "יעבר",
+        "lemma": "H5674",
+        "strong": "H5674",
+        "morph": "HVqi3ms"
+      },
+      {
+        "text": "עָלָ֖י/ו",
+        "text_no_nikud": "עלי/ו",
+        "lemma": "H5921",
+        "strong": "H5921",
+        "morph": "HR/Sp3ms"
+      },
+      {
+        "text": "לְ/כָל",
+        "text_no_nikud": "ל/כל",
+        "lemma": "Hl/H3605",
+        "strong": "Hl/H3605",
+        "morph": "HR/Ncmsc"
+      },
+      {
+        "text": "דָּבָ֑ר",
+        "text_no_nikud": "דבר",
+        "lemma": "H1697",
+        "strong": "H1697",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "נָקִ֞י",
+        "text_no_nikud": "נקי",
+        "lemma": "H5355",
+        "strong": "H5355",
+        "morph": "HAamsa"
+      },
+      {
+        "text": "יִהְיֶ֤ה",
+        "text_no_nikud": "יהיה",
+        "lemma": "H1961",
+        "strong": "H1961",
+        "morph": "HVqi3ms"
+      },
+      {
+        "text": "לְ/בֵית/וֹ֙",
+        "text_no_nikud": "ל/בית/ו",
+        "lemma": "Hl/H1004",
+        "strong": "Hl/H1004",
+        "morph": "HR/Ncmsc/Sp3ms"
+      },
+      {
+        "text": "שָׁנָ֣ה",
+        "text_no_nikud": "שנה",
+        "lemma": "H8141",
+        "strong": "H8141",
+        "morph": "HNcfsa"
+      },
+      {
+        "text": "אֶחָ֔ת",
+        "text_no_nikud": "אחת",
+        "lemma": "H259",
+        "strong": "H259",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "וְ/שִׂמַּ֖ח",
+        "text_no_nikud": "ו/שמח",
+        "lemma": "Hc/H8055",
+        "strong": "Hc/H8055",
+        "morph": "HC/Vpq3ms"
+      },
+      {
+        "text": "אֶת",
+        "text_no_nikud": "את",
+        "lemma": "H853",
+        "strong": "H853",
+        "morph": "HTo"
+      },
+      {
+        "text": "אִשְׁתּ֥/וֹ",
+        "text_no_nikud": "אשת/ו",
+        "lemma": "H802",
+        "strong": "H802",
+        "morph": "HNcfsc/Sp3ms"
+      },
+      {
+        "text": "אֲשֶׁר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "לָקָֽח",
+        "text_no_nikud": "לקח",
+        "lemma": "H3947",
+        "strong": "H3947",
+        "morph": "HVqp3ms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 6,
+    "hebrew": "לֹא יַחֲבֹ֥ל רֵחַ֖יִם וָ/רָ֑כֶב כִּי נֶ֖פֶשׁ ה֥וּא חֹבֵֽל",
+    "hebrew_no_nikud": "לא יחבל רחים ו/רכב כי נפש הוא חבל",
+    "words": [
+      {
+        "text": "לֹא",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "יַחֲבֹ֥ל",
+        "text_no_nikud": "יחבל",
+        "lemma": "H2254",
+        "strong": "H2254",
+        "morph": "HVqi3ms"
+      },
+      {
+        "text": "רֵחַ֖יִם",
+        "text_no_nikud": "רחים",
+        "lemma": "H7347",
+        "strong": "H7347",
+        "morph": "HNcmda"
+      },
+      {
+        "text": "וָ/רָ֑כֶב",
+        "text_no_nikud": "ו/רכב",
+        "lemma": "Hc/H7393",
+        "strong": "Hc/H7393",
+        "morph": "HC/Ncmsa"
+      },
+      {
+        "text": "כִּי",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "נֶ֖פֶשׁ",
+        "text_no_nikud": "נפש",
+        "lemma": "H5315",
+        "strong": "H5315",
+        "morph": "HNcbsa"
+      },
+      {
+        "text": "ה֥וּא",
+        "text_no_nikud": "הוא",
+        "lemma": "H1931",
+        "strong": "H1931",
+        "morph": "HPp3ms"
+      },
+      {
+        "text": "חֹבֵֽל",
+        "text_no_nikud": "חבל",
+        "lemma": "H2254",
+        "strong": "H2254",
+        "morph": "HVqrmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 7,
+    "hebrew": "כִּי יִמָּצֵ֣א אִ֗ישׁ גֹּנֵ֨ב נֶ֤פֶשׁ מֵ/אֶחָי/ו֙ מִ/בְּנֵ֣י יִשְׂרָאֵ֔ל וְ/הִתְעַמֶּר בּ֖/וֹ וּ/מְכָר֑/וֹ וּ/מֵת֙ הַ/גַּנָּ֣ב הַ/ה֔וּא וּ/בִֽעַרְתָּ֥ הָ/רָ֖ע מִ/קִּרְבֶּֽ/ךָ",
+    "hebrew_no_nikud": "כי ימצא איש גנב נפש מ/אחי/ו מ/בני ישראל ו/התעמר ב/ו ו/מכר/ו ו/מת ה/גנב ה/הוא ו/בערת ה/רע מ/קרב/ך",
+    "words": [
+      {
+        "text": "כִּי",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "יִמָּצֵ֣א",
+        "text_no_nikud": "ימצא",
+        "lemma": "H4672",
+        "strong": "H4672",
+        "morph": "HVNi3ms"
+      },
+      {
+        "text": "אִ֗ישׁ",
+        "text_no_nikud": "איש",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "גֹּנֵ֨ב",
+        "text_no_nikud": "גנב",
+        "lemma": "H1589",
+        "strong": "H1589",
+        "morph": "HVqrmsa"
+      },
+      {
+        "text": "נֶ֤פֶשׁ",
+        "text_no_nikud": "נפש",
+        "lemma": "H5315",
+        "strong": "H5315",
+        "morph": "HNcbsa"
+      },
+      {
+        "text": "מֵ/אֶחָי/ו֙",
+        "text_no_nikud": "מ/אחי/ו",
+        "lemma": "Hm/H251",
+        "strong": "Hm/H251",
+        "morph": "HR/Ncmpc/Sp3ms"
+      },
+      {
+        "text": "מִ/בְּנֵ֣י",
+        "text_no_nikud": "מ/בני",
+        "lemma": "Hm/H1121",
+        "strong": "Hm/H1121",
+        "morph": "HR/Ncmpc"
+      },
+      {
+        "text": "יִשְׂרָאֵ֔ל",
+        "text_no_nikud": "ישראל",
+        "lemma": "H3478",
+        "strong": "H3478",
+        "morph": "HNp"
+      },
+      {
+        "text": "וְ/הִתְעַמֶּר",
+        "text_no_nikud": "ו/התעמר",
+        "lemma": "Hc/H6014",
+        "strong": "Hc/H6014",
+        "morph": "HC/Vtq3ms"
+      },
+      {
+        "text": "בּ֖/וֹ",
+        "text_no_nikud": "ב/ו",
+        "lemma": "Hb",
+        "strong": "Hb",
+        "morph": "HR/Sp3ms"
+      },
+      {
+        "text": "וּ/מְכָר֑/וֹ",
+        "text_no_nikud": "ו/מכר/ו",
+        "lemma": "Hc/H4376",
+        "strong": "Hc/H4376",
+        "morph": "HC/Vqq3ms/Sp3ms"
+      },
+      {
+        "text": "וּ/מֵת֙",
+        "text_no_nikud": "ו/מת",
+        "lemma": "Hc/H4191",
+        "strong": "Hc/H4191",
+        "morph": "HC/Vqq3ms"
+      },
+      {
+        "text": "הַ/גַּנָּ֣ב",
+        "text_no_nikud": "ה/גנב",
+        "lemma": "Hd/H1590",
+        "strong": "Hd/H1590",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "הַ/ה֔וּא",
+        "text_no_nikud": "ה/הוא",
+        "lemma": "Hd/H1931",
+        "strong": "Hd/H1931",
+        "morph": "HTd/Pp3ms"
+      },
+      {
+        "text": "וּ/בִֽעַרְתָּ֥",
+        "text_no_nikud": "ו/בערת",
+        "lemma": "Hc/H1197",
+        "strong": "Hc/H1197",
+        "morph": "HC/Vpq2ms"
+      },
+      {
+        "text": "הָ/רָ֖ע",
+        "text_no_nikud": "ה/רע",
+        "lemma": "Hd/H7451",
+        "strong": "Hd/H7451",
+        "morph": "HTd/Aamsa"
+      },
+      {
+        "text": "מִ/קִּרְבֶּֽ/ךָ",
+        "text_no_nikud": "מ/קרב/ך",
+        "lemma": "Hm/H7130",
+        "strong": "Hm/H7130",
+        "morph": "HR/Ncmsc/Sp2ms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 8,
+    "hebrew": "הִשָּׁ֧מֶר בְּ/נֶֽגַע הַ/צָּרַ֛עַת לִ/שְׁמֹ֥ר מְאֹ֖ד וְ/לַ/עֲשׂ֑וֹת כְּ/כֹל֩ אֲשֶׁר יוֹר֨וּ אֶתְ/כֶ֜ם הַ/כֹּהֲנִ֧ים הַ/לְוִיִּ֛ם כַּ/אֲשֶׁ֥ר צִוִּיתִ֖/ם תִּשְׁמְר֥וּ לַ/עֲשֽׂוֹת",
+    "hebrew_no_nikud": "השמר ב/נגע ה/צרעת ל/שמר מאד ו/ל/עשות כ/כל אשר יורו את/כם ה/כהנים ה/לוים כ/אשר צוית/ם תשמרו ל/עשות",
+    "words": [
+      {
+        "text": "הִשָּׁ֧מֶר",
+        "text_no_nikud": "השמר",
+        "lemma": "H8104",
+        "strong": "H8104",
+        "morph": "HVNv2ms"
+      },
+      {
+        "text": "בְּ/נֶֽגַע",
+        "text_no_nikud": "ב/נגע",
+        "lemma": "Hb/H5061",
+        "strong": "Hb/H5061",
+        "morph": "HR/Ncmsc"
+      },
+      {
+        "text": "הַ/צָּרַ֛עַת",
+        "text_no_nikud": "ה/צרעת",
+        "lemma": "Hd/H6883",
+        "strong": "Hd/H6883",
+        "morph": "HTd/Ncfsa"
+      },
+      {
+        "text": "לִ/שְׁמֹ֥ר",
+        "text_no_nikud": "ל/שמר",
+        "lemma": "Hl/H8104",
+        "strong": "Hl/H8104",
+        "morph": "HR/Vqc"
+      },
+      {
+        "text": "מְאֹ֖ד",
+        "text_no_nikud": "מאד",
+        "lemma": "H3966",
+        "strong": "H3966",
+        "morph": "HD"
+      },
+      {
+        "text": "וְ/לַ/עֲשׂ֑וֹת",
+        "text_no_nikud": "ו/ל/עשות",
+        "lemma": "Hc/Hl/H6213",
+        "strong": "Hc/Hl/H6213",
+        "morph": "HC/R/Vqc"
+      },
+      {
+        "text": "כְּ/כֹל֩",
+        "text_no_nikud": "כ/כל",
+        "lemma": "Hk/H3605",
+        "strong": "Hk/H3605",
+        "morph": "HR/Ncmsa"
+      },
+      {
+        "text": "אֲשֶׁר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "יוֹר֨וּ",
+        "text_no_nikud": "יורו",
+        "lemma": "H3384",
+        "strong": "H3384",
+        "morph": "HVhi3mp"
+      },
+      {
+        "text": "אֶתְ/כֶ֜ם",
+        "text_no_nikud": "את/כם",
+        "lemma": "H853",
+        "strong": "H853",
+        "morph": "HTo/Sp2mp"
+      },
+      {
+        "text": "הַ/כֹּהֲנִ֧ים",
+        "text_no_nikud": "ה/כהנים",
+        "lemma": "Hd/H3548",
+        "strong": "Hd/H3548",
+        "morph": "HTd/Ncmpa"
+      },
+      {
+        "text": "הַ/לְוִיִּ֛ם",
+        "text_no_nikud": "ה/לוים",
+        "lemma": "Hd/H3881",
+        "strong": "Hd/H3881",
+        "morph": "HTd/Ngmpa"
+      },
+      {
+        "text": "כַּ/אֲשֶׁ֥ר",
+        "text_no_nikud": "כ/אשר",
+        "lemma": "Hk/H834",
+        "strong": "Hk/H834",
+        "morph": "HR/Tr"
+      },
+      {
+        "text": "צִוִּיתִ֖/ם",
+        "text_no_nikud": "צוית/ם",
+        "lemma": "H6680",
+        "strong": "H6680",
+        "morph": "HVpp1cs/Sp3mp"
+      },
+      {
+        "text": "תִּשְׁמְר֥וּ",
+        "text_no_nikud": "תשמרו",
+        "lemma": "H8104",
+        "strong": "H8104",
+        "morph": "HVqi2mp"
+      },
+      {
+        "text": "לַ/עֲשֽׂוֹת",
+        "text_no_nikud": "ל/עשות",
+        "lemma": "Hl/H6213",
+        "strong": "Hl/H6213",
+        "morph": "HR/Vqc"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 9,
+    "hebrew": "זָכ֕וֹר אֵ֧ת אֲשֶׁר עָשָׂ֛ה יְהוָ֥ה אֱלֹהֶ֖י/ךָ לְ/מִרְיָ֑ם בַּ/דֶּ֖רֶךְ בְּ/צֵאתְ/כֶ֥ם מִ/מִּצְרָֽיִם",
+    "hebrew_no_nikud": "זכור את אשר עשה יהוה אלהי/ך ל/מרים ב/דרך ב/צאת/כם מ/מצרים",
+    "words": [
+      {
+        "text": "זָכ֕וֹר",
+        "text_no_nikud": "זכור",
+        "lemma": "H2142",
+        "strong": "H2142",
+        "morph": "HVqa"
+      },
+      {
+        "text": "אֵ֧ת",
+        "text_no_nikud": "את",
+        "lemma": "H853",
+        "strong": "H853",
+        "morph": "HTo"
+      },
+      {
+        "text": "אֲשֶׁר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "עָשָׂ֛ה",
+        "text_no_nikud": "עשה",
+        "lemma": "H6213",
+        "strong": "H6213",
+        "morph": "HVqp3ms"
+      },
+      {
+        "text": "יְהוָ֥ה",
+        "text_no_nikud": "יהוה",
+        "lemma": "H3068",
+        "strong": "H3068",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֱלֹהֶ֖י/ךָ",
+        "text_no_nikud": "אלהי/ך",
+        "lemma": "H430",
+        "strong": "H430",
+        "morph": "HNcmpc/Sp2ms"
+      },
+      {
+        "text": "לְ/מִרְיָ֑ם",
+        "text_no_nikud": "ל/מרים",
+        "lemma": "Hl/H4813",
+        "strong": "Hl/H4813",
+        "morph": "HR/Np"
+      },
+      {
+        "text": "בַּ/דֶּ֖רֶךְ",
+        "text_no_nikud": "ב/דרך",
+        "lemma": "Hb/H1870",
+        "strong": "Hb/H1870",
+        "morph": "HRd/Ncbsa"
+      },
+      {
+        "text": "בְּ/צֵאתְ/כֶ֥ם",
+        "text_no_nikud": "ב/צאת/כם",
+        "lemma": "Hb/H3318",
+        "strong": "Hb/H3318",
+        "morph": "HR/Vqc/Sp2mp"
+      },
+      {
+        "text": "מִ/מִּצְרָֽיִם",
+        "text_no_nikud": "מ/מצרים",
+        "lemma": "Hm/H4714",
+        "strong": "Hm/H4714",
+        "morph": "HR/Np"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 10,
+    "hebrew": "כִּֽי תַשֶּׁ֥ה בְ/רֵֽעֲ/ךָ מַשַּׁ֣את מְא֑וּמָה לֹא תָבֹ֥א אֶל בֵּית֖/וֹ לַ/עֲבֹ֥ט עֲבֹטֽ/וֹ",
+    "hebrew_no_nikud": "כי תשה ב/רע/ך משאת מאומה לא תבא אל בית/ו ל/עבט עבט/ו",
+    "words": [
+      {
+        "text": "כִּֽי",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "תַשֶּׁ֥ה",
+        "text_no_nikud": "תשה",
+        "lemma": "H5383",
+        "strong": "H5383",
+        "morph": "HVhi2ms"
+      },
+      {
+        "text": "בְ/רֵֽעֲ/ךָ",
+        "text_no_nikud": "ב/רע/ך",
+        "lemma": "Hb/H7453",
+        "strong": "Hb/H7453",
+        "morph": "HR/Ncmsc/Sp2ms"
+      },
+      {
+        "text": "מַשַּׁ֣את",
+        "text_no_nikud": "משאת",
+        "lemma": "H4859",
+        "strong": "H4859",
+        "morph": "HNcfsc"
+      },
+      {
+        "text": "מְא֑וּמָה",
+        "text_no_nikud": "מאומה",
+        "lemma": "H3972",
+        "strong": "H3972",
+        "morph": "HNcfsa"
+      },
+      {
+        "text": "לֹא",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "תָבֹ֥א",
+        "text_no_nikud": "תבא",
+        "lemma": "H935",
+        "strong": "H935",
+        "morph": "HVqi2ms"
+      },
+      {
+        "text": "אֶל",
+        "text_no_nikud": "אל",
+        "lemma": "H413",
+        "strong": "H413",
+        "morph": "HR"
+      },
+      {
+        "text": "בֵּית֖/וֹ",
+        "text_no_nikud": "בית/ו",
+        "lemma": "H1004",
+        "strong": "H1004",
+        "morph": "HNcmsc/Sp3ms"
+      },
+      {
+        "text": "לַ/עֲבֹ֥ט",
+        "text_no_nikud": "ל/עבט",
+        "lemma": "Hl/H5670",
+        "strong": "Hl/H5670",
+        "morph": "HR/Vqc"
+      },
+      {
+        "text": "עֲבֹטֽ/וֹ",
+        "text_no_nikud": "עבט/ו",
+        "lemma": "H5667",
+        "strong": "H5667",
+        "morph": "HNcmsc/Sp3ms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 11,
+    "hebrew": "בַּ/ח֖וּץ תַּעֲמֹ֑ד וְ/הָ/אִ֗ישׁ אֲשֶׁ֤ר אַתָּה֙ נֹשֶׁ֣ה ב֔/וֹ יוֹצִ֥יא אֵלֶ֛י/ךָ אֶֽת הַ/עֲב֖וֹט הַ/חֽוּצָ/ה",
+    "hebrew_no_nikud": "ב/חוץ תעמד ו/ה/איש אשר אתה נשה ב/ו יוציא אלי/ך את ה/עבוט ה/חוצ/ה",
+    "words": [
+      {
+        "text": "בַּ/ח֖וּץ",
+        "text_no_nikud": "ב/חוץ",
+        "lemma": "Hb/H2351",
+        "strong": "Hb/H2351",
+        "morph": "HRd/Ncmsa"
+      },
+      {
+        "text": "תַּעֲמֹ֑ד",
+        "text_no_nikud": "תעמד",
+        "lemma": "H5975",
+        "strong": "H5975",
+        "morph": "HVqi2ms"
+      },
+      {
+        "text": "וְ/הָ/אִ֗ישׁ",
+        "text_no_nikud": "ו/ה/איש",
+        "lemma": "Hc/Hd/H376",
+        "strong": "Hc/Hd/H376",
+        "morph": "HC/Td/Ncmsa"
+      },
+      {
+        "text": "אֲשֶׁ֤ר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "אַתָּה֙",
+        "text_no_nikud": "אתה",
+        "lemma": "H859",
+        "strong": "H859",
+        "morph": "HPp2ms"
+      },
+      {
+        "text": "נֹשֶׁ֣ה",
+        "text_no_nikud": "נשה",
+        "lemma": "H5383",
+        "strong": "H5383",
+        "morph": "HVqrmsa"
+      },
+      {
+        "text": "ב֔/וֹ",
+        "text_no_nikud": "ב/ו",
+        "lemma": "Hb",
+        "strong": "Hb",
+        "morph": "HR/Sp3ms"
+      },
+      {
+        "text": "יוֹצִ֥יא",
+        "text_no_nikud": "יוציא",
+        "lemma": "H3318",
+        "strong": "H3318",
+        "morph": "HVhi3ms"
+      },
+      {
+        "text": "אֵלֶ֛י/ךָ",
+        "text_no_nikud": "אלי/ך",
+        "lemma": "H413",
+        "strong": "H413",
+        "morph": "HR/Sp2ms"
+      },
+      {
+        "text": "אֶֽת",
+        "text_no_nikud": "את",
+        "lemma": "H853",
+        "strong": "H853",
+        "morph": "HTo"
+      },
+      {
+        "text": "הַ/עֲב֖וֹט",
+        "text_no_nikud": "ה/עבוט",
+        "lemma": "Hd/H5667",
+        "strong": "Hd/H5667",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "הַ/חֽוּצָ/ה",
+        "text_no_nikud": "ה/חוצ/ה",
+        "lemma": "Hd/H2351",
+        "strong": "Hd/H2351",
+        "morph": "HTd/Ncmsa/Sd"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 12,
+    "hebrew": "וְ/אִם אִ֥ישׁ עָנִ֖י ה֑וּא לֹ֥א תִשְׁכַּ֖ב בַּ/עֲבֹטֽ/וֹ",
+    "hebrew_no_nikud": "ו/אם איש עני הוא לא תשכב ב/עבט/ו",
+    "words": [
+      {
+        "text": "וְ/אִם",
+        "text_no_nikud": "ו/אם",
+        "lemma": "Hc/H518",
+        "strong": "Hc/H518",
+        "morph": "HC/C"
+      },
+      {
+        "text": "אִ֥ישׁ",
+        "text_no_nikud": "איש",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "עָנִ֖י",
+        "text_no_nikud": "עני",
+        "lemma": "H6041",
+        "strong": "H6041",
+        "morph": "HAamsa"
+      },
+      {
+        "text": "ה֑וּא",
+        "text_no_nikud": "הוא",
+        "lemma": "H1931",
+        "strong": "H1931",
+        "morph": "HPp3ms"
+      },
+      {
+        "text": "לֹ֥א",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "תִשְׁכַּ֖ב",
+        "text_no_nikud": "תשכב",
+        "lemma": "H7901",
+        "strong": "H7901",
+        "morph": "HVqi2ms"
+      },
+      {
+        "text": "בַּ/עֲבֹטֽ/וֹ",
+        "text_no_nikud": "ב/עבט/ו",
+        "lemma": "Hb/H5667",
+        "strong": "Hb/H5667",
+        "morph": "HR/Ncmsc/Sp3ms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 13,
+    "hebrew": "הָשֵׁב֩ תָּשִׁ֨יב ל֤/וֹ אֶֽת הַ/עֲבוֹט֙ כְּ/בֹ֣א הַ/שֶּׁ֔מֶשׁ וְ/שָׁכַ֥ב בְּ/שַׂלְמָת֖/וֹ וּ/בֵֽרֲכֶ֑/ךָּ וּ/לְ/ךָ֙ תִּהְיֶ֣ה צְדָקָ֔ה לִ/פְנֵ֖י יְהוָ֥ה אֱלֹהֶֽי/ךָ",
+    "hebrew_no_nikud": "השב תשיב ל/ו את ה/עבוט כ/בא ה/שמש ו/שכב ב/שלמת/ו ו/ברכ/ך ו/ל/ך תהיה צדקה ל/פני יהוה אלהי/ך",
+    "words": [
+      {
+        "text": "הָשֵׁב֩",
+        "text_no_nikud": "השב",
+        "lemma": "H7725",
+        "strong": "H7725",
+        "morph": "HVha"
+      },
+      {
+        "text": "תָּשִׁ֨יב",
+        "text_no_nikud": "תשיב",
+        "lemma": "H7725",
+        "strong": "H7725",
+        "morph": "HVhi2ms"
+      },
+      {
+        "text": "ל֤/וֹ",
+        "text_no_nikud": "ל/ו",
+        "lemma": "Hl",
+        "strong": "Hl",
+        "morph": "HR/Sp3ms"
+      },
+      {
+        "text": "אֶֽת",
+        "text_no_nikud": "את",
+        "lemma": "H853",
+        "strong": "H853",
+        "morph": "HTo"
+      },
+      {
+        "text": "הַ/עֲבוֹט֙",
+        "text_no_nikud": "ה/עבוט",
+        "lemma": "Hd/H5667",
+        "strong": "Hd/H5667",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "כְּ/בֹ֣א",
+        "text_no_nikud": "כ/בא",
+        "lemma": "Hk/H935",
+        "strong": "Hk/H935",
+        "morph": "HR/Vqc"
+      },
+      {
+        "text": "הַ/שֶּׁ֔מֶשׁ",
+        "text_no_nikud": "ה/שמש",
+        "lemma": "Hd/H8121",
+        "strong": "Hd/H8121",
+        "morph": "HTd/Ncbsa"
+      },
+      {
+        "text": "וְ/שָׁכַ֥ב",
+        "text_no_nikud": "ו/שכב",
+        "lemma": "Hc/H7901",
+        "strong": "Hc/H7901",
+        "morph": "HC/Vqq3ms"
+      },
+      {
+        "text": "בְּ/שַׂלְמָת֖/וֹ",
+        "text_no_nikud": "ב/שלמת/ו",
+        "lemma": "Hb/H8008",
+        "strong": "Hb/H8008",
+        "morph": "HR/Ncfsc/Sp3ms"
+      },
+      {
+        "text": "וּ/בֵֽרֲכֶ֑/ךָּ",
+        "text_no_nikud": "ו/ברכ/ך",
+        "lemma": "Hc/H1288",
+        "strong": "Hc/H1288",
+        "morph": "HC/Vpq3ms/Sp2ms"
+      },
+      {
+        "text": "וּ/לְ/ךָ֙",
+        "text_no_nikud": "ו/ל/ך",
+        "lemma": "Hc/Hl",
+        "strong": "Hc/Hl",
+        "morph": "HC/R/Sp2ms"
+      },
+      {
+        "text": "תִּהְיֶ֣ה",
+        "text_no_nikud": "תהיה",
+        "lemma": "H1961",
+        "strong": "H1961",
+        "morph": "HVqi3fs"
+      },
+      {
+        "text": "צְדָקָ֔ה",
+        "text_no_nikud": "צדקה",
+        "lemma": "H6666",
+        "strong": "H6666",
+        "morph": "HNcfsa"
+      },
+      {
+        "text": "לִ/פְנֵ֖י",
+        "text_no_nikud": "ל/פני",
+        "lemma": "Hl/H6440",
+        "strong": "Hl/H6440",
+        "morph": "HR/Ncbpc"
+      },
+      {
+        "text": "יְהוָ֥ה",
+        "text_no_nikud": "יהוה",
+        "lemma": "H3068",
+        "strong": "H3068",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֱלֹהֶֽי/ךָ",
+        "text_no_nikud": "אלהי/ך",
+        "lemma": "H430",
+        "strong": "H430",
+        "morph": "HNcmpc/Sp2ms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 14,
+    "hebrew": "לֹא תַעֲשֹׁ֥ק שָׂכִ֖יר עָנִ֣י וְ/אֶבְי֑וֹן מֵ/אַחֶ֕י/ךָ א֧וֹ מִ/גֵּרְ/ךָ֛ אֲשֶׁ֥ר בְּ/אַרְצְ/ךָ֖ בִּ/שְׁעָרֶֽי/ךָ",
+    "hebrew_no_nikud": "לא תעשק שכיר עני ו/אביון מ/אחי/ך או מ/גר/ך אשר ב/ארצ/ך ב/שערי/ך",
+    "words": [
+      {
+        "text": "לֹא",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "תַעֲשֹׁ֥ק",
+        "text_no_nikud": "תעשק",
+        "lemma": "H6231",
+        "strong": "H6231",
+        "morph": "HVqi2ms"
+      },
+      {
+        "text": "שָׂכִ֖יר",
+        "text_no_nikud": "שכיר",
+        "lemma": "H7916",
+        "strong": "H7916",
+        "morph": "HAamsa"
+      },
+      {
+        "text": "עָנִ֣י",
+        "text_no_nikud": "עני",
+        "lemma": "H6041",
+        "strong": "H6041",
+        "morph": "HAamsa"
+      },
+      {
+        "text": "וְ/אֶבְי֑וֹן",
+        "text_no_nikud": "ו/אביון",
+        "lemma": "Hc/H34",
+        "strong": "Hc/H34",
+        "morph": "HC/Aamsa"
+      },
+      {
+        "text": "מֵ/אַחֶ֕י/ךָ",
+        "text_no_nikud": "מ/אחי/ך",
+        "lemma": "Hm/H251",
+        "strong": "Hm/H251",
+        "morph": "HR/Ncmpc/Sp2ms"
+      },
+      {
+        "text": "א֧וֹ",
+        "text_no_nikud": "או",
+        "lemma": "H176",
+        "strong": "H176",
+        "morph": "HC"
+      },
+      {
+        "text": "מִ/גֵּרְ/ךָ֛",
+        "text_no_nikud": "מ/גר/ך",
+        "lemma": "Hm/H1616",
+        "strong": "Hm/H1616",
+        "morph": "HR/Ncmsc/Sp2ms"
+      },
+      {
+        "text": "אֲשֶׁ֥ר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "בְּ/אַרְצְ/ךָ֖",
+        "text_no_nikud": "ב/ארצ/ך",
+        "lemma": "Hb/H776",
+        "strong": "Hb/H776",
+        "morph": "HR/Ncbsc/Sp2ms"
+      },
+      {
+        "text": "בִּ/שְׁעָרֶֽי/ךָ",
+        "text_no_nikud": "ב/שערי/ך",
+        "lemma": "Hb/H8179",
+        "strong": "Hb/H8179",
+        "morph": "HR/Ncmpc/Sp2ms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 15,
+    "hebrew": "בְּ/יוֹמ/וֹ֩ תִתֵּ֨ן שְׂכָר֜/וֹ וְֽ/לֹא תָב֧וֹא עָלָ֣י/ו הַ/שֶּׁ֗מֶשׁ כִּ֤י עָנִי֙ ה֔וּא וְ/אֵלָ֕י/ו ה֥וּא נֹשֵׂ֖א אֶת נַפְשׁ֑/וֹ וְ/לֹֽא יִקְרָ֤א עָלֶ֨י/ךָ֙ אֶל יְהוָ֔ה וְ/הָיָ֥ה בְ/ךָ֖ חֵֽטְא",
+    "hebrew_no_nikud": "ב/יומ/ו תתן שכר/ו ו/לא תבוא עלי/ו ה/שמש כי עני הוא ו/אלי/ו הוא נשא את נפש/ו ו/לא יקרא עלי/ך אל יהוה ו/היה ב/ך חטא",
+    "words": [
+      {
+        "text": "בְּ/יוֹמ/וֹ֩",
+        "text_no_nikud": "ב/יומ/ו",
+        "lemma": "Hb/H3117",
+        "strong": "Hb/H3117",
+        "morph": "HR/Ncmsc/Sp3ms"
+      },
+      {
+        "text": "תִתֵּ֨ן",
+        "text_no_nikud": "תתן",
+        "lemma": "H5414",
+        "strong": "H5414",
+        "morph": "HVqi2ms"
+      },
+      {
+        "text": "שְׂכָר֜/וֹ",
+        "text_no_nikud": "שכר/ו",
+        "lemma": "H7939",
+        "strong": "H7939",
+        "morph": "HNcmsc/Sp3ms"
+      },
+      {
+        "text": "וְֽ/לֹא",
+        "text_no_nikud": "ו/לא",
+        "lemma": "Hc/H3808",
+        "strong": "Hc/H3808",
+        "morph": "HC/Tn"
+      },
+      {
+        "text": "תָב֧וֹא",
+        "text_no_nikud": "תבוא",
+        "lemma": "H935",
+        "strong": "H935",
+        "morph": "HVqi3fs"
+      },
+      {
+        "text": "עָלָ֣י/ו",
+        "text_no_nikud": "עלי/ו",
+        "lemma": "H5921",
+        "strong": "H5921",
+        "morph": "HR/Sp3ms"
+      },
+      {
+        "text": "הַ/שֶּׁ֗מֶשׁ",
+        "text_no_nikud": "ה/שמש",
+        "lemma": "Hd/H8121",
+        "strong": "Hd/H8121",
+        "morph": "HTd/Ncbsa"
+      },
+      {
+        "text": "כִּ֤י",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "עָנִי֙",
+        "text_no_nikud": "עני",
+        "lemma": "H6041",
+        "strong": "H6041",
+        "morph": "HAamsa"
+      },
+      {
+        "text": "ה֔וּא",
+        "text_no_nikud": "הוא",
+        "lemma": "H1931",
+        "strong": "H1931",
+        "morph": "HPp3ms"
+      },
+      {
+        "text": "וְ/אֵלָ֕י/ו",
+        "text_no_nikud": "ו/אלי/ו",
+        "lemma": "Hc/H413",
+        "strong": "Hc/H413",
+        "morph": "HC/R/Sp3ms"
+      },
+      {
+        "text": "ה֥וּא",
+        "text_no_nikud": "הוא",
+        "lemma": "H1931",
+        "strong": "H1931",
+        "morph": "HPp3ms"
+      },
+      {
+        "text": "נֹשֵׂ֖א",
+        "text_no_nikud": "נשא",
+        "lemma": "H5375",
+        "strong": "H5375",
+        "morph": "HVqrmsa"
+      },
+      {
+        "text": "אֶת",
+        "text_no_nikud": "את",
+        "lemma": "H853",
+        "strong": "H853",
+        "morph": "HTo"
+      },
+      {
+        "text": "נַפְשׁ֑/וֹ",
+        "text_no_nikud": "נפש/ו",
+        "lemma": "H5315",
+        "strong": "H5315",
+        "morph": "HNcbsc/Sp3ms"
+      },
+      {
+        "text": "וְ/לֹֽא",
+        "text_no_nikud": "ו/לא",
+        "lemma": "Hc/H3808",
+        "strong": "Hc/H3808",
+        "morph": "HC/Tn"
+      },
+      {
+        "text": "יִקְרָ֤א",
+        "text_no_nikud": "יקרא",
+        "lemma": "H7121",
+        "strong": "H7121",
+        "morph": "HVqi3ms"
+      },
+      {
+        "text": "עָלֶ֨י/ךָ֙",
+        "text_no_nikud": "עלי/ך",
+        "lemma": "H5921",
+        "strong": "H5921",
+        "morph": "HR/Sp2ms"
+      },
+      {
+        "text": "אֶל",
+        "text_no_nikud": "אל",
+        "lemma": "H413",
+        "strong": "H413",
+        "morph": "HR"
+      },
+      {
+        "text": "יְהוָ֔ה",
+        "text_no_nikud": "יהוה",
+        "lemma": "H3068",
+        "strong": "H3068",
+        "morph": "HNp"
+      },
+      {
+        "text": "וְ/הָיָ֥ה",
+        "text_no_nikud": "ו/היה",
+        "lemma": "Hc/H1961",
+        "strong": "Hc/H1961",
+        "morph": "HC/Vqq3ms"
+      },
+      {
+        "text": "בְ/ךָ֖",
+        "text_no_nikud": "ב/ך",
+        "lemma": "Hb",
+        "strong": "Hb",
+        "morph": "HR/Sp2ms"
+      },
+      {
+        "text": "חֵֽטְא",
+        "text_no_nikud": "חטא",
+        "lemma": "H2399",
+        "strong": "H2399",
+        "morph": "HNcmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 16,
+    "hebrew": "לֹֽא יוּמְת֤וּ אָבוֹת֙ עַל בָּנִ֔ים וּ/בָנִ֖ים לֹא יוּמְת֣וּ עַל אָב֑וֹת אִ֥יש בְּ/חֶטְא֖/וֹ יוּמָֽתוּ",
+    "hebrew_no_nikud": "לא יומתו אבות על בנים ו/בנים לא יומתו על אבות איש ב/חטא/ו יומתו",
+    "words": [
+      {
+        "text": "לֹֽא",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "יוּמְת֤וּ",
+        "text_no_nikud": "יומתו",
+        "lemma": "H4191",
+        "strong": "H4191",
+        "morph": "HVHi3mp"
+      },
+      {
+        "text": "אָבוֹת֙",
+        "text_no_nikud": "אבות",
+        "lemma": "H1",
+        "strong": "H1",
+        "morph": "HNcmpa"
+      },
+      {
+        "text": "עַל",
+        "text_no_nikud": "על",
+        "lemma": "H5921",
+        "strong": "H5921",
+        "morph": "HR"
+      },
+      {
+        "text": "בָּנִ֔ים",
+        "text_no_nikud": "בנים",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpa"
+      },
+      {
+        "text": "וּ/בָנִ֖ים",
+        "text_no_nikud": "ו/בנים",
+        "lemma": "Hc/H1121",
+        "strong": "Hc/H1121",
+        "morph": "HC/Ncmpa"
+      },
+      {
+        "text": "לֹא",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "יוּמְת֣וּ",
+        "text_no_nikud": "יומתו",
+        "lemma": "H4191",
+        "strong": "H4191",
+        "morph": "HVHi3mp"
+      },
+      {
+        "text": "עַל",
+        "text_no_nikud": "על",
+        "lemma": "H5921",
+        "strong": "H5921",
+        "morph": "HR"
+      },
+      {
+        "text": "אָב֑וֹת",
+        "text_no_nikud": "אבות",
+        "lemma": "H1",
+        "strong": "H1",
+        "morph": "HNcmpa"
+      },
+      {
+        "text": "אִ֥יש",
+        "text_no_nikud": "איש",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "בְּ/חֶטְא֖/וֹ",
+        "text_no_nikud": "ב/חטא/ו",
+        "lemma": "Hb/H2399",
+        "strong": "Hb/H2399",
+        "morph": "HR/Ncmsc/Sp3ms"
+      },
+      {
+        "text": "יוּמָֽתוּ",
+        "text_no_nikud": "יומתו",
+        "lemma": "H4191",
+        "strong": "H4191",
+        "morph": "HVHi3mp"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 17,
+    "hebrew": "לֹ֣א תַטֶּ֔ה מִשְׁפַּ֖ט גֵּ֣ר יָת֑וֹם וְ/לֹ֣א תַחֲבֹ֔ל בֶּ֖גֶד אַלְמָנָֽה",
+    "hebrew_no_nikud": "לא תטה משפט גר יתום ו/לא תחבל בגד אלמנה",
+    "words": [
+      {
+        "text": "לֹ֣א",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "תַטֶּ֔ה",
+        "text_no_nikud": "תטה",
+        "lemma": "H5186",
+        "strong": "H5186",
+        "morph": "HVhi2ms"
+      },
+      {
+        "text": "מִשְׁפַּ֖ט",
+        "text_no_nikud": "משפט",
+        "lemma": "H4941",
+        "strong": "H4941",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "גֵּ֣ר",
+        "text_no_nikud": "גר",
+        "lemma": "H1616",
+        "strong": "H1616",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "יָת֑וֹם",
+        "text_no_nikud": "יתום",
+        "lemma": "H3490",
+        "strong": "H3490",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "וְ/לֹ֣א",
+        "text_no_nikud": "ו/לא",
+        "lemma": "Hc/H3808",
+        "strong": "Hc/H3808",
+        "morph": "HC/Tn"
+      },
+      {
+        "text": "תַחֲבֹ֔ל",
+        "text_no_nikud": "תחבל",
+        "lemma": "H2254",
+        "strong": "H2254",
+        "morph": "HVqi2ms"
+      },
+      {
+        "text": "בֶּ֖גֶד",
+        "text_no_nikud": "בגד",
+        "lemma": "H899",
+        "strong": "H899",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "אַלְמָנָֽה",
+        "text_no_nikud": "אלמנה",
+        "lemma": "H490",
+        "strong": "H490",
+        "morph": "HNcfsa"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 18,
+    "hebrew": "וְ/זָכַרְתָּ֗ כִּ֣י עֶ֤בֶד הָיִ֨יתָ֙ בְּ/מִצְרַ֔יִם וַֽ/יִּפְדְּ/ךָ֛ יְהוָ֥ה אֱלֹהֶ֖י/ךָ מִ/שָּׁ֑ם עַל כֵּ֞ן אָנֹכִ֤י מְצַוְּ/ךָ֙ לַ/עֲשׂ֔וֹת אֶת הַ/דָּבָ֖ר הַ/זֶּֽה",
+    "hebrew_no_nikud": "ו/זכרת כי עבד היית ב/מצרים ו/יפד/ך יהוה אלהי/ך מ/שם על כן אנכי מצו/ך ל/עשות את ה/דבר ה/זה",
+    "words": [
+      {
+        "text": "וְ/זָכַרְתָּ֗",
+        "text_no_nikud": "ו/זכרת",
+        "lemma": "Hc/H2142",
+        "strong": "Hc/H2142",
+        "morph": "HC/Vqq2ms"
+      },
+      {
+        "text": "כִּ֣י",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "עֶ֤בֶד",
+        "text_no_nikud": "עבד",
+        "lemma": "H5650",
+        "strong": "H5650",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "הָיִ֨יתָ֙",
+        "text_no_nikud": "היית",
+        "lemma": "H1961",
+        "strong": "H1961",
+        "morph": "HVqp2ms"
+      },
+      {
+        "text": "בְּ/מִצְרַ֔יִם",
+        "text_no_nikud": "ב/מצרים",
+        "lemma": "Hb/H4714",
+        "strong": "Hb/H4714",
+        "morph": "HR/Np"
+      },
+      {
+        "text": "וַֽ/יִּפְדְּ/ךָ֛",
+        "text_no_nikud": "ו/יפד/ך",
+        "lemma": "Hc/H6299",
+        "strong": "Hc/H6299",
+        "morph": "HC/Vqw3ms/Sp2ms"
+      },
+      {
+        "text": "יְהוָ֥ה",
+        "text_no_nikud": "יהוה",
+        "lemma": "H3068",
+        "strong": "H3068",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֱלֹהֶ֖י/ךָ",
+        "text_no_nikud": "אלהי/ך",
+        "lemma": "H430",
+        "strong": "H430",
+        "morph": "HNcmpc/Sp2ms"
+      },
+      {
+        "text": "מִ/שָּׁ֑ם",
+        "text_no_nikud": "מ/שם",
+        "lemma": "Hm/H8033",
+        "strong": "Hm/H8033",
+        "morph": "HR/D"
+      },
+      {
+        "text": "עַל",
+        "text_no_nikud": "על",
+        "lemma": "H5921",
+        "strong": "H5921",
+        "morph": "HR"
+      },
+      {
+        "text": "כֵּ֞ן",
+        "text_no_nikud": "כן",
+        "lemma": "H3651",
+        "strong": "H3651",
+        "morph": "HTm"
+      },
+      {
+        "text": "אָנֹכִ֤י",
+        "text_no_nikud": "אנכי",
+        "lemma": "H595",
+        "strong": "H595",
+        "morph": "HPp1cs"
+      },
+      {
+        "text": "מְצַוְּ/ךָ֙",
+        "text_no_nikud": "מצו/ך",
+        "lemma": "H6680",
+        "strong": "H6680",
+        "morph": "HVprmsc/Sp2ms"
+      },
+      {
+        "text": "לַ/עֲשׂ֔וֹת",
+        "text_no_nikud": "ל/עשות",
+        "lemma": "Hl/H6213",
+        "strong": "Hl/H6213",
+        "morph": "HR/Vqc"
+      },
+      {
+        "text": "אֶת",
+        "text_no_nikud": "את",
+        "lemma": "H853",
+        "strong": "H853",
+        "morph": "HTo"
+      },
+      {
+        "text": "הַ/דָּבָ֖ר",
+        "text_no_nikud": "ה/דבר",
+        "lemma": "Hd/H1697",
+        "strong": "Hd/H1697",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "הַ/זֶּֽה",
+        "text_no_nikud": "ה/זה",
+        "lemma": "Hd/H2088",
+        "strong": "Hd/H2088",
+        "morph": "HTd/Pdxms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 19,
+    "hebrew": "כִּ֣י תִקְצֹר֩ קְצִֽירְ/ךָ֨ בְ/שָׂדֶ֜/ךָ וְ/שָֽׁכַחְתָּ֧ עֹ֣מֶר בַּ/שָּׂדֶ֗ה לֹ֤א תָשׁוּב֙ לְ/קַחְתּ֔/וֹ לַ/גֵּ֛ר לַ/יָּת֥וֹם וְ/לָ/אַלְמָנָ֖ה יִהְיֶ֑ה לְמַ֤עַן יְבָרֶכְ/ךָ֙ יְהוָ֣ה אֱלֹהֶ֔י/ךָ בְּ/כֹ֖ל מַעֲשֵׂ֥ה יָדֶֽי/ךָ",
+    "hebrew_no_nikud": "כי תקצר קציר/ך ב/שד/ך ו/שכחת עמר ב/שדה לא תשוב ל/קחת/ו ל/גר ל/יתום ו/ל/אלמנה יהיה למען יברכ/ך יהוה אלהי/ך ב/כל מעשה ידי/ך",
+    "words": [
+      {
+        "text": "כִּ֣י",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "תִקְצֹר֩",
+        "text_no_nikud": "תקצר",
+        "lemma": "H7114",
+        "strong": "H7114",
+        "morph": "HVqi2ms"
+      },
+      {
+        "text": "קְצִֽירְ/ךָ֨",
+        "text_no_nikud": "קציר/ך",
+        "lemma": "H7105",
+        "strong": "H7105",
+        "morph": "HNcmsc/Sp2ms"
+      },
+      {
+        "text": "בְ/שָׂדֶ֜/ךָ",
+        "text_no_nikud": "ב/שד/ך",
+        "lemma": "Hb/H7704",
+        "strong": "Hb/H7704",
+        "morph": "HR/Ncmsc/Sp2ms"
+      },
+      {
+        "text": "וְ/שָֽׁכַחְתָּ֧",
+        "text_no_nikud": "ו/שכחת",
+        "lemma": "Hc/H7911",
+        "strong": "Hc/H7911",
+        "morph": "HC/Vqq2ms"
+      },
+      {
+        "text": "עֹ֣מֶר",
+        "text_no_nikud": "עמר",
+        "lemma": "H6016",
+        "strong": "H6016",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "בַּ/שָּׂדֶ֗ה",
+        "text_no_nikud": "ב/שדה",
+        "lemma": "Hb/H7704",
+        "strong": "Hb/H7704",
+        "morph": "HRd/Ncmsa"
+      },
+      {
+        "text": "לֹ֤א",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "תָשׁוּב֙",
+        "text_no_nikud": "תשוב",
+        "lemma": "H7725",
+        "strong": "H7725",
+        "morph": "HVqi2ms"
+      },
+      {
+        "text": "לְ/קַחְתּ֔/וֹ",
+        "text_no_nikud": "ל/קחת/ו",
+        "lemma": "Hl/H3947",
+        "strong": "Hl/H3947",
+        "morph": "HR/Vqc/Sp3ms"
+      },
+      {
+        "text": "לַ/גֵּ֛ר",
+        "text_no_nikud": "ל/גר",
+        "lemma": "Hl/H1616",
+        "strong": "Hl/H1616",
+        "morph": "HRd/Ncmsa"
+      },
+      {
+        "text": "לַ/יָּת֥וֹם",
+        "text_no_nikud": "ל/יתום",
+        "lemma": "Hl/H3490",
+        "strong": "Hl/H3490",
+        "morph": "HRd/Ncmsa"
+      },
+      {
+        "text": "וְ/לָ/אַלְמָנָ֖ה",
+        "text_no_nikud": "ו/ל/אלמנה",
+        "lemma": "Hc/Hl/H490",
+        "strong": "Hc/Hl/H490",
+        "morph": "HC/Rd/Ncfsa"
+      },
+      {
+        "text": "יִהְיֶ֑ה",
+        "text_no_nikud": "יהיה",
+        "lemma": "H1961",
+        "strong": "H1961",
+        "morph": "HVqi3ms"
+      },
+      {
+        "text": "לְמַ֤עַן",
+        "text_no_nikud": "למען",
+        "lemma": "H4616",
+        "strong": "H4616",
+        "morph": "HR"
+      },
+      {
+        "text": "יְבָרֶכְ/ךָ֙",
+        "text_no_nikud": "יברכ/ך",
+        "lemma": "H1288",
+        "strong": "H1288",
+        "morph": "HVpi3ms/Sp2ms"
+      },
+      {
+        "text": "יְהוָ֣ה",
+        "text_no_nikud": "יהוה",
+        "lemma": "H3068",
+        "strong": "H3068",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֱלֹהֶ֔י/ךָ",
+        "text_no_nikud": "אלהי/ך",
+        "lemma": "H430",
+        "strong": "H430",
+        "morph": "HNcmpc/Sp2ms"
+      },
+      {
+        "text": "בְּ/כֹ֖ל",
+        "text_no_nikud": "ב/כל",
+        "lemma": "Hb/H3605",
+        "strong": "Hb/H3605",
+        "morph": "HR/Ncmsc"
+      },
+      {
+        "text": "מַעֲשֵׂ֥ה",
+        "text_no_nikud": "מעשה",
+        "lemma": "H4639",
+        "strong": "H4639",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "יָדֶֽי/ךָ",
+        "text_no_nikud": "ידי/ך",
+        "lemma": "H3027",
+        "strong": "H3027",
+        "morph": "HNcbdc/Sp2ms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 20,
+    "hebrew": "כִּ֤י תַחְבֹּט֙ זֵֽיתְ/ךָ֔ לֹ֥א תְפָאֵ֖ר אַחֲרֶ֑י/ךָ לַ/גֵּ֛ר לַ/יָּת֥וֹם וְ/לָ/אַלְמָנָ֖ה יִהְיֶֽה",
+    "hebrew_no_nikud": "כי תחבט זית/ך לא תפאר אחרי/ך ל/גר ל/יתום ו/ל/אלמנה יהיה",
+    "words": [
+      {
+        "text": "כִּ֤י",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "תַחְבֹּט֙",
+        "text_no_nikud": "תחבט",
+        "lemma": "H2251",
+        "strong": "H2251",
+        "morph": "HVqi2ms"
+      },
+      {
+        "text": "זֵֽיתְ/ךָ֔",
+        "text_no_nikud": "זית/ך",
+        "lemma": "H2132",
+        "strong": "H2132",
+        "morph": "HNcmsc/Sp2ms"
+      },
+      {
+        "text": "לֹ֥א",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "תְפָאֵ֖ר",
+        "text_no_nikud": "תפאר",
+        "lemma": "H6286",
+        "strong": "H6286",
+        "morph": "HVpi2ms"
+      },
+      {
+        "text": "אַחֲרֶ֑י/ךָ",
+        "text_no_nikud": "אחרי/ך",
+        "lemma": "H310",
+        "strong": "H310",
+        "morph": "HR/Sp2ms"
+      },
+      {
+        "text": "לַ/גֵּ֛ר",
+        "text_no_nikud": "ל/גר",
+        "lemma": "Hl/H1616",
+        "strong": "Hl/H1616",
+        "morph": "HRd/Ncmsa"
+      },
+      {
+        "text": "לַ/יָּת֥וֹם",
+        "text_no_nikud": "ל/יתום",
+        "lemma": "Hl/H3490",
+        "strong": "Hl/H3490",
+        "morph": "HRd/Ncmsa"
+      },
+      {
+        "text": "וְ/לָ/אַלְמָנָ֖ה",
+        "text_no_nikud": "ו/ל/אלמנה",
+        "lemma": "Hc/Hl/H490",
+        "strong": "Hc/Hl/H490",
+        "morph": "HC/Rd/Ncfsa"
+      },
+      {
+        "text": "יִהְיֶֽה",
+        "text_no_nikud": "יהיה",
+        "lemma": "H1961",
+        "strong": "H1961",
+        "morph": "HVqi3ms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 21,
+    "hebrew": "כִּ֤י תִבְצֹר֙ כַּרְמְ/ךָ֔ לֹ֥א תְעוֹלֵ֖ל אַחֲרֶ֑י/ךָ לַ/גֵּ֛ר לַ/יָּת֥וֹם וְ/לָ/אַלְמָנָ֖ה יִהְיֶֽה",
+    "hebrew_no_nikud": "כי תבצר כרמ/ך לא תעולל אחרי/ך ל/גר ל/יתום ו/ל/אלמנה יהיה",
+    "words": [
+      {
+        "text": "כִּ֤י",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "תִבְצֹר֙",
+        "text_no_nikud": "תבצר",
+        "lemma": "H1219",
+        "strong": "H1219",
+        "morph": "HVqi2ms"
+      },
+      {
+        "text": "כַּרְמְ/ךָ֔",
+        "text_no_nikud": "כרמ/ך",
+        "lemma": "H3754",
+        "strong": "H3754",
+        "morph": "HNcbsc/Sp2ms"
+      },
+      {
+        "text": "לֹ֥א",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "תְעוֹלֵ֖ל",
+        "text_no_nikud": "תעולל",
+        "lemma": "H5953",
+        "strong": "H5953",
+        "morph": "HVmi2ms"
+      },
+      {
+        "text": "אַחֲרֶ֑י/ךָ",
+        "text_no_nikud": "אחרי/ך",
+        "lemma": "H310",
+        "strong": "H310",
+        "morph": "HR/Sp2ms"
+      },
+      {
+        "text": "לַ/גֵּ֛ר",
+        "text_no_nikud": "ל/גר",
+        "lemma": "Hl/H1616",
+        "strong": "Hl/H1616",
+        "morph": "HRd/Ncmsa"
+      },
+      {
+        "text": "לַ/יָּת֥וֹם",
+        "text_no_nikud": "ל/יתום",
+        "lemma": "Hl/H3490",
+        "strong": "Hl/H3490",
+        "morph": "HRd/Ncmsa"
+      },
+      {
+        "text": "וְ/לָ/אַלְמָנָ֖ה",
+        "text_no_nikud": "ו/ל/אלמנה",
+        "lemma": "Hc/Hl/H490",
+        "strong": "Hc/Hl/H490",
+        "morph": "HC/Rd/Ncfsa"
+      },
+      {
+        "text": "יִהְיֶֽה",
+        "text_no_nikud": "יהיה",
+        "lemma": "H1961",
+        "strong": "H1961",
+        "morph": "HVqi3ms"
+      }
+    ]
+  },
+  {
+    "chapter": 24,
+    "verse": 22,
+    "hebrew": "וְ/זָ֣כַרְתָּ֔ כִּי עֶ֥בֶד הָיִ֖יתָ בְּ/אֶ֣רֶץ מִצְרָ֑יִם עַל כֵּ֞ן אָנֹכִ֤י מְצַוְּ/ךָ֙ לַ/עֲשׂ֔וֹת אֶת הַ/דָּבָ֖ר הַ/זֶּֽה",
+    "hebrew_no_nikud": "ו/זכרת כי עבד היית ב/ארץ מצרים על כן אנכי מצו/ך ל/עשות את ה/דבר ה/זה",
+    "words": [
+      {
+        "text": "וְ/זָ֣כַרְתָּ֔",
+        "text_no_nikud": "ו/זכרת",
+        "lemma": "Hc/H2142",
+        "strong": "Hc/H2142",
+        "morph": "HC/Vqq2ms"
+      },
+      {
+        "text": "כִּי",
+        "text_no_nikud": "כי",
+        "lemma": "H3588",
+        "strong": "H3588",
+        "morph": "HC"
+      },
+      {
+        "text": "עֶ֥בֶד",
+        "text_no_nikud": "עבד",
+        "lemma": "H5650",
+        "strong": "H5650",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "הָיִ֖יתָ",
+        "text_no_nikud": "היית",
+        "lemma": "H1961",
+        "strong": "H1961",
+        "morph": "HVqp2ms"
+      },
+      {
+        "text": "בְּ/אֶ֣רֶץ",
+        "text_no_nikud": "ב/ארץ",
+        "lemma": "Hb/H776",
+        "strong": "Hb/H776",
+        "morph": "HR/Ncbsc"
+      },
+      {
+        "text": "מִצְרָ֑יִם",
+        "text_no_nikud": "מצרים",
+        "lemma": "H4714",
+        "strong": "H4714",
+        "morph": "HNp"
+      },
+      {
+        "text": "עַל",
+        "text_no_nikud": "על",
+        "lemma": "H5921",
+        "strong": "H5921",
+        "morph": "HR"
+      },
+      {
+        "text": "כֵּ֞ן",
+        "text_no_nikud": "כן",
+        "lemma": "H3651",
+        "strong": "H3651",
+        "morph": "HTm"
+      },
+      {
+        "text": "אָנֹכִ֤י",
+        "text_no_nikud": "אנכי",
+        "lemma": "H595",
+        "strong": "H595",
+        "morph": "HPp1cs"
+      },
+      {
+        "text": "מְצַוְּ/ךָ֙",
+        "text_no_nikud": "מצו/ך",
+        "lemma": "H6680",
+        "strong": "H6680",
+        "morph": "HVprmsc/Sp2ms"
+      },
+      {
+        "text": "לַ/עֲשׂ֔וֹת",
+        "text_no_nikud": "ל/עשות",
+        "lemma": "Hl/H6213",
+        "strong": "Hl/H6213",
+        "morph": "HR/Vqc"
+      },
+      {
+        "text": "אֶת",
+        "text_no_nikud": "את",
+        "lemma": "H853",
+        "strong": "H853",
+        "morph": "HTo"
+      },
+      {
+        "text": "הַ/דָּבָ֖ר",
+        "text_no_nikud": "ה/דבר",
+        "lemma": "Hd/H1697",
+        "strong": "Hd/H1697",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "הַ/זֶּֽה",
+        "text_no_nikud": "ה/זה",
+        "lemma": "Hd/H2088",
+        "strong": "Hd/H2088",
+        "morph": "HTd/Pdxms"
+      }
+    ]
+  }
+]
