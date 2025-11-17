@@ -1,0 +1,4384 @@
+[
+  {
+    "chapter": 2,
+    "verse": 1,
+    "hebrew": "וְ/אֵ֣לֶּה בְּנֵ֣י הַ/מְּדִינָ֗ה הָֽ/עֹלִים֙ מִ/שְּׁבִ֣י הַ/גּוֹלָ֔ה אֲשֶׁ֥ר הֶגְלָ֛ה נבוכדנצור נְבוּכַדְנֶצַּ֥ר מֶֽלֶךְ בָּבֶ֖ל לְ/בָבֶ֑ל וַ/יָּשׁ֛וּבוּ לִ/ירוּשָׁלִַ֥ם וִֽ/יהוּדָ֖ה אִ֥ישׁ לְ/עִירֽ/וֹ",
+    "hebrew_no_nikud": "ו/אלה בני ה/מדינה ה/עלים מ/שבי ה/גולה אשר הגלה נבוכדנצור נבוכדנצר מלך בבל ל/בבל ו/ישובו ל/ירושלם ו/יהודה איש ל/עיר/ו",
+    "words": [
+      {
+        "text": "וְ/אֵ֣לֶּה",
+        "text_no_nikud": "ו/אלה",
+        "lemma": "Hc/H428",
+        "strong": "Hc/H428",
+        "morph": "HC/Pdxcp"
+      },
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "הַ/מְּדִינָ֗ה",
+        "text_no_nikud": "ה/מדינה",
+        "lemma": "Hd/H4082",
+        "strong": "Hd/H4082",
+        "morph": "HTd/Ncfsa"
+      },
+      {
+        "text": "הָֽ/עֹלִים֙",
+        "text_no_nikud": "ה/עלים",
+        "lemma": "Hd/H5927",
+        "strong": "Hd/H5927",
+        "morph": "HTd/Vqrmpa"
+      },
+      {
+        "text": "מִ/שְּׁבִ֣י",
+        "text_no_nikud": "מ/שבי",
+        "lemma": "Hm/H7628",
+        "strong": "Hm/H7628",
+        "morph": "HR/Ncbsc"
+      },
+      {
+        "text": "הַ/גּוֹלָ֔ה",
+        "text_no_nikud": "ה/גולה",
+        "lemma": "Hd/H1473",
+        "strong": "Hd/H1473",
+        "morph": "HTd/Ncfsa"
+      },
+      {
+        "text": "אֲשֶׁ֥ר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "הֶגְלָ֛ה",
+        "text_no_nikud": "הגלה",
+        "lemma": "H1540",
+        "strong": "H1540",
+        "morph": "HVhp3ms"
+      },
+      {
+        "text": "נבוכדנצור",
+        "text_no_nikud": "נבוכדנצור",
+        "lemma": "H5020",
+        "strong": "H5020",
+        "morph": "HNp"
+      },
+      {
+        "text": "נְבוּכַדְנֶצַּ֥ר",
+        "text_no_nikud": "נבוכדנצר",
+        "lemma": "H5020",
+        "strong": "H5020",
+        "morph": "HNp"
+      },
+      {
+        "text": "מֶֽלֶךְ",
+        "text_no_nikud": "מלך",
+        "lemma": "H4428",
+        "strong": "H4428",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "בָּבֶ֖ל",
+        "text_no_nikud": "בבל",
+        "lemma": "H894",
+        "strong": "H894",
+        "morph": "HNp"
+      },
+      {
+        "text": "לְ/בָבֶ֑ל",
+        "text_no_nikud": "ל/בבל",
+        "lemma": "Hl/H894",
+        "strong": "Hl/H894",
+        "morph": "HR/Np"
+      },
+      {
+        "text": "וַ/יָּשׁ֛וּבוּ",
+        "text_no_nikud": "ו/ישובו",
+        "lemma": "Hc/H7725",
+        "strong": "Hc/H7725",
+        "morph": "HC/Vqw3mp"
+      },
+      {
+        "text": "לִ/ירוּשָׁלִַ֥ם",
+        "text_no_nikud": "ל/ירושלם",
+        "lemma": "Hl/H3389",
+        "strong": "Hl/H3389",
+        "morph": "HR/Np"
+      },
+      {
+        "text": "וִֽ/יהוּדָ֖ה",
+        "text_no_nikud": "ו/יהודה",
+        "lemma": "Hc/H3063",
+        "strong": "Hc/H3063",
+        "morph": "HC/Np"
+      },
+      {
+        "text": "אִ֥ישׁ",
+        "text_no_nikud": "איש",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "לְ/עִירֽ/וֹ",
+        "text_no_nikud": "ל/עיר/ו",
+        "lemma": "Hl/H5892",
+        "strong": "Hl/H5892",
+        "morph": "HR/Ncfsc/Sp3ms"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 2,
+    "hebrew": "אֲשֶׁר בָּ֣אוּ עִם זְרֻבָּבֶ֗ל יֵשׁ֡וּעַ נְ֠חֶמְיָה שְׂרָיָ֨ה רְֽעֵלָיָ֜ה מָרְדֳּכַ֥י בִּלְשָׁ֛ן מִסְפָּ֥ר בִּגְוַ֖י רְח֣וּם בַּעֲנָ֑ה מִסְפַּ֕ר אַנְשֵׁ֖י עַ֥ם יִשְׂרָאֵֽל",
+    "hebrew_no_nikud": "אשר באו עם זרבבל ישוע נחמיה שריה רעליה מרדכי בלשן מספר בגוי רחום בענה מספר אנשי עם ישראל",
+    "words": [
+      {
+        "text": "אֲשֶׁר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "בָּ֣אוּ",
+        "text_no_nikud": "באו",
+        "lemma": "H935",
+        "strong": "H935",
+        "morph": "HVqp3cp"
+      },
+      {
+        "text": "עִם",
+        "text_no_nikud": "עם",
+        "lemma": "H5973",
+        "strong": "H5973",
+        "morph": "HR"
+      },
+      {
+        "text": "זְרֻבָּבֶ֗ל",
+        "text_no_nikud": "זרבבל",
+        "lemma": "H2216",
+        "strong": "H2216",
+        "morph": "HNp"
+      },
+      {
+        "text": "יֵשׁ֡וּעַ",
+        "text_no_nikud": "ישוע",
+        "lemma": "H3442",
+        "strong": "H3442",
+        "morph": "HNp"
+      },
+      {
+        "text": "נְ֠חֶמְיָה",
+        "text_no_nikud": "נחמיה",
+        "lemma": "H5166",
+        "strong": "H5166",
+        "morph": "HNp"
+      },
+      {
+        "text": "שְׂרָיָ֨ה",
+        "text_no_nikud": "שריה",
+        "lemma": "H8304",
+        "strong": "H8304",
+        "morph": "HNp"
+      },
+      {
+        "text": "רְֽעֵלָיָ֜ה",
+        "text_no_nikud": "רעליה",
+        "lemma": "H7480",
+        "strong": "H7480",
+        "morph": "HNp"
+      },
+      {
+        "text": "מָרְדֳּכַ֥י",
+        "text_no_nikud": "מרדכי",
+        "lemma": "H4782",
+        "strong": "H4782",
+        "morph": "HNp"
+      },
+      {
+        "text": "בִּלְשָׁ֛ן",
+        "text_no_nikud": "בלשן",
+        "lemma": "H1114",
+        "strong": "H1114",
+        "morph": "HNp"
+      },
+      {
+        "text": "מִסְפָּ֥ר",
+        "text_no_nikud": "מספר",
+        "lemma": "H4558",
+        "strong": "H4558",
+        "morph": "HNp"
+      },
+      {
+        "text": "בִּגְוַ֖י",
+        "text_no_nikud": "בגוי",
+        "lemma": "H902",
+        "strong": "H902",
+        "morph": "HNp"
+      },
+      {
+        "text": "רְח֣וּם",
+        "text_no_nikud": "רחום",
+        "lemma": "H7348",
+        "strong": "H7348",
+        "morph": "HNp"
+      },
+      {
+        "text": "בַּעֲנָ֑ה",
+        "text_no_nikud": "בענה",
+        "lemma": "H1196",
+        "strong": "H1196",
+        "morph": "HNp"
+      },
+      {
+        "text": "מִסְפַּ֕ר",
+        "text_no_nikud": "מספר",
+        "lemma": "H4557",
+        "strong": "H4557",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "אַנְשֵׁ֖י",
+        "text_no_nikud": "אנשי",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עַ֥ם",
+        "text_no_nikud": "עם",
+        "lemma": "H5971",
+        "strong": "H5971",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "יִשְׂרָאֵֽל",
+        "text_no_nikud": "ישראל",
+        "lemma": "H3478",
+        "strong": "H3478",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 3,
+    "hebrew": "בְּנֵ֣י פַרְעֹ֔שׁ אַלְפַּ֕יִם מֵאָ֖ה שִׁבְעִ֥ים וּ/שְׁנָֽיִם",
+    "hebrew_no_nikud": "בני פרעש אלפים מאה שבעים ו/שנים",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "פַרְעֹ֔שׁ",
+        "text_no_nikud": "פרעש",
+        "lemma": "H6551",
+        "strong": "H6551",
+        "morph": "HNp"
+      },
+      {
+        "text": "אַלְפַּ֕יִם",
+        "text_no_nikud": "אלפים",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "מֵאָ֖ה",
+        "text_no_nikud": "מאה",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "שִׁבְעִ֥ים",
+        "text_no_nikud": "שבעים",
+        "lemma": "H7657",
+        "strong": "H7657",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנָֽיִם",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 4,
+    "hebrew": "בְּנֵ֣י שְׁפַטְיָ֔ה שְׁלֹ֥שׁ מֵא֖וֹת שִׁבְעִ֥ים וּ/שְׁנָֽיִם",
+    "hebrew_no_nikud": "בני שפטיה שלש מאות שבעים ו/שנים",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "שְׁפַטְיָ֔ה",
+        "text_no_nikud": "שפטיה",
+        "lemma": "H8203",
+        "strong": "H8203",
+        "morph": "HNp"
+      },
+      {
+        "text": "שְׁלֹ֥שׁ",
+        "text_no_nikud": "שלש",
+        "lemma": "H7969",
+        "strong": "H7969",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שִׁבְעִ֥ים",
+        "text_no_nikud": "שבעים",
+        "lemma": "H7657",
+        "strong": "H7657",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנָֽיִם",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 5,
+    "hebrew": "בְּנֵ֣י אָרַ֔ח שְׁבַ֥ע מֵא֖וֹת חֲמִשָּׁ֥ה וְ/שִׁבְעִֽים",
+    "hebrew_no_nikud": "בני ארח שבע מאות חמשה ו/שבעים",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "אָרַ֔ח",
+        "text_no_nikud": "ארח",
+        "lemma": "H733",
+        "strong": "H733",
+        "morph": "HNp"
+      },
+      {
+        "text": "שְׁבַ֥ע",
+        "text_no_nikud": "שבע",
+        "lemma": "H7651",
+        "strong": "H7651",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "חֲמִשָּׁ֥ה",
+        "text_no_nikud": "חמשה",
+        "lemma": "H2568",
+        "strong": "H2568",
+        "morph": "HAcmsa"
+      },
+      {
+        "text": "וְ/שִׁבְעִֽים",
+        "text_no_nikud": "ו/שבעים",
+        "lemma": "Hc/H7657",
+        "strong": "Hc/H7657",
+        "morph": "HC/Acbpa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 6,
+    "hebrew": "בְּנֵֽי פַחַ֥ת מוֹאָ֛ב לִ/בְנֵ֥י יֵשׁ֖וּעַ יוֹאָ֑ב אַלְפַּ֕יִם שְׁמֹנֶ֥ה מֵא֖וֹת וּ/שְׁנֵ֥ים עָשָֽׂר",
+    "hebrew_no_nikud": "בני פחת מואב ל/בני ישוע יואב אלפים שמנה מאות ו/שנים עשר",
+    "words": [
+      {
+        "text": "בְּנֵֽי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "פַחַ֥ת",
+        "text_no_nikud": "פחת",
+        "lemma": "H6355",
+        "strong": "H6355",
+        "morph": "HNp"
+      },
+      {
+        "text": "מוֹאָ֛ב",
+        "text_no_nikud": "מואב",
+        "lemma": "H6355",
+        "strong": "H6355",
+        "morph": "HNp"
+      },
+      {
+        "text": "לִ/בְנֵ֥י",
+        "text_no_nikud": "ל/בני",
+        "lemma": "Hl/H1121",
+        "strong": "Hl/H1121",
+        "morph": "HR/Ncmpc"
+      },
+      {
+        "text": "יֵשׁ֖וּעַ",
+        "text_no_nikud": "ישוע",
+        "lemma": "H3442",
+        "strong": "H3442",
+        "morph": "HNp"
+      },
+      {
+        "text": "יוֹאָ֑ב",
+        "text_no_nikud": "יואב",
+        "lemma": "H3097",
+        "strong": "H3097",
+        "morph": "HNp"
+      },
+      {
+        "text": "אַלְפַּ֕יִם",
+        "text_no_nikud": "אלפים",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שְׁמֹנֶ֥ה",
+        "text_no_nikud": "שמנה",
+        "lemma": "H8083",
+        "strong": "H8083",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנֵ֥ים",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      },
+      {
+        "text": "עָשָֽׂר",
+        "text_no_nikud": "עשר",
+        "lemma": "H6240",
+        "strong": "H6240",
+        "morph": "HAcmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 7,
+    "hebrew": "בְּנֵ֣י עֵילָ֔ם אֶ֕לֶף מָאתַ֖יִם חֲמִשִּׁ֥ים וְ/אַרְבָּעָֽה",
+    "hebrew_no_nikud": "בני עילם אלף מאתים חמשים ו/ארבעה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עֵילָ֔ם",
+        "text_no_nikud": "עילם",
+        "lemma": "H5867",
+        "strong": "H5867",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֶ֕לֶף",
+        "text_no_nikud": "אלף",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "מָאתַ֖יִם",
+        "text_no_nikud": "מאתים",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbda"
+      },
+      {
+        "text": "חֲמִשִּׁ֥ים",
+        "text_no_nikud": "חמשים",
+        "lemma": "H2572",
+        "strong": "H2572",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/אַרְבָּעָֽה",
+        "text_no_nikud": "ו/ארבעה",
+        "lemma": "Hc/H702",
+        "strong": "Hc/H702",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 8,
+    "hebrew": "בְּנֵ֣י זַתּ֔וּא תְּשַׁ֥ע מֵא֖וֹת וְ/אַרְבָּעִ֥ים וַ/חֲמִשָּֽׁה",
+    "hebrew_no_nikud": "בני זתוא תשע מאות ו/ארבעים ו/חמשה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "זַתּ֔וּא",
+        "text_no_nikud": "זתוא",
+        "lemma": "H2240",
+        "strong": "H2240",
+        "morph": "HNp"
+      },
+      {
+        "text": "תְּשַׁ֥ע",
+        "text_no_nikud": "תשע",
+        "lemma": "H8672",
+        "strong": "H8672",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/אַרְבָּעִ֥ים",
+        "text_no_nikud": "ו/ארבעים",
+        "lemma": "Hc/H705",
+        "strong": "Hc/H705",
+        "morph": "HC/Acbpa"
+      },
+      {
+        "text": "וַ/חֲמִשָּֽׁה",
+        "text_no_nikud": "ו/חמשה",
+        "lemma": "Hc/H2568",
+        "strong": "Hc/H2568",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 9,
+    "hebrew": "בְּנֵ֣י זַכָּ֔י שְׁבַ֥ע מֵא֖וֹת וְ/שִׁשִּֽׁים",
+    "hebrew_no_nikud": "בני זכי שבע מאות ו/ששים",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "זַכָּ֔י",
+        "text_no_nikud": "זכי",
+        "lemma": "H2140",
+        "strong": "H2140",
+        "morph": "HNp"
+      },
+      {
+        "text": "שְׁבַ֥ע",
+        "text_no_nikud": "שבע",
+        "lemma": "H7651",
+        "strong": "H7651",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/שִׁשִּֽׁים",
+        "text_no_nikud": "ו/ששים",
+        "lemma": "Hc/H8346",
+        "strong": "Hc/H8346",
+        "morph": "HC/Acbpa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 10,
+    "hebrew": "בְּנֵ֣י בָנִ֔י שֵׁ֥שׁ מֵא֖וֹת אַרְבָּעִ֥ים וּ/שְׁנָֽיִם",
+    "hebrew_no_nikud": "בני בני שש מאות ארבעים ו/שנים",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בָנִ֔י",
+        "text_no_nikud": "בני",
+        "lemma": "H1137",
+        "strong": "H1137",
+        "morph": "HNp"
+      },
+      {
+        "text": "שֵׁ֥שׁ",
+        "text_no_nikud": "שש",
+        "lemma": "H8337",
+        "strong": "H8337",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "אַרְבָּעִ֥ים",
+        "text_no_nikud": "ארבעים",
+        "lemma": "H705",
+        "strong": "H705",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנָֽיִם",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 11,
+    "hebrew": "בְּנֵ֣י בֵבָ֔י שֵׁ֥שׁ מֵא֖וֹת עֶשְׂרִ֥ים וּ/שְׁלֹשָֽׁה",
+    "hebrew_no_nikud": "בני בבי שש מאות עשרים ו/שלשה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בֵבָ֔י",
+        "text_no_nikud": "בבי",
+        "lemma": "H893",
+        "strong": "H893",
+        "morph": "HNp"
+      },
+      {
+        "text": "שֵׁ֥שׁ",
+        "text_no_nikud": "שש",
+        "lemma": "H8337",
+        "strong": "H8337",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁלֹשָֽׁה",
+        "text_no_nikud": "ו/שלשה",
+        "lemma": "Hc/H7969",
+        "strong": "Hc/H7969",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 12,
+    "hebrew": "בְּנֵ֣י עַזְגָּ֔ד אֶ֕לֶף מָאתַ֖יִם עֶשְׂרִ֥ים וּ/שְׁנָֽיִם",
+    "hebrew_no_nikud": "בני עזגד אלף מאתים עשרים ו/שנים",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עַזְגָּ֔ד",
+        "text_no_nikud": "עזגד",
+        "lemma": "H5803",
+        "strong": "H5803",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֶ֕לֶף",
+        "text_no_nikud": "אלף",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "מָאתַ֖יִם",
+        "text_no_nikud": "מאתים",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbda"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנָֽיִם",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 13,
+    "hebrew": "בְּנֵי֙ אֲדֹ֣נִיקָ֔ם שֵׁ֥שׁ מֵא֖וֹת שִׁשִּׁ֥ים וְ/שִׁשָּֽׁה",
+    "hebrew_no_nikud": "בני אדניקם שש מאות ששים ו/ששה",
+    "words": [
+      {
+        "text": "בְּנֵי֙",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "אֲדֹ֣נִיקָ֔ם",
+        "text_no_nikud": "אדניקם",
+        "lemma": "H140",
+        "strong": "H140",
+        "morph": "HNp"
+      },
+      {
+        "text": "שֵׁ֥שׁ",
+        "text_no_nikud": "שש",
+        "lemma": "H8337",
+        "strong": "H8337",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שִׁשִּׁ֥ים",
+        "text_no_nikud": "ששים",
+        "lemma": "H8346",
+        "strong": "H8346",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/שִׁשָּֽׁה",
+        "text_no_nikud": "ו/ששה",
+        "lemma": "Hc/H8337",
+        "strong": "Hc/H8337",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 14,
+    "hebrew": "בְּנֵ֣י בִגְוָ֔י אַלְפַּ֖יִם חֲמִשִּׁ֥ים וְ/שִׁשָּֽׁה",
+    "hebrew_no_nikud": "בני בגוי אלפים חמשים ו/ששה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בִגְוָ֔י",
+        "text_no_nikud": "בגוי",
+        "lemma": "H902",
+        "strong": "H902",
+        "morph": "HNp"
+      },
+      {
+        "text": "אַלְפַּ֖יִם",
+        "text_no_nikud": "אלפים",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "חֲמִשִּׁ֥ים",
+        "text_no_nikud": "חמשים",
+        "lemma": "H2572",
+        "strong": "H2572",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/שִׁשָּֽׁה",
+        "text_no_nikud": "ו/ששה",
+        "lemma": "Hc/H8337",
+        "strong": "Hc/H8337",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 15,
+    "hebrew": "בְּנֵ֣י עָדִ֔ין אַרְבַּ֥ע מֵא֖וֹת חֲמִשִּׁ֥ים וְ/אַרְבָּעָֽה",
+    "hebrew_no_nikud": "בני עדין ארבע מאות חמשים ו/ארבעה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עָדִ֔ין",
+        "text_no_nikud": "עדין",
+        "lemma": "H5720",
+        "strong": "H5720",
+        "morph": "HNp"
+      },
+      {
+        "text": "אַרְבַּ֥ע",
+        "text_no_nikud": "ארבע",
+        "lemma": "H702",
+        "strong": "H702",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "חֲמִשִּׁ֥ים",
+        "text_no_nikud": "חמשים",
+        "lemma": "H2572",
+        "strong": "H2572",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/אַרְבָּעָֽה",
+        "text_no_nikud": "ו/ארבעה",
+        "lemma": "Hc/H702",
+        "strong": "Hc/H702",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 16,
+    "hebrew": "בְּנֵֽי אָטֵ֥ר לִֽ/יחִזְקִיָּ֖ה תִּשְׁעִ֥ים וּ/שְׁמֹנָֽה",
+    "hebrew_no_nikud": "בני אטר ל/יחזקיה תשעים ו/שמנה",
+    "words": [
+      {
+        "text": "בְּנֵֽי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "אָטֵ֥ר",
+        "text_no_nikud": "אטר",
+        "lemma": "H333",
+        "strong": "H333",
+        "morph": "HNp"
+      },
+      {
+        "text": "לִֽ/יחִזְקִיָּ֖ה",
+        "text_no_nikud": "ל/יחזקיה",
+        "lemma": "Hl/H2396",
+        "strong": "Hl/H2396",
+        "morph": "HR/Np"
+      },
+      {
+        "text": "תִּשְׁעִ֥ים",
+        "text_no_nikud": "תשעים",
+        "lemma": "H8673",
+        "strong": "H8673",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁמֹנָֽה",
+        "text_no_nikud": "ו/שמנה",
+        "lemma": "Hc/H8083",
+        "strong": "Hc/H8083",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 17,
+    "hebrew": "בְּנֵ֣י בֵצָ֔י שְׁלֹ֥שׁ מֵא֖וֹת עֶשְׂרִ֥ים וּ/שְׁלֹשָֽׁה",
+    "hebrew_no_nikud": "בני בצי שלש מאות עשרים ו/שלשה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בֵצָ֔י",
+        "text_no_nikud": "בצי",
+        "lemma": "H1209",
+        "strong": "H1209",
+        "morph": "HNp"
+      },
+      {
+        "text": "שְׁלֹ֥שׁ",
+        "text_no_nikud": "שלש",
+        "lemma": "H7969",
+        "strong": "H7969",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁלֹשָֽׁה",
+        "text_no_nikud": "ו/שלשה",
+        "lemma": "Hc/H7969",
+        "strong": "Hc/H7969",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 18,
+    "hebrew": "בְּנֵ֣י יוֹרָ֔ה מֵאָ֖ה וּ/שְׁנֵ֥ים עָשָֽׂר",
+    "hebrew_no_nikud": "בני יורה מאה ו/שנים עשר",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "יוֹרָ֔ה",
+        "text_no_nikud": "יורה",
+        "lemma": "H3139",
+        "strong": "H3139",
+        "morph": "HNp"
+      },
+      {
+        "text": "מֵאָ֖ה",
+        "text_no_nikud": "מאה",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "וּ/שְׁנֵ֥ים",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      },
+      {
+        "text": "עָשָֽׂר",
+        "text_no_nikud": "עשר",
+        "lemma": "H6240",
+        "strong": "H6240",
+        "morph": "HAcmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 19,
+    "hebrew": "בְּנֵ֣י חָשֻׁ֔ם מָאתַ֖יִם עֶשְׂרִ֥ים וּ/שְׁלֹשָֽׁה",
+    "hebrew_no_nikud": "בני חשם מאתים עשרים ו/שלשה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חָשֻׁ֔ם",
+        "text_no_nikud": "חשם",
+        "lemma": "H2828",
+        "strong": "H2828",
+        "morph": "HNp"
+      },
+      {
+        "text": "מָאתַ֖יִם",
+        "text_no_nikud": "מאתים",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbda"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁלֹשָֽׁה",
+        "text_no_nikud": "ו/שלשה",
+        "lemma": "Hc/H7969",
+        "strong": "Hc/H7969",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 20,
+    "hebrew": "בְּנֵ֥י גִבָּ֖ר תִּשְׁעִ֥ים וַ/חֲמִשָּֽׁה",
+    "hebrew_no_nikud": "בני גבר תשעים ו/חמשה",
+    "words": [
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "גִבָּ֖ר",
+        "text_no_nikud": "גבר",
+        "lemma": "H1402",
+        "strong": "H1402",
+        "morph": "HNp"
+      },
+      {
+        "text": "תִּשְׁעִ֥ים",
+        "text_no_nikud": "תשעים",
+        "lemma": "H8673",
+        "strong": "H8673",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וַ/חֲמִשָּֽׁה",
+        "text_no_nikud": "ו/חמשה",
+        "lemma": "Hc/H2568",
+        "strong": "Hc/H2568",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 21,
+    "hebrew": "בְּנֵ֣י בֵֽית לָ֔חֶם מֵאָ֖ה עֶשְׂרִ֥ים וּ/שְׁלֹשָֽׁה",
+    "hebrew_no_nikud": "בני בית לחם מאה עשרים ו/שלשה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בֵֽית",
+        "text_no_nikud": "בית",
+        "lemma": "H1035",
+        "strong": "H1035",
+        "morph": "HNp"
+      },
+      {
+        "text": "לָ֔חֶם",
+        "text_no_nikud": "לחם",
+        "lemma": "H1035",
+        "strong": "H1035",
+        "morph": "HNp"
+      },
+      {
+        "text": "מֵאָ֖ה",
+        "text_no_nikud": "מאה",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁלֹשָֽׁה",
+        "text_no_nikud": "ו/שלשה",
+        "lemma": "Hc/H7969",
+        "strong": "Hc/H7969",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 22,
+    "hebrew": "אַנְשֵׁ֥י נְטֹפָ֖ה חֲמִשִּׁ֥ים וְ/שִׁשָּֽׁה",
+    "hebrew_no_nikud": "אנשי נטפה חמשים ו/ששה",
+    "words": [
+      {
+        "text": "אַנְשֵׁ֥י",
+        "text_no_nikud": "אנשי",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "נְטֹפָ֖ה",
+        "text_no_nikud": "נטפה",
+        "lemma": "H5199",
+        "strong": "H5199",
+        "morph": "HNp"
+      },
+      {
+        "text": "חֲמִשִּׁ֥ים",
+        "text_no_nikud": "חמשים",
+        "lemma": "H2572",
+        "strong": "H2572",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/שִׁשָּֽׁה",
+        "text_no_nikud": "ו/ששה",
+        "lemma": "Hc/H8337",
+        "strong": "Hc/H8337",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 23,
+    "hebrew": "אַנְשֵׁ֣י עֲנָת֔וֹת מֵאָ֖ה עֶשְׂרִ֥ים וּ/שְׁמֹנָֽה",
+    "hebrew_no_nikud": "אנשי ענתות מאה עשרים ו/שמנה",
+    "words": [
+      {
+        "text": "אַנְשֵׁ֣י",
+        "text_no_nikud": "אנשי",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עֲנָת֔וֹת",
+        "text_no_nikud": "ענתות",
+        "lemma": "H6068",
+        "strong": "H6068",
+        "morph": "HNp"
+      },
+      {
+        "text": "מֵאָ֖ה",
+        "text_no_nikud": "מאה",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁמֹנָֽה",
+        "text_no_nikud": "ו/שמנה",
+        "lemma": "Hc/H8083",
+        "strong": "Hc/H8083",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 24,
+    "hebrew": "בְּנֵ֥י עַזְמָ֖וֶת אַרְבָּעִ֥ים וּ/שְׁנָֽיִם",
+    "hebrew_no_nikud": "בני עזמות ארבעים ו/שנים",
+    "words": [
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עַזְמָ֖וֶת",
+        "text_no_nikud": "עזמות",
+        "lemma": "H5820",
+        "strong": "H5820",
+        "morph": "HNp"
+      },
+      {
+        "text": "אַרְבָּעִ֥ים",
+        "text_no_nikud": "ארבעים",
+        "lemma": "H705",
+        "strong": "H705",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנָֽיִם",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 25,
+    "hebrew": "בְּנֵ֨י קִרְיַ֤ת עָרִים֙ כְּפִירָ֣ה וּ/בְאֵר֔וֹת שְׁבַ֥ע מֵא֖וֹת וְ/אַרְבָּעִ֥ים וּ/שְׁלֹשָֽׁה",
+    "hebrew_no_nikud": "בני קרית ערים כפירה ו/בארות שבע מאות ו/ארבעים ו/שלשה",
+    "words": [
+      {
+        "text": "בְּנֵ֨י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "קִרְיַ֤ת",
+        "text_no_nikud": "קרית",
+        "lemma": "H7157",
+        "strong": "H7157",
+        "morph": "HNp"
+      },
+      {
+        "text": "עָרִים֙",
+        "text_no_nikud": "ערים",
+        "lemma": "H7157",
+        "strong": "H7157",
+        "morph": "HNp"
+      },
+      {
+        "text": "כְּפִירָ֣ה",
+        "text_no_nikud": "כפירה",
+        "lemma": "H3716",
+        "strong": "H3716",
+        "morph": "HNp"
+      },
+      {
+        "text": "וּ/בְאֵר֔וֹת",
+        "text_no_nikud": "ו/בארות",
+        "lemma": "Hc/H881",
+        "strong": "Hc/H881",
+        "morph": "HC/Np"
+      },
+      {
+        "text": "שְׁבַ֥ע",
+        "text_no_nikud": "שבע",
+        "lemma": "H7651",
+        "strong": "H7651",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/אַרְבָּעִ֥ים",
+        "text_no_nikud": "ו/ארבעים",
+        "lemma": "Hc/H705",
+        "strong": "Hc/H705",
+        "morph": "HC/Acbpa"
+      },
+      {
+        "text": "וּ/שְׁלֹשָֽׁה",
+        "text_no_nikud": "ו/שלשה",
+        "lemma": "Hc/H7969",
+        "strong": "Hc/H7969",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 26,
+    "hebrew": "בְּנֵ֤י הָ/רָמָה֙ וָ/גָ֔בַע שֵׁ֥שׁ מֵא֖וֹת עֶשְׂרִ֥ים וְ/אֶחָֽד",
+    "hebrew_no_nikud": "בני ה/רמה ו/גבע שש מאות עשרים ו/אחד",
+    "words": [
+      {
+        "text": "בְּנֵ֤י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "הָ/רָמָה֙",
+        "text_no_nikud": "ה/רמה",
+        "lemma": "Hd/H7414",
+        "strong": "Hd/H7414",
+        "morph": "HTd/Np"
+      },
+      {
+        "text": "וָ/גָ֔בַע",
+        "text_no_nikud": "ו/גבע",
+        "lemma": "Hc/H1387",
+        "strong": "Hc/H1387",
+        "morph": "HC/Np"
+      },
+      {
+        "text": "שֵׁ֥שׁ",
+        "text_no_nikud": "שש",
+        "lemma": "H8337",
+        "strong": "H8337",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/אֶחָֽד",
+        "text_no_nikud": "ו/אחד",
+        "lemma": "Hc/H259",
+        "strong": "Hc/H259",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 27,
+    "hebrew": "אַנְשֵׁ֣י מִכְמָ֔ס מֵאָ֖ה עֶשְׂרִ֥ים וּ/שְׁנָֽיִם",
+    "hebrew_no_nikud": "אנשי מכמס מאה עשרים ו/שנים",
+    "words": [
+      {
+        "text": "אַנְשֵׁ֣י",
+        "text_no_nikud": "אנשי",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "מִכְמָ֔ס",
+        "text_no_nikud": "מכמס",
+        "lemma": "H4363",
+        "strong": "H4363",
+        "morph": "HNp"
+      },
+      {
+        "text": "מֵאָ֖ה",
+        "text_no_nikud": "מאה",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנָֽיִם",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 28,
+    "hebrew": "אַנְשֵׁ֤י בֵֽית אֵל֙ וְ/הָ/עָ֔י מָאתַ֖יִם עֶשְׂרִ֥ים וּ/שְׁלֹשָֽׁה",
+    "hebrew_no_nikud": "אנשי בית אל ו/ה/עי מאתים עשרים ו/שלשה",
+    "words": [
+      {
+        "text": "אַנְשֵׁ֤י",
+        "text_no_nikud": "אנשי",
+        "lemma": "H376",
+        "strong": "H376",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בֵֽית",
+        "text_no_nikud": "בית",
+        "lemma": "H1008",
+        "strong": "H1008",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֵל֙",
+        "text_no_nikud": "אל",
+        "lemma": "H1008",
+        "strong": "H1008",
+        "morph": "HNp"
+      },
+      {
+        "text": "וְ/הָ/עָ֔י",
+        "text_no_nikud": "ו/ה/עי",
+        "lemma": "Hc/Hd/H5857",
+        "strong": "Hc/Hd/H5857",
+        "morph": "HC/Td/Np"
+      },
+      {
+        "text": "מָאתַ֖יִם",
+        "text_no_nikud": "מאתים",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbda"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁלֹשָֽׁה",
+        "text_no_nikud": "ו/שלשה",
+        "lemma": "Hc/H7969",
+        "strong": "Hc/H7969",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 29,
+    "hebrew": "בְּנֵ֥י נְב֖וֹ חֲמִשִּׁ֥ים וּ/שְׁנָֽיִם",
+    "hebrew_no_nikud": "בני נבו חמשים ו/שנים",
+    "words": [
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "נְב֖וֹ",
+        "text_no_nikud": "נבו",
+        "lemma": "H5015",
+        "strong": "H5015",
+        "morph": "HNp"
+      },
+      {
+        "text": "חֲמִשִּׁ֥ים",
+        "text_no_nikud": "חמשים",
+        "lemma": "H2572",
+        "strong": "H2572",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנָֽיִם",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 30,
+    "hebrew": "בְּנֵ֣י מַגְבִּ֔ישׁ מֵאָ֖ה חֲמִשִּׁ֥ים וְ/שִׁשָּֽׁה",
+    "hebrew_no_nikud": "בני מגביש מאה חמשים ו/ששה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "מַגְבִּ֔ישׁ",
+        "text_no_nikud": "מגביש",
+        "lemma": "H4019",
+        "strong": "H4019",
+        "morph": "HNp"
+      },
+      {
+        "text": "מֵאָ֖ה",
+        "text_no_nikud": "מאה",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "חֲמִשִּׁ֥ים",
+        "text_no_nikud": "חמשים",
+        "lemma": "H2572",
+        "strong": "H2572",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/שִׁשָּֽׁה",
+        "text_no_nikud": "ו/ששה",
+        "lemma": "Hc/H8337",
+        "strong": "Hc/H8337",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 31,
+    "hebrew": "בְּנֵי֙ עֵילָ֣ם אַחֵ֔ר אֶ֕לֶף מָאתַ֖יִם חֲמִשִּׁ֥ים וְ/אַרְבָּעָֽה",
+    "hebrew_no_nikud": "בני עילם אחר אלף מאתים חמשים ו/ארבעה",
+    "words": [
+      {
+        "text": "בְּנֵי֙",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עֵילָ֣ם",
+        "text_no_nikud": "עילם",
+        "lemma": "H5867",
+        "strong": "H5867",
+        "morph": "HNp"
+      },
+      {
+        "text": "אַחֵ֔ר",
+        "text_no_nikud": "אחר",
+        "lemma": "H312",
+        "strong": "H312",
+        "morph": "HAamsa"
+      },
+      {
+        "text": "אֶ֕לֶף",
+        "text_no_nikud": "אלף",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "מָאתַ֖יִם",
+        "text_no_nikud": "מאתים",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbda"
+      },
+      {
+        "text": "חֲמִשִּׁ֥ים",
+        "text_no_nikud": "חמשים",
+        "lemma": "H2572",
+        "strong": "H2572",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/אַרְבָּעָֽה",
+        "text_no_nikud": "ו/ארבעה",
+        "lemma": "Hc/H702",
+        "strong": "Hc/H702",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 32,
+    "hebrew": "בְּנֵ֣י חָרִ֔ם שְׁלֹ֥שׁ מֵא֖וֹת וְ/עֶשְׂרִֽים",
+    "hebrew_no_nikud": "בני חרם שלש מאות ו/עשרים",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חָרִ֔ם",
+        "text_no_nikud": "חרם",
+        "lemma": "H2766",
+        "strong": "H2766",
+        "morph": "HNp"
+      },
+      {
+        "text": "שְׁלֹ֥שׁ",
+        "text_no_nikud": "שלש",
+        "lemma": "H7969",
+        "strong": "H7969",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/עֶשְׂרִֽים",
+        "text_no_nikud": "ו/עשרים",
+        "lemma": "Hc/H6242",
+        "strong": "Hc/H6242",
+        "morph": "HC/Acbpa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 33,
+    "hebrew": "בְּנֵי לֹד֙ חָדִ֣יד וְ/אוֹנ֔וֹ שְׁבַ֥ע מֵא֖וֹת עֶשְׂרִ֥ים וַ/חֲמִשָּֽׁה",
+    "hebrew_no_nikud": "בני לד חדיד ו/אונו שבע מאות עשרים ו/חמשה",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "לֹד֙",
+        "text_no_nikud": "לד",
+        "lemma": "H3850",
+        "strong": "H3850",
+        "morph": "HNp"
+      },
+      {
+        "text": "חָדִ֣יד",
+        "text_no_nikud": "חדיד",
+        "lemma": "H2307",
+        "strong": "H2307",
+        "morph": "HNp"
+      },
+      {
+        "text": "וְ/אוֹנ֔וֹ",
+        "text_no_nikud": "ו/אונו",
+        "lemma": "Hc/H207",
+        "strong": "Hc/H207",
+        "morph": "HC/Np"
+      },
+      {
+        "text": "שְׁבַ֥ע",
+        "text_no_nikud": "שבע",
+        "lemma": "H7651",
+        "strong": "H7651",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וַ/חֲמִשָּֽׁה",
+        "text_no_nikud": "ו/חמשה",
+        "lemma": "Hc/H2568",
+        "strong": "Hc/H2568",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 34,
+    "hebrew": "בְּנֵ֣י יְרֵח֔וֹ שְׁלֹ֥שׁ מֵא֖וֹת אַרְבָּעִ֥ים וַ/חֲמִשָּֽׁה",
+    "hebrew_no_nikud": "בני ירחו שלש מאות ארבעים ו/חמשה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "יְרֵח֔וֹ",
+        "text_no_nikud": "ירחו",
+        "lemma": "H3405",
+        "strong": "H3405",
+        "morph": "HNp"
+      },
+      {
+        "text": "שְׁלֹ֥שׁ",
+        "text_no_nikud": "שלש",
+        "lemma": "H7969",
+        "strong": "H7969",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "אַרְבָּעִ֥ים",
+        "text_no_nikud": "ארבעים",
+        "lemma": "H705",
+        "strong": "H705",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וַ/חֲמִשָּֽׁה",
+        "text_no_nikud": "ו/חמשה",
+        "lemma": "Hc/H2568",
+        "strong": "Hc/H2568",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 35,
+    "hebrew": "בְּנֵ֣י סְנָאָ֔ה שְׁלֹ֣שֶׁת אֲלָפִ֔ים וְ/שֵׁ֥שׁ מֵא֖וֹת וּ/שְׁלֹשִֽׁים",
+    "hebrew_no_nikud": "בני סנאה שלשת אלפים ו/שש מאות ו/שלשים",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "סְנָאָ֔ה",
+        "text_no_nikud": "סנאה",
+        "lemma": "H5570",
+        "strong": "H5570",
+        "morph": "HNp"
+      },
+      {
+        "text": "שְׁלֹ֣שֶׁת",
+        "text_no_nikud": "שלשת",
+        "lemma": "H7969",
+        "strong": "H7969",
+        "morph": "HAcmsc"
+      },
+      {
+        "text": "אֲלָפִ֔ים",
+        "text_no_nikud": "אלפים",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/שֵׁ֥שׁ",
+        "text_no_nikud": "ו/שש",
+        "lemma": "Hc/H8337",
+        "strong": "Hc/H8337",
+        "morph": "HC/Acfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁלֹשִֽׁים",
+        "text_no_nikud": "ו/שלשים",
+        "lemma": "Hc/H7970",
+        "strong": "Hc/H7970",
+        "morph": "HC/Acbpa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 36,
+    "hebrew": "הַֽ/כֹּהֲנִ֑ים בְּנֵ֤י יְדַֽעְיָה֙ לְ/בֵ֣ית יֵשׁ֔וּעַ תְּשַׁ֥ע מֵא֖וֹת שִׁבְעִ֥ים וּ/שְׁלֹשָֽׁה",
+    "hebrew_no_nikud": "ה/כהנים בני ידעיה ל/בית ישוע תשע מאות שבעים ו/שלשה",
+    "words": [
+      {
+        "text": "הַֽ/כֹּהֲנִ֑ים",
+        "text_no_nikud": "ה/כהנים",
+        "lemma": "Hd/H3548",
+        "strong": "Hd/H3548",
+        "morph": "HTd/Ncmpa"
+      },
+      {
+        "text": "בְּנֵ֤י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "יְדַֽעְיָה֙",
+        "text_no_nikud": "ידעיה",
+        "lemma": "H3048",
+        "strong": "H3048",
+        "morph": "HNp"
+      },
+      {
+        "text": "לְ/בֵ֣ית",
+        "text_no_nikud": "ל/בית",
+        "lemma": "Hl/H1004",
+        "strong": "Hl/H1004",
+        "morph": "HR/Ncmsc"
+      },
+      {
+        "text": "יֵשׁ֔וּעַ",
+        "text_no_nikud": "ישוע",
+        "lemma": "H3442",
+        "strong": "H3442",
+        "morph": "HNp"
+      },
+      {
+        "text": "תְּשַׁ֥ע",
+        "text_no_nikud": "תשע",
+        "lemma": "H8672",
+        "strong": "H8672",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שִׁבְעִ֥ים",
+        "text_no_nikud": "שבעים",
+        "lemma": "H7657",
+        "strong": "H7657",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁלֹשָֽׁה",
+        "text_no_nikud": "ו/שלשה",
+        "lemma": "Hc/H7969",
+        "strong": "Hc/H7969",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 37,
+    "hebrew": "בְּנֵ֣י אִמֵּ֔ר אֶ֖לֶף חֲמִשִּׁ֥ים וּ/שְׁנָֽיִם",
+    "hebrew_no_nikud": "בני אמר אלף חמשים ו/שנים",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "אִמֵּ֔ר",
+        "text_no_nikud": "אמר",
+        "lemma": "H564",
+        "strong": "H564",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֶ֖לֶף",
+        "text_no_nikud": "אלף",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "חֲמִשִּׁ֥ים",
+        "text_no_nikud": "חמשים",
+        "lemma": "H2572",
+        "strong": "H2572",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנָֽיִם",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 38,
+    "hebrew": "בְּנֵ֣י פַשְׁח֔וּר אֶ֕לֶף מָאתַ֖יִם אַרְבָּעִ֥ים וְ/שִׁבְעָֽה",
+    "hebrew_no_nikud": "בני פשחור אלף מאתים ארבעים ו/שבעה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "פַשְׁח֔וּר",
+        "text_no_nikud": "פשחור",
+        "lemma": "H6583",
+        "strong": "H6583",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֶ֕לֶף",
+        "text_no_nikud": "אלף",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "מָאתַ֖יִם",
+        "text_no_nikud": "מאתים",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbda"
+      },
+      {
+        "text": "אַרְבָּעִ֥ים",
+        "text_no_nikud": "ארבעים",
+        "lemma": "H705",
+        "strong": "H705",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/שִׁבְעָֽה",
+        "text_no_nikud": "ו/שבעה",
+        "lemma": "Hc/H7651",
+        "strong": "Hc/H7651",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 39,
+    "hebrew": "בְּנֵ֣י חָרִ֔ם אֶ֖לֶף וְ/שִׁבְעָ֥ה עָשָֽׂר",
+    "hebrew_no_nikud": "בני חרם אלף ו/שבעה עשר",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חָרִ֔ם",
+        "text_no_nikud": "חרם",
+        "lemma": "H2766",
+        "strong": "H2766",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֶ֖לֶף",
+        "text_no_nikud": "אלף",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "וְ/שִׁבְעָ֥ה",
+        "text_no_nikud": "ו/שבעה",
+        "lemma": "Hc/H7651",
+        "strong": "Hc/H7651",
+        "morph": "HC/Acmsa"
+      },
+      {
+        "text": "עָשָֽׂר",
+        "text_no_nikud": "עשר",
+        "lemma": "H6240",
+        "strong": "H6240",
+        "morph": "HAcmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 40,
+    "hebrew": "הַ/לְוִיִּ֑ם בְּנֵי יֵשׁ֧וּעַ וְ/קַדְמִיאֵ֛ל לִ/בְנֵ֥י הוֹדַוְיָ֖ה שִׁבְעִ֥ים וְ/אַרְבָּעָֽה",
+    "hebrew_no_nikud": "ה/לוים בני ישוע ו/קדמיאל ל/בני הודויה שבעים ו/ארבעה",
+    "words": [
+      {
+        "text": "הַ/לְוִיִּ֑ם",
+        "text_no_nikud": "ה/לוים",
+        "lemma": "Hd/H3881",
+        "strong": "Hd/H3881",
+        "morph": "HTd/Ngmpa"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "יֵשׁ֧וּעַ",
+        "text_no_nikud": "ישוע",
+        "lemma": "H3442",
+        "strong": "H3442",
+        "morph": "HNp"
+      },
+      {
+        "text": "וְ/קַדְמִיאֵ֛ל",
+        "text_no_nikud": "ו/קדמיאל",
+        "lemma": "Hc/H6934",
+        "strong": "Hc/H6934",
+        "morph": "HC/Np"
+      },
+      {
+        "text": "לִ/בְנֵ֥י",
+        "text_no_nikud": "ל/בני",
+        "lemma": "Hl/H1121",
+        "strong": "Hl/H1121",
+        "morph": "HR/Ncmpc"
+      },
+      {
+        "text": "הוֹדַוְיָ֖ה",
+        "text_no_nikud": "הודויה",
+        "lemma": "H1938",
+        "strong": "H1938",
+        "morph": "HNp"
+      },
+      {
+        "text": "שִׁבְעִ֥ים",
+        "text_no_nikud": "שבעים",
+        "lemma": "H7657",
+        "strong": "H7657",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/אַרְבָּעָֽה",
+        "text_no_nikud": "ו/ארבעה",
+        "lemma": "Hc/H702",
+        "strong": "Hc/H702",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 41,
+    "hebrew": "הַֽ/מְשֹׁרְרִ֑ים בְּנֵ֣י אָסָ֔ף מֵאָ֖ה עֶשְׂרִ֥ים וּ/שְׁמֹנָֽה",
+    "hebrew_no_nikud": "ה/משררים בני אסף מאה עשרים ו/שמנה",
+    "words": [
+      {
+        "text": "הַֽ/מְשֹׁרְרִ֑ים",
+        "text_no_nikud": "ה/משררים",
+        "lemma": "Hd/H7891",
+        "strong": "Hd/H7891",
+        "morph": "HTd/Vormpa"
+      },
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "אָסָ֔ף",
+        "text_no_nikud": "אסף",
+        "lemma": "H623",
+        "strong": "H623",
+        "morph": "HNp"
+      },
+      {
+        "text": "מֵאָ֖ה",
+        "text_no_nikud": "מאה",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "עֶשְׂרִ֥ים",
+        "text_no_nikud": "עשרים",
+        "lemma": "H6242",
+        "strong": "H6242",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁמֹנָֽה",
+        "text_no_nikud": "ו/שמנה",
+        "lemma": "Hc/H8083",
+        "strong": "Hc/H8083",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 42,
+    "hebrew": "בְּנֵ֣י הַ/שֹּֽׁעֲרִ֗ים בְּנֵי שַׁלּ֤וּם בְּנֵֽי אָטֵר֙ בְּנֵי טַלְמ֣וֹן בְּנֵי עַקּ֔וּב בְּנֵ֥י חֲטִיטָ֖א בְּנֵ֣י שֹׁבָ֑י הַ/כֹּ֕ל מֵאָ֖ה שְׁלֹשִׁ֥ים וְ/תִשְׁעָֽה",
+    "hebrew_no_nikud": "בני ה/שערים בני שלום בני אטר בני טלמון בני עקוב בני חטיטא בני שבי ה/כל מאה שלשים ו/תשעה",
+    "words": [
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "הַ/שֹּֽׁעֲרִ֗ים",
+        "text_no_nikud": "ה/שערים",
+        "lemma": "Hd/H7778",
+        "strong": "Hd/H7778",
+        "morph": "HTd/Ncmpa"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "שַׁלּ֤וּם",
+        "text_no_nikud": "שלום",
+        "lemma": "H7967",
+        "strong": "H7967",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵֽי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "אָטֵר֙",
+        "text_no_nikud": "אטר",
+        "lemma": "H333",
+        "strong": "H333",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "טַלְמ֣וֹן",
+        "text_no_nikud": "טלמון",
+        "lemma": "H2929",
+        "strong": "H2929",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עַקּ֔וּב",
+        "text_no_nikud": "עקוב",
+        "lemma": "H6126",
+        "strong": "H6126",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חֲטִיטָ֖א",
+        "text_no_nikud": "חטיטא",
+        "lemma": "H2410",
+        "strong": "H2410",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "שֹׁבָ֑י",
+        "text_no_nikud": "שבי",
+        "lemma": "H7630",
+        "strong": "H7630",
+        "morph": "HNp"
+      },
+      {
+        "text": "הַ/כֹּ֕ל",
+        "text_no_nikud": "ה/כל",
+        "lemma": "Hd/H3605",
+        "strong": "Hd/H3605",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "מֵאָ֖ה",
+        "text_no_nikud": "מאה",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "שְׁלֹשִׁ֥ים",
+        "text_no_nikud": "שלשים",
+        "lemma": "H7970",
+        "strong": "H7970",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/תִשְׁעָֽה",
+        "text_no_nikud": "ו/תשעה",
+        "lemma": "Hc/H8672",
+        "strong": "Hc/H8672",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 43,
+    "hebrew": "הַ/נְּתִינִ֑ים בְּנֵי צִיחָ֥א בְנֵי חֲשׂוּפָ֖א בְּנֵ֥י טַבָּעֽוֹת",
+    "hebrew_no_nikud": "ה/נתינים בני ציחא בני חשופא בני טבעות",
+    "words": [
+      {
+        "text": "הַ/נְּתִינִ֑ים",
+        "text_no_nikud": "ה/נתינים",
+        "lemma": "Hd/H5411",
+        "strong": "Hd/H5411",
+        "morph": "HTd/Ncmpa"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "צִיחָ֥א",
+        "text_no_nikud": "ציחא",
+        "lemma": "H6727",
+        "strong": "H6727",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חֲשׂוּפָ֖א",
+        "text_no_nikud": "חשופא",
+        "lemma": "H2817",
+        "strong": "H2817",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "טַבָּעֽוֹת",
+        "text_no_nikud": "טבעות",
+        "lemma": "H2884",
+        "strong": "H2884",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 44,
+    "hebrew": "בְּנֵי קֵרֹ֥ס בְּֽנֵי סִֽיעֲהָ֖א בְּנֵ֥י פָדֽוֹן",
+    "hebrew_no_nikud": "בני קרס בני סיעהא בני פדון",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "קֵרֹ֥ס",
+        "text_no_nikud": "קרס",
+        "lemma": "H7026",
+        "strong": "H7026",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּֽנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "סִֽיעֲהָ֖א",
+        "text_no_nikud": "סיעהא",
+        "lemma": "H5517",
+        "strong": "H5517",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "פָדֽוֹן",
+        "text_no_nikud": "פדון",
+        "lemma": "H6303",
+        "strong": "H6303",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 45,
+    "hebrew": "בְּנֵי לְבָנָ֥ה בְנֵי חֲגָבָ֖ה בְּנֵ֥י עַקּֽוּב",
+    "hebrew_no_nikud": "בני לבנה בני חגבה בני עקוב",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "לְבָנָ֥ה",
+        "text_no_nikud": "לבנה",
+        "lemma": "H3838",
+        "strong": "H3838",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חֲגָבָ֖ה",
+        "text_no_nikud": "חגבה",
+        "lemma": "H2286",
+        "strong": "H2286",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עַקּֽוּב",
+        "text_no_nikud": "עקוב",
+        "lemma": "H6126",
+        "strong": "H6126",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 46,
+    "hebrew": "בְּנֵי חָגָ֥ב בְּנֵי שמלי שַׁלְמַ֖י בְּנֵ֥י חָנָֽן",
+    "hebrew_no_nikud": "בני חגב בני שמלי שלמי בני חנן",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חָגָ֥ב",
+        "text_no_nikud": "חגב",
+        "lemma": "H2285",
+        "strong": "H2285",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "שמלי",
+        "text_no_nikud": "שמלי",
+        "lemma": "H8073",
+        "strong": "H8073",
+        "morph": "HNp"
+      },
+      {
+        "text": "שַׁלְמַ֖י",
+        "text_no_nikud": "שלמי",
+        "lemma": "H8014",
+        "strong": "H8014",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חָנָֽן",
+        "text_no_nikud": "חנן",
+        "lemma": "H2605",
+        "strong": "H2605",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 47,
+    "hebrew": "בְּנֵי גִדֵּ֥ל בְּנֵי גַ֖חַר בְּנֵ֥י רְאָיָֽה",
+    "hebrew_no_nikud": "בני גדל בני גחר בני ראיה",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "גִדֵּ֥ל",
+        "text_no_nikud": "גדל",
+        "lemma": "H1435",
+        "strong": "H1435",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "גַ֖חַר",
+        "text_no_nikud": "גחר",
+        "lemma": "H1515",
+        "strong": "H1515",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "רְאָיָֽה",
+        "text_no_nikud": "ראיה",
+        "lemma": "H7211",
+        "strong": "H7211",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 48,
+    "hebrew": "בְּנֵי רְצִ֥ין בְּנֵי נְקוֹדָ֖א בְּנֵ֥י גַזָּֽם",
+    "hebrew_no_nikud": "בני רצין בני נקודא בני גזם",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "רְצִ֥ין",
+        "text_no_nikud": "רצין",
+        "lemma": "H7526",
+        "strong": "H7526",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "נְקוֹדָ֖א",
+        "text_no_nikud": "נקודא",
+        "lemma": "H5353",
+        "strong": "H5353",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "גַזָּֽם",
+        "text_no_nikud": "גזם",
+        "lemma": "H1502",
+        "strong": "H1502",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 49,
+    "hebrew": "בְּנֵי עֻזָּ֥א בְנֵי פָסֵ֖חַ בְּנֵ֥י בֵסָֽי",
+    "hebrew_no_nikud": "בני עזא בני פסח בני בסי",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עֻזָּ֥א",
+        "text_no_nikud": "עזא",
+        "lemma": "H5798",
+        "strong": "H5798",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "פָסֵ֖חַ",
+        "text_no_nikud": "פסח",
+        "lemma": "H6454",
+        "strong": "H6454",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בֵסָֽי",
+        "text_no_nikud": "בסי",
+        "lemma": "H1153",
+        "strong": "H1153",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 50,
+    "hebrew": "בְּנֵי אַסְנָ֥ה בְנֵי מעינים מְעוּנִ֖ים בְּנֵ֥י נפיסים נְפוּסִֽים",
+    "hebrew_no_nikud": "בני אסנה בני מעינים מעונים בני נפיסים נפוסים",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "אַסְנָ֥ה",
+        "text_no_nikud": "אסנה",
+        "lemma": "H619",
+        "strong": "H619",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "מעינים",
+        "text_no_nikud": "מעינים",
+        "lemma": "H4586",
+        "strong": "H4586",
+        "morph": "HNgmpa"
+      },
+      {
+        "text": "מְעוּנִ֖ים",
+        "text_no_nikud": "מעונים",
+        "lemma": "H4586",
+        "strong": "H4586",
+        "morph": "HNgmpa"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "נפיסים",
+        "text_no_nikud": "נפיסים",
+        "lemma": "H5304",
+        "strong": "H5304",
+        "morph": "HNgmpa"
+      },
+      {
+        "text": "נְפוּסִֽים",
+        "text_no_nikud": "נפוסים",
+        "lemma": "H5304",
+        "strong": "H5304",
+        "morph": "HNgmpa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 51,
+    "hebrew": "בְּנֵי בַקְבּ֥וּק בְּנֵי חֲקוּפָ֖א בְּנֵ֥י חַרְחֽוּר",
+    "hebrew_no_nikud": "בני בקבוק בני חקופא בני חרחור",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בַקְבּ֥וּק",
+        "text_no_nikud": "בקבוק",
+        "lemma": "H1227",
+        "strong": "H1227",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חֲקוּפָ֖א",
+        "text_no_nikud": "חקופא",
+        "lemma": "H2709",
+        "strong": "H2709",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חַרְחֽוּר",
+        "text_no_nikud": "חרחור",
+        "lemma": "H2744",
+        "strong": "H2744",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 52,
+    "hebrew": "בְּנֵי בַצְל֥וּת בְּנֵי מְחִידָ֖א בְּנֵ֥י חַרְשָֽׁא",
+    "hebrew_no_nikud": "בני בצלות בני מחידא בני חרשא",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בַצְל֥וּת",
+        "text_no_nikud": "בצלות",
+        "lemma": "H1213",
+        "strong": "H1213",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "מְחִידָ֖א",
+        "text_no_nikud": "מחידא",
+        "lemma": "H4240",
+        "strong": "H4240",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חַרְשָֽׁא",
+        "text_no_nikud": "חרשא",
+        "lemma": "H2797",
+        "strong": "H2797",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 53,
+    "hebrew": "בְּנֵי בַרְק֥וֹס בְּֽנֵי סִֽיסְרָ֖א בְּנֵי תָֽמַח",
+    "hebrew_no_nikud": "בני ברקוס בני סיסרא בני תמח",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בַרְק֥וֹס",
+        "text_no_nikud": "ברקוס",
+        "lemma": "H1302",
+        "strong": "H1302",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּֽנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "סִֽיסְרָ֖א",
+        "text_no_nikud": "סיסרא",
+        "lemma": "H5516",
+        "strong": "H5516",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "תָֽמַח",
+        "text_no_nikud": "תמח",
+        "lemma": "H8547",
+        "strong": "H8547",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 54,
+    "hebrew": "בְּנֵ֥י נְצִ֖יחַ בְּנֵ֥י חֲטִיפָֽא",
+    "hebrew_no_nikud": "בני נציח בני חטיפא",
+    "words": [
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "נְצִ֖יחַ",
+        "text_no_nikud": "נציח",
+        "lemma": "H5335",
+        "strong": "H5335",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חֲטִיפָֽא",
+        "text_no_nikud": "חטיפא",
+        "lemma": "H2412",
+        "strong": "H2412",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 55,
+    "hebrew": "בְּנֵ֖י עַבְדֵ֣י שְׁלֹמֹ֑ה בְּנֵי סֹטַ֥י בְּנֵי הַ/סֹּפֶ֖רֶת בְּנֵ֥י פְרוּדָֽא",
+    "hebrew_no_nikud": "בני עבדי שלמה בני סטי בני ה/ספרת בני פרודא",
+    "words": [
+      {
+        "text": "בְּנֵ֖י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "עַבְדֵ֣י",
+        "text_no_nikud": "עבדי",
+        "lemma": "H5650",
+        "strong": "H5650",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "שְׁלֹמֹ֑ה",
+        "text_no_nikud": "שלמה",
+        "lemma": "H8010",
+        "strong": "H8010",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "סֹטַ֥י",
+        "text_no_nikud": "סטי",
+        "lemma": "H5479",
+        "strong": "H5479",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "הַ/סֹּפֶ֖רֶת",
+        "text_no_nikud": "ה/ספרת",
+        "lemma": "Hd/H5618",
+        "strong": "Hd/H5618",
+        "morph": "HTd/Np"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "פְרוּדָֽא",
+        "text_no_nikud": "פרודא",
+        "lemma": "H6514",
+        "strong": "H6514",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 56,
+    "hebrew": "בְּנֵי יַעְלָ֥ה בְנֵי דַרְק֖וֹן בְּנֵ֥י גִדֵּֽל",
+    "hebrew_no_nikud": "בני יעלה בני דרקון בני גדל",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "יַעְלָ֥ה",
+        "text_no_nikud": "יעלה",
+        "lemma": "H3279",
+        "strong": "H3279",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "דַרְק֖וֹן",
+        "text_no_nikud": "דרקון",
+        "lemma": "H1874",
+        "strong": "H1874",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "גִדֵּֽל",
+        "text_no_nikud": "גדל",
+        "lemma": "H1435",
+        "strong": "H1435",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 57,
+    "hebrew": "בְּנֵ֧י שְׁפַטְיָ֣ה בְנֵֽי חַטִּ֗יל בְּנֵ֛י פֹּכֶ֥רֶת הַצְּבָיִ֖ים בְּנֵ֥י אָמִֽי",
+    "hebrew_no_nikud": "בני שפטיה בני חטיל בני פכרת הצביים בני אמי",
+    "words": [
+      {
+        "text": "בְּנֵ֧י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "שְׁפַטְיָ֣ה",
+        "text_no_nikud": "שפטיה",
+        "lemma": "H8203",
+        "strong": "H8203",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְנֵֽי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חַטִּ֗יל",
+        "text_no_nikud": "חטיל",
+        "lemma": "H2411",
+        "strong": "H2411",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֛י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "פֹּכֶ֥רֶת",
+        "text_no_nikud": "פכרת",
+        "lemma": "H6380",
+        "strong": "H6380",
+        "morph": "HNp"
+      },
+      {
+        "text": "הַצְּבָיִ֖ים",
+        "text_no_nikud": "הצביים",
+        "lemma": "H6380",
+        "strong": "H6380",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "אָמִֽי",
+        "text_no_nikud": "אמי",
+        "lemma": "H532",
+        "strong": "H532",
+        "morph": "HNp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 58,
+    "hebrew": "כָּ֨ל הַ/נְּתִינִ֔ים וּ/בְנֵ֖י עַבְדֵ֣י שְׁלֹמֹ֑ה שְׁלֹ֥שׁ מֵא֖וֹת תִּשְׁעִ֥ים וּ/שְׁנָֽיִם",
+    "hebrew_no_nikud": "כל ה/נתינים ו/בני עבדי שלמה שלש מאות תשעים ו/שנים",
+    "words": [
+      {
+        "text": "כָּ֨ל",
+        "text_no_nikud": "כל",
+        "lemma": "H3605",
+        "strong": "H3605",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "הַ/נְּתִינִ֔ים",
+        "text_no_nikud": "ה/נתינים",
+        "lemma": "Hd/H5411",
+        "strong": "Hd/H5411",
+        "morph": "HTd/Ncmpa"
+      },
+      {
+        "text": "וּ/בְנֵ֖י",
+        "text_no_nikud": "ו/בני",
+        "lemma": "Hc/H1121",
+        "strong": "Hc/H1121",
+        "morph": "HC/Ncmpc"
+      },
+      {
+        "text": "עַבְדֵ֣י",
+        "text_no_nikud": "עבדי",
+        "lemma": "H5650",
+        "strong": "H5650",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "שְׁלֹמֹ֑ה",
+        "text_no_nikud": "שלמה",
+        "lemma": "H8010",
+        "strong": "H8010",
+        "morph": "HNp"
+      },
+      {
+        "text": "שְׁלֹ֥שׁ",
+        "text_no_nikud": "שלש",
+        "lemma": "H7969",
+        "strong": "H7969",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "תִּשְׁעִ֥ים",
+        "text_no_nikud": "תשעים",
+        "lemma": "H8673",
+        "strong": "H8673",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנָֽיִם",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 59,
+    "hebrew": "וְ/אֵ֗לֶּה הָֽ/עֹלִים֙ מִ/תֵּ֥ל מֶ֨לַח֙ תֵּ֣ל חַרְשָׁ֔א כְּר֥וּב אַדָּ֖ן אִמֵּ֑ר וְ/לֹ֣א יָֽכְל֗וּ לְ/הַגִּ֤יד בֵּית אֲבוֹתָ/ם֙ וְ/זַרְעָ֔/ם אִ֥ם מִ/יִּשְׂרָאֵ֖ל הֵֽם",
+    "hebrew_no_nikud": "ו/אלה ה/עלים מ/תל מלח תל חרשא כרוב אדן אמר ו/לא יכלו ל/הגיד בית אבות/ם ו/זרע/ם אם מ/ישראל הם",
+    "words": [
+      {
+        "text": "וְ/אֵ֗לֶּה",
+        "text_no_nikud": "ו/אלה",
+        "lemma": "Hc/H428",
+        "strong": "Hc/H428",
+        "morph": "HC/Pdxcp"
+      },
+      {
+        "text": "הָֽ/עֹלִים֙",
+        "text_no_nikud": "ה/עלים",
+        "lemma": "Hd/H5927",
+        "strong": "Hd/H5927",
+        "morph": "HTd/Vqrmpa"
+      },
+      {
+        "text": "מִ/תֵּ֥ל",
+        "text_no_nikud": "מ/תל",
+        "lemma": "Hm/H8528",
+        "strong": "Hm/H8528",
+        "morph": "HR/Np"
+      },
+      {
+        "text": "מֶ֨לַח֙",
+        "text_no_nikud": "מלח",
+        "lemma": "H8528",
+        "strong": "H8528",
+        "morph": "HNp"
+      },
+      {
+        "text": "תֵּ֣ל",
+        "text_no_nikud": "תל",
+        "lemma": "H8521",
+        "strong": "H8521",
+        "morph": "HNp"
+      },
+      {
+        "text": "חַרְשָׁ֔א",
+        "text_no_nikud": "חרשא",
+        "lemma": "H8521",
+        "strong": "H8521",
+        "morph": "HNp"
+      },
+      {
+        "text": "כְּר֥וּב",
+        "text_no_nikud": "כרוב",
+        "lemma": "H3743",
+        "strong": "H3743",
+        "morph": "HNp"
+      },
+      {
+        "text": "אַדָּ֖ן",
+        "text_no_nikud": "אדן",
+        "lemma": "H135",
+        "strong": "H135",
+        "morph": "HNp"
+      },
+      {
+        "text": "אִמֵּ֑ר",
+        "text_no_nikud": "אמר",
+        "lemma": "H564",
+        "strong": "H564",
+        "morph": "HNp"
+      },
+      {
+        "text": "וְ/לֹ֣א",
+        "text_no_nikud": "ו/לא",
+        "lemma": "Hc/H3808",
+        "strong": "Hc/H3808",
+        "morph": "HC/Tn"
+      },
+      {
+        "text": "יָֽכְל֗וּ",
+        "text_no_nikud": "יכלו",
+        "lemma": "H3201",
+        "strong": "H3201",
+        "morph": "HVqp3cp"
+      },
+      {
+        "text": "לְ/הַגִּ֤יד",
+        "text_no_nikud": "ל/הגיד",
+        "lemma": "Hl/H5046",
+        "strong": "Hl/H5046",
+        "morph": "HR/Vhc"
+      },
+      {
+        "text": "בֵּית",
+        "text_no_nikud": "בית",
+        "lemma": "H1004",
+        "strong": "H1004",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "אֲבוֹתָ/ם֙",
+        "text_no_nikud": "אבות/ם",
+        "lemma": "H1",
+        "strong": "H1",
+        "morph": "HNcmpc/Sp3mp"
+      },
+      {
+        "text": "וְ/זַרְעָ֔/ם",
+        "text_no_nikud": "ו/זרע/ם",
+        "lemma": "Hc/H2233",
+        "strong": "Hc/H2233",
+        "morph": "HC/Ncmsc/Sp3mp"
+      },
+      {
+        "text": "אִ֥ם",
+        "text_no_nikud": "אם",
+        "lemma": "H518",
+        "strong": "H518",
+        "morph": "HC"
+      },
+      {
+        "text": "מִ/יִּשְׂרָאֵ֖ל",
+        "text_no_nikud": "מ/ישראל",
+        "lemma": "Hm/H3478",
+        "strong": "Hm/H3478",
+        "morph": "HR/Np"
+      },
+      {
+        "text": "הֵֽם",
+        "text_no_nikud": "הם",
+        "lemma": "H1992",
+        "strong": "H1992",
+        "morph": "HPp3mp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 60,
+    "hebrew": "בְּנֵי דְלָיָ֥ה בְנֵי טוֹבִיָּ֖ה בְּנֵ֣י נְקוֹדָ֑א שֵׁ֥שׁ מֵא֖וֹת חֲמִשִּׁ֥ים וּ/שְׁנָֽיִם",
+    "hebrew_no_nikud": "בני דליה בני טוביה בני נקודא שש מאות חמשים ו/שנים",
+    "words": [
+      {
+        "text": "בְּנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "דְלָיָ֥ה",
+        "text_no_nikud": "דליה",
+        "lemma": "H1806",
+        "strong": "H1806",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְנֵי",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "טוֹבִיָּ֖ה",
+        "text_no_nikud": "טוביה",
+        "lemma": "H2900",
+        "strong": "H2900",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "נְקוֹדָ֑א",
+        "text_no_nikud": "נקודא",
+        "lemma": "H5353",
+        "strong": "H5353",
+        "morph": "HNp"
+      },
+      {
+        "text": "שֵׁ֥שׁ",
+        "text_no_nikud": "שש",
+        "lemma": "H8337",
+        "strong": "H8337",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "חֲמִשִּׁ֥ים",
+        "text_no_nikud": "חמשים",
+        "lemma": "H2572",
+        "strong": "H2572",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וּ/שְׁנָֽיִם",
+        "text_no_nikud": "ו/שנים",
+        "lemma": "Hc/H8147",
+        "strong": "Hc/H8147",
+        "morph": "HC/Acmda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 61,
+    "hebrew": "וּ/מִ/בְּנֵי֙ הַ/כֹּ֣הֲנִ֔ים בְּנֵ֥י חֳבַיָּ֖ה בְּנֵ֣י הַקּ֑וֹץ בְּנֵ֣י בַרְזִלַּ֗י אֲשֶׁ֣ר לָ֠קַח מִ/בְּנ֞וֹת בַּרְזִלַּ֤י הַ/גִּלְעָדִי֙ אִשָּׁ֔ה וַ/יִּקָּרֵ֖א עַל שְׁמָֽ/ם",
+    "hebrew_no_nikud": "ו/מ/בני ה/כהנים בני חביה בני הקוץ בני ברזלי אשר לקח מ/בנות ברזלי ה/גלעדי אשה ו/יקרא על שמ/ם",
+    "words": [
+      {
+        "text": "וּ/מִ/בְּנֵי֙",
+        "text_no_nikud": "ו/מ/בני",
+        "lemma": "Hc/Hm/H1121",
+        "strong": "Hc/Hm/H1121",
+        "morph": "HC/R/Ncmpc"
+      },
+      {
+        "text": "הַ/כֹּ֣הֲנִ֔ים",
+        "text_no_nikud": "ה/כהנים",
+        "lemma": "Hd/H3548",
+        "strong": "Hd/H3548",
+        "morph": "HTd/Ncmpa"
+      },
+      {
+        "text": "בְּנֵ֥י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "חֳבַיָּ֖ה",
+        "text_no_nikud": "חביה",
+        "lemma": "H2252",
+        "strong": "H2252",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "הַקּ֑וֹץ",
+        "text_no_nikud": "הקוץ",
+        "lemma": "H6976",
+        "strong": "H6976",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּנֵ֣י",
+        "text_no_nikud": "בני",
+        "lemma": "H1121",
+        "strong": "H1121",
+        "morph": "HNcmpc"
+      },
+      {
+        "text": "בַרְזִלַּ֗י",
+        "text_no_nikud": "ברזלי",
+        "lemma": "H1271",
+        "strong": "H1271",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֲשֶׁ֣ר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "לָ֠קַח",
+        "text_no_nikud": "לקח",
+        "lemma": "H3947",
+        "strong": "H3947",
+        "morph": "HVqp3ms"
+      },
+      {
+        "text": "מִ/בְּנ֞וֹת",
+        "text_no_nikud": "מ/בנות",
+        "lemma": "Hm/H1323",
+        "strong": "Hm/H1323",
+        "morph": "HR/Ncfpc"
+      },
+      {
+        "text": "בַּרְזִלַּ֤י",
+        "text_no_nikud": "ברזלי",
+        "lemma": "H1271",
+        "strong": "H1271",
+        "morph": "HNp"
+      },
+      {
+        "text": "הַ/גִּלְעָדִי֙",
+        "text_no_nikud": "ה/גלעדי",
+        "lemma": "Hd/H1569",
+        "strong": "Hd/H1569",
+        "morph": "HTd/Ngmsa"
+      },
+      {
+        "text": "אִשָּׁ֔ה",
+        "text_no_nikud": "אשה",
+        "lemma": "H802",
+        "strong": "H802",
+        "morph": "HNcfsa"
+      },
+      {
+        "text": "וַ/יִּקָּרֵ֖א",
+        "text_no_nikud": "ו/יקרא",
+        "lemma": "Hc/H7121",
+        "strong": "Hc/H7121",
+        "morph": "HC/VNw3ms"
+      },
+      {
+        "text": "עַל",
+        "text_no_nikud": "על",
+        "lemma": "H5921",
+        "strong": "H5921",
+        "morph": "HR"
+      },
+      {
+        "text": "שְׁמָֽ/ם",
+        "text_no_nikud": "שמ/ם",
+        "lemma": "H8034",
+        "strong": "H8034",
+        "morph": "HNcmsc/Sp3mp"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 62,
+    "hebrew": "אֵ֗לֶּה בִּקְשׁ֧וּ כְתָבָ֛/ם הַ/מִּתְיַחְשִׂ֖ים וְ/לֹ֣א נִמְצָ֑אוּ וַֽ/יְגֹאֲל֖וּ מִן הַ/כְּהֻנָּֽה",
+    "hebrew_no_nikud": "אלה בקשו כתב/ם ה/מתיחשים ו/לא נמצאו ו/יגאלו מן ה/כהנה",
+    "words": [
+      {
+        "text": "אֵ֗לֶּה",
+        "text_no_nikud": "אלה",
+        "lemma": "H428",
+        "strong": "H428",
+        "morph": "HPdxcp"
+      },
+      {
+        "text": "בִּקְשׁ֧וּ",
+        "text_no_nikud": "בקשו",
+        "lemma": "H1245",
+        "strong": "H1245",
+        "morph": "HVpp3cp"
+      },
+      {
+        "text": "כְתָבָ֛/ם",
+        "text_no_nikud": "כתב/ם",
+        "lemma": "H3791",
+        "strong": "H3791",
+        "morph": "HNcmsc/Sp3mp"
+      },
+      {
+        "text": "הַ/מִּתְיַחְשִׂ֖ים",
+        "text_no_nikud": "ה/מתיחשים",
+        "lemma": "Hd/H3187",
+        "strong": "Hd/H3187",
+        "morph": "HTd/Vtrmpa"
+      },
+      {
+        "text": "וְ/לֹ֣א",
+        "text_no_nikud": "ו/לא",
+        "lemma": "Hc/H3808",
+        "strong": "Hc/H3808",
+        "morph": "HC/Tn"
+      },
+      {
+        "text": "נִמְצָ֑אוּ",
+        "text_no_nikud": "נמצאו",
+        "lemma": "H4672",
+        "strong": "H4672",
+        "morph": "HVNp3cp"
+      },
+      {
+        "text": "וַֽ/יְגֹאֲל֖וּ",
+        "text_no_nikud": "ו/יגאלו",
+        "lemma": "Hc/H1351",
+        "strong": "Hc/H1351",
+        "morph": "HC/VPw3mp"
+      },
+      {
+        "text": "מִן",
+        "text_no_nikud": "מן",
+        "lemma": "H4480",
+        "strong": "H4480",
+        "morph": "HR"
+      },
+      {
+        "text": "הַ/כְּהֻנָּֽה",
+        "text_no_nikud": "ה/כהנה",
+        "lemma": "Hd/H3550",
+        "strong": "Hd/H3550",
+        "morph": "HTd/Ncfsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 63,
+    "hebrew": "וַ/יֹּ֤אמֶר הַ/תִּרְשָׁ֨תָא֙ לָ/הֶ֔ם אֲשֶׁ֥ר לֹא יֹאכְל֖וּ מִ/קֹּ֣דֶשׁ הַ/קֳּדָשִׁ֑ים עַ֛ד עֲמֹ֥ד כֹּהֵ֖ן לְ/אוּרִ֥ים וּ/לְ/תֻמִּֽים",
+    "hebrew_no_nikud": "ו/יאמר ה/תרשתא ל/הם אשר לא יאכלו מ/קדש ה/קדשים עד עמד כהן ל/אורים ו/ל/תמים",
+    "words": [
+      {
+        "text": "וַ/יֹּ֤אמֶר",
+        "text_no_nikud": "ו/יאמר",
+        "lemma": "Hc/H559",
+        "strong": "Hc/H559",
+        "morph": "HC/Vqw3ms"
+      },
+      {
+        "text": "הַ/תִּרְשָׁ֨תָא֙",
+        "text_no_nikud": "ה/תרשתא",
+        "lemma": "Hd/H8660",
+        "strong": "Hd/H8660",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "לָ/הֶ֔ם",
+        "text_no_nikud": "ל/הם",
+        "lemma": "Hl",
+        "strong": "Hl",
+        "morph": "HR/Sp3mp"
+      },
+      {
+        "text": "אֲשֶׁ֥ר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "לֹא",
+        "text_no_nikud": "לא",
+        "lemma": "H3808",
+        "strong": "H3808",
+        "morph": "HTn"
+      },
+      {
+        "text": "יֹאכְל֖וּ",
+        "text_no_nikud": "יאכלו",
+        "lemma": "H398",
+        "strong": "H398",
+        "morph": "HVqi3mp"
+      },
+      {
+        "text": "מִ/קֹּ֣דֶשׁ",
+        "text_no_nikud": "מ/קדש",
+        "lemma": "Hm/H6944",
+        "strong": "Hm/H6944",
+        "morph": "HR/Ncmsc"
+      },
+      {
+        "text": "הַ/קֳּדָשִׁ֑ים",
+        "text_no_nikud": "ה/קדשים",
+        "lemma": "Hd/H6944",
+        "strong": "Hd/H6944",
+        "morph": "HTd/Ncmpa"
+      },
+      {
+        "text": "עַ֛ד",
+        "text_no_nikud": "עד",
+        "lemma": "H5704",
+        "strong": "H5704",
+        "morph": "HR"
+      },
+      {
+        "text": "עֲמֹ֥ד",
+        "text_no_nikud": "עמד",
+        "lemma": "H5975",
+        "strong": "H5975",
+        "morph": "HVqc"
+      },
+      {
+        "text": "כֹּהֵ֖ן",
+        "text_no_nikud": "כהן",
+        "lemma": "H3548",
+        "strong": "H3548",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "לְ/אוּרִ֥ים",
+        "text_no_nikud": "ל/אורים",
+        "lemma": "Hl/H224",
+        "strong": "Hl/H224",
+        "morph": "HR/Ncmpa"
+      },
+      {
+        "text": "וּ/לְ/תֻמִּֽים",
+        "text_no_nikud": "ו/ל/תמים",
+        "lemma": "Hc/Hl/H8550",
+        "strong": "Hc/Hl/H8550",
+        "morph": "HC/R/Ncmpa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 64,
+    "hebrew": "כָּל הַ/קָּהָ֖ל כְּ/אֶחָ֑ד אַרְבַּ֣ע רִבּ֔וֹא אַלְפַּ֖יִם שְׁלֹשׁ מֵא֥וֹת שִׁשִּֽׁים",
+    "hebrew_no_nikud": "כל ה/קהל כ/אחד ארבע רבוא אלפים שלש מאות ששים",
+    "words": [
+      {
+        "text": "כָּל",
+        "text_no_nikud": "כל",
+        "lemma": "H3605",
+        "strong": "H3605",
+        "morph": "HNcmsc"
+      },
+      {
+        "text": "הַ/קָּהָ֖ל",
+        "text_no_nikud": "ה/קהל",
+        "lemma": "Hd/H6951",
+        "strong": "Hd/H6951",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "כְּ/אֶחָ֑ד",
+        "text_no_nikud": "כ/אחד",
+        "lemma": "Hk/H259",
+        "strong": "Hk/H259",
+        "morph": "HR/Acmsa"
+      },
+      {
+        "text": "אַרְבַּ֣ע",
+        "text_no_nikud": "ארבע",
+        "lemma": "H702",
+        "strong": "H702",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "רִבּ֔וֹא",
+        "text_no_nikud": "רבוא",
+        "lemma": "H7239",
+        "strong": "H7239",
+        "morph": "HAcbsa"
+      },
+      {
+        "text": "אַלְפַּ֖יִם",
+        "text_no_nikud": "אלפים",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שְׁלֹשׁ",
+        "text_no_nikud": "שלש",
+        "lemma": "H7969",
+        "strong": "H7969",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֥וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שִׁשִּֽׁים",
+        "text_no_nikud": "ששים",
+        "lemma": "H8346",
+        "strong": "H8346",
+        "morph": "HAcbpa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 65,
+    "hebrew": "מִ֠/לְּ/בַד עַבְדֵי/הֶ֤ם וְ/אַמְהֹֽתֵי/הֶם֙ אֵ֔לֶּה שִׁבְעַ֣ת אֲלָפִ֔ים שְׁלֹ֥שׁ מֵא֖וֹת שְׁלֹשִׁ֣ים וְ/שִׁבְעָ֑ה וְ/לָ/הֶ֛ם מְשֹׁרְרִ֥ים וּֽ/מְשֹׁרְר֖וֹת מָאתָֽיִם",
+    "hebrew_no_nikud": "מ/ל/בד עבדי/הם ו/אמהתי/הם אלה שבעת אלפים שלש מאות שלשים ו/שבעה ו/ל/הם משררים ו/משררות מאתים",
+    "words": [
+      {
+        "text": "מִ֠/לְּ/בַד",
+        "text_no_nikud": "מ/ל/בד",
+        "lemma": "Hm/Hl/H905",
+        "strong": "Hm/Hl/H905",
+        "morph": "HR/R/Ncmsc"
+      },
+      {
+        "text": "עַבְדֵי/הֶ֤ם",
+        "text_no_nikud": "עבדי/הם",
+        "lemma": "H5650",
+        "strong": "H5650",
+        "morph": "HNcmpc/Sp3mp"
+      },
+      {
+        "text": "וְ/אַמְהֹֽתֵי/הֶם֙",
+        "text_no_nikud": "ו/אמהתי/הם",
+        "lemma": "Hc/H519",
+        "strong": "Hc/H519",
+        "morph": "HC/Ncfpc/Sp3mp"
+      },
+      {
+        "text": "אֵ֔לֶּה",
+        "text_no_nikud": "אלה",
+        "lemma": "H428",
+        "strong": "H428",
+        "morph": "HPdxcp"
+      },
+      {
+        "text": "שִׁבְעַ֣ת",
+        "text_no_nikud": "שבעת",
+        "lemma": "H7651",
+        "strong": "H7651",
+        "morph": "HAcmsc"
+      },
+      {
+        "text": "אֲלָפִ֔ים",
+        "text_no_nikud": "אלפים",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שְׁלֹ֥שׁ",
+        "text_no_nikud": "שלש",
+        "lemma": "H7969",
+        "strong": "H7969",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שְׁלֹשִׁ֣ים",
+        "text_no_nikud": "שלשים",
+        "lemma": "H7970",
+        "strong": "H7970",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/שִׁבְעָ֑ה",
+        "text_no_nikud": "ו/שבעה",
+        "lemma": "Hc/H7651",
+        "strong": "Hc/H7651",
+        "morph": "HC/Acmsa"
+      },
+      {
+        "text": "וְ/לָ/הֶ֛ם",
+        "text_no_nikud": "ו/ל/הם",
+        "lemma": "Hc/Hl",
+        "strong": "Hc/Hl",
+        "morph": "HC/R/Sp3mp"
+      },
+      {
+        "text": "מְשֹׁרְרִ֥ים",
+        "text_no_nikud": "משררים",
+        "lemma": "H7891",
+        "strong": "H7891",
+        "morph": "HVormpa"
+      },
+      {
+        "text": "וּֽ/מְשֹׁרְר֖וֹת",
+        "text_no_nikud": "ו/משררות",
+        "lemma": "Hc/H7891",
+        "strong": "Hc/H7891",
+        "morph": "HC/Vorfpa"
+      },
+      {
+        "text": "מָאתָֽיִם",
+        "text_no_nikud": "מאתים",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbda"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 66,
+    "hebrew": "סוּסֵי/הֶ֕ם שְׁבַ֥ע מֵא֖וֹת שְׁלֹשִׁ֣ים וְ/שִׁשָּׁ֑ה פִּרְדֵי/הֶ֕ם מָאתַ֖יִם אַרְבָּעִ֥ים וַ/חֲמִשָּֽׁה",
+    "hebrew_no_nikud": "סוסי/הם שבע מאות שלשים ו/ששה פרדי/הם מאתים ארבעים ו/חמשה",
+    "words": [
+      {
+        "text": "סוּסֵי/הֶ֕ם",
+        "text_no_nikud": "סוסי/הם",
+        "lemma": "H5483",
+        "strong": "H5483",
+        "morph": "HNcmpc/Sp3mp"
+      },
+      {
+        "text": "שְׁבַ֥ע",
+        "text_no_nikud": "שבע",
+        "lemma": "H7651",
+        "strong": "H7651",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שְׁלֹשִׁ֣ים",
+        "text_no_nikud": "שלשים",
+        "lemma": "H7970",
+        "strong": "H7970",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/שִׁשָּׁ֑ה",
+        "text_no_nikud": "ו/ששה",
+        "lemma": "Hc/H8337",
+        "strong": "Hc/H8337",
+        "morph": "HC/Acmsa"
+      },
+      {
+        "text": "פִּרְדֵי/הֶ֕ם",
+        "text_no_nikud": "פרדי/הם",
+        "lemma": "H6505",
+        "strong": "H6505",
+        "morph": "HNcmpc/Sp3mp"
+      },
+      {
+        "text": "מָאתַ֖יִם",
+        "text_no_nikud": "מאתים",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbda"
+      },
+      {
+        "text": "אַרְבָּעִ֥ים",
+        "text_no_nikud": "ארבעים",
+        "lemma": "H705",
+        "strong": "H705",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וַ/חֲמִשָּֽׁה",
+        "text_no_nikud": "ו/חמשה",
+        "lemma": "Hc/H2568",
+        "strong": "Hc/H2568",
+        "morph": "HC/Acmsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 67,
+    "hebrew": "גְּמַ֨לֵּי/הֶ֔ם אַרְבַּ֥ע מֵא֖וֹת שְׁלֹשִׁ֣ים וַ/חֲמִשָּׁ֑ה חֲמֹרִ֕ים שֵׁ֣שֶׁת אֲלָפִ֔ים שְׁבַ֥ע מֵא֖וֹת וְ/עֶשְׂרִֽים",
+    "hebrew_no_nikud": "גמלי/הם ארבע מאות שלשים ו/חמשה חמרים ששת אלפים שבע מאות ו/עשרים",
+    "words": [
+      {
+        "text": "גְּמַ֨לֵּי/הֶ֔ם",
+        "text_no_nikud": "גמלי/הם",
+        "lemma": "H1581",
+        "strong": "H1581",
+        "morph": "HNcmpc/Sp3mp"
+      },
+      {
+        "text": "אַרְבַּ֥ע",
+        "text_no_nikud": "ארבע",
+        "lemma": "H702",
+        "strong": "H702",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שְׁלֹשִׁ֣ים",
+        "text_no_nikud": "שלשים",
+        "lemma": "H7970",
+        "strong": "H7970",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וַ/חֲמִשָּׁ֑ה",
+        "text_no_nikud": "ו/חמשה",
+        "lemma": "Hc/H2568",
+        "strong": "Hc/H2568",
+        "morph": "HC/Acmsa"
+      },
+      {
+        "text": "חֲמֹרִ֕ים",
+        "text_no_nikud": "חמרים",
+        "lemma": "H2543",
+        "strong": "H2543",
+        "morph": "HNcbpa"
+      },
+      {
+        "text": "שֵׁ֣שֶׁת",
+        "text_no_nikud": "ששת",
+        "lemma": "H8337",
+        "strong": "H8337",
+        "morph": "HAcmsc"
+      },
+      {
+        "text": "אֲלָפִ֔ים",
+        "text_no_nikud": "אלפים",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "שְׁבַ֥ע",
+        "text_no_nikud": "שבע",
+        "lemma": "H7651",
+        "strong": "H7651",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "מֵא֖וֹת",
+        "text_no_nikud": "מאות",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/עֶשְׂרִֽים",
+        "text_no_nikud": "ו/עשרים",
+        "lemma": "Hc/H6242",
+        "strong": "Hc/H6242",
+        "morph": "HC/Acbpa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 68,
+    "hebrew": "וּ/מֵ/רָאשֵׁי֙ הָֽ/אָב֔וֹת בְּ/בוֹאָ֕/ם לְ/בֵ֥ית יְהוָ֖ה אֲשֶׁ֣ר בִּ/ירוּשָׁלִָ֑ם הִֽתְנַדְּבוּ֙ לְ/בֵ֣ית הָֽ/אֱלֹהִ֔ים לְ/הַעֲמִיד֖/וֹ עַל מְכוֹנֽ/וֹ",
+    "hebrew_no_nikud": "ו/מ/ראשי ה/אבות ב/בוא/ם ל/בית יהוה אשר ב/ירושלם התנדבו ל/בית ה/אלהים ל/העמיד/ו על מכונ/ו",
+    "words": [
+      {
+        "text": "וּ/מֵ/רָאשֵׁי֙",
+        "text_no_nikud": "ו/מ/ראשי",
+        "lemma": "Hc/Hm/H7218",
+        "strong": "Hc/Hm/H7218",
+        "morph": "HC/R/Ncmpc"
+      },
+      {
+        "text": "הָֽ/אָב֔וֹת",
+        "text_no_nikud": "ה/אבות",
+        "lemma": "Hd/H1",
+        "strong": "Hd/H1",
+        "morph": "HTd/Ncmpa"
+      },
+      {
+        "text": "בְּ/בוֹאָ֕/ם",
+        "text_no_nikud": "ב/בוא/ם",
+        "lemma": "Hb/H935",
+        "strong": "Hb/H935",
+        "morph": "HR/Vqc/Sp3mp"
+      },
+      {
+        "text": "לְ/בֵ֥ית",
+        "text_no_nikud": "ל/בית",
+        "lemma": "Hl/H1004",
+        "strong": "Hl/H1004",
+        "morph": "HR/Ncmsc"
+      },
+      {
+        "text": "יְהוָ֖ה",
+        "text_no_nikud": "יהוה",
+        "lemma": "H3068",
+        "strong": "H3068",
+        "morph": "HNp"
+      },
+      {
+        "text": "אֲשֶׁ֣ר",
+        "text_no_nikud": "אשר",
+        "lemma": "H834",
+        "strong": "H834",
+        "morph": "HTr"
+      },
+      {
+        "text": "בִּ/ירוּשָׁלִָ֑ם",
+        "text_no_nikud": "ב/ירושלם",
+        "lemma": "Hb/H3389",
+        "strong": "Hb/H3389",
+        "morph": "HR/Np"
+      },
+      {
+        "text": "הִֽתְנַדְּבוּ֙",
+        "text_no_nikud": "התנדבו",
+        "lemma": "H5068",
+        "strong": "H5068",
+        "morph": "HVtp3cp"
+      },
+      {
+        "text": "לְ/בֵ֣ית",
+        "text_no_nikud": "ל/בית",
+        "lemma": "Hl/H1004",
+        "strong": "Hl/H1004",
+        "morph": "HR/Ncmsc"
+      },
+      {
+        "text": "הָֽ/אֱלֹהִ֔ים",
+        "text_no_nikud": "ה/אלהים",
+        "lemma": "Hd/H430",
+        "strong": "Hd/H430",
+        "morph": "HTd/Ncmpa"
+      },
+      {
+        "text": "לְ/הַעֲמִיד֖/וֹ",
+        "text_no_nikud": "ל/העמיד/ו",
+        "lemma": "Hl/H5975",
+        "strong": "Hl/H5975",
+        "morph": "HR/Vhc/Sp3ms"
+      },
+      {
+        "text": "עַל",
+        "text_no_nikud": "על",
+        "lemma": "H5921",
+        "strong": "H5921",
+        "morph": "HR"
+      },
+      {
+        "text": "מְכוֹנֽ/וֹ",
+        "text_no_nikud": "מכונ/ו",
+        "lemma": "H4349",
+        "strong": "H4349",
+        "morph": "HNcmsc/Sp3ms"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 69,
+    "hebrew": "כְּ/כֹחָ֗/ם נָתְנוּ֮ לְ/אוֹצַ֣ר הַ/מְּלָאכָה֒ זָהָ֗ב דַּרְכְּמוֹנִים֙ שֵׁשׁ רִבֹּ֣אות וָ/אֶ֔לֶף וְ/כֶ֕סֶף מָנִ֖ים חֲמֵ֣שֶׁת אֲלָפִ֑ים וְ/כָתְנֹ֥ת כֹּהֲנִ֖ים מֵאָֽה",
+    "hebrew_no_nikud": "כ/כח/ם נתנו ל/אוצר ה/מלאכה זהב דרכמונים שש רבאות ו/אלף ו/כסף מנים חמשת אלפים ו/כתנת כהנים מאה",
+    "words": [
+      {
+        "text": "כְּ/כֹחָ֗/ם",
+        "text_no_nikud": "כ/כח/ם",
+        "lemma": "Hk/H3581",
+        "strong": "Hk/H3581",
+        "morph": "HR/Ncmsc/Sp3mp"
+      },
+      {
+        "text": "נָתְנוּ֮",
+        "text_no_nikud": "נתנו",
+        "lemma": "H5414",
+        "strong": "H5414",
+        "morph": "HVqp3cp"
+      },
+      {
+        "text": "לְ/אוֹצַ֣ר",
+        "text_no_nikud": "ל/אוצר",
+        "lemma": "Hl/H214",
+        "strong": "Hl/H214",
+        "morph": "HR/Ncmsc"
+      },
+      {
+        "text": "הַ/מְּלָאכָה֒",
+        "text_no_nikud": "ה/מלאכה",
+        "lemma": "Hd/H4399",
+        "strong": "Hd/H4399",
+        "morph": "HTd/Ncfsa"
+      },
+      {
+        "text": "זָהָ֗ב",
+        "text_no_nikud": "זהב",
+        "lemma": "H2091",
+        "strong": "H2091",
+        "morph": "HNcmsa"
+      },
+      {
+        "text": "דַּרְכְּמוֹנִים֙",
+        "text_no_nikud": "דרכמונים",
+        "lemma": "H1871",
+        "strong": "H1871",
+        "morph": "HNcmpa"
+      },
+      {
+        "text": "שֵׁשׁ",
+        "text_no_nikud": "שש",
+        "lemma": "H8337",
+        "strong": "H8337",
+        "morph": "HAcfsa"
+      },
+      {
+        "text": "רִבֹּ֣אות",
+        "text_no_nikud": "רבאות",
+        "lemma": "H7239",
+        "strong": "H7239",
+        "morph": "HNcbpa"
+      },
+      {
+        "text": "וָ/אֶ֔לֶף",
+        "text_no_nikud": "ו/אלף",
+        "lemma": "Hc/H505",
+        "strong": "Hc/H505",
+        "morph": "HC/Acbsa"
+      },
+      {
+        "text": "וְ/כֶ֕סֶף",
+        "text_no_nikud": "ו/כסף",
+        "lemma": "Hc/H3701",
+        "strong": "Hc/H3701",
+        "morph": "HC/Ncmsa"
+      },
+      {
+        "text": "מָנִ֖ים",
+        "text_no_nikud": "מנים",
+        "lemma": "H4488",
+        "strong": "H4488",
+        "morph": "HNcmpa"
+      },
+      {
+        "text": "חֲמֵ֣שֶׁת",
+        "text_no_nikud": "חמשת",
+        "lemma": "H2568",
+        "strong": "H2568",
+        "morph": "HAcmsc"
+      },
+      {
+        "text": "אֲלָפִ֑ים",
+        "text_no_nikud": "אלפים",
+        "lemma": "H505",
+        "strong": "H505",
+        "morph": "HAcbpa"
+      },
+      {
+        "text": "וְ/כָתְנֹ֥ת",
+        "text_no_nikud": "ו/כתנת",
+        "lemma": "Hc/H3801",
+        "strong": "Hc/H3801",
+        "morph": "HC/Ncfpc"
+      },
+      {
+        "text": "כֹּהֲנִ֖ים",
+        "text_no_nikud": "כהנים",
+        "lemma": "H3548",
+        "strong": "H3548",
+        "morph": "HNcmpa"
+      },
+      {
+        "text": "מֵאָֽה",
+        "text_no_nikud": "מאה",
+        "lemma": "H3967",
+        "strong": "H3967",
+        "morph": "HAcbsa"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 70,
+    "hebrew": "וַ/יֵּשְׁב֣וּ הַ/כֹּהֲנִ֣ים וְ֠/הַ/לְוִיִּם וּֽ/מִן הָ/עָ֞ם וְ/הַ/מְשֹׁרְרִ֧ים וְ/הַ/שּׁוֹעֲרִ֛ים וְ/הַ/נְּתִינִ֖ים בְּ/עָרֵי/הֶ֑ם וְ/כָל יִשְׂרָאֵ֖ל בְּ/עָרֵי/הֶֽם",
+    "hebrew_no_nikud": "ו/ישבו ה/כהנים ו/ה/לוים ו/מן ה/עם ו/ה/משררים ו/ה/שוערים ו/ה/נתינים ב/ערי/הם ו/כל ישראל ב/ערי/הם",
+    "words": [
+      {
+        "text": "וַ/יֵּשְׁב֣וּ",
+        "text_no_nikud": "ו/ישבו",
+        "lemma": "Hc/H3427",
+        "strong": "Hc/H3427",
+        "morph": "HC/Vqw3mp"
+      },
+      {
+        "text": "הַ/כֹּהֲנִ֣ים",
+        "text_no_nikud": "ה/כהנים",
+        "lemma": "Hd/H3548",
+        "strong": "Hd/H3548",
+        "morph": "HTd/Ncmpa"
+      },
+      {
+        "text": "וְ֠/הַ/לְוִיִּם",
+        "text_no_nikud": "ו/ה/לוים",
+        "lemma": "Hc/Hd/H3881",
+        "strong": "Hc/Hd/H3881",
+        "morph": "HC/Td/Ngmpa"
+      },
+      {
+        "text": "וּֽ/מִן",
+        "text_no_nikud": "ו/מן",
+        "lemma": "Hc/H4480",
+        "strong": "Hc/H4480",
+        "morph": "HC/R"
+      },
+      {
+        "text": "הָ/עָ֞ם",
+        "text_no_nikud": "ה/עם",
+        "lemma": "Hd/H5971",
+        "strong": "Hd/H5971",
+        "morph": "HTd/Ncmsa"
+      },
+      {
+        "text": "וְ/הַ/מְשֹׁרְרִ֧ים",
+        "text_no_nikud": "ו/ה/משררים",
+        "lemma": "Hc/Hd/H7891",
+        "strong": "Hc/Hd/H7891",
+        "morph": "HC/Td/Vormpa"
+      },
+      {
+        "text": "וְ/הַ/שּׁוֹעֲרִ֛ים",
+        "text_no_nikud": "ו/ה/שוערים",
+        "lemma": "Hc/Hd/H7778",
+        "strong": "Hc/Hd/H7778",
+        "morph": "HC/Td/Ncmpa"
+      },
+      {
+        "text": "וְ/הַ/נְּתִינִ֖ים",
+        "text_no_nikud": "ו/ה/נתינים",
+        "lemma": "Hc/Hd/H5411",
+        "strong": "Hc/Hd/H5411",
+        "morph": "HC/Td/Ncmpa"
+      },
+      {
+        "text": "בְּ/עָרֵי/הֶ֑ם",
+        "text_no_nikud": "ב/ערי/הם",
+        "lemma": "Hb/H5892",
+        "strong": "Hb/H5892",
+        "morph": "HR/Ncfpc/Sp3mp"
+      },
+      {
+        "text": "וְ/כָל",
+        "text_no_nikud": "ו/כל",
+        "lemma": "Hc/H3605",
+        "strong": "Hc/H3605",
+        "morph": "HC/Ncmsc"
+      },
+      {
+        "text": "יִשְׂרָאֵ֖ל",
+        "text_no_nikud": "ישראל",
+        "lemma": "H3478",
+        "strong": "H3478",
+        "morph": "HNp"
+      },
+      {
+        "text": "בְּ/עָרֵי/הֶֽם",
+        "text_no_nikud": "ב/ערי/הם",
+        "lemma": "Hb/H5892",
+        "strong": "Hb/H5892",
+        "morph": "HR/Ncfpc/Sp3mp"
+      }
+    ]
+  }
+]
