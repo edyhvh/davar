@@ -1,0 +1,130 @@
+# Davar Project - GitIgnore
+# דבר - Minimalist Bible Study App for Hebrew Scriptures
+
+# ==========================================
+# LICENSED CONTENT - NEVER COMMIT TO PUBLIC
+# ==========================================
+
+# ISR Hebrew Text Data (Institute for Scripture Research)
+# License: One verse per screen, visible attribution required
+data/ts2009/
+
+# Misc pdf files
+*.pdf
+
+# ==========================================
+# TECHNICAL FILES - NEVER COMMIT
+# ==========================================
+
+# Environment Variables
+.env
+.env.local
+.env.production
+.env.development
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+
+# Cloudflare Workers Configuration
+wrangler.toml
+
+# ==========================================
+# DEVELOPMENT & BUILD ARTIFACTS
+# ==========================================
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node.js (if used)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# React Native
+ios/build/
+android/app/build/
+android/build/
+
+# Logs
+*.log
+logs/
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.cursor/
+.cursorrules
+
+# Build Outputs
+dist/
+build/
+*.apk
+*.ipa
+
+# Testing
+.nyc_output/
+coverage/
+
+# ==========================================
+# ARCHITECTURE SPECIFIC IGNORES
+# ==========================================
+
+# SQLite Offline Databases (encrypted)
+content/sqlite/
+*.db
+
+# Penpot Design Files (if stored locally)
+*.penpot
+
+# ==========================================
+# BACKUP FILES
+# ==========================================
+
+*.backup
+*.old
+*.orig
+
+# ==========================================
+# SENSITIVE CONFIGURATION
+# ==========================================
+
+# API Keys and Secrets
+secrets.json
+config/secrets/
+keys/
