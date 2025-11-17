@@ -1,0 +1,917 @@
+
+
+**PREFACIO**
+
+La TRADUCCIÓN TEXTUAL DEL HEBREO de los libros de Santiago, Judas y Apocalipsis ha sido transcrita fielmente de manuscritos hebreos del Nuevo Testamento hallados en una sinagoga judía en Cochín, India, cuya digitalización podrá ser hallada en la parte final de esta obra.
+
+Para la traducción de los libros de Santiago y Judas he utilizado el manuscrito Oo.1.32.2 de la Biblioteca de la Universidad de Cambridge, y para el libro de Apocalipsis uno similar, Oo.1.16.1.
+
+Estas versiones de estos libros del Nuevo Testamento en hebreo, debido a su texto, digno de verse auténtico por sus muchas evidencias lingüísticas y variantes textuales en relación al texto griego, son importantes testigos de su trasmisión original en hebreo, derivándose luego a una traducción en griego.
+
+La siguiente obra es producto de una ardua labor, para dar a conocer al creyente estos textos antes desconocidos del Nuevo Testamento, mostrando así su genuina versión hebrea.
+
+Santiago **|** Judas **|** Apocalipsis   
+TRADUCCIÓN TEXTUAL DEL HEBREO©
+
+*Traductor: Natanael Doldan*
+
+**BASES DEL PROCESO DE TRADUCCIÓN**
+
+En el proceso de traducción, se ha renunciado por completo a una transcripción paráfrasis, y optado por seguir fidedignamente el texto hebreo, guardando al máximo posible la literalidad del mismo. 
+
+**NOMBRES**   
+Se han preservado tanto nombres como algunas palabras claves del texto hebreo.  
+***El Nombre de Dios*****:** Se ha optado por el hebreo original *Elohim*, palabra para el español PODEROSO.   
+El Nombre propio de Elohim, es el llamado Tetragrámaton, que en hebreo son estas cuatro letras: YHVH (יהוה). He utilizado la forma Yehovah (todo en mayúsculas), hallada en miles de manuscritos antiguos que la confirman.   
+En fin, no se han usado los títulos *Dios* o *Señor* por su lejanía con el hebreo, prefiriendo los originales *Elohim*, *Adonai*, *Adón* y *Yehovah* hebreos. 
+
+**FORMATO**  
+En el transcurso de la lectura, se encontrarán varios signos y/o notas que se utilizaron con la finalidad de dar un enriquecimiento más amplio al lector.  
+***(heb.:)*** Transliteración del hebreo.  
+***Cursiva*** Palabras que no aparecen en el hebreo, pero que se añadieron para completar el sentido de la oración.  
+***(Lit.)*** Lectura literal del texto hebreo.  
+***(O,)*** Distintos significados de la palabra hebrea en cuestión.   
+***(Véase)*** Cita a cierto/s versículo/s del Tanaj acorde/s o semejante/s al texto.  
+***(O sea,)*** Aclaración breve, si es necesaria.
+
+# **ÍNDICE**
+
+Iaacob \-  יעקב(Santiago)	6
+
+Iehudáh \-  יהודה(Judas)	11
+
+Sodot \-  סודות(Apocalipsis)	12
+
+*Fotografías de los manuscritos*	30
+
+**GLOSARIO HEBREO**
+
+Rúaj		\=	Espíritu, viento, aliento (Plural: *rujot*)
+
+Yehovah	\=	Tetragrámaton; Nombre de Elohim 
+
+Elohim		\=	Poderoso, fuerte; traducido como *Dios*
+
+EL		\=	Versión corta de Elohim *(todo en mayúsculas)*
+
+Kadosh		\=	Apartado, Santo
+
+Iehudáh		\=	Judá
+
+Mitzráim	\=	Egipto
+
+Ierushaláim	\=	Jerusalén
+
+Iehudí		\=	Judío
+
+Emunah		\=	Firmeza, constancia, fidelidad
+
+Teshuváh	\=	Retorno, arrepentimiento y vuelta
+
+Shalom		\=	Bienestar completo, paz
+
+Ha’Satán	\=	El adversario
+
+Adón		\=	Amo, Señor
+
+Malajim		\=	Mensajeros, ángeles
+
+Gei Hinom	\=	Valle de Hinom, en griego, Gehena
+
+Shofar		\=	Cuerno de carnero (Plural: *shofarot*)
+
+Menorah	\=	Candelabro de oro (Plural: *menorot*)
+
+Tzebaot		\=	Ejércitos
+
+Hejal		\=	Santuario, Templo
+
+**IAACOB (SANTIAGO)**  
+יעקב           
+
+*Gozo a las doce tribus dispersas*
+
+**1**  
+ Iaacob (Santiago o Jacobo), siervo de Yehovah y del *Adón* (Amo) Yeshúa el Me-sías, a las doce tribus dispersadas por todos los lugares; en primer lugar, ¡gozo\!
+
+*Las pruebas y la resistencia*
+
+**2** Mis amados hermanos, consideren esto como gozo si ustedes caen en una prueba (O, tentación),  
+**3** y sepan que la *emunah* (fidelidad, constancia) de ustedes, si es completa, causa resistencia (O, tolerancia a sufrimientos),  
+**4** pero la resistencia necesita ser hasta el fin, para que sean en plenitud, y no *les* falte *nada*.  
+**5** Pero si hay uno entre ustedes que le falte sabiduría, este necesita orar *por esto* de Yehovah, que da a todo hombre, y Él también se lo dará.   
+**6** Pero él precisa orar con emunah, y no con duda; porque quien es dudoso, este es semejante a una balanza sobre el mar.  
+**7** Y este hombre no debe pensar que recibirá alguna cosa del Adón.  
+**8** Y el poseedor de duda, él es sin entendimiento en todos sus caminos.
+
+*La humildad ante la riqueza*
+
+**9** Pero un hermano que es humilde (O, bajo) podrá gloriarse con su exaltación,   
+**10** y el rico debe gloriarse con su humillación, porque como una flor del campo se secará,  
+**11** y “como una flor saldrá y se marchitará, y huirá como sombra y no permanecerá de pie (Cita de Job 14:2; el texto gr. parafrasea el vers.)”.
+
+*La tentación*
+
+**12** Y “feliz es el hombre que es disciplinado *por* Eloah (singular de Elohim), y la disciplina de Shadai no rechaces” (cita de Job 5:17), porque después de las disciplinas, recibirás la corona de la vida, que prometió Yehovah a aquellos que le aman.  
+**13** Y no diga uno si la tentación (O, prueba) viene sobre él: “Esto viene de Yehovah”, porque Yehovah no tienta al hombre para mal, y Él no es tentado por nadie;  
+**14** solamente *que* cada uno es tentado si su deseo lo vence.  
+**15** Y después, si acepta el deseo, este causa el pecado; pero el pecado, si se consuma, este causa la muerte.  
+**16** No se extravíen, amados hermanos,   
+**17** toda buena dádiva viene de lo alto, de la luz del Padre, y con Él no hay cambio ni alteración de la luz y de la oscuridad.  
+**18** Y Él se mostró a nosotros conforme a su voluntad, por la palabra de la verdad, para que nosotros *seamos* primicias de su creación.
+
+*Hacedores de la palabra*
+
+**19** A causa de esto, amados hermanos, todos los hijos del hombre necesitan ser prontos para escuchar, pero no para hablar ni para airarse;  
+**20** porque la ira de los hijos del hombre no hace lo que es bueno delante de Yehovah.  
+**21** (*El texto gr. añade un vers. anterior a este*)   
+Pero ustedes serán de los que hacen la palabra y no de los que escuchan solamente, que, de por sí, los están engañando a ustedes (O, por los cuales ustedes están siendo engañados).  
+**22** Porque si es que hay uno que escucha la palabra y no *la* hace, este es semejante a un hombre que se mira a sí mismo en los espejos de las sirvientas (heb.: *bemarot  hatzovot*; véase Éxodo 38:8).  
+**23** Exactamente después de verse a sí mismo, él se va de aquello y olvida lo que vio.  
+**24** Pero el que mira con plenitud el decreto (O, la ley; heb.: *dat*) del gozo y lo establece, y no olvida lo que escuchó sino que *lo* hace, este será *kadosh* (apartado, santo) en todas sus obras.  
+**25** Pero, si uno entre ustedes piensa de sí mismo que sirve a Yehovah, y no guarda su lengua con freno, solo está seduciendo su *propio* corazón, este servicio de Yehovah no es bueno.  
+**26** Pero el servicio puro sin falta (O, deficiencia) delante de Yehovah el Padre, es este: el que va a visitar (O, a buscar) a los huérfanos y a las viudas en sus angustias.
+
+*El mostrar favoritismo*
+
+**2**  
+ Amados hermanos, no piensen que la emunah en Yeshúa el Mesías nuestro Adón alza los rostros (O, carga *consigo* los rostros; o sea, *muestra favoritismo hacia ciertas personas*; un hebraísmo).  
+**2** Porque si entra uno a la casa del juicio (O sea, lugar de la congregación) con un anillo de oro y con vestiduras agradables, y también uno pobre con vestiduras malas,  
+**3** y ustedes miran a este que viste vestiduras agradables, y le dicen: “Siéntate por nosotros en *este* buen *asiento* (O, buen *lugar*)”; pero dicen al pobre: “Párate allí” o “Siéntate a nuestros pies”,  
+**4** no mirarán con bien a este, solamente ustedes serán jueces y harán una mala división.  
+**5** Escúchenme, amados hermanos, ¿no escogió Yehovah a los pobres en este mundo, los ricos en emunah y poseedores de la promesa que prometió a aquellos que le aman?  
+**6** Pero ustedes hacen avergonzar a los pobres. Y los ricos, ¿no son ellos los que hacen con ustedes todo con fuerza, y los hacen salir a ustedes a juicio?  
+**7** ¿Y no insultan y blasfeman el buen Nombre de Éste que ustedes proclaman (O, invocan)?  
+**8** Si ustedes hacen el decreto (O, la ley; heb.: *dat*) conforme está escrito en la Torah (instrucción): “Y amarás a tu prójimo como a ti mismo”, harán bien.  
+**9** Pero si ustedes miran al hombre, harán pecado y serán castigados por el decreto como transgresores (Lit.: los que pasan por encima).  
+**10** Porque si uno establece toda la Torah, toda ella, pero peca en uno, él es culpable en todo.  
+**11** Porque Éste dijo: “No adulterarás”, también Él dijo: “No asesinarás”. Y si tú no adulteras pero haces asesinato, tú pasas por encima del decreto.  
+**12** A causa de esto, hablarán y harán como aquellos que serán juzgados por el decreto: con gozo.  
+**13** Pero vendrá juicio malo sobre este que no hace compasión (heb.: *rajamim*), y la compasión se glorifica contra el juicio.
+
+*La emunah y las obras*
+
+**14** ¿Y qué beneficio hay, amados hermanos, si uno dice que tiene la emunah (fidelidad o constancia), pero no tiene las obras? ¡Y esta emunah no tiene el poder de santificarlo\!  
+**15** Y si hay un hermano o hermana que les falta sustento cada día (Lit.: todo día y día), y uno de ustedes les dice palabras de consuelo: “Yehovah les dé saciedad”, pero él no les da alguna cosa para el beneficio del cuerpo, ¿qué beneficio hay para ellos en estas palabras?  
+**16** Así la emunah si no tiene las obras es muerta en sí misma.   
+**17** Pero podrá uno decir: “Tú tienes la emunah y yo tengo las obras; dame testimonio de tu emunah con tus obras; también yo te daré testimonio de mi emunah y mis obras”.  
+**18** Tú crees que Yehovah es uno, haces bien; los adversarios (heb.: *satanim*) también creen y tiemblan.  
+**19** ¿Pero quieres saber que la emunah sin obras es muerta?  
+**20** ¿No fue nuestro padre Abraham justificado por sus obras, que trajo a su hijo para ofrenda sobre el altar?  
+**21** Y en esto tú podrás ver que la emunah accionó en sus obras, y por las obras hechas, la emunah *fue* en plenitud.  
+**22** Y en esto fue plena la Torah, que dice: “Y Abraham creyó en Yehovah, y le consideró a él justicia.”.  
+**23** Y ahora podrán ustedes ver que el hombre es justificado por las obras, y no solo por la emunah.  
+**24** Y semejante a este *fue* Rajab la prostituta, ¿no fue ella justificada por las obras exactamente *cuando* recibió a los espías y los escondió?  
+**25** Porque como el cuerpo sin aliento (heb.: *rúaj*) es muerto, así la emunah sin obras es muerta.
+
+*El poder de la lengua*
+
+**3**  
+ Amados hermanos, no serán todos ustedes un señor maestro, *porque* sepan que el castigo será más grande.  
+**2** Porque nosotros pecamos en muchas palabras (O, muchas cosas), mas quien no peca en ninguna palabra (O, cosa), él es un hombre *kadosh* (apartado, santo), y podrá refrenar todo el cuerpo.  
+**3** Y mira que nosotros habituamos a los caballos con freno, para acostumbrarlos según nuestra voluntad.  
+**4** Y también los barcos, aunque son grandes y van por la fuerza del viento, aun así es conducido por un pequeño timón que está en la mano del mensajero.  
+**5** Así la lengua es un miembro pequeño, y hace grandes palabras. ¡Mira, un pequeño fuego quema un gran bosque\!  
+**6** Así también la lengua es como un fuego perdurable, llena de injusticias. Así es la lengua entre nuestros miembros, y hace pecar a todo el cuerpo, y nos enciende en nuestro andar, si es encendida por el Gei Hinom (Valle de Hinom, en gr., Gehena).  
+**7** Porque la naturaleza de todas las bestias, y las aves, y las serpientes, que están en la tierra seca o en el mar, es como la naturaleza del hombre (Probablemente signifique que la naturaleza de la gran parte de los animales permite que se les enseñe y entrene tal como al ser humano. La versión gr. parafrasea, y dice: la naturaleza de las bestias… se doma y ha sido domada por la naturaleza del hombre).  
+**8** Pero la lengua no puede ningún hombre refrenarla, porque es mala y está llena de la polilla de la muerte.  
+**9** Por medio de la lengua alabamos nosotros a Yehovah el Padre, y por medio de esta maldecimos nosotros al hombre, que es a imagen de Elohim;   
+**10** de una boca sale alabanza y maldiciones. Pero no debe ser así, amados hermanos.  
+**11** Porque, ¿hay una fuente que tenga en ella aguas saladas y dulces?  
+**12** ¿O podrá un árbol de dátiles dar aceite, o la vid, higos? Así la fuente no podrá dar aguas saladas y dulces.
+
+*La sabiduría de lo alto*
+
+**13** ¿Quién es sabio y entendido entre ustedes? Que me muestre su buen andar en sabiduría.  
+**14** Pero si hay en los corazones de ustedes celos (O, envidia; así en el vers. 16\) y odio, no se gloríen ni mientan contra la verdad.  
+**15** Porque esta no es sabiduría que viene de lo alto, solamente de la tierra, del hombre y de los adversarios.  
+**16** Porque en quien hay celos y odio, en este hay muchas palabras malas.  
+**17** Pero la sabiduría de lo alto es primeramente pura, y después *shalom* (bienestar entero, paz), y con reposo, y es capaz de reconciliar, y rápida para escuchar, llena de compasión, y por último, es para bien y no alza los rostros (O, no carga *consigo* los rostros) ni adula.  
+**18** Pero los frutos de las obras de justicia son sembrados en shalom por aquellos que establecen el shalom.
+
+*Guerras y disputas*
+
+**4**  
+ ¿Y a causa de qué viene guerra en medio de ustedes? ¿No es a causa de sus deseos que luchan en sus miembros?   
+**2** Y ustedes desean y no lo reciben; y el que se venga y guarda rencor no obtiene alivio en esto. ¿Y todo esto a causa de qué? Es porque ustedes no oran;   
+**3** mas ustedes hacen oración, pero no sube a causa de que ustedes oran con mal.  
+**4** ¡Adúltero y adúltera\! ¿No saben que quien ama este mundo, él es aborrecedor de Yehovah? Y quien quiera ser amante de este mundo, él será aborrecedor de Yehovah.  
+**5** ¿O piensan ustedes que la Torah dice en vano *que* el espíritu (*heb.: rúaj*) que mora dentro de ustedes desea lo opuesto a los mandamientos de Yehovah?  
+**6** Pero Él da mucha misericordia exacta, porque la Torah dice que Yehovah exalta a los humildes y humilla a los altivos.  
+**7** Ahora, ustedes serán sometidos a Yehovah, y lucharán contra los adversarios (heb.: *satanim)*, ellos huirán de ustedes.  
+**8** Y ustedes se deben acercar a Yehovah, Él se acercará a ustedes. ¡Y purifiquen sus manos, pecadores, y hagan sus corazones limpios\!  
+**9** ¡Y lleven las cargas (O, sufrimientos) y lloren\! Y su risa se tornará en llanto y su alegría en dolor.  
+**10** Sométanse delante de Yehovah, Él los oirá.   
+**11** Amados hermanos, no anden calumniando (O, chismeando. Lit.: yendo de acá para allá) entre ustedes, porque quien anda calumniando a sus hermanos, él calumnia contra el decreto; y si tú haces así, tú no estableces el decreto.  
+**12** Y hay solo uno que da el decreto, que es capaz de castigar y de perdonar; pero ¿quién eres tú para juzgar a los otros?
+
+*La dependencia total a Yehovah*
+
+**13** Y ahora, si ustedes dicen: “Hoy o mañana queremos ir a un lugar o a esta ciudad, y queremos permanecer allí un año y hacer negocios (Lit.: hacer cargas y dádivas) y saturar*nos*”,  
+**14** pero no saben qué podrá ser de mañana; pues, ¿qué es su vida? ¿No es un viento por poco tiempo y después se va?  
+**15** Pero ustedes deben decir: “Si quiere Yehovah, y estamos vivos, queremos hacer esto”.  
+**16** Pero ahora ustedes se glorían en su soberbia, y esto es para mal.  
+**17** Porque quien sabe hacer el bien y no lo hace, a este le será considerado por pecado.
+
+*Advertencia a los ricos*
+
+**5**  
+ Y ahora, ricos, clamen y lloren por el mal que vendrá sobre ustedes.   
+**2** Sus riquezas se pudrieron y sus vestidos fueron para comida como *de* polilla.  
+**3** Y su plata y su oro se enmohecerán, y este será a ustedes para testimonio y comerá su carne como el fuego. Y ustedes reunirán riquezas en los últimos días.  
+**4** Mira, el pago del asalariado que permanece toda la noche junto a ti, clama delante de Mí; y los clamores de ellos han venido delante de los oídos del Adón Tzebaot (Señor de los ejércitos).  
+**5** Y han tenido ustedes los deseos de este mundo, “y se alegraron al sonido de la flauta (Cita de Job 21:12)”.  
+**6** Y ustedes declararon culpable al justo, y lo mataron; y él no les protestó.
+
+*La esperanza en Yeshúa*
+
+**7** Y ahora, amados hermanos, deben tener esperanza por el futuro del Adón. Mira, el dueño del campo vigila por los frutos de la tierra, y su esperanza está en la lluvia temprana y la lluvia tardía.  
+**8** ¡Y también ustedes, fortalezcan sus corazones\! Porque el futuro del Adón está cerca.  
+**9** No giman (O, suspiren) contra ustedes mismos, amados hermanos, para que no entren en las manos de un obstáculo (O, lazo); porque el Juez está de pie delante de la puerta.  
+**10** Amados hermanos, tomen para ustedes por parábola las estrecheces y las cargas de los profetas que *les* hablaron a ustedes en Nombre del Adón.  
+**11** Miren, nosotros alabamos a aquellos que resisten. Y han oído de los sufrimientos de Iob, y han visto el final del Adón. Porque el Adón es un EL (Contracción de Elohim) de compasiones y grande de misericordia (O, bondad).
+
+*Instrucciones varias*
+
+**12** Pero ante todo, amados hermanos, no jurarán ni por los cielos o por la tierra o por ningún juramento, pero sus palabras serán: “Sí, sí” y “No, no”, para que no tropiecen.  
+**13** Y si uno entre ustedes sufre alguna cosa, él debe orar; y si uno entre ustedes *está* en buen corazón, este debe (O, necesita) cantar salmos.  
+**14** Y si uno está enfermo, necesita llamar a los ancianos de la congregación por él; y ellos harán oración por el bien de él, y lo ungirán con aceite *de oliva* en Nombre del Adón.  
+**15** Y la oración de la emunah ayudará al enfermo y el Adón lo levantará; y es que pecó, le perdonará los pecados.  
+**16** Y confiésense sus pecados unos a otros (Lit.: uno a uno), y cada uno haga oración por el bien de su amigo, porque “cercano está Yehovah de todos los que lo invocan, de todos los que lo invocan en verdad (Cita del Salmo 145:18)”.  
+**17** Y también, Eliyáhu (Elías) el profeta fue un hombre como nosotros, e hizo oración para que no viniera lluvia, y no vino lluvia sobre la tierra *por* tres años y medio.  
+**18** Y después hizo oración para que viniera lluvia, y dieron los cielos sus aguas y la tierra su fruto.  
+**19** Hermanos, si es que uno entre ustedes se va del buen camino al malo, y uno lo detiene,  
+**20** sepan *que* quien lo haga tornar de su maldad, este rescatará una *neshamáh* (persona que respira) de la muerte y cubrirá muchas iniquidades.
+
+**IEHUDÁH (JUDAS)**  
+יהודה    
+
+*Saludo a los hermanos*
+
+**1**  
+ Iehudáh, siervo de Yeshúa el Mesías, pero un hermano de Iaacob el enviado. A los apartados en Yehovah el Padre y escondidos en Yeshúa el Mesías.  
+**2** Yehovah les dará mucho amor, misericordia, paz y compasión.
+
+*Motivo de la carta*
+
+**3** Amados hermanos, después de que quise escribirles de nuestro apartamiento (O, santificación), hallé necesario corregirlos en las Escrituras (heb.: *Ketuvim*) para fortalecerlos en la emunah (fidelidad, constancia) que fue dada a los apartados (heb.: *kedoshim*).  
+**4** Porque algunos hijos del hombre entraron entre ellos, de los que ya estaban inscritos para este castigo, y ellos *eran* malvados, y estorbaron la bondad (heb.: *jésed*) de Yehovah con presunción, y no creyeron en Yehovah y en su ungido (O, Mesías).
+
+*Advertencias basadas en las Escrituras*
+
+**5** Pero yo quiero hacerles saber esto: que Éste que sacó a su pueblo de Mitzráim (Egipto), mató dos veces a los que no creyeron.  
+**6** Y también los ángeles (heb.: *malajim*) que pecaron y fueron echados de lo alto, ellos están escondidos en la oscuridad hasta el día del juicio futuro.  
+**7** Y también, los lugares de Sedom y Gamoráh (Sodoma y Gomorra), semejante a esto, vinieron a *ser* un proverbio, y sufrieron para siempre el fuego del Gei Hinom (Valle de Hinom, en gr., Gehena).  
+**8** Y semejante a esto son aquellos que desprecian las reglas (O, autoridades) y maldicen al reino.  
+**9** Pero el ángel Mijael (Miguel), en el momento que estaba dividido con Ha’Satán (el adversario) a causa de la tumba de Moshéh, aun así no lo maldijo, solo le dijo: “El Adón te castigará”.  
+**10** Pero aquellos maldicen y no saben nada, y además, lo que saben ellos desprecian.  
+**11** ¡Y ay de ellos\! Porque andan por el camino de Káin, y caen en la tentación de Bilam a causa de alguna ganancia, y se asesinan debido a la división de Koraj.  
+**12** Y ellos son orgullosos (Lit.: poseedores de orgullo) con las dádivas de ustedes; y son como nubes sin agua que van con el viento, y árboles que no llevan frutos,  
+**13** y como olas del mar que arrojan fuera lodo y barro.  
+**14** Y también de esto profetizó Janoj (Enoc), el séptimo desde Adam, y dijo: “Mira, el Adón vendrá con miles de miles, miríadas de apartados (O, consagrados; heb.: *kedoshim*),  
+**15** para hacer juicio a los malvados a causa de sus malas obras”.  
+**16** “Porque no hay en su boca firmeza (O, palabras verdaderas), su interior es destrucción, tumba abierta es su garganta, con su lengua adulan (Lit.: son suaves) (Cita del Salmo 5:9)”.
+
+*Exhortación a la firmeza*
+
+**17** Pero ustedes, amados hermanos, acuérdense de la palabra que fue dicha desde el principio por los enviados de nuestro Adón Yeshúa el Mesías,  
+**18** que les dijeron que en el final de los días habrá al lado de ustedes burladores que andarán tras sus deseos.  
+**19** Y estos están en la carne y no en el Rúaj (Espíritu).  
+**20** Pero ustedes, amados hermanos, fortalézcanse en su emunah por el Rúaj Ha’Kódesh (Espíritu de Santidad),  
+**21** y permanezcan en el amor de Yehovah y vigilen por las compasiones de nuestro Adón Yeshúa para una vida por siempre;  
+**22** y ustedes serán compasivos.  
+**23** De hecho, algunos de ustedes *tienen* buenas acciones y se alejan de los pecadores.  
+**24** Pero Éste que es capaz de guardarlos sin duda y de ponerlos de pie delante del Adón sin ningún pecado,  
+**25** a Éste sea gloria, esplendor y reino, desde tiempo antiguo hasta tiempo futuro. ¡Amén\!
+
+**SODOT (APOCALIPSIS)**  
+סודות    
+
+*Los secretos manifestados*
+
+**1**  
+ Estos son los secretos (O, misterios; heb.: *sodot*) que dio Yehovah a Yeshúa el Mesías para mostrar a sus siervos lo que será en *tiempo* cercano; y Él los envió por mano de su mensajero (O, ángel; heb.: *malaj*) a su siervo Iojanán (Juan),  
+**2** el testigo de la palabra de Yehovah, y del testimonio de Yeshúa el Mesías, de lo que vio.  
+**3** Santo (O, Apartado; heb.: *kadosh*) es el que lee y los que escuchan esta profecía y establecen lo que está escrito.
+
+*Saludo a los siete ancianos*
+
+**4** Iojanán, a los siete ancianos en Asia: Misericordia y *shalom* (bienestar entero, paz) sea con ustedes, de Éste que fue, y es, y será, y de los siete *Rujot* (Espíritus, Vientos) que son de su trono,  
+**5** y de Yeshúa el Mesías, el testigo fiel, el primero que se levantó de los muertos, y líder y comandante sobre la tierra (Véase Isaías 55:4). El que nos ama y nos lavó de nuestras iniquidades con su sangre,  
+**6** y nos hizo reyes y sacerdotes delante de Yehovah y su Padre, a Él será gloria y esplendor desde tiempo antiguo hasta tiempo futuro. ¡Amén\!  
+**7** ¡Mira\!, Él vendrá con las nubes, y lo verán estos que lo traspasaron y llorarán todas las familias de la tierra; sí. ¡Amén\! (Véase Zacarías 12:10-14).   
+**8** Yo soy el primero y el último, el principio y el fin, dice el Adón (Amo) Poderoso, el que fue, y es, y será.
+
+*La visión de la semejanza de hombre*
+
+**9** Yo, Iojanán, estaba en la isla llamada Patmos a causa de la palabra de Yehovah y el testimonio de Yeshúa el Mesías,  
+**10** y descansó sobre mí el Rúaj Ha’Kódesh y oí detrás de mí una gran voz,  
+**11** y dijo: Yo soy el primero y el último, y todo lo que ves, escríbe*lo* en un rollo, y envíalo a los ancianos en Asia: y a Éfeso, y también a Esmirna y a Pérgamo, y también a Tiatira y a Sardis, y también a Filadelfia y a Laodicea.  
+**12** Y me giré para ver a la voz que hablaba conmigo, y cuando me giré, vi siete *menorot* (candelabros) de oro;  
+**13** y entre ellas, uno conforme a la semejanza de hombre, y vestido con una túnica blanca y ceñido sobre el pecho con faja de oro.  
+**14** Pero su cabeza y su cabello eran blancos como lana blanca, y sus ojos como llama de fuego;  
+**15** y sus pies *eran* como el cobre, y su voz como el estruendo de grandes aguas.  
+**16** Y siete estrellas *había* en su mano derecha, y de su boca salió (Lit.: anduvo) una espada de doble filo (Lit.: dos bocas); y su apariencia brillaba como el sol.  
+**17** Y cuando lo vi, caí a sus pies como muerto. Y Él puso su mano derecha sobre mí, y me dijo: No temas, Yo soy el primero y el último.  
+**18** ¡Y mira\!, Yo estuve muerto, y ahora vivo Yo, desde tiempo antiguo hasta tiempo futuro, y Yo tengo las llaves de la muerte y del Gei Hinom (Valle de Hinom, en gr., Gehena).  
+**19** Escribe lo que has visto y lo que será después de eso.  
+**20** Y *en cuanto al* misterio (O, secreto) de las siete estrellas que viste en mi mano derecha y de las siete menorot de oro, es así: las siete estrellas, estas son siete mensajeros, y las siete menorot *son* siete ancianos.
+
+*Mensaje a la congregación de Éfeso*
+
+**2**  
+ Y al mensajero de la congregación de Éfeso, escribe:  
+“Así ha dicho Éste que tiene en su mano derecha las siete estrellas, el que camina en medio de las siete menorot de oro:  
+**2** ‘Yo conozco tus obras y tu esperanza (heb.: *tikváh*), y que no puedes soportar a los malvados, y has probado a aquellos que se dicen ser profetas y no lo son, y has hallado que ellos son falsos.  
+**3** Y tu esperanza y tu esfuerzo (O, carga), es todo a causa de mi Nombre.  
+**4** Pero tengo asombro, debido a que tú has abandonado el primer amor.  
+**5** Recuerda quién eras tú, y haz *teshuváh* (retorno, arrepentimiento), y haz tus obras primeras; y si no, rápidamente será empujada tu menorah de su lugar, si es que no haces teshuváh.  
+**6** (*El texto gr. añade un vers. anterior a este*)    
+Quien tenga oídos, escuche lo que el Rúaj dice a la congregación; quien venza comerá del árbol de la vida que está en el jardín de Éden’ ”.
+
+*Mensaje a la congregación de Esmirna*
+
+**7** Y al mensajero de la congregación de Esmirna, escribe:  
+“Así ha dicho el primero y el último, el que fue muerto y se levantó:  
+**8** ‘Yo conozco tus obras y tus sufrimientos, y el insulto de los que se dicen ser *iehudim* (judíos) y no lo son, solo ellos son hijos de Ha’Satán.  
+**9** No tengas temor de ellos. Mira, Ha’Satán tomará algunos de ustedes en cautiverio para probarlos; y el sufrimiento será para ustedes *por* diez días. Sé fiel hasta el día de tu muerte, para que Yo te dé la corona de la vida.  
+**10** Quien tenga oídos, escuche lo que el Rúaj dice a la congregación; quien venza no tendrá el sufrimiento de la muerte última (O, segunda)’ ”.
+
+*Mensaje a la congregación de Pérgamo*
+
+**11** Y al mensajero de la congregación de Pérgamo, escribe:  
+“Así ha dicho Éste que tiene la espada de doble filo (Lit.: dos bocas):  
+**12** ‘Yo conozco tus obras, y el lugar en que tú estás es el lugar donde está el trono de Ha’Satán. Y tú crees en mi Nombre y en mi *emunah* (fidelidad, constancia); y en los tiempos *en que* asesinaron a mi amigo fiel Antipas cerca de ustedes, en el lugar que Ha’Satán mora.  
+**13** Y también tú *debes ser* aborrecedor de aquellos que enseñan la enseñanza de Bilam, que enseñó por mano de Balak a hacer mal a los hijos de Israel, al hacerlos pecar en fornicación.  
+**14** Y también tú *debes ser* aborrecedor de la enseñanza de los nicolaítas, *porque* ciertamente Yo soy aborrecedor de aquellos.  
+**15** Haz teshuváh; y si no, vendré a ti con rapidez para hacer contra ti guerra por medio de la espada que está en mi boca.   
+**16** Quien tenga oídos, escuche lo que el Rúaj dice a la congregación; quien venza, Yo quiero darle de comer del maná (heb.: *man*) escondido, y también, un buen testimonio, y en este testimonio, un nombre nuevo escrito, que no podrá ninguno leer, solo este que lo recibe’ ”.
+
+*Mensaje a la congregación de Tiatira*
+
+**17** Y al mensajero de la congregación de Tiatira, escribe:  
+“Así ha dicho el Hijo de Yehovah, que sus ojos son como llama de fuego y sus pies como el cobre:  
+**18** ‘Yo conozco tus obras, tu amor, tu servicio, tu fidelidad (heb.: *emunah*) y tu esperanza, y *que* en todo tiempo haces *aún* más.  
+**19** Pero una cosa pequeña tengo acerca de ti: que dejas *a* la mujer Izebel (Jezabel), la que dice que es profetisa, y los que enseñan y seducen a mis siervos a hacer fornicación.  
+**20** Mira, Yo haré venir sobre ella y sobre aquel que se acuesta con ella, gran sufrimiento si no hacen teshuváh por sus obras;  
+**21** y Yo *le* he dado a ella tiempo para hacer teshuváh.  
+**22** Y a los hijos de ella mataré, y *en* toda congregación reconocerán que Yo soy el que escudriño los riñones y el corazón, y *a* cada uno conforme a sus medidas le retribuiré.  
+**23** Pero a ustedes y a los otros que están en Tiatira, digo Yo que no haré venir sobre ustedes más sufrimiento, porque no enseñan esta enseñanza de Ha’Satán.  
+**24** Pero aférrense a esto que ustedes tienen hasta que Yo venga.  
+**25** Y *a* quien venza, *le* daré naciones *como* su herencia;  
+**26** y él las pastoreará (O, guiará) con vara de hierro, y como los utensilios del alfarero los destrozará (Véase Salmo 2:8-9).  
+**27** como Yo he recibido de mi Padre;  
+**28** así *que* le daré el amanecer.  
+**29** Quien tenga oídos, escuche lo que el Rúaj dice a la congregación’ ”.
+
+*Mensaje a la congregación de Sardis*
+
+**3**  
+ Y al mensajero de la congregación de Sardis, escribe:  
+“Así ha dicho Éste que tiene los *rujot* (espíritus) de Yehovah y las siete estrellas: ‘Yo conozco tus obras, que tienes nombre de que vives, pero estás muerto.  
+**2** Por eso, no te duermas y aférrate a esto que quiere morir, porque no he hallado tus obras completas delante de Yehovah.  
+**3** Y ahora, recuerda cómo es que recibiste y oíste; y establece estas *cosas* y haz teshuváh, y si no, vendré Yo sobre ti como ladrón, y tú no sabrás en qué tiempo es que vendré.  
+**4** Y también tu nombre es oído en Sardis, *de aquellos* que no ensuciaron sus vestiduras; y ellos andarán conmigo con vestiduras blancas, porque ellos son dignos de esto.  
+**5** Y quien venza, andará con vestiduras blancas, y Yo no borraré su nombre del rollo (O, libro) de la vida, y conoceré su nombre delante de mi Padre y delante de sus ángeles.  
+**6** Quien tenga oídos, escuche lo que el Rúaj dice a la congregación’ ”.
+
+*Mensaje a la congregación de Filadelfia*
+
+**7** Y al mensajero de la congregación de Filadelfia, escribe:  
+“Así ha dicho el Kadosh y el Fiel, Éste que tiene la llave de David, el que abre y ninguno podrá cerrar, el que cierra y ninguno podrá abrir:  
+**8** ‘Yo conozco tus obras. Mira, he dado delante de ti una puerta abierta, y ninguno podrá cerrarla, porque poca fuerza tienes tú, pero has guardado mi palabra y no has negado mi Nombre.  
+**9** Mira, Yo daré a aquellos que son de la compañía de Ha’Satán, los que se dicen ser *iehudim* (judíos) y no lo son, solamente mienten. Mira que Yo quiero hacer que ellos vengan a orar a tus pies y a reconocer que Yo te he amado.  
+**10** Porque has guardado la palabra de mi esperanza, así Yo te guardaré del tiempo de la prueba que viene sobre la tierra para probar a aquellos que moran sobre la tierra.  
+**11** Mira, Yo vendré con rapidez; guarda lo que tienes, para que no tome ninguno tu corona.  
+**12** Quien venza, escribiré sobre él el Nombre de mi Elohim y el nombre de la nueva Ierushaláim, la ciudad de mi Elohim que vendrá de los cielos a la tierra de mi Elohim, y también mi Nombre nuevo.  
+**13** Quien tenga oídos, escuche lo que el Rúaj dice a la congregación’ ”.
+
+*Mensaje a la congregación de Laodicea*
+
+**14** Y al mensajero de la congregación de Laodicea, escribe:  
+“Así ha dicho Amén (Fidedigno, Verdadero), el Testigo Fiel, el principio de la creación:  
+**15** ‘Yo conozco tus obras, que tú no eres frío ni caliente, quizá serás frío o caliente.  
+**16** Pero porque tú no eres frío ni caliente, a causa de esto te escupiré de mi boca.  
+**17** Y tú dices: “Yo soy rico y tengo suficiente, y no tengo necesidad de ninguna cosa”; pero no sabes que tú eres pobre y necesitado.  
+**18** Y Yo te doy mi consejo: que de Mí compres oro, y vístete vestiduras blancas, y unge tus ojos con aceite para que puedas ver.  
+**19** Y Yo disciplino a aquellos que amo; y ahora, haz teshuváh.  
+**20** Mira, Yo me paro delante de la puerta y la golpeo, y si es que uno escucha mi voz y abre la puerta, a este iré.  
+**21** Quien venza, a este *le* daré el sentarse conmigo en mi trono, como Yo vencí y me senté con mi Padre en su trono.  
+**22** Quien tenga oídos, escuche lo que el Rúaj dice’ ”.
+
+*Visión del trono de Elohim*
+
+**4**  
+ Y después de esto vi que fue abierta una puerta en los cielos; y la primera voz que yo había escuchado, la que habló conmigo como voz de *shofar* (cuerno de carnero), me dijo: Ven aquí, Yo quiero hacerte ver qué será después de esto.  
+**2** E instantáneamente e inmediatamente descansó sobre mí el Rúaj Ha’Kódesh, y vi un trono asentado en los cielos, y sobre el trono se sentaba uno.  
+**3** Y el que estaba sentado sobre aquello, era su apariencia como apariencia de piedra de zafiro y jaspe, y alrededor del trono había un arco como *de* turquesa.  
+**4** Y alrededor del trono había veinticuatro tronos; y sobre ellos estaban sentados veinticuatro ancianos vestidos con vestiduras blancas, y sobre sus cabezas *tenían* una corona de oro.  
+**5** Y del trono salieron voces, truenos y relámpagos; y siete lámparas (O, velas) *había* delante del trono, y estos son los siete rujot de Yehovah.  
+**6** Y delante del trono había un mar de cristal, conforme a la semejanza de amatista (O, una piedra preciosa; significado incierto); y en medio del trono y alrededor del trono, cuatro seres vivientes llenos de ojos por delante de ellos y por detrás de ellos.  
+**7** Y el primer ser viviente era conforme a la semejanza de un león; el segundo como un buey; el tercero como un hombre, y el cuarto como un águila.  
+**8** Y cada uno tenía seis alas, y por dentro estaban llenos con ojos, y no había para ellos descanso, día y noche decían continuamente:  
+Kadosh, Kadosh, Kadosh,   
+Yehovah Tzebaot,   
+el Poderoso, el que fue, y es, y será.  
+**9** Y cada vez que los seres vivientes daban alabanza y acción de gracias a Éste que está sentado sobre el trono, y que vive desde tiempo antiguo hasta tiempo futuro,  
+**10** eran caídos los veinticuatro ancianos delante de Él, y oraban a Éste que vive desde tiempo antiguo hasta tiempo futuro, y arrojaban sus coronas delante de Él, y decían:  
+**11** Adón, Tú eres digno de recibir gloria y esplendor, porque Tú creaste todo, y por tu voluntad se hace todo.
+
+*El Cordero y el rollo de siete sellos*
+
+**5**  
+ Y Éste que estaba sentado sobre el trono, vi en su mano derecha un rollo, y *estaba* sellado con sellos por dentro y por fuera, con siete sellos.  
+**2** Y vi un ángel que gritó con gran voz: ¿Quién es digno de abrir el rollo y de romper sus sellos?  
+**3** Y ninguno en los cielos y en la tierra podía abrir el rollo y ver en él.  
+**4** Y yo lloré mucho, porque no había sido hallado uno que sea digno de esta cosa.  
+**5** Y uno de los ancianos me dijo: No llores; mira, ha vencido el León que es de las familias de Iehudáh (Judá), de la raíz de David, para abrir el rollo y para romper los siete sellos.  
+**6** Y vi que, en medio del trono y los seres vivientes y los veinticuatro ancianos, se paró un Cordero, como que fue matado, y tenía siete cuernos y siete ojos, y estos son los siete rujot de Yehovah enviados por toda la tierra.  
+**7** Y vino y tomó el rollo de la mano derecha de Éste que estaba sentado sobre el trono.  
+**8** Y en el momento que tomó el rollo, fueron caídos los cuatro seres vivientes y los veinticuatro ancianos delante del Cordero; y en las manos de ellos *había* arpas e incensarios llenos de incienso, y esto es la oración de los apartados.  
+**9** Y cantaban una canción nueva, y decían:  
+“Tú eres digno de tomar el rollo y de abrir sus sellos, porque Tú fuiste matado y nos compraste con tu sangre.  
+**10** Y nos hiciste sacerdotes y reyes, y nosotros seremos reyes sobre la tierra”.  
+**11** Y miré, y escuché voces de muchos de los ángeles alrededor del trono; y su número era miles de miríadas (Lit.: dos mil, diez miles).  
+**12** Y decían con gran voz:  
+“El cordero que fue matado es digno de la fuerza, de la gloria, del esplendor y de la alabanza”.  
+**13** Y toda la creación que hay en los cielos y sobre la tierra, y debajo de la tierra y en el mar, escuché que decían:   
+“A Éste que está sentado sobre el trono y al Cordero, la gloria, las alabanzas y la exaltación, desde tiempo antiguo hasta tiempo futuro”.  
+**14** Y los cuatro seres vivientes respondieron: ¡Amén\! Y los veinticuatro ancianos cayeron y oraron a Éste que vive desde tiempo antiguo hasta tiempo futuro.
+
+*Los primeros cuatro sellos*
+
+**6**  
+ Y vi que el Cordero abrió uno de los sellos, y oí que los cuatro seres vivientes decían como una voz: Ven y mira.  
+**2** Y vi un caballo blanco, y el que estaba sentado sobre él tenía en su mano un arco; y se le dio una corona, y él fue para vencer y venció.  
+**3** Y porque fue abierto el segundo sello escuché que el segundo ser viviente decía: Ven y mira.  
+**4** Y fue para afuera un caballo rojo; y al que estaba sentado sobre él le fue dado el tomar el shalom de la tierra, y se le dio una gran espada.  
+**5** Y en el momento que abrió el tercer sello, dijo el tercer ser viviente: Ven y mira. Y vi un caballo negro, y el que estaba sentado sobre él tenía en su mano una balanza.  
+**6** Y escuché una voz en medio de los cuatro seres vivientes, dijo: Una medida de trigo por dos monedas (Lit.: caras; posiblemente se refiere a las monedas con caras en ellas), y tres medidas de cebada por dos monedas, pero al aceite y al vino no hagas mal.  
+**7** Y porque abrió el cuarto sello escuché al cuarto ser viviente, dijo: Ven y mira.  
+**8** Y vi un caballo tordo (O, moteado) y fuerte (Véase Zacarías 6:3), y este que estaba sentado sobre él, era su nombre Ángel de la Muerte, y el Gei Hinom iba detrás de él. Y le fue dado permiso para matar una cuarta parte sobre la tierra con espada, con hambre y con muerte por medio de los animales de la tierra.
+
+*El quinto sello*
+
+**9** Y porque abrió el quinto, vi debajo del *Hejal* (Santuario, Templo) las personas (heb.: *neshamot*. Lit.: seres que respiran) que fueron matadas por la santidad (O, el apartamiento) de Yehovah y a causa del testimonio que ellos tenían;  
+**10** y gritaban con gran voz, y decían: ¡Adón santo y fiel\!, ¿hasta cuándo juzgarás sin vengar nuestra sangre de aquellos que moran sobre la tierra?  
+**11** Y a cada uno de ellos le fue dado vestiduras blancas, y les dijeron que descansaran aun un poco de tiempo.
+
+*El sexto sello*
+
+**12** Y vi que abrió el sexto, y hubo un temblor de la tierra, y el sol fue negro, y la luna fue roja como la sangre,  
+**13** y todo su ejército se marchitó como se marchita la hoja de la vid y como la marchitez del higo.  
+**14** Y todos los montes y colinas se sacudieron de su lugar.  
+**15** Y los reyes de la tierra, y los gobernantes, y los ricos, y los oficiales, y los siervos y los libres, se escondieron en cuevas estrechas y en cavidades del suelo (Lit.: polvo);  
+**16** y decían a los montes y a las peñas: ¡Caigan sobre nosotros y escóndannos de delante de la apariencia de Éste que está sentado sobre el trono y de delante de la ira del Cordero\!,  
+**17** porque el día del ardor de su ira ha llegado, ¿y quién podrá permanecer de pie delante de Él?
+
+*Los ciento cuarenta y cuatro mil*
+
+**7**  
+ Y después de esto, vi cuatro ángeles parados en las cuatro esquinas de la tierra, y contenían los cuatro vientos de la tierra, para que no haya viento sobre la tierra ni sobre las aguas ni sobre ningún árbol.  
+**2** Y vi otro ángel que venía del amanecer del sol, y tenía el sello del EL vivo; y se levantó y gritó con gran voz a los cuatro ángeles a los cuales se les había dado el hacer daño *a* la tierra y el mar,  
+**3** y dijo: ¡No hagan daño a la tierra ni al mar o al árbol, hasta que hallamos puesto una marca (heb.: *tav*) sobre las frentes de los siervos de Yehovah\!  
+**4** Y escuché el número de aquellos que fueron sellados, era: ciento cuarenta y cuatro mil que fueron sellados de las familias de los hijos de Israel:  
+**5** de la tribu de Iehudáh, doce mil;   
+de la tribu de Reubén, doce mil;   
+de la tribu de Gad, doce mil;  
+**6** de la tribu de Asher, doce mil;  
+de la tribu de Naftalí, doce mil;  
+de la tribu de Menashéh, doce mil;  
+**7** de la tribu de Shimeón, doce mil;  
+de la tribu de Leví, doce mil;  
+de la tribu de Isasjar, doce mil;  
+**8** de la tribu de Zebulún, doce mil;  
+de la tribu de Iosef, doce mil;  
+y de la tribu de Biniamín, doce mil.
+
+*La compañía de todos los pueblos*
+
+**9** Y después de eso, vi una gran compañía que no se podía contar, de todos los pueblos, parados delante del trono y delante del Cordero, y vestidos con vestiduras blancas, y en sus manos *tenían* ramas.  
+**10** Y gritaban con gran voz, y decían:  
+“¡A Yehovah la salvación, y al Cordero\!”  
+**11** Y todos los ángeles *estaban* parados alrededor del trono y los ancianos y los seres vivientes, y cayeron sobre sus rostros delante del trono y oraron a Yehovah,  
+**12** y decían:  
+“Exaltación, acción de gracias, alabanzas, gloria, esplendor, fuerza y poder serán a nuestro Elohim desde tiempo antiguo hasta tiempo futuro. ¡Amén\!”  
+**13** Y porque uno de los ancianos me dijo: ¿Quiénes son aquellos vestidos con vestiduras blancas y de cuál lugar han venido ellos?,  
+**14** yo le dije: Adón, tú *lo* sabes. Y él me dijo: Aquellos son los que han venido de *en* medio de mucho sufrimiento, y lavaron sus vestiduras y purificaron sus vestiduras con la sangre del Cordero.  
+**15** Y a causa de esto ellos *están* delante del trono de Yehovah y le sirven día y noche; y Éste que está sentado sobre el trono morará sobre ellos.  
+**16** Y ellos no tendrán hambre ni tendrán sed, y no los herirá el calor ardiente ni el sol,  
+**17** porque el Cordero los pastoreará (O, guiará) al pozo de aguas, y les limpiará (O, disolverá) Yehovah las lágrimas de sobre todos los rostros.
+
+*El séptimo sello*
+
+**8**  
+ Y porque abrió el séptimo todos se quedaron en silencio en los cielos como *por* un momento (Véase Daniel 4:19).  
+**2** Y vi siete ángeles que venían delante de Yehovah, y les fueron dados siete *shofarot* (plural de *shofar*, cuerno de carnero).  
+**3** Y otro ángel vino y caminó junto al *Hejal* (Santuario, Templo), y en su mano *tenía* incensarios de oro, y le fue dado mucho incienso para dar a las oraciones de los apartados delante del Hejal y delante del trono.  
+**4** Y el humo del incienso de los apartados de la mano del ángel fue delante de Yehovah.  
+**5** Y el ángel tomó el incensario y lo llenó con el fuego, y lo vertió sobre la tierra, y vinieron voces, truenos y relámpagos.
+
+*Los primeros cuatro shofarot*
+
+**6** Y los siete ángeles con los siete shofarot estuvieron preparados para soplar.  
+**7** Y el primer ángel sopló, y hubo granizo y fuego mezclado con sangre, y cayeron sobre la tierra; y un tercio de los árboles se quemó, y toda la hierba verde del campo se quemó.  
+**8** Y el segundo sopló, y hubo como una gran montaña *que* se quemaba con fuego, y fue al mar; y un tercio del mar fue sangre.  
+**9** Y un tercio de la creación del mar murió; y un tercio de los barcos se hundió.  
+**10** Y el tercero sopló, y cayó una estrella de los cielos, y se estaba quemando, y cayó sobre un tercio de los pozos de aguas.  
+**11** Y el nombre de la estrella era Tolaat (rojo escarlata o gusano carmesí; tinte del *kermes ilisis*); y un tercio de las aguas fue amarga; y muchos de los hijos del hombre murieron por las aguas, a causa de su amargura.  
+**12** Y el cuarto sopló, y fue herida (O, eclipsada) la tercera parte del sol, la luna y las estrellas, y un tercio del día no brilló, tampoco la noche.  
+**13** Y miré, y oí un ángel volar en los cielos; y gritó con gran voz: ¡Ay, ay, ay, de aquellos que moran sobre la tierra, a causa del sonido (Lit.: de la voz) de los shofarot que requieren aún soplar los tres ángeles\!
+
+*El quinto shofar*
+
+**9**  
+ Y el quinto ángel sopló, y vi una estrella caer sobre la tierra desde los cielos, y le fue dada la llave del abismo.  
+**2** Y abrió el abismo, y salió humo del abismo como humo de un gran horno, y se oscureció el sol y el aire por el humo del abismo.  
+**3** Y del humo vinieron langostas sobre la tierra, y les fue dado permiso para destruir.  
+**4** Y les dijeron que no hicieran daño a la hierba ni al forraje del campo o al árbol, sino sólo a los hijos del hombre que no tienen el sello de Yehovah en sus frentes.  
+**5** Y les fue dado no matarlos, sino hacerlos sufrir cinco meses; y su sufrimiento era como sufrimiento de escorpión cuando pica.  
+**6** Y en aquellos días intentarán sabiamente morir, pero no lo hallarán.  
+**7** Y las langostas, ellas eran como caballos preparados para la batalla, y sobre sus cabezas *había* como la semejanza de coronas de oro, y la apariencia de ellas era como la apariencia del hombre.  
+**8** Y sus cabellos eran como los cabellos de las mujeres, y sus dientes, como dientes de león.  
+**9** (*El texto gr. añade un vers. anterior a este*)   
+Y sus colas eran como colas de langosta; y a ellas les fue dado el permiso para hacer sufrir a los hijos del hombre cinco meses.  
+**10** Y el rey de ellas era un ángel del abismo, y su nombre en lengua hebrea es Abadón, y en lengua griega Apolión.  
+**11** Un (O, El primer) sufrimiento se ha ido; mira, aún dos sufrimientos vienen.
+
+*El sexto shofar*
+
+**12** Y el sexto ángel sopló, y escuché una voz de las cuatro esquinas del Hejal delante de Yehovah,  
+**13** y dijo al sexto ángel que había soplado: Ve y libera a los cuatro ángeles atados junto al gran mar, llamado Perat (Éufrates).  
+**14** Y los cuatro ángeles estaban preparados para matar la tercera parte de los hijos del hombre en una hora, en un día, en un mes y en un año.  
+**15** Sus carros (O, jinetes), era su número veinte millones (Lit.: veinte mil miles), y oí su número.  
+**16** Y después de eso vi la figura (O, forma) de los caballos y los que se sentaban sobre ellos, que tenían vestiduras de brea, azufre y fuego; y las cabezas de los caballos *eran* como cabezas de león, y de sus bocas fue fuego, humo y azufre,  
+**17** y por estos tres fue muerta la tercera parte de los hijos del hombre.  
+**18** Porque su fuerza estaba en sus bocas, y sus colas eran como serpientes y tenían cabezas, y con estas los matan.  
+**19** Pero había todavía muchos hijos del hombre que no murieron por aquellas heridas (O, plagas), porque ellos hicieron teshuváh por sus malas obras, y no oraron a Ha’Satán ni a hechura extraña (O sea, ídolos) hechas de arcilla y de piedra o de madera, y plata y oro, que no hay en ellas capacidad de caminar o de hablar o de escuchar.  
+**20** Pero no hicieron teshuváh por sus hechicerías ni por sus fornicaciones o por sus robos.
+
+*El ángel con el rollo*
+
+**10**  
+ Y vi otro ángel descender de los cielos, y *estaba* vestido con una nube, y un arco sobre su cabeza; y su apariencia *era* como el sol, y sus pies como flama de fuego.  
+**2** Y en su mano *tenía* un rollo abierto. Y pisó con su pie derecho sobre el mar y con su izquierdo sobre la tierra seca.  
+**3** Y gritó con gran voz como el grito del león; y en el momento que gritó, hablaron siete truenos (Lit.: voces) con sus voces.  
+**4** Y después de que hablaron con sus voces quería yo escribirlas, *pero* escuché una voz (Lit.: hija de voz; heb.: *bat kol*. Posiblemente, una voz de los cielos, un eco; así también en el vers. 8\) de los cielos que me dijo: Ciérralas y no escribas.  
+**5** Y el ángel que estaba parado sobre el mar y sobre la tierra seca que yo había visto, levantó su diestra y su siniestra a los cielos,  
+**6** y juró por el que vive para siempre, el Creador de los cielos y lo que hay en ellos, y de la tierra y el mar y todo lo que hay en ellos, que no hay más tiempo,  
+**7** solo cuando los siete ángeles soplen con los shofarot, serán completados todos estos misterios (O, secretos) de Yehovah, como Él dio a conocer a sus siervos, a sus profetas.  
+**8** Y escuché una vez más una voz *de los cielos*, *que* me dijo: Ve y toma el rollo abierto de la mano del ángel que está parado sobre el mar y sobre la tierra seca.  
+**9** Y fui al ángel y le dije: Dame el rollo. Y él me dijo: Toma y trágalo, y será para ti como la miel en tu boca, pero en tus entrañas te hará doler.  
+**10** Y tomé el rollo de la mano del ángel y lo tragué, y fue como la miel en mi boca; pero después que *lo* comí, me hizo doler en mis entrañas.  
+**11** Y él me dijo: Tú debes profetizar otra vez a las naciones y a los pueblos y a los reyes.
+
+*Los dos testigos*
+
+**11**  
+ Y me fue dada una caña conforme a la semejanza de una vara, y Él dijo: Levántate para medir el Hejal (Santuario, Templo) de Yehovah y su altar y aquellos que oran en él,  
+**2** pero el Hejal interior échalo afuera y no *lo* midas, porque este fue dado a los pueblos, y pisotearán la ciudad de santidad cuarenta y dos meses.  
+**3** Y Yo he dado a mis dos testigos, y ellos profetizarán mil doscientos sesenta días, y estarán vestidos con cilicio.  
+**4** Y estos, ellos *son* los dos olivos y las dos antorchas que permanecen de pie delante del Elohim de la tierra.  
+**5** Y si es que uno quiere hacerles mal, vendrá fuego y los quemará.  
+**6** Y ellos tienen permiso para cerrar los cielos para que no venga lluvia sobre la tierra en los días de su profecía, y sobre las aguas, para tornarlas en sangre y herir la tierra con plagas en todo tiempo que quisieran.  
+**7** Y después de que hayan completado su testimonio, el animal que viene del abismo hará guerra contra ellos, y los vencerá y los matará.  
+**8** Y sus cadáveres serán arrojados en las calles de la ciudad santa, la que es llamada Sedom y Mitzráim, porque allí fue crucificado nuestro Adón.  
+**9** Y algunos de los pueblos y de las tribus verán sus cadáveres *por* tres días y medio, y no los enterrarán.  
+**10** Y aquellos que moran sobre la tierra se alegrarán por ellos, y se enviarán regalos, un hombre a su compañero, porque estos profetas hicieron mucho sufrimiento a aquellos que moran sobre la tierra.  
+**11** Y después de tres días y medio, ¡ellos se levantaron y caminaron con (Lit.: sobre) sus pies\! Y temor y terror grande cayó sobre aquellos que los vieron.  
+**12** Y escucharon una voz *que* les dijo: ¡Suban\! Y subieron a lo alto (Lit.: arriba) en los cielos en una nube; y los vieron sus aborrecedores.  
+**13** Y en esta *misma* hora hubo un temblor de la tierra, y la décima parte de la ciudad cayó, y murieron siete mil hijos del hombre; y otros estaban aterrorizados, y dieron alabanza al Elohim de los cielos.  
+**14** Mira, el segundo sufrimiento se ha ido, y el tercero viene.
+
+*El séptimo shofar*
+
+**12**  
+ (*11:15 en el texto gr.*) Y el séptimo ángel sopló, y habían grandes voces en los cielos que decían: Los dignos de este mundo, todos ellos fueron detrás de nuestro Adón Yeshúa; y Él gobernará desde tiempo antiguo hasta tiempo futuro.  
+**2** Y los veinticuatro ancianos que estaban sentados sobre sus tronos delante de Yehovah, cayeron sobre sus rostros y oraron a Yehovah,  
+**3** y dijeron: ¡Nosotros damos alabanza a Ti, Adón Tzebaot, el que fue, y es, y será\!  
+**4** Y los pueblos se llenaron de ira y furor, y vino tu ira y el tiempo para juzgar los muertos y para dar el pago a tus siervos los profetas, y a los apartados y a aquellos que tienen temor de tu rostro, a pequeños y a grandes, y para destruir a aquellos que destruyen la tierra.  
+**5** Y la casa de oración de Yehovah fue abierta en los cielos, y fue vista el arca de las tablas del pacto en su casa de oración; y hubo voces y truenos y relámpagos, y un temblor de la tierra y gran granizo.
+
+*La mujer, el bebé y la serpiente*
+
+**6** (*12:1 en el texto gr.*) Y fue vista una gran señal en los cielos: una mujer vestida con el sol y la luna debajo de sus pies, y sobre su cabeza una corona de doce estrellas;  
+**7** y ella estaba encinta y gritaba, y estaba sentada en alumbramiento (Lit.: sobre el rompimiento de matriz), y tenía mucho dolor a causa del parto.  
+**8** Y otra señal hubo en los cielos, y vi una serpiente (O, un reptil; heb.: *tanín*), y tenía siete cabezas y diez cuernos, y sobre sus cabezas *había* siete coronas.  
+**9** Y su cola tomó un tercio de las estrellas y las arrojó sobre la tierra. Y la serpiente caminó delante de la mujer que estaba de parto para comerse al bebé cuando diera a luz.  
+**10** Y ella dio a luz un hijo, el que pastorearía (O, conduciría) los pueblos con vara de hierro. Y el bebé vino delante de Yehovah y su trono.  
+**11** Y la mujer se fue al desierto, porque había preparado para ella allí un lugar de Yehovah, para sustentarla allí mil doscientos sesenta días.  
+**12** Y fue hecha guerra en los cielos, el ángel Mijael con sus ángeles lucharon contra la serpiente, y los ángeles de esta lucharon contra ellos.  
+**13** Y no vencieron, y tampoco hallaron más su lugar en los cielos.  
+**14** Y fue arrojada fuera la gran serpiente, llamada Ha’Satán, el que destruye y seduce a todo el mundo; y él con sus ángeles fueron arrojados sobre la tierra para morar allí.  
+**15** Y escuché una gran voz en los cielos que dijo:  
+¡Ahora han sido vistas las obras poderosas de nuestro Elohim y su Mesías (heb.: *Mashíaj*; o sea, ungido)\! ¡Porque fue arrojado fuera este que era todo el tiempo por adversario (heb.: *satán*) contra ellos\!,  
+**16** y lo vencieron por medio de la sangre del Cordero y por medio de la palabra del testimonio de ellos, y consideraron sus vidas como nada (O, cualquier cosa).  
+**17** Y a causa de esto, ¡alégrense los cielos y todo lo que *hay* en ellos\! Y ay de aquellos que moran sobre la tierra y sobre el mar, porque Ha’Satán ha descendido a ustedes con gran ira ardiente, y sabe que tiene poco tiempo.  
+**18** Y porque vio la serpiente que había sido arrojada sobre la tierra, persiguió tras la mujer que había dado a luz.  
+**19** Y se le dieron a la mujer dos alas, como una gran águila, para ir al desierto a un lugar que había dado para ella Yehovah, para sustentarla allí un tiempo y dos tiempos y medio, a causa de la serpiente.  
+**20** Y arrojó la serpiente detrás de la mujer aguas de su boca, como un gran mar, para silenciarla (O, dejarla quieta).  
+**21** Pero hubo para la mujer salvación (heb.: *yeshuáh*) de *parte de* la tierra, porque ella abrió su boca y tragó las aguas que había arrojado la serpiente detrás de ella.  
+**22** Y la serpiente se llenó con ira a causa de la mujer, y fue para luchar contra los que quedaban de la simiente de ella, los que hacen los mandamientos de Yehovah y que creen en el testimonio de su Mesías.
+
+*El animal que sale del mar*
+
+**13**  
+ Y caminé sobre la arena del mar,  
+**2** (*13:1 en el texto gr.*) y vi un animal (O, ser viviente) *que* salió del mar, y tenía siete cabezas y diez cuernos; y sobre sus cuernos *había* diez coronas, y sobre sus cabezas *había* nombres de insultos (Lit.: palabras afiladas) e injurias (Lit.: palabras lanzadas).  
+**3** Y el animal que vi era como semejante a un caballo, y sus pies *eran* como pies de oso, y su boca como boca de león. Y la serpiente le dio su fuerza, su trono y su gran poder.  
+**4** Y vi una de sus cabezas como herida de muerte, pero la herida fue sanada, y todo el mundo se asombró a causa de este animal;  
+**5** y oraron a la serpiente, que dio al animal fuerza y gobierno; y oraron al animal, y decían: ¿Quién es semejante a este animal, y quién podrá luchar contra él?  
+**6** Y fue dado al animal abrir su boca para hablar palabras maravillosas (Véase Daniel 11:36) e insulto (Lit.: palabra afilada), hasta que se complete el tiempo de cuarenta y dos meses.  
+**7** Y abrió su boca para insultar contra Yehovah y contra los que moran en los cielos.  
+**8** Y le fue dado luchar contra los apartados y vencerlos, y todos los pueblos y naciones.  
+**9** Y todos los que moran sobre la tierra le oraron, aquellos que no está escrito su nombre en el rollo de la vida del Cordero que fue matado, desde el comienzo del mundo.  
+**10** Quien tenga oídos, escuche;  
+**11** cuando uno conduce a la cárcel, irá a la cárcel; y cuando uno mata *a* otra persona (heb.: *néfesh*) con espada, será matado con espada. Y aquí hay esperanza y emunah de los apartados.
+
+*El animal que sale de la tierra*
+
+**12** Y vi otro animal *que* salió de la tierra; y tenía dos cuernos como del Cordero pero hablaba como serpiente (heb.: *tanín*).  
+**13** E hizo grandes maravillas delante del primer animal, e hizo que la tierra y los que moran sobre ella oren al primer animal cuya herida fue sanada.  
+**14** E hizo que caiga fuego de los cielos delante del hombre.  
+**15** Y sedujo *a* los hijos del hombre con señales y demostraciones (O, maravillas) de sí mismo, y dijo a aquellos que moran sobre la tierra que hagan una imagen tallada (O, estatua) del animal que tenía la herida de espada y fue sanado.  
+**16** Y le fue dado el dar aliento y respiración (heb.: *rúaj ve’néfesh*) a la imagen tallada del animal, para que pudiera hablar y hacer que quien no quiera orar a la imagen tallada del animal, sea matado.  
+**17** E hizo para todos, los grandes y los pequeños, los ricos y los pobres, los esclavos y los libres, una marca (heb.: *simán*) en su mano derecha o en sus frentes,  
+**18** para que no pudiera ninguno comprar o vender, solamente si este tiene la marca en su mano derecha o en su frente, o el nombre del animal o el número de su nombre.  
+**19** Aquí hay sabiduría y discernimiento, quien tenga perspicacia necesita considerar el número del animal, porque este es el número de un hombre, y encontrará la cantidad, es: seiscientos y sesenta y seis.
+
+*El Cordero y los ciento cuarenta y cuatro mil*
+
+**14**  
+ Y vi un Cordero parado sobre el monte Tzión, y con Él ciento cuarenta y cuatro mil, y sobre ellos estaba escrito el Nombre de su Padre.  
+**2** Y escuché una voz de los cielos como estruendo de grandes aguas, y como la voz de grandes voces (O, truenos); y la voz que escuché era como el sonido (Lit.: la voz) de un arpa.  
+**3** Y ellos cantan como un cántico nuevo delante del trono y delante de los cuatro seres vivientes y los ancianos; y ninguno podía aprender este cántico, solamente aquellos ciento cuarenta y cuatro mil que fueron comprados de la tierra.  
+**4** Y aquellos son los que no pecaron con mujeres, y ellos son como las vírgenes, y van detrás del Cordero. Y ellos fueron comprados como primeros frutos de Yehovah y el Cordero.  
+**5** Y no hay en su rúaj engaño (Véase Salmo 32:2);  
+y ellos son limpios delante del trono de Yehovah.
+
+*Los tres ángeles*
+
+**6** Y vi un ángel volar en medio de los cielos, y tenía una buena noticia (Lit.: una fuerte escritura reveladora, en heb., *‘on guilaión’*, de donde proviene el gr., *‘evangelion’*. En la era talmúdica, *‘on guilaión’* era equivalente a *‘besoráh’,* que significa *‘buena noticia’*) para dar a conocer a aquellos que moran sobre la tierra, y a todos los pueblos y a las naciones.  
+**7** Y dijo con gran voz: ¡Teman a Yehovah y hagan sus oraciones a Él, porque el día del juicio ha venido\! ¡Y hagan oración a Éste que creó los cielos y la tierra y el mar y las fuentes\!  
+**8** Y después de esta voz, vino otro ángel, y gritó: ¡Cayó, cayó Babel, la gran ciudad\!, porque ella silenció con el vino de su fornicación a todos los pueblos.  
+**9** Y después de este vino el tercer ángel, y dijo con gran voz: Si uno hace su oración a la imagen tallada y al animal, y toma la marca sobre su mano o sobre su frente,  
+**10** este beberá del vino del ardor de Yehovah, que está en la copa del ardor, y será castigado con fuego y azufre delante de sus ángeles apartados (heb.: *kedoshim*) y el Cordero.  
+**11** Y el humo de su castigo irá en ascenso desde tiempo antiguo hasta tiempo futuro; y no habrá para ellos descanso, día y noche, aquellos que tomaron la marca y oraron a la imagen tallada.  
+**12** Aquí está *la* esperanza de *los* apartados, y aquí están los que hacen los mandamientos de Yehovah y creen en Yeshúa.  
+**13** Y escuché una voz (Lit.: hija de voz) de los cielos *que* me dijo: Escribe: “¡Apartados (O, Santos) son los muertos por el apartamiento (O, santidad) de Yehovah desde ahora\! Y verdad es esto que el Rúaj dice: ‘Que descansen (Lit.: Que se asienten) de sus obras, porque sus obras van en pos de ellos’ ”. 
+
+*Las cosechas de la tierra*
+
+**14** Y vi una nube blanca, y sobre ella estaba sentado uno conforme a la semejanza de hombre, y sobre su cabeza *había* una corona de oro, y en su mano una hoz.  
+**15** Y otro ángel vino de la casa de oración, y gritó con gran voz a este que estaba sentado sobre la nube: ¡Golpea con tu hoz y cosecha, porque el tiempo de la cosecha ha venido\!  
+**16** Y este que estaba sentado sobre la nube golpeó con su hoz y cosechó.  
+**17** Y otro ángel vino de los cielos, y en su mano había una hoz (En los vers. 17 y 19 se utiliza la palabra hebrea *'magal'* para *‘hoz’*, pero en los vers. 14 y 16 se utiliza *‘jarmesh’, ya que son diferentes tipos de hoces usadas para sembríos diferentes*).  
+**18** Y otro ángel salió del altar, y él tiene el dominio sobre el fuego, y gritó con gran voz a este que tenía la hoz, y dijo: ¡Golpea con tu hoz y cosecha las uvas de la tierra, porque sus frutos maduraron\!  
+**19** Y golpeó el ángel *con* su hoz, y cosechó las uvas de la tierra y *las* echó en el gran lagar del ardor de Yehovah.  
+**20** Y el lagar estaba afuera de la ciudad, y la sangre del lagar iba hasta la brida (O, el freno) de los caballos, camino de mil seiscientos tramos de campo (O, distancias de tierra).
+
+*Las siete plagas de los siete ángeles*
+
+**15**  
+ Y vi señales y grandes maravillas en los cielos: que siete ángeles venían; y ellos tenían siete plagas últimas, porque en ellas se ha completado el ardor de la ira de Yehovah.  
+**2** Y vi como un mar de cristal mezclado con fuego, y aquellos que vencieron al animal y su imagen tallada *estaban* parados junto al mar de cristal; y ellos tenían arpas de Yehovah.  
+**3** Y cantaban el cántico de Moshéh y el cántico del Cordero, y decían:
+
+¡Grandes son las obras de Yehovah, Elohim de los ejércitos\!  
+¡Justicia y verdad son tus caminos, Rey de los reyes\!  
+**4** ¿Y quién no temerá delante de ti   
+y dará exaltación a tu Nombre?  
+Porque Tú, solamente Tú, *eres* Kadosh;  
+porque todos los pueblos vendrán  
+y se postrarán delante de ti,  
+¡porque tus juicios fueron revelados\!
+
+**5** Y después de eso, vi que fue abierta el arca del pacto en los cielos,  
+**6** Y salieron afuera los siete ángeles que tenían las siete plagas, y estaban vestidos con vestiduras blancas, y ceñidos de oro sobre sus lomos.  
+**7** Y uno de los cuatro seres vivientes dio a los siete ángeles siete tazones de oro llenos con el ardor de Yehovah, el que vive desde tiempo antiguo hasta tiempo futuro.  
+**8** Y la casa de oración se llenó con humo, y la gloria de Yehovah llenó el Tabernáculo; y ninguno podía ir dentro de él hasta que se completaran las plagas de los siete ángeles.
+
+*Los siete tazones del ardor de Yehovah*
+
+**16**  
+ Y escuché una voz desde la casa de oración, y dijo a los siete ángeles: Vayan y derramen de los tazones sobre la tierra: el ardor de Yehovah.  
+**2** Y el primero fue y derramó su tazón sobre la tierra, y fue para erupción; se expandió sobre los hombres que tenían la marca del animal y los que oraron a su imagen tallada.  
+**3** Y derramó el segundo ángel su tazón en el mar, y fue sangre como de muerto; y todo lo que *había* en el mar, murió.  
+**4** Y el tercero derramó su tazón en los pozos de aguas, y fue sangre.  
+**5** Y escuché que el ángel dijo: Yehovah el Justo, el que fue, y es, y será; Kadosh *eres* Tú, que diste este juicio;  
+**6** porque ellos derramaron sangre de los apartados y los profetas como aguas, y Tú diste a ellos sangre para beber, porque ellos son dignos de esto.  
+**7** Y escuché otro ángel que habló de *en* medio del Hejal: Sí, Elohim de los ejércitos, tus juicios justos son.  
+**8** Y el cuarto derramó su tazón en el sol; y a este *le* fue dado hacer calor al hombre.  
+**9** Y fue grande el calor para el hombre, y maldijeron a Yehovah a causa de las plagas; maldijeron y no hicieron teshuváh para darle honor.  
+**10** Y el quinto derramó su tazón sobre el trono del animal, y lo oscureció; y ellos se mordían sus lenguas a causa del sufrimiento.  
+**11** (*El texto gr. añade un vers. anterior a este*)   
+Y el sexto derramó su tazón sobre el río Perat (Éufrates), y se secó el río para ser calzada para los reyes que son del amanecer del sol.  
+**12** Y vi que anduvieron de la boca de la serpiente, del animal y del profeta de mentira, tres reptiles impuros conforme a la semejanza de ranas;  
+**13** y aquellos son espíritus de Ha’Satán, y hacen maravillas y señales, y van a los reyes de la tierra y a todo el mundo para reunirlos para la guerra por el día de Yehovah el Poderoso.  
+**14** Mira, Yo vendré como ladrón, y apartados (O, santos) son aquellos que no se duermen y se guardan a sí mismos de no andar desnudos sin vestidos, para que no se descubra su desnudez.  
+**15** Y él los reunió en un lugar que es llamado en lengua de *ibrí* (hebreo) Har Meguidón (Monte de Meguidón; en gr., *Harmagedón*).  
+**16** Y el séptimo derramó su tazón en el aire; y vino una voz del trono, y dijo: ¡Esto pasó\!  
+**17** Y hubo voces, truenos, relámpagos y un temblor (Lit.: temblores; plural enfático) de la tierra que no había sucedido nunca (Lit.: desde antigüedad).  
+**18** Y de la gran ciudad se hicieron tres partes, y las ciudades de los pueblos cayeron. Y fue recordada la gran ciudad Babel delante de Yehovah para darle la copa con el vino del ardor de su ira.  
+**19** Y todos los montes y colinas huyeron, y no fueron vistos más.  
+**20** Y gran granizo cayó sobre el hombre desde los cielos, y ellos insultaron a Yehovah a causa de la plaga (O, golpe) del granizo.
+
+*El juicio a la gran ramera*
+
+**17**  
+ Y vino uno de los siete ángeles que tenían los siete tazones y me habló, y dijo: Ven, y te haré ver el juicio de la gran ramera, la que se sienta sobre muchas aguas;  
+**2** y con ella hicieron fornicaciones los reyes de la tierra y aquellos *a quienes* ella había embriagado de su vino.  
+**3** Y me hizo ir a un desierto, y vi *a* la mujer que estaba sentada sobre el animal cuya apariencia era como apariencia de lirios, y lleno estaba de nombres de insultos, y tenía siete cabezas y diez cuernos.  
+**4** Y la mujer estaba vestida con vestiduras rojas, como apariencia de lirios, y sobre ella había mucho oro y buenas piedras y perlas; y una copa de oro *había* en su mano llena de impurezas.  
+**5** Y en su frente estaba escrito el nombre del misterio de la gran ciudad Babel, la madre de las rameras y de las impurezas de la tierra.  
+**6** Y vi que la mujer estaba ebria de la sangre de los apartados y de la sangre de los testigos de Yeshúa, y gran asombro tuve cuando la vi.  
+**7** Y el ángel me dijo: ¿A causa de qué tienes asombro? Yo quiero decirte el misterio (O, secreto) de la mujer y del animal sobre el cual ella se sienta, y por qué tiene siete cabezas y diez cuernos.  
+**8** El animal que viste, era, y no es, y vendrá otra vez del abismo e irá al Sheol, y se asombrarán por él los hombres de la tierra cuando vean al animal que era pero no es, aunque es.  
+**9** Y aquí hay palabra que necesita perspicacia, sabiduría y discernimiento: Las siete cabezas son siete montes sobre los cuales se sienta la mujer, y aquellos son siete reyes;  
+**10** y de ellos han caído cinco, y uno es, y el otro (Lit.: el segundo) todavía no es; y cuando venga, necesita estar poco tiempo.  
+**11** Y el animal que era y no es, este es el octavo, y él es *parte* de los siete, y va al Sheol.  
+**12** Y los diez cuernos que viste son diez reyes que todavía no han recibido el reino, pero ellos gobernarán como reyes con el animal por poco tiempo.  
+**13** Y tienen un *mismo* pensamiento, y ellos darán su fuerza y su poder al animal.  
+**14** Y ellos harán guerra con el Cordero, y el Cordero los vencerá, porque Él es Amo de los amos y Rey de los reyes, y con Él *están* los escogidos y los fieles (O, los que creen).  
+**15** Y él me dijo: Las aguas que viste *en* que se sienta la ramera, son pueblos, compañías y naciones.  
+**16** Y los diez cuernos que viste sobre el animal, ellos serán aborrecedores de la ramera, y harán de ella desolación y comerán su carne, y con fuego la quemarán.  
+**17** Porque Yehovah dio en sus corazones el hacer su voluntad (O, deseo), para dar las riquezas de ella al animal hasta que se complete la palabra de Yehovah.  
+**18** Y la mujer que viste, ella es la gran ciudad que reina sobre todos los reyes de la tierra.
+
+*Caída de Babel*
+
+**18**  
+ Y después de eso vi otro ángel descender de los cielos, y tenía fuerza y gran poder, y la tierra fue iluminada por su luz.  
+**2** Y gritó con toda su fuerza, y dijo: ¡Cayó, cayó la gran ciudad Babel\!, y ha sido para morada de adversarios (O, demonios; heb.: *satanim*) y para escondite de todos los impuros de las aves y reptiles.  
+**3** Porque todos ellos bebieron de su vino y los reyes de la tierra hicieron fornicaciones con ella, y todos los mercaderes se hicieron ricos por sus deseos de grandeza.  
+**4** Y escuché otra voz desde los cielos, y dijo: ¡Salgan de ella, pueblo mío, para que no sean castigados con ella a causa de sus iniquidades\!  
+**5** Porque sus iniquidades tocaron los cielos, y Yehovah la ha recordado.  
+**6** ¡Y como ella hizo, háganle\!, ¡y retribúyele el doble, doblemente doble, conforme a sus obras\!  
+**7** Y como ella se enalteció y fue tras sus deseos, de acuerdo a esto háganle aflicciones, porque ella pensó en su corazón: “Yo soy una reina y no seré viuda, ni ningún sufrimiento veré”.  
+**8** Y a causa de esto, vendrán los sufrimientos de ellos en un día: la muerte, el sufrimiento y el hambre; y con fuego será quemada, porque fuerte es el Adón Yehovah que la juzga.  
+**9** Y los reyes de la tierra, que hicieron fornicaciones con ella, serán horrorizados (O, desolados) por ella cuando vean el humo del fuego.  
+**10** Y ellos se pararán de lejos a causa del terror, y dirán: “¡Ay y Ah (heb.: *Oy ve’ Aháh*), la gran ciudad Babel, de repente vino tu destroce\!”  
+**11** Y los mercaderes llorarán y silbarán por ti, porque ninguno comprará más la mercadería de ellos:  
+**12** la mercadería de oro y plata, buenas piedras, perlas, seda, y todos los tipos de maderas y los tipos de instrumentos de plata, hierro, estaño y plomo;  
+**13** y vino, aceite, pan, incienso, trigo, ganados y ovejas, caballos y becerros, y personas (Lit.: respiraciones ‘heb.: *neshamot*’ de hombre).  
+**14** Y el fruto (Lit.: los frutos) que era para satisfacer tu espíritu se ha ido de ti, y todas las cosas apreciadas se han ido, y no *las* hallarás más.  
+**15** Y los mercaderes que vendieron a ella estas cosas, se pararán de lejos y llorarán por ella,  
+**16** y dirán: “¡Ay y Ah, la gran ciudad Babel, que estaba vestida con seda, con oro, con buenas piedras y con perlas\!,  
+**17** porque en un momento ha sido devastado todo”. Y tu mercancía, tus marineros, tus navegantes (Lit.: los que atan cuerdas), los que refuerzan tus brechas, los que intercambian tu mercancía y todos los hombres de guerra se pararán de lejos,  
+**18** y gritarán en el momento que vean el humo, y dirán: “¿Quién es semejante a la gran ciudad?”  
+**19** Y arrojaron polvo sobre sus cabezas, y gritaban, lloraban y se lamentaban, y decían: “¡Ay, ay de la gran ciudad Babel, que de ella se enriquecieron todos los mercaderes que tenían barcos en el mar, por su mercancía\!; y ahora, en un momento ha sido devastado todo”.  
+**20** Se alegrarán los cielos y sus apartados y sus profetas, porque Yehovah ha vengado la venganza de ellos contra ella.  
+**21** Y un ángel tomó una piedra grande, como piedra de molino, y la arrojó en el mar, y dijo: “Así será hundida Babel, y no se levantará más.  
+**22** Y no se oirá más en ella voz de gozo y voz de alegría, voz del novio y voz de la novia, ni ningún instrumento de trabajo de los poseedores de trabajo; y el sonido (Lit.: la voz) de piedras de molino no se oirá más en ella;  
+**23** y no alumbrará más luz de lámpara, porque tus mercaderes fueron príncipes sobre toda la tierra, porque por medio de tus hechicerías fueron seducidos (Otra lectura posible es: *ellos sedujeron* *a*) todos los pueblos.  
+**24** Y en ella se halló la sangre de los apartados y los profetas, y de todos aquellos que fueron asesinados sobre la tierra”.
+
+*Alabanzas a Yehovah*
+
+**19**  
+ Y después de eso escuché una voz de una gran compañía, que decían:   
+¡Haleluyah\!,  
+y gloria, y poder y esplendor será a Yehovah nuestro Adón;  
+**2** porque justicia y verdad es su juicio,  
+que ha juzgado a la gran ramera,   
+la destructora de la tierra con su fornicación,  
+y ha vengado la sangre de sus siervos de ella.  
+**3** Y dijeron *por* segunda vez:  
+¡Haleluyah\!,  
+el humo *de ella* va de generación a generación.  
+**4** Y los veinticuatro ancianos y los cuatro seres vivientes cayeron y oraron a Yehovah, el que se sienta sobre el trono, y dijeron:   
+¡Amén\! ¡Haleluyah\!  
+**5** Y una voz salió del trono:  
+¡Haleluyah\!, ¡alaben, siervos de Yehovah\!,  
+¡alaben el Nombre de Yehovah\!,  
+¡y los que temen delante de Él,   
+ambos, pequeños y grandes\!
+
+*Anuncio de la boda del Cordero*
+
+**6** Y escuché una voz, como la voz de una gran compañía, como la voz de grandes aguas y como grandes voces (O, truenos), que decían:  
+¡Haleluyah\!,  
+porque Yehovah es poderoso;  
+**7** ¡estemos alegres y démosle gloria\!,  
+porque el tiempo de la boda del Cordero vino,  
+y su mujer está preparada.  
+**8** Y *le* fue dado a ella vestirse con seda,  
+pura, buena y hermosa.
+
+**9** Y él me dijo: Apartados son los que llamó a comer la cena (Lit.: la comida del atardecer) junto al Cordero. Y él me dijo: Estas son palabras de Yehovah en verdad.  
+**10** Y caí a sus pies para orarle, pero él me dijo: Mira, no *lo* hagas, yo soy compañero tuyo y de tus hermanos, y de aquellos que tienen el testimonio de Yeshúa; ¡haz oración a Yehovah\! 
+
+*El jinete del caballo blanco*
+
+**11** Y vi que los cielos se abrieron, y vi un caballo blanco, y Éste que estaba sentado sobre él, su nombre era Fiel y Verdad, y Él juzga con justicia.  
+**12** Y sus ojos eran como llama de fuego, y sobre su cabeza *había* muchas coronas, y *había* un nombre escrito sobre Él, y ninguno lo sabe, sino Él solamente.  
+**13** Y estaba vestido con una vestidura que fue rociada sobre ella sangre, y su Nombre era: La Palabra de Yehovah.  
+**14** Y todos los ejércitos de los cielos iban detrás de Él sobre caballos blancos, y todos ellos vestían vestiduras de seda blanca.  
+**15** Y de su boca fue una espada de doble filo (Lit.: dos bocas) para herir con ella los pueblos; y Él los pastoreará (O, guiará) con vara de hierro, y castigará con rectitud a las uvas de la tierra en el ardor de la ira de Yehovah.  
+**16** Y *había* un nombre escrito sobre su vestido, así: Rey de los reyes y Amo de los amos (heb.: *Mélej ha’mlajim ve’Adón ha’adonim*).  
+**17** Y vi un ángel parado en el sol, y gritó con gran voz, y dijo a todas las aves que están debajo de los cielos: ¡Vengan, reúnanse todas ustedes para la cena (Lit.: la comida del atardecer) del Elohim grande\!;  
+**18** para que coman la carne de los reyes y los príncipes, y la carne de poderosos, y carne de caballos y de aquellos que montan sobre ellos, y la carne de los pequeños y grandes, de esclavos y de libres.  
+**19** Y vi al animal y *a* los reyes de la tierra, reunieron sus campamentos para hacer guerra con Éste que estaba sentado sobre el caballo y con sus campamentos.  
+**20** Y fue capturado el animal con el profeta de mentira que hacía señales delante de él, para seducir a aquellos que tomaron la marca del animal y le oraron; y fueron arrojados en el Sheol que arde con azufre.  
+**21** Y los otros fueron muertos por medio de la espada de Éste que estaba sentado sobre el caballo, la cual salió de su boca, y todos los animales del campo se saciaron de su carne.
+
+*Ha’Satán atado por mil años*
+
+**20**  
+ Y vi un ángel descender de los cielos, y tenía la llave del abismo y en su mano una gran cadena.  
+**2** Y tomó *a* la serpiente, que es Ha’Satán, y lo ató *por* mil años;  
+**3** y lo arrojó al abismo y lo encerró, y selló por encima de él para que no pudiera seducir a los pueblos hasta que se completen los mil años, y después de eso será libre *por* poco tiempo.  
+**4** Y vi tronos, y ellos se sentaron sobre ellos, y les fue dado juzgar, aquellos que creen y testifican acerca de Yeshúa, y aquellos que no tomaron sobre sus frentes la marca del animal ni *le* oraron a él o a su imagen tallada; y aquellos viven, y gobiernan con Yeshúa *por* mil años.  
+**5** Pero los otros muertos no se levantaron hasta que se completaron los mil años. Y esta es la primera resurrección (Lit.: el primer levantamiento; así también en el vers. 6\).   
+**6** Apartado es quien tiene parte en la primera resurrección, porque sobre ellos no tiene fuerza la muerte segunda, sino que serán sacerdotes de Yehovah y su Mesías, y gobernarán con Él *por* mil años.
+
+*Juicio a Ha’Satán*
+
+**7** Y después de los mil años, será liberado Ha’Satán de su cautiverio,  
+**8** e irá a seducir *a* los pueblos sobre las cuatro esquinas de la tierra, y *a* Gog y Magog, para reunir sus fuerzas para entrar en guerra; y su número era como la arena del mar.  
+**9** Y ellos caminaron sobre la anchura de la tierra y rodearon *a* los soldados de los apartados y la ciudad amada. Y cayó fuego de los cielos y los quemó.  
+**10** Y Ha’Satán, el que los sedujo, fue arrojado en el fuego del Sheol, que allí están el animal y el profeta de mentira. Y los afligirá día y noche desde tiempo antiguo hasta tiempo futuro.
+
+*El juicio del trono blanco*
+
+**11** Y vi un gran trono, y era blanco, y *a* Éste que está sentado sobre él, y de su rostro huyeron los cielos y la tierra, y no fue hallado para ellos lugar.  
+**12** Y vi *a* los muertos, que entre ellos *estaban* los pequeños y los grandes, parados delante de Yehovah, y fueron abiertos los rollos; y otro rollo fue abierto, y este es el rollo de la vida, para juzgar *a* los muertos conforme a lo que estaba escrito en los rollos y conforme a sus obras.  
+**13** Y arrojó afuera el mar a los muertos que estaban en él, y la muerte y el Sheol dieron a los muertos; y fueron juzgados, cada uno conforme a sus obras.  
+**14** Y la muerte y el Gei Hinom fueron arrojados en el fuego; y esta es la muerte postrera.  
+**15** Y si uno no era hallado escrito en el rollo de la vida, era arrojado en el fuego.
+
+*Cielos nuevos y tierra nueva*
+
+**21**  
+ Y vi cielos nuevos y tierra nueva, porque los cielos y la tierra primeros habían perecido, y el mar no era más.  
+**2** Y yo, Iojanán, vi la ciudad apartada, la nueva Ierushaláim (Jerusalén) *que* descendió de los cielos a la tierra, y adornada estaba como la mujer que se adorna delante de su esposo.  
+**3** Y escuché una gran voz desde el trono, que dijo: ¡Mira, el Tabernáculo (heb.: *Mishkán*) de Yehovah junto al hombre, y será para ellos por Elohim y ellos serán para Él por pueblo\!  
+**4** Y limpiará (O, disolverá) Yehovah Elohim las lágrimas de sobre todos los rostros, y la muerte no gobernará más, ni *habrá* ningún sufrimiento, ni dolor, ni clamores, ni aflicciones, ¡porque lo primero pasó\!  
+**5** Y Éste que está sentado sobre el trono dijo: “Mira, Yo he hecho todo nuevo”. Y Él me dijo: “Escribe, porque estas palabras son verdad”.  
+**6** Y me dijo: “¡Pasó todo\!, Yo soy el primero y el último, el principio y el fin. Y Yo daré al sediento aguas vivas gratuitamente.  
+**7** Quien venza será heredero de todo, y Yo seré para él por Elohim, y él será para Mí por hijo.  
+**8** Pero a los que no creen, a los asesinos, a los fornicarios, a los hechiceros, y a los mentirosos daré su recompensa del fuego del Sheol, el que arde en fuego y azufre, y esta es la muerte segunda”.
+
+*La nueva Ierushaláim*
+
+**9** Y vino a mí uno de los siete ángeles que tenían en su mano los tazones llenos de las siete últimas plagas, y me dijo: Ven y mira *a* la mujer, la novia del Cordero.  
+**10** Y me condujo sobre un monte que era grande y alto, y me hizo ver la gran ciudad, la ciudad apartada, Ierushaláim *que* descendió de los cielos a la tierra.  
+**11** Y el esplendor (O, la hermosura) de Yehovah *estaba* sobre ella; y su resplandor era como la luz de la buena piedra llamada jaspe.  
+**12** Y tenía un gran muro y doce puertas, y sobre las puertas doce ángeles y los doce nombres de las doce tribus de Israel;  
+**13** desde el este (Lit.: amanecer) tres puertas, desde el oeste (Lit.: atardecer) tres puertas, desde el norte tres puertas y desde el sur tres puertas.  
+**14** Y el muro de la ciudad tenía doce fundamentos, y en ellos estaban escritos los nombres de los doce enviados del Cordero.  
+**15** Y este que hablaba conmigo tenía en su mano una caña de oro para medir con ella la ciudad, el muro y las puertas.  
+**16** Y la ciudad estaba puesta en cuadrado, y su longitud es como su anchura. Y midió la ciudad con la caña, doce mil tramos de campo; y la longitud, la anchura y la altura de la ciudad son iguales.  
+**17** Y sus muros, eran ciento cuarenta y cuatro mil codos, conforme a la medida de hombre que tenía el ángel.   
+**18** Y el muro era de jaspe y la ciudad de oro puro.  
+**19** Y el fundamento del muro y de la ciudad estaba adornado con buenas piedras: el primer fundamento era de jaspe; el segundo, zafiro; el tercero, calcedonia en lengua extranjera; y el cuarto, turquesa (O, carbunclo);  
+**20** el quinto, rubí; el sexto, ónice; el séptimo, cristal (una piedra preciosa; significado incierto); el octavo, crisólito (O, jacinto; significado dudoso); el noveno, topacio (O, una piedra preciosa amarilla; significado dudoso); el décimo, ágata; el undécimo, ópalo (O, jacinto); y el duodécimo, es llamada en lengua extranjera amatista.  
+**21** Y las doce puertas eran de perlas; y cada una de las puertas era de una perla; y las calles de la ciudad eran de oro puro, como cristal puro.  
+**22** Y no vi en ella la casa de oración, porque Yehovah Tzebaot es la casa del santuario de ellos, y el Cordero.  
+**23** Y la ciudad no necesita luz de sol o de luna, porque el esplendor de Yehovah es luminaria para ellos, y la luz de ella es el Cordero.  
+**24** Y los pueblos apartados (O, consagrados) andan en esta luz, y los reyes de la tierra traerán su riqueza en ella (Véase Isaías 60:5 y 60:11).  
+**25** Y estarán abiertas tus puertas continuamente, día y noche no se cerrarán, porque no habrá noche.  
+**26** Y ellos traerán en ella esplendor y gloria de los pueblos.  
+**27** Y extraño no se acercará a ella (O, a Él), solamente aquellos que está escrito su nombre en el rollo de la vida.
+
+*El río de aguas vivas y el árbol de la vida*
+
+**22**  
+ Y me hizo ver un río que estaba lleno de aguas vivas, y *era* puro como el cristal (heb.: *ajlamáh*; comúnmente traducido como *‘amatista’* o *‘jaspe rojo’*, pero esto no concuerda con el contexto), *que* salió del trono de Yehovah y el Cordero.  
+**2** En medio de las calles y junto al río, crecía (Lit.: subía) a su orilla, de ambos lados (Lit.: de este y de este), todo árbol de comida y el árbol de la vida. Y sobre él había doce tipos de frutos; y era su fruto para comida y su hoja para sanidad (Véase Ezequiel 47:12).  
+**3** Y destrucción (O, cosa prohibida, anatema) no habrá más; y el trono de Yehovah y el Cordero morará en ella, y sus siervos le servirán.  
+**4** Y verán su rostro, y su Nombre será escrito en sus frentes.  
+**5** Y no estará más en ella el sol para luz de día, ni para brillo, y la luna no te iluminará; y será a ti Yehovah para luz perpetua y tu Elohim para tu esplendor.
+
+*La venida de Yeshúa es pronto*
+
+**6** Y me dijo: Estas palabras son verdad; y Yehovah Tzebaot envió a sus mensajeros para hacer ver a sus siervos lo que está cerca.  
+**7** Mira, Yo vendré con rapidez; y apartado es quien crea en las palabras de la profecía que está escrita en este rollo.  
+**8** Y yo, Iojanán, escuché y vi todas estas *cosas*. Y porque escuché y vi esto, caí a tierra y oré (O, me postré) al ángel que me hizo ver esto.  
+**9** Y él me dijo: Mira, no hagas esto, porque yo soy también tu compañero y de *tus* hermanos los profetas, y de aquellos que establecen las palabras de este rollo; ¡haz oración a Yehovah\!  
+**10** Y me dijo: No tapes la visión de este rollo, porque el tiempo está cerca.  
+**11** Quien es malo, será todo el tiempo así; quien es impuro, será también así. Pero quien es benevolente, será todo el tiempo así; y quien es apartado, también este *será* así (Lit.: como él).  
+**12** Y mira, Yo vendré con rapidez para retribuir a todo hombre conforme a sus obras.  
+**13** Yo soy el primero y el último, el principio y el fin.  
+**14** Apartados son los que hacen sus mandamientos para que tengan parte en el árbol de la vida, y han sido limpios para ir por la ciudad.  
+**15** Porque desde afuera se paran los perros, los hechiceros, los fornicarios, los asesinos y los mentirosos. 
+
+*Palabras finales*
+
+**16** Yo, Yeshúa, he enviado mi mensajero para hacer*lo* ver a la congregación. Y Yo soy la raíz de las familias de David.  
+**17** Y el Rúaj y la novia dicen: ¡Ven\! Y quien oiga, diga: ¡Ven\! Y quienes tengan sed, ¡vengan a las aguas vivas, y beban sin plata y sin precio\! (Véase Isaías 55:1)  
+**18** Pero Yo doy testimonio a todos los que escuchan la profecía de este rollo, *que* si uno añade a él algunas palabras, añadirá sobre él Yehovah las plagas que están escritas en este rollo;  
+**19** y si uno quita algunas palabras de este rollo, borrará Yehovah su nombre del rollo de la vida.  
+**20** Y así dijo el que da testimonio de esto: Sí, Yo vendré con rapidez. ¡Amén\! Sí, ¡ven Adón Yeshúa\!  
+**21** La bondad de nuestro Adón Yeshúa el Mesías será con todos ustedes. ¡Amén\!
+
+FOTOGRAFÍAS DE   
+LOS MANUSCRITOS
+
+*Ms. Oo.1.32.2 y Ms. Oo. 1.16.1,*   
+*Cambridge University Library*
+
+	
+
+	
+
+*‘Y el Rúaj y la novia dicen: ¡Ven\! Y quien oiga, diga: ¡Ven\! Y quienes tengan sed, ¡vengan a las aguas vivas, y beban sin plata y sin precio\!’* 
+
+*\- Sodot (Apocalipsis) 22:17*
