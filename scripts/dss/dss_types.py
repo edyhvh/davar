@@ -66,3 +66,4 @@ class DSSVariant:
             errors.append("DSS text is required")
 
         return errors
+
