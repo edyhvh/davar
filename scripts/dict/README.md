@@ -241,3 +241,4 @@ python build_lexicon.py lexicon_100_percent_list.json
 ---
 
 *This modular architecture ensures maintainable, testable, and scalable Hebrew Scripture processing.*
+

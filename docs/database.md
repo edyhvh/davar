@@ -109,3 +109,4 @@ erDiagram
 - Las relaciones FK mantienen integridad referencial entre entidades
 
 
+
