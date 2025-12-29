@@ -1,0 +1,154 @@
+{
+  "timestamp": "2025-12-29T17:54:36.944336",
+  "summary": {
+    "total_books_validated": 3,
+    "books_with_errors": 0,
+    "books_with_warnings": 3,
+    "total_errors": 0,
+    "total_warnings": 75
+  },
+  "errors": {
+    "isaiah": [],
+    "samuel_1": [],
+    "samuel_2": []
+  },
+  "warnings": {
+    "isaiah": [
+      "Variant 1: No MT reference data available for validation",
+      "Variant 2: masoretic_text contains Latin words: ['Madheb', 'error']",
+      "Variant 2: dss_text contains Latin words: ['Marheb', 'orgullo']",
+      "Variant 2: No MT reference data available for validation",
+      "Variant 3: masoretic_text contains Latin words: ['Ari']",
+      "Variant 3: dss_text contains Latin words: ['Haro', 'que', 'mira']",
+      "Variant 3: No MT reference data available for validation",
+      "Variant 4: masoretic_text contains Latin words: ['Amarti', 'dije']",
+      "Variant 4: dss_text contains Latin words: ['Amart', 'dices']",
+      "Variant 4: No MT reference data available for validation",
+      "Variant 5: masoretic_text contains Latin words: ['Shiviti', 'puse']",
+      "Variant 5: dss_text contains Latin words: ['Shabuti', 'Fui', 'llevado', 'cautivo']",
+      "Variant 5: No MT reference data available for validation"
+    ],
+    "samuel_1": [
+      "Variant 1: masoretic_text contains no Hebrew characters",
+      "Variant 1: masoretic_text contains Latin words: ['YEHOVAH', 'establecer', 'palabra']",
+      "Variant 1: dss_text contains no Hebrew characters",
+      "Variant 1: dss_text contains Latin words: ['Pero', 'Janah', 'subi', 'pues', 'dijo', 'esposo', 'Hasta', 'que', 'sea', 'destetado', 'llevar', 'ser', 'visto', 'ante', 'rostro', 'YHVH', 'permanecer', 'all', 'hasta', 'siempre', 'dijo', 'ella', 'Elkanah', 'esposo', 'Haz', 'bueno', 'tus', 'ojos', 'Permanece', 'hasta', 'haberlo', 'destetado', 'YEHOVAH', 'establecer', 'que', 'sali', 'boca', 'mientras', 'que']",
+      "Variant 1: No MT reference data available for validation",
+      "Variant 2: masoretic_text contains no Hebrew characters",
+      "Variant 2: masoretic_text contains Latin words: ['con', 'tres', 'toros']",
+      "Variant 2: dss_text contains no Hebrew characters",
+      "Variant 2: dss_text contains Latin words: ['hizo', 'subir', 'con', 'ella', 'cuando', 'hab', 'destetado', 'con', 'toro', 'tres', 'harina', 'odre', 'vino', 'hizo', 'entrar', 'casa', 'YHVH', 'Shilo', 'era', 'joven', 'Pero']",
+      "Variant 2: No MT reference data available for validation",
+      "Variant 3: masoretic_text contains no Hebrew characters",
+      "Variant 3: masoretic_text contains Latin words: ['treinta', 'mil']",
+      "Variant 3: dss_text contains no Hebrew characters",
+      "Variant 3: dss_text contains Latin words: ['los', 'orden', 'alist', 'Bezek', 'eran', 'los', 'hijos', 'Israel', 'trescientos', 'mil', 'los', 'hombres', 'Iehud', 'setenta', 'mil', 'mientras', 'que']",
+      "Variant 3: No MT reference data available for validation",
+      "Variant 4: masoretic_text contains no Hebrew characters",
+      "Variant 4: masoretic_text contains Latin words: ['Sali', 'entonces', 'del', 'campamento', 'los', 'filisteos', 'palad', 'cual', 'llamaba', 'Goliat', 'Gat', 'ten', 'altura', 'seis', 'codos', 'palmo', 'metros', 'Mientras', 'que']",
+      "Variant 4: dss_text contains no Hebrew characters",
+      "Variant 4: dss_text contains Latin words: ['sali', 'hombre', 'entre', 'los', 'campamentos', 'los', 'filisteos', 'Goliat', 'era', 'nombre', 'Gat', 'altura', 'era', 'cuatro', 'codos', 'palmo', 'metros']",
+      "Variant 4: No MT reference data available for validation",
+      "Variant 5: masoretic_text contains no Hebrew characters",
+      "Variant 5: masoretic_text contains Latin words: ['YEHOVAH', 'establecer', 'palabra']",
+      "Variant 5: dss_text contains no Hebrew characters",
+      "Variant 5: dss_text contains Latin words: ['Pero', 'Janah', 'subi', 'pues', 'dijo', 'esposo', 'Hasta', 'que', 'sea', 'destetado', 'llevar', 'ser', 'visto', 'ante', 'rostro', 'YHVH', 'permanecer', 'all', 'hasta', 'siempre', 'dijo', 'ella', 'Elkanah', 'esposo', 'Haz', 'bueno', 'tus', 'ojos', 'Permanece', 'hasta', 'haberlo', 'destetado', 'YEHOVAH', 'establecer', 'que', 'sali', 'boca', 'mientras', 'que']",
+      "Variant 5: No MT reference data available for validation",
+      "Variant 6: masoretic_text contains no Hebrew characters",
+      "Variant 6: masoretic_text contains Latin words: ['con', 'tres', 'toros']",
+      "Variant 6: dss_text contains no Hebrew characters",
+      "Variant 6: dss_text contains Latin words: ['hizo', 'subir', 'con', 'ella', 'cuando', 'hab', 'destetado', 'con', 'toro', 'tres', 'harina', 'odre', 'vino', 'hizo', 'entrar', 'casa', 'YHVH', 'Shilo', 'era', 'joven', 'Pero']",
+      "Variant 6: No MT reference data available for validation",
+      "Variant 7: masoretic_text contains no Hebrew characters",
+      "Variant 7: masoretic_text contains Latin words: ['porque', 'los', 'hombres', 'decir', 'los', 'siervos', 'los', 'hijos', 'seg', 'algunos', 'getas', 'trataron', 'con', 'desprecio', 'ofrenda', 'YEHOVAH']",
+      "Variant 7: dss_text contains no Hebrew characters",
+      "Variant 7: dss_text contains Latin words: ['era', 'pecado', 'los', 'venes', 'muy', 'grande', 'ante', 'rostro', 'YHVH', 'porque', 'ellos', 'despreciaban', 'ofrenda', 'YEHOVAH', 'Pero']",
+      "Variant 7: No MT reference data available for validation",
+      "Variant 8: masoretic_text contains no Hebrew characters",
+      "Variant 8: masoretic_text contains Latin words: ['treinta', 'mil']",
+      "Variant 8: dss_text contains no Hebrew characters",
+      "Variant 8: dss_text contains Latin words: ['los', 'orden', 'alist', 'Bezek', 'eran', 'los', 'hijos', 'Israel', 'trescientos', 'mil', 'los', 'hombres', 'Iehud', 'setenta', 'mil', 'mientras', 'que']",
+      "Variant 8: No MT reference data available for validation",
+      "Variant 9: masoretic_text contains no Hebrew characters",
+      "Variant 9: masoretic_text contains Latin words: ['Sali', 'entonces', 'del', 'campamento', 'los', 'filisteos', 'palad', 'cual', 'llamaba', 'Goliat', 'Gat', 'ten', 'altura', 'seis', 'codos', 'palmo', 'metros', 'Mientras', 'que']",
+      "Variant 9: dss_text contains no Hebrew characters",
+      "Variant 9: dss_text contains Latin words: ['sali', 'hombre', 'entre', 'los', 'campamentos', 'los', 'filisteos', 'Goliat', 'era', 'nombre', 'Gat', 'altura', 'era', 'cuatro', 'codos', 'palmo', 'metros']",
+      "Variant 9: No MT reference data available for validation",
+      "Variant 10: masoretic_text contains no Hebrew characters",
+      "Variant 10: masoretic_text contains Latin words: ['petici', 'que', 'pidi', 'YEHOVAH']",
+      "Variant 10: dss_text contains no Hebrew characters",
+      "Variant 10: dss_text contains Latin words: ['bendijo', 'Elkanah', 'mujer', 'dijo', 'Pondr', 'YHVH', 'para', 'simiente', 'esta', 'mujer', 'lugar', 'prenda', 'que', 'prest', 'YEHOVAH', 'Pero']",
+      "Variant 10: No MT reference data available for validation",
+      "Chapter 1 has gaps in verses: [23]",
+      "Chapter 2 has gaps in verses: [18, 19]"
+    ],
+    "samuel_2": [
+      "Variant 1: masoretic_text contains no Hebrew characters",
+      "Variant 1: masoretic_text contains Latin words: ['los', 'enemigos', 'YEHOVAH']",
+      "Variant 1: dss_text contains no Hebrew characters",
+      "Variant 1: dss_text contains Latin words: ['Pero', 'porque', 'ciertamente', 'has', 'despreciado', 'palabra', 'YEHOVAH', 'Pero']",
+      "Variant 1: No MT reference data available for validation",
+      "Variant 2: masoretic_text contains no Hebrew characters",
+      "Variant 2: masoretic_text contains Latin words: ['los', 'enemigos', 'YEHOVAH']",
+      "Variant 2: dss_text contains no Hebrew characters",
+      "Variant 2: dss_text contains Latin words: ['Pero', 'porque', 'ciertamente', 'has', 'despreciado', 'palabra', 'YEHOVAH', 'Pero']",
+      "Variant 2: No MT reference data available for validation"
+    ]
+  },
+  "statistics": {
+    "isaiah": {
+      "total_variants": 5,
+      "chapters_covered": 5,
+      "verses_covered": 5,
+      "variant_types": {
+        "spelling": 2,
+        "unknown": 3
+      },
+      "significance_levels": {
+        "low": 1,
+        "high": 2,
+        "medium": 2
+      },
+      "completion_percentage": {
+        "masoretic_text": 5,
+        "dss_text": 5,
+        "translations": 5,
+        "comments": 5
+      }
+    },
+    "samuel_1": {
+      "total_variants": 10,
+      "chapters_covered": 4,
+      "verses_covered": 6,
+      "variant_types": {
+        "unknown": 10
+      },
+      "significance_levels": {
+        "medium": 10
+      },
+      "completion_percentage": {
+        "masoretic_text": 10,
+        "dss_text": 10,
+        "translations": 10,
+        "comments": 10
+      }
+    },
+    "samuel_2": {
+      "total_variants": 2,
+      "chapters_covered": 1,
+      "verses_covered": 1,
+      "variant_types": {
+        "unknown": 2
+      },
+      "significance_levels": {
+        "medium": 2
+      },
+      "completion_percentage": {
+        "masoretic_text": 2,
+        "dss_text": 2,
+        "translations": 2,
+        "comments": 2
+      }
+    }
+  }
+}
