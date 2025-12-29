@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño del API - Davar</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #B59E51;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #597057;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #2A2E17;
+            margin-top: 20px;
+        }
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+        pre {
+            background: #2A2E17;
+            color: #E0DED3;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        pre code {
+            background: transparent;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diseño del API - Davar</h1>
+        <p>Diagrama de secuencia que muestra el flujo de comunicación entre la aplicación React Native, el backend FastAPI y la base de datos PostgreSQL/SQLite.</p>
+        
+        <div class="mermaid">
+sequenceDiagram
+    participant Client as React Native App
+    participant API as FastAPI Backend
+    participant DB as PostgreSQL / SQLite
+
+    Client->>API: GET /books?section=torah
+    API->>DB: Query books table (filter by section)
+    DB-->>API: Books list
+    API-->>Client: JSON response (list of books)
+
+    Client->>API: GET /verses/{book_name}/{chapter_number}?language=en
+    API->>DB: Query verses + joins (words, translations, variants)
+    DB-->>API: Rows with JSONB arrays
+    API->>API: Build VerseResponse objects
+    API-->>Client: JSON response (VerseResponse list)
+
+    Client->>API: GET /lexicon/{strong_number}
+    API->>DB: Query lexicon + definitions
+    DB-->>API: Lexicon data
+    API->>API: Build LexiconResponse object
+    API-->>Client: LexiconResponse
+
+    Client->>API: GET /search?query=שָׁלוֹם&limit=10
+    API->>DB: Full-text search (tsvector index)
+    DB-->>API: Matching verses/references
+    API->>API: Format search results
+    API-->>Client: Search results
+        </div>
+
+        <h2>Endpoints Principales</h2>
+
+        <h3>GET /books</h3>
+        <ul>
+            <li><strong>Parámetros opcionales</strong>: <code>section</code> (book_section enum)</li>
+            <li><strong>Respuesta</strong>: Lista de libros con metadata (name, hebrew_name, section, etc.)</li>
+        </ul>
+
+        <h3>GET /verses/{book_name}/{chapter_number}</h3>
+        <ul>
+            <li><strong>Parámetros opcionales</strong>: <code>language</code> (translation_language enum)</li>
+            <li><strong>Respuesta</strong>: Lista de <code>VerseResponse</code> con:
+                <ul>
+                    <li>Texto hebreo (con y sin nikud)</li>
+                    <li>Palabras con posición, lemma, strong_number</li>
+                    <li>Traducciones según idioma solicitado</li>
+                    <li>Variantes Qumrán si existen</li>
+                    <li>Visual uncertainty markers</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>GET /lexicon/{strong_number}</h3>
+        <ul>
+            <li><strong>Respuesta</strong>: <code>LexiconResponse</code> con:
+                <ul>
+                    <li>Lemma, transliteración, pronunciación</li>
+                    <li>Definiciones múltiples (custom + Strong/BDB)</li>
+                    <li>Ocurrencias del término en las Escrituras</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>GET /search</h3>
+        <ul>
+            <li><strong>Parámetros</strong>: <code>query</code> (texto de búsqueda), <code>limit</code> (default: 10)</li>
+            <li><strong>Implementación</strong>: Full-text search usando PostgreSQL <code>tsvector</code> para eficiencia</li>
+            <li><strong>Respuesta</strong>: Versos y referencias que coinciden con la búsqueda</li>
+        </ul>
+
+        <h2>Modelos de Respuesta (Pydantic)</h2>
+
+        <h3>VerseResponse</h3>
+        <pre><code>{
+    "id": "uuid",
+    "number": 1,
+    "hebrew_text": "בְּרֵאשִׁית",
+    "hebrew_no_nikud": "בראשית",
+    "words": [{"position": 1, "hebrew": "...", "strong_number": "H7225"}],
+    "translations": [{"language": "en", "text": "In the beginning"}],
+    "variants": [{"source": "qumran", "variant_text": "..."}],
+    "visual_uncertainty": ["word1", "word2"]
+}</code></pre>
+
+        <h3>LexiconResponse</h3>
+        <pre><code>{
+    "strong_number": "H7225",
+    "lemma": "רֵאשִׁית",
+    "definitions": [...],
+    "occurrences": {...}
+}</code></pre>
+    </div>
+</body>
+</html>
+
+
