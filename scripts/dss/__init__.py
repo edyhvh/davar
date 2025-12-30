@@ -1,37 +1,36 @@
 """
 DSS Variants Processing Package
 
-This package provides tools for extracting, processing, and validating
-Dead Sea Scrolls textual variants for the Davar Bible study app.
+A comprehensive system for processing Dead Sea Scrolls textual variants
+for the Davar Bible study application.
 
-Modules:
-- dss_config: Configuration and constants
-- dss_processor: Main processing logic
-- dss_extractor: PDF extraction and parsing
-- dss_validator: Data validation and QA
-- example_usage: Usage examples and demonstrations
+This package provides tools for extracting, validating, and managing
+textual variants between the Masoretic Text and DSS manuscripts.
 
 Author: Davar Project Team
 Version: 1.0.0
+License: MIT
 """
 
 __version__ = "1.0.0"
 __author__ = "Davar Project Team"
+__license__ = "MIT"
 
 # Import main classes for easy access
+from .processor import DSSProcessor
 from .dss_types import DSSVariant
-from .dss_processor import DSSProcessor
-from .dss_extractor import DSSExtractor
-from .dss_validator import DSSValidator
-from .dss_config import BOOKS_WITH_VARIANTS, get_book_file_path
-from .etcbc_dss_integrator import ETCBC_DSS_Integrator, ETCBC_DSS_Config
-from .pdf_analyzer import DSSPDFAnalyzer
+from .validator import DSSValidator
+from .dss_config import DSSConfig, BOOKS_WITH_VARIANTS, get_book_file_path
+from .markdown_extractor import DSSMarkdownExtractor
+from .etcbc_integrator import ETCBC_DSS_Integrator as ETCBCIntegrator
 
 __all__ = [
     'DSSProcessor',
     'DSSVariant',
-    'DSSExtractor',
     'DSSValidator',
+    'DSSConfig',
+    'DSSMarkdownExtractor',
+    'ETCBCIntegrator',
     'BOOKS_WITH_VARIANTS',
     'get_book_file_path'
 ]

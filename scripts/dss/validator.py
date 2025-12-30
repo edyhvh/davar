@@ -24,9 +24,9 @@ sys.path.append(str(Path(__file__).parent))
 
 from dss_config import (
     BOOKS_WITH_VARIANTS,
-    get_book_file_path,
-    DSS_VARIANT_SCHEMA
+    get_book_file_path
 )
+from dss_types import DSSVariant
 from dss_types import DSSVariant
 
 # Configure logging

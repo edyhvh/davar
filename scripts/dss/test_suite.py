@@ -19,8 +19,9 @@ def test_imports():
     """Test that all modules can be imported."""
     try:
         from dss_config import BOOKS_WITH_VARIANTS, get_book_file_path
-        from dss_processor import DSSProcessor, DSSVariant
-        from dss_validator import DSSValidator
+        from processor import DSSProcessor
+        from dss_types import DSSVariant
+        from validator import DSSValidator
         print("✓ All imports successful")
         return True
     except ImportError as e:
