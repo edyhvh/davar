@@ -22,15 +22,15 @@ from datetime import datetime
 sys.path.append(str(Path(__file__).parent))
 
 from dss_config import (
-    DSS_VARIANT_SCHEMA,
     BOOKS_WITH_VARIANTS,
     get_book_file_path,
+    ETCBC_DSS_CONFIG,
     LOGGING_CONFIG,
-    PROCESSING_CONFIG,
-    ETCBC_DSS_CONFIG
+    PROCESSING_CONFIG
 )
 from dss_types import DSSVariant
-from etcbc_dss_integrator import ETCBC_DSS_Integrator, ETCBC_DSS_Config
+from dss_types import DSSVariant
+from etcbc_integrator import ETCBC_DSS_Integrator
 
 # Configure logging
 logging.basicConfig(

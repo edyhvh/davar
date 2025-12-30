@@ -15,13 +15,13 @@ DSS_DATA_DIR = DATA_DIR / "dss"
 SCRIPTS_DIR = PROJECT_ROOT / "scripts" / "dss"
 
 # DSS Corpus paths (if available)
-DSS_CORPUS_DIR = DATA_DIR / "dss_corpus"  # For ETCBC DSS corpus data
+DSS_CORPUS_DIR = DATA_DIR / "dss" / "raw" / "dss_corpus"  # Updated path
 DSS_CORPUS_BIBLICAL = DSS_CORPUS_DIR / "biblical"
 DSS_CORPUS_NONBIBLICAL = DSS_CORPUS_DIR / "nonbiblical"
 
-# Output directories
-DSS_OUTPUT_DIR = PROJECT_ROOT / "dss"
-DSS_BOOKS_DIR = DSS_OUTPUT_DIR / "books"
+# Output directories - JSON files go directly to data/dss/
+DSS_OUTPUT_DIR = DATA_DIR / "dss"
+DSS_BOOKS_DIR = DSS_OUTPUT_DIR  # No subfolder, files go directly here
 
 # Books with DSS variants (initial set)
 BOOKS_WITH_VARIANTS: Set[str] = {
@@ -108,11 +108,8 @@ LOGGING_CONFIG = {
 def ensure_directories() -> None:
     """Ensure all necessary directories exist."""
     directories = [
-        DSS_OUTPUT_DIR,
-        DSS_BOOKS_DIR,
-        DSS_CORPUS_DIR,
-        DSS_CORPUS_BIBLICAL,
-        DSS_CORPUS_NONBIBLICAL
+        DSS_OUTPUT_DIR,  # Main DSS output directory
+        # DSS_CORPUS_* directories should already exist
     ]
 
     for directory in directories:
@@ -120,15 +117,49 @@ def ensure_directories() -> None:
 
 def get_book_file_path(book: str) -> Path:
     """Get the file path for a specific book's DSS variants."""
-    return DSS_BOOKS_DIR / f"{book}_dss_variants.json"
+    return DSS_OUTPUT_DIR / f"{book}_dss.json"
 
 def get_available_books() -> List[str]:
     """Get list of books that have DSS variant files."""
-    if not DSS_BOOKS_DIR.exists():
+    if not DSS_OUTPUT_DIR.exists():
         return []
 
-    return [f.stem.replace("_dss_variants", "")
-            for f in DSS_BOOKS_DIR.glob("*_dss_variants.json")]
+    return [f.stem.replace("_dss", "")
+            for f in DSS_OUTPUT_DIR.glob("*_dss.json")]
+
+# Create config instance for compatibility
+class DSSConfig:
+    """Configuration class for DSS processing."""
+
+    def __init__(self):
+        self.paths = self._create_paths()
+        self.etcbc = self._create_etcbc_config()
+
+    def _create_paths(self):
+        class Paths:
+            project_root = PROJECT_ROOT
+            data_dir = DATA_DIR
+            dss_data_dir = DSS_DATA_DIR
+            scripts_dir = SCRIPTS_DIR
+            corpus_dir = DSS_CORPUS_DIR
+            corpus_biblical = DSS_CORPUS_BIBLICAL
+            corpus_nonbiblical = DSS_CORPUS_NONBIBLICAL
+            output_dir = DSS_OUTPUT_DIR
+
+        return Paths()
+
+    def _create_etcbc_config(self):
+        class ETCBC:
+            enabled = ETCBC_DSS_CONFIG["enabled"]
+            auto_enhance_variants = ETCBC_DSS_CONFIG["auto_enhance_variants"]
+            cross_reference_mt = ETCBC_DSS_CONFIG["cross_reference_mt"]
+            download_on_demand = ETCBC_DSS_CONFIG["download_on_demand"]
+            cache_results = ETCBC_DSS_CONFIG["cache_results"]
+
+        return ETCBC()
+
+# Create global config instance
+config = DSSConfig()
 
 # Initialize directories on import
 ensure_directories()

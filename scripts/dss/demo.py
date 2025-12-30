@@ -3,7 +3,7 @@
 DSS Processing System - Complete Demonstration
 
 Demonstrates all features of the DSS processing system including:
-- PDF extraction
+- Markdown extraction
 - ETCBC DSS corpus integration
 - Cross-validation
 - Data validation
@@ -19,9 +19,10 @@ from pathlib import Path
 # Add parent directory to path for imports
 sys.path.append(str(Path(__file__).parent))
 
-from dss_processor import DSSProcessor
-from dss_validator import DSSValidator
-from etcbc_dss_integrator import ETCBC_DSS_Integrator
+from processor import DSSProcessor
+from validator import DSSValidator
+from etcbc_integrator import ETCBCIntegrator
+from markdown_extractor import DSSMarkdownExtractor
 
 def main():
     """Complete demonstration of DSS processing system."""
@@ -37,6 +38,20 @@ def main():
     print(f"✓ Loaded {stats['total_variants']} variants across {stats['total_books']} books")
     print(f"✓ ETCBC integration: {'Enabled' if stats['etcbc_integration']['enabled'] else 'Disabled'}")
     print(f"✓ Corpus loaded: {'Yes' if stats['etcbc_integration']['corpus_loaded'] else 'No'}")
+
+    # 1.5. Markdown Extractor Demo
+    print("\n1.5. 📝 Markdown Extractor Capabilities")
+    print("-" * 50)
+
+    extractor = DSSMarkdownExtractor()
+    example_path = Path(__file__).parent.parent.parent / "data" / "dss" / "raw" / "variants_example.md"
+
+    if example_path.exists():
+        print(f"✓ Markdown extractor initialized")
+        print(f"✓ Example file available: {example_path.name}")
+        print("✓ Ready to extract DSS variants from Markdown format")
+    else:
+        print("⚠️  Example Markdown file not found")
 
     # 2. Show current data
     print("\n2. 📊 Current DSS Variants Overview")
@@ -102,22 +117,27 @@ def main():
         print(f"   Significance: {sample_variant.significance or 'unknown'}")
 
         # Try to enhance with ETCBC
-        integrator = ETCBC_DSS_Integrator()
+        integrator = ETCBCIntegrator()
         if integrator.load_corpus():
             enhanced = integrator.enhance_variant_data(sample_variant)
             if enhanced.dss_text != sample_variant.dss_text:
                 print("   ✓ Enhanced with ETCBC data!")
 
-    # 7. PDF Processing Status
-    print("\n7. 📄 PDF Processing Status")
+    # 7. Markdown Processing Status
+    print("\n7. 📄 Markdown Processing Status")
     print("-" * 50)
 
-    pdf_path = Path(__file__).parent.parent.parent / "data" / "dss" / "VARIANTES - TEXTO MASORÉTICO Y QUMRÁN.pdf"
-    if pdf_path.exists():
-        print(f"✓ PDF available: {pdf_path.name}")
-        print("✓ To process PDF: python scripts/dss/pdf_analyzer.py")
+    markdown_path = Path(__file__).parent.parent.parent / "data" / "dss" / "raw" / "variants.md"
+    example_path = Path(__file__).parent.parent.parent / "data" / "dss" / "raw" / "variants_example.md"
+
+    if markdown_path.exists():
+        print(f"✓ Markdown file available: {markdown_path.name}")
+        print("✓ To process Markdown: python scripts/dss/cli.py extract-markdown data/dss/raw/variants.md")
+    elif example_path.exists():
+        print(f"✓ Example Markdown available: {example_path.name}")
+        print("✓ To test with example: python scripts/dss/cli.py extract-markdown data/dss/raw/variants_example.md")
     else:
-        print("⚠️  PDF not found in expected location")
+        print("⚠️  No Markdown file found. Create variants.md in data/dss/raw/")
 
     # 8. System Health Check
     print("\n8. 🏥 System Health Check")
@@ -139,7 +159,7 @@ def main():
     # 9. Next Steps
     print("\n9. 🚀 Next Steps & Capabilities")
     print("-" * 50)
-    print("✓ PDF extraction from academic DSS documents")
+    print("✓ Markdown extraction from structured DSS documents")
     print("✓ Automatic ETCBC DSS corpus integration")
     print("✓ Cross-validation with Masoretic Text")
     print("✓ Data validation and quality assurance")

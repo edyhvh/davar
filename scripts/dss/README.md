@@ -6,7 +6,7 @@ This directory contains a comprehensive system for processing Dead Sea Scrolls (
 
 The DSS processing system extracts, validates, and manages textual variants between the Masoretic Text (MT) and Dead Sea Scrolls manuscripts. It features:
 
-- **PDF Extraction**: Automated parsing of academic DSS variant documents
+- **Markdown Extraction**: Automated parsing of structured Markdown DSS variant documents
 - **ETCBC Integration**: Cross-referencing with Text-Fabric DSS corpus
 - **Cross-Validation**: Automatic comparison with Masoretic Text
 - **Data Validation**: Comprehensive quality assurance and integrity checks
@@ -19,27 +19,27 @@ The DSS processing system extracts, validates, and manages textual variants betw
 
 | Module | Purpose | Key Features |
 |--------|---------|--------------|
-| `dss_config.py` | Configuration management | Paths, mappings, validation rules |
-| `dss_types.py` | Data structures | DSSVariant dataclass, validation |
-| `dss_processor.py` | Main processing engine | CRUD operations, ETCBC integration |
-| `dss_extractor.py` | PDF parsing | Text extraction, pattern matching |
-| `dss_validator.py` | Quality assurance | Data validation, cross-referencing |
-| `pdf_analyzer.py` | Specialized PDF analysis | Academic document parsing |
-| `etcbc_dss_integrator.py` | Corpus integration | Text-Fabric DSS connectivity |
+| `config.py` | Configuration management | Paths, mappings, validation rules |
+| `types.py` | Data structures | DSSVariant dataclass, validation |
+| `processor.py` | Main processing engine | CRUD operations, ETCBC integration |
+| `markdown_extractor.py` | Markdown parsing | Text extraction, pattern matching |
+| `validator.py` | Quality assurance | Data validation, cross-referencing |
+| `etcbc_integrator.py` | Corpus integration | Text-Fabric DSS connectivity |
+| `cli.py` | Command line interface | CLI commands and utilities |
 
 ### Supporting Files
 
-- `example_usage.py` - Usage demonstrations and examples
-- `test_basic.py` - Unit test suite
-- `demonstration.py` - Complete system showcase
-- `requirements.txt` - Python dependencies
+- `examples.py` - Usage demonstrations and examples
+- `test_suite.py` - Unit test suite
+- `demo.py` - Complete system showcase
+- `utils.py` - Utility functions and helpers
 - `validation_report.json` - Generated validation reports
 
 ## 🚀 Key Features
 
 ### ✅ Implemented Features
 
-- **📄 PDF Processing**: Extracts DSS variants from academic documents
+- **📄 Markdown Processing**: Extracts DSS variants from structured Markdown documents
 - **🔍 ETCBC DSS Integration**: Connects with Text-Fabric DSS corpus
 - **🔄 Cross-Validation**: Automatic MT vs DSS text comparison
 - **✅ Data Validation**: Comprehensive integrity and consistency checks
@@ -81,8 +81,8 @@ cd /Users/jhonny/davar
 # Run complete demonstration
 python scripts/dss/demonstration.py
 
-# Extract variants from PDF
-python scripts/dss/pdf_analyzer.py
+# Extract variants from Markdown
+python scripts/dss/markdown_extractor.py data/dss/raw/variants.md
 
 # Validate data integrity
 python scripts/dss/dss_validator.py
@@ -93,16 +93,16 @@ python scripts/dss/test_basic.py
 
 ### Advanced Usage
 
-#### PDF Processing
+#### Markdown Processing
 ```python
-from scripts.dss.pdf_analyzer import DSSPDFAnalyzer
+from scripts.dss.markdown_extractor import DSSMarkdownExtractor
 
-analyzer = DSSPDFAnalyzer()
-pdf_path = "data/dss/VARIANTES - TEXTO MASORÉTICO Y QUMRÁN.pdf"
-result = analyzer.analyze_pdf(pdf_path)
+extractor = DSSMarkdownExtractor()
+markdown_path = "data/dss/raw/variants.md"
+result = extractor.extract_from_markdown(markdown_path)
 
-print(f"Extracted {len(result['isaiah_variants'])} Isaiah variants")
-print(f"Extracted {len(result['samuel_variants'])} Samuel variants")
+for book, variants in result.items():
+    print(f"Extracted {len(variants)} {book} variants")
 ```
 
 #### ETCBC Integration

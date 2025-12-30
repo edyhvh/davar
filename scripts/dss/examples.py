@@ -63,7 +63,7 @@ def example_pdf_processing():
     print("\n=== PDF Processing Example ===\n")
 
     # This would be used with the actual PDF file
-    pdf_path = Path(__file__).parent.parent.parent / "data" / "dss" / "VARIANTES - TEXTO MASORÉTICO Y QUMRÁN.pdf"
+    pdf_path = Path(__file__).parent.parent.parent / "data" / "dss" / "raw" / "VARIANTES - TEXTO MASORÉTICO Y QUMRÁN.pdf"
 
     if pdf_path.exists():
         print(f"PDF found at: {pdf_path}")
