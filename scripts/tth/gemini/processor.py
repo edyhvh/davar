@@ -45,154 +45,11 @@ class BookProcessorStrategy:
         """Detect if this strategy applies to the given book text."""
         return False
 
-
-class StandardBookProcessor(BookProcessorStrategy):
-    """
-    Standard processing for most books with chapters and verses.
-    """
-
-    def detect_structure(self, book_text: str) -> bool:
-        """Detect standard chapter/verse structure."""
-        # Look for patterns like __1__, __2__, etc.
-        return bool(re.search(r'__\d+__', book_text))
-
-    def extract_chapters(self, book_text: str) -> List[Dict[str, Any]]:
-        """Extract chapters from standard book structure."""
-        return self.processor._extract_standard_chapters(book_text)
-
-
-class PsalmBookProcessor(BookProcessorStrategy):
-    """
-    Special processing for Tehilim (Psalms) with psalm-based structure.
-    """
-
-    def detect_structure(self, book_text: str) -> bool:
-        """Detect psalm structure."""
-        # Look for psalm markers or titles
-        psalm_indicators = [
-            r'__MIZMOR__',  # Psalm marker
-            r'__TEHILIM__',  # Book title
-            r'__LIBRO__',  # Book division
-            r'__ALEF__',  # Alphabetical division
-        ]
-        return any(re.search(pattern, book_text, re.IGNORECASE) for pattern in psalm_indicators)
-
-    def extract_chapters(self, book_text: str) -> List[Dict[str, Any]]:
-        """Extract psalms as chapters."""
-        return self.processor.extract_psalms(book_text)
-
-
-class SingleChapterBookProcessor(BookProcessorStrategy):
-    """
-    Processing for books with single chapter (like Jonah, Obadiah, etc.)
-    """
-
-    def detect_structure(self, book_text: str) -> bool:
-        """Detect single chapter structure."""
-        # Books with expected_chapters == 1
-        return self.processor.BOOKS_INFO.get(self.book_key, {}).get('expected_chapters', 0) == 1
-
-    def extract_chapters(self, book_text: str) -> List[Dict[str, Any]]:
-        """Extract single chapter."""
-        return self.processor.extract_single_chapter_book(book_text)
-
-
-class ContentBasedBookProcessor(BookProcessorStrategy):
-    """
-    Advanced processing for books with missing or inconsistent chapter markers.
-    Uses content analysis and book-specific knowledge to infer chapter boundaries.
-    """
-
-    def detect_structure(self, book_text: str) -> bool:
-        """Detect books that need content-based chapter detection."""
-        books_with_content_issues = {
-            'bereshit', 'shemot', 'bamidbar', 'devarim'  # Torah books with known issues
-        }
-        return self.book_key in books_with_content_issues
-
-    def extract_chapters(self, book_text: str) -> List[Dict[str, Any]]:
-        """Extract chapters using content analysis and inference."""
-        return self._extract_content_based_chapters(book_text)
-
-    def _extract_content_based_chapters(self, book_text: str) -> List[Dict[str, Any]]:
-        """Extract chapters using content analysis for books with missing markers."""
-        # Use the flexible extraction that handles missing verses
-        return self._extract_flexible_chapters_implementation(book_text)
-
-    def _extract_verses_from_text(self, text: str) -> List[Dict[str, Any]]:
-        """Extract verses from a text segment."""
-        lines = text.split('\n')
-        verses = []
-
-        for line in lines:
-            line = line.strip()
-            if not line:
-                continue
-
-            # Look for verse markers
-            verse_match = re.match(r'^\*\*\s*(\d+)\s*\*\*\s*(.*)$', line)
-            if verse_match:
-                verse_num = int(verse_match.group(1))
-                verse_text = verse_match.group(2).strip()
-
-                # Clean and process the verse
-                if verse_text:
-                    verse_text = self.processor.clean_text_preserve_comments(verse_text)
-                    verses.append({
-                        'verse': verse_num,
-                        'text': verse_text,
-                        'footnotes': self.processor.extract_footnotes(verse_text)[1],
-                        'hebrew_terms': self.processor.extract_hebrew_terms(verse_text)
-                    })
-
-        return verses
-
-    def _divide_into_chapters_by_content(self, book_text: str, expected_chapters: int) -> List[Dict[str, Any]]:
-        """Fallback method: divide content into approximately equal chapters."""
-
-        # This is a simplified approach - in a real implementation,
-        # we'd use more sophisticated content analysis
-
-        lines = book_text.split('\n')
-        total_lines = len(lines)
-
-        # Remove empty lines for calculation
-        content_lines = [line for line in lines if line.strip()]
-        lines_per_chapter = max(1, len(content_lines) // expected_chapters)
-
-        chapters = []
-        current_line = 0
-
-        for chap_num in range(1, expected_chapters + 1):
-            start_line = current_line
-            end_line = min(current_line + lines_per_chapter, len(content_lines))
-
-            # Extract chapter content
-            chapter_content = '\n'.join(content_lines[start_line:end_line])
-            verses = self._extract_verses_from_text(chapter_content)
-
-            if verses:
-                chapters.append({
-                    'chapter': chap_num,
-                    'verses': verses
-                })
-
-            current_line = end_line
-
-            # Stop if we've processed all content
-            if current_line >= len(content_lines):
-                break
-
-        return chapters
-
-    def _extract_with_boundary_detection(self, book_text: str) -> List[Dict[str, Any]]:
-        """Advanced chapter extraction that handles various marker patterns."""
-        # Use flexible extraction logic directly
-        return self._extract_flexible_chapters_implementation(book_text)
-
     def _extract_flexible_chapters_implementation(self, book_text: str) -> List[Dict[str, Any]]:
         """Flexible chapter extraction implementation with verse gap detection."""
+        print("DEBUG: Starting flexible chapter extraction")
         lines = book_text.split('\n')
+        print(f"DEBUG: Processing {len(lines)} lines")
         chapters = []
 
         current_chapter = None
@@ -252,6 +109,7 @@ class ContentBasedBookProcessor(BookProcessorStrategy):
 
             # Process verses if we're in a chapter section
             if in_chapter_section:
+                # print(f"DEBUG: Processing line in chapter {current_chapter}: {repr(line[:80])}")
                 # Look for verse markers - try multiple patterns
                 verse_match = None
 
@@ -268,8 +126,11 @@ class ContentBasedBookProcessor(BookProcessorStrategy):
                     verse_num = int(verse_match.group(1))
                     verse_text = verse_match.group(2).strip()
 
+                    # print(f"DEBUG: Found verse {verse_num}, current_verse_num={current_verse_num}")
+
                     # If this is the first verse found and it's not verse 1, fill missing verses
                     if current_verse_num is None and verse_num > 1:
+                        print(f"DEBUG: First verse found is {verse_num}, adding missing verses 1-{verse_num-1}")
                         for missing_verse in range(1, verse_num):
                             current_verses.append({
                                 'verse': missing_verse,
@@ -343,6 +204,156 @@ class ContentBasedBookProcessor(BookProcessorStrategy):
                 })
 
         return complete_verses
+
+
+class StandardBookProcessor(BookProcessorStrategy):
+    """
+    Standard processing for most books with chapters and verses.
+    """
+
+    def detect_structure(self, book_text: str) -> bool:
+        """Detect standard chapter/verse structure."""
+        # Look for patterns like __1__, __2__, etc.
+        return bool(re.search(r'__\d+__', book_text))
+
+    def extract_chapters(self, book_text: str) -> List[Dict[str, Any]]:
+        """Extract chapters from standard book structure."""
+        return self.processor._extract_standard_chapters(book_text)
+
+
+class PsalmBookProcessor(BookProcessorStrategy):
+    """
+    Special processing for Tehilim (Psalms) with psalm-based structure.
+    """
+
+    def detect_structure(self, book_text: str) -> bool:
+        """Detect psalm structure."""
+        # Look for psalm markers or titles
+        psalm_indicators = [
+            r'__MIZMOR__',  # Psalm marker
+            r'__TEHILIM__',  # Book title
+            r'__LIBRO__',  # Book division
+            r'__ALEF__',  # Alphabetical division
+        ]
+        return any(re.search(pattern, book_text, re.IGNORECASE) for pattern in psalm_indicators)
+
+    def extract_chapters(self, book_text: str) -> List[Dict[str, Any]]:
+        """Extract psalms as chapters."""
+        return self.processor.extract_psalms(book_text)
+
+
+class SingleChapterBookProcessor(BookProcessorStrategy):
+    """
+    Processing for books with single chapter (like Jonah, Obadiah, etc.)
+    """
+
+    def detect_structure(self, book_text: str) -> bool:
+        """Detect single chapter structure."""
+        # Books with expected_chapters == 1
+        return self.processor.BOOKS_INFO.get(self.book_key, {}).get('expected_chapters', 0) == 1
+
+    def extract_chapters(self, book_text: str) -> List[Dict[str, Any]]:
+        """Extract single chapter."""
+        return self.processor.extract_single_chapter_book(book_text)
+
+
+class ContentBasedBookProcessor(BookProcessorStrategy):
+    """
+    Advanced processing for books with missing or inconsistent chapter markers.
+    Uses content analysis and book-specific knowledge to infer chapter boundaries.
+    """
+
+    def detect_structure(self, book_text: str) -> bool:
+        """Detect books that need content-based chapter detection."""
+        books_with_content_issues = {
+            'bereshit', 'shemot', 'bamidbar', 'devarim'  # Torah books with known issues
+        }
+        return self.book_key in books_with_content_issues
+
+    def extract_chapters(self, book_text: str) -> List[Dict[str, Any]]:
+        """Extract chapters using content analysis and inference."""
+        print(f"DEBUG: ContentBasedBookProcessor.extract_chapters called for {self.book_key}")
+        return self._extract_content_based_chapters(book_text)
+
+    def _extract_content_based_chapters(self, book_text: str) -> List[Dict[str, Any]]:
+        """Extract chapters using content analysis for books with missing markers."""
+        print("DEBUG: In _extract_content_based_chapters")
+
+        # Use the flexible extraction that handles missing verses
+        return self._extract_flexible_chapters_implementation(book_text)
+
+    def _extract_verses_from_text(self, text: str) -> List[Dict[str, Any]]:
+        """Extract verses from a text segment."""
+        lines = text.split('\n')
+        verses = []
+
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+
+            # Look for verse markers
+            verse_match = re.match(r'^\*\*\s*(\d+)\s*\*\*\s*(.*)$', line)
+            if verse_match:
+                verse_num = int(verse_match.group(1))
+                verse_text = verse_match.group(2).strip()
+
+                # Clean and process the verse
+                if verse_text:
+                    verse_text = self.processor.clean_text_preserve_comments(verse_text)
+                    verses.append({
+                        'verse': verse_num,
+                        'text': verse_text,
+                        'footnotes': self.processor.extract_footnotes(verse_text)[1],
+                        'hebrew_terms': self.processor.extract_hebrew_terms(verse_text)
+                    })
+
+        return verses
+
+    def _divide_into_chapters_by_content(self, book_text: str, expected_chapters: int) -> List[Dict[str, Any]]:
+        """Fallback method: divide content into approximately equal chapters."""
+
+        # This is a simplified approach - in a real implementation,
+        # we'd use more sophisticated content analysis
+
+        lines = book_text.split('\n')
+        total_lines = len(lines)
+
+        # Remove empty lines for calculation
+        content_lines = [line for line in lines if line.strip()]
+        lines_per_chapter = max(1, len(content_lines) // expected_chapters)
+
+        chapters = []
+        current_line = 0
+
+        for chap_num in range(1, expected_chapters + 1):
+            start_line = current_line
+            end_line = min(current_line + lines_per_chapter, len(content_lines))
+
+            # Extract chapter content
+            chapter_content = '\n'.join(content_lines[start_line:end_line])
+            verses = self._extract_verses_from_text(chapter_content)
+
+            if verses:
+                chapters.append({
+                    'chapter': chap_num,
+                    'verses': verses
+                })
+
+            current_line = end_line
+
+            # Stop if we've processed all content
+            if current_line >= len(content_lines):
+                break
+
+        return chapters
+
+    def _extract_with_boundary_detection(self, book_text: str) -> List[Dict[str, Any]]:
+        """Advanced chapter extraction that handles various marker patterns."""
+        print("DEBUG: Using ContentBasedBookProcessor for extraction")
+
+        # Use flexible extraction logic directly
+        return self._extract_flexible_chapters_implementation(book_text)
 
     def _find_missing_chapters(self, book_text: str, existing_chapters: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Find chapters that might be missing from initial extraction."""
@@ -461,115 +472,7 @@ class FlexibleBookProcessor(BookProcessorStrategy):
 
     def extract_chapters(self, book_text: str) -> List[Dict[str, Any]]:
         """Extract chapters with flexible pattern matching."""
-        return self._extract_flexible_chapters(book_text)
-
-    def _extract_flexible_chapters(self, book_text: str) -> List[Dict[str, Any]]:
-        """Flexible chapter extraction that adapts to different marker patterns."""
-        lines = book_text.split('\n')
-        chapters = []
-
-        current_chapter = None
-        current_verses = []
-        current_verse_num = None
-        current_verse_text = []
-        in_chapter_section = False
-
-        i = 0
-        while i < len(lines):
-            line = lines[i].strip()
-
-            # Skip empty lines
-            if not line:
-                i += 1
-                continue
-
-            # Look for chapter markers - try multiple patterns
-            chapter_match = None
-
-            # Pattern 1: __Capítulo X__ or similar
-            chapter_match = re.match(r'^__\s*(?:Capítulo|Chapter|CAPÍTULO)\s*(\d+)\s*__.*', line, re.IGNORECASE)
-            if not chapter_match:
-                # Pattern 2: Just __X__ at start of line
-                chapter_match = re.match(r'^__\s*(\d+)\s*__.*', line)
-            if not chapter_match:
-                # Pattern 3: **X** alone on line (like **1**)
-                chapter_match = re.match(r'^\*\*\s*(\d+)\s*\*\*\s*$', line)
-            if not chapter_match:
-                # Pattern 4: X alone on line followed by content
-                chapter_match = re.match(r'^(\d+)\s*$', line)
-                if chapter_match and i + 1 < len(lines):
-                    next_line = lines[i + 1].strip()
-                    # Check if next line looks like chapter content
-                    if next_line and not next_line.startswith('**') and len(next_line) > 10:
-                        pass  # Keep the match
-                    else:
-                        chapter_match = None
-
-            if chapter_match:
-                # Save previous chapter if exists
-                if current_chapter is not None and current_verses:
-                    chapters.append({
-                        'chapter': current_chapter,
-                        'verses': current_verses
-                    })
-
-                current_chapter = int(chapter_match.group(1))
-                current_verses = []
-                current_verse_num = None
-                current_verse_text = []
-                in_chapter_section = True
-                i += 1
-                continue
-
-            # Process verses if we're in a chapter section
-            if in_chapter_section:
-                # Look for verse markers - try multiple patterns
-                verse_match = None
-
-                # Pattern 1: **X** followed by space and content
-                verse_match = re.match(r'^\*\*\s*(\d+)\s*\*\*\s+(.+)$', line)
-                if not verse_match:
-                    # Pattern 2: __X__ at start of line
-                    verse_match = re.match(r'^__\s*(\d+)\s*__\s*(.*)$', line)
-                if not verse_match:
-                    # Pattern 3: X. at start of line (followed by space or content)
-                    verse_match = re.match(r'^(\d+)\.\s*(.*)$', line)
-
-                if verse_match:
-                    verse_num = int(verse_match.group(1))
-                    verse_text = verse_match.group(2).strip()
-
-                    # Save previous verse if exists
-                    if current_verse_num is not None:
-                        prev_verse_text = ' '.join(current_verse_text).strip()
-                        if prev_verse_text:
-                            prev_verse_text = self.processor.clean_text_preserve_comments(prev_verse_text)
-                            current_verses.append({
-                                'verse': current_verse_num,
-                                'text': prev_verse_text,
-                                'footnotes': self.processor.extract_footnotes(prev_verse_text)[1],
-                                'hebrew_terms': self.processor.extract_hebrew_terms(prev_verse_text)
-                            })
-
-                    current_verse_num = verse_num
-                    current_verse_text = [verse_text] if verse_text else []
-                    i += 1
-                    continue
-
-                # Continue accumulating verse text
-                elif current_verse_num is not None:
-                    current_verse_text.append(line)
-
-            i += 1
-
-        # Save last chapter
-        if current_chapter is not None and current_verses:
-            chapters.append({
-                'chapter': current_chapter,
-                'verses': current_verses
-            })
-
-        return chapters
+        return self._extract_flexible_chapters_implementation(book_text)
 
 
 class TTHProcessor:
@@ -1402,52 +1305,20 @@ class TTHProcessor:
         current_verse_num = None
         current_verse_text = []
         current_title = None
-        seen_chapter_marker = False
 
         i = 0
         while i < len(lines):
             line = lines[i].strip()
 
-            # Skip empty lines
-            if not line:
-                i += 1
-                continue
-
-            # Skip chapter marker (e.g., **1** alone on a line for single chapter books)
-            # This is the chapter marker, not a verse
-            chapter_marker_match = re.match(r'^\*\*(\d+)\*\*\s*$', line)
-            if chapter_marker_match and not seen_chapter_marker:
-                seen_chapter_marker = True
-                i += 1
-                continue
-
-            # Handle titles (italic text like *Saludo a los hermanos*)
+            # Handle titles
             title_match = re.match(r'^\*([^*]+)\*$', line)
             if title_match and not re.match(r'^\*\*\d+\*\*', line):
-                # Save current verse before changing title
-                if current_verse_num is not None and current_verse_text:
-                    prev_verse_text = ' '.join(current_verse_text).strip()
-                    if prev_verse_text:
-                        prev_verse_text = self.clean_text_preserve_comments(prev_verse_text)
-                        prev_verse_text, footnotes = self.extract_footnotes(prev_verse_text)
-                        verse_entry = {
-                            'verse': current_verse_num,
-                            'text': prev_verse_text,
-                            'footnotes': footnotes,
-                            'hebrew_terms': self.extract_hebrew_terms(prev_verse_text)
-                        }
-                        if current_title:
-                            verse_entry['title'] = current_title
-                        verses.append(verse_entry)
-                        current_verse_num = None
-                        current_verse_text = []
-
                 current_title = title_match.group(1).strip()
                 i += 1
                 continue
 
-            # Process verses - look for **número** with text patterns
-            verse_match = re.match(r'^\*\*(\d+)\*\*\s*(.+)$', line)
+            # Process verses - look for **número** patterns in single chapter books
+            verse_match = re.match(r'^\*\*(\d+)\*\*\s*(.*)$', line)
             if verse_match:
                 verse_num = int(verse_match.group(1))
                 verse_text = verse_match.group(2).strip()
@@ -1470,10 +1341,25 @@ class TTHProcessor:
 
                 current_verse_num = verse_num
                 current_verse_text = [verse_text] if verse_text else []
+
+                # Continue reading multi-line verses
                 i += 1
+                while i < len(lines):
+                    next_line = lines[i].strip()
+                    if not next_line:
+                        i += 1
+                        continue
+                    if re.match(r'^\*\*\d+\*\*$', next_line):  # Next verse marker
+                        break
+                    if re.match(r'^\*([^*]+)\*$', next_line) and not next_line.startswith('**'):  # Title
+                        break
+                    if current_verse_num is not None:
+                        current_verse_text.append(next_line)
+                    i += 1
                 continue
 
-            # Add line to current verse if we're in one (for multi-line verses)
+
+            # Add line to current verse if we're in one
             if current_verse_num is not None and line:
                 if not re.match(r'^\*([^*]+)\*$', line):
                     current_verse_text.append(line)
@@ -1847,12 +1733,23 @@ class TTHProcessor:
     def create_json_structure(self, chapters: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Create final JSON structure compatible with Davar app."""
         json_data = []
+        book_info = self.BOOKS_INFO[self.book_key]
 
         for chapter_data in chapters:
             chapter_num = chapter_data['chapter']
 
             for verse_data in chapter_data['verses']:
                 verse_entry = {
+                    'book': self.book_key,
+                    'book_id': self.book_key,
+                    'book_tth_name': book_info['tth_name'],
+                    'book_hebrew_name': book_info['hebrew_name'],
+                    'book_english_name': book_info['english_name'],
+                    'book_spanish_name': book_info['spanish_name'],
+                    'section': book_info['section'],
+                    'section_hebrew': book_info['section_hebrew'],
+                    'section_english': book_info['section_english'],
+                    'section_spanish': book_info['section_spanish'],
                     'chapter': chapter_num,
                     'verse': verse_data['verse'],
                     'status': 'present',
@@ -1874,73 +1771,62 @@ class TTHProcessor:
                 # Add alefato field
                 if 'alefato' in verse_data:
                     verse_entry['alefato'] = verse_data['alefato']
+                
+                # Add lowercase english name
+                verse_entry['book_english_name_lower'] = book_info['english_name'].lower()
 
                 json_data.append(verse_entry)
 
         return json_data
 
     def save_book_file(self, json_data: List[Dict[str, Any]]):
-        """Save a single JSON file for the entire book with chapters structure."""
+        """Save JSON files for the book (per chapter and info)."""
         book_info = self.BOOKS_INFO[self.book_key]
 
-        # Create output directory
-        os.makedirs(self.output_dir, exist_ok=True)
+        # Create book directory
+        book_dir = os.path.join(self.output_dir, self.book_key)
+        os.makedirs(book_dir, exist_ok=True)
 
-        # Save complete book as single JSON file
-        filename = f"{self.book_key}.json"
-        filepath = os.path.join(self.output_dir, filename)
-
-        # Group verses by chapter
-        chapters_dict = {}
-        for verse in json_data:
-            chapter_num = verse['chapter']
-            if chapter_num not in chapters_dict:
-                chapters_dict[chapter_num] = []
-            # Create verse entry without the chapter field (it's in the parent)
-            verse_entry = {k: v for k, v in verse.items() if k != 'chapter'}
-            chapters_dict[chapter_num].append(verse_entry)
-
-        # Build chapters array sorted by chapter number
-        chapters_array = []
-        for chapter_num in sorted(chapters_dict.keys()):
-            chapters_array.append({
-                'chapter': chapter_num,
-                'verses': chapters_dict[chapter_num]
-            })
-
+        # 1. Save book_info.json
         # Calculate statistics
-        total_chapters = len(chapters_array)
+        total_chapters = len(set(v['chapter'] for v in json_data))
         total_verses = len(json_data)
 
-        # Add book metadata with lowercase keys and values
-        # Fields that should have lowercase values
-        lowercase_value_fields = {
-            'tth_name', 'english_name', 'spanish_name',
-            'section_english', 'section_spanish'
-        }
-        book_info_lower = {}
-        for key, value in book_info.items():
-            lower_key = key.lower()
-            if lower_key in lowercase_value_fields and isinstance(value, str):
-                book_info_lower[lower_key] = value.lower()
-            else:
-                book_info_lower[lower_key] = value
+        # Add book metadata with lowercase keys
+        # We start with the info from BOOKS_INFO
+        info_data = book_info.copy()
+        # Add statistics and version info
+        info_data.update({
+            'total_chapters': total_chapters,
+            'total_verses': total_verses,
+            'processed_date': datetime.now().isoformat(),
+            'processor_version': '2.1.0'
+        })
+        
+        info_path = os.path.join(book_dir, 'book_info.json')
+        with open(info_path, 'w', encoding='utf-8') as f:
+            json.dump(info_data, f, ensure_ascii=False, indent=2)
+            
+        print(f"Saved info: {info_path}")
 
-        book_data = {
-            'book_info': {
-                **book_info_lower,
-                'total_chapters': total_chapters,
-                'total_verses': total_verses,
-                'processed_date': datetime.now().isoformat(),
-                'processor_version': '2.2.0'
-            },
-            'chapters': chapters_array
-        }
-
-        with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(book_data, f, ensure_ascii=False, indent=2)
-
-        print(f"Saved: {filepath} ({total_verses} verses in {total_chapters} chapters)")
+        # 2. Save chapters
+        # Group verses by chapter
+        chapters_data = {}
+        for verse in json_data:
+            chap = verse['chapter']
+            if chap not in chapters_data:
+                chapters_data[chap] = []
+            chapters_data[chap].append(verse)
+            
+        for chap_num, verses in chapters_data.items():
+            # Format chapter filename: 01.json, 10.json, etc.
+            filename = f"{chap_num:02d}.json"
+            filepath = os.path.join(book_dir, filename)
+            
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(verses, f, ensure_ascii=False, indent=2)
+                
+        print(f"Saved {len(chapters_data)} chapter files in {book_dir} ({total_verses} total verses)")
 
     def validate_processing(self, json_data: List[Dict[str, Any]]) -> Dict[str, Any]:
         """Validate processing results."""

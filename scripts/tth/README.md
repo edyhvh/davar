@@ -30,6 +30,7 @@ python scripts/tth/main.py book amos iehudah
 
 ## ✨ v2.1.0 Improvements
 
+- **Modular processing strategies**: Automatically adapts to different book structures (Torah, Prophets, Psalms, etc.)
 - **Automatic text cleaning**: Fixes soft hyphens (`Is\-rael` → `Israel`), punctuation spacing, and stuck connectors
 - **Enhanced footnote processing**: Properly handles multiple footnotes in verses without text truncation
 - **Simplified JSON structure**: No redundant book info, lowercase keys
@@ -214,14 +215,26 @@ Each book generates a single JSON file with clean, simplified structure:
 - Verses contain only verse-specific data (no redundant book info)
 - Automatic text cleaning applied to verse content
 
-## 🔧 Text Cleaning Features
+## 🔧 Advanced Features
 
+### Text Cleaning
 The processor includes advanced text cleaning that automatically fixes common conversion issues:
 
 - **Soft hyphens**: `Is\-rael` → `Israel`
 - **Punctuation spacing**: `dijo:יהוה` → `dijo: יהוה`
 - **Stuck connectors**: `Ashdody al` → `Ashdod y al`
 - **Double spaces**: Automatic cleanup
+
+### Modular Processing Strategies
+The system automatically adapts to different book structures:
+
+- **Standard books**: Clear chapter markers (`__1__`, `**1**`)
+- **Psalm books**: Special handling for Tehilim structure
+- **Single-chapter books**: Jonah, Obadiah, etc.
+- **Complex books**: Flexible detection for irregular structures
+- **Content-based**: Inference for books with missing markers
+
+**Note**: Processing accuracy depends on source document quality. Some books in the source DOCX have incomplete chapter markers.
 
 ## 🐛 Troubleshooting
 
@@ -250,6 +263,21 @@ python scripts/tth/cli.py convert ~/davar/data/tth/raw/tanaj.docx ~/davar/data/t
 
 ### Missing mammoth Library
 For DOCX processing: `pip install mammoth`
+
+### Source Document Limitations
+Some books have incomplete chapter markers in the source DOCX:
+
+- **Bereshit**: Only ~34 chapters clearly marked (of 50 expected)
+- **Other Torah books**: May have similar issues
+- **Solution**: Use individual Markdown files when available, or improve source document structure
+
+### Processing Strategies
+The system uses multiple strategies in order:
+1. **PsalmBookProcessor** - For Tehilim
+2. **SingleChapterBookProcessor** - For Jonah, Obadiah, etc.
+3. **ContentBasedBookProcessor** - For books with missing markers
+4. **FlexibleBookProcessor** - For irregular structures
+5. **StandardBookProcessor** - For well-structured books
 
 ### Verses appearing truncated
 If verse text appears cut off (e.g., showing only "Con¹" instead of full text), this was a footnote processing bug in versions prior to v2.1.0. The issue has been fixed - verses with multiple footnotes now display complete text.

@@ -43,22 +43,16 @@ class TTHBookExtractor:
             r'מתתיהו'
         ]),
         ('markos', [
-            r'__MARKO\s*\(MARCOS\)__',
             r'Markos.*?מרקוס',
-            r'Marko.*?מרקו',
             r'__MARKOS.*?מרקוס__',
             r'MARCOS.*?מרקוס',
-            r'מרקוס',
-            r'מרקו'
+            r'מרקוס'
         ]),
         ('lukas', [
-            r'__LUKAH\s*\(LUCAS\)__',
             r'Lukas.*?לוקס',
-            r'Lukah.*?לוקה',
             r'__LUKAS.*?לוקס__',
             r'LUCAS.*?לוקס',
-            r'לוקס',
-            r'לוקה'
+            r'לוקס'
         ]),
         ('iojanan', [
             r'Iojanán.*?יוחנן',
