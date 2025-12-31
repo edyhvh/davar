@@ -43,16 +43,22 @@ class TTHBookExtractor:
             r'מתתיהו'
         ]),
         ('markos', [
+            r'__MARKO\s*\(MARCOS\)__',
             r'Markos.*?מרקוס',
+            r'Marko.*?מרקו',
             r'__MARKOS.*?מרקוס__',
             r'MARCOS.*?מרקוס',
-            r'מרקוס'
+            r'מרקוס',
+            r'מרקו'
         ]),
         ('lukas', [
+            r'__LUKAH\s*\(LUCAS\)__',
             r'Lukas.*?לוקס',
+            r'Lukah.*?לוקה',
             r'__LUKAS.*?לוקס__',
             r'LUCAS.*?לוקס',
-            r'לוקס'
+            r'לוקס',
+            r'לוקה'
         ]),
         ('iojanan', [
             r'Iojanán.*?יוחנן',
@@ -141,7 +147,7 @@ class TTHBookExtractor:
         ]),
 
         # Neviim (Profetas)
-        ('iehosua', [
+        ('iehoshua', [
             r'IEHOSHÚA.*?יהושע',
             r'NEVIÍM\s*-\s*IEHOSHÚA.*?יהושע',
             r'__NEVIÍM\s*-\s*IEHOSHÚA.*?יהושע__',
@@ -265,7 +271,7 @@ class TTHBookExtractor:
         self.BOOK_SOURCES = {
             # Tanaj books
             'bereshit': 'tanaj', 'shemot': 'tanaj', 'vaikra': 'tanaj', 'bamidbar': 'tanaj', 'devarim': 'tanaj',
-            'iehosua': 'tanaj', 'shoftim': 'tanaj', 'shemuel_alef': 'tanaj', 'shemuel_bet': 'tanaj',
+            'iehoshua': 'tanaj', 'shoftim': 'tanaj', 'shemuel_alef': 'tanaj', 'shemuel_bet': 'tanaj',
             'melajim_alef': 'tanaj', 'melajim_bet': 'tanaj', 'ieshaiahu': 'tanaj', 'irmeiahu': 'tanaj',
             'iejezkel': 'tanaj', 'hoshea': 'tanaj', 'ioel': 'tanaj', 'amos': 'tanaj', 'ionah': 'tanaj',
             'micah': 'tanaj', 'najum': 'tanaj', 'jabakuk': 'tanaj', 'tzefaniah': 'tanaj', 'jagai': 'tanaj',
@@ -349,7 +355,9 @@ class TTHBookExtractor:
                 continue
 
             # Check for book headers first (highest priority)
-            if line.startswith('**') and ('(' in line or 'SODOT' in line or 'IAACOB' in line):
+            # Only check for book headers if the line looks like a title, not a verse
+            if (line.startswith('**') and len(line.split()) < 10 and
+                ('(' in line or 'SODOT' in line or 'IAACOB' in line)):
                 # This is likely a book header, check if it's another book
                 for other_book in other_books:
                     if other_book in line.upper() or any(keyword in line.upper() for keyword in ['SODOT', 'IAACOB', 'APOCALIPSIS', 'SANTIAGO']):

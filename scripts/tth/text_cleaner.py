@@ -125,6 +125,19 @@ class TTHTextCleaner:
 
         return self.punctuation_space_pattern.sub(add_space, text)
 
+    # Words that should NEVER be split (Hebrew/Biblical names ending with connectors)
+    PROTECTED_WORDS = {
+        'Yeshúa', 'Yeshua', 'Iehudáh', 'Iehudah', 'Iehovah', 'Yehovah',
+        'Tzefaniah', 'Tzefaniáh', 'Malaquías', 'Malaquiah', 'Obadiah',
+        'Ieshaiáhu', 'Ieshaiahu', 'Irmeiáhu', 'Irmeiahu', 'Iejezkel',
+        'Zejariah', 'Zejaríah', 'Mijael', 'Mijaél', 'Gavriel', 'Gavriél',
+        'Elohim', 'Adonai', 'Shaddai', 'Tzebaoat', 'Tzebaot',
+        'Iaacob', 'Iaácob', 'Esau', 'Esaú', 'Moab', 'Amón',
+        'Sedom', 'Gamoráh', 'Gamorá', 'Sodoma', 'Gomorra',
+        'Moshéh', 'Moisés', 'Bilam', 'Koraj', 'Janoj',
+        # Additional pattern: any word with accented vowel before final letter
+    }
+
     def fix_stuck_connectors(self, text: str) -> str:
         """
         Fix words stuck to connectors like "Ashdody" -> "Ashdod y".
@@ -133,10 +146,12 @@ class TTHTextCleaner:
         1. The preceding word looks like a proper noun (capitalized)
         2. The connector is followed by another word
         3. The resulting separation makes semantic sense
+        4. The word is NOT a protected biblical name
 
         Examples:
             "Ashdody al que" -> "Ashdod y al que"
             "Guilada fin de" -> "Guilad a fin de"
+            "Yeshúa el" -> "Yeshúa el" (NO CHANGE - protected)
 
         Args:
             text: Input text with potential stuck connectors
@@ -160,22 +175,9 @@ class TTHTextCleaner:
         for pattern, replacement in known_stuck_words:
             result = re.sub(pattern, replacement, result)
 
-        # Also use the general pattern but more conservatively
-        # Only for clearly capitalized proper nouns with very common connectors
-        def separate_stuck(match):
-            word = match.group(1)
-            connector = match.group(2)
-
-            # Only separate if:
-            # 1. Word is at least 4 chars (excluding connector)
-            # 2. Word is capitalized (proper noun)
-            # 3. Connector is very common (y, e, o, a)
-            if len(word) >= 4 and word[0].isupper() and connector in ['y', 'e', 'o', 'a']:
-                return word + ' ' + connector
-
-            return match.group(0)  # Keep original if not sure
-
-        result = self.stuck_connector_pattern.sub(separate_stuck, result)
+        # NOTE: Disabled general pattern - too aggressive and splits valid words
+        # like "Padre" -> "Padr e" or "Yeshúa" -> "Yeshú a"
+        # Only use explicit known cases above for safety
 
         return result
 

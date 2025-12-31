@@ -151,6 +151,46 @@ class TTHDocxConverter:
 
         return text
 
+    def add_missing_verse_1_markers(self, text: str) -> str:
+        """
+        Add **1** marker to verse 1 content that follows chapter markers without explicit verse marker.
+
+        In TTH documents, verse 1 often appears without an explicit __1__ marker after the chapter marker.
+        This method detects such content and prepends **1** to it.
+        """
+        lines = text.split('\n')
+        result_lines = []
+        just_saw_chapter_marker = False
+        chapter_marker_line_idx = -1
+
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+
+            # Check if this is a chapter marker (single **número** on its own line)
+            chapter_match = re.match(r'^\*\*(\d+)\*\*\s*$', stripped)
+
+            if chapter_match:
+                result_lines.append(line)
+                just_saw_chapter_marker = True
+                chapter_marker_line_idx = len(result_lines) - 1
+                continue
+
+            # If we just saw a chapter marker and this line has content
+            if just_saw_chapter_marker and stripped:
+                # Check if line starts with a verse marker
+                if not re.match(r'^\*\*\d+\*\*', stripped):
+                    # This is verse 1 content without a marker - add **1**
+                    line = f"**1** {stripped}"
+                just_saw_chapter_marker = False
+
+            # Empty lines don't reset the flag
+            if stripped:
+                just_saw_chapter_marker = False
+
+            result_lines.append(line)
+
+        return '\n'.join(result_lines)
+
     def separate_inline_verses(self, text: str) -> str:
         """
         Separate verses that are on the same line into individual lines.
@@ -232,6 +272,9 @@ class TTHDocxConverter:
 
             print("Normalizing verse markers...")
             markdown_text = self.normalize_verse_markers(markdown_text)
+
+            print("Adding missing verse 1 markers...")
+            markdown_text = self.add_missing_verse_1_markers(markdown_text)
 
             print("Separating inline verses...")
             markdown_text = self.separate_inline_verses(markdown_text)
