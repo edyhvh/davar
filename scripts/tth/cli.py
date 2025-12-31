@@ -3,7 +3,7 @@
 TTH Processing CLI
 ==================
 
-Command-line interface for TTH (Traducción Textual del Hebreo) processing system.
+Command-line interface for TTH (Textual Translation of Hebrew) processing system.
 
 Usage:
     python cli.py convert <docx_file> [output_dir]    # Convert DOCX to Markdown
@@ -20,6 +20,13 @@ import sys
 import os
 from pathlib import Path
 from typing import List, Optional, Dict, Any
+
+# Project paths - always relative to ~/davar
+PROJECT_ROOT = Path.home() / "davar"
+DATA_DIR = PROJECT_ROOT / "data" / "tth"
+RAW_DIR = DATA_DIR / "raw"
+TEMP_DIR = DATA_DIR / "temp"
+OUTPUT_DIR = DATA_DIR
 
 # Import TTH modules
 try:
@@ -103,7 +110,7 @@ class TTHCLI:
             validation = self.extractor.validate_book_extraction(book_text, book_key)
 
             if not validation['has_content']:
-                print(f"❌ Extracción fallida: {book_key}")
+                print(f"❌ Extraction failed: {book_key}")
                 return 1
 
             # Save result
@@ -126,7 +133,7 @@ class TTHCLI:
             return 0
 
         except Exception as e:
-            print(f"❌ Error en extracción: {e}")
+            print(f"❌ Extraction error: {e}")
             import traceback
             traceback.print_exc()
             return 1
@@ -152,7 +159,7 @@ class TTHCLI:
                 return 1
 
         except Exception as e:
-            print(f"❌ Error en procesamiento: {e}")
+            print(f"❌ Processing error: {e}")
             import traceback
             traceback.print_exc()
             return 1
@@ -165,10 +172,11 @@ class TTHCLI:
             validation = validate_all_books(output_dir)
 
             if validation['valid']:
-                print(f"✓ Validación exitosa: {validation['books_valid']}/{validation['books_validated']} libros válidos")
+                print(f"✓ Validation successful: {validation['books_valid']}/{validation['books_validated']} books valid")
                 return 0
             else:
-                print(f"⚠️  Issues found: {validation['books_invalid']}/{validation['books_validated']} books with problems")
+                books_invalid = validation.get('books_invalid', 0)
+                print(f"⚠️  Issues found: {books_invalid}/{validation.get('books_validated', 0)} books with problems")
 
                 # Print summary of issues
                 for report in validation['validation_reports']:
@@ -180,7 +188,7 @@ class TTHCLI:
                 return 1
 
         except Exception as e:
-            print(f"❌ Error en validación: {e}")
+            print(f"❌ Validation error: {e}")
             return 1
 
     def full_command(self, args: List[str]) -> int:
@@ -286,7 +294,8 @@ class TTHCLI:
                 print("✓ All books passed validation")
                 return 0
             else:
-                print(f"⚠️  {final_validation['books_invalid']} books have validation issues")
+                books_invalid = final_validation.get('books_invalid', 0)
+                print(f"⚠️  {books_invalid} books have validation issues")
                 return 1
 
         except Exception as e:
@@ -303,27 +312,26 @@ class TTHCLI:
             return 1
 
         book_key = args[0]
-        output_dir = '../../data/tth/'
+        output_dir = str(OUTPUT_DIR)
 
         # Try to use existing Markdown file first (faster, no mammoth needed)
         markdown_files = [
-            f"../../data/tth/tanaj/{book_key}.md",  # Tanaj books
-            f"../../data/tth/raw/{book_key}.md"     # NT books (like sodot_iaacob_iehudah.md extracts)
+            str(RAW_DIR / f"{book_key}.md"),  # All books in raw directory
         ]
 
         for markdown_file in markdown_files:
             if os.path.exists(markdown_file):
-                print(f"Procesando libro '{book_key}' desde archivo Markdown existente...")
+                print(f"Processing book '{book_key}' from existing Markdown file...")
                 print(f"Archivo: {markdown_file}")
                 print(f"Output will go to: {output_dir}")
                 return self.process_command([book_key, markdown_file, output_dir])
 
         # Fall back to full pipeline with DOCX (requires mammoth)
         if not MAMMOTH_AVAILABLE:
-            print("❌ Error: No se encontró archivo Markdown y mammoth no está instalado")
-            print("Opciones:")
-            print("1. Instala mammoth: pip install mammoth")
-            print("2. Crea el archivo Markdown manualmente")
+            print("❌ Error: No Markdown file found and mammoth library is not installed")
+            print("Options:")
+            print("1. Install mammoth: pip install mammoth")
+            print("2. Create Markdown file manually")
             return 1
 
         try:
@@ -331,7 +339,7 @@ class TTHCLI:
             extractor = TTHBookExtractor()
             docx_file = extractor.get_source_document_path(book_key)
 
-            print(f"Procesando libro '{book_key}' desde {docx_file}...")
+            print(f"Processing book '{book_key}' from {docx_file}...")
             print(f"Output will go to: {output_dir}")
 
             return self.full_command([docx_file, output_dir, book_key])
@@ -347,27 +355,26 @@ class TTHCLI:
             return 1
 
         book_key = args[0]
-        output_dir = '../../data/tth/temp/'
+        output_dir = str(TEMP_DIR)
 
         # Try to use existing Markdown file first (faster, no mammoth needed)
         markdown_files = [
-            f"../../data/tth/tanaj/{book_key}.md",  # Tanaj books
-            f"../../data/tth/raw/{book_key}.md"     # NT books (like sodot_iaacob_iehudah.md extracts)
+            str(RAW_DIR / f"{book_key}.md"),  # All books in raw directory
         ]
 
         for markdown_file in markdown_files:
             if os.path.exists(markdown_file):
-                print(f"Probando libro '{book_key}' desde archivo Markdown existente...")
+                print(f"Testing book '{book_key}' from existing Markdown file...")
                 print(f"Archivo: {markdown_file}")
-                print(f"Resultado de prueba irá a: {output_dir}")
+                print(f"Test results will go to: {output_dir}")
                 return self.process_command([book_key, markdown_file, output_dir])
 
         # Fall back to full pipeline with DOCX (requires mammoth)
         if not MAMMOTH_AVAILABLE:
-            print("❌ Error: No se encontró archivo Markdown y mammoth no está instalado")
-            print("Opciones:")
-            print("1. Instala mammoth: pip install mammoth")
-            print("2. Crea el archivo Markdown manualmente")
+            print("❌ Error: No Markdown file found and mammoth library is not installed")
+            print("Options:")
+            print("1. Install mammoth: pip install mammoth")
+            print("2. Create Markdown file manually")
             return 1
 
         try:
@@ -375,8 +382,8 @@ class TTHCLI:
             extractor = TTHBookExtractor()
             docx_file = extractor.get_source_document_path(book_key)
 
-            print(f"Probando libro '{book_key}' desde {docx_file}...")
-            print(f"Resultado de prueba irá a: {output_dir}")
+            print(f"Testing book '{book_key}' from {docx_file}...")
+            print(f"Test results will go to: {output_dir}")
 
             return self.full_command([docx_file, output_dir, book_key])
         except Exception as e:
@@ -386,13 +393,13 @@ class TTHCLI:
     def all_command(self, args: List[str]) -> int:
         """Handle all command to process all books."""
         test_mode = '--test' in args
-        output_dir = '../../data/tth/temp/' if test_mode else '../../data/tth/'
+        output_dir = str(TEMP_DIR) if test_mode else '../../data/tth/'
 
         if test_mode:
             args.remove('--test')
 
-        print(f"Procesando TODOS los libros...")
-        print(f"Resultado irá a: {output_dir}")
+        print(f"Processing ALL books...")
+        print(f"Results will go to: {output_dir}")
 
         # Get all available books
         from extractor import get_available_books
@@ -402,7 +409,7 @@ class TTHCLI:
         # In production, this would process all books
         test_books = ['bereshit', 'shemot', 'amos', 'iehudah']  # Sample books
 
-        print(f"Procesando {len(test_books)} libros de muestra: {', '.join(test_books)}")
+        print(f"Processing {len(test_books)} sample books: {', '.join(test_books)}")
 
         # Process each book
         successful = []
@@ -438,10 +445,10 @@ class TTHCLI:
             args.remove('--test')
 
         book_keys = args
-        output_dir = '../../data/tth/temp/' if test_mode else '../../data/tth/'
+        output_dir = str(TEMP_DIR) if test_mode else '../../data/tth/'
 
-        print(f"Procesando {len(book_keys)} libros: {', '.join(book_keys)}")
-        print(f"Resultado irá a: {output_dir}")
+        print(f"Processing {len(book_keys)} books: {', '.join(book_keys)}")
+        print(f"Results will go to: {output_dir}")
 
         successful = []
         failed = []

@@ -15,6 +15,7 @@ Author: Davar Project
 """
 
 import re
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Set
 
 
@@ -23,12 +24,12 @@ class TTHBookExtractor:
     Extracts individual book sections from complete TTH documents.
     """
 
-    # Document sources
+    # Document sources - always in ~/davar/data/tth/raw
     DOCUMENT_SOURCES = {
-        'tanaj': 'data/tth/raw/tanaj.docx',
-        'besorah': 'data/tth/raw/besorah.docx',
-        'sodot_iaacob_iehudah': 'data/tth/raw/sodot_iaacob_iehudah.docx',
-        'tesaloniquim': 'data/tth/raw/tesaloniquim.docx'
+        'tanaj': str(Path.home() / 'davar' / 'data' / 'tth' / 'raw' / 'tanaj.docx'),
+        'besorah': str(Path.home() / 'davar' / 'data' / 'tth' / 'raw' / 'besorah.docx'),
+        'sodot_iaacob_iehudah': str(Path.home() / 'davar' / 'data' / 'tth' / 'raw' / 'sodot_iaacob_iehudah.docx'),
+        'tesaloniquim': str(Path.home() / 'davar' / 'data' / 'tth' / 'raw' / 'tesaloniquim.docx')
     }
 
     # Book identification patterns - ordered by specificity (longest first)
@@ -456,7 +457,7 @@ class TTHBookExtractor:
         if not source:
             raise ValueError(f"No source document found for book: {book_key}")
 
-        docx_path = self.DOCUMENT_SOURCES.get(source)
+        docx_path = self.DOCUMENT_SOURCES[source]
         if not docx_path:
             raise ValueError(f"No path found for source: {source}")
 

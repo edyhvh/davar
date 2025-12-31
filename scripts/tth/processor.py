@@ -22,6 +22,10 @@ import os
 from datetime import datetime
 from typing import Dict, List, Any, Tuple, Optional, Union
 from pathlib import Path
+try:
+    from .text_cleaner import TTHTextCleaner
+except ImportError:
+    from text_cleaner import TTHTextCleaner
 
 
 class TTHProcessor:
@@ -623,6 +627,9 @@ class TTHProcessor:
         self.output_dir = output_dir
         self.footnote_definitions = {}
 
+        # Initialize text cleaner for improved text processing
+        self.text_cleaner = TTHTextCleaner()
+
         # Validate book key
         if book_key not in self.BOOKS_INFO:
             raise ValueError(f"Book key '{book_key}' not found in books database")
@@ -1133,7 +1140,8 @@ class TTHProcessor:
 
             return ''
 
-        footnote_data = []
+        # Create mapping of footnote positions and associated words
+        footnote_info = {}
         for match in matches:
             footnote_num = match.group(1)
             marker = num_to_superscript(footnote_num)
@@ -1142,26 +1150,26 @@ class TTHProcessor:
             text_before = text[:match.start()]
             associated_word = extract_associated_word(text_before)
 
-            footnote_data.append({
-                'match': match,
-                'footnote_num': footnote_num,
+            footnote_info[footnote_num] = {
                 'marker': marker,
                 'definition': definition,
                 'word': associated_word
-            })
+            }
 
-        modified_text = text
-        for data in reversed(footnote_data):
-            match = data['match']
-            modified_text = modified_text[:match.start()] + data['marker'] + modified_text[match.end()]
-
-            if not any(fn['number'] == data['footnote_num'] for fn in footnotes):
+        # Replace all footnote markers with superscripts
+        def replace_footnote(match):
+            footnote_num = match.group(1)
+            info = footnote_info[footnote_num]
+            if not any(fn['number'] == footnote_num for fn in footnotes):
                 footnotes.append({
-                    'marker': data['marker'],
-                    'number': data['footnote_num'],
-                    'word': data['word'],
-                    'explanation': data['definition']
+                    'marker': info['marker'],
+                    'number': footnote_num,
+                    'word': info['word'],
+                    'explanation': info['definition']
                 })
+            return info['marker']
+
+        modified_text = re.sub(footnote_pattern, replace_footnote, text)
 
         footnotes.sort(key=lambda x: int(x['number']))
         return modified_text.strip(), footnotes
@@ -1198,6 +1206,9 @@ class TTHProcessor:
 
         # Convert escaped parentheses
         modified_text = modified_text.replace('\\(', '(').replace('\\)', ')')
+
+        # Apply advanced text cleaning (soft hyphens, punctuation spacing, stuck connectors)
+        modified_text = self.text_cleaner.clean_verse_text(modified_text)
 
         return modified_text
 
@@ -1263,7 +1274,6 @@ class TTHProcessor:
 
     def create_json_structure(self, chapters: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Create final JSON structure compatible with Davar app."""
-        book_info = self.BOOKS_INFO[self.book_key]
         json_data = []
 
         for chapter_data in chapters:
@@ -1271,16 +1281,6 @@ class TTHProcessor:
 
             for verse_data in chapter_data['verses']:
                 verse_entry = {
-                    'book': self.book_key,
-                    'book_id': book_info.get('book_code', self.book_key),
-                    'book_tth_name': book_info['tth_name'],
-                    'book_hebrew_name': book_info['hebrew_name'],
-                    'book_english_name': book_info['english_name'],
-                    'book_spanish_name': book_info['spanish_name'],
-                    'section': book_info.get('section', ''),
-                    'section_hebrew': book_info.get('section_hebrew', ''),
-                    'section_english': book_info.get('section_english', ''),
-                    'section_spanish': book_info.get('section_spanish', ''),
                     'chapter': chapter_num,
                     'verse': verse_data['verse'],
                     'status': 'present',
@@ -1322,14 +1322,15 @@ class TTHProcessor:
         total_chapters = len(set(v['chapter'] for v in json_data))
         total_verses = len(json_data)
 
-        # Add book metadata
+        # Add book metadata with lowercase keys
+        book_info_lower = {key.lower(): value for key, value in book_info.items()}
         book_data = {
             'book_info': {
-                **book_info,
+                **book_info_lower,
                 'total_chapters': total_chapters,
                 'total_verses': total_verses,
                 'processed_date': datetime.now().isoformat(),
-                'processor_version': '2.0.0'
+                'processor_version': '2.1.0'
             },
             'verses': json_data
         }

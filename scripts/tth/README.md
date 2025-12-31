@@ -1,114 +1,100 @@
-# TTH Processing System
+# TTH Processor v2.1.0
 
-A modular system for processing Hebrew Scriptures from DOCX/Markdown to JSON format for the Davar app.
+Simplified system for processing TTH (Textual Translation of Hebrew) biblical texts to JSON format for the Davar app.
 
-## Overview
+## 🚀 Quick Start
 
-The TTH (Textual Translation of Hebrew) Processing System converts TTH source documents into structured JSON format compatible with the Davar Bible study application. The system handles the complete pipeline from raw DOCX files to validated JSON output.
-
-## Architecture
-
-The system is built with a modular architecture:
-
-```
-tth/
-├── __init__.py          # Package initialization
-├── converter.py         # DOCX to Markdown conversion
-├── extractor.py         # Book section extraction
-├── processor.py         # Markdown to JSON processing
-├── validator.py         # Quality assurance and validation
-├── cli.py              # Command-line interface
-├── main.py             # Main entry point
-└── README.md           # This documentation
-```
-
-## Features
-
-- **DOCX Processing**: Converts Microsoft Word documents to normalized Markdown
-- **Book Extraction**: Intelligently extracts individual books from complete documents
-- **JSON Generation**: Creates structured JSON output with proper metadata
-- **Hebrew Term Detection**: Automatically identifies and explains Hebrew terms
-- **Footnote Processing**: Handles inline footnotes and definitions
-- **Quality Validation**: Comprehensive QA checks for data integrity
-- **Multi-language Support**: Hebrew, Spanish, and English text handling
-
-## Installation
-
-1. Install required dependencies:
+### 1. Setup (First Time Only)
 ```bash
-pip install mammoth
+# Convert DOCX to Markdown for faster processing (optional but recommended)
+cd ~/davar
+python scripts/tth/cli.py convert ~/davar/data/tth/raw/tanaj.docx ~/davar/data/tth/raw/tanaj.md
+
+# Create individual book Markdown files (optional, for even faster processing)
+# The system will automatically extract books from the complete tanaj.md when needed
 ```
 
-2. Ensure the package is in your Python path or run from the scripts directory.
-
-## Usage
-
-### Command Line Interface
-
-The system provides a comprehensive CLI for all operations:
+### 2. Run Commands
+**Important**: Always run commands from the project root directory (`cd ~/davar`), not from `scripts/tth/`.
 
 ```bash
-cd scripts/tth
-python cli.py <command> [args...]
+# 🧪 TEST a book (output goes to ~/davar/~/davar/data/tth/temp/)
+python scripts/tth/main.py test amos
+
+# 📚 PROCESS all books (output goes to ~/davar/data/tth/)
+python scripts/tth/main.py all
+
+# 📖 PROCESS specific books
+python scripts/tth/main.py book amos iehudah
 ```
 
-### Available Commands
+## ✨ v2.1.0 Improvements
 
-#### Convert DOCX to Markdown
+- **Automatic text cleaning**: Fixes soft hyphens (`Is\-rael` → `Israel`), punctuation spacing, and stuck connectors
+- **Enhanced footnote processing**: Properly handles multiple footnotes in verses without text truncation
+- **Simplified JSON structure**: No redundant book info, lowercase keys
+- **Optimized workflow**: `temp/` for testing, main directory for production
+- **Clean code**: Removed temporary scripts and development files
+
+## 📋 Main Commands
+
+**Important**: All commands must be run from the project root directory.
+
+### Option 1: Simple Interface (Recommended)
 ```bash
-python cli.py convert <docx_file> [output_file]
-```
-Converts a DOCX file to normalized Markdown format.
+# 🧪 TEST a book (output: ~/davar/data/tth/temp/)
+python scripts/tth/main.py test <book>          # Ex: python scripts/tth/main.py test amos
 
-#### Extract Book from Document
-```bash
-python cli.py extract <book_key> <docx_file> [output_dir]
-```
-Extracts a specific book from a complete DOCX document.
+# 📚 PROCESS specific books (output: ~/davar/data/tth/)
+python scripts/tth/main.py book <book1> [book2] # Ex: python scripts/tth/main.py book amos iehudah
 
-#### Process Markdown to JSON
-```bash
-python cli.py process <book_key> <markdown_file> [output_dir]
-```
-Converts a Markdown file to structured JSON format.
+# 🌍 PROCESS ALL books (output: ~/davar/data/tth/)
+python scripts/tth/main.py all                  # Process all available books
 
-#### Validate Results
-```bash
-python cli.py validate [output_dir]
-```
-Runs comprehensive validation on processed books.
+# ✅ VALIDATE results
+python scripts/tth/main.py validate [directory] # Validate processed JSON
 
-#### Complete Pipeline
-```bash
-python cli.py full <docx_file> <output_dir> [book_keys...]
+# 📋 LIST available books
+python scripts/tth/main.py books                # Show all supported books
 ```
-Runs the complete processing pipeline from DOCX to validated JSON.
 
-#### List Available Books
+### Option 2: Full CLI
 ```bash
-python cli.py books
+# Same commands but with cli.py
+python scripts/tth/cli.py test amos
+python scripts/tth/cli.py book amos iehudah
+python scripts/tth/cli.py all
+python scripts/tth/cli.py validate
+python scripts/tth/cli.py books
 ```
-Displays all supported books organized by section.
+
+**Use `main.py` for everyday use - it's simpler and shows helpful hints when run without arguments.**
+
+## 🎯 Recommended Workflow
+
+1. **Development/Testing**: Use `test` to try changes → results in `temp/`
+2. **Production**: Use `book` or `all` for final processing → results in `~/davar/data/tth/`
+3. **Validation**: Always validate after processing with `validate`
 
 ### Examples
 
 #### Process All Books
 ```bash
-python cli.py full data/tth/raw/tanaj.docx output/
+python cli.py full ~/davar/data/tth/raw/tanaj.docx output/
 ```
 
 #### Process Specific Books
 ```bash
-python cli.py full data/tth/raw/tanaj.docx output/ bereshit shemot vaigra
+python cli.py full ~/davar/data/tth/raw/tanaj.docx output/ bereshit shemot vaigra
 ```
 
 #### Individual Steps
 ```bash
 # Convert DOCX to Markdown
-python cli.py convert data/tth/raw/tanaj.docx temp/tanaj.md
+python cli.py convert ~/davar/data/tth/raw/tanaj.docx temp/tanaj.md
 
 # Extract a book
-python cli.py extract amos data/tth/raw/tanaj.docx extracted/
+python cli.py extract amos ~/davar/data/tth/raw/tanaj.docx extracted/
 
 # Process to JSON
 python cli.py process amos extracted/amos.md draft/
@@ -175,153 +161,122 @@ __1__
 [^1]: Footnote definition text
 ```
 
-## Output Format
+## 📄 Output Format
 
-### JSON Structure
-Each chapter generates a separate JSON file:
-
-```json
-[
-  {
-    "book": "amos",
-    "book_id": "amos",
-    "book_tth_name": "Amós",
-    "book_hebrew_name": "עמוס",
-    "book_english_name": "Amos",
-    "book_spanish_name": "Amós",
-    "section": "neviim",
-    "chapter": 1,
-    "verse": 1,
-    "status": "present",
-    "tth": "Verse text content...",
-    "footnotes": [
-      {
-        "marker": "¹",
-        "number": "1",
-        "word": "associated_word",
-        "explanation": "Footnote explanation text"
-      }
-    ],
-    "hebrew_terms": [
-      {
-        "term": "YEHOVAH",
-        "explanation": "Tetragrámaton - Nombre de Elohim"
-      }
-    ]
-  }
-]
-```
-
-### Book Info File
-Each book directory contains a `book_info.json` with metadata:
+### Simplified JSON Structure
+Each book generates a single JSON file with clean, simplified structure:
 
 ```json
 {
-  "tth_name": "Amós",
-  "hebrew_name": "עמוס",
-  "english_name": "Amos",
-  "spanish_name": "Amós",
-  "book_code": "amos",
-  "expected_chapters": 9,
-  "section": "neviim",
-  "total_chapters": 9,
-  "total_verses": 146,
-  "processed_date": "2024-01-15T10:30:00",
-  "processor_version": "2.0.0"
+  "book_info": {
+    "tth_name": "Amós",
+    "hebrew_name": "עמוס",
+    "english_name": "Amos",
+    "spanish_name": "Amós",
+    "book_code": "amos",
+    "expected_chapters": 9,
+    "section": "neviim",
+    "section_hebrew": "נביאים",
+    "section_english": "Prophets",
+    "section_spanish": "Profetas",
+    "total_chapters": 9,
+    "total_verses": 146,
+    "processed_date": "2024-12-31T09:52:09.737355",
+    "processor_version": "2.1.0"
+  },
+  "verses": [
+    {
+      "chapter": 1,
+      "verse": 1,
+      "status": "present",
+      "tth": "Cleaned verse text with proper spacing and joined words...",
+      "footnotes": [
+        {
+          "marker": "¹",
+          "number": "1",
+          "word": "associated_word",
+          "explanation": "Footnote explanation text"
+        }
+      ],
+      "hebrew_terms": [
+        {
+          "term": "YEHOVAH",
+          "explanation": "Tetragrámaton - Nombre de Elohim"
+        }
+      ]
+    }
+  ]
 }
 ```
 
-## Validation
+**Key improvements:**
+- Book metadata in separate `book_info` section with lowercase keys
+- Verses contain only verse-specific data (no redundant book info)
+- Automatic text cleaning applied to verse content
 
-The system includes comprehensive validation:
+## 🔧 Text Cleaning Features
 
-- **Structural Validation**: Ensures JSON format compliance
-- **Content Validation**: Checks for required fields and data types
-- **Hebrew Text Verification**: Confirms presence of Hebrew characters
-- **Chapter/Verse Counting**: Validates against expected counts
-- **Footnote Integrity**: Verifies footnote references and definitions
+The processor includes advanced text cleaning that automatically fixes common conversion issues:
 
-### Validation Report
+- **Soft hyphens**: `Is\-rael` → `Israel`
+- **Punctuation spacing**: `dijo:יהוה` → `dijo: יהוה`
+- **Stuck connectors**: `Ashdody al` → `Ashdod y al`
+- **Double spaces**: Automatic cleanup
+
+## 🐛 Troubleshooting
+
+### Permission Denied Error
+If you get permission errors, you're running commands from the wrong directory:
+
+**❌ Wrong:**
 ```bash
-python cli.py validate draft/
+cd scripts/tth
+python main.py test amos  # DON'T DO THIS
 ```
 
-Generates a detailed QA report with:
-- Processing statistics
-- Issues found
-- Recommendations for fixes
+**✅ Correct:**
+```bash
+cd ~/davar  # Go to project root first
+python scripts/tth/main.py test amos
+```
 
-## Development
+### Missing Markdown File
+If processing is slow, create the Markdown file first:
+```bash
+python scripts/tth/cli.py convert ~/davar/data/tth/raw/tanaj.docx ~/davar/data/tth/raw/tanaj.md
+```
 
-### Adding New Books
+**Note**: The complete `tanaj.md` file is now stored in `~/davar/data/tth/raw/` alongside other source files.
 
-1. Add book information to `processor.py` BOOKS_INFO dictionary
-2. Add extraction patterns to `extractor.py` BOOK_PATTERNS
-3. Test extraction and processing
-4. Update validation rules if needed
+### Missing mammoth Library
+For DOCX processing: `pip install mammoth`
 
-### Extending Functionality
+### Verses appearing truncated
+If verse text appears cut off (e.g., showing only "Con¹" instead of full text), this was a footnote processing bug in versions prior to v2.1.0. The issue has been fixed - verses with multiple footnotes now display complete text.
 
-The modular design allows easy extension:
+## ✅ Validation
 
-- **New Input Formats**: Add converters in the `converter` module
-- **Enhanced Processing**: Extend the `processor` module
-- **Additional Validation**: Add rules to the `validator` module
-- **New Output Formats**: Modify the `processor` output generation
+```bash
+python cli.py validate [output_dir]
+```
 
-## Error Handling
+Validates processed JSON for:
+- Structural integrity
+- Required fields presence
+- Hebrew text verification
+- Chapter/verse counts
+- Footnote consistency
 
-The system includes robust error handling:
+## 📚 Supported Books
 
-- **File Not Found**: Clear error messages for missing inputs
-- **Format Errors**: Validation catches malformed data
-- **Encoding Issues**: UTF-8 handling for Hebrew text
-- **Partial Failures**: Continues processing other books if one fails
+**Torah**: bereshit, shemot, vaikra, bamidbar, devarim
+**Prophets**: iehosua, shoftim, shemuel_alef/bet, melajim_alef/bet, ieshaiahu, irmeiahu, iejezkel, hosea, ioel, amos, ionah, micah, najum, jabakuk, tzefaniah, jagai, zejariah, malaji
+**Writings**: tehilim, mishlei
 
-## Performance
+## 🐛 Troubleshooting
 
-- **Memory Efficient**: Processes books individually to manage memory usage
-- **Incremental Processing**: Can process single books without full reprocessing
-- **Validation Caching**: Avoids redundant validation checks
+**Missing mammoth**: `pip install mammoth`
 
-## Troubleshooting
+**Text not recognized**: Ensure proper Unicode Hebrew in source
 
-### Common Issues
-
-1. **Missing mammoth library**
-   ```bash
-   pip install mammoth
-   ```
-
-2. **Hebrew text not recognized**
-   - Ensure DOCX contains proper Unicode Hebrew characters
-   - Check font encoding in source document
-
-3. **Chapter count mismatch**
-   - Verify source document structure
-   - Check for missing or extra chapter markers
-
-4. **Footnote processing errors**
-   - Ensure footnotes are properly formatted in DOCX
-   - Check for special characters in footnote text
-
-### Debug Mode
-
-Enable verbose output by modifying the logging level in individual modules.
-
-## Contributing
-
-1. Follow the existing modular structure
-2. Add comprehensive tests for new functionality
-3. Update documentation for any API changes
-4. Ensure all code and comments are in English
-5. Validate changes against existing test data
-
-## License
-
-Project-specific license - see main project documentation.
-
-## Version History
-
-- **2.0.0**: Complete modular refactor with CLI interface
-- **1.0.0**: Initial monolithic processor
+**Version**: 2.1.0 - Text cleaning + simplified JSON structure
