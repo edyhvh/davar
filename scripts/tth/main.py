@@ -3,7 +3,7 @@
 TTH Processing System - Main Entry Point
 =========================================
 
-Main entry point for the TTH (Traducción Textual del Hebreo) processing system.
+Main entry point for the TTH (Textual Translation of Hebrew) processing system.
 
 This script provides a high-level interface for processing Hebrew Scriptures
 from DOCX/Markdown to JSON format for the Davar app.
@@ -33,7 +33,7 @@ def main():
     # Show banner
     print("=" * 70)
     print("TTH Processing System - Davar Project")
-    print("Traducción Textual del Hebreo")
+    print("Textual Translation of Hebrew")
     print("=" * 70)
     print()
 
