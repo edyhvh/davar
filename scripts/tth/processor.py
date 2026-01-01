@@ -252,6 +252,26 @@ class ContentBasedBookProcessor(BookProcessorStrategy):
 
             # Process verses if we're in a chapter section
             if in_chapter_section:
+                # Check for subtitles first
+                prev_line = lines[i - 1] if i > 0 else ""
+                next_line = lines[i + 1] if i + 1 < len(lines) else ""
+                if self.processor.is_subtitle(line, prev_line, next_line):
+                    # Save previous verse if exists
+                    if current_verse_num is not None:
+                        prev_verse_text = ' '.join(current_verse_text).strip()
+                        if prev_verse_text:
+                            prev_verse_text = self.processor.clean_text_preserve_comments(prev_verse_text)
+                            current_verses.append({
+                                'verse': current_verse_num,
+                                'text': prev_verse_text,
+                                'footnotes': self.processor.extract_footnotes(prev_verse_text)[1],
+                                'hebrew_terms': self.processor.extract_hebrew_terms(prev_verse_text)
+                            })
+                            current_verse_num = None
+                            current_verse_text = []
+                    i += 1
+                    continue
+
                 # Look for verse markers - try multiple patterns
                 verse_match = None
 
@@ -295,9 +315,10 @@ class ContentBasedBookProcessor(BookProcessorStrategy):
                     i += 1
                     continue
 
-                # Continue accumulating verse text
+                # Continue accumulating verse text (but not subtitles)
                 elif current_verse_num is not None:
-                    current_verse_text.append(line)
+                    if not self.processor.is_subtitle(line, prev_line, next_line):
+                        current_verse_text.append(line)
 
             i += 1
 
@@ -523,6 +544,26 @@ class FlexibleBookProcessor(BookProcessorStrategy):
 
             # Process verses if we're in a chapter section
             if in_chapter_section:
+                # Check for subtitles first
+                prev_line = lines[i - 1] if i > 0 else ""
+                next_line = lines[i + 1] if i + 1 < len(lines) else ""
+                if self.processor.is_subtitle(line, prev_line, next_line):
+                    # Save previous verse if exists
+                    if current_verse_num is not None:
+                        prev_verse_text = ' '.join(current_verse_text).strip()
+                        if prev_verse_text:
+                            prev_verse_text = self.processor.clean_text_preserve_comments(prev_verse_text)
+                            current_verses.append({
+                                'verse': current_verse_num,
+                                'text': prev_verse_text,
+                                'footnotes': self.processor.extract_footnotes(prev_verse_text)[1],
+                                'hebrew_terms': self.processor.extract_hebrew_terms(prev_verse_text)
+                            })
+                            current_verse_num = None
+                            current_verse_text = []
+                    i += 1
+                    continue
+
                 # Look for verse markers - try multiple patterns
                 verse_match = None
 
@@ -556,9 +597,10 @@ class FlexibleBookProcessor(BookProcessorStrategy):
                     i += 1
                     continue
 
-                # Continue accumulating verse text
+                # Continue accumulating verse text (but not subtitles)
                 elif current_verse_num is not None:
-                    current_verse_text.append(line)
+                    if not self.processor.is_subtitle(line, prev_line, next_line):
+                        current_verse_text.append(line)
 
             i += 1
 
@@ -1187,6 +1229,88 @@ class TTHProcessor:
         if book_key not in self.BOOKS_INFO:
             raise ValueError(f"Book key '{book_key}' not found in books database")
 
+    def is_subtitle(self, line: str, prev_line: str = "", next_line: str = "") -> bool:
+        """
+        Detect if a line is a subtitle/section header.
+        
+        Subtitle patterns:
+        1. *Subtitle Text* - italic formatted (starts with capital)
+        2. *>Subtitle Text* - italic with > prefix
+        3. Plain Subtitle Text - plain text (surrounded by empty lines)
+        4. __X__rest of subtitle - drop cap style (bold first letter)
+        
+        Args:
+            line: Current line to check
+            prev_line: Previous line for context
+            next_line: Next line for context
+            
+        Returns:
+            True if the line is a subtitle, False otherwise
+        """
+        line = line.strip()
+        
+        if not line:
+            return False
+        
+        # Pattern 1 & 2: Italic subtitle *Text* or *>Text*
+        # Must NOT start with lowercase (that's inline italic)
+        if re.match(r'^\*[^*]+\*$', line):
+            # Subtitle if starts with capital, >, Hebrew, or Spanish punctuation
+            return not re.match(r'^\*[a-záéíóú]', line)
+        
+        # Pattern 4: Drop cap style __X__rest (like __S__helomóh)
+        if re.match(r'^__[A-ZÁÉÍÓÚ]__[a-záéíóú]', line):
+            return True
+        
+        # Pattern 3: Plain text subtitle (context-based)
+        # Must be surrounded by empty lines
+        prev_stripped = prev_line.strip() if prev_line else ""
+        next_stripped = next_line.strip() if next_line else ""
+        
+        # Skip verse/chapter markers
+        if line.startswith('**') or line.startswith('__'):
+            return False
+        
+        # Must start with capital letter
+        if not re.match(r'^[A-ZÁÉÍÓÚ]', line):
+            return False
+        
+        # Should be short (subtitle length)
+        if len(line) > 80:
+            return False
+        
+        # Must be surrounded by empty lines
+        return prev_stripped == "" and next_stripped == ""
+
+    def extract_subtitle_text(self, line: str) -> str:
+        """
+        Extract the clean subtitle text from a subtitle line.
+        
+        Args:
+            line: The subtitle line
+            
+        Returns:
+            Clean subtitle text without markers
+        """
+        line = line.strip()
+        
+        # Pattern 1 & 2: *Subtitle* or *>Subtitle*
+        if re.match(r'^\*[^*]+\*$', line):
+            text = line[1:-1]  # Remove outer asterisks
+            if text.startswith('>'):
+                text = text[1:]  # Remove > prefix
+            return text.strip()
+        
+        # Pattern 4: Drop cap __X__rest
+        if re.match(r'^__[A-ZÁÉÍÓÚ]__[a-záéíóú]', line):
+            # Convert __X__rest to Xrest
+            match = re.match(r'^__([A-ZÁÉÍÓÚ])__(.+)$', line)
+            if match:
+                return match.group(1) + match.group(2)
+        
+        # Pattern 3: Plain text subtitle
+        return line
+
     def read_markdown(self, file_path: str) -> str:
         """Read markdown file content."""
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -1302,12 +1426,34 @@ class TTHProcessor:
                     i += 1
                     continue
 
-                # Handle titles
-                title_match = re.match(r'^\*(.+?)\*$', line)
-                if title_match and not re.match(r'^\*\*\d+\*\*', line):
+                # Handle subtitles/titles (using new is_subtitle method)
+                prev_line = lines[i - 1] if i > 0 else ""
+                next_line_for_check = lines[i + 1] if i + 1 < len(lines) else ""
+                if self.is_subtitle(line, prev_line, next_line_for_check):
+                    # Skip alefato markers
                     alefato_check = re.match(r'^\*([A-Za-záéíóúÁÉÍÓÚ]+)\.\*\s*$', line)
                     if not alefato_check:
-                        current_title = title_match.group(1).strip()
+                        # Save current verse before setting new title
+                        if current_verse_num is not None:
+                            prev_verse_text = ' '.join(current_verse_text).strip()
+                            if prev_verse_text:
+                                prev_verse_text = self.clean_text_preserve_comments(prev_verse_text)
+                                prev_verse_text, footnotes = self.extract_footnotes(prev_verse_text)
+                                verse_entry = {
+                                    'verse': current_verse_num,
+                                    'text': prev_verse_text,
+                                    'footnotes': footnotes,
+                                    'hebrew_terms': self.extract_hebrew_terms(prev_verse_text)
+                                }
+                                if current_title:
+                                    verse_entry['title'] = current_title
+                                if current_alefato:
+                                    verse_entry['alefato'] = current_alefato
+                                current_verses.append(verse_entry)
+                                current_verse_num = None
+                                current_verse_text = []
+                        # Extract clean subtitle text
+                        current_title = self.extract_subtitle_text(line)
                     i += 1
                     continue
 
@@ -1349,14 +1495,16 @@ class TTHProcessor:
                         if not next_line:
                             i += 1
                             continue
+                        # Check for chapter/verse markers
                         if re.match(r'^(?:__|\*\*)\d+(?:__|\*\*)\s*$', next_line):
                             break
-                        if re.match(r'^\*.+\*$', next_line) and not re.match(r'^\*\*\d+\*\*', next_line):
-                            alefato_check = re.match(r'^\*([A-Za-záéíóúÁÉÍÓÚ]+)\.\*\s*$', next_line)
-                            if alefato_check:
-                                break
-                            break
+                        # Check for inline verse markers
                         if re.search(r'(?:\*\*\d+\*\*|__\d+__)', next_line):
+                            break
+                        # Check for subtitles using new is_subtitle method
+                        prev_for_check = lines[i - 1] if i > 0 else ""
+                        next_for_check = lines[i + 1] if i + 1 < len(lines) else ""
+                        if self.is_subtitle(next_line, prev_for_check, next_for_check):
                             break
                         if current_verse_num is not None:
                             current_verse_text.append(next_line)
@@ -1364,7 +1512,10 @@ class TTHProcessor:
                     continue
 
                 if current_verse_num is not None and line:
-                    if not re.match(r'^\*.+\*$', line):
+                    # Check if line is a subtitle before appending
+                    prev_for_check = lines[i - 1] if i > 0 else ""
+                    next_for_check = lines[i + 1] if i + 1 < len(lines) else ""
+                    if not self.is_subtitle(line, prev_for_check, next_for_check):
                         current_verse_text.append(line)
 
             i += 1
@@ -1421,9 +1572,10 @@ class TTHProcessor:
                 i += 1
                 continue
 
-            # Handle titles (italic text like *Saludo a los hermanos*)
-            title_match = re.match(r'^\*([^*]+)\*$', line)
-            if title_match and not re.match(r'^\*\*\d+\*\*', line):
+            # Handle subtitles/titles using is_subtitle method
+            prev_line = lines[i - 1] if i > 0 else ""
+            next_line = lines[i + 1] if i + 1 < len(lines) else ""
+            if self.is_subtitle(line, prev_line, next_line):
                 # Save current verse before changing title
                 if current_verse_num is not None and current_verse_text:
                     prev_verse_text = ' '.join(current_verse_text).strip()
@@ -1442,7 +1594,7 @@ class TTHProcessor:
                         current_verse_num = None
                         current_verse_text = []
 
-                current_title = title_match.group(1).strip()
+                current_title = self.extract_subtitle_text(line)
                 i += 1
                 continue
 
@@ -1475,7 +1627,8 @@ class TTHProcessor:
 
             # Add line to current verse if we're in one (for multi-line verses)
             if current_verse_num is not None and line:
-                if not re.match(r'^\*([^*]+)\*$', line):
+                # Don't add if it's a subtitle
+                if not self.is_subtitle(line, prev_line, next_line):
                     current_verse_text.append(line)
 
             i += 1
@@ -1628,14 +1781,23 @@ class TTHProcessor:
                             break
                         if re.search(r'(?:\*\*\d+\*\*|__\d+__)', next_line):
                             break
+                        # Check for subtitles using is_subtitle method
+                        prev_for_check = lines[i - 1] if i > 0 else ""
+                        next_for_check = lines[i + 1] if i + 1 < len(lines) else ""
+                        if self.is_subtitle(next_line, prev_for_check, next_for_check):
+                            break
                         if current_verse_num is not None:
                             current_verse_text.append(next_line)
                         i += 1
                     continue
 
                 if current_verse_num is not None and line:
-                    if not re.match(r'^\*.+\*$', line) and not re.match(r'^\*[A-Za-z]+\.\*\s*$', line):
-                        current_verse_text.append(line)
+                    # Check for subtitles before adding to verse text
+                    prev_for_check = lines[i - 1] if i > 0 else ""
+                    next_for_check = lines[i + 1] if i + 1 < len(lines) else ""
+                    if not self.is_subtitle(line, prev_for_check, next_for_check):
+                        if not re.match(r'^\*[A-Za-z]+\.\*\s*$', line):
+                            current_verse_text.append(line)
 
             i += 1
 
@@ -1747,25 +1909,43 @@ class TTHProcessor:
         return modified_text.strip(), footnotes
 
     def clean_text_preserve_comments(self, text: str) -> str:
-        """Clean text while preserving comments and formatting."""
+        """
+        Clean text while preserving comments, formatting, and italic emphasis.
+        
+        Changes from original:
+        1. Convert escaped parentheses FIRST so protection works correctly
+        2. Preserve italic emphasis as <em> tags instead of stripping
+        3. Properly handle italic inside parenthetical notes
+        """
         modified_text = text
 
         # Remove verse markers that may remain
         modified_text = re.sub(r'\*\*(\d+)\*\*', r'\1', modified_text)
 
-        # Protect comments in parentheses
+        # FIRST: Convert escaped parentheses so protection works
+        modified_text = modified_text.replace('\\(', '(').replace('\\)', ')')
+
+        # Protect comments in parentheses (now works with converted parens)
         protected_parts = []
         protected_pattern = r'\([^)]*\)'
 
         def protect_replace(match):
             protected_id = f"__PROTECTED_{len(protected_parts)}__"
-            protected_parts.append(match.group(0))
+            # Preserve italic inside parentheses by converting to <em>
+            content = match.group(0)
+            content = re.sub(r'\*([^*\s]+)\*', r'<em>\1</em>', content)
+            content = re.sub(r'\*([^*]+)\*', r'<em>\1</em>', content)
+            protected_parts.append(content)
             return protected_id
 
         modified_text = re.sub(protected_pattern, protect_replace, modified_text)
 
-        # Remove italic formatting
-        modified_text = re.sub(r'\*([^*\s]+)\*', r'\1', modified_text)
+        # Convert italic emphasis to <em> tags (instead of stripping)
+        # Handle multi-word italic first: *word word*
+        modified_text = re.sub(r'\*([^*]+)\*', r'<em>\1</em>', modified_text)
+        # Handle single word italic: *word*
+        modified_text = re.sub(r'\*([^*\s]+)\*', r'<em>\1</em>', modified_text)
+        # Clean up any orphan asterisks
         modified_text = re.sub(r'\*(\s+)', r'\1', modified_text)
         modified_text = re.sub(r'(\s+)\*', r'\1', modified_text)
 
@@ -1775,9 +1955,6 @@ class TTHProcessor:
 
         # Clean whitespace
         modified_text = re.sub(r'\s+', ' ', modified_text).strip()
-
-        # Convert escaped parentheses
-        modified_text = modified_text.replace('\\(', '(').replace('\\)', ')')
 
         # Apply advanced text cleaning (soft hyphens, punctuation spacing, stuck connectors)
         modified_text = self.text_cleaner.clean_verse_text(modified_text)
