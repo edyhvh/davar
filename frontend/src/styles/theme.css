@@ -1,0 +1,248 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Primary Tekhelet Blue Palette - ACCENTS ONLY */
+  --accent: #0038B8;
+  --accent-from: #0038B8;
+  --accent-to: #002B80;
+  --accent-deep: #001F59;
+  
+  /* Light theme */
+  --background: #faf6f0;
+  --foreground: #1a1a1a;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b6b6b;
+  --text-hebrew: #1a1a1a;
+  --muted: rgba(0, 0, 0, 0.05);
+  
+  /* Glassmorphism - Light Theme (NEUTRAL - No Color Tint) */
+  --glass-surface: rgba(255, 255, 255, 0.25);
+  --glass-surface-elevated: rgba(255, 255, 255, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --glass-highlight: rgba(255, 255, 255, 0.7);
+  --glass-blur: blur(40px);
+  --glass-blur-heavy: blur(40px);
+  
+  /* Dark theme overrides */
+  &.dark {
+    --accent: #4169E1;
+    --accent-from: #4169E1;
+    --accent-to: #0044CC;
+    --accent-deep: #002B80;
+    
+    --background: #1a1a1a;
+    --foreground: #ffffff;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --text-hebrew: #ebdbb2;
+    --muted: rgba(255, 255, 255, 0.08);
+    
+    /* Glassmorphism - Dark Theme (NEUTRAL GRAY - ZERO BLUE TINT) */
+    --glass-surface: rgba(18, 18, 28, 0.92);
+    --glass-surface-elevated: rgba(25, 25, 35, 0.95);
+    --glass-border: rgba(60, 60, 80, 0.5);
+    --glass-shadow: rgba(0, 0, 0, 0.3);
+    --glass-highlight: rgba(80, 80, 90, 0.15);
+  }
+  
+  /* Copper Onboarding Colors */
+  --copper-base: #B87333;
+  --copper-highlight: #CD7F32;
+  --copper-glow: rgba(205, 127, 50, 0.1);
+  --copper-background-subtle: rgba(184, 115, 51, 0.05);
+  
+  /* Standard theme variables */
+  --card: rgba(255, 255, 255, 0.8);
+  --card-foreground: #1d1d1f;
+  --popover: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #1d1d1f;
+  --primary: #0038B8;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(255, 255, 255, 0.6);
+  --secondary-foreground: #6e6e73;
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.5);
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(0, 56, 184, 0.5);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.75rem;
+  --sidebar: rgba(255, 255, 255, 0.95);
+  --sidebar-foreground: #1d1d1f;
+  --sidebar-primary: #0038B8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(255, 255, 255, 0.7);
+  --sidebar-accent-foreground: #6e6e73;
+  --sidebar-border: rgba(0, 0, 0, 0.1);
+  --sidebar-ring: rgba(0, 56, 184, 0.5);
+}
+
+.dark {
+  /* Davar Dark Theme Colors */
+  --background: #1c1c1e;
+  --foreground: #f5f5f7;
+  --text-secondary: #aeaeb2;
+  
+  /* Glass surfaces for dark theme */
+  --glass-surface: rgba(28, 28, 30, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  
+  /* Tekhelet Accent - Keep the deep intensity for dark theme */
+  --accent-from: #0038B8;
+  --accent-to: #001F59;
+  --accent: #0038B8;
+  --accent-dark: #002B80;
+  --accent-deep: #001F59;
+  
+  /* Tekhelet RGBA variants for glassmorphism */
+  --accent-glow: rgba(0, 56, 184, 0.1);
+  --accent-glow-dark: rgba(0, 43, 128, 0.15);
+  
+  /* Standard theme variables */
+  --card: rgba(28, 28, 30, 0.8);
+  --card-foreground: #f5f5f7;
+  --popover: rgba(28, 28, 30, 0.95);
+  --popover-foreground: #f5f5f7;
+  --primary: #0038B8;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(28, 28, 30, 0.7);
+  --secondary-foreground: #aeaeb2;
+  --muted: rgba(255, 255, 255, 0.08);
+  --muted-foreground: #8e8e93;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: rgba(255, 255, 255, 0.12);
+  --input: rgba(28, 28, 30, 0.7);
+  --input-background: rgba(58, 58, 60, 0.5);
+  --ring: rgba(0, 56, 184, 0.5);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: rgba(28, 28, 30, 0.95);
+  --sidebar-foreground: #f5f5f7;
+  --sidebar-primary: #0038B8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(28, 28, 30, 0.8);
+  --sidebar-accent-foreground: #aeaeb2;
+  --sidebar-border: rgba(255, 255, 255, 0.15);
+  --sidebar-ring: rgba(0, 56, 184, 0.5);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
