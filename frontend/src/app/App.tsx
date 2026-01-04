@@ -18,6 +18,7 @@ import { BottomNavBar } from './components/BottomNavBar';
 import { ChapterVerseSelector } from './components/ChapterVerseSelector';
 import { SwipeIndicator } from './components/SwipeIndicator';
 import { DesignSystemExport } from './components/DesignSystemExport';
+import { HomeScreen } from './components/HomeScreen';
 import { Settings, Home, BookOpen, FileText } from 'lucide-react';
 import { X } from 'lucide-react';
 
@@ -32,16 +33,28 @@ const sampleVerses = {
     qumranTranslation: 'In the beginning God created the heavens and the earth. (Qumran variant)',
   },
   'Genesis-1-2': {
-    hebrew: 'וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם',
-    translation: 'Now the earth was formless and empty, darkness was over the surface of the deep.',
-    translationEs: 'Y la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la faz del abismo.',
-    translationHe: 'וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם',
+    hebrew: 'וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם',
+    translation: 'Now the earth was formless and empty, darkness was over the surface of the deep, and the Spirit of God was hovering over the waters.',
+    translationEs: 'Y la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la faz del abismo, y el Espíritu de Dios se movía sobre la faz de las aguas.',
+    translationHe: 'וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם',
   },
   'Genesis-1-3': {
     hebrew: 'וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר',
     translation: 'And God said, "Let there be light," and there was light.',
     translationEs: 'Y dijo Dios: Sea la luz; y fue la luz.',
     translationHe: 'וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר',
+  },
+  'Genesis-1-4': {
+    hebrew: 'וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב וַיַּבְדֵּל אֱלֹהִים בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ',
+    translation: 'God saw that the light was good, and he separated the light from the darkness.',
+    translationEs: 'Y vio Dios que la luz era buena; y separó Dios la luz de las tinieblas.',
+    translationHe: 'וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב וַיַּבְדֵּל אֱלֹהִים בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ',
+  },
+  'Genesis-1-5': {
+    hebrew: 'וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם אֶחָד',
+    translation: 'God called the light "day," and the darkness he called "night." And there was evening, and there was morning—the first day.',
+    translationEs: 'Y llamó Dios a la luz Día, y a las tinieblas llamó Noche. Y fue la tarde y la mañana un día.',
+    translationHe: 'וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם אֶחָד',
   },
   'Psalms-23-1': {
     hebrew: 'יְהוָה רֹעִי לֹא אֶחְסָר',
@@ -102,6 +115,8 @@ export default function App() {
   const [selectedWord, setSelectedWord] = useState<string | null>(null);
   const [language, setLanguage] = useState<'en' | 'es' | 'he'>('en');
   const [showQumran, setShowQumran] = useState(true);
+  const [showFullChapter, setShowFullChapter] = useState(false);
+  const [hebrewOnly, setHebrewOnly] = useState(false);
   
   // Onboarding hint state (shows until word sheet is opened)
   const [hasOpenedWordSheet, setHasOpenedWordSheet] = useState(false);
@@ -120,10 +135,28 @@ export default function App() {
   const previousVerse = sampleVerses[prevVerseKey as keyof typeof sampleVerses];
   const nextVerse = sampleVerses[nextVerseKey as keyof typeof sampleVerses];
   
-  // Get book names
-  const bookData = booksData[book] || { en: 'Genesis', es: 'Génesis', he: 'בְּרֵאשִׁית' };
-  const bookName = language === 'he' ? bookData.he : (language === 'es' ? bookData.es : bookData.en);
-  const bookNameHebrew = bookData.he;
+  // Get chapter verses for full chapter view
+  const getChapterVerses = () => {
+    const verses = [];
+    for (let i = 1; i <= 5; i++) {
+      const key = `${book}-${chapter}-${i}`;
+      const v = sampleVerses[key as keyof typeof sampleVerses];
+      if (v) {
+        verses.push({
+          hebrew: v.hebrew,
+          translation: language === 'es' ? v.translationEs || v.translation : v.translation,
+        });
+      }
+    }
+    return verses;
+  };
+  
+  const chapterVerses = getChapterVerses();
+
+  // Get book name in different languages
+  const bookData = booksData[book];
+  const bookName = bookData ? bookData[language] || bookData.en : book;
+  const bookNameHebrew = bookData ? bookData.he : book;
 
   const handleThemeChange = (newTheme: 'light' | 'dark') => {
     setTheme(newTheme);
@@ -195,28 +228,27 @@ export default function App() {
         ) : showNavigationSelector ? (
           // Navigation Selector View
           <div className="min-h-screen">
-            <header className="sticky top-0 z-30 bg-[var(--glass-surface)] backdrop-blur-xl border-b border-[var(--glass-border)]">
-              <div className="flex items-center justify-between p-4">
-                <button
-                  onClick={() => setShowNavigationSelector(false)}
-                  className="p-2 rounded-full hover:bg-[var(--muted)] transition-colors"
+            {/* Fixed X button only - no glassmorphism */}
+            <button
+              onClick={() => setShowNavigationSelector(false)}
+              className="fixed top-6 left-6 z-40 p-2 rounded-full hover:bg-[var(--muted)] transition-colors"
+              style={{ backgroundColor: 'var(--background)' }}
+            >
+              <X className="w-5 h-5 text-[var(--text-secondary)]" />
+            </button>
+            
+            <main className="px-4 pt-6 pb-6">
+              {/* Davar heading at the beginning - scrolls with content */}
+              <div className="flex justify-center mb-8">
+                <h2 
+                  className="text-[var(--text-secondary)] dark:text-[var(--muted-foreground)] text-2xl" 
+                  style={{ fontFamily: "'Cardo', serif" }}
                 >
-                  <Home className="w-5 h-5 text-[var(--text-secondary)]" />
-                </button>
-                <h2 style={{ fontFamily: "'Inter', sans-serif" }}>Davar</h2>
-                <div className="w-9" /> {/* Spacer */}
+                  דבר
+                </h2>
               </div>
-            </header>
-            <main className="px-4 py-6">
-              <NavigationSelector
-                book={book}
-                chapter={chapter}
-                verse={verse}
-                onBookChange={setBook}
-                onChapterChange={setChapter}
-                onVerseChange={setVerse}
-                onClose={() => setShowNavigationSelector(false)}
-              />
+              
+              <HomeScreen language={language} />
             </main>
           </div>
         ) : showBookSelector ? (
@@ -254,7 +286,13 @@ export default function App() {
             </header>
 
             {/* Main Content - Centered Verse */}
-            <main className="min-h-screen flex flex-col items-center justify-center px-6 py-24 pb-32">
+            <main 
+              className={`min-h-screen flex flex-col items-center ${showFullChapter ? 'justify-start' : 'justify-center'} px-6 py-24 pb-32 transition-all duration-500`}
+              style={showFullChapter ? {
+                overflowY: 'auto',
+                scrollbarGutter: 'stable',
+              } : undefined}
+            >
               <div className="max-w-lg w-full">
                 {/* Verse Display */}
                 <VerseDisplay
@@ -277,6 +315,9 @@ export default function App() {
                   nextVerseSnippet={nextVerse?.hebrew.split(' ').slice(0, 3).join(' ')}
                   showOnboardingHint={showOnboardingHint}
                   showQumran={showQumran}
+                  showFullChapter={showFullChapter}
+                  hebrewOnly={hebrewOnly}
+                  chapterVerses={chapterVerses}
                   onSwipeUp={handlePrevVerse}
                   onSwipeDown={handleNextVerse}
                 />
@@ -346,7 +387,7 @@ export default function App() {
                   className="text-xl tracking-[0.25em]" 
                   style={{ fontFamily: "'Suez One', serif" }}
                 >
-                  DAVAR
+                  SETTINGS
                 </h2>
                 <button
                   onClick={() => setShowSettings(false)}
@@ -368,6 +409,10 @@ export default function App() {
                   onLanguageChange={setLanguage}
                   showQumran={showQumran}
                   onQumranChange={setShowQumran}
+                  showFullChapter={showFullChapter}
+                  onFullChapterChange={setShowFullChapter}
+                  hebrewOnly={hebrewOnly}
+                  onHebrewOnlyChange={setHebrewOnly}
                 />
               </div>
             </div>

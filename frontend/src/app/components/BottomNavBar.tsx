@@ -11,10 +11,9 @@ export function BottomNavBar({ onHomeClick, onChapterVerseClick, onSettingsClick
   return (
     <div className="fixed bottom-0 left-0 right-0 z-30">
       <div className="max-w-md mx-auto px-6 pb-6">
-        <nav className="relative bg-[var(--glass-surface-elevated)] backdrop-blur-[40px] border-2 border-[var(--glass-border)] rounded-full shadow-[0_12px_48px_0_var(--glass-shadow)] p-2">
-          {/* Inner glass highlight - NEUTRAL ONLY */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--glass-highlight)] via-transparent to-black/5 rounded-full pointer-events-none" />
-          
+        <nav 
+          className="relative rounded-full p-2 bg-[var(--background)]"
+        >
           <div className="relative flex items-center justify-around">
             {/* Home Button (Left) */}
             <button

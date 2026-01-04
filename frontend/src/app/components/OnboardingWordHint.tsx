@@ -43,7 +43,6 @@ export function OnboardingWordHint({ word, isActive, onClick }: OnboardingWordHi
           backgroundColor: 'rgba(184, 115, 51, 0.08)',
           borderRadius: '8px',
           padding: '2px 8px',
-          border: '1px solid rgba(205, 127, 50, 0.2)',
         }}
       >
         {word}
