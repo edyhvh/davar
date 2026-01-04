@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import { DavarLogo } from './components/DavarLogo';
 import { GlassButton } from './components/GlassButton';
 import { GlassCard } from './components/GlassCard';
@@ -204,7 +205,7 @@ export default function App() {
 
   // Show launch screen
   if (showLaunch) {
-    return <LaunchScreen onComplete={() => setShowLaunch(false)} />;
+    return <LaunchScreen onComplete={() => setShowLaunch(false)} language={language} />;
   }
 
   return (
@@ -281,7 +282,18 @@ export default function App() {
                 className="hover:opacity-80 transition-opacity"
                 aria-label="Toggle theme"
               >
-                <DavarLogo size="sm" theme={theme} />
+                <ImageWithFallback
+                  src="figma:asset/86a59e5984baacebd9e81429a4678e2e378e368b.png"
+                  alt="Davar Logo"
+                  className="w-12 h-12"
+                  style={
+                    theme === 'light'
+                      ? {
+                          filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06))',
+                        }
+                      : undefined
+                  }
+                />
               </button>
             </header>
 
