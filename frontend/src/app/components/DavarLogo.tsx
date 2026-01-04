@@ -34,7 +34,7 @@ export function DavarLogo({ size = 'md', variant = 'default', className = '', th
           // Remove blue background and colorize the white logo shape
           filter: isDark 
             ? 'brightness(0) saturate(100%) invert(87%) sepia(14%) saturate(524%) hue-rotate(357deg) brightness(95%) contrast(89%)' // #ebdbb2 warm cream
-            : 'brightness(0) saturate(100%) invert(13%) sepia(95%) saturate(4736%) hue-rotate(219deg) brightness(94%) contrast(108%)', // #0038B8 tekhelet blue
+            : 'brightness(0) saturate(100%) invert(18%) sepia(43%) saturate(2093%) hue-rotate(226deg) brightness(91%) contrast(94%)', // #2E347A earthy tekhelet
           objectFit: 'contain',
           mixBlendMode: 'normal',
         }}

@@ -14,20 +14,22 @@ export function DesignSystemExport({ theme, onThemeChange, onClose }: DesignSyst
   const colorTokens = {
     light: {
       primary: [
-        { name: 'Primary Base', value: '#0038B8', desc: 'Main tekhelet blue' },
-        { name: 'Primary Dark', value: '#002B80', desc: 'Gradient mid' },
-        { name: 'Primary Darker', value: '#001F59', desc: 'Gradient end' },
+        { name: 'Primary Base', value: '#2E347A', desc: 'Main earthy tekhelet blue' },
+        { name: 'Primary Dark', value: '#252B6B', desc: 'Pressed states/gradient mid' },
+        { name: 'Primary Darker', value: '#1C2254', desc: 'Shadows/gradient end' },
+        { name: 'Primary Light', value: '#5C6199', desc: 'Inactive/subtle highlights' },
       ],
       copper: [
         { name: 'Copper Light', value: '#B87333', desc: 'Onboarding hint' },
         { name: 'Copper Base', value: '#CD7F32', desc: 'Hint accent' },
       ],
       neutral: [
-        { name: 'Background', value: '#FFFFFF', desc: 'Page background' },
-        { name: 'Foreground', value: '#09090b', desc: 'Primary text' },
-        { name: 'Muted', value: '#f4f4f5', desc: 'Subtle backgrounds' },
-        { name: 'Muted Foreground', value: '#71717a', desc: 'Secondary text' },
-        { name: 'Border', value: '#e4e4e7', desc: 'Dividers' },
+        { name: 'Background', value: '#FDFDF9', desc: 'Warm ivory page background' },
+        { name: 'Surface', value: '#FFFFFF', desc: 'Card surfaces' },
+        { name: 'Surface Elevated', value: '#F5F4F0', desc: 'Raised surfaces' },
+        { name: 'Foreground', value: '#1a1a1a', desc: 'Primary text' },
+        { name: 'Muted Foreground', value: '#6b6b6b', desc: 'Secondary text' },
+        { name: 'Border', value: 'rgba(0, 0, 0, 0.08)', desc: 'Dividers' },
       ],
       glass: [
         { name: 'Glass Surface', value: 'rgba(255, 255, 255, 0.25)', desc: 'Card background' },
@@ -39,27 +41,29 @@ export function DesignSystemExport({ theme, onThemeChange, onClose }: DesignSyst
     },
     dark: {
       primary: [
-        { name: 'Primary Base', value: '#0038B8', desc: 'Main tekhelet blue' },
-        { name: 'Primary Dark', value: '#002B80', desc: 'Gradient mid' },
-        { name: 'Primary Darker', value: '#001F59', desc: 'Gradient end' },
+        { name: 'Primary Base', value: '#2E347A', desc: 'Main earthy tekhelet blue' },
+        { name: 'Primary Dark', value: '#252B6B', desc: 'Pressed states/gradient mid' },
+        { name: 'Primary Darker', value: '#1C2254', desc: 'Shadows/gradient end' },
+        { name: 'Primary Light', value: '#5C6199', desc: 'Inactive/subtle highlights' },
       ],
       copper: [
         { name: 'Copper Light', value: '#B87333', desc: 'Onboarding hint' },
         { name: 'Copper Base', value: '#CD7F32', desc: 'Hint accent' },
       ],
       neutral: [
-        { name: 'Background', value: '#32302f', desc: 'Warm charcoal' },
+        { name: 'Background', value: '#0F0E12', desc: 'Warm deep charcoal' },
+        { name: 'Surface', value: '#17161A', desc: 'Elevated surface' },
+        { name: 'Surface Elevated', value: '#1F1E23', desc: 'Raised surfaces' },
         { name: 'Foreground', value: '#ebdbb2', desc: 'Warm cream text' },
-        { name: 'Muted', value: '#3c3836', desc: 'Subtle backgrounds' },
         { name: 'Muted Foreground', value: '#a89984', desc: 'Secondary text' },
-        { name: 'Border', value: '#504945', desc: 'Dividers' },
+        { name: 'Border', value: 'rgba(255, 255, 255, 0.12)', desc: 'Dividers' },
       ],
       glass: [
-        { name: 'Glass Surface', value: 'rgba(26, 26, 26, 0.3)', desc: 'Card background' },
-        { name: 'Glass Surface Elevated', value: 'rgba(38, 38, 38, 0.4)', desc: 'Hover state' },
-        { name: 'Glass Border', value: 'rgba(255, 255, 255, 0.2)', desc: '2px border' },
+        { name: 'Glass Surface', value: 'rgba(23, 22, 26, 0.92)', desc: 'Card background' },
+        { name: 'Glass Surface Elevated', value: 'rgba(31, 30, 35, 0.95)', desc: 'Hover state' },
+        { name: 'Glass Border', value: 'rgba(60, 60, 80, 0.5)', desc: '2px border' },
         { name: 'Glass Shadow', value: 'rgba(0, 0, 0, 0.5)', desc: 'Drop shadow' },
-        { name: 'Glass Highlight', value: 'rgba(255, 255, 255, 0.1)', desc: 'Inner glow' },
+        { name: 'Glass Highlight', value: 'rgba(80, 80, 90, 0.15)', desc: 'Inner glow' },
       ],
     },
   };
@@ -207,7 +211,7 @@ export function DesignSystemExport({ theme, onThemeChange, onClose }: DesignSyst
           {/* Primary Colors */}
           <div className="space-y-6 mb-8">
             <h3 className="text-xl text-[var(--muted-foreground)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-              Primary - Tekhelet Blue
+              Primary - Earthy Tekhelet (Warm Indigo Blue)
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {currentColors.primary.map((color) => (

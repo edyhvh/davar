@@ -60,8 +60,11 @@ const booksData: { [key: string]: { en: string; es: string; he: string } } = {
 const sampleWordData = {
   'אֱלֹהִים': {
     word: 'אֱלֹהִים',
+    transliteration: 'Elohim',
     meanings: ['God', 'Divine being', 'Supreme deity'],
     root: 'אֵל',
+    rootTransliteration: 'El',
+    rootMeaning: 'Mighty one, power, deity',
     instances: [
       { verse: 'Gen 1:1', text: 'בָּרָא אֱלֹהִים' },
       { verse: 'Gen 1:3', text: 'וַיֹּאמֶר אֱלֹהִים' },
@@ -73,8 +76,11 @@ const sampleWordData = {
   },
   'בְּרֵאשִׁית': {
     word: 'בְּרֵאשִׁית',
+    transliteration: 'Bereshit',
     meanings: ['In the beginning', 'At first', 'Initially'],
     root: 'רֵאשִׁית',
+    rootTransliteration: 'Reshit',
+    rootMeaning: 'Beginning, first, chief',
     instances: [
       { verse: 'Gen 1:1', text: 'בְּרֵאשִׁית בָּרָא' },
     ],
@@ -260,8 +266,12 @@ export default function App() {
                   verseNumber={verse}
                   bookName={bookName}
                   bookNameHebrew={bookNameHebrew}
+                  book={book}
+                  chapter={chapter}
                   language={language}
                   onBookNameClick={() => setShowBookSelector(true)}
+                  onChapterChange={setChapter}
+                  onVerseChange={setVerse}
                   onWordClick={handleWordClick}
                   previousVerseSnippet={previousVerse?.hebrew.split(' ').slice(0, 3).join(' ')}
                   nextVerseSnippet={nextVerse?.hebrew.split(' ').slice(0, 3).join(' ')}

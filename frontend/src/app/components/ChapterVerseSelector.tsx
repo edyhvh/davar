@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X } from 'lucide-react';
+import { X, ChevronLeft } from 'lucide-react';
 
 interface ChapterVerseSelectorProps {
   book: string;
@@ -54,73 +54,131 @@ export function ChapterVerseSelector({
 
   return (
     <div className="fixed inset-0 z-50 bg-[var(--background)]">
-      {/* Header with HEAVY NEUTRAL glass */}
-      <div className="sticky top-0 z-10 bg-[var(--glass-surface-elevated)] backdrop-blur-[40px] border-b-2 border-[var(--glass-border)] shadow-[0_8px_32px_0_var(--glass-shadow)]">
-        <div className="relative max-w-md mx-auto px-6 py-5 flex items-center justify-between">
-          {/* Inner glass highlight - NEUTRAL */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--glass-highlight)] via-transparent to-transparent pointer-events-none" />
-          
-          <h2 
-            className="relative text-lg font-medium"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            {selectedChapter ? `Chapter ${selectedChapter}` : book}
-          </h2>
+      {/* Header - Retro minimal with border */}
+      <div 
+        className="sticky top-0 z-10 border-b-2"
+        style={{ 
+          backgroundColor: 'var(--background)',
+          borderColor: 'var(--foreground)',
+        }}
+      >
+        <div className="relative max-w-md mx-auto px-6 py-6 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            {selectedChapter && (
+              <button
+                onClick={() => setSelectedChapter(null)}
+                className="p-1.5 -ml-2 rounded-lg hover:bg-[var(--muted)] transition-colors"
+                aria-label="Back to chapters"
+              >
+                <ChevronLeft 
+                  className="w-6 h-6" 
+                  style={{ color: 'var(--foreground)' }} 
+                />
+              </button>
+            )}
+            <h2 
+              style={{ 
+                fontFamily: "'Courier New', monospace",
+                fontWeight: 700,
+                fontSize: '20px',
+                color: 'var(--foreground)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+              }}
+            >
+              {selectedChapter ? `Chapter ${selectedChapter}` : book}
+            </h2>
+          </div>
           <button
             onClick={onClose}
-            className="relative p-3 rounded-2xl bg-[var(--glass-surface)] backdrop-blur-[40px] border border-[var(--glass-border)] hover:bg-[var(--glass-surface-elevated)] transition-all hover:scale-110 active:scale-95 shadow-[0_4px_16px_0_var(--glass-shadow)]"
+            className="w-8 h-8 rounded-full border-2 flex items-center justify-center hover:bg-[var(--muted)] transition-colors"
+            style={{ 
+              borderColor: 'var(--foreground)',
+            }}
             aria-label="Close"
           >
-            <X className="w-5 h-5 text-[var(--text-secondary)]" />
+            <X 
+              className="w-4 h-4" 
+              style={{ color: 'var(--foreground)' }} 
+            />
           </button>
         </div>
       </div>
 
-      {/* Chapter or Verse Grid */}
-      <div className="max-w-md mx-auto px-6 py-6">
+      {/* Chapter or Verse Grid - Retro sketch style */}
+      <div className="max-w-md mx-auto px-5 py-8">
         {!selectedChapter ? (
-          // Chapter Selection - Chessboard Grid with NEUTRAL glass
-          <div className="grid grid-cols-6 gap-2 pb-24">
+          // Chapter Selection - Retro grid with borders
+          <div className="grid grid-cols-5 gap-3 pb-24">
             {chapters.map((chapter) => (
               <button
                 key={chapter}
                 onClick={() => handleChapterSelect(chapter)}
-                className={`
-                  aspect-square rounded-xl transition-all flex items-center justify-center font-medium
-                  ${chapter === currentChapter 
-                    ? 'bg-[var(--accent)] text-white shadow-lg' 
-                    : 'bg-[var(--glass-surface)] backdrop-blur-[40px] border border-[var(--glass-border)] text-[var(--foreground)] hover:bg-[var(--muted)] hover:scale-105 active:scale-95'
+                className="aspect-square rounded-lg transition-all flex items-center justify-center border-2"
+                style={{
+                  backgroundColor: chapter === currentChapter 
+                    ? 'var(--foreground)' 
+                    : 'var(--background)',
+                  borderColor: 'var(--foreground)',
+                  color: chapter === currentChapter 
+                    ? 'var(--background)' 
+                    : 'var(--foreground)',
+                  fontFamily: "'Courier New', monospace",
+                  fontSize: '18px',
+                  fontWeight: 700,
+                  transform: 'scale(1)',
+                }}
+                onMouseEnter={(e) => {
+                  if (chapter !== currentChapter) {
+                    e.currentTarget.style.backgroundColor = 'var(--muted)';
+                    e.currentTarget.style.transform = 'scale(1.05)';
                   }
-                `}
-                style={{ fontFamily: "'Inter', sans-serif" }}
+                }}
+                onMouseLeave={(e) => {
+                  if (chapter !== currentChapter) {
+                    e.currentTarget.style.backgroundColor = 'var(--background)';
+                    e.currentTarget.style.transform = 'scale(1)';
+                  }
+                }}
               >
                 {chapter}
               </button>
             ))}
           </div>
         ) : (
-          // Verse Selection - Chessboard Grid with NEUTRAL glass
+          // Verse Selection - Retro grid with borders
           <div className="space-y-4">
-            <button
-              onClick={() => setSelectedChapter(null)}
-              className="text-sm text-[var(--accent)] hover:underline"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              ← Back to Chapters
-            </button>
-            <div className="grid grid-cols-6 gap-2 pb-24">
+            <div className="grid grid-cols-5 gap-3 pb-24">
               {verses.map((verse) => (
                 <button
                   key={verse}
                   onClick={() => handleVerseSelect(verse)}
-                  className={`
-                    aspect-square rounded-xl transition-all flex items-center justify-center font-medium
-                    ${verse === currentVerse && selectedChapter === currentChapter
-                      ? 'bg-[var(--accent)] text-white shadow-lg' 
-                      : 'bg-[var(--glass-surface)] backdrop-blur-[40px] border border-[var(--glass-border)] text-[var(--foreground)] hover:bg-[var(--muted)] hover:scale-105 active:scale-95'
+                  className="aspect-square rounded-lg transition-all flex items-center justify-center border-2"
+                  style={{
+                    backgroundColor: verse === currentVerse && selectedChapter === currentChapter
+                      ? 'var(--foreground)' 
+                      : 'var(--background)',
+                    borderColor: 'var(--foreground)',
+                    color: verse === currentVerse && selectedChapter === currentChapter
+                      ? 'var(--background)' 
+                      : 'var(--foreground)',
+                    fontFamily: "'Courier New', monospace",
+                    fontSize: '18px',
+                    fontWeight: 700,
+                    transform: 'scale(1)',
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!(verse === currentVerse && selectedChapter === currentChapter)) {
+                      e.currentTarget.style.backgroundColor = 'var(--muted)';
+                      e.currentTarget.style.transform = 'scale(1.05)';
                     }
-                  `}
-                  style={{ fontFamily: "'Inter', sans-serif" }}
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!(verse === currentVerse && selectedChapter === currentChapter)) {
+                      e.currentTarget.style.backgroundColor = 'var(--background)';
+                      e.currentTarget.style.transform = 'scale(1)';
+                    }
+                  }}
                 >
                   {verse}
                 </button>
