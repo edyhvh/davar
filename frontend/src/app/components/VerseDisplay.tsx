@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { OnboardingWordHint } from './OnboardingWordHint';
 import { SwipeIndicator } from './SwipeIndicator';
+import { FullChapterView } from './FullChapterView';
 
 interface VerseDisplayProps {
   hebrewText: string;
@@ -22,6 +23,9 @@ interface VerseDisplayProps {
   nextVerseSnippet?: string;
   showOnboardingHint?: boolean;
   showQumran?: boolean;
+  showFullChapter?: boolean;
+  hebrewOnly?: boolean;
+  chapterVerses?: { hebrew: string; translation: string }[];
   onSwipeUp?: () => void;
   onSwipeDown?: () => void;
 }
@@ -63,6 +67,9 @@ export function VerseDisplay({
   nextVerseSnippet,
   showOnboardingHint = false,
   showQumran = false,
+  showFullChapter = false,
+  hebrewOnly = false,
+  chapterVerses,
   onSwipeUp,
   onSwipeDown,
 }: VerseDisplayProps) {
@@ -97,6 +104,25 @@ export function VerseDisplay({
   const firstWord = hebrewWords[0];
   const restOfText = hebrewWords.slice(1).join(' ');
 
+  // If full chapter mode is enabled and we have verses, show the full chapter view
+  if (showFullChapter && chapterVerses && chapterVerses.length > 0) {
+    return (
+      <div className="transition-opacity duration-500">
+        <FullChapterView
+          verses={chapterVerses}
+          bookName={bookName}
+          bookNameHebrew={bookNameHebrew}
+          chapter={chapter}
+          language={language}
+          hebrewOnly={hebrewOnly}
+          onBookNameClick={onBookNameClick}
+          onWordClick={onWordClick}
+        />
+      </div>
+    );
+  }
+
+  // Otherwise show the single verse view
   return (
     <div className="space-y-8">
       {/* Book Name & Chapter - NEUTRAL Glassmorphic CTA */}
@@ -247,36 +273,38 @@ export function VerseDisplay({
         </span>
       </div>
 
-      {/* Translation and Next Verse with Swipe Indicator */}
-      <SwipeIndicator onSwipeUp={onSwipeUp} onSwipeDown={onSwipeDown}>
-        <div className="space-y-8">
-          {/* Translation */}
-          <div 
-            className="text-center text-[var(--text-secondary)] leading-relaxed px-4"
-            style={{ 
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '17px',
-            }}
-          >
-            {translation}
-          </div>
-
-          {/* Next Verse Snippet */}
-          {nextVerseSnippet && (
+      {/* Translation and Next Verse with Swipe Indicator - Only show if not Hebrew Only mode */}
+      {!hebrewOnly && (
+        <SwipeIndicator onSwipeUp={onSwipeUp} onSwipeDown={onSwipeDown}>
+          <div className="space-y-8">
+            {/* Translation */}
             <div 
-              className="text-center leading-relaxed opacity-20"
+              className="text-center text-[var(--text-secondary)] leading-relaxed px-4 transition-all duration-500"
               style={{ 
-                fontFamily: "'Cardo', serif",
-                fontSize: '20px',
-                direction: 'rtl',
-                color: 'var(--text-hebrew)',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '17px',
               }}
             >
-              {nextVerseSnippet}
+              {translation}
             </div>
-          )}
-        </div>
-      </SwipeIndicator>
+
+            {/* Next Verse Snippet */}
+            {nextVerseSnippet && !showFullChapter && (
+              <div 
+                className="text-center leading-relaxed opacity-20"
+                style={{ 
+                  fontFamily: "'Cardo', serif",
+                  fontSize: '20px',
+                  direction: 'rtl',
+                  color: 'var(--text-hebrew)',
+                }}
+              >
+                {nextVerseSnippet}
+              </div>
+            )}
+          </div>
+        </SwipeIndicator>
+      )}
     </div>
   );
 }

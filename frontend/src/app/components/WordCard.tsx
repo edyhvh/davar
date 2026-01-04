@@ -88,7 +88,7 @@ export function WordCard({
 
       {/* Tab Content */}
       {activeTab === 'meanings' ? (
-        <div className="space-y-6 px-2">
+        <div className="space-y-6 px-2" style={{ minHeight: '320px' }}>
           {/* Meanings - Inline with separator */}
           <div>
             <h3 
@@ -167,7 +167,7 @@ export function WordCard({
           )}
         </div>
       ) : (
-        <div className="space-y-4 px-2">
+        <div className="space-y-4 px-2" style={{ minHeight: '320px' }}>
           {/* Instances - Retro style */}
           <h3 
             className="text-xs uppercase tracking-wider" 
