@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { GlassCard } from './GlassCard';
-import { GlassButton } from './GlassButton';
 
 interface WordInstance {
   verse: string;
@@ -9,62 +8,79 @@ interface WordInstance {
 
 interface WordCardProps {
   word: string;
+  transliteration?: string;
   meanings: string[];
   root?: string;
+  rootTransliteration?: string;
+  rootMeaning?: string;
   instances: WordInstance[];
   onInstanceClick: (verse: string) => void;
 }
 
-export function WordCard({ word, meanings, root, instances, onInstanceClick }: WordCardProps) {
+export function WordCard({ 
+  word, 
+  transliteration, 
+  meanings, 
+  root, 
+  rootTransliteration, 
+  rootMeaning, 
+  instances, 
+  onInstanceClick 
+}: WordCardProps) {
   const [activeTab, setActiveTab] = useState<'meanings' | 'instances'>('meanings');
 
   return (
     <div className="space-y-6 py-4">
-      {/* Title */}
-      <div className="text-center">
-        <h2 
-          className="text-lg font-medium"
-          style={{ fontFamily: "'Inter', sans-serif" }}
+      {/* Word - Large and centered with transliteration below */}
+      <div className="text-center space-y-2">
+        <div 
+          className="text-center"
+          style={{ 
+            fontFamily: "'Cardo', serif",
+            fontSize: '52px',
+            direction: 'rtl',
+            lineHeight: 1.2,
+            color: 'var(--text-hebrew)',
+          }}
         >
-          Word Analysis
-        </h2>
+          {word}
+        </div>
+        
+        {/* Transliteration - small and gray */}
+        {transliteration && (
+          <div 
+            className="text-sm"
+            style={{ 
+              fontFamily: "'Inter', sans-serif",
+              color: 'var(--text-secondary)',
+            }}
+          >
+            {transliteration}
+          </div>
+        )}
       </div>
 
-      {/* Word - Large and centered */}
-      <div 
-        className="text-center"
-        style={{ 
-          fontFamily: "'Cardo', serif",
-          fontSize: '52px',
-          direction: 'rtl',
-          lineHeight: 1.2,
-          color: 'var(--text-hebrew)',
-        }}
-      >
-        {word}
-      </div>
-
-      {/* Tabs - NEUTRAL glass, Tekhelet ONLY when selected */}
-      <div className="flex gap-3">
+      {/* Segmented Control - iOS style */}
+      <div className="bg-[var(--muted)] p-1 rounded-full flex gap-1">
         <button
           onClick={() => setActiveTab('meanings')}
-          className={`flex-1 px-5 py-4 rounded-2xl transition-all shadow-[0_4px_16px_var(--glass-shadow)] ${
+          className={`flex-1 px-5 py-3 rounded-full transition-all ${
             activeTab === 'meanings'
-              ? 'bg-[var(--accent)] text-white scale-105 shadow-[0_8px_24px_rgba(65,105,225,0.35)]'
-              : 'bg-[var(--glass-surface)] backdrop-blur-[40px] border-2 border-[var(--glass-border)] text-[var(--text-secondary)] hover:scale-105 hover:bg-[var(--glass-surface-elevated)]'
+              ? 'bg-white dark:bg-[var(--surface)] text-[var(--foreground)] shadow-sm'
+              : 'text-[var(--text-secondary)]'
           }`}
-          style={{ fontFamily: "'Inter', sans-serif" }}
+          style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: '15px' }}
         >
           Meanings
         </button>
         <button
           onClick={() => setActiveTab('instances')}
-          className={`flex-1 px-5 py-4 rounded-2xl transition-all shadow-[0_4px_16px_var(--glass-shadow)] ${
+          className={`flex-1 px-5 py-3 rounded-full transition-all ${
             activeTab === 'instances'
-              ? 'bg-[var(--accent)] text-white scale-105 shadow-[0_8px_24px_rgba(65,105,225,0.35)]'
-              : 'bg-[var(--glass-surface)] backdrop-blur-[40px] border-2 border-[var(--glass-border)] text-[var(--text-secondary)] hover:scale-105 hover:bg-[var(--glass-surface-elevated)]'
+              ? 'bg-white dark:bg-[var(--surface)] text-[var(--foreground)] shadow-sm'
+              : 'text-[var(--text-secondary)]'
           }`}
-          style={{ fontFamily: "'Inter', sans-serif" }}
+          style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: '15px' }}
         >
           Instances
         </button>
@@ -72,73 +88,113 @@ export function WordCard({ word, meanings, root, instances, onInstanceClick }: W
 
       {/* Tab Content */}
       {activeTab === 'meanings' ? (
-        <div className="space-y-5">
-          {/* Meanings - HEAVY GLASS */}
-          <GlassCard className="p-6">
-            <h3 className="text-xs uppercase tracking-wider text-[var(--text-secondary)] mb-5" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <div className="space-y-6 px-2">
+          {/* Meanings - Inline with separator */}
+          <div>
+            <h3 
+              className="text-xs uppercase tracking-wider mb-3" 
+              style={{ 
+                fontFamily: "'Inter', sans-serif",
+                color: 'var(--text-secondary)',
+              }}
+            >
               Meanings
             </h3>
-            <ul className="space-y-4">
-              {meanings.map((meaning, idx) => (
-                <li 
-                  key={idx} 
-                  className="text-base text-[var(--foreground)] flex items-start gap-3"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  <span className="text-[var(--accent)] mt-1 text-lg">•</span>
-                  <span>{meaning}</span>
-                </li>
-              ))}
-            </ul>
-          </GlassCard>
+            <p 
+              className="leading-relaxed"
+              style={{ 
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '16px',
+                color: 'var(--foreground)',
+              }}
+            >
+              {meanings.join(' • ')}
+            </p>
+          </div>
 
-          {/* Root - HEAVY GLASS */}
+          {/* Root - Inline */}
           {root && (
-            <GlassCard className="p-6">
-              <h3 className="text-xs uppercase tracking-wider text-[var(--text-secondary)] mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>
-                Root
-              </h3>
-              <div 
-                className="text-3xl"
+            <div className="border-t pt-6" style={{ borderColor: 'var(--border)' }}>
+              <h3 
+                className="text-xs uppercase tracking-wider mb-3" 
                 style={{ 
-                  fontFamily: "'Cardo', serif",
-                  direction: 'rtl',
-                  color: 'var(--text-hebrew)',
+                  fontFamily: "'Inter', sans-serif",
+                  color: 'var(--text-secondary)',
                 }}
               >
-                {root}
-              </div>
-            </GlassCard>
-          )}
-        </div>
-      ) : (
-        <div className="space-y-4">
-          {/* Instances Grid */}
-          <h3 className="text-xs uppercase tracking-wider text-[var(--text-secondary)] px-2" style={{ fontFamily: "'Inter', sans-serif" }}>
-            Tap to navigate
-          </h3>
-          <div className="grid grid-cols-2 gap-3">
-            {instances.map((instance, idx) => (
-              <GlassCard
-                key={idx}
-                hoverable
-                onClick={() => onInstanceClick(instance.verse)}
-                className="p-5 text-center"
-              >
-                <div className="text-xs font-medium text-[var(--accent)] mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  {instance.verse}
-                </div>
+                Root
+              </h3>
+              <div className="space-y-2">
+                {/* Hebrew root */}
                 <div 
-                  className="text-sm leading-relaxed"
+                  className="text-3xl"
                   style={{ 
                     fontFamily: "'Cardo', serif",
                     direction: 'rtl',
                     color: 'var(--text-hebrew)',
                   }}
                 >
-                  {instance.text}
+                  {root}
                 </div>
-              </GlassCard>
+                
+                {/* Root transliteration - lowercase */}
+                {rootTransliteration && (
+                  <div 
+                    className="text-sm"
+                    style={{ 
+                      fontFamily: "'Inter', sans-serif",
+                      color: 'var(--text-secondary)',
+                    }}
+                  >
+                    {rootTransliteration.toLowerCase()}
+                  </div>
+                )}
+                
+                {/* Root meaning */}
+                {rootMeaning && (
+                  <div 
+                    className="text-sm mt-3"
+                    style={{ 
+                      fontFamily: "'Inter', sans-serif",
+                      color: 'var(--foreground)',
+                    }}
+                  >
+                    {rootMeaning}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="space-y-4 px-2">
+          {/* Instances - Retro style */}
+          <h3 
+            className="text-xs uppercase tracking-wider" 
+            style={{ 
+              fontFamily: "'Inter', sans-serif",
+              color: 'var(--text-secondary)',
+            }}
+          >
+            Tap to navigate
+          </h3>
+          <div className="grid grid-cols-3 gap-2">
+            {instances.map((instance, idx) => (
+              <button
+                key={idx}
+                onClick={() => onInstanceClick(instance.verse)}
+                className="px-3 py-3 rounded-xl border transition-all hover:bg-[var(--muted)]"
+                style={{ 
+                  backgroundColor: 'var(--surface)',
+                  borderColor: 'var(--border)',
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: '13px',
+                  fontWeight: 500,
+                  color: 'var(--foreground)',
+                }}
+              >
+                {instance.verse}
+              </button>
             ))}
           </div>
         </div>
