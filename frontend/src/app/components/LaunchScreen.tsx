@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { DavarLogo } from './DavarLogo';
 
 interface LaunchScreenProps {
   onComplete: () => void;
@@ -41,11 +41,9 @@ export function LaunchScreen({ onComplete, language }: LaunchScreenProps) {
     >
       <div className="max-w-md mx-auto w-full px-8 text-center">
         {/* Logo */}
-        <ImageWithFallback
-          src="figma:asset/86a59e5984baacebd9e81429a4678e2e378e368b.png"
-          alt="Davar Logo"
-          className="w-48 h-48 mx-auto mb-6"
-        />
+        <div className="mb-6">
+          <DavarLogo size="xl" variant="light" />
+        </div>
         
         {/* Subtitle */}
         <p
