@@ -44,7 +44,7 @@ spacy>=3.7.0               # Advanced NLP processing
 
 # Hebrew text processing (optional)
 python-bidi>=0.4.2         # Bidirectional text support for Hebrew
-hebphon>=1.0.0             # Hebrew phonological analysis (if available)
+# hebphon>=1.0.0             # Hebrew phonological analysis (if available)
 
 # Regular expressions and text manipulation
 regex>=2023.8.8            # Enhanced regex support
@@ -93,7 +93,7 @@ pip-tools>=7.3.0           # Dependency management
 # Type checking extras
 types-requests>=2.31.0     # Type stubs for requests
 types-PyYAML>=6.0.12       # Type stubs for PyYAML
-types-all>=1.0.0           # All type stubs
+# types-all>=1.0.0           # All type stubs
 
 # =============================================================================
 # DATA VALIDATION AND SCHEMAS
@@ -121,6 +121,17 @@ uvicorn>=0.23.0            # ASGI server
 
 # Configuration management
 python-dotenv>=1.0.0       # Environment variable management
+
+# =============================================================================
+# TRANSLATION MODULE
+# =============================================================================
+
+# Google Gemini API for translations
+google-genai>=0.2.0  # Gemini API client for lexicon translations (recommended)
+# google-generativeai>=0.3.0  # Deprecated - keep as fallback only if needed
+
+# xAI Grok API for translations (alternative to Gemini)
+openai>=1.0.0  # OpenAI-compatible SDK for Grok API
 
 # Logging and monitoring
 structlog>=23.1.0          # Structured logging

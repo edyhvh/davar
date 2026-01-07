@@ -109,8 +109,8 @@ def validate_file_structure(filepath: Path, is_root: bool) -> Dict:
                     continue
                 
                 # Check required definition fields
-                if 'text' not in defn:
-                    errors.append(f'Definition {i} missing "text" field')
+                if 'text_en' not in defn:
+                    errors.append(f'Definition {i} missing "text_en" field')
                 if 'source' not in defn:
                     errors.append(f'Definition {i} missing "source" field')
                 if 'order' not in defn:

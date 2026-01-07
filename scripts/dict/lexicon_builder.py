@@ -50,10 +50,10 @@ def create_definition(text_en: str, source: str, order: int, sense: Optional[str
         sense: Optional sense number from BDB ("0" for main definitions, "1", "2", etc. for senses)
         
     Returns:
-        Dictionary with text, source, order, and sense (if BDB source)
+        Dictionary with text_en, source, order, and sense (if BDB source)
     """
     definition = {
-        "text": text_en.strip(),
+        "text_en": text_en.strip(),
         "source": source,
         "order": order
     }
