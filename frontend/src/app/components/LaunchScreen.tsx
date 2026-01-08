@@ -6,12 +6,6 @@ interface LaunchScreenProps {
   language: 'en' | 'es' | 'he';
 }
 
-const subtitles = {
-  en: 'searching his word',
-  es: 'escudriñando su palabra',
-  he: 'חוקר את דברו',
-};
-
 export function LaunchScreen({ onComplete, language }: LaunchScreenProps) {
   const [opacity, setOpacity] = useState(0);
 
@@ -41,22 +35,7 @@ export function LaunchScreen({ onComplete, language }: LaunchScreenProps) {
     >
       <div className="max-w-md mx-auto w-full px-8 text-center">
         {/* Logo */}
-        <div className="mb-6">
-          <DavarLogo size="xl" variant="light" />
-        </div>
-        
-        {/* Subtitle */}
-        <p
-          className="text-white/90"
-          style={{
-            fontFamily: language === 'he' ? "'Cardo', serif" : "'Inter', sans-serif",
-            fontSize: '18px',
-            letterSpacing: '0.01em',
-            direction: language === 'he' ? 'rtl' : 'ltr',
-          }}
-        >
-          {subtitles[language]}
-        </p>
+        <DavarLogo size="xl" variant="light" />
       </div>
     </div>
   );

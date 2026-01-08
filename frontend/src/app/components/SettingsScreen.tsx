@@ -240,7 +240,7 @@ export function SettingsScreen({
   return (
     <div className="pb-24">
       {/* General Section Header */}
-      <h3 className="text-sm text-[var(--text-secondary)] px-6 py-4 uppercase tracking-wider font-bold" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <h3 className="text-base text-[var(--text-secondary)] px-6 py-4 uppercase tracking-wider font-bold" style={{ fontFamily: "'Inter', sans-serif" }}>
         {t.general}
       </h3>
       
@@ -252,8 +252,8 @@ export function SettingsScreen({
               <RetroIcons.Theme />
             </div>
             <div>
-              <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.theme}</div>
-              <div className="text-xs text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.theme}</div>
+              <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {t.darkMode}
               </div>
             </div>
@@ -276,7 +276,7 @@ export function SettingsScreen({
               <RetroIcons.Language />
             </div>
             <div>
-              <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {t.language}
               </div>
             </div>
@@ -288,7 +288,7 @@ export function SettingsScreen({
               onClick={() => setIsLanguageOpen(!isLanguageOpen)}
               className="w-full bg-[var(--muted)] border-2 border-[var(--border)] rounded-[16px] px-4 py-2 flex items-center justify-between hover:bg-[var(--primary)]/10 transition-all"
             >
-              <span className="text-sm text-[var(--foreground)] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <span className="text-base text-[var(--foreground)] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {selectedLanguage.nativeName}
               </span>
               <svg 
@@ -315,7 +315,7 @@ export function SettingsScreen({
                       lang.code === language ? 'bg-[var(--muted)]' : ''
                     }`}
                   >
-                    <span className="text-sm text-[var(--foreground)] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <span className="text-base text-[var(--foreground)] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
                       {lang.nativeName}
                     </span>
                     {lang.code === language && (
@@ -342,8 +342,8 @@ export function SettingsScreen({
               <RetroIcons.Qumran />
             </div>
             <div>
-              <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.qumranVariants}</div>
-              <div className="text-xs text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.qumranVariants}</div>
+              <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {t.qumranDescription}
               </div>
             </div>
@@ -366,8 +366,8 @@ export function SettingsScreen({
               <RetroIcons.Chapter />
             </div>
             <div>
-              <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.fullChapter}</div>
-              <div className="text-xs text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.fullChapter}</div>
+              <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {t.fullChapterDescription}
               </div>
             </div>
@@ -390,8 +390,8 @@ export function SettingsScreen({
               <RetroIcons.Hebrew />
             </div>
             <div>
-              <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.hebrewOnly}</div>
-              <div className="text-xs text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.hebrewOnly}</div>
+              <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {t.hebrewOnlyDescription}
               </div>
             </div>
@@ -418,8 +418,8 @@ export function SettingsScreen({
                 <RetroIcons.DesignSystem />
               </div>
               <div>
-                <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>Design System</div>
-                <div className="text-xs text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>Design System</div>
+                <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
                   View design components
                 </div>
               </div>

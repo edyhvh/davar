@@ -51,14 +51,6 @@ export function SplashScreen({ onComplete, duration = 2500 }: SplashScreenProps)
         </svg>
       </div>
 
-      {/* App Name - Reverent Typography */}
-      <div 
-        className="absolute bottom-32 text-3xl tracking-wide opacity-60"
-        style={{ fontFamily: "'Suez One', serif" }}
-      >
-        דבר
-      </div>
-
       <style>{`
         @keyframes breathe {
           0%, 100% {

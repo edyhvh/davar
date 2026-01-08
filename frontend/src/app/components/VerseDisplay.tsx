@@ -3,6 +3,7 @@ import { OnboardingWordHint } from './OnboardingWordHint';
 import { SwipeIndicator } from './SwipeIndicator';
 import { FullChapterView } from './FullChapterView';
 import { VerticalSwipeIndicators } from './VerticalSwipeIndicators';
+import { StickyNote } from './StickyNote';
 
 interface VerseDisplayProps {
   hebrewText: string;
@@ -26,7 +27,18 @@ interface VerseDisplayProps {
   showQumran?: boolean;
   showFullChapter?: boolean;
   hebrewOnly?: boolean;
-  chapterVerses?: { hebrew: string; translation: string }[];
+  chapterVerses?: { 
+    hebrew: string; 
+    translation: string;
+    wordVariants?: {
+      [word: string]: {
+        qumranWord: string;
+        masoreticWord: string;
+        label: string;
+        color: 'yellow' | 'pink' | 'green' | 'lime' | 'red' | 'teal';
+      };
+    };
+  }[];
   onSwipeUp?: () => void;
   onSwipeDown?: () => void;
 }
@@ -105,6 +117,74 @@ export function VerseDisplay({
   const firstWord = hebrewWords[0];
   const restOfText = hebrewWords.slice(1).join(' ');
 
+  // Function to render Hebrew text with word variants
+  const renderHebrewText = () => {
+    const words = hebrewText.split(' ');
+    
+    return words.map((word, index) => {
+      const variant = chapterVerses && chapterVerses[verseNumber - 1] && chapterVerses[verseNumber - 1].wordVariants && chapterVerses[verseNumber - 1].wordVariants[word];
+      
+      // Special handling for first word with onboarding hint
+      if (index === 0) {
+        if (variant && showQumran) {
+          return (
+            <span key={index}>
+              <StickyNote
+                label={variant.label}
+                qumranWord={variant.qumranWord}
+                masoreticWord={variant.masoreticWord}
+                color={variant.color}
+                isFullChapter={showFullChapter}
+                onQumranClick={() => onWordClick(variant.qumranWord)}
+                onMasoreticClick={() => onWordClick(variant.masoreticWord)}
+              />
+              {index < words.length - 1 && ' '}
+            </span>
+          );
+        } else {
+          return (
+            <span key={index}>
+              <OnboardingWordHint
+                word={word}
+                isActive={showOnboardingHint}
+                onClick={() => onWordClick(word)}
+              />
+              {index < words.length - 1 && ' '}
+            </span>
+          );
+        }
+      }
+      
+      // Regular words with potential variants
+      if (variant && showQumran) {
+        return (
+          <span key={index}>
+            <StickyNote
+              label={variant.label}
+              qumranWord={variant.qumranWord}
+              masoreticWord={variant.masoreticWord}
+              color={variant.color}
+              isFullChapter={showFullChapter}
+              onQumranClick={() => onWordClick(variant.qumranWord)}
+              onMasoreticClick={() => onWordClick(variant.masoreticWord)}
+            />
+            {index < words.length - 1 && ' '}
+          </span>
+        );
+      }
+      
+      // Regular word without variant
+      return (
+        <span key={index}>
+          <span onClick={() => onWordClick(word)} className="cursor-pointer">
+            {word}
+          </span>
+          {index < words.length - 1 && ' '}
+        </span>
+      );
+    });
+  };
+
   // If full chapter mode is enabled and we have verses, show the full chapter view
   if (showFullChapter && chapterVerses && chapterVerses.length > 0) {
     return (
@@ -118,6 +198,7 @@ export function VerseDisplay({
           hebrewOnly={hebrewOnly}
           onBookNameClick={onBookNameClick}
           onWordClick={onWordClick}
+          showQumran={showQumran}
         />
       </div>
     );
@@ -269,15 +350,7 @@ export function VerseDisplay({
             </div>
           )}
         </div>
-        <OnboardingWordHint
-          word={firstWord}
-          isActive={showOnboardingHint}
-          onClick={() => onWordClick(firstWord)}
-        />
-        {' '}
-        <span onClick={() => onWordClick(restOfText)} className="cursor-pointer">
-          {restOfText}
-        </span>
+        {renderHebrewText()}
       </div>
 
       {/* Translation - Only show if not Hebrew Only mode */}
