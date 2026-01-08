@@ -334,15 +334,6 @@ export default function App() {
               onChapterVerseClick={() => setShowChapterVerseSelector(true)}
               onSettingsClick={() => setShowSettings(true)}
             />
-
-            {/* Floating Design System Export Button */}
-            <button
-              onClick={() => setShowDesignSystem(true)}
-              className="fixed bottom-32 right-6 w-14 h-14 bg-[var(--accent)] text-white rounded-full shadow-lg hover:scale-110 transition-transform z-40 flex items-center justify-center"
-              aria-label="View Design System Export"
-            >
-              <FileText className="w-6 h-6" />
-            </button>
           </>
         )}
 
@@ -417,6 +408,10 @@ export default function App() {
                   onFullChapterChange={setShowFullChapter}
                   hebrewOnly={hebrewOnly}
                   onHebrewOnlyChange={setHebrewOnly}
+                  onDesignSystemClick={() => {
+                    setShowSettings(false);
+                    setShowDesignSystem(true);
+                  }}
                 />
               </div>
             </div>

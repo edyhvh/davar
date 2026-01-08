@@ -32,6 +32,12 @@
   --glass-blur: blur(40px);
   --glass-blur-heavy: blur(40px);
   
+  /* Copper Onboarding Colors - Light Theme */
+  --copper-base: #B87333;
+  --copper-highlight: #CD7F32;
+  --copper-glow: rgba(205, 127, 50, 0.1);
+  --copper-background-subtle: rgba(184, 115, 51, 0.05);
+  
   /* Dark theme overrides */
   &.dark {
     --accent: #2E347A;
@@ -39,7 +45,7 @@
     --accent-to: #252B6B;
     --accent-dark: #252B6B;
     --accent-deep: #1C2254;
-    --accent-light: #5C6199;
+    --accent-light: #4A4F7A;
     
     /* Dark theme - Warm Deep Charcoal */
     --background: #0F0E12;
@@ -59,13 +65,13 @@
     --glass-border: rgba(60, 60, 80, 0.5);
     --glass-shadow: rgba(0, 0, 0, 0.3);
     --glass-highlight: rgba(80, 80, 90, 0.15);
+    
+    /* Warmer Copper colors for dark theme - Darker/Richer tones */
+    --copper-base: #A86830;
+    --copper-highlight: #B87333;
+    --copper-glow: rgba(184, 115, 51, 0.12);
+    --copper-background-subtle: rgba(168, 104, 48, 0.08);
   }
-  
-  /* Copper Onboarding Colors */
-  --copper-base: #B87333;
-  --copper-highlight: #CD7F32;
-  --copper-glow: rgba(205, 127, 50, 0.1);
-  --copper-background-subtle: rgba(184, 115, 51, 0.05);
   
   /* Standard theme variables */
   --card: rgba(255, 255, 255, 0.8);
@@ -156,7 +162,7 @@
   --accent: #2E347A;
   --accent-dark: #252B6B;
   --accent-deep: #1C2254;
-  --accent-light: #5C6199;
+  --accent-light: #4A4F7A;
   
   /* Tekhelet RGBA variants for glassmorphism */
   --accent-glow: rgba(46, 52, 122, 0.1);

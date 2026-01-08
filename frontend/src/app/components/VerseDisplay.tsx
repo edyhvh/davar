@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { OnboardingWordHint } from './OnboardingWordHint';
 import { SwipeIndicator } from './SwipeIndicator';
 import { FullChapterView } from './FullChapterView';
+import { VerticalSwipeIndicators } from './VerticalSwipeIndicators';
 
 interface VerseDisplayProps {
   hebrewText: string;
@@ -124,7 +125,13 @@ export function VerseDisplay({
 
   // Otherwise show the single verse view
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 relative">
+      {/* Animated Swipe Indicators - TikTok/YouTube Shorts style */}
+      <VerticalSwipeIndicators 
+        showUpIndicator={!!previousVerseSnippet} 
+        showDownIndicator={!!nextVerseSnippet} 
+      />
+
       {/* Book Name & Chapter - NEUTRAL Glassmorphic CTA */}
       <div className="flex justify-center items-center gap-2">
         <button
@@ -273,35 +280,17 @@ export function VerseDisplay({
         </span>
       </div>
 
-      {/* Translation and Next Verse with Swipe Indicator - Only show if not Hebrew Only mode */}
+      {/* Translation - Only show if not Hebrew Only mode */}
       {!hebrewOnly && (
         <SwipeIndicator onSwipeUp={onSwipeUp} onSwipeDown={onSwipeDown}>
-          <div className="space-y-8">
-            {/* Translation */}
-            <div 
-              className="text-center text-[var(--text-secondary)] leading-relaxed px-4 transition-all duration-500"
-              style={{ 
-                fontFamily: "'Inter', sans-serif",
-                fontSize: '17px',
-              }}
-            >
-              {translation}
-            </div>
-
-            {/* Next Verse Snippet */}
-            {nextVerseSnippet && !showFullChapter && (
-              <div 
-                className="text-center leading-relaxed opacity-20"
-                style={{ 
-                  fontFamily: "'Cardo', serif",
-                  fontSize: '20px',
-                  direction: 'rtl',
-                  color: 'var(--text-hebrew)',
-                }}
-              >
-                {nextVerseSnippet}
-              </div>
-            )}
+          <div 
+            className="text-center leading-relaxed px-4 transition-all duration-500 text-[var(--text-secondary)]"
+            style={{ 
+              fontFamily: "'Inter', sans-serif",
+              fontSize: '17px',
+            }}
+          >
+            {translation}
           </div>
         </SwipeIndicator>
       )}

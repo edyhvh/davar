@@ -18,8 +18,9 @@ export function DavarLogo({ size = 'md', variant = 'default', className = '', th
 
   const currentSize = sizes[size];
 
-  // Determine if we're in dark mode
-  const isDark = theme === 'dark' || variant === 'light';
+  // Use border color filter for both light and dark themes
+  // This creates a subtle gray appearance that matches text-secondary
+  const filterStyle = 'brightness(0) saturate(100%) invert(46%) sepia(6%) saturate(500%) hue-rotate(357deg) brightness(90%) contrast(88%)';
 
   return (
     <div className={`flex items-center justify-center ${className}`}>
@@ -30,9 +31,7 @@ export function DavarLogo({ size = 'md', variant = 'default', className = '', th
           height: `${currentSize}px`,
           width: `${currentSize}px`,
           objectFit: 'contain',
-          filter: isDark 
-            ? 'brightness(0) saturate(100%) invert(87%) sepia(14%) saturate(524%) hue-rotate(357deg) brightness(95%) contrast(89%)' 
-            : 'brightness(0) saturate(100%) invert(18%) sepia(43%) saturate(2093%) hue-rotate(226deg) brightness(91%) contrast(94%)',
+          filter: filterStyle,
         }}
       />
     </div>

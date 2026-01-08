@@ -23,39 +23,37 @@ export function BottomSheet({ isOpen, onClose, children }: BottomSheetProps) {
 
   return (
     <>
-      {/* Backdrop with HEAVY blur - NEUTRAL */}
+      {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/60 backdrop-blur-xl z-40 transition-opacity duration-300"
         onClick={onClose}
       />
 
-      {/* Bottom Sheet - HEAVY Liquid Glass NEUTRAL */}
+      {/* Bottom Sheet - Smaller with rounded top */}
       <div
-        className="fixed inset-x-0 bottom-0 z-50 max-h-[85vh] animate-slide-up"
+        className="fixed inset-x-0 bottom-0 z-50 max-h-[70vh] animate-slide-up"
         style={{
           animation: isOpen ? 'slideUp 0.3s ease-out' : 'slideDown 0.3s ease-in',
         }}
       >
-        <div className="relative bg-[var(--glass-surface-elevated)] backdrop-blur-[40px] border-t-2 border-[var(--glass-border)] rounded-t-[32px] shadow-[0_-16px_64px_0_var(--glass-shadow)]">
-          {/* Inner glass highlight - NEUTRAL ONLY */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--glass-highlight)] via-transparent to-transparent rounded-t-[32px] pointer-events-none" />
+        <div className="relative bg-[var(--background)] rounded-t-[32px] shadow-[0_-16px_64px_0_rgba(0,0,0,0.2)]">
           
-          {/* Handle bar - Tekhelet accent */}
-          <div className="relative flex justify-center pt-5 pb-3">
-            <div className="w-16 h-2 bg-[var(--accent)]/20 rounded-full shadow-inner" />
+          {/* Handle bar */}
+          <div className="relative flex justify-center pt-4 pb-2">
+            <div className="w-12 h-1 rounded-full bg-[var(--border)] opacity-40" />
           </div>
 
-          {/* Close button - NEUTRAL glass */}
+          {/* Close button - rounded pill */}
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 p-3 rounded-2xl bg-[var(--glass-surface)] backdrop-blur-[40px] border border-[var(--glass-border)] hover:bg-[var(--glass-surface-elevated)] transition-all hover:scale-110 active:scale-95 shadow-[0_4px_16px_0_var(--glass-shadow)]"
+            className="absolute top-4 right-4 p-2 rounded-full border border-[var(--border)] hover:bg-[var(--muted)] transition-all"
             aria-label="Close"
           >
-            <X className="w-5 h-5 text-[var(--text-secondary)]" />
+            <X className="w-4 h-4 text-[var(--text-secondary)]" />
           </button>
 
           {/* Content */}
-          <div className="relative overflow-y-auto max-h-[80vh] px-6 pb-8">
+          <div className="relative overflow-y-auto max-h-[65vh] px-6 pb-6">
             {children}
           </div>
         </div>

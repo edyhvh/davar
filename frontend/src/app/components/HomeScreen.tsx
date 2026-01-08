@@ -122,10 +122,9 @@ export function HomeScreen({ language }: HomeScreenProps) {
             }}
           >
             <span 
-              className={`text-sm font-medium ${isHebrewText(t.todayIs) ? 'dark:text-[var(--foreground)]' : 'dark:text-[var(--muted-foreground)]'}`}
+              className="text-sm font-medium text-[var(--text-secondary)]"
               style={{ 
                 fontFamily: "'Inter', sans-serif",
-                color: isHebrewText(t.todayIs) ? undefined : 'var(--foreground)',
               }}
             >
               {t.todayIs}
@@ -133,10 +132,9 @@ export function HomeScreen({ language }: HomeScreenProps) {
           </div>
         </div>
         <div 
-          className="text-7xl font-bold leading-none tracking-tight mb-8 dark:text-[var(--muted-foreground)]"
+          className="text-7xl font-bold leading-none tracking-tight mb-8 text-[var(--text-secondary)]"
           style={{ 
             fontFamily: "'Inter', sans-serif",
-            color: 'var(--foreground)',
           }}
         >
           {hebrewDate}
@@ -178,7 +176,7 @@ export function HomeScreen({ language }: HomeScreenProps) {
               {/* Day name */}
               <div 
                 className={`text-xs text-center mt-1 ${
-                  item.isToday ? 'text-white/80' : 'text-[var(--text-secondary)] dark:text-[var(--muted-foreground)]'
+                  item.isToday ? 'text-white/80' : 'text-[var(--text-secondary)]'
                 }`}
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
@@ -189,10 +187,9 @@ export function HomeScreen({ language }: HomeScreenProps) {
               {item.isPesach && (
                 <div className="mt-2 text-center">
                   <div 
-                    className="text-xs font-medium dark:text-[var(--muted-foreground)]" 
+                    className="text-xs font-medium text-[var(--text-secondary)]" 
                     style={{ 
                       fontFamily: "'Inter', sans-serif",
-                      color: 'var(--foreground)',
                     }}
                   >
                     Pesaj

@@ -1,6 +1,5 @@
 import React from 'react';
 import { GlassCard } from './GlassCard';
-import { Moon, Sun, Globe, BookOpen, Scroll, Type } from 'lucide-react';
 
 interface SettingsScreenProps {
   theme: 'light' | 'dark';
@@ -13,7 +12,150 @@ interface SettingsScreenProps {
   onFullChapterChange: (show: boolean) => void;
   hebrewOnly: boolean;
   onHebrewOnlyChange: (show: boolean) => void;
+  onDesignSystemClick?: () => void;
 }
+
+// 2D Retro Pill Toggle inspired by the copper toggle switch
+function RetroPillToggle({ 
+  isOn, 
+  onToggle
+}: { 
+  isOn: boolean; 
+  onToggle: () => void;
+}) {
+  return (
+    <button
+      onClick={onToggle}
+      className="relative bg-[var(--border)] rounded-full p-0.5 transition-all duration-300 flex-shrink-0"
+      style={{ 
+        width: '80px', 
+        height: '40px',
+        boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.15)'
+      }}
+    >
+      {/* Sliding pill */}
+      <div
+        className={`
+          absolute top-0.5 h-[36px] w-[38px] rounded-full transition-all duration-300
+          ${isOn 
+            ? 'translate-x-[40px] bg-[var(--primary)]' 
+            : 'translate-x-0.5 bg-[var(--muted)]'
+          }
+        `}
+        style={{
+          boxShadow: isOn 
+            ? '0 2px 8px var(--accent-glow), inset 0 -2px 4px rgba(0,0,0,0.2)' 
+            : '0 2px 4px rgba(0,0,0,0.1), inset 0 -2px 4px rgba(0,0,0,0.1)',
+          border: isOn ? '2px solid var(--accent-dark)' : '2px solid var(--border)'
+        }}
+      />
+    </button>
+  );
+}
+
+// Retro On/Off Button Component inspired by vintage audio equipment
+function RetroOnOffButton({ 
+  isOn, 
+  onToggle 
+}: { 
+  isOn: boolean; 
+  onToggle: () => void;
+}) {
+  return (
+    <button
+      onClick={onToggle}
+      className="relative flex flex-col items-center justify-center gap-2 group"
+      style={{ width: '64px' }}
+    >
+      {/* Large circular button with light indicator */}
+      <div 
+        className={`
+          relative w-14 h-14 rounded-full border-3 transition-all duration-300
+          ${isOn 
+            ? 'bg-[var(--primary)] border-[var(--accent-dark)] shadow-lg' 
+            : 'bg-[var(--muted)] border-[var(--border)] shadow-sm'
+          }
+        `}
+        style={{
+          boxShadow: isOn 
+            ? '0 0 20px var(--accent-glow), inset 0 2px 4px rgba(0,0,0,0.2)' 
+            : 'inset 0 2px 4px rgba(0,0,0,0.1)',
+          borderWidth: '3px'
+        }}
+      >
+        {/* Inner light indicator - glows when on */}
+        <div 
+          className={`
+            absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+            w-6 h-6 rounded-full transition-all duration-300
+            ${isOn 
+              ? 'bg-white opacity-90' 
+              : 'bg-[var(--text-secondary)] opacity-20'
+            }
+          `}
+          style={{
+            boxShadow: isOn 
+              ? '0 0 12px rgba(255,255,255,0.8), 0 0 24px var(--accent-glow)' 
+              : 'none'
+          }}
+        />
+      </div>
+      
+      {/* ON/OFF label */}
+      <div 
+        className="text-xs font-bold tracking-wide uppercase"
+        style={{ 
+          fontFamily: "'Inter', sans-serif",
+          color: isOn ? 'var(--primary)' : 'var(--text-secondary)'
+        }}
+      >
+        {isOn ? 'ON' : 'OFF'}
+      </div>
+    </button>
+  );
+}
+
+// Simple retro-style SVG icons
+const RetroIcons = {
+  Theme: () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="8" fill="currentColor" opacity="0.3"/>
+      <path d="M12 4 L12 12 L16 8 Z" fill="currentColor"/>
+    </svg>
+  ),
+  Language: () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+      <path d="M4 12 H20 M12 4 C14 8 14 16 12 20 M12 4 C10 8 10 16 12 20" stroke="currentColor" strokeWidth="2" fill="none"/>
+    </svg>
+  ),
+  Qumran: () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="4" width="12" height="16" stroke="currentColor" strokeWidth="2" fill="none" rx="1"/>
+      <line x1="9" y1="8" x2="15" y2="8" stroke="currentColor" strokeWidth="2"/>
+      <line x1="9" y1="12" x2="15" y2="12" stroke="currentColor" strokeWidth="2"/>
+      <line x1="9" y1="16" x2="13" y2="16" stroke="currentColor" strokeWidth="2"/>
+    </svg>
+  ),
+  Chapter: () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 4 L7 20 M7 4 L14 4 C16 4 17 6 17 8 C17 10 16 12 14 12 L7 12 M7 12 L15 12 C17 12 18 14 18 16 C18 18 17 20 15 20 L7 20" stroke="currentColor" strokeWidth="2" fill="none"/>
+    </svg>
+  ),
+  Hebrew: () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 6 L8 18 M12 6 L12 18 M16 6 L16 12 M8 12 L16 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+  ),
+  DesignSystem: () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="4" width="7" height="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+      <rect x="13" y="4" width="7" height="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+      <rect x="4" y="13" width="7" height="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+      <rect x="13" y="13" width="7" height="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+    </svg>
+  )
+};
 
 const languages = [
   { code: 'en', name: 'English', nativeName: 'English' },
@@ -74,6 +216,7 @@ export function SettingsScreen({
   onFullChapterChange,
   hebrewOnly,
   onHebrewOnlyChange,
+  onDesignSystemClick,
 }: SettingsScreenProps) {
   const [isLanguageOpen, setIsLanguageOpen] = React.useState(false);
   const selectedLanguage = languages.find(lang => lang.code === language) || languages[0];
@@ -95,225 +238,195 @@ export function SettingsScreen({
   }, [isLanguageOpen]);
 
   return (
-    <div className="space-y-6 pb-24">
-      {/* General Section */}
-      <div className="space-y-4">
-        <h3 className="text-sm text-[var(--text-secondary)] px-2 uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
-          {t.general}
-        </h3>
-        
-        {/* Theme Toggle - NEUTRAL GLASS, Tekhelet ONLY on icon + toggle */}
-        <GlassCard className="p-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              {/* Icon container - Tekhelet accent */}
-              <div className="p-3 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20">
-                {theme === 'dark' ? (
-                  <Moon className="w-6 h-6 text-[var(--accent)]" />
-                ) : (
-                  <Sun className="w-6 h-6 text-[var(--accent)]" />
-                )}
-              </div>
-              <div>
-                <div className="text-base font-medium mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>{t.theme}</div>
-                <div className="text-sm text-[var(--text-secondary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  {theme === 'dark' ? t.darkMode : t.lightMode}
-                </div>
-              </div>
+    <div className="pb-24">
+      {/* General Section Header */}
+      <h3 className="text-sm text-[var(--text-secondary)] px-6 py-4 uppercase tracking-wider font-bold" style={{ fontFamily: "'Inter', sans-serif" }}>
+        {t.general}
+      </h3>
+      
+      {/* Theme Toggle */}
+      <div className="px-6 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="text-[var(--text-secondary)]">
+              <RetroIcons.Theme />
             </div>
-            {/* Toggle - Tekhelet ONLY when active */}
-            <button
-              onClick={() => onThemeChange(theme === 'light' ? 'dark' : 'light')}
-              className={`
-                relative w-20 h-11 rounded-full transition-all duration-300 shadow-[inset_0_2px_8px_rgba(0,0,0,0.15)] border border-[var(--glass-border)]
-                ${theme === 'dark' ? 'bg-[var(--accent)]' : 'bg-gray-300'}
-              `}
-            >
-              <div
-                className={`
-                  absolute top-1.5 w-8 h-8 bg-white rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.2)] transition-transform duration-300 flex items-center justify-center
-                  ${theme === 'dark' ? 'translate-x-10' : 'translate-x-1.5'}
-                `}
-              >
-                {theme === 'dark' ? (
-                  <Moon className="w-4 h-4 text-[var(--accent)]" />
-                ) : (
-                  <Sun className="w-4 h-4 text-gray-600" />
-                )}
+            <div>
+              <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.theme}</div>
+              <div className="text-xs text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                {t.darkMode}
               </div>
-            </button>
-          </div>
-        </GlassCard>
-
-        {/* Language Selector */}
-        <GlassCard className={`p-6 relative ${isLanguageOpen ? 'z-50' : 'z-10'}`}>
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              {/* Icon container - Tekhelet accent */}
-              <div className="p-3 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20">
-                <Globe className="w-6 h-6 text-[var(--accent)]" />
-              </div>
-              <div>
-                <div className="text-base font-medium mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  {t.language}
-                </div>
-              </div>
-            </div>
-
-            {/* Custom Dropdown */}
-            <div className="relative flex-shrink-0" ref={dropdownRef} style={{ minWidth: '160px' }}>
-              <button
-                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                className="w-full bg-[var(--glass-surface)] backdrop-blur-[40px] border-2 border-[var(--glass-border)] rounded-2xl px-5 py-3 flex items-center justify-between hover:bg-[var(--glass-surface-elevated)] transition-all shadow-[0_4px_16px_0_var(--glass-shadow),inset_0_1px_0_0_var(--glass-highlight)]"
-              >
-                <span className="text-base text-[var(--foreground)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  {selectedLanguage.nativeName}
-                </span>
-                <svg 
-                  className={`w-5 h-5 text-[var(--text-secondary)] transition-transform ${isLanguageOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              {/* Dropdown List */}
-              {isLanguageOpen && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[var(--glass-surface-elevated)] backdrop-blur-[40px] border-2 border-[var(--glass-border)] rounded-2xl shadow-[0_12px_48px_var(--glass-shadow)] overflow-hidden z-[100]">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        onLanguageChange(lang.code);
-                        setIsLanguageOpen(false);
-                      }}
-                      className={`w-full px-5 py-4 flex items-center justify-between hover:bg-[var(--muted)] transition-all ${
-                        lang.code === language ? 'bg-[var(--muted)]' : ''
-                      }`}
-                    >
-                      <span className="text-base text-[var(--foreground)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                        {lang.nativeName}
-                      </span>
-                      {lang.code === language && (
-                        <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      )}
-                    </button>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
-        </GlassCard>
-
-        {/* Qumran Toggle - NEUTRAL GLASS, Tekhelet ONLY on icon + toggle */}
-        <GlassCard className="p-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              {/* Icon container - Tekhelet accent */}
-              <div className="p-3 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20">
-                <BookOpen className="w-6 h-6 text-[var(--accent)]" />
-              </div>
-              <div>
-                <div className="text-base font-medium mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>{t.qumranVariants}</div>
-                <div className="text-sm text-[var(--text-secondary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  {t.qumranDescription}
-                </div>
-              </div>
-            </div>
-            {/* Toggle - Tekhelet ONLY when active */}
-            <button
-              onClick={() => onQumranChange(!showQumran)}
-              className={`
-                relative w-20 h-11 rounded-full transition-all duration-300 shadow-[inset_0_2px_8px_rgba(0,0,0,0.15)] border border-[var(--glass-border)]
-                ${showQumran ? 'bg-[var(--accent)]' : 'bg-gray-300'}
-              `}
-            >
-              <div
-                className={`
-                  absolute top-1.5 w-8 h-8 bg-white rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.2)] transition-transform duration-300 flex items-center justify-center
-                  ${showQumran ? 'translate-x-10' : 'translate-x-1.5'}
-                `}
-              >
-                <BookOpen className={`w-4 h-4 ${showQumran ? 'text-[var(--accent)]' : 'text-gray-600'}`} />
-              </div>
-            </button>
-          </div>
-        </GlassCard>
-
-        {/* Full Chapter Toggle - NEUTRAL GLASS, Tekhelet ONLY on icon + toggle */}
-        <GlassCard className="p-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              {/* Icon container - Tekhelet accent */}
-              <div className="p-3 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20">
-                <Scroll className="w-6 h-6 text-[var(--accent)]" />
-              </div>
-              <div>
-                <div className="text-base font-medium mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>{t.fullChapter}</div>
-                <div className="text-sm text-[var(--text-secondary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  {t.fullChapterDescription}
-                </div>
-              </div>
-            </div>
-            {/* Toggle - Tekhelet ONLY when active */}
-            <button
-              onClick={() => onFullChapterChange(!showFullChapter)}
-              className={`
-                relative w-20 h-11 rounded-full transition-all duration-300 shadow-[inset_0_2px_8px_rgba(0,0,0,0.15)] border border-[var(--glass-border)]
-                ${showFullChapter ? 'bg-[var(--accent)]' : 'bg-gray-300'}
-              `}
-            >
-              <div
-                className={`
-                  absolute top-1.5 w-8 h-8 bg-white rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.2)] transition-transform duration-300 flex items-center justify-center
-                  ${showFullChapter ? 'translate-x-10' : 'translate-x-1.5'}
-                `}
-              >
-                <Scroll className={`w-4 h-4 ${showFullChapter ? 'text-[var(--accent)]' : 'text-gray-600'}`} />
-              </div>
-            </button>
-          </div>
-        </GlassCard>
-
-        {/* Hebrew Only Toggle - NEUTRAL GLASS, Tekhelet ONLY on icon + toggle */}
-        <GlassCard className="p-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              {/* Icon container - Tekhelet accent */}
-              <div className="p-3 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20">
-                <Type className="w-6 h-6 text-[var(--accent)]" />
-              </div>
-              <div>
-                <div className="text-base font-medium mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>{t.hebrewOnly}</div>
-                <div className="text-sm text-[var(--text-secondary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  {t.hebrewOnlyDescription}
-                </div>
-              </div>
-            </div>
-            {/* Toggle - Tekhelet ONLY when active */}
-            <button
-              onClick={() => onHebrewOnlyChange(!hebrewOnly)}
-              className={`
-                relative w-20 h-11 rounded-full transition-all duration-300 shadow-[inset_0_2px_8px_rgba(0,0,0,0.15)] border border-[var(--glass-border)]
-                ${hebrewOnly ? 'bg-[var(--accent)]' : 'bg-gray-300'}
-              `}
-            >
-              <div
-                className={`
-                  absolute top-1.5 w-8 h-8 bg-white rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.2)] transition-transform duration-300 flex items-center justify-center
-                  ${hebrewOnly ? 'translate-x-10' : 'translate-x-1.5'}
-                `}
-              >
-                <Type className={`w-4 h-4 ${hebrewOnly ? 'text-[var(--accent)]' : 'text-gray-600'}`} />
-              </div>
-            </button>
-          </div>
-        </GlassCard>
+          <RetroPillToggle
+            isOn={theme === 'dark'}
+            onToggle={() => onThemeChange(theme === 'light' ? 'dark' : 'light')}
+          />
+        </div>
       </div>
+
+      {/* Divider */}
+      <div className="border-t border-[var(--border)]" />
+
+      {/* Language Selector */}
+      <div className={`px-6 py-6 relative ${isLanguageOpen ? 'z-50' : 'z-10'}`}>
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <div className="text-[var(--text-secondary)]">
+              <RetroIcons.Language />
+            </div>
+            <div>
+              <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                {t.language}
+              </div>
+            </div>
+          </div>
+
+          {/* Custom Dropdown */}
+          <div className="relative flex-shrink-0" ref={dropdownRef} style={{ minWidth: '140px' }}>
+            <button
+              onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+              className="w-full bg-[var(--muted)] border-2 border-[var(--border)] rounded-[16px] px-4 py-2 flex items-center justify-between hover:bg-[var(--primary)]/10 transition-all"
+            >
+              <span className="text-sm text-[var(--foreground)] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                {selectedLanguage.nativeName}
+              </span>
+              <svg 
+                className={`w-4 h-4 text-[var(--text-secondary)] transition-transform ${isLanguageOpen ? 'rotate-180' : ''}`} 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {/* Dropdown List */}
+            {isLanguageOpen && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-[var(--background)] border-2 border-[var(--border)] rounded-[16px] shadow-lg overflow-hidden z-[100]">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      onLanguageChange(lang.code);
+                      setIsLanguageOpen(false);
+                    }}
+                    className={`w-full px-4 py-3 flex items-center justify-between hover:bg-[var(--muted)] transition-all ${
+                      lang.code === language ? 'bg-[var(--muted)]' : ''
+                    }`}
+                  >
+                    <span className="text-sm text-[var(--foreground)] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      {lang.nativeName}
+                    </span>
+                    {lang.code === language && (
+                      <svg className="w-4 h-4 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-[var(--border)]" />
+
+      {/* Qumran Toggle */}
+      <div className="px-6 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="text-[var(--text-secondary)]">
+              <RetroIcons.Qumran />
+            </div>
+            <div>
+              <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.qumranVariants}</div>
+              <div className="text-xs text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                {t.qumranDescription}
+              </div>
+            </div>
+          </div>
+          <RetroOnOffButton
+            isOn={showQumran}
+            onToggle={() => onQumranChange(!showQumran)}
+          />
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-[var(--border)]" />
+
+      {/* Full Chapter Toggle */}
+      <div className="px-6 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="text-[var(--text-secondary)]">
+              <RetroIcons.Chapter />
+            </div>
+            <div>
+              <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.fullChapter}</div>
+              <div className="text-xs text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                {t.fullChapterDescription}
+              </div>
+            </div>
+          </div>
+          <RetroOnOffButton
+            isOn={showFullChapter}
+            onToggle={() => onFullChapterChange(!showFullChapter)}
+          />
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t border-[var(--border)]" />
+
+      {/* Hebrew Only Toggle */}
+      <div className="px-6 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="text-[var(--text-secondary)]">
+              <RetroIcons.Hebrew />
+            </div>
+            <div>
+              <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.hebrewOnly}</div>
+              <div className="text-xs text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                {t.hebrewOnlyDescription}
+              </div>
+            </div>
+          </div>
+          <RetroOnOffButton
+            isOn={hebrewOnly}
+            onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
+          />
+        </div>
+      </div>
+
+      {/* Design System Button */}
+      {onDesignSystemClick && (
+        <>
+          {/* Divider */}
+          <div className="border-t border-[var(--border)]" />
+          
+          <button
+            onClick={onDesignSystemClick}
+            className="px-6 py-6 flex items-center justify-between w-full hover:bg-[var(--muted)] transition-all"
+          >
+            <div className="flex items-center gap-4">
+              <div className="text-[var(--text-secondary)]">
+                <RetroIcons.DesignSystem />
+              </div>
+              <div>
+                <div className="text-base font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>Design System</div>
+                <div className="text-xs text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  View design components
+                </div>
+              </div>
+            </div>
+          </button>
+        </>
+      )}
     </div>
   );
 }

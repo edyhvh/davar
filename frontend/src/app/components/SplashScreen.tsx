@@ -14,7 +14,7 @@ export function SplashScreen({ onComplete, duration = 2500 }: SplashScreenProps)
   }, [onComplete, duration]);
 
   return (
-    <div className="fixed inset-0 bg-[var(--background)] flex items-center justify-center z-50">
+    <div className="fixed inset-0 flex items-center justify-center z-50" style={{ backgroundColor: '#FFFFFF' }}>
       {/* Phoenician Dalet Logo with Tekhelet Gradient */}
       <div className="animate-breathe">
         <svg
