@@ -167,17 +167,18 @@ class LexiconProcessor:
         
         # Translate in batches
         total_translated = 0
-        
-        for i in range(0, len(texts_to_translate), self.batch_size):
-            batch_texts = texts_to_translate[i:i + self.batch_size]
-            batch_indices = indices[i:i + self.batch_size]
-            batch_keys_subset = batch_keys[i:i + self.batch_size]
+
+        for batch_idx in range(0, len(texts_to_translate), self.batch_size):
+            batch_texts = texts_to_translate[batch_idx:batch_idx + self.batch_size]
+            batch_indices = indices[batch_idx:batch_idx + self.batch_size]
+            batch_keys_subset = batch_keys[batch_idx:batch_idx + self.batch_size]
 
             try:
                 translations = self.translator.translate_batch(
                     batch_texts,
                     self.target_lang,
-                    keys=batch_keys_subset
+                    keys=batch_keys_subset,
+                    batch_index=batch_idx // self.batch_size + 1
                 )
                 
                 # Update entry with translations
@@ -247,8 +248,8 @@ class LexiconProcessor:
         # Batch and translate all definitions together
         total_translated = 0
 
-        for i in range(0, len(definitions_to_translate), self.batch_size):
-            batch_refs = definitions_to_translate[i:i + self.batch_size]
+        for batch_idx in range(0, len(definitions_to_translate), self.batch_size):
+            batch_refs = definitions_to_translate[batch_idx:batch_idx + self.batch_size]
             batch_texts = [ref.text for ref in batch_refs]
             batch_keys = [ref.batch_key for ref in batch_refs]
 
@@ -256,7 +257,8 @@ class LexiconProcessor:
                 translations = self.translator.translate_batch(
                     batch_texts,
                     self.target_lang,
-                    keys=batch_keys
+                    keys=batch_keys,
+                    batch_index=batch_idx // self.batch_size + 1
                 )
 
                 # Distribute translations back to their respective entries
@@ -409,3 +411,7 @@ class LexiconProcessor:
             strong_number,
             dry_run
         )
+
+    def get_mismatch_stats(self) -> Dict[str, int]:
+        """Get mismatch statistics from the translator."""
+        return self.translator.get_mismatch_stats()
