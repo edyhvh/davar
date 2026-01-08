@@ -31,28 +31,32 @@ export function WordCard({
 
   return (
     <div className="space-y-6 py-4">
-      {/* Word - Large and centered with transliteration below */}
-      <div className="text-center space-y-2">
+      {/* Word - Large centered */}
+      <div className="text-center space-y-2 pb-6">
         <div 
-          className="text-center"
           style={{ 
             fontFamily: "'Cardo', serif",
-            fontSize: '52px',
+            fontSize: '64px',
             direction: 'rtl',
-            lineHeight: 1.2,
+            lineHeight: 1,
             color: 'var(--text-hebrew)',
+            fontWeight: 600,
           }}
         >
           {word}
         </div>
         
-        {/* Transliteration - small and gray */}
+        {/* Transliteration */}
         {transliteration && (
           <div 
-            className="text-sm"
             style={{ 
               fontFamily: "'Inter', sans-serif",
+              fontSize: '11px',
               color: 'var(--text-secondary)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              fontWeight: 500,
+              marginTop: '12px',
             }}
           >
             {transliteration}
@@ -60,27 +64,46 @@ export function WordCard({
         )}
       </div>
 
-      {/* Segmented Control - iOS style */}
-      <div className="bg-[var(--muted)] p-1 rounded-full flex gap-1">
+      {/* Segmented Control - Pill style with border */}
+      <div 
+        className="grid grid-cols-2 gap-2 border-2 border-[var(--primary)] rounded-full p-1"
+        style={{ overflow: 'hidden' }}
+      >
         <button
           onClick={() => setActiveTab('meanings')}
-          className={`flex-1 px-5 py-3 rounded-full transition-all ${
-            activeTab === 'meanings'
-              ? 'bg-white dark:bg-[var(--surface)] text-[var(--foreground)] shadow-sm'
-              : 'text-[var(--text-secondary)]'
-          }`}
-          style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: '15px' }}
+          className="py-3 transition-all rounded-full"
+          style={{ 
+            fontFamily: "'Inter', sans-serif", 
+            fontWeight: 700, 
+            fontSize: '11px',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            backgroundColor: activeTab === 'meanings' 
+              ? 'var(--primary)' 
+              : 'transparent',
+            color: activeTab === 'meanings'
+              ? '#ffffff'
+              : 'var(--text-secondary)',
+          }}
         >
           Meanings
         </button>
         <button
           onClick={() => setActiveTab('instances')}
-          className={`flex-1 px-5 py-3 rounded-full transition-all ${
-            activeTab === 'instances'
-              ? 'bg-white dark:bg-[var(--surface)] text-[var(--foreground)] shadow-sm'
-              : 'text-[var(--text-secondary)]'
-          }`}
-          style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: '15px' }}
+          className="py-3 transition-all rounded-full"
+          style={{ 
+            fontFamily: "'Inter', sans-serif", 
+            fontWeight: 700, 
+            fontSize: '11px',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            backgroundColor: activeTab === 'instances' 
+              ? 'var(--primary)' 
+              : 'transparent',
+            color: activeTab === 'instances'
+              ? '#ffffff'
+              : 'var(--text-secondary)',
+          }}
         >
           Instances
         </button>
@@ -88,38 +111,47 @@ export function WordCard({
 
       {/* Tab Content */}
       {activeTab === 'meanings' ? (
-        <div className="space-y-6 px-2" style={{ minHeight: '320px' }}>
-          {/* Meanings - Inline with separator */}
-          <div>
+        <div className="space-y-6 text-center">
+          {/* Meanings Section */}
+          <div className="pb-6">
             <h3 
-              className="text-xs uppercase tracking-wider mb-3" 
+              className="mb-4"
               style={{ 
                 fontFamily: "'Inter', sans-serif",
+                fontSize: '11px',
                 color: 'var(--text-secondary)',
+                fontWeight: 700,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
               }}
             >
               Meanings
             </h3>
             <p 
-              className="leading-relaxed"
               style={{ 
                 fontFamily: "'Inter', sans-serif",
-                fontSize: '16px',
-                color: 'var(--foreground)',
+                fontSize: '18px',
+                lineHeight: 1.5,
+                fontWeight: 400,
               }}
+              className="dark:text-[var(--text-secondary)]"
             >
-              {meanings.join(' • ')}
+              {meanings.join(', ')}
             </p>
           </div>
 
-          {/* Root - Inline */}
+          {/* Root Section */}
           {root && (
-            <div className="border-t pt-6" style={{ borderColor: 'var(--border)' }}>
+            <div className="pb-6">
               <h3 
-                className="text-xs uppercase tracking-wider mb-3" 
+                className="mb-4"
                 style={{ 
                   fontFamily: "'Inter', sans-serif",
+                  fontSize: '11px',
                   color: 'var(--text-secondary)',
+                  fontWeight: 700,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
                 }}
               >
                 Root
@@ -127,37 +159,45 @@ export function WordCard({
               <div className="space-y-2">
                 {/* Hebrew root */}
                 <div 
-                  className="text-3xl"
                   style={{ 
                     fontFamily: "'Cardo', serif",
+                    fontSize: '48px',
                     direction: 'rtl',
-                    color: 'var(--text-hebrew)',
+                    color: 'var(--primary)',
+                    fontWeight: 600,
+                    lineHeight: 1,
                   }}
                 >
                   {root}
                 </div>
                 
-                {/* Root transliteration - lowercase */}
+                {/* Root transliteration - smaller */}
                 {rootTransliteration && (
                   <div 
-                    className="text-sm"
                     style={{ 
                       fontFamily: "'Inter', sans-serif",
+                      fontSize: '11px',
                       color: 'var(--text-secondary)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.12em',
+                      fontWeight: 500,
+                      marginTop: '8px',
                     }}
                   >
-                    {rootTransliteration.toLowerCase()}
+                    {rootTransliteration}
                   </div>
                 )}
                 
                 {/* Root meaning */}
                 {rootMeaning && (
                   <div 
-                    className="text-sm mt-3"
                     style={{ 
                       fontFamily: "'Inter', sans-serif",
-                      color: 'var(--foreground)',
+                      fontSize: '15px',
+                      lineHeight: 1.5,
+                      marginTop: '12px',
                     }}
+                    className="dark:text-[var(--text-secondary)]"
                   >
                     {rootMeaning}
                   </div>
@@ -167,29 +207,32 @@ export function WordCard({
           )}
         </div>
       ) : (
-        <div className="space-y-4 px-2" style={{ minHeight: '320px' }}>
-          {/* Instances - Retro style */}
-          <h3 
-            className="text-xs uppercase tracking-wider" 
+        <div className="space-y-4 text-center">
+          {/* Instances Section */}
+          <h3
+            className="mb-4"
             style={{ 
               fontFamily: "'Inter', sans-serif",
+              fontSize: '11px',
               color: 'var(--text-secondary)',
+              fontWeight: 700,
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
             }}
           >
-            Tap to navigate
+            Tap to Navigate
           </h3>
           <div className="grid grid-cols-3 gap-2">
             {instances.map((instance, idx) => (
               <button
                 key={idx}
                 onClick={() => onInstanceClick(instance.verse)}
-                className="px-3 py-3 rounded-xl border transition-all hover:bg-[var(--muted)]"
+                className="py-4 transition-all hover:bg-[var(--primary)] hover:text-white rounded-[20px]"
                 style={{ 
-                  backgroundColor: 'var(--surface)',
-                  borderColor: 'var(--border)',
+                  backgroundColor: 'var(--muted)',
                   fontFamily: "'Inter', sans-serif",
                   fontSize: '13px',
-                  fontWeight: 500,
+                  fontWeight: 600,
                   color: 'var(--foreground)',
                 }}
               >
