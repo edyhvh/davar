@@ -73,10 +73,10 @@ GROK_TIMEOUT = 3600  # 1 hour timeout (recommended for reasoning models, though 
 def validate_language(lang_code: str) -> bool:
     """
     Validate if a language code is supported.
-
+    
     Args:
         lang_code: Language code (e.g., 'es', 'pt')
-
+        
     Returns:
         True if supported, False otherwise
     """
@@ -86,10 +86,10 @@ def validate_language(lang_code: str) -> bool:
 def get_language_name(lang_code: str) -> Optional[str]:
     """
     Get the full name of a language from its code.
-
+    
     Args:
         lang_code: Language code (e.g., 'es', 'pt')
-
+        
     Returns:
         Full language name or None if not found
     """
@@ -99,7 +99,7 @@ def get_language_name(lang_code: str) -> Optional[str]:
 def validate_grok_api_key() -> bool:
     """
     Validate that the xAI API key is set.
-
+    
     Returns:
         True if API key is set, False otherwise
     """

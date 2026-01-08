@@ -108,9 +108,17 @@ def main():
     
     # Initialize processor
     try:
+        # Use specified batch_size, but warn if using --strong-number with large batches
+        effective_batch_size = args.batch_size
+        if args.strong_number and args.batch_size > 1:
+            logger.warning(
+                f"Using batch_size={args.batch_size} with --strong-number. "
+                f"This will batch definitions within the single entry."
+            )
+
         processor = LexiconProcessor(
             target_lang=args.language,
-            batch_size=args.batch_size if not args.strong_number else 1
+            batch_size=effective_batch_size
         )
     except Exception as e:
         logger.error(f"Failed to initialize processor: {e}")

@@ -193,11 +193,73 @@ Input definitions:
             # Try different ways to access content
             content = None
             if hasattr(output_item, 'content') and output_item.content is not None:
-                content = output_item.content
-                logger.debug(f"Found content via .content: {content}")
+                content_obj = output_item.content
+                logger.debug(f"content_obj type: {type(content_obj)}, attrs: {[attr for attr in dir(content_obj) if not attr.startswith('_')]}")
+
+                # Handle case where content is a list of ResponseOutputText objects
+                if isinstance(content_obj, list) and len(content_obj) > 0:
+                    # Take the first item and extract its text
+                    first_item = content_obj[0]
+                    if hasattr(first_item, 'text'):
+                        content = first_item.text
+                    elif hasattr(first_item, 'value'):
+                        content = first_item.value
+                    elif hasattr(first_item, 'content'):
+                        content = first_item.content
+                    elif hasattr(first_item, 'data'):
+                        content = first_item.data
+                    else:
+                        content = str(first_item)
+                # Handle single ResponseOutputText object
+                elif hasattr(content_obj, 'text'):
+                    content = content_obj.text
+                elif hasattr(content_obj, 'value'):
+                    content = content_obj.value
+                elif hasattr(content_obj, 'content'):
+                    content = content_obj.content
+                elif hasattr(content_obj, 'data'):
+                    content = content_obj.data
+                else:
+                    # Try calling the object as a string or accessing its content directly
+                    try:
+                        content = str(content_obj)
+                    except:
+                        content = repr(content_obj)
+                logger.debug(f"Found content via .content: {repr(content)}")
             elif hasattr(output_item, 'text') and output_item.text is not None:
-                content = output_item.text
-                logger.debug(f"Found content via .text: {content}")
+                content_obj = output_item.text
+                logger.debug(f"text_obj type: {type(content_obj)}, attrs: {[attr for attr in dir(content_obj) if not attr.startswith('_')]}")
+
+                # Handle case where text is a list of ResponseOutputText objects
+                if isinstance(content_obj, list) and len(content_obj) > 0:
+                    # Take the first item and extract its text
+                    first_item = content_obj[0]
+                    if hasattr(first_item, 'text'):
+                        content = first_item.text
+                    elif hasattr(first_item, 'value'):
+                        content = first_item.value
+                    elif hasattr(first_item, 'content'):
+                        content = first_item.content
+                    elif hasattr(first_item, 'data'):
+                        content = first_item.data
+                    else:
+                        content = str(first_item)
+                # Handle single ResponseOutputText object
+                elif hasattr(content_obj, 'text'):
+                    content = content_obj.text
+                elif hasattr(content_obj, 'value'):
+                    content = content_obj.value
+                elif hasattr(content_obj, 'content'):
+                    content = content_obj.content
+                elif hasattr(content_obj, 'data'):
+                    content = content_obj.data
+                else:
+                    # Try calling the object as a string or accessing its content directly
+                    try:
+                        content = str(content_obj)
+                    except:
+                        content = repr(content_obj)
+                logger.debug(f"Found content via .text: {repr(content)}")
             else:
                 logger.debug(f"Output item has no direct content, checking summary: {output_item}")
 
@@ -208,7 +270,33 @@ Input definitions:
                     # Look for summary items that might contain JSON
                     for summary_item in output_item.summary:
                         if hasattr(summary_item, 'text'):
-                            summary_text = summary_item.text
+                            summary_text_obj = summary_item.text
+
+                            # Handle case where summary text is a list of ResponseOutputText objects
+                            if isinstance(summary_text_obj, list) and len(summary_text_obj) > 0:
+                                # Take the first item and extract its text
+                                first_item = summary_text_obj[0]
+                                if hasattr(first_item, 'text'):
+                                    summary_text = first_item.text
+                                elif hasattr(first_item, 'value'):
+                                    summary_text = first_item.value
+                                elif hasattr(first_item, 'content'):
+                                    summary_text = first_item.content
+                                elif hasattr(first_item, 'data'):
+                                    summary_text = first_item.data
+                                else:
+                                    summary_text = str(first_item)
+                            # Handle single ResponseOutputText object
+                            elif hasattr(summary_text_obj, 'text'):
+                                summary_text = summary_text_obj.text
+                            elif hasattr(summary_text_obj, 'value'):
+                                summary_text = summary_text_obj.value
+                            elif hasattr(summary_text_obj, 'content'):
+                                summary_text = summary_text_obj.content
+                            elif hasattr(summary_text_obj, 'data'):
+                                summary_text = summary_text_obj.data
+                            else:
+                                summary_text = str(summary_text_obj)
                             logger.debug(f"Checking summary text: {summary_text[:200]}...")
 
                             # Look for JSON array patterns in the summary
@@ -270,22 +358,66 @@ Input definitions:
                 logger.error(f"Available attributes: {[attr for attr in dir(output_item) if not attr.startswith('_')]}")
                 raise ValueError("Could not extract content from Grok API response")
 
-            response_text = content.strip()
-            logger.debug(f"Extracted response text: {response_text[:200]}...")
-            
-            # Try to parse as JSON array
-            # Sometimes the response might have markdown code blocks
-            if response_text.startswith('```'):
-                # Remove markdown code blocks
-                lines = response_text.split('\n')
-                response_text = '\n'.join(
-                    line for line in lines
-                    if not line.strip().startswith('```')
-                )
-            
-            # Parse JSON array
-            translations = json.loads(response_text)
-            
+            # Ensure content is a string before calling strip()
+            if isinstance(content, list):
+                # If content is already a list, it might be the parsed translations
+                translations = content
+            else:
+                response_text = str(content).strip()
+                logger.debug(f"Extracted response text: {repr(response_text)}")
+
+                # Try to parse as JSON array
+                # Sometimes the response might have markdown code blocks
+                if response_text.startswith('```'):
+                    # Remove markdown code blocks
+                    lines = response_text.split('\n')
+                    response_text = '\n'.join(
+                        line for line in lines
+                        if not line.strip().startswith('```')
+                    )
+                    logger.debug(f"After markdown removal: {repr(response_text)}")
+
+                # Try to extract JSON from the response - sometimes Grok wraps it in other text
+                json_match = None
+                import re
+
+                # Look for JSON array patterns in the response
+                json_patterns = [
+                    r'\[([^\]]+)\]',  # [content]
+                    r'```json\s*(\[.*?\])\s*```',  # ```json [content] ```
+                    r'```\s*(\[.*?\])\s*```',  # ``` [content] ```
+                ]
+
+                for pattern in json_patterns:
+                    matches = re.findall(pattern, response_text, re.DOTALL)
+                    if matches:
+                        for match in matches:
+                            try:
+                                # Try to parse the extracted content
+                                if not match.strip().startswith('['):
+                                    match = f'[{match}]'
+                                translations = json.loads(match)
+                                if isinstance(translations, list):
+                                    logger.debug(f"Successfully extracted JSON from pattern: {translations}")
+                                    json_match = translations
+                                    break
+                            except json.JSONDecodeError:
+                                continue
+                        if json_match:
+                            break
+
+                if json_match:
+                    translations = json_match
+                else:
+                    # Fallback to direct parsing
+                    try:
+                        translations = json.loads(response_text)
+                        logger.debug(f"Successfully parsed JSON directly: {translations}")
+                    except json.JSONDecodeError as e:
+                        logger.error(f"JSON parse error. Content type: {type(content)}, Content repr: {repr(content)}")
+                        logger.error(f"Response text repr: {repr(response_text)}")
+                        raise
+
             if not isinstance(translations, list):
                 raise ValueError("Response is not a JSON array")
             
