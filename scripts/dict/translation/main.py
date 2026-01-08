@@ -186,8 +186,20 @@ def main():
         print(f"\nTotal:")
         print(f"  Entries processed: {total_entries}")
         print(f"  Definitions translated: {total_definitions}")
+
+        # Print mismatch statistics
+        mismatch_stats = processor.get_mismatch_stats()
+        if mismatch_stats['total_batches'] > 0:
+            print(f"\nTranslation Quality Stats:")
+            print(f"  Total batches processed: {mismatch_stats['total_batches']}")
+            print(f"  Batches with mismatches: {mismatch_stats['mismatched_batches']}")
+            if mismatch_stats['mismatched_batches'] > 0:
+                print(f"  Total padding applied: {mismatch_stats['total_padding']}")
+                print(f"  Total truncation applied: {mismatch_stats['total_truncation']}")
+                print(f"  Mismatch patterns: {mismatch_stats['mismatch_patterns']}")
+
         print("="*60)
-        
+
         if args.dry_run:
             print("\n⚠️  DRY RUN MODE - No files were saved")
         else:

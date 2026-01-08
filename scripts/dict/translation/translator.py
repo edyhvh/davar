@@ -9,7 +9,7 @@ import json
 import time
 import logging
 import re
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 try:
     import httpx
@@ -55,6 +55,13 @@ class GrokTranslator:
         )
         self.model_name = GROK_MODEL
         self._last_request_time = 0
+        self._mismatch_stats = {
+            'total_batches': 0,
+            'mismatched_batches': 0,
+            'total_padding': 0,
+            'total_truncation': 0,
+            'mismatch_patterns': {}
+        }
     
     def _rate_limit(self):
         """Enforce rate limiting between API calls."""
@@ -90,15 +97,145 @@ Input definitions:
             prompt += f"{i}. {text}\n"
         
         prompt += "\nReturn the translations as a JSON array:"
-        
+
         return prompt
-    
+
+    def _extract_json_array_robust(self, text: str) -> List:
+        """
+        Extract JSON array from text using robust bracket-matching algorithm.
+
+        This method tries multiple strategies in order:
+        1. Direct JSON parsing
+        2. Extract from markdown code blocks
+        3. Find the largest valid JSON array using bracket matching
+        4. Fallback to improved regex patterns
+
+        Args:
+            text: Text that may contain a JSON array
+
+        Returns:
+            List of extracted translations
+
+        Raises:
+            json.JSONDecodeError: If no valid JSON array can be found
+        """
+        # Strategy 1: Try direct JSON parsing
+        try:
+            result = json.loads(text)
+            if isinstance(result, list):
+                logger.debug("Successfully parsed JSON directly")
+                return result
+        except json.JSONDecodeError:
+            pass
+
+        # Strategy 2: Extract from markdown code blocks
+        import re
+        markdown_patterns = [
+            r'```json\s*(\[.*?\])\s*```',  # ```json [content] ```
+            r'```\s*(\[.*?\])\s*```',  # ``` [content] ```
+        ]
+
+        for pattern in markdown_patterns:
+            matches = re.findall(pattern, text, re.DOTALL)
+            for match in matches:
+                try:
+                    result = json.loads(match)
+                    if isinstance(result, list):
+                        logger.debug("Successfully extracted JSON from markdown code block")
+                        return result
+                except json.JSONDecodeError:
+                    continue
+
+        # Strategy 3: Find the largest valid JSON array using bracket matching
+        try:
+            result = self._find_largest_json_array(text)
+            if result:
+                logger.debug("Successfully extracted JSON using bracket matching")
+                return result
+        except Exception as e:
+            logger.debug(f"Bracket matching failed: {e}")
+
+        # Strategy 4: Fallback to improved regex patterns
+        regex_patterns = [
+            r'\[([^\[\]]*(?:\[[^\[\]]*\][^\[\]]*)*)\]',  # Improved nested bracket regex
+            r'\[([^\]]*)\]',  # Simple bracket regex as fallback
+        ]
+
+        for pattern in regex_patterns:
+            matches = re.findall(pattern, text, re.DOTALL)
+            for match in matches:
+                try:
+                    # Ensure the match starts with '['
+                    if not match.strip().startswith('['):
+                        match = f'[{match}]'
+                    result = json.loads(match)
+                    if isinstance(result, list):
+                        logger.debug("Successfully extracted JSON using improved regex")
+                        return result
+                except json.JSONDecodeError:
+                    continue
+
+        # If all strategies fail, raise an error
+        logger.error(f"Could not extract valid JSON array from text: {repr(text[:200])}...")
+        raise json.JSONDecodeError("No valid JSON array found", text, 0)
+
+    def _find_largest_json_array(self, text: str) -> Optional[List]:
+        """
+        Find the largest valid JSON array in text using bracket matching.
+
+        Args:
+            text: Text to search for JSON arrays
+
+        Returns:
+            The largest valid JSON array found, or None if none found
+        """
+        candidates = []
+
+        # Find all potential array starts
+        for i, char in enumerate(text):
+            if char == '[':
+                # Try to find the matching closing bracket
+                bracket_count = 1
+                end_pos = i + 1
+
+                while end_pos < len(text) and bracket_count > 0:
+                    if text[end_pos] == '[':
+                        bracket_count += 1
+                    elif text[end_pos] == ']':
+                        bracket_count -= 1
+                    end_pos += 1
+
+                if bracket_count == 0:  # Found matching brackets
+                    array_text = text[i:end_pos]
+                    try:
+                        result = json.loads(array_text)
+                        if isinstance(result, list):
+                            candidates.append(result)
+                    except json.JSONDecodeError:
+                        continue
+
+        # Return the largest array found
+        if candidates:
+            return max(candidates, key=len)
+
+        return None
+
+    def get_mismatch_stats(self) -> Dict:
+        """
+        Get mismatch statistics for reporting.
+
+        Returns:
+            Dictionary with mismatch statistics
+        """
+        return self._mismatch_stats.copy()
+
     def translate_batch(
         self,
         texts: List[str],
         target_lang: str,
         retry_count: int = 0,
-        keys: Optional[List[str]] = None
+        keys: Optional[List[str]] = None,
+        batch_index: Optional[int] = None
     ) -> List[str]:
         """
         Translate a batch of English texts to target language.
@@ -366,66 +503,57 @@ Input definitions:
                 response_text = str(content).strip()
                 logger.debug(f"Extracted response text: {repr(response_text)}")
 
-                # Try to parse as JSON array
-                # Sometimes the response might have markdown code blocks
-                if response_text.startswith('```'):
-                    # Remove markdown code blocks
-                    lines = response_text.split('\n')
-                    response_text = '\n'.join(
-                        line for line in lines
-                        if not line.strip().startswith('```')
-                    )
-                    logger.debug(f"After markdown removal: {repr(response_text)}")
-
-                # Try to extract JSON from the response - sometimes Grok wraps it in other text
-                json_match = None
-                import re
-
-                # Look for JSON array patterns in the response
-                json_patterns = [
-                    r'\[([^\]]+)\]',  # [content]
-                    r'```json\s*(\[.*?\])\s*```',  # ```json [content] ```
-                    r'```\s*(\[.*?\])\s*```',  # ``` [content] ```
-                ]
-
-                for pattern in json_patterns:
-                    matches = re.findall(pattern, response_text, re.DOTALL)
-                    if matches:
-                        for match in matches:
-                            try:
-                                # Try to parse the extracted content
-                                if not match.strip().startswith('['):
-                                    match = f'[{match}]'
-                                translations = json.loads(match)
-                                if isinstance(translations, list):
-                                    logger.debug(f"Successfully extracted JSON from pattern: {translations}")
-                                    json_match = translations
-                                    break
-                            except json.JSONDecodeError:
-                                continue
-                        if json_match:
-                            break
-
-                if json_match:
-                    translations = json_match
-                else:
-                    # Fallback to direct parsing
-                    try:
-                        translations = json.loads(response_text)
-                        logger.debug(f"Successfully parsed JSON directly: {translations}")
-                    except json.JSONDecodeError as e:
-                        logger.error(f"JSON parse error. Content type: {type(content)}, Content repr: {repr(content)}")
-                        logger.error(f"Response text repr: {repr(response_text)}")
-                        raise
+                # Use robust JSON extraction with bracket matching
+                translations = self._extract_json_array_robust(response_text)
+                logger.debug(f"Successfully extracted JSON array: {len(translations) if isinstance(translations, list) else 'not a list'} items")
 
             if not isinstance(translations, list):
                 raise ValueError("Response is not a JSON array")
             
+            # Track batch statistics
+            self._mismatch_stats['total_batches'] += 1
+
             if len(translations) != len(texts):
-                logger.warning(
-                    f"Translation count mismatch: expected {len(texts)}, "
-                    f"got {len(translations)}"
-                )
+                self._mismatch_stats['mismatched_batches'] += 1
+
+                # Calculate mismatch details
+                expected_count = len(texts)
+                actual_count = len(translations)
+                mismatch_diff = actual_count - expected_count
+
+                # Track padding/truncation
+                if mismatch_diff > 0:
+                    self._mismatch_stats['total_truncation'] += mismatch_diff
+                elif mismatch_diff < 0:
+                    self._mismatch_stats['total_padding'] += abs(mismatch_diff)
+
+                # Track mismatch patterns
+                pattern_key = f"{expected_count}->{actual_count}"
+                self._mismatch_stats['mismatch_patterns'][pattern_key] = \
+                    self._mismatch_stats['mismatch_patterns'].get(pattern_key, 0) + 1
+
+                # Enhanced logging with batch details
+                log_msg = f"Translation count mismatch in batch {batch_index or 'unknown'}: expected {expected_count}, got {actual_count}"
+
+                if batch_index is not None:
+                    log_msg += f" (batch {batch_index})"
+
+                # Log sample texts for debugging (first 3)
+                sample_count = min(3, len(texts), len(translations))
+                if sample_count > 0:
+                    log_msg += f"\nSample translations (first {sample_count}):"
+                    for i in range(sample_count):
+                        original = texts[i][:50] + "..." if len(texts[i]) > 50 else texts[i]
+                        translated = translations[i][:50] + "..." if i < len(translations) and len(translations[i]) > 50 else translations[i] if i < len(translations) else "[MISSING]"
+                        log_msg += f"\n  {i+1}. '{original}' -> '{translated}'"
+
+                # Log action taken
+                if mismatch_diff > 0:
+                    log_msg += f"\nAction: Truncated {mismatch_diff} extra translations"
+                elif mismatch_diff < 0:
+                    log_msg += f"\nAction: Padded with {abs(mismatch_diff)} empty strings"
+
+                logger.warning(log_msg)
             
             # Ensure we have the same number of translations as inputs
             # Pad with empty strings if needed
