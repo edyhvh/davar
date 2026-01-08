@@ -97,10 +97,14 @@ export function HomeScreen({ language }: HomeScreenProps) {
     // Check if this is Pesach (14th)
     const isPesach = day === 14;
     
+    // Check if this is Shabbat (Saturday)
+    const isShabbat = dayName === 'Sat';
+    
     upcomingDays.push({
       day,
       dayName,
       isPesach,
+      isShabbat,
       isToday: i === 0
     });
   }

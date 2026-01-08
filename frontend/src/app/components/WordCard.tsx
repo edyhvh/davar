@@ -15,6 +15,9 @@ interface WordCardProps {
   rootMeaning?: string;
   instances: WordInstance[];
   onInstanceClick: (verse: string) => void;
+  currentIndex?: number;
+  totalWords?: number;
+  onSwipe?: (direction: 'left' | 'right') => void;
 }
 
 export function WordCard({ 
@@ -25,12 +28,48 @@ export function WordCard({
   rootTransliteration, 
   rootMeaning, 
   instances, 
-  onInstanceClick 
+  onInstanceClick,
+  currentIndex = 0,
+  totalWords = 1,
+  onSwipe,
 }: WordCardProps) {
   const [activeTab, setActiveTab] = useState<'meanings' | 'instances'>('meanings');
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd || !onSwipe) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      onSwipe('left');
+    } else if (isRightSwipe) {
+      onSwipe('right');
+    }
+  };
 
   return (
-    <div className="space-y-6 py-4">
+    <div 
+      className="space-y-6 py-4"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       {/* Word - Large centered */}
       <div className="text-center space-y-2 pb-6">
         <div 
@@ -111,7 +150,7 @@ export function WordCard({
 
       {/* Tab Content */}
       {activeTab === 'meanings' ? (
-        <div className="space-y-6 text-center">
+        <div className="space-y-6 text-center" style={{ minHeight: '400px' }}>
           {/* Meanings Section */}
           <div className="pb-6">
             <h3 
@@ -203,42 +242,93 @@ export function WordCard({
                   </div>
                 )}
               </div>
+
+              {/* Progress Navigation - Below root definitions */}
+              {totalWords > 1 && (
+                <div className="flex justify-center items-center gap-3 pt-8 pb-4" dir="rtl">
+                  {/* Arrow button pointing left for RTL */}
+                  <button
+                    onClick={() => onSwipe?.('left')}
+                    className="w-14 h-14 rounded-full flex items-center justify-center transition-all hover:scale-105 active:scale-95"
+                    style={{
+                      backgroundColor: 'var(--primary)',
+                      border: '3px solid var(--background)',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                    }}
+                    aria-label="Next word"
+                  >
+                    <svg 
+                      width="24" 
+                      height="24" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="white" 
+                      strokeWidth="3"
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                  </button>
+                  
+                  {/* Progress dots - RTL order */}
+                  <div className="flex items-center gap-2" dir="rtl">
+                    {Array.from({ length: totalWords }).map((_, idx) => (
+                      <div
+                        key={idx}
+                        style={{
+                          width: '10px',
+                          height: '10px',
+                          borderRadius: '50%',
+                          backgroundColor: idx === currentIndex 
+                            ? 'var(--primary)' 
+                            : 'var(--muted)',
+                          transition: 'all 0.3s ease',
+                          opacity: idx === currentIndex ? 1 : 0.4,
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
       ) : (
-        <div className="space-y-4 text-center">
+        <div className="space-y-6 text-center pb-6" style={{ minHeight: '400px' }}>
           {/* Instances Section */}
-          <h3
-            className="mb-4"
-            style={{ 
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '11px',
-              color: 'var(--text-secondary)',
-              fontWeight: 700,
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-            }}
-          >
-            Tap to Navigate
-          </h3>
-          <div className="grid grid-cols-3 gap-2">
-            {instances.map((instance, idx) => (
-              <button
-                key={idx}
-                onClick={() => onInstanceClick(instance.verse)}
-                className="py-4 transition-all hover:bg-[var(--primary)] hover:text-white rounded-[20px]"
-                style={{ 
-                  backgroundColor: 'var(--muted)',
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  color: 'var(--foreground)',
-                }}
-              >
-                {instance.verse}
-              </button>
-            ))}
+          <div className="pb-6">
+            <h3
+              className="mb-4"
+              style={{ 
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '11px',
+                color: 'var(--text-secondary)',
+                fontWeight: 700,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Tap to Navigate
+            </h3>
+            <div className="grid grid-cols-3 gap-2">
+              {instances.map((instance, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => onInstanceClick(instance.verse)}
+                  className="py-4 transition-all hover:bg-[var(--primary)] hover:text-white rounded-[20px]"
+                  style={{ 
+                    backgroundColor: 'var(--muted)',
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    color: 'var(--foreground)',
+                  }}
+                >
+                  {instance.verse}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}

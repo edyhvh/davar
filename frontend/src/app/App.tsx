@@ -31,6 +31,14 @@ const sampleVerses = {
     translationHe: 'בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ',
     qumran: 'בְּרֵאשִׁית בָּרָא אֱלֹהִים אֶת הַשָּׁמַיִם וְאֶת הָאָרֶץ',
     qumranTranslation: 'In the beginning God created the heavens and the earth. (Qumran variant)',
+    wordVariants: {
+      'אֱלֹהִים': {
+        qumranWord: 'אֲדֹנָי',
+        masoreticWord: 'אֱלֹהִים',
+        label: 'Qumran',
+        color: 'yellow' as const,
+      }
+    }
   },
   'Genesis-1-2': {
     hebrew: 'וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם',
@@ -98,6 +106,60 @@ const sampleWordData = {
       { verse: 'Gen 1:1', text: 'בְּרֵאשִׁית בָּרָא' },
     ],
   },
+  'בָּרָא': {
+    word: 'בָּרָא',
+    transliteration: 'Bara',
+    meanings: ['Created', 'Formed', 'Made'],
+    root: 'ברא',
+    rootTransliteration: 'BRA',
+    rootMeaning: 'To create, to form',
+    instances: [
+      { verse: 'Gen 1:1', text: 'בְּרֵאשִׁית בָּרָא' },
+      { verse: 'Gen 1:21', text: 'וַיִּבְרָא אֱלֹהִים' },
+      { verse: 'Gen 1:27', text: 'וַיִּבְרָא אֱלֹהִים' },
+    ],
+  },
+  'הַשָּׁמַיִם': {
+    word: 'הַשָּׁמַיִם',
+    transliteration: 'HaShamayim',
+    meanings: ['The heavens', 'The sky', 'The firmament'],
+    root: 'שָׁמַיִם',
+    rootTransliteration: 'Shamayim',
+    rootMeaning: 'Heavens, sky',
+    instances: [
+      { verse: 'Gen 1:1', text: 'אֵת הַשָּׁמַיִם' },
+      { verse: 'Gen 1:8', text: 'לָרָקִיעַ שָׁמָיִם' },
+    ],
+  },
+  'הָאָרֶץ': {
+    word: 'הָאָרֶץ',
+    transliteration: 'HaAretz',
+    meanings: ['The earth', 'The land', 'The ground'],
+    root: 'אֶרֶץ',
+    rootTransliteration: 'Eretz',
+    rootMeaning: 'Earth, land, ground',
+    instances: [
+      { verse: 'Gen 1:1', text: 'וְאֵת הָאָרֶץ' },
+      { verse: 'Gen 1:2', text: 'וְהָאָרֶץ הָיְתָה' },
+    ],
+  },
+};
+
+// Array of word keys for navigation
+const wordKeys = Object.keys(sampleWordData);
+
+// Helper function to get words in a verse (in order they appear)
+const getVerseWords = (verseKey: string): string[] => {
+  const verse = sampleVerses[verseKey as keyof typeof sampleVerses];
+  if (!verse) return [];
+  
+  // For Genesis 1:1, return words in order
+  if (verseKey === 'Genesis-1-1') {
+    return ['בְּרֵאשִׁית', 'בָּרָא', 'אֱלֹהִים', 'הַשָּׁמַיִם', 'הָאָרֶץ'];
+  }
+  
+  // Default: return all available words
+  return wordKeys;
 };
 
 export default function App() {
@@ -126,6 +188,29 @@ export default function App() {
   const [settingsTouchStart, setSettingsTouchStart] = useState(0);
   const [settingsTouchEnd, setSettingsTouchEnd] = useState(0);
 
+  // Word navigation helpers
+  const getCurrentWordIndex = () => {
+    if (!selectedWord) return 0;
+    const verseWords = getVerseWords(verseKey);
+    return verseWords.indexOf(selectedWord);
+  };
+
+  const handleWordSwipe = (direction: 'left' | 'right') => {
+    const verseWords = getVerseWords(verseKey);
+    const currentIndex = getCurrentWordIndex();
+    let newIndex = currentIndex;
+    
+    if (direction === 'left') {
+      // Swipe left = next word (move left in RTL)
+      newIndex = (currentIndex + 1) % verseWords.length;
+    } else {
+      // Swipe right = previous word (move right in RTL)
+      newIndex = (currentIndex - 1 + verseWords.length) % verseWords.length;
+    }
+    
+    setSelectedWord(verseWords[newIndex]);
+  };
+
   const verseKey = `${book}-${chapter}-${verse}`;
   const currentVerse = sampleVerses[verseKey as keyof typeof sampleVerses] || sampleVerses['Genesis-1-1'];
   
@@ -145,6 +230,7 @@ export default function App() {
         verses.push({
           hebrew: v.hebrew,
           translation: language === 'es' ? v.translationEs || v.translation : v.translation,
+          wordVariants: v.wordVariants,
         });
       }
     }
@@ -324,6 +410,7 @@ export default function App() {
                   chapterVerses={chapterVerses}
                   onSwipeUp={handlePrevVerse}
                   onSwipeDown={handleNextVerse}
+                  wordVariants={currentVerse.wordVariants}
                 />
               </div>
             </main>
@@ -346,6 +433,9 @@ export default function App() {
                 console.log('Navigate to:', verseRef);
                 setShowWordSheet(false);
               }}
+              currentIndex={getCurrentWordIndex()}
+              totalWords={getVerseWords(verseKey).length}
+              onSwipe={handleWordSwipe}
             />
           )}
         </BottomSheet>
@@ -379,8 +469,8 @@ export default function App() {
               {/* Header with DAVAR and Close */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-[var(--glass-border)]">
                 <h2 
-                  className="text-xl tracking-[0.25em]" 
-                  style={{ fontFamily: "'Suez One', serif" }}
+                  className="text-xl font-bold tracking-wider text-[var(--text-primary)]" 
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   SETTINGS
                 </h2>

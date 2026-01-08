@@ -118,7 +118,7 @@ export function ChapterVerseSelector({
           <div className="overflow-y-auto max-h-[60vh] px-6 pb-6">
             {!selectedChapter ? (
               // Chapter Selection - Compact rounded pills
-              <div className="grid grid-cols-6 gap-2 pb-6">
+              <div className="grid grid-cols-6 gap-2 pb-6 pt-2 px-1">
                 {chapters.map((chapter) => (
                   <button
                     key={chapter}
@@ -143,7 +143,7 @@ export function ChapterVerseSelector({
               </div>
             ) : (
               // Verse Selection - Compact rounded pills
-              <div className="grid grid-cols-6 gap-2 pb-6">
+              <div className="grid grid-cols-6 gap-2 pb-6 pt-2 px-1">
                 {verses.map((verse) => (
                   <button
                     key={verse}
