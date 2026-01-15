@@ -1,5 +1,4 @@
 import React from 'react';
-import { StickyNote } from './StickyNote';
 
 interface Verse {
   hebrew: string;
@@ -43,7 +42,7 @@ export function FullChapterView({
       <div className="flex justify-center items-center gap-2 sticky top-0 z-10 bg-[var(--background)] py-4">
         <button
           onClick={onBookNameClick}
-          className="bg-[var(--glass-surface)] backdrop-blur-[40px] border-2 border-[var(--glass-border)] rounded-full px-5 py-2.5 hover:bg-[var(--glass-surface-elevated)] hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_4px_16px_0_var(--glass-shadow)]"
+          className="bg-[var(--neomorph-bg)] border border-[var(--neomorph-border)] rounded-full px-5 py-2.5 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[4px_4px_12px_var(--neomorph-shadow-dark),-4px_-4px_12px_var(--neomorph-shadow-light)] hover:shadow-[2px_2px_8px_var(--neomorph-shadow-dark),-2px_-2px_8px_var(--neomorph-shadow-light)] active:shadow-[inset_2px_2px_6px_var(--neomorph-inset-shadow-dark),inset_-2px_-2px_6px_var(--neomorph-inset-shadow-light)]"
         >
           <div 
             className="text-xs text-[var(--text-secondary)]"
@@ -86,15 +85,13 @@ export function FullChapterView({
                 if (variant && showQumran) {
                   return (
                     <span key={wordIdx}>
-                      <StickyNote
-                        label={variant.label}
-                        qumranWord={variant.qumranWord}
-                        masoreticWord={variant.masoreticWord}
-                        color={variant.color}
-                        isFullChapter={true}
-                        onQumranClick={() => onWordClick(variant.qumranWord)}
-                        onMasoreticClick={() => onWordClick(variant.masoreticWord)}
-                      />
+                      <span
+                        onClick={() => onWordClick(variant.qumranWord)}
+                        className="cursor-pointer transition-colors hover:opacity-80"
+                        style={{ color: 'var(--copper-highlight)' }}
+                      >
+                        {variant.qumranWord}
+                      </span>
                       {wordIdx < verse.hebrew.split(' ').length - 1 && ' '}
                     </span>
                   );

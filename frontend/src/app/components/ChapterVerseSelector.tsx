@@ -117,23 +117,23 @@ export function ChapterVerseSelector({
           {/* Number Grid - Compact and rounded */}
           <div className="overflow-y-auto max-h-[60vh] px-6 pb-6">
             {!selectedChapter ? (
-              // Chapter Selection - Compact rounded pills
-              <div className="grid grid-cols-6 gap-2 pb-6 pt-2 px-1">
+              // Chapter Selection - Neumorphic buttons
+              <div className="grid grid-cols-5 gap-3 pb-6 pt-2">
                 {chapters.map((chapter) => (
                   <button
                     key={chapter}
                     onClick={() => handleChapterSelect(chapter)}
                     className={`
-                      aspect-square rounded-full transition-all flex items-center justify-center border-2
-                      hover:scale-110 active:scale-95
+                      aspect-square rounded-2xl transition-all flex items-center justify-center
+                      hover:scale-105 active:scale-95
                       ${chapter === currentChapter 
-                        ? 'bg-[var(--primary)] border-[var(--primary)] text-white' 
-                        : 'bg-[var(--background)] border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--muted)] hover:border-[var(--text-secondary)]'
+                        ? 'bg-gradient-to-br from-[var(--accent-from)] to-[var(--accent-to)] text-white shadow-[inset_3px_3px_8px_rgba(0,0,0,0.2),inset_-3px_-3px_8px_rgba(255,255,255,0.1)]' 
+                        : 'bg-[var(--neomorph-bg)] text-[var(--text-primary)] shadow-[4px_4px_10px_var(--neomorph-shadow-dark),-4px_-4px_10px_var(--neomorph-shadow-light)] hover:shadow-[3px_3px_8px_var(--neomorph-shadow-dark),-3px_-3px_8px_var(--neomorph-shadow-light)] active:shadow-[inset_3px_3px_6px_var(--neomorph-inset-shadow-dark),inset_-3px_-3px_6px_var(--neomorph-inset-shadow-light)]'
                       }
                     `}
                     style={{
                       fontFamily: "'Inter', sans-serif",
-                      fontSize: '14px',
+                      fontSize: '18px',
                       fontWeight: 600,
                     }}
                   >
@@ -142,23 +142,23 @@ export function ChapterVerseSelector({
                 ))}
               </div>
             ) : (
-              // Verse Selection - Compact rounded pills
-              <div className="grid grid-cols-6 gap-2 pb-6 pt-2 px-1">
+              // Verse Selection - Neumorphic buttons
+              <div className="grid grid-cols-5 gap-3 pb-6 pt-2">
                 {verses.map((verse) => (
                   <button
                     key={verse}
                     onClick={() => handleVerseSelect(verse)}
                     className={`
-                      aspect-square rounded-full transition-all flex items-center justify-center border-2
-                      hover:scale-110 active:scale-95
+                      aspect-square rounded-2xl transition-all flex items-center justify-center
+                      hover:scale-105 active:scale-95
                       ${verse === currentVerse && selectedChapter === currentChapter
-                        ? 'bg-[var(--primary)] border-[var(--primary)] text-white' 
-                        : 'bg-[var(--background)] border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--muted)] hover:border-[var(--text-secondary)]'
+                        ? 'bg-gradient-to-br from-[var(--accent-from)] to-[var(--accent-to)] text-white shadow-[inset_3px_3px_8px_rgba(0,0,0,0.2),inset_-3px_-3px_8px_rgba(255,255,255,0.1)]' 
+                        : 'bg-[var(--neomorph-bg)] text-[var(--text-primary)] shadow-[4px_4px_10px_var(--neomorph-shadow-dark),-4px_-4px_10px_var(--neomorph-shadow-light)] hover:shadow-[3px_3px_8px_var(--neomorph-shadow-dark),-3px_-3px_8px_var(--neomorph-shadow-light)] active:shadow-[inset_3px_3px_6px_var(--neomorph-inset-shadow-dark),inset_-3px_-3px_6px_var(--neomorph-inset-shadow-light)]'
                       }
                     `}
                     style={{
                       fontFamily: "'Inter', sans-serif",
-                      fontSize: '14px',
+                      fontSize: '18px',
                       fontWeight: 600,
                     }}
                   >

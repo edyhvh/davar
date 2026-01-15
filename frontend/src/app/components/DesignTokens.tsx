@@ -26,80 +26,61 @@ export function DesignTokens() {
             </h3>
             <div className="grid grid-cols-3 gap-4">
               <div>
-                <div className="h-20 rounded-lg bg-[#0038B8] mb-2" />
-                <code className="text-xs">#0038B8</code>
+                <div className="h-20 rounded-lg bg-[#7AA0D6] mb-2" />
+                <code className="text-xs">#7AA0D6</code>
                 <p className="text-xs text-[var(--text-secondary)]">Primary Base</p>
               </div>
               <div>
-                <div className="h-20 rounded-lg bg-[#002B80] mb-2" />
-                <code className="text-xs">#002B80</code>
+                <div className="h-20 rounded-lg bg-[#6389BF] mb-2" />
+                <code className="text-xs">#6389BF</code>
                 <p className="text-xs text-[var(--text-secondary)]">Primary Dark</p>
               </div>
               <div>
-                <div className="h-20 rounded-lg bg-[#001F59] mb-2" />
-                <code className="text-xs">#001F59</code>
-                <p className="text-xs text-[var(--text-secondary)]">Primary Deep</p>
+                <div className="h-20 rounded-lg bg-[#4C72A8] mb-2" />
+                <code className="text-xs">#4C72A8</code>
+                <p className="text-xs text-[var(--text-secondary)]">Primary Darker</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 gap-4 mt-4">
+              <div>
+                <div className="h-20 rounded-lg bg-[#A8C8F0] mb-2" />
+                <code className="text-xs">#A8C8F0</code>
+                <p className="text-xs text-[var(--text-secondary)]">Primary Light</p>
               </div>
             </div>
             <div className="mt-4">
-              <div className="h-20 rounded-lg mb-2" style={{ background: 'linear-gradient(135deg, #0038B8 0%, #002B80 50%, #001F59 100%)' }} />
-              <code className="text-xs">linear-gradient(135deg, #0038B8, #002B80, #001F59)</code>
-              <p className="text-xs text-[var(--text-secondary)]">Tekhelet Gradient</p>
+              <div className="h-20 rounded-lg mb-2" style={{ background: 'linear-gradient(135deg, #7AA0D6 0%, #6389BF 50%, #4C72A8 100%)' }} />
+              <code className="text-xs">linear-gradient(135deg, #7AA0D6, #6389BF, #4C72A8)</code>
+              <p className="text-xs text-[var(--text-secondary)]">Light Mode Gradient</p>
             </div>
           </div>
 
           <div>
             <h3 className="text-sm uppercase tracking-wider text-[var(--text-secondary)] mb-3">
-              Light Theme
+              Dark Mode Primary Colors
             </h3>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 gap-4">
               <div>
-                <div className="h-16 rounded-lg bg-[#faf6f0] border border-gray-300 mb-2" />
-                <code className="text-xs">#faf6f0</code>
-                <p className="text-xs text-[var(--text-secondary)]">Background</p>
+                <div className="h-20 rounded-lg bg-[#92B5E8] mb-2" />
+                <code className="text-xs">#92B5E8</code>
+                <p className="text-xs text-[var(--text-secondary)]">Primary Base</p>
               </div>
               <div>
-                <div className="h-16 rounded-lg bg-white/95 border border-gray-300 mb-2" />
-                <code className="text-xs">rgba(255,255,255,0.95)</code>
-                <p className="text-xs text-[var(--text-secondary)]">Glass Surface</p>
+                <div className="h-20 rounded-lg bg-[#7B9ED1] mb-2" />
+                <code className="text-xs">#7B9ED1</code>
+                <p className="text-xs text-[var(--text-secondary)]">Primary Dark</p>
               </div>
               <div>
-                <div className="h-16 rounded-lg bg-black mb-2" />
-                <code className="text-xs">#000000</code>
-                <p className="text-xs text-[var(--text-secondary)]">Text Primary</p>
-              </div>
-              <div>
-                <div className="h-16 rounded-lg bg-[#333333] mb-2" />
-                <code className="text-xs">#333333</code>
-                <p className="text-xs text-[var(--text-secondary)]">Text Secondary</p>
+                <div className="h-20 rounded-lg bg-[#BCD8FF] mb-2" />
+                <code className="text-xs">#BCD8FF</code>
+                <p className="text-xs text-[var(--text-secondary)]">Primary Light</p>
               </div>
             </div>
-          </div>
-
-          <div>
-            <h3 className="text-sm uppercase tracking-wider text-[var(--text-secondary)] mb-3">
-              Dark Theme
-            </h3>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-4 mt-4">
               <div>
-                <div className="h-16 rounded-lg bg-[#1a1a1a] border border-gray-700 mb-2" />
-                <code className="text-xs">#1a1a1a</code>
-                <p className="text-xs text-[var(--text-secondary)]">Background</p>
-              </div>
-              <div>
-                <div className="h-16 rounded-lg" style={{ backgroundColor: 'rgba(30,30,30,0.95)' }} />
-                <code className="text-xs">rgba(30,30,30,0.95)</code>
-                <p className="text-xs text-[var(--text-secondary)]">Glass Surface</p>
-              </div>
-              <div>
-                <div className="h-16 rounded-lg bg-white mb-2" />
-                <code className="text-xs">#ffffff</code>
-                <p className="text-xs text-[var(--text-secondary)]">Text Primary</p>
-              </div>
-              <div>
-                <div className="h-16 rounded-lg bg-[#cccccc] mb-2" />
-                <code className="text-xs">#cccccc</code>
-                <p className="text-xs text-[var(--text-secondary)]">Text Secondary</p>
+                <div className="h-20 rounded-lg bg-[#E3EEFF] mb-2" />
+                <code className="text-xs">#E3EEFF</code>
+                <p className="text-xs text-[var(--text-secondary)]">Primary VeryLight</p>
               </div>
             </div>
           </div>
@@ -333,25 +314,34 @@ export function DesignTokens() {
 {`{
   "colors": {
     "tekhelet": {
-      "base": "#0038B8",
-      "dark": "#002B80",
-      "deep": "#001F59",
-      "gradient": "linear-gradient(135deg, #0038B8 0%, #002B80 50%, #001F59 100%)"
+      "light": {
+        "base": "#7AA0D6",
+        "dark": "#6389BF",
+        "darker": "#4C72A8",
+        "light": "#A8C8F0",
+        "gradient": "linear-gradient(135deg, #7AA0D6 0%, #6389BF 50%, #4C72A8 100%)"
+      },
+      "dark": {
+        "base": "#92B5E8",
+        "dark": "#7B9ED1",
+        "light": "#BCD8FF",
+        "veryLight": "#E3EEFF"
+      }
     },
     "light": {
-      "background": "#f5f5f7",
+      "background": "#FDFDF9",
       "surface": "rgba(255,255,255,0.8)",
       "text": {
-        "primary": "#1d1d1f",
-        "secondary": "#6e6e73"
+        "primary": "#1a1a1a",
+        "secondary": "#6b6b6b"
       }
     },
     "dark": {
-      "background": "#1c1c1e",
-      "surface": "rgba(28,28,30,0.8)",
+      "background": "#0F0E12",
+      "surface": "rgba(23,22,26,0.8)",
       "text": {
-        "primary": "#f5f5f7",
-        "secondary": "#aeaeb2"
+        "primary": "#ebdbb2",
+        "secondary": "#a89984"
       }
     }
   },

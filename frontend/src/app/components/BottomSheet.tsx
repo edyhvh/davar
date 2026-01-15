@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
-import { X } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 interface BottomSheetProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  title?: string;
 }
 
-export function BottomSheet({ isOpen, onClose, children }: BottomSheetProps) {
+export function BottomSheet({ isOpen, onClose, children, title }: BottomSheetProps) {
+  // Prevent scroll on body when bottom sheet is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -19,64 +21,55 @@ export function BottomSheet({ isOpen, onClose, children }: BottomSheetProps) {
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
-
   return (
-    <>
-      {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/60 backdrop-blur-xl z-40 transition-opacity duration-300"
-        onClick={onClose}
-      />
-
-      {/* Bottom Sheet - Smaller with rounded top */}
-      <div
-        className="fixed inset-x-0 bottom-0 z-50 max-h-[70vh] animate-slide-up"
-        style={{
-          animation: isOpen ? 'slideUp 0.3s ease-out' : 'slideDown 0.3s ease-in',
-        }}
-      >
-        <div className="relative bg-[var(--background)] rounded-t-[32px] shadow-[0_-16px_64px_0_rgba(0,0,0,0.2)]">
-          
-          {/* Handle bar */}
-          <div className="relative flex justify-center pt-4 pb-2">
-            <div className="w-12 h-1 rounded-full bg-[var(--border)] opacity-40" />
-          </div>
-
-          {/* Close button - rounded pill */}
-          <button
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black/40 z-[200]"
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full border border-[var(--border)] hover:bg-[var(--muted)] transition-all"
-            aria-label="Close"
+          />
+
+          {/* Bottom Sheet */}
+          <motion.div
+            initial={{ y: '100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '100%' }}
+            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+            className="fixed bottom-0 left-0 right-0 z-[201] bg-[var(--neomorph-bg)] rounded-t-[32px] shadow-[0_-8px_32px_var(--neomorph-shadow-dark)] max-h-[80vh] flex flex-col"
           >
-            <X className="w-4 h-4 text-[var(--text-secondary)]" />
-          </button>
+            {/* Handle bar */}
+            <div className="flex justify-center pt-3 pb-2">
+              <div 
+                className="w-12 h-1.5 rounded-full bg-[var(--neomorph-border)]"
+                style={{
+                  boxShadow: 'inset 2px 2px 4px var(--neomorph-inset-shadow-dark), inset -2px -2px 4px var(--neomorph-inset-shadow-light)'
+                }}
+              />
+            </div>
 
-          {/* Content */}
-          <div className="relative overflow-y-auto max-h-[65vh] px-6 pb-6">
-            {children}
-          </div>
-        </div>
-      </div>
+            {/* Title */}
+            {title && (
+              <div 
+                className="px-6 py-3 text-center text-[var(--text-primary)]"
+                style={{ fontFamily: "'Inter', sans-serif", fontSize: '18px', fontWeight: 600 }}
+              >
+                {title}
+              </div>
+            )}
 
-      <style>{`
-        @keyframes slideUp {
-          from {
-            transform: translateY(100%);
-          }
-          to {
-            transform: translateY(0);
-          }
-        }
-        @keyframes slideDown {
-          from {
-            transform: translateY(0);
-          }
-          to {
-            transform: translateY(100%);
-          }
-        }
-      `}</style>
-    </>
+            {/* Scrollable Content */}
+            <div className="overflow-y-auto px-6 pb-8 pt-2">
+              {children}
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   );
 }

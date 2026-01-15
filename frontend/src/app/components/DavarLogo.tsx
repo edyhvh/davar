@@ -18,9 +18,10 @@ export function DavarLogo({ size = 'md', variant = 'default', className = '', th
 
   const currentSize = sizes[size];
 
-  // Use border color filter for both light and dark themes
-  // This creates a subtle gray appearance that matches text-secondary
-  const filterStyle = 'brightness(0) saturate(100%) invert(46%) sepia(6%) saturate(500%) hue-rotate(357deg) brightness(90%) contrast(88%)';
+  // Use the border color (CSS variable) for the logo on main screens
+  // For light mode: #D4D0C8 (warm gray), for dark mode: #3A3A3A (dark gray)
+  // This filter converts the image to match the border color
+  const filterStyle = 'brightness(0) saturate(100%) invert(85%) sepia(6%) saturate(289%) hue-rotate(357deg) brightness(92%) contrast(88%)';
 
   return (
     <div className={`flex items-center justify-center ${className}`}>

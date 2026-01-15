@@ -14,8 +14,13 @@ export function SplashScreen({ onComplete, duration = 2500 }: SplashScreenProps)
   }, [onComplete, duration]);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50" style={{ backgroundColor: '#FFFFFF' }}>
-      {/* Phoenician Dalet Logo with Tekhelet Gradient */}
+    <div 
+      className="fixed inset-0 flex items-center justify-center z-50" 
+      style={{ 
+        background: 'linear-gradient(135deg, #FDFDF9 0%, #F8F7F3 100%)'
+      }}
+    >
+      {/* Phoenician Dalet Logo with Soft Earthy Tekhelet Gradient */}
       <div className="animate-breathe">
         <svg
           width="120"
@@ -25,16 +30,16 @@ export function SplashScreen({ onComplete, duration = 2500 }: SplashScreenProps)
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            {/* Tekhelet Blue Gradient: #0038B8 → #002B80 → #001F59 */}
+            {/* Soft Earthy Tekhelet Blue Gradient: #7AA0D6 → #6389BF → #4C72A8 */}
             <linearGradient id="tekheletGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#0038B8" />
-              <stop offset="50%" stopColor="#002B80" />
-              <stop offset="100%" stopColor="#001F59" />
+              <stop offset="0%" stopColor="#7AA0D6" />
+              <stop offset="50%" stopColor="#6389BF" />
+              <stop offset="100%" stopColor="#4C72A8" />
             </linearGradient>
             
             {/* Subtle glow filter */}
             <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
               <feMerge>
                 <feMergeNode in="coloredBlur"/>
                 <feMergeNode in="SourceGraphic"/>
