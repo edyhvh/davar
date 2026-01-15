@@ -249,7 +249,7 @@ export function HomeScreen({ language }: HomeScreenProps) {
       <div 
         className="p-5 rounded-[32px] relative overflow-hidden flex items-center justify-between"
         style={{
-          backgroundColor: 'var(--accent-light)',
+          backgroundColor: 'var(--accent-darker)',
         }}
       >
         <div>

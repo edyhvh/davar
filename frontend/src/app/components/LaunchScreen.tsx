@@ -29,14 +29,33 @@ export function LaunchScreen({ onComplete, language }: LaunchScreenProps) {
     <div
       className="min-h-screen flex flex-col items-center justify-center transition-opacity duration-500"
       style={{
-        background: 'linear-gradient(180deg, #1C2254 0%, #252B6B 33%, #2E347A 66%, #5C6199 100%)',
+        background: 'linear-gradient(135deg, #FDFDF9 0%, #F8F7F3 50%, #A8C8F0 100%)',
         opacity,
       }}
     >
       <div className="max-w-md mx-auto w-full px-8 text-center">
-        {/* Logo */}
-        <DavarLogo size="xl" variant="light" />
+        {/* Logo with breathing animation */}
+        <div className="animate-breathe">
+          <DavarLogo size="xl" variant="light" />
+        </div>
       </div>
+
+      <style>{`
+        @keyframes breathe {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 0.9;
+          }
+          50% {
+            transform: scale(1.05);
+            opacity: 1;
+          }
+        }
+
+        .animate-breathe {
+          animation: breathe 2.5s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 }

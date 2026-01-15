@@ -46,7 +46,7 @@ function RetroPillToggle({
           boxShadow: isOn 
             ? '0 2px 8px var(--accent-glow), inset 0 -2px 4px rgba(0,0,0,0.2)' 
             : '0 2px 4px rgba(0,0,0,0.1), inset 0 -2px 4px rgba(0,0,0,0.1)',
-          border: isOn ? '2px solid var(--accent-dark)' : '2px solid var(--border)'
+          border: isOn ? '2px solid var(--accent-deep)' : '2px solid var(--border)'
         }}
       />
     </button>
@@ -72,7 +72,7 @@ function RetroOnOffButton({
         className={`
           relative w-14 h-14 rounded-full border-3 transition-all duration-300
           ${isOn 
-            ? 'bg-[var(--primary)] border-[var(--accent-dark)] shadow-lg' 
+            ? 'bg-[var(--primary)] border-[var(--accent-deep)] shadow-lg' 
             : 'bg-[var(--muted)] border-[var(--border)] shadow-sm'
           }
         `}
