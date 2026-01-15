@@ -19,7 +19,11 @@ sys.path.insert(0, str(Path(__file__).parent))
 from config import (
     ensure_output_dirs, OUTPUT_DIR, UNMATCHED_WORDS_LOG
 )
-from matcher import process_delitzsch_book_from_sqlite, HebrewMatcher
+from dictionary_loader import get_dictionary_loader
+from prefix_detector import PrefixDetector
+from result_formatter import ResultFormatter
+from word_matcher import WordMatcher
+from book_processor import BookProcessor
 from sqlite_loader import get_sqlite_loader
 
 
@@ -52,9 +56,9 @@ def save_chapter_data(book_name: str, chapter_data: List[dict], dry_run: bool = 
             logging.error(f"Failed to save {output_file}: {e}")
 
 
-def log_unmatched_words(matcher: HebrewMatcher):
+def log_unmatched_words(word_matcher: WordMatcher):
     """Log unmatched words to file"""
-    unmatched = matcher.get_unmatched_words()
+    unmatched = word_matcher.get_unmatched_words()
     if not unmatched:
         return
 
@@ -65,7 +69,7 @@ def log_unmatched_words(matcher: HebrewMatcher):
             for item in unmatched:
                 f.write(f"Word: {item['word']}\n")
                 f.write(f"Stem: {item['stem']}\n")
-                f.write(f"Normalized: {item['normalized_stem']}\n")
+                f.write(f"Reason: {item['reason']}\n")
                 f.write("-" * 30 + "\n")
 
         print(f"Unmatched words logged to: {UNMATCHED_WORDS_LOG}")
@@ -79,8 +83,15 @@ def process_book(book_name: str, dry_run: bool = False, verbose: bool = False) -
         print(f"Processing book: {book_name}")
 
     try:
+        # Initialize new modular architecture
+        loader = get_dictionary_loader()
+        prefix_detector = PrefixDetector(loader)
+        result_formatter = ResultFormatter(loader)
+        word_matcher = WordMatcher(loader, prefix_detector, result_formatter)
+        book_processor = BookProcessor(word_matcher, result_formatter)
+
         # Process the book from SQLite
-        chapters_output = process_delitzsch_book_from_sqlite(book_name)
+        chapters_output = book_processor.process_book_from_sqlite(book_name)
 
         # Save results
         save_chapter_data(book_name, chapters_output, dry_run)
