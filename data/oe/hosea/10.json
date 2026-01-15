@@ -45,21 +45,30 @@
         "text_no_nikud": "ל/ו",
         "lemma": "Hl",
         "strong": "Hl",
-        "morph": "HR/Sp3ms"
+        "morph": "HR/Sp3ms",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "כְּ/רֹ֣ב",
         "text_no_nikud": "כ/רב",
         "lemma": "Hk/H7230",
         "strong": "Hk/H7230",
-        "morph": "HR/Ncbsa"
+        "morph": "HR/Ncbsa",
+        "prefixes": [
+          "Hk"
+        ]
       },
       {
         "text": "לְ/פִרְי֗/וֹ",
         "text_no_nikud": "ל/פרי/ו",
         "lemma": "Hl/H6529",
         "strong": "Hl/H6529",
-        "morph": "HR/Ncmsc/Sp3ms"
+        "morph": "HR/Ncmsc/Sp3ms",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "הִרְבָּה֙",
@@ -73,21 +82,30 @@
         "text_no_nikud": "ל/מזבחות",
         "lemma": "Hl/H4196",
         "strong": "Hl/H4196",
-        "morph": "HRd/Ncmpa"
+        "morph": "HRd/Ncmpa",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "כְּ/ט֣וֹב",
         "text_no_nikud": "כ/טוב",
         "lemma": "Hk/H2896",
         "strong": "Hk/H2896",
-        "morph": "HR/Aamsa"
+        "morph": "HR/Aamsa",
+        "prefixes": [
+          "Hk"
+        ]
       },
       {
         "text": "לְ/אַרְצ֔/וֹ",
         "text_no_nikud": "ל/ארצ/ו",
         "lemma": "Hl/H776",
         "strong": "Hl/H776",
-        "morph": "HR/Ncbsc/Sp3ms"
+        "morph": "HR/Ncbsc/Sp3ms",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "הֵיטִ֖יבוּ",
@@ -222,7 +240,10 @@
         "text_no_nikud": "ל/נו",
         "lemma": "Hl",
         "strong": "Hl",
-        "morph": "HR/Sp1cp"
+        "morph": "HR/Sp1cp",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "כִּ֣י",
@@ -264,7 +285,11 @@
         "text_no_nikud": "ו/ה/מלך",
         "lemma": "Hc/Hd/H4428",
         "strong": "Hc/Hd/H4428",
-        "morph": "HC/Td/Ncmsa"
+        "morph": "HC/Td/Ncmsa",
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ]
       },
       {
         "text": "מַה",
@@ -285,7 +310,10 @@
         "text_no_nikud": "ל/נו",
         "lemma": "Hl",
         "strong": "Hl",
-        "morph": "HR/Sp1cp"
+        "morph": "HR/Sp1cp",
+        "prefixes": [
+          "Hl"
+        ]
       }
     ]
   },
@@ -342,14 +370,20 @@
         "text_no_nikud": "ו/פרח",
         "lemma": "Hc/H6524",
         "strong": "Hc/H6524",
-        "morph": "HC/Vqq3ms"
+        "morph": "HC/Vqq3ms",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "כָּ/רֹאשׁ֙",
         "text_no_nikud": "כ/ראש",
         "lemma": "Hk/H7219",
         "strong": "Hk/H7219",
-        "morph": "HRd/Ncmsa"
+        "morph": "HRd/Ncmsa",
+        "prefixes": [
+          "Hk"
+        ]
       },
       {
         "text": "מִשְׁפָּ֔ט",
@@ -392,7 +426,10 @@
         "text_no_nikud": "ל/עגלות",
         "lemma": "Hl/H5697",
         "strong": "Hl/H5697",
-        "morph": "HR/Ncfpc"
+        "morph": "HR/Ncfpc",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "בֵּ֣ית",
@@ -462,7 +499,10 @@
         "text_no_nikud": "ו/כמרי/ו",
         "lemma": "Hc/H3649",
         "strong": "Hc/H3649",
-        "morph": "HC/Ncmpc/Sp3ms"
+        "morph": "HC/Ncmpc/Sp3ms",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "עָלָ֣י/ו",
@@ -540,7 +580,10 @@
         "text_no_nikud": "ל/אשור",
         "lemma": "Hl/H804",
         "strong": "Hl/H804",
-        "morph": "HR/Np"
+        "morph": "HR/Np",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "יוּבָ֔ל",
@@ -561,7 +604,10 @@
         "text_no_nikud": "ל/מלך",
         "lemma": "Hl/H4428",
         "strong": "Hl/H4428",
-        "morph": "HR/Ncmsa"
+        "morph": "HR/Ncmsa",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "יָרֵ֑ב",
@@ -596,7 +642,10 @@
         "text_no_nikud": "ו/יבוש",
         "lemma": "Hc/H954",
         "strong": "Hc/H954",
-        "morph": "HC/Vqi3ms"
+        "morph": "HC/Vqi3ms",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "יִשְׂרָאֵ֖ל",
@@ -610,7 +659,10 @@
         "text_no_nikud": "מ/עצת/ו",
         "lemma": "Hm/H6098",
         "strong": "Hm/H6098",
-        "morph": "HR/Ncfsc/Sp3ms"
+        "morph": "HR/Ncfsc/Sp3ms",
+        "prefixes": [
+          "Hm"
+        ]
       }
     ]
   },
@@ -646,7 +698,10 @@
         "text_no_nikud": "כ/קצף",
         "lemma": "Hk/H7110",
         "strong": "Hk/H7110",
-        "morph": "HR/Ncmsa"
+        "morph": "HR/Ncmsa",
+        "prefixes": [
+          "Hk"
+        ]
       },
       {
         "text": "עַל",
@@ -682,7 +737,10 @@
         "text_no_nikud": "ו/נשמדו",
         "lemma": "Hc/H8045",
         "strong": "Hc/H8045",
-        "morph": "HC/VNq3cp"
+        "morph": "HC/VNq3cp",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "בָּמ֣וֹת",
@@ -724,7 +782,10 @@
         "text_no_nikud": "ו/דרדר",
         "lemma": "Hc/H1863",
         "strong": "Hc/H1863",
-        "morph": "HC/Ncmsa"
+        "morph": "HC/Ncmsa",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "יַעֲלֶ֖ה",
@@ -752,14 +813,20 @@
         "text_no_nikud": "ו/אמרו",
         "lemma": "Hc/H559",
         "strong": "Hc/H559",
-        "morph": "HC/Vqq3cp"
+        "morph": "HC/Vqq3cp",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "לֶֽ/הָרִים֙",
         "text_no_nikud": "ל/הרים",
         "lemma": "Hl/H2022",
         "strong": "Hl/H2022",
-        "morph": "HRd/Ncmpa"
+        "morph": "HRd/Ncmpa",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "כַּסּ֔וּ/נוּ",
@@ -773,7 +840,11 @@
         "text_no_nikud": "ו/ל/גבעות",
         "lemma": "Hc/Hl/H1389",
         "strong": "Hc/Hl/H1389",
-        "morph": "HC/Rd/Ncfpa"
+        "morph": "HC/Rd/Ncfpa",
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ]
       },
       {
         "text": "נִפְל֥וּ",
@@ -802,14 +873,20 @@
         "text_no_nikud": "מ/ימי",
         "lemma": "Hm/H3117",
         "strong": "Hm/H3117",
-        "morph": "HR/Ncmpc"
+        "morph": "HR/Ncmpc",
+        "prefixes": [
+          "Hm"
+        ]
       },
       {
         "text": "הַ/גִּבְעָ֔ה",
         "text_no_nikud": "ה/גבעה",
         "lemma": "Hd/H1390",
         "strong": "Hd/H1390",
-        "morph": "HTd/Np"
+        "morph": "HTd/Np",
+        "prefixes": [
+          "Hd"
+        ]
       },
       {
         "text": "חָטָ֖אתָ",
@@ -858,7 +935,10 @@
         "text_no_nikud": "ב/גבעה",
         "lemma": "Hb/H1390",
         "strong": "Hb/H1390",
-        "morph": "HRd/Np"
+        "morph": "HRd/Np",
+        "prefixes": [
+          "Hb"
+        ]
       },
       {
         "text": "מִלְחָמָ֖ה",
@@ -901,21 +981,30 @@
         "text_no_nikud": "ב/אות/י",
         "lemma": "Hb/H185",
         "strong": "Hb/H185",
-        "morph": "HR/Ncfsc/Sp1cs"
+        "morph": "HR/Ncfsc/Sp1cs",
+        "prefixes": [
+          "Hb"
+        ]
       },
       {
         "text": "וְ/אֶסֳּרֵ֑/ם",
         "text_no_nikud": "ו/אסר/ם",
         "lemma": "Hc/H3256",
         "strong": "Hc/H3256",
-        "morph": "HC/Vqi1cs/Sp3mp"
+        "morph": "HC/Vqi1cs/Sp3mp",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "וְ/אֻסְּפ֤וּ",
         "text_no_nikud": "ו/אספו",
         "lemma": "Hc/H622",
         "strong": "Hc/H622",
-        "morph": "HC/VPq3cp"
+        "morph": "HC/VPq3cp",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "עֲלֵי/הֶם֙",
@@ -936,14 +1025,20 @@
         "text_no_nikud": "ב/אסר/ם",
         "lemma": "Hb/H631",
         "strong": "Hb/H631",
-        "morph": "HR/Vqc/Sp3mp"
+        "morph": "HR/Vqc/Sp3mp",
+        "prefixes": [
+          "Hb"
+        ]
       },
       {
         "text": "לִ/שְׁתֵּ֥י",
         "text_no_nikud": "ל/שתי",
         "lemma": "Hl/H8147",
         "strong": "Hl/H8147",
-        "morph": "HR/Acfdc"
+        "morph": "HR/Acfdc",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "עינת/ם",
@@ -972,7 +1067,10 @@
         "text_no_nikud": "ו/אפרים",
         "lemma": "Hc/H669",
         "strong": "Hc/H669",
-        "morph": "HC/Np"
+        "morph": "HC/Np",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "עֶגְלָ֤ה",
@@ -1000,14 +1098,20 @@
         "text_no_nikud": "ל/דוש",
         "lemma": "Hl/H1758",
         "strong": "Hl/H1758",
-        "morph": "HR/Vqc"
+        "morph": "HR/Vqc",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "וַ/אֲנִ֣י",
         "text_no_nikud": "ו/אני",
         "lemma": "Hc/H589",
         "strong": "Hc/H589",
-        "morph": "HC/Pp1cs"
+        "morph": "HC/Pp1cs",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "עָבַ֔רְתִּי",
@@ -1077,7 +1181,10 @@
         "text_no_nikud": "ל/ו",
         "lemma": "Hl",
         "strong": "Hl",
-        "morph": "HR/Sp3ms"
+        "morph": "HR/Sp3ms",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "יַעֲקֹֽב",
@@ -1106,14 +1213,20 @@
         "text_no_nikud": "ל/כם",
         "lemma": "Hl",
         "strong": "Hl",
-        "morph": "HR/Sp2mp"
+        "morph": "HR/Sp2mp",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "לִ/צְדָקָה֙",
         "text_no_nikud": "ל/צדקה",
         "lemma": "Hl/H6666",
         "strong": "Hl/H6666",
-        "morph": "HR/Ncfsa"
+        "morph": "HR/Ncfsa",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "קִצְר֣וּ",
@@ -1127,7 +1240,10 @@
         "text_no_nikud": "ל/פי",
         "lemma": "Hl/H6310",
         "strong": "Hl/H6310",
-        "morph": "HR/Ncmsc"
+        "morph": "HR/Ncmsc",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "חֶ֔סֶד",
@@ -1148,7 +1264,10 @@
         "text_no_nikud": "ל/כם",
         "lemma": "Hl",
         "strong": "Hl",
-        "morph": "HR/Sp2mp"
+        "morph": "HR/Sp2mp",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "נִ֑יר",
@@ -1162,14 +1281,20 @@
         "text_no_nikud": "ו/עת",
         "lemma": "Hc/H6256",
         "strong": "Hc/H6256",
-        "morph": "HC/Ncbsa"
+        "morph": "HC/Ncbsa",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "לִ/דְר֣וֹשׁ",
         "text_no_nikud": "ל/דרוש",
         "lemma": "Hl/H1875",
         "strong": "Hl/H1875",
-        "morph": "HR/Vqc"
+        "morph": "HR/Vqc",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "אֶת",
@@ -1204,7 +1329,10 @@
         "text_no_nikud": "ו/ירה",
         "lemma": "Hc/H3384",
         "strong": "Hc/H3384",
-        "morph": "HC/Vhi3ms"
+        "morph": "HC/Vhi3ms",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "צֶ֖דֶק",
@@ -1218,7 +1346,10 @@
         "text_no_nikud": "ל/כם",
         "lemma": "Hl",
         "strong": "Hl",
-        "morph": "HR/Sp2mp"
+        "morph": "HR/Sp2mp",
+        "prefixes": [
+          "Hl"
+        ]
       }
     ]
   },
@@ -1296,14 +1427,20 @@
         "text_no_nikud": "ב/דרכ/ך",
         "lemma": "Hb/H1870",
         "strong": "Hb/H1870",
-        "morph": "HR/Ncbsc/Sp2ms"
+        "morph": "HR/Ncbsc/Sp2ms",
+        "prefixes": [
+          "Hb"
+        ]
       },
       {
         "text": "בְּ/רֹ֥ב",
         "text_no_nikud": "ב/רב",
         "lemma": "Hb/H7230",
         "strong": "Hb/H7230",
-        "morph": "HR/Ncbsc"
+        "morph": "HR/Ncbsc",
+        "prefixes": [
+          "Hb"
+        ]
       },
       {
         "text": "גִּבּוֹרֶֽי/ךָ",
@@ -1325,7 +1462,10 @@
         "text_no_nikud": "ו/קאם",
         "lemma": "Hc/H6965",
         "strong": "Hc/H6965",
-        "morph": "HC/Vqq3ms"
+        "morph": "HC/Vqq3ms",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "שָׁאוֹן֮",
@@ -1339,14 +1479,20 @@
         "text_no_nikud": "ב/עמ/ך",
         "lemma": "Hb/H5971",
         "strong": "Hb/H5971",
-        "morph": "HR/Ncmsc/Sp2ms"
+        "morph": "HR/Ncmsc/Sp2ms",
+        "prefixes": [
+          "Hb"
+        ]
       },
       {
         "text": "וְ/כָל",
         "text_no_nikud": "ו/כל",
         "lemma": "Hc/H3605",
         "strong": "Hc/H3605",
-        "morph": "HC/Ncmsc"
+        "morph": "HC/Ncmsc",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "מִבְצָרֶ֣י/ךָ",
@@ -1367,7 +1513,10 @@
         "text_no_nikud": "כ/שד",
         "lemma": "Hk/H7701",
         "strong": "Hk/H7701",
-        "morph": "HR/Ncmsc"
+        "morph": "HR/Ncmsc",
+        "prefixes": [
+          "Hk"
+        ]
       },
       {
         "text": "שַֽׁלְמַ֛ן",
@@ -1395,7 +1544,10 @@
         "text_no_nikud": "ב/יום",
         "lemma": "Hb/H3117",
         "strong": "Hb/H3117",
-        "morph": "HR/Ncmsc"
+        "morph": "HR/Ncmsc",
+        "prefixes": [
+          "Hb"
+        ]
       },
       {
         "text": "מִלְחָמָ֑ה",
@@ -1459,7 +1611,10 @@
         "text_no_nikud": "ל/כם",
         "lemma": "Hl",
         "strong": "Hl",
-        "morph": "HR/Sp2mp"
+        "morph": "HR/Sp2mp",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "בֵּֽית",
@@ -1480,7 +1635,10 @@
         "text_no_nikud": "מ/פני",
         "lemma": "Hm/H6440",
         "strong": "Hm/H6440",
-        "morph": "HR/Ncbpc"
+        "morph": "HR/Ncbpc",
+        "prefixes": [
+          "Hm"
+        ]
       },
       {
         "text": "רָעַ֣ת",
@@ -1501,7 +1659,10 @@
         "text_no_nikud": "ב/שחר",
         "lemma": "Hb/H7837",
         "strong": "Hb/H7837",
-        "morph": "HRd/Ncmsa"
+        "morph": "HRd/Ncmsa",
+        "prefixes": [
+          "Hb"
+        ]
       },
       {
         "text": "נִדְמֹ֥ה",
