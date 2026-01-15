@@ -1,0 +1,283 @@
+{
+    // === SCHEMA VERSION ===
+    "schema_version": "2.0.0",
+
+    // === TARGET LANGUAGE (TO BE FILLED WHEN CREATING LANGUAGE-SPECIFIC SCHEMA) ===
+    "language": {
+      "code": "{LANGUAGE_CODE}", // ISO-639-1: es|en|pt|fr|de|it|ru|ar|zh|he …
+      "name": "{LANGUAGE_NAME}", // Full name of the language (in English)
+      "variant": "{LANGUAGE_VARIANT}" // neutral|mx|ar|br|pt|us|uk … (optional)
+    },
+
+    // === TRANSLITERATION SYSTEMS ===
+    // Based on SBL General Purpose and Brill simplified from hebrew-transliteration library
+    "transliteration_systems": {
+      "sbl_general_purpose": {
+        "name": "SBL General Purpose",
+        "description": "Simplified academic transliteration following SBL guidelines",
+        "source": "https://github.com/charlesLoder/hebrew-transliteration",
+        "features": {
+          "vocal_sheva": "e",  // Simple 'e' for vocal sheva
+          "qamats_qatan": false,  // No distinction for qamats qatan
+          "dagesh_strong": true,   // Distinguish spirantized vs plosive
+          "long_vowels": true
+        }
+      },
+      "brill_simplified": {
+        "name": "Brill Simplified",
+        "description": "Simplified version of Brill academic transliteration",
+        "source": "https://github.com/charlesLoder/hebrew-transliteration",
+        "features": {
+          "vocal_sheva": "ᵉ",  // Superscript 'e' for vocal sheva
+          "qamats_qatan": true,   // Distinguish qamats qatan
+          "dagesh_strong": true,   // Distinguish spirantized vs plosive
+          "long_vowels": true,
+          "special_chars": true    // Uses ḥ for het, ' for ayin
+        }
+      }
+    },
+
+    // === STYLE CONFIGURATION ===
+    // LLM generates native name & description based on target language
+    "style": {
+      "name": "Academic {LANGUAGE_NAME} Transliteration", // ALWAYS IN ENGLISH: 'Academic <Language> Transliteration'
+      "name_native": "{LLM_GENERATED_NATIVE_NAME}", // LLM: natural name in target language
+      "description": "{LLM_GENERATED_DESCRIPTION}", // LLM: 1–2 sentences in target language
+
+      // === FORMATTING RULES ===
+      "strict": false, // true|false
+      "dagesh": true, // true|false - distinguish spirantized/plosive
+      "qamatz_qatan": false, // true|false - distinguish qamats qatan (default: false for simplicity)
+      "sheva": "vocal", // simple|silent|vocal
+      "stress_mark": "uppercase", // uppercase|acute_accent|number
+      "system": "sbl_general_purpose" // sbl_general_purpose|brill_simplified
+    },
+
+    // === MAPPING RULES ===
+    // Based on SBL General Purpose and Brill simplified schemas
+    "rules": {
+      "consonants": {
+        // CRITICAL: Base mappings must reflect pronunciation WITHOUT dagesh
+        // Script automatically handles dagesh: ב→"v"(base)→"b"(with dagesh)
+        // כ→"kh"(base)→"k"(with dagesh), פ→"f"(base)→"p"(with dagesh)
+
+        // SBL General Purpose mappings
+        "א": "",     // Silent aleph
+        "ב": "v",    // Vet (without dagesh) - becomes "b" with dagesh
+        "ג": "g",    // Gimel - becomes "g" with dagesh (no change in SBL)
+        "ד": "d",    // Dalet - becomes "d" with dagesh (no change in SBL)
+        "ה": "h",    // He
+        "ו": "v",    // Vav (consonant)
+        "ז": "z",    // Zayin
+        "ח": "kh",   // Het (SBL: kh)
+        "ט": "t",    // Tet
+        "י": "y",    // Yod (consonant)
+        "כ": "kh",   // Kaf (without dagesh) - becomes "k" with dagesh
+        "ל": "l",    // Lamed
+        "מ": "m",    // Mem
+        "נ": "n",    // Nun
+        "ס": "s",    // Samekh
+        "ע": "",     // Silent ayin (SBL) or "'" (Brill)
+        "פ": "f",    // Pe (without dagesh) - becomes "p" with dagesh
+        "צ": "ts",   // Tzadi
+        "ק": "q",    // Qof
+        "ר": "r",    // Resh
+        "ש": "sh",   // Shin (SBL distinguishes שׁ vs שׂ, but simplified here)
+        "ת": "t",    // Tav
+
+        // Final forms (same as regular except for dagesh-affected letters)
+        "ך": "kh",   // Kaf sofit (same as kaf without dagesh)
+        "ם": "m",    // Mem sofit
+        "ן": "n",    // Nun sofit
+        "ף": "f",    // Pe sofit (same as pe without dagesh)
+        "ץ": "ts"    // Tzadi sofit
+      },
+      "vowels_nikud": {
+        // Hebrew vowel → sound in target language (SBL General Purpose style)
+        "ָ": "a",    // Qamats (ā in SBL, simplified to a)
+        "ַ": "a",    // Patah (a in SBL)
+        "ֵ": "e",    // Tsere (ē in SBL, simplified to e)
+        "ֶ": "e",    // Segol (e in SBL)
+        "ִ": "i",    // Hiriq (i in SBL)
+        "ֹ": "o",    // Holam (ō in SBL, simplified to o)
+        "ֻ": "u",    // Qubuts (ū in SBL, simplified to u)
+        "ְ": "e"     // Sheva (e for vocal sheva in SBL simplified)
+      },
+      "composite": {
+        // Optional: combined vav/yod + vowel for diphthongs (SBL style)
+        "וֹ": "o",   // Vav + holam (ō in SBL)
+        "וּ": "u",   // Vav + shuruq (ū in SBL)
+        "יִ": "i",   // Yod + hiriq (î in SBL)
+        "ֵי": "e",   // Tsere + yod (ê in SBL)
+        "ֶי": "e",   // Segol + yod (ê in SBL)
+        "ָי": "a",   // Qamats + yod (āy in SBL)
+        "ַי": "a",   // Patah + yod (ay in SBL)
+        "ִי": "i",   // Hiriq + yod (î in SBL)
+        "ֹי": "o",   // Holam + yod (ōy in SBL)
+        "ֻי": "u"    // Qubuts + yod (ûy in SBL)
+      },
+      "special_cases": {
+        // Based on SBL additional features
+        "divine_name": "yhwh",  // יהוה
+        "maqaf": "-",           // Hebrew hyphen
+        "qamats_he": "ah",      // הָ at end of word
+        "furtive_patah": "a"    // אַ at end of word
+      },
+      "post_processing": [
+        // Cleanup operations applied in order (SBL/Brill influenced)
+        "apply_dagesh_rules",          // Handle spirantization/plosivization
+        "normalize_composites",        // Handle diphthongs
+        "remove_duplicate_consonants", // Remove double letters (bb→b, kk→k)
+        "apply_qamats_qatan",          // If enabled, distinguish qamats qatan
+        "lowercase_rest"               // Ensure consistent casing
+        // Note: "apply_stress_uppercase" handled automatically in guides
+      ]
+    },
+
+    // === SYSTEM VARIATIONS ===
+    // Allow switching between SBL and Brill styles
+    "system_variations": {
+      "sbl_general_purpose": {
+        "consonants": {
+          "ע": "",     // Silent ayin
+          "ח": "kh",   // kh for het
+          "ש": "sh"    // sh for both shin and sin
+        },
+        "vowels_nikud": {
+          "ְ": "e"     // Simple 'e' for vocal sheva
+        },
+        "features": {
+          "qamats_qatan": false,
+          "special_chars": false
+        }
+      },
+      "brill_simplified": {
+        "consonants": {
+          "ע": "'",    // Apostrophe for ayin
+          "ח": "ḥ",    // Dot under het (ḥ)
+          "צ": "tz",   // tz for tsadi
+          "ץ": "tz"    // tz for final tsadi
+        },
+        "vowels_nikud": {
+          "ְ": "ᵉ"     // Superscript 'e' for vocal sheva
+        },
+        "features": {
+          "qamats_qatan": true,
+          "special_chars": true
+        }
+      }
+    },
+
+    // === UNIVERSAL STRESS (per Strong's number) ===
+    "stress": {
+      "default": "penultimate", // penultimate|ultimate|antepenultimate
+      "exceptions": {
+        // Strong's → stressed syllable (1-based index)
+        "H7965": 2, // שָׁלוֹם
+        "H1697": 2, // דָּבָר
+        "H3444": 3, // יְשׁוּעָה
+        "H2617": 1  // חֶסֶד
+      }
+    },
+
+    // === WORKFLOW (Strong's reference data integration) ===
+    "workflow": {
+      "use_strongs_reference": true, // true|false - Enable use of pron/xlit from strongs.json
+      "pron_parsing": {
+        "enabled": true, // true|false - Parse 'pron' field for syllables and stress
+        "syllable_separator": "-", // Character used to separate syllables in pron field
+        "stress_marker": "'", // Character marking stressed syllable in pron field
+        "description": "Parse 'pron' field to extract syllable boundaries and stress position. Format: 'syl1-syl2-syl3' where ' marks stressed syllable."
+      },
+      "xlit_reference": {
+        "enabled": true, // true|false - Use 'xlit' field as pronunciation reference
+        "description": "Use 'xlit' field as reference for pronunciation patterns, but adapt to target language phonetics according to schema rules."
+      },
+      "validation_mode": "strict", // strict|lenient - How strictly to validate pron/xlit data
+      "fallback_behavior": "use_generated", // use_generated|skip|error - What to do when pron/xlit unavailable
+      "description": "When 'pron' is available, intelligent alignment attempts to match pron syllables with transliteration. Handles normalization (aw→a, maw→mah) and text continuation. Falls back to rule-based generation if alignment fails."
+    },
+
+    // === EXAMPLES TEMPLATE (22+ Hebrew letters required) ===
+    // When creating language-specific schema, replace {LANGUAGE_EXAMPLE_*} with actual translations
+    "examples": {
+      // Hxxxx → { hebrew, translit, stress_syllable, guide, guide_full }
+      // NOTE: translit and guide are auto-generated by script, but shown here for reference
+      // IMPORTANT: Script automatically protects digraphs (sh, ts, kh, etc.) during syllable splitting
+      // and aligns syllables with Strong's pron field when available for optimal pronunciation guides
+      // When pron alignment fails, uses digraph-aware splitting to prevent breaking compound sounds
+
+      // Basic consonants (א-ת)
+      "H1":    { "hebrew": "אָב",       "translit": "av",     "stress_syllable": 1, "guide": "AV",        "guide_full": { "reference": "{LANGUAGE_EXAMPLE_FATHER}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_AV}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_ALEPH_OMITTED}"] } },
+      "H2":    { "hebrew": "בֵּן",      "translit": "ben",    "stress_syllable": 1, "guide": "BEN",       "guide_full": { "reference": "{LANGUAGE_EXAMPLE_SON}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_BEN}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_BET_DAGESH}"] } },
+      "H3":    { "hebrew": "גַּם",      "translit": "gam",    "stress_syllable": 1, "guide": "GAM",       "guide_full": { "reference": "{LANGUAGE_EXAMPLE_ALSO}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_GAM}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_GIMEL}"] } },
+      "H4":    { "hebrew": "דָּם",      "translit": "dam",    "stress_syllable": 1, "guide": "DAM",       "guide_full": { "reference": "{LANGUAGE_EXAMPLE_BLOOD}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_DAM}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_DALET}"] } },
+      "H5":    { "hebrew": "הוּא",      "translit": "hu",     "stress_syllable": 2, "guide": "hu",        "guide_full": { "reference": "{LANGUAGE_EXAMPLE_HE}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_FINAL}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_HE_SOUND}"] } },
+      "H6":    { "hebrew": "וְ",        "translit": "ve",     "stress_syllable": 1, "guide": "VE",        "guide_full": { "reference": "{LANGUAGE_EXAMPLE_AND}", "stress_note": "{LANGUAGE_EXAMPLE_CONJUNCTION}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_SHEVA_LIGHT}"] } },
+      "H7":    { "hebrew": "זֶה",       "translit": "ze",     "stress_syllable": 1, "guide": "ZE",        "guide_full": { "reference": "{LANGUAGE_EXAMPLE_THIS}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_ZE}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_ZAYIN}"] } },
+      "H8":    { "hebrew": "חַי",       "translit": "khai",   "stress_syllable": 1, "guide": "KHAI",      "guide_full": { "reference": "{LANGUAGE_EXAMPLE_LIVE}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_KHAI}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_HET_KH}"] } },
+      "H9":    { "hebrew": "טוֹב",      "translit": "tov",    "stress_syllable": 1, "guide": "TOV",       "guide_full": { "reference": "{LANGUAGE_EXAMPLE_GOOD}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_TOV}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_TET}"] } },
+      "H10":   { "hebrew": "יָד",       "translit": "yad",    "stress_syllable": 1, "guide": "YAD",       "guide_full": { "reference": "{LANGUAGE_EXAMPLE_HAND}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_YAD}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_YOD_CONSONANT}"] } },
+      "H11":   { "hebrew": "כֹּה",      "translit": "kho",    "stress_syllable": 1, "guide": "KHO",       "guide_full": { "reference": "{LANGUAGE_EXAMPLE_THUS}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_KHO}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_KAF_DAGESH}"] } },
+      "H12":   { "hebrew": "לֵב",       "translit": "lev",    "stress_syllable": 1, "guide": "LEV",       "guide_full": { "reference": "{LANGUAGE_EXAMPLE_HEART}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_LEV}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_LAMED}"] } },
+      "H13":   { "hebrew": "מַיִם",     "translit": "mayim",  "stress_syllable": 1, "guide": "MA-yim",    "guide_full": { "reference": "{LANGUAGE_EXAMPLE_WATER}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_MA}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_MEM}"] } },
+      "H14":   { "hebrew": "נַחַל",     "translit": "nakhal", "stress_syllable": 2, "guide": "na-KHAL",   "guide_full": { "reference": "{LANGUAGE_EXAMPLE_RIVER}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_KHAL}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_NUN}"] } },
+      "H15":   { "hebrew": "סֵפֶר",     "translit": "sefer",  "stress_syllable": 1, "guide": "SE-fer",    "guide_full": { "reference": "{LANGUAGE_EXAMPLE_BOOK}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_SE}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_SAMEKH}"] } },
+      "H16":   { "hebrew": "עַיִן",     "translit": "ayin",   "stress_syllable": 2, "guide": "a-YIN",     "guide_full": { "reference": "{LANGUAGE_EXAMPLE_EYE}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_YIN}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_AYIN_OMITTED}"] } },
+      "H17":   { "hebrew": "פֶּה",      "translit": "pe",     "stress_syllable": 1, "guide": "PE",        "guide_full": { "reference": "{LANGUAGE_EXAMPLE_MOUTH}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_PE}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_PE_DAGESH}"] } },
+      "H18":   { "hebrew": "צַדִּיק",   "translit": "tsadik", "stress_syllable": 1, "guide": "TSA-dik",   "guide_full": { "reference": "{LANGUAGE_EXAMPLE_RIGHTEOUS}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_TSA}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_TSADI_TS}"] } },
+      "H19":   { "hebrew": "קֹדֶשׁ",    "translit": "qodesh", "stress_syllable": 1, "guide": "QO-desh",   "guide_full": { "reference": "{LANGUAGE_EXAMPLE_HOLY}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_QO}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_QOF}"] } },
+      "H20":   { "hebrew": "רֹאשׁ",     "translit": "rosh",   "stress_syllable": 1, "guide": "ROSH",      "guide_full": { "reference": "{LANGUAGE_EXAMPLE_HEAD}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_ROSH}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_RESH}"] } },
+      "H21":   { "hebrew": "שָׁלוֹם",   "translit": "shalom", "stress_syllable": 2, "guide": "sha-LOM",   "guide_full": { "reference": "{LANGUAGE_EXAMPLE_PEACE}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_LOM}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_SHIN_SH}"] } },
+      "H22":   { "hebrew": "תּוֹרָה",   "translit": "tora",   "stress_syllable": 2, "guide": "to-RA",     "guide_full": { "reference": "{LANGUAGE_EXAMPLE_LAW}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_RA}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_TAV_DAGESH}"] } },
+
+      // Final forms examples
+      "H23":   { "hebrew": "מֶלֶךְ",    "translit": "melekh", "stress_syllable": 1, "guide": "ME-lekh",   "guide_full": { "reference": "{LANGUAGE_EXAMPLE_KING}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_ME}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_KAF_SOFIT}"] } },
+      "H24":   { "hebrew": "סוֹף",      "translit": "sof",    "stress_syllable": 1, "guide": "SOF",       "guide_full": { "reference": "{LANGUAGE_EXAMPLE_END}", "stress_note": "{LANGUAGE_EXAMPLE_STRESS_SOF}", "phonetic_notes": ["{LANGUAGE_EXAMPLE_PE_SOFIT}"] } }
+    },
+
+    // === LLM DATA TEMPLATE ===
+    // When creating language-specific schema, adapt these templates to the target language
+    "llm_data": {
+      "prompt_template": "Guide with stress in CAPITALS: {translit} → {guide}",
+      "guturals_note": "ח = [kh/gutural sound], ע = omit or glottal pause",
+      "shva_note": "ְ = very light '{LANGUAGE_VOWEL_SOUND}' sound (vocal sheva)",
+      "digraph_note": "IMPORTANT: sh, ts, kh, tz must stay together during syllable splitting",
+      "sbl_brill_note": "Based on SBL General Purpose and Brill simplified transliteration systems",
+
+      // === LANGUAGE ADAPTATION GUIDELINES ===
+      "language_adaptation": {
+        "description": "This is the UNIVERSAL BASE SCHEMA. To create a language-specific schema:",
+        "steps": [
+          "1. Copy this file to 'schemas/{LANGUAGE_CODE}.jsonc'",
+          "2. Replace all {LANGUAGE_*} placeholders with actual values for the target language",
+          "3. Adapt consonant/vowel mappings to target language phonetics",
+          "4. Generate native name and description using LLM",
+          "5. Test with Hebrew words and verify pronunciation accuracy",
+          "6. Validate that all 22+ examples work correctly"
+        ],
+        "placeholders_to_replace": [
+          "{LANGUAGE_CODE}", "{LANGUAGE_NAME}", "{LANGUAGE_VARIANT}",
+          "{LLM_GENERATED_NATIVE_NAME}", "{LLM_GENERATED_DESCRIPTION}",
+          "{LANGUAGE_EXAMPLE_*}", "{LANGUAGE_VOWEL_SOUND}"
+        ],
+        "example_for_spanish": {
+          "language": { "code": "es", "name": "Spanish", "variant": "neutral" },
+          "style": {
+            "name_native": "Transliteración Académica del Hebreo",
+            "description": "Sistemas de transliteración académica para hebreo y arameo basados en estándares SBL y Brill, adaptados para hispanohablantes."
+          }
+        }
+      }
+    },
+
+    // === VALIDATION ===
+    "validation": {
+      "status": "universal_base", // universal_base|pending_review|approved|rejected
+      "reviewer": null,
+      "reviewed_at": null,
+      "based_on": "SBL General Purpose and Brill simplified from hebrew-transliteration library",
+      "purpose": "Universal base schema for creating language-specific transliteration schemas",
+      "usage": "Copy this file and adapt {LANGUAGE_*} placeholders for specific languages"
+    }
+  }
