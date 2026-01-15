@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davar - Font Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .font-section {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .font-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .font-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .font-type {
+            background: #3498db;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        .font-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .sample-section {
+            margin: 15px 0;
+        }
+        .sample-label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .hebrew-sample {
+            font-size: 28px;
+            direction: rtl;
+            text-align: right;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .latin-sample {
+            font-size: 24px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .char-box {
+            text-align: center;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        .char-box .glyph {
+            font-size: 32px;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .char-box .label {
+            font-size: 0.7rem;
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .tech-table th, .tech-table td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .tech-table th {
+            background: #f8f9fa;
+            font-weight: bold;
+        }
+        .check { color: green; }
+        .cross { color: red; }
+    </style>
+
+    <!-- Font declarations -->
+    <style>
+        @font-face {
+            font-family: 'DeadSeaScrolls';
+            src: url('./Deadseascrolls-Regular.woff2') format('woff2'),
+                 url('./Deadseascrolls-Regular.ttf') format('truetype'),
+                 url('./Deadseascrolls-Regular.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'PaleoHebrew';
+            src: url('./PaleoHebrew.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'ProtoSinaitic';
+            src: url('./Proto-Sinaitic 15.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'ProtoSinaiticLeo';
+            src: url('./ProtoSinaiticLeo-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'SBLHebrew';
+            src: url('./SBL_Hbrw.ttf') format('truetype');
+        }
+    </style>
+</head>
+<body>
+    <h1>דבר - Fuentes del Proyecto Davar</h1>
+
+    <!-- Navigation Links -->
+    <div class="font-section">
+        <div class="font-header">
+            <div class="font-name">🧭 Navegación - Archivos Relacionados</div>
+            <span class="font-type">Herramientas</span>
+        </div>
+        <p class="font-description">Acceso rápido a todas las herramientas y recursos del proyecto Davar</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                <strong>🧪 Test de Fuentes</strong><br>
+                <a href="./test_fonts.html" style="color: #3498db; text-decoration: none;">test_fonts.html</a><br>
+                <small>Test automático de carga</small>
+            </div>
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                <strong>📚 Ejemplos Prácticos</strong><br>
+                <a href="./examples.html" style="color: #3498db; text-decoration: none;">examples.html</a><br>
+                <small>Código para múltiples plataformas</small>
+            </div>
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                <strong>🔍 Test Paleo Mapping</strong><br>
+                <a href="./paleo_mapping_test.html" style="color: #3498db; text-decoration: none;">paleo_mapping_test.html</a><br>
+                <small>Test interactivo de mapeo</small>
+            </div>
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                <strong>📖 Génesis 1:1 Comparativo</strong><br>
+                <a href="./genesis_1_1_all_fonts.html" style="color: #3498db; text-decoration: none;">genesis_1_1_all_fonts.html</a><br>
+                <small>Versículo completo en todas las fuentes</small>
+            </div>
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                <strong>🔮 Proto Sinaitic Leo</strong><br>
+                <a href="./proto_sinaitic_sample.html" style="color: #3498db; text-decoration: none;">proto_sinaitic_sample.html</a><br>
+                <small>Muestra detallada de glifos</small>
+            </div>
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                <strong>📋 Scripts Python</strong><br>
+                <a href="./create_proto_sinaitic_font.py" style="color: #27ae60; text-decoration: none;">Scripts</a><br>
+                <small>Herramientas de desarrollo</small>
+            </div>
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                <strong>📖 Documentación</strong><br>
+                <a href="./README.md" style="color: #9b59b6; text-decoration: none;">README.md</a><br>
+                <small>Documentación completa</small>
+            </div>
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                <strong>⚙️ Configuración</strong><br>
+                <a href="./fonts_config.json" style="color: #e74c3c; text-decoration: none;">fonts_config.json</a><br>
+                <small>Metadatos técnicos</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Compatibility Table -->
+    <div class="font-section">
+        <div class="font-header">
+            <div class="font-name">Compatibilidad de Fuentes</div>
+            <span class="font-type">Referencia</span>
+        </div>
+        <table class="tech-table">
+            <tr>
+                <th>Fuente</th>
+                <th>Hebreo Unicode (א-ת)</th>
+                <th>Latino (A-Z)</th>
+                <th>Uso Recomendado</th>
+            </tr>
+            <tr>
+                <td>Dead Sea Scrolls</td>
+                <td class="check">✓ 27 glifos</td>
+                <td class="cross">✗</td>
+                <td>Texto hebreo estilo Qumrán</td>
+            </tr>
+            <tr>
+                <td>SBL Hebrew</td>
+                <td class="check">✓ 87 glifos + nikud</td>
+                <td class="check">✓</td>
+                <td>Texto bíblico con vocales</td>
+            </tr>
+            <tr>
+                <td>Paleo Hebrew</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td>Mapeo latino → paleo</td>
+            </tr>
+            <tr>
+                <td>Proto-Sinaitic</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td>Pictogramas ancestrales</td>
+            </tr>
+            <tr>
+                <td>Proto Sinaitic Leo</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td>Unicode privado U+E000-U+E015</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Dead Sea Scrolls Font -->
+    <div class="font-section">
+        <div class="font-header">
+            <div class="font-name">Dead Sea Scrolls</div>
+            <span class="font-type">Hebrew Unicode</span>
+        </div>
+        <p class="font-description">
+            Fuente basada en la escritura de los Rollos del Mar Muerto (Qumrán).
+            Usa caracteres Unicode hebreos (א-ת) directamente.
+        </p>
+        <div class="sample-section">
+            <div class="sample-label">Génesis 1:1</div>
+            <div class="hebrew-sample" style="font-family: 'DeadSeaScrolls', serif;">
+                בראשית ברא אלהים את השמים ואת הארץ
+            </div>
+        </div>
+        <div class="sample-section">
+            <div class="sample-label">Génesis 1:2</div>
+            <div class="hebrew-sample" style="font-family: 'DeadSeaScrolls', serif;">
+                והארץ היתה תהו ובהו וחשך על פני תהום
+            </div>
+        </div>
+        <div class="note">
+            <strong>Nota:</strong> Esta fuente NO soporta nikud (vocales). Usa texto hebreo consonántico sin puntuación masorética.
+        </div>
+    </div>
+
+    <!-- SBL Hebrew Font -->
+    <div class="font-section">
+        <div class="font-header">
+            <div class="font-name">SBL Hebrew</div>
+            <span class="font-type">Academic Standard</span>
+        </div>
+        <p class="font-description">
+            Fuente académica estándar para hebreo bíblico. Soporta caracteres Unicode hebreos con nikud (vocales) y te'amim (acentos).
+        </p>
+        <div class="sample-section">
+            <div class="sample-label">Génesis 1:1-2 (con nikud)</div>
+            <div class="hebrew-sample" style="font-family: 'SBLHebrew', serif;">
+                בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ׃<br>
+                וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם׃
+            </div>
+        </div>
+    </div>
+
+    <!-- Paleo Hebrew Font -->
+    <div class="font-section">
+        <div class="font-header">
+            <div class="font-name">Paleo Hebrew</div>
+            <span class="font-type">Latin Mapping</span>
+        </div>
+        <p class="font-description">
+            Escritura paleo-hebrea, el alfabeto usado antes del exilio babilónico.
+            Mapea caracteres latinos (A-Z) a glifos paleo-hebreos.
+        </p>
+        <div class="sample-section">
+            <div class="sample-label">Alfabeto (A-Z)</div>
+            <div class="latin-sample" style="font-family: 'PaleoHebrew', serif; direction: rtl;">
+                ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            </div>
+        </div>
+        <div class="sample-section">
+            <div class="sample-label">"YHWH ELOHIM" en Paleo-Hebreo</div>
+            <div class="latin-sample" style="font-family: 'PaleoHebrew', serif; font-size: 36px; text-align: center; direction: rtl;">
+                YHWH ALHYM
+            </div>
+        </div>
+        <div class="note">
+            <strong>Mapeo aproximado:</strong> Cada letra latina se mapea a un glifo paleo-hebreo correspondiente.<br>
+            Ejemplo: B=ב, R=ר, A=א, S=ש, Y=י, T=ת (BRASYT ≈ בראשית)
+        </div>
+    </div>
+
+    <!-- Proto-Sinaitic Font -->
+    <div class="font-section">
+        <div class="font-header">
+            <div class="font-name">Proto-Sinaitic</div>
+            <span class="font-type">Pictographic</span>
+        </div>
+        <p class="font-description">
+            El ancestro pictográfico del alfabeto hebreo, datado circa 1800-1500 BCE.
+            Los caracteres son pictogramas que representan objetos. Mapea caracteres latinos (A-Z).
+        </p>
+        <div class="sample-section">
+            <div class="sample-label">Alfabeto (A-Z)</div>
+            <div class="latin-sample" style="font-family: 'ProtoSinaitic', serif; direction: rtl;">
+                ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            </div>
+        </div>
+        <div class="sample-section">
+            <div class="sample-label">"AB" (Padre) en Proto-Sinaítico</div>
+            <div class="latin-sample" style="font-family: 'ProtoSinaitic', serif; font-size: 48px; text-align: center; direction: rtl;">
+                AB
+            </div>
+        </div>
+        <div class="note">
+            <strong>Pictogramas:</strong> A = 🐂 (cabeza de buey/fuerza), B = 🏠 (casa/familia), etc.
+        </div>
+    </div>
+
+    <!-- Proto Sinaitic Leo Font - Unicode Private Use -->
+    <div class="font-section">
+        <div class="font-header">
+            <div class="font-name">Proto Sinaitic Leo</div>
+            <span class="font-type">Unicode Private Use</span>
+        </div>
+        <p class="font-description">
+            Versión personalizada creada a partir de glifos SVG proto-sinaíticos.
+            Mapeada a códigos Unicode U+E000-U+E015 (rango de uso privado).
+        </p>
+        <div class="sample-section">
+            <div class="sample-label">Glifos disponibles (U+E000-U+E015) - Orden: Alef (א) a Tav (ת)</div>
+            <div class="latin-sample" style="font-family: 'ProtoSinaiticLeo', serif; font-size: 36px; direction: rtl;">
+                &#xE000; &#xE001; &#xE002; &#xE003; &#xE004; &#xE005; &#xE006; &#xE007;<br>
+                &#xE008; &#xE009; &#xE00A; &#xE00B; &#xE00C; &#xE00D; &#xE00E; &#xE00F;
+            </div>
+        </div>
+        <div class="note">
+            <strong>Uso:</strong> Accede a los glifos usando códigos Unicode U+E000 a U+E015.
+            En HTML: <code>&amp;#xE000;</code> a <code>&amp;#xE015;</code>
+        </div>
+    </div>
+
+    <!-- Genesis 1:1 in All Fonts -->
+    <div class="font-section">
+        <div class="font-header">
+            <div class="font-name">בראשית ברא אלהים את השמים ואת הארץ</div>
+            <span class="font-type">Génesis 1:1</span>
+        </div>
+        <p class="font-description">
+            "En el principio creó Dios los cielos y la tierra." - Todas las fuentes mostrando el mismo versículo.
+        </p>
+
+        <!-- Dead Sea Scrolls Version -->
+        <div class="sample-section">
+            <div class="sample-label">Dead Sea Scrolls (Hebreo sin nikud)</div>
+            <div class="hebrew-sample" style="font-family: 'DeadSeaScrolls', serif;">
+                בראשית ברא אלהים את השמים ואת הארץ׃
+            </div>
+        </div>
+
+        <!-- SBL Hebrew Version -->
+        <div class="sample-section">
+            <div class="sample-label">SBL Hebrew (Hebreo con nikud)</div>
+            <div class="hebrew-sample" style="font-family: 'SBLHebrew', serif;">
+                בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ׃
+            </div>
+        </div>
+
+        <!-- Paleo Hebrew Version -->
+        <div class="sample-section">
+            <div class="sample-label">Paleo Hebrew (Mapeo Latino → Paleo-Hebreo)</div>
+            <div class="latin-sample" style="font-family: 'PaleoHebrew', serif; direction: rtl; font-size: 28px;">
+                BRASYT BRA ALHYM AT HASMYM VAT HARTS
+            </div>
+        </div>
+
+        <!-- Proto-Sinaitic Version -->
+        <div class="sample-section">
+            <div class="sample-label">Proto-Sinaitic (Pictogramas)</div>
+            <div class="latin-sample" style="font-family: 'ProtoSinaitic', serif; direction: rtl; font-size: 28px;">
+                BRASHYT BRA ALHYM AT HASHMYM VAT HARATS
+            </div>
+        </div>
+
+        <!-- Proto Sinaitic Leo Version -->
+        <div class="sample-section">
+            <div class="sample-label">Proto Sinaitic Leo (Glifos personalizados)</div>
+            <div class="latin-sample" style="font-family: 'ProtoSinaiticLeo', serif; font-size: 32px; direction: rtl;">
+                &#xE001;&#xE013;&#xE000;&#xE014;&#xE009;&#xE015; &#xE001;&#xE013;&#xE000; &#xE000;&#xE011;&#xE007;&#xE009;&#xE012;&#xE013; &#xE000;&#xE015; &#xE007;&#xE000;&#xE014;&#xE012;&#xE009;&#xE012;&#xE013; &#xE021;&#xE000;&#xE015; &#xE007;&#xE000;&#xE013;&#xE000;&#xE015;&#xE018;
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>Evolución histórica:</strong> Desde pictogramas ancestrales (~1800 BCE) hasta el hebreo moderno con vocales (~500-1000 CE).
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="font-section">
+        <div class="font-header">
+            <div class="font-name">📊 Estadísticas del Proyecto</div>
+            <span class="font-type">Resumen</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 15px;">
+            <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <div style="font-size: 2rem; font-weight: bold; color: #2c3e50;">5</div>
+                <div style="font-size: 0.9rem; color: #666;">Fuentes Principales</div>
+            </div>
+            <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <div style="font-size: 2rem; font-weight: bold; color: #2c3e50;">8</div>
+                <div style="font-size: 0.9rem; color: #666;">Archivos de Fuentes</div>
+            </div>
+            <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <div style="font-size: 2rem; font-weight: bold; color: #2c3e50;">22</div>
+                <div style="font-size: 0.9rem; color: #666;">Glifos Proto-Sinaíticos</div>
+            </div>
+            <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <div style="font-size: 2rem; font-weight: bold; color: #2c3e50;">4K+</div>
+                <div style="font-size: 0.9rem; color: #666;">Líneas de Código</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 8px;">
+            <h3 style="margin: 0 0 10px 0; color: #856404;">🎯 Estado del Proyecto</h3>
+            <ul style="margin: 0; padding-left: 20px; color: #856404;">
+                <li>✅ Fuentes completamente funcionales</li>
+                <li>✅ Scripts de generación automatizados</li>
+                <li>✅ Documentación completa</li>
+                <li>✅ Tests de compatibilidad</li>
+                <li>✅ Ejemplos para múltiples plataformas</li>
+                <li>✅ Mapeo paleo-hebreo corregido</li>
+            </ul>
+        </div>
+
+        <!-- Technical Reference -->
+        <div style="margin-top: 20px; padding: 15px; background: #e9ecef; border-radius: 8px;">
+            <h3 style="margin: 0 0 15px 0; color: #495057;">🔧 Referencia Técnica</h3>
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                <tr style="background: #f8f9fa;">
+                    <th style="padding: 8px; border: 1px solid #dee2e6; text-align: left;">Fuente</th>
+                    <th style="padding: 8px; border: 1px solid #dee2e6; text-align: left;">Archivo</th>
+                    <th style="padding: 8px; border: 1px solid #dee2e6; text-align: left;">Unicode</th>
+                    <th style="padding: 8px; border: 1px solid #dee2e6; text-align: left;">Uso</th>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Dead Sea Scrolls</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Deadseascrolls-Regular.*</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">U+05D0-U+05EA</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Texto hebreo sin nikud</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">SBL Hebrew</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">SBL_Hbrw.ttf</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">U+05D0-U+05EA + nikud</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Texto académico con vocales</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Paleo Hebrew</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">PaleoHebrew.ttf</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Latin mapping</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Alfabeto paleo-hebreo</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Proto-Sinaitic</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Proto-Sinaitic 15.ttf</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Latin mapping</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Pictogramas ancestrales</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Proto Sinaitic Leo</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">ProtoSinaiticLeo-Regular.ttf</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">U+E000-U+E015</td>
+                    <td style="padding: 8px; border: 1px solid #dee2e6;">Glifos personalizados SVG</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Troubleshooting -->
+    <div class="font-section">
+        <div class="font-header">
+            <div class="font-name">🔧 Solución de Problemas</div>
+            <span class="font-type">Soporte</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <h4 style="margin: 0 0 10px 0; color: #e74c3c;">❌ Fuentes no se cargan</h4>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem;">
+                    <li>Verificar que los archivos .ttf estén en la ruta correcta</li>
+                    <li>Abrir <a href="./test_fonts.html" style="color: #e74c3c;">test_fonts.html</a> para diagnóstico</li>
+                    <li>Verificar permisos de archivo</li>
+                    <li>Recargar la página (Ctrl+F5)</li>
+                </ul>
+            </div>
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <h4 style="margin: 0 0 10px 0; color: #f39c12;">⚠️ Texto no se muestra correctamente</h4>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem;">
+                    <li>Verificar dirección del texto (RTL para hebreo)</li>
+                    <li>Comprobar que el navegador soporta Unicode</li>
+                    <li>Para Proto Sinaitic Leo: usar navegador moderno</li>
+                </ul>
+            </div>
+            <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                <h4 style="margin: 0 0 10px 0; color: #27ae60;">✅ Verificación exitosa</h4>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem;">
+                    <li>Usar <a href="./test_fonts.html" style="color: #27ae60;">test_fonts.html</a> para verificación</li>
+                    <li>Verificar que todas las fuentes aparecen en verde</li>
+                    <li>Probar con <a href="./examples.html" style="color: #27ae60;">examples.html</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 15px; padding: 15px; background: #d4edda; border-radius: 8px;">
+            <h4 style="margin: 0 0 10px 0; color: #155724;">📞 Recursos Adicionales</h4>
+            <ul style="margin: 0; padding-left: 20px; color: #155724; font-size: 0.9rem;">
+                <li><a href="./README.md" style="color: #155724;">Documentación completa</a> - Guía detallada del proyecto</li>
+                <li><a href="./analyze_paleo_mapping.py" style="color: #155724;">Análisis de mapeo</a> - Script Python para debugging</li>
+                <li><a href="./create_proto_sinaitic_font.py" style="color: #155724;">Generador de fuentes</a> - Recrear Proto Sinaitic Leo</li>
+                <li><a href="./fonts_config.json" style="color: #155724;">Configuración JSON</a> - Metadatos técnicos</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>דבר — Minimalist Bible Study App for Hebrew Scriptures</p>
+        <p>Fuentes con licencia restringida al proyecto Davar.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; color: #666;">
+            Versión 1.0 - Proyecto Davar © 2025
+        </p>
+    </footer>
+</body>
+</html>

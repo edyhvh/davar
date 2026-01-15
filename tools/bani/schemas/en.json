@@ -1,0 +1,478 @@
+{
+  "schema_version": "2.0.0",
+  "language": {
+    "code": "en",
+    "name": "English",
+    "variant": "neutral"
+  },
+  "style": {
+    "name": "Academic English Transliteration",
+    "name_native": "Academic Hebrew Transliteration",
+    "description": "Academic transliteration system based on SBL and Brill standards for pronouncing Biblical Hebrew and Aramaic words. Stressed syllable in CAPITALS.",
+    "system": "simple_english",
+    "strict": false,
+    "dagesh": true,
+    "qamatz_qatan": true,
+    "sheva": "simple",
+    "stress_mark": "uppercase"
+  },
+  "rules": {
+    "consonants": {
+      "א": "",
+      "ב": "v",
+      "ג": "g",
+      "ד": "d",
+      "ה": "h",
+      "ו": "v",
+      "ז": "z",
+      "ח": "kh",
+      "ט": "t",
+      "י": "y",
+      "כ": "kh",
+      "ל": "l",
+      "מ": "m",
+      "נ": "n",
+      "ס": "s",
+      "ע": "",
+      "פ": "f",
+      "צ": "ts",
+      "ק": "k",
+      "ר": "r",
+      "ש": "sh",
+      "ת": "t",
+      "ך": "kh",
+      "ם": "m",
+      "ן": "n",
+      "ף": "f",
+      "ץ": "ts"
+    },
+    "vowels_nikud": {
+      "ָ": "a",
+      "ַ": "a",
+      "ֵ": "e",
+      "ֶ": "e",
+      "ִ": "i",
+      "ֹ": "o",
+      "ֻ": "u",
+      "וּ": "u",
+      "ְ": "e",
+      "ֲ": "a",
+      "ֳ": "o",
+      "ֱ": "e"
+    },
+    "composite": {
+      "וֹ": "o",
+      "וּ": "u",
+      "יִ": "i",
+      "ֵי": "ei",
+      "ֶי": "e",
+      "ָי": "a",
+      "ַי": "a",
+      "ִי": "i",
+      "ֹי": "o",
+      "ֻי": "u",
+      "הָ": "ah",
+      "הֶ": "eh",
+      "הֵ": "eh"
+    },
+    "special_cases": {
+      "divine_name": "yhwh",
+      "maqaf": "-",
+      "qamats_he": "ah",
+      "furtive_patah": "a"
+    },
+    "post_processing": [
+      "apply_dagesh_rules",
+      "normalize_composites",
+      "remove_duplicate_consonants",
+      "lowercase_rest"
+    ]
+  },
+  "stress": {
+    "default": "penultimate",
+    "exceptions": {}
+  },
+  "workflow": {
+    "use_strongs_reference": true,
+    "pron_parsing": {
+      "enabled": true,
+      "syllable_separator": "-",
+      "stress_marker": "'"
+    },
+    "xlit_reference": {
+      "enabled": true
+    },
+    "validation_mode": "strict",
+    "fallback_behavior": "use_generated"
+  },
+  "transliteration_systems": {
+    "sbl_general_purpose": {
+      "name": "SBL General Purpose",
+      "description": "Simplified academic transliteration following SBL guidelines",
+      "source": "https://github.com/charlesLoder/hebrew-transliteration",
+      "features": {
+        "vocal_sheva": "e",
+        "qamats_qatan": false,
+        "dagesh_strong": true,
+        "long_vowels": true
+      }
+    },
+    "brill_simplified": {
+      "name": "Brill Simplified",
+      "description": "Simplified version of Brill academic transliteration",
+      "source": "https://github.com/charlesLoder/hebrew-transliteration",
+      "features": {
+        "vocal_sheva": "ᵉ",
+        "qamats_qatan": true,
+        "dagesh_strong": true,
+        "long_vowels": true,
+        "special_chars": true
+      }
+    }
+  },
+  "system_variations": {},
+  "examples": {
+    "H1": {
+      "hebrew": "אָב",
+      "translit": "av",
+      "stress_syllable": 1,
+      "guide": "AV",
+      "guide_full": {
+        "reference": "father",
+        "stress_note": "stress on AV",
+        "phonetic_notes": [
+          "א silent (aleph)"
+        ]
+      }
+    },
+    "H2": {
+      "hebrew": "אַב",
+      "translit": "ab",
+      "stress_syllable": 1,
+      "guide": "AB",
+      "guide_full": {
+        "reference": "ab",
+        "stress_note": "stress on AB",
+        "phonetic_notes": [
+          "Aramaic form"
+        ]
+      }
+    },
+    "H3": {
+      "hebrew": "גַּם",
+      "translit": "gam",
+      "stress_syllable": 1,
+      "guide": "GAM",
+      "guide_full": {
+        "reference": "also",
+        "stress_note": "stress on GAM",
+        "phonetic_notes": [
+          "ג like 'g' in 'go'"
+        ]
+      }
+    },
+    "H4": {
+      "hebrew": "דָּם",
+      "translit": "dam",
+      "stress_syllable": 1,
+      "guide": "DAM",
+      "guide_full": {
+        "reference": "blood",
+        "stress_note": "stress on DAM",
+        "phonetic_notes": [
+          "ד like 'd' in 'day'"
+        ]
+      }
+    },
+    "H5": {
+      "hebrew": "הוּא",
+      "translit": "hu",
+      "stress_syllable": 2,
+      "guide": "hu",
+      "guide_full": {
+        "reference": "he",
+        "stress_note": "stress on final",
+        "phonetic_notes": [
+          "ה like 'h' in 'hay'"
+        ]
+      }
+    },
+    "H6": {
+      "hebrew": "וְ",
+      "translit": "ve",
+      "stress_syllable": 1,
+      "guide": "VE",
+      "guide_full": {
+        "reference": "and",
+        "stress_note": "conjunction",
+        "phonetic_notes": [
+          "ְ vocal sheva"
+        ]
+      }
+    },
+    "H7": {
+      "hebrew": "זֶה",
+      "translit": "ze",
+      "stress_syllable": 1,
+      "guide": "ZE",
+      "guide_full": {
+        "reference": "this",
+        "stress_note": "stress on ZEH",
+        "phonetic_notes": [
+          "ז like 'z' in 'zoo'"
+        ]
+      }
+    },
+    "H8": {
+      "hebrew": "חַי",
+      "translit": "khai",
+      "stress_syllable": 1,
+      "guide": "KHAI",
+      "guide_full": {
+        "reference": "live",
+        "stress_note": "stress on ḤAY",
+        "phonetic_notes": [
+          "ח like 'ch' in Scottish 'loch'"
+        ]
+      }
+    },
+    "H9": {
+      "hebrew": "טוֹב",
+      "translit": "tov",
+      "stress_syllable": 1,
+      "guide": "TOV",
+      "guide_full": {
+        "reference": "good",
+        "stress_note": "stress on ṬOV",
+        "phonetic_notes": [
+          "ט emphatic 't'"
+        ]
+      }
+    },
+    "H10": {
+      "hebrew": "יָד",
+      "translit": "yad",
+      "stress_syllable": 1,
+      "guide": "YAD",
+      "guide_full": {
+        "reference": "hand",
+        "stress_note": "stress on YAD",
+        "phonetic_notes": [
+          "י like 'y' in 'yes'"
+        ]
+      }
+    },
+    "H11": {
+      "hebrew": "כֹּה",
+      "translit": "kho",
+      "stress_syllable": 1,
+      "guide": "KHO",
+      "guide_full": {
+        "reference": "thus",
+        "stress_note": "stress on KOH",
+        "phonetic_notes": [
+          "כּ like 'k' (kaf with dagesh)"
+        ]
+      }
+    },
+    "H12": {
+      "hebrew": "לֵב",
+      "translit": "lev",
+      "stress_syllable": 1,
+      "guide": "LEV",
+      "guide_full": {
+        "reference": "heart",
+        "stress_note": "stress on LEV",
+        "phonetic_notes": [
+          "Phonetic notes for H12"
+        ]
+      }
+    },
+    "H13": {
+      "hebrew": "מַיִם",
+      "translit": "mayim",
+      "stress_syllable": 1,
+      "guide": "MA-yim",
+      "guide_full": {
+        "reference": "water",
+        "stress_note": "stress on MA",
+        "phonetic_notes": [
+          "מַיִם with diphthong"
+        ]
+      }
+    },
+    "H14": {
+      "hebrew": "נַחַל",
+      "translit": "nakhal",
+      "stress_syllable": 2,
+      "guide": "na-KHAL",
+      "guide_full": {
+        "reference": "river",
+        "stress_note": "stress on ḤAL",
+        "phonetic_notes": [
+          "נַחַל stress on second syllable"
+        ]
+      }
+    },
+    "H15": {
+      "hebrew": "סֵפֶר",
+      "translit": "sefer",
+      "stress_syllable": 1,
+      "guide": "SE-fer",
+      "guide_full": {
+        "reference": "book",
+        "stress_note": "stress on SE",
+        "phonetic_notes": [
+          "ס like 's' in 'see'"
+        ]
+      }
+    },
+    "H16": {
+      "hebrew": "עַיִן",
+      "translit": "ayin",
+      "stress_syllable": 2,
+      "guide": "a-YIN",
+      "guide_full": {
+        "reference": "eye",
+        "stress_note": "stress on YIN",
+        "phonetic_notes": [
+          "ע glottal stop (apostrophe)"
+        ]
+      }
+    },
+    "H17": {
+      "hebrew": "פֶּה",
+      "translit": "pe",
+      "stress_syllable": 1,
+      "guide": "PE",
+      "guide_full": {
+        "reference": "mouth",
+        "stress_note": "stress on PEH",
+        "phonetic_notes": [
+          "פּ like 'p' (pe with dagesh)"
+        ]
+      }
+    },
+    "H18": {
+      "hebrew": "צַדִּיק",
+      "translit": "tsadik",
+      "stress_syllable": 1,
+      "guide": "TSA-dik",
+      "guide_full": {
+        "reference": "righteous",
+        "stress_note": "stress on TZA",
+        "phonetic_notes": [
+          "צַדִּיק with 'tz' sound"
+        ]
+      }
+    },
+    "H19": {
+      "hebrew": "קֹדֶשׁ",
+      "translit": "qodesh",
+      "stress_syllable": 1,
+      "guide": "QO-desh",
+      "guide_full": {
+        "reference": "holy",
+        "stress_note": "stress on QO",
+        "phonetic_notes": [
+          "ק like 'k' in 'kite'"
+        ]
+      }
+    },
+    "H20": {
+      "hebrew": "רֹאשׁ",
+      "translit": "rosh",
+      "stress_syllable": 1,
+      "guide": "ROSH",
+      "guide_full": {
+        "reference": "head",
+        "stress_note": "stress on ROSH",
+        "phonetic_notes": [
+          "רֹאשׁ with 'sh' sound"
+        ]
+      }
+    },
+    "H21": {
+      "hebrew": "שָׁלוֹם",
+      "translit": "shalom",
+      "stress_syllable": 2,
+      "guide": "sha-LOM",
+      "guide_full": {
+        "reference": "peace",
+        "stress_note": "stress on LOM",
+        "phonetic_notes": [
+          "שׁ like 'sh' in 'ship'"
+        ]
+      }
+    },
+    "H22": {
+      "hebrew": "תּוֹרָה",
+      "translit": "tora",
+      "stress_syllable": 2,
+      "guide": "to-RA",
+      "guide_full": {
+        "reference": "law",
+        "stress_note": "stress on RAH",
+        "phonetic_notes": [
+          "תּ like 't' in 'top'"
+        ]
+      }
+    },
+    "H23": {
+      "hebrew": "מֶלֶךְ",
+      "translit": "melekh",
+      "stress_syllable": 1,
+      "guide": "ME-lekh",
+      "guide_full": {
+        "reference": "king",
+        "stress_note": "stress on ME",
+        "phonetic_notes": [
+          "ך like 'kh' (kaf sofit)"
+        ]
+      }
+    },
+    "H24": {
+      "hebrew": "סוֹף",
+      "translit": "sof",
+      "stress_syllable": 1,
+      "guide": "SOF",
+      "guide_full": {
+        "reference": "end",
+        "stress_note": "stress on SOF",
+        "phonetic_notes": [
+          "ף like 'f' (pe sofit)"
+        ]
+      }
+    }
+  },
+  "llm_data": {
+    "language_adaptation": {
+      "description": "This is the UNIVERSAL BASE SCHEMA. To create a language-specific schema:",
+      "steps": [
+        "1. Copy this file to 'schemas/{LANGUAGE_CODE}.jsonc'",
+        "2. Replace all {LANGUAGE_*} placeholders with actual values for the target language",
+        "3. Adapt consonant/vowel mappings to target language phonetics",
+        "4. Generate native name and description using LLM",
+        "5. Test with Hebrew words and verify pronunciation accuracy",
+        "6. Validate that all 22+ examples work correctly"
+      ],
+      "placeholders_to_replace": [
+        "{LANGUAGE_CODE}",
+        "{LANGUAGE_NAME}",
+        "{LANGUAGE_VARIANT}",
+        "{LLM_GENERATED_NATIVE_NAME}",
+        "{LLM_GENERATED_DESCRIPTION}",
+        "{LANGUAGE_EXAMPLE_*}",
+        "{LANGUAGE_VOWEL_SOUND}"
+      ]
+    }
+  },
+  "validation": {
+    "status": "generated_from_base",
+    "reviewer": "en.py",
+    "reviewed_at": "2025-11-14",
+    "based_on": "SCHEMA.jsonc with Brill Simplified system",
+    "purpose": "English language-specific academic transliteration schema",
+    "usage": "Academic Hebrew transliteration for English speakers"
+  }
+}

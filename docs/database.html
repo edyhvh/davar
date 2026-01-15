@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esquema de Base de Datos - Davar</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #B59E51;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #597057;
+            margin-top: 30px;
+        }
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Esquema de Base de Datos - Davar</h1>
+        <p>Diagrama ER del esquema de base de datos PostgreSQL con UUIDs, enums y campos JSONB.</p>
+        
+        <div class="mermaid">
+erDiagram
+    BOOKS ||--o{ CHAPTERS : contains
+    CHAPTERS ||--o{ VERSES : contains
+    VERSES ||--o{ WORDS : contains
+    VERSES ||--o{ TRANSLATIONS : has
+    VERSES ||--o{ VARIANTS : has
+    LEXICON ||--o{ DEFINITIONS : has
+    WORDS }o--|| LEXICON : references
+
+    BOOKS {
+        uuid id PK
+        string name
+        string hebrew_name
+        string english_name
+        string spanish_name
+        enum section
+        string author
+        string publication_year
+    }
+
+    CHAPTERS {
+        uuid id PK
+        uuid book_id FK
+        int number
+        string hebrew_letter
+    }
+
+    VERSES {
+        uuid id PK
+        uuid chapter_id FK
+        int number
+        text hebrew_text
+        text hebrew_no_nikud
+        jsonb source_files
+        jsonb visual_uncertainty
+    }
+
+    WORDS {
+        uuid id PK
+        uuid verse_id FK
+        int position
+        text hebrew
+        text hebrew_no_nikud
+        string lemma
+        string strong_number
+        string morph
+    }
+
+    LEXICON {
+        string strong_number PK
+        text lemma
+        text normalized
+        text pronunciation
+        text transliteration
+        boolean is_root
+        string root_ref FK
+        jsonb sources
+        jsonb occurrences
+    }
+
+    DEFINITIONS {
+        uuid id PK
+        string lexicon_strong_number FK
+        text text
+        string source
+        int order
+        string sense
+    }
+
+    TRANSLATIONS {
+        uuid id PK
+        uuid verse_id FK
+        enum language
+        string version
+        text text
+        enum status
+        jsonb footnotes
+    }
+
+    VARIANTS {
+        uuid id PK
+        uuid verse_id FK
+        enum source
+        text variant_text
+        text explanation
+    }
+        </div>
+
+        <h2>Enums</h2>
+        <ul>
+            <li><code>book_section</code>: <code>torah</code>, <code>neviim</code>, <code>ketuvim</code>, <code>besorah</code></li>
+            <li><code>translation_language</code>: <code>en</code>, <code>es</code></li>
+            <li><code>translation_status</code>: <code>present</code>, <code>absent</code></li>
+            <li><code>variant_source</code>: <code>qumran</code>, <code>masoretic</code>, <code>septuagint</code></li>
+        </ul>
+
+        <h2>Extensiones PostgreSQL</h2>
+        <ul>
+            <li><code>uuid-ossp</code>: Para generar UUIDs automáticamente</li>
+        </ul>
+
+        <h2>Notas</h2>
+        <ul>
+            <li>Todas las tablas usan UUID como primary key (excepto LEXICON que usa <code>strong_number</code>)</li>
+            <li>Los campos JSONB permiten almacenar estructuras flexibles (source_files, visual_uncertainty, sources, occurrences, footnotes)</li>
+            <li>Las relaciones FK mantienen integridad referencial entre entidades</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
