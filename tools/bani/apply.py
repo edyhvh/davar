@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-Bani Schema Applier
-Applies transliteration schema to Hebrew word dataset
+Bani Schema Applier - Core transliteration engine
+
+Applies transliteration schema to Hebrew word dataset.
+Used by build.py for batch processing.
 
 Usage:
-    python scripts/apply.py schemas/informal.es.jsonc --words 100
+    python tools/bani/apply.py schemas/es.json --words 100 --output results.json
 """
 
 import json
@@ -13,6 +15,11 @@ import argparse
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 import unicodedata
+
+
+# Hebrew character constants
+SHEVA_CHAR = "ְ"
+DAGESH_CHAR = "ּ"
 
 
 def load_jsonc(file_path: Path) -> Dict[str, Any]:
@@ -124,19 +131,78 @@ class Transliterator:
                         break
 
                 if not found_composite:
+                    # Skip combining marks that aren't vowels
+                    if unicodedata.category(char).startswith('M'):
+                        # It's a combining mark (diacritic)
+                        if char in self.vowels:
+                            # Known vowel - transliterate it
+                            translit += self.vowels[char]
+                        # Otherwise skip it (dagesh, meteg, etc. are handled separately)
+                        i += 1
+                        continue
+
                     # Single character mapping
                     if char in self.consonants:
-                        translit += self.consonants[char]
+                        # Check if dagesh or shin/sin dots appear in the combining marks that follow
+                        # (after normalization, combining marks come after base character)
+                        has_dagesh = False
+                        has_sin_dot = False
+                        has_shin_dot = False
+                        j = i + 1
+                        # Look ahead through combining marks to find dagesh or shin/sin dots
+                        while j < len(normalized):
+                            next_char = normalized[j]
+                            # Stop if we hit another base character (letter)
+                            if unicodedata.category(next_char)[0] == 'L':
+                                break
+                            # Check for special combining marks
+                            if next_char == DAGESH_CHAR:
+                                has_dagesh = True
+                            elif next_char == 'ׁ':  # Shin dot
+                                has_shin_dot = True
+                            elif next_char == 'ׂ':  # Sin dot
+                                has_sin_dot = True
+                            # Stop if we hit a non-combining character
+                            if not unicodedata.category(next_char).startswith('M'):
+                                break
+                            j += 1
+                        
+                        # Apply special rules for ש (shin) with dots
+                        if char == 'ש':
+                            if has_sin_dot:
+                                translit += 's'  # Shin with sin dot = 's'
+                            else:
+                                translit += self.consonants[char]  # Shin or shin with shin dot = 'sh'
+                        # Apply dagesh rules for ב, כ, פ
+                        elif has_dagesh and char in {'ב', 'כ', 'פ'}:
+                            if char == 'ב':
+                                translit += 'b'
+                            elif char == 'כ':
+                                translit += 'k'
+                            elif char == 'פ':
+                                translit += 'p'
+                        else:
+                            translit += self.consonants[char]
+                        i += 1
                     elif char in self.vowels:
                         translit += self.vowels[char]
+                        i += 1
                     else:
-                        # Keep unknown characters as-is or skip
-                        translit += char
-                    i += 1
+                        # Skip unknown characters (Hebrew punctuation, other marks, etc.)
+                        # Only process known consonants and vowels
+                        i += 1
 
             # Apply post-processing
             for rule in self.post_processing:
-                if rule == 'remove_duplicate_consonants':
+                if rule == 'apply_dagesh_rules':
+                    # Dagesh rules are already handled during transliteration
+                    # This is a no-op but kept for schema compatibility
+                    pass
+                elif rule == 'normalize_composites':
+                    # Composites are already handled during transliteration
+                    # This is a no-op but kept for schema compatibility
+                    pass
+                elif rule == 'remove_duplicate_consonants':
                     translit = re.sub(r'(.)\1+', r'\1', translit)
                 elif rule == 'apply_stress_uppercase':
                     translit = self.apply_stress(translit, strongs_num)
@@ -188,46 +254,15 @@ class Transliterator:
         return result
 
 
-def load_sample_words(count: int = 100) -> List[Dict[str, Any]]:
-    """Load sample Hebrew words for testing (mock data)."""
-    # This is mock data - in real usage you'd load from a proper dataset
-    sample_words = [
-        {'strongs': 'H1', 'hebrew': 'אָב'},
-        {'strongs': 'H2', 'hebrew': 'בֵּן'},
-        {'strongs': 'H3', 'hebrew': 'גַּם'},
-        {'strongs': 'H4', 'hebrew': 'דָּם'},
-        {'strongs': 'H5', 'hebrew': 'הוּא'},
-        {'strongs': 'H6', 'hebrew': 'וְ'},
-        {'strongs': 'H7', 'hebrew': 'זֶה'},
-        {'strongs': 'H8', 'hebrew': 'חַי'},
-        {'strongs': 'H9', 'hebrew': 'טוֹב'},
-        {'strongs': 'H10', 'hebrew': 'יָד'},
-        {'strongs': 'H11', 'hebrew': 'כֹּה'},
-        {'strongs': 'H12', 'hebrew': 'לֵב'},
-        {'strongs': 'H13', 'hebrew': 'מַיִם'},
-        {'strongs': 'H14', 'hebrew': 'נַחַל'},
-        {'strongs': 'H15', 'hebrew': 'סֵפֶר'},
-        {'strongs': 'H16', 'hebrew': 'עַיִן'},
-        {'strongs': 'H17', 'hebrew': 'פֶּה'},
-        {'strongs': 'H18', 'hebrew': 'צַדִּיק'},
-        {'strongs': 'H19', 'hebrew': 'קֹדֶשׁ'},
-        {'strongs': 'H20', 'hebrew': 'רֹאשׁ'},
-        {'strongs': 'H21', 'hebrew': 'שָׁלוֹם'},
-        {'strongs': 'H22', 'hebrew': 'תּוֹרָה'},
-        {'strongs': 'H23', 'hebrew': 'מֶלֶךְ'},
-        {'strongs': 'H24', 'hebrew': 'סוֹף'},
-    ]
-
-    return sample_words[:count]
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Apply Bani transliteration schema to word dataset')
-    parser.add_argument('schema_file', help='Path to schema file')
+    """Command-line interface for testing transliteration schemas."""
+    parser = argparse.ArgumentParser(description='Apply Bani transliteration schema to Hebrew words')
+    parser.add_argument('schema_file', help='Path to schema file (e.g., schemas/es.json)')
     parser.add_argument('--words', type=int, default=100, help='Number of words to process')
     parser.add_argument('--output', help='Output JSON file path')
-    parser.add_argument('--sqlite', help='Output SQLite database path')
-    parser.add_argument('--sample', action='store_true', help='Use sample data instead of real dataset')
+    parser.add_argument('--test', action='store_true', help='Test mode - show results without saving')
 
     args = parser.parse_args()
 
@@ -244,37 +279,49 @@ def main():
         return 1
 
     # Validate schema first
-    from validate import SchemaValidator
-    validator = SchemaValidator(schema)
-    is_valid, errors, warnings = validator.validate(3)
+    try:
+        from .validate import SchemaValidator
+        validator = SchemaValidator(schema)
+        is_valid, errors, warnings = validator.validate(3)
 
-    if not is_valid:
-        print("Schema validation failed. Please fix errors first:")
-        for error in errors:
-            print(f"  ❌ {error}")
-        return 1
+        if not is_valid:
+            print("Schema validation failed:")
+            for error in errors:
+                print(f"  ❌ {error}")
+            return 1
 
-    if warnings:
-        print("Schema has warnings:")
-        for warning in warnings:
-            print(f"  ⚠️  {warning}")
+        if warnings:
+            print("Schema warnings:")
+            for warning in warnings:
+                print(f"  ⚠️  {warning}")
 
-    # Load words
-    if args.sample:
-        words = load_sample_words(args.words)
-        print(f"Using {len(words)} sample words")
-    else:
-        print("Real dataset loading not implemented yet. Use --sample")
-        return 1
+    except ImportError:
+        print("Warning: Schema validation not available")
+
+    # Create sample words for testing
+    sample_words = [
+        {'strongs': 'H7965', 'hebrew': 'שָׁלוֹם'},
+        {'strongs': 'H1', 'hebrew': 'אָב'},
+        {'strongs': 'H2', 'hebrew': 'בֵּן'},
+        {'strongs': 'H8', 'hebrew': 'חַי'},
+    ][:args.words]
+
+    print(f"Processing {len(sample_words)} sample words")
 
     # Apply transliteration
     transliterator = Transliterator(schema)
-    result = transliterator.apply_to_dataset(words)
+    result = transliterator.apply_to_dataset(sample_words)
+
+    if args.test:
+        print("\nResults:")
+        for strongs, data in result.items():
+            print(f"  {strongs}: {data['hebrew']} → {data['guide']}")
+        return 0
 
     # Set default output path
     if not args.output:
         lang_code = schema['language']['code']
-        args.output = f"data/json/bani-{lang_code}.json"
+        args.output = f"bani-{lang_code}-test.json"
 
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -287,10 +334,6 @@ def main():
     except Exception as e:
         print(f"Error saving JSON: {e}")
         return 1
-
-    # SQLite export (placeholder)
-    if args.sqlite:
-        print(f"SQLite export not implemented yet: {args.sqlite}")
 
     print(f"Successfully processed {len(result)} words")
     return 0
