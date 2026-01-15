@@ -109,14 +109,20 @@
         "text_no_nikud": "מ/עתה",
         "lemma": "Hm/H6258",
         "strong": "Hm/H6258",
-        "morph": "HR/D"
+        "morph": "HR/D",
+        "prefixes": [
+          "Hm"
+        ]
       },
       {
         "text": "וְ/עַד",
         "text_no_nikud": "ו/עד",
         "lemma": "Hc/H5704",
         "strong": "Hc/H5704",
-        "morph": "HC/R"
+        "morph": "HC/R",
+        "prefixes": [
+          "Hc"
+        ]
       },
       {
         "text": "עוֹלָֽם",
@@ -138,7 +144,10 @@
         "text_no_nikud": "מ/מזרח",
         "lemma": "Hm/H4217",
         "strong": "Hm/H4217",
-        "morph": "HR/Ncmsc"
+        "morph": "HR/Ncmsc",
+        "prefixes": [
+          "Hm"
+        ]
       },
       {
         "text": "שֶׁ֥מֶשׁ",
@@ -237,7 +246,10 @@
         "text_no_nikud": "ה/שמים",
         "lemma": "Hd/H8064",
         "strong": "Hd/H8064",
-        "morph": "HTd/Ncmpa"
+        "morph": "HTd/Ncmpa",
+        "prefixes": [
+          "Hd"
+        ]
       },
       {
         "text": "כְּבוֹדֽ/וֹ",
@@ -266,7 +278,10 @@
         "text_no_nikud": "כ/יהוה",
         "lemma": "Hk/H3068",
         "strong": "Hk/H3068",
-        "morph": "HR/Np"
+        "morph": "HR/Np",
+        "prefixes": [
+          "Hk"
+        ]
       },
       {
         "text": "אֱלֹהֵ֑י/נוּ",
@@ -280,14 +295,20 @@
         "text_no_nikud": "ה/מגביהי",
         "lemma": "Hd/H1361",
         "strong": "Hd/H1361",
-        "morph": "HTd/Vhrmsc"
+        "morph": "HTd/Vhrmsc",
+        "prefixes": [
+          "Hd"
+        ]
       },
       {
         "text": "לָ/שָֽׁבֶת",
         "text_no_nikud": "ל/שבת",
         "lemma": "Hl/H3427",
         "strong": "Hl/H3427",
-        "morph": "HR/Vqc"
+        "morph": "HR/Vqc",
+        "prefixes": [
+          "Hl"
+        ]
       }
     ]
   },
@@ -302,28 +323,41 @@
         "text_no_nikud": "ה/משפילי",
         "lemma": "Hd/H8213",
         "strong": "Hd/H8213",
-        "morph": "HTd/Vhrmsc"
+        "morph": "HTd/Vhrmsc",
+        "prefixes": [
+          "Hd"
+        ]
       },
       {
         "text": "לִ/רְא֑וֹת",
         "text_no_nikud": "ל/ראות",
         "lemma": "Hl/H7200",
         "strong": "Hl/H7200",
-        "morph": "HR/Vqc"
+        "morph": "HR/Vqc",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "בַּ/שָּׁמַ֥יִם",
         "text_no_nikud": "ב/שמים",
         "lemma": "Hb/H8064",
         "strong": "Hb/H8064",
-        "morph": "HRd/Ncmpa"
+        "morph": "HRd/Ncmpa",
+        "prefixes": [
+          "Hb"
+        ]
       },
       {
         "text": "וּ/בָ/אָֽרֶץ",
         "text_no_nikud": "ו/ב/ארץ",
         "lemma": "Hc/Hb/H776",
         "strong": "Hc/Hb/H776",
-        "morph": "HC/Rd/Ncbsa"
+        "morph": "HC/Rd/Ncbsa",
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ]
       }
     ]
   },
@@ -345,7 +379,10 @@
         "text_no_nikud": "מ/עפר",
         "lemma": "Hm/H6083",
         "strong": "Hm/H6083",
-        "morph": "HR/Ncmsa"
+        "morph": "HR/Ncmsa",
+        "prefixes": [
+          "Hm"
+        ]
       },
       {
         "text": "דָּ֑ל",
@@ -359,7 +396,10 @@
         "text_no_nikud": "מ/אשפת",
         "lemma": "Hm/H830",
         "strong": "Hm/H830",
-        "morph": "HR/Ncmsa"
+        "morph": "HR/Ncmsa",
+        "prefixes": [
+          "Hm"
+        ]
       },
       {
         "text": "יָרִ֥ים",
@@ -388,7 +428,10 @@
         "text_no_nikud": "ל/הושיבי",
         "lemma": "Hl/H3427",
         "strong": "Hl/H3427",
-        "morph": "HR/Vhc"
+        "morph": "HR/Vhc",
+        "prefixes": [
+          "Hl"
+        ]
       },
       {
         "text": "עִם",
@@ -452,7 +495,10 @@
         "text_no_nikud": "ה/בית",
         "lemma": "Hd/H1004",
         "strong": "Hd/H1004",
-        "morph": "HTd/Ncmsa"
+        "morph": "HTd/Ncmsa",
+        "prefixes": [
+          "Hd"
+        ]
       },
       {
         "text": "אֵֽם",
@@ -466,7 +512,10 @@
         "text_no_nikud": "ה/בנים",
         "lemma": "Hd/H1121",
         "strong": "Hd/H1121",
-        "morph": "HTd/Ncmpa"
+        "morph": "HTd/Ncmpa",
+        "prefixes": [
+          "Hd"
+        ]
       },
       {
         "text": "שְׂמֵחָ֗ה",
