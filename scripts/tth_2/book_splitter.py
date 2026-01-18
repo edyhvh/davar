@@ -59,10 +59,9 @@ class TTH2BookSplitter:
             r'לוקה'
         ],
         'iojanan': [
-            r'Iojanán.*?יוחנן',
-            r'__IOJANÁN.*?יוחנן__',
-            r'JUAN.*?יוחנן',
-            r'יוחנן'
+            r'\*\*IOJANÁN\s*\(JUAN\)\*\*',
+            r'__IOJANÁN\s*\(JUAN\)__',
+            r'IOJANÁN\s*\(JUAN\)',
         ],
         'maasei_hashlijim': [
             r'Maasei\s+Hash\'lijim.*?מעשי\s+השליחים',

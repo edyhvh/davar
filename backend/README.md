@@ -43,7 +43,47 @@ A secure FastAPI backend for serving Hebrew Scripture text, translations, lexico
 The backend serves data from the `../data` directory containing:
 - OE Hebrew texts (Tanaj)
 - Delitzsch Hebrew texts (Besorah)
-- TTH Spanish translations
+- TTH Spanish translations (tth_2 format: one JSON file per book with hierarchical structure)
 - TS2009 English translations
 - DSS variants
 - Custom lexicon and prefixes
+
+### TTH Data Structure (tth_2)
+
+The TTH Spanish translations now use an optimized format with one JSON file per book:
+
+```json
+{
+  "book_info": {
+    "book_id": "amos",
+    "tth_name": "Amós",
+    "hebrew_name": "עמוס",
+    "english_name": "Amos",
+    "spanish_name": "Amós",
+    "section": "neviim",
+    "total_chapters": 10,
+    "total_verses": 166
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "verses": [
+        {
+          "verse": 1,
+          "tth": "Palabras de Amós...",
+          "footnotes": [
+            {"marker": "¹", "number": "1", "word": "palabra", "explanation": "..."}
+          ],
+          "hebrew_terms": []
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Benefits of tth_2 format:**
+- 67% smaller file sizes
+- Single file per book (38 total) vs multiple chapter files
+- Hierarchical structure for better organization
+- Faster loading with improved caching efficiency

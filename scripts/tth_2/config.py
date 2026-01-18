@@ -548,10 +548,9 @@ BOOKS_INFO = {
         'section_english': 'Gospel',
         'section_spanish': 'Evangelio',
         'patterns': [
-            r'Iojanán.*?יוחנן',
-            r'__IOJANÁN.*?יוחנן__',
-            r'JUAN.*?יוחנן',
-            r'יוחנן',
+            r'\*\*IOJANÁN\s*\(JUAN\)\*\*',
+            r'__IOJANÁN\s*\(JUAN\)__',
+            r'IOJANÁN\s*\(JUAN\)',
         ],
     },
     'maasei_hashlijim': {

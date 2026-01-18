@@ -14,7 +14,7 @@ class TranslationLoader(DataLoader):
 
     def __init__(self, data_path: str = None):
         super().__init__(data_path)
-        self.tth_path = self.data_path / "tth" / "draft"
+        self.tth_path = self.data_path / "tth_2" / "json"
         self.ts2009_path = self.data_path / "ts2009"
 
     def load_tth_verse(self, book_name: str, chapter: int, verse: int, language: str = "es") -> Optional[dict]:
@@ -28,20 +28,26 @@ class TranslationLoader(DataLoader):
         if not hebrew_book_name:
             return None
 
-        file_path = f"tth/draft/{hebrew_book_name}/{chapter:02d}.json"
+        # Load entire book JSON (tth_2 format)
+        file_path = f"tth_2/json/{hebrew_book_name}.json"
         try:
-            chapter_data = self.load_json(file_path)
-            for verse_data in chapter_data:
-                if (verse_data.get("chapter") == chapter and
-                    verse_data.get("verse") == verse):
-                    translation = verse_data.get("tth", "")
-                    footnotes = verse_data.get("footnotes", [])
-                    result = {
-                        "translation": translation,
-                        "footnotes": footnotes
-                    }
-                    self._cache[cache_key] = result
-                    return result
+            book_data = self.load_json(file_path)
+            if "chapters" not in book_data:
+                return None
+
+            # Find the requested chapter and verse
+            for chapter_data in book_data["chapters"]:
+                if chapter_data.get("chapter") == chapter:
+                    for verse_data in chapter_data.get("verses", []):
+                        if verse_data.get("verse") == verse:
+                            translation = verse_data.get("tth", "")
+                            footnotes = verse_data.get("footnotes", [])
+                            result = {
+                                "translation": translation,
+                                "footnotes": footnotes
+                            }
+                            self._cache[cache_key] = result
+                            return result
         except (FileNotFoundError, KeyError):
             pass
 
@@ -93,7 +99,7 @@ class TranslationLoader(DataLoader):
             "Leviticus": "vaikra",
             "Numbers": "bamidbar",
             "Deuteronomy": "devarim",
-            "Joshua": "iehosua",
+            "Joshua": "iehoshua",
             "Judges": "shoftim",
             "Samuel1": "shemuel_alef",
             "Samuel2": "shemuel_bet",
@@ -127,34 +133,34 @@ class TranslationLoader(DataLoader):
             "Nehemiah": "nehemya",
             "Chronicles1": "divrei_hayamim_alef",
             "Chronicles2": "divrei_hayamim_bet",
-            # Besorah books
-            "Matthew": "mattityahu",
-            "Mark": "marqos",
-            "Luke": "luqas",
-            "John": "yohanan",
-            "Acts": "maasei",
-            "Romans": "romiyim",
+            # Besorah books (tth_2 format)
+            "Matthew": "matityahu",
+            "Mark": "markos",
+            "Luke": "lukas",
+            "John": "iojanan",
+            "Acts": "maasei_hashlijim",
+            "Romans": "romaim",
             "Corinthians1": "qorintim_alef",
             "Corinthians2": "qorintim_bet",
             "Galatians": "galatiyim",
             "Ephesians": "efesiyim",
             "Philippians": "pilipiyim",
             "Colossians": "qolasim",
-            "Thessalonians1": "tesalonikim_alef",
-            "Thessalonians2": "tesalonikim_bet",
+            "Thessalonians1": "tesaloniquim_alef",
+            "Thessalonians2": "tesaloniquim_bet",
             "Timothy1": "timotiyos_alef",
             "Timothy2": "timotiyos_bet",
             "Titus": "titos",
             "Philemon": "filemon",
             "Hebrews": "ivrim",
-            "James": "yaakov",
+            "James": "iaacob",
             "Peter1": "kefa_alef",
             "Peter2": "kefa_bet",
             "John1": "yohanan_alef",
             "John2": "yohanan_bet",
             "John3": "yohanan_gimel",
-            "Jude": "yehudah",
-            "Revelation": "hitgalut"
+            "Jude": "iehudah",
+            "Revelation": "sodot"
         }
         return mapping.get(english_name)
 
