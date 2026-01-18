@@ -258,6 +258,10 @@ class TTH2MdToJson:
                 i += 1
                 continue
 
+            # Stop parsing when we reach the footnotes section
+            if line.startswith('## Footnotes') or line.startswith('# Footnotes'):
+                break
+
             # Check for chapter markers
             chapter_match = re.match(r'^\*\*(\d+)\*\*\s*$', line)
             if chapter_match:
