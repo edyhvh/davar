@@ -1,0 +1,503 @@
+#!/usr/bin/env python3
+"""
+Book Splitter Module
+====================
+
+Splits complete TTH markdown documents into individual per-book markdown files.
+Simplified version focused on the TTH2 workflow.
+
+Features:
+- Identifies book boundaries in complete documents
+- Extracts book content with associated footnotes
+- Handles Hebrew and Spanish text properly
+- Maintains document structure and formatting
+
+Author: Davar Project
+"""
+
+import re
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple, Set
+try:
+    from .config import BOOKS_INFO
+except ImportError:
+    from config import BOOKS_INFO
+
+try:
+    from .patterns import *
+except ImportError:
+    from patterns import *
+
+
+class TTH2BookSplitter:
+    """
+    Splits complete TTH markdown documents into individual per-book files.
+    """
+
+    def __init__(self):
+        """Initialize the book splitter."""
+        self.book_patterns = {
+            'mattityahu': [
+                r'מתתיהו'
+            ],
+        'markos': [
+            r'__MARKO\s*\(MARCOS\)__',
+            r'Markos.*?מרקוס',
+            r'Marko.*?מרקו',
+            r'__MARKOS.*?מרקוס__',
+            r'MARCOS.*?מרקוס',
+            r'מרקוס',
+            r'מרקו'
+        ],
+        'lukas': [
+            r'__LUKAH\s*\(LUCAS\)__',
+            r'Lukas.*?לוקס',
+            r'Lukah.*?לוקה',
+            r'__LUKAS.*?לוקס__',
+            r'LUCAS.*?לוקס',
+            r'לוקס',
+            r'לוקה'
+        ],
+        'iojanan': [
+            r'\*\*IOJANÁN\s*\(JUAN\)\*\*',
+            r'__IOJANÁN\s*\(JUAN\)__',
+            r'IOJANÁN\s*\(JUAN\)',
+        ],
+        'maasei_hashlijim': [
+            r'Maasei\s+Hash\'lijim.*?מעשי\s+השליחים',
+            r'__MAASEI.*?מעשי\s+השליחים__',
+            r'HECHOS.*?מעשי\s+השליחים',
+            r'מעשי\s+השליחים'
+        ],
+        'romaim': [
+            r'Romaim.*?רומאים',
+            r'__ROMAIM.*?רומאים__',
+            r'ROMANOS.*?רומאים',
+            r'רומאים'
+        ],
+        'iaacob': [
+            r'\*\*IAACOB.*?\*\*',
+            r'Iaacob.*?יעקב',
+            r'__IAACOB.*?יעקב__',
+            r'SANTIAGO.*?יעקב',
+            r'\*\*IAACOB',
+            r'SANTIAGO',
+            r'יעקב'
+        ],
+        'iehudah': [
+            r'\*\*IEHUDÁH.*?\*\*',
+            r'Iehudáh.*?יהודה',
+            r'__IEHUDÁH.*?יהודה__',
+            r'JUDAS.*?יהודה',
+            r'\*\*IEHUDÁH',
+            r'JUDAS',
+            r'יהודה'
+        ],
+        'sodot': [
+            r'\*\*SODOT.*?\*\*',
+            r'Sodot.*?סודות',
+            r'__SODOT.*?סודות__',
+            r'APOCALIPSIS.*?סודות',
+            r'\*\*SODOT',
+            r'APOCALIPSIS',
+            r'סודות'
+        ],
+        'tesaloniquim_alef': [
+            r'Tesaloniquim\s+Alef.*?תסלוניקים\s+א',
+            r'Tesaloniquenses\s+1.*?תסלוניקים\s+א',
+            r'__TESALONIKIM\s+ALEF.*?תסלוניקים\s+א__',
+            r'תסלוניקים\s+א'
+        ],
+        'tesaloniquim_bet': [
+            r'Tesaloniquim\s+Bet.*?תסלוניקים\s+ב',
+            r'Tesaloniquenses\s+2.*?תסלוניקים\s+ב',
+            r'__TESALONIKIM\s+BET.*?תסלוניקים\s+ב__',
+            r'תסלוניקים\s+ב'
+        ],
+
+        # Torah (Pentateuco)
+        'bereshit': [
+            r'TORAH\s*-\s*BERESHIT.*?בראשית',
+            r'__TORAH\s*-\s*BERESHIT.*?בראשית__',
+            r'BERESHIT.*?בראשית',
+            r'בראשית'
+        ],
+        'shemot': [
+            r'SHEMOT.*?שמות',
+            r'__SHEMOT.*?שמות__',
+            r'שמות'
+        ],
+        'vaikra': [
+            r'VAIKRÁ.*?ויקרא',
+            r'__VAIKRÁ.*?ויקרא__',
+            r'ויקרא'
+        ],
+        'bamidbar': [
+            r'BAMIDBAR.*?במדבר',
+            r'__BAMIDBAR.*?במדבר__',
+            r'במדבר'
+        ],
+        'devarim': [
+            r'DEVARIM.*?דברים',
+            r'__DEVARIM.*?דברים__',
+            r'דברים'
+        ],
+
+        # Neviim (Profetas)
+        'iehoshua': [
+            r'IEHOSHÚA.*?יהושע',
+            r'NEVIÍM\s*-\s*IEHOSHÚA.*?יהושע',
+            r'__NEVIÍM\s*-\s*IEHOSHÚA.*?יהושע__',
+            r'יהושע'
+        ],
+        'shoftim': [
+            r'SHOFTÍM.*?שפטים',
+            r'__SHOFTÍM.*?שפטים__',
+            r'שפטים'
+        ],
+        'shemuel_alef': [
+            r'SHEMUEL\s*ALEF.*?א\s*שמואל',
+            r'__SHEMUEL\s*ALEF.*?א\s*שמואל__',
+            r'א\s*שמואל'
+        ],
+        'shemuel_bet': [
+            r'SHEMUEL\s*BET.*?ב\s*שמואל',
+            r'__SHEMUEL\s*BET.*?ב\s*שמואל__',
+            r'ב\s*שמואל'
+        ],
+        'melajim_alef': [
+            r'MELAJIM\s*ALEF.*?א\s*מלכים',
+            r'__MELAJIM\s*ALEF.*?א\s*מלכים__',
+            r'א\s*מלכים'
+        ],
+        'melajim_bet': [
+            r'MELAJIM\s*BET.*?ב\s*מלכים',
+            r'__MELAJIM\s+BET.*?ב\s*מלכים__',
+            r'ב\s*מלכים'
+        ],
+        'ieshaiahu': [
+            r'IESHAIÁHU.*?ישעיהו',
+            r'__IESHAIÁHU.*?ישעיהו__',
+            r'ישעיהו'
+        ],
+        'irmeiahu': [
+            r'IRMEIÁHU.*?ירמיהו',
+            r'__IRMEIÁHU.*?ירמיהו__',
+            r'ירמיהו'
+        ],
+        'iejezkel': [
+            r'IEJEZKEL.*?יחזקאל',
+            r'__IEJEZKEL.*?יחזקאל__',
+            r'יחזקאל'
+        ],
+        'hoshea': [
+            r'HOSHEA.*?הושע',
+            r'__HOSHEA.*?הושע__',
+            r'הושע'
+        ],
+        'ioel': [
+            r'IOEL.*?יואל',
+            r'__IOEL.*?יואל__',
+            r'יואל'
+        ],
+        'amos': [
+            r'AMÓS.*?עמוס',
+            r'__AMÓS.*?עמוס__',
+            r'עמוס'
+        ],
+        'ionah': [
+            r'IONAH.*?יונה',
+            r'__IONAH.*?יונה__',
+            r'יונה'
+        ],
+        'micah': [
+            r'MICAH.*?מיכה',
+            r'__MICAH.*?מיכה__',
+            r'מיכה'
+        ],
+        'najum': [
+            r'NAJUM.*?נחום',
+            r'__NAJUM.*?נחום__',
+            r'נחום'
+        ],
+        'jabakuk': [
+            r'JABAKUK.*?חבקוק',
+            r'__JABAKUK.*?חבקוק__',
+            r'חבקוק'
+        ],
+        'tzefaniah': [
+            r'TZEFANIAH.*?צפניה',
+            r'__TZEFANIAH.*?צפניה__',
+            r'צפניה'
+        ],
+        'jagai': [
+            r'JAGAI.*?חגי',
+            r'__JAGAI.*?חגי__',
+            r'חגי'
+        ],
+        'zejariah': [
+            r'ZEJARIAH.*?זכריה',
+            r'__ZEJARIAH.*?זכריה__',
+            r'זכריה'
+        ],
+        'malaji': [
+            r'MALAJI.*?מלאכי',
+            r'__MALAJI.*?מלאכי__',
+            r'מלאכי'
+        ],
+
+        # Ketuvim (Escritos)
+        'tehilim': [
+            r'KETUVIM\s*-\s*TEHILIM.*?תהלים',
+            r'TEHILIM.*?תהלים',
+            r'__KETUVIM\s*-\s*TEHILIM.*?תהלים__',
+            r'__TEHILIM.*?תהלים__',
+            r'תהלים'
+        ],
+        'mishlei': [
+            r'MISHLEI.*?משלי',
+            r'__MISHLEI.*?משלי__',
+            r'משלי'
+        ]
+    }
+
+    def find_book_boundaries(self, text: str, book_key: str) -> Tuple[int, int]:
+        """
+        Find the start and end line numbers for a specific book.
+
+        Args:
+            text: Complete document text
+            book_key: Book identifier (e.g., 'bereshit', 'shemot')
+
+        Returns:
+            Tuple of (start_line, end_line)
+        """
+        lines = text.split('\n')
+        book_info = BOOKS_INFO.get(book_key)
+        if not book_info:
+            raise ValueError(f"Book '{book_key}' not found in BOOKS_INFO")
+        patterns = book_info.get('patterns', [])
+
+        if not patterns:
+            raise ValueError(f"Book '{book_key}' not found in pattern definitions")
+
+        # Find book start
+        book_start = -1
+        for i, line in enumerate(lines):
+            line_stripped = line.strip()
+
+            # Skip empty lines
+            if not line_stripped:
+                continue
+
+            # Check if line is too long (likely not a title)
+            if len(line_stripped) > 200:
+                continue
+
+            # Check for TOC links (skip them)
+            if '](#' in line_stripped:
+                continue
+
+            # Check for actual book header first (highest priority)
+            if line_stripped.startswith('**') and re.search(r'\*\*IEHUDÁH.*?\*\*', line_stripped, re.IGNORECASE):
+                book_start = i
+                break
+
+            # Try each pattern for this book
+            for pattern in patterns:
+                if re.search(pattern, line_stripped, re.IGNORECASE):
+                    # Additional validation: should contain Hebrew text
+                    if re.search(r'[\u0590-\u05FF]', line_stripped):
+                        # Skip TOC entries (lines with tab characters or page numbers)
+                        if '\t' in line_stripped or re.search(r'\d{1,3}$', line_stripped.strip()):
+                            continue
+                        # For valid matches
+                        elif book_start == -1:
+                            book_start = i
+
+            if book_start != -1:
+                break
+
+        if book_start == -1:
+            raise ValueError(f"Could not find start of book '{book_key}'")
+
+        # Find book end (next book or document end)
+        book_end = len(lines)
+
+        # Get all other book keys to find the next one
+        other_books = [key for key in self.book_patterns.keys() if key != book_key]
+
+        for i in range(book_start + 1, len(lines)):
+            line = lines[i].strip()
+
+            # Skip empty lines and subtitles (but not book headers)
+            if not line or (re.match(r'^\*([^*]+)\*$', line) and not line.startswith('**')):
+                continue
+
+            # Check for book headers first (highest priority)
+            # Only check for book headers if the line looks like a title, not a verse
+            if (line.startswith('**') and len(line.split()) < 10 and
+                ('(' in line or 'SODOT' in line or 'IAACOB' in line)):
+                # This is likely a book header, check if it's another book
+                for other_book in other_books:
+                    if other_book in line.upper() or any(keyword in line.upper() for keyword in ['SODOT', 'IAACOB', 'APOCALIPSIS', 'SANTIAGO']):
+                        book_end = i
+                        break
+                if book_end != len(lines):
+                    break
+                continue
+
+            # Check if this is the start of another book using patterns
+            for other_book in other_books:
+                other_patterns = self.book_patterns[other_book]
+                for pattern in other_patterns:
+                    if re.search(pattern, line, re.IGNORECASE):
+                        # Additional validation
+                        if re.search(r'[\u0590-\u05FF]', line) or line.startswith('**'):
+                            # Only end if it's an actual book header, not TOC
+                            if line.strip().startswith('**') or '__' in line or ('\t' not in line and not re.search(r'\d{1,3}$', line.strip())):
+                                book_end = i
+                                break
+                if book_end != len(lines):
+                    break
+
+            if book_end != len(lines):
+                break
+
+        return book_start, book_end
+
+    def extract_footnotes_for_book(self, full_text: str, book_text: str) -> List[str]:
+        """
+        Extract footnote definitions that belong to this book.
+
+        Args:
+            full_text: Complete document text
+            book_text: Text of the specific book
+
+        Returns:
+            List of footnote definition lines
+        """
+        # Find all footnote references in book text
+        footnote_nums = set()
+        for match in re.finditer(r'\[\^(\d+)\]', book_text):
+            footnote_nums.add(int(match.group(1)))
+
+        if not footnote_nums:
+            return []
+
+        # Extract footnote definitions from full text
+        footnote_lines = []
+        lines = full_text.split('\n')
+
+        for line in lines:
+            footnote_match = re.match(r'\[\^(\d+)\]:\s*(.+)', line)
+            if footnote_match:
+                footnote_num = int(footnote_match.group(1))
+                if footnote_num in footnote_nums:
+                    footnote_lines.append(line)
+
+        return footnote_lines
+
+    def extract_book_section(self, text: str, book_key: str, verbose: bool = False) -> str:
+        """
+        Extract a specific book section from the complete document.
+
+        Args:
+            text: Complete document text
+            book_key: Book identifier
+            verbose: If True, print extraction message
+
+        Returns:
+            Extracted book text with footnotes
+        """
+        # Find book boundaries
+        start_line, end_line = self.find_book_boundaries(text, book_key)
+        lines = text.split('\n')
+
+        # Extract book content
+        book_lines = lines[start_line:end_line]
+        book_text = '\n'.join(book_lines)
+
+        # Extract associated footnotes
+        footnote_lines = self.extract_footnotes_for_book(text, book_text)
+
+        # Combine book content and footnotes
+        result_lines = book_lines.copy()
+
+        if footnote_lines:
+            result_lines.extend(["", "## Footnotes"])
+            result_lines.extend(footnote_lines)
+
+        return '\n'.join(result_lines)
+
+    def split_complete_markdown(self, input_file: str, output_dir: str, books_to_extract: Optional[List[str]] = None, verbose: bool = True) -> Dict[str, str]:
+        """
+        Split a complete markdown file into individual per-book files.
+
+        Args:
+            input_file: Path to complete markdown file
+            output_dir: Directory to save individual book files
+            books_to_extract: List of specific books to extract (None = all available)
+            verbose: If True, print extraction messages. If False, suppress output.
+
+        Returns:
+            Dictionary mapping book keys to their output file paths
+        """
+        # Read the complete markdown
+        with open(input_file, 'r', encoding='utf-8') as f:
+            text = f.read()
+
+        # Determine which books to extract
+        if books_to_extract is None:
+            books_to_extract = list(self.book_patterns.keys())
+
+        # Create output directory
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+
+        extracted_books = {}
+
+        for book_key in books_to_extract:
+            try:
+                # Extract book content
+                book_text = self.extract_book_section(text, book_key, verbose=False)
+
+                # Save to individual file
+                output_file = output_path / f"{book_key}.md"
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    f.write(book_text)
+
+                extracted_books[book_key] = str(output_file)
+                if verbose:
+                    print(f"  ✓ {book_key}")
+
+            except ValueError:
+                # Silently skip books not found in this document
+                continue
+
+        return extracted_books
+
+    def get_available_books(self) -> List[str]:
+        """
+        Get list of all available book keys.
+
+        Returns:
+            List of book identifiers
+        """
+        return list(BOOKS_INFO.keys())
+
+
+def split_markdown(input_file: str, output_dir: str, books_to_extract: Optional[List[str]] = None) -> Dict[str, str]:
+    """
+    Convenience function to split a markdown file into per-book files.
+
+    Args:
+        input_file: Path to complete markdown file
+        output_dir: Directory to save individual book files
+        books_to_extract: List of specific books to extract (None = all)
+
+    Returns:
+        Dictionary mapping book keys to their output file paths
+    """
+    splitter = TTH2BookSplitter()
+    return splitter.split_complete_markdown(input_file, output_dir, books_to_extract)

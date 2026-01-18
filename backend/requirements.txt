@@ -1,0 +1,16 @@
+# Davar FastAPI Backend Requirements
+# Minimal dependencies for the FastAPI backend
+
+# Core FastAPI framework
+fastapi>=0.103.0
+uvicorn[standard]>=0.23.0
+
+# Data validation and parsing
+pydantic>=2.3.0
+pydantic-settings>=2.0.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Rate limiting middleware
+slowapi>=0.1.8
