@@ -181,7 +181,7 @@ export function VerseDisplay({
 
   // Otherwise show the single verse view
   return (
-    <div className="space-y-8 relative">
+    <div className="space-y-10 relative">
       {/* Animated Swipe Indicators - TikTok/YouTube Shorts style */}
       <VerticalSwipeIndicators 
         showUpIndicator={!!previousVerseSnippet} 
@@ -189,7 +189,7 @@ export function VerseDisplay({
       />
 
       {/* Book Name & Chapter - Neumorphic CTA */}
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex justify-center items-center gap-2 -mt-8">
         <button
           onClick={onBookNameClick}
           className="bg-[var(--neomorph-bg)] border border-[var(--neomorph-border)] rounded-full px-5 py-2.5 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[4px_4px_12px_var(--neomorph-shadow-dark),-4px_-4px_12px_var(--neomorph-shadow-light)] hover:shadow-[2px_2px_8px_var(--neomorph-shadow-dark),-2px_-2px_8px_var(--neomorph-shadow-light)] active:shadow-[inset_2px_2px_6px_var(--neomorph-inset-shadow-dark),inset_-2px_-2px_6px_var(--neomorph-inset-shadow-light)]"
@@ -266,7 +266,7 @@ export function VerseDisplay({
         className="text-center leading-[2] tracking-[0.01em] relative"
         style={{ 
           fontFamily: "'Cardo', serif",
-          fontSize: '42px',
+          fontSize: '48px',
           direction: 'rtl',
           color: 'var(--text-hebrew)',
         }}
