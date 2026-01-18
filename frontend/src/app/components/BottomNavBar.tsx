@@ -9,19 +9,19 @@ interface BottomNavBarProps {
 
 export function BottomNavBar({ onHomeClick, onChapterVerseClick, onSettingsClick }: BottomNavBarProps) {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-30">
+    <div className="fixed bottom-0 left-0 right-0 z-30 pointer-events-none bg-[var(--background)]">
       <div className="max-w-md mx-auto px-6 pb-6">
         <nav 
-          className="relative rounded-full p-2 bg-[var(--background)]"
+          className="relative rounded-full p-2 pointer-events-auto"
         >
-          <div className="relative flex items-center justify-around">
+          <div className="relative flex items-center justify-around pt-2">
             {/* Home Button (Left) */}
             <button
               onClick={onHomeClick}
-              className="p-4 rounded-full hover:bg-[var(--muted)] transition-all hover:scale-110 active:scale-95"
+              className="p-4 rounded-full bg-[var(--background)] hover:bg-[var(--muted)] transition-all hover:scale-110 active:scale-95"
               aria-label="Home"
             >
-              <Home className="w-5 h-5 text-[var(--text-secondary)]" />
+              <Home className="w-6 h-6 text-[var(--text-secondary)]" />
             </button>
 
             {/* Main Action Button - Tekhelet ACCENT ONLY */}
@@ -38,10 +38,10 @@ export function BottomNavBar({ onHomeClick, onChapterVerseClick, onSettingsClick
             {/* Settings Button (Right) */}
             <button
               onClick={onSettingsClick}
-              className="p-4 rounded-full hover:bg-[var(--muted)] transition-all hover:scale-110 active:scale-95"
+              className="p-4 rounded-full bg-[var(--background)] hover:bg-[var(--muted)] transition-all hover:scale-110 active:scale-95"
               aria-label="Settings"
             >
-              <Settings className="w-5 h-5 text-[var(--text-secondary)]" />
+              <Settings className="w-6 h-6 text-[var(--text-secondary)]" />
             </button>
           </div>
         </nav>
