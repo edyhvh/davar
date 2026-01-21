@@ -2,7 +2,7 @@
 Lexicon API routes
 """
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from app.api.deps import require_api_key
 from app.services.lexicon import LexiconService
 from app.data_loaders import dictionary_loader
@@ -13,17 +13,42 @@ router = APIRouter()
 # Initialize service with dependencies
 lexicon_service = LexiconService(dictionary_loader)
 
+
 @router.get("/lexicon/{strong}", response_model=LexiconResponse)
-async def get_lexicon_entry(strong: str, api_key: str = Depends(require_api_key)):
+async def get_lexicon_entry(
+    strong: str, 
+    language: str = Query(None, description="Language filter ('en' or 'es')"),
+    api_key: str = Depends(require_api_key)
+):
     """
     Get lexicon entry for a Strong's number with custom definitions priority
     """
     try:
-        entry = lexicon_service.get_lexicon_entry(strong)
+        entry = lexicon_service.get_lexicon_entry(strong, language)
         if entry is None:
-            raise HTTPException(status_code=404, detail=f"Strong number '{strong}' not found")
+            raise HTTPException(
+                status_code=404, detail=f"Strong number '{strong}' not found")
         return entry
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error retrieving lexicon entry: {str(e)}")
+        raise HTTPException(
+            status_code=500, detail=f"Error retrieving lexicon entry: {str(e)}")
+
+
+@router.get("/search", response_model=list[LexiconResponse])
+async def search_lexicon(
+    q: str = Query(..., min_length=1,
+                   description="Search query (Hebrew or transliteration)"),
+    limit: int = Query(
+        50, ge=1, le=200, description="Number of results to return"),
+    offset: int = Query(0, ge=0, description="Results offset for pagination"),
+    api_key: str = Depends(require_api_key)
+):
+    """Search lexicon entries with basic pagination"""
+    try:
+        results = lexicon_service.search_lexicon(q, limit=limit, offset=offset)
+        return results
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, detail=f"Error searching lexicon: {str(e)}")

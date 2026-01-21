@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { NeumorphCard } from './NeumorphCard';
+import { getBooks } from '../services/verseService';
 
 interface BookSelectorProps {
   currentBook: string;
@@ -9,32 +10,43 @@ interface BookSelectorProps {
   language: 'en' | 'es' | 'he';
 }
 
-const booksData = [
-  { en: 'Genesis', es: 'Génesis', he: 'בראשית' },
-  { en: 'Exodus', es: 'Éxodo', he: 'שמות' },
-  { en: 'Leviticus', es: 'Levítico', he: 'ויקרא' },
-  { en: 'Numbers', es: 'Números', he: 'במדבר' },
-  { en: 'Deuteronomy', es: 'Deuteronomio', he: 'דברים' },
-  { en: 'Joshua', es: 'Josué', he: 'יהושע' },
-  { en: 'Judges', es: 'Jueces', he: 'שופטים' },
-  { en: 'Ruth', es: 'Rut', he: 'רות' },
-  { en: 'Samuel', es: 'Samuel', he: 'שמואל' },
-  { en: 'Kings', es: 'Reyes', he: 'מלכים' },
-  { en: 'Isaiah', es: 'Isaías', he: 'ישעיהו' },
-  { en: 'Jeremiah', es: 'Jeremías', he: 'ירמיהו' },
-  { en: 'Ezekiel', es: 'Ezequiel', he: 'יחזקאל' },
-  { en: 'Hosea', es: 'Oseas', he: 'הושע' },
-  { en: 'Joel', es: 'Joel', he: 'יואל' },
-  { en: 'Psalms', es: 'Salmos', he: 'תהלים' },
-  { en: 'Proverbs', es: 'Proverbios', he: 'משלי' },
-  { en: 'Job', es: 'Job', he: 'איוב' },
-  { en: 'Song of Songs', es: 'Cantar de los Cantares', he: 'שיר השירים' },
-  { en: 'Ecclesiastes', es: 'Eclesiastés', he: 'קהלת' },
-];
+interface BookResponse {
+  id: string;
+  name: string;
+  section: string;
+  chapters: number;
+  order: number;
+  hebrew_name: string;
+  hebrew_transliteration: string;
+  spanish_name: string;
+}
 
 export function BookSelector({ currentBook, onBookSelect, onClose, language }: BookSelectorProps) {
-  return (
-    <div className="fixed inset-0 z-50 bg-[var(--background)]">
+  const [books, setBooks] = useState<BookResponse[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const booksData = await getBooks();
+        setBooks(booksData);
+      } catch (error) {
+        console.error('Failed to fetch books:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBooks();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 z-50 bg-[var(--background)] flex items-center justify-center">
+        <div className="text-[var(--text-primary)]">Loading books...</div>
+      </div>
+    );
+  }
       {/* Header with neumorphic styling */}
       <div className="sticky top-0 z-10 bg-[var(--neomorph-bg)] border-b border-[var(--neomorph-border)] shadow-[6px_6px_16px_var(--neomorph-shadow-dark),-6px_-6px_16px_var(--neomorph-shadow-light)]">
         <div className="relative max-w-md mx-auto px-6 py-5 flex items-center justify-between">
@@ -62,17 +74,19 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
       {/* Book Grid */}
       <div className="max-w-md mx-auto px-6 py-6">
         <div className="space-y-3 pb-24">
-          {booksData.map((book) => {
-            const isSelected = book.en === currentBook;
+          {books.map((book) => {
+            const isSelected = book.name === currentBook;
+            const displayName = language === 'es' ? book.spanish_name : book.name;
+            const hebrewDisplay = language === 'he' ? book.hebrew_name : book.hebrew_transliteration;
             return (
               <NeumorphCard
-                key={book.en}
+                key={book.id}
                 hoverable
                 className={`w-full p-6 rounded-2xl transition-all text-left ${
                   isSelected ? 'border-2 border-[var(--accent)]' : ''
                 }`}
                 onClick={() => {
-                  onBookSelect(book.en);
+                  onBookSelect(book.name);
                   onClose();
                 }}
               >
@@ -82,20 +96,20 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
                       className="text-lg font-medium mb-1 text-[var(--foreground)]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      {book.en.toUpperCase()}
+                      {book.name.toUpperCase()}
                     </div>
                     <div 
                       className="text-sm text-[var(--text-secondary)]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      {language === 'es' ? book.es : book.en}
+                      {displayName}
                     </div>
                   </div>
                   <div 
                     className="text-2xl text-[var(--text-hebrew)]"
                     style={{ fontFamily: "'Arimo', sans-serif" }}
                   >
-                    {book.he}
+                    {hebrewDisplay}
                   </div>
                 </div>
               </NeumorphCard>

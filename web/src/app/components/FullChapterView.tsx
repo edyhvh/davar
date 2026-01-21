@@ -1,5 +1,6 @@
 import React from 'react';
 import type { DssVariant, VerseResponse, WordResponse } from '../services/verseService';
+import { parseHebrewWord, stripNikud, stripCantillation } from '../utils/hebrew';
 
 interface FullChapterViewProps {
   verses: VerseResponse[];
@@ -11,6 +12,8 @@ interface FullChapterViewProps {
   onWordClick: (word: WordResponse) => void;
   showQumran?: boolean;
   selectedWord?: string | null;
+  showNikud?: boolean;
+  showCantillation?: boolean;
 }
 
 export function FullChapterView({
@@ -23,6 +26,8 @@ export function FullChapterView({
   onWordClick,
   showQumran,
   selectedWord,
+  showNikud = true,
+  showCantillation = true,
 }: FullChapterViewProps) {
   return (
     <div className="space-y-6 transition-all duration-500">
@@ -72,17 +77,47 @@ export function FullChapterView({
 
                 return verse.words.map((word, wordIdx) => {
                   const variantText = showQumran ? dssMap.get(word.position) : undefined;
-                const displayText = variantText ?? word.text;
-                const isSelected = selectedWord === word.text || selectedWord === displayText;
+                  const rawText = variantText ?? word.text;
+
+                  // Apply nikud and cantillation settings
+                  let displayText = rawText;
+                  if (!showNikud) {
+                    displayText = stripNikud(displayText);
+                  }
+                  if (!showCantillation) {
+                    displayText = stripCantillation(displayText);
+                  }
+
+                  const isSelected = selectedWord === word.text || selectedWord === displayText;
+
+                  // Parse word for prefix visualization
+                  const parsedWord = parseHebrewWord(displayText);
 
                   return (
                     <span key={word.position}>
-                      <span 
-                        onClick={() => onWordClick(word)} 
+                      <span
+                        onClick={() => onWordClick(word)}
                         className={`cursor-pointer transition-colors duration-200 ${isSelected ? 'verse-highlight' : ''}`}
                         style={variantText ? { color: 'var(--copper-highlight)' } : undefined}
                       >
-                        {displayText}
+                        {parsedWord.prefix ? (
+                          <>
+                            <span
+                              style={{ color: 'var(--accent)' }}
+                              className="cursor-pointer hover:opacity-80"
+                              title={`Prefix: ${parsedWord.prefix.particle}`}
+                            >
+                              {parsedWord.prefix.text}
+                            </span>
+                            <span
+                              style={{ color: 'var(--text-hebrew)' }}
+                            >
+                              {parsedWord.root}
+                            </span>
+                          </>
+                        ) : (
+                          displayText
+                        )}
                       </span>
                       {wordIdx < verse.words.length - 1 && ' '}
                     </span>

@@ -6,19 +6,28 @@ Loads Hebrew text from Open English (OE) JSON files
 import os
 from typing import Dict, List, Any, Optional
 from pathlib import Path
-from . import DataLoader
+from .base import DataLoader
 
 
 class TanajLoader(DataLoader):
     """Loader for Tanaj Hebrew text from OE data"""
 
-    def __init__(self, data_path: str = None):
+    def __init__(self, data_path: Optional[str] = None):
         super().__init__(data_path)
         self.oe_path = self.data_path / "oe"
+        self.oe_aliases = {
+            "samuel1": "isamuel",
+            "samuel2": "iisamuel",
+            "kings1": "ikings",
+            "kings2": "iikings",
+            "chronicles1": "ichronicles",
+            "chronicles2": "iichronicles"
+        }
 
     def get_book_chapters(self, book_name: str) -> List[int]:
         """Get list of available chapters for a book"""
-        book_path = self.oe_path / book_name
+        resolved_name = self._resolve_book_name(book_name)
+        book_path = self.oe_path / resolved_name
         if not book_path.exists():
             return []
 
@@ -33,11 +42,12 @@ class TanajLoader(DataLoader):
 
     def load_chapter(self, book_name: str, chapter: int) -> List[Dict[str, Any]]:
         """Load all verses for a specific book chapter"""
-        cache_key = f"oe_{book_name}_{chapter}"
+        resolved_name = self._resolve_book_name(book_name)
+        cache_key = f"oe_{resolved_name}_{chapter}"
         if cache_key in self._cache:
             return self._cache[cache_key]
 
-        file_path = f"oe/{book_name}/{chapter}.json"
+        file_path = f"oe/{resolved_name}/{chapter}.json"
         try:
             verses = self.load_json(file_path)
             self._cache[cache_key] = verses
@@ -93,22 +103,38 @@ class TanajLoader(DataLoader):
         """Load all verses for a specific book chapter"""
         return self.load_chapter(book_name, chapter)
 
+    def _resolve_book_name(self, book_name: str) -> str:
+        """Resolve canonical book name to OE folder name"""
+        normalized = book_name.lower()
+        if (self.oe_path / normalized).exists():
+            return normalized
+        alias = self.oe_aliases.get(normalized)
+        if alias and (self.oe_path / alias).exists():
+            return alias
+        return normalized
+
     def _get_book_section(self, book_name: str) -> str:
         """Map book name to section (torah, neviim, ketuvim)"""
-        torah_books = ['genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy']
-        neviim_books = ['joshua', 'judges', 'samuel1', 'samuel2', 'kings1', 'kings2',
-                       'isaiah', 'jeremiah', 'ezekiel', 'hosea', 'joel', 'amos',
-                       'obadiah', 'jonah', 'micah', 'nahum', 'habakkuk', 'zephaniah',
-                       'haggai', 'zechariah', 'malachi']
-        ketuvim_books = ['psalms', 'proverbs', 'job', 'songofsolomon', 'ruth',
-                        'lamentations', 'ecclesiastes', 'esther', 'daniel', 'ezra',
-                        'nehemiah', 'chronicles1', 'chronicles2']
+        canonical = self._resolve_book_name(book_name)
+        if canonical in self.oe_aliases.values():
+            canonical = {v: k for k, v in self.oe_aliases.items()}.get(
+                canonical, canonical)
 
-        if book_name in torah_books:
+        torah_books = ['genesis', 'exodus',
+                       'leviticus', 'numbers', 'deuteronomy']
+        neviim_books = ['joshua', 'judges', 'samuel1', 'samuel2', 'kings1', 'kings2',
+                        'isaiah', 'jeremiah', 'ezekiel', 'hosea', 'joel', 'amos',
+                        'obadiah', 'jonah', 'micah', 'nahum', 'habakkuk', 'zephaniah',
+                        'haggai', 'zechariah', 'malachi']
+        ketuvim_books = ['psalms', 'proverbs', 'job', 'songofsolomon', 'ruth',
+                         'lamentations', 'ecclesiastes', 'esther', 'daniel', 'ezra',
+                         'nehemiah', 'chronicles1', 'chronicles2']
+
+        if canonical in torah_books:
             return 'torah'
-        elif book_name in neviim_books:
+        elif canonical in neviim_books:
             return 'neviim'
-        elif book_name in ketuvim_books:
+        elif canonical in ketuvim_books:
             return 'ketuvim'
         else:
             return 'unknown'

@@ -1,5 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { FlatList, StyleSheet, View, useWindowDimensions } from "react-native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+  useWindowDimensions,
+} from "react-native";
 import {
   SafeAreaView,
   useSafeAreaInsets,
@@ -15,11 +21,11 @@ import { WordAnalysisBottomSheet } from "@/src/components/WordAnalysisBottomShee
 import { NavigationSheet } from "@/src/components/NavigationSheet";
 import { BookChapterPill } from "@/src/components/ui/BookChapterPill";
 import { getColors, spacing } from "@/src/theme";
+import { mockBooks } from "@/src/constants/mockData";
 import {
-  getMockVerseById,
-  mockBooks,
-  mockVerses,
-} from "@/src/constants/mockData";
+  fetchChapterVerses,
+  type DisplayVerse,
+} from "@/src/services/scripture";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 
 type TabPressEvent = {
@@ -63,22 +69,38 @@ export const VerseDetailContent = () => {
   const setCurrentVerseId = useAppStore(
     (state: AppState) => state.setCurrentVerseId,
   );
+  const language = useAppStore((state: AppState) => state.language);
+  const showQumran = useAppStore((state: AppState) => state.showQumran);
+  const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
   const verseId = (params.id as string) ?? currentVerseId;
-  const verse = getMockVerseById(verseId) ?? mockVerses[0];
+  const [chapterVerses, setChapterVerses] = useState<DisplayVerse[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const parseVerseId = (id: string) => {
+    const [bookId, chapterValue, verseValue] = id.split("-");
+    return {
+      bookId,
+      chapter: Number(chapterValue || 1),
+      verse: Number(verseValue || 1),
+    };
+  };
+
+  const { bookId, chapter, verse: verseNumber } = parseVerseId(verseId);
+  const verse =
+    chapterVerses.find((item) => item.verse === verseNumber) ??
+    chapterVerses[0];
   const bookMeta = useMemo(
     () =>
-      mockBooks.find((book) => book.id === verse.bookId) ?? {
-        id: verse.bookId,
-        name: verse.book,
-        hebrewName: verse.book,
+      mockBooks.find((book) => book.id === (verse?.bookId ?? bookId)) ?? {
+        id: verse?.bookId ?? bookId,
+        name: verse?.book ?? bookId,
+        hebrewName: verse?.book ?? bookId,
       },
-    [verse.book, verse.bookId],
+    [bookId, verse?.book, verse?.bookId],
   );
 
-  const bookVerses = useMemo(
-    () => mockVerses.filter((item) => item.bookId === verse.bookId),
-    [verse.bookId],
-  );
+  const bookVerses = useMemo(() => chapterVerses, [chapterVerses]);
   const orderedVerses = useMemo(
     () =>
       [...bookVerses].sort(
@@ -87,8 +109,8 @@ export const VerseDetailContent = () => {
     [bookVerses],
   );
   const currentIndex = useMemo(
-    () => orderedVerses.findIndex((item) => item.id === verse.id),
-    [orderedVerses, verse.id],
+    () => (verse ? orderedVerses.findIndex((item) => item.id === verse.id) : 0),
+    [orderedVerses, verse],
   );
 
   const [showWordHint, setShowWordHint] = useState(false);
@@ -109,8 +131,8 @@ export const VerseDetailContent = () => {
   const sheetRef = useRef<BottomSheet>(null);
   const navigationSheetRef = useRef<BottomSheet>(null);
   const [selectedWord, setSelectedWord] = useState<
-    (typeof verse.words)[number] | null
-  >(() => verse.words?.[0] || null);
+    (typeof orderedVerses)[number]["words"][number] | null
+  >(() => orderedVerses[0]?.words?.[0] || null);
 
   // Listen for tab press to open navigation sheet
   const navigation = useNavigation<BottomTabNavigationProp<ParamListBase>>();
@@ -129,7 +151,7 @@ export const VerseDetailContent = () => {
   }, [navigation]);
 
   useEffect(() => {
-    setSelectedWord(verse.words?.[0] || null);
+    setSelectedWord(verse?.words?.[0] || null);
   }, [verse]);
 
   useEffect(() => {
@@ -138,35 +160,55 @@ export const VerseDetailContent = () => {
   }, []);
 
   const handleNavigationSelect = useCallback(
-    (bookId: string, chapter: number, verseNum: number) => {
-      // Find the verse in the ordered list
-      const allBookVerses = mockVerses.filter((v) => v.bookId === bookId);
-      const targetVerse = allBookVerses.find(
-        (v) => v.chapter === chapter && v.verse === verseNum,
-      );
-      if (targetVerse) {
-        setCurrentVerseId(targetVerse.id);
-        // If same book, scroll to it
-        if (bookId === verse.bookId) {
-          const nextIndex = orderedVerses.findIndex(
-            (item) => item.id === targetVerse.id,
-          );
-          if (nextIndex >= 0) {
-            listRef.current?.scrollToIndex({
-              index: nextIndex,
-              animated: true,
-            });
-          }
+    (nextBookId: string, nextChapter: number, verseNum: number) => {
+      const targetId = `${nextBookId}-${nextChapter}-${verseNum}`;
+      setCurrentVerseId(targetId);
+      if (nextBookId === bookId && nextChapter === chapter) {
+        const nextIndex = orderedVerses.findIndex(
+          (item) => item.verse === verseNum,
+        );
+        if (nextIndex >= 0) {
+          listRef.current?.scrollToIndex({
+            index: nextIndex,
+            animated: true,
+          });
         }
       }
     },
-    [orderedVerses, setCurrentVerseId, verse.bookId],
+    [orderedVerses, setCurrentVerseId, bookId, chapter],
   );
 
   const handleWordPress = useCallback((word: typeof selectedWord) => {
     setSelectedWord(word);
     sheetRef.current?.expand();
   }, []);
+
+  useEffect(() => {
+    let isMounted = true;
+    const loadVerses = async () => {
+      if (!bookId) return;
+      setIsLoading(true);
+      setErrorMessage(null);
+      try {
+        const verses = await fetchChapterVerses(bookId, chapter, {
+          language: language === "he" ? undefined : language,
+          showDss: showQumran,
+          hebrewOnly,
+        });
+        if (!isMounted) return;
+        setChapterVerses(verses);
+      } catch (error) {
+        if (!isMounted) return;
+        setErrorMessage("Unable to load verses.");
+      } finally {
+        if (isMounted) setIsLoading(false);
+      }
+    };
+    loadVerses();
+    return () => {
+      isMounted = false;
+    };
+  }, [bookId, chapter, language, showQumran, hebrewOnly]);
 
   return (
     <>
@@ -176,11 +218,33 @@ export const VerseDetailContent = () => {
             <BookChapterPill
               bookLabel={bookMeta.name}
               hebrewLabel={bookMeta.hebrewName}
-              chapter={verse.chapter}
+              chapter={verse?.chapter ?? chapter}
               onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
               onChapterPress={() => navigationSheetRef.current?.snapToIndex(0)}
             />
           </View>
+          {isLoading ? (
+            <View
+              style={{ paddingHorizontal: spacing[6], paddingTop: spacing[12] }}
+            >
+              <Text
+                style={{ textAlign: "center", color: colors.textSecondary }}
+              >
+                Loading verses...
+              </Text>
+            </View>
+          ) : null}
+          {errorMessage ? (
+            <View
+              style={{ paddingHorizontal: spacing[6], paddingTop: spacing[12] }}
+            >
+              <Text
+                style={{ textAlign: "center", color: colors.textSecondary }}
+              >
+                {errorMessage}
+              </Text>
+            </View>
+          ) : null}
           <FlatList
             ref={listRef}
             data={orderedVerses}
@@ -198,7 +262,7 @@ export const VerseDetailContent = () => {
                   <VerseCard
                     verse={item}
                     variant="detail"
-                    showWordHint={showWordHint && item.id === verse.id}
+                    showWordHint={showWordHint && item.id === verse?.id}
                     onVersePress={() =>
                       navigationSheetRef.current?.snapToIndex(0)
                     }
@@ -230,9 +294,9 @@ export const VerseDetailContent = () => {
       />
       <NavigationSheet
         sheetRef={navigationSheetRef}
-        currentBookId={verse.bookId}
-        currentChapter={verse.chapter}
-        currentVerse={verse.verse}
+        currentBookId={verse?.bookId ?? bookId}
+        currentChapter={verse?.chapter ?? chapter}
+        currentVerse={verse?.verse ?? verseNumber}
         onSelectVerse={handleNavigationSelect}
       />
     </>

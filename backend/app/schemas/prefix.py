@@ -2,14 +2,15 @@
 Prefix-related schemas for API responses
 """
 
-from pydantic import BaseModel
-from typing import List, Optional
+from pydantic import BaseModel, Field
+from typing import Dict, List, Optional
 
 
 class PrefixResponse(BaseModel):
     """Response model for prefix data"""
     id: str
-    hebrew: Optional[str] = None
-    meanings_en: List[str] = []
-    meanings_es: List[str] = []
-    examples: Optional[List[str]] = None
+    main_form: Optional[str] = None
+    type: Optional[str] = None
+    meanings: Dict[str, List[str]] = Field(default_factory=dict)
+    forms: List[str] = Field(default_factory=list)
+    notes: Optional[Dict[str, str]] = None

@@ -1,6 +1,7 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import * as FileSystem from "expo-file-system";
 
 import { AppIcon } from "@/src/components/ui/AppIcon";
 import { PillToggle } from "@/src/components/ui/PillToggle";
@@ -110,6 +111,33 @@ export default function SettingsScreen() {
   const setShowNikud = useAppStore((state: AppState) => state.setShowNikud);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const [offlineStatus, setOfflineStatus] = useState({
+    dictionary: false,
+    english: false,
+    spanish: false,
+  });
+
+  useEffect(() => {
+    const loadStatus = async () => {
+      const basePath = `${FileSystem.documentDirectory}offline`;
+      const dictionary = await FileSystem.getInfoAsync(
+        `${basePath}/dictionary.json`,
+      );
+      const english = await FileSystem.getInfoAsync(
+        `${basePath}/translations-en.json`,
+      );
+      const spanish = await FileSystem.getInfoAsync(
+        `${basePath}/translations-es.json`,
+      );
+
+      setOfflineStatus({
+        dictionary: dictionary.exists,
+        english: english.exists,
+        spanish: spanish.exists,
+      });
+    };
+    loadStatus();
+  }, []);
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
@@ -134,6 +162,52 @@ export default function SettingsScreen() {
             </View>
           </View>
           <PillToggle value={themeMode === "dark"} onChange={toggleThemeMode} />
+        </View>
+
+        <View style={styles.divider} />
+
+        <Text style={styles.sectionTitle}>Offline</Text>
+
+        <View style={styles.row}>
+          <View style={styles.rowContent}>
+            <View style={styles.iconContainer}>
+              <AppIcon name="download" size={18} color={colors.textSecondary} />
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.label}>Dictionary</Text>
+              <Text style={styles.subtitle}>
+                {offlineStatus.dictionary ? "Downloaded" : "Not downloaded"}
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View style={styles.row}>
+          <View style={styles.rowContent}>
+            <View style={styles.iconContainer}>
+              <AppIcon name="language" size={18} color={colors.textSecondary} />
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.label}>English Translation</Text>
+              <Text style={styles.subtitle}>
+                {offlineStatus.english ? "Downloaded" : "Not downloaded"}
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View style={styles.row}>
+          <View style={styles.rowContent}>
+            <View style={styles.iconContainer}>
+              <AppIcon name="language" size={18} color={colors.textSecondary} />
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.label}>Spanish Translation</Text>
+              <Text style={styles.subtitle}>
+                {offlineStatus.spanish ? "Downloaded" : "Not downloaded"}
+              </Text>
+            </View>
+          </View>
         </View>
 
         <View style={styles.divider} />

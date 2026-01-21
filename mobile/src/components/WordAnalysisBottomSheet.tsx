@@ -1,19 +1,46 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
-  BottomSheetView,
+  BottomSheetScrollView,
   type BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
 import { router } from "expo-router";
 
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
-import type { MockWord } from "@/src/constants/mockData";
+import type { DisplayWord } from "@/src/services/scripture";
+import {
+  stripCantillation,
+  stripNikud,
+  normalizeHebrew,
+} from "@/src/utils/hebrew";
+import { apiRequest } from "@/src/services/api";
+import type { LexiconResponse } from "@/src/types/api";
+
+type PrefixResponse = {
+  id: string;
+  main_form?: string;
+  type?: string;
+  meanings?: Record<string, string[]>;
+  forms?: string[];
+  notes?: Record<string, string>;
+};
 
 type WordAnalysisBottomSheetProps = {
   sheetRef: React.RefObject<BottomSheet | null>;
-  word?: MockWord | null;
+  word?:
+    | (DisplayWord & {
+        meanings?: string[];
+        gloss?: string;
+        root?: string;
+        rootTransliteration?: string;
+        rootMeaning?: string;
+        instances?: { verse: string; text: string }[];
+        transliteration?: string;
+        strong?: string;
+      })
+    | null;
   onClose?: () => void;
 };
 
@@ -55,6 +82,13 @@ const createStyles = (
       color: colors.textSecondary,
       textTransform: "uppercase",
       letterSpacing: 2,
+      marginTop: spacing[1],
+    },
+    occurrencesText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.caption,
+      color: colors.textSecondary,
+      textAlign: "center",
       marginTop: spacing[1],
     },
     toggleContainer: {
@@ -102,6 +136,18 @@ const createStyles = (
       color: colors.textPrimary,
       textAlign: "center",
       lineHeight: 28,
+    },
+    meaningsList: {
+      alignItems: "center",
+      marginBottom: spacing[4],
+    },
+    meaningsBullet: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.h3,
+      color: colors.textPrimary,
+      textAlign: "center",
+      lineHeight: 28,
+      marginBottom: spacing[2],
     },
     rootSection: {
       marginTop: spacing[8],
@@ -155,12 +201,38 @@ const createStyles = (
       color: colors.textPrimary,
       fontWeight: "500",
     },
+    showMoreButton: {
+      paddingVertical: spacing[2],
+      paddingHorizontal: spacing[3],
+      borderRadius: radii.full,
+      backgroundColor: colors.background,
+      borderWidth: 1,
+      borderColor: colors.border,
+      alignItems: "center",
+    },
+    showMoreText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.bodySmall,
+      color: colors.primary,
+      fontWeight: "600",
+    },
     emptyText: {
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.body,
       color: colors.textSecondary,
       textAlign: "center",
       fontStyle: "italic",
+    },
+    prefixesSection: {
+      marginTop: spacing[6],
+      alignItems: "center",
+    },
+    prefixText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      color: colors.textPrimary,
+      textAlign: "center",
+      marginTop: spacing[1],
     },
   });
 
@@ -257,12 +329,87 @@ export const WordAnalysisBottomSheet = ({
   const hebrewFontScale = useAppStore(
     (state: AppState) => state.hebrewFontScale,
   );
+  const language = useAppStore((state: AppState) => state.language);
   const colors = getColors(themeMode);
   const styles = useMemo(
     () => createStyles(colors, hebrewFontScale),
     [colors, hebrewFontScale],
   );
   const [activeTab, setActiveTab] = useState<TabType>("meanings");
+  const [lexiconEntry, setLexiconEntry] = useState<LexiconResponse | null>(
+    null,
+  );
+  const [isLoading, setIsLoading] = useState(false);
+  const [showAllInstances, setShowAllInstances] = useState(false);
+  const [prefixEntries, setPrefixEntries] = useState<
+    Record<string, PrefixResponse | null>
+  >({});
+
+  const strongNumber = useMemo(() => {
+    if (!word?.strong) return null;
+    const parts = word.strong.split("/").map((part) => part.trim());
+    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
+    return strongPart ?? null;
+  }, [word?.strong]);
+
+  const displayHebrew = useMemo(() => {
+    const base = word?.text ?? lexiconEntry?.hebrew ?? "—";
+    return normalizeHebrew(base).replace(/\//g, "");
+  }, [lexiconEntry?.hebrew, word?.text]);
+
+  useEffect(() => {
+    const loadLexicon = async () => {
+      if (!strongNumber) {
+        setLexiconEntry(null);
+        return;
+      }
+      setIsLoading(true);
+      try {
+        const url =
+          language === "he"
+            ? `/api/v1/lexicon/${strongNumber}`
+            : `/api/v1/lexicon/${strongNumber}?language=${language}`;
+        const entry = await apiRequest<LexiconResponse>(url);
+        setLexiconEntry(entry);
+      } catch {
+        setLexiconEntry(null);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadLexicon();
+  }, [strongNumber, language]);
+
+  useEffect(() => {
+    setShowAllInstances(false);
+  }, [strongNumber]);
+
+  useEffect(() => {
+    const loadPrefixes = async () => {
+      if (!word?.prefixes?.length) {
+        setPrefixEntries({});
+        return;
+      }
+
+      const entries: Record<string, PrefixResponse | null> = {};
+      await Promise.all(
+        word.prefixes.map(async (prefixId) => {
+          try {
+            const entry = await apiRequest<PrefixResponse>(
+              `/api/v1/prefixes/${prefixId}`,
+            );
+            entries[prefixId] = entry;
+          } catch {
+            entries[prefixId] = null;
+          }
+        }),
+      );
+
+      setPrefixEntries(entries);
+    };
+
+    loadPrefixes();
+  }, [word?.prefixes]);
 
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
@@ -287,36 +434,90 @@ export const WordAnalysisBottomSheet = ({
     [onClose],
   );
 
-  const meaningsText = useMemo(() => {
-    if (!word) return "—";
-    const meanings = word.meanings?.length ? word.meanings : [word.gloss];
-    return meanings.filter(Boolean).join(", ") || "—";
-  }, [word]);
+  const meaningsList = useMemo(() => {
+    const normalizeForDisplay = (t: string) =>
+      stripCantillation(stripNikud(t)).replace(/\//g, "").trim();
+
+    let rawMeanings: string[] = [];
+    if (lexiconEntry?.definitions?.length) {
+      rawMeanings = lexiconEntry.definitions
+        .map((item) => (item.text ? normalizeForDisplay(item.text) : ""))
+        .filter(Boolean);
+    } else if (!word) {
+      return ["—"];
+    } else if (
+      word.morph?.includes("Np") ||
+      (!word.meanings?.length && !word.gloss)
+    ) {
+      return ["Proper Name"];
+    } else {
+      const meanings = word.meanings?.length ? word.meanings : [word.gloss];
+      // If user language is not Hebrew, prefer Latin-script meanings to avoid mixing languages
+      const preferLatin = language !== "he";
+      const isLatin = (s: string) => /[A-Za-zÀ-ž0-9]/.test(s);
+      rawMeanings = meanings
+        .map((m) => (m ? normalizeForDisplay(m) : ""))
+        .filter(Boolean)
+        .filter((m) => (preferLatin ? isLatin(m) : true));
+
+      // If filtering removed all items and we have raw ones, fall back to unfiltered normalized list
+      if (!rawMeanings.length && meanings) {
+        rawMeanings = meanings
+          .map((m) => (m ? normalizeForDisplay(m) : ""))
+          .filter(Boolean);
+      }
+    }
+
+    const expanded = rawMeanings.flatMap((meaning) =>
+      meaning
+        .split(/[,;]\s*/)
+        .map((item) => item.trim())
+        .filter(Boolean),
+    );
+
+    return expanded.length ? expanded : ["—"];
+  }, [lexiconEntry, word, language]);
+
+  const isDerivedRoot = Boolean(lexiconEntry?.root_strong || word?.root);
 
   const rootMeaningText = useMemo(() => {
+    // If this entry is itself a root, show ALREADY ROOT
+    if (!isDerivedRoot) return "ALREADY ROOT";
+
+    if (lexiconEntry?.root_definitions?.length) {
+      return (
+        lexiconEntry.root_definitions.map((item) => item.text).join(", ") || "—"
+      );
+    }
     if (!word?.rootMeaning) return "—";
     return word.rootMeaning;
-  }, [word]);
+  }, [lexiconEntry, word, isDerivedRoot]);
 
   return (
     <BottomSheet
       ref={sheetRef}
       index={-1}
-      enableDynamicSizing
-      maxDynamicContentSize={600}
+      snapPoints={["50%", "80%"]}
       enablePanDownToClose
       backgroundStyle={styles.sheetBackground}
       handleIndicatorStyle={styles.sheetHandle}
       onChange={handleSheetChanges}
       backdropComponent={renderBackdrop}
     >
-      <BottomSheetView style={styles.content}>
+      <BottomSheetScrollView style={styles.content}>
         {/* Header: Hebrew word + transliteration */}
         <View style={styles.headerSection}>
-          <Text style={styles.hebrew}>{word?.text ?? "—"}</Text>
-          {word?.transliteration ? (
-            <Text style={styles.transliteration}>{word.transliteration}</Text>
+          <Text style={styles.hebrew}>{displayHebrew}</Text>
+          {lexiconEntry?.transliteration || word?.transliteration ? (
+            <Text style={styles.transliteration}>
+              {lexiconEntry?.transliteration ?? word?.transliteration}
+            </Text>
           ) : null}
+          {lexiconEntry?.occurrences_count && (
+            <Text style={styles.occurrencesText}>
+              Appears {lexiconEntry.occurrences_count} times
+            </Text>
+          )}
         </View>
 
         {/* Toggle: Meanings / Instances */}
@@ -360,19 +561,61 @@ export const WordAnalysisBottomSheet = ({
           <>
             {/* Meanings section */}
             <Text style={styles.sectionLabel}>Meanings</Text>
-            <Text style={styles.meaningsText}>{meaningsText}</Text>
+            {isLoading ? (
+              <Text style={styles.emptyText}>Loading definitions...</Text>
+            ) : null}
+            <View style={styles.meaningsList}>
+              {meaningsList.map((meaning, index) => (
+                <Text key={`${meaning}-${index}`} style={styles.meaningsBullet}>
+                  • {meaning}
+                </Text>
+              ))}
+            </View>
 
             {/* Root section */}
-            {word?.root ? (
+            {word || lexiconEntry ? (
               <View style={styles.rootSection}>
                 <Text style={styles.sectionLabel}>Root</Text>
-                <Text style={styles.rootHebrew}>{word.root}</Text>
-                {word.rootTransliteration ? (
+                <Text style={styles.rootHebrew}>
+                  {(lexiconEntry?.root ?? word?.root ?? displayHebrew).replace(
+                    /\//g,
+                    "",
+                  )}
+                </Text>
+                {lexiconEntry?.root_transliteration ||
+                word?.rootTransliteration ? (
                   <Text style={styles.rootTransliteration}>
-                    {word.rootTransliteration}
+                    {lexiconEntry?.root_transliteration ??
+                      word?.rootTransliteration}
                   </Text>
                 ) : null}
-                <Text style={styles.rootMeaning}>{rootMeaningText}</Text>
+                <Text style={styles.rootMeaning}>
+                  {lexiconEntry?.root || word?.root
+                    ? rootMeaningText
+                    : "ALREADY ROOT"}
+                </Text>
+              </View>
+            ) : null}
+
+            {/* Prefixes section */}
+            {word?.prefixes?.length ? (
+              <View style={styles.prefixesSection}>
+                <Text style={styles.sectionLabel}>Prefixes</Text>
+                {word.prefixes.map((prefix, index) => {
+                  const entry = prefixEntries[prefix];
+                  const meanings =
+                    entry?.meanings?.[language] ??
+                    entry?.meanings?.en ??
+                    entry?.meanings?.es ??
+                    [];
+
+                  return (
+                    <Text key={`${prefix}-${index}`} style={styles.prefixText}>
+                      {prefix}
+                      {meanings.length ? `: ${meanings.join(", ")}` : ""}
+                    </Text>
+                  );
+                })}
               </View>
             ) : null}
           </>
@@ -380,38 +623,64 @@ export const WordAnalysisBottomSheet = ({
           <>
             {/* Instances section */}
             <Text style={styles.sectionLabel}>Appears In</Text>
-            {word?.instances?.length ? (
+            {lexiconEntry?.instances?.length || word?.instances?.length ? (
               <View style={styles.instancesContainer}>
-                {word.instances.map((instance, index) => {
-                  const verseId = parseVerseReference(instance.verse);
-                  return (
-                    <Pressable
-                      key={`${instance.verse}-${index}`}
-                      style={({ pressed }) => [
-                        styles.instancePill,
-                        pressed && styles.instancePillPressed,
-                      ]}
-                      onPress={() => {
-                        if (verseId) {
-                          sheetRef.current?.close();
-                          router.push({
-                            pathname: "/verse-detail",
-                            params: { id: verseId },
-                          });
-                        }
-                      }}
-                    >
-                      <Text style={styles.instanceRef}>{instance.verse}</Text>
-                    </Pressable>
-                  );
-                })}
+                {(
+                  (lexiconEntry?.instances ?? word?.instances ?? []) as Array<
+                    string | { verse: string; text: string }
+                  >
+                )
+                  .slice(0, showAllInstances ? undefined : 10)
+                  .map((instance, index) => {
+                    const verseRef =
+                      typeof instance === "string" ? instance : instance.verse;
+                    const cleanedRef = verseRef.replace(/\./g, "");
+                    const verseId = parseVerseReference(cleanedRef);
+                    return (
+                      <Pressable
+                        key={`${verseRef}-${index}`}
+                        style={({ pressed }) => [
+                          styles.instancePill,
+                          pressed && styles.instancePillPressed,
+                        ]}
+                        onPress={() => {
+                          if (verseId) {
+                            sheetRef.current?.close();
+                            router.push({
+                              pathname: "/verse-detail",
+                              params: { id: verseId },
+                            });
+                          }
+                        }}
+                      >
+                        <Text style={styles.instanceRef}>{verseRef}</Text>
+                      </Pressable>
+                    );
+                  })}
+                {!showAllInstances &&
+                (lexiconEntry?.instances?.length ??
+                  word?.instances?.length ??
+                  0) > 10 ? (
+                  <Pressable
+                    style={styles.showMoreButton}
+                    onPress={() => setShowAllInstances(true)}
+                  >
+                    <Text style={styles.showMoreText}>
+                      Show{" "}
+                      {(lexiconEntry?.instances?.length ??
+                        word?.instances?.length ??
+                        0) - 10}{" "}
+                      more
+                    </Text>
+                  </Pressable>
+                ) : null}
               </View>
             ) : (
               <Text style={styles.emptyText}>No instances available</Text>
             )}
           </>
         )}
-      </BottomSheetView>
+      </BottomSheetScrollView>
     </BottomSheet>
   );
 };
