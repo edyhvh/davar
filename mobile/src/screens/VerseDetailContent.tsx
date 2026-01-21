@@ -154,7 +154,10 @@ export const VerseDetailContent = () => {
             (item) => item.id === targetVerse.id,
           );
           if (nextIndex >= 0) {
-            listRef.current?.scrollToIndex({ index: nextIndex, animated: true });
+            listRef.current?.scrollToIndex({
+              index: nextIndex,
+              animated: true,
+            });
           }
         }
       }
@@ -198,7 +201,9 @@ export const VerseDetailContent = () => {
                     verse={item}
                     variant="detail"
                     showWordHint={showWordHint && item.id === verse.id}
-                    onVersePress={() => navigationSheetRef.current?.snapToIndex(0)}
+                    onVersePress={() =>
+                      navigationSheetRef.current?.snapToIndex(0)
+                    }
                     onWordPress={handleWordPress}
                   />
                 </View>

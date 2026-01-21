@@ -304,7 +304,8 @@ export default function SearchScreen() {
                   <Text
                     style={[
                       styles.selectionText,
-                      selectedChapter === null && styles.selectionTextPlaceholder,
+                      selectedChapter === null &&
+                        styles.selectionTextPlaceholder,
                     ]}
                   >
                     {selectedChapter ?? "Ch"}
