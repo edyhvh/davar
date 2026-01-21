@@ -1,20 +1,15 @@
-import { useEffect, useMemo, useState } from "react";
-import {
-  FlatList,
-  Pressable,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { useCallback, useMemo, useRef, useState } from "react";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
+import type BottomSheet from "@gorhom/bottom-sheet";
 
-import { SearchResultCard } from "@/src/components/SearchResultCard";
 import { AppIcon } from "@/src/components/ui/AppIcon";
-import { getColors, spacing, typography } from "@/src/theme";
-import { mockVerses } from "@/src/constants/mockData";
+import { BookSelectorSheet } from "@/src/components/BookSelectorSheet";
+import { NumberGridBottomSheet } from "@/src/components/NumberGridBottomSheet";
+import { VerseSelectorSheet } from "@/src/components/VerseSelectorSheet";
+import { getColors, radii, spacing, typography } from "@/src/theme";
+import { mockBooks, mockVerses } from "@/src/constants/mockData";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
@@ -39,189 +34,346 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       fontSize: typography.sizes.h2,
       color: colors.textPrimary,
     },
-    input: {
+    subtitle: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.bodySmall,
+      color: colors.textSecondary,
+      marginTop: spacing[2],
+    },
+    content: {
       flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+      paddingHorizontal: spacing[6],
+    },
+    searchButton: {
+      width: 120,
+      height: 120,
+      borderRadius: 60,
+      backgroundColor: colors.surface,
+      borderWidth: 2,
+      borderColor: colors.primary,
+      alignItems: "center",
+      justifyContent: "center",
+      marginBottom: spacing[6],
+    },
+    searchButtonPressed: {
+      backgroundColor: colors.primaryLight,
+    },
+    searchButtonIcon: {
+      color: colors.primary,
+    },
+    searchLabel: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      color: colors.textSecondary,
+      textAlign: "center",
+    },
+    selectionContainer: {
+      marginTop: spacing[8],
+      width: "100%",
+    },
+    selectionRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: spacing[3],
+      marginBottom: spacing[4],
+    },
+    selectionPill: {
+      flexDirection: "row",
+      alignItems: "center",
+      paddingVertical: spacing[3],
+      paddingHorizontal: spacing[4],
+      borderRadius: radii.full,
+      backgroundColor: colors.surface,
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: 12,
-      paddingHorizontal: spacing[4],
-      paddingVertical: spacing[3],
-      backgroundColor: colors.surface,
+    },
+    selectionPillActive: {
+      borderColor: colors.primary,
+      backgroundColor: colors.primaryLight,
+    },
+    selectionText: {
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.body,
       color: colors.textPrimary,
     },
-    inputRow: {
-      marginTop: spacing[4],
-      flexDirection: "row",
-      alignItems: "center",
-      gap: spacing[2],
-    },
-    inputContainer: {
-      flex: 1,
-      flexDirection: "row",
-      alignItems: "center",
-      gap: spacing[2],
-    },
-    inputFocused: {
-      borderColor: colors.primary,
-      shadowColor: colors.primary,
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.2,
-      shadowRadius: 6,
-    },
-    inputRtl: {
-      textAlign: "right",
-      writingDirection: "rtl",
-    },
-    inputLtr: {
-      textAlign: "left",
-      writingDirection: "ltr",
-    },
-    icon: {
+    selectionTextPlaceholder: {
       color: colors.textSecondary,
     },
-    clearButton: {
-      width: 32,
-      height: 32,
-      borderRadius: 16,
-      alignItems: "center",
-      justifyContent: "center",
-      borderWidth: 1,
-      borderColor: colors.border,
-      backgroundColor: colors.surface,
-    },
-    hint: {
-      fontFamily: typography.families.latinUI,
-      fontSize: typography.sizes.bodySmall,
+    arrow: {
       color: colors.textSecondary,
-      marginTop: spacing[3],
     },
-    listContent: {
+    goButton: {
+      paddingVertical: spacing[3],
       paddingHorizontal: spacing[6],
-      paddingBottom: spacing[12],
+      borderRadius: radii.full,
+      backgroundColor: colors.primary,
+      alignSelf: "center",
+      marginTop: spacing[4],
     },
-    verseItem: {
-      marginBottom: spacing[6],
+    goButtonDisabled: {
+      backgroundColor: colors.border,
     },
-    emptyState: {
-      marginTop: spacing[8],
-      alignItems: "center",
-      gap: spacing[3],
-    },
-    emptyText: {
+    goButtonText: {
       fontFamily: typography.families.latinUI,
-      fontSize: typography.sizes.bodySmall,
-      color: colors.textSecondary,
+      fontSize: typography.sizes.body,
+      color: colors.background,
+      fontWeight: typography.weights.medium,
     },
   });
+
+// Get the number of chapters for a book (mock implementation)
+const getChapterCount = (bookId: string): number => {
+  // Find max chapter number from mockVerses for this book
+  const chaptersForBook = mockVerses
+    .filter((v) => v.bookId === bookId)
+    .map((v) => v.chapter);
+  return chaptersForBook.length > 0 ? Math.max(...chaptersForBook) : 50;
+};
+
+// Get verse count for a chapter
+const getVerseCount = (bookId: string, chapter: number): number => {
+  const versesForChapter = mockVerses.filter(
+    (v) => v.bookId === bookId && v.chapter === chapter,
+  );
+  if (versesForChapter.length > 0) {
+    return Math.max(...versesForChapter.map((v) => v.verse));
+  }
+  // Default to reasonable verse count
+  return 30;
+};
 
 export default function SearchScreen() {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const searchQuery = useAppStore((state: AppState) => state.searchQuery);
-  const setSearchQuery = useAppStore((state: AppState) => state.setSearchQuery);
-  const setSearchResults = useAppStore(
-    (state: AppState) => state.setSearchResults,
+
+  // Selection state
+  const [selectedBookId, setSelectedBookId] = useState<string | null>(null);
+  const [selectedChapter, setSelectedChapter] = useState<number | null>(null);
+  const [selectedVerse, setSelectedVerse] = useState<number | null>(null);
+
+  // Sheet refs
+  const bookSheetRef = useRef<BottomSheet>(null);
+  const chapterSheetRef = useRef<BottomSheet>(null);
+  const verseSheetRef = useRef<BottomSheet>(null);
+
+  // Computed values
+  const selectedBook = useMemo(
+    () => mockBooks.find((b) => b.id === selectedBookId),
+    [selectedBookId],
   );
-  const [draftQuery, setDraftQuery] = useState(searchQuery);
-  const [isFocused, setIsFocused] = useState(false);
-  const isHebrew = useMemo(
-    () => /[\u0590-\u05FF]/.test(draftQuery),
-    [draftQuery],
-  );
 
-  const results = useMemo(() => {
-    const normalized = searchQuery.trim().toLowerCase();
-    if (!normalized) {
-      return [];
-    }
+  const chapterNumbers = useMemo(() => {
+    if (!selectedBookId) return [];
+    const count = getChapterCount(selectedBookId);
+    return Array.from({ length: count }, (_, i) => i + 1);
+  }, [selectedBookId]);
 
-    return mockVerses.filter((verse) => {
-      const inTranslation = verse.translation
-        .toLowerCase()
-        .includes(normalized);
-      const inHebrew = verse.hebrew.includes(normalized);
-      return inTranslation || inHebrew;
-    });
-  }, [searchQuery]);
+  const verseNumbers = useMemo(() => {
+    if (!selectedBookId || !selectedChapter) return [];
+    const count = getVerseCount(selectedBookId, selectedChapter);
+    return Array.from({ length: count }, (_, i) => i + 1);
+  }, [selectedBookId, selectedChapter]);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setSearchQuery(draftQuery);
+  const canNavigate =
+    selectedBookId !== null &&
+    selectedChapter !== null &&
+    selectedVerse !== null;
+
+  // Handlers
+  const handleOpenBookSelector = useCallback(() => {
+    bookSheetRef.current?.snapToIndex(0);
+  }, []);
+
+  const handleSelectBook = useCallback((bookId: string) => {
+    setSelectedBookId(bookId);
+    setSelectedChapter(null);
+    setSelectedVerse(null);
+    // Open chapter selector after a brief delay
+    setTimeout(() => {
+      chapterSheetRef.current?.snapToIndex(0);
     }, 300);
+  }, []);
 
-    return () => clearTimeout(timeout);
-  }, [draftQuery, setSearchQuery]);
+  const handleSelectChapter = useCallback((chapter: number) => {
+    setSelectedChapter(chapter);
+    setSelectedVerse(null);
+    chapterSheetRef.current?.close();
+    // Open verse selector after a brief delay
+    setTimeout(() => {
+      verseSheetRef.current?.snapToIndex(0);
+    }, 300);
+  }, []);
 
-  useEffect(() => {
-    setSearchResults(results);
-  }, [results, setSearchResults]);
+  const handleSelectVerse = useCallback(
+    (verse: number) => {
+      setSelectedVerse(verse);
+      verseSheetRef.current?.close();
+      // Navigate to the verse
+      if (selectedBookId && selectedChapter) {
+        const verseId = `${selectedBookId}-${selectedChapter}-${verse}`;
+        router.push({
+          pathname: "/verse-detail",
+          params: { id: verseId },
+        });
+      }
+    },
+    [selectedBookId, selectedChapter],
+  );
+
+  const handleBackToChapters = useCallback(() => {
+    setSelectedVerse(null);
+    setTimeout(() => {
+      chapterSheetRef.current?.snapToIndex(0);
+    }, 300);
+  }, []);
+
+  const handleNavigate = useCallback(() => {
+    if (canNavigate) {
+      const verseId = `${selectedBookId}-${selectedChapter}-${selectedVerse}`;
+      router.push({
+        pathname: "/verse-detail",
+        params: { id: verseId },
+      });
+    }
+  }, [canNavigate, selectedBookId, selectedChapter, selectedVerse]);
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.title}>Search</Text>
-          <View style={styles.inputRow}>
-            <View style={styles.inputContainer}>
-              <AppIcon name="search" size={18} color={styles.icon.color} />
-              <TextInput
-                value={draftQuery}
-                onChangeText={setDraftQuery}
-                placeholder="Search a word, phrase, or verse"
-                placeholderTextColor={colors.textSecondary}
-                style={[
-                  styles.input,
-                  isFocused && styles.inputFocused,
-                  isHebrew ? styles.inputRtl : styles.inputLtr,
-                ]}
-                autoCapitalize="none"
-                autoCorrect={false}
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
-              />
-            </View>
-            {draftQuery ? (
-              <Pressable
-                style={styles.clearButton}
-                onPress={() => setDraftQuery("")}
-              >
-                <Ionicons name="close" size={16} color={colors.textSecondary} />
-              </Pressable>
-            ) : null}
-          </View>
-          {!draftQuery ? (
-            <Text style={styles.hint}>Begin typing to explore Scripture.</Text>
-          ) : null}
+          <Text style={styles.subtitle}>
+            Navigate to any book, chapter, and verse
+          </Text>
         </View>
-        {draftQuery && results.length === 0 ? (
-          <View style={styles.emptyState}>
-            <AppIcon name="book" size={24} color={colors.textSecondary} />
-            <Text style={styles.emptyText}>No results found.</Text>
-          </View>
-        ) : null}
-        <FlatList
-          data={results}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <Pressable
-              style={styles.verseItem}
-              onPress={() =>
-                router.push({
-                  pathname: "/verse-detail",
-                  params: { id: item.id },
-                })
-              }
-            >
-              <SearchResultCard verse={item} query={searchQuery} />
-            </Pressable>
+
+        <View style={styles.content}>
+          <Pressable
+            style={({ pressed }) => [
+              styles.searchButton,
+              pressed && styles.searchButtonPressed,
+            ]}
+            onPress={handleOpenBookSelector}
+          >
+            <AppIcon
+              name="search"
+              size={48}
+              color={styles.searchButtonIcon.color}
+            />
+          </Pressable>
+          <Text style={styles.searchLabel}>
+            Tap to select a book, chapter, and verse
+          </Text>
+
+          {/* Current selection display */}
+          {(selectedBookId || selectedChapter || selectedVerse) && (
+            <View style={styles.selectionContainer}>
+              <View style={styles.selectionRow}>
+                <Pressable
+                  style={[
+                    styles.selectionPill,
+                    selectedBookId && styles.selectionPillActive,
+                  ]}
+                  onPress={handleOpenBookSelector}
+                >
+                  <Text
+                    style={[
+                      styles.selectionText,
+                      !selectedBook && styles.selectionTextPlaceholder,
+                    ]}
+                  >
+                    {selectedBook?.name ?? "Book"}
+                  </Text>
+                </Pressable>
+
+                <AppIcon name="book" size={16} color={styles.arrow.color} />
+
+                <Pressable
+                  style={[
+                    styles.selectionPill,
+                    selectedChapter !== null && styles.selectionPillActive,
+                  ]}
+                  onPress={() =>
+                    selectedBookId && chapterSheetRef.current?.snapToIndex(0)
+                  }
+                >
+                  <Text
+                    style={[
+                      styles.selectionText,
+                      selectedChapter === null && styles.selectionTextPlaceholder,
+                    ]}
+                  >
+                    {selectedChapter ?? "Ch"}
+                  </Text>
+                </Pressable>
+
+                <Text style={styles.selectionText}>:</Text>
+
+                <Pressable
+                  style={[
+                    styles.selectionPill,
+                    selectedVerse !== null && styles.selectionPillActive,
+                  ]}
+                  onPress={() =>
+                    selectedChapter && verseSheetRef.current?.snapToIndex(0)
+                  }
+                >
+                  <Text
+                    style={[
+                      styles.selectionText,
+                      selectedVerse === null && styles.selectionTextPlaceholder,
+                    ]}
+                  >
+                    {selectedVerse ?? "V"}
+                  </Text>
+                </Pressable>
+              </View>
+
+              {canNavigate && (
+                <Pressable
+                  style={[
+                    styles.goButton,
+                    !canNavigate && styles.goButtonDisabled,
+                  ]}
+                  onPress={handleNavigate}
+                >
+                  <Text style={styles.goButtonText}>Go to Verse</Text>
+                </Pressable>
+              )}
+            </View>
           )}
-          contentContainerStyle={styles.listContent}
-          showsVerticalScrollIndicator={false}
-        />
+        </View>
       </View>
+
+      {/* Book Selector Sheet */}
+      <BookSelectorSheet
+        sheetRef={bookSheetRef}
+        currentBookId={selectedBookId ?? undefined}
+        onSelectBook={handleSelectBook}
+      />
+
+      {/* Chapter Selector Sheet */}
+      <NumberGridBottomSheet
+        sheetRef={chapterSheetRef}
+        title={`Select Chapter${selectedBook ? ` - ${selectedBook.name}` : ""}`}
+        numbers={chapterNumbers}
+        selected={selectedChapter ?? 0}
+        onSelect={handleSelectChapter}
+      />
+
+      {/* Verse Selector Sheet */}
+      <VerseSelectorSheet
+        sheetRef={verseSheetRef}
+        title={`Select Verse${selectedBook && selectedChapter ? ` - ${selectedBook.name} ${selectedChapter}` : ""}`}
+        numbers={verseNumbers}
+        selected={selectedVerse ?? 0}
+        onSelect={handleSelectVerse}
+        onBack={handleBackToChapters}
+      />
     </SafeAreaView>
   );
 }

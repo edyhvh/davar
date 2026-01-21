@@ -4,16 +4,14 @@ import {
   SafeAreaView,
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
-import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams, useNavigation } from "expo-router";
 import BottomSheet from "@gorhom/bottom-sheet";
-import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 
 import { VerseCard } from "@/src/components/VerseCard";
 import { WordAnalysisBottomSheet } from "@/src/components/WordAnalysisBottomSheet";
-import { BookSelectorSheet } from "@/src/components/BookSelectorSheet";
+import { NavigationSheet } from "@/src/components/NavigationSheet";
 import { BookChapterPill } from "@/src/components/ui/BookChapterPill";
 import { getColors, spacing } from "@/src/theme";
-import { NumberGridBottomSheet } from "@/src/components/NumberGridBottomSheet";
 import {
   getMockVerseById,
   mockBooks,
@@ -21,6 +19,17 @@ import {
 } from "@/src/constants/mockData";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { loadWordHintCount, saveWordHintCount } from "@/src/services/storage";
+
+// Safe hook to get tab bar height - returns 0 if not in tab navigator
+const useTabBarHeightSafe = (): number => {
+  try {
+    // Dynamic import to avoid hook rules issues
+    const { useBottomTabBarHeight } = require("@react-navigation/bottom-tabs");
+    return useBottomTabBarHeight();
+  } catch {
+    return 0;
+  }
+};
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
   StyleSheet.create({
@@ -48,7 +57,7 @@ export const VerseDetailContent = () => {
   const styles = useMemo(() => createStyles(colors), [colors]);
   const { height: screenHeight } = useWindowDimensions();
   const insets = useSafeAreaInsets();
-  const tabBarHeight = useBottomTabBarHeight();
+  const tabBarHeight = useTabBarHeightSafe();
   const pageHeight = Math.max(
     0,
     screenHeight - insets.top - insets.bottom - tabBarHeight,
@@ -87,20 +96,6 @@ export const VerseDetailContent = () => {
     [orderedVerses, verse.id],
   );
 
-  const chapterNumbers = useMemo(() => {
-    const unique = new Set(bookVerses.map((item) => item.chapter));
-    return Array.from(unique).sort((a, b) => a - b);
-  }, [bookVerses]);
-
-  const verseNumbers = useMemo(() => {
-    const unique = new Set(
-      bookVerses
-        .filter((item) => item.chapter === verse.chapter)
-        .map((item) => item.verse),
-    );
-    return Array.from(unique).sort((a, b) => a - b);
-  }, [bookVerses, verse.chapter]);
-
   const [showWordHint, setShowWordHint] = useState(false);
   const listRef = useRef<FlatList<(typeof orderedVerses)[number]>>(null);
   const viewabilityConfigRef = useRef({ itemVisiblePercentThreshold: 70 });
@@ -117,12 +112,23 @@ export const VerseDetailContent = () => {
     },
   );
   const sheetRef = useRef<BottomSheet>(null);
-  const bookSheetRef = useRef<BottomSheet>(null);
-  const chapterSheetRef = useRef<BottomSheet>(null);
-  const verseSheetRef = useRef<BottomSheet>(null);
+  const navigationSheetRef = useRef<BottomSheet>(null);
   const [selectedWord, setSelectedWord] = useState<
     (typeof verse.words)[number] | null
   >(() => verse.words?.[0] || null);
+
+  // Listen for tab press to open navigation sheet
+  const navigation = useNavigation();
+  useEffect(() => {
+    const unsubscribe = navigation.addListener("tabPress" as any, (e: any) => {
+      // If we're already on this tab, open the navigation sheet
+      if (navigation.isFocused()) {
+        e.preventDefault();
+        navigationSheetRef.current?.snapToIndex(0);
+      }
+    });
+    return unsubscribe;
+  }, [navigation]);
 
   useEffect(() => {
     setSelectedWord(verse.words?.[0] || null);
@@ -133,45 +139,27 @@ export const VerseDetailContent = () => {
     setShowWordHint(true);
   }, []);
 
-  const handleSelectChapter = useCallback(
-    (chapter: number) => {
-      const nextIndex = orderedVerses.findIndex(
-        (item) => item.chapter === chapter,
+  const handleNavigationSelect = useCallback(
+    (bookId: string, chapter: number, verseNum: number) => {
+      // Find the verse in the ordered list
+      const allBookVerses = mockVerses.filter((v) => v.bookId === bookId);
+      const targetVerse = allBookVerses.find(
+        (v) => v.chapter === chapter && v.verse === verseNum,
       );
-      if (nextIndex >= 0) {
-        const nextVerse = orderedVerses[nextIndex];
-        setCurrentVerseId(nextVerse.id);
-        listRef.current?.scrollToIndex({ index: nextIndex, animated: true });
+      if (targetVerse) {
+        setCurrentVerseId(targetVerse.id);
+        // If same book, scroll to it
+        if (bookId === verse.bookId) {
+          const nextIndex = orderedVerses.findIndex(
+            (item) => item.id === targetVerse.id,
+          );
+          if (nextIndex >= 0) {
+            listRef.current?.scrollToIndex({ index: nextIndex, animated: true });
+          }
+        }
       }
-      chapterSheetRef.current?.close();
     },
-    [orderedVerses, setCurrentVerseId],
-  );
-
-  const handleSelectBook = useCallback(
-    (bookId: string) => {
-      const nextVerse = mockVerses.find((v) => v.bookId === bookId);
-      if (nextVerse) {
-        setCurrentVerseId(nextVerse.id);
-      }
-      bookSheetRef.current?.close();
-    },
-    [setCurrentVerseId],
-  );
-
-  const handleSelectVerse = useCallback(
-    (verseNumber: number) => {
-      const nextIndex = orderedVerses.findIndex(
-        (item) => item.chapter === verse.chapter && item.verse === verseNumber,
-      );
-      if (nextIndex >= 0) {
-        const nextVerse = orderedVerses[nextIndex];
-        setCurrentVerseId(nextVerse.id);
-        listRef.current?.scrollToIndex({ index: nextIndex, animated: true });
-      }
-      verseSheetRef.current?.close();
-    },
-    [orderedVerses, setCurrentVerseId, verse.chapter],
+    [orderedVerses, setCurrentVerseId, verse.bookId],
   );
 
   const handleWordPress = useCallback((word: typeof selectedWord) => {
@@ -188,8 +176,8 @@ export const VerseDetailContent = () => {
               bookLabel={bookMeta.name}
               hebrewLabel={bookMeta.hebrewName}
               chapter={verse.chapter}
-              onBookPress={() => bookSheetRef.current?.snapToIndex(0)}
-              onChapterPress={() => chapterSheetRef.current?.expand()}
+              onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
+              onChapterPress={() => navigationSheetRef.current?.snapToIndex(0)}
             />
           </View>
           <FlatList
@@ -210,7 +198,7 @@ export const VerseDetailContent = () => {
                     verse={item}
                     variant="detail"
                     showWordHint={showWordHint && item.id === verse.id}
-                    onVersePress={() => verseSheetRef.current?.snapToIndex(0)}
+                    onVersePress={() => navigationSheetRef.current?.snapToIndex(0)}
                     onWordPress={handleWordPress}
                   />
                 </View>
@@ -237,24 +225,12 @@ export const VerseDetailContent = () => {
         word={selectedWord}
         onClose={() => sheetRef.current?.close()}
       />
-      <BookSelectorSheet
-        sheetRef={bookSheetRef}
+      <NavigationSheet
+        sheetRef={navigationSheetRef}
         currentBookId={verse.bookId}
-        onSelectBook={handleSelectBook}
-      />
-      <NumberGridBottomSheet
-        sheetRef={chapterSheetRef}
-        title="Chapter"
-        numbers={chapterNumbers}
-        selected={verse.chapter}
-        onSelect={handleSelectChapter}
-      />
-      <NumberGridBottomSheet
-        sheetRef={verseSheetRef}
-        title="Verse"
-        numbers={verseNumbers}
-        selected={verse.verse}
-        onSelect={handleSelectVerse}
+        currentChapter={verse.chapter}
+        currentVerse={verse.verse}
+        onSelectVerse={handleNavigationSelect}
       />
     </>
   );
