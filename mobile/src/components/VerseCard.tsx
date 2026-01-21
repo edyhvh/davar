@@ -108,7 +108,7 @@ export const VerseCard = ({
       -1, // -1 means infinite repeats
       true, // reverse for smooth back-and-forth pulse
     );
-  }, []);
+  }, [highlightProgress]);
 
   // Subtle copper background pulse using rgba colors
   const highlightStyle = useAnimatedStyle(() => {

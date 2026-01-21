@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "dev": "vite --port 3002"
+    "dev": "vite --port 3002",
+    "lint": "bunx biome lint .",
+    "format": "bunx biome format --write .",
+    "format:check": "bunx biome format ."
   },
   "dependencies": {
     "@emotion/react": "11.14.0",

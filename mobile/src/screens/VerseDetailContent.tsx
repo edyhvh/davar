@@ -6,6 +6,9 @@ import {
 } from "react-native-safe-area-context";
 import { useLocalSearchParams, useNavigation } from "expo-router";
 import BottomSheet from "@gorhom/bottom-sheet";
+import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
+import type { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
+import type { ParamListBase } from "@react-navigation/native";
 
 import { VerseCard } from "@/src/components/VerseCard";
 import { WordAnalysisBottomSheet } from "@/src/components/WordAnalysisBottomSheet";
@@ -18,17 +21,9 @@ import {
   mockVerses,
 } from "@/src/constants/mockData";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
-import { loadWordHintCount, saveWordHintCount } from "@/src/services/storage";
 
-// Safe hook to get tab bar height - returns 0 if not in tab navigator
-const useTabBarHeightSafe = (): number => {
-  try {
-    // Dynamic import to avoid hook rules issues
-    const { useBottomTabBarHeight } = require("@react-navigation/bottom-tabs");
-    return useBottomTabBarHeight();
-  } catch {
-    return 0;
-  }
+type TabPressEvent = {
+  preventDefault: () => void;
 };
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
@@ -57,7 +52,7 @@ export const VerseDetailContent = () => {
   const styles = useMemo(() => createStyles(colors), [colors]);
   const { height: screenHeight } = useWindowDimensions();
   const insets = useSafeAreaInsets();
-  const tabBarHeight = useTabBarHeightSafe();
+  const tabBarHeight = useBottomTabBarHeight();
   const pageHeight = Math.max(
     0,
     screenHeight - insets.top - insets.bottom - tabBarHeight,
@@ -118,15 +113,18 @@ export const VerseDetailContent = () => {
   >(() => verse.words?.[0] || null);
 
   // Listen for tab press to open navigation sheet
-  const navigation = useNavigation();
+  const navigation = useNavigation<BottomTabNavigationProp<ParamListBase>>();
   useEffect(() => {
-    const unsubscribe = navigation.addListener("tabPress" as any, (e: any) => {
-      // If we're already on this tab, open the navigation sheet
-      if (navigation.isFocused()) {
-        e.preventDefault();
-        navigationSheetRef.current?.snapToIndex(0);
-      }
-    });
+    const unsubscribe = navigation.addListener(
+      "tabPress",
+      (e: TabPressEvent) => {
+        // If we're already on this tab, open the navigation sheet
+        if (navigation.isFocused()) {
+          e.preventDefault();
+          navigationSheetRef.current?.snapToIndex(0);
+        }
+      },
+    );
     return unsubscribe;
   }, [navigation]);
 
