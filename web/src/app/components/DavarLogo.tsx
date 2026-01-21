@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from 'figma:asset/86a59e5984baacebd9e81429a4678e2e378e368b.png';
+import logoImage from '../../assets/86a59e5984baacebd9e81429a4678e2e378e368b.png';
 
 interface DavarLogoProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';

@@ -1,12 +1,12 @@
 import React from 'react';
-import { GlassCard } from './GlassCard';
 import { X } from 'lucide-react';
+import { NeumorphCard } from './NeumorphCard';
 
 interface BookSelectorProps {
   currentBook: string;
   onBookSelect: (book: string) => void;
   onClose: () => void;
-  language: 'en' | 'es';
+  language: 'en' | 'es' | 'he';
 }
 
 const booksData = [
@@ -35,21 +35,23 @@ const booksData = [
 export function BookSelector({ currentBook, onBookSelect, onClose, language }: BookSelectorProps) {
   return (
     <div className="fixed inset-0 z-50 bg-[var(--background)]">
-      {/* Header with HEAVY NEUTRAL glass */}
-      <div className="sticky top-0 z-10 bg-[var(--glass-surface-elevated)] backdrop-blur-[40px] border-b-2 border-[var(--glass-border)] shadow-[0_8px_32px_0_var(--glass-shadow)]">
+      {/* Header with neumorphic styling */}
+      <div className="sticky top-0 z-10 bg-[var(--neomorph-bg)] border-b border-[var(--neomorph-border)] shadow-[6px_6px_16px_var(--neomorph-shadow-dark),-6px_-6px_16px_var(--neomorph-shadow-light)]">
         <div className="relative max-w-md mx-auto px-6 py-5 flex items-center justify-between">
-          {/* Inner glass highlight - NEUTRAL */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--glass-highlight)] via-transparent to-transparent pointer-events-none" />
-          
           <h2 
-            className="relative text-lg font-medium"
+            className="relative text-lg font-medium text-[var(--text-primary)]"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Select Book
           </h2>
           <button
             onClick={onClose}
-            className="relative p-3 rounded-2xl bg-[var(--glass-surface)] backdrop-blur-[40px] border border-[var(--glass-border)] hover:bg-[var(--glass-surface-elevated)] transition-all hover:scale-110 active:scale-95 shadow-[0_4px_16px_0_var(--glass-shadow)]"
+            className="relative p-3 rounded-2xl transition-all hover:scale-110 active:scale-95"
+            style={{
+              backgroundColor: 'var(--neomorph-bg)',
+              border: '1px solid var(--neomorph-border)',
+              boxShadow: '6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)',
+            }}
             aria-label="Close"
           >
             <X className="w-5 h-5 text-[var(--text-secondary)]" />
@@ -63,43 +65,40 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
           {booksData.map((book) => {
             const isSelected = book.en === currentBook;
             return (
-              <button
+              <NeumorphCard
                 key={book.en}
+                hoverable
+                className={`w-full p-6 rounded-2xl transition-all text-left ${
+                  isSelected ? 'border-2 border-[var(--accent)]' : ''
+                }`}
                 onClick={() => {
                   onBookSelect(book.en);
                   onClose();
                 }}
-                className={`
-                  w-full p-6 rounded-2xl transition-all text-left
-                  ${isSelected 
-                    ? 'bg-[var(--accent)] text-white shadow-lg scale-[1.02]' 
-                    : 'bg-[var(--glass-surface)] backdrop-blur-[40px] border border-[var(--glass-border)] hover:bg-[var(--glass-surface-elevated)] hover:scale-[1.01] active:scale-[0.99]'
-                  }
-                `}
               >
                 <div className="flex items-center justify-between">
                   <div>
                     <div 
-                      className={`text-lg font-medium mb-1 ${isSelected ? 'text-white' : 'text-[var(--foreground)]'}`}
+                      className="text-lg font-medium mb-1 text-[var(--foreground)]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       {book.en.toUpperCase()}
                     </div>
                     <div 
-                      className={`text-sm ${isSelected ? 'text-white/80' : 'text-[var(--text-secondary)]'}`}
+                      className="text-sm text-[var(--text-secondary)]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       {language === 'es' ? book.es : book.en}
                     </div>
                   </div>
                   <div 
-                    className={`text-2xl ${isSelected ? 'text-white' : 'text-[var(--text-hebrew)]'}`}
+                    className="text-2xl text-[var(--text-hebrew)]"
                     style={{ fontFamily: "'Arimo', sans-serif" }}
                   >
                     {book.he}
                   </div>
                 </div>
-              </button>
+              </NeumorphCard>
             );
           })}
         </div>

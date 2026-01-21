@@ -9,6 +9,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body, button, div, span, a, input, select {
+  transition: background-color 420ms ease, color 420ms ease, border-color 420ms ease, box-shadow 420ms ease;
+}
+
+button,
+a,
+[role="button"],
+[data-clickable="true"] {
+  cursor: pointer;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

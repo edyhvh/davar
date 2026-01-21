@@ -1,16 +1,14 @@
 import React from "react";
-import { Home, Search, Settings } from "lucide-react";
+import { Home, Search } from "lucide-react";
 
 interface BottomNavBarProps {
   onHomeClick?: () => void;
   onChapterVerseClick?: () => void;
-  onSettingsClick?: () => void;
 }
 
 export function BottomNavBar({
   onHomeClick,
   onChapterVerseClick,
-  onSettingsClick,
 }: BottomNavBarProps) {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-30 pointer-events-none bg-[var(--background)]">
@@ -37,14 +35,7 @@ export function BottomNavBar({
               <Search className="relative w-6 h-6 text-white" />
             </button>
 
-            {/* Settings Button (Right) */}
-            <button
-              onClick={onSettingsClick}
-              className="p-4 rounded-full bg-[var(--background)] hover:bg-[var(--muted)] transition-all hover:scale-110 active:scale-95"
-              aria-label="Settings"
-            >
-              <Settings className="w-6 h-6 text-[var(--text-secondary)]" />
-            </button>
+            <div className="w-14" />
           </div>
         </nav>
       </div>

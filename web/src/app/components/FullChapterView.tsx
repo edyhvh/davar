@@ -1,28 +1,16 @@
 import React from 'react';
-
-interface Verse {
-  hebrew: string;
-  translation: string;
-  wordVariants?: {
-    [word: string]: {
-      qumranWord: string;
-      masoreticWord: string;
-      label: string;
-      color: 'yellow' | 'pink' | 'green' | 'lime' | 'red' | 'teal';
-    };
-  };
-}
+import type { DssVariant, VerseResponse, WordResponse } from '../services/verseService';
 
 interface FullChapterViewProps {
-  verses: Verse[];
+  verses: VerseResponse[];
   bookName: string;
   bookNameHebrew: string;
   chapter: number;
   language: 'en' | 'es' | 'he';
   hebrewOnly: boolean;
-  onBookNameClick: () => void;
-  onWordClick: (word: string) => void;
+  onWordClick: (word: WordResponse) => void;
   showQumran?: boolean;
+  selectedWord?: string | null;
 }
 
 export function FullChapterView({
@@ -32,17 +20,16 @@ export function FullChapterView({
   chapter,
   language,
   hebrewOnly,
-  onBookNameClick,
   onWordClick,
   showQumran,
+  selectedWord,
 }: FullChapterViewProps) {
   return (
     <div className="space-y-6 transition-all duration-500">
       {/* Book Name & Chapter Header */}
       <div className="flex justify-center items-center gap-2 sticky top-0 z-10 bg-[var(--background)] py-4">
-        <button
-          onClick={onBookNameClick}
-          className="bg-[var(--neomorph-bg)] border border-[var(--neomorph-border)] rounded-full px-5 py-2.5 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[4px_4px_12px_var(--neomorph-shadow-dark),-4px_-4px_12px_var(--neomorph-shadow-light)] hover:shadow-[2px_2px_8px_var(--neomorph-shadow-dark),-2px_-2px_8px_var(--neomorph-shadow-light)] active:shadow-[inset_2px_2px_6px_var(--neomorph-inset-shadow-dark),inset_-2px_-2px_6px_var(--neomorph-inset-shadow-light)]"
+        <div
+          className="bg-[var(--neomorph-bg)] border border-[var(--neomorph-border)] rounded-full px-5 py-2.5 shadow-[4px_4px_12px_var(--neomorph-shadow-dark),-4px_-4px_12px_var(--neomorph-shadow-light)]"
         >
           <div 
             className="text-xs text-[var(--text-secondary)]"
@@ -50,7 +37,7 @@ export function FullChapterView({
           >
             {bookName.toUpperCase()} {chapter} | <span style={{ fontFamily: "'Arimo', sans-serif" }}>{bookNameHebrew} {chapter}</span>
           </div>
-        </button>
+        </div>
       </div>
 
       {/* Chapter Verses */}
@@ -79,36 +66,29 @@ export function FullChapterView({
               >
                 [{idx + 1}]
               </span>
-              {verse.hebrew.split(' ').map((word, wordIdx) => {
-                const variant = verse.wordVariants && verse.wordVariants[word];
-                
-                if (variant && showQumran) {
+              {(() => {
+                const dssMap = new Map<number, string>();
+                verse.dss?.forEach((variant) => dssMap.set(variant.word_position, variant.dss_text));
+
+                return verse.words.map((word, wordIdx) => {
+                  const variantText = showQumran ? dssMap.get(word.position) : undefined;
+                const displayText = variantText ?? word.text;
+                const isSelected = selectedWord === word.text || selectedWord === displayText;
+
                   return (
-                    <span key={wordIdx}>
-                      <span
-                        onClick={() => onWordClick(variant.qumranWord)}
-                        className="cursor-pointer transition-colors hover:opacity-80"
-                        style={{ color: 'var(--copper-highlight)' }}
+                    <span key={word.position}>
+                      <span 
+                        onClick={() => onWordClick(word)} 
+                        className={`cursor-pointer transition-colors duration-200 ${isSelected ? 'verse-highlight' : ''}`}
+                        style={variantText ? { color: 'var(--copper-highlight)' } : undefined}
                       >
-                        {variant.qumranWord}
+                        {displayText}
                       </span>
-                      {wordIdx < verse.hebrew.split(' ').length - 1 && ' '}
+                      {wordIdx < verse.words.length - 1 && ' '}
                     </span>
                   );
-                }
-                
-                return (
-                  <span key={wordIdx}>
-                    <span 
-                      onClick={() => onWordClick(word)} 
-                      className="cursor-pointer hover:text-[var(--accent)] transition-colors duration-200"
-                    >
-                      {word}
-                    </span>
-                    {wordIdx < verse.hebrew.split(' ').length - 1 && ' '}
-                  </span>
-                );
-              })}
+                });
+              })()}
             </div>
 
             {/* Translation - only show if not Hebrew Only mode */}
