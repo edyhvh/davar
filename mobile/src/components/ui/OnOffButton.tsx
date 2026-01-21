@@ -53,7 +53,8 @@ const createStyles = (
 export const OnOffButton = ({ value, onChange }: OnOffButtonProps) => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
-  const activeColor = themeMode === "light" ? colors.accentCopper : colors.primary;
+  const activeColor =
+    themeMode === "light" ? colors.accentCopper : colors.primary;
   const styles = useMemo(
     () => createStyles(colors, value, activeColor),
     [colors, value, activeColor],

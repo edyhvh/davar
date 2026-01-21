@@ -88,7 +88,7 @@ export function HomeScreen({ language }: HomeScreenProps) {
   const upcomingDays = [];
   const startDay = 10; // Aviv 10th
   
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 14; i++) {
     const day = startDay + i;
     // Simplified day names for demo
     const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -219,55 +219,26 @@ export function HomeScreen({ language }: HomeScreenProps) {
         </div>
       </div>
 
-      {/* Download Card - Full Width */}
-      <div 
-        className="p-5 rounded-[32px] relative overflow-hidden flex items-center justify-between"
+      {/* Info Section - Neumorphic Column */}
+      <div
+        className="p-6 rounded-[32px]"
         style={{
-          backgroundColor: 'var(--copper-highlight)',
+          backgroundColor: 'var(--about-surface)',
+          boxShadow: '0 28px 50px rgba(13, 39, 80, 0.16)',
         }}
       >
-        <div>
-          <div 
-            className={`text-2xl font-bold text-white mb-1 ${isHebrewText(t.downloadOffline) ? 'dark:text-white' : 'dark:text-white'}`}
+        <div className="space-y-3 text-white" style={{ fontFamily: "'Inter', sans-serif" }}>
+          <div
+            className="text-2xl font-bold mb-2"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            {t.downloadOffline}
+            Sources
           </div>
-          <div 
-            className={`text-sm text-white/80 ${isHebrewText(t.downloadDescription) ? 'dark:text-white/80' : 'dark:text-white/80'}`}
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            {t.downloadDescription}
-          </div>
-        </div>
-        <div className="flex-shrink-0">
-          <Download className="w-10 h-10 text-white" strokeWidth={2} />
-        </div>
-      </div>
-
-      {/* Donate Card - Full Width */}
-      <div 
-        className="p-5 rounded-[32px] relative overflow-hidden flex items-center justify-between"
-        style={{
-          backgroundColor: 'var(--accent-darker)',
-        }}
-      >
-        <div>
-          <div 
-            className={`text-2xl font-bold text-white mb-1 ${isHebrewText(t.donate) ? 'dark:text-white' : 'dark:text-white'}`}
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            {t.donate}
-          </div>
-          <div 
-            className={`text-sm text-white/80 ${isHebrewText(t.donateDescription) ? 'dark:text-white/80' : 'dark:text-white/80'}`}
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            {t.donateDescription}
-          </div>
-        </div>
-        <div className="flex-shrink-0">
-          <Heart className="w-10 h-10 text-white" strokeWidth={2} />
+          <div className="text-base text-white/80">Hebrew text <span className="font-semibold text-white">Masoretic & Qumran</span></div>
+          <div className="text-base text-white/80">Dictionary <span className="font-semibold text-white">Strong, BDB, custom</span> (selected words)</div>
+          <div className="text-base text-white/80">English translation <span className="font-semibold text-white">TS2009</span></div>
+          <div className="text-base text-white/80">Spanish translation <span className="font-semibold text-white">TTH</span></div>
+          <div className="text-base text-white/80">Besorah <span className="font-semibold text-white">Delitzsch translation</span></div>
         </div>
       </div>
 
@@ -275,7 +246,7 @@ export function HomeScreen({ language }: HomeScreenProps) {
       <div 
         className="p-6 rounded-[32px]"
         style={{
-          backgroundColor: 'var(--text-secondary)',
+          backgroundColor: 'var(--about-surface)',
         }}
       >
         <div 
@@ -367,6 +338,34 @@ export function HomeScreen({ language }: HomeScreenProps) {
           </a>
         </div>
       </div>
+
+      <div className="flex flex-wrap items-center justify-center gap-6 pt-2">
+        <a
+          href="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download on the App Store"
+        >
+          <img
+            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+            alt="Download on the App Store"
+            className="h-12"
+          />
+        </a>
+        <a
+          href="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Get it on Google Play"
+        >
+          <img
+            src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+            alt="Get it on Google Play"
+            className="h-14"
+          />
+        </a>
+      </div>
+
     </div>
   );
 }

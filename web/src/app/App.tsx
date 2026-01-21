@@ -1,94 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { LaunchScreen } from './components/LaunchScreen';
+import React, { useEffect, useMemo, useState } from 'react';
 import { HomeScreen } from './components/HomeScreen';
 import { VerseDisplay } from './components/VerseDisplay';
-import { SettingsScreen } from './components/SettingsScreen';
-import { BottomNavBar } from './components/BottomNavBar';
-import { BookSelector } from './components/BookSelector';
-import { ChapterVerseSelector } from './components/ChapterVerseSelector';
 import { BottomSheet } from './components/BottomSheet';
 import { WordCard } from './components/WordCard';
 import { DesignSystemExport } from './components/DesignSystemExport';
 import { MobileDesignSystemGuide } from './components/MobileDesignSystemGuide';
+import { NavigationBar } from './components/NavigationBar';
+import { NeumorphCard } from './components/NeumorphCard';
+import { DonateScreen } from './components/DonateScreen';
+import { FeaturesScreen } from './components/FeaturesScreen';
+import { getBooks, getChapterCount, getChapterVerses, getVerse, getVerseCount } from './services/verseService';
+import { getWordAnalysisByStrong, getWordAnalysisByText } from './services/lexiconService';
+import type { WordResponse } from './services/verseService';
 
-// Davar - Bible Study App
-// Sample Bible data with Qumran variants
-const sampleVerses = {
-  'Genesis': {
-    1: [
-      {
-        hebrew: 'בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ',
-        translation: 'In the beginning, God created the heavens and the earth.',
-        wordVariants: {
-          'בְּרֵאשִׁית': {
-            qumranWord: 'בְּרֵאשִׁית',
-            masoreticWord: 'בְּרֵאשִׁית',
-            label: 'Beginning',
-            color: 'yellow' as const,
-          }
-        }
-      },
-      {
-        hebrew: 'וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם',
-        translation: 'Now the earth was formless and empty, and darkness was over the surface of the deep.',
-        wordVariants: {}
-      },
-      {
-        hebrew: 'וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר',
-        translation: 'And God said, "Let there be light," and there was light.',
-        wordVariants: {}
-      },
-    ]
-  }
-};
-
-// Sample word analysis data
-const wordAnalysisData: { [key: string]: any } = {
-  'בְּרֵאשִׁית': {
-    word: 'בְּרֵאשִׁית',
-    transliteration: 'bereshit',
-    meanings: ['in beginning', 'at first', 'when beginning'],
-    root: 'ראש',
-    rootTransliteration: 'rosh',
-    rootMeaning: 'head, beginning, chief',
-    instances: [
-      { verse: 'Gen 1:1', text: 'In the beginning God created...' },
-      { verse: 'Gen 10:10', text: 'The beginning of his kingdom was...' },
-    ]
-  },
-  'בָּרָא': {
-    word: 'בָּרָא',
-    transliteration: 'bara',
-    meanings: ['created', 'brought into existence'],
-    root: 'ברא',
-    rootTransliteration: 'bara',
-    rootMeaning: 'to create, shape, form',
-    instances: [
-      { verse: 'Gen 1:1', text: 'In the beginning God created...' },
-      { verse: 'Gen 1:21', text: 'So God created the great creatures...' },
-      { verse: 'Gen 1:27', text: 'So God created mankind...' },
-    ]
-  },
-  'אֱלֹהִים': {
-    word: 'אֱלֹהִים',
-    transliteration: 'elohim',
-    meanings: ['God', 'gods', 'divine beings'],
-    root: 'אלה',
-    rootTransliteration: 'elah',
-    rootMeaning: 'deity, divine power',
-    instances: [
-      { verse: 'Gen 1:1', text: 'In the beginning God created...' },
-      { verse: 'Gen 1:2', text: 'and the Spirit of God was hovering...' },
-    ]
-  },
-};
-
-type Screen = 'home' | 'verse' | 'settings';
+type Screen = 'home' | 'verse' | 'settings' | 'donate' | 'features';
 
 export default function App() {
-  // Launch screen state
-  const [showLaunchScreen, setShowLaunchScreen] = useState(true);
-  
   // App state
   const [currentScreen, setCurrentScreen] = useState<Screen>('verse');
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -103,15 +30,14 @@ export default function App() {
   const [showQumran, setShowQumran] = useState(false);
   const [showFullChapter, setShowFullChapter] = useState(false);
   const [hebrewOnly, setHebrewOnly] = useState(false);
+  const [showNikud, setShowNikud] = useState(true);
+  const [showCantillation, setShowCantillation] = useState(false);
   
   // UI state
-  const [showBookSelector, setShowBookSelector] = useState(false);
-  const [showChapterVerseSelector, setShowChapterVerseSelector] = useState(false);
-  const [showWordAnalysis, setShowWordAnalysis] = useState(false);
-  const [selectedWord, setSelectedWord] = useState<string | null>(null);
-  const [showSettings, setShowSettings] = useState(false);
+  const [selectedWord, setSelectedWord] = useState<WordResponse | null>(null);
   const [showMobileDesignGuide, setShowMobileDesignGuide] = useState(false);
   const [showDesignSystem, setShowDesignSystem] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Get Hebrew book name
   const getHebrewBookName = (book: string): string => {
@@ -135,9 +61,8 @@ export default function App() {
   }, [theme]);
 
   // Handle word click
-  const handleWordClick = (word: string) => {
+  const handleWordClick = (word: WordResponse) => {
     setSelectedWord(word);
-    setShowWordAnalysis(true);
   };
 
   // Handle navigation to specific verse
@@ -148,186 +73,216 @@ export default function App() {
       const [chapter, verse] = parts[1].split(':');
       setCurrentChapter(parseInt(chapter));
       setCurrentVerse(parseInt(verse));
-      setShowWordAnalysis(false);
+      setSelectedWord(null);
     }
   };
 
   // Get current verse data
-  const getCurrentVerseData = () => {
-    const bookData = sampleVerses[currentBook as keyof typeof sampleVerses];
-    if (!bookData) return null;
-    
-    const chapterData = bookData[currentChapter as keyof typeof bookData];
-    if (!chapterData || !Array.isArray(chapterData)) return null;
-    
-    return chapterData[currentVerse - 1];
-  };
+  const currentVerseData = useMemo(
+    () => getVerse(currentBook, currentChapter, currentVerse),
+    [currentBook, currentChapter, currentVerse]
+  );
 
-  const currentVerseData = getCurrentVerseData();
+  const chapterVerses = useMemo(
+    () => getChapterVerses(currentBook, currentChapter),
+    [currentBook, currentChapter]
+  );
 
-  // Get all chapter verses
-  const getChapterVerses = () => {
-    const bookData = sampleVerses[currentBook as keyof typeof sampleVerses];
-    if (!bookData) return [];
-    
-    const chapterData = bookData[currentChapter as keyof typeof bookData];
-    if (!chapterData || !Array.isArray(chapterData)) return [];
-    
-    return chapterData;
-  };
+  const availableBooks = useMemo(() => getBooks(), []);
+  const bookOptions = useMemo(
+    () => availableBooks.map((book) => ({ name: book, hebrew: getHebrewBookName(book) })),
+    [availableBooks]
+  );
 
-  // Show launch screen
-  if (showLaunchScreen) {
-    return (
-      <LaunchScreen
-        onComplete={() => setShowLaunchScreen(false)}
-        language={language}
-      />
-    );
-  }
+  const chapterCount = useMemo(
+    () => getChapterCount(currentBook),
+    [currentBook]
+  );
+
+  const verseCount = useMemo(
+    () => getVerseCount(currentBook, currentChapter),
+    [currentBook, currentChapter]
+  );
+
+  const selectedWordAnalysis = useMemo(() => {
+    if (!selectedWord) return null;
+    return getWordAnalysisByStrong(selectedWord.strong) ?? getWordAnalysisByText(selectedWord.text);
+  }, [selectedWord]);
+
+  const isSplitView = Boolean(selectedWord && !isMobile);
+  const [isWordPanelVisible, setIsWordPanelVisible] = useState(false);
+
+  useEffect(() => {
+    if (selectedWord) {
+      setIsWordPanelVisible(true);
+      return undefined;
+    }
+
+    if (isWordPanelVisible) {
+      const timeout = window.setTimeout(() => setIsWordPanelVisible(false), 220);
+      return () => window.clearTimeout(timeout);
+    }
+
+    return undefined;
+  }, [selectedWord, isWordPanelVisible]);
+
+  useEffect(() => {
+    setSelectedWord(null);
+  }, [currentBook, currentChapter, currentVerse]);
+
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 767px)');
+    const update = () => setIsMobile(media.matches);
+    update();
+    media.addEventListener('change', update);
+    return () => media.removeEventListener('change', update);
+  }, []);
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
-      {/* Main Content Area */}
-      <div className={`max-w-md mx-auto px-6 ${currentScreen === 'verse' ? 'min-h-screen flex items-center' : 'pt-8 pb-32'}`}>
-        {currentScreen === 'home' && (
-          <HomeScreen language={language} />
-        )}
-
-        {currentScreen === 'verse' && currentVerseData && (
-          <VerseDisplay
-            hebrewText={currentVerseData.hebrew}
-            translation={currentVerseData.translation}
-            verseRef={`${currentBook} ${currentChapter}:${currentVerse}`}
-            verseNumber={currentVerse}
-            bookName={currentBook}
-            bookNameHebrew={getHebrewBookName(currentBook)}
+      <div className="sticky top-0 z-40 px-6 pt-6">
+        <div className="max-w-7xl mx-auto">
+          <NavigationBar
             book={currentBook}
+            bookHebrew={getHebrewBookName(currentBook)}
             chapter={currentChapter}
-            language={language}
-            onBookNameClick={() => setShowBookSelector(true)}
+            verse={currentVerse}
+            books={bookOptions}
+            chapterCount={chapterCount}
+            verseCount={verseCount}
+            onBookChange={(book) => {
+              setCurrentBook(book);
+              setCurrentChapter(1);
+              setCurrentVerse(1);
+              setCurrentScreen('verse');
+            }}
             onChapterChange={(chapter) => {
               setCurrentChapter(chapter);
               setCurrentVerse(1);
             }}
             onVerseChange={(verse) => setCurrentVerse(verse)}
-            onWordClick={handleWordClick}
-            showQumran={showQumran}
-            showFullChapter={showFullChapter}
-            hebrewOnly={hebrewOnly}
-            chapterVerses={getChapterVerses()}
-            previousVerseSnippet={currentVerse > 1 ? 'Previous verse...' : undefined}
-            nextVerseSnippet={currentVerse < getChapterVerses().length ? 'Next verse...' : undefined}
-            onSwipeUp={() => {
-              if (currentVerse > 1) {
-                setCurrentVerse(currentVerse - 1);
-              }
-            }}
-            onSwipeDown={() => {
-              const chapterVerses = getChapterVerses();
-              if (currentVerse < chapterVerses.length) {
-                setCurrentVerse(currentVerse + 1);
-              }
-            }}
-          />
-        )}
-      </div>
-
-      {/* Bottom Navigation */}
-      <BottomNavBar
-        onHomeClick={() => setCurrentScreen('home')}
-        onChapterVerseClick={() => setShowChapterVerseSelector(true)}
-        onSettingsClick={() => setShowSettings(true)}
-      />
-
-      {/* Swipe Indicator Line - Only on Verse Screen */}
-      {(currentScreen === 'verse' || currentScreen === 'home') && (
-        <div className="fixed bottom-[100px] left-0 right-0 z-20 pointer-events-none">
-          <div 
-            className="w-full h-[1px]"
-            style={{ backgroundColor: '#999999' }}
-          />
-        </div>
-      )}
-
-      {/* Book Selector Modal */}
-      {showBookSelector && (
-        <BookSelector
-          currentBook={currentBook}
-          onBookSelect={(book) => {
-            setCurrentBook(book);
-            setCurrentChapter(1);
-            setCurrentVerse(1);
-          }}
-          onClose={() => setShowBookSelector(false)}
-          language={language}
-        />
-      )}
-
-      {/* Chapter & Verse Selector Bottom Sheet */}
-      {showChapterVerseSelector && (
-        <ChapterVerseSelector
-          book={currentBook}
-          currentChapter={currentChapter}
-          currentVerse={currentVerse}
-          onSelect={(chapter, verse) => {
-            setCurrentChapter(chapter);
-            setCurrentVerse(verse);
-            setCurrentScreen('verse');
-          }}
-          onClose={() => setShowChapterVerseSelector(false)}
-        />
-      )}
-
-      {/* Word Analysis Bottom Sheet */}
-      {showWordAnalysis && selectedWord && wordAnalysisData[selectedWord] && (
-        <BottomSheet
-          isOpen={showWordAnalysis}
-          onClose={() => {
-            setShowWordAnalysis(false);
-            setSelectedWord(null);
-          }}
-          title=""
-        >
-          <WordCard
-            word={wordAnalysisData[selectedWord].word}
-            transliteration={wordAnalysisData[selectedWord].transliteration}
-            meanings={wordAnalysisData[selectedWord].meanings}
-            root={wordAnalysisData[selectedWord].root}
-            rootTransliteration={wordAnalysisData[selectedWord].rootTransliteration}
-            rootMeaning={wordAnalysisData[selectedWord].rootMeaning}
-            instances={wordAnalysisData[selectedWord].instances}
-            onInstanceClick={handleNavigateToVerse}
-          />
-        </BottomSheet>
-      )}
-
-      {/* Settings Bottom Sheet */}
-      {showSettings && (
-        <BottomSheet
-          isOpen={showSettings}
-          onClose={() => setShowSettings(false)}
-          title="Settings"
-        >
-          <SettingsScreen
+            onHomeClick={() => setCurrentScreen('home')}
+            onDonateClick={() => setCurrentScreen('donate')}
+            onFeaturesClick={() => setCurrentScreen('features')}
             theme={theme}
             onThemeChange={setTheme}
             language={language}
-            onLanguageChange={(lang) => setLanguage(lang as 'en' | 'es' | 'he')}
+            onLanguageChange={setLanguage}
             showQumran={showQumran}
             onQumranChange={setShowQumran}
             showFullChapter={showFullChapter}
             onFullChapterChange={setShowFullChapter}
             hebrewOnly={hebrewOnly}
             onHebrewOnlyChange={setHebrewOnly}
-            onDesignSystemClick={() => {
-              setShowDesignSystem(true);
-              setShowSettings(false);
-            }}
-            onMobileDesignGuideClick={() => {
-              setShowMobileDesignGuide(true);
-              setShowSettings(false);
-            }}
+            showNikud={showNikud}
+            onNikudChange={setShowNikud}
+            showCantillation={showCantillation}
+            onCantillationChange={setShowCantillation}
+          />
+        </div>
+      </div>
+
+      {/* Main Content Area */}
+      <div className="px-6 pb-32 pt-6">
+        <div className="max-w-7xl mx-auto">
+          {currentScreen === 'home' && (
+            <HomeScreen language={language} />
+          )}
+
+          {currentScreen === 'donate' && (
+            <DonateScreen />
+          )}
+
+          {currentScreen === 'features' && (
+            <FeaturesScreen />
+          )}
+
+          {currentScreen === 'verse' && currentVerseData && (
+            <div className={`grid gap-6 ${isSplitView ? 'md:grid-cols-[7fr_3fr]' : 'md:grid-cols-1'}`}>
+              <div className={`min-h-[70vh] ${showFullChapter ? '' : 'flex items-center justify-center'} ${isSplitView ? '' : 'mx-auto w-full max-w-3xl'} verse-panel-shell ${isSplitView ? 'verse-panel-split' : 'verse-panel-centered'}`}>
+                <VerseDisplay
+                  hebrewText={currentVerseData.hebrew}
+                  translation={currentVerseData.translation ?? ''}
+                  verseRef={`${currentBook} ${currentChapter}:${currentVerse}`}
+                  verseNumber={currentVerse}
+                  bookName={currentBook}
+                  bookNameHebrew={getHebrewBookName(currentBook)}
+                  book={currentBook}
+                  chapter={currentChapter}
+                  language={language}
+                  onWordClick={handleWordClick}
+                  showQumran={showQumran}
+                  showFullChapter={showFullChapter}
+                  hebrewOnly={hebrewOnly}
+                  showNikud={showNikud}
+                  showCantillation={showCantillation}
+                  chapterVerses={chapterVerses}
+                  words={currentVerseData.words}
+                  dssVariants={currentVerseData.dss}
+                  selectedWord={selectedWord?.text ?? null}
+                  previousVerseSnippet={currentVerse > 1 ? 'Previous verse...' : undefined}
+                  nextVerseSnippet={currentVerse < chapterVerses.length ? 'Next verse...' : undefined}
+                  onSwipeUp={() => {
+                    if (currentVerse > 1) {
+                      setCurrentVerse(currentVerse - 1);
+                    }
+                  }}
+                  onSwipeDown={() => {
+                    if (currentVerse < chapterVerses.length) {
+                      setCurrentVerse(currentVerse + 1);
+                    }
+                  }}
+                />
+              </div>
+
+              <div className="hidden md:block">
+                {(selectedWord || isWordPanelVisible) && (
+                  <NeumorphCard
+                    className={`p-6 sticky top-24 word-panel-shell ${selectedWord ? 'word-panel-open' : 'word-panel-closed'}`}
+                  >
+                    {selectedWord && (
+                      <WordCard
+                        word={selectedWordAnalysis?.word ?? selectedWord.text}
+                        transliteration={selectedWordAnalysis?.transliteration}
+                        meanings={selectedWordAnalysis?.meanings ?? []}
+                        root={selectedWordAnalysis?.root}
+                        rootTransliteration={selectedWordAnalysis?.rootTransliteration}
+                        rootMeaning={selectedWordAnalysis?.rootMeaning}
+                        instances={selectedWordAnalysis?.instances ?? []}
+                        onInstanceClick={handleNavigateToVerse}
+                        onClose={() => setSelectedWord(null)}
+                      />
+                    )}
+                  </NeumorphCard>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Bottom Navigation (mobile only) */}
+      <div className="md:hidden">
+        <div className="h-10" />
+      </div>
+
+      {/* Word Analysis Bottom Sheet (mobile only) */}
+      {isMobile && selectedWord && (
+        <BottomSheet
+          isOpen={!!selectedWord}
+          onClose={() => setSelectedWord(null)}
+          title=""
+        >
+          <WordCard
+            word={selectedWordAnalysis?.word ?? selectedWord.text}
+            transliteration={selectedWordAnalysis?.transliteration}
+            meanings={selectedWordAnalysis?.meanings ?? []}
+            root={selectedWordAnalysis?.root}
+            rootTransliteration={selectedWordAnalysis?.rootTransliteration}
+            rootMeaning={selectedWordAnalysis?.rootMeaning}
+            instances={selectedWordAnalysis?.instances ?? []}
+            onInstanceClick={handleNavigateToVerse}
+            onClose={() => setSelectedWord(null)}
           />
         </BottomSheet>
       )}
