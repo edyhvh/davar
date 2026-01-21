@@ -1,0 +1,115 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import type { ThemeMode } from "@/src/theme";
+
+const STORAGE_KEYS = {
+  themeMode: "davar.themeMode",
+  hebrewFontScale: "davar.hebrewFontScale",
+  bookmarks: "davar.bookmarks",
+  language: "davar.language",
+  showQumran: "davar.showQumran",
+  showFullChapter: "davar.showFullChapter",
+  hebrewOnly: "davar.hebrewOnly",
+  wordHintCount: "davar.wordHintCount",
+};
+
+export const loadThemeMode = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.themeMode);
+  return value === "dark" ? "dark" : "light";
+};
+
+export const saveThemeMode = async (mode: ThemeMode) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.themeMode, mode);
+};
+
+export const loadHebrewFontScale = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.hebrewFontScale);
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
+};
+
+export const saveHebrewFontScale = async (scale: number) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.hebrewFontScale, String(scale));
+};
+
+export const loadBookmarks = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.bookmarks);
+  if (!value) {
+    return [];
+  }
+
+  try {
+    const parsed = JSON.parse(value);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+};
+
+export const saveBookmarks = async (bookmarks: string[]) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.bookmarks, JSON.stringify(bookmarks));
+};
+
+export type AppLanguage = "en" | "es" | "he";
+
+export const loadLanguage = async (): Promise<AppLanguage> => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.language);
+  if (value === "es" || value === "he") {
+    return value;
+  }
+  return "en";
+};
+
+export const saveLanguage = async (language: AppLanguage) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.language, language);
+};
+
+const parseBoolean = (value: string | null, fallback: boolean) => {
+  if (value === "true") {
+    return true;
+  }
+  if (value === "false") {
+    return false;
+  }
+  return fallback;
+};
+
+export const loadShowQumran = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.showQumran);
+  return parseBoolean(value, false);
+};
+
+export const saveShowQumran = async (value: boolean) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.showQumran, String(value));
+};
+
+export const loadShowFullChapter = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.showFullChapter);
+  return parseBoolean(value, false);
+};
+
+export const saveShowFullChapter = async (value: boolean) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.showFullChapter, String(value));
+};
+
+export const loadHebrewOnly = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.hebrewOnly);
+  return parseBoolean(value, false);
+};
+
+export const saveHebrewOnly = async (value: boolean) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.hebrewOnly, String(value));
+};
+
+export const loadWordHintCount = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.wordHintCount);
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+};
+
+export const saveWordHintCount = async (count: number) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.wordHintCount, String(count));
+};
+
+export const clearStorage = async () => {
+  await AsyncStorage.multiRemove(Object.values(STORAGE_KEYS));
+};

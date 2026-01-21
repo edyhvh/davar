@@ -1,0 +1,32 @@
+---
+description: "Force Bun as the only JavaScript runtime - never suggest or use other package managers or runtimes"
+globs: "*"
+alwaysApply: true
+---
+
+# Bun Runtime & Execution Rules - Davar Project
+
+- ALWAYS use **Bun** as the JavaScript/TypeScript runtime and package manager.
+- NEVER suggest, mention, or generate commands for npm, yarn, pnpm, deno, node scripts, or any other runtime/manager.
+  Examples of forbidden commands:
+  - npm install / npm run / npm start
+  - yarn add / yarn dev
+  - pnpm install / pnpm dev
+  - node server.js / ts-node
+- Use **only** Bun-compatible commands:
+  - bun install
+  - bun add <package>
+  - bun run dev / bun dev
+  - bun --bun
+  - bunx <command>
+  - bun test
+  - bun upgrade
+- When a command needs to be executed (install, dev server, lint, build, etc.):
+  1. Tell me EXACTLY which command to run
+  2. Specify the exact directory/path where it should be executed (e.g. project root, /apps/mobile, etc.)
+  3. DO NOT run ANY command yourself in this chat
+  4. DO NOT generate, simulate, or invent terminal output / logs
+  5. Wait for me to confirm execution and paste the real output (including any errors)
+  6. ONLY after I provide the actual logs/output, continue with the next step, analysis, or fix
+- Keep all responses clean — no fake terminal blocks, no assumed success/failure messages.
+- If initial setup is needed, suggest:
