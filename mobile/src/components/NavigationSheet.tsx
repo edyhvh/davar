@@ -285,7 +285,9 @@ export const NavigationSheet = ({
       .filter((v) => v.bookId === selectedBookId)
       .map((v) => v.chapter);
     const unique = [...new Set(chaptersForBook)].sort((a, b) => a - b);
-    return unique.length > 0 ? unique : Array.from({ length: 50 }, (_, i) => i + 1);
+    return unique.length > 0
+      ? unique
+      : Array.from({ length: 50 }, (_, i) => i + 1);
   }, [selectedBookId]);
 
   // Get verses for selected chapter
@@ -296,7 +298,9 @@ export const NavigationSheet = ({
     const unique = [...new Set(versesForChapter.map((v) => v.verse))].sort(
       (a, b) => a - b,
     );
-    return unique.length > 0 ? unique : Array.from({ length: 30 }, (_, i) => i + 1);
+    return unique.length > 0
+      ? unique
+      : Array.from({ length: 30 }, (_, i) => i + 1);
   }, [selectedBookId, selectedChapter]);
 
   // Pad numbers for grid

@@ -161,7 +161,9 @@ export const VerseSelectorSheet = ({
       return filteredNumbers;
     }
     const fillerCount = COLUMN_COUNT - remainder;
-    return filteredNumbers.concat(Array.from({ length: fillerCount }, () => -1));
+    return filteredNumbers.concat(
+      Array.from({ length: fillerCount }, () => -1),
+    );
   }, [filteredNumbers]);
 
   const renderBackdrop = useCallback(
