@@ -1,0 +1,398 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Core Accent: Soft airy pastel tekhelet blue */
+  --accent: #7AA0D6;           /* Primary interactive elements */
+  --accent-from: #7AA0D6;
+  --accent-to: #6389BF;        /* Gradients, hover base */
+  --accent-dark: #6389BF;
+  --accent-deep: #4C72A8;      /* Pressed/deep states */
+  --accent-light: #A8C8F0;     /* Soft fills, selected states */
+  --accent-darker: #3D5A8C;    /* Darker blue for donate button */
+  --accent-strong: #4C72A8;
+  --about-surface: #4a4a4a;
+  --accent-glow: rgba(122, 160, 214, 0.12);
+  --accent-glow-dark: rgba(99, 137, 191, 0.18);
+  
+  /* Light theme foundations – warm manuscript cream */
+  --background: #FAF6F0;       /* Shafan-inspired warm parchment */
+  --foreground: #000000;
+  --text-primary: #000000;     /* Main text + Hebrew */
+  --text-secondary: #333333;
+  --text-hebrew: #000000;
+  --muted: rgba(0, 0, 0, 0.05); /* Subtle muted bg */
+  
+  /* Surfaces – soft paper */
+  --surface: #FDF8F2;
+  --surface-elevated: #F4EEE7;
+  
+  /* Neumorphism - Light Theme (Shafan soft depth) */
+  --neomorph-bg: #FAF6F0;
+  --neomorph-shadow-dark: rgba(180, 160, 140, 0.5);
+  --neomorph-shadow-light: rgba(255, 255, 255, 1);
+  --neomorph-border: rgba(0, 0, 0, 0.04);
+  --neomorph-inset-shadow-dark: rgba(180, 160, 140, 0.5);
+  --neomorph-inset-shadow-light: rgba(255, 255, 255, 1);
+
+  /* Glass surfaces (for dropdown panels only) */
+  --glass-surface: rgba(255, 255, 255, 0.95);
+  --glass-surface-elevated: rgba(255, 255, 255, 0.98);
+  --glass-border: rgba(0, 0, 0, 0.15);
+  --glass-shadow: rgba(0, 0, 0, 0.15);
+  --glass-highlight: rgba(255, 255, 255, 0.75);
+  
+  /* Softened Copper – now more golden/earthy to complement pastels */
+  --copper-base: #B07A3C;      /* Main copper (e.g., Download button) */
+  --copper-highlight: #C68F55;
+  --copper-glow: rgba(192, 140, 70, 0.07);
+  --copper-background-subtle: rgba(184, 130, 60, 0.03);
+  
+  /* Dark theme overrides */
+  &.dark {
+    /* Accent stays lighter pastel for visibility & serenity */
+    --accent: #92B5E8;
+    --accent-from: #92B5E8;
+    --accent-to: #7B9ED1;
+    --accent-dark: #7B9ED1;
+    --accent-deep: #4C72A8;
+    --accent-light: #BCD8FF;
+    --accent-darker: #3D5A8C;    /* Darker blue for donate button */
+    --accent-strong: #4C72A8;
+    --about-surface: #2f2b29;
+    
+    /* Warm text – preserved for long reading comfort */
+    --text-primary: #d5c4a1;
+    --text-secondary: #bdae93;
+    --text-hebrew: #d5c4a1;
+    
+    /* Deep warm brown backgrounds */
+    --background: #3c3836;
+    --foreground: #d5c4a1;
+    --muted: rgba(255, 255, 255, 0.08);
+    
+    /* Surfaces – deep but cozy */
+    --surface: #3c3836;
+    --surface-elevated: #44403e;
+    
+    /* Neumorphism - Dark Theme (Shafan warm depth) */
+    --neomorph-bg: #3c3836;
+    --neomorph-shadow-dark: rgba(29, 32, 33, 0.9);
+    --neomorph-shadow-light: rgba(80, 73, 69, 0.7);
+    --neomorph-border: rgba(255, 255, 255, 0.06);
+    --neomorph-inset-shadow-dark: rgba(29, 32, 33, 0.9);
+    --neomorph-inset-shadow-light: rgba(80, 73, 69, 0.7);
+
+    /* Glass surfaces for dark theme */
+    --glass-surface: rgba(60, 56, 54, 0.95);
+    --glass-surface-elevated: rgba(68, 64, 62, 0.97);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-shadow: rgba(0, 0, 0, 0.35);
+    --glass-highlight: rgba(255, 255, 255, 0.1);
+    
+    /* Copper – richer, warmer for dark mode harmony */
+    --copper-base: #A06C35;
+    --copper-highlight: #B5814A;
+    --copper-glow: rgba(176, 120, 60, 0.10);
+    --copper-background-subtle: rgba(160, 110, 50, 0.05);
+  }
+  
+  /* Standard theme variables */
+  --card: rgba(255, 255, 255, 0.8);
+  --card-foreground: #1d1d1f;
+  --popover: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #1d1d1f;
+  --primary: #7AA0D6;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(255, 255, 255, 0.6);
+  --secondary-foreground: #6e6e73;
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.5);
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(122, 160, 214, 0.4);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.75rem;
+  --sidebar: rgba(255, 255, 255, 0.95);
+  --sidebar-foreground: #1d1d1f;
+  --sidebar-primary: #2E347A;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(255, 255, 255, 0.7);
+  --sidebar-accent-foreground: #6e6e73;
+  --sidebar-border: rgba(0, 0, 0, 0.1);
+  --sidebar-ring: rgba(46, 52, 122, 0.5);
+}
+
+/* Custom scrollbar styling - overlay style to prevent layout shift */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.dark * {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.dark {
+  /* Shafan Dark Theme Colors - Warm Brown */
+  --background: #3c3836;
+  --foreground: #d5c4a1;
+  --text-primary: #d5c4a1;
+  --text-secondary: #bdae93;
+  
+  /* Glass surfaces for dark theme */
+  --glass-surface: rgba(60, 56, 54, 0.95);
+  --glass-surface-elevated: rgba(68, 64, 62, 0.97);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  
+  /* Earthy Tekhelet Accent - Dark Mode */
+  --accent-from: #92B5E8;
+  --accent-to: #7B9ED1;
+  --accent: #92B5E8;
+  --accent-dark: #7B9ED1;
+  --accent-deep: #4C72A8;
+  --accent-light: #BCD8FF;
+  
+  /* Subtle accent glow for depth */
+  --accent-glow: rgba(146, 181, 232, 0.10);
+  --accent-glow-dark: rgba(123, 158, 209, 0.15);
+  
+  /* Standard theme variables */
+  --card: rgba(60, 56, 54, 0.82);
+  --card-foreground: #d5c4a1;
+  --popover: rgba(60, 56, 54, 0.95);
+  --popover-foreground: #d5c4a1;
+  --primary: #92B5E8;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(60, 56, 54, 0.7);
+  --secondary-foreground: #bdae93;
+  --muted: rgba(255, 255, 255, 0.08);
+  --muted-foreground: #bdae93;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: rgba(255, 255, 255, 0.10);
+  --input: rgba(60, 56, 54, 0.7);
+  --input-background: rgba(80, 73, 69, 0.5);
+  --ring: rgba(146, 181, 232, 0.45);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: rgba(60, 56, 54, 0.95);
+  --sidebar-foreground: #d5c4a1;
+  --sidebar-primary: #92B5E8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(60, 56, 54, 0.8);
+  --sidebar-accent-foreground: #bdae93;
+  --sidebar-border: rgba(255, 255, 255, 0.15);
+  --sidebar-ring: rgba(146, 181, 232, 0.5);
+}
+
+@keyframes verseHighlight {
+  0% { background-color: rgba(251, 191, 36, 0); transform: scale(1); }
+  20% { background-color: rgba(251, 191, 36, 0.3); transform: scale(1.005); }
+  100% { background-color: rgba(251, 191, 36, 0); transform: scale(1); }
+}
+
+.verse-highlight {
+  animation: verseHighlight 1.6s ease-out;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 0 0 6px rgba(251, 191, 36, 0.2);
+}
+
+@keyframes wordPanelIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.word-panel-enter {
+  animation: wordPanelIn 220ms ease-out;
+}
+
+.crypto-icon-internal {
+  fill: #ffffff;
+}
+
+.dark .crypto-icon-internal {
+  fill: #3c3836;
+}
+
+.dark .usdt-internal {
+  fill: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 420ms ease, color 420ms ease;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+.word-panel-shell {
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.word-panel-open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.word-panel-closed {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.verse-panel-shell {
+  transition: transform 240ms ease, opacity 240ms ease;
+}
+
+.verse-panel-centered {
+  transform: translateX(0);
+}
+
+.verse-panel-split {
+  transform: translateX(-8px);
+}
