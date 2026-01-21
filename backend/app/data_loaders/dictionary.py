@@ -6,13 +6,13 @@ Loads lexicon (custom definitions, BDB/Strong's) and prefix data
 import os
 from typing import Dict, List, Any, Optional
 from pathlib import Path
-from . import DataLoader
+from .base import DataLoader
 
 
 class DictionaryLoader(DataLoader):
     """Loader for dictionary data (lexicon and prefixes)"""
 
-    def __init__(self, data_path: str = None):
+    def __init__(self, data_path: Optional[str] = None):
         super().__init__(data_path)
         self.lexicon_path = self.data_path / "dict" / "lexicon"
         self.prefixes_path = self.data_path / "dict" / "prefixes"
@@ -43,6 +43,19 @@ class DictionaryLoader(DataLoader):
         except FileNotFoundError:
             return {}
 
+    def load_words_lexicon(self) -> Dict[str, Any]:
+        """Load full words lexicon (Strong's words with occurrences)"""
+        cache_key = "words_lexicon"
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+
+        try:
+            data = self.load_json("dict/lexicon/words.json")
+            self._cache[cache_key] = data
+            return data
+        except FileNotFoundError:
+            return {}
+
     def get_custom_definition(self, strong_number: str) -> Optional[Dict[str, Any]]:
         """Get custom definition for a Strong's number"""
         custom_defs = self.load_custom_definitions()
@@ -54,6 +67,11 @@ class DictionaryLoader(DataLoader):
         custom_defs = self.load_custom_definitions()
         if strong_number in custom_defs:
             return custom_defs[strong_number]
+
+        # Next try words lexicon (more complete for occurrences)
+        words_lexicon = self.load_words_lexicon()
+        if strong_number in words_lexicon:
+            return words_lexicon[strong_number]
 
         # Fall back to BDB/Strong's
         roots_lexicon = self.load_roots_lexicon()
@@ -104,7 +122,7 @@ class DictionaryLoader(DataLoader):
 
             if (query.lower() in hebrew or
                 query.lower() in translit_en or
-                query.lower() in translit_es):
+                    query.lower() in translit_es):
                 results.append(entry)
                 if len(results) >= limit:
                     break

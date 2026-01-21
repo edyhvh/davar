@@ -6,13 +6,13 @@ Loads DSS (Dead Sea Scrolls) variant readings
 import os
 from typing import Dict, List, Any, Optional
 from pathlib import Path
-from . import DataLoader
+from .base import DataLoader
 
 
 class VariantLoader(DataLoader):
     """Loader for DSS variant data from DSS JSON"""
 
-    def __init__(self, data_path: str = None):
+    def __init__(self, data_path: Optional[str] = None):
         super().__init__(data_path)
         self.dss_path = self.data_path / "dss" / "dss.json"
 

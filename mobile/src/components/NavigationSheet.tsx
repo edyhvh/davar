@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
@@ -21,7 +21,8 @@ import {
   spacing,
   typography,
 } from "@/src/theme";
-import { mockBooks, mockVerses, type MockBook } from "@/src/constants/mockData";
+import { mockBooks, type MockBook } from "@/src/constants/mockData";
+import { fetchMetadata } from "@/src/services/metadata";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 
 type NavigationSheetProps = {
@@ -256,50 +257,72 @@ export const NavigationSheet = ({
   const [selectedChapter, setSelectedChapter] = useState(currentChapter);
   const [searchQuery, setSearchQuery] = useState("");
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
+  const [booksMeta, setBooksMeta] = useState<MockBook[]>(mockBooks);
+  const [chapterCounts, setChapterCounts] = useState<Record<string, number[]>>(
+    {},
+  );
+  const [verseCounts, setVerseCounts] = useState<
+    Record<string, Record<string, number>>
+  >({});
+
+  useEffect(() => {
+    let isMounted = true;
+    const loadMetadata = async () => {
+      try {
+        const metadata = await fetchMetadata();
+        if (!isMounted) return;
+        const mappedBooks = metadata.books.map((book) => ({
+          id: book.id,
+          name: book.name,
+          hebrewName: book.hebrew_name,
+        }));
+        setBooksMeta(mappedBooks);
+        setChapterCounts(metadata.chapter_counts ?? {});
+        setVerseCounts(metadata.verse_counts ?? {});
+      } catch {
+        if (!isMounted) return;
+        setBooksMeta(mockBooks);
+      }
+    };
+    loadMetadata();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   // Get selected book info
   const selectedBook = useMemo(
-    () => mockBooks.find((b) => b.id === selectedBookId),
-    [selectedBookId],
+    () => booksMeta.find((b) => b.id === selectedBookId),
+    [booksMeta, selectedBookId],
   );
 
   // Filter books by search
   const filteredBooks = useMemo(() => {
     if (!searchQuery.trim()) {
-      return mockBooks;
+      return booksMeta;
     }
     const query = searchQuery.toLowerCase();
-    return mockBooks.filter(
+    return booksMeta.filter(
       (book) =>
         book.name.toLowerCase().includes(query) ||
         stripNikud(book.hebrewName).includes(query) ||
         book.hebrewName.includes(query),
     );
-  }, [searchQuery]);
+  }, [booksMeta, searchQuery]);
 
   // Get chapters for selected book
   const chapterNumbers = useMemo(() => {
-    const chaptersForBook = mockVerses
-      .filter((v) => v.bookId === selectedBookId)
-      .map((v) => v.chapter);
-    const unique = [...new Set(chaptersForBook)].sort((a, b) => a - b);
-    return unique.length > 0
-      ? unique
-      : Array.from({ length: 50 }, (_, i) => i + 1);
-  }, [selectedBookId]);
+    const chapters = chapterCounts[selectedBookId];
+    if (chapters?.length) return chapters;
+    return Array.from({ length: 50 }, (_, i) => i + 1);
+  }, [chapterCounts, selectedBookId]);
 
   // Get verses for selected chapter
   const verseNumbers = useMemo(() => {
-    const versesForChapter = mockVerses.filter(
-      (v) => v.bookId === selectedBookId && v.chapter === selectedChapter,
-    );
-    const unique = [...new Set(versesForChapter.map((v) => v.verse))].sort(
-      (a, b) => a - b,
-    );
-    return unique.length > 0
-      ? unique
-      : Array.from({ length: 30 }, (_, i) => i + 1);
-  }, [selectedBookId, selectedChapter]);
+    const count = verseCounts[selectedBookId]?.[String(selectedChapter)];
+    if (count) return Array.from({ length: count }, (_, i) => i + 1);
+    return Array.from({ length: 30 }, (_, i) => i + 1);
+  }, [selectedBookId, selectedChapter, verseCounts]);
 
   // Pad numbers for grid
   const padNumbers = useCallback((numbers: number[]) => {

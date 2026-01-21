@@ -6,13 +6,13 @@ Loads TTH (Spanish) and TS2009 (English) translations
 import os
 from typing import Dict, List, Any, Optional
 from pathlib import Path
-from . import DataLoader
+from .base import DataLoader
 
 
 class TranslationLoader(DataLoader):
     """Loader for translation data (TTH Spanish, TS2009 English)"""
 
-    def __init__(self, data_path: str = None):
+    def __init__(self, data_path: Optional[str] = None):
         super().__init__(data_path)
         self.tth_path = self.data_path / "tth_2" / "json"
         self.ts2009_path = self.data_path / "ts2009"
@@ -72,7 +72,7 @@ class TranslationLoader(DataLoader):
                 verses = book_data["verses"]
                 for verse_data in verses:
                     if (verse_data.get("chapter") == chapter and
-                        verse_data.get("verse") == verse):
+                            verse_data.get("verse") == verse):
                         translation = verse_data.get("text", "")
                         self._cache[cache_key] = translation
                         return translation

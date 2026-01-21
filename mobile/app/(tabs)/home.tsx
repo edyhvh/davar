@@ -1,11 +1,15 @@
-import { useMemo } from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { useMemo, useState } from "react";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { AppIcon } from "@/src/components/ui/AppIcon";
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import type { IconKey } from "@/src/constants/icons";
+import {
+  downloadDictionaryBundle,
+  downloadTranslationBundle,
+} from "@/src/services/offlineSync";
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
   StyleSheet.create({
@@ -126,6 +130,27 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     actionIconDark: {
       color: colors.textTertiary,
     },
+    downloadActions: {
+      marginTop: spacing[4],
+      flexDirection: "row",
+      gap: spacing[3],
+      flexWrap: "wrap",
+    },
+    downloadButton: {
+      borderRadius: radii.full,
+      paddingHorizontal: spacing[4],
+      paddingVertical: spacing[3],
+      borderWidth: 1,
+      borderColor: colors.background,
+      backgroundColor: "rgba(255, 255, 255, 0.15)",
+    },
+    downloadButtonText: {
+      fontFamily: typography.families.latinUIBold,
+      fontSize: typography.sizes.caption,
+      color: colors.background,
+      textTransform: "uppercase",
+      letterSpacing: 1,
+    },
     aboutCard: {
       borderRadius: radii.xl,
       padding: spacing[5],
@@ -164,6 +189,7 @@ export default function HomeScreen() {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const [downloading, setDownloading] = useState<string | null>(null);
   const calendarDays = [
     { day: 10, label: "Sun", active: true },
     { day: 11, label: "Mon" },
@@ -224,8 +250,51 @@ export default function HomeScreen() {
                   themeMode === "dark" && styles.actionSubtitleDark,
                 ]}
               >
-                Access Scripture without internet
+                {downloading
+                  ? `Downloading ${downloading}...`
+                  : "Tap to store dictionary and translations"}
               </Text>
+              <View style={styles.downloadActions}>
+                <Pressable
+                  onPress={async () => {
+                    setDownloading("dictionary");
+                    try {
+                      await downloadDictionaryBundle();
+                    } finally {
+                      setDownloading(null);
+                    }
+                  }}
+                  style={styles.downloadButton}
+                >
+                  <Text style={styles.downloadButtonText}>Dictionary</Text>
+                </Pressable>
+                <Pressable
+                  onPress={async () => {
+                    setDownloading("english");
+                    try {
+                      await downloadTranslationBundle("en");
+                    } finally {
+                      setDownloading(null);
+                    }
+                  }}
+                  style={styles.downloadButton}
+                >
+                  <Text style={styles.downloadButtonText}>English</Text>
+                </Pressable>
+                <Pressable
+                  onPress={async () => {
+                    setDownloading("spanish");
+                    try {
+                      await downloadTranslationBundle("es");
+                    } finally {
+                      setDownloading(null);
+                    }
+                  }}
+                  style={styles.downloadButton}
+                >
+                  <Text style={styles.downloadButtonText}>Spanish</Text>
+                </Pressable>
+              </View>
             </View>
             <AppIcon
               name="download"

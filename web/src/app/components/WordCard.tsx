@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
+import { normalizeHebrew, stripCantillation } from '../utils/hebrew';
 
 interface WordInstance {
   verse: string;
@@ -69,7 +70,7 @@ export function WordCard({
             fontWeight: 600,
           }}
         >
-          {word}
+          {normalizeHebrew(word).replace(/\//g, '')}
         </div>
         
         {/* Transliteration */}
@@ -153,7 +154,7 @@ export function WordCard({
             >
               Meanings
             </h3>
-            <p 
+            <div 
               style={{ 
                 fontFamily: "'Inter', sans-serif",
                 fontSize: '18px',
@@ -162,60 +163,70 @@ export function WordCard({
               }}
               className="dark:text-[var(--text-secondary)]"
             >
-              {meanings.length > 0 ? meanings.join(', ') : 'No meanings available yet.'}
-            </p>
+              {meanings.length > 0 ? (
+                <div className="space-y-2 text-center">
+                  {meanings
+                    .flatMap((m) => (m ? m.split(/[,;]\s*/).map((s) => s.trim()) : []))
+                    .map((m, i) => (
+                      <div key={i} style={{ whiteSpace: 'normal' }}>
+                        {stripCantillation(m).replace(/\//g, '').trim()}
+                      </div>
+                    ))}
+                </div>
+              ) : (
+                'No meanings available yet.'
+              )}
+            </div>
           </div>
 
           {/* Root Section */}
-          {root && (
-            <div className="pb-6">
-              <h3 
-                className="mb-4"
-                style={{ 
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: '11px',
-                  color: 'var(--text-secondary)',
-                  fontWeight: 700,
-                  letterSpacing: '0.15em',
-                  textTransform: 'uppercase',
-                }}
-              >
-                Root
-              </h3>
-              <div className="space-y-2">
-                {/* Hebrew root */}
-                <div 
-                  style={{ 
-                    fontFamily: "'Cardo', serif",
-                    fontSize: '48px',
-                    direction: 'rtl',
-                    color: 'var(--primary)',
-                    fontWeight: 600,
-                    lineHeight: 1,
-                  }}
-                >
-                  {root}
-                </div>
-                
-                {/* Root transliteration - smaller */}
-                {rootTransliteration && (
+          {/* Root Section — always show; if no root, show ALREADY ROOT */}
+          <div className="pb-6">
+            <h3 
+              className="mb-4"
+              style={{ 
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '11px',
+                color: 'var(--text-secondary)',
+                fontWeight: 700,
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Root
+            </h3>
+            <div className="space-y-2">
+              {root ? (
+                <>
                   <div 
                     style={{ 
-                      fontFamily: "'Inter', sans-serif",
-                      fontSize: '11px',
-                      color: 'var(--text-secondary)',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.12em',
-                      fontWeight: 500,
-                      marginTop: '8px',
+                      fontFamily: "'Cardo', serif",
+                      fontSize: '48px',
+                      direction: 'rtl',
+                      color: 'var(--primary)',
+                      fontWeight: 600,
+                      lineHeight: 1,
                     }}
                   >
-                    {rootTransliteration}
+                    {normalizeHebrew(root).replace(/\//g, '')}
                   </div>
-                )}
-                
-                {/* Root meaning */}
-                {rootMeaning && (
+
+                  {rootTransliteration && (
+                    <div 
+                      style={{ 
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: '11px',
+                        color: 'var(--text-secondary)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.12em',
+                        fontWeight: 500,
+                        marginTop: '8px',
+                      }}
+                    >
+                      {rootTransliteration}
+                    </div>
+                  )}
+
                   <div 
                     style={{ 
                       fontFamily: "'Inter', sans-serif",
@@ -225,12 +236,24 @@ export function WordCard({
                     }}
                     className="dark:text-[var(--text-secondary)]"
                   >
-                    {rootMeaning}
+                    {rootMeaning ? normalizeHebrew(rootMeaning).replace(/\//g, '') : '—'}
                   </div>
-                )}
-              </div>
+                </>
+              ) : (
+                <div 
+                  style={{ 
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: '15px',
+                    lineHeight: 1.5,
+                    textAlign: 'center'
+                  }}
+                  className="dark:text-[var(--text-secondary)]"
+                >
+                  <strong>ALREADY ROOT</strong>
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       ) : (
         <div className="space-y-6 text-center pb-6">

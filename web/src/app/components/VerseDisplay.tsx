@@ -3,6 +3,7 @@ import { OnboardingWordHint } from './OnboardingWordHint';
 import { SwipeIndicator } from './SwipeIndicator';
 import { FullChapterView } from './FullChapterView';
 import type { DssVariant, VerseResponse, WordResponse } from '../services/verseService';
+import { parseHebrewWord, stripNikud, stripCantillation } from '../utils/hebrew';
 
 interface VerseDisplayProps {
   hebrewText: string;
@@ -48,6 +49,8 @@ export function VerseDisplay({
   showQumran = false,
   showFullChapter = false,
   hebrewOnly = false,
+  showNikud = true,
+  showCantillation = false,
   chapterVerses,
   words,
   dssVariants,
@@ -72,8 +75,23 @@ export function VerseDisplay({
 
     return sourceWords.map((word, index) => {
       const variantText = showQumran ? dssMap.get(word.position) : undefined;
-      const displayText = variantText ?? word.text;
+      const rawText = variantText ?? word.text;
+
+      // Apply nikud and cantillation settings
+      let displayText = rawText;
+      if (!showNikud) {
+        displayText = stripNikud(displayText);
+      }
+      if (!showCantillation) {
+        displayText = stripCantillation(displayText);
+      }
+      // Always remove explicit slash separators from data like "וּ/בִ/ימֵ֞י"
+      displayText = displayText.replace(/\//g, "");
+
       const isSelected = selectedWord === word.text || selectedWord === displayText;
+
+      // Parse word for prefix visualization
+      const parsedWord = parseHebrewWord(displayText);
 
       if (index === 0 && showOnboardingHint && !variantText) {
         return (
@@ -95,7 +113,24 @@ export function VerseDisplay({
             className={`cursor-pointer transition-colors ${isSelected ? 'verse-highlight' : ''}`}
             style={variantText ? { color: 'var(--copper-highlight)' } : undefined}
           >
-            {displayText}
+            {parsedWord.prefix ? (
+              <>
+                <span
+                  style={{ color: 'var(--accent)' }}
+                  className="cursor-pointer hover:opacity-80"
+                  title={`Prefix: ${parsedWord.prefix.particle}`}
+                >
+                  {parsedWord.prefix.text.replace(/\//g, "")}
+                </span>
+                <span
+                  style={{ color: 'var(--text-hebrew)' }}
+                >
+                  {parsedWord.root.replace(/\//g, "")}
+                </span>
+              </>
+            ) : (
+              displayText
+            )}
           </span>
           {index < sourceWords.length - 1 && ' '}
         </span>
@@ -117,6 +152,8 @@ export function VerseDisplay({
           onWordClick={onWordClick}
           showQumran={showQumran}
           selectedWord={selectedWord}
+          showNikud={showNikud}
+          showCantillation={showCantillation}
         />
       </div>
     );

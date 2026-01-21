@@ -18,6 +18,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 
 import { AppProvider } from "@/src/providers/AppProvider";
+import { ErrorBoundary } from "@/src/components/ErrorBoundary";
 
 export const unstable_settings = {
   anchor: "(tabs)",
@@ -51,17 +52,19 @@ export default function RootLayout() {
     <SafeAreaProvider>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <BottomSheetModalProvider>
-          <AppProvider>
-            <Stack initialRouteName="splash">
-              <Stack.Screen name="splash" options={{ headerShown: false }} />
-              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-              <Stack.Screen
-                name="modal"
-                options={{ presentation: "modal", title: "Modal" }}
-              />
-            </Stack>
-            <StatusBar style="auto" />
-          </AppProvider>
+          <ErrorBoundary>
+            <AppProvider>
+              <Stack initialRouteName="splash">
+                <Stack.Screen name="splash" options={{ headerShown: false }} />
+                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                <Stack.Screen
+                  name="modal"
+                  options={{ presentation: "modal", title: "Modal" }}
+                />
+              </Stack>
+              <StatusBar style="auto" />
+            </AppProvider>
+          </ErrorBoundary>
         </BottomSheetModalProvider>
       </GestureHandlerRootView>
     </SafeAreaProvider>

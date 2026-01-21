@@ -373,6 +373,9 @@
 
 .word-panel-shell {
   transition: transform 220ms ease, opacity 220ms ease;
+  /* Prevent the panel from growing the page and causing layout shifts */
+  max-height: calc(100vh - 160px);
+  overflow: auto;
 }
 
 .word-panel-open {

@@ -1,73 +1,41 @@
-export interface WordInstance {
-  verse: string;
+import { apiRequest } from "./apiClient";
+
+export interface DefinitionItem {
   text: string;
+  source: "custom" | "strong" | "bdb" | string;
+  language: "en" | "es" | string;
 }
 
 export interface WordAnalysis {
-  word: string;
+  strong_number: string;
+  hebrew?: string;
   transliteration?: string;
-  meanings: string[];
+  definitions: DefinitionItem[];
   root?: string;
-  rootTransliteration?: string;
-  rootMeaning?: string;
-  instances: WordInstance[];
-  strong?: string;
+  root_strong?: string;
+  root_definitions?: DefinitionItem[];
+  occurrences_count: number;
+  instances?: Array<string | { verse: string; text: string }>;
 }
 
-const mockLexicon: Record<string, WordAnalysis> = {
-  'H7225': {
-    word: 'בְּרֵאשִׁית',
-    transliteration: 'bereshit',
-    meanings: ['in beginning', 'at first', 'when beginning'],
-    root: 'ראש',
-    rootTransliteration: 'rosh',
-    rootMeaning: 'head, beginning, chief',
-    instances: [
-      { verse: 'Gen 1:1', text: 'In the beginning God created...' },
-      { verse: 'Gen 10:10', text: 'The beginning of his kingdom was...' },
-    ],
-    strong: 'H7225',
-  },
-  'H1254': {
-    word: 'בָּרָא',
-    transliteration: 'bara',
-    meanings: ['created', 'brought into existence'],
-    root: 'ברא',
-    rootTransliteration: 'bara',
-    rootMeaning: 'to create, shape, form',
-    instances: [
-      { verse: 'Gen 1:1', text: 'In the beginning God created...' },
-      { verse: 'Gen 1:21', text: 'So God created the great creatures...' },
-      { verse: 'Gen 1:27', text: 'So God created mankind...' },
-    ],
-    strong: 'H1254',
-  },
-  'H430': {
-    word: 'אֱלֹהִים',
-    transliteration: 'elohim',
-    meanings: ['God', 'gods', 'divine beings'],
-    root: 'אלה',
-    rootTransliteration: 'elah',
-    rootMeaning: 'deity, divine power',
-    instances: [
-      { verse: 'Gen 1:1', text: 'In the beginning God created...' },
-      { verse: 'Gen 1:2', text: 'and the Spirit of God was hovering...' },
-    ],
-    strong: 'H430',
-  },
-};
-
-const mockLexiconByWord: Record<string, WordAnalysis> = {
-  'בְּרֵאשִׁית': mockLexicon.H7225,
-  'בָּרָא': mockLexicon.H1254,
-  'אֱלֹהִים': mockLexicon.H430,
-};
-
-export const getWordAnalysisByStrong = (strong?: string): WordAnalysis | null => {
+export const getWordAnalysisByStrong = async (
+  strong?: string,
+  language?: "en" | "es",
+): Promise<WordAnalysis | null> => {
   if (!strong) return null;
-  return mockLexicon[strong] ?? null;
+  const url = language 
+    ? `/api/v1/lexicon/${strong}?language=${language}`
+    : `/api/v1/lexicon/${strong}`;
+  return apiRequest<WordAnalysis>(url);
 };
 
-export const getWordAnalysisByText = (word: string): WordAnalysis | null => {
-  return mockLexiconByWord[word] ?? null;
+export const searchWordAnalysis = async (
+  query: string,
+  options?: { limit?: number; offset?: number },
+): Promise<WordAnalysis[]> => {
+  const params = new URLSearchParams();
+  params.set("q", query);
+  if (options?.limit) params.set("limit", String(options.limit));
+  if (options?.offset) params.set("offset", String(options.offset));
+  return apiRequest<WordAnalysis[]>(`/api/v1/search?${params.toString()}`);
 };

@@ -12,11 +12,16 @@ import Animated, {
 import { NeumorphCard } from "@/src/components/ui/NeumorphCard";
 import { getColors, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
-import type { MockVerse } from "@/src/constants/mockData";
+import type { DisplayVerse } from "@/src/services/scripture";
+import {
+  parseHebrewWord,
+  stripNikud,
+  stripCantillation,
+} from "@/src/utils/hebrew";
 
 type VerseCardProps = {
-  verse: MockVerse;
-  onWordPress?: (word: MockVerse["words"][number]) => void;
+  verse: DisplayVerse;
+  onWordPress?: (word: DisplayVerse["words"][number]) => void;
   onVersePress?: () => void;
   showWordHint?: boolean;
   variant?: "card" | "detail";
@@ -94,6 +99,10 @@ export const VerseCard = ({
   );
   const showQumran = useAppStore((state: AppState) => state.showQumran);
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
+  const showCantillation = useAppStore(
+    (state: AppState) => state.showCantillation,
+  );
+  const showNikud = useAppStore((state: AppState) => state.showNikud);
   const colors = getColors(themeMode);
   const styles = useMemo(
     () => createStyles(colors, hebrewFontScale),
@@ -131,11 +140,49 @@ export const VerseCard = ({
         {verse.words.map((word, index) => {
           const isFirst = index === 0;
           const shouldHighlight = showWordHint && isFirst;
+
+          // Apply nikud and cantillation settings
+          let displayText = word.text;
+          if (!showNikud) {
+            displayText = stripNikud(displayText);
+          }
+          if (!showCantillation) {
+            displayText = stripCantillation(displayText);
+          }
+          displayText = displayText.replace(/\//g, "");
+
+          // Parse word for prefix visualization
+          const parsedWord = parseHebrewWord(displayText);
+
           const wordStyles = [
             styles.hebrewWordPressable,
             showQumran && word.hasQumranVariant && styles.qumranHighlight,
             shouldHighlight && highlightStyle,
           ];
+
+          const renderWordContent = () => {
+            if (parsedWord.prefix) {
+              return (
+                <View style={{ flexDirection: "row" }}>
+                  <Text
+                    style={[styles.hebrewWord, { color: colors.textSecondary }]}
+                  >
+                    {parsedWord.prefix.text.replace(/\//g, "")}
+                  </Text>
+                  <Text
+                    style={[styles.hebrewWord, { color: colors.textPrimary }]}
+                  >
+                    {parsedWord.root.replace(/\//g, "")}
+                  </Text>
+                </View>
+              );
+            }
+            return (
+              <Text style={styles.hebrewWord}>
+                {displayText.replace(/\//g, "")}
+              </Text>
+            );
+          };
 
           if (isFirst) {
             return (
@@ -160,7 +207,7 @@ export const VerseCard = ({
                       style={[StyleSheet.absoluteFillObject, highlightStyle]}
                     />
                   ) : null}
-                  <Text style={styles.hebrewWord}>{word.text}</Text>
+                  {renderWordContent()}
                 </Pressable>
               </View>
             );
@@ -179,7 +226,7 @@ export const VerseCard = ({
                   style={[StyleSheet.absoluteFillObject, highlightStyle]}
                 />
               ) : null}
-              <Text style={styles.hebrewWord}>{word.text}</Text>
+              {renderWordContent()}
             </Pressable>
           );
         })}
