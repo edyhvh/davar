@@ -8,8 +8,6 @@ import BottomSheet, {
 } from "@gorhom/bottom-sheet";
 import { Ionicons } from "@expo/vector-icons";
 import Animated, {
-  FadeIn,
-  FadeOut,
   SlideInRight,
   SlideInLeft,
   SlideOutLeft,
