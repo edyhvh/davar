@@ -58,7 +58,7 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       borderRadius: radii.lg,
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: colors.surfaceElevated,
+      backgroundColor: colors.surfaceLightest,
     },
     dateCardActive: {
       backgroundColor: colors.primary,
@@ -106,6 +106,9 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       fontSize: typography.sizes.h3,
       color: colors.background,
     },
+    actionTitleDark: {
+      color: colors.textTertiary,
+    },
     actionSubtitle: {
       fontFamily: typography.families.latinUIMedium,
       fontSize: typography.sizes.bodySmall,
@@ -113,8 +116,15 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       opacity: 0.85,
       marginTop: spacing[2],
     },
+    actionSubtitleDark: {
+      color: colors.textTertiary,
+      opacity: 1,
+    },
     actionIcon: {
       color: colors.background,
+    },
+    actionIconDark: {
+      color: colors.textTertiary,
     },
     aboutCard: {
       borderRadius: radii.xl,
@@ -200,29 +210,61 @@ export default function HomeScreen() {
 
           <View style={[styles.actionCard, styles.actionPrimary]}>
             <View>
-              <Text style={styles.actionTitle}>Download Offline</Text>
-              <Text style={styles.actionSubtitle}>
+              <Text
+                style={[
+                  styles.actionTitle,
+                  themeMode === "dark" && styles.actionTitleDark,
+                ]}
+              >
+                Download Offline
+              </Text>
+              <Text
+                style={[
+                  styles.actionSubtitle,
+                  themeMode === "dark" && styles.actionSubtitleDark,
+                ]}
+              >
                 Access Scripture without internet
               </Text>
             </View>
             <AppIcon
               name="download"
               size={24}
-              color={styles.actionIcon.color}
+              color={
+                themeMode === "dark"
+                  ? styles.actionIconDark.color
+                  : styles.actionIcon.color
+              }
             />
           </View>
 
           <View style={[styles.actionCard, styles.actionSecondary]}>
             <View>
-              <Text style={styles.actionTitle}>Donate</Text>
-              <Text style={styles.actionSubtitle}>
+              <Text
+                style={[
+                  styles.actionTitle,
+                  themeMode === "dark" && styles.actionTitleDark,
+                ]}
+              >
+                Donate
+              </Text>
+              <Text
+                style={[
+                  styles.actionSubtitle,
+                  themeMode === "dark" && styles.actionSubtitleDark,
+                ]}
+              >
                 Support Davar development
               </Text>
             </View>
             <AppIcon
               name="favorite"
               size={24}
-              color={styles.actionIcon.color}
+              color={
+                themeMode === "dark"
+                  ? styles.actionIconDark.color
+                  : styles.actionIcon.color
+              }
             />
           </View>
 

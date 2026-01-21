@@ -18,6 +18,10 @@ export type AppState = {
   setShowFullChapter: (value: boolean) => void;
   hebrewOnly: boolean;
   setHebrewOnly: (value: boolean) => void;
+  showCantillation: boolean;
+  setShowCantillation: (value: boolean) => void;
+  showNikud: boolean;
+  setShowNikud: (value: boolean) => void;
   currentVerseId: string;
   setCurrentVerseId: (id: string) => void;
   bookmarks: string[];
@@ -47,6 +51,10 @@ export const useAppStore = create<AppState>((set) => ({
   setShowFullChapter: (value) => set({ showFullChapter: value }),
   hebrewOnly: false,
   setHebrewOnly: (value) => set({ hebrewOnly: value }),
+  showCantillation: true,
+  setShowCantillation: (value) => set({ showCantillation: value }),
+  showNikud: true,
+  setShowNikud: (value) => set({ showNikud: value }),
   currentVerseId: "genesis-1-1",
   setCurrentVerseId: (id) => set({ currentVerseId: id }),
   bookmarks: [],

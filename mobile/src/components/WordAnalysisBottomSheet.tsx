@@ -5,6 +5,7 @@ import BottomSheet, {
   BottomSheetView,
   type BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
+import { router } from "expo-router";
 
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
@@ -130,24 +131,29 @@ const createStyles = (
       marginTop: spacing[2],
     },
     instancesContainer: {
-      gap: spacing[4],
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: spacing[2],
     },
-    instanceItem: {
-      paddingVertical: spacing[3],
-      borderBottomWidth: StyleSheet.hairlineWidth,
-      borderBottomColor: colors.border,
+    instancePill: {
+      flexDirection: "row",
+      alignItems: "center",
+      paddingVertical: spacing[2],
+      paddingHorizontal: spacing[3],
+      borderRadius: radii.full,
+      backgroundColor: colors.surface,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    instancePillPressed: {
+      backgroundColor: colors.primaryLight,
+      borderColor: colors.primary,
     },
     instanceRef: {
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.bodySmall,
-      color: colors.textSecondary,
-      fontWeight: "500",
-    },
-    instanceText: {
-      fontFamily: typography.families.latinUI,
-      fontSize: typography.sizes.body,
       color: colors.textPrimary,
-      marginTop: spacing[1],
+      fontWeight: "500",
     },
     emptyText: {
       fontFamily: typography.families.latinUI,
@@ -157,6 +163,90 @@ const createStyles = (
       fontStyle: "italic",
     },
   });
+
+// Map of book abbreviations to book IDs
+const bookAbbreviations: Record<string, string> = {
+  Gen: "genesis",
+  Exod: "exodus",
+  Ex: "exodus",
+  Lev: "leviticus",
+  Num: "numbers",
+  Deut: "deuteronomy",
+  Josh: "joshua",
+  Judg: "judges",
+  Ruth: "ruth",
+  "1Sam": "1samuel",
+  "2Sam": "2samuel",
+  "1Kgs": "1kings",
+  "2Kgs": "2kings",
+  "1Chr": "1chronicles",
+  "2Chr": "2chronicles",
+  Ezra: "ezra",
+  Neh: "nehemiah",
+  Esth: "esther",
+  Job: "job",
+  Ps: "psalms",
+  Prov: "proverbs",
+  Eccl: "ecclesiastes",
+  Song: "songofsolomon",
+  Isa: "isaiah",
+  Jer: "jeremiah",
+  Lam: "lamentations",
+  Ezek: "ezekiel",
+  Dan: "daniel",
+  Hos: "hosea",
+  Joel: "joel",
+  Amos: "amos",
+  Obad: "obadiah",
+  Jonah: "jonah",
+  Mic: "micah",
+  Nah: "nahum",
+  Hab: "habakkuk",
+  Zeph: "zephaniah",
+  Hag: "haggai",
+  Zech: "zechariah",
+  Mal: "malachi",
+  Matt: "matthew",
+  Mark: "mark",
+  Luke: "luke",
+  John: "john",
+  Acts: "acts",
+  Rom: "romans",
+  "1Cor": "1corinthians",
+  "2Cor": "2corinthians",
+  Gal: "galatians",
+  Eph: "ephesians",
+  Phil: "philippians",
+  Col: "colossians",
+  "1Thess": "1thessalonians",
+  "2Thess": "2thessalonians",
+  "1Tim": "1timothy",
+  "2Tim": "2timothy",
+  Titus: "titus",
+  Phlm: "philemon",
+  Heb: "hebrews",
+  Jas: "james",
+  "1Pet": "1peter",
+  "2Pet": "2peter",
+  "1John": "1john",
+  "2John": "2john",
+  "3John": "3john",
+  Jude: "jude",
+  Rev: "revelation",
+};
+
+// Parse verse reference like "Gen 1:1" to verse ID like "genesis-1-1"
+const parseVerseReference = (ref: string): string | null => {
+  // Match patterns like "Gen 1:1", "1Sam 2:3", "Ps 119:105"
+  const match = ref.match(/^(\d?\w+)\s+(\d+):(\d+)/);
+  if (!match) return null;
+
+  const [, bookAbbr, chapter, verse] = match;
+  const bookId = bookAbbreviations[bookAbbr];
+  if (!bookId) return null;
+
+  return `${bookId}-${chapter}-${verse}`;
+};
 
 export const WordAnalysisBottomSheet = ({
   sheetRef,
@@ -292,17 +382,29 @@ export const WordAnalysisBottomSheet = ({
             <Text style={styles.sectionLabel}>Appears In</Text>
             {word?.instances?.length ? (
               <View style={styles.instancesContainer}>
-                {word.instances.map((instance, index) => (
-                  <View
-                    key={`${instance.verse}-${index}`}
-                    style={styles.instanceItem}
-                  >
-                    <Text style={styles.instanceRef}>{instance.verse}</Text>
-                    {instance.text ? (
-                      <Text style={styles.instanceText}>{instance.text}</Text>
-                    ) : null}
-                  </View>
-                ))}
+                {word.instances.map((instance, index) => {
+                  const verseId = parseVerseReference(instance.verse);
+                  return (
+                    <Pressable
+                      key={`${instance.verse}-${index}`}
+                      style={({ pressed }) => [
+                        styles.instancePill,
+                        pressed && styles.instancePillPressed,
+                      ]}
+                      onPress={() => {
+                        if (verseId) {
+                          sheetRef.current?.close();
+                          router.push({
+                            pathname: "/verse-detail",
+                            params: { id: verseId },
+                          });
+                        }
+                      }}
+                    >
+                      <Text style={styles.instanceRef}>{instance.verse}</Text>
+                    </Pressable>
+                  );
+                })}
               </View>
             ) : (
               <Text style={styles.emptyText}>No instances available</Text>

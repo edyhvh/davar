@@ -100,6 +100,14 @@ export default function SettingsScreen() {
   );
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
   const setHebrewOnly = useAppStore((state: AppState) => state.setHebrewOnly);
+  const showCantillation = useAppStore(
+    (state: AppState) => state.showCantillation,
+  );
+  const setShowCantillation = useAppStore(
+    (state: AppState) => state.setShowCantillation,
+  );
+  const showNikud = useAppStore((state: AppState) => state.showNikud);
+  const setShowNikud = useAppStore((state: AppState) => state.setShowNikud);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
 
@@ -197,6 +205,41 @@ export default function SettingsScreen() {
             </View>
           </View>
           <OnOffButton value={hebrewOnly} onChange={setHebrewOnly} />
+        </View>
+
+        <View style={styles.divider} />
+
+        {/* Cantillation */}
+        <View style={styles.row}>
+          <View style={styles.rowContent}>
+            <View style={styles.iconContainer}>
+              <AppIcon name="hebrew" size={18} color={colors.textSecondary} />
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.label}>Cantillation</Text>
+              <Text style={styles.subtitle}>Show cantillation marks</Text>
+            </View>
+          </View>
+          <OnOffButton
+            value={showCantillation}
+            onChange={setShowCantillation}
+          />
+        </View>
+
+        <View style={styles.divider} />
+
+        {/* Nikud */}
+        <View style={styles.row}>
+          <View style={styles.rowContent}>
+            <View style={styles.iconContainer}>
+              <AppIcon name="hebrew" size={18} color={colors.textSecondary} />
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.label}>Nikud</Text>
+              <Text style={styles.subtitle}>Show vowel pointing</Text>
+            </View>
+          </View>
+          <OnOffButton value={showNikud} onChange={setShowNikud} />
         </View>
 
         <View style={styles.divider} />

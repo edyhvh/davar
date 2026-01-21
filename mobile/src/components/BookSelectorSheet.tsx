@@ -280,7 +280,7 @@ export const BookSelectorSheet = ({
       </View>
       <BottomSheetFlatList
         data={filteredBooks}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item: MockBook) => item.id}
         renderItem={renderBookItem}
         contentContainerStyle={styles.listContent}
         showsVerticalScrollIndicator={false}
