@@ -12,7 +12,12 @@ class LexiconService:
     def __init__(self, dictionary_loader: DictionaryLoader):
         self.dictionary_loader = dictionary_loader
 
-    def get_lexicon_entry(self, strong_number: str, language: Optional[str] = None) -> Optional[LexiconResponse]:
+    def get_lexicon_entry(
+        self,
+        strong_number: str,
+        language: Optional[str] = None,
+        display_hebrew: Optional[str] = None,
+    ) -> Optional[LexiconResponse]:
         """
         Get lexicon entry for a Strong number.
 
@@ -47,46 +52,50 @@ class LexiconService:
             s = s.replace('/', '')
             return s.strip()
 
+        def _append_definition_items(
+            target: list[DefinitionItem],
+            def_item: dict,
+            default_source: str,
+        ) -> None:
+            """Append definition items for both EN/ES when available."""
+            text = def_item.get('text')
+            language_hint = def_item.get('language')
+
+            if text and not text.strip().startswith('id.:'):
+                target.append(DefinitionItem(
+                    text=_normalize_text(text),
+                    source=def_item.get('source', default_source),
+                    language=language_hint or 'en'
+                ))
+                return
+
+            text_en = def_item.get('text_en')
+            if text_en and not text_en.strip().startswith('id.:'):
+                target.append(DefinitionItem(
+                    text=_normalize_text(text_en),
+                    source=def_item.get('source', default_source),
+                    language='en'
+                ))
+
+            text_es = def_item.get('text_es')
+            if text_es and not text_es.strip().startswith('id.:'):
+                target.append(DefinitionItem(
+                    text=_normalize_text(text_es),
+                    source=def_item.get('source', default_source),
+                    language='es'
+                ))
+
         # Build definitions list (custom first, then Strong/BDB)
         definitions = []
         if custom_def:
             for def_item in custom_def.get('definitions', []):
-                text_en = def_item.get('text_en')
-                text_es = def_item.get('text_es')
-                if text_en and not text_en.strip().startswith('id.:'):
-                    definitions.append(DefinitionItem(
-                        text=_normalize_text(text_en),
-                        source=def_item.get('source', 'custom'),
-                        language='en'
-                    ))
-                if text_es and not text_es.strip().startswith('id.:'):
-                    definitions.append(DefinitionItem(
-                        text=_normalize_text(text_es),
-                        source=def_item.get('source', 'custom'),
-                        language='es'
-                    ))
+                _append_definition_items(definitions, def_item, 'custom')
 
         if (words_entry or roots_entry) and lexicon_entry != custom_def:
             # Add Strong/BDB definitions
             base_entry = words_entry or roots_entry or {}
             for def_item in base_entry.get('definitions', []):
-                text = def_item.get('text')
-                def_lang = def_item.get('language', 'en')
-                if not text:
-                    if def_item.get('text_en'):
-                        text = def_item.get('text_en')
-                        def_lang = 'en'
-                    elif def_item.get('text_es'):
-                        text = def_item.get('text_es')
-                        def_lang = 'es'
-                    else:
-                        text = ''
-                if text and not text.strip().startswith('id.:'):
-                    definitions.append(DefinitionItem(
-                        text=_normalize_text(text),
-                        source=def_item.get('source', 'strong'),
-                        language=def_lang
-                    ))
+                _append_definition_items(definitions, def_item, 'strong')
 
         # Get root information if available
         root = (lexicon_entry or {}).get('root')
@@ -102,19 +111,10 @@ class LexiconService:
                     or root_entry.get('transliteration_en')
                     or root_entry.get('transliteration_es')
                 )
-                root_definitions = [
-                    DefinitionItem(
-                        text=_normalize_text((d.get('text') or d.get(
-                            'text_en') or d.get('text_es') or '')),
-                        source=d.get('source', 'strong'),
-                        language=(
-                            d.get('language')
-                            or ('en' if d.get('text_en') else 'es' if d.get('text_es') else 'en')
-                        )
-                    )
-                    for d in root_entry.get('definitions', [])
-                    if not (d.get('text') or d.get('text_en') or d.get('text_es') or '').strip().startswith('id.:')
-                ]
+                root_definitions = []
+                for def_item in root_entry.get('definitions', []):
+                    _append_definition_items(
+                        root_definitions, def_item, 'strong')
 
         # Get occurrences count
         occurrences_count = (lexicon_entry or {}).get('occurrences_count', 0)
@@ -140,7 +140,8 @@ class LexiconService:
         return LexiconResponse(
             strong_number=strong_number,
             hebrew=(
-                (lexicon_entry or {}).get('hebrew')
+                (display_hebrew or '').strip()
+                or (lexicon_entry or {}).get('hebrew')
                 or (lexicon_entry or {}).get('lemma')
                 or ''
             ),

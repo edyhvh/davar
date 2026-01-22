@@ -30,6 +30,8 @@ class PrefixesService:
             id=prefix_id,
             main_form=prefix_data.get('main_form'),
             type=prefix_data.get('type'),
+            transliteration_en=prefix_data.get('transliteration_en'),
+            transliteration_es=prefix_data.get('transliteration_es'),
             meanings=prefix_data.get('meanings', {}),
             forms=prefix_data.get('forms', []),
             notes=prefix_data.get('notes')

@@ -3,7 +3,7 @@ import { Github, Lightbulb, Mail } from "lucide-react";
 
 const proposalItems = [
   "telegram app",
-  "blockchain integration",
+  "blockchain app",
   "arabic",
   "farsi",
   "japanese",
@@ -18,7 +18,7 @@ export function FeaturesScreen() {
     <div className="min-h-[60vh] flex items-center justify-center">
       <div className="text-center">
         <div className="text-sm tracking-[0.3em] uppercase text-[var(--copper-highlight)] mb-6">
-          Proposal
+          Ideas
         </div>
         <div className="space-y-3">
           {proposalItems.map((item) => (

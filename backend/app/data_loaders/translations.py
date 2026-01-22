@@ -3,10 +3,134 @@ Translation data loader
 Loads TTH (Spanish) and TS2009 (English) translations
 """
 
-import os
+import logging
 from typing import Dict, List, Any, Optional
 from pathlib import Path
 from .base import DataLoader
+
+logger = logging.getLogger(__name__)
+
+TTH_BOOK_MAPPING = {
+    # TORAH
+    "Genesis": "bereshit",
+    "Exodus": "shemot",
+    "Leviticus": "vaikra",
+    "Numbers": "bamidbar",
+    "Deuteronomy": "devarim",
+    # NEVIIM (Former Prophets)
+    "Joshua": "iehoshua",
+    "Judges": "shoftim",
+    "Samuel1": "shemuel_alef",
+    "Samuel2": "shemuel_bet",
+    "Kings1": "melajim_alef",
+    "Kings2": "melajim_bet",
+    # NEVIIM (Latter Prophets)
+    "Isaiah": "ieshaiahu",
+    "Jeremiah": "irmeiahu",
+    "Ezekiel": "iejezkel",
+    # NEVIIM (The Twelve)
+    "Hosea": "hoshea",
+    "Joel": "ioel",
+    "Amos": "amos",
+    "Jonah": "ionah",
+    "Micah": "micah",
+    "Nahum": "najum",
+    "Habakkuk": "jabakuk",
+    "Zephaniah": "tzefaniah",
+    "Haggai": "jagai",
+    "Zechariah": "zejariah",
+    "Malachi": "malaji",
+    # KETUVIM (partial in tth_2)
+    "Psalms": "tehilim",
+    "Proverbs": "mishlei",
+    # BESORAH (tth_2 format)
+    "Matthew": "matityahu",
+    "Mark": "markos",
+    "Luke": "lukas",
+    "John": "iojanan",
+    "Acts": "maasei_hashlijim",
+    "Romans": "romaim",
+    "Thessalonians1": "tesaloniquim_alef",
+    "Thessalonians2": "tesaloniquim_bet",
+    "James": "iaacob",
+    "Jude": "iehudah",
+    "Revelation": "sodot",
+}
+
+TS2009_BOOK_MAPPING = {
+    # TORAH
+    "Genesis": "bereshit",
+    "Exodus": "shemoth",
+    "Leviticus": "wayyiqra",
+    "Numbers": "bemidbar",
+    "Deuteronomy": "debarim",
+    # NEVIIM (Former Prophets)
+    "Joshua": "yehoshua",
+    "Judges": "shophetim",
+    "Samuel1": "samuel_1",
+    "Samuel2": "samuel_2",
+    "Kings1": "kings_1",
+    "Kings2": "kings_2",
+    # NEVIIM (Latter Prophets)
+    "Isaiah": "yeshayahu",
+    "Jeremiah": "yirmeyahu",
+    "Ezekiel": "yehezqel",
+    # NEVIIM (The Twelve)
+    "Hosea": "hosea",
+    "Joel": "yoel",
+    "Amos": "amos",
+    "Obadiah": "obadyah",
+    "Jonah": "yonah",
+    "Micah": "micah",
+    "Nahum": "nahum",
+    "Habakkuk": "habakkuk",
+    "Zephaniah": "zephaniah",
+    "Haggai": "haggai",
+    "Zechariah": "zechariah",
+    "Malachi": "malachi",
+    # KETUVIM
+    "Psalms": "tehillim",
+    "Proverbs": "mishlei",
+    "Job": "iyob",
+    "SongOfSolomon": "shir_hashirim",
+    "Ruth": "ruth",
+    "Lamentations": "ekah",
+    "Ecclesiastes": "qoheleth",
+    "Esther": "ester",
+    "Daniel": "daniel",
+    "Ezra": "ezra",
+    "Nehemiah": "nehemyah",
+    "Chronicles1": "chronicles_1",
+    "Chronicles2": "chronicles_2",
+    # BESORAH (New Testament)
+    "Matthew": "mattithyahu",
+    "Mark": "marqos",
+    "Luke": "lugqas",
+    "John": "yohanan",
+    "Acts": "maasei",
+    "Romans": "romiyim",
+    "Corinthians1": "corinthians_1",
+    "Corinthians2": "corinthians_2",
+    "Galatians": "galatiyim",
+    "Ephesians": "ephsiyim",
+    "Philippians": "pilipiyim",
+    "Colossians": "qolasim",
+    "Thessalonians1": "thessalonians_1",
+    "Thessalonians2": "thessalonians_2",
+    "Timothy1": "timothy_1",
+    "Timothy2": "timothy_2",
+    "Titus": "titos",
+    "Philemon": "pileymon",
+    "Hebrews": "ibrim",
+    "James": "yaaqob",
+    "Peter1": "peter_1",
+    "Peter2": "peter_2",
+    "John1": "john_1",
+    "John2": "john_2",
+    "John3": "john_3",
+    "Jude": "yehudah",
+    "Revelation": "hazon",
+}
 
 
 class TranslationLoader(DataLoader):
@@ -19,17 +143,17 @@ class TranslationLoader(DataLoader):
 
     def load_tth_verse(self, book_name: str, chapter: int, verse: int, language: str = "es") -> Optional[dict]:
         """Load TTH translation for a specific verse"""
-        cache_key = f"tth_{book_name}_{chapter}_{verse}_{language}"
+        # TTH (tth_2) uses transliterated book names, map from English
+        tth_book_name = self._english_to_tth_book_name(book_name)
+        if not tth_book_name:
+            return None
+
+        cache_key = f"tth_{tth_book_name}_{chapter}_{verse}_{language}"
         if cache_key in self._cache:
             return self._cache[cache_key]
 
-        # TTH uses Hebrew book names, so we need to map from English to Hebrew names
-        hebrew_book_name = self._english_to_hebrew_book_name(book_name)
-        if not hebrew_book_name:
-            return None
-
         # Load entire book JSON (tth_2 format)
-        file_path = f"tth_2/json/{hebrew_book_name}.json"
+        file_path = f"tth_2/json/{tth_book_name}.json"
         try:
             book_data = self.load_json(file_path)
             if "chapters" not in book_data:
@@ -48,22 +172,24 @@ class TranslationLoader(DataLoader):
                             }
                             self._cache[cache_key] = result
                             return result
-        except (FileNotFoundError, KeyError):
-            pass
+        except FileNotFoundError:
+            logger.warning(f"TTH translation file not found for {book_name} (mapped to: {tth_book_name})")
+        except KeyError as e:
+            logger.warning(f"TTH translation structure error for {book_name} chapter {chapter} verse {verse}: {e}")
 
         self._cache[cache_key] = None
         return None
 
     def load_ts2009_verse(self, book_name: str, chapter: int, verse: int) -> Optional[str]:
         """Load TS2009 English translation for a specific verse"""
-        cache_key = f"ts2009_{book_name}_{chapter}_{verse}"
-        if cache_key in self._cache:
-            return self._cache[cache_key]
-
         # TS2009 uses Hebrew book names
         hebrew_book_name = self._english_to_hebrew_book_name(book_name)
         if not hebrew_book_name:
             return None
+
+        cache_key = f"ts2009_{hebrew_book_name}_{chapter}_{verse}"
+        if cache_key in self._cache:
+            return self._cache[cache_key]
 
         try:
             book_data = self.load_json(f"ts2009/{hebrew_book_name}.json")
@@ -76,8 +202,10 @@ class TranslationLoader(DataLoader):
                         translation = verse_data.get("text", "")
                         self._cache[cache_key] = translation
                         return translation
-        except (FileNotFoundError, KeyError):
-            pass
+        except FileNotFoundError:
+            logger.warning(f"TS2009 translation file not found for {book_name} (mapped to: {hebrew_book_name}.json)")
+        except KeyError as e:
+            logger.warning(f"TS2009 translation structure error for {book_name} chapter {chapter} verse {verse}: {e}")
 
         self._cache[cache_key] = None
         return None
@@ -93,76 +221,11 @@ class TranslationLoader(DataLoader):
 
     def _english_to_hebrew_book_name(self, english_name: str) -> Optional[str]:
         """Map English book names to Hebrew names used in translation files"""
-        mapping = {
-            "Genesis": "bereshit",
-            "Exodus": "shemot",
-            "Leviticus": "vaikra",
-            "Numbers": "bamidbar",
-            "Deuteronomy": "devarim",
-            "Joshua": "iehoshua",
-            "Judges": "shoftim",
-            "Samuel1": "shemuel_alef",
-            "Samuel2": "shemuel_bet",
-            "Kings1": "melajim_alef",
-            "Kings2": "melajim_bet",
-            "Isaiah": "ieshaiahu",
-            "Jeremiah": "irmeiahu",
-            "Ezekiel": "iejezkel",
-            "Hosea": "hoshea",
-            "Joel": "ioel",
-            "Amos": "amos",
-            "Obadiah": "ovadia",
-            "Jonah": "ionah",
-            "Micah": "micah",
-            "Nahum": "najum",
-            "Habakkuk": "jabakuk",
-            "Zephaniah": "tzefaniah",
-            "Haggai": "jagai",
-            "Zechariah": "zejariah",
-            "Malachi": "malaji",
-            "Psalms": "tehilim",
-            "Proverbs": "mishlei",
-            "Job": "iyov",
-            "SongOfSolomon": "shir_hashirim",
-            "Ruth": "rut",
-            "Lamentations": "eka",
-            "Ecclesiastes": "kohelet",
-            "Esther": "ester",
-            "Daniel": "daniel",
-            "Ezra": "ezra",
-            "Nehemiah": "nehemya",
-            "Chronicles1": "divrei_hayamim_alef",
-            "Chronicles2": "divrei_hayamim_bet",
-            # Besorah books (tth_2 format)
-            "Matthew": "matityahu",
-            "Mark": "markos",
-            "Luke": "lukas",
-            "John": "iojanan",
-            "Acts": "maasei_hashlijim",
-            "Romans": "romaim",
-            "Corinthians1": "qorintim_alef",
-            "Corinthians2": "qorintim_bet",
-            "Galatians": "galatiyim",
-            "Ephesians": "efesiyim",
-            "Philippians": "pilipiyim",
-            "Colossians": "qolasim",
-            "Thessalonians1": "tesaloniquim_alef",
-            "Thessalonians2": "tesaloniquim_bet",
-            "Timothy1": "timotiyos_alef",
-            "Timothy2": "timotiyos_bet",
-            "Titus": "titos",
-            "Philemon": "filemon",
-            "Hebrews": "ivrim",
-            "James": "iaacob",
-            "Peter1": "kefa_alef",
-            "Peter2": "kefa_bet",
-            "John1": "yohanan_alef",
-            "John2": "yohanan_bet",
-            "John3": "yohanan_gimel",
-            "Jude": "iehudah",
-            "Revelation": "sodot"
-        }
-        return mapping.get(english_name)
+        return TS2009_BOOK_MAPPING.get(english_name)
+
+    def _english_to_tth_book_name(self, english_name: str) -> Optional[str]:
+        """Map English book names to TTH (tth_2) JSON filenames"""
+        return TTH_BOOK_MAPPING.get(english_name)
 
 
 # Global instance

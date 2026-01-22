@@ -4,6 +4,7 @@ Maps various source naming conventions to Standard English canonical names
 """
 
 from typing import Dict, Optional
+from .translations import TTH_BOOK_MAPPING, TS2009_BOOK_MAPPING
 
 
 class BookNameMapper:
@@ -91,78 +92,10 @@ class BookNameMapper:
         }
 
         # TTH Hebrew transliterations to English
-        self.tth_to_english = {
-            "bereshit": "Genesis",
-            "shemot": "Exodus",
-            "vaikra": "Leviticus",
-            "bamidbar": "Numbers",
-            "devarim": "Deuteronomy",
-            "iehoshua": "Joshua",
-            "shoftim": "Judges",
-            "shemuel_alef": "Samuel1",
-            "shemuel_bet": "Samuel2",
-            "melajim_alef": "Kings1",
-            "melajim_bet": "Kings2",
-            "ieshaiahu": "Isaiah",
-            "irmeiahu": "Jeremiah",
-            "iejezkel": "Ezekiel",
-            "hoshea": "Hosea",
-            "ioel": "Joel",
-            "amos": "Amos",
-            "ovadia": "Obadiah",
-            "ionah": "Jonah",
-            "micah": "Micah",
-            "najum": "Nahum",
-            "jabakuk": "Habakkuk",
-            "tzefaniah": "Zephaniah",
-            "jagai": "Haggai",
-            "zejariah": "Zechariah",
-            "malaji": "Malachi",
-            "tehilim": "Psalms",
-            "mishlei": "Proverbs",
-            "iyov": "Job",
-            "shir_hashirim": "SongOfSolomon",
-            "rut": "Ruth",
-            "eka": "Lamentations",
-            "kohelet": "Ecclesiastes",
-            "ester": "Esther",
-            "daniel": "Daniel",
-            "ezra": "Ezra",
-            "nehemya": "Nehemiah",
-            "divrei_hayamim_alef": "Chronicles1",
-            "divrei_hayamim_bet": "Chronicles2",
-            # Besorah (tth_2 format)
-            "matityahu": "Matthew",
-            "markos": "Mark",
-            "lukas": "Luke",
-            "iojanan": "John",
-            "maasei_hashlijim": "Acts",
-            "romaim": "Romans",
-            "qorintim_alef": "Corinthians1",
-            "qorintim_bet": "Corinthians2",
-            "galatiyim": "Galatians",
-            "efesiyim": "Ephesians",
-            "pilipiyim": "Philippians",
-            "qolasim": "Colossians",
-            "tesaloniquim_alef": "Thessalonians1",
-            "tesaloniquim_bet": "Thessalonians2",
-            "timotiyos_alef": "Timothy1",
-            "timotiyos_bet": "Timothy2",
-            "titos": "Titus",
-            "filemon": "Philemon",
-            "ivrim": "Hebrews",
-            "iaacob": "James",
-            "kefa_alef": "Peter1",
-            "kefa_bet": "Peter2",
-            "yohanan_alef": "John1",
-            "yohanan_bet": "John2",
-            "yohanan_gimel": "John3",
-            "iehudah": "Jude",
-            "sodot": "Revelation"
-        }
+        self.tth_to_english = {value: key for key, value in TTH_BOOK_MAPPING.items()}
 
-        # TS2009 Hebrew transliterations to English (similar to TTH)
-        self.ts2009_to_english = self.tth_to_english.copy()
+        # TS2009 Hebrew transliterations to English
+        self.ts2009_to_english = {value: key for key, value in TS2009_BOOK_MAPPING.items()}
 
         # DSS mappings (book names in DSS data)
         self.dss_to_english = {

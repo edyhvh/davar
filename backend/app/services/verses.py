@@ -58,7 +58,7 @@ class VersesService:
         book_oe = book_en.lower()
         verses_data = self.tanaj_loader.get_verses(book_oe, chapter)
         if not verses_data:
-            verses_data = self.besorah_loader.get_verses(book_en, chapter)
+            verses_data = self.besorah_loader.get_verses(book_oe, chapter)
 
         if not verses_data:
             return []
@@ -148,7 +148,6 @@ class VersesService:
             word = WordResponse(
                 position=idx + 1,
                 text=word_data.get('text', ''),
-                text_no_nikud=word_data.get('text_no_nikud', ''),
                 strong=word_data.get('strong'),
                 morph=word_data.get('morph'),
                 prefixes=word_data.get('prefixes', []),
@@ -201,7 +200,6 @@ class VersesService:
             chapter=verse_data['chapter'],
             verse=verse_data['verse'],
             hebrew=verse_data.get('hebrew', ''),
-            hebrew_no_nikud=verse_data.get('hebrew_no_nikud', ''),
             words=words,
             translation=translation,
             translation_language=translation_language,

@@ -18,13 +18,18 @@ lexicon_service = LexiconService(dictionary_loader)
 async def get_lexicon_entry(
     strong: str, 
     language: str = Query(None, description="Language filter ('en' or 'es')"),
+    hebrew: str | None = Query(None, description="Override Hebrew display word"),
     api_key: str = Depends(require_api_key)
 ):
     """
     Get lexicon entry for a Strong's number with custom definitions priority
     """
     try:
-        entry = lexicon_service.get_lexicon_entry(strong, language)
+        entry = lexicon_service.get_lexicon_entry(
+            strong,
+            language,
+            display_hebrew=hebrew,
+        )
         if entry is None:
             raise HTTPException(
                 status_code=404, detail=f"Strong number '{strong}' not found")

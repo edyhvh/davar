@@ -13,7 +13,7 @@ import type { DisplayWord } from "@/src/services/scripture";
 import {
   stripCantillation,
   stripNikud,
-  normalizeHebrew,
+  getPrefixSegments,
 } from "@/src/utils/hebrew";
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
@@ -22,6 +22,8 @@ type PrefixResponse = {
   id: string;
   main_form?: string;
   type?: string;
+  transliteration_en?: string;
+  transliteration_es?: string;
   meanings?: Record<string, string[]>;
   forms?: string[];
   notes?: Record<string, string>;
@@ -227,6 +229,53 @@ const createStyles = (
       marginTop: spacing[6],
       alignItems: "center",
     },
+    prefixItem: {
+      alignItems: "center",
+      marginBottom: spacing[4],
+    },
+    prefixHebrew: {
+      fontFamily: typography.families.hebrewScripture,
+      fontSize: 40 * hebrewScale,
+      color: colors.textSecondary,
+      textAlign: "center",
+      writingDirection: "rtl",
+      lineHeight: 56 * hebrewScale,
+    },
+    prefixTransliteration: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.bodySmall,
+      color: colors.textSecondary,
+      textTransform: "uppercase",
+      letterSpacing: 2,
+      marginTop: spacing[1],
+    },
+    prefixMeaning: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      color: colors.textPrimary,
+      textAlign: "center",
+      marginTop: spacing[2],
+    },
+      color: colors.textSecondary,
+      textAlign: "center",
+      writingDirection: "rtl",
+      lineHeight: 56 * hebrewScale,
+    },
+    prefixTransliteration: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.bodySmall,
+      color: colors.textSecondary,
+      textTransform: "uppercase",
+      letterSpacing: 2,
+      marginTop: spacing[1],
+    },
+    prefixMeaning: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      color: colors.textPrimary,
+      textAlign: "center",
+      marginTop: spacing[2],
+    },
     prefixText: {
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.body,
@@ -344,6 +393,10 @@ export const WordAnalysisBottomSheet = ({
   const [prefixEntries, setPrefixEntries] = useState<
     Record<string, PrefixResponse | null>
   >({});
+  const showNikud = useAppStore((state: AppState) => state.showNikud);
+  const showCantillation = useAppStore(
+    (state: AppState) => state.showCantillation,
+  );
 
   const strongNumber = useMemo(() => {
     if (!word?.strong) return null;
@@ -353,9 +406,26 @@ export const WordAnalysisBottomSheet = ({
   }, [word?.strong]);
 
   const displayHebrew = useMemo(() => {
-    const base = word?.text ?? lexiconEntry?.hebrew ?? "—";
-    return normalizeHebrew(base).replace(/\//g, "");
-  }, [lexiconEntry?.hebrew, word?.text]);
+    let base = word?.text ?? lexiconEntry?.hebrew ?? "—";
+    if (!showNikud) {
+      base = stripNikud(base);
+    }
+    if (!showCantillation) {
+      base = stripCantillation(base);
+    }
+    return base.replace(/\//g, "");
+  }, [lexiconEntry?.hebrew, word?.text, showNikud, showCantillation]);
+
+  const prefixSegments = useMemo(() => {
+    if (!word?.text || !word?.prefixes?.length) {
+      return { prefixes: [], root: word?.text ?? "" };
+    }
+    let displayBase = stripCantillation(word.text);
+    if (!showNikud) {
+      displayBase = stripNikud(displayBase);
+    }
+    return getPrefixSegments(displayBase, word.prefixes);
+  }, [showNikud, word?.text, word?.prefixes]);
 
   useEffect(() => {
     const loadLexicon = async () => {
@@ -365,10 +435,17 @@ export const WordAnalysisBottomSheet = ({
       }
       setIsLoading(true);
       try {
-        const url =
-          language === "he"
-            ? `/api/v1/lexicon/${strongNumber}`
-            : `/api/v1/lexicon/${strongNumber}?language=${language}`;
+        const params = new URLSearchParams();
+        if (language !== "he") {
+          params.set("language", language);
+        }
+        if (word?.text) {
+          params.set("hebrew", word.text);
+        }
+        const query = params.toString();
+        const url = query
+          ? `/api/v1/lexicon/${strongNumber}?${query}`
+          : `/api/v1/lexicon/${strongNumber}`;
         const entry = await apiRequest<LexiconResponse>(url);
         setLexiconEntry(entry);
       } catch {
@@ -378,7 +455,7 @@ export const WordAnalysisBottomSheet = ({
       }
     };
     loadLexicon();
-  }, [strongNumber, language]);
+  }, [strongNumber, language, word?.text]);
 
   useEffect(() => {
     setShowAllInstances(false);
@@ -438,6 +515,12 @@ export const WordAnalysisBottomSheet = ({
     const normalizeForDisplay = (t: string) =>
       stripCantillation(stripNikud(t)).replace(/\//g, "").trim();
 
+    const formatMeaning = (text: string) => {
+      const cleaned = text.replace(/^[-–—]\s*/, "").trim();
+      if (!cleaned) return cleaned;
+      return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+    };
+
     let rawMeanings: string[] = [];
     if (lexiconEntry?.definitions?.length) {
       rawMeanings = lexiconEntry.definitions
@@ -475,7 +558,8 @@ export const WordAnalysisBottomSheet = ({
         .filter(Boolean),
     );
 
-    return expanded.length ? expanded : ["—"];
+    const formatted = expanded.map((item) => formatMeaning(item));
+    return formatted.length ? formatted : ["—"];
   }, [lexiconEntry, word, language]);
 
   const isDerivedRoot = Boolean(lexiconEntry?.root_strong || word?.root);
@@ -519,6 +603,7 @@ export const WordAnalysisBottomSheet = ({
             </Text>
           )}
         </View>
+
 
         {/* Toggle: Meanings / Instances */}
         <View style={styles.toggleContainer}>
@@ -582,10 +667,12 @@ export const WordAnalysisBottomSheet = ({
                     "",
                   )}
                 </Text>
-                {lexiconEntry?.root_transliteration ||
+                {lexiconEntry?.root_strong ||
+                lexiconEntry?.root_transliteration ||
                 word?.rootTransliteration ? (
                   <Text style={styles.rootTransliteration}>
-                    {lexiconEntry?.root_transliteration ??
+                    {lexiconEntry?.root_strong ??
+                      lexiconEntry?.root_transliteration ??
                       word?.rootTransliteration}
                   </Text>
                 ) : null}
@@ -597,10 +684,9 @@ export const WordAnalysisBottomSheet = ({
               </View>
             ) : null}
 
-            {/* Prefixes section */}
             {word?.prefixes?.length ? (
               <View style={styles.prefixesSection}>
-                <Text style={styles.sectionLabel}>Prefixes</Text>
+                <Text style={styles.sectionLabel}>Preposition</Text>
                 {word.prefixes.map((prefix, index) => {
                   const entry = prefixEntries[prefix];
                   const meanings =
@@ -608,16 +694,34 @@ export const WordAnalysisBottomSheet = ({
                     entry?.meanings?.en ??
                     entry?.meanings?.es ??
                     [];
+                  const transliteration =
+                    language === "es"
+                      ? entry?.transliteration_es
+                      : entry?.transliteration_en ?? entry?.transliteration_es;
+                  const prefixText =
+                    prefixSegments.prefixes[index]?.replace(/\//g, "") ??
+                    entry?.main_form ??
+                    "";
 
                   return (
-                    <Text key={`${prefix}-${index}`} style={styles.prefixText}>
-                      {prefix}
-                      {meanings.length ? `: ${meanings.join(", ")}` : ""}
-                    </Text>
+                    <View key={`${prefix}-${index}`} style={styles.prefixItem}>
+                      <Text style={styles.prefixHebrew}>{prefixText}</Text>
+                      {transliteration ? (
+                        <Text style={styles.prefixTransliteration}>
+                          {transliteration}
+                        </Text>
+                      ) : null}
+                      {meanings.length ? (
+                        <Text style={styles.prefixMeaning}>
+                          {meanings.join(", ")}
+                        </Text>
+                      ) : null}
+                    </View>
                   );
                 })}
               </View>
             ) : null}
+
           </>
         ) : (
           <>

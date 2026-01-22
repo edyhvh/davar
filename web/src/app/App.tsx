@@ -1,4 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { HomeScreen } from "./components/HomeScreen";
 import { VerseDisplay } from "./components/VerseDisplay";
 import { BottomSheet } from "./components/BottomSheet";
@@ -18,6 +24,7 @@ import {
   type VerseResponse,
   type WordResponse,
 } from "./services/verseService";
+import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
 import {
   getWordAnalysisByStrong,
   type WordAnalysis,
@@ -26,13 +33,46 @@ import {
 type Screen = "home" | "verse" | "settings" | "donate" | "features";
 
 export default function App() {
+  const getSavedReadingState = () => {
+    if (typeof window === "undefined") return null;
+    try {
+      const raw = window.localStorage.getItem("davar.readingState");
+      if (!raw) return null;
+      const parsed = JSON.parse(raw) as {
+        book?: string;
+        chapter?: number;
+        verse?: number;
+        language?: "en" | "es" | "he";
+        scrollNavHintCount?: number;
+      };
+      return parsed;
+    } catch {
+      return null;
+    }
+  };
+
+  const getStoredLanguage = () => getSavedReadingState()?.language ?? "en";
+  const getStoredBook = () => getSavedReadingState()?.book ?? "Genesis";
+  const getStoredChapter = () => getSavedReadingState()?.chapter ?? 1;
+  const getStoredVerse = () => getSavedReadingState()?.verse ?? 1;
+  const getStoredScrollHintCount = () =>
+    getSavedReadingState()?.scrollNavHintCount ?? 0;
+
   const [currentScreen, setCurrentScreen] = useState<Screen>("verse");
   const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [language, setLanguage] = useState<"en" | "es" | "he">("en");
+  const [language, setLanguage] = useState<"en" | "es" | "he">(
+    getStoredLanguage,
+  );
 
-  const [currentBook, setCurrentBook] = useState("Genesis");
-  const [currentChapter, setCurrentChapter] = useState(1);
-  const [currentVerse, setCurrentVerse] = useState(1);
+  const [currentBook, setCurrentBook] = useState(getStoredBook);
+  const [currentChapter, setCurrentChapter] = useState(getStoredChapter);
+  const [currentVerse, setCurrentVerse] = useState(getStoredVerse);
+  const [scrollHintCount, setScrollHintCount] = useState(
+    getStoredScrollHintCount,
+  );
+  const [scrollJumpActive, setScrollJumpActive] = useState(false);
+  const [isWordPanelHovered, setIsWordPanelHovered] = useState(false);
+  const versePanelRef = useRef<HTMLDivElement | null>(null);
 
   const [showQumran, setShowQumran] = useState(false);
   const [showFullChapter, setShowFullChapter] = useState(false);
@@ -53,12 +93,23 @@ export default function App() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [selectedWordAnalysis, setSelectedWordAnalysis] =
     useState<WordAnalysis | null>(null);
+  const [isWordAnalysisLoading, setIsWordAnalysisLoading] = useState(false);
 
   const getHebrewBookName = (book: string): string => {
     const found = books.find(
       (item) => item.name.toLowerCase() === book.toLowerCase(),
     );
     return found?.hebrew_name ?? book;
+  };
+
+  const getDisplayBookName = (book: string): string => {
+    const found = books.find(
+      (item) => item.name.toLowerCase() === book.toLowerCase(),
+    );
+    if (language === "es") {
+      return found?.spanish_name || book;
+    }
+    return book;
   };
 
   useEffect(() => {
@@ -68,6 +119,18 @@ export default function App() {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const payload = {
+      book: currentBook,
+      chapter: currentChapter,
+      verse: currentVerse,
+      language,
+      scrollNavHintCount: scrollHintCount,
+    };
+    window.localStorage.setItem("davar.readingState", JSON.stringify(payload));
+  }, [currentBook, currentChapter, currentVerse, language, scrollHintCount]);
 
   const handleWordClick = (word: WordResponse) => {
     setSelectedWord(word);
@@ -89,7 +152,14 @@ export default function App() {
   );
 
   const bookOptions = useMemo(
-    () => books.map((book) => ({ name: book.name, hebrew: book.hebrew_name })),
+    () =>
+      [...books]
+        .sort((a, b) => a.order - b.order)
+        .map((book) => ({
+          name: book.name,
+          hebrew: book.hebrew_name,
+          spanish: book.spanish_name,
+        })),
     [books],
   );
 
@@ -101,7 +171,14 @@ export default function App() {
         if (!isMounted) return;
         setBooks(response);
         if (response.length > 0) {
-          setCurrentBook(response[0].name);
+          const hasCurrent = response.some(
+            (item) => item.name.toLowerCase() === currentBook.toLowerCase(),
+          );
+          if (!hasCurrent) {
+            setCurrentBook(response[0].name);
+            setCurrentChapter(1);
+            setCurrentVerse(1);
+          }
         }
       } catch (error) {
         if (!isMounted) return;
@@ -126,7 +203,7 @@ export default function App() {
           getChapterVerses(currentBook.toLowerCase(), currentChapter, {
             language: language === "he" ? undefined : language,
             showDss: showQumran,
-            hebrewOnly,
+            hebrewOnly: false, // Always load translations; UI will control display
           }),
         ]);
         if (!isMounted) return;
@@ -156,13 +233,37 @@ export default function App() {
     const loadWordAnalysis = async () => {
       if (!selectedWord?.strong) {
         setSelectedWordAnalysis(null);
+        setIsWordAnalysisLoading(false);
         return;
       }
+
+      const strongPart = selectedWord.strong
+        .split("/")
+        .map((part) => part.trim())
+        .find((part) => /^[HG]\d+$/.test(part));
+
+      if (!strongPart) {
+        setSelectedWordAnalysis(null);
+        setIsWordAnalysisLoading(false);
+        return;
+      }
+
+      setIsWordAnalysisLoading(true);
       try {
-        const analysis = await getWordAnalysisByStrong(selectedWord.strong, language === 'he' ? 'en' : language);
-        if (isMounted) setSelectedWordAnalysis(analysis);
+        const analysis = await getWordAnalysisByStrong(
+          strongPart,
+          language === "he" ? "en" : language,
+          selectedWord.text,
+        );
+        if (isMounted) {
+          setSelectedWordAnalysis(analysis);
+          setIsWordAnalysisLoading(false);
+        }
       } catch {
-        if (isMounted) setSelectedWordAnalysis(null);
+        if (isMounted) {
+          setSelectedWordAnalysis(null);
+          setIsWordAnalysisLoading(false);
+        }
       }
     };
     loadWordAnalysis();
@@ -203,18 +304,94 @@ export default function App() {
     return () => media.removeEventListener("change", update);
   }, []);
 
+  useEffect(() => {
+    if (!selectedWord || isMobile) {
+      setIsWordPanelHovered(false);
+    }
+  }, [isMobile, selectedWord]);
+
+  useEffect(() => {
+    if (!scrollJumpActive) return undefined;
+    const timeout = window.setTimeout(() => setScrollJumpActive(false), 240);
+    return () => window.clearTimeout(timeout);
+  }, [scrollJumpActive]);
+
+  const triggerScrollJump = useCallback(() => {
+    setScrollHintCount((previous) => {
+      if (previous >= 5) return previous;
+      setScrollJumpActive(true);
+      return previous + 1;
+    });
+  }, []);
+
+  const handlePreviousVerse = useCallback(async () => {
+    if (currentVerse > 1) {
+      setCurrentVerse(currentVerse - 1);
+      return true;
+    }
+
+    if (currentChapter > 1) {
+      try {
+        const previousChapter = currentChapter - 1;
+        const previousVerseCount = await getVerseCount(
+          currentBook.toLowerCase(),
+          previousChapter,
+        );
+        setCurrentChapter(previousChapter);
+        setCurrentVerse(previousVerseCount);
+        return true;
+      } catch {
+        return false;
+      }
+    }
+    return false;
+  }, [currentBook, currentChapter, currentVerse]);
+
+  const handleNextVerse = useCallback(async () => {
+    if (currentVerse < verseCount) {
+      setCurrentVerse(currentVerse + 1);
+      return true;
+    }
+
+    if (currentChapter < chapterCount) {
+      setCurrentChapter(currentChapter + 1);
+      setCurrentVerse(1);
+      return true;
+    }
+    return false;
+  }, [chapterCount, currentChapter, currentVerse, verseCount]);
+
+  const isScrollNavigationActive =
+    currentScreen === "verse" && !showFullChapter && !isMobile;
+
+  useVerseScrollNavigation({
+    containerRef: versePanelRef,
+    isEnabled: isScrollNavigationActive,
+    isBlocked: isWordPanelHovered,
+    threshold: 36,
+    cooldownMs: 500,
+    onNavigateNext: handleNextVerse,
+    onNavigatePrevious: handlePreviousVerse,
+    onNavigateFeedback: triggerScrollJump,
+  });
+
   const wordMeanings =
     selectedWordAnalysis?.definitions?.map((item) => item.text) ?? [];
 
   return (
     <div
       className="min-h-screen"
-      style={{ backgroundColor: "var(--background)" }}
+      style={{
+        backgroundColor: "var(--background)",
+        height: isScrollNavigationActive ? "100vh" : undefined,
+        overflow: isScrollNavigationActive ? "hidden" : undefined,
+      }}
     >
       <div className="sticky top-0 z-40 px-6 pt-6">
         <div className="max-w-7xl mx-auto">
           <NavigationBar
             book={currentBook}
+            bookDisplayName={getDisplayBookName(currentBook)}
             bookHebrew={getHebrewBookName(currentBook)}
             chapter={currentChapter}
             verse={currentVerse}
@@ -235,6 +412,18 @@ export default function App() {
             onHomeClick={() => setCurrentScreen("home")}
             onDonateClick={() => setCurrentScreen("donate")}
             onFeaturesClick={() => setCurrentScreen("features")}
+            onPreviousVerse={() => {
+              if (currentVerse > 1) {
+                setCurrentVerse(currentVerse - 1);
+              }
+            }}
+            onNextVerse={() => {
+              if (currentVerse < verseCount) {
+                setCurrentVerse(currentVerse + 1);
+              }
+            }}
+            hasPreviousVerse={currentVerse > 1}
+            hasNextVerse={currentVerse < verseCount}
             theme={theme}
             onThemeChange={setTheme}
             language={language}
@@ -262,81 +451,88 @@ export default function App() {
           {currentScreen === "verse" && (
             <div className="grid gap-6 items-start md:grid-cols-[7fr_3fr]">
               <div
+                ref={versePanelRef}
                 className={`min-h-[70vh] ${showFullChapter ? "" : "flex items-center justify-center"} w-full max-w-3xl md:max-w-4xl justify-self-center verse-panel-shell ${
-                  isSplitView ? "verse-panel-split md:col-span-1" : "verse-panel-centered md:col-span-2"
-                }`}
+                  isSplitView
+                    ? "verse-panel-split md:col-span-1"
+                    : "verse-panel-centered md:col-span-2"
+                } ${scrollJumpActive ? "verse-panel-jump" : ""}`}
                 style={showFullChapter ? undefined : { height: "70vh" }}
               >
-                {currentVerseData ? (
-                  <VerseDisplay
-                    hebrewText={currentVerseData.hebrew}
-                    translation={currentVerseData.translation ?? ""}
-                    verseRef={`${currentBook} ${currentChapter}:${currentVerse}`}
-                    verseNumber={currentVerse}
-                    bookName={currentBook}
-                    bookNameHebrew={getHebrewBookName(currentBook)}
-                    book={currentBook}
-                    chapter={currentChapter}
-                    language={language}
-                    onWordClick={handleWordClick}
-                    showQumran={showQumran}
-                    showFullChapter={showFullChapter}
-                    hebrewOnly={hebrewOnly}
-                    showNikud={showNikud}
-                    showCantillation={showCantillation}
-                    chapterVerses={chapterVerses}
-                    words={currentVerseData.words}
-                    dssVariants={currentVerseData.dss}
-                    selectedWord={selectedWord?.text ?? null}
-                    previousVerseSnippet={
-                      currentVerse > 1 ? "Previous verse..." : undefined
-                    }
-                    nextVerseSnippet={
-                      currentVerse < chapterVerses.length
-                        ? "Next verse..."
-                        : undefined
-                    }
-                    onSwipeUp={() => {
-                      if (currentVerse > 1) {
-                        setCurrentVerse(currentVerse - 1);
+                <div className="verse-panel-inner">
+                  {currentVerseData ? (
+                    <VerseDisplay
+                      hebrewText={currentVerseData.hebrew}
+                      translation={currentVerseData.translation ?? ""}
+                      verseRef={`${currentBook} ${currentChapter}:${currentVerse}`}
+                      verseNumber={currentVerse}
+                      bookName={getDisplayBookName(currentBook)}
+                      bookNameHebrew={getHebrewBookName(currentBook)}
+                      book={currentBook}
+                      chapter={currentChapter}
+                      language={language}
+                      onWordClick={handleWordClick}
+                      showQumran={showQumran}
+                      showFullChapter={showFullChapter}
+                      hebrewOnly={hebrewOnly}
+                      showNikud={showNikud}
+                      showCantillation={showCantillation}
+                      chapterVerses={chapterVerses}
+                      words={currentVerseData.words}
+                      dssVariants={currentVerseData.dss}
+                      selectedWord={selectedWord?.text ?? null}
+                      previousVerseSnippet={
+                        currentVerse > 1 ? "Previous verse..." : undefined
                       }
-                    }}
-                    onSwipeDown={() => {
-                      if (currentVerse < chapterVerses.length) {
-                        setCurrentVerse(currentVerse + 1);
+                      nextVerseSnippet={
+                        currentVerse < chapterVerses.length
+                          ? "Next verse..."
+                          : undefined
                       }
-                    }}
-                  />
-                ) : (
-                  <NeumorphCard>
-                    <p className="text-sm text-gray-500">
-                      Select a book to begin.
-                    </p>
-                  </NeumorphCard>
-                )}
+                      onSwipeUp={() => {
+                        void handlePreviousVerse();
+                      }}
+                      onSwipeDown={() => {
+                        void handleNextVerse();
+                      }}
+                    />
+                  ) : (
+                    <NeumorphCard>
+                      <p className="text-sm text-gray-500">
+                        Select a book to begin.
+                      </p>
+                    </NeumorphCard>
+                  )}
 
-                {isLoading && (
-                  <NeumorphCard className="mt-6">
-                    <p className="text-sm text-gray-500">Loading verses...</p>
-                  </NeumorphCard>
-                )}
-                {errorMessage && (
-                  <NeumorphCard className="mt-6">
-                    <p className="text-sm text-red-500">{errorMessage}</p>
-                  </NeumorphCard>
-                )}
+                  {isLoading && (
+                    <NeumorphCard className="mt-6">
+                      <p className="text-sm text-gray-500">Loading verses...</p>
+                    </NeumorphCard>
+                  )}
+                  {errorMessage && (
+                    <NeumorphCard className="mt-6">
+                      <p className="text-sm text-red-500">{errorMessage}</p>
+                    </NeumorphCard>
+                  )}
+                </div>
               </div>
 
-              <div className="hidden md:block" style={showFullChapter ? undefined : { height: "70vh" }}>
+              <div
+                className="hidden md:block"
+                style={showFullChapter ? undefined : { height: "70vh" }}
+              >
                 <NeumorphCard
                   className={`p-6 sticky top-24 word-panel-shell ${
                     selectedWord ? "word-panel-open" : "word-panel-closed"
                   }`}
                   style={!selectedWord ? { pointerEvents: "none" } : undefined}
+                  onMouseEnter={() => setIsWordPanelHovered(true)}
+                  onMouseLeave={() => setIsWordPanelHovered(false)}
                 >
                   {selectedWord ? (
                     <WordCard
                       word={selectedWordAnalysis?.hebrew ?? selectedWord.text}
+                      wordFromVerse={selectedWord.text}
                       transliteration={selectedWordAnalysis?.transliteration}
                       meanings={wordMeanings}
                       root={selectedWordAnalysis?.root}
@@ -344,17 +540,24 @@ export default function App() {
                       rootMeaning={
                         selectedWordAnalysis?.root_definitions?.[0]?.text
                       }
-                      instances={(selectedWordAnalysis?.instances ?? []).map((instance) =>
-                        typeof instance === "string"
-                          ? { verse: instance, text: "" }
-                          : instance,
+                      prefixes={selectedWord.prefixes}
+                      language={language}
+                      showNikud={showNikud}
+                      instances={(selectedWordAnalysis?.instances ?? []).map(
+                        (instance) =>
+                          typeof instance === "string"
+                            ? { verse: instance, text: "" }
+                            : instance,
                       )}
                       onInstanceClick={handleNavigateToVerse}
                       onClose={() => setSelectedWord(null)}
-                      isLoading={!selectedWordAnalysis}
+                      isLoading={isWordAnalysisLoading}
                     />
                   ) : (
-                    <div className="text-sm text-[var(--text-secondary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <div
+                      className="text-sm text-[var(--text-secondary)]"
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
                       Select a word
                     </div>
                   )}
@@ -377,15 +580,20 @@ export default function App() {
         >
           <WordCard
             word={selectedWordAnalysis?.hebrew ?? selectedWord.text}
+            wordFromVerse={selectedWord.text}
             transliteration={selectedWordAnalysis?.transliteration}
             meanings={wordMeanings}
             root={selectedWordAnalysis?.root}
             rootTransliteration={selectedWordAnalysis?.root_strong}
             rootMeaning={selectedWordAnalysis?.root_definitions?.[0]?.text}
-            instances={(selectedWordAnalysis?.instances ?? []).map((instance) =>
-              typeof instance === "string"
-                ? { verse: instance, text: "" }
-                : instance,
+            prefixes={selectedWord.prefixes}
+            language={language}
+            showNikud={showNikud}
+            instances={(selectedWordAnalysis?.instances ?? []).map(
+              (instance) =>
+                typeof instance === "string"
+                  ? { verse: instance, text: "" }
+                  : instance,
             )}
             onInstanceClick={handleNavigateToVerse}
             onClose={() => setSelectedWord(null)}

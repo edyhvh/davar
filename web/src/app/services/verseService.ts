@@ -3,7 +3,6 @@ import { apiRequest } from "./apiClient";
 export interface WordResponse {
   position: number;
   text: string;
-  text_no_nikud: string;
   strong?: string;
   morph?: string;
   prefixes: string[];
@@ -28,7 +27,6 @@ export interface VerseResponse {
   chapter: number;
   verse: number;
   hebrew: string;
-  hebrew_no_nikud: string;
   words: WordResponse[];
   translation?: string;
   translation_language?: string;
@@ -41,7 +39,7 @@ export interface BookResponse {
   name: string;
   section: "torah" | "neviim" | "ketuvim" | "besorah";
   chapters: number;
-  order: "tanaj" | "besorah";
+  order: number;
   hebrew_name: string;
   hebrew_transliteration: string;
   spanish_name: string;

@@ -19,6 +19,103 @@ const PREFIX_FORMS: Record<string, string[]> = {
   // Add more forms as needed
 };
 
+const HEBREW_MARKS_REGEX = /[\u0591-\u05C7]/g;
+const HEBREW_MARKS_SINGLE = /[\u0591-\u05C7]/;
+
+const stripHebrewMarks = (text: string) => text.replace(HEBREW_MARKS_REGEX, "");
+
+const buildPrefixFormsById = () => {
+  const map: Record<string, string[]> = {};
+  Object.entries(PREFIX_FORMS).forEach(([form, ids]) => {
+    ids.forEach((id) => {
+      map[id] = map[id] ? [...map[id], form] : [form];
+    });
+  });
+  return map;
+};
+
+const PREFIX_FORMS_BY_ID = buildPrefixFormsById();
+
+const sliceByStrippedLength = (
+  text: string,
+  startIndex: number,
+  strippedLength: number,
+) => {
+  let count = 0;
+  let endIndex = startIndex;
+  for (; endIndex < text.length; endIndex += 1) {
+    const char = text[endIndex];
+    if (char === "/") {
+      continue;
+    }
+    if (!HEBREW_MARKS_SINGLE.test(char)) {
+      count += 1;
+    }
+    if (count >= strippedLength) {
+      endIndex += 1;
+      break;
+    }
+  }
+  return text.slice(startIndex, endIndex);
+};
+
+export const getPrefixSegments = (
+  word: string,
+  prefixIds: string[],
+): { prefixes: string[]; root: string } => {
+  if (!word || !prefixIds.length) {
+    return { prefixes: [], root: word };
+  }
+
+  if (word.includes("/")) {
+    const parts = word.split("/").filter(Boolean);
+    if (parts.length > 1) {
+      return {
+        prefixes: parts.slice(0, -1).map((part) => part.replace(/\//g, "")),
+        root: parts.slice(-1).join(""),
+      };
+    }
+  }
+
+  const strippedWord = stripHebrewMarks(word);
+  const prefixes: string[] = [];
+  let rawIndex = 0;
+  let strippedIndex = 0;
+
+  for (const prefixId of prefixIds) {
+    const forms = PREFIX_FORMS_BY_ID[prefixId] ?? [];
+    const sortedForms = forms
+      .map((form) => ({ form, stripped: stripHebrewMarks(form) }))
+      .sort((a, b) => b.stripped.length - a.stripped.length);
+
+    const match = sortedForms.find((form) =>
+      strippedWord.startsWith(form.stripped, strippedIndex),
+    );
+
+    if (!match) {
+      break;
+    }
+
+    const segment = sliceByStrippedLength(
+      word,
+      rawIndex,
+      match.stripped.length,
+    );
+    prefixes.push(segment.replace(/\//g, ""));
+    rawIndex += segment.length;
+    strippedIndex += match.stripped.length;
+  }
+
+  if (!prefixes.length) {
+    return { prefixes: [], root: word };
+  }
+
+  return {
+    prefixes,
+    root: word.slice(rawIndex),
+  };
+};
+
 export interface ParsedWord {
   full: string;
   prefix?: {
@@ -38,31 +135,24 @@ export function parseHebrewWord(word: string): ParsedWord {
     const parts = word.split("/");
     if (parts.length >= 2) {
       const prefixText = parts.slice(0, -1).join("");
-      const rootText = parts.slice(-1)[0];
+      const rootText = parts.slice(-1).join("");
 
-      // Clean prefix and root text: remove cantillation, nikud and any remaining slashes
-      const clean = (s: string) =>
-        s
-          .replace(/[\u0591-\u05AF]/g, "")
-          .replace(/[\u05B0-\u05C7]/g, "")
-          .replace(/\//g, "");
-      const cleanedPrefixText = clean(prefixText);
-      const cleanedRootText = clean(rootText);
+      const cleanedPrefixText = stripHebrewMarks(prefixText.replace(/\//g, ""));
 
       // Find the prefix particle from our lookup
       const prefixForms = Object.keys(PREFIX_FORMS).sort(
         (a, b) => b.length - a.length,
       );
       for (const prefixForm of prefixForms) {
-        if (cleanedPrefixText.includes(prefixForm)) {
+        if (cleanedPrefixText.includes(stripHebrewMarks(prefixForm))) {
           return {
             full: word,
             prefix: {
-              text: cleanedPrefixText,
+              text: prefixText.replace(/\//g, ""),
               particle: PREFIX_FORMS[prefixForm][0],
               meanings: {}, // Would be loaded from API
             },
-            root: cleanedRootText,
+            root: rootText.replace(/\//g, ""),
           };
         }
       }
@@ -71,20 +161,16 @@ export function parseHebrewWord(word: string): ParsedWord {
       return {
         full: word,
         prefix: {
-          text: cleanedPrefixText,
+          text: prefixText.replace(/\//g, ""),
           particle: "unknown",
           meanings: {},
         },
-        root: cleanedRootText,
+        root: rootText.replace(/\//g, ""),
       };
     }
   }
 
-  // Remove cantillation marks (U+0591-U+05AF)
-  const withoutCantillation = word.replace(/[\u0591-\u05AF]/g, "");
-
-  // Remove nikud (U+05B0-U+05C7)
-  const withoutNikud = withoutCantillation.replace(/[\u05B0-\u05C7]/g, "");
+  const withoutMarks = stripHebrewMarks(word);
 
   // Try to find prefix (longest match first)
   const prefixForms = Object.keys(PREFIX_FORMS).sort(
@@ -92,14 +178,16 @@ export function parseHebrewWord(word: string): ParsedWord {
   );
 
   for (const prefixForm of prefixForms) {
-    if (withoutNikud.startsWith(prefixForm)) {
-      const root = withoutNikud.slice(prefixForm.length);
+    const strippedPrefixForm = stripHebrewMarks(prefixForm);
+    if (withoutMarks.startsWith(strippedPrefixForm)) {
+      const prefixText = sliceByStrippedLength(word, 0, strippedPrefixForm.length);
+      const root = word.slice(prefixText.length);
       if (root.length > 0) {
         // Ensure there's a root left
         return {
           full: word,
           prefix: {
-            text: prefixForm,
+            text: prefixText,
             particle: PREFIX_FORMS[prefixForm][0],
             meanings: {}, // Would be loaded from API
           },
@@ -112,7 +200,7 @@ export function parseHebrewWord(word: string): ParsedWord {
   // No prefix found
   return {
     full: word,
-    root: withoutNikud,
+    root: word,
   };
 }
 

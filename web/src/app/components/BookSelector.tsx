@@ -46,7 +46,10 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
         <div className="text-[var(--text-primary)]">Loading books...</div>
       </div>
     );
-  }
+  const sortedBooks = [...books].sort((a, b) => a.order - b.order);
+
+  return (
+    <div className="fixed inset-0 z-50 bg-[var(--background)] overflow-y-auto">
       {/* Header with neumorphic styling */}
       <div className="sticky top-0 z-10 bg-[var(--neomorph-bg)] border-b border-[var(--neomorph-border)] shadow-[6px_6px_16px_var(--neomorph-shadow-dark),-6px_-6px_16px_var(--neomorph-shadow-light)]">
         <div className="relative max-w-md mx-auto px-6 py-5 flex items-center justify-between">
@@ -74,9 +77,10 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
       {/* Book Grid */}
       <div className="max-w-md mx-auto px-6 py-6">
         <div className="space-y-3 pb-24">
-          {books.map((book) => {
+          {sortedBooks.map((book) => {
             const isSelected = book.name === currentBook;
-            const displayName = language === 'es' ? book.spanish_name : book.name;
+            const primaryName = language === 'es' ? book.spanish_name : book.name;
+            const secondaryName = language === 'es' ? book.name : book.spanish_name;
             const hebrewDisplay = language === 'he' ? book.hebrew_name : book.hebrew_transliteration;
             return (
               <NeumorphCard
@@ -96,13 +100,13 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
                       className="text-lg font-medium mb-1 text-[var(--foreground)]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      {book.name.toUpperCase()}
+                      {primaryName?.toUpperCase()}
                     </div>
                     <div 
                       className="text-sm text-[var(--text-secondary)]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      {displayName}
+                      {secondaryName}
                     </div>
                   </div>
                   <div 
@@ -117,6 +121,8 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
           })}
         </div>
       </div>
+    </div>
+  );
     </div>
   );
 }
