@@ -1,13 +1,13 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { X } from 'lucide-react';
-import { apiRequest } from '../services/apiClient';
+import React, { useEffect, useMemo, useState } from "react";
+import { X } from "lucide-react";
+import { apiRequest } from "../services/apiClient";
 import {
   getPrefixSegments,
   normalizeHebrew,
   normalizeHebrewDisplay,
   stripCantillation,
   stripMeteg,
-} from '../utils/hebrew';
+} from "../utils/hebrew";
 
 interface WordInstance {
   verse: string;
@@ -23,7 +23,7 @@ interface WordCardProps {
   rootTransliteration?: string;
   rootMeaning?: string;
   prefixes?: string[];
-  language?: 'en' | 'es' | 'he';
+  language?: "en" | "es" | "he";
   instances: WordInstance[];
   onInstanceClick: (verse: string) => void;
   isLoading?: boolean;
@@ -42,23 +42,25 @@ interface PrefixEntry {
   notes?: Record<string, string>;
 }
 
-export function WordCard({ 
-  word, 
+export function WordCard({
+  word,
   wordFromVerse,
-  transliteration, 
-  meanings, 
-  root, 
-  rootTransliteration, 
-  rootMeaning, 
+  transliteration,
+  meanings,
+  root,
+  rootTransliteration,
+  rootMeaning,
   prefixes,
-  language = 'en',
-  instances, 
+  language = "en",
+  instances,
   onInstanceClick,
   isLoading = false,
   showNikud = true,
   onClose,
 }: WordCardProps) {
-  const [activeTab, setActiveTab] = useState<'meanings' | 'instances'>('meanings');
+  const [activeTab, setActiveTab] = useState<"meanings" | "instances">(
+    "meanings",
+  );
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [displayedData, setDisplayedData] = useState({
     word,
@@ -74,11 +76,13 @@ export function WordCard({
   const displayWord = showNikud
     ? normalizeHebrewDisplay(stripMeteg(stripCantillation(displayedData.word)))
     : normalizeHebrewDisplay(normalizeHebrew(displayedData.word));
-  const [prefixEntries, setPrefixEntries] = useState<Record<string, PrefixEntry | null>>({});
+  const [prefixEntries, setPrefixEntries] = useState<
+    Record<string, PrefixEntry | null>
+  >({});
 
   const formatMeaning = (text: string) => {
     const cleaned = stripMeteg(stripCantillation(text))
-      .replace(/^[-–—]\s*/, '')
+      .replace(/^[-–—]\s*/, "")
       .trim();
     if (!cleaned) return cleaned;
     return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
@@ -86,7 +90,7 @@ export function WordCard({
 
   const prefixSegments = useMemo(() => {
     if (!displayedData.wordFromVerse || !displayedData.prefixes?.length) {
-      return { prefixes: [], root: displayedData.wordFromVerse ?? '' };
+      return { prefixes: [], root: displayedData.wordFromVerse ?? "" };
     }
     let displayBase = normalizeHebrewDisplay(
       stripMeteg(stripCantillation(displayedData.wordFromVerse)),
@@ -189,7 +193,7 @@ export function WordCard({
       className="space-y-6 py-2"
       style={{
         opacity: isTransitioning ? 0.8 : 1,
-        transition: 'opacity 160ms ease',
+        transition: "opacity 160ms ease",
       }}
     >
       <div className="flex justify-end">
@@ -198,9 +202,10 @@ export function WordCard({
             onClick={onClose}
             className="rounded-full p-2 transition-all hover:scale-105 active:scale-95"
             style={{
-              backgroundColor: 'var(--neomorph-bg)',
-              border: '1px solid var(--neomorph-border)',
-              boxShadow: '6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)',
+              backgroundColor: "var(--neomorph-bg)",
+              border: "1px solid var(--neomorph-border)",
+              boxShadow:
+                "6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)",
             }}
             aria-label="Close word meaning"
           >
@@ -211,32 +216,32 @@ export function WordCard({
 
       {/* Word - Large centered */}
       <div className="text-center space-y-2 pb-6">
-        <div 
-          style={{ 
+        <div
+          style={{
             fontFamily: "'Cardo', serif",
-            fontSize: '64px',
-            direction: 'rtl',
+            fontSize: "64px",
+            direction: "rtl",
             lineHeight: 1.8,
-            letterSpacing: '0.05em',
-            color: 'var(--text-hebrew)',
+            letterSpacing: "0.05em",
+            color: "var(--text-hebrew)",
             fontWeight: 400,
-            wordSpacing: '0.1em',
+            wordSpacing: "0.1em",
           }}
         >
-        {normalizeHebrewDisplay(displayWord.replace(/\//g, ''))}
+          {normalizeHebrewDisplay(displayWord.replace(/\//g, ""))}
         </div>
-        
+
         {/* Transliteration */}
         {displayedData.transliteration && (
-          <div 
-            style={{ 
+          <div
+            style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: '11px',
-              color: 'var(--text-secondary)',
-              textTransform: 'uppercase',
-              letterSpacing: '0.15em',
+              fontSize: "11px",
+              color: "var(--text-secondary)",
+              textTransform: "uppercase",
+              letterSpacing: "0.15em",
               fontWeight: 500,
-              marginTop: '12px',
+              marginTop: "12px",
             }}
           >
             {displayedData.transliteration}
@@ -244,46 +249,43 @@ export function WordCard({
         )}
       </div>
 
-
       {/* Segmented Control - Pill style with border */}
-      <div 
+      <div
         className="grid grid-cols-2 gap-2 border-2 border-[var(--primary)] rounded-full p-1"
-        style={{ overflow: 'hidden' }}
+        style={{ overflow: "hidden" }}
       >
         <button
-          onClick={() => setActiveTab('meanings')}
+          onClick={() => setActiveTab("meanings")}
           className="py-3 transition-all rounded-full"
-          style={{ 
-            fontFamily: "'Inter', sans-serif", 
-            fontWeight: 700, 
-            fontSize: '11px',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            backgroundColor: activeTab === 'meanings' 
-              ? 'var(--accent-strong)' 
-              : 'transparent',
-            color: activeTab === 'meanings'
-              ? '#ffffff'
-              : 'var(--text-secondary)',
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 700,
+            fontSize: "11px",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            backgroundColor:
+              activeTab === "meanings" ? "var(--accent-strong)" : "transparent",
+            color:
+              activeTab === "meanings" ? "#ffffff" : "var(--text-secondary)",
           }}
         >
           Meanings
         </button>
         <button
-          onClick={() => setActiveTab('instances')}
+          onClick={() => setActiveTab("instances")}
           className="py-3 transition-all rounded-full"
-          style={{ 
-            fontFamily: "'Inter', sans-serif", 
-            fontWeight: 700, 
-            fontSize: '11px',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            backgroundColor: activeTab === 'instances' 
-              ? 'var(--accent-strong)' 
-              : 'transparent',
-            color: activeTab === 'instances'
-              ? '#ffffff'
-              : 'var(--text-secondary)',
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 700,
+            fontSize: "11px",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            backgroundColor:
+              activeTab === "instances"
+                ? "var(--accent-strong)"
+                : "transparent",
+            color:
+              activeTab === "instances" ? "#ffffff" : "var(--text-secondary)",
           }}
         >
           Instances
@@ -291,27 +293,27 @@ export function WordCard({
       </div>
 
       {/* Tab Content */}
-      {activeTab === 'meanings' ? (
+      {activeTab === "meanings" ? (
         <div className="space-y-6 text-center">
           {/* Meanings Section */}
           <div className="pb-6">
-            <h3 
+            <h3
               className="mb-4"
-              style={{ 
+              style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: '11px',
-                color: 'var(--text-secondary)',
+                fontSize: "11px",
+                color: "var(--text-secondary)",
                 fontWeight: 700,
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
               }}
             >
               Meanings
             </h3>
-            <div 
-              style={{ 
+            <div
+              style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: '18px',
+                fontSize: "18px",
                 lineHeight: 1.5,
                 fontWeight: 400,
               }}
@@ -320,15 +322,17 @@ export function WordCard({
               {displayedData.meanings.length > 0 ? (
                 <div className="space-y-2 text-center">
                   {displayedData.meanings
-                    .flatMap((m) => (m ? m.split(/[,;]\s*/).map((s) => s.trim()) : []))
+                    .flatMap((m) =>
+                      m ? m.split(/[,;]\s*/).map((s) => s.trim()) : [],
+                    )
                     .map((m, i) => (
-                      <div key={i} style={{ whiteSpace: 'normal' }}>
-                        {formatMeaning(m).replace(/\//g, '')}
+                      <div key={i} style={{ whiteSpace: "normal" }}>
+                        {formatMeaning(m).replace(/\//g, "")}
                       </div>
                     ))}
                 </div>
               ) : (
-                'No meanings available yet.'
+                "No meanings available yet."
               )}
             </div>
           </div>
@@ -336,15 +340,15 @@ export function WordCard({
           {/* Root Section */}
           {/* Root Section — always show; if no root, show ALREADY ROOT */}
           <div className="pb-6">
-            <h3 
+            <h3
               className="mb-4"
-              style={{ 
+              style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: '11px',
-                color: 'var(--text-secondary)',
+                fontSize: "11px",
+                color: "var(--text-secondary)",
                 fontWeight: 700,
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
               }}
             >
               Root
@@ -352,55 +356,62 @@ export function WordCard({
             <div className="space-y-2">
               {displayedData.root ? (
                 <>
-                  <div 
-                    style={{ 
+                  <div
+                    style={{
                       fontFamily: "'Cardo', serif",
-                      fontSize: '48px',
-                      direction: 'rtl',
-                      color: 'var(--primary)',
+                      fontSize: "48px",
+                      direction: "rtl",
+                      color: "var(--primary)",
                       fontWeight: 600,
                       lineHeight: 1.4,
                     }}
                   >
-                    {normalizeHebrewDisplay(normalizeHebrew(displayedData.root).replace(/\//g, ''))}
+                    {normalizeHebrewDisplay(
+                      normalizeHebrew(displayedData.root).replace(/\//g, ""),
+                    )}
                   </div>
 
                   {displayedData.rootTransliteration && (
-                    <div 
-                      style={{ 
+                    <div
+                      style={{
                         fontFamily: "'Inter', sans-serif",
-                        fontSize: '11px',
-                        color: 'var(--text-secondary)',
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.12em',
+                        fontSize: "11px",
+                        color: "var(--text-secondary)",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.12em",
                         fontWeight: 500,
-                        marginTop: '8px',
+                        marginTop: "8px",
                       }}
                     >
                       {displayedData.rootTransliteration}
                     </div>
                   )}
 
-                  <div 
-                    style={{ 
+                  <div
+                    style={{
                       fontFamily: "'Inter', sans-serif",
-                      fontSize: '15px',
+                      fontSize: "15px",
                       lineHeight: 1.5,
-                      marginTop: '12px',
+                      marginTop: "12px",
                     }}
                     className="dark:text-[var(--text-secondary)]"
                   >
                     {displayedData.rootMeaning
-                      ? normalizeHebrewDisplay(normalizeHebrew(displayedData.rootMeaning).replace(/\//g, ''))
-                      : '—'}
+                      ? normalizeHebrewDisplay(
+                          normalizeHebrew(displayedData.rootMeaning).replace(
+                            /\//g,
+                            "",
+                          ),
+                        )
+                      : "—"}
                   </div>
                 </>
               ) : (
-                <div 
-                  style={{ 
+                <div
+                  style={{
                     fontFamily: "'Inter', sans-serif",
                     lineHeight: 1.5,
-                    textAlign: 'center'
+                    textAlign: "center",
                   }}
                   className="dark:text-[var(--text-secondary)]"
                 >
@@ -412,15 +423,15 @@ export function WordCard({
 
           {displayedData.prefixes?.length ? (
             <div className="text-center space-y-4 pb-6">
-              <h3 
+              <h3
                 className="mb-2"
-                style={{ 
+                style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: '11px',
-                  color: 'var(--text-secondary)',
+                  fontSize: "11px",
+                  color: "var(--text-secondary)",
                   fontWeight: 700,
-                  letterSpacing: '0.15em',
-                  textTransform: 'uppercase',
+                  letterSpacing: "0.15em",
+                  textTransform: "uppercase",
                 }}
               >
                 Preposition
@@ -433,13 +444,13 @@ export function WordCard({
                   entry?.meanings?.es ??
                   [];
                 const translit =
-                  language === 'es'
+                  language === "es"
                     ? entry?.transliteration_es
-                    : entry?.transliteration_en ?? entry?.transliteration_es;
+                    : (entry?.transliteration_en ?? entry?.transliteration_es);
                 const prefixText = stripMeteg(
-                  prefixSegments.prefixes[index]?.replace(/\//g, '') ??
+                  prefixSegments.prefixes[index]?.replace(/\//g, "") ??
                     entry?.main_form ??
-                    '',
+                    "",
                 );
 
                 return (
@@ -447,10 +458,10 @@ export function WordCard({
                     <div
                       style={{
                         fontFamily: "'Cardo', serif",
-                        fontSize: '48px',
-                        direction: 'rtl',
+                        fontSize: "48px",
+                        direction: "rtl",
                         lineHeight: 1,
-                        color: 'var(--text-secondary)',
+                        color: "var(--text-secondary)",
                         fontWeight: 600,
                       }}
                     >
@@ -460,10 +471,10 @@ export function WordCard({
                       <div
                         style={{
                           fontFamily: "'Inter', sans-serif",
-                          fontSize: '11px',
-                          color: 'var(--text-secondary)',
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.15em',
+                          fontSize: "11px",
+                          color: "var(--text-secondary)",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.15em",
                           fontWeight: 500,
                         }}
                       >
@@ -474,12 +485,12 @@ export function WordCard({
                       <div
                         style={{
                           fontFamily: "'Inter', sans-serif",
-                          fontSize: '15px',
+                          fontSize: "15px",
                           lineHeight: 1.5,
                         }}
                         className="dark:text-[var(--text-secondary)]"
                       >
-                        {meanings.join(', ')}
+                        {meanings.join(", ")}
                       </div>
                     ) : null}
                   </div>
@@ -494,13 +505,13 @@ export function WordCard({
           <div className="pb-6">
             <h3
               className="mb-4"
-              style={{ 
+              style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: '11px',
-                color: 'var(--text-secondary)',
+                fontSize: "11px",
+                color: "var(--text-secondary)",
                 fontWeight: 700,
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
               }}
             >
               Tap to Navigate
@@ -512,19 +523,22 @@ export function WordCard({
                     key={idx}
                     onClick={() => onInstanceClick(instance.verse)}
                     className="py-4 transition-all hover:bg-[var(--primary)] hover:text-white rounded-[20px]"
-                    style={{ 
-                      backgroundColor: 'var(--muted)',
+                    style={{
+                      backgroundColor: "var(--muted)",
                       fontFamily: "'Inter', sans-serif",
-                      fontSize: '13px',
+                      fontSize: "13px",
                       fontWeight: 600,
-                      color: 'var(--foreground)',
+                      color: "var(--foreground)",
                     }}
                   >
                     {instance.verse}
                   </button>
                 ))
               ) : (
-                <div className="col-span-3 text-sm text-[var(--text-secondary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <div
+                  className="col-span-3 text-sm text-[var(--text-secondary)]"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
                   No instances available yet.
                 </div>
               )}
