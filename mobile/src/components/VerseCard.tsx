@@ -14,10 +14,49 @@ import { getColors, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import type { DisplayVerse } from "@/src/services/scripture";
 import {
-  parseHebrewWord,
-  stripNikud,
+  getPrefixSegments,
   stripCantillation,
+  stripNikud,
 } from "@/src/utils/hebrew";
+
+const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
+
+const renderTranslationWithItalics = (
+  translation: string,
+  italicStyle: object,
+) => {
+  const segments: Array<string | JSX.Element> = [];
+  const emPattern = /<em>(.*?)<\/em>/gi;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let index = 0;
+
+  while ((match = emPattern.exec(translation)) !== null) {
+    const start = match.index;
+    const end = start + match[0].length;
+    const plainText = translation.slice(lastIndex, start);
+
+    if (plainText) {
+      segments.push(sanitizeEmTags(plainText));
+    }
+
+    segments.push(
+      <Text key={`em-${index}`} style={italicStyle}>
+        {match[1]}
+      </Text>,
+    );
+
+    lastIndex = end;
+    index += 1;
+  }
+
+  const trailingText = translation.slice(lastIndex);
+  if (trailingText) {
+    segments.push(sanitizeEmTags(trailingText));
+  }
+
+  return segments;
+};
 
 type VerseCardProps = {
   verse: DisplayVerse;
@@ -39,9 +78,12 @@ const createStyles = (
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.body,
       lineHeight: typography.sizes.body * typography.lineHeights.body,
-      color: colors.textSecondary,
+      color: colors.textPrimary,
       marginTop: spacing[6],
       textAlign: "center",
+    },
+    translationItalic: {
+      fontStyle: "italic",
     },
     hebrewRow: {
       flexDirection: "row-reverse",
@@ -151,8 +193,9 @@ export const VerseCard = ({
           }
           displayText = displayText.replace(/\//g, "");
 
-          // Parse word for prefix visualization
-          const parsedWord = parseHebrewWord(displayText);
+          const prefixSegments = word.prefixes?.length
+            ? getPrefixSegments(displayText, word.prefixes)
+            : null;
 
           const wordStyles = [
             styles.hebrewWordPressable,
@@ -161,18 +204,18 @@ export const VerseCard = ({
           ];
 
           const renderWordContent = () => {
-            if (parsedWord.prefix) {
+            if (prefixSegments?.prefixes?.length) {
               return (
                 <View style={{ flexDirection: "row" }}>
                   <Text
                     style={[styles.hebrewWord, { color: colors.textSecondary }]}
                   >
-                    {parsedWord.prefix.text.replace(/\//g, "")}
+                    {prefixSegments.prefixes.join("").replace(/\//g, "")}
                   </Text>
                   <Text
                     style={[styles.hebrewWord, { color: colors.textPrimary }]}
                   >
-                    {parsedWord.root.replace(/\//g, "")}
+                    {prefixSegments.root.replace(/\//g, "")}
                   </Text>
                 </View>
               );
@@ -232,7 +275,14 @@ export const VerseCard = ({
         })}
       </View>
       {hebrewOnly ? null : (
-        <Text style={styles.translation}>{verse.translation}</Text>
+        <Text style={styles.translation}>
+          {/<\/?em>/i.test(verse.translation)
+            ? renderTranslationWithItalics(
+                verse.translation,
+                styles.translationItalic,
+              )
+            : verse.translation}
+        </Text>
       )}
     </View>
   );

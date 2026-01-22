@@ -400,7 +400,6 @@ Manually maintained in both frontends to match backend Pydantic schemas:
 interface WordResponse {
     position: number;
     text: string;
-    text_no_nikud: string;
     strong?: string;
     morph?: string;
     prefixes: string[];
@@ -411,7 +410,6 @@ interface VerseResponse {
     chapter: number;
     verse: number;
     hebrew: string;
-    hebrew_no_nikud: string;
     words: WordResponse[];
     translation?: string;
     translation_language?: string;

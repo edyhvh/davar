@@ -11,7 +11,6 @@ class WordResponse(BaseModel):
     """Response model for individual Hebrew words"""
     position: int
     text: str
-    text_no_nikud: str
     strong: Optional[str] = None
     morph: Optional[str] = None
     prefixes: List[str] = []
@@ -39,7 +38,6 @@ class VerseResponse(BaseModel):
     chapter: int
     verse: int
     hebrew: str
-    hebrew_no_nikud: str
     words: List[WordResponse]
     translation: Optional[str] = None
     translation_language: Optional[str] = None

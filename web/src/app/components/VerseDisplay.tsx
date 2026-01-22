@@ -1,9 +1,18 @@
-import React from 'react';
-import { OnboardingWordHint } from './OnboardingWordHint';
-import { SwipeIndicator } from './SwipeIndicator';
-import { FullChapterView } from './FullChapterView';
-import type { DssVariant, VerseResponse, WordResponse } from '../services/verseService';
-import { parseHebrewWord, stripNikud, stripCantillation } from '../utils/hebrew';
+import React from "react";
+import { OnboardingWordHint } from "./OnboardingWordHint";
+import { SwipeIndicator } from "./SwipeIndicator";
+import { FullChapterView } from "./FullChapterView";
+import type {
+  DssVariant,
+  VerseResponse,
+  WordResponse,
+} from "../services/verseService";
+import {
+  parseHebrewWord,
+  stripNikud,
+  stripCantillation,
+} from "../utils/hebrew";
+import { renderTranslation } from "../utils/translationFormatter";
 
 interface VerseDisplayProps {
   hebrewText: string;
@@ -14,7 +23,7 @@ interface VerseDisplayProps {
   bookNameHebrew: string;
   book: string;
   chapter: number;
-  language: 'en' | 'es' | 'he';
+  language: "en" | "es" | "he";
   onWordClick: (word: WordResponse) => void;
   previousVerseSnippet?: string;
   nextVerseSnippet?: string;
@@ -65,13 +74,16 @@ export function VerseDisplay({
       dssMap.set(variant.word_position, variant.dss_text);
     });
 
-    const sourceWords = words.length > 0 ? words : hebrewText.split(' ').map((word, index) => ({
-      position: index + 1,
-      text: word,
-      text_no_nikud: word,
-      prefixes: [],
-      has_dss_variant: false,
-    }));
+    const sourceWords =
+      words.length > 0
+        ? words
+        : hebrewText.split(" ").map((word, index) => ({
+            position: index + 1,
+            text: word,
+            text_no_nikud: word,
+            prefixes: [],
+            has_dss_variant: false,
+          }));
 
     return sourceWords.map((word, index) => {
       const variantText = showQumran ? dssMap.get(word.position) : undefined;
@@ -85,10 +97,9 @@ export function VerseDisplay({
       if (!showCantillation) {
         displayText = stripCantillation(displayText);
       }
-      // Always remove explicit slash separators from data like "וּ/בִ/ימֵ֞י"
-      displayText = displayText.replace(/\//g, "");
 
-      const isSelected = selectedWord === word.text || selectedWord === displayText;
+      const isSelected =
+        selectedWord === word.text || selectedWord === displayText;
 
       // Parse word for prefix visualization
       const parsedWord = parseHebrewWord(displayText);
@@ -101,7 +112,7 @@ export function VerseDisplay({
               isActive={showOnboardingHint}
               onClick={() => onWordClick(word)}
             />
-            {index < sourceWords.length - 1 && ' '}
+            {index < sourceWords.length - 1 && " "}
           </span>
         );
       }
@@ -110,29 +121,29 @@ export function VerseDisplay({
         <span key={word.position}>
           <span
             onClick={() => onWordClick(word)}
-            className={`cursor-pointer transition-colors ${isSelected ? 'verse-highlight' : ''}`}
-            style={variantText ? { color: 'var(--copper-highlight)' } : undefined}
+            className={`cursor-pointer transition-colors ${isSelected ? "verse-highlight" : ""}`}
+            style={
+              variantText ? { color: "var(--copper-highlight)" } : undefined
+            }
           >
             {parsedWord.prefix ? (
               <>
                 <span
-                  style={{ color: 'var(--accent)' }}
+                  style={{ color: "var(--text-secondary)" }}
                   className="cursor-pointer hover:opacity-80"
                   title={`Prefix: ${parsedWord.prefix.particle}`}
                 >
-                  {parsedWord.prefix.text.replace(/\//g, "")}
+                  {parsedWord.prefix.text}
                 </span>
-                <span
-                  style={{ color: 'var(--text-hebrew)' }}
-                >
-                  {parsedWord.root.replace(/\//g, "")}
+                <span style={{ color: "var(--text-hebrew)" }}>
+                  {parsedWord.root}
                 </span>
               </>
             ) : (
               displayText
             )}
           </span>
-          {index < sourceWords.length - 1 && ' '}
+          {index < sourceWords.length - 1 && " "}
         </span>
       );
     });
@@ -163,21 +174,21 @@ export function VerseDisplay({
   return (
     <div className="space-y-10 relative">
       {/* Hebrew Text with Verse Number and Onboarding Hint - Large and Centered */}
-      <div 
+      <div
         className="text-center leading-[2] tracking-[0.01em] relative"
-        style={{ 
+        style={{
           fontFamily: "'Cardo', serif",
-          fontSize: '48px',
-          direction: 'rtl',
-          color: 'var(--text-hebrew)',
+          fontSize: "48px",
+          direction: "rtl",
+          color: "var(--text-hebrew)",
           lineHeight: 1.85,
         }}
       >
         <span
           className="text-[var(--text-secondary)] opacity-50 ml-2"
-          style={{ 
+          style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: '14px',
+            fontSize: "14px",
           }}
         >
           [{verseNumber}]
@@ -188,18 +199,17 @@ export function VerseDisplay({
       {/* Translation - Only show if not Hebrew Only mode */}
       {!hebrewOnly && (
         <SwipeIndicator onSwipeUp={onSwipeUp} onSwipeDown={onSwipeDown}>
-          <div 
+          <div
             className="text-center leading-relaxed px-4 transition-all duration-500 text-[var(--text-secondary)]"
-            style={{ 
+            style={{
               fontFamily: "'Inter', sans-serif",
-              fontSize: '17px',
+              fontSize: "17px",
             }}
           >
-            {translation}
+            {renderTranslation(translation)}
           </div>
         </SwipeIndicator>
       )}
-
     </div>
   );
 }

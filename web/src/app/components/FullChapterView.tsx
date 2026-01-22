@@ -1,13 +1,22 @@
-import React from 'react';
-import type { DssVariant, VerseResponse, WordResponse } from '../services/verseService';
-import { parseHebrewWord, stripNikud, stripCantillation } from '../utils/hebrew';
+import React from "react";
+import type {
+  DssVariant,
+  VerseResponse,
+  WordResponse,
+} from "../services/verseService";
+import {
+  getPrefixSegments,
+  stripNikud,
+  stripCantillation,
+} from "../utils/hebrew";
+import { renderTranslation } from "../utils/translationFormatter";
 
 interface FullChapterViewProps {
   verses: VerseResponse[];
   bookName: string;
   bookNameHebrew: string;
   chapter: number;
-  language: 'en' | 'es' | 'he';
+  language: "en" | "es" | "he";
   hebrewOnly: boolean;
   onWordClick: (word: WordResponse) => void;
   showQumran?: boolean;
@@ -33,14 +42,15 @@ export function FullChapterView({
     <div className="space-y-6 transition-all duration-500">
       {/* Book Name & Chapter Header */}
       <div className="flex justify-center items-center gap-2 sticky top-0 z-10 bg-[var(--background)] py-4">
-        <div
-          className="bg-[var(--neomorph-bg)] border border-[var(--neomorph-border)] rounded-full px-5 py-2.5 shadow-[4px_4px_12px_var(--neomorph-shadow-dark),-4px_-4px_12px_var(--neomorph-shadow-light)]"
-        >
-          <div 
+        <div className="bg-[var(--neomorph-bg)] border border-[var(--neomorph-border)] rounded-full px-5 py-2.5 shadow-[4px_4px_12px_var(--neomorph-shadow-dark),-4px_-4px_12px_var(--neomorph-shadow-light)]">
+          <div
             className="text-xs text-[var(--text-secondary)]"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            {bookName.toUpperCase()} {chapter} | <span style={{ fontFamily: "'Arimo', sans-serif" }}>{bookNameHebrew} {chapter}</span>
+            {bookName.toUpperCase()} {chapter} |{" "}
+            <span style={{ fontFamily: "'Arimo', sans-serif" }}>
+              {bookNameHebrew} {chapter}
+            </span>
           </div>
         </div>
       </div>
@@ -48,35 +58,36 @@ export function FullChapterView({
       {/* Chapter Verses */}
       <div className="space-y-8 px-2">
         {verses.map((verse, idx) => (
-          <div 
-            key={idx} 
-            className="space-y-3 transition-all duration-300"
-          >
+          <div key={idx} className="space-y-3 transition-all duration-300">
             {/* Hebrew Text with Verse Number */}
-            <div 
+            <div
               className="leading-relaxed tracking-[0.01em]"
-              style={{ 
+              style={{
                 fontFamily: "'Cardo', serif",
-                fontSize: '32px',
-                direction: 'rtl',
-                color: 'var(--text-hebrew)',
+                fontSize: "32px",
+                direction: "rtl",
+                color: "var(--text-hebrew)",
               }}
             >
-              <span 
+              <span
                 className="text-[var(--text-secondary)] opacity-40 ml-2"
-                style={{ 
+                style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: '13px',
+                  fontSize: "13px",
                 }}
               >
                 [{idx + 1}]
               </span>
               {(() => {
                 const dssMap = new Map<number, string>();
-                verse.dss?.forEach((variant) => dssMap.set(variant.word_position, variant.dss_text));
+                verse.dss?.forEach((variant) =>
+                  dssMap.set(variant.word_position, variant.dss_text),
+                );
 
                 return verse.words.map((word, wordIdx) => {
-                  const variantText = showQumran ? dssMap.get(word.position) : undefined;
+                  const variantText = showQumran
+                    ? dssMap.get(word.position)
+                    : undefined;
                   const rawText = variantText ?? word.text;
 
                   // Apply nikud and cantillation settings
@@ -88,38 +99,44 @@ export function FullChapterView({
                     displayText = stripCantillation(displayText);
                   }
 
-                  const isSelected = selectedWord === word.text || selectedWord === displayText;
+                  const isSelected =
+                    selectedWord === word.text || selectedWord === displayText;
 
-                  // Parse word for prefix visualization
-                  const parsedWord = parseHebrewWord(displayText);
+                  const prefixSegments = word.prefixes?.length
+                    ? getPrefixSegments(displayText, word.prefixes)
+                    : null;
 
                   return (
                     <span key={word.position}>
                       <span
                         onClick={() => onWordClick(word)}
-                        className={`cursor-pointer transition-colors duration-200 ${isSelected ? 'verse-highlight' : ''}`}
-                        style={variantText ? { color: 'var(--copper-highlight)' } : undefined}
+                        className={`cursor-pointer transition-colors duration-200 ${isSelected ? "verse-highlight" : ""}`}
+                        style={
+                          variantText
+                            ? { color: "var(--copper-highlight)" }
+                            : undefined
+                        }
                       >
-                        {parsedWord.prefix ? (
+                        {prefixSegments?.prefixes?.length ? (
                           <>
                             <span
-                              style={{ color: 'var(--accent)' }}
+                              style={{ color: "var(--text-secondary)" }}
                               className="cursor-pointer hover:opacity-80"
-                              title={`Prefix: ${parsedWord.prefix.particle}`}
+                              title={`Prefix: ${word.prefixes?.join(", ")}`}
                             >
-                              {parsedWord.prefix.text}
+                              {prefixSegments.prefixes
+                                .join("")
+                                .replace(/\//g, "")}
                             </span>
-                            <span
-                              style={{ color: 'var(--text-hebrew)' }}
-                            >
-                              {parsedWord.root}
+                            <span style={{ color: "var(--text-hebrew)" }}>
+                              {prefixSegments.root.replace(/\//g, "")}
                             </span>
                           </>
                         ) : (
                           displayText
                         )}
                       </span>
-                      {wordIdx < verse.words.length - 1 && ' '}
+                      {wordIdx < verse.words.length - 1 && " "}
                     </span>
                   );
                 });
@@ -128,14 +145,14 @@ export function FullChapterView({
 
             {/* Translation - only show if not Hebrew Only mode */}
             {!hebrewOnly && (
-              <div 
+              <div
                 className="text-[var(--text-secondary)] leading-relaxed"
-                style={{ 
+                style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: '15px',
+                  fontSize: "15px",
                 }}
               >
-                [{verse.translation}]
+                [{renderTranslation(verse.translation ?? "")}]
               </div>
             )}
           </div>

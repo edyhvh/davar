@@ -21,10 +21,15 @@ export interface WordAnalysis {
 export const getWordAnalysisByStrong = async (
   strong?: string,
   language?: "en" | "es",
+  displayHebrew?: string,
 ): Promise<WordAnalysis | null> => {
   if (!strong) return null;
-  const url = language 
-    ? `/api/v1/lexicon/${strong}?language=${language}`
+  const params = new URLSearchParams();
+  if (language) params.set("language", language);
+  if (displayHebrew) params.set("hebrew", displayHebrew);
+  const query = params.toString();
+  const url = query
+    ? `/api/v1/lexicon/${strong}?${query}`
     : `/api/v1/lexicon/${strong}`;
   return apiRequest<WordAnalysis>(url);
 };

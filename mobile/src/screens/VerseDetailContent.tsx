@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   FlatList,
+  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -51,6 +52,85 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       elevation: 10,
     },
   });
+
+type VersePageProps = {
+  item: DisplayVerse;
+  pageHeight: number;
+  centerOffset: number;
+  showWordHint: boolean;
+  isSelectedVerse: boolean;
+  onVersePress: () => void;
+  onWordPress: (word: DisplayVerse["words"][number] | null) => void;
+};
+
+const VersePage = ({
+  item,
+  pageHeight,
+  centerOffset,
+  showWordHint,
+  isSelectedVerse,
+  onVersePress,
+  onWordPress,
+}: VersePageProps) => {
+  const [contentHeight, setContentHeight] = useState(0);
+  const verticalPadding = spacing[8] * 2;
+  const availableHeight = Math.max(0, pageHeight - verticalPadding);
+  const canScroll = contentHeight > availableHeight + 1;
+
+  const verseContent = (
+    <View
+      style={{
+        paddingHorizontal: spacing[6],
+        paddingVertical: spacing[8],
+        transform: [{ translateY: centerOffset }],
+      }}
+      onLayout={(event) => setContentHeight(event.nativeEvent.layout.height)}
+    >
+      <VerseCard
+        verse={item}
+        variant="detail"
+        showWordHint={showWordHint && isSelectedVerse}
+        onVersePress={onVersePress}
+        onWordPress={onWordPress}
+      />
+    </View>
+  );
+
+  return (
+    <View
+      style={{
+        height: pageHeight,
+        width: "100%",
+      }}
+    >
+      {canScroll ? (
+        <ScrollView
+          contentContainerStyle={{
+            paddingHorizontal: spacing[6],
+            paddingVertical: spacing[8],
+          }}
+          showsVerticalScrollIndicator={false}
+          bounces={false}
+          alwaysBounceVertical={false}
+          overScrollMode="never"
+          nestedScrollEnabled
+        >
+          {verseContent}
+        </ScrollView>
+      ) : (
+        <View
+          style={{
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {verseContent}
+        </View>
+      )}
+    </View>
+  );
+};
 
 export const VerseDetailContent = () => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
@@ -193,7 +273,7 @@ export const VerseDetailContent = () => {
         const verses = await fetchChapterVerses(bookId, chapter, {
           language: language === "he" ? undefined : language,
           showDss: showQumran,
-          hebrewOnly,
+          hebrewOnly: false, // Always load translations; UI will control display
         });
         if (!isMounted) return;
         setChapterVerses(verses);
@@ -250,26 +330,15 @@ export const VerseDetailContent = () => {
             data={orderedVerses}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <View
-                style={{
-                  height: pageHeight,
-                  paddingHorizontal: spacing[6],
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <View style={{ transform: [{ translateY: centerOffset }] }}>
-                  <VerseCard
-                    verse={item}
-                    variant="detail"
-                    showWordHint={showWordHint && item.id === verse?.id}
-                    onVersePress={() =>
-                      navigationSheetRef.current?.snapToIndex(0)
-                    }
-                    onWordPress={handleWordPress}
-                  />
-                </View>
-              </View>
+              <VersePage
+                item={item}
+                pageHeight={pageHeight}
+                centerOffset={centerOffset}
+                showWordHint={showWordHint}
+                isSelectedVerse={item.id === verse?.id}
+                onVersePress={() => navigationSheetRef.current?.snapToIndex(0)}
+                onWordPress={handleWordPress}
+              />
             )}
             pagingEnabled
             showsVerticalScrollIndicator={false}

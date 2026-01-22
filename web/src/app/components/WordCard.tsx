@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { X } from 'lucide-react';
-import { normalizeHebrew, stripCantillation } from '../utils/hebrew';
+import { apiRequest } from '../services/apiClient';
+import { getPrefixSegments, normalizeHebrew, stripCantillation } from '../utils/hebrew';
 
 interface WordInstance {
   verse: string;
@@ -9,30 +10,95 @@ interface WordInstance {
 
 interface WordCardProps {
   word: string;
+  wordFromVerse?: string;
   transliteration?: string;
   meanings: string[];
   root?: string;
   rootTransliteration?: string;
   rootMeaning?: string;
+  prefixes?: string[];
+  language?: 'en' | 'es' | 'he';
   instances: WordInstance[];
   onInstanceClick: (verse: string) => void;
   isLoading?: boolean;
+  showNikud?: boolean;
   onClose?: () => void;
+}
+
+interface PrefixEntry {
+  id: string;
+  main_form?: string;
+  type?: string;
+  transliteration_en?: string;
+  transliteration_es?: string;
+  meanings?: Record<string, string[]>;
+  forms?: string[];
+  notes?: Record<string, string>;
 }
 
 export function WordCard({ 
   word, 
+  wordFromVerse,
   transliteration, 
   meanings, 
   root, 
   rootTransliteration, 
   rootMeaning, 
+  prefixes,
+  language = 'en',
   instances, 
   onInstanceClick,
   isLoading = false,
+  showNikud = true,
   onClose,
 }: WordCardProps) {
   const [activeTab, setActiveTab] = useState<'meanings' | 'instances'>('meanings');
+  const displayWord = showNikud ? stripCantillation(word) : normalizeHebrew(word);
+  const [prefixEntries, setPrefixEntries] = useState<Record<string, PrefixEntry | null>>({});
+
+  const formatMeaning = (text: string) => {
+    const cleaned = stripCantillation(text).replace(/^[-–—]\s*/, '').trim();
+    if (!cleaned) return cleaned;
+    return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+  };
+
+  const prefixSegments = useMemo(() => {
+    if (!wordFromVerse || !prefixes?.length) {
+      return { prefixes: [], root: wordFromVerse ?? '' };
+    }
+    let displayBase = stripCantillation(wordFromVerse);
+    if (!showNikud) {
+      displayBase = normalizeHebrew(displayBase);
+    }
+    return getPrefixSegments(displayBase, prefixes);
+  }, [prefixes, showNikud, wordFromVerse]);
+
+  useEffect(() => {
+    const loadPrefixes = async () => {
+      if (!prefixes?.length) {
+        setPrefixEntries({});
+        return;
+      }
+
+      const entries: Record<string, PrefixEntry | null> = {};
+      await Promise.all(
+        prefixes.map(async (prefixId) => {
+          try {
+            const entry = await apiRequest<PrefixEntry>(
+              `/api/v1/prefixes/${prefixId}`,
+            );
+            entries[prefixId] = entry;
+          } catch {
+            entries[prefixId] = null;
+          }
+        }),
+      );
+
+      setPrefixEntries(entries);
+    };
+
+    loadPrefixes();
+  }, [prefixes]);
 
   return (
     <div className="space-y-6 py-2">
@@ -70,7 +136,7 @@ export function WordCard({
             fontWeight: 600,
           }}
         >
-          {normalizeHebrew(word).replace(/\//g, '')}
+          {displayWord.replace(/\//g, '')}
         </div>
         
         {/* Transliteration */}
@@ -90,6 +156,7 @@ export function WordCard({
           </div>
         )}
       </div>
+
 
       {/* Segmented Control - Pill style with border */}
       <div 
@@ -169,7 +236,7 @@ export function WordCard({
                     .flatMap((m) => (m ? m.split(/[,;]\s*/).map((s) => s.trim()) : []))
                     .map((m, i) => (
                       <div key={i} style={{ whiteSpace: 'normal' }}>
-                        {stripCantillation(m).replace(/\//g, '').trim()}
+                        {formatMeaning(m).replace(/\//g, '')}
                       </div>
                     ))}
                 </div>
@@ -254,6 +321,83 @@ export function WordCard({
               )}
             </div>
           </div>
+
+          {prefixes?.length ? (
+            <div className="text-center space-y-4 pb-6">
+              <h3 
+                className="mb-2"
+                style={{ 
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: '11px',
+                  color: 'var(--text-secondary)',
+                  fontWeight: 700,
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                }}
+              >
+                Preposition
+              </h3>
+              {prefixes.map((prefixId, index) => {
+                const entry = prefixEntries[prefixId];
+                const meanings =
+                  entry?.meanings?.[language] ??
+                  entry?.meanings?.en ??
+                  entry?.meanings?.es ??
+                  [];
+                const translit =
+                  language === 'es'
+                    ? entry?.transliteration_es
+                    : entry?.transliteration_en ?? entry?.transliteration_es;
+                const prefixText =
+                  prefixSegments.prefixes[index]?.replace(/\//g, '') ??
+                  entry?.main_form ??
+                  '';
+
+                return (
+                  <div key={`${prefixId}-${index}`} className="space-y-2">
+                    <div
+                      style={{
+                        fontFamily: "'Cardo', serif",
+                        fontSize: '48px',
+                        direction: 'rtl',
+                        lineHeight: 1,
+                        color: 'var(--text-secondary)',
+                        fontWeight: 600,
+                      }}
+                    >
+                      {prefixText}
+                    </div>
+                    {translit ? (
+                      <div
+                        style={{
+                          fontFamily: "'Inter', sans-serif",
+                          fontSize: '11px',
+                          color: 'var(--text-secondary)',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.15em',
+                          fontWeight: 500,
+                        }}
+                      >
+                        {translit}
+                      </div>
+                    ) : null}
+                    {meanings.length ? (
+                      <div
+                        style={{
+                          fontFamily: "'Inter', sans-serif",
+                          fontSize: '15px',
+                          lineHeight: 1.5,
+                        }}
+                        className="dark:text-[var(--text-secondary)]"
+                      >
+                        {meanings.join(', ')}
+                      </div>
+                    ) : null}
+                  </div>
+                );
+              })}
+            </div>
+          ) : null}
         </div>
       ) : (
         <div className="space-y-6 text-center pb-6">

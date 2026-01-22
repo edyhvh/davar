@@ -1,7 +1,6 @@
 export type WordResponse = {
   position: number;
   text: string;
-  text_no_nikud: string;
   strong?: string;
   morph?: string;
   prefixes: string[];
@@ -26,7 +25,6 @@ export type VerseResponse = {
   chapter: number;
   verse: number;
   hebrew: string;
-  hebrew_no_nikud: string;
   words: WordResponse[];
   translation?: string;
   translation_language?: string;

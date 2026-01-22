@@ -2,34 +2,34 @@
 
 :root {
   --font-size: 16px;
-  
+
   /* Core Accent: Soft airy pastel tekhelet blue */
-  --accent: #7AA0D6;           /* Primary interactive elements */
-  --accent-from: #7AA0D6;
-  --accent-to: #6389BF;        /* Gradients, hover base */
-  --accent-dark: #6389BF;
-  --accent-deep: #4C72A8;      /* Pressed/deep states */
-  --accent-light: #A8C8F0;     /* Soft fills, selected states */
-  --accent-darker: #3D5A8C;    /* Darker blue for donate button */
-  --accent-strong: #4C72A8;
+  --accent: #7aa0d6; /* Primary interactive elements */
+  --accent-from: #7aa0d6;
+  --accent-to: #6389bf; /* Gradients, hover base */
+  --accent-dark: #6389bf;
+  --accent-deep: #4c72a8; /* Pressed/deep states */
+  --accent-light: #a8c8f0; /* Soft fills, selected states */
+  --accent-darker: #3d5a8c; /* Darker blue for donate button */
+  --accent-strong: #4c72a8;
   --about-surface: #4a4a4a;
   --accent-glow: rgba(122, 160, 214, 0.12);
   --accent-glow-dark: rgba(99, 137, 191, 0.18);
-  
+
   /* Light theme foundations – warm manuscript cream */
-  --background: #FAF6F0;       /* Shafan-inspired warm parchment */
+  --background: #faf6f0; /* Shafan-inspired warm parchment */
   --foreground: #000000;
-  --text-primary: #000000;     /* Main text + Hebrew */
-  --text-secondary: #333333;
+  --text-primary: #000000; /* Main text + Hebrew */
+  --text-secondary: #707070;
   --text-hebrew: #000000;
   --muted: rgba(0, 0, 0, 0.05); /* Subtle muted bg */
-  
+
   /* Surfaces – soft paper */
-  --surface: #FDF8F2;
-  --surface-elevated: #F4EEE7;
-  
+  --surface: #fdf8f2;
+  --surface-elevated: #f4eee7;
+
   /* Neumorphism - Light Theme (Shafan soft depth) */
-  --neomorph-bg: #FAF6F0;
+  --neomorph-bg: #faf6f0;
   --neomorph-shadow-dark: rgba(180, 160, 140, 0.5);
   --neomorph-shadow-light: rgba(255, 255, 255, 1);
   --neomorph-border: rgba(0, 0, 0, 0.04);
@@ -42,40 +42,40 @@
   --glass-border: rgba(0, 0, 0, 0.15);
   --glass-shadow: rgba(0, 0, 0, 0.15);
   --glass-highlight: rgba(255, 255, 255, 0.75);
-  
+
   /* Softened Copper – now more golden/earthy to complement pastels */
-  --copper-base: #B07A3C;      /* Main copper (e.g., Download button) */
-  --copper-highlight: #C68F55;
+  --copper-base: #b07a3c; /* Main copper (e.g., Download button) */
+  --copper-highlight: #c68f55;
   --copper-glow: rgba(192, 140, 70, 0.07);
   --copper-background-subtle: rgba(184, 130, 60, 0.03);
-  
+
   /* Dark theme overrides */
   &.dark {
     /* Accent stays lighter pastel for visibility & serenity */
-    --accent: #92B5E8;
-    --accent-from: #92B5E8;
-    --accent-to: #7B9ED1;
-    --accent-dark: #7B9ED1;
-    --accent-deep: #4C72A8;
-    --accent-light: #BCD8FF;
-    --accent-darker: #3D5A8C;    /* Darker blue for donate button */
-    --accent-strong: #4C72A8;
+    --accent: #92b5e8;
+    --accent-from: #92b5e8;
+    --accent-to: #7b9ed1;
+    --accent-dark: #7b9ed1;
+    --accent-deep: #4c72a8;
+    --accent-light: #bcd8ff;
+    --accent-darker: #3d5a8c; /* Darker blue for donate button */
+    --accent-strong: #4c72a8;
     --about-surface: #2f2b29;
-    
+
     /* Warm text – preserved for long reading comfort */
     --text-primary: #d5c4a1;
     --text-secondary: #bdae93;
     --text-hebrew: #d5c4a1;
-    
+
     /* Deep warm brown backgrounds */
     --background: #3c3836;
     --foreground: #d5c4a1;
     --muted: rgba(255, 255, 255, 0.08);
-    
+
     /* Surfaces – deep but cozy */
     --surface: #3c3836;
     --surface-elevated: #44403e;
-    
+
     /* Neumorphism - Dark Theme (Shafan warm depth) */
     --neomorph-bg: #3c3836;
     --neomorph-shadow-dark: rgba(29, 32, 33, 0.9);
@@ -90,20 +90,20 @@
     --glass-border: rgba(255, 255, 255, 0.12);
     --glass-shadow: rgba(0, 0, 0, 0.35);
     --glass-highlight: rgba(255, 255, 255, 0.1);
-    
+
     /* Copper – richer, warmer for dark mode harmony */
-    --copper-base: #A06C35;
-    --copper-highlight: #B5814A;
-    --copper-glow: rgba(176, 120, 60, 0.10);
+    --copper-base: #a06c35;
+    --copper-highlight: #b5814a;
+    --copper-glow: rgba(176, 120, 60, 0.1);
     --copper-background-subtle: rgba(160, 110, 50, 0.05);
   }
-  
+
   /* Standard theme variables */
   --card: rgba(255, 255, 255, 0.8);
   --card-foreground: #1d1d1f;
   --popover: rgba(255, 255, 255, 0.95);
   --popover-foreground: #1d1d1f;
-  --primary: #7AA0D6;
+  --primary: #7aa0d6;
   --primary-foreground: #ffffff;
   --secondary: rgba(255, 255, 255, 0.6);
   --secondary-foreground: #6e6e73;
@@ -125,7 +125,7 @@
   --radius: 0.75rem;
   --sidebar: rgba(255, 255, 255, 0.95);
   --sidebar-foreground: #1d1d1f;
-  --sidebar-primary: #2E347A;
+  --sidebar-primary: #2e347a;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: rgba(255, 255, 255, 0.7);
   --sidebar-accent-foreground: #6e6e73;
@@ -175,30 +175,30 @@
   --foreground: #d5c4a1;
   --text-primary: #d5c4a1;
   --text-secondary: #bdae93;
-  
+
   /* Glass surfaces for dark theme */
   --glass-surface: rgba(60, 56, 54, 0.95);
   --glass-surface-elevated: rgba(68, 64, 62, 0.97);
   --glass-border: rgba(255, 255, 255, 0.12);
-  
+
   /* Earthy Tekhelet Accent - Dark Mode */
-  --accent-from: #92B5E8;
-  --accent-to: #7B9ED1;
-  --accent: #92B5E8;
-  --accent-dark: #7B9ED1;
-  --accent-deep: #4C72A8;
-  --accent-light: #BCD8FF;
-  
+  --accent-from: #92b5e8;
+  --accent-to: #7b9ed1;
+  --accent: #92b5e8;
+  --accent-dark: #7b9ed1;
+  --accent-deep: #4c72a8;
+  --accent-light: #bcd8ff;
+
   /* Subtle accent glow for depth */
-  --accent-glow: rgba(146, 181, 232, 0.10);
+  --accent-glow: rgba(146, 181, 232, 0.1);
   --accent-glow-dark: rgba(123, 158, 209, 0.15);
-  
+
   /* Standard theme variables */
   --card: rgba(60, 56, 54, 0.82);
   --card-foreground: #d5c4a1;
   --popover: rgba(60, 56, 54, 0.95);
   --popover-foreground: #d5c4a1;
-  --primary: #92B5E8;
+  --primary: #92b5e8;
   --primary-foreground: #ffffff;
   --secondary: rgba(60, 56, 54, 0.7);
   --secondary-foreground: #bdae93;
@@ -207,7 +207,7 @@
   --accent-foreground: #ffffff;
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: rgba(255, 255, 255, 0.10);
+  --border: rgba(255, 255, 255, 0.1);
   --input: rgba(60, 56, 54, 0.7);
   --input-background: rgba(80, 73, 69, 0.5);
   --ring: rgba(146, 181, 232, 0.45);
@@ -220,7 +220,7 @@
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: rgba(60, 56, 54, 0.95);
   --sidebar-foreground: #d5c4a1;
-  --sidebar-primary: #92B5E8;
+  --sidebar-primary: #92b5e8;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: rgba(60, 56, 54, 0.8);
   --sidebar-accent-foreground: #bdae93;
@@ -229,9 +229,18 @@
 }
 
 @keyframes verseHighlight {
-  0% { background-color: rgba(251, 191, 36, 0); transform: scale(1); }
-  20% { background-color: rgba(251, 191, 36, 0.3); transform: scale(1.005); }
-  100% { background-color: rgba(251, 191, 36, 0); transform: scale(1); }
+  0% {
+    background-color: rgba(251, 191, 36, 0);
+    transform: scale(1);
+  }
+  20% {
+    background-color: rgba(251, 191, 36, 0.3);
+    transform: scale(1.005);
+  }
+  100% {
+    background-color: rgba(251, 191, 36, 0);
+    transform: scale(1);
+  }
 }
 
 .verse-highlight {
@@ -316,7 +325,9 @@
 
   body {
     @apply bg-background text-foreground;
-    transition: background-color 420ms ease, color 420ms ease;
+    transition:
+      background-color 420ms ease,
+      color 420ms ease;
   }
 
   /**
@@ -372,7 +383,9 @@
 }
 
 .word-panel-shell {
-  transition: transform 220ms ease, opacity 220ms ease;
+  transition:
+    transform 220ms ease,
+    opacity 220ms ease;
   /* Prevent the panel from growing the page and causing layout shifts */
   max-height: calc(100vh - 160px);
   overflow: auto;
@@ -389,7 +402,29 @@
 }
 
 .verse-panel-shell {
-  transition: transform 240ms ease, opacity 240ms ease;
+  transition:
+    transform 240ms ease,
+    opacity 240ms ease;
+}
+
+.verse-panel-inner {
+  transition: transform 220ms ease;
+}
+
+.verse-panel-jump .verse-panel-inner {
+  animation: versePanelJump 220ms ease;
+}
+
+@keyframes versePanelJump {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .verse-panel-centered {

@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { BookOpen, Settings, Sun, Moon, ScrollText, Languages, Eye, Heart, Home, Lightbulb } from 'lucide-react';
+import { BookOpen, Settings, Sun, Moon, ScrollText, Languages, Eye, Heart, Home, Lightbulb, ChevronUp, ChevronDown } from 'lucide-react';
 import { NeumorphCard } from './NeumorphCard';
 import { NeumorphicToggle } from './NeumorphicToggle';
 
 interface NavigationBarProps {
   book: string;
+  bookDisplayName: string;
   bookHebrew: string;
   chapter: number;
   verse: number;
-  books: { name: string; hebrew: string }[];
+  books: { name: string; hebrew: string; spanish: string }[];
   chapterCount: number;
   verseCount: number;
   onBookChange: (book: string) => void;
@@ -17,6 +18,10 @@ interface NavigationBarProps {
   onHomeClick: () => void;
   onDonateClick: () => void;
   onFeaturesClick: () => void;
+  onPreviousVerse: () => void;
+  onNextVerse: () => void;
+  hasPreviousVerse: boolean;
+  hasNextVerse: boolean;
   theme: 'light' | 'dark';
   onThemeChange: (theme: 'light' | 'dark') => void;
   language: 'en' | 'es' | 'he';
@@ -35,6 +40,7 @@ interface NavigationBarProps {
 
 export function NavigationBar({
   book,
+  bookDisplayName,
   bookHebrew,
   chapter,
   verse,
@@ -47,6 +53,10 @@ export function NavigationBar({
   onHomeClick,
   onDonateClick,
   onFeaturesClick,
+  onPreviousVerse,
+  onNextVerse,
+  hasPreviousVerse,
+  hasNextVerse,
   theme,
   onThemeChange,
   language,
@@ -96,7 +106,7 @@ export function NavigationBar({
   return (
     <div className="relative" ref={dropdownRef}>
       <NeumorphCard className="px-4 py-3">
-        <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={onHomeClick}
@@ -124,7 +134,7 @@ export function NavigationBar({
             >
               <BookOpen className="w-4 h-4 text-[var(--text-secondary)]" />
               <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-secondary)]">
-                {book} | <span style={{ fontFamily: "'Suez One', serif" }}>{bookHebrew}</span>
+                {bookDisplayName} | <span style={{ fontFamily: "'Suez One', serif" }}>{bookHebrew}</span>
               </span>
             </button>
 
@@ -156,6 +166,39 @@ export function NavigationBar({
               <span className="text-xs text-[var(--text-secondary)]">{verse}</span>
             </button>
 
+          </div>
+
+          <div className="flex flex-1 items-center justify-center gap-2">
+            <button
+              onClick={onPreviousVerse}
+              disabled={!hasPreviousVerse}
+              className="rounded-full p-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              style={{
+                backgroundColor: 'var(--neomorph-bg)',
+                border: '1px solid var(--neomorph-border)',
+                boxShadow: '6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)',
+              }}
+              aria-label="Previous verse"
+            >
+              <ChevronUp
+                className={`h-4 w-4 ${hasPreviousVerse ? 'text-[var(--text-secondary)]' : 'text-[var(--text-secondary)]/40'}`}
+              />
+            </button>
+            <button
+              onClick={onNextVerse}
+              disabled={!hasNextVerse}
+              className="rounded-full p-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              style={{
+                backgroundColor: 'var(--neomorph-bg)',
+                border: '1px solid var(--neomorph-border)',
+                boxShadow: '6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)',
+              }}
+              aria-label="Next verse"
+            >
+              <ChevronDown
+                className={`h-4 w-4 ${hasNextVerse ? 'text-[var(--text-secondary)]' : 'text-[var(--text-secondary)]/40'}`}
+              />
+            </button>
           </div>
 
           <div className="flex items-center gap-2">
@@ -348,7 +391,9 @@ export function NavigationBar({
                 }`}
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                <span className="text-xs tracking-[0.2em] uppercase">{item.name}</span>
+                <span className="text-xs tracking-[0.2em] uppercase">
+                  {language === "es" ? item.spanish : item.name}
+                </span>
                 <span className="text-sm" style={{ fontFamily: "'Suez One', serif" }}>{item.hebrew}</span>
               </button>
             ))}
