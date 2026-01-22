@@ -17,6 +17,7 @@ import {
   getPrefixSegments,
   stripCantillation,
   stripNikud,
+  stripMeteg,
 } from "@/src/utils/hebrew";
 
 const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
@@ -191,6 +192,7 @@ export const VerseCard = ({
           if (!showCantillation) {
             displayText = stripCantillation(displayText);
           }
+          displayText = stripMeteg(displayText);
           displayText = displayText.replace(/\//g, "");
 
           const prefixSegments = word.prefixes?.length

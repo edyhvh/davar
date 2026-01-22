@@ -384,11 +384,12 @@
 
 .word-panel-shell {
   transition:
-    transform 220ms ease,
-    opacity 220ms ease;
+    transform 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 280ms cubic-bezier(0.4, 0, 0.2, 1);
   /* Prevent the panel from growing the page and causing layout shifts */
   max-height: calc(100vh - 160px);
   overflow: auto;
+  will-change: transform, opacity;
 }
 
 .word-panel-open {
@@ -398,7 +399,8 @@
 
 .word-panel-closed {
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateY(12px);
+  pointer-events: none;
 }
 
 .verse-panel-shell {

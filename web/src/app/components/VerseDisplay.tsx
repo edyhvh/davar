@@ -11,6 +11,7 @@ import {
   parseHebrewWord,
   stripNikud,
   stripCantillation,
+  stripMeteg,
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
 
@@ -97,6 +98,7 @@ export function VerseDisplay({
       if (!showCantillation) {
         displayText = stripCantillation(displayText);
       }
+      displayText = stripMeteg(displayText);
 
       const isSelected =
         selectedWord === word.text || selectedWord === displayText;

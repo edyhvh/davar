@@ -14,6 +14,8 @@ import {
   stripCantillation,
   stripNikud,
   getPrefixSegments,
+  stripMeteg,
+  normalizeHebrewDisplay,
 } from "@/src/utils/hebrew";
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
@@ -413,14 +415,17 @@ export const WordAnalysisBottomSheet = ({
     if (!showCantillation) {
       base = stripCantillation(base);
     }
-    return base.replace(/\//g, "");
+    base = stripMeteg(base);
+    return normalizeHebrewDisplay(base).replace(/\//g, "");
   }, [lexiconEntry?.hebrew, word?.text, showNikud, showCantillation]);
 
   const prefixSegments = useMemo(() => {
     if (!word?.text || !word?.prefixes?.length) {
       return { prefixes: [], root: word?.text ?? "" };
     }
-    let displayBase = stripCantillation(word.text);
+    let displayBase = normalizeHebrewDisplay(
+      stripMeteg(stripCantillation(word.text)),
+    );
     if (!showNikud) {
       displayBase = stripNikud(displayBase);
     }
