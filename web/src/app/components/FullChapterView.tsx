@@ -8,6 +8,7 @@ import {
   getPrefixSegments,
   stripNikud,
   stripCantillation,
+  stripMeteg,
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
 
@@ -98,6 +99,7 @@ export function FullChapterView({
                   if (!showCantillation) {
                     displayText = stripCantillation(displayText);
                   }
+                  displayText = stripMeteg(displayText);
 
                   const isSelected =
                     selectedWord === word.text || selectedWord === displayText;

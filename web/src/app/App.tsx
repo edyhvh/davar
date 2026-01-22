@@ -81,6 +81,11 @@ export default function App() {
   const [showCantillation, setShowCantillation] = useState(false);
 
   const [selectedWord, setSelectedWord] = useState<WordResponse | null>(null);
+  const [lastSelectedWord, setLastSelectedWord] = useState<WordResponse | null>(
+    null,
+  );
+  const [lastSelectedWordAnalysis, setLastSelectedWordAnalysis] =
+    useState<WordAnalysis | null>(null);
   const [showMobileDesignGuide, setShowMobileDesignGuide] = useState(false);
   const [showDesignSystem, setShowDesignSystem] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -272,6 +277,18 @@ export default function App() {
     };
   }, [selectedWord, language]);
 
+  useEffect(() => {
+    if (selectedWord) {
+      setLastSelectedWord(selectedWord);
+    }
+  }, [selectedWord]);
+
+  useEffect(() => {
+    if (selectedWord && selectedWordAnalysis) {
+      setLastSelectedWordAnalysis(selectedWordAnalysis);
+    }
+  }, [selectedWord, selectedWordAnalysis]);
+
   const isSplitView = Boolean(selectedWord && !isMobile);
   const [isWordPanelVisible, setIsWordPanelVisible] = useState(false);
 
@@ -284,7 +301,7 @@ export default function App() {
     if (isWordPanelVisible) {
       const timeout = window.setTimeout(
         () => setIsWordPanelVisible(false),
-        220,
+        300,
       );
       return () => window.clearTimeout(timeout);
     }
@@ -293,7 +310,8 @@ export default function App() {
   }, [selectedWord, isWordPanelVisible]);
 
   useEffect(() => {
-    setSelectedWord(null);
+    const timeout = window.setTimeout(() => setSelectedWord(null), 50);
+    return () => window.clearTimeout(timeout);
   }, [currentBook, currentChapter, currentVerse]);
 
   useEffect(() => {
@@ -375,8 +393,12 @@ export default function App() {
     onNavigateFeedback: triggerScrollJump,
   });
 
+  const activeWordAnalysis = selectedWord
+    ? selectedWordAnalysis
+    : lastSelectedWordAnalysis;
+
   const wordMeanings =
-    selectedWordAnalysis?.definitions?.map((item) => item.text) ?? [];
+    activeWordAnalysis?.definitions?.map((item) => item.text) ?? [];
 
   return (
     <div
@@ -521,6 +543,13 @@ export default function App() {
                 className="hidden md:block"
                 style={showFullChapter ? undefined : { height: "70vh" }}
               >
+                {(() => {
+                  const wordForCard = selectedWord ?? lastSelectedWord;
+                  const wordAnalysisForCard = selectedWord
+                    ? selectedWordAnalysis
+                    : lastSelectedWordAnalysis;
+
+                  return (
                 <NeumorphCard
                   className={`p-6 sticky top-24 word-panel-shell ${
                     selectedWord ? "word-panel-open" : "word-panel-closed"
@@ -529,21 +558,21 @@ export default function App() {
                   onMouseEnter={() => setIsWordPanelHovered(true)}
                   onMouseLeave={() => setIsWordPanelHovered(false)}
                 >
-                  {selectedWord ? (
+                  {wordForCard && isWordPanelVisible ? (
                     <WordCard
-                      word={selectedWordAnalysis?.hebrew ?? selectedWord.text}
-                      wordFromVerse={selectedWord.text}
-                      transliteration={selectedWordAnalysis?.transliteration}
+                      word={wordAnalysisForCard?.hebrew ?? wordForCard.text}
+                      wordFromVerse={wordForCard.text}
+                      transliteration={wordAnalysisForCard?.transliteration}
                       meanings={wordMeanings}
-                      root={selectedWordAnalysis?.root}
-                      rootTransliteration={selectedWordAnalysis?.root_strong}
+                      root={wordAnalysisForCard?.root}
+                      rootTransliteration={wordAnalysisForCard?.root_strong}
                       rootMeaning={
-                        selectedWordAnalysis?.root_definitions?.[0]?.text
+                        wordAnalysisForCard?.root_definitions?.[0]?.text
                       }
-                      prefixes={selectedWord.prefixes}
+                      prefixes={wordForCard.prefixes}
                       language={language}
                       showNikud={showNikud}
-                      instances={(selectedWordAnalysis?.instances ?? []).map(
+                      instances={(wordAnalysisForCard?.instances ?? []).map(
                         (instance) =>
                           typeof instance === "string"
                             ? { verse: instance, text: "" }
@@ -551,7 +580,7 @@ export default function App() {
                       )}
                       onInstanceClick={handleNavigateToVerse}
                       onClose={() => setSelectedWord(null)}
-                      isLoading={isWordAnalysisLoading}
+                      isLoading={Boolean(selectedWord && isWordAnalysisLoading)}
                     />
                   ) : (
                     <div
@@ -562,6 +591,8 @@ export default function App() {
                     </div>
                   )}
                 </NeumorphCard>
+                  );
+                })()}
               </div>
             </div>
           )}

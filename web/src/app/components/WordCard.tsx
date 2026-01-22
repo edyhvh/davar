@@ -1,7 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { X } from 'lucide-react';
 import { apiRequest } from '../services/apiClient';
-import { getPrefixSegments, normalizeHebrew, stripCantillation } from '../utils/hebrew';
+import {
+  getPrefixSegments,
+  normalizeHebrew,
+  normalizeHebrewDisplay,
+  stripCantillation,
+  stripMeteg,
+} from '../utils/hebrew';
 
 interface WordInstance {
   verse: string;
@@ -53,36 +59,54 @@ export function WordCard({
   onClose,
 }: WordCardProps) {
   const [activeTab, setActiveTab] = useState<'meanings' | 'instances'>('meanings');
-  const displayWord = showNikud ? stripCantillation(word) : normalizeHebrew(word);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [displayedData, setDisplayedData] = useState({
+    word,
+    wordFromVerse,
+    transliteration,
+    meanings,
+    root,
+    rootTransliteration,
+    rootMeaning,
+    prefixes,
+    instances,
+  });
+  const displayWord = showNikud
+    ? normalizeHebrewDisplay(stripMeteg(stripCantillation(displayedData.word)))
+    : normalizeHebrewDisplay(normalizeHebrew(displayedData.word));
   const [prefixEntries, setPrefixEntries] = useState<Record<string, PrefixEntry | null>>({});
 
   const formatMeaning = (text: string) => {
-    const cleaned = stripCantillation(text).replace(/^[-–—]\s*/, '').trim();
+    const cleaned = stripMeteg(stripCantillation(text))
+      .replace(/^[-–—]\s*/, '')
+      .trim();
     if (!cleaned) return cleaned;
     return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
   };
 
   const prefixSegments = useMemo(() => {
-    if (!wordFromVerse || !prefixes?.length) {
-      return { prefixes: [], root: wordFromVerse ?? '' };
+    if (!displayedData.wordFromVerse || !displayedData.prefixes?.length) {
+      return { prefixes: [], root: displayedData.wordFromVerse ?? '' };
     }
-    let displayBase = stripCantillation(wordFromVerse);
+    let displayBase = normalizeHebrewDisplay(
+      stripMeteg(stripCantillation(displayedData.wordFromVerse)),
+    );
     if (!showNikud) {
       displayBase = normalizeHebrew(displayBase);
     }
-    return getPrefixSegments(displayBase, prefixes);
-  }, [prefixes, showNikud, wordFromVerse]);
+    return getPrefixSegments(displayBase, displayedData.prefixes);
+  }, [displayedData.prefixes, displayedData.wordFromVerse, showNikud]);
 
   useEffect(() => {
     const loadPrefixes = async () => {
-      if (!prefixes?.length) {
+      if (!displayedData.prefixes?.length) {
         setPrefixEntries({});
         return;
       }
 
       const entries: Record<string, PrefixEntry | null> = {};
       await Promise.all(
-        prefixes.map(async (prefixId) => {
+        displayedData.prefixes.map(async (prefixId) => {
           try {
             const entry = await apiRequest<PrefixEntry>(
               `/api/v1/prefixes/${prefixId}`,
@@ -98,10 +122,76 @@ export function WordCard({
     };
 
     loadPrefixes();
-  }, [prefixes]);
+  }, [displayedData.prefixes]);
+
+  useEffect(() => {
+    const hasChanged =
+      displayedData.word !== word ||
+      displayedData.wordFromVerse !== wordFromVerse ||
+      displayedData.transliteration !== transliteration ||
+      displayedData.root !== root ||
+      displayedData.rootMeaning !== rootMeaning;
+
+    if (!hasChanged) return undefined;
+
+    if (isLoading) {
+      // Only transition when loading new word analysis
+      setIsTransitioning(true);
+      const timeout = window.setTimeout(() => {
+        setDisplayedData({
+          word,
+          wordFromVerse,
+          transliteration,
+          meanings,
+          root,
+          rootTransliteration,
+          rootMeaning,
+          prefixes,
+          instances,
+        });
+        setIsTransitioning(false);
+      }, 140);
+      return () => window.clearTimeout(timeout);
+    } else {
+      // Update immediately without transition for word switching
+      setDisplayedData({
+        word,
+        wordFromVerse,
+        transliteration,
+        meanings,
+        root,
+        rootTransliteration,
+        rootMeaning,
+        prefixes,
+        instances,
+      });
+    }
+  }, [
+    displayedData.root,
+    displayedData.rootMeaning,
+    displayedData.transliteration,
+    displayedData.word,
+    displayedData.wordFromVerse,
+    instances,
+    isLoading,
+    meanings,
+    prefixes,
+    root,
+    rootMeaning,
+    rootTransliteration,
+    transliteration,
+    word,
+    wordFromVerse,
+  ]);
 
   return (
-    <div className="space-y-6 py-2">
+    <div
+      className="space-y-6 py-2"
+      style={{
+        opacity: isTransitioning ? 0.8 : 1,
+        transition: 'opacity 160ms ease',
+      }}
+    >
       <div className="flex justify-end">
         {onClose && (
           <button
@@ -118,11 +208,6 @@ export function WordCard({
           </button>
         )}
       </div>
-      {isLoading && (
-        <div className="text-center text-sm text-[var(--text-secondary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-          Loading word analysis…
-        </div>
-      )}
 
       {/* Word - Large centered */}
       <div className="text-center space-y-2 pb-6">
@@ -131,16 +216,16 @@ export function WordCard({
             fontFamily: "'Cardo', serif",
             fontSize: '64px',
             direction: 'rtl',
-            lineHeight: 1,
+            lineHeight: 1.4,
             color: 'var(--text-hebrew)',
             fontWeight: 600,
           }}
         >
-          {displayWord.replace(/\//g, '')}
+        {normalizeHebrewDisplay(displayWord.replace(/\//g, ''))}
         </div>
         
         {/* Transliteration */}
-        {transliteration && (
+        {displayedData.transliteration && (
           <div 
             style={{ 
               fontFamily: "'Inter', sans-serif",
@@ -152,7 +237,7 @@ export function WordCard({
               marginTop: '12px',
             }}
           >
-            {transliteration}
+            {displayedData.transliteration}
           </div>
         )}
       </div>
@@ -230,9 +315,9 @@ export function WordCard({
               }}
               className="dark:text-[var(--text-secondary)]"
             >
-              {meanings.length > 0 ? (
+              {displayedData.meanings.length > 0 ? (
                 <div className="space-y-2 text-center">
-                  {meanings
+                  {displayedData.meanings
                     .flatMap((m) => (m ? m.split(/[,;]\s*/).map((s) => s.trim()) : []))
                     .map((m, i) => (
                       <div key={i} style={{ whiteSpace: 'normal' }}>
@@ -263,7 +348,7 @@ export function WordCard({
               Root
             </h3>
             <div className="space-y-2">
-              {root ? (
+              {displayedData.root ? (
                 <>
                   <div 
                     style={{ 
@@ -272,13 +357,13 @@ export function WordCard({
                       direction: 'rtl',
                       color: 'var(--primary)',
                       fontWeight: 600,
-                      lineHeight: 1,
+                      lineHeight: 1.4,
                     }}
                   >
-                    {normalizeHebrew(root).replace(/\//g, '')}
+                    {normalizeHebrewDisplay(normalizeHebrew(displayedData.root).replace(/\//g, ''))}
                   </div>
 
-                  {rootTransliteration && (
+                  {displayedData.rootTransliteration && (
                     <div 
                       style={{ 
                         fontFamily: "'Inter', sans-serif",
@@ -290,7 +375,7 @@ export function WordCard({
                         marginTop: '8px',
                       }}
                     >
-                      {rootTransliteration}
+                      {displayedData.rootTransliteration}
                     </div>
                   )}
 
@@ -303,14 +388,15 @@ export function WordCard({
                     }}
                     className="dark:text-[var(--text-secondary)]"
                   >
-                    {rootMeaning ? normalizeHebrew(rootMeaning).replace(/\//g, '') : '—'}
+                    {displayedData.rootMeaning
+                      ? normalizeHebrewDisplay(normalizeHebrew(displayedData.rootMeaning).replace(/\//g, ''))
+                      : '—'}
                   </div>
                 </>
               ) : (
                 <div 
                   style={{ 
                     fontFamily: "'Inter', sans-serif",
-                    fontSize: '15px',
                     lineHeight: 1.5,
                     textAlign: 'center'
                   }}
@@ -322,7 +408,7 @@ export function WordCard({
             </div>
           </div>
 
-          {prefixes?.length ? (
+          {displayedData.prefixes?.length ? (
             <div className="text-center space-y-4 pb-6">
               <h3 
                 className="mb-2"
@@ -337,7 +423,7 @@ export function WordCard({
               >
                 Preposition
               </h3>
-              {prefixes.map((prefixId, index) => {
+              {displayedData.prefixes.map((prefixId, index) => {
                 const entry = prefixEntries[prefixId];
                 const meanings =
                   entry?.meanings?.[language] ??
@@ -348,10 +434,11 @@ export function WordCard({
                   language === 'es'
                     ? entry?.transliteration_es
                     : entry?.transliteration_en ?? entry?.transliteration_es;
-                const prefixText =
+                const prefixText = stripMeteg(
                   prefixSegments.prefixes[index]?.replace(/\//g, '') ??
-                  entry?.main_form ??
-                  '';
+                    entry?.main_form ??
+                    '',
+                );
 
                 return (
                   <div key={`${prefixId}-${index}`} className="space-y-2">
@@ -365,7 +452,7 @@ export function WordCard({
                         fontWeight: 600,
                       }}
                     >
-                      {prefixText}
+                      {normalizeHebrewDisplay(prefixText)}
                     </div>
                     {translit ? (
                       <div
@@ -417,8 +504,8 @@ export function WordCard({
               Tap to Navigate
             </h3>
             <div className="grid grid-cols-3 gap-2">
-              {instances.length > 0 ? (
-                instances.map((instance, idx) => (
+              {displayedData.instances.length > 0 ? (
+                displayedData.instances.map((instance, idx) => (
                   <button
                     key={idx}
                     onClick={() => onInstanceClick(instance.verse)}

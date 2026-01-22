@@ -97,6 +97,9 @@ class LexiconService:
             for def_item in base_entry.get('definitions', []):
                 _append_definition_items(definitions, def_item, 'strong')
 
+        # De-duplicate definitions while preserving order
+        definitions = self._deduplicate_definitions(definitions)
+
         # Get root information if available
         root = (lexicon_entry or {}).get('root')
         root_strong = (lexicon_entry or {}).get('root_strong')
@@ -115,6 +118,9 @@ class LexiconService:
                 for def_item in root_entry.get('definitions', []):
                     _append_definition_items(
                         root_definitions, def_item, 'strong')
+
+                # De-duplicate root definitions while preserving order
+                root_definitions = self._deduplicate_definitions(root_definitions)
 
         # Get occurrences count
         occurrences_count = (lexicon_entry or {}).get('occurrences_count', 0)
@@ -188,6 +194,22 @@ class LexiconService:
             if ref not in seen:
                 seen.add(ref)
                 deduped.append(ref)
+
+        return deduped
+
+    def _deduplicate_definitions(
+        self,
+        definitions: list[DefinitionItem],
+    ) -> list[DefinitionItem]:
+        """De-duplicate definitions while preserving order."""
+        seen = set()
+        deduped: list[DefinitionItem] = []
+        for def_item in definitions:
+            # Create unique key based on text, language, and source
+            key = (def_item.text.lower(), def_item.language, def_item.source)
+            if key not in seen:
+                seen.add(key)
+                deduped.append(def_item)
 
         return deduped
 
