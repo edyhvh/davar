@@ -216,9 +216,11 @@ export function WordCard({
             fontFamily: "'Cardo', serif",
             fontSize: '64px',
             direction: 'rtl',
-            lineHeight: 1.4,
+            lineHeight: 1.8,
+            letterSpacing: '0.05em',
             color: 'var(--text-hebrew)',
-            fontWeight: 600,
+            fontWeight: 400,
+            wordSpacing: '0.1em',
           }}
         >
         {normalizeHebrewDisplay(displayWord.replace(/\//g, ''))}
