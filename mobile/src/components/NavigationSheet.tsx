@@ -21,7 +21,6 @@ import {
   spacing,
   typography,
 } from "@/src/theme";
-import { mockBooks, type MockBook } from "@/src/constants/mockData";
 import { fetchMetadata } from "@/src/services/metadata";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 
@@ -35,6 +34,12 @@ type NavigationSheetProps = {
 };
 
 type Step = "book" | "chapter" | "verse";
+
+type BookMeta = {
+  id: string;
+  name: string;
+  hebrewName: string;
+};
 
 const COLUMN_COUNT = 5;
 
@@ -257,7 +262,8 @@ export const NavigationSheet = ({
   const [selectedChapter, setSelectedChapter] = useState(currentChapter);
   const [searchQuery, setSearchQuery] = useState("");
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
-  const [booksMeta, setBooksMeta] = useState<MockBook[]>(mockBooks);
+  const [booksMeta, setBooksMeta] = useState<BookMeta[]>([]);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [chapterCounts, setChapterCounts] = useState<Record<string, number[]>>(
     {},
   );
@@ -277,11 +283,15 @@ export const NavigationSheet = ({
           hebrewName: book.hebrew_name,
         }));
         setBooksMeta(mappedBooks);
+        setLoadError(null);
         setChapterCounts(metadata.chapter_counts ?? {});
         setVerseCounts(metadata.verse_counts ?? {});
       } catch {
         if (!isMounted) return;
-        setBooksMeta(mockBooks);
+        setBooksMeta([]);
+        setChapterCounts({});
+        setVerseCounts({});
+        setLoadError("Unable to load books from the server.");
       }
     };
     loadMetadata();
@@ -314,14 +324,14 @@ export const NavigationSheet = ({
   const chapterNumbers = useMemo(() => {
     const chapters = chapterCounts[selectedBookId];
     if (chapters?.length) return chapters;
-    return Array.from({ length: 50 }, (_, i) => i + 1);
+    return [];
   }, [chapterCounts, selectedBookId]);
 
   // Get verses for selected chapter
   const verseNumbers = useMemo(() => {
     const count = verseCounts[selectedBookId]?.[String(selectedChapter)];
     if (count) return Array.from({ length: count }, (_, i) => i + 1);
-    return Array.from({ length: 30 }, (_, i) => i + 1);
+    return [];
   }, [selectedBookId, selectedChapter, verseCounts]);
 
   // Pad numbers for grid
@@ -390,7 +400,7 @@ export const NavigationSheet = ({
   );
 
   const renderBookItem = useCallback(
-    ({ item }: { item: MockBook }) => {
+    ({ item }: { item: BookMeta }) => {
       const isSelected = item.id === selectedBookId;
       return (
         <Pressable
@@ -621,13 +631,15 @@ export const NavigationSheet = ({
         >
           <BottomSheetFlatList
             data={filteredBooks}
-            keyExtractor={(item: MockBook) => item.id}
+            keyExtractor={(item: BookMeta) => item.id}
             renderItem={renderBookItem}
             contentContainerStyle={styles.listContent}
             showsVerticalScrollIndicator={false}
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
-                <Text style={styles.emptyText}>No books found</Text>
+                <Text style={styles.emptyText}>
+                  {loadError ?? "No books found"}
+                </Text>
               </View>
             }
             keyboardShouldPersistTaps="handled"
@@ -644,10 +656,16 @@ export const NavigationSheet = ({
         >
           <BottomSheetView style={styles.gridContainer}>
             <Text style={styles.gridTitle}>Select Chapter</Text>
-            {renderNumberGrid(
-              chapterNumbers,
-              currentBookId === selectedBookId ? currentChapter : 0,
-              handleSelectChapter,
+            {chapterNumbers.length ? (
+              renderNumberGrid(
+                chapterNumbers,
+                currentBookId === selectedBookId ? currentChapter : 0,
+                handleSelectChapter,
+              )
+            ) : (
+              <View style={styles.emptyContainer}>
+                <Text style={styles.emptyText}>No chapters available</Text>
+              </View>
             )}
           </BottomSheetView>
         </Animated.View>
@@ -662,13 +680,19 @@ export const NavigationSheet = ({
         >
           <BottomSheetView style={styles.gridContainer}>
             <Text style={styles.gridTitle}>Select Verse</Text>
-            {renderNumberGrid(
-              verseNumbers,
-              currentBookId === selectedBookId &&
-                currentChapter === selectedChapter
-                ? currentVerse
-                : 0,
-              handleSelectVerse,
+            {verseNumbers.length ? (
+              renderNumberGrid(
+                verseNumbers,
+                currentBookId === selectedBookId &&
+                  currentChapter === selectedChapter
+                  ? currentVerse
+                  : 0,
+                handleSelectVerse,
+              )
+            ) : (
+              <View style={styles.emptyContainer}>
+                <Text style={styles.emptyText}>No verses available</Text>
+              </View>
             )}
           </BottomSheetView>
         </Animated.View>

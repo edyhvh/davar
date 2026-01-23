@@ -12,8 +12,10 @@ import {
   stripNikud,
   stripCantillation,
   stripMeteg,
+  getPrefixSegments,
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
+import { useTranslation } from "../hooks/useTranslation";
 
 interface VerseDisplayProps {
   hebrewText: string;
@@ -68,6 +70,7 @@ export function VerseDisplay({
   onSwipeUp,
   onSwipeDown,
 }: VerseDisplayProps) {
+  const { t } = useTranslation(language);
   // Function to render Hebrew text with DSS variants
   const renderHebrewText = () => {
     const dssMap = new Map<number, string>();
@@ -99,12 +102,16 @@ export function VerseDisplay({
         displayText = stripCantillation(displayText);
       }
       displayText = stripMeteg(displayText);
+      // Remove "/" separators from display
+      displayText = displayText.replace(/\//g, "");
 
       const isSelected =
         selectedWord === word.text || selectedWord === displayText;
 
-      // Parse word for prefix visualization
-      const parsedWord = parseHebrewWord(displayText);
+      // Parse word for prefix visualization only if word has prefix data
+      const prefixSegments = word.prefixes?.length
+        ? getPrefixSegments(displayText, word.prefixes)
+        : null;
 
       if (index === 0 && showOnboardingHint && !variantText) {
         return (
@@ -128,17 +135,19 @@ export function VerseDisplay({
               variantText ? { color: "var(--copper-highlight)" } : undefined
             }
           >
-            {parsedWord.prefix ? (
+            {prefixSegments?.prefixes?.length ? (
               <>
                 <span
                   style={{ color: "var(--text-secondary)" }}
                   className="cursor-pointer hover:opacity-80"
-                  title={`Prefix: ${parsedWord.prefix.particle}`}
+                  title={t("verse.prefixLabel", {
+                    prefix: word.prefixes?.join(", ") ?? "",
+                  })}
                 >
-                  {parsedWord.prefix.text}
+                  {prefixSegments.prefixes.join("")}
                 </span>
                 <span style={{ color: "var(--text-hebrew)" }}>
-                  {parsedWord.root}
+                  {prefixSegments.root}
                 </span>
               </>
             ) : (
@@ -200,9 +209,13 @@ export function VerseDisplay({
 
       {/* Translation - Only show if not Hebrew Only mode */}
       {!hebrewOnly && (
-        <SwipeIndicator onSwipeUp={onSwipeUp} onSwipeDown={onSwipeDown}>
+        <SwipeIndicator
+          onSwipeUp={onSwipeUp}
+          onSwipeDown={onSwipeDown}
+          label={t("navigation.swipeToNavigate")}
+        >
           <div
-            className="text-center leading-relaxed px-4 transition-all duration-500 text-[var(--text-secondary)]"
+            className="text-center leading-relaxed px-4 transition-all duration-500 text-[var(--text-primary)]"
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "17px",

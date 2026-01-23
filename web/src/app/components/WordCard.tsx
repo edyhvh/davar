@@ -5,9 +5,11 @@ import {
   getPrefixSegments,
   normalizeHebrew,
   normalizeHebrewDisplay,
+  splitLeadingHebrewCluster,
   stripCantillation,
   stripMeteg,
 } from "../utils/hebrew";
+import { useTranslation } from "../hooks/useTranslation";
 
 interface WordInstance {
   verse: string;
@@ -58,6 +60,7 @@ export function WordCard({
   showNikud = true,
   onClose,
 }: WordCardProps) {
+  const { t } = useTranslation(language);
   const [activeTab, setActiveTab] = useState<"meanings" | "instances">(
     "meanings",
   );
@@ -207,7 +210,7 @@ export function WordCard({
               boxShadow:
                 "6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)",
             }}
-            aria-label="Close word meaning"
+            aria-label={t("wordCard.close")}
           >
             <X className="w-4 h-4 text-[var(--text-secondary)]" />
           </button>
@@ -223,12 +226,24 @@ export function WordCard({
             direction: "rtl",
             lineHeight: 1.8,
             letterSpacing: "0.05em",
-            color: "var(--text-hebrew)",
             fontWeight: 400,
             wordSpacing: "0.1em",
           }}
         >
-          {normalizeHebrewDisplay(displayWord.replace(/\//g, ""))}
+          {prefixSegments.prefixes.length > 0 ? (
+            <>
+              <span style={{ color: "var(--text-secondary)" }}>
+                {normalizeHebrewDisplay(prefixSegments.prefixes.join(""))}
+              </span>
+              <span style={{ color: "var(--text-hebrew)" }}>
+                {normalizeHebrewDisplay(prefixSegments.root)}
+              </span>
+            </>
+          ) : (
+            <span style={{ color: "var(--text-hebrew)" }}>
+              {normalizeHebrewDisplay(displayWord.replace(/\//g, ""))}
+            </span>
+          )}
         </div>
 
         {/* Transliteration */}
@@ -269,7 +284,7 @@ export function WordCard({
               activeTab === "meanings" ? "#ffffff" : "var(--text-secondary)",
           }}
         >
-          Meanings
+          {t("wordCard.meanings")}
         </button>
         <button
           onClick={() => setActiveTab("instances")}
@@ -288,7 +303,7 @@ export function WordCard({
               activeTab === "instances" ? "#ffffff" : "var(--text-secondary)",
           }}
         >
-          Instances
+          {t("wordCard.instances")}
         </button>
       </div>
 
@@ -308,7 +323,7 @@ export function WordCard({
                 textTransform: "uppercase",
               }}
             >
-              Meanings
+              {t("wordCard.meanings")}
             </h3>
             <div
               style={{
@@ -332,7 +347,7 @@ export function WordCard({
                     ))}
                 </div>
               ) : (
-                "No meanings available yet."
+                t("wordCard.noMeanings")
               )}
             </div>
           </div>
@@ -351,7 +366,7 @@ export function WordCard({
                 textTransform: "uppercase",
               }}
             >
-              Root
+              {t("wordCard.root")}
             </h3>
             <div className="space-y-2">
               {displayedData.root ? (
@@ -415,7 +430,7 @@ export function WordCard({
                   }}
                   className="dark:text-[var(--text-secondary)]"
                 >
-                  <strong>ALREADY ROOT</strong>
+                  <strong>{t("wordCard.alreadyRoot")}</strong>
                 </div>
               )}
             </div>
@@ -434,7 +449,7 @@ export function WordCard({
                   textTransform: "uppercase",
                 }}
               >
-                Preposition
+                {t("wordCard.preposition")}
               </h3>
               {displayedData.prefixes.map((prefixId, index) => {
                 const entry = prefixEntries[prefixId];
@@ -452,6 +467,8 @@ export function WordCard({
                     entry?.main_form ??
                     "",
                 );
+                const { head: prefixHead, tail: prefixTail } =
+                  splitLeadingHebrewCluster(prefixText);
 
                 return (
                   <div key={`${prefixId}-${index}`} className="space-y-2">
@@ -461,11 +478,21 @@ export function WordCard({
                         fontSize: "48px",
                         direction: "rtl",
                         lineHeight: 1,
-                        color: "var(--text-secondary)",
                         fontWeight: 600,
                       }}
                     >
-                      {normalizeHebrewDisplay(prefixText)}
+                      {prefixHead && (
+                        <>
+                          <span style={{ color: "var(--text-secondary)" }}>
+                            {normalizeHebrewDisplay(prefixHead)}
+                          </span>
+                          {prefixTail.length > 0 && (
+                            <span style={{ color: "var(--text-hebrew)" }}>
+                              {normalizeHebrewDisplay(prefixTail)}
+                            </span>
+                          )}
+                        </>
+                      )}
                     </div>
                     {translit ? (
                       <div
@@ -514,7 +541,7 @@ export function WordCard({
                 textTransform: "uppercase",
               }}
             >
-              Tap to Navigate
+              {t("wordCard.tapToNavigate")}
             </h3>
             <div className="grid grid-cols-3 gap-2">
               {displayedData.instances.length > 0 ? (
@@ -539,7 +566,7 @@ export function WordCard({
                   className="col-span-3 text-sm text-[var(--text-secondary)]"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  No instances available yet.
+                  {t("wordCard.noInstances")}
                 </div>
               )}
             </div>

@@ -42,6 +42,7 @@ export const apiRequest = async <T>(
   const headers = new Headers({
     "X-API-Key": API_KEY,
     "Content-Type": "application/json",
+    "Cache-Control": "no-store",
     ...options.headers,
   });
 
@@ -49,6 +50,7 @@ export const apiRequest = async <T>(
     ...options,
     headers,
     credentials: "omit", // no cookies needed for API key auth
+    cache: "no-store",
   };
 
   try {

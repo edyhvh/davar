@@ -13,16 +13,17 @@
   --accent-darker: #3d5a8c; /* Darker blue for donate button */
   --accent-strong: #4c72a8;
   --about-surface: #4a4a4a;
+  --about-text: #f7f1e9;
   --accent-glow: rgba(122, 160, 214, 0.12);
   --accent-glow-dark: rgba(99, 137, 191, 0.18);
 
   /* Light theme foundations – warm manuscript cream */
   --background: #faf6f0; /* Shafan-inspired warm parchment */
   --foreground: #000000;
-  --text-primary: #000000; /* Main text + Hebrew */
   --text-secondary: #707070;
   --text-hebrew: #000000;
   --muted: rgba(0, 0, 0, 0.05); /* Subtle muted bg */
+  --crypto-icon-fill: #ffffff;
 
   /* Surfaces – soft paper */
   --surface: #fdf8f2;
@@ -61,11 +62,13 @@
     --accent-darker: #3d5a8c; /* Darker blue for donate button */
     --accent-strong: #4c72a8;
     --about-surface: #2f2b29;
+    --about-text: #faf4e6;
 
     /* Warm text – preserved for long reading comfort */
-    --text-primary: #d5c4a1;
-    --text-secondary: #bdae93;
+    --text-primary: #faf4e6;
+    --text-secondary: #a89a7f;
     --text-hebrew: #d5c4a1;
+    --crypto-icon-fill: #3c3836;
 
     /* Deep warm brown backgrounds */
     --background: #3c3836;
@@ -175,6 +178,8 @@
   --foreground: #d5c4a1;
   --text-primary: #d5c4a1;
   --text-secondary: #bdae93;
+  --crypto-icon-fill: #3c3836;
+  --about-text: #d5c4a1;
 
   /* Glass surfaces for dark theme */
   --glass-surface: rgba(60, 56, 54, 0.95);
@@ -265,16 +270,9 @@
   animation: wordPanelIn 220ms ease-out;
 }
 
+/* Crypto icon internal elements - fill color based on theme */
 .crypto-icon-internal {
-  fill: #ffffff;
-}
-
-.dark .crypto-icon-internal {
-  fill: #3c3836;
-}
-
-.dark .usdt-internal {
-  fill: #ffffff;
+  fill: var(--crypto-icon-fill);
 }
 
 @theme inline {
@@ -384,12 +382,11 @@
 
 .word-panel-shell {
   transition:
-    transform 280ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform 220ms ease,
+    opacity 220ms ease;
   /* Prevent the panel from growing the page and causing layout shifts */
   max-height: calc(100vh - 160px);
   overflow: auto;
-  will-change: transform, opacity;
 }
 
 .word-panel-open {
@@ -399,8 +396,7 @@
 
 .word-panel-closed {
   opacity: 0;
-  transform: translateY(12px);
-  pointer-events: none;
+  transform: translateY(8px);
 }
 
 .verse-panel-shell {

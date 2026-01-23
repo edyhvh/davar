@@ -26,7 +26,7 @@ const renderTranslationWithItalics = (
   translation: string,
   italicStyle: object,
 ) => {
-  const segments: Array<string | JSX.Element> = [];
+  const segments: (string | JSX.Element)[] = [];
   const emPattern = /<em>(.*?)<\/em>/gi;
   let lastIndex = 0;
   let match: RegExpExecArray | null;
@@ -212,19 +212,19 @@ export const VerseCard = ({
                   <Text
                     style={[styles.hebrewWord, { color: colors.textSecondary }]}
                   >
-                    {prefixSegments.prefixes.join("").replace(/\//g, "")}
+                    {prefixSegments.prefixes.join("")}
                   </Text>
                   <Text
                     style={[styles.hebrewWord, { color: colors.textPrimary }]}
                   >
-                    {prefixSegments.root.replace(/\//g, "")}
+                    {prefixSegments.root}
                   </Text>
                 </View>
               );
             }
             return (
               <Text style={styles.hebrewWord}>
-                {displayText.replace(/\//g, "")}
+                {displayText}
               </Text>
             );
           };

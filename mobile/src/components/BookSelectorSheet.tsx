@@ -14,7 +14,6 @@ import {
   spacing,
   typography,
 } from "@/src/theme";
-import { mockBooks, type MockBook } from "@/src/constants/mockData";
 import { getBooks } from "@/src/services/api";
 import type { BookResponse } from "@/src/types/api";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
@@ -143,6 +142,7 @@ export const BookSelectorSheet = ({
   const [searchQuery, setSearchQuery] = useState("");
   const [booksMeta, setBooksMeta] = useState<BookResponse[]>([]);
   const [loading, setLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -151,19 +151,12 @@ export const BookSelectorSheet = ({
         const books = await getBooks();
         if (!isMounted) return;
         setBooksMeta(books);
+        setErrorMessage(null);
       } catch (error) {
         console.error('Failed to load books:', error);
-        // Fallback to mock data if API fails
-        setBooksMeta(mockBooks.map(book => ({
-          id: book.id,
-          name: book.name,
-          section: 'torah' as const, // Default fallback
-          chapters: 1, // Default fallback
-          order: 99, // Default fallback
-          hebrew_name: book.hebrewName,
-          hebrew_transliteration: book.hebrewName, // Fallback
-          spanish_name: book.name, // Fallback
-        })));
+        if (!isMounted) return;
+        setBooksMeta([]);
+        setErrorMessage("Unable to load books from the server.");
       } finally {
         if (isMounted) setLoading(false);
       }
@@ -244,11 +237,13 @@ export const BookSelectorSheet = ({
     () => (
       <View style={styles.emptyContainer}>
         <Text style={styles.emptyText}>
-          {loading ? 'Loading books...' : 'No books found'}
+          {loading
+            ? 'Loading books...'
+            : errorMessage ?? 'No books found'}
         </Text>
       </View>
     ),
-    [styles, loading],
+    [styles, loading, errorMessage],
   );
 
   return (

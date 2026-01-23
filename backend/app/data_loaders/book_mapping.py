@@ -22,12 +22,16 @@ class BookNameMapper:
             "judges": "Judges",
             "isamuel": "Samuel1",
             "samuel1": "Samuel1",
+            "1sam": "Samuel1",
             "iisamuel": "Samuel2",
             "samuel2": "Samuel2",
+            "2sam": "Samuel2",
             "ikings": "Kings1",
             "kings1": "Kings1",
+            "1kgs": "Kings1",
             "iikings": "Kings2",
             "kings2": "Kings2",
+            "2kgs": "Kings2",
             "isaiah": "Isaiah",
             "jeremiah": "Jeremiah",
             "ezekiel": "Ezekiel",
@@ -56,8 +60,10 @@ class BookNameMapper:
             "nehemiah": "Nehemiah",
             "ichronicles": "Chronicles1",
             "chronicles1": "Chronicles1",
+            "1chr": "Chronicles1",
             "iichronicles": "Chronicles2",
-            "chronicles2": "Chronicles2"
+            "chronicles2": "Chronicles2",
+            "2chr": "Chronicles2"
         }
 
         # Delitzsch mappings

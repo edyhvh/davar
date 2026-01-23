@@ -1,11 +1,12 @@
 import React from 'react';
 import { GlassCard } from './GlassCard';
+import { useTranslation } from '../hooks/useTranslation';
 
 interface SettingsScreenProps {
   theme: 'light' | 'dark';
   onThemeChange: (theme: 'light' | 'dark') => void;
-  language: string;
-  onLanguageChange: (language: string) => void;
+  language: 'en' | 'es' | 'he';
+  onLanguageChange: (language: 'en' | 'es' | 'he') => void;
   showQumran: boolean;
   onQumranChange: (show: boolean) => void;
   showFullChapter: boolean;
@@ -57,10 +58,14 @@ function RetroPillToggle({
 // Retro On/Off Button Component inspired by vintage audio equipment
 function RetroOnOffButton({ 
   isOn, 
-  onToggle 
+  onToggle,
+  onLabel,
+  offLabel,
 }: { 
   isOn: boolean; 
   onToggle: () => void;
+  onLabel: string;
+  offLabel: string;
 }) {
   return (
     <button
@@ -110,7 +115,7 @@ function RetroOnOffButton({
           color: isOn ? 'var(--primary)' : 'var(--text-secondary)'
         }}
       >
-        {isOn ? 'ON' : 'OFF'}
+        {isOn ? onLabel : offLabel}
       </div>
     </button>
   );
@@ -164,48 +169,6 @@ const languages = [
   { code: 'he', name: 'Hebrew', nativeName: 'עברית' },
 ];
 
-const translations = {
-  en: {
-    general: 'General',
-    theme: 'Theme',
-    darkMode: 'Dark Mode',
-    lightMode: 'Light Mode',
-    language: 'Language',
-    qumranVariants: 'Qumran Variants',
-    qumranDescription: 'Show Dead Sea Scrolls text',
-    fullChapter: 'Full Chapter',
-    fullChapterDescription: 'Show full chapter text',
-    hebrewOnly: 'Hebrew Only',
-    hebrewOnlyDescription: 'Show text in Hebrew only',
-  },
-  es: {
-    general: 'General',
-    theme: 'Tema',
-    darkMode: 'Modo Oscuro',
-    lightMode: 'Modo Claro',
-    language: 'Idioma',
-    qumranVariants: 'Variantes de Qumrán',
-    qumranDescription: 'Mostrar texto de los Rollos del Mar Muerto',
-    fullChapter: 'Capítulo Completo',
-    fullChapterDescription: 'Mostrar texto completo del capítulo',
-    hebrewOnly: 'Sólo Hebreo',
-    hebrewOnlyDescription: 'Mostrar texto solo en hebreo',
-  },
-  he: {
-    general: 'כללי',
-    theme: 'עיצוב',
-    darkMode: 'מצב כהה',
-    lightMode: 'מצב בהיר',
-    language: 'שפה',
-    qumranVariants: 'גרסאות קומראן',
-    qumranDescription: 'הצג טקסט מגילות מדבר יהודה',
-    fullChapter: 'פרק كامل',
-    fullChapterDescription: 'הצג טקסט של פרק كامل',
-    hebrewOnly: 'עברית בלבד',
-    hebrewOnlyDescription: 'הצג טקסט רק בעברית',
-  },
-};
-
 export function SettingsScreen({
   theme,
   onThemeChange,
@@ -223,7 +186,7 @@ export function SettingsScreen({
   const [isLanguageOpen, setIsLanguageOpen] = React.useState(false);
   const selectedLanguage = languages.find(lang => lang.code === language) || languages[0];
   const dropdownRef = React.useRef<HTMLDivElement>(null);
-  const t = translations[language as keyof typeof translations] || translations.en;
+  const { t } = useTranslation(language);
 
   // Close dropdown when clicking outside
   React.useEffect(() => {
@@ -243,7 +206,7 @@ export function SettingsScreen({
     <div className="pb-24">
       {/* General Section Header */}
       <h3 className="text-base text-[var(--text-secondary)] px-6 py-4 uppercase tracking-wider font-bold" style={{ fontFamily: "'Inter', sans-serif" }}>
-        {t.general}
+        {t('settings.general')}
       </h3>
       
       {/* Theme Toggle */}
@@ -254,9 +217,9 @@ export function SettingsScreen({
               <RetroIcons.Theme />
             </div>
             <div>
-              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.theme}</div>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.theme')}</div>
               <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {t.darkMode}
+                {t('settings.darkMode')}
               </div>
             </div>
           </div>
@@ -279,7 +242,7 @@ export function SettingsScreen({
             </div>
             <div>
               <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {t.language}
+                {t('settings.language')}
               </div>
             </div>
           </div>
@@ -344,15 +307,17 @@ export function SettingsScreen({
               <RetroIcons.Qumran />
             </div>
             <div>
-              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.qumranVariants}</div>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.qumranVariants')}</div>
               <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {t.qumranDescription}
+                {t('settings.qumranDescription')}
               </div>
             </div>
           </div>
           <RetroOnOffButton
             isOn={showQumran}
             onToggle={() => onQumranChange(!showQumran)}
+            onLabel={t('common.on')}
+            offLabel={t('common.off')}
           />
         </div>
       </div>
@@ -368,15 +333,17 @@ export function SettingsScreen({
               <RetroIcons.Chapter />
             </div>
             <div>
-              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.fullChapter}</div>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.fullChapter')}</div>
               <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {t.fullChapterDescription}
+                {t('settings.fullChapterDescription')}
               </div>
             </div>
           </div>
           <RetroOnOffButton
             isOn={showFullChapter}
             onToggle={() => onFullChapterChange(!showFullChapter)}
+            onLabel={t('common.on')}
+            offLabel={t('common.off')}
           />
         </div>
       </div>
@@ -392,15 +359,17 @@ export function SettingsScreen({
               <RetroIcons.Hebrew />
             </div>
             <div>
-              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t.hebrewOnly}</div>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.hebrewOnly')}</div>
               <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {t.hebrewOnlyDescription}
+                {t('settings.hebrewOnlyDescription')}
               </div>
             </div>
           </div>
           <RetroOnOffButton
             isOn={hebrewOnly}
             onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
+            onLabel={t('common.on')}
+            offLabel={t('common.off')}
           />
         </div>
       </div>
@@ -420,9 +389,9 @@ export function SettingsScreen({
                 <RetroIcons.DesignSystem />
               </div>
               <div>
-                <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>Design System</div>
+                <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.designSystemTitle')}</div>
                 <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  View design components
+                  {t('settings.designSystemDescription')}
                 </div>
               </div>
             </div>
@@ -445,9 +414,9 @@ export function SettingsScreen({
                 <RetroIcons.DesignSystem />
               </div>
               <div>
-                <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>Mobile Design Guide</div>
+                <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.mobileDesignGuideTitle')}</div>
                 <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  View mobile design components
+                  {t('settings.mobileDesignGuideDescription')}
                 </div>
               </div>
             </div>

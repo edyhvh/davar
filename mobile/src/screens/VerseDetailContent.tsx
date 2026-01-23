@@ -22,7 +22,8 @@ import { WordAnalysisBottomSheet } from "@/src/components/WordAnalysisBottomShee
 import { NavigationSheet } from "@/src/components/NavigationSheet";
 import { BookChapterPill } from "@/src/components/ui/BookChapterPill";
 import { getColors, spacing } from "@/src/theme";
-import { mockBooks } from "@/src/constants/mockData";
+import { fetchMetadata } from "@/src/services/metadata";
+import type { BookResponse } from "@/src/types/api";
 import {
   fetchChapterVerses,
   type DisplayVerse,
@@ -151,11 +152,21 @@ export const VerseDetailContent = () => {
   );
   const language = useAppStore((state: AppState) => state.language);
   const showQumran = useAppStore((state: AppState) => state.showQumran);
-  const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
-  const verseId = (params.id as string) ?? currentVerseId;
+  const lastParamIdRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (!params.id) return;
+    if (lastParamIdRef.current === params.id) return;
+    lastParamIdRef.current = params.id;
+    if (params.id !== currentVerseId) {
+      setCurrentVerseId(params.id as string);
+    }
+  }, [params.id, currentVerseId, setCurrentVerseId]);
+
+  const verseId = currentVerseId || ((params.id as string) ?? "");
   const [chapterVerses, setChapterVerses] = useState<DisplayVerse[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [booksMeta, setBooksMeta] = useState<BookResponse[]>([]);
 
   const parseVerseId = (id: string) => {
     const [bookId, chapterValue, verseValue] = id.split("-");
@@ -172,12 +183,8 @@ export const VerseDetailContent = () => {
     chapterVerses[0];
   const bookMeta = useMemo(
     () =>
-      mockBooks.find((book) => book.id === (verse?.bookId ?? bookId)) ?? {
-        id: verse?.bookId ?? bookId,
-        name: verse?.book ?? bookId,
-        hebrewName: verse?.book ?? bookId,
-      },
-    [bookId, verse?.book, verse?.bookId],
+      booksMeta.find((book) => book.id === (verse?.bookId ?? bookId)) ?? null,
+    [bookId, booksMeta, verse?.bookId],
   );
 
   const bookVerses = useMemo(() => chapterVerses, [chapterVerses]);
@@ -212,7 +219,7 @@ export const VerseDetailContent = () => {
   const navigationSheetRef = useRef<BottomSheet>(null);
   const [selectedWord, setSelectedWord] = useState<
     (typeof orderedVerses)[number]["words"][number] | null
-  >(() => orderedVerses[0]?.words?.[0] || null);
+  >(null);
 
   // Listen for tab press to open navigation sheet
   const navigation = useNavigation<BottomTabNavigationProp<ParamListBase>>();
@@ -231,12 +238,27 @@ export const VerseDetailContent = () => {
   }, [navigation]);
 
   useEffect(() => {
-    setSelectedWord(verse?.words?.[0] || null);
-  }, [verse]);
-
-  useEffect(() => {
     // Always show hint for testing
     setShowWordHint(true);
+  }, []);
+
+  useEffect(() => {
+    let isMounted = true;
+    const loadBooks = async () => {
+      try {
+        const metadata = await fetchMetadata();
+        if (!isMounted) return;
+        setBooksMeta(metadata.books);
+      } catch (error) {
+        if (!isMounted) return;
+        console.error("Failed to load books metadata:", error);
+        setBooksMeta([]);
+      }
+    };
+    loadBooks();
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const handleNavigationSelect = useCallback(
@@ -263,12 +285,41 @@ export const VerseDetailContent = () => {
     sheetRef.current?.expand();
   }, []);
 
+  // Clear selectedWord immediately when currentVerseId changes to prevent stale word display
+  const prevVerseIdRef = useRef(currentVerseId);
   useEffect(() => {
+    if (prevVerseIdRef.current !== currentVerseId) {
+      const prevBookId = prevVerseIdRef.current?.split("-")[0];
+      const newBookId = currentVerseId?.split("-")[0];
+      // Only clear if book actually changed (not just verse within same chapter)
+      if (prevBookId !== newBookId) {
+        setSelectedWord(null);
+        sheetRef.current?.close();
+      }
+      prevVerseIdRef.current = currentVerseId;
+    }
+  }, [currentVerseId]);
+
+  const currentLoadRef = useRef({ bookId: "", chapter: 0 });
+  useEffect(() => {
+    if (!bookId) return;
+    if (
+      currentLoadRef.current.bookId === bookId &&
+      currentLoadRef.current.chapter === chapter
+    ) {
+      return;
+    }
+
     let isMounted = true;
+    currentLoadRef.current = { bookId, chapter };
+
     const loadVerses = async () => {
-      if (!bookId) return;
+      setChapterVerses([]);
+      setSelectedWord(null);
       setIsLoading(true);
       setErrorMessage(null);
+      sheetRef.current?.close();
+
       try {
         const verses = await fetchChapterVerses(bookId, chapter, {
           language: language === "he" ? undefined : language,
@@ -276,7 +327,16 @@ export const VerseDetailContent = () => {
           hebrewOnly: false, // Always load translations; UI will control display
         });
         if (!isMounted) return;
+        if (
+          currentLoadRef.current.bookId !== bookId ||
+          currentLoadRef.current.chapter !== chapter
+        ) {
+          return;
+        }
         setChapterVerses(verses);
+        if (verses.length > 0 && verses[0].words?.length > 0) {
+          setSelectedWord(verses[0].words[0]);
+        }
       } catch (error) {
         if (!isMounted) return;
         setErrorMessage("Unable to load verses.");
@@ -284,11 +344,12 @@ export const VerseDetailContent = () => {
         if (isMounted) setIsLoading(false);
       }
     };
+
     loadVerses();
     return () => {
       isMounted = false;
     };
-  }, [bookId, chapter, language, showQumran, hebrewOnly]);
+  }, [bookId, chapter, language, showQumran]);
 
   return (
     <>
@@ -296,8 +357,8 @@ export const VerseDetailContent = () => {
         <View style={styles.container}>
           <View style={styles.navigationRow}>
             <BookChapterPill
-              bookLabel={bookMeta.name}
-              hebrewLabel={bookMeta.hebrewName}
+              bookLabel={bookMeta?.name ?? "Loading..."}
+              hebrewLabel={bookMeta?.hebrew_name ?? ""}
               chapter={verse?.chapter ?? chapter}
               onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
               onChapterPress={() => navigationSheetRef.current?.snapToIndex(0)}
@@ -359,6 +420,7 @@ export const VerseDetailContent = () => {
       <WordAnalysisBottomSheet
         sheetRef={sheetRef}
         word={selectedWord}
+        currentVerseId={currentVerseId}
         onClose={() => sheetRef.current?.close()}
       />
       <NavigationSheet

@@ -56,6 +56,12 @@ export const getBooks = async (): Promise<BookResponse[]> => {
   return apiRequest<BookResponse[]>("/api/v1/books");
 };
 
+export const lookupBook = async (bookName: string): Promise<BookResponse> => {
+  return apiRequest<BookResponse>(
+    `/api/v1/books/lookup/${encodeURIComponent(bookName)}`,
+  );
+};
+
 export const getChapterCount = async (book: string): Promise<number> => {
   const response = await apiRequest<ChapterResponse>(
     `/api/v1/books/${book}/chapters`,

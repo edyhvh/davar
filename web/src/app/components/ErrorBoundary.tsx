@@ -1,4 +1,6 @@
 import React, { Component, type ErrorInfo, type ReactNode } from "react";
+import { getStoredReadingState } from "../utils/storageHelpers";
+import { translate } from "../hooks/useTranslation";
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -24,14 +26,15 @@ export class ErrorBoundary extends Component<
 
   render() {
     if (this.state.hasError) {
+      const language = getStoredReadingState()?.language ?? "en";
       return (
         <div className="min-h-screen flex items-center justify-center text-center px-6">
           <div>
             <h1 className="text-xl font-semibold text-[var(--text-primary)]">
-              Something went wrong
+              {translate(language, "errors.uiFallbackTitle")}
             </h1>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">
-              Please refresh the page or try again later.
+              {translate(language, "errors.uiFallbackMessage")}
             </p>
           </div>
         </div>
