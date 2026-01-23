@@ -10,6 +10,7 @@ import {
   downloadDictionaryBundle,
   downloadTranslationBundle,
 } from "@/src/services/offlineSync";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
   StyleSheet.create({
@@ -189,12 +190,22 @@ export default function HomeScreen() {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const { t, get } = useTranslation();
   const [downloading, setDownloading] = useState<string | null>(null);
+  const dayNames = get<string[]>("home.calendar.dayNames", [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+  ]);
   const calendarDays = [
-    { day: 10, label: "Sun", active: true },
-    { day: 11, label: "Mon" },
-    { day: 12, label: "Tue" },
-    { day: 13, label: "Wed" },
+    { day: 10, label: dayNames[0] ?? "Sun", active: true },
+    { day: 11, label: dayNames[1] ?? "Mon" },
+    { day: 12, label: dayNames[2] ?? "Tue" },
+    { day: 13, label: dayNames[3] ?? "Wed" },
   ];
 
   return (
@@ -203,9 +214,13 @@ export default function HomeScreen() {
         <ScrollView contentContainerStyle={styles.content}>
           <View style={styles.calendarCard}>
             <View style={styles.calendarBadge}>
-              <Text style={styles.calendarBadgeText}>Today is</Text>
+              <Text style={styles.calendarBadgeText}>
+                {t("home.calendar.todayIs")}
+              </Text>
             </View>
-            <Text style={styles.calendarTitle}>Aviv 10</Text>
+            <Text style={styles.calendarTitle}>
+              {t("home.calendar.dateLabel")}
+            </Text>
             <View style={styles.dateRow}>
               {calendarDays.map((day) => (
                 <View
@@ -242,7 +257,7 @@ export default function HomeScreen() {
                   themeMode === "dark" && styles.actionTitleDark,
                 ]}
               >
-                Download Offline
+                {t("home.download.title")}
               </Text>
               <Text
                 style={[
@@ -251,13 +266,13 @@ export default function HomeScreen() {
                 ]}
               >
                 {downloading
-                  ? `Downloading ${downloading}...`
-                  : "Tap to store dictionary and translations"}
+                  ? t("home.download.downloading", { item: downloading })
+                  : t("home.download.idle")}
               </Text>
               <View style={styles.downloadActions}>
                 <Pressable
                   onPress={async () => {
-                    setDownloading("dictionary");
+                    setDownloading(t("home.download.dictionary"));
                     try {
                       await downloadDictionaryBundle();
                     } finally {
@@ -266,11 +281,13 @@ export default function HomeScreen() {
                   }}
                   style={styles.downloadButton}
                 >
-                  <Text style={styles.downloadButtonText}>Dictionary</Text>
+                  <Text style={styles.downloadButtonText}>
+                    {t("home.download.dictionary")}
+                  </Text>
                 </Pressable>
                 <Pressable
                   onPress={async () => {
-                    setDownloading("english");
+                    setDownloading(t("home.download.english"));
                     try {
                       await downloadTranslationBundle("en");
                     } finally {
@@ -279,11 +296,13 @@ export default function HomeScreen() {
                   }}
                   style={styles.downloadButton}
                 >
-                  <Text style={styles.downloadButtonText}>English</Text>
+                  <Text style={styles.downloadButtonText}>
+                    {t("home.download.english")}
+                  </Text>
                 </Pressable>
                 <Pressable
                   onPress={async () => {
-                    setDownloading("spanish");
+                    setDownloading(t("home.download.spanish"));
                     try {
                       await downloadTranslationBundle("es");
                     } finally {
@@ -292,7 +311,9 @@ export default function HomeScreen() {
                   }}
                   style={styles.downloadButton}
                 >
-                  <Text style={styles.downloadButtonText}>Spanish</Text>
+                  <Text style={styles.downloadButtonText}>
+                    {t("home.download.spanish")}
+                  </Text>
                 </Pressable>
               </View>
             </View>
@@ -315,7 +336,7 @@ export default function HomeScreen() {
                   themeMode === "dark" && styles.actionTitleDark,
                 ]}
               >
-                Donate
+                {t("home.donate.title")}
               </Text>
               <Text
                 style={[
@@ -323,7 +344,7 @@ export default function HomeScreen() {
                   themeMode === "dark" && styles.actionSubtitleDark,
                 ]}
               >
-                Support Davar development
+                {t("home.donate.subtitle")}
               </Text>
             </View>
             <AppIcon
@@ -338,17 +359,17 @@ export default function HomeScreen() {
           </View>
 
           <View style={styles.aboutCard}>
-            <Text style={styles.aboutTitle}>About</Text>
+            <Text style={styles.aboutTitle}>{t("home.about.title")}</Text>
             <View style={styles.aboutGrid}>
               {(
                 [
-                  { label: "Legal", icon: "balance" },
-                  { label: "Terms", icon: "file" },
-                  { label: "Privacy", icon: "shield" },
-                  { label: "Support", icon: "chat" },
-                  { label: "Bug", icon: "bug" },
-                  { label: "GitHub", icon: "github" },
-                  { label: "Feedback", icon: "feedback" },
+                  { label: t("home.about.items.legal"), icon: "balance" },
+                  { label: t("home.about.items.terms"), icon: "file" },
+                  { label: t("home.about.items.privacy"), icon: "shield" },
+                  { label: t("home.about.items.support"), icon: "chat" },
+                  { label: t("home.about.items.bug"), icon: "bug" },
+                  { label: t("home.about.items.github"), icon: "github" },
+                  { label: t("home.about.items.feedback"), icon: "feedback" },
                 ] as { label: string; icon: IconKey }[]
               ).map((item) => (
                 <View key={item.label} style={styles.aboutPill}>

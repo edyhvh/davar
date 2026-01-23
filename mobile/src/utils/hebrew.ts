@@ -4,20 +4,56 @@
 
 // Load prefix forms lookup (this would be loaded from the API in a real app)
 const PREFIX_FORMS: Record<string, string[]> = {
-  בְּ: ["Hb"],
-  לְ: ["Hl"],
-  וְ: ["Hv"],
-  כְּ: ["Hk"],
-  מִ: ["Hm"],
-  הַ: ["Hd"],
-  בַּ: ["Hb"],
-  לַ: ["Hl"],
-  וַ: ["Hv"],
-  כַּ: ["Hk"],
-  מַ: ["Hm"],
-  הָ: ["Hd"],
+  // Bet/Beit (ב) prefix with various vowel points and accents
+  בְּ: ["Hb"],  // with shva and dagesh
+  בַּ: ["Hb"],  // with patach and dagesh
+  בָּ: ["Hb"],  // with qamats and dagesh
+  בִּ: ["Hb"],  // with hiriq and dagesh
+  בּ: ["Hb"],   // with just dagesh (no vowel)
+  בָ: ["Hb"],   // with qamats only
+  בִ: ["Hb"],   // with hiriq only
+  בְ: ["Hb"],   // with shva only
+  "ב֖": ["Hb"],   // with tiperasim accent
+  "בָּ֖": ["Hb"], // with qamats, dagesh, and accent
+  
+  // Lamed (ל) prefix with various vowel points and accents
+  לְ: ["Hl"],   // with shva
+  לַ: ["Hl"],   // with patach
+  לָ: ["Hl"],   // with qamats
+  לִ: ["Hl"],   // with hiriq
+  "ל֑": ["Hl"],   // with oleh ve-yored accent
+  "לַֽ": ["Hl"],  // with patach and silluq accent
+  "לָֽ": ["Hl"],  // with qamats and silluq accent
+  
+  // Vav/Conjunctive vav (ו) prefix with various vowel points and accents
+  וְ: ["Hv", "Hc"],  // with shva
+  וַ: ["Hv", "Hc"],  // with patach
+  וָ: ["Hv", "Hc"],  // with qamats
+  וִ: ["Hv", "Hc"],  // with hiriq
+  וּ: ["Hv", "Hc"],  // with dagesh (no vowel)
+  ו: ["Hv", "Hc"],   // without vowels or accents
+  "וַֽ": ["Hv", "Hc"], // with patach and silluq accent
+  
+  // Kaf (כ) prefix with various vowel points
+  כְּ: ["Hk"],   // with shva and dagesh
+  כַּ: ["Hk"],   // with patach and dagesh
+  כָּ: ["Hk"],   // with qamats and dagesh
+  כִּ: ["Hk"],   // with hiriq and dagesh
+  כּ: ["Hk"],    // with just dagesh (no vowel)
+  
+  // Mem (מ) prefix with various vowel points
+  מִ: ["Hm"],    // with hiriq
+  מַ: ["Hm"],    // with patach
+  מֵ: ["Hm"],    // with tsere
+  
+  // Heh (ה) prefix with various vowel points and accents
+  הַ: ["Hd"],    // with patach
+  הָ: ["Hd"],    // with qamats
+  הִ: ["Hd"],    // with hiriq
+  "הָֽ": ["Hd"],   // with qamats and silluq accent
   // Add more forms as needed
 };
+
 
 const HEBREW_MARKS_REGEX = /[\u0591-\u05C7]/g;
 const HEBREW_MARKS_SINGLE = /[\u0591-\u05C7]/;
@@ -51,10 +87,18 @@ const sliceByStrippedLength = (
     }
     if (!HEBREW_MARKS_SINGLE.test(char)) {
       count += 1;
-    }
-    if (count >= strippedLength) {
-      endIndex += 1;
-      break;
+      if (count >= strippedLength) {
+        endIndex += 1;
+        // Continue to include all combining marks after this character
+        while (endIndex < text.length) {
+          const nextChar = text[endIndex];
+          if (nextChar === "/" || !HEBREW_MARKS_SINGLE.test(nextChar)) {
+            break;
+          }
+          endIndex += 1;
+        }
+        break;
+      }
     }
   }
   return text.slice(startIndex, endIndex);
@@ -68,21 +112,16 @@ export const getPrefixSegments = (
     return { prefixes: [], root: word };
   }
 
-  if (word.includes("/")) {
-    const parts = word.split("/").filter(Boolean);
-    if (parts.length > 1) {
-      return {
-        prefixes: parts.slice(0, -1).map((part) => part.replace(/\//g, "")),
-        root: parts.slice(-1).join(""),
-      };
-    }
-  }
+  // Remove "/" separators for uniform processing
+  // The "/" is a data format indicator but should not affect prefix extraction
+  const cleanWord = word.replace(/\//g, "");
 
-  const strippedWord = stripHebrewMarks(word);
+  const strippedWord = stripHebrewMarks(cleanWord);
   const prefixes: string[] = [];
   let rawIndex = 0;
   let strippedIndex = 0;
 
+  // Always validate against prefixIds - extract prefixes strictly
   for (const prefixId of prefixIds) {
     const forms = PREFIX_FORMS_BY_ID[prefixId] ?? [];
     const sortedForms = forms
@@ -98,22 +137,22 @@ export const getPrefixSegments = (
     }
 
     const segment = sliceByStrippedLength(
-      word,
+      cleanWord,
       rawIndex,
       match.stripped.length,
     );
-    prefixes.push(segment.replace(/\//g, ""));
+    prefixes.push(segment);
     rawIndex += segment.length;
     strippedIndex += match.stripped.length;
   }
 
   if (!prefixes.length) {
-    return { prefixes: [], root: word };
+    return { prefixes: [], root: word.replace(/\//g, "") };
   }
 
   return {
     prefixes,
-    root: word.slice(rawIndex),
+    root: cleanWord.slice(rawIndex),
   };
 };
 

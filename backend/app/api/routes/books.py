@@ -57,6 +57,41 @@ async def get_book_chapters(
             status_code=500, detail=f"Error retrieving chapters: {str(e)}")
 
 
+@router.get("/books/lookup/{book_name}", response_model=BookResponse)
+async def lookup_book(
+    book_name: str,
+    response: Response,
+    api_key: str = Depends(require_api_key),
+    source: Optional[str] = Query(
+        None,
+        description="Source format (oe, delitzsch, tth, ts2009, dss, auto)",
+    ),
+):
+    """
+    Normalize a book name from any source and return canonical metadata.
+    """
+    try:
+        normalized = book_mapper.normalize_book_name(book_name, source or "auto")
+        if not normalized:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Book '{book_name}' not found",
+            )
+        book = books_service.get_book(normalized)
+        if not book:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Book '{book_name}' not found",
+            )
+        response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
+        return book
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, detail=f"Error retrieving book: {str(e)}")
+
+
 @router.get("/books/{book}/chapters/{chapter}/verses")
 async def get_chapter_verses(
     book: str,

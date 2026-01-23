@@ -33,6 +33,7 @@ type PrefixResponse = {
 
 type WordAnalysisBottomSheetProps = {
   sheetRef: React.RefObject<BottomSheet | null>;
+  currentVerseId?: string;
   word?:
     | (DisplayWord & {
         meanings?: string[];
@@ -258,26 +259,6 @@ const createStyles = (
       textAlign: "center",
       marginTop: spacing[2],
     },
-      color: colors.textSecondary,
-      textAlign: "center",
-      writingDirection: "rtl",
-      lineHeight: 56 * hebrewScale,
-    },
-    prefixTransliteration: {
-      fontFamily: typography.families.latinUI,
-      fontSize: typography.sizes.bodySmall,
-      color: colors.textSecondary,
-      textTransform: "uppercase",
-      letterSpacing: 2,
-      marginTop: spacing[1],
-    },
-    prefixMeaning: {
-      fontFamily: typography.families.latinUI,
-      fontSize: typography.sizes.body,
-      color: colors.textPrimary,
-      textAlign: "center",
-      marginTop: spacing[2],
-    },
     prefixText: {
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.body,
@@ -298,12 +279,12 @@ const bookAbbreviations: Record<string, string> = {
   Josh: "joshua",
   Judg: "judges",
   Ruth: "ruth",
-  "1Sam": "1samuel",
-  "2Sam": "2samuel",
-  "1Kgs": "1kings",
-  "2Kgs": "2kings",
-  "1Chr": "1chronicles",
-  "2Chr": "2chronicles",
+  "1Sam": "samuel1",
+  "2Sam": "samuel2",
+  "1Kgs": "kings1",
+  "2Kgs": "kings2",
+  "1Chr": "chronicles1",
+  "2Chr": "chronicles2",
   Ezra: "ezra",
   Neh: "nehemiah",
   Esth: "esther",
@@ -335,25 +316,25 @@ const bookAbbreviations: Record<string, string> = {
   John: "john",
   Acts: "acts",
   Rom: "romans",
-  "1Cor": "1corinthians",
-  "2Cor": "2corinthians",
+  "1Cor": "corinthians1",
+  "2Cor": "corinthians2",
   Gal: "galatians",
   Eph: "ephesians",
   Phil: "philippians",
   Col: "colossians",
-  "1Thess": "1thessalonians",
-  "2Thess": "2thessalonians",
-  "1Tim": "1timothy",
-  "2Tim": "2timothy",
+  "1Thess": "thessalonians1",
+  "2Thess": "thessalonians2",
+  "1Tim": "timothy1",
+  "2Tim": "timothy2",
   Titus: "titus",
   Phlm: "philemon",
   Heb: "hebrews",
   Jas: "james",
-  "1Pet": "1peter",
-  "2Pet": "2peter",
-  "1John": "1john",
-  "2John": "2john",
-  "3John": "3john",
+  "1Pet": "peter1",
+  "2Pet": "peter2",
+  "1John": "john1",
+  "2John": "john2",
+  "3John": "john3",
   Jude: "jude",
   Rev: "revelation",
 };
@@ -375,6 +356,7 @@ export const WordAnalysisBottomSheet = ({
   sheetRef,
   word,
   onClose,
+  currentVerseId,
 }: WordAnalysisBottomSheetProps) => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const hebrewFontScale = useAppStore(
@@ -453,8 +435,10 @@ export const WordAnalysisBottomSheet = ({
           : `/api/v1/lexicon/${strongNumber}`;
         const entry = await apiRequest<LexiconResponse>(url);
         setLexiconEntry(entry);
+        console.debug("WordAnalysisBottomSheet: lexicon loaded", strongNumber, entry?.transliteration ?? entry?.hebrew ?? entry?.root_strong ?? null);
       } catch {
         setLexiconEntry(null);
+        console.debug("WordAnalysisBottomSheet: lexicon fetch failed", strongNumber);
       } finally {
         setIsLoading(false);
       }
@@ -488,10 +472,17 @@ export const WordAnalysisBottomSheet = ({
       );
 
       setPrefixEntries(entries);
+      console.debug("WordAnalysisBottomSheet: loaded prefixes", Object.keys(entries));
     };
 
     loadPrefixes();
   }, [word?.prefixes]);
+
+  useEffect(() => {
+    // Clear lexicon and prefix entries when the current verse changes to avoid showing stale data
+    setLexiconEntry(null);
+    setPrefixEntries({});
+  }, [currentVerseId]);
 
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
@@ -594,6 +585,13 @@ export const WordAnalysisBottomSheet = ({
       backdropComponent={renderBackdrop}
     >
       <BottomSheetScrollView style={styles.content}>
+        {/* Show empty state when no word is selected */}
+        {!word ? (
+          <View style={styles.headerSection}>
+            <Text style={styles.emptyText}>Select a word to see its analysis</Text>
+          </View>
+        ) : (
+          <>
         {/* Header: Hebrew word + transliteration */}
         <View style={styles.headerSection}>
           <Text style={styles.hebrew}>{displayHebrew}</Text>
@@ -735,9 +733,7 @@ export const WordAnalysisBottomSheet = ({
             {lexiconEntry?.instances?.length || word?.instances?.length ? (
               <View style={styles.instancesContainer}>
                 {(
-                  (lexiconEntry?.instances ?? word?.instances ?? []) as Array<
-                    string | { verse: string; text: string }
-                  >
+                  (lexiconEntry?.instances ?? word?.instances ?? []) as (string | { verse: string; text: string })[]
                 )
                   .slice(0, showAllInstances ? undefined : 10)
                   .map((instance, index) => {
@@ -787,6 +783,8 @@ export const WordAnalysisBottomSheet = ({
             ) : (
               <Text style={styles.emptyText}>No instances available</Text>
             )}
+          </>
+        )}
           </>
         )}
       </BottomSheetScrollView>

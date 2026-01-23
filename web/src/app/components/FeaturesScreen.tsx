@@ -1,24 +1,19 @@
 import React from "react";
 import { Github, Lightbulb, Mail } from "lucide-react";
+import { useTranslation, type AppLanguage } from "../hooks/useTranslation";
 
-const proposalItems = [
-  "telegram app",
-  "blockchain app",
-  "arabic",
-  "farsi",
-  "japanese",
-  "portuguese",
-  "search anything (latin characters or hebrew)",
-  "septuagint",
-  "greek εὐαγγέλιον",
-];
+interface FeaturesScreenProps {
+  language: AppLanguage;
+}
 
-export function FeaturesScreen() {
+export function FeaturesScreen({ language }: FeaturesScreenProps) {
+  const { t, get } = useTranslation(language);
+  const proposalItems = get<string[]>("features.items", []);
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
       <div className="text-center">
         <div className="text-sm tracking-[0.3em] uppercase text-[var(--copper-highlight)] mb-6">
-          Ideas
+          {t("features.title")}
         </div>
         <div className="space-y-3">
           {proposalItems.map((item) => (
@@ -31,7 +26,7 @@ export function FeaturesScreen() {
             </div>
           ))}
         </div>
-        <div className="mt-6 flex items-center justify-center gap-2 text-sm text-[var(--text-secondary)]">
+        <div className="mt-6 flex items-center justify-center gap-2 text-sm text-[var(--text-secondary-muted)]">
           <Github className="w-4 h-4" />
           <a
             href="https://github.com/edyhvh/davar"
@@ -39,14 +34,13 @@ export function FeaturesScreen() {
             rel="noopener noreferrer"
             className="underline underline-offset-2 hover:text-[var(--text-primary)]"
           >
-            davar
+            {t("features.repositoryLabel")}
           </a>
           <span>
-            this is an open source project, contribute and collaborate with your
-            skills or ideas
+            {t("features.openSourceNote")}
           </span>
         </div>
-        <div className="mt-3 flex items-center justify-center gap-2 text-sm text-[var(--text-secondary)]">
+        <div className="mt-3 flex items-center justify-center gap-2 text-sm text-[var(--text-secondary-muted)]">
           <Mail className="w-4 h-4" />
           <a
             href="mailto:contact@davar.bible"

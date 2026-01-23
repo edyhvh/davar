@@ -13,6 +13,7 @@ import { DesignSystemExport } from "./components/DesignSystemExport";
 import { MobileDesignSystemGuide } from "./components/MobileDesignSystemGuide";
 import { NavigationBar } from "./components/NavigationBar";
 import { NeumorphCard } from "./components/NeumorphCard";
+import { Skeleton } from "./components/ui/skeleton";
 import { DonateScreen } from "./components/DonateScreen";
 import { FeaturesScreen } from "./components/FeaturesScreen";
 import {
@@ -20,6 +21,7 @@ import {
   getChapterCount,
   getChapterVerses,
   getVerseCount,
+  lookupBook,
   type BookResponse,
   type VerseResponse,
   type WordResponse,
@@ -29,58 +31,71 @@ import {
   getWordAnalysisByStrong,
   type WordAnalysis,
 } from "./services/lexiconService";
+import { usePersistedState, usePersistedBookPosition } from "./hooks/usePersistedState";
+import { getStoredReadingState, getLastPositionForBook, updateLastPositionForBook, createDefaultReadingState, saveReadingState } from "./utils/storageHelpers";
+import type { ReadingStateV2 } from "./utils/storageHelpers";
+import { useTranslation } from "./hooks/useTranslation";
+import { useDocumentTitle } from "./hooks/useDocumentTitle";
 
 type Screen = "home" | "verse" | "settings" | "donate" | "features";
 
 export default function App() {
-  const getSavedReadingState = () => {
-    if (typeof window === "undefined") return null;
-    try {
-      const raw = window.localStorage.getItem("davar.readingState");
-      if (!raw) return null;
-      const parsed = JSON.parse(raw) as {
-        book?: string;
-        chapter?: number;
-        verse?: number;
-        language?: "en" | "es" | "he";
-        scrollNavHintCount?: number;
-      };
-      return parsed;
-    } catch {
-      return null;
-    }
-  };
+  // Initialize persisted state from localStorage or defaults
+  const initialState = getStoredReadingState() ?? createDefaultReadingState();
 
-  const getStoredLanguage = () => getSavedReadingState()?.language ?? "en";
-  const getStoredBook = () => getSavedReadingState()?.book ?? "Genesis";
-  const getStoredChapter = () => getSavedReadingState()?.chapter ?? 1;
-  const getStoredVerse = () => getSavedReadingState()?.verse ?? 1;
-  const getStoredScrollHintCount = () =>
-    getSavedReadingState()?.scrollNavHintCount ?? 0;
-
+  // Use persisted state hooks for all settings
   const [currentScreen, setCurrentScreen] = useState<Screen>("verse");
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [language, setLanguage] = useState<"en" | "es" | "he">(
-    getStoredLanguage,
+  const [theme, setTheme] = usePersistedState("theme", initialState.theme);
+  const [language, setLanguage] = usePersistedState(
+    "language",
+    initialState.language,
+  );
+  const { t, isRTL } = useTranslation(language);
+  const [showQumran, setShowQumran] = usePersistedState(
+    "showQumran",
+    initialState.showQumran,
+  );
+  const [showFullChapter, setShowFullChapter] = usePersistedState(
+    "showFullChapter",
+    initialState.showFullChapter,
+  );
+  const [hebrewOnly, setHebrewOnly] = usePersistedState(
+    "hebrewOnly",
+    initialState.hebrewOnly,
+  );
+  const [showNikud, setShowNikud] = usePersistedState(
+    "showNikud",
+    initialState.showNikud,
+  );
+  const [showCantillation, setShowCantillation] = usePersistedState(
+    "showCantillation",
+    initialState.showCantillation,
+  );
+  const [scrollHintCount, setScrollHintCount] = usePersistedState(
+    "scrollNavHintCount",
+    initialState.scrollNavHintCount,
   );
 
-  const [currentBook, setCurrentBook] = useState(getStoredBook);
-  const [currentChapter, setCurrentChapter] = useState(getStoredChapter);
-  const [currentVerse, setCurrentVerse] = useState(getStoredVerse);
-  const [scrollHintCount, setScrollHintCount] = useState(
-    getStoredScrollHintCount,
+  // Navigation state - also persisted but with special logic for per-book tracking
+  const [currentBook, setCurrentBook] = useState(initialState.book);
+  const [currentChapter, setCurrentChapter] = useState(
+    initialState.chapter,
   );
+  const [currentVerse, setCurrentVerse] = useState(initialState.verse);
+  const prevBookRef = useRef(currentBook);
+
+  // Non-persisted UI state
   const [scrollJumpActive, setScrollJumpActive] = useState(false);
   const [isWordPanelHovered, setIsWordPanelHovered] = useState(false);
   const versePanelRef = useRef<HTMLDivElement | null>(null);
 
-  const [showQumran, setShowQumran] = useState(false);
-  const [showFullChapter, setShowFullChapter] = useState(false);
-  const [hebrewOnly, setHebrewOnly] = useState(false);
-  const [showNikud, setShowNikud] = useState(true);
-  const [showCantillation, setShowCantillation] = useState(false);
-
   const [selectedWord, setSelectedWord] = useState<WordResponse | null>(null);
+  const [isWordPanelDismissed, setIsWordPanelDismissed] = useState(false);
+  const [isNavigatingWordPanel, setIsNavigatingWordPanel] = useState(false);
+  const [showWordSkeleton, setShowWordSkeleton] = useState(false);
+  const navigationKeyRef = useRef<string | null>(null);
+  const wordSkeletonTimerRef = useRef<number | null>(null);
+  const wordPanelDismissedRef = useRef(false);
   const [lastSelectedWord, setLastSelectedWord] = useState<WordResponse | null>(
     null,
   );
@@ -117,6 +132,21 @@ export default function App() {
     return book;
   };
 
+  const tabTitle = useMemo(() => {
+    if (currentScreen !== "verse" || !currentBook || !currentChapter) {
+      return "Davar";
+    }
+
+    const displayBookName =
+      language === "he"
+        ? getHebrewBookName(currentBook)
+        : getDisplayBookName(currentBook);
+
+    return `${displayBookName} ${currentChapter}`;
+  }, [currentBook, currentChapter, currentScreen, language, books]);
+
+  useDocumentTitle(tabTitle);
+
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -126,28 +156,76 @@ export default function App() {
   }, [theme]);
 
   useEffect(() => {
+    document.documentElement.dir = isRTL ? "rtl" : "ltr";
+    document.documentElement.lang = language;
+  }, [isRTL, language]);
+
+  useEffect(() => {
     if (typeof window === "undefined") return;
-    const payload = {
-      book: currentBook,
-      chapter: currentChapter,
-      verse: currentVerse,
-      language,
-      scrollNavHintCount: scrollHintCount,
-    };
-    window.localStorage.setItem("davar.readingState", JSON.stringify(payload));
-  }, [currentBook, currentChapter, currentVerse, language, scrollHintCount]);
+    // Save navigation state and per-book position to localStorage
+    const stored = getStoredReadingState();
+    if (stored) {
+      let updated = { ...stored, book: currentBook, chapter: currentChapter, verse: currentVerse };
+      updated = updateLastPositionForBook(updated, currentBook, currentChapter, currentVerse);
+      saveReadingState(updated);
+    }
+  }, [currentBook, currentChapter, currentVerse]);
+
+  // Clear selected word and chapter verses when book changes to prevent showing stale data
+  useEffect(() => {
+    if (prevBookRef.current !== currentBook) {
+      setSelectedWord(null);
+      setSelectedWordAnalysis(null);
+      setChapterVerses([]); // Clear old verses so currentVerseData becomes null
+      prevBookRef.current = currentBook;
+    }
+  }, [currentBook]);
 
   const handleWordClick = (word: WordResponse) => {
+    setIsWordPanelDismissed(false);
     setSelectedWord(word);
   };
 
-  const handleNavigateToVerse = (verseRef: string) => {
-    const parts = verseRef.split(" ");
-    if (parts.length === 2) {
-      const [chapter, verse] = parts[1].split(":");
-      setCurrentChapter(parseInt(chapter));
-      setCurrentVerse(parseInt(verse));
+  const handleNavigateToVerse = async (verseRef: string) => {
+    const cleanedRef = verseRef.replace(/\s+/g, " ").trim();
+    const lastSpaceIndex = cleanedRef.lastIndexOf(" ");
+    if (lastSpaceIndex <= 0) return;
+
+    const bookLabel = cleanedRef.slice(0, lastSpaceIndex).trim();
+    const chapterVerse = cleanedRef.slice(lastSpaceIndex + 1).trim();
+    const match = chapterVerse.match(/^(\d+):(\d+)$/);
+    if (!match) return;
+
+    const chapter = Number.parseInt(match[1], 10);
+    const verse = Number.parseInt(match[2], 10);
+    if (Number.isNaN(chapter) || Number.isNaN(verse)) return;
+
+    const matchedBook = books.find((item) => {
+      const label = bookLabel.toLowerCase();
+      return (
+        item.name.toLowerCase() === label ||
+        item.hebrew_name?.toLowerCase() === label ||
+        item.spanish_name?.toLowerCase() === label
+      );
+    });
+
+    let resolvedBookName = matchedBook?.name ?? bookLabel;
+    if (!matchedBook) {
+      try {
+        const resolved = await lookupBook(bookLabel);
+        resolvedBookName = resolved.name;
+      } catch (error) {
+        console.error("Failed to normalize book label:", error);
+      }
+    }
+
+    setCurrentBook(resolvedBookName);
+    setCurrentChapter(chapter);
+    setCurrentVerse(verse);
+    if (isMobile) {
       setSelectedWord(null);
+    } else {
+      setIsWordPanelDismissed(false);
     }
   };
 
@@ -187,7 +265,7 @@ export default function App() {
         }
       } catch (error) {
         if (!isMounted) return;
-        setErrorMessage("Unable to load books.");
+        setErrorMessage(t("errors.loadBooks"));
       }
     };
     loadBooks();
@@ -220,7 +298,7 @@ export default function App() {
         }
       } catch (error) {
         if (!isMounted) return;
-        setErrorMessage("Unable to load verses.");
+        setErrorMessage(t("errors.loadVerses"));
       } finally {
         if (isMounted) setIsLoading(false);
       }
@@ -289,11 +367,15 @@ export default function App() {
     }
   }, [selectedWord, selectedWordAnalysis]);
 
-  const isSplitView = Boolean(selectedWord && !isMobile);
+  const isSplitView = Boolean(!isMobile && (selectedWord || isNavigatingWordPanel));
   const [isWordPanelVisible, setIsWordPanelVisible] = useState(false);
+  const isWordPanelActive =
+    !isMobile && !isWordPanelDismissed && (selectedWord || isNavigatingWordPanel);
+  const shouldShowWordSkeleton =
+    isWordPanelActive && isNavigatingWordPanel && showWordSkeleton && !selectedWord;
 
   useEffect(() => {
-    if (selectedWord) {
+    if (isWordPanelActive) {
       setIsWordPanelVisible(true);
       return undefined;
     }
@@ -307,12 +389,81 @@ export default function App() {
     }
 
     return undefined;
-  }, [selectedWord, isWordPanelVisible]);
+  }, [isWordPanelActive, isWordPanelVisible]);
 
   useEffect(() => {
-    const timeout = window.setTimeout(() => setSelectedWord(null), 50);
-    return () => window.clearTimeout(timeout);
-  }, [currentBook, currentChapter, currentVerse]);
+    wordPanelDismissedRef.current = isWordPanelDismissed;
+  }, [isWordPanelDismissed]);
+
+  useEffect(() => {
+    if (wordSkeletonTimerRef.current) {
+      window.clearTimeout(wordSkeletonTimerRef.current);
+      wordSkeletonTimerRef.current = null;
+    }
+    setShowWordSkeleton(false);
+
+    if (isMobile) {
+      setIsNavigatingWordPanel(false);
+      return;
+    }
+
+    const navigationKey = `${currentBook}-${currentChapter}-${currentVerse}`;
+    if (navigationKeyRef.current === navigationKey) return;
+    navigationKeyRef.current = navigationKey;
+
+    if (wordPanelDismissedRef.current) {
+      setIsNavigatingWordPanel(false);
+      return;
+    }
+
+    setIsNavigatingWordPanel(true);
+    wordSkeletonTimerRef.current = window.setTimeout(() => {
+      setShowWordSkeleton(true);
+    }, 300);
+  }, [currentBook, currentChapter, currentVerse, isMobile]);
+
+  useEffect(() => {
+    if (!isNavigatingWordPanel || isMobile) return;
+    if (wordPanelDismissedRef.current) {
+      setIsNavigatingWordPanel(false);
+      return;
+    }
+    if (!currentVerseData) return;
+
+    const firstWord = currentVerseData.words?.[0];
+    if (firstWord) {
+      setSelectedWord(firstWord);
+      setIsWordPanelDismissed(false);
+    } else {
+      setSelectedWord(null);
+    }
+
+    setIsNavigatingWordPanel(false);
+    setShowWordSkeleton(false);
+    if (wordSkeletonTimerRef.current) {
+      window.clearTimeout(wordSkeletonTimerRef.current);
+      wordSkeletonTimerRef.current = null;
+    }
+  }, [currentVerseData, isMobile, isNavigatingWordPanel]);
+
+  useEffect(() => {
+    if (!selectedWord) return;
+    setIsNavigatingWordPanel(false);
+    setShowWordSkeleton(false);
+    if (wordSkeletonTimerRef.current) {
+      window.clearTimeout(wordSkeletonTimerRef.current);
+      wordSkeletonTimerRef.current = null;
+    }
+  }, [selectedWord]);
+
+  useEffect(() => {
+    return () => {
+      if (wordSkeletonTimerRef.current) {
+        window.clearTimeout(wordSkeletonTimerRef.current);
+        wordSkeletonTimerRef.current = null;
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 767px)");
@@ -410,7 +561,7 @@ export default function App() {
       }}
     >
       <div className="sticky top-0 z-40 px-6 pt-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="mx-auto flex justify-center">
           <NavigationBar
             book={currentBook}
             bookDisplayName={getDisplayBookName(currentBook)}
@@ -420,10 +571,21 @@ export default function App() {
             books={bookOptions}
             chapterCount={chapterCount}
             verseCount={verseCount}
-            onBookChange={(book) => {
-              setCurrentBook(book);
-              setCurrentChapter(1);
-              setCurrentVerse(1);
+            onBookChange={(selectedBook) => {
+              if (selectedBook === currentBook) {
+                // Same book - retrieve last position for this book
+                const stored = getStoredReadingState();
+                if (stored) {
+                  const position = getLastPositionForBook(stored, selectedBook);
+                  setCurrentChapter(position.chapter);
+                  setCurrentVerse(position.verse);
+                }
+              } else {
+                // Different book - reset to 1:1
+                setCurrentBook(selectedBook);
+                setCurrentChapter(1);
+                setCurrentVerse(1);
+              }
               setCurrentScreen("verse");
             }}
             onChapterChange={(chapter) => {
@@ -434,18 +596,6 @@ export default function App() {
             onHomeClick={() => setCurrentScreen("home")}
             onDonateClick={() => setCurrentScreen("donate")}
             onFeaturesClick={() => setCurrentScreen("features")}
-            onPreviousVerse={() => {
-              if (currentVerse > 1) {
-                setCurrentVerse(currentVerse - 1);
-              }
-            }}
-            onNextVerse={() => {
-              if (currentVerse < verseCount) {
-                setCurrentVerse(currentVerse + 1);
-              }
-            }}
-            hasPreviousVerse={currentVerse > 1}
-            hasNextVerse={currentVerse < verseCount}
             theme={theme}
             onThemeChange={setTheme}
             language={language}
@@ -467,8 +617,10 @@ export default function App() {
       <div className="px-6 pb-32 pt-6">
         <div className="max-w-7xl mx-auto">
           {currentScreen === "home" && <HomeScreen language={language} />}
-          {currentScreen === "donate" && <DonateScreen />}
-          {currentScreen === "features" && <FeaturesScreen />}
+          {currentScreen === "donate" && <DonateScreen language={language} />}
+          {currentScreen === "features" && (
+            <FeaturesScreen language={language} />
+          )}
 
           {currentScreen === "verse" && (
             <div className="grid gap-6 items-start md:grid-cols-[7fr_3fr]">
@@ -504,11 +656,13 @@ export default function App() {
                       dssVariants={currentVerseData.dss}
                       selectedWord={selectedWord?.text ?? null}
                       previousVerseSnippet={
-                        currentVerse > 1 ? "Previous verse..." : undefined
+                        currentVerse > 1
+                          ? t("verse.previousSnippet")
+                          : undefined
                       }
                       nextVerseSnippet={
                         currentVerse < chapterVerses.length
-                          ? "Next verse..."
+                          ? t("verse.nextSnippet")
                           : undefined
                       }
                       onSwipeUp={() => {
@@ -521,16 +675,11 @@ export default function App() {
                   ) : (
                     <NeumorphCard>
                       <p className="text-sm text-gray-500">
-                        Select a book to begin.
+                        {t("verse.selectBookPrompt")}
                       </p>
                     </NeumorphCard>
                   )}
 
-                  {isLoading && (
-                    <NeumorphCard className="mt-6">
-                      <p className="text-sm text-gray-500">Loading verses...</p>
-                    </NeumorphCard>
-                  )}
                   {errorMessage && (
                     <NeumorphCard className="mt-6">
                       <p className="text-sm text-red-500">{errorMessage}</p>
@@ -544,7 +693,11 @@ export default function App() {
                 style={showFullChapter ? undefined : { height: "70vh" }}
               >
                 {(() => {
-                  const wordForCard = selectedWord ?? lastSelectedWord;
+                  const wordForCard =
+                    selectedWord ??
+                    (!isNavigatingWordPanel && !showWordSkeleton
+                      ? lastSelectedWord
+                      : null);
                   const wordAnalysisForCard = selectedWord
                     ? selectedWordAnalysis
                     : lastSelectedWordAnalysis;
@@ -552,13 +705,24 @@ export default function App() {
                   return (
                 <NeumorphCard
                   className={`p-6 sticky top-24 word-panel-shell ${
-                    selectedWord ? "word-panel-open" : "word-panel-closed"
+                    isWordPanelActive ? "word-panel-open" : "word-panel-closed"
                   }`}
-                  style={!selectedWord ? { pointerEvents: "none" } : undefined}
+                  style={!isWordPanelActive ? { pointerEvents: "none" } : undefined}
                   onMouseEnter={() => setIsWordPanelHovered(true)}
                   onMouseLeave={() => setIsWordPanelHovered(false)}
                 >
-                  {wordForCard && isWordPanelVisible ? (
+                  {shouldShowWordSkeleton ? (
+                    <div className="space-y-5">
+                      <div className="flex justify-end">
+                        <Skeleton className="h-9 w-9 rounded-full" />
+                      </div>
+                      <Skeleton className="h-16 w-40 mx-auto" />
+                      <Skeleton className="h-3 w-32 mx-auto" />
+                      <Skeleton className="h-4 w-full" />
+                      <Skeleton className="h-4 w-4/5" />
+                      <Skeleton className="h-4 w-3/4" />
+                    </div>
+                  ) : wordForCard && isWordPanelVisible ? (
                     <WordCard
                       word={wordAnalysisForCard?.hebrew ?? wordForCard.text}
                       wordFromVerse={wordForCard.text}
@@ -579,15 +743,28 @@ export default function App() {
                             : instance,
                       )}
                       onInstanceClick={handleNavigateToVerse}
-                      onClose={() => setSelectedWord(null)}
+                      onClose={() => {
+                        if (!isMobile) {
+                          setIsWordPanelDismissed(true);
+                        }
+                        setSelectedWord(null);
+                        setIsNavigatingWordPanel(false);
+                        setShowWordSkeleton(false);
+                        if (wordSkeletonTimerRef.current) {
+                          window.clearTimeout(wordSkeletonTimerRef.current);
+                          wordSkeletonTimerRef.current = null;
+                        }
+                      }}
                       isLoading={Boolean(selectedWord && isWordAnalysisLoading)}
                     />
+                  ) : isNavigatingWordPanel ? (
+                    <div className="h-40" />
                   ) : (
                     <div
                       className="text-sm text-[var(--text-secondary)]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Select a word
+                      {t("wordCard.selectWord")}
                     </div>
                   )}
                 </NeumorphCard>
@@ -652,7 +829,7 @@ export default function App() {
                 className="mb-8 px-6 py-3 bg-[var(--primary)] text-white rounded-full hover:scale-105 transition-all"
                 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600 }}
               >
-                ← Back to App
+                {t("navigation.backToApp")}
               </button>
               <MobileDesignSystemGuide />
             </div>

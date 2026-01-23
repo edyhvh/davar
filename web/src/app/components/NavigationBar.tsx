@@ -1,7 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { BookOpen, Settings, Sun, Moon, ScrollText, Languages, Eye, Heart, Home, Lightbulb, ChevronUp, ChevronDown } from 'lucide-react';
+import { BookOpen, Settings, ScrollText, Eye, Heart, Home } from 'lucide-react';
+import { LuLightbulb } from 'react-icons/lu';
+import { TbAlphabetHebrew, TbLanguageHiragana } from 'react-icons/tb';
+import { FaThList } from 'react-icons/fa';
 import { NeumorphCard } from './NeumorphCard';
 import { NeumorphicToggle } from './NeumorphicToggle';
+import { useTranslation } from '../hooks/useTranslation';
 
 interface NavigationBarProps {
   book: string;
@@ -18,10 +22,6 @@ interface NavigationBarProps {
   onHomeClick: () => void;
   onDonateClick: () => void;
   onFeaturesClick: () => void;
-  onPreviousVerse: () => void;
-  onNextVerse: () => void;
-  hasPreviousVerse: boolean;
-  hasNextVerse: boolean;
   theme: 'light' | 'dark';
   onThemeChange: (theme: 'light' | 'dark') => void;
   language: 'en' | 'es' | 'he';
@@ -53,10 +53,6 @@ export function NavigationBar({
   onHomeClick,
   onDonateClick,
   onFeaturesClick,
-  onPreviousVerse,
-  onNextVerse,
-  hasPreviousVerse,
-  hasNextVerse,
   theme,
   onThemeChange,
   language,
@@ -74,6 +70,7 @@ export function NavigationBar({
 }: NavigationBarProps) {
   const [openMenu, setOpenMenu] = useState<'settings' | 'book' | 'chapter' | 'verse' | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation(language);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -89,122 +86,83 @@ export function NavigationBar({
   }, [openMenu]);
 
   const languages = [
-    { code: 'en', label: 'English' },
-    { code: 'es', label: 'Español' },
-    { code: 'he', label: 'עברית' },
+    { code: 'en', label: t('languages.en') },
+    { code: 'es', label: t('languages.es') },
+    { code: 'he', label: t('languages.he') },
   ];
-
-  const HebrewIcon = () => (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8 6 L8 18 M12 6 L12 18 M16 6 L16 12 M8 12 L16 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
 
   const chapters = Array.from({ length: chapterCount }, (_, i) => i + 1);
   const verses = Array.from({ length: verseCount }, (_, i) => i + 1);
 
   return (
     <div className="relative" ref={dropdownRef}>
-      <NeumorphCard className="px-4 py-3">
-        <div className="flex flex-wrap items-center gap-3">
+      <NeumorphCard className="inline-flex px-3 py-2">
+        <div className="flex flex-wrap items-center gap-2">
           <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={onHomeClick}
-              className="rounded-full px-4 py-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="rounded-full p-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 backgroundColor: 'var(--neomorph-bg)',
                 border: '1px solid var(--neomorph-border)',
                 boxShadow: '6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)',
               }}
-              aria-label="Go to home"
+              aria-label={t('navigation.goHome')}
             >
-              <Home className="w-4 h-4 text-[var(--text-secondary)]" />
+              <Home className="w-3 h-3 text-[var(--text-primary)]" />
             </button>
 
             <button
               onClick={() => setOpenMenu(openMenu === 'book' ? null : 'book')}
-              className="flex items-center gap-2 rounded-full px-4 py-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex items-center gap-2 rounded-full px-3 py-1.5 transition-all hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 boxShadow: 'inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)',
                 backgroundColor: 'var(--neomorph-bg)',
               }}
-              aria-label="Select book"
+              aria-label={t('navigation.selectBook')}
             >
-              <BookOpen className="w-4 h-4 text-[var(--text-secondary)]" />
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-secondary)]">
+              <BookOpen className="w-3 h-3 text-[var(--text-primary)]" />
+              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-primary)]">
                 {bookDisplayName} | <span style={{ fontFamily: "'Suez One', serif" }}>{bookHebrew}</span>
               </span>
             </button>
 
             <button
               onClick={() => setOpenMenu(openMenu === 'chapter' ? null : 'chapter')}
-              className="flex items-center gap-2 rounded-full px-4 py-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex items-center gap-2 rounded-full px-3 py-1.5 transition-all hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 boxShadow: 'inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)',
                 backgroundColor: 'var(--neomorph-bg)',
               }}
-              aria-label="Select chapter"
+              aria-label={t('navigation.selectChapter')}
             >
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-secondary)]">CH</span>
-              <span className="text-xs text-[var(--text-secondary)]">{chapter}</span>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-primary)]">{t('navigation.chapterShort')}</span>
+              <span className="text-[11px] text-[var(--text-primary)]">{chapter}</span>
             </button>
 
             <button
               onClick={() => setOpenMenu(openMenu === 'verse' ? null : 'verse')}
-              className="flex items-center gap-2 rounded-full px-4 py-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex items-center gap-2 rounded-full px-3 py-1.5 transition-all hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 boxShadow: 'inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)',
                 backgroundColor: 'var(--neomorph-bg)',
               }}
-              aria-label="Select verse"
+              aria-label={t('navigation.selectVerse')}
             >
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-secondary)]">VS</span>
-              <span className="text-xs text-[var(--text-secondary)]">{verse}</span>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-primary)]">{t('navigation.verseShort')}</span>
+              <span className="text-[11px] text-[var(--text-primary)]">{verse}</span>
             </button>
 
-          </div>
-
-          <div className="flex flex-1 items-center justify-center gap-2">
-            <button
-              onClick={onPreviousVerse}
-              disabled={!hasPreviousVerse}
-              className="rounded-full p-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
-              style={{
-                backgroundColor: 'var(--neomorph-bg)',
-                border: '1px solid var(--neomorph-border)',
-                boxShadow: '6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)',
-              }}
-              aria-label="Previous verse"
-            >
-              <ChevronUp
-                className={`h-4 w-4 ${hasPreviousVerse ? 'text-[var(--text-secondary)]' : 'text-[var(--text-secondary)]/40'}`}
-              />
-            </button>
-            <button
-              onClick={onNextVerse}
-              disabled={!hasNextVerse}
-              className="rounded-full p-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
-              style={{
-                backgroundColor: 'var(--neomorph-bg)',
-                border: '1px solid var(--neomorph-border)',
-                boxShadow: '6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)',
-              }}
-              aria-label="Next verse"
-            >
-              <ChevronDown
-                className={`h-4 w-4 ${hasNextVerse ? 'text-[var(--text-secondary)]' : 'text-[var(--text-secondary)]/40'}`}
-              />
-            </button>
           </div>
 
           <div className="flex items-center gap-2">
             <button
               onClick={onFeaturesClick}
-              className="flex items-center gap-2 rounded-full px-4 py-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex items-center gap-2 rounded-full px-3 py-1.5 transition-all hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 background: 'linear-gradient(135deg, rgba(198,143,85,0.85), rgba(176,122,60,0.65))',
@@ -213,37 +171,37 @@ export function NavigationBar({
                 boxShadow: '0 8px 20px rgba(13,39,80,0.16)',
                 backdropFilter: 'blur(16px)',
               }}
-              aria-label="Open features"
+              aria-label={t('navigation.openFeatures')}
             >
-              <span className="text-xs tracking-[0.2em] uppercase">Features</span>
+              <span className="text-[11px] tracking-[0.2em] uppercase">{t('navigation.features')}</span>
             </button>
 
             <button
               onClick={onDonateClick}
-              className="flex items-center gap-2 rounded-full px-4 py-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex items-center gap-2 rounded-full px-3 py-1.5 transition-all hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 backgroundColor: 'var(--accent-darker)',
-                color: '#ffffff',
+                color: '#faf4e6',
                 boxShadow: '4px 4px 10px var(--neomorph-shadow-dark)',
               }}
-              aria-label="Donate"
+              aria-label={t('navigation.donate')}
             >
-              <Heart className="w-4 h-4" />
-              <span className="text-xs tracking-[0.2em] uppercase">Donate</span>
+              <Heart className="w-3 h-3" />
+              <span className="text-[11px] tracking-[0.2em] uppercase">{t('navigation.donate')}</span>
             </button>
 
             <button
               onClick={() => setOpenMenu(openMenu === 'settings' ? null : 'settings')}
-              className="rounded-full p-3 transition-all hover:scale-[1.05] active:scale-[0.98]"
+              className="rounded-full p-2 transition-all hover:scale-[1.05] active:scale-[0.98]"
               style={{
                 backgroundColor: 'var(--neomorph-bg)',
                 boxShadow: '6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)',
                 border: '1px solid var(--neomorph-border)',
               }}
-              aria-label="Open settings"
+              aria-label={t('navigation.openSettings')}
             >
-              <Settings className="w-4 h-4 text-[var(--text-secondary)]" />
+              <Settings className="w-3 h-3 text-[var(--text-primary)]" />
             </button>
           </div>
         </div>
@@ -254,19 +212,15 @@ export function NavigationBar({
           <div className="space-y-5">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                {theme === 'dark' ? (
-                  <Moon className="w-4 h-4 text-[var(--text-secondary)]" />
-                ) : (
-                  <Sun className="w-4 h-4 text-[var(--text-secondary)]" />
-                )}
+                <LuLightbulb className="w-4 h-4 text-[var(--text-secondary)]" />
                 <span className="text-sm text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  Theme
+                  {t('settings.theme')}
                 </span>
               </div>
               <NeumorphicToggle
                 enabled={theme === 'dark'}
                 onToggle={() => onThemeChange(theme === 'light' ? 'dark' : 'light')}
-                ariaLabel="Toggle dark theme"
+                ariaLabel={t('navigation.toggleDarkTheme')}
               />
             </div>
 
@@ -274,81 +228,77 @@ export function NavigationBar({
               <div className="flex items-center gap-3">
                 <ScrollText className="w-4 h-4 text-[var(--text-secondary)]" />
                 <span className="text-sm text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  Qumran variants
+                  {t('settings.qumranVariants')}
                 </span>
               </div>
               <NeumorphicToggle
                 enabled={showQumran}
                 onToggle={() => onQumranChange(!showQumran)}
-                ariaLabel="Toggle Qumran variants"
+                ariaLabel={t('navigation.toggleQumran')}
               />
             </div>
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Eye className="w-4 h-4 text-[var(--text-secondary)]" />
+                <TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
                 <span className="text-sm text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  Hebrew only
+                  {t('settings.hebrewOnly')}
                 </span>
               </div>
               <NeumorphicToggle
                 enabled={hebrewOnly}
                 onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
-                ariaLabel="Toggle Hebrew only"
+                ariaLabel={t('navigation.toggleHebrewOnly')}
               />
             </div>
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="text-[var(--text-secondary)]">
-                  <HebrewIcon />
-                </span>
+                <TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
                 <span className="text-sm text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  Nikud
+                  {t('settings.showNikud')}
                 </span>
               </div>
               <NeumorphicToggle
                 enabled={showNikud}
                 onToggle={() => onNikudChange(!showNikud)}
-                ariaLabel="Toggle nikud"
+                ariaLabel={t('navigation.toggleNikud')}
               />
             </div>
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="text-[var(--text-secondary)]">
-                  <HebrewIcon />
-                </span>
+                <TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
                 <span className="text-sm text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  Cantillation
+                  {t('settings.showCantillation')}
                 </span>
               </div>
               <NeumorphicToggle
                 enabled={showCantillation}
                 onToggle={() => onCantillationChange(!showCantillation)}
-                ariaLabel="Toggle cantillation"
+                ariaLabel={t('navigation.toggleCantillation')}
               />
             </div>
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <ScrollText className="w-4 h-4 text-[var(--text-secondary)]" />
+                <FaThList className="w-4 h-4 text-[var(--text-secondary)]" />
                 <span className="text-sm text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  Full chapter
+                  {t('settings.fullChapter')}
                 </span>
               </div>
               <NeumorphicToggle
                 enabled={showFullChapter}
                 onToggle={() => onFullChapterChange(!showFullChapter)}
-                ariaLabel="Toggle full chapter"
+                ariaLabel={t('navigation.toggleFullChapter')}
               />
             </div>
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Languages className="w-4 h-4 text-[var(--text-secondary)]" />
+                <TbLanguageHiragana className="w-4 h-4 text-[var(--text-secondary)]" />
                 <span className="text-sm text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  Language
+                  {t('navigation.languageLabel')}
                 </span>
               </div>
               <select

@@ -100,6 +100,8 @@ export function FullChapterView({
                     displayText = stripCantillation(displayText);
                   }
                   displayText = stripMeteg(displayText);
+                  // Remove "/" separators from display
+                  displayText = displayText.replace(/\//g, "");
 
                   const isSelected =
                     selectedWord === word.text || selectedWord === displayText;
@@ -126,12 +128,10 @@ export function FullChapterView({
                               className="cursor-pointer hover:opacity-80"
                               title={`Prefix: ${word.prefixes?.join(", ")}`}
                             >
-                              {prefixSegments.prefixes
-                                .join("")
-                                .replace(/\//g, "")}
+                              {prefixSegments.prefixes.join("")}
                             </span>
                             <span style={{ color: "var(--text-hebrew)" }}>
-                              {prefixSegments.root.replace(/\//g, "")}
+                              {prefixSegments.root}
                             </span>
                           </>
                         ) : (
