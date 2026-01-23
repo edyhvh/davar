@@ -1,4 +1,10 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
@@ -46,7 +52,8 @@ type WordAnalysisBottomSheetProps = {
         strong?: string;
       })
     | null;
-  onClose?: () => void;
+  // Called after the sheet has fully closed and any exit animations have completed
+  onClosed?: () => void;
 };
 
 type TabType = "meanings" | "instances";
@@ -355,7 +362,6 @@ const parseVerseReference = (ref: string): string | null => {
 export const WordAnalysisBottomSheet = ({
   sheetRef,
   word,
-  onClose,
   currentVerseId,
 }: WordAnalysisBottomSheetProps) => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
@@ -435,10 +441,17 @@ export const WordAnalysisBottomSheet = ({
           : `/api/v1/lexicon/${strongNumber}`;
         const entry = await apiRequest<LexiconResponse>(url);
         setLexiconEntry(entry);
-        console.debug("WordAnalysisBottomSheet: lexicon loaded", strongNumber, entry?.transliteration ?? entry?.hebrew ?? entry?.root_strong ?? null);
+        console.debug(
+          "WordAnalysisBottomSheet: lexicon loaded",
+          strongNumber,
+          entry?.transliteration ?? entry?.hebrew ?? entry?.root_strong ?? null,
+        );
       } catch {
         setLexiconEntry(null);
-        console.debug("WordAnalysisBottomSheet: lexicon fetch failed", strongNumber);
+        console.debug(
+          "WordAnalysisBottomSheet: lexicon fetch failed",
+          strongNumber,
+        );
       } finally {
         setIsLoading(false);
       }
@@ -447,8 +460,10 @@ export const WordAnalysisBottomSheet = ({
   }, [strongNumber, language, word?.text]);
 
   useEffect(() => {
+    // Reset to meanings tab when a new word is selected
+    setActiveTab("meanings");
     setShowAllInstances(false);
-  }, [strongNumber]);
+  }, [word?.strong]);
 
   useEffect(() => {
     const loadPrefixes = async () => {
@@ -472,7 +487,10 @@ export const WordAnalysisBottomSheet = ({
       );
 
       setPrefixEntries(entries);
-      console.debug("WordAnalysisBottomSheet: loaded prefixes", Object.keys(entries));
+      console.debug(
+        "WordAnalysisBottomSheet: loaded prefixes",
+        Object.keys(entries),
+      );
     };
 
     loadPrefixes();
@@ -497,15 +515,43 @@ export const WordAnalysisBottomSheet = ({
     [],
   );
 
+  const [isOpen, setIsOpen] = useState(false);
+  // Keep sheet onChange lean; just track open state for safe conditional rendering
+  const closeTimerRef = useRef<number | null>(null);
+
   const handleSheetChanges = useCallback(
     (index: number) => {
+      console.debug("WordAnalysisBottomSheet onChange", { index });
       if (index === -1) {
-        onClose?.();
-        setActiveTab("meanings");
+        setIsOpen(false);
+        // Wait for exit animation to finish before notifying parent to clear state
+        if (closeTimerRef.current) {
+          clearTimeout(closeTimerRef.current);
+        }
+        // @ts-ignore - window.setTimeout returns number
+        closeTimerRef.current = window.setTimeout(() => {
+          onClosed?.();
+          closeTimerRef.current = null;
+        }, 300);
+      } else {
+        setIsOpen(true);
+        if (closeTimerRef.current) {
+          clearTimeout(closeTimerRef.current);
+          closeTimerRef.current = null;
+        }
       }
     },
-    [onClose],
+    [onClosed],
   );
+
+  useEffect(() => {
+    return () => {
+      if (closeTimerRef.current) {
+        clearTimeout(closeTimerRef.current);
+        closeTimerRef.current = null;
+      }
+    };
+  }, []);
 
   const meaningsList = useMemo(() => {
     const normalizeForDisplay = (t: string) =>
@@ -583,208 +629,222 @@ export const WordAnalysisBottomSheet = ({
       handleIndicatorStyle={styles.sheetHandle}
       onChange={handleSheetChanges}
       backdropComponent={renderBackdrop}
+      animateOnMount={false}
     >
       <BottomSheetScrollView style={styles.content}>
         {/* Show empty state when no word is selected */}
         {!word ? (
           <View style={styles.headerSection}>
-            <Text style={styles.emptyText}>Select a word to see its analysis</Text>
+            <Text style={styles.emptyText}>
+              Select a word to see its analysis
+            </Text>
           </View>
         ) : (
           <>
-        {/* Header: Hebrew word + transliteration */}
-        <View style={styles.headerSection}>
-          <Text style={styles.hebrew}>{displayHebrew}</Text>
-          {lexiconEntry?.transliteration || word?.transliteration ? (
-            <Text style={styles.transliteration}>
-              {lexiconEntry?.transliteration ?? word?.transliteration}
-            </Text>
-          ) : null}
-          {lexiconEntry?.occurrences_count && (
-            <Text style={styles.occurrencesText}>
-              Appears {lexiconEntry.occurrences_count} times
-            </Text>
-          )}
-        </View>
-
-
-        {/* Toggle: Meanings / Instances */}
-        <View style={styles.toggleContainer}>
-          <Pressable
-            style={[
-              styles.toggleButton,
-              activeTab === "meanings" && styles.toggleButtonActive,
-            ]}
-            onPress={() => setActiveTab("meanings")}
-          >
-            <Text
-              style={[
-                styles.toggleText,
-                activeTab === "meanings" && styles.toggleTextActive,
-              ]}
-            >
-              Meanings
-            </Text>
-          </Pressable>
-          <Pressable
-            style={[
-              styles.toggleButton,
-              activeTab === "instances" && styles.toggleButtonActive,
-            ]}
-            onPress={() => setActiveTab("instances")}
-          >
-            <Text
-              style={[
-                styles.toggleText,
-                activeTab === "instances" && styles.toggleTextActive,
-              ]}
-            >
-              Instances
-            </Text>
-          </Pressable>
-        </View>
-
-        {/* Tab Content */}
-        {activeTab === "meanings" ? (
-          <>
-            {/* Meanings section */}
-            <Text style={styles.sectionLabel}>Meanings</Text>
-            {isLoading ? (
-              <Text style={styles.emptyText}>Loading definitions...</Text>
-            ) : null}
-            <View style={styles.meaningsList}>
-              {meaningsList.map((meaning, index) => (
-                <Text key={`${meaning}-${index}`} style={styles.meaningsBullet}>
-                  • {meaning}
+            {/* Header: Hebrew word + transliteration */}
+            <View style={styles.headerSection}>
+              <Text style={styles.hebrew}>{displayHebrew}</Text>
+              {lexiconEntry?.transliteration || word?.transliteration ? (
+                <Text style={styles.transliteration}>
+                  {lexiconEntry?.transliteration ?? word?.transliteration}
                 </Text>
-              ))}
+              ) : null}
+              {lexiconEntry?.occurrences_count && (
+                <Text style={styles.occurrencesText}>
+                  Appears {lexiconEntry.occurrences_count} times
+                </Text>
+              )}
             </View>
 
-            {/* Root section */}
-            {word || lexiconEntry ? (
-              <View style={styles.rootSection}>
-                <Text style={styles.sectionLabel}>Root</Text>
-                <Text style={styles.rootHebrew}>
-                  {(lexiconEntry?.root ?? word?.root ?? displayHebrew).replace(
-                    /\//g,
-                    "",
-                  )}
+            {/* Toggle: Meanings / Instances */}
+            <View style={styles.toggleContainer}>
+              <Pressable
+                style={[
+                  styles.toggleButton,
+                  activeTab === "meanings" && styles.toggleButtonActive,
+                ]}
+                onPress={() => setActiveTab("meanings")}
+              >
+                <Text
+                  style={[
+                    styles.toggleText,
+                    activeTab === "meanings" && styles.toggleTextActive,
+                  ]}
+                >
+                  Meanings
                 </Text>
-                {lexiconEntry?.root_strong ||
-                lexiconEntry?.root_transliteration ||
-                word?.rootTransliteration ? (
-                  <Text style={styles.rootTransliteration}>
-                    {lexiconEntry?.root_strong ??
-                      lexiconEntry?.root_transliteration ??
-                      word?.rootTransliteration}
-                  </Text>
+              </Pressable>
+              <Pressable
+                style={[
+                  styles.toggleButton,
+                  activeTab === "instances" && styles.toggleButtonActive,
+                ]}
+                onPress={() => setActiveTab("instances")}
+              >
+                <Text
+                  style={[
+                    styles.toggleText,
+                    activeTab === "instances" && styles.toggleTextActive,
+                  ]}
+                >
+                  Instances
+                </Text>
+              </Pressable>
+            </View>
+
+            {/* Tab Content */}
+            {activeTab === "meanings" ? (
+              <>
+                {/* Meanings section */}
+                <Text style={styles.sectionLabel}>Meanings</Text>
+                {isLoading ? (
+                  <Text style={styles.emptyText}>Loading definitions...</Text>
                 ) : null}
-                <Text style={styles.rootMeaning}>
-                  {lexiconEntry?.root || word?.root
-                    ? rootMeaningText
-                    : "ALREADY ROOT"}
-                </Text>
-              </View>
-            ) : null}
-
-            {word?.prefixes?.length ? (
-              <View style={styles.prefixesSection}>
-                <Text style={styles.sectionLabel}>Preposition</Text>
-                {word.prefixes.map((prefix, index) => {
-                  const entry = prefixEntries[prefix];
-                  const meanings =
-                    entry?.meanings?.[language] ??
-                    entry?.meanings?.en ??
-                    entry?.meanings?.es ??
-                    [];
-                  const transliteration =
-                    language === "es"
-                      ? entry?.transliteration_es
-                      : entry?.transliteration_en ?? entry?.transliteration_es;
-                  const prefixText =
-                    prefixSegments.prefixes[index]?.replace(/\//g, "") ??
-                    entry?.main_form ??
-                    "";
-
-                  return (
-                    <View key={`${prefix}-${index}`} style={styles.prefixItem}>
-                      <Text style={styles.prefixHebrew}>{prefixText}</Text>
-                      {transliteration ? (
-                        <Text style={styles.prefixTransliteration}>
-                          {transliteration}
-                        </Text>
-                      ) : null}
-                      {meanings.length ? (
-                        <Text style={styles.prefixMeaning}>
-                          {meanings.join(", ")}
-                        </Text>
-                      ) : null}
-                    </View>
-                  );
-                })}
-              </View>
-            ) : null}
-
-          </>
-        ) : (
-          <>
-            {/* Instances section */}
-            <Text style={styles.sectionLabel}>Appears In</Text>
-            {lexiconEntry?.instances?.length || word?.instances?.length ? (
-              <View style={styles.instancesContainer}>
-                {(
-                  (lexiconEntry?.instances ?? word?.instances ?? []) as (string | { verse: string; text: string })[]
-                )
-                  .slice(0, showAllInstances ? undefined : 10)
-                  .map((instance, index) => {
-                    const verseRef =
-                      typeof instance === "string" ? instance : instance.verse;
-                    const cleanedRef = verseRef.replace(/\./g, "");
-                    const verseId = parseVerseReference(cleanedRef);
-                    return (
-                      <Pressable
-                        key={`${verseRef}-${index}`}
-                        style={({ pressed }) => [
-                          styles.instancePill,
-                          pressed && styles.instancePillPressed,
-                        ]}
-                        onPress={() => {
-                          if (verseId) {
-                            sheetRef.current?.close();
-                            router.push({
-                              pathname: "/verse-detail",
-                              params: { id: verseId },
-                            });
-                          }
-                        }}
-                      >
-                        <Text style={styles.instanceRef}>{verseRef}</Text>
-                      </Pressable>
-                    );
-                  })}
-                {!showAllInstances &&
-                (lexiconEntry?.instances?.length ??
-                  word?.instances?.length ??
-                  0) > 10 ? (
-                  <Pressable
-                    style={styles.showMoreButton}
-                    onPress={() => setShowAllInstances(true)}
-                  >
-                    <Text style={styles.showMoreText}>
-                      Show{" "}
-                      {(lexiconEntry?.instances?.length ??
-                        word?.instances?.length ??
-                        0) - 10}{" "}
-                      more
+                <View style={styles.meaningsList}>
+                  {meaningsList.map((meaning, index) => (
+                    <Text
+                      key={`${meaning}-${index}`}
+                      style={styles.meaningsBullet}
+                    >
+                      • {meaning}
                     </Text>
-                  </Pressable>
+                  ))}
+                </View>
+
+                {/* Root section */}
+                {word || lexiconEntry ? (
+                  <View style={styles.rootSection}>
+                    <Text style={styles.sectionLabel}>Root</Text>
+                    <Text style={styles.rootHebrew}>
+                      {(
+                        lexiconEntry?.root ??
+                        word?.root ??
+                        displayHebrew
+                      ).replace(/\//g, "")}
+                    </Text>
+                    {lexiconEntry?.root_strong ||
+                    lexiconEntry?.root_transliteration ||
+                    word?.rootTransliteration ? (
+                      <Text style={styles.rootTransliteration}>
+                        {lexiconEntry?.root_strong ??
+                          lexiconEntry?.root_transliteration ??
+                          word?.rootTransliteration}
+                      </Text>
+                    ) : null}
+                    <Text style={styles.rootMeaning}>
+                      {lexiconEntry?.root || word?.root
+                        ? rootMeaningText
+                        : "ALREADY ROOT"}
+                    </Text>
+                  </View>
                 ) : null}
-              </View>
+
+                {word?.prefixes?.length ? (
+                  <View style={styles.prefixesSection}>
+                    <Text style={styles.sectionLabel}>Preposition</Text>
+                    {word.prefixes.map((prefix, index) => {
+                      const entry = prefixEntries[prefix];
+                      const meanings =
+                        entry?.meanings?.[language] ??
+                        entry?.meanings?.en ??
+                        entry?.meanings?.es ??
+                        [];
+                      const transliteration =
+                        language === "es"
+                          ? entry?.transliteration_es
+                          : (entry?.transliteration_en ??
+                            entry?.transliteration_es);
+                      const prefixText =
+                        prefixSegments.prefixes[index]?.replace(/\//g, "") ??
+                        entry?.main_form ??
+                        "";
+
+                      return (
+                        <View
+                          key={`${prefix}-${index}`}
+                          style={styles.prefixItem}
+                        >
+                          <Text style={styles.prefixHebrew}>{prefixText}</Text>
+                          {transliteration ? (
+                            <Text style={styles.prefixTransliteration}>
+                              {transliteration}
+                            </Text>
+                          ) : null}
+                          {meanings.length ? (
+                            <Text style={styles.prefixMeaning}>
+                              {meanings.join(", ")}
+                            </Text>
+                          ) : null}
+                        </View>
+                      );
+                    })}
+                  </View>
+                ) : null}
+              </>
             ) : (
-              <Text style={styles.emptyText}>No instances available</Text>
+              <>
+                {/* Instances section */}
+                <Text style={styles.sectionLabel}>Appears In</Text>
+                {lexiconEntry?.instances?.length || word?.instances?.length ? (
+                  <View style={styles.instancesContainer}>
+                    {(
+                      (lexiconEntry?.instances ?? word?.instances ?? []) as (
+                        | string
+                        | { verse: string; text: string }
+                      )[]
+                    )
+                      .slice(0, showAllInstances ? undefined : 10)
+                      .map((instance, index) => {
+                        const verseRef =
+                          typeof instance === "string"
+                            ? instance
+                            : instance.verse;
+                        const cleanedRef = verseRef.replace(/\./g, "");
+                        const verseId = parseVerseReference(cleanedRef);
+                        return (
+                          <Pressable
+                            key={`${verseRef}-${index}`}
+                            style={({ pressed }) => [
+                              styles.instancePill,
+                              pressed && styles.instancePillPressed,
+                            ]}
+                            onPress={() => {
+                              if (verseId) {
+                                sheetRef.current?.close();
+                                router.push({
+                                  pathname: "/verse-detail",
+                                  params: { id: verseId },
+                                });
+                              }
+                            }}
+                          >
+                            <Text style={styles.instanceRef}>{verseRef}</Text>
+                          </Pressable>
+                        );
+                      })}
+                    {!showAllInstances &&
+                    (lexiconEntry?.instances?.length ??
+                      word?.instances?.length ??
+                      0) > 10 ? (
+                      <Pressable
+                        style={styles.showMoreButton}
+                        onPress={() => setShowAllInstances(true)}
+                      >
+                        <Text style={styles.showMoreText}>
+                          Show{" "}
+                          {(lexiconEntry?.instances?.length ??
+                            word?.instances?.length ??
+                            0) - 10}{" "}
+                          more
+                        </Text>
+                      </Pressable>
+                    ) : null}
+                  </View>
+                ) : (
+                  <Text style={styles.emptyText}>No instances available</Text>
+                )}
+              </>
             )}
-          </>
-        )}
           </>
         )}
       </BottomSheetScrollView>

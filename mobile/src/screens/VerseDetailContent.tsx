@@ -230,6 +230,8 @@ export const VerseDetailContent = () => {
         // If we're already on this tab, open the navigation sheet
         if (navigation.isFocused()) {
           e.preventDefault();
+          // Close word analysis sheet if it's open
+          sheetRef.current?.close();
           navigationSheetRef.current?.snapToIndex(0);
         }
       },
@@ -281,6 +283,8 @@ export const VerseDetailContent = () => {
   );
 
   const handleWordPress = useCallback((word: typeof selectedWord) => {
+    // Close navigation sheet if it's open
+    navigationSheetRef.current?.close();
     setSelectedWord(word);
     sheetRef.current?.expand();
   }, []);
@@ -417,12 +421,14 @@ export const VerseDetailContent = () => {
           />
         </View>
       </SafeAreaView>
-      <WordAnalysisBottomSheet
-        sheetRef={sheetRef}
-        word={selectedWord}
-        currentVerseId={currentVerseId}
-        onClose={() => sheetRef.current?.close()}
-      />
+      {selectedWord ? (
+        <WordAnalysisBottomSheet
+          sheetRef={sheetRef}
+          word={selectedWord}
+          currentVerseId={currentVerseId}
+          onClosed={() => setSelectedWord(null)}
+        />
+      ) : null}
       <NavigationSheet
         sheetRef={navigationSheetRef}
         currentBookId={verse?.bookId ?? bookId}

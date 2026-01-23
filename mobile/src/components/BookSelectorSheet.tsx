@@ -153,7 +153,7 @@ export const BookSelectorSheet = ({
         setBooksMeta(books);
         setErrorMessage(null);
       } catch (error) {
-        console.error('Failed to load books:', error);
+        console.error("Failed to load books:", error);
         if (!isMounted) return;
         setBooksMeta([]);
         setErrorMessage("Unable to load books from the server.");
@@ -163,7 +163,9 @@ export const BookSelectorSheet = ({
     };
 
     loadBooks();
-    return () => { isMounted = false; };
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const filteredBooks = useMemo(() => {
@@ -193,11 +195,17 @@ export const BookSelectorSheet = ({
     [],
   );
 
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleSheetChanges = useCallback(
     (index: number) => {
+      console.debug("BookSelectorSheet onChange", { index });
       if (index === -1) {
         setSearchQuery("");
+        setIsOpen(false);
         onClose?.();
+      } else {
+        setIsOpen(true);
       }
     },
     [onClose],
@@ -237,9 +245,7 @@ export const BookSelectorSheet = ({
     () => (
       <View style={styles.emptyContainer}>
         <Text style={styles.emptyText}>
-          {loading
-            ? 'Loading books...'
-            : errorMessage ?? 'No books found'}
+          {loading ? "Loading books..." : (errorMessage ?? "No books found")}
         </Text>
       </View>
     ),
@@ -262,12 +268,15 @@ export const BookSelectorSheet = ({
       <View style={styles.header}>
         <View style={styles.titleRow}>
           <Text style={styles.title}>Select Book</Text>
-          <Pressable
-            style={styles.closeButton}
-            onPress={() => sheetRef.current?.close()}
-          >
-            <Ionicons name="close" size={18} color={colors.textSecondary} />
-          </Pressable>
+          {isOpen && (
+            <Pressable
+              style={styles.closeButton}
+              onPress={() => sheetRef.current?.close()}
+              testID="bookselector-close-button"
+            >
+              <Ionicons name="close" size={18} color={colors.textSecondary} />
+            </Pressable>
+          )}
         </View>
         <View
           style={[

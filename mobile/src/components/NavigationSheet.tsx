@@ -355,15 +355,21 @@ export const NavigationSheet = ({
     [],
   );
 
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleSheetChanges = useCallback(
     (index: number) => {
+      console.debug("NavigationSheet onChange", { index });
       if (index === -1) {
         // Reset state when closed
         setStep("book");
         setSearchQuery("");
         setSelectedBookId(currentBookId);
         setSelectedChapter(currentChapter);
+        setIsOpen(false);
         onClose?.();
+      } else {
+        setIsOpen(true);
       }
     },
     [onClose, currentBookId, currentChapter],
@@ -485,6 +491,7 @@ export const NavigationSheet = ({
       backdropComponent={renderBackdrop}
       keyboardBehavior="interactive"
       keyboardBlurBehavior="restore"
+      animateOnMount={false}
     >
       <View style={styles.header}>
         <View style={styles.titleRow}>
@@ -503,12 +510,15 @@ export const NavigationSheet = ({
             />
           </Pressable>
           <Text style={styles.title}>{getTitle()}</Text>
-          <Pressable
-            style={styles.closeButton}
-            onPress={() => sheetRef.current?.close()}
-          >
-            <Ionicons name="close" size={18} color={colors.textSecondary} />
-          </Pressable>
+          {isOpen && (
+            <Pressable
+              style={styles.closeButton}
+              onPress={() => sheetRef.current?.close()}
+              testID="navigation-close-button"
+            >
+              <Ionicons name="close" size={18} color={colors.textSecondary} />
+            </Pressable>
+          )}
         </View>
 
         {/* Breadcrumb */}
