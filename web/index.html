@@ -1,19 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>davar.bible</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta
+      name="theme-color"
+      content="#faf6f0"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#3c3836"
+      media="(prefers-color-scheme: dark)"
+    />
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Davar</title>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <meta name="theme-color" content="#faf6f0" media="(prefers-color-scheme: light)" />
-      <meta name="theme-color" content="#3c3836" media="(prefers-color-scheme: dark)" />
-    </head>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="davar.bible" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://davar.bible" id="og-url" />
+    <meta
+      property="og:image"
+      content="https://davar.bible/og-image.png"
+      id="og-image"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:description"
+      content="Do you wanna learn to read the Bible in Hebrew?"
+      id="og-description"
+    />
+    <meta property="og:locale" content="en_US" id="og-locale" />
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="davar.bible" />
+    <meta
+      name="twitter:description"
+      content="Do you wanna learn to read the Bible in Hebrew?"
+      id="twitter-description"
+    />
+    <meta
+      name="twitter:image"
+      content="https://davar.bible/og-image.png"
+      id="twitter-image"
+    />
+
+    <!-- Language Detection and Dynamic Meta Tag Setting -->
+    <script>
+      (function () {
+        // Get user's preferred language
+        const userLang = navigator.language || navigator.userLanguage;
+        const primaryLang = userLang.split("-")[0];
+
+        // Define descriptions by language
+        const descriptions = {
+          es: "¿Quieres aprender a leer la Biblia en hebreo?",
+          he: 'בא לך ללמוד לקרוא את התנ"ך בעברית?',
+          en: "Do you wanna learn to read the Bible in Hebrew?",
+        };
+
+        // Determine description based on language
+        const description = descriptions[primaryLang] || descriptions.en;
+        const locale =
+          primaryLang === "es"
+            ? "es_ES"
+            : primaryLang === "he"
+              ? "he_IL"
+              : "en_US";
+
+        // Get the image URL dynamically
+        const imageUrl = window.location.origin + "/og-image.png";
+
+        // Set Open Graph meta tags
+        document
+          .getElementById("og-description")
+          .setAttribute("content", description);
+        document.getElementById("og-image").setAttribute("content", imageUrl);
+        document
+          .getElementById("og-url")
+          .setAttribute("content", window.location.origin);
+        document.getElementById("og-locale").setAttribute("content", locale);
+
+        // Set Twitter Card meta tags
+        document
+          .getElementById("twitter-description")
+          .setAttribute("content", description);
+        document
+          .getElementById("twitter-image")
+          .setAttribute("content", imageUrl);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
