@@ -546,17 +546,21 @@ CREATE TABLE user_progress (
 
 ```bash
 # Backend
-DAVAR_API_KEY=your-secure-api-key
+# NOTE: Do not treat DAVAR_API_KEY as a secret for client auth if the same
+# value is shipped to web/mobile bundles (VITE_API_KEY/EXPO_PUBLIC_API_KEY).
+# Use it only for server-to-server or local dev tooling, and move real
+# client authentication to per-user tokens/sessions.
+DAVAR_API_KEY=your-non-secret-dev-identifier
 DAVAR_SUPABASE_URL=https://your-project.supabase.co
 DAVAR_SUPABASE_KEY=your-supabase-anon-key
 
-# Web
+# Web (public; bundled into client)
 VITE_API_BASE_URL=https://api.davar.app
-VITE_API_KEY=your-api-key
+VITE_API_KEY=your-public-client-identifier
 
-# Mobile
+# Mobile (public; bundled into client)
 EXPO_PUBLIC_API_BASE_URL=https://api.davar.app
-EXPO_PUBLIC_API_KEY=your-api-key
+EXPO_PUBLIC_API_KEY=your-public-client-identifier
 ```
 
 ---

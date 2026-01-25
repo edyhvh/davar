@@ -3,6 +3,7 @@ Configuration settings for Davar FastAPI backend
 """
 
 from pathlib import Path
+import json
 from pydantic_settings import BaseSettings
 from typing import List, Optional
 from pydantic import field_validator
@@ -25,9 +26,20 @@ class Settings(BaseSettings):
     @field_validator("allowed_origins", mode="before")
     @classmethod
     def parse_allowed_origins(cls, v):
-        """Parse comma-separated string or list"""
+        """Parse JSON array or comma-separated string into a list."""
         if isinstance(v, str):
-            return [origin.strip() for origin in v.split(",")]
+            raw = v.strip()
+            if not raw:
+                return []
+            if raw.startswith("["):
+                try:
+                    parsed = json.loads(raw)
+                except json.JSONDecodeError:
+                    parsed = raw
+                else:
+                    if isinstance(parsed, list):
+                        return [str(origin).strip() for origin in parsed if str(origin).strip()]
+            return [origin.strip() for origin in raw.split(",") if origin.strip()]
         return v
 
     # Rate Limiting
@@ -55,7 +67,7 @@ class Settings(BaseSettings):
         return str(path)
 
     class Config:
-        env_file = "/Users/jhonny/davar/backend/.env"
+        env_file = str(BACKEND_ROOT / ".env")
         env_file_encoding = "utf-8"
         env_prefix = "DAVAR_"
         case_sensitive = False
