@@ -15,6 +15,8 @@ from .models import TransliterationResult, WordItem
 
 logger = logging.getLogger(__name__)
 
+EXCLUDED_WORD_FIELDS = ("lemma", "text_no_nikud")
+
 
 @dataclass
 class BookStats:
@@ -73,8 +75,10 @@ def _word_items_from_verse(
         word_items.append(item)
 
         output_word = dict(word)
-        output_word.pop("lemma", None)
-        output_word.pop("text_no_nikud", None)
+        # Remove fields not needed in transliteration output to keep files lean
+        # and avoid duplicating lemma/normalized text already present in lexicon data.
+        for field in EXCLUDED_WORD_FIELDS:
+            output_word.pop(field, None)
         output_word["id"] = item.word_id
         output_word["translit_en"] = ""
         output_word["translit_es"] = ""
@@ -106,7 +110,8 @@ def _load_book_words(
     output_verses: List[Dict] = []
 
     chapter_files = _iter_chapter_files(book_dir)
-    logger.info("Loading %s chapters from %s...", len(chapter_files), book_dir.name)
+    logger.info("Loading %s chapters from %s...",
+                len(chapter_files), book_dir.name)
 
     for chapter_file in chapter_files:
         with open(chapter_file, "r", encoding="utf-8") as f:
@@ -151,7 +156,8 @@ def transliterate_book_local(
     source_dir = TANAKH_DIR if corpus == "tanakh" else BESORAH_DIR
     source_name = "tanakh" if corpus == "tanakh" else "besorah"
 
-    verses_word_items, output_verses = _load_book_words(book_id, source_dir, source_name)
+    verses_word_items, output_verses = _load_book_words(
+        book_id, source_dir, source_name)
 
     transliterator = LocalTransliterator()
     stats = BookStats(book_id=book_id)

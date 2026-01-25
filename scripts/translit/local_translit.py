@@ -86,6 +86,19 @@ def _has_any_vowel(tokens: Iterable[Tuple[str, List[str]]]) -> bool:
     return False
 
 
+def _is_vav_dagesh_vowel(letter: str, marks: List[str]) -> bool:
+    """Return True when וּ is functioning as a 'u' vowel (shuruk).
+
+    This is when the letter is ו with a dagesh and no other vowel marks
+    besides an optional sheva, indicating a vowel sound rather than a
+    consonantal 'v'.
+    """
+    if letter != "ו":
+        return False
+    mark_set = set(marks)
+    return DAGESH in mark_set and not (mark_set & (VOWEL_MARKS - {SHEVA}))
+
+
 def _vowel_from_marks(letter: str, marks: List[str]) -> str:
     mark_set = set(marks)
     if HOLAM in mark_set:
@@ -94,7 +107,7 @@ def _vowel_from_marks(letter: str, marks: List[str]) -> str:
         return "o"
     if QUBUTS in mark_set:
         return "u"
-    if letter == "ו" and DAGESH in mark_set and not (mark_set & (VOWEL_MARKS - {SHEVA})):
+    if _is_vav_dagesh_vowel(letter, marks):
         return "u"
     if HIRIQ in mark_set:
         return "i"
@@ -142,7 +155,7 @@ def _consonant_for(letter: str, marks: List[str], lang: str, use_vowels: bool) -
         return "h"
 
     if base == "ו":
-        if use_vowels and (HOLAM in mark_set or (DAGESH in mark_set and not (mark_set & (VOWEL_MARKS - {SHEVA})))):
+        if use_vowels and (HOLAM in mark_set or _is_vav_dagesh_vowel(letter, marks)):
             return ""
         return "v"
 
@@ -165,7 +178,12 @@ def _consonant_for(letter: str, marks: List[str], lang: str, use_vowels: bool) -
     return mapping.get(base, "")
 
 
-def _transliterate_tokens(tokens: List[Tuple[str, List[str]]], lang: str, use_vowels: bool) -> str:
+def _transliterate_tokens(
+    tokens: List[Tuple[str, List[str]]],
+    lang: str,
+    use_vowels: bool,
+    source_text: str,
+) -> str:
     parts: List[str] = []
     for letter, marks in tokens:
         consonant = _consonant_for(letter, marks, lang, use_vowels)
@@ -173,7 +191,8 @@ def _transliterate_tokens(tokens: List[Tuple[str, List[str]]], lang: str, use_vo
         parts.append(f"{consonant}{vowel}")
 
     result = "".join(parts)
-    if tokens:
+    normalized_source = _normalize_word(source_text)
+    if tokens and normalized_source.endswith("ה"):
         last_letter = FINAL_MAP.get(tokens[-1][0], tokens[-1][0])
         if last_letter == "ה" and not result.endswith("h"):
             result += "h"
@@ -186,8 +205,8 @@ class LocalTransliterator:
     def transliterate_word(self, text: str) -> TransliterationResult:
         tokens = _tokenize(text)
         use_vowels = _has_any_vowel(tokens)
-        translit_en = _transliterate_tokens(tokens, "en", use_vowels)
-        translit_es = _transliterate_tokens(tokens, "es", use_vowels)
+        translit_en = _transliterate_tokens(tokens, "en", use_vowels, text)
+        translit_es = _transliterate_tokens(tokens, "es", use_vowels, text)
         return TransliterationResult(translit_en=translit_en, translit_es=translit_es)
 
     def translate_batch(self, items: List[WordItem]) -> BatchResult:

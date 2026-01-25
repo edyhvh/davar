@@ -45,10 +45,16 @@ BESORAH_BOOKS = [
 ]
 
 
+def _is_valid_book_dir(path: Path) -> bool:
+    """Return True if the path represents a valid book directory."""
+    return path.is_dir() and not path.name.startswith(".") and path.name != "raw"
+
+
 def get_available_books(corpus: str) -> list:
     """Return list of available book directories for a corpus."""
     source_dir = TANAKH_DIR if corpus == "tanakh" else BESORAH_DIR
-    return sorted([p.name for p in source_dir.iterdir() if p.is_dir() and not p.name.startswith(".") and p.name != "raw"])
+    books = [p.name for p in source_dir.iterdir() if _is_valid_book_dir(p)]
+    return sorted(books)
 
 
 def parse_args():
@@ -119,7 +125,8 @@ def main():
     failed_books = []
 
     logger.info("="*60)
-    logger.info("Starting transliteration for %s (%s books)", args.corpus.upper(), total_books)
+    logger.info("Starting transliteration for %s (%s books)",
+                args.corpus.upper(), total_books)
     logger.info("Token budget per batch: %s", args.token_budget)
     logger.info("Dry run: %s", args.dry_run)
     logger.info("="*60)
@@ -127,7 +134,8 @@ def main():
     for book_index, book_id in enumerate(books_to_process, start=1):
         logger.info("")
         logger.info("-"*60)
-        logger.info("[%s/%s] Starting book: %s", book_index, total_books, book_id)
+        logger.info("[%s/%s] Starting book: %s",
+                    book_index, total_books, book_id)
         logger.info("-"*60)
 
         try:
@@ -156,7 +164,8 @@ def main():
             )
 
         except Exception as e:
-            logger.error("[%s/%s] Book %s FAILED: %s", book_index, total_books, book_id, e)
+            logger.error("[%s/%s] Book %s FAILED: %s",
+                         book_index, total_books, book_id, e)
             failed_books.append(book_id)
             continue
 
@@ -168,7 +177,8 @@ def main():
     logger.info("TRANSLITERATION COMPLETE")
     logger.info("="*60)
     logger.info("Corpus: %s", args.corpus)
-    logger.info("Books processed: %s/%s", total_books - len(failed_books), total_books)
+    logger.info("Books processed: %s/%s", total_books -
+                len(failed_books), total_books)
     logger.info("Total words: %s", total_words)
     logger.info("Total batches: %s", total_batches)
     logger.info("Total input tokens: %s", total_input_tokens)
