@@ -2,7 +2,6 @@
 Configuration for per-word transliteration pipeline.
 """
 
-import os
 from pathlib import Path
 from typing import Optional
 from dotenv import load_dotenv
@@ -14,6 +13,7 @@ try:
     if ENV_FILE.exists() and ENV_FILE.is_file():
         load_dotenv(ENV_FILE, override=False)
 except (PermissionError, IOError):
+    # Gracefully skip loading .env if file is inaccessible (e.g., in restricted environments)
     pass
 
 DATA_DIR = PROJECT_ROOT / "data"
