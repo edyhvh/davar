@@ -2,18 +2,45 @@
 Configuration settings for Davar FastAPI backend
 """
 
+from pathlib import Path
+import json
 from pydantic_settings import BaseSettings
-from typing import List
+from typing import List, Optional
+from pydantic import field_validator
+
+
+BACKEND_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = BACKEND_ROOT.parent
+DEFAULT_DATA_PATH = PROJECT_ROOT / "data"
 
 
 class Settings(BaseSettings):
     """Application settings with environment variable support"""
 
     # API Security
-    api_key: str
+    api_key: str = ""
 
     # CORS Settings
     allowed_origins: List[str] = ["http://localhost:2221"]
+
+    @field_validator("allowed_origins", mode="before")
+    @classmethod
+    def parse_allowed_origins(cls, v):
+        """Parse JSON array or comma-separated string into a list."""
+        if isinstance(v, str):
+            raw = v.strip()
+            if not raw:
+                return []
+            if raw.startswith("["):
+                try:
+                    parsed = json.loads(raw)
+                except json.JSONDecodeError:
+                    parsed = raw
+                else:
+                    if isinstance(parsed, list):
+                        return [str(origin).strip() for origin in parsed if str(origin).strip()]
+            return [origin.strip() for origin in raw.split(",") if origin.strip()]
+        return v
 
     # Rate Limiting
     rate_limit: str = "100/minute"
@@ -21,13 +48,30 @@ class Settings(BaseSettings):
     # Environment
     env: str = "development"
 
-    # Data Source Paths (relative to backend directory)
-    data_path: str = "../data"
+    # Supabase (future user data)
+    supabase_url: Optional[str] = None
+    supabase_key: Optional[str] = None
+
+    # Data Source Paths (absolute to avoid cwd issues)
+    data_path: str = str(DEFAULT_DATA_PATH)
+
+    @field_validator("data_path", mode="before")
+    @classmethod
+    def resolve_data_path(cls, v):
+        """Resolve relative paths against the project root."""
+        if not v:
+            return str(DEFAULT_DATA_PATH)
+        path = Path(str(v))
+        if not path.is_absolute():
+            path = (BACKEND_ROOT / path).resolve()
+        return str(path)
 
     class Config:
-        env_file = ".env"
+        env_file = str(BACKEND_ROOT / ".env")
+        env_file_encoding = "utf-8"
         env_prefix = "DAVAR_"
         case_sensitive = False
+        extra = "ignore"  # Ignore extra environment variables
 
 
 # Global settings instance

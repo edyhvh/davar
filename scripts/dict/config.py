@@ -51,6 +51,7 @@ class Config:
         self.STRONGS_FILE = self.RAW_DIR / 'strongs_hebrew_dict_en.json'
         self.STRONG_REFS_FILE = self.RAW_DIR / 'strong_refs.json'
         self.BDB_XML = self.RAW_DIR / 'BrownDriverBriggs.xml'
+        self.LEXICAL_INDEX = self.RAW_DIR / 'LexicalIndex.xml'
         self.LEXICON_LIST_FILE = self.SCRIPTS_DIR / 'lexicon_100_percent_list.json'
 
         # Create output directories if they don't exist

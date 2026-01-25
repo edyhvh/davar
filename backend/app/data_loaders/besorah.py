@@ -6,13 +6,13 @@ Loads Hebrew text from Delitzsch parsed JSON files
 import os
 from typing import Dict, List, Any, Optional
 from pathlib import Path
-from . import DataLoader
+from .base import DataLoader
 
 
 class BesorahLoader(DataLoader):
     """Loader for Besorah Hebrew text from Delitzsch data"""
 
-    def __init__(self, data_path: str = None):
+    def __init__(self, data_path: Optional[str] = None):
         super().__init__(data_path)
         self.delitzsch_path = self.data_path / "delitzsch_parsed"
 

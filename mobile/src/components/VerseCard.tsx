@@ -12,11 +12,56 @@ import Animated, {
 import { NeumorphCard } from "@/src/components/ui/NeumorphCard";
 import { getColors, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
-import type { MockVerse } from "@/src/constants/mockData";
+import type { DisplayVerse } from "@/src/services/scripture";
+import {
+  getPrefixSegments,
+  stripCantillation,
+  stripNikud,
+  stripMeteg,
+} from "@/src/utils/hebrew";
+
+const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
+
+const renderTranslationWithItalics = (
+  translation: string,
+  italicStyle: object,
+) => {
+  const segments: (string | JSX.Element)[] = [];
+  const emPattern = /<em>(.*?)<\/em>/gi;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let index = 0;
+
+  while ((match = emPattern.exec(translation)) !== null) {
+    const start = match.index;
+    const end = start + match[0].length;
+    const plainText = translation.slice(lastIndex, start);
+
+    if (plainText) {
+      segments.push(sanitizeEmTags(plainText));
+    }
+
+    segments.push(
+      <Text key={`em-${index}`} style={italicStyle}>
+        {match[1]}
+      </Text>,
+    );
+
+    lastIndex = end;
+    index += 1;
+  }
+
+  const trailingText = translation.slice(lastIndex);
+  if (trailingText) {
+    segments.push(sanitizeEmTags(trailingText));
+  }
+
+  return segments;
+};
 
 type VerseCardProps = {
-  verse: MockVerse;
-  onWordPress?: (word: MockVerse["words"][number]) => void;
+  verse: DisplayVerse;
+  onWordPress?: (word: DisplayVerse["words"][number]) => void;
   onVersePress?: () => void;
   showWordHint?: boolean;
   variant?: "card" | "detail";
@@ -34,9 +79,12 @@ const createStyles = (
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.body,
       lineHeight: typography.sizes.body * typography.lineHeights.body,
-      color: colors.textSecondary,
+      color: colors.textPrimary,
       marginTop: spacing[6],
       textAlign: "center",
+    },
+    translationItalic: {
+      fontStyle: "italic",
     },
     hebrewRow: {
       flexDirection: "row-reverse",
@@ -94,6 +142,10 @@ export const VerseCard = ({
   );
   const showQumran = useAppStore((state: AppState) => state.showQumran);
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
+  const showCantillation = useAppStore(
+    (state: AppState) => state.showCantillation,
+  );
+  const showNikud = useAppStore((state: AppState) => state.showNikud);
   const colors = getColors(themeMode);
   const styles = useMemo(
     () => createStyles(colors, hebrewFontScale),
@@ -131,11 +183,51 @@ export const VerseCard = ({
         {verse.words.map((word, index) => {
           const isFirst = index === 0;
           const shouldHighlight = showWordHint && isFirst;
+
+          // Apply nikud and cantillation settings
+          let displayText = word.text;
+          if (!showNikud) {
+            displayText = stripNikud(displayText);
+          }
+          if (!showCantillation) {
+            displayText = stripCantillation(displayText);
+          }
+          displayText = stripMeteg(displayText);
+          displayText = displayText.replace(/\//g, "");
+
+          const prefixSegments = word.prefixes?.length
+            ? getPrefixSegments(displayText, word.prefixes)
+            : null;
+
           const wordStyles = [
             styles.hebrewWordPressable,
             showQumran && word.hasQumranVariant && styles.qumranHighlight,
             shouldHighlight && highlightStyle,
           ];
+
+          const renderWordContent = () => {
+            if (prefixSegments?.prefixes?.length) {
+              return (
+                <View style={{ flexDirection: "row" }}>
+                  <Text
+                    style={[styles.hebrewWord, { color: colors.textSecondary }]}
+                  >
+                    {prefixSegments.prefixes.join("")}
+                  </Text>
+                  <Text
+                    style={[styles.hebrewWord, { color: colors.textPrimary }]}
+                  >
+                    {prefixSegments.root}
+                  </Text>
+                </View>
+              );
+            }
+            return (
+              <Text style={styles.hebrewWord}>
+                {displayText}
+              </Text>
+            );
+          };
 
           if (isFirst) {
             return (
@@ -160,7 +252,7 @@ export const VerseCard = ({
                       style={[StyleSheet.absoluteFillObject, highlightStyle]}
                     />
                   ) : null}
-                  <Text style={styles.hebrewWord}>{word.text}</Text>
+                  {renderWordContent()}
                 </Pressable>
               </View>
             );
@@ -179,13 +271,20 @@ export const VerseCard = ({
                   style={[StyleSheet.absoluteFillObject, highlightStyle]}
                 />
               ) : null}
-              <Text style={styles.hebrewWord}>{word.text}</Text>
+              {renderWordContent()}
             </Pressable>
           );
         })}
       </View>
       {hebrewOnly ? null : (
-        <Text style={styles.translation}>{verse.translation}</Text>
+        <Text style={styles.translation}>
+          {/<\/?em>/i.test(verse.translation)
+            ? renderTranslationWithItalics(
+                verse.translation,
+                styles.translationItalic,
+              )
+            : verse.translation}
+        </Text>
       )}
     </View>
   );

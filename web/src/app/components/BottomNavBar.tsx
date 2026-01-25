@@ -21,7 +21,7 @@ export function BottomNavBar({
               className="p-4 rounded-full bg-[var(--background)] hover:bg-[var(--muted)] transition-all hover:scale-110 active:scale-95"
               aria-label="Home"
             >
-              <Home className="w-6 h-6 text-[var(--text-secondary)]" />
+              <Home className="w-6 h-6 text-[var(--text-primary)]" />
             </button>
 
             {/* Main Action Button - Tekhelet ACCENT ONLY */}

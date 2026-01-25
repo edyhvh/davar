@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
@@ -14,7 +14,8 @@ import {
   spacing,
   typography,
 } from "@/src/theme";
-import { mockBooks, type MockBook } from "@/src/constants/mockData";
+import { getBooks } from "@/src/services/api";
+import type { BookResponse } from "@/src/types/api";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 
 type BookSelectorSheetProps = {
@@ -23,9 +24,6 @@ type BookSelectorSheetProps = {
   onSelectBook: (bookId: string) => void;
   onClose?: () => void;
 };
-
-const stripNikud = (value: string) =>
-  value.normalize("NFD").replace(/[\u0591-\u05C7]/g, "");
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
   StyleSheet.create({
@@ -142,19 +140,47 @@ export const BookSelectorSheet = ({
   const styles = useMemo(() => createStyles(colors), [colors]);
   const snapPoints = useMemo(() => ["70%", "90%"], []);
   const [searchQuery, setSearchQuery] = useState("");
+  const [booksMeta, setBooksMeta] = useState<BookResponse[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    const loadBooks = async () => {
+      try {
+        const books = await getBooks();
+        if (!isMounted) return;
+        setBooksMeta(books);
+        setErrorMessage(null);
+      } catch (error) {
+        console.error("Failed to load books:", error);
+        if (!isMounted) return;
+        setBooksMeta([]);
+        setErrorMessage("Unable to load books from the server.");
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    };
+
+    loadBooks();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const filteredBooks = useMemo(() => {
     if (!searchQuery.trim()) {
-      return mockBooks;
+      return booksMeta;
     }
     const query = searchQuery.toLowerCase();
-    return mockBooks.filter(
+    return booksMeta.filter(
       (book) =>
         book.name.toLowerCase().includes(query) ||
-        stripNikud(book.hebrewName).includes(query) ||
-        book.hebrewName.includes(query),
+        book.hebrew_name.toLowerCase().includes(query) ||
+        book.hebrew_transliteration.toLowerCase().includes(query) ||
+        book.spanish_name.toLowerCase().includes(query),
     );
-  }, [searchQuery]);
+  }, [booksMeta, searchQuery]);
 
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
@@ -169,11 +195,17 @@ export const BookSelectorSheet = ({
     [],
   );
 
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleSheetChanges = useCallback(
     (index: number) => {
+      console.debug("BookSelectorSheet onChange", { index });
       if (index === -1) {
         setSearchQuery("");
+        setIsOpen(false);
         onClose?.();
+      } else {
+        setIsOpen(true);
       }
     },
     [onClose],
@@ -188,7 +220,7 @@ export const BookSelectorSheet = ({
   );
 
   const renderBookItem = useCallback(
-    ({ item }: { item: MockBook }) => {
+    ({ item }: { item: BookResponse }) => {
       const isSelected = item.id === currentBookId;
       return (
         <Pressable
@@ -202,7 +234,7 @@ export const BookSelectorSheet = ({
           ]}
         >
           <Text style={styles.bookEnglish}>{item.name}</Text>
-          <Text style={styles.bookHebrew}>{stripNikud(item.hebrewName)}</Text>
+          <Text style={styles.bookHebrew}>{item.hebrew_name}</Text>
         </Pressable>
       );
     },
@@ -212,10 +244,12 @@ export const BookSelectorSheet = ({
   const renderListEmpty = useCallback(
     () => (
       <View style={styles.emptyContainer}>
-        <Text style={styles.emptyText}>No books found</Text>
+        <Text style={styles.emptyText}>
+          {loading ? "Loading books..." : (errorMessage ?? "No books found")}
+        </Text>
       </View>
     ),
-    [styles],
+    [styles, loading, errorMessage],
   );
 
   return (
@@ -234,12 +268,15 @@ export const BookSelectorSheet = ({
       <View style={styles.header}>
         <View style={styles.titleRow}>
           <Text style={styles.title}>Select Book</Text>
-          <Pressable
-            style={styles.closeButton}
-            onPress={() => sheetRef.current?.close()}
-          >
-            <Ionicons name="close" size={18} color={colors.textSecondary} />
-          </Pressable>
+          {isOpen && (
+            <Pressable
+              style={styles.closeButton}
+              onPress={() => sheetRef.current?.close()}
+              testID="bookselector-close-button"
+            >
+              <Ionicons name="close" size={18} color={colors.textSecondary} />
+            </Pressable>
+          )}
         </View>
         <View
           style={[
@@ -280,7 +317,7 @@ export const BookSelectorSheet = ({
       </View>
       <BottomSheetFlatList
         data={filteredBooks}
-        keyExtractor={(item: MockBook) => item.id}
+        keyExtractor={(item: BookResponse) => item.id}
         renderItem={renderBookItem}
         contentContainerStyle={styles.listContent}
         showsVerticalScrollIndicator={false}

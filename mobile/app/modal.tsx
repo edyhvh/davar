@@ -7,6 +7,7 @@ import { getColors } from "@/src/theme";
 import { mockVerses } from "@/src/constants/mockData";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { BookSelectorSheet } from "@/src/components/BookSelectorSheet";
+import { fetchMetadata } from "@/src/services/metadata";
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
   StyleSheet.create({
@@ -40,12 +41,20 @@ export default function ModalScreen() {
   }, []);
 
   const handleSelectBook = useCallback(
-    (bookId: string) => {
-      const nextVerse = mockVerses.find((verse) => verse.bookId === bookId);
-      if (nextVerse) {
-        setCurrentVerseId(nextVerse.id);
+    async (bookId: string) => {
+      try {
+        const metadata = await fetchMetadata();
+        const chapters = metadata?.chapter_counts?.[bookId];
+        const firstChapter = chapters && chapters.length > 0 ? chapters[0] : 1;
+        console.debug("Modal: handleSelectBook", { bookId, firstChapter });
+        setCurrentVerseId(`${bookId}-${firstChapter}-1`);
+      } catch (err) {
+        console.debug("Modal: handleSelectBook failed, using fallback firstChapter=1", { bookId, err });
+        // Fallback if metadata fetch fails or book not found
+        setCurrentVerseId(`${bookId}-1-1`);
+      } finally {
+        router.back();
       }
-      router.back();
     },
     [setCurrentVerseId],
   );

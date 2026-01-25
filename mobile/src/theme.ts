@@ -44,7 +44,7 @@ export const getColors = (mode: ThemeMode) => {
     surfaceElevated: "#ECECEC",
     surfaceLightest: "#F5F5F5",
     textPrimary: "#1a1a1a",
-    textSecondary: "#6b6b6b",
+    textSecondary: "#707070",
     textTertiary: "#9a9a9a",
     border: "rgba(0,0,0,0.08)",
     neomorphBg: "#E7E7E7",
@@ -93,6 +93,7 @@ export const typography = {
   families: {
     hebrewScripture: "Cardo_400Regular",
     hebrewUI: "SuezOne_400Regular",
+    latinMeaning: "Jost_400Regular",
     latinUI: "Inter_400Regular",
     latinUIMedium: "Inter_500Medium",
     latinUISemiBold: "Inter_600SemiBold",

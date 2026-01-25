@@ -1,11 +1,14 @@
+import { apiRequest } from "./apiClient";
+
 export interface WordResponse {
   position: number;
   text: string;
-  text_no_nikud: string;
   strong?: string;
   morph?: string;
   prefixes: string[];
   has_dss_variant: boolean;
+  translit_en?: string;
+  translit_es?: string;
 }
 
 export interface DssVariant {
@@ -15,123 +18,107 @@ export interface DssVariant {
   commentary?: string;
 }
 
+export interface TranslationFootnote {
+  marker: string;
+  number: string;
+  word: string;
+  explanation: string;
+}
+
 export interface VerseResponse {
   chapter: number;
   verse: number;
   hebrew: string;
-  hebrew_no_nikud: string;
   words: WordResponse[];
   translation?: string;
   translation_language?: string;
+  translation_footnotes?: TranslationFootnote[];
   dss?: DssVariant[];
 }
 
-const createWordResponses = (
-  hebrew: string,
-  strongMap: Record<number, string> = {},
-  dssPositions: number[] = []
-): WordResponse[] => {
-  return hebrew.split(' ').map((word, index) => {
-    const position = index + 1;
-    return {
-      position,
-      text: word,
-      text_no_nikud: word,
-      strong: strongMap[position],
-      prefixes: [],
-      has_dss_variant: dssPositions.includes(position),
-    };
-  });
+export interface BookResponse {
+  id: string;
+  name: string;
+  section: "torah" | "neviim" | "ketuvim" | "besorah";
+  chapters: number;
+  order: number;
+  hebrew_name: string;
+  hebrew_transliteration: string;
+  spanish_name: string;
+}
+
+type ChapterResponse = { book: string; chapters: number[] };
+type VerseCountResponse = {
+  book: string;
+  chapter: number;
+  verse_count: number;
 };
 
-const makeVerse = (
+export const getBooks = async (): Promise<BookResponse[]> => {
+  return apiRequest<BookResponse[]>("/api/v1/books");
+};
+
+export const lookupBook = async (bookName: string): Promise<BookResponse> => {
+  return apiRequest<BookResponse>(
+    `/api/v1/books/lookup/${encodeURIComponent(bookName)}`,
+  );
+};
+
+export const getChapterCount = async (book: string): Promise<number> => {
+  const response = await apiRequest<ChapterResponse>(
+    `/api/v1/books/${book}/chapters`,
+  );
+  return response.chapters.length;
+};
+
+export const getVerseCount = async (
+  book: string,
+  chapter: number,
+): Promise<number> => {
+  const response = await apiRequest<VerseCountResponse>(
+    `/api/v1/books/${book}/chapters/${chapter}/verses`,
+  );
+  return response.verse_count;
+};
+
+export const getChapterVerses = async (
+  book: string,
+  chapter: number,
+  options?: {
+    language?: "es" | "en";
+    showDss?: boolean;
+    hebrewOnly?: boolean;
+  },
+): Promise<VerseResponse[]> => {
+  const params = new URLSearchParams();
+  if (options?.language) params.set("language", options.language);
+  if (options?.showDss) params.set("show_dss", "true");
+  if (options?.hebrewOnly) params.set("hebrew_only", "true");
+
+  const query = params.toString();
+  const url = query
+    ? `/api/v1/verses/${book}/${chapter}?${query}`
+    : `/api/v1/verses/${book}/${chapter}`;
+  return apiRequest<VerseResponse[]>(url);
+};
+
+export const getVerse = async (
+  book: string,
   chapter: number,
   verse: number,
-  hebrew: string,
-  translation: string,
-  strongMap: Record<number, string> = {},
-  dss?: DssVariant[]
-): VerseResponse => ({
-  chapter,
-  verse,
-  hebrew,
-  hebrew_no_nikud: hebrew,
-  words: createWordResponses(hebrew, strongMap, dss?.map((item) => item.word_position) ?? []),
-  translation,
-  translation_language: 'en',
-  dss,
-});
-
-const mockVerses: Record<string, Record<number, VerseResponse[]>> = {
-  Genesis: {
-    1: [
-      makeVerse(
-        1,
-        1,
-        'בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ',
-        'In the beginning, God created the heavens and the earth.',
-        {
-          1: 'H7225',
-          2: 'H1254',
-          3: 'H430',
-        },
-        [
-          {
-            word_position: 1,
-            dss_text: 'בראשית',
-            manuscript: '1QGen',
-            commentary: 'Orthographic variant without niqqud.',
-          },
-        ]
-      ),
-      makeVerse(
-        1,
-        2,
-        'וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם',
-        'Now the earth was formless and empty, and darkness was over the surface of the deep.',
-        {
-          2: 'H1961',
-          3: 'H8414',
-          4: 'H922',
-        }
-      ),
-      makeVerse(
-        1,
-        3,
-        'וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר',
-        'And God said, “Let there be light,” and there was light.',
-        {
-          1: 'H559',
-          2: 'H430',
-          3: 'H1961',
-          4: 'H216',
-        }
-      ),
-    ],
+  options?: {
+    language?: "es" | "en";
+    showDss?: boolean;
+    hebrewOnly?: boolean;
   },
-};
-
-const defaultBooks = Object.keys(mockVerses);
-
-export const getBooks = (): string[] => defaultBooks;
-
-export const getChapterCount = (book: string): number => {
-  const chapters = mockVerses[book];
-  if (!chapters) return 1;
-  return Object.keys(chapters).length;
-};
-
-export const getVerseCount = (book: string, chapter: number): number => {
-  const verses = mockVerses[book]?.[chapter];
-  return verses?.length ?? 0;
-};
-
-export const getChapterVerses = (book: string, chapter: number): VerseResponse[] => {
-  return mockVerses[book]?.[chapter] ?? [];
-};
-
-export const getVerse = (book: string, chapter: number, verse: number): VerseResponse | null => {
-  const verses = mockVerses[book]?.[chapter];
-  if (!verses) return null;
-  return verses[verse - 1] ?? null;
+): Promise<VerseResponse | null> => {
+  const params = new URLSearchParams();
+  if (options?.language) params.set("language", options.language);
+  if (options?.showDss) params.set("show_dss", "true");
+  if (options?.hebrewOnly) params.set("hebrew_only", "true");
+  const query = params.toString();
+  const url = query
+    ? `/api/v1/verses/${book}/${chapter}/${verse}?${query}`
+    : `/api/v1/verses/${book}/${chapter}/${verse}`;
+  return apiRequest<VerseResponse>(url);
 };

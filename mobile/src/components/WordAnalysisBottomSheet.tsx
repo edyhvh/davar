@@ -1,20 +1,59 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
-  BottomSheetView,
+  BottomSheetScrollView,
   type BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
 import { router } from "expo-router";
 
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
-import type { MockWord } from "@/src/constants/mockData";
+import type { DisplayWord } from "@/src/services/scripture";
+import {
+  stripCantillation,
+  stripNikud,
+  getPrefixSegments,
+  stripMeteg,
+  normalizeHebrewDisplay,
+} from "@/src/utils/hebrew";
+import { apiRequest } from "@/src/services/api";
+import type { LexiconResponse } from "@/src/types/api";
+
+type PrefixResponse = {
+  id: string;
+  main_form?: string;
+  type?: string;
+  transliteration_en?: string;
+  transliteration_es?: string;
+  meanings?: Record<string, string[]>;
+  forms?: string[];
+  notes?: Record<string, string>;
+};
 
 type WordAnalysisBottomSheetProps = {
   sheetRef: React.RefObject<BottomSheet | null>;
-  word?: MockWord | null;
-  onClose?: () => void;
+  currentVerseId?: string;
+  word?:
+    | (DisplayWord & {
+        meanings?: string[];
+        gloss?: string;
+        root?: string;
+        rootTransliteration?: string;
+        rootMeaning?: string;
+        instances?: { verse: string; text: string }[];
+        strong?: string;
+        translit_en?: string;
+        translit_es?: string;
+      })
+    | null;
+  // Called after the sheet has fully closed and any exit animations have completed
+  onClosed?: () => void;
 };
 
 type TabType = "meanings" | "instances";
@@ -57,6 +96,13 @@ const createStyles = (
       letterSpacing: 2,
       marginTop: spacing[1],
     },
+    occurrencesText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.caption,
+      color: colors.textSecondary,
+      textAlign: "center",
+      marginTop: spacing[1],
+    },
     toggleContainer: {
       flexDirection: "row",
       backgroundColor: colors.background,
@@ -97,11 +143,23 @@ const createStyles = (
       marginBottom: spacing[3],
     },
     meaningsText: {
-      fontFamily: typography.families.latinUI,
+      fontFamily: typography.families.latinMeaning,
       fontSize: typography.sizes.h3,
       color: colors.textPrimary,
       textAlign: "center",
       lineHeight: 28,
+    },
+    meaningsList: {
+      alignItems: "center",
+      marginBottom: spacing[4],
+    },
+    meaningsBullet: {
+      fontFamily: typography.families.latinMeaning,
+      fontSize: typography.sizes.h3,
+      color: colors.textPrimary,
+      textAlign: "center",
+      lineHeight: 28,
+      marginBottom: spacing[2],
     },
     rootSection: {
       marginTop: spacing[8],
@@ -155,12 +213,65 @@ const createStyles = (
       color: colors.textPrimary,
       fontWeight: "500",
     },
+    showMoreButton: {
+      paddingVertical: spacing[2],
+      paddingHorizontal: spacing[3],
+      borderRadius: radii.full,
+      backgroundColor: colors.background,
+      borderWidth: 1,
+      borderColor: colors.border,
+      alignItems: "center",
+    },
+    showMoreText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.bodySmall,
+      color: colors.primary,
+      fontWeight: "600",
+    },
     emptyText: {
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.body,
       color: colors.textSecondary,
       textAlign: "center",
       fontStyle: "italic",
+    },
+    prefixesSection: {
+      marginTop: spacing[6],
+      alignItems: "center",
+    },
+    prefixItem: {
+      alignItems: "center",
+      marginBottom: spacing[4],
+    },
+    prefixHebrew: {
+      fontFamily: typography.families.hebrewScripture,
+      fontSize: 40 * hebrewScale,
+      color: colors.textSecondary,
+      textAlign: "center",
+      writingDirection: "rtl",
+      lineHeight: 56 * hebrewScale,
+    },
+    prefixTransliteration: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.bodySmall,
+      color: colors.textSecondary,
+      textTransform: "uppercase",
+      letterSpacing: 2,
+      marginTop: spacing[1],
+    },
+    prefixMeaning: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      color: colors.textPrimary,
+      textAlign: "center",
+      marginTop: spacing[2],
+    },
+    prefixText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      color: colors.textPrimary,
+      textAlign: "center",
+      marginTop: spacing[1],
     },
   });
 
@@ -175,12 +286,12 @@ const bookAbbreviations: Record<string, string> = {
   Josh: "joshua",
   Judg: "judges",
   Ruth: "ruth",
-  "1Sam": "1samuel",
-  "2Sam": "2samuel",
-  "1Kgs": "1kings",
-  "2Kgs": "2kings",
-  "1Chr": "1chronicles",
-  "2Chr": "2chronicles",
+  "1Sam": "samuel1",
+  "2Sam": "samuel2",
+  "1Kgs": "kings1",
+  "2Kgs": "kings2",
+  "1Chr": "chronicles1",
+  "2Chr": "chronicles2",
   Ezra: "ezra",
   Neh: "nehemiah",
   Esth: "esther",
@@ -212,25 +323,25 @@ const bookAbbreviations: Record<string, string> = {
   John: "john",
   Acts: "acts",
   Rom: "romans",
-  "1Cor": "1corinthians",
-  "2Cor": "2corinthians",
+  "1Cor": "corinthians1",
+  "2Cor": "corinthians2",
   Gal: "galatians",
   Eph: "ephesians",
   Phil: "philippians",
   Col: "colossians",
-  "1Thess": "1thessalonians",
-  "2Thess": "2thessalonians",
-  "1Tim": "1timothy",
-  "2Tim": "2timothy",
+  "1Thess": "thessalonians1",
+  "2Thess": "thessalonians2",
+  "1Tim": "timothy1",
+  "2Tim": "timothy2",
   Titus: "titus",
   Phlm: "philemon",
   Heb: "hebrews",
   Jas: "james",
-  "1Pet": "1peter",
-  "2Pet": "2peter",
-  "1John": "1john",
-  "2John": "2john",
-  "3John": "3john",
+  "1Pet": "peter1",
+  "2Pet": "peter2",
+  "1John": "john1",
+  "2John": "john2",
+  "3John": "john3",
   Jude: "jude",
   Rev: "revelation",
 };
@@ -251,18 +362,153 @@ const parseVerseReference = (ref: string): string | null => {
 export const WordAnalysisBottomSheet = ({
   sheetRef,
   word,
-  onClose,
+  currentVerseId,
+  onClosed,
 }: WordAnalysisBottomSheetProps) => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const hebrewFontScale = useAppStore(
     (state: AppState) => state.hebrewFontScale,
   );
+  const language = useAppStore((state: AppState) => state.language);
   const colors = getColors(themeMode);
   const styles = useMemo(
     () => createStyles(colors, hebrewFontScale),
     [colors, hebrewFontScale],
   );
   const [activeTab, setActiveTab] = useState<TabType>("meanings");
+  const [lexiconEntry, setLexiconEntry] = useState<LexiconResponse | null>(
+    null,
+  );
+  const [isLoading, setIsLoading] = useState(false);
+  const [showAllInstances, setShowAllInstances] = useState(false);
+  const [prefixEntries, setPrefixEntries] = useState<
+    Record<string, PrefixResponse | null>
+  >({});
+  const showNikud = useAppStore((state: AppState) => state.showNikud);
+  const showCantillation = useAppStore(
+    (state: AppState) => state.showCantillation,
+  );
+  // Keep in sync with web/src/app/App.tsx transliteration selection logic.
+  const wordTransliteration =
+    language === "en"
+      ? word?.translit_en
+      : language === "es"
+        ? word?.translit_es
+        : undefined;
+
+  const strongNumber = useMemo(() => {
+    if (!word?.strong) return null;
+    const parts = word.strong.split("/").map((part) => part.trim());
+    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
+    return strongPart ?? null;
+  }, [word?.strong]);
+
+  const displayHebrew = useMemo(() => {
+    let base = word?.text ?? lexiconEntry?.hebrew ?? "—";
+    if (!showNikud) {
+      base = stripNikud(base);
+    }
+    if (!showCantillation) {
+      base = stripCantillation(base);
+    }
+    base = stripMeteg(base);
+    return normalizeHebrewDisplay(base).replace(/\//g, "");
+  }, [lexiconEntry?.hebrew, word?.text, showNikud, showCantillation]);
+
+  const prefixSegments = useMemo(() => {
+    if (!word?.text || !word?.prefixes?.length) {
+      return { prefixes: [], root: word?.text ?? "" };
+    }
+    let displayBase = normalizeHebrewDisplay(
+      stripMeteg(stripCantillation(word.text)),
+    );
+    if (!showNikud) {
+      displayBase = stripNikud(displayBase);
+    }
+    return getPrefixSegments(displayBase, word.prefixes);
+  }, [showNikud, word?.text, word?.prefixes]);
+
+  useEffect(() => {
+    const loadLexicon = async () => {
+      if (!strongNumber) {
+        setLexiconEntry(null);
+        return;
+      }
+      setIsLoading(true);
+      try {
+        const params = new URLSearchParams();
+        if (language !== "he") {
+          params.set("language", language);
+        }
+        if (word?.text) {
+          params.set("hebrew", word.text);
+        }
+        const query = params.toString();
+        const url = query
+          ? `/api/v1/lexicon/${strongNumber}?${query}`
+          : `/api/v1/lexicon/${strongNumber}`;
+        const entry = await apiRequest<LexiconResponse>(url);
+        setLexiconEntry(entry);
+        console.debug(
+          "WordAnalysisBottomSheet: lexicon loaded",
+          strongNumber,
+          entry?.hebrew ?? entry?.root_strong ?? null,
+        );
+      } catch {
+        setLexiconEntry(null);
+        console.debug(
+          "WordAnalysisBottomSheet: lexicon fetch failed",
+          strongNumber,
+        );
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadLexicon();
+  }, [strongNumber, language, word?.text]);
+
+  useEffect(() => {
+    // Reset to meanings tab when a new word is selected
+    setActiveTab("meanings");
+    setShowAllInstances(false);
+  }, [word?.strong]);
+
+  useEffect(() => {
+    const loadPrefixes = async () => {
+      if (!word?.prefixes?.length) {
+        setPrefixEntries({});
+        return;
+      }
+
+      const entries: Record<string, PrefixResponse | null> = {};
+      await Promise.all(
+        word.prefixes.map(async (prefixId) => {
+          try {
+            const entry = await apiRequest<PrefixResponse>(
+              `/api/v1/prefixes/${prefixId}`,
+            );
+            entries[prefixId] = entry;
+          } catch {
+            entries[prefixId] = null;
+          }
+        }),
+      );
+
+      setPrefixEntries(entries);
+      console.debug(
+        "WordAnalysisBottomSheet: loaded prefixes",
+        Object.keys(entries),
+      );
+    };
+
+    loadPrefixes();
+  }, [word?.prefixes]);
+
+  useEffect(() => {
+    // Clear lexicon and prefix entries when the current verse changes to avoid showing stale data
+    setLexiconEntry(null);
+    setPrefixEntries({});
+  }, [currentVerseId]);
 
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
@@ -277,141 +523,312 @@ export const WordAnalysisBottomSheet = ({
     [],
   );
 
-  const handleSheetChanges = useCallback(
-    (index: number) => {
-      if (index === -1) {
-        onClose?.();
-        setActiveTab("meanings");
-      }
-    },
-    [onClose],
-  );
+  const handleSheetChanges = useCallback((index: number) => {
+    console.debug("WordAnalysisBottomSheet onChange", { index });
+  }, []);
 
-  const meaningsText = useMemo(() => {
-    if (!word) return "—";
-    const meanings = word.meanings?.length ? word.meanings : [word.gloss];
-    return meanings.filter(Boolean).join(", ") || "—";
-  }, [word]);
+  const handleSheetClose = useCallback(() => {
+    onClosed?.();
+  }, [onClosed]);
+
+  const meaningsList = useMemo(() => {
+    const normalizeForDisplay = (t: string) =>
+      stripCantillation(stripNikud(t)).replace(/\//g, "").trim();
+
+    const formatMeaning = (text: string) => {
+      const cleaned = text.replace(/^[-–—]\s*/, "").trim();
+      if (!cleaned) return cleaned;
+      return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+    };
+
+    let rawMeanings: string[] = [];
+    if (lexiconEntry?.definitions?.length) {
+      rawMeanings = lexiconEntry.definitions
+        .map((item) => (item.text ? normalizeForDisplay(item.text) : ""))
+        .filter(Boolean);
+    } else if (!word) {
+      return ["—"];
+    } else if (
+      word.morph?.includes("Np") ||
+      (!word.meanings?.length && !word.gloss)
+    ) {
+      return ["Proper Name"];
+    } else {
+      const meanings = word.meanings?.length ? word.meanings : [word.gloss];
+      // If user language is not Hebrew, prefer Latin-script meanings to avoid mixing languages
+      const preferLatin = language !== "he";
+      const isLatin = (s: string) => /[A-Za-zÀ-ž0-9]/.test(s);
+      rawMeanings = meanings
+        .map((m) => (m ? normalizeForDisplay(m) : ""))
+        .filter(Boolean)
+        .filter((m) => (preferLatin ? isLatin(m) : true));
+
+      // If filtering removed all items and we have raw ones, fall back to unfiltered normalized list
+      if (!rawMeanings.length && meanings) {
+        rawMeanings = meanings
+          .map((m) => (m ? normalizeForDisplay(m) : ""))
+          .filter(Boolean);
+      }
+    }
+
+    const expanded = rawMeanings.flatMap((meaning) =>
+      meaning
+        .split(/[,;]\s*/)
+        .map((item) => item.trim())
+        .filter(Boolean),
+    );
+
+    const formatted = expanded.map((item) => formatMeaning(item));
+    return formatted.length ? formatted : ["—"];
+  }, [lexiconEntry, word, language]);
+
+  const isDerivedRoot = Boolean(lexiconEntry?.root_strong || word?.root);
 
   const rootMeaningText = useMemo(() => {
+    // If this entry is itself a root, show ALREADY ROOT
+    if (!isDerivedRoot) return "ALREADY ROOT";
+
+    if (lexiconEntry?.root_definitions?.length) {
+      return (
+        lexiconEntry.root_definitions.map((item) => item.text).join(", ") || "—"
+      );
+    }
     if (!word?.rootMeaning) return "—";
     return word.rootMeaning;
-  }, [word]);
+  }, [lexiconEntry, word, isDerivedRoot]);
 
   return (
     <BottomSheet
       ref={sheetRef}
       index={-1}
-      enableDynamicSizing
-      maxDynamicContentSize={600}
+      snapPoints={["50%", "80%"]}
       enablePanDownToClose
       backgroundStyle={styles.sheetBackground}
       handleIndicatorStyle={styles.sheetHandle}
       onChange={handleSheetChanges}
+      onClose={handleSheetClose}
       backdropComponent={renderBackdrop}
+      animateOnMount={false}
     >
-      <BottomSheetView style={styles.content}>
-        {/* Header: Hebrew word + transliteration */}
-        <View style={styles.headerSection}>
-          <Text style={styles.hebrew}>{word?.text ?? "—"}</Text>
-          {word?.transliteration ? (
-            <Text style={styles.transliteration}>{word.transliteration}</Text>
-          ) : null}
-        </View>
-
-        {/* Toggle: Meanings / Instances */}
-        <View style={styles.toggleContainer}>
-          <Pressable
-            style={[
-              styles.toggleButton,
-              activeTab === "meanings" && styles.toggleButtonActive,
-            ]}
-            onPress={() => setActiveTab("meanings")}
-          >
-            <Text
-              style={[
-                styles.toggleText,
-                activeTab === "meanings" && styles.toggleTextActive,
-              ]}
-            >
-              Meanings
+      <BottomSheetScrollView style={styles.content}>
+        {/* Show empty state when no word is selected */}
+        {!word ? (
+          <View style={styles.headerSection}>
+            <Text style={styles.emptyText}>
+              Select a word to see its analysis
             </Text>
-          </Pressable>
-          <Pressable
-            style={[
-              styles.toggleButton,
-              activeTab === "instances" && styles.toggleButtonActive,
-            ]}
-            onPress={() => setActiveTab("instances")}
-          >
-            <Text
-              style={[
-                styles.toggleText,
-                activeTab === "instances" && styles.toggleTextActive,
-              ]}
-            >
-              Instances
-            </Text>
-          </Pressable>
-        </View>
-
-        {/* Tab Content */}
-        {activeTab === "meanings" ? (
-          <>
-            {/* Meanings section */}
-            <Text style={styles.sectionLabel}>Meanings</Text>
-            <Text style={styles.meaningsText}>{meaningsText}</Text>
-
-            {/* Root section */}
-            {word?.root ? (
-              <View style={styles.rootSection}>
-                <Text style={styles.sectionLabel}>Root</Text>
-                <Text style={styles.rootHebrew}>{word.root}</Text>
-                {word.rootTransliteration ? (
-                  <Text style={styles.rootTransliteration}>
-                    {word.rootTransliteration}
-                  </Text>
-                ) : null}
-                <Text style={styles.rootMeaning}>{rootMeaningText}</Text>
-              </View>
-            ) : null}
-          </>
+          </View>
         ) : (
           <>
-            {/* Instances section */}
-            <Text style={styles.sectionLabel}>Appears In</Text>
-            {word?.instances?.length ? (
-              <View style={styles.instancesContainer}>
-                {word.instances.map((instance, index) => {
-                  const verseId = parseVerseReference(instance.verse);
-                  return (
-                    <Pressable
-                      key={`${instance.verse}-${index}`}
-                      style={({ pressed }) => [
-                        styles.instancePill,
-                        pressed && styles.instancePillPressed,
-                      ]}
-                      onPress={() => {
-                        if (verseId) {
-                          sheetRef.current?.close();
-                          router.push({
-                            pathname: "/verse-detail",
-                            params: { id: verseId },
-                          });
-                        }
-                      }}
+            {/* Header: Hebrew word + transliteration */}
+            <View style={styles.headerSection}>
+              <Text style={styles.hebrew}>{displayHebrew}</Text>
+              {wordTransliteration ? (
+                <Text style={styles.transliteration}>
+                  {wordTransliteration}
+                </Text>
+              ) : null}
+              {lexiconEntry?.occurrences_count && (
+                <Text style={styles.occurrencesText}>
+                  Appears {lexiconEntry.occurrences_count} times
+                </Text>
+              )}
+            </View>
+
+            {/* Toggle: Meanings / Instances */}
+            <View style={styles.toggleContainer}>
+              <Pressable
+                style={[
+                  styles.toggleButton,
+                  activeTab === "meanings" && styles.toggleButtonActive,
+                ]}
+                onPress={() => setActiveTab("meanings")}
+              >
+                <Text
+                  style={[
+                    styles.toggleText,
+                    activeTab === "meanings" && styles.toggleTextActive,
+                  ]}
+                >
+                  Meanings
+                </Text>
+              </Pressable>
+              <Pressable
+                style={[
+                  styles.toggleButton,
+                  activeTab === "instances" && styles.toggleButtonActive,
+                ]}
+                onPress={() => setActiveTab("instances")}
+              >
+                <Text
+                  style={[
+                    styles.toggleText,
+                    activeTab === "instances" && styles.toggleTextActive,
+                  ]}
+                >
+                  Instances
+                </Text>
+              </Pressable>
+            </View>
+
+            {/* Tab Content */}
+            {activeTab === "meanings" ? (
+              <>
+                {/* Meanings section */}
+                <Text style={styles.sectionLabel}>Meanings</Text>
+                {isLoading ? (
+                  <Text style={styles.emptyText}>Loading definitions...</Text>
+                ) : null}
+                <View style={styles.meaningsList}>
+                  {meaningsList.map((meaning, index) => (
+                    <Text
+                      key={`${meaning}-${index}`}
+                      style={styles.meaningsBullet}
                     >
-                      <Text style={styles.instanceRef}>{instance.verse}</Text>
-                    </Pressable>
-                  );
-                })}
-              </View>
+                      • {meaning}
+                    </Text>
+                  ))}
+                </View>
+
+                {/* Root section */}
+                <View style={styles.rootSection}>
+                  <Text style={styles.sectionLabel}>Root</Text>
+                  <Text style={styles.rootHebrew}>
+                    {(lexiconEntry?.root ?? word?.root ?? displayHebrew).replace(
+                      /\//g,
+                      "",
+                    )}
+                  </Text>
+                  {lexiconEntry?.root_strong ||
+                  lexiconEntry?.root_transliteration ||
+                  word?.rootTransliteration ? (
+                    <Text style={styles.rootTransliteration}>
+                      {lexiconEntry?.root_strong ??
+                        lexiconEntry?.root_transliteration ??
+                        word?.rootTransliteration}
+                    </Text>
+                    {lexiconEntry?.root_strong || word?.rootTransliteration ? (
+                      <Text style={styles.rootTransliteration}>
+                        {lexiconEntry?.root_strong ?? word?.rootTransliteration}
+                      </Text>
+                    ) : null}
+                    <Text style={styles.rootMeaning}>
+                      {lexiconEntry?.root || word?.root
+                        ? rootMeaningText
+                        : "ALREADY ROOT"}
+                    </Text>
+                  </View>
+                ) : null}
+
+                {word?.prefixes?.length ? (
+                  <View style={styles.prefixesSection}>
+                    <Text style={styles.sectionLabel}>Preposition</Text>
+                    {word.prefixes.map((prefix, index) => {
+                      const entry = prefixEntries[prefix];
+                      const meanings =
+                        entry?.meanings?.[language] ??
+                        entry?.meanings?.en ??
+                        entry?.meanings?.es ??
+                        [];
+                      const transliteration =
+                        language === "es"
+                          ? entry?.transliteration_es
+                          : (entry?.transliteration_en ??
+                            entry?.transliteration_es);
+                      const prefixText =
+                        prefixSegments.prefixes[index]?.replace(/\//g, "") ??
+                        entry?.main_form ??
+                        "";
+
+                      return (
+                        <View
+                          key={`${prefix}-${index}`}
+                          style={styles.prefixItem}
+                        >
+                          <Text style={styles.prefixHebrew}>{prefixText}</Text>
+                          {transliteration ? (
+                            <Text style={styles.prefixTransliteration}>
+                              {transliteration}
+                            </Text>
+                          ) : null}
+                          {meanings.length ? (
+                            <Text style={styles.prefixMeaning}>
+                              {meanings.join(", ")}
+                            </Text>
+                          ) : null}
+                        </View>
+                      );
+                    })}
+                  </View>
+                ) : null}
+              </>
             ) : (
-              <Text style={styles.emptyText}>No instances available</Text>
+              <>
+                {/* Instances section */}
+                <Text style={styles.sectionLabel}>Appears In</Text>
+                {lexiconEntry?.instances?.length || word?.instances?.length ? (
+                  <View style={styles.instancesContainer}>
+                    {(
+                      (lexiconEntry?.instances ?? word?.instances ?? []) as (
+                        | string
+                        | { verse: string; text: string }
+                      )[]
+                    )
+                      .slice(0, showAllInstances ? undefined : 10)
+                      .map((instance, index) => {
+                        const verseRef =
+                          typeof instance === "string"
+                            ? instance
+                            : instance.verse;
+                        const cleanedRef = verseRef.replace(/\./g, "");
+                        const verseId = parseVerseReference(cleanedRef);
+                        return (
+                          <Pressable
+                            key={`${verseRef}-${index}`}
+                            style={({ pressed }) => [
+                              styles.instancePill,
+                              pressed && styles.instancePillPressed,
+                            ]}
+                            onPress={() => {
+                              if (verseId) {
+                                sheetRef.current?.close();
+                                router.push({
+                                  pathname: "/verse-detail",
+                                  params: { id: verseId },
+                                });
+                              }
+                            }}
+                          >
+                            <Text style={styles.instanceRef}>{verseRef}</Text>
+                          </Pressable>
+                        );
+                      })}
+                    {!showAllInstances &&
+                    (lexiconEntry?.instances?.length ??
+                      word?.instances?.length ??
+                      0) > 10 ? (
+                      <Pressable
+                        style={styles.showMoreButton}
+                        onPress={() => setShowAllInstances(true)}
+                      >
+                        <Text style={styles.showMoreText}>
+                          Show{" "}
+                          {(lexiconEntry?.instances?.length ??
+                            word?.instances?.length ??
+                            0) - 10}{" "}
+                          more
+                        </Text>
+                      </Pressable>
+                    ) : null}
+                  </View>
+                ) : (
+                  <Text style={styles.emptyText}>No instances available</Text>
+                )}
+              </>
             )}
           </>
         )}
-      </BottomSheetView>
+      </BottomSheetScrollView>
     </BottomSheet>
   );
 };

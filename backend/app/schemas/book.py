@@ -21,7 +21,7 @@ class BookResponse(BaseModel):
     name: str         # Standard English name (same as id)
     section: BookSection
     chapters: int     # Number of chapters
-    order: str    # "tanaj" or "besorah"
+    order: int    # Canonical order (1-66)
     hebrew_name: str      # Hebrew characters (e.g., "בראשית")
     hebrew_transliteration: str  # Hebrew transliteration (e.g., "Bereshit")
     spanish_name: str    # Spanish name (e.g., "Génesis")

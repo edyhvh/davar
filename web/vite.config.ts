@@ -10,10 +10,33 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:2220",
+        changeOrigin: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       // Alias @ to the src directory
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom"],
+          vendor: [
+            "@mui/material",
+            "@mui/icons-material",
+            "@emotion/react",
+            "@emotion/styled",
+          ],
+        },
+      },
     },
   },
 });

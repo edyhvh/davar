@@ -14,16 +14,61 @@ const highlightParts = (text: string, query: string) => {
   if (!query) {
     return [{ text, highlight: false }];
   }
-  const normalized = query.toLowerCase();
-  const lower = text.toLowerCase();
-  const index = lower.indexOf(normalized);
-  if (index === -1) {
+  const isCombiningMark = (char: string) => /\p{M}/u.test(char);
+  const splitGraphemes = (value: string) => {
+    const graphemes: string[] = [];
+    for (const char of Array.from(value)) {
+      if (isCombiningMark(char) && graphemes.length) {
+        graphemes[graphemes.length - 1] += char;
+      } else {
+        graphemes.push(char);
+      }
+    }
+    return graphemes;
+  };
+
+  const textGraphemes = splitGraphemes(text);
+  const queryGraphemes = splitGraphemes(query);
+  if (!queryGraphemes.length) {
     return [{ text, highlight: false }];
   }
+
+  const normalizedText = textGraphemes.map((part) => part.toLowerCase());
+  const normalizedQuery = queryGraphemes.map((part) => part.toLowerCase());
+  let matchIndex = -1;
+
+  for (let i = 0; i <= normalizedText.length - normalizedQuery.length; i += 1) {
+    let matched = true;
+    for (let j = 0; j < normalizedQuery.length; j += 1) {
+      if (normalizedText[i + j] !== normalizedQuery[j]) {
+        matched = false;
+        break;
+      }
+    }
+    if (matched) {
+      matchIndex = i;
+      break;
+    }
+  }
+
+  if (matchIndex === -1) {
+    return [{ text, highlight: false }];
+  }
+
   return [
-    { text: text.slice(0, index), highlight: false },
-    { text: text.slice(index, index + query.length), highlight: true },
-    { text: text.slice(index + query.length), highlight: false },
+    { text: textGraphemes.slice(0, matchIndex).join(""), highlight: false },
+    {
+      text: textGraphemes
+        .slice(matchIndex, matchIndex + queryGraphemes.length)
+        .join(""),
+      highlight: true,
+    },
+    {
+      text: textGraphemes
+        .slice(matchIndex + queryGraphemes.length)
+        .join(""),
+      highlight: false,
+    },
   ].filter((part) => part.text.length > 0);
 };
 
