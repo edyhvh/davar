@@ -153,7 +153,7 @@ class VersesService:
             verse_data.get("chapter", 0),
             verse_data.get("verse", 0),
         )
-        
+
         verse_words = verse_data.get('words', [])
         # Validate transliteration word count matches verse word count
         if verse_words and translit_words and len(translit_words) != len(verse_words):
@@ -163,7 +163,7 @@ class VersesService:
                 f"expected {len(verse_words)} words but got {len(translit_words)}. "
                 f"Words may be misaligned."
             )
-        
+
         for idx, word_data in enumerate(verse_words):
             translit_data = (
                 translit_words[idx] if idx < len(translit_words) else {}
