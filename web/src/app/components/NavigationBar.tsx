@@ -30,6 +30,8 @@ interface NavigationBarProps {
   onQumranChange: (show: boolean) => void;
   showFullChapter: boolean;
   onFullChapterChange: (show: boolean) => void;
+  seferMode: boolean;
+  onSeferModeChange: (show: boolean) => void;
   hebrewOnly: boolean;
   onHebrewOnlyChange: (show: boolean) => void;
   showNikud: boolean;
@@ -61,6 +63,8 @@ export function NavigationBar({
   onQumranChange,
   showFullChapter,
   onFullChapterChange,
+  seferMode,
+  onSeferModeChange,
   hebrewOnly,
   onHebrewOnlyChange,
   showNikud,
@@ -144,6 +148,7 @@ export function NavigationBar({
   const filteredVerses = normalizedVerseSearch
     ? verses.filter((item) => String(item).startsWith(normalizedVerseSearch))
     : verses;
+  const seferDisabled = !hebrewOnly;
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -177,9 +182,6 @@ export function NavigationBar({
               aria-label={t("navigation.selectBook")}
             >
               <BookOpen className="w-3 h-3 text-[var(--text-primary)]" />
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-primary)]">
-                {t("navigation.bookShort")}
-              </span>
               <span className="text-[11px] text-[var(--text-primary)]">
                 {bookDisplayName} |{" "}
                 <span style={{ fontFamily: "'Suez One', serif" }}>
@@ -340,7 +342,6 @@ export function NavigationBar({
                 ariaLabel={t("navigation.toggleHebrewOnly")}
               />
             </div>
-
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
@@ -391,6 +392,51 @@ export function NavigationBar({
                 ariaLabel={t("navigation.toggleFullChapter")}
               />
             </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
+                <span
+                  className="text-sm text-[var(--text-primary)]"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  {t("settings.hebrewOnly")}
+                </span>
+              </div>
+              <NeumorphicToggle
+                enabled={hebrewOnly}
+                onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
+                ariaLabel={t("navigation.toggleHebrewOnly")}
+              />
+            </div>
+
+            {showFullChapter && (
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <BookOpen className="w-4 h-4 text-[var(--text-secondary)]" />
+                  <span
+                    className="text-sm text-[var(--text-primary)]"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    {t("settings.seferStyle")}
+                  </span>
+                </div>
+                <div className="relative group">
+                  <NeumorphicToggle
+                    enabled={seferMode}
+                    onToggle={() => onSeferModeChange(!seferMode)}
+                    ariaLabel={t("navigation.toggleSeferStyle")}
+                    disabled={seferDisabled}
+                    disabledReason={t("settings.seferStyleWarning")}
+                  />
+                  {seferDisabled && (
+                    <div className="absolute right-0 mt-2 w-48 rounded-lg bg-[var(--neomorph-bg)] border border-[var(--neomorph-border)] px-3 py-2 text-[10px] text-[var(--text-secondary)] shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                      {t("settings.seferStyleWarning")}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">

@@ -56,6 +56,12 @@ const es = {
       title: "Capítulo completo",
       subtitle: "Mostrar texto completo del capítulo",
     },
+    seferStyle: {
+      title: "Estilo de libro",
+      subtitle: "Diseño continuo de rollo hebreo",
+      warningTitle: "Sefer requiere Solo hebreo",
+      warningMessage: "Activa Solo hebreo para usar el estilo Sefer.",
+    },
     hebrewOnly: {
       title: "Solo hebreo",
       subtitle: "Mostrar texto solo en hebreo",

@@ -32,8 +32,17 @@ import {
   getWordAnalysisByStrong,
   type WordAnalysis,
 } from "./services/lexiconService";
-import { usePersistedState, usePersistedBookPosition } from "./hooks/usePersistedState";
-import { getStoredReadingState, getLastPositionForBook, updateLastPositionForBook, createDefaultReadingState, saveReadingState } from "./utils/storageHelpers";
+import {
+  usePersistedState,
+  usePersistedBookPosition,
+} from "./hooks/usePersistedState";
+import {
+  getStoredReadingState,
+  getLastPositionForBook,
+  updateLastPositionForBook,
+  createDefaultReadingState,
+  saveReadingState,
+} from "./utils/storageHelpers";
 import type { ReadingStateV2 } from "./utils/storageHelpers";
 import { useTranslation } from "./hooks/useTranslation";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
@@ -137,6 +146,10 @@ export default function App() {
     "showFullChapter",
     initialState.showFullChapter,
   );
+  const [seferMode, setSeferMode] = usePersistedState(
+    "seferMode",
+    initialState.seferMode ?? false,
+  );
   const [hebrewOnly, setHebrewOnly] = usePersistedState(
     "hebrewOnly",
     initialState.hebrewOnly,
@@ -156,9 +169,7 @@ export default function App() {
 
   // Navigation state - also persisted but with special logic for per-book tracking
   const [currentBook, setCurrentBook] = useState(initialState.book);
-  const [currentChapter, setCurrentChapter] = useState(
-    initialState.chapter,
-  );
+  const [currentChapter, setCurrentChapter] = useState(initialState.chapter);
   const [currentVerse, setCurrentVerse] = useState(initialState.verse);
   const prevBookRef = useRef(currentBook);
 
@@ -201,30 +212,34 @@ export default function App() {
   const pendingWordStrongRef = useRef<string | null>(null);
   const pendingWordRef = useRef<WordResponse | null>(null);
   const [wordCardTabKey, setWordCardTabKey] = useState(0);
+  const [hideNavOnScroll, setHideNavOnScroll] = useState(false);
 
-  const buildRoutePath = useCallback(
-    (route: RouteState) => {
-      switch (route.screen) {
-        case "home":
-          return "/home";
-        case "donate":
-          return "/donate";
-        case "features":
-          return "/features";
-        case "settings":
-          return "/settings";
-        case "verse": {
-          const book = route.book ? encodeURIComponent(route.book) : "";
-          const chapter = route.chapter ?? 1;
-          const verse = route.verse ?? 1;
-          return book ? `/verse/${book}/${chapter}/${verse}` : "/";
-        }
-        default:
-          return "/";
+  useEffect(() => {
+    if ((!showFullChapter || !hebrewOnly) && seferMode) {
+      setSeferMode(false);
+    }
+  }, [showFullChapter, hebrewOnly, seferMode, setSeferMode]);
+
+  const buildRoutePath = useCallback((route: RouteState) => {
+    switch (route.screen) {
+      case "home":
+        return "/home";
+      case "donate":
+        return "/donate";
+      case "features":
+        return "/features";
+      case "settings":
+        return "/settings";
+      case "verse": {
+        const book = route.book ? encodeURIComponent(route.book) : "";
+        const chapter = route.chapter ?? 1;
+        const verse = route.verse ?? 1;
+        return book ? `/verse/${book}/${chapter}/${verse}` : "/";
       }
-    },
-    [],
-  );
+      default:
+        return "/";
+    }
+  }, []);
 
   const parseRoutePath = useCallback((pathname: string): RouteState => {
     const trimmed = pathname.replace(/\/+$/, "") || "/";
@@ -312,8 +327,18 @@ export default function App() {
     // Save navigation state and per-book position to localStorage
     const stored = getStoredReadingState();
     if (stored) {
-      let updated = { ...stored, book: currentBook, chapter: currentChapter, verse: currentVerse };
-      updated = updateLastPositionForBook(updated, currentBook, currentChapter, currentVerse);
+      let updated = {
+        ...stored,
+        book: currentBook,
+        chapter: currentChapter,
+        verse: currentVerse,
+      };
+      updated = updateLastPositionForBook(
+        updated,
+        currentBook,
+        currentChapter,
+        currentVerse,
+      );
       saveReadingState(updated);
     }
   }, [currentBook, currentChapter, currentVerse]);
@@ -369,8 +394,7 @@ export default function App() {
       );
     });
 
-    let resolvedBookName =
-      matchedBook?.name ?? abbreviationMatch ?? bookLabel;
+    let resolvedBookName = matchedBook?.name ?? abbreviationMatch ?? bookLabel;
     if (!matchedBook && !abbreviationMatch) {
       try {
         const resolved = await lookupBook(bookLabel);
@@ -554,7 +578,13 @@ export default function App() {
     if (lastUrlRef.current === path) return;
     window.history.pushState(null, "", path);
     lastUrlRef.current = path;
-  }, [buildRoutePath, currentBook, currentChapter, currentScreen, currentVerse]);
+  }, [
+    buildRoutePath,
+    currentBook,
+    currentChapter,
+    currentScreen,
+    currentVerse,
+  ]);
 
   useEffect(() => {
     let isMounted = true;
@@ -612,12 +642,19 @@ export default function App() {
     }
   }, [selectedWord, selectedWordAnalysis]);
 
-  const isSplitView = Boolean(!isMobile && (selectedWord || isNavigatingWordPanel));
+  const isSplitView = Boolean(
+    !isMobile && (selectedWord || isNavigatingWordPanel),
+  );
   const [isWordPanelVisible, setIsWordPanelVisible] = useState(false);
   const isWordPanelActive =
-    !isMobile && !isWordPanelDismissed && (selectedWord || isNavigatingWordPanel);
+    !isMobile &&
+    !isWordPanelDismissed &&
+    (selectedWord || isNavigatingWordPanel);
   const shouldShowWordSkeleton =
-    isWordPanelActive && isNavigatingWordPanel && showWordSkeleton && !selectedWord;
+    isWordPanelActive &&
+    isNavigatingWordPanel &&
+    showWordSkeleton &&
+    !selectedWord;
 
   useEffect(() => {
     if (isWordPanelActive) {
@@ -793,6 +830,21 @@ export default function App() {
   const isScrollNavigationActive =
     currentScreen === "verse" && !showFullChapter && !isMobile;
 
+  useEffect(() => {
+    if (!(currentScreen === "verse" && showFullChapter && seferMode)) {
+      setHideNavOnScroll(false);
+      return;
+    }
+
+    const handleScroll = () => {
+      setHideNavOnScroll(window.scrollY > 40);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [currentScreen, showFullChapter, seferMode]);
+
   useVerseScrollNavigation({
     containerRef: versePanelRef,
     isEnabled: isScrollNavigationActive,
@@ -818,7 +870,13 @@ export default function App() {
         overflow: isScrollNavigationActive ? "hidden" : undefined,
       }}
     >
-      <div className="sticky top-0 z-40 px-6 pt-6">
+      <div
+        className={`sticky top-0 z-40 px-6 pt-6 transition-transform duration-300 ${
+          hideNavOnScroll
+            ? "-translate-y-full opacity-0 pointer-events-none"
+            : "translate-y-0 opacity-100"
+        }`}
+      >
         <div className="mx-auto flex justify-center">
           <NavigationBar
             book={currentBook}
@@ -862,6 +920,8 @@ export default function App() {
             onQumranChange={setShowQumran}
             showFullChapter={showFullChapter}
             onFullChapterChange={setShowFullChapter}
+            seferMode={seferMode}
+            onSeferModeChange={setSeferMode}
             hebrewOnly={hebrewOnly}
             onHebrewOnlyChange={setHebrewOnly}
             showNikud={showNikud}
@@ -907,6 +967,7 @@ export default function App() {
                       showOnboardingHint={showWordHint}
                       showQumran={showQumran}
                       showFullChapter={showFullChapter}
+                      seferMode={seferMode}
                       hebrewOnly={hebrewOnly}
                       showNikud={showNikud}
                       showCantillation={showCantillation}
@@ -938,18 +999,12 @@ export default function App() {
                       </p>
                     </NeumorphCard>
                   )}
-
-                  {errorMessage && (
-                    <NeumorphCard className="mt-6">
-                      <p className="text-sm text-red-500">{errorMessage}</p>
-                    </NeumorphCard>
-                  )}
                 </div>
               </div>
 
               <div
                 className="hidden md:block"
-                style={showFullChapter ? undefined : { height: "70vh" }}
+                style={showFullChapter ? { height: "auto" } : { height: "70vh" }}
               >
                 {(() => {
                   const wordForCard =
@@ -962,73 +1017,81 @@ export default function App() {
                     : lastSelectedWordAnalysis;
 
                   return (
-                <NeumorphCard
-                  className={`p-6 sticky top-24 word-panel-shell ${
-                    isWordPanelActive ? "word-panel-open" : "word-panel-closed"
-                  }`}
-                  style={!isWordPanelActive ? { pointerEvents: "none" } : undefined}
-                  onMouseEnter={() => setIsWordPanelHovered(true)}
-                  onMouseLeave={() => setIsWordPanelHovered(false)}
-                >
-                  {shouldShowWordSkeleton ? (
-                    <div className="space-y-5">
-                      <div className="flex justify-end">
-                        <Skeleton className="h-9 w-9 rounded-full" />
-                      </div>
-                      <Skeleton className="h-16 w-40 mx-auto" />
-                      <Skeleton className="h-3 w-32 mx-auto" />
-                      <Skeleton className="h-4 w-full" />
-                      <Skeleton className="h-4 w-4/5" />
-                      <Skeleton className="h-4 w-3/4" />
-                    </div>
-                  ) : wordForCard && isWordPanelVisible ? (
-                    <WordCard
-                      word={wordAnalysisForCard?.hebrew ?? wordForCard.text}
-                      wordFromVerse={wordForCard.text}
-                      strongNumber={wordAnalysisForCard?.strong_number}
-                      transliteration={wordAnalysisForCard?.transliteration}
-                      meanings={wordMeanings}
-                      root={wordAnalysisForCard?.root}
-                      rootTransliteration={wordAnalysisForCard?.root_strong}
-                      rootMeaning={
-                        wordAnalysisForCard?.root_definitions?.[0]?.text
+                    <NeumorphCard
+                      className={`p-6 ${
+                        isWordPanelActive
+                          ? "word-panel-open"
+                          : "word-panel-closed"
+                      } sticky top-24 word-panel-shell`}
+                      style={
+                        !isWordPanelActive
+                          ? { pointerEvents: "none" }
+                          : undefined
                       }
-                      prefixes={wordForCard.prefixes}
-                      language={language}
-                      showNikud={showNikud}
-                      instances={(wordAnalysisForCard?.instances ?? []).map(
-                        (instance) =>
-                          typeof instance === "string"
-                            ? { verse: instance, text: "" }
-                            : instance,
-                      )}
-                      onInstanceClick={handleNavigateToVerse}
-                      tabResetKey={wordCardTabKey}
-                      onClose={() => {
-                        if (!isMobile) {
-                          setIsWordPanelDismissed(true);
-                        }
-                        setSelectedWord(null);
-                        setIsNavigatingWordPanel(false);
-                        setShowWordSkeleton(false);
-                        if (wordSkeletonTimerRef.current) {
-                          window.clearTimeout(wordSkeletonTimerRef.current);
-                          wordSkeletonTimerRef.current = null;
-                        }
-                      }}
-                      isLoading={Boolean(selectedWord && isWordAnalysisLoading)}
-                    />
-                  ) : isNavigatingWordPanel ? (
-                    <div className="h-40" />
-                  ) : (
-                    <div
-                      className="text-sm text-[var(--text-secondary)]"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
+                      onMouseEnter={() => setIsWordPanelHovered(true)}
+                      onMouseLeave={() => setIsWordPanelHovered(false)}
                     >
-                      {t("wordCard.selectWord")}
-                    </div>
-                  )}
-                </NeumorphCard>
+                      {shouldShowWordSkeleton ? (
+                        <div className="space-y-5">
+                          <div className="flex justify-end">
+                            <Skeleton className="h-9 w-9 rounded-full" />
+                          </div>
+                          <Skeleton className="h-16 w-40 mx-auto" />
+                          <Skeleton className="h-3 w-32 mx-auto" />
+                          <Skeleton className="h-4 w-full" />
+                          <Skeleton className="h-4 w-4/5" />
+                          <Skeleton className="h-4 w-3/4" />
+                        </div>
+                      ) : wordForCard && isWordPanelVisible ? (
+                        <WordCard
+                          word={wordAnalysisForCard?.hebrew ?? wordForCard.text}
+                          wordFromVerse={wordForCard.text}
+                          strongNumber={wordAnalysisForCard?.strong_number}
+                          transliteration={wordAnalysisForCard?.transliteration}
+                          meanings={wordMeanings}
+                          root={wordAnalysisForCard?.root}
+                          rootTransliteration={wordAnalysisForCard?.root_strong}
+                          rootMeaning={
+                            wordAnalysisForCard?.root_definitions?.[0]?.text
+                          }
+                          prefixes={wordForCard.prefixes}
+                          language={language}
+                          showNikud={showNikud}
+                          instances={(wordAnalysisForCard?.instances ?? []).map(
+                            (instance) =>
+                              typeof instance === "string"
+                                ? { verse: instance, text: "" }
+                                : instance,
+                          )}
+                          onInstanceClick={handleNavigateToVerse}
+                          tabResetKey={wordCardTabKey}
+                          onClose={() => {
+                            if (!isMobile) {
+                              setIsWordPanelDismissed(true);
+                            }
+                            setSelectedWord(null);
+                            setIsNavigatingWordPanel(false);
+                            setShowWordSkeleton(false);
+                            if (wordSkeletonTimerRef.current) {
+                              window.clearTimeout(wordSkeletonTimerRef.current);
+                              wordSkeletonTimerRef.current = null;
+                            }
+                          }}
+                          isLoading={Boolean(
+                            selectedWord && isWordAnalysisLoading,
+                          )}
+                        />
+                      ) : isNavigatingWordPanel ? (
+                        <div className="h-40" />
+                      ) : (
+                        <div
+                          className="text-sm text-[var(--text-secondary)]"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
+                          {t("wordCard.selectWord")}
+                        </div>
+                      )}
+                    </NeumorphCard>
                   );
                 })()}
               </div>

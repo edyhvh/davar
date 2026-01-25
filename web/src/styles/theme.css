@@ -400,7 +400,9 @@
   /* Prevent the panel from growing the page and causing layout shifts */
   max-height: calc(100vh - 160px);
   overflow: auto;
+  z-index: 10;
 }
+
 
 .word-panel-open {
   opacity: 1;

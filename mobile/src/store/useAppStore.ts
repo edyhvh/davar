@@ -16,6 +16,8 @@ export type AppState = {
   setShowQumran: (value: boolean) => void;
   showFullChapter: boolean;
   setShowFullChapter: (value: boolean) => void;
+  seferMode: boolean;
+  setSeferMode: (value: boolean) => void;
   hebrewOnly: boolean;
   setHebrewOnly: (value: boolean) => void;
   showCantillation: boolean;
@@ -48,9 +50,22 @@ export const useAppStore = create<AppState>((set) => ({
   showQumran: false,
   setShowQumran: (value) => set({ showQumran: value }),
   showFullChapter: false,
-  setShowFullChapter: (value) => set({ showFullChapter: value }),
+  setShowFullChapter: (value) =>
+    set((state) => ({
+      showFullChapter: value,
+      seferMode: value ? state.seferMode : false,
+    })),
+  seferMode: false,
+  setSeferMode: (value) =>
+    set((state) => ({
+      seferMode: value && state.showFullChapter && state.hebrewOnly,
+    })),
   hebrewOnly: false,
-  setHebrewOnly: (value) => set({ hebrewOnly: value }),
+  setHebrewOnly: (value) =>
+    set((state) => ({
+      hebrewOnly: value,
+      seferMode: value ? state.seferMode : false,
+    })),
   showCantillation: true,
   setShowCantillation: (value) => set({ showCantillation: value }),
   showNikud: true,

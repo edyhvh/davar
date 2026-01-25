@@ -33,6 +33,7 @@ interface VerseDisplayProps {
   showOnboardingHint?: boolean;
   showQumran?: boolean;
   showFullChapter?: boolean;
+  seferMode?: boolean;
   hebrewOnly?: boolean;
   showNikud?: boolean;
   showCantillation?: boolean;
@@ -60,6 +61,7 @@ export function VerseDisplay({
   showOnboardingHint = false,
   showQumran = false,
   showFullChapter = false,
+  seferMode = false,
   hebrewOnly = false,
   showNikud = true,
   showCantillation = false,
@@ -183,6 +185,7 @@ export function VerseDisplay({
           chapter={chapter}
           language={language}
           hebrewOnly={hebrewOnly}
+          seferMode={seferMode}
           onWordClick={onWordClick}
           showQumran={showQumran}
           selectedWord={selectedWord}

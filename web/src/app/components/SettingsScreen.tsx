@@ -11,6 +11,8 @@ interface SettingsScreenProps {
   onQumranChange: (show: boolean) => void;
   showFullChapter: boolean;
   onFullChapterChange: (show: boolean) => void;
+  seferMode: boolean;
+  onSeferModeChange: (show: boolean) => void;
   hebrewOnly: boolean;
   onHebrewOnlyChange: (show: boolean) => void;
   onDesignSystemClick?: () => void;
@@ -61,16 +63,23 @@ function RetroOnOffButton({
   onToggle,
   onLabel,
   offLabel,
+  disabled = false,
+  disabledReason,
 }: { 
   isOn: boolean; 
   onToggle: () => void;
   onLabel: string;
   offLabel: string;
+  disabled?: boolean;
+  disabledReason?: string;
 }) {
   return (
     <button
-      onClick={onToggle}
-      className="relative flex flex-col items-center justify-center gap-2 group"
+      onClick={disabled ? undefined : onToggle}
+      disabled={disabled}
+      aria-disabled={disabled}
+      title={disabled ? disabledReason : undefined}
+      className={`relative flex flex-col items-center justify-center gap-2 group ${disabled ? "cursor-not-allowed opacity-60" : ""}`}
       style={{ width: '64px' }}
     >
       {/* Large circular button with light indicator */}
@@ -153,6 +162,14 @@ const RetroIcons = {
       <path d="M8 6 L8 18 M12 6 L12 18 M16 6 L16 12 M8 12 L16 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
     </svg>
   ),
+  Sefer: () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 4 H17 C18.5 4 19 5 19 6.5 V19 C19 17.5 18.5 16.5 17 16.5 H5" stroke="currentColor" strokeWidth="2" fill="none" />
+      <path d="M5 4 V19" stroke="currentColor" strokeWidth="2" />
+      <path d="M8 8 H15" stroke="currentColor" strokeWidth="2" />
+      <path d="M8 12 H15" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  ),
   DesignSystem: () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="4" y="4" width="7" height="7" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -178,6 +195,8 @@ export function SettingsScreen({
   onQumranChange,
   showFullChapter,
   onFullChapterChange,
+  seferMode,
+  onSeferModeChange,
   hebrewOnly,
   onHebrewOnlyChange,
   onDesignSystemClick,
@@ -187,6 +206,7 @@ export function SettingsScreen({
   const selectedLanguage = languages.find(lang => lang.code === language) || languages[0];
   const dropdownRef = React.useRef<HTMLDivElement>(null);
   const { t } = useTranslation(language);
+  const seferDisabled = !hebrewOnly;
 
   // Close dropdown when clicking outside
   React.useEffect(() => {
@@ -373,6 +393,48 @@ export function SettingsScreen({
           />
         </div>
       </div>
+
+      {showFullChapter && (
+        <>
+          {/* Divider */}
+          <div className="border-t border-[var(--border)]" />
+
+          {/* Sefer Style Toggle */}
+          <div className="px-6 py-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div className="text-[var(--text-secondary)]">
+                  <RetroIcons.Sefer />
+                </div>
+                <div>
+                  <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.seferStyle')}</div>
+                  <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    {t('settings.seferStyleDescription')}
+                  </div>
+                </div>
+              </div>
+              <div className="relative group">
+                <RetroOnOffButton
+                  isOn={seferMode}
+                  onToggle={() => onSeferModeChange(!seferMode)}
+                  onLabel={t('common.on')}
+                  offLabel={t('common.off')}
+                  disabled={seferDisabled}
+                  disabledReason={t('settings.seferStyleWarning')}
+                />
+                {seferDisabled && (
+                  <div className="absolute right-0 mt-2 w-48 rounded-lg bg-[var(--background)] border border-[var(--border)] px-3 py-2 text-[10px] text-[var(--text-secondary)] shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                    {t('settings.seferStyleWarning')}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* Divider */}
+      <div className="border-t border-[var(--border)]" />
 
       {/* Design System Button */}
       {onDesignSystemClick && (

@@ -13,6 +13,7 @@ import {
   loadHebrewFontScale,
   loadHebrewOnly,
   loadLanguage,
+  loadSeferMode,
   loadShowFullChapter,
   loadShowQumran,
   loadThemeMode,
@@ -20,6 +21,7 @@ import {
   saveHebrewFontScale,
   saveHebrewOnly,
   saveLanguage,
+  saveSeferMode,
   saveShowFullChapter,
   saveShowQumran,
   saveThemeMode,
@@ -72,6 +74,8 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const setShowFullChapter = useAppStore(
     (state: AppState) => state.setShowFullChapter,
   );
+  const seferMode = useAppStore((state: AppState) => state.seferMode);
+  const setSeferMode = useAppStore((state: AppState) => state.setSeferMode);
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
   const setHebrewOnly = useAppStore((state: AppState) => state.setHebrewOnly);
   const bookmarks = useAppStore((state: AppState) => state.bookmarks);
@@ -94,6 +98,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
         savedLanguage,
         savedShowQumran,
         savedShowFullChapter,
+        savedSeferMode,
         savedHebrewOnly,
       ] = await Promise.all([
         loadThemeMode(),
@@ -102,6 +107,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
         loadLanguage(),
         loadShowQumran(),
         loadShowFullChapter(),
+        loadSeferMode(),
         loadHebrewOnly(),
       ]);
       setThemeMode(savedTheme);
@@ -111,6 +117,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
       setShowQumran(savedShowQumran);
       setShowFullChapter(savedShowFullChapter);
       setHebrewOnly(savedHebrewOnly);
+      setSeferMode(savedSeferMode);
     };
 
     hydrate();
@@ -121,6 +128,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     setLanguage,
     setShowQumran,
     setShowFullChapter,
+    setSeferMode,
     setHebrewOnly,
   ]);
 
@@ -143,6 +151,10 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     saveShowFullChapter(showFullChapter);
   }, [showFullChapter]);
+
+  useEffect(() => {
+    saveSeferMode(seferMode);
+  }, [seferMode]);
 
   useEffect(() => {
     saveHebrewOnly(hebrewOnly);

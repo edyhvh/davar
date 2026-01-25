@@ -56,6 +56,12 @@ const he = {
       title: "פרק מלא",
       subtitle: "הצג טקסט מלא של הפרק",
     },
+    seferStyle: {
+      title: "סגנון ספר",
+      subtitle: "פריסת מגילה רציפה בעברית",
+      warningTitle: "סגנון ספר דורש עברית בלבד",
+      warningMessage: "הפעל עברית בלבד כדי להשתמש בסגנון ספר.",
+    },
     hebrewOnly: {
       title: "עברית בלבד",
       subtitle: "הצג טקסט רק בעברית",
