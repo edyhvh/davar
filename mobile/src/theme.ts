@@ -93,6 +93,7 @@ export const typography = {
   families: {
     hebrewScripture: "Cardo_400Regular",
     hebrewUI: "SuezOne_400Regular",
+    latinMeaning: "Jost_400Regular",
     latinUI: "Inter_400Regular",
     latinUIMedium: "Inter_500Medium",
     latinUISemiBold: "Inter_600SemiBold",

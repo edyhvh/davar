@@ -2,7 +2,6 @@ import React, {
   useCallback,
   useEffect,
   useMemo,
-  useRef,
   useState,
 } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
@@ -143,7 +142,7 @@ const createStyles = (
       marginBottom: spacing[3],
     },
     meaningsText: {
-      fontFamily: typography.families.latinUI,
+      fontFamily: typography.families.latinMeaning,
       fontSize: typography.sizes.h3,
       color: colors.textPrimary,
       textAlign: "center",
@@ -154,7 +153,7 @@ const createStyles = (
       marginBottom: spacing[4],
     },
     meaningsBullet: {
-      fontFamily: typography.families.latinUI,
+      fontFamily: typography.families.latinMeaning,
       fontSize: typography.sizes.h3,
       color: colors.textPrimary,
       textAlign: "center",
@@ -515,43 +514,13 @@ export const WordAnalysisBottomSheet = ({
     [],
   );
 
-  const [isOpen, setIsOpen] = useState(false);
-  // Keep sheet onChange lean; just track open state for safe conditional rendering
-  const closeTimerRef = useRef<number | null>(null);
-
-  const handleSheetChanges = useCallback(
-    (index: number) => {
-      console.debug("WordAnalysisBottomSheet onChange", { index });
-      if (index === -1) {
-        setIsOpen(false);
-        // Wait for exit animation to finish before notifying parent to clear state
-        if (closeTimerRef.current) {
-          clearTimeout(closeTimerRef.current);
-        }
-        // @ts-ignore - window.setTimeout returns number
-        closeTimerRef.current = window.setTimeout(() => {
-          onClosed?.();
-          closeTimerRef.current = null;
-        }, 300);
-      } else {
-        setIsOpen(true);
-        if (closeTimerRef.current) {
-          clearTimeout(closeTimerRef.current);
-          closeTimerRef.current = null;
-        }
-      }
-    },
-    [onClosed],
-  );
-
-  useEffect(() => {
-    return () => {
-      if (closeTimerRef.current) {
-        clearTimeout(closeTimerRef.current);
-        closeTimerRef.current = null;
-      }
-    };
+  const handleSheetChanges = useCallback((index: number) => {
+    console.debug("WordAnalysisBottomSheet onChange", { index });
   }, []);
+
+  const handleSheetClose = useCallback(() => {
+    onClosed?.();
+  }, [onClosed]);
 
   const meaningsList = useMemo(() => {
     const normalizeForDisplay = (t: string) =>
@@ -628,6 +597,7 @@ export const WordAnalysisBottomSheet = ({
       backgroundStyle={styles.sheetBackground}
       handleIndicatorStyle={styles.sheetHandle}
       onChange={handleSheetChanges}
+      onClose={handleSheetClose}
       backdropComponent={renderBackdrop}
       animateOnMount={false}
     >

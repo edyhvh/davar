@@ -85,6 +85,17 @@ export function FullChapterView({
                   dssMap.set(variant.word_position, variant.dss_text),
                 );
 
+                const normalizeForMatch = (text: string) => {
+                  let normalized = stripNikud(text);
+                  normalized = stripCantillation(normalized);
+                  normalized = stripMeteg(normalized);
+                  return normalized.replace(/\//g, "");
+                };
+
+                const normalizedSelected = selectedWord
+                  ? normalizeForMatch(selectedWord)
+                  : null;
+
                 return verse.words.map((word, wordIdx) => {
                   const variantText = showQumran
                     ? dssMap.get(word.position)
@@ -103,8 +114,10 @@ export function FullChapterView({
                   // Remove "/" separators from display
                   displayText = displayText.replace(/\//g, "");
 
+                  const normalizedDisplay = normalizeForMatch(displayText);
                   const isSelected =
-                    selectedWord === word.text || selectedWord === displayText;
+                    Boolean(normalizedSelected) &&
+                    normalizedSelected === normalizedDisplay;
 
                   const prefixSegments = word.prefixes?.length
                     ? getPrefixSegments(displayText, word.prefixes)

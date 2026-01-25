@@ -89,6 +89,17 @@ export function VerseDisplay({
             has_dss_variant: false,
           }));
 
+    const normalizeForMatch = (text: string) => {
+      let normalized = stripNikud(text);
+      normalized = stripCantillation(normalized);
+      normalized = stripMeteg(normalized);
+      return normalized.replace(/\//g, "");
+    };
+
+    const normalizedSelected = selectedWord
+      ? normalizeForMatch(selectedWord)
+      : null;
+
     return sourceWords.map((word, index) => {
       const variantText = showQumran ? dssMap.get(word.position) : undefined;
       const rawText = variantText ?? word.text;
@@ -105,8 +116,9 @@ export function VerseDisplay({
       // Remove "/" separators from display
       displayText = displayText.replace(/\//g, "");
 
+      const normalizedDisplay = normalizeForMatch(displayText);
       const isSelected =
-        selectedWord === word.text || selectedWord === displayText;
+        Boolean(normalizedSelected) && normalizedSelected === normalizedDisplay;
 
       // Parse word for prefix visualization only if word has prefix data
       const prefixSegments = word.prefixes?.length

@@ -83,7 +83,7 @@ const es = {
     },
   },
   donate: {
-    githubSponsor: "Patrocinio en GitHub",
+    githubSponsor: "GitHub Sponsor",
   },
   features: {
     title: "Ideas",
