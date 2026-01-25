@@ -173,7 +173,8 @@ class VersesService:
         translation_footnotes = None
         if not hebrew_only and language:
             translation_data = self.translations_loader.get_translation(
-                book_en, verse_data.get('chapter', 0), verse_data.get('verse', 0), language
+                book_en, verse_data.get('chapter', 0), verse_data.get(
+                    'verse', 0), language
             )
             if translation_data:
                 translation = translation_data.get("translation")
@@ -193,7 +194,8 @@ class VersesService:
         dss_variants = None
         if show_dss:
             dss_data = self.variants_loader.get_dss_variants(
-                book_en, verse_data.get('chapter', 0), verse_data.get('verse', 0)
+                book_en, verse_data.get(
+                    'chapter', 0), verse_data.get('verse', 0)
             )
             if dss_data:
                 dss_variants = []
