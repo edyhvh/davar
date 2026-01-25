@@ -1,3 +1,5 @@
+import type { BookResponse } from "@/src/types/api";
+
 const API_BASE_URL =
   process.env.EXPO_PUBLIC_API_BASE_URL || "http://localhost:2220";
 const API_KEY = process.env.EXPO_PUBLIC_API_KEY;

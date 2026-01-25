@@ -204,6 +204,16 @@ export const insertTranslationVerses = async (
   }
 };
 
+export const deleteTranslationBookEntries = async (
+  bookId: string,
+  language: "en" | "es",
+) => {
+  await executeSql(
+    "DELETE FROM verses WHERE book = ? AND language = ?;",
+    [bookId, language],
+  );
+};
+
 // ── Queries ────────────────────────────────────────────────────────────────
 
 export const fetchTranslationVerses = async (

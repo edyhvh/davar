@@ -11,6 +11,7 @@ class WordResponse(BaseModel):
     """Response model for individual Hebrew words"""
     position: int
     text: str
+    text_no_nikud: Optional[str] = None
     strong: Optional[str] = None
     morph: Optional[str] = None
     prefixes: List[str] = []

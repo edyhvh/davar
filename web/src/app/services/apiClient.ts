@@ -7,7 +7,8 @@ const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:2220";
 
 // Load API key once at module level
-const API_KEY = import.meta.env.VITE_API_KEY;
+const RAW_API_KEY = import.meta.env.VITE_API_KEY;
+const API_KEY = RAW_API_KEY?.trim();
 
 // Early validation in development to catch missing key immediately
 if (import.meta.env.DEV && !API_KEY) {
