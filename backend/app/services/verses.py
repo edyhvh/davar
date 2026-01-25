@@ -159,6 +159,7 @@ class VersesService:
             word = WordResponse(
                 position=idx + 1,
                 text=word_data.get('text', ''),
+                text_no_nikud=word_data.get('text_no_nikud'),
                 strong=word_data.get('strong'),
                 morph=word_data.get('morph'),
                 prefixes=word_data.get('prefixes', []),

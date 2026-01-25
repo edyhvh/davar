@@ -2,6 +2,7 @@ import * as FileSystem from "expo-file-system";
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
 import {
+  deleteTranslationBookEntries,
   insertLexiconEntries,
   insertTranslationVerses,
   initializeDatabase,
@@ -161,17 +162,23 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
 
 export const downloadDictionaryBundle = async () => {
   await initializeDatabase();
-  const bundle = await apiRequest<DictionaryBundle>(
-    "/api/v1/export/bundle/dictionary",
-  );
-  const entries = buildLexiconEntries(bundle);
-  await insertLexiconEntries(entries);
+  try {
+    const bundle = await apiRequest<DictionaryBundle>(
+      "/api/v1/export/bundle/dictionary",
+    );
+    const entries = buildLexiconEntries(bundle);
+    await insertLexiconEntries(entries);
 
-  await ensureOfflineDir();
-  await FileSystem.writeAsStringAsync(
-    `${OFFLINE_DIR}/dictionary.json`,
-    JSON.stringify({ downloadedAt: new Date().toISOString() }),
-  );
+    await ensureOfflineDir();
+    await FileSystem.writeAsStringAsync(
+      `${OFFLINE_DIR}/dictionary.json`,
+      JSON.stringify({ downloadedAt: new Date().toISOString() }),
+    );
+  } catch (error) {
+    const message =
+      error instanceof Error ? error.message : "Unknown error";
+    throw new Error(`Failed to download dictionary bundle: ${message}`);
+  }
 };
 
 // ── Translation extractors ─────────────────────────────────────────────────
@@ -207,23 +214,35 @@ const extractTs2009Verses = (bookData: Ts2009BookData): TranslationRow[] => {
 export const downloadTranslationBundle = async (language: "es" | "en") => {
   await initializeDatabase();
 
-  const dataset = language === "es" ? "tth" : "ts2009";
-  const bundle = await apiRequest<TranslationBundle>(
-    `/api/v1/export/bundle/${dataset}`,
-  );
+  const insertedBooks: string[] = [];
 
-  for (const [bookId, bookData] of Object.entries(bundle.books ?? {})) {
-    const rows =
-      language === "es"
-        ? extractTthVerses(bookData as TthBookData)
-        : extractTs2009Verses(bookData as Ts2009BookData);
+  try {
+    const dataset = language === "es" ? "tth" : "ts2009";
+    const bundle = await apiRequest<TranslationBundle>(
+      `/api/v1/export/bundle/${dataset}`,
+    );
 
-    await insertTranslationVerses(rows, language, bookId);
+    for (const [bookId, bookData] of Object.entries(bundle.books ?? {})) {
+      const rows =
+        language === "es"
+          ? extractTthVerses(bookData as TthBookData)
+          : extractTs2009Verses(bookData as Ts2009BookData);
+
+      await insertTranslationVerses(rows, language, bookId);
+      insertedBooks.push(bookId);
+    }
+
+    await ensureOfflineDir();
+    await FileSystem.writeAsStringAsync(
+      `${OFFLINE_DIR}/translations-${language}.json`,
+      JSON.stringify({ downloadedAt: new Date().toISOString() }),
+    );
+  } catch (error) {
+    for (const bookId of insertedBooks) {
+      await deleteTranslationBookEntries(bookId, language);
+    }
+    const message =
+      error instanceof Error ? error.message : "Unknown error";
+    throw new Error(`Failed to download translation bundle: ${message}`);
   }
-
-  await ensureOfflineDir();
-  await FileSystem.writeAsStringAsync(
-    `${OFFLINE_DIR}/translations-${language}.json`,
-    JSON.stringify({ downloadedAt: new Date().toISOString() }),
-  );
 };
