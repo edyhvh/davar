@@ -16,6 +16,7 @@ const he = {
     features: "תכונות",
     donate: "תרומה",
     openSettings: "פתח הגדרות",
+    bookShort: "ספר",
     chapterShort: "פרק",
     verseShort: "פס",
     languageLabel: "שפה",
