@@ -27,6 +27,7 @@ import {
   type WordResponse,
 } from "./services/verseService";
 import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
+import { stripCantillation, stripMeteg } from "./utils/hebrew";
 import {
   getWordAnalysisByStrong,
   type WordAnalysis,
@@ -38,6 +39,83 @@ import { useTranslation } from "./hooks/useTranslation";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
 
 type Screen = "home" | "verse" | "settings" | "donate" | "features";
+
+type RouteState = {
+  screen: Screen;
+  book?: string;
+  chapter?: number;
+  verse?: number;
+};
+
+const BOOK_ABBREVIATIONS: Record<string, string> = {
+  gen: "Genesis",
+  exod: "Exodus",
+  ex: "Exodus",
+  lev: "Leviticus",
+  num: "Numbers",
+  deut: "Deuteronomy",
+  josh: "Joshua",
+  judg: "Judges",
+  ruth: "Ruth",
+  "1sam": "Samuel1",
+  "2sam": "Samuel2",
+  "1kgs": "Kings1",
+  "2kgs": "Kings2",
+  "1chr": "Chronicles1",
+  "2chr": "Chronicles2",
+  ezra: "Ezra",
+  neh: "Nehemiah",
+  esth: "Esther",
+  job: "Job",
+  ps: "Psalms",
+  prov: "Proverbs",
+  eccl: "Ecclesiastes",
+  song: "SongOfSolomon",
+  isa: "Isaiah",
+  jer: "Jeremiah",
+  ezek: "Ezekiel",
+  dan: "Daniel",
+  hos: "Hosea",
+  joel: "Joel",
+  amos: "Amos",
+  obad: "Obadiah",
+  jonah: "Jonah",
+  mic: "Micah",
+  nah: "Nahum",
+  hab: "Habakkuk",
+  zeph: "Zephaniah",
+  hag: "Haggai",
+  zech: "Zechariah",
+  mal: "Malachi",
+  matt: "Matthew",
+  mark: "Mark",
+  luke: "Luke",
+  john: "John",
+  acts: "Acts",
+  rom: "Romans",
+  "1cor": "Corinthians1",
+  "2cor": "Corinthians2",
+  gal: "Galatians",
+  eph: "Ephesians",
+  phil: "Philippians",
+  col: "Colossians",
+  "1thess": "Thessalonians1",
+  "2thess": "Thessalonians2",
+  "1tim": "Timothy1",
+  "2tim": "Timothy2",
+  tit: "Titus",
+  phlm: "Philemon",
+  phlm2: "Philemon",
+  heb: "Hebrews",
+  jas: "James",
+  "1pet": "Peter1",
+  "2pet": "Peter2",
+  "1john": "John1",
+  "2john": "John2",
+  "3john": "John3",
+  jude: "Jude",
+  rev: "Revelation",
+};
 
 export default function App() {
   // Initialize persisted state from localStorage or defaults
@@ -90,12 +168,13 @@ export default function App() {
   const versePanelRef = useRef<HTMLDivElement | null>(null);
 
   const [selectedWord, setSelectedWord] = useState<WordResponse | null>(null);
-  const [isWordPanelDismissed, setIsWordPanelDismissed] = useState(false);
+  const [isWordPanelDismissed, setIsWordPanelDismissed] = useState(true);
+  const [showWordHint, setShowWordHint] = useState(true);
   const [isNavigatingWordPanel, setIsNavigatingWordPanel] = useState(false);
   const [showWordSkeleton, setShowWordSkeleton] = useState(false);
   const navigationKeyRef = useRef<string | null>(null);
   const wordSkeletonTimerRef = useRef<number | null>(null);
-  const wordPanelDismissedRef = useRef(false);
+  const wordPanelDismissedRef = useRef(true);
   const [lastSelectedWord, setLastSelectedWord] = useState<WordResponse | null>(
     null,
   );
@@ -114,6 +193,67 @@ export default function App() {
   const [selectedWordAnalysis, setSelectedWordAnalysis] =
     useState<WordAnalysis | null>(null);
   const [isWordAnalysisLoading, setIsWordAnalysisLoading] = useState(false);
+  const lastUrlRef = useRef<string | null>(null);
+  const pendingRouteRef = useRef<RouteState | null>(null);
+  const isHandlingPopStateRef = useRef(false);
+  const preserveWordRef = useRef(false);
+  const pendingWordTextRef = useRef<string | null>(null);
+  const pendingWordStrongRef = useRef<string | null>(null);
+  const pendingWordRef = useRef<WordResponse | null>(null);
+  const [wordCardTabKey, setWordCardTabKey] = useState(0);
+
+  const buildRoutePath = useCallback(
+    (route: RouteState) => {
+      switch (route.screen) {
+        case "home":
+          return "/home";
+        case "donate":
+          return "/donate";
+        case "features":
+          return "/features";
+        case "settings":
+          return "/settings";
+        case "verse": {
+          const book = route.book ? encodeURIComponent(route.book) : "";
+          const chapter = route.chapter ?? 1;
+          const verse = route.verse ?? 1;
+          return book ? `/verse/${book}/${chapter}/${verse}` : "/";
+        }
+        default:
+          return "/";
+      }
+    },
+    [],
+  );
+
+  const parseRoutePath = useCallback((pathname: string): RouteState => {
+    const trimmed = pathname.replace(/\/+$/, "") || "/";
+    const parts = trimmed.split("/").filter(Boolean);
+
+    if (parts.length === 0) {
+      return { screen: "verse" };
+    }
+
+    const [root, book, chapter, verse] = parts;
+    if (root === "home") return { screen: "home" };
+    if (root === "donate") return { screen: "donate" };
+    if (root === "features") return { screen: "features" };
+    if (root === "settings") return { screen: "settings" };
+
+    if (root === "verse") {
+      const decodedBook = book ? decodeURIComponent(book) : undefined;
+      const parsedChapter = chapter ? Number.parseInt(chapter, 10) : undefined;
+      const parsedVerse = verse ? Number.parseInt(verse, 10) : undefined;
+      return {
+        screen: "verse",
+        book: decodedBook,
+        chapter: Number.isNaN(parsedChapter) ? undefined : parsedChapter,
+        verse: Number.isNaN(parsedVerse) ? undefined : parsedVerse,
+      };
+    }
+
+    return { screen: "verse" };
+  }, []);
 
   const getHebrewBookName = (book: string): string => {
     const found = books.find(
@@ -137,12 +277,14 @@ export default function App() {
       return "Davar";
     }
 
-    const displayBookName =
-      language === "he"
-        ? getHebrewBookName(currentBook)
-        : getDisplayBookName(currentBook);
+    if (language === "he") {
+      return `${getHebrewBookName(currentBook)} ${currentChapter}`;
+    }
 
-    return `${displayBookName} ${currentChapter}`;
+    const displayBookName = getDisplayBookName(currentBook);
+    const hebrewBookName = getHebrewBookName(currentBook);
+
+    return `${displayBookName} ${hebrewBookName} ${currentChapter}`;
   }, [currentBook, currentChapter, currentScreen, language, books]);
 
   useDocumentTitle(tabTitle);
@@ -154,6 +296,11 @@ export default function App() {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    pendingRouteRef.current = parseRoutePath(window.location.pathname);
+  }, [parseRoutePath]);
 
   useEffect(() => {
     document.documentElement.dir = isRTL ? "rtl" : "ltr";
@@ -183,10 +330,20 @@ export default function App() {
 
   const handleWordClick = (word: WordResponse) => {
     setIsWordPanelDismissed(false);
+    setShowWordHint(false);
     setSelectedWord(word);
   };
 
   const handleNavigateToVerse = async (verseRef: string) => {
+    const wordToPreserve = selectedWord ?? lastSelectedWord;
+    if (wordToPreserve) {
+      preserveWordRef.current = true;
+      pendingWordTextRef.current = wordToPreserve.text;
+      pendingWordStrongRef.current = wordToPreserve.strong ?? null;
+      pendingWordRef.current = wordToPreserve;
+      setIsWordPanelDismissed(false);
+      setWordCardTabKey((previous) => previous + 1);
+    }
     const cleanedRef = verseRef.replace(/\s+/g, " ").trim();
     const lastSpaceIndex = cleanedRef.lastIndexOf(" ");
     if (lastSpaceIndex <= 0) return;
@@ -200,8 +357,11 @@ export default function App() {
     const verse = Number.parseInt(match[2], 10);
     if (Number.isNaN(chapter) || Number.isNaN(verse)) return;
 
+    const normalizedBookLabel = bookLabel.toLowerCase().replace(/\./g, "");
+    const abbreviationMatch = BOOK_ABBREVIATIONS[normalizedBookLabel];
+
     const matchedBook = books.find((item) => {
-      const label = bookLabel.toLowerCase();
+      const label = normalizedBookLabel;
       return (
         item.name.toLowerCase() === label ||
         item.hebrew_name?.toLowerCase() === label ||
@@ -209,8 +369,9 @@ export default function App() {
       );
     });
 
-    let resolvedBookName = matchedBook?.name ?? bookLabel;
-    if (!matchedBook) {
+    let resolvedBookName =
+      matchedBook?.name ?? abbreviationMatch ?? bookLabel;
+    if (!matchedBook && !abbreviationMatch) {
       try {
         const resolved = await lookupBook(bookLabel);
         resolvedBookName = resolved.name;
@@ -275,6 +436,39 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    const pending = pendingRouteRef.current;
+    if (!pending) return;
+
+    if (pending.screen !== "verse") {
+      setCurrentScreen(pending.screen);
+      pendingRouteRef.current = null;
+      return;
+    }
+
+    if (pending.book) {
+      const matchedBook = books.find(
+        (item) => item.name.toLowerCase() === pending.book?.toLowerCase(),
+      );
+      if (matchedBook) {
+        setCurrentBook(matchedBook.name);
+      } else {
+        setCurrentBook(pending.book);
+      }
+    }
+
+    if (pending.chapter) {
+      setCurrentChapter(pending.chapter);
+    }
+
+    if (pending.verse) {
+      setCurrentVerse(pending.verse);
+    }
+
+    setCurrentScreen("verse");
+    pendingRouteRef.current = null;
+  }, [books]);
+
+  useEffect(() => {
     let isMounted = true;
     const loadChapterData = async () => {
       setIsLoading(true);
@@ -310,6 +504,57 @@ export default function App() {
       isMounted = false;
     };
   }, [currentBook, currentChapter, language, showQumran, hebrewOnly]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const handlePopState = () => {
+      isHandlingPopStateRef.current = true;
+      const route = parseRoutePath(window.location.pathname);
+      if (route.screen !== "verse") {
+        setCurrentScreen(route.screen);
+      } else {
+        if (route.book) {
+          const matchedBook = books.find(
+            (item) => item.name.toLowerCase() === route.book?.toLowerCase(),
+          );
+          if (matchedBook) {
+            setCurrentBook(matchedBook.name);
+          } else {
+            setCurrentBook(route.book);
+          }
+        }
+        if (route.chapter) {
+          setCurrentChapter(route.chapter);
+        }
+        if (route.verse) {
+          setCurrentVerse(route.verse);
+        }
+        setCurrentScreen("verse");
+      }
+      window.setTimeout(() => {
+        isHandlingPopStateRef.current = false;
+      }, 0);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [books, parseRoutePath]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (isHandlingPopStateRef.current) return;
+
+    const path = buildRoutePath({
+      screen: currentScreen,
+      book: currentBook,
+      chapter: currentChapter,
+      verse: currentVerse,
+    });
+
+    if (lastUrlRef.current === path) return;
+    window.history.pushState(null, "", path);
+    lastUrlRef.current = path;
+  }, [buildRoutePath, currentBook, currentChapter, currentScreen, currentVerse]);
 
   useEffect(() => {
     let isMounted = true;
@@ -411,40 +656,55 @@ export default function App() {
     if (navigationKeyRef.current === navigationKey) return;
     navigationKeyRef.current = navigationKey;
 
-    if (wordPanelDismissedRef.current) {
+    if (preserveWordRef.current) {
       setIsNavigatingWordPanel(false);
-      return;
-    }
-
-    setIsNavigatingWordPanel(true);
-    wordSkeletonTimerRef.current = window.setTimeout(() => {
-      setShowWordSkeleton(true);
-    }, 300);
-  }, [currentBook, currentChapter, currentVerse, isMobile]);
-
-  useEffect(() => {
-    if (!isNavigatingWordPanel || isMobile) return;
-    if (wordPanelDismissedRef.current) {
-      setIsNavigatingWordPanel(false);
-      return;
-    }
-    if (!currentVerseData) return;
-
-    const firstWord = currentVerseData.words?.[0];
-    if (firstWord) {
-      setSelectedWord(firstWord);
       setIsWordPanelDismissed(false);
-    } else {
-      setSelectedWord(null);
+      return;
     }
 
     setIsNavigatingWordPanel(false);
-    setShowWordSkeleton(false);
-    if (wordSkeletonTimerRef.current) {
-      window.clearTimeout(wordSkeletonTimerRef.current);
-      wordSkeletonTimerRef.current = null;
+    setIsWordPanelDismissed(true);
+    setSelectedWord(null);
+  }, [currentBook, currentChapter, currentVerse, isMobile]);
+
+  useEffect(() => {
+    if (!currentVerseData || !preserveWordRef.current) return;
+
+    const targetText = pendingWordTextRef.current;
+    const targetStrong = pendingWordStrongRef.current;
+    const fallbackWord = pendingWordRef.current;
+
+    const normalize = (text: string) =>
+      stripMeteg(stripCantillation(text)).replace(/\//g, "");
+
+    let matchedWord: WordResponse | undefined;
+
+    if (targetStrong) {
+      matchedWord = currentVerseData.words?.find(
+        (word) => word.strong === targetStrong,
+      );
     }
-  }, [currentVerseData, isMobile, isNavigatingWordPanel]);
+
+    if (!matchedWord && targetText) {
+      const normalizedTarget = normalize(targetText);
+      matchedWord = currentVerseData.words?.find(
+        (word) => normalize(word.text) === normalizedTarget,
+      );
+    }
+
+    if (matchedWord) {
+      setSelectedWord(matchedWord);
+      setIsWordPanelDismissed(false);
+    } else if (fallbackWord) {
+      setSelectedWord(fallbackWord);
+      setIsWordPanelDismissed(false);
+    }
+
+    preserveWordRef.current = false;
+    pendingWordTextRef.current = null;
+    pendingWordStrongRef.current = null;
+    pendingWordRef.current = null;
+  }, [currentVerseData]);
 
   useEffect(() => {
     if (!selectedWord) return;
@@ -544,9 +804,7 @@ export default function App() {
     onNavigateFeedback: triggerScrollJump,
   });
 
-  const activeWordAnalysis = selectedWord
-    ? selectedWordAnalysis
-    : lastSelectedWordAnalysis;
+  const activeWordAnalysis = selectedWordAnalysis ?? lastSelectedWordAnalysis;
 
   const wordMeanings =
     activeWordAnalysis?.definitions?.map((item) => item.text) ?? [];
@@ -646,6 +904,7 @@ export default function App() {
                       chapter={currentChapter}
                       language={language}
                       onWordClick={handleWordClick}
+                      showOnboardingHint={showWordHint}
                       showQumran={showQumran}
                       showFullChapter={showFullChapter}
                       hebrewOnly={hebrewOnly}
@@ -726,6 +985,7 @@ export default function App() {
                     <WordCard
                       word={wordAnalysisForCard?.hebrew ?? wordForCard.text}
                       wordFromVerse={wordForCard.text}
+                      strongNumber={wordAnalysisForCard?.strong_number}
                       transliteration={wordAnalysisForCard?.transliteration}
                       meanings={wordMeanings}
                       root={wordAnalysisForCard?.root}
@@ -743,6 +1003,7 @@ export default function App() {
                             : instance,
                       )}
                       onInstanceClick={handleNavigateToVerse}
+                      tabResetKey={wordCardTabKey}
                       onClose={() => {
                         if (!isMobile) {
                           setIsWordPanelDismissed(true);
@@ -789,6 +1050,7 @@ export default function App() {
           <WordCard
             word={selectedWordAnalysis?.hebrew ?? selectedWord.text}
             wordFromVerse={selectedWord.text}
+            strongNumber={selectedWordAnalysis?.strong_number}
             transliteration={selectedWordAnalysis?.transliteration}
             meanings={wordMeanings}
             root={selectedWordAnalysis?.root}
@@ -804,6 +1066,7 @@ export default function App() {
                   : instance,
             )}
             onInstanceClick={handleNavigateToVerse}
+            tabResetKey={wordCardTabKey}
             onClose={() => setSelectedWord(null)}
             isLoading={!selectedWordAnalysis}
           />

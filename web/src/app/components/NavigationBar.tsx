@@ -70,6 +70,12 @@ export function NavigationBar({
 }: NavigationBarProps) {
   const [openMenu, setOpenMenu] = useState<'settings' | 'book' | 'chapter' | 'verse' | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const bookSearchRef = useRef<HTMLInputElement>(null);
+  const chapterSearchRef = useRef<HTMLInputElement>(null);
+  const verseSearchRef = useRef<HTMLInputElement>(null);
+  const [bookSearch, setBookSearch] = useState('');
+  const [chapterSearch, setChapterSearch] = useState('');
+  const [verseSearch, setVerseSearch] = useState('');
   const { t } = useTranslation(language);
 
   useEffect(() => {
@@ -85,6 +91,22 @@ export function NavigationBar({
     }
   }, [openMenu]);
 
+  useEffect(() => {
+    if (!openMenu) return;
+    if (openMenu === 'book') {
+      setBookSearch('');
+      window.setTimeout(() => bookSearchRef.current?.focus(), 0);
+    }
+    if (openMenu === 'chapter') {
+      setChapterSearch('');
+      window.setTimeout(() => chapterSearchRef.current?.focus(), 0);
+    }
+    if (openMenu === 'verse') {
+      setVerseSearch('');
+      window.setTimeout(() => verseSearchRef.current?.focus(), 0);
+    }
+  }, [openMenu]);
+
   const languages = [
     { code: 'en', label: t('languages.en') },
     { code: 'es', label: t('languages.es') },
@@ -93,6 +115,27 @@ export function NavigationBar({
 
   const chapters = Array.from({ length: chapterCount }, (_, i) => i + 1);
   const verses = Array.from({ length: verseCount }, (_, i) => i + 1);
+
+  const normalizedBookSearch = bookSearch.trim().toLowerCase();
+  const filteredBooks = normalizedBookSearch
+    ? books.filter((item) => {
+        const haystack = [item.name, item.spanish, item.hebrew]
+          .filter(Boolean)
+          .join(' ')
+          .toLowerCase();
+        return haystack.includes(normalizedBookSearch);
+      })
+    : books;
+
+  const normalizedChapterSearch = chapterSearch.trim();
+  const filteredChapters = normalizedChapterSearch
+    ? chapters.filter((item) => String(item).startsWith(normalizedChapterSearch))
+    : chapters;
+
+  const normalizedVerseSearch = verseSearch.trim();
+  const filteredVerses = normalizedVerseSearch
+    ? verses.filter((item) => String(item).startsWith(normalizedVerseSearch))
+    : verses;
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -326,8 +369,24 @@ export function NavigationBar({
 
       {openMenu === 'book' && (
         <div className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30">
-          <div className="max-h-[360px] overflow-y-auto space-y-2">
-            {books.map((item) => (
+          <div className="mb-3">
+            <input
+              ref={bookSearchRef}
+              value={bookSearch}
+              onChange={(event) => setBookSearch(event.target.value)}
+              placeholder="Search book"
+              className="w-full rounded-full px-4 py-2 text-xs text-[var(--text-primary)]"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                backgroundColor: 'var(--neomorph-bg)',
+                border: '1px solid var(--neomorph-border)',
+                boxShadow:
+                  'inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)',
+              }}
+            />
+          </div>
+          <div className="max-h-[320px] overflow-y-auto space-y-2">
+            {filteredBooks.map((item) => (
               <button
                 key={item.name}
                 onClick={() => {
@@ -353,8 +412,25 @@ export function NavigationBar({
 
       {openMenu === 'chapter' && (
         <div className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30">
+          <div className="mb-3">
+            <input
+              ref={chapterSearchRef}
+              value={chapterSearch}
+              onChange={(event) => setChapterSearch(event.target.value.replace(/[^0-9]/g, ''))}
+              placeholder={t('navigation.chapterShort')}
+              inputMode="numeric"
+              className="w-full rounded-full px-4 py-2 text-xs text-[var(--text-primary)]"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                backgroundColor: 'var(--neomorph-bg)',
+                border: '1px solid var(--neomorph-border)',
+                boxShadow:
+                  'inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)',
+              }}
+            />
+          </div>
           <div className="grid grid-cols-5 gap-2">
-            {chapters.map((item) => (
+            {filteredChapters.map((item) => (
               <button
                 key={item}
                 onClick={() => {
@@ -377,8 +453,25 @@ export function NavigationBar({
 
       {openMenu === 'verse' && (
         <div className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30">
+          <div className="mb-3">
+            <input
+              ref={verseSearchRef}
+              value={verseSearch}
+              onChange={(event) => setVerseSearch(event.target.value.replace(/[^0-9]/g, ''))}
+              placeholder={t('navigation.verseShort')}
+              inputMode="numeric"
+              className="w-full rounded-full px-4 py-2 text-xs text-[var(--text-primary)]"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                backgroundColor: 'var(--neomorph-bg)',
+                border: '1px solid var(--neomorph-border)',
+                boxShadow:
+                  'inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)',
+              }}
+            />
+          </div>
           <div className="grid grid-cols-5 gap-2 max-h-[320px] overflow-y-auto">
-            {verses.map((item) => (
+            {filteredVerses.map((item) => (
               <button
                 key={item}
                 onClick={() => {

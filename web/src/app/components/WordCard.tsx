@@ -19,6 +19,7 @@ interface WordInstance {
 interface WordCardProps {
   word: string;
   wordFromVerse?: string;
+  strongNumber?: string;
   transliteration?: string;
   meanings: string[];
   root?: string;
@@ -31,6 +32,7 @@ interface WordCardProps {
   isLoading?: boolean;
   showNikud?: boolean;
   onClose?: () => void;
+  tabResetKey?: number;
 }
 
 interface PrefixEntry {
@@ -47,6 +49,7 @@ interface PrefixEntry {
 export function WordCard({
   word,
   wordFromVerse,
+  strongNumber,
   transliteration,
   meanings,
   root,
@@ -59,6 +62,7 @@ export function WordCard({
   isLoading = false,
   showNikud = true,
   onClose,
+  tabResetKey,
 }: WordCardProps) {
   const { t } = useTranslation(language);
   const [activeTab, setActiveTab] = useState<"meanings" | "instances">(
@@ -103,6 +107,12 @@ export function WordCard({
     }
     return getPrefixSegments(displayBase, displayedData.prefixes);
   }, [displayedData.prefixes, displayedData.wordFromVerse, showNikud]);
+
+  const hasRootInfo = Boolean(
+    displayedData.root ||
+      displayedData.rootTransliteration ||
+      displayedData.rootMeaning,
+  );
 
   useEffect(() => {
     const loadPrefixes = async () => {
@@ -191,6 +201,11 @@ export function WordCard({
     wordFromVerse,
   ]);
 
+  useEffect(() => {
+    if (tabResetKey === undefined) return;
+    setActiveTab("meanings");
+  }, [tabResetKey]);
+
   return (
     <div
       className="space-y-6 py-2"
@@ -245,6 +260,22 @@ export function WordCard({
             </span>
           )}
         </div>
+
+        {strongNumber && (
+          <div
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "11px",
+              color: "var(--text-secondary)",
+              textTransform: "uppercase",
+              letterSpacing: "0.12em",
+              fontWeight: 500,
+              marginTop: "8px",
+            }}
+          >
+            {strongNumber}
+          </div>
+        )}
 
         {/* Transliteration */}
         {displayedData.transliteration && (
@@ -327,7 +358,7 @@ export function WordCard({
             </h3>
             <div
               style={{
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Jost', sans-serif",
                 fontSize: "18px",
                 lineHeight: 1.5,
                 fontWeight: 400,
@@ -369,22 +400,37 @@ export function WordCard({
               {t("wordCard.root")}
             </h3>
             <div className="space-y-2">
-              {displayedData.root ? (
+              {hasRootInfo ? (
                 <>
-                  <div
-                    style={{
-                      fontFamily: "'Cardo', serif",
-                      fontSize: "48px",
-                      direction: "rtl",
-                      color: "var(--primary)",
-                      fontWeight: 600,
-                      lineHeight: 1.4,
-                    }}
-                  >
-                    {normalizeHebrewDisplay(
-                      normalizeHebrew(displayedData.root).replace(/\//g, ""),
-                    )}
-                  </div>
+                  {displayedData.root ? (
+                    <div
+                      style={{
+                        fontFamily: "'Cardo', serif",
+                        fontSize: "48px",
+                        direction: "rtl",
+                        color: "var(--primary)",
+                        fontWeight: 600,
+                        lineHeight: 1.4,
+                      }}
+                    >
+                      {normalizeHebrewDisplay(
+                        normalizeHebrew(displayedData.root).replace(/\//g, ""),
+                      )}
+                    </div>
+                  ) : (
+                    <div
+                      style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: "13px",
+                        color: "var(--text-secondary)",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.12em",
+                        fontWeight: 600,
+                      }}
+                    >
+                      —
+                    </div>
+                  )}
 
                   {displayedData.rootTransliteration && (
                     <div
@@ -511,7 +557,7 @@ export function WordCard({
                     {meanings.length ? (
                       <div
                         style={{
-                          fontFamily: "'Inter', sans-serif",
+                          fontFamily: "'Jost', sans-serif",
                           fontSize: "15px",
                           lineHeight: 1.5,
                         }}

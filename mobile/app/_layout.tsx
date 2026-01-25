@@ -12,6 +12,7 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from "@expo-google-fonts/inter";
+import { Jost_400Regular } from "@expo-google-fonts/jost";
 import { Arimo_400Regular, Arimo_700Bold } from "@expo-google-fonts/arimo";
 import { SuezOne_400Regular } from "@expo-google-fonts/suez-one";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -33,6 +34,7 @@ export default function RootLayout() {
     Inter_500Medium,
     Inter_600SemiBold,
     Inter_700Bold,
+    Jost_400Regular,
     Arimo_400Regular,
     Arimo_700Bold,
     SuezOne_400Regular,
