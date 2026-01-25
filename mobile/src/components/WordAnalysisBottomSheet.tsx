@@ -682,32 +682,29 @@ export const WordAnalysisBottomSheet = ({
                 </View>
 
                 {/* Root section */}
-                {word || lexiconEntry ? (
-                  <View style={styles.rootSection}>
-                    <Text style={styles.sectionLabel}>Root</Text>
-                    <Text style={styles.rootHebrew}>
-                      {(
-                        lexiconEntry?.root ??
-                        word?.root ??
-                        displayHebrew
-                      ).replace(/\//g, "")}
+                <View style={styles.rootSection}>
+                  <Text style={styles.sectionLabel}>Root</Text>
+                  <Text style={styles.rootHebrew}>
+                    {(lexiconEntry?.root ?? word?.root ?? displayHebrew).replace(
+                      /\//g,
+                      "",
+                    )}
+                  </Text>
+                  {lexiconEntry?.root_strong ||
+                  lexiconEntry?.root_transliteration ||
+                  word?.rootTransliteration ? (
+                    <Text style={styles.rootTransliteration}>
+                      {lexiconEntry?.root_strong ??
+                        lexiconEntry?.root_transliteration ??
+                        word?.rootTransliteration}
                     </Text>
-                    {lexiconEntry?.root_strong ||
-                    lexiconEntry?.root_transliteration ||
-                    word?.rootTransliteration ? (
-                      <Text style={styles.rootTransliteration}>
-                        {lexiconEntry?.root_strong ??
-                          lexiconEntry?.root_transliteration ??
-                          word?.rootTransliteration}
-                      </Text>
-                    ) : null}
-                    <Text style={styles.rootMeaning}>
-                      {lexiconEntry?.root || word?.root
-                        ? rootMeaningText
-                        : "ALREADY ROOT"}
-                    </Text>
-                  </View>
-                ) : null}
+                  ) : null}
+                  <Text style={styles.rootMeaning}>
+                    {lexiconEntry?.root || word?.root
+                      ? rootMeaningText
+                      : "ALREADY ROOT"}
+                  </Text>
+                </View>
 
                 {word?.prefixes?.length ? (
                   <View style={styles.prefixesSection}>

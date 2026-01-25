@@ -55,19 +55,23 @@ async def get_verses(
         }
 
         if stream:
+            verse_iterator = verses_service.iter_verses(
+                book=book,
+                chapter=chapter,
+                language=language,
+                show_dss=show_dss,
+                hebrew_only=hebrew_only
+            )
+            first_verse = next(verse_iterator, None)
+            if not first_verse:
+                raise HTTPException(
+                    status_code=404, detail=f"Book '{book}' or chapter {chapter} not found")
+
             def verse_stream():
                 yield b"["
-                first = True
-                for verse in verses_service.iter_verses(
-                    book=book,
-                    chapter=chapter,
-                    language=language,
-                    show_dss=show_dss,
-                    hebrew_only=hebrew_only
-                ):
-                    if not first:
-                        yield b","
-                    first = False
+                yield orjson.dumps(first_verse.model_dump())
+                for verse in verse_iterator:
+                    yield b","
                     yield orjson.dumps(verse.model_dump())
                 yield b"]"
 
