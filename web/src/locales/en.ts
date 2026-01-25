@@ -16,6 +16,7 @@ const en = {
     features: "Features",
     donate: "Donate",
     openSettings: "Open settings",
+    bookShort: "SEFER",
     chapterShort: "Ch",
     verseShort: "Vs",
     languageLabel: "Language",
