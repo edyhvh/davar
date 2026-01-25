@@ -78,8 +78,7 @@ export function FullChapterView({
 
       const normalizedDisplay = normalizeForMatch(displayText);
       const isSelected =
-        Boolean(normalizedSelected) &&
-        normalizedSelected === normalizedDisplay;
+        Boolean(normalizedSelected) && normalizedSelected === normalizedDisplay;
 
       const prefixSegments = word.prefixes?.length
         ? getPrefixSegments(displayText, word.prefixes)
@@ -91,9 +90,7 @@ export function FullChapterView({
             onClick={() => onWordClick(word)}
             className={`cursor-pointer transition-colors duration-200 ${isSelected ? "verse-highlight" : ""}`}
             style={
-              variantText
-                ? { color: "var(--copper-highlight)" }
-                : undefined
+              variantText ? { color: "var(--copper-highlight)" } : undefined
             }
           >
             {prefixSegments?.prefixes?.length ? (
@@ -120,7 +117,7 @@ export function FullChapterView({
   };
 
   return (
-    <div className="space-y-6 transition-all duration-500">
+    <div className="space-y-6 transition-all duration-500 full-chapter-scroll">
       {/* Chapter Verses */}
       {shouldShowSefer ? (
         <div className="px-2">
@@ -155,7 +152,10 @@ export function FullChapterView({
       ) : (
         <div className="space-y-8 px-2">
           {verses.map((verse, idx) => (
-            <div key={verse.verse} className="space-y-3 transition-all duration-300">
+            <div
+              key={verse.verse}
+              className="space-y-3 transition-all duration-300 verse-block"
+            >
               {/* Hebrew Text with Verse Number */}
               <div
                 className="leading-relaxed tracking-[0.01em]"
