@@ -8,6 +8,7 @@ from app.data_loaders.besorah import BesorahLoader
 from app.data_loaders.translations import TranslationLoader
 from app.data_loaders.variants import VariantLoader
 from app.data_loaders.book_mapping import BookNameMapper as BookMapper
+from app.data_loaders.translit import TranslitLoader
 
 
 class VersesService:
@@ -19,12 +20,14 @@ class VersesService:
         besorah_loader: BesorahLoader,
         translations_loader: TranslationLoader,
         variants_loader: VariantLoader,
+        translit_loader: TranslitLoader,
         book_mapper: BookMapper
     ):
         self.tanaj_loader = tanaj_loader
         self.besorah_loader = besorah_loader
         self.translations_loader = translations_loader
         self.variants_loader = variants_loader
+        self.translit_loader = translit_loader
         self.book_mapper = book_mapper
 
     def get_verses(
@@ -144,14 +147,24 @@ class VersesService:
     ) -> VerseResponse:
         """Build a VerseResponse from raw verse data."""
         words = []
+        translit_words = self.translit_loader.get_verse_words(
+            book_en.lower(),
+            verse_data["chapter"],
+            verse_data["verse"],
+        )
         for idx, word_data in enumerate(verse_data.get('words', [])):
+            translit_data = (
+                translit_words[idx] if idx < len(translit_words) else {}
+            )
             word = WordResponse(
                 position=idx + 1,
                 text=word_data.get('text', ''),
                 strong=word_data.get('strong'),
                 morph=word_data.get('morph'),
                 prefixes=word_data.get('prefixes', []),
-                has_dss_variant=False
+                has_dss_variant=False,
+                translit_en=translit_data.get('translit_en'),
+                translit_es=translit_data.get('translit_es')
             )
             words.append(word)
 

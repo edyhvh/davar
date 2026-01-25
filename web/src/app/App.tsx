@@ -214,6 +214,16 @@ export default function App() {
   const [wordCardTabKey, setWordCardTabKey] = useState(0);
   const [hideNavOnScroll, setHideNavOnScroll] = useState(false);
 
+  const getTransliterationForLanguage = useCallback(
+    (word?: WordResponse | null) => {
+      if (!word) return undefined;
+      if (language === "en") return word.translit_en;
+      if (language === "es") return word.translit_es;
+      return undefined;
+    },
+    [language],
+  );
+
   useEffect(() => {
     if ((!showFullChapter || !hebrewOnly) && seferMode) {
       setSeferMode(false);
@@ -792,12 +802,11 @@ export default function App() {
   }, [scrollJumpActive]);
 
   const triggerScrollJump = useCallback(() => {
-    setScrollHintCount((previous) => {
-      if (previous >= 5) return previous;
+    if (scrollHintCount < 5) {
       setScrollJumpActive(true);
-      return previous + 1;
-    });
-  }, []);
+      setScrollHintCount(scrollHintCount + 1);
+    }
+  }, [scrollHintCount, setScrollHintCount]);
 
   const handlePreviousVerse = useCallback(async () => {
     if (currentVerse > 1) {
@@ -1026,19 +1035,16 @@ export default function App() {
                     const wordAnalysisForCard = selectedWord
                       ? selectedWordAnalysis
                       : lastSelectedWordAnalysis;
+                    const wordTransliteration =
+                      getTransliterationForLanguage(wordForCard);
 
                     return (
                       <NeumorphCard
                         className={`p-6 ${
                           isWordPanelActive
                             ? "word-panel-open"
-                            : "word-panel-closed"
+                            : "word-panel-closed pointer-events-none"
                         } ${showFullChapter ? "" : "sticky top-24"} word-panel-shell`}
-                        style={
-                          !isWordPanelActive
-                            ? { pointerEvents: "none" }
-                            : undefined
-                        }
                         onMouseEnter={() => setIsWordPanelHovered(true)}
                         onMouseLeave={() => setIsWordPanelHovered(false)}
                       >
@@ -1060,9 +1066,7 @@ export default function App() {
                             }
                             wordFromVerse={wordForCard.text}
                             strongNumber={wordAnalysisForCard?.strong_number}
-                            transliteration={
-                              wordAnalysisForCard?.transliteration
-                            }
+                            transliteration={wordTransliteration}
                             meanings={wordMeanings}
                             root={wordAnalysisForCard?.root}
                             rootTransliteration={
@@ -1135,7 +1139,7 @@ export default function App() {
             word={selectedWordAnalysis?.hebrew ?? selectedWord.text}
             wordFromVerse={selectedWord.text}
             strongNumber={selectedWordAnalysis?.strong_number}
-            transliteration={selectedWordAnalysis?.transliteration}
+            transliteration={getTransliterationForLanguage(selectedWord)}
             meanings={wordMeanings}
             root={selectedWordAnalysis?.root}
             rootTransliteration={selectedWordAnalysis?.root_strong}
