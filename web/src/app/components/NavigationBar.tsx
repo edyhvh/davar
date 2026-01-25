@@ -325,23 +325,6 @@ export function NavigationBar({
                 ariaLabel={t("navigation.toggleQumran")}
               />
             </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
-                <span
-                  className="text-sm text-[var(--text-primary)]"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  {t("settings.hebrewOnly")}
-                </span>
-              </div>
-              <NeumorphicToggle
-                enabled={hebrewOnly}
-                onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
-                ariaLabel={t("navigation.toggleHebrewOnly")}
-              />
-            </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />

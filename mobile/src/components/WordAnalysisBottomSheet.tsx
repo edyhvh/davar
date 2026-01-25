@@ -47,8 +47,9 @@ type WordAnalysisBottomSheetProps = {
         rootTransliteration?: string;
         rootMeaning?: string;
         instances?: { verse: string; text: string }[];
-        transliteration?: string;
         strong?: string;
+        translit_en?: string;
+        translit_es?: string;
       })
     | null;
   // Called after the sheet has fully closed and any exit animations have completed
@@ -362,6 +363,7 @@ export const WordAnalysisBottomSheet = ({
   sheetRef,
   word,
   currentVerseId,
+  onClosed,
 }: WordAnalysisBottomSheetProps) => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const hebrewFontScale = useAppStore(
@@ -386,6 +388,13 @@ export const WordAnalysisBottomSheet = ({
   const showCantillation = useAppStore(
     (state: AppState) => state.showCantillation,
   );
+  // Keep in sync with web/src/app/App.tsx transliteration selection logic.
+  const wordTransliteration =
+    language === "en"
+      ? word?.translit_en
+      : language === "es"
+        ? word?.translit_es
+        : undefined;
 
   const strongNumber = useMemo(() => {
     if (!word?.strong) return null;
@@ -443,7 +452,7 @@ export const WordAnalysisBottomSheet = ({
         console.debug(
           "WordAnalysisBottomSheet: lexicon loaded",
           strongNumber,
-          entry?.transliteration ?? entry?.hebrew ?? entry?.root_strong ?? null,
+          entry?.hebrew ?? entry?.root_strong ?? null,
         );
       } catch {
         setLexiconEntry(null);
@@ -614,9 +623,9 @@ export const WordAnalysisBottomSheet = ({
             {/* Header: Hebrew word + transliteration */}
             <View style={styles.headerSection}>
               <Text style={styles.hebrew}>{displayHebrew}</Text>
-              {lexiconEntry?.transliteration || word?.transliteration ? (
+              {wordTransliteration ? (
                 <Text style={styles.transliteration}>
-                  {lexiconEntry?.transliteration ?? word?.transliteration}
+                  {wordTransliteration}
                 </Text>
               ) : null}
               {lexiconEntry?.occurrences_count && (
@@ -692,13 +701,9 @@ export const WordAnalysisBottomSheet = ({
                         displayHebrew
                       ).replace(/\//g, "")}
                     </Text>
-                    {lexiconEntry?.root_strong ||
-                    lexiconEntry?.root_transliteration ||
-                    word?.rootTransliteration ? (
+                    {lexiconEntry?.root_strong || word?.rootTransliteration ? (
                       <Text style={styles.rootTransliteration}>
-                        {lexiconEntry?.root_strong ??
-                          lexiconEntry?.root_transliteration ??
-                          word?.rootTransliteration}
+                        {lexiconEntry?.root_strong ?? word?.rootTransliteration}
                       </Text>
                     ) : null}
                     <Text style={styles.rootMeaning}>

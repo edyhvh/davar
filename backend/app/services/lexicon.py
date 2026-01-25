@@ -104,16 +104,9 @@ class LexiconService:
         root = (lexicon_entry or {}).get('root')
         root_strong = (lexicon_entry or {}).get('root_strong')
         root_definitions = None
-        root_transliteration = None
-
         if root_strong:
             root_entry = self.dictionary_loader.get_lexicon_entry(root_strong)
             if root_entry:
-                root_transliteration = (
-                    root_entry.get('transliteration')
-                    or root_entry.get('transliteration_en')
-                    or root_entry.get('transliteration_es')
-                )
                 root_definitions = []
                 for def_item in root_entry.get('definitions', []):
                     _append_definition_items(
@@ -151,16 +144,9 @@ class LexiconService:
                 or (lexicon_entry or {}).get('lemma')
                 or ''
             ),
-            transliteration=(
-                (lexicon_entry or {}).get('transliteration')
-                or (lexicon_entry or {}).get('transliteration_en')
-                or (lexicon_entry or {}).get('transliteration_es')
-                or ''
-            ),
             definitions=definitions,
             root=root,
             root_strong=root_strong,
-            root_transliteration=root_transliteration,
             root_definitions=root_definitions,
             occurrences_count=occurrences_count,
             instances=instances
@@ -335,8 +321,6 @@ class LexiconService:
             results.append(LexiconResponse(
                 strong_number=strong_number,
                 hebrew=entry.get('hebrew'),
-                transliteration=entry.get(
-                    'transliteration_en') or entry.get('transliteration_es'),
                 definitions=definitions,
                 root=entry.get('root'),
                 root_strong=entry.get('root_strong'),
