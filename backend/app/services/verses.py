@@ -149,8 +149,8 @@ class VersesService:
         words = []
         translit_words = self.translit_loader.get_verse_words(
             book_en.lower(),
-            verse_data["chapter"],
-            verse_data["verse"],
+            verse_data.get("chapter", 0),
+            verse_data.get("verse", 0),
         )
         for idx, word_data in enumerate(verse_data.get('words', [])):
             translit_data = (
@@ -173,7 +173,7 @@ class VersesService:
         translation_footnotes = None
         if not hebrew_only and language:
             translation_data = self.translations_loader.get_translation(
-                book_en, verse_data['chapter'], verse_data['verse'], language
+                book_en, verse_data.get('chapter', 0), verse_data.get('verse', 0), language
             )
             if translation_data:
                 translation = translation_data.get("translation")
@@ -193,7 +193,7 @@ class VersesService:
         dss_variants = None
         if show_dss:
             dss_data = self.variants_loader.get_dss_variants(
-                book_en, verse_data['chapter'], verse_data['verse']
+                book_en, verse_data.get('chapter', 0), verse_data.get('verse', 0)
             )
             if dss_data:
                 dss_variants = []
@@ -210,8 +210,8 @@ class VersesService:
                         words[dv.word_position - 1].has_dss_variant = True
 
         return VerseResponse(
-            chapter=verse_data['chapter'],
-            verse=verse_data['verse'],
+            chapter=verse_data.get('chapter', 0),
+            verse=verse_data.get('verse', 0),
             hebrew=verse_data.get('hebrew', ''),
             words=words,
             translation=translation,
