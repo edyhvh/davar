@@ -11,11 +11,13 @@ class WordResponse(BaseModel):
     """Response model for individual Hebrew words"""
     position: int
     text: str
-    text_no_nikud: str
+    text_no_nikud: Optional[str] = None
     strong: Optional[str] = None
     morph: Optional[str] = None
     prefixes: List[str] = []
     has_dss_variant: bool = False
+    translit_en: Optional[str] = None
+    translit_es: Optional[str] = None
 
 
 class DssVariant(BaseModel):
@@ -39,7 +41,6 @@ class VerseResponse(BaseModel):
     chapter: int
     verse: int
     hebrew: str
-    hebrew_no_nikud: str
     words: List[WordResponse]
     translation: Optional[str] = None
     translation_language: Optional[str] = None

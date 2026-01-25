@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
 
 interface NeumorphicToggleProps {
   enabled: boolean;
   onToggle: () => void;
-  size?: 'sm' | 'md';
+  size?: "sm" | "md";
   label?: string;
   ariaLabel: string;
   iconRenderer?: (enabled: boolean) => React.ReactNode;
+  disabled?: boolean;
+  disabledReason?: string;
 }
 
 const sizes = {
@@ -17,48 +19,53 @@ const sizes = {
 export function NeumorphicToggle({
   enabled,
   onToggle,
-  size = 'md',
+  size = "md",
   label,
   ariaLabel,
   iconRenderer,
+  disabled = false,
+  disabledReason,
 }: NeumorphicToggleProps) {
   const { outer, inner } = sizes[size];
 
   return (
     <button
       type="button"
-      onClick={onToggle}
+      onClick={disabled ? undefined : onToggle}
+      disabled={disabled}
       aria-label={ariaLabel}
-      className="flex flex-col items-center gap-2"
+      aria-disabled={disabled}
+      title={disabled ? disabledReason : undefined}
+      className={`flex flex-col items-center gap-2 ${disabled ? "cursor-not-allowed opacity-60" : ""}`}
     >
       <span
         className={`relative flex items-center justify-center rounded-full transition-all duration-300 ${
           enabled
-            ? 'shadow-[inset_4px_4px_8px_var(--neomorph-inset-shadow-dark),inset_-4px_-4px_8px_var(--neomorph-inset-shadow-light)]'
-            : 'shadow-[-6px_-6px_12px_var(--neomorph-shadow-light),6px_6px_12px_var(--neomorph-shadow-dark)]'
+            ? "shadow-[inset_4px_4px_8px_var(--neomorph-inset-shadow-dark),inset_-4px_-4px_8px_var(--neomorph-inset-shadow-light)]"
+            : "shadow-[-6px_-6px_12px_var(--neomorph-shadow-light),6px_6px_12px_var(--neomorph-shadow-dark)]"
         }`}
         style={{
           width: `${outer}px`,
           height: `${outer}px`,
-          backgroundColor: 'var(--neomorph-bg)',
-          border: '1px solid var(--neomorph-border)',
+          backgroundColor: "var(--neomorph-bg)",
+          border: "1px solid var(--neomorph-border)",
         }}
       >
         {iconRenderer ? (
-          <span className="text-[var(--text-secondary)]">{iconRenderer(enabled)}</span>
+          <span className="text-[var(--text-secondary)]">
+            {iconRenderer(enabled)}
+          </span>
         ) : (
           <span
             className={`rounded-full transition-all duration-300 ${
-              enabled
-                ? 'bg-[var(--accent)]'
-                : 'bg-[var(--neomorph-bg)]'
+              enabled ? "bg-[var(--accent)]" : "bg-[var(--neomorph-bg)]"
             }`}
             style={{
               width: `${inner}px`,
               height: `${inner}px`,
               boxShadow: enabled
-                ? '0 0 12px rgba(0, 0, 0, 0.12)'
-                : 'inset 2px 2px 4px var(--neomorph-inset-shadow-dark), inset -2px -2px 4px var(--neomorph-inset-shadow-light)',
+                ? "0 0 12px rgba(0, 0, 0, 0.12)"
+                : "inset 2px 2px 4px var(--neomorph-inset-shadow-dark), inset -2px -2px 4px var(--neomorph-inset-shadow-light)",
             }}
           />
         )}

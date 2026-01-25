@@ -78,7 +78,7 @@ export function CopyableWallet({ icon, name, address }: CopyableWalletProps) {
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2 sm:gap-3 text-lg group max-w-full">
       <div className="flex items-center justify-center gap-2 sm:gap-3">
         {icon}
-        <span className="font-medium text-[var(--text-primary)] text-center sm:text-left">
+        <span className="font-medium text-[var(--text-secondary)] text-center sm:text-left">
           {name}
         </span>
       </div>

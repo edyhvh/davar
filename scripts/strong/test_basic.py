@@ -4,18 +4,17 @@ Basic test script for Delitzsch Strong's Matcher
 Tests the new modular architecture with separate components
 """
 
+from book_processor import BookProcessor
+from word_matcher import WordMatcher
+from result_formatter import ResultFormatter
+from prefix_detector import PrefixDetector
+from dictionary_loader import get_dictionary_loader
+from hebrew_utils import strip_nikud, tokenize_verse, normalize_for_matching
 import sys
 import os
 
 # Add the scripts directory to Python path for imports
 sys.path.insert(0, os.path.dirname(__file__))
-
-from hebrew_utils import strip_nikud, tokenize_verse, normalize_for_matching
-from dictionary_loader import get_dictionary_loader
-from prefix_detector import PrefixDetector
-from result_formatter import ResultFormatter
-from word_matcher import WordMatcher
-from book_processor import BookProcessor
 
 
 def test_hebrew_utils():
@@ -80,6 +79,14 @@ def test_prefix_detector():
     prefixes, stem = detector.identify_prefixes(word)
     print(f"Word: {word}")
     print(f"Prefixes: {prefixes}, Stem: {stem}")
+    assert 'Hb' in prefixes  # Should detect ב
+
+    # Test multiple prepositions (e.g., לְבְּראות)
+    word = "לְבְּרָאוֹת"
+    prefixes, stem = detector.identify_prefixes(word)
+    print(f"Word: {word}")
+    print(f"Prefixes: {prefixes}, Stem: {stem}")
+    assert 'Hl' in prefixes  # Should detect ל
     assert 'Hb' in prefixes  # Should detect ב
 
     print("✓ Prefix detector tests passed\n")

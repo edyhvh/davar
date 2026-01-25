@@ -1,16 +1,17 @@
 import { useMemo } from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams } from "expo-router";
 
 import { getColors, spacing, typography } from "@/src/theme";
 import { mockBooks, mockVerses } from "@/src/constants/mockData";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
+import { stripCantillation, stripMeteg, stripNikud } from "@/src/utils/hebrew";
 
-const stripNikud = (value: string) =>
-  value.normalize("NFD").replace(/[\u0591-\u05C7]/g, "");
-
-const createStyles = (colors: ReturnType<typeof getColors>) =>
+const createStyles = (
+  colors: ReturnType<typeof getColors>,
+  hebrewScale: number,
+) =>
   StyleSheet.create({
     safeArea: {
       flex: 1,
@@ -52,13 +53,32 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     },
     hebrewText: {
       fontFamily: typography.families.hebrewScripture,
-      fontSize: typography.sizes.hebrewVerseMedium,
+      fontSize: typography.sizes.hebrewVerseMedium * hebrewScale * 1.06,
       lineHeight:
         typography.sizes.hebrewVerseMedium *
+        hebrewScale *
         typography.lineHeights.hebrewScripture,
       color: colors.textPrimary,
       textAlign: "right",
       writingDirection: "rtl",
+    },
+    seferText: {
+      fontFamily: typography.families.hebrewScripture,
+      fontSize: typography.sizes.hebrewVerseMedium * hebrewScale * 1.06,
+      lineHeight:
+        typography.sizes.hebrewVerseMedium *
+        hebrewScale *
+        typography.lineHeights.hebrewScripture,
+      color: colors.textPrimary,
+      textAlign: "right",
+      writingDirection: "rtl",
+      letterSpacing: 0.3,
+    },
+    seferVerseNumber: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.caption,
+      color: colors.textSecondary,
+      letterSpacing: 0.6,
     },
     translation: {
       fontFamily: typography.families.latinUI,
@@ -72,12 +92,36 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
 export default function FullChapterScreen() {
   const params = useLocalSearchParams<{ bookId?: string; chapter?: string }>();
   const themeMode = useAppStore((state: AppState) => state.themeMode);
+  const hebrewFontScale = useAppStore(
+    (state: AppState) => state.hebrewFontScale,
+  );
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
+  const seferMode = useAppStore((state: AppState) => state.seferMode);
+  const showNikud = useAppStore((state: AppState) => state.showNikud);
+  const showCantillation = useAppStore(
+    (state: AppState) => state.showCantillation,
+  );
   const colors = getColors(themeMode);
-  const styles = useMemo(() => createStyles(colors), [colors]);
+  const styles = useMemo(
+    () => createStyles(colors, hebrewFontScale),
+    [colors, hebrewFontScale],
+  );
   const bookId = params.bookId ?? "genesis";
   const chapter = Number(params.chapter ?? 1);
   const book = mockBooks.find((item) => item.id === bookId);
+  const shouldShowSefer = seferMode && hebrewOnly;
+
+  const normalizeHebrew = (text: string) => {
+    let normalized = text;
+    if (!showNikud) {
+      normalized = stripNikud(normalized);
+    }
+    if (!showCantillation) {
+      normalized = stripCantillation(normalized);
+    }
+    normalized = stripMeteg(normalized);
+    return normalized.replace(/\//g, "");
+  };
 
   const verses = useMemo(
     () =>
@@ -97,21 +141,38 @@ export default function FullChapterScreen() {
           <Text style={styles.headerHebrew}>{stripNikud(book.hebrewName)}</Text>
         ) : null}
       </View>
-      <FlatList
-        data={verses}
-        keyExtractor={(item) => item.id}
-        contentContainerStyle={styles.listContent}
-        renderItem={({ item }) => (
-          <View style={styles.verseBlock}>
-            <Text style={styles.verseNumber}>[{item.verse}]</Text>
-            <Text style={styles.hebrewText}>{item.hebrew}</Text>
-            {hebrewOnly ? null : (
-              <Text style={styles.translation}>{item.translation}</Text>
-            )}
-          </View>
-        )}
-        showsVerticalScrollIndicator={false}
-      />
+      {shouldShowSefer ? (
+        <ScrollView
+          contentContainerStyle={styles.listContent}
+          showsVerticalScrollIndicator={false}
+        >
+          <Text style={styles.seferText}>
+            {verses.map((item, index) => (
+              <Text key={item.id}>
+                <Text style={styles.seferVerseNumber}>[{item.verse}]</Text>{" "}
+                {normalizeHebrew(item.hebrew)}
+                {index < verses.length - 1 ? " " : ""}
+              </Text>
+            ))}
+          </Text>
+        </ScrollView>
+      ) : (
+        <FlatList
+          data={verses}
+          keyExtractor={(item) => item.id}
+          contentContainerStyle={styles.listContent}
+          renderItem={({ item }) => (
+            <View style={styles.verseBlock}>
+              <Text style={styles.verseNumber}>[{item.verse}]</Text>
+              <Text style={styles.hebrewText}>{normalizeHebrew(item.hebrew)}</Text>
+              {hebrewOnly ? null : (
+                <Text style={styles.translation}>{item.translation}</Text>
+              )}
+            </View>
+          )}
+          showsVerticalScrollIndicator={false}
+        />
+      )}
     </SafeAreaView>
   );
 }

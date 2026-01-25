@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
@@ -21,7 +21,7 @@ import {
   spacing,
   typography,
 } from "@/src/theme";
-import { mockBooks, mockVerses, type MockBook } from "@/src/constants/mockData";
+import { fetchMetadata } from "@/src/services/metadata";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 
 type NavigationSheetProps = {
@@ -34,6 +34,12 @@ type NavigationSheetProps = {
 };
 
 type Step = "book" | "chapter" | "verse";
+
+type BookMeta = {
+  id: string;
+  name: string;
+  hebrewName: string;
+};
 
 const COLUMN_COUNT = 5;
 
@@ -256,50 +262,77 @@ export const NavigationSheet = ({
   const [selectedChapter, setSelectedChapter] = useState(currentChapter);
   const [searchQuery, setSearchQuery] = useState("");
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
+  const [booksMeta, setBooksMeta] = useState<BookMeta[]>([]);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [chapterCounts, setChapterCounts] = useState<Record<string, number[]>>(
+    {},
+  );
+  const [verseCounts, setVerseCounts] = useState<
+    Record<string, Record<string, number>>
+  >({});
+
+  useEffect(() => {
+    let isMounted = true;
+    const loadMetadata = async () => {
+      try {
+        const metadata = await fetchMetadata();
+        if (!isMounted) return;
+        const mappedBooks = metadata.books.map((book) => ({
+          id: book.id,
+          name: book.name,
+          hebrewName: book.hebrew_name,
+        }));
+        setBooksMeta(mappedBooks);
+        setLoadError(null);
+        setChapterCounts(metadata.chapter_counts ?? {});
+        setVerseCounts(metadata.verse_counts ?? {});
+      } catch {
+        if (!isMounted) return;
+        setBooksMeta([]);
+        setChapterCounts({});
+        setVerseCounts({});
+        setLoadError("Unable to load books from the server.");
+      }
+    };
+    loadMetadata();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   // Get selected book info
   const selectedBook = useMemo(
-    () => mockBooks.find((b) => b.id === selectedBookId),
-    [selectedBookId],
+    () => booksMeta.find((b) => b.id === selectedBookId),
+    [booksMeta, selectedBookId],
   );
 
   // Filter books by search
   const filteredBooks = useMemo(() => {
     if (!searchQuery.trim()) {
-      return mockBooks;
+      return booksMeta;
     }
     const query = searchQuery.toLowerCase();
-    return mockBooks.filter(
+    return booksMeta.filter(
       (book) =>
         book.name.toLowerCase().includes(query) ||
         stripNikud(book.hebrewName).includes(query) ||
         book.hebrewName.includes(query),
     );
-  }, [searchQuery]);
+  }, [booksMeta, searchQuery]);
 
   // Get chapters for selected book
   const chapterNumbers = useMemo(() => {
-    const chaptersForBook = mockVerses
-      .filter((v) => v.bookId === selectedBookId)
-      .map((v) => v.chapter);
-    const unique = [...new Set(chaptersForBook)].sort((a, b) => a - b);
-    return unique.length > 0
-      ? unique
-      : Array.from({ length: 50 }, (_, i) => i + 1);
-  }, [selectedBookId]);
+    const chapters = chapterCounts[selectedBookId];
+    if (chapters?.length) return chapters;
+    return [];
+  }, [chapterCounts, selectedBookId]);
 
   // Get verses for selected chapter
   const verseNumbers = useMemo(() => {
-    const versesForChapter = mockVerses.filter(
-      (v) => v.bookId === selectedBookId && v.chapter === selectedChapter,
-    );
-    const unique = [...new Set(versesForChapter.map((v) => v.verse))].sort(
-      (a, b) => a - b,
-    );
-    return unique.length > 0
-      ? unique
-      : Array.from({ length: 30 }, (_, i) => i + 1);
-  }, [selectedBookId, selectedChapter]);
+    const count = verseCounts[selectedBookId]?.[String(selectedChapter)];
+    if (count) return Array.from({ length: count }, (_, i) => i + 1);
+    return [];
+  }, [selectedBookId, selectedChapter, verseCounts]);
 
   // Pad numbers for grid
   const padNumbers = useCallback((numbers: number[]) => {
@@ -322,15 +355,21 @@ export const NavigationSheet = ({
     [],
   );
 
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleSheetChanges = useCallback(
     (index: number) => {
+      console.debug("NavigationSheet onChange", { index });
       if (index === -1) {
         // Reset state when closed
         setStep("book");
         setSearchQuery("");
         setSelectedBookId(currentBookId);
         setSelectedChapter(currentChapter);
+        setIsOpen(false);
         onClose?.();
+      } else {
+        setIsOpen(true);
       }
     },
     [onClose, currentBookId, currentChapter],
@@ -367,7 +406,7 @@ export const NavigationSheet = ({
   );
 
   const renderBookItem = useCallback(
-    ({ item }: { item: MockBook }) => {
+    ({ item }: { item: BookMeta }) => {
       const isSelected = item.id === selectedBookId;
       return (
         <Pressable
@@ -452,6 +491,7 @@ export const NavigationSheet = ({
       backdropComponent={renderBackdrop}
       keyboardBehavior="interactive"
       keyboardBlurBehavior="restore"
+      animateOnMount={false}
     >
       <View style={styles.header}>
         <View style={styles.titleRow}>
@@ -470,12 +510,15 @@ export const NavigationSheet = ({
             />
           </Pressable>
           <Text style={styles.title}>{getTitle()}</Text>
-          <Pressable
-            style={styles.closeButton}
-            onPress={() => sheetRef.current?.close()}
-          >
-            <Ionicons name="close" size={18} color={colors.textSecondary} />
-          </Pressable>
+          {isOpen && (
+            <Pressable
+              style={styles.closeButton}
+              onPress={() => sheetRef.current?.close()}
+              testID="navigation-close-button"
+            >
+              <Ionicons name="close" size={18} color={colors.textSecondary} />
+            </Pressable>
+          )}
         </View>
 
         {/* Breadcrumb */}
@@ -598,13 +641,15 @@ export const NavigationSheet = ({
         >
           <BottomSheetFlatList
             data={filteredBooks}
-            keyExtractor={(item: MockBook) => item.id}
+            keyExtractor={(item: BookMeta) => item.id}
             renderItem={renderBookItem}
             contentContainerStyle={styles.listContent}
             showsVerticalScrollIndicator={false}
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
-                <Text style={styles.emptyText}>No books found</Text>
+                <Text style={styles.emptyText}>
+                  {loadError ?? "No books found"}
+                </Text>
               </View>
             }
             keyboardShouldPersistTaps="handled"
@@ -621,10 +666,16 @@ export const NavigationSheet = ({
         >
           <BottomSheetView style={styles.gridContainer}>
             <Text style={styles.gridTitle}>Select Chapter</Text>
-            {renderNumberGrid(
-              chapterNumbers,
-              currentBookId === selectedBookId ? currentChapter : 0,
-              handleSelectChapter,
+            {chapterNumbers.length ? (
+              renderNumberGrid(
+                chapterNumbers,
+                currentBookId === selectedBookId ? currentChapter : 0,
+                handleSelectChapter,
+              )
+            ) : (
+              <View style={styles.emptyContainer}>
+                <Text style={styles.emptyText}>No chapters available</Text>
+              </View>
             )}
           </BottomSheetView>
         </Animated.View>
@@ -639,13 +690,19 @@ export const NavigationSheet = ({
         >
           <BottomSheetView style={styles.gridContainer}>
             <Text style={styles.gridTitle}>Select Verse</Text>
-            {renderNumberGrid(
-              verseNumbers,
-              currentBookId === selectedBookId &&
-                currentChapter === selectedChapter
-                ? currentVerse
-                : 0,
-              handleSelectVerse,
+            {verseNumbers.length ? (
+              renderNumberGrid(
+                verseNumbers,
+                currentBookId === selectedBookId &&
+                  currentChapter === selectedChapter
+                  ? currentVerse
+                  : 0,
+                handleSelectVerse,
+              )
+            ) : (
+              <View style={styles.emptyContainer}>
+                <Text style={styles.emptyText}>No verses available</Text>
+              </View>
             )}
           </BottomSheetView>
         </Animated.View>

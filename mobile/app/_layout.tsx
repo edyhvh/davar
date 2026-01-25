@@ -12,12 +12,14 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from "@expo-google-fonts/inter";
+import { Jost_400Regular } from "@expo-google-fonts/jost";
 import { Arimo_400Regular, Arimo_700Bold } from "@expo-google-fonts/arimo";
 import { SuezOne_400Regular } from "@expo-google-fonts/suez-one";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 
 import { AppProvider } from "@/src/providers/AppProvider";
+import { ErrorBoundary } from "@/src/components/ErrorBoundary";
 
 export const unstable_settings = {
   anchor: "(tabs)",
@@ -32,6 +34,7 @@ export default function RootLayout() {
     Inter_500Medium,
     Inter_600SemiBold,
     Inter_700Bold,
+    Jost_400Regular,
     Arimo_400Regular,
     Arimo_700Bold,
     SuezOne_400Regular,
@@ -51,17 +54,19 @@ export default function RootLayout() {
     <SafeAreaProvider>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <BottomSheetModalProvider>
-          <AppProvider>
-            <Stack initialRouteName="splash">
-              <Stack.Screen name="splash" options={{ headerShown: false }} />
-              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-              <Stack.Screen
-                name="modal"
-                options={{ presentation: "modal", title: "Modal" }}
-              />
-            </Stack>
-            <StatusBar style="auto" />
-          </AppProvider>
+          <ErrorBoundary>
+            <AppProvider>
+              <Stack initialRouteName="splash">
+                <Stack.Screen name="splash" options={{ headerShown: false }} />
+                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                <Stack.Screen
+                  name="modal"
+                  options={{ presentation: "modal", title: "Modal" }}
+                />
+              </Stack>
+              <StatusBar style="auto" />
+            </AppProvider>
+          </ErrorBoundary>
         </BottomSheetModalProvider>
       </GestureHandlerRootView>
     </SafeAreaProvider>

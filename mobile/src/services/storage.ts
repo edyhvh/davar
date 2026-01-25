@@ -8,6 +8,7 @@ const STORAGE_KEYS = {
   language: "davar.language",
   showQumran: "davar.showQumran",
   showFullChapter: "davar.showFullChapter",
+  seferMode: "davar.seferMode",
   hebrewOnly: "davar.hebrewOnly",
   wordHintCount: "davar.wordHintCount",
 };
@@ -89,6 +90,15 @@ export const loadShowFullChapter = async () => {
 
 export const saveShowFullChapter = async (value: boolean) => {
   await AsyncStorage.setItem(STORAGE_KEYS.showFullChapter, String(value));
+};
+
+export const loadSeferMode = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.seferMode);
+  return parseBoolean(value, false);
+};
+
+export const saveSeferMode = async (value: boolean) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.seferMode, String(value));
 };
 
 export const loadHebrewOnly = async () => {

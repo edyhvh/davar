@@ -11,7 +11,7 @@ from hebrew_utils import strip_nikud
 class PrefixDetector:
     """
     Detects and identifies Hebrew prefixes in words using Hebrew grammar rules.
-    
+
     Handles prefix detection for:
     - Conjunctive vav (ו) - "and"
     - Prepositions (ב, ל, כ) - "in/at/with", "to/for", "like/as"
@@ -33,7 +33,7 @@ class PrefixDetector:
     def __init__(self, dictionary_loader):
         """
         Initialize prefix detector.
-        
+
         Args:
             dictionary_loader: Dictionary loader instance for accessing prefix forms
         """
@@ -70,7 +70,8 @@ class PrefixDetector:
         - For ו, ב, ל, כ prefixes: remaining stem must have >= 2 consonants
         - For מ (from): remaining stem must have >= 3 consonants (to reduce false positives)
         - For ה (definite article): remaining stem must have >= 3 consonants
-        - Each prefix type can only appear once
+        - Conjunctive vav and definite article can only appear once
+        - Prepositions (ב, ל, כ) can appear multiple times
         - In conservative mode: skip מ detection entirely (too many false positives)
 
         Args:
@@ -104,18 +105,23 @@ class PrefixDetector:
         remaining = word
 
         # Step 1: Try to match conjunctive vav (ו)
-        result = self._try_match_standard(remaining, CONJUNCTIVE_VAV, MIN_STEM_DEFAULT)
+        result = self._try_match_standard(
+            remaining, CONJUNCTIVE_VAV, MIN_STEM_DEFAULT)
         if result:
             prefix_id, new_remaining = result
             found_prefixes.append(prefix_id)
             remaining = new_remaining
 
-        # Step 2a: Try to match safe prepositions (ב, ל, כ)
-        result = self._try_match_standard(remaining, SAFE_PREPOSITIONS, MIN_STEM_DEFAULT)
-        if result:
-            prefix_id, new_remaining = result
-            found_prefixes.append(prefix_id)
-            remaining = new_remaining
+        # Step 2a: Try to match safe prepositions (ב, ל, כ) - allow multiple
+        while True:
+            result = self._try_match_standard(
+                remaining, SAFE_PREPOSITIONS, MIN_STEM_DEFAULT)
+            if result:
+                prefix_id, new_remaining = result
+                found_prefixes.append(prefix_id)
+                remaining = new_remaining
+            else:
+                break
         else:
             # Step 2b: Try מ prefix - distinguish between:
             # - Preposition מִן (מִ/מֵ patterns) → HR
@@ -128,7 +134,8 @@ class PrefixDetector:
                 remaining = new_remaining
 
         # Step 3: Try to match definite article (ה)
-        result = self._try_match_standard(remaining, DEFINITE_ARTICLE, MIN_STEM_FOR_HE)
+        result = self._try_match_standard(
+            remaining, DEFINITE_ARTICLE, MIN_STEM_FOR_HE)
         if result:
             prefix_id, new_remaining = result
             found_prefixes.append(prefix_id)

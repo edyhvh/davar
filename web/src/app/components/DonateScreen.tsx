@@ -1,5 +1,6 @@
 import React from 'react';
 import { CopyableWallet } from './CopyableWallet';
+import { useTranslation, type AppLanguage } from '../hooks/useTranslation';
 
 const DONATION_CONFIG = {
   wallets: {
@@ -34,12 +35,11 @@ const TetherIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 339.43 295.27">
     <path
       fill="currentColor"
-      d="M191.19,144.8v0c-1.2.09-7.4.46-21.23.46-11,0-18.81-.33-21.55-.46v0c-42.51-1.87-74.24-9.27-74.24-18.13s31.73-16.25,74.24-18.15v28.91c2.78.19,10.93.67,21.74.67,13,0,19.82-.56,21-.66v-28.9c42.42,1.89,74.08,9.29,74.08,18.13s-31.65,16.24-74.08,18.12h0Zm0-39.25V79.68h59.2V40.23H89.21V79.68h59.2v25.86c-48.2,2.21-84.47,11.42-84.47,22.5s36.27,20.29,84.47,22.5v69.56h42.78V150.54c48.09-2.21,84.36-11.42,84.36-22.5s-36.27-20.29-84.36-22.5Z"
+      d="M62.15,1.45l-61.89,130a2.52,2.52,0,0,0,.54,2.94L167.95,294.56a2.55,2.55,0,0,0,3.53,0L338.63,134.4a2.52,2.52,0,0,0,.54-2.94l-61.89-130A2.5,2.5,0,0,0,275,0H64.45a2.5,2.5,0,0,0-2.3,1.45h0Z"
     />
     <path
-      className="crypto-icon-internal usdt-internal"
-      fill="#fff"
-      d="M191.19,156.89c-1.11.08-7,.46-21.23.46-11,0-18.81-.33-21.55-.46v0c-42.51-1.87-74.24-9.27-74.24-18.13s31.73-16.25,74.24-18.15v28.91c2.78.19,10.93.67,21.74.67,13,0,19.82-.56,21-.66v-28.9c42.42,1.89,74.08,9.29,74.08,18.13s-31.65,16.24-74.08,18.12h0Zm0-39.25V91.77h59.2V52.32H89.21V91.77h59.2v25.86c-48.2,2.21-84.47,11.42-84.47,22.5s36.27,20.29,84.47,22.5v69.56h42.78V162.64c48.09-2.21,84.36-11.42,84.36-22.5s-36.27-20.29-84.36-22.5Z"
+      className="crypto-icon-internal"
+      d="M191.19,144.8v0c-1.2.09-7.4,0.46-21.23,0.46-11,0-18.81-.33-21.55-0.46v0c-42.51-1.87-74.24-9.27-74.24-18.13s31.73-16.25,74.24-18.15v28.91c2.78,0.19,10.93.67,21.74,0.67,13,0,19.82-.56,21-0.66v-28.9c42.42,1.89,74.08,9.29,74.08,18.13s-31.65,16.24-74.08,18.12h0Zm0-39.25V79.68h59.2V40.23H89.21V79.68h59.2v25.86c-48.11,2.21-84.29,11.74-84.29,23.16s36.18,20.94,84.29,23.16v82.9h42.78v-82.93c48-2.21,84.12-11.73,84.12-23.14s-36.09-20.93-84.12-23.15h0Z"
     />
   </svg>
 );
@@ -78,11 +78,16 @@ const CreditCardIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export function DonateScreen() {
+interface DonateScreenProps {
+  language: AppLanguage;
+}
+
+export function DonateScreen({ language }: DonateScreenProps) {
+  const { t } = useTranslation(language);
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
       <div className="text-center">
-        <div className="space-y-6" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <div className="space-y-6 text-[var(--text-secondary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
           <CopyableWallet
             icon={
               <div className="flex items-center gap-1">
@@ -118,7 +123,7 @@ export function DonateScreen() {
               <GithubSponsorsIcon className="w-6 h-6" />
               <CreditCardIcon className="w-5 h-5" />
             </div>
-            <span className="font-medium">Github Sponsor</span>
+            <span className="font-medium">{t('donate.githubSponsor')}</span>
             <a
               href={DONATION_CONFIG.githubSponsor}
               target="_blank"
@@ -134,11 +139,11 @@ export function DonateScreen() {
               href="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Download on the App Store"
+              aria-label={t('common.downloadOnAppStore')}
             >
               <img
                 src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                alt="Download on the App Store"
+                alt={t('common.downloadOnAppStore')}
                 className="h-12"
               />
             </a>
@@ -146,11 +151,11 @@ export function DonateScreen() {
               href="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Get it on Google Play"
+              aria-label={t('common.getOnGooglePlay')}
             >
               <img
                 src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-                alt="Get it on Google Play"
+                alt={t('common.getOnGooglePlay')}
                 className="h-14"
               />
             </a>

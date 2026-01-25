@@ -5,9 +5,10 @@ interface SwipeIndicatorProps {
   onSwipeUp?: () => void;
   onSwipeDown?: () => void;
   children: React.ReactNode;
+  label: string;
 }
 
-export function SwipeIndicator({ onSwipeUp, onSwipeDown, children }: SwipeIndicatorProps) {
+export function SwipeIndicator({ onSwipeUp, onSwipeDown, children, label }: SwipeIndicatorProps) {
   const [showIndicator, setShowIndicator] = useState(false);
   const longPressTimerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -93,7 +94,7 @@ export function SwipeIndicator({ onSwipeUp, onSwipeDown, children }: SwipeIndica
                 className="text-xs text-[var(--text-secondary)]"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Swipe to navigate
+                {label}
               </div>
               <ChevronDown 
                 className="w-6 h-6 text-[var(--accent)]"

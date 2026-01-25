@@ -117,6 +117,30 @@ def load_bdb_xml():
         return None
 
 
+def load_lexical_index():
+    """Load LexicalIndex XML and create Strong to BDB mapping"""
+    if not config.LEXICAL_INDEX.exists():
+        return {}
+    
+    try:
+        tree = ET.parse(config.LEXICAL_INDEX)
+        root = tree.getroot()
+        
+        li_ns = {'li': 'http://openscriptures.github.com/morphhb/namespace'}
+        mapping = {}
+        for entry in root.findall('.//li:entry', li_ns):
+            xref = entry.find('li:xref', li_ns)
+            if xref is not None:
+                strong = xref.get('strong')
+                bdb = xref.get('bdb')
+                if strong and bdb:
+                    mapping[f"H{strong}"] = bdb
+        return mapping
+    except Exception as e:
+        print(f"Error loading lexical index: {e}")
+        return {}
+
+
 def normalize_definition_text(text: str) -> str:
     """Normalize definition text for matching"""
     return re.sub(r'\s+', ' ', text.strip().lower())
@@ -202,7 +226,7 @@ def find_bdb_entry(hebrew_word: str, root_element, include_roots: bool = False) 
     return best_entry
 
 
-def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb_root) -> List[Dict]:
+def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb_root, lexical_index: Dict[str, str]) -> List[Dict]:
     """
     Extract BDB definitions with sense assignment
 
@@ -239,11 +263,19 @@ def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb
     # If direct search fails or module not available, search manually in XML
     if not bdb_data or not bdb_data.get('definitions'):
         if bdb_root is not None:
-            # First try without root entries (normal case)
-            bdb_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=False)
-            # If not found, try with root entries (for words like H776)
+            bdb_entry = None
+            # Try to find exact BDB entry using LexicalIndex mapping
+            bdb_id = lexical_index.get(strong_number)
+            if bdb_id:
+                bdb_entry = bdb_root.find(f'.//bdb:entry[@id="{bdb_id}"]', NS)
+            
+            # Fallback to old method if not found
             if not bdb_entry:
-                bdb_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=True)
+                # First try without root entries (normal case)
+                bdb_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=False)
+                # If not found, try with root entries (for words like H776)
+                if not bdb_entry:
+                    bdb_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=True)
 
             if bdb_entry:
                 # Find the correct Hebrew word element (prefer longer/matching one)
@@ -526,7 +558,8 @@ def build_lexicon_entry(strong_number: str, bdb_root, update_existing: bool = Fa
 
     # Extract BDB definitions with sense assignment
     hebrew_word = strongs_entry.get('lemma', '')
-    bdb_definitions = extract_bdb_definitions_with_sense(strong_number, hebrew_word, bdb_root)
+    lexical_index = load_lexical_index()
+    bdb_definitions = extract_bdb_definitions_with_sense(strong_number, hebrew_word, bdb_root, lexical_index)
 
     if bdb_definitions:
         entry["sources"]["bdb"] = True
@@ -681,6 +714,8 @@ def fill_missing_definitions(directories: List[Path] = None, bdb_root = None) ->
         if bdb_root is None:
             return {'updated': 0, 'failed': 0, 'total': 0, 'error': 'BDB XML not found'}
 
+    lexical_index = load_lexical_index()
+
     # Find all JSON files without definitions
     files_to_process = []
     for directory in directories:
@@ -718,7 +753,7 @@ def fill_missing_definitions(directories: List[Path] = None, bdb_root = None) ->
                 continue
 
             # Extract definitions using the same logic as build_lexicon_entry
-            bdb_definitions = extract_bdb_definitions_with_sense(strong_number, lemma, bdb_root)
+            bdb_definitions = extract_bdb_definitions_with_sense(strong_number, lemma, bdb_root, lexical_index)
 
             if bdb_definitions:
                 data['definitions'] = bdb_definitions
