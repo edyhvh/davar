@@ -56,6 +56,12 @@ const en = {
       title: "Full Chapter",
       subtitle: "Show full chapter text",
     },
+    seferStyle: {
+      title: "Book Style",
+      subtitle: "Continuous Hebrew scroll layout",
+      warningTitle: "Book requires Hebrew Only",
+      warningMessage: "Enable Hebrew Only to use Book style.",
+    },
     hebrewOnly: {
       title: "Hebrew Only",
       subtitle: "Show text in Hebrew only",
@@ -72,7 +78,8 @@ const en = {
       title: "Clear Storage",
       subtitle: "Reset all settings and data",
       alertTitle: "Clear Storage",
-      alertMessage: "This will reset all settings and data. The app will reload.",
+      alertMessage:
+        "This will reset all settings and data. The app will reload.",
       cancel: "Cancel",
       confirm: "Clear",
     },

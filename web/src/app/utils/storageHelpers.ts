@@ -14,6 +14,7 @@ export interface ReadingStateV2 {
   showNikud: boolean;
   showCantillation: boolean;
   showFullChapter: boolean;
+  seferMode: boolean;
   scrollNavHintCount: number;
   lastPositionByBook: Record<string, { chapter: number; verse: number }>;
 }
@@ -44,6 +45,7 @@ function migrateV1toV2(v1Data: ReadingStateV1): ReadingStateV2 {
     showNikud: true,
     showCantillation: false,
     showFullChapter: false,
+    seferMode: false,
     scrollNavHintCount: v1Data.scrollNavHintCount ?? 0,
     lastPositionByBook: {
       [v1Data.book ?? "Genesis"]: {
@@ -68,7 +70,13 @@ export function getStoredReadingState(): ReadingStateV2 | null {
 
     // Check if it's v2 format (has version field)
     if (parsed.version === 2) {
-      return parsed as ReadingStateV2;
+      const defaults = createDefaultReadingState();
+      return {
+        ...defaults,
+        ...parsed,
+        lastPositionByBook:
+          parsed.lastPositionByBook ?? defaults.lastPositionByBook,
+      } as ReadingStateV2;
     }
 
     // Migrate v1 to v2
@@ -102,9 +110,7 @@ export function getLastPositionForBook(
   state: ReadingStateV2,
   book: string,
 ): { chapter: number; verse: number } {
-  return (
-    state.lastPositionByBook[book] || { chapter: 1, verse: 1 }
-  );
+  return state.lastPositionByBook[book] || { chapter: 1, verse: 1 };
 }
 
 /**
@@ -141,6 +147,7 @@ export function createDefaultReadingState(): ReadingStateV2 {
     showNikud: true,
     showCantillation: false,
     showFullChapter: false,
+    seferMode: false,
     scrollNavHintCount: 0,
     lastPositionByBook: {
       Genesis: { chapter: 1, verse: 1 },

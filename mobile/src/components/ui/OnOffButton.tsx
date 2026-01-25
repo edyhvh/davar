@@ -7,6 +7,8 @@ import { useAppStore, type AppState } from "@/src/store/useAppStore";
 type OnOffButtonProps = {
   value: boolean;
   onChange: (value: boolean) => void;
+  disabled?: boolean;
+  onDisabledPress?: () => void;
 };
 
 const createStyles = (
@@ -50,7 +52,12 @@ const createStyles = (
     },
   });
 
-export const OnOffButton = ({ value, onChange }: OnOffButtonProps) => {
+export const OnOffButton = ({
+  value,
+  onChange,
+  disabled = false,
+  onDisabledPress,
+}: OnOffButtonProps) => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const activeColor =
@@ -61,7 +68,17 @@ export const OnOffButton = ({ value, onChange }: OnOffButtonProps) => {
   );
 
   return (
-    <Pressable onPress={() => onChange(!value)} style={styles.container}>
+    <Pressable
+      onPress={() => {
+        if (disabled) {
+          onDisabledPress?.();
+          return;
+        }
+        onChange(!value);
+      }}
+      accessibilityState={{ disabled }}
+      style={[styles.container, disabled ? { opacity: 0.5 } : null]}
+    >
       <View style={styles.circle}>
         <View style={styles.inner} />
       </View>
