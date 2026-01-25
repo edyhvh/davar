@@ -354,6 +354,15 @@ export default function App() {
   }, [currentBook]);
 
   const handleWordClick = (word: WordResponse) => {
+    // If same word is clicked again, close the word card
+    if (
+      selectedWord?.text === word.text &&
+      selectedWord?.strong === word.strong
+    ) {
+      setIsWordPanelDismissed(true);
+      setSelectedWord(null);
+      return;
+    }
     setIsWordPanelDismissed(false);
     setShowWordHint(false);
     setSelectedWord(word);
@@ -1002,99 +1011,111 @@ export default function App() {
                 </div>
               </div>
 
-              <div
-                className="hidden md:block"
-                style={showFullChapter ? { height: "auto" } : { height: "70vh" }}
-              >
-                {(() => {
-                  const wordForCard =
-                    selectedWord ??
-                    (!isNavigatingWordPanel && !showWordSkeleton
-                      ? lastSelectedWord
-                      : null);
-                  const wordAnalysisForCard = selectedWord
-                    ? selectedWordAnalysis
-                    : lastSelectedWordAnalysis;
+              {/* Word panel - in full chapter mode, only render when active to avoid blocking clicks */}
+              {(!showFullChapter || isWordPanelActive) && (
+                <div
+                  className={`hidden md:block ${showFullChapter ? "word-panel-fixed-wrapper" : ""}`}
+                  style={showFullChapter ? undefined : { height: "70vh" }}
+                >
+                  {(() => {
+                    const wordForCard =
+                      selectedWord ??
+                      (!isNavigatingWordPanel && !showWordSkeleton
+                        ? lastSelectedWord
+                        : null);
+                    const wordAnalysisForCard = selectedWord
+                      ? selectedWordAnalysis
+                      : lastSelectedWordAnalysis;
 
-                  return (
-                    <NeumorphCard
-                      className={`p-6 ${
-                        isWordPanelActive
-                          ? "word-panel-open"
-                          : "word-panel-closed"
-                      } sticky top-24 word-panel-shell`}
-                      style={
-                        !isWordPanelActive
-                          ? { pointerEvents: "none" }
-                          : undefined
-                      }
-                      onMouseEnter={() => setIsWordPanelHovered(true)}
-                      onMouseLeave={() => setIsWordPanelHovered(false)}
-                    >
-                      {shouldShowWordSkeleton ? (
-                        <div className="space-y-5">
-                          <div className="flex justify-end">
-                            <Skeleton className="h-9 w-9 rounded-full" />
+                    return (
+                      <NeumorphCard
+                        className={`p-6 ${
+                          isWordPanelActive
+                            ? "word-panel-open"
+                            : "word-panel-closed"
+                        } ${showFullChapter ? "" : "sticky top-24"} word-panel-shell`}
+                        style={
+                          !isWordPanelActive
+                            ? { pointerEvents: "none" }
+                            : undefined
+                        }
+                        onMouseEnter={() => setIsWordPanelHovered(true)}
+                        onMouseLeave={() => setIsWordPanelHovered(false)}
+                      >
+                        {shouldShowWordSkeleton ? (
+                          <div className="space-y-5">
+                            <div className="flex justify-end">
+                              <Skeleton className="h-9 w-9 rounded-full" />
+                            </div>
+                            <Skeleton className="h-16 w-40 mx-auto" />
+                            <Skeleton className="h-3 w-32 mx-auto" />
+                            <Skeleton className="h-4 w-full" />
+                            <Skeleton className="h-4 w-4/5" />
+                            <Skeleton className="h-4 w-3/4" />
                           </div>
-                          <Skeleton className="h-16 w-40 mx-auto" />
-                          <Skeleton className="h-3 w-32 mx-auto" />
-                          <Skeleton className="h-4 w-full" />
-                          <Skeleton className="h-4 w-4/5" />
-                          <Skeleton className="h-4 w-3/4" />
-                        </div>
-                      ) : wordForCard && isWordPanelVisible ? (
-                        <WordCard
-                          word={wordAnalysisForCard?.hebrew ?? wordForCard.text}
-                          wordFromVerse={wordForCard.text}
-                          strongNumber={wordAnalysisForCard?.strong_number}
-                          transliteration={wordAnalysisForCard?.transliteration}
-                          meanings={wordMeanings}
-                          root={wordAnalysisForCard?.root}
-                          rootTransliteration={wordAnalysisForCard?.root_strong}
-                          rootMeaning={
-                            wordAnalysisForCard?.root_definitions?.[0]?.text
-                          }
-                          prefixes={wordForCard.prefixes}
-                          language={language}
-                          showNikud={showNikud}
-                          instances={(wordAnalysisForCard?.instances ?? []).map(
-                            (instance) =>
+                        ) : wordForCard && isWordPanelVisible ? (
+                          <WordCard
+                            word={
+                              wordAnalysisForCard?.hebrew ?? wordForCard.text
+                            }
+                            wordFromVerse={wordForCard.text}
+                            strongNumber={wordAnalysisForCard?.strong_number}
+                            transliteration={
+                              wordAnalysisForCard?.transliteration
+                            }
+                            meanings={wordMeanings}
+                            root={wordAnalysisForCard?.root}
+                            rootTransliteration={
+                              wordAnalysisForCard?.root_strong
+                            }
+                            rootMeaning={
+                              wordAnalysisForCard?.root_definitions?.[0]?.text
+                            }
+                            prefixes={wordForCard.prefixes}
+                            language={language}
+                            showNikud={showNikud}
+                            instances={(
+                              wordAnalysisForCard?.instances ?? []
+                            ).map((instance) =>
                               typeof instance === "string"
                                 ? { verse: instance, text: "" }
                                 : instance,
-                          )}
-                          onInstanceClick={handleNavigateToVerse}
-                          tabResetKey={wordCardTabKey}
-                          onClose={() => {
-                            if (!isMobile) {
-                              setIsWordPanelDismissed(true);
-                            }
-                            setSelectedWord(null);
-                            setIsNavigatingWordPanel(false);
-                            setShowWordSkeleton(false);
-                            if (wordSkeletonTimerRef.current) {
-                              window.clearTimeout(wordSkeletonTimerRef.current);
-                              wordSkeletonTimerRef.current = null;
-                            }
-                          }}
-                          isLoading={Boolean(
-                            selectedWord && isWordAnalysisLoading,
-                          )}
-                        />
-                      ) : isNavigatingWordPanel ? (
-                        <div className="h-40" />
-                      ) : (
-                        <div
-                          className="text-sm text-[var(--text-secondary)]"
-                          style={{ fontFamily: "'Inter', sans-serif" }}
-                        >
-                          {t("wordCard.selectWord")}
-                        </div>
-                      )}
-                    </NeumorphCard>
-                  );
-                })()}
-              </div>
+                            )}
+                            onInstanceClick={handleNavigateToVerse}
+                            tabResetKey={wordCardTabKey}
+                            onClose={() => {
+                              if (!isMobile) {
+                                setIsWordPanelDismissed(true);
+                              }
+                              setSelectedWord(null);
+                              setIsNavigatingWordPanel(false);
+                              setShowWordSkeleton(false);
+                              if (wordSkeletonTimerRef.current) {
+                                window.clearTimeout(
+                                  wordSkeletonTimerRef.current,
+                                );
+                                wordSkeletonTimerRef.current = null;
+                              }
+                            }}
+                            isLoading={Boolean(
+                              selectedWord && isWordAnalysisLoading,
+                            )}
+                          />
+                        ) : isNavigatingWordPanel ? (
+                          <div className="h-40" />
+                        ) : (
+                          <div
+                            className="text-sm text-[var(--text-secondary)]"
+                            style={{ fontFamily: "'Inter', sans-serif" }}
+                          >
+                            {t("wordCard.selectWord")}
+                          </div>
+                        )}
+                      </NeumorphCard>
+                    );
+                  })()}
+                </div>
+              )}
             </div>
           )}
         </div>

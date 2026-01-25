@@ -251,7 +251,9 @@
   padding: 2px 8px;
   color: var(--text-hebrew);
   background-color: rgba(198, 143, 85, 0.4);
-  transition: background-color 220ms ease, box-shadow 220ms ease;
+  transition:
+    background-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .word-hint-active {
@@ -265,7 +267,10 @@
   padding: 2px 6px;
   background-color: rgba(198, 143, 85, 0.35);
   box-shadow: 0 0 0 3px rgba(198, 143, 85, 0.2);
-  transition: background-color 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  transition:
+    background-color 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
 }
 
 @keyframes wordPanelIn {
@@ -403,6 +408,45 @@
   z-index: 10;
 }
 
+.word-panel-fixed-wrapper {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  width: calc(30% - 48px);
+  max-width: 380px;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.word-panel-fixed-wrapper .word-panel-shell {
+  pointer-events: auto;
+}
+
+/* Full chapter smooth scrolling */
+.full-chapter-scroll {
+  scroll-behavior: smooth;
+}
+
+html:has(.full-chapter-scroll) {
+  scroll-behavior: smooth;
+}
+
+/* Subtle verse fade-in animation on scroll */
+.verse-block {
+  animation: verseFadeIn 0.4s ease-out both;
+}
+
+@keyframes verseFadeIn {
+  from {
+    opacity: 0.7;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .word-panel-open {
   opacity: 1;
