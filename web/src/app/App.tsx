@@ -1026,6 +1026,12 @@ export default function App() {
                     const wordAnalysisForCard = selectedWord
                       ? selectedWordAnalysis
                       : lastSelectedWordAnalysis;
+                    const wordTransliteration =
+                      language === "en"
+                        ? wordForCard?.translit_en
+                        : language === "es"
+                          ? wordForCard?.translit_es
+                          : undefined;
 
                     return (
                       <NeumorphCard
@@ -1060,9 +1066,7 @@ export default function App() {
                             }
                             wordFromVerse={wordForCard.text}
                             strongNumber={wordAnalysisForCard?.strong_number}
-                            transliteration={
-                              wordAnalysisForCard?.transliteration
-                            }
+                            transliteration={wordTransliteration}
                             meanings={wordMeanings}
                             root={wordAnalysisForCard?.root}
                             rootTransliteration={
@@ -1135,7 +1139,13 @@ export default function App() {
             word={selectedWordAnalysis?.hebrew ?? selectedWord.text}
             wordFromVerse={selectedWord.text}
             strongNumber={selectedWordAnalysis?.strong_number}
-            transliteration={selectedWordAnalysis?.transliteration}
+            transliteration={
+              language === "en"
+                ? selectedWord?.translit_en
+                : language === "es"
+                  ? selectedWord?.translit_es
+                  : undefined
+            }
             meanings={wordMeanings}
             root={selectedWordAnalysis?.root}
             rootTransliteration={selectedWordAnalysis?.root_strong}

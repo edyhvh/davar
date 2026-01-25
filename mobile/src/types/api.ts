@@ -5,6 +5,8 @@ export type WordResponse = {
   morph?: string;
   prefixes: string[];
   has_dss_variant: boolean;
+  translit_en?: string;
+  translit_es?: string;
 };
 
 export type DssVariant = {
@@ -41,11 +43,9 @@ export type DefinitionItem = {
 export type LexiconResponse = {
   strong_number: string;
   hebrew?: string;
-  transliteration?: string;
   definitions: DefinitionItem[];
   root?: string;
   root_strong?: string;
-  root_transliteration?: string;
   root_definitions?: DefinitionItem[];
   occurrences_count: number;
   instances: string[];

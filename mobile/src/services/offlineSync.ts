@@ -113,8 +113,6 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
       entries.push({
         strong_number: entry.strong_number,
         hebrew: entry.hebrew ?? null,
-        transliteration:
-          entry.transliteration_en ?? entry.transliteration_es ?? null,
         definitions,
         root: entry.root ?? null,
         root_strong: entry.root_strong ?? null,
@@ -150,7 +148,6 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
     entries.push({
       strong_number: entry.strong_number,
       hebrew: entry.lemma,
-      transliteration: entry.transliteration ?? null,
       definitions,
       root: entry.root ?? null,
       root_strong: entry.root_strong ?? null,
