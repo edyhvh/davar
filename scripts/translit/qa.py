@@ -4,7 +4,7 @@ Quality checks for transliteration outputs.
 
 import json
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict
 
 
 def _load_book(path: Path) -> Dict:
