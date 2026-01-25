@@ -7,6 +7,8 @@ export type DisplayWord = {
   prefixes?: string[];
   hasQumranVariant?: boolean;
   morph?: string;
+  translit_en?: string;
+  translit_es?: string;
 };
 
 export type DisplayVerse = {
@@ -56,6 +58,8 @@ export const fetchChapterVerses = async (
       prefixes: word.prefixes,
       hasQumranVariant: word.has_dss_variant,
       morph: word.morph,
+      translit_en: word.translit_en,
+      translit_es: word.translit_es,
     }));
 
     return {

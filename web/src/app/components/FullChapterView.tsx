@@ -19,6 +19,7 @@ interface FullChapterViewProps {
   chapter: number;
   language: "en" | "es" | "he";
   hebrewOnly: boolean;
+  seferMode?: boolean;
   onWordClick: (word: WordResponse) => void;
   showQumran?: boolean;
   selectedWord?: string | null;
@@ -33,146 +34,167 @@ export function FullChapterView({
   chapter,
   language,
   hebrewOnly,
+  seferMode = false,
   onWordClick,
   showQumran,
   selectedWord,
   showNikud = true,
   showCantillation = true,
 }: FullChapterViewProps) {
-  return (
-    <div className="space-y-6 transition-all duration-500">
-      {/* Book Name & Chapter Header */}
-      <div className="flex justify-center items-center gap-2 sticky top-0 z-10 bg-[var(--background)] py-4">
-        <div className="bg-[var(--neomorph-bg)] border border-[var(--neomorph-border)] rounded-full px-5 py-2.5 shadow-[4px_4px_12px_var(--neomorph-shadow-dark),-4px_-4px_12px_var(--neomorph-shadow-light)]">
-          <div
-            className="text-xs text-[var(--text-secondary)]"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+  const shouldShowSefer = seferMode && hebrewOnly;
+
+  const normalizeForMatch = (text: string) => {
+    let normalized = stripNikud(text);
+    normalized = stripCantillation(normalized);
+    normalized = stripMeteg(normalized);
+    return normalized.replace(/\//g, "");
+  };
+
+  const normalizedSelected = selectedWord
+    ? normalizeForMatch(selectedWord)
+    : null;
+
+  const renderVerseWords = (verse: VerseResponse) => {
+    const dssMap = new Map<number, string>();
+    verse.dss?.forEach((variant) =>
+      dssMap.set(variant.word_position, variant.dss_text),
+    );
+
+    return verse.words.map((word, wordIdx) => {
+      const variantText = showQumran ? dssMap.get(word.position) : undefined;
+      const rawText = variantText ?? word.text;
+
+      // Apply nikud and cantillation settings
+      let displayText = rawText;
+      if (!showNikud) {
+        displayText = stripNikud(displayText);
+      }
+      if (!showCantillation) {
+        displayText = stripCantillation(displayText);
+      }
+      displayText = stripMeteg(displayText);
+      // Remove "/" separators from display
+      displayText = displayText.replace(/\//g, "");
+
+      const normalizedDisplay = normalizeForMatch(displayText);
+      const isSelected =
+        Boolean(normalizedSelected) && normalizedSelected === normalizedDisplay;
+
+      const prefixSegments = word.prefixes?.length
+        ? getPrefixSegments(displayText, word.prefixes)
+        : null;
+
+      return (
+        <span key={word.position}>
+          <span
+            onClick={() => onWordClick(word)}
+            className={`cursor-pointer transition-colors duration-200 ${isSelected ? "verse-highlight" : ""}`}
+            style={
+              variantText ? { color: "var(--copper-highlight)" } : undefined
+            }
           >
-            {bookName.toUpperCase()} {chapter} |{" "}
-            <span style={{ fontFamily: "'Arimo', sans-serif" }}>
-              {bookNameHebrew} {chapter}
-            </span>
+            {prefixSegments?.prefixes?.length ? (
+              <>
+                <span
+                  style={{ color: "var(--text-secondary)" }}
+                  className="cursor-pointer hover:opacity-80"
+                  title={`Prefix: ${word.prefixes?.join(", ")}`}
+                >
+                  {prefixSegments.prefixes.join("")}
+                </span>
+                <span style={{ color: "var(--text-hebrew)" }}>
+                  {prefixSegments.root}
+                </span>
+              </>
+            ) : (
+              displayText
+            )}
+          </span>
+          {wordIdx < verse.words.length - 1 && " "}
+        </span>
+      );
+    });
+  };
+
+  return (
+    <div className="space-y-6 transition-all duration-500 full-chapter-scroll">
+      {/* Chapter Verses */}
+      {shouldShowSefer ? (
+        <div className="px-2">
+          <div
+            className="leading-relaxed tracking-[0.01em]"
+            style={{
+              fontFamily: "'Cardo', serif",
+              fontSize: "48px",
+              direction: "rtl",
+              color: "var(--text-hebrew)",
+              lineHeight: 1.9,
+              letterSpacing: "0.01em",
+            }}
+          >
+            {verses.map((verse, idx) => (
+              <span key={verse.verse}>
+                <span
+                  className="text-[var(--text-secondary)] opacity-40 ml-2"
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "14px",
+                  }}
+                >
+                  [{idx + 1}]
+                </span>
+                {renderVerseWords(verse)}
+                {idx < verses.length - 1 && " "}
+              </span>
+            ))}
           </div>
         </div>
-      </div>
-
-      {/* Chapter Verses */}
-      <div className="space-y-8 px-2">
-        {verses.map((verse, idx) => (
-          <div key={idx} className="space-y-3 transition-all duration-300">
-            {/* Hebrew Text with Verse Number */}
+      ) : (
+        <div className="space-y-8 px-2">
+          {verses.map((verse, idx) => (
             <div
-              className="leading-relaxed tracking-[0.01em]"
-              style={{
-                fontFamily: "'Cardo', serif",
-                fontSize: "32px",
-                direction: "rtl",
-                color: "var(--text-hebrew)",
-              }}
+              key={verse.verse}
+              className="space-y-3 transition-all duration-300 verse-block"
             >
-              <span
-                className="text-[var(--text-secondary)] opacity-40 ml-2"
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "13px",
-                }}
-              >
-                [{idx + 1}]
-              </span>
-              {(() => {
-                const dssMap = new Map<number, string>();
-                verse.dss?.forEach((variant) =>
-                  dssMap.set(variant.word_position, variant.dss_text),
-                );
-
-                const normalizeForMatch = (text: string) => {
-                  let normalized = stripNikud(text);
-                  normalized = stripCantillation(normalized);
-                  normalized = stripMeteg(normalized);
-                  return normalized.replace(/\//g, "");
-                };
-
-                const normalizedSelected = selectedWord
-                  ? normalizeForMatch(selectedWord)
-                  : null;
-
-                return verse.words.map((word, wordIdx) => {
-                  const variantText = showQumran
-                    ? dssMap.get(word.position)
-                    : undefined;
-                  const rawText = variantText ?? word.text;
-
-                  // Apply nikud and cantillation settings
-                  let displayText = rawText;
-                  if (!showNikud) {
-                    displayText = stripNikud(displayText);
-                  }
-                  if (!showCantillation) {
-                    displayText = stripCantillation(displayText);
-                  }
-                  displayText = stripMeteg(displayText);
-                  // Remove "/" separators from display
-                  displayText = displayText.replace(/\//g, "");
-
-                  const normalizedDisplay = normalizeForMatch(displayText);
-                  const isSelected =
-                    Boolean(normalizedSelected) &&
-                    normalizedSelected === normalizedDisplay;
-
-                  const prefixSegments = word.prefixes?.length
-                    ? getPrefixSegments(displayText, word.prefixes)
-                    : null;
-
-                  return (
-                    <span key={word.position}>
-                      <span
-                        onClick={() => onWordClick(word)}
-                        className={`cursor-pointer transition-colors duration-200 ${isSelected ? "verse-highlight" : ""}`}
-                        style={
-                          variantText
-                            ? { color: "var(--copper-highlight)" }
-                            : undefined
-                        }
-                      >
-                        {prefixSegments?.prefixes?.length ? (
-                          <>
-                            <span
-                              style={{ color: "var(--text-secondary)" }}
-                              className="cursor-pointer hover:opacity-80"
-                              title={`Prefix: ${word.prefixes?.join(", ")}`}
-                            >
-                              {prefixSegments.prefixes.join("")}
-                            </span>
-                            <span style={{ color: "var(--text-hebrew)" }}>
-                              {prefixSegments.root}
-                            </span>
-                          </>
-                        ) : (
-                          displayText
-                        )}
-                      </span>
-                      {wordIdx < verse.words.length - 1 && " "}
-                    </span>
-                  );
-                });
-              })()}
-            </div>
-
-            {/* Translation - only show if not Hebrew Only mode */}
-            {!hebrewOnly && (
+              {/* Hebrew Text with Verse Number */}
               <div
-                className="text-[var(--text-secondary)] leading-relaxed"
+                className="leading-relaxed tracking-[0.01em]"
                 style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "15px",
+                  fontFamily: "'Cardo', serif",
+                  fontSize: "48px",
+                  direction: "rtl",
+                  color: "var(--text-hebrew)",
+                  lineHeight: 1.85,
                 }}
               >
-                [{renderTranslation(verse.translation ?? "")}]
+                <span
+                  className="text-[var(--text-secondary)] opacity-40 ml-2"
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "14px",
+                  }}
+                >
+                  [{idx + 1}]
+                </span>
+                {renderVerseWords(verse)}
               </div>
-            )}
-          </div>
-        ))}
-      </div>
+
+              {/* Translation - only show if not Hebrew Only mode */}
+              {!hebrewOnly && (
+                <div
+                  className="text-[var(--text-secondary)] leading-relaxed"
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: "15px",
+                  }}
+                >
+                  [{renderTranslation(verse.translation ?? "")}]
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

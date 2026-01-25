@@ -108,6 +108,8 @@ export default function SettingsScreen() {
   const setShowFullChapter = useAppStore(
     (state: AppState) => state.setShowFullChapter,
   );
+  const seferMode = useAppStore((state: AppState) => state.seferMode);
+  const setSeferMode = useAppStore((state: AppState) => state.setSeferMode);
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
   const setHebrewOnly = useAppStore((state: AppState) => state.setHebrewOnly);
   const showCantillation = useAppStore(
@@ -121,6 +123,7 @@ export default function SettingsScreen() {
   const colors = getColors(themeMode);
   const { t, isRTL } = useTranslation();
   const styles = useMemo(() => createStyles(colors, isRTL), [colors, isRTL]);
+  const seferDisabled = !hebrewOnly;
   const [offlineStatus, setOfflineStatus] = useState({
     dictionary: false,
     english: false,
@@ -297,6 +300,38 @@ export default function SettingsScreen() {
           <OnOffButton value={hebrewOnly} onChange={setHebrewOnly} />
         </View>
 
+        {showFullChapter ? (
+          <>
+            <View style={styles.divider} />
+
+            {/* Sefer Style */}
+            <View style={styles.row}>
+              <View style={styles.rowContent}>
+                <View style={styles.iconContainer}>
+                  <AppIcon name="book" size={18} color={colors.textSecondary} />
+                </View>
+                <View style={styles.textContainer}>
+                  <Text style={styles.label}>{t("settings.seferStyle.title")}</Text>
+                  <Text style={styles.subtitle}>{t("settings.seferStyle.subtitle")}</Text>
+                </View>
+              </View>
+              <OnOffButton
+                value={seferMode}
+                onChange={setSeferMode}
+                disabled={seferDisabled}
+                onDisabledPress={() =>
+                  Alert.alert(
+                    t("settings.seferStyle.warningTitle"),
+                    t("settings.seferStyle.warningMessage"),
+                  )
+                }
+              />
+            </View>
+          </>
+        ) : null}
+
+        <View style={styles.divider} />
+
         <View style={styles.divider} />
 
         {/* Cantillation */}
@@ -361,6 +396,7 @@ export default function SettingsScreen() {
                       useAppStore.getState().setHebrewFontScale(1);
                       useAppStore.getState().setShowQumran(false);
                       useAppStore.getState().setShowFullChapter(false);
+                      useAppStore.getState().setSeferMode(false);
                       useAppStore.getState().setHebrewOnly(false);
                       useAppStore.getState().setLanguage("en");
                       if (themeMode === "dark") {

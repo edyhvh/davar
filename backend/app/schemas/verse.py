@@ -16,6 +16,8 @@ class WordResponse(BaseModel):
     morph: Optional[str] = None
     prefixes: List[str] = []
     has_dss_variant: bool = False
+    translit_en: Optional[str] = None
+    translit_es: Optional[str] = None
 
 
 class DssVariant(BaseModel):
