@@ -8,7 +8,9 @@ export type TranslationRow = {
   footnotes?: unknown[];
 };
 
-const db = SQLite.openDatabase("davar.db");
+const db = SQLite.openDatabaseSync("davar.db");
+
+const CURRENT_SCHEMA_VERSION = 2;
 
 // ── Custom error for better debugging ──────────────────────────────────────
 
@@ -36,41 +38,31 @@ class DatabaseError extends Error {
 
 // ── Low-level executor with error context ──────────────────────────────────
 
-const executeSql = (
+const executeSql = async (
   query: string,
   params: (string | number | null)[] = [],
-): Promise<SQLite.SQLResultSet> =>
-  new Promise((resolve, reject) => {
-    db.transaction(
-      (tx) => {
-        tx.executeSql(
-          query,
-          params,
-          (_, result) => resolve(result),
-          (_, error) => {
-            const wrappedError = new DatabaseError(
-              `SQLite execution failed`,
-              query,
-              params,
-              error,
-            );
-            reject(wrappedError);
-            return false;
-          },
-        );
-      },
-      (error) => {
-        // Transaction-level failure
-        reject(
-          new DatabaseError(`SQLite transaction failed`, query, params, error),
-        );
-      },
+): Promise<any> => {
+  try {
+    const result = await db.runAsync(query, ...params);
+    return { rows: { _array: result as unknown as any[] } };
+  } catch (error) {
+    const wrappedError = new DatabaseError(
+      `SQLite execution failed`,
+      query,
+      params,
+      error,
     );
-  });
+    throw wrappedError;
+  }
+};
 
 // ── Initialization ──────────────────────────────────────────────────────────
 
 export const initializeDatabase = async () => {
+  const versionResult = await executeSql("PRAGMA user_version;");
+  const currentVersion =
+    (versionResult.rows._array?.[0]?.user_version as number) ?? 0;
+
   await executeSql(
     `CREATE TABLE IF NOT EXISTS verses (
       id TEXT PRIMARY KEY,
@@ -88,22 +80,68 @@ export const initializeDatabase = async () => {
      ON verses(book, chapter);`,
   );
 
-  await executeSql(
-    `CREATE TABLE IF NOT EXISTS lexicon (
-      strong TEXT PRIMARY KEY,
-      hebrew TEXT,
-      transliteration TEXT,
-      definitions TEXT NOT NULL,
-      root TEXT,
-      root_strong TEXT,
-      occurrences TEXT
-    );`,
-  );
+  if (currentVersion < 2) {
+    const lexiconInfo = await executeSql("PRAGMA table_info(lexicon);");
+    const lexiconExists = (lexiconInfo.rows.length ?? 0) > 0;
 
-  await executeSql(
-    `CREATE INDEX IF NOT EXISTS idx_lexicon_hebrew 
-     ON lexicon(hebrew);`,
-  );
+    if (lexiconExists) {
+      await executeSql(
+        `CREATE TABLE IF NOT EXISTS lexicon_new (
+          strong TEXT PRIMARY KEY,
+          hebrew TEXT,
+          definitions TEXT NOT NULL,
+          root TEXT,
+          root_strong TEXT,
+          occurrences TEXT
+        );`,
+      );
+
+      await executeSql(
+        `INSERT OR REPLACE INTO lexicon_new (
+          strong, hebrew, definitions, root, root_strong, occurrences
+        )
+        SELECT strong, hebrew, definitions, root, root_strong, occurrences
+        FROM lexicon;`,
+      );
+
+      await executeSql("DROP TABLE lexicon;");
+      await executeSql("ALTER TABLE lexicon_new RENAME TO lexicon;");
+    } else {
+      await executeSql(
+        `CREATE TABLE IF NOT EXISTS lexicon (
+          strong TEXT PRIMARY KEY,
+          hebrew TEXT,
+          definitions TEXT NOT NULL,
+          root TEXT,
+          root_strong TEXT,
+          occurrences TEXT
+        );`,
+      );
+    }
+
+    await executeSql(
+      `CREATE INDEX IF NOT EXISTS idx_lexicon_hebrew 
+       ON lexicon(hebrew);`,
+    );
+
+    await executeSql(`PRAGMA user_version = ${CURRENT_SCHEMA_VERSION};`);
+  } else {
+    await executeSql(
+      `CREATE TABLE IF NOT EXISTS lexicon (
+        strong TEXT PRIMARY KEY,
+        hebrew TEXT,
+        definitions TEXT NOT NULL,
+        root TEXT,
+        root_strong TEXT,
+        occurrences TEXT
+      );`,
+    );
+
+    await executeSql(
+      `CREATE INDEX IF NOT EXISTS idx_lexicon_hebrew 
+       ON lexicon(hebrew);`,
+    );
+  }
 };
 
 // ── Bulk inserts with transaction safety ───────────────────────────────────
@@ -115,12 +153,11 @@ export const insertLexiconEntries = async (entries: LexiconResponse[]) => {
     for (const entry of entries) {
       await executeSql(
         `INSERT OR REPLACE INTO lexicon (
-          strong, hebrew, transliteration, definitions, root, root_strong, occurrences
-        ) VALUES (?, ?, ?, ?, ?, ?, ?);`,
+          strong, hebrew, definitions, root, root_strong, occurrences
+        ) VALUES (?, ?, ?, ?, ?, ?);`,
         [
           entry.strong_number,
           entry.hebrew ?? null,
-          entry.transliteration ?? null,
           JSON.stringify(entry.definitions ?? []),
           entry.root ?? null,
           entry.root_strong ?? null,

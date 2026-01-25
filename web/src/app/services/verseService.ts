@@ -7,6 +7,8 @@ export interface WordResponse {
   morph?: string;
   prefixes: string[];
   has_dss_variant: boolean;
+  translit_en?: string;
+  translit_es?: string;
 }
 
 export interface DssVariant {
