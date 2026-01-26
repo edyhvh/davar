@@ -278,12 +278,12 @@ class LexiconProcessor:
 
                 total_translated += len(translations)
                 logger.info(
-                    f"Translated batch {i//self.batch_size + 1}: {len(translations)} definitions "
+                    f"Translated batch {batch_idx // self.batch_size + 1}: {len(translations)} definitions "
                     f"(total translated: {total_translated}/{len(definitions_to_translate)})"
                 )
 
             except Exception as e:
-                logger.error(f"Failed to translate batch starting at index {i}: {e}")
+                logger.error(f"Failed to translate batch starting at index {batch_idx}: {e}")
                 # Continue with next batch
                 continue
 
