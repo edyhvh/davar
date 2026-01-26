@@ -10,6 +10,7 @@ Supports testing mode with 1% of data for development and validation.
 
 import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -32,6 +33,8 @@ except ImportError:
     extract_from_bdb = None
 
 NS = {'bdb': 'http://openscriptures.github.com/morphhb/namespace'}
+
+LOG_MAPPING_MISMATCHES = os.getenv('DAVAR_LEXICON_LOG_MAPPING', '').lower() in {'1', 'true', 'yes'}
 
 # Consolidated data storage for new format
 consolidated_roots = {}
@@ -226,6 +229,13 @@ def find_bdb_entry(hebrew_word: str, root_element, include_roots: bool = False) 
     return best_entry
 
 
+def find_bdb_entry_by_id(root_element, bdb_id: Optional[str]) -> Optional[ET.Element]:
+    """Find a BDB entry by its id attribute."""
+    if root_element is None or not bdb_id:
+        return None
+    return root_element.find(f'.//bdb:entry[@id="{bdb_id}"]', NS)
+
+
 def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb_root, lexical_index: Dict[str, str]) -> List[Dict]:
     """
     Extract BDB definitions with sense assignment
@@ -267,17 +277,21 @@ def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb
             # Try to find exact BDB entry using LexicalIndex mapping
             bdb_id = lexical_index.get(strong_number)
             if bdb_id:
-                bdb_entry = bdb_root.find(f'.//bdb:entry[@id="{bdb_id}"]', NS)
+                bdb_entry = find_bdb_entry_by_id(bdb_root, bdb_id)
             
             # Fallback to old method if not found
-            if not bdb_entry:
+            if bdb_entry is None:
                 # First try without root entries (normal case)
                 bdb_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=False)
                 # If not found, try with root entries (for words like H776)
-                if not bdb_entry:
+                if bdb_entry is None:
                     bdb_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=True)
+            elif LOG_MAPPING_MISMATCHES:
+                entry_id = bdb_entry.get('id', '')
+                if entry_id and entry_id != bdb_id:
+                    print(f"⚠️  LexicalIndex mismatch for {strong_number}: expected {bdb_id}, found {entry_id}")
 
-            if bdb_entry:
+            if bdb_entry is not None:
                 # Find the correct Hebrew word element (prefer longer/matching one)
                 w_elements = bdb_entry.findall('.//bdb:w', NS)
                 bdb_hebrew = ''
@@ -383,11 +397,14 @@ def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb
 
     # Build sense mapping from BDB XML if available
     sense_mapping = {}
-    if bdb_root:
-        xml_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=False)
-        if not xml_entry:
+    if bdb_root is not None:
+        bdb_id = lexical_index.get(strong_number)
+        xml_entry = find_bdb_entry_by_id(bdb_root, bdb_id) if bdb_id else None
+        if xml_entry is None:
+            xml_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=False)
+        if xml_entry is None:
             xml_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=True)
-        if xml_entry:
+        if xml_entry is not None:
             sense_mapping = build_sense_mapping(xml_entry)
 
     # Use sense+text as key to allow same word in different senses
@@ -662,6 +679,10 @@ def save_lexicon_entry(entry: Dict, testing_mode: bool = False, consolidate: boo
         if draft_file.exists():
             draft_file.unlink()
 
+        # Add to consolidated data (only in production mode)
+        if consolidate and not testing_mode:
+            consolidated_roots[strong_number] = root_entry
+
         return root_file
 
     # If this word is NOT a root, save it to draft/
@@ -684,10 +705,7 @@ def save_lexicon_entry(entry: Dict, testing_mode: bool = False, consolidate: boo
 
     # Add to consolidated data (only in production mode)
     if consolidate and not testing_mode:
-        if entry.get('is_root'):
-            consolidated_roots[strong_number] = root_entry
-        else:
-            consolidated_words[strong_number] = entry
+        consolidated_words[strong_number] = entry
 
     return output_file
 

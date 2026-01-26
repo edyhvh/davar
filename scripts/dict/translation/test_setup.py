@@ -40,7 +40,7 @@ def test_config():
         from scripts.dict.translation.config import (
             validate_language,
             get_language_name,
-            validate_api_key,
+            validate_grok_api_key,
             SUPPORTED_LANGUAGES,
         )
         
@@ -56,11 +56,11 @@ def test_config():
         print("✓ Language name lookup works")
         
         # Test API key (may be False if not set)
-        api_key_valid = validate_api_key()
+        api_key_valid = validate_grok_api_key()
         if api_key_valid:
             print("✓ API key is configured")
         else:
-            print("⚠ API key not found (set GEMINI_API_KEY in .env)")
+            print("⚠ API key not found (set XAI_API_KEY in .env)")
         
         print(f"✓ Supported languages: {', '.join(SUPPORTED_LANGUAGES.keys())}")
         
@@ -83,9 +83,9 @@ def test_processor_structure():
             print("✓ Processor initialized successfully")
             return True
         except ValueError as e:
-            if "GEMINI_API_KEY" in str(e):
+            if "XAI_API_KEY" in str(e):
                 print("⚠ Processor requires API key (expected)")
-                print("  Set GEMINI_API_KEY in .env file to use translation")
+                print("  Set XAI_API_KEY in .env file to use translation")
                 return True
             else:
                 raise
@@ -122,7 +122,7 @@ def main():
     if all_passed:
         print("\n✓ All tests passed! Module is ready to use.")
         print("\nNext steps:")
-        print("1. Set GEMINI_API_KEY in .env file")
+        print("1. Set XAI_API_KEY in .env file")
         print("2. Run: python -m scripts.dict.translation.main --strong-number H1 --dry-run")
     else:
         print("\n✗ Some tests failed. Please fix the issues above.")
