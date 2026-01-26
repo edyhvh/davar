@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 class LexiconProcessor:
     """Processes lexicon JSON files for translation."""
-    
+
     def __init__(
         self,
         target_lang: str,
@@ -39,7 +39,7 @@ class LexiconProcessor:
 
         if not validate_language(target_lang):
             raise ValueError(f"Unsupported language: {target_lang}")
-        
+
         self.target_lang = target_lang.lower()
         self.text_field = f"text_{self.target_lang}"
         self.batch_size = batch_size
@@ -47,7 +47,7 @@ class LexiconProcessor:
         # Initialize Grok translator
         from .translator import GrokTranslator
         self.translator = GrokTranslator()
-    
+
     def _load_json_file(self, file_path: Path) -> Dict:
         """Load JSON file, handling both minified and pretty formats."""
         try:
@@ -59,17 +59,17 @@ class LexiconProcessor:
         except json.JSONDecodeError as e:
             logger.error(f"Invalid JSON in {file_path}: {e}")
             raise
-    
+
     def _save_json_file(self, data: Dict, file_path: Path, pretty: bool = False):
         """Save JSON file in minified or pretty format."""
         file_path.parent.mkdir(parents=True, exist_ok=True)
-        
+
         with open(file_path, 'w', encoding='utf-8') as f:
             if pretty:
                 json.dump(data, f, ensure_ascii=False, indent=2)
             else:
                 json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
-    
+
     def _extract_definitions_to_translate(
         self,
         entry: Dict
@@ -116,25 +116,25 @@ class LexiconProcessor:
     ):
         """
         Update entry definitions with translations.
-        
+
         Args:
             entry: Entry dictionary to update
             translations: List of translated texts
             indices: List of definition indices that were translated
         """
         definitions = entry.get('definitions', [])
-        
+
         for idx, translation in zip(indices, translations):
             if idx < len(definitions):
                 defn = definitions[idx]
-                
+
                 # Migrate 'text' to 'text_en' if needed
                 if 'text' in defn and 'text_en' not in defn:
                     defn['text_en'] = defn.pop('text')
-                
+
                 # Add translation
                 defn[self.text_field] = translation.strip()
-    
+
     def _process_entry(
         self,
         entry: Dict,
@@ -146,7 +146,8 @@ class LexiconProcessor:
         Returns:
             Tuple of (definitions_processed, definitions_translated)
         """
-        definitions_to_translate = self._extract_definitions_to_translate(entry)
+        definitions_to_translate = self._extract_definitions_to_translate(
+            entry)
 
         if not definitions_to_translate:
             return 0, 0
@@ -162,16 +163,19 @@ class LexiconProcessor:
             indices.append(idx)
 
             # Create key for batch processing: {entry_key}-def-{order}
-            order = defn.get('order', idx + 1)  # Use order field, fallback to index + 1
+            # Use order field, fallback to index + 1
+            order = defn.get('order', idx + 1)
             batch_keys.append(f"{entry_key}-def-{order}")
-        
+
         # Translate in batches
         total_translated = 0
 
         for batch_idx in range(0, len(texts_to_translate), self.batch_size):
-            batch_texts = texts_to_translate[batch_idx:batch_idx + self.batch_size]
+            batch_texts = texts_to_translate[batch_idx:batch_idx +
+                                             self.batch_size]
             batch_indices = indices[batch_idx:batch_idx + self.batch_size]
-            batch_keys_subset = batch_keys[batch_idx:batch_idx + self.batch_size]
+            batch_keys_subset = batch_keys[batch_idx:batch_idx +
+                                           self.batch_size]
 
             try:
                 translations = self.translator.translate_batch(
@@ -180,25 +184,25 @@ class LexiconProcessor:
                     keys=batch_keys_subset,
                     batch_index=batch_idx // self.batch_size + 1
                 )
-                
+
                 # Update entry with translations
                 self._update_entry_definitions(
                     entry,
                     translations,
                     batch_indices
                 )
-                
+
                 total_translated += len(translations)
                 logger.info(
                     f"Translated {len(translations)} definitions for {entry_key}"
                 )
-                
+
             except Exception as e:
                 logger.error(
                     f"Failed to translate batch for {entry_key}: {e}"
                 )
                 # Continue with next batch
-        
+
         return len(definitions_to_translate), total_translated
 
     def _process_entries_cross_batch(self, entries: Dict) -> Tuple[int, int]:
@@ -243,7 +247,8 @@ class LexiconProcessor:
         if not definitions_to_translate:
             return 0, 0
 
-        logger.info(f"Collected {len(definitions_to_translate)} definitions to translate across {len(entries)} entries")
+        logger.info(
+            f"Collected {len(definitions_to_translate)} definitions to translate across {len(entries)} entries")
 
         # Batch and translate all definitions together
         total_translated = 0
@@ -278,12 +283,13 @@ class LexiconProcessor:
 
                 total_translated += len(translations)
                 logger.info(
-                    f"Translated batch {i//self.batch_size + 1}: {len(translations)} definitions "
+                    f"Translated batch {batch_idx // self.batch_size + 1}: {len(translations)} definitions "
                     f"(total translated: {total_translated}/{len(definitions_to_translate)})"
                 )
 
             except Exception as e:
-                logger.error(f"Failed to translate batch starting at index {i}: {e}")
+                logger.error(
+                    f"Failed to translate batch starting at index {batch_idx}: {e}")
                 # Continue with next batch
                 continue
 
@@ -298,25 +304,25 @@ class LexiconProcessor:
     ) -> Dict[str, int]:
         """
         Process a lexicon file, translating all definitions.
-        
+
         Args:
             file_path: Path to JSON file to process
             pretty_file_path: Optional path to pretty-printed version
             strong_number: Optional Strong's number to process only that entry
-            
+
         Returns:
             Dictionary with processing statistics
         """
         logger.info(f"Loading file: {file_path}")
         data = self._load_json_file(file_path)
-        
+
         stats = {
             'entries_processed': 0,
             'entries_total': len(data),
             'definitions_processed': 0,
             'definitions_translated': 0,
         }
-        
+
         # Filter entries if strong_number is specified
         entries_to_process = {}
         if strong_number:
@@ -329,13 +335,13 @@ class LexiconProcessor:
                     if entry.get('strong_number') == strong_number:
                         entries_to_process[key] = entry
                         break
-            
+
             if not entries_to_process:
                 logger.warning(f"Strong's number {strong_number} not found")
                 return stats
         else:
             entries_to_process = data
-        
+
         logger.info(
             f"Processing {len(entries_to_process)} entries "
             f"(target language: {self.target_lang})"
@@ -347,7 +353,8 @@ class LexiconProcessor:
             processed, translated = 0, 0
             for entry_key, entry in entries_to_process.items():
                 try:
-                    entry_processed, entry_translated = self._process_entry(entry, entry_key)
+                    entry_processed, entry_translated = self._process_entry(
+                        entry, entry_key)
                     processed += entry_processed
                     translated += entry_translated
 
@@ -363,25 +370,26 @@ class LexiconProcessor:
                     continue
         else:
             # For full processing, use cross-entry batching for better efficiency
-            processed, translated = self._process_entries_cross_batch(entries_to_process)
+            processed, translated = self._process_entries_cross_batch(
+                entries_to_process)
             stats['entries_processed'] = len(entries_to_process)
 
         stats['definitions_processed'] = processed
         stats['definitions_translated'] = translated
-        
+
         # Save updated file (unless dry run)
         if not dry_run:
             logger.info(f"Saving updated file: {file_path}")
             self._save_json_file(data, file_path, pretty=False)
-            
+
             if pretty_file_path:
                 logger.info(f"Saving pretty file: {pretty_file_path}")
                 self._save_json_file(data, pretty_file_path, pretty=True)
         else:
             logger.info("DRY RUN MODE - Skipping file save")
-        
+
         return stats
-    
+
     def process_roots(
         self,
         strong_number: Optional[str] = None,
@@ -396,7 +404,7 @@ class LexiconProcessor:
             strong_number,
             dry_run
         )
-    
+
     def process_words(
         self,
         strong_number: Optional[str] = None,
