@@ -16,11 +16,13 @@ A secure FastAPI backend for serving Hebrew Scripture text, translations, lexico
 ## Quick Start
 
 1. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 2. Set up environment variables:
+
    ```bash
    cp .env.example .env
    # Edit .env with your API key and settings
@@ -29,6 +31,8 @@ A secure FastAPI backend for serving Hebrew Scripture text, translations, lexico
 3. Run the server:
    ```bash
    uvicorn app.main:app --reload
+   // or use
+   fastapi dev --port 2220
    ```
 
 ## API Endpoints
@@ -41,6 +45,7 @@ A secure FastAPI backend for serving Hebrew Scripture text, translations, lexico
 ## Development
 
 The backend serves data from the `../data` directory containing:
+
 - OE Hebrew texts (Tanaj)
 - Delitzsch Hebrew texts (Besorah)
 - TTH Spanish translations (tth_2 format: one JSON file per book with hierarchical structure)
@@ -72,7 +77,12 @@ The TTH Spanish translations now use an optimized format with one JSON file per 
           "verse": 1,
           "tth": "Palabras de Amós...",
           "footnotes": [
-            {"marker": "¹", "number": "1", "word": "palabra", "explanation": "..."}
+            {
+              "marker": "¹",
+              "number": "1",
+              "word": "palabra",
+              "explanation": "..."
+            }
           ],
           "hebrew_terms": []
         }
@@ -83,6 +93,7 @@ The TTH Spanish translations now use an optimized format with one JSON file per 
 ```
 
 **Benefits of tth_2 format:**
+
 - 67% smaller file sizes
 - Single file per book (38 total) vs multiple chapter files
 - Hierarchical structure for better organization
