@@ -147,7 +147,13 @@ export function WordCard({
       displayedData.wordFromVerse !== wordFromVerse ||
       displayedData.transliteration !== transliteration ||
       displayedData.root !== root ||
-      displayedData.rootMeaning !== rootMeaning;
+      displayedData.rootMeaning !== rootMeaning ||
+      displayedData.rootTransliteration !== rootTransliteration ||
+      displayedData.meanings.join("|") !== meanings.join("|") ||
+      (displayedData.prefixes ?? []).join("|") !==
+        (prefixes ?? []).join("|") ||
+      displayedData.instances.map((item) => `${item.verse}:${item.text}`).join("|") !==
+        instances.map((item) => `${item.verse}:${item.text}`).join("|");
 
     if (!hasChanged) return undefined;
 
