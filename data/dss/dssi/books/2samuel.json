@@ -1,0 +1,37 @@
+{
+  "name": "2 Samuel",
+  "chapters": {
+    "15": {
+      "verses": {
+        "2": {
+          "masoretic_text": "וְהִשְׁכִּים֙ אַבְשָׁל֔וֹם וְעָמַ֕ד עַל־ יַ֖ד דֶּ֣רֶךְ הַשָּׁ֑עַר וַיְהִ֡י כָּל־ הָאִ֣ישׁ אֲשֶֽׁר־ יִהְיֶה־ לּוֹ־ רִיב֩ לָב֨וֹא אֶל־ הַמֶּ֜לֶךְ לַמִּשְׁפָּ֗ט וַיִּקְרָ֨א אַבְשָׁל֤וֹם אֵלָיו֙ וַיֹּ֗אמֶר אֵֽי־ מִזֶּ֥ה עִיר֙ אַ֔תָּה וַיֹּ֕אמֶר מֵאַחַ֥ד שִׁבְטֵֽי־ יִשְׂרָאֵ֖ל עַבְדֶּֽךָ׃",
+          "dss_text": "והשכים אבשלום ועמד על יד הדרך והיה כול איש אשר יהיה לו ריב לבוא אל המלך משפט וקרא לו אבשלום ואמר אי מזה עיר אתה וענה האיש ואמר מאחד שבטי ישראל עבדכה",
+          "differences": [
+            {
+              "position": 17,
+              "masoretic_word": "למשפט",
+              "dss_word": "אל המשפט",
+              "commentary": "4QSamc: for a decision (implicit). 4QSama reads the explicit אל המשפט and the Masoretic reads למשפט, both meaning for the decision. The readings of 4QSama and Masoretic are explicit, but use different prepositions. No change of meaning to the text."
+            }
+          ]
+        }
+      }
+    },
+    "20": {
+      "verses": {
+        "10": {
+          "masoretic_text": "וַעֲמָשָׂ֨א לֹֽא־ נִשְׁמַ֜ר בַּחֶ֣רֶב ׀ אֲשֶׁ֣ר בְּיַד־ יוֹאָ֗ב וַיַּכֵּהוּ֩ בָ֨הּ אֶל־ הַחֹ֜מֶשׁ וַיִּשְׁפֹּ֨ךְ מֵעָ֥יו אַ֛רְצָה וְלֹא־ שָׁ֥נָה ל֖וֹ וַיָּמֹ֑ת וְיוֹאָב֙ וַאֲבִישַׁ֣י אָחִ֔יו רָדַ֕ף אַחֲרֵ֖י שֶׁ֥בַע בֶּן־ בִּכְרִֽי׃",
+          "dss_text": "ועמשא לא נשמר בחרב אשר ביד יואב ויכהו בה על החמש וישפך מעיו ארצה ולוא שנה לו וימות ויואב ואבישי אחיו רדפו אחרי שבע בן בכרי",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "אל",
+              "dss_word": "אל",
+              "commentary": "4QSama: upon. 1QSam and Masoretic read the preposition אל meaning into. There is very little difference between the two; אל makes it more explicit that the dagger was thrust into Amsa’s stomach, rather than thrust upon it."
+            }
+          ]
+        }
+      }
+    }
+  }
+}
