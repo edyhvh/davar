@@ -1,0 +1,611 @@
+{
+  "name": "Exodus",
+  "chapters": {
+    "1": {
+      "verses": {
+        "3": {
+          "masoretic_text": "יִשָּׂשכָ֥ר זְבוּלֻ֖ן וּבְנְיָמִֽן׃",
+          "dss_text": "ויששכר וזבולן ובנימן",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "יששכר",
+              "dss_word": "ויששכר",
+              "commentary": "4QGen-Exoda, 4QpaleoGen-Exodl, SP: and Issachar. 4QExodb, Masoretic and LXX read יששכר meaning Issachar."
+            },
+            {
+              "position": 2,
+              "masoretic_word": "זבולן",
+              "dss_word": "וזבולן",
+              "commentary": "4QGen-Exoda, SP: and Zebulun. 4QExodb, Masoretic and LXX read זבולן meaning Zebulun."
+            }
+          ]
+        },
+        "12": {
+          "masoretic_text": "וְכַאֲשֶׁר֙ יְעַנּ֣וּ אֹת֔וֹ כֵּ֥ן יִרְבֶּ֖ה וְכֵ֣ן יִפְרֹ֑ץ וַיָּקֻ֕צוּ מִפְּנֵ֖י בְּנֵ֥י יִשְׂרָאֵֽל׃",
+          "dss_text": "וכאשר יענו אותם כן ירבו וכן ישרצו במאד מאד ויקוצו מצרים מפני בני ישראל",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "אתו",
+              "dss_word": "אותם",
+              "commentary": "2QExoda, LXX: them. 4QGen-Exoda, Masoretic and SP read אתו meaning him. The difference is a change of subject: is it Yisra'el as a singular entity (‘he/him’), or is it the multiple children of Yisra’el (‘they/them’). Either reading could be genuine. There’s no change of meaning to the text."
+            },
+            {
+              "position": 5,
+              "masoretic_word": "ירבה",
+              "dss_word": "ירבו",
+              "commentary": "2QExoda, LXX: they multiplied. 4QGen-Exoda, Masoretic and SP read ירבה meaning he multiplied. See footnote 5."
+            },
+            {
+              "position": 11,
+              "masoretic_word": "יִשְׂרָאֵֽל׃",
+              "dss_word": "מצרים",
+              "commentary": "2QExoda(vid), LXX: Egyptians. Due to the fact that 2QExoda agrees with the LXX against the Masoretic, it’s likely (especially due to the space left), that 4QGen-Exoda agrees with the Masoretic against the LXX, and so omits this word."
+            }
+          ]
+        }
+      }
+    },
+    "3": {
+      "verses": {
+        "13": {
+          "masoretic_text": "וַיֹּ֨אמֶר מֹשֶׁ֜ה אֶל־ הָֽאֱלֹהִ֗ים הִנֵּ֨ה אָנֹכִ֣י בָא֮ אֶל־ בְּנֵ֣י יִשְׂרָאֵל֒ וְאָמַרְתִּ֣י לָהֶ֔ם אֱלֹהֵ֥י אֲבוֹתֵיכֶ֖ם שְׁלָחַ֣נִי אֲלֵיכֶ֑ם וְאָֽמְרוּ־ לִ֣י מַה־ שְּׁמ֔וֹ מָ֥ה אֹמַ֖ר אֲלֵהֶֽם׃",
+          "dss_text": "ויאמר משה אל האלהים הנה אנכי בא אל בני ישראל ואמרתי אליהם אלוהי אבותיכם שלחני אליכם ואמרו לי מה שמו מה אמר אליהם",
+          "differences": [
+            {
+              "position": 12,
+              "masoretic_word": "להם",
+              "dss_word": "אליהם",
+              "commentary": "4QExodb: to them. 4QGen-Exoda, SP and Masoretic read להם, which is just a slightly different preposition with the same meaning of to them."
+            },
+            {
+              "position": 13,
+              "masoretic_word": "אלהי",
+              "dss_word": "אלוהי",
+              "commentary": "4QExodb: God (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling אלהי."
+            },
+            {
+              "position": 23,
+              "masoretic_word": "אלהם",
+              "dss_word": "אליהם",
+              "commentary": "4QExodb, SP: to them (plene spelling). 4QGen-Exoda and Masoretic have the defective spelling אלהם."
+            }
+          ]
+        },
+        "14": {
+          "masoretic_text": "וַיֹּ֤אמֶר אֱלֹהִים֙ אֶל־ מֹשֶׁ֔ה אֶֽהְיֶ֖ה אֲשֶׁ֣ר אֶֽהְיֶ֑ה וַיֹּ֗אמֶר כֹּ֤ה תֹאמַר֙ לִבְנֵ֣י יִשְׂרָאֵ֔ל אֶֽהְיֶ֖ה שְׁלָחַ֥נִי אֲלֵיכֶֽם׃",
+          "dss_text": "ויואמר אלוהים אל משה אהיה אשר אהיה ויאמר כה תואמר אל בני ישראל אהיה שלחני אליכם",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "ויאמר",
+              "dss_word": "ויואמר",
+              "commentary": "4QExodb: And He said (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling ויאמר."
+            },
+            {
+              "position": 2,
+              "masoretic_word": "אלהים",
+              "dss_word": "אלוהים",
+              "commentary": "4QExodb: God (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling אלהים."
+            },
+            {
+              "position": 10,
+              "masoretic_word": "תאמר",
+              "dss_word": "תואמר",
+              "commentary": "4QExodb: You shall say (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling תאמר."
+            }
+          ]
+        },
+        "15": {
+          "masoretic_text": "וַיֹּאמֶר֩ ע֨וֹד אֱלֹהִ֜ים אֶל־ מֹשֶׁ֗ה כֹּֽה־ תֹאמַר֮ אֶל־ בְּנֵ֣י יִשְׂרָאֵל֒ יְהוָ֞ה אֱלֹהֵ֣י אֲבֹתֵיכֶ֗ם אֱלֹהֵ֨י אַבְרָהָ֜ם אֱלֹהֵ֥י יִצְחָ֛ק וֵאלֹהֵ֥י יַעֲקֹ֖ב שְׁלָחַ֣נִי אֲלֵיכֶ֑ם זֶה־ שְּׁמִ֣י לְעֹלָ֔ם וְזֶ֥ה זִכְרִ֖י לְדֹ֥ר דֹּֽר׃",
+          "dss_text": "ויואמר אלוהים עוד אל מושה כה תואמר אל בני ישראל יהוה אלהי אבתיכם אלהי אברהם ואלהי יצחק ואלוהי יעקב שלחני אליכם זה שמי לעלם וזה זכרי לדר דר",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "ויאמר",
+              "dss_word": "ויואמר",
+              "commentary": "4QExodb: And He said (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling ויאמר."
+            },
+            {
+              "position": 5,
+              "masoretic_word": "משה",
+              "dss_word": "מושה",
+              "commentary": "4QExodb: Moses (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling משה."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "כֹּֽה־",
+              "dss_word": "כה",
+              "commentary": "4QExodb, SP, Mas: So. 4QGen-Exoda reads כי meaning That."
+            },
+            {
+              "position": 7,
+              "masoretic_word": "תאמר",
+              "dss_word": "תואמר",
+              "commentary": "4QExodb: You shall say (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling תאמר."
+            },
+            {
+              "position": 16,
+              "masoretic_word": "אלוהי",
+              "dss_word": "ואלהי",
+              "commentary": "4QGen-Exoda, SP, LXX: and God. 4QExodb and Masoretic read אלוהי (אלהי), meaning God."
+            }
+          ]
+        }
+      }
+    },
+    "5": {
+      "verses": {
+        "4": {
+          "masoretic_text": "וַיֹּ֤אמֶר אֲלֵהֶם֙ מֶ֣לֶךְ מִצְרַ֔יִם לָ֚מָּה מֹשֶׁ֣ה וְאַהֲרֹ֔ן תַּפְרִ֥יעוּ אֶת־ הָעָ֖ם מִמַּֽעֲשָׂ֑יו לְכ֖וּ לְסִבְלֹתֵיכֶֽם׃",
+          "dss_text": "ויאמר אלהם מלך מרצים למה מושה ואהרון תפריעו את העם ממעשיו לכו לסבלתיכם",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "משה",
+              "dss_word": "מושה",
+              "commentary": "4QExodb: Moses (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling משה."
+            }
+          ]
+        },
+        "5": {
+          "masoretic_text": "וַיֹּ֣אמֶר פַּרְעֹ֔ה הֵן־ רַבִּ֥ים עַתָּ֖ה עַ֣ם הָאָ֑רֶץ וְהִשְׁבַּתֶּ֥ם אֹתָ֖ם מִסִּבְלֹתָֽם׃",
+          "dss_text": "ויואמר פרעה הן רבים עתה עם הארץ והשבתם אתם מסבלתם",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "ויאמר",
+              "dss_word": "ויואמר",
+              "commentary": "4QExodb: And he said (plene spelling). 4QGen-Exoda, 2QExodc, SP and Masoretic have the defective spelling ויאמר."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "לֹ֣א תֹאסִפ֞וּן לָתֵ֨ת תֶּ֧בֶן לָעָ֛ם לִלְבֹּ֥ן הַלְּבֵנִ֖ים כִּתְמ֣וֹל שִׁלְשֹׁ֑ם הֵ֚ם יֵֽלְכ֔וּ וְקֹשְׁשׁ֥וּ לָהֶ֖ם תֶּֽבֶן׃",
+          "dss_text": "לא תאספון לתת תבן לעם ללבון הלבנים כתמול שלשם הם ילכו וקששו להם תבן",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "ללבן",
+              "dss_word": "ללבון",
+              "commentary": "4QExodb: to make (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling ללבן."
+            }
+          ]
+        },
+        "10": {
+          "masoretic_text": "וַיֵּ֨צְא֜וּ נֹגְשֵׂ֤י הָעָם֙ וְשֹׁ֣טְרָ֔יו וַיֹּאמְר֥וּ אֶל־ הָעָ֖ם לֵאמֹ֑ר כֹּ֚ה אָמַ֣ר פַּרְעֹ֔ה אֵינֶ֛נִּי נֹתֵ֥ן לָכֶ֖ם תֶּֽבֶן׃",
+          "dss_text": "ויצאו נגשי העם ושוטריו וידברו אל העם לאמור כה אמר פרעה אינני נותן לכם תבן",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "ושטריו",
+              "dss_word": "ושוטריו",
+              "commentary": "4QExodb: and their foremen (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling ושטריו."
+            }
+          ]
+        },
+        "13": {
+          "masoretic_text": "וְהַנֹּגְשִׂ֖ים אָצִ֣ים לֵאמֹ֑ר כַּלּ֤וּ מַעֲשֵׂיכֶם֙ דְּבַר־ י֣וֹם בְּיוֹמ֔וֹ כַּאֲשֶׁ֖ר בִּהְי֥וֹת הַתֶּֽבֶן׃",
+          "dss_text": "והנוגשים אצים את עם ישראל לאמור כלו מעשיכם דבר יום ביומו כאשר בהיות התבן נתן לכם",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "והנגשים",
+              "dss_word": "והנוגשים",
+              "commentary": "4QExodb: and the slave drivers (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling והנגשים."
+            }
+          ]
+        }
+      }
+    },
+    "6": {
+      "verses": {
+        "8": {
+          "masoretic_text": "וְהֵבֵאתִ֤י אֶתְכֶם֙ אֶל־ הָאָ֔רֶץ אֲשֶׁ֤ר נָשָׂ֙אתִי֙ אֶת־ יָדִ֔י לָתֵ֣ת אֹתָ֔הּ לְאַבְרָהָ֥ם לְיִצְחָ֖ק וּֽלְיַעֲקֹ֑ב וְנָתַתִּ֨י אֹתָ֥הּ לָכֶ֛ם מוֹרָשָׁ֖ה אֲנִ֥י יְהוָֽה׃",
+          "dss_text": "והבאתי אתכם אל הארץ אשר נשאתי את ידי לתת אתה לאברהם ליצחק וליעקב ונתתי אתה לכם למורשה אני יהוה",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "נָשָׂ֙אתִי֙",
+              "dss_word": "נשאתי",
+              "commentary": "MurGen, Mas, SP, LXX: I lifted up. 4QGen-Exoda reads נשבעתי meaning I swore."
+            },
+            {
+              "position": 17,
+              "masoretic_word": "מוֹרָשָׁ֖ה",
+              "dss_word": "למורשה",
+              "commentary": "4QGen-Exoda: as a possession. MurGen, MT and SP read מורשה making the as implicit rather than explicit."
+            }
+          ]
+        }
+      }
+    },
+    "7": {
+      "verses": {
+        "4": {
+          "masoretic_text": "וְלֹֽא־ יִשְׁמַ֤ע אֲלֵכֶם֙ פַּרְעֹ֔ה וְנָתַתִּ֥י אֶת־ יָדִ֖י בְּמִצְרָ֑יִם וְהוֹצֵאתִ֨י אֶת־ צִבְאֹתַ֜י אֶת־ עַמִּ֤י בְנֵֽי־ יִשְׂרָאֵל֙ מֵאֶ֣רֶץ מִצְרַ֔יִם בִּשְׁפָטִ֖ים גְּדֹלִֽים׃",
+          "dss_text": "ולא ישמע אלכם פרעה ונתתי את ידי במצרים והוצאתי את צבאותי את עמי בני ישראל מארץ מצרים בשפטים גדולים",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "וְלֹֽא־",
+              "dss_word": "ולא",
+              "commentary": "4QpaleoExodm, SP, Mas: and not (defective spelling). 2QExoda has the plene spelling ולוא."
+            }
+          ]
+        },
+        "6": {
+          "masoretic_text": "וַיַּ֥עַשׂ מֹשֶׁ֖ה וְאַהֲרֹ֑ן כַּאֲשֶׁ֨ר צִוָּ֧ה יְהוָ֛ה אֹתָ֖ם כֵּ֥ן עָשֽׂוּ׃",
+          "dss_text": "ויעש משה ואהרון כאשר צוה יהוה אתם כן עשו",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "ואהרן",
+              "dss_word": "ואהרון",
+              "commentary": "4QpaleoExodm: and Aaron (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling ואהרן."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "וּמֹשֶׁה֙ בֶּן־ שְׁמֹנִ֣ים שָׁנָ֔ה וְאֽ͏ַהֲרֹ֔ן בֶּן־ שָׁלֹ֥שׁ וּשְׁמֹנִ֖ים שָׁנָ֑ה בְּדַבְּרָ֖ם אֶל־ פַּרְעֹֽה׃",
+          "dss_text": "ומשה בן שמונים שנה ואהרון בן שלש ושמנים שנה בדברם אל פרעה",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "ואהרן",
+              "dss_word": "ואהרון",
+              "commentary": "4QpaleoExodm: and Aaron (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling ואהרן."
+            }
+          ]
+        },
+        "8": {
+          "masoretic_text": "וַיֹּ֣אמֶר יְהוָ֔ה אֶל־ מֹשֶׁ֥ה וְאֶֽל־ אַהֲרֹ֖ן לֵאמֹֽר׃",
+          "dss_text": "ויאמר יהוה אל משה ואל אהרון לאמר",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "אהרן",
+              "dss_word": "אהרון",
+              "commentary": "4QpaleoExodm: Aaron (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling אהרן."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "כִּי֩ יְדַבֵּ֨ר אֲלֵכֶ֤ם פַּרְעֹה֙ לֵאמֹ֔ר תְּנ֥וּ לָכֶ֖ם מוֹפֵ֑ת וְאָמַרְתָּ֣ אֶֽל־ אַהֲרֹ֗ן קַ֧ח אֶֽת־ מַטְּךָ֛ וְהַשְׁלֵ֥ךְ לִפְנֵֽי־ פַרְעֹ֖ה יְהִ֥י לְתַנִּֽין׃",
+          "dss_text": "כי ידבר אליכם פרעה לאמר תנו לכם מופת ואמרת אל אהרן קח את מטך והשלך לפני פרעה יהי לתנין",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "אלכם",
+              "dss_word": "אליכם",
+              "commentary": "4QpaleoExodm, SP: to you both (plene spelling). 4QGen-Exoda and Masoretic have the defective spelling אלכם."
+            }
+          ]
+        },
+        "10": {
+          "masoretic_text": "וַיָּבֹ֨א מֹשֶׁ֤ה וְאַהֲרֹן֙ אֶל־ פַּרְעֹ֔ה וַיַּ֣עַשׂוּ כֵ֔ן כַּאֲשֶׁ֖ר צִוָּ֣ה יְהוָ֑ה וַיַּשְׁלֵ֨ךְ אַהֲרֹ֜ן אֶת־ מַטֵּ֗הוּ לִפְנֵ֥י פַרְעֹ֛ה וְלִפְנֵ֥י עֲבָדָ֖יו וַיְהִ֥י לְתַנִּֽין׃",
+          "dss_text": "ויבא משה ואהרון לפני פרעה ויעשו כן כאשר צוה יהוה וישלך אהרן את מטהו לפני פרעה ולפני עבדיו ויהי לתנין",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "ואהרן",
+              "dss_word": "ואהרון",
+              "commentary": "4QpaleoExodm: and Aaron (plene spelling). 4QGen-Exoda, SP and Masoretic have the defective spelling ואהרן."
+            }
+          ]
+        }
+      }
+    },
+    "9": {
+      "verses": {
+        "8": {
+          "masoretic_text": "וַיֹּ֣אמֶר יְהוָה֮ אֶל־ מֹשֶׁ֣ה וְאֶֽל־ אַהֲרֹן֒ קְח֤וּ לָכֶם֙ מְלֹ֣א חָפְנֵיכֶ֔ם פִּ֖יחַ כִּבְשָׁ֑ן וּזְרָק֥וֹ מֹשֶׁ֛ה הַשָּׁמַ֖יְמָה לְעֵינֵ֥י פַרְעֹֽה׃",
+          "dss_text": "ויאמר יהוה אל משה ואל אהרון לאמור קחו לכם מלא חפניכם פיח כבשן וזרקו משה השמימה לעיני פרעה",
+          "differences": [
+            {
+              "position": 16,
+              "masoretic_word": "לְעֵינֵ֥י",
+              "dss_word": "השמימה",
+              "commentary": "4QGen-Exoda, LXX, Mas: towards the heavens. 4QpaleoExodm and SP read השמים meaning in the heavens."
+            }
+          ]
+        },
+        "11": {
+          "masoretic_text": "וְלֹֽא־ יָכְל֣וּ הֽ͏ַחַרְטֻמִּ֗ים לַעֲמֹ֛ד לִפְנֵ֥י מֹשֶׁ֖ה מִפְּנֵ֣י הַשְּׁחִ֑ין כִּֽי־ הָיָ֣ה הַשְּׁחִ֔ין בּֽ͏ַחֲרְטֻמִּ֖ם וּבְכָל־ מִצְרָֽיִם׃",
+          "dss_text": "ולא יכלו החרטמים לעמד לפני משה מפני השחין כי היה השחין בחרטומים ובכל מצרים",
+          "differences": [
+            {
+              "position": 12,
+              "masoretic_word": "בחרטמם",
+              "dss_word": "בחרטמים",
+              "commentary": "4QpaleoExodm: the magicians (plene spelling). 4QExodc and SP have the defective spelling בחרטמים, and the Masoretic has the basic בחרטמם. All are effectively different spellings of the same word indicating the magicians/poisoners."
+            }
+          ]
+        },
+        "29": {
+          "masoretic_text": "וַיֹּ֤אמֶר אֵלָיו֙ מֹשֶׁ֔ה כְּצֵאתִי֙ אֶת־ הָעִ֔יר אֶפְרֹ֥שׂ אֶת־ כַּפַּ֖י אֶל־ יְהוָ֑ה הַקֹּל֣וֹת יֶחְדָּל֗וּן וְהַבָּרָד֙ לֹ֣א יִֽהְיֶה־ ע֔וֹד לְמַ֣עַן תֵּדַ֔ע כִּ֥י לַיהוָ֖ה הָאָֽרֶץ׃",
+          "dss_text": "ויואמר אליו מושה כצאתי את העיר אפרש כפי אל יהוה הקולות יחדלון והברד לא יהיה עוד למען תדע כי ליהוה הארץ",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "אֵלָיו֙",
+              "dss_word": "אליו",
+              "commentary": "4Qpaleo-Genl, Mas, SP: to him. 2QExoda probably places this after משה rather than here, or omits it entirely."
+            },
+            {
+              "position": 3,
+              "masoretic_word": "משה",
+              "dss_word": "מושה",
+              "commentary": "2QExoda: Moses (plene spelling). 4QpaleoGen-Exodl, SP and Masoretic have the defective spelling משה."
+            },
+            {
+              "position": 11,
+              "masoretic_word": "הקלות",
+              "dss_word": "הקולות",
+              "commentary": "2QExoda: the thunders (plene spelling). 4QExodc and Masoretic have the defective spelling הקלות."
+            }
+          ]
+        }
+      }
+    },
+    "10": {
+      "verses": {
+        "8": {
+          "masoretic_text": "וַיּוּשַׁ֞ב אֶת־ מֹשֶׁ֤ה וְאֶֽת־ אַהֲרֹן֙ אֶל־ פַּרְעֹ֔ה וַיֹּ֣אמֶר אֲלֵהֶ֔ם לְכ֥וּ עִבְד֖וּ אֶת־ יְהוָ֣ה אֱלֹהֵיכֶ֑ם מִ֥י וָמִ֖י הַהֹלְכִֽים׃",
+          "dss_text": "ויושב את משה ואת אהרון אל פרעה ויאמר אלהם לכו עבדו את יהוה אלהיכם מי ומי ההולכים",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "אהרן",
+              "dss_word": "אהרון",
+              "commentary": "4QpaleoExodm: Aaron (plene spelling). 4QExodc, SP and Masoretic have the defective spelling אהרן."
+            }
+          ]
+        },
+        "24": {
+          "masoretic_text": "וַיִּקְרָ֨א פַרְעֹ֜ה אֶל־ מֹשֶׁ֗ה וַיֹּ֙אמֶר֙ לְכוּ֙ עִבְד֣וּ אֶת־ יְהוָ֔ה רַ֛ק צֹאנְכֶ֥ם וּבְקַרְכֶ֖ם יֻצָּ֑ג גַּֽם־ טַפְּכֶ֖ם יֵלֵ֥ך עִמָּכֶֽם׃",
+          "dss_text": "ויקרא פרעה למשה ולאהרון ויאמר לכו עבדו את יהוה רק צאנכם ובקרכם יצג גם טפכם ילך עמכם",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "מֹשֶׁ֗ה",
+              "dss_word": "ולאהרון",
+              "commentary": "4QpaleoExodm, SP, LXX: And for Aaron. 4QExodc and Masoretic omit."
+            }
+          ]
+        }
+      }
+    },
+    "12": {
+      "verses": {
+        "14": {
+          "masoretic_text": "וְהָיָה֩ הַיּ֨וֹם הַזֶּ֤ה לָכֶם֙ לְזִכָּר֔וֹן וְחַגֹּתֶ֥ם אֹת֖וֹ חַ֣ג לַֽיהוָ֑ה לְדֹרֹ֣תֵיכֶ֔ם חֻקַּ֥ת עוֹלָ֖ם תְּחָגֻּֽהוּ׃",
+          "dss_text": "והיה היום הזה לכם לזכרון וחגותם אתו חג ליהוה לדורותיכם חוקות עולם תחגהו",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "חֻקַּ֥ת",
+              "dss_word": "חוקות",
+              "commentary": "4QpaleoExodm: (plene spelling). 4QExodc has the defective spelling חקת."
+            }
+          ]
+        },
+        "35": {
+          "masoretic_text": "וּבְנֵי־ יִשְׂרָאֵ֥ל עָשׂ֖וּ כִּדְבַ֣ר מֹשֶׁ֑ה וַֽיִּשְׁאֲלוּ֙ מִמִּצְרַ֔יִם כְּלֵי־ כֶ֛סֶף וּכְלֵ֥י זָהָ֖ב וּשְׂמָלֹֽת׃",
+          "dss_text": "ובני ישראל עשו כדבר משה וישאלו ממצרים כלי כסף וכלי זהב ושמלות",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "מִמִּצְרַ֔יִם",
+              "dss_word": "ממצרים",
+              "commentary": "2QExoda, SP, LXX, Mas: from the Egyptians (defective spelling). 4QExodc omits. 4QpaleoExodm has the plene spelling ממצריים."
+            }
+          ]
+        },
+        "38": {
+          "masoretic_text": "וְגַם־ עֵ֥רֶב רַ֖ב עָלָ֣ה אִתָּ֑ם וְצֹ֣אן וּבָקָ֔ר מִקְנֶ֖ה כָּבֵ֥ד מְאֹֽד׃",
+          "dss_text": "וגם ערב רב עלה אתם וצאן ובקר מקנה כבד מאד",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "מְאֹֽד׃",
+              "dss_word": "מאד",
+              "commentary": "4QExodc, SP, Mas: very (defective spelling). 4QpaleoExodm has the plene spelling מאדה."
+            }
+          ]
+        }
+      }
+    },
+    "13": {
+      "verses": {
+        "5": {
+          "masoretic_text": "וְהָיָ֣ה כִֽי־ יְבִֽיאֲךָ֣ יְהוָ֡ה אֶל־ אֶ֣רֶץ הַֽ֠כְּנַעֲנִי וְהַחִתִּ֨י וְהָאֱמֹרִ֜י וְהַחִוִּ֣י וְהַיְבוּסִ֗י אֲשֶׁ֨ר נִשְׁבַּ֤ע לַאֲבֹתֶ֙יךָ֙ לָ֣תֶת לָ֔ךְ אֶ֛רֶץ זָבַ֥ת חָלָ֖ב וּדְבָ֑שׁ וְעָבַדְתָּ֛ אֶת־ הָעֲבֹדָ֥ה הַזֹּ֖את בַּחֹ֥דֶשׁ הַזֶּֽה׃",
+          "dss_text": "והיה כי יביאך יהוה אלוהיך אל ארץ הכנעני והחתי החוי האמרי היבוסי אשר נשבע לאבותיך לתת לך ארץ זבת חלב ודבש ועבדתה את העבודה הזאת בחדש הזה",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "וְהָאֱמֹרִ֜י",
+              "dss_word": "והחתי",
+              "commentary": "4QpaleoExodm, LXX, Mas: and the Hittite. 4QExode and SP read החתי, meaning the Hittite."
+            },
+            {
+              "position": 13,
+              "masoretic_word": "נִשְׁבַּ֤ע",
+              "dss_word": "אשר",
+              "commentary": "4QpaleoExodm, SP, LXX, Mas: which. 4QExode reads כאשר meaning just as."
+            },
+            {
+              "position": 24,
+              "masoretic_word": "העבדה",
+              "dss_word": "העבודה",
+              "commentary": "4QpaleoExodm: the service (plene spelling). 4Qexode, SP and Masoretic have the defective spelling העבדה."
+            }
+          ]
+        }
+      }
+    },
+    "16": {
+      "verses": {
+        "33": {
+          "masoretic_text": "וַיֹּ֨אמֶר מֹשֶׁ֜ה אֶֽל־ אַהֲרֹ֗ן קַ֚ח צִנְצֶ֣נֶת אַחַ֔ת וְתֶן־ שָׁ֥מָּה מְלֹֽא־ הָעֹ֖מֶר מָ֑ן וְהַנַּ֤ח אֹתוֹ֙ לִפְנֵ֣י יְהוָ֔ה לְמִשְׁמֶ֖רֶת לְדֹרֹתֵיכֶֽם׃",
+          "dss_text": "ויאמר משה אל אהרן קח צנצנת אחת ותן שמה מלא העמר מן והניח אותו לפני יהוה למשמרת לדרתיכם",
+          "differences": [
+            {
+              "position": 14,
+              "masoretic_word": "אתו",
+              "dss_word": "אותו",
+              "commentary": "4QpaleoExodm: it (plene spelling). 4QpaleoGen-Exodl, SP and Masoretic have the defective spelling אתו."
+            }
+          ]
+        }
+      }
+    },
+    "17": {
+      "verses": {
+        "13": {
+          "masoretic_text": "וַיַּחֲלֹ֧שׁ יְהוֹשֻׁ֛עַ אֶת־ עֲמָלֵ֥ק וְאֶת־ עַמּ֖וֹ לְפִי־ חָֽרֶב׃",
+          "dss_text": "ויחלש יהשוע את עמלק ואת עמו ויכם לפי חרב",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "יהושע",
+              "dss_word": "יהשוע",
+              "commentary": "4QpaleoExodm: Joshua (alternative spelling). 4QExodc, SP and Masoretic have the spelling יהושע."
+            },
+            {
+              "position": 7,
+              "masoretic_word": "יהושע",
+              "dss_word": "ויכם",
+              "commentary": "4QpaleoExodm: Joshua (alternative spelling). 4QExodc, SP and Masoretic have the spelling יהושע."
+            }
+          ]
+        },
+        "14": {
+          "masoretic_text": "וַיֹּ֨אמֶר יְהוָ֜ה אֶל־ מֹשֶׁ֗ה כְּתֹ֨ב זֹ֤את זִכָּרוֹן֙ בַּסֵּ֔פֶר וְשִׂ֖ים בְּאָזְנֵ֣י יְהוֹשֻׁ֑עַ כִּֽי־ מָחֹ֤ה אֶמְחֶה֙ אֶת־ זֵ֣כֶר עֲמָלֵ֔ק מִתַּ֖חַת הַשָּׁמָֽיִם׃",
+          "dss_text": "ויאמר יהוה אל משה כתוב זאת זכרון בספר ושים באזני יהושע כי מחה אמחה את זכר עמלק מתחת השמים",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "כתב",
+              "dss_word": "כתוב",
+              "commentary": "4QpaleoExodm: You write (plene spelling). 4QExodc, SP and Masoretic have the defective spelling כתב."
+            }
+          ]
+        }
+      }
+    },
+    "18": {
+      "verses": {
+        "6": {
+          "masoretic_text": "וַיֹּ֙אמֶר֙ אֶל־ מֹשֶׁ֔ה אֲנִ֛י חֹתֶנְךָ֥ יִתְר֖וֹ בָּ֣א אֵלֶ֑יךָ וְאִ֨שְׁתְּךָ֔ וּשְׁנֵ֥י בָנֶ֖יהָ עִמָּֽהּ׃",
+          "dss_text": "ויאמר אל משה הנה חתנך יתרו בא אליך ואשתך ושני בניה עמה",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "אני",
+              "dss_word": "הנה",
+              "commentary": "4QpaleoExodm, SP, LXX: Behold. 4QExodc and Masoretic read אני meaning I am."
+            }
+          ]
+        },
+        "21": {
+          "masoretic_text": "וְאַתָּ֣ה תֶחֱזֶ֣ה מִכָּל־ הָ֠עָם אַנְשֵׁי־ חַ֜יִל יִרְאֵ֧י אֱלֹהִ֛ים אַנְשֵׁ֥י אֱמֶ֖ת שֹׂ֣נְאֵי בָ֑צַע וְשַׂמְתָּ֣ עֲלֵהֶ֗ם שָׂרֵ֤י אֲלָפִים֙ שָׂרֵ֣י מֵא֔וֹת שָׂרֵ֥י חֲמִשִּׁ֖ים וְשָׂרֵ֥י עֲשָׂרֹֽת׃",
+          "dss_text": "ואתה תחזה מכל העם אנשי חיל יראי יהוה אנשי אמת שונאי בצע ושמת אתם עליהם שרי אלפים ושרי מאות ושרי חמשים ושרי עשרת",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "שנאי",
+              "dss_word": "שונאי",
+              "commentary": "4QpaleoExodm: who hate (plene spelling). 4QpaleoGen-Exodl, SP and Masoretic have the defective spelling שנאי."
+            },
+            {
+              "position": 19,
+              "masoretic_word": "שָׂרֵ֥י",
+              "dss_word": "מאות",
+              "commentary": "4QpaleoGen-Exodl, 4QpaleoExodm, SP, Mas: of hundreds. 2QExodb has the plene spelling מאיות."
+            },
+            {
+              "position": 20,
+              "masoretic_word": "חֲמִשִּׁ֖ים",
+              "dss_word": "ושרי",
+              "commentary": "4QpaleoExodm: and rulers. 4QpaleoGen-Exodl and Masorietc read שרי meaning rulers."
+            }
+          ]
+        },
+        "22": {
+          "masoretic_text": "וְשָׁפְט֣וּ אֶת־ הָעָם֮ בְּכָל־ עֵת֒ וְהָיָ֞ה כָּל־ הַדָּבָ֤ר הַגָּדֹל֙ יָבִ֣יאוּ אֵלֶ֔יךָ וְכָל־ הַדָּבָ֥ר הַקָּטֹ֖ן יִשְׁפְּטוּ־ הֵ֑ם וְהָקֵל֙ מֵֽעָלֶ֔יךָ וְנָשְׂא֖וּ אִתָּֽךְ׃",
+          "dss_text": "ושפטו את העם בכל עת והיה כל הדבר הגדול יביאו אליך וכל הדבר הקטן ישפוטו הם והקל מעליך ונשאו אתך",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "בְּכָל־",
+              "dss_word": "בכל",
+              "commentary": "4QpaleoGen-Exodl, 4QpaleoExodm, SP, Mas: in all (defective spelling). 2QExodb has the plene spelling בכול."
+            }
+          ]
+        }
+      }
+    },
+    "19": {
+      "verses": {
+        "9": {
+          "masoretic_text": "וַיֹּ֨אמֶר יְהוָ֜ה אֶל־ מֹשֶׁ֗ה הִנֵּ֨ה אָנֹכִ֜י בָּ֣א אֵלֶיךָ֮ בְּעַ֣ב הֶֽעָנָן֒ בַּעֲב֞וּר יִשְׁמַ֤ע הָעָם֙ בְּדַבְּרִ֣י עִמָּ֔ךְ וְגַם־ בְּךָ֖ יַאֲמִ֣ינוּ לְעוֹלָ֑ם וַיַּגֵּ֥ד מֹשֶׁ֛ה אֶת־ דִּבְרֵ֥י הָעָ֖ם אֶל־ יְהוָֽה׃",
+          "dss_text": "ויאומר יהוה אל משה הנה אנכי בא אליך בעב הענן בעבור ישמע העם בדברי עמך וגם בך יאמינו לעולם ויגד מושה את דברי העם אל יהוה",
+          "differences": [
+            {
+              "position": 21,
+              "masoretic_word": "מושה",
+              "dss_word": "מושה",
+              "commentary": "2QExodb: Moses (plene spelling). 4QpaleoExodm, SP and Masoretic have the defective spelling מושה."
+            }
+          ]
+        },
+        "24": {
+          "masoretic_text": "וַיֹּ֨אמֶר אֵלָ֤יו יְהוָה֙ לֶךְ־ רֵ֔ד וְעָלִ֥יתָ אַתָּ֖ה וְאַהֲרֹ֣ן עִמָּ֑ךְ וְהַכֹּהֲנִ֣ים וְהָעָ֗ם אַל־ יֽ͏ֶהֶרְס֛וּ לַעֲלֹ֥ת אֶל־ יְהוָ֖ה פֶּן־ יִפְרָץ־ בָּֽם׃",
+          "dss_text": "ויאמר אליו יהוה לך רד ועלית אתה ואהרן עמך והכהנים והעם יהרסו לעלת אל יהוה פן יפרץ בם",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "וְאַהֲרֹ֣ן",
+              "dss_word": "ואהרן",
+              "commentary": "1QExod, 4QpaleoGen-Exodl, SP, Mas: and Aaron (defective spelling). 4QpaleoExodm has the plene spelling ואהרון."
+            }
+          ]
+        }
+      }
+    },
+    "27": {
+      "verses": {
+        "9": {
+          "masoretic_text": "וְעָשִׂ֕יתָ אֵ֖ת חֲצַ֣ר הַמִּשְׁכָּ֑ן לִפְאַ֣ת נֶֽגֶב־ תֵּ֠ימָנָה קְלָעִ֨ים לֶחָצֵ֜ר שֵׁ֣שׁ מָשְׁזָ֗ר מֵאָ֤ה בָֽאַמָּה֙ אֹ֔רֶךְ לַפֵּאָ֖ה הָאֶחָֽת׃",
+          "dss_text": "ועשית את חצר המשכן לפאת נגב תימנה קלעים לחצר שש משזר מאה באמה ארך לפאה האחת",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "נֶֽגֶב־",
+              "dss_word": "נגבה",
+              "commentary": "4QpaleoExodm, Mas: south. 4QpaleoGen-Exodl and SP have נגבה, which is the main noun נגב with the locative ה."
+            }
+          ]
+        }
+      }
+    },
+    "40": {
+      "verses": {
+        "15": {
+          "masoretic_text": "וּמָשַׁחְתָּ֣ אֹתָ֗ם כַּאֲשֶׁ֤ר מָשַׁ֙חְתָּ֙ אֶת־ אֲבִיהֶ֔ם וְכִהֲנ֖וּ לִ֑י וְ֠הָיְתָה לִהְיֹ֨ת לָהֶ֧ם מָשְׁחָתָ֛ם לִכְהֻנַּ֥ת עוֹלָ֖ם לְדֹרֹתָֽם׃",
+          "dss_text": "ומשחת אותם כאשר משחת את אביהן וכהנו לי והיתה להיות להם משחתם לכהנות עולם לדורותם",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "אתם",
+              "dss_word": "אותם",
+              "commentary": "4QExod-Levf: them (plene spelling). 4QpaleoGen-Exodl, SP and Masoretic have the defective spelling אתם."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

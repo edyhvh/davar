@@ -1,0 +1,67 @@
+{
+  "name": "Habakkuk",
+  "chapters": {
+    "2": {
+      "verses": {
+        "8": {
+          "masoretic_text": "כִּֽי אַתָּ֤ה שַׁלּ֙וֹתָ֙ גּוֹיִ֣ם רַבִּ֔ים יְשָׁלּ֖וּךָ כָּל־ יֶ֣תֶר עַמִּ֑ים מִדְּמֵ֤י אָדָם֙ וַחֲמַס־ אֶ֔רֶץ קִרְיָ֖ה וְכָל־ יֹ֥שְׁבֵי בָֽהּ׃",
+          "dss_text": "כי אתה שלות גוים רבים וישלוך כל יתר עמים מדמי אדם וחמס ארץ קריה וכל ישבי בה",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "יְשָׁלּ֖וּךָ",
+              "dss_word": "וישלוך",
+              "commentary": "Addition of ו at the beginning due to this not being extant in MurXII, and 8HevXIIgr contains και meaning and. Omitted by the Masoretic and LXX."
+            }
+          ]
+        },
+        "18": {
+          "masoretic_text": "מָֽה־ הוֹעִ֣יל פֶּ֗סֶל כִּ֤י פְסָלוֹ֙ יֹֽצְר֔וֹ מַסֵּכָ֖ה וּמ֣וֹרֶה שָּׁ֑קֶר כִּ֣י בָטַ֞ח יֹצֵ֤ר יִצְרוֹ֙ עָלָ֔יו לַעֲשׂ֖וֹת אֱלִילִ֥ים אִלְּמִֽים׃",
+          "dss_text": "מה הועיל פסל כי פסלו יצרו מסכה ומראה שקר כי בטח יצר יצרו עליו לעשות אלילים אלמים",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "ומורה",
+              "dss_word": "ומראה",
+              "commentary": "Hebrew reconstruction from 8HevXIIgr, LXX: και φαντασιαν - and an appearance. Masoretic reads ומורה meaning and a teacher."
+            }
+          ]
+        }
+      }
+    },
+    "3": {
+      "verses": {
+        "9": {
+          "masoretic_text": "עֶרְיָ֤ה תֵעוֹר֙ קַשְׁתֶּ֔ךָ שְׁבֻע֥וֹת מַטּ֖וֹת אֹ֣מֶר סֶ֑לָה נְהָר֖וֹת תְּבַקַּע־ אָֽרֶץ׃",
+          "dss_text": "ערוה תעור קשתך שבעות מטות אמר סלה נהרות תבקע ארץ",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "תְּבַקַּע־",
+              "dss_word": "תבקע",
+              "commentary": "MurXII, Mas: you split. 8HevXIIgr and LXX read ραγησεται meaning he split."
+            }
+          ]
+        },
+        "14": {
+          "masoretic_text": "נָקַ֤בְתָּ בְמַטָּיו֙ רֹ֣אשׁ יִסְעֲר֖וּ לַהֲפִיצֵ֑נִי עֲלִ֣יצֻתָ֔ם כְּמוֹ־ לֶאֱכֹ֥ל עָנִ֖י בַּמִּסְתָּֽר׃",
+          "dss_text": "נקבת במטיו ראש פרזו יסערו להפיצני עליצתם כמו לאכול עני במסתר",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "פרזיו",
+              "dss_word": "פרזו",
+              "commentary": "MurXII, Mas(k): his warrior. Masoretic(q) reads פרזיו (LXX: δυναστων) meaning his warriors. 8HevXIIgr reads ατειχιστων αυτου meaning unwalled ones. The underlying Vorlege for 8HevXIIgr possibly reading פרזנו for פרזו."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "עֲלִ֣יצֻתָ֔ם",
+              "dss_word": "להפיצני",
+              "commentary": "MurXII, Mas: scatter me. 8HevXIIgr reads σκορπισαι ημας meaning scatter us. LXX reads εν αυτη meaning in it."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

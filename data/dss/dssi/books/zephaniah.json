@@ -1,0 +1,55 @@
+{
+  "name": "Zephaniah",
+  "chapters": {
+    "2": {
+      "verses": {
+        "13": {
+          "masoretic_text": "וְיֵ֤ט יָדוֹ֙ עַל־ צָפ֔וֹן וִֽיאַבֵּ֖ד אֶת־ אַשּׁ֑וּר וְיָשֵׂ֤ם אֶת־ נִֽינְוֵה֙ לִשְׁמָמָ֔ה צִיָּ֖ה כַּמִּדְבָּֽר׃",
+          "dss_text": "ויט ידו על צפון ויאבד את אשור וישם את נינוה לשממה ציה כמדבר",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "וִֽיאַבֵּ֖ד",
+              "dss_word": "ויאבד",
+              "commentary": "MurXII, Mas, LXX: And He shall destroy. 4QXIIb reads ויאב, which is a nonsensical scribal mistake."
+            }
+          ]
+        },
+        "15": {
+          "masoretic_text": "זֹ֞֠ הָעִ֤יר הָעַלִּיזָה֙ הַיּוֹשֶׁ֣בֶת לָבֶ֔טַח הָאֹֽמְרָה֙ בִּלְבָבָ֔הּ אֲנִ֖י וְאַפְסִ֣י ע֑וֹד אֵ֣יךְ ׀ הָיְתָ֣ה לְשַׁמָּ֗ה מַרְבֵּץ֙ לַֽחַיָּ֔ה כֹּ֚ל עוֹבֵ֣ר עָלֶ֔יהָ יִשְׁרֹ֖ק יָנִ֥יעַ יָדֽוֹ׃",
+          "dss_text": "זאת העיר העליזה היושבת לבטח האמרה בלבבה אני ואפסי עוד איך היתה לשמה מרבץ לחיה כל עובר עליה ישרוק יניע את ידו",
+          "differences": [
+            {
+              "position": 19,
+              "masoretic_word": "ישרק",
+              "dss_word": "ישרוק",
+              "commentary": "4QXIIc: He hisses (plene spelling). MurXII and Masoretic read the defective spelling ישרק."
+            },
+            {
+              "position": 21,
+              "masoretic_word": "ידו",
+              "dss_word": "ידו",
+              "commentary": "4QXIIc: Direct-object marker (untranslatable). MurXII and Masoretic omit this, making the object (ידו - his fist) of the verb יניע (he shakes) implicit rather than explicit."
+            }
+          ]
+        }
+      }
+    },
+    "3": {
+      "verses": {
+        "2": {
+          "masoretic_text": "לֹ֤א שָֽׁמְעָה֙ בְּק֔וֹל לֹ֥א לָקְחָ֖ה מוּסָ֑ר בַּֽיהוָה֙ לֹ֣א בָטָ֔חָה אֶל־ אֱלֹהֶ֖יהָ לֹ֥א קָרֵֽבָה׃",
+          "dss_text": "לא שמעה בקול לוא לקחה מוסר ביהוה לא בטחה אל אלהיה לא קרבה",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "לא",
+              "dss_word": "לוא",
+              "commentary": "4QXIIc: not (plene spelling). MurXII and Masoretic read the defective spelling לא."
+            }
+          ]
+        }
+      }
+    }
+  }
+}
