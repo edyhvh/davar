@@ -2,20 +2,7 @@
   "name": "Nahum",
   "chapters": {
     "1": {
-      "verses": {
-        "7": {
-          "masoretic_text": "ט֣וֹב יְהוָ֔ה לְמָע֖וֹז בְּי֣וֹם צָרָ֑ה וְיֹדֵ֖עַ חֹ֥סֵי בֽוֹ׃",
-          "dss_text": "טוב יהוה למעוז ביום צרה וידע חוסי בו",
-          "differences": [
-            {
-              "position": 7,
-              "masoretic_word": "חסי",
-              "dss_word": "חוסי",
-              "commentary": "4QXIIg: those who take refuge (plene spelling). MurXII and Masoretic read the defective spelling חסי."
-            }
-          ]
-        }
-      }
+      "verses": {}
     },
     "2": {
       "verses": {
@@ -28,18 +15,6 @@
               "masoretic_word": "מימי",
               "dss_word": "מימיה",
               "commentary": "4QXIIg, LXX: her days. MurXII and Masoretic read מימי meaning its days."
-            }
-          ]
-        },
-        "11": {
-          "masoretic_text": "בּוּקָ֥ה וּמְבוּקָ֖ה וּמְבֻלָּקָ֑ה וְלֵ֨ב נָמֵ֜ס וּפִ֣ק בִּרְכַּ֗יִם וְחַלְחָלָה֙ בְּכָל־ מָתְנַ֔יִם וּפְנֵ֥י כֻלָּ֖ם קִבְּצ֥וּ פָארֽוּר׃",
-          "dss_text": "בוקה ומבוקה ומבולקה ולב נמס ופק ברכים וחלחלה בכל מתנים ופני כלם קבצו פארור",
-          "differences": [
-            {
-              "position": 3,
-              "masoretic_word": "וּמְבֻלָּקָ֑ה",
-              "dss_word": "ומבולקה",
-              "commentary": "MurXII: and devestation (plene spelling). 4QXIIg and Masoreitc read the defective spelling ומבלקה."
             }
           ]
         },
@@ -59,6 +34,18 @@
     },
     "3": {
       "verses": {
+        "8": {
+          "masoretic_text": "הֲתֵֽיטְבִי֙ מִנֹּ֣א אָמ֔וֹן הַיֹּֽשְׁבָה֙ בַּיְאֹרִ֔ים מַ֖יִם סָבִ֣יב לָ֑הּ אֲשֶׁר־ חֵ֣יל יָ֔ם מִיָּ֖ם חוֹמָתָֽהּ׃",
+          "dss_text": "התיטבי מנא אמון הישבה ביארים מים סביב לה אשר חיל מים חומתה",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "אשר חיל ים מים חומתה",
+              "dss_word": "חיל מים חומתה",
+              "commentary": "MurXII: power of waters is her barrier. Masoretic reads אשר חיל ים מים חומתה meaning rampart is the sea, water her walls. 8HevXIIgr reads ισχυς θαλασσα υδωρ το τειχος αυτης meaning strength is the sea, water her wall. LXX reads η αρχη θαλασσα και υδωρ τα τειχη αυτης meaning empire is the sea, and water her walls."
+            }
+          ]
+        },
         "16": {
           "masoretic_text": "הִרְבֵּית֙ רֹֽכְלַ֔יִךְ מִכּוֹכְבֵ֖י הַשָּׁמָ֑יִם יֶ֥לֶק פָּשַׁ֖ט וַיָּעֹֽף׃",
           "dss_text": "הרבית רכליך ככוכבי השמים ילק פשט ויעף",

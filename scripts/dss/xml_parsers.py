@@ -49,20 +49,72 @@ def parse_dss_book(book_file) -> List[Dict]:
                 continue
             
             # Collect all words including variants
+            # DSS XML has 3 variant types: <w>, <group>, and <note>
             dss_words = []
             variant_positions = []
             
-            for i, word in enumerate(verse.findall('.//w')):
-                word_text = word.text or ''
-                is_variant = word.get('variant') == 'yes'
-                variant_id = word.get('id', '')
-                
+            # Build word list with position tracking
+            all_words = verse.findall('.//w')
+            for word_elem in all_words:
+                word_text = word_elem.text or ''
                 dss_words.append(word_text)
-                
-                if is_variant:
+            
+            # Now find variants - check different element types
+            word_position = 0
+            
+            # 1. Find individual word variants
+            for word_elem in all_words:
+                word_position += 1
+                if word_elem.get('variant') == 'yes':
+                    variant_id = word_elem.get('id', '')
+                    word_text = word_elem.text or ''
+                    
+                    # Check if this word is part of a group variant
+                    parent = None
+                    for group in verse.findall('.//group'):
+                        if word_elem in group.findall('.//w'):
+                            parent = group
+                            break
+                    
+                    # Only add if not part of a group variant (will be handled separately)
+                    if parent is None or parent.get('variant') != 'yes':
+                        variant_positions.append({
+                            'position': word_position,
+                            'word': word_text,
+                            'variant_id': variant_id
+                        })
+            
+            # 2. Find group variants (multiple words with shared variant)
+            for group_elem in verse.findall('.//group'):
+                if group_elem.get('variant') == 'yes':
+                    variant_id = group_elem.get('id', '')
+                    group_words = []
+                    group_position = None
+                    
+                    # Find position of first word in group
+                    for idx, word_elem in enumerate(all_words, 1):
+                        if word_elem in group_elem.findall('.//w'):
+                            if group_position is None:
+                                group_position = idx
+                            group_words.append(word_elem.text or '')
+                    
+                    if group_words and group_position:
+                        variant_positions.append({
+                            'position': group_position,
+                            'word': ' '.join(group_words),
+                            'variant_id': variant_id
+                        })
+            
+            # 3. Find note variants (structural differences like omissions)
+            for note_elem in verse.findall('.//note'):
+                if note_elem.get('variant') == 'yes':
+                    variant_id = note_elem.get('id', '')
+                    note_text = note_elem.text or 'note'
+                    
+                    # Use position 1 as default for structural notes
                     variant_positions.append({
-                        'position': i + 1,
-                        'word': word_text,
+                        'position': 1,
+                        'word': note_text,
                         'variant_id': variant_id
                     })
             

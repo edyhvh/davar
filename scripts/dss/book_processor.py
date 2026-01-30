@@ -13,7 +13,7 @@ if str(scripts_dir) not in sys.path:
     sys.path.insert(0, str(scripts_dir))
 
 from dss.xml_parsers import parse_dss_book, parse_wlc_book
-from dss.notes_parser import extract_masoretic_dss_words
+from dss.notes_parser import extract_masoretic_dss_words, is_fragment_to_fragment_difference
 from dss.config import DSS_DIR, WLC_DIR, BOOK_NAMES
 
 
@@ -94,7 +94,13 @@ class BookProcessor:
         differences = []
         for var in dss_verse['variants']:
             diff = self._process_variant(var, wlc_verse)
-            differences.append(diff)
+            # Only append if it passed the fragment-to-fragment filter
+            if diff is not None:
+                differences.append(diff)
+        
+        # Only add verse if it has valid differences
+        if not differences:
+            return
         
         # Add verse data
         book_structure['chapters'][str(chapter)]['verses'][str(verse)] = {
@@ -103,7 +109,7 @@ class BookProcessor:
             'differences': differences
         }
     
-    def _process_variant(self, var: Dict, wlc_verse: Dict) -> Dict:
+    def _process_variant(self, var: Dict, wlc_verse: Dict) -> Optional[Dict]:
         """Process a single variant and extract word differences."""
         # Try to get note data if available
         note_data = None
@@ -112,6 +118,11 @@ class BookProcessor:
             note_data = self.notes.get(var['variant_id'])
             if note_data:
                 commentary = note_data['commentary']
+        
+        # FILTER: Only include fragment-to-fragment differences
+        # (those mentioning 2+ different DSS manuscripts)
+        if not is_fragment_to_fragment_difference(commentary):
+            return None
         
         # Extract Masoretic and DSS words from commentary
         masoretic_word, dss_word = extract_masoretic_dss_words(

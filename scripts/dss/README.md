@@ -2,6 +2,27 @@
 
 Professional modular parser for Dead Sea Scrolls differences extraction.
 
+## What It Extracts
+
+This parser extracts **meaningful textual variations** - substantive differences in Dead Sea Scrolls that provide scholarly insight.
+
+**Included:**
+- Fragment-to-fragment differences (2+ DSS manuscripts mentioned): ✅
+  - "4QSamc: for a decision. 4QSama reads אל המשפט..." 
+- Scholarly single-DSS notes with substantive content: ✅
+  - "4QSama moves directly from verse 3 to verse 6, completely omitting verses 4-5..."
+  - "4QIsab reads different word meaning..."
+- Word substitutions, omissions, additions, semantic differences: ✅
+
+**Excluded:**
+- Automatic spelling differences (plene/defective): ❌
+  - "1QIsaa: plene spelling. Masoretic defective..."
+- Simple orthographic variations: ❌
+- Vowel-pointing differences: ❌
+- Paragogic nun variations: ❌
+
+This provides clean, scholarly-reviewed textual variants without noise from automatic orthographic comparisons.
+
 ## Structure
 
 ```
