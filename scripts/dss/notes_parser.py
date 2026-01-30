@@ -8,6 +8,97 @@ import xml.etree.ElementTree as ET
 from typing import Dict, Optional, Tuple
 
 
+def is_fragment_to_fragment_difference(commentary: str) -> bool:
+    """
+    Determine if commentary describes a meaningful textual difference
+    (not just automatic spelling/orthographic variations).
+    
+    INCLUDES:
+    - Fragment-to-fragment (2+ DSS manuscripts)
+    - Scholarly single-DSS notes (omissions, word changes, semantic differences)
+    
+    EXCLUDES:
+    - Automatic spelling differences (plene/defective)
+    - Simple orthographic variations
+    - Vowel-pointing differences
+    
+    Args:
+        commentary: The commentary text
+        
+    Returns:
+        True if commentary describes a meaningful difference
+    """
+    if not commentary:
+        return False
+    
+    # First check: Is this an automatic spelling difference? → EXCLUDE
+    spelling_exclude_patterns = [
+        r'\bplene\s+spelling\b',
+        r'\bdefective\s+spelling\b',
+        r'\balternative\s+spelling\b',
+        r'\borthographic(?:\s+alternative)?\b',
+        r'\bparagogic\s+nun\b',
+        r'\bvowel\s*point(?:ing|ed)?\b',
+        r'\bpronoun-(?:medial|final)\s+spelling\b',
+        r'\bMasoretes?\s+(?:vowel\s+)?point',
+        r'\b(?:just|only|merely)\s+(?:a\s+)?spelling',
+        r'\bvar(?:iant)?\.\s+spelling\b',
+    ]
+    
+    for pattern in spelling_exclude_patterns:
+        if re.search(pattern, commentary, re.IGNORECASE):
+            # Double-check: substantive changes override spelling exclusion
+            substantive_overrides = [
+                r'\b(?:omit|add|include)s?\b',
+                r'\bchange\s+of\s+(?:tense|subject|meaning)\b',
+                r'\bdifferent\s+(?:word|verb|noun|preposition)',
+            ]
+            
+            has_override = any(re.search(p, commentary, re.IGNORECASE) 
+                             for p in substantive_overrides)
+            
+            if not has_override:
+                return False  # Pure spelling difference
+    
+    # Second check: Does this have substantive content? → INCLUDE
+    substantive_include_patterns = [
+        r'\b(?:omit|add|include|repeat)s?\b',
+        r'\b(?:LXX|SP|Samaritan)',
+        r'\bchange\s+of\s+(?:tense|subject|meaning)',
+        r'\b(?:homoeoteleuton|parablepsis)',
+        r'\breads?\s+\w+\s+meaning\s+(?!the\s+same)',
+        r'\bdifferent\s+(?:word|verb|noun|form)',
+        r'\bscribal\s+(?:mistake|error)(?!.*spelling)',
+        r'\bcorruption\b',
+        r'\bgenuine\s+reading\b',
+        r'\boriginal\s+reading\b',
+        r'\bno\s+change\s+of\s+meaning\s+to\s+the\s+(?:text|verse)',  # Scholarly phrase
+    ]
+    
+    for pattern in substantive_include_patterns:
+        if re.search(pattern, commentary, re.IGNORECASE):
+            return True  # Substantive difference
+    
+    # Third check: Pattern to match DSS scroll sigla
+    dss_pattern = r'\b([1-9]Q[A-Za-z]+[a-z]?|Mur[A-Z]+[a-z]?|pap\w+)\b'
+    dss_refs = set(re.findall(dss_pattern, commentary, re.IGNORECASE))
+    
+    # If 2+ DSS manuscripts mentioned → fragment-to-fragment difference
+    if len(dss_refs) >= 2:
+        return True
+    
+    # If only 1 DSS but has longer, detailed commentary (not just spelling) → INCLUDE
+    if len(dss_refs) == 1 and len(commentary) > 100:
+        # Longer commentary usually indicates scholarly analysis
+        # But exclude if it's primarily about spelling
+        spelling_ratio = sum(1 for p in spelling_exclude_patterns 
+                           if re.search(p, commentary, re.IGNORECASE))
+        if spelling_ratio == 0:
+            return True
+    
+    return False
+
+
 def parse_notes_file(notes_file) -> Dict[str, Dict]:
     """
     Parse the DSS notes file to extract variant commentaries with Hebrew words.

@@ -3,6 +3,24 @@
   "chapters": {
     "2": {
       "verses": {
+        "6": {
+          "masoretic_text": "הֲלוֹא־ אֵ֣לֶּה כֻלָּ֗ם עָלָיו֙ מָשָׁ֣ל יִשָּׂ֔אוּ וּמְלִיצָ֖ה חִיד֣וֹת ל֑וֹ וְיֹאמַ֗ר ה֚וֹי הַמַּרְבֶּ֣ה לֹּא־ ל֔וֹ עַד־ מָתַ֕י וּמַכְבִּ֥יד עָלָ֖יו עַבְטִֽיט׃",
+          "dss_text": "הלוא אלה כלם עליו משל ישאו ומליצה חידות לו ויאמר הוי המרבה לא לו עד מתי ומכביד עליו עבי טיט",
+          "differences": [
+            {
+              "position": 15,
+              "masoretic_word": "עַד־",
+              "dss_word": "עד מתי",
+              "commentary": "MurXII, LXX, Mas: For How long? 8HevXIIgr omits."
+            },
+            {
+              "position": 19,
+              "masoretic_word": "עבטיט",
+              "dss_word": "עבי טיט",
+              "commentary": "Hebrew reconstruction from 8HevXIIgr: παχος πηλου - thick mud. The text is not extant in MurXII. Masoretic reads עבטיט meaning pledges; and LXX reads στιβαρως meaning heavily."
+            }
+          ]
+        },
         "8": {
           "masoretic_text": "כִּֽי אַתָּ֤ה שַׁלּ֙וֹתָ֙ גּוֹיִ֣ם רַבִּ֔ים יְשָׁלּ֖וּךָ כָּל־ יֶ֣תֶר עַמִּ֑ים מִדְּמֵ֤י אָדָם֙ וַחֲמַס־ אֶ֔רֶץ קִרְיָ֖ה וְכָל־ יֹ֥שְׁבֵי בָֽהּ׃",
           "dss_text": "כי אתה שלות גוים רבים וישלוך כל יתר עמים מדמי אדם וחמס ארץ קריה וכל ישבי בה",
@@ -40,6 +58,24 @@
               "masoretic_word": "תְּבַקַּע־",
               "dss_word": "תבקע",
               "commentary": "MurXII, Mas: you split. 8HevXIIgr and LXX read ραγησεται meaning he split."
+            },
+            {
+              "position": 1,
+              "masoretic_word": "עריה תעור",
+              "dss_word": "ערוה תעור",
+              "commentary": "Hebrew reconstruction from 8HevXIIgr: εξεγειρων εξεγερεις - You completely awakened your bow. The Masoretic reads עריה תעור, with a possible misreading of the Vav in ערוה as a Yod (י). LXX reads εντεινων ενετεινας τοξον σου meaning You completely stretched forth your bow."
+            }
+          ]
+        },
+        "10": {
+          "masoretic_text": "רָא֤וּךָ יָחִ֙ילוּ֙ הָרִ֔ים זֶ֥רֶם מַ֖יִם עָבָ֑ר נָתַ֤ן תְּהוֹם֙ קוֹל֔וֹ ר֖וֹם יָדֵ֥יהוּ נָשָֽׂא׃",
+          "dss_text": "ראוך יחילו הרים זרמו מים עבות נתן תהום קולו רום ידיהו נשא",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "זרם מים עבר",
+              "dss_word": "זרמו מים עבות",
+              "commentary": "MurXII: the clouds poured out water. Masoretic reads זרם מים עבר (which is also the reading of 8HevXIIgr: εντιναγμα υδατα παρηλθεν) meaning a torrent of waters passed by. LXX reads σκορπιζων υδατα πορειας meaning scattering moving waters."
             }
           ]
         },

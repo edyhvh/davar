@@ -8,22 +8,10 @@
           "dss_text": "השבעתי אתכמה בנות ירושלם בצבאות או באילות השדה אם תעירו ואם תעוררו את האהבה עד שתחפץ",
           "differences": [
             {
-              "position": 2,
-              "masoretic_word": "אתכם",
-              "dss_word": "אתכמה",
-              "commentary": "4QCantb: you (plene spelling). 4QCanta and Masoretic have the defective spelling אתכם."
-            }
-          ]
-        },
-        "10": {
-          "masoretic_text": "עַמּוּדָיו֙ עָ֣שָׂה כֶ֔סֶף רְפִידָת֣וֹ זָהָ֔ב מֶרְכָּב֖וֹ אַרְגָּמָ֑ן תּוֹכוֹ֙ רָצ֣וּף אַהֲבָ֔ה מִבְּנ֖וֹת יְרוּשָׁלָֽ͏ִם׃",
-          "dss_text": "עמודיו עשה כסף רפידתו זהב מרכבו ארגמן תוכו רצוף אהבה מבנות ירושלים",
-          "differences": [
-            {
-              "position": 12,
-              "masoretic_word": "ירושלם",
-              "dss_word": "ירושלים",
-              "commentary": "4QCantb: Jerusalem (plene spelling). 4QCanta and Masoretic have the defective spelling ירושלם."
+              "position": 1,
+              "masoretic_word": "הִשְׁבַּ֨עְתִּי",
+              "dss_word": "note",
+              "commentary": "The manuscript known as 4QCantb actually completely omits 3:6-8, going straight from 3:5 to 3:9. Both 4QCanta and 4QCantc contain verses 7 - 8. Why 4QCantb omits these three verses is up for debate, although seeing as 6-8 describes a dramatic arrival of King Solomon, they may’ve been omitted, being deemed as unnecessary for this book regarding love."
             }
           ]
         }
@@ -31,15 +19,27 @@
     },
     "4": {
       "verses": {
+        "1": {
+          "masoretic_text": "הִנָּ֨ךְ יָפָ֤ה רַעְיָתִי֙ הִנָּ֣ךְ יָפָ֔ה עֵינַ֣יִךְ יוֹנִ֔ים מִבַּ֖עַד לְצַמָּתֵ֑ךְ שַׂעְרֵךְ֙ כְּעֵ֣דֶר הָֽעִזִּ֔ים שֶׁגָּלְשׁ֖וּ מֵהַ֥ר גִּלְעָֽד׃",
+          "dss_text": "הנך יפה רעיתי הנך יפה עיניך יונים מבעד לצמתך שערך כעדר העזים שגלשות מהר גלעד",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "שַׂעְרֵךְ֙",
+              "dss_word": "שערך כעדר העזים",
+              "commentary": "4QCantb, Mas, LXX: your hair is like a herd of goats. 4QCanta alters the word order a bit - כעדר העזים שערך - to give like a herd of goats is your hair. There is no change of meaning."
+            }
+          ]
+        },
         "2": {
           "masoretic_text": "שִׁנַּ֙יִךְ֙ כְּעֵ֣דֶר הַקְּצוּב֔וֹת שֶׁעָל֖וּ מִן־ הָרַחְצָ֑ה שֶׁכֻּלָּם֙ מַתְאִימ֔וֹת וְשַׁכֻּלָ֖ה אֵ֥ין בָּהֶֽם׃",
           "dss_text": "שניך כעדר הקצובות עלו מן הרחצה שכלם מתאימות ושכלה אין בהם",
           "differences": [
             {
-              "position": 8,
-              "masoretic_word": "מַתְאִימ֔וֹת",
-              "dss_word": "מתאימות",
-              "commentary": "4QCanta, Mas: bearing twins (plene spelling). 4QCantb has either a defective or alternate spelling מתאמות."
+              "position": 1,
+              "masoretic_word": "שִׁנַּ֙יִךְ֙",
+              "dss_word": "שניך כעדר הקצובות",
+              "commentary": "4QCantb, Mas, LXX: Your teeth are like a herd of shorn ewes. As above, 4QCanta alters the word order a bit - כעדר הקצובות שניך - to give like a herd of shorn ewes are your teeth. There is no change of meaning."
             }
           ]
         },
@@ -58,6 +58,34 @@
               "masoretic_word": "מבעד",
               "dss_word": "ומבעד",
               "commentary": "4QCantb: and from behind. 4QCanta, Masoretic and LXX read מבעד (εκτος LXX) meaning from behind. No change of meaning to the text."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "כֻּלָּ֤ךְ יָפָה֙ רַעְיָתִ֔י וּמ֖וּם אֵ֥ין בָּֽךְ׃",
+          "dss_text": "כלך יפה רעיתי ומום אין בך",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "כֻּלָּ֤ךְ",
+              "dss_word": "note",
+              "commentary": "4QCantb completely omits 4:4-7; 4QCanta includes them."
+            }
+          ]
+        }
+      }
+    },
+    "6": {
+      "verses": {
+        "11": {
+          "masoretic_text": "אֶל־ גִּנַּ֤ת אֱגוֹז֙ יָרַ֔דְתִּי לִרְא֖וֹת בְּאִבֵּ֣י הַנָּ֑חַל לִרְאוֹת֙ הֲפָֽרְחָ֣ה הַגֶּ֔פֶן הֵנֵ֖צוּ הָרִמֹּנִֽים׃",
+          "dss_text": "אל גנת אגוז ירדתי לראות באבי הנחל לראות אם פרחה הגפן הנצו הרמנים",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "אֶל־",
+              "dss_word": "note",
+              "commentary": "4QCanta not only completely omits 6:1-10, but actually omits everything from 4:8 to 6:11, going straight from 4:7 to 6:11. Either the manuscript moved the verses to a different place (unfortunately 4QCanta doesn’t have any verses extant after 7:7), or they were deliberately removed and not written down. Due to the overtly erotic nature of Song of Songs, it appears to have always been a controversial book, with Judaism interpretating it as an allegory of God’s relationship with Israel, and Christianity interpretating it as an allegory of God’s relationship with the Church. For the Qumran Sect, they too may’ve been a bit cautious of the books erotic nature, and so chose to omit the more sexual verses."
             }
           ]
         }
