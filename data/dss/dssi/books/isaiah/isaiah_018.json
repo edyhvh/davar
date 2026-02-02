@@ -1,0 +1,202 @@
+{
+  "name": "Isaiah",
+  "file_number": 18,
+  "total_files": 40,
+  "difference_count": 19,
+  "chapters": {
+    "43": {
+      "verses": {
+        "6": {
+          "masoretic_text": "אֹמַ֤ר לַצָּפוֹן֙ תֵּ֔נִי וּלְתֵימָ֖ן אַל־ תִּכְלָ֑אִי הָבִ֤יאִי בָנַי֙ מֵרָח֔וֹק וּבְנוֹתַ֖י מִקְצֵ֥ה הָאָֽרֶץ׃",
+          "dss_text": "אומר לצפון תני ולתימן אל תכלאי הביאי בני מרחוק ובנותי מקצוי הארץ",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "בָנַי֙",
+              "dss_word": "בני",
+              "commentary": "1QIsaa, Mas, LXX: My sons. 1QIsab has בניך meaning and your sons. In this case, it would be a case of the reference being the sons of the north and south, rather than the sons of Yahweh."
+            },
+            {
+              "position": 10,
+              "masoretic_word": "וּבְנוֹתַ֖י",
+              "dss_word": "ובנותי",
+              "commentary": "1QIsaa, Mas, LXX: and My daughters. 1QIsab has ובנתיך meaning and your daughters. In this case, it would be a case of the reference being the daughters of the north and south, rather than the daughters of Yahweh."
+            },
+            {
+              "position": 11,
+              "masoretic_word": "מקצה",
+              "dss_word": "מקצוי",
+              "commentary": "1QIsaa: end. 1QIsab and Masoretic have a different form מקצה. No change of meaning."
+            }
+          ]
+        },
+        "8": {
+          "masoretic_text": "הוֹצִ֥יא עַם־ עִוֵּ֖ר וְעֵינַ֣יִם יֵ֑שׁ וְחֵרְשִׁ֖ים וְאָזְנַ֥יִם לָֽמוֹ׃",
+          "dss_text": "הוציאו עם עואר ועינים יש וחרשים ואוזנים למו",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "הוציא",
+              "dss_word": "אוציא",
+              "commentary": "1QIsaa, LXX: All of you bring out. 1QIsab reads אוציא meaning I bring out. Masoretic reads הוציא meaning He brings out."
+            },
+            {
+              "position": 4,
+              "masoretic_word": "וְעֵינַ֣יִם",
+              "dss_word": "ועינים",
+              "commentary": "1QIsab, Mas, LXX: and eyes. 1QIsaa reads עינים meaning eyes."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "כָּֽל־ הַגּוֹיִ֞ם נִקְבְּצ֣וּ יַחְדָּ֗ו וְיֵאָֽסְפוּ֙ לְאֻמִּ֔ים מִ֤י בָהֶם֙ יַגִּ֣יד זֹ֔את וְרִֽאשֹׁנ֖וֹת יַשְׁמִיעֻ֑נוּ יִתְּנ֤וּ עֵֽדֵיהֶם֙ וְיִצְדָּ֔קוּ וְיִשְׁמְע֖וּ וְיֹאמְר֥וּ אֱמֶֽת׃",
+          "dss_text": "כול הגואים נקבצו יחדיו ויאספו לאומים מי בהמה ויגידו זואת ורישונות ישמיעו יתנו עדיהמה ויצדקו וישמעו ויואמרו אמת",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "יגיד",
+              "dss_word": "יגידו",
+              "commentary": "1QIsaa: that shall announce (plural). 1QIsab reads יגידו meaning they shall announce, plural spelling. Masoretic reads יגיד meaning he shall announce, singular spelling, a reading supported by the LXX: αναγγελει."
+            },
+            {
+              "position": 16,
+              "masoretic_word": "וְיִשְׁמְע֖וּ",
+              "dss_word": "וישמעו",
+              "commentary": "1QIsab, Mas, LXX: and let them hear. 1QIsaa reads וישמיעו meaning and let them proclaim."
+            }
+          ]
+        },
+        "10": {
+          "masoretic_text": "אַתֶּ֤ם עֵדַי֙ נְאֻם־ יְהוָ֔ה וְעַבְדִּ֖י אֲשֶׁ֣ר בָּחָ֑רְתִּי לְמַ֣עַן תֵּ֠דְעוּ וְתַאֲמִ֨ינוּ לִ֤י וְתָבִ֙ינוּ֙ כִּֽי־ אֲנִ֣י ה֔וּא לְפָנַי֙ לֹא־ נ֣וֹצַר אֵ֔ל וְאַחֲרַ֖י לֹ֥א יִהְיֶֽה׃",
+          "dss_text": "אתמה עדי נואם יהוה עבדי אשר בחרתי למען תדעו ותאמינו ליא ותבינו כיא אני הואה לפני לוא נוצר אל ואחרי לוא היה",
+          "differences": [
+            {
+              "position": 20,
+              "masoretic_word": "וְאַחֲרַ֖י",
+              "dss_word": "ואחרי",
+              "commentary": "1QIsaa, Mas, LXX: and after Me. 1QIsab reads ואחריו meaning and after Him."
+            },
+            {
+              "position": 22,
+              "masoretic_word": "יהיה",
+              "dss_word": "היה",
+              "commentary": "1QIsaa: shall exist (perfect). 1QIsab and Masoretic have the imperfect form יהיה."
+            }
+          ]
+        },
+        "12": {
+          "masoretic_text": "אָנֹכִ֞י הִגַּ֤דְתִּי וְהוֹשַׁ֙עְתִּי֙ וְהִשְׁמַ֔עְתִּי וְאֵ֥ין בָּכֶ֖ם זָ֑ר וְאַתֶּ֥ם עֵדַ֛י נְאֻם־ יְהוָ֖ה וַֽאֲנִי־ אֵֽל׃",
+          "dss_text": "אנוכי הגדתי והושעתי השמעתי ואין בכמה זר ואתמה עדי נואם יהוה אני אל",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "והשמעתי",
+              "dss_word": "השמעתי",
+              "commentary": "1QIsab, LXX: I proclaimed. 1QIsaa and Masoretic read והשמעתי meaning and I proclaimed."
+            }
+          ]
+        },
+        "14": {
+          "masoretic_text": "כֹּֽה־ אָמַ֧ר יְהוָ֛ה גֹּאַלְכֶ֖ם קְד֣וֹשׁ יִשְׂרָאֵ֑ל לְמַעַנְכֶ֞ם שִׁלַּ֣חְתִּי בָבֶ֗לָה וְהוֹרַדְתִּ֤י בָֽרִיחִים֙ כֻּלָּ֔ם וְכַשְׂדִּ֖ים בָּאֳנִיּ֥וֹת רִנָּתָֽם׃",
+          "dss_text": "כוה אמר יהוה גואלכמה קדוש ישראל למענכמה שלחתי בבל והורדתי בריחים כולם וכשדיים באוניות רנתמה",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "בבלה",
+              "dss_word": "בבבל",
+              "commentary": "4QIsab, LXX: Babylon. 1QIsaa misspells as בבבל. Masoretic reads בבלה which whilst meaning Babylon, has a locative ה- suffixed."
+            }
+          ]
+        },
+        "21": {
+          "masoretic_text": "עַם־ זוּ֙ יָצַ֣רְתִּי לִ֔י תְּהִלָּתִ֖י יְסַפֵּֽרוּ׃",
+          "dss_text": "עם זה יצרתי לי תהלתי יספרו",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "תְּהִלָּתִ֖י",
+              "dss_word": "תהלתי",
+              "commentary": "4QIsag, Mas, LXX: My praise. 1QIsaa reads ותהלתי meaning and My praise."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "יְסַפֵּֽרוּ׃",
+              "dss_word": "יספרו",
+              "commentary": "4QIsag, Mas, LXX: they shall recount. 1QIsaa reads יואמרו meaning they shall speak."
+            }
+          ]
+        },
+        "23": {
+          "masoretic_text": "לֹֽא־ הֵבֵ֤יאתָ לִּי֙ שֵׂ֣ה עֹלֹתֶ֔יךָ וּזְבָחֶ֖יךָ לֹ֣א כִבַּדְתָּ֑נִי לֹ֤א הֶעֱבַדְתִּ֙יךָ֙ בְּמִנְחָ֔ה וְלֹ֥א הוֹגַעְתִּ֖יךָ בִּלְבוֹנָֽה׃",
+          "dss_text": "לוא הביאותה לי שה עולותיך ובזבחיכה לוא כבדתני ולוא עשיתה ליא מנחה ולוא הוגעתיכה בלבונה",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "לא העבדתיך במנחה",
+              "dss_word": "ולוא עשיתה ליא מנחה",
+              "commentary": "1QIsaa: and you have not made offerings for me. 4QIsag and Masoretic read לא העבדתיך במנחה meaning I have not made you serve with offerings. LXX omits entire phrase, possibly by parablepsis. However the divergent readings here hint that the phrase may’ve been an addition to Isaiah that wasn’t originally in the text, with the LXX providing the original form."
+            }
+          ]
+        },
+        "25": {
+          "masoretic_text": "אָנֹכִ֨י אָנֹכִ֥י ה֛וּא מֹחֶ֥ה פְשָׁעֶ֖יךָ לְמַעֲנִ֑י וְחַטֹּאתֶ֖יךָ לֹ֥א אֶזְכֹּֽר׃",
+          "dss_text": "אנוכי אנוכי הואה מוחה פשעכה למעני וחטאתיכה לוא אזכור ",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "עוד",
+              "dss_word": "",
+              "commentary": "1QIsab, Mas, LXX: omit. 1QIsaa includes עוד meaning no longer."
+            }
+          ]
+        },
+        "26": {
+          "masoretic_text": "הַזְכִּירֵ֕נִי נִשָּׁפְטָ֖ה יָ֑חַד סַפֵּ֥ר אַתָּ֖ה לְמַ֥עַן תִּצְדָּֽק׃",
+          "dss_text": "הזכירוני נשפטה יחדיו ספר אתה למען תצדק",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "הזכירני",
+              "dss_word": "הזכירוני",
+              "commentary": "1QIsaa: all of you take me to court (plural spelling). 1QIsab and Masoretic have the singular spelling הזכירני."
+            }
+          ]
+        }
+      }
+    },
+    "44": {
+      "verses": {
+        "7": {
+          "masoretic_text": "וּמִֽי־ כָמ֣וֹנִי יִקְרָ֗א וְיַגִּידֶ֤הָ וְיַעְרְכֶ֙הָ֙ לִ֔י מִשּׂוּמִ֖י עַם־ עוֹלָ֑ם וְאֹתִיּ֛וֹת וַאֲשֶׁ֥ר תָּבֹ֖אנָה יַגִּ֥ידוּ לָֽמוֹ׃",
+          "dss_text": "ומיא כמוני יקרא ויגידה ויעריכהה לוא משומי עם עולם ואותיות יואמר אשר תבואינה יגידו למו",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "וַאֲשֶׁ֥ר",
+              "dss_word": "יואמר",
+              "commentary": "1QIsaa: let them speak. 4QIsac and Masoretic omit."
+            },
+            {
+              "position": 12,
+              "masoretic_word": "ואשר",
+              "dss_word": "אשר",
+              "commentary": "1QIsaa: what. 4QIsac and Masoretic read ואשר meaning and what."
+            }
+          ]
+        },
+        "19": {
+          "masoretic_text": "וְלֹא־ יָשִׁ֣יב אֶל־ לִבּ֗וֹ וְלֹ֨א דַ֥עַת וְלֹֽא־ תְבוּנָה֮ לֵאמֹר֒ חֶצְי֞וֹ שָׂרַ֣פְתִּי בְמוֹ־ אֵ֗שׁ וְ֠אַף אָפִ֤יתִי עַל־ גֶּחָלָיו֙ לֶ֔חֶם אֶצְלֶ֥ה בָשָׂ֖ר וְאֹכֵ֑ל וְיִתְרוֹ֙ לְתוֹעֵבָ֣ה אֶעֱשֶׂ֔ה לְב֥וּל עֵ֖ץ אֶסְגּֽוֹד׃",
+          "dss_text": "ולוא ישיב אל לבו ולוא דעת ולוא תבונה לאמור לאמור חציו שרפתי במו אש ואף אפיתי על גחליו לחם ואצלה בשר ואוכלה ויתרו לתועבה אעשה לבלוי עץ אסגוד",
+          "differences": [
+            {
+              "position": 23,
+              "masoretic_word": "לְתוֹעֵבָ֣ה",
+              "dss_word": "ויתרו",
+              "commentary": "1QIsaa, Mas, LXX: and the rest. 4QIsab reads יתרו meaning the rest."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

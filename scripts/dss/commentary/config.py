@@ -1,7 +1,7 @@
 """
 Configuration for DSS Commentary Enhancement.
 
-Uses Claude API (Anthropic) for commentary generation.
+Uses Grok API (xAI) for commentary generation.
 """
 
 import os
@@ -19,39 +19,39 @@ except (PermissionError, IOError) as e:
     import warnings
     warnings.warn(f"Could not load .env file: {e}. Using environment variables if available.")
 
-# Claude API Configuration
-ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY')
-CLAUDE_MODEL = 'claude-haiku-4-5-20251001'  # Fast, intelligent, cost-effective
-CLAUDE_API_VERSION = '2023-06-01'
-CLAUDE_TIMEOUT = 120  # 2 minutes - Claude Haiku should respond within this time
+# Grok API Configuration (xAI)
+XAI_API_KEY = os.getenv('XAI_API_KEY')
+GROK_MODEL = 'grok-4-1-fast-non-reasoning'  # Fast, cost-effective: $0.20/1M input, $0.50/1M output
+GROK_TIMEOUT = 3600  # 1 hour timeout for longer batches
 
 # Paths
 DSSI_DIR = PROJECT_ROOT / 'data' / 'dss' / 'dssi' / 'books'
 METADATA_FILE = PROJECT_ROOT / 'data' / 'dss' / 'dssi' / 'metadata.json'
 
 # Batch settings
-# Note: Each difference generates ~400 tokens (Strong's + 3 commentaries)
-# With 8K token limit, safe batch size is ~15 items to avoid truncation
-MAX_BATCH_SIZE = 15  # Reduced for reliability
-DEFAULT_BATCH_SIZE = 15
+# Note: Grok 4.1 Fast has 2M context window but response limits require smaller batches
+# Each difference generates ~300 tokens input + ~400 tokens output (Strong's + 3 commentaries)
+# Conservative batch size ensures complete JSON responses without truncation
+MAX_BATCH_SIZE = 50  # Conservative size to avoid response truncation
+DEFAULT_BATCH_SIZE = 50
 
 # Rate limiting and retry
 MAX_RETRIES = 3
 RETRY_BACKOFF_BASE = 2.0
-RATE_LIMIT_DELAY = 0.5  # seconds between calls
+RATE_LIMIT_DELAY = 1.0  # seconds between calls (Grok has generous limits)
 
 # Commentary version
-COMMENTARY_VERSION = "v2_claude_2026"
+COMMENTARY_VERSION = "v2_grok_2026"
 
 # Temperature for generation
 TEMPERATURE = 0.3  # Consistent, reproducible
 
 
-def validate_anthropic_api_key() -> bool:
+def validate_grok_api_key() -> bool:
     """
-    Validate that the Anthropic API key is set.
+    Validate that the xAI API key is set.
     
     Returns:
         True if API key is set, False otherwise
     """
-    return ANTHROPIC_API_KEY is not None and len(ANTHROPIC_API_KEY.strip()) > 0
+    return XAI_API_KEY is not None and len(XAI_API_KEY.strip()) > 0

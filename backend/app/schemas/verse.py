@@ -22,10 +22,17 @@ class WordResponse(BaseModel):
 
 class DssVariant(BaseModel):
     """Response model for DSS manuscript variants"""
-    word_position: int
-    dss_text: str
-    manuscript: str
-    commentary: Optional[str] = None
+    book: str
+    chapter: int
+    verse: int
+    position: int
+    dss_word: str
+    masoretic_word: str
+    comment_v2_en: Optional[str] = None
+    comment_v2_es: Optional[str] = None
+    comment_v2_he: Optional[str] = None
+    masoretic_strong: Optional[str] = None
+    dss_strong: Optional[str] = None
 
 
 class TranslationFootnote(BaseModel):

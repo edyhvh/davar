@@ -12,10 +12,14 @@ export interface WordResponse {
 }
 
 export interface DssVariant {
-  word_position: number;
-  dss_text: string;
-  manuscript: string;
-  commentary?: string;
+  position: number;
+  dss_word: string;
+  masoretic_word: string;
+  comment_v2_en?: string;
+  comment_v2_es?: string;
+  comment_v2_he?: string;
+  masoretic_strong?: string;
+  dss_strong?: string;
 }
 
 export interface TranslationFootnote {

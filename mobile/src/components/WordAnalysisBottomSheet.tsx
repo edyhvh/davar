@@ -45,13 +45,18 @@ type WordAnalysisBottomSheetProps = {
         strong?: string;
         translit_en?: string;
         translit_es?: string;
+        dssWord?: string;
+        dssStrong?: string;
+        dssCommentaryEn?: string;
+        dssCommentaryEs?: string;
+        dssCommentaryHe?: string;
       })
     | null;
   // Called after the sheet has fully closed and any exit animations have completed
   onClosed?: () => void;
 };
 
-type TabType = "meanings" | "instances";
+type TabType = "masoretic" | "qumran" | "instances";
 
 const createStyles = (
   colors: ReturnType<typeof getColors>,
@@ -68,6 +73,13 @@ const createStyles = (
       borderTopLeftRadius: radii.xl,
       borderTopRightRadius: radii.xl,
     },
+    sheetBackgroundDss: {
+      backgroundColor: colors.surface,
+      borderTopLeftRadius: radii.xl,
+      borderTopRightRadius: radii.xl,
+      borderWidth: 1,
+      borderColor: `${colors.accentCopper}66`,
+    },
     sheetHandle: {
       backgroundColor: colors.border,
     },
@@ -82,6 +94,9 @@ const createStyles = (
       textAlign: "center",
       writingDirection: "rtl",
       lineHeight: 72 * hebrewScale,
+    },
+    hebrewQumran: {
+      fontFamily: typography.families.hebrewQumran,
     },
     transliteration: {
       fontFamily: typography.families.latinUI,
@@ -182,6 +197,13 @@ const createStyles = (
       color: colors.textPrimary,
       textAlign: "center",
       marginTop: spacing[2],
+    },
+    commentaryText: {
+      fontFamily: typography.families.latinMeaning,
+      fontSize: typography.sizes.body,
+      color: colors.textPrimary,
+      textAlign: "center",
+      lineHeight: 22,
     },
     instancesContainer: {
       flexDirection: "row",
@@ -370,11 +392,14 @@ export const WordAnalysisBottomSheet = ({
     () => createStyles(colors, hebrewFontScale),
     [colors, hebrewFontScale],
   );
-  const [activeTab, setActiveTab] = useState<TabType>("meanings");
+  const [activeTab, setActiveTab] = useState<TabType>("masoretic");
   const [lexiconEntry, setLexiconEntry] = useState<LexiconResponse | null>(
     null,
   );
   const [isLoading, setIsLoading] = useState(false);
+  const [dssLexiconEntry, setDssLexiconEntry] =
+    useState<LexiconResponse | null>(null);
+  const [isDssLoading, setIsDssLoading] = useState(false);
   const [showAllInstances, setShowAllInstances] = useState(false);
   const [prefixEntries, setPrefixEntries] = useState<
     Record<string, PrefixResponse | null>
@@ -382,6 +407,13 @@ export const WordAnalysisBottomSheet = ({
   const showNikud = useAppStore((state: AppState) => state.showNikud);
   const showCantillation = useAppStore(
     (state: AppState) => state.showCantillation,
+  );
+  const hasDssVariant = Boolean(
+    word?.dssWord ||
+      word?.dssStrong ||
+      word?.dssCommentaryEn ||
+      word?.dssCommentaryEs ||
+      word?.dssCommentaryHe,
   );
   // Keep in sync with web/src/app/App.tsx transliteration selection logic.
   const wordTransliteration =
@@ -398,8 +430,19 @@ export const WordAnalysisBottomSheet = ({
     return strongPart ?? null;
   }, [word?.strong]);
 
+  const dssStrongNumber = useMemo(() => {
+    if (!word?.dssStrong) return null;
+    const parts = word.dssStrong.split("/").map((part) => part.trim());
+    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
+    return strongPart ?? null;
+  }, [word?.dssStrong]);
+
   const displayHebrew = useMemo(() => {
-    let base = word?.text ?? lexiconEntry?.hebrew ?? "—";
+    const baseWord =
+      activeTab === "qumran" && word?.dssWord
+        ? word.dssWord
+        : word?.text ?? lexiconEntry?.hebrew ?? "—";
+    let base = baseWord;
     if (!showNikud) {
       base = stripNikud(base);
     }
@@ -408,7 +451,14 @@ export const WordAnalysisBottomSheet = ({
     }
     base = stripMeteg(base);
     return normalizeHebrewDisplay(base).replace(/\//g, "");
-  }, [lexiconEntry?.hebrew, word?.text, showNikud, showCantillation]);
+  }, [
+    activeTab,
+    lexiconEntry?.hebrew,
+    word?.dssWord,
+    word?.text,
+    showNikud,
+    showCantillation,
+  ]);
 
   const prefixSegments = useMemo(() => {
     if (!word?.text || !word?.prefixes?.length) {
@@ -463,10 +513,55 @@ export const WordAnalysisBottomSheet = ({
   }, [strongNumber, language, word?.text]);
 
   useEffect(() => {
+    const loadDssLexicon = async () => {
+      if (!dssStrongNumber) {
+        setDssLexiconEntry(null);
+        return;
+      }
+      setIsDssLoading(true);
+      try {
+        const params = new URLSearchParams();
+        if (language !== "he") {
+          params.set("language", language);
+        }
+        if (word?.dssWord) {
+          params.set("hebrew", word.dssWord);
+        }
+        const query = params.toString();
+        const url = query
+          ? `/api/v1/lexicon/${dssStrongNumber}?${query}`
+          : `/api/v1/lexicon/${dssStrongNumber}`;
+        const entry = await apiRequest<LexiconResponse>(url);
+        setDssLexiconEntry(entry);
+        console.debug(
+          "WordAnalysisBottomSheet: dss lexicon loaded",
+          dssStrongNumber,
+          entry?.hebrew ?? entry?.root_strong ?? null,
+        );
+      } catch {
+        setDssLexiconEntry(null);
+        console.debug(
+          "WordAnalysisBottomSheet: dss lexicon fetch failed",
+          dssStrongNumber,
+        );
+      } finally {
+        setIsDssLoading(false);
+      }
+    };
+    loadDssLexicon();
+  }, [dssStrongNumber, language, word?.dssWord]);
+
+  useEffect(() => {
     // Reset to meanings tab when a new word is selected
-    setActiveTab("meanings");
+    setActiveTab("masoretic");
     setShowAllInstances(false);
-  }, [word?.strong]);
+  }, [word?.strong, word?.dssStrong]);
+
+  useEffect(() => {
+    if (!hasDssVariant && activeTab === "qumran") {
+      setActiveTab("masoretic");
+    }
+  }, [activeTab, hasDssVariant]);
 
   useEffect(() => {
     const loadPrefixes = async () => {
@@ -502,6 +597,7 @@ export const WordAnalysisBottomSheet = ({
   useEffect(() => {
     // Clear lexicon and prefix entries when the current verse changes to avoid showing stale data
     setLexiconEntry(null);
+    setDssLexiconEntry(null);
     setPrefixEntries({});
   }, [currentVerseId]);
 
@@ -577,6 +673,35 @@ export const WordAnalysisBottomSheet = ({
     return formatted.length ? formatted : ["—"];
   }, [lexiconEntry, word, language]);
 
+  const dssMeaningsList = useMemo(() => {
+    const normalizeForDisplay = (t: string) =>
+      stripCantillation(stripNikud(t)).replace(/\//g, "").trim();
+
+    const formatMeaning = (text: string) => {
+      const cleaned = text.replace(/^[-–—]\s*/, "").trim();
+      if (!cleaned) return cleaned;
+      return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+    };
+
+    if (!dssLexiconEntry?.definitions?.length) {
+      return ["—"];
+    }
+
+    const rawMeanings = dssLexiconEntry.definitions
+      .map((item) => (item.text ? normalizeForDisplay(item.text) : ""))
+      .filter(Boolean);
+
+    const expanded = rawMeanings.flatMap((meaning) =>
+      meaning
+        .split(/[,;]\s*/)
+        .map((item) => item.trim())
+        .filter(Boolean),
+    );
+
+    const formatted = expanded.map((item) => formatMeaning(item));
+    return formatted.length ? formatted : ["—"];
+  }, [dssLexiconEntry]);
+
   const isDerivedRoot = Boolean(lexiconEntry?.root_strong || word?.root);
 
   const rootMeaningText = useMemo(() => {
@@ -592,13 +717,43 @@ export const WordAnalysisBottomSheet = ({
     return word.rootMeaning;
   }, [lexiconEntry, word, isDerivedRoot]);
 
+  const isDssDerivedRoot = Boolean(
+    dssLexiconEntry?.root_strong || dssLexiconEntry?.root,
+  );
+
+  const dssRootMeaningText = useMemo(() => {
+    if (!isDssDerivedRoot) return "ALREADY ROOT";
+    if (dssLexiconEntry?.root_definitions?.length) {
+      return (
+        dssLexiconEntry.root_definitions
+          .map((item) => item.text)
+          .join(", ") || "—"
+      );
+    }
+    return "—";
+  }, [dssLexiconEntry, isDssDerivedRoot]);
+
+  const dssCommentary = useMemo(() => {
+    if (!word) return undefined;
+    if (language === "es") {
+      return word.dssCommentaryEs ?? word.dssCommentaryEn ?? word.dssCommentaryHe;
+    }
+    if (language === "he") {
+      return word.dssCommentaryHe ?? word.dssCommentaryEn ?? word.dssCommentaryEs;
+    }
+    return word.dssCommentaryEn ?? word.dssCommentaryEs ?? word.dssCommentaryHe;
+  }, [language, word]);
+
+  const isQumranTab = hasDssVariant && activeTab === "qumran";
+  const activeStrongNumber = isQumranTab ? dssStrongNumber : strongNumber;
+
   return (
     <BottomSheet
       ref={sheetRef}
       index={-1}
       snapPoints={["50%", "80%"]}
       enablePanDownToClose
-      backgroundStyle={styles.sheetBackground}
+      backgroundStyle={hasDssVariant ? styles.sheetBackgroundDss : styles.sheetBackground}
       handleIndicatorStyle={styles.sheetHandle}
       onChange={handleSheetChanges}
       onClose={handleSheetClose}
@@ -617,35 +772,60 @@ export const WordAnalysisBottomSheet = ({
           <>
             {/* Header: Hebrew word + transliteration */}
             <View style={styles.headerSection}>
-              <Text style={styles.hebrew}>{displayHebrew}</Text>
+              <Text
+                style={[styles.hebrew, isQumranTab && styles.hebrewQumran]}
+              >
+                {displayHebrew}
+              </Text>
               {wordTransliteration ? (
                 <Text style={styles.transliteration}>
                   {wordTransliteration}
                 </Text>
               ) : null}
-              {lexiconEntry?.occurrences_count && (
+              {lexiconEntry?.occurrences_count && !isQumranTab && (
                 <Text style={styles.occurrencesText}>
                   Appears {lexiconEntry.occurrences_count} times
                 </Text>
               )}
+              {activeStrongNumber ? (
+                <Text style={styles.occurrencesText}>{activeStrongNumber}</Text>
+              ) : null}
             </View>
 
-            {/* Toggle: Meanings / Instances */}
+            {/* Toggle: Qumran / Masoretic / Instances */}
             <View style={styles.toggleContainer}>
+              {hasDssVariant ? (
+                <Pressable
+                  style={[
+                    styles.toggleButton,
+                    activeTab === "qumran" && styles.toggleButtonActive,
+                  ]}
+                  onPress={() => setActiveTab("qumran")}
+                >
+                  <Text
+                    style={[
+                      styles.toggleText,
+                      activeTab === "qumran" && styles.toggleTextActive,
+                    ]}
+                  >
+                    Qumran
+                  </Text>
+                </Pressable>
+              ) : null}
               <Pressable
                 style={[
                   styles.toggleButton,
-                  activeTab === "meanings" && styles.toggleButtonActive,
+                  activeTab === "masoretic" && styles.toggleButtonActive,
                 ]}
-                onPress={() => setActiveTab("meanings")}
+                onPress={() => setActiveTab("masoretic")}
               >
                 <Text
                   style={[
                     styles.toggleText,
-                    activeTab === "meanings" && styles.toggleTextActive,
+                    activeTab === "masoretic" && styles.toggleTextActive,
                   ]}
                 >
-                  Meanings
+                  {hasDssVariant ? "Masoretic" : "Meanings"}
                 </Text>
               </Pressable>
               <Pressable
@@ -667,7 +847,7 @@ export const WordAnalysisBottomSheet = ({
             </View>
 
             {/* Tab Content */}
-            {activeTab === "meanings" ? (
+            {activeTab === "masoretic" ? (
               <>
                 {/* Meanings section */}
                 <Text style={styles.sectionLabel}>Meanings</Text>
@@ -748,6 +928,46 @@ export const WordAnalysisBottomSheet = ({
                     })}
                   </View>
                 ) : null}
+              </>
+            ) : activeTab === "qumran" ? (
+              <>
+                <Text style={styles.sectionLabel}>Meanings</Text>
+                {isDssLoading ? (
+                  <Text style={styles.emptyText}>Loading definitions...</Text>
+                ) : null}
+                <View style={styles.meaningsList}>
+                  {dssMeaningsList.map((meaning, index) => (
+                    <Text key={`${meaning}-${index}`} style={styles.meaningsBullet}>
+                      • {meaning}
+                    </Text>
+                  ))}
+                </View>
+
+                <Text style={styles.sectionLabel}>Commentary</Text>
+                <Text style={styles.commentaryText}>
+                  {dssCommentary ?? "—"}
+                </Text>
+
+                <View style={styles.rootSection}>
+                  <Text style={styles.sectionLabel}>Root</Text>
+                  <Text style={styles.rootHebrew}>
+                    {(
+                      dssLexiconEntry?.root ??
+                      dssLexiconEntry?.hebrew ??
+                      displayHebrew
+                    ).replace(/\//g, "")}
+                  </Text>
+                  {dssLexiconEntry?.root_strong ? (
+                    <Text style={styles.rootTransliteration}>
+                      {dssLexiconEntry.root_strong}
+                    </Text>
+                  ) : null}
+                  <Text style={styles.rootMeaning}>
+                    {dssLexiconEntry?.root || dssLexiconEntry?.root_strong
+                      ? dssRootMeaningText
+                      : "ALREADY ROOT"}
+                  </Text>
+                </View>
               </>
             ) : (
               <>

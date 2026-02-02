@@ -204,6 +204,11 @@ export default function App() {
   const [selectedWordAnalysis, setSelectedWordAnalysis] =
     useState<WordAnalysis | null>(null);
   const [isWordAnalysisLoading, setIsWordAnalysisLoading] = useState(false);
+  const [selectedDssAnalysis, setSelectedDssAnalysis] =
+    useState<WordAnalysis | null>(null);
+  const [lastSelectedDssAnalysis, setLastSelectedDssAnalysis] =
+    useState<WordAnalysis | null>(null);
+  const [isDssAnalysisLoading, setIsDssAnalysisLoading] = useState(false);
   const lastUrlRef = useRef<string | null>(null);
   const pendingRouteRef = useRef<RouteState | null>(null);
   const isHandlingPopStateRef = useRef(false);
@@ -438,6 +443,14 @@ export default function App() {
     [chapterVerses, currentVerse],
   );
 
+  const selectedDssVariant = useMemo(
+    () =>
+      currentVerseData?.dss?.find(
+        (variant) => variant.position === selectedWord?.position,
+      ) ?? null,
+    [currentVerseData, selectedWord],
+  );
+
   const bookOptions = useMemo(
     () =>
       [...books]
@@ -650,6 +663,51 @@ export default function App() {
   }, [selectedWord, language]);
 
   useEffect(() => {
+    let isMounted = true;
+    const loadDssAnalysis = async () => {
+      const dssStrong = selectedDssVariant?.dss_strong ?? null;
+      if (!dssStrong) {
+        setSelectedDssAnalysis(null);
+        setIsDssAnalysisLoading(false);
+        return;
+      }
+
+      const strongPart = dssStrong
+        .split("/")
+        .map((part) => part.trim())
+        .find((part) => /^[HG]\d+$/.test(part));
+
+      if (!strongPart) {
+        setSelectedDssAnalysis(null);
+        setIsDssAnalysisLoading(false);
+        return;
+      }
+
+      setIsDssAnalysisLoading(true);
+      try {
+        const analysis = await getWordAnalysisByStrong(
+          strongPart,
+          language === "he" ? "en" : language,
+          selectedDssVariant?.dss_word ?? selectedWord?.text,
+        );
+        if (isMounted) {
+          setSelectedDssAnalysis(analysis);
+          setIsDssAnalysisLoading(false);
+        }
+      } catch {
+        if (isMounted) {
+          setSelectedDssAnalysis(null);
+          setIsDssAnalysisLoading(false);
+        }
+      }
+    };
+    loadDssAnalysis();
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedDssVariant, selectedWord, language]);
+
+  useEffect(() => {
     if (selectedWord) {
       setLastSelectedWord(selectedWord);
     }
@@ -660,6 +718,12 @@ export default function App() {
       setLastSelectedWordAnalysis(selectedWordAnalysis);
     }
   }, [selectedWord, selectedWordAnalysis]);
+
+  useEffect(() => {
+    if (selectedWord && selectedDssAnalysis) {
+      setLastSelectedDssAnalysis(selectedDssAnalysis);
+    }
+  }, [selectedWord, selectedDssAnalysis]);
 
   const isSplitView = Boolean(
     !isMobile && (selectedWord || isNavigatingWordPanel),
@@ -1035,8 +1099,32 @@ export default function App() {
                     const wordAnalysisForCard = selectedWord
                       ? selectedWordAnalysis
                       : lastSelectedWordAnalysis;
+                    const dssAnalysisForCard = selectedWord
+                      ? selectedDssAnalysis
+                      : lastSelectedDssAnalysis;
+                    const dssVariantForCard =
+                      currentVerseData?.dss?.find(
+                        (variant) => variant.position === wordForCard?.position,
+                      ) ?? null;
                     const wordTransliteration =
                       getTransliterationForLanguage(wordForCard);
+                    const dssCommentary = dssVariantForCard
+                      ? language === "es"
+                        ? dssVariantForCard.comment_v2_es ??
+                          dssVariantForCard.comment_v2_en ??
+                          dssVariantForCard.comment_v2_he
+                        : language === "he"
+                          ? dssVariantForCard.comment_v2_he ??
+                            dssVariantForCard.comment_v2_en ??
+                            dssVariantForCard.comment_v2_es
+                          : dssVariantForCard.comment_v2_en ??
+                            dssVariantForCard.comment_v2_es ??
+                            dssVariantForCard.comment_v2_he
+                      : undefined;
+                    const dssMeanings =
+                      dssAnalysisForCard?.definitions?.map((item) => item.text) ??
+                      [];
+                    const hasQumranVariant = Boolean(dssVariantForCard);
 
                     return (
                       <NeumorphCard
@@ -1044,7 +1132,9 @@ export default function App() {
                           isWordPanelActive
                             ? "word-panel-open"
                             : "word-panel-closed pointer-events-none"
-                        } ${showFullChapter ? "" : "sticky top-24"} word-panel-shell`}
+                        } ${showFullChapter ? "" : "sticky top-24"} word-panel-shell ${
+                          hasQumranVariant ? "word-card-qumran" : ""
+                        }`}
                         onMouseEnter={() => setIsWordPanelHovered(true)}
                         onMouseLeave={() => setIsWordPanelHovered(false)}
                       >
@@ -1066,6 +1156,18 @@ export default function App() {
                             }
                             wordFromVerse={wordForCard.text}
                             strongNumber={wordAnalysisForCard?.strong_number}
+                            qumranWord={dssVariantForCard?.dss_word}
+                            qumranStrong={dssVariantForCard?.dss_strong}
+                            qumranMeanings={dssMeanings}
+                            qumranCommentary={dssCommentary}
+                            qumranRoot={dssAnalysisForCard?.root}
+                            qumranRootTransliteration={
+                              dssAnalysisForCard?.root_strong
+                            }
+                            qumranRootMeaning={
+                              dssAnalysisForCard?.root_definitions?.[0]?.text
+                            }
+                            hasQumranVariant={hasQumranVariant}
                             transliteration={wordTransliteration}
                             meanings={wordMeanings}
                             root={wordAnalysisForCard?.root}
@@ -1104,6 +1206,9 @@ export default function App() {
                             isLoading={Boolean(
                               selectedWord && isWordAnalysisLoading,
                             )}
+                            isQumranLoading={Boolean(
+                              selectedWord && isDssAnalysisLoading,
+                            )}
                           />
                         ) : isNavigatingWordPanel ? (
                           <div className="h-40" />
@@ -1135,10 +1240,43 @@ export default function App() {
           onClose={() => setSelectedWord(null)}
           title=""
         >
+          {(() => {
+            const dssVariantForCard =
+              currentVerseData?.dss?.find(
+                (variant) => variant.position === selectedWord.position,
+              ) ?? null;
+            const dssCommentary = dssVariantForCard
+              ? language === "es"
+                ? dssVariantForCard.comment_v2_es ??
+                  dssVariantForCard.comment_v2_en ??
+                  dssVariantForCard.comment_v2_he
+                : language === "he"
+                  ? dssVariantForCard.comment_v2_he ??
+                    dssVariantForCard.comment_v2_en ??
+                    dssVariantForCard.comment_v2_es
+                  : dssVariantForCard.comment_v2_en ??
+                    dssVariantForCard.comment_v2_es ??
+                    dssVariantForCard.comment_v2_he
+              : undefined;
+            const dssMeanings =
+              selectedDssAnalysis?.definitions?.map((item) => item.text) ?? [];
+            const hasQumranVariant = Boolean(dssVariantForCard);
+
+            return (
           <WordCard
             word={selectedWordAnalysis?.hebrew ?? selectedWord.text}
             wordFromVerse={selectedWord.text}
             strongNumber={selectedWordAnalysis?.strong_number}
+                qumranWord={dssVariantForCard?.dss_word}
+                qumranStrong={dssVariantForCard?.dss_strong}
+                qumranMeanings={dssMeanings}
+                qumranCommentary={dssCommentary}
+                qumranRoot={selectedDssAnalysis?.root}
+                qumranRootTransliteration={selectedDssAnalysis?.root_strong}
+                qumranRootMeaning={
+                  selectedDssAnalysis?.root_definitions?.[0]?.text
+                }
+                hasQumranVariant={hasQumranVariant}
             transliteration={getTransliterationForLanguage(selectedWord)}
             meanings={wordMeanings}
             root={selectedWordAnalysis?.root}
@@ -1157,7 +1295,10 @@ export default function App() {
             tabResetKey={wordCardTabKey}
             onClose={() => setSelectedWord(null)}
             isLoading={!selectedWordAnalysis}
+                isQumranLoading={Boolean(isDssAnalysisLoading)}
           />
+            );
+          })()}
         </BottomSheet>
       )}
 

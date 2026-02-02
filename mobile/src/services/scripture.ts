@@ -2,6 +2,7 @@ import { apiRequest } from "@/src/services/api";
 import type { VerseResponse } from "@/src/types/api";
 
 export type DisplayWord = {
+  position: number;
   text: string;
   strong?: string;
   prefixes?: string[];
@@ -9,6 +10,11 @@ export type DisplayWord = {
   morph?: string;
   translit_en?: string;
   translit_es?: string;
+  dssWord?: string;
+  dssStrong?: string;
+  dssCommentaryEn?: string;
+  dssCommentaryEs?: string;
+  dssCommentaryHe?: string;
 };
 
 export type DisplayVerse = {
@@ -20,7 +26,7 @@ export type DisplayVerse = {
   hebrew: string;
   translation: string;
   words: DisplayWord[];
-  qumranVariants?: { wordIndex: number; variant: string }[];
+  qumranVariants?: { position: number; dssWord: string }[];
 };
 
 const formatBookName = (bookId: string) =>
@@ -48,19 +54,32 @@ export const fetchChapterVerses = async (
   const verses = await apiRequest<VerseResponse[]>(url);
   return verses.map((verse) => {
     const qumranVariants = verse.dss?.map((variant) => ({
-      wordIndex: Math.max(variant.word_position - 1, 0),
-      variant: variant.dss_text,
+      position: Math.max(variant.position, 0),
+      dssWord: variant.dss_word,
     }));
 
-    const words = verse.words.map((word) => ({
-      text: word.text,
-      strong: word.strong,
-      prefixes: word.prefixes,
-      hasQumranVariant: word.has_dss_variant,
-      morph: word.morph,
-      translit_en: word.translit_en,
-      translit_es: word.translit_es,
-    }));
+    const dssVariantMap = new Map(
+      verse.dss?.map((variant) => [variant.position, variant]) ?? [],
+    );
+
+    const words = verse.words.map((word) => {
+      const dssVariant = dssVariantMap.get(word.position);
+      return {
+        position: word.position,
+        text: word.text,
+        strong: word.strong,
+        prefixes: word.prefixes,
+        hasQumranVariant: word.has_dss_variant,
+        morph: word.morph,
+        translit_en: word.translit_en,
+        translit_es: word.translit_es,
+        dssWord: dssVariant?.dss_word,
+        dssStrong: dssVariant?.dss_strong,
+        dssCommentaryEn: dssVariant?.comment_v2_en,
+        dssCommentaryEs: dssVariant?.comment_v2_es,
+        dssCommentaryHe: dssVariant?.comment_v2_he,
+      };
+    });
 
     return {
       id: `${bookId}-${verse.chapter}-${verse.verse}`,

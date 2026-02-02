@@ -27,8 +27,8 @@ except ImportError:
 
 from .config import (
     MAX_BATCH_SIZE,
-    CLAUDE_MODEL,
-    validate_anthropic_api_key,
+    GROK_MODEL,
+    validate_grok_api_key,
 )
 from .loader import load_all_differences, load_sample_differences, load_differences_for_book
 from .rewriter import DSSCommentaryRewriter
@@ -67,20 +67,23 @@ def estimate_cost(total_differences: int, batch_size: int) -> Dict[str, float]:
     
     Rough estimates:
     - Input: ~300 tokens per difference (Hebrew words + commentary)
-    - Output: ~200 tokens per difference (Strong's + 3 commentaries)
+    - Output: ~400 tokens per difference (Strong's + 3 commentaries)
     
-    Pricing (claude-haiku-4-5):
-    - Input: $1.00 per 1M tokens
-    - Output: $5.00 per 1M tokens
+    Pricing (grok-4-1-fast-non-reasoning):
+    - Input: $0.20 per 1M tokens
+    - Output: $0.50 per 1M tokens
+    - Cached input: $0.05 per 1M tokens (75% discount, automatic)
+    
+    Note: Repeated prompts are automatically cached at 75% discount.
     """
     input_per_diff = 300
-    output_per_diff = 200
+    output_per_diff = 400
     
     total_input = total_differences * input_per_diff
     total_output = total_differences * output_per_diff
     
-    input_cost = (total_input / 1_000_000) * 1.00
-    output_cost = (total_output / 1_000_000) * 5.00
+    input_cost = (total_input / 1_000_000) * 0.20  # Grok 4.1 Fast Non-Reasoning
+    output_cost = (total_output / 1_000_000) * 0.50
     total_cost = input_cost + output_cost
     
     return {
@@ -147,16 +150,16 @@ def main():
         logging.getLogger().setLevel(logging.DEBUG)
     
     # Validate API key
-    logger.info("Checking Anthropic API key...")
-    if not validate_anthropic_api_key():
+    logger.info("Checking xAI API key...")
+    if not validate_grok_api_key():
         logger.error(
-            "ANTHROPIC_API_KEY not found in environment variables.\n"
+            "XAI_API_KEY not found in environment variables.\n"
             "Please add to .env file:\n"
-            "ANTHROPIC_API_KEY=your_api_key_here\n"
+            "XAI_API_KEY=your_api_key_here\n"
         )
         return 1
     
-    logger.info(f"Using model: {CLAUDE_MODEL}")
+    logger.info(f"Using model: {GROK_MODEL}")
     
     # Load differences
     logger.info("Loading DSSI differences...")
@@ -201,7 +204,7 @@ def main():
     signal.signal(signal.SIGTERM, _signal_handler)
     
     # Initialize rewriter
-    logger.info(f"Initializing Claude {CLAUDE_MODEL} rewriter...")
+    logger.info(f"Initializing Grok {GROK_MODEL} rewriter...")
     rewriter = DSSCommentaryRewriter()
     
     # Process in batches
@@ -268,7 +271,7 @@ def main():
         logger.info("\nUpdating metadata...")
         update_metadata(
             total_processed=len(enhanced_differences),
-            model_used=CLAUDE_MODEL,
+            model_used=GROK_MODEL,
             token_stats=estimate,
             dry_run=args.dry_run
         )

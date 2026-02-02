@@ -1,0 +1,166 @@
+{
+  "name": "Isaiah",
+  "file_number": 31,
+  "total_files": 40,
+  "difference_count": 19,
+  "chapters": {
+    "57": {
+      "verses": {
+        "19": {
+          "masoretic_text": "בּוֹרֵ֖א שְׂפָתָ֑יִם שָׁל֨וֹם ׀ שָׁל֜וֹם לָרָח֧וֹק וְלַקָּר֛וֹב אָמַ֥ר יְהוָ֖ה וּרְפָאתִֽיו׃",
+          "dss_text": "בורה ניב שפתים שלום שלום לרחוק ולקרוב אמר יהוה ורפתיהו",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "אָמַ֥ר",
+              "dss_word": "ולקרוב",
+              "commentary": "1QIsaa, 1QIsab, Mas, LXX: and to the near. 4QIsad misspells as ולרקרוב."
+            },
+            {
+              "position": 10,
+              "masoretic_word": "ורפאתיו",
+              "dss_word": "ורפתיו",
+              "commentary": "1QIsaa: and I shall heal him (defective, uncontracted pronoun spelling). 4QIsad has the contracted pronoun form ורפתיו, with the Masoretic reading the plene, contracted pronoun spelling ורפאתיו. LXX reads Ιασομαι αυτους meaning I shall heal them (Vorlage: רפאתים)."
+            },
+            {
+              "position": 4,
+              "masoretic_word": "שָׁל֜וֹם",
+              "dss_word": "שלום שלום",
+              "commentary": "1QIsab, Mas, LXX: Peace, peace (LXX: upon peace). 1QIsaa reads שלום meaning Peace."
+            }
+          ]
+        },
+        "20": {
+          "masoretic_text": "וְהָרְשָׁעִ֖ים כַּיָּ֣ם נִגְרָ֑שׁ כִּ֤י הַשְׁקֵט֙ לֹ֣א יוּכָ֔ל וַיִּגְרְשׁ֥וּ מֵימָ֖יו רֶ֥פֶשׁ וָטִֽיט׃",
+          "dss_text": "והרשעים כים נגרשו כיא השקט לא יוכלו ויגרשו מימיו רפש וטיט",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "נגרש",
+              "dss_word": "נרגשו",
+              "commentary": "1QIsaa, LXX: they are churned about. 4QIsad(vid) and Masoretic read נגרש meaning the churning. 1QIsab(vid) reads נרגש meaning in commotion; due to the manuscript being lacunae after נרג[, it is not possible to know whether 1QIsab read the plural נרגשו (to support 1QIsaa/LXX), or was kept as the singular נרגש (to support 4QIsad/Mas)."
+            },
+            {
+              "position": 5,
+              "masoretic_word": "הַשְׁקֵט֙",
+              "dss_word": "השקט",
+              "commentary": "1QIsab(vid), 4QIsad, Mas: to keep quite (to implicit). 1QIsaa reads לאשקיט meaning the same, but with the to explicit."
+            },
+            {
+              "position": 7,
+              "masoretic_word": "יוכל",
+              "dss_word": "יוכלו",
+              "commentary": "1QIsaa, LXX: they are capable. 1QIsab, 4QIsad and Masoretic read יוכל meaning he is capable."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "וַיִּגְרְשׁ֥וּ",
+              "dss_word": "יתגרשו",
+              "commentary": "1QIsab, 4QIsad, Mas: and they throw up. 1QIsaa reads יתגרשו meaning they throw up; this looks like the hitpa’el form of the verb גרש, however the hitpa’el is usually an intransitive verb (doesn’t affect a direct object), but the context here definitely has the verb with a direct object (רפש וטיט/mire and mud)."
+            }
+          ]
+        }
+      }
+    },
+    "58": {
+      "verses": {
+        "1": {
+          "masoretic_text": "קְרָ֤א בְגָרוֹן֙ אַל־ תַּחְשֹׂ֔ךְ כַּשּׁוֹפָ֖ר הָרֵ֣ם קוֹלֶ֑ךָ וְהַגֵּ֤ד לְעַמִּי֙ פִּשְׁעָ֔ם וּלְבֵ֥ית יַעֲקֹ֖ב חַטֹּאתָֽם׃",
+          "dss_text": "קרא בגרון ואל תחשוך כשופר הרם קולך והגד לעמיא פשעיהמה ולבית יעקוב חטאתם",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "אל",
+              "dss_word": "ואל",
+              "commentary": "1QIsab, LXX: and do not. 1QIsaa and Masoretic read אל meaning do not."
+            },
+            {
+              "position": 5,
+              "masoretic_word": "כַּשּׁוֹפָ֖ר",
+              "dss_word": "כשופר",
+              "commentary": "1QIsaa, Mas, LXX: like a trumpet. 1QIsab(vid) reads וכשופר meaning and like a trumpet."
+            },
+            {
+              "position": 10,
+              "masoretic_word": "פשעם",
+              "dss_word": "פשעיהמה",
+              "commentary": "1QIsaa, LXX: their rebellions. 1QIsab and Masoretic read פשעם meaning their rebellion."
+            }
+          ]
+        },
+        "2": {
+          "masoretic_text": "וְאוֹתִ֗י י֥וֹם יוֹם֙ יִדְרֹשׁ֔וּן וְדַ֥עַת דְּרָכַ֖י יֶחְפָּצ֑וּן כְּג֞וֹי אֲשֶׁר־ צְדָקָ֣ה עָשָׂ֗ה וּמִשְׁפַּ֤ט אֱלֹהָיו֙ לֹ֣א עָזָ֔ב יִשְׁאָל֙וּנִי֙ מִשְׁפְּטֵי־ צֶ֔דֶק קִרְבַ֥ת אֱלֹהִ֖ים יֶחְפָּצֽוּן׃",
+          "dss_text": "אתי יום יום ידרושו ודעת דרכי יחפצון כגוי אשר צדקה עשה ומשפט אלוהו לוא עזב ישאלוני משפטי צדק קרבת אלוהים יחפצו",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "ואתי",
+              "dss_word": "ות",
+              "commentary": "1QIsab, 4QIsad, 1QIsaa (ות-), LXX: Me. Masoretic reads ואתי meaning Yet Me."
+            },
+            {
+              "position": 3,
+              "masoretic_word": "יוֹם֙",
+              "dss_word": "יום",
+              "commentary": "1QIsab, 4QIsad, Mas, LXX: day. 1QIsaa reads ויום meaning and day."
+            },
+            {
+              "position": 4,
+              "masoretic_word": "ידרשון",
+              "dss_word": "ידרושו",
+              "commentary": "1QIsaa: they seek to consult. 1QIsab and Masoretic read the paragogic-nun spelling ידרשון."
+            },
+            {
+              "position": 21,
+              "masoretic_word": "יחפצון",
+              "dss_word": "יחפצו",
+              "commentary": "1QIsaa: they delight in. 1QIsab and Masoretic read the paragogic-nun spelling יחפצון."
+            }
+          ]
+        },
+        "3": {
+          "masoretic_text": "לָ֤מָּה צַּ֙מְנוּ֙ וְלֹ֣א רָאִ֔יתָ עִנִּ֥ינוּ נַפְשֵׁ֖נוּ וְלֹ֣א תֵדָ֑ע הֵ֣ן בְּי֤וֹם צֹֽמְכֶם֙ תִּמְצְאוּ־ חֵ֔פֶץ וְכָל־ עַצְּבֵיכֶ֖ם תִּנְגֹּֽשׂוּ׃",
+          "dss_text": "למה צמנו ולוא ראיתה ענינו נפשותינו ולוא תדע הן ביום צומכמה תמצאו חפץ וכול עצביכמה תנגשו",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "נפשנו",
+              "dss_word": "שת",
+              "commentary": "1QIsaa, 1QIsab (שת-), LXX: our souls. Masoretic reads נפשנו meaning our soul."
+            },
+            {
+              "position": 7,
+              "masoretic_word": "לא",
+              "dss_word": "ולוא",
+              "commentary": "1QIsaa, Mas (לא-), LXX: and not. 1QIsab reads לא meaning not."
+            }
+          ]
+        },
+        "4": {
+          "masoretic_text": "הֵ֣ן לְרִ֤יב וּמַצָּה֙ תָּצ֔וּמוּ וּלְהַכּ֖וֹת בְּאֶגְרֹ֣ף רֶ֑שַׁע לֹא־ תָצ֣וּמוּ כַיּ֔וֹם לְהַשְׁמִ֥יעַ בַּמָּר֖וֹם קוֹלְכֶֽם׃",
+          "dss_text": "הנה לריב ולמצה תצומו ולהכות באגרף רשע לוא תצומו כיום להשמיע במרום קולכמה",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "וּלְהַכּ֖וֹת",
+              "dss_word": "ולהכות",
+              "commentary": "1QIsaa, Mas, LXX: and to strike. 1QIsab reads להכות meaning to strike."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "לא",
+              "dss_word": "ולא",
+              "commentary": "1QIsaa, Mas (לא-): not. 1QIsab reads ולא meaning and not. LXX omits."
+            },
+            {
+              "position": 11,
+              "masoretic_word": "לְהַשְׁמִ֥יעַ",
+              "dss_word": "להשמיע",
+              "commentary": "1QIsab, Mas: to make heard. 1QIsaa has an alternative form לשמיע, meaning the same."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

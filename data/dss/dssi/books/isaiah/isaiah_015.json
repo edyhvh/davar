@@ -1,0 +1,200 @@
+{
+  "name": "Isaiah",
+  "file_number": 15,
+  "total_files": 40,
+  "difference_count": 19,
+  "chapters": {
+    "38": {
+      "verses": {
+        "18": {
+          "masoretic_text": "כִּ֣י לֹ֥א שְׁא֛וֹל תּוֹדֶ֖ךָּ מָ֣וֶת יְהַלְלֶ֑ךָּ לֹֽא־ יְשַׂבְּר֥וּ יֽוֹרְדֵי־ ב֖וֹר אֶל־ אֲמִתֶּֽךָ׃",
+          "dss_text": "כיא לוא שאול תודכה ולוא מות יהללכה ולוא ישברו יורדי בור אל אמתכה",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "מָ֣וֶת",
+              "dss_word": "ולוא",
+              "commentary": "1QIsaa: and cannot. 1QIsab and Masoretic omit this, but the context implies it."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "ו",
+              "dss_word": "ו",
+              "commentary": "1QIsaa: and cannot. 1QIsab and Masoretic omit the first ו meaning and and use the defective spelling לא."
+            }
+          ]
+        },
+        "19": {
+          "masoretic_text": "חַ֥י חַ֛י ה֥וּא יוֹדֶ֖ךָ כָּמ֣וֹנִי הַיּ֑וֹם אָ֣ב לְבָנִ֔ים יוֹדִ֖יעַ אֶל־ אֲמִתֶּֽךָ׃",
+          "dss_text": "חי חי הוא יודכה כמוני היום אב לבנים יודיע אל אמתכה",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "היום כמוני",
+              "dss_word": "כמוני",
+              "commentary": "1QIsaa: like me today. 1QIsab and Masoretic have these words the other way round: היום כמוני."
+            },
+            {
+              "position": 9,
+              "masoretic_word": "יוֹדִ֖יעַ",
+              "dss_word": "יודיע",
+              "commentary": "1QIsaa, Mas: will make known. 1QIsab has יודע meaning let be known."
+            },
+            {
+              "position": 10,
+              "masoretic_word": "אֶל־",
+              "dss_word": "אל",
+              "commentary": "1QIsaa, Mas: to. 1QIsab has אלה meaning to these. In conjunction with the previous differences, the meaning of Isaiah 38:19 in 1QIsab would be A father shall let Your trust be known to these children."
+            }
+          ]
+        },
+        "20": {
+          "masoretic_text": "יְהוָ֖ה לְהוֹשִׁיעֵ֑נִי וּנְגִנוֹתַ֧י נְנַגֵּ֛ן כָּל־ יְמֵ֥י חַיֵּ֖ינוּ עַל־ בֵּ֥ית יְהוָֽה׃",
+          "dss_text": "יהוה להושיעני ונגנותי ננגן כול ימי חיינו על בית יהוה",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "יְהוָ֖ה",
+              "dss_word": "note",
+              "commentary": "In 1QIsaa, a second scribe (not the original) inserted the following text, which is a repetition of verse 19 with slight variations, plus the start of verse 20: חי חי יודך כמוני היום אב לבנים והודיע אלוה אמתך יהוה להושיעני"
+            }
+          ]
+        },
+        "21": {
+          "masoretic_text": "וַיֹּ֣אמֶר יְשַׁעְיָ֔הוּ יִשְׂא֖וּ דְּבֶ֣לֶת תְּאֵנִ֑ים וְיִמְרְח֥וּ עַֽל־ הַשְּׁחִ֖ין וְיֶֽחִי׃",
+          "dss_text": "ויאומר ישעיהו ישאו דבלת תאנים וימרחו על השחין ויחי",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "יִשְׂא֖וּ",
+              "dss_word": "ישאו",
+              "commentary": "1QIsab, Mas: Let them take. 1QIsaa omits the word, probably due to homoeoteleuton."
+            },
+            {
+              "position": 7,
+              "masoretic_word": "עַֽל־",
+              "dss_word": "על",
+              "commentary": "1QIsaa, Mas: upon. 1QIsab has אל meaning to. The difference would be between rub it on (1QIsaa, Mas) and apply it to (1QIsab); the meaning wouldn’t change."
+            }
+          ]
+        },
+        "22": {
+          "masoretic_text": "וַיֹּ֥אמֶר חִזְקִיָּ֖הוּ מָ֣ה א֑וֹת כִּ֥י אֶעֱלֶ֖ה בֵּ֥ית יְהוָֽה׃",
+          "dss_text": "ויאמר חזקיה  מה אות כי אעלה בית יהוה",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "מָ֣ה",
+              "dss_word": "",
+              "commentary": "The original scribe of 1QIsaa omitted verse 22 from the scroll, to which a third scribe added it later."
+            }
+          ]
+        }
+      }
+    },
+    "39": {
+      "verses": {
+        "1": {
+          "masoretic_text": "בָּעֵ֣ת הַהִ֡וא שָׁלַ֡ח מְרֹדַ֣ךְ בַּ֠לְאֲדָן בֶּֽן־ בַּלְאֲדָ֧ן מֶֽלֶךְ־ בָּבֶ֛ל סְפָרִ֥ים וּמִנְחָ֖ה אֶל־ חִזְקִיָּ֑הוּ וַיִּשְׁמַ֕ע כִּ֥י חָלָ֖ה וֽ͏ַיֶּחֱזָֽק׃",
+          "dss_text": "בעת ההיא שלח מרודך בלאדון בן בלאדון מלך בבל ספרים ומנחה אל יחיזקיה כי שמע כי חלה ויחיה",
+          "differences": [
+            {
+              "position": 13,
+              "masoretic_word": "חזקיהו",
+              "dss_word": "יחיזקיה",
+              "commentary": "1QIsaa: Hezekiah (alternate spelling). 1QIsab and Masoretic have another spelling: חזקיהו."
+            },
+            {
+              "position": 14,
+              "masoretic_word": "וישמע",
+              "dss_word": "כי",
+              "commentary": "4QIsab, LXX: for he heard. 1QIsaa, 1QIsab and Masoretic read וישמע meaning as he heard."
+            },
+            {
+              "position": 18,
+              "masoretic_word": "ויחזק",
+              "dss_word": "ויחיה",
+              "commentary": "1QIsaa: and he lived. 1QIsab and Masoretic have ויחזק meaning he recovered. No change to meaning of verse."
+            }
+          ]
+        },
+        "6": {
+          "masoretic_text": "הִנֵּה֮ יָמִ֣ים בָּאִים֒ וְנִשָּׂ֣א ׀ כָּל־ אֲשֶׁ֣ר בְּבֵיתֶ֗ךָ וַאֲשֶׁ֨ר אָצְר֧וּ אֲבֹתֶ֛יךָ עַד־ הַיּ֥וֹם הַזֶּ֖ה בָּבֶ֑ל לֹֽא־ יִוָּתֵ֥ר דָּבָ֖ר אָמַ֥ר יְהוָֽה׃",
+          "dss_text": "הנה ימים באים ונשאו כול אשר בביתכה ואשר אצרו אבותיכה עד היום הזה בבל יביאו ולוא יותר דבר אמר יהוה",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "ונשא",
+              "dss_word": "ונשאו",
+              "commentary": "1QIsaa: they shall be carried (plural). 1QIsab and Masoretic use the singular ונשא."
+            },
+            {
+              "position": 14,
+              "masoretic_word": "בָּבֶ֑ל",
+              "dss_word": "בבלה",
+              "commentary": "1QIsaa, Mas: Babylon. 4QIsab reads בבלה, which means the same, but has a paragogic directional ה- suffixed."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "וּמִבָּנֶ֜יךָ אֲשֶׁ֨ר יֵצְא֧וּ מִמְּךָ֛ אֲשֶׁ֥ר תּוֹלִ֖יד יִקָּ֑חוּ וְהָיוּ֙ סָרִיסִ֔ים בְּהֵיכַ֖ל מֶ֥לֶךְ בָּבֶֽל׃",
+          "dss_text": "ומבניכה אשר יצאו ממעיכה אשר תוליד יקחו ויהיו סריסים בהיכל מלך בבל",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "ממך",
+              "dss_word": "ממעיכה",
+              "commentary": "1QIsaa: from your loins. 4QIsab and Masoretic read ממך meaning from you."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "והיו",
+              "dss_word": "ויהיו",
+              "commentary": "1QIsaa: and they shall be (imperfect). 4QIsab and Masoretic read the perfect form והיו."
+            }
+          ]
+        }
+      }
+    },
+    "40": {
+      "verses": {
+        "2": {
+          "masoretic_text": "דַּבְּר֞וּ עַל־ לֵ֤ב יְרֽוּשָׁלִַ֙ם֙ וְקִרְא֣וּ אֵלֶ֔יהָ כִּ֤י מָֽלְאָה֙ צְבָאָ֔הּ כִּ֥י נִרְצָ֖ה עֲוֺנָ֑הּ כִּ֤י לָקְחָה֙ מִיַּ֣ד יְהוָ֔ה כִּפְלַ֖יִם בְּכָל־ חַטֹּאתֶֽיהָ׃",
+          "dss_text": "דברו על לב ירושלים וקראו אליהא כיא מלא צבאה כיא נרצא עוונה כיא לקחה מיד יהוה כפלים בכול חטאותיה",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "נרצה",
+              "dss_word": "נרצא",
+              "commentary": "1QIsaa: is paid for (feminine). 1QIsab and Masoretic have נרצה which is masculine."
+            }
+          ]
+        },
+        "3": {
+          "masoretic_text": "ק֣וֹל קוֹרֵ֔א בַּמִּדְבָּ֕ר פַּנּ֖וּ דֶּ֣רֶךְ יְהוָ֑ה יַשְּׁרוּ֙ בָּעֲרָבָ֔ה מְסִלָּ֖ה לֵאלֹהֵֽינוּ׃",
+          "dss_text": "קול קורא במדבר פנו דרך יהוה ישרו בערבה מסלה לאלוהינו",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "יַשְּׁרוּ֙",
+              "dss_word": "ישרו",
+              "commentary": "1QIsab, 4QIsab, Mas: make. 1QIsaa has וישרו which means and make."
+            }
+          ]
+        },
+        "4": {
+          "masoretic_text": "כָּל־ גֶּיא֙ יִנָּשֵׂ֔א וְכָל־ הַ֥ר וְגִבְעָ֖ה יִשְׁפָּ֑לוּ וְהָיָ֤ה הֶֽעָקֹב֙ לְמִישׁ֔וֹר וְהָרְכָסִ֖ים לְבִקְעָֽה׃",
+          "dss_text": "כול גיא ינשא וכול הר וגבעה ישפלו והיה העקב למישור והרוכסים לבקעה",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "גֶּיא֙",
+              "dss_word": "גי",
+              "commentary": "1QIsab, 4QIsab, Mas: valleys (absolute). 1QIsaa has גי which is the construct form of the noun גיא. The construct form of a noun usually only appears when there’re two nouns together, usually to indicate a relation between the two, with the construct noun usually being the object of possession for the absolute noun (so a word of a king - a word would be the construct form, and a king would be in the absolute form). As there’s no other noun here in 40:4, the scribe of 1QIsaa has made a mistake in his copying."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -408,6 +408,19 @@
   z-index: 10;
 }
 
+.word-card-qumran {
+  background: linear-gradient(
+      145deg,
+      rgba(198, 143, 85, 0.18),
+      rgba(198, 143, 85, 0.06)
+    );
+  border-color: rgba(198, 143, 85, 0.5);
+  box-shadow:
+    6px 6px 16px var(--neomorph-shadow-dark),
+    -6px -6px 16px var(--neomorph-shadow-light),
+    0 0 24px rgba(198, 143, 85, 0.25);
+}
+
 .word-panel-fixed-wrapper {
   position: fixed;
   top: 50%;

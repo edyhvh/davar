@@ -1,7 +1,7 @@
 """
-Claude-powered DSS commentary rewriter.
+Grok-powered DSS commentary rewriter.
 
-Uses Claude Haiku 4.5 to assign Strong's numbers and generate
+Uses Grok 4.1 Fast to assign Strong's numbers and generate
 reverent trilingual commentaries for Dead Sea Scrolls variants.
 """
 
@@ -13,22 +13,22 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 try:
-    from anthropic import Anthropic
+    from xai_sdk import Client
+    from xai_sdk.chat import user, system
 except ImportError as e:
     raise ImportError(
-        "Commentary rewriter requires 'anthropic' package. Install with: pip install anthropic"
+        "Commentary rewriter requires 'xai-sdk' package. Install with: pip install xai-sdk"
     ) from e
 
 from .config import (
-    ANTHROPIC_API_KEY,
-    CLAUDE_MODEL,
-    CLAUDE_API_VERSION,
-    CLAUDE_TIMEOUT,
+    XAI_API_KEY,
+    GROK_MODEL,
+    GROK_TIMEOUT,
     MAX_RETRIES,
     RETRY_BACKOFF_BASE,
     RATE_LIMIT_DELAY,
     TEMPERATURE,
-    validate_anthropic_api_key,
+    validate_grok_api_key,
 )
 
 logger = logging.getLogger(__name__)
@@ -66,21 +66,21 @@ Additionally, you MUST assign Strong's numbers to both the Masoretic and DSS Heb
 
 
 class DSSCommentaryRewriter:
-    """Rewriter using Claude API for DSS commentaries."""
+    """Rewriter using Grok API for DSS commentaries."""
 
     def __init__(self):
         """Initialize the rewriter with API key."""
-        if not validate_anthropic_api_key():
+        if not validate_grok_api_key():
             raise ValueError(
-                "ANTHROPIC_API_KEY not found in environment variables. "
+                "XAI_API_KEY not found in environment variables. "
                 "Please set it in .env file or as an environment variable."
             )
 
-        self.client = Anthropic(
-            api_key=ANTHROPIC_API_KEY,
-            timeout=CLAUDE_TIMEOUT,
+        self.client = Client(
+            api_key=XAI_API_KEY,
+            timeout=GROK_TIMEOUT,
         )
-        self.model_name = CLAUDE_MODEL
+        self.model_name = GROK_MODEL
         self._last_request_time = 0
         self._stats = {
             'total_batches': 0,
@@ -290,28 +290,23 @@ Return ONLY a valid JSON array with the enhanced entries. No markdown, no code b
             logger.info(f"Making API call to {self.model_name} with {len(differences)} differences")
             logger.debug(f"Prompt length: {len(prompt)} characters")
 
-            response = self.client.messages.create(
+            # Use xAI SDK's native chat API
+            chat = self.client.chat.create(
                 model=self.model_name,
-                max_tokens=16384,  # Increased for trilingual output (~400 tokens per item)
-                temperature=TEMPERATURE,
-                system=SYSTEM_PROMPT,
-                messages=[
-                    {
-                        "role": "user",
-                        "content": prompt
-                    }
-                ]
+                store_messages=False,  # Don't store on server for privacy
             )
+            chat.append(system(SYSTEM_PROMPT))
+            chat.append(user(prompt))
+            
+            # Generate response
+            response = chat.sample()
 
             logger.debug("API call completed")
 
-            if not response.content or len(response.content) == 0:
-                raise ValueError("Empty response from Claude API")
+            if not response or not response.content:
+                raise ValueError("Empty response from Grok API")
 
-            response_text = ""
-            for content_block in response.content:
-                if hasattr(content_block, 'text'):
-                    response_text += content_block.text
+            response_text = response.content.strip()
 
             if not response_text:
                 raise ValueError("Could not extract text content from response")

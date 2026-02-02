@@ -114,6 +114,9 @@ const createStyles = (
       textAlign: "right",
       writingDirection: "rtl",
     },
+    hebrewWordQumran: {
+      fontFamily: typography.families.hebrewQumran,
+    },
     hebrewWordPressable: {
       paddingHorizontal: spacing[2],
       paddingVertical: spacing[1],
@@ -184,8 +187,10 @@ export const VerseCard = ({
           const isFirst = index === 0;
           const shouldHighlight = showWordHint && isFirst;
 
+          const qumranWord = showQumran ? word.dssWord : undefined;
+
           // Apply nikud and cantillation settings
-          let displayText = word.text;
+          let displayText = qumranWord ?? word.text;
           if (!showNikud) {
             displayText = stripNikud(displayText);
           }
@@ -195,9 +200,10 @@ export const VerseCard = ({
           displayText = stripMeteg(displayText);
           displayText = displayText.replace(/\//g, "");
 
-          const prefixSegments = word.prefixes?.length
-            ? getPrefixSegments(displayText, word.prefixes)
-            : null;
+          const prefixSegments =
+            qumranWord || !word.prefixes?.length
+              ? null
+              : getPrefixSegments(displayText, word.prefixes);
 
           const wordStyles = [
             styles.hebrewWordPressable,
@@ -223,7 +229,13 @@ export const VerseCard = ({
               );
             }
             return (
-              <Text style={styles.hebrewWord}>
+              <Text
+                style={
+                  qumranWord
+                    ? [styles.hebrewWord, styles.hebrewWordQumran]
+                    : styles.hebrewWord
+                }
+              >
                 {displayText}
               </Text>
             );
