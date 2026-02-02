@@ -1,0 +1,156 @@
+{
+  "name": "Isaiah",
+  "file_number": 23,
+  "total_files": 40,
+  "difference_count": 19,
+  "chapters": {
+    "49": {
+      "verses": {
+        "4": {
+          "masoretic_text": "וַאֲנִ֤י אָמַ֙רְתִּי֙ לְרִ֣יק יָגַ֔עְתִּי לְתֹ֥הוּ וְהֶ֖בֶל כֹּחִ֣י כִלֵּ֑יתִי אָכֵן֙ מִשְׁפָּטִ֣י אֶת־ יְהוָ֔ה וּפְעֻלָּתִ֖י אֶת־ אֱלֹהָֽי׃",
+          "dss_text": "ואני אמרתי לריק יגעתי לתהו ולהבל כוחי כליתי אכן משפטי את יהוה ופועלתי את אלהי",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "לְתֹ֥הוּ",
+              "dss_word": "לתהו",
+              "commentary": "1QIsab, Mas, LXX: to worthlessness. 1QIsaa misspells as לתוה."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "והבל",
+              "dss_word": "ולהבל",
+              "commentary": "1QIsaa, LXX: and to meaninglessness. 1QIsab and Masoretic read והבל meaning and meaninglessness, with the to implicit rather than explicit."
+            },
+            {
+              "position": 9,
+              "masoretic_word": "אָכֵן֙",
+              "dss_word": "אכן",
+              "commentary": "1QIsaa, Mas: Nevertheless. 1QIsab reads אך meaning howbeit. LXX reads δια τουτο meaning Because of this, which supports the reading of 1QIsaa/Mas."
+            }
+          ]
+        },
+        "5": {
+          "masoretic_text": "וְעַתָּ֣ה ׀ אָמַ֣ר יְהוָ֗ה יֹצְרִ֤י מִבֶּ֙טֶן֙ לְעֶ֣בֶד ל֔וֹ לְשׁוֹבֵ֤ב יַֽעֲקֹב֙ אֵלָ֔יו וְיִשְׂרָאֵ֖ל יֵאָסֵ֑ף וְאֶכָּבֵד֙ בְּעֵינֵ֣י יְהוָ֔ה וֵאלֹהַ֖י הָיָ֥ה עֻזִּֽי׃",
+          "dss_text": "ועתה כה אמר יהוה יוצרי מבטן לעבד לו לשובב יעקוב אליו וישראל לו יאסף ואכבדה בעיני יהוה ואלוהי היה עזי",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "אָמַ֣ר",
+              "dss_word": "כה",
+              "commentary": "1QIsab, LXX: thus. 1QIsaa and Masoretic omit."
+            },
+            {
+              "position": 13,
+              "masoretic_word": "לא",
+              "dss_word": "לו",
+              "commentary": "1QIsaa: to Him. 4QIsad and Masoretic read לא, which would mean not, but in the context of the verse it is a misspelling of (using א instead of ו to indicate the -uw sound). LXX omits, which may be a translational decision by the translator; Greek, unlike Hebrew, doesn’t need to repeat the preposition as it already appears beforehand (προς αυτον). This may be reflected in the reading of Codex Sinaiticusc.a, Alexandrinus and Marchalianus: τον Ιακωβ και Ι̅Η̅Λ̅ προς αυτον."
+            },
+            {
+              "position": 18,
+              "masoretic_word": "ואלהי",
+              "dss_word": "ואלוהי",
+              "commentary": "1QIsaa: and my God (plene spelling). 1QIsab and Masoretic have the defective spelling ואלהי. Codex Vaticanus (LXX) omits μου; Codex Sinaiticus, Alexandrinus and Marchalianus include it."
+            },
+            {
+              "position": 20,
+              "masoretic_word": "עזי",
+              "dss_word": "עזי",
+              "commentary": "1QIsab, Mas, LXX: my strength. 1QIsaa reads עזרי meaning my helper."
+            }
+          ]
+        },
+        "6": {
+          "masoretic_text": "וַיֹּ֗אמֶר נָקֵ֨ל מִֽהְיוֹתְךָ֥ לִי֙ עֶ֔בֶד לְהָקִים֙ אֶת־ שִׁבְטֵ֣י יַעֲקֹ֔ב יִשְׂרָאֵ֖ל לְהָשִׁ֑יב וּנְתַתִּ֙יךָ֙ לְא֣וֹר גּוֹיִ֔ם לִֽהְי֥וֹת יְשׁוּעָתִ֖י עַד־ קְצֵ֥ה הָאָֽרֶץ׃",
+          "dss_text": "ויואמר נקל מהיותכה לי עבד להקים את שבטי יעקב ונצירי ישראל להשיב ונתתיך לאור גואים להיות ישועתי עד קצה הארץ",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "נָקֵ֨ל",
+              "dss_word": "נקל",
+              "commentary": "1QIsaa, Mas: It is trivial. 1QIsab reads הנקל meaning Surely it is not trivial."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "לְהָקִים֙",
+              "dss_word": "להקים",
+              "commentary": "1QIsab, 4QIsad, Mas, LXX: to establish. 1QIsab(vid) reads להשיב meaning to bring back."
+            },
+            {
+              "position": 9,
+              "masoretic_word": "יַעֲקֹ֔ב",
+              "dss_word": "יעקב",
+              "commentary": "1QIsab, Mas, LXX: Jacob. 1QIsaa reads ישראל meaning Israel."
+            },
+            {
+              "position": 11,
+              "masoretic_word": "לְהָשִׁ֑יב",
+              "dss_word": "ישראל",
+              "commentary": "1QIsab, Mas, LXX: Israel. 1QIsaa reads יעקב meaning Jacob."
+            },
+            {
+              "position": 19,
+              "masoretic_word": "הָאָֽרֶץ׃",
+              "dss_word": "קצה",
+              "commentary": "1QIsab, Mas, LXX: end. 1QIsaa reads קצוי meaning ends."
+            },
+            {
+              "position": 20,
+              "masoretic_word": "הארץ",
+              "dss_word": "הארץ",
+              "commentary": "1QIsaa, Mas, LXX: the earth. 1QIsab reads ארץ meaning earth."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "כֹּ֣ה אָֽמַר־ יְהוָה֩ גֹּאֵ֨ל יִשְׂרָאֵ֜ל קְדוֹשׁ֗וֹ לִבְזֹה־ נֶ֜פֶשׁ לִמְתָ֤עֵֽב גּוֹי֙ לְעֶ֣בֶד מֹשְׁלִ֔ים מְלָכִים֙ יִרְא֣וּ וָקָ֔מוּ שָׂרִ֖ים וְיִֽשְׁתַּחֲוּ֑וּ לְמַ֤עַן יְהוָה֙ אֲשֶׁ֣ר נֶאֱמָ֔ן קְדֹ֥שׁ יִשְׂרָאֵ֖ל וַיִּבְחָרֶֽךָּ׃",
+          "dss_text": "כוה אמר אדוני יהוה גואלכה ישראל קדושו לבזוי נפש למתעבי גוי לעבד מושלים מלכים ראו וקמו שרים והשתחוו למען יהוה אשר נאמן קדוש ישראל ויבחרך",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "יְהוָה֩",
+              "dss_word": "אדוני",
+              "commentary": "1QIsaa: Master (plene spelling). 1QIsab has the defective spelling אדני. Masoretic omits."
+            },
+            {
+              "position": 15,
+              "masoretic_word": "יראו",
+              "dss_word": "ראו",
+              "commentary": "1QIsaa: shall see (perfect form). 1QIsab and Masoretic have the imperfect form יראו."
+            },
+            {
+              "position": 16,
+              "masoretic_word": "שָׂרִ֖ים",
+              "dss_word": "וקמו",
+              "commentary": "1QIsaa, Mas: and they shall stand up. 1QIsab reads יקומו meaning they shall stand up."
+            },
+            {
+              "position": 17,
+              "masoretic_word": "וְיִֽשְׁתַּחֲוּ֑וּ",
+              "dss_word": "שרים",
+              "commentary": "1QIsab, Mas, LXX: princes. 1QIsaa reads ושרים meaning also princes."
+            },
+            {
+              "position": 25,
+              "masoretic_word": "ויבחרך",
+              "dss_word": "ויבחרך",
+              "commentary": "1QIsab, Mas, LXX: and He has selected you. 1QIsaa reads יבחרכה meaning He has selected you."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "לֵאמֹ֤ר לַֽאֲסוּרִים֙ צֵ֔אוּ לַאֲשֶׁ֥ר בַּחֹ֖שֶׁךְ הִגָּל֑וּ עַל־ דְּרָכִ֣ים יִרְע֔וּ וּבְכָל־ שְׁפָיִ֖ים מַרְעִיתָֽם׃",
+          "dss_text": "לאמור לאסורים צאו ולאשר בחושך הגלו על כול הרים ירעו ובכול שפאים מרעיתם",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "לאשר",
+              "dss_word": "ולאשר",
+              "commentary": "1QIsaa, LXX: and to those. 4QIsad and Masoretic read לאשר meaning to those."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

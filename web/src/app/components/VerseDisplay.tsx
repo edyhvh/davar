@@ -73,11 +73,13 @@ export function VerseDisplay({
   onSwipeDown,
 }: VerseDisplayProps) {
   const { t } = useTranslation(language);
+  const dssInlineFontScale = "1.80em";
+  const dssInlineBaselineShift = "-0.08em";
   // Function to render Hebrew text with DSS variants
   const renderHebrewText = () => {
     const dssMap = new Map<number, string>();
     dssVariants?.forEach((variant) => {
-      dssMap.set(variant.word_position, variant.dss_text);
+      dssMap.set(variant.position, variant.dss_word);
     });
 
     const sourceWords =
@@ -146,7 +148,16 @@ export function VerseDisplay({
             onClick={() => onWordClick(word)}
             className={`cursor-pointer transition-colors ${isSelected ? "verse-highlight" : ""}`}
             style={
-              variantText ? { color: "var(--copper-highlight)" } : undefined
+              variantText
+                ? {
+                    color: "var(--copper-highlight)",
+                    fontFamily: "'DeadSeaScrolls-Regular', 'Cardo', serif",
+                    fontSize: dssInlineFontScale,
+                    display: "inline-block",
+                    verticalAlign: "middle",
+                    transform: `translateY(${dssInlineBaselineShift})`,
+                  }
+                : undefined
             }
           >
             {prefixSegments?.prefixes?.length ? (

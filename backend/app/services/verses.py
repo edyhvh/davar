@@ -214,15 +214,22 @@ class VersesService:
                 dss_variants = []
                 for variant in dss_data:
                     dv = DssVariant(
-                        word_position=variant.get('word_position', 0),
-                        dss_text=variant.get('dss_text', ''),
-                        manuscript=variant.get('manuscript', ''),
-                        commentary=variant.get('commentary')
+                        book=variant.get('book', book_en),
+                        chapter=variant.get('chapter', verse_data.get('chapter', 0)),
+                        verse=variant.get('verse', verse_data.get('verse', 0)),
+                        position=variant.get('position', 0),
+                        dss_word=variant.get('dss_word', ''),
+                        masoretic_word=variant.get('masoretic_word', ''),
+                        comment_v2_en=variant.get('comment_v2_en'),
+                        comment_v2_es=variant.get('comment_v2_es'),
+                        comment_v2_he=variant.get('comment_v2_he'),
+                        masoretic_strong=variant.get('masoretic_strong'),
+                        dss_strong=variant.get('dss_strong')
                     )
                     dss_variants.append(dv)
 
-                    if dv.word_position > 0 and dv.word_position <= len(words):
-                        words[dv.word_position - 1].has_dss_variant = True
+                    if dv.position > 0 and dv.position <= len(words):
+                        words[dv.position - 1].has_dss_variant = True
 
         return VerseResponse(
             chapter=verse_data.get('chapter', 0),

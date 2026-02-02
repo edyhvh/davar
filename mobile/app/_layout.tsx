@@ -38,6 +38,7 @@ export default function RootLayout() {
     Arimo_400Regular,
     Arimo_700Bold,
     SuezOne_400Regular,
+    DeadSeaScrolls_400Regular: require("../assets/fonts/Deadseascrolls-Regular.ttf"),
   });
 
   useEffect(() => {

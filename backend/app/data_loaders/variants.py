@@ -3,10 +3,10 @@ DSS variants data loader
 Loads DSS (Dead Sea Scrolls) variant readings
 """
 
-import os
 from typing import Dict, List, Any, Optional
 from pathlib import Path
 from .base import DataLoader
+from .book_mapping import book_mapper
 
 
 class VariantLoader(DataLoader):
@@ -14,26 +14,28 @@ class VariantLoader(DataLoader):
 
     def __init__(self, data_path: Optional[str] = None):
         super().__init__(data_path)
-        self.dss_path = self.data_path / "dss" / "dss.json"
+        self.dss_books_path = self.data_path / "dss" / "books"
 
-    def load_dss_data(self) -> Dict[str, Any]:
-        """Load the complete DSS data file"""
-        cache_key = "dss_data"
+    def load_dss_book(self, book_key: str) -> Optional[Dict[str, Any]]:
+        """Load a DSS book file by its DSS key."""
+        cache_key = f"dss_book:{book_key}"
         if cache_key in self._cache:
             return self._cache[cache_key]
 
         try:
-            data = self.load_json("dss/dss.json")
+            data = self.load_json(f"dss/books/{book_key}.json")
             self._cache[cache_key] = data
             return data
         except FileNotFoundError:
-            return {}
+            return None
 
     def get_book_variants(self, book_name: str) -> Optional[Dict[str, Any]]:
         """Get all variants for a specific book"""
-        dss_data = self.load_dss_data()
-        books = dss_data.get("books", {})
-        return books.get(book_name)
+        book_key = book_mapper.to_dss_key(book_name)
+        if not book_key:
+            return None
+
+        return self.load_dss_book(book_key)
 
     def get_chapter_variants(self, book_name: str, chapter: int) -> Optional[Dict[str, Any]]:
         """Get all variants for a specific book chapter"""
@@ -69,37 +71,35 @@ class VariantLoader(DataLoader):
         if not verse_data:
             return []
 
+        differences = verse_data.get("differences", [])
         variants = []
-        # DSS structure may contain multiple variants per verse
-        # For now, extract variant information
-        dss_variants = verse_data.get("variants", [])
-
-        for variant in dss_variants:
-            variant_data = {
-                "word_position": variant.get("word_position", 0),
-                "dss_text": variant.get("dss_text", ""),
-                "manuscript": variant.get("manuscript", ""),
-                "commentary": variant.get("commentary")
-            }
-            variants.append(variant_data)
-
-        # If no structured variants, create a single variant from main verse data
-        if not variants and verse_data:
-            variant_data = {
-                "word_position": verse_data.get("word_position", 0),
-                "dss_text": verse_data.get("dss_text", ""),
-                "manuscript": verse_data.get("manuscript", ""),
-                "commentary": verse_data.get("commentary")
-            }
-            variants.append(variant_data)
+        for difference in differences:
+            variants.append({
+                "book": book_name,
+                "chapter": chapter,
+                "verse": verse,
+                "position": difference.get("position", 0),
+                "masoretic_word": difference.get("masoretic_word", ""),
+                "dss_word": difference.get("dss_word", ""),
+                "comment_v2_en": difference.get("comment_v2_en"),
+                "comment_v2_es": difference.get("comment_v2_es"),
+                "comment_v2_he": difference.get("comment_v2_he"),
+                "masoretic_strong": difference.get("masoretic_strong"),
+                "dss_strong": difference.get("dss_strong")
+            })
 
         return variants
 
     def get_available_books(self) -> List[str]:
         """Get list of books that have DSS variants"""
-        dss_data = self.load_dss_data()
-        books = dss_data.get("books", {})
-        return list(books.keys())
+        if not self.dss_books_path.exists():
+            return []
+
+        return sorted(
+            path.stem
+            for path in self.dss_books_path.glob("*.json")
+            if path.is_file()
+        )
 
 
 # Global instance

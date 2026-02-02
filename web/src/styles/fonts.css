@@ -8,7 +8,10 @@
 /* Custom font for Qumran/Dead Sea Scrolls style (fallback to Cardo for simulation) */
 @font-face {
   font-family: 'DeadSeaScrolls-Regular';
-  src: local('Cardo'), local('Times New Roman');
+  src:
+    url('/fonts/Deadseascrolls-Regular.ttf') format('truetype'),
+    local('Cardo'),
+    local('Times New Roman');
   font-style: normal;
   font-weight: 400;
 }

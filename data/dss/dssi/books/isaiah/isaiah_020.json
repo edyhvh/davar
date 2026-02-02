@@ -1,0 +1,208 @@
+{
+  "name": "Isaiah",
+  "file_number": 20,
+  "total_files": 40,
+  "difference_count": 19,
+  "chapters": {
+    "46": {
+      "verses": {
+        "1": {
+          "masoretic_text": "כָּרַ֥ע בֵּל֙ קֹרֵ֣ס נְב֔וֹ הָיוּ֙ עֲצַבֵּיהֶ֔ם לַחַיָּ֖ה וְלַבְּהֵמָ֑ה נְשֻׂאֹתֵיכֶ֣ם עֲמוּס֔וֹת מַשָּׂ֖א לַעֲיֵפָֽה׃",
+          "dss_text": "כרע בל קרס נבו היו עצביהמה לחיה לבהמה נשאותיכמה עמוסות משא לעיפה",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "מַשָּׂ֖א",
+              "dss_word": "משא",
+              "commentary": "4QIsab(vid), Mas, LXX: as a burden upon the weary. 1QIsaa reads משמועיהמה meaning from their report."
+            }
+          ]
+        },
+        "2": {
+          "masoretic_text": "קָרְס֤וּ כָֽרְעוּ֙ יַחְדָּ֔ו לֹ֥א יָכְל֖וּ מַלֵּ֣ט מַשָּׂ֑א וְנַפְשָׁ֖ם בַּשְּׁבִ֥י הָלָֽכָה׃",
+          "dss_text": "קרסו כרעו יחדיו ולוא יוכלו מלט משא ונפשמה בשבי הלכו",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "הלכה",
+              "dss_word": "הלכו",
+              "commentary": "1QIsaa, LXX: they go (LXX: shall be led). 4QIsab and Masoretic read הלכה meaning she goes. The reading of 1QIsaa and LXX corresponds to the מה of ונפשמה; the reading of 4QIsab and Masoretic corresponds to the נפש of the same word."
+            }
+          ]
+        },
+        "3": {
+          "masoretic_text": "שִׁמְע֤וּ אֵלַי֙ בֵּ֣ית יַעֲקֹ֔ב וְכָל־ שְׁאֵרִ֖ית בֵּ֣ית יִשְׂרָאֵ֑ל הַֽעֲמֻסִים֙ מִנִּי־ בֶ֔טֶן הַנְּשֻׂאִ֖ים מִנִּי־ רָֽחַם׃",
+          "dss_text": "שמע אלי בית יעקוב וכול שארית בית ישראל עומסים מני בטן ונושאים מני רחם",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "מִנִּי־",
+              "dss_word": "מני",
+              "commentary": "4QIsab, Mas: from out of. 1QIsaa misspells as ממני."
+            },
+            {
+              "position": 12,
+              "masoretic_word": "הנשאים",
+              "dss_word": "ונושאים",
+              "commentary": "1QIsaa, LXX: and have been brought up. 1QIsab and Masoretic read הנשאים meaning who have been brought up."
+            }
+          ]
+        },
+        "5": {
+          "masoretic_text": "לְמִ֥י תְדַמְי֖וּנִי וְתַשְׁו֑וּ וְתַמְשִׁל֖וּנִי וְנִדְמֶֽה׃",
+          "dss_text": "למי תדמיוני ותשוי ותמשלוני ואדמה",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "ונדמה",
+              "dss_word": "ואדמה",
+              "commentary": "1QIsaa: that I may appear similar? 1QIsab and Masoretic read ונדמה meaning that we may appear similar? LXX reads οι πλανωμενοι meaning those who are deceived; a possible misreading of ונדמה as הנדח."
+            }
+          ]
+        },
+        "6": {
+          "masoretic_text": "הַזָּלִ֤ים זָהָב֙ מִכִּ֔יס וְכֶ֖סֶף בַּקָּנֶ֣ה יִשְׁקֹ֑לוּ יִשְׂכְּר֤וּ צוֹרֵף֙ וְיַעֲשֵׂ֣הוּ אֵ֔ל יִסְגְּד֖וּ אַף־ יִֽשְׁתַּחֲוּֽוּ׃",
+          "dss_text": "הזלים זהב מכיס וכסף בקנה ישקולו וישכרו צורף ויעשה אל ויסגודו אף ישתחו",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "ויעשהו",
+              "dss_word": "ויעשה",
+              "commentary": "1QIsaa, LXX: and he makes (LXX: and they made). 1QIsab and Masoretic read ויעשהו meaning and they make it."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "יִ֠שָּׂאֻהוּ עַל־ כָּתֵ֨ף יִסְבְּלֻ֜הוּ וְיַנִּיחֻ֤הוּ תַחְתָּיו֙ וְיַֽעֲמֹ֔ד מִמְּקוֹמ֖וֹ לֹ֣א יָמִ֑ישׁ אַף־ יִצְעַ֤ק אֵלָיו֙ וְלֹ֣א יַעֲנֶ֔ה מִצָּרָת֖וֹ לֹ֥א יוֹשִׁיעֶֽנּוּ׃",
+          "dss_text": "וישאוהו על כתף יסבלוהו ויניחוהו תחתיו ויעמוד ממקומו לוא ימיש אף יזעק אליו ולוא יענה מצרתו לוא יושיענו",
+          "differences": [
+            {
+              "position": 13,
+              "masoretic_word": "אֵלָיו֙",
+              "dss_word": "אליו",
+              "commentary": "1QIsab, Mas, LXX: to it. 1QIsaa reads עליו meaning upon it, however also is used in context to indicate towards something as well."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "זִכְר֥וּ רִאשֹׁנ֖וֹת מֵעוֹלָ֑ם כִּ֣י אָנֹכִ֥י אֵל֙ וְאֵ֣ין ע֔וֹד אֱלֹהִ֖ים וְאֶ֥פֶס כָּמֽוֹנִי׃",
+          "dss_text": "זכורו רישונות מעולם כיא אני אל ואין עוד אלוהים ואפס כמוני",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "אנכי",
+              "dss_word": "אני",
+              "commentary": "1QIsaa, 4QIsac: I am. 1QIsab and Masoretic read אנכי, an alternative, but just as common spelling meaning the same."
+            }
+          ]
+        },
+        "10": {
+          "masoretic_text": "מַגִּ֤יד מֵֽרֵאשִׁית֙ אַחֲרִ֔ית וּמִקֶּ֖דֶם אֲשֶׁ֣ר לֹא־ נַעֲשׂ֑וּ אֹמֵר֙ עֲצָתִ֣י תָק֔וּם וְכָל־ חֶפְצִ֖י אֶעֱשֶֽׂה׃",
+          "dss_text": "מגיד מראישית אחרות ומקדם אשר לוא נעשו אמר עצתי תקום וכול חפצי אעשה",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "אחרית",
+              "dss_word": "אחרונות",
+              "commentary": "1QIsaa, 1QIsab: things to follow. 4QIsac reads אחרונות meaning the latter things. Masoretic reads אחרית meaning the end. LXX reads τα εσχατα meaning the final things, which could support the reading of either 1Isaa/1QIsab or 4QIsac."
+            },
+            {
+              "position": 13,
+              "masoretic_word": "אֶעֱשֶֽׂה׃",
+              "dss_word": "יעשה",
+              "commentary": "1QIsab, 4QIsac, Mas, LXX: I shall accomplish. 1QIsaa reads יעשה meaning he shall accomplish. As with v9 above, a probable spelling mistake of איעשה."
+            }
+          ]
+        },
+        "11": {
+          "masoretic_text": "קֹרֵ֤א מִמִּזְרָח֙ עַ֔יִט מֵאֶ֥רֶץ מֶרְחָ֖ק אִ֣ישׁ אַף־ דִּבַּ֙רְתִּי֙ אַף־ אֲבִיאֶ֔נָּה יָצַ֖רְתִּי אַף־ אֶעֱשֶֽׂנָּה׃",
+          "dss_text": "קורא ממזרח עיט מארץ מרחק איש עצתו אף דברתי אף אביאנה יצרתי אף אעשנה",
+          "differences": [
+            {
+              "position": 12,
+              "masoretic_word": "אַף־",
+              "dss_word": "יצרתי",
+              "commentary": "1QIsab, 4QIsac, Mas, LXX: I formed it (the it implicit). 1QIsaa reads יצרתיה meaning I formed it, with the it explicit."
+            }
+          ]
+        },
+        "13": {
+          "masoretic_text": "קֵרַ֤בְתִּי צִדְקָתִי֙ לֹ֣א תִרְחָ֔ק וּתְשׁוּעָתִ֖י לֹ֣א תְאַחֵ֑ר וְנָתַתִּ֤י בְצִיּוֹן֙ תְּשׁוּעָ֔ה לְיִשְׂרָאֵ֖ל תִּפְאַרְתִּֽי׃",
+          "dss_text": "הקרבתי צדקתי ולוא תרחק ותשועתי לא תאחר ונתתי בציון תשועה ולישראל תפארתי",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "קרבתי",
+              "dss_word": "קרובה",
+              "commentary": "4QIsac: I bring near (hifil form). 1QIsab and Masoretic read קרבתי also meaning the same, however being in the Piel form. 1QIsaa reads קרובה meaning is near. LXX reads ηγγισα meaning I have brought near. The reading of the LXX could support either the reading of 4QIsac or 1QIsab/Masoretic."
+            },
+            {
+              "position": 3,
+              "masoretic_word": "לא",
+              "dss_word": "ולוא",
+              "commentary": "1QIsaa: and is not. 1QIsab and Masoretic read לא meaning is not. LXX omits this and the next word (תרחק)."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "לֹ֣א",
+              "dss_word": "לא",
+              "commentary": "1QIsab, Mas, LXX: will not. 1QIsaa reads ולוא meaning also will not."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "וְנָתַתִּ֤י",
+              "dss_word": "ונתתי",
+              "commentary": "1QIsab, 4QIsac, Mas: And I shall place. 1QIsaa reads נתתי meaning I shall place. LXX supports the reading of 1QIsaa: δεδωκα."
+            },
+            {
+              "position": 11,
+              "masoretic_word": "לישראל",
+              "dss_word": "ולישראל",
+              "commentary": "1QIsaa, 4QIsac: and to Israel. 1QIsab, 4QIsad and Masoretic read לישראל meaning to Israel. LXX supports the reading of 1QIsab/4QIsad/Masoretic: τω Ἰσραηλ."
+            }
+          ]
+        }
+      }
+    },
+    "47": {
+      "verses": {
+        "1": {
+          "masoretic_text": "רְדִ֣י ׀ וּשְׁבִ֣י עַל־ עָפָ֗ר בְּתוּלַת֙ בַּת־ בָּבֶ֔ל שְׁבִי־ לָאָ֥רֶץ אֵין־ כִּסֵּ֖א בַּת־ כַּשְׂדִּ֑ים כִּ֣י לֹ֤א תוֹסִ֙יפִי֙ יִקְרְאוּ־ לָ֔ךְ רַכָּ֖ה וַעֲנֻגָּֽה׃",
+          "dss_text": "רדי ושבי על עפר בתולת בת בבל שבי לארץ אין כסא בת כשדיים כיא לוא תוסיפי יקראו לך רכה וענוגה",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "לָאָ֥רֶץ",
+              "dss_word": "לארץ",
+              "commentary": "1QIsab, Mas, LXX: to the ground. 1QIsaa reads על הארץ meaning upon the ground."
+            }
+          ]
+        },
+        "2": {
+          "masoretic_text": "קְחִ֥י רֵחַ֖יִם וְטַ֣חֲנִי קָ֑מַח גַּלִּ֨י צַמָּתֵ֧ךְ חֶשְׂפִּי־ שֹׁ֛בֶל גַּלִּי־ שׁ֖וֹק עִבְרִ֥י נְהָרֽוֹת׃",
+          "dss_text": "קחי רחים וטחני קמח גלי צמתך חשופי שבל גלי שוק עבורי נהרות",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "שֹׁ֛בֶל",
+              "dss_word": "שוליך",
+              "commentary": "1QIsab, 4QIsad, Mas: skirt. 1QIsaa reads שוליך meaning your robes. LXX reads τας πολιας meaning the grey hairs; appears to be a misreading conflation of חשפי שבל to השיבה."
+            }
+          ]
+        },
+        "6": {
+          "masoretic_text": "קָצַ֣פְתִּי עַל־ עַמִּ֗י חִלַּ֙לְתִּי֙ נַחֲלָתִ֔י וָאֶתְּנֵ֖ם בְּיָדֵ֑ךְ לֹא־ שַׂ֤מְתְּ לָהֶם֙ רַחֲמִ֔ים עַל־ זָקֵ֕ן הִכְבַּ֥דְתְּ עֻלֵּ֖ךְ מְאֹֽד׃",
+          "dss_text": "קצפתי על עמי חללתי נחלתי ואתנם בידך לוא שמתי להמה רחמים על זקן הכבדתי עולך מואדה",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "חִלַּ֙לְתִּי֙",
+              "dss_word": "חללתי",
+              "commentary": "1QIsab, Mas, LXX: I profaned. 1QIsaa reads וחללתי meaning and I profaned."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

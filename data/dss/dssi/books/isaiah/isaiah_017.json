@@ -1,0 +1,196 @@
+{
+  "name": "Isaiah",
+  "file_number": 17,
+  "total_files": 40,
+  "difference_count": 19,
+  "chapters": {
+    "42": {
+      "verses": {
+        "4": {
+          "masoretic_text": "לֹ֤א יִכְהֶה֙ וְלֹ֣א יָר֔וּץ עַד־ יָשִׂ֥ים בָּאָ֖רֶץ מִשְׁפָּ֑ט וּלְתוֹרָת֖וֹ אִיִּ֥ים יְיַחֵֽילוּ׃",
+          "dss_text": "ולוא יכהה ולוא ירוץ עד ישים בארץ משפט ולתורתיו איים יחילו",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "לא",
+              "dss_word": "ולוא",
+              "commentary": "1QIsaa: And not. 4QIsab and Masoretic have לא meaning Not."
+            },
+            {
+              "position": 11,
+              "masoretic_word": "ייחילו",
+              "dss_word": "ינחילו",
+              "commentary": "4QIsah: they wait (perfect). 1QIsaa reads ינחילו meaning they inherit. Masoretic reads ייחילו which is the imperfect form meaning the same as 4QIsah. LXX reads ελπιουσιν also meaning they wait, however this is unable to help determine between the imperfect and perfect form of יחל. See here."
+            }
+          ]
+        },
+        "6": {
+          "masoretic_text": "אֲנִ֧י יְהוָ֛ה קְרָאתִ֥יךָֽ בְצֶ֖דֶק וְאַחְזֵ֣ק בְּיָדֶ֑ךָ וְאֶצָּרְךָ֗ וְאֶתֶּנְךָ֛ לִבְרִ֥ית עָ֖ם לְא֥וֹר גּוֹיִֽם׃",
+          "dss_text": "אני יהוה קרתיכה בצדק ואחזיקה בידכה ואצורכה ואתנכה לברית עם לאור גואים",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "יְהוָ֛ה",
+              "dss_word": "יהוה",
+              "commentary": "4QIsah, Mas, LXX (+ ο θεος): Yahweh. 1QIsaa omitted originally, however there are some letters written above the following word that are unable to be read properly. This may’ve been an amendment by the scribe or a corrector that restored יהוה."
+            },
+            {
+              "position": 10,
+              "masoretic_word": "עָ֖ם",
+              "dss_word": "עם",
+              "commentary": "1QIsaa, Mas, LXX: people. 4QIsah reads עולם meaning everlasting."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "לִפְקֹ֖חַ עֵינַ֣יִם עִוְר֑וֹת לְהוֹצִ֤יא מִמַּסְגֵּר֙ אַסִּ֔יר מִבֵּ֥ית כֶּ֖לֶא יֹ֥שְׁבֵי חֹֽשֶׁךְ׃",
+          "dss_text": "לפקוח עינים עורות להוציא ממסגר אסור ומבית כלא יושבי חושך",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "אסיר",
+              "dss_word": "אסור",
+              "commentary": "1QIsaa, LXX: those bound. 4QIsah and Masoretic read אסיר meaning prisoner."
+            },
+            {
+              "position": 7,
+              "masoretic_word": "מבית",
+              "dss_word": "ומבית",
+              "commentary": "1QIsaa, LXX: and from the house. 4QIsah and Masoretic read מבית meaning from the house."
+            }
+          ]
+        },
+        "8": {
+          "masoretic_text": "אֲנִ֥י יְהוָ֖ה ה֣וּא שְׁמִ֑י וּכְבוֹדִי֙ לְאַחֵ֣ר לֹֽא־ אֶתֵּ֔ן וּתְהִלָּתִ֖י לַפְּסִילִֽים׃",
+          "dss_text": "אני יהוה הואה שמי וכבודי לאחר לוא אתן ותהלתי לפסילים",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "שְׁמִ֑י",
+              "dss_word": "שמי",
+              "commentary": "4QIsah, Mas, LXX: is My Name. 1QIsaa reads ושמי meaning and My Name."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "הָרִֽאשֹׁנ֖וֹת הִנֵּה־ בָ֑אוּ וַֽחֲדָשׁוֹת֙ אֲנִ֣י מַגִּ֔יד בְּטֶ֥רֶם תִּצְמַ֖חְנָה אַשְׁמִ֥יע אֶתְכֶֽם׃",
+          "dss_text": "הרישונות הנה באו וחדשות אני מגיד בטרם תצמחנה אשמיע אתכמה",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "וַֽחֲדָשׁוֹת֙",
+              "dss_word": "וחדשות",
+              "commentary": "4QIsab, 4QIsah, Mas, LXX: and new things. 1QIsaa reads והחדשות meaning and the new things."
+            }
+          ]
+        },
+        "10": {
+          "masoretic_text": "שִׁ֤ירוּ לַֽיהוָה֙ שִׁ֣יר חָדָ֔שׁ תְּהִלָּת֖וֹ מִקְצֵ֣ה הָאָ֑רֶץ יוֹרְדֵ֤י הַיָּם֙ וּמְלֹא֔וֹ אִיִּ֖ים וְיֹשְׁבֵיהֶֽם׃",
+          "dss_text": "שירו ליהוה שיר חדש תהלתו מקצה הארץ יורדי הים ומלואו איים ויושביהם",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "תְּהִלָּת֖וֹ",
+              "dss_word": "תהלתו",
+              "commentary": "4QIsab, 4QIsah, Mas, LXX: praise Him. 1QIsaa reads ותהלתו meaning and praise Him."
+            }
+          ]
+        },
+        "22": {
+          "masoretic_text": "וְהוּא֮ עַם־ בָּז֣וּז וְשָׁסוּי֒ הָפֵ֤חַ בַּֽחוּרִים֙ כֻּלָּ֔ם וּבְבָתֵּ֥י כְלָאִ֖ים הָחְבָּ֑אוּ הָי֤וּ לָבַז֙ וְאֵ֣ין מַצִּ֔יל מְשִׁסָּ֖ה וְאֵין־ אֹמֵ֥ר הָשַֽׁב׃",
+          "dss_text": "והואה עם בזוז ושסוי הפח בחורים כולם ובבתי כלאים הוחבאו היו לבז ואין מציל למשיסה ואין אומר השב",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "וּבְבָתֵּ֥י",
+              "dss_word": "ובבתי",
+              "commentary": "1QIsaa, Mas, LXX: and in houses. 4QIsag reads ובבית meaning and in a house."
+            }
+          ]
+        },
+        "23": {
+          "masoretic_text": "מִ֥י בָכֶ֖ם יַאֲזִ֣ין זֹ֑את יַקְשִׁ֥ב וְיִשְׁמַ֖ע לְאָחֽוֹר׃",
+          "dss_text": "מיא בכמה ויאזין זואת ויקשב וישמע לאחור",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "יאזין",
+              "dss_word": "ויאזין",
+              "commentary": "1QIsaa, LXX: that shall heed. 4QIsag and Masoretic read יאזין meaning shall heed."
+            }
+          ]
+        },
+        "25": {
+          "masoretic_text": "וַיִּשְׁפֹּ֤ךְ עָלָיו֙ חֵמָ֣ה אַפּ֔וֹ וֶעֱז֖וּז מִלְחָמָ֑ה וַתְּלַהֲטֵ֤הוּ מִסָּבִיב֙ וְלֹ֣א יָדָ֔ע וַתִּבְעַר־ בּ֖וֹ וְלֹא־ יָשִׂ֥ים עַל־ לֵֽב׃",
+          "dss_text": "וישפוך עליו חמת אפוא ועוזז מלחמה ותלהטהו מסביב ולוא ידע ותבער בו ולוא ישים על לב",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "חמה",
+              "dss_word": "חמת",
+              "commentary": "1QIsaa, LXX: the wrath of (construct form). 4QIsag and Masoretic read the absolute form חמה meaning the wrath."
+            }
+          ]
+        }
+      }
+    },
+    "43": {
+      "verses": {
+        "3": {
+          "masoretic_text": "כִּ֗י אֲנִי֙ יְהוָ֣ה אֱלֹהֶ֔יךָ קְד֥וֹשׁ יִשְׂרָאֵ֖ל מוֹשִׁיעֶ֑ךָ נָתַ֤תִּי כָפְרְךָ֙ מִצְרַ֔יִם כּ֥וּשׁ וּסְבָ֖א תַּחְתֶּֽיךָ׃",
+          "dss_text": "כי אני יהוה אלוהיכה קדוש ישראל מושיעך נתתי מצרים כופרך כוש וסבא תחתיך",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "כִּ֗י",
+              "dss_word": "כי",
+              "commentary": "1QIsab, 4QIsag, Mas, LXX: For. 1QIsaa omits this."
+            },
+            {
+              "position": 7,
+              "masoretic_word": "מוֹשִׁיעֶ֑ךָ",
+              "dss_word": "מושיעך",
+              "commentary": "1QIsab, Mas, LXX: your saviour. 1QIsaa has גואלך meaning your redeemer."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "נָתַ֤תִּי",
+              "dss_word": "נתתי",
+              "commentary": "1QIsab, Mas, LXX: I give. 1QIsaa has ונתתי meaning And I give."
+            },
+            {
+              "position": 9,
+              "masoretic_word": "כָפְרְךָ֙",
+              "dss_word": "מצרים",
+              "commentary": "1QIsaa: Egypt as a ransom to you. 1QIsab(vid), Masoretic and LXX reverse these words. No change in meaning."
+            },
+            {
+              "position": 12,
+              "masoretic_word": "וּסְבָ֖א",
+              "dss_word": "וסבא",
+              "commentary": "1QIsab, 4QIsag, Mas, LXX: and Seba. 1QIsaa has וסבאים meaning people of Seba."
+            }
+          ]
+        },
+        "4": {
+          "masoretic_text": "מֵאֲשֶׁ֨ר יָקַ֧רְתָּ בְעֵינַ֛י נִכְבַּ֖דְתָּ וַאֲנִ֣י אֲהַבְתִּ֑יךָ וְאֶתֵּ֤ן אָדָם֙ תַּחְתֶּ֔יךָ וּלְאֻמִּ֖ים תַּ֥חַת נַפְשֶֽׁךָ׃",
+          "dss_text": "מאשר יקרתה בעיני נכבדתה ואני אהבתיכה אתן האדם תחתיכה ולאמים תחת נפשכה",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "ואתן",
+              "dss_word": "ואתנה",
+              "commentary": "1QIsaa: I give. Masoretic reads ואתן meaning And I give. 1QIsab reads ואתנה meaning And I gave."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "אדם",
+              "dss_word": "האדם",
+              "commentary": "1QIsaa: the people. 1QIsab and Masoretic read אדם meaning people."
+            }
+          ]
+        }
+      }
+    }
+  }
+}
