@@ -44,8 +44,6 @@ GROK_MODEL = 'grok-4'  # Fastest model: $0.10/1M input, $0.30/1M output
 LEXICON_DIR = PROJECT_ROOT / 'data' / 'dict' / 'lexicon'
 ROOTS_FILE = LEXICON_DIR / 'roots.json'
 WORDS_FILE = LEXICON_DIR / 'words.json'
-ROOTS_PRETTY_FILE = LEXICON_DIR / 'roots.pretty.json'
-WORDS_PRETTY_FILE = LEXICON_DIR / 'words.pretty.json'
 
 # Translation settings (reuse from parent config)
 DEFAULT_BATCH_SIZE = 50  # Number of definitions per API call

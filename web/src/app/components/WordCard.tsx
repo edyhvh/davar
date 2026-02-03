@@ -28,6 +28,7 @@ interface WordCardProps {
   qumranRootMeaning?: string;
   qumranCommentary?: string;
   hasQumranVariant?: boolean;
+  showQumran?: boolean;
   transliteration?: string;
   meanings: string[];
   root?: string;
@@ -67,6 +68,7 @@ export function WordCard({
   qumranRootMeaning,
   qumranCommentary,
   hasQumranVariant = false,
+  showQumran = false,
   transliteration,
   meanings,
   root,
@@ -139,21 +141,23 @@ export function WordCard({
 
   const hasRootInfo = Boolean(
     displayedData.root ||
-      displayedData.rootTransliteration ||
-      displayedData.rootMeaning,
+    displayedData.rootTransliteration ||
+    displayedData.rootMeaning,
   );
   const hasQumranRootInfo = Boolean(
     displayedData.qumranRoot ||
-      displayedData.qumranRootTransliteration ||
-      displayedData.qumranRootMeaning,
+    displayedData.qumranRootTransliteration ||
+    displayedData.qumranRootMeaning,
   );
   const showQumranTab = hasQumranVariant;
+  const defaultTab = showQumran && showQumranTab ? "qumran" : "masoretic";
   const isQumranTab = showQumranTab && activeTab === "qumran";
   const activeStrongNumber = isQumranTab
     ? displayedData.qumranStrong
     : strongNumber;
-  const masoreticWordFontSize = "64px";
-  const qumranWordFontSize = "70px";
+  const masoreticWordFontSizePx = 64;
+  const masoreticWordFontSize = `${masoreticWordFontSizePx}px`;
+  const qumranWordFontSize = `${Math.round(masoreticWordFontSizePx * 1.5)}px`;
 
   useEffect(() => {
     const loadPrefixes = async () => {
@@ -199,9 +203,10 @@ export function WordCard({
       displayedData.qumranRootMeaning !== qumranRootMeaning ||
       displayedData.qumranRootTransliteration !== qumranRootTransliteration ||
       displayedData.qumranCommentary !== qumranCommentary ||
-      (displayedData.prefixes ?? []).join("|") !==
-        (prefixes ?? []).join("|") ||
-      displayedData.instances.map((item) => `${item.verse}:${item.text}`).join("|") !==
+      (displayedData.prefixes ?? []).join("|") !== (prefixes ?? []).join("|") ||
+      displayedData.instances
+        .map((item) => `${item.verse}:${item.text}`)
+        .join("|") !==
         instances.map((item) => `${item.verse}:${item.text}`).join("|");
 
     if (!hasChanged) return undefined;
@@ -285,8 +290,18 @@ export function WordCard({
 
   useEffect(() => {
     if (tabResetKey === undefined) return;
-    setActiveTab("masoretic");
-  }, [tabResetKey]);
+    setActiveTab(defaultTab);
+  }, [defaultTab, tabResetKey]);
+
+  useEffect(() => {
+    setActiveTab(defaultTab);
+  }, [defaultTab, wordFromVerse, strongNumber, word]);
+
+  useEffect(() => {
+    if (showQumran && showQumranTab) {
+      setActiveTab("qumran");
+    }
+  }, [showQumran, showQumranTab]);
 
   useEffect(() => {
     if (!hasQumranVariant && activeTab === "qumran") {
@@ -479,9 +494,7 @@ export function WordCard({
               {displayedData.meanings.length > 0 ? (
                 <div className="space-y-2 text-center">
                   {displayedData.meanings
-                    .flatMap((m) =>
-                      m ? m.split(/[,;]\s*/).map((s) => s.trim()) : [],
-                    )
+                    .filter((m) => m && m.trim())
                     .map((m, i) => (
                       <div key={i} style={{ whiteSpace: "normal" }}>
                         {formatMeaning(m).replace(/\//g, "")}
@@ -713,9 +726,7 @@ export function WordCard({
               ) : displayedData.qumranMeanings?.length ? (
                 <div className="space-y-2 text-center">
                   {displayedData.qumranMeanings
-                    .flatMap((m) =>
-                      m ? m.split(/[,;]\s*/).map((s) => s.trim()) : [],
-                    )
+                    .filter((m) => m && m.trim())
                     .map((m, i) => (
                       <div key={i} style={{ whiteSpace: "normal" }}>
                         {formatMeaning(m).replace(/\//g, "")}
@@ -784,9 +795,10 @@ export function WordCard({
                       }}
                     >
                       {normalizeHebrewDisplay(
-                        normalizeHebrew(
-                          displayedData.qumranRoot,
-                        ).replace(/\//g, ""),
+                        normalizeHebrew(displayedData.qumranRoot).replace(
+                          /\//g,
+                          "",
+                        ),
                       )}
                     </div>
                   ) : (
