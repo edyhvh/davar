@@ -257,13 +257,19 @@ Input definitions:
 
         # Grok doesn't have a separate batch API like Gemini
         # Process synchronously
-        return self._translate_batch_sync(texts, target_lang, retry_count)
+        return self._translate_batch_sync(
+            texts,
+            target_lang,
+            retry_count,
+            batch_index=batch_index,
+        )
 
     def _translate_batch_sync(
         self,
         texts: List[str],
         target_lang: str,
-        retry_count: int = 0
+        retry_count: int = 0,
+        batch_index: Optional[int] = None,
     ) -> List[str]:
         """
         Synchronous batch translation using Grok API.
@@ -272,6 +278,7 @@ Input definitions:
             texts: List of English definition texts to translate
             target_lang: Target language code (e.g., 'es', 'pt')
             retry_count: Current retry attempt
+            batch_index: Optional batch index for logging
 
         Returns:
             List of translated texts in the same order as input
@@ -571,7 +578,12 @@ Input definitions:
                 wait_time = RETRY_BACKOFF_BASE ** retry_count
                 logger.info(f"Retrying in {wait_time} seconds... (attempt {retry_count + 1}/{MAX_RETRIES})")
                 time.sleep(wait_time)
-                return self.translate_batch(texts, target_lang, retry_count + 1)
+                return self.translate_batch(
+                    texts,
+                    target_lang,
+                    retry_count + 1,
+                    batch_index=batch_index,
+                )
             else:
                 raise ValueError(
                     f"Failed to parse translation response after {MAX_RETRIES} retries: {e}"
@@ -601,7 +613,12 @@ Input definitions:
                     wait_time = RETRY_BACKOFF_BASE ** retry_count
                 logger.info(f"Retrying in {wait_time:.1f} seconds... (attempt {retry_count + 1}/{MAX_RETRIES})")
                 time.sleep(wait_time)
-                return self._translate_batch_sync(texts, target_lang, retry_count + 1)
+                return self._translate_batch_sync(
+                    texts,
+                    target_lang,
+                    retry_count + 1,
+                    batch_index=batch_index,
+                )
             else:
                 raise ValueError(
                     f"Translation failed after {MAX_RETRIES} retries: {e}"

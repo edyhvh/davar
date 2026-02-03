@@ -180,16 +180,13 @@ class MismatchFixer:
             logger.error(f"Invalid JSON in {file_path}: {e}")
             raise
 
-    def _save_json_file(self, data: Dict, file_path: Path, pretty: bool = False):
-        """Save JSON file."""
+    def _save_json_file(self, data: Dict, file_path: Path):
+        """Save JSON file in pretty format."""
         import json
         file_path.parent.mkdir(parents=True, exist_ok=True)
 
         with open(file_path, 'w', encoding='utf-8') as f:
-            if pretty:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-            else:
-                json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
+            json.dump(data, f, ensure_ascii=False, indent=2)
 
     def _find_problems_in_file(self, file_path: Path, file_type: str) -> List[DefinitionRef]:
         """
@@ -210,7 +207,8 @@ class MismatchFixer:
 
             for def_idx, defn in enumerate(definitions):
                 # Check if translation is missing or empty
-                if self.text_field not in defn or not defn[self.text_field].strip():
+                existing_translation = defn.get(self.text_field)
+                if not isinstance(existing_translation, str) or not existing_translation.strip():
                     # Check if we have English text to translate from
                     text_en = defn.get('text_en') or defn.get('text', '')
                     if text_en.strip():
@@ -238,7 +236,7 @@ class MismatchFixer:
         Returns:
             Statistics dictionary
         """
-        from .config import ROOTS_FILE, WORDS_FILE, ROOTS_PRETTY_FILE, WORDS_PRETTY_FILE
+        from .config import ROOTS_FILE, WORDS_FILE
 
         stats = {
             'roots': {'problems_found': 0, 'fixed': 0},
@@ -250,11 +248,11 @@ class MismatchFixer:
 
         files_to_process = []
         if file_filter == 'roots' or file_filter is None:
-            files_to_process.append(('roots', ROOTS_FILE, ROOTS_PRETTY_FILE))
+            files_to_process.append(('roots', ROOTS_FILE))
         if file_filter == 'words' or file_filter is None:
-            files_to_process.append(('words', WORDS_FILE, WORDS_PRETTY_FILE))
+            files_to_process.append(('words', WORDS_FILE))
 
-        for file_type, file_path, pretty_file_path in files_to_process:
+        for file_type, file_path in files_to_process:
             logger.info(f"Scanning {file_path} for problems...")
             problems = self._find_problems_in_file(file_path, file_type)
             stats[file_type]['problems_found'] = len(problems)
@@ -333,11 +331,9 @@ class MismatchFixer:
             # Save the updated file
             if not dry_run and fixed_count > 0:
                 if file_type == 'roots':
-                    self._save_json_file(data, ROOTS_FILE, pretty=False)
-                    self._save_json_file(data, ROOTS_PRETTY_FILE, pretty=True)
+                    self._save_json_file(data, ROOTS_FILE)
                 elif file_type == 'words':
-                    self._save_json_file(data, WORDS_FILE, pretty=False)
-                    self._save_json_file(data, WORDS_PRETTY_FILE, pretty=True)
+                    self._save_json_file(data, WORDS_FILE)
 
                 logger.info(f"Saved updated {file_type} files")
 

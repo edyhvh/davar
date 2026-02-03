@@ -662,14 +662,7 @@ export const WordAnalysisBottomSheet = ({
       }
     }
 
-    const expanded = rawMeanings.flatMap((meaning) =>
-      meaning
-        .split(/[,;]\s*/)
-        .map((item) => item.trim())
-        .filter(Boolean),
-    );
-
-    const formatted = expanded.map((item) => formatMeaning(item));
+    const formatted = rawMeanings.map((item) => formatMeaning(item));
     return formatted.length ? formatted : ["—"];
   }, [lexiconEntry, word, language]);
 
@@ -691,14 +684,7 @@ export const WordAnalysisBottomSheet = ({
       .map((item) => (item.text ? normalizeForDisplay(item.text) : ""))
       .filter(Boolean);
 
-    const expanded = rawMeanings.flatMap((meaning) =>
-      meaning
-        .split(/[,;]\s*/)
-        .map((item) => item.trim())
-        .filter(Boolean),
-    );
-
-    const formatted = expanded.map((item) => formatMeaning(item));
+    const formatted = rawMeanings.map((item) => formatMeaning(item));
     return formatted.length ? formatted : ["—"];
   }, [dssLexiconEntry]);
 

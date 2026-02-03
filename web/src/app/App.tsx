@@ -1168,6 +1168,7 @@ export default function App() {
                               dssAnalysisForCard?.root_definitions?.[0]?.text
                             }
                             hasQumranVariant={hasQumranVariant}
+                            showQumran={showQumran}
                             transliteration={wordTransliteration}
                             meanings={wordMeanings}
                             root={wordAnalysisForCard?.root}
@@ -1277,6 +1278,7 @@ export default function App() {
                   selectedDssAnalysis?.root_definitions?.[0]?.text
                 }
                 hasQumranVariant={hasQumranVariant}
+                showQumran={showQumran}
             transliteration={getTransliterationForLanguage(selectedWord)}
             meanings={wordMeanings}
             root={selectedWordAnalysis?.root}
