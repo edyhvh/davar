@@ -569,3 +569,59 @@ class StatisticsCollector:
         
         print(f"Elapsed Time: {self.get_elapsed_time():.1f}s")
         print('='*60)
+
+
+# ============================================================================
+# SHARED DATA LOADERS
+# ============================================================================
+
+def load_strongs_data() -> Dict:
+    """
+    Load Strong's dictionary data.
+    
+    Returns:
+        Dictionary of Strong's entries keyed by Strong's number
+    """
+    from config import Config
+    config = Config()
+    
+    if config.STRONGS_FILE.exists():
+        return load_json(config.STRONGS_FILE)
+    return {}
+
+
+def load_strong_refs() -> Dict:
+    """
+    Load Strong's references data.
+    
+    Returns:
+        Dictionary of Strong's references keyed by Strong's number
+    """
+    from config import Config
+    config = Config()
+    
+    if config.STRONG_REFS_FILE.exists():
+        with open(config.STRONG_REFS_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {}
+
+
+def load_bdb_xml():
+    """
+    Load BDB XML file.
+    
+    Returns:
+        XML root element or None if file not found/unparseable
+    """
+    from config import Config
+    config = Config()
+    
+    if not config.BDB_XML.exists():
+        return None
+    
+    try:
+        import xml.etree.ElementTree as ET
+        tree = ET.parse(config.BDB_XML)
+        return tree.getroot()
+    except Exception:
+        return None

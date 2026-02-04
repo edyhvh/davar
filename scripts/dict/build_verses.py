@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from config import config
 from book_mappings import BookMapper
 from strong_processor import StrongProcessor
-from morphus_loader import MorphusLoader
+from morphhb import MorphusLoader
 from verse_processor import VerseProcessor
 from utils import save_json_minified
 

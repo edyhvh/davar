@@ -11,7 +11,7 @@ Use this before running transliteration or other operations that modify individu
 import json
 import sys
 from pathlib import Path
-from typing import Dict
+from typing import Dict, Optional
 
 # Add current directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent))
@@ -92,6 +92,93 @@ def sync_file_type(file_type: str) -> None:
     print(f"   ⏭️  Skipped (not found): {skipped}")
     if errors > 0:
         print(f"   ❌ Errors: {errors}")
+
+
+def export_translations_backup(output_file: Optional[str] = None, verbose: bool = False) -> int:
+    """
+    Export all translations from consolidated files to a backup JSON file.
+    
+    This creates a translations.json file with the format:
+    {
+        "H1:1": {"es": "...", "pt": "..."},
+        "H1:2": {"es": "..."},
+        ...
+    }
+    
+    Args:
+        output_file: Path to output file (default: data/dict/lexicon/translations.json)
+        verbose: Enable verbose output
+        
+    Returns:
+        Exit code (0 for success)
+    """
+    if output_file is None:
+        output_file_path = config.LEXICON_DIR / "translations.json"
+    else:
+        output_file_path = Path(output_file)
+    
+    translations = {}
+    
+    # Process roots.json
+    roots_file = config.LEXICON_DIR / "roots.json"
+    if roots_file.exists():
+        if verbose:
+            print(f"📖 Processing {roots_file}...")
+        
+        with roots_file.open("r", encoding="utf-8") as f:
+            roots_data = json.load(f)
+        
+        for strong_number, entry in roots_data.items():
+            if "definitions" in entry:
+                for i, definition in enumerate(entry["definitions"]):
+                    key = f"{strong_number}:{i+1}"
+                    
+                    # Extract translations
+                    trans_entry = {}
+                    if "text_es" in definition and definition["text_es"]:
+                        trans_entry["es"] = definition["text_es"]
+                    if "text_pt" in definition and definition["text_pt"]:
+                        trans_entry["pt"] = definition["text_pt"]
+                    
+                    if trans_entry:
+                        translations[key] = trans_entry
+    
+    # Process words.json
+    words_file = config.LEXICON_DIR / "words.json"
+    if words_file.exists():
+        if verbose:
+            print(f"📖 Processing {words_file}...")
+        
+        with words_file.open("r", encoding="utf-8") as f:
+            words_data = json.load(f)
+        
+        for strong_number, entry in words_data.items():
+            if "definitions" in entry:
+                for i, definition in enumerate(entry["definitions"]):
+                    key = f"{strong_number}:{i+1}"
+                    
+                    # Extract translations
+                    trans_entry = {}
+                    if "text_es" in definition and definition["text_es"]:
+                        trans_entry["es"] = definition["text_es"]
+                    if "text_pt" in definition and definition["text_pt"]:
+                        trans_entry["pt"] = definition["text_pt"]
+                    
+                    if trans_entry:
+                        translations[key] = trans_entry
+    
+    # Save translations backup
+    output_file_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    if verbose:
+        print(f"💾 Saving to {output_file_path}...")
+    
+    with output_file_path.open("w", encoding="utf-8") as f:
+        json.dump(translations, f, ensure_ascii=False, indent=2)
+    
+    print(f"✅ Exported {len(translations)} translation entries to {output_file_path}")
+    
+    return 0
 
 
 def main():
