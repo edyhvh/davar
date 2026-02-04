@@ -1162,22 +1162,28 @@ export default function App() {
                             qumranCommentary={dssCommentary}
                             qumranRoot={dssAnalysisForCard?.root}
                             qumranRootTransliteration={
-                              dssAnalysisForCard?.root_strong
+                              language === 'en' 
+                                ? dssAnalysisForCard?.root_translit_en
+                                : dssAnalysisForCard?.root_translit_es
                             }
                             qumranRootMeaning={
                               dssAnalysisForCard?.root_definitions?.[0]?.text
                             }
+                            qumranRootStrongNumber={dssAnalysisForCard?.root_strong}
                             hasQumranVariant={hasQumranVariant}
                             showQumran={showQumran}
                             transliteration={wordTransliteration}
                             meanings={wordMeanings}
                             root={wordAnalysisForCard?.root}
                             rootTransliteration={
-                              wordAnalysisForCard?.root_strong
+                              language === 'en'
+                                ? wordAnalysisForCard?.root_translit_en
+                                : wordAnalysisForCard?.root_translit_es
                             }
                             rootMeaning={
                               wordAnalysisForCard?.root_definitions?.[0]?.text
                             }
+                            rootStrongNumber={wordAnalysisForCard?.root_strong}
                             prefixes={wordForCard.prefixes}
                             language={language}
                             showNikud={showNikud}
@@ -1273,17 +1279,27 @@ export default function App() {
                 qumranMeanings={dssMeanings}
                 qumranCommentary={dssCommentary}
                 qumranRoot={selectedDssAnalysis?.root}
-                qumranRootTransliteration={selectedDssAnalysis?.root_strong}
+                qumranRootTransliteration={
+                  language === 'en'
+                    ? selectedDssAnalysis?.root_translit_en
+                    : selectedDssAnalysis?.root_translit_es
+                }
                 qumranRootMeaning={
                   selectedDssAnalysis?.root_definitions?.[0]?.text
                 }
+                qumranRootStrongNumber={selectedDssAnalysis?.root_strong}
                 hasQumranVariant={hasQumranVariant}
                 showQumran={showQumran}
             transliteration={getTransliterationForLanguage(selectedWord)}
             meanings={wordMeanings}
             root={selectedWordAnalysis?.root}
-            rootTransliteration={selectedWordAnalysis?.root_strong}
+            rootTransliteration={
+              language === 'en'
+                ? selectedWordAnalysis?.root_translit_en
+                : selectedWordAnalysis?.root_translit_es
+            }
             rootMeaning={selectedWordAnalysis?.root_definitions?.[0]?.text}
+            rootStrongNumber={selectedWordAnalysis?.root_strong}
             prefixes={selectedWord.prefixes}
             language={language}
             showNikud={showNikud}

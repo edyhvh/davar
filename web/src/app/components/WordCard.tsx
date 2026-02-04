@@ -26,6 +26,7 @@ interface WordCardProps {
   qumranRoot?: string;
   qumranRootTransliteration?: string;
   qumranRootMeaning?: string;
+  qumranRootStrongNumber?: string;
   qumranCommentary?: string;
   hasQumranVariant?: boolean;
   showQumran?: boolean;
@@ -34,6 +35,7 @@ interface WordCardProps {
   root?: string;
   rootTransliteration?: string;
   rootMeaning?: string;
+  rootStrongNumber?: string;
   prefixes?: string[];
   language?: "en" | "es" | "he";
   instances: WordInstance[];
@@ -66,6 +68,7 @@ export function WordCard({
   qumranRoot,
   qumranRootTransliteration,
   qumranRootMeaning,
+  qumranRootStrongNumber,
   qumranCommentary,
   hasQumranVariant = false,
   showQumran = false,
@@ -74,6 +77,7 @@ export function WordCard({
   root,
   rootTransliteration,
   rootMeaning,
+  rootStrongNumber,
   prefixes,
   language = "en",
   instances,
@@ -572,24 +576,27 @@ export function WordCard({
                     </div>
                   )}
 
-                  <div
-                    style={{
-                      fontFamily: "'Inter', sans-serif",
-                      fontSize: "15px",
-                      lineHeight: 1.5,
-                      marginTop: "12px",
-                    }}
-                    className="dark:text-[var(--text-secondary)]"
-                  >
-                    {displayedData.rootMeaning
-                      ? normalizeHebrewDisplay(
-                          normalizeHebrew(displayedData.rootMeaning).replace(
-                            /\//g,
-                            "",
-                          ),
-                        )
-                      : "—"}
-                  </div>
+                  {/* Show meaning only if root differs from word */}
+                  {rootStrongNumber && strongNumber && rootStrongNumber !== strongNumber && (
+                    <div
+                      style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: "15px",
+                        lineHeight: 1.5,
+                        marginTop: "12px",
+                      }}
+                      className="dark:text-[var(--text-secondary)]"
+                    >
+                      {displayedData.rootMeaning
+                        ? normalizeHebrewDisplay(
+                            normalizeHebrew(displayedData.rootMeaning).replace(
+                              /\//g,
+                              "",
+                            ),
+                          )
+                        : "—"}
+                    </div>
+                  )}
                 </>
               ) : (
                 <div
@@ -832,23 +839,26 @@ export function WordCard({
                     </div>
                   )}
 
-                  <div
-                    style={{
-                      fontFamily: "'Inter', sans-serif",
-                      fontSize: "15px",
-                      lineHeight: 1.5,
-                      marginTop: "12px",
-                    }}
-                    className="dark:text-[var(--text-secondary)]"
-                  >
-                    {displayedData.qumranRootMeaning
-                      ? normalizeHebrewDisplay(
-                          normalizeHebrew(
-                            displayedData.qumranRootMeaning,
-                          ).replace(/\//g, ""),
-                        )
-                      : "—"}
-                  </div>
+                  {/* Show meaning only if root differs from word */}
+                  {qumranRootStrongNumber && qumranStrong && qumranRootStrongNumber !== qumranStrong && (
+                    <div
+                      style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: "15px",
+                        lineHeight: 1.5,
+                        marginTop: "12px",
+                      }}
+                      className="dark:text-[var(--text-secondary)]"
+                    >
+                      {displayedData.qumranRootMeaning
+                        ? normalizeHebrewDisplay(
+                            normalizeHebrew(
+                              displayedData.qumranRootMeaning,
+                            ).replace(/\//g, ""),
+                          )
+                        : "—"}
+                    </div>
+                  )}
                 </>
               ) : (
                 <div

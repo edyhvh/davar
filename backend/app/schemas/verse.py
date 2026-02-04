@@ -28,6 +28,8 @@ class DssVariant(BaseModel):
     position: int
     dss_word: str
     masoretic_word: str
+    dss_translit_en: Optional[str] = None
+    dss_translit_es: Optional[str] = None
     comment_v2_en: Optional[str] = None
     comment_v2_es: Optional[str] = None
     comment_v2_he: Optional[str] = None

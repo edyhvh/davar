@@ -10,6 +10,8 @@ export type DisplayWord = {
   morph?: string;
   translit_en?: string;
   translit_es?: string;
+  dss_translit_en?: string;
+  dss_translit_es?: string;
   dssWord?: string;
   dssStrong?: string;
   dssCommentaryEn?: string;
@@ -73,6 +75,8 @@ export const fetchChapterVerses = async (
         morph: word.morph,
         translit_en: word.translit_en,
         translit_es: word.translit_es,
+        dss_translit_en: dssVariant?.dss_translit_en,
+        dss_translit_es: dssVariant?.dss_translit_es,
         dssWord: dssVariant?.dss_word,
         dssStrong: dssVariant?.dss_strong,
         dssCommentaryEn: dssVariant?.comment_v2_en,

@@ -13,6 +13,8 @@ export interface WordAnalysis {
   root?: string;
   root_strong?: string;
   root_definitions?: DefinitionItem[];
+  root_translit_en?: string;
+  root_translit_es?: string;
   occurrences_count: number;
   instances?: Array<string | { verse: string; text: string }>;
 }

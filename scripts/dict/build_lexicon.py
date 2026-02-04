@@ -698,6 +698,8 @@ def build_lexicon_entry(strong_number: str, bdb_root, update_existing: bool = Fa
         "normalized": existing_entry.get('normalized', re.sub(r'[\u0591-\u05C7]', '', strongs_entry.get('lemma', ''))),
         "pronunciation": strongs_entry.get('pron', ''),
         "transliteration": existing_entry.get('transliteration', strongs_entry.get('xlit', '')),
+        "translit_en": existing_entry.get('translit_en', ''),
+        "translit_es": existing_entry.get('translit_es', ''),
         "definitions": [],
         "sources": {
             "strongs": False,

@@ -20,6 +20,8 @@ class LexiconResponse(BaseModel):
     definitions: List[DefinitionItem]
     root: Optional[str] = None
     root_strong: Optional[str] = None
+    root_translit_en: Optional[str] = None
+    root_translit_es: Optional[str] = None
     root_definitions: Optional[List[DefinitionItem]] = None
     occurrences_count: int
     instances: List[str] = []
