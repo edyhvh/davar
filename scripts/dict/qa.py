@@ -6,48 +6,41 @@ Combines all QA functionality into a single script
 
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Dict, List, Set, Optional
 from collections import defaultdict
 import xml.etree.ElementTree as ET
 
-# Project paths
-SCRIPTS_DIR = Path(__file__).parent
-PROJECT_ROOT = SCRIPTS_DIR.parent.parent
-DATA_DIR = PROJECT_ROOT / 'data' / 'dict'
-LEXICON_DIR = DATA_DIR / 'lexicon'
-LEXICON_DRAFT = LEXICON_DIR / 'words'  # Now called 'words' instead of 'draft'
-LEXICON_ROOTS = LEXICON_DIR / 'roots'
-RAW_DIR = DATA_DIR / 'raw'
-STRONGS_FILE = RAW_DIR / 'strongs_hebrew_dict_en.json'
-STRONG_REFS_FILE = RAW_DIR / 'strong_refs.json'
-BDB_XML = RAW_DIR / 'BrownDriverBriggs.xml'
+# Add current directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent))
+
+from config import config
+from utils import load_json, validate_lexicon_entry, StatisticsCollector
 
 NS = {'bdb': 'http://openscriptures.github.com/morphhb/namespace'}
 
 
 def load_strongs_data() -> Dict:
     """Load Strong's dictionary data"""
-    if STRONGS_FILE.exists():
-        with open(STRONGS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+    if config.STRONGS_FILE.exists():
+        return load_json(config.STRONGS_FILE)
     return {}
 
 
 def load_strong_refs() -> Dict:
     """Load Strong's references data"""
-    if STRONG_REFS_FILE.exists():
-        with open(STRONG_REFS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+    if config.STRONG_REFS_FILE.exists():
+        return load_json(config.STRONG_REFS_FILE)
     return {}
 
 
 def load_bdb_xml():
     """Load BDB XML file"""
-    if not BDB_XML.exists():
+    if not config.BDB_XML.exists():
         return None
     try:
-        tree = ET.parse(BDB_XML)
+        tree = ET.parse(config.BDB_XML)
         return tree.getroot()
     except Exception:
         return None
@@ -59,8 +52,7 @@ def validate_file_structure(filepath: Path, is_root: bool) -> Dict:
     warnings = []
     
     try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+        data = load_json(filepath)
     except json.JSONDecodeError as e:
         return {
             'file': filepath.name,
@@ -76,26 +68,14 @@ def validate_file_structure(filepath: Path, is_root: bool) -> Dict:
             'warnings': []
         }
     
-    # Required fields
-    required_fields = ['strong_number', 'lemma', 'definitions', 'occurrences', 'sources']
-    for field in required_fields:
-        if field not in data:
-            errors.append(f'Missing required field: {field}')
-    
+    # Use utils validation
+    validation_errors = validate_lexicon_entry(data, is_root)
+    errors.extend(validation_errors)
     # Validate strong_number matches filename
     if 'strong_number' in data:
         expected_filename = f"{data['strong_number']}.json"
         if filepath.name != expected_filename:
             errors.append(f'Filename mismatch: expected {expected_filename}, got {filepath.name}')
-    
-    # Validate is_root matches directory
-    if 'is_root' in data:
-        if is_root and not data['is_root']:
-            errors.append(f'File in roots/ but is_root=False')
-        elif not is_root and data['is_root']:
-            errors.append(f'File in draft/ but is_root=True')
-    elif is_root:
-        warnings.append('Missing is_root field (should be True for roots/)')
     
     # Validate definitions
     if 'definitions' in data:
@@ -174,7 +154,7 @@ def validate_file_structure(filepath: Path, is_root: bool) -> Dict:
     # Validate root_ref exists (if present)
     if not is_root and 'root_ref' in data:
         root_ref = data['root_ref']
-        root_file = LEXICON_ROOTS / f"{root_ref}.json"
+        root_file = config.LEXICON_ROOTS_DIR / f"{root_ref}.json"
         if not root_file.exists():
             warnings.append(f'root_ref {root_ref} does not exist in roots/')
     
@@ -200,7 +180,7 @@ def validate_cross_references(draft_files: List[Path], root_files: List[Path]) -
             if 'root_ref' in data:
                 root_ref = data['root_ref']
                 root_refs_used.add(root_ref)
-                root_file = LEXICON_ROOTS / f"{root_ref}.json"
+                root_file = config.LEXICON_ROOTS_DIR / f"{root_ref}.json"
                 if not root_file.exists():
                     root_refs_missing.append({
                         'file': filepath.name,
@@ -278,7 +258,7 @@ def check_empty_senses(bdb_root) -> Dict:
     """Check for files with empty sense strings"""
     files_with_empty = []
     
-    for filepath in list(LEXICON_DRAFT.glob("H*.json")) + list(LEXICON_ROOTS.glob("H*.json")):
+    for filepath in list(config.LEXICON_WORDS_DIR.glob("H*.json")) + list(config.LEXICON_ROOTS_DIR.glob("H*.json")):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -306,7 +286,7 @@ def check_incomplete_sense_hierarchy() -> Dict:
     """
     files_with_incomplete = []
     
-    for filepath in list(LEXICON_DRAFT.glob("H*.json")) + list(LEXICON_ROOTS.glob("H*.json")):
+    for filepath in list(config.LEXICON_WORDS_DIR.glob("H*.json")) + list(config.LEXICON_ROOTS_DIR.glob("H*.json")):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -367,7 +347,7 @@ def check_etymological_definitions(bdb_root) -> Dict:
     
     files_with_etymological = []
     
-    for filepath in list(LEXICON_DRAFT.glob("H*.json")) + list(LEXICON_ROOTS.glob("H*.json")):
+    for filepath in list(config.LEXICON_WORDS_DIR.glob("H*.json")) + list(config.LEXICON_ROOTS_DIR.glob("H*.json")):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -432,7 +412,7 @@ def check_missing_fields() -> Dict:
     missing_occurrences = []
     missing_sources = []
     
-    for filepath in list(LEXICON_DRAFT.glob("H*.json")) + list(LEXICON_ROOTS.glob("H*.json")):
+    for filepath in list(config.LEXICON_WORDS_DIR.glob("H*.json")) + list(config.LEXICON_ROOTS_DIR.glob("H*.json")):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -457,7 +437,7 @@ def check_missing_definitions() -> Dict:
     files_without_defs = []
     files_with_empty_defs = []
     
-    for filepath in list(LEXICON_DRAFT.glob("H*.json")) + list(LEXICON_ROOTS.glob("H*.json")):
+    for filepath in list(config.LEXICON_WORDS_DIR.glob("H*.json")) + list(config.LEXICON_ROOTS_DIR.glob("H*.json")):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -508,8 +488,8 @@ def main():
     
     # Get all files
     print("\n📁 Scanning files...")
-    draft_files = sorted(list(LEXICON_DRAFT.glob("H*.json")))
-    root_files = sorted(list(LEXICON_ROOTS.glob("H*.json")))
+    draft_files = sorted(list(config.LEXICON_WORDS_DIR.glob("H*.json")))
+    root_files = sorted(list(config.LEXICON_ROOTS_DIR.glob("H*.json")))
     print(f"   Draft files: {len(draft_files)}")
     print(f"   Root files: {len(root_files)}")
     print(f"   Total: {len(draft_files) + len(root_files)}")

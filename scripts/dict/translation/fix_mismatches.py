@@ -12,6 +12,11 @@ import sys
 from pathlib import Path
 from typing import Dict, List, NamedTuple
 
+# Add parent directory to path for utils import
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import load_json, save_json, create_backup, ProgressTracker
+
 logger = logging.getLogger(__name__)
 
 
@@ -168,25 +173,12 @@ class MismatchFixer:
         self.translator = GrokTranslator()
 
     def _load_json_file(self, file_path: Path) -> Dict:
-        """Load JSON file."""
-        import json
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except FileNotFoundError:
-            logger.error(f"File not found: {file_path}")
-            raise
-        except json.JSONDecodeError as e:
-            logger.error(f"Invalid JSON in {file_path}: {e}")
-            raise
+        """Load JSON file using utils module."""
+        return load_json(file_path)
 
     def _save_json_file(self, data: Dict, file_path: Path):
-        """Save JSON file in pretty format."""
-        import json
-        file_path.parent.mkdir(parents=True, exist_ok=True)
-
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+        """Save JSON file using utils module."""
+        save_json(data, file_path)
 
     def _find_problems_in_file(self, file_path: Path, file_type: str) -> List[DefinitionRef]:
         """
@@ -328,14 +320,18 @@ class MismatchFixer:
             total_fixed += fixed_count
             logger.info(f"Fixed {fixed_count} entries in {file_type}")
 
-            # Save the updated file
+            # Save the updated file (with backup)
             if not dry_run and fixed_count > 0:
                 if file_type == 'roots':
+                    backup_path = create_backup(ROOTS_FILE)
+                    logger.info(f"Created backup: {backup_path}")
                     self._save_json_file(data, ROOTS_FILE)
                 elif file_type == 'words':
+                    backup_path = create_backup(WORDS_FILE)
+                    logger.info(f"Created backup: {backup_path}")
                     self._save_json_file(data, WORDS_FILE)
 
-                logger.info(f"Saved updated {file_type} files")
+                logger.info(f"Saved updated {file_type} file")
 
         logger.info(f"Total fixed across all files: {total_fixed}")
         return stats

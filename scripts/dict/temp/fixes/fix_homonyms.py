@@ -73,7 +73,7 @@ def load_existing_entry(strong_number: str) -> Optional[Dict]:
 def regenerate_entry(
     strong_number: str,
     bdb_root: ET.Element
-) -> Dict:
+) -> Optional[Dict]:
     """Regenerate a single lexicon entry using fixed extraction logic."""
     
     # Get existing entry to preserve translations
