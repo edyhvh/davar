@@ -21,7 +21,7 @@ import xml.etree.ElementTree as ET
 sys.path.insert(0, str(Path(__file__).parent))
 
 from config import config
-from utils import save_json, load_json
+from utils import save_json, load_json, load_strongs_data, load_strong_refs, load_bdb_xml
 
 # Import extraction functions
 sys.path.insert(0, str(config.OE_DIR))
@@ -92,30 +92,7 @@ def create_definition(text_en: str, source: str, order: int, sense: Optional[str
     return definition
 
 
-def load_strongs_data() -> Dict:
-    """Load Strong's dictionary data"""
-    if config.STRONGS_FILE.exists():
-        return load_json(config.STRONGS_FILE)
-    return {}
 
-
-def load_strong_refs() -> Dict:
-    """Load Strong's references data"""
-    if config.STRONG_REFS_FILE.exists():
-        with open(config.STRONG_REFS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {}
-
-
-def load_bdb_xml():
-    """Load BDB XML file"""
-    if not config.BDB_XML.exists():
-        return None
-    try:
-        tree = ET.parse(config.BDB_XML)
-        return tree.getroot()
-    except Exception:
-        return None
 
 
 def load_lexical_index() -> Dict:

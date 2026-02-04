@@ -965,8 +965,8 @@ export const WordAnalysisBottomSheet = ({
                     : dssLexiconEntry?.root_translit_es) ? (
                     <Text style={styles.rootTransliteration}>
                       {language === "en"
-                        ? dssLexiconEntry.root_translit_en
-                        : dssLexiconEntry.root_translit_es}
+                        ? dssLexiconEntry?.root_translit_en
+                        : dssLexiconEntry?.root_translit_es}
                     </Text>
                   ) : null}
                   {/* Show meaning only if root differs from word or if no specific DSS root */}

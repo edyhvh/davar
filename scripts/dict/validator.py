@@ -16,34 +16,12 @@ import xml.etree.ElementTree as ET
 sys.path.insert(0, str(Path(__file__).parent))
 
 from config import config
-from utils import load_json, validate_lexicon_entry, StatisticsCollector
+from utils import load_json, validate_lexicon_entry, StatisticsCollector, load_strongs_data, load_strong_refs, load_bdb_xml
 
 NS = {'bdb': 'http://openscriptures.github.com/morphhb/namespace'}
 
 
-def load_strongs_data() -> Dict:
-    """Load Strong's dictionary data"""
-    if config.STRONGS_FILE.exists():
-        return load_json(config.STRONGS_FILE)
-    return {}
 
-
-def load_strong_refs() -> Dict:
-    """Load Strong's references data"""
-    if config.STRONG_REFS_FILE.exists():
-        return load_json(config.STRONG_REFS_FILE)
-    return {}
-
-
-def load_bdb_xml():
-    """Load BDB XML file"""
-    if not config.BDB_XML.exists():
-        return None
-    try:
-        tree = ET.parse(config.BDB_XML)
-        return tree.getroot()
-    except Exception:
-        return None
 
 
 def validate_file_structure(filepath: Path, is_root: bool) -> Dict:
@@ -384,10 +362,7 @@ def check_etymological_definitions(bdb_root) -> Dict:
             elif sense_0_count >= 5 and bdb_root:
                 # Check if BDB entry has main definitions
                 # Import here to avoid circular dependency
-                import sys
-                from pathlib import Path
-                sys.path.insert(0, str(Path(__file__).parent))
-                from lexicon_builder import find_bdb_entry
+                from build_lexicon import find_bdb_entry
                 bdb_entry = find_bdb_entry(hebrew_word, bdb_root)
                 if bdb_entry:
                     main_defs = bdb_entry.findall('./bdb:def', NS)
