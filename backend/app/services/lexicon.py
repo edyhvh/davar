@@ -125,9 +125,15 @@ class LexiconService:
 
         # Get root definitions if we have a root_strong
         root_definitions = None
+        root_translit_en = None
+        root_translit_es = None
         if root_strong:
             root_entry = self.dictionary_loader.get_lexicon_entry(root_strong)
             if root_entry:
+                # Extract root transliterations
+                root_translit_en = root_entry.get('translit_en')
+                root_translit_es = root_entry.get('translit_es')
+                
                 root_definitions = []
                 for def_item in root_entry.get('definitions', []):
                     _append_definition_items(
@@ -168,6 +174,8 @@ class LexiconService:
             definitions=definitions,
             root=root,
             root_strong=root_strong,
+            root_translit_en=root_translit_en,
+            root_translit_es=root_translit_es,
             root_definitions=root_definitions,
             occurrences_count=occurrences_count,
             instances=instances

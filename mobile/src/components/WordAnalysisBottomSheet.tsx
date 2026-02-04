@@ -45,6 +45,8 @@ type WordAnalysisBottomSheetProps = {
         strong?: string;
         translit_en?: string;
         translit_es?: string;
+        dss_translit_en?: string;
+        dss_translit_es?: string;
         dssWord?: string;
         dssStrong?: string;
         dssCommentaryEn?: string;
@@ -416,12 +418,18 @@ export const WordAnalysisBottomSheet = ({
       word?.dssCommentaryHe,
   );
   // Keep in sync with web/src/app/App.tsx transliteration selection logic.
-  const wordTransliteration =
-    language === "en"
+  const wordTransliteration = useMemo(() => {
+    // When on Qumran tab and DSS transliteration is available, use it
+    if (activeTab === "qumran" && (word?.dss_translit_en || word?.dss_translit_es)) {
+      return language === "en" ? word?.dss_translit_en : word?.dss_translit_es;
+    }
+    // Otherwise use standard word transliteration
+    return language === "en"
       ? word?.translit_en
       : language === "es"
         ? word?.translit_es
         : undefined;
+  }, [activeTab, language, word?.translit_en, word?.translit_es, word?.dss_translit_en, word?.dss_translit_es]);
 
   const strongNumber = useMemo(() => {
     if (!word?.strong) return null;
@@ -859,14 +867,21 @@ export const WordAnalysisBottomSheet = ({
                       <Text style={styles.rootHebrew}>
                         {(lexiconEntry?.root ?? word?.root ?? "").replace(/\//g, "")}
                       </Text>
-                      {lexiconEntry?.root_strong || word?.rootTransliteration ? (
+                      {(language === "en" 
+                        ? lexiconEntry?.root_translit_en 
+                        : lexiconEntry?.root_translit_es) || word?.rootTransliteration ? (
                         <Text style={styles.rootTransliteration}>
-                          {lexiconEntry?.root_strong ?? word?.rootTransliteration}
+                          {(language === "en" 
+                            ? lexiconEntry?.root_translit_en 
+                            : lexiconEntry?.root_translit_es) ?? word?.rootTransliteration}
                         </Text>
                       ) : null}
-                      <Text style={styles.rootMeaning}>
-                        {rootMeaningText}
-                      </Text>
+                      {/* Show meaning only if root differs from word */}
+                      {lexiconEntry?.root_strong && strongNumber && lexiconEntry.root_strong !== strongNumber && (
+                        <Text style={styles.rootMeaning}>
+                          {rootMeaningText}
+                        </Text>
+                      )}
                     </>
                   ) : (
                     <Text style={styles.rootMeaning}>
@@ -945,16 +960,27 @@ export const WordAnalysisBottomSheet = ({
                       displayHebrew
                     ).replace(/\//g, "")}
                   </Text>
-                  {dssLexiconEntry?.root_strong ? (
+                  {(language === "en"
+                    ? dssLexiconEntry?.root_translit_en
+                    : dssLexiconEntry?.root_translit_es) ? (
                     <Text style={styles.rootTransliteration}>
-                      {dssLexiconEntry.root_strong}
+                      {language === "en"
+                        ? dssLexiconEntry.root_translit_en
+                        : dssLexiconEntry.root_translit_es}
                     </Text>
                   ) : null}
-                  <Text style={styles.rootMeaning}>
-                    {dssLexiconEntry?.root || dssLexiconEntry?.root_strong
-                      ? dssRootMeaningText
-                      : "ALREADY ROOT"}
-                  </Text>
+                  {/* Show meaning only if root differs from word or if no specific DSS root */}
+                  {dssLexiconEntry?.root || dssLexiconEntry?.root_strong ? (
+                    dssLexiconEntry.root_strong && dssStrongNumber && dssLexiconEntry.root_strong !== dssStrongNumber ? (
+                      <Text style={styles.rootMeaning}>
+                        {dssRootMeaningText}
+                      </Text>
+                    ) : null
+                  ) : (
+                    <Text style={styles.rootMeaning}>
+                      ALREADY ROOT
+                    </Text>
+                  )}
                 </View>
               </>
             ) : (

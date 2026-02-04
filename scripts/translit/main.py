@@ -16,6 +16,7 @@ from .config import (
 )
 from .local_processor import estimate_book_cost as estimate_book_cost_local
 from .local_processor import transliterate_book_local
+from .lexicon_processor import transliterate_roots, estimate_roots_cost
 
 logging.basicConfig(
     level=logging.INFO,
@@ -64,14 +65,18 @@ def parse_args():
     )
     parser.add_argument(
         "--corpus",
-        choices=["tanakh", "besorah"],
+        choices=["tanakh", "besorah", "lexicon"],
         required=True,
-        help="Corpus to process"
+        help="Corpus to process (lexicon = root entries)"
     )
     parser.add_argument(
         "--book",
         default="all",
-        help="Book id (directory name, e.g., genesis, john) or 'all' for entire corpus"
+        help="Book id (directory name, e.g., genesis, john) or 'all' for entire corpus. Ignored for lexicon corpus."
+    )
+    parser.add_argument(
+        "--strong-number",
+        help="For lexicon corpus: process only this Strong's number (e.g., H1)"
     )
     parser.add_argument(
         "--list-books",
@@ -103,6 +108,39 @@ def main():
     if args.verbose:
         logging.getLogger().setLevel(logging.DEBUG)
 
+    # Handle lexicon corpus separately
+    if args.corpus == "lexicon":
+        logger.info("="*60)
+        logger.info("Starting transliteration for LEXICON ROOTS")
+        logger.info("Dry run: %s", args.dry_run)
+        logger.info("="*60)
+        
+        try:
+            stats = transliterate_roots(
+                dry_run=args.dry_run,
+                strong_number=args.strong_number,
+                verbose=args.verbose
+            )
+            cost = estimate_roots_cost()
+            
+            logger.info("")
+            logger.info("="*60)
+            logger.info("TRANSLITERATION COMPLETE")
+            logger.info("="*60)
+            logger.info("Roots processed: %s", stats.words)
+            logger.info("Total estimated cost: $%.4f", cost)
+            
+            if args.dry_run:
+                logger.info("")
+                logger.info("DRY RUN - No files were written")
+            
+            logger.info("="*60)
+            sys.exit(0)
+            
+        except Exception as e:
+            logger.error("Lexicon transliteration failed: %s", e)
+            sys.exit(1)
+    
     # List books and exit if requested
     if args.list_books:
         books = get_available_books(args.corpus)

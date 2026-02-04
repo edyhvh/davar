@@ -2,6 +2,8 @@
 Verses service - handles business logic for verse-related operations.
 """
 import logging
+import sys
+from pathlib import Path
 from typing import Optional
 from app.schemas.verse import VerseResponse, WordResponse, DssVariant, TranslationFootnote
 from app.data_loaders.tanaj import TanajLoader
@@ -10,6 +12,15 @@ from app.data_loaders.translations import TranslationLoader
 from app.data_loaders.variants import VariantLoader
 from app.data_loaders.book_mapping import BookNameMapper as BookMapper
 from app.data_loaders.translit import TranslitLoader
+
+# Import LocalTransliterator for DSS word transliteration
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / "scripts"))
+try:
+    from translit.local_translit import LocalTransliterator
+    TRANSLIT_AVAILABLE = True
+except ImportError:
+    TRANSLIT_AVAILABLE = False
+    logging.warning("LocalTransliterator not available - DSS transliteration will be skipped")
 
 
 class VersesService:
@@ -29,6 +40,10 @@ class VersesService:
         self.translations_loader = translations_loader
         self.variants_loader = variants_loader
         self.translit_loader = translit_loader
+        self.book_mapper = book_mapper
+        
+        # Initialize DSS transliterator if available
+        self.dss_transliterator = LocalTransliterator() if TRANSLIT_AVAILABLE else None
         self.book_mapper = book_mapper
 
     def get_verses(
@@ -213,13 +228,27 @@ class VersesService:
             if dss_data:
                 dss_variants = []
                 for variant in dss_data:
+                    # Transliterate DSS word if transliterator available
+                    dss_translit_en = None
+                    dss_translit_es = None
+                    dss_word = variant.get('dss_word', '')
+                    if dss_word and self.dss_transliterator:
+                        try:
+                            result = self.dss_transliterator.transliterate_word(dss_word)
+                            dss_translit_en = result.translit_en
+                            dss_translit_es = result.translit_es
+                        except Exception as e:
+                            logging.warning(f"Failed to transliterate DSS word '{dss_word}': {e}")
+                    
                     dv = DssVariant(
                         book=variant.get('book', book_en),
                         chapter=variant.get('chapter', verse_data.get('chapter', 0)),
                         verse=variant.get('verse', verse_data.get('verse', 0)),
                         position=variant.get('position', 0),
-                        dss_word=variant.get('dss_word', ''),
+                        dss_word=dss_word,
                         masoretic_word=variant.get('masoretic_word', ''),
+                        dss_translit_en=dss_translit_en,
+                        dss_translit_es=dss_translit_es,
                         comment_v2_en=variant.get('comment_v2_en'),
                         comment_v2_es=variant.get('comment_v2_es'),
                         comment_v2_he=variant.get('comment_v2_he'),

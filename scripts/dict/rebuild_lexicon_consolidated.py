@@ -13,6 +13,7 @@ import sys
 from pathlib import Path
 from typing import Dict, Tuple
 
+
 # Add current directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent))
 
@@ -37,6 +38,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_entries(entries_dir: Path) -> Tuple[Dict[str, dict], int]:
+    """Load all JSON entries from a directory without any modifications."""
     entries: Dict[str, dict] = {}
     skipped = 0
 
@@ -55,12 +57,14 @@ def load_entries(entries_dir: Path) -> Tuple[Dict[str, dict], int]:
         if strong_number in entries:
             raise ValueError(f"Duplicate entry for {strong_number} in {entry_path}")
 
+        # Store entry exactly as-is
         entries[strong_number] = entry
 
     return entries, skipped
 
 
 def write_consolidated(output_path: Path, entries: Dict[str, dict], dry_run: bool) -> None:
+    """Write consolidated JSON file without any modifications."""
     if dry_run:
         return
 
@@ -111,3 +115,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

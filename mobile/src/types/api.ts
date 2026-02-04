@@ -13,6 +13,8 @@ export type DssVariant = {
   position: number;
   dss_word: string;
   masoretic_word: string;
+  dss_translit_en?: string;
+  dss_translit_es?: string;
   comment_v2_en?: string;
   comment_v2_es?: string;
   comment_v2_he?: string;
@@ -50,6 +52,8 @@ export type LexiconResponse = {
   definitions: DefinitionItem[];
   root?: string;
   root_strong?: string;
+  root_translit_en?: string;
+  root_translit_es?: string;
   root_definitions?: DefinitionItem[];
   occurrences_count: number;
   instances: string[];
