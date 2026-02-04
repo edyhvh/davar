@@ -101,8 +101,29 @@ class LexiconService:
         definitions = self._deduplicate_definitions(definitions)
 
         # Get root information if available
+        # First check for existing root/root_strong (for backward compatibility with custom definitions)
         root = (lexicon_entry or {}).get('root')
         root_strong = (lexicon_entry or {}).get('root_strong')
+
+        # If not found, check for root_ref field (the actual data structure)
+        if not root and not root_strong:
+            root_ref = (lexicon_entry or {}).get('root_ref')
+            if root_ref:
+                # Look up the root entry using root_ref
+                root_entry = self.dictionary_loader.get_lexicon_entry(root_ref)
+                if root_entry:
+                    root_strong = root_ref  # The root_ref is the Strong's number of the root
+                    root = root_entry.get('lemma') or root_entry.get('hebrew', '')
+            else:
+                # For root entries (no root_ref), populate with self for consistent UI display
+                # This helps when verse words are conjugated forms of the root
+                is_root = (lexicon_entry or {}).get('is_root', False)
+                if is_root or roots_entry:
+                    # This IS a root entry - set root to itself for display
+                    root = (lexicon_entry or {}).get('lemma') or (lexicon_entry or {}).get('hebrew', '')
+                    root_strong = strong_number
+
+        # Get root definitions if we have a root_strong
         root_definitions = None
         if root_strong:
             root_entry = self.dictionary_loader.get_lexicon_entry(root_strong)

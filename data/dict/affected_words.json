@@ -1,0 +1,8352 @@
+{
+  "stats": {
+    "total_affected": 293,
+    "by_homonym_count": {
+      "2": 249,
+      "4": 10,
+      "3": 31,
+      "5": 2,
+      "6": 1
+    },
+    "examples": {
+      "H1254_bara_create": {
+        "strong_number": "H1254",
+        "entries": [
+          {
+            "bdb_id": "b.cx.aa",
+            "aug": "b",
+            "twot": "279",
+            "hebrew": "בָּרָא",
+            "definition": "be fat",
+            "mod": "II",
+            "type": "root",
+            "preview": "בָּרָא"
+          },
+          {
+            "bdb_id": "b.cw.aa",
+            "aug": "a",
+            "twot": "278",
+            "hebrew": "בָּרָא",
+            "definition": "shape",
+            "mod": "I",
+            "type": "root",
+            "preview": "בָּרָא"
+          }
+        ],
+        "homonym_count": 2
+      },
+      "H352_ayil_ram": {
+        "strong_number": "H352",
+        "entries": [
+          {
+            "bdb_id": "a.bx.ah",
+            "aug": "c",
+            "twot": "45f",
+            "hebrew": "אַ֫יִל",
+            "definition": "leader",
+            "mod": "III",
+            "type": "",
+            "preview": "אַ֫יִל"
+          },
+          {
+            "bdb_id": "a.bx.ai",
+            "aug": "d",
+            "twot": "45g",
+            "hebrew": "אַ֫יִל",
+            "definition": "terebinth",
+            "mod": "IV",
+            "type": "",
+            "preview": "אַ֫יִל"
+          },
+          {
+            "bdb_id": "a.bx.ag",
+            "aug": "b",
+            "twot": "45e",
+            "hebrew": "אַ֫יִל",
+            "definition": "projecting pillar",
+            "mod": "II",
+            "type": "",
+            "preview": "אַ֫יִל"
+          },
+          {
+            "bdb_id": "a.bx.af",
+            "aug": "a",
+            "twot": "45d",
+            "hebrew": "אַ֫יִל",
+            "definition": "ram",
+            "mod": "I",
+            "type": "",
+            "preview": "אַ֫יִל"
+          }
+        ],
+        "homonym_count": 4
+      },
+      "H1481_gur_sojourn": {
+        "strong_number": "H1481",
+        "entries": [
+          {
+            "bdb_id": "c.bh.aa",
+            "aug": "c",
+            "twot": "332",
+            "hebrew": "גּוּר",
+            "definition": "dread",
+            "mod": "III",
+            "type": "root",
+            "preview": "גּוּר"
+          },
+          {
+            "bdb_id": "c.bg.aa",
+            "aug": "b",
+            "twot": "331",
+            "hebrew": "גּוּר",
+            "definition": "stir up strife",
+            "mod": "II",
+            "type": "root",
+            "preview": "גּוּר"
+          },
+          {
+            "bdb_id": "c.bf.aa",
+            "aug": "a",
+            "twot": "330",
+            "hebrew": "גּוּר",
+            "definition": "sojourn",
+            "mod": "I",
+            "type": "root",
+            "preview": "גּוּר"
+          }
+        ],
+        "homonym_count": 3
+      }
+    }
+  },
+  "affected_words": {
+    "H193": {
+      "strong_number": "H193",
+      "entries": [
+        {
+          "bdb_id": "a.bx.ab",
+          "aug": "a",
+          "twot": "45a",
+          "hebrew": "אוּל",
+          "definition": "body",
+          "mod": "I",
+          "type": "",
+          "preview": "אוּל"
+        },
+        {
+          "bdb_id": "a.bx.ac",
+          "aug": "b",
+          "twot": "45b",
+          "hebrew": "אוּל",
+          "definition": "leading man",
+          "mod": "II",
+          "type": "",
+          "preview": "אוּל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H218": {
+      "strong_number": "H218",
+      "entries": [
+        {
+          "bdb_id": "a.cd.aq",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "אוּר",
+          "definition": "Ur",
+          "mod": "III",
+          "type": "",
+          "preview": "אוּר"
+        },
+        {
+          "bdb_id": "a.cd.ah",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "אוּר",
+          "definition": "Ur",
+          "mod": "II",
+          "type": "",
+          "preview": "אוּר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H219": {
+      "strong_number": "H219",
+      "entries": [
+        {
+          "bdb_id": "a.cd.ad",
+          "aug": "b",
+          "twot": "52c",
+          "hebrew": "אוֹרָה",
+          "definition": "herb",
+          "mod": "II",
+          "type": "",
+          "preview": "אוֹרָה"
+        },
+        {
+          "bdb_id": "a.cd.ac",
+          "aug": "a",
+          "twot": "52b",
+          "hebrew": "אוֹרָה",
+          "definition": "light",
+          "mod": "I",
+          "type": "",
+          "preview": "אוֹרָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H352": {
+      "strong_number": "H352",
+      "entries": [
+        {
+          "bdb_id": "a.bx.ah",
+          "aug": "c",
+          "twot": "45f",
+          "hebrew": "אַ֫יִל",
+          "definition": "leader",
+          "mod": "III",
+          "type": "",
+          "preview": "אַ֫יִל"
+        },
+        {
+          "bdb_id": "a.bx.ai",
+          "aug": "d",
+          "twot": "45g",
+          "hebrew": "אַ֫יִל",
+          "definition": "terebinth",
+          "mod": "IV",
+          "type": "",
+          "preview": "אַ֫יִל"
+        },
+        {
+          "bdb_id": "a.bx.ag",
+          "aug": "b",
+          "twot": "45e",
+          "hebrew": "אַ֫יִל",
+          "definition": "projecting pillar",
+          "mod": "II",
+          "type": "",
+          "preview": "אַ֫יִל"
+        },
+        {
+          "bdb_id": "a.bx.af",
+          "aug": "a",
+          "twot": "45d",
+          "hebrew": "אַ֫יִל",
+          "definition": "ram",
+          "mod": "I",
+          "type": "",
+          "preview": "אַ֫יִל"
+        }
+      ],
+      "homonym_count": 4
+    },
+    "H441": {
+      "strong_number": "H441",
+      "entries": [
+        {
+          "bdb_id": "a.ds.ac",
+          "aug": "a",
+          "twot": "108b",
+          "hebrew": "אַלּוּף",
+          "definition": "tame",
+          "mod": "I",
+          "type": "",
+          "preview": "אַלּוּף"
+        },
+        {
+          "bdb_id": "a.dt.ac",
+          "aug": "b",
+          "twot": "109b",
+          "hebrew": "אַלּוּף",
+          "definition": "chief",
+          "mod": "II",
+          "type": "",
+          "preview": "אַלּוּף"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H520": {
+      "strong_number": "H520",
+      "entries": [
+        {
+          "bdb_id": "a.dx.ae",
+          "aug": "b",
+          "twot": "115d",
+          "hebrew": "אַמָּה",
+          "definition": "foundation",
+          "mod": "III",
+          "type": "",
+          "preview": "אַמָּה"
+        },
+        {
+          "bdb_id": "a.dx.ad",
+          "aug": "a",
+          "twot": "115c",
+          "hebrew": "אַמָּה",
+          "definition": "ell",
+          "mod": "II",
+          "type": "",
+          "preview": "אַמָּה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H682": {
+      "strong_number": "H682",
+      "entries": [
+        {
+          "bdb_id": "a.fj.ae",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "אָצֵל",
+          "definition": "Azal",
+          "mod": "I",
+          "type": "",
+          "preview": "אָצֵל"
+        },
+        {
+          "bdb_id": "a.fj.af",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "אָצֵל",
+          "definition": "Azal",
+          "mod": "II",
+          "type": "",
+          "preview": "אָצֵל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H899": {
+      "strong_number": "H899",
+      "entries": [
+        {
+          "bdb_id": "b.ae.ae",
+          "aug": "b",
+          "twot": "198d",
+          "hebrew": "בֶּ֫גֶד",
+          "definition": "garment",
+          "mod": "II",
+          "type": "",
+          "preview": "בֶּ֫גֶד"
+        },
+        {
+          "bdb_id": "b.ae.ab",
+          "aug": "a",
+          "twot": "198a",
+          "hebrew": "בֶּ֫גֶד",
+          "definition": "treachery",
+          "mod": "I",
+          "type": "",
+          "preview": "בֶּ֫גֶד"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H973": {
+      "strong_number": "H973",
+      "entries": [
+        {
+          "bdb_id": "b.be.aa",
+          "aug": "b",
+          "twot": "229",
+          "hebrew": "בָּחֵל",
+          "definition": "gotten by greed",
+          "mod": "II",
+          "type": "root",
+          "preview": "בָּחֵל"
+        },
+        {
+          "bdb_id": "b.bd.aa",
+          "aug": "a",
+          "twot": "228",
+          "hebrew": "בָּחֵל",
+          "definition": "feel loathing",
+          "mod": "I",
+          "type": "root",
+          "preview": "בָּחֵל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7462": {
+      "strong_number": "H7462",
+      "entries": [
+        {
+          "bdb_id": "b.bp.bn",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "בֵּית־עֵ֫קֶד הָרֹעִים",
+          "definition": "binding-house of the shepherds",
+          "mod": "I",
+          "type": "",
+          "preview": "בֵּית־עֵ֫קֶד הָרֹעִים"
+        },
+        {
+          "bdb_id": "t.dl.ad",
+          "aug": "d",
+          "twot": "2186",
+          "hebrew": "רָעָה",
+          "definition": "be a special friend",
+          "mod": "I",
+          "type": "",
+          "preview": "רָעָה"
+        },
+        {
+          "bdb_id": "t.dl.aa",
+          "aug": "c",
+          "twot": "2186",
+          "hebrew": "רָעָה",
+          "definition": "associate with",
+          "mod": "II",
+          "type": "root",
+          "preview": "רָעָה"
+        },
+        {
+          "bdb_id": "t.dk.aa",
+          "aug": "b",
+          "twot": "2185",
+          "hebrew": "רָעָה",
+          "definition": "pasture",
+          "mod": "I",
+          "type": "root",
+          "preview": "רָעָה"
+        }
+      ],
+      "homonym_count": 4
+    },
+    "H1090": {
+      "strong_number": "H1090",
+      "entries": [
+        {
+          "bdb_id": "b.bu.ad",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "בִּלְהָה",
+          "definition": "Bilhah",
+          "mod": "II",
+          "type": "",
+          "preview": "בִּלְהָה"
+        },
+        {
+          "bdb_id": "b.bu.ac",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "בִּלְהָה",
+          "definition": "Bilhah",
+          "mod": "I",
+          "type": "",
+          "preview": "בִּלְהָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1101": {
+      "strong_number": "H1101",
+      "entries": [
+        {
+          "bdb_id": "b.bv.ac",
+          "aug": "b",
+          "twot": "248b",
+          "hebrew": "בָּלַל",
+          "definition": "to give provender",
+          "mod": "II",
+          "type": "",
+          "preview": "בָּלַל"
+        },
+        {
+          "bdb_id": "b.bv.aa",
+          "aug": "a",
+          "twot": "248",
+          "hebrew": "בָּלַל",
+          "definition": "mingle",
+          "mod": "I",
+          "type": "root",
+          "preview": "בָּלַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1106": {
+      "strong_number": "H1106",
+      "entries": [
+        {
+          "bdb_id": "b.by.ae",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "בֶּ֫לַע",
+          "definition": "Bela",
+          "mod": "III",
+          "type": "",
+          "preview": "בֶּ֫לַע"
+        },
+        {
+          "bdb_id": "b.by.ac",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "בֶּ֫לַע",
+          "definition": "Bela",
+          "mod": "II",
+          "type": "",
+          "preview": "בֶ֫לַע"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1109": {
+      "strong_number": "H1109",
+      "entries": [
+        {
+          "bdb_id": "b.by.ag",
+          "aug": "a",
+          "twot": "251b",
+          "hebrew": "בִּלְעָם",
+          "definition": "Balaam",
+          "mod": "I",
+          "type": "",
+          "preview": "בִּלְעָם"
+        },
+        {
+          "bdb_id": "b.by.ah",
+          "aug": "b",
+          "twot": "251b",
+          "hebrew": "בִּלְעָם",
+          "definition": "Bileam",
+          "mod": "II",
+          "type": "",
+          "preview": "בִּלְעָם"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1168": {
+      "strong_number": "H1168",
+      "entries": [
+        {
+          "bdb_id": "b.ci.ac",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "בַּ֫עַל",
+          "definition": "Baal",
+          "mod": "II",
+          "type": "",
+          "preview": "בַּ֫עַל"
+        },
+        {
+          "bdb_id": "b.ci.ab",
+          "aug": "a",
+          "twot": "262a",
+          "hebrew": "בַּעַל",
+          "definition": "Baal",
+          "mod": "I",
+          "type": "",
+          "preview": "בַּעַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1197": {
+      "strong_number": "H1197",
+      "entries": [
+        {
+          "bdb_id": "b.cj.ae",
+          "aug": "b",
+          "twot": "264",
+          "hebrew": "בָּעַר",
+          "definition": "be brutish",
+          "mod": "II",
+          "type": "",
+          "preview": "בָּעַר"
+        },
+        {
+          "bdb_id": "b.cj.aa",
+          "aug": "a",
+          "twot": "263",
+          "hebrew": "בָּעַר",
+          "definition": "burn",
+          "mod": "I",
+          "type": "root",
+          "preview": "בָּעַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6869": {
+      "strong_number": "H6869",
+      "entries": [
+        {
+          "bdb_id": "b.cp.ah",
+          "aug": "a",
+          "twot": "270e",
+          "hebrew": "בַּצָּרָה",
+          "definition": "dearth",
+          "mod": "I",
+          "type": "",
+          "preview": "בַּצָּרָה"
+        },
+        {
+          "bdb_id": "r.dz.ad",
+          "aug": "b",
+          "twot": "1973c",
+          "hebrew": "צָרָה",
+          "definition": "straits",
+          "mod": "I",
+          "type": "",
+          "preview": "צָרָה"
+        },
+        {
+          "bdb_id": "r.ea.ac",
+          "aug": "c",
+          "twot": "1974b",
+          "hebrew": "צָרָה",
+          "definition": "vexer",
+          "mod": "II",
+          "type": "",
+          "preview": "צָרָה"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H1238": {
+      "strong_number": "H1238",
+      "entries": [
+        {
+          "bdb_id": "b.ct.aa",
+          "aug": "b",
+          "twot": "273",
+          "hebrew": "בָּקַק",
+          "definition": "empty",
+          "mod": "II",
+          "type": "root",
+          "preview": "בָּקַק"
+        },
+        {
+          "bdb_id": "b.cs.aa",
+          "aug": "a",
+          "twot": "272",
+          "hebrew": "בָּקַק",
+          "definition": "be luxuriant",
+          "mod": "I",
+          "type": "root",
+          "preview": "בָּקַק"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1250": {
+      "strong_number": "H1250",
+      "entries": [
+        {
+          "bdb_id": "b.dg.ac",
+          "aug": "a",
+          "twot": "288b",
+          "hebrew": "בַּר",
+          "definition": "grain",
+          "mod": "III",
+          "type": "",
+          "preview": "בַּר"
+        },
+        {
+          "bdb_id": "b.dg.ag",
+          "aug": "b",
+          "twot": "288f",
+          "hebrew": "בָּר",
+          "definition": "field",
+          "mod": "I",
+          "type": "",
+          "preview": "בָּר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1254": {
+      "strong_number": "H1254",
+      "entries": [
+        {
+          "bdb_id": "b.cx.aa",
+          "aug": "b",
+          "twot": "279",
+          "hebrew": "בָּרָא",
+          "definition": "be fat",
+          "mod": "II",
+          "type": "root",
+          "preview": "בָּרָא"
+        },
+        {
+          "bdb_id": "b.cw.aa",
+          "aug": "a",
+          "twot": "278",
+          "hebrew": "בָּרָא",
+          "definition": "shape",
+          "mod": "I",
+          "type": "root",
+          "preview": "בָּרָא"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1328": {
+      "strong_number": "H1328",
+      "entries": [
+        {
+          "bdb_id": "b.dm.af",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "בְּתוּאֵל",
+          "definition": "Bethuel",
+          "mod": "II",
+          "type": "",
+          "preview": "בְּתוּאֵל"
+        },
+        {
+          "bdb_id": "b.dm.ae",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "בְּתוּאֵל",
+          "definition": "Bethuel",
+          "mod": "I",
+          "type": "",
+          "preview": "בְּתוּאֵל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1356": {
+      "strong_number": "H1356",
+      "entries": [
+        {
+          "bdb_id": "c.ay.ad",
+          "aug": "b",
+          "twot": "323b",
+          "hebrew": "גֵּב",
+          "definition": "beam",
+          "mod": "III",
+          "type": "",
+          "preview": "גֵּב"
+        },
+        {
+          "bdb_id": "c.ay.ab",
+          "aug": "a",
+          "twot": "323a",
+          "hebrew": "גֵּב",
+          "definition": "pit",
+          "mod": "II",
+          "type": "",
+          "preview": "גֵּב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1430": {
+      "strong_number": "H1430",
+      "entries": [
+        {
+          "bdb_id": "c.av.ab",
+          "aug": "b",
+          "twot": "320a",
+          "hebrew": "גָּדִישׁ",
+          "definition": "tomb",
+          "mod": "II",
+          "type": "",
+          "preview": "גָּדִישׁ"
+        },
+        {
+          "bdb_id": "c.au.ab",
+          "aug": "a",
+          "twot": "319a",
+          "hebrew": "גָּדִישׁ",
+          "definition": "heap",
+          "mod": "I",
+          "type": "",
+          "preview": "גָּדִישׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1460": {
+      "strong_number": "H1460",
+      "entries": [
+        {
+          "bdb_id": "c.ba.ad",
+          "aug": "b",
+          "twot": "326b",
+          "hebrew": "גֵּו",
+          "definition": "midst",
+          "mod": "II",
+          "type": "",
+          "preview": "גֵּו"
+        },
+        {
+          "bdb_id": "c.ba.ac",
+          "aug": "a",
+          "twot": "326b",
+          "hebrew": "גֵּו",
+          "definition": "back",
+          "mod": "I",
+          "type": "",
+          "preview": "גֵּו"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1481": {
+      "strong_number": "H1481",
+      "entries": [
+        {
+          "bdb_id": "c.bh.aa",
+          "aug": "c",
+          "twot": "332",
+          "hebrew": "גּוּר",
+          "definition": "dread",
+          "mod": "III",
+          "type": "root",
+          "preview": "גּוּר"
+        },
+        {
+          "bdb_id": "c.bg.aa",
+          "aug": "b",
+          "twot": "331",
+          "hebrew": "גּוּר",
+          "definition": "stir up strife",
+          "mod": "II",
+          "type": "root",
+          "preview": "גּוּר"
+        },
+        {
+          "bdb_id": "c.bf.aa",
+          "aug": "a",
+          "twot": "330",
+          "hebrew": "גּוּר",
+          "definition": "sojourn",
+          "mod": "I",
+          "type": "root",
+          "preview": "גּוּר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H1524": {
+      "strong_number": "H1524",
+      "entries": [
+        {
+          "bdb_id": "c.bw.ac",
+          "aug": "b",
+          "twot": "346b",
+          "hebrew": "גִּיל",
+          "definition": "circle",
+          "mod": "II",
+          "type": "",
+          "preview": "גִּיל"
+        },
+        {
+          "bdb_id": "c.bw.ab",
+          "aug": "a",
+          "twot": "346a",
+          "hebrew": "גִּיל",
+          "definition": "rejoicing",
+          "mod": "I",
+          "type": "",
+          "preview": "גִּיל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1550": {
+      "strong_number": "H1550",
+      "entries": [
+        {
+          "bdb_id": "c.cd.ak",
+          "aug": "a",
+          "twot": "353e",
+          "hebrew": "גָּלִיל",
+          "definition": "turning",
+          "mod": "I",
+          "type": "",
+          "preview": "גָּלִיל"
+        },
+        {
+          "bdb_id": "c.cd.al",
+          "aug": "b",
+          "twot": "353f",
+          "hebrew": "גָּלִיל",
+          "definition": "cylinder",
+          "mod": "II",
+          "type": "",
+          "preview": "גָּלִיל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1633": {
+      "strong_number": "H1633",
+      "entries": [
+        {
+          "bdb_id": "c.db.ac",
+          "aug": "b",
+          "twot": "382b",
+          "hebrew": "גָּרַם",
+          "definition": "break bones",
+          "mod": "II",
+          "type": "",
+          "preview": "גָּרַם"
+        },
+        {
+          "bdb_id": "c.db.aa",
+          "aug": "a",
+          "twot": "382",
+          "hebrew": "גָּרַם",
+          "definition": "lay aside",
+          "mod": "I",
+          "type": "root",
+          "preview": "גָּרַם"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1688": {
+      "strong_number": "H1688",
+      "entries": [
+        {
+          "bdb_id": "d.ai.ak",
+          "aug": "a",
+          "twot": "399h",
+          "hebrew": "דְּבִיר",
+          "definition": "Debir",
+          "mod": "II",
+          "type": "",
+          "preview": "דְּבִיר"
+        },
+        {
+          "bdb_id": "l.al.ag",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "לִדְבִר",
+          "definition": "Debir",
+          "mod": "I",
+          "type": "",
+          "preview": "לִדְבִר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1793": {
+      "strong_number": "H1793",
+      "entries": [
+        {
+          "bdb_id": "d.bi.ac",
+          "aug": "b",
+          "twot": "427b",
+          "hebrew": "דַּכָּא",
+          "definition": "dust",
+          "mod": "II",
+          "type": "",
+          "preview": "דַּכָּא"
+        },
+        {
+          "bdb_id": "d.bi.ab",
+          "aug": "a",
+          "twot": "427a",
+          "hebrew": "דַּכָּא",
+          "definition": "contrite",
+          "mod": "I",
+          "type": "",
+          "preview": "דַּכָּא"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1803": {
+      "strong_number": "H1803",
+      "entries": [
+        {
+          "bdb_id": "d.bo.ac",
+          "aug": "a",
+          "twot": "433b",
+          "hebrew": "דַּלָּה",
+          "definition": "hair",
+          "mod": "I",
+          "type": "",
+          "preview": "דַּלָּה"
+        },
+        {
+          "bdb_id": "d.bo.ad",
+          "aug": "b",
+          "twot": "433c",
+          "hebrew": "דַּלָּה",
+          "definition": "the poor",
+          "mod": "II",
+          "type": "",
+          "preview": "דַּלָּה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1826": {
+      "strong_number": "H1826",
+      "entries": [
+        {
+          "bdb_id": "d.bv.aa",
+          "aug": "b",
+          "twot": "440",
+          "hebrew": "דָּמַם",
+          "definition": "wail",
+          "mod": "II",
+          "type": "root",
+          "preview": "דָּמַם"
+        },
+        {
+          "bdb_id": "d.bu.aa",
+          "aug": "a",
+          "twot": "439",
+          "hebrew": "דָּמַם",
+          "definition": "be dumb",
+          "mod": "I",
+          "type": "root",
+          "preview": "דָּמַם"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H1984": {
+      "strong_number": "H1984",
+      "entries": [
+        {
+          "bdb_id": "e.bo.aa",
+          "aug": "a",
+          "twot": "499",
+          "hebrew": "הָלַל",
+          "definition": "shine",
+          "mod": "I",
+          "type": "root",
+          "preview": "הָלַל"
+        },
+        {
+          "bdb_id": "e.bp.aa",
+          "aug": "c",
+          "twot": "501",
+          "hebrew": "הָלַל",
+          "definition": "be boastful",
+          "mod": "II",
+          "type": "root",
+          "preview": "הָלַל"
+        },
+        {
+          "bdb_id": "e.bp.aa",
+          "aug": "b",
+          "twot": "500",
+          "hebrew": "הָלַל",
+          "definition": "be boastful",
+          "mod": "II",
+          "type": "root",
+          "preview": "הָלַל"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H2030": {
+      "strong_number": "H2030",
+      "entries": [
+        {
+          "bdb_id": "e.cd.ab",
+          "aug": "a",
+          "twot": "515a",
+          "hebrew": "הָרָה",
+          "definition": "pregnant",
+          "mod": "II",
+          "type": "",
+          "preview": "הָרָה"
+        },
+        {
+          "bdb_id": "e.cd.ad",
+          "aug": "b",
+          "twot": "515b",
+          "hebrew": "הָרִיָּה",
+          "definition": "pregnant",
+          "mod": "I",
+          "type": "",
+          "preview": "הָרִיָּה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2048": {
+      "strong_number": "H2048",
+      "entries": [
+        {
+          "bdb_id": "e.cg.aa",
+          "aug": "a",
+          "twot": "518",
+          "hebrew": "הָתַל",
+          "definition": "deceive",
+          "mod": "I",
+          "type": "root",
+          "preview": "הָתַל"
+        },
+        {
+          "bdb_id": "w.au.aa",
+          "aug": "b",
+          "twot": "2514",
+          "hebrew": "תָּלַל",
+          "definition": "deride",
+          "mod": "II",
+          "type": "root",
+          "preview": "תָּלַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2094": {
+      "strong_number": "H2094",
+      "entries": [
+        {
+          "bdb_id": "g.an.aa",
+          "aug": "a",
+          "twot": "531",
+          "hebrew": "זָהַר",
+          "definition": "be light",
+          "mod": "I",
+          "type": "root",
+          "preview": "זָהַר"
+        },
+        {
+          "bdb_id": "g.ao.aa",
+          "aug": "b",
+          "twot": "532",
+          "hebrew": "זָהַר",
+          "definition": "enlighten",
+          "mod": "II",
+          "type": "root",
+          "preview": "זָהַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2114": {
+      "strong_number": "H2114",
+      "entries": [
+        {
+          "bdb_id": "g.ay.aa",
+          "aug": "a",
+          "twot": "541",
+          "hebrew": "זוּר",
+          "definition": "be a stranger",
+          "mod": "I",
+          "type": "root",
+          "preview": "זוּר"
+        },
+        {
+          "bdb_id": "g.az.aa",
+          "aug": "b",
+          "twot": "542",
+          "hebrew": "זוּר",
+          "definition": "be loathsome",
+          "mod": "II",
+          "type": "root",
+          "preview": "זוּר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2119": {
+      "strong_number": "H2119",
+      "entries": [
+        {
+          "bdb_id": "g.bd.aa",
+          "aug": "b",
+          "twot": "546",
+          "hebrew": "זָחַל",
+          "definition": "fear",
+          "mod": "II",
+          "type": "root",
+          "preview": "זָחַל"
+        },
+        {
+          "bdb_id": "g.bc.aa",
+          "aug": "a",
+          "twot": "545",
+          "hebrew": "זָחַל",
+          "definition": "shrink back",
+          "mod": "I",
+          "type": "root",
+          "preview": "זָחַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2123": {
+      "strong_number": "H2123",
+      "entries": [
+        {
+          "bdb_id": "g.as.ab",
+          "aug": "a",
+          "twot": "535a",
+          "hebrew": "זִיז",
+          "definition": "moving things",
+          "mod": "I",
+          "type": "",
+          "preview": "זִיז"
+        },
+        {
+          "bdb_id": "g.at.ab",
+          "aug": "b",
+          "twot": "536a",
+          "hebrew": "זִיז",
+          "definition": "abundance",
+          "mod": "II",
+          "type": "",
+          "preview": "זִיז"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2151": {
+      "strong_number": "H2151",
+      "entries": [
+        {
+          "bdb_id": "g.bk.aa",
+          "aug": "a",
+          "twot": "553",
+          "hebrew": "זָלַל",
+          "definition": "shake",
+          "mod": "I",
+          "type": "root",
+          "preview": "זָלַל"
+        },
+        {
+          "bdb_id": "g.bl.aa",
+          "aug": "b",
+          "twot": "554",
+          "hebrew": "זָלַל",
+          "definition": "be light",
+          "mod": "II",
+          "type": "root",
+          "preview": "זָלַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2174": {
+      "strong_number": "H2174",
+      "entries": [
+        {
+          "bdb_id": "g.bs.ad",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "זִמְרִי",
+          "definition": "Zimri",
+          "mod": "I",
+          "type": "",
+          "preview": "זִמְרִי"
+        },
+        {
+          "bdb_id": "g.bs.ae",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "זִמְרִי",
+          "definition": "Zimri",
+          "mod": "II",
+          "type": "",
+          "preview": "זִמְרִי"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2186": {
+      "strong_number": "H2186",
+      "entries": [
+        {
+          "bdb_id": "g.bv.aa",
+          "aug": "a",
+          "twot": "564",
+          "hebrew": "זָנַח",
+          "definition": "reject",
+          "mod": "I",
+          "type": "root",
+          "preview": "זָנַח"
+        },
+        {
+          "bdb_id": "g.bw.aa",
+          "aug": "b",
+          "twot": "565",
+          "hebrew": "זָנַח",
+          "definition": "stink",
+          "mod": "II",
+          "type": "root",
+          "preview": "זָנַח"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2131": {
+      "strong_number": "H2131",
+      "entries": [
+        {
+          "bdb_id": "g.cg.ab",
+          "aug": "b",
+          "twot": "577a",
+          "hebrew": "זֵק",
+          "definition": "fetter",
+          "mod": "II",
+          "type": "",
+          "preview": "n.[m.]"
+        },
+        {
+          "bdb_id": "g.cc.af",
+          "aug": "a",
+          "twot": "573",
+          "hebrew": "זֵק",
+          "definition": "missile",
+          "mod": "I",
+          "type": "",
+          "preview": "n.[m.]"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2256": {
+      "strong_number": "H2256",
+      "entries": [
+        {
+          "bdb_id": "h.af.ac",
+          "aug": "b",
+          "twot": "595a",
+          "hebrew": "חֵ֫בֶל",
+          "definition": "pain",
+          "mod": "I",
+          "type": "",
+          "preview": "חֵ֫בֶל"
+        },
+        {
+          "bdb_id": "h.af.ab",
+          "aug": "a",
+          "twot": "592b",
+          "hebrew": "חֶ֫בֶל",
+          "definition": "cord",
+          "mod": "I",
+          "type": "",
+          "preview": "חֶ֫בֶל"
+        },
+        {
+          "bdb_id": "h.ag.ab",
+          "aug": "d",
+          "twot": "594a",
+          "hebrew": "חֶ֫בֶל",
+          "definition": "destruction",
+          "mod": "II",
+          "type": "",
+          "preview": "חֶ֫בֶל"
+        },
+        {
+          "bdb_id": "h.af.ah",
+          "aug": "c",
+          "twot": "592a",
+          "hebrew": "חֹבְלִים",
+          "definition": "union",
+          "mod": "I",
+          "type": "",
+          "preview": "חֹבְלִים"
+        }
+      ],
+      "homonym_count": 4
+    },
+    "H2254": {
+      "strong_number": "H2254",
+      "entries": [
+        {
+          "bdb_id": "h.ag.aa",
+          "aug": "b",
+          "twot": "594",
+          "hebrew": "חָבַל",
+          "definition": "act (ruinously) corruptly",
+          "mod": "II",
+          "type": "root",
+          "preview": "חָבַל"
+        },
+        {
+          "bdb_id": "h.af.aa",
+          "aug": "c",
+          "twot": "595",
+          "hebrew": "חָבַל",
+          "definition": "travail",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָבַל"
+        },
+        {
+          "bdb_id": "h.af.aa",
+          "aug": "a",
+          "twot": "593",
+          "hebrew": "חָבַל",
+          "definition": "bind",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָבַל"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H2275": {
+      "strong_number": "H2275",
+      "entries": [
+        {
+          "bdb_id": "h.ai.am",
+          "aug": "b",
+          "twot": "598i",
+          "hebrew": "חֶבְרוֹן",
+          "definition": "Hebron",
+          "mod": "II",
+          "type": "",
+          "preview": "חֶבְרוֹן"
+        },
+        {
+          "bdb_id": "h.ai.al",
+          "aug": "a",
+          "twot": "598i",
+          "hebrew": "חֶבְרוֹן",
+          "definition": "Hebron",
+          "mod": "I",
+          "type": "",
+          "preview": "חֶבְרוֹן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2342": {
+      "strong_number": "H2342",
+      "entries": [
+        {
+          "bdb_id": "h.bf.aa",
+          "aug": "a",
+          "twot": "623",
+          "hebrew": "חוּל",
+          "definition": "whirl",
+          "mod": "I",
+          "type": "root",
+          "preview": "חוּל"
+        },
+        {
+          "bdb_id": "h.bg.aa",
+          "aug": "b",
+          "twot": "624",
+          "hebrew": "חִיל",
+          "definition": "be firm",
+          "mod": "II",
+          "type": "root",
+          "preview": "חִיל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2363": {
+      "strong_number": "H2363",
+      "entries": [
+        {
+          "bdb_id": "h.bo.aa",
+          "aug": "b",
+          "twot": "632",
+          "hebrew": "חוּשׁ",
+          "definition": "feel",
+          "mod": "II",
+          "type": "root",
+          "preview": "חוּשׁ"
+        },
+        {
+          "bdb_id": "h.bn.aa",
+          "aug": "a",
+          "twot": "631",
+          "hebrew": "חוּשׁ",
+          "definition": "haste",
+          "mod": "I",
+          "type": "root",
+          "preview": "חוּשׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2366": {
+      "strong_number": "H2366",
+      "entries": [
+        {
+          "bdb_id": "h.bo.ae",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "חוּשִׁים",
+          "definition": "Hushim",
+          "mod": "I",
+          "type": "",
+          "preview": "חוּשִׁים"
+        },
+        {
+          "bdb_id": "h.bo.af",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "חֻשִׁים",
+          "definition": "Hushim",
+          "mod": "II",
+          "type": "",
+          "preview": "חֻשִׁים"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2416": {
+      "strong_number": "H2416",
+      "entries": [
+        {
+          "bdb_id": "h.cd.ac",
+          "aug": "b",
+          "twot": "644b",
+          "hebrew": "חַי",
+          "definition": "kinsfolk",
+          "mod": "II",
+          "type": "",
+          "preview": "n.[m.]"
+        },
+        {
+          "bdb_id": "h.cd.ab",
+          "aug": "a",
+          "twot": "644a",
+          "hebrew": "חַי",
+          "definition": "alive",
+          "mod": "I",
+          "type": "",
+          "preview": "alive"
+        },
+        {
+          "bdb_id": "h.cd.ad",
+          "aug": "c",
+          "twot": "644c",
+          "hebrew": "חַיָּה",
+          "definition": "living thing",
+          "mod": "I",
+          "type": "",
+          "preview": "חַיָּה"
+        },
+        {
+          "bdb_id": "h.cd.ae",
+          "aug": "d",
+          "twot": "644d",
+          "hebrew": "חַיָּה",
+          "definition": "community",
+          "mod": "II",
+          "type": "",
+          "preview": "חַיָּה"
+        },
+        {
+          "bdb_id": "h.cd.ag",
+          "aug": "e",
+          "twot": "644f",
+          "hebrew": "חַיִּים",
+          "definition": "life",
+          "mod": "I",
+          "type": "",
+          "preview": "חַיִּים"
+        }
+      ],
+      "homonym_count": 5
+    },
+    "H2470": {
+      "strong_number": "H2470",
+      "entries": [
+        {
+          "bdb_id": "h.cn.aa",
+          "aug": "a",
+          "twot": "655",
+          "hebrew": "חָלָה",
+          "definition": "be weak",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָלָה"
+        },
+        {
+          "bdb_id": "h.co.aa",
+          "aug": "b",
+          "twot": "656",
+          "hebrew": "חָלָה",
+          "definition": "mollify",
+          "mod": "II",
+          "type": "root",
+          "preview": "חָלָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2490": {
+      "strong_number": "H2490",
+      "entries": [
+        {
+          "bdb_id": "h.ct.aa",
+          "aug": "c",
+          "twot": "661",
+          "hebrew": "חָלַל",
+          "definition": "pollute",
+          "mod": "III",
+          "type": "root",
+          "preview": "חָלַל"
+        },
+        {
+          "bdb_id": "h.cs.af",
+          "aug": "b",
+          "twot": "660e",
+          "hebrew": "חָלַל",
+          "definition": "play the pipe",
+          "mod": "II",
+          "type": "",
+          "preview": "vb. denom"
+        },
+        {
+          "bdb_id": "h.cs.aa",
+          "aug": "a",
+          "twot": "660",
+          "hebrew": "חָלַל",
+          "definition": "bore",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָלַל"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H2491": {
+      "strong_number": "H2491",
+      "entries": [
+        {
+          "bdb_id": "h.ct.ac",
+          "aug": "b",
+          "twot": "661b",
+          "hebrew": "חָלָל",
+          "definition": "profaned",
+          "mod": "II",
+          "type": "",
+          "preview": "חָלָל"
+        },
+        {
+          "bdb_id": "h.cs.ab",
+          "aug": "a",
+          "twot": "660a",
+          "hebrew": "חָלָל",
+          "definition": "pierced",
+          "mod": "I",
+          "type": "",
+          "preview": "חָלָל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2492": {
+      "strong_number": "H2492",
+      "entries": [
+        {
+          "bdb_id": "h.cu.aa",
+          "aug": "a",
+          "twot": "662",
+          "hebrew": "חָלַם",
+          "definition": "be healthy",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָלַם"
+        },
+        {
+          "bdb_id": "h.cv.aa",
+          "aug": "b",
+          "twot": "663",
+          "hebrew": "חָלַם",
+          "definition": "dream",
+          "mod": "II",
+          "type": "root",
+          "preview": "חָלַם"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2502": {
+      "strong_number": "H2502",
+      "entries": [
+        {
+          "bdb_id": "h.cy.aa",
+          "aug": "a",
+          "twot": "667",
+          "hebrew": "חָלַץ",
+          "definition": "draw off",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָלַץ"
+        },
+        {
+          "bdb_id": "h.cz.aa",
+          "aug": "b",
+          "twot": "668",
+          "hebrew": "חָלַץ",
+          "definition": "equip",
+          "mod": "II",
+          "type": "root",
+          "preview": "חָלַץ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2506": {
+      "strong_number": "H2506",
+      "entries": [
+        {
+          "bdb_id": "h.db.ab",
+          "aug": "b",
+          "twot": "670a",
+          "hebrew": "חֵ֫לֶק",
+          "definition": "smoothness",
+          "mod": "III",
+          "type": "",
+          "preview": "חֵ֫לֶק"
+        },
+        {
+          "bdb_id": "h.da.ab",
+          "aug": "a",
+          "twot": "669a",
+          "hebrew": "חֵ֫לֶק",
+          "definition": "portion",
+          "mod": "I",
+          "type": "",
+          "preview": "חֵ֫לֶק"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2505": {
+      "strong_number": "H2505",
+      "entries": [
+        {
+          "bdb_id": "h.db.aa",
+          "aug": "b",
+          "twot": "670",
+          "hebrew": "חָלַק",
+          "definition": "be smooth",
+          "mod": "II",
+          "type": "root",
+          "preview": "חָלַק"
+        },
+        {
+          "bdb_id": "h.da.aa",
+          "aug": "a",
+          "twot": "669",
+          "hebrew": "חָלַק",
+          "definition": "divide",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָלַק"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2513": {
+      "strong_number": "H2513",
+      "entries": [
+        {
+          "bdb_id": "h.da.ae",
+          "aug": "a",
+          "twot": "669b",
+          "hebrew": "חֶלְקָה",
+          "definition": "portion",
+          "mod": "I",
+          "type": "",
+          "preview": "חֶלְקָה"
+        },
+        {
+          "bdb_id": "h.db.ad",
+          "aug": "b",
+          "twot": "670c",
+          "hebrew": "חֶלְקָה",
+          "definition": "smooth part",
+          "mod": "II",
+          "type": "",
+          "preview": "חֶלְקָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2556": {
+      "strong_number": "H2556",
+      "entries": [
+        {
+          "bdb_id": "h.dk.aa",
+          "aug": "a",
+          "twot": "679",
+          "hebrew": "חָמֵץ",
+          "definition": "be sour",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָמֵץ"
+        },
+        {
+          "bdb_id": "h.dl.aa",
+          "aug": "b",
+          "twot": "680",
+          "hebrew": "חָמַץ",
+          "definition": "be red",
+          "mod": "II",
+          "type": "root",
+          "preview": "be red"
+        },
+        {
+          "bdb_id": "h.dm.aa",
+          "aug": "c",
+          "twot": "681",
+          "hebrew": "חָמַץ",
+          "definition": "be ruthless",
+          "mod": "III",
+          "type": "root",
+          "preview": "be ruthless"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H2560": {
+      "strong_number": "H2560",
+      "entries": [
+        {
+          "bdb_id": "h.do.aa",
+          "aug": "a",
+          "twot": "683",
+          "hebrew": "חָמַר",
+          "definition": "ferment",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָמַר"
+        },
+        {
+          "bdb_id": "h.dq.aa",
+          "aug": "c",
+          "twot": "685",
+          "hebrew": "חָמַר",
+          "definition": "be red",
+          "mod": "IV",
+          "type": "root",
+          "preview": "be red"
+        },
+        {
+          "bdb_id": "h.do.ae",
+          "aug": "b",
+          "twot": "683d",
+          "hebrew": "חָמַר",
+          "definition": "cover with asphalt",
+          "mod": "II",
+          "type": "",
+          "preview": "חָמַר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H2563": {
+      "strong_number": "H2563",
+      "entries": [
+        {
+          "bdb_id": "h.dp.ab",
+          "aug": "b",
+          "twot": "684a",
+          "hebrew": "חֹ֫מֶר",
+          "definition": "heap",
+          "mod": "II",
+          "type": "",
+          "preview": "חֹ֫מֶר"
+        },
+        {
+          "bdb_id": "h.dp.ac",
+          "aug": "c",
+          "twot": "684b",
+          "hebrew": "חֹ֫מֶר",
+          "definition": "homer",
+          "mod": "III",
+          "type": "",
+          "preview": "חֹ֫מֶר"
+        },
+        {
+          "bdb_id": "h.do.ad",
+          "aug": "a",
+          "twot": "683c",
+          "hebrew": "חֹ֫מֶר",
+          "definition": "cement",
+          "mod": "I",
+          "type": "",
+          "preview": "חֹ֫מֶר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H2575": {
+      "strong_number": "H2575",
+      "entries": [
+        {
+          "bdb_id": "h.di.ag",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "חַמַּת",
+          "definition": "Hammath",
+          "mod": "I",
+          "type": "",
+          "preview": "חַמַּת"
+        },
+        {
+          "bdb_id": "h.di.ah",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "חַמַּת",
+          "definition": "Hammath",
+          "mod": "II",
+          "type": "",
+          "preview": "חַמַּת"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2603": {
+      "strong_number": "H2603",
+      "entries": [
+        {
+          "bdb_id": "h.ea.aa",
+          "aug": "b",
+          "twot": "695",
+          "hebrew": "חָנַן",
+          "definition": "be loathsome",
+          "mod": "II",
+          "type": "root",
+          "preview": "חָנַן"
+        },
+        {
+          "bdb_id": "h.dz.aa",
+          "aug": "a",
+          "twot": "694",
+          "hebrew": "חָנַן",
+          "definition": "shew favour",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָנַן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2617": {
+      "strong_number": "H2617",
+      "entries": [
+        {
+          "bdb_id": "h.ee.ab",
+          "aug": "b",
+          "twot": "699a",
+          "hebrew": "חֶ֫סֶד",
+          "definition": "shame",
+          "mod": "II",
+          "type": "",
+          "preview": "חֶ֫סֶד"
+        },
+        {
+          "bdb_id": "h.ed.ab",
+          "aug": "a",
+          "twot": "698a",
+          "hebrew": "חֶ֫סֶד",
+          "definition": "goodness",
+          "mod": "I",
+          "type": "",
+          "preview": "חֶ֫סֶד"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2616": {
+      "strong_number": "H2616",
+      "entries": [
+        {
+          "bdb_id": "h.ee.aa",
+          "aug": "b",
+          "twot": "699",
+          "hebrew": "חָסַד",
+          "definition": "be reproached",
+          "mod": "II",
+          "type": "root",
+          "preview": "חָסַד"
+        },
+        {
+          "bdb_id": "h.ed.aa",
+          "aug": "a",
+          "twot": "698",
+          "hebrew": "חָסַד",
+          "definition": "be good",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָסַד"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2660": {
+      "strong_number": "H2660",
+      "entries": [
+        {
+          "bdb_id": "h.es.ab",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "חֵ֫פֶר",
+          "definition": "Hepher",
+          "mod": "I",
+          "type": "",
+          "preview": "חֵ֫פֶר"
+        },
+        {
+          "bdb_id": "h.es.ad",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "חֵ֫פֶר",
+          "definition": "Hepher",
+          "mod": "II",
+          "type": "",
+          "preview": "חֵ֫פֶר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2682": {
+      "strong_number": "H2682",
+      "entries": [
+        {
+          "bdb_id": "h.fc.ab",
+          "aug": "b",
+          "twot": "725a",
+          "hebrew": "חָצִיר",
+          "definition": "green grass",
+          "mod": "II",
+          "type": "",
+          "preview": "חָצִיר"
+        },
+        {
+          "bdb_id": "h.fc.ab",
+          "aug": "a",
+          "twot": "724a",
+          "hebrew": "חָצִיר",
+          "definition": "green grass",
+          "mod": "II",
+          "type": "",
+          "preview": "חָצִיר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2686": {
+      "strong_number": "H2686",
+      "entries": [
+        {
+          "bdb_id": "h.ez.ae",
+          "aug": "b",
+          "twot": "721c",
+          "hebrew": "חָצַץ",
+          "definition": "archers",
+          "mod": "II",
+          "type": "",
+          "preview": "vb. denom"
+        },
+        {
+          "bdb_id": "h.ez.aa",
+          "aug": "a",
+          "twot": "721",
+          "hebrew": "חָצַץ",
+          "definition": "divide",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָצַץ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2691": {
+      "strong_number": "H2691",
+      "entries": [
+        {
+          "bdb_id": "h.fb.ab",
+          "aug": "b",
+          "twot": "723a",
+          "hebrew": "חָצֵר",
+          "definition": "settled abode",
+          "mod": "II",
+          "type": "",
+          "preview": "חָצֵר"
+        },
+        {
+          "bdb_id": "h.fa.ab",
+          "aug": "a",
+          "twot": "722a",
+          "hebrew": "חָצֵר",
+          "definition": "enclosure",
+          "mod": "I",
+          "type": "",
+          "preview": "חָצֵר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2720": {
+      "strong_number": "H2720",
+      "entries": [
+        {
+          "bdb_id": "h.fi.ab",
+          "aug": "a",
+          "twot": "731a",
+          "hebrew": "חָרֵב",
+          "definition": "dry",
+          "mod": "I",
+          "type": "",
+          "preview": "חָרֵב"
+        },
+        {
+          "bdb_id": "h.fj.ab",
+          "aug": "b",
+          "twot": "731a",
+          "hebrew": "חָרֵב",
+          "definition": "waste",
+          "mod": "II",
+          "type": "",
+          "preview": "חָרֵב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2717": {
+      "strong_number": "H2717",
+      "entries": [
+        {
+          "bdb_id": "h.fj.aa",
+          "aug": "b",
+          "twot": "731",
+          "hebrew": "חָרֵב",
+          "definition": "be waste",
+          "mod": "II",
+          "type": "root",
+          "preview": "חָרֵב"
+        },
+        {
+          "bdb_id": "h.fi.aa",
+          "aug": "a",
+          "twot": "731",
+          "hebrew": "חָרֵב",
+          "definition": "be dry",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָרֵב"
+        },
+        {
+          "bdb_id": "h.fk.aa",
+          "aug": "c",
+          "twot": "732",
+          "hebrew": "חָרַב",
+          "definition": "attack",
+          "mod": "III",
+          "type": "root",
+          "preview": "חָרַב"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H2721": {
+      "strong_number": "H2721",
+      "entries": [
+        {
+          "bdb_id": "h.fi.ac",
+          "aug": "a",
+          "twot": "731b",
+          "hebrew": "חֹ֫רֶב",
+          "definition": "dryness",
+          "mod": "I",
+          "type": "",
+          "preview": "חֹ֫רֶב"
+        },
+        {
+          "bdb_id": "h.fj.ac",
+          "aug": "b",
+          "twot": "731b",
+          "hebrew": "חֹ֫רֶב",
+          "definition": "desolation",
+          "mod": "II",
+          "type": "",
+          "preview": "חֹ֫רֶב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2742": {
+      "strong_number": "H2742",
+      "entries": [
+        {
+          "bdb_id": "h.gc.ab",
+          "aug": "a",
+          "twot": "752a",
+          "hebrew": "חָרוּץ",
+          "definition": "sharp",
+          "mod": "I",
+          "type": "",
+          "preview": "חָרוּץ"
+        },
+        {
+          "bdb_id": "h.gc.ad",
+          "aug": "c",
+          "twot": "752b",
+          "hebrew": "חָרוּץ",
+          "definition": "trench",
+          "mod": "III",
+          "type": "",
+          "preview": "חָרוּץ"
+        },
+        {
+          "bdb_id": "h.gd.ab",
+          "aug": "d",
+          "twot": "753a",
+          "hebrew": "חָרוּץ",
+          "definition": "gold",
+          "mod": "V",
+          "type": "",
+          "preview": "חָרוּץ"
+        },
+        {
+          "bdb_id": "h.gc.ac",
+          "aug": "b",
+          "twot": "752a",
+          "hebrew": "חָרוּץ",
+          "definition": "strict decision",
+          "mod": "II",
+          "type": "",
+          "preview": "חָרוּץ"
+        }
+      ],
+      "homonym_count": 4
+    },
+    "H2764": {
+      "strong_number": "H2764",
+      "entries": [
+        {
+          "bdb_id": "h.fv.ab",
+          "aug": "a",
+          "twot": "744a",
+          "hebrew": "חֵ֫רֶם",
+          "definition": "devoted thing",
+          "mod": "I",
+          "type": "",
+          "preview": "חֵ֫רֶם"
+        },
+        {
+          "bdb_id": "h.fw.ab",
+          "aug": "b",
+          "twot": "745a",
+          "hebrew": "חֵ֫רֶם",
+          "definition": "net",
+          "mod": "II",
+          "type": "",
+          "preview": "חֵ֫רֶם"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2763": {
+      "strong_number": "H2763",
+      "entries": [
+        {
+          "bdb_id": "h.fv.aa",
+          "aug": "a",
+          "twot": "744",
+          "hebrew": "חָרַם",
+          "definition": "ban",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָרַם"
+        },
+        {
+          "bdb_id": "h.fw.aa",
+          "aug": "b",
+          "twot": "745",
+          "hebrew": "חָרַם",
+          "definition": "slit",
+          "mod": "II",
+          "type": "root",
+          "preview": "חָרַם"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2771": {
+      "strong_number": "H2771",
+      "entries": [
+        {
+          "bdb_id": "h.fw.ad",
+          "aug": "a",
+          "twot": "747",
+          "hebrew": "חָרָן",
+          "definition": "Haran",
+          "mod": "I",
+          "type": "",
+          "preview": "חָרָן"
+        },
+        {
+          "bdb_id": "h.fw.ae",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "חָרָן",
+          "definition": "Haran",
+          "mod": "II",
+          "type": "",
+          "preview": "חָרָן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2775": {
+      "strong_number": "H2775",
+      "entries": [
+        {
+          "bdb_id": "h.gj.ad",
+          "aug": "b",
+          "twot": "759b",
+          "hebrew": "חֶ֫רֶס",
+          "definition": "an eruptive disease",
+          "mod": "III",
+          "type": "",
+          "preview": "חֶ֫רֶס"
+        },
+        {
+          "bdb_id": "h.fx.ab",
+          "aug": "a",
+          "twot": "748a",
+          "hebrew": "חֶ֫רֶס",
+          "definition": "sun",
+          "mod": "I",
+          "type": "",
+          "preview": "חֶ֫רֶס"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2778": {
+      "strong_number": "H2778",
+      "entries": [
+        {
+          "bdb_id": "h.fz.aa",
+          "aug": "a",
+          "twot": "749",
+          "hebrew": "חָרַף",
+          "definition": "reproach",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָרַף"
+        },
+        {
+          "bdb_id": "h.gb.aa",
+          "aug": "c",
+          "twot": "751",
+          "hebrew": "חָרַף",
+          "definition": "acquire",
+          "mod": "IV",
+          "type": "root",
+          "preview": "חָרַף"
+        },
+        {
+          "bdb_id": "h.ga.ac",
+          "aug": "b",
+          "twot": "750",
+          "hebrew": "חָרַף",
+          "definition": "remain in harvest time",
+          "mod": "III",
+          "type": "",
+          "preview": "חָרַף"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H2791": {
+      "strong_number": "H2791",
+      "entries": [
+        {
+          "bdb_id": "h.gn.ab",
+          "aug": "b",
+          "twot": "763a",
+          "hebrew": "חֶ֫רֶשׁ",
+          "definition": "magic art",
+          "mod": "II",
+          "type": "",
+          "preview": "חֶ֫רֶשׁ"
+        },
+        {
+          "bdb_id": "h.gl.ac",
+          "aug": "a",
+          "twot": "761b",
+          "hebrew": "חֶ֫רֶשׁ",
+          "definition": "silently",
+          "mod": "I",
+          "type": "",
+          "preview": "חֶ֫רֶשׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2790": {
+      "strong_number": "H2790",
+      "entries": [
+        {
+          "bdb_id": "h.gl.aa",
+          "aug": "b",
+          "twot": "761",
+          "hebrew": "חָרֵשׁ",
+          "definition": "be silent",
+          "mod": "II",
+          "type": "root",
+          "preview": "חָרֵשׁ"
+        },
+        {
+          "bdb_id": "h.gk.aa",
+          "aug": "a",
+          "twot": "760",
+          "hebrew": "חָרַשׁ",
+          "definition": "cut in",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָרַשׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2836": {
+      "strong_number": "H2836",
+      "entries": [
+        {
+          "bdb_id": "h.gw.ad",
+          "aug": "b",
+          "twot": "773c",
+          "hebrew": "חָשַׁק",
+          "definition": "furnish with fillets",
+          "mod": "II",
+          "type": "",
+          "preview": "חשׁק"
+        },
+        {
+          "bdb_id": "h.gw.aa",
+          "aug": "a",
+          "twot": "773",
+          "hebrew": "חָשַׁק",
+          "definition": "be attached to",
+          "mod": "I",
+          "type": "root",
+          "preview": "חָשַׁק"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2844": {
+      "strong_number": "H2844",
+      "entries": [
+        {
+          "bdb_id": "h.hf.ac",
+          "aug": "b",
+          "twot": "784b",
+          "hebrew": "חַת",
+          "definition": "shattered",
+          "mod": "II",
+          "type": "",
+          "preview": "shattered"
+        },
+        {
+          "bdb_id": "h.hf.ab",
+          "aug": "a",
+          "twot": "784a",
+          "hebrew": "חַת",
+          "definition": "terror",
+          "mod": "I",
+          "type": "",
+          "preview": "terror"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2859": {
+      "strong_number": "H2859",
+      "entries": [
+        {
+          "bdb_id": "h.hc.ad",
+          "aug": "b",
+          "twot": "781b",
+          "hebrew": "חָתַן",
+          "definition": "make oneself a daughter’s husband",
+          "mod": "II",
+          "type": "",
+          "preview": "vb. denom"
+        },
+        {
+          "bdb_id": "h.hc.ab",
+          "aug": "a",
+          "twot": "781a",
+          "hebrew": "חֹתֵן",
+          "definition": "give",
+          "mod": "I",
+          "type": "",
+          "preview": "חֹתֵן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H2896": {
+      "strong_number": "H2896",
+      "entries": [
+        {
+          "bdb_id": "i.ai.ac",
+          "aug": "b",
+          "twot": "793a",
+          "hebrew": "טוֹב",
+          "definition": "a good thing",
+          "mod": "III",
+          "type": "",
+          "preview": "טוֹב"
+        },
+        {
+          "bdb_id": "i.ai.ab",
+          "aug": "a",
+          "twot": "793a",
+          "hebrew": "טוֹב",
+          "definition": "pleasant",
+          "mod": "II",
+          "type": "",
+          "preview": "טוֹב"
+        },
+        {
+          "bdb_id": "i.ai.af",
+          "aug": "c",
+          "twot": "793c",
+          "hebrew": "טוֹבָה",
+          "definition": "welfare",
+          "mod": "I",
+          "type": "",
+          "preview": "טוֹבָה"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H3227": {
+      "strong_number": "H3227",
+      "entries": [
+        {
+          "bdb_id": "j.bs.ad",
+          "aug": "b",
+          "twot": "872b",
+          "hebrew": "יְמִינִי",
+          "definition": "right",
+          "mod": "II",
+          "type": "",
+          "preview": "יְמִינִי"
+        },
+        {
+          "bdb_id": "j.bs.ac",
+          "aug": "a",
+          "twot": "872b",
+          "hebrew": "יְמִינִי",
+          "definition": "right hand",
+          "mod": "I",
+          "type": "",
+          "preview": "יְמִינִי"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3293": {
+      "strong_number": "H3293",
+      "entries": [
+        {
+          "bdb_id": "j.cm.ab",
+          "aug": "b",
+          "twot": "889a",
+          "hebrew": "יַ֫עַר",
+          "definition": "honeycomb",
+          "mod": "II",
+          "type": "",
+          "preview": "יַ֫עַר"
+        },
+        {
+          "bdb_id": "j.cl.ab",
+          "aug": "a",
+          "twot": "888a",
+          "hebrew": "יַ֫עַר",
+          "definition": "wood",
+          "mod": "I",
+          "type": "",
+          "preview": "יַ֫עַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3499": {
+      "strong_number": "H3499",
+      "entries": [
+        {
+          "bdb_id": "j.ef.ac",
+          "aug": "a",
+          "twot": "936a",
+          "hebrew": "יֶ֫תֶר",
+          "definition": "remainder",
+          "mod": "I",
+          "type": "",
+          "preview": "יֶ֫תֶר"
+        },
+        {
+          "bdb_id": "j.ef.ad",
+          "aug": "b",
+          "twot": "936b",
+          "hebrew": "יֶ֫תֶר",
+          "definition": "cord",
+          "mod": "II",
+          "type": "",
+          "preview": "יֶ֫תֶר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3543": {
+      "strong_number": "H3543",
+      "entries": [
+        {
+          "bdb_id": "k.ar.aa",
+          "aug": "b",
+          "twot": "958",
+          "hebrew": "כָּהָה",
+          "definition": "rebuke",
+          "mod": "II",
+          "type": "root",
+          "preview": "כָּהָה"
+        },
+        {
+          "bdb_id": "k.aq.aa",
+          "aug": "a",
+          "twot": "957",
+          "hebrew": "כָּהָה",
+          "definition": "be dim",
+          "mod": "I",
+          "type": "root",
+          "preview": "כָּהָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3563": {
+      "strong_number": "H3563",
+      "entries": [
+        {
+          "bdb_id": "k.aw.an",
+          "aug": "b",
+          "twot": "966",
+          "hebrew": "כּוֹס",
+          "definition": "owl",
+          "mod": "II",
+          "type": "",
+          "preview": "כּוֹס"
+        },
+        {
+          "bdb_id": "k.aw.am",
+          "aug": "a",
+          "twot": "965",
+          "hebrew": "כּוֹס",
+          "definition": "cup",
+          "mod": "I",
+          "type": "",
+          "preview": "כּוֹס"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3738": {
+      "strong_number": "H3738",
+      "entries": [
+        {
+          "bdb_id": "k.ay.aa",
+          "aug": "a",
+          "twot": "968",
+          "hebrew": "כוּר",
+          "definition": "bore",
+          "mod": "II",
+          "type": "root",
+          "preview": "כוּר"
+        },
+        {
+          "bdb_id": "k.cy.aa",
+          "aug": "b",
+          "twot": "1033",
+          "hebrew": "כָּרָה",
+          "definition": "dig",
+          "mod": "I",
+          "type": "root",
+          "preview": "כָּרָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3568": {
+      "strong_number": "H3568",
+      "entries": [
+        {
+          "bdb_id": "k.az.aa",
+          "aug": "a",
+          "twot": "969",
+          "hebrew": "כּוּשׁ",
+          "definition": "Cush",
+          "mod": "I",
+          "type": "root",
+          "preview": "כּוּשׁ"
+        },
+        {
+          "bdb_id": "k.az.ab",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "כּוּשׁ",
+          "definition": "Cush",
+          "mod": "II",
+          "type": "",
+          "preview": "כּוּשׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3581": {
+      "strong_number": "H3581",
+      "entries": [
+        {
+          "bdb_id": "k.bb.ae",
+          "aug": "a",
+          "twot": "971.1",
+          "hebrew": "כֹּחַ",
+          "definition": "chameleon",
+          "mod": "I",
+          "type": "",
+          "preview": "כֹּחַ"
+        },
+        {
+          "bdb_id": "k.bd.ab",
+          "aug": "b",
+          "twot": "973a",
+          "hebrew": "כֹּחַ",
+          "definition": "strength",
+          "mod": "II",
+          "type": "",
+          "preview": "כֹּחַ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3667": {
+      "strong_number": "H3667",
+      "entries": [
+        {
+          "bdb_id": "k.cd.ad",
+          "aug": "b",
+          "twot": "1002b",
+          "hebrew": "כְּנַ֫עַן",
+          "definition": "merchant",
+          "mod": "II",
+          "type": "",
+          "preview": "כְּנַ֫עַן"
+        },
+        {
+          "bdb_id": "k.cd.ac",
+          "aug": "a",
+          "twot": "1002",
+          "hebrew": "כְּנַ֫עַן",
+          "definition": "Canaan",
+          "mod": "I",
+          "type": "",
+          "preview": "כְּנַ֫עַן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3669": {
+      "strong_number": "H3669",
+      "entries": [
+        {
+          "bdb_id": "k.cd.ae",
+          "aug": "a",
+          "twot": "1002a",
+          "hebrew": "כְּנַעֲנִי",
+          "definition": "Kenaanite",
+          "mod": "I",
+          "type": "",
+          "preview": "כְּנַעֲנִי"
+        },
+        {
+          "bdb_id": "k.cd.af",
+          "aug": "b",
+          "twot": "1002a",
+          "hebrew": "כְּנַעֲנִי",
+          "definition": "trader",
+          "mod": "II",
+          "type": "",
+          "preview": "כְּנַעֲנִי"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3713": {
+      "strong_number": "H3713",
+      "entries": [
+        {
+          "bdb_id": "k.cw.ab",
+          "aug": "a",
+          "twot": "1026a",
+          "hebrew": "כְּפוֹר",
+          "definition": "bowl",
+          "mod": "I",
+          "type": "",
+          "preview": "כְּפוֹר"
+        },
+        {
+          "bdb_id": "k.cw.ac",
+          "aug": "b",
+          "twot": "1026b",
+          "hebrew": "כְּפוֹר",
+          "definition": "hoar frost",
+          "mod": "II",
+          "type": "",
+          "preview": "כְּפוֹר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3722": {
+      "strong_number": "H3722",
+      "entries": [
+        {
+          "bdb_id": "k.ct.ac",
+          "aug": "a",
+          "twot": "1023",
+          "hebrew": "כִּפֶּר",
+          "definition": "cover over",
+          "mod": "I",
+          "type": "",
+          "preview": "כִּפֶּר"
+        },
+        {
+          "bdb_id": "k.cu.ac",
+          "aug": "b",
+          "twot": "1024",
+          "hebrew": "כָּפַר",
+          "definition": "and thou shalt pitch it with pitch",
+          "mod": "II",
+          "type": "",
+          "preview": "כָּפַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3724": {
+      "strong_number": "H3724",
+      "entries": [
+        {
+          "bdb_id": "k.cu.ab",
+          "aug": "b",
+          "twot": "1024a",
+          "hebrew": "כֹּ֫פֶר",
+          "definition": "pitch",
+          "mod": "II",
+          "type": "",
+          "preview": "כֹּ֫פֶר"
+        },
+        {
+          "bdb_id": "k.cv.ac",
+          "aug": "c",
+          "twot": "1025b",
+          "hebrew": "כֹּ֫פֶר",
+          "definition": "El Ḥenna",
+          "mod": "III",
+          "type": "",
+          "preview": "כֹּ֫פֶר"
+        },
+        {
+          "bdb_id": "k.ct.ab",
+          "aug": "a",
+          "twot": "1023a",
+          "hebrew": "כֹּפֶר",
+          "definition": "the price of a life",
+          "mod": "I",
+          "type": "",
+          "preview": "כֹּפֶר"
+        },
+        {
+          "bdb_id": "k.cv.ae",
+          "aug": "d",
+          "twot": "1025d",
+          "hebrew": "כֹּפֶר",
+          "definition": "village",
+          "mod": "IV",
+          "type": "",
+          "preview": "כֹּפֶר"
+        }
+      ],
+      "homonym_count": 4
+    },
+    "H3733": {
+      "strong_number": "H3733",
+      "entries": [
+        {
+          "bdb_id": "k.cx.af",
+          "aug": "b",
+          "twot": "1030",
+          "hebrew": "כַּר",
+          "definition": "pasture",
+          "mod": "II",
+          "type": "",
+          "preview": "כַּר"
+        },
+        {
+          "bdb_id": "k.df.ab",
+          "aug": "c",
+          "twot": "1046a",
+          "hebrew": "כַּר",
+          "definition": "he-lamb",
+          "mod": "II",
+          "type": "",
+          "preview": "כַּר"
+        },
+        {
+          "bdb_id": "k.ax.ab",
+          "aug": "a",
+          "twot": "967a",
+          "hebrew": "כָּר",
+          "definition": "basket-saddle",
+          "mod": "I",
+          "type": "",
+          "preview": "כָּר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H3739": {
+      "strong_number": "H3739",
+      "entries": [
+        {
+          "bdb_id": "k.da.aa",
+          "aug": "b",
+          "twot": "1035",
+          "hebrew": "כָּרָה",
+          "definition": "give a feast",
+          "mod": "III",
+          "type": "root",
+          "preview": "כָּרָה"
+        },
+        {
+          "bdb_id": "k.cz.aa",
+          "aug": "a",
+          "twot": "1034",
+          "hebrew": "כָּרָה",
+          "definition": "get by trade",
+          "mod": "II",
+          "type": "root",
+          "preview": "כָּרָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3823": {
+      "strong_number": "H3823",
+      "entries": [
+        {
+          "bdb_id": "l.ai.ah",
+          "aug": "b",
+          "twot": "1071d",
+          "hebrew": "לִבֵּב",
+          "definition": "make cakes",
+          "mod": "II",
+          "type": "",
+          "preview": "vb. denom"
+        },
+        {
+          "bdb_id": "l.ai.af",
+          "aug": "a",
+          "twot": "1071",
+          "hebrew": "לָבַב",
+          "definition": "encourage",
+          "mod": "I",
+          "type": "",
+          "preview": "vb. denom"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3837": {
+      "strong_number": "H3837",
+      "entries": [
+        {
+          "bdb_id": "l.ak.ae",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "לָבָן",
+          "definition": "Laban",
+          "mod": "III",
+          "type": "",
+          "preview": "לָבָן"
+        },
+        {
+          "bdb_id": "l.ak.ad",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "לָבָן",
+          "definition": "Laban",
+          "mod": "II",
+          "type": "",
+          "preview": "לָבָן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3867": {
+      "strong_number": "H3867",
+      "entries": [
+        {
+          "bdb_id": "l.at.aa",
+          "aug": "b",
+          "twot": "1088",
+          "hebrew": "לָוָה",
+          "definition": "borrow",
+          "mod": "II",
+          "type": "root",
+          "preview": "לָוָה"
+        },
+        {
+          "bdb_id": "l.as.aa",
+          "aug": "a",
+          "twot": "1087",
+          "hebrew": "לָוָה",
+          "definition": "join",
+          "mod": "I",
+          "type": "root",
+          "preview": "לָוָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3885": {
+      "strong_number": "H3885",
+      "entries": [
+        {
+          "bdb_id": "l.ba.aa",
+          "aug": "b",
+          "twot": "1097",
+          "hebrew": "לוּן",
+          "definition": "murmur",
+          "mod": "II",
+          "type": "root",
+          "preview": "לוּן"
+        },
+        {
+          "bdb_id": "l.az.aa",
+          "aug": "a",
+          "twot": "1096",
+          "hebrew": "לוּן",
+          "definition": "lodge",
+          "mod": "I",
+          "type": "root",
+          "preview": "לוּן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3886": {
+      "strong_number": "H3886",
+      "entries": [
+        {
+          "bdb_id": "l.bb.aa",
+          "aug": "a",
+          "twot": "1098",
+          "hebrew": "לוּעַ",
+          "definition": "swallow",
+          "mod": "I",
+          "type": "root",
+          "preview": "לוּעַ"
+        },
+        {
+          "bdb_id": "l.bc.aa",
+          "aug": "b",
+          "twot": "1099",
+          "hebrew": "לוּעַ",
+          "definition": "talk wildly",
+          "mod": "II",
+          "type": "root",
+          "preview": "לוּע"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3898": {
+      "strong_number": "H3898",
+      "entries": [
+        {
+          "bdb_id": "l.bi.aa",
+          "aug": "b",
+          "twot": "1105",
+          "hebrew": "לָחַם",
+          "definition": "use as food",
+          "mod": "II",
+          "type": "root",
+          "preview": "לָחַם"
+        },
+        {
+          "bdb_id": "l.bh.aa",
+          "aug": "a",
+          "twot": "1104",
+          "hebrew": "לָחַם",
+          "definition": "fight",
+          "mod": "I",
+          "type": "root",
+          "preview": "לָחַם"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H3919": {
+      "strong_number": "H3919",
+      "entries": [
+        {
+          "bdb_id": "l.bo.ac",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "לַ֫יִשׁ",
+          "definition": "Laish",
+          "mod": "II",
+          "type": "",
+          "preview": "לַ֫יִשׁ"
+        },
+        {
+          "bdb_id": "l.bo.ad",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "לַ֫יִשׁ",
+          "definition": "Laish",
+          "mod": "III",
+          "type": "",
+          "preview": "לַ֫יִשׁ"
+        },
+        {
+          "bdb_id": "l.bo.ae",
+          "aug": "c",
+          "twot": null,
+          "hebrew": "לַ֫יְשָׁה",
+          "definition": "Laish",
+          "mod": "I",
+          "type": "",
+          "preview": "לַ֫יְשָׁה"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H3988": {
+      "strong_number": "H3988",
+      "entries": [
+        {
+          "bdb_id": "m.ag.aa",
+          "aug": "b",
+          "twot": "1140",
+          "hebrew": "מָאַס",
+          "definition": "flow",
+          "mod": "II",
+          "type": "root",
+          "preview": "מָאַס"
+        },
+        {
+          "bdb_id": "m.af.aa",
+          "aug": "a",
+          "twot": "1139",
+          "hebrew": "מָאַס",
+          "definition": "reject",
+          "mod": "I",
+          "type": "root",
+          "preview": "מָאַס"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4057": {
+      "strong_number": "H4057",
+      "entries": [
+        {
+          "bdb_id": "d.ai.ao",
+          "aug": "a",
+          "twot": "399k",
+          "hebrew": "מִדְבָּר",
+          "definition": "mouth",
+          "mod": "I",
+          "type": "",
+          "preview": "מִדְבָּר"
+        },
+        {
+          "bdb_id": "d.ai.ap",
+          "aug": "b",
+          "twot": "399l",
+          "hebrew": "מִדְבָּר",
+          "definition": "wilderness",
+          "mod": "II",
+          "type": "",
+          "preview": "מִדְבָר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4060": {
+      "strong_number": "H4060",
+      "entries": [
+        {
+          "bdb_id": "m.al.af",
+          "aug": "b",
+          "twot": "1147",
+          "hebrew": "מִדָּה",
+          "definition": "tribute",
+          "mod": "II",
+          "type": "",
+          "preview": "מִדָּה"
+        },
+        {
+          "bdb_id": "m.al.ac",
+          "aug": "a",
+          "twot": "1146b",
+          "hebrew": "מִדָּה",
+          "definition": "measure",
+          "mod": "I",
+          "type": "",
+          "preview": "מִדָּה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4118": {
+      "strong_number": "H4118",
+      "entries": [
+        {
+          "bdb_id": "m.aq.ac",
+          "aug": "b",
+          "twot": "1152b",
+          "hebrew": "מַהֵר",
+          "definition": "quickly",
+          "mod": "II",
+          "type": "",
+          "preview": "מַהֵר"
+        },
+        {
+          "bdb_id": "m.aq.ab",
+          "aug": "a",
+          "twot": "1152a",
+          "hebrew": "מַהֵר",
+          "definition": "hastening",
+          "mod": "I",
+          "type": "",
+          "preview": "מַהֵר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4116": {
+      "strong_number": "H4116",
+      "entries": [
+        {
+          "bdb_id": "m.aq.aa",
+          "aug": "a",
+          "twot": "1152",
+          "hebrew": "מָהַר",
+          "definition": "hasten",
+          "mod": "I",
+          "type": "root",
+          "preview": "מָהַר"
+        },
+        {
+          "bdb_id": "m.ar.ac",
+          "aug": "b",
+          "twot": "1153",
+          "hebrew": "מָהַר",
+          "definition": "acquire by paying purchase-price",
+          "mod": "III",
+          "type": "",
+          "preview": "מָהַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4135": {
+      "strong_number": "H4135",
+      "entries": [
+        {
+          "bdb_id": "m.az.aa",
+          "aug": "a",
+          "twot": "1161",
+          "hebrew": "מוּל",
+          "definition": "circumcise",
+          "mod": "II",
+          "type": "root",
+          "preview": "מוּל"
+        },
+        {
+          "bdb_id": "m.ci.aa",
+          "aug": "b",
+          "twot": "1204",
+          "hebrew": "מָלַל",
+          "definition": "circumcise",
+          "mod": "IV",
+          "type": "root",
+          "preview": "מָלַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4229": {
+      "strong_number": "H4229",
+      "entries": [
+        {
+          "bdb_id": "m.bn.ad",
+          "aug": "c",
+          "twot": "1181c",
+          "hebrew": "מָחָה",
+          "definition": "full of marrow",
+          "mod": "III",
+          "type": "",
+          "preview": "מָחָה"
+        },
+        {
+          "bdb_id": "m.bl.aa",
+          "aug": "a",
+          "twot": "1178",
+          "hebrew": "מָחָה",
+          "definition": "wipe",
+          "mod": "I",
+          "type": "root",
+          "preview": "מָחָה"
+        },
+        {
+          "bdb_id": "m.bm.aa",
+          "aug": "b",
+          "twot": "1179",
+          "hebrew": "מָחָה",
+          "definition": "strike",
+          "mod": "II",
+          "type": "root",
+          "preview": "מָחָה"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H4414": {
+      "strong_number": "H4414",
+      "entries": [
+        {
+          "bdb_id": "m.cb.ac",
+          "aug": "b",
+          "twot": "1197",
+          "hebrew": "מָלַח",
+          "definition": "salt",
+          "mod": "III",
+          "type": "",
+          "preview": "מָלַח"
+        },
+        {
+          "bdb_id": "m.ca.aa",
+          "aug": "a",
+          "twot": "1196",
+          "hebrew": "מָלַח",
+          "definition": "tear away",
+          "mod": "I",
+          "type": "root",
+          "preview": "מָלַח"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4427": {
+      "strong_number": "H4427",
+      "entries": [
+        {
+          "bdb_id": "m.cd.ae",
+          "aug": "a",
+          "twot": "1199",
+          "hebrew": "מָלַךְ",
+          "definition": "be king",
+          "mod": "II",
+          "type": "",
+          "preview": "מָלַךְ"
+        },
+        {
+          "bdb_id": "m.ce.aa",
+          "aug": "b",
+          "twot": "1200",
+          "hebrew": "מָלַךְ",
+          "definition": "counsel",
+          "mod": "II",
+          "type": "root",
+          "preview": "מָלַךְ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4448": {
+      "strong_number": "H4448",
+      "entries": [
+        {
+          "bdb_id": "m.cg.aa",
+          "aug": "b",
+          "twot": "1202",
+          "hebrew": "מָלַל",
+          "definition": "rub",
+          "mod": "II",
+          "type": "root",
+          "preview": "מָלַל"
+        },
+        {
+          "bdb_id": "m.cf.aa",
+          "aug": "a",
+          "twot": "1201",
+          "hebrew": "מָלַל",
+          "definition": "speak",
+          "mod": "I",
+          "type": "root",
+          "preview": "מָלַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5243": {
+      "strong_number": "H5243",
+      "entries": [
+        {
+          "bdb_id": "m.ch.aa",
+          "aug": "a",
+          "twot": "1203",
+          "hebrew": "מָלַל",
+          "definition": "languish",
+          "mod": "III",
+          "type": "root",
+          "preview": "מָלַל"
+        },
+        {
+          "bdb_id": "m.ci.aa",
+          "aug": "b",
+          "twot": "1204",
+          "hebrew": "נָמַל",
+          "definition": "circumcise",
+          "mod": "IV",
+          "type": "root",
+          "preview": "מָלַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4455": {
+      "strong_number": "H4455",
+      "entries": [
+        {
+          "bdb_id": "l.bx.ad",
+          "aug": "a",
+          "twot": "1124b",
+          "hebrew": "מַלְקוֹחַ",
+          "definition": "booty",
+          "mod": "I",
+          "type": "",
+          "preview": "מַלְקוֹחַ"
+        },
+        {
+          "bdb_id": "l.bx.ae",
+          "aug": "b",
+          "twot": "1124c",
+          "hebrew": "מַלְקוֹחַ",
+          "definition": "jaw",
+          "mod": "II",
+          "type": "",
+          "preview": "מַלְקוֹחַ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4480": {
+      "strong_number": "H4480",
+      "entries": [
+        {
+          "bdb_id": "m.cl.aa",
+          "aug": "a",
+          "twot": "1212",
+          "hebrew": "מִן־",
+          "definition": "out of",
+          "mod": "I",
+          "type": "root",
+          "preview": "מִן־"
+        },
+        {
+          "bdb_id": "m.co.ab",
+          "aug": "b",
+          "twot": "1215a",
+          "hebrew": "מֵן",
+          "definition": "portion",
+          "mod": "II",
+          "type": "",
+          "preview": "n. [m.]"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4478": {
+      "strong_number": "H4478",
+      "entries": [
+        {
+          "bdb_id": "m.ck.av",
+          "aug": "b",
+          "twot": "1210",
+          "hebrew": "מָן",
+          "definition": "What",
+          "mod": "II",
+          "type": "",
+          "preview": "Ex 16:15"
+        },
+        {
+          "bdb_id": "m.ck.au",
+          "aug": "a",
+          "twot": "1209",
+          "hebrew": "מָן",
+          "definition": "manna",
+          "mod": "I",
+          "type": "",
+          "preview": "manna"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4506": {
+      "strong_number": "H4506",
+      "entries": [
+        {
+          "bdb_id": "n.by.aq",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "מָנַ֫חַת",
+          "definition": "Manahath",
+          "mod": "II",
+          "type": "",
+          "preview": "מָנַ֫חַת"
+        },
+        {
+          "bdb_id": "n.by.ao",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "מָנַ֫חַת",
+          "definition": "Manahath",
+          "mod": "I",
+          "type": "",
+          "preview": "מָנַ֫חַת"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4531": {
+      "strong_number": "H4531",
+      "entries": [
+        {
+          "bdb_id": "m.cs.ac",
+          "aug": "a",
+          "twot": "1223b",
+          "hebrew": "מַסָּה",
+          "definition": "despair",
+          "mod": "I",
+          "type": "",
+          "preview": "מַסָּה"
+        },
+        {
+          "bdb_id": "n.ds.ab",
+          "aug": "b",
+          "twot": "1373a",
+          "hebrew": "מַסָּה",
+          "definition": "test",
+          "mod": "II",
+          "type": "",
+          "preview": "מַסָּה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4541": {
+      "strong_number": "H4541",
+      "entries": [
+        {
+          "bdb_id": "n.dv.ab",
+          "aug": "b",
+          "twot": "1376a",
+          "hebrew": "מַסֵּכָה",
+          "definition": "woven stuff",
+          "mod": "II",
+          "type": "",
+          "preview": "מַסֵּכָה"
+        },
+        {
+          "bdb_id": "n.du.ad",
+          "aug": "a",
+          "twot": "1375c",
+          "hebrew": "מַסֵּכָה",
+          "definition": "molten metal",
+          "mod": "I",
+          "type": "",
+          "preview": "מַסֵּכָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4551": {
+      "strong_number": "H4551",
+      "entries": [
+        {
+          "bdb_id": "n.ea.ab",
+          "aug": "b",
+          "twot": "1381a",
+          "hebrew": "מַסָּע",
+          "definition": "missile",
+          "mod": "II",
+          "type": "",
+          "preview": "מַסָּע"
+        },
+        {
+          "bdb_id": "n.dz.ac",
+          "aug": "a",
+          "twot": "1380b",
+          "hebrew": "מַסָּע",
+          "definition": "quarry",
+          "mod": "I",
+          "type": "",
+          "preview": "מַסָּע"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4609": {
+      "strong_number": "H4609",
+      "entries": [
+        {
+          "bdb_id": "p.cs.ao",
+          "aug": "b",
+          "twot": "1624m",
+          "hebrew": "מַעֲלָה",
+          "definition": "step",
+          "mod": "II",
+          "type": "",
+          "preview": "מַעֲלָה"
+        },
+        {
+          "bdb_id": "p.cs.an",
+          "aug": "a",
+          "twot": "1624l",
+          "hebrew": "מַעֲלָה",
+          "definition": "what comes up",
+          "mod": "I",
+          "type": "",
+          "preview": "מַעֲלָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6327": {
+      "strong_number": "H6327",
+      "entries": [
+        {
+          "bdb_id": "q.aq.ab",
+          "aug": "b",
+          "twot": "1745a",
+          "hebrew": "מֵפִיץ",
+          "definition": "scatterer",
+          "mod": "I",
+          "type": "",
+          "preview": "מֵפִיץ"
+        },
+        {
+          "bdb_id": "q.ar.aa",
+          "aug": "c",
+          "twot": "1746",
+          "hebrew": "פּוּץ",
+          "definition": "flow",
+          "mod": "II",
+          "type": "root",
+          "preview": "פּוּץ"
+        },
+        {
+          "bdb_id": "q.aq.aa",
+          "aug": "a",
+          "twot": "1745",
+          "hebrew": "פּוּץ",
+          "definition": "be dispersed",
+          "mod": "I",
+          "type": "root",
+          "preview": "פּוּץ"
+        },
+        {
+          "bdb_id": "q.cm.aa",
+          "aug": "d",
+          "twot": "1800",
+          "hebrew": "פָּצַץ",
+          "definition": "break",
+          "mod": "I",
+          "type": "root",
+          "preview": "פָּצַץ"
+        }
+      ],
+      "homonym_count": 4
+    },
+    "H4685": {
+      "strong_number": "H4685",
+      "entries": [
+        {
+          "bdb_id": "r.ax.ae",
+          "aug": "a",
+          "twot": "1885d",
+          "hebrew": "מָצוֹד",
+          "definition": "siege-works",
+          "mod": "I",
+          "type": "",
+          "preview": "מָצוֹד"
+        },
+        {
+          "bdb_id": "r.ax.af",
+          "aug": "b",
+          "twot": "1885e",
+          "hebrew": "מָצוֹד",
+          "definition": "hunting implement",
+          "mod": "II",
+          "type": "",
+          "preview": "מָצוֹד"
+        },
+        {
+          "bdb_id": "r.ax.ag",
+          "aug": "c",
+          "twot": "1885f",
+          "hebrew": "מְצוֹדָה",
+          "definition": "net",
+          "mod": "I",
+          "type": "",
+          "preview": "מְצוֹדָה"
+        },
+        {
+          "bdb_id": "r.ax.ai",
+          "aug": "d",
+          "twot": "1885h",
+          "hebrew": "מְצוֹדָה",
+          "definition": "fastness",
+          "mod": "II",
+          "type": "",
+          "preview": "מְצוֹדָה"
+        }
+      ],
+      "homonym_count": 4
+    },
+    "H4686": {
+      "strong_number": "H4686",
+      "entries": [
+        {
+          "bdb_id": "r.ax.ah",
+          "aug": "a",
+          "twot": "1885g",
+          "hebrew": "מְצוּדָה",
+          "definition": "net",
+          "mod": "I",
+          "type": "",
+          "preview": "מְצוּדָה"
+        },
+        {
+          "bdb_id": "r.ax.aj",
+          "aug": "b",
+          "twot": "1885i",
+          "hebrew": "מְצוּדָה",
+          "definition": "fastness",
+          "mod": "II",
+          "type": "",
+          "preview": "מְצוּדָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4718": {
+      "strong_number": "H4718",
+      "entries": [
+        {
+          "bdb_id": "n.fa.ae",
+          "aug": "a",
+          "twot": "1409c",
+          "hebrew": "מַקֶּ֫בֶת",
+          "definition": "hammer",
+          "mod": "I",
+          "type": "",
+          "preview": "מַקֶּ֫בֶת"
+        },
+        {
+          "bdb_id": "n.fa.af",
+          "aug": "b",
+          "twot": "1409d",
+          "hebrew": "מַקֶּבֶת",
+          "definition": "hole",
+          "mod": "II",
+          "type": "",
+          "preview": "מַקֶּבֶת"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4723": {
+      "strong_number": "H4723",
+      "entries": [
+        {
+          "bdb_id": "s.aq.ae",
+          "aug": "b",
+          "twot": "1994c",
+          "hebrew": "מִקְוֶה",
+          "definition": "hope",
+          "mod": "I",
+          "type": "",
+          "preview": "מִקְוֶה"
+        },
+        {
+          "bdb_id": "s.ar.ab",
+          "aug": "c",
+          "twot": "1995a",
+          "hebrew": "מִקְוֶה",
+          "definition": "collection",
+          "mod": "II",
+          "type": "",
+          "preview": "מִקְוֶה"
+        },
+        {
+          "bdb_id": "s.ap.ao",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "קֹוֶה",
+          "definition": "Kue",
+          "mod": "I",
+          "type": "",
+          "preview": "קֹוֶה"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H4759": {
+      "strong_number": "H4759",
+      "entries": [
+        {
+          "bdb_id": "t.ab.al",
+          "aug": "b",
+          "twot": "2095h",
+          "hebrew": "מַרְאָה",
+          "definition": "mirror",
+          "mod": "II",
+          "type": "",
+          "preview": "מַרְאָה"
+        },
+        {
+          "bdb_id": "t.ab.ak",
+          "aug": "a",
+          "twot": "2095g",
+          "hebrew": "מַרְאָה",
+          "definition": "vision",
+          "mod": "I",
+          "type": "",
+          "preview": "מַרְאָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4853": {
+      "strong_number": "H4853",
+      "entries": [
+        {
+          "bdb_id": "n.fm.af",
+          "aug": "a",
+          "twot": "1421d",
+          "hebrew": "מַשָּׂא",
+          "definition": "load",
+          "mod": "II",
+          "type": "",
+          "preview": "מַשָּׂא"
+        },
+        {
+          "bdb_id": "n.fm.ag",
+          "aug": "b",
+          "twot": "1421e",
+          "hebrew": "מַשָּׂא",
+          "definition": "utterance",
+          "mod": "III",
+          "type": "",
+          "preview": "מַשָּׂא"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4869": {
+      "strong_number": "H4869",
+      "entries": [
+        {
+          "bdb_id": "u.ah.ac",
+          "aug": "a",
+          "twot": "2234a",
+          "hebrew": "מִשְׂגָּב",
+          "definition": "secure height",
+          "mod": "I",
+          "type": "",
+          "preview": "מִשְׂגָּב"
+        },
+        {
+          "bdb_id": "u.ah.ad",
+          "aug": "b",
+          "twot": "2234a",
+          "hebrew": "מִשְׂגָּב",
+          "definition": "Misgab",
+          "mod": "II",
+          "type": "",
+          "preview": "מִשְׂגָּב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4911": {
+      "strong_number": "H4911",
+      "entries": [
+        {
+          "bdb_id": "m.dv.aa",
+          "aug": "a",
+          "twot": "1258",
+          "hebrew": "מָשַׁל",
+          "definition": "represent",
+          "mod": "I",
+          "type": "root",
+          "preview": "מָשַׁל"
+        },
+        {
+          "bdb_id": "m.dv.ac",
+          "aug": "b",
+          "twot": "1258b",
+          "hebrew": "מָשַׁל",
+          "definition": "use a proverb",
+          "mod": "II",
+          "type": "",
+          "preview": "מָשַׁל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4915": {
+      "strong_number": "H4915",
+      "entries": [
+        {
+          "bdb_id": "m.dw.ab",
+          "aug": "b",
+          "twot": "1259a",
+          "hebrew": "מֹ֫שֶׁל",
+          "definition": "dominion",
+          "mod": "II",
+          "type": "",
+          "preview": "מֹ֫שֶׁל"
+        },
+        {
+          "bdb_id": "m.dv.ad",
+          "aug": "a",
+          "twot": "1258c",
+          "hebrew": "מֹ֫שֶׁל",
+          "definition": "likeness",
+          "mod": "I",
+          "type": "",
+          "preview": "מֹ֫שֶׁל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H4945": {
+      "strong_number": "H4945",
+      "entries": [
+        {
+          "bdb_id": "v.fo.ae",
+          "aug": "b",
+          "twot": "2452c",
+          "hebrew": "מַשְׁקֶה",
+          "definition": "irrigation",
+          "mod": "II",
+          "type": "",
+          "preview": "מַשְׁקֶה"
+        },
+        {
+          "bdb_id": "v.fo.ad",
+          "aug": "a",
+          "twot": "2452c",
+          "hebrew": "מַשְׁקֶה",
+          "definition": "butler",
+          "mod": "I",
+          "type": "",
+          "preview": "מַשְׁקֶה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5015": {
+      "strong_number": "H5015",
+      "entries": [
+        {
+          "bdb_id": "n.aj.ac",
+          "aug": "a",
+          "twot": "1280",
+          "hebrew": "נְבוֹ",
+          "definition": "Nebo",
+          "mod": "I",
+          "type": "",
+          "preview": "נְבוֹ"
+        },
+        {
+          "bdb_id": "n.aj.ad",
+          "aug": "b",
+          "twot": "1279",
+          "hebrew": "נְבוֹ",
+          "definition": "Nebo",
+          "mod": "II",
+          "type": "",
+          "preview": "נְבוֹ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5035": {
+      "strong_number": "H5035",
+      "entries": [
+        {
+          "bdb_id": "n.am.ab",
+          "aug": "a",
+          "twot": "1284a",
+          "hebrew": "נֵ֫בֶל",
+          "definition": "bag",
+          "mod": "I",
+          "type": "",
+          "preview": "נֵ֫בֶל"
+        },
+        {
+          "bdb_id": "n.am.ac",
+          "aug": "b",
+          "twot": "1284b",
+          "hebrew": "נֵ֫בֶל",
+          "definition": "harp",
+          "mod": "II",
+          "type": "",
+          "preview": "נֵ֫בֶל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5034": {
+      "strong_number": "H5034",
+      "entries": [
+        {
+          "bdb_id": "n.ao.aa",
+          "aug": "b",
+          "twot": "1286",
+          "hebrew": "נָבֵל",
+          "definition": "sink down",
+          "mod": "I",
+          "type": "root",
+          "preview": "נָבֵל"
+        },
+        {
+          "bdb_id": "n.an.aa",
+          "aug": "a",
+          "twot": "1285",
+          "hebrew": "נָבַל",
+          "definition": "be senseless",
+          "mod": "II",
+          "type": "root",
+          "preview": "נָבַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5090": {
+      "strong_number": "H5090",
+      "entries": [
+        {
+          "bdb_id": "n.bk.aa",
+          "aug": "a",
+          "twot": "1309",
+          "hebrew": "נָהַג",
+          "definition": "drive",
+          "mod": "I",
+          "type": "root",
+          "preview": "נָהַג"
+        },
+        {
+          "bdb_id": "n.bl.aa",
+          "aug": "b",
+          "twot": "1310",
+          "hebrew": "נָהַג",
+          "definition": "moan",
+          "mod": "II",
+          "type": "root",
+          "preview": "נָהַג"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5102": {
+      "strong_number": "H5102",
+      "entries": [
+        {
+          "bdb_id": "n.bq.aa",
+          "aug": "a",
+          "twot": "1315",
+          "hebrew": "נָהַר",
+          "definition": "flow",
+          "mod": "I",
+          "type": "root",
+          "preview": "נָהַר"
+        },
+        {
+          "bdb_id": "n.br.aa",
+          "aug": "b",
+          "twot": "1316",
+          "hebrew": "נָהַר",
+          "definition": "shine",
+          "mod": "II",
+          "type": "root",
+          "preview": "נָהַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5116": {
+      "strong_number": "H5116",
+      "entries": [
+        {
+          "bdb_id": "n.bx.ad",
+          "aug": "b",
+          "twot": "1322b",
+          "hebrew": "נָוֶה",
+          "definition": "dwelling",
+          "mod": "II",
+          "type": "",
+          "preview": "נָוֶה"
+        },
+        {
+          "bdb_id": "n.bx.ab",
+          "aug": "a",
+          "twot": "1322a",
+          "hebrew": "נָוֶה",
+          "definition": "abode of shepherd",
+          "mod": "I",
+          "type": "",
+          "preview": "נָוֶה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5137": {
+      "strong_number": "H5137",
+      "entries": [
+        {
+          "bdb_id": "n.ck.aa",
+          "aug": "b",
+          "twot": "1336",
+          "hebrew": "נָזָה",
+          "definition": "spring",
+          "mod": "II",
+          "type": "root",
+          "preview": "נָזָה"
+        },
+        {
+          "bdb_id": "n.cj.aa",
+          "aug": "a",
+          "twot": "1335",
+          "hebrew": "נָזָה",
+          "definition": "spurt",
+          "mod": "I",
+          "type": "root",
+          "preview": "נָזָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5158": {
+      "strong_number": "H5158",
+      "entries": [
+        {
+          "bdb_id": "n.cq.ab",
+          "aug": "a",
+          "twot": "1343a",
+          "hebrew": "נַ֫חַל",
+          "definition": "torrent",
+          "mod": "I",
+          "type": "",
+          "preview": "נַ֫חַל"
+        },
+        {
+          "bdb_id": "n.cq.ac",
+          "aug": "b",
+          "twot": "1343b",
+          "hebrew": "נַ֫חַל",
+          "definition": "palm-tree",
+          "mod": "II",
+          "type": "",
+          "preview": "נַ֫חַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5178": {
+      "strong_number": "H5178",
+      "entries": [
+        {
+          "bdb_id": "n.cw.ab",
+          "aug": "a",
+          "twot": "1349a",
+          "hebrew": "נְחֹ֫שֶׁת",
+          "definition": "copper",
+          "mod": "I",
+          "type": "",
+          "preview": "נְחֹ֫שֶׁת"
+        },
+        {
+          "bdb_id": "n.cx.ab",
+          "aug": "b",
+          "twot": "1350a",
+          "hebrew": "נְחֹ֫שֶׁת",
+          "definition": "lust",
+          "mod": "II",
+          "type": "",
+          "preview": "נְחֹ֫שֶׁת"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5183": {
+      "strong_number": "H5183",
+      "entries": [
+        {
+          "bdb_id": "n.cy.ab",
+          "aug": "b",
+          "twot": "1351a",
+          "hebrew": "נַ֫חַת",
+          "definition": "descent",
+          "mod": "II",
+          "type": "",
+          "preview": "נַ֫חַת"
+        },
+        {
+          "bdb_id": "n.by.ae",
+          "aug": "a",
+          "twot": "1323a",
+          "hebrew": "נַ֫חַת",
+          "definition": "quietness",
+          "mod": "I",
+          "type": "",
+          "preview": "נַ֫חַת"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5198": {
+      "strong_number": "H5198",
+      "entries": [
+        {
+          "bdb_id": "n.dc.ab",
+          "aug": "a",
+          "twot": "1355a",
+          "hebrew": "נָטָף",
+          "definition": "drop",
+          "mod": "I",
+          "type": "",
+          "preview": "נָטָף"
+        },
+        {
+          "bdb_id": "n.dc.ac",
+          "aug": "b",
+          "twot": "1355b",
+          "hebrew": "נָטָף",
+          "definition": "gum",
+          "mod": "II",
+          "type": "",
+          "preview": "נָטָף"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5257": {
+      "strong_number": "H5257",
+      "entries": [
+        {
+          "bdb_id": "n.dw.ab",
+          "aug": "b",
+          "twot": "1377a",
+          "hebrew": "נָסִיךְ",
+          "definition": "prince",
+          "mod": "II",
+          "type": "",
+          "preview": "נָסִיךְ"
+        },
+        {
+          "bdb_id": "n.du.ac",
+          "aug": "a",
+          "twot": "1375b",
+          "hebrew": "נָסִיךְ",
+          "definition": "libation",
+          "mod": "I",
+          "type": "",
+          "preview": "נָסִיךְ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5258": {
+      "strong_number": "H5258",
+      "entries": [
+        {
+          "bdb_id": "n.du.aa",
+          "aug": "a",
+          "twot": "1375",
+          "hebrew": "נָסַךְ",
+          "definition": "pour out",
+          "mod": "I",
+          "type": "root",
+          "preview": "נָסַךְ"
+        },
+        {
+          "bdb_id": "n.dw.aa",
+          "aug": "b",
+          "twot": "1377",
+          "hebrew": "נָסַךְ",
+          "definition": "set",
+          "mod": "III",
+          "type": "root",
+          "preview": "נָסַךְ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5273": {
+      "strong_number": "H5273",
+      "entries": [
+        {
+          "bdb_id": "n.ee.ab",
+          "aug": "b",
+          "twot": "1385a",
+          "hebrew": "נָעִים",
+          "definition": "singing",
+          "mod": "II",
+          "type": "",
+          "preview": "נָעִים"
+        },
+        {
+          "bdb_id": "n.ed.ad",
+          "aug": "a",
+          "twot": "1384b",
+          "hebrew": "נָעִים",
+          "definition": "pleasant",
+          "mod": "I",
+          "type": "",
+          "preview": "נָעִים"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5279": {
+      "strong_number": "H5279",
+      "entries": [
+        {
+          "bdb_id": "n.ed.ae",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "נַעֲמָה",
+          "definition": "Naamah",
+          "mod": "I",
+          "type": "",
+          "preview": "נַעֲמָה"
+        },
+        {
+          "bdb_id": "n.ed.af",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "נַעֲמָה",
+          "definition": "Naamah",
+          "mod": "II",
+          "type": "",
+          "preview": "נַעֲמָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5292": {
+      "strong_number": "H5292",
+      "entries": [
+        {
+          "bdb_id": "n.ei.ah",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "נַעֲרָה",
+          "definition": "Naarah",
+          "mod": "III",
+          "type": "",
+          "preview": "נַעֲרָה"
+        },
+        {
+          "bdb_id": "n.ei.ag",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "נַעֲרָה",
+          "definition": "Naarah",
+          "mod": "II",
+          "type": "",
+          "preview": "נַעֲרָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5299": {
+      "strong_number": "H5299",
+      "entries": [
+        {
+          "bdb_id": "n.ce.ab",
+          "aug": "a",
+          "twot": "1330a",
+          "hebrew": "נָפָה",
+          "definition": "sieve",
+          "mod": "I",
+          "type": "",
+          "preview": "נָפָה"
+        },
+        {
+          "bdb_id": "n.cf.ac",
+          "aug": "b",
+          "twot": "1331b",
+          "hebrew": "נָפָה",
+          "definition": "height",
+          "mod": "II",
+          "type": "",
+          "preview": "נָפָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5310": {
+      "strong_number": "H5310",
+      "entries": [
+        {
+          "bdb_id": "n.el.aa",
+          "aug": "a",
+          "twot": "1394",
+          "hebrew": "נָפַץ",
+          "definition": "shatter",
+          "mod": "I",
+          "type": "root",
+          "preview": "נָפַץ"
+        },
+        {
+          "bdb_id": "n.em.aa",
+          "aug": "b",
+          "twot": "1394",
+          "hebrew": "נָפַץ",
+          "definition": "disperse",
+          "mod": "II",
+          "type": "root",
+          "preview": "נָפַץ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5322": {
+      "strong_number": "H5322",
+      "entries": [
+        {
+          "bdb_id": "n.ew.ac",
+          "aug": "a",
+          "twot": "1405b",
+          "hebrew": "נֵץ",
+          "definition": "flower",
+          "mod": "I",
+          "type": "",
+          "preview": ". only sf."
+        },
+        {
+          "bdb_id": "n.ex.ab",
+          "aug": "b",
+          "twot": "1406a",
+          "hebrew": "נֵץ",
+          "definition": "hawk",
+          "mod": "II",
+          "type": "",
+          "preview": ". a bird of prey, generic name, incl."
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5327": {
+      "strong_number": "H5327",
+      "entries": [
+        {
+          "bdb_id": "n.es.aa",
+          "aug": "b",
+          "twot": "1401",
+          "hebrew": "נָצָה",
+          "definition": "fall in ruins",
+          "mod": "III",
+          "type": "root",
+          "preview": "נָצָה"
+        },
+        {
+          "bdb_id": "n.er.aa",
+          "aug": "a",
+          "twot": "1400",
+          "hebrew": "נָצָה",
+          "definition": "struggle",
+          "mod": "II",
+          "type": "root",
+          "preview": "נָצָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5344": {
+      "strong_number": "H5344",
+      "entries": [
+        {
+          "bdb_id": "n.fa.aa",
+          "aug": "a",
+          "twot": "1409",
+          "hebrew": "נָקַב",
+          "definition": "pierce",
+          "mod": "I",
+          "type": "root",
+          "preview": "נָקַב"
+        },
+        {
+          "bdb_id": "n.fb.aa",
+          "aug": "b",
+          "twot": "1409",
+          "hebrew": "נָקַב",
+          "definition": "curse",
+          "mod": "II",
+          "type": "root",
+          "preview": "נָקַב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5362": {
+      "strong_number": "H5362",
+      "entries": [
+        {
+          "bdb_id": "n.fi.aa",
+          "aug": "b",
+          "twot": "1416",
+          "hebrew": "נָקַף",
+          "definition": "go around",
+          "mod": "II",
+          "type": "root",
+          "preview": "נָקַף"
+        },
+        {
+          "bdb_id": "n.fh.aa",
+          "aug": "a",
+          "twot": "1415",
+          "hebrew": "נָקַף",
+          "definition": "strike off",
+          "mod": "I",
+          "type": "root",
+          "preview": "נָקַף"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5387": {
+      "strong_number": "H5387",
+      "entries": [
+        {
+          "bdb_id": "n.fm.ae",
+          "aug": "b",
+          "twot": "1421c",
+          "hebrew": "נָשִׂיא",
+          "definition": "rising mist",
+          "mod": "II",
+          "type": "",
+          "preview": "נָשִׂיא"
+        },
+        {
+          "bdb_id": "n.fm.ad",
+          "aug": "a",
+          "twot": "1421b",
+          "hebrew": "נָשִׂיא",
+          "definition": "one lifted up",
+          "mod": "I",
+          "type": "",
+          "preview": "נָשִׂיא"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5401": {
+      "strong_number": "H5401",
+      "entries": [
+        {
+          "bdb_id": "n.ga.aa",
+          "aug": "b",
+          "twot": "1436",
+          "hebrew": "נָשַׁק",
+          "definition": "handle",
+          "mod": "II",
+          "type": "root",
+          "preview": "נָשַׁק"
+        },
+        {
+          "bdb_id": "n.fz.aa",
+          "aug": "a",
+          "twot": "1435",
+          "hebrew": "נָשַׁק",
+          "definition": "kiss",
+          "mod": "I",
+          "type": "root",
+          "preview": "נָשַׁק"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5425": {
+      "strong_number": "H5425",
+      "entries": [
+        {
+          "bdb_id": "n.gm.aa",
+          "aug": "b",
+          "twot": "1449",
+          "hebrew": "נָתַר",
+          "definition": "be free",
+          "mod": "II",
+          "type": "root",
+          "preview": "נָתַר"
+        },
+        {
+          "bdb_id": "n.gl.aa",
+          "aug": "a",
+          "twot": "1448",
+          "hebrew": "נָתַר",
+          "definition": "spring up",
+          "mod": "I",
+          "type": "root",
+          "preview": "נָתַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5526": {
+      "strong_number": "H5526",
+      "entries": [
+        {
+          "bdb_id": "o.as.aa",
+          "aug": "a",
+          "twot": "1475",
+          "hebrew": "סוּךְ",
+          "definition": "hedge",
+          "mod": "II",
+          "type": "root",
+          "preview": "סוּךְ"
+        },
+        {
+          "bdb_id": "o.bb.aa",
+          "aug": "c",
+          "twot": "2260",
+          "hebrew": "סָכַךְ",
+          "definition": "weave together",
+          "mod": "II",
+          "type": "root",
+          "preview": "סָכַךְ"
+        },
+        {
+          "bdb_id": "o.ba.aa",
+          "aug": "b",
+          "twot": "1492",
+          "hebrew": "סָכַךְ",
+          "definition": "overshadow",
+          "mod": "I",
+          "type": "root",
+          "preview": "סָכַךְ"
+        },
+        {
+          "bdb_id": "o.bb.af",
+          "aug": "d",
+          "twot": "1492f",
+          "hebrew": "סֹכֵךְ",
+          "definition": "protector",
+          "mod": "I",
+          "type": "",
+          "preview": "סֹכֵךְ"
+        },
+        {
+          "bdb_id": "u.bf.aa",
+          "aug": "f",
+          "twot": "2260",
+          "hebrew": "שָׂכַךְ",
+          "definition": "weave",
+          "mod": "II",
+          "type": "root",
+          "preview": "שָׂכַךְ"
+        },
+        {
+          "bdb_id": "u.be.aa",
+          "aug": "e",
+          "twot": "2259",
+          "hebrew": "שָׂכַךְ",
+          "definition": "cover",
+          "mod": "I",
+          "type": "root",
+          "preview": "שָׂכַךְ"
+        }
+      ],
+      "homonym_count": 6
+    },
+    "H5483": {
+      "strong_number": "H5483",
+      "entries": [
+        {
+          "bdb_id": "o.as.af",
+          "aug": "b",
+          "twot": "1477",
+          "hebrew": "סוּס",
+          "definition": "horse",
+          "mod": "II",
+          "type": "",
+          "preview": "סוּס"
+        },
+        {
+          "bdb_id": "o.as.ae",
+          "aug": "a",
+          "twot": "1476",
+          "hebrew": "סוּס",
+          "definition": "swallow",
+          "mod": "I",
+          "type": "",
+          "preview": "סוּס"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5492": {
+      "strong_number": "H5492",
+      "entries": [
+        {
+          "bdb_id": "o.at.af",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "סוּפָה",
+          "definition": "Suphah",
+          "mod": "II",
+          "type": "",
+          "preview": "סוּפָה"
+        },
+        {
+          "bdb_id": "o.at.ac",
+          "aug": "a",
+          "twot": "1478b",
+          "hebrew": "סוּפָה",
+          "definition": "storm-wind",
+          "mod": "I",
+          "type": "",
+          "preview": "סוּפָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5512": {
+      "strong_number": "H5512",
+      "entries": [
+        {
+          "bdb_id": "o.az.al",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "סִין",
+          "definition": "Sin",
+          "mod": "II",
+          "type": "",
+          "preview": "סִין"
+        },
+        {
+          "bdb_id": "o.az.ak",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "סִין",
+          "definition": "Sin",
+          "mod": "I",
+          "type": "",
+          "preview": "סִין"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5518": {
+      "strong_number": "H5518",
+      "entries": [
+        {
+          "bdb_id": "o.az.at",
+          "aug": "b",
+          "twot": "1490",
+          "hebrew": "סִיר",
+          "definition": "thorn",
+          "mod": "II",
+          "type": "",
+          "preview": "סִיר"
+        },
+        {
+          "bdb_id": "o.az.as",
+          "aug": "a",
+          "twot": "1489",
+          "hebrew": "סִיר",
+          "definition": "pot",
+          "mod": "I",
+          "type": "",
+          "preview": "סִיר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5533": {
+      "strong_number": "H5533",
+      "entries": [
+        {
+          "bdb_id": "o.bf.aa",
+          "aug": "b",
+          "twot": "1496",
+          "hebrew": "סָכַן",
+          "definition": "be poor",
+          "mod": "III",
+          "type": "root",
+          "preview": "סָכַן"
+        },
+        {
+          "bdb_id": "o.be.aa",
+          "aug": "a",
+          "twot": "1495",
+          "hebrew": "סָכַן",
+          "definition": "incur danger",
+          "mod": "II",
+          "type": "root",
+          "preview": "סָכַן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7936": {
+      "strong_number": "H7936",
+      "entries": [
+        {
+          "bdb_id": "o.bh.aa",
+          "aug": "a",
+          "twot": "1498",
+          "hebrew": "סָכַר",
+          "definition": "hire",
+          "mod": "II",
+          "type": "root",
+          "preview": "סָכַר"
+        },
+        {
+          "bdb_id": "u.bk.aa",
+          "aug": "b",
+          "twot": "2264.1",
+          "hebrew": "שָׂכַר",
+          "definition": "hire",
+          "mod": "I",
+          "type": "root",
+          "preview": "שָׂכַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5541": {
+      "strong_number": "H5541",
+      "entries": [
+        {
+          "bdb_id": "o.bm.aa",
+          "aug": "b",
+          "twot": "1503",
+          "hebrew": "סָלָה",
+          "definition": "weigh",
+          "mod": "II",
+          "type": "root",
+          "preview": "סָלָה"
+        },
+        {
+          "bdb_id": "o.bl.aa",
+          "aug": "a",
+          "twot": "1502",
+          "hebrew": "סָלָה",
+          "definition": "make light of",
+          "mod": "I",
+          "type": "root",
+          "preview": "סָלָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5592": {
+      "strong_number": "H5592",
+      "entries": [
+        {
+          "bdb_id": "o.ci.ac",
+          "aug": "b",
+          "twot": "1538b",
+          "hebrew": "סַף",
+          "definition": "threshhold",
+          "mod": "II",
+          "type": "",
+          "preview": "threshhold"
+        },
+        {
+          "bdb_id": "o.ci.ab",
+          "aug": "a",
+          "twot": "1538a",
+          "hebrew": "סַף",
+          "definition": "basin",
+          "mod": "I",
+          "type": "",
+          "preview": "basin"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5599": {
+      "strong_number": "H5599",
+      "entries": [
+        {
+          "bdb_id": "o.cf.ac",
+          "aug": "b",
+          "twot": "1533b",
+          "hebrew": "סָפִיחַ",
+          "definition": "growth from spilled kernels",
+          "mod": "II",
+          "type": "",
+          "preview": "סָפִיחַ"
+        },
+        {
+          "bdb_id": "o.cf.ab",
+          "aug": "a",
+          "twot": "1533a",
+          "hebrew": "סָפִיחַ",
+          "definition": "outpouring",
+          "mod": "I",
+          "type": "",
+          "preview": "סָפִיחַ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5606": {
+      "strong_number": "H5606",
+      "entries": [
+        {
+          "bdb_id": "o.cj.aa",
+          "aug": "a",
+          "twot": "1539",
+          "hebrew": "סָפַק",
+          "definition": "slap",
+          "mod": "I",
+          "type": "root",
+          "preview": "סָפַק"
+        },
+        {
+          "bdb_id": "u.bx.aa",
+          "aug": "b",
+          "twot": "2280",
+          "hebrew": "שָׂפַק",
+          "definition": "suffice",
+          "mod": "II",
+          "type": "root",
+          "preview": "שָׂפַק"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5633": {
+      "strong_number": "H5633",
+      "entries": [
+        {
+          "bdb_id": "o.cn.ae",
+          "aug": "a",
+          "twot": "1546",
+          "hebrew": "סֶ֫רֶן",
+          "definition": "tyrant",
+          "mod": "I",
+          "type": "",
+          "preview": "סֶ֫רֶן"
+        },
+        {
+          "bdb_id": "o.cn.af",
+          "aug": "b",
+          "twot": "1547",
+          "hebrew": "סֶ֫רֶן",
+          "definition": "axle",
+          "mod": "II",
+          "type": "",
+          "preview": "סֶ֫רֶן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5713": {
+      "strong_number": "H5713",
+      "entries": [
+        {
+          "bdb_id": "p.bc.ag",
+          "aug": "b",
+          "twot": "1576e",
+          "hebrew": "עֵדָה",
+          "definition": "testimonies",
+          "mod": "III",
+          "type": "",
+          "preview": "עֵדָה"
+        },
+        {
+          "bdb_id": "p.bc.ae",
+          "aug": "a",
+          "twot": "1576c",
+          "hebrew": "עֵדָה",
+          "definition": "testimony",
+          "mod": "II",
+          "type": "",
+          "preview": "עֵדָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5710": {
+      "strong_number": "H5710",
+      "entries": [
+        {
+          "bdb_id": "p.ar.aa",
+          "aug": "b",
+          "twot": "1566",
+          "hebrew": "עָדָה",
+          "definition": "ornament",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָדָה"
+        },
+        {
+          "bdb_id": "p.aq.aa",
+          "aug": "a",
+          "twot": "1565",
+          "hebrew": "עָדָה",
+          "definition": "pass on",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָדָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5731": {
+      "strong_number": "H5731",
+      "entries": [
+        {
+          "bdb_id": "p.au.ad",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "עֵ֫דֶן",
+          "definition": "Eden",
+          "mod": "II",
+          "type": "",
+          "preview": "עֵ֫דֶן"
+        },
+        {
+          "bdb_id": "p.av.ab",
+          "aug": "b",
+          "twot": "1568",
+          "hebrew": "עֵ֫דֶן",
+          "definition": "Eden",
+          "mod": "III",
+          "type": "",
+          "preview": "עֵ֫דֶן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5740": {
+      "strong_number": "H5740",
+      "entries": [
+        {
+          "bdb_id": "p.az.ad",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "עֵ֫דֶר",
+          "definition": "Edar",
+          "mod": "III",
+          "type": "",
+          "preview": "עֵ֫דֶר"
+        },
+        {
+          "bdb_id": "p.az.ac",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "עֵ֫דֶר",
+          "definition": "Edar",
+          "mod": "II",
+          "type": "",
+          "preview": "עֵ֫דֶר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5737": {
+      "strong_number": "H5737",
+      "entries": [
+        {
+          "bdb_id": "p.ay.aa",
+          "aug": "b",
+          "twot": "1571",
+          "hebrew": "עָדַר",
+          "definition": "hoe",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָדַר"
+        },
+        {
+          "bdb_id": "p.az.aa",
+          "aug": "c",
+          "twot": "1572",
+          "hebrew": "עָדַר",
+          "definition": "be lacking",
+          "mod": "III",
+          "type": "root",
+          "preview": "עָדַר"
+        },
+        {
+          "bdb_id": "p.ax.aa",
+          "aug": "a",
+          "twot": "1570",
+          "hebrew": "עָדַר",
+          "definition": "help",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָדַר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H6030": {
+      "strong_number": "H6030",
+      "entries": [
+        {
+          "bdb_id": "p.bj.aa",
+          "aug": "a",
+          "twot": "1581",
+          "hebrew": "עוּן",
+          "definition": "dwell",
+          "mod": "I",
+          "type": "root",
+          "preview": "עוּן"
+        },
+        {
+          "bdb_id": "p.dw.aa",
+          "aug": "c",
+          "twot": "1653",
+          "hebrew": "עָנָה",
+          "definition": "sing",
+          "mod": "IV",
+          "type": "root",
+          "preview": "עָנָה"
+        },
+        {
+          "bdb_id": "p.dt.aa",
+          "aug": "b",
+          "twot": "1650",
+          "hebrew": "עָנָה",
+          "definition": "answer",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָנָה"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H5800": {
+      "strong_number": "H5800",
+      "entries": [
+        {
+          "bdb_id": "p.bw.aa",
+          "aug": "b",
+          "twot": "1595",
+          "hebrew": "עָזַב",
+          "definition": "restore",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָזַב"
+        },
+        {
+          "bdb_id": "p.bv.aa",
+          "aug": "a",
+          "twot": "1594",
+          "hebrew": "עָזַב",
+          "definition": "leave",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָזַב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5844": {
+      "strong_number": "H5844",
+      "entries": [
+        {
+          "bdb_id": "p.cc.aa",
+          "aug": "b",
+          "twot": "1602",
+          "hebrew": "עָטָה",
+          "definition": "grasp",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָטָה"
+        },
+        {
+          "bdb_id": "p.cb.aa",
+          "aug": "a",
+          "twot": "1601",
+          "hebrew": "עָטָה",
+          "definition": "wrap oneself",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָטָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5848": {
+      "strong_number": "H5848",
+      "entries": [
+        {
+          "bdb_id": "p.cf.aa",
+          "aug": "b",
+          "twot": "1606",
+          "hebrew": "עָטַף",
+          "definition": "envelop oneself (Aramaism)",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָטַף"
+        },
+        {
+          "bdb_id": "p.cg.aa",
+          "aug": "c",
+          "twot": "1607",
+          "hebrew": "עָטַף",
+          "definition": "be feeble",
+          "mod": "III",
+          "type": "root",
+          "preview": "עָטַף"
+        },
+        {
+          "bdb_id": "p.ce.aa",
+          "aug": "a",
+          "twot": "1605",
+          "hebrew": "עָטַף",
+          "definition": "turn aside",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָטַף"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H5858": {
+      "strong_number": "H5858",
+      "entries": [
+        {
+          "bdb_id": "p.af.ab",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "עֵיבָל",
+          "definition": "Ebal",
+          "mod": "I",
+          "type": "",
+          "preview": "עוֹבָל"
+        },
+        {
+          "bdb_id": "p.af.ae",
+          "aug": "c",
+          "twot": null,
+          "hebrew": "עֵיבָל",
+          "definition": "Ebal",
+          "mod": "III",
+          "type": "",
+          "preview": "עֵיבָל"
+        },
+        {
+          "bdb_id": "p.af.ad",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "עֵיבָל",
+          "definition": "Ebal",
+          "mod": "II",
+          "type": "",
+          "preview": "עֵיבָל"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H5867": {
+      "strong_number": "H5867",
+      "entries": [
+        {
+          "bdb_id": "p.cj.ai",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "עֵילָם",
+          "definition": "Elam",
+          "mod": "II",
+          "type": "",
+          "preview": "עֵילָם"
+        },
+        {
+          "bdb_id": "p.cj.ah",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "עֵילָם",
+          "definition": "Elam",
+          "mod": "I",
+          "type": "",
+          "preview": "עֵילָם"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5869": {
+      "strong_number": "H5869",
+      "entries": [
+        {
+          "bdb_id": "p.ck.ac",
+          "aug": "b",
+          "twot": "1613",
+          "hebrew": "עַ֫יִן",
+          "definition": "spring",
+          "mod": "II",
+          "type": "",
+          "preview": "עַ֫יִן"
+        },
+        {
+          "bdb_id": "p.ck.aa",
+          "aug": "a",
+          "twot": "1612a",
+          "hebrew": "עַ֫יִן",
+          "definition": "eye",
+          "mod": "I",
+          "type": "root",
+          "preview": "עַ֫יִן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5892": {
+      "strong_number": "H5892",
+      "entries": [
+        {
+          "bdb_id": "p.cm.ad",
+          "aug": "b",
+          "twot": "1615",
+          "hebrew": "עִיר",
+          "definition": "city",
+          "mod": "II",
+          "type": "",
+          "preview": "עִיר"
+        },
+        {
+          "bdb_id": "p.bp.ab",
+          "aug": "a",
+          "twot": "1587a",
+          "hebrew": "עִיר",
+          "definition": "excitement",
+          "mod": "I",
+          "type": "",
+          "preview": "עִיר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5930": {
+      "strong_number": "H5930",
+      "entries": [
+        {
+          "bdb_id": "p.cs.ae",
+          "aug": "a",
+          "twot": "1624c",
+          "hebrew": "עֹלָה",
+          "definition": "whole burnt-offering",
+          "mod": "I",
+          "type": "",
+          "preview": "עֹלָה"
+        },
+        {
+          "bdb_id": "p.cs.af",
+          "aug": "b",
+          "twot": "1624d",
+          "hebrew": "עֹלָה",
+          "definition": "ascent",
+          "mod": "II",
+          "type": "",
+          "preview": "עֹלָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5945": {
+      "strong_number": "H5945",
+      "entries": [
+        {
+          "bdb_id": "p.cs.ai",
+          "aug": "a",
+          "twot": "1624g",
+          "hebrew": "עֶלְיוֹן",
+          "definition": "high",
+          "mod": "I",
+          "type": "",
+          "preview": "עֶלְיוֹן"
+        },
+        {
+          "bdb_id": "p.cs.aj",
+          "aug": "b",
+          "twot": "1624h",
+          "hebrew": "עֶלְיוֹן",
+          "definition": "Highest",
+          "mod": "II",
+          "type": "",
+          "preview": "עֶלְיוֹן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5953": {
+      "strong_number": "H5953",
+      "entries": [
+        {
+          "bdb_id": "p.cv.ac",
+          "aug": "c",
+          "twot": null,
+          "hebrew": "עָלַל",
+          "definition": "act the child",
+          "mod": "I",
+          "type": "",
+          "preview": "עָלַל"
+        },
+        {
+          "bdb_id": "p.cw.aa",
+          "aug": "d",
+          "twot": "1628",
+          "hebrew": "עָלַל",
+          "definition": "insert",
+          "mod": "III",
+          "type": "root",
+          "preview": "עָלַל"
+        },
+        {
+          "bdb_id": "p.cu.aa",
+          "aug": "a",
+          "twot": "1627",
+          "hebrew": "עָלַל",
+          "definition": "act severely",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָלַל"
+        },
+        {
+          "bdb_id": "p.cu.ac",
+          "aug": "b",
+          "twot": "1627b",
+          "hebrew": "עָלַל",
+          "definition": "glean",
+          "mod": "I",
+          "type": "",
+          "preview": "עָלַל"
+        }
+      ],
+      "homonym_count": 4
+    },
+    "H5971": {
+      "strong_number": "H5971",
+      "entries": [
+        {
+          "bdb_id": "p.dj.ad",
+          "aug": "b",
+          "twot": "1640e",
+          "hebrew": "עַם",
+          "definition": "kinsman",
+          "mod": "II",
+          "type": "",
+          "preview": "n.[m.]"
+        },
+        {
+          "bdb_id": "p.di.ab",
+          "aug": "a",
+          "twot": "1640a",
+          "hebrew": "עַם",
+          "definition": "people",
+          "mod": "I",
+          "type": "",
+          "preview": "1810"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6001": {
+      "strong_number": "H6001",
+      "entries": [
+        {
+          "bdb_id": "p.dh.ae",
+          "aug": "b",
+          "twot": "1639c",
+          "hebrew": "עָמֵל",
+          "definition": "toiling",
+          "mod": "II",
+          "type": "",
+          "preview": "עָמֵל"
+        },
+        {
+          "bdb_id": "p.dh.ad",
+          "aug": "a",
+          "twot": "1639b",
+          "hebrew": "עָמֵל",
+          "definition": "laborer",
+          "mod": "I",
+          "type": "",
+          "preview": "עָמֵל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6014": {
+      "strong_number": "H6014",
+      "entries": [
+        {
+          "bdb_id": "p.dn.ae",
+          "aug": "a",
+          "twot": "1645",
+          "hebrew": "עִמֵּר",
+          "definition": "bind sheaves",
+          "mod": "I",
+          "type": "",
+          "preview": "עִמֵּר"
+        },
+        {
+          "bdb_id": "p.do.aa",
+          "aug": "b",
+          "twot": "1646",
+          "hebrew": "עָמַר",
+          "definition": "deal tyrannically",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָמַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6016": {
+      "strong_number": "H6016",
+      "entries": [
+        {
+          "bdb_id": "p.dn.ac",
+          "aug": "b",
+          "twot": "1645b",
+          "hebrew": "עֹ֫מֶר",
+          "definition": "omer",
+          "mod": "II",
+          "type": "",
+          "preview": "עֹ֫מֶר"
+        },
+        {
+          "bdb_id": "p.dn.ab",
+          "aug": "a",
+          "twot": "1645a",
+          "hebrew": "עֹ֫מֶר",
+          "definition": "sheaf",
+          "mod": "I",
+          "type": "",
+          "preview": "עֹ֫מֶר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6031": {
+      "strong_number": "H6031",
+      "entries": [
+        {
+          "bdb_id": "p.du.aa",
+          "aug": "a",
+          "twot": "1651",
+          "hebrew": "עָנָה",
+          "definition": "be occupied",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָנָה"
+        },
+        {
+          "bdb_id": "p.dv.aa",
+          "aug": "b",
+          "twot": "1652",
+          "hebrew": "עָנָה",
+          "definition": "be bowed down",
+          "mod": "III",
+          "type": "root",
+          "preview": "עָנָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6049": {
+      "strong_number": "H6049",
+      "entries": [
+        {
+          "bdb_id": "p.dz.aa",
+          "aug": "b",
+          "twot": "1656",
+          "hebrew": "עָנַן",
+          "definition": "practise soothsaying",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָנַן"
+        },
+        {
+          "bdb_id": "p.dy.ac",
+          "aug": "a",
+          "twot": "1655",
+          "hebrew": "עָנַן",
+          "definition": "bring clouds",
+          "mod": "I",
+          "type": "",
+          "preview": "עָנַן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6060": {
+      "strong_number": "H6060",
+      "entries": [
+        {
+          "bdb_id": "p.eb.ac",
+          "aug": "b",
+          "twot": "1658b",
+          "hebrew": "עֲנָק",
+          "definition": "necklace",
+          "mod": "II",
+          "type": "",
+          "preview": "עֲנָק"
+        },
+        {
+          "bdb_id": "p.eb.ab",
+          "aug": "a",
+          "twot": "1658a",
+          "hebrew": "עֲנָק",
+          "definition": "neck",
+          "mod": "I",
+          "type": "",
+          "preview": "עֲנָק"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6075": {
+      "strong_number": "H6075",
+      "entries": [
+        {
+          "bdb_id": "p.ef.aa",
+          "aug": "b",
+          "twot": "1663",
+          "hebrew": "עָפַל",
+          "definition": "be heedless",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָפַל"
+        },
+        {
+          "bdb_id": "p.ee.aa",
+          "aug": "a",
+          "twot": "1662",
+          "hebrew": "עָפַל",
+          "definition": "swell",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָפַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6076": {
+      "strong_number": "H6076",
+      "entries": [
+        {
+          "bdb_id": "p.ee.ab",
+          "aug": "a",
+          "twot": "1662a",
+          "hebrew": "עֹ֫פֶל",
+          "definition": "mound",
+          "mod": "I",
+          "type": "",
+          "preview": "עֹ֫פֶל"
+        },
+        {
+          "bdb_id": "p.ee.ac",
+          "aug": "b",
+          "twot": "1662b",
+          "hebrew": "עֹ֫פֶל",
+          "definition": "tumour",
+          "mod": "II",
+          "type": "",
+          "preview": "עֹ֫פֶל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6089": {
+      "strong_number": "H6089",
+      "entries": [
+        {
+          "bdb_id": "p.ei.ab",
+          "aug": "a",
+          "twot": "1666a",
+          "hebrew": "עֶ֫צֶב",
+          "definition": "pain",
+          "mod": "I",
+          "type": "",
+          "preview": "עֶ֫צֶב"
+        },
+        {
+          "bdb_id": "p.ej.ab",
+          "aug": "b",
+          "twot": "1667a",
+          "hebrew": "עֶ֫צֶב",
+          "definition": "vessel",
+          "mod": "II",
+          "type": "",
+          "preview": "עֶ֫צֶב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6087": {
+      "strong_number": "H6087",
+      "entries": [
+        {
+          "bdb_id": "p.ej.aa",
+          "aug": "b",
+          "twot": "1667",
+          "hebrew": "עָצַב",
+          "definition": "shape",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָצַב"
+        },
+        {
+          "bdb_id": "p.ei.aa",
+          "aug": "a",
+          "twot": "1666",
+          "hebrew": "עָצַב",
+          "definition": "hurt",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָצַב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6090": {
+      "strong_number": "H6090",
+      "entries": [
+        {
+          "bdb_id": "p.ej.ac",
+          "aug": "b",
+          "twot": "1667b",
+          "hebrew": "עֹ֫צֶב",
+          "definition": "idol",
+          "mod": "II",
+          "type": "",
+          "preview": "עֹ֫צֶב"
+        },
+        {
+          "bdb_id": "p.ei.ac",
+          "aug": "a",
+          "twot": "1666b",
+          "hebrew": "עֹ֫צֶב",
+          "definition": "pain",
+          "mod": "I",
+          "type": "",
+          "preview": "עֹ֫צֶב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6105": {
+      "strong_number": "H6105",
+      "entries": [
+        {
+          "bdb_id": "p.er.aa",
+          "aug": "b",
+          "twot": "1674",
+          "hebrew": "עָצַם",
+          "definition": "shut the eyes",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָצַם"
+        },
+        {
+          "bdb_id": "p.eq.aa",
+          "aug": "a",
+          "twot": "1673",
+          "hebrew": "עָצֹם",
+          "definition": "be vast",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָצֹם"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6121": {
+      "strong_number": "H6121",
+      "entries": [
+        {
+          "bdb_id": "p.eu.af",
+          "aug": "b",
+          "twot": "1676c",
+          "hebrew": "עָקֹב",
+          "definition": "steep",
+          "mod": "II",
+          "type": "",
+          "preview": "עָקֹב"
+        },
+        {
+          "bdb_id": "p.eu.ae",
+          "aug": "a",
+          "twot": "1676c",
+          "hebrew": "עָקֹב",
+          "definition": "fraudulent",
+          "mod": "I",
+          "type": "",
+          "preview": "עָקֹב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6154": {
+      "strong_number": "H6154",
+      "entries": [
+        {
+          "bdb_id": "p.fb.ab",
+          "aug": "a",
+          "twot": "1685a",
+          "hebrew": "עֵ֫רֶב",
+          "definition": "mixture",
+          "mod": "I",
+          "type": "",
+          "preview": "עֵ֫רֶב"
+        },
+        {
+          "bdb_id": "p.fb.ac",
+          "aug": "b",
+          "twot": "1685b",
+          "hebrew": "עֵ֫רֶב",
+          "definition": "woof",
+          "mod": "II",
+          "type": "",
+          "preview": "עֵ֫רֶב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6166": {
+      "strong_number": "H6166",
+      "entries": [
+        {
+          "bdb_id": "p.fh.ad",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "עֲרָד",
+          "definition": "Arad",
+          "mod": "II",
+          "type": "",
+          "preview": "עֲרָד"
+        },
+        {
+          "bdb_id": "p.fh.ac",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "עֲרָד",
+          "definition": "Arad",
+          "mod": "I",
+          "type": "",
+          "preview": "עֲרָד"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6211": {
+      "strong_number": "H6211",
+      "entries": [
+        {
+          "bdb_id": "p.gf.ab",
+          "aug": "a",
+          "twot": "1715a",
+          "hebrew": "עָשׁ",
+          "definition": "moth",
+          "mod": "II",
+          "type": "",
+          "preview": "עָשׁ"
+        },
+        {
+          "bdb_id": "xp.ap.ac",
+          "aug": "b",
+          "twot": "2931",
+          "hebrew": "עֲשַׂב",
+          "definition": "herbage",
+          "mod": "I",
+          "type": "",
+          "preview": "עֲשַׂב"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6213": {
+      "strong_number": "H6213",
+      "entries": [
+        {
+          "bdb_id": "p.fy.aa",
+          "aug": "a",
+          "twot": "1708",
+          "hebrew": "עָשָׂה",
+          "definition": "do",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָשָׂה"
+        },
+        {
+          "bdb_id": "p.fz.aa",
+          "aug": "b",
+          "twot": "1709",
+          "hebrew": "עָשָׂה",
+          "definition": "press",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָשָׂה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6245": {
+      "strong_number": "H6245",
+      "entries": [
+        {
+          "bdb_id": "p.gh.aa",
+          "aug": "b",
+          "twot": "1717",
+          "hebrew": "עָשַׁת",
+          "definition": "think",
+          "mod": "II",
+          "type": "root",
+          "preview": "עָשַׁת"
+        },
+        {
+          "bdb_id": "p.gg.aa",
+          "aug": "a",
+          "twot": "1716",
+          "hebrew": "עָשַׁת",
+          "definition": "be smooth",
+          "mod": "I",
+          "type": "root",
+          "preview": "עָשַׁת"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6282": {
+      "strong_number": "H6282",
+      "entries": [
+        {
+          "bdb_id": "p.gm.ab",
+          "aug": "a",
+          "twot": "1722a",
+          "hebrew": "עָתָר",
+          "definition": "suppliant",
+          "mod": "I",
+          "type": "",
+          "preview": "עָתָר"
+        },
+        {
+          "bdb_id": "p.go.ab",
+          "aug": "b",
+          "twot": "1724a",
+          "hebrew": "עָתָר",
+          "definition": "odour",
+          "mod": "II",
+          "type": "",
+          "preview": "עָתָר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6335": {
+      "strong_number": "H6335",
+      "entries": [
+        {
+          "bdb_id": "q.aw.aa",
+          "aug": "a",
+          "twot": "1751",
+          "hebrew": "פּוּשׁ",
+          "definition": "spring about",
+          "mod": "I",
+          "type": "root",
+          "preview": "פּוּשׁ"
+        },
+        {
+          "bdb_id": "q.ax.aa",
+          "aug": "b",
+          "twot": "1752",
+          "hebrew": "פּוּשׁ",
+          "definition": "be scattered",
+          "mod": "II",
+          "type": "root",
+          "preview": "פּוּשׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6341": {
+      "strong_number": "H6341",
+      "entries": [
+        {
+          "bdb_id": "q.bd.ab",
+          "aug": "a",
+          "twot": "1759a",
+          "hebrew": "פַּח",
+          "definition": "bird-trap",
+          "mod": "I",
+          "type": "",
+          "preview": "פַּח"
+        },
+        {
+          "bdb_id": "q.bd.ad",
+          "aug": "b",
+          "twot": "1759b",
+          "hebrew": "פַּח",
+          "definition": "plate",
+          "mod": "II",
+          "type": "",
+          "preview": "פַּח"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6452": {
+      "strong_number": "H6452",
+      "entries": [
+        {
+          "bdb_id": "q.by.aa",
+          "aug": "a",
+          "twot": "1786",
+          "hebrew": "פָּסַח",
+          "definition": "pass over",
+          "mod": "I",
+          "type": "root",
+          "preview": "פָּסַח"
+        },
+        {
+          "bdb_id": "q.bz.aa",
+          "aug": "b",
+          "twot": "1787",
+          "hebrew": "פָּסַח",
+          "definition": "limp",
+          "mod": "II",
+          "type": "root",
+          "preview": "פָּסַח"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6524": {
+      "strong_number": "H6524",
+      "entries": [
+        {
+          "bdb_id": "q.cx.aa",
+          "aug": "a",
+          "twot": "1813",
+          "hebrew": "פָּרַח",
+          "definition": "bud",
+          "mod": "I",
+          "type": "root",
+          "preview": "פָּרַח"
+        },
+        {
+          "bdb_id": "q.cy.aa",
+          "aug": "b",
+          "twot": "1814",
+          "hebrew": "פָּרַח",
+          "definition": "break out",
+          "mod": "II",
+          "type": "root",
+          "preview": "פָּרַח"
+        },
+        {
+          "bdb_id": "q.cz.aa",
+          "aug": "c",
+          "twot": "1815",
+          "hebrew": "פָּרַח",
+          "definition": "fly",
+          "mod": "III",
+          "type": "root",
+          "preview": "פָּרַח"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H6544": {
+      "strong_number": "H6544",
+      "entries": [
+        {
+          "bdb_id": "q.df.ac",
+          "aug": "a",
+          "twot": "1822",
+          "hebrew": "פָּרַע",
+          "definition": "act as leader",
+          "mod": "I",
+          "type": "",
+          "preview": "פָּרַע"
+        },
+        {
+          "bdb_id": "q.dh.aa",
+          "aug": "b",
+          "twot": "1824",
+          "hebrew": "פָּרַע",
+          "definition": "let go",
+          "mod": "III",
+          "type": "root",
+          "preview": "פָּרַע"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6565": {
+      "strong_number": "H6565",
+      "entries": [
+        {
+          "bdb_id": "q.dm.aa",
+          "aug": "b",
+          "twot": "1830",
+          "hebrew": "פָּרַר",
+          "definition": "split",
+          "mod": "II",
+          "type": "root",
+          "preview": "פָּרַר"
+        },
+        {
+          "bdb_id": "q.dl.aa",
+          "aug": "a",
+          "twot": "1829",
+          "hebrew": "פָּרַר",
+          "definition": "break",
+          "mod": "I",
+          "type": "root",
+          "preview": "פָּרַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6567": {
+      "strong_number": "H6567",
+      "entries": [
+        {
+          "bdb_id": "q.dp.aa",
+          "aug": "a",
+          "twot": "1833",
+          "hebrew": "פָּרַשׁ",
+          "definition": "make distinct",
+          "mod": "I",
+          "type": "root",
+          "preview": "פָּרַשׁ"
+        },
+        {
+          "bdb_id": "q.dq.aa",
+          "aug": "b",
+          "twot": "1834",
+          "hebrew": "פָּרַשׁ",
+          "definition": "pierce",
+          "mod": "II",
+          "type": "root",
+          "preview": "פָּרַשׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6571": {
+      "strong_number": "H6571",
+      "entries": [
+        {
+          "bdb_id": "q.ds.ac",
+          "aug": "b",
+          "twot": "1836a",
+          "hebrew": "פָּרָשׁ",
+          "definition": "horseman",
+          "mod": "II",
+          "type": "",
+          "preview": "פָּרָשׁ"
+        },
+        {
+          "bdb_id": "q.ds.ab",
+          "aug": "a",
+          "twot": "1836a",
+          "hebrew": "פָּרָשׁ",
+          "definition": "horse",
+          "mod": "II",
+          "type": "",
+          "preview": "פָּרָשׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6605": {
+      "strong_number": "H6605",
+      "entries": [
+        {
+          "bdb_id": "q.ea.aa",
+          "aug": "a",
+          "twot": "1854",
+          "hebrew": "פָּתַח",
+          "definition": "open",
+          "mod": "I",
+          "type": "root",
+          "preview": "פָּתַח"
+        },
+        {
+          "bdb_id": "q.eb.aa",
+          "aug": "b",
+          "twot": "1855",
+          "hebrew": "פָּתַח",
+          "definition": "engrave",
+          "mod": "II",
+          "type": "root",
+          "preview": "פָּתַח"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6632": {
+      "strong_number": "H6632",
+      "entries": [
+        {
+          "bdb_id": "r.ae.ab",
+          "aug": "b",
+          "twot": "1867a",
+          "hebrew": "צָב",
+          "definition": "lizard",
+          "mod": "II",
+          "type": "",
+          "preview": "n.[m.]"
+        },
+        {
+          "bdb_id": "r.ad.ab",
+          "aug": "a",
+          "twot": "1866a",
+          "hebrew": "צָב",
+          "definition": "litter",
+          "mod": "I",
+          "type": "",
+          "preview": "n.[m.]"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6643": {
+      "strong_number": "H6643",
+      "entries": [
+        {
+          "bdb_id": "r.ag.ab",
+          "aug": "a",
+          "twot": "1869a",
+          "hebrew": "צְבִי",
+          "definition": "beauty",
+          "mod": "I",
+          "type": "",
+          "preview": "צְבִי"
+        },
+        {
+          "bdb_id": "r.ah.ab",
+          "aug": "b",
+          "twot": "1870a",
+          "hebrew": "צְבִי",
+          "definition": "gazelle",
+          "mod": "II",
+          "type": "",
+          "preview": "צְבִי"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6658": {
+      "strong_number": "H6658",
+      "entries": [
+        {
+          "bdb_id": "r.ap.aa",
+          "aug": "a",
+          "twot": "1877",
+          "hebrew": "צָדָה",
+          "definition": "lie in wait",
+          "mod": "I",
+          "type": "root",
+          "preview": "צָדָה"
+        },
+        {
+          "bdb_id": "r.aq.aa",
+          "aug": "b",
+          "twot": "1878",
+          "hebrew": "צָדָה",
+          "definition": "lay waste",
+          "mod": "II",
+          "type": "root",
+          "preview": "צָדָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6670": {
+      "strong_number": "H6670",
+      "entries": [
+        {
+          "bdb_id": "r.au.aa",
+          "aug": "b",
+          "twot": "1882",
+          "hebrew": "צָהַל",
+          "definition": "make shining",
+          "mod": "II",
+          "type": "root",
+          "preview": "צָהַל"
+        },
+        {
+          "bdb_id": "r.at.aa",
+          "aug": "a",
+          "twot": "1881",
+          "hebrew": "צָהַל",
+          "definition": "neigh",
+          "mod": "I",
+          "type": "root",
+          "preview": "צָהַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6672": {
+      "strong_number": "H6672",
+      "entries": [
+        {
+          "bdb_id": "r.av.ab",
+          "aug": "a",
+          "twot": "1883a",
+          "hebrew": "צֹ֫הַר",
+          "definition": "midday",
+          "mod": "I",
+          "type": "",
+          "preview": "צֹ֫הַר"
+        },
+        {
+          "bdb_id": "r.av.ac",
+          "aug": "b",
+          "twot": "1883b",
+          "hebrew": "צֹ֫הַר",
+          "definition": "roof",
+          "mod": "II",
+          "type": "",
+          "preview": "צֹ֫הַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6692": {
+      "strong_number": "H6692",
+      "entries": [
+        {
+          "bdb_id": "r.bf.aa",
+          "aug": "a",
+          "twot": "1893",
+          "hebrew": "צוּץ",
+          "definition": "blossom",
+          "mod": "I",
+          "type": "root",
+          "preview": "צוּץ"
+        },
+        {
+          "bdb_id": "r.bg.aa",
+          "aug": "b",
+          "twot": "1894",
+          "hebrew": "צוּץ",
+          "definition": "gaze",
+          "mod": "II",
+          "type": "root",
+          "preview": "צוּץ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6696": {
+      "strong_number": "H6696",
+      "entries": [
+        {
+          "bdb_id": "r.bm.aa",
+          "aug": "c",
+          "twot": "1900",
+          "hebrew": "צוּר",
+          "definition": "fashion",
+          "mod": "IV",
+          "type": "root",
+          "preview": "צוּר"
+        },
+        {
+          "bdb_id": "r.bk.aa",
+          "aug": "a",
+          "twot": "1898",
+          "hebrew": "צוּר",
+          "definition": "confine",
+          "mod": "II",
+          "type": "root",
+          "preview": "צוּר"
+        },
+        {
+          "bdb_id": "r.bl.aa",
+          "aug": "b",
+          "twot": "1899",
+          "hebrew": "צוּר",
+          "definition": "shew hostility to",
+          "mod": "III",
+          "type": "root",
+          "preview": "צוּר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H6887": {
+      "strong_number": "H6887",
+      "entries": [
+        {
+          "bdb_id": "r.bk.aa",
+          "aug": "a",
+          "twot": "1898",
+          "hebrew": "צוּר",
+          "definition": "confine",
+          "mod": "II",
+          "type": "root",
+          "preview": "צוּר"
+        },
+        {
+          "bdb_id": "r.dz.ae",
+          "aug": "c",
+          "twot": "1973d",
+          "hebrew": "צָרַר",
+          "definition": "suffer distress",
+          "mod": "I",
+          "type": "",
+          "preview": "צָרַר"
+        },
+        {
+          "bdb_id": "r.ea.ad",
+          "aug": "e",
+          "twot": "1974c",
+          "hebrew": "צָרַר",
+          "definition": "make a rival-wife",
+          "mod": "I",
+          "type": "",
+          "preview": "צָרַר"
+        },
+        {
+          "bdb_id": "r.dz.aa",
+          "aug": "b",
+          "twot": "1973",
+          "hebrew": "צָרַר",
+          "definition": "bind",
+          "mod": "I",
+          "type": "root",
+          "preview": "צָרַר"
+        },
+        {
+          "bdb_id": "r.ea.aa",
+          "aug": "d",
+          "twot": "1974",
+          "hebrew": "צָרַר",
+          "definition": "shew hostility toward",
+          "mod": "II",
+          "type": "root",
+          "preview": "צָרַר"
+        }
+      ],
+      "homonym_count": 5
+    },
+    "H6718": {
+      "strong_number": "H6718",
+      "entries": [
+        {
+          "bdb_id": "r.ax.ab",
+          "aug": "a",
+          "twot": "1885a",
+          "hebrew": "צַ֫יִד",
+          "definition": "hunting",
+          "mod": "I",
+          "type": "",
+          "preview": "צַ֫יִד"
+        },
+        {
+          "bdb_id": "r.ay.ab",
+          "aug": "b",
+          "twot": "1886a",
+          "hebrew": "צַ֫יִד",
+          "definition": "provision",
+          "mod": "II",
+          "type": "",
+          "preview": "צַ֫יִד"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6731": {
+      "strong_number": "H6731",
+      "entries": [
+        {
+          "bdb_id": "r.bf.ab",
+          "aug": "a",
+          "twot": "1893a",
+          "hebrew": "צִיץ",
+          "definition": "blossom",
+          "mod": "I",
+          "type": "",
+          "preview": "צִיץ"
+        },
+        {
+          "bdb_id": "r.bt.an",
+          "aug": "b",
+          "twot": "1911",
+          "hebrew": "צִיץ",
+          "definition": "wings",
+          "mod": "II",
+          "type": "",
+          "preview": "צִיץ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6735": {
+      "strong_number": "H6735",
+      "entries": [
+        {
+          "bdb_id": "r.bu.ab",
+          "aug": "a",
+          "twot": "1913a",
+          "hebrew": "צִיר",
+          "definition": "envoy",
+          "mod": "II",
+          "type": "",
+          "preview": "צִיר"
+        },
+        {
+          "bdb_id": "r.bv.ac",
+          "aug": "c",
+          "twot": "1914b",
+          "hebrew": "צִיר",
+          "definition": "pang",
+          "mod": "IV",
+          "type": "",
+          "preview": "צִיר"
+        },
+        {
+          "bdb_id": "r.bv.ab",
+          "aug": "b",
+          "twot": "1914a",
+          "hebrew": "צִיר",
+          "definition": "pivot",
+          "mod": "III",
+          "type": "",
+          "preview": "צִיר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H6743": {
+      "strong_number": "H6743",
+      "entries": [
+        {
+          "bdb_id": "r.by.aa",
+          "aug": "b",
+          "twot": "1917",
+          "hebrew": "צָלֵחַ",
+          "definition": "advance",
+          "mod": "II",
+          "type": "root",
+          "preview": "צָלֵחַ"
+        },
+        {
+          "bdb_id": "r.bx.aa",
+          "aug": "a",
+          "twot": "1916",
+          "hebrew": "צָלַח",
+          "definition": "rush",
+          "mod": "I",
+          "type": "root",
+          "preview": "צָלַח"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6756": {
+      "strong_number": "H6756",
+      "entries": [
+        {
+          "bdb_id": "r.ce.ac",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "צַלְמוֹן",
+          "definition": "Zalmon",
+          "mod": "I",
+          "type": "",
+          "preview": "צַלְמוֹן"
+        },
+        {
+          "bdb_id": "r.ce.ad",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "צַלְמוֹן",
+          "definition": "Zalmon",
+          "mod": "II",
+          "type": "",
+          "preview": "צַלְמוֹן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6767": {
+      "strong_number": "H6767",
+      "entries": [
+        {
+          "bdb_id": "r.ca.ad",
+          "aug": "c",
+          "twot": "1919c",
+          "hebrew": "צְלָצַ֑ל",
+          "definition": "whirring locust",
+          "mod": "I",
+          "type": "",
+          "preview": "צְלָצַ֑ל"
+        },
+        {
+          "bdb_id": "r.ca.ab",
+          "aug": "a",
+          "twot": "1919a",
+          "hebrew": "צִלְצָל",
+          "definition": "whirring",
+          "mod": "I",
+          "type": "",
+          "preview": "צִלְצָל"
+        },
+        {
+          "bdb_id": "r.ca.ac",
+          "aug": "b",
+          "twot": "1919b",
+          "hebrew": "צִלִצָל",
+          "definition": "spear",
+          "mod": "II",
+          "type": "",
+          "preview": "צִלִצָל"
+        },
+        {
+          "bdb_id": "r.ca.ae",
+          "aug": "d",
+          "twot": "1919d",
+          "hebrew": "צֶלְצְלִים",
+          "definition": "cymbals",
+          "mod": "I",
+          "type": "",
+          "preview": "צֶלְצְלִים"
+        }
+      ],
+      "homonym_count": 4
+    },
+    "H6781": {
+      "strong_number": "H6781",
+      "entries": [
+        {
+          "bdb_id": "r.ci.ac",
+          "aug": "a",
+          "twot": "1927b",
+          "hebrew": "צָמִיד",
+          "definition": "bracelet",
+          "mod": "I",
+          "type": "",
+          "preview": "צָמִיד"
+        },
+        {
+          "bdb_id": "r.ci.ad",
+          "aug": "b",
+          "twot": "1927c",
+          "hebrew": "צָמִיד",
+          "definition": "cover",
+          "mod": "II",
+          "type": "",
+          "preview": "צָמִיד"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6793": {
+      "strong_number": "H6793",
+      "entries": [
+        {
+          "bdb_id": "r.cr.ab",
+          "aug": "b",
+          "twot": "1937a",
+          "hebrew": "צִנָּה",
+          "definition": "coolness",
+          "mod": "II",
+          "type": "",
+          "preview": "צִנָּה"
+        },
+        {
+          "bdb_id": "r.cq.ac",
+          "aug": "a",
+          "twot": "1936b",
+          "hebrew": "צִנָּה",
+          "definition": "hook",
+          "mod": "I",
+          "type": "",
+          "preview": "צִנָּה"
+        },
+        {
+          "bdb_id": "r.cs.ab",
+          "aug": "c",
+          "twot": "1938a",
+          "hebrew": "צִנָּה",
+          "definition": "shield",
+          "mod": "III",
+          "type": "",
+          "preview": "צִנָּה"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H6807": {
+      "strong_number": "H6807",
+      "entries": [
+        {
+          "bdb_id": "r.cy.ab",
+          "aug": "b",
+          "twot": "1943c",
+          "hebrew": "צְעָדָה",
+          "definition": "armlet",
+          "mod": "II",
+          "type": "",
+          "preview": "צְעָדָה"
+        },
+        {
+          "bdb_id": "r.cx.ac",
+          "aug": "a",
+          "twot": "1943b",
+          "hebrew": "צְעָדָה",
+          "definition": "marching",
+          "mod": "I",
+          "type": "",
+          "preview": "צְעָדָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6862": {
+      "strong_number": "H6862",
+      "entries": [
+        {
+          "bdb_id": "r.eb.ab",
+          "aug": "d",
+          "twot": "1975a",
+          "hebrew": "צַר",
+          "definition": "pebble",
+          "mod": "IV",
+          "type": "",
+          "preview": "n.[m.]"
+        },
+        {
+          "bdb_id": "r.dz.ac",
+          "aug": "b",
+          "twot": "1973b",
+          "hebrew": "צַר",
+          "definition": "straits",
+          "mod": "II",
+          "type": "",
+          "preview": "n.[m.]"
+        },
+        {
+          "bdb_id": "r.ea.ab",
+          "aug": "c",
+          "twot": "1974a",
+          "hebrew": "צַר",
+          "definition": "adversary",
+          "mod": "III",
+          "type": "",
+          "preview": "adversary"
+        },
+        {
+          "bdb_id": "r.dz.ab",
+          "aug": "a",
+          "twot": "1973a",
+          "hebrew": "צַר",
+          "definition": "narrow",
+          "mod": "I",
+          "type": "",
+          "preview": "narrow"
+        }
+      ],
+      "homonym_count": 4
+    },
+    "H6872": {
+      "strong_number": "H6872",
+      "entries": [
+        {
+          "bdb_id": "r.eb.ae",
+          "aug": "c",
+          "twot": null,
+          "hebrew": "צְרוֹר",
+          "definition": "Zeror",
+          "mod": "III",
+          "type": "",
+          "preview": "צְרוֹר"
+        },
+        {
+          "bdb_id": "r.dz.af",
+          "aug": "a",
+          "twot": "1973e",
+          "hebrew": "צְרוֹר",
+          "definition": "bundle",
+          "mod": "I",
+          "type": "",
+          "preview": "צְרוֹר"
+        },
+        {
+          "bdb_id": "r.eb.ad",
+          "aug": "b",
+          "twot": "1975c",
+          "hebrew": "צְרוֹר",
+          "definition": "pebble",
+          "mod": "II",
+          "type": "",
+          "preview": "צְרוֹר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H6957": {
+      "strong_number": "H6957",
+      "entries": [
+        {
+          "bdb_id": "s.ap.ak",
+          "aug": "a",
+          "twot": "1992",
+          "hebrew": "קַו",
+          "definition": "cord",
+          "mod": "I",
+          "type": "",
+          "preview": "mimicry of Isaiah's words, perh. senseless"
+        },
+        {
+          "bdb_id": "s.aq.ab",
+          "aug": "b",
+          "twot": "1994a",
+          "hebrew": "קַו",
+          "definition": "line",
+          "mod": "II",
+          "type": "",
+          "preview": "line"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6960": {
+      "strong_number": "H6960",
+      "entries": [
+        {
+          "bdb_id": "s.aq.aa",
+          "aug": "a",
+          "twot": "1994",
+          "hebrew": "קָוָה",
+          "definition": "wait for",
+          "mod": "I",
+          "type": "root",
+          "preview": "קָוָה"
+        },
+        {
+          "bdb_id": "s.ar.aa",
+          "aug": "b",
+          "twot": "1995",
+          "hebrew": "קָוָה",
+          "definition": "collect",
+          "mod": "II",
+          "type": "root",
+          "preview": "קָוָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H6979": {
+      "strong_number": "H6979",
+      "entries": [
+        {
+          "bdb_id": "s.az.aa",
+          "aug": "a",
+          "twot": "2004",
+          "hebrew": "קוּר",
+          "definition": "bore",
+          "mod": "I",
+          "type": "root",
+          "preview": "קוּר"
+        },
+        {
+          "bdb_id": "s.dk.aa",
+          "aug": "b",
+          "twot": "2077",
+          "hebrew": "קָרַר",
+          "definition": "be cold",
+          "mod": "I",
+          "type": "root",
+          "preview": "קָרַר"
+        },
+        {
+          "bdb_id": "s.dl.aa",
+          "aug": "c",
+          "twot": "2078",
+          "hebrew": "קָרַר",
+          "definition": "tear down",
+          "mod": "II",
+          "type": "root",
+          "preview": "קָרַר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H7014": {
+      "strong_number": "H7014",
+      "entries": [
+        {
+          "bdb_id": "s.bk.ae",
+          "aug": "b",
+          "twot": "2017",
+          "hebrew": "קַ֫יִן",
+          "definition": "Cain",
+          "mod": "III",
+          "type": "",
+          "preview": "קַ֫יִן"
+        },
+        {
+          "bdb_id": "s.bk.ac",
+          "aug": "a",
+          "twot": "2016",
+          "hebrew": "קַ֫יִן",
+          "definition": "Cain",
+          "mod": "II",
+          "type": "",
+          "preview": "קַ֫יִן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7024": {
+      "strong_number": "H7024",
+      "entries": [
+        {
+          "bdb_id": "s.bm.ah",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "קִיר",
+          "definition": "Kir",
+          "mod": "III",
+          "type": "",
+          "preview": "קִיר"
+        },
+        {
+          "bdb_id": "s.bm.ag",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "קִיר",
+          "definition": "Kir",
+          "mod": "II",
+          "type": "",
+          "preview": "קִיר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7050": {
+      "strong_number": "H7050",
+      "entries": [
+        {
+          "bdb_id": "s.bt.ad",
+          "aug": "b",
+          "twot": "2030c",
+          "hebrew": "קֶ֫לַע",
+          "definition": "curtain",
+          "mod": "II",
+          "type": "",
+          "preview": "קֶ֫לַע"
+        },
+        {
+          "bdb_id": "s.bt.ab",
+          "aug": "a",
+          "twot": "2030a",
+          "hebrew": "קֶ֫לַע",
+          "definition": "sling",
+          "mod": "I",
+          "type": "",
+          "preview": "קֶ֫לַע"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7049": {
+      "strong_number": "H7049",
+      "entries": [
+        {
+          "bdb_id": "s.bu.aa",
+          "aug": "b",
+          "twot": "2031",
+          "hebrew": "קָלַע",
+          "definition": "carve",
+          "mod": "II",
+          "type": "root",
+          "preview": "קָלַע"
+        },
+        {
+          "bdb_id": "s.bt.aa",
+          "aug": "a",
+          "twot": "2030",
+          "hebrew": "קָלַע",
+          "definition": "sling",
+          "mod": "I",
+          "type": "root",
+          "preview": "קָלַע"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7105": {
+      "strong_number": "H7105",
+      "entries": [
+        {
+          "bdb_id": "s.cx.ab",
+          "aug": "a",
+          "twot": "2062a",
+          "hebrew": "קָצִיר",
+          "definition": "harvesting",
+          "mod": "I",
+          "type": "",
+          "preview": "קָצִיר"
+        },
+        {
+          "bdb_id": "s.cx.ac",
+          "aug": "b",
+          "twot": "2062b",
+          "hebrew": "קָצִיר",
+          "definition": "boughs",
+          "mod": "II",
+          "type": "",
+          "preview": "קָצִיר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7110": {
+      "strong_number": "H7110",
+      "entries": [
+        {
+          "bdb_id": "s.ct.ab",
+          "aug": "a",
+          "twot": "2058a",
+          "hebrew": "קֶ֫צֶף",
+          "definition": "wrath",
+          "mod": "I",
+          "type": "",
+          "preview": "קֶ֫צֶף"
+        },
+        {
+          "bdb_id": "s.cu.ac",
+          "aug": "b",
+          "twot": "2059b",
+          "hebrew": "קֶ֫צֶף",
+          "definition": "splinter",
+          "mod": "II",
+          "type": "",
+          "preview": "קֶ֫צֶף"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7114": {
+      "strong_number": "H7114",
+      "entries": [
+        {
+          "bdb_id": "s.cw.aa",
+          "aug": "a",
+          "twot": "2061",
+          "hebrew": "קָצֵר",
+          "definition": "be short",
+          "mod": "I",
+          "type": "root",
+          "preview": "קָצֵר"
+        },
+        {
+          "bdb_id": "s.cx.aa",
+          "aug": "b",
+          "twot": "2062",
+          "hebrew": "קָצַר",
+          "definition": "reap",
+          "mod": "II",
+          "type": "root",
+          "preview": "קָצַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7197": {
+      "strong_number": "H7197",
+      "entries": [
+        {
+          "bdb_id": "s.dy.aa",
+          "aug": "b",
+          "twot": "2092",
+          "hebrew": "קָשַׁשׁ",
+          "definition": "gather stubble",
+          "mod": "II",
+          "type": "root",
+          "preview": "קָשַׁשׁ"
+        },
+        {
+          "bdb_id": "s.dx.ac",
+          "aug": "a",
+          "twot": "2091",
+          "hebrew": "קָשַׁשׁ",
+          "definition": "gather stubble",
+          "mod": "I",
+          "type": "",
+          "preview": "קָשַׁשׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7203": {
+      "strong_number": "H7203",
+      "entries": [
+        {
+          "bdb_id": "t.ab.ad",
+          "aug": "b",
+          "twot": "2095c",
+          "hebrew": "רֹאֶה",
+          "definition": "vision",
+          "mod": "II",
+          "type": "",
+          "preview": "רֹאֶה"
+        },
+        {
+          "bdb_id": "t.ab.ac",
+          "aug": "a",
+          "twot": "2095b",
+          "hebrew": "רֹאֶה",
+          "definition": "seer",
+          "mod": "I",
+          "type": "",
+          "preview": "רֹאֶה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7218": {
+      "strong_number": "H7218",
+      "entries": [
+        {
+          "bdb_id": "t.ad.al",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "רֹאשׁ",
+          "definition": "Rôsh",
+          "mod": "IV",
+          "type": "",
+          "preview": "רֹאשׁ"
+        },
+        {
+          "bdb_id": "t.ad.aa",
+          "aug": "a",
+          "twot": "2097",
+          "hebrew": "רֹאשׁ",
+          "definition": "head",
+          "mod": "I",
+          "type": "root",
+          "preview": "רֹאשׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7227": {
+      "strong_number": "H7227",
+      "entries": [
+        {
+          "bdb_id": "t.ae.ac",
+          "aug": "b",
+          "twot": "2099b",
+          "hebrew": "רַב",
+          "definition": "chief",
+          "mod": "II",
+          "type": "",
+          "preview": "chief"
+        },
+        {
+          "bdb_id": "t.ae.ab",
+          "aug": "a",
+          "twot": "2099a",
+          "hebrew": "רַב",
+          "definition": "much",
+          "mod": "I",
+          "type": "",
+          "preview": "much"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7235": {
+      "strong_number": "H7235",
+      "entries": [
+        {
+          "bdb_id": "t.ai.aa",
+          "aug": "a",
+          "twot": "2103",
+          "hebrew": "רָבָה",
+          "definition": "be much",
+          "mod": "I",
+          "type": "root",
+          "preview": "רָבָה"
+        },
+        {
+          "bdb_id": "t.aj.aa",
+          "aug": "b",
+          "twot": "2104",
+          "hebrew": "רָבָה",
+          "definition": "shoot",
+          "mod": "II",
+          "type": "root",
+          "preview": "רָבָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7280": {
+      "strong_number": "H7280",
+      "entries": [
+        {
+          "bdb_id": "t.av.aa",
+          "aug": "b",
+          "twot": "2117",
+          "hebrew": "רָגַע",
+          "definition": "be at rest",
+          "mod": "II",
+          "type": "root",
+          "preview": "רָגַע"
+        },
+        {
+          "bdb_id": "t.au.aa",
+          "aug": "a",
+          "twot": "2116",
+          "hebrew": "רָגַע",
+          "definition": "disturb",
+          "mod": "I",
+          "type": "root",
+          "preview": "רָגַע"
+        },
+        {
+          "bdb_id": "t.aw.aa",
+          "aug": "c",
+          "twot": "2118",
+          "hebrew": "רָגַע",
+          "definition": "harden",
+          "mod": "III",
+          "type": "root",
+          "preview": "רָגַע"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H7287": {
+      "strong_number": "H7287",
+      "entries": [
+        {
+          "bdb_id": "t.ba.aa",
+          "aug": "b",
+          "twot": "2122",
+          "hebrew": "רָדָה",
+          "definition": "scrape out",
+          "mod": "II",
+          "type": "root",
+          "preview": "רָדָה"
+        },
+        {
+          "bdb_id": "t.az.aa",
+          "aug": "a",
+          "twot": "2121",
+          "hebrew": "רָדָה",
+          "definition": "have dominion",
+          "mod": "I",
+          "type": "root",
+          "preview": "רָדָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7298": {
+      "strong_number": "H7298",
+      "entries": [
+        {
+          "bdb_id": "t.bh.ab",
+          "aug": "b",
+          "twot": "2128a",
+          "hebrew": "רַ֫הַט",
+          "definition": "lock",
+          "mod": "II",
+          "type": "",
+          "preview": "רַ֫הַט"
+        },
+        {
+          "bdb_id": "t.bg.ab",
+          "aug": "a",
+          "twot": "2127a",
+          "hebrew": "רַ֫הַט",
+          "definition": "trough",
+          "mod": "I",
+          "type": "",
+          "preview": "רַ֫הַט"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7363": {
+      "strong_number": "H7363",
+      "entries": [
+        {
+          "bdb_id": "t.cc.aa",
+          "aug": "a",
+          "twot": "2148",
+          "hebrew": "רָחַף",
+          "definition": "grow soft",
+          "mod": "I",
+          "type": "root",
+          "preview": "רָחַף"
+        },
+        {
+          "bdb_id": "t.cd.aa",
+          "aug": "b",
+          "twot": "2149",
+          "hebrew": "רָחַף",
+          "definition": "hover",
+          "mod": "II",
+          "type": "root",
+          "preview": "רָחַף"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7411": {
+      "strong_number": "H7411",
+      "entries": [
+        {
+          "bdb_id": "t.cw.aa",
+          "aug": "b",
+          "twot": "2169",
+          "hebrew": "רָמָה",
+          "definition": "beguile",
+          "mod": "II",
+          "type": "root",
+          "preview": "רָמָה"
+        },
+        {
+          "bdb_id": "t.cv.aa",
+          "aug": "a",
+          "twot": "2168",
+          "hebrew": "רָמָה",
+          "definition": "cast",
+          "mod": "I",
+          "type": "root",
+          "preview": "רָמָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7417": {
+      "strong_number": "H7417",
+      "entries": [
+        {
+          "bdb_id": "t.cx.ai",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "רִמּוֹן",
+          "definition": "Remmon",
+          "mod": "III",
+          "type": "",
+          "preview": "רִמּוֹן"
+        },
+        {
+          "bdb_id": "t.cx.aj",
+          "aug": "c",
+          "twot": null,
+          "hebrew": "רִמּוֹן",
+          "definition": "Remmon",
+          "mod": "IV",
+          "type": "",
+          "preview": "רִמּוֹן"
+        },
+        {
+          "bdb_id": "t.cx.ah",
+          "aug": "a",
+          "twot": "2171",
+          "hebrew": "רִמּוֹן",
+          "definition": "Remmon",
+          "mod": "II",
+          "type": "",
+          "preview": "רִמּוֹן"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H7423": {
+      "strong_number": "H7423",
+      "entries": [
+        {
+          "bdb_id": "t.cw.ab",
+          "aug": "a",
+          "twot": "2169a",
+          "hebrew": "רְמִיָּה",
+          "definition": "deceit",
+          "mod": "I",
+          "type": "",
+          "preview": "רְמִיָּה"
+        },
+        {
+          "bdb_id": "t.cx.ab",
+          "aug": "b",
+          "twot": "2169a",
+          "hebrew": "רְמִיָּה",
+          "definition": "laxness",
+          "mod": "II",
+          "type": "",
+          "preview": "רְמִיָּה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7447": {
+      "strong_number": "H7447",
+      "entries": [
+        {
+          "bdb_id": "t.dh.ab",
+          "aug": "b",
+          "twot": "2182a",
+          "hebrew": "רָסִיס",
+          "definition": "fragment",
+          "mod": "II",
+          "type": "",
+          "preview": "רָסִיס"
+        },
+        {
+          "bdb_id": "t.dg.ab",
+          "aug": "a",
+          "twot": "2181a",
+          "hebrew": "רָסִיס",
+          "definition": "drop",
+          "mod": "I",
+          "type": "",
+          "preview": "רָסִיס"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7451": {
+      "strong_number": "H7451",
+      "entries": [
+        {
+          "bdb_id": "t.dq.ad",
+          "aug": "b",
+          "twot": "2191a",
+          "hebrew": "רַע",
+          "definition": "evil",
+          "mod": "II",
+          "type": "",
+          "preview": "evil"
+        },
+        {
+          "bdb_id": "t.dq.ac",
+          "aug": "a",
+          "twot": "2191a",
+          "hebrew": "רַע",
+          "definition": "bad",
+          "mod": "I",
+          "type": "",
+          "preview": "evil"
+        },
+        {
+          "bdb_id": "t.dq.ae",
+          "aug": "c",
+          "twot": "2191c",
+          "hebrew": "רָעָה",
+          "definition": "evil",
+          "mod": "I",
+          "type": "",
+          "preview": "רָעָה"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H7489": {
+      "strong_number": "H7489",
+      "entries": [
+        {
+          "bdb_id": "t.dq.af",
+          "aug": "a",
+          "twot": "2191",
+          "hebrew": "רָעַע",
+          "definition": "be evil",
+          "mod": "I",
+          "type": "",
+          "preview": "רָעַע"
+        },
+        {
+          "bdb_id": "t.dr.aa",
+          "aug": "b",
+          "twot": "2192",
+          "hebrew": "רָעַע",
+          "definition": "break",
+          "mod": "II",
+          "type": "root",
+          "preview": "רָעַע"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7497": {
+      "strong_number": "H7497",
+      "entries": [
+        {
+          "bdb_id": "t.dx.af",
+          "aug": "b",
+          "twot": "2198d",
+          "hebrew": "רְפָאִים",
+          "definition": "Rephaim",
+          "mod": "II",
+          "type": "",
+          "preview": "רְפָאִים"
+        },
+        {
+          "bdb_id": "t.dx.ad",
+          "aug": "a",
+          "twot": "2198d",
+          "hebrew": "רָפָה",
+          "definition": "giant",
+          "mod": "II",
+          "type": "",
+          "preview": "רָפָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7602": {
+      "strong_number": "H7602",
+      "entries": [
+        {
+          "bdb_id": "v.aj.aa",
+          "aug": "b",
+          "twot": "2306",
+          "hebrew": "שָׁאַף",
+          "definition": "crush",
+          "mod": "II",
+          "type": "root",
+          "preview": "שָׁאַף"
+        },
+        {
+          "bdb_id": "v.ai.aa",
+          "aug": "a",
+          "twot": "2305",
+          "hebrew": "שָׁאַף",
+          "definition": "gasp",
+          "mod": "I",
+          "type": "root",
+          "preview": "שָׁאַף"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7623": {
+      "strong_number": "H7623",
+      "entries": [
+        {
+          "bdb_id": "v.ap.aa",
+          "aug": "a",
+          "twot": "2312",
+          "hebrew": "שָׁבַח",
+          "definition": "soothe",
+          "mod": "I",
+          "type": "root",
+          "preview": "שָׁבַח"
+        },
+        {
+          "bdb_id": "v.aq.aa",
+          "aug": "b",
+          "twot": "2313",
+          "hebrew": "שָׁבַח",
+          "definition": "laud",
+          "mod": "II",
+          "type": "root",
+          "preview": "שָׁבַח"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7641": {
+      "strong_number": "H7641",
+      "entries": [
+        {
+          "bdb_id": "v.as.ad",
+          "aug": "b",
+          "twot": "2316c",
+          "hebrew": "שִׁבֹּ֫לֶת",
+          "definition": "ear",
+          "mod": "II",
+          "type": "",
+          "preview": "שִׁבֹּ֫לֶת"
+        },
+        {
+          "bdb_id": "v.as.ac",
+          "aug": "a",
+          "twot": "2316b",
+          "hebrew": "שִׁבֹּ֫לֶת",
+          "definition": "flowing stream",
+          "mod": "I",
+          "type": "",
+          "preview": "שִׁבֹּ֫לֶת"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7652": {
+      "strong_number": "H7652",
+      "entries": [
+        {
+          "bdb_id": "v.av.ai",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "שֶׁ֫בַע",
+          "definition": "Sheba",
+          "mod": "II",
+          "type": "",
+          "preview": "שֶׁ֫בַע"
+        },
+        {
+          "bdb_id": "v.av.aj",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "שֶׁבַע",
+          "definition": "Sheba",
+          "mod": "III",
+          "type": "",
+          "preview": "שֶׁבַע"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7663": {
+      "strong_number": "H7663",
+      "entries": [
+        {
+          "bdb_id": "u.af.aa",
+          "aug": "b",
+          "twot": "2232",
+          "hebrew": "שָׂבַר",
+          "definition": "wait",
+          "mod": "II",
+          "type": "root",
+          "preview": "שָׂבַר"
+        },
+        {
+          "bdb_id": "u.ae.aa",
+          "aug": "a",
+          "twot": "2232",
+          "hebrew": "שָׂבַר",
+          "definition": "inspect",
+          "mod": "I",
+          "type": "root",
+          "preview": "שָׂבַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7699": {
+      "strong_number": "H7699",
+      "entries": [
+        {
+          "bdb_id": "v.bh.ab",
+          "aug": "a",
+          "twot": "2332a",
+          "hebrew": "שַׁד",
+          "definition": "breast",
+          "mod": "I",
+          "type": "",
+          "preview": "שַׁד"
+        },
+        {
+          "bdb_id": "v.bh.ac",
+          "aug": "b",
+          "twot": "2332a",
+          "hebrew": "שֹׁד",
+          "definition": "breast of a woman",
+          "mod": "II",
+          "type": "",
+          "preview": "שֹׁד"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7737": {
+      "strong_number": "H7737",
+      "entries": [
+        {
+          "bdb_id": "v.bp.aa",
+          "aug": "a",
+          "twot": "2342",
+          "hebrew": "שָׁוָה",
+          "definition": "be even",
+          "mod": "I",
+          "type": "root",
+          "preview": "שָׁוָה"
+        },
+        {
+          "bdb_id": "v.bq.aa",
+          "aug": "b",
+          "twot": "2343",
+          "hebrew": "שָׁוָה",
+          "definition": "set",
+          "mod": "II",
+          "type": "root",
+          "preview": "שָׁוָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7777": {
+      "strong_number": "H7777",
+      "entries": [
+        {
+          "bdb_id": "v.ew.ad",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "שׁוּעָל",
+          "definition": "Shual",
+          "mod": "III",
+          "type": "",
+          "preview": "שׁוּעָל"
+        },
+        {
+          "bdb_id": "v.ew.ac",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "שׁוּעָל",
+          "definition": "Shual",
+          "mod": "II",
+          "type": "",
+          "preview": "שׁוּעָל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7791": {
+      "strong_number": "H7791",
+      "entries": [
+        {
+          "bdb_id": "v.cc.ac",
+          "aug": "a",
+          "twot": "2355b",
+          "hebrew": "שׁוּר",
+          "definition": "wall",
+          "mod": "II",
+          "type": "",
+          "preview": "שׁוּר"
+        },
+        {
+          "bdb_id": "v.cc.ae",
+          "aug": "b",
+          "twot": "2355c",
+          "hebrew": "שׁוּרָה",
+          "definition": "row",
+          "mod": "I",
+          "type": "",
+          "preview": "שׁוּרָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7919": {
+      "strong_number": "H7919",
+      "entries": [
+        {
+          "bdb_id": "u.bi.aa",
+          "aug": "a",
+          "twot": "2263",
+          "hebrew": "שָׂכַל",
+          "definition": "be prudent",
+          "mod": "I",
+          "type": "root",
+          "preview": "שָׂכַל"
+        },
+        {
+          "bdb_id": "u.bj.aa",
+          "aug": "b",
+          "twot": "2264",
+          "hebrew": "שָׂכַל",
+          "definition": "lay crosswise",
+          "mod": "II",
+          "type": "root",
+          "preview": "שָׂכַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7975": {
+      "strong_number": "H7975",
+      "entries": [
+        {
+          "bdb_id": "v.dl.ag",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "שִׁלֹחַ",
+          "definition": "Shiloah",
+          "mod": "I",
+          "type": "",
+          "preview": "שִׁלֹחַ"
+        },
+        {
+          "bdb_id": "v.dl.ad",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "שֶׁ֫לַח",
+          "definition": "Shiloah",
+          "mod": "III",
+          "type": "",
+          "preview": "שֶׁ֫לַח"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7991": {
+      "strong_number": "H7991",
+      "entries": [
+        {
+          "bdb_id": "v.du.ah",
+          "aug": "b",
+          "twot": "2403f",
+          "hebrew": "שָׁלִישׁ",
+          "definition": "sistrum",
+          "mod": "II",
+          "type": "",
+          "preview": "שָׁלִישׁ"
+        },
+        {
+          "bdb_id": "v.du.ai",
+          "aug": "c",
+          "twot": "2403g",
+          "hebrew": "שָׁלִישׁ",
+          "definition": "adjutant",
+          "mod": "III",
+          "type": "",
+          "preview": "שָׁלִישׁ"
+        },
+        {
+          "bdb_id": "v.du.ag",
+          "aug": "a",
+          "twot": "2403e",
+          "hebrew": "שָׁלִישׁ",
+          "definition": "third",
+          "mod": "I",
+          "type": "",
+          "preview": "שָׁלִ(י)שׁ"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H7997": {
+      "strong_number": "H7997",
+      "entries": [
+        {
+          "bdb_id": "v.dq.aa",
+          "aug": "a",
+          "twot": "2399",
+          "hebrew": "שָׁלַל",
+          "definition": "draw out",
+          "mod": "I",
+          "type": "root",
+          "preview": "שָׁלַל"
+        },
+        {
+          "bdb_id": "v.dr.aa",
+          "aug": "b",
+          "twot": "2400",
+          "hebrew": "שָׁלַל",
+          "definition": "spoil",
+          "mod": "II",
+          "type": "root",
+          "preview": "שָׁלַל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8019": {
+      "strong_number": "H8019",
+      "entries": [
+        {
+          "bdb_id": "v.ds.au",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "שְׁלֹמִית",
+          "definition": "Shelomith",
+          "mod": "I",
+          "type": "",
+          "preview": "שְׁלֹמוֹת"
+        },
+        {
+          "bdb_id": "v.ds.av",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "שְׁלֹמִית",
+          "definition": "Shelomith",
+          "mod": "II",
+          "type": "",
+          "preview": "שְׁלֹמִית"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8110": {
+      "strong_number": "H8110",
+      "entries": [
+        {
+          "bdb_id": "v.ef.an",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "שִׁמְרוֹן",
+          "definition": "Shimron",
+          "mod": "II",
+          "type": "",
+          "preview": "שִׁמְרוֹן"
+        },
+        {
+          "bdb_id": "v.ef.am",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "שִׁמְרוֹן",
+          "definition": "Shimron",
+          "mod": "I",
+          "type": "",
+          "preview": "שִׁמְרוֹן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8138": {
+      "strong_number": "H8138",
+      "entries": [
+        {
+          "bdb_id": "v.em.aa",
+          "aug": "b",
+          "twot": "2421",
+          "hebrew": "שָׁנָה",
+          "definition": "repeat",
+          "mod": "III",
+          "type": "root",
+          "preview": "שָׁנָה"
+        },
+        {
+          "bdb_id": "v.ek.aa",
+          "aug": "a",
+          "twot": "2419",
+          "hebrew": "שָׁנָה",
+          "definition": "change",
+          "mod": "I",
+          "type": "root",
+          "preview": "שָׁנָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8163": {
+      "strong_number": "H8163",
+      "entries": [
+        {
+          "bdb_id": "u.bs.aj",
+          "aug": "c",
+          "twot": "2274e",
+          "hebrew": "שָׂעִיר",
+          "definition": "satyr",
+          "mod": "III",
+          "type": "",
+          "preview": "שָׂעִיר"
+        },
+        {
+          "bdb_id": "u.bs.ag",
+          "aug": "b",
+          "twot": "2274e",
+          "hebrew": "שָׂעִיר",
+          "definition": "he-goat",
+          "mod": "II",
+          "type": "",
+          "preview": "שָׂעִיר"
+        },
+        {
+          "bdb_id": "u.bs.af",
+          "aug": "a",
+          "twot": "2274c",
+          "hebrew": "שָׂעִר",
+          "definition": "hairy",
+          "mod": "I",
+          "type": "",
+          "preview": "שָׂעִר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H8173": {
+      "strong_number": "H8173",
+      "entries": [
+        {
+          "bdb_id": "v.ez.aa",
+          "aug": "b",
+          "twot": "2436",
+          "hebrew": "שָׁעַע",
+          "definition": "sport",
+          "mod": "II",
+          "type": "root",
+          "preview": "שָׁעַע"
+        },
+        {
+          "bdb_id": "v.ey.aa",
+          "aug": "a",
+          "twot": "2435",
+          "hebrew": "שָׁעַע",
+          "definition": "be smeared over",
+          "mod": "I",
+          "type": "root",
+          "preview": "שָׁעַע"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8178": {
+      "strong_number": "H8178",
+      "entries": [
+        {
+          "bdb_id": "u.bt.ab",
+          "aug": "b",
+          "twot": "2275a",
+          "hebrew": "שַׂ֫עַר",
+          "definition": "storm",
+          "mod": "II",
+          "type": "",
+          "preview": "שַׂ֫עַר"
+        },
+        {
+          "bdb_id": "u.bs.ae",
+          "aug": "a",
+          "twot": "2274d",
+          "hebrew": "שַׂ֫עַר",
+          "definition": "horror",
+          "mod": "I",
+          "type": "",
+          "preview": "שַׂ֫עַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8175": {
+      "strong_number": "H8175",
+      "entries": [
+        {
+          "bdb_id": "u.bt.aa",
+          "aug": "b",
+          "twot": "2275",
+          "hebrew": "שָׂעַר",
+          "definition": "sweep away",
+          "mod": "II",
+          "type": "root",
+          "preview": "שָׂעַר"
+        },
+        {
+          "bdb_id": "u.bu.aa",
+          "aug": "c",
+          "twot": "2276",
+          "hebrew": "שָׂעַר",
+          "definition": "be acquainted with",
+          "mod": "III",
+          "type": "root",
+          "preview": "שָׂעַר"
+        },
+        {
+          "bdb_id": "u.bs.ad",
+          "aug": "a",
+          "twot": "2274d",
+          "hebrew": "שָׂעַר",
+          "definition": "bristle",
+          "mod": "I",
+          "type": "",
+          "preview": "שָׂעַר"
+        }
+      ],
+      "homonym_count": 3
+    },
+    "H8227": {
+      "strong_number": "H8227",
+      "entries": [
+        {
+          "bdb_id": "v.fj.ab",
+          "aug": "a",
+          "twot": "2446a",
+          "hebrew": "שָׁפָן",
+          "definition": "rock-badger",
+          "mod": "I",
+          "type": "",
+          "preview": "שָׁפָן"
+        },
+        {
+          "bdb_id": "v.fj.ac",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "שָׁפָן",
+          "definition": "Shaphan",
+          "mod": "II",
+          "type": "",
+          "preview": "שָׁפָן"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8240": {
+      "strong_number": "H8240",
+      "entries": [
+        {
+          "bdb_id": "v.fm.ak",
+          "aug": "b",
+          "twot": "2450",
+          "hebrew": "שְׁפַתַּ֫יִם",
+          "definition": "hook-shaped pegs",
+          "mod": "II",
+          "type": "",
+          "preview": "שְׁפַתַּ֫יִם"
+        },
+        {
+          "bdb_id": "v.fe.ad",
+          "aug": "a",
+          "twot": "2441c",
+          "hebrew": "שְׁפַתָּ֑יִם",
+          "definition": "stall",
+          "mod": "I",
+          "type": "",
+          "preview": "שְׁפַתָּ֑יִם"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8314": {
+      "strong_number": "H8314",
+      "entries": [
+        {
+          "bdb_id": "u.cj.ac",
+          "aug": "b",
+          "twot": "2292b",
+          "hebrew": "שָׂרָף",
+          "definition": "seraphim",
+          "mod": "II",
+          "type": "",
+          "preview": "שָׂרָף"
+        },
+        {
+          "bdb_id": "u.cj.ab",
+          "aug": "a",
+          "twot": "2292a",
+          "hebrew": "שָׂרָף",
+          "definition": "serpent",
+          "mod": "I",
+          "type": "",
+          "preview": "שָׂרָף"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8336": {
+      "strong_number": "H8336",
+      "entries": [
+        {
+          "bdb_id": "v.cw.ab",
+          "aug": "a",
+          "twot": "2379a",
+          "hebrew": "שֵׁשׁ",
+          "definition": "alabaster",
+          "mod": "II",
+          "type": "",
+          "preview": "שֵׁשׁ"
+        },
+        {
+          "bdb_id": "v.gg.af",
+          "aug": "b",
+          "twot": "2473",
+          "hebrew": "שֵׁשׁ",
+          "definition": "byssus",
+          "mod": "III",
+          "type": "",
+          "preview": "שֵׁשׁ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8585": {
+      "strong_number": "H8585",
+      "entries": [
+        {
+          "bdb_id": "p.cs.aq",
+          "aug": "b",
+          "twot": "1624o",
+          "hebrew": "תְּעָלָה",
+          "definition": "healing",
+          "mod": "II",
+          "type": "",
+          "preview": "תְּעָלָה"
+        },
+        {
+          "bdb_id": "p.cs.ap",
+          "aug": "a",
+          "twot": "1624n",
+          "hebrew": "תְּעָלָה",
+          "definition": "water-course",
+          "mod": "I",
+          "type": "",
+          "preview": "תְּעָלָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8599": {
+      "strong_number": "H8599",
+      "entries": [
+        {
+          "bdb_id": "n.ej.ag",
+          "aug": "b",
+          "twot": null,
+          "hebrew": "תַּפּוּחַ",
+          "definition": "Tappuah",
+          "mod": "III",
+          "type": "",
+          "preview": "תַּפּוּחַ"
+        },
+        {
+          "bdb_id": "n.ej.af",
+          "aug": "a",
+          "twot": null,
+          "hebrew": "תַּפֻּחַ",
+          "definition": "Tappuah",
+          "mod": "II",
+          "type": "",
+          "preview": "תַּפֻּחַ"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8602": {
+      "strong_number": "H8602",
+      "entries": [
+        {
+          "bdb_id": "w.bj.ab",
+          "aug": "a",
+          "twot": "2534a",
+          "hebrew": "תָּפֵל",
+          "definition": "tasteless",
+          "mod": "I",
+          "type": "",
+          "preview": "תָּפֵל"
+        },
+        {
+          "bdb_id": "w.bk.ab",
+          "aug": "b",
+          "twot": "2535a",
+          "hebrew": "תָּפֵל",
+          "definition": "whitewash",
+          "mod": "II",
+          "type": "",
+          "preview": "תָּפֵל"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H8615": {
+      "strong_number": "H8615",
+      "entries": [
+        {
+          "bdb_id": "s.aq.ag",
+          "aug": "b",
+          "twot": "1994e",
+          "hebrew": "תִּקְוָה",
+          "definition": "hope",
+          "mod": "II",
+          "type": "",
+          "preview": "תִּקְוָה"
+        },
+        {
+          "bdb_id": "s.aq.af",
+          "aug": "a",
+          "twot": "1994d",
+          "hebrew": "תִּקְוָה",
+          "definition": "cord",
+          "mod": "I",
+          "type": "",
+          "preview": "תִּקְוָה"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H5642": {
+      "strong_number": "H5642",
+      "entries": [
+        {
+          "bdb_id": "xo.ai.aa",
+          "aug": "b",
+          "twot": "2895",
+          "hebrew": "סְתַר",
+          "definition": "destroy",
+          "mod": "II",
+          "type": "root",
+          "preview": "סְתַר"
+        },
+        {
+          "bdb_id": "xo.ah.aa",
+          "aug": "a",
+          "twot": "2894",
+          "hebrew": "סְתַר",
+          "definition": "hide",
+          "mod": "I",
+          "type": "root",
+          "preview": "סְתַר"
+        }
+      ],
+      "homonym_count": 2
+    },
+    "H7739": {
+      "strong_number": "H7739",
+      "entries": [
+        {
+          "bdb_id": "xv.aj.aa",
+          "aug": "b",
+          "twot": "3024",
+          "hebrew": "שְׁוָה",
+          "definition": "be set",
+          "mod": "II",
+          "type": "root",
+          "preview": "שְׁוָה"
+        },
+        {
+          "bdb_id": "xv.ai.aa",
+          "aug": "a",
+          "twot": "3023",
+          "hebrew": "שְׁוָה",
+          "definition": "become like",
+          "mod": "I",
+          "type": "root",
+          "preview": "שְׁוָה"
+        }
+      ],
+      "homonym_count": 2
+    }
+  }
+}
