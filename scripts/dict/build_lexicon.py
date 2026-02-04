@@ -400,6 +400,27 @@ def extract_bdb_definitions_with_sense(
                 entry = find_bdb_entry_by_id(bdb_root, bdb_id)
                 if entry is not None:
                     bdb_entries.append(entry)
+            
+            # HOMONYM FIX: Prioritize mod="I" entries over mod="II"+ (homonyms)
+            # When multiple BDB entries exist for a Strong's number, prefer the primary sense
+            if len(bdb_entries) > 1:
+                # Group entries by mod attribute
+                mod_to_entries = {}
+                for entry in bdb_entries:
+                    mod = entry.get('mod', 'I')  # Default to "I" if not specified
+                    if mod not in mod_to_entries:
+                        mod_to_entries[mod] = []
+                    mod_to_entries[mod].append(entry)
+                
+                # Prioritize: mod="I" > no mod > mod="II" > mod="III" > etc.
+                if 'I' in mod_to_entries:
+                    bdb_entries = mod_to_entries['I']
+                elif '' in mod_to_entries:  # Entries without mod attribute
+                    bdb_entries = mod_to_entries['']
+                else:
+                    # If only secondary homonyms exist, use lowest number (II before III)
+                    sorted_mods = sorted(mod_to_entries.keys())
+                    bdb_entries = mod_to_entries[sorted_mods[0]]
 
             # Fallback to old method if not found
             if not bdb_entries:
