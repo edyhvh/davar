@@ -21,6 +21,7 @@ import xml.etree.ElementTree as ET
 sys.path.insert(0, str(Path(__file__).parent))
 
 from config import config
+from utils import save_json, load_json
 
 # Import extraction functions
 sys.path.insert(0, str(config.OE_DIR))
@@ -52,16 +53,14 @@ def save_consolidated_files(testing_mode: bool = False) -> None:
     if consolidated_roots:
         roots_file = lexicon_dir / 'roots.json'
         print(f"💾 Saving consolidated roots to {roots_file}...")
-        with open(roots_file, 'w', encoding='utf-8') as f:
-            json.dump(consolidated_roots, f, ensure_ascii=False, indent=2)
+        save_json(consolidated_roots, roots_file)
         print(f"✅ Saved {len(consolidated_roots)} root entries")
 
     # Save consolidated words (pretty-printed)
     if consolidated_words:
         words_file = lexicon_dir / 'words.json'
         print(f"💾 Saving consolidated words to {words_file}...")
-        with open(words_file, 'w', encoding='utf-8') as f:
-            json.dump(consolidated_words, f, ensure_ascii=False, indent=2)
+        save_json(consolidated_words, words_file)
         print(f"✅ Saved {len(consolidated_words)} word entries")
 
 
@@ -96,8 +95,7 @@ def create_definition(text_en: str, source: str, order: int, sense: Optional[str
 def load_strongs_data() -> Dict:
     """Load Strong's dictionary data"""
     if config.STRONGS_FILE.exists():
-        with open(config.STRONGS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        return load_json(config.STRONGS_FILE)
     return {}
 
 

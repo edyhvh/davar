@@ -6,8 +6,14 @@ Handles loading, processing, and updating lexicon JSON files with translations.
 
 import json
 import logging
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, NamedTuple
+
+# Add parent directory to path for utils import
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import load_json, save_json, validate_translation_field, ProgressTracker
 
 logger = logging.getLogger(__name__)
 
@@ -40,24 +46,7 @@ class LexiconProcessor:
         from .translator import GrokTranslator
         self.translator = GrokTranslator()
 
-    def _load_json_file(self, file_path: Path) -> Dict:
-        """Load JSON file, handling both minified and pretty formats."""
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except FileNotFoundError:
-            logger.error(f"File not found: {file_path}")
-            raise
-        except json.JSONDecodeError as e:
-            logger.error(f"Invalid JSON in {file_path}: {e}")
-            raise
-
-    def _save_json_file(self, data: Dict, file_path: Path):
-        """Save JSON file in pretty format."""
-        file_path.parent.mkdir(parents=True, exist_ok=True)
-
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+    # JSON I/O now handled by utils module
 
     def _extract_definitions_to_translate(
         self,
@@ -303,7 +292,7 @@ class LexiconProcessor:
             Dictionary with processing statistics
         """
         logger.info(f"Loading file: {file_path}")
-        data = self._load_json_file(file_path)
+        data = load_json(file_path)
 
         stats = {
             'entries_processed': 0,
@@ -366,10 +355,22 @@ class LexiconProcessor:
         stats['definitions_processed'] = processed
         stats['definitions_translated'] = translated
 
+        # Validate translations before saving
+        if stats['definitions_translated'] > 0:
+            logger.debug("Validating translations...")
+            invalid_count = 0
+            for entry in data.values():
+                for defn in entry.get('definitions', []):
+                    if not validate_translation_field(defn, self.target_lang, allow_empty=False):
+                        invalid_count += 1
+            
+            if invalid_count > 0:
+                logger.warning(f"Found {invalid_count} definitions with invalid translations")
+        
         # Save updated file (unless dry run)
         if not dry_run:
             logger.info(f"Saving updated file: {file_path}")
-            self._save_json_file(data, file_path)
+            save_json(data, file_path)
         else:
             logger.info("DRY RUN MODE - Skipping file save")
 

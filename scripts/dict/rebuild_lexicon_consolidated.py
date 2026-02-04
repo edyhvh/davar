@@ -9,8 +9,14 @@ roots.pretty.json and words.pretty.json after successful rebuild.
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Dict, Tuple
+
+# Add current directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent))
+
+from config import config
 
 
 def parse_args() -> argparse.Namespace:
@@ -76,10 +82,9 @@ def delete_legacy_pretty(lexicon_dir: Path, dry_run: bool, keep_pretty: bool) ->
 def main() -> int:
     args = parse_args()
 
-    project_root = Path(__file__).parent.parent.parent
-    lexicon_dir = project_root / "data" / "dict" / "lexicon"
-    roots_dir = lexicon_dir / "roots"
-    words_dir = lexicon_dir / "words"
+    lexicon_dir = config.LEXICON_DIR
+    roots_dir = config.LEXICON_ROOTS_DIR
+    words_dir = config.LEXICON_WORDS_DIR
 
     if not roots_dir.exists():
         raise FileNotFoundError(f"Roots directory not found: {roots_dir}")

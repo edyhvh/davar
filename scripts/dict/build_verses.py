@@ -11,7 +11,7 @@ import json
 import logging
 import sys
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Dict
 
 # Add current directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent))
@@ -21,6 +21,7 @@ from book_mappings import BookMapper
 from strong_processor import StrongProcessor
 from morphus_loader import MorphusLoader
 from verse_processor import VerseProcessor
+from utils import save_json_minified
 
 # Configure logging
 logging.basicConfig(
@@ -37,6 +38,36 @@ class VerseBuilder:
         self.strong_processor = StrongProcessor()
         self.morphus_loader = MorphusLoader(self.strong_processor)
         self.verse_processor = VerseProcessor(self.strong_processor, self.morphus_loader)
+
+    def _save_book_file(self, book_key: str, book_data: Dict, verbose: bool = False) -> None:
+        """
+        Save consolidated book file with sorted chapters and verses.
+        
+        Args:
+            book_key: Book key (e.g., 'genesis')
+            book_data: Dictionary of chapter->verse->verse_data
+            verbose: Whether to log the save operation
+        """
+        if not book_data:
+            return
+        
+        book_id = BookMapper.get_book_id(BookMapper.get_book_info(book_key))
+        output_file = config.BOOKS_DIR / f"{book_id}.json"
+
+        # Sort chapters and verses
+        sorted_book_data = {}
+        for chapter in sorted(book_data.keys(), key=int):
+            sorted_chapter_data = {}
+            for verse in sorted(book_data[chapter].keys(), key=int):
+                sorted_chapter_data[verse] = book_data[chapter][verse]
+            sorted_book_data[chapter] = sorted_chapter_data
+
+        # Save consolidated file using minified format
+        config.BOOKS_DIR.mkdir(exist_ok=True)
+        save_json_minified(sorted_book_data, output_file)
+
+        if verbose:
+            print(f"💾 Saved consolidated book: {output_file}")
 
     def run(self, book_key: Optional[str] = None, chapter_num: Optional[int] = None, verbose: bool = False) -> None:
         """
@@ -81,26 +112,7 @@ class VerseBuilder:
             total_errors += errors
 
             # Save consolidated book file
-            if book_data:
-                book_id = BookMapper.get_book_id(BookMapper.get_book_info(book_key))
-                output_file = config.BOOKS_DIR / f"{book_id}.json"
-
-                # Sort chapters and verses
-                sorted_book_data = {}
-                for chapter in sorted(book_data.keys(), key=int):
-                    sorted_chapter_data = {}
-                    for verse in sorted(book_data[chapter].keys(), key=int):
-                        sorted_chapter_data[verse] = book_data[chapter][verse]
-                    sorted_book_data[chapter] = sorted_chapter_data
-
-                # Save consolidated file
-                config.BOOKS_DIR.mkdir(exist_ok=True)
-                with open(output_file, 'w', encoding='utf-8') as f:
-                    json.dump(sorted_book_data, f, ensure_ascii=False, separators=(',', ':'))
-
-                if verbose:
-                    print(f"💾 Saved consolidated book: {output_file}")
-
+            self._save_book_file(book_key, book_data, verbose)
             books_processed = 1
         else:
             # Process each book available in oe/
@@ -121,26 +133,7 @@ class VerseBuilder:
                 total_errors += errors
 
                 # Save consolidated book file
-                if book_data:
-                    book_id = BookMapper.get_book_id(BookMapper.get_book_info(book_key_iter))
-                    output_file = config.BOOKS_DIR / f"{book_id}.json"
-
-                    # Sort chapters and verses
-                    sorted_book_data = {}
-                    for chapter in sorted(book_data.keys(), key=int):
-                        sorted_chapter_data = {}
-                        for verse in sorted(book_data[chapter].keys(), key=int):
-                            sorted_chapter_data[verse] = book_data[chapter][verse]
-                        sorted_book_data[chapter] = sorted_chapter_data
-
-                    # Save consolidated file
-                    config.BOOKS_DIR.mkdir(exist_ok=True)
-                    with open(output_file, 'w', encoding='utf-8') as f:
-                        json.dump(sorted_book_data, f, ensure_ascii=False, separators=(',', ':'))
-
-                    if verbose:
-                        print(f"💾 Saved consolidated book: {output_file}")
-
+                self._save_book_file(book_key_iter, book_data, verbose)
                 books_processed += 1
 
         print("\n" + "=" * 70)
