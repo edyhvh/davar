@@ -123,27 +123,19 @@ def process_lexicon_file(file_path: Path) -> bool:
         return False
 
 
-def main():
-    """Main function to process all lexicon files."""
-    # Get the project root directory
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent.parent
-    lexicon_dir = project_root / 'data' / 'dict' / 'lexicon' / 'roots'
-
+def process_lexicon_dir(lexicon_dir: Path, label: str) -> None:
     if not lexicon_dir.exists():
-        print(f"Error: Lexicon directory not found at {lexicon_dir}")
+        print(f"Error: Lexicon {label} directory not found at {lexicon_dir}")
         return
 
-    # Get all JSON files
     json_files = sorted(lexicon_dir.glob('H*.json'))
 
     if not json_files:
         print(f"No JSON files found in {lexicon_dir}")
         return
 
-    print(f"Found {len(json_files)} lexicon files to process")
+    print(f"Found {len(json_files)} lexicon {label} files to process")
 
-    # Process each file
     success_count = 0
     error_count = 0
 
@@ -153,9 +145,20 @@ def main():
         else:
             error_count += 1
 
-    print(f"\nProcessing complete:")
+    print(f"\nProcessing complete for {label}:")
     print(f"  Successfully updated: {success_count}")
     print(f"  Errors: {error_count}")
+
+
+def main():
+    """Main function to process all lexicon files."""
+    script_dir = Path(__file__).parent
+    project_root = script_dir.parent.parent
+    lexicon_root_dir = project_root / 'data' / 'dict' / 'lexicon' / 'roots'
+    lexicon_words_dir = project_root / 'data' / 'dict' / 'lexicon' / 'words'
+
+    process_lexicon_dir(lexicon_root_dir, 'roots')
+    process_lexicon_dir(lexicon_words_dir, 'words')
 
 
 if __name__ == '__main__':
