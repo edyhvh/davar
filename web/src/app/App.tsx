@@ -994,6 +994,7 @@ export default function App() {
             onHomeClick={() => setCurrentScreen("home")}
             onDonateClick={() => setCurrentScreen("donate")}
             onFeaturesClick={() => setCurrentScreen("features")}
+            onDesignSystemClick={() => setShowDesignSystem(true)}
             theme={theme}
             onThemeChange={setTheme}
             language={language}
@@ -1167,7 +1168,10 @@ export default function App() {
                                 : dssAnalysisForCard?.root_translit_es
                             }
                             qumranRootMeaning={
-                              dssAnalysisForCard?.root_definitions?.[0]?.text
+                              dssAnalysisForCard?.root_definitions
+                                ?.map((item) => item.text)
+                                .filter(Boolean)
+                                .join(", ") || undefined
                             }
                             qumranRootStrongNumber={dssAnalysisForCard?.root_strong}
                             hasQumranVariant={hasQumranVariant}
@@ -1181,7 +1185,10 @@ export default function App() {
                                 : wordAnalysisForCard?.root_translit_es
                             }
                             rootMeaning={
-                              wordAnalysisForCard?.root_definitions?.[0]?.text
+                              wordAnalysisForCard?.root_definitions
+                                ?.map((item) => item.text)
+                                .filter(Boolean)
+                                .join(", ") || undefined
                             }
                             rootStrongNumber={wordAnalysisForCard?.root_strong}
                             prefixes={wordForCard.prefixes}
@@ -1285,7 +1292,10 @@ export default function App() {
                     : selectedDssAnalysis?.root_translit_es
                 }
                 qumranRootMeaning={
-                  selectedDssAnalysis?.root_definitions?.[0]?.text
+                  selectedDssAnalysis?.root_definitions
+                    ?.map((item) => item.text)
+                    .filter(Boolean)
+                    .join(", ") || undefined
                 }
                 qumranRootStrongNumber={selectedDssAnalysis?.root_strong}
                 hasQumranVariant={hasQumranVariant}
@@ -1298,7 +1308,12 @@ export default function App() {
                 ? selectedWordAnalysis?.root_translit_en
                 : selectedWordAnalysis?.root_translit_es
             }
-            rootMeaning={selectedWordAnalysis?.root_definitions?.[0]?.text}
+            rootMeaning={
+              selectedWordAnalysis?.root_definitions
+                ?.map((item) => item.text)
+                .filter(Boolean)
+                .join(", ") || undefined
+            }
             rootStrongNumber={selectedWordAnalysis?.root_strong}
             prefixes={selectedWord.prefixes}
             language={language}

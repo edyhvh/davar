@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { BookOpen, Settings, ScrollText, Eye, Heart, Home } from "lucide-react";
+import { BookOpen, Settings, ScrollText, Eye, Heart, Home, Paintbrush } from "lucide-react";
 import { LuLightbulb } from "react-icons/lu";
 import { TbAlphabetHebrew, TbLanguageHiragana } from "react-icons/tb";
 import { FaThList } from "react-icons/fa";
@@ -22,6 +22,7 @@ interface NavigationBarProps {
   onHomeClick: () => void;
   onDonateClick: () => void;
   onFeaturesClick: () => void;
+  onDesignSystemClick?: () => void;
   theme: "light" | "dark";
   onThemeChange: (theme: "light" | "dark") => void;
   language: "en" | "es" | "he";
@@ -55,6 +56,7 @@ export function NavigationBar({
   onHomeClick,
   onDonateClick,
   onFeaturesClick,
+  onDesignSystemClick,
   theme,
   onThemeChange,
   language,
@@ -267,6 +269,22 @@ export function NavigationBar({
                 {t("navigation.donate")}
               </span>
             </button>
+
+            {import.meta.env.DEV && onDesignSystemClick && (
+              <button
+                onClick={onDesignSystemClick}
+                className="rounded-full p-2 transition-all hover:scale-[1.05] active:scale-[0.98]"
+                style={{
+                  backgroundColor: "var(--neomorph-bg)",
+                  boxShadow:
+                    "6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)",
+                  border: "1px solid var(--neomorph-border)",
+                }}
+                aria-label="Design System"
+              >
+                <Paintbrush className="w-3 h-3 text-[var(--text-primary)]" />
+              </button>
+            )}
 
             <button
               onClick={() =>

@@ -114,14 +114,6 @@ class LexiconService:
                 if root_entry:
                     root_strong = root_ref  # The root_ref is the Strong's number of the root
                     root = root_entry.get('lemma') or root_entry.get('hebrew', '')
-            else:
-                # For root entries (no root_ref), populate with self for consistent UI display
-                # This helps when verse words are conjugated forms of the root
-                is_root = (lexicon_entry or {}).get('is_root', False)
-                if is_root or roots_entry:
-                    # This IS a root entry - set root to itself for display
-                    root = (lexicon_entry or {}).get('lemma') or (lexicon_entry or {}).get('hebrew', '')
-                    root_strong = strong_number
 
         # Get root definitions if we have a root_strong
         root_definitions = None
@@ -131,8 +123,8 @@ class LexiconService:
             root_entry = self.dictionary_loader.get_lexicon_entry(root_strong)
             if root_entry:
                 # Extract root transliterations
-                root_translit_en = root_entry.get('translit_en')
-                root_translit_es = root_entry.get('translit_es')
+                root_translit_en = root_entry.get('translit_en') or root_entry.get('transliteration')
+                root_translit_es = root_entry.get('translit_es') or root_entry.get('transliteration')
                 
                 root_definitions = []
                 for def_item in root_entry.get('definitions', []):

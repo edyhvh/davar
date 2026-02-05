@@ -24,6 +24,7 @@ RULES_PATH = SCRIPTS_DIR / "RULES.md"
 TANAKH_DIR = DATA_DIR / "oe"
 BESORAH_DIR = DATA_DIR / "delitzsch_parsed"
 LEXICON_ROOTS_DIR = DATA_DIR / "dict" / "lexicon" / "roots"
+LEXICON_WORDS_DIR = DATA_DIR / "dict" / "lexicon" / "words"
 
 BATCH_TOKEN_BUDGET = 1500
 

@@ -16,7 +16,12 @@ from .config import (
 )
 from .local_processor import estimate_book_cost as estimate_book_cost_local
 from .local_processor import transliterate_book_local
-from .lexicon_processor import transliterate_roots, estimate_roots_cost
+from .lexicon_processor import (
+    estimate_roots_cost,
+    estimate_words_cost,
+    transliterate_roots,
+    transliterate_words,
+)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -111,23 +116,29 @@ def main():
     # Handle lexicon corpus separately
     if args.corpus == "lexicon":
         logger.info("="*60)
-        logger.info("Starting transliteration for LEXICON ROOTS")
+        logger.info("Starting transliteration for LEXICON ENTRIES")
         logger.info("Dry run: %s", args.dry_run)
         logger.info("="*60)
         
         try:
-            stats = transliterate_roots(
+            roots_stats = transliterate_roots(
                 dry_run=args.dry_run,
                 strong_number=args.strong_number,
-                verbose=args.verbose
+                verbose=args.verbose,
             )
-            cost = estimate_roots_cost()
+            words_stats = transliterate_words(
+                dry_run=args.dry_run,
+                strong_number=args.strong_number,
+                verbose=args.verbose,
+            )
+            cost = estimate_roots_cost() + estimate_words_cost()
             
             logger.info("")
             logger.info("="*60)
             logger.info("TRANSLITERATION COMPLETE")
             logger.info("="*60)
-            logger.info("Roots processed: %s", stats.words)
+            logger.info("Roots processed: %s", roots_stats.words)
+            logger.info("Words processed: %s", words_stats.words)
             logger.info("Total estimated cost: $%.4f", cost)
             
             if args.dry_run:

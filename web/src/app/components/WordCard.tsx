@@ -511,108 +511,6 @@ export function WordCard({
             </div>
           </div>
 
-          {/* Root Section */}
-          {/* Root Section — always show; if no root, show ALREADY ROOT */}
-          <div className="pb-6">
-            <h3
-              className="mb-4"
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontSize: "11px",
-                color: "var(--text-secondary)",
-                fontWeight: 700,
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-              }}
-            >
-              {t("wordCard.root")}
-            </h3>
-            <div className="space-y-2">
-              {hasRootInfo ? (
-                <>
-                  {displayedData.root ? (
-                    <div
-                      style={{
-                        fontFamily: "'Cardo', serif",
-                        fontSize: "48px",
-                        direction: "rtl",
-                        color: "var(--primary)",
-                        fontWeight: 600,
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {normalizeHebrewDisplay(
-                        normalizeHebrew(displayedData.root).replace(/\//g, ""),
-                      )}
-                    </div>
-                  ) : (
-                    <div
-                      style={{
-                        fontFamily: "'Inter', sans-serif",
-                        fontSize: "13px",
-                        color: "var(--text-secondary)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.12em",
-                        fontWeight: 600,
-                      }}
-                    >
-                      —
-                    </div>
-                  )}
-
-                  {displayedData.rootTransliteration && (
-                    <div
-                      style={{
-                        fontFamily: "'Inter', sans-serif",
-                        fontSize: "11px",
-                        color: "var(--text-secondary)",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.12em",
-                        fontWeight: 500,
-                        marginTop: "8px",
-                      }}
-                    >
-                      {displayedData.rootTransliteration}
-                    </div>
-                  )}
-
-                  {/* Show meaning only if root differs from word */}
-                  {rootStrongNumber && strongNumber && rootStrongNumber !== strongNumber && (
-                    <div
-                      style={{
-                        fontFamily: "'Inter', sans-serif",
-                        fontSize: "15px",
-                        lineHeight: 1.5,
-                        marginTop: "12px",
-                      }}
-                      className="dark:text-[var(--text-secondary)]"
-                    >
-                      {displayedData.rootMeaning
-                        ? normalizeHebrewDisplay(
-                            normalizeHebrew(displayedData.rootMeaning).replace(
-                              /\//g,
-                              "",
-                            ),
-                          )
-                        : "—"}
-                    </div>
-                  )}
-                </>
-              ) : (
-                <div
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    lineHeight: 1.5,
-                    textAlign: "center",
-                  }}
-                  className="dark:text-[var(--text-secondary)]"
-                >
-                  <strong>{t("wordCard.alreadyRoot")}</strong>
-                </div>
-              )}
-            </div>
-          </div>
-
           {displayedData.prefixes?.length ? (
             <div className="text-center space-y-4 pb-6">
               <h3
@@ -702,6 +600,119 @@ export function WordCard({
               })}
             </div>
           ) : null}
+
+          {/* Root Section */}
+          {/* Root Section — always show; if no root, show ALREADY ROOT */}
+          <div className="pb-6">
+            <h3
+              className="mb-4"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "11px",
+                color: "var(--text-secondary)",
+                fontWeight: 700,
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+              }}
+            >
+              {t("wordCard.root")}
+            </h3>
+            <div className="space-y-2">
+              {hasRootInfo ? (
+                <>
+                  {displayedData.root ? (
+                    <div
+                      style={{
+                        fontFamily: "'Cardo', serif",
+                        fontSize: "48px",
+                        direction: "rtl",
+                        color: "var(--primary)",
+                        fontWeight: 600,
+                        lineHeight: 1.4,
+                      }}
+                    >
+                      {normalizeHebrewDisplay(
+                        normalizeHebrew(displayedData.root).replace(/\//g, ""),
+                      )}
+                    </div>
+                  ) : (
+                    <div
+                      style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: "13px",
+                        color: "var(--text-secondary)",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.12em",
+                        fontWeight: 600,
+                      }}
+                    >
+                      —
+                    </div>
+                  )}
+
+                  {rootStrongNumber && (
+                    <div
+                      style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: "11px",
+                        color: "var(--text-secondary)",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.12em",
+                        fontWeight: 500,
+                        marginTop: "6px",
+                      }}
+                    >
+                      {rootStrongNumber}
+                    </div>
+                  )}
+
+                  {displayedData.rootTransliteration && (
+                    <div
+                      style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: "11px",
+                        color: "var(--text-secondary)",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.12em",
+                        fontWeight: 500,
+                        marginTop: "8px",
+                      }}
+                    >
+                      {displayedData.rootTransliteration}
+                    </div>
+                  )}
+
+                  {/* Show meaning only if root differs from word */}
+                  {rootStrongNumber && strongNumber && rootStrongNumber !== strongNumber && (
+                    <div
+                      style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: "15px",
+                        lineHeight: 1.5,
+                        marginTop: "12px",
+                      }}
+                      className="dark:text-[var(--text-secondary)]"
+                    >
+                      {displayedData.rootMeaning
+                        ? formatMeaning(displayedData.rootMeaning)
+                        : "—"}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <div
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    lineHeight: 1.5,
+                    textAlign: "center",
+                  }}
+                  className="dark:text-[var(--text-secondary)]"
+                >
+                  <strong>{t("wordCard.alreadyRoot")}</strong>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       ) : activeTab === "qumran" ? (
         <div className="space-y-6 text-center">
@@ -823,6 +834,22 @@ export function WordCard({
                     </div>
                   )}
 
+                  {qumranRootStrongNumber && (
+                    <div
+                      style={{
+                        fontFamily: "'Inter', sans-serif",
+                        fontSize: "11px",
+                        color: "var(--text-secondary)",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.12em",
+                        fontWeight: 500,
+                        marginTop: "6px",
+                      }}
+                    >
+                      {qumranRootStrongNumber}
+                    </div>
+                  )}
+
                   {displayedData.qumranRootTransliteration && (
                     <div
                       style={{
@@ -851,11 +878,7 @@ export function WordCard({
                       className="dark:text-[var(--text-secondary)]"
                     >
                       {displayedData.qumranRootMeaning
-                        ? normalizeHebrewDisplay(
-                            normalizeHebrew(
-                              displayedData.qumranRootMeaning,
-                            ).replace(/\//g, ""),
-                          )
+                        ? formatMeaning(displayedData.qumranRootMeaning)
                         : "—"}
                     </div>
                   )}

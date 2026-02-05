@@ -193,6 +193,14 @@ const createStyles = (
       letterSpacing: 2,
       marginTop: spacing[1],
     },
+    rootStrong: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.bodySmall,
+      color: colors.textSecondary,
+      textTransform: "uppercase",
+      letterSpacing: 2,
+      marginTop: spacing[1],
+    },
     rootMeaning: {
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.body,
@@ -696,6 +704,15 @@ export const WordAnalysisBottomSheet = ({
     return formatted.length ? formatted : ["—"];
   }, [dssLexiconEntry]);
 
+  const formatRootMeaningText = (text: string) => {
+    if (text === "ALREADY ROOT" || text === "—") {
+      return text;
+    }
+    const cleaned = text.replace(/^[-–—]\s*/, "").trim();
+    if (!cleaned) return cleaned;
+    return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+  };
+
   const isDerivedRoot = Boolean(lexiconEntry?.root_strong || word?.root);
 
   const rootMeaningText = useMemo(() => {
@@ -859,37 +876,6 @@ export const WordAnalysisBottomSheet = ({
                   ))}
                 </View>
 
-                {/* Root section */}
-                <View style={styles.rootSection}>
-                  <Text style={styles.sectionLabel}>Root</Text>
-                  {lexiconEntry?.root || word?.root ? (
-                    <>
-                      <Text style={styles.rootHebrew}>
-                        {(lexiconEntry?.root ?? word?.root ?? "").replace(/\//g, "")}
-                      </Text>
-                      {(language === "en" 
-                        ? lexiconEntry?.root_translit_en 
-                        : lexiconEntry?.root_translit_es) || word?.rootTransliteration ? (
-                        <Text style={styles.rootTransliteration}>
-                          {(language === "en" 
-                            ? lexiconEntry?.root_translit_en 
-                            : lexiconEntry?.root_translit_es) ?? word?.rootTransliteration}
-                        </Text>
-                      ) : null}
-                      {/* Show meaning only if root differs from word */}
-                      {lexiconEntry?.root_strong && strongNumber && lexiconEntry.root_strong !== strongNumber && (
-                        <Text style={styles.rootMeaning}>
-                          {rootMeaningText}
-                        </Text>
-                      )}
-                    </>
-                  ) : (
-                    <Text style={styles.rootMeaning}>
-                      ALREADY ROOT
-                    </Text>
-                  )}
-                </View>
-
                 {word?.prefixes?.length ? (
                   <View style={styles.prefixesSection}>
                     <Text style={styles.sectionLabel}>Preposition</Text>
@@ -931,6 +917,42 @@ export const WordAnalysisBottomSheet = ({
                     })}
                   </View>
                 ) : null}
+
+                {/* Root section */}
+                <View style={styles.rootSection}>
+                  <Text style={styles.sectionLabel}>Root</Text>
+                  {lexiconEntry?.root || word?.root ? (
+                    <>
+                      <Text style={styles.rootHebrew}>
+                        {(lexiconEntry?.root ?? word?.root ?? "").replace(/\//g, "")}
+                      </Text>
+                      {lexiconEntry?.root_strong ? (
+                        <Text style={styles.rootStrong}>
+                          {lexiconEntry.root_strong}
+                        </Text>
+                      ) : null}
+                      {(language === "en" 
+                        ? lexiconEntry?.root_translit_en 
+                        : lexiconEntry?.root_translit_es) || word?.rootTransliteration ? (
+                        <Text style={styles.rootTransliteration}>
+                          {(language === "en" 
+                            ? lexiconEntry?.root_translit_en 
+                            : lexiconEntry?.root_translit_es) ?? word?.rootTransliteration}
+                        </Text>
+                      ) : null}
+                      {/* Show meaning only if root differs from word */}
+                      {lexiconEntry?.root_strong && strongNumber && lexiconEntry.root_strong !== strongNumber && (
+                        <Text style={styles.rootMeaning}>
+                          {formatRootMeaningText(rootMeaningText)}
+                        </Text>
+                      )}
+                    </>
+                  ) : (
+                    <Text style={styles.rootMeaning}>
+                      ALREADY ROOT
+                    </Text>
+                  )}
+                </View>
               </>
             ) : activeTab === "qumran" ? (
               <>
@@ -960,6 +982,11 @@ export const WordAnalysisBottomSheet = ({
                       displayHebrew
                     ).replace(/\//g, "")}
                   </Text>
+                  {dssLexiconEntry?.root_strong ? (
+                    <Text style={styles.rootStrong}>
+                      {dssLexiconEntry.root_strong}
+                    </Text>
+                  ) : null}
                   {(language === "en"
                     ? dssLexiconEntry?.root_translit_en
                     : dssLexiconEntry?.root_translit_es) ? (
@@ -973,7 +1000,7 @@ export const WordAnalysisBottomSheet = ({
                   {dssLexiconEntry?.root || dssLexiconEntry?.root_strong ? (
                     dssLexiconEntry.root_strong && dssStrongNumber && dssLexiconEntry.root_strong !== dssStrongNumber ? (
                       <Text style={styles.rootMeaning}>
-                        {dssRootMeaningText}
+                        {formatRootMeaningText(dssRootMeaningText)}
                       </Text>
                     ) : null
                   ) : (
