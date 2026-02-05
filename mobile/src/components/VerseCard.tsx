@@ -116,6 +116,7 @@ const createStyles = (
     },
     hebrewWordQumran: {
       fontFamily: typography.families.hebrewQumran,
+      color: colors.qumranText,
     },
     hebrewWordPressable: {
       paddingHorizontal: spacing[2],

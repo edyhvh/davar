@@ -22,6 +22,7 @@
   --foreground: #000000;
   --text-secondary: #707070;
   --text-hebrew: #000000;
+  --qumran-text: #2c1a0f;
   --muted: rgba(0, 0, 0, 0.05); /* Subtle muted bg */
   --crypto-icon-fill: #ffffff;
 
@@ -68,6 +69,7 @@
     --text-primary: #faf4e6;
     --text-secondary: #a89a7f;
     --text-hebrew: #d5c4a1;
+    --qumran-text: #a38f6e;
     --crypto-icon-fill: #3c3836;
 
     /* Deep warm brown backgrounds */
@@ -410,10 +412,10 @@
 
 .word-card-qumran {
   background: linear-gradient(
-      145deg,
-      rgba(198, 143, 85, 0.18),
-      rgba(198, 143, 85, 0.06)
-    );
+    145deg,
+    rgba(198, 143, 85, 0.18),
+    rgba(198, 143, 85, 0.06)
+  );
   border-color: rgba(198, 143, 85, 0.5);
   box-shadow:
     6px 6px 16px var(--neomorph-shadow-dark),

@@ -159,6 +159,7 @@ export function WordCard({
   const activeStrongNumber = isQumranTab
     ? displayedData.qumranStrong
     : strongNumber;
+  const qumranTextColor = "var(--qumran-text)";
   const masoreticWordFontSizePx = 64;
   const masoreticWordFontSize = `${masoreticWordFontSizePx}px`;
   const qumranWordFontSize = `${Math.round(masoreticWordFontSizePx * 1.5)}px`;
@@ -364,7 +365,11 @@ export function WordCard({
               </span>
             </>
           ) : (
-            <span style={{ color: "var(--text-hebrew)" }}>
+            <span
+              style={{
+                color: isQumranTab ? qumranTextColor : "var(--text-hebrew)",
+              }}
+            >
               {normalizeHebrewDisplay(displayWord.replace(/\//g, ""))}
             </span>
           )}
@@ -375,7 +380,7 @@ export function WordCard({
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "11px",
-              color: "var(--text-secondary)",
+              color: isQumranTab ? qumranTextColor : "var(--text-secondary)",
               textTransform: "uppercase",
               letterSpacing: "0.12em",
               fontWeight: 500,
@@ -392,7 +397,7 @@ export function WordCard({
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "11px",
-              color: "var(--text-secondary)",
+              color: isQumranTab ? qumranTextColor : "var(--text-secondary)",
               textTransform: "uppercase",
               letterSpacing: "0.15em",
               fontWeight: 500,
@@ -683,21 +688,23 @@ export function WordCard({
                   )}
 
                   {/* Show meaning only if root differs from word */}
-                  {rootStrongNumber && strongNumber && rootStrongNumber !== strongNumber && (
-                    <div
-                      style={{
-                        fontFamily: "'Inter', sans-serif",
-                        fontSize: "15px",
-                        lineHeight: 1.5,
-                        marginTop: "12px",
-                      }}
-                      className="dark:text-[var(--text-secondary)]"
-                    >
-                      {displayedData.rootMeaning
-                        ? formatMeaning(displayedData.rootMeaning)
-                        : "—"}
-                    </div>
-                  )}
+                  {rootStrongNumber &&
+                    strongNumber &&
+                    rootStrongNumber !== strongNumber && (
+                      <div
+                        style={{
+                          fontFamily: "'Inter', sans-serif",
+                          fontSize: "15px",
+                          lineHeight: 1.5,
+                          marginTop: "12px",
+                        }}
+                        className="dark:text-[var(--text-secondary)]"
+                      >
+                        {displayedData.rootMeaning
+                          ? formatMeaning(displayedData.rootMeaning)
+                          : "—"}
+                      </div>
+                    )}
                 </>
               ) : (
                 <div
@@ -736,6 +743,7 @@ export function WordCard({
                 fontSize: "18px",
                 lineHeight: 1.5,
                 fontWeight: 400,
+                color: qumranTextColor,
               }}
               className="dark:text-[var(--text-secondary)]"
             >
@@ -777,6 +785,7 @@ export function WordCard({
                 fontSize: "15px",
                 lineHeight: 1.6,
                 fontWeight: 400,
+                color: qumranTextColor,
               }}
               className="dark:text-[var(--text-secondary)]"
             >
@@ -807,7 +816,7 @@ export function WordCard({
                         fontFamily: "'Cardo', serif",
                         fontSize: "48px",
                         direction: "rtl",
-                        color: "var(--primary)",
+                        color: qumranTextColor,
                         fontWeight: 600,
                         lineHeight: 1.4,
                       }}
@@ -839,7 +848,7 @@ export function WordCard({
                       style={{
                         fontFamily: "'Inter', sans-serif",
                         fontSize: "11px",
-                        color: "var(--text-secondary)",
+                        color: qumranTextColor,
                         textTransform: "uppercase",
                         letterSpacing: "0.12em",
                         fontWeight: 500,
@@ -855,7 +864,7 @@ export function WordCard({
                       style={{
                         fontFamily: "'Inter', sans-serif",
                         fontSize: "11px",
-                        color: "var(--text-secondary)",
+                        color: qumranTextColor,
                         textTransform: "uppercase",
                         letterSpacing: "0.12em",
                         fontWeight: 500,
@@ -867,21 +876,24 @@ export function WordCard({
                   )}
 
                   {/* Show meaning only if root differs from word */}
-                  {qumranRootStrongNumber && qumranStrong && qumranRootStrongNumber !== qumranStrong && (
-                    <div
-                      style={{
-                        fontFamily: "'Inter', sans-serif",
-                        fontSize: "15px",
-                        lineHeight: 1.5,
-                        marginTop: "12px",
-                      }}
-                      className="dark:text-[var(--text-secondary)]"
-                    >
-                      {displayedData.qumranRootMeaning
-                        ? formatMeaning(displayedData.qumranRootMeaning)
-                        : "—"}
-                    </div>
-                  )}
+                  {qumranRootStrongNumber &&
+                    qumranStrong &&
+                    qumranRootStrongNumber !== qumranStrong && (
+                      <div
+                        style={{
+                          fontFamily: "'Inter', sans-serif",
+                          fontSize: "15px",
+                          lineHeight: 1.5,
+                          marginTop: "12px",
+                          color: qumranTextColor,
+                        }}
+                        className="dark:text-[var(--text-secondary)]"
+                      >
+                        {displayedData.qumranRootMeaning
+                          ? formatMeaning(displayedData.qumranRootMeaning)
+                          : "—"}
+                      </div>
+                    )}
                 </>
               ) : (
                 <div

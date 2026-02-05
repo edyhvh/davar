@@ -99,6 +99,10 @@ const createStyles = (
     },
     hebrewQumran: {
       fontFamily: typography.families.hebrewQumran,
+      color: colors.qumranText,
+    },
+    qumranText: {
+      color: colors.qumranText,
     },
     transliteration: {
       fontFamily: typography.families.latinUI,
@@ -420,15 +424,18 @@ export const WordAnalysisBottomSheet = ({
   );
   const hasDssVariant = Boolean(
     word?.dssWord ||
-      word?.dssStrong ||
-      word?.dssCommentaryEn ||
-      word?.dssCommentaryEs ||
-      word?.dssCommentaryHe,
+    word?.dssStrong ||
+    word?.dssCommentaryEn ||
+    word?.dssCommentaryEs ||
+    word?.dssCommentaryHe,
   );
   // Keep in sync with web/src/app/App.tsx transliteration selection logic.
   const wordTransliteration = useMemo(() => {
     // When on Qumran tab and DSS transliteration is available, use it
-    if (activeTab === "qumran" && (word?.dss_translit_en || word?.dss_translit_es)) {
+    if (
+      activeTab === "qumran" &&
+      (word?.dss_translit_en || word?.dss_translit_es)
+    ) {
       return language === "en" ? word?.dss_translit_en : word?.dss_translit_es;
     }
     // Otherwise use standard word transliteration
@@ -437,7 +444,14 @@ export const WordAnalysisBottomSheet = ({
       : language === "es"
         ? word?.translit_es
         : undefined;
-  }, [activeTab, language, word?.translit_en, word?.translit_es, word?.dss_translit_en, word?.dss_translit_es]);
+  }, [
+    activeTab,
+    language,
+    word?.translit_en,
+    word?.translit_es,
+    word?.dss_translit_en,
+    word?.dss_translit_es,
+  ]);
 
   const strongNumber = useMemo(() => {
     if (!word?.strong) return null;
@@ -457,7 +471,7 @@ export const WordAnalysisBottomSheet = ({
     const baseWord =
       activeTab === "qumran" && word?.dssWord
         ? word.dssWord
-        : word?.text ?? lexiconEntry?.hebrew ?? "—";
+        : (word?.text ?? lexiconEntry?.hebrew ?? "—");
     let base = baseWord;
     if (!showNikud) {
       base = stripNikud(base);
@@ -736,9 +750,8 @@ export const WordAnalysisBottomSheet = ({
     if (!isDssDerivedRoot) return "ALREADY ROOT";
     if (dssLexiconEntry?.root_definitions?.length) {
       return (
-        dssLexiconEntry.root_definitions
-          .map((item) => item.text)
-          .join(", ") || "—"
+        dssLexiconEntry.root_definitions.map((item) => item.text).join(", ") ||
+        "—"
       );
     }
     return "—";
@@ -747,10 +760,14 @@ export const WordAnalysisBottomSheet = ({
   const dssCommentary = useMemo(() => {
     if (!word) return undefined;
     if (language === "es") {
-      return word.dssCommentaryEs ?? word.dssCommentaryEn ?? word.dssCommentaryHe;
+      return (
+        word.dssCommentaryEs ?? word.dssCommentaryEn ?? word.dssCommentaryHe
+      );
     }
     if (language === "he") {
-      return word.dssCommentaryHe ?? word.dssCommentaryEn ?? word.dssCommentaryEs;
+      return (
+        word.dssCommentaryHe ?? word.dssCommentaryEn ?? word.dssCommentaryEs
+      );
     }
     return word.dssCommentaryEn ?? word.dssCommentaryEs ?? word.dssCommentaryHe;
   }, [language, word]);
@@ -764,7 +781,9 @@ export const WordAnalysisBottomSheet = ({
       index={-1}
       snapPoints={["50%", "80%"]}
       enablePanDownToClose
-      backgroundStyle={hasDssVariant ? styles.sheetBackgroundDss : styles.sheetBackground}
+      backgroundStyle={
+        hasDssVariant ? styles.sheetBackgroundDss : styles.sheetBackground
+      }
       handleIndicatorStyle={styles.sheetHandle}
       onChange={handleSheetChanges}
       onClose={handleSheetClose}
@@ -783,13 +802,16 @@ export const WordAnalysisBottomSheet = ({
           <>
             {/* Header: Hebrew word + transliteration */}
             <View style={styles.headerSection}>
-              <Text
-                style={[styles.hebrew, isQumranTab && styles.hebrewQumran]}
-              >
+              <Text style={[styles.hebrew, isQumranTab && styles.hebrewQumran]}>
                 {displayHebrew}
               </Text>
               {wordTransliteration ? (
-                <Text style={styles.transliteration}>
+                <Text
+                  style={[
+                    styles.transliteration,
+                    isQumranTab && styles.qumranText,
+                  ]}
+                >
                   {wordTransliteration}
                 </Text>
               ) : null}
@@ -799,7 +821,14 @@ export const WordAnalysisBottomSheet = ({
                 </Text>
               )}
               {activeStrongNumber ? (
-                <Text style={styles.occurrencesText}>{activeStrongNumber}</Text>
+                <Text
+                  style={[
+                    styles.occurrencesText,
+                    isQumranTab && styles.qumranText,
+                  ]}
+                >
+                  {activeStrongNumber}
+                </Text>
               ) : null}
             </View>
 
@@ -924,33 +953,38 @@ export const WordAnalysisBottomSheet = ({
                   {lexiconEntry?.root || word?.root ? (
                     <>
                       <Text style={styles.rootHebrew}>
-                        {(lexiconEntry?.root ?? word?.root ?? "").replace(/\//g, "")}
+                        {(lexiconEntry?.root ?? word?.root ?? "").replace(
+                          /\//g,
+                          "",
+                        )}
                       </Text>
                       {lexiconEntry?.root_strong ? (
                         <Text style={styles.rootStrong}>
                           {lexiconEntry.root_strong}
                         </Text>
                       ) : null}
-                      {(language === "en" 
-                        ? lexiconEntry?.root_translit_en 
-                        : lexiconEntry?.root_translit_es) || word?.rootTransliteration ? (
+                      {(language === "en"
+                        ? lexiconEntry?.root_translit_en
+                        : lexiconEntry?.root_translit_es) ||
+                      word?.rootTransliteration ? (
                         <Text style={styles.rootTransliteration}>
-                          {(language === "en" 
-                            ? lexiconEntry?.root_translit_en 
-                            : lexiconEntry?.root_translit_es) ?? word?.rootTransliteration}
+                          {(language === "en"
+                            ? lexiconEntry?.root_translit_en
+                            : lexiconEntry?.root_translit_es) ??
+                            word?.rootTransliteration}
                         </Text>
                       ) : null}
                       {/* Show meaning only if root differs from word */}
-                      {lexiconEntry?.root_strong && strongNumber && lexiconEntry.root_strong !== strongNumber && (
-                        <Text style={styles.rootMeaning}>
-                          {formatRootMeaningText(rootMeaningText)}
-                        </Text>
-                      )}
+                      {lexiconEntry?.root_strong &&
+                        strongNumber &&
+                        lexiconEntry.root_strong !== strongNumber && (
+                          <Text style={styles.rootMeaning}>
+                            {formatRootMeaningText(rootMeaningText)}
+                          </Text>
+                        )}
                     </>
                   ) : (
-                    <Text style={styles.rootMeaning}>
-                      ALREADY ROOT
-                    </Text>
+                    <Text style={styles.rootMeaning}>ALREADY ROOT</Text>
                   )}
                 </View>
               </>
@@ -962,20 +996,23 @@ export const WordAnalysisBottomSheet = ({
                 ) : null}
                 <View style={styles.meaningsList}>
                   {dssMeaningsList.map((meaning, index) => (
-                    <Text key={`${meaning}-${index}`} style={styles.meaningsBullet}>
+                    <Text
+                      key={`${meaning}-${index}`}
+                      style={[styles.meaningsBullet, styles.qumranText]}
+                    >
                       • {meaning}
                     </Text>
                   ))}
                 </View>
 
                 <Text style={styles.sectionLabel}>Commentary</Text>
-                <Text style={styles.commentaryText}>
+                <Text style={[styles.commentaryText, styles.qumranText]}>
                   {dssCommentary ?? "—"}
                 </Text>
 
                 <View style={styles.rootSection}>
                   <Text style={styles.sectionLabel}>Root</Text>
-                  <Text style={styles.rootHebrew}>
+                  <Text style={[styles.rootHebrew, styles.qumranText]}>
                     {(
                       dssLexiconEntry?.root ??
                       dssLexiconEntry?.hebrew ??
@@ -983,14 +1020,18 @@ export const WordAnalysisBottomSheet = ({
                     ).replace(/\//g, "")}
                   </Text>
                   {dssLexiconEntry?.root_strong ? (
-                    <Text style={styles.rootStrong}>
+                    <Text style={[styles.rootStrong, styles.qumranText]}>
                       {dssLexiconEntry.root_strong}
                     </Text>
                   ) : null}
-                  {(language === "en"
-                    ? dssLexiconEntry?.root_translit_en
-                    : dssLexiconEntry?.root_translit_es) ? (
-                    <Text style={styles.rootTransliteration}>
+                  {(
+                    language === "en"
+                      ? dssLexiconEntry?.root_translit_en
+                      : dssLexiconEntry?.root_translit_es
+                  ) ? (
+                    <Text
+                      style={[styles.rootTransliteration, styles.qumranText]}
+                    >
                       {language === "en"
                         ? dssLexiconEntry?.root_translit_en
                         : dssLexiconEntry?.root_translit_es}
@@ -998,13 +1039,15 @@ export const WordAnalysisBottomSheet = ({
                   ) : null}
                   {/* Show meaning only if root differs from word or if no specific DSS root */}
                   {dssLexiconEntry?.root || dssLexiconEntry?.root_strong ? (
-                    dssLexiconEntry.root_strong && dssStrongNumber && dssLexiconEntry.root_strong !== dssStrongNumber ? (
-                      <Text style={styles.rootMeaning}>
+                    dssLexiconEntry.root_strong &&
+                    dssStrongNumber &&
+                    dssLexiconEntry.root_strong !== dssStrongNumber ? (
+                      <Text style={[styles.rootMeaning, styles.qumranText]}>
                         {formatRootMeaningText(dssRootMeaningText)}
                       </Text>
                     ) : null
                   ) : (
-                    <Text style={styles.rootMeaning}>
+                    <Text style={[styles.rootMeaning, styles.qumranText]}>
                       ALREADY ROOT
                     </Text>
                   )}

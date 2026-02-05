@@ -73,7 +73,7 @@ export function VerseDisplay({
   onSwipeDown,
 }: VerseDisplayProps) {
   const { t } = useTranslation(language);
-  const dssInlineFontScale = "1.80em";
+  const dssInlineFontScale = "1.70em";
   const dssInlineBaselineShift = "-0.08em";
   // Function to render Hebrew text with DSS variants
   const renderHebrewText = () => {
@@ -150,7 +150,7 @@ export function VerseDisplay({
             style={
               variantText
                 ? {
-                    color: "var(--copper-highlight)",
+                    color: "var(--qumran-text)",
                     fontFamily: "'DeadSeaScrolls-Regular', 'Cardo', serif",
                     fontSize: dssInlineFontScale,
                     display: "inline-block",
