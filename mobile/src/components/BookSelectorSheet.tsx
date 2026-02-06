@@ -17,6 +17,7 @@ import {
 import { getBooks } from "@/src/services/api";
 import type { BookResponse } from "@/src/types/api";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 type BookSelectorSheetProps = {
   sheetRef: React.RefObject<BottomSheet | null>;
@@ -139,6 +140,7 @@ export const BookSelectorSheet = ({
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
   const snapPoints = useMemo(() => ["70%", "90%"], []);
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
   const [booksMeta, setBooksMeta] = useState<BookResponse[]>([]);
   const [loading, setLoading] = useState(true);
@@ -156,7 +158,7 @@ export const BookSelectorSheet = ({
         console.error("Failed to load books:", error);
         if (!isMounted) return;
         setBooksMeta([]);
-        setErrorMessage("Unable to load books from the server.");
+        setErrorMessage(t("errors.loadBooks"));
       } finally {
         if (isMounted) setLoading(false);
       }
@@ -245,11 +247,13 @@ export const BookSelectorSheet = ({
     () => (
       <View style={styles.emptyContainer}>
         <Text style={styles.emptyText}>
-          {loading ? "Loading books..." : (errorMessage ?? "No books found")}
+          {loading
+            ? t("navigation.loadingBooks")
+            : (errorMessage ?? t("navigation.noBooksFound"))}
         </Text>
       </View>
     ),
-    [styles, loading, errorMessage],
+    [styles, loading, errorMessage, t],
   );
 
   return (
@@ -267,7 +271,7 @@ export const BookSelectorSheet = ({
     >
       <View style={styles.header}>
         <View style={styles.titleRow}>
-          <Text style={styles.title}>Select Book</Text>
+          <Text style={styles.title}>{t("navigation.selectBook")}</Text>
           {isOpen && (
             <Pressable
               style={styles.closeButton}
@@ -292,7 +296,7 @@ export const BookSelectorSheet = ({
           />
           <TextInput
             style={styles.searchInput}
-            placeholder="Search books..."
+            placeholder={t("navigation.searchBooks")}
             placeholderTextColor={colors.textSecondary}
             value={searchQuery}
             onChangeText={setSearchQuery}

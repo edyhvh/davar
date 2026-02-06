@@ -1,0 +1,236 @@
+{
+  "common": {
+    "on": "ENCENDIDO",
+    "off": "APAGADO",
+    "loading": "Cargando...",
+    "appName": "Davar",
+    "downloadOnAppStore": "Descargar en el App Store",
+    "getOnGooglePlay": "Disponible en Google Play"
+  },
+  "navigation": {
+    "goHome": "Ir al inicio",
+    "selectBook": "Seleccionar libro",
+    "selectChapter": "Seleccionar cap\u00edtulo",
+    "selectVerse": "Seleccionar vers\u00edculo",
+    "previousVerse": "Vers\u00edculo anterior",
+    "nextVerse": "Siguiente vers\u00edculo",
+    "openFeatures": "Abrir funciones",
+    "features": "Funciones",
+    "donate": "Donar",
+    "openSettings": "Abrir ajustes",
+    "chapterShort": "CAP",
+    "verseShort": "VER",
+    "languageLabel": "Idioma",
+    "toggleDarkTheme": "Alternar modo oscuro",
+    "toggleQumran": "Alternar variantes de Qumr\u00e1n",
+    "toggleHebrewOnly": "Alternar solo hebreo",
+    "toggleNikud": "Alternar nikud",
+    "toggleCantillation": "Alternar cantilaci\u00f3n",
+    "toggleFullChapter": "Alternar cap\u00edtulo completo",
+    "toggleSeferStyle": "Alternar estilo sefer",
+    "swipeToNavigate": "Desliza para navegar",
+    "backToApp": "\u2190 Volver a la app",
+    "search": "Buscar...",
+    "searchBooks": "Buscar libros...",
+    "loadingBooks": "Cargando libros...",
+    "noBooksFound": "No se encontraron libros",
+    "noResults": "No se encontraron resultados",
+    "noChapters": "No hay cap\u00edtulos disponibles",
+    "noVerses": "No hay vers\u00edculos disponibles",
+    "book": "Libro",
+    "verse": "Vers\u00edculo",
+    "modal": "Modal"
+  },
+  "settings": {
+    "title": "Ajustes",
+    "sections": {
+      "general": "General",
+      "offline": "Sin conexi\u00f3n"
+    },
+    "theme": {
+      "title": "Tema",
+      "subtitle": "Modo oscuro"
+    },
+    "language": {
+      "title": "Idioma"
+    },
+    "qumran": {
+      "title": "Variantes de Qumr\u00e1n",
+      "subtitle": "Mostrar texto de los Rollos del Mar Muerto"
+    },
+    "fullChapter": {
+      "title": "Cap\u00edtulo completo",
+      "subtitle": "Mostrar texto completo del cap\u00edtulo"
+    },
+    "seferStyle": {
+      "title": "Estilo de libro",
+      "subtitle": "Dise\u00f1o continuo de rollo hebreo",
+      "warningTitle": "Sefer requiere Solo hebreo",
+      "warningMessage": "Activa Solo hebreo para usar el estilo Sefer."
+    },
+    "hebrewOnly": {
+      "title": "Solo hebreo",
+      "subtitle": "Mostrar texto solo en hebreo"
+    },
+    "cantillation": {
+      "title": "Cantilaci\u00f3n",
+      "subtitle": "Mostrar marcas de cantilaci\u00f3n"
+    },
+    "nikud": {
+      "title": "Nikud",
+      "subtitle": "Mostrar signos voc\u00e1licos"
+    },
+    "clearStorage": {
+      "title": "Borrar almacenamiento",
+      "subtitle": "Restablecer ajustes y datos",
+      "alertTitle": "Borrar almacenamiento",
+      "alertMessage": "Esto restablecer\u00e1 todos los ajustes y datos. La app se recargar\u00e1.",
+      "cancel": "Cancelar",
+      "confirm": "Borrar"
+    },
+    "designSystemTitle": "Sistema de dise\u00f1o",
+    "designSystemDescription": "Ver componentes de dise\u00f1o",
+    "mobileDesignGuideTitle": "Gu\u00eda de dise\u00f1o m\u00f3vil",
+    "mobileDesignGuideDescription": "Ver componentes de dise\u00f1o m\u00f3vil"
+  },
+  "home": {
+    "todayIs": "Hoy es",
+    "calendar": {
+      "todayIs": "Hoy es",
+      "dateLabel": "Aviv 10",
+      "dayNames": ["Dom", "Lun", "Mar", "Mi\u00e9", "Jue", "Vie", "S\u00e1b"],
+      "pesachLabel": "P\u00e9saj",
+      "pesachHebrew": "פֶּסַח"
+    },
+    "download": {
+      "title": "Descargar sin conexi\u00f3n",
+      "downloading": "Descargando {item}...",
+      "idle": "Toca para guardar diccionario y traducciones",
+      "dictionary": "Diccionario",
+      "english": "Ingl\u00e9s",
+      "spanish": "Espa\u00f1ol"
+    },
+    "donate": {
+      "title": "Donar",
+      "subtitle": "Apoya el desarrollo de Davar"
+    },
+    "sourcesTitle": "Fuentes",
+    "sources": {
+      "hebrewTextLabel": "Texto hebreo",
+      "hebrewTextValue": "Masor\u00e9tico y Qumr\u00e1n",
+      "dictionaryLabel": "Diccionario",
+      "dictionaryValue": "Strong, BDB, personalizado",
+      "dictionaryNote": " (palabras seleccionadas)",
+      "englishTranslationLabel": "Traducci\u00f3n al ingl\u00e9s",
+      "englishTranslationValue": "TS2009",
+      "spanishTranslationLabel": "Traducci\u00f3n al espa\u00f1ol",
+      "spanishTranslationValue": "TTH",
+      "besorahLabel": "Besorah",
+      "besorahValue": "Traducci\u00f3n de Delitzsch"
+    },
+    "aboutTitle": "Acerca de",
+    "aboutItems": {
+      "legal": "Legal",
+      "terms": "T\u00e9rminos",
+      "privacy": "Privacidad",
+      "support": "Soporte",
+      "bug": "Bug",
+      "github": "GitHub",
+      "feedback": "Comentarios"
+    },
+    "about": {
+      "title": "Acerca de",
+      "items": {
+        "legal": "Legal",
+        "terms": "T\u00e9rminos",
+        "privacy": "Privacidad",
+        "support": "Soporte",
+        "bug": "Bug",
+        "github": "GitHub",
+        "feedback": "Comentarios"
+      }
+    }
+  },
+  "donate": {
+    "githubSponsor": "GitHub Sponsor"
+  },
+  "features": {
+    "title": "Ideas",
+    "items": [
+      "telegram app",
+      "blockchain app",
+      "arabic",
+      "farsi",
+      "japanese",
+      "portuguese",
+      "search anything (latin characters or hebrew)",
+      "septuagint",
+      "greek εὐαγγέλιον"
+    ],
+    "openSourceNote": "este es un proyecto de c\u00f3digo abierto, contribuye y colabora con tus habilidades o ideas",
+    "repositoryLabel": "davar"
+  },
+  "errors": {
+    "uiFallbackTitle": "Algo sali\u00f3 mal",
+    "uiFallbackMessage": "Por favor, actualiza la p\u00e1gina o int\u00e9ntalo m\u00e1s tarde.",
+    "uiFallbackMessageMobile": "Por favor, reinicia la aplicaci\u00f3n.",
+    "loadBooks": "No se pudieron cargar los libros.",
+    "loadVerses": "No se pudieron cargar los vers\u00edculos."
+  },
+  "verse": {
+    "previousSnippet": "Vers\u00edculo anterior...",
+    "nextSnippet": "Siguiente vers\u00edculo...",
+    "selectBookPrompt": "Selecciona un libro para comenzar.",
+    "loading": "Cargando vers\u00edculos...",
+    "prefixLabel": "Prefijo: {prefix}",
+    "missingSpanishTranslation": "Por el momento no contamos con traducci\u00f3n al espa\u00f1ol de este texto, estamos trabajando en ello..."
+  },
+  "wordCard": {
+    "selectWord": "Selecciona una palabra",
+    "selectWordPrompt": "Selecciona una palabra para ver su an\u00e1lisis",
+    "close": "Cerrar significado",
+    "meanings": "Significados",
+    "masoretic": "Masor\u00e9tico",
+    "qumran": "Qumr\u00e1n",
+    "instances": "Instancias",
+    "root": "Ra\u00edz",
+    "commentary": "Comentario",
+    "preposition": "Preposici\u00f3n",
+    "tapToNavigate": "Toca para navegar",
+    "noMeanings": "A\u00fan no hay significados.",
+    "noInstances": "A\u00fan no hay instancias.",
+    "loadingDefinitions": "Cargando definiciones...",
+    "alreadyRoot": "YA ES RA\u00cdZ",
+    "appearsCount": "Aparece {count} veces",
+    "appearsIn": "Aparece en",
+    "showMore": "Mostrar {count} m\u00e1s",
+    "properName": "Nombre propio"
+  },
+  "languages": {
+    "en": "Ingl\u00e9s",
+    "es": "Espa\u00f1ol",
+    "he": "Hebreo"
+  },
+  "offline": {
+    "dictionary": "Diccionario",
+    "englishTranslation": "Traducci\u00f3n al ingl\u00e9s",
+    "spanishTranslation": "Traducci\u00f3n al espa\u00f1ol",
+    "downloaded": "Descargado",
+    "notDownloaded": "No descargado"
+  },
+  "search": {
+    "title": "Buscar",
+    "subtitle": "Navega a cualquier libro, cap\u00edtulo y vers\u00edculo",
+    "tapPrompt": "Toca para seleccionar un libro, cap\u00edtulo y vers\u00edculo",
+    "goToVerse": "Ir al vers\u00edculo"
+  },
+  "bookmarks": {
+    "title": "Marcadores",
+    "emptyState": "Guarda vers\u00edculos para revisarlos aqu\u00ed."
+  },
+  "tabs": {
+    "home": "Inicio",
+    "verse": "Vers\u00edculo",
+    "settings": "Ajustes"
+  }
+}

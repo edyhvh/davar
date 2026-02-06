@@ -1,5 +1,7 @@
 import React, { Component, type ErrorInfo, type ReactNode } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { useAppStore } from "@/src/store/useAppStore";
+import { translate } from "@/src/i18n/useTranslation";
 
 type ErrorBoundaryProps = {
   children: ReactNode;
@@ -25,10 +27,13 @@ export class ErrorBoundary extends Component<
 
   render() {
     if (this.state.hasError) {
+      const language = useAppStore.getState().language;
+      const title = translate(language, "errors.uiFallbackTitle");
+      const message = translate(language, "errors.uiFallbackMessageMobile");
       return (
         <View style={styles.container}>
-          <Text style={styles.title}>Something went wrong</Text>
-          <Text style={styles.subtitle}>Please restart the app.</Text>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.subtitle}>{message}</Text>
         </View>
       );
     }

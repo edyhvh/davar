@@ -1,6 +1,6 @@
-import en from "../locales/en";
-import es from "../locales/es";
-import he from "../locales/he";
+import en from "../../../locales/en.json";
+import es from "../../../locales/es.json";
+import he from "../../../locales/he.json";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import type { AppLanguage } from "@/src/services/storage";
 
