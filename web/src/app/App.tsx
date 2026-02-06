@@ -179,6 +179,8 @@ export default function App() {
   const versePanelRef = useRef<HTMLDivElement | null>(null);
 
   const [selectedWord, setSelectedWord] = useState<WordResponse | null>(null);
+  const [isWordSheetOpen, setIsWordSheetOpen] = useState(false);
+  const wordSheetClosingRef = useRef(false);
   const [isWordPanelDismissed, setIsWordPanelDismissed] = useState(true);
   const [showWordHint, setShowWordHint] = useState(true);
   const [isNavigatingWordPanel, setIsNavigatingWordPanel] = useState(false);
@@ -368,19 +370,38 @@ export default function App() {
     }
   }, [currentBook]);
 
+  const closeWordSheet = useCallback(() => {
+    wordSheetClosingRef.current = true;
+    setIsWordSheetOpen(false);
+  }, []);
+
+  const handleWordSheetAfterClose = useCallback(() => {
+    if (isWordSheetOpen) return;
+    wordSheetClosingRef.current = false;
+    setSelectedWord(null);
+  }, [isWordSheetOpen]);
+
   const handleWordClick = (word: WordResponse) => {
     // If same word is clicked again, close the word card
     if (
       selectedWord?.text === word.text &&
       selectedWord?.strong === word.strong
     ) {
-      setIsWordPanelDismissed(true);
-      setSelectedWord(null);
+      if (isMobile) {
+        closeWordSheet();
+      } else {
+        setIsWordPanelDismissed(true);
+        setSelectedWord(null);
+      }
       return;
     }
     setIsWordPanelDismissed(false);
     setShowWordHint(false);
     setSelectedWord(word);
+    if (isMobile) {
+      wordSheetClosingRef.current = false;
+      setIsWordSheetOpen(true);
+    }
   };
 
   const handleNavigateToVerse = async (verseRef: string) => {
@@ -432,7 +453,7 @@ export default function App() {
     setCurrentChapter(chapter);
     setCurrentVerse(verse);
     if (isMobile) {
-      setSelectedWord(null);
+      closeWordSheet();
     } else {
       setIsWordPanelDismissed(false);
     }
@@ -854,6 +875,23 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (!isMobile) {
+      wordSheetClosingRef.current = false;
+      setIsWordSheetOpen(false);
+      return;
+    }
+
+    if (!selectedWord) {
+      setIsWordSheetOpen(false);
+      return;
+    }
+
+    if (!wordSheetClosingRef.current) {
+      setIsWordSheetOpen(true);
+    }
+  }, [isMobile, selectedWord]);
+
+  useEffect(() => {
     if (!selectedWord || isMobile) {
       setIsWordPanelHovered(false);
     }
@@ -1259,13 +1297,16 @@ export default function App() {
         <div className="h-10" />
       </div>
 
-      {isMobile && selectedWord && (
+      {isMobile && (
         <BottomSheet
-          isOpen={!!selectedWord}
-          onClose={() => setSelectedWord(null)}
+          isOpen={isWordSheetOpen}
+          onClose={closeWordSheet}
+          onAfterClose={handleWordSheetAfterClose}
           title=""
         >
           {(() => {
+            if (!selectedWord) return null;
+
             const dssVariantForCard =
               currentVerseData?.dss?.find(
                 (variant) => variant.position === selectedWord.position,
@@ -1345,7 +1386,7 @@ export default function App() {
                 )}
                 onInstanceClick={handleNavigateToVerse}
                 tabResetKey={wordCardTabKey}
-                onClose={() => setSelectedWord(null)}
+                onClose={closeWordSheet}
                 isLoading={!selectedWordAnalysis}
                 isQumranLoading={Boolean(isDssAnalysisLoading)}
               />
