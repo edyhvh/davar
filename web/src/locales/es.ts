@@ -72,7 +72,7 @@ const es = {
       englishTranslationValue: "TS2009",
       spanishTranslationLabel: "Traducción al español",
       spanishTranslationValue: "TTH",
-      besorahLabel: "Besorá",
+      besorahLabel: "Besorah",
       besorahValue: "Traducción de Delitzsch",
     },
     aboutTitle: "Acerca de",

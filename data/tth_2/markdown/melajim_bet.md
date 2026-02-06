@@ -1,4 +1,4 @@
-__MELAJIM BET \(2 REYES\)__ב מלכים
+**MELAJIM BET \(2 REYES\)**ב מלכים
 
 Muerte de Ajazyáh
 
@@ -148,42 +148,42 @@ Elishá y Naamán
 **5**
 
 **1** Y Naamán, jefe del ejército del rey de Aram, era un gran hombre delante de su amo y levan­tado de rostro, porque por él había dado יהוה la liberación a Aram. Y el hom­bre era poderoso de valor, pero leproso \(heb.: met­zorá\).
-**2** Y Aram había salido *en* bandas y habían cap­turado de la tierra de Israel *a* una muchacha pe­queña, y ella estaba delante de la mujer de Naamán.
-**3** Ella dijo a su dama: ¡Ah, si sólo mi amo *es­­tu­viera* delante del profeta que *está* en Shom­rón! Entonces él lo quitaría de su tzaraat.
+**2** Y Aram había salido _en_ bandas y habían cap­turado de la tierra de Israel _a_ una muchacha pe­queña, y ella estaba delante de la mujer de Naamán.
+**3** Ella dijo a su dama: ¡Ah, si sólo mi amo _es­­tu­viera_ delante del profeta que _está_ en Shom­rón! Entonces él lo quitaría de su tzaraat.
 **4** Y él entró y dio a conocer a su amo, dicien­do: Conforme a esto y esto habló la muchacha que es de la tierra de Israel.
-**5** Y dijo el rey de Aram: Ve, entra, y enviaré una carta al rey de Israel. Y él fue y tomó en su mano diez talentos de plata y seis mil *shekel* de oro y diez cambios de vestimentas.
+**5** Y dijo el rey de Aram: Ve, entra, y enviaré una carta al rey de Israel. Y él fue y tomó en su mano diez talentos de plata y seis mil _shekel_ de oro y diez cambios de vestimentas.
 **6** E hizo venir la carta al rey de Israel, dicien­do: Y ahora, cuando llegue esta carta a ti, he a­quí, habré enviado a ti a Naamán, mi siervo, y lo quitarás de su tzaraat.
-**7** Y sucedió *que* cuando leyó el rey de Israel la carta, rasgó sus vestiduras, y dijo: ¿Elohim soy yo, para hacer morir y para hacer vivir, que este envía a mí para quitar un hombre de su tza­raat? Pero, sin embargo, conozcan por favor, y vean que él me está buscando pelea.
-**8** Y sucedió *que* cuando escuchó Elishá, hom­bre de Elohim, que había rasgado el rey de Is­rael sus vestiduras, envió al rey, diciendo: ¿Por qué has rasgado tus vestiduras? Venga él, por favor, a mí, y sabrá que hay profeta en Israel.
-**9** Y vino Naamán con su caballo y con su ca­rro, y se paró *a* la entrada de la casa de Elishá.
-**10** Y envió a él Elishá un mensajero, diciendo: Ve y lávate siete veces en el Iardén, y regresa­rá tu carne a ti, y *quedarás* puro.
+**7** Y sucedió _que_ cuando leyó el rey de Israel la carta, rasgó sus vestiduras, y dijo: ¿Elohim soy yo, para hacer morir y para hacer vivir, que este envía a mí para quitar un hombre de su tza­raat? Pero, sin embargo, conozcan por favor, y vean que él me está buscando pelea.
+**8** Y sucedió _que_ cuando escuchó Elishá, hom­bre de Elohim, que había rasgado el rey de Is­rael sus vestiduras, envió al rey, diciendo: ¿Por qué has rasgado tus vestiduras? Venga él, por favor, a mí, y sabrá que hay profeta en Israel.
+**9** Y vino Naamán con su caballo y con su ca­rro, y se paró _a_ la entrada de la casa de Elishá.
+**10** Y envió a él Elishá un mensajero, diciendo: Ve y lávate siete veces en el Iardén, y regresa­rá tu carne a ti, y _quedarás_ puro.
 **11** Pero se enojó Naamán, y se fue y dijo: He aquí, yo me dije: “Seguramente él saldrá, y se parará y llamará en el Nombre de יהוה su E­lohim, y agitará su mano en el lugar y sanará \(Lit.: quitará\) al leproso.
-**12**¿No *son más* buenos el Abanáh y el Farpar, ríos de Damések, que todas las aguas de Is­rael? ¿No me lavaría en ellos y me purifica­ría? Y se giró, y se fue con ira.
-**13** Pero se acercaron sus siervos y le hablaron, y dijeron: Padre mío, *si* cosa grande el profeta te hubiera hablado, ¿no *la* harías? ¡Cuánto más *cuando* te dice: “Lávate y *serás* puro”!
+**12**¿No _son más_ buenos el Abanáh y el Farpar, ríos de Damések, que todas las aguas de Is­rael? ¿No me lavaría en ellos y me purifica­ría? Y se giró, y se fue con ira.
+**13** Pero se acercaron sus siervos y le hablaron, y dijeron: Padre mío, _si_ cosa grande el profeta te hubiera hablado, ¿no _la_ harías? ¡Cuánto más _cuando_ te dice: “Lávate y _serás_ puro”!
 **14** Y él bajó y se sumergió en el Iardén siete veces, conforme a la palabra del hombre de Elo­him; y regresó su carne como la carne de un mu­chacho pequeño, y se purificó.
 **15** Y volvió al hombre de Elohim, él y todo su campamento, y entró y se paró delante de él, y dijo: He aquí, ahora sé que no hay Elohim en toda la tierra, sino en Israel. Y ahora, toma por favor una bendición de tu siervo.
 **16** Pero él dijo: Vive יהוה, que me paro de­lante de Él, ¡si *la *tomaría! Y lo presionó a to­mar*la*, pero él se negó.
-**17** Y dijo Naamán: Y *si* no, se dará, por favor, a tu siervo, una carga de un par de mulos de la tierra, porque no hará más tu siervo ofrenda as­cendida y sacrificio a otros dioses, sino a יהוה.
-**18** Por esta cosa perdone יהוה a tu siervo: Cuando entre mi amo *en* la casa de Rimón para inclinarse allí, y él se apoye sobre mi mano, y me incline yo *en* la casa de Rimón cuando me tenga que inclinar *en* la casa de Rimón; perdo­ne, por favor, יהוה a tu siervo por esta cosa.
+**17** Y dijo Naamán: Y _si_ no, se dará, por favor, a tu siervo, una carga de un par de mulos de la tierra, porque no hará más tu siervo ofrenda as­cendida y sacrificio a otros dioses, sino a יהוה.
+**18** Por esta cosa perdone יהוה a tu siervo: Cuando entre mi amo _en_ la casa de Rimón para inclinarse allí, y él se apoye sobre mi mano, y me incline yo _en_ la casa de Rimón cuando me tenga que inclinar _en_ la casa de Rimón; perdo­ne, por favor, יהוה a tu siervo por esta cosa.
 **19** Y él le dijo: Ve en shalom. Y se fue de él como a una distancia de tierra.
 
-*Gejazi se vuelve leproso*
+_Gejazi se vuelve leproso_
 
 **20** Pero dijo Gejazi, joven de Elishá, hombre de Elohim: He aquí, ha retenido mi amo a este Naa­mán el aramí de tomar de su mano lo que él trajo. Vive יהוה, sino que correré tras él y tomaré de él cualquier cosa.
-**21** Y persiguió Gejazi tras de Naamán. Y vio Naamán *que* corría detrás de él, y cayó de so­bre el carro a su encuentro, y dijo: ¿Shalom?
-**22** Y él dijo: Shalom. Mi amo me ha enviado, diciendo: “He aquí, *en* este momento vinieron a mí dos jóvenes del monte de Efráim de los hi­jos de los profetas; da, por favor, a ellos, un talento de plata y dos cambios de vestimentas”.
-**23** Y dijo Naamán: Consiente *en* tomar dos ta­lentos. Y lo presionó y ató dos talentos de plata en dos bolsas y dos cambios de vestimentas, y *los* dio a dos de sus jóvenes; y *los* llevaron de­lante de él.
-**24** Y vino a la colina, y *los* tomó de la mano de ellos y *los* revisó en la casa. Y envió a los jó­venes y se fueron.
-**25** Y él entró y se paró hacia su amo, y le dijo Elishá: ¿Dónde *has estado*, Gejazi? Y él dijo: No ha ido tu siervo a ninguna parte \(Lit.: aquí y allá\).
+**21** Y persiguió Gejazi tras de Naamán. Y vio Naamán _que_ corría detrás de él, y cayó de so­bre el carro a su encuentro, y dijo: ¿Shalom?
+**22** Y él dijo: Shalom. Mi amo me ha enviado, diciendo: “He aquí, _en_ este momento vinieron a mí dos jóvenes del monte de Efráim de los hi­jos de los profetas; da, por favor, a ellos, un talento de plata y dos cambios de vestimentas”.
+**23** Y dijo Naamán: Consiente _en_ tomar dos ta­lentos. Y lo presionó y ató dos talentos de plata en dos bolsas y dos cambios de vestimentas, y _los_ dio a dos de sus jóvenes; y _los_ llevaron de­lante de él.
+**24** Y vino a la colina, y _los_ tomó de la mano de ellos y _los_ revisó en la casa. Y envió a los jó­venes y se fueron.
+**25** Y él entró y se paró hacia su amo, y le dijo Elishá: ¿Dónde _has estado_, Gejazi? Y él dijo: No ha ido tu siervo a ninguna parte \(Lit.: aquí y allá\).
 **26** Y él le dijo: ¿No iba mi corazón cuando se volvió el hombre de sobre su carro para encon­trarte? ¿Es tiempo de tomar plata y tomar ves­ti­mentas, olivos y viñas, rebaño y ganado, sier­vos y siervas?
 **27** Y la tzaraat de Naamán se pegará en ti, y en tu simiente, para siempre. Y salió de delante de él leproso como la nieve.
 
-*Elishá y el hacha perdida*
+_Elishá y el hacha perdida_
 
 **6**
 
 **1** Y dijeron los hijos de los profetas a Eli­shá: He aquí, por favor, el lugar el cual no­so­tros ha­bitamos allí delante de ti es estrecho para noso­tros.
-**2** Déjanos ir, por favor, hasta el Iardén, y tome de allí *cada* hombre una viga, y hagamos para nosotros allí un lugar para habitar allí. Y él di­jo: Vayan.
+**2** Déjanos ir, por favor, hasta el Iardén, y tome de allí _cada_ hombre una viga, y hagamos para nosotros allí un lugar para habitar allí. Y él di­jo: Vayan.
 **3** Y dijo uno: Consiente por favor, y ve con tus siervos. Y él dijo: Yo iré.
 **4** Y fue con ellos; y vinieron al Iardén y corta­ron árboles.
 **5** Pero sucedió que uno hacía caer la viga, y el hierro del hacha cayó al agua; y gritó, y dijo: ¡Ah, amo mío, esto era prestado!
@@ -226,65 +226,65 @@ Hambre por el sitio de Aram
 
 **1** Y dijo Elishá: Oigan la palabra de יהוה. Así dice יהוה: “Como a este tiem­po maña­na, un seah de harina fina se venderá por un shekel, y dos seah de cebada por un shekel, en la puerta de Shomrón”.
 **2** Y respondió el oficial \(Lit.: el tercero\), que el rey se apoyaba sobre su mano, al hombre de Elohim, y dijo: He aquí, aunque יהוה hicie­ra ventanas en los cielos, ¿sucedería esta cosa? Y dijo Elishá: He aquí, tú lo verás con tus ojos, pero de allí no comerás.
-**3** Y había cuatro hombres leprosos \(heb.: metzo­raím\) *en* la en­trada de la puerta, y se dijeron un hombre a su prójimo: ¿*Por* qué nosotros esta­mos senta­dos aquí hasta morirnos?
-**4** Si decimos: “Entraremos *en* la ciudad”, el hambre *está* en la ciudad, y moriremos allí; y si nos sentamos aquí, moriremos. Y ahora, va­yamos y caigamos al campamento de Aram. Si nos dejan vivir, viviremos; y si nos hacen mo­rir, moriremos.
+**3** Y había cuatro hombres leprosos \(heb.: metzo­raím\) _en_ la en­trada de la puerta, y se dijeron un hombre a su prójimo: ¿_Por_ qué nosotros esta­mos senta­dos aquí hasta morirnos?
+**4** Si decimos: “Entraremos _en_ la ciudad”, el hambre _está_ en la ciudad, y moriremos allí; y si nos sentamos aquí, moriremos. Y ahora, va­yamos y caigamos al campamento de Aram. Si nos dejan vivir, viviremos; y si nos hacen mo­rir, moriremos.
 **5** Y se levantaron en el crepúsculo para entrar al campamento de Aram. Y vinieron hasta el extremo del campamento de Aram, y he aquí, no había allí hombre.
-**6** Y Adonai había hecho escuchar al campa­men­to de Aram un sonido de carros *y* un soni­do de caballos, sonido de una gran fuerza, y se dijeron un hombre a su hermano: He aquí, ha contratado contra nosotros el rey de Israel a los reyes de los jitím y a los reyes de Mitzráim, para venir contra nosotros.
+**6** Y Adonai había hecho escuchar al campa­men­to de Aram un sonido de carros _y_ un soni­do de caballos, sonido de una gran fuerza, y se dijeron un hombre a su hermano: He aquí, ha contratado contra nosotros el rey de Israel a los reyes de los jitím y a los reyes de Mitzráim, para venir contra nosotros.
 **7** Y se levantaron y huyeron en el crepúsculo, y abandonaron sus tiendas, y sus caballos y sus asnos, el campamento como estaba, y huyeron por \(Lit.: hacia\) sus vidas.
-**8** Y vinieron estos leprosos hasta el extremo del campamento, y entraron a una tienda, y co­mieron y bebieron, y se llevaron de allí plata y oro y vestiduras, y fueron y *lo* escondieron; y volvieron y entraron a otra tienda, y se lleva­ron de allí *cosas*, y fueron y *las* escondieron.
-**9** Y se dijeron un hombre a su prójimo: No es­tamos haciendo nosotros *lo* correcto. Este día es un día de buenas noticias \(heb.: *besoráh*\), y no­sotros estamos callados; y esperaremos hasta la luz de la mañana y nos hallará la iniquidad. Y ahora, vayamos, y entremos y demos a conocer *a* la casa del rey.
-**10** Y vinieron y llamaron a los porteros \(Lit.: al portero\) de la ciu­dad, y dieron a conocer a ellos, diciendo: Entramos al campamento de Aram, y he aquí, no había allí hombre ni voz de hom­bre; sino que los caballos *estaban* atados, los asnos ata­dos, y las tiendas como *estaban* estas.
-**11** Y llamaron los porteros, y *lo* dieron a cono­cer *a* la casa del rey, adentro.
-**12** Y se levantó el rey de noche, y dijo a sus sier­vos: Daré a conocer, por favor, a ustedes lo que han hecho a nosotros *los de *Aram; Saben que *es­ta­mos* hambrientos nosotros, y salieron del cam­pamento para esconderse en el campo, diciendo: “Cuando salgan de la ciudad los cap­turaremos vivos, y a la ciudad entraremos”.
-**13** Y respondió uno de sus siervos, y dijo: To­men, por favor, *unos hombres*, cinco de los ca­ballos restantes que quedaron en ella. He aquí, ellos *son* como toda la multitud de Israel que queda en ella, he aquí, ellos *son* como toda la multitud de Israel que fue acabada; y *los* envia­remos y veremos.
-**14** Y tomaron dos carros *con* caballos, y *los* en­vió el rey tras del campamento de Aram, di­ciendo: Vayan y vean.
-**15** Y fueron tras de ellos hasta el Iardén, y he aquí, todo el camino estaba lleno de vestidos e instrumentos que habían lanzado *los de* Aram en su prisa. Y volvieron los mensajeros y *lo* die­ron a conocer al rey.
+**8** Y vinieron estos leprosos hasta el extremo del campamento, y entraron a una tienda, y co­mieron y bebieron, y se llevaron de allí plata y oro y vestiduras, y fueron y _lo_ escondieron; y volvieron y entraron a otra tienda, y se lleva­ron de allí _cosas_, y fueron y _las_ escondieron.
+**9** Y se dijeron un hombre a su prójimo: No es­tamos haciendo nosotros _lo_ correcto. Este día es un día de buenas noticias \(heb.: _besorah_\), y no­sotros estamos callados; y esperaremos hasta la luz de la mañana y nos hallará la iniquidad. Y ahora, vayamos, y entremos y demos a conocer _a_ la casa del rey.
+**10** Y vinieron y llamaron a los porteros \(Lit.: al portero\) de la ciu­dad, y dieron a conocer a ellos, diciendo: Entramos al campamento de Aram, y he aquí, no había allí hombre ni voz de hom­bre; sino que los caballos _estaban_ atados, los asnos ata­dos, y las tiendas como _estaban_ estas.
+**11** Y llamaron los porteros, y _lo_ dieron a cono­cer _a_ la casa del rey, adentro.
+**12** Y se levantó el rey de noche, y dijo a sus sier­vos: Daré a conocer, por favor, a ustedes lo que han hecho a nosotros *los de *Aram; Saben que _es­ta­mos_ hambrientos nosotros, y salieron del cam­pamento para esconderse en el campo, diciendo: “Cuando salgan de la ciudad los cap­turaremos vivos, y a la ciudad entraremos”.
+**13** Y respondió uno de sus siervos, y dijo: To­men, por favor, _unos hombres_, cinco de los ca­ballos restantes que quedaron en ella. He aquí, ellos _son_ como toda la multitud de Israel que queda en ella, he aquí, ellos _son_ como toda la multitud de Israel que fue acabada; y _los_ envia­remos y veremos.
+**14** Y tomaron dos carros _con_ caballos, y _los_ en­vió el rey tras del campamento de Aram, di­ciendo: Vayan y vean.
+**15** Y fueron tras de ellos hasta el Iardén, y he aquí, todo el camino estaba lleno de vestidos e instrumentos que habían lanzado _los de_ Aram en su prisa. Y volvieron los mensajeros y _lo_ die­ron a conocer al rey.
 **16** Y salió el pueblo y saquearon el campa­men­to de Aram. Y fue *vendido *un seah de ha­rina fina por un shekel, y dos seah de cebada por un she­kel, conforme a la palabra de יהוה.
 **17** Y el rey comandó al oficial \(Lit.: al tercero\), que se apoyaba sobre su mano, sobre la puerta; pero lo pisoteó el pueblo en la puerta, y murió, como había hablado el hombre de Elohim, el cual habló cuando descendió el rey a él.
-**18** Y sucedió *que* cuando habló el hombre de Elohim al rey, diciendo: Dos seah de cebada por un shekel, y un seah de harina fina por un shekel, será como a *este* tiempo mañana, en la puerta de Shomrón;
-**19** y había respondido el oficial al hombre de Elohim, y dijo: He aquí, *aunque* יהוה hicie­ra ventanas en los cielos, ¿sucedería conforme a esta cosa? Y dijo *Elishá*: He aquí, tú *lo* verás con tus ojos, pero de allí no comerás.
+**18** Y sucedió _que_ cuando habló el hombre de Elohim al rey, diciendo: Dos seah de cebada por un shekel, y un seah de harina fina por un shekel, será como a _este_ tiempo mañana, en la puerta de Shomrón;
+**19** y había respondido el oficial al hombre de Elohim, y dijo: He aquí, _aunque_ יהוה hicie­ra ventanas en los cielos, ¿sucedería conforme a esta cosa? Y dijo _Elishá_: He aquí, tú _lo_ verás con tus ojos, pero de allí no comerás.
 **20** Y fue a él así, y lo pisoteó el pueblo en la puerta, y murió.
 
-*Devolución de los bienes de la shunamit*
+_Devolución de los bienes de la shunamit_
 
 **8**
 
 **1** Y Elishá habló a la mujer, que él había he­cho vivir a su hijo, diciendo: Levántate y vete, tú y tu casa, y reside en donde puedas residir, por­que ha llamado יהוה al hambre, y también vendrá a la tierra siete años.
-**2** Y se levantó la mujer e hizo conforme a la pa­la­bra del hombre de Elohim; y se fue ella y su casa, y residió en la tierra de los pelishtim siete años.__3* *__Y sucedió *que* al final de los siete años, vol­vió la mujer de la tierra de los pelishtim; y salió a clamar al rey por su casa y por su campo.
-**4** Y el rey hablaba con Gejazi, joven del hom­bre de Elohim, diciendo: Cuéntame, por favor, todas las grandes *cosas* que ha hecho Elishá.
-**5** Y sucedió *que* él *le *estaba contando al rey que había hecho vivir al muerto, y he aquí, la mujer que él había hecho vivir a su hijo clamó al rey por su casa y por su campo. Y dijo Geja­zi: Mi amo el rey, ¡esta es la mujer y este es su hijo que hizo vivir Elishá!
-**6** Y preguntó el rey a la mujer, y ella le contó. Y puso para ella el rey un eunuco, diciendo: Haz regresar todo lo que *era* de ella y todos los productos del campo desde el día *que* dejó la tierra y hasta ahora.
+**2** Y se levantó la mujer e hizo conforme a la pa­la­bra del hombre de Elohim; y se fue ella y su casa, y residió en la tierra de los pelishtim siete años.**3\* \***Y sucedió _que_ al final de los siete años, vol­vió la mujer de la tierra de los pelishtim; y salió a clamar al rey por su casa y por su campo.
+**4** Y el rey hablaba con Gejazi, joven del hom­bre de Elohim, diciendo: Cuéntame, por favor, todas las grandes _cosas_ que ha hecho Elishá.
+**5** Y sucedió _que_ él *le *estaba contando al rey que había hecho vivir al muerto, y he aquí, la mujer que él había hecho vivir a su hijo clamó al rey por su casa y por su campo. Y dijo Geja­zi: Mi amo el rey, ¡esta es la mujer y este es su hijo que hizo vivir Elishá!
+**6** Y preguntó el rey a la mujer, y ella le contó. Y puso para ella el rey un eunuco, diciendo: Haz regresar todo lo que _era_ de ella y todos los productos del campo desde el día _que_ dejó la tierra y hasta ahora.
 
-*Elishá en Damések*
+_Elishá en Damések_
 
-**7** Y vino Elishá *a* Damések. Y Ben Hadad, rey de Aram, estaba enfermo, y le dieron a cono­cer, diciendo: Ha venido el hombre de Elohim hasta aquí.
+**7** Y vino Elishá _a_ Damések. Y Ben Hadad, rey de Aram, estaba enfermo, y le dieron a cono­cer, diciendo: Ha venido el hombre de Elohim hasta aquí.
 **8** Y dijo el rey a Jazael: Toma en tu mano una ofrenda y ve al encuentro del hombre de Elo­him, y consultarás a יהוה por él, diciendo: “¿Viviré de esta enfermedad?”
 **9** Y fue Jazael a su encuentro, y tomó una o­fren­da en su mano y todo lo bueno de Damések, carga de cuarenta camellos; y vino y se paró delante de él, y dijo: Tu hijo Ben Hadad, rey de Aram, me ha enviado hacia ti, diciendo: “¿Vi­viré de esta enfermedad?”
 **10** Y le dijo Elishá: Ve, dile: “Ciertamente vi­virás \(Lit.: Viviendo, vivirás\)”; pero me ha mostrado יהוה que ciertamente morirá \(Lit.: muriendo mo­ri­rá\).
-**11** Y estableció su rostro y puso *sus ojos en él* hasta estar avergonzado; y lloró el hombre de Elohim.
+**11** Y estableció su rostro y puso _sus ojos en él_ hasta estar avergonzado; y lloró el hombre de Elohim.
 **12** Y dijo Jazael: ¿Por qué mi amo llora? Y él dijo: Porque sé que harás a los hijos de Israel maldad: sus fortalezas enviarás en fuego, sus jóvenes con la espada matarás, sus niños lanza­rás en pedazos, y sus embarazadas rasgarás.
-**13** Y dijo Jazael: Pero, ¿qué es tu siervo, un pe­­rro, que hará esta gran cosa? Y dijo Elishá: Me ha hecho ver יהוה a ti *como* rey sobre Aram.
+**13** Y dijo Jazael: Pero, ¿qué es tu siervo, un pe­­rro, que hará esta gran cosa? Y dijo Elishá: Me ha hecho ver יהוה a ti _como_ rey sobre Aram.
 **14** Y se fue de Elishá, y vino a su amo, y él le dijo: ¿Qué te dijo Elishá? Y él dijo: Me dijo: “Cier­­tamente vivirá \(Lit.: Viviendo, vivirá\)”.
-**15** Y sucedió *que* al día siguiente, tomó el pa­ño, y lo sumergió en agua y lo extendió sobre su rostro, y murió. Y reinó Jazael en su lugar.
+**15** Y sucedió _que_ al día siguiente, tomó el pa­ño, y lo sumergió en agua y lo extendió sobre su rostro, y murió. Y reinó Jazael en su lugar.
 
-*Reinados de Ioram y Ajazyáhu*
+_Reinados de Ioram y Ajazyáhu_
 
-**16** Y en el año cinco de Ioram, hijo de Ajab, rey de Israel, y *siendo* Iehoshafat rey de Iehu­dáh, reinó Iehoram, hijo de Iehoshafat, rey de Iehudáh.
+**16** Y en el año cinco de Ioram, hijo de Ajab, rey de Israel, y _siendo_ Iehoshafat rey de Iehu­dáh, reinó Iehoram, hijo de Iehoshafat, rey de Iehudáh.
 **17** Edad de treinta y dos años tenía en su rei­nar, y ocho años reinó en Ierushalem.
 **18** Y anduvo en el camino de los reyes de Is­rael, como hizo la casa de Ajab, porque la hija de Ajab era para él por mujer; y él hizo lo ma­lo en los ojos de יהוה.
 **19** Pero no quiso יהוה destruir a Iehudáh por causa de David su siervo, como le había dicho de darle una lámpara por sus hijos todos los días.
 **20** En sus días se rebeló Edom de debajo de la ma­no de Iehudáh, e hicieron reinar sobre ellos un rey.
-**21** Y pasó Ioram hacia Tzair, y todos los carros con él. Y sucedió *que* él se levantó de noche y golpeó a Edom que lo había rodeado y a los je­fes de los carros, y huyó el pueblo a sus tien­das.
+**21** Y pasó Ioram hacia Tzair, y todos los carros con él. Y sucedió _que_ él se levantó de noche y golpeó a Edom que lo había rodeado y a los je­fes de los carros, y huyó el pueblo a sus tien­das.
 **22** Y se rebeló Edom de debajo de la mano de Iehudáh hasta este día. Entonces se rebeló Lib­nah en aquel tiempo.
 **23** Y el resto de los actos de Ioram, y todo lo que hizo, ¿no están escritos en el rollo de las Palabras de los Días de los reyes de Iehudáh?
 **24** Y descansó Ioram con sus padres y fue en­te­rrado con sus padres en la ciudad de David. Y reinó Ajazyáhu, su hijo, en su lugar.
 **25** En el año doce, año de Ioram, hijo de Ajab, rey de Israel, reinó Ajazyáhu, hijo de Iehoram, rey de Iehudáh.
-**26** Edad de veintidós años *tenía* Ajazyáhu en su reinar, y un año reinó en Ierushalem. Y el nombre de su madre *era* Ataliáhu, hija de Om­ri, rey de Israel.
-**27** Y anduvo en el camino de la casa de Ajab, e hizo lo malo en los ojos de יהוה, como la casa de Ajab, porque yerno de la casa de Ajab él *era*.
-**28** Y fue con Ioram, hijo de Ajab, a la guerra contra Jazael, rey de Aram, en Ramot Guilad; e hirieron los *aramim* \(arameos\) a Ioram.
-**29** Y regresó el rey Ioram para ser sanado en Iz­reel de las heridas que habían herido los aramim en Ramáh, cuando luchó con Jazael, rey de Aram. Y Ajazyáhu, hijo de Iehoram, rey de Iehudáh, descendió para encontrarse con Ioram, hijo de Ajab, en Izreel, porque enfermo *estaba* él.
+**26** Edad de veintidós años _tenía_ Ajazyáhu en su reinar, y un año reinó en Ierushalem. Y el nombre de su madre _era_ Ataliáhu, hija de Om­ri, rey de Israel.
+**27** Y anduvo en el camino de la casa de Ajab, e hizo lo malo en los ojos de יהוה, como la casa de Ajab, porque yerno de la casa de Ajab él _era_.
+**28** Y fue con Ioram, hijo de Ajab, a la guerra contra Jazael, rey de Aram, en Ramot Guilad; e hirieron los _aramim_ \(arameos\) a Ioram.
+**29** Y regresó el rey Ioram para ser sanado en Iz­reel de las heridas que habían herido los aramim en Ramáh, cuando luchó con Jazael, rey de Aram. Y Ajazyáhu, hijo de Iehoram, rey de Iehudáh, descendió para encontrarse con Ioram, hijo de Ajab, en Izreel, porque enfermo _estaba_ él.
 
-*Iehú nombrado rey de Israel*
+_Iehú nombrado rey de Israel_
 
 **9**
 
@@ -790,7 +790,7 @@ Hallazgo del rollo de la Torah
 **11** Y sucedió que cuando oyó el rey las pa­la­bras del rollo de la Torah, rasgó sus vestidos.
 **12** Y ordenó el rey a Jilkiyah el sacerdote, a Ajikam, hijo de Shafán, a Ajbor, hijo de Mica­iáh, a Shafán el escriba y a Asaiáh, siervo del rey, diciendo:
 **13** Vayan, consulten a יהוה por mí y por el pueblo y por todo Iehudáh sobre las palabras de este rollo que ha sido hallado, porque gran­de es la ira \(Lit.: el calor\) de יהוה que se ha en­cendido contra nosotros, porque no han es­cuchado nuestros padres a las palabras de este rollo, para hacer conforme a todo lo escrito so­bre nosotros.
-**14** Y fue Jilkiyahu el sacerdote, y Ajikam, Aj­bor, Shafán y Asaiáh, a Juldáh, la profetisa \(heb.: *neviáh*\), mu­jer de Shalum, hijo de Tikváh, hijo de Jar­jás, guardia de las vestiduras; y ella habitaba en Ierushalem en el segundo sector, y hablaron a ella.
+**14** Y fue Jilkiyahu el sacerdote, y Ajikam, Aj­bor, Shafán y Asaiáh, a Juldáh, la profetisa \(heb.: _neviáh_\), mu­jer de Shalum, hijo de Tikváh, hijo de Jar­jás, guardia de las vestiduras; y ella habitaba en Ierushalem en el segundo sector, y hablaron a ella.
 **15** Y ella les dijo: Así dice יהוה, Elohim de Israel: “Digan al hombre que los ha enviado a Mí:
 **16** ‘Así dice יהוה: “He aquí, Yo haré venir el mal hacia este lugar y sobre sus habitantes, todas las palabras del rollo que ha leído el rey de Iehudáh.
 **17** Porque me han abandonado y han que­mado incienso a otros dioses para hacer­me enfurecer con toda la obra de sus manos, se ha encendido mi ira en este lugar, y no se apa­ga­rá” ’ ”.
