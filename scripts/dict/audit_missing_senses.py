@@ -15,6 +15,7 @@ Usage:
     cd ~/davar && python -m scripts.dict.audit_missing_senses --fix --dry-run
 """
 
+from config import config
 import json
 import sys
 from pathlib import Path
@@ -22,7 +23,6 @@ from collections import defaultdict
 import xml.etree.ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).parent))
-from config import config
 
 LI_NS = {'li': 'http://openscriptures.github.com/morphhb/namespace'}
 BDB_NS = {'bdb': 'http://openscriptures.github.com/morphhb/namespace'}
@@ -150,13 +150,16 @@ def fix_entry(strong, missing_glosses, bdb_root):
         gloss = entry['gloss']
 
         # Try to get richer definitions from BDB XML
-        bdb_entry = find_bdb_entry_by_id(bdb_root, bdb_id) if bdb_root else None
-        bdb_defs = extract_definitions_from_bdb_entry(bdb_entry) if bdb_entry else []
+        bdb_entry = find_bdb_entry_by_id(
+            bdb_root, bdb_id) if bdb_root else None
+        bdb_defs = extract_definitions_from_bdb_entry(
+            bdb_entry) if bdb_entry else []
 
         # Use BDB definitions if available, otherwise fall back to LI gloss
         defs_to_add = bdb_defs if bdb_defs else [gloss]
 
-        existing_texts = {d.get('text_en', '').lower().strip() for d in definitions}
+        existing_texts = {d.get('text_en', '').lower().strip()
+                          for d in definitions}
 
         for def_text in defs_to_add:
             if not def_text or len(def_text.strip()) <= 1:
@@ -219,7 +222,8 @@ def main():
         non_propername = [e for e in bdb_entries if e['pos'] != 'Np']
         if len(non_propername) <= 1:
             # Either 0-1 non-proper-name senses — check if there are multiple with glosses
-            meaningful = [e for e in bdb_entries if e['gloss'] and e['pos'] != 'Np']
+            meaningful = [e for e in bdb_entries if e['gloss']
+                          and e['pos'] != 'Np']
             if len(meaningful) <= 1:
                 continue
 
@@ -249,33 +253,41 @@ def main():
                 'missing': missing_glosses,
             })
 
-    missing.sort(key=lambda x: int(x['strong'][1:]) if x['strong'][1:].isdigit() else 0)
+    missing.sort(key=lambda x: int(x['strong'][1:])
+                 if x['strong'][1:].isdigit() else 0)
 
     print(f"\n{'=' * 80}")
-    print(f"RESULTS: {len(missing)} entries with potentially missing BDB senses")
+    print(
+        f"RESULTS: {len(missing)} entries with potentially missing BDB senses")
     print(f"{'=' * 80}\n")
 
     fixed_count = 0
     for item in missing:
-        mg = ', '.join(f'"{e["gloss"]}" (bdb={e["bdb_id"]})' for e in item['missing'])
+        mg = ', '.join(
+            f'"{e["gloss"]}" (bdb={e["bdb_id"]})' for e in item['missing'])
         ours = ', '.join(f'"{g}"' for g in item['our_glosses'][:5]) or '(none)'
         print(f"  {item['strong']} {item['lemma']}")
         print(f"    Our glosses: {ours}  ({item['our_defs']} total defs)")
         print(f"    Missing from LI: {mg}")
 
         if fix_mode:
-            updated_data, filepath = fix_entry(item['strong'], item['missing'], bdb_root)
+            updated_data, filepath = fix_entry(
+                item['strong'], item['missing'], bdb_root)
             if updated_data and filepath:
                 new_count = len(updated_data['definitions'])
                 if dry_run:
-                    print(f"    [DRY RUN] Would update {filepath.name}: {item['our_defs']} -> {new_count} defs")
+                    print(
+                        f"    [DRY RUN] Would update {filepath.name}: {item['our_defs']} -> {new_count} defs")
                 else:
                     with open(filepath, 'w', encoding='utf-8') as f:
-                        json.dump(updated_data, f, ensure_ascii=False, indent=2)
-                    print(f"    ✅ Updated {filepath.name}: {item['our_defs']} -> {new_count} defs")
+                        json.dump(updated_data, f,
+                                  ensure_ascii=False, indent=2)
+                    print(
+                        f"    ✅ Updated {filepath.name}: {item['our_defs']} -> {new_count} defs")
                 fixed_count += 1
             else:
-                print(f"    ⏭️  No new definitions to add (already covered or BDB empty)")
+                print(
+                    f"    ⏭️  No new definitions to add (already covered or BDB empty)")
 
         print()
 
