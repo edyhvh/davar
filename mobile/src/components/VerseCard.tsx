@@ -121,6 +121,8 @@ const createStyles = (
     },
     hebrewWordQumran: {
       fontFamily: typography.families.hebrewQumran,
+      fontSize: typography.sizes.hebrewVerseMedium * hebrewScale * 1.9,
+      lineHeight: typography.sizes.hebrewVerseMedium * hebrewScale * 1.5,
       color: colors.qumranText,
     },
     hebrewWordPressable: {
@@ -132,9 +134,6 @@ const createStyles = (
     },
     wordHintHighlight: {
       borderWidth: 0,
-    },
-    qumranHighlight: {
-      backgroundColor: `${colors.accentCopper}26`,
     },
   });
 
@@ -220,10 +219,7 @@ export const VerseCard = ({
               ? null
               : getPrefixSegments(displayText, word.prefixes);
 
-          const wordStyles = [
-            styles.hebrewWordPressable,
-            showQumran && word.hasQumranVariant && styles.qumranHighlight,
-          ];
+          const wordStyles = [styles.hebrewWordPressable];
 
           const renderWordContent = () => {
             if (prefixSegments?.prefixes?.length) {
