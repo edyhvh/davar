@@ -325,7 +325,7 @@ export const VerseDetailContent = () => {
     // Close navigation sheet if it's open
     navigationSheetRef.current?.close();
     setSelectedWord(word);
-    sheetRef.current?.expand();
+    sheetRef.current?.snapToIndex(0);
   }, []);
 
   const handleBackgroundPress = useCallback(() => {
