@@ -6,7 +6,13 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  useWindowDimensions,
+} from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import BottomSheet, {
   BottomSheetBackdrop,
@@ -165,6 +171,9 @@ const createStyles = (
       letterSpacing: 1.5,
       textAlign: "center",
       marginBottom: spacing[3],
+    },
+    sectionLabelBold: {
+      fontWeight: "700",
     },
     meaningsText: {
       fontFamily: typography.families.latinMeaning,
@@ -406,6 +415,7 @@ const WordAnalysisBottomSheetComponent = (
   useImperativeHandle(ref, () => sheetRef.current);
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const insets = useSafeAreaInsets();
+  const { height: screenHeight } = useWindowDimensions();
   const hebrewFontScale = useAppStore(
     (state: AppState) => state.hebrewFontScale,
   );
@@ -416,6 +426,14 @@ const WordAnalysisBottomSheetComponent = (
     () => createStyles(colors, hebrewFontScale),
     [colors, hebrewFontScale],
   );
+  const snapPoints = useMemo(() => {
+    const minHeight = Math.max(0, screenHeight * 0.5);
+    const maxHeight = Math.max(0, screenHeight * 0.8);
+    if (maxHeight <= minHeight) {
+      return [minHeight];
+    }
+    return [minHeight, maxHeight];
+  }, [screenHeight]);
   const [activeTab, setActiveTab] = useState<TabType>("masoretic");
   const [lexiconEntry, setLexiconEntry] = useState<LexiconResponse | null>(
     null,
@@ -799,7 +817,8 @@ const WordAnalysisBottomSheetComponent = (
     <BottomSheet
       ref={sheetRef}
       index={-1}
-      snapPoints={["50%"]}
+      snapPoints={snapPoints}
+      enableDynamicSizing={false}
       enablePanDownToClose
       backgroundStyle={
         hasDssVariant ? styles.sheetBackgroundDss : styles.sheetBackground
@@ -917,7 +936,7 @@ const WordAnalysisBottomSheetComponent = (
             {activeTab === "masoretic" ? (
               <>
                 {/* Meanings section */}
-                <Text style={styles.sectionLabel}>
+                <Text style={[styles.sectionLabel, styles.sectionLabelBold]}>
                   {t("wordCard.meanings")}
                 </Text>
                 {isLoading ? (
@@ -938,7 +957,7 @@ const WordAnalysisBottomSheetComponent = (
 
                 {word?.prefixes?.length ? (
                   <View style={styles.prefixesSection}>
-                    <Text style={styles.sectionLabel}>
+                    <Text style={[styles.sectionLabel, styles.sectionLabelBold]}>
                       {t("wordCard.preposition")}
                     </Text>
                     {word.prefixes.map((prefix, index) => {
@@ -982,7 +1001,9 @@ const WordAnalysisBottomSheetComponent = (
 
                 {/* Root section */}
                 <View style={styles.rootSection}>
-                  <Text style={styles.sectionLabel}>{t("wordCard.root")}</Text>
+                  <Text style={[styles.sectionLabel, styles.sectionLabelBold]}>
+                    {t("wordCard.root")}
+                  </Text>
                   {lexiconEntry?.root || word?.root ? (
                     <>
                       <Text style={styles.rootHebrew}>
@@ -1025,7 +1046,7 @@ const WordAnalysisBottomSheetComponent = (
               </>
             ) : activeTab === "qumran" ? (
               <>
-                <Text style={styles.sectionLabel}>
+                <Text style={[styles.sectionLabel, styles.sectionLabelBold]}>
                   {t("wordCard.meanings")}
                 </Text>
                 {isDssLoading ? (
@@ -1052,7 +1073,9 @@ const WordAnalysisBottomSheetComponent = (
                 </Text>
 
                 <View style={styles.rootSection}>
-                  <Text style={styles.sectionLabel}>{t("wordCard.root")}</Text>
+                  <Text style={[styles.sectionLabel, styles.sectionLabelBold]}>
+                    {t("wordCard.root")}
+                  </Text>
                   <Text style={[styles.rootHebrew, styles.qumranText]}>
                     {(
                       dssLexiconEntry?.root ??
