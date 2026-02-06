@@ -76,9 +76,11 @@ export function FullChapterView({
       // Remove "/" separators from display
       displayText = displayText.replace(/\//g, "");
 
-      const normalizedDisplay = normalizeForMatch(displayText);
+      // Always compare against the original Masoretic word text, not the
+      // display text which may be a DSS variant.
+      const normalizedWord = normalizeForMatch(word.text);
       const isSelected =
-        Boolean(normalizedSelected) && normalizedSelected === normalizedDisplay;
+        Boolean(normalizedSelected) && normalizedSelected === normalizedWord;
 
       const prefixSegments = word.prefixes?.length
         ? getPrefixSegments(displayText, word.prefixes)

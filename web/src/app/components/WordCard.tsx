@@ -390,7 +390,7 @@ export function WordCard({
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "11px",
-              color: isQumranTab ? qumranTextColor : "var(--text-secondary)",
+              color: "var(--text-secondary)",
               textTransform: "uppercase",
               letterSpacing: "0.12em",
               fontWeight: 500,
@@ -407,7 +407,7 @@ export function WordCard({
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "11px",
-              color: isQumranTab ? qumranTextColor : "var(--text-secondary)",
+              color: "var(--text-secondary)",
               textTransform: "uppercase",
               letterSpacing: "0.15em",
               fontWeight: 500,
@@ -753,7 +753,7 @@ export function WordCard({
                 fontSize: "18px",
                 lineHeight: 1.5,
                 fontWeight: 400,
-                color: qumranTextColor,
+                color: "var(--text-primary)",
               }}
               className="dark:text-[var(--text-secondary)]"
             >
@@ -795,7 +795,7 @@ export function WordCard({
                 fontSize: "15px",
                 lineHeight: 1.6,
                 fontWeight: 400,
-                color: qumranTextColor,
+                color: "var(--text-primary)",
               }}
               className="dark:text-[var(--text-secondary)]"
             >
@@ -826,7 +826,7 @@ export function WordCard({
                         fontFamily: "'Cardo', serif",
                         fontSize: "48px",
                         direction: "rtl",
-                        color: qumranTextColor,
+                        color: "var(--text-hebrew)",
                         fontWeight: 600,
                         lineHeight: 1.4,
                       }}
@@ -858,7 +858,7 @@ export function WordCard({
                       style={{
                         fontFamily: "'Inter', sans-serif",
                         fontSize: "11px",
-                        color: qumranTextColor,
+                        color: "var(--text-secondary)",
                         textTransform: "uppercase",
                         letterSpacing: "0.12em",
                         fontWeight: 500,
@@ -874,7 +874,7 @@ export function WordCard({
                       style={{
                         fontFamily: "'Inter', sans-serif",
                         fontSize: "11px",
-                        color: qumranTextColor,
+                        color: "var(--text-secondary)",
                         textTransform: "uppercase",
                         letterSpacing: "0.12em",
                         fontWeight: 500,
@@ -895,7 +895,7 @@ export function WordCard({
                           fontSize: "15px",
                           lineHeight: 1.5,
                           marginTop: "12px",
-                          color: qumranTextColor,
+                          color: "var(--text-primary)",
                         }}
                         className="dark:text-[var(--text-secondary)]"
                       >
