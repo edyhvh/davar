@@ -437,7 +437,9 @@ export const VerseDetailContent = () => {
                 hebrewLabel={bookMeta?.hebrew_name ?? ""}
                 chapter={verse?.chapter ?? chapter}
                 onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
-                onChapterPress={() => navigationSheetRef.current?.snapToIndex(0)}
+                onChapterPress={() =>
+                  navigationSheetRef.current?.snapToIndex(0)
+                }
               />
             </Animated.View>
           </View>
