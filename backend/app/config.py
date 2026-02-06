@@ -21,7 +21,11 @@ class Settings(BaseSettings):
     api_key: str = ""
 
     # CORS Settings
-    allowed_origins: List[str] = ["http://localhost:2221"]
+    allowed_origins: List[str] = [
+        "http://localhost:2221",
+        "http://localhost:3000",
+        "http://localhost:3002",
+    ]
 
     @field_validator("allowed_origins", mode="before")
     @classmethod
