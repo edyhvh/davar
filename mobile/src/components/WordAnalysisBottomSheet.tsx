@@ -957,7 +957,9 @@ const WordAnalysisBottomSheetComponent = (
 
                 {word?.prefixes?.length ? (
                   <View style={styles.prefixesSection}>
-                    <Text style={[styles.sectionLabel, styles.sectionLabelBold]}>
+                    <Text
+                      style={[styles.sectionLabel, styles.sectionLabelBold]}
+                    >
                       {t("wordCard.preposition")}
                     </Text>
                     {word.prefixes.map((prefix, index) => {
