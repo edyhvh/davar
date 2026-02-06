@@ -1118,20 +1118,21 @@ export default function App() {
                       : undefined;
                     const dssCommentary = dssVariantForCard
                       ? language === "es"
-                        ? dssVariantForCard.comment_v2_es ??
+                        ? (dssVariantForCard.comment_v2_es ??
                           dssVariantForCard.comment_v2_en ??
-                          dssVariantForCard.comment_v2_he
+                          dssVariantForCard.comment_v2_he)
                         : language === "he"
-                          ? dssVariantForCard.comment_v2_he ??
+                          ? (dssVariantForCard.comment_v2_he ??
                             dssVariantForCard.comment_v2_en ??
-                            dssVariantForCard.comment_v2_es
-                          : dssVariantForCard.comment_v2_en ??
+                            dssVariantForCard.comment_v2_es)
+                          : (dssVariantForCard.comment_v2_en ??
                             dssVariantForCard.comment_v2_es ??
-                            dssVariantForCard.comment_v2_he
+                            dssVariantForCard.comment_v2_he)
                       : undefined;
                     const dssMeanings =
-                      dssAnalysisForCard?.definitions?.map((item) => item.text) ??
-                      [];
+                      dssAnalysisForCard?.definitions?.map(
+                        (item) => item.text,
+                      ) ?? [];
                     const hasQumranVariant = Boolean(dssVariantForCard);
 
                     return (
@@ -1171,7 +1172,7 @@ export default function App() {
                             qumranCommentary={dssCommentary}
                             qumranRoot={dssAnalysisForCard?.root}
                             qumranRootTransliteration={
-                              language === 'en' 
+                              language === "en"
                                 ? dssAnalysisForCard?.root_translit_en
                                 : dssAnalysisForCard?.root_translit_es
                             }
@@ -1181,14 +1182,16 @@ export default function App() {
                                 .filter(Boolean)
                                 .join(", ") || undefined
                             }
-                            qumranRootStrongNumber={dssAnalysisForCard?.root_strong}
+                            qumranRootStrongNumber={
+                              dssAnalysisForCard?.root_strong
+                            }
                             hasQumranVariant={hasQumranVariant}
                             showQumran={showQumran}
                             transliteration={wordTransliteration}
                             meanings={wordMeanings}
                             root={wordAnalysisForCard?.root}
                             rootTransliteration={
-                              language === 'en'
+                              language === "en"
                                 ? wordAnalysisForCard?.root_translit_en
                                 : wordAnalysisForCard?.root_translit_es
                             }
@@ -1269,16 +1272,16 @@ export default function App() {
               ) ?? null;
             const dssCommentary = dssVariantForCard
               ? language === "es"
-                ? dssVariantForCard.comment_v2_es ??
+                ? (dssVariantForCard.comment_v2_es ??
                   dssVariantForCard.comment_v2_en ??
-                  dssVariantForCard.comment_v2_he
+                  dssVariantForCard.comment_v2_he)
                 : language === "he"
-                  ? dssVariantForCard.comment_v2_he ??
+                  ? (dssVariantForCard.comment_v2_he ??
                     dssVariantForCard.comment_v2_en ??
-                    dssVariantForCard.comment_v2_es
-                  : dssVariantForCard.comment_v2_en ??
+                    dssVariantForCard.comment_v2_es)
+                  : (dssVariantForCard.comment_v2_en ??
                     dssVariantForCard.comment_v2_es ??
-                    dssVariantForCard.comment_v2_he
+                    dssVariantForCard.comment_v2_he)
               : undefined;
             const dssMeanings =
               selectedDssAnalysis?.definitions?.map((item) => item.text) ?? [];
@@ -1292,10 +1295,10 @@ export default function App() {
               : undefined;
 
             return (
-          <WordCard
-            word={selectedWordAnalysis?.hebrew ?? selectedWord.text}
-            wordFromVerse={selectedWord.text}
-            strongNumber={selectedWordAnalysis?.strong_number}
+              <WordCard
+                word={selectedWordAnalysis?.hebrew ?? selectedWord.text}
+                wordFromVerse={selectedWord.text}
+                strongNumber={selectedWordAnalysis?.strong_number}
                 qumranWord={dssVariantForCard?.dss_word}
                 qumranStrong={dssVariantForCard?.dss_strong}
                 qumranTransliteration={qumranTransliteration}
@@ -1303,7 +1306,7 @@ export default function App() {
                 qumranCommentary={dssCommentary}
                 qumranRoot={selectedDssAnalysis?.root}
                 qumranRootTransliteration={
-                  language === 'en'
+                  language === "en"
                     ? selectedDssAnalysis?.root_translit_en
                     : selectedDssAnalysis?.root_translit_es
                 }
@@ -1316,36 +1319,36 @@ export default function App() {
                 qumranRootStrongNumber={selectedDssAnalysis?.root_strong}
                 hasQumranVariant={hasQumranVariant}
                 showQumran={showQumran}
-            transliteration={getTransliterationForLanguage(selectedWord)}
-            meanings={wordMeanings}
-            root={selectedWordAnalysis?.root}
-            rootTransliteration={
-              language === 'en'
-                ? selectedWordAnalysis?.root_translit_en
-                : selectedWordAnalysis?.root_translit_es
-            }
-            rootMeaning={
-              selectedWordAnalysis?.root_definitions
-                ?.map((item) => item.text)
-                .filter(Boolean)
-                .join(", ") || undefined
-            }
-            rootStrongNumber={selectedWordAnalysis?.root_strong}
-            prefixes={selectedWord.prefixes}
-            language={language}
-            showNikud={showNikud}
-            instances={(selectedWordAnalysis?.instances ?? []).map(
-              (instance) =>
-                typeof instance === "string"
-                  ? { verse: instance, text: "" }
-                  : instance,
-            )}
-            onInstanceClick={handleNavigateToVerse}
-            tabResetKey={wordCardTabKey}
-            onClose={() => setSelectedWord(null)}
-            isLoading={!selectedWordAnalysis}
+                transliteration={getTransliterationForLanguage(selectedWord)}
+                meanings={wordMeanings}
+                root={selectedWordAnalysis?.root}
+                rootTransliteration={
+                  language === "en"
+                    ? selectedWordAnalysis?.root_translit_en
+                    : selectedWordAnalysis?.root_translit_es
+                }
+                rootMeaning={
+                  selectedWordAnalysis?.root_definitions
+                    ?.map((item) => item.text)
+                    .filter(Boolean)
+                    .join(", ") || undefined
+                }
+                rootStrongNumber={selectedWordAnalysis?.root_strong}
+                prefixes={selectedWord.prefixes}
+                language={language}
+                showNikud={showNikud}
+                instances={(selectedWordAnalysis?.instances ?? []).map(
+                  (instance) =>
+                    typeof instance === "string"
+                      ? { verse: instance, text: "" }
+                      : instance,
+                )}
+                onInstanceClick={handleNavigateToVerse}
+                tabResetKey={wordCardTabKey}
+                onClose={() => setSelectedWord(null)}
+                isLoading={!selectedWordAnalysis}
                 isQumranLoading={Boolean(isDssAnalysisLoading)}
-          />
+              />
             );
           })()}
         </BottomSheet>

@@ -163,7 +163,7 @@ export function WordCard({
     ? displayedData.qumranStrong
     : strongNumber;
   const activeTransliteration = isQumranTab
-    ? displayedData.qumranTransliteration ?? displayedData.transliteration
+    ? (displayedData.qumranTransliteration ?? displayedData.transliteration)
     : displayedData.transliteration;
   const qumranTextColor = "var(--qumran-text)";
   const masoreticWordFontSizePx = 64;

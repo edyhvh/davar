@@ -113,7 +113,8 @@ class LexiconService:
                 root_entry = self.dictionary_loader.get_lexicon_entry(root_ref)
                 if root_entry:
                     root_strong = root_ref  # The root_ref is the Strong's number of the root
-                    root = root_entry.get('lemma') or root_entry.get('hebrew', '')
+                    root = root_entry.get(
+                        'lemma') or root_entry.get('hebrew', '')
 
         # Get root definitions if we have a root_strong
         root_definitions = None
@@ -123,16 +124,19 @@ class LexiconService:
             root_entry = self.dictionary_loader.get_lexicon_entry(root_strong)
             if root_entry:
                 # Extract root transliterations
-                root_translit_en = root_entry.get('translit_en') or root_entry.get('transliteration')
-                root_translit_es = root_entry.get('translit_es') or root_entry.get('transliteration')
-                
+                root_translit_en = root_entry.get(
+                    'translit_en') or root_entry.get('transliteration')
+                root_translit_es = root_entry.get(
+                    'translit_es') or root_entry.get('transliteration')
+
                 root_definitions = []
                 for def_item in root_entry.get('definitions', []):
                     _append_definition_items(
                         root_definitions, def_item, 'strong')
 
                 # De-duplicate root definitions while preserving order
-                root_definitions = self._deduplicate_definitions(root_definitions)
+                root_definitions = self._deduplicate_definitions(
+                    root_definitions)
 
         # Get occurrences count
         occurrences_count = (lexicon_entry or {}).get('occurrences_count', 0)
