@@ -11,6 +11,7 @@ import {
   stripMeteg,
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
+import { useTranslation } from "../hooks/useTranslation";
 
 interface FullChapterViewProps {
   verses: VerseResponse[];
@@ -41,9 +42,9 @@ export function FullChapterView({
   showNikud = true,
   showCantillation = true,
 }: FullChapterViewProps) {
+  const { t } = useTranslation(language);
   const shouldShowSefer = seferMode && hebrewOnly;
-  const spanishMissingTranslation =
-    "Por el momento no contamos con traducción al español de este texto, estamos trabajando en ello...";
+  const spanishMissingTranslation = t("verse.missingSpanishTranslation");
 
   const normalizeForMatch = (text: string) => {
     let normalized = stripNikud(text);
@@ -102,7 +103,9 @@ export function FullChapterView({
                 <span
                   style={{ color: "var(--text-secondary)" }}
                   className="cursor-pointer hover:opacity-80"
-                  title={`Prefix: ${word.prefixes?.join(", ")}`}
+                  title={t("verse.prefixLabel", {
+                    prefix: word.prefixes?.join(", ") ?? "",
+                  })}
                 >
                   {prefixSegments.prefixes.join("")}
                 </span>

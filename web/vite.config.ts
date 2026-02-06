@@ -18,6 +18,9 @@ export default defineConfig({
       },
     },
     middlewareMode: false,
+    fs: {
+      allow: [path.resolve(__dirname, "..")],
+    },
   },
   resolve: {
     alias: {

@@ -29,6 +29,7 @@ import {
   type DisplayVerse,
 } from "@/src/services/scripture";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 type TabPressEvent = {
   preventDefault: () => void;
@@ -137,6 +138,7 @@ export const VerseDetailContent = () => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const { t } = useTranslation();
   const { height: screenHeight } = useWindowDimensions();
   const insets = useSafeAreaInsets();
   const tabBarHeight = useBottomTabBarHeight();
@@ -343,7 +345,7 @@ export const VerseDetailContent = () => {
         }
       } catch (error) {
         if (!isMounted) return;
-        setErrorMessage("Unable to load verses.");
+        setErrorMessage(t("errors.loadVerses"));
       } finally {
         if (isMounted) setIsLoading(false);
       }
@@ -361,7 +363,7 @@ export const VerseDetailContent = () => {
         <View style={styles.container}>
           <View style={styles.navigationRow}>
             <BookChapterPill
-              bookLabel={bookMeta?.name ?? "Loading..."}
+              bookLabel={bookMeta?.name ?? t("common.loading")}
               hebrewLabel={bookMeta?.hebrew_name ?? ""}
               chapter={verse?.chapter ?? chapter}
               onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
@@ -375,7 +377,7 @@ export const VerseDetailContent = () => {
               <Text
                 style={{ textAlign: "center", color: colors.textSecondary }}
               >
-                Loading verses...
+                {t("verse.loading")}
               </Text>
             </View>
           ) : null}

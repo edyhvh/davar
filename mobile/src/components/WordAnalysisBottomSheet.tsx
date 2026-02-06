@@ -19,6 +19,7 @@ import {
 } from "@/src/utils/hebrew";
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 type PrefixResponse = {
   id: string;
@@ -401,6 +402,7 @@ export const WordAnalysisBottomSheet = ({
     (state: AppState) => state.hebrewFontScale,
   );
   const language = useAppStore((state: AppState) => state.language);
+  const { t } = useTranslation();
   const colors = getColors(themeMode);
   const styles = useMemo(
     () => createStyles(colors, hebrewFontScale),
@@ -680,7 +682,7 @@ export const WordAnalysisBottomSheet = ({
       word.morph?.includes("Np") ||
       (!word.meanings?.length && !word.gloss)
     ) {
-      return ["Proper Name"];
+      return [t("wordCard.properName")];
     } else {
       const meanings = word.meanings?.length ? word.meanings : [word.gloss];
       // If user language is not Hebrew, prefer Latin-script meanings to avoid mixing languages
@@ -701,7 +703,7 @@ export const WordAnalysisBottomSheet = ({
 
     const formatted = rawMeanings.map((item) => formatMeaning(item));
     return formatted.length ? formatted : ["—"];
-  }, [lexiconEntry, word, language]);
+  }, [lexiconEntry, word, language, t]);
 
   const dssMeaningsList = useMemo(() => {
     const normalizeForDisplay = (t: string) =>
@@ -726,7 +728,10 @@ export const WordAnalysisBottomSheet = ({
   }, [dssLexiconEntry]);
 
   const formatRootMeaningText = (text: string) => {
-    if (text === "ALREADY ROOT" || text === "—") {
+    if (text === "ALREADY ROOT") {
+      return t("wordCard.alreadyRoot");
+    }
+    if (text === "—") {
       return text;
     }
     const cleaned = text.replace(/^[-–—]\s*/, "").trim();
@@ -802,7 +807,7 @@ export const WordAnalysisBottomSheet = ({
         {!word ? (
           <View style={styles.headerSection}>
             <Text style={styles.emptyText}>
-              Select a word to see its analysis
+              {t("wordCard.selectWordPrompt")}
             </Text>
           </View>
         ) : (
@@ -824,7 +829,9 @@ export const WordAnalysisBottomSheet = ({
               ) : null}
               {lexiconEntry?.occurrences_count && !isQumranTab && (
                 <Text style={styles.occurrencesText}>
-                  Appears {lexiconEntry.occurrences_count} times
+                  {t("wordCard.appearsCount", {
+                    count: lexiconEntry.occurrences_count,
+                  })}
                 </Text>
               )}
               {activeStrongNumber ? (
@@ -855,7 +862,7 @@ export const WordAnalysisBottomSheet = ({
                       activeTab === "qumran" && styles.toggleTextActive,
                     ]}
                   >
-                    Qumran
+                    {t("wordCard.qumran")}
                   </Text>
                 </Pressable>
               ) : null}
@@ -872,7 +879,7 @@ export const WordAnalysisBottomSheet = ({
                     activeTab === "masoretic" && styles.toggleTextActive,
                   ]}
                 >
-                  {hasDssVariant ? "Masoretic" : "Meanings"}
+                  {hasDssVariant ? t("wordCard.masoretic") : t("wordCard.meanings")}
                 </Text>
               </Pressable>
               <Pressable
@@ -888,7 +895,7 @@ export const WordAnalysisBottomSheet = ({
                     activeTab === "instances" && styles.toggleTextActive,
                   ]}
                 >
-                  Instances
+                  {t("wordCard.instances")}
                 </Text>
               </Pressable>
             </View>
@@ -897,9 +904,11 @@ export const WordAnalysisBottomSheet = ({
             {activeTab === "masoretic" ? (
               <>
                 {/* Meanings section */}
-                <Text style={styles.sectionLabel}>Meanings</Text>
+                <Text style={styles.sectionLabel}>{t("wordCard.meanings")}</Text>
                 {isLoading ? (
-                  <Text style={styles.emptyText}>Loading definitions...</Text>
+                  <Text style={styles.emptyText}>
+                    {t("wordCard.loadingDefinitions")}
+                  </Text>
                 ) : null}
                 <View style={styles.meaningsList}>
                   {meaningsList.map((meaning, index) => (
@@ -914,7 +923,9 @@ export const WordAnalysisBottomSheet = ({
 
                 {word?.prefixes?.length ? (
                   <View style={styles.prefixesSection}>
-                    <Text style={styles.sectionLabel}>Preposition</Text>
+                    <Text style={styles.sectionLabel}>
+                      {t("wordCard.preposition")}
+                    </Text>
                     {word.prefixes.map((prefix, index) => {
                       const entry = prefixEntries[prefix];
                       const meanings =
@@ -956,7 +967,7 @@ export const WordAnalysisBottomSheet = ({
 
                 {/* Root section */}
                 <View style={styles.rootSection}>
-                  <Text style={styles.sectionLabel}>Root</Text>
+                  <Text style={styles.sectionLabel}>{t("wordCard.root")}</Text>
                   {lexiconEntry?.root || word?.root ? (
                     <>
                       <Text style={styles.rootHebrew}>
@@ -991,15 +1002,19 @@ export const WordAnalysisBottomSheet = ({
                         )}
                     </>
                   ) : (
-                    <Text style={styles.rootMeaning}>ALREADY ROOT</Text>
+                    <Text style={styles.rootMeaning}>
+                      {t("wordCard.alreadyRoot")}
+                    </Text>
                   )}
                 </View>
               </>
             ) : activeTab === "qumran" ? (
               <>
-                <Text style={styles.sectionLabel}>Meanings</Text>
+                <Text style={styles.sectionLabel}>{t("wordCard.meanings")}</Text>
                 {isDssLoading ? (
-                  <Text style={styles.emptyText}>Loading definitions...</Text>
+                  <Text style={styles.emptyText}>
+                    {t("wordCard.loadingDefinitions")}
+                  </Text>
                 ) : null}
                 <View style={styles.meaningsList}>
                   {dssMeaningsList.map((meaning, index) => (
@@ -1012,13 +1027,13 @@ export const WordAnalysisBottomSheet = ({
                   ))}
                 </View>
 
-                <Text style={styles.sectionLabel}>Commentary</Text>
+                <Text style={styles.sectionLabel}>{t("wordCard.commentary")}</Text>
                 <Text style={[styles.commentaryText, styles.qumranText]}>
                   {dssCommentary ?? "—"}
                 </Text>
 
                 <View style={styles.rootSection}>
-                  <Text style={styles.sectionLabel}>Root</Text>
+                  <Text style={styles.sectionLabel}>{t("wordCard.root")}</Text>
                   <Text style={[styles.rootHebrew, styles.qumranText]}>
                     {(
                       dssLexiconEntry?.root ??
@@ -1055,7 +1070,7 @@ export const WordAnalysisBottomSheet = ({
                     ) : null
                   ) : (
                     <Text style={[styles.rootMeaning, styles.qumranText]}>
-                      ALREADY ROOT
+                      {t("wordCard.alreadyRoot")}
                     </Text>
                   )}
                 </View>
@@ -1063,7 +1078,7 @@ export const WordAnalysisBottomSheet = ({
             ) : (
               <>
                 {/* Instances section */}
-                <Text style={styles.sectionLabel}>Appears In</Text>
+                <Text style={styles.sectionLabel}>{t("wordCard.appearsIn")}</Text>
                 {lexiconEntry?.instances?.length || word?.instances?.length ? (
                   <View style={styles.instancesContainer}>
                     {(
@@ -1110,17 +1125,20 @@ export const WordAnalysisBottomSheet = ({
                         onPress={() => setShowAllInstances(true)}
                       >
                         <Text style={styles.showMoreText}>
-                          Show{" "}
-                          {(lexiconEntry?.instances?.length ??
-                            word?.instances?.length ??
-                            0) - 10}{" "}
-                          more
+                          {t("wordCard.showMore", {
+                            count:
+                              (lexiconEntry?.instances?.length ??
+                                word?.instances?.length ??
+                                0) - 10,
+                          })}
                         </Text>
                       </Pressable>
                     ) : null}
                   </View>
                 ) : (
-                  <Text style={styles.emptyText}>No instances available</Text>
+                  <Text style={styles.emptyText}>
+                    {t("wordCard.noInstances")}
+                  </Text>
                 )}
               </>
             )}

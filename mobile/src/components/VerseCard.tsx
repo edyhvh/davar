@@ -19,6 +19,7 @@ import {
   stripNikud,
   stripMeteg,
 } from "@/src/utils/hebrew";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
 
@@ -151,6 +152,7 @@ export const VerseCard = ({
     (state: AppState) => state.showCantillation,
   );
   const showNikud = useAppStore((state: AppState) => state.showNikud);
+  const { t } = useTranslation();
   const colors = getColors(themeMode);
   const styles = useMemo(
     () => createStyles(colors, hebrewFontScale),
@@ -182,8 +184,7 @@ export const VerseCard = ({
     return { backgroundColor };
   });
 
-  const missingSpanishTranslation =
-    "Por el momento no contamos con traducción al español de este texto, estamos trabajando en ello...";
+  const missingSpanishTranslation = t("verse.missingSpanishTranslation");
   const translationText =
     language === "es" && !verse.translation?.trim()
       ? missingSpanishTranslation

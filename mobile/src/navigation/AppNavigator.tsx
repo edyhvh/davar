@@ -7,6 +7,7 @@ import { HapticTab } from "@/components/haptic-tab";
 import { AppIcon } from "@/src/components/ui/AppIcon";
 import { getColors } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 const createStyles = (
   colors: ReturnType<typeof getColors>,
@@ -50,6 +51,7 @@ export const AppNavigator = () => {
   const colors = getColors(themeMode);
   const insets = useSafeAreaInsets();
   const bottomInset = Platform.OS === "ios" ? insets.bottom : 0;
+  const { t } = useTranslation();
   const styles = useMemo(
     () => createStyles(colors, bottomInset),
     [colors, bottomInset],
@@ -71,7 +73,7 @@ export const AppNavigator = () => {
       <Tabs.Screen
         name="home"
         options={{
-          title: "Home",
+          title: t("tabs.home"),
           tabBarIcon: ({ color }) => (
             <AppIcon name="home" color={color} size={24} />
           ),
@@ -80,7 +82,7 @@ export const AppNavigator = () => {
       <Tabs.Screen
         name="verse"
         options={{
-          title: "Verse",
+          title: t("tabs.verse"),
           tabBarIcon: ({ focused }) => (
             <View style={styles.centerIconWrapper}>
               <View style={styles.centerIcon}>
@@ -97,7 +99,7 @@ export const AppNavigator = () => {
       <Tabs.Screen
         name="settings"
         options={{
-          title: "Settings",
+          title: t("tabs.settings"),
           tabBarIcon: ({ color }) => (
             <AppIcon name="settings" color={color} size={24} />
           ),

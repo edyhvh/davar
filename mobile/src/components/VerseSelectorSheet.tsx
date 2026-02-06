@@ -9,6 +9,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 type VerseSelectorSheetProps = {
   sheetRef: React.RefObject<BottomSheet | null>;
@@ -145,6 +146,7 @@ export const VerseSelectorSheet = ({
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
   const snapPoints = useMemo(() => ["60%", "85%"], []);
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredNumbers = useMemo(() => {
@@ -231,7 +233,7 @@ export const VerseSelectorSheet = ({
           />
           <TextInput
             style={styles.searchInput}
-            placeholder="Search..."
+            placeholder={t("navigation.search")}
             placeholderTextColor={colors.textSecondary}
             value={searchQuery}
             onChangeText={setSearchQuery}
@@ -254,7 +256,7 @@ export const VerseSelectorSheet = ({
 
         {filteredNumbers.length === 0 ? (
           <View style={styles.emptyContainer}>
-            <Text style={styles.emptyText}>No results found</Text>
+            <Text style={styles.emptyText}>{t("navigation.noResults")}</Text>
           </View>
         ) : (
           <View style={styles.grid}>

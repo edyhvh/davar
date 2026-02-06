@@ -306,7 +306,7 @@ export default function App() {
 
   const tabTitle = useMemo(() => {
     if (currentScreen !== "verse" || !currentBook || !currentChapter) {
-      return "Davar";
+      return t("common.appName");
     }
 
     if (language === "he") {
@@ -317,7 +317,7 @@ export default function App() {
     const hebrewBookName = getHebrewBookName(currentBook);
 
     return `${displayBookName} ${hebrewBookName} ${currentChapter}`;
-  }, [currentBook, currentChapter, currentScreen, language, books]);
+  }, [currentBook, currentChapter, currentScreen, language, books, t]);
 
   useDocumentTitle(tabTitle);
 
