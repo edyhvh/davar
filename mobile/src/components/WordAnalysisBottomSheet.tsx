@@ -171,8 +171,6 @@ const createStyles = (
       letterSpacing: 1.5,
       textAlign: "center",
       marginBottom: spacing[3],
-    },
-    sectionLabelBold: {
       fontWeight: "700",
     },
     meaningsText: {
@@ -950,7 +948,7 @@ const WordAnalysisBottomSheetComponent = (
                       key={`${meaning}-${index}`}
                       style={styles.meaningsBullet}
                     >
-                      • {meaning}
+                      {meaning}
                     </Text>
                   ))}
                 </View>
@@ -1062,7 +1060,7 @@ const WordAnalysisBottomSheetComponent = (
                       key={`${meaning}-${index}`}
                       style={[styles.meaningsBullet, styles.qumranText]}
                     >
-                      • {meaning}
+                      {meaning}
                     </Text>
                   ))}
                 </View>
