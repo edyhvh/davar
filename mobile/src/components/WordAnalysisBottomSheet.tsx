@@ -431,14 +431,15 @@ export const WordAnalysisBottomSheet = ({
   );
   // Keep in sync with web/src/app/App.tsx transliteration selection logic.
   const wordTransliteration = useMemo(() => {
-    // When on Qumran tab and DSS transliteration is available, use it
-    if (
-      activeTab === "qumran" &&
-      (word?.dss_translit_en || word?.dss_translit_es)
-    ) {
-      return language === "en" ? word?.dss_translit_en : word?.dss_translit_es;
+    if (activeTab === "qumran") {
+      const strongTranslit =
+        language === "en"
+          ? dssLexiconEntry?.translit_en
+          : language === "es"
+            ? dssLexiconEntry?.translit_es
+            : undefined;
+      if (strongTranslit) return strongTranslit;
     }
-    // Otherwise use standard word transliteration
     return language === "en"
       ? word?.translit_en
       : language === "es"
@@ -449,8 +450,8 @@ export const WordAnalysisBottomSheet = ({
     language,
     word?.translit_en,
     word?.translit_es,
-    word?.dss_translit_en,
-    word?.dss_translit_es,
+    dssLexiconEntry?.translit_en,
+    dssLexiconEntry?.translit_es,
   ]);
 
   const strongNumber = useMemo(() => {

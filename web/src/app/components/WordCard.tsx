@@ -22,6 +22,7 @@ interface WordCardProps {
   strongNumber?: string;
   qumranWord?: string;
   qumranStrong?: string;
+  qumranTransliteration?: string;
   qumranMeanings?: string[];
   qumranRoot?: string;
   qumranRootTransliteration?: string;
@@ -68,6 +69,7 @@ export function WordCard({
   qumranRoot,
   qumranRootTransliteration,
   qumranRootMeaning,
+  qumranTransliteration,
   qumranRootStrongNumber,
   qumranCommentary,
   hasQumranVariant = false,
@@ -105,6 +107,7 @@ export function WordCard({
     instances,
     qumranWord,
     qumranStrong,
+    qumranTransliteration,
     qumranMeanings,
     qumranRoot,
     qumranRootTransliteration,
@@ -159,6 +162,9 @@ export function WordCard({
   const activeStrongNumber = isQumranTab
     ? displayedData.qumranStrong
     : strongNumber;
+  const activeTransliteration = isQumranTab
+    ? displayedData.qumranTransliteration ?? displayedData.transliteration
+    : displayedData.transliteration;
   const qumranTextColor = "var(--qumran-text)";
   const masoreticWordFontSizePx = 64;
   const masoreticWordFontSize = `${masoreticWordFontSizePx}px`;
@@ -196,6 +202,7 @@ export function WordCard({
       displayedData.word !== word ||
       displayedData.wordFromVerse !== wordFromVerse ||
       displayedData.transliteration !== transliteration ||
+      displayedData.qumranTransliteration !== qumranTransliteration ||
       displayedData.root !== root ||
       displayedData.rootMeaning !== rootMeaning ||
       displayedData.rootTransliteration !== rootTransliteration ||
@@ -232,6 +239,7 @@ export function WordCard({
           instances,
           qumranWord,
           qumranStrong,
+          qumranTransliteration,
           qumranMeanings,
           qumranRoot,
           qumranRootTransliteration,
@@ -255,6 +263,7 @@ export function WordCard({
         instances,
         qumranWord,
         qumranStrong,
+        qumranTransliteration,
         qumranMeanings,
         qumranRoot,
         qumranRootTransliteration,
@@ -287,6 +296,7 @@ export function WordCard({
     wordFromVerse,
     qumranWord,
     qumranStrong,
+    qumranTransliteration,
     qumranRoot,
     qumranRootMeaning,
     qumranRootTransliteration,
@@ -392,7 +402,7 @@ export function WordCard({
         )}
 
         {/* Transliteration */}
-        {displayedData.transliteration && (
+        {activeTransliteration && (
           <div
             style={{
               fontFamily: "'Inter', sans-serif",
@@ -404,7 +414,7 @@ export function WordCard({
               marginTop: "12px",
             }}
           >
-            {displayedData.transliteration}
+            {activeTransliteration}
           </div>
         )}
       </div>

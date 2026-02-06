@@ -17,6 +17,8 @@ class LexiconResponse(BaseModel):
     """Response model for lexicon entries"""
     strong_number: str
     hebrew: Optional[str] = None
+    translit_en: Optional[str] = None
+    translit_es: Optional[str] = None
     definitions: List[DefinitionItem]
     root: Optional[str] = None
     root_strong: Optional[str] = None

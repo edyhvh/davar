@@ -142,6 +142,16 @@ class LexiconService:
                 .get("total", 0)
             )
 
+        base_translit_entry = words_entry or roots_entry or lexicon_entry or {}
+        word_translit_en = (
+            base_translit_entry.get('translit_en')
+            or base_translit_entry.get('transliteration')
+        )
+        word_translit_es = (
+            base_translit_entry.get('translit_es')
+            or base_translit_entry.get('transliteration')
+        )
+
         # Build instances list from occurrences and manual instances
         instances = self._build_instances(
             base_entry=words_entry or roots_entry or {},
@@ -163,6 +173,8 @@ class LexiconService:
                 or (lexicon_entry or {}).get('lemma')
                 or ''
             ),
+            translit_en=word_translit_en,
+            translit_es=word_translit_es,
             definitions=definitions,
             root=root,
             root_strong=root_strong,

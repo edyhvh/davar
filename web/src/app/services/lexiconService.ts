@@ -9,6 +9,8 @@ export interface DefinitionItem {
 export interface WordAnalysis {
   strong_number: string;
   hebrew?: string;
+  translit_en?: string;
+  translit_es?: string;
   definitions: DefinitionItem[];
   root?: string;
   root_strong?: string;
