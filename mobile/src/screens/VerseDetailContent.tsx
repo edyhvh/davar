@@ -12,7 +12,7 @@ import {
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
 import { useLocalSearchParams, useNavigation } from "expo-router";
-import BottomSheet from "@gorhom/bottom-sheet";
+import BottomSheet, { type BottomSheetMethods } from "@gorhom/bottom-sheet";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import type { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import type { ParamListBase } from "@react-navigation/native";
@@ -154,17 +154,42 @@ export const VerseDetailContent = () => {
   );
   const language = useAppStore((state: AppState) => state.language);
   const showQumran = useAppStore((state: AppState) => state.showQumran);
-  const lastParamIdRef = useRef<string | null>(null);
-  useEffect(() => {
-    if (!params.id) return;
-    if (lastParamIdRef.current === params.id) return;
-    lastParamIdRef.current = params.id;
-    if (params.id !== currentVerseId) {
-      setCurrentVerseId(params.id as string);
+  const DEFAULT_VERSE_ID = "genesis-1-1";
+  const normalizeVerseId = (value?: string | null) => {
+    if (!value) return DEFAULT_VERSE_ID;
+    const [bookId, chapterValue, verseValue] = value.split("-");
+    const chapterNumber = Number(chapterValue);
+    const verseNumber = Number(verseValue);
+    if (
+      !bookId ||
+      !Number.isFinite(chapterNumber) ||
+      chapterNumber <= 0 ||
+      !Number.isFinite(verseNumber) ||
+      verseNumber <= 0
+    ) {
+      return DEFAULT_VERSE_ID;
     }
-  }, [params.id, currentVerseId, setCurrentVerseId]);
+    return `${bookId}-${chapterNumber}-${verseNumber}`;
+  };
 
-  const verseId = currentVerseId || ((params.id as string) ?? "");
+  const paramId = Array.isArray(params.id) ? params.id[0] : params.id;
+  const normalizedParamId = normalizeVerseId(paramId);
+  const normalizedStoreId = normalizeVerseId(currentVerseId);
+  const verseId = paramId ? normalizedParamId : normalizedStoreId;
+
+  useEffect(() => {
+    const nextId = paramId ? normalizedParamId : normalizedStoreId;
+    if (nextId !== currentVerseId) {
+      setCurrentVerseId(nextId);
+    }
+  }, [
+    paramId,
+    normalizedParamId,
+    normalizedStoreId,
+    currentVerseId,
+    setCurrentVerseId,
+  ]);
+
   const [chapterVerses, setChapterVerses] = useState<DisplayVerse[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -217,8 +242,8 @@ export const VerseDetailContent = () => {
       }
     },
   );
-  const sheetRef = useRef<BottomSheet>(null);
-  const navigationSheetRef = useRef<BottomSheet>(null);
+  const sheetRef = useRef<BottomSheetMethods>(null!);
+  const navigationSheetRef = useRef<BottomSheetMethods>(null!);
   const [selectedWord, setSelectedWord] = useState<
     (typeof orderedVerses)[number]["words"][number] | null
   >(null);
@@ -306,18 +331,25 @@ export const VerseDetailContent = () => {
     }
   }, [currentVerseId]);
 
-  const currentLoadRef = useRef({ bookId: "", chapter: 0 });
+  const currentLoadRef = useRef({
+    bookId: "",
+    chapter: 0,
+    language: "en" as AppState["language"],
+    showQumran: false,
+  });
   useEffect(() => {
     if (!bookId) return;
     if (
       currentLoadRef.current.bookId === bookId &&
-      currentLoadRef.current.chapter === chapter
+      currentLoadRef.current.chapter === chapter &&
+      currentLoadRef.current.language === language &&
+      currentLoadRef.current.showQumran === showQumran
     ) {
       return;
     }
 
     let isMounted = true;
-    currentLoadRef.current = { bookId, chapter };
+    currentLoadRef.current = { bookId, chapter, language, showQumran };
 
     const loadVerses = async () => {
       setChapterVerses([]);
@@ -335,7 +367,9 @@ export const VerseDetailContent = () => {
         if (!isMounted) return;
         if (
           currentLoadRef.current.bookId !== bookId ||
-          currentLoadRef.current.chapter !== chapter
+          currentLoadRef.current.chapter !== chapter ||
+          currentLoadRef.current.language !== language ||
+          currentLoadRef.current.showQumran !== showQumran
         ) {
           return;
         }
@@ -423,16 +457,14 @@ export const VerseDetailContent = () => {
           />
         </View>
       </SafeAreaView>
-      {selectedWord ? (
-        <WordAnalysisBottomSheet
-          sheetRef={sheetRef}
-          word={selectedWord}
-          currentVerseId={currentVerseId}
-          onClosed={() => setSelectedWord(null)}
-        />
-      ) : null}
+      <WordAnalysisBottomSheet
+        ref={sheetRef}
+        word={selectedWord}
+        currentVerseId={currentVerseId}
+        onClosed={() => setSelectedWord(null)}
+      />
       <NavigationSheet
-        sheetRef={navigationSheetRef}
+        ref={navigationSheetRef}
         currentBookId={verse?.bookId ?? bookId}
         currentChapter={verse?.chapter ?? chapter}
         currentVerse={verse?.verse ?? verseNumber}

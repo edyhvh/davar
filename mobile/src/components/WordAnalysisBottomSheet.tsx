@@ -1,9 +1,17 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetScrollView,
   type BottomSheetBackdropProps,
+  type BottomSheetMethods,
 } from "@gorhom/bottom-sheet";
 import { router } from "expo-router";
 
@@ -33,7 +41,6 @@ type PrefixResponse = {
 };
 
 type WordAnalysisBottomSheetProps = {
-  sheetRef: React.RefObject<BottomSheet | null>;
   currentVerseId?: string;
   word?:
     | (DisplayWord & {
@@ -391,12 +398,12 @@ const parseVerseReference = (ref: string): string | null => {
   return `${bookId}-${chapter}-${verse}`;
 };
 
-export const WordAnalysisBottomSheet = ({
-  sheetRef,
-  word,
-  currentVerseId,
-  onClosed,
-}: WordAnalysisBottomSheetProps) => {
+const WordAnalysisBottomSheetComponent = (
+  { word, currentVerseId, onClosed }: WordAnalysisBottomSheetProps,
+  ref: React.ForwardedRef<BottomSheetMethods>,
+) => {
+  const sheetRef = useRef<BottomSheetMethods>(null!);
+  useImperativeHandle(ref, () => sheetRef.current);
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const hebrewFontScale = useAppStore(
     (state: AppState) => state.hebrewFontScale,
@@ -879,7 +886,9 @@ export const WordAnalysisBottomSheet = ({
                     activeTab === "masoretic" && styles.toggleTextActive,
                   ]}
                 >
-                  {hasDssVariant ? t("wordCard.masoretic") : t("wordCard.meanings")}
+                  {hasDssVariant
+                    ? t("wordCard.masoretic")
+                    : t("wordCard.meanings")}
                 </Text>
               </Pressable>
               <Pressable
@@ -904,7 +913,9 @@ export const WordAnalysisBottomSheet = ({
             {activeTab === "masoretic" ? (
               <>
                 {/* Meanings section */}
-                <Text style={styles.sectionLabel}>{t("wordCard.meanings")}</Text>
+                <Text style={styles.sectionLabel}>
+                  {t("wordCard.meanings")}
+                </Text>
                 {isLoading ? (
                   <Text style={styles.emptyText}>
                     {t("wordCard.loadingDefinitions")}
@@ -1010,7 +1021,9 @@ export const WordAnalysisBottomSheet = ({
               </>
             ) : activeTab === "qumran" ? (
               <>
-                <Text style={styles.sectionLabel}>{t("wordCard.meanings")}</Text>
+                <Text style={styles.sectionLabel}>
+                  {t("wordCard.meanings")}
+                </Text>
                 {isDssLoading ? (
                   <Text style={styles.emptyText}>
                     {t("wordCard.loadingDefinitions")}
@@ -1027,7 +1040,9 @@ export const WordAnalysisBottomSheet = ({
                   ))}
                 </View>
 
-                <Text style={styles.sectionLabel}>{t("wordCard.commentary")}</Text>
+                <Text style={styles.sectionLabel}>
+                  {t("wordCard.commentary")}
+                </Text>
                 <Text style={[styles.commentaryText, styles.qumranText]}>
                   {dssCommentary ?? "—"}
                 </Text>
@@ -1078,7 +1093,9 @@ export const WordAnalysisBottomSheet = ({
             ) : (
               <>
                 {/* Instances section */}
-                <Text style={styles.sectionLabel}>{t("wordCard.appearsIn")}</Text>
+                <Text style={styles.sectionLabel}>
+                  {t("wordCard.appearsIn")}
+                </Text>
                 {lexiconEntry?.instances?.length || word?.instances?.length ? (
                   <View style={styles.instancesContainer}>
                     {(
@@ -1148,3 +1165,7 @@ export const WordAnalysisBottomSheet = ({
     </BottomSheet>
   );
 };
+
+export const WordAnalysisBottomSheet = React.forwardRef(
+  WordAnalysisBottomSheetComponent,
+);

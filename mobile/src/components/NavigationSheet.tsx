@@ -1,10 +1,18 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetFlatList,
   BottomSheetView,
   type BottomSheetBackdropProps,
+  type BottomSheetMethods,
 } from "@gorhom/bottom-sheet";
 import { Ionicons } from "@expo/vector-icons";
 import Animated, {
@@ -26,7 +34,6 @@ import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
 
 type NavigationSheetProps = {
-  sheetRef: React.RefObject<BottomSheet | null>;
   currentBookId: string;
   currentChapter: number;
   currentVerse: number;
@@ -245,14 +252,18 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     },
   });
 
-export const NavigationSheet = ({
-  sheetRef,
-  currentBookId,
-  currentChapter,
-  currentVerse,
-  onSelectVerse,
-  onClose,
-}: NavigationSheetProps) => {
+const NavigationSheetComponent = (
+  {
+    currentBookId,
+    currentChapter,
+    currentVerse,
+    onSelectVerse,
+    onClose,
+  }: NavigationSheetProps,
+  ref: React.ForwardedRef<BottomSheetMethods>,
+) => {
+  const sheetRef = useRef<BottomSheetMethods>(null!);
+  useImperativeHandle(ref, () => sheetRef.current);
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
@@ -404,7 +415,7 @@ export const NavigationSheet = ({
       onSelectVerse(selectedBookId, selectedChapter, verse);
       sheetRef.current?.close();
     },
-    [selectedBookId, selectedChapter, onSelectVerse, sheetRef],
+    [selectedBookId, selectedChapter, onSelectVerse],
   );
 
   const renderBookItem = useCallback(
@@ -667,7 +678,9 @@ export const NavigationSheet = ({
           style={styles.content}
         >
           <BottomSheetView style={styles.gridContainer}>
-            <Text style={styles.gridTitle}>{t("navigation.selectChapter")}</Text>
+            <Text style={styles.gridTitle}>
+              {t("navigation.selectChapter")}
+            </Text>
             {chapterNumbers.length ? (
               renderNumberGrid(
                 chapterNumbers,
@@ -714,3 +727,5 @@ export const NavigationSheet = ({
     </BottomSheet>
   );
 };
+
+export const NavigationSheet = React.forwardRef(NavigationSheetComponent);
