@@ -40,7 +40,6 @@ export function HomeScreen({ language }: HomeScreenProps) {
     },
   ];
   const aboutItems = [
-    { label: t("home.aboutItems.legal"), Icon: Scale, href: "#" },
     { label: t("home.aboutItems.terms"), Icon: FileText, href: "#" },
     { label: t("home.aboutItems.privacy"), Icon: Shield, href: "#" },
     { label: t("home.aboutItems.support"), Icon: MessageCircle, href: "#" },
