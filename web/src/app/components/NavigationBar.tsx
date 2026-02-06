@@ -85,6 +85,7 @@ export function NavigationBar({
   const [chapterSearch, setChapterSearch] = useState("");
   const [verseSearch, setVerseSearch] = useState("");
   const { t } = useTranslation(language);
+  const isDev = process.env.NODE_ENV !== "production";
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -270,7 +271,7 @@ export function NavigationBar({
               </span>
             </button>
 
-            {import.meta.env.DEV && onDesignSystemClick && (
+            {isDev && onDesignSystemClick && (
               <button
                 onClick={onDesignSystemClick}
                 className="rounded-full p-2 transition-all hover:scale-[1.05] active:scale-[0.98]"
