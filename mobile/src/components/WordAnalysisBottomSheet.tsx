@@ -7,6 +7,7 @@ import React, {
   useState,
 } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetScrollView,
@@ -76,7 +77,6 @@ const createStyles = (
     content: {
       paddingHorizontal: spacing[6],
       paddingTop: spacing[2],
-      paddingBottom: spacing[8],
     },
     sheetBackground: {
       backgroundColor: colors.surface,
@@ -405,6 +405,7 @@ const WordAnalysisBottomSheetComponent = (
   const sheetRef = useRef<BottomSheetMethods>(null!);
   useImperativeHandle(ref, () => sheetRef.current);
   const themeMode = useAppStore((state: AppState) => state.themeMode);
+  const insets = useSafeAreaInsets();
   const hebrewFontScale = useAppStore(
     (state: AppState) => state.hebrewFontScale,
   );
@@ -798,7 +799,7 @@ const WordAnalysisBottomSheetComponent = (
     <BottomSheet
       ref={sheetRef}
       index={-1}
-      snapPoints={["50%", "80%"]}
+      snapPoints={["50%"]}
       enablePanDownToClose
       backgroundStyle={
         hasDssVariant ? styles.sheetBackgroundDss : styles.sheetBackground
@@ -809,7 +810,10 @@ const WordAnalysisBottomSheetComponent = (
       backdropComponent={renderBackdrop}
       animateOnMount={false}
     >
-      <BottomSheetScrollView style={styles.content}>
+      <BottomSheetScrollView
+        style={styles.content}
+        contentContainerStyle={{ paddingBottom: spacing[8] + insets.bottom }}
+      >
         {/* Show empty state when no word is selected */}
         {!word ? (
           <View style={styles.headerSection}>
