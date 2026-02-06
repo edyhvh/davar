@@ -1109,6 +1109,13 @@ export default function App() {
                       ) ?? null;
                     const wordTransliteration =
                       getTransliterationForLanguage(wordForCard);
+                    const qumranTransliteration = dssAnalysisForCard
+                      ? language === "en"
+                        ? dssAnalysisForCard.translit_en
+                        : language === "es"
+                          ? dssAnalysisForCard.translit_es
+                          : undefined
+                      : undefined;
                     const dssCommentary = dssVariantForCard
                       ? language === "es"
                         ? dssVariantForCard.comment_v2_es ??
@@ -1159,6 +1166,7 @@ export default function App() {
                             strongNumber={wordAnalysisForCard?.strong_number}
                             qumranWord={dssVariantForCard?.dss_word}
                             qumranStrong={dssVariantForCard?.dss_strong}
+                            qumranTransliteration={qumranTransliteration}
                             qumranMeanings={dssMeanings}
                             qumranCommentary={dssCommentary}
                             qumranRoot={dssAnalysisForCard?.root}
@@ -1275,6 +1283,13 @@ export default function App() {
             const dssMeanings =
               selectedDssAnalysis?.definitions?.map((item) => item.text) ?? [];
             const hasQumranVariant = Boolean(dssVariantForCard);
+            const qumranTransliteration = selectedDssAnalysis
+              ? language === "en"
+                ? selectedDssAnalysis.translit_en
+                : language === "es"
+                  ? selectedDssAnalysis.translit_es
+                  : undefined
+              : undefined;
 
             return (
           <WordCard
@@ -1283,6 +1298,7 @@ export default function App() {
             strongNumber={selectedWordAnalysis?.strong_number}
                 qumranWord={dssVariantForCard?.dss_word}
                 qumranStrong={dssVariantForCard?.dss_strong}
+                qumranTransliteration={qumranTransliteration}
                 qumranMeanings={dssMeanings}
                 qumranCommentary={dssCommentary}
                 qumranRoot={selectedDssAnalysis?.root}

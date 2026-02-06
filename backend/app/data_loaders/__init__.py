@@ -9,6 +9,7 @@ from .translations import translation_loader
 from .besorah import besorah_loader
 from .tanaj import tanaj_loader
 from .translit import translit_loader
+from .dss_translit import dss_translit_loader
 from .base import DataLoader
 
 __all__ = [
@@ -19,5 +20,6 @@ __all__ = [
     "variant_loader",
     "dictionary_loader",
     "book_mapper",
-    "translit_loader"
+    "translit_loader",
+    "dss_translit_loader"
 ]
