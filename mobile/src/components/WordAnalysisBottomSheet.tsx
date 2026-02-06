@@ -429,8 +429,26 @@ export const WordAnalysisBottomSheet = ({
     word?.dssCommentaryEs ||
     word?.dssCommentaryHe,
   );
+  const strongNumber = useMemo(() => {
+    if (!word?.strong) return null;
+    const parts = word.strong.split("/").map((part) => part.trim());
+    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
+    return strongPart ?? null;
+  }, [word?.strong]);
+
+  const dssStrongNumber = useMemo(() => {
+    if (!word?.dssStrong) return null;
+    const parts = word.dssStrong.split("/").map((part) => part.trim());
+    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
+    return strongPart ?? null;
+  }, [word?.dssStrong]);
   // Keep in sync with web/src/app/App.tsx transliteration selection logic.
   const wordTransliteration = useMemo(() => {
+    // Determine which strong number is currently active
+    const checkStrong = activeTab === "qumran" ? dssStrongNumber : strongNumber;
+    // Hide transliteration for YHVH (H3068)
+    if (checkStrong === "H3068") return undefined;
+
     if (activeTab === "qumran") {
       const strongTranslit =
         language === "en"
@@ -452,21 +470,9 @@ export const WordAnalysisBottomSheet = ({
     word?.translit_es,
     dssLexiconEntry?.translit_en,
     dssLexiconEntry?.translit_es,
+    strongNumber,
+    dssStrongNumber,
   ]);
-
-  const strongNumber = useMemo(() => {
-    if (!word?.strong) return null;
-    const parts = word.strong.split("/").map((part) => part.trim());
-    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
-    return strongPart ?? null;
-  }, [word?.strong]);
-
-  const dssStrongNumber = useMemo(() => {
-    if (!word?.dssStrong) return null;
-    const parts = word.dssStrong.split("/").map((part) => part.trim());
-    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
-    return strongPart ?? null;
-  }, [word?.dssStrong]);
 
   const displayHebrew = useMemo(() => {
     const baseWord =
