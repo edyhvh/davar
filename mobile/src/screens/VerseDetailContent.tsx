@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
+  Animated,
   FlatList,
+  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -58,33 +60,37 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
 type VersePageProps = {
   item: DisplayVerse;
   pageHeight: number;
-  centerOffset: number;
   showWordHint: boolean;
   isSelectedVerse: boolean;
   onVersePress: () => void;
   onWordPress: (word: DisplayVerse["words"][number] | null) => void;
+  onBackgroundPress: () => void;
 };
 
 const VersePage = ({
   item,
   pageHeight,
-  centerOffset,
   showWordHint,
   isSelectedVerse,
   onVersePress,
   onWordPress,
+  onBackgroundPress,
 }: VersePageProps) => {
   const [contentHeight, setContentHeight] = useState(0);
-  const verticalPadding = spacing[8] * 2;
+  const horizontalPadding = spacing[4];
+  const topPadding = spacing[16] + spacing[8];
+  const bottomPadding = spacing[8];
+  const verticalPadding = topPadding + bottomPadding;
   const availableHeight = Math.max(0, pageHeight - verticalPadding);
   const canScroll = contentHeight > availableHeight + 1;
 
   const verseContent = (
-    <View
+    <Pressable
+      onPress={onBackgroundPress}
       style={{
-        paddingHorizontal: spacing[6],
-        paddingVertical: spacing[8],
-        transform: [{ translateY: centerOffset }],
+        paddingHorizontal: horizontalPadding,
+        paddingTop: topPadding,
+        paddingBottom: bottomPadding,
       }}
       onLayout={(event) => setContentHeight(event.nativeEvent.layout.height)}
     >
@@ -95,7 +101,7 @@ const VersePage = ({
         onVersePress={onVersePress}
         onWordPress={onWordPress}
       />
-    </View>
+    </Pressable>
   );
 
   return (
@@ -107,10 +113,6 @@ const VersePage = ({
     >
       {canScroll ? (
         <ScrollView
-          contentContainerStyle={{
-            paddingHorizontal: spacing[6],
-            paddingVertical: spacing[8],
-          }}
           showsVerticalScrollIndicator={false}
           bounces={false}
           alwaysBounceVertical={false}
@@ -142,11 +144,7 @@ export const VerseDetailContent = () => {
   const { height: screenHeight } = useWindowDimensions();
   const insets = useSafeAreaInsets();
   const tabBarHeight = useBottomTabBarHeight();
-  const pageHeight = Math.max(
-    0,
-    screenHeight - insets.top - insets.bottom - tabBarHeight,
-  );
-  const centerOffset = spacing[6];
+  const pageHeight = Math.max(0, screenHeight - insets.top - tabBarHeight);
   const params = useLocalSearchParams<{ id?: string }>();
   const currentVerseId = useAppStore((state: AppState) => state.currentVerseId);
   const setCurrentVerseId = useAppStore(
@@ -247,6 +245,20 @@ export const VerseDetailContent = () => {
   const [selectedWord, setSelectedWord] = useState<
     (typeof orderedVerses)[number]["words"][number] | null
   >(null);
+  const pillVisibility = useRef(new Animated.Value(1)).current;
+  const [pillVisible, setPillVisible] = useState(true);
+
+  const animatePill = useCallback(
+    (nextVisible: boolean) => {
+      setPillVisible(nextVisible);
+      Animated.timing(pillVisibility, {
+        toValue: nextVisible ? 1 : 0,
+        duration: 220,
+        useNativeDriver: true,
+      }).start();
+    },
+    [pillVisibility],
+  );
 
   // Listen for tab press to open navigation sheet
   const navigation = useNavigation<BottomTabNavigationProp<ParamListBase>>();
@@ -315,6 +327,16 @@ export const VerseDetailContent = () => {
     setSelectedWord(word);
     sheetRef.current?.expand();
   }, []);
+
+  const handleBackgroundPress = useCallback(() => {
+    animatePill(true);
+  }, [animatePill]);
+
+  const handleScrollBegin = useCallback(() => {
+    if (pillVisible) {
+      animatePill(false);
+    }
+  }, [animatePill, pillVisible]);
 
   // Clear selectedWord immediately when currentVerseId changes to prevent stale word display
   const prevVerseIdRef = useRef(currentVerseId);
@@ -393,16 +415,31 @@ export const VerseDetailContent = () => {
 
   return (
     <>
-      <SafeAreaView style={styles.safeArea} edges={["top", "bottom"]}>
+      <SafeAreaView style={styles.safeArea} edges={["top"]}>
         <View style={styles.container}>
           <View style={styles.navigationRow}>
-            <BookChapterPill
-              bookLabel={bookMeta?.name ?? t("common.loading")}
-              hebrewLabel={bookMeta?.hebrew_name ?? ""}
-              chapter={verse?.chapter ?? chapter}
-              onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
-              onChapterPress={() => navigationSheetRef.current?.snapToIndex(0)}
-            />
+            <Animated.View
+              pointerEvents={pillVisible ? "auto" : "none"}
+              style={{
+                opacity: pillVisibility,
+                transform: [
+                  {
+                    translateY: pillVisibility.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [-12, 0],
+                    }),
+                  },
+                ],
+              }}
+            >
+              <BookChapterPill
+                bookLabel={bookMeta?.name ?? t("common.loading")}
+                hebrewLabel={bookMeta?.hebrew_name ?? ""}
+                chapter={verse?.chapter ?? chapter}
+                onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
+                onChapterPress={() => navigationSheetRef.current?.snapToIndex(0)}
+              />
+            </Animated.View>
           </View>
           {isLoading ? (
             <View
@@ -434,11 +471,11 @@ export const VerseDetailContent = () => {
               <VersePage
                 item={item}
                 pageHeight={pageHeight}
-                centerOffset={centerOffset}
                 showWordHint={showWordHint}
                 isSelectedVerse={item.id === verse?.id}
                 onVersePress={() => navigationSheetRef.current?.snapToIndex(0)}
                 onWordPress={handleWordPress}
+                onBackgroundPress={handleBackgroundPress}
               />
             )}
             pagingEnabled
@@ -454,6 +491,8 @@ export const VerseDetailContent = () => {
             })}
             viewabilityConfig={viewabilityConfigRef.current}
             onViewableItemsChanged={onViewableItemsChanged.current}
+            onScrollBeginDrag={handleScrollBegin}
+            onMomentumScrollBegin={handleScrollBegin}
           />
         </View>
       </SafeAreaView>
