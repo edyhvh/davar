@@ -42,6 +42,8 @@ export function FullChapterView({
   showCantillation = true,
 }: FullChapterViewProps) {
   const shouldShowSefer = seferMode && hebrewOnly;
+  const spanishMissingTranslation =
+    "Por el momento no contamos con traducción al español de este texto, estamos trabajando en ello...";
 
   const normalizeForMatch = (text: string) => {
     let normalized = stripNikud(text);
@@ -190,7 +192,11 @@ export function FullChapterView({
                     fontSize: "15px",
                   }}
                 >
-                  [{renderTranslation(verse.translation ?? "")}]
+                  [
+                  {language === "es" && !(verse.translation ?? "").trim()
+                    ? spanishMissingTranslation
+                    : renderTranslation(verse.translation ?? "")}
+                  ]
                 </div>
               )}
             </div>

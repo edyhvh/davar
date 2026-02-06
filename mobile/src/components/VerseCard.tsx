@@ -146,6 +146,7 @@ export const VerseCard = ({
   );
   const showQumran = useAppStore((state: AppState) => state.showQumran);
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
+  const language = useAppStore((state: AppState) => state.language);
   const showCantillation = useAppStore(
     (state: AppState) => state.showCantillation,
   );
@@ -180,6 +181,13 @@ export const VerseCard = ({
     );
     return { backgroundColor };
   });
+
+  const missingSpanishTranslation =
+    "Por el momento no contamos con traducción al español de este texto, estamos trabajando en ello...";
+  const translationText =
+    language === "es" && !verse.translation?.trim()
+      ? missingSpanishTranslation
+      : (verse.translation ?? "");
 
   const content = (
     <View style={variant === "detail" ? styles.containerDetail : undefined}>
@@ -291,12 +299,12 @@ export const VerseCard = ({
       </View>
       {hebrewOnly ? null : (
         <Text style={styles.translation}>
-          {/<\/?em>/i.test(verse.translation)
+          {/<\/?em>/i.test(translationText)
             ? renderTranslationWithItalics(
-                verse.translation,
+                translationText,
                 styles.translationItalic,
               )
-            : verse.translation}
+            : translationText}
         </Text>
       )}
     </View>

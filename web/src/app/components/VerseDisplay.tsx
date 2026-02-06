@@ -73,6 +73,8 @@ export function VerseDisplay({
   onSwipeDown,
 }: VerseDisplayProps) {
   const { t } = useTranslation(language);
+  const spanishMissingTranslation =
+    "Por el momento no contamos con traducción al español de este texto, estamos trabajando en ello...";
   const dssInlineFontScale = "1.70em";
   const dssInlineBaselineShift = "-0.08em";
   // Function to render Hebrew text with DSS variants
@@ -249,7 +251,9 @@ export function VerseDisplay({
               fontSize: "17px",
             }}
           >
-            {renderTranslation(translation)}
+            {language === "es" && !translation.trim()
+              ? spanishMissingTranslation
+              : renderTranslation(translation)}
           </div>
         </SwipeIndicator>
       )}
