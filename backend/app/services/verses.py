@@ -21,7 +21,8 @@ try:
     TRANSLIT_AVAILABLE = True
 except ImportError:
     TRANSLIT_AVAILABLE = False
-    logging.warning("LocalTransliterator not available - DSS transliteration will be skipped")
+    logging.warning(
+        "LocalTransliterator not available - DSS transliteration will be skipped")
 
 
 class VersesService:
@@ -44,7 +45,7 @@ class VersesService:
         self.translit_loader = translit_loader
         self.dss_translit_loader = dss_translit_loader
         self.book_mapper = book_mapper
-        
+
         # Initialize DSS transliterator if available
         self.dss_transliterator = LocalTransliterator() if TRANSLIT_AVAILABLE else None
         self.book_mapper = book_mapper
@@ -248,7 +249,8 @@ class VersesService:
                         dss_translit_es = precomputed.get('translit_es')
                     elif dss_word and self.dss_transliterator:
                         try:
-                            result = self.dss_transliterator.transliterate_word(dss_word)
+                            result = self.dss_transliterator.transliterate_word(
+                                dss_word)
                             dss_translit_en = result.translit_en
                             dss_translit_es = result.translit_es
                         except Exception as e:
@@ -257,10 +259,11 @@ class VersesService:
                                 dss_word,
                                 e,
                             )
-                    
+
                     dv = DssVariant(
                         book=variant.get('book', book_en),
-                        chapter=variant.get('chapter', verse_data.get('chapter', 0)),
+                        chapter=variant.get(
+                            'chapter', verse_data.get('chapter', 0)),
                         verse=variant.get('verse', verse_data.get('verse', 0)),
                         position=position,
                         dss_word=dss_word,

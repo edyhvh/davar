@@ -120,7 +120,7 @@ def main():
         logger.info("Starting transliteration for LEXICON ENTRIES")
         logger.info("Dry run: %s", args.dry_run)
         logger.info("="*60)
-        
+
         try:
             roots_stats = transliterate_roots(
                 dry_run=args.dry_run,
@@ -133,7 +133,7 @@ def main():
                 verbose=args.verbose,
             )
             cost = estimate_roots_cost() + estimate_words_cost()
-            
+
             logger.info("")
             logger.info("="*60)
             logger.info("TRANSLITERATION COMPLETE")
@@ -141,14 +141,14 @@ def main():
             logger.info("Roots processed: %s", roots_stats.words)
             logger.info("Words processed: %s", words_stats.words)
             logger.info("Total estimated cost: $%.4f", cost)
-            
+
             if args.dry_run:
                 logger.info("")
                 logger.info("DRY RUN - No files were written")
-            
+
             logger.info("="*60)
             sys.exit(0)
-            
+
         except Exception as e:
             logger.error("Lexicon transliteration failed: %s", e)
             sys.exit(1)
@@ -228,7 +228,7 @@ def main():
         if failed_books:
             sys.exit(1)
         sys.exit(0)
-    
+
     # List books and exit if requested
     if args.list_books:
         books = get_available_books(args.corpus)
