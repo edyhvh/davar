@@ -96,6 +96,10 @@ const createStyles = (
       flexDirection: "row-reverse",
       alignItems: "center",
     },
+    hebrewPrefixRow: {
+      flexDirection: "row-reverse",
+      alignItems: "center",
+    },
     verseNumberPressable: {
       paddingHorizontal: spacing[1],
       paddingVertical: 0,
@@ -194,6 +198,7 @@ export const VerseCard = ({
     <View style={variant === "detail" ? styles.containerDetail : undefined}>
       <View style={styles.hebrewRow}>
         {verse.words.map((word, index) => {
+          const wordKey = `${verse.id}-${word.position ?? index}`;
           const isFirst = index === 0;
           const shouldHighlight = showWordHint && isFirst;
 
@@ -218,13 +223,12 @@ export const VerseCard = ({
           const wordStyles = [
             styles.hebrewWordPressable,
             showQumran && word.hasQumranVariant && styles.qumranHighlight,
-            shouldHighlight && highlightStyle,
           ];
 
           const renderWordContent = () => {
             if (prefixSegments?.prefixes?.length) {
               return (
-                <View style={{ flexDirection: "row" }}>
+                <View style={styles.hebrewPrefixRow}>
                   <Text
                     style={[styles.hebrewWord, { color: colors.textSecondary }]}
                   >
@@ -253,10 +257,7 @@ export const VerseCard = ({
 
           if (isFirst) {
             return (
-              <View
-                key={`${verse.id}-${word.text}`}
-                style={styles.firstWordRow}
-              >
+              <View key={wordKey} style={styles.firstWordRow}>
                 <Pressable
                   onPress={onVersePress}
                   style={styles.verseNumberPressable}
@@ -282,7 +283,7 @@ export const VerseCard = ({
 
           return (
             <Pressable
-              key={`${verse.id}-${word.text}`}
+              key={wordKey}
               onPress={() => onWordPress?.(word)}
               hitSlop={8}
               style={wordStyles}
