@@ -164,14 +164,18 @@ const createStyles = (
       color: colors.surface,
     },
     sectionLabel: {
-      fontFamily: typography.families.latinUI,
+      fontFamily: typography.families.latinUIBold,
       fontSize: typography.sizes.caption,
       color: colors.textSecondary,
       textTransform: "uppercase",
       letterSpacing: 1.5,
       textAlign: "center",
       marginBottom: spacing[3],
-      fontWeight: "700",
+    },
+    sectionDivider: {
+      height: 1,
+      backgroundColor: colors.border,
+      marginVertical: spacing[6],
     },
     meaningsText: {
       fontFamily: typography.families.latinMeaning,
@@ -934,7 +938,7 @@ const WordAnalysisBottomSheetComponent = (
             {activeTab === "masoretic" ? (
               <>
                 {/* Meanings section */}
-                <Text style={[styles.sectionLabel, styles.sectionLabelBold]}>
+                <Text style={styles.sectionLabel}>
                   {t("wordCard.meanings")}
                 </Text>
                 {isLoading ? (
@@ -954,56 +958,58 @@ const WordAnalysisBottomSheetComponent = (
                 </View>
 
                 {word?.prefixes?.length ? (
-                  <View style={styles.prefixesSection}>
-                    <Text
-                      style={[styles.sectionLabel, styles.sectionLabelBold]}
-                    >
-                      {t("wordCard.preposition")}
-                    </Text>
-                    {word.prefixes.map((prefix, index) => {
-                      const entry = prefixEntries[prefix];
-                      const meanings =
-                        entry?.meanings?.[language] ??
-                        entry?.meanings?.en ??
-                        entry?.meanings?.es ??
-                        [];
-                      const transliteration =
-                        language === "es"
-                          ? entry?.transliteration_es
-                          : (entry?.transliteration_en ??
-                            entry?.transliteration_es);
-                      const prefixText =
-                        prefixSegments.prefixes[index]?.replace(/\//g, "") ??
-                        entry?.main_form ??
-                        "";
+                  <>
+                    <View style={styles.sectionDivider} />
+                    <View style={styles.prefixesSection}>
+                      <Text style={styles.sectionLabel}>
+                        {t("wordCard.preposition")}
+                      </Text>
+                      {word.prefixes.map((prefix, index) => {
+                        const entry = prefixEntries[prefix];
+                        const meanings =
+                          entry?.meanings?.[language] ??
+                          entry?.meanings?.en ??
+                          entry?.meanings?.es ??
+                          [];
+                        const transliteration =
+                          language === "es"
+                            ? entry?.transliteration_es
+                            : (entry?.transliteration_en ??
+                              entry?.transliteration_es);
+                        const prefixText =
+                          prefixSegments.prefixes[index]?.replace(/\//g, "") ??
+                          entry?.main_form ??
+                          "";
 
-                      return (
-                        <View
-                          key={`${prefix}-${index}`}
-                          style={styles.prefixItem}
-                        >
-                          <Text style={styles.prefixHebrew}>{prefixText}</Text>
-                          {transliteration ? (
-                            <Text style={styles.prefixTransliteration}>
-                              {transliteration}
+                        return (
+                          <View
+                            key={`${prefix}-${index}`}
+                            style={styles.prefixItem}
+                          >
+                            <Text style={styles.prefixHebrew}>
+                              {prefixText}
                             </Text>
-                          ) : null}
-                          {meanings.length ? (
-                            <Text style={styles.prefixMeaning}>
-                              {meanings.join(", ")}
-                            </Text>
-                          ) : null}
-                        </View>
-                      );
-                    })}
-                  </View>
+                            {transliteration ? (
+                              <Text style={styles.prefixTransliteration}>
+                                {transliteration}
+                              </Text>
+                            ) : null}
+                            {meanings.length ? (
+                              <Text style={styles.prefixMeaning}>
+                                {meanings.join(", ")}
+                              </Text>
+                            ) : null}
+                          </View>
+                        );
+                      })}
+                    </View>
+                  </>
                 ) : null}
 
+                <View style={styles.sectionDivider} />
                 {/* Root section */}
                 <View style={styles.rootSection}>
-                  <Text style={[styles.sectionLabel, styles.sectionLabelBold]}>
-                    {t("wordCard.root")}
-                  </Text>
+                  <Text style={styles.sectionLabel}>{t("wordCard.root")}</Text>
                   {lexiconEntry?.root || word?.root ? (
                     <>
                       <Text style={styles.rootHebrew}>
@@ -1012,11 +1018,6 @@ const WordAnalysisBottomSheetComponent = (
                           "",
                         )}
                       </Text>
-                      {lexiconEntry?.root_strong ? (
-                        <Text style={styles.rootStrong}>
-                          {lexiconEntry.root_strong}
-                        </Text>
-                      ) : null}
                       {(language === "en"
                         ? lexiconEntry?.root_translit_en
                         : lexiconEntry?.root_translit_es) ||
@@ -1026,6 +1027,11 @@ const WordAnalysisBottomSheetComponent = (
                             ? lexiconEntry?.root_translit_en
                             : lexiconEntry?.root_translit_es) ??
                             word?.rootTransliteration}
+                        </Text>
+                      ) : null}
+                      {lexiconEntry?.root_strong ? (
+                        <Text style={styles.rootStrong}>
+                          {lexiconEntry.root_strong}
                         </Text>
                       ) : null}
                       {/* Show meaning only if root differs from word */}
@@ -1046,7 +1052,7 @@ const WordAnalysisBottomSheetComponent = (
               </>
             ) : activeTab === "qumran" ? (
               <>
-                <Text style={[styles.sectionLabel, styles.sectionLabelBold]}>
+                <Text style={styles.sectionLabel}>
                   {t("wordCard.meanings")}
                 </Text>
                 {isDssLoading ? (
@@ -1073,9 +1079,7 @@ const WordAnalysisBottomSheetComponent = (
                 </Text>
 
                 <View style={styles.rootSection}>
-                  <Text style={[styles.sectionLabel, styles.sectionLabelBold]}>
-                    {t("wordCard.root")}
-                  </Text>
+                  <Text style={styles.sectionLabel}>{t("wordCard.root")}</Text>
                   <Text style={[styles.rootHebrew, styles.qumranText]}>
                     {(
                       dssLexiconEntry?.root ??
@@ -1083,11 +1087,6 @@ const WordAnalysisBottomSheetComponent = (
                       displayHebrew
                     ).replace(/\//g, "")}
                   </Text>
-                  {dssLexiconEntry?.root_strong ? (
-                    <Text style={[styles.rootStrong, styles.qumranText]}>
-                      {dssLexiconEntry.root_strong}
-                    </Text>
-                  ) : null}
                   {(
                     language === "en"
                       ? dssLexiconEntry?.root_translit_en
@@ -1099,6 +1098,11 @@ const WordAnalysisBottomSheetComponent = (
                       {language === "en"
                         ? dssLexiconEntry?.root_translit_en
                         : dssLexiconEntry?.root_translit_es}
+                    </Text>
+                  ) : null}
+                  {dssLexiconEntry?.root_strong ? (
+                    <Text style={[styles.rootStrong, styles.qumranText]}>
+                      {dssLexiconEntry.root_strong}
                     </Text>
                   ) : null}
                   {/* Show meaning only if root differs from word or if no specific DSS root */}
