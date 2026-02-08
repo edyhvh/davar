@@ -60,40 +60,61 @@ def detect_section_headers_in_json(json_file: Path) -> List[Tuple[int, int, str]
                     if not potential_header[0].isupper():
                         continue
 
-                    # Check for section header indicators
+                    # Check for section header indicators - be more restrictive
                     title_indicators = [
                         'anuncio', 'nacimiento', 'visita', 'profecía', 'crecimiento',
                         'proclamación', 'inmersión', 'genealogía', 'tentación',
                         'enseña', 'sanación', 'llamado', 'pregunta', 'advertencia',
                         'parábola', 'emisión', 'regreso', 'reino', 'juicio',
                         'bautismo', 'crucifixión', 'resurrección', 'ascensión',
-                        'crucifixión', 'resurrección', 'ascensión', 'introducción',
-                        'saludo', 'justicia', 'venida', 'oración', 'despedida',
-                        'firmes', 'deber', 'trabajar', 'advertencia', 'ansiedad',
-                        'siervos', 'vigilantes', 'fiel', 'infiel', 'división',
-                        'discuten', 'grande', 'reino', 'humillado', 'humillación',
+                        'introducción', 'saludo', 'justicia', 'venida', 'oración',
+                        'despedida', 'firmes', 'deber', 'trabajar', 'advertencia',
+                        'ansiedad', 'siervos', 'vigilantes', 'fiel', 'infiel',
+                        'división', 'discuten', 'humillado', 'humillación',
                         'estregado', 'estrellas', 'proclamación', 'monte', 'sal',
-                        'luz', 'adulterio', 'juramento', 'venganza', 'juicio',
-                        'otros', 'leproso', 'ciegos', 'doce', 'discípulos', 'manda',
+                        'luz', 'adulterio', 'juramento', 'venganza', 'otros',
+                        'leproso', 'ciegos', 'doce', 'discípulos', 'manda',
                         'habla', 'parábolas', 'multitudes', 'sembrador', 'propósito',
                         'cizaña', 'mostaza', 'levadura', 'tesoro', 'piedras',
-                        'preciosas', 'red', 'mar', 'hombre', 'sabio', 'natzrat',
-                        'muerte', 'resurrección', 'oveja', 'perdida', 'deudores',
-                        'divorcio', 'obreros', 'viña', 'tercera', 'vez', 'jerijó',
-                        'viña', 'boda', 'resurrección', 'higuera', 'siervo',
-                        'fiel', 'infiel', 'vírgenes', 'monedas', 'oro', 'juicio',
-                        'final', 'crucifixión', 'cruz', 'ladrones', 'muerte',
-                        'sepultura', 'levantó', 'muertos', 'aparición', 'dos',
-                        'discípulos', 'sube', 'cielos', 'presenta', 'santuario',
-                        'poder', 'echa', 'mercaderes', 'casa', 'yehovah', 'enseña',
-                        'santuario', 'piedra', 'esquina', 'cabeza', 'esquina',
-                        'casa', 'edificada', 'desierto', 'regreso', 'babilonia',
-                        'reconstrucción', 'templo', 'palacio', 'reconstrucción',
-                        'templo', 'palacio', 'reconstrucción', 'templo', 'palacio'
+                        'preciosas', 'red', 'mar', 'sabio', 'natzrat',
+                        'oveja', 'perdida', 'deudores', 'divorcio', 'obreros',
+                        'viña', 'tercera', 'vez', 'jerijó', 'boda',
+                        'higuera', 'siervo', 'vírgenes', 'monedas', 'oro',
+                        'final', 'cruz', 'ladrones', 'sepultura', 'levantó',
+                        'aparición', 'dos', 'sube', 'cielos', 'presenta',
+                        'santuario', 'poder', 'echa', 'mercaderes', 'casa',
+                        'yehovah', 'piedra', 'esquina', 'cabeza', 'edificada',
+                        'desierto', 'babilonia', 'reconstrucción', 'templo', 'palacio'
+                    ]
+
+                    # More restrictive: must start with a section header word
+                    section_starters = [
+                        'anuncio', 'nacimiento', 'visita', 'profecía', 'crecimiento',
+                        'proclamación', 'inmersión', 'genealogía', 'tentación',
+                        'enseña', 'sanación', 'llamado', 'advertencia',
+                        'parábola', 'regreso', 'reino', 'juicio',
+                        'bautismo', 'crucifixión', 'resurrección', 'ascensión',
+                        'introducción', 'saludo', 'venida', 'oración',
+                        'despedida', 'firmes', 'trabajar', 'ansiedad',
+                        'vigilantes', 'división', 'discuten', 'humillado',
+                        'proclamación', 'monte', 'luz', 'juramento',
+                        'venganza', 'ciegos', 'discípulos', 'parábolas',
+                        'multitudes', 'sembrador', 'cizaña', 'mostaza',
+                        'levadura', 'tesoro', 'piedras', 'preciosas',
+                        'red', 'mar', 'oveja', 'perdida', 'deudores',
+                        'divorcio', 'obreros', 'viña', 'boda',
+                        'higuera', 'vírgenes', 'monedas', 'cruz',
+                        'ladrones', 'sepultura', 'aparición', 'cielos',
+                        'mercaderes', 'esquina', 'desierto', 'babilonia',
+                        'reconstrucción', 'templo', 'palacio'
                     ]
 
                     header_lower = potential_header.lower()
-                    if any(indicator in header_lower for indicator in title_indicators):
+                    # Must start with a section header word AND contain title indicators
+                    starts_with_section = any(header_lower.startswith(starter) for starter in section_starters)
+                    contains_indicator = any(indicator in header_lower for indicator in title_indicators)
+
+                    if starts_with_section and contains_indicator:
                         issues.append((chapter_num, verse_num, potential_header))
 
     except Exception as e:

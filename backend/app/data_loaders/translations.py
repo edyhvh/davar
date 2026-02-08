@@ -49,12 +49,7 @@ TTH_BOOK_MAPPING = {
     "Luke": "lukas",
     "John": "iojanan",
     "Acts": "maasei_hashlijim",
-    "Romans": "romaim",
-    "Thessalonians1": "tesaloniquim_alef",
-    "Thessalonians2": "tesaloniquim_bet",
-    "James": "iaacob",
-    "Jude": "iehudah",
-    "Revelation": "sodot",
+    "Romans": "romanos",
 }
 
 TS2009_BOOK_MAPPING = {

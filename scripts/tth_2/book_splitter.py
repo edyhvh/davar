@@ -36,230 +36,10 @@ class TTH2BookSplitter:
 
     def __init__(self):
         """Initialize the book splitter."""
-        self.book_patterns = {
-            'mattityahu': [
-                r'מתתיהו'
-            ],
-        'markos': [
-            r'__MARKO\s*\(MARCOS\)__',
-            r'Markos.*?מרקוס',
-            r'Marko.*?מרקו',
-            r'__MARKOS.*?מרקוס__',
-            r'MARCOS.*?מרקוס',
-            r'מרקוס',
-            r'מרקו'
-        ],
-        'lukas': [
-            r'__LUKAH\s*\(LUCAS\)__',
-            r'Lukas.*?לוקס',
-            r'Lukah.*?לוקה',
-            r'__LUKAS.*?לוקס__',
-            r'LUCAS.*?לוקס',
-            r'לוקס',
-            r'לוקה'
-        ],
-        'iojanan': [
-            r'\*\*IOJANÁN\s*\(JUAN\)\*\*',
-            r'__IOJANÁN\s*\(JUAN\)__',
-            r'IOJANÁN\s*\(JUAN\)',
-        ],
-        'maasei_hashlijim': [
-            r'Maasei\s+Hash\'lijim.*?מעשי\s+השליחים',
-            r'__MAASEI.*?מעשי\s+השליחים__',
-            r'HECHOS.*?מעשי\s+השליחים',
-            r'מעשי\s+השליחים'
-        ],
-        'romaim': [
-            r'Romaim.*?רומאים',
-            r'__ROMAIM.*?רומאים__',
-            r'ROMANOS.*?רומאים',
-            r'רומאים'
-        ],
-        'iaacob': [
-            r'\*\*IAACOB.*?\*\*',
-            r'Iaacob.*?יעקב',
-            r'__IAACOB.*?יעקב__',
-            r'SANTIAGO.*?יעקב',
-            r'\*\*IAACOB',
-            r'SANTIAGO',
-            r'יעקב'
-        ],
-        'iehudah': [
-            r'\*\*IEHUDÁH.*?\*\*',
-            r'Iehudáh.*?יהודה',
-            r'__IEHUDÁH.*?יהודה__',
-            r'JUDAS.*?יהודה',
-            r'\*\*IEHUDÁH',
-            r'JUDAS',
-            r'יהודה'
-        ],
-        'sodot': [
-            r'\*\*SODOT.*?\*\*',
-            r'Sodot.*?סודות',
-            r'__SODOT.*?סודות__',
-            r'APOCALIPSIS.*?סודות',
-            r'\*\*SODOT',
-            r'APOCALIPSIS',
-            r'סודות'
-        ],
-        'tesaloniquim_alef': [
-            r'Tesaloniquim\s+Alef.*?תסלוניקים\s+א',
-            r'Tesaloniquenses\s+1.*?תסלוניקים\s+א',
-            r'__TESALONIKIM\s+ALEF.*?תסלוניקים\s+א__',
-            r'תסלוניקים\s+א'
-        ],
-        'tesaloniquim_bet': [
-            r'Tesaloniquim\s+Bet.*?תסלוניקים\s+ב',
-            r'Tesaloniquenses\s+2.*?תסלוניקים\s+ב',
-            r'__TESALONIKIM\s+BET.*?תסלוניקים\s+ב__',
-            r'תסלוניקים\s+ב'
-        ],
-
-        # Torah (Pentateuco)
-        'bereshit': [
-            r'TORAH\s*-\s*BERESHIT.*?בראשית',
-            r'__TORAH\s*-\s*BERESHIT.*?בראשית__',
-            r'BERESHIT.*?בראשית',
-            r'בראשית'
-        ],
-        'shemot': [
-            r'SHEMOT.*?שמות',
-            r'__SHEMOT.*?שמות__',
-            r'שמות'
-        ],
-        'vaikra': [
-            r'VAIKRÁ.*?ויקרא',
-            r'__VAIKRÁ.*?ויקרא__',
-            r'ויקרא'
-        ],
-        'bamidbar': [
-            r'BAMIDBAR.*?במדבר',
-            r'__BAMIDBAR.*?במדבר__',
-            r'במדבר'
-        ],
-        'devarim': [
-            r'DEVARIM.*?דברים',
-            r'__DEVARIM.*?דברים__',
-            r'דברים'
-        ],
-
-        # Neviim (Profetas)
-        'iehoshua': [
-            r'IEHOSHÚA.*?יהושע',
-            r'NEVIÍM\s*-\s*IEHOSHÚA.*?יהושע',
-            r'__NEVIÍM\s*-\s*IEHOSHÚA.*?יהושע__',
-            r'יהושע'
-        ],
-        'shoftim': [
-            r'SHOFTÍM.*?שפטים',
-            r'__SHOFTÍM.*?שפטים__',
-            r'שפטים'
-        ],
-        'shemuel_alef': [
-            r'SHEMUEL\s*ALEF.*?א\s*שמואל',
-            r'__SHEMUEL\s*ALEF.*?א\s*שמואל__',
-            r'א\s*שמואל'
-        ],
-        'shemuel_bet': [
-            r'SHEMUEL\s*BET.*?ב\s*שמואל',
-            r'__SHEMUEL\s*BET.*?ב\s*שמואל__',
-            r'ב\s*שמואל'
-        ],
-        'melajim_alef': [
-            r'MELAJIM\s*ALEF.*?א\s*מלכים',
-            r'__MELAJIM\s*ALEF.*?א\s*מלכים__',
-            r'א\s*מלכים'
-        ],
-        'melajim_bet': [
-            r'MELAJIM\s*BET.*?ב\s*מלכים',
-            r'__MELAJIM\s+BET.*?ב\s*מלכים__',
-            r'ב\s*מלכים'
-        ],
-        'ieshaiahu': [
-            r'IESHAIÁHU.*?ישעיהו',
-            r'__IESHAIÁHU.*?ישעיהו__',
-            r'ישעיהו'
-        ],
-        'irmeiahu': [
-            r'IRMEIÁHU.*?ירמיהו',
-            r'__IRMEIÁHU.*?ירמיהו__',
-            r'ירמיהו'
-        ],
-        'iejezkel': [
-            r'IEJEZKEL.*?יחזקאל',
-            r'__IEJEZKEL.*?יחזקאל__',
-            r'יחזקאל'
-        ],
-        'hoshea': [
-            r'HOSHEA.*?הושע',
-            r'__HOSHEA.*?הושע__',
-            r'הושע'
-        ],
-        'ioel': [
-            r'IOEL.*?יואל',
-            r'__IOEL.*?יואל__',
-            r'יואל'
-        ],
-        'amos': [
-            r'AMÓS.*?עמוס',
-            r'__AMÓS.*?עמוס__',
-            r'עמוס'
-        ],
-        'ionah': [
-            r'IONAH.*?יונה',
-            r'__IONAH.*?יונה__',
-            r'יונה'
-        ],
-        'micah': [
-            r'MICAH.*?מיכה',
-            r'__MICAH.*?מיכה__',
-            r'מיכה'
-        ],
-        'najum': [
-            r'NAJUM.*?נחום',
-            r'__NAJUM.*?נחום__',
-            r'נחום'
-        ],
-        'jabakuk': [
-            r'JABAKUK.*?חבקוק',
-            r'__JABAKUK.*?חבקוק__',
-            r'חבקוק'
-        ],
-        'tzefaniah': [
-            r'TZEFANIAH.*?צפניה',
-            r'__TZEFANIAH.*?צפניה__',
-            r'צפניה'
-        ],
-        'jagai': [
-            r'JAGAI.*?חגי',
-            r'__JAGAI.*?חגי__',
-            r'חגי'
-        ],
-        'zejariah': [
-            r'ZEJARIAH.*?זכריה',
-            r'__ZEJARIAH.*?זכריה__',
-            r'זכריה'
-        ],
-        'malaji': [
-            r'MALAJI.*?מלאכי',
-            r'__MALAJI.*?מלאכי__',
-            r'מלאכי'
-        ],
-
-        # Ketuvim (Escritos)
-        'tehilim': [
-            r'KETUVIM\s*-\s*TEHILIM.*?תהלים',
-            r'TEHILIM.*?תהלים',
-            r'__KETUVIM\s*-\s*TEHILIM.*?תהלים__',
-            r'__TEHILIM.*?תהלים__',
-            r'תהלים'
-        ],
-        'mishlei': [
-            r'MISHLEI.*?משלי',
-            r'__MISHLEI.*?משלי__',
-            r'משלי'
-        ]
-    }
+        # Build book patterns from BOOKS_INFO to avoid drift
+        self.book_patterns = {}
+        for book_key, info in BOOKS_INFO.items():
+            self.book_patterns[book_key] = info.get('patterns', [])
 
     def find_book_boundaries(self, text: str, book_key: str) -> Tuple[int, int]:
         """
@@ -299,7 +79,7 @@ class TTH2BookSplitter:
                 continue
 
             # Check for actual book header first (highest priority)
-            if line_stripped.startswith('**') and re.search(r'\*\*IEHUDÁH.*?\*\*', line_stripped, re.IGNORECASE):
+            if line_stripped.startswith('**') and re.search(r'\*\*.*?\*\*', line_stripped, re.IGNORECASE):
                 book_start = i
                 break
 
@@ -336,11 +116,10 @@ class TTH2BookSplitter:
 
             # Check for book headers first (highest priority)
             # Only check for book headers if the line looks like a title, not a verse
-            if (line.startswith('**') and len(line.split()) < 10 and
-                ('(' in line or 'SODOT' in line or 'IAACOB' in line)):
+            if line.startswith('**') and len(line.split()) < 10:
                 # This is likely a book header, check if it's another book
                 for other_book in other_books:
-                    if other_book in line.upper() or any(keyword in line.upper() for keyword in ['SODOT', 'IAACOB', 'APOCALIPSIS', 'SANTIAGO']):
+                    if other_book.upper() in line.upper():
                         book_end = i
                         break
                 if book_end != len(lines):

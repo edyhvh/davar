@@ -124,11 +124,11 @@ Each book is **one JSON file** with clean structure:
 
 ## 📚 Supported Books
 
-### 38 Books Extracted
+### 33 Books Extracted
 - **Torah (5):** bereshit, shemot, vaikra, bamidbar, devarim
 - **Neviim (18):** iehoshua, shoftim, shemuel (1-2), melajim (1-2), ieshaiahu, irmeiahu, iejezkel, and 12 minor prophets
 - **Ketuvim (2):** tehilim, mishlei
-- **Besorah (11):** matityahu, markos, lukas, iojanan, maasei_hashlijim, romaim, iaacob, iehudah, sodot, tesaloniquim (1-2)
+- **Besorah (8):** matityahu, markos, lukas, iojanan, maasei_hashlijim, romanos
 
 View full list: `python scripts/tth_2/main.py books`
 
@@ -149,7 +149,7 @@ View full list: `python scripts/tth_2/main.py books`
 - Medium books (~500 verses): ~0.2s  
 - Large books (1500+ verses): ~0.4s
 - Largest book (Tehilim, 2458 verses): ~0.2s
-- **Total pipeline: ~30 seconds** for all 38 books
+- **Total pipeline: ~25 seconds** for all 33 books
 
 ## 🛠️ Troubleshooting
 
@@ -172,9 +172,13 @@ Ensure you're in the project root (`~/davar`) when running commands.
 
 ## 🔧 Advanced Usage
 
-### Convert Single Book
+### Process Specific Books
 ```bash
-python scripts/tth_2/main.py convert bereshit
+# Process a specific DOCX file for specific books
+python scripts/tth_2/main.py process data/tth_2/raw/romanos.docx --books romanos
+
+# Or let it infer the book from the filename
+python scripts/tth_2/main.py process data/tth_2/raw/romanos.docx
 ```
 
 ### Re-process Specific Book
