@@ -1,5 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { BookOpen, Settings, ScrollText, Eye, Heart, Home, Paintbrush } from "lucide-react";
+import {
+  BookOpen,
+  Settings,
+  ScrollText,
+  Eye,
+  Heart,
+  Home,
+  Paintbrush,
+} from "lucide-react";
 import { LuLightbulb } from "react-icons/lu";
 import { TbAlphabetHebrew, TbLanguageHiragana } from "react-icons/tb";
 import { FaThList } from "react-icons/fa";
@@ -85,7 +93,8 @@ export function NavigationBar({
   const [chapterSearch, setChapterSearch] = useState("");
   const [verseSearch, setVerseSearch] = useState("");
   const { t } = useTranslation(language);
-  const isDev = process.env.NODE_ENV !== "production";
+  const publicNodeEnv = process.env.PUBLIC_NODE_ENV ?? "production";
+  const isDev = publicNodeEnv === "development";
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

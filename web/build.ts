@@ -22,7 +22,7 @@ const publicDir = join(import.meta.dir, "public");
 const distDir = join(import.meta.dir, "dist");
 
 if (existsSync(publicDir)) {
-  cpSync(publicDir, distDir, { recursive: true, force: false });
+  cpSync(publicDir, distDir, { recursive: true, force: true });
 }
 
 console.log(`Build complete: ${result.outputs.length} files written to ./dist`);

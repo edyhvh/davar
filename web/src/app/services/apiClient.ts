@@ -3,14 +3,14 @@
  * Handles authenticated requests with API key validation and better error reporting.
  */
 
-const API_BASE_URL =
-  process.env.PUBLIC_API_BASE_URL || "http://localhost:2220";
+const API_BASE_URL = process.env.PUBLIC_API_BASE_URL || "http://localhost:2220";
 
 // Load API key once at module level
 const RAW_API_KEY = process.env.PUBLIC_API_KEY;
 const API_KEY = RAW_API_KEY?.trim();
 
-const isDev = process.env.NODE_ENV !== "production";
+const publicNodeEnv = process.env.PUBLIC_NODE_ENV ?? "production";
+const isDev = publicNodeEnv === "development";
 
 // Early validation in development to catch missing key immediately
 if (isDev && !API_KEY) {
