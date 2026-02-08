@@ -1,7 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import * as FileSystem from "expo-file-system";
 
 import { AppIcon } from "@/src/components/ui/AppIcon";
 import { PillToggle } from "@/src/components/ui/PillToggle";
@@ -124,33 +123,6 @@ export default function SettingsScreen() {
   const { t, isRTL } = useTranslation();
   const styles = useMemo(() => createStyles(colors, isRTL), [colors, isRTL]);
   const seferDisabled = !hebrewOnly;
-  const [offlineStatus, setOfflineStatus] = useState({
-    dictionary: false,
-    english: false,
-    spanish: false,
-  });
-
-  useEffect(() => {
-    const loadStatus = async () => {
-      const basePath = `${FileSystem.documentDirectory}offline`;
-      const dictionary = await FileSystem.getInfoAsync(
-        `${basePath}/dictionary.json`,
-      );
-      const english = await FileSystem.getInfoAsync(
-        `${basePath}/translations-en.json`,
-      );
-      const spanish = await FileSystem.getInfoAsync(
-        `${basePath}/translations-es.json`,
-      );
-
-      setOfflineStatus({
-        dictionary: dictionary.exists,
-        english: english.exists,
-        spanish: spanish.exists,
-      });
-    };
-    loadStatus();
-  }, []);
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
@@ -161,7 +133,9 @@ export default function SettingsScreen() {
         </View>
 
         {/* General Section */}
-        <Text style={styles.sectionTitle}>{t("settings.sections.general")}</Text>
+        <Text style={styles.sectionTitle}>
+          {t("settings.sections.general")}
+        </Text>
 
         {/* Theme */}
         <View style={styles.row}>
@@ -171,62 +145,12 @@ export default function SettingsScreen() {
             </View>
             <View style={styles.textContainer}>
               <Text style={styles.label}>{t("settings.theme.title")}</Text>
-              <Text style={styles.subtitle}>{t("settings.theme.subtitle")}</Text>
+              <Text style={styles.subtitle}>
+                {t("settings.theme.subtitle")}
+              </Text>
             </View>
           </View>
           <PillToggle value={themeMode === "dark"} onChange={toggleThemeMode} />
-        </View>
-
-        <View style={styles.divider} />
-
-        <Text style={styles.sectionTitle}>{t("settings.sections.offline")}</Text>
-
-        <View style={styles.row}>
-          <View style={styles.rowContent}>
-            <View style={styles.iconContainer}>
-              <AppIcon name="download" size={18} color={colors.textSecondary} />
-            </View>
-            <View style={styles.textContainer}>
-              <Text style={styles.label}>{t("offline.dictionary")}</Text>
-              <Text style={styles.subtitle}>
-                {offlineStatus.dictionary
-                  ? t("offline.downloaded")
-                  : t("offline.notDownloaded")}
-              </Text>
-            </View>
-          </View>
-        </View>
-
-        <View style={styles.row}>
-          <View style={styles.rowContent}>
-            <View style={styles.iconContainer}>
-              <AppIcon name="language" size={18} color={colors.textSecondary} />
-            </View>
-            <View style={styles.textContainer}>
-              <Text style={styles.label}>{t("offline.englishTranslation")}</Text>
-              <Text style={styles.subtitle}>
-                {offlineStatus.english
-                  ? t("offline.downloaded")
-                  : t("offline.notDownloaded")}
-              </Text>
-            </View>
-          </View>
-        </View>
-
-        <View style={styles.row}>
-          <View style={styles.rowContent}>
-            <View style={styles.iconContainer}>
-              <AppIcon name="language" size={18} color={colors.textSecondary} />
-            </View>
-            <View style={styles.textContainer}>
-              <Text style={styles.label}>{t("offline.spanishTranslation")}</Text>
-              <Text style={styles.subtitle}>
-                {offlineStatus.spanish
-                  ? t("offline.downloaded")
-                  : t("offline.notDownloaded")}
-              </Text>
-            </View>
-          </View>
         </View>
 
         <View style={styles.divider} />
@@ -262,7 +186,9 @@ export default function SettingsScreen() {
             </View>
             <View style={styles.textContainer}>
               <Text style={styles.label}>{t("settings.qumran.title")}</Text>
-              <Text style={styles.subtitle}>{t("settings.qumran.subtitle")}</Text>
+              <Text style={styles.subtitle}>
+                {t("settings.qumran.subtitle")}
+              </Text>
             </View>
           </View>
           <OnOffButton value={showQumran} onChange={setShowQumran} />
@@ -277,8 +203,12 @@ export default function SettingsScreen() {
               <AppIcon name="list" size={18} color={colors.textSecondary} />
             </View>
             <View style={styles.textContainer}>
-              <Text style={styles.label}>{t("settings.fullChapter.title")}</Text>
-              <Text style={styles.subtitle}>{t("settings.fullChapter.subtitle")}</Text>
+              <Text style={styles.label}>
+                {t("settings.fullChapter.title")}
+              </Text>
+              <Text style={styles.subtitle}>
+                {t("settings.fullChapter.subtitle")}
+              </Text>
             </View>
           </View>
           <OnOffButton value={showFullChapter} onChange={setShowFullChapter} />
@@ -294,7 +224,9 @@ export default function SettingsScreen() {
             </View>
             <View style={styles.textContainer}>
               <Text style={styles.label}>{t("settings.hebrewOnly.title")}</Text>
-              <Text style={styles.subtitle}>{t("settings.hebrewOnly.subtitle")}</Text>
+              <Text style={styles.subtitle}>
+                {t("settings.hebrewOnly.subtitle")}
+              </Text>
             </View>
           </View>
           <OnOffButton value={hebrewOnly} onChange={setHebrewOnly} />
@@ -311,8 +243,12 @@ export default function SettingsScreen() {
                   <AppIcon name="book" size={18} color={colors.textSecondary} />
                 </View>
                 <View style={styles.textContainer}>
-                  <Text style={styles.label}>{t("settings.seferStyle.title")}</Text>
-                  <Text style={styles.subtitle}>{t("settings.seferStyle.subtitle")}</Text>
+                  <Text style={styles.label}>
+                    {t("settings.seferStyle.title")}
+                  </Text>
+                  <Text style={styles.subtitle}>
+                    {t("settings.seferStyle.subtitle")}
+                  </Text>
                 </View>
               </View>
               <OnOffButton
@@ -332,8 +268,6 @@ export default function SettingsScreen() {
 
         <View style={styles.divider} />
 
-        <View style={styles.divider} />
-
         {/* Cantillation */}
         <View style={styles.row}>
           <View style={styles.rowContent}>
@@ -341,8 +275,12 @@ export default function SettingsScreen() {
               <AppIcon name="hebrew" size={18} color={colors.textSecondary} />
             </View>
             <View style={styles.textContainer}>
-              <Text style={styles.label}>{t("settings.cantillation.title")}</Text>
-              <Text style={styles.subtitle}>{t("settings.cantillation.subtitle")}</Text>
+              <Text style={styles.label}>
+                {t("settings.cantillation.title")}
+              </Text>
+              <Text style={styles.subtitle}>
+                {t("settings.cantillation.subtitle")}
+              </Text>
             </View>
           </View>
           <OnOffButton
@@ -361,7 +299,9 @@ export default function SettingsScreen() {
             </View>
             <View style={styles.textContainer}>
               <Text style={styles.label}>{t("settings.nikud.title")}</Text>
-              <Text style={styles.subtitle}>{t("settings.nikud.subtitle")}</Text>
+              <Text style={styles.subtitle}>
+                {t("settings.nikud.subtitle")}
+              </Text>
             </View>
           </View>
           <OnOffButton value={showNikud} onChange={setShowNikud} />
@@ -376,8 +316,12 @@ export default function SettingsScreen() {
               <AppIcon name="download" size={18} color={colors.textSecondary} />
             </View>
             <View style={styles.textContainer}>
-              <Text style={styles.label}>{t("settings.clearStorage.title")}</Text>
-              <Text style={styles.subtitle}>{t("settings.clearStorage.subtitle")}</Text>
+              <Text style={styles.label}>
+                {t("settings.clearStorage.title")}
+              </Text>
+              <Text style={styles.subtitle}>
+                {t("settings.clearStorage.subtitle")}
+              </Text>
             </View>
           </View>
           <OnOffButton
