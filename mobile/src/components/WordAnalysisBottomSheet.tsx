@@ -78,8 +78,13 @@ type TabType = "masoretic" | "qumran" | "instances";
 const createStyles = (
   colors: ReturnType<typeof getColors>,
   hebrewScale: number,
-) =>
-  StyleSheet.create({
+) => {
+  const baseHebrewSize = 48 * hebrewScale;
+  const baseHebrewLineHeight = 72 * hebrewScale;
+  const qumranSize = baseHebrewSize * (1.9 / 1.06);
+  const qumranLineHeight = baseHebrewLineHeight * (1.5 / 1.65);
+
+  return StyleSheet.create({
     content: {
       paddingHorizontal: spacing[6],
       paddingTop: spacing[2],
@@ -105,14 +110,16 @@ const createStyles = (
     },
     hebrew: {
       fontFamily: typography.families.hebrewScripture,
-      fontSize: 48 * hebrewScale,
+      fontSize: baseHebrewSize,
       color: colors.textPrimary,
       textAlign: "center",
       writingDirection: "rtl",
-      lineHeight: 72 * hebrewScale,
+      lineHeight: baseHebrewLineHeight,
     },
     hebrewQumran: {
       fontFamily: typography.families.hebrewQumran,
+      fontSize: qumranSize,
+      lineHeight: qumranLineHeight,
       color: colors.qumranText,
     },
     qumranText: {
@@ -161,6 +168,34 @@ const createStyles = (
       letterSpacing: 1,
     },
     toggleTextActive: {
+      color: colors.surface,
+    },
+    secondaryToggleContainer: {
+      alignItems: "center",
+      marginTop: -spacing[2],
+      marginBottom: spacing[6],
+    },
+    secondaryToggleButton: {
+      paddingVertical: spacing[2],
+      paddingHorizontal: spacing[4],
+      borderRadius: radii.full,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.background,
+    },
+    secondaryToggleButtonActive: {
+      backgroundColor: colors.primary,
+      borderColor: colors.primary,
+    },
+    secondaryToggleText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.bodySmall,
+      color: colors.textSecondary,
+      fontWeight: "600",
+      textTransform: "uppercase",
+      letterSpacing: 1,
+    },
+    secondaryToggleTextActive: {
       color: colors.surface,
     },
     sectionLabel: {
@@ -324,6 +359,7 @@ const createStyles = (
       marginTop: spacing[1],
     },
   });
+};
 
 // Map of book abbreviations to book IDs
 const bookAbbreviations: Record<string, string> = {
@@ -479,7 +515,17 @@ const WordAnalysisBottomSheetComponent = (
     // Hide transliteration for YHVH (H3068)
     if (checkStrong === "H3068") return undefined;
 
+    const masoreticTranslit =
+      language === "en"
+        ? word?.translit_en
+        : language === "es"
+          ? word?.translit_es
+          : undefined;
+
     if (activeTab === "qumran") {
+      if (dssStrongNumber && strongNumber && dssStrongNumber === strongNumber) {
+        return masoreticTranslit;
+      }
       const strongTranslit =
         language === "en"
           ? dssLexiconEntry?.translit_en
@@ -488,11 +534,7 @@ const WordAnalysisBottomSheetComponent = (
             : undefined;
       if (strongTranslit) return strongTranslit;
     }
-    return language === "en"
-      ? word?.translit_en
-      : language === "es"
-        ? word?.translit_es
-        : undefined;
+    return masoreticTranslit;
   }, [
     activeTab,
     language,
@@ -619,10 +661,10 @@ const WordAnalysisBottomSheetComponent = (
   }, [dssStrongNumber, language, word?.dssWord]);
 
   useEffect(() => {
-    // Reset to meanings tab when a new word is selected
-    setActiveTab("masoretic");
+    // Reset to default tab when a new word is selected
+    setActiveTab(hasDssVariant ? "qumran" : "masoretic");
     setShowAllInstances(false);
-  }, [word?.strong, word?.dssStrong]);
+  }, [word?.strong, word?.dssStrong, hasDssVariant]);
 
   useEffect(() => {
     if (!hasDssVariant && activeTab === "qumran") {
@@ -850,12 +892,7 @@ const WordAnalysisBottomSheetComponent = (
                 {displayHebrew}
               </Text>
               {wordTransliteration ? (
-                <Text
-                  style={[
-                    styles.transliteration,
-                    isQumranTab && styles.qumranText,
-                  ]}
-                >
+                <Text style={styles.transliteration}>
                   {wordTransliteration}
                 </Text>
               ) : null}
@@ -867,18 +904,11 @@ const WordAnalysisBottomSheetComponent = (
                 </Text>
               )}
               {activeStrongNumber ? (
-                <Text
-                  style={[
-                    styles.occurrencesText,
-                    isQumranTab && styles.qumranText,
-                  ]}
-                >
-                  {activeStrongNumber}
-                </Text>
+                <Text style={styles.occurrencesText}>{activeStrongNumber}</Text>
               ) : null}
             </View>
 
-            {/* Toggle: Qumran / Masoretic / Instances */}
+            {/* Toggle: Qumran / Masoretic */}
             <View style={styles.toggleContainer}>
               {hasDssVariant ? (
                 <Pressable
@@ -916,23 +946,47 @@ const WordAnalysisBottomSheetComponent = (
                     : t("wordCard.meanings")}
                 </Text>
               </Pressable>
-              <Pressable
-                style={[
-                  styles.toggleButton,
-                  activeTab === "instances" && styles.toggleButtonActive,
-                ]}
-                onPress={() => setActiveTab("instances")}
-              >
-                <Text
+              {!hasDssVariant ? (
+                <Pressable
                   style={[
-                    styles.toggleText,
-                    activeTab === "instances" && styles.toggleTextActive,
+                    styles.toggleButton,
+                    activeTab === "instances" && styles.toggleButtonActive,
                   ]}
+                  onPress={() => setActiveTab("instances")}
                 >
-                  {t("wordCard.instances")}
-                </Text>
-              </Pressable>
+                  <Text
+                    style={[
+                      styles.toggleText,
+                      activeTab === "instances" && styles.toggleTextActive,
+                    ]}
+                  >
+                    {t("wordCard.instances")}
+                  </Text>
+                </Pressable>
+              ) : null}
             </View>
+            {hasDssVariant ? (
+              <View style={styles.secondaryToggleContainer}>
+                <Pressable
+                  style={[
+                    styles.secondaryToggleButton,
+                    activeTab === "instances" &&
+                      styles.secondaryToggleButtonActive,
+                  ]}
+                  onPress={() => setActiveTab("instances")}
+                >
+                  <Text
+                    style={[
+                      styles.secondaryToggleText,
+                      activeTab === "instances" &&
+                        styles.secondaryToggleTextActive,
+                    ]}
+                  >
+                    {t("wordCard.instances")}
+                  </Text>
+                </Pressable>
+              </View>
+            ) : null}
 
             {/* Tab Content */}
             {activeTab === "masoretic" ? (
@@ -1064,44 +1118,46 @@ const WordAnalysisBottomSheetComponent = (
                   {dssMeaningsList.map((meaning, index) => (
                     <Text
                       key={`${meaning}-${index}`}
-                      style={[styles.meaningsBullet, styles.qumranText]}
+                      style={styles.meaningsBullet}
                     >
                       {meaning}
                     </Text>
                   ))}
                 </View>
 
+                <View style={styles.sectionDivider} />
                 <Text style={styles.sectionLabel}>
                   {t("wordCard.commentary")}
                 </Text>
-                <Text style={[styles.commentaryText, styles.qumranText]}>
+                <Text style={styles.commentaryText}>
                   {dssCommentary ?? "—"}
                 </Text>
 
+                <View style={styles.sectionDivider} />
                 <View style={styles.rootSection}>
                   <Text style={styles.sectionLabel}>{t("wordCard.root")}</Text>
-                  <Text style={[styles.rootHebrew, styles.qumranText]}>
-                    {(
-                      dssLexiconEntry?.root ??
-                      dssLexiconEntry?.hebrew ??
-                      displayHebrew
-                    ).replace(/\//g, "")}
-                  </Text>
+                  {dssLexiconEntry?.root || dssLexiconEntry?.root_strong ? (
+                    <Text style={styles.rootHebrew}>
+                      {(
+                        dssLexiconEntry?.root ??
+                        dssLexiconEntry?.hebrew ??
+                        displayHebrew
+                      ).replace(/\//g, "")}
+                    </Text>
+                  ) : null}
                   {(
                     language === "en"
                       ? dssLexiconEntry?.root_translit_en
                       : dssLexiconEntry?.root_translit_es
                   ) ? (
-                    <Text
-                      style={[styles.rootTransliteration, styles.qumranText]}
-                    >
+                    <Text style={styles.rootTransliteration}>
                       {language === "en"
                         ? dssLexiconEntry?.root_translit_en
                         : dssLexiconEntry?.root_translit_es}
                     </Text>
                   ) : null}
                   {dssLexiconEntry?.root_strong ? (
-                    <Text style={[styles.rootStrong, styles.qumranText]}>
+                    <Text style={styles.rootStrong}>
                       {dssLexiconEntry.root_strong}
                     </Text>
                   ) : null}
@@ -1110,12 +1166,12 @@ const WordAnalysisBottomSheetComponent = (
                     dssLexiconEntry.root_strong &&
                     dssStrongNumber &&
                     dssLexiconEntry.root_strong !== dssStrongNumber ? (
-                      <Text style={[styles.rootMeaning, styles.qumranText]}>
+                      <Text style={styles.rootMeaning}>
                         {formatRootMeaningText(dssRootMeaningText)}
                       </Text>
                     ) : null
                   ) : (
-                    <Text style={[styles.rootMeaning, styles.qumranText]}>
+                    <Text style={styles.rootMeaning}>
                       {t("wordCard.alreadyRoot")}
                     </Text>
                   )}
