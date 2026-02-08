@@ -1,0 +1,236 @@
+{
+  "common": {
+    "on": "On",
+    "off": "Off",
+    "loading": "Loading...",
+    "appName": "Davar",
+    "downloadOnAppStore": "Download on the App Store",
+    "getOnGooglePlay": "Get it on Google Play"
+  },
+  "navigation": {
+    "goHome": "Go to home",
+    "selectBook": "Select book",
+    "selectChapter": "Select chapter",
+    "selectVerse": "Select verse",
+    "previousVerse": "Previous verse",
+    "nextVerse": "Next verse",
+    "openFeatures": "Open features",
+    "features": "Features",
+    "donate": "Donate",
+    "openSettings": "Open settings",
+    "chapterShort": "Ch",
+    "verseShort": "Vs",
+    "languageLabel": "Language",
+    "toggleDarkTheme": "Toggle dark theme",
+    "toggleQumran": "Toggle Qumran variants",
+    "toggleHebrewOnly": "Toggle Hebrew only",
+    "toggleNikud": "Toggle nikud",
+    "toggleCantillation": "Toggle cantillation",
+    "toggleFullChapter": "Toggle full chapter",
+    "toggleSeferStyle": "Toggle sefer style",
+    "swipeToNavigate": "Swipe to navigate",
+    "backToApp": "\u2190 Back to App",
+    "search": "Search...",
+    "searchBooks": "Search books...",
+    "loadingBooks": "Loading books...",
+    "noBooksFound": "No books found",
+    "noResults": "No results found",
+    "noChapters": "No chapters available",
+    "noVerses": "No verses available",
+    "book": "Book",
+    "verse": "Verse",
+    "modal": "Modal"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": {
+      "general": "General",
+      "offline": "Offline"
+    },
+    "theme": {
+      "title": "Theme",
+      "subtitle": "Dark Mode"
+    },
+    "language": {
+      "title": "Language"
+    },
+    "qumran": {
+      "title": "Qumran Variants",
+      "subtitle": "Show Dead Sea Scrolls text"
+    },
+    "fullChapter": {
+      "title": "Full Chapter",
+      "subtitle": "Show full chapter text"
+    },
+    "seferStyle": {
+      "title": "Book Style",
+      "subtitle": "Continuous Hebrew scroll layout",
+      "warningTitle": "Book requires Hebrew Only",
+      "warningMessage": "Enable Hebrew Only to use Book style."
+    },
+    "hebrewOnly": {
+      "title": "Hebrew Only",
+      "subtitle": "Show text in Hebrew only"
+    },
+    "cantillation": {
+      "title": "Cantillation",
+      "subtitle": "Show cantillation marks"
+    },
+    "nikud": {
+      "title": "Nikud",
+      "subtitle": "Show vowel pointing"
+    },
+    "clearStorage": {
+      "title": "Clear Storage",
+      "subtitle": "Reset all settings and data",
+      "alertTitle": "Clear Storage",
+      "alertMessage": "This will reset all settings and data. The app will reload.",
+      "cancel": "Cancel",
+      "confirm": "Clear"
+    },
+    "designSystemTitle": "Design System",
+    "designSystemDescription": "View design components",
+    "mobileDesignGuideTitle": "Mobile Design Guide",
+    "mobileDesignGuideDescription": "View mobile design components"
+  },
+  "home": {
+    "todayIs": "Today is",
+    "calendar": {
+      "todayIs": "Today is",
+      "dateLabel": "Aviv 10",
+      "dayNames": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      "pesachLabel": "Pesach",
+      "pesachHebrew": "פֶּסַח"
+    },
+    "download": {
+      "title": "Download Offline",
+      "downloading": "Downloading {item}...",
+      "idle": "Tap to store dictionary and translations",
+      "dictionary": "Dictionary",
+      "english": "English",
+      "spanish": "Spanish"
+    },
+    "donate": {
+      "title": "Donate",
+      "subtitle": "Support Davar development"
+    },
+    "sourcesTitle": "Sources",
+    "sources": {
+      "hebrewTextLabel": "Hebrew text",
+      "hebrewTextValue": "Masoretic & Qumran",
+      "dictionaryLabel": "Dictionary",
+      "dictionaryValue": "Strong, BDB, custom",
+      "dictionaryNote": " (selected words)",
+      "englishTranslationLabel": "English translation",
+      "englishTranslationValue": "TS2009",
+      "spanishTranslationLabel": "Spanish translation",
+      "spanishTranslationValue": "TTH",
+      "besorahLabel": "Besorah",
+      "besorahValue": "Delitzsch translation"
+    },
+    "aboutTitle": "About",
+    "aboutItems": {
+      "legal": "Legal",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "support": "Support",
+      "bug": "Bug",
+      "github": "GitHub",
+      "feedback": "Feedback"
+    },
+    "about": {
+      "title": "About",
+      "items": {
+        "legal": "Legal",
+        "terms": "Terms",
+        "privacy": "Privacy",
+        "support": "Support",
+        "bug": "Bug",
+        "github": "GitHub",
+        "feedback": "Feedback"
+      }
+    }
+  },
+  "donate": {
+    "githubSponsor": "Github Sponsor"
+  },
+  "features": {
+    "title": "Ideas",
+    "items": [
+      "telegram app",
+      "blockchain app",
+      "arabic",
+      "farsi",
+      "japanese",
+      "portuguese",
+      "search anything (latin characters or hebrew)",
+      "septuagint",
+      "greek εὐαγγέλιον"
+    ],
+    "openSourceNote": "this is an open source project, contribute and collaborate with your skills or ideas",
+    "repositoryLabel": "davar"
+  },
+  "errors": {
+    "uiFallbackTitle": "Something went wrong",
+    "uiFallbackMessage": "Please refresh the page or try again later.",
+    "uiFallbackMessageMobile": "Please restart the app.",
+    "loadBooks": "Unable to load books.",
+    "loadVerses": "Unable to load verses."
+  },
+  "verse": {
+    "previousSnippet": "Previous verse...",
+    "nextSnippet": "Next verse...",
+    "selectBookPrompt": "Select a book to begin.",
+    "loading": "Loading verses...",
+    "prefixLabel": "Prefix: {prefix}",
+    "missingSpanishTranslation": "We don't have a Spanish translation for this text yet, we're working on it..."
+  },
+  "wordCard": {
+    "selectWord": "Select a word",
+    "selectWordPrompt": "Select a word to see its analysis",
+    "close": "Close word meaning",
+    "meanings": "Meanings",
+    "masoretic": "Masoretic",
+    "qumran": "Qumran",
+    "instances": "Instances",
+    "root": "Root",
+    "commentary": "Commentary",
+    "preposition": "Preposition",
+    "tapToNavigate": "Tap to Navigate",
+    "noMeanings": "No meanings available yet.",
+    "noInstances": "No instances available yet.",
+    "loadingDefinitions": "Loading definitions...",
+    "alreadyRoot": "ALREADY ROOT",
+    "appearsCount": "Appears {count} times",
+    "appearsIn": "Appears In",
+    "showMore": "Show {count} more",
+    "properName": "Proper Name"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Espa\u00f1ol",
+    "he": "\u05e2\u05d1\u05e8\u05d9\u05ea"
+  },
+  "offline": {
+    "dictionary": "Dictionary",
+    "englishTranslation": "English Translation",
+    "spanishTranslation": "Spanish Translation",
+    "downloaded": "Downloaded",
+    "notDownloaded": "Not downloaded"
+  },
+  "search": {
+    "title": "Search",
+    "subtitle": "Navigate to any book, chapter, and verse",
+    "tapPrompt": "Tap to select a book, chapter, and verse",
+    "goToVerse": "Go to Verse"
+  },
+  "bookmarks": {
+    "title": "Bookmarks",
+    "emptyState": "Save verses to revisit them here."
+  },
+  "tabs": {
+    "home": "Home",
+    "verse": "Verse",
+    "settings": "Settings"
+  }
+}

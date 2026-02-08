@@ -1,0 +1,208 @@
+{
+  "name": "Leviticus",
+  "chapters": {
+    "1": {
+      "verses": {
+        "17": {
+          "masoretic_text": "וְשִׁסַּ֨ע אֹת֣וֹ בִכְנָפָיו֮ לֹ֣א יַבְדִּיל֒ וְהִקְטִ֨יר אֹת֤וֹ הַכֹּהֵן֙ הַמִּזְבֵּ֔חָה עַל־ הָעֵצִ֖ים אֲשֶׁ֣ר עַל־ הָאֵ֑שׁ עֹלָ֣ה ה֗וּא אִשֵּׁ֛ה רֵ֥יחַ נִיחֹ֖חַ לַיהוָֽה׃",
+          "dss_text": "ושסע אתיו בכנפיו ולא יבדיל והקטיר אתו הכהן המזבחה על העצים אשר על האש עלה הוא אשה ריח ניחוח ליהוה",
+          "differences": [
+            {
+              "position": 15,
+              "masoretic_word": "עֹלָ֣ה",
+              "dss_word": "עלה הוא אשה",
+              "commentary": "4QExod-Levf, Mas, SP, LXX: it is an offering of fire. 4QLevb reads עלה היא which means it is an offering."
+            }
+          ]
+        }
+      }
+    },
+    "3": {
+      "verses": {
+        "11": {
+          "masoretic_text": "וְהִקְטִיר֥וֹ הַכֹּהֵ֖ן הַמִּזְבֵּ֑חָה לֶ֥חֶם אִשֶּׁ֖ה לַיהוָֽה׃",
+          "dss_text": "והקטיר הכהן המזבחה לחם אשה ליהוה",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "לֶ֥חֶם",
+              "dss_word": "לחם אשה ליהוה",
+              "commentary": "4QLevb, Mas, SP: the food of the fire offering to Yahweh. 4QLXXLevb along with LXX includes οσμη(ν) ευωδιας meaning a pleasing fragrance. This would indicate that the LXX and 4QLXXLevb had a different Hebrew Vorlage compared to what we see in the main Hebrew text-type."
+            }
+          ]
+        }
+      }
+    },
+    "4": {
+      "verses": {
+        "4": {
+          "masoretic_text": "וְהֵבִ֣יא אֶת־ הַפָּ֗ר אֶל־ פֶּ֛תַח אֹ֥הֶל מוֹעֵ֖ד לִפְנֵ֣י יְהוָ֑ה וְסָמַ֤ךְ אֶת־ יָדוֹ֙ עַל־ רֹ֣אשׁ הַפָּ֔ר וְשָׁחַ֥ט אֶת־ הַפָּ֖ר לִפְנֵ֥י יְהוָֽה׃",
+          "dss_text": "והביא את הפר אל פתח אהל מועד לפני יהוה וסמך את ידו על ראש הפר לפני יהוה ושחט את הפר לפני יהוה",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "וְהֵבִ֣יא",
+              "dss_word": "והביא",
+              "commentary": "MasLeva, Mas, SP, LXX: And he shall bring in. 4QLXXLevb reads και εισαξει meaning And he shall introduce."
+            },
+            {
+              "position": 16,
+              "masoretic_word": "וְשָׁחַ֥ט",
+              "dss_word": "לפני יהוה",
+              "commentary": "Hebrew reconstructed from the Greek of 4QLXXLevb (εναντι Ιαω), a reading also in the LXX. Masoretic and SP omit. 4QLevc and MasLeva are not extant in this section of the verse."
+            }
+          ]
+        },
+        "6": {
+          "masoretic_text": "וְטָבַ֧ל הַכֹּהֵ֛ן אֶת־ אֶצְבָּע֖וֹ בַּדָּ֑ם וְהִזָּ֨ה מִן־ הַדָּ֜ם שֶׁ֤בַע פְּעָמִים֙ לִפְנֵ֣י יְהוָ֔ה אֶת־ פְּנֵ֖י פָּרֹ֥כֶת הַקֹּֽדֶשׁ׃",
+          "dss_text": "וטבל הכהן את אצבעו בדם והזה מן הדם שבע פעמים באצבעו לפני יהוה את פני פרכת הקדש",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "לִפְנֵ֣י",
+              "dss_word": "באצבעו",
+              "commentary": "Hebrew reconstructed from the Greek of 4QLXXLevb (τωι δακτυλωι), a reading also in the SP. Masoretic and LXX omit. 4QLevc and MasLeva are not extant in this section of the verse."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "וְנָתַן֩ הַכֹּהֵ֨ן מִן־ הַדָּ֜ם עַל־ קַ֠רְנוֹת מִזְבַּ֨ח קְטֹ֤רֶת הַסַּמִּים֙ לִפְנֵ֣י יְהוָ֔ה אֲשֶׁ֖ר בְּאֹ֣הֶל מוֹעֵ֑ד וְאֵ֣ת ׀ כָּל־ דַּ֣ם הַפָּ֗ר יִשְׁפֹּךְ֙ אֶל־ יְסוֹד֙ מִזְבַּ֣ח הָעֹלָ֔ה אֲשֶׁר־ פֶּ֖תַח אֹ֥הֶל מוֹעֵֽד׃",
+          "dss_text": "ונתן הכהן מן הדם על קרנות מזבח קטרת הסמים לפני יהוה אשר באהל מועד ואת כל דם הפר ישפך אל יסוד מזבח העלה אשר פתח אהל מועד",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "הַדָּ֜ם",
+              "dss_word": "הדם",
+              "commentary": "MasLeva, Mas, SP: the blood. 4QLXXLevb and LXX add του μοσχου meaning of the bull afterwards. Either the Greek translators were working from a different Hebrew Vorlage, or they added such things for clarity."
+            },
+            {
+              "position": 23,
+              "masoretic_word": "הָעֹלָ֔ה",
+              "dss_word": "העלה",
+              "commentary": "MasLeva, Mas, SP, LXX: of the burnt offering. 4QLXXLevb reads της καρπωσεως meaning of the offering."
+            }
+          ]
+        },
+        "25": {
+          "masoretic_text": "וְלָקַ֨ח הַכֹּהֵ֜ן מִדַּ֤ם הַֽחַטָּאת֙ בְּאֶצְבָּע֔וֹ וְנָתַ֕ן עַל־ קַרְנֹ֖ת מִזְבַּ֣ח הָעֹלָ֑ה וְאֶת־ דָּמ֣וֹ יִשְׁפֹּ֔ךְ אֶל־ יְס֖וֹד מִזְבַּ֥ח הָעֹלָֽה׃",
+          "dss_text": "ולקח הכהן מדם החטאת באצבעו ונתן על קרנת מזבח העלה ואת דמו ישפך אל יסוד מזבח העלה",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "וְאֶת־",
+              "dss_word": "ואת דמו ישפך",
+              "commentary": "4QLevc, Mas, SP, LXX: and its blood he shall pour out. 11QpaleoLeva reads ושפך ואת דמו meaning and he shall pour out its blood."
+            }
+          ]
+        }
+      }
+    },
+    "11": {
+      "verses": {
+        "26": {
+          "masoretic_text": "לְֽכָל־ הַבְּהֵמָ֡ה אֲשֶׁ֣ר הִוא֩ מַפְרֶ֨סֶת פַּרְסָ֜ה וְשֶׁ֣סַע ׀ אֵינֶ֣נָּה שֹׁסַ֗עַת וְגֵרָה֙ אֵינֶ֣נָּה מַעֲלָ֔ה טְמֵאִ֥ים הֵ֖ם לָכֶ֑ם כָּל־ הַנֹּגֵ֥עַ בָּהֶ֖ם יִטְמָֽא׃",
+          "dss_text": "לכל הבהמה אשר הוא מפריסת פרסה ושסעת שסע פרסות וגרה איננה מעלה טמאים הם לכם כל הנוגע בהם יטמא",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "ושסע איננה שסעת",
+              "dss_word": "ושסעת שסע פרסות",
+              "commentary": "2QpaleoLev, LXX: and that has a split cleft in the hoof. MasLevb(vid) and Masoretic read ושסע איננה שסעת meaning and which does not split the hoof. SP reads ושסעה איננה שסע meaning and splits not the hoof."
+            }
+          ]
+        }
+      }
+    },
+    "14": {
+      "verses": {
+        "16": {
+          "masoretic_text": "וְטָבַ֤ל הַכֹּהֵן֙ אֶת־ אֶצְבָּע֣וֹ הַיְמָנִ֔ית מִן־ הַשֶּׁ֕מֶן אֲשֶׁ֥ר עַל־ כַּפּ֖וֹ הַשְּׂמָאלִ֑ית וְהִזָּ֨ה מִן־ הַשֶּׁ֧מֶן בְּאֶצְבָּע֛וֹ שֶׁ֥בַע פְּעָמִ֖ים לִפְנֵ֥י יְהוָֽה׃",
+          "dss_text": "וטבל הכהן את אצבעו הימנית ימן השמן אשר על כפו השמאלית והזה מן השמן שבע פעמים לפני יהוה",
+          "differences": [
+            {
+              "position": 14,
+              "masoretic_word": "השמן באצבעו",
+              "dss_word": "השמן",
+              "commentary": "11QpaleoLeva, SP: the oil. 11QLevb and Masoretic read השמן באצבעו meaning the oil with his finger. The LXX reads τω δακτυλω meaning with the finger, omitting a reiteration of oil."
+            }
+          ]
+        }
+      }
+    },
+    "17": {
+      "verses": {
+        "3": {
+          "masoretic_text": "אִ֥ישׁ אִישׁ֙ מִבֵּ֣ית יִשְׂרָאֵ֔ל אֲשֶׁ֨ר יִשְׁחַ֜ט שׁ֥וֹר אוֹ־ כֶ֛שֶׂב אוֹ־ עֵ֖ז בַּֽמַּחֲנֶ֑ה א֚וֹ אֲשֶׁ֣ר יִשְׁחַ֔ט מִח֖וּץ לַֽמַּחֲנֶֽה׃",
+          "dss_text": "איש איש מבית ישראל אשר ישחט שור או כשב או עז במחנה או אשר ישחט מחוץ למחנה",
+          "differences": [
+            {
+              "position": 16,
+              "masoretic_word": "מִח֖וּץ",
+              "dss_word": "מחוצה",
+              "commentary": "11QpaleoLeva, Mas, SP: from outside. 4QLevd reads מחוצה which means the same thing, but with a locative ה- suffix."
+            },
+            {
+              "position": 1,
+              "masoretic_word": "אִ֥ישׁ",
+              "dss_word": "איש איש מבית ישראל",
+              "commentary": "11QpaleoLeva, Mas, SP: Any man from the house of Israel. 4QLevd adds והגר הגר בישראל meaning or the foreigner who resides in Israel, a reading closely resembled in the LXX: η των προσηλυτων η των προσκειμενων εν υμιν meaning or the foreigner or those living among you."
+            }
+          ]
+        },
+        "4": {
+          "masoretic_text": "וְאֶל־ פֶּ֜תַח אֹ֣הֶל מוֹעֵד֮ לֹ֣א הֱבִיאוֹ֒ לְהַקְרִ֤יב קָרְבָּן֙ לַֽיהוָ֔ה לִפְנֵ֖י מִשְׁכַּ֣ן יְהוָ֑ה דָּ֣ם יֵחָשֵׁ֞ב לָאִ֤ישׁ הַהוּא֙ דָּ֣ם שָׁפָ֔ךְ וְנִכְרַ֛ת הָאִ֥ישׁ הַה֖וּא מִקֶּ֥רֶב עַמּֽוֹ׃",
+          "dss_text": "ואל פתח אהל מועד לא הביאו לעשות אתו עלה או שלמים ליהוה לרצונכם לריח ניחח וישחטהו בחוץ ואל פתח אוהל מועד לוא יביאנו להקריבו קרבן ליהוה לפני משכן יהוה דם יחשב לאיש ההוא דם שפך ונכרת האיש ההוא מקרב עמו",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "לְהַקְרִ֤יב",
+              "dss_word": "לעשות אתו עלה או שלמים ליהוה לרצונכם לריח ניחח וישחטהו בחוץ ואל פתח אוהל מועד לוא יביאנו",
+              "commentary": "4QLevd, SP, LXX: to sacrifice it as a burnt offering or an offering of fellowship to Yahweh, to be acceptable as a pleasing fragrance, and has slaughtered it outside and does not bring it to the door of the tent of meeting. 11QpaleoLeva and Masoretic omit."
+            }
+          ]
+        }
+      }
+    },
+    "22": {
+      "verses": {
+        "22": {
+          "masoretic_text": "עַוֶּרֶת֩ א֨וֹ שָׁב֜וּר אוֹ־ חָר֣וּץ אֽוֹ־ יַבֶּ֗לֶת א֤וֹ גָרָב֙ א֣וֹ יַלֶּ֔פֶת לֹא־ תַקְרִ֥יבוּ אֵ֖לֶּה לַיהוָ֑ה וְאִשֶּׁ֗ה לֹא־ תִתְּנ֥וּ מֵהֶ֛ם עַל־ הַמִּזְבֵּ֖חַ לַיהוָֽה׃",
+          "dss_text": "עורת או שבר או חרוץ או יבלת או גרב או ילפת או מרוח אשך לא תקריבו אשה ליהוה ואשה לא תתנו מהם על המזבח ליהוה",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "יַבֶּ֗לֶת",
+              "dss_word": "יבלת או גרב או",
+              "commentary": "4QLevb, Mas, SP, LXX: having a seeping ulcer, or a rash, or having scabs. 11QpaleoLeva reads ילפת או גרב או יבלת meaning having scabs, or a rash, or having a seeping ulcer."
+            },
+            {
+              "position": 11,
+              "masoretic_word": "יַלֶּ֔פֶת",
+              "dss_word": "ילפת או מרוח אשך",
+              "commentary": "4QLevb: or crushed testicles. 11QpaleoLeva, Mas, SP and LXX omit."
+            }
+          ]
+        }
+      }
+    },
+    "25": {
+      "verses": {}
+    },
+    "27": {
+      "verses": {
+        "17": {
+          "masoretic_text": "אִם־ מִשְּׁנַ֥ת הַיֹּבֵ֖ל יַקְדִּ֣ישׁ שָׂדֵ֑הוּ כְּעֶרְכְּךָ֖ יָקֽוּם׃",
+          "dss_text": "אם משנת היובל יקדיש שדהו כערכך יקום",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "אִם־",
+              "dss_word": "אם",
+              "commentary": "11QpaleoLeva, Mas: If. 4QLev-Numa and SP read ואם meaning And if, a reading supported by the LXX: εαν δε."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -6,8 +6,14 @@ Handles loading, processing, and updating lexicon JSON files with translations.
 
 import json
 import logging
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, NamedTuple
+
+# Add parent directory to path for utils import
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import load_json, save_json, validate_translation_field, ProgressTracker
 
 logger = logging.getLogger(__name__)
 
@@ -27,15 +33,7 @@ class LexiconProcessor:
             target_lang: Target language code (e.g., 'es', 'pt')
             batch_size: Number of definitions to translate per API call
         """
-        from .config import (
-            SUPPORTED_LANGUAGES,
-            DEFAULT_BATCH_SIZE,
-            ROOTS_FILE,
-            WORDS_FILE,
-            ROOTS_PRETTY_FILE,
-            WORDS_PRETTY_FILE,
-            validate_language
-        )
+        from .config import validate_language
 
         if not validate_language(target_lang):
             raise ValueError(f"Unsupported language: {target_lang}")
@@ -48,27 +46,7 @@ class LexiconProcessor:
         from .translator import GrokTranslator
         self.translator = GrokTranslator()
 
-    def _load_json_file(self, file_path: Path) -> Dict:
-        """Load JSON file, handling both minified and pretty formats."""
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except FileNotFoundError:
-            logger.error(f"File not found: {file_path}")
-            raise
-        except json.JSONDecodeError as e:
-            logger.error(f"Invalid JSON in {file_path}: {e}")
-            raise
-
-    def _save_json_file(self, data: Dict, file_path: Path, pretty: bool = False):
-        """Save JSON file in minified or pretty format."""
-        file_path.parent.mkdir(parents=True, exist_ok=True)
-
-        with open(file_path, 'w', encoding='utf-8') as f:
-            if pretty:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-            else:
-                json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
+    # JSON I/O now handled by utils module
 
     def _extract_definitions_to_translate(
         self,
@@ -84,8 +62,9 @@ class LexiconProcessor:
         to_translate = []
 
         for idx, defn in enumerate(definitions):
-            # Check if translation already exists
-            if self.text_field in defn:
+            # Check if translation already exists and is non-empty
+            existing_translation = defn.get(self.text_field)
+            if isinstance(existing_translation, str) and existing_translation.strip():
                 continue
 
             # Check if we have English text to translate
@@ -298,7 +277,6 @@ class LexiconProcessor:
     def process_file(
         self,
         file_path: Path,
-        pretty_file_path: Optional[Path] = None,
         strong_number: Optional[str] = None,
         dry_run: bool = False
     ) -> Dict[str, int]:
@@ -314,7 +292,7 @@ class LexiconProcessor:
             Dictionary with processing statistics
         """
         logger.info(f"Loading file: {file_path}")
-        data = self._load_json_file(file_path)
+        data = load_json(file_path)
 
         stats = {
             'entries_processed': 0,
@@ -377,14 +355,22 @@ class LexiconProcessor:
         stats['definitions_processed'] = processed
         stats['definitions_translated'] = translated
 
+        # Validate translations before saving
+        if stats['definitions_translated'] > 0:
+            logger.debug("Validating translations...")
+            invalid_count = 0
+            for entry in data.values():
+                for defn in entry.get('definitions', []):
+                    if not validate_translation_field(defn, self.target_lang, allow_empty=False):
+                        invalid_count += 1
+            
+            if invalid_count > 0:
+                logger.warning(f"Found {invalid_count} definitions with invalid translations")
+        
         # Save updated file (unless dry run)
         if not dry_run:
             logger.info(f"Saving updated file: {file_path}")
-            self._save_json_file(data, file_path, pretty=False)
-
-            if pretty_file_path:
-                logger.info(f"Saving pretty file: {pretty_file_path}")
-                self._save_json_file(data, pretty_file_path, pretty=True)
+            save_json(data, file_path)
         else:
             logger.info("DRY RUN MODE - Skipping file save")
 
@@ -396,11 +382,10 @@ class LexiconProcessor:
         dry_run: bool = False
     ) -> Dict[str, int]:
         """Process roots.json file."""
-        from .config import ROOTS_FILE, ROOTS_PRETTY_FILE
+        from .config import ROOTS_FILE
 
         return self.process_file(
             ROOTS_FILE,
-            ROOTS_PRETTY_FILE,
             strong_number,
             dry_run
         )
@@ -411,11 +396,10 @@ class LexiconProcessor:
         dry_run: bool = False
     ) -> Dict[str, int]:
         """Process words.json file."""
-        from .config import WORDS_FILE, WORDS_PRETTY_FILE
+        from .config import WORDS_FILE
 
         return self.process_file(
             WORDS_FILE,
-            WORDS_PRETTY_FILE,
             strong_number,
             dry_run
         )

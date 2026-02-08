@@ -1,0 +1,464 @@
+{
+  "name": "Deuteronomy",
+  "chapters": {
+    "1": {
+      "verses": {}
+    },
+    "2": {
+      "verses": {}
+    },
+    "3": {
+      "verses": {
+        "19": {
+          "masoretic_text": "רַ֠ק נְשֵׁיכֶ֣ם וְטַפְּכֶם֮ וּמִקְנֵכֶם֒ יָדַ֕עְתִּי כִּֽי־ מִקְנֶ֥ה רַ֖ב לָכֶ֑ם יֵֽשְׁבוּ֙ בְּעָ֣רֵיכֶ֔ם אֲשֶׁ֥ר נָתַ֖תִּי לָכֶֽם׃",
+          "dss_text": "רק נשיכמה וטפכמה ומקנכמה ידעתי כי מקנה רב לכם ישבו בעריכם אשר נתתי לכמה",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "וטפכם",
+              "dss_word": "טפכם",
+              "commentary": "4QDeutm, Mas (וטפכם): and your little children. 4QDeutd reads טפכם, omitting the initial ו and means your little children (see previous footnote 5 for SP reading the same). SP reads ונשיכם meaning and your women."
+            }
+          ]
+        },
+        "20": {
+          "masoretic_text": "עַ֠ד אֲשֶׁר־ יָנִ֨יחַ יְהוָ֥ה ׀ לֽ͏ַאֲחֵיכֶם֮ כָּכֶם֒ וְיָרְשׁ֣וּ גַם־ הֵ֔ם אֶת־ הָאָ֕רֶץ אֲשֶׁ֨ר יְהוָ֧ה אֱלֹהֵיכֶ֛ם נֹתֵ֥ן לָהֶ֖ם בְּעֵ֣בֶר הַיַּרְדֵּ֑ן וְשַׁבְתֶּ֗ם אִ֚ישׁ לִֽירֻשָּׁת֔וֹ אֲשֶׁ֥ר נָתַ֖תִּי לָכֶֽם׃",
+          "dss_text": "עד אשר יניח יהוה אלוהיכמה לאחיכמה ככמה וירשו גם המה את הארץ אשר יהוה אלהיכמה נותן להמה בעבר הירדן ושבתם איש לירשתו אשר נתתי לכם",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "לֽ͏ַאֲחֵיכֶם֮",
+              "dss_word": "אלוהיכמה",
+              "commentary": "4QDeutm, LXX: your God. 4QDeutd, Masoretic and SP omit."
+            }
+          ]
+        },
+        "22": {
+          "masoretic_text": "לֹ֖א תִּ͏ְירָא֑וּם כִּ֚י יְהוָ֣ה אֱלֹֽהֵיכֶ֔ם ה֖וּא הַנִּלְחָ֥ם לָכֶֽם׃",
+          "dss_text": "ולוא תיראום כי יהוה אלהיכם הוא הנלחם לכם",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "לא",
+              "dss_word": "ולוא",
+              "commentary": "4QDeutm: And do not. 4QDeutd, Masoretic and SP read לא meaning Do not."
+            },
+            {
+              "position": 2,
+              "masoretic_word": "תִּ͏ְירָא֑וּם",
+              "dss_word": "תיראום",
+              "commentary": "4QDeutm, Mas, LXX: all of you fear (plural). 4QDeutd and SP read the singular תיראם."
+            }
+          ]
+        }
+      }
+    },
+    "4": {
+      "verses": {}
+    },
+    "5": {
+      "verses": {
+        "1": {
+          "masoretic_text": "וַיִּקְרָ֣א מֹשֶׁה֮ אֶל־ כָּל־ יִשְׂרָאֵל֒ וַיֹּ֣אמֶר אֲלֵהֶ֗ם שְׁמַ֤ע יִשְׂרָאֵל֙ אֶת־ הַחֻקִּ֣ים וְאֶת־ הַמִּשְׁפָּטִ֔ים אֲשֶׁ֧ר אָנֹכִ֛י דֹּבֵ֥ר בְּאָזְנֵיכֶ֖ם הַיּ֑וֹם וּלְמַדְתֶּ֣ם אֹתָ֔ם וּשְׁמַרְתֶּ֖ם לַעֲשֹׂתָֽם׃",
+          "dss_text": "ויקרא מושה אל כול ישראל ויואמר אליהם שמעה ישראל את החוקים ואת המשפטים אשר אנוכי דובר באוזניכם היום ולמדתם אותם ושמרתם לעשותם",
+          "differences": [
+            {
+              "position": 18,
+              "masoretic_word": "הַיּ֑וֹם",
+              "dss_word": "היום",
+              "commentary": "4QDeutn, 4QDeuto, Mas, SP: today. 4QDeutj reads היום הזה meaning this day, a reading supported by the LXX: τη ημερα ταυτη."
+            }
+          ]
+        },
+        "3": {
+          "masoretic_text": "לֹ֣א אֶת־ אֲבֹתֵ֔ינוּ כָּרַ֥ת יְהוָ֖ה אֶת־ הַבְּרִ֣ית הַזֹּ֑את כִּ֣י אִתָּ֔נוּ אֲנַ֨חְנוּ אֵ֥לֶּה פֹ֛ה הַיּ֖וֹם כֻּלָּ֥נוּ חַיִּֽים׃",
+          "dss_text": "לא את אבותינו כרת יהוה את הברית הזאת כי אתנו אנחנו אלה פה היום כולנו חיים היום",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "הַזֹּ֑את",
+              "dss_word": "הזאת",
+              "commentary": "4QDeutj, Mas, SP: this. 4QDeutn reads an alternative form הזות (both pronounced ha-zowth) meaning the same thing."
+            },
+            {
+              "position": 17,
+              "masoretic_word": "היום",
+              "dss_word": "היום",
+              "commentary": "4QDeutn, LXX: today. Masoretic and SP omit the word. Possibly omitted by 4QDeutj, but manuscript has a lacunae at the end of verse 3."
+            }
+          ]
+        },
+        "5": {
+          "masoretic_text": "אָ֠נֹכִי עֹמֵ֨ד בֵּין־ יְהוָ֤ה וּבֵֽינֵיכֶם֙ בָּעֵ֣ת הַהִ֔וא לְהַגִּ֥יד לָכֶ֖ם אֶת־ דְּבַ֣ר יְהוָ֑ה כִּ֤י יְרֵאתֶם֙ מִפְּנֵ֣י הָאֵ֔שׁ וְלֹֽא־ עֲלִיתֶ֥ם בָּהָ֖ר לֵאמֹֽר׃",
+          "dss_text": "ואנוכי עומד בין יהוה וביניכם בעת ההיא להגיד לכם את דברי יהוה כי יראתם מפני האש ולוא עליתם בהר לאמור",
+          "differences": [
+            {
+              "position": 12,
+              "masoretic_word": "יְהוָ֑ה",
+              "dss_word": "יהוה",
+              "commentary": "4QDeutj, Mas, SP, LXX: Yahweh. 4QDeutn reads יהוה אלוהיכם meaning Yahweh your God."
+            },
+            {
+              "position": 20,
+              "masoretic_word": "לֵאמֹֽר׃",
+              "dss_word": "לאמור",
+              "commentary": "4QDeutj, Mas, SP, LXX: Yahweh. 4QDeutn reads יהוה אלוהיכם meaning Yahweh your God."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "לֹא־ תִשְׁתַּחֲוֶ֥֣ה לָהֶ֖ם֮ וְלֹ֣א תָעָבְדֵ֑ם֒ כִּ֣י אָנֹכִ֞י יְהוָ֤ה אֱלֹהֶ֙יךָ֙ אֵ֣ל קַנָּ֔א פֹּ֠קֵד עֲוֺ֨ן אָב֧וֹת עַל־ בָּנִ֛ים וְעַל־ שִׁלֵּשִׁ֥ים וְעַל־ רִבֵּעִ֖ים לְשֹׂנְאָֽ֑י׃",
+          "dss_text": "לוא תשתחוה להם ולוא תעובדם כי אנוכי יהוה אלוהיך אל קנא פוקד עוון אבות על בנים על שלשים ועל רבעים לשונאי",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "תעבדם",
+              "dss_word": "תעובדם",
+              "commentary": "4QDeutn, Mas & SP (תעבדם): you serve them. 4QDeuto(vid) reads תעבד להם meaning you give service to them."
+            }
+          ]
+        },
+        "14": {
+          "masoretic_text": "וְי֨וֹם֙ הַשְּׁבִיעִ֔֜י שַׁבָּ֖֣ת ׀ לַיהוָ֣֥ אֱלֹהֶ֑֗יךָ לֹ֣א תַעֲשֶׂ֣ה כָל־ מְלָאכָ֡ה אַתָּ֣ה וּבִנְךָֽ־ וּבִתֶּ֣ךָ וְעַבְדְּךָֽ־ וַ֠אֲמָתֶךָ וְשׁוֹרְךָ֨ וַחֲמֹֽרְךָ֜ וְכָל־ בְּהֶמְתֶּ֗ךָ וְגֵֽרְךָ֙ אֲשֶׁ֣ר בִּשְׁעָרֶ֔יךָ לְמַ֗עַן יָנ֛וּחַ עַבְדְּךָ֥ וַאֲמָתְךָ֖ כָּמֽ֑וֹךָ׃",
+          "dss_text": "וביום השביעי שבת ליהוה אלוהיך לוא תעשה בו כל מלאכה אתה בנך בתך עבדך ואמתך שורך וחמורך וכל בהמתך גריך אשר בשעריך למען ינוח עבדך ואמתך כמוך",
+          "differences": [
+            {
+              "position": 18,
+              "masoretic_word": "בְּהֶמְתֶּ֗ךָ",
+              "dss_word": "וכל",
+              "commentary": "4QDeutj(vid), Mas, SP, LXX: and all your cattle. 4QDeutn reads ובהמתך meaning and your cattle."
+            }
+          ]
+        },
+        "24": {
+          "masoretic_text": "וַתֹּאמְר֗וּ הֵ֣ן הֶרְאָ֜נוּ יְהוָ֤ה אֱלֹהֵ֙ינוּ֙ אֶת־ כְּבֹד֣וֹ וְאֶת־ גָּדְל֔וֹ וְאֶת־ קֹל֥וֹ שָׁמַ֖עְנוּ מִתּ֣וֹךְ הָאֵ֑שׁ הַיּ֤וֹם הַזֶּה֙ רָאִ֔ינוּ כִּֽי־ יְדַבֵּ֧ר אֱלֹהִ֛ים אֶת־ הָֽאָדָ֖ם וָחָֽי׃",
+          "dss_text": "ותאמר הן הראנו יהוה אלוהינו את כבודו ואת גודלו ואת קולו שמענו מתוך האש ביום הזה ראינו כי ידבר יהוה את האדם וחי",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "הֵ֣ן",
+              "dss_word": "הן",
+              "commentary": "4QDeutn, Mas, SP:  Behold!4QDeutj uses the more common form הנה meaning the same."
+            }
+          ]
+        },
+        "27": {
+          "masoretic_text": "קְרַ֤ב אַתָּה֙ וּֽשֲׁמָ֔ע אֵ֛ת כָּל־ אֲשֶׁ֥ר יֹאמַ֖ר יְהוָ֣ה אֱלֹהֵ֑ינוּ וְאַ֣תְּ ׀ תְּדַבֵּ֣ר אֵלֵ֗ינוּ אֵת֩ כָּל־ אֲשֶׁ֨ר יְדַבֵּ֜ר יְהוָ֧ה אֱלֹהֵ֛ינוּ אֵלֶ֖יךָ וְשָׁמַ֥עְנוּ וְעָשִֽׂינוּ׃",
+          "dss_text": "קרב אתה ושמע את כול אשר ידבר יהוה אלוהינו אליכה ואתה תדבר אלינו את כול אשר ידבר יהוה אלוהינו אליך ושמענו ועשינו",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "וְאַ֣תְּ ׀",
+              "dss_word": "אליכה",
+              "commentary": "4QDeutj, LXX: to you. 4QDeutn, Masoretic ad SP omit."
+            }
+          ]
+        }
+      }
+    },
+    "7": {
+      "verses": {
+        "15": {
+          "masoretic_text": "וְהֵסִ֧יר יְהוָ֛ה מִמְּךָ֖ כָּל־ חֹ֑לִי וְכָל־ מַדְוֵי֩ מִצְרַ֨יִם הָרָעִ֜ים אֲשֶׁ֣ר יָדַ֗עְתָּ לֹ֤א יְשִׂימָם֙ בָּ֔ךְ וּנְתָנָ֖ם בְּכָל־ שֹׂנְאֶֽיךָ׃",
+          "dss_text": "והסיר יהוה ממך כל חלי וכל מדוי מצרים הרעים אשר ראותה ואשר ידעת לא ישימם בך ונתנם בכל שנאיך",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "יָדַ֗עְתָּ",
+              "dss_word": "ראותה ואשר",
+              "commentary": "5QDeut, LXX: you have seen and which. 4QDeute, Masoretic and SP omit."
+            }
+          ]
+        },
+        "16": {
+          "masoretic_text": "וְאָכַלְתָּ֣ אֶת־ כָּל־ הָֽעַמִּ֗ים אֲשֶׁ֨ר יְהוָ֤ה אֱלֹהֶ֙יךָ֙ נֹתֵ֣ן לָ֔ךְ לֹא־ תָחֹ֥ס עֵֽינְךָ֖ עֲלֵיהֶ֑ם וְלֹ֤א תַעֲבֹד֙ אֶת־ אֱלֹ֣הֵיהֶ֔ם כִּֽי־ מוֹקֵ֥שׁ ה֖וּא לָֽךְ׃",
+          "dss_text": "ואכלת את כל העמים אשר יהוה אלהיך נתן לך לא תחס עינך עליהם ולא תעבד את אלהיהם כי מוקש הוא לך",
+          "differences": [
+            {
+              "position": 13,
+              "masoretic_word": "עֲלֵיהֶ֑ם",
+              "dss_word": "עליהם",
+              "commentary": "4QpaleoDeutr, Mas, SP: upon them. 5QDeut reads the different form עלהם meaning the same thing."
+            }
+          ]
+        },
+        "23": {
+          "masoretic_text": "וּנְתָנָ֛ם יְהוָ֥ה אֱלֹהֶ֖יךָ לְפָנֶ֑יךָ וְהָמָם֙ מְהוּמָ֣ה גְדֹלָ֔ה עַ֖ד הִשָּׁמְדָֽם׃",
+          "dss_text": "ונתנם יהוה אלהיך בידך והומם מהומה גדלה עד השמידם",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "לפניך",
+              "dss_word": "בידך",
+              "commentary": "4QDeute, LXX: into your hand. 4QpaleoDeutr, Masoretic and SP read לפניך (Mas & SP: לפניך) meaning before your face."
+            }
+          ]
+        },
+        "25": {
+          "masoretic_text": "פְּסִילֵ֥י אֱלֹהֵיהֶ֖ם תִּשְׂרְפ֣וּן בָּאֵ֑שׁ לֹֽא־ תַחְמֹד֩ כֶּ֨סֶף וְזָהָ֤ב עֲלֵיהֶם֙ וְלָקַחְתָּ֣ לָ֔ךְ פֶּ֚ן תִּוָּקֵ֣שׁ בּ֔וֹ כִּ֧י תוֹעֲבַ֛ת יְהוָ֥ה אֱלֹהֶ֖יךָ הֽוּא׃",
+          "dss_text": "פסילי אלהיהם תשרפון באש לא תחמד כסף וזהב עליהם ולקחת לך פן תוקש בו כי תועבת יהוה אלהיך הוא",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "תַחְמֹד֩",
+              "dss_word": "תחמד",
+              "commentary": "4QDeute, Mas, SP, LXX: you shall covet (singular). 4QpaleoDeutr reads the plural תחמדו."
+            }
+          ]
+        }
+      }
+    },
+    "8": {
+      "verses": {
+        "2": {
+          "masoretic_text": "וְזָכַרְתָּ֣ אֶת־ כָּל־ הַדֶּ֗רֶךְ אֲשֶׁ֨ר הֹלִֽיכֲךָ֜ יְהוָ֧ה אֱלֹהֶ֛יךָ זֶ֛ה אַרְבָּעִ֥ים שָׁנָ֖ה בַּמִּדְבָּ֑ר לְמַ֨עַן עַנֹּֽתְךָ֜ לְנַסֹּֽתְךָ֗ לָדַ֜עַת אֶת־ אֲשֶׁ֧ר בִּֽלְבָבְךָ֛ הֲתִשְׁמֹ֥ר אִם־ לֹֽא׃",
+          "dss_text": "וזכרת את כל הדרך אשר הוליכך יהוה אלהיך זה ארבעים שנה במדבר למען ענתך נסותך ולדעת את אשר בלבבך התשמר מצותיו אם לא",
+          "differences": [
+            {
+              "position": 21,
+              "masoretic_word": "אִם־",
+              "dss_word": "מצותו",
+              "commentary": "4QDeutf, Mas, SP: his commandments. 4QDeute reads the alternative form מצותו. Though this form could also be the singular, and mean his commandment. As the noun מצוה is feminine, the ות- ending can be the plural or the singular construct form, as the word root contains a ו in its spelling. In this case, the additional י suffix could be an indication to take מצותיו as a definite plural and not confuse it as a singular which מצותו could do. Interestingly, manuscript 4Deutn indicates the plural of מצוה with a double vav מצוות in all instances the word is extant."
+            }
+          ]
+        },
+        "5": {
+          "masoretic_text": "וְיָדַעְתָּ֖ עִם־ לְבָבֶ֑ךָ כִּ֗י כַּאֲשֶׁ֨ר יְיַסֵּ֥ר אִישׁ֙ אֶת־ בְּנ֔וֹ יְהוָ֥ה אֱלֹהֶ֖יךָ מְיַסְּרֶֽךָּ׃",
+          "dss_text": "וידעת עם לבבכה כי כאשר ייסר איש את בנו כן יהוה אלוהיך מיסרך",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "יְהוָ֥ה",
+              "dss_word": "כן",
+              "commentary": "4QDeutj, LXX: so. 4QDeutn, Masoretic and SP omit."
+            }
+          ]
+        },
+        "6": {
+          "masoretic_text": "וְשָׁ֣מַרְתָּ֔ אֶת־ מִצְוֺ֖ת יְהוָ֣ה אֱלֹהֶ֑יךָ לָלֶ֥כֶת בִּדְרָכָ֖יו וּלְיִרְאָ֥ה אֹתֽוֹ׃",
+          "dss_text": "ושמרתה את מצוות יהוה אלוהיכה ללכת בכול דרכיו וליראה אותו",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "ב",
+              "dss_word": "בכול",
+              "commentary": "4QDeutj: in all. 4QDeutn, Masoretic, SP and LXX omit, attaching ב to the following word instead."
+            },
+            {
+              "position": 9,
+              "masoretic_word": "ולאהבה",
+              "dss_word": "וליראה",
+              "commentary": "4QDeutf, Mas, SP, LXX: by revering. 4QDeutn, in contrast to its usual main text readings which closely resemble the Masoretic Text-Type, reads ולאהבה meaning and by loving."
+            }
+          ]
+        },
+        "8": {
+          "masoretic_text": "אֶ֤רֶץ חִטָּה֙ וּשְׂעֹרָ֔ה וְגֶ֥פֶן וּתְאֵנָ֖ה וְרִמּ֑וֹן אֶֽרֶץ־ זֵ֥ית שֶׁ֖מֶן וּדְבָֽשׁ׃",
+          "dss_text": "ארץ חטה ושעורה וגפן תאנה ורמון ארץ זית שמן ודבש",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "ותאנה",
+              "dss_word": "תאנה",
+              "commentary": "4QDeutn, SP, LXX: fig trees. 4QDeutf, 4QDeutj and Masoretic read ותאנה meaning and fig trees."
+            }
+          ]
+        }
+      }
+    },
+    "11": {
+      "verses": {}
+    },
+    "13": {
+      "verses": {
+        "5": {
+          "masoretic_text": "אַחֲרֵ֨י יְהוָ֧ה אֱלֹהֵיכֶ֛ם תֵּלֵ֖כוּ וְאֹת֣וֹ תִירָ֑אוּ וְאֶת־ מִצְוֺתָ֤יו תִּשְׁמֹ֙רוּ֙ וּבְקֹל֣וֹ תִשְׁמָ֔עוּ וְאֹת֥וֹ תַעֲבֹ֖דוּ וּב֥וֹ תִדְבָּקֽוּן׃",
+          "dss_text": "אחרי יהוה אלוהיכמה תלכון ואותו תעבדון ובקלו תשמעון ובו תדבקון ואתו תיראון ואת מצותיו תשמר",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "תיראו(ן) ואת מצותיו תשמרו(ן) ובקלו תשמעו(ן) ואתו תעבדו(ן) ובו תדבקו(ן)",
+              "dss_word": "תעבדון ובקלו תשמעון ובו תדבקון ואתו תיראון ואת מצותיו תשמר",
+              "commentary": "1QDeuta: all of you shall serve Him, and all of you shall listen to His voice, and all of you shall cling to him, and all of you shall revere Him, and you shall observe His commandments. 4QDeutc(vid), Masoretic and SP read: תיראו(ן) ואת מצותיו תשמרו(ן) ובקלו תשמעו(ן) ואתו תעבדו(ן) ובו תדבקו(ן) meaning all of you shall revere Him, and all of you shall observe His commandments, and all of you shall listen to His voice, and all of you shall serve Him, and all of you shall cling to Him. LXX has φοβηθησεσθε και της φωνης αυτου ακουσεσθε και αυτω meaning all of you shall revere, and all of you shall listen to His voice, and all of you shall be joined Him."
+            }
+          ]
+        }
+      }
+    },
+    "16": {
+      "verses": {
+        "6": {
+          "masoretic_text": "כִּ֠י אִֽם־ אֶל־ הַמָּק֞וֹם אֲשֶׁר־ יִבְחַ֨ר יְהוָ֤ה אֱלֹהֶ֙יךָ֙ לְשַׁכֵּ֣ן שְׁמ֔וֹ שָׁ֛ם תִּזְבַּ֥ח אֶת־ הַפֶּ֖סַח בָּעָ֑רֶב כְּב֣וֹא הַשֶּׁ֔מֶשׁ מוֹעֵ֖ד צֵֽאתְךָ֥ מִמִּצְרָֽיִם׃",
+          "dss_text": "כיא אם אל המקום אשר יבחר יהוה אלוהיכה בו לשכן שמו שם תזבח את הפסח בערב כבוא השמש מועד צאתך מארץ מצרים",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "לְשַׁכֵּ֣ן",
+              "dss_word": "בו",
+              "commentary": "1QDeuta: in which. 4QDeutc, Masoretic and SP omit."
+            }
+          ]
+        }
+      }
+    },
+    "20": {
+      "verses": {}
+    },
+    "21": {
+      "verses": {
+        "9": {
+          "masoretic_text": "וְאַתָּ֗ה תְּבַעֵ֛ר הַדָּ֥ם הַנָּקִ֖י מִקִּרְבֶּ֑ךָ כִּֽי־ תַעֲשֶׂ֥ה הַיָּשָׁ֖ר בְּעֵינֵ֥י יְהוָֽה׃",
+          "dss_text": "ואתה תבער הדם הנקי מקרבך כי תעשה הישר בעיני יהוה",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "הַדָּ֥ם",
+              "dss_word": "הדם",
+              "commentary": "1QDeutb, Mas, SP: the blood. 4QDeutf reads דם which is the non-definite form meaning blood."
+            }
+          ]
+        }
+      }
+    },
+    "23": {
+      "verses": {
+        "14": {
+          "masoretic_text": "וְיָתֵ֛ד תִּהְיֶ֥ה לְךָ֖ עַל־ אֲזֵנֶ֑ךָ וְהָיָה֙ בְּשִׁבְתְּךָ֣ ח֔וּץ וְחָפַרְתָּ֣ה בָ֔הּ וְשַׁבְתָּ֖ וְכִסִּ֥יתָ אֶת־ צֵאָתֶֽךָ׃",
+          "dss_text": "ויתד תהיה לך על אזנך והיה בשבתך החוצה וחפרת בה והשיבות וכסית את צאתך",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "חוץ",
+              "dss_word": "החוצה",
+              "commentary": "4QpaleoDeutr, SP: the outside (with directive suffixed ה). 4QDeuti and Masoretic have חוץ meaning outside with no definite article or directive suffixed ה."
+            }
+          ]
+        },
+        "24": {
+          "masoretic_text": "מוֹצָ֥א שְׂפָתֶ֖יךָ תִּשְׁמֹ֣ר וְעָשִׂ֑יתָ כַּאֲשֶׁ֨ר נָדַ֜רְתָּ לַיהוָ֤ה אֱלֹהֶ֙יךָ֙ נְדָבָ֔ה אֲשֶׁ֥ר דִּבַּ֖רְתָּ בְּפִֽיךָ׃",
+          "dss_text": "מוצא שפתיכה תשמור ועשית כאשר נדרת ליהוה אלהיך נדבה אשר דברת בפיכה",
+          "differences": [
+            {
+              "position": 12,
+              "masoretic_word": "בְּפִֽיךָ׃",
+              "dss_word": "כא",
+              "commentary": "4QDeuti, Mas, SP: for. 4QDeutk2 reads כא, which is a scribal mistake for his usual כיא."
+            }
+          ]
+        },
+        "25": {
+          "masoretic_text": "כִּ֤י תָבֹא֙ בְּכֶ֣רֶם רֵעֶ֔ךָ וְאָכַלְתָּ֧ עֲנָבִ֛ים כְּנַפְשְׁךָ֖ שָׂבְעֶ֑ךָ וְאֶֽל־ כֶּלְיְךָ֖ לֹ֥א תִתֵּֽן׃",
+          "dss_text": "כי תבא בכרם רעך ואכלת ענבים כנפשך שבעך ואל כליכה לא תתן",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "כִּ֤י",
+              "dss_word": "כא",
+              "commentary": "4QDeuti, Mas, SP: for. 4QDeutk2 reads כא, which is a scribal mistake for his usual כיא."
+            }
+          ]
+        }
+      }
+    },
+    "24": {
+      "verses": {
+        "2": {
+          "masoretic_text": "וְיָצְאָ֖ה מִבֵּית֑וֹ וְהָלְכָ֖ה וְהָיְתָ֥ה לְאִישׁ־ אַחֵֽר׃",
+          "dss_text": "ויצאה מביתו והלכה והיתה לאיש אחר",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "וְיָצְאָ֖ה",
+              "dss_word": "ויצאה מביתו",
+              "commentary": "4QDeutk2, Mas, SP: and when she has departed from his house. 4QDeuta omits, a reading followed by the LXX. Either this was added to make it specific as to when a woman can marry another man, or the scribe of 4QDeuta, as well as the LXX translator, omitted them via homoeoteleuton (from מביתו at the end of verse 1 to the same in verse 2)."
+            }
+          ]
+        }
+      }
+    },
+    "28": {
+      "verses": {
+        "22": {
+          "masoretic_text": "יַכְּכָ֣ה יְ֠הוָה בַּשַּׁחֶ֨פֶת וּבַקַּדַּ֜חַת וּבַדַּלֶּ֗קֶת וּבַֽחַרְחֻר֙ וּבַחֶ֔רֶב וּבַשִּׁדָּפ֖וֹן וּבַיֵּרָק֑וֹן וּרְדָפ֖וּךָ עַ֥ד אָבְדֶֽךָ׃",
+          "dss_text": "יככה יהוה בשחפת ובקדחת ובדלקת ובחרחר ובחרב ובשדפון ובירקון ורדפוך עד אבדך",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "וּרְדָפ֖וּךָ",
+              "dss_word": "ורדפוך",
+              "commentary": "4QDeutg, Mas, LXX: and they shall pursue you. 4QDeutc and SP read ירדפוך meaning they shall pursue you."
+            }
+          ]
+        }
+      }
+    },
+    "33": {
+      "verses": {
+        "13": {
+          "masoretic_text": "וּלְיוֹסֵ֣ף אָמַ֔ר מְבֹרֶ֥כֶת יְהֹוָ֖ה אַרְצ֑וֹ מִמֶּ֤גֶד שָׁמַ֙יִם֙ מִטָּ֔ל וּמִתְּה֖וֹם רֹבֶ֥צֶת תָּֽחַת׃",
+          "dss_text": "וליוסף אמר מברכת יהוה ארצו ממגד שמים מטל ומתהום רבצת תחת",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "מִמֶּ֤גֶד",
+              "dss_word": "ממגד",
+              "commentary": "1QDeutb, Mas, SP, LXX: the excellences. 4QDeuth reads וממגד meaning and the excellences."
+            }
+          ]
+        },
+        "17": {
+          "masoretic_text": "בְּכ֨וֹר שׁוֹר֜וֹ הָדָ֣ר ל֗וֹ וְקַרְנֵ֤י רְאֵם֙ קַרְנָ֔יו בָּהֶ֗ם עַמִּ֛ים יְנַגַּ֥ח יַחְדָּ֖ו אַפְסֵי־ אָ֑רֶץ וְהֵם֙ רִבְב֣וֹת אֶפְרַ֔יִם וְהֵ֖ם אַלְפֵ֥י מְנַשֶּֽׁה׃",
+          "dss_text": "בכור שור הדר לו וקרני ראם קרנו בהם עמים ינגח יחדו אפסי ארץ והם רבבות אפרים והם אלפי מנשה",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "שורו",
+              "dss_word": "שור",
+              "commentary": "1QDeutb, SP, LXX: of a bull. 4QDeuth and Masoretic read שורו meaning of his bull."
+            }
+          ]
+        },
+        "19": {
+          "masoretic_text": "עַמִּים֙ הַר־ יִקְרָ֔אוּ שָׁ֖ם יִזְבְּח֣וּ זִבְחֵי־ צֶ֑דֶק כִּ֣י שֶׁ֤פַע יַמִּים֙ יִינָ֔קוּ וּשְׂפוּנֵ֖י טְמ֥וּנֵי חֽוֹל׃",
+          "dss_text": "עמים הדו יקראו שם יזבחו זבחי צדק כי שפע ימים ינקו ושפני טמוני חול",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "הר",
+              "dss_word": "הדו",
+              "commentary": "4QDeuth: shout for him. MasDeut and Masoretic read הר meaning mountain. SP reads הרי meaning mountains."
+            }
+          ]
+        },
+        "20": {
+          "masoretic_text": "וּלְגָ֣ד אָמַ֔ר בָּר֖וּךְ מַרְחִ֣יב גָּ֑ד כְּלָבִ֣יא שָׁכֵ֔ן וְטָרַ֥ף זְר֖וֹעַ אַף־ קָדְקֹֽד׃",
+          "dss_text": "ולגד אמר ברוך מרחיב גד כלביא שכן וטרף זרוע ואף קדקד",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "אף",
+              "dss_word": "ואף",
+              "commentary": "4QDeuth: and also. MasDeut and Masoretic read אף meaning as well as. SP reads וגם meaning and in addition."
+            }
+          ]
+        }
+      }
+    },
+    "34": {
+      "verses": {
+        "6": {
+          "masoretic_text": "וַיִּקְבֹּ֨ר אֹת֤וֹ בַגַּיְ֙ בְּאֶ֣רֶץ מוֹאָ֔ב מ֖וּל בֵּ֣ית פְּע֑וֹר וְלֹֽא־ יָדַ֥ע אִישׁ֙ אֶת־ קְבֻ֣רָת֔וֹ עַ֖ד הַיּ֥וֹם הַזֶּֽה׃",
+          "dss_text": "ויקברו אתו בגי בארץ מואב מול בית פעור ולא ידע איש את קברתו עד היום הזה",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "ויקבר",
+              "dss_word": "ויקברו",
+              "commentary": "4QDeutl, LXX: and they (the Israelites) buried. MasDeut, Masoretic and SP read ויקבר meaning and He (Yahweh) buried."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

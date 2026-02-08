@@ -31,3 +31,12 @@ class BatchResult:
     results: Dict[str, TransliterationResult]
     input_tokens: int
     output_tokens: int
+
+
+@dataclass
+class TransliterationStats:
+    book_id: str
+    words: int
+    batches: int
+    input_tokens: int
+    output_tokens: int

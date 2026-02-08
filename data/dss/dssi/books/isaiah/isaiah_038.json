@@ -1,0 +1,202 @@
+{
+  "name": "Isaiah",
+  "file_number": 38,
+  "total_files": 40,
+  "difference_count": 19,
+  "chapters": {
+    "65": {
+      "verses": {
+        "21": {
+          "masoretic_text": "וּבָנ֥וּ בָתִּ֖ים וְיָשָׁ֑בוּ וְנָטְע֣וּ כְרָמִ֔ים וְאָכְל֖וּ פִּרְיָֽם׃",
+          "dss_text": "ובנו בתים וישבו ונטעו כרמים ואכלו את פריאם",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "פִּרְיָֽם׃",
+              "dss_word": "את",
+              "commentary": "1QIsaa: direct object marker. 1QIsab and Masoretic omit."
+            }
+          ]
+        },
+        "22": {
+          "masoretic_text": "לֹ֤א יִבְנוּ֙ וְאַחֵ֣ר יֵשֵׁ֔ב לֹ֥א יִטְּע֖וּ וְאַחֵ֣ר יֹאכֵ֑ל כִּֽי־ כִימֵ֤י הָעֵץ֙ יְמֵ֣י עַמִּ֔י וּמַעֲשֵׂ֥ה יְדֵיהֶ֖ם יְבַלּ֥וּ בְחִירָֽי׃",
+          "dss_text": "לוא יבנו ואחר ישב לוא יטעו ואחר יואכל כיא כימי העץ ימי עמיא ומעשה ידיהמה יבלו",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "הָעֵץ֙",
+              "dss_word": "עץ",
+              "commentary": "1QIsab, Mas: the tree. 1QIsaa reads עץ meaning a tree. LXX reads του ξυλου της ζωης meaning the tree of life (recalling Gen 3:22/24, or Vorlage: העץ החיים ?)."
+            }
+          ]
+        },
+        "23": {
+          "masoretic_text": "לֹ֤א יִֽיגְעוּ֙ לָרִ֔יק וְלֹ֥א יֵלְד֖וּ לַבֶּהָלָ֑ה כִּ֣י זֶ֜רַע בְּרוּכֵ֤י יְהוָה֙ הֵ֔מָּה וְצֶאֱצָאֵיהֶ֖ם אִתָּֽם׃",
+          "dss_text": "בחירי לוא יגעו לריק ולוא ילדו לבהלה כיא זרע ברך יהוה המה וצאצאיהמה אתם",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "לֹ֤א",
+              "dss_word": "בחירי",
+              "commentary": "1QIsaa, LXX: My chosen ones. 1QIsab and Masoretic have this as part of the previous verse."
+            },
+            {
+              "position": 10,
+              "masoretic_word": "ברכי",
+              "dss_word": "ברכי",
+              "commentary": "1QIsaa, LXX: blessed (singular). 1QIsab and Masoretic have the plural ברכי (conforming to C.A.S. of זרע/seed)."
+            }
+          ]
+        }
+      }
+    },
+    "66": {
+      "verses": {
+        "2": {
+          "masoretic_text": "וְאֶת־ כָּל־ אֵ֙לֶּה֙ יָדִ֣י עָשָׂ֔תָה וַיִּהְי֥וּ כָל־ אֵ֖לֶּה נְאֻם־ יְהוָ֑ה וְאֶל־ זֶ֣ה אַבִּ֔יט אֶל־ עָנִי֙ וּנְכֵה־ ר֔וּחַ וְחָרֵ֖ד עַל־ דְּבָרִֽי׃",
+          "dss_text": "ואת כול אלה ידי עשתה והיו כול אלה נואם יהוה ואל זה אביט אל עניא ונכאה רוח וחרד לדברי",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "ויהיו",
+              "dss_word": "והיו",
+              "commentary": "1QIsaa: and have come into being (perfect form). 1QIsab and Masoretic have the imperfect form ויהיו, meaning the same."
+            },
+            {
+              "position": 16,
+              "masoretic_word": "ונכה",
+              "dss_word": "ונכאי",
+              "commentary": "1QIsab, LXX: and the downcast (singular) 1QIsaa reads the plural ונכאי. The Masoretic Leningrad codex gives ונכה, whereas other Masoretic manuscripts give ונכא; all are different spellings of the same word."
+            },
+            {
+              "position": 18,
+              "masoretic_word": "וְחָרֵ֖ד",
+              "dss_word": "וחרד",
+              "commentary": "1QIsab, Mas, LXX: and in reverent awe. 1QIsaa reads והחורד meaning and the one in reverent awe."
+            }
+          ]
+        },
+        "3": {
+          "masoretic_text": "שׁוֹחֵ֨ט הַשּׁ֜וֹר מַכֵּה־ אִ֗ישׁ זוֹבֵ֤חַ הַשֶּׂה֙ עֹ֣רֵֽף כֶּ֔לֶב מַעֲלֵ֤ה מִנְחָה֙ דַּם־ חֲזִ֔יר מַזְכִּ֥יר לְבֹנָ֖ה מְבָ֣רֵֽךְ אָ֑וֶן גַּם־ הֵ֗מָּה בָּֽחֲרוּ֙ בְּדַרְכֵיהֶ֔ם וּבְשִׁקּוּצֵיהֶ֖ם נַפְשָׁ֥ם חָפֵֽצָה׃",
+          "dss_text": "שוחט השור כמכה איש זובח השה עורף כלב מעלה מנחה דם חוזיר מזכיר לבונה מברך און גם המה בחרו בדרכיהמה ובשקוציהמה נפשמה חפצה",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "מכה",
+              "dss_word": "כמכה",
+              "commentary": "1QIsaa, LXX: like one who slays. 1QIsab and Masoretic read מכה meaning one who slays, with like implicit rather than explicit."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "הַשֶּׂה֙",
+              "dss_word": "השא",
+              "commentary": "1QIsab, Mas: the sheep. 1QIsaa reads השא, an orthographic alternative spelling meaning the same. LXX omits from איש to עורף."
+            }
+          ]
+        },
+        "4": {
+          "masoretic_text": "גַּם־ אֲנִ֞י אֶבְחַ֣ר בְּתַעֲלֻלֵיהֶ֗ם וּמְגֽוּרֹתָם֙ אָבִ֣יא לָהֶ֔ם יַ֤עַן קָרָ֙אתִי֙ וְאֵ֣ין עוֹנֶ֔ה דִּבַּ֖רְתִּי וְלֹ֣א שָׁמֵ֑עוּ וַיַּעֲשׂ֤וּ הָרַע֙ בְּעֵינַ֔י וּבַאֲשֶׁ֥ר לֹֽא־ חָפַ֖צְתִּי בָּחָֽרוּ׃",
+          "dss_text": "גם אני אבחר בתעלוליהמה ובמגורותיהמה אביא להמה יען קראתי ואין עונה דברתי ולוא שמעו ויעשו את הרע בעיני ובאשר לוא חפצתי בחרו",
+          "differences": [
+            {
+              "position": 16,
+              "masoretic_word": "הָרַע֙",
+              "dss_word": "את",
+              "commentary": "1QIsaa: direct-object marker. 1QIsab and Masoretic omit."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "בְּטֶ֥רֶם תָּחִ֖יל יָלָ֑דָה בְּטֶ֨רֶם יָב֥וֹא חֵ֛בֶל לָ֖הּ וְהִמְלִ֥יטָה זָכָֽר׃",
+          "dss_text": "בטרם תחיל ילדה בטרם יבוא חבל לה והמליטה זכר",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "וְהִמְלִ֥יטָה",
+              "dss_word": "והמליטה",
+              "commentary": "1QIsab, Mas, LXX: she also gave birth. 1QIsaa reads המליטה meaning she gave birth."
+            }
+          ]
+        },
+        "8": {
+          "masoretic_text": "מִֽי־ שָׁמַ֣ע כָּזֹ֗את מִ֤י רָאָה֙ כָּאֵ֔לֶּה הֲי֤וּחַל אֶ֙רֶץ֙ בְּי֣וֹם אֶחָ֔ד אִם־ יִוָּ֥לֵֽד גּ֖וֹי פַּ֣עַם אֶחָ֑ת כִּֽי־ חָ֛לָה גַּם־ יָלְדָ֥ה צִיּ֖וֹן אֶת־ בָּנֶֽיהָ׃",
+          "dss_text": "מיא שמע כזואת ומיא ראה כאלה התחיל ארץ ביום אחד אם יולד גוי פעם אחת כיא חלה גם ילדה ציון את בניהא",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "מי",
+              "dss_word": "ומיא",
+              "commentary": "1QIsaa, LXX: And who. 1QIsab and Masoretic have מי meaning who."
+            },
+            {
+              "position": 5,
+              "masoretic_word": "רָאָה֙",
+              "dss_word": "ראה",
+              "commentary": "1QIsab, Mas, LXX: has seen. 1QIsaa reads יראה meaning sees."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "הַאֲנִ֥י אַשְׁבִּ֛יר וְלֹ֥א אוֹלִ֖יד יֹאמַ֣ר יְהוָ֑ה אִם־ אֲנִ֧י הַמּוֹלִ֛יד וְעָצַ֖רְתִּי אָמַ֥ר אֱלֹהָֽיִךְ׃",
+          "dss_text": "האני אשביר ולוא אוליד יואמר יהוה אם אניא המוליד ואעצרה אמר אלוהיך",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "ועצרתי",
+              "dss_word": "ואעצרה",
+              "commentary": "1QIsaa: shall I close. 1QIsab and Masoretic read ועצרתי meaning I close."
+            }
+          ]
+        },
+        "11": {
+          "masoretic_text": "לְמַ֤עַן תִּֽינְקוּ֙ וּשְׂבַעְתֶּ֔ם מִשֹּׁ֖ד תַּנְחֻמֶ֑יהָ לְמַ֧עַן תָּמֹ֛צּוּ וְהִתְעַנַּגְתֶּ֖ם מִזִּ֥יז כְּבוֹדָֽהּ׃",
+          "dss_text": "למען תינקו ושבעתמה משד תנחומיהא למען תמוצו והתענגתמה מזיז כבודה",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "מִזִּ֥יז",
+              "dss_word": "ממזוז",
+              "commentary": "1QIsab, Mas: from the breast. 1QIsaa has the strange reading ממזוז which might be a corrupt reading of מזוזת meaning doorposts or doorframes. The LXX has the reading εισοδου here meaning entrance, which may come from a figurative meaning of מזוזת."
+            }
+          ]
+        },
+        "15": {
+          "masoretic_text": "כִּֽי־ הִנֵּ֤ה יְהוָה֙ בָּאֵ֣שׁ יָב֔וֹא וְכַסּוּפָ֖ה מַרְכְּבֹתָ֑יו לְהָשִׁ֤יב בְּחֵמָה֙ אַפּ֔וֹ וְגַעֲרָת֖וֹ בְּלַהֲבֵי־ אֵֽשׁ׃",
+          "dss_text": "כיא הנה יהוה באש יבוא ובסופה מרכבותיו להשיב בחמה אפו וגערתו בלהבי אש",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "אַפּ֔וֹ",
+              "dss_word": "אפו",
+              "commentary": "1QIsab, Mas, LXX: His anger. 1QIsaa repeats אפו, giving an extra Yes, his anger; probably written again by mistake (known as dittography)."
+            }
+          ]
+        },
+        "16": {
+          "masoretic_text": "כִּ֤י בָאֵשׁ֙ יְהוָ֣ה נִשְׁפָּ֔ט וּבְחַרְבּ֖וֹ אֶת־ כָּל־ בָּשָׂ֑ר וְרַבּ֖וּ חַֽלְלֵ֥י יְהוָֽה׃",
+          "dss_text": "כיא באש יהוה נשפט ובחרבו את כול הבשר ורבו חללי יהוה",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "נשפט כל הארץ",
+              "dss_word": "יבוא לשפוט",
+              "commentary": "1QIsab, Mas: enters into judgement. 1QIsaa reads יבוא לשפוט meaning comes to pass judgement, possibly influenced by the more or less same wording in v15 above. LXX reads κριθησεται πασα η γη meaning all the earth shall be judged, supporting the reading of 1QIsab/Masoretic somewhat (though reflects a different Vorlage: נשפט כל הארץ ?)."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "בשר",
+              "dss_word": "הבשר",
+              "commentary": "1QIsaa: mankind. 1QIsab and Masoretic read בשר meaning flesh."
+            },
+            {
+              "position": 10,
+              "masoretic_word": "חַֽלְלֵ֥י",
+              "dss_word": "חללי",
+              "commentary": "1QIsab, Mas, LXX: those slain by Yahweh. 1QIsaa reads חלליו meaning those slain by Him."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

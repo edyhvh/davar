@@ -1,0 +1,98 @@
+{
+  "name": "Genesis",
+  "chapters": {
+    "1": {
+      "verses": {
+        "9": {
+          "masoretic_text": "וַיֹּ֣אמֶר אֱלֹהִ֗ים יִקָּו֨וּ הַמַּ֜יִם מִתַּ֤חַת הַשָּׁמַ֙יִם֙ אֶל־ מָק֣וֹם אֶחָ֔ד וְתֵרָאֶ֖ה הַיַּבָּשָׁ֑ה וַֽיְהִי־ כֵֽן׃",
+          "dss_text": "ויאמר אלהים יקוו המים מתחת השמים אל מקוה אחד ותראה היבשה ויהי כן ויקוו המים מתחת השמים למקוהו ותרא היבשה",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "יִקָּו֨וּ",
+              "dss_word": "יקוו",
+              "commentary": "4QGenb, Mas, LXX: be gathered. 4QGeng has the variant spelling יקאו. Due to this just being a spelling variant, there’s no change of meaning to the text."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "הַשָּׁמַ֙יִם֙",
+              "dss_word": "לשמים",
+              "commentary": "4QGenb, Mas: the heavens. 4QGeng reads לשמים meaning to the heavens. As this is being read in conjunction with the previous word מתחת, it changes the meaning from under the heavens to underneath the heavens."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "מקום",
+              "dss_word": "מקוה",
+              "commentary": "4QGenh1, LXX: gathering. Masoretic and 4QGenb read מקום meaning place. Not a great change of meaning; two different nouns are being employed to refer to similar things, although one focuses on the completion of the command be gathered."
+            },
+            {
+              "position": 14,
+              "masoretic_word": "ויקוו",
+              "dss_word": "ויקוו המים מתחת השמים למקוהו ותרא היבשה",
+              "commentary": "4QGenk, LXX: And the waters under the heavens were gathered to their gatherings; and the dry land appeared. 4QGenb, 4QGeng, 4QGenh1, Masoretic, and the Samaritan Pentateuch (SP) omit these words. This was done either due to homoeoteleuton (ויקוו starts off similarly to ויקרא of v10), or omitted as superfluous."
+            }
+          ]
+        },
+        "14": {
+          "masoretic_text": "וַיֹּ֣אמֶר אֱלֹהִ֗ים יְהִ֤י מְאֹרֹת֙ בִּרְקִ֣יעַ הַשָּׁמַ֔יִם לְהַבְדִּ֕יל בֵּ֥ין הַיּ֖וֹם וּבֵ֣ין הַלָּ֑יְלָה וְהָי֤וּ לְאֹתֹת֙ וּלְמ֣וֹעֲדִ֔ים וּלְיָמִ֖ים וְשָׁנִֽים׃",
+          "dss_text": "ויאמר אלהים יהי מארות ברקיע השמים להבדיל בין היום ובין הלילה והיו לאתות ולמעדים ולימים ולשנים",
+          "differences": [
+            {
+              "position": 12,
+              "masoretic_word": "וְהָי֤וּ",
+              "dss_word": "והיו",
+              "commentary": "4QGenb, 4QGenk, SP, Mas: and let them exist. 4QGeng reads ויהיו meaning and they were. Slight change of tense, one indicating what something will be in the future; the other indicating what they actually exist as."
+            }
+          ]
+        },
+        "22": {
+          "masoretic_text": "וַיְבָ֧רֶךְ אֹתָ֛ם אֱלֹהִ֖ים לֵאמֹ֑ר פְּר֣וּ וּרְב֗וּ וּמִלְא֤וּ אֶת־ הַמַּ֙יִם֙ בַּיַּמִּ֔ים וְהָע֖וֹף יִ֥רֶב בָּאָֽרֶץ׃",
+          "dss_text": "ויברך אותם אלהים לאמר פרו ורבו ומלאו את המים בימים והעוף ירבה בארץ",
+          "differences": [
+            {
+              "position": 12,
+              "masoretic_word": "ירב",
+              "dss_word": "ירבה",
+              "commentary": "4QGeng, SP: they shall. 4QGenb and Masoretic read ירב meaning let them."
+            }
+          ]
+        }
+      }
+    },
+    "35": {
+      "verses": {
+        "26": {
+          "masoretic_text": "וּבְנֵ֥י זִלְפָּ֛ה שִׁפְחַ֥ת לֵאָ֖ה גָּ֣ד וְאָשֵׁ֑ר אֵ֚לֶּה בְּנֵ֣י יַעֲקֹ֔ב אֲשֶׁ֥ר יֻלַּד־ ל֖וֹ בְּפַדַּ֥ן אֲרָֽם׃",
+          "dss_text": "בני זלפה שפחת לאה גד ואשר אלה בני יעקב אשר ילדה לו בפדן ארם",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "ילד",
+              "dss_word": "ה",
+              "commentary": "4QGen-Exoda: she bore. SdeirGen and Masoretic read ילד meaning was (singular) born. The LXX and SP have were (plural) born. The best reading that account for the rest is that of 4QGen Exoda, which references back to Zilpah. During transmisison of the text, the final ה was omitted (probably by accident), to which the LXX and SP attempted to correct to have ילד be grammatically correct references to בני/sons."
+            }
+          ]
+        }
+      }
+    },
+    "41": {
+      "verses": {}
+    },
+    "42": {
+      "verses": {
+        "18": {
+          "masoretic_text": "וַיֹּ֨אמֶר אֲלֵהֶ֤ם יוֹסֵף֙ בַּיּ֣וֹם הַשְּׁלִישִׁ֔י זֹ֥את עֲשׂ֖וּ וִֽחְי֑וּ אֶת־ הָאֱלֹהִ֖ים אֲנִ֥י יָרֵֽא׃",
+          "dss_text": "ויאמר אלהם יוסף ביום השלישי זאת עשו וחיו את האלהים אני ירא",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "הָאֱלֹהִ֖ים",
+              "dss_word": "האלהים",
+              "commentary": "4QGene, Mas: God. 4QGenj reads האלהם, which is probably just a scribal mistake."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -5,13 +5,19 @@ Loads API keys and configures Grok-specific translation settings.
 """
 
 import os
+import sys
 from pathlib import Path
 from typing import Dict, Optional
 from dotenv import load_dotenv
 
+# Add parent directory to path for config import
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+# Import from parent config module
+from config import config
+
 # Load environment variables from .env file
-PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
-ENV_FILE = PROJECT_ROOT / '.env'
+ENV_FILE = config.PROJECT_ROOT / '.env'
 
 # Try to load .env file, but don't fail if it doesn't exist or can't be read
 try:
@@ -40,34 +46,40 @@ DEFAULT_LANGUAGE = 'es'
 XAI_API_KEY = os.getenv('XAI_API_KEY')
 GROK_MODEL = 'grok-4'  # Fastest model: $0.10/1M input, $0.30/1M output
 
-# Paths
-LEXICON_DIR = PROJECT_ROOT / 'data' / 'dict' / 'lexicon'
+# Paths (use parent config module)
+LEXICON_DIR = config.LEXICON_DIR
 ROOTS_FILE = LEXICON_DIR / 'roots.json'
 WORDS_FILE = LEXICON_DIR / 'words.json'
-ROOTS_PRETTY_FILE = LEXICON_DIR / 'roots.pretty.json'
-WORDS_PRETTY_FILE = LEXICON_DIR / 'words.pretty.json'
 
-# Translation settings (reuse from parent config)
-DEFAULT_BATCH_SIZE = 50  # Number of definitions per API call
-MAX_BATCH_SIZE = 100
-MIN_BATCH_SIZE = 1
+# Translation settings
+DEFAULT_BATCH_SIZE = 50  # Number of definitions per API call (recommended: 50-100)
+MAX_BATCH_SIZE = 100     # Maximum allowed batch size
+MIN_BATCH_SIZE = 1       # Minimum allowed batch size
 
 # Rate limiting and retry settings
 # Grok has higher rate limits than Gemini free tier
-MAX_RETRIES = 3
-RETRY_BACKOFF_BASE = 2  # Exponential backoff: 2^retry seconds
-RATE_LIMIT_DELAY = 1.0  # Seconds to wait between API calls (Grok has higher limits)
+MAX_RETRIES = 3                # Number of retry attempts on failure
+RETRY_BACKOFF_BASE = 2         # Exponential backoff: 2^retry seconds
+RATE_LIMIT_DELAY = 1.0         # Seconds to wait between API calls (Grok has higher limits)
+
+# Mismatch handling strategy
+# Options: 'pad' (add empty strings), 'truncate' (remove extras), 'fail' (raise error)
+MISMATCH_STRATEGY = 'pad'      # Default: pad with empty strings for robustness
+
+# Validation settings
+VALIDATE_TRANSLATIONS = True   # Validate translations before saving
+STRICT_VALIDATION = False      # If True, fail on any empty translation
 
 # Batch API settings (Grok doesn't use batch API, but kept for compatibility)
-USE_BATCH_API = False  # Grok doesn't support batch API
-BATCH_INLINE_MAX_SIZE = 1000
-BATCH_FILE_THRESHOLD = 1000
-BATCH_POLL_INTERVAL = 60
-BATCH_MAX_WAIT_HOURS = 24
+USE_BATCH_API = False          # Grok doesn't support batch API
+BATCH_INLINE_MAX_SIZE = 1000   # Not used for Grok
+BATCH_FILE_THRESHOLD = 1000    # Not used for Grok
+BATCH_POLL_INTERVAL = 60       # Not used for Grok
+BATCH_MAX_WAIT_HOURS = 24      # Not used for Grok
 
 # API Configuration
 GROK_BASE_URL = "https://api.x.ai/v1"
-GROK_TIMEOUT = 3600  # 1 hour timeout (recommended for reasoning models, though grok-4 is fast)
+GROK_TIMEOUT = 3600            # 1 hour timeout (recommended for reasoning models, though grok-4 is fast)
 
 
 def validate_language(lang_code: str) -> bool:

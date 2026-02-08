@@ -12,6 +12,7 @@ export const getColors = (mode: ThemeMode) => {
       primaryDarker: "#3D5A8C",
       secondary: "#A06C35",
       accentCopper: "#C68F55",
+      qumranText: "#A38F6E",
       background: "#0F0E12",
       surface: "#17161A",
       surfaceElevated: "#1F1E23",
@@ -39,6 +40,7 @@ export const getColors = (mode: ThemeMode) => {
     primaryDarker: "#3D5A8C",
     secondary: "#B07A3C",
     accentCopper: "#C68F55",
+    qumranText: "#2C1A0F",
     background: "#E7E7E7",
     surface: "#E9E9E9",
     surfaceElevated: "#ECECEC",
@@ -92,6 +94,7 @@ export const radii = {
 export const typography = {
   families: {
     hebrewScripture: "Cardo_400Regular",
+    hebrewQumran: "DeadSeaScrolls_400Regular",
     hebrewUI: "SuezOne_400Regular",
     latinMeaning: "Jost_400Regular",
     latinUI: "Inter_400Regular",

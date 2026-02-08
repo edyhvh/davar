@@ -1,0 +1,200 @@
+{
+  "name": "Isaiah",
+  "file_number": 12,
+  "total_files": 40,
+  "difference_count": 19,
+  "chapters": {
+    "24": {
+      "verses": {
+        "19": {
+          "masoretic_text": "רֹ֥עָה הִֽתְרֹעֲעָ֖ה הָאָ֑רֶץ פּ֤וֹר הִֽתְפּוֹרְרָה֙ אֶ֔רֶץ מ֥וֹט הִֽתְמוֹטְטָ֖ה אָֽרֶץ׃",
+          "dss_text": "רוע התרועעה הארץ פור התפוררה ארץ מוט התמוטטה ארץ",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "הָאָ֑רֶץ",
+              "dss_word": "הארץ",
+              "commentary": "1QIsaa, Mas, LXX: the earth. 1QIsab reads ארץ meaning earth."
+            }
+          ]
+        },
+        "20": {
+          "masoretic_text": "נ֣וֹעַ תָּנ֤וּעַ אֶ֙רֶץ֙ כַּשִּׁכּ֔וֹר וְהִֽתְנוֹדְדָ֖ה כַּמְּלוּנָ֑ה וְכָבַ֤ד עָלֶ֙יהָ֙ פִּשְׁעָ֔הּ וְנָפְלָ֖ה וְלֹא־ תֹסִ֥יף קֽוּם׃",
+          "dss_text": "נוע תנוע הארץ כשכור והתנודדא וכמלונה וכבד עליה פשעה ונפל ולוא תוסיף קום",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "ארץ",
+              "dss_word": "הארץ",
+              "commentary": "1QIsaa, LXX: the earth. 1QIsab and Masoretic read ארץ meaning earth."
+            }
+          ]
+        },
+        "22": {
+          "masoretic_text": "וְאֻסְּפ֨וּ אֲסֵפָ֤ה אַסִּיר֙ עַל־ בּ֔וֹר וְסֻגְּר֖וּ עַל־ מַסְגֵּ֑ר וּמֵרֹ֥ב יָמִ֖ים יִפָּקֵֽדוּ׃",
+          "dss_text": "אספו אספה על בור וסגרו על מסגר ומרוב ימים יפקדו",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "ואספו",
+              "dss_word": "ואסף",
+              "commentary": "1QIsaa: They shall be gathered. 4QIsac reads ואסף meaning And shall be gathered. Masoretic reads ואספו meaning And they shall be gathered, a reading supported by the LXX: και συναξουσιν."
+            },
+            {
+              "position": 2,
+              "masoretic_word": "אֲסֵפָ֤ה",
+              "dss_word": "אספה",
+              "commentary": "1QIsaa, Mas: a gathering. 4QIsac reads אסוף and alternative form meaning the same."
+            },
+            {
+              "position": 3,
+              "masoretic_word": "אסיר על",
+              "dss_word": "על",
+              "commentary": "1QIsaa, LXX: in. 4QIsac(vid) and Masoretic read אסיר על meaning like prisoners in."
+            }
+          ]
+        }
+      }
+    },
+    "25": {
+      "verses": {
+        "1": {
+          "masoretic_text": "יְהוָ֤ה אֱלֹהַי֙ אַתָּ֔ה אֲרֽוֹמִמְךָ֙ אוֹדֶ֣ה שִׁמְךָ֔ כִּ֥י עָשִׂ֖יתָ פֶּ֑לֶא עֵצ֥וֹת מֵֽרָח֖וֹק אֱמ֥וּנָה אֹֽמֶן׃",
+          "dss_text": "יהוה אלוהי אתה ארוממך אודה שמך כי עשיתה פלא עצות מרחוק אמונה אמן",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "עֵצ֥וֹת",
+              "dss_word": "עצות",
+              "commentary": "1QIsab, Mas: plans. 1QIsaa reads אצית, which is either a misspelling of, or is an unknown parallel form."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "וְאָמַר֙ בַּיּ֣וֹם הַה֔וּא הִנֵּ֨ה אֱלֹהֵ֥ינוּ זֶ֛ה קִוִּ֥ינוּ ל֖וֹ וְיֽוֹשִׁיעֵ֑נוּ זֶ֤ה יְהוָה֙ קִוִּ֣ינוּ ל֔וֹ נָגִ֥ילָה וְנִשְׂמְחָ֖ה בִּישׁוּעָתֽוֹ׃",
+          "dss_text": "ואמרת ביום ההוא הנה יהוה אלוהינו זה קוינו לו ויושיענו זה יהוה קוינו לו נגילה ונשמח בישועתו",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "ואמר",
+              "dss_word": "ואמרת",
+              "commentary": "1QIsaa: And you shall say. 4QIsac and Masoretic read ואמר meaning And one shall say. LXX reads και ἐροῦσιν meaning And they shall say."
+            }
+          ]
+        },
+        "12": {
+          "masoretic_text": "וּמִבְצַ֞ר מִשְׂגַּ֣ב חוֹמֹתֶ֗יךָ הֵשַׁ֥ח הִשְׁפִּ֛יל הִגִּ֥יעַ לָאָ֖רֶץ עַד־ עָפָֽר׃",
+          "dss_text": "ומבצר משגב חומותיכה השחה השפיל הגיע לארץ עד עפר",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "הִגִּ֥יעַ",
+              "dss_word": "הגיע",
+              "commentary": "4QIsac, Mas: He shall cause it to come down (perfect conjugation). 1QIsaa reads יגיע meaning the same thing, but is the imperfect conjugation."
+            }
+          ]
+        }
+      }
+    },
+    "26": {
+      "verses": {
+        "1": {
+          "masoretic_text": "בַּיּ֣וֹם הַה֔וּא יוּשַׁ֥ר הַשִּׁיר־ הַזֶּ֖ה בְּאֶ֣רֶץ יְהוּדָ֑ה עִ֣יר עָז־ לָ֔נוּ יְשׁוּעָ֥ה יָשִׁ֖ית חוֹמ֥וֹת וָחֵֽל׃",
+          "dss_text": "ביום ההוא יושר  השיר הזואת בארץ יהודה עיר עוז לנו ישועה ישית חומות וחל",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "יוּשַׁ֥ר",
+              "dss_word": "יושר",
+              "commentary": "1QIsab(vid), 4QIsac, Mas: will be sung. 1QIsaa has ישיר meaning one will sing. LXX reads ασονται meaning they will sing."
+            },
+            {
+              "position": 4,
+              "masoretic_word": "הַשִּׁיר־",
+              "dss_word": "",
+              "commentary": "1QIsaa, 4QIsac, Mas: the song. 1QIsab has השירה meaning the same thing, but is the feminine form rather than the masculine."
+            },
+            {
+              "position": 14,
+              "masoretic_word": "וָחֵֽל׃",
+              "dss_word": "חומות",
+              "commentary": "1QIsaa, Mas: walls. 4QIsac reads חומותיה meaning her walls. LXX reads τειχος meaning wall."
+            },
+            {
+              "position": 15,
+              "masoretic_word": "וחל",
+              "dss_word": "וחל",
+              "commentary": "1QIsaa, Mas, LXX: and rampart. 4QIsac reads וחילה meaning and her rampart."
+            }
+          ]
+        },
+        "2": {
+          "masoretic_text": "פִּתְח֖וּ שְׁעָרִ֑ים וְיָבֹ֥א גוֹי־ צַדִּ֖יק שֹׁמֵ֥ר אֱמֻנִֽים׃",
+          "dss_text": "פתחו שערים ויבוא גוי צדיק שומר אמונים",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "שְׁעָרִ֑ים",
+              "dss_word": "שערים",
+              "commentary": "1QIsab, Mas: the gates. 1QIsaa reads שעריך meaning your gates. 1QIsab and Masoretic are supported by the LXX: πυλας."
+            },
+            {
+              "position": 3,
+              "masoretic_word": "ויבא",
+              "dss_word": "ויבאו",
+              "commentary": "1QIsaa, 4QIsac, Mas (ויבא), LXX: so that it may enter. 1QIsab reads ויבאו meaning they may enter. As a righteous nation (גוי צדיק) is mentioned, the reading of 1QIsab could be in reference to many nations."
+            }
+          ]
+        },
+        "3": {
+          "masoretic_text": "יֵ֣צֶר סָמ֔וּךְ תִּצֹּ֖ר שָׁל֣וֹם ׀ שָׁל֑וֹם כִּ֥י בְךָ֖ בָּטֽוּחַ׃",
+          "dss_text": "יצר סמוך תצר שלום שלום כי בכה בטוח",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "בָּטֽוּחַ׃",
+              "dss_word": "בט-",
+              "commentary": "1QIsab, 4QIsac, Mas: he trusts. 1QIsaa omits this word, possibly due to the fact that the scribe’s eye skipped from the start of בט- to the same at the start of verse 4. However, the LXX reads οτι επι σοι ηλπισαν meaning Because in you they have hoped, which would be the meaning of כי בכה בטחו in 1QIsaa."
+            }
+          ]
+        },
+        "4": {
+          "masoretic_text": "בִּטְח֥וּ בַֽיהוָ֖ה עֲדֵי־ עַ֑ד כִּ֚י בְּיָ֣הּ יְהוָ֔ה צ֖וּר עוֹלָמִֽים׃",
+          "dss_text": "בטחו ביהוה עדי עד כי ביה יהוה צור עולמים",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "עֲדֵי־",
+              "dss_word": "עדי",
+              "commentary": "1QIsaa, Mas: as far as (defective spelling?). 4QIsac(vid) reads עודי which would seem to be a plene spelling, however as it’s not clear as to the letters, it is possibly a different word."
+            },
+            {
+              "position": 7,
+              "masoretic_word": "יְהוָ֔ה",
+              "dss_word": "יהוה",
+              "commentary": "1QIsaa, Mas: Yahweh. 4QIsab(vid) reads אדני meaning Sovereign Master. LXX reads ο Θ̅Σ̅ meaning the God."
+            }
+          ]
+        },
+        "5": {
+          "masoretic_text": "כִּ֤י הֵשַׁח֙ יֹשְׁבֵ֣י מָר֔וֹם קִרְיָ֖ה נִשְׂגָּבָ֑ה יַשְׁפִּילֶ֤נָּה יַשְׁפִּילָהּ֙ עַד־ אֶ֔רֶץ יַגִּיעֶ֖נָּה עַד־ עָפָֽר׃",
+          "dss_text": "כי השח יושבי מרום קריה נשגבה ישפילנה עדי ארץ יגיענה עדי עפר",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "הֵשַׁח֙",
+              "dss_word": "השת",
+              "commentary": "1QIsab, 4QIsab, 4QIsac, Mas: has thrown down. 1QIsaa has השת meaning has put down. 1QIsaa has either mixed up reading the ת for the ח, or the manuscript he was copying from contained this reading."
+            },
+            {
+              "position": 11,
+              "masoretic_word": "עד",
+              "dss_word": "עדי",
+              "commentary": "1QIsaa: to (alternative form). 4QIsac and Masoretic have the more common form עד meaning the same."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

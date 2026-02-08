@@ -1,0 +1,141 @@
+{
+  "name": "Jonah",
+  "chapters": {
+    "1": {
+      "verses": {
+        "3": {
+          "masoretic_text": "וַיָּ֤קָם יוֹנָה֙ לִבְרֹ֣חַ תַּרְשִׁ֔ישָׁה מִלִּפְנֵ֖י יְהוָ֑ה וַיֵּ֨רֶד יָפ֜וֹ וַיִּמְצָ֥א אָנִיָּ֣ה ׀ בָּאָ֣ה תַרְשִׁ֗ישׁ וַיִּתֵּ֨ן שְׂכָרָ֜הּ וַיֵּ֤רֶד בָּהּ֙ לָב֤וֹא עִמָּהֶם֙ תַּרְשִׁ֔ישָׁה מִלִּפְנֵ֖י יְהוָֽה׃",
+          "dss_text": "ויקם יונה לברח תרשיש מלפני יהוה וירד יפו וימצא אניה באה תרשיש ויתן שכרה וירד בה לבוא עמהם תרשישה מלפני יהוה",
+          "differences": [
+            {
+              "position": 19,
+              "masoretic_word": "תַּרְשִׁ֔ישָׁה",
+              "dss_word": "תרשיש",
+              "commentary": "MurXII, Mas: to Tarshish. 4QXIIg reads תרשיש, omitting the final Hey (ה), which in Hebrew is used to indicate direction towards something; in this case, to the town of Tarshish."
+            }
+          ]
+        },
+        "8": {
+          "masoretic_text": "וַיֹּאמְר֣וּ אֵלָ֔יו הַגִּידָה־ נָּ֣א לָ֔נוּ בַּאֲשֶׁ֛ר לְמִי־ הָרָעָ֥ה הַזֹּ֖את לָ֑נוּ מַה־ מְּלַאכְתְּךָ֙ וּמֵאַ֣יִן תָּב֔וֹא מָ֣ה אַרְצֶ֔ךָ וְאֵֽי־ מִזֶּ֥ה עַ֖ם אָֽתָּה׃",
+          "dss_text": "ויאמרו אליו הגידה נא לנו באשר למי הרעה הזאת לנו מה מלאכתך ומאין תבוא ומה ארצך ואי מזה עם אתה",
+          "differences": [
+            {
+              "position": 15,
+              "masoretic_word": "מה",
+              "dss_word": "ומה",
+              "commentary": "4QXIIg, LXX: And what. 4QXIIa, MurXII and Masoretic read מה meaning What."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "בַּאֲשֶׁ֛ר",
+              "dss_word": "באשר למי",
+              "commentary": "MurXII, Mas: because of whom (plene form). 4QXIIa has the defective form בשלמי."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "וַיֹּ֥אמֶר אֲלֵיהֶ֖ם עִבְרִ֣י אָנֹ֑כִי וְאֶת־ יְהוָ֞ה אֱלֹהֵ֤י הַשָּׁמַ֙יִם֙ אֲנִ֣י יָרֵ֔א אֲשֶׁר־ עָשָׂ֥ה אֶת־ הַיָּ֖ם וְאֶת־ הַיַּבָּשָֽׁה׃",
+          "dss_text": "ויאמר אליהם עברי אנכי ואת יהוה אלהי השמים ואלהי הארץ אני ירא אשר עשה את הים ואת היבשה",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "אֲנִ֣י",
+              "dss_word": "ואלהי הארץ",
+              "commentary": "4QXIIa(vid): and God of the earth. MurXII, Masoreitc and several LXX manuscripts omit. Several other LXX manuscripts contain και της γης meaning and the earth."
+            }
+          ]
+        }
+      }
+    },
+    "2": {
+      "verses": {
+        "6": {
+          "masoretic_text": "אֲפָפ֤וּנִי מַ֙יִם֙ עַד־ נֶ֔פֶשׁ תְּה֖וֹם יְסֹבְבֵ֑נִי ס֖וּף חָב֥וּשׁ לְרֹאשִֽׁי׃",
+          "dss_text": "אפפני מים עד נפש תהום יסבבני סוף חבוש לראשי",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "אפפוני",
+              "dss_word": "אפפני",
+              "commentary": "4QXIIg: closed in (singular). MurXII and Masoretic read אפפוני which is the plural. Either could work, as the word מים can mean water or waters, so can have either a singular or plural verb in agreement with it."
+            }
+          ]
+        },
+        "8": {
+          "masoretic_text": "בְּהִתְעַטֵּ֤ף עָלַי֙ נַפְשִׁ֔י אֶת־ יְהוָ֖ה זָכָ֑רְתִּי וַתָּב֤וֹא אֵלֶ֙יךָ֙ תְּפִלָּתִ֔י אֶל־ הֵיכַ֖ל קָדְשֶֽׁךָ׃",
+          "dss_text": "בהתעטף עלי נפשי את יהוה זכרתי ותבוא אליכה תפלתי אל היכל קדשך",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "תְּפִלָּתִ֔י",
+              "dss_word": "תפלתי אל היכל קדשך",
+              "commentary": "MurXII, Mas, LXX: my prayer, into your set-apart Temple. 4QXIIg omits this, possibly due to homoeoteleuton (אליכה תפלתי אל היכל קדשכה)."
+            }
+          ]
+        }
+      }
+    },
+    "3": {
+      "verses": {
+        "2": {
+          "masoretic_text": "ק֛וּם לֵ֥ךְ אֶל־ נִֽינְוֵ֖ה הָעִ֣יר הַגְּדוֹלָ֑ה וִּקְרָ֤א אֵלֶ֙יהָ֙ אֶת־ הַקְּרִיאָ֔ה אֲשֶׁ֥ר אָנֹכִ֖י דֹּבֵ֥ר אֵלֶֽיךָ׃",
+          "dss_text": "קום לכה אל נינוה העיר הגדולה וקרא אליה את הקריאה כזות אשר אנכי דובר אליכה",
+          "differences": [
+            {
+              "position": 11,
+              "masoretic_word": "אֲשֶׁ֥ר",
+              "dss_word": "כזות",
+              "commentary": "4QXIIs, LXX: according to this. MurXII and Masoretic omit."
+            }
+          ]
+        },
+        "8": {
+          "masoretic_text": "וְיִתְכַּסּ֣וּ שַׂקִּ֗ים הָֽאָדָם֙ וְהַבְּהֵמָ֔ה וְיִקְרְא֥וּ אֶל־ אֱלֹהִ֖ים בְּחָזְקָ֑ה וְיָשֻׁ֗בוּ אִ֚ישׁ מִדַּרְכּ֣וֹ הָֽרָעָ֔ה וּמִן־ הֶחָמָ֖ס אֲשֶׁ֥ר בְּכַפֵּיהֶֽם׃",
+          "dss_text": "ויתכסו שקים האדם והבהמה ויקראו על אלהים בחזקה וישב איש מדרכו הרעה ומן החמס אשר בכפיהם",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "אל",
+              "dss_word": "על",
+              "commentary": "MurXII: over. Masoretic has אל meaning towards, which is also possibly what the translation of προς in 8HevXIIgr and LXX is translating. However, the prepostition על can also mean upto, towards, which in Greek could be translated as προς as well. It is difficult to decide the original, though the Masoretic reading of אל is possibly a corrective-edit."
+            },
+            {
+              "position": 9,
+              "masoretic_word": "וישבו",
+              "dss_word": "וישב",
+              "commentary": "Hebrew reconstruction from 8HevXIIgr: επεστρεψεν - and He shall turn. The text is not extant in MurXII. Masoretic reads וישבו (with the LXX equivalent: απεστρεψαν) meaning and they shall turn. There is change of meaning, in that it turns it from a collective repentance based on the man, to a repentence caused by God Himself."
+            }
+          ]
+        }
+      }
+    },
+    "4": {
+      "verses": {
+        "6": {
+          "masoretic_text": "וַיְמַ֣ן יְהוָֽה־ אֱ֠לֹהִים קִיקָי֞וֹן וַיַּ֣עַל ׀ מֵעַ֣ל לְיוֹנָ֗ה לִֽהְי֥וֹת צֵל֙ עַל־ רֹאשׁ֔וֹ לְהַצִּ֥יל ל֖וֹ מֵרָֽעָת֑וֹ וַיִּשְׂמַ֥ח יוֹנָ֛ה עַל־ הַקּֽ͏ִיקָי֖וֹן שִׂמְחָ֥ה גְדוֹלָֽה׃",
+          "dss_text": "וימן יהוה אלהים קיקיון ויעל מעל ליונה להיות צל על ראשו להציל לו מרעתו וישמח יונה על הקיקיון שמחה גדולה",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "יְהוָֽה־",
+              "dss_word": "יהוה אלהים",
+              "commentary": "MurXII, Mas, LXX: Yahweh God. 4QXIIg reads אדוני יהוה meaning Sovereign Yahweh."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "וַיְמַ֤ן הָֽאֱלֹהִים֙ תּוֹלַ֔עַת בַּעֲל֥וֹת הַשַּׁ֖חַר לַֽמָּחֳרָ֑ת וַתַּ֥ךְ אֶת־ הַקִּֽיקָי֖וֹן וַיִּיבָֽשׁ׃",
+          "dss_text": "וימן האלהים תולעת כעלות השחר למחרת ותך את קיקיון וייבש",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "לַֽמָּחֳרָ֑ת",
+              "dss_word": "למחרת",
+              "commentary": "MurXII, Mas, LXX: on the following. 4QXIIg adds היום after this, to give on the following day. There’s no change of meaning to the verse. The reading of 4QXIIg makes it more explicit."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

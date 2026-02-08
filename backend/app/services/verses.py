@@ -1,7 +1,9 @@
 """
 Verses service - handles business logic for verse-related operations.
 """
+import importlib
 import logging
+from pathlib import Path
 from typing import Optional
 from app.schemas.verse import VerseResponse, WordResponse, DssVariant, TranslationFootnote
 from app.data_loaders.tanaj import TanajLoader
@@ -10,6 +12,30 @@ from app.data_loaders.translations import TranslationLoader
 from app.data_loaders.variants import VariantLoader
 from app.data_loaders.book_mapping import BookNameMapper as BookMapper
 from app.data_loaders.translit import TranslitLoader
+from app.data_loaders.dss_translit import DssTranslitLoader
+
+# Import LocalTransliterator for DSS word transliteration.
+# The module lives under <project_root>/scripts/translit/ which is outside the
+# backend package, so we load it dynamically via importlib to avoid mutating
+# sys.path at module level.
+TRANSLIT_AVAILABLE = False
+LocalTransliterator = None  # type: ignore[assignment]
+try:
+    _scripts_dir = str(Path(__file__).resolve(
+    ).parent.parent.parent.parent / "scripts")
+    _spec = importlib.util.spec_from_file_location(
+        "translit.local_translit",
+        Path(_scripts_dir) / "translit" / "local_translit.py",
+    )
+    if _spec and _spec.loader:
+        _mod = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(_mod)
+        # type: ignore[assignment]
+        LocalTransliterator = _mod.LocalTransliterator
+        TRANSLIT_AVAILABLE = True
+except Exception:
+    logging.warning(
+        "LocalTransliterator not available - DSS transliteration will be skipped")
 
 
 class VersesService:
@@ -22,6 +48,7 @@ class VersesService:
         translations_loader: TranslationLoader,
         variants_loader: VariantLoader,
         translit_loader: TranslitLoader,
+        dss_translit_loader: DssTranslitLoader,
         book_mapper: BookMapper
     ):
         self.tanaj_loader = tanaj_loader
@@ -29,7 +56,11 @@ class VersesService:
         self.translations_loader = translations_loader
         self.variants_loader = variants_loader
         self.translit_loader = translit_loader
+        self.dss_translit_loader = dss_translit_loader
         self.book_mapper = book_mapper
+
+        # Initialize DSS transliterator if available
+        self.dss_transliterator = LocalTransliterator() if TRANSLIT_AVAILABLE else None
 
     def get_verses(
         self,
@@ -213,16 +244,54 @@ class VersesService:
             if dss_data:
                 dss_variants = []
                 for variant in dss_data:
+                    # Transliterate DSS word if transliterator available
+                    dss_translit_en = None
+                    dss_translit_es = None
+                    dss_word = variant.get('dss_word', '')
+                    position = variant.get('position', 0)
+
+                    precomputed = self.dss_translit_loader.get_variant_translit(
+                        book_en,
+                        verse_data.get('chapter', 0),
+                        verse_data.get('verse', 0),
+                        position,
+                    )
+                    if precomputed:
+                        dss_translit_en = precomputed.get('translit_en')
+                        dss_translit_es = precomputed.get('translit_es')
+                    elif dss_word and self.dss_transliterator:
+                        try:
+                            result = self.dss_transliterator.transliterate_word(
+                                dss_word)
+                            dss_translit_en = result.translit_en
+                            dss_translit_es = result.translit_es
+                        except Exception as e:
+                            logging.warning(
+                                "Failed to transliterate DSS word '%s': %s",
+                                dss_word,
+                                e,
+                            )
+
                     dv = DssVariant(
-                        word_position=variant.get('word_position', 0),
-                        dss_text=variant.get('dss_text', ''),
-                        manuscript=variant.get('manuscript', ''),
-                        commentary=variant.get('commentary')
+                        book=variant.get('book', book_en),
+                        chapter=variant.get(
+                            'chapter', verse_data.get('chapter', 0)),
+                        verse=variant.get('verse', verse_data.get('verse', 0)),
+                        position=position,
+                        dss_word=dss_word,
+                        masoretic_word=variant.get('masoretic_word', ''),
+                        dss_translit_en=dss_translit_en,
+                        dss_translit_es=dss_translit_es,
+                        comment_v2_en=variant.get('comment_v2_en'),
+                        comment_v2_es=variant.get('comment_v2_es'),
+                        comment_v2_he=variant.get('comment_v2_he'),
+                        masoretic_strong=variant.get('masoretic_strong'),
+                        dss_strong=variant.get('dss_strong')
                     )
                     dss_variants.append(dv)
 
-                    if dv.word_position > 0 and dv.word_position <= len(words):
-                        words[dv.word_position - 1].has_dss_variant = True
+                    if dv.position > 0 and dv.position <= len(words):
+                        words[dv.position - 1].has_dss_variant = True
 
         return VerseResponse(
             chapter=verse_data.get('chapter', 0),

@@ -1,34 +1,34 @@
-__SHEMUEL BET \(2 SAMUEL\)__ ב שמואל
+**SHEMUEL BET \(2 SAMUEL\)** ב שמואל
 
-*David oye de la muerte de Shaúl*
+_David oye de la muerte de Shaúl_
 
 **1**
 
-**1** Y sucedió *que* después de la muerte de Shaúl, David regresó de herir a Amalek; y permaneció David en Tziklag dos días.
-**2** Y sucedió *que* en el día tercero, he aquí, un hombre vino del campamento de Shaúl, y sus vestiduras rasgadas y tierra sobre su cabeza; y fue *que* en su llegada a David, cayó a tierra y se inclinó.
+**1** Y sucedió _que_ después de la muerte de Shaúl, David regresó de herir a Amalek; y permaneció David en Tziklag dos días.
+**2** Y sucedió _que_ en el día tercero, he aquí, un hombre vino del campamento de Shaúl, y sus vestiduras rasgadas y tierra sobre su cabeza; y fue _que_ en su llegada a David, cayó a tierra y se inclinó.
 **3** Y le dijo David: ¿De dónde has venido? Y él le dijo: Del campamento de Israel he escapa­do.
 **4** Y le dijo David: ¿Qué cosa sucedió? Da a conocer, por favor, a mí. Y él dijo: Que ha hui­do el pueblo de la batalla y también se au­men­taron los caídos del pueblo y han muerto, y también Shaúl y Iehonatán, su hijo, murieron.
 **5** Y dijo David al joven que se lo dio a cono­cer: ¿Cómo sabes que ha muerto Shaúl, y Ieho­natán su hijo?
 **6** Y dijo el joven que se lo había dado a cono­cer: Yo me encontraba \(Lit.: Encontrar me en­contraba\) en el monte de Gilboa, y he aquí, *es­taba *Sha­úl apoyado sobre su espada; y he aquí, los carros y los señores de los jinetes lo alcan­zaban.
 **7** Y giró tras de él y me vio, y me llamó. Y di­je: “Heme aquí”.
 **8** Y dijo a mí: “¿Quién eres tú?” Y le dije: “A­malekí soy yo”.
-**9** Y me dijo: “Párate por favor sobre mí y má­ta­me, porque me ha atrapado la agonía \(O, con­vulsión\), pues aún toda mi vida *está* en mí”.
-**10** Y me paré sobre él y lo maté, porque sabía que no podría vivir después de su caída. Y to­mé la corona que *tenía* sobre su cabeza y la pul­sera que *estaba* en su brazo, y los traje a mi amo aquí.
-**11** Y se apoderó David de sus vestiduras y las rasgó, y también todos los hombres que *esta­ban* con él.
+**9** Y me dijo: “Párate por favor sobre mí y má­ta­me, porque me ha atrapado la agonía \(O, con­vulsión\), pues aún toda mi vida _está_ en mí”.
+**10** Y me paré sobre él y lo maté, porque sabía que no podría vivir después de su caída. Y to­mé la corona que _tenía_ sobre su cabeza y la pul­sera que _estaba_ en su brazo, y los traje a mi amo aquí.
+**11** Y se apoderó David de sus vestiduras y las rasgó, y también todos los hombres que _esta­ban_ con él.
 **12** Y se lamentaron y lloraron, y ayunaron has­ta el atardecer por Shaúl y por Iehonatán su hijo, por el pueblo de יהוה y por la casa de Israel, porque habían caído por la espada.
 **13** Y dijo David al joven que se lo había dado a co­no­cer: ¿De dónde eres tú? Y él dijo: Hijo de un hombre extranjero, amalekí soy yo.
 **14** Y le dijo David: ¿Cómo no tuviste temor de enviar tu mano para destruir al ungido de יהוה?
 **15** Y llamó David a uno de los jóvenes, y dijo: Acércate, golpea contra él. Y lo golpeó y mu­rió.
-**16** Y le dijo David: Tu sangre *sea* sobre tu ca­be­za, porque tu boca ha respondido contra ti, diciendo: “Yo maté al ungido de יהוה”.
+**16** Y le dijo David: Tu sangre _sea_ sobre tu ca­be­za, porque tu boca ha respondido contra ti, diciendo: “Yo maté al ungido de יהוה”.
 
-*David entona una elegía*
+_David entona una elegía_
 
 **17** Y entonó David esta elegía por Shaúl y por Iehonatán su hijo,
-**18** Y dijo de enseñar *a* los hijos de Iehudáh el* cántico del *arco; he aquí, *está* escrito en el ro­llo de Iashar.
+**18** Y dijo de enseñar _a_ los hijos de Iehudáh el* cántico del *arco; he aquí, _está_ escrito en el ro­llo de Iashar.
 
 **19** La belleza, Israel, sobre tus alturas, ha muer­to.¡Cómo han caído los poderosos!
 **20** No lo des a conocer en Gat,¡no lo anoticien en las afueras de Ashkelón!;¡no sea que se alegren las hijas de los pelishtim!,¡no sea que se regocijen las hijas de los incir­cun­cisos!
-**21**¡Montes de Gilboa!,no *haya* rocío ni lluvia sobre ustedes, ni cam­pos de contribuciones;porque allí fue aborrecido el escudo de los po­derosos, el escudo de Shaúl, no ungido con aceite.
+**21**¡Montes de Gilboa!,no _haya_ rocío ni lluvia sobre ustedes, ni cam­pos de contribuciones;porque allí fue aborrecido el escudo de los po­derosos, el escudo de Shaúl, no ungido con aceite.
 **22** De las sangre de los muertos, de la grasa de los poderosos, el arco de Iehonatán no regresa­ba atrás,y la espada de Shaúl no volvía vacía.
 **23** Shaúl y Iehonatán, amados y agradables en sus vidas, y en su muerte no fueron separados;que las águilas fueron más rápidos,que leones fueron más fuertes.
 **24** ¡Hijas de Israel!, a Shaúl lloren,el que los vestía de escarlata con lujos,quien hacía subir adornos de oro sobre sus ves­tidos.
@@ -339,7 +339,7 @@ David y Batsheva
 **26** Y oyó la mujer de Uriyah que había muer­to su esposo, y se lamentó por su marido.
 **27** Y pasó el luto; y envió David y la recogió a su casa, y ella fue para él por mujer, y dio a luz para él un hijo. Pero fue mala la cosa que hizo David en los ojos de יהוה.
 
-*Natán amonesta a David*
+_Natán amonesta a David_
 
 **12**
 
@@ -347,47 +347,47 @@ David y Batsheva
 
 **2** Para el rico había rebaño y ganado, gran­de­mente mucho.
 **3** Pero para el pobre no había nada, sino una oveja pequeña que había comprado y dejado vivir,y creció con él y con sus hijos, juntos.De su bocado comió y de su copa bebió, y en su seno se acostó, y fue para él como una hija.
-**4** Y vino un viajero al hombre ricoy tuvo pena de tomar de su rebaño y de su ga­nado para preparar para el caminante *que* había venido a él,y tomó a la oveja del hombre pobre y la prepa­ró para el hombre *que* había venido a él.
+**4** Y vino un viajero al hombre ricoy tuvo pena de tomar de su rebaño y de su ga­nado para preparar para el caminante _que_ había venido a él,y tomó a la oveja del hombre pobre y la prepa­ró para el hombre _que_ había venido a él.
 
 **5** Y se encendió la ira de David contra el hom­bre mucho, y dijo a Natán: Vive יהוה, que hijo de muerte es el hombre hacedor de esto,
 **6** y a la oveja restituirá el cuádruple, debido a que hizo esta cosa y porque no se compadeció.
-**7** Y dijo Natán a David: ¡Tú *eres* el hombre! Así dice יהוה, Elohim de Israel: “Yo te un­gí por rey sobre Israel, y Yo te rescaté de mano de Shaúl;
-**8** y di a ti la casa de tu amo y las mujeres de tu amo en tu seno, y di a ti la casa de Israel y Ie­hu­­­dáh; y si *hubiera sido* poco, hubiera aumen­ta­do a ti como estas y como estas.
+**7** Y dijo Natán a David: ¡Tú _eres_ el hombre! Así dice יהוה, Elohim de Israel: “Yo te un­gí por rey sobre Israel, y Yo te rescaté de mano de Shaúl;
+**8** y di a ti la casa de tu amo y las mujeres de tu amo en tu seno, y di a ti la casa de Israel y Ie­hu­­­dáh; y si _hubiera sido_ poco, hubiera aumen­ta­do a ti como estas y como estas.
 **9**¿Por qué despreciaste la palabra de יהוה para hacer el mal en sus ojos? A Uriyah el jití heriste con la espada, y a su mujer has tomado para ti por mujer, y a él mataste con la espada de los hijos de Amón.
 **10** Y ahora, no se apartará la espada de tu casa hasta siempre, debido a que me has desprecia­do y has tomado a la mujer de Uriyah el jití para ser a ti por mujer”.
-**11** Así dice יהוה: “He aquí, haré levantar sobre ti maldad de tu casa, y tomaré a tus mu­je­res a tus ojos y *las* daré a tu compañero, y él se acostará con tu mujer a ojos de este sol.
+**11** Así dice יהוה: “He aquí, haré levantar sobre ti maldad de tu casa, y tomaré a tus mu­je­res a tus ojos y _las_ daré a tu compañero, y él se acostará con tu mujer a ojos de este sol.
 **12** Porque tú hiciste en secreto, y Yo haré esta cosa delante de todo Israel y delante del sol”.
 **13** Y dijo David a Natán: He fallado a יהוה. Y dijo Natán a David: También יהוה ha he­cho pasar tu pecado, no morirás.
-**14** Pero, porque ciertamente has despreciado a los enemigos de יהוה \(Así en el T.M. y la versión gr., en los Manuscritos del Mar Muerto: *a la palabra de יהוה*\) con esta cosa, también el hijo nacido a ti, ciertamente morirá.
+**14** Pero, porque ciertamente has despreciado a los enemigos de יהוה \(Así en el T.M. y la versión gr., en los Manuscritos del Mar Muerto: _a la palabra de יהוה_\) con esta cosa, también el hijo nacido a ti, ciertamente morirá.
 
-*Muerte del hijo de David y Batsheva*
+_Muerte del hijo de David y Batsheva_
 
 **15** Y se fue Natán a su casa. Y golpeó יהוה al niño que dio a luz la mujer de Uriyah para Da­vid, y se enfermó.
 **16** Y pidió David a Elohim por el bien del ni­ño; y ayunó David en ayunas, y vino y pasó la noche, y se acostó a tierra.
 **17** Y se levantaron los ancianos de su casa jun­to hacia él para levantarlo de la tierra, pero no qui­so, y no preparó con ellos pan.
-**18** Y sucedió *que* en el día séptimo, murió el niño; y temieron los siervos de David de dar a conocer a él que había muerto el niño, porque decían: He aquí, cuando estaba el niño vivo, ha­blamos a él y no escuchó a nuestra voz. ¿Y cómo le diremos: “Ha muerto el niño”?, puede hacer mal.
+**18** Y sucedió _que_ en el día séptimo, murió el niño; y temieron los siervos de David de dar a conocer a él que había muerto el niño, porque decían: He aquí, cuando estaba el niño vivo, ha­blamos a él y no escuchó a nuestra voz. ¿Y cómo le diremos: “Ha muerto el niño”?, puede hacer mal.
 **19** Y vio David que sus siervos susurraban, y discernió David que había muerto el niño, y di­jo David a sus siervos: ¿Ha muerto el niño? Y ellos dijeron: Ha muerto.
-**20** Y se levantó David de la tierra, y se lavó y se ungió y cambió su ropa; y entró *a* la casa de יהוה y se inclinó. Y vino a su casa, y pidió, y pusieron para él pan, y comió.
-**21** Y dijeron sus siervos a él: ¿Qué es esta cosa que has hecho? Por el bien de *que* el niño viva, ayunaste y lloraste, pero cuando murió el niño, te levantaste y comiste pan.
+**20** Y se levantó David de la tierra, y se lavó y se ungió y cambió su ropa; y entró _a_ la casa de יהוה y se inclinó. Y vino a su casa, y pidió, y pusieron para él pan, y comió.
+**21** Y dijeron sus siervos a él: ¿Qué es esta cosa que has hecho? Por el bien de _que_ el niño viva, ayunaste y lloraste, pero cuando murió el niño, te levantaste y comiste pan.
 **22** Y él dijo: Cuando aún el niño vivía, ayuné y lloré, porque dije: “¿Quién sabe? ¿Me mos­tra­rá favor יהוה y vivirá el niño?”
 **23** Pero ahora, ha muerto, ¿por qué ésto, yo a­yu­naré? ¿Podré hacerlo volver aún? Yo iré a él, pero él no volverá a mí.
 **24** Y consoló David a Batsheva su mujer, y vi­no a ella y se acostó con ella; y ella dio a luz un hijo, y él \(Algunas versiones dicen: y ella\) lla­mó su nombre Shelomóh; y יהוה lo amó.
-**25** Y envió *palabra* por mano de Natán el profeta, y llamó su nombre Iedidiáh \(Amado de יהוה\), por causa de יהוה.
+**25** Y envió _palabra_ por mano de Natán el profeta, y llamó su nombre Iedidiáh \(Amado de יהוה\), por causa de יהוה.
 
-*David captura Rabáh*
+_David captura Rabáh_
 
 **26** Y luchó Ioab contra Rabáh de los hijos de Amón, y capturó la ciudad de la realeza.
 **27** Y envió Ioab mensajeros a David, y dijo: He luchado contra Rabáh, también capturé la ciudad de las aguas.
 **28** Y ahora, reúne al resto del pueblo y acampa sobre la ciudad y captúrala, no sea que capture yo la ciudad, y sea llamado mi nombre en ella.
 **29** Y reunió David a todo el pueblo y fue a Ra­báh, y luchó contra ella y la capturó.
-**30** Y tomó la corona de su rey de sobre su ca­be­za, y su peso *era *un talento de oro, y *tenía* una piedra preciosa; y estaba sobre la cabeza de David. Y el botín de la ciudad él saco gran­de­mente mucho.
-**31** Y al pueblo que *estaba* en ella él sacó, y *los* puso con cuchilla, con cortadores de hierro y con sierras de hierro, y los hizo pasar por hor­nos de ladrillo. Y así hizo a todas las ciudades de los hijos de Amón. Y volvió David y todo el pueblo *a* Ierushalem.
+**30** Y tomó la corona de su rey de sobre su ca­be­za, y su peso *era *un talento de oro, y _tenía_ una piedra preciosa; y estaba sobre la cabeza de David. Y el botín de la ciudad él saco gran­de­mente mucho.
+**31** Y al pueblo que _estaba_ en ella él sacó, y _los_ puso con cuchilla, con cortadores de hierro y con sierras de hierro, y los hizo pasar por hor­nos de ladrillo. Y así hizo a todas las ciudades de los hijos de Amón. Y volvió David y todo el pueblo _a_ Ierushalem.
 
-*Amnón y Tamar*
+_Amnón y Tamar_
 
 **13**
 
-**1** Y sucedió después de eso, tenía* *Abshalom, hijo de David, una hermana her­­mosa, y su nom­bre *era* Tamar, y la amó Am­­nón, hijo de David.
+**1** Y sucedió después de eso, tenía\* *Abshalom, hijo de David, una hermana her­­mosa, y su nom­bre *era* Tamar, y la amó Am­­nón, hijo de David.
 **2** Y se angustió Amnón hasta enfermarse, por cau­­sa de Tamar su hermana, porque virgen *era* ella, y fue difícil en los ojos de Amnón hacer a ella cualquier cosa.
 **3** Pero tenía Amnón un amigo, y su nombre *era* Ionadab, hijo de Shimeah, hermano de Da­vid; y Ionadab *era* un hombre muy sabio.
 **4** Y le dijo: ¿Por qué tú *estás* así pobre, hijo del rey, de mañana en mañana? ¿No *lo *darás a co­nocer a mí? Y le dijo Amnón: A Tamar, her­mana de Abshalom, mi hermano, yo amo.
@@ -402,7 +402,7 @@ David y Batsheva
 **13** Y yo, ¿adónde haré ir mi reproche? Y tú se­rás como uno de los desgraciados en Israel. Y ahora, habla por favor al rey, porque no me re­tendrá de ti.
 **14** Pero no quiso escuchar a su voz; y se for­taleció *más* que ella, y la afligió, y se acostó con ella.
 **15** Y la aborreció Amnón* con* odio muy gran­de; porque *más* grande *era* el odio *con *que la abo­rreció que el amor *con* que la amó. Y le dijo a ella Amnón: Levántate, vete.
-**16** Y ella le dijo: No, *por *causa de *que* el mal este es* más* grande que el otro que has hecho conmigo, al enviarme. Pero no quiso escuchar­la.
+**16** Y ella le dijo: No, *por *causa de *que* el mal este es* más\* grande que el otro que has hecho conmigo, al enviarme. Pero no quiso escuchar­la.
 **17** Y llamó a su joven que le servía, y dijo: En­vía por favor a esta de sobre mí hacia afuera, y bloquea la puerta tras ella.
 **18** Y sobre ella había una túnica de rayas, pues así se vestían las hijas vírgenes del rey túnicas. Y la hizo salir su servidor afuera, y bloqueó la puerta tras ella.
 **19** Y tomó Tamar cenizas sobre su cabeza, y la túnica de rayas que tenía sobre ella, rasgó; y puso su mano sobre su cabeza y se fue andan­do y llorando a gritos.
@@ -599,7 +599,7 @@ Muerte de Abshalom
 **17** Y tomaron a Abshalom y lo lanzaron en el bosque al hoyo grande, y establecieron sobre él un montón de piedras muy grande. Y todo Is­rael huyó, cada hombre a su tienda.
 **18** Y Abshalom había tomado y establecido pa­ra sí en su vida un pilar, que está en el Valle del Rey, pues dijo: No hay para mí hijo por el bien de hacer recordar mi nombre. Y llamó al pilar con su nombre, y lo llamó Monumento de Abshalom, hasta este día.
 **19** Y Ajimáatz, hijo de Tzadok, dijo: Déjame correr, te ruego, y daré las noticias al rey, que lo ha juzgado יהוה de mano de sus enemi­gos.
-**20** Pero le dijo Ioab: No eres hombre de no­ticias \(heb.: besoráh\) tú este día, darás noticias en otro día; y este día no darás noticias, porque el hijo del rey ha muerto.
+**20** Pero le dijo Ioab: No eres hombre de no­ticias \(heb.: besorah\) tú este día, darás noticias en otro día; y este día no darás noticias, porque el hijo del rey ha muerto.
 **21** Y dijo Ioab al cushí: Ve, da a conocer al rey lo que has visto. Y se inclinó el cushí a Ioab, y corrió.
 **22** Y añadió más Ajimáatz, hijo de Tzadok, y dijo a Ioab: Suceda lo que suceda, co­rreré por favor también yo tras el cushí. Y dijo Ioab: ¿Por qué esto, tú correrás, hijo mío?, y para ti no habrá noticias halladas.
 **23** Y él dijo: Suceda lo que suceda, correré. Y le dijo: Corre. Y corrió Ajimáatz por el camino del círculo, y pasó al cushí.

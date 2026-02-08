@@ -73,11 +73,14 @@ export function VerseDisplay({
   onSwipeDown,
 }: VerseDisplayProps) {
   const { t } = useTranslation(language);
+  const spanishMissingTranslation = t("verse.missingSpanishTranslation");
+  const dssInlineFontScale = "1.70em";
+  const dssInlineBaselineShift = "-0.08em";
   // Function to render Hebrew text with DSS variants
   const renderHebrewText = () => {
     const dssMap = new Map<number, string>();
     dssVariants?.forEach((variant) => {
-      dssMap.set(variant.word_position, variant.dss_text);
+      dssMap.set(variant.position, variant.dss_word);
     });
 
     const sourceWords =
@@ -118,9 +121,11 @@ export function VerseDisplay({
       // Remove "/" separators from display
       displayText = displayText.replace(/\//g, "");
 
-      const normalizedDisplay = normalizeForMatch(displayText);
+      // Always compare against the original Masoretic word text, not the
+      // display text which may be a DSS variant.
+      const normalizedWord = normalizeForMatch(word.text);
       const isSelected =
-        Boolean(normalizedSelected) && normalizedSelected === normalizedDisplay;
+        Boolean(normalizedSelected) && normalizedSelected === normalizedWord;
 
       // Parse word for prefix visualization only if word has prefix data
       const prefixSegments = word.prefixes?.length
@@ -146,7 +151,16 @@ export function VerseDisplay({
             onClick={() => onWordClick(word)}
             className={`cursor-pointer transition-colors ${isSelected ? "verse-highlight" : ""}`}
             style={
-              variantText ? { color: "var(--copper-highlight)" } : undefined
+              variantText
+                ? {
+                    color: "var(--qumran-text)",
+                    fontFamily: "'DeadSeaScrolls-Regular', 'Cardo', serif",
+                    fontSize: dssInlineFontScale,
+                    display: "inline-block",
+                    verticalAlign: "middle",
+                    transform: `translateY(${dssInlineBaselineShift})`,
+                  }
+                : undefined
             }
           >
             {prefixSegments?.prefixes?.length ? (
@@ -236,7 +250,9 @@ export function VerseDisplay({
               fontSize: "17px",
             }}
           >
-            {renderTranslation(translation)}
+            {language === "es" && !translation.trim()
+              ? spanishMissingTranslation
+              : renderTranslation(translation)}
           </div>
         </SwipeIndicator>
       )}

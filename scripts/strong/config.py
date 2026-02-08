@@ -18,7 +18,7 @@ DICT_DIR = DATA_DIR / "dict"
 
 # Dictionary files
 WORDS_JSON = DICT_DIR / "lexicon" / "words.json"
-ROOTS_JSON = DICT_DIR / "lexicon" / "roots.pretty.json"
+ROOTS_JSON = DICT_DIR / "lexicon" / "roots.json"
 PREFIX_FORMS_JSON = DICT_DIR / "prefixes" / "forms_lookup.json"
 PREFIX_ENTRIES_DIR = DICT_DIR / "prefixes" / "entries"
 

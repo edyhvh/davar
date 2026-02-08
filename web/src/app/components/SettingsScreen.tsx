@@ -226,7 +226,7 @@ export function SettingsScreen({
     <div className="pb-24">
       {/* General Section Header */}
       <h3 className="text-base text-[var(--text-secondary)] px-6 py-4 uppercase tracking-wider font-bold" style={{ fontFamily: "'Inter', sans-serif" }}>
-        {t('settings.general')}
+        {t('settings.sections.general')}
       </h3>
       
       {/* Theme Toggle */}
@@ -237,9 +237,9 @@ export function SettingsScreen({
               <RetroIcons.Theme />
             </div>
             <div>
-              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.theme')}</div>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.theme.title')}</div>
               <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {t('settings.darkMode')}
+                {t('settings.theme.subtitle')}
               </div>
             </div>
           </div>
@@ -262,7 +262,7 @@ export function SettingsScreen({
             </div>
             <div>
               <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {t('settings.language')}
+                {t('settings.language.title')}
               </div>
             </div>
           </div>
@@ -327,9 +327,9 @@ export function SettingsScreen({
               <RetroIcons.Qumran />
             </div>
             <div>
-              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.qumranVariants')}</div>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.qumran.title')}</div>
               <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {t('settings.qumranDescription')}
+                {t('settings.qumran.subtitle')}
               </div>
             </div>
           </div>
@@ -353,9 +353,9 @@ export function SettingsScreen({
               <RetroIcons.Chapter />
             </div>
             <div>
-              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.fullChapter')}</div>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.fullChapter.title')}</div>
               <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {t('settings.fullChapterDescription')}
+                {t('settings.fullChapter.subtitle')}
               </div>
             </div>
           </div>
@@ -379,9 +379,9 @@ export function SettingsScreen({
               <RetroIcons.Hebrew />
             </div>
             <div>
-              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.hebrewOnly')}</div>
+              <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.hebrewOnly.title')}</div>
               <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {t('settings.hebrewOnlyDescription')}
+                {t('settings.hebrewOnly.subtitle')}
               </div>
             </div>
           </div>
@@ -407,9 +407,9 @@ export function SettingsScreen({
                   <RetroIcons.Sefer />
                 </div>
                 <div>
-                  <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.seferStyle')}</div>
+                  <div className="text-lg font-semibold text-[var(--text-primary)]" style={{ fontFamily: "'Inter', sans-serif" }}>{t('settings.seferStyle.title')}</div>
                   <div className="text-sm text-[var(--text-secondary)] mt-0.5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    {t('settings.seferStyleDescription')}
+                    {t('settings.seferStyle.subtitle')}
                   </div>
                 </div>
               </div>
@@ -420,11 +420,11 @@ export function SettingsScreen({
                   onLabel={t('common.on')}
                   offLabel={t('common.off')}
                   disabled={seferDisabled}
-                  disabledReason={t('settings.seferStyleWarning')}
+                  disabledReason={t('settings.seferStyle.warningMessage')}
                 />
                 {seferDisabled && (
                   <div className="absolute right-0 mt-2 w-48 rounded-lg bg-[var(--background)] border border-[var(--border)] px-3 py-2 text-[10px] text-[var(--text-secondary)] shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                    {t('settings.seferStyleWarning')}
+                    {t('settings.seferStyle.warningMessage')}
                   </div>
                 )}
               </div>

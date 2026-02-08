@@ -47,7 +47,7 @@ class LexiconService:
             if not s:
                 return ''
             # Remove cantillation U+0591-U+05AF
-            s = __import__('re').sub(r"[\u0591-\u05AF]", "", s)
+            s = _CANTILLATION_RE.sub("", s)
             # Remove slash separators
             s = s.replace('/', '')
             return s.strip()
@@ -101,19 +101,42 @@ class LexiconService:
         definitions = self._deduplicate_definitions(definitions)
 
         # Get root information if available
+        # First check for existing root/root_strong (for backward compatibility with custom definitions)
         root = (lexicon_entry or {}).get('root')
         root_strong = (lexicon_entry or {}).get('root_strong')
+
+        # If not found, check for root_ref field (the actual data structure)
+        if not root and not root_strong:
+            root_ref = (lexicon_entry or {}).get('root_ref')
+            if root_ref:
+                # Look up the root entry using root_ref
+                root_entry = self.dictionary_loader.get_lexicon_entry(root_ref)
+                if root_entry:
+                    root_strong = root_ref  # The root_ref is the Strong's number of the root
+                    root = root_entry.get(
+                        'lemma') or root_entry.get('hebrew', '')
+
+        # Get root definitions if we have a root_strong
         root_definitions = None
+        root_translit_en = None
+        root_translit_es = None
         if root_strong:
             root_entry = self.dictionary_loader.get_lexicon_entry(root_strong)
             if root_entry:
+                # Extract root transliterations
+                root_translit_en = root_entry.get(
+                    'translit_en') or root_entry.get('transliteration')
+                root_translit_es = root_entry.get(
+                    'translit_es') or root_entry.get('transliteration')
+
                 root_definitions = []
                 for def_item in root_entry.get('definitions', []):
                     _append_definition_items(
                         root_definitions, def_item, 'strong')
 
                 # De-duplicate root definitions while preserving order
-                root_definitions = self._deduplicate_definitions(root_definitions)
+                root_definitions = self._deduplicate_definitions(
+                    root_definitions)
 
         # Get occurrences count
         occurrences_count = (lexicon_entry or {}).get('occurrences_count', 0)
@@ -122,6 +145,16 @@ class LexiconService:
                 (words_entry or {}).get("occurrences", {})
                 .get("total", 0)
             )
+
+        base_translit_entry = words_entry or roots_entry or lexicon_entry or {}
+        word_translit_en = (
+            base_translit_entry.get('translit_en')
+            or base_translit_entry.get('transliteration')
+        )
+        word_translit_es = (
+            base_translit_entry.get('translit_es')
+            or base_translit_entry.get('transliteration')
+        )
 
         # Build instances list from occurrences and manual instances
         instances = self._build_instances(
@@ -144,9 +177,13 @@ class LexiconService:
                 or (lexicon_entry or {}).get('lemma')
                 or ''
             ),
+            translit_en=word_translit_en,
+            translit_es=word_translit_es,
             definitions=definitions,
             root=root,
             root_strong=root_strong,
+            root_translit_en=root_translit_en,
+            root_translit_es=root_translit_es,
             root_definitions=root_definitions,
             occurrences_count=occurrences_count,
             instances=instances

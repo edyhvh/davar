@@ -21,6 +21,7 @@ Each book produces a `book.json` file in [data/translit](data/translit):
 
 - Tanakh: [data/oe](data/oe)
 - Besorah: [data/delitzsch_parsed](data/delitzsch_parsed)
+- DSS variants: [data/dss/books](data/dss/books) (differences only)
 
 ## Files
 
@@ -54,6 +55,9 @@ python -m scripts.translit.main --corpus tanakh --book genesis --dry-run
 
 # Write output
 python -m scripts.translit.main --corpus besorah --book john
+
+# DSS variants (differences only)
+python -m scripts.translit.main --corpus dss --book 1samuel
 ```
 
 ### Local mode (default)

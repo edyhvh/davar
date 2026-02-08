@@ -23,6 +23,7 @@ import {
 } from "@/src/theme";
 import { fetchMetadata } from "@/src/services/metadata";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 type NavigationSheetProps = {
   sheetRef: React.RefObject<BottomSheet | null>;
@@ -256,6 +257,7 @@ export const NavigationSheet = ({
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
   const snapPoints = useMemo(() => ["70%", "90%"], []);
+  const { t } = useTranslation();
 
   const [step, setStep] = useState<Step>("book");
   const [selectedBookId, setSelectedBookId] = useState(currentBookId);
@@ -291,7 +293,7 @@ export const NavigationSheet = ({
         setBooksMeta([]);
         setChapterCounts({});
         setVerseCounts({});
-        setLoadError("Unable to load books from the server.");
+        setLoadError(t("errors.loadBooks"));
       }
     };
     loadMetadata();
@@ -468,9 +470,9 @@ export const NavigationSheet = ({
   const getTitle = () => {
     switch (step) {
       case "book":
-        return "Select Book";
+        return t("navigation.selectBook");
       case "chapter":
-        return selectedBook?.name ?? "Select Chapter";
+        return selectedBook?.name ?? t("navigation.selectChapter");
       case "verse":
         return `${selectedBook?.name ?? ""} ${selectedChapter}`;
     }
@@ -539,7 +541,7 @@ export const NavigationSheet = ({
                 step === "book" && styles.breadcrumbTextActive,
               ]}
             >
-              {selectedBook?.name ?? "Book"}
+              {selectedBook?.name ?? t("navigation.book")}
             </Text>
           </Pressable>
           <Ionicons
@@ -566,7 +568,7 @@ export const NavigationSheet = ({
                 step === "chapter" && styles.breadcrumbTextActive,
               ]}
             >
-              {selectedChapter || "Ch"}
+              {selectedChapter || t("navigation.chapterShort")}
             </Text>
           </Pressable>
           <Ionicons
@@ -586,7 +588,7 @@ export const NavigationSheet = ({
                 step === "verse" && styles.breadcrumbTextActive,
               ]}
             >
-              Verse
+              {t("navigation.verse")}
             </Text>
           </View>
         </View>
@@ -607,7 +609,7 @@ export const NavigationSheet = ({
             />
             <TextInput
               style={styles.searchInput}
-              placeholder="Search books..."
+              placeholder={t("navigation.searchBooks")}
               placeholderTextColor={colors.textSecondary}
               value={searchQuery}
               onChangeText={setSearchQuery}
@@ -648,7 +650,7 @@ export const NavigationSheet = ({
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
                 <Text style={styles.emptyText}>
-                  {loadError ?? "No books found"}
+                  {loadError ?? t("navigation.noBooksFound")}
                 </Text>
               </View>
             }
@@ -665,7 +667,7 @@ export const NavigationSheet = ({
           style={styles.content}
         >
           <BottomSheetView style={styles.gridContainer}>
-            <Text style={styles.gridTitle}>Select Chapter</Text>
+            <Text style={styles.gridTitle}>{t("navigation.selectChapter")}</Text>
             {chapterNumbers.length ? (
               renderNumberGrid(
                 chapterNumbers,
@@ -674,7 +676,9 @@ export const NavigationSheet = ({
               )
             ) : (
               <View style={styles.emptyContainer}>
-                <Text style={styles.emptyText}>No chapters available</Text>
+                <Text style={styles.emptyText}>
+                  {t("navigation.noChapters")}
+                </Text>
               </View>
             )}
           </BottomSheetView>
@@ -689,7 +693,7 @@ export const NavigationSheet = ({
           style={styles.content}
         >
           <BottomSheetView style={styles.gridContainer}>
-            <Text style={styles.gridTitle}>Select Verse</Text>
+            <Text style={styles.gridTitle}>{t("navigation.selectVerse")}</Text>
             {verseNumbers.length ? (
               renderNumberGrid(
                 verseNumbers,
@@ -701,7 +705,7 @@ export const NavigationSheet = ({
               )
             ) : (
               <View style={styles.emptyContainer}>
-                <Text style={styles.emptyText}>No verses available</Text>
+                <Text style={styles.emptyText}>{t("navigation.noVerses")}</Text>
               </View>
             )}
           </BottomSheetView>

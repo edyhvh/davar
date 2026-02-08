@@ -37,7 +37,7 @@ class DictionaryLoader(DataLoader):
             return self._cache[cache_key]
 
         try:
-            data = self.load_json("dict/lexicon/roots.pretty.json")
+            data = self.load_json("dict/lexicon/roots.json")
             self._cache[cache_key] = data
             return data
         except FileNotFoundError:

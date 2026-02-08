@@ -1,0 +1,30 @@
+{
+  "name": "Daniel",
+  "chapters": {
+    "8": {
+      "verses": {}
+    },
+    "10": {
+      "verses": {
+        "12": {
+          "masoretic_text": "וַיֹּ֣אמֶר אֵלַי֮ אַל־ תִּירָ֣א דָנִיֵּאל֒ כִּ֣י ׀ מִן־ הַיּ֣וֹם הָרִאשׁ֗וֹן אֲשֶׁ֨ר נָתַ֧תָּ אֶֽת־ לִבְּךָ֛ לְהָבִ֧ין וּלְהִתְעַנּ֛וֹת לִפְנֵ֥י אֱלֹהֶ֖יךָ נִשְׁמְע֣וּ דְבָרֶ֑יךָ וַאֲנִי־ בָ֖אתִי בִּדְבָרֶֽיךָ׃",
+          "dss_text": "ויאמר אלי אל תירא דניאל כי מן היום הראשון אשר נתתה את לבך להבין ולהתענות לפני אלהיך נשמעו דבריך ואני באתי בעבורך",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "דָנִיֵּאל֒",
+              "dss_word": "דניאל",
+              "commentary": "4QDanc, Mas, LXX: Daniel. 6QpapDan reads דניל, which is most probably just a scribal mistake than a variant reading."
+            },
+            {
+              "position": 9,
+              "masoretic_word": "הָרִאשׁ֗וֹן",
+              "dss_word": "הראשון",
+              "commentary": "4QDanc, Mas: the first. 6QpapDan reads הרישון, a variant spelling."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ import { VerseSelectorSheet } from "@/src/components/VerseSelectorSheet";
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { mockBooks, mockVerses } from "@/src/constants/mockData";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
   StyleSheet.create({
@@ -149,6 +150,7 @@ export default function SearchScreen() {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const { t } = useTranslation();
 
   // Selection state
   const [selectedBookId, setSelectedBookId] = useState<string | null>(null);
@@ -245,10 +247,8 @@ export default function SearchScreen() {
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.title}>Search</Text>
-          <Text style={styles.subtitle}>
-            Navigate to any book, chapter, and verse
-          </Text>
+          <Text style={styles.title}>{t("search.title")}</Text>
+          <Text style={styles.subtitle}>{t("search.subtitle")}</Text>
         </View>
 
         <View style={styles.content}>
@@ -265,9 +265,7 @@ export default function SearchScreen() {
               color={styles.searchButtonIcon.color}
             />
           </Pressable>
-          <Text style={styles.searchLabel}>
-            Tap to select a book, chapter, and verse
-          </Text>
+          <Text style={styles.searchLabel}>{t("search.tapPrompt")}</Text>
 
           {/* Current selection display */}
           {(selectedBookId || selectedChapter || selectedVerse) && (
@@ -286,7 +284,7 @@ export default function SearchScreen() {
                       !selectedBook && styles.selectionTextPlaceholder,
                     ]}
                   >
-                    {selectedBook?.name ?? "Book"}
+                    {selectedBook?.name ?? t("navigation.book")}
                   </Text>
                 </Pressable>
 
@@ -308,7 +306,7 @@ export default function SearchScreen() {
                         styles.selectionTextPlaceholder,
                     ]}
                   >
-                    {selectedChapter ?? "Ch"}
+                    {selectedChapter ?? t("navigation.chapterShort")}
                   </Text>
                 </Pressable>
 
@@ -329,7 +327,7 @@ export default function SearchScreen() {
                       selectedVerse === null && styles.selectionTextPlaceholder,
                     ]}
                   >
-                    {selectedVerse ?? "V"}
+                    {selectedVerse ?? t("navigation.verseShort")}
                   </Text>
                 </Pressable>
               </View>
@@ -342,7 +340,7 @@ export default function SearchScreen() {
                   ]}
                   onPress={handleNavigate}
                 >
-                  <Text style={styles.goButtonText}>Go to Verse</Text>
+                  <Text style={styles.goButtonText}>{t("search.goToVerse")}</Text>
                 </Pressable>
               )}
             </View>
@@ -360,7 +358,7 @@ export default function SearchScreen() {
       {/* Chapter Selector Sheet */}
       <NumberGridBottomSheet
         sheetRef={chapterSheetRef}
-        title={`Select Chapter${selectedBook ? ` - ${selectedBook.name}` : ""}`}
+        title={`${t("navigation.selectChapter")}${selectedBook ? ` - ${selectedBook.name}` : ""}`}
         numbers={chapterNumbers}
         selected={selectedChapter ?? 0}
         onSelect={handleSelectChapter}
@@ -369,7 +367,7 @@ export default function SearchScreen() {
       {/* Verse Selector Sheet */}
       <VerseSelectorSheet
         sheetRef={verseSheetRef}
-        title={`Select Verse${selectedBook && selectedChapter ? ` - ${selectedBook.name} ${selectedChapter}` : ""}`}
+        title={`${t("navigation.selectVerse")}${selectedBook && selectedChapter ? ` - ${selectedBook.name} ${selectedChapter}` : ""}`}
         numbers={verseNumbers}
         selected={selectedVerse ?? 0}
         onSelect={handleSelectVerse}

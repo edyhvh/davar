@@ -1,0 +1,220 @@
+{
+  "name": "Isaiah",
+  "file_number": 1,
+  "total_files": 40,
+  "difference_count": 19,
+  "chapters": {
+    "1": {
+      "verses": {
+        "1": {
+          "masoretic_text": "חֲזוֹן֙ יְשַֽׁעְיָ֣הוּ בֶן־ אָמ֔וֹץ אֲשֶׁ֣ר חָזָ֔ה עַל־ יְהוּדָ֖ה וִירוּשָׁלָ֑͏ִם בִּימֵ֨י עֻזִּיָּ֧הוּ יוֹתָ֛ם אָחָ֥ז יְחִזְקִיָּ֖הוּ מַלְכֵ֥י יְהוּדָֽה׃",
+          "dss_text": "חזון ישעיהו בן אמוץ אשר חזה על יהודה וירושלים בימי עוזיה יותם אחז יחזקיה מלכי יהודה",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "בִּימֵ֨י",
+              "dss_word": "ביומי",
+              "commentary": "1QIsaa*, 4QIsaj, Mas: in the days. 1QIsaa has a correction causing it to read ביומי, which isn't found anywhere else in the scroll. This may just be an orthographical alternative, and so provides no change of meaning. The scribe himself might be showing an influence of Aramaic on his writing, for יומי is how days would be written in Aramaic (see Dan. 2:44; 5:11)."
+            }
+          ]
+        },
+        "2": {
+          "masoretic_text": "שִׁמְע֤וּ שָׁמַ֙יִם֙ וְהַאֲזִ֣ינִי אֶ֔רֶץ כִּ֥י יְהוָ֖ה דִּבֵּ֑ר בָּנִים֙ גִּדַּ֣לְתִּי וְרוֹמַ֔מְתִּי וְהֵ֖ם פָּ֥שְׁעוּ בִֽי׃",
+          "dss_text": "שמעו שמים והאזינו הארץ כיא יהוה דבר בנים גדלתי ורוממתי והמה פשעו בי",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "וְהַאֲזִ֣ינִי",
+              "dss_word": "והאזינו",
+              "commentary": "1QIsaa, Mas: and give ear. 4QIsaj has the misspelling הזינוו. No change of meaning."
+            }
+          ]
+        },
+        "3": {
+          "masoretic_text": "יָדַ֥ע שׁוֹר֙ קֹנֵ֔הוּ וַחֲמ֖וֹר אֵב֣וּס בְּעָלָ֑יו יִשְׂרָאֵל֙ לֹ֣א יָדַ֔ע עַמִּ֖י לֹ֥א הִתְבּוֹנָֽן׃",
+          "dss_text": "ידע שור קוניהו וחמור אבוס בעליו ישראל לוא ידע ועמי לוא התבונן",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "יִשְׂרָאֵל֙",
+              "dss_word": "ישראל",
+              "commentary": "1QIsaa, Mas: Israel. 4QIsaj has וישראל meaning but Israel, a reading supported by the LXX: Ισραηλ δε."
+            },
+            {
+              "position": 10,
+              "masoretic_word": "עמי",
+              "dss_word": "ועמי",
+              "commentary": "1QIsaa, LXX: And my family. 4QIsaa and Masoretic read עמי, omitting the initial ו meaning And."
+            }
+          ]
+        },
+        "10": {
+          "masoretic_text": "שִׁמְע֥וּ דְבַר־ יְהוָ֖ה קְצִינֵ֣י סְדֹ֑ם הַאֲזִ֛ינוּ תּוֹרַ֥ת אֱלֹהֵ֖ינוּ עַ֥ם עֲמֹרָֽה׃",
+          "dss_text": "שמעו דבר יהוה קציני סודם האזינו תורה אלוהינו עם עומרה",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "הַאֲזִ֛ינוּ",
+              "dss_word": "האזינו",
+              "commentary": "4QIsaf, Masoretic, LXX: listen. 1QIsaa has ואזינו meaning and listen."
+            }
+          ]
+        },
+        "12": {
+          "masoretic_text": "כִּ֣י תָבֹ֔אוּ לֵרָא֖וֹת פָּנָ֑י מִי־ בִקֵּ֥שׁ זֹ֛את מִיֶּדְכֶ֖ם רְמֹ֥ס חֲצֵרָֽי׃",
+          "dss_text": "כיא תבאו לראות פני מי בקש זואת מידכם לרמוס חצרי",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "רמס",
+              "dss_word": "לרמוס",
+              "commentary": "1QIsaa: to trample (plene spelling). 4QIsaf and Masoretic have the defective spelling רמס, and omit the initial ל meaning to. 4QIsaf and Masoretic imply the to; 1QIsaa has it explicitly."
+            }
+          ]
+        },
+        "15": {
+          "masoretic_text": "וּבְפָרִשְׂכֶ֣ם כַּפֵּיכֶ֗ם אַעְלִ֤ים עֵינַי֙ מִכֶּ֔ם גַּ֛ם כִּֽי־ תַרְבּ֥וּ תְפִלָּ֖ה אֵינֶ֣נִּי שֹׁמֵ֑עַ יְדֵיכֶ֖ם דָּמִ֥ים מָלֵֽאוּ׃",
+          "dss_text": "ובפרשכם כפיכם אעלים עיני מכם גם כי הרבו תפלה אינני שומע ידיכמה דמים מלאו אצבעותיכם בעאון",
+          "differences": [
+            {
+              "position": 15,
+              "masoretic_word": "אצבעותיכם",
+              "dss_word": "אצבעותיכם",
+              "commentary": "1QIsaa: your fingers with perversion. 4QIsaf, Masoretic and LXX omit."
+            }
+          ]
+        },
+        "16": {
+          "masoretic_text": "רַחֲצוּ֙ הִזַּכּ֔וּ הָסִ֛ירוּ רֹ֥עַ מַעַלְלֵיכֶ֖ם מִנֶּ֣גֶד עֵינָ֑י חִדְל֖וּ הָרֵֽעַ׃",
+          "dss_text": "רחצו הזכו והסירו רוע מעלליכם מנגד עיני חדלו הרע",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "הִזַּכּ֔וּ",
+              "dss_word": "הזכו",
+              "commentary": "4QIsaf, Mas, LXX: cleanse yourselves. 1QIsaa reads והזכו meaning and cleanse yourselves."
+            }
+          ]
+        },
+        "18": {
+          "masoretic_text": "לְכוּ־ נָ֛א וְנִוָּֽכְחָ֖ה יֹאמַ֣ר יְהוָ֑ה אִם־ יִֽהְי֨וּ חֲטָאֵיכֶ֤ם כַּשָּׁנִים֙ כַּשֶּׁ֣לֶג יַלְבִּ֔ינוּ אִם־ יַאְדִּ֥ימוּ כַתּוֹלָ֖ע כַּצֶּ֥מֶר יִהְיֽוּ׃",
+          "dss_text": "לכו נא ונוכחה יואמר יהוה אם יהיו חטאיכם כשני כשלג ילבינו אם ידומו כתולע כצמר יהיו",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "וְנִוָּֽכְחָ֖ה",
+              "dss_word": "נוכח",
+              "commentary": "1QIsaa, Mas: let us reason.4QIsaf spells it נוכח, without the cohortative final ה-, and would mean either we can reason or I can decide."
+            },
+            {
+              "position": 14,
+              "masoretic_word": "כַתּוֹלָ֖ע",
+              "dss_word": "כתולע",
+              "commentary": "1QIsaa, Mas: like crimson. 4QIsaf has the word תולעת, which is usually translated as worm or maggot, but in several contexts is used to refer to something deep red/scarlet, due to the fact that red dye was taken from the dried female bodies of the Kermes insect, which lived in the sap of trees. It is very common in the Mediterranean region. No change of meaning between the words used."
+            }
+          ]
+        },
+        "20": {
+          "masoretic_text": "וְאִם־ תְּמָאֲנ֖וּ וּמְרִיתֶ֑ם חֶ֣רֶב תְּאֻכְּל֔וּ כִּ֛י פִּ֥י יְהוָ֖ה דִּבֵּֽר׃",
+          "dss_text": "ואם תמאנו ומריתם בחרב תאכלו כיא פי יהוה דבר",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "וְאִם־",
+              "dss_word": "ואם",
+              "commentary": "1QIsaa(vid), Mas, LXX: But if. 4QIsaf reads אם meaning But."
+            }
+          ]
+        },
+        "24": {
+          "masoretic_text": "לָכֵ֗ן נְאֻ֤ם הָֽאָדוֹן֙ יְהוָ֣ה צְבָא֔וֹת אֲבִ֖יר יִשְׂרָאֵ֑ל ה֚וֹי אֶנָּחֵ֣ם מִצָּרַ֔י וְאִנָּקְמָ֖ה מֵאוֹיְבָֽי׃",
+          "dss_text": "לכן נאום האדון יהוה צבאות אביר ישראל הוה אנחם מצריי ואנקם מהאיבו",
+          "differences": [
+            {
+              "position": 12,
+              "masoretic_word": "מאויבי",
+              "dss_word": "מהאיבו",
+              "commentary": "1QIsaa: from his foes. 4QIsaf(vid) and Masoretic have מאויבי meaning My foes."
+            }
+          ]
+        },
+        "26": {
+          "masoretic_text": "וְאָשִׁ֤יבָה שֹׁפְטַ֙יִךְ֙ כְּבָרִ֣אשֹׁנָ֔ה וְיֹעֲצַ֖יִךְ כְּבַתְּחִלָּ֑ה אַחֲרֵי־ כֵ֗ן יִקָּ֤רֵא לָךְ֙ עִ֣יר הַצֶּ֔דֶק קִרְיָ֖ה נֶאֱמָנָֽה׃",
+          "dss_text": "ואשיבה שופטיך כבראישונה ויעציך כבתחלה אחרי כן יקראו לך עיר הצדק קריה נאמנה",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "וְאָשִׁ֤יבָה",
+              "dss_word": "ואשיבה",
+              "commentary": "1QIsaa, Mas:  I resolve to restore. 4QIsaf reads ואשיב which whilst having the same basic understanding, removes the cohortative meaning from the verb. The Cohortative expresses the strong desire of the speaker upon the direct object in question (not necessarily a guarantee that the desired result will be acquired): in this case, it’s Yahweh’s strong desire that He will restore your judges. The reading of 4QIsaf removes this sense, and makes it a more concrete I will restore, regardless of whether this is volition on Yahweh’s part."
+            }
+          ]
+        },
+        "27": {
+          "masoretic_text": "צִיּ֖וֹן בְּמִשְׁפָּ֣ט תִּפָּדֶ֑ה וְשָׁבֶ֖יהָ בִּצְדָקָֽה׃",
+          "dss_text": "ציון במשפט תפדה ושביה בצדקה",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "וְשָׁבֶ֖יהָ",
+              "dss_word": "ושביה ושביה",
+              "commentary": "1QIsaa, Mas: and her repentant ones. 4QIsaf has this word written twice as ושביה ושביה, giving us a strange reading and her repentant ones, and her repentant ones. Some manuscripts of the LXX appear to give credence to such a reading, taking ושביה as meaning her captives (taking this as coming from שבה rather than שוב): μετα γαρ κριματος σωθησεται η αιχμαλωσια αυτης και η αποστροφη αυτης μετα ελεημοσυνης/for her captives and her repentant ones shall escape with justice and with mercy."
+            }
+          ]
+        },
+        "30": {
+          "masoretic_text": "כִּ֣י תִֽהְי֔וּ כְּאֵלָ֖ה נֹבֶ֣לֶת עָלֶ֑הָ וּֽכְגַנָּ֔ה אֲשֶׁר־ מַ֖יִם אֵ֥ין לָֽהּ׃",
+          "dss_text": "כי תהיו כאלה נובלת עלה וכגנה אשר אין מים לה",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "מים אין",
+              "dss_word": "אין",
+              "commentary": "1QIsaa: no water. 4QIsaf and Masoretic reverse the words (מים אין), giving us the meaning water not = no water."
+            }
+          ]
+        },
+        "31": {
+          "masoretic_text": "וְהָיָ֤ה הֶחָסֹן֙ לִנְעֹ֔רֶת וּפֹעֲל֖וֹ לְנִיצ֑וֹץ וּבָעֲר֧וּ שְׁנֵיהֶ֛ם יַחְדָּ֖ו וְאֵ֥ין מְכַבֶּֽה׃",
+          "dss_text": "והיה החסנכם לנעורת ופעלכם לניצוץ ובערו שניהם יחדו ואין מכבה",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "החסן",
+              "dss_word": "החסנכם",
+              "commentary": "1QIsaa: The strong man of you all. 4QIsaf and Masoretic read החסן meaning the strong one."
+            }
+          ]
+        }
+      }
+    },
+    "2": {
+      "verses": {
+        "2": {
+          "masoretic_text": "וְהָיָ֣ה ׀ בְּאַחֲרִ֣ית הַיָּמִ֗ים נָכ֨וֹן יִֽהְיֶ֜ה הַ֤ר בֵּית־ יְהוָה֙ בְּרֹ֣אשׁ הֶהָרִ֔ים וְנִשָּׂ֖א מִגְּבָע֑וֹת וְנָהֲר֥וּ אֵלָ֖יו כָּל־ הַגּוֹיִֽם׃",
+          "dss_text": "והיה באחרית הימים נכון יהיה הר בית יהוה בראש ההרים ונשא מגבעות ונהרו ונהרו כל הגואים",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "יִֽהְיֶ֜ה",
+              "dss_word": "יהיה",
+              "commentary": "1QIsaa, 4QIsaf, Mas: they shall be. 4QIsae omits this, making they shall be implicit, rather than explicit."
+            },
+            {
+              "position": 10,
+              "masoretic_word": "הֶהָרִ֔ים",
+              "dss_word": "ההרים",
+              "commentary": "4QIsae, Mas: the mountains. 1QIsaa omits the initial ה meaning the, possibly accidentally. No change of meaning to the verse."
+            },
+            {
+              "position": 11,
+              "masoretic_word": "וְנִשָּׂ֖א",
+              "dss_word": "ונשא",
+              "commentary": "1QIsaa, Mas: and shall be raised. 4QIsae reads ונשא הוא meaning and it shall be raised. In 1QIsaa and Masoretic the it is implicit; 4QIsae has it explicit."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

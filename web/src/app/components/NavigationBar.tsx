@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { BookOpen, Settings, ScrollText, Eye, Heart, Home } from "lucide-react";
+import { BookOpen, Settings, ScrollText, Eye, Heart, Home, Paintbrush } from "lucide-react";
 import { LuLightbulb } from "react-icons/lu";
 import { TbAlphabetHebrew, TbLanguageHiragana } from "react-icons/tb";
 import { FaThList } from "react-icons/fa";
@@ -22,6 +22,7 @@ interface NavigationBarProps {
   onHomeClick: () => void;
   onDonateClick: () => void;
   onFeaturesClick: () => void;
+  onDesignSystemClick?: () => void;
   theme: "light" | "dark";
   onThemeChange: (theme: "light" | "dark") => void;
   language: "en" | "es" | "he";
@@ -55,6 +56,7 @@ export function NavigationBar({
   onHomeClick,
   onDonateClick,
   onFeaturesClick,
+  onDesignSystemClick,
   theme,
   onThemeChange,
   language,
@@ -268,6 +270,22 @@ export function NavigationBar({
               </span>
             </button>
 
+            {import.meta.env.DEV && onDesignSystemClick && (
+              <button
+                onClick={onDesignSystemClick}
+                className="rounded-full p-2 transition-all hover:scale-[1.05] active:scale-[0.98]"
+                style={{
+                  backgroundColor: "var(--neomorph-bg)",
+                  boxShadow:
+                    "6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)",
+                  border: "1px solid var(--neomorph-border)",
+                }}
+                aria-label="Design System"
+              >
+                <Paintbrush className="w-3 h-3 text-[var(--text-primary)]" />
+              </button>
+            )}
+
             <button
               onClick={() =>
                 setOpenMenu(openMenu === "settings" ? null : "settings")
@@ -297,7 +315,7 @@ export function NavigationBar({
                   className="text-sm text-[var(--text-primary)]"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  {t("settings.theme")}
+                  {t("settings.theme.title")}
                 </span>
               </div>
               <NeumorphicToggle
@@ -316,7 +334,7 @@ export function NavigationBar({
                   className="text-sm text-[var(--text-primary)]"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  {t("settings.qumranVariants")}
+                  {t("settings.qumran.title")}
                 </span>
               </div>
               <NeumorphicToggle
@@ -332,7 +350,7 @@ export function NavigationBar({
                   className="text-sm text-[var(--text-primary)]"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  {t("settings.showNikud")}
+                  {t("settings.nikud.title")}
                 </span>
               </div>
               <NeumorphicToggle
@@ -349,7 +367,7 @@ export function NavigationBar({
                   className="text-sm text-[var(--text-primary)]"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  {t("settings.showCantillation")}
+                  {t("settings.cantillation.title")}
                 </span>
               </div>
               <NeumorphicToggle
@@ -366,7 +384,7 @@ export function NavigationBar({
                   className="text-sm text-[var(--text-primary)]"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  {t("settings.fullChapter")}
+                  {t("settings.fullChapter.title")}
                 </span>
               </div>
               <NeumorphicToggle
@@ -383,7 +401,7 @@ export function NavigationBar({
                   className="text-sm text-[var(--text-primary)]"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  {t("settings.hebrewOnly")}
+                  {t("settings.hebrewOnly.title")}
                 </span>
               </div>
               <NeumorphicToggle
@@ -401,7 +419,7 @@ export function NavigationBar({
                     className="text-sm text-[var(--text-primary)]"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
-                    {t("settings.seferStyle")}
+                    {t("settings.seferStyle.title")}
                   </span>
                 </div>
                 <div className="relative group">
@@ -410,11 +428,11 @@ export function NavigationBar({
                     onToggle={() => onSeferModeChange(!seferMode)}
                     ariaLabel={t("navigation.toggleSeferStyle")}
                     disabled={seferDisabled}
-                    disabledReason={t("settings.seferStyleWarning")}
+                    disabledReason={t("settings.seferStyle.warningMessage")}
                   />
                   {seferDisabled && (
                     <div className="absolute right-0 mt-2 w-48 rounded-lg bg-[var(--neomorph-bg)] border border-[var(--neomorph-border)] px-3 py-2 text-[10px] text-[var(--text-secondary)] shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                      {t("settings.seferStyleWarning")}
+                      {t("settings.seferStyle.warningMessage")}
                     </div>
                   )}
                 </div>

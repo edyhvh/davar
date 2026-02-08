@@ -13,8 +13,6 @@ data/dict/
 ├── lexicon/                     # 🧠 LEXICON DATA - Consolidated word definitions
 │   ├── roots.json              # All primitive roots (3,131 entries)
 │   ├── words.json              # All derived words (6,312 entries)
-│   ├── roots.pretty.json       # Pretty-printed roots (development)
-│   ├── words.pretty.json       # Pretty-printed words (development)
 │   └── testing/                # Development samples (1% of data)
 │       ├── words/              # Test derived words
 │       └── roots/              # Test primitive roots
@@ -50,7 +48,7 @@ data/dict/
 
 ### Key Benefits
 - 🚀 **Performance**: Reduced I/O operations and filesystem overhead
-- 💾 **Efficiency**: Minified JSON saves ~40% storage space
+- 💾 **Efficiency**: Consolidated JSON reduces storage overhead
 - 🔧 **Maintainability**: Simplified file management and version control
 - 🔄 **Flexibility**: Easy to load complete books or search entire lexicons
 - 📱 **Scalability**: Optimal for mobile app with reduced file count (35 vs 27,849 files)

@@ -9,10 +9,14 @@ export interface DefinitionItem {
 export interface WordAnalysis {
   strong_number: string;
   hebrew?: string;
+  translit_en?: string;
+  translit_es?: string;
   definitions: DefinitionItem[];
   root?: string;
   root_strong?: string;
   root_definitions?: DefinitionItem[];
+  root_translit_en?: string;
+  root_translit_es?: string;
   occurrences_count: number;
   instances?: Array<string | { verse: string; text: string }>;
 }

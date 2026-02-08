@@ -1,0 +1,883 @@
+{
+  "name": "Psalms",
+  "chapters": {
+    "2": {
+      "verses": {}
+    },
+    "5": {
+      "verses": {
+        "10": {
+          "masoretic_text": "כִּ֤י אֵ֪ין בְּפִ֡יהוּ נְכוֹנָה֮ קִרְבָּ֢ם הַ֫וּ֥וֹת קֶֽבֶר־ פָּת֥וּחַ גְּרוֹנָ֑ם לְ֝שׁוֹנָ֗ם יַחֲלִֽיקוּן׃",
+          "dss_text": "כי אין בפיהו נכונה קרבם הוות קבר פתוח גרונם לשונם יחליקון",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "כִּ֤י",
+              "dss_word": "א??? כי",
+              "commentary": "4QPss, Masoretic: for. 4QPsa reads א??? כי, with א??? being a word with three letters unable to be deciphered. Based on the use of יהוה in the previous verse as O Yahweh, I suggest that possibly 4QPsa read אדני, and the verse begins: O Sovereign Master, because there is nothing reliable in his mouth…"
+            }
+          ]
+        }
+      }
+    },
+    "6": {
+      "verses": {}
+    },
+    "12": {
+      "verses": {}
+    },
+    "18": {
+      "verses": {
+        "2": {
+          "masoretic_text": "וַיֹּאמַ֡ר אֶרְחָמְךָ֖ יְהוָ֣ה חִזְקִֽי׃",
+          "dss_text": "ויואמר רחמתיכה יהוה חזקי",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "רחם",
+              "dss_word": "רחם",
+              "commentary": "11QPsc: I have compassion for you. 4QPsc and Masoretic read an alternative conjugation of רחם - ארחמך meaning I love you."
+            }
+          ]
+        },
+        "16": {
+          "masoretic_text": "וַיֵּ֤רָא֨וּ ׀ אֲפִ֥יקֵי מַ֗יִם וַֽיִּגָּלוּ֮ מוֹסְד֢וֹת תֵּ֫בֵ֥ל מִגַּעֲרָ֣תְךָ֣ יְהוָ֑ה מִ֝נִּשְׁמַ֗ת ר֣וּחַ אַפֶּֽךָ׃",
+          "dss_text": "ויראו אפיקי מים ויגלו מוסדי תבל ישלח מגערתכה יהוה מנשמת רוח אפכה",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "מוסדות",
+              "dss_word": "מוסדי",
+              "commentary": "11QPsc: foundations (masculine). 4QPsc and Masoretic read מוסדות meaning the same thing, but is the feminine form. The masculine noun form in 11QPsc agrees with the masculine verb prior, יגלו (they were uncovered), whereas the feminine noun form in 4QPSc and the Masoretic doesn’t agree with any verb in the verse, and is a more difficult reading as it is subjected on by the masculine verb יגלו. There are, however, numerous exceptions to such a rule, so either reading could be the original."
+            }
+          ]
+        }
+      }
+    },
+    "22": {
+      "verses": {
+        "16": {
+          "masoretic_text": "יָ֘בֵ֤שׁ כַּחֶ֨רֶשׂ ׀ כֹּחִ֗י וּ֭לְשׁוֹנִי מֻדְבָּ֣ק מַלְקוֹחָ֑י וְֽלַעֲפַר־ מָ֥וֶת תִּשְׁפְּתֵֽנִי׃",
+          "dss_text": "יבש כחרש כחי ולשוני מדבק מלקוחי ולעפר מות תשפתני",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "מֻדְבָּ֣ק",
+              "dss_word": "מדבק",
+              "commentary": "5/6ḤevPs, Masoretic: is cleaving. 4QPsf reads מדבש which is usually a preposition-noun meaning more than honey, but context dictates that this is a verb; possible meanings: melts, sticks, dissolves."
+            },
+            {
+              "position": 9,
+              "masoretic_word": "תִּשְׁפְּתֵֽנִי׃",
+              "dss_word": "תשפתני",
+              "commentary": "5/6ḤevPs, Masoretic: You have set me. 4QPsf reads שופט meaning I have been judged deserving."
+            }
+          ]
+        },
+        "17": {
+          "masoretic_text": "כִּ֥י סְבָב֗וּנִי כְּלָ֫בִ֥ים עֲדַ֣ת מְ֭רֵעִים הִקִּיפ֑וּנִי כָּ֝אֲרִ֗י יָדַ֥י וְרַגְלָֽי׃",
+          "dss_text": "כי סבבוני כלבים עדת מרעים הקיפוני כארו ידיה ורגלי",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "ידי",
+              "dss_word": "ידי",
+              "commentary": "5/6ḤevPs: my hands (with emphatic paragogic ה suffix). 4QPsf and Masoretic read the non-emphatic ידי."
+            }
+          ]
+        }
+      }
+    },
+    "25": {
+      "verses": {}
+    },
+    "33": {
+      "verses": {}
+    },
+    "45": {
+      "verses": {
+        "6": {
+          "masoretic_text": "חִצֶּ֗יךָ שְׁנ֫וּנִ֥ים עַ֭מִּים תַּחְתֶּ֣יךָ יִפְּל֑וּ בְּ֝לֵ֗ב אוֹיְבֵ֥י הַמֶּֽלֶךְ׃",
+          "dss_text": "חציך שנונים עמים תחתיך יפלו בלב אויבי המלך אלף ???????????",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "אלף",
+              "dss_word": "אלף",
+              "commentary": "11QPsd has a few additional words to the end of verse 6 that aren’t found in either the Masoretic or LXX texts, so what came after אלף (A thousand) is unknown."
+            }
+          ]
+        }
+      }
+    },
+    "46": {
+      "verses": {
+        "8": {
+          "masoretic_text": "יְהוָ֣ה צְבָא֣וֹת עִמָּ֑נוּ מִשְׂגָּֽב־ לָ֝נוּ אֱלֹהֵ֖י יַעֲקֹ֣ב סֶֽלָה׃",
+          "dss_text": "יהוה צבאות עמנו משגב לנו אלהי יעקב סלה",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "יְהוָ֣ה",
+              "dss_word": "note",
+              "commentary": "4QPcc has a fragment that has extant the letters ]באות עמנ[, which could be either from verse 8 or verse 12, as they both contain the exact same letters in each verse."
+            }
+          ]
+        }
+      }
+    },
+    "49": {
+      "verses": {
+        "9": {
+          "masoretic_text": "וְ֭יֵקַר פִּדְי֥וֹן נַפְשָׁ֗ם וְחָדַ֥ל לְעוֹלָֽם׃",
+          "dss_text": "ויקר פדיון נשפם וחדל לעולם",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "וְחָדַ֥ל",
+              "dss_word": "וחדל",
+              "commentary": "4QPsc, Mas: and shall fail. 4QPsj reads וחלו meaning and they shall tremble."
+            }
+          ]
+        }
+      }
+    },
+    "81": {
+      "verses": {}
+    },
+    "91": {
+      "verses": {
+        "7": {
+          "masoretic_text": "יִפֹּ֤ל מִצִּדְּךָ֨ ׀ אֶ֗לֶף וּרְבָבָ֥ה מִימִינֶ֑ךָ אֵ֝לֶ֗יךָ לֹ֣א יִגָּֽשׁ׃",
+          "dss_text": "יפול מצדך אלף ורבבה מימינך אליך לוא יגש",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "יִגָּֽשׁ׃",
+              "dss_word": "יגש",
+              "commentary": "4QPsb, Mas, LXX: it shall come near. 11QApPs reads יגע meaning it shall strike."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "כִּֽי־ אַתָּ֣ה יְהוָ֣ה מַחְסִ֑י עֶ֝לְי֗וֹן שַׂ֣מְתָּ מְעוֹנֶֽךָ׃",
+          "dss_text": "קראת מחסך ??ת מחמדו",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "יְהוָ֣ה",
+              "dss_word": "??ת",
+              "commentary": "11QApPs contains different words for the entirety of 91:9, and the manuscript has a few gaps which make it difficult to determine what letters are missing. There are a few questions as to what the word(s) here were originally."
+            }
+          ]
+        },
+        "13": {
+          "masoretic_text": "עַל־ שַׁ֣חַל וָפֶ֣תֶן תִּדְרֹ֑ךְ תִּרְמֹ֖ס כְּפִ֣יר וְתַנִּֽין׃",
+          "dss_text": "על פתן ואפעה תדרוך תרמוס כפיר ותנין",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "שחל ופתן",
+              "dss_word": "פתן",
+              "commentary": "11QApPs, LXX: cobra and the viper. 4QPsb and Masoretic read שחל ופתן meaning lion and the cobra."
+            }
+          ]
+        }
+      }
+    },
+    "93": {
+      "verses": {}
+    },
+    "102": {
+      "verses": {
+        "18": {
+          "masoretic_text": "פָּ֭נָה אֶל־ תְּפִלַּ֣ת הָעַרְעָ֑ר וְלֹֽא־ בָ֝זָ֗ה אֶת־ תְּפִלָּתָֽם׃",
+          "dss_text": "פנה אל תולעת הערער ולוא בזה את תפלתם",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "תפלת",
+              "dss_word": "תולעת",
+              "commentary": "11QPsa: the worm. 4QPsb and Masoretic read תפלת meaning the prayer."
+            }
+          ]
+        },
+        "20": {
+          "masoretic_text": "כִּֽי־ הִ֭שְׁקִיף מִמְּר֣וֹם קָדְשׁ֑וֹ יְ֝הוָ֗ה מִשָּׁמַ֤יִם ׀ אֶל־ אֶ֬רֶץ הִבִּֽיט׃",
+          "dss_text": "כי השקיף ממעון קדשו יהוה משמים אל הארץ הביט",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "לארץ",
+              "dss_word": "אל",
+              "commentary": "11QPsa: to the earth. 4QPsb and Masoretic read לארץ meaning the same to the earth, which denotes direction, whereas the preposition אל denotes motion as well."
+            }
+          ]
+        },
+        "24": {
+          "masoretic_text": "עִנָּ֖ה בַדֶּ֥רֶךְ קִצַּ֥ר יָמָֽי׃",
+          "dss_text": "כי ענה בדרך כחי קצר ימי",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "עִנָּ֖ה",
+              "dss_word": "כי",
+              "commentary": "11QPsa: for. 4QPsb omits this word."
+            }
+          ]
+        },
+        "26": {
+          "masoretic_text": "לְ֭פָנִים הָאָ֣רֶץ יָסַ֑דְתָּ וּֽמַעֲשֵׂ֖ה יָדֶ֣יךָ שָׁמָֽיִם׃",
+          "dss_text": "לפנים הארץ נוסדה ומעשי ידיכה שמים",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "יסדת",
+              "dss_word": "נוסדה",
+              "commentary": "11QPsa: was established. 4QPsb and Masoretic read יסדת meaning you established."
+            },
+            {
+              "position": 4,
+              "masoretic_word": "ומעשה",
+              "dss_word": "ומעשי",
+              "commentary": "11QPsa, LXX: the works. 4QPsb and Masoretic read ומעשה meaning the work."
+            }
+          ]
+        },
+        "27": {
+          "masoretic_text": "הֵ֤מָּה ׀ יֹאבֵדוּ֮ וְאַתָּ֢ה תַ֫עֲמֹ֥ד וְ֭כֻלָּם כַּבֶּ֣גֶד יִבְל֑וּ כַּלְּב֖וּשׁ תַּחֲלִיפֵ֣ם וְֽיַחֲלֹֽפוּ׃",
+          "dss_text": "המה יאבדו ואתה תעמד וכולם כבגד יבלו וכלבוש תחליפם ויחלפו",
+          "differences": [
+            {
+              "position": 8,
+              "masoretic_word": "כַּלְּב֖וּשׁ",
+              "dss_word": "וכלבוש",
+              "commentary": "11QPsa, LXX: and like clothing. 4QPsb reads כלבוש meaning ."
+            }
+          ]
+        }
+      }
+    },
+    "103": {
+      "verses": {}
+    },
+    "104": {
+      "verses": {
+        "1": {
+          "masoretic_text": "בָּרֲכִ֥י נַפְשִׁ֗י אֶת־ יְה֫וָ֥ה יְהוָ֣ה אֱ֭לֹהַי גָּדַ֣לְתָּ מְּאֹ֑ד ה֖וֹד וְהָדָ֣ר לָבָֽשְׁתָּ׃",
+          "dss_text": "לדויד בדכי נפשי את יהוה יהוה אלוהינו גדלתה מואדה הוד והדר תלבש",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "בָּרֲכִ֥י",
+              "dss_word": "לדויד",
+              "commentary": "11QPsa, 4QPse(vid), LXX: For David. 4QPsd(vid) and Masoretic omit."
+            },
+            {
+              "position": 7,
+              "masoretic_word": "אלהי",
+              "dss_word": "אלהים",
+              "commentary": "11QPsa: our God. 4QPsd reads אלהים meaning God; Masoretic reads אלהי meaning my God (a reading supported by the LXX: ο θεος μου)."
+            }
+          ]
+        },
+        "3": {
+          "masoretic_text": "הַ֥מְקָרֶֽה בַמַּ֗יִם עֲ‍ֽלִיּ֫וֹתָ֥יו הַשָּׂם־ עָבִ֥ים רְכוּב֑וֹ הַֽ֝מְהַלֵּ֗ךְ עַל־ כַּנְפֵי־ רֽוּחַ׃",
+          "dss_text": "מקרה במים עליותיו השם עבים רכובו המהלך על כנפי רוח",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "הַֽ֝מְהַלֵּ֗ךְ",
+              "dss_word": "המהלך",
+              "commentary": "11QPsa, 4QPsj, Mas, LXX: who rides upon. 4QPsd reads מהלך meaning riding upon."
+            }
+          ]
+        },
+        "4": {
+          "masoretic_text": "עֹשֶׂ֣ה מַלְאָכָ֣יו רוּח֑וֹת מְ֝שָׁרְתָ֗יו אֵ֣שׁ לֹהֵֽט׃",
+          "dss_text": "עשי מלאכיו רוחות משרתיו אש להט",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "מַלְאָכָ֣יו",
+              "dss_word": "מלאכיו",
+              "commentary": "4QPsd, Mas, LXX: his messengers. 4QPsj reads מלאכו meaning his messenger."
+            },
+            {
+              "position": 4,
+              "masoretic_word": "מְ֝שָׁרְתָ֗יו",
+              "dss_word": "משרתיו",
+              "commentary": "11QPsa, 4QPsd, Mas, LXX: his ministers. 4QPsj reads משירתו meaning his minister."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "לֹהֵֽט׃",
+              "dss_word": "להט",
+              "commentary": "4QPsd, 4QPsj, Mas: flaming. 11QPsa reads לוהטת which is a previously unseen form of the word, meaning the same."
+            }
+          ]
+        },
+        "11": {
+          "masoretic_text": "יַ֭שְׁקוּ כָּל־ חַיְת֣וֹ שָׂדָ֑י יִשְׁבְּר֖וּ פְרָאִ֣ים צְמָאָֽם׃",
+          "dss_text": "ישקו חיות\\\\\\את ה\\\\\\א ישברו פראים צמאם",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "ישקו כל חיתו שדי",
+              "dss_word": "חיות\\\\\\את",
+              "commentary": "4QPsd: The wild animals drink the ???. Due to 4QPsd containing a few scratched out letters, it’s impossible to determine the text here. Masoretic reads ישקו כל חיתו שדי meaning They give drink for all the beasts of the field, supported by the LXX."
+            },
+            {
+              "position": 4,
+              "masoretic_word": "שָׂדָ֑י",
+              "dss_word": "ישברו",
+              "commentary": "2QPs, Mas, LXX: quench. 4QPsd reads ישכירו meaning indulge."
+            }
+          ]
+        },
+        "22": {
+          "masoretic_text": "תִּזְרַ֣ח הַ֭שֶּׁמֶשׁ יֵאָסֵפ֑וּן וְאֶל־ מְ֝עוֹנֹתָ֗ם יִרְבָּצֽוּן׃",
+          "dss_text": "תזרח השמש ויאספון ואל מעונותיהם ירבצו",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "מעונתם",
+              "dss_word": "מעונותיהם",
+              "commentary": "11QPsa, 4QPse: their dens (full form). 4QPsd and Masoretic have the reduced form מעונתם."
+            }
+          ]
+        },
+        "24": {
+          "masoretic_text": "מָֽה־ רַבּ֬וּ מַעֲשֶׂ֨יךָ ׀ יְֽהוָ֗ה כֻּ֭לָּם בְּחָכְמָ֣ה עָשִׂ֑יתָ מָלְאָ֥ה הָ֝אָ֗רֶץ קִנְיָנֶֽךָ׃",
+          "dss_text": "מה רבו מעשיכה יהוה כולם בחוכמה עשיתה מלאה הארץ קנינכה",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "עשית",
+              "dss_word": "עשיתה",
+              "commentary": "11QPsa, Mas (עשית), LXX: you have done. 4QPsd has נעשו meaning have been done."
+            }
+          ]
+        },
+        "25": {
+          "masoretic_text": "זֶ֤ה ׀ הַיָּ֥ם גָּדוֹל֮ וּרְחַ֢ב יָ֫דָ֥יִם שָֽׁם־ רֶ֭מֶשׂ וְאֵ֣ין מִסְפָּ֑ר חַיּ֥וֹת קְ֝טַנּ֗וֹת עִם־ גְּדֹלֽוֹת׃",
+          "dss_text": "הים גדול ורחב ידים שמה רמש ואין מספר חיות קטנות עם גדולות",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "שָֽׁם־",
+              "dss_word": "רמש",
+              "commentary": "4QPsd, Mas, LXX: creeping things. 11QPsa reads רמש הרבה meaning many creeping things."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "וְאֵ֣ין",
+              "dss_word": "מספר",
+              "commentary": "4QPsd, Mas, LXX: number. 11QPsa reads למספר meaning to number."
+            }
+          ]
+        },
+        "34": {
+          "masoretic_text": "יֶעֱרַ֣ב עָלָ֣יו שִׂיחִ֑י אָ֝נֹכִ֗י אֶשְׂמַ֥ח בַּיהוָֽה׃",
+          "dss_text": "יערב עליו שיחי אנוכי אשמח ב",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "אָ֝נֹכִ֗י",
+              "dss_word": "אנוכי",
+              "commentary": "11QPsa, Mas, LXX: I will rejoice in Yahweh. 4QPsd omits."
+            }
+          ]
+        },
+        "35": {
+          "masoretic_text": "יִתַּ֤מּוּ חַטָּאִ֨ים ׀ מִן־ הָאָ֡רֶץ וּרְשָׁעִ֤ים ׀ ע֤וֹד אֵינָ֗ם בָּרֲכִ֣י נַ֭פְשִׁי אֶת־ יְהוָ֗ה הַֽלְלוּ־ יָֽהּ׃",
+          "dss_text": "כאשר יתמו חוטאים מן הארץ ורשעים עוד אינם ברכי נפש את יהוה הללויה",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "יִתַּ֤מּוּ",
+              "dss_word": "כאשר",
+              "commentary": "11QPsa: Just as. 4QPsa reads כי meaning for; Masoretic and the LXX omit."
+            }
+          ]
+        }
+      }
+    },
+    "105": {
+      "verses": {
+        "37": {
+          "masoretic_text": "וַֽ֭יּוֹצִיאֵם בְּכֶ֣סֶף וְזָהָ֑ב וְאֵ֖ין בִּשְׁבָטָ֣יו כּוֹשֵֽׁל׃",
+          "dss_text": "ויוצא את עמו בכסף וזהב ואין בשבטיו כושל",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "בְּכֶ֣סֶף",
+              "dss_word": "עמו",
+              "commentary": "11QPsa: His people. 4QPse reads just עמו, omitting the direct-object marker את. Masoretic and LXX omit."
+            }
+          ]
+        }
+      }
+    },
+    "109": {
+      "verses": {
+        "27": {
+          "masoretic_text": "וְֽ֭יֵדְעוּ כִּי־ יָ֣דְךָ זֹּ֑את אַתָּ֖ה יְהוָ֣ה עֲשִׂיתָֽהּ׃",
+          "dss_text": "וידעו כי ידך זאת יהוה אתה עשיתה",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "אתה יהוה עשיתה",
+              "dss_word": "יהוה אתה עשיתה",
+              "commentary": "11QPsa: Yahweh, You have done it. 4QPsf omits; Masoretic reads אתה יהוה עשיתה meaning You, Yahweh, have done it; and LXX reads και συ, κυριε, εποιησας αυτην meaning and you, Yahweh, have done it."
+            }
+          ]
+        }
+      }
+    },
+    "118": {
+      "verses": {
+        "26": {
+          "masoretic_text": "בָּר֣וּךְ הַ֭בָּא בְּשֵׁ֣ם יְהוָ֑ה בֵּ֝רַֽכְנוּכֶ֗ם מִבֵּ֥ית יְהוָֽה׃",
+          "dss_text": "ברוך הבא בשם יהוה ברכנוכם מבית יהוה",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "בֵּ֝רַֽכְנוּכֶ֗ם",
+              "dss_word": "ברכנוכם",
+              "commentary": "11QPsa: we bless you. 4QPsb reads ברכנו אתכם which means the same thing, however in its most full form."
+            }
+          ]
+        }
+      }
+    },
+    "119": {
+      "verses": {
+        "16": {
+          "masoretic_text": "בְּחֻקֹּתֶ֥יךָ אֶֽשְׁתַּעֲשָׁ֑ע לֹ֖א אֶשְׁכַּ֣ח דְּבָרֶֽךָ׃",
+          "dss_text": "בחוקיכה אשתעשע לוא אשכח דבריכה",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "בחקתיך",
+              "dss_word": "בחוקותיך",
+              "commentary": "11QPsa: In your statutes (masculine). 4QPsh and Masoretic have the feminine form בחוקותיך (Mas: בחקתיך)."
+            }
+          ]
+        },
+        "18": {
+          "masoretic_text": "גַּל־ עֵינַ֥י וְאַבִּ֑יטָה נִ֝פְלָא֗וֹת מִתּוֹרָתֶֽךָ׃",
+          "dss_text": "גל עיני ואביטה נפלאות מתורותיכה",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "וְאַבִּ֑יטָה",
+              "dss_word": "ואביטה",
+              "commentary": "11QPsa, Mas, LXX: and I will see. 4QPsh reads אביט meaning that I may see."
+            }
+          ]
+        },
+        "37": {
+          "masoretic_text": "הַעֲבֵ֣ר עֵ֭ינַי מֵרְא֣וֹת שָׁ֑וְא בִּדְרָכֶ֥ךָ חַיֵּֽנִי׃",
+          "dss_text": "העבר עיני מראות שוא בדרכך חיני",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "הַעֲבֵ֣ר",
+              "dss_word": "העבר",
+              "commentary": "11QPsa, Mas: Turn away (imperative). 4QPsg reads העביר meaning He turned away. The change in meaning is one of source: the reading of 11QPsa/Mas has it as a command or request; the reading of 4QPsg makes it something that Yahweh has already done: He turned away my eyes from looking at what is worthless."
+            },
+            {
+              "position": 5,
+              "masoretic_word": "בִּדְרָכֶ֥ךָ",
+              "dss_word": "בדרכך",
+              "commentary": "4QPsg, Mas, LXX: Give me life in your way. 11QPsa reads כדברכה חונני meaning Be gracious to me according to your way."
+            }
+          ]
+        },
+        "40": {
+          "masoretic_text": "הִ֭נֵּה תָּאַ֣בְתִּי לְפִקֻּדֶ֑יךָ בְּצִדְקָתְךָ֥ חַיֵּֽנִי׃",
+          "dss_text": "הנה תאבתי לפקודיכה בצדקתכה חיני",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "חַיֵּֽנִי׃",
+              "dss_word": "חיני",
+              "commentary": "4QPsg, Mas, LXX: Give me life. 11QPsa reads חונני meaning Be gracious to me."
+            }
+          ]
+        },
+        "41": {
+          "masoretic_text": "וִֽיבֹאֻ֣נִי חֲסָדֶ֣ךָ יְהוָ֑ה תְּ֝שׁ֥וּעָתְךָ֗ כְּאִמְרָתֶֽךָ׃",
+          "dss_text": "ויבואוני חסד יהוה תשועתכה כאמרתכה",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "ויבאני",
+              "dss_word": "ויבואוני",
+              "commentary": "4QPsg: And may (He) bring to me. Masoretic reads ויבאני meaning And let come to me. 11QPsa reads ויבואוני meaning And they shall bring to me."
+            },
+            {
+              "position": 2,
+              "masoretic_word": "חֲסָדֶ֣ךָ",
+              "dss_word": "חסד",
+              "commentary": "4QPsg, Mas: Your loving kindness. 11QPsa reads חסד meaning loving kindness."
+            }
+          ]
+        },
+        "42": {
+          "masoretic_text": "וְאֶֽעֱנֶ֣ה חֹרְפִ֣י דָבָ֑ר כִּֽי־ בָ֝טַחְתִּי בִּדְבָרֶֽךָ׃",
+          "dss_text": "ואענה חורפי דבר כי בטחתי בדברכה",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "בָ֝טַחְתִּי",
+              "dss_word": "בטחתי",
+              "commentary": "11QPsa, Mas, LXX: I trust. 4QPsg reads פקודיך meaning Your precepts."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "ך",
+              "dss_word": "נצרתי",
+              "commentary": "11QPsa, Mas (ך- for כה-), LXX: in Your word. 4QPsg reads נצרתי meaning I observe or I keep."
+            }
+          ]
+        },
+        "43": {
+          "masoretic_text": "וְֽאַל־ תַּצֵּ֬ל מִפִּ֣י דְבַר־ אֱמֶ֣ת עַד־ מְאֹ֑ד כִּ֖י לְמִשְׁפָּטֶ֣ךָ יִחָֽלְתִּי׃",
+          "dss_text": "ואל תצל מפי דבר אמת עד מואדה כי לדבריכה יחלתי",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "אֱמֶ֣ת",
+              "dss_word": "אמת",
+              "commentary": "11QPsa, Mas, LXX: of truth. 4QPsg reads אמתך meaning Your truth."
+            },
+            {
+              "position": 9,
+              "masoretic_word": "למשפטך",
+              "dss_word": "לדבריכה",
+              "commentary": "11QPsa: in Your words. 4QPsg and Masoretic read למשפטך meaning in your ordinance. The LXX reads κριματα meaning judgements, which could be a translation of לדבריכה, or possibly an alternative reading למשפטיך."
+            }
+          ]
+        },
+        "45": {
+          "masoretic_text": "וְאֶתְהַלְּכָ֥ה בָרְחָבָ֑ה כִּ֖י פִקֻּדֶ֣יךָ דָרָֽשְׁתִּי׃",
+          "dss_text": "ואתהלכה ברחבה כי פקודיכה דרשתי",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "בָרְחָבָ֑ה",
+              "dss_word": "ברחבה",
+              "commentary": "4QPsg, Mas, LXX: in freedom. 11QPsa reads ברחוביה meaning in its broadness."
+            }
+          ]
+        },
+        "82": {
+          "masoretic_text": "כָּל֣וּ עֵ֭ינַי לְאִמְרָתֶ֑ךָ לֵ֝אמֹ֗ר מָתַ֥י תְּֽנַחֲמֵֽנִי׃",
+          "dss_text": "כלו עיני לאמרתכה לאמור מתי תנחמני",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "כָּל֣וּ",
+              "dss_word": "כלו",
+              "commentary": "4QPsg, Mas, LXX: Long for. 11QPsa reads כלתה meaning languish."
+            }
+          ]
+        },
+        "83": {
+          "masoretic_text": "כִּֽי־ הָ֭יִיתִי כְּנֹ֣אד בְּקִיט֑וֹר חֻ֝קֶּ֗יךָ לֹ֣א שָׁכָֽחְתִּי׃",
+          "dss_text": "כי הייתי כנאוד בקיטור חסדכה לוא שכחתי",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "הָ֭יִיתִי",
+              "dss_word": "הייתי",
+              "commentary": "4QPsg, Mas, LXX: I have become. 11QPsa reads עשיתני meaning You have made me."
+            }
+          ]
+        },
+        "92": {
+          "masoretic_text": "לוּלֵ֣י ת֭וֹרָתְךָ שַׁעֲשֻׁעָ֑י אָ֝֗ז אָבַ֥דְתִּי בְעָנְיִֽי׃",
+          "dss_text": "לולי תורתכה שעשועי אז אבדתי בעניי",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "בְעָנְיִֽי׃",
+              "dss_word": "בעניי",
+              "commentary": "4QPsg, Mas, LXX: in my misery. 11QPsa reads בעווני meaning in my iniquity."
+            }
+          ]
+        },
+        "116": {
+          "masoretic_text": "סָמְכֵ֣נִי כְאִמְרָתְךָ֣ וְאֶֽחְיֶ֑ה וְאַל־ תְּ֝בִישֵׁ֗נִי מִשִּׂבְרִֽי׃",
+          "dss_text": "סמכני כאמרתכה ואחיה ואל תבישני משברי",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "מִשִּׂבְרִֽי׃",
+              "dss_word": "ממשברי",
+              "commentary": "5QPs, Mas, LXX: my hope. 11QPsa reads ממשברי, which can either be translated as breakers or cervical opening. Quite possibly a scribal mistake, writing two מ‘s instead of just the one. The reading of 11QPsa would be and let me not be put to shame because of my breakers/cervical opening."
+            }
+          ]
+        },
+        "119": {
+          "masoretic_text": "סִגִ֗ים הִשְׁבַּ֥תָּ כָל־ רִשְׁעֵי־ אָ֑רֶץ לָ֝כֵ֗ן אָהַ֥בְתִּי עֵדֹתֶֽיךָ׃",
+          "dss_text": "סיגים חשבתי כול רשעי ארץ על כן אהבתי כול עדוותיכה",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "לכן",
+              "dss_word": "על",
+              "commentary": "11QPsa, LXX: because of this. 5QPs and Masoretic read לכן meaning therefore."
+            },
+            {
+              "position": 9,
+              "masoretic_word": "כול",
+              "dss_word": "כול",
+              "commentary": "11QPsa, LXX: all (LXX: always). Word omitted by 5QPs and Masoretic."
+            }
+          ]
+        },
+        "140": {
+          "masoretic_text": "צְרוּפָ֖ה אִמְרָתְךָ֥ מְאֹ֗ד וְֽעַבְדְּךָ֥ אֲהֵבָֽהּ׃",
+          "dss_text": "צרופה אמרתכה מואדה ועבדכה אהבה",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "ך",
+              "dss_word": "עבדכה",
+              "commentary": "5QPs, Mas (ך- for כה-), LXX: and Your servant. 11QPsa reads עבדכה meaning Your servant."
+            }
+          ]
+        },
+        "142": {
+          "masoretic_text": "צִדְקָתְךָ֣ צֶ֣דֶק לְעוֹלָ֑ם וְֽתוֹרָתְךָ֥ אֱמֶֽת׃",
+          "dss_text": "צדקות צדקות לעולם ותורתך אמת",
+          "differences": [
+            {
+              "position": 3,
+              "masoretic_word": "לְעוֹלָ֑ם",
+              "dss_word": "לעולם",
+              "commentary": "5QPs, Mas, LXX: forever. 11QPsa reads עולם meaning always."
+            }
+          ]
+        }
+      }
+    },
+    "122": {
+      "verses": {
+        "4": {
+          "masoretic_text": "שֶׁשָּׁ֨ם עָל֪וּ שְׁבָטִ֡ים שִׁבְטֵי־ יָ֭הּ עֵד֣וּת לְיִשְׂרָאֵ֑ל לְ֝הֹד֗וֹת לְשֵׁ֣ם יְהוָֽה׃",
+          "dss_text": "שמה עלו שבטים שבטי יה עדות לישראל להודות לשם יהוה",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "לְיִשְׂרָאֵ֑ל",
+              "dss_word": "לישראל",
+              "commentary": "4Q522, Mas, LXX: for Israel. 11QPsa reads ישראל meaning Israel."
+            },
+            {
+              "position": 4,
+              "masoretic_word": "שִׁבְטֵי־",
+              "dss_word": "שבטי יה",
+              "commentary": "4Q522, Mas, LXX: the tribes of Yah. 11QPsa possibly omits this. It is unable to determine accurately, as the manuscript is fragmentary here."
+            }
+          ]
+        },
+        "5": {
+          "masoretic_text": "כִּ֤י שָׁ֨מָּה ׀ יָשְׁב֣וּ כִסְא֣וֹת לְמִשְׁפָּ֑ט כִּ֝סְא֗וֹת לְבֵ֣ית דָּוִֽיד׃",
+          "dss_text": "כי שם ישבו כסאות למשפט כסאות לבית דויד",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "כִּ֝סְא֗וֹת",
+              "dss_word": "כסאות",
+              "commentary": "4Q522, Mas, LXX: thrones. 11QPsa reads כסא, which is the singular form and means throne."
+            }
+          ]
+        },
+        "7": {
+          "masoretic_text": "יְהִֽי־ שָׁל֥וֹם בְּחֵילֵ֑ךְ שַׁ֝לְוָ֗ה בְּאַרְמְנוֹתָֽיִךְ׃",
+          "dss_text": "יהי שלום בחילך ושלוה בארמונותיך",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "שלוה",
+              "dss_word": "שלום",
+              "commentary": "11QPsa, LXX: and security. 4Q522 reads שלום meaning peace, and Masoretic reads שלוה meaning security."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "לְ֭מַעַן בֵּית־ יְהוָ֣ה אֱלֹהֵ֑ינוּ אֲבַקְשָׁ֖ה ט֣וֹב לָֽךְ׃",
+          "dss_text": "למען בית יהוה אלוהינו אבקשה טובה לך",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "ט֣וֹב",
+              "dss_word": "שלום",
+              "commentary": "11QPsa: good (feminine). Masoretic reads the masculine spelling טוב, and 4Q522 reads שלום meaning peace. LXX doesn’t contain either word."
+            }
+          ]
+        }
+      }
+    },
+    "125": {
+      "verses": {
+        "2": {
+          "masoretic_text": "יְֽרוּשָׁלִַ֗ם הָרִים֮ סָבִ֢יב לָ֥הּ וַ֭יהוָה סָבִ֣יב לְעַמּ֑וֹ מֵ֝עַתָּ֗ה וְעַד־ עוֹלָֽם׃",
+          "dss_text": "ירושלים הרים סביב לו יהוה סביב לעמו מעתה ועד עולם",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "סָבִ֣יב",
+              "dss_word": "סביב לעמו",
+              "commentary": "11QPsa, Mas, LXX: surrounds His people. 4QPse has the words swapped around, giving the meaning His people surrounds, making it an unconventional subject-object-verb sentence syntax.  Hebrew usually has verb-subject-object."
+            }
+          ]
+        },
+        "5": {
+          "masoretic_text": "וְהַמַּטִּ֤ים עַֽקַלְקַלּוֹתָ֗ם יוֹלִיכֵ֣ם יְ֭הוָה אֶת־ פֹּעֲלֵ֣י הָאָ֑וֶן שָׁ֝ל֗וֹם עַל־ יִשְׂרָאֵֽל׃",
+          "dss_text": "והמטים עקלקולות יוליכם יהוה את פועלי און שלום על ישראל",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "וְהַמַּטִּ֤ים",
+              "dss_word": "והמטים",
+              "commentary": "4QPse, Mas, LXX: Those who turn aside to. 11QPsa omits this word."
+            },
+            {
+              "position": 2,
+              "masoretic_word": "עקלק(ו)לותם",
+              "dss_word": "עקלקולות",
+              "commentary": "11QPsa, LXX:  twisted ways. 4QPse and Masoretic read עקלק(ו)לותם meaning their twisted ways."
+            },
+            {
+              "position": 5,
+              "masoretic_word": "אֶת־",
+              "dss_word": "את פועלי",
+              "commentary": "4QPse, Mas, LXX: with workers. 11QPsa reads את כול פועלי meaning with all workers."
+            }
+          ]
+        }
+      }
+    },
+    "126": {
+      "verses": {
+        "1": {
+          "masoretic_text": "שִׁ֗יר הַֽמַּ֫עֲל֥וֹת בְּשׁ֣וּב יְ֭הוָה אֶת־ שִׁיבַ֣ת צִיּ֑וֹן הָ֝יִ֗ינוּ כְּחֹלְמִֽים׃",
+          "dss_text": "שיר המעלות בשוב יהוה את שבית ציון היינו כחלומים",
+          "differences": [
+            {
+              "position": 9,
+              "masoretic_word": "כחלמים",
+              "dss_word": "כחלומים",
+              "commentary": "11QPsa, LXX: like ones consoled. 4QPse and Masoretic read כחלמים. According to the Masoretes, כחלמים was to be pronounced כְּחֹלְמִים/Kekholemim, and this was interpreted as meaning dreamers. However the difference between the two readings is very small, it could quite easily be that the Masoretes added in the incorrect vowel-points, and so the meaning of the word was skewered. The form of the word in 11QPse would give us the pronunciation kekhalowmim. That the LXX translator also took the meaning to be like ones consoled, this is therefore a good example of why the vowel-points that the Masoretes added should be questioned more often."
+            }
+          ]
+        }
+      }
+    },
+    "130": {
+      "verses": {
+        "1": {
+          "masoretic_text": "שִׁ֥יר הַֽמַּעֲל֑וֹת מִמַּעֲמַקִּ֖ים קְרָאתִ֣יךָ יְהוָֽה׃",
+          "dss_text": "שיר המעלות ממעמקים קראתיכה יהוה",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "שִׁ֥יר",
+              "dss_word": "note",
+              "commentary": "11QPse adds אדוני meaning Master between these two words. 4QPse, Masoretic and the LXX don’t include it."
+            }
+          ]
+        }
+      }
+    },
+    "133": {
+      "verses": {}
+    },
+    "135": {
+      "verses": {
+        "12": {
+          "masoretic_text": "וְנָתַ֣ן אַרְצָ֣ם נַחֲלָ֑ה נַ֝חֲלָ֗ה לְיִשְׂרָאֵ֥ל עַמּֽוֹ׃",
+          "dss_text": "ונתן ארצם נחלה נחלה לישראל עמו",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "וְנָתַ֣ן",
+              "dss_word": "note",
+              "commentary": "4QPsn inserts the following here: לנו כי לעולם חסדו which is translated as to us, for His loving kindness is everlasting. 4QPsk, Masoretic and LXX don’t include the words. The words are also found in Psalm 136:22."
+            },
+            {
+              "position": 1,
+              "masoretic_word": "וְנָתַ֣ן",
+              "dss_word": "note",
+              "commentary": "4QPsn again inserts an extra bit here: כי לעולם חסדו which is translated as for His loving kindness is everlasting. 4QPsk, Masoretic and LXX don’t include the words. The words are also found in Psalm 136:22."
+            },
+            {
+              "position": 1,
+              "masoretic_word": "וְנָתַ֣ן",
+              "dss_word": "ונתן ארצם",
+              "commentary": "After 135:12, 4QPsn then continues to include Psalm 136:23-24. I have elected to not include 136:23-24 here, as not only does manuscript 4QPsk continue with Psalm 135:13-16, the Masoretic and the LXX do the same. As such, Psalm 136:23-24 will be in their usual place in Psalm 136. As to why the copyist of 4QPsn did this, it’s quite apparent that his eye seems to have skipped down a Psalm, as Psalm 135:12 and Psalm 136:21 start with the same words:  ונתן ארצם, and half way through Psalm 135:12, it also starts with the same words that Psalm 136:22 does: נחלה לישרא. Not seeing his mistake, the scribe just appears to have kept going!"
+            }
+          ]
+        }
+      }
+    },
+    "136": {
+      "verses": {
+        "26": {
+          "masoretic_text": "ה֭וֹדוּ לְאֵ֣ל הַשָּׁמָ֑יִם כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+          "dss_text": "הודו לאל השמים כי לעולם חסדו",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "ה֭וֹדוּ",
+              "dss_word": "note",
+              "commentary": "After 136:26, 11QPsa then goes onto add verses from Psalm 118, but in a slightly different order. This isn’t just a random inclusion of verses from Psalm 118, as Psalm 118 appears in 11QPsa earlier on, and manuscript 11QPsb also has a similar order amongst its fragments (the order Psalm 118:1, 15-16 is seen in 11QPsb, fragment 3). Some scholars have suggested they’re a sort of separate Catena of sorts; but others have argued that seeing as though 11QPsa has no break between Psalm 136:26 and the verse 27 (118:1), then it is likely just a longer ending to Psalm 136. 11QPsb unfortunately doesn’t have any verses from Psalm 136 extant, so we don’t know whether the verses from Psalm 118 seen there follow Psalm 136, or are indeed a separate composition. As such, I have treated them here as separate verses, and haven’t just included them in Psalm 118."
+            }
+          ]
+        }
+      }
+    },
+    "143": {
+      "verses": {}
+    },
+    "146": {
+      "verses": {}
+    },
+    "147": {
+      "verses": {
+        "1": {
+          "masoretic_text": "הַ֥לְלוּ יָ֨הּ ׀ כִּי־ ט֭וֹב זַמְּרָ֣ה אֱלֹהֵ֑ינוּ כִּֽי־ נָ֝עִים נָאוָ֥ה תְהִלָּֽה׃",
+          "dss_text": "הללויה  כי טוב זמרה אלהינו נאוה זמרה אלהינו נאוה נעים תהלה",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "כִּֽי־",
+              "dss_word": "נאוה זמרה אלהינו",
+              "commentary": "4QPsd: it is fitting to sing praises to our God. The extant portion of 11QPsa would suggest that this alternative reading (which isn’t found in either the Masoretic or the LXX) wasn’t in 11QPsa; but seeing as though only three letters of the last word in the verse are extant in 11QPsa, this wouldn’t account for a scribal correction. As such, seeing as though 4QPsd has more of the verse extant, I felt it was better to follow its wording, rather than rely on the Masoretic and subjective views concerning 11QPsa."
+            }
+          ]
+        },
+        "20": {
+          "masoretic_text": "לֹ֘א עָ֤שָׂה כֵ֨ן ׀ לְכָל־ גּ֗וֹי וּמִשְׁפָּטִ֥ים בַּל־ יְדָע֗וּם הַֽלְלוּ־ יָֽהּ׃",
+          "dss_text": "לוא עשה כן לכל גוי ומשפטים בל הודיעם הללויה",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "וּמִשְׁפָּטִ֥ים",
+              "dss_word": "ומשפטים",
+              "commentary": "4QPsd, Mas, LXX: and His ordinances. 11QPsa reads משפטים meaning His ordinances."
+            }
+          ]
+        }
+      }
+    },
+    "150": {
+      "verses": {}
+    }
+  }
+}

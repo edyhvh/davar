@@ -11,6 +11,7 @@ import {
   stripMeteg,
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
+import { useTranslation } from "../hooks/useTranslation";
 
 interface FullChapterViewProps {
   verses: VerseResponse[];
@@ -41,7 +42,9 @@ export function FullChapterView({
   showNikud = true,
   showCantillation = true,
 }: FullChapterViewProps) {
+  const { t } = useTranslation(language);
   const shouldShowSefer = seferMode && hebrewOnly;
+  const spanishMissingTranslation = t("verse.missingSpanishTranslation");
 
   const normalizeForMatch = (text: string) => {
     let normalized = stripNikud(text);
@@ -76,9 +79,11 @@ export function FullChapterView({
       // Remove "/" separators from display
       displayText = displayText.replace(/\//g, "");
 
-      const normalizedDisplay = normalizeForMatch(displayText);
+      // Always compare against the original Masoretic word text, not the
+      // display text which may be a DSS variant.
+      const normalizedWord = normalizeForMatch(word.text);
       const isSelected =
-        Boolean(normalizedSelected) && normalizedSelected === normalizedDisplay;
+        Boolean(normalizedSelected) && normalizedSelected === normalizedWord;
 
       const prefixSegments = word.prefixes?.length
         ? getPrefixSegments(displayText, word.prefixes)
@@ -98,7 +103,9 @@ export function FullChapterView({
                 <span
                   style={{ color: "var(--text-secondary)" }}
                   className="cursor-pointer hover:opacity-80"
-                  title={`Prefix: ${word.prefixes?.join(", ")}`}
+                  title={t("verse.prefixLabel", {
+                    prefix: word.prefixes?.join(", ") ?? "",
+                  })}
                 >
                   {prefixSegments.prefixes.join("")}
                 </span>
@@ -188,7 +195,11 @@ export function FullChapterView({
                     fontSize: "15px",
                   }}
                 >
-                  [{renderTranslation(verse.translation ?? "")}]
+                  [
+                  {language === "es" && !(verse.translation ?? "").trim()
+                    ? spanishMissingTranslation
+                    : renderTranslation(verse.translation ?? "")}
+                  ]
                 </div>
               )}
             </div>

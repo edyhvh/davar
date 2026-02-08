@@ -69,7 +69,7 @@ class DictionaryLoader:
         self.words_by_normalized.update(ALTERNATE_FORMS)
 
     def _load_roots(self):
-        """Load roots.pretty.json and build normalized lookup table"""
+        """Load roots.json and build normalized lookup table"""
         if not ROOTS_JSON.exists():
             raise FileNotFoundError(f"Roots dictionary not found: {ROOTS_JSON}")
 

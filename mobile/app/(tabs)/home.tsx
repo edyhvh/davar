@@ -192,63 +192,11 @@ export default function HomeScreen() {
   const styles = useMemo(() => createStyles(colors), [colors]);
   const { t, get } = useTranslation();
   const [downloading, setDownloading] = useState<string | null>(null);
-  const dayNames = get<string[]>("home.calendar.dayNames", [
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat",
-  ]);
-  const calendarDays = [
-    { day: 10, label: dayNames[0] ?? "Sun", active: true },
-    { day: 11, label: dayNames[1] ?? "Mon" },
-    { day: 12, label: dayNames[2] ?? "Tue" },
-    { day: 13, label: dayNames[3] ?? "Wed" },
-  ];
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.content}>
-          <View style={styles.calendarCard}>
-            <View style={styles.calendarBadge}>
-              <Text style={styles.calendarBadgeText}>
-                {t("home.calendar.todayIs")}
-              </Text>
-            </View>
-            <Text style={styles.calendarTitle}>
-              {t("home.calendar.dateLabel")}
-            </Text>
-            <View style={styles.dateRow}>
-              {calendarDays.map((day) => (
-                <View
-                  key={`${day.day}-${day.label}`}
-                  style={[styles.dateCard, day.active && styles.dateCardActive]}
-                >
-                  <Text
-                    style={[
-                      styles.dateNumber,
-                      day.active && styles.dateNumberActive,
-                    ]}
-                  >
-                    {day.day}
-                  </Text>
-                  <Text
-                    style={[
-                      styles.dateLabel,
-                      day.active && styles.dateLabelActive,
-                    ]}
-                  >
-                    {day.label}
-                  </Text>
-                  {day.active ? <View style={styles.datePip} /> : null}
-                </View>
-              ))}
-            </View>
-          </View>
-
           <View style={[styles.actionCard, styles.actionPrimary]}>
             <View>
               <Text
@@ -363,7 +311,6 @@ export default function HomeScreen() {
             <View style={styles.aboutGrid}>
               {(
                 [
-                  { label: t("home.about.items.legal"), icon: "balance" },
                   { label: t("home.about.items.terms"), icon: "file" },
                   { label: t("home.about.items.privacy"), icon: "shield" },
                   { label: t("home.about.items.support"), icon: "chat" },

@@ -12,6 +12,11 @@ import sys
 from pathlib import Path
 from typing import Dict, List, NamedTuple
 
+# Add parent directory to path for utils import
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import load_json, save_json, create_backup, ProgressTracker
+
 logger = logging.getLogger(__name__)
 
 
@@ -168,28 +173,12 @@ class MismatchFixer:
         self.translator = GrokTranslator()
 
     def _load_json_file(self, file_path: Path) -> Dict:
-        """Load JSON file."""
-        import json
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except FileNotFoundError:
-            logger.error(f"File not found: {file_path}")
-            raise
-        except json.JSONDecodeError as e:
-            logger.error(f"Invalid JSON in {file_path}: {e}")
-            raise
+        """Load JSON file using utils module."""
+        return load_json(file_path)
 
-    def _save_json_file(self, data: Dict, file_path: Path, pretty: bool = False):
-        """Save JSON file."""
-        import json
-        file_path.parent.mkdir(parents=True, exist_ok=True)
-
-        with open(file_path, 'w', encoding='utf-8') as f:
-            if pretty:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-            else:
-                json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
+    def _save_json_file(self, data: Dict, file_path: Path):
+        """Save JSON file using utils module."""
+        save_json(data, file_path)
 
     def _find_problems_in_file(self, file_path: Path, file_type: str) -> List[DefinitionRef]:
         """
@@ -210,7 +199,8 @@ class MismatchFixer:
 
             for def_idx, defn in enumerate(definitions):
                 # Check if translation is missing or empty
-                if self.text_field not in defn or not defn[self.text_field].strip():
+                existing_translation = defn.get(self.text_field)
+                if not isinstance(existing_translation, str) or not existing_translation.strip():
                     # Check if we have English text to translate from
                     text_en = defn.get('text_en') or defn.get('text', '')
                     if text_en.strip():
@@ -238,7 +228,7 @@ class MismatchFixer:
         Returns:
             Statistics dictionary
         """
-        from .config import ROOTS_FILE, WORDS_FILE, ROOTS_PRETTY_FILE, WORDS_PRETTY_FILE
+        from .config import ROOTS_FILE, WORDS_FILE
 
         stats = {
             'roots': {'problems_found': 0, 'fixed': 0},
@@ -250,11 +240,11 @@ class MismatchFixer:
 
         files_to_process = []
         if file_filter == 'roots' or file_filter is None:
-            files_to_process.append(('roots', ROOTS_FILE, ROOTS_PRETTY_FILE))
+            files_to_process.append(('roots', ROOTS_FILE))
         if file_filter == 'words' or file_filter is None:
-            files_to_process.append(('words', WORDS_FILE, WORDS_PRETTY_FILE))
+            files_to_process.append(('words', WORDS_FILE))
 
-        for file_type, file_path, pretty_file_path in files_to_process:
+        for file_type, file_path in files_to_process:
             logger.info(f"Scanning {file_path} for problems...")
             problems = self._find_problems_in_file(file_path, file_type)
             stats[file_type]['problems_found'] = len(problems)
@@ -330,16 +320,18 @@ class MismatchFixer:
             total_fixed += fixed_count
             logger.info(f"Fixed {fixed_count} entries in {file_type}")
 
-            # Save the updated file
+            # Save the updated file (with backup)
             if not dry_run and fixed_count > 0:
                 if file_type == 'roots':
-                    self._save_json_file(data, ROOTS_FILE, pretty=False)
-                    self._save_json_file(data, ROOTS_PRETTY_FILE, pretty=True)
+                    backup_path = create_backup(ROOTS_FILE)
+                    logger.info(f"Created backup: {backup_path}")
+                    self._save_json_file(data, ROOTS_FILE)
                 elif file_type == 'words':
-                    self._save_json_file(data, WORDS_FILE, pretty=False)
-                    self._save_json_file(data, WORDS_PRETTY_FILE, pretty=True)
+                    backup_path = create_backup(WORDS_FILE)
+                    logger.info(f"Created backup: {backup_path}")
+                    self._save_json_file(data, WORDS_FILE)
 
-                logger.info(f"Saved updated {file_type} files")
+                logger.info(f"Saved updated {file_type} file")
 
         logger.info(f"Total fixed across all files: {total_fixed}")
         return stats
