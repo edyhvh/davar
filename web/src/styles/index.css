@@ -1,16 +1,26 @@
-@import './fonts.css';
-@import './tailwind.css';
-@import './theme.css';
+@import "./fonts.css";
+@import "./tailwind.css";
+@import "./theme.css";
 
 /* Additional global styles for Davar app */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body, button, div, span, a, input, select {
-  transition: background-color 420ms ease, color 420ms ease, border-color 420ms ease, box-shadow 420ms ease;
+body,
+button,
+div,
+span,
+a,
+input,
+select {
+  transition:
+    background-color 420ms ease,
+    color 420ms ease,
+    border-color 420ms ease,
+    box-shadow 420ms ease;
 }
 
 button,
@@ -58,7 +68,8 @@ html {
 }
 
 /* Prevent text selection on UI elements */
-button, .no-select {
+button,
+.no-select {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -131,7 +142,10 @@ button, .no-select {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   margin-bottom: 8px;
-  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
   font-family: "Jost", sans-serif;
 }
 
@@ -196,7 +210,6 @@ button, .no-select {
   background: var(--border);
   margin-bottom: 28px;
 }
-
 
 .legal-status {
   font-family: "Jost", sans-serif;

@@ -3,7 +3,7 @@
  * Handles authenticated requests with API key validation and better error reporting.
  */
 
-const globalAsAny = (typeof window !== 'undefined' ? window : global) as any;
+const globalAsAny = (typeof window !== "undefined" ? window : global) as any;
 
 // Safely access environment variables
 // Note: Bun should replace import.meta.env.PUBLIC_* strings at build time.
@@ -23,14 +23,14 @@ const FALLBACK_API_URL = "http://localhost:2220";
 const FALLBACK_API_KEY = "m1wRuEaE1Z_efYFo-_Up59VrpirdMzYtrfRjP9nPYIg";
 
 // Try multiple ways to get the config
-const API_BASE_URL = 
-  env.PUBLIC_API_BASE_URL || 
-  (globalAsAny.process?.env?.PUBLIC_API_BASE_URL) || 
+const API_BASE_URL =
+  env.PUBLIC_API_BASE_URL ||
+  globalAsAny.process?.env?.PUBLIC_API_BASE_URL ||
   FALLBACK_API_URL;
 
-const RAW_API_KEY = 
-  env.PUBLIC_API_KEY || 
-  (globalAsAny.process?.env?.PUBLIC_API_KEY) || 
+const RAW_API_KEY =
+  env.PUBLIC_API_KEY ||
+  globalAsAny.process?.env?.PUBLIC_API_KEY ||
   FALLBACK_API_KEY;
 
 const API_KEY = RAW_API_KEY?.trim();
@@ -38,10 +38,10 @@ const API_KEY = RAW_API_KEY?.trim();
 const publicNodeEnv = env.PUBLIC_NODE_ENV ?? "production";
 const isDev = publicNodeEnv === "development";
 
-console.log("[Davar] API Config:", { 
-  url: API_BASE_URL, 
-  hasKey: !!API_KEY, 
-  envState: env 
+console.log("[Davar] API Config:", {
+  url: API_BASE_URL,
+  hasKey: !!API_KEY,
+  envState: env,
 });
 
 // Early validation in development to catch missing key immediately
