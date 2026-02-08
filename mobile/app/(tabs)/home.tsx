@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import {
   ActivityIndicator,
   Pressable,
@@ -13,6 +13,7 @@ import { AppIcon } from "@/src/components/ui/AppIcon";
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import type { IconKey } from "@/src/constants/icons";
+import { downloadTranslationBundle } from "@/src/services/offlineSync";
 import { useTranslation } from "@/src/i18n/useTranslation";
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
@@ -216,9 +217,6 @@ export default function HomeScreen() {
   const [downloadStatus, setDownloadStatus] = useState<
     Record<DownloadLanguage, DownloadStatus>
   >({ en: "idle", es: "idle" });
-  const downloadTimeouts = useRef<
-    Partial<Record<DownloadLanguage, ReturnType<typeof setTimeout>>>
-  >({});
   const activeDownload = (
     Object.entries(downloadStatus) as [DownloadLanguage, DownloadStatus][]
   ).find(([, status]) => status === "downloading");
@@ -230,29 +228,18 @@ export default function HomeScreen() {
     ? downloadLabelMap[activeDownload[0]]
     : null;
 
-  useEffect(() => {
-    return () => {
-      Object.values(downloadTimeouts.current).forEach((timeoutId) => {
-        if (timeoutId) {
-          clearTimeout(timeoutId);
-        }
-      });
-    };
-  }, []);
-
-  const handleDownloadPress = (language: DownloadLanguage) => {
+  const handleDownloadPress = async (language: DownloadLanguage) => {
     if (downloadStatus[language] === "downloading") {
       return;
     }
 
     setDownloadStatus((prev) => ({ ...prev, [language]: "downloading" }));
-    const currentTimeout = downloadTimeouts.current[language];
-    if (currentTimeout) {
-      clearTimeout(currentTimeout);
-    }
-    downloadTimeouts.current[language] = setTimeout(() => {
+    try {
+      await downloadTranslationBundle(language);
       setDownloadStatus((prev) => ({ ...prev, [language]: "completed" }));
-    }, 1200);
+    } catch {
+      setDownloadStatus((prev) => ({ ...prev, [language]: "idle" }));
+    }
   };
 
   return (
