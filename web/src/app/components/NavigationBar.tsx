@@ -93,7 +93,8 @@ export function NavigationBar({
   const [chapterSearch, setChapterSearch] = useState("");
   const [verseSearch, setVerseSearch] = useState("");
   const { t } = useTranslation(language);
-  const publicNodeEnv = process.env.PUBLIC_NODE_ENV ?? "production";
+  const env = (import.meta as any).env || {};
+  const publicNodeEnv = env.PUBLIC_NODE_ENV ?? "production";
   const isDev = publicNodeEnv === "development";
 
   useEffect(() => {

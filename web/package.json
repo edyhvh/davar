@@ -1,12 +1,12 @@
 {
-  "name": "@figma/my-make-file",
+  "name": "@davar/web",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "bun ./build.ts",
-    "dev": "PORT=3002 bun ./index.html",
-    "serve": "bun ./server.ts",
+    "build": "bun --env-file=.env ./build.ts",
+    "dev": "PORT=3002 bun --env-file=.env ./index.html",
+    "serve": "bun --env-file=.env ./server.ts",
     "lint": "bunx biome lint .",
     "format": "bunx biome format --write .",
     "format:check": "bunx biome format ."
