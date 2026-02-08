@@ -24,7 +24,7 @@ const EN_TERMS = `# Terms of Service for Davar
 **Effective Date:** February 8, 2026  
 **Last Updated:** February 8, 2026
 
-Welcome to Davar, an open-source project providing access to the Hebrew Bible (Tanakh) in its original language, along with select translations and study resources. The Davar mobile application (the "App") is available on the Apple App Store and Google Play Store, and the associated website is located at https://davar.bible (collectively, the "Services").
+Welcome to Davar, an open-source project providing access to the Hebrew Bible (Tanakh) in its original language and hebrew translations of the Besorah, along with select translations and study resources. The Davar mobile application (the "App") is available on the Apple App Store and Google Play Store, and the associated website is located at https://davar.bible (collectively, the "Services").
 
 These Terms of Service ("Terms") govern your access to and use of the Services. By downloading, installing, accessing, or using the App or Website, you agree to be bound by these Terms. If you do not agree, do not use the Services.
 
@@ -155,7 +155,7 @@ const EN_PRIVACY = `# Privacy Policy for Davar
 **Effective Date:** February 8, 2026  
 **Last Updated:** February 8, 2026
 
-Davar (the "App" and "Website") is an open-source project providing access to the Hebrew Bible (Tanakh) in its original language. The App is available on the Apple App Store and Google Play Store, and the Website is hosted at https://davar.bible. This Privacy Policy explains our practices regarding any information when you use the App or visit the Website.
+Davar (the "App" and "Website") is an open-source project providing access to the Hebrew Bible (Tanakh) in its original language and hebrew translations of the Besorah. The App is available on the Apple App Store and Google Play Store, and the Website is hosted at https://davar.bible. This Privacy Policy explains our practices regarding any information when you use the App or visit the Website.
 
 We are committed to your privacy, minimal data practices, and transparency as an open-source initiative. We do not collect personally identifiable information (PII) at this time. Our practices comply with Argentina's Personal Data Protection Law (Ley 25.326) and equivalent international standards (e.g., GDPR for EU users where applicable).
 
