@@ -214,9 +214,7 @@ export const VerseCard = ({
     language === "es" && !verse.translation?.trim()
       ? missingSpanishTranslation
       : (verse.translation ?? "");
-  const translationText = verse.translation_footnotes?.length
-    ? stripSuperscripts(rawTranslationText)
-    : rawTranslationText;
+  const translationText = rawTranslationText;
 
   const content = (
     <View style={variant === "detail" ? styles.containerDetail : undefined}>

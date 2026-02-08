@@ -71,7 +71,7 @@ def detect_section_headers_in_json(json_file: Path) -> List[Tuple[int, int, str]
                         'despedida', 'firmes', 'deber', 'trabajar', 'advertencia',
                         'ansiedad', 'siervos', 'vigilantes', 'fiel', 'infiel',
                         'división', 'discuten', 'humillado', 'humillación',
-                        'estregado', 'estrellas', 'proclamación', 'monte', 'sal',
+                        'entregado', 'estrellas', 'proclamación', 'monte', 'sal',
                         'luz', 'adulterio', 'juramento', 'venganza', 'otros',
                         'leproso', 'ciegos', 'doce', 'discípulos', 'manda',
                         'habla', 'parábolas', 'multitudes', 'sembrador', 'propósito',
@@ -110,12 +110,22 @@ def detect_section_headers_in_json(json_file: Path) -> List[Tuple[int, int, str]
                     ]
 
                     header_lower = potential_header.lower()
-                    # Must start with a section header word AND contain title indicators
-                    starts_with_section = any(header_lower.startswith(starter) for starter in section_starters)
-                    contains_indicator = any(indicator in header_lower for indicator in title_indicators)
+                    # Must start with a section header word and include a non-starter indicator.
+                    starts_with_section = any(header_lower.startswith(
+                        starter) for starter in section_starters)
+                    non_starter_indicators = [
+                        indicator
+                        for indicator in title_indicators
+                        if indicator not in section_starters
+                    ]
+                    contains_indicator = any(
+                        indicator in header_lower
+                        for indicator in non_starter_indicators
+                    )
 
                     if starts_with_section and contains_indicator:
-                        issues.append((chapter_num, verse_num, potential_header))
+                        issues.append(
+                            (chapter_num, verse_num, potential_header))
 
     except Exception as e:
         print(f"Error processing {json_file}: {e}")
@@ -130,7 +140,8 @@ def scan_all_json_files(json_dir: Path) -> Dict[str, List[Tuple[int, int, str]]]
     json_files = sorted(json_dir.glob('*.json'))
     all_issues = {}
 
-    print(f"Scanning {len(json_files)} JSON files for section headers in verses...")
+    print(
+        f"Scanning {len(json_files)} JSON files for section headers in verses...")
 
     for json_file in json_files:
         book_name = json_file.stem
@@ -178,11 +189,13 @@ def main():
     """Main entry point."""
     import argparse
 
-    parser = argparse.ArgumentParser(description='Detect section headers in TTH2 JSON verses')
+    parser = argparse.ArgumentParser(
+        description='Detect section headers in TTH2 JSON verses')
     parser.add_argument(
         '--json-dir',
         type=Path,
-        default=Path(__file__).parent.parent.parent / "data" / "tth_2" / "json",
+        default=Path(__file__).parent.parent.parent /
+        "data" / "tth_2" / "json",
         help='Path to JSON directory'
     )
     parser.add_argument(

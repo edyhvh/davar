@@ -60,7 +60,7 @@ class TTH2BookSplitter:
 
         if not patterns:
             raise ValueError(
-                f"Book '{book_key}' not found in pattern definitions")
+                f"Book '{book_key}' has no patterns configured in BOOKS_INFO")
 
         # Find book start
         book_start = -1

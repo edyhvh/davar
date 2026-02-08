@@ -199,7 +199,7 @@ export function FullChapterView({
                   {language === "es" && !(verse.translation ?? "").trim()
                     ? spanishMissingTranslation
                     : renderTranslation(verse.translation ?? "", {
-                        hideSuperscripts: !!verse.translation_footnotes?.length,
+                        hideSuperscripts: false,
                       })}
                   ]
                 </div>
