@@ -25,6 +25,7 @@ const renderTextSegment = (
   text: string,
   italic: boolean,
   keyPrefix: string,
+  hideSuperscripts: boolean,
 ): React.ReactNode[] => {
   const nodes: React.ReactNode[] = [];
   let lastIndex = 0;
@@ -51,14 +52,16 @@ const renderTextSegment = (
       );
     }
 
-    nodes.push(
-      <sup
-        key={`${keyPrefix}-sup-${matchIndex}`}
-        className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
-      >
-        {normalized}
-      </sup>,
-    );
+    if (!hideSuperscripts) {
+      nodes.push(
+        <sup
+          key={`${keyPrefix}-sup-${matchIndex}`}
+          className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
+        >
+          {normalized}
+        </sup>,
+      );
+    }
 
     lastIndex = end;
     matchIndex += 1;
@@ -82,9 +85,13 @@ const renderTextSegment = (
   return nodes;
 };
 
-export const renderTranslation = (translation: string): React.ReactNode[] => {
+export const renderTranslation = (
+  translation: string,
+  options?: { hideSuperscripts?: boolean },
+): React.ReactNode[] => {
   if (!translation) return [];
 
+  const { hideSuperscripts = false } = options || {};
   const tokens = translation
     .split(/(<\/?em>)/i)
     .filter((token) => token !== "");
@@ -104,7 +111,9 @@ export const renderTranslation = (translation: string): React.ReactNode[] => {
       return;
     }
 
-    nodes.push(...renderTextSegment(token, italic, `seg-${index}`));
+    nodes.push(
+      ...renderTextSegment(token, italic, `seg-${index}`, hideSuperscripts),
+    );
   });
 
   return nodes;

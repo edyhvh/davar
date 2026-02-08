@@ -1,5 +1,5 @@
 import { apiRequest } from "@/src/services/api";
-import type { VerseResponse } from "@/src/types/api";
+import type { VerseResponse, TranslationFootnote } from "@/src/types/api";
 
 export type DisplayWord = {
   position: number;
@@ -29,6 +29,7 @@ export type DisplayVerse = {
   translation: string;
   words: DisplayWord[];
   qumranVariants?: { position: number; dssWord: string }[];
+  translation_footnotes?: TranslationFootnote[];
 };
 
 const formatBookName = (bookId: string) =>
@@ -95,6 +96,7 @@ export const fetchChapterVerses = async (
       translation: verse.translation ?? "",
       words,
       qumranVariants,
+      translation_footnotes: verse.translation_footnotes,
     };
   });
 };
