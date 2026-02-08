@@ -19,7 +19,7 @@ const createStyles = (
       borderTopColor: "#999999",
       borderTopWidth: 0.4,
       height: 70 + bottomInset,
-      paddingTop: 8,
+      paddingTop: 18,
       paddingBottom: bottomInset,
     },
     centerIconWrapper: {

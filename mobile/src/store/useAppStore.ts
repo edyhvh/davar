@@ -66,7 +66,7 @@ export const useAppStore = create<AppState>((set) => ({
       hebrewOnly: value,
       seferMode: value ? state.seferMode : false,
     })),
-  showCantillation: true,
+  showCantillation: false,
   setShowCantillation: (value) => set({ showCantillation: value }),
   showNikud: true,
   setShowNikud: (value) => set({ showNikud: value }),

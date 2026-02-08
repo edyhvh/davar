@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
+  Animated,
   FlatList,
+  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -12,7 +14,7 @@ import {
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
 import { useLocalSearchParams, useNavigation } from "expo-router";
-import BottomSheet from "@gorhom/bottom-sheet";
+import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import type { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import type { ParamListBase } from "@react-navigation/native";
@@ -58,33 +60,37 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
 type VersePageProps = {
   item: DisplayVerse;
   pageHeight: number;
-  centerOffset: number;
   showWordHint: boolean;
   isSelectedVerse: boolean;
   onVersePress: () => void;
   onWordPress: (word: DisplayVerse["words"][number] | null) => void;
+  onBackgroundPress: () => void;
 };
 
 const VersePage = ({
   item,
   pageHeight,
-  centerOffset,
   showWordHint,
   isSelectedVerse,
   onVersePress,
   onWordPress,
+  onBackgroundPress,
 }: VersePageProps) => {
   const [contentHeight, setContentHeight] = useState(0);
-  const verticalPadding = spacing[8] * 2;
+  const horizontalPadding = spacing[4];
+  const topPadding = spacing[16] + spacing[8];
+  const bottomPadding = spacing[8];
+  const verticalPadding = topPadding + bottomPadding;
   const availableHeight = Math.max(0, pageHeight - verticalPadding);
   const canScroll = contentHeight > availableHeight + 1;
 
   const verseContent = (
-    <View
+    <Pressable
+      onPress={onBackgroundPress}
       style={{
-        paddingHorizontal: spacing[6],
-        paddingVertical: spacing[8],
-        transform: [{ translateY: centerOffset }],
+        paddingHorizontal: horizontalPadding,
+        paddingTop: topPadding,
+        paddingBottom: bottomPadding,
       }}
       onLayout={(event) => setContentHeight(event.nativeEvent.layout.height)}
     >
@@ -95,7 +101,7 @@ const VersePage = ({
         onVersePress={onVersePress}
         onWordPress={onWordPress}
       />
-    </View>
+    </Pressable>
   );
 
   return (
@@ -107,10 +113,6 @@ const VersePage = ({
     >
       {canScroll ? (
         <ScrollView
-          contentContainerStyle={{
-            paddingHorizontal: spacing[6],
-            paddingVertical: spacing[8],
-          }}
           showsVerticalScrollIndicator={false}
           bounces={false}
           alwaysBounceVertical={false}
@@ -142,11 +144,7 @@ export const VerseDetailContent = () => {
   const { height: screenHeight } = useWindowDimensions();
   const insets = useSafeAreaInsets();
   const tabBarHeight = useBottomTabBarHeight();
-  const pageHeight = Math.max(
-    0,
-    screenHeight - insets.top - insets.bottom - tabBarHeight,
-  );
-  const centerOffset = spacing[6];
+  const pageHeight = Math.max(0, screenHeight - insets.top - tabBarHeight);
   const params = useLocalSearchParams<{ id?: string }>();
   const currentVerseId = useAppStore((state: AppState) => state.currentVerseId);
   const setCurrentVerseId = useAppStore(
@@ -154,17 +152,42 @@ export const VerseDetailContent = () => {
   );
   const language = useAppStore((state: AppState) => state.language);
   const showQumran = useAppStore((state: AppState) => state.showQumran);
-  const lastParamIdRef = useRef<string | null>(null);
-  useEffect(() => {
-    if (!params.id) return;
-    if (lastParamIdRef.current === params.id) return;
-    lastParamIdRef.current = params.id;
-    if (params.id !== currentVerseId) {
-      setCurrentVerseId(params.id as string);
+  const DEFAULT_VERSE_ID = "genesis-1-1";
+  const normalizeVerseId = (value?: string | null) => {
+    if (!value) return DEFAULT_VERSE_ID;
+    const [bookId, chapterValue, verseValue] = value.split("-");
+    const chapterNumber = Number(chapterValue);
+    const verseNumber = Number(verseValue);
+    if (
+      !bookId ||
+      !Number.isFinite(chapterNumber) ||
+      chapterNumber <= 0 ||
+      !Number.isFinite(verseNumber) ||
+      verseNumber <= 0
+    ) {
+      return DEFAULT_VERSE_ID;
     }
-  }, [params.id, currentVerseId, setCurrentVerseId]);
+    return `${bookId}-${chapterNumber}-${verseNumber}`;
+  };
 
-  const verseId = currentVerseId || ((params.id as string) ?? "");
+  const paramId = Array.isArray(params.id) ? params.id[0] : params.id;
+  const normalizedParamId = normalizeVerseId(paramId);
+  const normalizedStoreId = normalizeVerseId(currentVerseId);
+  const verseId = paramId ? normalizedParamId : normalizedStoreId;
+
+  useEffect(() => {
+    const nextId = paramId ? normalizedParamId : normalizedStoreId;
+    if (nextId !== currentVerseId) {
+      setCurrentVerseId(nextId);
+    }
+  }, [
+    paramId,
+    normalizedParamId,
+    normalizedStoreId,
+    currentVerseId,
+    setCurrentVerseId,
+  ]);
+
   const [chapterVerses, setChapterVerses] = useState<DisplayVerse[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -217,11 +240,25 @@ export const VerseDetailContent = () => {
       }
     },
   );
-  const sheetRef = useRef<BottomSheet>(null);
-  const navigationSheetRef = useRef<BottomSheet>(null);
+  const sheetRef = useRef<BottomSheetMethods>(null!);
+  const navigationSheetRef = useRef<BottomSheetMethods>(null!);
   const [selectedWord, setSelectedWord] = useState<
     (typeof orderedVerses)[number]["words"][number] | null
   >(null);
+  const pillVisibility = useRef(new Animated.Value(1)).current;
+  const [pillVisible, setPillVisible] = useState(true);
+
+  const animatePill = useCallback(
+    (nextVisible: boolean) => {
+      setPillVisible(nextVisible);
+      Animated.timing(pillVisibility, {
+        toValue: nextVisible ? 1 : 0,
+        duration: 220,
+        useNativeDriver: true,
+      }).start();
+    },
+    [pillVisibility],
+  );
 
   // Listen for tab press to open navigation sheet
   const navigation = useNavigation<BottomTabNavigationProp<ParamListBase>>();
@@ -288,8 +325,24 @@ export const VerseDetailContent = () => {
     // Close navigation sheet if it's open
     navigationSheetRef.current?.close();
     setSelectedWord(word);
-    sheetRef.current?.expand();
   }, []);
+
+  // Open the word analysis sheet whenever a word is selected
+  useEffect(() => {
+    if (selectedWord && sheetRef.current) {
+      sheetRef.current.snapToIndex(0);
+    }
+  }, [selectedWord]);
+
+  const handleBackgroundPress = useCallback(() => {
+    animatePill(true);
+  }, [animatePill]);
+
+  const handleScrollBegin = useCallback(() => {
+    if (pillVisible) {
+      animatePill(false);
+    }
+  }, [animatePill, pillVisible]);
 
   // Clear selectedWord immediately when currentVerseId changes to prevent stale word display
   const prevVerseIdRef = useRef(currentVerseId);
@@ -306,18 +359,25 @@ export const VerseDetailContent = () => {
     }
   }, [currentVerseId]);
 
-  const currentLoadRef = useRef({ bookId: "", chapter: 0 });
+  const currentLoadRef = useRef({
+    bookId: "",
+    chapter: 0,
+    language: "en" as AppState["language"],
+    showQumran: false,
+  });
   useEffect(() => {
     if (!bookId) return;
     if (
       currentLoadRef.current.bookId === bookId &&
-      currentLoadRef.current.chapter === chapter
+      currentLoadRef.current.chapter === chapter &&
+      currentLoadRef.current.language === language &&
+      currentLoadRef.current.showQumran === showQumran
     ) {
       return;
     }
 
     let isMounted = true;
-    currentLoadRef.current = { bookId, chapter };
+    currentLoadRef.current = { bookId, chapter, language, showQumran };
 
     const loadVerses = async () => {
       setChapterVerses([]);
@@ -335,7 +395,9 @@ export const VerseDetailContent = () => {
         if (!isMounted) return;
         if (
           currentLoadRef.current.bookId !== bookId ||
-          currentLoadRef.current.chapter !== chapter
+          currentLoadRef.current.chapter !== chapter ||
+          currentLoadRef.current.language !== language ||
+          currentLoadRef.current.showQumran !== showQumran
         ) {
           return;
         }
@@ -359,16 +421,33 @@ export const VerseDetailContent = () => {
 
   return (
     <>
-      <SafeAreaView style={styles.safeArea} edges={["top", "bottom"]}>
+      <SafeAreaView style={styles.safeArea} edges={["top"]}>
         <View style={styles.container}>
           <View style={styles.navigationRow}>
-            <BookChapterPill
-              bookLabel={bookMeta?.name ?? t("common.loading")}
-              hebrewLabel={bookMeta?.hebrew_name ?? ""}
-              chapter={verse?.chapter ?? chapter}
-              onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
-              onChapterPress={() => navigationSheetRef.current?.snapToIndex(0)}
-            />
+            <Animated.View
+              pointerEvents={pillVisible ? "auto" : "none"}
+              style={{
+                opacity: pillVisibility,
+                transform: [
+                  {
+                    translateY: pillVisibility.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [-12, 0],
+                    }),
+                  },
+                ],
+              }}
+            >
+              <BookChapterPill
+                bookLabel={bookMeta?.name ?? t("common.loading")}
+                hebrewLabel={bookMeta?.hebrew_name ?? ""}
+                chapter={verse?.chapter ?? chapter}
+                onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
+                onChapterPress={() =>
+                  navigationSheetRef.current?.snapToIndex(0)
+                }
+              />
+            </Animated.View>
           </View>
           {isLoading ? (
             <View
@@ -400,11 +479,11 @@ export const VerseDetailContent = () => {
               <VersePage
                 item={item}
                 pageHeight={pageHeight}
-                centerOffset={centerOffset}
                 showWordHint={showWordHint}
                 isSelectedVerse={item.id === verse?.id}
                 onVersePress={() => navigationSheetRef.current?.snapToIndex(0)}
                 onWordPress={handleWordPress}
+                onBackgroundPress={handleBackgroundPress}
               />
             )}
             pagingEnabled
@@ -420,19 +499,19 @@ export const VerseDetailContent = () => {
             })}
             viewabilityConfig={viewabilityConfigRef.current}
             onViewableItemsChanged={onViewableItemsChanged.current}
+            onScrollBeginDrag={handleScrollBegin}
+            onMomentumScrollBegin={handleScrollBegin}
           />
         </View>
       </SafeAreaView>
-      {selectedWord ? (
-        <WordAnalysisBottomSheet
-          sheetRef={sheetRef}
-          word={selectedWord}
-          currentVerseId={currentVerseId}
-          onClosed={() => setSelectedWord(null)}
-        />
-      ) : null}
+      <WordAnalysisBottomSheet
+        ref={sheetRef}
+        word={selectedWord}
+        currentVerseId={currentVerseId}
+        onClosed={() => setSelectedWord(null)}
+      />
       <NavigationSheet
-        sheetRef={navigationSheetRef}
+        ref={navigationSheetRef}
         currentBookId={verse?.bookId ?? bookId}
         currentChapter={verse?.chapter ?? chapter}
         currentVerse={verse?.verse ?? verseNumber}
