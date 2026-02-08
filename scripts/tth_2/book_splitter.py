@@ -81,8 +81,20 @@ class TTH2BookSplitter:
 
             # Check for actual book header first (highest priority)
             if line_stripped.startswith('**') and re.search(r'\*\*.*?\*\*', line_stripped, re.IGNORECASE):
-                book_start = i
-                break
+                # Only treat a bold line as a book header if it also matches this book's patterns
+                bold_matches_book = False
+                for pattern in patterns:
+                    if re.search(pattern, line_stripped, re.IGNORECASE):
+                        # Additional validation: should contain Hebrew text
+                        if re.search(r'[\u0590-\u05FF]', line_stripped):
+                            # Skip TOC entries (lines with tab characters or page numbers)
+                            if '\t' in line_stripped or re.search(r'\d{1,3}$', line_stripped.strip()):
+                                continue
+                            bold_matches_book = True
+                            break
+                if bold_matches_book:
+                    book_start = i
+                    break
 
             # Try each pattern for this book
             for pattern in patterns:
@@ -125,7 +137,13 @@ class TTH2BookSplitter:
             if line.startswith('**') and len(line.split()) < 10:
                 # This is likely a book header, check if it's another book
                 for other_book in other_books:
-                    if other_book.upper() in line.upper():
+                    other_info = BOOKS_INFO.get(other_book, {})
+                    # Try matching against known display names instead of internal keys
+                    candidate_names = [
+                        other_info.get('tth_name', ''),
+                        other_info.get('spanish_name', ''),
+                    ]
+                    if any(name and name.upper() in line.upper() for name in candidate_names):
                         book_end = i
                         break
                 if book_end != len(lines):
