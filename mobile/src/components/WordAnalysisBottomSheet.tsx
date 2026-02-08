@@ -18,8 +18,8 @@ import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetScrollView,
   type BottomSheetBackdropProps,
-  type BottomSheetMethods,
 } from "@gorhom/bottom-sheet";
+import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
 import { router } from "expo-router";
 
 import { getColors, radii, spacing, typography } from "@/src/theme";
