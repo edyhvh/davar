@@ -1,0 +1,212 @@
+{
+  "name": "Isaiah",
+  "file_number": 37,
+  "total_files": 40,
+  "difference_count": 19,
+  "chapters": {
+    "63": {
+      "verses": {
+        "2": {
+          "masoretic_text": "מַדּ֥וּעַ אָדֹ֖ם לִלְבוּשֶׁ֑ךָ וּבְגָדֶ֖יךָ כְּדֹרֵ֥ךְ בְּגַֽת׃",
+          "dss_text": "מדוע אדום ללבושכה ובגדיך כדורך בגת",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "בְּגַֽת׃",
+              "dss_word": "בגד",
+              "commentary": "1QIsab, Mas, LXX: in the winepress. 1QIsaa reads בגד which means coriander, but this would make little sense here; clearly a mistake of similar sounding letters, with ת and ד having similar sounds."
+            }
+          ]
+        },
+        "3": {
+          "masoretic_text": "פּוּרָ֣ה ׀ דָּרַ֣כְתִּי לְבַדִּ֗י וּמֵֽעַמִּים֙ אֵֽין־ אִ֣ישׁ אִתִּ֔י וְאֶדְרְכֵ֣ם בְּאַפִּ֔י וְאֶרְמְסֵ֖ם בַּחֲמָתִ֑י וְיֵ֤ז נִצְחָם֙ עַל־ בְּגָדַ֔י וְכָל־ מַלְבּוּשַׁ֖י אֶגְאָֽלְתִּי׃",
+          "dss_text": "פורה דרכתי לבדי ומעמים אין איש אתי ואדרכם באפי וארמסם בחמתי ויז נצחם על בגדי וכול מלבושי גאלתי",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "וּמֵֽעַמִּים֙",
+              "dss_word": "ומעמים",
+              "commentary": "1QIsab, Mas, LXX: and from the peoples. 1QIsaa reads ומעמי meaning and from My people."
+            },
+            {
+              "position": 8,
+              "masoretic_word": "וְאֶדְרְכֵ֣ם",
+              "dss_word": "בגדי",
+              "commentary": "1QIsab, Mas, LXX: and I walked over them in My anger, and I trampled them in My wrath (LXX: like dust), and I splattered their blood on My garments (LXX: omit). 1QIsaa omits the entire section, possibly by parablepsis (בגדי … אתי)."
+            }
+          ]
+        },
+        "5": {
+          "masoretic_text": "וְאַבִּיט֙ וְאֵ֣ין עֹזֵ֔ר וְאֶשְׁתּוֹמֵ֖ם וְאֵ֣ין סוֹמֵ֑ךְ וַתּ֤וֹשַֽׁע לִי֙ זְרֹעִ֔י וַחֲמָתִ֖י הִ֥יא סְמָכָֽתְנִי׃",
+          "dss_text": "ואביט ואין עוזר ואשתומם ואין תומך ותושע ליא זרועי וחמתיא היא סמכתני",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "וְאַבִּיט֙",
+              "dss_word": "ואביטה",
+              "commentary": "1QIsaa, Mas: And I looked. 1QIsab reads ואביטה meaning the same, with a cohortative ה-, indicating that the speakers will has been put into the action."
+            },
+            {
+              "position": 3,
+              "masoretic_word": "עז",
+              "dss_word": "איש",
+              "commentary": "1QIsaa, Mas (-עז), LXX: helper. 1QIsab reads איש meaning man."
+            },
+            {
+              "position": 4,
+              "masoretic_word": "וְאֶשְׁתּוֹמֵ֖ם",
+              "dss_word": "ואשתוממה",
+              "commentary": "1QIsaa, Mas: and I was appalled. 1QIsab reads ואשתוממה meaning the same, with a cohortative ה-, indicating that the speakers will has been put into the action. LXX reads και προσενοησα meaning and I observed/paid attention."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "סומך",
+              "dss_word": "תומך",
+              "commentary": "1QIsaa: who supports. 1QIsab and Masoretic read סומך meaning the same, though with an implication of help. LXX reads αντελαμβανετο meaning support, which could be translation of either."
+            }
+          ]
+        },
+        "6": {
+          "masoretic_text": "וְאָב֤וּס עַמִּים֙ בְּאַפִּ֔י וַאֲשַׁכְּרֵ֖ם בַּחֲמָתִ֑י וְאוֹרִ֥יד לָאָ֖רֶץ נִצְחָֽם׃",
+          "dss_text": "ואבוסה עמים באפיא ואשכירמה בחמתי ואורידה לארץ נצחם",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "ואשכרם",
+              "dss_word": "ואשכירם",
+              "commentary": "1QIsaa: and I caused them to be drunk (plene, pronoun-medial spelling). 1QIsab has the plene, pronoun-final spelling ואשכירם. Masoretic has the defective, pronoun-final spelling ואשכרם. Masoretes vowel pointed this as וַאֲשַׁכְּרֵם, turning it into a piel rather than the hifil form seen in 1QIsaa and 1QIsab. LXX omits this and the following word בחמתי (by parablepsis, or on purpose?)."
+            },
+            {
+              "position": 6,
+              "masoretic_word": "ואוריד",
+              "dss_word": "וארידה",
+              "commentary": "1QIsaa: and I brought down (plene, cohortative spelling). 1QIsab reads the defective, cohortative spelling וארידה. Masoretic has the plene, non-cohortative spelling ואוריד."
+            }
+          ]
+        },
+        "9": {
+          "masoretic_text": "בְּֽכָל־ צָרָתָ֣ם ׀ צָ֗ר וּמַלְאַ֤ךְ פָּנָיו֙ הֽוֹשִׁיעָ֔ם בְּאַהֲבָת֥וֹ וּבְחֶמְלָת֖וֹ ה֣וּא גְאָלָ֑ם וַֽיְנַטְּלֵ֥ם וַֽיְנַשְּׂאֵ֖ם כָּל־ יְמֵ֥י עוֹלָֽם׃",
+          "dss_text": "בכול צרתמה לוא צר ומלאך פניו הושיעמה באהבתיו ובחומלתיו הואה גאלמה וינטלם וינשאם כול ימי עולם",
+          "differences": [
+            {
+              "position": 12,
+              "masoretic_word": "וַֽיְנַשְּׂאֵ֖ם",
+              "dss_word": "וינטלם וינשאם",
+              "commentary": "1QIsab, Mas, LXX: and He sustained them, and He lifted them up. 1QIsaa reverses to וינשאם וינטלם, giving and He lifted them up, and He sustained them."
+            }
+          ]
+        },
+        "11": {
+          "masoretic_text": "וַיִּזְכֹּ֥ר יְמֵֽי־ עוֹלָ֖ם מֹשֶׁ֣ה עַמּ֑וֹ אַיֵּ֣ה ׀ הַֽמַּעֲלֵ֣ם מִיָּ֗ם אֵ֚ת רֹעֵ֣י צֹאנ֔וֹ אַיֵּ֛ה הַשָּׂ֥ם בְּקִרְבּ֖וֹ אֶת־ ר֥וּחַ קָדְשֽׁוֹ׃",
+          "dss_text": "ויזכור ימי עולם מושה עמוא איה המעלה מי את רועי צואונו איה השם בקרבו את רוח קודשו",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "משה",
+              "dss_word": "מושה",
+              "commentary": "1Qisaa: of Moses (plene spelling). 1QIsab and Masoretic have the defective spelling משה. LXX omits."
+            }
+          ]
+        },
+        "17": {
+          "masoretic_text": "לָ֣מָּה תַתְעֵ֤נוּ יְהוָה֙ מִדְּרָכֶ֔יךָ תַּקְשִׁ֥יחַ לִבֵּ֖נוּ מִיִּרְאָתֶ֑ךָ שׁ֚וּב לְמַ֣עַן עֲבָדֶ֔יךָ שִׁבְטֵ֖י נַחֲלָתֶֽךָ׃",
+          "dss_text": "למה תתענו יהוה מדרכיכה תקשיח לבנו מיראתך שוב למען עבדיך שבט נחלתך",
+          "differences": [
+            {
+              "position": 2,
+              "masoretic_word": "תַתְעֵ֤נוּ",
+              "dss_word": "תתענו יהוה",
+              "commentary": "1QIsab, Mas, LXX: You cause us to wander, O Yahweh. 1QIsaa reverses these to יהוה תתענו, giving O Yahweh, You cause us to wander."
+            }
+          ]
+        },
+        "18": {
+          "masoretic_text": "לַמִּצְעָ֕ר יָרְשׁ֖וּ עַם־ קָדְשֶׁ֑ךָ צָרֵ֕ינוּ בּוֹסְס֖וּ מִקְדָּשֶֽׁךָ׃",
+          "dss_text": "למצער ירש עם קודשך צרינו בססו מקדשכה",
+          "differences": [
+            {
+              "position": 7,
+              "masoretic_word": "מקדשך",
+              "dss_word": "מקדשך",
+              "commentary": "1QIsaa: of Your sanctuary (pronoun-medial spelling). 1QIsab and Masoretic have the pronoun-final spelling מקדשך. LXX omits (with previous two words צרינו בססו)."
+            }
+          ]
+        },
+        "19": {
+          "masoretic_text": "הָיִ֗ינוּ מֵֽעוֹלָם֙ לֹֽא־ מָשַׁ֣לְתָּ בָּ֔ם לֹֽא־ נִקְרָ֥א שִׁמְךָ֖ עֲלֵיהֶ֑ם לוּא־ קָרַ֤עְתָּ שָׁמַ֙יִם֙ יָרַ֔דְתָּ מִפָּנֶ֖יךָ הָרִ֥ים נָזֹֽלּוּ׃",
+          "dss_text": "היינו מעולם לוא משלתה בם לוא נקרא שמכה עליהמה לוא קרעתה שמים ירדת מפניכה הרים נזלו",
+          "differences": [
+            {
+              "position": 13,
+              "masoretic_word": "יָרַ֔דְתָּ",
+              "dss_word": "וירדתה",
+              "commentary": "1QIsab(vid), Mas: You come down. 1QIsaa reads וירדתה meaning and You come down. LXX reads τρομος λημψεται meaning shall receive a trembling (recalling Isa 33:14, or Vorlage: רעד תאחז ?)."
+            },
+            {
+              "position": 1,
+              "masoretic_word": "הָיִ֗ינוּ",
+              "dss_word": "note",
+              "commentary": "Most English translations split this here and have the following words as 64:1, and such 64:1 becomes 64:2, etc., etc. No Hebrew manuscript has a space here to indicate a separate paragraph or section. Several manuscripts of the LXX have it as the start of a new section, which was repeated in the Latin Vulgate (hence the split done by English translations)."
+            }
+          ]
+        }
+      }
+    },
+    "64": {
+      "verses": {
+        "7": {
+          "masoretic_text": "וְעַתָּ֥ה יְהוָ֖ה אָבִ֣ינוּ אָ֑תָּה אֲנַ֤חְנוּ הַחֹ֙מֶר֙ וְאַתָּ֣ה יֹצְרֵ֔נוּ וּמַעֲשֵׂ֥ה יָדְךָ֖ כֻּלָּֽנוּ׃",
+          "dss_text": "ואתה יהוה אבינו אתה ואנחנו חמר ואתה יוצרנו ומעשה ידיכה כולנו",
+          "differences": [
+            {
+              "position": 6,
+              "masoretic_word": "החמר",
+              "dss_word": "חמר",
+              "commentary": "1QIsaa, LXX: clay. 1QIsab(vid) and Masoretic read החמר meaning the clay."
+            }
+          ]
+        },
+        "8": {
+          "masoretic_text": "אַל־ תִּקְצֹ֤ף יְהוָה֙ עַד־ מְאֹ֔ד וְאַל־ לָעַ֖ד תִּזְכֹּ֣ר עָוֺ֑ן הֵ֥ן הַבֶּט־ נָ֖א עַמְּךָ֥ כֻלָּֽנוּ׃",
+          "dss_text": "אל תקצוף יהוה עד מואדה ואל לעת תזכור עוון הנה הבטנא עמכה כולנו",
+          "differences": [
+            {
+              "position": 10,
+              "masoretic_word": "הן",
+              "dss_word": "הן",
+              "commentary": "1QIsaa: Behold. 1QIsab and Masoretic read the less common form הן meaning the same. LXX reads και νυν meaning And now (Vorlage: ועתה ?)."
+            }
+          ]
+        }
+      }
+    },
+    "65": {
+      "verses": {
+        "18": {
+          "masoretic_text": "כִּֽי־ אִם־ שִׂ֤ישׂוּ וְגִ֙ילוּ֙ עֲדֵי־ עַ֔ד אֲשֶׁ֖ר אֲנִ֣י בוֹרֵ֑א כִּי֩ הִנְנִ֨י בוֹרֵ֧א אֶת־ יְרוּשָׁלַ֛͏ִם גִּילָ֖ה וְעַמָּ֥הּ מָשֽׂוֹשׂ׃",
+          "dss_text": "כיא אם שיש וגיל עדי עד אשר אני בורא כיא הנני בורא את ירושלים גילה ועמה משוש",
+          "differences": [
+            {
+              "position": 4,
+              "masoretic_word": "וגילו",
+              "dss_word": "וגילו",
+              "commentary": "1QIsaa: and rejoice (singular). 1QIsab and Masoretic read the plural וגילו meaning and all of you rejoice. LXX has και αγαλλιαμα meaning and rejoicing, supporting the reading of 1QIsaa, taking גיל as a noun rather than a verb."
+            }
+          ]
+        },
+        "20": {
+          "masoretic_text": "לֹא־ יִֽהְיֶ֨ה מִשָּׁ֜ם ע֗וֹד ע֤וּל יָמִים֙ וְזָקֵ֔ן אֲשֶׁ֥ר לֹֽא־ יְמַלֵּ֖א אֶת־ יָמָ֑יו כִּ֣י הַנַּ֗עַר בֶּן־ מֵאָ֤ה שָׁנָה֙ יָמ֔וּת וְהַ֣חוֹטֶ֔א בֶּן־ מֵאָ֥ה שָׁנָ֖ה יְקֻלָּֽל׃",
+          "dss_text": "ולוא יהיה משמה עוד עול ימים וזקן אשר לוא ימלה את ימיו כיא הנער בן מאה שנה ימות והחוטא בן מאה שנה יקולל",
+          "differences": [
+            {
+              "position": 5,
+              "masoretic_word": "ע֤וּל",
+              "dss_word": "עויל",
+              "commentary": "1QIsab, Mas: a nursing infant. 1QIsaa reads עויל meaning a young boy. LXX supports the reading of 1QIsab and Masoretic somewhat, having αωρος meaning untimely death (translating עול ימים)."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

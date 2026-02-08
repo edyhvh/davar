@@ -20,6 +20,7 @@ import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 
 import { AppProvider } from "@/src/providers/AppProvider";
 import { ErrorBoundary } from "@/src/components/ErrorBoundary";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 export const unstable_settings = {
   anchor: "(tabs)",
@@ -38,7 +39,9 @@ export default function RootLayout() {
     Arimo_400Regular,
     Arimo_700Bold,
     SuezOne_400Regular,
+    DeadSeaScrolls_400Regular: require("../assets/fonts/Deadseascrolls-Regular.ttf"),
   });
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (fontsLoaded) {
@@ -61,7 +64,7 @@ export default function RootLayout() {
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
                 <Stack.Screen
                   name="modal"
-                  options={{ presentation: "modal", title: "Modal" }}
+                  options={{ presentation: "modal", title: t("navigation.modal") }}
                 />
               </Stack>
               <StatusBar style="auto" />

@@ -1,0 +1,50 @@
+{
+  "source": "https://codeberg.org/dandeto/deadseainsights",
+  "license": "CC BY-SA 4.0",
+  "extraction_date": "2026-01-29T08:46:12.472246",
+  "statistics": {
+    "total_books": 23,
+    "total_differences": 966,
+    "books_processed": [
+      "2 Samuel",
+      "Amos",
+      "Song of Songs",
+      "Daniel",
+      "Deuteronomy",
+      "Exodus",
+      "Ezekiel",
+      "Genesis",
+      "Habakkuk",
+      "Hosea",
+      "Isaiah",
+      "Joel",
+      "Jonah",
+      "Judges",
+      "Lamentations",
+      "Leviticus",
+      "Micah",
+      "Nahum",
+      "Numbers",
+      "Obadiah",
+      "Psalms",
+      "Ruth",
+      "Zephaniah"
+    ]
+  },
+  "commentary_generation": {
+    "timestamp": "2026-01-31T21:32:36.434716",
+    "model": "grok-4-1-fast-non-reasoning",
+    "total_processed": 732,
+    "commentary_version": "v2_grok_2026",
+    "token_stats": {
+      "input_tokens": 219600,
+      "output_tokens": 292800,
+      "total_tokens": 512400,
+      "input_cost": 0.04392,
+      "output_cost": 0.1464,
+      "total_cost": 0.19032,
+      "batch_count": 15
+    }
+  },
+  "schema_version": "2.0"
+}

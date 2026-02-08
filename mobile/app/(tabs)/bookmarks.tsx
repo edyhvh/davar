@@ -7,6 +7,7 @@ import { VerseCard } from "@/src/components/VerseCard";
 import { getColors, spacing, typography } from "@/src/theme";
 import { mockVerses } from "@/src/constants/mockData";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
   StyleSheet.create({
@@ -42,6 +43,7 @@ export default function BookmarksScreen() {
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
   const bookmarks = useAppStore((state: AppState) => state.bookmarks);
+  const { t } = useTranslation();
 
   const bookmarkedVerses = mockVerses.filter((verse) =>
     bookmarks.includes(verse.id),
@@ -50,10 +52,10 @@ export default function BookmarksScreen() {
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
       <View style={styles.container}>
-        <Text style={styles.title}>Bookmarks</Text>
+        <Text style={styles.title}>{t("bookmarks.title")}</Text>
         {bookmarkedVerses.length === 0 ? (
           <Text style={styles.emptyState}>
-            Save verses to revisit them here.
+            {t("bookmarks.emptyState")}
           </Text>
         ) : (
           <FlatList

@@ -10,10 +10,16 @@ export type WordResponse = {
 };
 
 export type DssVariant = {
-  word_position: number;
-  dss_text: string;
-  manuscript: string;
-  commentary?: string;
+  position: number;
+  dss_word: string;
+  masoretic_word: string;
+  dss_translit_en?: string;
+  dss_translit_es?: string;
+  comment_v2_en?: string;
+  comment_v2_es?: string;
+  comment_v2_he?: string;
+  masoretic_strong?: string;
+  dss_strong?: string;
 };
 
 export type TranslationFootnote = {
@@ -43,9 +49,13 @@ export type DefinitionItem = {
 export type LexiconResponse = {
   strong_number: string;
   hebrew?: string;
+  translit_en?: string;
+  translit_es?: string;
   definitions: DefinitionItem[];
   root?: string;
   root_strong?: string;
+  root_translit_en?: string;
+  root_translit_es?: string;
   root_definitions?: DefinitionItem[];
   occurrences_count: number;
   instances: string[];

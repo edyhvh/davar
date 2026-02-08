@@ -105,23 +105,43 @@ class BookNameMapper:
 
         # DSS mappings (book names in DSS data)
         self.dss_to_english = {
-            "isaiah": "Isaiah",
-            "jeremiah": "Jeremiah",
+            "1samuel": "Samuel1",
+            "2samuel": "Samuel2",
+            "amos": "Amos",
+            "deuteronomy": "Deuteronomy",
+            "exodus": "Exodus",
             "ezekiel": "Ezekiel",
+            "genesis": "Genesis",
+            "habakkuk": "Habakkuk",
+            "haggai": "Haggai",
+            "hoseah": "Hosea",
+            "isaiah": "Isaiah",
+            "joel": "Joel",
+            "jonah": "Jonah",
+            "judges": "Judges",
+            "jeremiah": "Jeremiah",
+            "lamentations": "Lamentations",
+            "leviticus": "Leviticus",
+            "micah": "Micah",
+            "nahum": "Nahum",
+            "numbers": "Numbers",
+            "obadiah": "Obadiah",
             "psalms": "Psalms",
             "job": "Job",
             "proverbs": "Proverbs",
             "ruth": "Ruth",
-            "songofsolomon": "SongOfSolomon",
+            "songs": "SongOfSolomon",
             "ecclesiastes": "Ecclesiastes",
-            "lamentations": "Lamentations",
             "esther": "Esther",
             "daniel": "Daniel",
             "ezra": "Ezra",
             "nehemiah": "Nehemiah",
             "chronicles1": "Chronicles1",
-            "chronicles2": "Chronicles2"
+            "chronicles2": "Chronicles2",
+            "zephaniah": "Zephaniah"
         }
+
+        self.english_to_dss = {value: key for key, value in self.dss_to_english.items()}
 
         # Book metadata for canonical English names
         self.book_metadata = {
@@ -222,6 +242,13 @@ class BookNameMapper:
     def to_english(self, book_name: str, source: str = "auto") -> Optional[str]:
         """Alias for normalize_book_name for backward compatibility"""
         return self.normalize_book_name(book_name, source)
+
+    def to_dss_key(self, book_name: str) -> Optional[str]:
+        """Convert a book name to the DSS book key used in data/dss/books."""
+        book_en = self.normalize_book_name(book_name, source="auto")
+        if not book_en:
+            return None
+        return self.english_to_dss.get(book_en)
 
     def get_book_metadata(self, book_name: str) -> Optional[Dict[str, any]]:
         """Get metadata for a canonical English book name"""

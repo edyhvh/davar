@@ -90,7 +90,7 @@ Produces JSON files structured as:
 
 - **Delitzsch Texts**: `data/delitzsch/*.json` - Source Hebrew NT texts
 - **Words Dictionary**: `data/dict/lexicon/words.json` - Strong's word mappings
-- **Roots Dictionary**: `data/dict/lexicon/roots.pretty.json` - Root word mappings
+- **Roots Dictionary**: `data/dict/lexicon/roots.json` - Root word mappings
 - **Prefix Data**: `data/dict/prefixes/` - Hebrew prefix forms and definitions
 
 ## Matching Algorithm

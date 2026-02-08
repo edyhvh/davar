@@ -14,13 +14,14 @@ import os
 import re
 import sys
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 import xml.etree.ElementTree as ET
 
 # Add current directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent))
 
 from config import config
+from utils import save_json, load_json, load_strongs_data, load_strong_refs, load_bdb_xml
 
 # Import extraction functions
 sys.path.insert(0, str(config.OE_DIR))
@@ -42,26 +43,24 @@ consolidated_words = {}
 
 
 def save_consolidated_files(testing_mode: bool = False) -> None:
-    """Save consolidated lexicon files in the new format."""
+    """Save consolidated lexicon files in the new format (pretty-printed)."""
     if testing_mode:
         return  # Skip consolidation in testing mode
 
     lexicon_dir = config.LEXICON_DIR
 
-    # Save consolidated roots
+    # Save consolidated roots (pretty-printed)
     if consolidated_roots:
         roots_file = lexicon_dir / 'roots.json'
         print(f"💾 Saving consolidated roots to {roots_file}...")
-        with open(roots_file, 'w', encoding='utf-8') as f:
-            json.dump(consolidated_roots, f, ensure_ascii=False, separators=(',', ':'))
+        save_json(consolidated_roots, roots_file)
         print(f"✅ Saved {len(consolidated_roots)} root entries")
 
-    # Save consolidated words
+    # Save consolidated words (pretty-printed)
     if consolidated_words:
         words_file = lexicon_dir / 'words.json'
         print(f"💾 Saving consolidated words to {words_file}...")
-        with open(words_file, 'w', encoding='utf-8') as f:
-            json.dump(consolidated_words, f, ensure_ascii=False, separators=(',', ':'))
+        save_json(consolidated_words, words_file)
         print(f"✅ Saved {len(consolidated_words)} word entries")
 
 
@@ -93,55 +92,54 @@ def create_definition(text_en: str, source: str, order: int, sense: Optional[str
     return definition
 
 
-def load_strongs_data() -> Dict:
-    """Load Strong's dictionary data"""
-    if config.STRONGS_FILE.exists():
-        with open(config.STRONGS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {}
 
 
-def load_strong_refs() -> Dict:
-    """Load Strong's references data"""
-    if config.STRONG_REFS_FILE.exists():
-        with open(config.STRONG_REFS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {}
 
+def load_lexical_index() -> Dict:
+    """
+    Load LexicalIndex XML and create mappings.
 
-def load_bdb_xml():
-    """Load BDB XML file"""
-    if not config.BDB_XML.exists():
-        return None
-    try:
-        tree = ET.parse(config.BDB_XML)
-        return tree.getroot()
-    except Exception:
-        return None
-
-
-def load_lexical_index():
-    """Load LexicalIndex XML and create Strong to BDB mapping"""
+    Returns:
+        Dictionary with two keys:
+        - 'strong_to_bdb': Maps Strong's numbers to list of BDB ids
+        - 'bdb_to_def': Maps BDB ids to LexicalIndex <def> text
+    """
     if not config.LEXICAL_INDEX.exists():
-        return {}
-    
+        return {"strong_to_bdb": {}, "bdb_to_def": {}}
+
     try:
         tree = ET.parse(config.LEXICAL_INDEX)
         root = tree.getroot()
-        
+
         li_ns = {'li': 'http://openscriptures.github.com/morphhb/namespace'}
-        mapping = {}
+        strong_to_bdb: Dict[str, List[str]] = {}
+        bdb_to_def: Dict[str, str] = {}
+
         for entry in root.findall('.//li:entry', li_ns):
             xref = entry.find('li:xref', li_ns)
+            def_elem = entry.find('li:def', li_ns)
+
             if xref is not None:
                 strong = xref.get('strong')
                 bdb = xref.get('bdb')
+
                 if strong and bdb:
-                    mapping[f"H{strong}"] = bdb
-        return mapping
+                    strong_key = f"H{strong}"
+
+                    # Build strong_to_bdb mapping
+                    if strong_key not in strong_to_bdb:
+                        strong_to_bdb[strong_key] = []
+                    if bdb not in strong_to_bdb[strong_key]:
+                        strong_to_bdb[strong_key].append(bdb)
+
+                    # Build bdb_to_def mapping (capture the <def> text for this BDB entry)
+                    if def_elem is not None and def_elem.text and bdb:
+                        bdb_to_def[bdb] = def_elem.text.strip()
+
+        return {"strong_to_bdb": strong_to_bdb, "bdb_to_def": bdb_to_def}
     except Exception as e:
         print(f"Error loading lexical index: {e}")
-        return {}
+        return {"strong_to_bdb": {}, "bdb_to_def": {}}
 
 
 def normalize_definition_text(text: str) -> str:
@@ -236,7 +234,12 @@ def find_bdb_entry_by_id(root_element, bdb_id: Optional[str]) -> Optional[ET.Ele
     return root_element.find(f'.//bdb:entry[@id="{bdb_id}"]', NS)
 
 
-def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb_root, lexical_index: Dict[str, str]) -> List[Dict]:
+def extract_bdb_definitions_with_sense(
+    strong_number: str,
+    hebrew_word: str,
+    bdb_root,
+    lexical_index: Dict,
+) -> List[Dict]:
     """
     Extract BDB definitions with sense assignment
 
@@ -265,6 +268,8 @@ def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb
     hebrew_normalized = re.sub(r'[\u0591-\u05C7]', '', hebrew_word)
 
     bdb_data = None
+    bdb_ids = lexical_index.get("strong_to_bdb", {}).get(strong_number, [])
+    bdb_to_def = lexical_index.get("bdb_to_def", {})
 
     # Try direct search first (if extraction module available)
     if EXTRACTION_AVAILABLE and extract_from_bdb:
@@ -273,25 +278,7 @@ def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb
     # If direct search fails or module not available, search manually in XML
     if not bdb_data or not bdb_data.get('definitions'):
         if bdb_root is not None:
-            bdb_entry = None
-            # Try to find exact BDB entry using LexicalIndex mapping
-            bdb_id = lexical_index.get(strong_number)
-            if bdb_id:
-                bdb_entry = find_bdb_entry_by_id(bdb_root, bdb_id)
-            
-            # Fallback to old method if not found
-            if bdb_entry is None:
-                # First try without root entries (normal case)
-                bdb_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=False)
-                # If not found, try with root entries (for words like H776)
-                if bdb_entry is None:
-                    bdb_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=True)
-            elif LOG_MAPPING_MISMATCHES:
-                entry_id = bdb_entry.get('id', '')
-                if entry_id and entry_id != bdb_id:
-                    print(f"⚠️  LexicalIndex mismatch for {strong_number}: expected {bdb_id}, found {entry_id}")
-
-            if bdb_entry is not None:
+            def build_bdb_entry_data(bdb_entry: ET.Element) -> Dict:
                 # Find the correct Hebrew word element (prefer longer/matching one)
                 w_elements = bdb_entry.findall('.//bdb:w', NS)
                 bdb_hebrew = ''
@@ -306,7 +293,7 @@ def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb
                 if not bdb_hebrew and w_elements:
                     bdb_hebrew = w_elements[0].text if w_elements[0].text else ''
 
-                bdb_data = {
+                entry_data = {
                     'id': bdb_entry.get('id', ''),
                     'hebrew': bdb_hebrew,
                     'definitions': [],
@@ -314,7 +301,7 @@ def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb
                 }
 
                 def_elements = bdb_entry.findall('./bdb:def', NS)
-                bdb_data['definitions'] = [d.text for d in def_elements if d.text]
+                entry_data['definitions'] = [d.text for d in def_elements if d.text]
 
                 def extract_text_from_element(elem: ET.Element) -> str:
                     """Extract text content from element, removing child element tags but keeping their text"""
@@ -366,7 +353,7 @@ def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb
                     # Only add this sense if it has definitions and no nested senses,
                     # OR if it has definitions AND nested senses (meaningful parent sense)
                     if sense_texts and (not has_nested or direct_defs):
-                        bdb_data['senses'].append({
+                        entry_data['senses'].append({
                             "number": sense_path,
                             "definitions": sense_texts
                         })
@@ -380,68 +367,190 @@ def extract_bdb_definitions_with_sense(strong_number: str, hebrew_word: str, bdb
                 for sense in top_level_senses:
                     extract_senses_recursive(sense)
 
+                return entry_data
+
+            bdb_entries: List[ET.Element] = []
+            # Try to find exact BDB entries using LexicalIndex mapping
+            for bdb_id in bdb_ids:
+                entry = find_bdb_entry_by_id(bdb_root, bdb_id)
+                if entry is not None:
+                    bdb_entries.append(entry)
+            
+            # HOMONYM FIX: Prioritize mod="I" entries over mod="II"+ (homonyms)
+            # When multiple BDB entries exist for a Strong's number, prefer the primary sense
+            if len(bdb_entries) > 1:
+                # Group entries by mod attribute
+                mod_to_entries = {}
+                for entry in bdb_entries:
+                    mod = entry.get('mod', 'I')  # Default to "I" if not specified
+                    if mod not in mod_to_entries:
+                        mod_to_entries[mod] = []
+                    mod_to_entries[mod].append(entry)
+                
+                # Prioritize: mod="I" > no mod > mod="II" > mod="III" > etc.
+                if 'I' in mod_to_entries:
+                    bdb_entries = mod_to_entries['I']
+                elif '' in mod_to_entries:  # Entries without mod attribute
+                    bdb_entries = mod_to_entries['']
+                else:
+                    # If only secondary homonyms exist, use lowest number (II before III)
+                    sorted_mods = sorted(mod_to_entries.keys())
+                    bdb_entries = mod_to_entries[sorted_mods[0]]
+
+            # Fallback to old method if not found
+            if not bdb_entries:
+                # First try without root entries (normal case)
+                bdb_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=False)
+                # If not found, try with root entries (for words like H776)
+                if bdb_entry is None:
+                    bdb_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=True)
+                if bdb_entry is not None:
+                    bdb_entries.append(bdb_entry)
+            elif LOG_MAPPING_MISMATCHES:
+                entry_ids = {entry.get('id', '') for entry in bdb_entries}
+                missing_ids = [bdb_id for bdb_id in bdb_ids if bdb_id not in entry_ids]
+                if missing_ids:
+                    print(
+                        f"⚠️  LexicalIndex missing entries for {strong_number}: {', '.join(missing_ids)}"
+                    )
+
+            if bdb_entries:
+                bdb_data = [build_bdb_entry_data(entry) for entry in bdb_entries]
+
     if not bdb_data:
         return definitions
 
-    bdb_entry = bdb_data
-    if isinstance(bdb_data, list):
-        bdb_entry = bdb_data[0] if bdb_data else {}
-
-    # Verify Hebrew word matches
-    bdb_hebrew = bdb_entry.get('hebrew', '')
-    if bdb_hebrew:
-        bdb_normalized = re.sub(r'[\u0591-\u05C7]', '', bdb_hebrew)
-        if bdb_normalized != hebrew_normalized:
-            if hebrew_normalized not in bdb_normalized or len(bdb_normalized) > len(hebrew_normalized) + 2:
-                return definitions
+    bdb_entries_data = bdb_data if isinstance(bdb_data, list) else [bdb_data]
 
     # Build sense mapping from BDB XML if available
-    sense_mapping = {}
+    sense_mapping: Dict[str, str] = {}
     if bdb_root is not None:
-        bdb_id = lexical_index.get(strong_number)
-        xml_entry = find_bdb_entry_by_id(bdb_root, bdb_id) if bdb_id else None
-        if xml_entry is None:
+        def add_sense_mapping(xml_entry: Optional[ET.Element]) -> None:
+            if xml_entry is None:
+                return
+            for key, value in build_sense_mapping(xml_entry).items():
+                if key not in sense_mapping:
+                    sense_mapping[key] = value
+
+        if bdb_ids:
+            for bdb_id in bdb_ids:
+                add_sense_mapping(find_bdb_entry_by_id(bdb_root, bdb_id))
+
+        if not sense_mapping:
             xml_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=False)
-        if xml_entry is None:
-            xml_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=True)
-        if xml_entry is not None:
-            sense_mapping = build_sense_mapping(xml_entry)
+            if xml_entry is None:
+                xml_entry = find_bdb_entry(hebrew_word, bdb_root, include_roots=True)
+            add_sense_mapping(xml_entry)
 
     # Use sense+text as key to allow same word in different senses
     seen = set()
     order = 1
 
-    # Extract from definitions list (main definitions)
-    if bdb_entry.get('definitions'):
-        for defn in bdb_entry['definitions']:
-            if defn and defn.strip():
-                if len(defn.strip()) > 1 and defn.strip().lower() not in ['in', 'on', 'at', 'to', 'of', 'by', 'as', 'with', 'from', 'for']:
-                    # Use sense "0" as key for main definitions
-                    def_key = ("0", defn.lower())
+    def is_single_word_fragments(defs: List[str]) -> bool:
+        """Check if all definitions are single-word fragments"""
+        if not defs:
+            return False
+        cleaned = [d.strip() for d in defs if d and d.strip()]
+        if not cleaned:
+            return False
+        # Check if all are single words (no spaces, commas, or semicolons)
+        return all(len(d.split()) == 1 and ',' not in d and ';' not in d for d in cleaned)
+
+    def collapse_main_definitions(defs: List[str]) -> Optional[str]:
+        cleaned = [d.strip() for d in defs if d and d.strip()]
+        if len(cleaned) < 3:
+            return None
+        if any(len(d.split()) > 1 for d in cleaned):
+            return None
+        return ", ".join(cleaned)
+
+    # Count valid BDB entries to determine if we should use LexicalIndex override
+    valid_bdb_count = 0
+    for bdb_entry in bdb_entries_data:
+        if not bdb_entry:
+            continue
+        bdb_hebrew = bdb_entry.get('hebrew', '')
+        if bdb_hebrew:
+            bdb_normalized = re.sub(r'[\u0591-\u05C7]', '', bdb_hebrew)
+            if bdb_normalized != hebrew_normalized:
+                if hebrew_normalized not in bdb_normalized or len(bdb_normalized) > len(hebrew_normalized) + 2:
+                    continue
+        valid_bdb_count += 1
+
+    for bdb_entry in bdb_entries_data:
+        if not bdb_entry:
+            continue
+
+        # Verify Hebrew word matches
+        bdb_hebrew = bdb_entry.get('hebrew', '')
+        if bdb_hebrew:
+            bdb_normalized = re.sub(r'[\u0591-\u05C7]', '', bdb_hebrew)
+            if bdb_normalized != hebrew_normalized:
+                if hebrew_normalized not in bdb_normalized or len(bdb_normalized) > len(hebrew_normalized) + 2:
+                    continue
+
+        # Extract from definitions list (main definitions)
+        if bdb_entry.get('definitions'):
+            main_defs = bdb_entry['definitions']
+            bdb_id = bdb_entry.get('id', '')
+
+            # Only use LexicalIndex override when there are MULTIPLE BDB entries for this Strong's number
+            # This avoids collapsing valid single-word synonyms from a single BDB entry
+            if valid_bdb_count > 1 and is_single_word_fragments(main_defs) and bdb_id and bdb_id in bdb_to_def:
+                # Use LexicalIndex <def> as the single main definition
+                lex_gloss = bdb_to_def[bdb_id]
+                def_key = ("0", lex_gloss.lower())
+                if def_key not in seen:
+                    seen.add(def_key)
+                    def_text = normalize_definition_text(lex_gloss)
+                    sense = sense_mapping.get(def_text, "0")
+                    definitions.append(create_definition(lex_gloss, "bdb", order, sense))
+                    order += 1
+            else:
+                # Only collapse definitions when there are MULTIPLE BDB entries
+                # For single BDB entries, keep all synonyms separate
+                combined_main = None
+                if valid_bdb_count > 1:
+                    combined_main = collapse_main_definitions(main_defs)
+
+                if combined_main:
+                    def_key = ("0", combined_main.lower())
                     if def_key not in seen:
                         seen.add(def_key)
-                        # Assign sense from mapping or default to "0"
-                        def_text = normalize_definition_text(defn)
+                        def_text = normalize_definition_text(combined_main)
                         sense = sense_mapping.get(def_text, "0")
-                        definitions.append(create_definition(defn, "bdb", order, sense))
+                        definitions.append(create_definition(combined_main, "bdb", order, sense))
                         order += 1
+                else:
+                    for defn in main_defs:
+                        if defn and defn.strip():
+                            if len(defn.strip()) > 1 and defn.strip().lower() not in ['in', 'on', 'at', 'to', 'of', 'by', 'as', 'with', 'from', 'for']:
+                                # Use sense "0" as key for main definitions
+                                def_key = ("0", defn.lower())
+                                if def_key not in seen:
+                                    seen.add(def_key)
+                                    # Assign sense from mapping or default to "0"
+                                    def_text = normalize_definition_text(defn)
+                                    sense = sense_mapping.get(def_text, "0")
+                                    definitions.append(create_definition(defn, "bdb", order, sense))
+                                    order += 1
 
-    # Extract from senses
-    if bdb_entry.get('senses'):
-        for sense_obj in bdb_entry['senses']:
-            sense_num = sense_obj.get('number', '')
-            for defn in sense_obj.get('definitions', []):
-                if defn and defn.strip():
-                    if len(defn.strip()) > 1 and defn.strip().lower() not in ['in', 'on', 'at', 'to', 'of', 'by', 'as', 'with', 'from', 'for']:
-                        # Use sense number + text as key to allow same word in different senses
-                        def_key = (sense_num, defn.lower())
-                        if def_key not in seen:
-                            seen.add(def_key)
-                            # Use sense number from sense object, or try mapping
-                            def_text = normalize_definition_text(defn)
-                            final_sense = sense_num if sense_num else sense_mapping.get(def_text, "0")
-                            definitions.append(create_definition(defn, "bdb", order, final_sense))
-                            order += 1
+        # Extract from senses
+        if bdb_entry.get('senses'):
+            for sense_obj in bdb_entry['senses']:
+                sense_num = sense_obj.get('number', '')
+                for defn in sense_obj.get('definitions', []):
+                    if defn and defn.strip():
+                        if len(defn.strip()) > 1 and defn.strip().lower() not in ['in', 'on', 'at', 'to', 'of', 'by', 'as', 'with', 'from', 'for']:
+                            # Use sense number + text as key to allow same word in different senses
+                            def_key = (sense_num, defn.lower())
+                            if def_key not in seen:
+                                seen.add(def_key)
+                                # Use sense number from sense object, or try mapping
+                                def_text = normalize_definition_text(defn)
+                                final_sense = sense_num if sense_num else sense_mapping.get(def_text, "0")
+                                definitions.append(create_definition(defn, "bdb", order, final_sense))
+                                order += 1
 
     return definitions
 
@@ -566,6 +675,8 @@ def build_lexicon_entry(strong_number: str, bdb_root, update_existing: bool = Fa
         "normalized": existing_entry.get('normalized', re.sub(r'[\u0591-\u05C7]', '', strongs_entry.get('lemma', ''))),
         "pronunciation": strongs_entry.get('pron', ''),
         "transliteration": existing_entry.get('transliteration', strongs_entry.get('xlit', '')),
+        "translit_en": existing_entry.get('translit_en', ''),
+        "translit_es": existing_entry.get('translit_es', ''),
         "definitions": [],
         "sources": {
             "strongs": False,

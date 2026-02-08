@@ -22,6 +22,7 @@
   --foreground: #000000;
   --text-secondary: #707070;
   --text-hebrew: #000000;
+  --qumran-text: #c68f55;
   --muted: rgba(0, 0, 0, 0.05); /* Subtle muted bg */
   --crypto-icon-fill: #ffffff;
 
@@ -68,6 +69,7 @@
     --text-primary: #faf4e6;
     --text-secondary: #a89a7f;
     --text-hebrew: #d5c4a1;
+    --qumran-text: #b5814a;
     --crypto-icon-fill: #3c3836;
 
     /* Deep warm brown backgrounds */
@@ -408,6 +410,19 @@
   z-index: 10;
 }
 
+.word-card-qumran {
+  background: linear-gradient(
+    145deg,
+    rgba(198, 143, 85, 0.18),
+    rgba(198, 143, 85, 0.06)
+  );
+  border-color: rgba(198, 143, 85, 0.5);
+  box-shadow:
+    6px 6px 16px var(--neomorph-shadow-dark),
+    -6px -6px 16px var(--neomorph-shadow-light),
+    0 0 24px rgba(198, 143, 85, 0.25);
+}
+
 .word-panel-fixed-wrapper {
   position: fixed;
   top: 50%;
@@ -456,6 +471,9 @@ html:has(.full-chapter-scroll) {
 .word-panel-closed {
   opacity: 0;
   transform: translateY(8px);
+  /* Instant close to prevent flash when grid reflows from split to centered */
+  transition-duration: 0ms;
+  visibility: hidden;
 }
 
 .verse-panel-shell {

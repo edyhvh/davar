@@ -16,6 +16,13 @@ from .config import (
 )
 from .local_processor import estimate_book_cost as estimate_book_cost_local
 from .local_processor import transliterate_book_local
+from .dss_processor import get_available_dss_books, transliterate_dss_book
+from .lexicon_processor import (
+    estimate_roots_cost,
+    estimate_words_cost,
+    transliterate_roots,
+    transliterate_words,
+)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -64,14 +71,18 @@ def parse_args():
     )
     parser.add_argument(
         "--corpus",
-        choices=["tanakh", "besorah"],
+        choices=["tanakh", "besorah", "lexicon", "dss"],
         required=True,
-        help="Corpus to process"
+        help="Corpus to process (lexicon = root entries)"
     )
     parser.add_argument(
         "--book",
         default="all",
-        help="Book id (directory name, e.g., genesis, john) or 'all' for entire corpus"
+        help="Book id (directory name, e.g., genesis, john) or 'all' for entire corpus. Ignored for lexicon corpus."
+    )
+    parser.add_argument(
+        "--strong-number",
+        help="For lexicon corpus: process only this Strong's number (e.g., H1)"
     )
     parser.add_argument(
         "--list-books",
@@ -102,6 +113,121 @@ def main():
 
     if args.verbose:
         logging.getLogger().setLevel(logging.DEBUG)
+
+    # Handle lexicon corpus separately
+    if args.corpus == "lexicon":
+        logger.info("="*60)
+        logger.info("Starting transliteration for LEXICON ENTRIES")
+        logger.info("Dry run: %s", args.dry_run)
+        logger.info("="*60)
+
+        try:
+            roots_stats = transliterate_roots(
+                dry_run=args.dry_run,
+                strong_number=args.strong_number,
+                verbose=args.verbose,
+            )
+            words_stats = transliterate_words(
+                dry_run=args.dry_run,
+                strong_number=args.strong_number,
+                verbose=args.verbose,
+            )
+            cost = estimate_roots_cost() + estimate_words_cost()
+
+            logger.info("")
+            logger.info("="*60)
+            logger.info("TRANSLITERATION COMPLETE")
+            logger.info("="*60)
+            logger.info("Roots processed: %s", roots_stats.words)
+            logger.info("Words processed: %s", words_stats.words)
+            logger.info("Total estimated cost: $%.4f", cost)
+
+            if args.dry_run:
+                logger.info("")
+                logger.info("DRY RUN - No files were written")
+
+            logger.info("="*60)
+            sys.exit(0)
+
+        except Exception as e:
+            logger.error("Lexicon transliteration failed: %s", e)
+            sys.exit(1)
+
+    if args.corpus == "dss":
+        if args.list_books:
+            books = get_available_dss_books()
+            print(f"Available books in dss ({len(books)} total):")
+            for book in books:
+                print(f"  {book}")
+            sys.exit(0)
+
+        if args.book == "all":
+            books_to_process = get_available_dss_books()
+        else:
+            books_to_process = [args.book]
+
+        total_books = len(books_to_process)
+        total_variants = 0
+        total_failed = 0
+        failed_books = []
+
+        logger.info("="*60)
+        logger.info("Starting transliteration for DSS (%s books)", total_books)
+        logger.info("Dry run: %s", args.dry_run)
+        logger.info("="*60)
+
+        for book_index, book_id in enumerate(books_to_process, start=1):
+            logger.info("")
+            logger.info("-"*60)
+            logger.info("[%s/%s] Starting book: %s",
+                        book_index, total_books, book_id)
+            logger.info("-"*60)
+
+            try:
+                stats = transliterate_dss_book(
+                    book_id=book_id,
+                    dry_run=args.dry_run,
+                )
+                total_variants += stats.variants
+                total_failed += stats.failed
+
+                logger.info("")
+                logger.info(
+                    "[%s/%s] Book %s COMPLETED: %s variants, %s failures",
+                    book_index,
+                    total_books,
+                    stats.book_id,
+                    stats.variants,
+                    stats.failed,
+                )
+
+            except Exception as e:
+                logger.error("[%s/%s] Book %s FAILED: %s",
+                             book_index, total_books, book_id, e)
+                failed_books.append(book_id)
+                continue
+
+        logger.info("")
+        logger.info("="*60)
+        logger.info("DSS TRANSLITERATION COMPLETE")
+        logger.info("="*60)
+        logger.info("Books processed: %s/%s", total_books -
+                    len(failed_books), total_books)
+        logger.info("Total variants: %s", total_variants)
+        logger.info("Total failures: %s", total_failed)
+
+        if failed_books:
+            logger.warning("Failed books: %s", ", ".join(failed_books))
+
+        if args.dry_run:
+            logger.info("")
+            logger.info("DRY RUN - No files were written")
+
+        logger.info("="*60)
+
+        if failed_books:
+            sys.exit(1)
+        sys.exit(0)
 
     # List books and exit if requested
     if args.list_books:

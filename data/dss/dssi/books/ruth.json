@@ -1,0 +1,27 @@
+{
+  "name": "Ruth",
+  "chapters": {
+    "1": {
+      "verses": {
+        "2": {
+          "masoretic_text": "וְשֵׁ֣ם הָאִ֣ישׁ אֱ‍ֽלִימֶ֡לֶךְ וְשֵׁם֩ אִשְׁתּ֨וֹ נָעֳמִ֜י וְשֵׁ֥ם שְׁנֵֽי־ בָנָ֣יו ׀ מַחְל֤וֹן וְכִלְיוֹן֙ אֶפְרָתִ֔ים מִבֵּ֥ית לֶ֖חֶם יְהוּדָ֑ה וַיָּבֹ֥אוּ שְׂדֵי־ מוֹאָ֖ב וַיִּֽהְיוּ־ שָֽׁם׃",
+          "dss_text": "ושם  האיש אלימלך ושם אשתו נעמי ושם שני בניו מחלון וכליון אפרתים מבית לחם יהודה ויבאו שדה מואב וישבו שם",
+          "differences": [
+            {
+              "position": 1,
+              "masoretic_word": "וְשֵׁ֣ם",
+              "dss_word": "ושם",
+              "commentary": "4QRutha, Mas: and the name. 4QRuthb reads שם meaning The name. No change of meaning to the text."
+            },
+            {
+              "position": 20,
+              "masoretic_word": "שָֽׁם׃",
+              "dss_word": "וישבו שם",
+              "commentary": "4QRutha: and they lived there. 4QRuthb appears to have had a shorter text, which I propose is the omission of וישבו שם. Mas, LXX read ויהיו שם and they were there."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

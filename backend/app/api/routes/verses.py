@@ -9,7 +9,15 @@ import hashlib
 import orjson
 from app.api.deps import require_api_key
 from app.services.verses import VersesService
-from app.data_loaders import tanaj_loader, besorah_loader, translation_loader, variant_loader, book_mapper, translit_loader
+from app.data_loaders import (
+    tanaj_loader,
+    besorah_loader,
+    translation_loader,
+    variant_loader,
+    book_mapper,
+    translit_loader,
+    dss_translit_loader,
+)
 from app.schemas.verse import VerseResponse
 
 router = APIRouter()
@@ -21,6 +29,7 @@ verses_service = VersesService(
     translation_loader,
     variant_loader,
     translit_loader,
+    dss_translit_loader,
     book_mapper
 )
 

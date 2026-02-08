@@ -26,6 +26,9 @@ pathlib2>=2.3.7            # Enhanced pathlib (Python < 3.4 compatibility)
 # DSS PROCESSING MODULE
 # =============================================================================
 
+# xAI Grok API client for commentary generation
+xai-sdk>=0.1.0
+
 # PDF processing libraries
 PyMuPDF>=1.23.0            # PDF text extraction (fitz)
 pdfplumber>=0.10.0         # Advanced PDF text extraction

@@ -9,7 +9,12 @@ import json
 import time
 import logging
 import re
+import sys
+from pathlib import Path
 from typing import Dict, List, Optional
+
+# Add parent directory to path for utils import
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 try:
     import httpx
@@ -30,6 +35,9 @@ from .config import (
     get_language_name,
     validate_grok_api_key,
 )
+
+# Import utilities from parent module
+from utils import extract_json_array_robust
 
 logger = logging.getLogger(__name__)
 
@@ -100,127 +108,7 @@ Input definitions:
 
         return prompt
 
-    def _extract_json_array_robust(self, text: str) -> List:
-        """
-        Extract JSON array from text using robust bracket-matching algorithm.
-
-        This method tries multiple strategies in order:
-        1. Direct JSON parsing
-        2. Extract from markdown code blocks
-        3. Find the largest valid JSON array using bracket matching
-        4. Fallback to improved regex patterns
-
-        Args:
-            text: Text that may contain a JSON array
-
-        Returns:
-            List of extracted translations
-
-        Raises:
-            json.JSONDecodeError: If no valid JSON array can be found
-        """
-        # Strategy 1: Try direct JSON parsing
-        try:
-            result = json.loads(text)
-            if isinstance(result, list):
-                logger.debug("Successfully parsed JSON directly")
-                return result
-        except json.JSONDecodeError:
-            pass
-
-        # Strategy 2: Extract from markdown code blocks
-        import re
-        markdown_patterns = [
-            r'```json\s*(\[.*?\])\s*```',  # ```json [content] ```
-            r'```\s*(\[.*?\])\s*```',  # ``` [content] ```
-        ]
-
-        for pattern in markdown_patterns:
-            matches = re.findall(pattern, text, re.DOTALL)
-            for match in matches:
-                try:
-                    result = json.loads(match)
-                    if isinstance(result, list):
-                        logger.debug("Successfully extracted JSON from markdown code block")
-                        return result
-                except json.JSONDecodeError:
-                    continue
-
-        # Strategy 3: Find the largest valid JSON array using bracket matching
-        try:
-            result = self._find_largest_json_array(text)
-            if result:
-                logger.debug("Successfully extracted JSON using bracket matching")
-                return result
-        except Exception as e:
-            logger.debug(f"Bracket matching failed: {e}")
-
-        # Strategy 4: Fallback to improved regex patterns
-        regex_patterns = [
-            r'\[([^\[\]]*(?:\[[^\[\]]*\][^\[\]]*)*)\]',  # Improved nested bracket regex
-            r'\[([^\]]*)\]',  # Simple bracket regex as fallback
-        ]
-
-        for pattern in regex_patterns:
-            matches = re.findall(pattern, text, re.DOTALL)
-            for match in matches:
-                try:
-                    # Ensure the match starts with '['
-                    if not match.strip().startswith('['):
-                        match = f'[{match}]'
-                    result = json.loads(match)
-                    if isinstance(result, list):
-                        logger.debug("Successfully extracted JSON using improved regex")
-                        return result
-                except json.JSONDecodeError:
-                    continue
-
-        # If all strategies fail, raise an error
-        logger.error(f"Could not extract valid JSON array from text: {repr(text[:200])}...")
-        raise json.JSONDecodeError("No valid JSON array found", text, 0)
-
-    def _find_largest_json_array(self, text: str) -> Optional[List]:
-        """
-        Find the largest valid JSON array in text using bracket matching.
-
-        Args:
-            text: Text to search for JSON arrays
-
-        Returns:
-            The largest valid JSON array found, or None if none found
-        """
-        candidates = []
-
-        # Find all potential array starts
-        for i, char in enumerate(text):
-            if char == '[':
-                # Try to find the matching closing bracket
-                bracket_count = 1
-                end_pos = i + 1
-
-                while end_pos < len(text) and bracket_count > 0:
-                    if text[end_pos] == '[':
-                        bracket_count += 1
-                    elif text[end_pos] == ']':
-                        bracket_count -= 1
-                    end_pos += 1
-
-                if bracket_count == 0:  # Found matching brackets
-                    array_text = text[i:end_pos]
-                    try:
-                        result = json.loads(array_text)
-                        if isinstance(result, list):
-                            candidates.append(result)
-                    except json.JSONDecodeError:
-                        continue
-
-        # Return the largest array found
-        if candidates:
-            return max(candidates, key=len)
-
-        return None
-
-    def get_mismatch_stats(self) -> Dict:
+    def _generate_prompt(self, texts: List[str], target_lang: str) -> str:
         """
         Get mismatch statistics for reporting.
 
@@ -257,13 +145,19 @@ Input definitions:
 
         # Grok doesn't have a separate batch API like Gemini
         # Process synchronously
-        return self._translate_batch_sync(texts, target_lang, retry_count)
+        return self._translate_batch_sync(
+            texts,
+            target_lang,
+            retry_count,
+            batch_index=batch_index,
+        )
 
     def _translate_batch_sync(
         self,
         texts: List[str],
         target_lang: str,
-        retry_count: int = 0
+        retry_count: int = 0,
+        batch_index: Optional[int] = None,
     ) -> List[str]:
         """
         Synchronous batch translation using Grok API.
@@ -272,6 +166,7 @@ Input definitions:
             texts: List of English definition texts to translate
             target_lang: Target language code (e.g., 'es', 'pt')
             retry_count: Current retry attempt
+            batch_index: Optional batch index for logging
 
         Returns:
             List of translated texts in the same order as input
@@ -503,8 +398,8 @@ Input definitions:
                 response_text = str(content).strip()
                 logger.debug(f"Extracted response text: {repr(response_text)}")
 
-                # Use robust JSON extraction with bracket matching
-                translations = self._extract_json_array_robust(response_text)
+                # Use robust JSON extraction from utils module
+                translations = extract_json_array_robust(response_text)
                 logger.debug(f"Successfully extracted JSON array: {len(translations) if isinstance(translations, list) else 'not a list'} items")
 
             if not isinstance(translations, list):
@@ -571,7 +466,12 @@ Input definitions:
                 wait_time = RETRY_BACKOFF_BASE ** retry_count
                 logger.info(f"Retrying in {wait_time} seconds... (attempt {retry_count + 1}/{MAX_RETRIES})")
                 time.sleep(wait_time)
-                return self.translate_batch(texts, target_lang, retry_count + 1)
+                return self.translate_batch(
+                    texts,
+                    target_lang,
+                    retry_count + 1,
+                    batch_index=batch_index,
+                )
             else:
                 raise ValueError(
                     f"Failed to parse translation response after {MAX_RETRIES} retries: {e}"
@@ -601,7 +501,12 @@ Input definitions:
                     wait_time = RETRY_BACKOFF_BASE ** retry_count
                 logger.info(f"Retrying in {wait_time:.1f} seconds... (attempt {retry_count + 1}/{MAX_RETRIES})")
                 time.sleep(wait_time)
-                return self._translate_batch_sync(texts, target_lang, retry_count + 1)
+                return self._translate_batch_sync(
+                    texts,
+                    target_lang,
+                    retry_count + 1,
+                    batch_index=batch_index,
+                )
             else:
                 raise ValueError(
                     f"Translation failed after {MAX_RETRIES} retries: {e}"
