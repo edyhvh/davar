@@ -14,7 +14,7 @@ import {
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
 import { useLocalSearchParams, useNavigation } from "expo-router";
-import BottomSheet, { type BottomSheetMethods } from "@gorhom/bottom-sheet";
+import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import type { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import type { ParamListBase } from "@react-navigation/native";

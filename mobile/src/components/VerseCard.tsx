@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, type ReactElement } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import Animated, {
   interpolateColor,
@@ -27,7 +27,7 @@ const renderTranslationWithItalics = (
   translation: string,
   italicStyle: object,
 ) => {
-  const segments: (string | JSX.Element)[] = [];
+  const segments: (string | ReactElement)[] = [];
   const emPattern = /<em>(.*?)<\/em>/gi;
   let lastIndex = 0;
   let match: RegExpExecArray | null;

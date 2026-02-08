@@ -12,8 +12,8 @@ import BottomSheet, {
   BottomSheetFlatList,
   BottomSheetView,
   type BottomSheetBackdropProps,
-  type BottomSheetMethods,
 } from "@gorhom/bottom-sheet";
+import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
 import { Ionicons } from "@expo/vector-icons";
 import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
 
