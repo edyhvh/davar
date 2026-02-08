@@ -1,4 +1,11 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
@@ -6,13 +13,9 @@ import BottomSheet, {
   BottomSheetView,
   type BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
+import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
 import { Ionicons } from "@expo/vector-icons";
-import Animated, {
-  SlideInRight,
-  SlideInLeft,
-  SlideOutLeft,
-  SlideOutRight,
-} from "react-native-reanimated";
+import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
 
 import {
   getColors,
@@ -26,7 +29,6 @@ import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
 
 type NavigationSheetProps = {
-  sheetRef: React.RefObject<BottomSheet | null>;
   currentBookId: string;
   currentChapter: number;
   currentVerse: number;
@@ -98,37 +100,6 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       backgroundColor: colors.surface,
       borderWidth: 1,
       borderColor: colors.border,
-    },
-    breadcrumb: {
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: spacing[2],
-      marginBottom: spacing[4],
-    },
-    breadcrumbItem: {
-      paddingVertical: spacing[1],
-      paddingHorizontal: spacing[3],
-      borderRadius: radii.full,
-      backgroundColor: colors.surface,
-      borderWidth: 1,
-      borderColor: colors.border,
-    },
-    breadcrumbItemActive: {
-      backgroundColor: colors.primaryLight,
-      borderColor: colors.primary,
-    },
-    breadcrumbText: {
-      fontFamily: typography.families.latinUI,
-      fontSize: typography.sizes.caption,
-      color: colors.textSecondary,
-    },
-    breadcrumbTextActive: {
-      color: colors.primary,
-      fontWeight: typography.weights.medium,
-    },
-    breadcrumbArrow: {
-      color: colors.textSecondary,
     },
     searchContainer: {
       flexDirection: "row",
@@ -245,18 +216,34 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     },
   });
 
-export const NavigationSheet = ({
-  sheetRef,
-  currentBookId,
-  currentChapter,
-  currentVerse,
-  onSelectVerse,
-  onClose,
-}: NavigationSheetProps) => {
+const NavigationSheetComponent = (
+  {
+    currentBookId,
+    currentChapter,
+    currentVerse,
+    onSelectVerse,
+    onClose,
+  }: NavigationSheetProps,
+  ref: React.ForwardedRef<BottomSheetMethods>,
+) => {
+  const sheetRef = useRef<BottomSheetMethods | null>(null);
+  useImperativeHandle(
+    ref,
+    () => ({
+      expand: () => sheetRef.current?.expand(),
+      collapse: () => sheetRef.current?.collapse(),
+      close: () => sheetRef.current?.close(),
+      forceClose: () => sheetRef.current?.forceClose(),
+      snapToIndex: (index: number) => sheetRef.current?.snapToIndex(index),
+      snapToPosition: (position: number | string) =>
+        sheetRef.current?.snapToPosition(position as any),
+    }),
+    [],
+  );
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const snapPoints = useMemo(() => ["70%", "90%"], []);
+  const snapPoints = useMemo(() => ["60%", "80%"], []);
   const { t } = useTranslation();
 
   const [step, setStep] = useState<Step>("book");
@@ -404,7 +391,7 @@ export const NavigationSheet = ({
       onSelectVerse(selectedBookId, selectedChapter, verse);
       sheetRef.current?.close();
     },
-    [selectedBookId, selectedChapter, onSelectVerse, sheetRef],
+    [selectedBookId, selectedChapter, onSelectVerse],
   );
 
   const renderBookItem = useCallback(
@@ -478,8 +465,8 @@ export const NavigationSheet = ({
     }
   };
 
-  const enteringAnim = direction === "forward" ? SlideInRight : SlideInLeft;
-  const exitingAnim = direction === "forward" ? SlideOutLeft : SlideOutRight;
+  const enteringAnim = FadeIn;
+  const exitingAnim = FadeOut;
 
   return (
     <BottomSheet
@@ -521,76 +508,6 @@ export const NavigationSheet = ({
               <Ionicons name="close" size={18} color={colors.textSecondary} />
             </Pressable>
           )}
-        </View>
-
-        {/* Breadcrumb */}
-        <View style={styles.breadcrumb}>
-          <Pressable
-            style={[
-              styles.breadcrumbItem,
-              step === "book" && styles.breadcrumbItemActive,
-            ]}
-            onPress={() => {
-              setDirection("backward");
-              setStep("book");
-            }}
-          >
-            <Text
-              style={[
-                styles.breadcrumbText,
-                step === "book" && styles.breadcrumbTextActive,
-              ]}
-            >
-              {selectedBook?.name ?? t("navigation.book")}
-            </Text>
-          </Pressable>
-          <Ionicons
-            name="chevron-forward"
-            size={14}
-            color={colors.textSecondary}
-          />
-          <Pressable
-            style={[
-              styles.breadcrumbItem,
-              step === "chapter" && styles.breadcrumbItemActive,
-            ]}
-            onPress={() => {
-              if (selectedBookId) {
-                setDirection(step === "verse" ? "backward" : "forward");
-                setStep("chapter");
-              }
-            }}
-            disabled={!selectedBookId}
-          >
-            <Text
-              style={[
-                styles.breadcrumbText,
-                step === "chapter" && styles.breadcrumbTextActive,
-              ]}
-            >
-              {selectedChapter || t("navigation.chapterShort")}
-            </Text>
-          </Pressable>
-          <Ionicons
-            name="chevron-forward"
-            size={14}
-            color={colors.textSecondary}
-          />
-          <View
-            style={[
-              styles.breadcrumbItem,
-              step === "verse" && styles.breadcrumbItemActive,
-            ]}
-          >
-            <Text
-              style={[
-                styles.breadcrumbText,
-                step === "verse" && styles.breadcrumbTextActive,
-              ]}
-            >
-              {t("navigation.verse")}
-            </Text>
-          </View>
         </View>
 
         {/* Search - only for books */}
@@ -667,7 +584,9 @@ export const NavigationSheet = ({
           style={styles.content}
         >
           <BottomSheetView style={styles.gridContainer}>
-            <Text style={styles.gridTitle}>{t("navigation.selectChapter")}</Text>
+            <Text style={styles.gridTitle}>
+              {t("navigation.selectChapter")}
+            </Text>
             {chapterNumbers.length ? (
               renderNumberGrid(
                 chapterNumbers,
@@ -714,3 +633,5 @@ export const NavigationSheet = ({
     </BottomSheet>
   );
 };
+
+export const NavigationSheet = React.forwardRef(NavigationSheetComponent);

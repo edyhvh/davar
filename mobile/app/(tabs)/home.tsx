@@ -1,15 +1,19 @@
 import { useMemo, useState } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  ActivityIndicator,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { AppIcon } from "@/src/components/ui/AppIcon";
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import type { IconKey } from "@/src/constants/icons";
-import {
-  downloadDictionaryBundle,
-  downloadTranslationBundle,
-} from "@/src/services/offlineSync";
+import { downloadTranslationBundle } from "@/src/services/offlineSync";
 import { useTranslation } from "@/src/i18n/useTranslation";
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
@@ -131,26 +135,36 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     actionIconDark: {
       color: colors.textTertiary,
     },
-    downloadActions: {
+    downloadList: {
       marginTop: spacing[4],
-      flexDirection: "row",
       gap: spacing[3],
-      flexWrap: "wrap",
     },
-    downloadButton: {
-      borderRadius: radii.full,
+    downloadRow: {
+      borderRadius: radii.lg,
       paddingHorizontal: spacing[4],
       paddingVertical: spacing[3],
       borderWidth: 1,
       borderColor: colors.background,
       backgroundColor: "rgba(255, 255, 255, 0.15)",
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
     },
-    downloadButtonText: {
+    downloadRowPressed: {
+      opacity: 0.85,
+    },
+    downloadRowText: {
       fontFamily: typography.families.latinUIBold,
       fontSize: typography.sizes.caption,
       color: colors.background,
       textTransform: "uppercase",
       letterSpacing: 1,
+    },
+    downloadStatus: {
+      width: 24,
+      height: 24,
+      alignItems: "center",
+      justifyContent: "center",
     },
     aboutCard: {
       borderRadius: radii.xl,
@@ -190,8 +204,43 @@ export default function HomeScreen() {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const { t, get } = useTranslation();
-  const [downloading, setDownloading] = useState<string | null>(null);
+  const { t } = useTranslation();
+  type DownloadLanguage = "en" | "es";
+  type DownloadStatus = "idle" | "downloading" | "completed";
+  const downloadItems = useMemo(
+    () => [
+      { language: "en" as DownloadLanguage, label: t("home.download.english") },
+      { language: "es" as DownloadLanguage, label: t("home.download.spanish") },
+    ],
+    [t],
+  );
+  const [downloadStatus, setDownloadStatus] = useState<
+    Record<DownloadLanguage, DownloadStatus>
+  >({ en: "idle", es: "idle" });
+  const activeDownload = (
+    Object.entries(downloadStatus) as [DownloadLanguage, DownloadStatus][]
+  ).find(([, status]) => status === "downloading");
+  const downloadLabelMap: Record<DownloadLanguage, string> = {
+    en: t("home.download.english"),
+    es: t("home.download.spanish"),
+  };
+  const activeLabel = activeDownload
+    ? downloadLabelMap[activeDownload[0]]
+    : null;
+
+  const handleDownloadPress = async (language: DownloadLanguage) => {
+    if (downloadStatus[language] === "downloading") {
+      return;
+    }
+
+    setDownloadStatus((prev) => ({ ...prev, [language]: "downloading" }));
+    try {
+      await downloadTranslationBundle(language);
+      setDownloadStatus((prev) => ({ ...prev, [language]: "completed" }));
+    } catch {
+      setDownloadStatus((prev) => ({ ...prev, [language]: "idle" }));
+    }
+  };
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
@@ -213,67 +262,46 @@ export default function HomeScreen() {
                   themeMode === "dark" && styles.actionSubtitleDark,
                 ]}
               >
-                {downloading
-                  ? t("home.download.downloading", { item: downloading })
+                {activeLabel
+                  ? t("home.download.downloading", { item: activeLabel })
                   : t("home.download.idle")}
               </Text>
-              <View style={styles.downloadActions}>
-                <Pressable
-                  onPress={async () => {
-                    setDownloading(t("home.download.dictionary"));
-                    try {
-                      await downloadDictionaryBundle();
-                    } finally {
-                      setDownloading(null);
-                    }
-                  }}
-                  style={styles.downloadButton}
-                >
-                  <Text style={styles.downloadButtonText}>
-                    {t("home.download.dictionary")}
-                  </Text>
-                </Pressable>
-                <Pressable
-                  onPress={async () => {
-                    setDownloading(t("home.download.english"));
-                    try {
-                      await downloadTranslationBundle("en");
-                    } finally {
-                      setDownloading(null);
-                    }
-                  }}
-                  style={styles.downloadButton}
-                >
-                  <Text style={styles.downloadButtonText}>
-                    {t("home.download.english")}
-                  </Text>
-                </Pressable>
-                <Pressable
-                  onPress={async () => {
-                    setDownloading(t("home.download.spanish"));
-                    try {
-                      await downloadTranslationBundle("es");
-                    } finally {
-                      setDownloading(null);
-                    }
-                  }}
-                  style={styles.downloadButton}
-                >
-                  <Text style={styles.downloadButtonText}>
-                    {t("home.download.spanish")}
-                  </Text>
-                </Pressable>
+              <View style={styles.downloadList}>
+                {downloadItems.map((item) => {
+                  const status = downloadStatus[item.language];
+                  return (
+                    <Pressable
+                      key={item.language}
+                      onPress={() => handleDownloadPress(item.language)}
+                      style={({ pressed }) => [
+                        styles.downloadRow,
+                        pressed && styles.downloadRowPressed,
+                      ]}
+                    >
+                      <Text style={styles.downloadRowText}>{item.label}</Text>
+                      <View style={styles.downloadStatus}>
+                        {status === "downloading" ? (
+                          <ActivityIndicator
+                            size="small"
+                            color={colors.background}
+                          />
+                        ) : (
+                          <AppIcon
+                            name={
+                              status === "completed"
+                                ? "download-done"
+                                : "download"
+                            }
+                            size={20}
+                            color={colors.background}
+                          />
+                        )}
+                      </View>
+                    </Pressable>
+                  );
+                })}
               </View>
             </View>
-            <AppIcon
-              name="download"
-              size={24}
-              color={
-                themeMode === "dark"
-                  ? styles.actionIconDark.color
-                  : styles.actionIcon.color
-              }
-            />
           </View>
 
           <View style={[styles.actionCard, styles.actionSecondary]}>

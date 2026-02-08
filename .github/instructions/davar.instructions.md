@@ -29,7 +29,6 @@ Davar (דבר - "word") is a sacred, distraction-free digital tool for deep, con
 
 - Modify licensed content files
 - Remove required attributions
-- Break the one-verse-per-screen constraint
 - Commit sensitive data to public branches
 
 ### ALWAYS:

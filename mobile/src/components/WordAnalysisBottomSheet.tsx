@@ -1,10 +1,25 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import React, {
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  useWindowDimensions,
+} from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetScrollView,
   type BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
+import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
 import { router } from "expo-router";
 
 import { getColors, radii, spacing, typography } from "@/src/theme";
@@ -33,7 +48,6 @@ type PrefixResponse = {
 };
 
 type WordAnalysisBottomSheetProps = {
-  sheetRef: React.RefObject<BottomSheet | null>;
   currentVerseId?: string;
   word?:
     | (DisplayWord & {
@@ -64,12 +78,16 @@ type TabType = "masoretic" | "qumran" | "instances";
 const createStyles = (
   colors: ReturnType<typeof getColors>,
   hebrewScale: number,
-) =>
-  StyleSheet.create({
+) => {
+  const baseHebrewSize = 48 * hebrewScale;
+  const baseHebrewLineHeight = 72 * hebrewScale;
+  const qumranSize = baseHebrewSize * (1.9 / 1.06);
+  const qumranLineHeight = baseHebrewLineHeight * (1.5 / 1.65);
+
+  return StyleSheet.create({
     content: {
       paddingHorizontal: spacing[6],
       paddingTop: spacing[2],
-      paddingBottom: spacing[8],
     },
     sheetBackground: {
       backgroundColor: colors.surface,
@@ -92,14 +110,16 @@ const createStyles = (
     },
     hebrew: {
       fontFamily: typography.families.hebrewScripture,
-      fontSize: 48 * hebrewScale,
+      fontSize: baseHebrewSize,
       color: colors.textPrimary,
       textAlign: "center",
       writingDirection: "rtl",
-      lineHeight: 72 * hebrewScale,
+      lineHeight: baseHebrewLineHeight,
     },
     hebrewQumran: {
       fontFamily: typography.families.hebrewQumran,
+      fontSize: qumranSize,
+      lineHeight: qumranLineHeight,
       color: colors.qumranText,
     },
     qumranText: {
@@ -150,14 +170,47 @@ const createStyles = (
     toggleTextActive: {
       color: colors.surface,
     },
-    sectionLabel: {
+    secondaryToggleContainer: {
+      alignItems: "center",
+      marginTop: -spacing[2],
+      marginBottom: spacing[6],
+    },
+    secondaryToggleButton: {
+      paddingVertical: spacing[2],
+      paddingHorizontal: spacing[4],
+      borderRadius: radii.full,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.background,
+    },
+    secondaryToggleButtonActive: {
+      backgroundColor: colors.primary,
+      borderColor: colors.primary,
+    },
+    secondaryToggleText: {
       fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.bodySmall,
+      color: colors.textSecondary,
+      fontWeight: "600",
+      textTransform: "uppercase",
+      letterSpacing: 1,
+    },
+    secondaryToggleTextActive: {
+      color: colors.surface,
+    },
+    sectionLabel: {
+      fontFamily: typography.families.latinUIBold,
       fontSize: typography.sizes.caption,
       color: colors.textSecondary,
       textTransform: "uppercase",
       letterSpacing: 1.5,
       textAlign: "center",
       marginBottom: spacing[3],
+    },
+    sectionDivider: {
+      height: 1,
+      backgroundColor: colors.border,
+      marginVertical: spacing[6],
     },
     meaningsText: {
       fontFamily: typography.families.latinMeaning,
@@ -306,6 +359,7 @@ const createStyles = (
       marginTop: spacing[1],
     },
   });
+};
 
 // Map of book abbreviations to book IDs
 const bookAbbreviations: Record<string, string> = {
@@ -391,13 +445,27 @@ const parseVerseReference = (ref: string): string | null => {
   return `${bookId}-${chapter}-${verse}`;
 };
 
-export const WordAnalysisBottomSheet = ({
-  sheetRef,
-  word,
-  currentVerseId,
-  onClosed,
-}: WordAnalysisBottomSheetProps) => {
+const WordAnalysisBottomSheetComponent = (
+  { word, currentVerseId, onClosed }: WordAnalysisBottomSheetProps,
+  ref: React.ForwardedRef<BottomSheetMethods>,
+) => {
+  const sheetRef = useRef<BottomSheetMethods | null>(null);
+  useImperativeHandle(
+    ref,
+    () => ({
+      expand: () => sheetRef.current?.expand(),
+      collapse: () => sheetRef.current?.collapse(),
+      close: () => sheetRef.current?.close(),
+      forceClose: () => sheetRef.current?.forceClose(),
+      snapToIndex: (index: number) => sheetRef.current?.snapToIndex(index),
+      snapToPosition: (position: number | string) =>
+        sheetRef.current?.snapToPosition(position as any),
+    }),
+    [],
+  );
   const themeMode = useAppStore((state: AppState) => state.themeMode);
+  const insets = useSafeAreaInsets();
+  const { height: screenHeight } = useWindowDimensions();
   const hebrewFontScale = useAppStore(
     (state: AppState) => state.hebrewFontScale,
   );
@@ -408,6 +476,14 @@ export const WordAnalysisBottomSheet = ({
     () => createStyles(colors, hebrewFontScale),
     [colors, hebrewFontScale],
   );
+  const snapPoints = useMemo(() => {
+    const minHeight = Math.max(0, screenHeight * 0.5);
+    const maxHeight = Math.max(0, screenHeight * 0.8);
+    if (maxHeight <= minHeight) {
+      return [minHeight];
+    }
+    return [minHeight, maxHeight];
+  }, [screenHeight]);
   const [activeTab, setActiveTab] = useState<TabType>("masoretic");
   const [lexiconEntry, setLexiconEntry] = useState<LexiconResponse | null>(
     null,
@@ -451,7 +527,17 @@ export const WordAnalysisBottomSheet = ({
     // Hide transliteration for YHVH (H3068)
     if (checkStrong === "H3068") return undefined;
 
+    const masoreticTranslit =
+      language === "en"
+        ? word?.translit_en
+        : language === "es"
+          ? word?.translit_es
+          : undefined;
+
     if (activeTab === "qumran") {
+      if (dssStrongNumber && strongNumber && dssStrongNumber === strongNumber) {
+        return masoreticTranslit;
+      }
       const strongTranslit =
         language === "en"
           ? dssLexiconEntry?.translit_en
@@ -460,11 +546,7 @@ export const WordAnalysisBottomSheet = ({
             : undefined;
       if (strongTranslit) return strongTranslit;
     }
-    return language === "en"
-      ? word?.translit_en
-      : language === "es"
-        ? word?.translit_es
-        : undefined;
+    return masoreticTranslit;
   }, [
     activeTab,
     language,
@@ -591,10 +673,10 @@ export const WordAnalysisBottomSheet = ({
   }, [dssStrongNumber, language, word?.dssWord]);
 
   useEffect(() => {
-    // Reset to meanings tab when a new word is selected
-    setActiveTab("masoretic");
+    // Reset to default tab when a new word is selected
+    setActiveTab(hasDssVariant ? "qumran" : "masoretic");
     setShowAllInstances(false);
-  }, [word?.strong, word?.dssStrong]);
+  }, [word?.strong, word?.dssStrong, hasDssVariant]);
 
   useEffect(() => {
     if (!hasDssVariant && activeTab === "qumran") {
@@ -791,7 +873,8 @@ export const WordAnalysisBottomSheet = ({
     <BottomSheet
       ref={sheetRef}
       index={-1}
-      snapPoints={["50%", "80%"]}
+      snapPoints={snapPoints}
+      enableDynamicSizing={false}
       enablePanDownToClose
       backgroundStyle={
         hasDssVariant ? styles.sheetBackgroundDss : styles.sheetBackground
@@ -802,7 +885,10 @@ export const WordAnalysisBottomSheet = ({
       backdropComponent={renderBackdrop}
       animateOnMount={false}
     >
-      <BottomSheetScrollView style={styles.content}>
+      <BottomSheetScrollView
+        style={styles.content}
+        contentContainerStyle={{ paddingBottom: spacing[8] + insets.bottom }}
+      >
         {/* Show empty state when no word is selected */}
         {!word ? (
           <View style={styles.headerSection}>
@@ -818,12 +904,7 @@ export const WordAnalysisBottomSheet = ({
                 {displayHebrew}
               </Text>
               {wordTransliteration ? (
-                <Text
-                  style={[
-                    styles.transliteration,
-                    isQumranTab && styles.qumranText,
-                  ]}
-                >
+                <Text style={styles.transliteration}>
                   {wordTransliteration}
                 </Text>
               ) : null}
@@ -835,18 +916,11 @@ export const WordAnalysisBottomSheet = ({
                 </Text>
               )}
               {activeStrongNumber ? (
-                <Text
-                  style={[
-                    styles.occurrencesText,
-                    isQumranTab && styles.qumranText,
-                  ]}
-                >
-                  {activeStrongNumber}
-                </Text>
+                <Text style={styles.occurrencesText}>{activeStrongNumber}</Text>
               ) : null}
             </View>
 
-            {/* Toggle: Qumran / Masoretic / Instances */}
+            {/* Toggle: Qumran / Masoretic */}
             <View style={styles.toggleContainer}>
               {hasDssVariant ? (
                 <Pressable
@@ -879,32 +953,60 @@ export const WordAnalysisBottomSheet = ({
                     activeTab === "masoretic" && styles.toggleTextActive,
                   ]}
                 >
-                  {hasDssVariant ? t("wordCard.masoretic") : t("wordCard.meanings")}
+                  {hasDssVariant
+                    ? t("wordCard.masoretic")
+                    : t("wordCard.meanings")}
                 </Text>
               </Pressable>
-              <Pressable
-                style={[
-                  styles.toggleButton,
-                  activeTab === "instances" && styles.toggleButtonActive,
-                ]}
-                onPress={() => setActiveTab("instances")}
-              >
-                <Text
+              {!hasDssVariant ? (
+                <Pressable
                   style={[
-                    styles.toggleText,
-                    activeTab === "instances" && styles.toggleTextActive,
+                    styles.toggleButton,
+                    activeTab === "instances" && styles.toggleButtonActive,
                   ]}
+                  onPress={() => setActiveTab("instances")}
                 >
-                  {t("wordCard.instances")}
-                </Text>
-              </Pressable>
+                  <Text
+                    style={[
+                      styles.toggleText,
+                      activeTab === "instances" && styles.toggleTextActive,
+                    ]}
+                  >
+                    {t("wordCard.instances")}
+                  </Text>
+                </Pressable>
+              ) : null}
             </View>
+            {hasDssVariant ? (
+              <View style={styles.secondaryToggleContainer}>
+                <Pressable
+                  style={[
+                    styles.secondaryToggleButton,
+                    activeTab === "instances" &&
+                      styles.secondaryToggleButtonActive,
+                  ]}
+                  onPress={() => setActiveTab("instances")}
+                >
+                  <Text
+                    style={[
+                      styles.secondaryToggleText,
+                      activeTab === "instances" &&
+                        styles.secondaryToggleTextActive,
+                    ]}
+                  >
+                    {t("wordCard.instances")}
+                  </Text>
+                </Pressable>
+              </View>
+            ) : null}
 
             {/* Tab Content */}
             {activeTab === "masoretic" ? (
               <>
                 {/* Meanings section */}
-                <Text style={styles.sectionLabel}>{t("wordCard.meanings")}</Text>
+                <Text style={styles.sectionLabel}>
+                  {t("wordCard.meanings")}
+                </Text>
                 {isLoading ? (
                   <Text style={styles.emptyText}>
                     {t("wordCard.loadingDefinitions")}
@@ -916,55 +1018,61 @@ export const WordAnalysisBottomSheet = ({
                       key={`${meaning}-${index}`}
                       style={styles.meaningsBullet}
                     >
-                      • {meaning}
+                      {meaning}
                     </Text>
                   ))}
                 </View>
 
                 {word?.prefixes?.length ? (
-                  <View style={styles.prefixesSection}>
-                    <Text style={styles.sectionLabel}>
-                      {t("wordCard.preposition")}
-                    </Text>
-                    {word.prefixes.map((prefix, index) => {
-                      const entry = prefixEntries[prefix];
-                      const meanings =
-                        entry?.meanings?.[language] ??
-                        entry?.meanings?.en ??
-                        entry?.meanings?.es ??
-                        [];
-                      const transliteration =
-                        language === "es"
-                          ? entry?.transliteration_es
-                          : (entry?.transliteration_en ??
-                            entry?.transliteration_es);
-                      const prefixText =
-                        prefixSegments.prefixes[index]?.replace(/\//g, "") ??
-                        entry?.main_form ??
-                        "";
+                  <>
+                    <View style={styles.sectionDivider} />
+                    <View style={styles.prefixesSection}>
+                      <Text style={styles.sectionLabel}>
+                        {t("wordCard.preposition")}
+                      </Text>
+                      {word.prefixes.map((prefix, index) => {
+                        const entry = prefixEntries[prefix];
+                        const meanings =
+                          entry?.meanings?.[language] ??
+                          entry?.meanings?.en ??
+                          entry?.meanings?.es ??
+                          [];
+                        const transliteration =
+                          language === "es"
+                            ? entry?.transliteration_es
+                            : (entry?.transliteration_en ??
+                              entry?.transliteration_es);
+                        const prefixText =
+                          prefixSegments.prefixes[index]?.replace(/\//g, "") ??
+                          entry?.main_form ??
+                          "";
 
-                      return (
-                        <View
-                          key={`${prefix}-${index}`}
-                          style={styles.prefixItem}
-                        >
-                          <Text style={styles.prefixHebrew}>{prefixText}</Text>
-                          {transliteration ? (
-                            <Text style={styles.prefixTransliteration}>
-                              {transliteration}
+                        return (
+                          <View
+                            key={`${prefix}-${index}`}
+                            style={styles.prefixItem}
+                          >
+                            <Text style={styles.prefixHebrew}>
+                              {prefixText}
                             </Text>
-                          ) : null}
-                          {meanings.length ? (
-                            <Text style={styles.prefixMeaning}>
-                              {meanings.join(", ")}
-                            </Text>
-                          ) : null}
-                        </View>
-                      );
-                    })}
-                  </View>
+                            {transliteration ? (
+                              <Text style={styles.prefixTransliteration}>
+                                {transliteration}
+                              </Text>
+                            ) : null}
+                            {meanings.length ? (
+                              <Text style={styles.prefixMeaning}>
+                                {meanings.join(", ")}
+                              </Text>
+                            ) : null}
+                          </View>
+                        );
+                      })}
+                    </View>
+                  </>
                 ) : null}
 
+                <View style={styles.sectionDivider} />
                 {/* Root section */}
                 <View style={styles.rootSection}>
                   <Text style={styles.sectionLabel}>{t("wordCard.root")}</Text>
@@ -976,11 +1084,6 @@ export const WordAnalysisBottomSheet = ({
                           "",
                         )}
                       </Text>
-                      {lexiconEntry?.root_strong ? (
-                        <Text style={styles.rootStrong}>
-                          {lexiconEntry.root_strong}
-                        </Text>
-                      ) : null}
                       {(language === "en"
                         ? lexiconEntry?.root_translit_en
                         : lexiconEntry?.root_translit_es) ||
@@ -990,6 +1093,11 @@ export const WordAnalysisBottomSheet = ({
                             ? lexiconEntry?.root_translit_en
                             : lexiconEntry?.root_translit_es) ??
                             word?.rootTransliteration}
+                        </Text>
+                      ) : null}
+                      {lexiconEntry?.root_strong ? (
+                        <Text style={styles.rootStrong}>
+                          {lexiconEntry.root_strong}
                         </Text>
                       ) : null}
                       {/* Show meaning only if root differs from word */}
@@ -1010,7 +1118,9 @@ export const WordAnalysisBottomSheet = ({
               </>
             ) : activeTab === "qumran" ? (
               <>
-                <Text style={styles.sectionLabel}>{t("wordCard.meanings")}</Text>
+                <Text style={styles.sectionLabel}>
+                  {t("wordCard.meanings")}
+                </Text>
                 {isDssLoading ? (
                   <Text style={styles.emptyText}>
                     {t("wordCard.loadingDefinitions")}
@@ -1020,30 +1130,31 @@ export const WordAnalysisBottomSheet = ({
                   {dssMeaningsList.map((meaning, index) => (
                     <Text
                       key={`${meaning}-${index}`}
-                      style={[styles.meaningsBullet, styles.qumranText]}
+                      style={styles.meaningsBullet}
                     >
-                      • {meaning}
+                      {meaning}
                     </Text>
                   ))}
                 </View>
 
-                <Text style={styles.sectionLabel}>{t("wordCard.commentary")}</Text>
-                <Text style={[styles.commentaryText, styles.qumranText]}>
+                <View style={styles.sectionDivider} />
+                <Text style={styles.sectionLabel}>
+                  {t("wordCard.commentary")}
+                </Text>
+                <Text style={styles.commentaryText}>
                   {dssCommentary ?? "—"}
                 </Text>
 
+                <View style={styles.sectionDivider} />
                 <View style={styles.rootSection}>
                   <Text style={styles.sectionLabel}>{t("wordCard.root")}</Text>
-                  <Text style={[styles.rootHebrew, styles.qumranText]}>
-                    {(
-                      dssLexiconEntry?.root ??
-                      dssLexiconEntry?.hebrew ??
-                      displayHebrew
-                    ).replace(/\//g, "")}
-                  </Text>
-                  {dssLexiconEntry?.root_strong ? (
-                    <Text style={[styles.rootStrong, styles.qumranText]}>
-                      {dssLexiconEntry.root_strong}
+                  {dssLexiconEntry?.root || dssLexiconEntry?.root_strong ? (
+                    <Text style={styles.rootHebrew}>
+                      {(
+                        dssLexiconEntry?.root ??
+                        dssLexiconEntry?.hebrew ??
+                        displayHebrew
+                      ).replace(/\//g, "")}
                     </Text>
                   ) : null}
                   {(
@@ -1051,12 +1162,15 @@ export const WordAnalysisBottomSheet = ({
                       ? dssLexiconEntry?.root_translit_en
                       : dssLexiconEntry?.root_translit_es
                   ) ? (
-                    <Text
-                      style={[styles.rootTransliteration, styles.qumranText]}
-                    >
+                    <Text style={styles.rootTransliteration}>
                       {language === "en"
                         ? dssLexiconEntry?.root_translit_en
                         : dssLexiconEntry?.root_translit_es}
+                    </Text>
+                  ) : null}
+                  {dssLexiconEntry?.root_strong ? (
+                    <Text style={styles.rootStrong}>
+                      {dssLexiconEntry.root_strong}
                     </Text>
                   ) : null}
                   {/* Show meaning only if root differs from word or if no specific DSS root */}
@@ -1064,12 +1178,12 @@ export const WordAnalysisBottomSheet = ({
                     dssLexiconEntry.root_strong &&
                     dssStrongNumber &&
                     dssLexiconEntry.root_strong !== dssStrongNumber ? (
-                      <Text style={[styles.rootMeaning, styles.qumranText]}>
+                      <Text style={styles.rootMeaning}>
                         {formatRootMeaningText(dssRootMeaningText)}
                       </Text>
                     ) : null
                   ) : (
-                    <Text style={[styles.rootMeaning, styles.qumranText]}>
+                    <Text style={styles.rootMeaning}>
                       {t("wordCard.alreadyRoot")}
                     </Text>
                   )}
@@ -1078,7 +1192,9 @@ export const WordAnalysisBottomSheet = ({
             ) : (
               <>
                 {/* Instances section */}
-                <Text style={styles.sectionLabel}>{t("wordCard.appearsIn")}</Text>
+                <Text style={styles.sectionLabel}>
+                  {t("wordCard.appearsIn")}
+                </Text>
                 {lexiconEntry?.instances?.length || word?.instances?.length ? (
                   <View style={styles.instancesContainer}>
                     {(
@@ -1148,3 +1264,7 @@ export const WordAnalysisBottomSheet = ({
     </BottomSheet>
   );
 };
+
+export const WordAnalysisBottomSheet = React.forwardRef(
+  WordAnalysisBottomSheetComponent,
+);
