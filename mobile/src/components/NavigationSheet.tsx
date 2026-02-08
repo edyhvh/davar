@@ -106,37 +106,6 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       borderWidth: 1,
       borderColor: colors.border,
     },
-    breadcrumb: {
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: spacing[2],
-      marginBottom: spacing[4],
-    },
-    breadcrumbItem: {
-      paddingVertical: spacing[1],
-      paddingHorizontal: spacing[3],
-      borderRadius: radii.full,
-      backgroundColor: colors.surface,
-      borderWidth: 1,
-      borderColor: colors.border,
-    },
-    breadcrumbItemActive: {
-      backgroundColor: colors.primaryLight,
-      borderColor: colors.primary,
-    },
-    breadcrumbText: {
-      fontFamily: typography.families.latinUI,
-      fontSize: typography.sizes.caption,
-      color: colors.textSecondary,
-    },
-    breadcrumbTextActive: {
-      color: colors.primary,
-      fontWeight: typography.weights.medium,
-    },
-    breadcrumbArrow: {
-      color: colors.textSecondary,
-    },
     searchContainer: {
       flexDirection: "row",
       alignItems: "center",
@@ -532,76 +501,6 @@ const NavigationSheetComponent = (
               <Ionicons name="close" size={18} color={colors.textSecondary} />
             </Pressable>
           )}
-        </View>
-
-        {/* Breadcrumb */}
-        <View style={styles.breadcrumb}>
-          <Pressable
-            style={[
-              styles.breadcrumbItem,
-              step === "book" && styles.breadcrumbItemActive,
-            ]}
-            onPress={() => {
-              setDirection("backward");
-              setStep("book");
-            }}
-          >
-            <Text
-              style={[
-                styles.breadcrumbText,
-                step === "book" && styles.breadcrumbTextActive,
-              ]}
-            >
-              {selectedBook?.name ?? t("navigation.book")}
-            </Text>
-          </Pressable>
-          <Ionicons
-            name="chevron-forward"
-            size={14}
-            color={colors.textSecondary}
-          />
-          <Pressable
-            style={[
-              styles.breadcrumbItem,
-              step === "chapter" && styles.breadcrumbItemActive,
-            ]}
-            onPress={() => {
-              if (selectedBookId) {
-                setDirection(step === "verse" ? "backward" : "forward");
-                setStep("chapter");
-              }
-            }}
-            disabled={!selectedBookId}
-          >
-            <Text
-              style={[
-                styles.breadcrumbText,
-                step === "chapter" && styles.breadcrumbTextActive,
-              ]}
-            >
-              {selectedChapter || t("navigation.chapterShort")}
-            </Text>
-          </Pressable>
-          <Ionicons
-            name="chevron-forward"
-            size={14}
-            color={colors.textSecondary}
-          />
-          <View
-            style={[
-              styles.breadcrumbItem,
-              step === "verse" && styles.breadcrumbItemActive,
-            ]}
-          >
-            <Text
-              style={[
-                styles.breadcrumbText,
-                step === "verse" && styles.breadcrumbTextActive,
-              ]}
-            >
-              {t("navigation.verse")}
-            </Text>
-          </View>
         </View>
 
         {/* Search - only for books */}
