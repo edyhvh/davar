@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { type JSX, useEffect, useMemo } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import Animated, {
   interpolateColor,
@@ -184,6 +184,10 @@ export const VerseCard = ({
     return { backgroundColor };
   });
 
+  // Spanish fallback: when the user's language is Spanish but the verse has no
+  // Spanish translation available yet, we show a localised placeholder message
+  // ("verse.missingSpanishTranslation") instead of an empty string so the user
+  // knows the translation is pending rather than missing by error.
   const missingSpanishTranslation = t("verse.missingSpanishTranslation");
   const translationText =
     language === "es" && !verse.translation?.trim()

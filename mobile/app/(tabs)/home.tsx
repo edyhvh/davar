@@ -311,7 +311,6 @@ export default function HomeScreen() {
             <View style={styles.aboutGrid}>
               {(
                 [
-                  { label: t("home.about.items.legal"), icon: "balance" },
                   { label: t("home.about.items.terms"), icon: "file" },
                   { label: t("home.about.items.privacy"), icon: "shield" },
                   { label: t("home.about.items.support"), icon: "chat" },

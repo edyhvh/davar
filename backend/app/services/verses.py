@@ -1,8 +1,8 @@
 """
 Verses service - handles business logic for verse-related operations.
 """
+import importlib
 import logging
-import sys
 from pathlib import Path
 from typing import Optional
 from app.schemas.verse import VerseResponse, WordResponse, DssVariant, TranslationFootnote
@@ -14,13 +14,26 @@ from app.data_loaders.book_mapping import BookNameMapper as BookMapper
 from app.data_loaders.translit import TranslitLoader
 from app.data_loaders.dss_translit import DssTranslitLoader
 
-# Import LocalTransliterator for DSS word transliteration
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / "scripts"))
+# Import LocalTransliterator for DSS word transliteration.
+# The module lives under <project_root>/scripts/translit/ which is outside the
+# backend package, so we load it dynamically via importlib to avoid mutating
+# sys.path at module level.
+TRANSLIT_AVAILABLE = False
+LocalTransliterator = None  # type: ignore[assignment]
 try:
-    from translit.local_translit import LocalTransliterator
-    TRANSLIT_AVAILABLE = True
-except ImportError:
-    TRANSLIT_AVAILABLE = False
+    _scripts_dir = str(Path(__file__).resolve(
+    ).parent.parent.parent.parent / "scripts")
+    _spec = importlib.util.spec_from_file_location(
+        "translit.local_translit",
+        Path(_scripts_dir) / "translit" / "local_translit.py",
+    )
+    if _spec and _spec.loader:
+        _mod = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(_mod)
+        # type: ignore[assignment]
+        LocalTransliterator = _mod.LocalTransliterator
+        TRANSLIT_AVAILABLE = True
+except Exception:
     logging.warning(
         "LocalTransliterator not available - DSS transliteration will be skipped")
 
@@ -48,7 +61,6 @@ class VersesService:
 
         # Initialize DSS transliterator if available
         self.dss_transliterator = LocalTransliterator() if TRANSLIT_AVAILABLE else None
-        self.book_mapper = book_mapper
 
     def get_verses(
         self,

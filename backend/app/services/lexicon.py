@@ -47,7 +47,7 @@ class LexiconService:
             if not s:
                 return ''
             # Remove cantillation U+0591-U+05AF
-            s = __import__('re').sub(r"[\u0591-\u05AF]", "", s)
+            s = _CANTILLATION_RE.sub("", s)
             # Remove slash separators
             s = s.replace('/', '')
             return s.strip()
