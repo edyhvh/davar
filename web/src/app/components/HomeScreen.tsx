@@ -8,7 +8,7 @@ import {
   Scale,
   Shield,
 } from "lucide-react";
-import { useTranslation } from "../hooks/useTranslation";
+import { useTranslation, getSupportTelegramUrl } from "../hooks/useTranslation";
 
 interface HomeScreenProps {
   language: "en" | "es" | "he";
@@ -42,10 +42,30 @@ export function HomeScreen({ language }: HomeScreenProps) {
   const aboutItems = [
     { label: t("home.aboutItems.terms"), Icon: FileText, href: "/terms" },
     { label: t("home.aboutItems.privacy"), Icon: Shield, href: "/privacy" },
-    { label: t("home.aboutItems.support"), Icon: MessageCircle, href: "#" },
-    { label: t("home.aboutItems.bug"), Icon: Bug, href: "#" },
-    { label: t("home.aboutItems.github"), Icon: Github, href: "#" },
-    { label: t("home.aboutItems.feedback"), Icon: Info, href: "#" },
+    {
+      label: t("home.aboutItems.support"),
+      Icon: MessageCircle,
+      href: getSupportTelegramUrl(language),
+      target: "_blank",
+    },
+    {
+      label: t("home.aboutItems.bug"),
+      Icon: Bug,
+      href: getSupportTelegramUrl(language),
+      target: "_blank",
+    },
+    {
+      label: t("home.aboutItems.github"),
+      Icon: Github,
+      href: "https://github.com/edyhvh/davar",
+      target: "_blank",
+    },
+    {
+      label: t("home.aboutItems.feedback"),
+      Icon: Info,
+      href: getSupportTelegramUrl(language),
+      target: "_blank",
+    },
   ];
 
   return (
@@ -82,6 +102,10 @@ export function HomeScreen({ language }: HomeScreenProps) {
               <a
                 key={item.label}
                 href={item.href}
+                {...(item.target && {
+                  target: item.target,
+                  rel: "noopener noreferrer",
+                })}
                 className="flex items-center justify-center gap-2 text-sm text-[var(--text-primary)] hover:text-[var(--text-secondary-muted)]"
               >
                 <item.Icon className="w-4 h-4 text-[var(--copper-highlight)]" />

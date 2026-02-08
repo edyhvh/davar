@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import {
   ActivityIndicator,
+  Linking,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -15,7 +16,10 @@ import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import type { IconKey } from "@/src/constants/icons";
 import { downloadTranslationBundle } from "@/src/services/offlineSync";
-import { useTranslation } from "@/src/i18n/useTranslation";
+import {
+  useTranslation,
+  getSupportTelegramUrl,
+} from "@/src/i18n/useTranslation";
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
   StyleSheet.create({
@@ -213,7 +217,7 @@ export default function HomeScreen() {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const router = useRouter();
   type DownloadLanguage = "en" | "es";
   type DownloadStatus = "idle" | "downloading" | "completed";
@@ -359,10 +363,30 @@ export default function HomeScreen() {
                     icon: "shield",
                     onPress: () => router.push("/privacy"),
                   },
-                  { label: t("home.about.items.support"), icon: "chat" },
-                  { label: t("home.about.items.bug"), icon: "bug" },
-                  { label: t("home.about.items.github"), icon: "github" },
-                  { label: t("home.about.items.feedback"), icon: "feedback" },
+                  {
+                    label: t("home.about.items.support"),
+                    icon: "chat",
+                    onPress: () =>
+                      Linking.openURL(getSupportTelegramUrl(language)),
+                  },
+                  {
+                    label: t("home.about.items.bug"),
+                    icon: "bug",
+                    onPress: () =>
+                      Linking.openURL(getSupportTelegramUrl(language)),
+                  },
+                  {
+                    label: t("home.about.items.github"),
+                    icon: "github",
+                    onPress: () =>
+                      Linking.openURL("https://github.com/edyhvh/davar"),
+                  },
+                  {
+                    label: t("home.about.items.feedback"),
+                    icon: "feedback",
+                    onPress: () =>
+                      Linking.openURL(getSupportTelegramUrl(language)),
+                  },
                 ] as { label: string; icon: IconKey; onPress?: () => void }[]
               ).map((item) => (
                 <Pressable
