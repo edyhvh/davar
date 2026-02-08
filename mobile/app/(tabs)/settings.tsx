@@ -101,14 +101,6 @@ export default function SettingsScreen() {
   const setLanguage = useAppStore((state: AppState) => state.setLanguage);
   const showQumran = useAppStore((state: AppState) => state.showQumran);
   const setShowQumran = useAppStore((state: AppState) => state.setShowQumran);
-  const showFullChapter = useAppStore(
-    (state: AppState) => state.showFullChapter,
-  );
-  const setShowFullChapter = useAppStore(
-    (state: AppState) => state.setShowFullChapter,
-  );
-  const seferMode = useAppStore((state: AppState) => state.seferMode);
-  const setSeferMode = useAppStore((state: AppState) => state.setSeferMode);
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
   const setHebrewOnly = useAppStore((state: AppState) => state.setHebrewOnly);
   const showCantillation = useAppStore(
@@ -122,7 +114,6 @@ export default function SettingsScreen() {
   const colors = getColors(themeMode);
   const { t, isRTL } = useTranslation();
   const styles = useMemo(() => createStyles(colors, isRTL), [colors, isRTL]);
-  const seferDisabled = !hebrewOnly;
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
@@ -196,25 +187,8 @@ export default function SettingsScreen() {
 
         <View style={styles.divider} />
 
-        {/* Full Chapter */}
-        <View style={styles.row}>
-          <View style={styles.rowContent}>
-            <View style={styles.iconContainer}>
-              <AppIcon name="list" size={18} color={colors.textSecondary} />
-            </View>
-            <View style={styles.textContainer}>
-              <Text style={styles.label}>
-                {t("settings.fullChapter.title")}
-              </Text>
-              <Text style={styles.subtitle}>
-                {t("settings.fullChapter.subtitle")}
-              </Text>
-            </View>
-          </View>
-          <OnOffButton value={showFullChapter} onChange={setShowFullChapter} />
-        </View>
-
-        <View style={styles.divider} />
+        {/* NOTE: Full Chapter and Sefer Style settings are intentionally removed
+            until the feature is ready for implementation. */}
 
         {/* Hebrew Only */}
         <View style={styles.row}>
@@ -231,40 +205,6 @@ export default function SettingsScreen() {
           </View>
           <OnOffButton value={hebrewOnly} onChange={setHebrewOnly} />
         </View>
-
-        {showFullChapter ? (
-          <>
-            <View style={styles.divider} />
-
-            {/* Sefer Style */}
-            <View style={styles.row}>
-              <View style={styles.rowContent}>
-                <View style={styles.iconContainer}>
-                  <AppIcon name="book" size={18} color={colors.textSecondary} />
-                </View>
-                <View style={styles.textContainer}>
-                  <Text style={styles.label}>
-                    {t("settings.seferStyle.title")}
-                  </Text>
-                  <Text style={styles.subtitle}>
-                    {t("settings.seferStyle.subtitle")}
-                  </Text>
-                </View>
-              </View>
-              <OnOffButton
-                value={seferMode}
-                onChange={setSeferMode}
-                disabled={seferDisabled}
-                onDisabledPress={() =>
-                  Alert.alert(
-                    t("settings.seferStyle.warningTitle"),
-                    t("settings.seferStyle.warningMessage"),
-                  )
-                }
-              />
-            </View>
-          </>
-        ) : null}
 
         <View style={styles.divider} />
 
