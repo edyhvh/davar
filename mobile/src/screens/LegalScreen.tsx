@@ -1,6 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import {
-  ActivityIndicator,
   Linking,
   Pressable,
   ScrollView,
@@ -12,13 +11,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import Markdown from "react-native-markdown-display";
 
-import { getColors, radii, spacing, typography } from "@/src/theme";
+import { getColors, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
+import { getLegalDoc, type LegalKind } from "../../../locales/legalContent";
 
 interface LegalScreenProps {
-  title: string;
-  docUrl: string;
+  kind: LegalKind;
 }
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
@@ -33,7 +32,10 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     header: {
       paddingHorizontal: spacing[6],
       paddingTop: spacing[6],
-      paddingBottom: spacing[4],
+      paddingBottom: spacing[5],
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border,
+      marginBottom: spacing[5],
     },
     backButton: {
       alignSelf: "flex-start",
@@ -42,18 +44,18 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       borderColor: colors.border,
       paddingHorizontal: spacing[4],
       paddingVertical: spacing[2],
-      marginBottom: spacing[4],
-      backgroundColor: colors.surface,
+      marginBottom: spacing[3],
+      backgroundColor: "transparent",
     },
     backText: {
-      fontFamily: typography.families.latinUIMedium,
+      fontFamily: "Jost_400Regular",
       fontSize: typography.sizes.bodySmall,
       color: colors.textPrimary,
-      letterSpacing: 1,
+      letterSpacing: 1.6,
       textTransform: "uppercase",
     },
     title: {
-      fontFamily: typography.families.hebrewUI,
+      fontFamily: "Jost_400Regular",
       fontSize: 30,
       color: colors.textPrimary,
       marginBottom: spacing[2],
@@ -62,6 +64,31 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       fontFamily: typography.families.latinMeaning,
       fontSize: typography.sizes.bodySmall,
       color: colors.textSecondary,
+      lineHeight: 20,
+    },
+    metaRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      alignItems: "center",
+      gap: spacing[2],
+      marginBottom: spacing[4],
+    },
+    metaLabel: {
+      fontFamily: "Jost_400Regular",
+      fontSize: 11,
+      letterSpacing: 1.6,
+      textTransform: "uppercase",
+      color: colors.textSecondary,
+    },
+    metaValue: {
+      fontFamily: "Arimo_400Regular",
+      fontSize: typography.sizes.bodySmall,
+      color: colors.textPrimary,
+    },
+    divider: {
+      height: 1,
+      backgroundColor: colors.border,
+      marginBottom: spacing[5],
     },
     content: {
       paddingHorizontal: spacing[6],
@@ -75,42 +102,43 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       paddingVertical: spacing[6],
     },
     card: {
-      borderRadius: radii.xl,
-      backgroundColor: colors.surface,
-      padding: spacing[5],
-      borderWidth: 1,
-      borderColor: colors.border,
+      borderRadius: 0,
+      backgroundColor: "transparent",
+      padding: 0,
+      borderWidth: 0,
+      borderColor: "transparent",
     },
   });
 
-export function LegalScreen({ title, docUrl }: LegalScreenProps) {
+export function LegalScreen({ kind }: LegalScreenProps) {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const doc = useMemo(() => getLegalDoc(kind), [kind]);
   const markdownStyles = useMemo(
     () => ({
       body: {
-        fontFamily: typography.families.hebrewScripture,
+        fontFamily: "Arimo_400Regular",
         fontSize: typography.sizes.body,
         lineHeight: 26,
         color: colors.textPrimary,
       },
       heading1: {
-        fontFamily: typography.families.hebrewUI,
+        fontFamily: "Jost_400Regular",
         fontSize: 24,
         color: colors.textPrimary,
         marginTop: spacing[6],
         marginBottom: spacing[2],
       },
       heading2: {
-        fontFamily: typography.families.hebrewUI,
+        fontFamily: "Jost_400Regular",
         fontSize: 20,
         color: colors.textPrimary,
         marginTop: spacing[5],
         marginBottom: spacing[2],
       },
       heading3: {
-        fontFamily: typography.families.hebrewUI,
+        fontFamily: "Jost_400Regular",
         fontSize: 18,
         color: colors.textPrimary,
         marginTop: spacing[4],
@@ -147,39 +175,8 @@ export function LegalScreen({ title, docUrl }: LegalScreenProps) {
     }),
     [colors],
   );
-  const { t } = useTranslation();
   const router = useRouter();
-  const [markdown, setMarkdown] = useState<string>("");
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const loadDoc = async () => {
-      try {
-        setIsLoading(true);
-        setError(null);
-        const response = await fetch(docUrl, { signal: controller.signal });
-        if (!response.ok) {
-          throw new Error("Failed to load legal content.");
-        }
-        const text = await response.text();
-        setMarkdown(text);
-      } catch (err) {
-        if ((err as { name?: string }).name === "AbortError") {
-          return;
-        }
-        setError(t("errors.uiFallbackMessageMobile"));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    void loadDoc();
-
-    return () => controller.abort();
-  }, [docUrl, t]);
+  const { t } = useTranslation();
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
@@ -195,28 +192,27 @@ export function LegalScreen({ title, docUrl }: LegalScreenProps) {
             >
               <Text style={styles.backText}>{t("navigation.backToApp")}</Text>
             </Pressable>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.subtitle}>
-              Quiet clarity for important agreements and commitments.
-            </Text>
+            <Text style={styles.title}>{doc.title}</Text>
+            <View style={styles.divider} />
+            {doc.lastUpdated && (
+              <View style={styles.metaRow}>
+                <Text style={styles.metaLabel}>Last Updated</Text>
+                <Text style={styles.metaValue}>{doc.lastUpdated}</Text>
+              </View>
+            )}
+            <View style={styles.divider} />
           </View>
 
           <View style={styles.card}>
-            {isLoading && (
-              <ActivityIndicator size="small" color={colors.textSecondary} />
-            )}
-            {!isLoading && error && <Text style={styles.status}>{error}</Text>}
-            {!isLoading && !error && (
-              <Markdown
-                style={markdownStyles}
-                onLinkPress={(url) => {
-                  void Linking.openURL(url);
-                  return false;
-                }}
-              >
-                {markdown}
-              </Markdown>
-            )}
+            <Markdown
+              style={markdownStyles}
+              onLinkPress={(url) => {
+                void Linking.openURL(url);
+                return false;
+              }}
+            >
+              {doc.body}
+            </Markdown>
           </View>
         </ScrollView>
       </View>

@@ -1,5 +1,4 @@
 import { join } from "path";
-import app from "./dist/index.html";
 
 const port = Number(process.env.PORT ?? 3002);
 const distDir = join(import.meta.dir, "dist");
@@ -19,7 +18,10 @@ Bun.serve({
       return new Response("Not Found", { status: 404 });
     }
 
-    return app;
+    const htmlFile = Bun.file(join(distDir, "index.html"));
+    return new Response(htmlFile, {
+      headers: { "Content-Type": "text/html; charset=utf-8" },
+    });
   },
 });
 
