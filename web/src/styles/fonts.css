@@ -9,7 +9,7 @@
 @font-face {
   font-family: "DeadSeaScrolls-Regular";
   src:
-    url("/fonts/Deadseascrolls-Regular.ttf") format("truetype"),
+    url("../../public/fonts/Deadseascrolls-Regular.ttf") format("truetype"),
     local("Cardo"),
     local("Times New Roman");
   font-style: normal;
