@@ -127,7 +127,6 @@ Davar accepts voluntary donations for development, maintenance, and expansion. D
 Methods (via Website):
 
 - GitHub Sponsors (processed by GitHub; we receive after fees).
-- Cryptocurrency to listed wallets (volatile; we are not responsible for fluctuations/fees/risks).
 
 Donations used exclusively for project purposes. Periodic transparency reports posted (aggregate totals, categories). A portion may be voluntarily shared with licensors (e.g., TTH maintenance). Donors confirm legitimate sources; we may reject/return violating donations. No tax receipts issued.
 

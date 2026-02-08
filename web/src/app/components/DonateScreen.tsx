@@ -1,67 +1,9 @@
 import React from 'react';
-import { CopyableWallet } from './CopyableWallet';
 import { useTranslation, type AppLanguage } from '../hooks/useTranslation';
 
 const DONATION_CONFIG = {
-  wallets: {
-    ethereum: 'REMOVED',
-    bitcoin: 'REMOVED',
-    solana: 'REMOVED',
-  },
   githubSponsor: 'https://github.com/sponsors/edyhvh',
 } as const;
-
-const EthereumIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 320 512" fill="currentColor">
-    <path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z" />
-  </svg>
-);
-
-const BitcoinIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 512 512" fill="currentColor">
-    <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zm-141.651-35.33c4.937-32.999-20.191-50.739-54.55-62.573l11.146-44.702-27.213-6.781-10.851 43.524c-7.154-1.783-14.502-3.464-21.803-5.13l10.929-43.81-27.198-6.781-11.153 44.686c-5.922-1.349-11.735-2.682-17.377-4.084l.031-.14-37.53-9.37-7.239 29.062s20.191 4.627 19.765 4.913c11.022 2.75 13.007 10.056 12.675 15.846l-12.7 50.864c.759.194 1.744.473 2.825.905l-2.873-.716-17.8 71.333c-1.352 3.352-4.785 8.373-12.53 6.465.272.396-19.765-4.913-19.765-4.913l-13.5 31.097 35.417 8.833c6.586 1.647 13.034 3.37 19.398 5.002l-11.26 45.132 27.198 6.781 11.153-44.732c7.421 2.016 14.63 3.879 21.678 5.635l-11.113 44.508 27.213 6.781 11.26-45.07c46.38 8.79 81.26 5.247 95.956-36.727 11.826-33.95-.588-53.53-25.0-66.148 17.777-4.106 31.199-15.82 34.744-39.995zm-62.161 87.159c-8.401 33.95-65.826 15.606-84.388 10.999l14.93-59.792c18.562 4.632 78.098 13.812 69.458 48.793zm8.402-87.646c-7.674 30.862-55.225 15.178-70.739 11.324l13.532-54.432c15.513 3.854 65.436 11.083 57.207 43.108z" />
-  </svg>
-);
-
-const SolanaIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 397.7 311.7" fill="currentColor">
-    <path d="M64.6 237.9c2.4-2.4 5.7-3.8 9.2-3.8h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7z" />
-    <path d="M64.6 120.1c2.4-2.4 5.7-3.8 9.2-3.8h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7z" />
-    <path d="M64.6 3.8C67.1 1.4 70.4 0 73.8 0h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1L64.6 3.8z" />
-  </svg>
-);
-
-const TetherIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 339.43 295.27">
-    <path
-      fill="currentColor"
-      d="M62.15,1.45l-61.89,130a2.52,2.52,0,0,0,.54,2.94L167.95,294.56a2.55,2.55,0,0,0,3.53,0L338.63,134.4a2.52,2.52,0,0,0,.54-2.94l-61.89-130A2.5,2.5,0,0,0,275,0H64.45a2.5,2.5,0,0,0-2.3,1.45h0Z"
-    />
-    <path
-      className="crypto-icon-internal"
-      d="M191.19,144.8v0c-1.2.09-7.4,0.46-21.23,0.46-11,0-18.81-.33-21.55-0.46v0c-42.51-1.87-74.24-9.27-74.24-18.13s31.73-16.25,74.24-18.15v28.91c2.78,0.19,10.93.67,21.74,0.67,13,0,19.82-.56,21-0.66v-28.9c42.42,1.89,74.08,9.29,74.08,18.13s-31.65,16.24-74.08,18.12h0Zm0-39.25V79.68h59.2V40.23H89.21V79.68h59.2v25.86c-48.11,2.21-84.29,11.74-84.29,23.16s36.18,20.94,84.29,23.16v82.9h42.78v-82.93c48-2.21,84.12-11.73,84.12-23.14s-36.09-20.93-84.12-23.15h0Z"
-    />
-  </svg>
-);
-
-const USDCIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 2000 2000">
-    <path
-      fill="currentColor"
-      d="M1000 2000c554.17 0 1000-445.83 1000-1000S1554.17 0 1000 0 0 445.83 0 1000s445.83 1000 1000 1000z"
-    />
-    <path
-      className="crypto-icon-internal usdc-internal"
-      fill="#fff"
-      d="M787.5 1595.83c-325-116.66-491.67-479.16-370.83-800 62.5-166.67 191.66-295.84 358.33-358.34 16.67-8.33 25-20.83 25-41.66v-58.34c0-16.66-8.33-29.16-25-33.33-4.17 0-12.5 0-16.67 4.17-395.83 125-612.5 545.83-487.5 941.66 75 233.34 254.17 412.5 487.5 487.5 16.67 8.34 33.34 0 37.5-16.66 4.17-4.17 4.17-8.34 4.17-16.67v-58.33c0-12.5-12.5-29.17-37.5-37.5zm479.16-1208.33c-16.66-8.33-25-20.83-25-41.66v-58.34c0-16.66 8.34-29.16 25-33.33 4.17 0 12.5 0 16.67 4.17 395.83 125 612.5 545.83 487.5 941.66-75 233.34-254.17 412.5-487.5 487.5-16.67 8.34-33.34 0-37.5-16.66-4.17-4.17-4.17-8.34-4.17-16.67v-58.33c0-12.5 12.5-29.17 37.5-37.5 325-116.66 491.67-479.16 370.83-800-62.5-166.67-191.66-295.84-358.33-358.34z"
-    />
-    <path
-      className="crypto-icon-internal usdc-internal"
-      fill="#fff"
-      d="M1245.83 1058.33c0-145.83-87.5-195.83-262.5-216.66-125-16.67-150-50-150-108.34s41.67-95.83 125-95.83c75 0 116.67 25 137.5 87.5 4.17 12.5 16.67 20.83 29.17 20.83h66.66c16.67 0 29.17-12.5 29.17-29.16v-4.17c-16.67-91.67-91.67-162.5-187.5-170.83v-100c0-16.67-12.5-29.17-33.33-33.34h-62.5c-16.67 0-29.17 12.5-33.34 33.34v95.83c-125 16.67-216.67 91.67-216.67 204.17 0 154.17 120.83 195.83 262.5 216.67 137.5 20.83 162.5 58.33 162.5 112.5 0 83.33-66.67 108.33-141.67 108.33-108.33 0-150-45.83-166.67-108.33-4.17-16.67-16.67-25-33.33-25h-66.67c-16.67 0-29.16 12.5-29.16 29.17v4.16c16.66 116.67 100 179.17 229.16 195.83v100c0 16.67 12.5 29.17 33.34 33.34h62.5c16.66 0 33.33-16.67 33.33-33.34v-95.83c141.67-20.83 229.17-112.5 229.17-212.5z"
-    />
-  </svg>
-);
 
 const GithubSponsorsIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 16 16" fill="currentColor">
@@ -78,6 +20,17 @@ const CreditCardIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const TelegramIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M9.993 15.43 9.66 20.06c.506 0 .726-.217.99-.478l2.37-2.28 4.91 3.595c.902.498 1.54.235 1.76-.832l3.2-15.02c.293-1.326-.48-1.845-1.33-1.53L2.1 9.18c-1.29.49-1.27 1.19-.22 1.51l4.86 1.52 11.28-7.12c.53-.35 1.01-.16.61.19L9.993 15.43z" />
+  </svg>
+);
+
 interface DonateScreenProps {
   language: AppLanguage;
 }
@@ -88,36 +41,6 @@ export function DonateScreen({ language }: DonateScreenProps) {
     <div className="min-h-[60vh] flex items-center justify-center">
       <div className="text-center">
         <div className="space-y-6 text-[var(--text-secondary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
-          <CopyableWallet
-            icon={
-              <div className="flex items-center gap-1">
-                <EthereumIcon className="w-6 h-6" />
-                <TetherIcon className="w-5 h-5" />
-                <USDCIcon className="w-5 h-5" />
-              </div>
-            }
-            name="Ethereum"
-            address={DONATION_CONFIG.wallets.ethereum}
-          />
-
-          <CopyableWallet
-            icon={<BitcoinIcon className="w-6 h-6" />}
-            name="Bitcoin"
-            address={DONATION_CONFIG.wallets.bitcoin}
-          />
-
-          <CopyableWallet
-            icon={
-              <div className="flex items-center gap-1">
-                <SolanaIcon className="w-6 h-6" />
-                <TetherIcon className="w-5 h-5" />
-                <USDCIcon className="w-5 h-5" />
-              </div>
-            }
-            name="Solana"
-            address={DONATION_CONFIG.wallets.solana}
-          />
-
           <div className="flex items-center justify-center gap-3 text-base">
             <div className="flex items-center gap-1">
               <GithubSponsorsIcon className="w-6 h-6" />
@@ -133,6 +56,24 @@ export function DonateScreen({ language }: DonateScreenProps) {
               @edyhvh
             </a>
           </div>
+
+          <p className="text-sm text-[var(--text-secondary)]">
+            {t('donate.contactPrefix')}{' '}
+            <span className="inline-flex items-center gap-2">
+              <span className="inline-flex items-center gap-1 font-medium text-[var(--text-primary)]">
+                <TelegramIcon className="w-4 h-4" />
+                {t('donate.telegramLabel')}
+              </span>
+              <a
+                href="https://t.me/edyhvh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
+              >
+                @edyhvh
+              </a>
+            </span>
+          </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6 pt-6">
             <a
