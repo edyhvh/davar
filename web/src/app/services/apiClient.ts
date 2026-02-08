@@ -3,17 +3,19 @@
  * Handles authenticated requests with API key validation and better error reporting.
  */
 
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:2220";
+const API_BASE_URL = process.env.PUBLIC_API_BASE_URL || "http://localhost:2220";
 
 // Load API key once at module level
-const RAW_API_KEY = import.meta.env.VITE_API_KEY;
+const RAW_API_KEY = process.env.PUBLIC_API_KEY;
 const API_KEY = RAW_API_KEY?.trim();
 
+const publicNodeEnv = process.env.PUBLIC_NODE_ENV ?? "production";
+const isDev = publicNodeEnv === "development";
+
 // Early validation in development to catch missing key immediately
-if (import.meta.env.DEV && !API_KEY) {
+if (isDev && !API_KEY) {
   console.error(
-    "[Davar API Client] Missing VITE_API_KEY in .env file or environment.\n" +
+    "[Davar API Client] Missing PUBLIC_API_KEY in .env file or environment.\n" +
       "All API requests will fail until this is configured.",
   );
 }
@@ -32,7 +34,7 @@ export const apiRequest = async <T>(
   if (!API_KEY || API_KEY.trim() === "") {
     const error: ApiError = new Error(
       "API key is missing or empty. Cannot make authenticated request.\n" +
-        "Please set VITE_API_KEY in your .env file or environment variables.",
+        "Please set PUBLIC_API_KEY in your .env file or environment variables.",
     );
     error.name = "MissingApiKeyError";
     throw error;
