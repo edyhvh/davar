@@ -1132,6 +1132,9 @@ export default function App() {
                       words={currentVerseData.words}
                       dssVariants={currentVerseData.dss}
                       selectedWord={selectedWord?.text ?? null}
+                      translation_footnotes={
+                        currentVerseData.translation_footnotes
+                      }
                       previousVerseSnippet={
                         currentVerse > 1
                           ? t("verse.previousSnippet")

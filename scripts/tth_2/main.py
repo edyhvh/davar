@@ -17,6 +17,7 @@ Author: Davar Project
 import sys
 import os
 import logging
+import json
 from pathlib import Path
 from typing import List, Optional
 
@@ -114,6 +115,7 @@ USAGE:
   python main.py postprocess all          Post-process all JSON files
   python main.py validate <book>          Validate single book JSON file
   python main.py validate all             Validate all JSON files
+  python main.py process <docx> [--books <book1> <book2> ...]  Process specific DOCX file for specific books
   python main.py all                      Full pipeline: split + convert + postprocess
   python main.py books                    List available books
   python main.py --help                   Show this help
@@ -124,6 +126,7 @@ EXAMPLES:
   python scripts/tth_2/main.py postprocess lukas # Fix formatting in lukas.json
   python scripts/tth_2/main.py validate amos     # Check amos.json for issues
   python scripts/tth_2/main.py validate all      # Check all JSON files
+  python scripts/tth_2/main.py process data/tth_2/raw/romanos.docx --books romanos  # Process specific book
   python scripts/tth_2/main.py all               # Complete workflow
 
 OPTIONS FOR POSTPROCESS:
@@ -421,6 +424,89 @@ def validate_all_books(verbose: bool = True) -> bool:
     return valid_books == total_books
 
 
+def process_docx_books(docx_path: str, book_keys: List[str]):
+    """Process a specific DOCX file for specific books: split → convert → postprocess → validate."""
+    docx_file = Path(docx_path)
+    if not docx_file.exists():
+        print(f"❌ DOCX file not found: {docx_path}")
+        return False
+
+    print(f"Processing {docx_file.name} for books: {', '.join(book_keys)}")
+    print()
+
+    # Validate book keys
+    invalid_books = [book for book in book_keys if book not in BOOKS_INFO]
+    if invalid_books:
+        print(f"❌ Unknown books: {', '.join(invalid_books)}")
+        print("Use 'python main.py books' to see available books")
+        return False
+
+    splitter = TTH2BookSplitter()
+
+    # Step 1: Convert DOCX to temporary markdown
+    print("STEP 1: Converting DOCX to markdown")
+    temp_md_file = docx_file.with_suffix('.md')
+    try:
+        convert_docx(str(docx_file), str(temp_md_file))
+        print("✓ DOCX converted to markdown")
+    except Exception as e:
+        print(f"❌ DOCX conversion failed: {e}")
+        return False
+
+    # Step 2: Split specific books from markdown
+    print("\nSTEP 2: Extracting books from markdown")
+    try:
+        extracted = splitter.split_complete_markdown(str(temp_md_file), str(MARKDOWN_DIR), books_to_extract=book_keys, verbose=True)
+        if not extracted:
+            print("❌ No books were extracted")
+            temp_md_file.unlink(missing_ok=True)
+            return False
+        print(f"✓ Extracted {len(extracted)} books")
+    except Exception as e:
+        print(f"❌ Book extraction failed: {e}")
+        temp_md_file.unlink(missing_ok=True)
+        return False
+
+    # Clean up temporary file
+    temp_md_file.unlink(missing_ok=True)
+
+    # Step 3: Convert extracted books to JSON
+    print("\nSTEP 3: Converting to JSON")
+    converted = 0
+    for book_key in book_keys:
+        if convert_book_to_json(book_key, verbose=True):
+            converted += 1
+
+    if converted != len(book_keys):
+        print(f"❌ Only {converted}/{len(book_keys)} books converted successfully")
+        return False
+
+    # Step 4: Post-process JSON files
+    print("\nSTEP 4: Post-processing JSON")
+    postprocessed = 0
+    for book_key in book_keys:
+        if postprocess_book(book_key, verbose=False):
+            postprocessed += 1
+
+    if postprocessed != len(book_keys):
+        print(f"❌ Only {postprocessed}/{len(book_keys)} books post-processed successfully")
+        return False
+
+    # Step 5: Validate JSON files
+    print("\nSTEP 5: Validating JSON")
+    validated = 0
+    for book_key in book_keys:
+        if validate_book(book_key, verbose=True):
+            validated += 1
+
+    if validated != len(book_keys):
+        print(f"❌ Only {validated}/{len(book_keys)} books validated successfully")
+        return False
+
+    print(f"\n🎉 Successfully processed {len(book_keys)} books from {docx_file.name}!")
+    return True
+
+
 def list_books():
     """List all available books."""
     print("AVAILABLE BOOKS:")
@@ -523,6 +609,37 @@ def main():
                 sys.exit(1)
             success = validate_book(book_key)
             sys.exit(0 if success else 1)
+
+    elif command == 'process':
+        if len(sys.argv) < 3:
+            print("Usage: python main.py process <docx_path> [--books <book1> <book2> ...]")
+            print("If --books is not specified, attempts to infer book from DOCX filename")
+            sys.exit(1)
+
+        docx_path = sys.argv[2]
+        
+        # Parse --books argument
+        book_keys = []
+        if '--books' in sys.argv:
+            books_index = sys.argv.index('--books')
+            if books_index + 1 < len(sys.argv):
+                book_keys = sys.argv[books_index + 1:]
+            else:
+                print("Error: --books requires at least one book key")
+                sys.exit(1)
+        else:
+            # Try to infer book from filename
+            docx_name = Path(docx_path).stem.lower()
+            if docx_name in BOOKS_INFO:
+                book_keys = [docx_name]
+                print(f"Inferred book '{docx_name}' from DOCX filename")
+            else:
+                print(f"Could not infer book from DOCX filename '{docx_name}'")
+                print("Please specify books with --books option")
+                sys.exit(1)
+
+        success = process_docx_books(docx_path, book_keys)
+        sys.exit(0 if success else 1)
 
     elif command == 'all':
         print("Running full TTH2 pipeline...")

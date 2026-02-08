@@ -6,6 +6,7 @@ import type {
   DssVariant,
   VerseResponse,
   WordResponse,
+  TranslationFootnote,
 } from "../services/verseService";
 import {
   parseHebrewWord,
@@ -43,6 +44,7 @@ interface VerseDisplayProps {
   selectedWord?: string | null;
   onSwipeUp?: () => void;
   onSwipeDown?: () => void;
+  translation_footnotes?: TranslationFootnote[];
 }
 
 export function VerseDisplay({
@@ -71,6 +73,7 @@ export function VerseDisplay({
   selectedWord,
   onSwipeUp,
   onSwipeDown,
+  translation_footnotes,
 }: VerseDisplayProps) {
   const { t } = useTranslation(language);
   const spanishMissingTranslation = t("verse.missingSpanishTranslation");
@@ -252,7 +255,9 @@ export function VerseDisplay({
           >
             {language === "es" && !translation.trim()
               ? spanishMissingTranslation
-              : renderTranslation(translation)}
+              : renderTranslation(translation, {
+                  hideSuperscripts: false,
+                })}
           </div>
         </SwipeIndicator>
       )}

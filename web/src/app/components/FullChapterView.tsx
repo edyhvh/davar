@@ -198,7 +198,9 @@ export function FullChapterView({
                   [
                   {language === "es" && !(verse.translation ?? "").trim()
                     ? spanishMissingTranslation
-                    : renderTranslation(verse.translation ?? "")}
+                    : renderTranslation(verse.translation ?? "", {
+                        hideSuperscripts: false,
+                      })}
                   ]
                 </div>
               )}
