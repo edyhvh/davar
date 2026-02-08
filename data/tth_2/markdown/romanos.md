@@ -560,6 +560,1320 @@ Porque por ti somos matados todo el día,
 
 **24** a los cuales también llamó, a nosotros, no solamente de los iehudim[^94], sino también de los gentiles.
 
+**25** Como también en Hoshea dice:
+
+Y diré al que no era mi pueblo[^95]:
+ “Pueblo mío eres tú”,
+y amaré a la no amada[^96].
+
+**26** Y será que en el lugar donde se les dice:
+“No son mi pueblo”,
+ se les dirá: “Hijos del EL vivo[^97]”.
+
+**27** Y Ieshaiáhu clama acerca de Israel:
+
+Si fuese tu pueblo Israel como la arena del mar,
+ un remanente volverá por Él,
+la consumación está afilada, desbordante de justicia.Porque una finalización y afilamiento,
+ Adonai יהוה Tzebaot hace en medio de toda la tierra[^98].
+
+**29** Y como antes dijo Ieshaiáhu:
+
+¡Si יהוה Tzebaot no nos hubiera dejado sobreviviente,
+
+ casi como Sedom hubiéramos sido,
+a Gamoráh seríamos semejantes[^99]!
+
+*La justicia que es por la emunah*
+
+**30** ¿Y qué diremos? Que los gentiles que no perseguían tras la justicia[^100] han tomado la justicia, la justicia que es por la emunah[^101].
+
+**31** E Israel, que perseguía tras una Torah de justicia, no alcanzó esa Torah.
+
+**32** ¿Por qué? Porque no *era* de la emunah, sino como por obras; tropezaron en la piedra de tropiezo,
+
+**33** como está escrito:
+
+Heme aquí, fundé en Tzión
+ una piedra de golpe y roca de tropiezo,
+y todo el que sea afirmado por Él
+ no se avergonzará[^102].
+
+**10**
+
+**1** Hermanos, ciertamente el deseo de mi corazón y la tefilah[^103] a Elohim es por Israel para salvación.
+
+**2** Porque yo les doy testimonio que tienen celo de Elohim, pero no conforme al conocimiento.
+
+**3** Porque, no conociendo la justicia de Elohim[^104] y buscando establecer la justicia de ellos mismos, a la justicia de Elohim no son sujetos.
+
+**4** Porque el último recurso[^105] de la Torah es el Mesías, para justicia a todo el que ha sido afirmado.
+
+**5** Porque Moshéh escribe acerca de la justicia que es de la Torah: Los cuales hará el hombre y vivirá en ellos[^106].
+
+**6** Y la justicia que es de la emunah[^107], dice así: No digas en tu corazón: ¿Quién subirá por nosotros a los cielos[^108]? –esto es, para hacer bajar al Mesías.
+
+**7** O, ¿quién descenderá al abismo? –esto es, para hacer subir al Mesías de los muertos.
+
+**8** Pero, ¿qué dice? Porque muy cercana a ti está la palabra, en tu boca y en tu corazón, para hacerla[^109]. Esta es la palabra de la emunah que estamos anunciando.
+
+**9** Porque si confiesas con tu boca: ¡ יהוהYeshúa! Y eres afirmado en tu corazón que Elohim lo levantó de los muertos, serás salvo.
+
+**10** Porque con el corazón se es afirmado para justicia, y con la boca se confiesa para salvación.
+
+**11** Porque dice la Escritura:
+
+y todo el que sea afirmado por Él
+
+ no se avergonzará[^110]
+
+**12** Porque no hay diferencia entre el iehudí[^111] y el ievaní[^112], porque Él es Adón[^113] de todos, rico para todos lo que lo llaman;
+
+**13** porque todo el que llame por nombre יהוה, será hecho escapar[^114].
+
+**14** ¿Y cómo llamarán al que por el cual no han sido afirmados? ¿Y cómo serán afirmados por Él, acerca del cual no han escuchado? ¿Y cómo escucharán sin *que haya *anunciador?
+**15** ¿Y cómo anunciarán si no han sido enviados? Como está escrito:
+
+Qué hermosos son sobre los montes
+ los pies del que da buenas noticias,
+quien hace escuchar el shalom[^115],
+ quien da buenas noticias de bien[^116].
+
+**16** Pero no todos han escuchado a la Besorah[^117], porque Ieshaiáhu dijo:
+
+יהוה, ¿quién ha sido afirmado[^118] a[^119] nuestro hacer oír[^120]?
+
+**17** Por lo tanto, la emunah *proviene* del oír, y el oír por medio de la Palabra del Mesías[^121].
+**18** Pero yo digo: ¿No han oído? Porque:
+
+Por toda la tierra salió la voz de ellos,
+
+ y por el extremo del Tevel sus palabras[^122].
+
+**19** Pero yo digo: ¿No ha conocido Israel? Primero Moshéh dice:
+
+Y Yo, los provocaré a celos con lo que no es pueblo;
+
+ con una nación marchita les provocaré rechazo[^123].
+
+**20** Y Ieshaiáhu dice resueltamente:
+
+Me dejé hallar a los que no me procuraban;
+ me dejé buscar a los que no me preguntaban[^124].
+
+**21** Pero a Israel dijo:
+
+Extendí mis manos todo el día hacia un pueblo rebelde,
+
+ quienes caminan por el camino no bueno, tras sus pensamientos[^125].
+
+*La elección del remanente de Israel*
+
+**11**
+
+**1** Y por lo tanto, digo, ¿ha desechado Elohim a su pueblo? ¡Profanación! Porque yo también soy israelí[^126], de la simiente de Abraham, de la tribu de Biniamín.
+
+**2** No ha desechado Elohim a su pueblo que desde el Kédem[^127] lo conoció. ¿No saben lo que dice la Escritura en Eliyáhu, cuando está haciendo tefilah a יהוה acerca de Israel, diciendo:
+
+**3** יהוה, a tus profetas han matado con espada; y he quedado yo, sólo yo, y buscan mi vida para tomarla[^128]?
+
+**4** Pero, ¿qué le responde la palabra de Elohim? He dejado en Israel[^129] siete mil, todas las rodillas que no se han inclinado a Baal[^130].
+
+**5** Así también en este tiempo ha habido un __remanente__ conforme a la elección del favor[^131].
+
+**6** Y si es por favor, ya no es por obras; porque si fuera así, el favor ya no sería favor.
+
+**7** ¿Y qué es esto? Lo que buscaba Israel no lo alcanzó; pero la elección lo ha alcanzado, y los otros estuvieron cubiertos con velo,
+
+**8** como está escrito:
+
+Porque ha derramado sobre ustedes יהוה un espíritu de sueño profundo,
+
+ y Él ha cerrado sus ojos,
+
+y a sus cabezas, ha cubierto con velo[^132],
+
+ hasta este día.
+
+**9** Y David dijo:
+
+Será su mesa delante de ellos por trampa,
+
+ y para los que están en bienestar, por señuelo.
+
+**10** Se oscurecerán sus ojos de ver,
+
+ y sus lomos continuamente haz agitar[^133].
+
+*Los gentiles plantados en el olivo natural*
+
+**11** Por lo tanto, digo, ¿tropezaron para que caigan? ¡Profanación! Sino que por el tropiezo de ellos, la salvación ha sido para los gentiles, para provocarlos a celo.
+
+**12** Y si su transgresión es la riqueza del olam, y su caída la riqueza de los gentiles, ¿cuánto más será su llenura?
+
+**13** Y a ustedes, gentiles, hablo yo; y conforme soy enviado de los gentiles, mi servicio honro,
+
+**14** quizá pueda provocar a celo a *los de *mi carne y hacer salvos a algunos de ellos.
+
+**15** Porque si su rechazo es la reconciliación del olam, ¿qué *será *la toma, sino la vida de los muertos?
+
+**16** Y si la primicia es santa, también la masa; y si la raíz es santa, también las ramas.
+
+**17** Y si algunas de las ramas son quebradas, y tú siendo acebuche[^134], fuiste plantado en ellas, y has llegado a ser aliado de la raíz y el aceite del olivo,
+
+**18** no te jactes contra las ramas; y si te jactas, no cargas tú a la raíz, sino que la raíz te carga a ti.
+
+**19** Y dirás tú: Las ramas fueron quebradas para yo ser plantado.
+
+**20** Bien; porque no se afirmaron fueron quebradas, y tú por la emunah[^135] estás en pie; no te enorgullezcas, sino teme.
+
+**21** Y si Elohim no perdonó a las ramas que son conforme al camino de la naturaleza, no te perdonará a ti.
+
+**22** Por eso, mira la bondad y la severidad de Elohim. En ellas que cayeron, la severidad; y sobre ti, la bondad, si permaneces en la bondad, y si no, tú también serás cortado.
+
+**23** Y también ellos, si no permanecen en la falta de emunah, serán plantados, porque poderoso es Elohim para volverlos a plantar.
+
+**24** Y si tú fuiste cortado del árbol que conforme a su naturaleza es acebuche, y contra el camino de la naturaleza fuiste plantado en el olivo bueno, ¿cuánto más estos, que conforme a su naturaleza, serán plantados en el propio olivo?
+
+**25** Porque no quiero que desconozcan, hermanos, este misterio[^136], para que no sean sabios en sus propios ojos, que ha acontecido un velo a algunos de Israel, hasta que entre la llenura de las naciones[^137].
+
+**26** Y así todo Israel será salvo; como está escrito:
+
+Y vendrá el Redentor de Tzión,
+
+ y a hacer volver la transgresión de Iaacob
+
+**27** Y Yo, este es mi pacto con ellos[^138],
+
+ cuando Yo cargue sus pecados.
+
+**28** Porque conforme a la Besorah[^139], *son *enemigos por causa de ustedes; pero conforme a la elección, amados por causa de los padres.
+
+**29** Porque no se retractará Elohim acerca de sus dones y su llamamiento.
+
+**30** Porque como también ustedes antes no fueron afirmados[^140] por Elohim, pero ahora fueron amados ante la falta de Elohim de estos,
+
+**31** así también estos ahora no se han afirmado por el favor a ustedes, para que también ellos sean amados.
+
+**32** Porque encerró Elohim a todos en falta de emunah para amar a todos.
+
+**33** ¡Oh profundidad de la riqueza de la sabiduría y el conocimiento de Elohim! ¡Cuán inescrutables son sus juicios e ininvestigables sus caminos!
+
+**34** ¿Quién midió al Rúaj[^141] de יהוה, y qué hombre su consejo dará a conocer?
+
+¿A quién pidió consejo y quién le dio entendimiento[^142]?,
+
+**35** ¿O quién le dio primero, y se le pagará?
+
+**36** Porque de Él, por Él, y hacia Él es todo, y para Él es la gloria por los tiempos[^143]. Amén.
+
+*El servicio a Elohim*
+
+**12**
+
+**1** Por lo tanto, les pido, hermanos míos, por las compasiones de Elohim, que establezcan sus cuerpos como sacrificio vivo, santo y acepto a Elohim, el servicio prudente de ustedes,
+
+**2** y no se hagan semejantes a este olam[^144], sino que transfórmense por la renovación de la mente, para que examinen para ustedes mismos cuál es la voluntad de Elohim, buena, acepta y completa.
+
+**3** Porque yo digo, por el favor que me ha sido dado, a todos los que están entre ustedes, *que *no se crean más sabios de lo que es adecuado ser sabio, sino que cada hombre actúe sabiamente en humildad, conforme a la medida[^145] de la emunah[^146] que Elohim le ha repartido.
+
+**4** Porque como en un cuerpo tenemos muchos miembros, pero todos los miembros no tienen una misma obra,
+
+**5** así muchos somos un cuerpo en el Mesías, pero cada uno, miembros los unos de los otros.
+
+**6** Habiendo para ustedes diversos dones, según el favor que nos fue dado, si profecía, sea conforme a la medida de la emunah;
+
+**7** si servicio, en el servicio; o el que enseña, en la enseñanza.
+
+**8** y si consuela, en la consolación; el que da, *sea *con integridad; el que supervisa, con diligencia[^147]; el que hace misericordia, con alegría;
+
+**9** El amor *sea *sin hipocresía: aborrezcan el mal, adhiéranse al bien.
+
+**10** Con amor fraternal ámense los unos a los otros; con honra, dense preferencia los unos a los otros.
+
+**11** En la diligencia, no perezosos; ardientes en Rúaj, sirviendo a יהוה.
+
+**12** En la esperanza, gozosos; en la estrechez, sufrientes; en tefilah[^148], constantes.
+
+**13** En cuanto a las necesidades de los santos, compartiendo; siguiendo la hospitalidad.
+
+**14** Bendigan a sus perseguidores, bendigan y no excluyan.
+
+**15** Alégrense con los que se alegran y lloren con los que lloran.
+
+**16** Unidos entre ustedes; sabios no en las cosas elevadas, sino conduciéndose sabios en las cosas humildes; no sean sabios en sus ojos.
+
+**17** No paguen a nadie mal por mal, procurando lo bueno delante de todos los hombres.
+
+**18** Si es posible, en cuanto dependa de ustedes, estando en shalom[^149] con todos los hombres.
+
+**19** No se venguen ustedes mismos, amados míos, sino den lugar al calor de la nariz, porque está escrito: Para Mí es la venganza y la retribución[^150], dice יהוה.
+
+**20** Por eso, si tiene hambre tu enemigo, dale de comer pan; si tiene sed, dale de beber agua; porque haciendo esto, carbones de fuego amontonarás sobre su cabeza.
+
+**21** No seas vencido por el mal, sino vence con el bien al mal.
+
+*Acerca del respeto a la autoridad*
+
+**13**
+
+**1** Toda persona[^151] sea sujeta bajo estos que tienen autoridad[^152], pero no hay autoridad si no es de Elohim, y las que hay, por Elohim han sido encargadas.
+
+**2** Por eso, el que se opone a la autoridad, al orden de Elohim se opone; y los que se oponen, para sus gargantas[^153] juicio tomarán.
+
+**3** Porque los jefes no son para temor de los que hacen el bien, sino el mal. ¿Acaso no quieres temer a la autoridad? Haz el bien, y tendrás honra de ella.
+
+**4** Porque es servidor de Elohim para tu bien[^154]; pero si haces el mal, teme, porque no sin causa lleva la espada, porque es servidor de Elohim, vengador del calor de la nariz[^155] a los hacedores de injusticia[^156].
+
+**5** Por eso es necesario estar sujetándose, no solamente por causa de la indignación[^157], sino también por causa de la conciencia.
+
+**6** Y por eso también pagan los tributos, porque son servidores de Elohim, y sobre esto permanecen.
+
+**7** Por eso, paguen a todo hombre lo que deban; al que tributo, tributo; al que impuesto, impuesto; al que temor, temor; al que honra, honra.
+
+**8** No deban nada a nadie, sino el amar un hombre a su compañero; porque el que ama a su compañero, ha hecho plena la Torah.
+
+**9** Porque: No adulterarás, no asesinarás, no robarás, no responderás falso testimonio, no codiciarás[^158], y si hay otro mandamiento, en esta palabra se completa *sumariamente*: Y amarás por estar siendo tú el compañero, como tú[^159].
+
+**10** El amor, al compañero no hace mal; por eso, la plenitud de la Torah es el amor.
+
+**11** Y acerca de esto, conocerán el tiempo, porque ahora es la hora de despertarnos del sueño, porque ahora *está más *cercana para nosotros la salvación que cuando nos afirmamos[^160].
+
+**12** La noche ha pasado y el día se ha acercado, y echemos de nosotros las obras de la oscuridad y vistámonos de las armas de luz.
+
+**13** Como en el día, dignamente, andemos; no en glotonerías y borracheras, no en camas y lascivias, no en contienda y envidia.
+
+**14** Sino vístanse del Adón[^161] Yeshúa el Mesías, y preocúpense de la carne, no haciendo los deseos.
+
+*Los débiles de la emunah*
+
+**14**
+
+**1** Y al débil[^162] de la emunah[^163] tomen, no para hacer divisiones de los pensamientos.
+
+**2** Porque uno se afirma para comer todo, pero el débil come vegetales.
+
+**3** El que come no desprecie al que no come, y el que no come no juzgue al que come, porque Elohim lo ha tomado.
+
+**4** ¿Y quién eres tú, que juzgas a otro siervo? Para su amo está en pie o cae; pero estará en pie, porque poderoso es יהוה para hacerlo estar en pie.
+
+**5** Y uno distingue entre día y día, otro distingue todo día *como *cada uno. Cada uno esté pleno en su mente.
+
+**6** El que entiende el día, para יהוה lo entiende, y el que no lo entiende, para יהוה no lo entiende; el que come, para יהוה come, y agradece a יהוה, y el que no come, para יהוה no come, y agradece a יהוה.
+
+**7** Porque ninguno de ustedes vive para sí, y ninguno muere para sí.
+
+**8** Porque si vivimos, para יהוה vivimos, y si morimos, para יהוה morimos. Por lo tanto, si vivimos o morimos, para יהוה somos.
+
+**9** Porque por esto murió y se levantó el Mesías, para que gobierne tanto sobre los muertos como sobre los vivos.
+
+**10** Pero tú, ¿por qué juzgas a tu hermano? O, tú también, ¿por qué desprecias a tu hermano? Porque todos estaremos parados ante el trono del juicio del Mesías[^164].
+
+**11** Porque está escrito:
+
+Vivo Yo –declaración de יהוה–
+
+Que a Mí se inclinará toda rodilla
+
+ y jurará toda lengua[^165].
+
+**12** Y por eso, todo hombre de nosotros, acerca de sí mismo devolverá palabra[^166] a Elohim.
+
+**13** Por lo tanto, no juzguemos más un hombre a su compañero, sino esto juzguen más: que no pongan obstáculo al hermano, o tropiezo.
+
+**14** Yo sé y confío en nuestro Adón[^167] Yeshúa que no hay nada profano[^168] en sí mismo, sino que el que considera que algo es profano, para él será profano.
+
+**15** Y si por causa de la comida se aflige tu hermano, ya no andas conforme al amor; no eches a perder por tu comida al quien por el cual murió el Mesías.
+
+**16** Por eso, no sea injuriado el bien de ustedes.
+
+**17** Porque el reino de Elohim no es comida ni bebida, sino justicia, shalom[^169] y gozo en el Rúaj Ha’Kódesh[^170].
+
+**18** Porque el que en estas cosas sirve al Mesías, acepto es a Elohim, y aprobado a los hombres.
+
+**19** Por lo tanto, persigamos los caminos de shalom y a la edificación entre nosotros.
+
+**20** No derribes la obra de Elohim por causa de la comida. Porque todas las cosas son puras, pero malo es para el hombre que coma para tropiezo.
+
+**21** Bueno es no comer carne, ni beber vino, ni lo que haga golpear, tropezar o debilitar a tu hermano.
+
+**22** Tú, ¿hay para ti emunah[^171]? Haya para ti delante de Elohim. ¡Feliz el hombre que no se juzgue a sí mismo en lo que aprueba!
+
+**23** Pero el que hace diferencias cuando come, es sentenciado, porque no es dentro de la emunah; porque todo lo que no es dentro de la emunah, es pecado.
+
+**15**
+
+**1** Y debemos nosotros, los fuertes, sobrellevar las debilidades de los débiles, y no agradarnos a nosotros mismos.
+
+**2** Pues, cada uno de nosotros agrade a su compañero para bien, para edificación.
+
+**3** Porque tampoco el Mesías se agradó a sí mismo, sino como está escrito: Los insultos de los que te insultan cayeron sobre Mí[^172].
+
+**4** Porque todas las palabras que desde antes se escribieron, para nuestro aprendizaje se escribieron, para que por la esperanza y por la consolación[^173] de las Escrituras, haya para nosotros confianza.
+
+**5** Y el Elohim de la esperanza y la consolación dé a ustedes que sean de un solo corazón según Yeshúa el Mesías,
+
+**6** para que, en una misma mente y en una misma boca, glorifiquen al Elohim y Padre en nuestro Adón[^174] Yeshúa el Mesías.
+
+La Besorah a los gentiles
+
+**7** Por lo tanto, tómense un hombre a su compañero, como también el Mesías los tomó para gloria de Elohim.
+
+**8** Porque yo digo que Yeshúa el Mesías fue siervo de la circuncisión por causa de la verdad de Elohim, para establecer los juramentos a los padres,
+
+**9** y para que los gentiles glorifiquen a Elohim por causa de su amor bondadoso[^175], como está escrito:
+
+Por eso te confesaré entre los gentiles, יהוה,
+
+ y a tu Nombre cantaré melodías[^176].
+
+**10** Y otra vez dice:
+
+Griten de alegría, gentiles, con su pueblo[^177].
+
+**11** Y otra vez:
+
+Alaben a __יהוה__, todos los gentiles;
+
+ elógienlo, todos los pueblos[^178].
+
+**12** Y otra vez dice Ieshaiáhu:
+
+Y sucederá que en aquel día, la raíz de Ishai que está parada por estandarte de los pueblos, a Él los gentiles buscarán[^179].
+
+**13** Y el Elohim de la esperanza los llenará de toda alegría y shalom[^180] para ser afirmados en fidelidad, para hacerlos abundar en la esperanza en la potencia del Rúaj Ha’Kódesh[^181].
+
+**14** Y he aquí, hermanos míos, yo confío acerca de ustedes, que están llenos de bondad, y llenos de todo conocimiento, y pueden amonestarse un hombre a su compañero.
+
+**15** Pero les he escrito, hermanos míos, en parte con atrevimiento[^182], para hacerles recordar por el favor que me es dado de Elohim,
+
+**16** para ser ministro de Yeshúa el Mesías a los gentiles, y para oficiar como sacerdote en la Besorah[^183] de Elohim, para que sea la ofrenda de los gentiles aceptada y santificada por el Rúaj Ha’Kódesh.
+
+**17** Por eso hay para mí alabanza en Yeshúa el Mesías delante de Elohim.
+
+**18** Porque no osaría hablar palabra que el Mesías no haya hecho por mano mía para la obediencia de los gentiles, en palabra y en obra,
+
+**19** con potencia de señales y maravillas, en la potencia del Rúaj[^184] de Elohim; así que, desde Ierushaláim y sus alrededores hasta Ilurikón[^185], he llenado de la Besorah del Mesías.
+
+**20** Y así me esforcé para anunciar la Besorah, no en los lugares donde haya sido oído el Nombre del Mesías, para no edificar sobre otro fundamento,
+
+**21** sino como está escrito:
+
+Porque lo que no se les había contado verán, y lo que no habían escuchado entenderán[^186].
+
+Planificación de futuros viajes
+
+**22** Por lo cual, he sido impedido en muchas ocasiones de ir a ustedes.
+
+**23** Pero ahora que no tengo más lugar en estas regiones, y deseando yo ir a ustedes desde hace muchos años,
+
+**24** Y cuando vaya a Hispania[^187], iré a ustedes; porque espero verlos al pasar, y por ustedes ser enviado allá, si primero me lleno de ustedes.
+
+**25** Pero ahora voy a Ierushaláim para servir a los kedoshim[^188].
+
+**26** Porque Makedonía[^189] y Acaya consintieron en hacer una colecta para los pobres de los kedoshim que hay en Ierushaláim.
+
+**27** Porque consintieron, y también son deudores a ellos; porque si los gentiles fueron hechos partícipes de los asuntos del Rúaj, también en los de la carne les deben de servir.
+
+**28** Por lo tanto, cuando haya acabado esto y les hubiere sellado este fruto, pasaré a ustedes rumbo a Hispania.
+
+**29** Y sé que cuando llegue a ustedes, en plenitud de bendición de la Besorah del Mesías vendré.
+
+**30** Ruego a ustedes, hermanos míos, en nuestro Adón[^190] Yeshúa el Mesías, y por el amor del Rúaj Ha’Kódesh, que me ayuden en sus tefilot[^191] por mí a Elohim,
+
+**31** para que sea rescatado de los rebeldes que están en Iehudáh, y que mi servicio en Ierushaláim a los kedoshim sea acepto;
+
+**32** para que con alegría llegue a ustedes por la voluntad[^192] de Elohim, y tenga un respiro con ustedes.
+
+**33** Y el Elohim de shalom[^193] sea con todos ustedes. Amén.
+
+Saludos personales
+
+**16**
+
+**1** Y les encargo a Foíbe, nuestra hermana, que es sierva de la congregación que está en Kéncreas[^194],
+
+**2** que la reciban en יהוה, como es digno de los kedoshim[^195], y que la sostengan en cualquier cosa que necesite de ustedes, porque también ella ha sido ayudadora de muchos, y también de mí mismo.
+
+**3** Pregunten por el shalom[^196] de Prisca[^197] y Aquilas, mis compañeros de obra en Yeshúa el Mesías,
+
+**4** quienes por mi vida pusieron sus cuellos, a quienes no solo yo doy gracias, sino también todas las congregaciones de los gentiles,
+
+**5** y a la congregación de la casa. Pregunten por el shalom de Epénetos, amado mío, que es la primicia de Asia[^198] para el Mesías.
+
+**6** Pregunten por el shalom de Miriam, la cual ha trabajado mucho para ustedes.
+
+**7** Pregunten por el shalom de Andrónicos y Iunías, mis parientes y los que fueron cautivos conmigo, quienes son honrados entre los enviados[^199], los cuales también fueron antes de mí en el Mesías.
+
+**8** Pregunten por el shalom de Amplías, amado mío en יהוה.
+
+**9** Pregunten por el shalom de Urbanós, nuestro ayudador en Yeshúa el Mesías, y de Stájis, amado mío.
+
+**10** Pregunten por el shalom de Apeles, refinado en el Mesías. Pregunten por el shalom de los de la casa de Aristóbulos.
+
+**11** Pregunten por el shalom de Herodión, mi pariente. Pregunten por el shalom de los de la casa de Nárquisos, los cuales están en יהוה.
+
+**12** Pregunten por el shalom de Trifaina y Trifosa, los cuales trabajan en יהוה. Pregunten por el shalom de Pérsida la amada, la cual ha trabajado mucho en יהוה.
+
+**13** Pregunten por el shalom de Rufos, escogido en יהוה, y a su madre y mía.
+
+**14** Pregunten por el shalom de Asíncritos, Flegonte, Hermes, Patrobas, Hermas, y a los hermanos que están con ellos.
+
+**15** Pregunten por el shalom de Filólogos, Yulia, Nereus y su hermana, Olimpas y a todos los kedoshim que están con ellos.
+
+**16** Pregunten un hombre a su compañero por el shalom, con beso santo. ¡Las congregaciones del Mesías preguntan por el shalom de ustedes!
+
+**17** Les amonesto, mis hermanos, que observen a los que hacen divisiones y tropiezos contra la enseñanza que ustedes han aprendido, y apártense de ellos.
+
+**18** Porque los hombres como estos no sirven a nuestro Adón[^200] Yeshúa el Mesías, sino a sus propios vientres, y con palabras agradables y bendiciones engañan a los corazones de los ingenuos.
+
+**19** Porque la escucha de ustedes ha sido conocida por todos, por eso me alegro por ustedes; pero quiero que sean sabios para el bien e ingenuos para el mal.
+
+**20** Y el Elohim de shalom aplastará a Ha’satán[^201] pronto debajo de los pies de ustedes. El favor de nuestro Adón Yeshúa el Mesías sea con ustedes.
+
+**21** Preguntan por el shalom de ustedes Timoteos, mi compañero de obra, y Luquios, Yasón y Sosípatros, mis parientes.
+
+**22** Yo, Tértios, el que escribe esta carta, pregunto por el shalom de ustedes en יהוה.
+
+**23** Gayos, hospedador mío y de toda la congregación, pregunta por el shalom de ustedes. Erastos, tesorero de la ciudad, y el hermano Cuartos, preguntan por el shalom de ustedes.
+
+**24** El favor de nuestro Adón Yeshúa el Mesías sea con todos ustedes. Amén.
+
+**25** Y al que puede establecerlos conforme a mi Besorah[^202] y la proclamación de Yeshúa el Mesías, conforme la revelación del misterio que estaba oculto desde tiempos olam[^203],
+
+**26** pero que ahora ha sido descubierto, y por medio de los escritos de los profetas, conforme al mandamiento del Elohei Olam[^204], dado a conocer a todos los gentiles para la obediencia[^205] a la emunah[^206],
+
+**27** Al único sabio Elohim, por medio de Yeshúa el Mesías sea la gloria, le’olmei olamim[^207]. Amén.
+
+1.
+[^1]: Heb.: *Shalíaj.*
+
+
+2.
+[^2]: Evangelio, Buena Noticia. Así en el resto del cap.
+
+
+3.
+[^3]: Heb.: *Ben; *término en clave del Mesías como la imagen de Elohim en la tierra. Así en el resto del cap.
+
+
+4.
+[^4]: Espíritu de Santidad.
+
+
+5.
+[^5]: Amo, Señor.
+
+
+6.
+[^6]: Fidelidad, firmeza, crianza. Así en el resto del cap.
+
+
+7.
+[^7]: O, *apartados, distinguidos.*
+
+
+8.
+[^8]: Heb.: *Av; *término en clave de Elohim como la cabeza y el origen de todo.
+
+
+9.
+[^9]: Espíritu, mente, ánimo.
+
+
+10.
+[^10]: Plural de *tefilah: *oración, participación en juicio.
+
+
+11.
+[^11]: Griegos.
+
+
+12.
+[^12]: Lit.: *todo lo que hay en mí.*
+
+
+13.
+[^13]: Griego.
+
+
+14.
+[^14]: Véase Habacuc 2:4.
+
+
+15.
+[^15]: Retorno.
+
+
+16.
+[^16]: Judío.
+
+
+17.
+[^17]: Griego.
+
+
+18.
+[^18]: Plenitud, ausencia de deudas.
+
+
+19.
+[^19]: O, *juzgados.*
+
+
+20.
+[^20]: Judío. Así en el resto del cap.
+
+
+21.
+[^21]: Véase Isaías 52:5 y Ezequiel 36:20.
+
+
+22.
+[^22]: Lit.: *de sus huesos.*
+
+
+23.
+[^23]: Judío.
+
+
+24.
+[^24]: Fidelidad, firmeza, crianza. Así en el resto del cap.
+
+
+25.
+[^25]: O, verdadero.
+
+
+26.
+[^26]: Véase Salmo 51:6.
+
+
+27.
+[^27]: Judíos.
+
+
+28.
+[^28]: Griegos.
+
+
+29.
+[^29]: Véase Salmo 14:3 y 53:3.
+
+
+30.
+[^30]: Véase Salmo 14:2 y 53:2.
+
+
+31.
+[^31]: Véase Salmo 14:3 y 53:3.
+
+
+32.
+[^32]: Véase Salmo 5:9.
+
+
+33.
+[^33]: Véase Salmo 140:4.
+
+
+34.
+[^34]: Véase Salmo 10:7.
+
+
+35.
+[^35]: Véase Isaías 59:7 y Proverbios 1:16.
+
+
+36.
+[^36]: Véase Isaías 59:7.
+
+
+37.
+[^37]: Véase Isaías 59:8.
+
+
+38.
+[^38]: Véase Salmos 36:1.
+
+
+39.
+[^39]: O sea, los versículos de la Torah anterior­mente citados.
+
+
+40.
+[^40]: O, *compra.*
+
+
+41.
+[^41]: Heb.: *Kapóret. *Tapa del arca del pacto.
+
+
+42.
+[^42]: O, *soportado.*
+
+
+43.
+[^43]: Judíos.
+
+
+44.
+[^44]: Véase Génesis 15:6.
+
+
+45.
+[^45]: Fidelidad, firmeza, crianza. Así en el resto del cap.
+
+
+46.
+[^46]: O, *diseñada.*
+
+
+47.
+[^47]: Véase Salmo 32:1\-2.
+
+
+48.
+[^48]: Así en Mss. Oo.1.32.2 y mss. griegos, Ver. Políglota de Nuremberg dice: *obra calor de nariz de Yehovah.*
+
+
+49.
+[^49]: O, *transgresión.*
+
+
+50.
+[^50]: Véase Génesis 17:5.
+
+
+51.
+[^51]: Véase Génesis 15:5.
+
+
+52.
+[^52]: O, *no buscó pretextos.*
+
+
+53.
+[^53]: Véase Génesis 15:6.
+
+
+54.
+[^54]: Amo, Señor. Así también en cap. 5:1, 11.
+
+
+55.
+[^55]: Véase Isaías 53:5.
+
+
+56.
+[^56]: Fidelidad, firmeza, crianza. Así en el resto del cap.
+
+
+57.
+[^57]: Plenitud, ausencia de deudas.
+
+
+58.
+[^58]: Heb.: *Tikváh.*
+
+
+59.
+[^59]: O, *refinamiento. *Heb.: *Boján.*
+
+
+60.
+[^60]: Heb.: *Bétaj.*
+
+
+61.
+[^61]: Espíritu de Santidad.
+
+
+62.
+[^62]: Heb.: *Ben; *término en clave del Mesías como la imagen de Elohim en la tierra.
+
+
+63.
+[^63]: Amo, Señor. Así también en vers. 11.
+
+
+64.
+[^64]: O, *la resurrección.*
+
+
+65.
+[^65]: Amo, Señor.
+
+
+66.
+[^66]: O sea, *Torah del marido; *véase vers. 2.
+
+
+67.
+[^67]: Espíritu. Así también en el resto del cap.
+
+
+68.
+[^68]: Véase Éxodo 20:17.
+
+
+69.
+[^69]: Amo, Señor.
+
+
+70.
+[^70]: Espíritu. Así también en el resto del cap.
+
+
+71.
+[^71]: Plenitud, ausencia de deudas.
+
+
+72.
+[^72]: Térm. aram.; es.: *Padre, fuente, origen, precursor, sin precedentes*.
+
+
+73.
+[^73]: O, *al vapor. *Heb.: *Hével.*
+
+
+74.
+[^74]: O, *apartados; *o, *distinguidos.*
+
+
+75.
+[^75]: O, *preparación; *o, *propósito.*
+
+
+76.
+[^76]: Antes; tiempo anterior. Así también en vers. 30.
+
+
+77.
+[^77]: O, *preparó; *o, *determinó. *Así también en vers. 30.
+
+
+78.
+[^78]: Heb.: *Ben. *Así también en vers. 32.
+
+
+79.
+[^79]: Véase Génesis 22:12.
+
+
+80.
+[^80]: Véase Salmo 44:22.
+
+
+81.
+[^81]: Amo, Señor.* *
+
+
+82.
+[^82]: Espíritu de Santidad.
+
+
+83.
+[^83]: O, *prohibición. *Heb.: *Jérem.*
+
+
+84.
+[^84]: O, *anuncios.*
+
+
+85.
+[^85]: Véase Génesis 21:12.
+
+
+86.
+[^86]: Véase Génesis 18:14.
+
+
+87.
+[^87]: O, *preparación; *o, *propósito.*
+
+
+88.
+[^88]: Véase Génesis 25:23.
+
+
+89.
+[^89]: Véase Malaquías 1:2\-3.
+
+
+90.
+[^90]: Véase Éxodo 33:19.
+
+
+91.
+[^91]: Véase Éxodo 9:16.
+
+
+92.
+[^92]: Véase Isaías 45:9.
+
+
+93.
+[^93]: O, *sostenidas; *o, *terminadas.*
+
+
+94.
+[^94]: Judíos.
+
+
+95.
+[^95]: Heb.: *Lo Amí.*
+
+
+96.
+[^96]: Véase Oseas 2:23.
+
+
+97.
+[^97]: Véase Oseas 1:10.
+
+
+98.
+[^98]: Véase Isaías 10:22.
+
+
+99.
+[^99]: Véase Isaías 1:9.
+
+
+100.
+[^100]: O, *justificación. *Así en el resto del vers.
+
+
+101.
+[^101]: Fidelidad, firmeza, crianza. Así en el resto del cap.
+
+
+102.
+[^102]: Véase Isaías 8:14; 28:16.
+
+
+103.
+[^103]: Oración, participación en juicio.
+
+
+104.
+[^104]: Véase Romanos 3:21.
+
+
+105.
+[^105]: O, *finalidad. *Gr.: *Telós.*
+
+
+106.
+[^106]: Véase Levítico 18:5.
+
+
+107.
+[^107]: Fidelidad, firmeza, crianza. Así en el resto del cap.
+
+
+108.
+[^108]: Véase Deuteronomio 30:12.
+
+
+109.
+[^109]: Véase Deuteronomio 30:14.
+
+
+110.
+[^110]: Véase Isaías 28:16.
+
+
+111.
+[^111]: Judío.
+
+
+112.
+[^112]: Griego.
+
+
+113.
+[^113]: Amo, Señor.
+
+
+114.
+[^114]: Véase Joel 2:32.
+
+
+115.
+[^115]: Plenitud, ausencia de deudas.
+
+
+116.
+[^116]: Véase Isaías 52:7.
+
+
+117.
+[^117]: Evangelio, Buena Noticia.
+
+
+118.
+[^118]: O, *fue criado en fidelidad.*
+
+
+119.
+[^119]: O, *por.*
+
+
+120.
+[^120]: Véase Isaías 53:1.
+
+
+121.
+[^121]: Otras versiones dicen: *Palabra de Elohim.*
+
+
+122.
+[^122]: Véase Salmo 19:4*.*
+
+
+123.
+[^123]: Véase Deuteronomio 32:21*.*
+
+
+124.
+[^124]: Véase Isaías 65:1*.*
+
+
+125.
+[^125]: Véase Isaías 65:2*.*
+
+
+126.
+[^126]: Israelita.
+
+
+127.
+[^127]: Antes; tiempo anterior.
+
+
+128.
+[^128]: Véase 1 Reyes 19:10.
+
+
+129.
+[^129]: El texto gr. omite: *en Israel.*
+
+
+130.
+[^130]: Véase 1 Reyes 19:18.
+
+
+131.
+[^131]: Heb.: *Jen. *Gr.: *Járis.*
+
+
+132.
+[^132]: Véase Isaías 29:10.
+
+
+133.
+[^133]: Véase Salmo 69:22.
+
+
+134.
+[^134]: U, *olivo del campo, silvestre.*
+
+
+135.
+[^135]: Fidelidad, firmeza, crianza. Así en el resto del cap.
+
+
+136.
+[^136]: O, *secreto. *Heb.: *Sod.*
+
+
+137.
+[^137]: Véase Génesis 48:19.
+
+
+138.
+[^138]: Véase Isaías 59:20\-21.
+
+
+139.
+[^139]: Evangelio, Buena Noticia.
+
+
+140.
+[^140]: O, *criados en la fidelidad.*
+
+
+141.
+[^141]: Espíritu, viento, mente, poder.
+
+
+142.
+[^142]: Véase Isaías 40:13.
+
+
+143.
+[^143]: Heb.: *Olamim.*
+
+
+144.
+[^144]: Tiempo, era.
+
+
+145.
+[^145]: O sea, *medida estándar, *que es el Mesías. Así también en vers. 6.
+
+
+146.
+[^146]: Fidelidad, firmeza, crianza. Así también en vers. 6.
+
+
+147.
+[^147]: O, *rapidez de acción.*
+
+
+148.
+[^148]: Oración, participación en juicio.
+
+
+149.
+[^149]: Plenitud, ausencia de deudas.
+
+
+150.
+[^150]: Véase Deuteronomio 32:35.
+
+
+151.
+[^151]: Heb.: *Néfesh.*
+
+
+152.
+[^152]: Así en la Ver. Políglota de Nuremberg, en el texto gr.: *sea sujeta a las autoridades superiores.*
+
+
+153.
+[^153]: O, *vidas. *Heb.: *Néfesh.*
+
+
+154.
+[^154]: Lit.: *para ti para bien.*
+
+
+155.
+[^155]: O, *de la indignación.*
+
+
+156.
+[^156]: Heb.: *Po’alei Avel.*
+
+
+157.
+[^157]: Lit.: *nariz.*
+
+
+158.
+[^158]: Véase Éxodo 20:13\-17; Deuteronomio 5:17\-21.
+
+
+159.
+[^159]: Véase Levítico 19:18.
+
+
+160.
+[^160]: O, *recibimos la crianza de la fidelidad.*
+
+
+161.
+[^161]: Amo, Señor.
+
+
+162.
+[^162]: O, *enfermo. *Así en el resto del cap.
+
+
+163.
+[^163]: Fidelidad, firmeza, crianza.
+
+
+164.
+[^164]: Otras versiones dicen: *de Elohim.*
+
+
+165.
+[^165]: Véase Isaías 45:23.
+
+
+166.
+[^166]: O, *dará cuentas.*
+
+
+167.
+[^167]: Amo, Señor.
+
+
+168.
+[^168]: Heb.: *Jol. *Gr.: *Koinós.*
+
+
+169.
+[^169]: Plenitud, ausencia de deudas.
+
+
+170.
+[^170]: Espíritu de Santidad.
+
+
+171.
+[^171]: Fidelidad, firmeza, crianza.
+
+
+172.
+[^172]: Véase Salmo 69:11.
+
+
+173.
+[^173]: O, *restauración.*
+
+
+174.
+[^174]: Amo, Señor.
+
+
+175.
+[^175]: Heb.: *Jésed.*
+
+
+176.
+[^176]: Véase Salmo 18:49.
+
+
+177.
+[^177]: Véase Deuteronomio 32:43.
+
+
+178.
+[^178]: Véase Salmo 117:1.
+
+
+179.
+[^179]: Véase Isaías 11:10.
+
+
+180.
+[^180]: Plenitud, ausencia de deudas.
+
+
+181.
+[^181]: Espíritu de Santidad. Así también en vers. 16.
+
+
+182.
+[^182]: Lit.: *confianza.*
+
+
+183.
+[^183]: Evangelio, Buena Noticia.
+
+
+184.
+[^184]: Espíritu, viento, poder.
+
+
+185.
+[^185]: Ilírico. Provincia romana al noroeste de Ma­ce­­donia. Hoy en día abarca principalmente Croacia, Bosnia y Herzegovina, Montenegro y una parte del norte de Albania.
+
+
+186.
+[^186]: Véase Isaías 52:15.
+
+
+187.
+[^187]: Gr.: *Spanía. *Heb.: *Sh’faniyah. *Región de la Península ibérica. No confundir con heb. *Sefarad*, alusivo a *Sparda, *que es *Sardis.*
+
+
+188.
+[^188]: Santos, apartados, distinguidos.
+
+
+189.
+[^189]: Macedonia.
+
+
+190.
+[^190]: Amo, Señor.
+
+
+191.
+[^191]: Oraciones, participaciones en juicio.
+
+
+192.
+[^192]: O, *el favor.*
+
+
+193.
+[^193]: Plenitud, ausencia de deudas.
+
+
+194.
+[^194]: Cencrea.
+
+
+195.
+[^195]: Santos, apartados, distinguidos. Así tam­bién en vers. 15.
+
+
+196.
+[^196]: Plenitud, ausencia de deudas. O, *saluden. *Así en el resto del cap.
+
+
+197.
+[^197]: Priscila.
+
+
+198.
+[^198]: O sea, *Asia menor. *Otros mss. dicen: *Acaya.*
+
+
+199.
+[^199]: O, *apóstoles.*
+
+
+200.
+[^200]: Amo, Señor. Así en el resto del cap.
+
+
+201.
+[^201]: El adversario.
+
+
+202.
+[^202]: Evangelio, Buena Noticia.
+
+
+203.
+[^203]: Tiempo oculto, solo conocido por Elohim.
+
+
+204.
+[^204]: Elohim inescrutable, o, eterno.
+
+
+205.
+[^205]: O, *escucha.*
+
+
+206.
+[^206]: Fidelidad, firmeza, crianza.
+
+
+207.
+[^207]: O sea, *por los tiempos de los tiempos. *
+
+
+
 
 ## Footnotes
 [^1]: Heb.: *Shalíaj.*
@@ -656,3 +1970,116 @@ Porque por ti somos matados todo el día,
 [^92]: Véase Isaías 45:9.
 [^93]: O, *sostenidas; *o, *terminadas.*
 [^94]: Judíos.
+[^95]: Heb.: *Lo Amí.*
+[^96]: Véase Oseas 2:23.
+[^97]: Véase Oseas 1:10.
+[^98]: Véase Isaías 10:22.
+[^99]: Véase Isaías 1:9.
+[^100]: O, *justificación. *Así en el resto del vers.
+[^101]: Fidelidad, firmeza, crianza. Así en el resto del cap.
+[^102]: Véase Isaías 8:14; 28:16.
+[^103]: Oración, participación en juicio.
+[^104]: Véase Romanos 3:21.
+[^105]: O, *finalidad. *Gr.: *Telós.*
+[^106]: Véase Levítico 18:5.
+[^107]: Fidelidad, firmeza, crianza. Así en el resto del cap.
+[^108]: Véase Deuteronomio 30:12.
+[^109]: Véase Deuteronomio 30:14.
+[^110]: Véase Isaías 28:16.
+[^111]: Judío.
+[^112]: Griego.
+[^113]: Amo, Señor.
+[^114]: Véase Joel 2:32.
+[^115]: Plenitud, ausencia de deudas.
+[^116]: Véase Isaías 52:7.
+[^117]: Evangelio, Buena Noticia.
+[^118]: O, *fue criado en fidelidad.*
+[^119]: O, *por.*
+[^120]: Véase Isaías 53:1.
+[^121]: Otras versiones dicen: *Palabra de Elohim.*
+[^122]: Véase Salmo 19:4*.*
+[^123]: Véase Deuteronomio 32:21*.*
+[^124]: Véase Isaías 65:1*.*
+[^125]: Véase Isaías 65:2*.*
+[^126]: Israelita.
+[^127]: Antes; tiempo anterior.
+[^128]: Véase 1 Reyes 19:10.
+[^129]: El texto gr. omite: *en Israel.*
+[^130]: Véase 1 Reyes 19:18.
+[^131]: Heb.: *Jen. *Gr.: *Járis.*
+[^132]: Véase Isaías 29:10.
+[^133]: Véase Salmo 69:22.
+[^134]: U, *olivo del campo, silvestre.*
+[^135]: Fidelidad, firmeza, crianza. Así en el resto del cap.
+[^136]: O, *secreto. *Heb.: *Sod.*
+[^137]: Véase Génesis 48:19.
+[^138]: Véase Isaías 59:20\-21.
+[^139]: Evangelio, Buena Noticia.
+[^140]: O, *criados en la fidelidad.*
+[^141]: Espíritu, viento, mente, poder.
+[^142]: Véase Isaías 40:13.
+[^143]: Heb.: *Olamim.*
+[^144]: Tiempo, era.
+[^145]: O sea, *medida estándar, *que es el Mesías. Así también en vers. 6.
+[^146]: Fidelidad, firmeza, crianza. Así también en vers. 6.
+[^147]: O, *rapidez de acción.*
+[^148]: Oración, participación en juicio.
+[^149]: Plenitud, ausencia de deudas.
+[^150]: Véase Deuteronomio 32:35.
+[^151]: Heb.: *Néfesh.*
+[^152]: Así en la Ver. Políglota de Nuremberg, en el texto gr.: *sea sujeta a las autoridades superiores.*
+[^153]: O, *vidas. *Heb.: *Néfesh.*
+[^154]: Lit.: *para ti para bien.*
+[^155]: O, *de la indignación.*
+[^156]: Heb.: *Po’alei Avel.*
+[^157]: Lit.: *nariz.*
+[^158]: Véase Éxodo 20:13\-17; Deuteronomio 5:17\-21.
+[^159]: Véase Levítico 19:18.
+[^160]: O, *recibimos la crianza de la fidelidad.*
+[^161]: Amo, Señor.
+[^162]: O, *enfermo. *Así en el resto del cap.
+[^163]: Fidelidad, firmeza, crianza.
+[^164]: Otras versiones dicen: *de Elohim.*
+[^165]: Véase Isaías 45:23.
+[^166]: O, *dará cuentas.*
+[^167]: Amo, Señor.
+[^168]: Heb.: *Jol. *Gr.: *Koinós.*
+[^169]: Plenitud, ausencia de deudas.
+[^170]: Espíritu de Santidad.
+[^171]: Fidelidad, firmeza, crianza.
+[^172]: Véase Salmo 69:11.
+[^173]: O, *restauración.*
+[^174]: Amo, Señor.
+[^175]: Heb.: *Jésed.*
+[^176]: Véase Salmo 18:49.
+[^177]: Véase Deuteronomio 32:43.
+[^178]: Véase Salmo 117:1.
+[^179]: Véase Isaías 11:10.
+[^180]: Plenitud, ausencia de deudas.
+[^181]: Espíritu de Santidad. Así también en vers. 16.
+[^182]: Lit.: *confianza.*
+[^183]: Evangelio, Buena Noticia.
+[^184]: Espíritu, viento, poder.
+[^185]: Ilírico. Provincia romana al noroeste de Ma­ce­­donia. Hoy en día abarca principalmente Croacia, Bosnia y Herzegovina, Montenegro y una parte del norte de Albania.
+[^186]: Véase Isaías 52:15.
+[^187]: Gr.: *Spanía. *Heb.: *Sh’faniyah. *Región de la Península ibérica. No confundir con heb. *Sefarad*, alusivo a *Sparda, *que es *Sardis.*
+[^188]: Santos, apartados, distinguidos.
+[^189]: Macedonia.
+[^190]: Amo, Señor.
+[^191]: Oraciones, participaciones en juicio.
+[^192]: O, *el favor.*
+[^193]: Plenitud, ausencia de deudas.
+[^194]: Cencrea.
+[^195]: Santos, apartados, distinguidos. Así tam­bién en vers. 15.
+[^196]: Plenitud, ausencia de deudas. O, *saluden. *Así en el resto del cap.
+[^197]: Priscila.
+[^198]: O sea, *Asia menor. *Otros mss. dicen: *Acaya.*
+[^199]: O, *apóstoles.*
+[^200]: Amo, Señor. Así en el resto del cap.
+[^201]: El adversario.
+[^202]: Evangelio, Buena Noticia.
+[^203]: Tiempo oculto, solo conocido por Elohim.
+[^204]: Elohim inescrutable, o, eterno.
+[^205]: O, *escucha.*
+[^206]: Fidelidad, firmeza, crianza.
+[^207]: O sea, *por los tiempos de los tiempos. *

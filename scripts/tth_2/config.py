@@ -577,7 +577,7 @@ BOOKS_INFO = {
         'english_name': 'Romans',
         'spanish_name': 'Romanos',
         'book_code': 'romans',
-        'expected_chapters': 9,
+        'expected_chapters': 16,
         'section': 'besorah',
         'section_hebrew': 'בשורה',
         'section_english': 'Gospel',

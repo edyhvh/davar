@@ -59,7 +59,8 @@ class TTH2BookSplitter:
         patterns = book_info.get('patterns', [])
 
         if not patterns:
-            raise ValueError(f"Book '{book_key}' not found in pattern definitions")
+            raise ValueError(
+                f"Book '{book_key}' not found in pattern definitions")
 
         # Find book start
         book_start = -1
@@ -105,13 +106,18 @@ class TTH2BookSplitter:
         book_end = len(lines)
 
         # Get all other book keys to find the next one
-        other_books = [key for key in self.book_patterns.keys() if key != book_key]
+        other_books = [key for key in self.book_patterns.keys()
+                       if key != book_key]
 
         for i in range(book_start + 1, len(lines)):
             line = lines[i].strip()
 
             # Skip empty lines and subtitles (but not book headers)
             if not line or (re.match(r'^\*([^*]+)\*$', line) and not line.startswith('**')):
+                continue
+
+            # Skip verse lines (avoid treating them as book headers)
+            if re.match(r'^\*\*\d+\*\*', line):
                 continue
 
             # Check for book headers first (highest priority)
@@ -239,7 +245,8 @@ class TTH2BookSplitter:
         for book_key in books_to_extract:
             try:
                 # Extract book content
-                book_text = self.extract_book_section(text, book_key, verbose=False)
+                book_text = self.extract_book_section(
+                    text, book_key, verbose=False)
 
                 # Save to individual file
                 output_file = output_path / f"{book_key}.md"
