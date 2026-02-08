@@ -15,12 +15,7 @@ import BottomSheet, {
   type BottomSheetMethods,
 } from "@gorhom/bottom-sheet";
 import { Ionicons } from "@expo/vector-icons";
-import Animated, {
-  SlideInRight,
-  SlideInLeft,
-  SlideOutLeft,
-  SlideOutRight,
-} from "react-native-reanimated";
+import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
 
 import {
   getColors,
@@ -236,7 +231,7 @@ const NavigationSheetComponent = (
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const snapPoints = useMemo(() => ["70%", "90%"], []);
+  const snapPoints = useMemo(() => ["60%", "80%"], []);
   const { t } = useTranslation();
 
   const [step, setStep] = useState<Step>("book");
@@ -458,8 +453,8 @@ const NavigationSheetComponent = (
     }
   };
 
-  const enteringAnim = direction === "forward" ? SlideInRight : SlideInLeft;
-  const exitingAnim = direction === "forward" ? SlideOutLeft : SlideOutRight;
+  const enteringAnim = FadeIn;
+  const exitingAnim = FadeOut;
 
   return (
     <BottomSheet
