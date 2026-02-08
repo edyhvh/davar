@@ -51,7 +51,7 @@ export function HomeScreen({ language }: HomeScreenProps) {
     {
       label: t("home.aboutItems.bug"),
       Icon: Bug,
-      href: getSupportTelegramUrl(language),
+      href: "https://github.com/edyhvh/davar/issues/new",
       target: "_blank",
     },
     {

@@ -373,7 +373,9 @@ export default function HomeScreen() {
                     label: t("home.about.items.bug"),
                     icon: "bug",
                     onPress: () =>
-                      Linking.openURL(getSupportTelegramUrl(language)),
+                      Linking.openURL(
+                        "https://github.com/edyhvh/davar/issues/new",
+                      ),
                   },
                   {
                     label: t("home.about.items.github"),
