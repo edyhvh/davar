@@ -43,10 +43,10 @@ export function FeaturesScreen({ language }: FeaturesScreenProps) {
         <div className="mt-3 flex items-center justify-center gap-2 text-sm text-[var(--text-secondary-muted)]">
           <Mail className="w-4 h-4" />
           <a
-            href="mailto:contact@davar.bible"
+            href="mailto:hi@davar.bible"
             className="underline underline-offset-2 hover:text-[var(--text-primary)]"
           >
-            contact@davar.bible
+            hi@davar.bible
           </a>
         </div>
       </div>

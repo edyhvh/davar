@@ -16,6 +16,7 @@ import { NeumorphCard } from "./components/NeumorphCard";
 import { Skeleton } from "./components/ui/skeleton";
 import { DonateScreen } from "./components/DonateScreen";
 import { FeaturesScreen } from "./components/FeaturesScreen";
+import { LegalScreen } from "./components/LegalScreen";
 import {
   getBooks,
   getChapterCount,
@@ -47,7 +48,14 @@ import type { ReadingStateV2 } from "./utils/storageHelpers";
 import { useTranslation } from "./hooks/useTranslation";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
 
-type Screen = "home" | "verse" | "settings" | "donate" | "features";
+type Screen =
+  | "home"
+  | "verse"
+  | "settings"
+  | "donate"
+  | "features"
+  | "terms"
+  | "privacy";
 
 type RouteState = {
   screen: Screen;
@@ -241,6 +249,10 @@ export default function App() {
     switch (route.screen) {
       case "home":
         return "/home";
+      case "terms":
+        return "/terms";
+      case "privacy":
+        return "/privacy";
       case "donate":
         return "/donate";
       case "features":
@@ -268,6 +280,8 @@ export default function App() {
 
     const [root, book, chapter, verse] = parts;
     if (root === "home") return { screen: "home" };
+    if (root === "terms") return { screen: "terms" };
+    if (root === "privacy") return { screen: "privacy" };
     if (root === "donate") return { screen: "donate" };
     if (root === "features") return { screen: "features" };
     if (root === "settings") return { screen: "settings" };
@@ -305,6 +319,14 @@ export default function App() {
   };
 
   const tabTitle = useMemo(() => {
+    if (currentScreen === "terms") {
+      return `${t("home.aboutItems.terms")} | ${t("common.appName")}`;
+    }
+
+    if (currentScreen === "privacy") {
+      return `${t("home.aboutItems.privacy")} | ${t("common.appName")}`;
+    }
+
     if (currentScreen !== "verse" || !currentBook || !currentChapter) {
       return t("common.appName");
     }
@@ -1056,6 +1078,20 @@ export default function App() {
       <div className="px-6 pb-32 pt-6">
         <div className="max-w-7xl mx-auto">
           {currentScreen === "home" && <HomeScreen language={language} />}
+          {currentScreen === "terms" && (
+            <LegalScreen
+              kind="terms"
+              language={language}
+              onBack={() => setCurrentScreen("home")}
+            />
+          )}
+          {currentScreen === "privacy" && (
+            <LegalScreen
+              kind="privacy"
+              language={language}
+              onBack={() => setCurrentScreen("home")}
+            />
+          )}
           {currentScreen === "donate" && <DonateScreen language={language} />}
           {currentScreen === "features" && (
             <FeaturesScreen language={language} />

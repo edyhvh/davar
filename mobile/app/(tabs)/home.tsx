@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 
 import { AppIcon } from "@/src/components/ui/AppIcon";
 import { getColors, radii, spacing, typography } from "@/src/theme";
@@ -193,6 +194,14 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       borderWidth: 0,
       backgroundColor: "#6B6B6B",
     },
+    aboutPillInteractive: {
+      borderWidth: 1,
+      borderColor: "rgba(255, 255, 255, 0.12)",
+    },
+    aboutPillPressed: {
+      opacity: 0.85,
+      transform: [{ scale: 0.98 }],
+    },
     aboutText: {
       fontFamily: typography.families.latinUIMedium,
       fontSize: typography.sizes.bodySmall,
@@ -205,6 +214,7 @@ export default function HomeScreen() {
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
   const { t } = useTranslation();
+  const router = useRouter();
   type DownloadLanguage = "en" | "es";
   type DownloadStatus = "idle" | "downloading" | "completed";
   const downloadItems = useMemo(
@@ -339,18 +349,35 @@ export default function HomeScreen() {
             <View style={styles.aboutGrid}>
               {(
                 [
-                  { label: t("home.about.items.terms"), icon: "file" },
-                  { label: t("home.about.items.privacy"), icon: "shield" },
+                  {
+                    label: t("home.about.items.terms"),
+                    icon: "file",
+                    onPress: () => router.push("/terms"),
+                  },
+                  {
+                    label: t("home.about.items.privacy"),
+                    icon: "shield",
+                    onPress: () => router.push("/privacy"),
+                  },
                   { label: t("home.about.items.support"), icon: "chat" },
                   { label: t("home.about.items.bug"), icon: "bug" },
                   { label: t("home.about.items.github"), icon: "github" },
                   { label: t("home.about.items.feedback"), icon: "feedback" },
-                ] as { label: string; icon: IconKey }[]
+                ] as { label: string; icon: IconKey; onPress?: () => void }[]
               ).map((item) => (
-                <View key={item.label} style={styles.aboutPill}>
+                <Pressable
+                  key={item.label}
+                  onPress={item.onPress}
+                  disabled={!item.onPress}
+                  style={({ pressed }) => [
+                    styles.aboutPill,
+                    item.onPress && styles.aboutPillInteractive,
+                    pressed && item.onPress && styles.aboutPillPressed,
+                  ]}
+                >
                   <AppIcon name={item.icon} size={16} color="#E0E0E0" />
                   <Text style={styles.aboutText}>{item.label}</Text>
-                </View>
+                </Pressable>
               ))}
             </View>
           </View>
