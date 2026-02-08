@@ -11,7 +11,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import Markdown from "react-native-markdown-display";
 
-import { getColors, spacing, typography } from "@/src/theme";
+import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
 import { getLegalDoc, type LegalKind } from "../../../locales/legalContent";
@@ -33,8 +33,6 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       paddingHorizontal: spacing[6],
       paddingTop: spacing[6],
       paddingBottom: spacing[5],
-      borderBottomWidth: 1,
-      borderBottomColor: colors.border,
       marginBottom: spacing[5],
     },
     backButton: {
@@ -155,25 +153,25 @@ export function LegalScreen({ kind }: LegalScreenProps) {
       },
       link: {
         color: colors.accentCopper,
-        textDecorationLine: "underline",
+        textDecorationLine: "underline" as const,
       },
       table: {
         borderWidth: 1,
-        borderColor: colors.border,
+        borderColor: themeMode === "light" ? "#d0d0d0" : colors.border,
         marginVertical: spacing[3],
       },
       th: {
         borderWidth: 1,
-        borderColor: colors.border,
+        borderColor: themeMode === "light" ? "#d0d0d0" : colors.border,
         padding: spacing[2],
       },
       td: {
         borderWidth: 1,
-        borderColor: colors.border,
+        borderColor: themeMode === "light" ? "#d0d0d0" : colors.border,
         padding: spacing[2],
       },
     }),
-    [colors],
+    [colors, themeMode],
   );
   const router = useRouter();
   const { t } = useTranslation();
@@ -183,24 +181,16 @@ export function LegalScreen({ kind }: LegalScreenProps) {
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.content}>
           <View style={styles.header}>
-            <Pressable
-              onPress={() => router.back()}
-              style={({ pressed }) => [
-                styles.backButton,
-                pressed && { opacity: 0.85 },
-              ]}
-            >
+            <Pressable onPress={() => router.back()} style={styles.backButton}>
               <Text style={styles.backText}>{t("navigation.backToApp")}</Text>
             </Pressable>
             <Text style={styles.title}>{doc.title}</Text>
-            <View style={styles.divider} />
             {doc.lastUpdated && (
               <View style={styles.metaRow}>
                 <Text style={styles.metaLabel}>Last Updated</Text>
                 <Text style={styles.metaValue}>{doc.lastUpdated}</Text>
               </View>
             )}
-            <View style={styles.divider} />
           </View>
 
           <View style={styles.card}>

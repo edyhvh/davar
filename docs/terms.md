@@ -3,7 +3,7 @@
 **Effective Date:** February 8, 2026  
 **Last Updated:** February 8, 2026
 
-Welcome to Davar, an open-source project providing access to the Hebrew Bible (Tanakh) in its original language, along with select translations and study resources. The Davar mobile application (the "App") is available on the Apple App Store and Google Play Store, and the associated website is located at https://davar.bible (collectively, the "Services").
+Welcome to Davar, an open-source project providing access to the Hebrew Bible (Tanakh) in its original language and hebrew translations of the Besorah, along with select translations and study resources. The Davar mobile application (the "App") is available on the Apple App Store and Google Play Store, and the associated website is located at https://davar.bible (collectively, the "Services").
 
 These Terms of Service ("Terms") govern your access to and use of the Services. By downloading, installing, accessing, or using the App or Website, you agree to be bound by these Terms. If you do not agree, do not use the Services.
 
