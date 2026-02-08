@@ -449,8 +449,20 @@ const WordAnalysisBottomSheetComponent = (
   { word, currentVerseId, onClosed }: WordAnalysisBottomSheetProps,
   ref: React.ForwardedRef<BottomSheetMethods>,
 ) => {
-  const sheetRef = useRef<BottomSheetMethods>(null!);
-  useImperativeHandle(ref, () => sheetRef.current);
+  const sheetRef = useRef<BottomSheetMethods | null>(null);
+  useImperativeHandle(
+    ref,
+    () => ({
+      expand: () => sheetRef.current?.expand(),
+      collapse: () => sheetRef.current?.collapse(),
+      close: () => sheetRef.current?.close(),
+      forceClose: () => sheetRef.current?.forceClose(),
+      snapToIndex: (index: number) => sheetRef.current?.snapToIndex(index),
+      snapToPosition: (position: number | string) =>
+        sheetRef.current?.snapToPosition(position as any),
+    }),
+    [],
+  );
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const insets = useSafeAreaInsets();
   const { height: screenHeight } = useWindowDimensions();

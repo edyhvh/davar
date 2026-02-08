@@ -325,8 +325,14 @@ export const VerseDetailContent = () => {
     // Close navigation sheet if it's open
     navigationSheetRef.current?.close();
     setSelectedWord(word);
-    sheetRef.current?.snapToIndex(0);
   }, []);
+
+  // Open the word analysis sheet whenever a word is selected
+  useEffect(() => {
+    if (selectedWord && sheetRef.current) {
+      sheetRef.current.snapToIndex(0);
+    }
+  }, [selectedWord]);
 
   const handleBackgroundPress = useCallback(() => {
     animatePill(true);
