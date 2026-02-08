@@ -387,7 +387,7 @@ export default function HomeScreen() {
                     label: t("home.about.items.feedback"),
                     icon: "feedback",
                     onPress: () =>
-                      Linking.openURL(getSupportTelegramUrl(language)),
+                      Linking.openURL("https://davar.bible/feedback"),
                   },
                 ] as { label: string; icon: IconKey; onPress?: () => void }[]
               ).map((item) => (

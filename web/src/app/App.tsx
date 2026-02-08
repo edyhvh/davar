@@ -17,6 +17,7 @@ import { Skeleton } from "./components/ui/skeleton";
 import { DonateScreen } from "./components/DonateScreen";
 import { FeaturesScreen } from "./components/FeaturesScreen";
 import { LegalScreen } from "./components/LegalScreen";
+import { FeedbackScreen } from "./components/FeedbackScreen";
 import {
   getBooks,
   getChapterCount,
@@ -55,7 +56,8 @@ type Screen =
   | "donate"
   | "features"
   | "terms"
-  | "privacy";
+  | "privacy"
+  | "feedback";
 
 type RouteState = {
   screen: Screen;
@@ -253,6 +255,8 @@ export default function App() {
         return "/terms";
       case "privacy":
         return "/privacy";
+      case "feedback":
+        return "/feedback";
       case "donate":
         return "/donate";
       case "features":
@@ -282,6 +286,7 @@ export default function App() {
     if (root === "home") return { screen: "home" };
     if (root === "terms") return { screen: "terms" };
     if (root === "privacy") return { screen: "privacy" };
+    if (root === "feedback") return { screen: "feedback" };
     if (root === "donate") return { screen: "donate" };
     if (root === "features") return { screen: "features" };
     if (root === "settings") return { screen: "settings" };
@@ -1088,6 +1093,12 @@ export default function App() {
           {currentScreen === "privacy" && (
             <LegalScreen
               kind="privacy"
+              language={language}
+              onBack={() => setCurrentScreen("home")}
+            />
+          )}
+          {currentScreen === "feedback" && (
+            <FeedbackScreen
               language={language}
               onBack={() => setCurrentScreen("home")}
             />

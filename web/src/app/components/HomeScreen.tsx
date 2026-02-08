@@ -63,8 +63,7 @@ export function HomeScreen({ language }: HomeScreenProps) {
     {
       label: t("home.aboutItems.feedback"),
       Icon: Info,
-      href: getSupportTelegramUrl(language),
-      target: "_blank",
+      href: "/feedback",
     },
   ];
 

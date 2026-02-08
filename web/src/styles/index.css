@@ -205,6 +205,10 @@ button,
   padding: 28px 24px 0;
 }
 
+.feedback-content {
+  padding-top: 0;
+}
+
 .legal-divider {
   height: 1px;
   background: var(--border);
