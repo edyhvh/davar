@@ -134,77 +134,77 @@ TS2009_BOOK_MAPPING = {
 
 BES_BOOK_MAPPING = {
     # TORAH
-    "Genesis": "Genesis",
-    "Exodus": "Exodus", 
-    "Leviticus": "Leviticus",
-    "Numbers": "Numbers",
-    "Deuteronomy": "Deuteronomy",
+    "Genesis": "genesis",
+    "Exodus": "exodus", 
+    "Leviticus": "leviticus",
+    "Numbers": "numbers",
+    "Deuteronomy": "deuteronomy",
     # NEVIIM (Former Prophets)
-    "Joshua": "Joshua",
-    "Judges": "Judges",
-    "Samuel1": "Samuel1",
-    "Samuel2": "Samuel2",
-    "Kings1": "Kings1",
-    "Kings2": "Kings2",
+    "Joshua": "joshua",
+    "Judges": "judges",
+    "Samuel1": "samuel1",
+    "Samuel2": "samuel2",
+    "Kings1": "kings1",
+    "Kings2": "kings2",
     # NEVIIM (Latter Prophets)
-    "Isaiah": "Isaiah",
-    "Jeremiah": "Jeremiah",
-    "Ezekiel": "Ezekiel",
+    "Isaiah": "isaiah",
+    "Jeremiah": "jeremiah",
+    "Ezekiel": "ezekiel",
     # NEVIIM (The Twelve)
-    "Hosea": "Hosea",
-    "Joel": "Joel",
-    "Amos": "Amos",
-    "Obadiah": "Obadiah",
-    "Jonah": "Jonah",
-    "Micah": "Micah",
-    "Nahum": "Nahum",
-    "Habakkuk": "Habakkuk",
-    "Zephaniah": "Zephaniah",
-    "Haggai": "Haggai",
-    "Zechariah": "Zechariah",
-    "Malachi": "Malachi",
+    "Hosea": "hosea",
+    "Joel": "joel",
+    "Amos": "amos",
+    "Obadiah": "obadiah",
+    "Jonah": "jonah",
+    "Micah": "micah",
+    "Nahum": "nahum",
+    "Habakkuk": "habakkuk",
+    "Zephaniah": "zephaniah",
+    "Haggai": "haggai",
+    "Zechariah": "zechariah",
+    "Malachi": "malachi",
     # KETUVIM
-    "Psalms": "Psalms",
-    "Proverbs": "Proverbs",
-    "Job": "Job",
-    "SongOfSolomon": "SongOfSolomon",
-    "Ruth": "Ruth",
-    "Lamentations": "Lamentations",
-    "Ecclesiastes": "Ecclesiastes",
-    "Esther": "Esther",
-    "Daniel": "Daniel",
-    "Ezra": "Ezra",
-    "Nehemiah": "Nehemiah",
-    "Chronicles1": "Chronicles1",
-    "Chronicles2": "Chronicles2",
+    "Psalms": "psalms",
+    "Proverbs": "proverbs",
+    "Job": "job",
+    "SongOfSolomon": "songofsolomon",
+    "Ruth": "ruth",
+    "Lamentations": "lamentations",
+    "Ecclesiastes": "ecclesiastes",
+    "Esther": "esther",
+    "Daniel": "daniel",
+    "Ezra": "ezra",
+    "Nehemiah": "nehemiah",
+    "Chronicles1": "chronicles1",
+    "Chronicles2": "chronicles2",
     # BESORAH (New Testament)
-    "Matthew": "Matthew",
-    "Mark": "Mark",
-    "Luke": "Luke",
-    "John": "John",
-    "Acts": "Acts",
-    "Romans": "Romans",
-    "Corinthians1": "Corinthians1",
-    "Corinthians2": "Corinthians2",
-    "Galatians": "Galatians",
-    "Ephesians": "Ephesians",
-    "Philippians": "Philippians",
-    "Colossians": "Colossians",
-    "Thessalonians1": "Thessalonians1",
-    "Thessalonians2": "Thessalonians2",
-    "Timothy1": "Timothy1",
-    "Timothy2": "Timothy2",
-    "Titus": "Titus",
-    "Philemon": "Philemon",
-    "Hebrews": "Hebrews",
-    "James": "James",
-    "Peter1": "Peter1",
-    "Peter2": "Peter2",
-    "John1": "John1",
-    "John2": "John2",
-    "John3": "John3",
-    "Jude": "Jude",
-    "Revelation": "Revelation",
+    "Matthew": "matthew",
+    "Mark": "mark",
+    "Luke": "luke",
+    "John": "john",
+    "Acts": "acts",
+    "Romans": "romans",
+    "Corinthians1": "corinthians1",
+    "Corinthians2": "corinthians2",
+    "Galatians": "galatians",
+    "Ephesians": "ephesians",
+    "Philippians": "philippians",
+    "Colossians": "colossians",
+    "Thessalonians1": "thessalonians1",
+    "Thessalonians2": "thessalonians2",
+    "Timothy1": "timothy1",
+    "Timothy2": "timothy2",
+    "Titus": "titus",
+    "Philemon": "philemon",
+    "Hebrews": "hebrews",
+    "James": "james",
+    "Peter1": "peter1",
+    "Peter2": "peter2",
+    "John1": "john1",
+    "John2": "john2",
+    "John3": "john3",
+    "Jude": "jude",
+    "Revelation": "revelation",
 }
 
 
@@ -292,28 +292,43 @@ class TranslationLoader(DataLoader):
         if not bes_book_name:
             return None
 
+        # Cache key for the entire book data
+        book_cache_key = f"bes_book_{bes_book_name}"
+        if book_cache_key not in self._cache:
+            # Load and cache the entire book
+            try:
+                book_data = self.load_json(f"bes/json/{bes_book_name}.json")
+                # Build an index: {chapter: {verse: text}}
+                book_index = {}
+                if "chapters" in book_data:
+                    for chapter_data in book_data["chapters"]:
+                        chap_num = chapter_data.get("chapter")
+                        if chap_num not in book_index:
+                            book_index[chap_num] = {}
+                        for verse_data in chapter_data.get("verses", []):
+                            verse_num = verse_data.get("verse")
+                            text = verse_data.get("bes", "")
+                            book_index[chap_num][verse_num] = text
+                self._cache[book_cache_key] = book_index
+            except FileNotFoundError:
+                logger.warning(f"BES translation file not found for {book_name} (mapped to: {bes_book_name})")
+                self._cache[book_cache_key] = None
+            except KeyError as e:
+                logger.warning(f"BES translation structure error for {book_name}: {e}")
+                self._cache[book_cache_key] = None
+
+        book_index = self._cache[book_cache_key]
+        if book_index is None:
+            return None
+
+        # Now lookup the specific verse
         cache_key = f"bes_{bes_book_name}_{chapter}_{verse}"
         if cache_key in self._cache:
             return self._cache[cache_key]
 
-        try:
-            book_data = self.load_json(f"bes/json/{bes_book_name}.json")
-            # BES data structure: {"chapters": [{"chapter": num, "verses": [{"verse": num, "bes": "text"}]}]}
-            if "chapters" in book_data:
-                for chapter_data in book_data["chapters"]:
-                    if chapter_data.get("chapter") == chapter:
-                        for verse_data in chapter_data.get("verses", []):
-                            if verse_data.get("verse") == verse:
-                                translation = verse_data.get("bes", "")
-                                self._cache[cache_key] = translation
-                                return translation
-        except FileNotFoundError:
-            logger.warning(f"BES translation file not found for {book_name} (mapped to: {bes_book_name})")
-        except KeyError as e:
-            logger.warning(f"BES translation structure error for {book_name} chapter {chapter} verse {verse}: {e}")
-
-        self._cache[cache_key] = None
-        return None
+        translation = book_index.get(chapter, {}).get(verse)
+        self._cache[cache_key] = translation
+        return translation
 
     def get_translation(self, book_name: str, chapter: int, verse: int, language: str) -> Optional[dict]:
         """Get translation for a verse in specified language"""
@@ -321,7 +336,11 @@ class TranslationLoader(DataLoader):
             # Try TTH first
             tth_result = self.load_tth_verse(book_name, chapter, verse, language)
             if tth_result and tth_result.get("translation"):
-                return tth_result
+                return {
+                    "translation": tth_result["translation"],
+                    "footnotes": tth_result.get("footnotes", []),
+                    "source": "tth"
+                }
             
             # Fall back to BES if TTH is not available
             bes_translation = self.load_bes_verse(book_name, chapter, verse)
@@ -329,13 +348,19 @@ class TranslationLoader(DataLoader):
                 return {
                     "translation": bes_translation,
                     "footnotes": [],  # BES doesn't have footnotes
-                    "source": "bes"  # Indicate this came from BES fallback
+                    "source": "bes"
                 }
             
             return None
         elif language.lower() == "en":
             translation = self.load_ts2009_verse(book_name, chapter, verse)
-            return {"translation": translation, "footnotes": None} if translation else None
+            if translation:
+                return {
+                    "translation": translation,
+                    "footnotes": [],  # TS2009 doesn't have footnotes in this format
+                    "source": "ts2009"
+                }
+            return None
         return None
 
     def _english_to_hebrew_book_name(self, english_name: str) -> Optional[str]:

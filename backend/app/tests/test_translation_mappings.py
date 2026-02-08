@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from app.data_loaders.translations import TTH_BOOK_MAPPING, TS2009_BOOK_MAPPING, TranslationLoader
+from app.data_loaders.translations import TTH_BOOK_MAPPING, TS2009_BOOK_MAPPING, BES_BOOK_MAPPING, TranslationLoader
 from app.data_loaders.book_mapping import BookNameMapper
 
 
@@ -43,12 +43,22 @@ class TranslationMappingTests(unittest.TestCase):
             mapped_name = self.translation_loader._english_to_tth_book_name(english_name)
             self.assertEqual(path.stem, mapped_name)
 
-    def test_ts2009_roundtrip_mapping(self):
-        ts2009_dir = self.data_root / "ts2009"
-        for path in ts2009_dir.glob("*.json"):
+    def test_bes_mapping_matches_files(self):
+        bes_json_dir = self.data_root / "bes" / "json"
+        bes_files = self._json_stems(bes_json_dir)
+        mapping_values = set(BES_BOOK_MAPPING.values())
+        self.assertEqual(
+            bes_files,
+            mapping_values,
+            "bes mapping must match JSON filenames exactly"
+        )
+
+    def test_bes_roundtrip_mapping(self):
+        bes_json_dir = self.data_root / "bes" / "json"
+        for path in bes_json_dir.glob("*.json"):
             english_name = self.book_mapper.to_english(path.stem)
             self.assertIsNotNone(english_name, f"No English mapping for {path.stem}")
-            mapped_name = self.translation_loader._english_to_hebrew_book_name(english_name)
+            mapped_name = self.translation_loader._english_to_bes_book_name(english_name)
             self.assertEqual(path.stem, mapped_name)
 
 
