@@ -4,7 +4,7 @@ Maps various source naming conventions to Standard English canonical names
 """
 
 from typing import Dict, Optional
-from .translations import TTH_BOOK_MAPPING, TS2009_BOOK_MAPPING
+from .translations import TTH_BOOK_MAPPING, TS2009_BOOK_MAPPING, BES_BOOK_MAPPING
 
 
 class BookNameMapper:
@@ -102,6 +102,9 @@ class BookNameMapper:
 
         # TS2009 Hebrew transliterations to English
         self.ts2009_to_english = {value: key for key, value in TS2009_BOOK_MAPPING.items()}
+
+        # BES English names to English (identity mapping since BES uses English names)
+        self.bes_to_english = {value: key for key, value in BES_BOOK_MAPPING.items()}
 
         # DSS mappings (book names in DSS data)
         self.dss_to_english = {
@@ -229,11 +232,14 @@ class BookNameMapper:
             return self.ts2009_to_english.get(book_name)
         elif source == "dss" or (source == "auto" and book_name in self.dss_to_english):
             return self.dss_to_english.get(book_name)
+        elif source == "bes" or (source == "auto" and book_name in self.bes_to_english):
+            return self.bes_to_english.get(book_name)
 
         # If auto-detection fails, try all mappings
         if source == "auto":
             for mapping in [self.oe_to_english, self.delitzsch_to_english,
-                            self.tth_to_english, self.ts2009_to_english, self.dss_to_english]:
+                            self.tth_to_english, self.ts2009_to_english, self.dss_to_english,
+                            self.bes_to_english]:
                 if book_name in mapping:
                     return mapping[book_name]
 

@@ -1,6 +1,6 @@
 """
 Translation data loader
-Loads TTH (Spanish) and TS2009 (English) translations
+Loads TTH (Spanish), TS2009 (English), and BES (Spanish fallback) translations
 """
 
 import logging
@@ -132,14 +132,90 @@ TS2009_BOOK_MAPPING = {
     "Revelation": "hazon",
 }
 
+BES_BOOK_MAPPING = {
+    # TORAH
+    "Genesis": "Genesis",
+    "Exodus": "Exodus", 
+    "Leviticus": "Leviticus",
+    "Numbers": "Numbers",
+    "Deuteronomy": "Deuteronomy",
+    # NEVIIM (Former Prophets)
+    "Joshua": "Joshua",
+    "Judges": "Judges",
+    "Samuel1": "Samuel1",
+    "Samuel2": "Samuel2",
+    "Kings1": "Kings1",
+    "Kings2": "Kings2",
+    # NEVIIM (Latter Prophets)
+    "Isaiah": "Isaiah",
+    "Jeremiah": "Jeremiah",
+    "Ezekiel": "Ezekiel",
+    # NEVIIM (The Twelve)
+    "Hosea": "Hosea",
+    "Joel": "Joel",
+    "Amos": "Amos",
+    "Obadiah": "Obadiah",
+    "Jonah": "Jonah",
+    "Micah": "Micah",
+    "Nahum": "Nahum",
+    "Habakkuk": "Habakkuk",
+    "Zephaniah": "Zephaniah",
+    "Haggai": "Haggai",
+    "Zechariah": "Zechariah",
+    "Malachi": "Malachi",
+    # KETUVIM
+    "Psalms": "Psalms",
+    "Proverbs": "Proverbs",
+    "Job": "Job",
+    "SongOfSolomon": "SongOfSolomon",
+    "Ruth": "Ruth",
+    "Lamentations": "Lamentations",
+    "Ecclesiastes": "Ecclesiastes",
+    "Esther": "Esther",
+    "Daniel": "Daniel",
+    "Ezra": "Ezra",
+    "Nehemiah": "Nehemiah",
+    "Chronicles1": "Chronicles1",
+    "Chronicles2": "Chronicles2",
+    # BESORAH (New Testament)
+    "Matthew": "Matthew",
+    "Mark": "Mark",
+    "Luke": "Luke",
+    "John": "John",
+    "Acts": "Acts",
+    "Romans": "Romans",
+    "Corinthians1": "Corinthians1",
+    "Corinthians2": "Corinthians2",
+    "Galatians": "Galatians",
+    "Ephesians": "Ephesians",
+    "Philippians": "Philippians",
+    "Colossians": "Colossians",
+    "Thessalonians1": "Thessalonians1",
+    "Thessalonians2": "Thessalonians2",
+    "Timothy1": "Timothy1",
+    "Timothy2": "Timothy2",
+    "Titus": "Titus",
+    "Philemon": "Philemon",
+    "Hebrews": "Hebrews",
+    "James": "James",
+    "Peter1": "Peter1",
+    "Peter2": "Peter2",
+    "John1": "John1",
+    "John2": "John2",
+    "John3": "John3",
+    "Jude": "Jude",
+    "Revelation": "Revelation",
+}
+
 
 class TranslationLoader(DataLoader):
-    """Loader for translation data (TTH Spanish, TS2009 English)"""
+    """Loader for translation data (TTH Spanish, TS2009 English, BES Spanish fallback)"""
 
     def __init__(self, data_path: Optional[str] = None):
         super().__init__(data_path)
         self.tth_path = self.data_path / "tth_2" / "json"
         self.ts2009_path = self.data_path / "ts2009"
+        self.bes_path = self.data_path / "bes" / "json"
 
     def load_tth_verse(self, book_name: str, chapter: int, verse: int, language: str = "es") -> Optional[dict]:
         """Load TTH translation for a specific verse"""
@@ -210,10 +286,53 @@ class TranslationLoader(DataLoader):
         self._cache[cache_key] = None
         return None
 
+    def load_bes_verse(self, book_name: str, chapter: int, verse: int) -> Optional[str]:
+        """Load BES (Biblia en Español Sencillo) translation for a specific verse"""
+        bes_book_name = self._english_to_bes_book_name(book_name)
+        if not bes_book_name:
+            return None
+
+        cache_key = f"bes_{bes_book_name}_{chapter}_{verse}"
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+
+        try:
+            book_data = self.load_json(f"bes/json/{bes_book_name}.json")
+            # BES data structure: {"chapters": [{"chapter": num, "verses": [{"verse": num, "bes": "text"}]}]}
+            if "chapters" in book_data:
+                for chapter_data in book_data["chapters"]:
+                    if chapter_data.get("chapter") == chapter:
+                        for verse_data in chapter_data.get("verses", []):
+                            if verse_data.get("verse") == verse:
+                                translation = verse_data.get("bes", "")
+                                self._cache[cache_key] = translation
+                                return translation
+        except FileNotFoundError:
+            logger.warning(f"BES translation file not found for {book_name} (mapped to: {bes_book_name})")
+        except KeyError as e:
+            logger.warning(f"BES translation structure error for {book_name} chapter {chapter} verse {verse}: {e}")
+
+        self._cache[cache_key] = None
+        return None
+
     def get_translation(self, book_name: str, chapter: int, verse: int, language: str) -> Optional[dict]:
         """Get translation for a verse in specified language"""
         if language.lower() == "es":
-            return self.load_tth_verse(book_name, chapter, verse, language)
+            # Try TTH first
+            tth_result = self.load_tth_verse(book_name, chapter, verse, language)
+            if tth_result and tth_result.get("translation"):
+                return tth_result
+            
+            # Fall back to BES if TTH is not available
+            bes_translation = self.load_bes_verse(book_name, chapter, verse)
+            if bes_translation:
+                return {
+                    "translation": bes_translation,
+                    "footnotes": [],  # BES doesn't have footnotes
+                    "source": "bes"  # Indicate this came from BES fallback
+                }
+            
+            return None
         elif language.lower() == "en":
             translation = self.load_ts2009_verse(book_name, chapter, verse)
             return {"translation": translation, "footnotes": None} if translation else None
@@ -226,6 +345,10 @@ class TranslationLoader(DataLoader):
     def _english_to_tth_book_name(self, english_name: str) -> Optional[str]:
         """Map English book names to TTH (tth_2) JSON filenames"""
         return TTH_BOOK_MAPPING.get(english_name)
+
+    def _english_to_bes_book_name(self, english_name: str) -> Optional[str]:
+        """Map English book names to BES JSON filenames"""
+        return BES_BOOK_MAPPING.get(english_name)
 
 
 # Global instance

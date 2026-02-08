@@ -144,4 +144,9 @@ async def export_bundle(dataset: str, api_key: str = Depends(require_api_key)):
             translation_loader.ts2009_path, "ts2009")
         return ORJSONResponse(content=data, headers=_bundle_headers(dataset_key))
 
+    if dataset_key == "bes":
+        data = _load_translation_bundle(
+            translation_loader.bes_path, "bes/json")
+        return ORJSONResponse(content=data, headers=_bundle_headers(dataset_key))
+
     raise HTTPException(status_code=404, detail=f"Unknown dataset '{dataset}'")
