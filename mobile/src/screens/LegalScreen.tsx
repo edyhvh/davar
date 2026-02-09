@@ -67,20 +67,22 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     metaRow: {
       flexDirection: "row",
       flexWrap: "wrap",
-      alignItems: "center",
+      alignItems: "baseline",
       gap: spacing[2],
       marginBottom: spacing[4],
     },
     metaLabel: {
       fontFamily: "Jost_400Regular",
       fontSize: 11,
+      lineHeight: typography.sizes.bodySmall,
       letterSpacing: 1.6,
       textTransform: "uppercase",
       color: colors.textSecondary,
     },
     metaValue: {
-      fontFamily: "Arimo_400Regular",
-      fontSize: typography.sizes.bodySmall,
+      fontFamily: typography.families.latinUISemiBold,
+      fontSize: 11,
+      lineHeight: typography.sizes.bodySmall,
       color: colors.textPrimary,
     },
     divider: {
