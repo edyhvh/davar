@@ -10,7 +10,6 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
-import * as MailComposer from "expo-mail-composer";
 
 import { AppIcon } from "@/src/components/ui/AppIcon";
 import { getColors, radii, spacing, typography } from "@/src/theme";
@@ -220,6 +219,17 @@ export default function HomeScreen() {
   const styles = useMemo(() => createStyles(colors), [colors]);
   const { t, language } = useTranslation();
   const router = useRouter();
+
+  const openUrlSafely = async (url: string) => {
+    try {
+      const can = await Linking.canOpenURL(url);
+      if (can) await Linking.openURL(url);
+      else console.warn("Can't open URL:", url);
+    } catch (err) {
+      console.error("Failed to open URL:", err);
+    }
+  };
+
   type DownloadLanguage = "en" | "es";
   type DownloadStatus = "idle" | "downloading" | "completed";
   const downloadItems = useMemo(
@@ -368,17 +378,13 @@ export default function HomeScreen() {
                     label: t("home.about.items.support"),
                     icon: "chat",
                     onPress: () =>
-                      void MailComposer.composeAsync({
-                        recipients: ["hi@davar.bible"],
-                        subject: t("support.emailSubject"),
-                        body: t("support.emailBody"),
-                      }),
+                      void openUrlSafely(getSupportTelegramUrl(language)),
                   },
                   {
                     label: t("home.about.items.bug"),
                     icon: "bug",
                     onPress: () =>
-                      Linking.openURL(
+                      void openUrlSafely(
                         "https://github.com/edyhvh/davar/issues/new",
                       ),
                   },
@@ -386,17 +392,13 @@ export default function HomeScreen() {
                     label: t("home.about.items.github"),
                     icon: "github",
                     onPress: () =>
-                      Linking.openURL("https://github.com/edyhvh/davar"),
+                      void openUrlSafely("https://github.com/edyhvh/davar"),
                   },
                   {
                     label: t("home.about.items.feedback"),
                     icon: "feedback",
                     onPress: () =>
-                      void MailComposer.composeAsync({
-                        recipients: ["hi@davar.bible"],
-                        subject: t("feedback.emailSubject"),
-                        body: t("feedback.emailBody"),
-                      }),
+                      void openUrlSafely(getSupportTelegramUrl(language)),
                   },
                 ] as { label: string; icon: IconKey; onPress?: () => void }[]
               ).map((item) => (
