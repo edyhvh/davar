@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
+import * as MailComposer from "expo-mail-composer";
 
 import { AppIcon } from "@/src/components/ui/AppIcon";
 import { getColors, radii, spacing, typography } from "@/src/theme";
@@ -367,7 +368,11 @@ export default function HomeScreen() {
                     label: t("home.about.items.support"),
                     icon: "chat",
                     onPress: () =>
-                      Linking.openURL(getSupportTelegramUrl(language)),
+                      void MailComposer.composeAsync({
+                        recipients: ["hi@davar.bible"],
+                        subject: t("support.emailSubject"),
+                        body: t("support.emailBody"),
+                      }),
                   },
                   {
                     label: t("home.about.items.bug"),
@@ -387,7 +392,11 @@ export default function HomeScreen() {
                     label: t("home.about.items.feedback"),
                     icon: "feedback",
                     onPress: () =>
-                      Linking.openURL("https://davar.bible/feedback"),
+                      void MailComposer.composeAsync({
+                        recipients: ["hi@davar.bible"],
+                        subject: t("feedback.emailSubject"),
+                        body: t("feedback.emailBody"),
+                      }),
                   },
                 ] as { label: string; icon: IconKey; onPress?: () => void }[]
               ).map((item) => (

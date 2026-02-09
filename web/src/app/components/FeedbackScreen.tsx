@@ -23,6 +23,9 @@ export function FeedbackScreen({ language, onBack }: FeedbackScreenProps) {
       <div className="legal-content feedback-content">
         <div className="legal-prose">
           <p>{t("feedback.emailInstruction", { email: "hi@davar.bible" })}</p>
+          <p>
+            <a href="mailto:hi@davar.bible">hi@davar.bible</a>
+          </p>
           <p>{t("feedback.telegramReminder")}</p>
           <p>
             <a
