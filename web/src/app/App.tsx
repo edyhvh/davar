@@ -617,23 +617,28 @@ export default function App() {
       if (route.screen !== "verse") {
         setCurrentScreen(route.screen);
       } else {
-        if (route.book) {
-          const matchedBook = books.find(
-            (item) => item.name.toLowerCase() === route.book?.toLowerCase(),
-          );
-          if (matchedBook) {
-            setCurrentBook(matchedBook.name);
-          } else {
-            setCurrentBook(route.book);
+        // If we're coming back from terms/privacy/feedback, go to home instead of verse
+        if (["terms", "privacy", "feedback"].includes(currentScreen)) {
+          setCurrentScreen("home");
+        } else {
+          if (route.book) {
+            const matchedBook = books.find(
+              (item) => item.name.toLowerCase() === route.book?.toLowerCase(),
+            );
+            if (matchedBook) {
+              setCurrentBook(matchedBook.name);
+            } else {
+              setCurrentBook(route.book);
+            }
           }
+          if (route.chapter) {
+            setCurrentChapter(route.chapter);
+          }
+          if (route.verse) {
+            setCurrentVerse(route.verse);
+          }
+          setCurrentScreen("verse");
         }
-        if (route.chapter) {
-          setCurrentChapter(route.chapter);
-        }
-        if (route.verse) {
-          setCurrentVerse(route.verse);
-        }
-        setCurrentScreen("verse");
       }
       window.setTimeout(() => {
         isHandlingPopStateRef.current = false;
@@ -642,7 +647,7 @@ export default function App() {
 
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
-  }, [books, parseRoutePath]);
+  }, [books, parseRoutePath, currentScreen]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
