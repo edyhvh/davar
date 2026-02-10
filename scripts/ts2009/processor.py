@@ -18,14 +18,14 @@ try:
         BOOKS_MAPPING, SECTIONS_MAPPING,
         DEFAULT_DB_PATH, DEFAULT_OUTPUT_DIR, DEFAULT_TEMP_DIR, PROCESSOR_VERSION, PROJECT_ROOT
     )
-    from .text_processor import TextCleaner, ProcessedText
+    from .text_processor import TextCleaner
 except ImportError:
     # Fall back to absolute import for direct script execution
     from config import (
         BOOKS_MAPPING, SECTIONS_MAPPING,
         DEFAULT_DB_PATH, DEFAULT_OUTPUT_DIR, DEFAULT_TEMP_DIR, PROCESSOR_VERSION, PROJECT_ROOT
     )
-    from text_processor import TextCleaner, ProcessedText
+    from text_processor import TextCleaner
 
 
 @dataclass
