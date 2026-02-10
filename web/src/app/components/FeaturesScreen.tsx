@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Lightbulb, Mail } from "lucide-react";
+import { Github, Lightbulb } from "lucide-react";
 import { useTranslation, type AppLanguage } from "../hooks/useTranslation";
 
 interface FeaturesScreenProps {
@@ -36,18 +36,7 @@ export function FeaturesScreen({ language }: FeaturesScreenProps) {
           >
             {t("features.repositoryLabel")}
           </a>
-          <span>
-            {t("features.openSourceNote")}
-          </span>
-        </div>
-        <div className="mt-3 flex items-center justify-center gap-2 text-sm text-[var(--text-secondary-muted)]">
-          <Mail className="w-4 h-4" />
-          <a
-            href="mailto:hi@davar.bible"
-            className="underline underline-offset-2 hover:text-[var(--text-primary)]"
-          >
-            hi@davar.bible
-          </a>
+          <span>{t("features.openSourceNote")}</span>
         </div>
       </div>
     </div>

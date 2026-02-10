@@ -20,7 +20,10 @@ const translations = {
   he,
 } as const;
 
-const resolvePath = (source: TranslationObject, path: string): TranslationValue => {
+const resolvePath = (
+  source: TranslationObject,
+  path: string,
+): TranslationValue => {
   return path.split(".").reduce<TranslationValue>((acc, key) => {
     if (acc && typeof acc === "object" && !Array.isArray(acc) && key in acc) {
       return (acc as TranslationObject)[key];
@@ -29,7 +32,10 @@ const resolvePath = (source: TranslationObject, path: string): TranslationValue 
   }, source);
 };
 
-const interpolate = (value: string, params?: Record<string, string | number>): string => {
+const interpolate = (
+  value: string,
+  params?: Record<string, string | number>,
+): string => {
   if (!params) return value;
   return Object.entries(params).reduce((acc, [key, replacement]) => {
     return acc.replaceAll(`{${key}}`, String(replacement));
@@ -90,4 +96,17 @@ export const useTranslation = () => {
     language,
     isRTL: language === "he",
   };
+};
+
+export const getSupportTelegramUrl = (language: AppLanguage): string => {
+  switch (language) {
+    case "he":
+      return "https://t.me/davarbiblehe";
+    case "en":
+      return "https://t.me/davarbibleen";
+    case "es":
+      return "https://t.me/davarbiblees";
+    default:
+      return "https://t.me/davarbibleen";
+  }
 };

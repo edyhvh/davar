@@ -17,6 +17,7 @@ import { Skeleton } from "./components/ui/skeleton";
 import { DonateScreen } from "./components/DonateScreen";
 import { FeaturesScreen } from "./components/FeaturesScreen";
 import { LegalScreen } from "./components/LegalScreen";
+import { FeedbackScreen } from "./components/FeedbackScreen";
 import {
   getBooks,
   getChapterCount,
@@ -55,7 +56,8 @@ type Screen =
   | "donate"
   | "features"
   | "terms"
-  | "privacy";
+  | "privacy"
+  | "feedback";
 
 type RouteState = {
   screen: Screen;
@@ -140,12 +142,17 @@ export default function App() {
 
   // Use persisted state hooks for all settings
   const [currentScreen, setCurrentScreen] = useState<Screen>("verse");
+  const currentScreenRef = useRef(currentScreen);
   const [theme, setTheme] = usePersistedState("theme", initialState.theme);
   const [language, setLanguage] = usePersistedState(
     "language",
     initialState.language,
   );
   const { t, isRTL } = useTranslation(language);
+
+  useEffect(() => {
+    currentScreenRef.current = currentScreen;
+  }, [currentScreen]);
   const [showQumran, setShowQumran] = usePersistedState(
     "showQumran",
     initialState.showQumran,
@@ -206,6 +213,7 @@ export default function App() {
   const [isMobile, setIsMobile] = useState(false);
 
   const [books, setBooks] = useState<BookResponse[]>([]);
+  const booksRef = useRef<BookResponse[]>([]);
   const [chapterVerses, setChapterVerses] = useState<VerseResponse[]>([]);
   const [chapterCount, setChapterCount] = useState(1);
   const [verseCount, setVerseCount] = useState(1);
@@ -253,6 +261,8 @@ export default function App() {
         return "/terms";
       case "privacy":
         return "/privacy";
+      case "feedback":
+        return "/feedback";
       case "donate":
         return "/donate";
       case "features":
@@ -282,6 +292,7 @@ export default function App() {
     if (root === "home") return { screen: "home" };
     if (root === "terms") return { screen: "terms" };
     if (root === "privacy") return { screen: "privacy" };
+    if (root === "feedback") return { screen: "feedback" };
     if (root === "donate") return { screen: "donate" };
     if (root === "features") return { screen: "features" };
     if (root === "settings") return { screen: "settings" };
@@ -300,6 +311,15 @@ export default function App() {
 
     return { screen: "verse" };
   }, []);
+  const parseRoutePathRef = useRef(parseRoutePath);
+
+  useEffect(() => {
+    booksRef.current = books;
+  }, [books]);
+
+  useEffect(() => {
+    parseRoutePathRef.current = parseRoutePath;
+  }, [parseRoutePath]);
 
   const getHebrewBookName = (book: string): string => {
     const found = books.find(
@@ -353,8 +373,10 @@ export default function App() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    pendingRouteRef.current = parseRoutePath(window.location.pathname);
-  }, [parseRoutePath]);
+    pendingRouteRef.current = parseRoutePathRef.current(
+      window.location.pathname,
+    );
+  }, []);
 
   useEffect(() => {
     document.documentElement.dir = isRTL ? "rtl" : "ltr";
@@ -608,27 +630,34 @@ export default function App() {
     if (typeof window === "undefined") return;
     const handlePopState = () => {
       isHandlingPopStateRef.current = true;
-      const route = parseRoutePath(window.location.pathname);
+      const route = parseRoutePathRef.current(window.location.pathname);
       if (route.screen !== "verse") {
         setCurrentScreen(route.screen);
       } else {
-        if (route.book) {
-          const matchedBook = books.find(
-            (item) => item.name.toLowerCase() === route.book?.toLowerCase(),
-          );
-          if (matchedBook) {
-            setCurrentBook(matchedBook.name);
-          } else {
-            setCurrentBook(route.book);
+        // If we're coming back from terms/privacy/feedback, go to home instead of verse
+        if (
+          ["terms", "privacy", "feedback"].includes(currentScreenRef.current)
+        ) {
+          setCurrentScreen("home");
+        } else {
+          if (route.book) {
+            const matchedBook = booksRef.current.find(
+              (item) => item.name.toLowerCase() === route.book?.toLowerCase(),
+            );
+            if (matchedBook) {
+              setCurrentBook(matchedBook.name);
+            } else {
+              setCurrentBook(route.book);
+            }
           }
+          if (route.chapter) {
+            setCurrentChapter(route.chapter);
+          }
+          if (route.verse) {
+            setCurrentVerse(route.verse);
+          }
+          setCurrentScreen("verse");
         }
-        if (route.chapter) {
-          setCurrentChapter(route.chapter);
-        }
-        if (route.verse) {
-          setCurrentVerse(route.verse);
-        }
-        setCurrentScreen("verse");
       }
       window.setTimeout(() => {
         isHandlingPopStateRef.current = false;
@@ -637,7 +666,7 @@ export default function App() {
 
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
-  }, [books, parseRoutePath]);
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -1088,6 +1117,12 @@ export default function App() {
           {currentScreen === "privacy" && (
             <LegalScreen
               kind="privacy"
+              language={language}
+              onBack={() => setCurrentScreen("home")}
+            />
+          )}
+          {currentScreen === "feedback" && (
+            <FeedbackScreen
               language={language}
               onBack={() => setCurrentScreen("home")}
             />

@@ -1,8 +1,8 @@
-import React from 'react';
-import { useTranslation, type AppLanguage } from '../hooks/useTranslation';
+import React from "react";
+import { useTranslation, type AppLanguage } from "../hooks/useTranslation";
 
 const DONATION_CONFIG = {
-  githubSponsor: 'https://github.com/sponsors/edyhvh',
+  githubSponsor: "https://github.com/sponsors/edyhvh",
 } as const;
 
 const GithubSponsorsIcon = ({ className }: { className?: string }) => (
@@ -40,13 +40,16 @@ export function DonateScreen({ language }: DonateScreenProps) {
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
       <div className="text-center">
-        <div className="space-y-6 text-[var(--text-secondary)]" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <div
+          className="space-y-6 text-[var(--text-secondary)]"
+          style={{ fontFamily: "'Inter', sans-serif" }}
+        >
           <div className="flex items-center justify-center gap-3 text-base">
             <div className="flex items-center gap-1">
               <GithubSponsorsIcon className="w-6 h-6" />
               <CreditCardIcon className="w-5 h-5" />
             </div>
-            <span className="font-medium">{t('donate.githubSponsor')}</span>
+            <span className="font-medium">{t("donate.githubSponsor")}</span>
             <a
               href={DONATION_CONFIG.githubSponsor}
               target="_blank"
@@ -58,17 +61,17 @@ export function DonateScreen({ language }: DonateScreenProps) {
           </div>
 
           <p className="text-sm text-[var(--text-secondary)]">
-            {t('donate.contactPrefix')}{' '}
-            <span className="inline-flex items-center gap-2">
-              <span className="inline-flex items-center gap-1 font-medium text-[var(--text-primary)]">
-                <TelegramIcon className="w-4 h-4" />
-                {t('donate.telegramLabel')}
+            {t("donate.contactPrefix")}{" "}
+            <span className="inline-flex items-baseline gap-2">
+              <span className="inline-flex items-baseline gap-1 font-medium text-[var(--text-primary)]">
+                <TelegramIcon className="w-4 h-4 align-middle" />
+                {t("donate.telegramLabel")}
               </span>
               <a
                 href="https://t.me/edyhvh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
+                className="inline-flex items-baseline underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
               >
                 @edyhvh
               </a>
@@ -80,11 +83,11 @@ export function DonateScreen({ language }: DonateScreenProps) {
               href="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={t('common.downloadOnAppStore')}
+              aria-label={t("common.downloadOnAppStore")}
             >
               <img
                 src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                alt={t('common.downloadOnAppStore')}
+                alt={t("common.downloadOnAppStore")}
                 className="h-12"
               />
             </a>
@@ -92,11 +95,11 @@ export function DonateScreen({ language }: DonateScreenProps) {
               href="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={t('common.getOnGooglePlay')}
+              aria-label={t("common.getOnGooglePlay")}
             >
               <img
                 src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-                alt={t('common.getOnGooglePlay')}
+                alt={t("common.getOnGooglePlay")}
                 className="h-14"
               />
             </a>

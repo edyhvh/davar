@@ -183,6 +183,7 @@ button,
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  align-items: baseline;
   font-family: "Arimo", sans-serif;
   color: var(--text-secondary);
   font-size: 0.95rem;
@@ -191,12 +192,13 @@ button,
 .legal-meta-label {
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 0.72rem;
+  font-size: 0.72rem; /* keep the label small */
 }
 
 .legal-meta-value {
-  font-weight: 600;
+  font-weight: 700; /* stronger emphasis */
   color: var(--text-primary);
+  font-size: 0.72rem; /* match the label size but bold */
 }
 
 .legal-content {
@@ -205,10 +207,17 @@ button,
   padding: 28px 24px 0;
 }
 
+.feedback-content {
+  padding-top: 0;
+}
+
 .legal-divider {
   height: 1px;
   background: var(--border);
   margin-bottom: 28px;
+  /* align with the hero content (compensate for .legal-content padding) */
+  margin-left: -24px;
+  width: calc(100% + 48px);
 }
 
 .legal-status {
