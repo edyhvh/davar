@@ -5,11 +5,8 @@ Handles text cleaning and footnote extraction for TS2009 Bible data.
 """
 
 import re
-import logging
-from typing import Dict, List, Tuple, Optional
+from typing import List
 from dataclasses import dataclass
-
-logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -24,12 +21,6 @@ class FootnoteExtractor:
 
     # Pattern to match footnote markers like [a], [b], [1], [2]
     FOOTNOTE_MARKER_PATTERN = re.compile(r'\[([a-z0-9]+)\]')
-    
-    # Pattern to match "Footnote: [a]..." text at the end
-    FOOTNOTE_TEXT_PATTERN = re.compile(r'\s*Footnote:\s*(.+?)(?:\s*$|\s+Footnote:)', re.IGNORECASE)
-    
-    # Pattern to match multiple footnotes in "Footnote: [a]... [b]..." format
-    MULTIPLE_FOOTNOTES_PATTERN = re.compile(r'Footnote:\s*\[([^\]]+)\]\s*([^\[]*)(?=\s*(?:Footnote:|$))', re.IGNORECASE)
 
     @classmethod
     def extract_footnotes(cls, text: str) -> ProcessedText:
