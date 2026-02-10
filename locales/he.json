@@ -1,171 +1,171 @@
 {
   "common": {
-    "on": "\u05e4\u05e2\u05d9\u05dc",
-    "off": "\u05db\u05d1\u05d5\u05d9",
-    "loading": "\u05d8\u05d5\u05e2\u05df...",
-    "appName": "\u05d3\u05d1\u05e8",
-    "downloadOnAppStore": "\u05d4\u05d5\u05e8\u05d3 \u05d1-App Store",
-    "getOnGooglePlay": "\u05d6\u05de\u05d9\u05df \u05d1-Google Play"
+    "on": "פעיל",
+    "off": "כבוי",
+    "loading": "טוען...",
+    "appName": "דבר",
+    "downloadOnAppStore": "הורד ב-App Store",
+    "getOnGooglePlay": "זמין ב-Google Play"
   },
   "navigation": {
-    "goHome": "\u05dc\u05d3\u05e3 \u05d4\u05d1\u05d9\u05ea",
-    "selectBook": "\u05e1\u05e4\u05e8",
-    "selectChapter": "\u05e4\u05e8\u05e7",
-    "selectVerse": "\u05e4\u05e1\u05d5\u05e7",
-    "previousVerse": "\u05e4\u05e1\u05d5\u05e7 \u05e7\u05d5\u05d3\u05dd",
-    "nextVerse": "\u05e4\u05e1\u05d5\u05e7 \u05d4\u05d1\u05d0",
-    "openFeatures": "\u05e4\u05ea\u05d7 \u05ea\u05db\u05d5\u05e0\u05d5\u05ea",
-    "features": "\u05ea\u05db\u05d5\u05e0\u05d5\u05ea",
-    "donate": "\u05ea\u05e8\u05d5\u05de\u05d4",
-    "openSettings": "\u05e4\u05ea\u05d7 \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea",
-    "chapterShort": "\u05e4\u05e8\u05e7",
-    "verseShort": "\u05e4\u05e1",
-    "languageLabel": "\u05e9\u05e4\u05d4",
-    "toggleDarkTheme": "\u05d4\u05d7\u05dc\u05e3 \u05de\u05e6\u05d1 \u05db\u05d4\u05d4",
-    "toggleQumran": "\u05d4\u05d7\u05dc\u05e3 \u05d2\u05e8\u05e1\u05d0\u05d5\u05ea \u05e7\u05d5\u05de\u05e8\u05d0\u05df",
-    "toggleHebrewOnly": "\u05d4\u05d7\u05dc\u05e3 \u05e2\u05d1\u05e8\u05d9\u05ea \u05d1\u05dc\u05d1\u05d3",
-    "toggleNikud": "\u05d4\u05d7\u05dc\u05e3 \u05e0\u05d9\u05e7\u05d5\u05d3",
-    "toggleCantillation": "\u05d4\u05d7\u05dc\u05e3 \u05d8\u05e2\u05de\u05d9 \u05de\u05e7\u05e8\u05d0",
-    "toggleFullChapter": "\u05d4\u05d7\u05dc\u05e3 \u05e4\u05e8\u05e7 \u05de\u05dc\u05d0",
-    "toggleSeferStyle": "\u05d4\u05d7\u05dc\u05e3 \u05e1\u05d2\u05e0\u05d5\u05df \u05e1\u05e4\u05e8",
-    "swipeToNavigate": "\u05d4\u05d7\u05dc\u05e7 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d5\u05d5\u05d8",
-    "backToApp": "\u2190 \u05d7\u05d6\u05e8\u05d4 \u05dc\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d4",
-    "search": "\u05d7\u05e4\u05e9...",
-    "searchBooks": "\u05d7\u05e4\u05e9 \u05e1\u05e4\u05e8\u05d9\u05dd...",
-    "loadingBooks": "\u05d8\u05d5\u05e2\u05df \u05e1\u05e4\u05e8\u05d9\u05dd...",
-    "noBooksFound": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d5 \u05e1\u05e4\u05e8\u05d9\u05dd",
-    "noResults": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d5 \u05ea\u05d5\u05e6\u05d0\u05d5\u05ea",
-    "noChapters": "\u05d0\u05d9\u05df \u05e4\u05e8\u05e7\u05d9\u05dd \u05d6\u05de\u05d9\u05e0\u05d9\u05dd",
-    "noVerses": "\u05d0\u05d9\u05df \u05e4\u05e1\u05d5\u05e7\u05d9\u05dd \u05d6\u05de\u05d9\u05e0\u05d9\u05dd",
-    "book": "\u05e1\u05e4\u05e8",
-    "verse": "\u05e4\u05e1\u05d5\u05e7",
-    "modal": "\u05de\u05d5\u05d3\u05d0\u05dc"
+    "goHome": "לדף הבית",
+    "selectBook": "ספר",
+    "selectChapter": "פרק",
+    "selectVerse": "פסוק",
+    "previousVerse": "פסוק קודם",
+    "nextVerse": "פסוק הבא",
+    "openFeatures": "פתח תכונות",
+    "features": "תכונות",
+    "donate": "תרומה",
+    "openSettings": "פתח הגדרות",
+    "chapterShort": "פרק",
+    "verseShort": "פס",
+    "languageLabel": "שפה",
+    "toggleDarkTheme": "החלף מצב כהה",
+    "toggleQumran": "החלף גרסאות קומראן",
+    "toggleHebrewOnly": "החלף עברית בלבד",
+    "toggleNikud": "החלף ניקוד",
+    "toggleCantillation": "החלף טעמי מקרא",
+    "toggleFullChapter": "החלף פרק מלא",
+    "toggleSeferStyle": "החלף סגנון ספר",
+    "swipeToNavigate": "החלק כדי לנווט",
+    "backToApp": "← חזרה לאפליקציה",
+    "search": "חפש...",
+    "searchBooks": "חפש ספרים...",
+    "loadingBooks": "טוען ספרים...",
+    "noBooksFound": "לא נמצאו ספרים",
+    "noResults": "לא נמצאו תוצאות",
+    "noChapters": "אין פרקים זמינים",
+    "noVerses": "אין פסוקים זמינים",
+    "book": "ספר",
+    "verse": "פסוק",
+    "modal": "מודאל"
   },
   "settings": {
-    "title": "\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea",
+    "title": "הגדרות",
     "sections": {
-      "general": "\u05db\u05dc\u05dc\u05d9",
-      "offline": "\u05dc\u05d0 \u05de\u05e7\u05d5\u05d5\u05df"
+      "general": "כללי",
+      "offline": "לא מקוון"
     },
     "theme": {
-      "title": "\u05e2\u05e8\u05db\u05ea \u05e0\u05d5\u05e9\u05d0",
-      "subtitle": "\u05de\u05e6\u05d1 \u05db\u05d4\u05d4"
+      "title": "ערכת נושא",
+      "subtitle": "מצב כהה"
     },
     "language": {
-      "title": "\u05e9\u05e4\u05d4"
+      "title": "שפה"
     },
     "qumran": {
-      "title": "\u05d2\u05e8\u05e1\u05d0\u05d5\u05ea \u05e7\u05d5\u05de\u05e8\u05d0\u05df",
-      "subtitle": "\u05d4\u05e6\u05d2 \u05d8\u05e7\u05e1\u05d8 \u05de\u05d2\u05d9\u05dc\u05d5\u05ea \u05de\u05d3\u05d1\u05e8 \u05d9\u05d4\u05d5\u05d3\u05d4"
+      "title": "גרסאות קומראן",
+      "subtitle": "הצג טקסט מגילות מדבר יהודה"
     },
     "fullChapter": {
-      "title": "\u05e4\u05e8\u05e7 \u05de\u05dc\u05d0",
-      "subtitle": "\u05d4\u05e6\u05d2 \u05d8\u05e7\u05e1\u05d8 \u05de\u05dc\u05d0 \u05e9\u05dc \u05d4\u05e4\u05e8\u05e7"
+      "title": "פרק מלא",
+      "subtitle": "הצג טקסט מלא של הפרק"
     },
     "seferStyle": {
-      "title": "\u05e1\u05d2\u05e0\u05d5\u05df \u05e1\u05e4\u05e8",
-      "subtitle": "\u05e4\u05e8\u05d9\u05e1\u05ea \u05de\u05d2\u05d9\u05dc\u05d4 \u05e8\u05e6\u05d9\u05e4\u05d4 \u05d1\u05e2\u05d1\u05e8\u05d9\u05ea",
-      "warningTitle": "\u05e1\u05d2\u05e0\u05d5\u05df \u05e1\u05e4\u05e8 \u05d3\u05d5\u05e8\u05e9 \u05e2\u05d1\u05e8\u05d9\u05ea \u05d1\u05dc\u05d1\u05d3",
-      "warningMessage": "\u05d4\u05e4\u05e2\u05dc \u05e2\u05d1\u05e8\u05d9\u05ea \u05d1\u05dc\u05d1\u05d3 \u05db\u05d3\u05d9 \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05e1\u05d2\u05e0\u05d5\u05df \u05e1\u05e4\u05e8."
+      "title": "סגנון ספר",
+      "subtitle": "פריסת מגילה רציפה בעברית",
+      "warningTitle": "סגנון ספר דורש עברית בלבד",
+      "warningMessage": "הפעל עברית בלבד כדי להשתמש בסגנון ספר."
     },
     "hebrewOnly": {
-      "title": "\u05e2\u05d1\u05e8\u05d9\u05ea \u05d1\u05dc\u05d1\u05d3",
-      "subtitle": "\u05d4\u05e6\u05d2 \u05d8\u05e7\u05e1\u05d8 \u05e8\u05e7 \u05d1\u05e2\u05d1\u05e8\u05d9\u05ea"
+      "title": "עברית בלבד",
+      "subtitle": "הצג טקסט רק בעברית"
     },
     "cantillation": {
-      "title": "\u05d8\u05e2\u05de\u05d9 \u05de\u05e7\u05e8\u05d0",
-      "subtitle": "\u05d4\u05e6\u05d2 \u05d8\u05e2\u05de\u05d9 \u05de\u05e7\u05e8\u05d0"
+      "title": "טעמי מקרא",
+      "subtitle": "הצג טעמי מקרא"
     },
     "nikud": {
-      "title": "\u05e0\u05d9\u05e7\u05d5\u05d3",
-      "subtitle": "\u05d4\u05e6\u05d2 \u05e0\u05d9\u05e7\u05d5\u05d3"
+      "title": "ניקוד",
+      "subtitle": "הצג ניקוד"
     },
     "clearStorage": {
-      "title": "\u05e0\u05e7\u05d4 \u05d0\u05d7\u05e1\u05d5\u05df",
-      "subtitle": "\u05d0\u05e4\u05e1 \u05d0\u05ea \u05db\u05dc \u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d5\u05d4\u05e0\u05ea\u05d5\u05e0\u05d9\u05dd",
-      "alertTitle": "\u05e0\u05e7\u05d4 \u05d0\u05d7\u05e1\u05d5\u05df",
-      "alertMessage": "\u05e4\u05e2\u05d5\u05dc\u05d4 \u05d6\u05d5 \u05ea\u05d0\u05e4\u05e1 \u05d0\u05ea \u05db\u05dc \u05d4\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea \u05d5\u05d4\u05e0\u05ea\u05d5\u05e0\u05d9\u05dd. \u05d4\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d4 \u05ea\u05d9\u05d8\u05e2\u05df \u05de\u05d7\u05d3\u05e9.",
-      "cancel": "\u05d1\u05d9\u05d8\u05d5\u05dc",
-      "confirm": "\u05e0\u05e7\u05d4"
+      "title": "נקה אחסון",
+      "subtitle": "אפס את כל ההגדרות והנתונים",
+      "alertTitle": "נקה אחסון",
+      "alertMessage": "פעולה זו תאפס את כל ההגדרות והנתונים. האפליקציה תיטען מחדש.",
+      "cancel": "ביטול",
+      "confirm": "נקה"
     },
-    "designSystemTitle": "\u05de\u05e2\u05e8\u05db\u05ea \u05e2\u05d9\u05e6\u05d5\u05d1",
-    "designSystemDescription": "\u05e6\u05e4\u05d4 \u05d1\u05e8\u05db\u05d9\u05d1\u05d9 \u05e2\u05d9\u05e6\u05d5\u05d1",
-    "mobileDesignGuideTitle": "\u05de\u05d3\u05e8\u05d9\u05da \u05e2\u05d9\u05e6\u05d5\u05d1 \u05dc\u05e0\u05d9\u05d9\u05d3",
-    "mobileDesignGuideDescription": "\u05e6\u05e4\u05d4 \u05d1\u05e8\u05db\u05d9\u05d1\u05d9 \u05e2\u05d9\u05e6\u05d5\u05d1 \u05dc\u05e0\u05d9\u05d9\u05d3"
+    "designSystemTitle": "מערכת עיצוב",
+    "designSystemDescription": "צפה ברכיבי עיצוב",
+    "mobileDesignGuideTitle": "מדריך עיצוב לנייד",
+    "mobileDesignGuideDescription": "צפה ברכיבי עיצוב לנייד"
   },
   "home": {
-    "todayIs": "\u05d4\u05d9\u05d5\u05dd \u05d4\u05d5\u05d0",
+    "todayIs": "היום הוא",
     "calendar": {
-      "todayIs": "\u05d4\u05d9\u05d5\u05dd \u05d4\u05d5\u05d0",
-      "dateLabel": "\u05d0\u05d1\u05d9\u05d1 10",
+      "todayIs": "היום הוא",
+      "dateLabel": "אביב 10",
       "dayNames": [
-        "\u05d0\u05f3",
-        "\u05d1\u05f3",
-        "\u05d2\u05f3",
-        "\u05d3\u05f3",
-        "\u05d4\u05f3",
-        "\u05d5\u05f3",
-        "\u05e9\u05f3"
+        "א׳",
+        "ב׳",
+        "ג׳",
+        "ד׳",
+        "ה׳",
+        "ו׳",
+        "ש׳"
       ],
-      "pesachLabel": "\u05e4\u05e1\u05d7",
+      "pesachLabel": "פסח",
       "pesachHebrew": "פֶּסַח"
     },
     "download": {
-      "title": "\u05d4\u05d5\u05e8\u05d3\u05d4 \u05dc\u05d0 \u05de\u05e7\u05d5\u05d5\u05e0\u05ea",
-      "downloading": "\u05de\u05d5\u05e8\u05d9\u05d3 {item}...",
-      "idle": "\u05d4\u05e7\u05e9 \u05db\u05d3\u05d9 \u05dc\u05e9\u05de\u05d5\u05e8 \u05ea\u05e8\u05d2\u05d5\u05de\u05d9\u05dd \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05dc\u05d0 \u05de\u05e7\u05d5\u05d5\u05df",
-      "dictionary": "\u05de\u05d9\u05dc\u05d5\u05df",
-      "english": "\u05d0\u05e0\u05d2\u05dc\u05d9\u05ea",
-      "spanish": "\u05e1\u05e4\u05e8\u05d3\u05d9\u05ea"
+      "title": "הורדה לא מקוונת",
+      "downloading": "מוריד {item}...",
+      "idle": "הקש כדי לשמור תרגומים לשימוש לא מקוון",
+      "dictionary": "מילון",
+      "english": "אנגלית",
+      "spanish": "ספרדית"
     },
     "donate": {
-      "title": "\u05ea\u05e8\u05d5\u05de\u05d4",
-      "subtitle": "\u05ea\u05de\u05d9\u05db\u05d4 \u05d1\u05e4\u05d9\u05ea\u05d5\u05d7 \u05d3\u05d1\u05e8"
+      "title": "תרומה",
+      "subtitle": "תמיכה בפיתוח דבר"
     },
-    "sourcesTitle": "\u05de\u05e7\u05d5\u05e8\u05d5\u05ea",
+    "sourcesTitle": "מקורות",
     "sources": {
-      "hebrewTextLabel": "\u05d8\u05e7\u05e1\u05d8 \u05e2\u05d1\u05e8\u05d9",
-      "hebrewTextValue": "\u05de\u05e1\u05d5\u05e8\u05d4 \u05d5\u05e7\u05d5\u05de\u05e8\u05d0\u05df",
-      "dictionaryLabel": "\u05de\u05d9\u05dc\u05d5\u05df",
-      "dictionaryValue": "\u05e1\u05d8\u05e8\u05d5\u05e0\u05d2, BDB, \u05de\u05d5\u05ea\u05d0\u05dd",
-      "dictionaryNote": " (\u05de\u05d9\u05dc\u05d9\u05dd \u05e0\u05d1\u05d7\u05e8\u05d5\u05ea)",
-      "englishTranslationLabel": "\u05ea\u05e8\u05d2\u05d5\u05dd \u05d0\u05e0\u05d2\u05dc\u05d9",
+      "hebrewTextLabel": "טקסט עברי",
+      "hebrewTextValue": "מסורה וקומראן",
+      "dictionaryLabel": "מילון",
+      "dictionaryValue": "סטרונג, BDB, מותאם",
+      "dictionaryNote": " (מילים נבחרות)",
+      "englishTranslationLabel": "תרגום אנגלי",
       "englishTranslationValue": "TS2009",
-      "spanishTranslationLabel": "\u05ea\u05e8\u05d2\u05d5\u05dd \u05e1\u05e4\u05e8\u05d3\u05d9",
-      "spanishTranslationValue": "TTH (\u05e8\u05d0\u05e9\u05d9), BES (\u05de\u05e9\u05e0\u05d9)",
-      "besorahLabel": "\u05d1\u05e9\u05d5\u05e8\u05d4",
-      "besorahValue": "\u05ea\u05e8\u05d2\u05d5\u05dd \u05d3\u05dc\u05d9\u05e5\u05e9"
+      "spanishTranslationLabel": "תרגום ספרדי",
+      "spanishTranslationValue": "TTH (ראשי), BES (משני)",
+      "besorahLabel": "בשורה",
+      "besorahValue": "תרגום דליץש"
     },
-    "aboutTitle": "\u05d0\u05d5\u05d3\u05d5\u05ea",
+    "aboutTitle": "אודות",
     "aboutItems": {
-      "legal": "\u05de\u05e9\u05e4\u05d8\u05d9",
-      "terms": "\u05ea\u05e0\u05d0\u05d9\u05dd",
-      "privacy": "\u05e4\u05e8\u05d8\u05d9\u05d5\u05ea",
-      "support": "\u05ea\u05de\u05d9\u05db\u05d4",
-      "bug": "\u05d1\u05d0\u05d2",
+      "legal": "משפטי",
+      "terms": "תנאים",
+      "privacy": "פרטיות",
+      "support": "תמיכה",
+      "bug": "באג",
       "github": "GitHub",
-      "feedback": "\u05de\u05e9\u05d5\u05d1"
+      "feedback": "משוב"
     },
     "about": {
-      "title": "\u05d0\u05d5\u05d3\u05d5\u05ea",
+      "title": "אודות",
       "items": {
-        "legal": "\u05de\u05e9\u05e4\u05d8\u05d9",
-        "terms": "\u05ea\u05e0\u05d0\u05d9\u05dd",
-        "privacy": "\u05e4\u05e8\u05d8\u05d9\u05d5\u05ea",
-        "support": "\u05ea\u05de\u05d9\u05db\u05d4",
-        "bug": "\u05d1\u05d0\u05d2",
+        "legal": "משפטי",
+        "terms": "תנאים",
+        "privacy": "פרטיות",
+        "support": "תמיכה",
+        "bug": "באג",
         "github": "GitHub",
-        "feedback": "\u05de\u05e9\u05d5\u05d1"
+        "feedback": "משוב"
       }
     }
   },
   "donate": {
-    "githubSponsor": "\u05ea\u05de\u05d9\u05db\u05d4 \u05d1-GitHub",
-    "contactPrefix": "\u05d0\u05dd \u05ea\u05e8\u05e6\u05d4 \u05dc\u05d3\u05e2\u05ea \u05e2\u05dc \u05d3\u05e8\u05db\u05d9 \u05ea\u05e8\u05d5\u05de\u05d4 \u05e0\u05d5\u05e1\u05e4\u05d5\u05ea, \u05d0\u05e4\u05e9\u05e8 \u05dc\u05d9\u05e6\u05d5\u05e8 \u05d0\u05d9\u05ea\u05d9 \u05e7\u05e9\u05e8 \u05d1",
-    "telegramLabel": "\u05d8\u05dc\u05d2\u05e8\u05dd"
+    "githubSponsor": "תמיכה ב-GitHub",
+    "contactPrefix": "אם תרצה לדעת על דרכי תרומה נוספות, אפשר ליצור איתי קשר ב",
+    "telegramLabel": "טלגרם"
   },
   "features": {
-    "title": "\u05e8\u05e2\u05d9\u05d5\u05e0\u05d5\u05ea",
+    "title": "רעיונות",
     "items": [
       "telegram app",
       "blockchain app",
@@ -177,74 +177,87 @@
       "septuagint",
       "greek εὐαγγέλιον"
     ],
-    "openSourceNote": "\u05d6\u05d4\u05d5 \u05e4\u05e8\u05d5\u05d9\u05e7\u05d8 \u05e7\u05d5\u05d3 \u05e4\u05ea\u05d5\u05d7, \u05e0\u05e9\u05de\u05d7 \u05dc\u05ea\u05e8\u05d5\u05de\u05d5\u05ea \u05d5\u05dc\u05e9\u05d9\u05ea\u05d5\u05e3 \u05e4\u05e2\u05d5\u05dc\u05d4 \u05e2\u05dd \u05d4\u05db\u05d9\u05e9\u05d5\u05e8\u05d9\u05dd \u05d0\u05d5 \u05d4\u05e8\u05e2\u05d9\u05d5\u05e0\u05d5\u05ea \u05e9\u05dc\u05da",
+    "openSourceNote": "זהו פרויקט קוד פתוח, נשמח לתרומות ולשיתוף פעולה עם הכישורים או הרעיונות שלך",
     "repositoryLabel": "davar"
   },
   "errors": {
-    "uiFallbackTitle": "\u05de\u05e9\u05d4\u05d5 \u05d4\u05e9\u05ea\u05d1\u05e9",
-    "uiFallbackMessage": "\u05e0\u05d0 \u05dc\u05e8\u05e2\u05e0\u05df \u05d0\u05ea \u05d4\u05d3\u05e3 \u05d0\u05d5 \u05dc\u05e0\u05e1\u05d5\u05ea \u05e9\u05d5\u05d1 \u05de\u05d0\u05d5\u05d7\u05e8 \u05d9\u05d5\u05ea\u05e8.",
-    "uiFallbackMessageMobile": "\u05e0\u05d0 \u05dc\u05d0\u05ea\u05d7\u05dc \u05d0\u05ea \u05d4\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d4.",
-    "loadBooks": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d8\u05e2\u05d5\u05df \u05e1\u05e4\u05e8\u05d9\u05dd.",
-    "loadVerses": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d8\u05e2\u05d5\u05df \u05e4\u05e1\u05d5\u05e7\u05d9\u05dd."
+    "uiFallbackTitle": "משהו השתבש",
+    "uiFallbackMessage": "נא לרענן את הדף או לנסות שוב מאוחר יותר.",
+    "uiFallbackMessageMobile": "נא לאתחל את האפליקציה.",
+    "loadBooks": "לא ניתן לטעון ספרים.",
+    "loadVerses": "לא ניתן לטעון פסוקים.",
+    "notFound": {
+      "title": "הדף לא נמצא",
+      "message": "הדף שאתה מחפש לא קיים.",
+      "goHome": "לדף הבית",
+      "goToVerse": "לפסוק"
+    },
+    "connection": {
+      "title": "שגיאת חיבור",
+      "message": "לא ניתן להתחבר לשרת. אנא בדוק את חיבור האינטרנט שלך.",
+      "retry": "נסה שוב",
+      "goHome": "לדף הבית",
+      "goToVerse": "לפסוק"
+    }
   },
   "verse": {
-    "previousSnippet": "\u05e4\u05e1\u05d5\u05e7 \u05e7\u05d5\u05d3\u05dd...",
-    "nextSnippet": "\u05e4\u05e1\u05d5\u05e7 \u05d4\u05d1\u05d0...",
-    "selectBookPrompt": "\u05d1\u05d7\u05e8 \u05e1\u05e4\u05e8 \u05db\u05d3\u05d9 \u05dc\u05d4\u05ea\u05d7\u05d9\u05dc.",
-    "loading": "\u05d8\u05d5\u05e2\u05df \u05e4\u05e1\u05d5\u05e7\u05d9\u05dd...",
-    "prefixLabel": "\u05ea\u05d7\u05d9\u05dc\u05d9\u05ea: {prefix}",
-    "missingSpanishTranslation": "\u05d0\u05d9\u05df \u05dc\u05e0\u05d5 \u05db\u05e8\u05d2\u05e2 \u05ea\u05e8\u05d2\u05d5\u05dd \u05dc\u05e1\u05e4\u05e8\u05d3\u05d9\u05ea \u05dc\u05d8\u05e7\u05e1\u05d8 \u05d6\u05d4, \u05d0\u05e0\u05d7\u05e0\u05d5 \u05e2\u05d5\u05d1\u05d3\u05d9\u05dd \u05e2\u05dc \u05db\u05da..."
+    "previousSnippet": "פסוק קודם...",
+    "nextSnippet": "פסוק הבא...",
+    "selectBookPrompt": "בחר ספר כדי להתחיל.",
+    "loading": "טוען פסוקים...",
+    "prefixLabel": "תחילית: {prefix}",
+    "missingSpanishTranslation": "אין לנו כרגע תרגום לספרדית לטקסט זה, אנחנו עובדים על כך..."
   },
   "wordCard": {
-    "selectWord": "\u05d1\u05d7\u05e8 \u05de\u05d9\u05dc\u05d4",
-    "selectWordPrompt": "\u05d1\u05d7\u05e8 \u05de\u05d9\u05dc\u05d4 \u05db\u05d3\u05d9 \u05dc\u05e8\u05d0\u05d5\u05ea \u05d0\u05ea \u05d4\u05e0\u05d9\u05ea\u05d5\u05d7 \u05e9\u05dc\u05d4",
-    "close": "\u05e1\u05d2\u05d5\u05e8 \u05e4\u05d9\u05e8\u05d5\u05e9 \u05de\u05d9\u05dc\u05d4",
-    "meanings": "\u05de\u05e9\u05de\u05e2\u05d5\u05d9\u05d5\u05ea",
-    "masoretic": "\u05de\u05e1\u05d5\u05e8\u05d4",
-    "qumran": "\u05e7\u05d5\u05de\u05e8\u05d0\u05df",
-    "instances": "\u05de\u05d5\u05e4\u05e2\u05d9\u05dd",
-    "root": "\u05e9\u05d5\u05e8\u05e9",
-    "commentary": "\u05d4\u05e2\u05e8\u05d4",
-    "preposition": "\u05de\u05d9\u05dc\u05d9\u05ea",
-    "tapToNavigate": "\u05d4\u05e7\u05e9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d5\u05d5\u05d8",
-    "noMeanings": "\u05e2\u05d3\u05d9\u05d9\u05df \u05d0\u05d9\u05df \u05de\u05e9\u05de\u05e2\u05d5\u05d9\u05d5\u05ea.",
-    "noInstances": "\u05e2\u05d3\u05d9\u05d9\u05df \u05d0\u05d9\u05df \u05de\u05d5\u05e4\u05e2\u05d9\u05dd.",
-    "loadingDefinitions": "\u05d8\u05d5\u05e2\u05df \u05d4\u05d2\u05d3\u05e8\u05d5\u05ea...",
-    "alreadyRoot": "\u05db\u05d1\u05e8 \u05e9\u05d5\u05e8\u05e9",
-    "appearsCount": "\u05de\u05d5\u05e4\u05d9\u05e2 {count} \u05e4\u05e2\u05de\u05d9\u05dd",
-    "appearsIn": "\u05de\u05d5\u05e4\u05d9\u05e2 \u05d1",
-    "showMore": "\u05d4\u05e6\u05d2 \u05e2\u05d5\u05d3 {count}",
-    "properName": "\u05e9\u05dd \u05e4\u05e8\u05d8\u05d9"
+    "selectWord": "בחר מילה",
+    "selectWordPrompt": "בחר מילה כדי לראות את הניתוח שלה",
+    "close": "סגור פירוש מילה",
+    "meanings": "משמעויות",
+    "masoretic": "מסורה",
+    "qumran": "קומראן",
+    "instances": "מופעים",
+    "root": "שורש",
+    "commentary": "הערה",
+    "preposition": "מילית",
+    "tapToNavigate": "הקש כדי לנווט",
+    "noMeanings": "עדיין אין משמעויות.",
+    "noInstances": "עדיין אין מופעים.",
+    "loadingDefinitions": "טוען הגדרות...",
+    "alreadyRoot": "כבר שורש",
+    "appearsCount": "מופיע {count} פעמים",
+    "appearsIn": "מופיע ב",
+    "showMore": "הצג עוד {count}",
+    "properName": "שם פרטי"
   },
   "languages": {
-    "en": "\u05d0\u05e0\u05d2\u05dc\u05d9\u05ea",
-    "es": "\u05e1\u05e4\u05e8\u05d3\u05d9\u05ea",
-    "he": "\u05e2\u05d1\u05e8\u05d9\u05ea"
+    "en": "אנגלית",
+    "es": "ספרדית",
+    "he": "עברית"
   },
   "offline": {
-    "dictionary": "\u05de\u05d9\u05dc\u05d5\u05df",
-    "englishTranslation": "\u05ea\u05e8\u05d2\u05d5\u05dd \u05d0\u05e0\u05d2\u05dc\u05d9",
-    "spanishTranslation": "\u05ea\u05e8\u05d2\u05d5\u05dd \u05e1\u05e4\u05e8\u05d3\u05d9",
-    "downloaded": "\u05d4\u05d5\u05e8\u05d3",
-    "notDownloaded": "\u05dc\u05d0 \u05d4\u05d5\u05e8\u05d3"
+    "dictionary": "מילון",
+    "englishTranslation": "תרגום אנגלי",
+    "spanishTranslation": "תרגום ספרדי",
+    "downloaded": "הורד",
+    "notDownloaded": "לא הורד"
   },
   "search": {
-    "title": "\u05d7\u05d9\u05e4\u05d5\u05e9",
-    "subtitle": "\u05e0\u05d5\u05d5\u05d8 \u05dc\u05db\u05dc \u05e1\u05e4\u05e8, \u05e4\u05e8\u05e7 \u05d5\u05e4\u05e1\u05d5\u05e7",
-    "tapPrompt": "\u05d4\u05e7\u05e9 \u05dc\u05d1\u05d7\u05d5\u05e8 \u05e1\u05e4\u05e8, \u05e4\u05e8\u05e7 \u05d5\u05e4\u05e1\u05d5\u05e7",
-    "goToVerse": "\u05e2\u05d1\u05d5\u05e8 \u05dc\u05e4\u05e1\u05d5\u05e7"
+    "title": "חיפוש",
+    "subtitle": "נווט לכל ספר, פרק ופסוק",
+    "tapPrompt": "הקש לבחור ספר, פרק ופסוק",
+    "goToVerse": "עבור לפסוק"
   },
   "bookmarks": {
-    "title": "\u05e1\u05d9\u05de\u05e0\u05d9\u05d5\u05ea",
-    "emptyState": "\u05e9\u05de\u05d5\u05e8 \u05e4\u05e1\u05d5\u05e7\u05d9\u05dd \u05db\u05d3\u05d9 \u05dc\u05d7\u05d6\u05d5\u05e8 \u05d0\u05dc\u05d9\u05d4\u05dd \u05db\u05d0\u05df."
+    "title": "סימניות",
+    "emptyState": "שמור פסוקים כדי לחזור אליהם כאן."
   },
   "feedback": {
     "telegramReminder": "לתגובות ומשוב, הצטרף לקבוצת הטלגרם שלנו:",
     "telegramLink": "הצטרף לקבוצת הטלגרם שלנו"
   },
   "tabs": {
-    "home": "\u05d1\u05d9\u05ea",
-    "verse": "\u05e4\u05e1\u05d5\u05e7",
-    "settings": "\u05d4\u05d2\u05d3\u05e8\u05d5\u05ea"
+    "home": "בית",
+    "verse": "פסוק",
+    "settings": "הגדרות"
   }
 }
