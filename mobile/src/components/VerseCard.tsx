@@ -23,19 +23,9 @@ import { useTranslation } from "@/src/i18n/useTranslation";
 
 const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
 
-const superscriptDigitMap: Record<string, string> = {
-  "⁰": "0",
-  "¹": "1",
-  "²": "2",
-  "³": "3",
-  "⁴": "4",
-  "⁵": "5",
-  "⁶": "6",
-  "⁷": "7",
-  "⁸": "8",
-  "⁹": "9",
-};
-
+// Some translation strings include verse footnote markers as Unicode superscript digits.
+// We strip these from translationText so footnote markers do not appear inline in the
+// mobile UI, while other verse fields may intentionally retain them as provided.
 const superscriptPattern = /[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g;
 
 const stripSuperscripts = (value: string): string =>
@@ -214,7 +204,7 @@ export const VerseCard = ({
     language === "es" && !verse.translation?.trim()
       ? missingSpanishTranslation
       : (verse.translation ?? "");
-  const translationText = rawTranslationText;
+  const translationText = stripSuperscripts(rawTranslationText);
 
   const content = (
     <View style={variant === "detail" ? styles.containerDetail : undefined}>

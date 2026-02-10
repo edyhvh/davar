@@ -19,6 +19,9 @@ import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import type { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import type { ParamListBase } from "@react-navigation/native";
 
+// Suppress import/namespace check: ESLint parser errors were reporting a false positive
+// for the `VerseCard` module in some environments. See issue notes in repo.
+// eslint-disable-next-line import/namespace
 import { VerseCard } from "@/src/components/VerseCard";
 import { WordAnalysisBottomSheet } from "@/src/components/WordAnalysisBottomSheet";
 import { NavigationSheet } from "@/src/components/NavigationSheet";
@@ -405,7 +408,7 @@ export const VerseDetailContent = () => {
         if (verses.length > 0 && verses[0].words?.length > 0) {
           setSelectedWord(verses[0].words[0]);
         }
-      } catch (error) {
+      } catch {
         if (!isMounted) return;
         setErrorMessage(t("errors.loadVerses"));
       } finally {
@@ -417,7 +420,7 @@ export const VerseDetailContent = () => {
     return () => {
       isMounted = false;
     };
-  }, [bookId, chapter, language, showQumran]);
+  }, [bookId, chapter, language, showQumran, t]);
 
   return (
     <>

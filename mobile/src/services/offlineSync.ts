@@ -1,6 +1,7 @@
 import * as FileSystem from "expo-file-system";
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
+import type { TranslationRow } from "@/src/services/database";
 import {
   deleteTranslationBookEntries,
   insertLexiconEntries,
@@ -8,7 +9,7 @@ import {
   initializeDatabase,
 } from "@/src/services/database";
 
-const OFFLINE_DIR = `${FileSystem.documentDirectory}offline`;
+const OFFLINE_DIR = `${(FileSystem as unknown as { documentDirectory?: string }).documentDirectory ?? ""}offline`;
 
 const ensureOfflineDir = async () => {
   const info = await FileSystem.getInfoAsync(OFFLINE_DIR);
@@ -48,7 +49,7 @@ interface RootEntry {
 interface DictionaryBundle {
   custom_definitions: Record<string, CustomDefinitionEntry>;
   roots: Record<string, RootEntry>;
-  prefixes: Record<string, any>; // can be refined later if needed
+  prefixes: Record<string, unknown>; // can be refined later if needed
 }
 
 // ── Translation Bundle Types ───────────────────────────────────────────────
@@ -113,12 +114,13 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
 
       entries.push({
         strong_number: entry.strong_number,
-        hebrew: entry.hebrew ?? null,
+        hebrew: entry.hebrew ?? undefined,
         definitions,
-        root: entry.root ?? null,
-        root_strong: entry.root_strong ?? null,
+        root: entry.root ?? undefined,
+        root_strong: entry.root_strong ?? undefined,
         root_definitions: [],
         occurrences_count: 0,
+        instances: [],
       });
     },
   );
@@ -150,10 +152,11 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
       strong_number: entry.strong_number,
       hebrew: entry.lemma,
       definitions,
-      root: entry.root ?? null,
-      root_strong: entry.root_strong ?? null,
+      root: entry.root ?? undefined,
+      root_strong: entry.root_strong ?? undefined,
       root_definitions: [],
       occurrences_count: entry.occurrences_count ?? 0,
+      instances: [],
     });
   });
 
@@ -175,8 +178,7 @@ export const downloadDictionaryBundle = async () => {
       JSON.stringify({ downloadedAt: new Date().toISOString() }),
     );
   } catch (error) {
-    const message =
-      error instanceof Error ? error.message : "Unknown error";
+    const message = error instanceof Error ? error.message : "Unknown error";
     throw new Error(`Failed to download dictionary bundle: ${message}`);
   }
 };
@@ -192,7 +194,7 @@ const extractTthVerses = (bookData: TthBookData): TranslationRow[] => {
         verse: verse.verse,
         text: verse.tth ?? "",
         footnotes: verse.footnotes ?? [],
-      });
+      } as TranslationRow);
     }
   }
   return rows;
@@ -237,12 +239,11 @@ export const downloadTranslationBundle = async (language: "es" | "en") => {
       `${OFFLINE_DIR}/translations-${language}.json`,
       JSON.stringify({ downloadedAt: new Date().toISOString() }),
     );
-  } catch (error) {
+  } catch (error: unknown) {
     for (const bookId of insertedBooks) {
       await deleteTranslationBookEntries(bookId, language);
     }
-    const message =
-      error instanceof Error ? error.message : "Unknown error";
+    const message = error instanceof Error ? error.message : "Unknown error";
     throw new Error(`Failed to download translation bundle: ${message}`);
   }
 };

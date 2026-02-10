@@ -54,7 +54,7 @@ export default function SplashScreen() {
   const opacity = useSharedValue(0);
   const scale = useSharedValue(1);
 
-  const gradientColors = useMemo(() => {
+  const gradientColors = useMemo<[string, string, string]>(() => {
     if (themeMode === "dark") {
       return ["#0F0E12", "#17161A", "#1B2536"];
     }

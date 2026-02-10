@@ -236,7 +236,7 @@ const NavigationSheetComponent = (
       forceClose: () => sheetRef.current?.forceClose(),
       snapToIndex: (index: number) => sheetRef.current?.snapToIndex(index),
       snapToPosition: (position: number | string) =>
-        sheetRef.current?.snapToPosition(position as any),
+        sheetRef.current?.snapToPosition(position),
     }),
     [],
   );
@@ -250,7 +250,6 @@ const NavigationSheetComponent = (
   const [selectedBookId, setSelectedBookId] = useState(currentBookId);
   const [selectedChapter, setSelectedChapter] = useState(currentChapter);
   const [searchQuery, setSearchQuery] = useState("");
-  const [direction, setDirection] = useState<"forward" | "backward">("forward");
   const [booksMeta, setBooksMeta] = useState<BookMeta[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [chapterCounts, setChapterCounts] = useState<Record<string, number[]>>(
@@ -287,7 +286,7 @@ const NavigationSheetComponent = (
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [t]);
 
   // Get selected book info
   const selectedBook = useMemo(
@@ -365,7 +364,6 @@ const NavigationSheetComponent = (
   );
 
   const handleBack = useCallback(() => {
-    setDirection("backward");
     if (step === "verse") {
       setStep("chapter");
     } else if (step === "chapter") {
@@ -375,14 +373,12 @@ const NavigationSheetComponent = (
 
   const handleSelectBook = useCallback((bookId: string) => {
     setSelectedBookId(bookId);
-    setDirection("forward");
     setSearchQuery("");
     setStep("chapter");
   }, []);
 
   const handleSelectChapter = useCallback((chapter: number) => {
     setSelectedChapter(chapter);
-    setDirection("forward");
     setStep("verse");
   }, []);
 

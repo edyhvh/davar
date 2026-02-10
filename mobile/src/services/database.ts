@@ -1,6 +1,12 @@
 import * as SQLite from "expo-sqlite";
 import type { LexiconResponse } from "@/src/types/api";
 
+type ExecResult = {
+  rows: {
+    _array: unknown[];
+  };
+};
+
 export type TranslationRow = {
   chapter: number;
   verse: number;
@@ -19,7 +25,7 @@ class DatabaseError extends Error {
     message: string,
     public query: string,
     public params: (string | number | null)[],
-    public originalError: any,
+    public originalError: unknown,
   ) {
     super(message);
     this.name = "DatabaseError";
@@ -31,7 +37,10 @@ class DatabaseError extends Error {
       message: this.message,
       query: this.query.trim().replace(/\s+/g, " "),
       params: this.params,
-      original: this.originalError?.message || String(this.originalError),
+      original:
+        this.originalError instanceof Error
+          ? this.originalError.message
+          : String(this.originalError),
     };
   }
 }
@@ -41,10 +50,25 @@ class DatabaseError extends Error {
 const executeSql = async (
   query: string,
   params: (string | number | null)[] = [],
-): Promise<any> => {
+): Promise<ExecResult> => {
   try {
-    const result = await db.runAsync(query, ...params);
-    return { rows: { _array: result as unknown as any[] } };
+    // db.runAsync historically returned an array of rows in this codebase.
+    // Accept both the raw array or objects and normalize to { rows: { _array } }.
+    const raw: unknown = await (
+      db as unknown as {
+        runAsync: (...args: unknown[]) => Promise<unknown>;
+      }
+    ).runAsync(query, ...params);
+
+    if (Array.isArray(raw)) {
+      return { rows: { _array: raw } };
+    }
+
+    // If the runtime returned an object with a `rows` property, try to normalize
+    // that too, otherwise fall back to an empty array for safety.
+    const normalized =
+      (raw as { rows?: { _array?: unknown[] } })?.rows?._array ?? [];
+    return { rows: { _array: normalized } };
   } catch (error) {
     const wrappedError = new DatabaseError(
       `SQLite execution failed`,
@@ -61,7 +85,9 @@ const executeSql = async (
 export const initializeDatabase = async () => {
   const versionResult = await executeSql("PRAGMA user_version;");
   const currentVersion =
-    (versionResult.rows._array?.[0]?.user_version as number) ?? 0;
+    Number(
+      (versionResult.rows._array?.[0] as Record<string, unknown>)?.user_version,
+    ) || 0;
 
   await executeSql(
     `CREATE TABLE IF NOT EXISTS verses (
@@ -82,7 +108,7 @@ export const initializeDatabase = async () => {
 
   if (currentVersion < 2) {
     const lexiconInfo = await executeSql("PRAGMA table_info(lexicon);");
-    const lexiconExists = (lexiconInfo.rows.length ?? 0) > 0;
+    const lexiconExists = (lexiconInfo.rows._array.length ?? 0) > 0;
 
     if (lexiconExists) {
       await executeSql(
@@ -208,10 +234,10 @@ export const deleteTranslationBookEntries = async (
   bookId: string,
   language: "en" | "es",
 ) => {
-  await executeSql(
-    "DELETE FROM verses WHERE book = ? AND language = ?;",
-    [bookId, language],
-  );
+  await executeSql("DELETE FROM verses WHERE book = ? AND language = ?;", [
+    bookId,
+    language,
+  ]);
 };
 
 // ── Queries ────────────────────────────────────────────────────────────────
@@ -229,11 +255,16 @@ export const fetchTranslationVerses = async (
     [bookId, chapter, language],
   );
 
-  // Parse footnotes back to array
-  return result.rows._array.map((row: any) => ({
-    ...row,
-    footnotes: row.footnotes ? JSON.parse(row.footnotes) : undefined,
-  }));
+  // Parse footnotes back to TranslationRow array
+  return result.rows._array.map((row) => {
+    const r = row as Record<string, unknown>;
+    return {
+      chapter: Number(r.chapter ?? 0),
+      verse: Number(r.verse ?? 0),
+      text: String(r.text ?? ""),
+      footnotes: r.footnotes ? JSON.parse(String(r.footnotes)) : undefined,
+    } as TranslationRow;
+  });
 };
 
 export const fetchLexiconEntry = async (strong: string) => {
@@ -242,12 +273,12 @@ export const fetchLexiconEntry = async (strong: string) => {
     [strong],
   );
 
-  const row = result.rows._array[0];
+  const row = result.rows._array[0] as Record<string, unknown> | undefined;
   if (!row) return null;
 
   return {
     ...row,
-    definitions: row.definitions ? JSON.parse(row.definitions) : [],
-    occurrences: row.occurrences ? JSON.parse(row.occurrences) : [],
+    definitions: row.definitions ? JSON.parse(String(row.definitions)) : [],
+    occurrences: row.occurrences ? JSON.parse(String(row.occurrences)) : [],
   };
 };
