@@ -1,12 +1,14 @@
 import React from "react";
-import { AlertCircle, Home } from "lucide-react";
+import { AlertCircle, BookOpen } from "lucide-react";
 import { useTranslation, type AppLanguage } from "../hooks/useTranslation";
 
 interface NotFoundPageProps {
   language: AppLanguage;
+  onGoHome?: () => void;
+  onGoBack?: () => void;
 }
 
-export function NotFoundPage({ language }: NotFoundPageProps) {
+export function NotFoundPage({ language, onGoHome, onGoBack }: NotFoundPageProps) {
   const { t } = useTranslation(language);
 
   return (
@@ -33,15 +35,35 @@ export function NotFoundPage({ language }: NotFoundPageProps) {
           {t("errors.notFound.message")}
         </p>
 
-        {/* Go Home Button */}
-        <a
-          href="/home"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] transition-colors"
-          style={{ fontFamily: "'Jost', sans-serif" }}
-        >
-          <Home className="w-4 h-4" />
-          {t("errors.notFound.goHome")}
-        </a>
+        {/* Go Back to Verse Button */}
+        {onGoBack ? (
+          <button
+            onClick={onGoBack}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] transition-colors"
+            style={{ fontFamily: "'Jost', sans-serif" }}
+          >
+            <BookOpen className="w-4 h-4" />
+            {t("errors.notFound.goToVerse")}
+          </button>
+        ) : onGoHome ? (
+          <button
+            onClick={onGoHome}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] transition-colors"
+            style={{ fontFamily: "'Jost', sans-serif" }}
+          >
+            <BookOpen className="w-4 h-4" />
+            {t("errors.notFound.goToVerse")}
+          </button>
+        ) : (
+          <a
+            href="/verse"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] transition-colors"
+            style={{ fontFamily: "'Jost', sans-serif" }}
+          >
+            <BookOpen className="w-4 h-4" />
+            {t("errors.notFound.goToVerse")}
+          </a>
+        )}
       </div>
     </div>
   );

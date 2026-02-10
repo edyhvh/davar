@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, RefreshCw, WifiOff } from "lucide-react";
+import { RefreshCw, WifiOff } from "lucide-react";
 import { useTranslation, type AppLanguage } from "../hooks/useTranslation";
 
 interface ConnectionErrorPageProps {
@@ -49,15 +49,6 @@ export function ConnectionErrorPage({
               {t("errors.connection.retry")}
             </button>
           )}
-
-          <a
-            href="/home"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white transition-colors"
-            style={{ fontFamily: "'Jost', sans-serif" }}
-          >
-            <Home className="w-4 h-4" />
-            {t("errors.connection.goHome")}
-          </a>
         </div>
       </div>
     </div>

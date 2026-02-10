@@ -284,7 +284,7 @@ export default function App() {
     }
   }, []);
 
-  const parseRoutePath = useCallback((pathname: string): RouteState => {
+  const parseRoutePath = useCallback((pathname: string): RouteState | null => {
     const trimmed = pathname.replace(/\/+$/, "") || "/";
     const parts = trimmed.split("/").filter(Boolean);
 
@@ -313,8 +313,8 @@ export default function App() {
       };
     }
 
-    // Handle invalid routes - return notFound
-    return { screen: "notFound" };
+    // Handle invalid routes - return null to trigger 404
+    return null;
   }, []);
   const parseRoutePathRef = useRef(parseRoutePath);
 
@@ -494,6 +494,11 @@ export default function App() {
         const resolved = await lookupBook(bookLabel);
         resolvedBookName = resolved.name;
       } catch (error) {
+        // Check if it's a network/connection error
+        if (error instanceof Error && error.name === "NetworkError") {
+          setCurrentScreen("connectionError");
+          return;
+        }
         console.error("Failed to normalize book label:", error);
       }
     }
@@ -552,7 +557,12 @@ export default function App() {
         }
       } catch (error) {
         if (!isMounted) return;
-        setErrorMessage(t("errors.loadBooks"));
+        // Check if it's a network/connection error
+        if (error instanceof Error && error.name === "NetworkError") {
+          setCurrentScreen("connectionError");
+        } else {
+          setErrorMessage(t("errors.loadBooks"));
+        }
       }
     };
     loadBooks();
@@ -564,6 +574,13 @@ export default function App() {
   useEffect(() => {
     const pending = pendingRouteRef.current;
     if (!pending) return;
+
+    // Handle invalid routes (null)
+    if (pending === null) {
+      setCurrentScreen("notFound");
+      pendingRouteRef.current = null;
+      return;
+    }
 
     if (pending.screen !== "verse") {
       setCurrentScreen(pending.screen);
@@ -621,7 +638,12 @@ export default function App() {
         }
       } catch (error) {
         if (!isMounted) return;
-        setErrorMessage(t("errors.loadVerses"));
+        // Check if it's a network/connection error
+        if (error instanceof Error && error.name === "NetworkError") {
+          setCurrentScreen("connectionError");
+        } else {
+          setErrorMessage(t("errors.loadVerses"));
+        }
       } finally {
         if (isMounted) setIsLoading(false);
       }
@@ -639,6 +661,16 @@ export default function App() {
     const handlePopState = () => {
       isHandlingPopStateRef.current = true;
       const route = parseRoutePathRef.current(window.location.pathname);
+
+      // Handle invalid routes (null)
+      if (!route) {
+        setCurrentScreen("notFound");
+        window.setTimeout(() => {
+          isHandlingPopStateRef.current = false;
+        }, 0);
+        return;
+      }
+
       if (route.screen !== "verse") {
         setCurrentScreen(route.screen);
       } else {
@@ -734,8 +766,12 @@ export default function App() {
           setSelectedWordAnalysis(analysis);
           setIsWordAnalysisLoading(false);
         }
-      } catch {
+      } catch (error) {
         if (isMounted) {
+          // Check if it's a network/connection error
+          if (error instanceof Error && error.name === "NetworkError") {
+            setCurrentScreen("connectionError");
+          }
           setSelectedWordAnalysis(null);
           setIsWordAnalysisLoading(false);
         }
@@ -779,8 +815,12 @@ export default function App() {
           setSelectedDssAnalysis(analysis);
           setIsDssAnalysisLoading(false);
         }
-      } catch {
+      } catch (error) {
         if (isMounted) {
+          // Check if it's a network/connection error
+          if (error instanceof Error && error.name === "NetworkError") {
+            setCurrentScreen("connectionError");
+          }
           setSelectedDssAnalysis(null);
           setIsDssAnalysisLoading(false);
         }
@@ -797,6 +837,34 @@ export default function App() {
       setLastSelectedWord(selectedWord);
     }
   }, [selectedWord]);
+
+  // Monitor online/offline status for connection error handling
+  useEffect(() => {
+    const handleOnline = () => {
+      // When coming back online, if we're on connectionError screen, go to verse
+      if (currentScreen === "connectionError") {
+        setCurrentScreen("verse");
+      }
+    };
+
+    const handleOffline = () => {
+      // When going offline, show connection error page
+      setCurrentScreen("connectionError");
+    };
+
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+
+    // Check initial online status
+    if (!navigator.onLine) {
+      setCurrentScreen("connectionError");
+    }
+
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, [currentScreen]);
 
   useEffect(() => {
     if (selectedWord && selectedWordAnalysis) {
@@ -990,7 +1058,11 @@ export default function App() {
         setCurrentChapter(previousChapter);
         setCurrentVerse(previousVerseCount);
         return true;
-      } catch {
+      } catch (error) {
+        // Check if it's a network/connection error
+        if (error instanceof Error && error.name === "NetworkError") {
+          setCurrentScreen("connectionError");
+        }
         return false;
       }
     }
@@ -1146,11 +1218,42 @@ export default function App() {
           )}
 
           {currentScreen === "notFound" && (
-            <NotFoundPage language={language} />
+            <NotFoundPage
+              language={language}
+              onGoBack={() => setCurrentScreen("verse")}
+            />
           )}
 
           {currentScreen === "connectionError" && (
-            <ConnectionErrorPage language={language} />
+            <ConnectionErrorPage
+              language={language}
+              onRetry={async () => {
+                // Try to reload the data
+                try {
+                  setIsLoading(true);
+                  const response = await getBooks();
+                  setBooks(response);
+                  // If successful and we have books, go to verse screen
+                  if (response.length > 0) {
+                    // Always set to first book to ensure valid state
+                    setCurrentBook(response[0].name);
+                    setCurrentChapter(1);
+                    setCurrentVerse(1);
+                    setCurrentScreen("verse");
+                  } else {
+                    // If no books returned, stay on connection error page
+                    setCurrentScreen("connectionError");
+                  }
+                } catch (error) {
+                  // If still failing, stay on connection error page
+                  if (error instanceof Error && error.name === "NetworkError") {
+                    setCurrentScreen("connectionError");
+                  }
+                } finally {
+                  setIsLoading(false);
+                }
+              }}
+            />
           )}
 
           {currentScreen === "verse" && (

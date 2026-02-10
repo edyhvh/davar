@@ -27,6 +27,15 @@ if [ "$1" = "--dry-run" ]; then
     exit 0
 fi
 
+# Warning about --delete flag
+echo "⚠️  Warning: This will delete files in $TARGET_DIR that don't exist in $SOURCE_DIR"
+read -p "Continue? (y/N) " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    echo "Cancelled."
+    exit 0
+fi
+
 # Copy .kilo/ directory
 rsync -av --delete "$SOURCE_DIR/" "$TARGET_DIR/"
 
