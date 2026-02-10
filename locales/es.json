@@ -177,7 +177,18 @@
     "uiFallbackMessage": "Por favor, actualiza la p\u00e1gina o int\u00e9ntalo m\u00e1s tarde.",
     "uiFallbackMessageMobile": "Por favor, reinicia la aplicaci\u00f3n.",
     "loadBooks": "No se pudieron cargar los libros.",
-    "loadVerses": "No se pudieron cargar los vers\u00edculos."
+    "loadVerses": "No se pudieron cargar los vers\u00edculos.",
+    "notFound": {
+      "title": "P\u00e1gina No Encontrada",
+      "message": "La p\u00e1gina que buscas no existe.",
+      "goHome": "Ir al Inicio"
+    },
+    "connection": {
+      "title": "Error de Conexi\u00f3n",
+      "message": "No se puede conectar al servidor. Por favor, verifica tu conexi\u00f3n a internet.",
+      "retry": "Intentar de Nuevo",
+      "goHome": "Ir al Inicio"
+    }
   },
   "verse": {
     "previousSnippet": "Vers\u00edculo anterior...",

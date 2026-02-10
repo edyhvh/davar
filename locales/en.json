@@ -177,7 +177,18 @@
     "uiFallbackMessage": "Please refresh the page or try again later.",
     "uiFallbackMessageMobile": "Please restart the app.",
     "loadBooks": "Unable to load books.",
-    "loadVerses": "Unable to load verses."
+    "loadVerses": "Unable to load verses.",
+    "notFound": {
+      "title": "Page Not Found",
+      "message": "The page you're looking for doesn't exist.",
+      "goHome": "Go Home"
+    },
+    "connection": {
+      "title": "Connection Error",
+      "message": "Unable to connect to the server. Please check your internet connection.",
+      "retry": "Try Again",
+      "goHome": "Go Home"
+    }
   },
   "verse": {
     "previousSnippet": "Previous verse...",

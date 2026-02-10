@@ -18,6 +18,8 @@ import { DonateScreen } from "./components/DonateScreen";
 import { FeaturesScreen } from "./components/FeaturesScreen";
 import { LegalScreen } from "./components/LegalScreen";
 import { FeedbackScreen } from "./components/FeedbackScreen";
+import { NotFoundPage } from "./components/NotFoundPage";
+import { ConnectionErrorPage } from "./components/ConnectionErrorPage";
 import {
   getBooks,
   getChapterCount,
@@ -57,7 +59,9 @@ type Screen =
   | "features"
   | "terms"
   | "privacy"
-  | "feedback";
+  | "feedback"
+  | "notFound"
+  | "connectionError";
 
 type RouteState = {
   screen: Screen;
@@ -309,7 +313,8 @@ export default function App() {
       };
     }
 
-    return { screen: "verse" };
+    // Handle invalid routes - return notFound
+    return { screen: "notFound" };
   }, []);
   const parseRoutePathRef = useRef(parseRoutePath);
 
@@ -573,7 +578,10 @@ export default function App() {
       if (matchedBook) {
         setCurrentBook(matchedBook.name);
       } else {
-        setCurrentBook(pending.book);
+        // Book not found - show 404 page
+        setCurrentScreen("notFound");
+        pendingRouteRef.current = null;
+        return;
       }
     }
 
@@ -647,7 +655,12 @@ export default function App() {
             if (matchedBook) {
               setCurrentBook(matchedBook.name);
             } else {
-              setCurrentBook(route.book);
+              // Book not found - show 404 page
+              setCurrentScreen("notFound");
+              window.setTimeout(() => {
+                isHandlingPopStateRef.current = false;
+              }, 0);
+              return;
             }
           }
           if (route.chapter) {
@@ -1130,6 +1143,14 @@ export default function App() {
           {currentScreen === "donate" && <DonateScreen language={language} />}
           {currentScreen === "features" && (
             <FeaturesScreen language={language} />
+          )}
+
+          {currentScreen === "notFound" && (
+            <NotFoundPage language={language} />
+          )}
+
+          {currentScreen === "connectionError" && (
+            <ConnectionErrorPage language={language} />
           )}
 
           {currentScreen === "verse" && (
