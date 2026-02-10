@@ -258,31 +258,45 @@ class TranslationLoader(DataLoader):
         if not hebrew_book_name:
             return None
 
+        # Cache key for the entire book data
+        book_cache_key = f"ts2009_book_{hebrew_book_name}"
+        if book_cache_key not in self._cache:
+            # Load and cache the entire book
+            try:
+                book_data = self.load_json(f"ts2009/{hebrew_book_name}.json")
+                # Build an index: {chapter: {verse: {translation, footnotes}}}
+                book_index = {}
+                if "chapters" in book_data:
+                    for chapter_data in book_data["chapters"]:
+                        chap_num = chapter_data.get("number")
+                        if chap_num not in book_index:
+                            book_index[chap_num] = {}
+                        for verse_data in chapter_data.get("verses", []):
+                            verse_num = verse_data.get("number")
+                            book_index[chap_num][verse_num] = {
+                                "translation": verse_data.get("text", ""),
+                                "footnotes": verse_data.get("footnotes", [])
+                            }
+                self._cache[book_cache_key] = book_index
+            except FileNotFoundError:
+                logger.warning(f"TS2009 translation file not found for {book_name} (mapped to: {hebrew_book_name}.json)")
+                self._cache[book_cache_key] = None
+            except KeyError as e:
+                logger.warning(f"TS2009 translation structure error for {book_name}: {e}")
+                self._cache[book_cache_key] = None
+
+        book_index = self._cache[book_cache_key]
+        if book_index is None:
+            return None
+
+        # Now lookup the specific verse
         cache_key = f"ts2009_{hebrew_book_name}_{chapter}_{verse}"
         if cache_key in self._cache:
             return self._cache[cache_key]
 
-        try:
-            book_data = self.load_json(f"ts2009/{hebrew_book_name}.json")
-            # TS2009 v3.0 data has a "chapters" array with nested "verses"
-            if "chapters" in book_data:
-                for chapter_data in book_data["chapters"]:
-                    if chapter_data.get("number") == chapter:
-                        for verse_data in chapter_data.get("verses", []):
-                            if verse_data.get("number") == verse:
-                                result = {
-                                    "translation": verse_data.get("text", ""),
-                                    "footnotes": verse_data.get("footnotes", [])
-                                }
-                                self._cache[cache_key] = result
-                                return result
-        except FileNotFoundError:
-            logger.warning(f"TS2009 translation file not found for {book_name} (mapped to: {hebrew_book_name}.json)")
-        except KeyError as e:
-            logger.warning(f"TS2009 translation structure error for {book_name} chapter {chapter} verse {verse}: {e}")
-
-        self._cache[cache_key] = None
-        return None
+        result = book_index.get(chapter, {}).get(verse)
+        self._cache[cache_key] = result
+        return result
 
     def load_bes_verse(self, book_name: str, chapter: int, verse: int) -> Optional[str]:
         """Load BES (Biblia en Español Sencillo) translation for a specific verse"""
