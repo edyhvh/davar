@@ -169,84 +169,90 @@ class TS2009CLI:
 
     def validate_command(self, args: List[str]) -> int:
         """Handle validate command to validate output files."""
-        output_dir = args[0] if args else str(OUTPUT_DIR)
-        
-        print(f"Validating TS2009 output in: {output_dir}")
-        print()
+        try:
+            output_dir = args[0] if args else str(OUTPUT_DIR)
+            
+            print(f"Validating TS2009 output in: {output_dir}")
+            print()
 
-        output_path = Path(output_dir)
-        if not output_path.exists():
-            print(f"❌ Output directory not found: {output_dir}")
-            return 1
+            output_path = Path(output_dir)
+            if not output_path.exists():
+                print(f"❌ Output directory not found: {output_dir}")
+                return 1
 
-        # Get all JSON files
-        json_files = list(output_path.glob("*.json"))
-        if not json_files:
-            print(f"❌ No JSON files found in: {output_dir}")
-            return 1
+            # Get all JSON files
+            json_files = list(output_path.glob("*.json"))
+            if not json_files:
+                print(f"❌ No JSON files found in: {output_dir}")
+                return 1
 
-        print(f"Found {len(json_files)} JSON files")
-        print()
+            print(f"Found {len(json_files)} JSON files")
+            print()
 
-        valid_count = 0
-        invalid_count = 0
-        issues = []
+            valid_count = 0
+            invalid_count = 0
+            issues = []
 
-        for json_file in sorted(json_files):
-            try:
-                with open(json_file, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                
-                # Validate structure
-                if 'metadata' not in data:
-                    issues.append(f"{json_file.name}: Missing 'metadata'")
-                    invalid_count += 1
-                    continue
-                
-                if 'chapters' not in data:
-                    issues.append(f"{json_file.name}: Missing 'chapters'")
-                    invalid_count += 1
-                    continue
-                
-                # Validate metadata
-                metadata = data['metadata']
-                required_metadata = ['book_id', 'book_name', 'section', 'total_chapters', 'total_verses']
-                for field in required_metadata:
-                    if field not in metadata:
-                        issues.append(f"{json_file.name}: Missing metadata field '{field}'")
-                        invalid_count += 1
-                        break
-                else:
-                    # Validate chapters
-                    chapters = data['chapters']
-                    if not isinstance(chapters, list):
-                        issues.append(f"{json_file.name}: 'chapters' is not a list")
+            for json_file in sorted(json_files):
+                try:
+                    with open(json_file, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                    
+                    # Validate structure
+                    if 'metadata' not in data:
+                        issues.append(f"{json_file.name}: Missing 'metadata'")
                         invalid_count += 1
                         continue
                     
-                    valid_count += 1
-                    print(f"✓ {json_file.name}")
-            
-            except json.JSONDecodeError as e:
-                issues.append(f"{json_file.name}: Invalid JSON - {e}")
-                invalid_count += 1
-            except Exception as e:
-                issues.append(f"{json_file.name}: Error - {e}")
-                invalid_count += 1
+                    if 'chapters' not in data:
+                        issues.append(f"{json_file.name}: Missing 'chapters'")
+                        invalid_count += 1
+                        continue
+                    
+                    # Validate metadata
+                    metadata = data['metadata']
+                    required_metadata = ['book_id', 'book_name', 'section', 'total_chapters', 'total_verses']
+                    for field in required_metadata:
+                        if field not in metadata:
+                            issues.append(f"{json_file.name}: Missing metadata field '{field}'")
+                            invalid_count += 1
+                            break
+                    else:
+                        # Validate chapters
+                        chapters = data['chapters']
+                        if not isinstance(chapters, list):
+                            issues.append(f"{json_file.name}: 'chapters' is not a list")
+                            invalid_count += 1
+                            continue
+                        
+                        valid_count += 1
+                        print(f"✓ {json_file.name}")
+                
+                except json.JSONDecodeError as e:
+                    issues.append(f"{json_file.name}: Invalid JSON - {e}")
+                    invalid_count += 1
+                except Exception as e:
+                    issues.append(f"{json_file.name}: Error - {e}")
+                    invalid_count += 1
 
-        print()
-        print(f"Validation complete:")
-        print(f"  Valid: {valid_count}")
-        print(f"  Invalid: {invalid_count}")
-        
-        if issues:
             print()
-            print("Issues found:")
-            for issue in issues:
-                print(f"  - {issue}")
+            print(f"Validation complete:")
+            print(f"  Valid: {valid_count}")
+            print(f"  Invalid: {invalid_count}")
+            
+            if issues:
+                print()
+                print("Issues found:")
+                for issue in issues:
+                    print(f"  - {issue}")
+                return 1
+            
+            return 0
+        except Exception as e:
+            print(f"❌ Error during validation: {e}")
+            import traceback
+            traceback.print_exc()
             return 1
-        
-        return 0
 
     def _print_available_books(self):
         """Print available books grouped by section."""

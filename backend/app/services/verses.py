@@ -3,6 +3,7 @@ Verses service - handles business logic for verse-related operations.
 """
 import importlib
 import logging
+import re
 from pathlib import Path
 from typing import Optional
 from app.schemas.verse import VerseResponse, WordResponse, DssVariant, TranslationFootnote
@@ -231,7 +232,6 @@ class VersesService:
                             if isinstance(footnote, str):
                                 # TS2009 format: "[a] Or the earth became."
                                 # Parse the marker and explanation
-                                import re
                                 match = re.match(r'\[([a-z0-9]+)\]\s*(.*)', footnote, re.IGNORECASE)
                                 if match:
                                     marker = match.group(1)
@@ -267,7 +267,7 @@ class VersesService:
                     translation_language = language
             except Exception as e:
                 logging.error(f"Failed to load translation for {book_en} {verse_data.get('chapter', 0)}:{verse_data.get('verse', 0)}: {e}", exc_info=True)
-                raise
+                # Translation is optional - continue without it
 
         dss_variants = None
         if show_dss:

@@ -13,13 +13,6 @@ logger = logging.getLogger(__name__)
 
 
 @dataclass
-class ExtractedFootnote:
-    """Represents a single extracted footnote."""
-    marker: str  # e.g., "[a]", "[b]"
-    text: str    # e.g., "Or the earth became."
-
-
-@dataclass
 class ProcessedText:
     """Represents text after processing with footnotes extracted."""
     text: str
@@ -87,7 +80,7 @@ class FootnoteExtractor:
             # Extract all footnote markers and their text from this part
             # Pattern: [a]Or the earth became. [b]Another footnote.
             # Use finditer to get all matches with their positions
-            for match in re.finditer(r'\[([^\]]+)\]\s*(.*?)(?=\s*\[|$)', part):
+            for match in re.finditer(r'\[([^\]]+)\]\s*([^[]*)(?=\s*\[|$)', part):
                 marker = match.group(1)
                 footnote_text = match.group(2).strip()
                 if footnote_text:
