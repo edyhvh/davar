@@ -20,7 +20,7 @@ import os
 import json
 import logging
 from pathlib import Path
-from typing import List, Optional
+from typing import List
 
 # Project paths - always relative to project root
 PROJECT_ROOT = Path(__file__).parent.parent.parent
