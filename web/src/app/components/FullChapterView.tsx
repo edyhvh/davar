@@ -12,6 +12,10 @@ import {
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
 import { useTranslation } from "../hooks/useTranslation";
+import {
+  shouldHideSuperscripts,
+  getTranslationKey,
+} from "../utils/translationConfig";
 
 interface FullChapterViewProps {
   verses: VerseResponse[];
@@ -45,6 +49,7 @@ export function FullChapterView({
   const { t } = useTranslation(language);
   const shouldShowSefer = seferMode && hebrewOnly;
   const spanishMissingTranslation = t("verse.missingSpanishTranslation");
+  const hideSuperscripts = shouldHideSuperscripts(getTranslationKey(language));
 
   const normalizeForMatch = (text: string) => {
     let normalized = stripNikud(text);
@@ -59,9 +64,10 @@ export function FullChapterView({
 
   const renderVerseWords = (verse: VerseResponse) => {
     const dssMap = new Map<number, string>();
-    verse.dss?.forEach((variant) =>
-      dssMap.set(variant.word_position, variant.dss_text),
-    );
+    verse.dss?.forEach((variant) => {
+      if (typeof variant.position !== "number" || !variant.dss_word) return;
+      dssMap.set(variant.position, variant.dss_word);
+    });
 
     return verse.words.map((word, wordIdx) => {
       const variantText = showQumran ? dssMap.get(word.position) : undefined;
@@ -199,7 +205,7 @@ export function FullChapterView({
                   {language === "es" && !(verse.translation ?? "").trim()
                     ? spanishMissingTranslation
                     : renderTranslation(verse.translation ?? "", {
-                        hideSuperscripts: false,
+                        hideSuperscripts,
                       })}
                   ]
                 </div>

@@ -20,16 +20,9 @@ import {
   stripMeteg,
 } from "@/src/utils/hebrew";
 import { useTranslation } from "@/src/i18n/useTranslation";
+import { getTranslationDisplayText } from "@/src/utils/translationDisplay";
 
 const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
-
-// Some translation strings include verse footnote markers as Unicode superscript digits.
-// We strip these from translationText so footnote markers do not appear inline in the
-// mobile UI, while other verse fields may intentionally retain them as provided.
-const superscriptPattern = /[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g;
-
-const stripSuperscripts = (value: string): string =>
-  value.replace(superscriptPattern, "");
 
 const renderTranslationWithItalics = (
   translation: string,
@@ -200,11 +193,11 @@ export const VerseCard = ({
   // ("verse.missingSpanishTranslation") instead of an empty string so the user
   // knows the translation is pending rather than missing by error.
   const missingSpanishTranslation = t("verse.missingSpanishTranslation");
-  const rawTranslationText =
-    language === "es" && !verse.translation?.trim()
-      ? missingSpanishTranslation
-      : (verse.translation ?? "");
-  const translationText = stripSuperscripts(rawTranslationText);
+  const translationText = getTranslationDisplayText({
+    language,
+    translation: verse.translation,
+    missingTranslationText: missingSpanishTranslation,
+  });
 
   const content = (
     <View style={variant === "detail" ? styles.containerDetail : undefined}>
