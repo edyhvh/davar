@@ -168,7 +168,7 @@ export const BookSelectorSheet = ({
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [t]);
 
   const filteredBooks = useMemo(() => {
     if (!searchQuery.trim()) {

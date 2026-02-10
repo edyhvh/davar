@@ -1,4 +1,5 @@
 export type MockWord = {
+  position: number;
   text: string;
   strong: string;
   prefixes?: string[];
@@ -21,7 +22,7 @@ export type MockVerse = {
   hebrew: string;
   translation: string;
   words: MockWord[];
-  qumranVariants?: { wordIndex: number; variant: string }[];
+  qumranVariants?: { position: number; dssWord: string }[];
 };
 
 export type MockBook = {
@@ -108,9 +109,10 @@ export const mockVerses: MockVerse[] = [
     verse: 1,
     hebrew: "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ׃",
     translation: "In the beginning God created the heavens and the earth.",
-    qumranVariants: [{ wordIndex: 0, variant: "בְּרֹאשִׁית" }],
+    qumranVariants: [{ position: 0, dssWord: "בְּרֹאשִׁית" }],
     words: [
       {
+        position: 0,
         text: "בְּרֵאשִׁית",
         strong: "H7225",
         transliteration: "Bereshit",
@@ -126,6 +128,7 @@ export const mockVerses: MockVerse[] = [
         hasQumranVariant: true,
       },
       {
+        position: 1,
         text: "בָּרָא",
         strong: "H1254",
         transliteration: "bara",
@@ -136,24 +139,28 @@ export const mockVerses: MockVerse[] = [
         rootMeaning: "create, shape",
       },
       {
+        position: 2,
         text: "אֱלֹהִים",
         strong: "H430",
         transliteration: "Elohim",
         gloss: "God",
       },
       {
+        position: 3,
         text: "אֵת",
         strong: "H853",
         transliteration: "et",
         gloss: "object marker",
       },
       {
+        position: 4,
         text: "הַשָּׁמַיִם",
         strong: "H8064",
         transliteration: "hashamayim",
         gloss: "the heavens",
       },
       {
+        position: 5,
         text: "וְאֵת",
         strong: "H853",
         prefixes: ["ו"],
@@ -161,6 +168,7 @@ export const mockVerses: MockVerse[] = [
         gloss: "and",
       },
       {
+        position: 6,
         text: "הָאָרֶץ",
         strong: "H776",
         transliteration: "haaretz",
@@ -180,6 +188,7 @@ export const mockVerses: MockVerse[] = [
       "Now the earth was formless and empty, darkness was over the surface of the deep, and the Spirit of God was hovering over the waters.",
     words: [
       {
+        position: 0,
         text: "וְהָאָרֶץ",
         strong: "H776",
         prefixes: ["ו"],
@@ -188,18 +197,21 @@ export const mockVerses: MockVerse[] = [
         hasQumranVariant: true,
       },
       {
+        position: 1,
         text: "הָיְתָה",
         strong: "H1961",
         transliteration: "hayetah",
         gloss: "was",
       },
       {
+        position: 2,
         text: "תֹהוּ",
         strong: "H8414",
         transliteration: "tohu",
         gloss: "formless",
       },
       {
+        position: 3,
         text: "וָבֹהוּ",
         strong: "H922",
         prefixes: ["ו"],
@@ -218,6 +230,7 @@ export const mockVerses: MockVerse[] = [
     translation: "And God said, “Let there be light,” and there was light.",
     words: [
       {
+        position: 0,
         text: "וַיֹּאמֶר",
         strong: "H559",
         prefixes: ["ו"],
@@ -226,18 +239,26 @@ export const mockVerses: MockVerse[] = [
         hasQumranVariant: false,
       },
       {
+        position: 1,
         text: "אֱלֹהִים",
         strong: "H430",
         transliteration: "Elohim",
         gloss: "God",
       },
       {
+        position: 2,
         text: "יְהִי",
         strong: "H1961",
         transliteration: "yehi",
         gloss: "let there be",
       },
-      { text: "אוֹר", strong: "H216", transliteration: "or", gloss: "light" },
+      {
+        position: 3,
+        text: "אוֹר",
+        strong: "H216",
+        transliteration: "or",
+        gloss: "light",
+      },
     ],
   },
   {
@@ -251,6 +272,7 @@ export const mockVerses: MockVerse[] = [
       "The record of the genealogy of Yeshua the Messiah, the son of David, the son of Abraham.",
     words: [
       {
+        position: 0,
         text: "סֵפֶר",
         strong: "H5612",
         transliteration: "sefer",
@@ -258,18 +280,21 @@ export const mockVerses: MockVerse[] = [
         meanings: ["book", "scroll"],
       },
       {
+        position: 1,
         text: "תּוֹלְדֹת",
         strong: "H8435",
         transliteration: "toledot",
         gloss: "genealogies",
       },
       {
+        position: 2,
         text: "יֵשׁוּעַ",
         strong: "H3442",
         transliteration: "Yeshua",
         gloss: "Jesus",
       },
       {
+        position: 3,
         text: "הַמָּשִׁיחַ",
         strong: "H4899",
         prefixes: ["ה"],

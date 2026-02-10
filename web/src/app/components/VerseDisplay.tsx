@@ -17,6 +17,10 @@ import {
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
 import { useTranslation } from "../hooks/useTranslation";
+import {
+  shouldHideSuperscripts,
+  getTranslationKey,
+} from "../utils/translationConfig";
 
 interface VerseDisplayProps {
   hebrewText: string;
@@ -77,6 +81,7 @@ export function VerseDisplay({
 }: VerseDisplayProps) {
   const { t } = useTranslation(language);
   const spanishMissingTranslation = t("verse.missingSpanishTranslation");
+  const hideSuperscripts = shouldHideSuperscripts(getTranslationKey(language));
   const dssInlineFontScale = "1.70em";
   const dssInlineBaselineShift = "-0.08em";
   // Function to render Hebrew text with DSS variants
@@ -256,7 +261,7 @@ export function VerseDisplay({
             {language === "es" && !translation.trim()
               ? spanishMissingTranslation
               : renderTranslation(translation, {
-                  hideSuperscripts: false,
+                  hideSuperscripts,
                 })}
           </div>
         </SwipeIndicator>

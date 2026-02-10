@@ -19,7 +19,7 @@ class DatabaseError extends Error {
     message: string,
     public query: string,
     public params: (string | number | null)[],
-    public originalError: any,
+    public originalError: unknown,
   ) {
     super(message);
     this.name = "DatabaseError";
@@ -31,23 +31,56 @@ class DatabaseError extends Error {
       message: this.message,
       query: this.query.trim().replace(/\s+/g, " "),
       params: this.params,
-      original: this.originalError?.message || String(this.originalError),
+      original:
+        this.originalError instanceof Error
+          ? this.originalError.message
+          : String(this.originalError),
     };
   }
 }
 
-// ── Low-level executor with error context ──────────────────────────────────
+// ── Low-level executors with error context ─────────────────────────────────
 
-const executeSql = async (
+const executeRead = async (
   query: string,
   params: (string | number | null)[] = [],
-): Promise<any> => {
+): Promise<unknown[]> => {
   try {
-    const result = await db.runAsync(query, ...params);
-    return { rows: { _array: result as unknown as any[] } };
+    const rows = await (
+      db as unknown as {
+        getAllAsync: (sql: string, params?: unknown[]) => Promise<unknown[]>;
+      }
+    ).getAllAsync(query, params);
+
+    if (!Array.isArray(rows)) {
+      throw new Error("SQLite read returned non-array rows.");
+    }
+
+    return rows;
   } catch (error) {
     const wrappedError = new DatabaseError(
-      `SQLite execution failed`,
+      `SQLite read failed`,
+      query,
+      params,
+      error,
+    );
+    throw wrappedError;
+  }
+};
+
+const executeWrite = async (
+  query: string,
+  params: (string | number | null)[] = [],
+): Promise<void> => {
+  try {
+    await (
+      db as unknown as {
+        runAsync: (sql: string, params?: unknown[]) => Promise<unknown>;
+      }
+    ).runAsync(query, params);
+  } catch (error) {
+    const wrappedError = new DatabaseError(
+      `SQLite write failed`,
       query,
       params,
       error,
@@ -59,11 +92,11 @@ const executeSql = async (
 // ── Initialization ──────────────────────────────────────────────────────────
 
 export const initializeDatabase = async () => {
-  const versionResult = await executeSql("PRAGMA user_version;");
+  const versionResult = await executeRead("PRAGMA user_version;");
   const currentVersion =
-    (versionResult.rows._array?.[0]?.user_version as number) ?? 0;
+    Number((versionResult?.[0] as Record<string, unknown>)?.user_version) || 0;
 
-  await executeSql(
+  await executeWrite(
     `CREATE TABLE IF NOT EXISTS verses (
       id TEXT PRIMARY KEY,
       book TEXT NOT NULL,
@@ -75,17 +108,17 @@ export const initializeDatabase = async () => {
     );`,
   );
 
-  await executeSql(
+  await executeWrite(
     `CREATE INDEX IF NOT EXISTS idx_verses_book_chapter 
      ON verses(book, chapter);`,
   );
 
   if (currentVersion < 2) {
-    const lexiconInfo = await executeSql("PRAGMA table_info(lexicon);");
-    const lexiconExists = (lexiconInfo.rows.length ?? 0) > 0;
+    const lexiconInfo = await executeRead("PRAGMA table_info(lexicon);");
+    const lexiconExists = (lexiconInfo.length ?? 0) > 0;
 
     if (lexiconExists) {
-      await executeSql(
+      await executeWrite(
         `CREATE TABLE IF NOT EXISTS lexicon_new (
           strong TEXT PRIMARY KEY,
           hebrew TEXT,
@@ -96,7 +129,7 @@ export const initializeDatabase = async () => {
         );`,
       );
 
-      await executeSql(
+      await executeWrite(
         `INSERT OR REPLACE INTO lexicon_new (
           strong, hebrew, definitions, root, root_strong, occurrences
         )
@@ -104,10 +137,10 @@ export const initializeDatabase = async () => {
         FROM lexicon;`,
       );
 
-      await executeSql("DROP TABLE lexicon;");
-      await executeSql("ALTER TABLE lexicon_new RENAME TO lexicon;");
+      await executeWrite("DROP TABLE lexicon;");
+      await executeWrite("ALTER TABLE lexicon_new RENAME TO lexicon;");
     } else {
-      await executeSql(
+      await executeWrite(
         `CREATE TABLE IF NOT EXISTS lexicon (
           strong TEXT PRIMARY KEY,
           hebrew TEXT,
@@ -119,14 +152,14 @@ export const initializeDatabase = async () => {
       );
     }
 
-    await executeSql(
+    await executeWrite(
       `CREATE INDEX IF NOT EXISTS idx_lexicon_hebrew 
        ON lexicon(hebrew);`,
     );
 
-    await executeSql(`PRAGMA user_version = ${CURRENT_SCHEMA_VERSION};`);
+    await executeWrite(`PRAGMA user_version = ${CURRENT_SCHEMA_VERSION};`);
   } else {
-    await executeSql(
+    await executeWrite(
       `CREATE TABLE IF NOT EXISTS lexicon (
         strong TEXT PRIMARY KEY,
         hebrew TEXT,
@@ -137,7 +170,7 @@ export const initializeDatabase = async () => {
       );`,
     );
 
-    await executeSql(
+    await executeWrite(
       `CREATE INDEX IF NOT EXISTS idx_lexicon_hebrew 
        ON lexicon(hebrew);`,
     );
@@ -147,11 +180,11 @@ export const initializeDatabase = async () => {
 // ── Bulk inserts with transaction safety ───────────────────────────────────
 
 export const insertLexiconEntries = async (entries: LexiconResponse[]) => {
-  await executeSql("BEGIN TRANSACTION;");
+  await executeWrite("BEGIN TRANSACTION;");
 
   try {
     for (const entry of entries) {
-      await executeSql(
+      await executeWrite(
         `INSERT OR REPLACE INTO lexicon (
           strong, hebrew, definitions, root, root_strong, occurrences
         ) VALUES (?, ?, ?, ?, ?, ?);`,
@@ -165,9 +198,9 @@ export const insertLexiconEntries = async (entries: LexiconResponse[]) => {
         ],
       );
     }
-    await executeSql("COMMIT;");
+    await executeWrite("COMMIT;");
   } catch (error) {
-    await executeSql("ROLLBACK;");
+    await executeWrite("ROLLBACK;");
     throw error; // Already wrapped as DatabaseError
   }
 };
@@ -177,12 +210,12 @@ export const insertTranslationVerses = async (
   language: "en" | "es",
   bookId: string,
 ) => {
-  await executeSql("BEGIN TRANSACTION;");
+  await executeWrite("BEGIN TRANSACTION;");
 
   try {
     for (const verse of verses) {
       const id = `${bookId}-${verse.chapter}-${verse.verse}`;
-      await executeSql(
+      await executeWrite(
         `INSERT OR REPLACE INTO verses (
           id, book, chapter, verse, text, language, footnotes
         ) VALUES (?, ?, ?, ?, ?, ?, ?);`,
@@ -197,9 +230,9 @@ export const insertTranslationVerses = async (
         ],
       );
     }
-    await executeSql("COMMIT;");
+    await executeWrite("COMMIT;");
   } catch (error) {
-    await executeSql("ROLLBACK;");
+    await executeWrite("ROLLBACK;");
     throw error;
   }
 };
@@ -208,10 +241,10 @@ export const deleteTranslationBookEntries = async (
   bookId: string,
   language: "en" | "es",
 ) => {
-  await executeSql(
-    "DELETE FROM verses WHERE book = ? AND language = ?;",
-    [bookId, language],
-  );
+  await executeWrite("DELETE FROM verses WHERE book = ? AND language = ?;", [
+    bookId,
+    language,
+  ]);
 };
 
 // ── Queries ────────────────────────────────────────────────────────────────
@@ -221,7 +254,7 @@ export const fetchTranslationVerses = async (
   chapter: number,
   language: "en" | "es",
 ): Promise<TranslationRow[]> => {
-  const result = await executeSql(
+  const result = await executeRead(
     `SELECT chapter, verse, text, footnotes 
      FROM verses 
      WHERE book = ? AND chapter = ? AND language = ? 
@@ -229,25 +262,30 @@ export const fetchTranslationVerses = async (
     [bookId, chapter, language],
   );
 
-  // Parse footnotes back to array
-  return result.rows._array.map((row: any) => ({
-    ...row,
-    footnotes: row.footnotes ? JSON.parse(row.footnotes) : undefined,
-  }));
+  // Parse footnotes back to TranslationRow array
+  return result.map((row) => {
+    const r = row as Record<string, unknown>;
+    return {
+      chapter: Number(r.chapter ?? 0),
+      verse: Number(r.verse ?? 0),
+      text: String(r.text ?? ""),
+      footnotes: r.footnotes ? JSON.parse(String(r.footnotes)) : undefined,
+    } as TranslationRow;
+  });
 };
 
 export const fetchLexiconEntry = async (strong: string) => {
-  const result = await executeSql(
+  const result = await executeRead(
     `SELECT * FROM lexicon WHERE strong = ? LIMIT 1;`,
     [strong],
   );
 
-  const row = result.rows._array[0];
+  const row = result[0] as Record<string, unknown> | undefined;
   if (!row) return null;
 
   return {
     ...row,
-    definitions: row.definitions ? JSON.parse(row.definitions) : [],
-    occurrences: row.occurrences ? JSON.parse(row.occurrences) : [],
+    definitions: row.definitions ? JSON.parse(String(row.definitions)) : [],
+    occurrences: row.occurrences ? JSON.parse(String(row.occurrences)) : [],
   };
 };

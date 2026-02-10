@@ -459,7 +459,7 @@ const WordAnalysisBottomSheetComponent = (
       forceClose: () => sheetRef.current?.forceClose(),
       snapToIndex: (index: number) => sheetRef.current?.snapToIndex(index),
       snapToPosition: (position: number | string) =>
-        sheetRef.current?.snapToPosition(position as any),
+        sheetRef.current?.snapToPosition(position),
     }),
     [],
   );

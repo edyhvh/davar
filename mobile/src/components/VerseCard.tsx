@@ -20,26 +20,9 @@ import {
   stripMeteg,
 } from "@/src/utils/hebrew";
 import { useTranslation } from "@/src/i18n/useTranslation";
+import { getTranslationDisplayText } from "@/src/utils/translationDisplay";
 
 const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
-
-const superscriptDigitMap: Record<string, string> = {
-  "⁰": "0",
-  "¹": "1",
-  "²": "2",
-  "³": "3",
-  "⁴": "4",
-  "⁵": "5",
-  "⁶": "6",
-  "⁷": "7",
-  "⁸": "8",
-  "⁹": "9",
-};
-
-const superscriptPattern = /[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g;
-
-const stripSuperscripts = (value: string): string =>
-  value.replace(superscriptPattern, "");
 
 const renderTranslationWithItalics = (
   translation: string,
@@ -210,11 +193,11 @@ export const VerseCard = ({
   // ("verse.missingSpanishTranslation") instead of an empty string so the user
   // knows the translation is pending rather than missing by error.
   const missingSpanishTranslation = t("verse.missingSpanishTranslation");
-  const rawTranslationText =
-    language === "es" && !verse.translation?.trim()
-      ? missingSpanishTranslation
-      : (verse.translation ?? "");
-  const translationText = rawTranslationText;
+  const translationText = getTranslationDisplayText({
+    language,
+    translation: verse.translation,
+    missingTranslationText: missingSpanishTranslation,
+  });
 
   const content = (
     <View style={variant === "detail" ? styles.containerDetail : undefined}>
