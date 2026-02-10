@@ -251,7 +251,7 @@ class TranslationLoader(DataLoader):
         self._cache[cache_key] = None
         return None
 
-    def load_ts2009_verse(self, book_name: str, chapter: int, verse: int) -> Optional[str]:
+    def load_ts2009_verse(self, book_name: str, chapter: int, verse: int) -> Optional[dict]:
         """Load TS2009 English translation for a specific verse"""
         # TS2009 uses Hebrew book names
         hebrew_book_name = self._english_to_hebrew_book_name(book_name)
@@ -264,15 +264,18 @@ class TranslationLoader(DataLoader):
 
         try:
             book_data = self.load_json(f"ts2009/{hebrew_book_name}.json")
-            # TS2009 data has a "verses" array with objects containing chapter, verse, text
-            if "verses" in book_data:
-                verses = book_data["verses"]
-                for verse_data in verses:
-                    if (verse_data.get("chapter") == chapter and
-                            verse_data.get("verse") == verse):
-                        translation = verse_data.get("text", "")
-                        self._cache[cache_key] = translation
-                        return translation
+            # TS2009 v3.0 data has a "chapters" array with nested "verses"
+            if "chapters" in book_data:
+                for chapter_data in book_data["chapters"]:
+                    if chapter_data.get("number") == chapter:
+                        for verse_data in chapter_data.get("verses", []):
+                            if verse_data.get("number") == verse:
+                                result = {
+                                    "translation": verse_data.get("text", ""),
+                                    "footnotes": verse_data.get("footnotes", [])
+                                }
+                                self._cache[cache_key] = result
+                                return result
         except FileNotFoundError:
             logger.warning(f"TS2009 translation file not found for {book_name} (mapped to: {hebrew_book_name}.json)")
         except KeyError as e:
@@ -348,11 +351,11 @@ class TranslationLoader(DataLoader):
             
             return None
         elif language.lower() == "en":
-            translation = self.load_ts2009_verse(book_name, chapter, verse)
-            if translation:
+            result = self.load_ts2009_verse(book_name, chapter, verse)
+            if result:
                 return {
-                    "translation": translation,
-                    "footnotes": [],  # TS2009 doesn't have footnotes in this format
+                    "translation": result["translation"],
+                    "footnotes": result.get("footnotes", []),
                     "source": "ts2009"
                 }
             return None

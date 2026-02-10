@@ -7,7 +7,6 @@ Processes TS2009 SQLite database into streamlined JSON format optimized for Dava
 import sqlite3
 import json
 import logging
-import re
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
@@ -16,90 +15,82 @@ from dataclasses import dataclass, asdict
 try:
     # Try relative import for module usage
     from .config import (
-        BOOKS_MAPPING, SECTIONS_MAPPING, COMMON_HEBREW_TERMS,
+        BOOKS_MAPPING, SECTIONS_MAPPING,
         DEFAULT_DB_PATH, DEFAULT_OUTPUT_DIR, DEFAULT_TEMP_DIR, PROCESSOR_VERSION, PROJECT_ROOT
     )
+    from .text_processor import TextCleaner, ProcessedText
 except ImportError:
     # Fall back to absolute import for direct script execution
     from config import (
-        BOOKS_MAPPING, SECTIONS_MAPPING, COMMON_HEBREW_TERMS,
+        BOOKS_MAPPING, SECTIONS_MAPPING,
         DEFAULT_DB_PATH, DEFAULT_OUTPUT_DIR, DEFAULT_TEMP_DIR, PROCESSOR_VERSION, PROJECT_ROOT
     )
+    from text_processor import TextCleaner, ProcessedText
 
 
 @dataclass
 class VerseData:
     """Represents a single verse with minimal required fields."""
-    book: str
-    book_id: str
-    book_ts2009_name: str
-    section: str
-    chapter: int
-    verse: int
-    status: str = "present"
-    text: str = ""
+    number: int
+    text: str
+    footnotes: List[str] = None
+
+    def __post_init__(self):
+        if self.footnotes is None:
+            self.footnotes = []
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary for JSON serialization."""
-        return asdict(self)
+        result = {
+            'number': self.number,
+            'text': self.text
+        }
+        if self.footnotes:
+            result['footnotes'] = self.footnotes
+        return result
+
+
+@dataclass
+class ChapterData:
+    """Represents a chapter with its verses."""
+    number: int
+    verses: List[VerseData]
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary for JSON serialization."""
+        return {
+            'number': self.number,
+            'verses': [verse.to_dict() for verse in self.verses]
+        }
 
 
 @dataclass
 class BookMetadata:
     """Represents book metadata information."""
     book_id: str
-    expected_chapters: int
+    book_name: str
+    book_hebrew: str
+    book_anglicized: str
     section: str
     section_english: str
+    section_hebrew: str
+    expected_chapters: int
     total_chapters: int
     total_verses: int
 
 
 @dataclass
 class ProcessedBook:
-    """Represents a complete processed book with metadata and verses."""
+    """Represents a complete processed book with metadata and chapters."""
     metadata: BookMetadata
-    verses: List[VerseData]
+    chapters: List[ChapterData]
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary for JSON serialization."""
         return {
             'metadata': asdict(self.metadata),
-            'verses': [verse.to_dict() for verse in self.verses]
+            'chapters': [chapter.to_dict() for chapter in self.chapters]
         }
-
-
-class TextCleaner:
-    """Handles cleaning and processing of TS2009 text content."""
-
-    @staticmethod
-    def clean_html_text(text: str) -> str:
-        """
-        Clean HTML text from TS2009, preserving Hebrew content and essential formatting.
-
-        Args:
-            text: Raw text from database
-
-        Returns:
-            Cleaned text ready for app consumption
-        """
-        if not text:
-            return ""
-
-        # Remove HTML tags but preserve content
-        text = re.sub(r'<blu>(.*?)</blu>', r'\1', text)  # Remove blue styling
-        text = re.sub(r'<red>(.*?)</red>', r'\1', text)  # Remove red styling
-        text = re.sub(r'<b>(.*?)</b>', r'\1', text)     # Remove bold
-        text = re.sub(r'<sup>([^<]*)</sup>', r'[\1]', text)  # Convert superscripts to brackets
-        text = re.sub(r'<ref>([^<]*)</ref>', r'[\1]', text)  # Convert references to brackets
-        text = re.sub(r'<a[^>]*>(.*?)</a>', r'\1', text)     # Remove links
-        text = re.sub(r'<heb>(.*?)</heb>', r'\1', text)     # Preserve Hebrew content
-        text = re.sub(r'<em>(.*?)</em>', r'\1', text)       # Remove emphasis
-        text = re.sub(r'<u>(.*?)</u>', r'\1', text)         # Remove underline
-
-        # Clean up whitespace
-        text = re.sub(r'\s+', ' ', text)
-        return text.strip()
 
 
 class DatabaseHandler:
@@ -153,21 +144,6 @@ class BookProcessor:
         """Get book metadata from configuration."""
         return BOOKS_MAPPING.get(book_num)
 
-    def create_verse_data(self, book_info: Dict[str, Any], chapter: int, verse: int,
-                         scripture: str) -> VerseData:
-        """Create a VerseData object from raw database data."""
-        cleaned_text = self.text_cleaner.clean_html_text(scripture)
-
-        return VerseData(
-            book=book_info['name_anglicized'],
-            book_id=book_info['name_english'].lower(),
-            book_ts2009_name=f"{book_info['name_hebrew']}/{book_info['name_english']}",
-            section=book_info['section'],
-            chapter=chapter,
-            verse=verse,
-            text=cleaned_text
-        )
-
     def process_book(self, book_num: int) -> Optional[ProcessedBook]:
         """
         Process a complete book and return structured data.
@@ -191,28 +167,51 @@ class BookProcessor:
             logging.warning(f"No verses found for book {book_num}")
             return None
 
-        # Process verses
-        verses = []
-        chapters_seen = set()
-
+        # Group verses by chapter
+        chapters_dict: Dict[int, List[Tuple[int, str]]] = {}
         for book, chapter, verse, scripture in raw_verses:
-            verse_data = self.create_verse_data(book_info, chapter, verse, scripture)
-            verses.append(verse_data)
-            chapters_seen.add(chapter)
+            if chapter not in chapters_dict:
+                chapters_dict[chapter] = []
+            chapters_dict[chapter].append((verse, scripture))
+
+        # Process each chapter
+        chapters = []
+        for chapter_num in sorted(chapters_dict.keys()):
+            verses_data = chapters_dict[chapter_num]
+            verses = []
+            
+            for verse_num, scripture in verses_data:
+                # Process text and extract footnotes
+                processed = self.text_cleaner.process_verse_text(scripture)
+                
+                verse_data = VerseData(
+                    number=verse_num,
+                    text=processed.text,
+                    footnotes=processed.footnotes
+                )
+                verses.append(verse_data)
+            
+            chapter_data = ChapterData(number=chapter_num, verses=verses)
+            chapters.append(chapter_data)
 
         # Create metadata
+        section_info = SECTIONS_MAPPING.get(book_info['section'], {})
         metadata = BookMetadata(
             book_id=book_info['name_english'].lower(),
-            expected_chapters=book_info['expected_chapters'],
+            book_name=book_info['name_english'],
+            book_hebrew=book_info['name_hebrew'],
+            book_anglicized=book_info['name_anglicized'],
             section=book_info['section'],
-            section_english=SECTIONS_MAPPING[book_info['section']]['english'],
-            total_chapters=len(chapters_seen),
-            total_verses=len(verses)
+            section_english=section_info.get('english', book_info['section']),
+            section_hebrew=section_info.get('hebrew', ''),
+            expected_chapters=book_info['expected_chapters'],
+            total_chapters=len(chapters),
+            total_verses=sum(len(ch.verses) for ch in chapters)
         )
 
-        logging.info(f"  ✓ Processed {len(chapters_seen)} chapters, {len(verses)} verses")
+        logging.info(f"  ✓ Processed {len(chapters)} chapters, {metadata.total_verses} verses")
 
-        return ProcessedBook(metadata=metadata, verses=verses)
+        return ProcessedBook(metadata=metadata, chapters=chapters)
 
 
 class TS2009Processor:
@@ -270,7 +269,7 @@ class TS2009Processor:
         if not processed_book:
             return False
 
-        # Use anglicized name for filename (lowercase), but English name for book_id field
+        # Use anglicized name for filename
         filename = book_info['name_anglicized']
         output_file = target_dir / f"{filename}.json"
         self.save_book_to_json(processed_book, output_file)
@@ -316,38 +315,19 @@ class TS2009Processor:
         temp_dir.mkdir(parents=True, exist_ok=True)
         return self.process_all_books(temp_dir)
 
+    def get_available_books(self) -> List[str]:
+        """Get list of available book anglicized names."""
+        book_numbers = self.db_handler.get_book_numbers()
+        books = []
+        for book_num in book_numbers:
+            book_info = self.book_processor.get_book_info(book_num)
+            if book_info:
+                books.append(book_info['name_anglicized'])
+        return books
 
-def main():
-    """Main entry point for command-line usage."""
-    import argparse
-
-    parser = argparse.ArgumentParser(description='TS2009 Bible Processor')
-    parser.add_argument('--db-path', default=DEFAULT_DB_PATH,
-                       help='Path to TS2009 database file')
-    parser.add_argument('--output-dir', default=DEFAULT_OUTPUT_DIR,
-                       help='Output directory for JSON files')
-    parser.add_argument('--temp', action='store_true',
-                       help='Process to temporary directory for testing')
-
-    args = parser.parse_args()
-
-    try:
-        processor = TS2009Processor(args.db_path, args.output_dir)
-
-        if args.temp:
-            logging.info("Processing to temporary directory for testing...")
-            processed = processor.process_to_temp()
-        else:
-            processed = processor.process_all_books()
-
-        logging.info(f"Successfully processed {len(processed)} books")
-
-    except Exception as e:
-        logging.error(f"Processing failed: {e}")
-        return 1
-
-    return 0
-
-
-if __name__ == '__main__':
-    exit(main())
+    def get_book_number_by_name(self, book_name: str) -> Optional[int]:
+        """Get book number by anglicized name."""
+        for book_num, book_info in BOOKS_MAPPING.items():
+            if book_info['name_anglicized'] == book_name:
+                return book_num
+        return None

@@ -260,7 +260,7 @@ export function VerseDisplay({
           >
             {language === "es" && !translation.trim()
               ? spanishMissingTranslation
-              : renderTranslation(translation, {
+              : renderTranslation(translation || '', {
                   hideSuperscripts,
                 })}
           </div>

@@ -19,6 +19,6 @@ export const getTranslationKey = (language: AppLanguage): TranslationKey => {
 export const shouldHideSuperscripts = (
   translationKey: TranslationKey,
 ): boolean => {
-  // TTH (Spanish) embeds footnote markers as superscripts that we hide in UI
-  return translationKey === "tth";
+  // TTH (Spanish) and TS2009 (English) embed footnote markers that we hide in UI
+  return translationKey === "tth" || translationKey === "ts2009";
 };

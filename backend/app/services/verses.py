@@ -216,24 +216,58 @@ class VersesService:
         translation_language = None
         translation_footnotes = None
         if not hebrew_only and language:
-            translation_data = self.translations_loader.get_translation(
-                book_en, verse_data.get('chapter', 0), verse_data.get(
-                    'verse', 0), language
-            )
-            if translation_data:
-                translation = translation_data.get("translation")
-                footnotes = translation_data.get("footnotes")
-                if footnotes:
-                    translation_footnotes = [
-                        TranslationFootnote(
-                            marker=footnote.get("marker", ""),
-                            number=footnote.get("number", ""),
-                            word=footnote.get("word", ""),
-                            explanation=footnote.get("explanation", "")
-                        )
-                        for footnote in footnotes
-                    ]
-                translation_language = language
+            try:
+                translation_data = self.translations_loader.get_translation(
+                    book_en, verse_data.get('chapter', 0), verse_data.get(
+                        'verse', 0), language
+                )
+                if translation_data:
+                    translation = translation_data.get("translation")
+                    footnotes = translation_data.get("footnotes")
+                    if footnotes:
+                        # Handle both string footnotes (TS2009) and dictionary footnotes (TTH)
+                        translation_footnotes = []
+                        for footnote in footnotes:
+                            if isinstance(footnote, str):
+                                # TS2009 format: "[a] Or the earth became."
+                                # Parse the marker and explanation
+                                import re
+                                match = re.match(r'\[([a-z0-9]+)\]\s*(.*)', footnote, re.IGNORECASE)
+                                if match:
+                                    marker = match.group(1)
+                                    explanation = match.group(2)
+                                    translation_footnotes.append(
+                                        TranslationFootnote(
+                                            marker=marker,
+                                            number="",
+                                            word="",
+                                            explanation=explanation
+                                        )
+                                    )
+                                else:
+                                    # Fallback: use the entire string as explanation
+                                    translation_footnotes.append(
+                                        TranslationFootnote(
+                                            marker="",
+                                            number="",
+                                            word="",
+                                            explanation=footnote
+                                        )
+                                    )
+                            elif isinstance(footnote, dict):
+                                # TTH format: dictionary with marker, number, word, explanation
+                                translation_footnotes.append(
+                                    TranslationFootnote(
+                                        marker=footnote.get("marker", ""),
+                                        number=footnote.get("number", ""),
+                                        word=footnote.get("word", ""),
+                                        explanation=footnote.get("explanation", "")
+                                    )
+                                )
+                    translation_language = language
+            except Exception as e:
+                logging.error(f"Failed to load translation for {book_en} {verse_data.get('chapter', 0)}:{verse_data.get('verse', 0)}: {e}", exc_info=True)
+                raise
 
         dss_variants = None
         if show_dss:

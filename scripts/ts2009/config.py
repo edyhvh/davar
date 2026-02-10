@@ -20,7 +20,7 @@ DEFAULT_OUTPUT_DIR = PROJECT_ROOT / 'data/ts2009'
 DEFAULT_TEMP_DIR = PROJECT_ROOT / 'data/ts2009/temp'
 
 # Processing settings
-PROCESSOR_VERSION = "2.0.0"
+PROCESSOR_VERSION = "3.0.0"
 
 
 # Book mappings - TS2009 book numbers to metadata
