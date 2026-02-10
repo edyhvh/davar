@@ -9,7 +9,19 @@ import {
   initializeDatabase,
 } from "@/src/services/database";
 
-const OFFLINE_DIR = `${(FileSystem as unknown as { documentDirectory?: string }).documentDirectory ?? ""}offline`;
+const { documentDirectory, cacheDirectory } = FileSystem as {
+  documentDirectory?: string | null;
+  cacheDirectory?: string | null;
+};
+const offlineBaseDir = documentDirectory ?? cacheDirectory;
+
+if (!offlineBaseDir) {
+  throw new Error(
+    "Expo FileSystem: Neither documentDirectory nor cacheDirectory is available for offline storage.",
+  );
+}
+
+const OFFLINE_DIR = `${offlineBaseDir}offline`;
 
 const ensureOfflineDir = async () => {
   const info = await FileSystem.getInfoAsync(OFFLINE_DIR);
@@ -194,7 +206,7 @@ const extractTthVerses = (bookData: TthBookData): TranslationRow[] => {
         verse: verse.verse,
         text: verse.tth ?? "",
         footnotes: verse.footnotes ?? [],
-      } as TranslationRow);
+      });
     }
   }
   return rows;
