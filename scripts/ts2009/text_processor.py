@@ -46,7 +46,7 @@ class FootnoteExtractor:
             return ProcessedText(text="", footnotes=[])
 
         # First, check if there's explicit "Footnote:" or "Footnotes:" text
-        if "Footnote:" in text or "Footnotes:" in text:
+        if re.search(r'footnote[s]?:', text, re.IGNORECASE):
             return cls._extract_explicit_footnotes(text)
         
         # Check for inline footnote markers like [a], [b]
@@ -60,8 +60,8 @@ class FootnoteExtractor:
         Example: "And the earth came to be[a] formless... Footnote: [a]Or the earth became."
         """
         # Split on "Footnote:" or "Footnotes:" to separate verse text from footnotes
-        # Use regex to split on either form
-        parts = re.split(r'Footnote[s]?:', text)
+        # Use regex to split on either form (case-insensitive)
+        parts = re.split(r'Footnote[s]?:', text, flags=re.IGNORECASE)
         
         if len(parts) == 1:
             # No footnotes found, return as-is
