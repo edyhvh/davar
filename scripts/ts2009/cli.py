@@ -124,7 +124,10 @@ class TS2009CLI:
         besorah_books = []
 
         # Get book info from BOOKS_MAPPING
-        from config import BOOKS_MAPPING
+        try:
+            from .config import BOOKS_MAPPING
+        except ImportError:
+            from config import BOOKS_MAPPING
         
         for book in books:
             for book_num, info in BOOKS_MAPPING.items():
@@ -257,8 +260,11 @@ class TS2009CLI:
     def _print_available_books(self):
         """Print available books grouped by section."""
         books = self.processor.get_available_books()
-        
-        from config import BOOKS_MAPPING
+
+        try:
+            from .config import BOOKS_MAPPING
+        except ImportError:
+            from config import BOOKS_MAPPING
         
         torah_books = []
         neviim_books = []
