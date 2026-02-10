@@ -35,8 +35,8 @@ const renderTextSegment = (
   // Find all matches (both superscript digits and bracket footnotes)
   const allMatches: Array<{type: 'superscript' | 'bracket', start: number, end: number, content: string}> = [];
   
-  // Find superscript digit matches
-  for (const match of text.matchAll(superscriptPattern)) {
+  // Find superscript digit matches (create fresh RegExp to avoid lastIndex mutation)
+  for (const match of text.matchAll(new RegExp(superscriptPattern))) {
     if (match.index === undefined) continue;
     allMatches.push({
       type: 'superscript',
@@ -45,9 +45,9 @@ const renderTextSegment = (
       content: match[0]
     });
   }
-  
-  // Find bracket footnote matches
-  for (const match of text.matchAll(bracketFootnotePattern)) {
+
+  // Find bracket footnote matches (create fresh RegExp to avoid lastIndex mutation)
+  for (const match of text.matchAll(new RegExp(bracketFootnotePattern))) {
     if (match.index === undefined) continue;
     allMatches.push({
       type: 'bracket',
