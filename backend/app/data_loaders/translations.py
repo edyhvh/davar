@@ -251,35 +251,52 @@ class TranslationLoader(DataLoader):
         self._cache[cache_key] = None
         return None
 
-    def load_ts2009_verse(self, book_name: str, chapter: int, verse: int) -> Optional[str]:
+    def load_ts2009_verse(self, book_name: str, chapter: int, verse: int) -> Optional[dict]:
         """Load TS2009 English translation for a specific verse"""
         # TS2009 uses Hebrew book names
         hebrew_book_name = self._english_to_hebrew_book_name(book_name)
         if not hebrew_book_name:
             return None
 
+        # Cache key for the entire book data
+        book_cache_key = f"ts2009_book_{hebrew_book_name}"
+        if book_cache_key not in self._cache:
+            # Load and cache the entire book
+            try:
+                book_data = self.load_json(f"ts2009/{hebrew_book_name}.json")
+                # Build an index: {chapter: {verse: {translation, footnotes}}}
+                book_index = {}
+                if "chapters" in book_data:
+                    for chapter_data in book_data["chapters"]:
+                        chap_num = chapter_data.get("number")
+                        if chap_num not in book_index:
+                            book_index[chap_num] = {}
+                        for verse_data in chapter_data.get("verses", []):
+                            verse_num = verse_data.get("number")
+                            book_index[chap_num][verse_num] = {
+                                "translation": verse_data.get("text", ""),
+                                "footnotes": verse_data.get("footnotes", [])
+                            }
+                self._cache[book_cache_key] = book_index
+            except FileNotFoundError:
+                logger.warning(f"TS2009 translation file not found for {book_name} (mapped to: {hebrew_book_name}.json)")
+                self._cache[book_cache_key] = None
+            except KeyError as e:
+                logger.warning(f"TS2009 translation structure error for {book_name}: {e}")
+                self._cache[book_cache_key] = None
+
+        book_index = self._cache[book_cache_key]
+        if book_index is None:
+            return None
+
+        # Now lookup the specific verse
         cache_key = f"ts2009_{hebrew_book_name}_{chapter}_{verse}"
         if cache_key in self._cache:
             return self._cache[cache_key]
 
-        try:
-            book_data = self.load_json(f"ts2009/{hebrew_book_name}.json")
-            # TS2009 data has a "verses" array with objects containing chapter, verse, text
-            if "verses" in book_data:
-                verses = book_data["verses"]
-                for verse_data in verses:
-                    if (verse_data.get("chapter") == chapter and
-                            verse_data.get("verse") == verse):
-                        translation = verse_data.get("text", "")
-                        self._cache[cache_key] = translation
-                        return translation
-        except FileNotFoundError:
-            logger.warning(f"TS2009 translation file not found for {book_name} (mapped to: {hebrew_book_name}.json)")
-        except KeyError as e:
-            logger.warning(f"TS2009 translation structure error for {book_name} chapter {chapter} verse {verse}: {e}")
-
-        self._cache[cache_key] = None
-        return None
+        result = book_index.get(chapter, {}).get(verse)
+        self._cache[cache_key] = result
+        return result
 
     def load_bes_verse(self, book_name: str, chapter: int, verse: int) -> Optional[str]:
         """Load BES (Biblia en Español Sencillo) translation for a specific verse"""
@@ -348,11 +365,11 @@ class TranslationLoader(DataLoader):
             
             return None
         elif language.lower() == "en":
-            translation = self.load_ts2009_verse(book_name, chapter, verse)
-            if translation:
+            result = self.load_ts2009_verse(book_name, chapter, verse)
+            if result:
                 return {
-                    "translation": translation,
-                    "footnotes": [],  # TS2009 doesn't have footnotes in this format
+                    "translation": result["translation"],
+                    "footnotes": result.get("footnotes", []),
                     "source": "ts2009"
                 }
             return None

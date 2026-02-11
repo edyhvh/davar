@@ -14,6 +14,7 @@ const superscriptDigitMap: Record<string, string> = {
 };
 
 const superscriptPattern = /[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g;
+const bracketFootnotePattern = /\[([a-z0-9]+)\]/gi;
 
 const normalizeSuperscripts = (value: string): string =>
   value
@@ -31,12 +32,38 @@ const renderTextSegment = (
   let lastIndex = 0;
   let matchIndex = 0;
 
-  for (const match of text.matchAll(superscriptPattern)) {
+  // Find all matches (both superscript digits and bracket footnotes)
+  const allMatches: Array<{type: 'superscript' | 'bracket', start: number, end: number, content: string}> = [];
+  
+  // Find superscript digit matches (create fresh RegExp to avoid lastIndex mutation)
+  for (const match of text.matchAll(new RegExp(superscriptPattern))) {
     if (match.index === undefined) continue;
-    const start = match.index;
-    const end = start + match[0].length;
+    allMatches.push({
+      type: 'superscript',
+      start: match.index,
+      end: match.index + match[0].length,
+      content: match[0]
+    });
+  }
+
+  // Find bracket footnote matches (create fresh RegExp to avoid lastIndex mutation)
+  for (const match of text.matchAll(new RegExp(bracketFootnotePattern))) {
+    if (match.index === undefined) continue;
+    allMatches.push({
+      type: 'bracket',
+      start: match.index,
+      end: match.index + match[0].length,
+      content: match[0]
+    });
+  }
+  
+  // Sort matches by position
+  allMatches.sort((a, b) => a.start - b.start);
+
+  for (const match of allMatches) {
+    const start = match.start;
+    const end = match.end;
     const plainText = text.slice(lastIndex, start);
-    const normalized = normalizeSuperscripts(match[0]);
 
     if (plainText) {
       nodes.push(
@@ -53,14 +80,28 @@ const renderTextSegment = (
     }
 
     if (!hideSuperscripts) {
-      nodes.push(
-        <sup
-          key={`${keyPrefix}-sup-${matchIndex}`}
-          className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
-        >
-          {normalized}
-        </sup>,
-      );
+      if (match.type === 'superscript') {
+        const normalized = normalizeSuperscripts(match.content);
+        nodes.push(
+          <sup
+            key={`${keyPrefix}-sup-${matchIndex}`}
+            className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
+          >
+            {normalized}
+          </sup>,
+        );
+      } else if (match.type === 'bracket') {
+        // Render bracket footnotes as superscripts
+        const marker = match.content.slice(1, -1); // Remove brackets
+        nodes.push(
+          <sup
+            key={`${keyPrefix}-bracket-${matchIndex}`}
+            className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
+          >
+            {marker}
+          </sup>,
+        );
+      }
     }
 
     lastIndex = end;
