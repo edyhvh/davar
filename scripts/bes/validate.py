@@ -13,6 +13,12 @@ logger = logging.getLogger(__name__)
 
 OUTPUT_DIR = Path(__file__).parent.parent.parent / "data" / "bes" / "json"
 
+# Books that should have chapter titles
+BOOKS_WITH_TITLES = {"Psalms"}
+
+# Books that should have headers
+BOOKS_WITH_HEADERS = {"SongOfSolomon"}
+
 def validate_bes_output() -> Tuple[bool, Dict[str, List[str]]]:
     """
     Validate all BES JSON files against expected metadata.
@@ -70,20 +76,46 @@ def validate_bes_output() -> Tuple[bool, Dict[str, List[str]]]:
                 if chapter_nums != expected_nums:
                     book_errors.append(f"Chapter numbers not sequential: expected {expected_nums}, got {chapter_nums}")
 
-                # Count total verses
+                # Count total verses and validate titles/headers
                 total_verses = 0
                 for chapter in chapters:
                     verses = chapter.get("verses", [])
                     total_verses += len(verses)
+                    chapter_num = chapter.get("chapter")
 
                     # Validate verse structure
                     for verse in verses:
                         if not isinstance(verse.get("verse"), int):
-                            book_errors.append(f"Invalid verse number in chapter {chapter.get('chapter')}")
+                            book_errors.append(f"Invalid verse number in chapter {chapter_num}")
                         if "bes" not in verse:
-                            book_errors.append(f"Missing 'bes' field in chapter {chapter.get('chapter')} verse {verse.get('verse')}")
+                            book_errors.append(f"Missing 'bes' field in chapter {chapter_num} verse {verse.get('verse')}")
                         if not verse.get("bes", "").strip():
-                            book_errors.append(f"Empty 'bes' text in chapter {chapter.get('chapter')} verse {verse.get('verse')}")
+                            book_errors.append(f"Empty 'bes' text in chapter {chapter_num} verse {verse.get('verse')}")
+
+                        # Check that titles/headers are NOT in verse text
+                        verse_text = verse.get("bes", "")
+                        if book_name in BOOKS_WITH_TITLES:
+                            # Check for common Psalms title patterns in verse text
+                            if "Un salmo de" in verse_text and "David" in verse_text:
+                                book_errors.append(f"Psalm title found in verse text in chapter {chapter_num} verse {verse.get('verse')}: '{verse_text[:50]}...'")
+                        if book_name in BOOKS_WITH_HEADERS:
+                            # Check for speaker labels in verse text
+                            for speaker in ["Ella", "Él", "Coro", "Los Dos"]:
+                                if speaker in verse_text and len(verse_text) < 50:
+                                    book_errors.append(f"Speaker label '{speaker}' found in verse text in chapter {chapter_num} verse {verse.get('verse')}: '{verse_text}'")
+
+                    # Validate titles for Psalms
+                    if book_name in BOOKS_WITH_TITLES:
+                        title = chapter.get("title")
+                        if title:
+                            logger.debug(f"{book_name} chapter {chapter_num} has title: '{title}'")
+                        # Note: Not all Psalms have titles, so we don't require them
+
+                    # Validate headers for Song of Solomon (now in verses)
+                    if book_name in BOOKS_WITH_HEADERS:
+                        headers_count = sum(1 for v in verses if "header" in v)
+                        if headers_count > 0:
+                            logger.debug(f"{book_name} chapter {chapter_num} has {headers_count} verses with headers")
 
                 # Log verse count for verification
                 logger.info(f"{book_name}: {len(chapters)} chapters, {total_verses} verses")
