@@ -128,7 +128,6 @@ def parse_usfx_book(book_element) -> Optional[Dict[str, Any]]:
         # The header was set from next_header when this verse started
         if current_header:
             verse_data["header"] = current_header
-            current_header = None  # Reset after using
 
         if cleaned_text:
             verses_in_chapter.append(verse_data)

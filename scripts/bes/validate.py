@@ -5,6 +5,7 @@ Validate BES JSON output against expected book metadata
 
 import json
 import logging
+import re
 from pathlib import Path
 from typing import Dict, List, Tuple
 from config import BOOK_METADATA
@@ -100,9 +101,17 @@ def validate_bes_output() -> Tuple[bool, Dict[str, List[str]]]:
                                 book_errors.append(f"Psalm title found in verse text in chapter {chapter_num} verse {verse.get('verse')}: '{verse_text[:50]}...'")
                         if book_name in BOOKS_WITH_HEADERS:
                             # Check for speaker labels in verse text
+                            # Speaker labels that weren't properly extracted are likely to appear
+                            # at the beginning or end of the verse text
                             for speaker in ["Ella", "Él", "Coro", "Los Dos"]:
-                                if speaker in verse_text and len(verse_text) < 50:
+                                # Check if speaker appears at the start or end (most likely leftover label)
+                                if verse_text.startswith(speaker + " ") or verse_text.endswith(" " + speaker):
                                     book_errors.append(f"Speaker label '{speaker}' found in verse text in chapter {chapter_num} verse {verse.get('verse')}: '{verse_text}'")
+                                # Also check if speaker appears as a standalone word (could be legitimate, but worth flagging)
+                                elif re.search(rf'\b{re.escape(speaker)}\b', verse_text):
+                                    # Only flag if it's a short verse (heuristic to reduce false positives)
+                                    if len(verse_text) < 50:
+                                        book_errors.append(f"Speaker label '{speaker}' possibly found in verse text in chapter {chapter_num} verse {verse.get('verse')}: '{verse_text}'")
 
                     # Validate titles for Psalms
                     if book_name in BOOKS_WITH_TITLES:
