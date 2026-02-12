@@ -775,8 +775,6 @@ const WordAnalysisBottomSheetComponent = (
     [],
   );
 
-  const handleSheetChanges = useCallback((index: number) => {}, []);
-
   const handleSheetClose = useCallback(() => {
     onClosed?.();
   }, [onClosed]);
@@ -918,7 +916,6 @@ const WordAnalysisBottomSheetComponent = (
         hasDssVariant ? styles.sheetBackgroundDss : styles.sheetBackground
       }
       handleIndicatorStyle={styles.sheetHandle}
-      onChange={handleSheetChanges}
       onClose={handleSheetClose}
       backdropComponent={renderBackdrop}
       animateOnMount={false}
