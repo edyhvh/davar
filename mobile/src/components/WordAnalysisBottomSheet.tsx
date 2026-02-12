@@ -762,7 +762,12 @@ const WordAnalysisBottomSheetComponent = (
             // API failed — try offline SQLite fallback
             try {
               const offlineEntry = await fetchPrefixEntry(prefixId);
-              entries[prefixId] = offlineEntry as PrefixResponse | null;
+              entries[prefixId] = offlineEntry
+                ? ({
+                    id: prefixId,
+                    ...(offlineEntry as object),
+                  } as PrefixResponse)
+                : null;
             } catch {
               entries[prefixId] = null;
             }

@@ -233,22 +233,24 @@ export default function HomeScreen() {
     }
   };
 
-  // Stage name resolver for progress display
-  const stageName = (stage: string): string => {
-    const stageKeys: Record<string, string> = {
-      hebrew: t("home.download.stages.hebrew"),
-      translation: t("home.download.stages.translation"),
-      dictionary: t("home.download.stages.dictionary"),
-      dss: t("home.download.stages.dss"),
-    };
-    return stageKeys[stage] ?? stage;
-  };
-
   // Compute subtitle text based on offline status
   const subtitleText = useMemo(() => {
-    if (offlineStatus === "downloading" && downloadProgress) {
+    if (offlineStatus === "downloading") {
+      if (!downloadProgress) {
+        return t("home.download.downloading", {
+          stage: t("home.download.stages.hebrew"),
+          current: "0",
+          total: "4",
+        });
+      }
+      const stageKeys: Record<string, string> = {
+        hebrew: t("home.download.stages.hebrew"),
+        translation: t("home.download.stages.translation"),
+        dictionary: t("home.download.stages.dictionary"),
+        dss: t("home.download.stages.dss"),
+      };
       return t("home.download.downloading", {
-        stage: stageName(downloadProgress.stage),
+        stage: stageKeys[downloadProgress.stage] ?? downloadProgress.stage,
         current: String(downloadProgress.current),
         total: String(downloadProgress.total),
       });
@@ -256,7 +258,6 @@ export default function HomeScreen() {
     if (offlineUpdateAvailable) return t("home.download.updateAvailable");
     if (offlineStatus === "ready") return t("home.download.ready");
     return t("home.download.idle");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offlineStatus, offlineUpdateAvailable, downloadProgress, t]);
 
   const handleDownloadPress = useCallback(async () => {
