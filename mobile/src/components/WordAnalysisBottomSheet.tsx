@@ -775,9 +775,7 @@ const WordAnalysisBottomSheetComponent = (
     [],
   );
 
-  const handleSheetChanges = useCallback((index: number) => {
-
-  }, []);
+  const handleSheetChanges = useCallback((index: number) => {}, []);
 
   const handleSheetClose = useCallback(() => {
     onClosed?.();
