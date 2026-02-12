@@ -10,7 +10,7 @@ export type TranslationRow = {
 
 const db = SQLite.openDatabaseSync("davar.db");
 
-const CURRENT_SCHEMA_VERSION = 2;
+const CURRENT_SCHEMA_VERSION = 3;
 
 // ── Custom error for better debugging ──────────────────────────────────────
 
@@ -21,7 +21,11 @@ class DatabaseError extends Error {
     public params: (string | number | null)[],
     public originalError: unknown,
   ) {
-    super(message);
+    const originalMsg =
+      originalError instanceof Error
+        ? originalError.message
+        : String(originalError);
+    super(`${message}: ${originalMsg}`);
     this.name = "DatabaseError";
   }
 
@@ -68,23 +72,50 @@ const executeRead = async (
   }
 };
 
+/**
+ * Coerce any value to a SQLite-safe primitive.
+ * Objects/arrays are JSON-stringified; undefined becomes null.
+ */
+const sanitizeParam = (value: unknown): string | number | null => {
+  if (value === undefined || value === null) return null;
+  if (typeof value === "string" || typeof value === "number") return value;
+  if (typeof value === "boolean") return value ? 1 : 0;
+  if (typeof value === "bigint") return value.toString();
+  if (typeof value === "symbol" || typeof value === "function") {
+    return String(value);
+  }
+  try {
+    const serialized = JSON.stringify(value);
+    return serialized === undefined ? null : serialized;
+  } catch {
+    return String(value);
+  }
+};
+
 const executeWrite = async (
   query: string,
-  params: (string | number | null)[] = [],
+  params: unknown[] = [],
 ): Promise<void> => {
+  // Sanitize ALL params to prevent "[object Object]" crashes on Android
+  const safeParams = params.map(sanitizeParam);
   try {
     await (
       db as unknown as {
         runAsync: (sql: string, params?: unknown[]) => Promise<unknown>;
       }
-    ).runAsync(query, params);
+    ).runAsync(query, safeParams);
   } catch (error) {
     const wrappedError = new DatabaseError(
       `SQLite write failed`,
       query,
-      params,
+      safeParams,
       error,
     );
+    const paramTypes = safeParams.map((param) => typeof param);
+    console.error("SQLite write error", {
+      ...wrappedError.toJSON(),
+      paramTypes,
+    });
     throw wrappedError;
   }
 };
@@ -92,6 +123,9 @@ const executeWrite = async (
 // ── Initialization ──────────────────────────────────────────────────────────
 
 export const initializeDatabase = async () => {
+  // Enable WAL mode for better concurrent access and write performance
+  await executeWrite("PRAGMA journal_mode = WAL;");
+
   const versionResult = await executeRead("PRAGMA user_version;");
   const currentVersion =
     Number((versionResult?.[0] as Record<string, unknown>)?.user_version) || 0;
@@ -156,8 +190,6 @@ export const initializeDatabase = async () => {
       `CREATE INDEX IF NOT EXISTS idx_lexicon_hebrew 
        ON lexicon(hebrew);`,
     );
-
-    await executeWrite(`PRAGMA user_version = ${CURRENT_SCHEMA_VERSION};`);
   } else {
     await executeWrite(
       `CREATE TABLE IF NOT EXISTS lexicon (
@@ -175,33 +207,99 @@ export const initializeDatabase = async () => {
        ON lexicon(hebrew);`,
     );
   }
+
+  // ── Schema v3: offline tables for Hebrew, DSS, prefixes, bundle versions ──
+  if (currentVersion < 3) {
+    await executeWrite(
+      `CREATE TABLE IF NOT EXISTS hebrew_verses (
+        id TEXT PRIMARY KEY,
+        book TEXT NOT NULL,
+        chapter INTEGER NOT NULL,
+        verse INTEGER NOT NULL,
+        words TEXT NOT NULL
+      );`,
+    );
+    await executeWrite(
+      `CREATE INDEX IF NOT EXISTS idx_hebrew_verses_book_chapter
+       ON hebrew_verses(book, chapter);`,
+    );
+
+    await executeWrite(
+      `CREATE TABLE IF NOT EXISTS dss_variants (
+        id TEXT PRIMARY KEY,
+        book TEXT NOT NULL,
+        chapter INTEGER NOT NULL,
+        verse INTEGER NOT NULL,
+        position INTEGER NOT NULL,
+        data TEXT NOT NULL
+      );`,
+    );
+    await executeWrite(
+      `CREATE INDEX IF NOT EXISTS idx_dss_variants_book_chapter
+       ON dss_variants(book, chapter);`,
+    );
+
+    await executeWrite(
+      `CREATE TABLE IF NOT EXISTS prefixes (
+        id TEXT PRIMARY KEY,
+        data TEXT NOT NULL
+      );`,
+    );
+
+    await executeWrite(
+      `CREATE TABLE IF NOT EXISTS bundle_versions (
+        bundle TEXT PRIMARY KEY,
+        version INTEGER NOT NULL,
+        downloaded_at TEXT NOT NULL
+      );`,
+    );
+  }
+
+  if (currentVersion < CURRENT_SCHEMA_VERSION) {
+    await executeWrite(`PRAGMA user_version = ${CURRENT_SCHEMA_VERSION};`);
+  }
 };
 
 // ── Bulk inserts with transaction safety ───────────────────────────────────
 
-export const insertLexiconEntries = async (entries: LexiconResponse[]) => {
-  await executeWrite("BEGIN TRANSACTION;");
+const BATCH_SIZE = 500;
 
-  try {
-    for (const entry of entries) {
-      await executeWrite(
-        `INSERT OR REPLACE INTO lexicon (
-          strong, hebrew, definitions, root, root_strong, occurrences
-        ) VALUES (?, ?, ?, ?, ?, ?);`,
-        [
-          entry.strong_number,
-          entry.hebrew ?? null,
-          JSON.stringify(entry.definitions ?? []),
-          entry.root ?? null,
-          entry.root_strong ?? null,
-          JSON.stringify(entry.root_definitions ?? []),
-        ],
-      );
+export const insertLexiconEntries = async (entries: LexiconResponse[]) => {
+  for (let i = 0; i < entries.length; i += BATCH_SIZE) {
+    const batch = entries.slice(i, i + BATCH_SIZE);
+    await executeWrite("BEGIN TRANSACTION;");
+    try {
+      for (const entry of batch) {
+        const strong = sanitizeParam(entry.strong_number);
+        const hebrew = sanitizeParam(entry.hebrew);
+        const root = sanitizeParam(entry.root);
+        const rootStrong = sanitizeParam(entry.root_strong);
+        if (strong == null || String(strong).trim() === "") {
+          continue;
+        }
+        await executeWrite(
+          `INSERT OR REPLACE INTO lexicon (
+            strong, hebrew, definitions, root, root_strong, occurrences
+          ) VALUES (?, ?, ?, ?, ?, ?);`,
+          [
+            String(strong),
+            hebrew == null ? null : String(hebrew),
+            JSON.stringify(entry.definitions ?? []),
+            root == null ? null : String(root),
+            rootStrong == null ? null : String(rootStrong),
+            JSON.stringify(entry.root_definitions ?? []),
+          ],
+        );
+      }
+      await executeWrite("COMMIT;");
+    } catch (error) {
+      try {
+        await executeWrite("ROLLBACK;");
+      } catch {
+        // Best-effort rollback
+      }
+      throw error;
     }
-    await executeWrite("COMMIT;");
-  } catch (error) {
-    await executeWrite("ROLLBACK;");
-    throw error; // Already wrapped as DatabaseError
   }
 };
 
@@ -210,30 +308,36 @@ export const insertTranslationVerses = async (
   language: "en" | "es",
   bookId: string,
 ) => {
-  await executeWrite("BEGIN TRANSACTION;");
-
-  try {
-    for (const verse of verses) {
-      const id = `${bookId}-${verse.chapter}-${verse.verse}`;
-      await executeWrite(
-        `INSERT OR REPLACE INTO verses (
-          id, book, chapter, verse, text, language, footnotes
-        ) VALUES (?, ?, ?, ?, ?, ?, ?);`,
-        [
-          id,
-          bookId,
-          verse.chapter,
-          verse.verse,
-          verse.text,
-          language,
-          JSON.stringify(verse.footnotes ?? []),
-        ],
-      );
+  for (let i = 0; i < verses.length; i += BATCH_SIZE) {
+    const batch = verses.slice(i, i + BATCH_SIZE);
+    await executeWrite("BEGIN TRANSACTION;");
+    try {
+      for (const verse of batch) {
+        const id = `${bookId}-${verse.chapter}-${verse.verse}`;
+        await executeWrite(
+          `INSERT OR REPLACE INTO verses (
+            id, book, chapter, verse, text, language, footnotes
+          ) VALUES (?, ?, ?, ?, ?, ?, ?);`,
+          [
+            id,
+            bookId,
+            verse.chapter,
+            verse.verse,
+            verse.text,
+            language,
+            JSON.stringify(verse.footnotes ?? []),
+          ],
+        );
+      }
+      await executeWrite("COMMIT;");
+    } catch (error) {
+      try {
+        await executeWrite("ROLLBACK;");
+      } catch {
+        // Best-effort rollback
+      }
+      throw error;
     }
-    await executeWrite("COMMIT;");
-  } catch (error) {
-    await executeWrite("ROLLBACK;");
-    throw error;
   }
 };
 
@@ -274,7 +378,18 @@ export const fetchTranslationVerses = async (
   });
 };
 
-export const fetchLexiconEntry = async (strong: string) => {
+export type LexiconRow = {
+  strong: string;
+  hebrew: string | null;
+  definitions: unknown[];
+  root: string | null;
+  root_strong: string | null;
+  occurrences: unknown[];
+};
+
+export const fetchLexiconEntry = async (
+  strong: string,
+): Promise<LexiconRow | null> => {
   const result = await executeRead(
     `SELECT * FROM lexicon WHERE strong = ? LIMIT 1;`,
     [strong],
@@ -284,8 +399,227 @@ export const fetchLexiconEntry = async (strong: string) => {
   if (!row) return null;
 
   return {
-    ...row,
+    strong: String(row.strong ?? ""),
+    hebrew: row.hebrew ? String(row.hebrew) : null,
     definitions: row.definitions ? JSON.parse(String(row.definitions)) : [],
+    root: row.root ? String(row.root) : null,
+    root_strong: row.root_strong ? String(row.root_strong) : null,
     occurrences: row.occurrences ? JSON.parse(String(row.occurrences)) : [],
   };
+};
+
+// ── Hebrew verses ──────────────────────────────────────────────────────────
+
+export type HebrewVerseRow = {
+  book: string;
+  chapter: number;
+  verse: number;
+  words: unknown[];
+};
+
+export const insertHebrewVerses = async (
+  verses: { book: string; chapter: number; verse: number; words: unknown[] }[],
+) => {
+  for (let i = 0; i < verses.length; i += BATCH_SIZE) {
+    const batch = verses.slice(i, i + BATCH_SIZE);
+    await executeWrite("BEGIN TRANSACTION;");
+    try {
+      for (const v of batch) {
+        const id = `${v.book}-${v.chapter}-${v.verse}`;
+        await executeWrite(
+          `INSERT OR REPLACE INTO hebrew_verses (id, book, chapter, verse, words)
+           VALUES (?, ?, ?, ?, ?);`,
+          [id, v.book, v.chapter, v.verse, JSON.stringify(v.words)],
+        );
+      }
+      await executeWrite("COMMIT;");
+    } catch (error) {
+      try {
+        await executeWrite("ROLLBACK;");
+      } catch {
+        // Best-effort rollback
+      }
+      throw error;
+    }
+  }
+};
+
+export const fetchHebrewVerses = async (
+  bookId: string,
+  chapter: number,
+): Promise<HebrewVerseRow[]> => {
+  const result = await executeRead(
+    `SELECT book, chapter, verse, words
+     FROM hebrew_verses
+     WHERE book = ? AND chapter = ?
+     ORDER BY verse ASC;`,
+    [bookId, chapter],
+  );
+  return result.map((row) => {
+    const r = row as Record<string, unknown>;
+    return {
+      book: String(r.book),
+      chapter: Number(r.chapter),
+      verse: Number(r.verse),
+      words: r.words ? JSON.parse(String(r.words)) : [],
+    };
+  });
+};
+
+export const deleteHebrewBookEntries = async (bookId: string) => {
+  await executeWrite("DELETE FROM hebrew_verses WHERE book = ?;", [bookId]);
+};
+
+// ── DSS variants ───────────────────────────────────────────────────────────
+
+export type DssVariantRow = {
+  book: string;
+  chapter: number;
+  verse: number;
+  position: number;
+  data: Record<string, unknown>;
+};
+
+export const insertDssVariants = async (
+  variants: {
+    book: string;
+    chapter: number;
+    verse: number;
+    position: number;
+    data: Record<string, unknown>;
+  }[],
+) => {
+  for (let i = 0; i < variants.length; i += BATCH_SIZE) {
+    const batch = variants.slice(i, i + BATCH_SIZE);
+    await executeWrite("BEGIN TRANSACTION;");
+    try {
+      for (const v of batch) {
+        const id = `${v.book}-${v.chapter}-${v.verse}-${v.position}`;
+        await executeWrite(
+          `INSERT OR REPLACE INTO dss_variants (id, book, chapter, verse, position, data)
+           VALUES (?, ?, ?, ?, ?, ?);`,
+          [id, v.book, v.chapter, v.verse, v.position, JSON.stringify(v.data)],
+        );
+      }
+      await executeWrite("COMMIT;");
+    } catch (error) {
+      try {
+        await executeWrite("ROLLBACK;");
+      } catch {
+        // Best-effort rollback
+      }
+      throw error;
+    }
+  }
+};
+
+export const fetchDssVariants = async (
+  bookId: string,
+  chapter: number,
+): Promise<DssVariantRow[]> => {
+  const result = await executeRead(
+    `SELECT book, chapter, verse, position, data
+     FROM dss_variants
+     WHERE book = ? AND chapter = ?
+     ORDER BY verse ASC, position ASC;`,
+    [bookId, chapter],
+  );
+  return result.map((row) => {
+    const r = row as Record<string, unknown>;
+    return {
+      book: String(r.book),
+      chapter: Number(r.chapter),
+      verse: Number(r.verse),
+      position: Number(r.position),
+      data: r.data ? JSON.parse(String(r.data)) : {},
+    };
+  });
+};
+
+// ── Prefixes ───────────────────────────────────────────────────────────────
+
+export const insertPrefixEntries = async (
+  prefixes: Record<string, unknown>,
+) => {
+  const entries = Object.entries(prefixes);
+  for (let i = 0; i < entries.length; i += BATCH_SIZE) {
+    const batch = entries.slice(i, i + BATCH_SIZE);
+    await executeWrite("BEGIN TRANSACTION;");
+    try {
+      for (const [id, data] of batch) {
+        await executeWrite(
+          `INSERT OR REPLACE INTO prefixes (id, data) VALUES (?, ?);`,
+          [id, JSON.stringify(data)],
+        );
+      }
+      await executeWrite("COMMIT;");
+    } catch (error) {
+      try {
+        await executeWrite("ROLLBACK;");
+      } catch {
+        // Best-effort rollback
+      }
+      throw error;
+    }
+  }
+};
+
+export const fetchPrefixEntry = async (
+  prefixId: string,
+): Promise<Record<string, unknown> | null> => {
+  const result = await executeRead(
+    `SELECT data FROM prefixes WHERE id = ? LIMIT 1;`,
+    [prefixId],
+  );
+  const row = result[0] as Record<string, unknown> | undefined;
+  if (!row) return null;
+  return row.data ? JSON.parse(String(row.data)) : null;
+};
+
+// ── Bundle versions ────────────────────────────────────────────────────────
+
+export const getLocalBundleVersion = async (
+  bundle: string,
+): Promise<number | null> => {
+  const result = await executeRead(
+    `SELECT version FROM bundle_versions WHERE bundle = ? LIMIT 1;`,
+    [bundle],
+  );
+  const row = result[0] as Record<string, unknown> | undefined;
+  if (!row) return null;
+  return Number(row.version);
+};
+
+export const getAllLocalBundleVersions = async (): Promise<
+  Record<string, number>
+> => {
+  const result = await executeRead(`SELECT bundle, version FROM bundle_versions;`);
+  const versions: Record<string, number> = {};
+  for (const row of result) {
+    const r = row as Record<string, unknown>;
+    versions[String(r.bundle)] = Number(r.version);
+  }
+  return versions;
+};
+
+export const setLocalBundleVersion = async (
+  bundle: string,
+  version: number,
+) => {
+  await executeWrite(
+    `INSERT OR REPLACE INTO bundle_versions (bundle, version, downloaded_at)
+     VALUES (?, ?, ?);`,
+    [bundle, version, new Date().toISOString()],
+  );
+};
+
+// ── Clear all offline data ─────────────────────────────────────────────────
+
+export const clearAllOfflineData = async () => {
+  await executeWrite("DELETE FROM verses;");
+  await executeWrite("DELETE FROM lexicon;");
+  await executeWrite("DELETE FROM hebrew_verses;");
+  await executeWrite("DELETE FROM dss_variants;");
+  await executeWrite("DELETE FROM prefixes;");
+  await executeWrite("DELETE FROM bundle_versions;");
 };

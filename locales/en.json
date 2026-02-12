@@ -104,11 +104,21 @@
     },
     "download": {
       "title": "Download Offline",
-      "downloading": "Downloading {item}...",
-      "idle": "Tap to store translations for offline use",
-      "dictionary": "Dictionary",
-      "english": "English",
-      "spanish": "Spanish"
+      "downloading": "Downloading {stage} ({current}/{total})...",
+      "idle": "Tap to download all data for offline use",
+      "ready": "All data downloaded",
+      "updateAvailable": "Update available",
+      "delete": "Delete offline data",
+      "deleteConfirmTitle": "Delete Offline Data",
+      "deleteConfirmMessage": "This will remove all downloaded data. You will need internet to use the app.",
+      "deleteConfirmCancel": "Cancel",
+      "deleteConfirmOk": "Delete",
+      "stages": {
+        "hebrew": "Hebrew text",
+        "translation": "Translation",
+        "dictionary": "Dictionary",
+        "dss": "Dead Sea Scrolls"
+      }
     },
     "donate": {
       "title": "Donate",

@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
+import { useCallback, useMemo } from "react";
 import {
-  ActivityIndicator,
+  Alert,
   Linking,
   Pressable,
   ScrollView,
@@ -11,11 +11,16 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 
+import { AnimatedCircularProgress } from "react-native-circular-progress";
 import { AppIcon } from "@/src/components/ui/AppIcon";
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import type { IconKey } from "@/src/constants/icons";
-import { downloadTranslationBundle } from "@/src/services/offlineSync";
+import {
+  downloadAllForOffline,
+  getAllLocalBundleVersions,
+} from "@/src/services/offlineSync";
+import { clearAllOfflineData } from "@/src/services/database";
 import {
   useTranslation,
   getSupportTelegramUrl,
@@ -140,30 +145,8 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     actionIconDark: {
       color: colors.textTertiary,
     },
-    downloadList: {
-      marginTop: spacing[4],
-      gap: spacing[3],
-    },
-    downloadRow: {
-      borderRadius: radii.lg,
-      paddingHorizontal: spacing[4],
-      paddingVertical: spacing[3],
-      borderWidth: 1,
-      borderColor: colors.background,
-      backgroundColor: "rgba(255, 255, 255, 0.15)",
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "space-between",
-    },
     downloadRowPressed: {
       opacity: 0.85,
-    },
-    downloadRowText: {
-      fontFamily: typography.families.latinUIBold,
-      fontSize: typography.sizes.caption,
-      color: colors.background,
-      textTransform: "uppercase",
-      letterSpacing: 1,
     },
     downloadStatus: {
       width: 24,
@@ -215,6 +198,26 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
 
 export default function HomeScreen() {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
+  const offlineStatus = useAppStore((state: AppState) => state.offlineStatus);
+  const offlineUpdateAvailable = useAppStore(
+    (state: AppState) => state.offlineUpdateAvailable,
+  );
+  const downloadProgress = useAppStore(
+    (state: AppState) => state.downloadProgress,
+  );
+  const setOfflineStatus = useAppStore(
+    (state: AppState) => state.setOfflineStatus,
+  );
+  const setDownloadProgress = useAppStore(
+    (state: AppState) => state.setDownloadProgress,
+  );
+  const setLocalBundleVersions = useAppStore(
+    (state: AppState) => state.setLocalBundleVersions,
+  );
+  const setOfflineUpdateAvailable = useAppStore(
+    (state: AppState) => state.setOfflineUpdateAvailable,
+  );
+
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
   const { t, language } = useTranslation();
@@ -230,56 +233,131 @@ export default function HomeScreen() {
     }
   };
 
-  type DownloadLanguage = "en" | "es";
-  type DownloadStatus = "idle" | "downloading" | "completed";
-  const downloadItems = useMemo(
-    () => [
-      { language: "en" as DownloadLanguage, label: t("home.download.english") },
-      { language: "es" as DownloadLanguage, label: t("home.download.spanish") },
-    ],
-    [t],
-  );
-  const [downloadStatus, setDownloadStatus] = useState<
-    Record<DownloadLanguage, DownloadStatus>
-  >({ en: "idle", es: "idle" });
-  const activeDownload = (
-    Object.entries(downloadStatus) as [DownloadLanguage, DownloadStatus][]
-  ).find(([, status]) => status === "downloading");
-  const downloadLabelMap: Record<DownloadLanguage, string> = {
-    en: t("home.download.english"),
-    es: t("home.download.spanish"),
+  // Stage name resolver for progress display
+  const stageName = (stage: string): string => {
+    const stageKeys: Record<string, string> = {
+      hebrew: t("home.download.stages.hebrew"),
+      translation: t("home.download.stages.translation"),
+      dictionary: t("home.download.stages.dictionary"),
+      dss: t("home.download.stages.dss"),
+    };
+    return stageKeys[stage] ?? stage;
   };
-  const activeLabel = activeDownload
-    ? downloadLabelMap[activeDownload[0]]
-    : null;
 
-  const handleDownloadPress = async (language: DownloadLanguage) => {
-    if (downloadStatus[language] === "downloading") {
-      return;
+  // Compute subtitle text based on offline status
+  const subtitleText = useMemo(() => {
+    if (offlineStatus === "downloading" && downloadProgress) {
+      return t("home.download.downloading", {
+        stage: stageName(downloadProgress.stage),
+        current: String(downloadProgress.current),
+        total: String(downloadProgress.total),
+      });
     }
+    if (offlineUpdateAvailable) return t("home.download.updateAvailable");
+    if (offlineStatus === "ready") return t("home.download.ready");
+    return t("home.download.idle");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [offlineStatus, offlineUpdateAvailable, downloadProgress, t]);
 
-    setDownloadStatus((prev) => ({ ...prev, [language]: "downloading" }));
+  const handleDownloadPress = useCallback(async () => {
+    if (offlineStatus === "downloading") return;
+
+    const downloadLanguage =
+      language === "es" ? ("es" as const) : ("en" as const);
+
+    setOfflineStatus("downloading");
+    setDownloadProgress(null);
+
     try {
-      await downloadTranslationBundle(language);
-      setDownloadStatus((prev) => ({ ...prev, [language]: "completed" }));
+      await downloadAllForOffline(downloadLanguage, (progress) => {
+        setDownloadProgress(progress);
+      });
+      const versions = await getAllLocalBundleVersions();
+      setLocalBundleVersions(versions);
+      setOfflineStatus("ready");
+      setOfflineUpdateAvailable(false);
     } catch {
-      setDownloadStatus((prev) => ({ ...prev, [language]: "idle" }));
+      // If some bundles succeeded before the failure, keep "ready" if we have any data.
+      try {
+        const versions = await getAllLocalBundleVersions();
+        setLocalBundleVersions(versions);
+        setOfflineStatus(Object.keys(versions).length > 0 ? "ready" : "idle");
+      } catch {
+        setOfflineStatus("idle");
+      }
+    } finally {
+      setDownloadProgress(null);
     }
-  };
+  }, [
+    offlineStatus,
+    language,
+    setOfflineStatus,
+    setDownloadProgress,
+    setLocalBundleVersions,
+    setOfflineUpdateAvailable,
+  ]);
+
+  const handleDeleteOfflineData = useCallback(() => {
+    Alert.alert(
+      t("home.download.deleteConfirmTitle"),
+      t("home.download.deleteConfirmMessage"),
+      [
+        {
+          text: t("home.download.deleteConfirmCancel"),
+          style: "cancel",
+        },
+        {
+          text: t("home.download.deleteConfirmOk"),
+          style: "destructive",
+          onPress: async () => {
+            try {
+              await clearAllOfflineData();
+              setOfflineStatus("idle");
+              setLocalBundleVersions({});
+              setOfflineUpdateAvailable(false);
+            } catch (error) {
+              console.error("Failed to clear offline data:", error);
+            }
+          },
+        },
+      ],
+    );
+  }, [t, setOfflineStatus, setLocalBundleVersions, setOfflineUpdateAvailable]);
+
+  // Download button icon
+  const downloadIcon: IconKey = offlineUpdateAvailable
+    ? "download"
+    : offlineStatus === "ready"
+      ? "download-done"
+      : "download";
+
+  const hasOfflineData = offlineStatus === "ready";
+  const shouldOfferDelete = hasOfflineData && !offlineUpdateAvailable;
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.content}>
-          <View style={[styles.actionCard, styles.actionPrimary]}>
-            <View>
+          <Pressable
+            onPress={
+              shouldOfferDelete ? handleDeleteOfflineData : handleDownloadPress
+            }
+            style={({ pressed }) => [
+              styles.actionCard,
+              styles.actionPrimary,
+              pressed && styles.downloadRowPressed,
+            ]}
+          >
+            <View style={{ flex: 1 }}>
               <Text
                 style={[
                   styles.actionTitle,
                   themeMode === "dark" && styles.actionTitleDark,
                 ]}
               >
-                {t("home.download.title")}
+                {shouldOfferDelete
+                  ? t("home.download.delete")
+                  : t("home.download.title")}
               </Text>
               <Text
                 style={[
@@ -287,47 +365,44 @@ export default function HomeScreen() {
                   themeMode === "dark" && styles.actionSubtitleDark,
                 ]}
               >
-                {activeLabel
-                  ? t("home.download.downloading", { item: activeLabel })
-                  : t("home.download.idle")}
+                {subtitleText}
               </Text>
-              <View style={styles.downloadList}>
-                {downloadItems.map((item) => {
-                  const status = downloadStatus[item.language];
-                  return (
-                    <Pressable
-                      key={item.language}
-                      onPress={() => handleDownloadPress(item.language)}
-                      style={({ pressed }) => [
-                        styles.downloadRow,
-                        pressed && styles.downloadRowPressed,
-                      ]}
-                    >
-                      <Text style={styles.downloadRowText}>{item.label}</Text>
-                      <View style={styles.downloadStatus}>
-                        {status === "downloading" ? (
-                          <ActivityIndicator
-                            size="small"
-                            color={colors.background}
-                          />
-                        ) : (
-                          <AppIcon
-                            name={
-                              status === "completed"
-                                ? "download-done"
-                                : "download"
-                            }
-                            size={20}
-                            color={colors.background}
-                          />
-                        )}
-                      </View>
-                    </Pressable>
-                  );
-                })}
-              </View>
             </View>
-          </View>
+            <View style={styles.downloadStatus}>
+              {offlineStatus === "downloading" && downloadProgress ? (
+                <AnimatedCircularProgress
+                  size={24}
+                  width={2.5}
+                  fill={
+                    (downloadProgress.current / downloadProgress.total) * 100
+                  }
+                  tintColor={
+                    themeMode === "dark"
+                      ? styles.actionIconDark.color
+                      : styles.actionIcon.color
+                  }
+                  backgroundColor={
+                    themeMode === "dark"
+                      ? "rgba(255,255,255,0.15)"
+                      : "rgba(0,0,0,0.12)"
+                  }
+                  rotation={0}
+                  lineCap="round"
+                  duration={350}
+                />
+              ) : (
+                <AppIcon
+                  name={downloadIcon}
+                  size={24}
+                  color={
+                    themeMode === "dark"
+                      ? styles.actionIconDark.color
+                      : styles.actionIcon.color
+                  }
+                />
+              )}
+            </View>
+          </Pressable>
 
           <View style={[styles.actionCard, styles.actionSecondary]}>
             <View>

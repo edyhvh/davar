@@ -155,6 +155,7 @@ export const VerseDetailContent = () => {
   );
   const language = useAppStore((state: AppState) => state.language);
   const showQumran = useAppStore((state: AppState) => state.showQumran);
+  const isConnected = useAppStore((state: AppState) => state.isConnected);
   const DEFAULT_VERSE_ID = "genesis-1-1";
   const normalizeVerseId = (value?: string | null) => {
     if (!value) return DEFAULT_VERSE_ID;
@@ -367,6 +368,7 @@ export const VerseDetailContent = () => {
     chapter: 0,
     language: "en" as AppState["language"],
     showQumran: false,
+    isConnected: true,
   });
   useEffect(() => {
     if (!bookId) return;
@@ -374,13 +376,14 @@ export const VerseDetailContent = () => {
       currentLoadRef.current.bookId === bookId &&
       currentLoadRef.current.chapter === chapter &&
       currentLoadRef.current.language === language &&
-      currentLoadRef.current.showQumran === showQumran
+      currentLoadRef.current.showQumran === showQumran &&
+      currentLoadRef.current.isConnected === isConnected
     ) {
       return;
     }
 
     let isMounted = true;
-    currentLoadRef.current = { bookId, chapter, language, showQumran };
+    currentLoadRef.current = { bookId, chapter, language, showQumran, isConnected };
 
     const loadVerses = async () => {
       setChapterVerses([]);
@@ -394,13 +397,15 @@ export const VerseDetailContent = () => {
           language: language === "he" ? undefined : language,
           showDss: showQumran,
           hebrewOnly: false, // Always load translations; UI will control display
+          isConnected,
         });
         if (!isMounted) return;
         if (
           currentLoadRef.current.bookId !== bookId ||
           currentLoadRef.current.chapter !== chapter ||
           currentLoadRef.current.language !== language ||
-          currentLoadRef.current.showQumran !== showQumran
+          currentLoadRef.current.showQumran !== showQumran ||
+          currentLoadRef.current.isConnected !== isConnected
         ) {
           return;
         }
@@ -420,7 +425,7 @@ export const VerseDetailContent = () => {
     return () => {
       isMounted = false;
     };
-  }, [bookId, chapter, language, showQumran, t]);
+  }, [bookId, chapter, language, showQumran, isConnected, t]);
 
   return (
     <>

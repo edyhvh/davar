@@ -13,6 +13,7 @@ except ImportError:  # pragma: no cover - fallback for environments without orjs
     orjson = None
 
 from app.api.deps import require_api_key
+from app.config import BUNDLE_VERSIONS
 from app.data_loaders import (
     tanaj_loader,
     besorah_loader,
@@ -105,6 +106,12 @@ def _load_dictionary_bundle() -> dict:
         "roots": dictionary_loader.load_roots_lexicon(),
         "prefixes": prefixes
     }
+
+
+@router.get("/export/versions")
+async def export_versions(api_key: str = Depends(require_api_key)):
+    """Return current version numbers for all downloadable bundles."""
+    return ORJSONResponse(content=BUNDLE_VERSIONS)
 
 
 @router.get("/export/bundle/{dataset}")
