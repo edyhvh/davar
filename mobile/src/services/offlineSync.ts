@@ -9,24 +9,25 @@ import {
   initializeDatabase,
 } from "@/src/services/database";
 
-const { documentDirectory, cacheDirectory } = FileSystem as {
-  documentDirectory?: string | null;
-  cacheDirectory?: string | null;
+const getOfflineDir = (): string => {
+  const { documentDirectory, cacheDirectory } = FileSystem as {
+    documentDirectory?: string | null;
+    cacheDirectory?: string | null;
+  };
+  const base = documentDirectory ?? cacheDirectory;
+  if (!base) {
+    throw new Error(
+      "Expo FileSystem: Neither documentDirectory nor cacheDirectory is available for offline storage.",
+    );
+  }
+  return `${base}offline`;
 };
-const offlineBaseDir = documentDirectory ?? cacheDirectory;
-
-if (!offlineBaseDir) {
-  throw new Error(
-    "Expo FileSystem: Neither documentDirectory nor cacheDirectory is available for offline storage.",
-  );
-}
-
-const OFFLINE_DIR = `${offlineBaseDir}offline`;
 
 const ensureOfflineDir = async () => {
-  const info = await FileSystem.getInfoAsync(OFFLINE_DIR);
+  const dir = getOfflineDir();
+  const info = await FileSystem.getInfoAsync(dir);
   if (!info.exists) {
-    await FileSystem.makeDirectoryAsync(OFFLINE_DIR, { intermediates: true });
+    await FileSystem.makeDirectoryAsync(dir, { intermediates: true });
   }
 };
 
@@ -186,7 +187,7 @@ export const downloadDictionaryBundle = async () => {
 
     await ensureOfflineDir();
     await FileSystem.writeAsStringAsync(
-      `${OFFLINE_DIR}/dictionary.json`,
+      `${getOfflineDir()}/dictionary.json`,
       JSON.stringify({ downloadedAt: new Date().toISOString() }),
     );
   } catch (error) {
@@ -248,7 +249,7 @@ export const downloadTranslationBundle = async (language: "es" | "en") => {
 
     await ensureOfflineDir();
     await FileSystem.writeAsStringAsync(
-      `${OFFLINE_DIR}/translations-${language}.json`,
+      `${getOfflineDir()}/translations-${language}.json`,
       JSON.stringify({ downloadedAt: new Date().toISOString() }),
     );
   } catch (error: unknown) {
