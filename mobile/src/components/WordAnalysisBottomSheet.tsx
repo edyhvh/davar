@@ -35,6 +35,7 @@ import {
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
 import { useTranslation } from "@/src/i18n/useTranslation";
+import { fetchLexiconEntry, fetchPrefixEntry } from "@/src/services/database";
 
 type PrefixResponse = {
   id: string;
@@ -621,11 +622,40 @@ const WordAnalysisBottomSheetComponent = (
           entry?.hebrew ?? entry?.root_strong ?? null,
         );
       } catch {
-        setLexiconEntry(null);
-        console.debug(
-          "WordAnalysisBottomSheet: lexicon fetch failed",
-          strongNumber,
-        );
+        // API failed — try offline SQLite fallback
+        try {
+          const offlineEntry = await fetchLexiconEntry(strongNumber);
+          if (offlineEntry) {
+            setLexiconEntry({
+              strong_number: String(offlineEntry.strong ?? strongNumber),
+              hebrew: offlineEntry.hebrew
+                ? String(offlineEntry.hebrew)
+                : undefined,
+              definitions: Array.isArray(offlineEntry.definitions)
+                ? (offlineEntry.definitions as LexiconResponse["definitions"])
+                : [],
+              root: offlineEntry.root ? String(offlineEntry.root) : undefined,
+              root_strong: offlineEntry.root_strong
+                ? String(offlineEntry.root_strong)
+                : undefined,
+              root_definitions: [],
+              occurrences_count: 0,
+              instances: [],
+            });
+            console.debug(
+              "WordAnalysisBottomSheet: lexicon loaded from offline",
+              strongNumber,
+            );
+          } else {
+            setLexiconEntry(null);
+          }
+        } catch {
+          setLexiconEntry(null);
+          console.debug(
+            "WordAnalysisBottomSheet: lexicon fetch failed (API + offline)",
+            strongNumber,
+          );
+        }
       } finally {
         setIsLoading(false);
       }
@@ -660,11 +690,40 @@ const WordAnalysisBottomSheetComponent = (
           entry?.hebrew ?? entry?.root_strong ?? null,
         );
       } catch {
-        setDssLexiconEntry(null);
-        console.debug(
-          "WordAnalysisBottomSheet: dss lexicon fetch failed",
-          dssStrongNumber,
-        );
+        // API failed — try offline SQLite fallback
+        try {
+          const offlineEntry = await fetchLexiconEntry(dssStrongNumber);
+          if (offlineEntry) {
+            setDssLexiconEntry({
+              strong_number: String(offlineEntry.strong ?? dssStrongNumber),
+              hebrew: offlineEntry.hebrew
+                ? String(offlineEntry.hebrew)
+                : undefined,
+              definitions: Array.isArray(offlineEntry.definitions)
+                ? (offlineEntry.definitions as LexiconResponse["definitions"])
+                : [],
+              root: offlineEntry.root ? String(offlineEntry.root) : undefined,
+              root_strong: offlineEntry.root_strong
+                ? String(offlineEntry.root_strong)
+                : undefined,
+              root_definitions: [],
+              occurrences_count: 0,
+              instances: [],
+            });
+            console.debug(
+              "WordAnalysisBottomSheet: dss lexicon loaded from offline",
+              dssStrongNumber,
+            );
+          } else {
+            setDssLexiconEntry(null);
+          }
+        } catch {
+          setDssLexiconEntry(null);
+          console.debug(
+            "WordAnalysisBottomSheet: dss lexicon fetch failed (API + offline)",
+            dssStrongNumber,
+          );
+        }
       } finally {
         setIsDssLoading(false);
       }
@@ -700,7 +759,18 @@ const WordAnalysisBottomSheetComponent = (
             );
             entries[prefixId] = entry;
           } catch {
-            entries[prefixId] = null;
+            // API failed — try offline SQLite fallback
+            try {
+              const offlineEntry = await fetchPrefixEntry(prefixId);
+              entries[prefixId] = offlineEntry
+                ? ({
+                    id: prefixId,
+                    ...(offlineEntry as object),
+                  } as PrefixResponse)
+                : null;
+            } catch {
+              entries[prefixId] = null;
+            }
           }
         }),
       );

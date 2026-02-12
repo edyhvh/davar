@@ -101,6 +101,20 @@ class VariantLoader(DataLoader):
             if path.is_file()
         )
 
+    def load_dss_data(self) -> Dict[str, Any]:
+        """Load all DSS variant data for offline bundle export.
+
+        Returns a dict keyed by DSS book name, each containing the full
+        chapter/verse/differences structure.
+        """
+        books = self.get_available_books()
+        result: Dict[str, Any] = {}
+        for book_key in books:
+            book_data = self.load_dss_book(book_key)
+            if book_data:
+                result[book_key] = book_data
+        return result
+
 
 # Global instance
 variant_loader = VariantLoader()

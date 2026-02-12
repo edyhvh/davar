@@ -80,3 +80,13 @@ class Settings(BaseSettings):
 
 # Global settings instance
 settings = Settings()
+
+# Bundle version numbers — bump when data changes to trigger re-download on clients
+BUNDLE_VERSIONS: dict[str, int] = {
+    "tanaj": 1,
+    "besorah": 1,
+    "dss": 1,
+    "dictionary": 1,
+    "tth": 1,
+    "ts2009": 1,
+}

@@ -1,7 +1,13 @@
+import { Platform } from "react-native";
 import type { BookResponse } from "@/src/types/api";
 
-const API_BASE_URL =
-  process.env.EXPO_PUBLIC_API_BASE_URL || "http://localhost:2220";
+const DEFAULT_API_URL =
+  Platform.select({
+    android: "http://10.0.2.2:2220",
+    default: "http://localhost:2220",
+  }) ?? "http://localhost:2220";
+
+const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL || DEFAULT_API_URL;
 const API_KEY = process.env.EXPO_PUBLIC_API_KEY;
 
 export const apiRequest = async <T>(
