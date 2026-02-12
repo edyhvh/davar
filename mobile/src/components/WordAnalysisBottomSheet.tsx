@@ -616,11 +616,6 @@ const WordAnalysisBottomSheetComponent = (
           : `/api/v1/lexicon/${strongNumber}`;
         const entry = await apiRequest<LexiconResponse>(url);
         setLexiconEntry(entry);
-        console.debug(
-          "WordAnalysisBottomSheet: lexicon loaded",
-          strongNumber,
-          entry?.hebrew ?? entry?.root_strong ?? null,
-        );
       } catch {
         // API failed — try offline SQLite fallback
         try {
@@ -642,19 +637,11 @@ const WordAnalysisBottomSheetComponent = (
               occurrences_count: 0,
               instances: [],
             });
-            console.debug(
-              "WordAnalysisBottomSheet: lexicon loaded from offline",
-              strongNumber,
-            );
           } else {
             setLexiconEntry(null);
           }
         } catch {
           setLexiconEntry(null);
-          console.debug(
-            "WordAnalysisBottomSheet: lexicon fetch failed (API + offline)",
-            strongNumber,
-          );
         }
       } finally {
         setIsLoading(false);
@@ -684,11 +671,6 @@ const WordAnalysisBottomSheetComponent = (
           : `/api/v1/lexicon/${dssStrongNumber}`;
         const entry = await apiRequest<LexiconResponse>(url);
         setDssLexiconEntry(entry);
-        console.debug(
-          "WordAnalysisBottomSheet: dss lexicon loaded",
-          dssStrongNumber,
-          entry?.hebrew ?? entry?.root_strong ?? null,
-        );
       } catch {
         // API failed — try offline SQLite fallback
         try {
@@ -710,19 +692,11 @@ const WordAnalysisBottomSheetComponent = (
               occurrences_count: 0,
               instances: [],
             });
-            console.debug(
-              "WordAnalysisBottomSheet: dss lexicon loaded from offline",
-              dssStrongNumber,
-            );
           } else {
             setDssLexiconEntry(null);
           }
         } catch {
           setDssLexiconEntry(null);
-          console.debug(
-            "WordAnalysisBottomSheet: dss lexicon fetch failed (API + offline)",
-            dssStrongNumber,
-          );
         }
       } finally {
         setIsDssLoading(false);
@@ -776,10 +750,6 @@ const WordAnalysisBottomSheetComponent = (
       );
 
       setPrefixEntries(entries);
-      console.debug(
-        "WordAnalysisBottomSheet: loaded prefixes",
-        Object.keys(entries),
-      );
     };
 
     loadPrefixes();
@@ -806,7 +776,7 @@ const WordAnalysisBottomSheetComponent = (
   );
 
   const handleSheetChanges = useCallback((index: number) => {
-    console.debug("WordAnalysisBottomSheet onChange", { index });
+
   }, []);
 
   const handleSheetClose = useCallback(() => {
