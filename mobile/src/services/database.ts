@@ -593,7 +593,9 @@ export const getLocalBundleVersion = async (
 export const getAllLocalBundleVersions = async (): Promise<
   Record<string, number>
 > => {
-  const result = await executeRead(`SELECT bundle, version FROM bundle_versions;`);
+  const result = await executeRead(
+    `SELECT bundle, version FROM bundle_versions;`,
+  );
   const versions: Record<string, number> = {};
   for (const row of result) {
     const r = row as Record<string, unknown>;

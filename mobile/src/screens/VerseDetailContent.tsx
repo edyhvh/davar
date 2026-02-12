@@ -383,7 +383,13 @@ export const VerseDetailContent = () => {
     }
 
     let isMounted = true;
-    currentLoadRef.current = { bookId, chapter, language, showQumran, isConnected };
+    currentLoadRef.current = {
+      bookId,
+      chapter,
+      language,
+      showQumran,
+      isConnected,
+    };
 
     const loadVerses = async () => {
       setChapterVerses([]);

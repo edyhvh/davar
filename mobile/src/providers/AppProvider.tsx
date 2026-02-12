@@ -28,7 +28,10 @@ import {
 } from "@/src/services/storage";
 import { useNetworkStatus } from "@/hooks/useNetworkStatus";
 import { initializeDatabase } from "@/src/services/database";
-import { getAllLocalBundleVersions, fetchRemoteBundleVersions } from "@/src/services/offlineSync";
+import {
+  getAllLocalBundleVersions,
+  fetchRemoteBundleVersions,
+} from "@/src/services/offlineSync";
 
 export type AppTheme = {
   mode: "light" | "dark";
@@ -194,11 +197,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
       }
     };
     checkUpdates();
-  }, [
-    isConnected,
-    localBundleVersions,
-    setOfflineUpdateAvailable,
-  ]);
+  }, [isConnected, localBundleVersions, setOfflineUpdateAvailable]);
 
   useEffect(() => {
     saveThemeMode(themeMode);

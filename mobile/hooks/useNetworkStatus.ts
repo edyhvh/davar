@@ -18,7 +18,9 @@ export const useNetworkStatus = () => {
       try {
         const state = await Network.getNetworkStateAsync();
         if (mounted) {
-          setIsConnected(state.isInternetReachable ?? state.isConnected ?? true);
+          setIsConnected(
+            state.isInternetReachable ?? state.isConnected ?? true,
+          );
         }
       } catch {
         // Assume connected if we can't check

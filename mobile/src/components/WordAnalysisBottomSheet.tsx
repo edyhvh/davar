@@ -35,10 +35,7 @@ import {
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
 import { useTranslation } from "@/src/i18n/useTranslation";
-import {
-  fetchLexiconEntry,
-  fetchPrefixEntry,
-} from "@/src/services/database";
+import { fetchLexiconEntry, fetchPrefixEntry } from "@/src/services/database";
 
 type PrefixResponse = {
   id: string;
@@ -631,10 +628,16 @@ const WordAnalysisBottomSheetComponent = (
           if (offlineEntry) {
             setLexiconEntry({
               strong_number: String(offlineEntry.strong ?? strongNumber),
-              hebrew: offlineEntry.hebrew ? String(offlineEntry.hebrew) : undefined,
-              definitions: Array.isArray(offlineEntry.definitions) ? offlineEntry.definitions as LexiconResponse["definitions"] : [],
+              hebrew: offlineEntry.hebrew
+                ? String(offlineEntry.hebrew)
+                : undefined,
+              definitions: Array.isArray(offlineEntry.definitions)
+                ? (offlineEntry.definitions as LexiconResponse["definitions"])
+                : [],
               root: offlineEntry.root ? String(offlineEntry.root) : undefined,
-              root_strong: offlineEntry.root_strong ? String(offlineEntry.root_strong) : undefined,
+              root_strong: offlineEntry.root_strong
+                ? String(offlineEntry.root_strong)
+                : undefined,
               root_definitions: [],
               occurrences_count: 0,
               instances: [],
@@ -693,10 +696,16 @@ const WordAnalysisBottomSheetComponent = (
           if (offlineEntry) {
             setDssLexiconEntry({
               strong_number: String(offlineEntry.strong ?? dssStrongNumber),
-              hebrew: offlineEntry.hebrew ? String(offlineEntry.hebrew) : undefined,
-              definitions: Array.isArray(offlineEntry.definitions) ? offlineEntry.definitions as LexiconResponse["definitions"] : [],
+              hebrew: offlineEntry.hebrew
+                ? String(offlineEntry.hebrew)
+                : undefined,
+              definitions: Array.isArray(offlineEntry.definitions)
+                ? (offlineEntry.definitions as LexiconResponse["definitions"])
+                : [],
               root: offlineEntry.root ? String(offlineEntry.root) : undefined,
-              root_strong: offlineEntry.root_strong ? String(offlineEntry.root_strong) : undefined,
+              root_strong: offlineEntry.root_strong
+                ? String(offlineEntry.root_strong)
+                : undefined,
               root_definitions: [],
               occurrences_count: 0,
               instances: [],

@@ -3,7 +3,10 @@ import { create } from "zustand";
 import type { MockVerse } from "@/src/constants/mockData";
 import type { ThemeMode } from "@/src/theme";
 import type { AppLanguage } from "@/src/services/storage";
-import type { DownloadProgress, BundleVersions } from "@/src/services/offlineSync";
+import type {
+  DownloadProgress,
+  BundleVersions,
+} from "@/src/services/offlineSync";
 
 export type OfflineStatus = "idle" | "downloading" | "ready";
 
@@ -106,8 +109,7 @@ export const useAppStore = create<AppState>((set) => ({
   downloadProgress: null,
   setDownloadProgress: (progress) => set({ downloadProgress: progress }),
   localBundleVersions: {},
-  setLocalBundleVersions: (versions) =>
-    set({ localBundleVersions: versions }),
+  setLocalBundleVersions: (versions) => set({ localBundleVersions: versions }),
   isConnected: true,
   setIsConnected: (connected) => set({ isConnected: connected }),
 }));

@@ -153,10 +153,9 @@ type DssBundle = Record<string, DssBookData>;
 
 // ── Remote versions ────────────────────────────────────────────────────────
 
-export const fetchRemoteBundleVersions =
-  async (): Promise<BundleVersions> => {
-    return apiRequest<BundleVersions>("/api/v1/export/versions");
-  };
+export const fetchRemoteBundleVersions = async (): Promise<BundleVersions> => {
+  return apiRequest<BundleVersions>("/api/v1/export/versions");
+};
 
 export { getAllLocalBundleVersions };
 
@@ -190,11 +189,13 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
       );
 
       entries.push({
-        strong_number: entry.strong_number != null ? String(entry.strong_number) : "",
+        strong_number:
+          entry.strong_number != null ? String(entry.strong_number) : "",
         hebrew: entry.hebrew != null ? String(entry.hebrew) : undefined,
         definitions,
         root: entry.root != null ? String(entry.root) : undefined,
-        root_strong: entry.root_strong != null ? String(entry.root_strong) : undefined,
+        root_strong:
+          entry.root_strong != null ? String(entry.root_strong) : undefined,
         root_definitions: [],
         occurrences_count: 0,
         instances: [],
@@ -226,11 +227,13 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
     );
 
     entries.push({
-      strong_number: entry.strong_number != null ? String(entry.strong_number) : "",
+      strong_number:
+        entry.strong_number != null ? String(entry.strong_number) : "",
       hebrew: entry.lemma != null ? String(entry.lemma) : undefined,
       definitions,
       root: entry.root != null ? String(entry.root) : undefined,
-      root_strong: entry.root_strong != null ? String(entry.root_strong) : undefined,
+      root_strong:
+        entry.root_strong != null ? String(entry.root_strong) : undefined,
       root_definitions: [],
       occurrences_count: entry.occurrences_count ?? 0,
       instances: [],
@@ -240,9 +243,7 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
   return entries.filter((entry) => entry.strong_number.trim() !== "");
 };
 
-export const downloadDictionaryBundle = async (
-  remoteVersion?: number,
-) => {
+export const downloadDictionaryBundle = async (remoteVersion?: number) => {
   await initializeDatabase();
   try {
     const bundle = await apiRequest<DictionaryBundle>(
@@ -409,9 +410,7 @@ export const downloadDssBundle = async (remoteVersion?: number) => {
   await initializeDatabase();
 
   try {
-    const bundle = await apiRequest<DssBundle>(
-      "/api/v1/export/bundle/dss",
-    );
+    const bundle = await apiRequest<DssBundle>("/api/v1/export/bundle/dss");
 
     const allVariants: {
       book: string;
@@ -480,11 +479,7 @@ export const downloadAllForOffline = async (
   const remoteVersions = await fetchRemoteBundleVersions();
   const localVersions = await getAllLocalBundleVersions();
 
-  const plan = getBundleUpdatePlan(
-    language,
-    localVersions,
-    remoteVersions,
-  );
+  const plan = getBundleUpdatePlan(language, localVersions, remoteVersions);
   const translationDataset = plan.translationDataset;
 
   // Define download steps — each checks if it needs updating
@@ -550,10 +545,7 @@ export const downloadAllForOffline = async (
     } catch (error) {
       // Log the failure but let already-completed bundles remain usable.
       // Re-throw so the caller knows the download didn't fully complete.
-      console.error(
-        `Offline download failed at step "${step.name}":`,
-        error,
-      );
+      console.error(`Offline download failed at step "${step.name}":`, error);
       throw error;
     }
   }
