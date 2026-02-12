@@ -1,9 +1,12 @@
 """
 Lexicon service - handles business logic for lexicon/word lookup operations.
 """
+import re
 from typing import Optional, List
 from app.schemas.lexicon import LexiconResponse, DefinitionItem
 from app.data_loaders.dictionary import DictionaryLoader
+
+_CANTILLATION_RE = re.compile(r"[\u0591-\u05AF]")
 
 
 class LexiconService:
