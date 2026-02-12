@@ -277,16 +277,18 @@ export const insertLexiconEntries = async (entries: LexiconResponse[]) => {
         if (strong == null || String(strong).trim() === "") {
           continue;
         }
+        // Use "" instead of null for nullable TEXT columns — expo-sqlite v15
+        // on Android (Kotlin/JSI bridge) can fail to convert null bind params.
         await executeWrite(
           `INSERT OR REPLACE INTO lexicon (
             strong, hebrew, definitions, root, root_strong, occurrences
           ) VALUES (?, ?, ?, ?, ?, ?);`,
           [
             String(strong),
-            hebrew == null ? null : String(hebrew),
+            hebrew == null ? "" : String(hebrew),
             JSON.stringify(entry.definitions ?? []),
-            root == null ? null : String(root),
-            rootStrong == null ? null : String(rootStrong),
+            root == null ? "" : String(root),
+            rootStrong == null ? "" : String(rootStrong),
             JSON.stringify(entry.root_definitions ?? []),
           ],
         );
