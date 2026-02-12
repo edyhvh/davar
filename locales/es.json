@@ -104,11 +104,21 @@
     },
     "download": {
       "title": "Descargar sin conexi\u00f3n",
-      "downloading": "Descargando {item}...",
-      "idle": "Toca para guardar traducciones para usar sin conexi\u00f3n",
-      "dictionary": "Diccionario",
-      "english": "Ingl\u00e9s",
-      "spanish": "Espa\u00f1ol"
+      "downloading": "Descargando {stage} ({current}/{total})...",
+      "idle": "Toca para descargar todos los datos para uso sin conexi\u00f3n",
+      "ready": "Todos los datos descargados",
+      "updateAvailable": "Actualizaci\u00f3n disponible",
+      "delete": "Eliminar datos sin conexi\u00f3n",
+      "deleteConfirmTitle": "Eliminar datos sin conexi\u00f3n",
+      "deleteConfirmMessage": "Esto eliminar\u00e1 todos los datos descargados. Necesitar\u00e1s internet para usar la app.",
+      "deleteConfirmCancel": "Cancelar",
+      "deleteConfirmOk": "Eliminar",
+      "stages": {
+        "hebrew": "Texto hebreo",
+        "translation": "Traducci\u00f3n",
+        "dictionary": "Diccionario",
+        "dss": "Rollos del Mar Muerto"
+      }
     },
     "donate": {
       "title": "Donar",

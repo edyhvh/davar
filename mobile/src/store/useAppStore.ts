@@ -3,6 +3,12 @@ import { create } from "zustand";
 import type { MockVerse } from "@/src/constants/mockData";
 import type { ThemeMode } from "@/src/theme";
 import type { AppLanguage } from "@/src/services/storage";
+import type {
+  DownloadProgress,
+  BundleVersions,
+} from "@/src/services/offlineSync";
+
+export type OfflineStatus = "idle" | "downloading" | "ready";
 
 export type AppState = {
   themeMode: ThemeMode;
@@ -34,6 +40,17 @@ export type AppState = {
   setSearchQuery: (query: string) => void;
   searchResults: MockVerse[];
   setSearchResults: (results: MockVerse[]) => void;
+  // Offline download state
+  offlineStatus: OfflineStatus;
+  setOfflineStatus: (status: OfflineStatus) => void;
+  offlineUpdateAvailable: boolean;
+  setOfflineUpdateAvailable: (value: boolean) => void;
+  downloadProgress: DownloadProgress | null;
+  setDownloadProgress: (progress: DownloadProgress | null) => void;
+  localBundleVersions: BundleVersions;
+  setLocalBundleVersions: (versions: BundleVersions) => void;
+  isConnected: boolean;
+  setIsConnected: (connected: boolean) => void;
 };
 
 export const useAppStore = create<AppState>((set) => ({
@@ -84,4 +101,15 @@ export const useAppStore = create<AppState>((set) => ({
   setSearchQuery: (query) => set({ searchQuery: query }),
   searchResults: [],
   setSearchResults: (results) => set({ searchResults: results }),
+  // Offline download state
+  offlineStatus: "idle",
+  setOfflineStatus: (status) => set({ offlineStatus: status }),
+  offlineUpdateAvailable: false,
+  setOfflineUpdateAvailable: (value) => set({ offlineUpdateAvailable: value }),
+  downloadProgress: null,
+  setDownloadProgress: (progress) => set({ downloadProgress: progress }),
+  localBundleVersions: {},
+  setLocalBundleVersions: (versions) => set({ localBundleVersions: versions }),
+  isConnected: true,
+  setIsConnected: (connected) => set({ isConnected: connected }),
 }));

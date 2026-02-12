@@ -112,11 +112,21 @@
     },
     "download": {
       "title": "הורדה לא מקוונת",
-      "downloading": "מוריד {item}...",
-      "idle": "הקש כדי לשמור תרגומים לשימוש לא מקוון",
-      "dictionary": "מילון",
-      "english": "אנגלית",
-      "spanish": "ספרדית"
+      "downloading": "מוריד {stage} ({current}/{total})...",
+      "idle": "הקש כדי להוריד את כל הנתונים לשימוש לא מקוון",
+      "ready": "כל הנתונים הורדו",
+      "updateAvailable": "עדכון זמין",
+      "delete": "מחק נתונים לא מקוונים",
+      "deleteConfirmTitle": "מחק נתונים לא מקוונים",
+      "deleteConfirmMessage": "פעולה זו תסיר את כל הנתונים שהורדו. תצטרך אינטרנט כדי להשתמש באפליקציה.",
+      "deleteConfirmCancel": "ביטול",
+      "deleteConfirmOk": "מחק",
+      "stages": {
+        "hebrew": "טקסט עברי",
+        "translation": "תרגום",
+        "dictionary": "מילון",
+        "dss": "מגילות ים המלח"
+      }
     },
     "donate": {
       "title": "תרומה",

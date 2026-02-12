@@ -24,6 +24,22 @@ from app.data_loaders import (
 
 router = APIRouter()
 
+# Bundle version numbers — increment when data changes to trigger client updates
+BUNDLE_VERSIONS = {
+    "tanaj": 1,
+    "besorah": 1,
+    "tth": 1,
+    "ts2009": 1,
+    "dictionary": 1,
+    "dss": 1,
+}
+
+
+@router.get("/export/versions")
+async def export_versions(api_key: str = Depends(require_api_key)):
+    """Return current bundle version numbers for update checking."""
+    return BUNDLE_VERSIONS
+
 
 def _bundle_headers(dataset: str) -> dict:
     return {

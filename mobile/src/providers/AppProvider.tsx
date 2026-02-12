@@ -26,6 +26,12 @@ import {
   saveShowQumran,
   saveThemeMode,
 } from "@/src/services/storage";
+import { useNetworkStatus } from "@/hooks/useNetworkStatus";
+import { initializeDatabase } from "@/src/services/database";
+import {
+  getAllLocalBundleVersions,
+  fetchRemoteBundleVersions,
+} from "@/src/services/offlineSync";
 
 export type AppTheme = {
   mode: "light" | "dark";
@@ -56,6 +62,9 @@ const getNavigationTheme = (mode: "light" | "dark") => {
 };
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
+  // Network connectivity monitoring
+  useNetworkStatus();
+
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const setThemeMode = useAppStore((state: AppState) => state.setThemeMode);
   const hebrewFontScale = useAppStore(
@@ -80,6 +89,19 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const setHebrewOnly = useAppStore((state: AppState) => state.setHebrewOnly);
   const bookmarks = useAppStore((state: AppState) => state.bookmarks);
   const setBookmarks = useAppStore((state: AppState) => state.setBookmarks);
+  const setLocalBundleVersions = useAppStore(
+    (state: AppState) => state.setLocalBundleVersions,
+  );
+  const localBundleVersions = useAppStore(
+    (state: AppState) => state.localBundleVersions,
+  );
+  const setOfflineStatus = useAppStore(
+    (state: AppState) => state.setOfflineStatus,
+  );
+  const setOfflineUpdateAvailable = useAppStore(
+    (state: AppState) => state.setOfflineUpdateAvailable,
+  );
+  const isConnected = useAppStore((state: AppState) => state.isConnected);
 
   const value = useMemo(
     () => ({
@@ -131,6 +153,51 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     setSeferMode,
     setHebrewOnly,
   ]);
+
+  // Load offline bundle versions from SQLite and check for updates
+  useEffect(() => {
+    const loadOfflineState = async () => {
+      try {
+        await initializeDatabase();
+        const versions = await getAllLocalBundleVersions();
+        setLocalBundleVersions(versions);
+
+        // Determine initial offline status based on whether any bundles are downloaded
+        const hasAnyBundles = Object.keys(versions).length > 0;
+        if (hasAnyBundles) {
+          setOfflineStatus("ready");
+        }
+      } catch (error) {
+        console.error("Failed to load offline state:", error);
+      }
+    };
+    loadOfflineState();
+  }, [setLocalBundleVersions, setOfflineStatus]);
+
+  // Check for updates when connected
+  useEffect(() => {
+    if (!isConnected) return;
+
+    const checkUpdates = async () => {
+      try {
+        const localVersions = localBundleVersions;
+        if (Object.keys(localVersions).length === 0) return;
+
+        const remoteVersions = await fetchRemoteBundleVersions();
+        // Only check bundles the user actually has locally — remote may
+        // contain bundles for other languages (tth vs ts2009) that the
+        // user never downloaded, which would always look like an "update".
+        const needsUpdate = Object.entries(localVersions).some(
+          ([bundle, localV]) => (remoteVersions[bundle] ?? 0) > (localV ?? 0),
+        );
+
+        setOfflineUpdateAvailable(needsUpdate);
+      } catch {
+        // Silent failure — don't disrupt the user
+      }
+    };
+    checkUpdates();
+  }, [isConnected, localBundleVersions, setOfflineUpdateAvailable]);
 
   useEffect(() => {
     saveThemeMode(themeMode);
