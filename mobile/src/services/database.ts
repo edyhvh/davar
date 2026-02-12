@@ -18,7 +18,7 @@ class DatabaseError extends Error {
   constructor(
     message: string,
     public query: string,
-    public params: (string | number | null)[],
+    public params: (string | number)[],
     public originalError: unknown,
   ) {
     const originalMsg =
@@ -47,7 +47,7 @@ class DatabaseError extends Error {
 
 const executeRead = async (
   query: string,
-  params: (string | number | null)[] = [],
+  params: (string | number)[] = [],
 ): Promise<unknown[]> => {
   try {
     const rows = await (
@@ -76,8 +76,14 @@ const executeRead = async (
  * Coerce any value to a SQLite-safe primitive.
  * Objects/arrays are JSON-stringified; undefined becomes null.
  */
-const sanitizeParam = (value: unknown): string | number | null => {
-  if (value === undefined || value === null) return null;
+/**
+ * Coerce any value to a SQLite-safe primitive.
+ * Returns "" instead of null — expo-sqlite v15's Kotlin/JSI bridge on Android
+ * cannot convert JS null in bind param arrays, throwing:
+ *   "Cannot convert '[object Object]' to a Kotlin type."
+ */
+const sanitizeParam = (value: unknown): string | number => {
+  if (value === undefined || value === null) return "";
   if (typeof value === "string" || typeof value === "number") return value;
   if (typeof value === "boolean") return value ? 1 : 0;
   if (typeof value === "bigint") return value.toString();
@@ -86,7 +92,7 @@ const sanitizeParam = (value: unknown): string | number | null => {
   }
   try {
     const serialized = JSON.stringify(value);
-    return serialized === undefined ? null : serialized;
+    return serialized === undefined ? "" : serialized;
   } catch {
     return String(value);
   }
@@ -270,25 +276,20 @@ export const insertLexiconEntries = async (entries: LexiconResponse[]) => {
     await executeWrite("BEGIN TRANSACTION;");
     try {
       for (const entry of batch) {
-        const strong = sanitizeParam(entry.strong_number);
-        const hebrew = sanitizeParam(entry.hebrew);
-        const root = sanitizeParam(entry.root);
-        const rootStrong = sanitizeParam(entry.root_strong);
-        if (strong == null || String(strong).trim() === "") {
+        const strong = String(entry.strong_number ?? "").trim();
+        if (strong === "") {
           continue;
         }
-        // Use "" instead of null for nullable TEXT columns — expo-sqlite v15
-        // on Android (Kotlin/JSI bridge) can fail to convert null bind params.
         await executeWrite(
           `INSERT OR REPLACE INTO lexicon (
             strong, hebrew, definitions, root, root_strong, occurrences
           ) VALUES (?, ?, ?, ?, ?, ?);`,
           [
-            String(strong),
-            hebrew == null ? "" : String(hebrew),
+            strong,
+            entry.hebrew ?? "",
             JSON.stringify(entry.definitions ?? []),
-            root == null ? "" : String(root),
-            rootStrong == null ? "" : String(rootStrong),
+            entry.root ?? "",
+            entry.root_strong ?? "",
             JSON.stringify(entry.root_definitions ?? []),
           ],
         );
