@@ -416,9 +416,7 @@ export const VerseDetailContent = () => {
           return;
         }
         setChapterVerses(verses);
-        if (verses.length > 0 && verses[0].words?.length > 0) {
-          setSelectedWord(verses[0].words[0]);
-        }
+        // Don't auto-select a word - let user tap to select
       } catch {
         if (!isMounted) return;
         setErrorMessage(t("errors.loadVerses"));
