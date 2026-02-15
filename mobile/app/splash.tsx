@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Dimensions, Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import { useRootNavigationState, useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import Animated, {
@@ -17,12 +17,10 @@ import Animated, {
 // No clipped blob Views — just stacked transparent LinearGradients.
 // ---------------------------------------------------------------------------
 
-const { width: W, height: H } = Dimensions.get("window");
-
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: "#B8CEEB", // soft blue-gray base
+    backgroundColor: "#7AA0D6", // matches native splash background exactly
   },
   gradientLayer: {
     ...StyleSheet.absoluteFillObject,
@@ -38,11 +36,11 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     alignItems: "center",
     justifyContent: "center",
+    zIndex: 10,
   },
   logo: {
-    width: 110,
-    height: 110,
-    tintColor: "#2E3A50",
+    width: 180,
+    height: 180,
   },
 });
 
@@ -99,11 +97,7 @@ export default function SplashScreen() {
 
       {/* Layer 2: top-right copper glow (transparent center/left) */}
       <LinearGradient
-        colors={[
-          "transparent",
-          "transparent",
-          "rgba(198, 143, 85, 0.6)",
-        ]}
+        colors={["transparent", "transparent", "rgba(198, 143, 85, 0.6)"]}
         locations={[0, 0.4, 1]}
         start={{ x: 0, y: 1 }}
         end={{ x: 1, y: 0 }}
@@ -112,11 +106,7 @@ export default function SplashScreen() {
 
       {/* Layer 3: bottom-left deep blue glow */}
       <LinearGradient
-        colors={[
-          "rgba(61, 90, 140, 0.7)",
-          "transparent",
-          "transparent",
-        ]}
+        colors={["rgba(61, 90, 140, 0.7)", "transparent", "transparent"]}
         locations={[0, 0.5, 1]}
         start={{ x: 0, y: 1 }}
         end={{ x: 1, y: 0 }}
@@ -125,11 +115,7 @@ export default function SplashScreen() {
 
       {/* Layer 4: soft light wash across center for dreamy feel */}
       <LinearGradient
-        colors={[
-          "transparent",
-          "rgba(200, 216, 240, 0.35)",
-          "transparent",
-        ]}
+        colors={["transparent", "rgba(200, 216, 240, 0.35)", "transparent"]}
         locations={[0.15, 0.5, 0.85]}
         start={{ x: 0.5, y: 0 }}
         end={{ x: 0.5, y: 1 }}

@@ -1,78 +1,125 @@
-# Splash Screen Implementation (How We Show the Splash)
+# Splash Screen Implementation
 
-This app shows splash in **two phases** so users never see an unstyled or blank transition:
-
-1. **Native Expo splash** (configured in `app.json`)
-2. **Custom in-app splash route** (`app/splash.tsx`)
+This document explains how the splash screen is implemented for both iOS and Android platforms.
 
 ---
 
-## 1) Native splash setup (Expo config)
+## iOS Implementation
 
-In `mobile/app.json`, the `expo-splash-screen` plugin defines:
+iOS uses a **full-screen native splash image** that covers the entire screen until the app is ready.
 
-- splash image (`./assets/images/davar_nobackground.png`)
-- background color (`#7AA0D6`)
-- platform-specific iOS override (`./assets/images/splash-native-ios.png`)
+### Configuration (`app.json`)
 
-This guarantees the app has a branded native splash before React Native UI mounts.
+```json
+"ios": {
+  "image": "./assets/images/splash-native-ios.png",
+  "resizeMode": "cover",
+  "backgroundColor": "#7AA0D6",
+  "enableFullScreenImage_legacy": true
+}
+```
 
----
+### Required Asset
 
-## 2) Keep native splash visible until fonts are ready
+| Asset | Size | Purpose |
+|-------|------|---------|
+| `splash-native-ios.png` | **1179×2556px** (iPhone 14 Pro Max) or **1284×2778px** | Full-screen splash image |
 
-In `mobile/app/_layout.tsx`:
+### How it works
 
-- `SplashScreen.preventAutoHideAsync()` is called at startup
-- Custom fonts are loaded with `useFonts(...)`
-- `SplashScreen.hideAsync()` runs only after fonts are loaded (or if there is a font load error)
-- While loading, the layout returns `null`, so native splash stays visible
-
-This prevents flash-of-unstyled-text and avoids a jumpy first frame.
-
----
-
-## 3) Start app on custom splash route
-
-In `mobile/app/_layout.tsx`, stack navigation uses:
-
-- `<Stack initialRouteName="splash">`
-- `<Stack.Screen name="splash" options={{ headerShown: false }} />`
-
-So once native splash is hidden, the first JS screen shown is our custom `app/splash.tsx`.
+1. iOS displays the full-screen image immediately on app launch
+2. The image covers the entire screen with `resizeMode: "cover"`
+3. Once fonts are loaded, `SplashScreen.hideAsync()` reveals the app
 
 ---
 
-## 4) Render visual splash and animate logo
+## Android Implementation
 
-In `mobile/app/splash.tsx`:
+Android 12+ (API 31+) uses the **SplashScreen API** which has specific limitations:
+- Only supports **background color** + **centered icon** (max 288dp)
+- Does NOT support full-screen background images
+- Logo is displayed centered in a circle mask
 
-- Multiple full-screen `LinearGradient` layers create the dreamy background
-- A grain/noise texture overlays the gradients
-- Center logo (`davar_nobackground.png`) is animated with Reanimated:
-  - pulse scale loop (`1 -> 1.05 -> 1`)
-  - fade out after ~1600ms
+### Configuration (`app.json`)
 
-This gives a smooth branded handoff from native splash into app content.
+```json
+"android": {
+  "image": "./assets/images/splash-logo-android.png",
+  "resizeMode": "contain",
+  "backgroundColor": "#7AA0D6"
+}
+```
+
+### Required Asset
+
+| Asset | Size | Purpose |
+|-------|------|---------|
+| `splash-logo-android.png` | **288×288dp** (576×576px recommended) | Centered logo on transparent background |
+
+### How it works
+
+1. Android displays a solid background color (`#7AA0D6`)
+2. Your logo appears centered on the screen (contained within the display area)
+3. Once fonts are loaded, `SplashScreen.hideAsync()` reveals the app
+
+### Generated Resources
+
+Expo prebuild generates these density-specific versions:
+
+| Density | Generated Size | Path |
+|---------|----------------|------|
+| mdpi | 48×48px | `android/app/src/main/res/drawable-mdpi/splashscreen_logo.png` |
+| hdpi | 72×72px | `android/app/src/main/res/drawable-hdpi/splashscreen_logo.png` |
+| xhdpi | 96×96px | `android/app/src/main/res/drawable-xhdpi/splashscreen_logo.png` |
+| xxhdpi | 144×144px | `android/app/src/main/res/drawable-xxhdpi/splashscreen_logo.png` |
+| xxxhdpi | 192×192px | `android/app/src/main/res/drawable-xxxhdpi/splashscreen_logo.png` |
 
 ---
 
-## 5) Navigate automatically to content
+## Common Implementation (`_layout.tsx`)
 
-Also in `mobile/app/splash.tsx`:
+Both platforms use the same React Native logic:
 
-- waits for router navigation readiness (`useRootNavigationState`) before starting flow
-- after ~2100ms total, calls `router.replace("/verse")`
+1. `SplashScreen.preventAutoHideAsync()` keeps the native splash visible
+2. Fonts are loaded with `useFonts(...)`
+3. `SplashScreen.hideAsync()` runs after fonts are ready
+4. While loading, the layout returns `null` so the native splash stays visible
 
-`/verse` resolves to `mobile/app/(tabs)/verse.tsx`, so users land directly in the reading experience.
+This prevents flash-of-unstyled-text and ensures a smooth transition.
 
 ---
 
-## Why this works well
+## Platform Differences Summary
 
-- No visual gap between app launch and first meaningful screen
-- Fonts are guaranteed before UI display
-- Branded transition feels intentional instead of abrupt
-- `replace()` avoids keeping splash in back stack
+| Feature | iOS | Android 12+ |
+|---------|-----|-------------|
+| **Image type** | Full-screen | Centered logo only |
+| **Background** | Image covers all | Solid color only |
+| **Resize mode** | `cover` | `contain` |
+| **Max logo size** | Full screen | 288dp diameter |
 
-This is the exact mechanism currently used in the codebase to show splash reliably and smoothly.
+---
+
+## Rebuilding After Changes
+
+After modifying splash assets or configuration:
+
+```bash
+cd mobile
+
+# Clean and regenerate native resources
+bunx expo prebuild --clean --platform ios
+bunx expo prebuild --clean --platform android
+
+# Or both at once
+bunx expo prebuild --clean
+```
+
+---
+
+## Why Different Approaches?
+
+- **iOS**: Supports full-screen splash images natively
+- **Android 12+**: SplashScreen API is restrictive by design (performance/security)
+
+The centered logo approach on Android is the standard pattern for modern Android apps and provides a consistent experience across the platform.

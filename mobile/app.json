@@ -35,18 +35,17 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/davar_nobackground.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
           "backgroundColor": "#7AA0D6",
           "ios": {
             "image": "./assets/images/splash-native-ios.png",
-            "backgroundColor": "#7AA0D6",
             "resizeMode": "cover",
+            "backgroundColor": "#7AA0D6",
             "enableFullScreenImage_legacy": true
           },
-          "dark": {
-            "backgroundColor": "#3D5A8C"
+          "android": {
+            "image": "./assets/images/splash-logo-android.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#7AA0D6"
           }
         }
       ]

@@ -1,6 +1,6 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { useEffect, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { View, StyleSheet } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import "react-native-reanimated";
@@ -27,7 +27,7 @@ export const unstable_settings = {
   anchor: "(tabs)",
 };
 
-// Keep native splash visible while fonts load
+// Keep native splash visible while we prepare the app
 void SplashScreen.preventAutoHideAsync().catch(() => {});
 
 export default function RootLayout() {
@@ -43,34 +43,52 @@ export default function RootLayout() {
     SuezOne_400Regular,
     DeadSeaScrolls_400Regular: require("../assets/fonts/Deadseascrolls-Regular.ttf"),
   });
-  const { t } = useTranslation();
 
-  const onLayoutRootView = useCallback(() => {}, []);
+  // Splash screen state management
+  const [nativeSplashHidden, setNativeSplashHidden] = useState(false);
+
+  const { t } = useTranslation();
+  const appReady = fontsLoaded || !!fontError;
+
+  // Hide the native splash screen
+  const hideSplash = useCallback(async () => {
+    if (!appReady) return;
+
+    try {
+      await SplashScreen.hideAsync();
+      setNativeSplashHidden(true);
+    } catch {
+      // Ignore errors
+    }
+  }, [appReady]);
 
   useEffect(() => {
-    if (fontsLoaded || fontError) {
-      void SplashScreen.hideAsync().catch(() => {});
-    }
-  }, [fontsLoaded, fontError]);
+    void hideSplash();
+  }, [hideSplash]);
 
-  if (!fontsLoaded && !fontError) {
-    // Show native splash while fonts load
+  // Don't render anything until fonts are ready
+  if (!appReady) {
     return null;
   }
 
   return (
-    <View style={styles.container} onLayout={onLayoutRootView}>
+    <View style={styles.container}>
       <SafeAreaProvider>
         <GestureHandlerRootView style={styles.flex}>
           <BottomSheetModalProvider>
             <ErrorBoundary>
               <AppProvider>
-                <Stack initialRouteName="splash">
-                  <Stack.Screen name="splash" options={{ headerShown: false }} />
-                  <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                <Stack initialRouteName="(tabs)">
+                  <Stack.Screen
+                    name="(tabs)"
+                    options={{ headerShown: false }}
+                  />
                   <Stack.Screen
                     name="modal"
-                    options={{ presentation: "modal", title: t("navigation.modal") }}
+                    options={{
+                      presentation: "modal",
+                      title: t("navigation.modal"),
+                    }}
                   />
                 </Stack>
                 <StatusBar style="auto" />
