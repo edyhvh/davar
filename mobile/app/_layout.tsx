@@ -1,6 +1,7 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
+import { StyleSheet } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import "react-native-reanimated";
 import * as SplashScreen from "expo-splash-screen";
@@ -26,10 +27,11 @@ export const unstable_settings = {
   anchor: "(tabs)",
 };
 
-SplashScreen.preventAutoHideAsync();
+// Keep native splash visible while we prepare the app
+void SplashScreen.preventAutoHideAsync().catch(() => {});
 
 export default function RootLayout() {
-  const [fontsLoaded] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     Cardo_400Regular,
     Inter_400Regular,
     Inter_500Medium,
@@ -41,30 +43,47 @@ export default function RootLayout() {
     SuezOne_400Regular,
     DeadSeaScrolls_400Regular: require("../assets/fonts/Deadseascrolls-Regular.ttf"),
   });
+
   const { t } = useTranslation();
+  const appReady = fontsLoaded || !!fontError;
+
+  // Hide the native splash screen
+  const hideSplash = useCallback(async () => {
+    if (!appReady) return;
+
+    try {
+      await SplashScreen.hideAsync();
+    } catch {
+      // Ignore errors
+    }
+  }, [appReady]);
 
   useEffect(() => {
-    if (fontsLoaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
+    void hideSplash();
+  }, [hideSplash]);
 
-  if (!fontsLoaded) {
+  // Don't render anything until fonts are ready
+  if (!appReady) {
     return null;
   }
 
   return (
     <SafeAreaProvider>
-      <GestureHandlerRootView style={{ flex: 1 }}>
+      <GestureHandlerRootView style={styles.flex}>
         <BottomSheetModalProvider>
           <ErrorBoundary>
             <AppProvider>
-              <Stack initialRouteName="splash">
-                <Stack.Screen name="splash" options={{ headerShown: false }} />
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+              <Stack initialRouteName="(tabs)">
+                <Stack.Screen
+                  name="(tabs)"
+                  options={{ headerShown: false }}
+                />
                 <Stack.Screen
                   name="modal"
-                  options={{ presentation: "modal", title: t("navigation.modal") }}
+                  options={{
+                    presentation: "modal",
+                    title: t("navigation.modal"),
+                  }}
                 />
               </Stack>
               <StatusBar style="auto" />
@@ -75,3 +94,9 @@ export default function RootLayout() {
     </SafeAreaProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  flex: {
+    flex: 1,
+  },
+});

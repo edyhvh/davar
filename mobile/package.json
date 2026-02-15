@@ -5,18 +5,19 @@
   "type": "module",
   "scripts": {
     "start": "expo start --port 8082",
-    "reset-project": "bun ./scripts/reset-project.js",
-    "android": "expo run:android",
+    "start:clear": "expo start --port 8082 --clear",
     "ios": "expo run:ios",
-    "run:ios": "expo run:ios",
-    "run:android": "expo run:android",
+    "ios:clean": "expo prebuild --clean --platform ios && expo run:ios --no-build-cache",
+    "android": "expo run:android",
+    "android:clean": "expo prebuild --clean --platform android && expo run:android",
     "web": "expo start --web --port 8082",
     "lint": "expo lint",
     "format": "bunx biome format --write .",
     "format:check": "bunx biome format .",
-    "build:android": "eas build --platform android",
     "build:ios": "eas build --platform ios",
-    "build:all": "eas build --platform all"
+    "build:android": "eas build --platform android",
+    "build:all": "eas build --platform all",
+    "reset-project": "bun ./scripts/reset-project.js"
   },
   "dependencies": {
     "@expo-google-fonts/arimo": "^0.2.3",
