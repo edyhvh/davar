@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import { useMemo } from "react";
-import { Platform, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { HapticTab } from "@/components/haptic-tab";
@@ -50,7 +50,8 @@ export const AppNavigator = () => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const insets = useSafeAreaInsets();
-  const bottomInset = Platform.OS === "ios" ? insets.bottom : 0;
+  // Use safe area inset for both iOS and Android to properly handle navigation bars
+  const bottomInset = insets.bottom;
   const { t } = useTranslation();
   const styles = useMemo(
     () => createStyles(colors, bottomInset),
