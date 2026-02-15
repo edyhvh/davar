@@ -1,9 +1,9 @@
-import { useEffect, useMemo } from "react";
-import { StyleSheet, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { router } from "expo-router";
+import { useEffect } from "react";
+import { Dimensions, Image, StyleSheet, View } from "react-native";
+import { useRootNavigationState, useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import Animated, {
+  Easing,
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
@@ -11,103 +11,148 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
-import { getColors, spacing, typography } from "@/src/theme";
-import { useAppStore, type AppState } from "@/src/store/useAppStore";
+// ---------------------------------------------------------------------------
+// Dreamy gradient splash — multiple full-screen gradient layers
+// overlapping at different angles to create depth and color variation.
+// No clipped blob Views — just stacked transparent LinearGradients.
+// ---------------------------------------------------------------------------
 
-const createStyles = (
-  colors: ReturnType<typeof getColors>,
-  themeMode: AppState["themeMode"],
-) =>
-  StyleSheet.create({
-    safeArea: {
-      flex: 1,
-    },
-    gradient: {
-      flex: 1,
-    },
-    container: {
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "center",
-      paddingHorizontal: spacing[6],
-    },
-    logo: {
-      width: 180,
-      height: 180,
-      tintColor: themeMode === "dark" ? colors.textPrimary : undefined,
-    },
-    subtitle: {
-      fontFamily: typography.families.latinUI,
-      fontSize: typography.sizes.bodySmall,
-      color: colors.textSecondary,
-      marginTop: spacing[3],
-    },
-  });
+const { width: W, height: H } = Dimensions.get("window");
+
+const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+    backgroundColor: "#B8CEEB", // soft blue-gray base
+  },
+  gradientLayer: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  noiseWrap: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  noiseImage: {
+    ...StyleSheet.absoluteFillObject,
+    opacity: 0.6,
+  },
+  logoWrap: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  logo: {
+    width: 110,
+    height: 110,
+    tintColor: "#2E3A50",
+  },
+});
 
 export default function SplashScreen() {
-  const themeMode = useAppStore((state: AppState) => state.themeMode);
-  const colors = getColors(themeMode);
-  const styles = useMemo(
-    () => createStyles(colors, themeMode),
-    [colors, themeMode],
-  );
-  const opacity = useSharedValue(0);
+  const router = useRouter();
+  const rootNavigationState = useRootNavigationState();
   const scale = useSharedValue(1);
-
-  const gradientColors = useMemo<[string, string, string]>(() => {
-    if (themeMode === "dark") {
-      return ["#0F0E12", "#17161A", "#1B2536"];
-    }
-    return ["#FDFDF9", "#F8F7F3", "#A8C8F0"];
-  }, [themeMode]);
+  const logoOpacity = useSharedValue(1);
 
   useEffect(() => {
-    opacity.value = withTiming(1, { duration: 500 });
+    if (!rootNavigationState?.key) return;
+
     scale.value = withRepeat(
       withSequence(
-        withTiming(1.05, { duration: 1250 }),
-        withTiming(1, { duration: 1250 }),
+        withTiming(1.05, { duration: 800, easing: Easing.inOut(Easing.quad) }),
+        withTiming(1, { duration: 800, easing: Easing.inOut(Easing.quad) }),
       ),
       -1,
       true,
     );
 
-    const fadeOutTimeout = setTimeout(() => {
-      opacity.value = withTiming(0, { duration: 500 });
-    }, 2500);
+    const fadeOut = setTimeout(() => {
+      logoOpacity.value = withTiming(0, {
+        duration: 400,
+        easing: Easing.in(Easing.quad),
+      });
+    }, 1600);
 
-    const navigateTimeout = setTimeout(() => {
-      router.replace("/(tabs)/verse");
-    }, 3000);
+    const navigate = setTimeout(() => {
+      router.replace("/verse");
+    }, 2100);
 
     return () => {
-      clearTimeout(fadeOutTimeout);
-      clearTimeout(navigateTimeout);
+      clearTimeout(fadeOut);
+      clearTimeout(navigate);
     };
-  }, [opacity, scale]);
+  }, [logoOpacity, rootNavigationState?.key, router, scale]);
 
-  const fadeStyle = useAnimatedStyle(() => ({
-    opacity: opacity.value,
-  }));
-
-  const breatheStyle = useAnimatedStyle(() => ({
+  const animatedLogo = useAnimatedStyle(() => ({
+    opacity: logoOpacity.value,
     transform: [{ scale: scale.value }],
   }));
 
   return (
-    <LinearGradient colors={gradientColors} style={styles.gradient}>
-      <SafeAreaView style={styles.safeArea} edges={["top", "bottom"]}>
-        <View style={styles.container}>
-          <Animated.Image
-            source={require("@/assets/images/davar_nobackground.png")}
-            resizeMode="contain"
-            style={[styles.logo, fadeStyle, breatheStyle]}
-          />
-          <Animated.Text style={[styles.subtitle, fadeStyle]}>
-            Quiet the mind. Hear the word.
-          </Animated.Text>
-        </View>
-      </SafeAreaView>
-    </LinearGradient>
+    <View style={styles.root}>
+      {/* Layer 1: top-left deep blue → bottom-right warm copper */}
+      <LinearGradient
+        colors={["#6389BF", "#A8C8F0", "#C68F55"]}
+        locations={[0, 0.5, 1]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        style={styles.gradientLayer}
+      />
+
+      {/* Layer 2: top-right copper glow (transparent center/left) */}
+      <LinearGradient
+        colors={[
+          "transparent",
+          "transparent",
+          "rgba(198, 143, 85, 0.6)",
+        ]}
+        locations={[0, 0.4, 1]}
+        start={{ x: 0, y: 1 }}
+        end={{ x: 1, y: 0 }}
+        style={styles.gradientLayer}
+      />
+
+      {/* Layer 3: bottom-left deep blue glow */}
+      <LinearGradient
+        colors={[
+          "rgba(61, 90, 140, 0.7)",
+          "transparent",
+          "transparent",
+        ]}
+        locations={[0, 0.5, 1]}
+        start={{ x: 0, y: 1 }}
+        end={{ x: 1, y: 0 }}
+        style={styles.gradientLayer}
+      />
+
+      {/* Layer 4: soft light wash across center for dreamy feel */}
+      <LinearGradient
+        colors={[
+          "transparent",
+          "rgba(200, 216, 240, 0.35)",
+          "transparent",
+        ]}
+        locations={[0.15, 0.5, 0.85]}
+        start={{ x: 0.5, y: 0 }}
+        end={{ x: 0.5, y: 1 }}
+        style={styles.gradientLayer}
+      />
+
+      {/* Layer 5: noise / grain overlay */}
+      <View pointerEvents="none" style={styles.noiseWrap}>
+        <Image
+          source={require("@/assets/images/noise-texture.png")}
+          resizeMode="repeat"
+          style={styles.noiseImage}
+        />
+      </View>
+
+      {/* Layer 6: logo */}
+      <View style={styles.logoWrap}>
+        <Animated.Image
+          source={require("@/assets/images/davar_nobackground.png")}
+          resizeMode="contain"
+          style={[styles.logo, animatedLogo]}
+        />
+      </View>
+    </View>
   );
 }

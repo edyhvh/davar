@@ -1,6 +1,7 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
+import { View, StyleSheet } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import "react-native-reanimated";
 import * as SplashScreen from "expo-splash-screen";
@@ -26,10 +27,11 @@ export const unstable_settings = {
   anchor: "(tabs)",
 };
 
-SplashScreen.preventAutoHideAsync();
+// Keep native splash visible while fonts load
+void SplashScreen.preventAutoHideAsync().catch(() => {});
 
 export default function RootLayout() {
-  const [fontsLoaded] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     Cardo_400Regular,
     Inter_400Regular,
     Inter_500Medium,
@@ -43,35 +45,49 @@ export default function RootLayout() {
   });
   const { t } = useTranslation();
 
-  useEffect(() => {
-    if (fontsLoaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
+  const onLayoutRootView = useCallback(() => {}, []);
 
-  if (!fontsLoaded) {
+  useEffect(() => {
+    if (fontsLoaded || fontError) {
+      void SplashScreen.hideAsync().catch(() => {});
+    }
+  }, [fontsLoaded, fontError]);
+
+  if (!fontsLoaded && !fontError) {
+    // Show native splash while fonts load
     return null;
   }
 
   return (
-    <SafeAreaProvider>
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <BottomSheetModalProvider>
-          <ErrorBoundary>
-            <AppProvider>
-              <Stack initialRouteName="splash">
-                <Stack.Screen name="splash" options={{ headerShown: false }} />
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                <Stack.Screen
-                  name="modal"
-                  options={{ presentation: "modal", title: t("navigation.modal") }}
-                />
-              </Stack>
-              <StatusBar style="auto" />
-            </AppProvider>
-          </ErrorBoundary>
-        </BottomSheetModalProvider>
-      </GestureHandlerRootView>
-    </SafeAreaProvider>
+    <View style={styles.container} onLayout={onLayoutRootView}>
+      <SafeAreaProvider>
+        <GestureHandlerRootView style={styles.flex}>
+          <BottomSheetModalProvider>
+            <ErrorBoundary>
+              <AppProvider>
+                <Stack initialRouteName="splash">
+                  <Stack.Screen name="splash" options={{ headerShown: false }} />
+                  <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                  <Stack.Screen
+                    name="modal"
+                    options={{ presentation: "modal", title: t("navigation.modal") }}
+                  />
+                </Stack>
+                <StatusBar style="auto" />
+              </AppProvider>
+            </ErrorBoundary>
+          </BottomSheetModalProvider>
+        </GestureHandlerRootView>
+      </SafeAreaProvider>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  flex: {
+    flex: 1,
+  },
+});

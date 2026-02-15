@@ -35,12 +35,18 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/davar_nobackground.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#7AA0D6",
+          "ios": {
+            "image": "./assets/images/splash-native-ios.png",
+            "backgroundColor": "#7AA0D6",
+            "resizeMode": "cover",
+            "enableFullScreenImage_legacy": true
+          },
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#3D5A8C"
           }
         }
       ]
