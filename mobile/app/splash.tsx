@@ -25,13 +25,6 @@ const styles = StyleSheet.create({
   gradientLayer: {
     ...StyleSheet.absoluteFillObject,
   },
-  noiseWrap: {
-    ...StyleSheet.absoluteFillObject,
-  },
-  noiseImage: {
-    ...StyleSheet.absoluteFillObject,
-    opacity: 0.6,
-  },
   logoWrap: {
     ...StyleSheet.absoluteFillObject,
     alignItems: "center",
@@ -122,16 +115,7 @@ export default function SplashScreen() {
         style={styles.gradientLayer}
       />
 
-      {/* Layer 5: noise / grain overlay */}
-      <View pointerEvents="none" style={styles.noiseWrap}>
-        <Image
-          source={require("@/assets/images/noise-texture.png")}
-          resizeMode="repeat"
-          style={styles.noiseImage}
-        />
-      </View>
-
-      {/* Layer 6: logo */}
+      {/* Layer 5: logo */}
       <View style={styles.logoWrap}>
         <Animated.Image
           source={require("@/assets/images/davar_nobackground.png")}
