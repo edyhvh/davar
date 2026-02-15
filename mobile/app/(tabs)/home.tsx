@@ -36,9 +36,11 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       flex: 1,
     },
     content: {
+      flexGrow: 1,
       paddingHorizontal: spacing[6],
       paddingTop: spacing[6],
       paddingBottom: spacing[12],
+      justifyContent: "center",
     },
     calendarCard: {
       borderRadius: radii.xl,
