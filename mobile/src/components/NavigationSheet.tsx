@@ -228,7 +228,7 @@ const NavigationSheetComponent = (
     onSelectVerse,
     onClose,
   }: NavigationSheetProps,
-  ref: React.ForwardedRef<BottomSheetMethods>,
+  ref: React.ForwardedRef<NavigationSheetMethods>,
 ) => {
   const sheetRef = useRef<BottomSheetMethods | null>(null);
   const [step, setStep] = useState<Step>("book");
@@ -639,4 +639,7 @@ const NavigationSheetComponent = (
   );
 };
 
-export const NavigationSheet = React.forwardRef(NavigationSheetComponent);
+export const NavigationSheet = React.forwardRef<
+  NavigationSheetMethods,
+  NavigationSheetProps
+>(NavigationSheetComponent);

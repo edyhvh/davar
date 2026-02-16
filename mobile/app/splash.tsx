@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import Animated, {
+  cancelAnimation,
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
@@ -83,6 +84,8 @@ export default function SplashScreen() {
     return () => {
       clearTimeout(fadeOutTimeout);
       clearTimeout(navigateTimeout);
+      cancelAnimation(opacity);
+      cancelAnimation(scale);
     };
   }, [opacity, scale]);
 
@@ -101,6 +104,8 @@ export default function SplashScreen() {
           <Animated.Image
             source={require("../assets/images/davar_nobackground.png")}
             resizeMode="contain"
+            accessibilityRole="image"
+            accessibilityLabel="Davar logo"
             style={[styles.logo, fadeStyle, breatheStyle]}
           />
           <Animated.Text style={[styles.subtitle, fadeStyle]}>

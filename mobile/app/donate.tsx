@@ -10,6 +10,8 @@ import { useTranslation } from "@/src/i18n/useTranslation";
 const DONATION_CONFIG = {
   githubSponsor: "https://github.com/sponsors/edyhvh",
   telegram: "https://t.me/edyhvh",
+  githubHandle: "@edyhvh",
+  telegramHandle: "@edyhvh",
 };
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>
@@ -66,6 +68,9 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       color: colors.textSecondary,
       flexShrink: 1,
     },
+    telegramIconWrap: {
+      marginTop: 2,
+    },
   });
 
 export default function DonateScreen() {
@@ -78,9 +83,9 @@ export default function DonateScreen() {
     try {
       const can = await Linking.canOpenURL(url);
       if (can) await Linking.openURL(url);
-      else console.warn("Can't open URL:", url);
+      else if (__DEV__) console.warn("Can't open URL:", url);
     } catch (err) {
-      console.error("Failed to open URL:", err);
+      if (__DEV__) console.error("Failed to open URL:", err);
     }
   };
 
@@ -93,21 +98,25 @@ export default function DonateScreen() {
             <Pressable
               style={styles.githubRow}
               onPress={() => openUrlSafely(DONATION_CONFIG.githubSponsor)}
+              accessibilityRole="link"
+              accessibilityLabel={t("donate.githubSponsor")}
             >
               <View style={styles.iconsGroup}>
                 <Feather name="github" size={24} color={colors.textSecondary} />
                 <Ionicons name="card-outline" size={20} color={colors.textSecondary} />
               </View>
               <Text style={styles.githubText}>{t("donate.githubSponsor")}</Text>
-              <Text style={styles.linkText}>@edyhvh</Text>
+              <Text style={styles.linkText}>{DONATION_CONFIG.githubHandle}</Text>
             </Pressable>
 
             {/* Contact Row with Telegram icon at the beginning */}
             <Pressable
               style={styles.contactRow}
               onPress={() => openUrlSafely(DONATION_CONFIG.telegram)}
+              accessibilityRole="link"
+              accessibilityLabel={`${t("donate.contactPrefix")} ${t("donate.telegramLabel")} ${DONATION_CONFIG.telegramHandle}`}
             >
-              <View style={{ marginTop: 2 }}>
+              <View style={styles.telegramIconWrap}>
                 <FontAwesome
                   name="telegram"
                   size={20}
@@ -115,7 +124,7 @@ export default function DonateScreen() {
                 />
               </View>
               <Text style={styles.contactText}>
-                {t("donate.contactPrefix")} {t("donate.telegramLabel")} @edyhvh
+                {t("donate.contactPrefix")} {t("donate.telegramLabel")} {DONATION_CONFIG.telegramHandle}
               </Text>
             </Pressable>
           </View>
