@@ -24,7 +24,10 @@ import type { ParamListBase } from "@react-navigation/native";
 // eslint-disable-next-line import/namespace
 import { VerseCard } from "@/src/components/VerseCard";
 import { WordAnalysisBottomSheet } from "@/src/components/WordAnalysisBottomSheet";
-import { NavigationSheet, type NavigationSheetMethods } from "@/src/components/NavigationSheet";
+import {
+  NavigationSheet,
+  type NavigationSheetMethods,
+} from "@/src/components/NavigationSheet";
 import { BookChapterPill } from "@/src/components/ui/BookChapterPill";
 import { getColors, spacing } from "@/src/theme";
 import { fetchMetadata } from "@/src/services/metadata";
@@ -455,7 +458,9 @@ export const VerseDetailContent = () => {
                 hebrewLabel={bookMeta?.hebrew_name ?? ""}
                 chapter={verse?.chapter ?? chapter}
                 onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
-                onChapterPress={() => navigationSheetRef.current?.openAtChapter()}
+                onChapterPress={() =>
+                  navigationSheetRef.current?.openAtChapter()
+                }
               />
             </Animated.View>
           </View>
