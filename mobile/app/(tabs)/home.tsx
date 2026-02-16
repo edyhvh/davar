@@ -407,7 +407,14 @@ export default function HomeScreen() {
             </View>
           </Pressable>
 
-          <View style={[styles.actionCard, styles.actionSecondary]}>
+          <Pressable
+            style={({ pressed }) => [
+              styles.actionCard,
+              styles.actionSecondary,
+              pressed && styles.downloadRowPressed,
+            ]}
+            onPress={() => router.push("/donate")}
+          >
             <View>
               <Text
                 style={[
@@ -435,7 +442,7 @@ export default function HomeScreen() {
                   : styles.actionIcon.color
               }
             />
-          </View>
+          </Pressable>
 
           <View style={styles.aboutCard}>
             <Text style={styles.aboutTitle}>{t("home.about.title")}</Text>
