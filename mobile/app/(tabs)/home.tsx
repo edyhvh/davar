@@ -36,9 +36,11 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       flex: 1,
     },
     content: {
+      flexGrow: 1,
       paddingHorizontal: spacing[6],
       paddingTop: spacing[6],
       paddingBottom: spacing[12],
+      justifyContent: "center",
     },
     calendarCard: {
       borderRadius: radii.xl,
@@ -405,7 +407,14 @@ export default function HomeScreen() {
             </View>
           </Pressable>
 
-          <View style={[styles.actionCard, styles.actionSecondary]}>
+          <Pressable
+            style={({ pressed }) => [
+              styles.actionCard,
+              styles.actionSecondary,
+              pressed && styles.downloadRowPressed,
+            ]}
+            onPress={() => router.push("/donate")}
+          >
             <View>
               <Text
                 style={[
@@ -433,7 +442,7 @@ export default function HomeScreen() {
                   : styles.actionIcon.color
               }
             />
-          </View>
+          </Pressable>
 
           <View style={styles.aboutCard}>
             <Text style={styles.aboutTitle}>{t("home.about.title")}</Text>

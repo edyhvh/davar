@@ -38,6 +38,10 @@ type NavigationSheetProps = {
 
 type Step = "book" | "chapter" | "verse";
 
+export type NavigationSheetMethods = BottomSheetMethods & {
+  openAtChapter: () => void;
+};
+
 type BookMeta = {
   id: string;
   name: string;
@@ -144,7 +148,7 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       borderColor: colors.border,
     },
     bookItemSelected: {
-      backgroundColor: colors.primaryLight,
+      backgroundColor: colors.primaryDeep,
       borderColor: colors.primary,
     },
     bookEnglish: {
@@ -193,8 +197,8 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       opacity: 0,
     },
     cellSelected: {
-      backgroundColor: colors.primary,
-      borderColor: colors.primary,
+      backgroundColor: colors.primaryDeep,
+      borderColor: colors.primaryDeep,
     },
     cellLabel: {
       fontFamily: typography.families.latinUI,
@@ -224,9 +228,12 @@ const NavigationSheetComponent = (
     onSelectVerse,
     onClose,
   }: NavigationSheetProps,
-  ref: React.ForwardedRef<BottomSheetMethods>,
+  ref: React.ForwardedRef<NavigationSheetMethods>,
 ) => {
   const sheetRef = useRef<BottomSheetMethods | null>(null);
+  const [step, setStep] = useState<Step>("book");
+  const [selectedBookId, setSelectedBookId] = useState(currentBookId);
+
   useImperativeHandle(
     ref,
     () => ({
@@ -237,6 +244,10 @@ const NavigationSheetComponent = (
       snapToIndex: (index: number) => sheetRef.current?.snapToIndex(index),
       snapToPosition: (position: number | string) =>
         sheetRef.current?.snapToPosition(position),
+      openAtChapter: () => {
+        setStep("chapter");
+        sheetRef.current?.snapToIndex(0);
+      },
     }),
     [],
   );
@@ -246,8 +257,6 @@ const NavigationSheetComponent = (
   const snapPoints = useMemo(() => ["60%", "80%"], []);
   const { t } = useTranslation();
 
-  const [step, setStep] = useState<Step>("book");
-  const [selectedBookId, setSelectedBookId] = useState(currentBookId);
   const [selectedChapter, setSelectedChapter] = useState(currentChapter);
   const [searchQuery, setSearchQuery] = useState("");
   const [booksMeta, setBooksMeta] = useState<BookMeta[]>([]);
@@ -630,4 +639,7 @@ const NavigationSheetComponent = (
   );
 };
 
-export const NavigationSheet = React.forwardRef(NavigationSheetComponent);
+export const NavigationSheet = React.forwardRef<
+  NavigationSheetMethods,
+  NavigationSheetProps
+>(NavigationSheetComponent);

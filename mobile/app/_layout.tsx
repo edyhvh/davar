@@ -73,7 +73,11 @@ export default function RootLayout() {
         <BottomSheetModalProvider>
           <ErrorBoundary>
             <AppProvider>
-              <Stack initialRouteName="(tabs)">
+              <Stack initialRouteName="splash">
+                <Stack.Screen
+                  name="splash"
+                  options={{ headerShown: false }}
+                />
                 <Stack.Screen
                   name="(tabs)"
                   options={{ headerShown: false }}

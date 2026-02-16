@@ -24,7 +24,10 @@ import type { ParamListBase } from "@react-navigation/native";
 // eslint-disable-next-line import/namespace
 import { VerseCard } from "@/src/components/VerseCard";
 import { WordAnalysisBottomSheet } from "@/src/components/WordAnalysisBottomSheet";
-import { NavigationSheet } from "@/src/components/NavigationSheet";
+import {
+  NavigationSheet,
+  type NavigationSheetMethods,
+} from "@/src/components/NavigationSheet";
 import { BookChapterPill } from "@/src/components/ui/BookChapterPill";
 import { getColors, spacing } from "@/src/theme";
 import { fetchMetadata } from "@/src/services/metadata";
@@ -245,7 +248,7 @@ export const VerseDetailContent = () => {
     },
   );
   const sheetRef = useRef<BottomSheetMethods>(null!);
-  const navigationSheetRef = useRef<BottomSheetMethods>(null!);
+  const navigationSheetRef = useRef<NavigationSheetMethods>(null!);
   const [selectedWord, setSelectedWord] = useState<
     (typeof orderedVerses)[number]["words"][number] | null
   >(null);
@@ -416,9 +419,7 @@ export const VerseDetailContent = () => {
           return;
         }
         setChapterVerses(verses);
-        if (verses.length > 0 && verses[0].words?.length > 0) {
-          setSelectedWord(verses[0].words[0]);
-        }
+        // Don't auto-select a word - let user tap to select
       } catch {
         if (!isMounted) return;
         setErrorMessage(t("errors.loadVerses"));
@@ -458,7 +459,7 @@ export const VerseDetailContent = () => {
                 chapter={verse?.chapter ?? chapter}
                 onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
                 onChapterPress={() =>
-                  navigationSheetRef.current?.snapToIndex(0)
+                  navigationSheetRef.current?.openAtChapter()
                 }
               />
             </Animated.View>

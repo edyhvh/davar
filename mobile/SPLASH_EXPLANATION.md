@@ -89,6 +89,14 @@ This prevents flash-of-unstyled-text and ensures a smooth transition.
 
 ---
 
+## App Startup Flow
+
+After the native splash is hidden, the app starts at the React route `app/splash.tsx`.
+That screen shows a short animated Davar splash and then redirects to `/(tabs)/verse`.
+This gives a consistent branded transition on both platforms while keeping native startup fast.
+
+---
+
 ## Platform Differences Summary
 
 | Feature | iOS | Android 12+ |

@@ -904,6 +904,7 @@ const WordAnalysisBottomSheetComponent = (
 
   const isQumranTab = hasDssVariant && activeTab === "qumran";
   const activeStrongNumber = isQumranTab ? dssStrongNumber : strongNumber;
+  const occurrencesCount = lexiconEntry?.occurrences_count ?? 0;
 
   return (
     <BottomSheet
@@ -943,10 +944,10 @@ const WordAnalysisBottomSheetComponent = (
                   {wordTransliteration}
                 </Text>
               ) : null}
-              {lexiconEntry?.occurrences_count && !isQumranTab && (
+              {occurrencesCount > 0 && !isQumranTab && (
                 <Text style={styles.occurrencesText}>
                   {t("wordCard.appearsCount", {
-                    count: lexiconEntry.occurrences_count,
+                    count: occurrencesCount,
                   })}
                 </Text>
               )}
