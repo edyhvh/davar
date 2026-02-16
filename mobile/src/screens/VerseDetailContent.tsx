@@ -38,6 +38,7 @@ import {
 } from "@/src/services/scripture";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
+import { formatBookDisplayName } from "../utils/bookNameFormatter";
 
 type TabPressEvent = {
   preventDefault: () => void;
@@ -454,7 +455,13 @@ export const VerseDetailContent = () => {
               }}
             >
               <BookChapterPill
-                bookLabel={bookMeta?.name ?? t("common.loading")}
+                bookLabel={
+                  formatBookDisplayName(
+                    language === "es"
+                      ? (bookMeta?.spanish_name ?? t("common.loading"))
+                      : (bookMeta?.name ?? t("common.loading"))
+                  )
+                }
                 hebrewLabel={bookMeta?.hebrew_name ?? ""}
                 chapter={verse?.chapter ?? chapter}
                 onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}

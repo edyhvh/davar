@@ -18,6 +18,7 @@ import { getBooks } from "@/src/services/api";
 import type { BookResponse } from "@/src/types/api";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
+import { formatBookDisplayName } from "../utils/bookNameFormatter";
 
 type BookSelectorSheetProps = {
   sheetRef: React.RefObject<BottomSheet | null>;
@@ -137,6 +138,7 @@ export const BookSelectorSheet = ({
   onClose,
 }: BookSelectorSheetProps) => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
+  const language = useAppStore((state: AppState) => state.language);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
   const snapPoints = useMemo(() => ["70%", "90%"], []);
@@ -224,6 +226,7 @@ export const BookSelectorSheet = ({
   const renderBookItem = useCallback(
     ({ item }: { item: BookResponse }) => {
       const isSelected = item.id === currentBookId;
+      const displayName = formatBookDisplayName(language === "es" ? item.spanish_name : item.name);
       return (
         <Pressable
           onPress={() => handleSelectBook(item.id)}
@@ -235,12 +238,12 @@ export const BookSelectorSheet = ({
               : getNeumorphShadowStyle("raised", colors),
           ]}
         >
-          <Text style={styles.bookEnglish}>{item.name}</Text>
+          <Text style={styles.bookEnglish}>{displayName}</Text>
           <Text style={styles.bookHebrew}>{item.hebrew_name}</Text>
         </Pressable>
       );
     },
-    [currentBookId, handleSelectBook, styles, colors],
+    [currentBookId, handleSelectBook, styles, colors, language],
   );
 
   const renderListEmpty = useCallback(

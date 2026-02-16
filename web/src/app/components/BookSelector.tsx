@@ -83,7 +83,7 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
           {sortedBooks.map((book) => {
             const isSelected = book.name === currentBook;
             const primaryName = language === 'es' ? formatBookDisplayName(book.spanish_name) : formatBookDisplayName(book.name);
-            const secondaryName = language === 'es' ? formatBookDisplayName(book.name) : formatBookDisplayName(book.spanish_name);
+            const secondaryName = language === 'es' ? formatBookDisplayName(book.name) : book.spanish_name;
             const hebrewDisplay = language === 'he' ? book.hebrew_name : book.hebrew_transliteration;
             return (
               <NeumorphCard
