@@ -72,7 +72,7 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.caption,
       letterSpacing: 0.6,
-      color: colors.textPrimary,
+      color: colors.textSecondary,
     },
   });
 

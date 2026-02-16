@@ -103,7 +103,7 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       borderColor: colors.border,
     },
     bookItemSelected: {
-      backgroundColor: colors.primaryLight,
+      backgroundColor: colors.primaryDeep,
       borderColor: colors.primary,
     },
     bookEnglish: {
