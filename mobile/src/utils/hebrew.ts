@@ -266,6 +266,14 @@ export function stripMeteg(text: string): string {
 }
 
 /**
+ * Remove maqaf from Hebrew display text and normalize whitespace.
+ * Converts maqaf (־) into a plain separator space for frontend readability.
+ */
+export function removeMaqafForDisplay(text: string): string {
+  return text.replace(/\u05BE/g, " ").replace(/\s+/g, " ").trim();
+}
+
+/**
  * Normalize Hebrew display text and remove bidi control characters
  */
 export function normalizeHebrewDisplay(text: string): string {

@@ -18,6 +18,7 @@ import {
   stripCantillation,
   stripNikud,
   stripMeteg,
+  removeMaqafForDisplay,
 } from "@/src/utils/hebrew";
 import { useTranslation } from "@/src/i18n/useTranslation";
 import { getTranslationDisplayText } from "@/src/utils/translationDisplay";
@@ -219,6 +220,7 @@ export const VerseCard = ({
           }
           displayText = stripMeteg(displayText);
           displayText = displayText.replace(/\//g, "");
+          displayText = removeMaqafForDisplay(displayText);
 
           const prefixSegments =
             qumranWord || !word.prefixes?.length

@@ -9,6 +9,7 @@ import {
   stripNikud,
   stripCantillation,
   stripMeteg,
+  removeMaqafForDisplay,
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
 import { useTranslation } from "../hooks/useTranslation";
@@ -55,7 +56,8 @@ export function FullChapterView({
     let normalized = stripNikud(text);
     normalized = stripCantillation(normalized);
     normalized = stripMeteg(normalized);
-    return normalized.replace(/\//g, "");
+    normalized = normalized.replace(/\//g, "");
+    return normalized.replace(/\u05BE/g, "");
   };
 
   const normalizedSelected = selectedWord
@@ -84,6 +86,7 @@ export function FullChapterView({
       displayText = stripMeteg(displayText);
       // Remove "/" separators from display
       displayText = displayText.replace(/\//g, "");
+      displayText = removeMaqafForDisplay(displayText);
 
       // Always compare against the original Masoretic word text, not the
       // display text which may be a DSS variant.

@@ -14,6 +14,7 @@ import {
   stripCantillation,
   stripMeteg,
   getPrefixSegments,
+  removeMaqafForDisplay,
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
 import { useTranslation } from "../hooks/useTranslation";
@@ -94,7 +95,10 @@ export function VerseDisplay({
     const sourceWords =
       words.length > 0
         ? words
-        : hebrewText.split(" ").map((word, index) => ({
+        : removeMaqafForDisplay(hebrewText)
+            .split(" ")
+            .filter(Boolean)
+            .map((word, index) => ({
             position: index + 1,
             text: word,
             text_no_nikud: word,
@@ -106,7 +110,8 @@ export function VerseDisplay({
       let normalized = stripNikud(text);
       normalized = stripCantillation(normalized);
       normalized = stripMeteg(normalized);
-      return normalized.replace(/\//g, "");
+      normalized = normalized.replace(/\//g, "");
+      return normalized.replace(/\u05BE/g, "");
     };
 
     const normalizedSelected = selectedWord
@@ -128,6 +133,7 @@ export function VerseDisplay({
       displayText = stripMeteg(displayText);
       // Remove "/" separators from display
       displayText = displayText.replace(/\//g, "");
+      displayText = removeMaqafForDisplay(displayText);
 
       // Always compare against the original Masoretic word text, not the
       // display text which may be a DSS variant.
