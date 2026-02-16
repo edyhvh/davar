@@ -5,6 +5,7 @@ import {
   getPrefixSegments,
   normalizeHebrew,
   normalizeHebrewDisplay,
+  removeMaqafForDisplay,
   splitLeadingHebrewCluster,
   stripCantillation,
   stripMeteg,
@@ -119,8 +120,8 @@ export function WordCard({
       ? displayedData.qumranWord
       : displayedData.word;
   const displayWord = showNikud
-    ? normalizeHebrewDisplay(stripMeteg(stripCantillation(headerWord)))
-    : normalizeHebrewDisplay(normalizeHebrew(headerWord));
+    ? removeMaqafForDisplay(normalizeHebrewDisplay(stripMeteg(stripCantillation(headerWord))))
+    : removeMaqafForDisplay(normalizeHebrewDisplay(normalizeHebrew(headerWord)));
   const [prefixEntries, setPrefixEntries] = useState<
     Record<string, PrefixEntry | null>
   >({});

@@ -31,6 +31,7 @@ import {
   getPrefixSegments,
   stripMeteg,
   normalizeHebrewDisplay,
+  removeMaqafForDisplay,
 } from "@/src/utils/hebrew";
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
@@ -572,7 +573,7 @@ const WordAnalysisBottomSheetComponent = (
       base = stripCantillation(base);
     }
     base = stripMeteg(base);
-    return normalizeHebrewDisplay(base).replace(/\//g, "");
+    return removeMaqafForDisplay(normalizeHebrewDisplay(base).replace(/\//g, ""));
   }, [
     activeTab,
     lexiconEntry?.hebrew,

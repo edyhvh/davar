@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { NeumorphCard } from './NeumorphCard';
 import { getBooks } from '../services/verseService';
+import { formatBookDisplayName } from '../utils/bookNameFormatter';
 
 interface BookSelectorProps {
   currentBook: string;
@@ -46,6 +47,8 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
         <div className="text-[var(--text-primary)]">Loading books...</div>
       </div>
     );
+  }
+
   const sortedBooks = [...books].sort((a, b) => a.order - b.order);
 
   return (
@@ -79,8 +82,8 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
         <div className="space-y-3 pb-24">
           {sortedBooks.map((book) => {
             const isSelected = book.name === currentBook;
-            const primaryName = language === 'es' ? book.spanish_name : book.name;
-            const secondaryName = language === 'es' ? book.name : book.spanish_name;
+            const primaryName = language === 'es' ? formatBookDisplayName(book.spanish_name) : formatBookDisplayName(book.name);
+            const secondaryName = language === 'es' ? formatBookDisplayName(book.name) : formatBookDisplayName(book.spanish_name);
             const hebrewDisplay = language === 'he' ? book.hebrew_name : book.hebrew_transliteration;
             return (
               <NeumorphCard
@@ -121,8 +124,6 @@ export function BookSelector({ currentBook, onBookSelect, onClose, language }: B
           })}
         </div>
       </div>
-    </div>
-  );
     </div>
   );
 }

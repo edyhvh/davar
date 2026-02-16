@@ -50,6 +50,7 @@ import {
 import type { ReadingStateV2 } from "./utils/storageHelpers";
 import { useTranslation } from "./hooks/useTranslation";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
+import { formatBookDisplayName } from "./utils/bookNameFormatter";
 
 type Screen =
   | "home"
@@ -338,9 +339,9 @@ export default function App() {
       (item) => item.name.toLowerCase() === book.toLowerCase(),
     );
     if (language === "es") {
-      return found?.spanish_name || book;
+      return formatBookDisplayName(found?.spanish_name || book);
     }
-    return book;
+    return formatBookDisplayName(book);
   };
 
   const tabTitle = useMemo(() => {
