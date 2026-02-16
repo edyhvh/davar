@@ -4,7 +4,7 @@
 
 name:issue
 agent: agent
-description: create a .md file in the root directory about the issue requested for github 
+description: create a .md file in the root directory about the issue requested for github
 
 ---
 
@@ -20,47 +20,58 @@ Rules you MUST follow strictly:
 4. Use this exact section order — do NOT add, remove or rename sections unless I explicitly say so in this message:
 
 ## Title
+
 One clear, searchable line (start with verb or problem → "Fix …", "Implement …", "Incorrect …", etc.)
 
 ## Summary
+
 1–3 sentences maximum. What needs to be done and why it matters.
 
 ## Scope / What to do
+
 - Bullet list of the concrete work to be performed
 - Very focused — avoid open-ended phrases
 
 ## Current Problem / Root Cause (if applicable)
+
 - Explanation of what is broken
 - Why it happens (if known)
 - Screenshots / examples / before-after if relevant
 
 ## Examples
+
 Show 2–5 concrete before/after or wrong/right cases.
-Use code blocks with Hebrew if needed (use ```hebrew or ```text)
+Use code blocks with Hebrew if needed (use `hebrew or `text)
 Include file paths, line numbers, Strong's numbers, verses when available.
 
 ## Impact
+
 - Who/what is affected
 - Severity (data quality, user experience, matching rate, learning accuracy, etc.)
 
 ## Proposed Solution / Recommended Fix
+
 - Preferred approach first (usually automated/script if possible)
 - Numbered options if alternatives exist
 - Mention if manual review is NOT recommended due to scale
 
 ## Files / Locations Involved
+
 - List files, folders, scripts, databases that must be touched
-- Use relative paths like data/delitzsch/, scripts/strong/matcher.py, etc.
+- Use relative paths like data/delitzsch/, scripts/delitzsch/run_matcher.py, etc.
 
 ## Acceptance Criteria / How to know it's fixed
+
 - Bullet list of testable outcomes
 - Example: "Match rate for particles increases by ~15%", "No more H8055 on בּוֹ", etc.
 
 ## Related Issues / Context
+
 - Link or mention other issues (#45, #12) or decisions already made
 - Discovery context if useful ("found while fixing prefix detection")
 
 ## Status (only if relevant)
+
 - Open / In progress / Blocked / Low priority / Future review
 - Default: leave empty or write "New"
 

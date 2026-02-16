@@ -5,7 +5,10 @@ Identifies Hebrew prefixes (ו, ב, ל, כ, מ, ה) with grammar-based validatio
 
 from typing import Dict, List, Optional, Tuple
 
-from hebrew_utils import strip_nikud
+try:
+    from .hebrew_utils import strip_nikud
+except ImportError:
+    from hebrew_utils import strip_nikud
 
 
 class PrefixDetector:

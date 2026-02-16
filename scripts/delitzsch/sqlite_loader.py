@@ -62,7 +62,8 @@ class SQLiteLoader:
             self.connection = sqlite3.connect(str(self.db_path))
             self.connection.row_factory = sqlite3.Row  # Enable column access by name
         except sqlite3.Error as e:
-            raise RuntimeError(f"Failed to connect to database {self.db_path}: {e}")
+            raise RuntimeError(
+                f"Failed to connect to database {self.db_path}: {e}")
 
     def close(self):
         """Close database connection"""
@@ -118,7 +119,8 @@ class SQLiteLoader:
             row = cursor.fetchone()
             return row['text'] if row else None
         except sqlite3.Error as e:
-            print(f"Database error getting verse {book_number}:{chapter}:{verse}: {e}")
+            print(
+                f"Database error getting verse {book_number}:{chapter}:{verse}: {e}")
             return None
 
     def get_chapter_verses(self, book_number: int, chapter: int) -> List[Dict]:
@@ -147,7 +149,8 @@ class SQLiteLoader:
                 })
             return verses
         except sqlite3.Error as e:
-            print(f"Database error getting chapter {book_number}:{chapter}: {e}")
+            print(
+                f"Database error getting chapter {book_number}:{chapter}: {e}")
             return []
 
     def get_book_verses(self, book_number: int) -> Dict[int, List[Dict]]:
@@ -203,6 +206,7 @@ class SQLiteLoader:
 # Singleton instance
 _loader_instance = None
 
+
 def get_sqlite_loader(db_path: Optional[Path] = None) -> SQLiteLoader:
     """
     Get singleton SQLite loader instance.
@@ -217,7 +221,10 @@ def get_sqlite_loader(db_path: Optional[Path] = None) -> SQLiteLoader:
     if _loader_instance is None:
         if db_path is None:
             # Import here to avoid circular imports
-            from config import SQLITE_DB
+            try:
+                from .config import SQLITE_DB
+            except ImportError:
+                from config import SQLITE_DB
             db_path = SQLITE_DB
         _loader_instance = SQLiteLoader(db_path)
     return _loader_instance

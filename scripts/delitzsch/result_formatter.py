@@ -9,7 +9,7 @@ from typing import Dict, List, Optional
 class ResultFormatter:
     """
     Formats word matching results into output dictionaries.
-    
+
     Handles:
     - Formatting word results with Strong's numbers and prefixes
     - Adding "/" separators for prefixes in Hebrew text
@@ -19,14 +19,14 @@ class ResultFormatter:
     def __init__(self, dictionary_loader):
         """
         Initialize result formatter.
-        
+
         Args:
             dictionary_loader: Dictionary loader instance for accessing proper name data
         """
         self.loader = dictionary_loader
 
-    def format_word_result(self, word: str, strong_number: Optional[str], 
-                          prefixes: List[str], suffix_id: Optional[str] = None) -> Dict:
+    def format_word_result(self, word: str, strong_number: Optional[str],
+                           prefixes: List[str], suffix_id: Optional[str] = None) -> Dict:
         """
         Format the result dictionary with prefixes and suffix.
 
@@ -39,29 +39,30 @@ class ResultFormatter:
         Returns:
             Formatted word dictionary with text, strong, prefixes, suffix
         """
-        if strong_number and prefixes:
-            prefix_str = '/'.join(prefixes)
-            strong_number = f"{prefix_str}/{strong_number}"
+        normalized_prefixes = self._normalize_prefixes(prefixes)
+        strong_with_prefixes = strong_number
+
+        if strong_number and normalized_prefixes:
+            prefix_str = '/'.join(normalized_prefixes)
+            strong_with_prefixes = f"{prefix_str}/{strong_number}"
 
         result = {
             'text': word,
-            'strong': strong_number,
-            'prefixes': prefixes if prefixes else [],
+            'strong': strong_with_prefixes,
+            'prefixes': normalized_prefixes,
             'suffix': suffix_id  # Track suffixes
         }
 
-        # Add possible_proper_name flag if the Strong's number is a proper name
-        # This helps identify potential dictionary collisions
         if strong_number and self.loader.is_proper_name(strong_number):
             result['possible_proper_name'] = True
 
         return result
 
-    def format_word_result_with_strong(self, word: str, strong_number: str, 
-                                      prefixes: List[str], stem: str = None) -> Dict:
+    def format_word_result_with_strong(self, word: str, strong_number: Optional[str],
+                                       prefixes: List[str], stem: str = None) -> Dict:
         """
         Format the result dictionary when Strong's number is already known.
-        
+
         This is used when processing words from SQLite with pre-assigned Strong's numbers.
 
         Args:
@@ -73,19 +74,19 @@ class ResultFormatter:
         Returns:
             Formatted word dictionary with text, strong, prefixes
         """
+        normalized_prefixes = self._normalize_prefixes(prefixes)
         formatted_strong = strong_number
 
-        if strong_number and prefixes:
-            prefix_str = '/'.join(prefixes)
+        if strong_number and normalized_prefixes:
+            prefix_str = '/'.join(normalized_prefixes)
             formatted_strong = f"{prefix_str}/{strong_number}"
 
         result = {
             'text': word,
             'strong': formatted_strong,
-            'prefixes': prefixes if prefixes else []
+            'prefixes': normalized_prefixes
         }
 
-        # Add possible_proper_name flag if the Strong's number is a proper name
         if strong_number and self.loader.is_proper_name(strong_number):
             result['possible_proper_name'] = True
 
@@ -186,6 +187,13 @@ class ResultFormatter:
         Returns:
             Complete verse dictionary ready for output
         """
+        # Fix maqef spacing in individual word text fields
+        # This fixes words like "עַל־" that should not have trailing spaces
+        import re
+        for word in words:
+            if 'text' in word and word['text']:
+                word['text'] = re.sub(r'־\s+', '־', word['text'])
+
         return {
             'chapter': chapter_num,
             'verse': verse_num,
@@ -197,3 +205,22 @@ class ResultFormatter:
         """Check if a character is Hebrew nikud (vowel point or accent)"""
         code = ord(char)
         return 0x0591 <= code <= 0x05C7
+
+    def _normalize_prefixes(self, prefixes: Optional[List[str]]) -> List[str]:
+        """
+        Normalize prefix sequence for stable output.
+
+        Rules:
+        - Remove adjacent duplicate prefixes (e.g., Hb,Hb -> Hb)
+        - Keep order intact
+        - Keep at most first 2 prefixes (conjunctive + one preposition)
+        """
+        if not prefixes:
+            return []
+
+        deduped: List[str] = []
+        for prefix in prefixes:
+            if not deduped or deduped[-1] != prefix:
+                deduped.append(prefix)
+
+        return deduped[:2]

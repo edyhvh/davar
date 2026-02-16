@@ -2,6 +2,8 @@
 
 A fast, lightweight Python script suite for processing Delitzsch Hebrew New Testament texts and matching words to Strong's numbers with Hebrew prefix identification.
 
+Location: `scripts/delitzsch`.
+
 ## Overview
 
 This tool processes the Delitzsch Hebrew New Testament (דבר) and transforms it from verse-level text into word-level data with Strong's number assignments, similar to the OE (OpenScriptures Enhanced) format.
@@ -20,33 +22,51 @@ No special installation required. Ensure Python 3.8+ is available and run from t
 
 ```bash
 cd ~/davar
-python scripts/strong/run_matcher.py --help
+python scripts/delitzsch/cli.py --help
 ```
 
 ## Usage
 
+### Canonical CLI
+
+```bash
+python scripts/delitzsch/cli.py run --help
+python scripts/delitzsch/cli.py audit --help
+python scripts/delitzsch/cli.py normalize --help
+```
+
 ### Process All Books
 
 ```bash
-python scripts/strong/run_matcher.py
+python scripts/delitzsch/cli.py run
 ```
 
 ### Process Specific Book
 
 ```bash
-python scripts/strong/run_matcher.py --book acts
+python scripts/delitzsch/cli.py run --book acts
 ```
 
 ### Dry Run (Preview Only)
 
 ```bash
-python scripts/strong/run_matcher.py --dry-run
+python scripts/delitzsch/cli.py run --dry-run
 ```
 
 ### Verbose Output
 
 ```bash
-python scripts/strong/run_matcher.py --verbose
+python scripts/delitzsch/cli.py run --verbose
+```
+
+### Script Entrypoints
+
+Direct script entrypoints are available in this folder:
+
+```bash
+python scripts/delitzsch/run_matcher.py --help
+python scripts/delitzsch/audit_delitzsch_parsing.py --help
+python scripts/delitzsch/normalize_delitzsch_prefixes.py --help
 ```
 
 ## Output Format
@@ -83,8 +103,9 @@ Produces JSON files structured as:
 - **`config.py`**: Path configuration and utilities
 - **`hebrew_utils.py`**: Hebrew text processing (nikud stripping, tokenization, normalization)
 - **`dictionary_loader.py`**: Loads and indexes Hebrew dictionaries for fast lookups
-- **`matcher.py`**: Core matching logic for prefixes and Strong's numbers
-- **`run_matcher.py`**: CLI interface and processing orchestration
+- **`word_matcher.py`**: Core matching logic for prefixes and Strong's numbers
+- **`matcher_runner.py`**: Processing orchestration for run workflows
+- **`cli.py`**: Canonical modular CLI with subcommands (`run`, `audit`, `normalize`)
 
 ### Data Sources
 
@@ -119,7 +140,7 @@ data/delitzsch_parsed/
 
 ## Error Handling
 
-- **Unmatched Words**: Logged to `scripts/strong/unmatched_words.log`
+- **Unmatched Words**: Logged to `scripts/delitzsch/unmatched_words.log`
 - **Processing Errors**: Continue with next word/book on individual failures
 - **JSON Validation**: Output validated before writing
 
@@ -138,6 +159,7 @@ data/delitzsch_parsed/
 ## Contributing
 
 For the Davar project, ensure changes maintain:
+
 - Minimalist, sacred focus
 - RTL Hebrew compatibility
 - Offline-first design

@@ -6,7 +6,10 @@ import json
 from typing import Dict, List, Tuple
 from pathlib import Path
 
-from config import WORDS_JSON, ROOTS_JSON, PREFIX_FORMS_JSON, PREFIX_ENTRIES_DIR
+try:
+    from .config import WORDS_JSON, ROOTS_JSON, PREFIX_FORMS_JSON, PREFIX_ENTRIES_DIR
+except ImportError:
+    from config import WORDS_JSON, ROOTS_JSON, PREFIX_FORMS_JSON, PREFIX_ENTRIES_DIR
 
 
 class DictionaryLoader:
@@ -43,7 +46,8 @@ class DictionaryLoader:
     def _load_words(self):
         """Load words.json and build normalized lookup table"""
         if not WORDS_JSON.exists():
-            raise FileNotFoundError(f"Words dictionary not found: {WORDS_JSON}")
+            raise FileNotFoundError(
+                f"Words dictionary not found: {WORDS_JSON}")
 
         with open(WORDS_JSON, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -62,8 +66,8 @@ class DictionaryLoader:
         ALTERNATE_FORMS = {
             'היא': 'H1931',  # She (alternate of הוא he)
             'יהי': 'H1961',  # Let it be (jussive form)
-            'תהיה': 'H1961', # You will be
-            'למען': 'H4616', # For the sake of (with prefix)
+            'תהיה': 'H1961',  # You will be
+            'למען': 'H4616',  # For the sake of (with prefix)
         }
 
         self.words_by_normalized.update(ALTERNATE_FORMS)
@@ -71,7 +75,8 @@ class DictionaryLoader:
     def _load_roots(self):
         """Load roots.json and build normalized lookup table"""
         if not ROOTS_JSON.exists():
-            raise FileNotFoundError(f"Roots dictionary not found: {ROOTS_JSON}")
+            raise FileNotFoundError(
+                f"Roots dictionary not found: {ROOTS_JSON}")
 
         with open(ROOTS_JSON, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -185,6 +190,7 @@ class DictionaryLoader:
 
 # Singleton instance
 _loader_instance = None
+
 
 def get_dictionary_loader() -> DictionaryLoader:
     """Get singleton dictionary loader instance"""
