@@ -588,6 +588,12 @@ export default function App() {
       return;
     }
 
+    // Wait for books to load before processing verse routes with a book
+    // This prevents showing 404 when the page reloads before books are fetched
+    if (pending.book && books.length === 0) {
+      return;
+    }
+
     if (pending.book) {
       const matchedBook = books.find(
         (item) => item.name.toLowerCase() === pending.book?.toLowerCase(),
