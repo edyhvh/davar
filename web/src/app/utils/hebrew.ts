@@ -5,59 +5,59 @@
 // Load prefix forms lookup (this would be loaded from the API in a real app)
 const PREFIX_FORMS: Record<string, string[]> = {
   // Bet/Beit (ב) prefix with various vowel points and accents
-  "בְּ": ["Hb"],  // with shva and dagesh
-  "בַּ": ["Hb"],  // with patach and dagesh
-  "בָּ": ["Hb"],  // with qamats and dagesh
-  "בִּ": ["Hb"],  // with hiriq and dagesh
-  "בּ": ["Hb"],   // with just dagesh (no vowel)
-  "בָ": ["Hb"],   // with qamats only
-  "בִ": ["Hb"],   // with hiriq only
-  "בְ": ["Hb"],   // with shva only
-  "ב֖": ["Hb"],   // with tiperasim accent
-  "בָּ֖": ["Hb"], // with qamats, dagesh, and accent
-  
+  בְּ: ["Hb"], // with shva and dagesh
+  בַּ: ["Hb"], // with patach and dagesh
+  בָּ: ["Hb"], // with qamats and dagesh
+  בִּ: ["Hb"], // with hiriq and dagesh
+  בּ: ["Hb"], // with just dagesh (no vowel)
+  בָ: ["Hb"], // with qamats only
+  בִ: ["Hb"], // with hiriq only
+  בְ: ["Hb"], // with shva only
+  ב֖: ["Hb"], // with tiperasim accent
+  בָּ֖: ["Hb"], // with qamats, dagesh, and accent
+
   // Lamed (ל) prefix with various vowel points and accents
-  "לְ": ["Hl"],   // with shva
-  "לַ": ["Hl"],   // with patach
-  "לָ": ["Hl"],   // with qamats
-  "לִ": ["Hl"],   // with hiriq
-  "ל֑": ["Hl"],   // with oleh ve-yored accent
-  "לַֽ": ["Hl"],  // with patach and silluq accent
-  "לָֽ": ["Hl"],  // with qamats and silluq accent
-  
+  לְ: ["Hl"], // with shva
+  לַ: ["Hl"], // with patach
+  לָ: ["Hl"], // with qamats
+  לִ: ["Hl"], // with hiriq
+  ל֑: ["Hl"], // with oleh ve-yored accent
+  לַֽ: ["Hl"], // with patach and silluq accent
+  לָֽ: ["Hl"], // with qamats and silluq accent
+
   // Vav/Conjunctive vav (ו) prefix with various vowel points and accents
-  "וְ": ["Hv", "Hc"],  // with shva
-  "וַ": ["Hv", "Hc"],  // with patach
-  "וָ": ["Hv", "Hc"],  // with qamats
-  "וִ": ["Hv", "Hc"],  // with hiriq
-  "וּ": ["Hv", "Hc"],  // with dagesh (no vowel)
-  "ו": ["Hv", "Hc"],   // without vowels or accents
-  "וַֽ": ["Hv", "Hc"], // with patach and silluq accent
-  
+  וְ: ["Hv", "Hc"], // with shva
+  וַ: ["Hv", "Hc"], // with patach
+  וָ: ["Hv", "Hc"], // with qamats
+  וִ: ["Hv", "Hc"], // with hiriq
+  וּ: ["Hv", "Hc"], // with dagesh (no vowel)
+  ו: ["Hv", "Hc"], // without vowels or accents
+  וַֽ: ["Hv", "Hc"], // with patach and silluq accent
+
   // Kaf (כ) prefix with various vowel points
-  "כְּ": ["Hk"],   // with shva and dagesh
-  "כַּ": ["Hk"],   // with patach and dagesh
-  "כָּ": ["Hk"],   // with qamats and dagesh
-  "כִּ": ["Hk"],   // with hiriq and dagesh
-  "כּ": ["Hk"],    // with just dagesh (no vowel)
-  
+  כְּ: ["Hk"], // with shva and dagesh
+  כַּ: ["Hk"], // with patach and dagesh
+  כָּ: ["Hk"], // with qamats and dagesh
+  כִּ: ["Hk"], // with hiriq and dagesh
+  כּ: ["Hk"], // with just dagesh (no vowel)
+
   // Mem (מ) prefix with various vowel points
-  "מִ": ["Hm"],    // with hiriq
-  "מַ": ["Hm"],    // with patach
-  "מֵ": ["Hm"],    // with tsere
-  
+  מִ: ["Hm"], // with hiriq
+  מַ: ["Hm"], // with patach
+  מֵ: ["Hm"], // with tsere
+
   // Heh (ה) prefix with various vowel points and accents
-  "הַ": ["Hd"],    // with patach
-  "הָ": ["Hd"],    // with qamats
-  "הִ": ["Hd"],    // with hiriq
-  "הָֽ": ["Hd"],   // with qamats and silluq accent
+  הַ: ["Hd"], // with patach
+  הָ: ["Hd"], // with qamats
+  הִ: ["Hd"], // with hiriq
+  הָֽ: ["Hd"], // with qamats and silluq accent
   // Add more forms as needed
 };
 
-
 const HEBREW_MARKS_REGEX = /[\u0591-\u05C7]/g;
 const HEBREW_MARKS_SINGLE = /[\u0591-\u05C7]/;
-const HEBREW_BIDI_CONTROLS = /[\u200C\u200D\u200E\u200F\u202A-\u202E\u2066-\u2069]/g;
+const HEBREW_BIDI_CONTROLS =
+  /[\u200C\u200D\u200E\u200F\u202A-\u202E\u2066-\u2069]/g;
 
 const stripHebrewMarks = (text: string) => text.replace(HEBREW_MARKS_REGEX, "");
 
@@ -171,26 +171,28 @@ export interface ParsedWord {
  */
 export function parseHebrewWord(word: string): ParsedWord {
   // Check if word contains "/" separator (data format with explicit prefix separation)
-  if (word.includes('/')) {
-    const parts = word.split('/');
+  if (word.includes("/")) {
+    const parts = word.split("/");
     if (parts.length >= 2) {
-      const prefixText = parts.slice(0, -1).join('');
-      const rootText = parts.slice(-1).join('');
+      const prefixText = parts.slice(0, -1).join("");
+      const rootText = parts.slice(-1).join("");
 
-      const cleanedPrefixText = stripHebrewMarks(prefixText.replace(/\//g, ''));
+      const cleanedPrefixText = stripHebrewMarks(prefixText.replace(/\//g, ""));
 
       // Find the prefix particle from our lookup
-      const prefixForms = Object.keys(PREFIX_FORMS).sort((a, b) => b.length - a.length);
+      const prefixForms = Object.keys(PREFIX_FORMS).sort(
+        (a, b) => b.length - a.length,
+      );
       for (const prefixForm of prefixForms) {
         if (cleanedPrefixText.includes(stripHebrewMarks(prefixForm))) {
           return {
             full: word,
             prefix: {
-              text: prefixText.replace(/\//g, ''),
+              text: prefixText.replace(/\//g, ""),
               particle: PREFIX_FORMS[prefixForm][0],
-              meanings: {} // Would be loaded from API
+              meanings: {}, // Would be loaded from API
             },
-            root: rootText.replace(/\//g, '')
+            root: rootText.replace(/\//g, ""),
           };
         }
       }
@@ -199,11 +201,11 @@ export function parseHebrewWord(word: string): ParsedWord {
       return {
         full: word,
         prefix: {
-          text: prefixText.replace(/\//g, ''),
-          particle: 'unknown',
-          meanings: {}
+          text: prefixText.replace(/\//g, ""),
+          particle: "unknown",
+          meanings: {},
         },
-        root: rootText.replace(/\//g, '')
+        root: rootText.replace(/\//g, ""),
       };
     }
   }
@@ -211,22 +213,29 @@ export function parseHebrewWord(word: string): ParsedWord {
   const withoutMarks = stripHebrewMarks(word);
 
   // Try to find prefix (longest match first)
-  const prefixForms = Object.keys(PREFIX_FORMS).sort((a, b) => b.length - a.length);
+  const prefixForms = Object.keys(PREFIX_FORMS).sort(
+    (a, b) => b.length - a.length,
+  );
 
   for (const prefixForm of prefixForms) {
     const strippedPrefixForm = stripHebrewMarks(prefixForm);
     if (withoutMarks.startsWith(strippedPrefixForm)) {
-      const prefixText = sliceByStrippedLength(word, 0, strippedPrefixForm.length);
+      const prefixText = sliceByStrippedLength(
+        word,
+        0,
+        strippedPrefixForm.length,
+      );
       const root = word.slice(prefixText.length);
-      if (root.length > 0) { // Ensure there's a root left
+      if (root.length > 0) {
+        // Ensure there's a root left
         return {
           full: word,
           prefix: {
             text: prefixText,
             particle: PREFIX_FORMS[prefixForm][0],
-            meanings: {} // Would be loaded from API
+            meanings: {}, // Would be loaded from API
           },
-          root: root
+          root: root,
         };
       }
     }
@@ -235,7 +244,7 @@ export function parseHebrewWord(word: string): ParsedWord {
   // No prefix found
   return {
     full: word,
-    root: word
+    root: word,
   };
 }
 
@@ -243,21 +252,21 @@ export function parseHebrewWord(word: string): ParsedWord {
  * Strip nikud from Hebrew text
  */
 export function stripNikud(text: string): string {
-  return text.replace(/[\u05B0-\u05C7]/g, '');
+  return text.replace(/[\u05B0-\u05C7]/g, "");
 }
 
 /**
  * Strip cantillation marks from Hebrew text
  */
 export function stripCantillation(text: string): string {
-  return text.replace(/[\u0591-\u05AF]/g, '');
+  return text.replace(/[\u0591-\u05AF]/g, "");
 }
 
 /**
  * Strip meteg (U+05BD) from Hebrew text
  */
 export function stripMeteg(text: string): string {
-  return text.replace(/\u05BD/g, '');
+  return text.replace(/\u05BD/g, "");
 }
 
 /**
@@ -265,14 +274,17 @@ export function stripMeteg(text: string): string {
  * Converts maqaf (־) into a plain separator space for frontend readability.
  */
 export function removeMaqafForDisplay(text: string): string {
-  return text.replace(/\u05BE/g, " ").replace(/\s+/g, " ").trim();
+  return text
+    .replace(/\u05BE/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 /**
  * Normalize Hebrew display text and remove bidi control characters
  */
 export function normalizeHebrewDisplay(text: string): string {
-  return text.normalize('NFC').replace(HEBREW_BIDI_CONTROLS, '');
+  return text.normalize("NFC").replace(HEBREW_BIDI_CONTROLS, "");
 }
 
 /**

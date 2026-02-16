@@ -99,12 +99,12 @@ export function VerseDisplay({
             .split(" ")
             .filter(Boolean)
             .map((word, index) => ({
-            position: index + 1,
-            text: word,
-            text_no_nikud: word,
-            prefixes: [],
-            has_dss_variant: false,
-          }));
+              position: index + 1,
+              text: word,
+              text_no_nikud: word,
+              prefixes: [],
+              has_dss_variant: false,
+            }));
 
     const normalizeForMatch = (text: string) => {
       let normalized = stripNikud(text);
@@ -266,7 +266,7 @@ export function VerseDisplay({
           >
             {language === "es" && !translation.trim()
               ? spanishMissingTranslation
-              : renderTranslation(translation || '', {
+              : renderTranslation(translation || "", {
                   hideSuperscripts,
                 })}
           </div>
