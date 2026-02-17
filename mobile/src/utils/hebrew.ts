@@ -300,3 +300,23 @@ export function normalizeHebrewDisplay(text: string): string {
 export function normalizeHebrew(text: string): string {
   return stripCantillation(stripNikud(text));
 }
+
+/**
+ * Split a Hebrew text cluster into head (first consonant) and tail (vowel marks and remaining chars)
+ * This is useful for fine-grained coloring of prefix letters.
+ */
+export function splitLeadingHebrewCluster(text: string): {
+  head: string;
+  tail: string;
+} {
+  if (!text) {
+    return { head: "", tail: "" };
+  }
+
+  // Head is just the first consonant (no marks)
+  // Tail is all the rest (marks + any other characters)
+  const head = text[0];
+  const tail = text.slice(1);
+
+  return { head, tail };
+}

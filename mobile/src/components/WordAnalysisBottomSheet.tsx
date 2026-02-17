@@ -33,6 +33,7 @@ import {
   normalizeHebrewDisplay,
   removeMaqafForDisplay,
   removeSofPasukForDisplay,
+  splitLeadingHebrewCluster,
 } from "@/src/utils/hebrew";
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
@@ -951,7 +952,18 @@ const WordAnalysisBottomSheetComponent = (
             {/* Header: Hebrew word + transliteration */}
             <View style={styles.headerSection}>
               <Text style={[styles.hebrew, isQumranTab && styles.hebrewQumran]}>
-                {displayHebrew}
+                {prefixSegments.prefixes.length > 0 && !isQumranTab ? (
+                  <>
+                    <Text style={{ color: colors.textSecondary }}>
+                      {prefixSegments.prefixes.join("")}
+                    </Text>
+                    <Text style={{ color: colors.textPrimary }}>
+                      {prefixSegments.root}
+                    </Text>
+                  </>
+                ) : (
+                  displayHebrew
+                )}
               </Text>
               {wordTransliteration ? (
                 <Text style={styles.transliteration}>
@@ -1096,6 +1108,8 @@ const WordAnalysisBottomSheetComponent = (
                           prefixSegments.prefixes[index]?.replace(/\//g, "") ??
                           entry?.main_form ??
                           "";
+                        const { head: prefixHead, tail: prefixTail } =
+                          splitLeadingHebrewCluster(prefixText);
 
                         return (
                           <View
@@ -1103,7 +1117,18 @@ const WordAnalysisBottomSheetComponent = (
                             style={styles.prefixItem}
                           >
                             <Text style={styles.prefixHebrew}>
-                              {prefixText}
+                              {prefixHead && (
+                                <>
+                                  <Text style={{ color: colors.textSecondary }}>
+                                    {prefixHead}
+                                  </Text>
+                                  {prefixTail.length > 0 && (
+                                    <Text style={{ color: colors.textPrimary }}>
+                                      {prefixTail}
+                                    </Text>
+                                  )}
+                                </>
+                              )}
                             </Text>
                             {transliteration ? (
                               <Text style={styles.prefixTransliteration}>
