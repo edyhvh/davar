@@ -922,7 +922,7 @@ const WordAnalysisBottomSheetComponent = (
       backdropComponent={renderBackdrop}
       animateOnMount={false}
     >
-      <BottomSheetScrollView
+          <BottomSheetScrollView
         style={styles.content}
         contentContainerStyle={{ paddingBottom: spacing[8] + insets.bottom }}
       >

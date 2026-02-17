@@ -145,7 +145,7 @@ export const VerseSelectorSheet = ({
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const snapPoints = useMemo(() => ["60%", "85%"], []);
+  const snapPoints = useMemo(() => ["65%"], []);
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -202,10 +202,13 @@ export const VerseSelectorSheet = ({
       index={-1}
       snapPoints={snapPoints}
       enablePanDownToClose
+      enableContentPanningGesture={false}
       backgroundStyle={styles.sheetBackground}
       handleIndicatorStyle={styles.handleIndicator}
       backdropComponent={renderBackdrop}
       onChange={handleSheetChanges}
+      keyboardBehavior="extend"
+      keyboardBlurBehavior="none"
     >
       <BottomSheetView style={styles.sheetContent}>
         <View style={styles.header}>

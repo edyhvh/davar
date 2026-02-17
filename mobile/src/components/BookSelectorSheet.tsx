@@ -141,7 +141,7 @@ export const BookSelectorSheet = ({
   const language = useAppStore((state: AppState) => state.language);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const snapPoints = useMemo(() => ["70%", "90%"], []);
+  const snapPoints = useMemo(() => ["75%"], []);
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
   const [booksMeta, setBooksMeta] = useState<BookResponse[]>([]);
@@ -203,7 +203,6 @@ export const BookSelectorSheet = ({
 
   const handleSheetChanges = useCallback(
     (index: number) => {
-      console.debug("BookSelectorSheet onChange", { index });
       if (index === -1) {
         setSearchQuery("");
         setIsOpen(false);
@@ -265,12 +264,13 @@ export const BookSelectorSheet = ({
       index={-1}
       snapPoints={snapPoints}
       enablePanDownToClose
+      enableContentPanningGesture={false}
       backgroundStyle={styles.sheetBackground}
       handleIndicatorStyle={styles.sheetHandle}
       onChange={handleSheetChanges}
       backdropComponent={renderBackdrop}
-      keyboardBehavior="interactive"
-      keyboardBlurBehavior="restore"
+      keyboardBehavior="extend"
+      keyboardBlurBehavior="none"
     >
       <View style={styles.header}>
         <View style={styles.titleRow}>

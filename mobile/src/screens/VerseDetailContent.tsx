@@ -329,9 +329,14 @@ export const VerseDetailContent = () => {
     [orderedVerses, setCurrentVerseId, bookId, chapter],
   );
 
+  // Track when a word was just selected to prevent race condition with sheet's onClose
+  const justSelectedWordRef = useRef(false);
+
   const handleWordPress = useCallback((word: typeof selectedWord) => {
     // Close navigation sheet if it's open
     navigationSheetRef.current?.close();
+    // Mark that we just selected a word to prevent onClosed from clearing it
+    justSelectedWordRef.current = true;
     setSelectedWord(word);
   }, []);
 
@@ -341,6 +346,17 @@ export const VerseDetailContent = () => {
       sheetRef.current.snapToIndex(0);
     }
   }, [selectedWord]);
+
+  // Handle sheet close - only clear selectedWord if it wasn't just set
+  const handleSheetClosed = useCallback(() => {
+    if (justSelectedWordRef.current) {
+      // A new word was just selected, don't clear it
+      justSelectedWordRef.current = false;
+      return;
+    }
+    // Normal close (user swiped down or tapped backdrop) - clear the selection
+    setSelectedWord(null);
+  }, []);
 
   const handleBackgroundPress = useCallback(() => {
     animatePill(true);
@@ -530,7 +546,7 @@ export const VerseDetailContent = () => {
         ref={sheetRef}
         word={selectedWord}
         currentVerseId={currentVerseId}
-        onClosed={() => setSelectedWord(null)}
+        onClosed={handleSheetClosed}
       />
       <NavigationSheet
         ref={navigationSheetRef}

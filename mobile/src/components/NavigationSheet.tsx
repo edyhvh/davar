@@ -27,6 +27,7 @@ import {
 import { fetchMetadata } from "@/src/services/metadata";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
+import { formatBookDisplayName } from "../utils/bookNameFormatter";
 
 type NavigationSheetProps = {
   currentBookId: string;
@@ -311,7 +312,7 @@ const NavigationSheetComponent = (
     const query = searchQuery.toLowerCase();
     return booksMeta.filter(
       (book) =>
-        book.name.toLowerCase().includes(query) ||
+        formatBookDisplayName(book.name).toLowerCase().includes(query) ||
         stripNikud(book.hebrewName).includes(query) ||
         book.hebrewName.includes(query),
     );
@@ -413,7 +414,9 @@ const NavigationSheetComponent = (
               : getNeumorphShadowStyle("raised", colors),
           ]}
         >
-          <Text style={styles.bookEnglish}>{item.name}</Text>
+          <Text style={styles.bookEnglish}>
+            {formatBookDisplayName(item.name)}
+          </Text>
           <Text style={styles.bookHebrew}>{stripNikud(item.hebrewName)}</Text>
         </Pressable>
       );
@@ -460,13 +463,17 @@ const NavigationSheetComponent = (
   );
 
   const getTitle = () => {
+    const selectedBookName = selectedBook
+      ? formatBookDisplayName(selectedBook.name)
+      : "";
+
     switch (step) {
       case "book":
         return t("navigation.selectBook");
       case "chapter":
-        return selectedBook?.name ?? t("navigation.selectChapter");
+        return selectedBookName || t("navigation.selectChapter");
       case "verse":
-        return `${selectedBook?.name ?? ""} ${selectedChapter}`;
+        return `${selectedBookName} ${selectedChapter}`;
     }
   };
 
@@ -478,6 +485,7 @@ const NavigationSheetComponent = (
       ref={sheetRef}
       index={-1}
       snapPoints={snapPoints}
+      enableDynamicSizing={false}
       enablePanDownToClose
       backgroundStyle={styles.sheetBackground}
       handleIndicatorStyle={styles.sheetHandle}
