@@ -14,6 +14,8 @@ import {
   stripCantillation,
   stripMeteg,
   getPrefixSegments,
+  removeMaqafForDisplay,
+  removeSofPasukForDisplay,
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
 import { useTranslation } from "../hooks/useTranslation";
@@ -49,6 +51,7 @@ interface VerseDisplayProps {
   onSwipeUp?: () => void;
   onSwipeDown?: () => void;
   translation_footnotes?: TranslationFootnote[];
+  isBesorah?: boolean;
 }
 
 export function VerseDisplay({
@@ -78,6 +81,7 @@ export function VerseDisplay({
   onSwipeUp,
   onSwipeDown,
   translation_footnotes,
+  isBesorah = false,
 }: VerseDisplayProps) {
   const { t } = useTranslation(language);
   const spanishMissingTranslation = t("verse.missingSpanishTranslation");
@@ -94,19 +98,23 @@ export function VerseDisplay({
     const sourceWords =
       words.length > 0
         ? words
-        : hebrewText.split(" ").map((word, index) => ({
-            position: index + 1,
-            text: word,
-            text_no_nikud: word,
-            prefixes: [],
-            has_dss_variant: false,
-          }));
+        : removeMaqafForDisplay(hebrewText)
+            .split(" ")
+            .filter(Boolean)
+            .map((word, index) => ({
+              position: index + 1,
+              text: word,
+              text_no_nikud: word,
+              prefixes: [],
+              has_dss_variant: false,
+            }));
 
     const normalizeForMatch = (text: string) => {
       let normalized = stripNikud(text);
       normalized = stripCantillation(normalized);
       normalized = stripMeteg(normalized);
-      return normalized.replace(/\//g, "");
+      normalized = normalized.replace(/\//g, "");
+      return normalized.replace(/\u05BE/g, "");
     };
 
     const normalizedSelected = selectedWord
@@ -128,6 +136,10 @@ export function VerseDisplay({
       displayText = stripMeteg(displayText);
       // Remove "/" separators from display
       displayText = displayText.replace(/\//g, "");
+      displayText = removeMaqafForDisplay(displayText);
+      if (isBesorah) {
+        displayText = removeSofPasukForDisplay(displayText);
+      }
 
       // Always compare against the original Masoretic word text, not the
       // display text which may be a DSS variant.
@@ -213,6 +225,7 @@ export function VerseDisplay({
           selectedWord={selectedWord}
           showNikud={showNikud}
           showCantillation={showCantillation}
+          isBesorah={isBesorah}
         />
       </div>
     );
@@ -260,7 +273,7 @@ export function VerseDisplay({
           >
             {language === "es" && !translation.trim()
               ? spanishMissingTranslation
-              : renderTranslation(translation || '', {
+              : renderTranslation(translation || "", {
                   hideSuperscripts,
                 })}
           </div>

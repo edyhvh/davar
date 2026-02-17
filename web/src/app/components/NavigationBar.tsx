@@ -14,6 +14,7 @@ import { FaThList } from "react-icons/fa";
 import { NeumorphCard } from "./NeumorphCard";
 import { NeumorphicToggle } from "./NeumorphicToggle";
 import { useTranslation } from "../hooks/useTranslation";
+import { formatBookDisplayName } from "../utils/bookNameFormatter";
 
 interface NavigationBarProps {
   book: string;
@@ -519,7 +520,7 @@ export function NavigationBar({
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 <span className="text-xs tracking-[0.2em] uppercase">
-                  {language === "es" ? item.spanish : item.name}
+                  {language === "es" ? formatBookDisplayName(item.spanish) : formatBookDisplayName(item.name)}
                 </span>
                 <span
                   className="text-sm"

@@ -1,9 +1,17 @@
-import { getTranslationKey, shouldHideSuperscripts, type AppLanguage } from "./translationConfig";
+import {
+  getTranslationKey,
+  shouldHideSuperscripts,
+  type AppLanguage,
+} from "./translationConfig";
 
 const superscriptPattern = /[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g;
+const bracketFootnotePattern = /\[([a-z0-9]+)\]/gi;
 
-const stripSuperscripts = (value: string): string =>
-  value.replace(superscriptPattern, "");
+const stripSuperscripts = (value: string): string => {
+  let result = value.replace(superscriptPattern, "");
+  result = result.replace(bracketFootnotePattern, "");
+  return result;
+};
 
 type TranslationDisplayInput = {
   language: AppLanguage;

@@ -13,6 +13,7 @@ import {
   type TranslationRow,
   type DssVariantRow,
 } from "@/src/services/database";
+import { removeMaqafForDisplay } from "@/src/utils/hebrew";
 
 export type DisplayWord = {
   position: number;
@@ -91,7 +92,7 @@ const mapApiVersesToDisplay = (
       bookId,
       chapter: verse.chapter,
       verse: verse.verse,
-      hebrew: verse.hebrew,
+      hebrew: removeMaqafForDisplay(verse.hebrew),
       translation: verse.translation ?? "",
       words,
       qumranVariants,
@@ -168,7 +169,10 @@ const mapOfflineDataToDisplay = (
     }));
 
     // Reconstruct hebrew text from words if not stored directly
-    const hebrew = words.map((w) => w.text).join(" ");
+    const hebrew = words
+      .map((word) => removeMaqafForDisplay(word.text))
+      .filter(Boolean)
+      .join(" ");
 
     // Parse footnotes from translation row
     let translationFootnotes: TranslationFootnote[] | undefined;

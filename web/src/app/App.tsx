@@ -50,6 +50,7 @@ import {
 import type { ReadingStateV2 } from "./utils/storageHelpers";
 import { useTranslation } from "./hooks/useTranslation";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
+import { formatBookDisplayName } from "./utils/bookNameFormatter";
 
 type Screen =
   | "home"
@@ -338,9 +339,9 @@ export default function App() {
       (item) => item.name.toLowerCase() === book.toLowerCase(),
     );
     if (language === "es") {
-      return found?.spanish_name || book;
+      return formatBookDisplayName(found?.spanish_name || book);
     }
-    return book;
+    return formatBookDisplayName(book);
   };
 
   const tabTitle = useMemo(() => {
@@ -441,6 +442,8 @@ export default function App() {
       } else {
         setIsWordPanelDismissed(true);
         setSelectedWord(null);
+        setLastSelectedWordAnalysis(null);
+        setLastSelectedDssAnalysis(null);
       }
       return;
     }
@@ -537,6 +540,14 @@ export default function App() {
         })),
     [books],
   );
+  const currentBookMeta = useMemo(
+    () =>
+      books.find(
+        (item) => item.name.toLowerCase() === currentBook.toLowerCase(),
+      ) ?? null,
+    [books, currentBook],
+  );
+  const isBesorah = currentBookMeta?.section === "besorah";
 
   useEffect(() => {
     let isMounted = true;
@@ -585,6 +596,12 @@ export default function App() {
     if (pending.screen !== "verse") {
       setCurrentScreen(pending.screen);
       pendingRouteRef.current = null;
+      return;
+    }
+
+    // Wait for books to load before processing verse routes with a book
+    // This prevents showing 404 when the page reloads before books are fetched
+    if (pending.book && books.length === 0) {
       return;
     }
 
@@ -740,6 +757,7 @@ export default function App() {
     const loadWordAnalysis = async () => {
       if (!selectedWord?.strong) {
         setSelectedWordAnalysis(null);
+        setLastSelectedWordAnalysis(null);
         setIsWordAnalysisLoading(false);
         return;
       }
@@ -751,6 +769,7 @@ export default function App() {
 
       if (!strongPart) {
         setSelectedWordAnalysis(null);
+        setLastSelectedWordAnalysis(null);
         setIsWordAnalysisLoading(false);
         return;
       }
@@ -773,6 +792,7 @@ export default function App() {
             setCurrentScreen("connectionError");
           }
           setSelectedWordAnalysis(null);
+          setLastSelectedWordAnalysis(null);
           setIsWordAnalysisLoading(false);
         }
       }
@@ -789,6 +809,7 @@ export default function App() {
       const dssStrong = selectedDssVariant?.dss_strong ?? null;
       if (!dssStrong) {
         setSelectedDssAnalysis(null);
+        setLastSelectedDssAnalysis(null);
         setIsDssAnalysisLoading(false);
         return;
       }
@@ -800,6 +821,7 @@ export default function App() {
 
       if (!strongPart) {
         setSelectedDssAnalysis(null);
+        setLastSelectedDssAnalysis(null);
         setIsDssAnalysisLoading(false);
         return;
       }
@@ -822,6 +844,7 @@ export default function App() {
             setCurrentScreen("connectionError");
           }
           setSelectedDssAnalysis(null);
+          setLastSelectedDssAnalysis(null);
           setIsDssAnalysisLoading(false);
         }
       }
@@ -867,16 +890,16 @@ export default function App() {
   }, [currentScreen]);
 
   useEffect(() => {
-    if (selectedWord && selectedWordAnalysis) {
+    if (selectedWordAnalysis) {
       setLastSelectedWordAnalysis(selectedWordAnalysis);
     }
-  }, [selectedWord, selectedWordAnalysis]);
+  }, [selectedWordAnalysis]);
 
   useEffect(() => {
-    if (selectedWord && selectedDssAnalysis) {
+    if (selectedDssAnalysis) {
       setLastSelectedDssAnalysis(selectedDssAnalysis);
     }
-  }, [selectedWord, selectedDssAnalysis]);
+  }, [selectedDssAnalysis]);
 
   const isSplitView = Boolean(
     !isMobile && (selectedWord || isNavigatingWordPanel),
@@ -1291,6 +1314,7 @@ export default function App() {
                       words={currentVerseData.words}
                       dssVariants={currentVerseData.dss}
                       selectedWord={selectedWord?.text ?? null}
+                      isBesorah={isBesorah}
                       translation_footnotes={
                         currentVerseData.translation_footnotes
                       }
@@ -1470,6 +1494,7 @@ export default function App() {
                             isQumranLoading={Boolean(
                               selectedWord && isDssAnalysisLoading,
                             )}
+                            isBesorah={isBesorah}
                           />
                         ) : isNavigatingWordPanel ? (
                           <div className="h-40" />
@@ -1587,6 +1612,7 @@ export default function App() {
                 onClose={closeWordSheet}
                 isLoading={!selectedWordAnalysis}
                 isQumranLoading={Boolean(isDssAnalysisLoading)}
+                isBesorah={isBesorah}
               />
             );
           })()}

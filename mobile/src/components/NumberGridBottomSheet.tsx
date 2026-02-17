@@ -87,7 +87,7 @@ export const NumberGridBottomSheet = ({
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const snapPoints = useMemo(() => ["45%"], []);
+  const snapPoints = useMemo(() => ["55%"], []);
 
   const paddedNumbers = useMemo(() => {
     const remainder = numbers.length % COLUMN_COUNT;
@@ -117,9 +117,12 @@ export const NumberGridBottomSheet = ({
       index={-1}
       snapPoints={snapPoints}
       enablePanDownToClose
+      enableContentPanningGesture={false}
       backgroundStyle={styles.sheetBackground}
       handleIndicatorStyle={styles.handleIndicator}
       backdropComponent={renderBackdrop}
+      keyboardBehavior="extend"
+      keyboardBlurBehavior="none"
     >
       <BottomSheetView style={styles.sheetContent}>
         <Text style={styles.title}>{title}</Text>

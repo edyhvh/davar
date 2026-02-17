@@ -7,7 +7,10 @@ Parses Hebrew text with embedded <S>NNNN</S> Strong's tags from SQLite database.
 import re
 from typing import Dict, List, Optional, Tuple
 
-from hebrew_utils import strip_nikud
+try:
+    from .hebrew_utils import strip_nikud
+except ImportError:
+    from hebrew_utils import strip_nikud
 
 
 class TextParser:
@@ -126,11 +129,15 @@ class TextParser:
         """
         # Remove all <S>number</S> tags (including empty ones)
         clean_text = re.sub(r'<S>\d*</S>', '', verse_text)
+        # Fix maqef spacing: remove spaces after maqef (־) characters
+        # This fixes words like "עַל־ כֹּל" that should be "עַל־כֹּל"
+        clean_text = re.sub(r'־\s+', '־', clean_text)
         return clean_text.strip()
 
 
 # Singleton instance
 _parser_instance = None
+
 
 def get_text_parser() -> TextParser:
     """Get singleton text parser instance"""

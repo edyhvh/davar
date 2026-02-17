@@ -38,6 +38,7 @@ import {
 } from "@/src/services/scripture";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
+import { formatBookDisplayName } from "../utils/bookNameFormatter";
 
 type TabPressEvent = {
   preventDefault: () => void;
@@ -68,6 +69,7 @@ type VersePageProps = {
   pageHeight: number;
   showWordHint: boolean;
   isSelectedVerse: boolean;
+  isBesorah: boolean;
   onVersePress: () => void;
   onWordPress: (word: DisplayVerse["words"][number] | null) => void;
   onBackgroundPress: () => void;
@@ -78,13 +80,14 @@ const VersePage = ({
   pageHeight,
   showWordHint,
   isSelectedVerse,
+  isBesorah,
   onVersePress,
   onWordPress,
   onBackgroundPress,
 }: VersePageProps) => {
   const [contentHeight, setContentHeight] = useState(0);
   const horizontalPadding = spacing[4];
-  const topPadding = spacing[16] + spacing[8];
+  const topPadding = spacing[16] + spacing[12];
   const bottomPadding = spacing[8];
   const verticalPadding = topPadding + bottomPadding;
   const availableHeight = Math.max(0, pageHeight - verticalPadding);
@@ -104,6 +107,7 @@ const VersePage = ({
         verse={item}
         variant="detail"
         showWordHint={showWordHint && isSelectedVerse}
+        isBesorah={isBesorah}
         onVersePress={onVersePress}
         onWordPress={onWordPress}
       />
@@ -218,6 +222,7 @@ export const VerseDetailContent = () => {
       booksMeta.find((book) => book.id === (verse?.bookId ?? bookId)) ?? null,
     [bookId, booksMeta, verse?.bookId],
   );
+  const isBesorah = bookMeta?.section === "besorah";
 
   const bookVerses = useMemo(() => chapterVerses, [chapterVerses]);
   const orderedVerses = useMemo(
@@ -328,9 +333,14 @@ export const VerseDetailContent = () => {
     [orderedVerses, setCurrentVerseId, bookId, chapter],
   );
 
+  // Track when a word was just selected to prevent race condition with sheet's onClose
+  const justSelectedWordRef = useRef(false);
+
   const handleWordPress = useCallback((word: typeof selectedWord) => {
     // Close navigation sheet if it's open
     navigationSheetRef.current?.close();
+    // Mark that we just selected a word to prevent onClosed from clearing it
+    justSelectedWordRef.current = true;
     setSelectedWord(word);
   }, []);
 
@@ -340,6 +350,17 @@ export const VerseDetailContent = () => {
       sheetRef.current.snapToIndex(0);
     }
   }, [selectedWord]);
+
+  // Handle sheet close - only clear selectedWord if it wasn't just set
+  const handleSheetClosed = useCallback(() => {
+    if (justSelectedWordRef.current) {
+      // A new word was just selected, don't clear it
+      justSelectedWordRef.current = false;
+      return;
+    }
+    // Normal close (user swiped down or tapped backdrop) - clear the selection
+    setSelectedWord(null);
+  }, []);
 
   const handleBackgroundPress = useCallback(() => {
     animatePill(true);
@@ -454,7 +475,11 @@ export const VerseDetailContent = () => {
               }}
             >
               <BookChapterPill
-                bookLabel={bookMeta?.name ?? t("common.loading")}
+                bookLabel={formatBookDisplayName(
+                  language === "es"
+                    ? (bookMeta?.spanish_name ?? t("common.loading"))
+                    : (bookMeta?.name ?? t("common.loading")),
+                )}
                 hebrewLabel={bookMeta?.hebrew_name ?? ""}
                 chapter={verse?.chapter ?? chapter}
                 onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
@@ -496,6 +521,7 @@ export const VerseDetailContent = () => {
                 pageHeight={pageHeight}
                 showWordHint={showWordHint}
                 isSelectedVerse={item.id === verse?.id}
+                isBesorah={isBesorah}
                 onVersePress={() => navigationSheetRef.current?.snapToIndex(0)}
                 onWordPress={handleWordPress}
                 onBackgroundPress={handleBackgroundPress}
@@ -523,7 +549,8 @@ export const VerseDetailContent = () => {
         ref={sheetRef}
         word={selectedWord}
         currentVerseId={currentVerseId}
-        onClosed={() => setSelectedWord(null)}
+        isBesorah={isBesorah}
+        onClosed={handleSheetClosed}
       />
       <NavigationSheet
         ref={navigationSheetRef}

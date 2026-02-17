@@ -31,6 +31,9 @@ import {
   getPrefixSegments,
   stripMeteg,
   normalizeHebrewDisplay,
+  removeMaqafForDisplay,
+  removeSofPasukForDisplay,
+  splitLeadingHebrewCluster,
 } from "@/src/utils/hebrew";
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
@@ -50,6 +53,7 @@ type PrefixResponse = {
 
 type WordAnalysisBottomSheetProps = {
   currentVerseId?: string;
+  isBesorah?: boolean;
   word?:
     | (DisplayWord & {
         meanings?: string[];
@@ -447,7 +451,12 @@ const parseVerseReference = (ref: string): string | null => {
 };
 
 const WordAnalysisBottomSheetComponent = (
-  { word, currentVerseId, onClosed }: WordAnalysisBottomSheetProps,
+  {
+    word,
+    currentVerseId,
+    isBesorah = false,
+    onClosed,
+  }: WordAnalysisBottomSheetProps,
   ref: React.ForwardedRef<BottomSheetMethods>,
 ) => {
   const sheetRef = useRef<BottomSheetMethods | null>(null);
@@ -572,9 +581,16 @@ const WordAnalysisBottomSheetComponent = (
       base = stripCantillation(base);
     }
     base = stripMeteg(base);
-    return normalizeHebrewDisplay(base).replace(/\//g, "");
+    base = removeMaqafForDisplay(
+      normalizeHebrewDisplay(base).replace(/\//g, ""),
+    );
+    if (isBesorah) {
+      base = removeSofPasukForDisplay(base);
+    }
+    return base;
   }, [
     activeTab,
+    isBesorah,
     lexiconEntry?.hebrew,
     word?.dssWord,
     word?.text,
@@ -796,11 +812,10 @@ const WordAnalysisBottomSheetComponent = (
         .filter(Boolean);
     } else if (!word) {
       return ["—"];
-    } else if (
-      word.morph?.includes("Np") ||
-      (!word.meanings?.length && !word.gloss)
-    ) {
+    } else if (word.morph?.includes("Np")) {
       return [t("wordCard.properName")];
+    } else if (!word.meanings?.length && !word.gloss) {
+      return [t("wordCard.definitionNotAvailable")];
     } else {
       const meanings = word.meanings?.length ? word.meanings : [word.gloss];
       // If user language is not Hebrew, prefer Latin-script meanings to avoid mixing languages
@@ -937,7 +952,18 @@ const WordAnalysisBottomSheetComponent = (
             {/* Header: Hebrew word + transliteration */}
             <View style={styles.headerSection}>
               <Text style={[styles.hebrew, isQumranTab && styles.hebrewQumran]}>
-                {displayHebrew}
+                {prefixSegments.prefixes.length > 0 && !isQumranTab ? (
+                  <>
+                    <Text style={{ color: colors.textSecondary }}>
+                      {prefixSegments.prefixes.join("")}
+                    </Text>
+                    <Text style={{ color: colors.textPrimary }}>
+                      {prefixSegments.root}
+                    </Text>
+                  </>
+                ) : (
+                  displayHebrew
+                )}
               </Text>
               {wordTransliteration ? (
                 <Text style={styles.transliteration}>
@@ -1082,6 +1108,8 @@ const WordAnalysisBottomSheetComponent = (
                           prefixSegments.prefixes[index]?.replace(/\//g, "") ??
                           entry?.main_form ??
                           "";
+                        const { head: prefixHead, tail: prefixTail } =
+                          splitLeadingHebrewCluster(prefixText);
 
                         return (
                           <View
@@ -1089,7 +1117,18 @@ const WordAnalysisBottomSheetComponent = (
                             style={styles.prefixItem}
                           >
                             <Text style={styles.prefixHebrew}>
-                              {prefixText}
+                              {prefixHead && (
+                                <>
+                                  <Text style={{ color: colors.textSecondary }}>
+                                    {prefixHead}
+                                  </Text>
+                                  {prefixTail.length > 0 && (
+                                    <Text style={{ color: colors.textPrimary }}>
+                                      {prefixTail}
+                                    </Text>
+                                  )}
+                                </>
+                              )}
                             </Text>
                             {transliteration ? (
                               <Text style={styles.prefixTransliteration}>
