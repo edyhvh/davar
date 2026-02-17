@@ -22,23 +22,6 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       paddingBottom: spacing[5],
       marginBottom: spacing[5],
     },
-    backButton: {
-      alignSelf: "flex-start",
-      borderRadius: radii.full,
-      borderWidth: 1,
-      borderColor: colors.border,
-      paddingHorizontal: spacing[4],
-      paddingVertical: spacing[2],
-      marginBottom: spacing[3],
-      backgroundColor: "transparent",
-    },
-    backText: {
-      fontFamily: "Jost_400Regular",
-      fontSize: typography.sizes.bodySmall,
-      color: colors.textPrimary,
-      letterSpacing: 1.6,
-      textTransform: "uppercase",
-    },
     title: {
       fontFamily: "Jost_400Regular",
       fontSize: 30,
@@ -141,9 +124,6 @@ export function SourcesScreen() {
       <View style={styles.container}>
         <ScrollView>
           <View style={styles.header}>
-            <Pressable onPress={() => router.back()} style={styles.backButton}>
-              <Text style={styles.backText}>{t("navigation.backToApp")}</Text>
-            </Pressable>
             <Text style={styles.title}>{t("home.about.items.sources")}</Text>
           </View>
 
