@@ -450,7 +450,12 @@ const parseVerseReference = (ref: string): string | null => {
 };
 
 const WordAnalysisBottomSheetComponent = (
-  { word, currentVerseId, isBesorah = false, onClosed }: WordAnalysisBottomSheetProps,
+  {
+    word,
+    currentVerseId,
+    isBesorah = false,
+    onClosed,
+  }: WordAnalysisBottomSheetProps,
   ref: React.ForwardedRef<BottomSheetMethods>,
 ) => {
   const sheetRef = useRef<BottomSheetMethods | null>(null);
@@ -575,7 +580,9 @@ const WordAnalysisBottomSheetComponent = (
       base = stripCantillation(base);
     }
     base = stripMeteg(base);
-    base = removeMaqafForDisplay(normalizeHebrewDisplay(base).replace(/\//g, ""));
+    base = removeMaqafForDisplay(
+      normalizeHebrewDisplay(base).replace(/\//g, ""),
+    );
     if (isBesorah) {
       base = removeSofPasukForDisplay(base);
     }
@@ -929,7 +936,7 @@ const WordAnalysisBottomSheetComponent = (
       backdropComponent={renderBackdrop}
       animateOnMount={false}
     >
-          <BottomSheetScrollView
+      <BottomSheetScrollView
         style={styles.content}
         contentContainerStyle={{ paddingBottom: spacing[8] + insets.bottom }}
       >

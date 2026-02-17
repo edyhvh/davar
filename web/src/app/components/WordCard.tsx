@@ -123,8 +123,12 @@ export function WordCard({
       ? displayedData.qumranWord
       : displayedData.word;
   let displayWord = showNikud
-    ? removeMaqafForDisplay(normalizeHebrewDisplay(stripMeteg(stripCantillation(headerWord))))
-    : removeMaqafForDisplay(normalizeHebrewDisplay(normalizeHebrew(headerWord)));
+    ? removeMaqafForDisplay(
+        normalizeHebrewDisplay(stripMeteg(stripCantillation(headerWord))),
+      )
+    : removeMaqafForDisplay(
+        normalizeHebrewDisplay(normalizeHebrew(headerWord)),
+      );
   if (isBesorah) {
     displayWord = removeSofPasukForDisplay(displayWord);
   }
@@ -154,7 +158,12 @@ export function WordCard({
       displayBase = removeSofPasukForDisplay(displayBase);
     }
     return getPrefixSegments(displayBase, displayedData.prefixes);
-  }, [displayedData.prefixes, displayedData.wordFromVerse, isBesorah, showNikud]);
+  }, [
+    displayedData.prefixes,
+    displayedData.wordFromVerse,
+    isBesorah,
+    showNikud,
+  ]);
 
   const hasRootInfo = Boolean(
     displayedData.root ||
