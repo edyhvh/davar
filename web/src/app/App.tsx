@@ -442,6 +442,8 @@ export default function App() {
       } else {
         setIsWordPanelDismissed(true);
         setSelectedWord(null);
+        setLastSelectedWordAnalysis(null);
+        setLastSelectedDssAnalysis(null);
       }
       return;
     }
@@ -755,6 +757,7 @@ export default function App() {
     const loadWordAnalysis = async () => {
       if (!selectedWord?.strong) {
         setSelectedWordAnalysis(null);
+        setLastSelectedWordAnalysis(null);
         setIsWordAnalysisLoading(false);
         return;
       }
@@ -766,6 +769,7 @@ export default function App() {
 
       if (!strongPart) {
         setSelectedWordAnalysis(null);
+        setLastSelectedWordAnalysis(null);
         setIsWordAnalysisLoading(false);
         return;
       }
@@ -788,6 +792,7 @@ export default function App() {
             setCurrentScreen("connectionError");
           }
           setSelectedWordAnalysis(null);
+          setLastSelectedWordAnalysis(null);
           setIsWordAnalysisLoading(false);
         }
       }
@@ -804,6 +809,7 @@ export default function App() {
       const dssStrong = selectedDssVariant?.dss_strong ?? null;
       if (!dssStrong) {
         setSelectedDssAnalysis(null);
+        setLastSelectedDssAnalysis(null);
         setIsDssAnalysisLoading(false);
         return;
       }
@@ -815,6 +821,7 @@ export default function App() {
 
       if (!strongPart) {
         setSelectedDssAnalysis(null);
+        setLastSelectedDssAnalysis(null);
         setIsDssAnalysisLoading(false);
         return;
       }
@@ -837,6 +844,7 @@ export default function App() {
             setCurrentScreen("connectionError");
           }
           setSelectedDssAnalysis(null);
+          setLastSelectedDssAnalysis(null);
           setIsDssAnalysisLoading(false);
         }
       }
@@ -882,16 +890,16 @@ export default function App() {
   }, [currentScreen]);
 
   useEffect(() => {
-    if (selectedWord && selectedWordAnalysis) {
+    if (selectedWordAnalysis) {
       setLastSelectedWordAnalysis(selectedWordAnalysis);
     }
-  }, [selectedWord, selectedWordAnalysis]);
+  }, [selectedWordAnalysis]);
 
   useEffect(() => {
-    if (selectedWord && selectedDssAnalysis) {
+    if (selectedDssAnalysis) {
       setLastSelectedDssAnalysis(selectedDssAnalysis);
     }
-  }, [selectedWord, selectedDssAnalysis]);
+  }, [selectedDssAnalysis]);
 
   const isSplitView = Boolean(
     !isMobile && (selectedWord || isNavigatingWordPanel),
