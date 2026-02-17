@@ -1,4 +1,8 @@
-import { getTranslationKey, shouldHideSuperscripts, type AppLanguage } from "./translationConfig";
+import {
+  getTranslationKey,
+  shouldHideSuperscripts,
+  type AppLanguage,
+} from "./translationConfig";
 
 const superscriptPattern = /[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g;
 const bracketFootnotePattern = /\[([a-z0-9]+)\]/gi;
