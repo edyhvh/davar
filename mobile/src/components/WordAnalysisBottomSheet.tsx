@@ -811,11 +811,10 @@ const WordAnalysisBottomSheetComponent = (
         .filter(Boolean);
     } else if (!word) {
       return ["—"];
-    } else if (
-      word.morph?.includes("Np") ||
-      (!word.meanings?.length && !word.gloss)
-    ) {
+    } else if (word.morph?.includes("Np")) {
       return [t("wordCard.properName")];
+    } else if (!word.meanings?.length && !word.gloss) {
+      return [t("wordCard.definitionNotAvailable")];
     } else {
       const meanings = word.meanings?.length ? word.meanings : [word.gloss];
       // If user language is not Hebrew, prefer Latin-script meanings to avoid mixing languages
