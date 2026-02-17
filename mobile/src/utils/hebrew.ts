@@ -281,6 +281,13 @@ export function removeMaqafForDisplay(text: string): string {
 }
 
 /**
+ * Remove sof pasuk (׃) from Hebrew display text.
+ */
+export function removeSofPasukForDisplay(text: string): string {
+  return text.replace(/\u05C3/g, "");
+}
+
+/**
  * Normalize Hebrew display text and remove bidi control characters
  */
 export function normalizeHebrewDisplay(text: string): string {

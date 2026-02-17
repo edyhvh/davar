@@ -69,6 +69,7 @@ type VersePageProps = {
   pageHeight: number;
   showWordHint: boolean;
   isSelectedVerse: boolean;
+  isBesorah: boolean;
   onVersePress: () => void;
   onWordPress: (word: DisplayVerse["words"][number] | null) => void;
   onBackgroundPress: () => void;
@@ -79,6 +80,7 @@ const VersePage = ({
   pageHeight,
   showWordHint,
   isSelectedVerse,
+  isBesorah,
   onVersePress,
   onWordPress,
   onBackgroundPress,
@@ -105,6 +107,7 @@ const VersePage = ({
         verse={item}
         variant="detail"
         showWordHint={showWordHint && isSelectedVerse}
+        isBesorah={isBesorah}
         onVersePress={onVersePress}
         onWordPress={onWordPress}
       />
@@ -219,6 +222,7 @@ export const VerseDetailContent = () => {
       booksMeta.find((book) => book.id === (verse?.bookId ?? bookId)) ?? null,
     [bookId, booksMeta, verse?.bookId],
   );
+  const isBesorah = bookMeta?.section === "besorah";
 
   const bookVerses = useMemo(() => chapterVerses, [chapterVerses]);
   const orderedVerses = useMemo(
@@ -517,6 +521,7 @@ export const VerseDetailContent = () => {
                 pageHeight={pageHeight}
                 showWordHint={showWordHint}
                 isSelectedVerse={item.id === verse?.id}
+                isBesorah={isBesorah}
                 onVersePress={() => navigationSheetRef.current?.snapToIndex(0)}
                 onWordPress={handleWordPress}
                 onBackgroundPress={handleBackgroundPress}
@@ -544,6 +549,7 @@ export const VerseDetailContent = () => {
         ref={sheetRef}
         word={selectedWord}
         currentVerseId={currentVerseId}
+        isBesorah={isBesorah}
         onClosed={handleSheetClosed}
       />
       <NavigationSheet

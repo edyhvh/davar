@@ -19,6 +19,7 @@ import {
   stripNikud,
   stripMeteg,
   removeMaqafForDisplay,
+  removeSofPasukForDisplay,
 } from "@/src/utils/hebrew";
 import { useTranslation } from "@/src/i18n/useTranslation";
 import { getTranslationDisplayText } from "@/src/utils/translationDisplay";
@@ -68,6 +69,7 @@ type VerseCardProps = {
   onVersePress?: () => void;
   showWordHint?: boolean;
   variant?: "card" | "detail";
+  isBesorah?: boolean;
 };
 
 const createStyles = (
@@ -145,6 +147,7 @@ export const VerseCard = ({
   onVersePress,
   showWordHint = false,
   variant = "card",
+  isBesorah = false,
 }: VerseCardProps) => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const hebrewFontScale = useAppStore(
@@ -221,6 +224,9 @@ export const VerseCard = ({
           displayText = stripMeteg(displayText);
           displayText = displayText.replace(/\//g, "");
           displayText = removeMaqafForDisplay(displayText);
+          if (isBesorah) {
+            displayText = removeSofPasukForDisplay(displayText);
+          }
 
           const prefixSegments =
             qumranWord || !word.prefixes?.length

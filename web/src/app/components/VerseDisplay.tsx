@@ -15,6 +15,7 @@ import {
   stripMeteg,
   getPrefixSegments,
   removeMaqafForDisplay,
+  removeSofPasukForDisplay,
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
 import { useTranslation } from "../hooks/useTranslation";
@@ -50,6 +51,7 @@ interface VerseDisplayProps {
   onSwipeUp?: () => void;
   onSwipeDown?: () => void;
   translation_footnotes?: TranslationFootnote[];
+  isBesorah?: boolean;
 }
 
 export function VerseDisplay({
@@ -79,6 +81,7 @@ export function VerseDisplay({
   onSwipeUp,
   onSwipeDown,
   translation_footnotes,
+  isBesorah = false,
 }: VerseDisplayProps) {
   const { t } = useTranslation(language);
   const spanishMissingTranslation = t("verse.missingSpanishTranslation");
@@ -134,6 +137,9 @@ export function VerseDisplay({
       // Remove "/" separators from display
       displayText = displayText.replace(/\//g, "");
       displayText = removeMaqafForDisplay(displayText);
+      if (isBesorah) {
+        displayText = removeSofPasukForDisplay(displayText);
+      }
 
       // Always compare against the original Masoretic word text, not the
       // display text which may be a DSS variant.
@@ -219,6 +225,7 @@ export function VerseDisplay({
           selectedWord={selectedWord}
           showNikud={showNikud}
           showCantillation={showCantillation}
+          isBesorah={isBesorah}
         />
       </div>
     );

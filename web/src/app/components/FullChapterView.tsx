@@ -10,6 +10,7 @@ import {
   stripCantillation,
   stripMeteg,
   removeMaqafForDisplay,
+  removeSofPasukForDisplay,
 } from "../utils/hebrew";
 import { renderTranslation } from "../utils/translationFormatter";
 import { useTranslation } from "../hooks/useTranslation";
@@ -31,6 +32,7 @@ interface FullChapterViewProps {
   selectedWord?: string | null;
   showNikud?: boolean;
   showCantillation?: boolean;
+  isBesorah?: boolean;
 }
 
 export function FullChapterView({
@@ -46,6 +48,7 @@ export function FullChapterView({
   selectedWord,
   showNikud = true,
   showCantillation = true,
+  isBesorah = false,
 }: FullChapterViewProps) {
   const { t } = useTranslation(language);
   const shouldShowSefer = seferMode && hebrewOnly;
@@ -87,6 +90,9 @@ export function FullChapterView({
       // Remove "/" separators from display
       displayText = displayText.replace(/\//g, "");
       displayText = removeMaqafForDisplay(displayText);
+      if (isBesorah) {
+        displayText = removeSofPasukForDisplay(displayText);
+      }
 
       // Always compare against the original Masoretic word text, not the
       // display text which may be a DSS variant.

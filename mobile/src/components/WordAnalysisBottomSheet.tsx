@@ -32,6 +32,7 @@ import {
   stripMeteg,
   normalizeHebrewDisplay,
   removeMaqafForDisplay,
+  removeSofPasukForDisplay,
 } from "@/src/utils/hebrew";
 import { apiRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
@@ -51,6 +52,7 @@ type PrefixResponse = {
 
 type WordAnalysisBottomSheetProps = {
   currentVerseId?: string;
+  isBesorah?: boolean;
   word?:
     | (DisplayWord & {
         meanings?: string[];
@@ -448,7 +450,7 @@ const parseVerseReference = (ref: string): string | null => {
 };
 
 const WordAnalysisBottomSheetComponent = (
-  { word, currentVerseId, onClosed }: WordAnalysisBottomSheetProps,
+  { word, currentVerseId, isBesorah = false, onClosed }: WordAnalysisBottomSheetProps,
   ref: React.ForwardedRef<BottomSheetMethods>,
 ) => {
   const sheetRef = useRef<BottomSheetMethods | null>(null);
@@ -573,9 +575,14 @@ const WordAnalysisBottomSheetComponent = (
       base = stripCantillation(base);
     }
     base = stripMeteg(base);
-    return removeMaqafForDisplay(normalizeHebrewDisplay(base).replace(/\//g, ""));
+    base = removeMaqafForDisplay(normalizeHebrewDisplay(base).replace(/\//g, ""));
+    if (isBesorah) {
+      base = removeSofPasukForDisplay(base);
+    }
+    return base;
   }, [
     activeTab,
+    isBesorah,
     lexiconEntry?.hebrew,
     word?.dssWord,
     word?.text,

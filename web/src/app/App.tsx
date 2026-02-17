@@ -538,6 +538,14 @@ export default function App() {
         })),
     [books],
   );
+  const currentBookMeta = useMemo(
+    () =>
+      books.find(
+        (item) => item.name.toLowerCase() === currentBook.toLowerCase(),
+      ) ?? null,
+    [books, currentBook],
+  );
+  const isBesorah = currentBookMeta?.section === "besorah";
 
   useEffect(() => {
     let isMounted = true;
@@ -1298,6 +1306,7 @@ export default function App() {
                       words={currentVerseData.words}
                       dssVariants={currentVerseData.dss}
                       selectedWord={selectedWord?.text ?? null}
+                      isBesorah={isBesorah}
                       translation_footnotes={
                         currentVerseData.translation_footnotes
                       }
@@ -1477,6 +1486,7 @@ export default function App() {
                             isQumranLoading={Boolean(
                               selectedWord && isDssAnalysisLoading,
                             )}
+                            isBesorah={isBesorah}
                           />
                         ) : isNavigatingWordPanel ? (
                           <div className="h-40" />
@@ -1594,6 +1604,7 @@ export default function App() {
                 onClose={closeWordSheet}
                 isLoading={!selectedWordAnalysis}
                 isQumranLoading={Boolean(isDssAnalysisLoading)}
+                isBesorah={isBesorah}
               />
             );
           })()}

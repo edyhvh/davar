@@ -6,6 +6,7 @@ import {
   normalizeHebrew,
   normalizeHebrewDisplay,
   removeMaqafForDisplay,
+  removeSofPasukForDisplay,
   splitLeadingHebrewCluster,
   stripCantillation,
   stripMeteg,
@@ -47,6 +48,7 @@ interface WordCardProps {
   showNikud?: boolean;
   onClose?: () => void;
   tabResetKey?: number;
+  isBesorah?: boolean;
 }
 
 interface PrefixEntry {
@@ -90,6 +92,7 @@ export function WordCard({
   showNikud = true,
   onClose,
   tabResetKey,
+  isBesorah = false,
 }: WordCardProps) {
   const { t } = useTranslation(language);
   const [activeTab, setActiveTab] = useState<
@@ -119,9 +122,12 @@ export function WordCard({
     activeTab === "qumran" && displayedData.qumranWord
       ? displayedData.qumranWord
       : displayedData.word;
-  const displayWord = showNikud
+  let displayWord = showNikud
     ? removeMaqafForDisplay(normalizeHebrewDisplay(stripMeteg(stripCantillation(headerWord))))
     : removeMaqafForDisplay(normalizeHebrewDisplay(normalizeHebrew(headerWord)));
+  if (isBesorah) {
+    displayWord = removeSofPasukForDisplay(displayWord);
+  }
   const [prefixEntries, setPrefixEntries] = useState<
     Record<string, PrefixEntry | null>
   >({});
@@ -144,8 +150,11 @@ export function WordCard({
     if (!showNikud) {
       displayBase = normalizeHebrew(displayBase);
     }
+    if (isBesorah) {
+      displayBase = removeSofPasukForDisplay(displayBase);
+    }
     return getPrefixSegments(displayBase, displayedData.prefixes);
-  }, [displayedData.prefixes, displayedData.wordFromVerse, showNikud]);
+  }, [displayedData.prefixes, displayedData.wordFromVerse, isBesorah, showNikud]);
 
   const hasRootInfo = Boolean(
     displayedData.root ||
