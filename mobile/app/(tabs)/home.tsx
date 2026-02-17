@@ -450,6 +450,11 @@ export default function HomeScreen() {
               {(
                 [
                   {
+                    label: t("home.about.items.sources"),
+                    icon: "sources",
+                    onPress: () => router.push("/sources"),
+                  },
+                  {
                     label: t("home.about.items.terms"),
                     icon: "file",
                     onPress: () => router.push("/terms"),
