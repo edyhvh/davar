@@ -85,7 +85,7 @@ const VersePage = ({
 }: VersePageProps) => {
   const [contentHeight, setContentHeight] = useState(0);
   const horizontalPadding = spacing[4];
-  const topPadding = spacing[16] + spacing[8];
+  const topPadding = spacing[16] + spacing[12];
   const bottomPadding = spacing[8];
   const verticalPadding = topPadding + bottomPadding;
   const availableHeight = Math.max(0, pageHeight - verticalPadding);
@@ -471,13 +471,11 @@ export const VerseDetailContent = () => {
               }}
             >
               <BookChapterPill
-                bookLabel={
-                  formatBookDisplayName(
-                    language === "es"
-                      ? (bookMeta?.spanish_name ?? t("common.loading"))
-                      : (bookMeta?.name ?? t("common.loading"))
-                  )
-                }
+                bookLabel={formatBookDisplayName(
+                  language === "es"
+                    ? (bookMeta?.spanish_name ?? t("common.loading"))
+                    : (bookMeta?.name ?? t("common.loading")),
+                )}
                 hebrewLabel={bookMeta?.hebrew_name ?? ""}
                 chapter={verse?.chapter ?? chapter}
                 onBookPress={() => navigationSheetRef.current?.snapToIndex(0)}
