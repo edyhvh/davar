@@ -44,7 +44,7 @@ DEFAULT_LANGUAGE = 'es'
 
 # Grok API Configuration
 XAI_API_KEY = os.getenv('XAI_API_KEY')
-GROK_MODEL = 'grok-4'  # Fastest model: $0.10/1M input, $0.30/1M output
+GROK_MODEL = 'grok-4-1-fast-reasoning'  # Use the fast reasoning model
 
 # Paths (use parent config module)
 LEXICON_DIR = config.LEXICON_DIR

@@ -1,0 +1,2558 @@
+{
+  "book": "james",
+  "total_null_words": 274,
+  "total_assigned": 229,
+  "total_failed": 43,
+  "total_skipped": 2,
+  "chapters": [
+    {
+      "chapter": 1,
+      "assignments": [
+        {
+          "word_index": 6,
+          "text": "שֹׁאֵל",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7592",
+          "reason": "Root match (original): שָׁאַל"
+        },
+        {
+          "word_index": 11,
+          "text": "הַנְּפוֹצִים׃",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H6327",
+          "reason": "Root match (niphal): פּוּץ"
+        },
+        {
+          "word_index": 2,
+          "text": "חִשְׁבוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2803",
+          "reason": "Root match (suffix_3ms): חָשַׁב"
+        },
+        {
+          "word_index": 3,
+          "text": "לָכֶם",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 7,
+          "text": "בְּנִסְיֹנוֹת",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H5512",
+          "reason": "Root match (niphal): סִין"
+        },
+        {
+          "word_index": 0,
+          "text": "בְּדַעְתְּכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H1847",
+          "reason": "Derived match (suffix_2mp): דַּעַת"
+        },
+        {
+          "word_index": 6,
+          "text": "סַבְלָנוּת׃",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 0,
+          "text": "וְהַסַּבְלָנוּת",
+          "prefixes": [
+            "Hc",
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 3,
+          "text": "בְּפָעֳלָהּ",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H6468",
+          "reason": "Derived match (original): פְּעֻלָּה"
+        },
+        {
+          "word_index": 8,
+          "text": "תַחְסְרוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2637",
+          "reason": "Root match (minus_first): חָסֵר"
+        },
+        {
+          "word_index": 9,
+          "text": "בִּנְדִיבָה",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H5082",
+          "reason": "Derived match (original): נְדִיבָה"
+        },
+        {
+          "word_index": 3,
+          "text": "וּבִבְלִי",
+          "prefixes": [
+            "Hc",
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H1097",
+          "reason": "Derived match (original): בְּלִי"
+        },
+        {
+          "word_index": 4,
+          "text": "סָפֵק",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5606",
+          "reason": "Root match (original): סָפַק"
+        },
+        {
+          "word_index": 7,
+          "text": "סָפֵק",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5606",
+          "reason": "Root match (original): סָפַק"
+        },
+        {
+          "word_index": 9,
+          "text": "לְגַלֵּי",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H1530",
+          "reason": "Derived match (suffix_1cs): גַּל"
+        },
+        {
+          "word_index": 11,
+          "text": "הַסֹּעֵר",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5590",
+          "reason": "Root match (hiphil): סָעַר"
+        },
+        {
+          "word_index": 4,
+          "text": "הֲפַכְפָּךְ",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H2019",
+          "reason": "Derived match (original): הֲפַכְפַּךְ"
+        },
+        {
+          "word_index": 2,
+          "text": "הַשָּׁפֵל",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H8213",
+          "reason": "Root match (hiphil): שָׁפֵל"
+        },
+        {
+          "word_index": 4,
+          "text": "בְּרוֹמְמֻתוֹ׃",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 0,
+          "text": "וְהֶעָשִׁיר",
+          "prefixes": [
+            "Hc",
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H6223",
+          "reason": "Derived match (original): עָשִׁיר"
+        },
+        {
+          "word_index": 2,
+          "text": "בְּשִׁפְלוּתוֹ",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H8220",
+          "reason": "Derived match (suffix_3ms): שִׁפְלוּת"
+        },
+        {
+          "word_index": 3,
+          "text": "בְּחַמָּתוֹ",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H2575",
+          "reason": "Root match (suffix_3ms): חַמַּת"
+        },
+        {
+          "word_index": 4,
+          "text": "וַיְיַבֵּשׁ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H3001",
+          "reason": "Root match (minus_first): יָבֵשׁ"
+        },
+        {
+          "word_index": 7,
+          "text": "וַיִּבֹּל",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H2986",
+          "reason": "Root match (original): יָבַל"
+        },
+        {
+          "word_index": 8,
+          "text": "צִיצוֹ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H6732",
+          "reason": "Root match (suffix_3ms): צִיץ"
+        },
+        {
+          "word_index": 15,
+          "text": "בַּהֲלִיכוֹתָיו׃",
+          "prefixes": [
+            "Hb",
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 3,
+          "text": "בְּנִסְיוֹנוֹ",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H5510",
+          "reason": "Root match (niphal): סִיוָן"
+        },
+        {
+          "word_index": 6,
+          "text": "נִבְחַן",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H974",
+          "reason": "Root match (niphal): בָּחַן"
+        },
+        {
+          "word_index": 11,
+          "text": "הִבְטִיחַ",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 2,
+          "text": "הַמְנֻסֶּה",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H5254",
+          "reason": "Root match (niphal_participle): נָסָה"
+        },
+        {
+          "word_index": 4,
+          "text": "נִסָּנִי",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5212",
+          "reason": "Root match (inserted_yod): נִיסָן"
+        },
+        {
+          "word_index": 8,
+          "text": "מְנֻסֶּה",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5254",
+          "reason": "Root match (niphal_participle): נָסָה"
+        },
+        {
+          "word_index": 12,
+          "text": "יְנַסֶּה",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5254",
+          "reason": "Root match (hiphil_participle): נָסָה"
+        },
+        {
+          "word_index": 2,
+          "text": "יְנֻסֶּה",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5254",
+          "reason": "Root match (hiphil_participle): נָסָה"
+        },
+        {
+          "word_index": 5,
+          "text": "בְּתַאֲוַת",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H8372",
+          "reason": "Root match (plural_fem): תָּא"
+        },
+        {
+          "word_index": 8,
+          "text": "תְּסִיתֵהוּ",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 9,
+          "text": "וּתְפַתֵּהוּ׃",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H8613",
+          "reason": "Root match (suffix_3ms): תׇּפְתֶּה"
+        },
+        {
+          "word_index": 2,
+          "text": "הָרְתָה",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 8,
+          "text": "נִשְׁלַם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7999",
+          "reason": "Root match (niphal): שָׁלַם"
+        },
+        {
+          "word_index": 1,
+          "text": "תִּתְעוּ",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 10,
+          "text": "הָאוֹרוֹת",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H215",
+          "reason": "Root match (plural_fem): אוֹר"
+        },
+        {
+          "word_index": 12,
+          "text": "חִלּוּף",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2475",
+          "reason": "Derived match (original): חֲלוֹף"
+        },
+        {
+          "word_index": 15,
+          "text": "שִׁנּוּי",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H8138",
+          "reason": "Root match (yod_vav_reduced): שָׁנָה"
+        },
+        {
+          "word_index": 1,
+          "text": "בְחֶפְצוֹ",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H2654",
+          "reason": "Root match (suffix_3ms): חָפֵץ"
+        },
+        {
+          "word_index": 6,
+          "text": "לִהְיוֹתֵנוּ",
+          "prefixes": [
+            "Hl",
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 10,
+          "text": "יְצוּרָיו׃",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3339",
+          "reason": "Derived match (holem_reduced): יִצְרִי"
+        },
+        {
+          "word_index": 11,
+          "text": "וְקָשֶׁה",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H7184",
+          "reason": "Root match (original): קָשָׂה"
+        },
+        {
+          "word_index": 4,
+          "text": "טִנּוּף",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5130",
+          "reason": "Root match (minus_first): נוּף"
+        },
+        {
+          "word_index": 5,
+          "text": "וְתַרְבּוּת",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H8635",
+          "reason": "Derived match (original): תַּרְבּוּת"
+        },
+        {
+          "word_index": 8,
+          "text": "בַעֲנָוָה",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H6037",
+          "reason": "Derived match (original): עַנְוָה"
+        },
+        {
+          "word_index": 11,
+          "text": "הַנָּטוּעַ",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H5193",
+          "reason": "Root match (holem_reduced): נָטַע"
+        },
+        {
+          "word_index": 12,
+          "text": "בָּכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 17,
+          "text": "נַפְשֹׁתֵיכֶם׃",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5314",
+          "reason": "Root match (suffix_2mp_fem_chain): נָפַשׁ"
+        },
+        {
+          "word_index": 0,
+          "text": "וֶהֱיוּ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H1958",
+          "reason": "Root match (suffix_3ms): הִי"
+        },
+        {
+          "word_index": 4,
+          "text": "שֹׁמְעָיו",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H8096",
+          "reason": "Derived match (suffix_3ms): שִׁמְעִי"
+        },
+        {
+          "word_index": 6,
+          "text": "לְרַמּוֹת",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H7418",
+          "reason": "Root match (original): רָמוֹת"
+        },
+        {
+          "word_index": 9,
+          "text": "נִמְשָׁל",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H4910",
+          "reason": "Root match (niphal): מָשַׁל"
+        },
+        {
+          "word_index": 13,
+          "text": "תֹּאַר",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H8388",
+          "reason": "Root match (original): תָּאַר"
+        },
+        {
+          "word_index": 14,
+          "text": "הֲוָיָתוֹ",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 15,
+          "text": "בְּמַרְאָה׃",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H4760",
+          "reason": "Root match (original): מֻרְאָה"
+        },
+        {
+          "word_index": 1,
+          "text": "הַמַּשְׁקִיף",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 3,
+          "text": "הַשְּׁלֵמָה",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H8008",
+          "reason": "Root match (original): שַׂלְמָה"
+        },
+        {
+          "word_index": 5,
+          "text": "הַחֵרוּת",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H2715",
+          "reason": "Derived match (plural_fem): חֹר"
+        },
+        {
+          "word_index": 7,
+          "text": "בָּהּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H892",
+          "reason": "Root match (doubled_first): בָּבָה"
+        },
+        {
+          "word_index": 11,
+          "text": "וְשָׁכֵחַ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H7911",
+          "reason": "Root match (original): שָׁכַח"
+        },
+        {
+          "word_index": 19,
+          "text": "בְּמַעֲשֵׂהוּ׃",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H4639",
+          "reason": "Derived match (suffix_3ms): מַעֲשֶׂה"
+        },
+        {
+          "word_index": 10,
+          "text": "לִלְשֹׁנוֹ",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H3960",
+          "reason": "Derived match (suffix_3ms): לָשַׁן"
+        },
+        {
+          "word_index": 3,
+          "text": "וְהַבָּרָה",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H1895",
+          "reason": "Root match (suffix_3fs): הָבַר"
+        },
+        {
+          "word_index": 9,
+          "text": "הַיְתוֹמִים",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H3490",
+          "reason": "Root match (plural_masc): יָתוֹם"
+        },
+        {
+          "word_index": 10,
+          "text": "וְהָאַלְמָנוֹת",
+          "prefixes": [
+            "Hc",
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H491",
+          "reason": "Derived match (original): אַלְמָנוּת"
+        },
+        {
+          "word_index": 11,
+          "text": "בְּלַחֲצָם",
+          "prefixes": [
+            "Hb",
+            "Hl"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 16,
+          "text": "מֵחֶלְאַת",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2456",
+          "reason": "Root match (puul): חָלָא"
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "assignments": [
+        {
+          "word_index": 3,
+          "text": "מַשּׂא",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H4852",
+          "reason": "Root match (original): מֵשָׁא"
+        },
+        {
+          "word_index": 5,
+          "text": "בֶּאֱמוּנַתְכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 6,
+          "text": "וְטַבְּעֹת",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H2885",
+          "reason": "Derived match (original): טַבַּעַת"
+        },
+        {
+          "word_index": 19,
+          "text": "וּבִגְדוֹ",
+          "prefixes": [
+            "Hc",
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H1408",
+          "reason": "Root match (suffix_3ms): גַּד"
+        },
+        {
+          "word_index": 20,
+          "text": "מְטֻנָּף׃",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2936",
+          "reason": "Root match (puul): טָנַף"
+        },
+        {
+          "word_index": 0,
+          "text": "וּפְנִיתֶם",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H6324",
+          "reason": "Root match (inserted_vav): פּוּנִי"
+        },
+        {
+          "word_index": 2,
+          "text": "הַלָּבוּשׁ",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H3830",
+          "reason": "Derived match (original): לְבוּשׁ"
+        },
+        {
+          "word_index": 7,
+          "text": "שֶׁב־",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7725",
+          "reason": "Root match (added_vav): שׁוּב"
+        },
+        {
+          "word_index": 11,
+          "text": "וְלֶעָנִי",
+          "prefixes": [
+            "Hc",
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H6040",
+          "reason": "Derived match (original): עֳנִי"
+        },
+        {
+          "word_index": 16,
+          "text": "שֶׁב־",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7725",
+          "reason": "Root match (added_vav): שׁוּב"
+        },
+        {
+          "word_index": 2,
+          "text": "נֶחֱלַק",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2505",
+          "reason": "Root match (niphal): חָלַק"
+        },
+        {
+          "word_index": 4,
+          "text": "בַעֲנִיֵּי",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H6040",
+          "reason": "Derived match (suffix_1cs): עֳנִי"
+        },
+        {
+          "word_index": 10,
+          "text": "עֲשִׁירִים",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H6223",
+          "reason": "Derived match (plural_masc): עָשִׁיר"
+        },
+        {
+          "word_index": 12,
+          "text": "וְיֹרְשֵׁי",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H3423",
+          "reason": "Root match (suffix_1cs): יָרַשׁ"
+        },
+        {
+          "word_index": 15,
+          "text": "הִבְטִיחַ",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 1,
+          "text": "הִכְלַמְתֶּם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3637",
+          "reason": "Root match (hiphil): כָּלַם"
+        },
+        {
+          "word_index": 5,
+          "text": "הָעֲשִׁירִים",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H6223",
+          "reason": "Derived match (plural_masc): עָשִׁיר"
+        },
+        {
+          "word_index": 7,
+          "text": "הָעשְׁקִים",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H6229",
+          "reason": "Root match (plural_masc): עָשַׂק"
+        },
+        {
+          "word_index": 10,
+          "text": "הַסֹּחֲבִים",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H5498",
+          "reason": "Root match (plural_masc): סָחַב"
+        },
+        {
+          "word_index": 2,
+          "text": "הַמְגַדְּפִים",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H1442",
+          "reason": "Root match (puul): גָּדַף"
+        },
+        {
+          "word_index": 1,
+          "text": "בְּקַיֶּמְכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H7009",
+          "reason": "Derived match (suffix_2mp): קִים"
+        },
+        {
+          "word_index": 4,
+          "text": "הַמֹּלֶכֶת",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H4446",
+          "reason": "Derived match (original): מְלֶכֶת"
+        },
+        {
+          "word_index": 6,
+          "text": "כֻּלָּן",
+          "prefixes": [
+            "Hk"
+          ],
+          "type": "strong",
+          "strong": "H3885",
+          "reason": "Root match (added_vav): לוּן"
+        },
+        {
+          "word_index": 5,
+          "text": "בְּמַעֲשֵׂיכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H4640",
+          "reason": "Derived match (suffix_2mp): מַעֲשַׂי"
+        },
+        {
+          "word_index": 8,
+          "text": "כְּעֹבְרִים",
+          "prefixes": [
+            "Hk"
+          ],
+          "type": "strong",
+          "strong": "H5682",
+          "reason": "Derived match (original): עֲבָרִים"
+        },
+        {
+          "word_index": 3,
+          "text": "יְקַיֵּם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3356",
+          "reason": "Derived match (original): יָקִים"
+        },
+        {
+          "word_index": 7,
+          "text": "וְנִכְשָׁל",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H3782",
+          "reason": "Root match (niphal): כָּשַׁל"
+        },
+        {
+          "word_index": 11,
+          "text": "אָשֹׁם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H816",
+          "reason": "Root match (original): אָשַׁם"
+        },
+        {
+          "word_index": 3,
+          "text": "תִנְאָף",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5003",
+          "reason": "Root match (minus_first): נָאַף"
+        },
+        {
+          "word_index": 16,
+          "text": "לְעֹבֵר",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H5674",
+          "reason": "Root match (original): עָבַר"
+        },
+        {
+          "word_index": 10,
+          "text": "הַחֵרוּת׃",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H2715",
+          "reason": "Derived match (plural_fem): חֹר"
+        },
+        {
+          "word_index": 9,
+          "text": "יִתְגָּאֶה",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H1342",
+          "reason": "Root match (hitpael_3ms): גָּאָה"
+        },
+        {
+          "word_index": 2,
+          "text": "יּוֹעִיל",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 10,
+          "text": "וּמַעֲשִׂים",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 13,
+          "text": "הֲתוּכַל",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 15,
+          "text": "לְהוֹשִׁיעוֹ׃",
+          "prefixes": [
+            "Hl",
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 5,
+          "text": "בְעֵירֹם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H5902",
+          "reason": "Derived match (original): עִירָם"
+        },
+        {
+          "word_index": 6,
+          "text": "וְהִתְחַמְמוּ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H2552",
+          "reason": "Root match (hitpael): חָמַם"
+        },
+        {
+          "word_index": 7,
+          "text": "וּשְׂבָעוּ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H7646",
+          "reason": "Root match (suffix_3ms): שָׂבַע"
+        },
+        {
+          "word_index": 15,
+          "text": "תּוֹעִיל",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 5,
+          "text": "בָּהּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H892",
+          "reason": "Root match (doubled_first): בָּבָה"
+        },
+        {
+          "word_index": 9,
+          "text": "בְּעַצְמָהּ׃",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H6109",
+          "reason": "Derived match (original): עׇצְמָה"
+        },
+        {
+          "word_index": 18,
+          "text": "אַרְאֲךָ",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 11,
+          "text": "וְרֹעֲדִים׃",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H7460",
+          "reason": "Root match (plural_masc): רָעַד"
+        },
+        {
+          "word_index": 4,
+          "text": "נִצְדָּק",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H6663",
+          "reason": "Root match (niphal): צָדַק"
+        },
+        {
+          "word_index": 5,
+          "text": "בְּהַעֲלֹתוֹ",
+          "prefixes": [
+            "Hb",
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 6,
+          "text": "לְמַעֲשָׂיו",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H4640",
+          "reason": "Derived match (suffix_3ms): מַעֲשַׂי"
+        },
+        {
+          "word_index": 7,
+          "text": "וּמִתּוֹךְ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H8432",
+          "reason": "Root match (puul): תָּוֶךְ"
+        },
+        {
+          "word_index": 6,
+          "text": "וַתֵּחָשֵׁב־",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H2803",
+          "reason": "Root match (minus_first): חָשַׁב"
+        },
+        {
+          "word_index": 5,
+          "text": "נִצְדְּקָה",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H6663",
+          "reason": "Root match (niphal): צָדַק"
+        },
+        {
+          "word_index": 7,
+          "text": "בְּאָסְפָהּ",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H626",
+          "reason": "Derived match (original): אֲסֵפָה"
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "assignments": [
+        {
+          "word_index": 5,
+          "text": "לְמוֹרִים",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H4171",
+          "reason": "Root match (plural_masc): מוּר"
+        },
+        {
+          "word_index": 10,
+          "text": "נַכְבִּיד",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 3,
+          "text": "לְהִכָּשֵׁל",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H3782",
+          "reason": "Root match (hiphil): כָּשַׁל"
+        },
+        {
+          "word_index": 6,
+          "text": "יִכָּשֵׁל",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3782",
+          "reason": "Root match (minus_first): כָּשַׁל"
+        },
+        {
+          "word_index": 7,
+          "text": "בְּדִבּוּר",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H952",
+          "reason": "Root match (minus_first): בּוּר"
+        },
+        {
+          "word_index": 11,
+          "text": "וּבִיכָלְתּוֹ",
+          "prefixes": [
+            "Hc",
+            "Hb"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 3,
+          "text": "נָשִׂים",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5136",
+          "reason": "Root match (added_vav): נוּשׁ"
+        },
+        {
+          "word_index": 5,
+          "text": "הָרֶסֶן",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7448",
+          "reason": "Root match (hiphil): רֶסֶן"
+        },
+        {
+          "word_index": 9,
+          "text": "לָנוּ",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H5115",
+          "reason": "Root match (added_he): נָוָה"
+        },
+        {
+          "word_index": 10,
+          "text": "וְנִהַגְנוּ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H5090",
+          "reason": "Root match (suffix_1cp): נָהַג"
+        },
+        {
+          "word_index": 11,
+          "text": "בוֹ",
+          "prefixes": [],
+          "type": "skipped",
+          "reason": "Pronominal suffix form - no Strong's assignment"
+        },
+        {
+          "word_index": 14,
+          "text": "גְּוִיָּתָם׃",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H1471",
+          "reason": "Root match (suffix_2mp): גּוֹי"
+        },
+        {
+          "word_index": 1,
+          "text": "הָאֳנִיּוֹת",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H589",
+          "reason": "Derived match (plural_fem): אֲנִי"
+        },
+        {
+          "word_index": 8,
+          "text": "יֶהְדְּפוּן",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 24,
+          "text": "וּגְדֹלוֹת",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H1431",
+          "reason": "Root match (plural_fem): גָּדַל"
+        },
+        {
+          "word_index": 6,
+          "text": "תַּבְעִירֶנּוּ",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 2,
+          "text": "נִצֶּבֶת",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5324",
+          "reason": "Root match (fem_sing_action): נָצַב"
+        },
+        {
+          "word_index": 5,
+          "text": "הַמַּגְאֶלֶת",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H1350",
+          "reason": "Root match (puul): גָּאַל"
+        },
+        {
+          "word_index": 9,
+          "text": "וּמְלַהֶטֶת",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H3857",
+          "reason": "Root match (puul): לָהַט"
+        },
+        {
+          "word_index": 11,
+          "text": "גַּלְגַּל",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H1536",
+          "reason": "Root match (original): גִּלְגָּל"
+        },
+        {
+          "word_index": 12,
+          "text": "הֲוָיָתֵנוּ",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 14,
+          "text": "לְהוּטָה",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 16,
+          "text": "גֵּיהִנֹּם׃",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 1,
+          "text": "מִין",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H4327",
+          "reason": "Root match (original): מִין"
+        },
+        {
+          "word_index": 6,
+          "text": "וְחַיּוֹת",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H2424",
+          "reason": "Derived match (original): חַיּוּת"
+        },
+        {
+          "word_index": 8,
+          "text": "יִכָּבֵשׁ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3532",
+          "reason": "Root match (minus_first): כֶּבֶשׂ"
+        },
+        {
+          "word_index": 9,
+          "text": "וְנִכְבָּשִׁים",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H3532",
+          "reason": "Root match (niphal): כֶּבֶשׂ"
+        },
+        {
+          "word_index": 13,
+          "text": "מִין",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H4327",
+          "reason": "Root match (original): מִין"
+        },
+        {
+          "word_index": 5,
+          "text": "לְכָבְשָׁהּ",
+          "prefixes": [
+            "Hl",
+            "Hk"
+          ],
+          "type": "strong",
+          "strong": "H954",
+          "reason": "Root match (added_vav): בּוּשׁ"
+        },
+        {
+          "word_index": 10,
+          "text": "וְסַם",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H5561",
+          "reason": "Root match (original): סַם"
+        },
+        {
+          "word_index": 12,
+          "text": "מָלֵאָה׃",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H4395",
+          "reason": "Derived match (original): מְלֵאָה"
+        },
+        {
+          "word_index": 0,
+          "text": "בָּהּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H892",
+          "reason": "Root match (doubled_first): בָּבָה"
+        },
+        {
+          "word_index": 5,
+          "text": "וּבָהּ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H892",
+          "reason": "Root match (doubled_first): בָּבָה"
+        },
+        {
+          "word_index": 6,
+          "text": "נְקַלֵּל",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7043",
+          "reason": "Root match (niphal): קָלַל"
+        },
+        {
+          "word_index": 0,
+          "text": "הֲיַבִּיעַ",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 1,
+          "text": "הַמַּעְיָן",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H4599",
+          "reason": "Derived match (original): מַעְיָן"
+        },
+        {
+          "word_index": 2,
+          "text": "מְתוּקִים",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H4966",
+          "reason": "Derived match (plural_masc): מָתוֹק"
+        },
+        {
+          "word_index": 3,
+          "text": "וּמָרִים",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H4813",
+          "reason": "Derived match (original): מִרְיָם"
+        },
+        {
+          "word_index": 7,
+          "text": "הֲתוּכַל",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 17,
+          "text": "נְבֹעַ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5042",
+          "reason": "Root match (original): נָבַע"
+        },
+        {
+          "word_index": 19,
+          "text": "מְלוּחִים",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H4408",
+          "reason": "Derived match (plural_masc): מַלּוּחַ"
+        },
+        {
+          "word_index": 1,
+          "text": "בָכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 5,
+          "text": "בְּדַרְכּוֹ",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H1869",
+          "reason": "Root match (suffix_3ms): דָּרַךְ"
+        },
+        {
+          "word_index": 9,
+          "text": "בְּעַנְוַת",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H6039",
+          "reason": "Derived match (original): עֱנוּת"
+        },
+        {
+          "word_index": 9,
+          "text": "בָּאֱמֶת׃",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H571",
+          "reason": "Derived match (original): אֶמֶת"
+        },
+        {
+          "word_index": 3,
+          "text": "הַיֹּרֶדֶת",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H3381",
+          "reason": "Root match (fem_sing_action): יָרַד"
+        },
+        {
+          "word_index": 11,
+          "text": "הַיֵּצֶר",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3334",
+          "reason": "Root match (hiphil): יָצַר"
+        },
+        {
+          "word_index": 1,
+          "text": "בִמְקוֹם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H4725",
+          "reason": "Derived match (original): מָקוֹם"
+        },
+        {
+          "word_index": 5,
+          "text": "צְנוּעָה",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5128",
+          "reason": "Root match (minus_first): נוּעַ"
+        },
+        {
+          "word_index": 10,
+          "text": "וּמַכְרַעַת",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H3766",
+          "reason": "Root match (puul): כָּרַע"
+        },
+        {
+          "word_index": 12,
+          "text": "זְכוּת",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2134",
+          "reason": "Derived match (plural_fem): זַךְ"
+        },
+        {
+          "word_index": 13,
+          "text": "וְאֵינֶנָּה",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 16,
+          "text": "דַּעְתָּהּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H1847",
+          "reason": "Derived match (suffix_3fs): דַּעַת"
+        },
+        {
+          "word_index": 17,
+          "text": "וּמְלֵאָה",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H4395",
+          "reason": "Derived match (original): מְלֵאָה"
+        },
+        {
+          "word_index": 24,
+          "text": "וּבְלִי",
+          "prefixes": [
+            "Hc",
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H3878",
+          "reason": "Derived match (added_vav): לֵוִי"
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "assignments": [
+        {
+          "word_index": 7,
+          "text": "הַתַּאֲוֺת",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H8372",
+          "reason": "Root match (plural_fem): תָּא"
+        },
+        {
+          "word_index": 8,
+          "text": "הַמִּתְגָּרוֹת",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 9,
+          "text": "בְּאֵבָרֵיכֶם׃",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H1276",
+          "reason": "Root match (minus_first): בֵּרִי"
+        },
+        {
+          "word_index": 1,
+          "text": "מִתְאַוִּים",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H8377",
+          "reason": "Derived match (puul): תְּאוֹ"
+        },
+        {
+          "word_index": 3,
+          "text": "לָכֶם",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 5,
+          "text": "וּתְקַנְאוּ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H7065",
+          "reason": "Root match (minus_first): קָנָא"
+        },
+        {
+          "word_index": 6,
+          "text": "וְהַשֵּׂג",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 9,
+          "text": "תָּרִיבוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7378",
+          "reason": "Root match (minus_first): רִיב"
+        },
+        {
+          "word_index": 10,
+          "text": "וְתִלָּחֲמוּ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H3898",
+          "reason": "Root match (minus_first): לָחַם"
+        },
+        {
+          "word_index": 12,
+          "text": "לָכֶם",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 16,
+          "text": "הִתְפַּלַּלְתֶּם׃",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H6419",
+          "reason": "Root match (hitpael): פָּלַל"
+        },
+        {
+          "word_index": 3,
+          "text": "וְאֵינְכֶם",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H369",
+          "reason": "Root match (suffix_2mp): אַיִן"
+        },
+        {
+          "word_index": 10,
+          "text": "תְּבַלּוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H8397",
+          "reason": "Derived match (suffix_3ms): תֶּבֶל"
+        },
+        {
+          "word_index": 11,
+          "text": "בְּתַאֲוֺתֵיכֶם׃",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H8377",
+          "reason": "Derived match (suffix_2mp_fem_chain): תְּאוֹ"
+        },
+        {
+          "word_index": 0,
+          "text": "הַנֹּאֲפִים",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H5003",
+          "reason": "Root match (plural_masc): נָאַף"
+        },
+        {
+          "word_index": 1,
+          "text": "וְהַמְנָאֲפוֹת",
+          "prefixes": [
+            "Hc",
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H5003",
+          "reason": "Root match (puul): נָאַף"
+        },
+        {
+          "word_index": 1,
+          "text": "הַתְדַמּוּ",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 2,
+          "text": "בְנַפְשְׁכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H5314",
+          "reason": "Root match (suffix_2mp): נָפַשׁ"
+        },
+        {
+          "word_index": 7,
+          "text": "בְּקִנְאָה",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H7068",
+          "reason": "Derived match (original): קִנְאָה"
+        },
+        {
+          "word_index": 10,
+          "text": "הַשֹּׁכֵן",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7931",
+          "reason": "Root match (hiphil): שָׁכַן"
+        },
+        {
+          "word_index": 10,
+          "text": "וְלָעֲנָוִים",
+          "prefixes": [
+            "Hc",
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H6035",
+          "reason": "Derived match (plural_masc): עָנָו"
+        },
+        {
+          "word_index": 1,
+          "text": "הִכָּנְעוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3665",
+          "reason": "Root match (hiphil): כָּנַע"
+        },
+        {
+          "word_index": 6,
+          "text": "וְיִבְרַח",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H1272",
+          "reason": "Root match (minus_first): בָּרַח"
+        },
+        {
+          "word_index": 2,
+          "text": "וְיִקְרַב",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H7126",
+          "reason": "Root match (minus_first): קָרַב"
+        },
+        {
+          "word_index": 7,
+          "text": "טַהֲרוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2891",
+          "reason": "Root match (suffix_3ms): טָהֵר"
+        },
+        {
+          "word_index": 9,
+          "text": "חֲלוּקֵי",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2505",
+          "reason": "Root match (holem_reduced): חָלַק"
+        },
+        {
+          "word_index": 0,
+          "text": "הִתְעַנּוּ",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 1,
+          "text": "וְהִתְאַבְּלוּ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H56",
+          "reason": "Root match (hitpael): אָבַל"
+        },
+        {
+          "word_index": 3,
+          "text": "שְׂחָקְכֶם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7832",
+          "reason": "Root match (suffix_2mp): שָׂחַק"
+        },
+        {
+          "word_index": 6,
+          "text": "וְשִׂמְחַתְכֶם",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H4287",
+          "reason": "Derived match (minus_first): מַחַת"
+        },
+        {
+          "word_index": 7,
+          "text": "לְיָגוֹן׃",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H3015",
+          "reason": "Derived match (original): יָגוֹן"
+        },
+        {
+          "word_index": 0,
+          "text": "הִכָּנְעוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3665",
+          "reason": "Root match (hiphil): כָּנַע"
+        },
+        {
+          "word_index": 2,
+          "text": "תְּחָרְפוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2778",
+          "reason": "Derived match (minus_first): חָרַף"
+        },
+        {
+          "word_index": 6,
+          "text": "הַמְחָרֵף",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H2778",
+          "reason": "Derived match (puul): חָרַף"
+        },
+        {
+          "word_index": 28,
+          "text": "שֹׁפְטָהּ׃",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H8199",
+          "reason": "Root match (suffix_3fs): שָׁפַט"
+        },
+        {
+          "word_index": 2,
+          "text": "הַמְחֹקֵק",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H2710",
+          "reason": "Root match (puul): חָקַק"
+        },
+        {
+          "word_index": 6,
+          "text": "פְּלוֹנִית",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H6397",
+          "reason": "Derived match (fem_sing_action): פְּלוֹנִי"
+        },
+        {
+          "word_index": 7,
+          "text": "אַלְמוֹנִית",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 12,
+          "text": "לִסְחֹר",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H5503",
+          "reason": "Root match (original): סָחַר"
+        },
+        {
+          "word_index": 13,
+          "text": "בָּהּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H892",
+          "reason": "Root match (doubled_first): בָּבָה"
+        },
+        {
+          "word_index": 3,
+          "text": "יֵּלֵד",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3205",
+          "reason": "Root match (original): יָלַד"
+        },
+        {
+          "word_index": 1,
+          "text": "תִּתְגָּאוּ",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 2,
+          "text": "בְּפַחֲזוּתְכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H6350",
+          "reason": "Derived match (suffix_2mp): פַּחֲזוּת"
+        },
+        {
+          "word_index": 5,
+          "text": "יַעֲשֶׂנּוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3135",
+          "reason": "Derived match (inserted_vav): יוֹעָשׁ"
+        },
+        {
+          "word_index": 7,
+          "text": "בוֹ",
+          "prefixes": [],
+          "type": "skipped",
+          "reason": "Pronominal suffix form - no Strong's assignment"
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "assignments": [
+        {
+          "word_index": 1,
+          "text": "הָעֲשִׁירִים",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H6223",
+          "reason": "Derived match (plural_masc): עָשִׁיר"
+        },
+        {
+          "word_index": 0,
+          "text": "עָשְׁרְכֶם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H6238",
+          "reason": "Root match (suffix_2mp): עָשַׁר"
+        },
+        {
+          "word_index": 1,
+          "text": "בָּלָה",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H3867",
+          "reason": "Root match (added_vav): לָוָה"
+        },
+        {
+          "word_index": 0,
+          "text": "זְהַבְכֶם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2091",
+          "reason": "Root match (suffix_2mp): זָהָב"
+        },
+        {
+          "word_index": 1,
+          "text": "וְכַסְפְּכֶם",
+          "prefixes": [
+            "Hc",
+            "Hk"
+          ],
+          "type": "strong",
+          "strong": "H5593",
+          "reason": "Root match (suffix_2mp): סַף"
+        },
+        {
+          "word_index": 2,
+          "text": "כִּסָּתַם",
+          "prefixes": [
+            "Hk"
+          ],
+          "type": "strong",
+          "strong": "H5640",
+          "reason": "Root match (original): סָתַם"
+        },
+        {
+          "word_index": 5,
+          "text": "חֶלְאָתָם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2456",
+          "reason": "Root match (suffix_2mp): חָלָא"
+        },
+        {
+          "word_index": 6,
+          "text": "בָּכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 13,
+          "text": "אֲצַרְתֶּם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H686",
+          "reason": "Root match (suffix_2mp): אָצַר"
+        },
+        {
+          "word_index": 14,
+          "text": "לָכֶם",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 16,
+          "text": "בְּקֵץ",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H7093",
+          "reason": "Derived match (original): קֵץ"
+        },
+        {
+          "word_index": 2,
+          "text": "הַפֹּעֲלִים",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H6466",
+          "reason": "Root match (plural_masc): פָּעַל"
+        },
+        {
+          "word_index": 3,
+          "text": "אֹסְפֵי",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H622",
+          "reason": "Root match (suffix_1cs): אָסַף"
+        },
+        {
+          "word_index": 5,
+          "text": "שְׂדֹתֵיכֶם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7699",
+          "reason": "Derived match (suffix_2mp_fem_chain): שַׁד"
+        },
+        {
+          "word_index": 7,
+          "text": "עֲשַׁקְתֶּם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H6229",
+          "reason": "Root match (suffix_2mp): עָשַׂק"
+        },
+        {
+          "word_index": 8,
+          "text": "צֹעֵק",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H6817",
+          "reason": "Root match (original): צָעַק"
+        },
+        {
+          "word_index": 0,
+          "text": "הִתְעַדַּנְתֶּם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5727",
+          "reason": "Root match (hitpael): עָדַן"
+        },
+        {
+          "word_index": 3,
+          "text": "וְהִשְׁמַנְתֶּם",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H8080",
+          "reason": "Root match (hiphil): שָׁמַן"
+        },
+        {
+          "word_index": 0,
+          "text": "הִרְשַׁעְתֶּם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7561",
+          "reason": "Root match (hiphil): רָשַׁע"
+        },
+        {
+          "word_index": 2,
+          "text": "דֹּמּוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H1818",
+          "reason": "Derived match (suffix_3ms): דָּם"
+        },
+        {
+          "word_index": 3,
+          "text": "וְהוֹחִילוּ",
+          "prefixes": [
+            "Hc",
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H2426",
+          "reason": "Root match (minus_first): חֵיל"
+        },
+        {
+          "word_index": 8,
+          "text": "הָאִכָּר",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H406",
+          "reason": "Root match (hiphil): אִכָּר"
+        },
+        {
+          "word_index": 10,
+          "text": "לְטוּב",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H2895",
+          "reason": "Root match (original): טוֹב"
+        },
+        {
+          "word_index": 13,
+          "text": "בְּהוֹחִילוֹ",
+          "prefixes": [
+            "Hb",
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H2426",
+          "reason": "Root match (minus_first): חֵיל"
+        },
+        {
+          "word_index": 1,
+          "text": "הוֹחִילוּ",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H2426",
+          "reason": "Root match (minus_first): חֵיל"
+        },
+        {
+          "word_index": 4,
+          "text": "וְאַמְּצוּ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H553",
+          "reason": "Root match (suffix_3ms): אָמַץ"
+        },
+        {
+          "word_index": 2,
+          "text": "תִּתְאוֹנְנוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H203",
+          "reason": "Root match (hitpael_2nd_suffix_נו): אוֹן"
+        },
+        {
+          "word_index": 11,
+          "text": "לַפָּתַח׃",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H6605",
+          "reason": "Root match (original): פָּתַח"
+        },
+        {
+          "word_index": 8,
+          "text": "לָכֶם",
+          "prefixes": [
+            "Hl"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 10,
+          "text": "הַסֵּבֶל",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5445",
+          "reason": "Root match (hiphil): סָבַל"
+        },
+        {
+          "word_index": 11,
+          "text": "וְהַתּוֹחֶלֶת׃",
+          "prefixes": [
+            "Hc",
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H8431",
+          "reason": "Derived match (original): תּוֹחֶלֶת"
+        },
+        {
+          "word_index": 4,
+          "text": "הַסֹּבְלִים",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H5445",
+          "reason": "Root match (plural_masc): סָבַל"
+        },
+        {
+          "word_index": 6,
+          "text": "סַבְלָנוּת",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 15,
+          "text": "שֶׁלָּכֶם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7945",
+          "reason": "Root match (suffix_2mp): שֶׁל"
+        },
+        {
+          "word_index": 18,
+          "text": "שֶׁלָּכֶם",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H7945",
+          "reason": "Root match (suffix_2mp): שֶׁל"
+        },
+        {
+          "word_index": 21,
+          "text": "תִּפְּלוּ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H8602",
+          "reason": "Root match (suffix_3ms): תָּפֵל"
+        },
+        {
+          "word_index": 3,
+          "text": "בָּכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 10,
+          "text": "יְזַמֵּר׃",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H2167",
+          "reason": "Root match (minus_first): זָמַר"
+        },
+        {
+          "word_index": 2,
+          "text": "יֶחֱלֶה",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3176",
+          "reason": "Root match (suffix_3fs): יָחַל"
+        },
+        {
+          "word_index": 3,
+          "text": "בָכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 10,
+          "text": "וִיסוּכֻהוּ",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "strong",
+          "strong": "H3252",
+          "reason": "Root match (holem_reduced): יִסְכָּה"
+        },
+        {
+          "word_index": 9,
+          "text": "יִסָּלַח",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H5545",
+          "reason": "Root match (minus_first): סָלַח"
+        },
+        {
+          "word_index": 0,
+          "text": "הִתְוַדּוּ",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 13,
+          "text": "כֹּחַ",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H3581",
+          "reason": "Root match (original): כֹּחַ"
+        },
+        {
+          "word_index": 6,
+          "text": "הִצְמִיחָה",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 2,
+          "text": "יִתְעֶה",
+          "prefixes": [],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 4,
+          "text": "בָּכֶם",
+          "prefixes": [
+            "Hb"
+          ],
+          "type": "strong",
+          "strong": "H3642",
+          "reason": "Root match (added_he): כָּמַהּ"
+        },
+        {
+          "word_index": 3,
+          "text": "הַמֵּשִׁיב",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "strong",
+          "strong": "H7867",
+          "reason": "Root match (puul): שִׂיב"
+        },
+        {
+          "word_index": 5,
+          "text": "הַחוֹטֵא",
+          "prefixes": [
+            "Hd"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        },
+        {
+          "word_index": 6,
+          "text": "מֵעִקְּשׁוּת",
+          "prefixes": [],
+          "type": "strong",
+          "strong": "H4625",
+          "reason": "Derived match (plural_fem): מַעֲקָשׁ"
+        },
+        {
+          "word_index": 13,
+          "text": "וִיכַסֶּה",
+          "prefixes": [
+            "Hc"
+          ],
+          "type": "failed",
+          "error": "no_match",
+          "reason": "No matching entry found in dictionary"
+        }
+      ]
+    }
+  ]
+}
