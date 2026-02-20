@@ -1,8 +1,8 @@
 {
   "book": "james",
   "total_null_words": 274,
-  "total_assigned": 229,
-  "total_failed": 43,
+  "total_assigned": 241,
+  "total_failed": 31,
   "total_skipped": 2,
   "chapters": [
     {
@@ -68,9 +68,9 @@
           "word_index": 6,
           "text": "סַבְלָנוּת׃",
           "prefixes": [],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H5445",
+          "reason": "Root match (abstract_nun): סָבַל"
         },
         {
           "word_index": 0,
@@ -79,9 +79,9 @@
             "Hc",
             "Hd"
           ],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H5445",
+          "reason": "Root match (abstract_nun): סָבַל"
         },
         {
           "word_index": 3,
@@ -154,7 +154,7 @@
           "prefixes": [],
           "type": "strong",
           "strong": "H5590",
-          "reason": "Root match (hiphil): סָעַר"
+          "reason": "Root match (he_hiphil): סָעַר"
         },
         {
           "word_index": 4,
@@ -172,7 +172,7 @@
           "prefixes": [],
           "type": "strong",
           "strong": "H8213",
-          "reason": "Root match (hiphil): שָׁפֵל"
+          "reason": "Root match (he_hiphil): שָׁפֵל"
         },
         {
           "word_index": 4,
@@ -250,9 +250,9 @@
             "Hb",
             "Hd"
           ],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H3551",
+          "reason": "Derived match (lamed_yod_removed): כַּו"
         },
         {
           "word_index": 3,
@@ -276,9 +276,9 @@
           "word_index": 11,
           "text": "הִבְטִיחַ",
           "prefixes": [],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H982",
+          "reason": "Root match (hiphil_yod_original): בָּטַח"
         },
         {
           "word_index": 2,
@@ -417,9 +417,9 @@
             "Hl",
             "Hd"
           ],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H1961",
+          "reason": "Root match (hayah_infinitive): הָיָה"
         },
         {
           "word_index": 10,
@@ -545,9 +545,9 @@
           "prefixes": [
             "Hd"
           ],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H8420",
+          "reason": "Derived match (vav_yod_prefix): תָּו"
         },
         {
           "word_index": 15,
@@ -565,9 +565,9 @@
           "prefixes": [
             "Hd"
           ],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H8259",
+          "reason": "Root match (hiphil_participle_yod): שָׁקַף"
         },
         {
           "word_index": 3,
@@ -816,9 +816,9 @@
           "word_index": 15,
           "text": "הִבְטִיחַ",
           "prefixes": [],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H982",
+          "reason": "Root match (hiphil_yod_original): בָּטַח"
         },
         {
           "word_index": 1,
@@ -1179,9 +1179,9 @@
           "word_index": 10,
           "text": "נַכְבִּיד",
           "prefixes": [],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H3513",
+          "reason": "Root match (niphal_yod_original): כָּבַד"
         },
         {
           "word_index": 3,
@@ -1191,7 +1191,7 @@
           ],
           "type": "strong",
           "strong": "H3782",
-          "reason": "Root match (hiphil): כָּשַׁל"
+          "reason": "Root match (he_hiphil): כָּשַׁל"
         },
         {
           "word_index": 6,
@@ -1236,7 +1236,7 @@
           "prefixes": [],
           "type": "strong",
           "strong": "H7448",
-          "reason": "Root match (hiphil): רֶסֶן"
+          "reason": "Root match (he_hiphil): רֶסֶן"
         },
         {
           "word_index": 9,
@@ -1592,7 +1592,7 @@
           "prefixes": [],
           "type": "strong",
           "strong": "H3334",
-          "reason": "Root match (hiphil): יָצַר"
+          "reason": "Root match (he_yod_prefix): יָצַר"
         },
         {
           "word_index": 1,
@@ -1636,9 +1636,9 @@
           "prefixes": [
             "Hc"
           ],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H336",
+          "reason": "Root match (ei_compound): אִי"
         },
         {
           "word_index": 16,
@@ -1863,7 +1863,7 @@
           "prefixes": [],
           "type": "strong",
           "strong": "H7931",
-          "reason": "Root match (hiphil): שָׁכַן"
+          "reason": "Root match (he_hiphil): שָׁכַן"
         },
         {
           "word_index": 10,
@@ -1882,7 +1882,7 @@
           "prefixes": [],
           "type": "strong",
           "strong": "H3665",
-          "reason": "Root match (hiphil): כָּנַע"
+          "reason": "Root match (he_hiphil_suffix_ו): כָּנַע"
         },
         {
           "word_index": 6,
@@ -1972,7 +1972,7 @@
           "prefixes": [],
           "type": "strong",
           "strong": "H3665",
-          "reason": "Root match (hiphil): כָּנַע"
+          "reason": "Root match (he_hiphil_suffix_ו): כָּנַע"
         },
         {
           "word_index": 2,
@@ -2286,7 +2286,7 @@
           "prefixes": [],
           "type": "strong",
           "strong": "H406",
-          "reason": "Root match (hiphil): אִכָּר"
+          "reason": "Root match (he_hiphil): אִכָּר"
         },
         {
           "word_index": 10,
@@ -2363,7 +2363,7 @@
           "prefixes": [],
           "type": "strong",
           "strong": "H5445",
-          "reason": "Root match (hiphil): סָבַל"
+          "reason": "Root match (he_hiphil): סָבַל"
         },
         {
           "word_index": 11,
@@ -2390,9 +2390,9 @@
           "word_index": 6,
           "text": "סַבְלָנוּת",
           "prefixes": [],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H5445",
+          "reason": "Root match (abstract_nun): סָבַל"
         },
         {
           "word_index": 15,
@@ -2492,9 +2492,9 @@
           "word_index": 6,
           "text": "הִצְמִיחָה",
           "prefixes": [],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H6779",
+          "reason": "Root match (hiphil_yod): צָמַח"
         },
         {
           "word_index": 2,

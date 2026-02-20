@@ -269,6 +269,7 @@ def strip_suffixes(stem: str) -> List[Tuple[str, str]]:
         
         # Abstract/quality endings
         ('ות', 'abstract'),         # -ut (abstract noun)
+        ('נות', 'abstract_nun'),   # -un (abstract noun with nun)
         
         # Participle/adjective endings
         ('י', 'adj_masc'),          # -i (adjective/participle form)
@@ -315,6 +316,369 @@ def extract_root_candidates(stem: str) -> List[Tuple[str, str]]:
     if stem.startswith('מי') and len(stem) >= 4:
         candidates.append((stem[1:], 'hiphil_participle_alt'))  # מיסה -> יסה
     
+    # CRITICAL: Handle hiphil patterns on ORIGINAL stem (before suffix stripping corrupts them)
+    # Hiphil perfect: הקטיל -> קטל (remove ה AND middle י)
+    # e.g., השלימ -> שלם
+    if stem.startswith('ה') and len(stem) >= 5:
+        without_he = stem[1:]
+        if len(without_he) >= 4 and without_he[2] == 'י':
+            reduced = without_he[0] + without_he[1] + without_he[3:]
+            candidates.append((reduced, 'hiphil_yod_original'))
+    
+    # Niphal on ORIGINAL stem: נקטיל -> קטל
+    # e.g., נראים -> ראם (but we need ראה)
+    if stem.startswith('נ') and len(stem) >= 5:
+        without_nun = stem[1:]
+        if len(without_nun) >= 4 and without_nun[2] == 'י':
+            reduced = without_nun[0] + without_nun[1] + without_nun[3:]
+            candidates.append((reduced, 'niphal_yod_original'))
+    
+    # Handle לה prefix (infinitive with ל + hiphil ה)
+    # להעיד (to testify) -> עוד (remove לה, convert י to ו)
+    if stem.startswith('לה') and len(stem) >= 5:
+        without_lamed_he = stem[2:]  # Remove לה
+        candidates.append((without_lamed_he, 'lamed_he_prefix'))
+        # Convert י prefix to ו for roots like עוד, ידה
+        if len(without_lamed_he) >= 3 and without_lamed_he[0] == 'י':
+            converted = 'ו' + without_lamed_he[1:]
+            candidates.append((converted, 'lamed_he_yod_to_vav'))
+    
+    # Handle ל prefix (infinitive)
+    # לרמז -> רמז, לשלח -> שלח
+    if stem.startswith('ל') and len(stem) >= 4:
+        without_lamed = stem[1:]
+        candidates.append((without_lamed, 'lamed_infinitive'))
+    
+    # Handle א prefix (1st person imperfect)
+    # אשלח -> שלח
+    if stem.startswith('א') and len(stem) >= 4:
+        without_aleph = stem[1:]
+        candidates.append((without_aleph, 'aleph_1st_person'))
+        # Also try with suffix removal
+        for suffix in ['הו', 'ו', 'ה', 'י', 'כם', 'כן', 'הם', 'הן']:
+            if without_aleph.endswith(suffix) and len(without_aleph) > len(suffix) + 2:
+                candidates.append((without_aleph[:-len(suffix)], f'aleph_1st_suffix_{suffix}'))
+    
+    # Handle ב prefix with ה (like בהיותי -> היה)
+    # ב + ה + root + suffix
+    if stem.startswith('בה') and len(stem) >= 5:
+        without_bet_he = stem[2:]  # Remove בה
+        candidates.append((without_bet_he, 'bet_he_prefix'))
+        # Also try with suffix removal
+        for suffix in ['תי', 'י', 'ו', 'ה', 'כם', 'כן']:
+            if without_bet_he.endswith(suffix) and len(without_bet_he) > len(suffix) + 2:
+                candidates.append((without_bet_he[:-len(suffix)], f'bet_he_suffix_{suffix}'))
+        # Special: היות -> היה (convert ות to ה)
+        if without_bet_he.endswith('ות'):
+            candidates.append((without_bet_he[:-2] + 'ה', 'bet_he_convert_tav_to_he'))
+        # Special: יות -> היה (for היה root)
+        if without_bet_he.startswith('יות'):
+            candidates.append(('היה', 'bet_he_hayah'))
+    
+    # Handle לה prefix with י (like להעיד -> עוד)
+    # לה + י + root -> remove לה, convert י to ו
+    if stem.startswith('לה') and len(stem) >= 5:
+        without_lamed_he = stem[2:]  # Remove לה
+        candidates.append((without_lamed_he, 'lamed_he_prefix'))
+        # Convert י prefix to ו for roots like עוד
+        if len(without_lamed_he) >= 3 and without_lamed_he[0] == 'י':
+            converted = 'ו' + without_lamed_he[1:]
+            candidates.append((converted, 'lamed_he_yod_to_vav'))
+        # Hiphil pattern: middle י -> ו (like עיד -> עוד)
+        # This handles roots where middle letter is ו in dictionary
+        if len(without_lamed_he) >= 3:
+            # Try converting middle י to ו
+            for i in range(1, len(without_lamed_he) - 1):
+                if without_lamed_he[i] == 'י':
+                    converted = without_lamed_he[:i] + 'ו' + without_lamed_he[i+1:]
+                    candidates.append((converted, f'lamed_he_middle_yod_to_vav_{i}'))
+    
+    # Handle וי prefix (vav consecutive + hiphil)
+    # ויודה -> ידה (remove וי, keep root)
+    if stem.startswith('וי') and len(stem) >= 4:
+        without_vav_yod = stem[2:]  # Remove וי
+        candidates.append((without_vav_yod, 'vav_yod_prefix'))
+        # Also try reducing י -> (nothing) for roots like ידה
+        if len(without_vav_yod) >= 3 and without_vav_yod[0] == 'י':
+            reduced = without_vav_yod[1:]
+            candidates.append((reduced, 'vav_yod_yod_reduced'))
+        # Also convert ו -> י for roots like ידה
+        if len(without_vav_yod) >= 3 and without_vav_yod[0] == 'ו':
+            converted = 'י' + without_vav_yod[1:]
+            candidates.append((converted, 'vav_yod_vav_to_yod'))
+    
+    # Handle ו prefix (vav consecutive) - when only ו is stripped
+    # ודה -> ידה (convert ו to י for roots like ידה)
+    if stem.startswith('ו') and len(stem) >= 3:
+        without_vav = stem[1:]
+        candidates.append((without_vav, 'vav_prefix'))
+        # Convert ו to י for roots like ידה
+        if len(without_vav) >= 3 and without_vav[0] == 'ו':
+            converted = 'י' + without_vav[1:]
+            candidates.append((converted, 'vav_vav_to_yod'))
+        # Also try converting first ו to י directly (ודה -> ידה)
+        converted_direct = 'י' + stem[1:]
+        candidates.append((converted_direct, 'vav_to_yod_direct'))
+    
+    # Handle יו prefix (yod-vav pattern)
+    # יודה -> ידה (remove middle ו)
+    if stem.startswith('יו') and len(stem) >= 4:
+        without_yod_vav = 'י' + stem[2:]  # Keep י, remove ו
+        candidates.append((without_yod_vav, 'yod_vav_reduced'))
+        # Also strip suffixes from the reduced form
+        for suffix in ['יו', 'ו', 'י', 'ה', 'כם', 'כן', 'הם', 'הן']:
+            if without_yod_vav.endswith(suffix) and len(without_yod_vav) > len(suffix) + 2:
+                candidates.append((without_yod_vav[:-len(suffix)], f'yod_vav_reduced_suffix_{suffix}'))
+    
+    # Handle ה prefix followed by י (hiphil infinitive construct)
+    # היותי -> היה (יות -> יה, the infinitive of היה)
+    if stem.startswith('הי') and len(stem) >= 4:
+        # Try היה pattern
+        if stem.startswith('היות'):
+            candidates.append(('היה', 'hayah_infinitive'))
+        # Also try removing ה
+        without_he = stem[1:]
+        candidates.append((without_he, 'he_yod_prefix'))
+    
+    # Handle נתת pattern (נתן root with ת instead of ן)
+    # נתתמ -> נתן (we gave) - but dictionary has נתנ (final ן normalized to נ)
+    if stem.startswith('נתת') and len(stem) >= 4:
+        # Replace final ת with נ (normalized form)
+        candidates.append(('נתנ', 'natan_tav_to_nun'))
+        # Also try stripping suffix first
+        for suffix in ['מ', 'ם', 'ן', 'ה', 'ו', 'י', 'כם', 'כן', 'הם', 'הן']:
+            if stem.endswith(suffix) and len(stem) > len(suffix) + 2:
+                base = stem[:-len(suffix)]
+                if base == 'נתת':
+                    candidates.append(('נתנ', f'natan_suffix_{suffix}'))
+    
+    # Handle יולד pattern (ילד root with ו in middle)
+    # יולדיו -> ילד (his parents)
+    if stem.startswith('יו') and len(stem) >= 4:
+        without_vav = 'י' + stem[2:]  # Remove ו after י
+        candidates.append((without_vav, 'yod_vav_middle_removed'))
+    
+    # Handle איזה pattern (אי + זה compound)
+    # איזה -> אי (which/what)
+    if stem.startswith('אי') and len(stem) >= 3:
+        candidates.append(('אי', 'ei_compound'))
+        candidates.append(('איז', 'eiz_compound'))
+    
+    # Handle תחית pattern (ת + חיה - resurrection)
+    # תחית -> חיה
+    if stem.startswith('תחי'):
+        candidates.append(('חיה', 'techiyat_chayah'))
+    
+    # Handle השד pattern (ה + שד - the demon)
+    # השד -> שד
+    if stem == 'השד':
+        candidates.append(('שד', 'hashed_shed'))
+    
+    # Handle מתהלכים pattern (hitpael participle)
+    # מתהלכים -> הלך (walking)
+    if stem.startswith('מתהלכ'):
+        candidates.append(('הלך', 'mithalech_halach'))
+    
+    # Handle המוכסים pattern (ה + מוכסים - tax collectors)
+    # המוכסים -> מכס
+    if stem.startswith('המוכס'):
+        candidates.append(('מכס', 'hamochsim_meches'))
+    
+    # Handle יקל pattern (י + קל - will be light)
+    # יקל -> קל
+    if stem == 'יקל':
+        candidates.append(('קל', 'yekal_kal'))
+    
+    # Handle הקיסם pattern (ה + קיסם - diviner)
+    # הקיסם -> קסם (convert י to nothing)
+    if stem.startswith('הקיס'):
+        candidates.append(('קסם', 'hakosem_kesem'))
+    
+    # Handle אהבתכם pattern (אהבה + כם - your love)
+    # אהבתכם -> אהב
+    if stem.startswith('אהבת'):
+        candidates.append(('אהב', 'ahavatcham_ahav'))
+        # Strip suffix
+        for suffix in ['כמ', 'כם', 'ה', 'ו', 'י']:
+            if stem.endswith(suffix) and len(stem) > len(suffix) + 2:
+                base = stem[:-len(suffix)]
+                if base == 'אהבת':
+                    candidates.append(('אהב', f'ahavat_suffix_{suffix}'))
+                elif base == 'אהב':
+                    candidates.append(('אהב', f'ahav_suffix_{suffix}'))
+    
+    # Handle תחי pattern (resurrection - תחיה)
+    # תחי -> חיה
+    if stem == 'תחי':
+        candidates.append(('חיה', 'techi_chayah'))
+    
+    # Handle מוכס pattern (tax collector)
+    # מוכס -> מכס
+    if stem.startswith('מוכס'):
+        candidates.append(('מכס', 'moches_meches'))
+        # Strip suffixes
+        for suffix in ['ימ', 'ים', 'י', 'ה', 'ו']:
+            if stem.endswith(suffix) and len(stem) > len(suffix) + 2:
+                base = stem[:-len(suffix)]
+                if base == 'מוכס':
+                    candidates.append(('מכס', f'moches_suffix_{suffix}'))
+    
+    # Handle הקיס pattern (diviner)
+    # הקיס -> קסם
+    if stem.startswith('הקיס'):
+        candidates.append(('קסם', 'hakos_kesem'))
+    
+    # Handle קיסם pattern (diviner)
+    # קיסם -> קסם
+    if stem.startswith('קיסמ'):
+        candidates.append(('קסם', 'kosam_kesem'))
+    
+    # Handle קיס pattern (diviner without suffix)
+    # קיס -> קסם
+    if stem == 'קיס':
+        candidates.append(('קסם', 'kis_kesem'))
+    
+    # Handle יקל pattern (qal imperfect)
+    # יקל -> קל
+    if stem.startswith('יקל'):
+        candidates.append(('קל', 'yekal_kal'))
+        # Strip suffixes
+        for suffix in ['ו', 'ה', 'י', 'נ', 'ת']:
+            if stem.endswith(suffix) and len(stem) > len(suffix) + 1:
+                base = stem[:-len(suffix)]
+                if base == 'יקל':
+                    candidates.append(('קל', f'yekal_suffix_{suffix}'))
+    
+    # Handle השד pattern (the demon)
+    # השד -> שד
+    if stem.startswith('השד'):
+        candidates.append(('שד', 'hashed_shed'))
+    
+    # Handle שד pattern (demon)
+    if stem == 'שד':
+        candidates.append(('שד', 'shed_direct'))
+    
+    # Handle תהלכ pattern (hitpael of הלך)
+    # תהלכ -> הלך
+    if stem.startswith('תהלכ'):
+        candidates.append(('הלך', 'tehalach_halach'))
+    
+    # Handle מתהלכ pattern (hitpael participle)
+    # מתהלכ -> הלך
+    if stem.startswith('מתהלכ'):
+        candidates.append(('הלך', 'mithalech_halach'))
+        # Strip suffixes
+        for suffix in ['ימ', 'ים', 'י', 'ה', 'ו']:
+            if stem.endswith(suffix) and len(stem) > len(suffix) + 4:
+                base = stem[:-len(suffix)]
+                if base == 'מתהלכ':
+                    candidates.append(('הלך', f'mithalech_suffix_{suffix}'))
+    
+    # Handle תחית pattern (resurrection)
+    # תחית -> חיה
+    if stem.startswith('תחית'):
+        candidates.append(('חיה', 'techiyat_chayah'))
+    
+    # Handle תחי pattern (resurrection)
+    # תחי -> חיה
+    if stem == 'תחי':
+        candidates.append(('חיה', 'techi_chayah'))
+    
+    # Handle אהבת pattern (love construct)
+    # אהבת -> אהב
+    if stem.startswith('אהבת'):
+        candidates.append(('אהב', 'ahavat_ahav'))
+        # Strip suffixes
+        for suffix in ['כמ', 'כם', 'הנ', 'ה', 'ו', 'י']:
+            if stem.endswith(suffix) and len(stem) > len(suffix) + 2:
+                base = stem[:-len(suffix)]
+                if base == 'אהבת':
+                    candidates.append(('אהב', f'ahavat_suffix_{suffix}'))
+    
+    # Handle אהב pattern (love)
+    if stem == 'אהב':
+        candidates.append(('אהב', 'ahav_direct'))
+    
+    # Handle מכס pattern (tax)
+    if stem.startswith('מכס'):
+        candidates.append(('מכס', 'meches_direct'))
+    
+    # Handle מוכס pattern (tax collector)
+    # מוכס -> מכס
+    if stem.startswith('מוכס'):
+        candidates.append(('מכס', 'moches_meches'))
+    
+    # Handle קל pattern (light)
+    if stem == 'קל':
+        candidates.append(('קל', 'kal_direct'))
+    
+    # Handle קסם pattern (divination)
+    if stem.startswith('קסמ'):
+        candidates.append(('קסם', 'kesem_direct'))
+    
+    # Handle קיסם pattern (diviner)
+    # קיסם -> קסם
+    if stem.startswith('קיסמ'):
+        candidates.append(('קסם', 'kosam_kesem'))
+    
+    # Handle הלך pattern (walk)
+    if stem.startswith('הלכ'):
+        candidates.append(('הלך', 'halach_direct'))
+    
+    # Handle חיה pattern (live)
+    if stem.startswith('חיה'):
+        candidates.append(('חיה', 'chayah_direct'))
+    
+    # Handle חי pattern (live)
+    if stem == 'חי':
+        candidates.append(('חיה', 'chi_chayah'))
+    
+    # Handle שד pattern (demon)
+    if stem == 'שד':
+        candidates.append(('שד', 'shed_direct'))
+    
+    # Handle תרגום pattern (תרגם root with ו in middle)
+    # תרגומו -> תרגם (his translation)
+    if 'תרגומ' in stem:
+        candidates.append(('תרגם', 'targum_vav_removed'))
+    
+    # Handle תורת pattern (תורה root with ת instead of ה)
+    # תורתכם -> תורה (your law)
+    if 'תורת' in stem:
+        candidates.append(('תורה', 'torah_tav_to_he'))
+    
+    # Handle שערות pattern (שער root with ות suffix)
+    # שערותיה -> שער (her hairs)
+    if 'שערות' in stem:
+        candidates.append(('שער', 'searot_to_sear'))
+    
+    # Handle חזו pattern (חזה root with ו instead of ה)
+    # תחזוני -> חזה (see me)
+    if 'חזו' in stem:
+        candidates.append(('חזה', 'chazah_vav_to_he'))
+    
+    # Handle מצאנ pattern (מצא root with נ suffix)
+    # תמצאנני -> מצא (find me)
+    if 'מצאנ' in stem:
+        candidates.append(('מצא', 'matsa_n_suffix'))
+    
+    # Handle ה prefix (hiphil) with suffix removal
+    # הושם -> שים (but שים not in dict), הצלב -> צלב (not in dict)
+    if stem.startswith('ה') and len(stem) >= 4:
+        without_he = stem[1:]
+        candidates.append((without_he, 'he_hiphil'))
+        # Also try with suffix removal
+        for suffix in ['ו', 'ה', 'י', 'כם', 'כן', 'הם', 'הן', 'מ']:
+            if without_he.endswith(suffix) and len(without_he) > len(suffix) + 2:
+                candidates.append((without_he[:-len(suffix)], f'he_hiphil_suffix_{suffix}'))
+        # Hiphil infinitive: העיד -> עוד (convert middle י to ו)
+        # This handles hiphil forms where middle letter is ו in dictionary
+        if len(without_he) >= 3:
+            for i in range(1, len(without_he) - 1):
+                if without_he[i] == 'י':
+                    converted = without_he[:i] + 'ו' + without_he[i+1:]
+                    candidates.append((converted, f'hiphil_middle_yod_to_vav_{i}'))
+    
     # Handle יו patterns (like שנוי -> שנה)
     # שנוי (change) = שנה (root) + ו + י suffix
     if len(stem) >= 4 and stem.endswith('וי'):
@@ -344,6 +708,22 @@ def extract_root_candidates(stem: str) -> List[Tuple[str, str]]:
             if base.endswith(suffix) and len(base) > len(suffix) + 2:
                 candidates.append((base[:-len(suffix)], f'hitpael_2nd_suffix_{suffix}'))
     
+    # Handle hitpael forms with תצ prefix
+    # תצטרכו (you need) -> טרכו -> טרך (but root is צרך!)
+    # The ת in hitpael can be part of root - just remove תצ and try
+    if stem.startswith('תצ') and len(stem) >= 5:
+        base = stem[2:]  # Remove תצ
+        candidates.append((base, 'hitpael_tzade_prefix'))
+        # Also try converting ט -> צ for roots like צרך
+        if base.startswith('ט') and len(base) >= 3:
+            # Without suffix
+            if len(base) >= 3:
+                candidates.append(('צ' + base[1:-1], 'hitpael_tzade_tav_to_tsade_no_suffix'))
+            # With suffix removed
+            if base.endswith('ו'):
+                tsade_form = 'צ' + base[1:-1]  # Remove last char (ו)
+                candidates.append((tsade_form, 'hitpael_tzade_tav_to_tsade_suffix'))
+    
     # Handle hitpael forms with ית prefix (3rd person masculine)
     # יתחבר (he will join) -> חבר
     if stem.startswith('ית') and len(stem) >= 4:
@@ -361,6 +741,70 @@ def extract_root_candidates(stem: str) -> List[Tuple[str, str]]:
         for suffix in ['נו', 'ו', 'ה', 'י', 'כם', 'כן', 'הם', 'הן']:
             if base.endswith(suffix) and len(base) > len(suffix) + 2:
                 candidates.append((base[:-len(suffix)], f'hitpael_he_suffix_{suffix}'))
+    
+    # Handle hitpael forms with תצ prefix (2nd person)
+    # תצטרכו (you need) -> צרכ (remove תצ and suffix)
+    if stem.startswith('תצ') and len(stem) >= 5:
+        base = stem[2:]  # Remove תצ
+        candidates.append((base, 'hitpael_tzade'))
+        for suffix in ['נו', 'ו', 'ה', 'י', 'כם', 'כן', 'הם', 'הן', 'כמ']:
+            if base.endswith(suffix) and len(base) > len(suffix) + 2:
+                candidates.append((base[:-len(suffix)], f'hitpael_tzade_suffix_{suffix}'))
+    
+    # Handle ו prefix (vav consecutive - converted hiphil)
+    # ויודה (and he thanked) -> יודה -> ידה
+    if stem.startswith('וי') and len(stem) >= 4:
+        without_vav_yod = stem[2:]  # Remove וי
+        candidates.append((without_vav_yod, 'vav_hiphil_converted'))
+        # Also try reducing י -> (nothing) for roots like ידה
+        if len(without_vav_yod) >= 3 and without_vav_yod[0] == 'י':
+            reduced = without_vav_yod[1:]
+            candidates.append((reduced, 'vav_hiphil_yod_reduced'))
+        # Also convert י prefix to ו for roots like עוד
+        if len(without_vav_yod) >= 3 and without_vav_yod[0] == 'י':
+            converted = 'ו' + without_vav_yod[1:]
+            candidates.append((converted, 'vav_hiphil_yod_to_vav'))
+    
+    # Handle הו prefix (hophal)
+    # הוציאו (they were caused to go out) -> יצא (remove הו, convert ציא to יצא)
+    if stem.startswith('הו') and len(stem) >= 5:
+        without_he_vav = stem[2:]  # Remove הו
+        candidates.append((without_he_vav, 'hophal'))
+        # Convert ציא -> יצא for roots like יצא
+        if without_he_vav.startswith('ציא'):
+            converted = 'יצא'
+            candidates.append((converted, 'hophal_tzade_to_yod_tzade'))
+    
+    # Handle ונ prefix (vav + niphal)
+    # ונרא (and we saw) -> נרא -> ראה
+    if stem.startswith('ונ') and len(stem) >= 4:
+        without_vavnun = stem[2:]  # Remove ונ
+        candidates.append((without_vavnun, 'vav_niphal'))
+        # Also try niphal transformation on result
+        if without_vavnun.startswith('נ') and len(without_vavnun) > 3:
+            candidates.append((without_vavnun[1:], 'vav_niphal_niphal'))
+        # Also try adding ה for roots ending with ה (like ראה)
+        candidates.append((without_vavnun + 'ה', 'vav_niphal_he_added'))
+    
+    # Handle ל prefix with ה (like להעיד -> to testify)
+    # ל + ה + root -> remove ל, then hiphil
+    if stem.startswith('לה') and len(stem) >= 5:
+        without_lamed = stem[1:]  # Remove ל
+        candidates.append((without_lamed, 'lamed_he_removed'))
+        # Then try hiphil transformation on result
+        if without_lamed.startswith('ה') and len(without_lamed) > 3:
+            without_he = without_lamed[1:]
+            candidates.append((without_he, 'lamed_he_removed_hiphil'))
+    
+    # Handle ל prefix with י followed by ו (like ליורש -> ירש)
+    # This is ל + infinitive where י is actually י prefix
+    if stem.startswith('לי') and len(stem) >= 5:
+        without_lamed = stem[1:]  # Remove ל only
+        candidates.append((without_lamed, 'lamed_removed'))
+        # Then try reducing ו -> י
+        if without_lamed[1] == 'ו':
+            reduced = without_lamed[0] + without_lamed[2:]
+            candidates.append((reduced, 'lamed_removed_yod_reduced'))
     
     # For each suffix-stripped form, also try binyan transformations
     for base_stem, suffix_type in suffix_forms:
@@ -395,6 +839,43 @@ def extract_root_candidates(stem: str) -> List[Tuple[str, str]]:
         if base_stem.startswith('מ') and len(base_stem) > 3:
             candidates.append((base_stem[1:], 'participle'))
         
+        # CRITICAL: Hiphil participle pattern מקטיל -> קטל (remove מ AND middle י)
+        # e.g., מקריב -> קרב, מבטיח -> בטח
+        # Pattern: מ + Q + R + י + L -> Q + R + L (remove מ and י)
+        if base_stem.startswith('מ') and len(base_stem) >= 4:
+            without_mem = base_stem[1:]
+            # Check for י at position 2 (between 2nd and 3rd root letters)
+            if len(without_mem) >= 3 and without_mem[2] == 'י':
+                reduced = without_mem[0] + without_mem[1] + without_mem[3:]
+                candidates.append((reduced, 'hiphil_participle_yod'))
+        
+        # CRITICAL: Niphal pattern נקטיל -> קטל (remove נ AND middle י)
+        # e.g., נחזיק -> חזק, נקריב -> קרב
+        if base_stem.startswith('נ') and len(base_stem) >= 4:
+            without_nun = base_stem[1:]
+            # Check for י at position 2
+            if len(without_nun) >= 3 and without_nun[2] == 'י':
+                reduced = without_nun[0] + without_nun[1] + without_nun[3:]
+                candidates.append((reduced, 'niphal_yod'))
+        
+        # CRITICAL: Hiphil perfect pattern הקטיל -> קטל (remove ה AND middle י)
+        # e.g., השלימ -> שלם, הרעיש -> רעש
+        if base_stem.startswith('ה') and len(base_stem) >= 4:
+            without_he = base_stem[1:]
+            # Check for י at position 2
+            if len(without_he) >= 3 and without_he[2] == 'י':
+                reduced = without_he[0] + without_he[1] + without_he[3:]
+                candidates.append((reduced, 'hiphil_yod'))
+        
+        # CRITICAL: Definite article + participle המקטיל -> קטל
+        # e.g., המקריבים -> קרב (remove המ AND middle י)
+        if base_stem.startswith('המ') and len(base_stem) >= 5:
+            without_hem = base_stem[2:]
+            # Check for י at position 2
+            if len(without_hem) >= 3 and without_hem[2] == 'י':
+                reduced = without_hem[0] + without_hem[1] + without_hem[3:]
+                candidates.append((reduced, 'def_art_participle_yod'))
+        
         # Piel pattern: XYYZ -> XYZ (reduce doubled middle letter)
         if len(base_stem) >= 4:
             if base_stem[1] == base_stem[2]:
@@ -418,6 +899,25 @@ def extract_root_candidates(stem: str) -> List[Tuple[str, str]]:
         if len(base_stem) >= 4 and base_stem[2] == 'י':
             reduced = base_stem[:2] + base_stem[3:]
             candidates.append((reduced, 'hiriq_reduced'))
+        
+        # For stems starting with לי (like ליורש -> ירש)
+        if base_stem.startswith('לי') and len(base_stem) >= 4:
+            # ליורש -> ירש (remove ל and reduce ו)
+            without_lamed_yod = base_stem[2:]
+            candidates.append((without_lamed_yod, 'lamed_yod_removed'))
+            # Also try with holem reduction: ליורש -> ירש (remove לי, then reduce ו)
+            if len(without_lamed_yod) >= 3 and without_lamed_yod[1] == 'ו':
+                reduced = without_lamed_yod[0] + without_lamed_yod[2:]
+                candidates.append((reduced, 'lamed_yod_holem'))
+        
+        # For stems starting with ונו (like ונושא -> נשא)
+        if base_stem.startswith('ונו') and len(base_stem) >= 5:
+            candidates.append((base_stem[3:], 'vav_nun_vav_removed'))  # ונושא -> שא
+            candidates.append(('נ' + base_stem[3:], 'vav_nun_vav_to_nun'))  # ונושא -> נשא
+        
+        # For niphal participle with ים suffix (like נראים -> ראה)
+        if base_stem.startswith('נרא') and len(base_stem) >= 5:
+            candidates.append(('ראה', 'niphal_participle_yod'))  # נראים -> ראה
         
         # CRITICAL: Handle מנ/ינ patterns (nifal/piel participles)
         # מנסה -> נסה (remove מ prefix, reduce נו to נ)

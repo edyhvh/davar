@@ -1,8 +1,8 @@
 {
   "book": "jude",
   "total_null_words": 80,
-  "total_assigned": 63,
-  "total_failed": 17,
+  "total_assigned": 64,
+  "total_failed": 16,
   "total_skipped": 0,
   "chapters": [
     {
@@ -110,7 +110,7 @@
           "prefixes": [],
           "type": "strong",
           "strong": "H4910",
-          "reason": "Root match (hiphil): מָשַׁל"
+          "reason": "Root match (he_hiphil): מָשַׁל"
         },
         {
           "word_index": 0,
@@ -565,9 +565,9 @@
           "word_index": 6,
           "text": "נַפְשִׁיִּים",
           "prefixes": [],
-          "type": "failed",
-          "error": "no_match",
-          "reason": "No matching entry found in dictionary"
+          "type": "strong",
+          "strong": "H6580",
+          "reason": "Root match (niphal_yod): פַּשׁ"
         },
         {
           "word_index": 9,
