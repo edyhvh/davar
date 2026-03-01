@@ -46,7 +46,8 @@ class CorpusLookup:
     Lookup then finds the best candidate for a null-strong word.
     """
 
-    MIN_STEM_LEN = 3        # Reject stems < 3 consonants (e.g. pronoun suffixes כם, הם)
+    # Reject stems < 3 consonants (e.g. pronoun suffixes כם, הם)
+    MIN_STEM_LEN = 3
     MIN_FREQ_AUTO = 3       # Must appear ≥ 3 times for auto-assignment
     MIN_DOMINANCE = 0.80    # Top candidate must be ≥ 80% of all occurrences for auto-assign
 
@@ -74,7 +75,8 @@ class CorpusLookup:
                                 continue
                             consonants = _normalize(text)
                             n_pfx = len(word.get('prefixes', []))
-                            stem = consonants[n_pfx:] if len(consonants) > n_pfx else consonants
+                            stem = consonants[n_pfx:] if len(
+                                consonants) > n_pfx else consonants
                             if len(stem) < self.MIN_STEM_LEN:
                                 continue
                             entry = self._index.setdefault(stem, {})
@@ -83,7 +85,8 @@ class CorpusLookup:
                 except Exception as e:
                     logger.warning(f'Error scanning {chapter_file}: {e}')
         self._built = True
-        logger.info(f'Corpus index: {len(self._index)} stems from {total} words')
+        logger.info(
+            f'Corpus index: {len(self._index)} stems from {total} words')
 
     def lookup(self, word_text: str, prefixes: list) -> Tuple[Optional[str], int, bool]:
         """
@@ -100,7 +103,8 @@ class CorpusLookup:
             - is_auto_assignable: True when confidence is high enough to skip the API
         """
         if not self._built:
-            raise RuntimeError('CorpusLookup.build() must be called before lookup()')
+            raise RuntimeError(
+                'CorpusLookup.build() must be called before lookup()')
 
         consonants = _normalize(word_text)
         n_pfx = len(prefixes)

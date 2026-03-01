@@ -5,6 +5,8 @@ Handles loading, processing, and updating Delitzsch parsed JSON files
 with Strong's number assignments.
 """
 
+from .pronominal_lookup import lookup_pronominal, is_pronominal_form
+from scripts.dict.utils import load_json, save_json, ProgressTracker, create_backup
 import asyncio
 import json
 import logging
@@ -15,8 +17,6 @@ from typing import Dict, List, Optional, Any, Tuple
 # Add parent directory to path for utils import
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from scripts.dict.utils import load_json, save_json, ProgressTracker, create_backup
-from .pronominal_lookup import lookup_pronominal, is_pronominal_form
 
 logger = logging.getLogger(__name__)
 
@@ -83,7 +83,8 @@ class StrongsProcessor:
                     verse_num = verse_data['verse']
                     verse_words = verse_data['words']
 
-                    null_indices = [i for i, w in enumerate(verse_words) if w.get('strong') is None]
+                    null_indices = [i for i, w in enumerate(
+                        verse_words) if w.get('strong') is None]
                     if not null_indices:
                         continue
 
@@ -93,9 +94,11 @@ class StrongsProcessor:
                         w_text = w.get('text', '')
                         if i in null_indices:
                             raw_pfx = w.get('prefixes', []) or []
-                            pfx_list: List[str] = [p for p in raw_pfx if isinstance(p, str)]
+                            pfx_list: List[str] = [
+                                p for p in raw_pfx if isinstance(p, str)]
                             if pfx_list:
-                                consonants: List[str] = [_PREFIX_CONSONANT.get(p, p) for p in pfx_list]
+                                consonants: List[str] = [
+                                    _PREFIX_CONSONANT.get(p, p) for p in pfx_list]
                                 pfx_str = f"[pfx:{','.join(consonants)}]"
                             else:
                                 pfx_str = ''
@@ -113,11 +116,12 @@ class StrongsProcessor:
                     for i in null_indices:
                         w = verse_words[i]
                         prefixes = w.get('prefixes', [])
-                        
+
                         # First check if this is a pronominal form (preposition + suffix)
                         # Note: lookup_pronominal now returns None since Hebrew pronominal forms
                         # don't have separate Strong's numbers - let API handle them correctly
-                        pronominal_strong = lookup_pronominal(w['text'], prefixes)
+                        pronominal_strong = lookup_pronominal(
+                            w['text'], prefixes)
                         if pronominal_strong is not None:
                             # Only auto-assign if we have a valid Strong's number
                             null_words.append({
@@ -136,7 +140,7 @@ class StrongsProcessor:
                             })
                             pronominal_auto_assigned += 1
                             continue
-                        
+
                         corpus_strong, corpus_count, is_auto = self.corpus.lookup(
                             w['text'], prefixes
                         )
@@ -153,9 +157,10 @@ class StrongsProcessor:
                             'corpus_count': corpus_count,         # how many times seen
                             'corpus_auto': is_auto,               # True → skip API
                         })
-                    
+
                     if pronominal_auto_assigned > 0:
-                        logger.debug(f"Auto-assigned {pronominal_auto_assigned} pronominal forms in {book_name} {chapter_num}:{verse_num}")
+                        logger.debug(
+                            f"Auto-assigned {pronominal_auto_assigned} pronominal forms in {book_name} {chapter_num}:{verse_num}")
 
                     verse_groups.append({
                         'chapter': chapter_num,
@@ -170,7 +175,8 @@ class StrongsProcessor:
                 logger.error(f"Error scanning {chapter_file}: {e}")
                 continue
 
-        logger.info(f"Found {total_null} words across {len(verse_groups)} verses needing assignment in {book_name}")
+        logger.info(
+            f"Found {total_null} words across {len(verse_groups)} verses needing assignment in {book_name}")
         return verse_groups
 
     def _checkpoint_path(self, book_name: str) -> Path:
@@ -197,7 +203,8 @@ class StrongsProcessor:
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         try:
             save_json(results, cp_path)
-            logger.debug(f"Checkpoint saved for {book_name} ({len(results)} verses)")
+            logger.debug(
+                f"Checkpoint saved for {book_name} ({len(results)} verses)")
         except Exception as e:
             logger.warning(f"Could not save checkpoint for {book_name}: {e}")
 
@@ -217,41 +224,47 @@ class StrongsProcessor:
         from .config import MAX_CONCURRENT
 
         results = self._load_checkpoint(book_name)
-        
+
         # Handle pronominal forms that don't need API calls
         for vg in verse_groups:
             verse_key = vg['verse_key']
             if verse_key in results:
                 continue
-                
+
             # Check if all words in this verse are pronominal forms
             all_pronominal = all(
-                word_info.get('pronominal_form') or word_info.get('corpus_auto')
+                word_info.get('pronominal_form') or word_info.get(
+                    'corpus_auto')
                 for word_info in vg['null_words']
             )
-            
+
             if all_pronominal and vg['null_words']:
                 # Auto-assign all pronominal forms without API call
                 assignments = []
                 for word_info in vg['null_words']:
                     if word_info.get('pronominal_form'):
-                        assignments.append({'strong': word_info['corpus_strong']})
+                        assignments.append(
+                            {'strong': word_info['corpus_strong']})
                     elif word_info.get('corpus_auto') and word_info.get('corpus_strong'):
-                        assignments.append({'strong': word_info['corpus_strong']})
+                        assignments.append(
+                            {'strong': word_info['corpus_strong']})
                     else:
                         assignments.append({'error': 'unknown'})
                 results[verse_key] = assignments
                 self._save_checkpoint(book_name, results)
-                logger.debug(f"Auto-assigned verse {verse_key} with {len(assignments)} pronominal/corpus forms")
-        
+                logger.debug(
+                    f"Auto-assigned verse {verse_key} with {len(assignments)} pronominal/corpus forms")
+
         pending = [vg for vg in verse_groups if vg['verse_key'] not in results]
 
         if not pending:
-            logger.info("All verses already completed (loaded from checkpoint or auto-assigned)")
+            logger.info(
+                "All verses already completed (loaded from checkpoint or auto-assigned)")
             return results
 
         if results:
-            logger.info(f"Resuming: {len(results)} verses done, {len(pending)} remaining")
+            logger.info(
+                f"Resuming: {len(results)} verses done, {len(pending)} remaining")
 
         semaphore = asyncio.Semaphore(MAX_CONCURRENT)
         total = len(verse_groups)
@@ -260,7 +273,8 @@ class StrongsProcessor:
             async with semaphore:
                 verse_key = vg['verse_key']
                 null_words = vg['null_words']
-                logger.info(f"Processing verse {verse_key} ({len(null_words)} words)")
+                logger.info(
+                    f"Processing verse {verse_key} ({len(null_words)} words)")
                 assignments = await self.assigner.assign_batch_async(
                     null_words, batch_index=verse_key
                 )
@@ -273,7 +287,8 @@ class StrongsProcessor:
                 results[verse_key] = assignments
                 self._save_checkpoint(book_name, results)
             except Exception as e:
-                logger.error(f"A verse failed and will be marked as failed in output: {e}")
+                logger.error(
+                    f"A verse failed and will be marked as failed in output: {e}")
 
         return results
 
@@ -300,7 +315,8 @@ class StrongsProcessor:
 
         # Check if output already exists
         if output_file.exists() and not force and not dry_run:
-            logger.info(f"Output file already exists for {book_name}. Use --force to re-process.")
+            logger.info(
+                f"Output file already exists for {book_name}. Use --force to re-process.")
             return {'skipped': True}
 
         # Scan for verses needing assignment
@@ -316,7 +332,8 @@ class StrongsProcessor:
         }
 
         if dry_run:
-            logger.info(f"DRY RUN: Would process {total_null} words across {len(verse_groups)} verses in {book_name}")
+            logger.info(
+                f"DRY RUN: Would process {total_null} words across {len(verse_groups)} verses in {book_name}")
             return stats
 
         if not verse_groups:
@@ -324,9 +341,11 @@ class StrongsProcessor:
             return stats
 
         from .config import MAX_CONCURRENT
-        logger.info(f"Running {len(verse_groups)} verses (up to {MAX_CONCURRENT} concurrent)")
+        logger.info(
+            f"Running {len(verse_groups)} verses (up to {MAX_CONCURRENT} concurrent)")
 
-        verse_results = asyncio.run(self._run_verses_async(book_name, verse_groups))
+        verse_results = asyncio.run(
+            self._run_verses_async(book_name, verse_groups))
 
         # Assemble output grouped by chapter
         chapter_assignments: Dict[int, List] = {}
@@ -339,12 +358,14 @@ class StrongsProcessor:
 
             asgn = verse_results.get(verse_key)
             if asgn is None:
-                logger.error(f"Verse {verse_key} failed; marking {len(null_words)} words as failed")
+                logger.error(
+                    f"Verse {verse_key} failed; marking {len(null_words)} words as failed")
                 asgn = []
             asgn_iter = iter(asgn)
 
             for word_info in null_words:
-                assignment: Dict = next(asgn_iter, {'error': 'missing_assignment'})
+                assignment: Dict = next(
+                    asgn_iter, {'error': 'missing_assignment'})
 
                 chapter = word_info['chapter']
                 chapter_assignments.setdefault(chapter, [])

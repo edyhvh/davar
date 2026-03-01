@@ -3,6 +3,9 @@
 Simple test script to check Grok API response structure.
 """
 
+import httpx
+from openai import OpenAI
+from scripts.delitzsch.strongs.config import XAI_API_KEY, GROK_MODEL, GROK_BASE_URL
 import json
 import sys
 from pathlib import Path
@@ -10,9 +13,6 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from scripts.delitzsch.strongs.config import XAI_API_KEY, GROK_MODEL, GROK_BASE_URL
-from openai import OpenAI
-import httpx
 
 def test_grok_api():
     """Test basic Grok API call."""
@@ -56,7 +56,8 @@ def test_grok_api():
 
         print("API call successful!")
         print(f"Response type: {type(response)}")
-        print(f"Response attributes: {[attr for attr in dir(response) if not attr.startswith('_')]}")
+        print(
+            f"Response attributes: {[attr for attr in dir(response) if not attr.startswith('_')]}")
 
         if hasattr(response, 'choices') and response.choices:
             choice = response.choices[0]
@@ -86,6 +87,7 @@ def test_grok_api():
         print(f"API call failed: {e}")
         import traceback
         traceback.print_exc()
+
 
 if __name__ == "__main__":
     test_grok_api()
