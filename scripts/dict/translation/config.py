@@ -10,14 +10,16 @@ from pathlib import Path
 from typing import Dict, Optional
 from dotenv import load_dotenv
 
-# Add parent directory to path for config import
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Ensure project root is importable before importing project-local modules
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
-# Import from parent config module
-from config import config
+from scripts.dict.config import config as dict_config
+
 
 # Load environment variables from .env file
-ENV_FILE = config.PROJECT_ROOT / '.env'
+ENV_FILE = dict_config.PROJECT_ROOT / '.env'
 
 # Try to load .env file, but don't fail if it doesn't exist or can't be read
 try:
@@ -26,7 +28,8 @@ try:
 except (PermissionError, IOError) as e:
     # If we can't read .env, continue - environment variables might be set elsewhere
     import warnings
-    warnings.warn(f"Could not load .env file: {e}. Using environment variables if available.")
+    warnings.warn(
+        f"Could not load .env file: {e}. Using environment variables if available.")
 
 # Supported languages mapping: code -> full name
 SUPPORTED_LANGUAGES: Dict[str, str] = {
@@ -44,15 +47,16 @@ DEFAULT_LANGUAGE = 'es'
 
 # Grok API Configuration
 XAI_API_KEY = os.getenv('XAI_API_KEY')
-GROK_MODEL = 'grok-4'  # Fastest model: $0.10/1M input, $0.30/1M output
+GROK_MODEL = 'grok-4-1-fast-reasoning'  # Use the fast reasoning model
 
 # Paths (use parent config module)
-LEXICON_DIR = config.LEXICON_DIR
+LEXICON_DIR = dict_config.LEXICON_DIR
 ROOTS_FILE = LEXICON_DIR / 'roots.json'
 WORDS_FILE = LEXICON_DIR / 'words.json'
 
 # Translation settings
-DEFAULT_BATCH_SIZE = 50  # Number of definitions per API call (recommended: 50-100)
+# Number of definitions per API call (recommended: 50-100)
+DEFAULT_BATCH_SIZE = 50
 MAX_BATCH_SIZE = 100     # Maximum allowed batch size
 MIN_BATCH_SIZE = 1       # Minimum allowed batch size
 
@@ -60,7 +64,8 @@ MIN_BATCH_SIZE = 1       # Minimum allowed batch size
 # Grok has higher rate limits than Gemini free tier
 MAX_RETRIES = 3                # Number of retry attempts on failure
 RETRY_BACKOFF_BASE = 2         # Exponential backoff: 2^retry seconds
-RATE_LIMIT_DELAY = 1.0         # Seconds to wait between API calls (Grok has higher limits)
+# Seconds to wait between API calls (Grok has higher limits)
+RATE_LIMIT_DELAY = 1.0
 
 # Mismatch handling strategy
 # Options: 'pad' (add empty strings), 'truncate' (remove extras), 'fail' (raise error)
@@ -79,16 +84,17 @@ BATCH_MAX_WAIT_HOURS = 24      # Not used for Grok
 
 # API Configuration
 GROK_BASE_URL = "https://api.x.ai/v1"
-GROK_TIMEOUT = 3600            # 1 hour timeout (recommended for reasoning models, though grok-4 is fast)
+# 1 hour timeout (recommended for reasoning models, though grok-4 is fast)
+GROK_TIMEOUT = 3600
 
 
 def validate_language(lang_code: str) -> bool:
     """
     Validate if a language code is supported.
-    
+
     Args:
         lang_code: Language code (e.g., 'es', 'pt')
-        
+
     Returns:
         True if supported, False otherwise
     """
@@ -98,10 +104,10 @@ def validate_language(lang_code: str) -> bool:
 def get_language_name(lang_code: str) -> Optional[str]:
     """
     Get the full name of a language from its code.
-    
+
     Args:
         lang_code: Language code (e.g., 'es', 'pt')
-        
+
     Returns:
         Full language name or None if not found
     """
@@ -111,9 +117,8 @@ def get_language_name(lang_code: str) -> Optional[str]:
 def validate_grok_api_key() -> bool:
     """
     Validate that the xAI API key is set.
-    
+
     Returns:
         True if API key is set, False otherwise
     """
     return XAI_API_KEY is not None and len(XAI_API_KEY.strip()) > 0
-
