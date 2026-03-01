@@ -88,13 +88,14 @@ class StrongsProcessor:
                         continue
 
                     # Build annotated verse: known words get [H####], unknown get <<<word[prefixes]>>>
-                    annotated_parts = []
+                    annotated_parts: List[str] = []
                     for i, w in enumerate(verse_words):
                         w_text = w.get('text', '')
                         if i in null_indices:
-                            pfx = w.get('prefixes', [])
-                            if pfx:
-                                consonants = [_PREFIX_CONSONANT.get(p, p) for p in pfx]
+                            raw_pfx = w.get('prefixes', []) or []
+                            pfx_list: List[str] = [p for p in raw_pfx if isinstance(p, str)]
+                            if pfx_list:
+                                consonants: List[str] = [_PREFIX_CONSONANT.get(p, p) for p in pfx_list]
                                 pfx_str = f"[pfx:{','.join(consonants)}]"
                             else:
                                 pfx_str = ''

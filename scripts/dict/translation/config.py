@@ -10,14 +10,15 @@ from pathlib import Path
 from typing import Dict, Optional
 from dotenv import load_dotenv
 
-# Add parent directory to path for config import
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Ensure project root is importable, then import dict config explicitly
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
-# Import from parent config module
-from config import config
+from scripts.dict.config import config as dict_config
 
 # Load environment variables from .env file
-ENV_FILE = config.PROJECT_ROOT / '.env'
+ENV_FILE = dict_config.PROJECT_ROOT / '.env'
 
 # Try to load .env file, but don't fail if it doesn't exist or can't be read
 try:
@@ -47,7 +48,7 @@ XAI_API_KEY = os.getenv('XAI_API_KEY')
 GROK_MODEL = 'grok-4-1-fast-reasoning'  # Use the fast reasoning model
 
 # Paths (use parent config module)
-LEXICON_DIR = config.LEXICON_DIR
+LEXICON_DIR = dict_config.LEXICON_DIR
 ROOTS_FILE = LEXICON_DIR / 'roots.json'
 WORDS_FILE = LEXICON_DIR / 'words.json'
 

@@ -113,7 +113,7 @@ class CorpusLookup:
             return None, 0, False
 
         total = sum(candidates.values())
-        best = max(candidates, key=candidates.get)
+        best = max(candidates, key=lambda key: candidates[key])
         best_count = candidates[best]
         dominance = best_count / total
 

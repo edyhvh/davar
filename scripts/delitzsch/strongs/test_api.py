@@ -67,11 +67,14 @@ def test_grok_api():
                 if hasattr(message, 'content'):
                     content = message.content
                     print(f"Content: {repr(content)}")
-                    try:
-                        parsed = json.loads(content)
-                        print(f"Successfully parsed JSON: {parsed}")
-                    except json.JSONDecodeError as e:
-                        print(f"Failed to parse JSON: {e}")
+                    if content is not None:
+                        try:
+                            parsed = json.loads(content)
+                            print(f"Successfully parsed JSON: {parsed}")
+                        except json.JSONDecodeError as e:
+                            print(f"Failed to parse JSON: {e}")
+                    else:
+                        print("No content returned; cannot parse JSON")
                 else:
                     print("No content in message")
             else:
