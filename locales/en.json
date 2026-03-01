@@ -209,7 +209,13 @@
     "selectBookPrompt": "Select a book to begin.",
     "loading": "Loading verses...",
     "prefixLabel": "Prefix: {prefix}",
-    "missingSpanishTranslation": "We don't have a Spanish translation for this text yet, we're working on it..."
+    "missingSpanishTranslation": "We don't have a Spanish translation for this text yet, we're working on it...",
+    "besorahDisclaimer": {
+      "short": "Reference only: Besorah Strong mapping may contain unreviewed or missing entries.",
+      "modalTitle": "Besorah mapping notice",
+      "modalMessage": "Besorah Strong mappings are provided for reference only. Some mappings may be unreviewed, incomplete, or unresolved.",
+      "modalConfirm": "Understood"
+    }
   },
   "wordCard": {
     "selectWord": "Select a word",

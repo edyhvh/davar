@@ -11,6 +11,7 @@ const STORAGE_KEYS = {
   seferMode: "davar.seferMode",
   hebrewOnly: "davar.hebrewOnly",
   wordHintCount: "davar.wordHintCount",
+  besorahDisclaimerCount: "davar.besorahDisclaimerCount",
 };
 
 export const loadThemeMode = async () => {
@@ -118,6 +119,19 @@ export const loadWordHintCount = async () => {
 
 export const saveWordHintCount = async (count: number) => {
   await AsyncStorage.setItem(STORAGE_KEYS.wordHintCount, String(count));
+};
+
+export const loadBesorahDisclaimerCount = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.besorahDisclaimerCount);
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+};
+
+export const saveBesorahDisclaimerCount = async (count: number) => {
+  await AsyncStorage.setItem(
+    STORAGE_KEYS.besorahDisclaimerCount,
+    String(count),
+  );
 };
 
 export const clearStorage = async () => {

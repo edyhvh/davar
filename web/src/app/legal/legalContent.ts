@@ -22,7 +22,7 @@ const LEGAL_TITLES: Record<LegalKind, string> = {
 const EN_TERMS = `# Terms of Service for Davar
 
 **Effective Date:** February 8, 2026  
-**Last Updated:** February 8, 2026
+**Last Updated:** March 1, 2026
 
 Welcome to Davar, an open-source project providing access to the Hebrew Bible (Tanakh) in its original language and hebrew translations of the Besorah, along with select translations and study resources. The Davar mobile application (the "App") is available on the Apple App Store and Google Play Store, and the associated website is located at https://davar.bible (collectively, the "Services").
 
@@ -33,6 +33,8 @@ These Terms are provided in English. If you prefer another language, you may use
 ## 1. Nature of the Services
 
 Davar is a non-commercial, open-source project created to facilitate reading, studying, and meditating on the Hebrew Scriptures. The Services are provided "as is" without any warranty of accuracy, completeness, or fitness for any particular purpose beyond personal, non-commercial use.
+
+Some datasets (including parts of Besorah Strong's mapping) are compiled from third-party sources and automated processing workflows. These datasets are provided for reference and study only, and may contain unresolved items, omissions, or mapping errors pending manual review.
 
 ## 2. User Eligibility
 
@@ -87,7 +89,7 @@ For copyrighted translations (TS2009, TTH), we operate under specific agreements
 | English Translation (TS2009) | Licensed from Institute for Scripture Research (agreement July 15, 2025)     | Custom non-exclusive, non-commercial                        | Display: "Scripture taken from The Scriptures, Copyright by Institute for Scripture Research. Used by permission." in every display | Non-commercial only; API <=100 verses, emails/RSS <=250, SMS <=10; no broad redistribution; error corrections required |
 | Spanish Translation (TTH)    | Licensed from Natanael Doldan (agreement ~January 2026)                      | Custom non-exclusive, non-commercial                        | Display: "Texto tomado de la Traduccion Textual del Hebreo, Copyright por Natanael Doldan. Usado con permiso." in every display     | Non-commercial only; similar limits to TS2009; error corrections; donations to licensor voluntary                   |
 | Spanish Translation (SPABES) | https://ebible.org/spabes/                                                   | CC BY 4.0                                                   | Credit "AudioBiblia.org / Irma Flores (info@audiobiblia.org)"; note changes if modified                                             | Redistribution ok with attribution; indicate if modified                                                            |
-| Delitzsch Strong's           | https://www.ph4.org/b4_1.php?l=iw                                            | Unclear (site ©2005-2026 Ph4)                               | None specified; recommend crediting source                                                                                          | License unclear—use cautiously or consider alternatives                                                             |
+| Delitzsch Strong's           | https://www.ph4.org/b4_1.php?l=iw                                            | Unclear (site ©2005-2026 Ph4)                               | None specified; recommend crediting source                                                                                          | Initial mapping references were sourced from internet files; license unclear—use cautiously or consider alternatives |
 | Qumran Differences/Data      | https://codeberg.org/dandeto/deadseainsights + document from Natanael Doldan | No license specified (treat as restricted)                  | Credit repository/author or Natanael Doldan if applicable                                                                           | Unclear permissions—contact for explicit license; treat as non-redistributable                                      |
 | Fonts (SBL Hebrew)           | https://www.sbl-site.org/educational/BiblicalFonts_SBLHebrew.aspx            | SIL Open Font License 1.1                                   | Font credit not required but recommended                                                                                            | Free for personal and commercial use; modifications allowed                                                         |
 | Fonts (Dead Sea Scrolls)     | Custom font files                                                            | Licensed                                                    | None required                                                                                                                       | Used under license agreement                                                                                        |
@@ -103,6 +105,8 @@ THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY K
 We are not responsible for:
 
 - Errors, omissions, or inaccuracies in biblical text or data (including Qumran differences).
+- Errors, omissions, or inaccuracies in Besorah Strong's mappings, including entries that are unreviewed, partially reviewed, or sourced from third-party reference files.
+- Automated mapping outcomes that leave unresolved values (for example null, failed, or skipped) until future correction or review.
 - Interruptions, delays, or data loss (including future notes).
 - Any spiritual, emotional, or personal outcomes.
 
