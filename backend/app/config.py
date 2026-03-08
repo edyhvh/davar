@@ -52,9 +52,9 @@ class Settings(BaseSettings):
     # Environment
     env: str = "development"
 
-    # Supabase (future user data)
+    # Supabase (for TS2009 private content sync and future user data)
     supabase_url: Optional[str] = None
-    supabase_key: Optional[str] = None
+    supabase_service_key: Optional[str] = None
 
     # Data Source Paths (absolute to avoid cwd issues)
     data_path: str = str(DEFAULT_DATA_PATH)

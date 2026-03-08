@@ -4,7 +4,6 @@ Sync TS2009 translation files from Supabase Storage to local data directory.
 This script runs at startup to ensure private TS2009 content is available.
 """
 
-import os
 import sys
 from pathlib import Path
 
@@ -25,11 +24,11 @@ TS2009_BUCKET = "ts2009"
 
 def sync_ts2009():
     """Download all TS2009 JSON files from Supabase Storage bucket."""
-    supabase_url = os.getenv('DAVAR_SUPABASE_URL')
-    supabase_key = os.getenv('DAVAR_SUPABASE_SERVICE_KEY')
+    supabase_url = settings.supabase_url
+    supabase_key = settings.supabase_service_key
 
     if not supabase_url or not supabase_key:
-        print("ERROR: DAVAR_SUPABASE_URL and DAVAR_SUPABASE_SERVICE_KEY must be set")
+        print("ERROR: supabase_url and supabase_service_key must be configured (via DAVAR_SUPABASE_URL and DAVAR_SUPABASE_SERVICE_KEY)")
         sys.exit(1)
 
     # Initialize Supabase client
