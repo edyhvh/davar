@@ -125,10 +125,12 @@ const createStyles = (
       fontFamily: typography.families.hebrewQumran,
       fontSize: qumranSize,
       lineHeight: qumranLineHeight,
-      color: colors.qumranText,
+      color: colors.textPrimary,
+      textDecorationLine: "underline",
     },
     qumranText: {
-      color: colors.qumranText,
+      color: colors.textPrimary,
+      textDecorationLine: "underline",
     },
     transliteration: {
       fontFamily: typography.families.latinUI,

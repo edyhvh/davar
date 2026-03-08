@@ -173,12 +173,14 @@ export function VerseDisplay({
             style={
               variantText
                 ? {
-                    color: "var(--qumran-text)",
+                    color: "var(--text-hebrew)",
                     fontFamily: "'DeadSeaScrolls-Regular', 'Cardo', serif",
                     fontSize: dssInlineFontScale,
                     display: "inline-block",
                     verticalAlign: "middle",
                     transform: `translateY(${dssInlineBaselineShift})`,
+                    textDecoration: "underline",
+                    textDecorationThickness: "1px",
                   }
                 : undefined
             }

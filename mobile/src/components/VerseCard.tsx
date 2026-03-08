@@ -127,7 +127,8 @@ const createStyles = (
       fontFamily: typography.families.hebrewQumran,
       fontSize: typography.sizes.hebrewVerseMedium * hebrewScale * 1.9,
       lineHeight: typography.sizes.hebrewVerseMedium * hebrewScale * 1.5,
-      color: colors.qumranText,
+      color: colors.textPrimary,
+      textDecorationLine: "underline",
     },
     hebrewWordPressable: {
       paddingHorizontal: spacing[2],
