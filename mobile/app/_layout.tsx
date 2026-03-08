@@ -1,5 +1,6 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 import { useEffect, useCallback } from "react";
 import { StyleSheet } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -80,7 +81,19 @@ export default function RootLayout() {
                 />
                 <Stack.Screen
                   name="(tabs)"
-                  options={{ headerShown: false }}
+                  options={({ route }) => {
+                    const focusedTab = getFocusedRouteNameFromRoute(route) ?? "home";
+                    const tabTitles: Record<string, string> = {
+                      home: t("tabs.home"),
+                      verse: t("tabs.verse"),
+                      settings: t("tabs.settings"),
+                    };
+
+                    return {
+                      headerShown: false,
+                      title: tabTitles[focusedTab] ?? t("tabs.home"),
+                    };
+                  }}
                 />
                 <Stack.Screen
                   name="modal"
