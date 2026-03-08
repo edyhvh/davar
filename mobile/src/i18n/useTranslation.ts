@@ -99,14 +99,5 @@ export const useTranslation = () => {
 };
 
 export const getSupportTelegramUrl = (language: AppLanguage): string => {
-  switch (language) {
-    case "he":
-      return "https://t.me/davarbiblehe";
-    case "en":
-      return "https://t.me/davarbibleen";
-    case "es":
-      return "https://t.me/davarbiblees";
-    default:
-      return "https://t.me/davarbibleen";
-  }
+  return "https://t.me/davarbible";
 };

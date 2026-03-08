@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Alert,
   Animated,
@@ -80,7 +80,7 @@ type VersePageProps = {
   onBackgroundPress: () => void;
 };
 
-const VersePage = ({
+const VersePageComponent = ({
   item,
   pageHeight,
   showWordHint,
@@ -150,6 +150,19 @@ const VersePage = ({
     </View>
   );
 };
+
+const VersePage = memo(
+  VersePageComponent,
+  (prevProps, nextProps) =>
+    prevProps.item.id === nextProps.item.id &&
+    prevProps.pageHeight === nextProps.pageHeight &&
+    prevProps.showWordHint === nextProps.showWordHint &&
+    prevProps.isSelectedVerse === nextProps.isSelectedVerse &&
+    prevProps.isBesorah === nextProps.isBesorah &&
+    prevProps.onVersePress === nextProps.onVersePress &&
+    prevProps.onWordPress === nextProps.onWordPress &&
+    prevProps.onBackgroundPress === nextProps.onBackgroundPress,
+);
 
 export const VerseDetailContent = () => {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
@@ -379,6 +392,10 @@ export const VerseDetailContent = () => {
     // Mark that we just selected a word to prevent onClosed from clearing it
     justSelectedWordRef.current = true;
     setSelectedWord(word);
+    // Immediately open the sheet to handle same-word retaps
+    if (sheetRef.current) {
+      sheetRef.current.snapToIndex(0);
+    }
   }, []);
 
   // Open the word analysis sheet whenever a word is selected
@@ -408,6 +425,39 @@ export const VerseDetailContent = () => {
       animatePill(false);
     }
   }, [animatePill, pillVisible]);
+
+  const handleOpenNavigationSheet = useCallback(() => {
+    navigationSheetRef.current?.snapToIndex(0);
+  }, []);
+
+  const keyExtractor = useCallback(
+    (item: (typeof orderedVerses)[number]) => item.id,
+    [],
+  );
+
+  const renderVersePage = useCallback(
+    ({ item }: { item: (typeof orderedVerses)[number] }) => (
+      <VersePage
+        item={item}
+        pageHeight={pageHeight}
+        showWordHint={showWordHint}
+        isSelectedVerse={item.id === verse?.id}
+        isBesorah={isBesorah}
+        onVersePress={handleOpenNavigationSheet}
+        onWordPress={handleWordPress}
+        onBackgroundPress={handleBackgroundPress}
+      />
+    ),
+    [
+      pageHeight,
+      showWordHint,
+      verse?.id,
+      isBesorah,
+      handleOpenNavigationSheet,
+      handleWordPress,
+      handleBackgroundPress,
+    ],
+  );
 
   // Clear selectedWord immediately when currentVerseId changes to prevent stale word display
   const prevVerseIdRef = useRef(currentVerseId);
@@ -551,24 +601,18 @@ export const VerseDetailContent = () => {
           <FlatList
             ref={listRef}
             data={orderedVerses}
-            keyExtractor={(item) => item.id}
-            renderItem={({ item }) => (
-              <VersePage
-                item={item}
-                pageHeight={pageHeight}
-                showWordHint={showWordHint}
-                isSelectedVerse={item.id === verse?.id}
-                isBesorah={isBesorah}
-                onVersePress={() => navigationSheetRef.current?.snapToIndex(0)}
-                onWordPress={handleWordPress}
-                onBackgroundPress={handleBackgroundPress}
-              />
-            )}
+            keyExtractor={keyExtractor}
+            renderItem={renderVersePage}
             pagingEnabled
             showsVerticalScrollIndicator={false}
             decelerationRate="fast"
             snapToInterval={pageHeight}
             snapToAlignment="start"
+            removeClippedSubviews
+            windowSize={5}
+            initialNumToRender={3}
+            maxToRenderPerBatch={4}
+            updateCellsBatchingPeriod={50}
             initialScrollIndex={Math.max(currentIndex, 0)}
             getItemLayout={(_, index) => ({
               length: pageHeight,

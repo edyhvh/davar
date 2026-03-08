@@ -110,7 +110,13 @@ export function FullChapterView({
             onClick={() => onWordClick(word)}
             className={`cursor-pointer transition-colors duration-200 ${isSelected ? "verse-highlight" : ""}`}
             style={
-              variantText ? { color: "var(--copper-highlight)" } : undefined
+              variantText
+                ? {
+                    color: "var(--text-hebrew)",
+                    textDecoration: "underline",
+                    textDecorationThickness: "1px",
+                  }
+                : undefined
             }
           >
             {prefixSegments?.prefixes?.length ? (

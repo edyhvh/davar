@@ -357,7 +357,6 @@ const NavigationSheetComponent = (
 
   const handleSheetChanges = useCallback(
     (index: number) => {
-      console.debug("NavigationSheet onChange", { index });
       if (index === -1) {
         // Reset state when closed
         setStep("book");
