@@ -1,0 +1,43 @@
+name: Backend Deploy
+
+on:
+  pull_request:
+    branches: [ production ]
+    paths: [ 'backend/**' ]
+  push:
+    branches: [ production ]
+    paths: [ 'backend/**' ]
+
+jobs:
+  release-validation:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify release PR source branch
+        run: |
+          if [ "${{ github.head_ref }}" != "main" ]; then
+            echo "Release PRs to production must come from main."
+            exit 1
+          fi
+
+  deploy:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate TS2009 files exist in storage
+        run: |
+          # This would need Supabase CLI or API call to check bucket contents
+          # For now, placeholder - in real implementation, add Supabase CLI setup
+          echo "TS2009 storage validation placeholder"
+          # TODO: Install Supabase CLI and check bucket has expected files
+
+      - name: Notify deployment
+        run: |
+          echo "Backend deployment triggered on Render via auto-deploy"

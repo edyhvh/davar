@@ -98,3 +98,39 @@ The TTH Spanish translations now use an optimized format with one JSON file per 
 - Single file per book (38 total) vs multiple chapter files
 - Hierarchical structure for better organization
 - Faster loading with improved caching efficiency
+
+## Deployment
+
+The backend is designed for JSON-first deployment with private TS2009 content stored in Supabase Storage.
+
+### TS2009 Private Content
+
+TS2009 English translations are licensed/private and not committed to GitHub. They are stored in a private Supabase Storage bucket and synced to the runtime data directory at startup.
+
+- Storage bucket: `ts2009`
+- Sync script: `scripts/sync_ts2009.py`
+- Requires: `DAVAR_SUPABASE_URL` and `DAVAR_SUPABASE_SERVICE_KEY`
+
+### Render Deployment
+
+1. Create a Render web service from this GitHub repository.
+2. Set build command: (none, or pip install if needed)
+3. Set start command: `python scripts/sync_ts2009.py && uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+4. Configure environment variables from `.env.example`.
+5. Set Render production branch to `production`.
+
+### Branch Strategy
+
+- `main`: development integration branch.
+- `production`: live release branch.
+
+Release flow:
+
+1. Merge feature branches into `main`.
+2. Open a release PR from `main` to `production`.
+3. After approvals/checks, merge into `production`.
+4. Render auto-deploy runs from `production` only.
+
+### Environment Variables
+
+See `.env.example` for required variables. For production, use separate Supabase project and keys.

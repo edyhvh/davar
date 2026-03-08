@@ -19,5 +19,8 @@ slowapi>=0.1.8
 orjson>=3.10.0
 aiofiles>=23.2.1
 
+# Supabase client (for future user data)
+supabase>=2.3.0
+
 # Supabase client (future user data)
 supabase>=2.3.0
