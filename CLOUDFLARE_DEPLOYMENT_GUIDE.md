@@ -3,7 +3,7 @@
 This guide explains how to deploy the Davar web frontend to Cloudflare Pages on the free tier, using:
 
 - Custom domain from day one
-- Cloudflare proxy for `/api/*`
+- Direct backend calls to Render production API
 - Render as backend origin
 
 ---
@@ -13,15 +13,14 @@ This guide explains how to deploy the Davar web frontend to Cloudflare Pages on 
 Flow:
 
 1. Browser loads frontend from your custom domain on Cloudflare Pages
-2. Frontend requests same-origin API paths such as `/api/v1/books`
-3. Cloudflare forwards `/api/*` to `https://davar.onrender.com/api/*`
-4. Render responds, Cloudflare returns response to browser
+2. Frontend requests `https://davar.onrender.com/api/...`
+3. Render responds directly to the browser
 
 Why this is simpler:
 
-- Browser talks to one origin (your domain)
-- Less direct CORS pain for frontend requests
-- You can apply edge protection in Cloudflare before traffic reaches Render
+- Matches the existing backend production model
+- No Worker route setup required
+- Fewer moving parts for launch
 
 Free tier support:
 
@@ -66,14 +65,14 @@ If you only see DNS/SSL/Security, you are in the Zone dashboard, not the Pages d
 In your Pages project settings, add production environment variables:
 
 ```bash
-PUBLIC_API_BASE_URL=/api
+PUBLIC_API_BASE_URL=https://davar.onrender.com
 PUBLIC_API_KEY=your_api_key_value
 PUBLIC_NODE_ENV=production
 ```
 
 Notes:
 
-- `PUBLIC_API_BASE_URL=/api` makes frontend requests same-origin and proxy-friendly.
+- `PUBLIC_API_BASE_URL=https://davar.onrender.com` sends frontend API traffic directly to Render.
 - Keep API key value aligned with backend expected key.
 - These values are applied at build time.
 
@@ -89,56 +88,11 @@ Once active, use this exact HTTPS origin in backend CORS.
 
 ---
 
-## 6. Configure API Proxy in Cloudflare
+## 6. Optional: Add API Proxy Later
 
-Goal: forward frontend `/api/*` traffic to Render backend.
+For now, you can skip Workers Routes entirely.
 
-Recommended rule behavior:
-
-- Incoming: `https://your-domain.com/api/*`
-- Forward to: `https://davar.onrender.com/api/*`
-- Preserve method, query string, and body
-
-Where to configure:
-
-- Use Cloudflare Rules or Worker-based routing, depending on your dashboard options.
-- Keep the result equivalent to the mapping above.
-
-### Recommended for this project: GitHub-managed Worker
-
-If you prefer GitHub, connect your repository when Cloudflare prompts for it and deploy a dedicated Worker from source control.
-
-Suggested Worker script:
-
-```ts
-export default {
-   async fetch(request: Request): Promise<Response> {
-      const url = new URL(request.url);
-
-      // Keep path and query string and forward to Render.
-      const upstream = new URL(url.pathname + url.search, "https://davar.onrender.com");
-
-      const response = await fetch(upstream.toString(), {
-         method: request.method,
-         headers: request.headers,
-         body: request.body,
-         redirect: "follow",
-      });
-
-      return response;
-   },
-};
-```
-
-GitHub deployment sequence:
-
-1. In Cloudflare, create a new Worker and choose GitHub as source.
-2. Select this repository and the branch you deploy from.
-3. Add the Worker code in the selected Worker directory.
-4. Deploy Worker from Cloudflare.
-5. Go to **Workers Routes** and add route pattern `your-domain.com/api/*` mapped to this Worker.
-
-After setup, browser network requests should target your custom domain `/api/...`, not Render directly.
+If you later want same-origin API requests (`/api/*`) for security or observability reasons, add a Worker proxy as a second phase. This is optional and not required for production launch.
 
 ---
 
@@ -157,6 +111,8 @@ DAVAR_ALLOWED_ORIGINS=["http://localhost:3002","http://localhost:3003","http://l
 ```
 
 Then redeploy backend.
+
+Because frontend is calling Render directly, this exact origin allowlist is required.
 
 ---
 
@@ -198,8 +154,8 @@ bunx wrangler pages dev dist
 
 1. Pages deployment is healthy in **Workers & Pages**
 2. Custom domain is active and serving frontend
-3. Browser API calls go to `https://your-domain.com/api/...`
-4. Proxy forwards successfully and responses are `200`
+3. Browser API calls go to `https://davar.onrender.com/api/...`
+4. API responses are `200`
 5. No CORS errors in browser console
 6. No CSP connect-src errors in browser console
 7. Direct navigation to deep routes still loads app (SPA fallback)
@@ -225,15 +181,15 @@ bunx wrangler pages dev dist
 
 ### API calls bypass proxy
 
-1. Confirm `PUBLIC_API_BASE_URL=/api` in Pages environment variables
+1. This is expected in direct mode because no proxy is configured
+2. If you want direct mode, keep `PUBLIC_API_BASE_URL=https://davar.onrender.com`
+3. If you want proxy mode later, switch base URL to `/api` and add Worker route
+
+### API calls fail or go to wrong host
+
+1. Confirm `PUBLIC_API_BASE_URL=https://davar.onrender.com` in Pages environment variables
 2. Rebuild/redeploy Pages after variable changes
 3. Check network tab request URL host
-
-### Proxy returns error
-
-1. Test backend origin directly: `https://davar.onrender.com/api/v1/books`
-2. Check Cloudflare rule target path mapping for `/api/*`
-3. Check Render logs for rejected requests or upstream errors
 
 ### Build fails
 

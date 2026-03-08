@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths: ["backend/**"]
   pull_request:
-    branches: [main, production]
+    branches: [main]
 
 jobs:
   test:
