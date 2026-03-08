@@ -1,0 +1,73 @@
+---
+title: Quickstart
+next: false
+---
+
+import { Code, TabItem, Tabs, CardGrid, LinkCard } from "@astrojs/starlight/components";
+
+Create customized Hebrew transliterations.
+
+## Installation
+
+<Tabs syncKey="runtime">
+  <TabItem label="node" icon="node">
+    <Code code={"npm i hebrew-transliteration"} lang="bash" frame="code" />
+  </TabItem>
+  <TabItem label="deno" icon="deno">
+    <Code code={`import { transliterate } from "npm:hebrew-transliteration";`} lang="ts" frame="code" />
+  </TabItem>
+  <TabItem label="browser" icon="laptop">
+    <Code code={`import { transliterate } from "https://esm.sh/hebrew-transliteration";`} lang="js" frame="code" />
+  </TabItem>
+</Tabs>
+
+## Usage
+
+<Tabs syncKey="runtime">
+  <TabItem label="ESM" icon="seti:javascript">
+    <Code
+      code={`import { transliterate } from "hebrew-transliteration";\nconst str = "בְּרֵאשִׁ֖ית";\nconsole.log(transliterate(str));\n// bərēʾšît;`}
+      lang="js"
+      frame="code"
+    />
+  </TabItem>
+  <TabItem label="CommonJS" icon="node">
+    <Code
+      code={`const heb = require("hebrew-transliteration");\nconst str = "בְּרֵאשִׁ֖ית";\nconsole.log(heb.transliterate(str));\n// bərēʾšît;`}
+      lang="js"
+      frame="code"
+    />
+  </TabItem>
+  <TabItem label="deno" icon="deno">
+    <Code
+      code={`import { transliterate } from "npm:hebrew-transliteration";\nconst str = "בְּרֵאשִׁ֖ית";\nconsole.log(transliterate(str));\n// bərēʾšît;`}
+      lang="ts"
+      frame="code"
+    />
+  </TabItem>
+  <TabItem label="browser" icon="laptop">
+    <Code
+      code={`import { transliterate } from "https://esm.sh/hebrew-transliteration";\nconst str = "בְּרֵאשִׁ֖ית";\nconsole.log(transliterate(str));\n// bərēʾšît;`}
+      lang="ts"
+      frame="code"
+    />
+  </TabItem>
+</Tabs>
+
+Use it live at [https://hebrewtransliteration.app](https://hebrewtransliteration.app)
+
+## Key features
+
+This package contains 3 functions for:
+
+<LinkCard
+  title="Transliteration"
+  href="/api/functions/transliterate"
+  description="Create customized transliterations"
+/>
+<LinkCard title="Removing Niqqud" href="/api/functions/remove" description="Remove accent marks and vowel points" />
+<LinkCard
+  title="Sequencing Text"
+  href="/api/functions/sequence"
+  description="Sequence characters according to the SBL Hebrew font manual"
+/>
