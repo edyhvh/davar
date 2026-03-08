@@ -117,10 +117,10 @@ export default function DonateScreen() {
               ]}
               onPress={() => WebBrowser.openBrowserAsync(DONATION_CONFIG.kofi)}
               accessibilityRole="link"
-              accessibilityLabel="Support me on Ko-fi"
+              accessibilityLabel={t("donate.kofi")}
             >
               <FontAwesome name="coffee" size={20} color="#ffffff" />
-              <Text style={styles.buttonText}>Support me on Ko-fi</Text>
+              <Text style={styles.buttonText}>{t("donate.kofi")}</Text>
             </Pressable>
 
             {/* GitHub Sponsor Button */}
