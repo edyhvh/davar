@@ -75,14 +75,12 @@ export default function RootLayout() {
           <ErrorBoundary>
             <AppProvider>
               <Stack initialRouteName="splash">
-                <Stack.Screen
-                  name="splash"
-                  options={{ headerShown: false }}
-                />
+                <Stack.Screen name="splash" options={{ headerShown: false }} />
                 <Stack.Screen
                   name="(tabs)"
                   options={({ route }) => {
-                    const focusedTab = getFocusedRouteNameFromRoute(route) ?? "home";
+                    const focusedTab =
+                      getFocusedRouteNameFromRoute(route) ?? "home";
                     const tabTitles: Record<string, string> = {
                       home: t("tabs.home"),
                       verse: t("tabs.verse"),
