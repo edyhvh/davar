@@ -1,7 +1,15 @@
 import { useMemo } from "react";
-import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  Linking,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Feather, Ionicons, FontAwesome } from "@expo/vector-icons";
+import { Feather, FontAwesome } from "@expo/vector-icons";
+import * as WebBrowser from "expo-web-browser";
 
 import { getColors, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
@@ -9,8 +17,8 @@ import { useTranslation } from "@/src/i18n/useTranslation";
 
 const DONATION_CONFIG = {
   githubSponsor: "https://github.com/sponsors/edyhvh",
+  kofi: "https://ko-fi.com/P5P31IPYA3",
   telegram: "https://t.me/edyhvh",
-  githubHandle: "@edyhvh",
   telegramHandle: "@edyhvh",
 };
 
@@ -33,28 +41,35 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     },
     centeredContent: {
       alignItems: "center",
-      gap: spacing[6],
+      gap: spacing[4],
     },
-    githubRow: {
+    kofiButton: {
+      backgroundColor: "#72a4f2",
+      paddingVertical: spacing[3],
+      paddingHorizontal: spacing[6],
+      borderRadius: 8,
       flexDirection: "row",
       alignItems: "center",
-      gap: spacing[3],
+      justifyContent: "center",
+      gap: spacing[2],
+      width: 220,
     },
-    iconsGroup: {
+    githubButton: {
+      backgroundColor: "#24292f",
+      paddingVertical: spacing[3],
+      paddingHorizontal: spacing[6],
+      borderRadius: 8,
       flexDirection: "row",
       alignItems: "center",
-      gap: spacing[1],
+      justifyContent: "center",
+      gap: spacing[2],
+      width: 220,
     },
-    githubText: {
+    buttonText: {
       fontFamily: typography.families.latinUIMedium,
       fontSize: typography.sizes.body,
-      color: colors.textSecondary,
-    },
-    linkText: {
-      fontFamily: typography.families.latinUIMedium,
-      fontSize: typography.sizes.body,
-      color: colors.textSecondary,
-      textDecorationLine: "underline",
+      color: "#ffffff",
+      fontWeight: "600",
     },
     contactRow: {
       flexDirection: "row",
@@ -94,19 +109,32 @@ export default function DonateScreen() {
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.content}>
           <View style={styles.centeredContent}>
-            {/* GitHub Sponsor Row */}
+            {/* Ko-fi Button */}
             <Pressable
-              style={styles.githubRow}
+              style={({ pressed }) => [
+                styles.kofiButton,
+                pressed && { opacity: 0.8 },
+              ]}
+              onPress={() => WebBrowser.openBrowserAsync(DONATION_CONFIG.kofi)}
+              accessibilityRole="link"
+              accessibilityLabel="Support me on Ko-fi"
+            >
+              <FontAwesome name="coffee" size={20} color="#ffffff" />
+              <Text style={styles.buttonText}>Support me on Ko-fi</Text>
+            </Pressable>
+
+            {/* GitHub Sponsor Button */}
+            <Pressable
+              style={({ pressed }) => [
+                styles.githubButton,
+                pressed && { opacity: 0.8 },
+              ]}
               onPress={() => openUrlSafely(DONATION_CONFIG.githubSponsor)}
               accessibilityRole="link"
               accessibilityLabel={t("donate.githubSponsor")}
             >
-              <View style={styles.iconsGroup}>
-                <Feather name="github" size={24} color={colors.textSecondary} />
-                <Ionicons name="card-outline" size={20} color={colors.textSecondary} />
-              </View>
-              <Text style={styles.githubText}>{t("donate.githubSponsor")}</Text>
-              <Text style={styles.linkText}>{DONATION_CONFIG.githubHandle}</Text>
+              <Feather name="github" size={20} color="#ffffff" />
+              <Text style={styles.buttonText}>{t("donate.githubSponsor")}</Text>
             </Pressable>
 
             {/* Contact Row with Telegram icon at the beginning */}
@@ -124,7 +152,8 @@ export default function DonateScreen() {
                 />
               </View>
               <Text style={styles.contactText}>
-                {t("donate.contactPrefix")} {t("donate.telegramLabel")} {DONATION_CONFIG.telegramHandle}
+                {t("donate.contactPrefix")} {t("donate.telegramLabel")}{" "}
+                {DONATION_CONFIG.telegramHandle}
               </Text>
             </Pressable>
           </View>
