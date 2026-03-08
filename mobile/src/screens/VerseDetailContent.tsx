@@ -392,6 +392,10 @@ export const VerseDetailContent = () => {
     // Mark that we just selected a word to prevent onClosed from clearing it
     justSelectedWordRef.current = true;
     setSelectedWord(word);
+    // Immediately open the sheet to handle same-word retaps
+    if (sheetRef.current) {
+      sheetRef.current.snapToIndex(0);
+    }
   }, []);
 
   // Open the word analysis sheet whenever a word is selected
