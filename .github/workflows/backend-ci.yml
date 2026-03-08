@@ -2,40 +2,40 @@ name: Backend CI
 
 on:
   push:
-    branches: [ main ]
-    paths: [ 'backend/**' ]
+    branches: [main]
+    paths: ["backend/**"]
   pull_request:
-    branches: [ main, production ]
-    paths: [ 'backend/**' ]
+    branches: [main, production]
+    paths: ["backend/**"]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
-    - name: Install dependencies
-      run: |
-        cd backend
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          cd backend
+          pip install -r requirements.txt
 
-    # - name: Run tests
-    #   run: |
-    #     cd backend
-    #     python -m pytest app/tests/ -v
+      # - name: Run tests
+      #   run: |
+      #     cd backend
+      #     python -m pytest app/tests/ -v
 
-    - name: Check linting
-      run: |
-        cd backend
-        pip install flake8
-        flake8 app/ --count --select=E9,F63,F7,F82 --show-source --statistics
-        flake8 app/ --count --exit-zero --max-complexity=10 --max-line-length=88 --statistics
+      - name: Check linting
+        run: |
+          cd backend
+          pip install flake8
+          flake8 app/ --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 app/ --count --exit-zero --max-complexity=10 --max-line-length=88 --statistics
 
     # - name: Check translation mappings
     #   run: |
