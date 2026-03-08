@@ -4,9 +4,7 @@
   "enforcement": "active",
   "conditions": {
     "ref_name": {
-      "include": [
-        "refs/heads/main"
-      ],
+      "include": ["refs/heads/main"],
       "exclude": []
     }
   },
@@ -25,12 +23,7 @@
       "type": "required_status_checks",
       "parameters": {
         "strict_required_status_checks_policy": true,
-        "required_status_checks": [
-          {
-            "context": "test",
-            "integration_id": null
-          }
-        ]
+        "contexts": ["test"]
       }
     }
   ],
