@@ -2,11 +2,10 @@ name: Backend Deploy
 
 on:
   pull_request:
-    branches: [ production ]
-    paths: [ 'backend/**' ]
+    branches: [production]
   push:
-    branches: [ production ]
-    paths: [ 'backend/**' ]
+    branches: [production]
+    paths: ["backend/**"]
 
 jobs:
   release-validation:
