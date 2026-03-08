@@ -1,0 +1,103 @@
+{
+  "name": "hebrew-transliteration",
+  "version": "2.9.1",
+  "description": "a package for transliterating Hebrew",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json",
+    "./schemas": {
+      "types": "./dist/schemas/types/index.d.ts",
+      "require": "./dist/cjs/schemas/index.js",
+      "import": "./dist/esm/schemas/index.js"
+    },
+    "./removeOptions": {
+      "types": "./dist/types/remove.d.ts",
+      "require": "./dist/cjs/remove.js",
+      "import": "./dist/esm/remove.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "schemas": [
+        "./dist/types/schemas/index.d.ts"
+      ],
+      "removeOptions": [
+        "./dist/types/remove.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc --project ./.config/tsconfig.esm.json && tsc-alias --project ./.config/tsconfig.esm.json",
+    "watch": "concurrently \"tsc --watch --project .config/tsconfig.esm.json\" \"npm run watch:tsc-alias\" \"npm run watch:esm2cjs\"",
+    "watch:tsc-alias": "chokidar \"dist/esm/**/*.js\" -c \"tsc-alias --project .config/tsconfig.esm.json\"",
+    "watch:esm2cjs": "chokidar \"dist/esm/**/*.js\" -c \"esm2cjs --in dist/esm --out dist/cjs -l error\"",
+    "postbuild": "esm2cjs --in dist/esm --out dist/cjs -l error",
+    "test": "vitest --watch=false",
+    "test:transliterate": "jest --config ./.config/jest.config.js test/transliterate.test.ts",
+    "test:remove": "jest --config ./.config/jest.config.js test/remove.test.ts",
+    "test:sequence": "jest --config ./.config/jest.config.js test/sequence.test.ts",
+    "format": "prettier --config ./.config/.prettierrc.json --write 'src/**/*.ts' 'test/**/*.ts'",
+    "format:check": "prettier --config ./.config/.prettierrc.json --check 'src/**/*.ts' 'test/**/*.ts'",
+    "lint": "eslint -c ./.config/eslint.config.mjs .",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "./changelog.sh && npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "update": "npm-check-updates -u",
+    "docs:output": "typedoc --tsconfig ./.config/tsconfig.json --json ./docs/data.json src/index.ts",
+    "docs:dev": "astro dev --config ./docs/astro.config.mjs",
+    "docs": "NODE_ENV=production astro build --config ./docs/astro.config.mjs"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charlesLoder/hebrew-transliteration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charlesLoder/hebrew-transliteration/issues"
+  },
+  "homepage": "https://github.com/charlesLoder/hebrew-transliteration",
+  "keywords": [
+    "hebrew",
+    "transliteration",
+    "SBL",
+    "Society of Biblical Literature"
+  ],
+  "author": "Charles Loder",
+  "license": "MIT",
+  "devDependencies": {
+    "@alcalzone/esm2cjs": "^1.1.2",
+    "@astrojs/starlight": "^0.28.4",
+    "@eslint/js": "^9.33.0",
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
+    "astro": "^4.16.7",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.0",
+    "esbuild": "^0.24.0",
+    "eslint": "^9.13.0",
+    "npm-check-updates": "^17.1.9",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "starlight-typedoc": "^0.16.0",
+    "tsc-alias": "^1.8.10",
+    "typedoc": "^0.26.10",
+    "typedoc-plugin-markdown": "^4.2.9",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.40.0",
+    "vitest": "^2.1.4"
+  },
+  "dependencies": {
+    "havarotjs": "0.25.4"
+  }
+}
