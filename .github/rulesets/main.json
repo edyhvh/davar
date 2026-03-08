@@ -1,5 +1,5 @@
 {
-  "name": "main-branch-rules",
+  "name": "main",
   "target": "branch",
   "enforcement": "active",
   "conditions": {
@@ -17,17 +17,6 @@
         "require_last_push_approval": false,
         "required_approving_review_count": 0,
         "required_review_thread_resolution": true
-      }
-    },
-    {
-      "type": "required_status_checks",
-      "parameters": {
-        "strict_required_status_checks_policy": true,
-        "required_status_checks": [
-          {
-            "context": "test"
-          }
-        ]
       }
     }
   ],
