@@ -1,29 +1,12 @@
 name: Backend Deploy
 
 on:
-  pull_request:
-    branches: [production]
   push:
-    branches: [production]
+    branches: [main]
     paths: ["backend/**"]
 
 jobs:
-  release-validation:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Verify release PR source branch
-        run: |
-          if [ "${{ github.head_ref }}" != "main" ]; then
-            echo "Release PRs to production must come from main."
-            exit 1
-          fi
-
   deploy:
-    if: github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:

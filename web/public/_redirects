@@ -1,0 +1,25 @@
+# Cloudflare Pages SPA Routing
+# All routes should serve the index.html for client-side routing
+
+# Static assets - serve directly
+/*.html 200
+/*.css 200
+/*.js 200
+/*.json 200
+/*.png 200
+/*.jpg 200
+/*.jpeg 200
+/*.gif 200
+/*.svg 200
+/*.ico 200
+/*.woff 200
+/*.woff2 200
+/*.ttf 200
+/*.eot 200
+
+# API calls - proxy to backend (optional, if you want to avoid CORS)
+# /api/*  https://davar.onrender.com/api/:splat  200
+
+# SPA fallback - serve index.html for all other routes
+# This must be last
+/*    /index.html   200

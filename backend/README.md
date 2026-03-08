@@ -117,19 +117,17 @@ TS2009 English translations are licensed/private and not committed to GitHub. Th
 2. Set build command: (none, or pip install if needed)
 3. Set start command: `python scripts/sync_ts2009.py && uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 4. Configure environment variables from `.env.example`.
-5. Set Render production branch to `production`.
+5. Set Render branch to `main`.
 
 ### Branch Strategy
 
-- `main`: development integration branch.
-- `production`: live release branch.
+- `main`: development and production branch.
 
 Release flow:
 
 1. Merge feature branches into `main`.
-2. Open a release PR from `main` to `production`.
-3. After approvals/checks, merge into `production`.
-4. Render auto-deploy runs from `production` only.
+2. After approvals/checks, merge into `main`.
+3. Render auto-deploy runs from `main`.
 
 ### Environment Variables
 

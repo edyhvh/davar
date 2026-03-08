@@ -18,7 +18,7 @@ fi
 
 echo "Applying rulesets to $OWNER/$REPO"
 
-existing_ids="$(gh api "repos/$OWNER/$REPO/rulesets" | jq -r '.[] | select(.name == "production" or .name == "main" or .name == "pr") | .id')"
+existing_ids="$(gh api "repos/$OWNER/$REPO/rulesets" | jq -r '.[] | select(.name == "main" or .name == "pr") | .id')"
 
 if [[ -n "$existing_ids" ]]; then
   echo "Deleting existing managed rulesets..."
@@ -29,7 +29,7 @@ if [[ -n "$existing_ids" ]]; then
   done <<< "$existing_ids"
 fi
 
-for file in "$RULESET_DIR"/production.json "$RULESET_DIR"/main.json "$RULESET_DIR"/pr-baseline.json; do
+for file in "$RULESET_DIR"/main.json "$RULESET_DIR"/pr-baseline.json; do
   echo "Creating $(basename "$file")"
   gh api -X POST "repos/$OWNER/$REPO/rulesets" --input "$file" >/dev/null
   echo "Created $(basename "$file")"
