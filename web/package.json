@@ -4,9 +4,13 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "bun --env-file=.env ./build.ts",
+    "build": "bun ./build.ts",
+    "build:dev": "bun --env-file=.env ./build.ts",
+    "build:prod": "bun --env-file=.env.production ./build.ts",
     "dev": "PORT=3002 bun --env-file=.env ./index.html",
     "serve": "bun --env-file=.env ./server.ts",
+    "test": "bun test",
+    "test:connectivity": "RUN_LIVE_CONNECTIVITY_TEST=1 bun test src/app/services/apiClient.connectivity.test.js",
     "lint": "bunx biome lint .",
     "format": "bunx biome format --write .",
     "format:check": "bunx biome format ."

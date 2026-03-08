@@ -18,31 +18,76 @@ const getEnv = () => {
 
 const env = getEnv();
 
-// Hardcoded fallbacks to ensure the app works even if env injection fails
-const FALLBACK_API_URL = "http://localhost:2220";
-const FALLBACK_API_KEY = "m1wRuEaE1Z_efYFo-_Up59VrpirdMzYtrfRjP9nPYIg";
+type ApiClientConfigInput = {
+  env?: Record<string, string | undefined>;
+  processEnv?: Record<string, string | undefined>;
+};
 
-// Try multiple ways to get the config
-const API_BASE_URL =
-  env.PUBLIC_API_BASE_URL ||
-  globalAsAny.process?.env?.PUBLIC_API_BASE_URL ||
-  FALLBACK_API_URL;
+type ApiClientResolvedConfig = {
+  apiBaseUrl: string;
+  apiKey: string;
+  publicNodeEnv: string;
+  isDev: boolean;
+  usedFallbackApiBaseUrl: boolean;
+};
 
-const RAW_API_KEY =
-  env.PUBLIC_API_KEY ||
-  globalAsAny.process?.env?.PUBLIC_API_KEY ||
-  FALLBACK_API_KEY;
+export const resolveApiClientConfig = ({
+  env = {},
+  processEnv = {},
+}: ApiClientConfigInput = {}): ApiClientResolvedConfig => {
+  const publicNodeEnv =
+    env.PUBLIC_NODE_ENV || processEnv.PUBLIC_NODE_ENV || "production";
+  const isDev = publicNodeEnv === "development";
 
-const API_KEY = RAW_API_KEY?.trim();
+  const fallbackApiUrl = isDev
+    ? "http://localhost:2220"
+    : "https://davar.onrender.com";
+  const fallbackApiKey = "m1wRuEaE1Z_efYFo-_Up59VrpirdMzYtrfRjP9nPYIg";
 
-const publicNodeEnv = env.PUBLIC_NODE_ENV ?? "production";
-const isDev = publicNodeEnv === "development";
+  const configuredApiBaseUrl =
+    env.PUBLIC_API_BASE_URL || processEnv.PUBLIC_API_BASE_URL;
+  const apiBaseUrl = configuredApiBaseUrl || fallbackApiUrl;
+
+  const rawApiKey =
+    env.PUBLIC_API_KEY || processEnv.PUBLIC_API_KEY || fallbackApiKey;
+
+  return {
+    apiBaseUrl,
+    apiKey: rawApiKey.trim(),
+    publicNodeEnv,
+    isDev,
+    usedFallbackApiBaseUrl: !configuredApiBaseUrl,
+  };
+};
+
+const resolvedConfig = resolveApiClientConfig({
+  env,
+  processEnv: globalAsAny.process?.env,
+});
+
+const {
+  apiBaseUrl: API_BASE_URL,
+  apiKey: API_KEY,
+  publicNodeEnv,
+  isDev,
+} = resolvedConfig;
 
 console.log("[Davar] API Config:", {
   url: API_BASE_URL,
   hasKey: !!API_KEY,
-  envState: env,
+  env: publicNodeEnv,
 });
+
+if (
+  !isDev &&
+  !env.PUBLIC_API_BASE_URL &&
+  !globalAsAny.process?.env?.PUBLIC_API_BASE_URL
+) {
+  console.warn(
+    "[Davar API Client] PUBLIC_API_BASE_URL is missing in production build. " +
+      "Using fallback https://davar.onrender.com. Set PUBLIC_API_BASE_URL at build time.",
+  );
+}
 
 // Early validation in development to catch missing key immediately
 if (isDev && !API_KEY) {
