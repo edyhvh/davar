@@ -1,13 +1,10 @@
 {
-  "name": "pr-baseline-rules",
+  "name": "pr",
   "target": "branch",
   "enforcement": "active",
   "conditions": {
     "ref_name": {
-      "include": [
-        "refs/heads/main",
-        "refs/heads/production"
-      ],
+      "include": ["refs/heads/main", "refs/heads/production"],
       "exclude": []
     }
   },

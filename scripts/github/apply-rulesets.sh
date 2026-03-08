@@ -18,7 +18,7 @@ fi
 
 echo "Applying rulesets to $OWNER/$REPO"
 
-existing_ids="$(gh api "repos/$OWNER/$REPO/rulesets" | jq -r '.[] | select(.name == "production-branch-rules" or .name == "main-branch-rules" or .name == "pr-baseline-rules") | .id')"
+existing_ids="$(gh api "repos/$OWNER/$REPO/rulesets" | jq -r '.[] | select(.name == "production" or .name == "main" or .name == "pr") | .id')"
 
 if [[ -n "$existing_ids" ]]; then
   echo "Deleting existing managed rulesets..."
