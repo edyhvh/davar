@@ -42,14 +42,13 @@ export const resolveApiClientConfig = ({
   const fallbackApiUrl = isDev
     ? "http://localhost:2220"
     : "https://davar.onrender.com";
-  const fallbackApiKey = "m1wRuEaE1Z_efYFo-_Up59VrpirdMzYtrfRjP9nPYIg";
 
   const configuredApiBaseUrl =
     env.PUBLIC_API_BASE_URL || processEnv.PUBLIC_API_BASE_URL;
   const apiBaseUrl = configuredApiBaseUrl || fallbackApiUrl;
 
   const rawApiKey =
-    env.PUBLIC_API_KEY || processEnv.PUBLIC_API_KEY || fallbackApiKey;
+    env.PUBLIC_API_KEY || processEnv.PUBLIC_API_KEY || "";
 
   return {
     apiBaseUrl,
@@ -89,12 +88,19 @@ if (
   );
 }
 
-// Early validation in development to catch missing key immediately
-if (isDev && !API_KEY) {
-  console.error(
-    "[Davar API Client] Missing PUBLIC_API_KEY in .env file or environment.\n" +
-      "All API requests will fail until this is configured.",
-  );
+// Validate API key presence in both environments
+if (!API_KEY) {
+  if (isDev) {
+    console.error(
+      "[Davar API Client] Missing PUBLIC_API_KEY in .env file or environment.\n" +
+        "All API requests will fail until this is configured.",
+    );
+  } else {
+    console.warn(
+      "[Davar API Client] PUBLIC_API_KEY is missing in production build. " +
+        "All authenticated API requests will fail. Set PUBLIC_API_KEY at build time.",
+    );
+  }
 }
 
 interface ApiError extends Error {
