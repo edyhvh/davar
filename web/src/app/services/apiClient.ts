@@ -42,14 +42,13 @@ export const resolveApiClientConfig = ({
   const fallbackApiUrl = isDev
     ? "http://localhost:2220"
     : "https://davar.onrender.com";
-  const fallbackApiKey = "m1wRuEaE1Z_efYFo-_Up59VrpirdMzYtrfRjP9nPYIg";
 
   const configuredApiBaseUrl =
     env.PUBLIC_API_BASE_URL || processEnv.PUBLIC_API_BASE_URL;
   const apiBaseUrl = configuredApiBaseUrl || fallbackApiUrl;
 
   const rawApiKey =
-    env.PUBLIC_API_KEY || processEnv.PUBLIC_API_KEY || fallbackApiKey;
+    env.PUBLIC_API_KEY || processEnv.PUBLIC_API_KEY || "";
 
   return {
     apiBaseUrl,
