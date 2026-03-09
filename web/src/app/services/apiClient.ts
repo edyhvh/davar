@@ -88,12 +88,19 @@ if (
   );
 }
 
-// Early validation in development to catch missing key immediately
-if (isDev && !API_KEY) {
-  console.error(
-    "[Davar API Client] Missing PUBLIC_API_KEY in .env file or environment.\n" +
-      "All API requests will fail until this is configured.",
-  );
+// Validate API key presence in both environments
+if (!API_KEY) {
+  if (isDev) {
+    console.error(
+      "[Davar API Client] Missing PUBLIC_API_KEY in .env file or environment.\n" +
+        "All API requests will fail until this is configured.",
+    );
+  } else {
+    console.warn(
+      "[Davar API Client] PUBLIC_API_KEY is missing in production build. " +
+        "All authenticated API requests will fail. Set PUBLIC_API_KEY at build time.",
+    );
+  }
 }
 
 interface ApiError extends Error {
