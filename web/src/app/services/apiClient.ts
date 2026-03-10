@@ -3,21 +3,6 @@
  * Handles authenticated requests with API key validation and better error reporting.
  */
 
-const globalAsAny = (typeof window !== "undefined" ? window : global) as any;
-
-// Safely access environment variables
-// Note: Bun should replace import.meta.env.PUBLIC_* strings at build time.
-// If it doesn't, we need to avoid crashing on undefined property access.
-const getEnv = () => {
-  try {
-    return (import.meta as any).env || {};
-  } catch {
-    return {};
-  }
-};
-
-const env = getEnv();
-
 type ApiClientConfigInput = {
   env?: Record<string, string | undefined>;
   processEnv?: Record<string, string | undefined>;
@@ -47,8 +32,7 @@ export const resolveApiClientConfig = ({
     env.PUBLIC_API_BASE_URL || processEnv.PUBLIC_API_BASE_URL;
   const apiBaseUrl = configuredApiBaseUrl || fallbackApiUrl;
 
-  const rawApiKey =
-    env.PUBLIC_API_KEY || processEnv.PUBLIC_API_KEY || "";
+  const rawApiKey = env.PUBLIC_API_KEY || processEnv.PUBLIC_API_KEY || "";
 
   return {
     apiBaseUrl,
@@ -59,9 +43,15 @@ export const resolveApiClientConfig = ({
   };
 };
 
+// Use direct process.env.PUBLIC_* references so Bun can statically
+// replace them at build time. Bun only inlines process.env — NOT
+// import.meta.env — during Bun.build().
 const resolvedConfig = resolveApiClientConfig({
-  env,
-  processEnv: globalAsAny.process?.env,
+  env: {
+    PUBLIC_NODE_ENV: process.env.PUBLIC_NODE_ENV,
+    PUBLIC_API_BASE_URL: process.env.PUBLIC_API_BASE_URL,
+    PUBLIC_API_KEY: process.env.PUBLIC_API_KEY,
+  },
 });
 
 const {
@@ -77,11 +67,7 @@ console.log("[Davar] API Config:", {
   env: publicNodeEnv,
 });
 
-if (
-  !isDev &&
-  !env.PUBLIC_API_BASE_URL &&
-  !globalAsAny.process?.env?.PUBLIC_API_BASE_URL
-) {
+if (!isDev && resolvedConfig.usedFallbackApiBaseUrl) {
   console.warn(
     "[Davar API Client] PUBLIC_API_BASE_URL is missing in production build. " +
       "Using fallback https://davar.onrender.com. Set PUBLIC_API_BASE_URL at build time.",
