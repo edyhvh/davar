@@ -3,53 +3,90 @@
  * Handles authenticated requests with API key validation and better error reporting.
  */
 
-const globalAsAny = (typeof window !== "undefined" ? window : global) as any;
-
-// Safely access environment variables
-// Note: Bun should replace import.meta.env.PUBLIC_* strings at build time.
-// If it doesn't, we need to avoid crashing on undefined property access.
-const getEnv = () => {
-  try {
-    return (import.meta as any).env || {};
-  } catch {
-    return {};
-  }
+type ApiClientConfigInput = {
+  env?: Record<string, string | undefined>;
+  processEnv?: Record<string, string | undefined>;
 };
 
-const env = getEnv();
+type ApiClientResolvedConfig = {
+  apiBaseUrl: string;
+  apiKey: string;
+  publicNodeEnv: string;
+  isDev: boolean;
+  usedFallbackApiBaseUrl: boolean;
+};
 
-// Hardcoded fallbacks to ensure the app works even if env injection fails
-const FALLBACK_API_URL = "http://localhost:2220";
-const FALLBACK_API_KEY = "m1wRuEaE1Z_efYFo-_Up59VrpirdMzYtrfRjP9nPYIg";
+export const resolveApiClientConfig = ({
+  env = {},
+  processEnv = {},
+}: ApiClientConfigInput = {}): ApiClientResolvedConfig => {
+  const publicNodeEnv =
+    env.PUBLIC_NODE_ENV || processEnv.PUBLIC_NODE_ENV || "production";
+  const isDev = publicNodeEnv === "development";
 
-// Try multiple ways to get the config
-const API_BASE_URL =
-  env.PUBLIC_API_BASE_URL ||
-  globalAsAny.process?.env?.PUBLIC_API_BASE_URL ||
-  FALLBACK_API_URL;
+  const fallbackApiUrl = isDev
+    ? "http://localhost:2220"
+    : "https://davar.onrender.com";
 
-const RAW_API_KEY =
-  env.PUBLIC_API_KEY ||
-  globalAsAny.process?.env?.PUBLIC_API_KEY ||
-  FALLBACK_API_KEY;
+  const configuredApiBaseUrl =
+    env.PUBLIC_API_BASE_URL || processEnv.PUBLIC_API_BASE_URL;
+  const apiBaseUrl = configuredApiBaseUrl || fallbackApiUrl;
 
-const API_KEY = RAW_API_KEY?.trim();
+  const rawApiKey = env.PUBLIC_API_KEY || processEnv.PUBLIC_API_KEY || "";
 
-const publicNodeEnv = env.PUBLIC_NODE_ENV ?? "production";
-const isDev = publicNodeEnv === "development";
+  return {
+    apiBaseUrl,
+    apiKey: rawApiKey.trim(),
+    publicNodeEnv,
+    isDev,
+    usedFallbackApiBaseUrl: !configuredApiBaseUrl,
+  };
+};
+
+// Use direct process.env.PUBLIC_* references so Bun can statically
+// replace them at build time. Bun only inlines process.env — NOT
+// import.meta.env — during Bun.build().
+const resolvedConfig = resolveApiClientConfig({
+  env: {
+    PUBLIC_NODE_ENV: process.env.PUBLIC_NODE_ENV,
+    PUBLIC_API_BASE_URL: process.env.PUBLIC_API_BASE_URL,
+    PUBLIC_API_KEY: process.env.PUBLIC_API_KEY,
+  },
+});
+
+const {
+  apiBaseUrl: API_BASE_URL,
+  apiKey: API_KEY,
+  publicNodeEnv,
+  isDev,
+} = resolvedConfig;
 
 console.log("[Davar] API Config:", {
   url: API_BASE_URL,
   hasKey: !!API_KEY,
-  envState: env,
+  env: publicNodeEnv,
 });
 
-// Early validation in development to catch missing key immediately
-if (isDev && !API_KEY) {
-  console.error(
-    "[Davar API Client] Missing PUBLIC_API_KEY in .env file or environment.\n" +
-      "All API requests will fail until this is configured.",
+if (!isDev && resolvedConfig.usedFallbackApiBaseUrl) {
+  console.warn(
+    "[Davar API Client] PUBLIC_API_BASE_URL is missing in production build. " +
+      "Using fallback https://davar.onrender.com. Set PUBLIC_API_BASE_URL at build time.",
   );
+}
+
+// Validate API key presence in both environments
+if (!API_KEY) {
+  if (isDev) {
+    console.error(
+      "[Davar API Client] Missing PUBLIC_API_KEY in .env file or environment.\n" +
+        "All API requests will fail until this is configured.",
+    );
+  } else {
+    console.warn(
+      "[Davar API Client] PUBLIC_API_KEY is missing in production build. " +
+        "All authenticated API requests will fail. Set PUBLIC_API_KEY at build time.",
+    );
+  }
 }
 
 interface ApiError extends Error {
