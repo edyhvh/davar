@@ -4,7 +4,6 @@ import {
   Settings,
   ScrollText,
   Eye,
-  Heart,
   Home,
   Paintbrush,
 } from "lucide-react";
@@ -29,9 +28,6 @@ interface NavigationBarProps {
   onChapterChange: (chapter: number) => void;
   onVerseChange: (verse: number) => void;
   onHomeClick: () => void;
-  onDonateClick: () => void;
-  onFeaturesClick: () => void;
-  showAuxActions?: boolean;
   onDesignSystemClick?: () => void;
   theme: "light" | "dark";
   onThemeChange: (theme: "light" | "dark") => void;
@@ -64,9 +60,6 @@ export function NavigationBar({
   onChapterChange,
   onVerseChange,
   onHomeClick,
-  onDonateClick,
-  onFeaturesClick,
-  showAuxActions = true,
   onDesignSystemClick,
   theme,
   onThemeChange,
@@ -248,46 +241,6 @@ export function NavigationBar({
           </div>
 
           <div className="flex items-center gap-2">
-            {showAuxActions && (
-              <>
-                <button
-                  onClick={onFeaturesClick}
-                  className="flex items-center gap-2 rounded-full px-3 py-1.5 transition-all hover:scale-[1.02] active:scale-[0.98]"
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    background:
-                      "linear-gradient(135deg, rgba(198,143,85,0.85), rgba(176,122,60,0.65))",
-                    color: "#ffffff",
-                    border: "1px solid rgba(198,143,85,0.6)",
-                    boxShadow: "0 8px 20px rgba(13,39,80,0.16)",
-                    backdropFilter: "blur(16px)",
-                  }}
-                  aria-label={t("navigation.openFeatures")}
-                >
-                  <span className="text-[11px] tracking-[0.2em] uppercase">
-                    {t("navigation.features")}
-                  </span>
-                </button>
-
-                <button
-                  onClick={onDonateClick}
-                  className="flex items-center gap-2 rounded-full px-3 py-1.5 transition-all hover:scale-[1.02] active:scale-[0.98]"
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    backgroundColor: "var(--accent-darker)",
-                    color: "#faf4e6",
-                    boxShadow: "4px 4px 10px var(--neomorph-shadow-dark)",
-                  }}
-                  aria-label={t("navigation.donate")}
-                >
-                  <Heart className="w-3 h-3" />
-                  <span className="text-[11px] tracking-[0.2em] uppercase">
-                    {t("navigation.donate")}
-                  </span>
-                </button>
-              </>
-            )}
-
             {isDev && onDesignSystemClick && (
               <button
                 onClick={onDesignSystemClick}

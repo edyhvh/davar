@@ -1215,9 +1215,6 @@ export default function App() {
             }}
             onVerseChange={(verse) => setCurrentVerse(verse)}
             onHomeClick={() => setCurrentScreen("home")}
-            onDonateClick={() => setCurrentScreen("donate")}
-            onFeaturesClick={() => setCurrentScreen("features")}
-            showAuxActions={!isMobile}
             onDesignSystemClick={() => setShowDesignSystem(true)}
             theme={theme}
             onThemeChange={setTheme}
@@ -1257,7 +1254,6 @@ export default function App() {
           {currentScreen === "home" && (
             <HomeScreen
               language={language}
-              isMobile={isMobile}
               onFeaturesClick={() => setCurrentScreen("features")}
               onDonateClick={() => setCurrentScreen("donate")}
             />
