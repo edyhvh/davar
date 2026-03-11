@@ -35,7 +35,9 @@ function resolveDefaultLanguage(): "en" | "es" | "he" {
   }
 
   const preferred = [navigator.language, ...(navigator.languages ?? [])]
-    .filter((value): value is string => typeof value === "string" && value.length > 0)
+    .filter(
+      (value): value is string => typeof value === "string" && value.length > 0,
+    )
     .map((value) => value.toLowerCase());
 
   for (const locale of preferred) {
