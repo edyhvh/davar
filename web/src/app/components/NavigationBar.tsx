@@ -479,7 +479,9 @@ export function NavigationBar({
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 <span className="text-xs tracking-[0.2em] uppercase">
-                  {language === "es" ? formatBookDisplayName(item.spanish) : formatBookDisplayName(item.name)}
+                  {language === "es"
+                    ? formatBookDisplayName(item.spanish)
+                    : formatBookDisplayName(item.name)}
                 </span>
                 <span
                   className="text-sm"
