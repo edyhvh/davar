@@ -241,6 +241,7 @@ export default function App() {
   const pendingWordRef = useRef<WordResponse | null>(null);
   const [wordCardTabKey, setWordCardTabKey] = useState(0);
   const [hideNavOnScroll, setHideNavOnScroll] = useState(false);
+  const lastScrollYRef = useRef(0);
 
   const getTransliterationForLanguage = useCallback(
     (word?: WordResponse | null) => {
@@ -1111,6 +1112,30 @@ export default function App() {
     currentScreen === "verse" && !showFullChapter && !isMobile;
 
   useEffect(() => {
+    if (isMobile) {
+      const threshold = 24;
+      lastScrollYRef.current = window.scrollY;
+
+      const handleMobileScroll = () => {
+        const currentY = window.scrollY;
+        const delta = currentY - lastScrollYRef.current;
+
+        if (currentY <= threshold) {
+          setHideNavOnScroll(false);
+        } else if (delta > 4) {
+          setHideNavOnScroll(true);
+        } else if (delta < -4) {
+          setHideNavOnScroll(false);
+        }
+
+        lastScrollYRef.current = currentY;
+      };
+
+      handleMobileScroll();
+      window.addEventListener("scroll", handleMobileScroll, { passive: true });
+      return () => window.removeEventListener("scroll", handleMobileScroll);
+    }
+
     if (!(currentScreen === "verse" && showFullChapter && seferMode)) {
       setHideNavOnScroll(false);
       return;
@@ -1123,7 +1148,7 @@ export default function App() {
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [currentScreen, showFullChapter, seferMode]);
+  }, [currentScreen, isMobile, showFullChapter, seferMode]);
 
   useVerseScrollNavigation({
     containerRef: versePanelRef,
@@ -1192,6 +1217,7 @@ export default function App() {
             onHomeClick={() => setCurrentScreen("home")}
             onDonateClick={() => setCurrentScreen("donate")}
             onFeaturesClick={() => setCurrentScreen("features")}
+            showAuxActions={!isMobile}
             onDesignSystemClick={() => setShowDesignSystem(true)}
             theme={theme}
             onThemeChange={setTheme}
@@ -1228,7 +1254,14 @@ export default function App() {
 
       <div className="px-6 pb-32 pt-6">
         <div className="max-w-7xl mx-auto">
-          {currentScreen === "home" && <HomeScreen language={language} />}
+          {currentScreen === "home" && (
+            <HomeScreen
+              language={language}
+              isMobile={isMobile}
+              onFeaturesClick={() => setCurrentScreen("features")}
+              onDonateClick={() => setCurrentScreen("donate")}
+            />
+          )}
           {currentScreen === "terms" && (
             <LegalScreen
               kind="terms"
