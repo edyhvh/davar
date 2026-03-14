@@ -76,6 +76,7 @@ type VersePageProps = {
   isSelectedVerse: boolean;
   isBesorah: boolean;
   onVersePress: () => void;
+  selectedWord: DisplayVerse["words"][number] | null;
   onWordPress: (word: DisplayVerse["words"][number] | null) => void;
   onBackgroundPress: () => void;
 };
@@ -87,6 +88,7 @@ const VersePageComponent = ({
   isSelectedVerse,
   isBesorah,
   onVersePress,
+  selectedWord,
   onWordPress,
   onBackgroundPress,
 }: VersePageProps) => {
@@ -112,6 +114,7 @@ const VersePageComponent = ({
         verse={item}
         variant="detail"
         showWordHint={showWordHint && isSelectedVerse}
+        selectedWord={isSelectedVerse ? selectedWord : null}
         isBesorah={isBesorah}
         onVersePress={onVersePress}
         onWordPress={onWordPress}
@@ -159,6 +162,7 @@ const VersePage = memo(
     prevProps.showWordHint === nextProps.showWordHint &&
     prevProps.isSelectedVerse === nextProps.isSelectedVerse &&
     prevProps.isBesorah === nextProps.isBesorah &&
+    prevProps.selectedWord === nextProps.selectedWord &&
     prevProps.onVersePress === nextProps.onVersePress &&
     prevProps.onWordPress === nextProps.onWordPress &&
     prevProps.onBackgroundPress === nextProps.onBackgroundPress,
@@ -310,11 +314,6 @@ export const VerseDetailContent = () => {
   }, [navigation]);
 
   useEffect(() => {
-    // Always show hint for testing
-    setShowWordHint(true);
-  }, []);
-
-  useEffect(() => {
     let isMounted = true;
     const loadBooks = async () => {
       try {
@@ -386,17 +385,32 @@ export const VerseDetailContent = () => {
   // Track when a word was just selected to prevent race condition with sheet's onClose
   const justSelectedWordRef = useRef(false);
 
-  const handleWordPress = useCallback((word: typeof selectedWord) => {
-    // Close navigation sheet if it's open
-    navigationSheetRef.current?.close();
-    // Mark that we just selected a word to prevent onClosed from clearing it
-    justSelectedWordRef.current = true;
-    setSelectedWord(word);
-    // Immediately open the sheet to handle same-word retaps
-    if (sheetRef.current) {
-      sheetRef.current.snapToIndex(0);
-    }
-  }, []);
+  const handleWordPress = useCallback(
+    (word: typeof selectedWord) => {
+      if (!word) return;
+
+      const isSameWord =
+        selectedWord?.position === word.position &&
+        selectedWord?.text === word.text &&
+        selectedWord?.strong === word.strong;
+
+      navigationSheetRef.current?.close();
+
+      if (isSameWord) {
+        justSelectedWordRef.current = false;
+        setSelectedWord(null);
+        sheetRef.current?.close();
+        return;
+      }
+
+      justSelectedWordRef.current = true;
+      setSelectedWord(word);
+      if (sheetRef.current) {
+        sheetRef.current.snapToIndex(0);
+      }
+    },
+    [selectedWord],
+  );
 
   // Open the word analysis sheet whenever a word is selected
   useEffect(() => {
@@ -443,6 +457,7 @@ export const VerseDetailContent = () => {
         showWordHint={showWordHint}
         isSelectedVerse={item.id === verse?.id}
         isBesorah={isBesorah}
+        selectedWord={selectedWord}
         onVersePress={handleOpenNavigationSheet}
         onWordPress={handleWordPress}
         onBackgroundPress={handleBackgroundPress}
@@ -453,6 +468,7 @@ export const VerseDetailContent = () => {
       showWordHint,
       verse?.id,
       isBesorah,
+      selectedWord,
       handleOpenNavigationSheet,
       handleWordPress,
       handleBackgroundPress,
