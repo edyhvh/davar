@@ -108,7 +108,7 @@ export function FullChapterView({
         <span key={word.position}>
           <span
             onClick={() => onWordClick(word)}
-            className={`cursor-pointer transition-colors duration-200 ${isSelected ? "verse-highlight" : ""}`}
+            className={`word-interactive cursor-pointer ${isSelected ? "verse-highlight" : ""}`}
             style={
               variantText
                 ? {

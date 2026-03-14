@@ -152,12 +152,18 @@ export function VerseDisplay({
         ? getPrefixSegments(displayText, word.prefixes)
         : null;
 
-      if (index === 0 && showOnboardingHint && !variantText) {
+      const shouldShowHintButton =
+        showOnboardingHint &&
+        !variantText &&
+        (isSelected || (!normalizedSelected && index === 0));
+
+      if (shouldShowHintButton) {
         return (
           <span key={word.position}>
             <OnboardingWordHint
               word={displayText}
               isActive={showOnboardingHint}
+              isPressed={isSelected}
               onClick={() => onWordClick(word)}
             />
             {index < sourceWords.length - 1 && " "}
@@ -169,7 +175,7 @@ export function VerseDisplay({
         <span key={word.position}>
           <span
             onClick={() => onWordClick(word)}
-            className={`cursor-pointer transition-colors ${isSelected ? "verse-highlight" : ""}`}
+            className={`word-interactive cursor-pointer ${isSelected ? "verse-highlight" : ""}`}
             style={
               variantText
                 ? {

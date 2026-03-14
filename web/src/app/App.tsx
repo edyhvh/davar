@@ -449,7 +449,6 @@ export default function App() {
       return;
     }
     setIsWordPanelDismissed(false);
-    setShowWordHint(false);
     setSelectedWord(word);
     if (isMobile) {
       wordSheetClosingRef.current = false;
