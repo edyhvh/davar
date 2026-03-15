@@ -536,6 +536,28 @@ export default function App() {
     [chapterVerses, currentVerse],
   );
 
+  const highlightedWord = useMemo(() => {
+    const candidate = selectedWord ?? lastSelectedWord;
+    if (!candidate || !currentVerseData) return null;
+
+    if (candidate.strong) {
+      const byStrong = currentVerseData.words.find(
+        (word) => word.strong === candidate.strong,
+      );
+      if (byStrong) return byStrong;
+    }
+
+    const byPosition = currentVerseData.words.find(
+      (word) => word.position === candidate.position,
+    );
+
+    if (byPosition && byPosition.text === candidate.text) {
+      return byPosition;
+    }
+
+    return null;
+  }, [currentVerseData, selectedWord, lastSelectedWord]);
+
   const selectedDssVariant = useMemo(
     () =>
       currentVerseData?.dss?.find(
@@ -1379,7 +1401,7 @@ export default function App() {
                       chapterVerses={chapterVerses}
                       words={currentVerseData.words}
                       dssVariants={currentVerseData.dss}
-                      selectedWord={selectedWord?.text ?? null}
+                      selectedWord={highlightedWord?.text ?? null}
                       isBesorah={isBesorah}
                       translation_footnotes={
                         currentVerseData.translation_footnotes
