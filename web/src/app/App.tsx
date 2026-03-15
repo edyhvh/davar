@@ -1189,7 +1189,7 @@ export default function App() {
       }}
     >
       <div
-        className={`sticky top-0 z-40 px-6 pt-6 transition-transform duration-300 ${
+        className={`sticky top-0 z-40 px-2 pt-4 sm:px-4 sm:pt-5 md:px-6 md:pt-6 transition-transform duration-300 ${
           hideNavOnScroll
             ? "-translate-y-full opacity-0 pointer-events-none"
             : "translate-y-0 opacity-100"

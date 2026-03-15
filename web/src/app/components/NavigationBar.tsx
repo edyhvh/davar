@@ -161,12 +161,12 @@ export function NavigationBar({
 
   return (
     <div className="relative" ref={dropdownRef}>
-      <NeumorphCard className="inline-flex px-3 py-2">
-        <div className="flex flex-wrap items-center gap-2">
-          <div className="flex flex-wrap items-center gap-2">
+      <NeumorphCard className="w-full md:w-auto px-2 py-2 md:px-3">
+        <div className="flex w-full items-center gap-1 md:gap-2">
+          <div className="flex min-w-0 flex-1 items-center gap-1 md:gap-2">
             <button
               onClick={onHomeClick}
-              className="rounded-full p-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="shrink-0 rounded-full p-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 backgroundColor: "var(--neomorph-bg)",
@@ -181,7 +181,7 @@ export function NavigationBar({
 
             <button
               onClick={() => setOpenMenu(openMenu === "book" ? null : "book")}
-              className="flex items-center gap-2 rounded-full px-3 py-1.5 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex min-w-0 flex-1 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 boxShadow:
@@ -190,10 +190,14 @@ export function NavigationBar({
               }}
               aria-label={t("navigation.selectBook")}
             >
-              <BookOpen className="w-3 h-3 text-[var(--text-primary)]" />
-              <span className="text-[11px] text-[var(--text-primary)]">
-                {bookDisplayName} |{" "}
-                <span style={{ fontFamily: "'Suez One', serif" }}>
+              <BookOpen className="hidden md:block w-3 h-3 text-[var(--text-primary)]" />
+              <span className="min-w-0 truncate text-[10px] md:text-[11px] text-[var(--text-primary)]">
+                <span className="md:hidden">{bookDisplayName}</span>
+                <span className="hidden md:inline">{bookDisplayName} | </span>
+                <span
+                  className="hidden md:inline"
+                  style={{ fontFamily: "'Suez One', serif" }}
+                >
                   {bookHebrew}
                 </span>
               </span>
@@ -203,7 +207,7 @@ export function NavigationBar({
               onClick={() =>
                 setOpenMenu(openMenu === "chapter" ? null : "chapter")
               }
-              className="flex items-center gap-2 rounded-full px-3 py-1.5 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex shrink-0 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 boxShadow:
@@ -212,17 +216,17 @@ export function NavigationBar({
               }}
               aria-label={t("navigation.selectChapter")}
             >
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-primary)]">
+              <span className="text-[9px] md:text-[10px] tracking-[0.15em] md:tracking-[0.2em] uppercase text-[var(--text-primary)]">
                 {t("navigation.chapterShort")}
               </span>
-              <span className="text-[11px] text-[var(--text-primary)]">
+              <span className="text-[10px] md:text-[11px] text-[var(--text-primary)]">
                 {chapter}
               </span>
             </button>
 
             <button
               onClick={() => setOpenMenu(openMenu === "verse" ? null : "verse")}
-              className="flex items-center gap-2 rounded-full px-3 py-1.5 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex shrink-0 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all hover:scale-[1.02] active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 boxShadow:
@@ -231,20 +235,20 @@ export function NavigationBar({
               }}
               aria-label={t("navigation.selectVerse")}
             >
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-primary)]">
+              <span className="text-[9px] md:text-[10px] tracking-[0.15em] md:tracking-[0.2em] uppercase text-[var(--text-primary)]">
                 {t("navigation.verseShort")}
               </span>
-              <span className="text-[11px] text-[var(--text-primary)]">
+              <span className="text-[10px] md:text-[11px] text-[var(--text-primary)]">
                 {verse}
               </span>
             </button>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-1 md:gap-2">
             {isDev && onDesignSystemClick && (
               <button
                 onClick={onDesignSystemClick}
-                className="rounded-full p-2 transition-all hover:scale-[1.05] active:scale-[0.98]"
+                className="shrink-0 rounded-full p-2 transition-all hover:scale-[1.05] active:scale-[0.98]"
                 style={{
                   backgroundColor: "var(--neomorph-bg)",
                   boxShadow:
@@ -261,7 +265,7 @@ export function NavigationBar({
               onClick={() =>
                 setOpenMenu(openMenu === "settings" ? null : "settings")
               }
-              className="rounded-full p-2 transition-all hover:scale-[1.05] active:scale-[0.98]"
+              className="shrink-0 rounded-full p-2 transition-all hover:scale-[1.05] active:scale-[0.98]"
               style={{
                 backgroundColor: "var(--neomorph-bg)",
                 boxShadow:
