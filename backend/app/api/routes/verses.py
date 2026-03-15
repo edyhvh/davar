@@ -161,15 +161,16 @@ async def get_verse(
 
         etag_seed = f"{book}:{chapter}:{verse}:{language}:{show_dss}:{hebrew_only}"
         etag = hashlib.sha256(etag_seed.encode("utf-8")).hexdigest()
+        cache_headers = {
+            "Cache-Control": "public, max-age=31536000, immutable",
+            "ETag": f'"{etag}"',
+        }
 
         if _if_none_match_matches_etag(request.headers.get("if-none-match"), etag):
-            response.status_code = 304
-            response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
-            response.headers["ETag"] = f'"{etag}"'
-            return response
+            return Response(status_code=304, headers=cache_headers)
 
-        response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
-        response.headers["ETag"] = f'"{etag}"'
+        for key, value in cache_headers.items():
+            response.headers[key] = value
 
         return verse_response
     except HTTPException:
