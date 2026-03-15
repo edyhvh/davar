@@ -111,18 +111,28 @@ export const apiRequest = async <T>(
 
   const url = `${API_BASE_URL}${endpoint.startsWith("/") ? endpoint : `/${endpoint}`}`;
 
+  const method = (options.method || "GET").toUpperCase();
+  const isReadOnlyRequest = method === "GET" || method === "HEAD";
+
   const headers = new Headers({
     "X-API-Key": API_KEY,
-    "Content-Type": "application/json",
-    "Cache-Control": "no-store",
     ...options.headers,
   });
+
+  if (!headers.has("Content-Type") && options.body != null) {
+    headers.set("Content-Type", "application/json");
+  }
+
+  // Let cacheable read endpoints use browser/CDN caching by default.
+  if (!headers.has("Cache-Control") && !isReadOnlyRequest) {
+    headers.set("Cache-Control", "no-store");
+  }
 
   const fetchOptions: RequestInit = {
     ...options,
     headers,
     credentials: "omit", // no cookies needed for API key auth
-    cache: "no-store",
+    cache: options.cache ?? (isReadOnlyRequest ? "default" : "no-store"),
   };
 
   try {

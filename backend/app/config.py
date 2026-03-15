@@ -25,7 +25,10 @@ class Settings(BaseSettings):
         "http://localhost:2221",
         "http://localhost:3000",
         "http://localhost:3002",
+        "http://localhost:3003",
+        "http://localhost:8082",
         "https://davar.pages.dev",
+        "https://deploy-issue.davar.pages.dev",
     ]
 
     @field_validator("allowed_origins", mode="before")

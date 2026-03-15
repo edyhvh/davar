@@ -2,7 +2,7 @@
 Verses API routes
 """
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Response
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from fastapi.responses import StreamingResponse
 from typing import Optional
 import hashlib
@@ -34,10 +34,19 @@ verses_service = VersesService(
 )
 
 
+def _if_none_match_matches_etag(if_none_match: str | None, etag: str) -> bool:
+    if not if_none_match:
+        return False
+    candidates = [token.strip() for token in if_none_match.split(",")]
+    quoted = f'"{etag}"'
+    return "*" in candidates or quoted in candidates or etag in candidates
+
+
 @router.get("/verses/{book}/{chapter}", response_model=list[VerseResponse])
 async def get_verses(
     book: str,
     chapter: int,
+    request: Request,
     response: Response,
     language: Optional[str] = Query(
         None, description="Translation language ('es' or 'en')"),
@@ -63,6 +72,9 @@ async def get_verses(
             "Cache-Control": "public, max-age=31536000, immutable",
             "ETag": f'"{etag}"'
         }
+
+        if _if_none_match_matches_etag(request.headers.get("if-none-match"), etag):
+            return Response(status_code=304, headers=headers)
 
         if stream:
             verse_iterator = verses_service.iter_verses(
@@ -119,6 +131,7 @@ async def get_verse(
     book: str,
     chapter: int,
     verse: int,
+    request: Request,
     response: Response,
     language: Optional[str] = Query(
         None, description="Translation language ('es' or 'en')"),
@@ -148,6 +161,13 @@ async def get_verse(
 
         etag_seed = f"{book}:{chapter}:{verse}:{language}:{show_dss}:{hebrew_only}"
         etag = hashlib.sha256(etag_seed.encode("utf-8")).hexdigest()
+
+        if _if_none_match_matches_etag(request.headers.get("if-none-match"), etag):
+            response.status_code = 304
+            response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
+            response.headers["ETag"] = f'"{etag}"'
+            return response
+
         response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
         response.headers["ETag"] = f'"{etag}"'
 
