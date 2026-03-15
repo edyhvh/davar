@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { OnboardingWordHint } from "./OnboardingWordHint";
 import { SwipeIndicator } from "./SwipeIndicator";
 import { FullChapterView } from "./FullChapterView";
@@ -50,6 +51,8 @@ interface VerseDisplayProps {
   selectedWord?: string | null;
   onSwipeUp?: () => void;
   onSwipeDown?: () => void;
+  canNavigatePrevious?: boolean;
+  canNavigateNext?: boolean;
   translation_footnotes?: TranslationFootnote[];
   isBesorah?: boolean;
 }
@@ -80,6 +83,8 @@ export function VerseDisplay({
   selectedWord,
   onSwipeUp,
   onSwipeDown,
+  canNavigatePrevious = false,
+  canNavigateNext = false,
   translation_footnotes,
   isBesorah = false,
 }: VerseDisplayProps) {
@@ -286,6 +291,50 @@ export function VerseDisplay({
                 })}
           </div>
         </SwipeIndicator>
+      )}
+
+      {(canNavigatePrevious || canNavigateNext) && (
+        <div
+          className={`md:hidden flex items-center justify-center gap-3 px-4 ${hebrewOnly ? "mt-2" : "-mt-3"}`}
+        >
+          {canNavigatePrevious && (
+            <button
+              type="button"
+              onClick={onSwipeUp}
+              aria-label="Previous verse"
+              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-[12px] font-medium transition-colors"
+              style={{
+                background: "var(--glass-surface)",
+                borderColor: "var(--glass-border)",
+                color: "var(--text-secondary)",
+                backdropFilter: "blur(8px)",
+                minHeight: "36px",
+              }}
+            >
+              <ChevronUp size={14} strokeWidth={2.25} aria-hidden="true" />
+              <span>Previous verse</span>
+            </button>
+          )}
+
+          {canNavigateNext && (
+            <button
+              type="button"
+              onClick={onSwipeDown}
+              aria-label="Next verse"
+              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-[12px] font-medium transition-colors"
+              style={{
+                background: "var(--glass-surface)",
+                borderColor: "var(--glass-border)",
+                color: "var(--text-secondary)",
+                backdropFilter: "blur(8px)",
+                minHeight: "36px",
+              }}
+            >
+              <ChevronDown size={14} strokeWidth={2.25} aria-hidden="true" />
+              <span>Next verse</span>
+            </button>
+          )}
+        </div>
       )}
     </div>
   );

@@ -1390,6 +1390,13 @@ export default function App() {
                       onSwipeDown={() => {
                         void handleNextVerse();
                       }}
+                      canNavigatePrevious={
+                        currentVerse > 1 || currentChapter > 1
+                      }
+                      canNavigateNext={
+                        currentVerse < chapterVerses.length ||
+                        currentChapter < chapterCount
+                      }
                     />
                   ) : (
                     <NeumorphCard>
