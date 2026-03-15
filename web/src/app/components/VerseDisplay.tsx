@@ -256,6 +256,7 @@ export function VerseDisplay({
           direction: "rtl",
           color: "var(--text-hebrew)",
           lineHeight: 1.85,
+          wordSpacing: "0.24em",
         }}
       >
         <span
