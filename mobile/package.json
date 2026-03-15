@@ -12,6 +12,7 @@
     "android:clean": "expo prebuild --clean --platform android && expo run:android",
     "web": "expo start --web --port 8082",
     "lint": "expo lint",
+    "typecheck": "bunx tsc --noEmit",
     "format": "bunx biome format --write .",
     "format:check": "bunx biome format .",
     "build:ios": "eas build --platform ios",
