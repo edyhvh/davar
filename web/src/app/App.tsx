@@ -363,15 +363,25 @@ export default function App() {
       return t("common.appName");
     }
 
+    const hebrewBookName = getHebrewBookName(currentBook);
+    const chapterVerse = `${currentChapter}:${currentVerse}`;
+
     if (language === "he") {
-      return `${getHebrewBookName(currentBook)} ${currentChapter}`;
+      return `${hebrewBookName} ${chapterVerse} ${hebrewBookName}`;
     }
 
     const displayBookName = getDisplayBookName(currentBook);
-    const hebrewBookName = getHebrewBookName(currentBook);
 
-    return `${displayBookName} ${hebrewBookName} ${currentChapter}`;
-  }, [currentBook, currentChapter, currentScreen, language, books, t]);
+    return `${displayBookName} ${chapterVerse} ${hebrewBookName}`;
+  }, [
+    currentBook,
+    currentChapter,
+    currentVerse,
+    currentScreen,
+    language,
+    books,
+    t,
+  ]);
 
   useDocumentTitle(tabTitle);
 
