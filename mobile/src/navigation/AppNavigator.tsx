@@ -69,7 +69,7 @@ export const AppNavigator = () => {
         tabBarShowLabel: false,
         tabBarItemStyle: styles.tabItem,
       }}
-      initialRouteName="verse"
+      initialRouteName="index"
     >
       <Tabs.Screen
         name="home"
