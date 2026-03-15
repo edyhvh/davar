@@ -302,7 +302,7 @@ export function VerseDisplay({
             <button
               type="button"
               onClick={onSwipeUp}
-              aria-label="Previous verse"
+              aria-label={t("verse.previousVerse")}
               className="inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-[12px] font-medium transition-colors"
               style={{
                 background: "var(--glass-surface)",
@@ -313,7 +313,7 @@ export function VerseDisplay({
               }}
             >
               <ChevronUp size={14} strokeWidth={2.25} aria-hidden="true" />
-              <span>Previous verse</span>
+              <span>{t("verse.previousVerse")}</span>
             </button>
           )}
 
@@ -321,7 +321,7 @@ export function VerseDisplay({
             <button
               type="button"
               onClick={onSwipeDown}
-              aria-label="Next verse"
+              aria-label={t("verse.nextVerse")}
               className="inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-[12px] font-medium transition-colors"
               style={{
                 background: "var(--glass-surface)",
@@ -332,7 +332,7 @@ export function VerseDisplay({
               }}
             >
               <ChevronDown size={14} strokeWidth={2.25} aria-hidden="true" />
-              <span>Next verse</span>
+              <span>{t("verse.nextVerse")}</span>
             </button>
           )}
         </div>
