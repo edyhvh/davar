@@ -297,7 +297,7 @@
 
 @media (max-width: 767px) {
   .word-interactive {
-    margin: 0 1px;
+    margin: 0 2px;
     padding: 2px 8px;
     border: 1px solid var(--neomorph-border);
     background-color: color-mix(in srgb, var(--neomorph-bg) 92%, rgba(198, 143, 85, 0.04));
