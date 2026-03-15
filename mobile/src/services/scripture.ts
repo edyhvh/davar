@@ -3,7 +3,6 @@ import type {
   VerseResponse,
   TranslationFootnote,
   WordResponse,
-  DssVariant,
 } from "@/src/types/api";
 import {
   fetchHebrewVerses,

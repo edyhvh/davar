@@ -19,10 +19,6 @@ import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/typ
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import type { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import type { ParamListBase } from "@react-navigation/native";
-
-// Suppress import/namespace check: ESLint parser errors were reporting a false positive
-// for the `VerseCard` module in some environments. See issue notes in repo.
-// eslint-disable-next-line import/namespace
 import { VerseCard } from "@/src/components/VerseCard";
 import { WordAnalysisBottomSheet } from "@/src/components/WordAnalysisBottomSheet";
 import {
@@ -260,7 +256,7 @@ export const VerseDetailContent = () => {
     [orderedVerses, verse],
   );
 
-  const [showWordHint, setShowWordHint] = useState(false);
+  const [showWordHint] = useState(false);
   const listRef = useRef<FlatList<(typeof orderedVerses)[number]>>(null);
   const viewabilityConfigRef = useRef({ itemVisiblePercentThreshold: 70 });
   const onViewableItemsChanged = useRef(
