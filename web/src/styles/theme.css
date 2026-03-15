@@ -297,13 +297,13 @@
 
 @media (max-width: 767px) {
   .word-interactive {
-    margin: 0 2px;
+    margin: 2px 4px;
     padding: 2px 8px;
     border: 1px solid var(--neomorph-border);
     background-color: color-mix(in srgb, var(--neomorph-bg) 92%, rgba(198, 143, 85, 0.04));
     box-shadow:
-      2px 2px 5px var(--neomorph-shadow-dark),
-      -2px -2px 5px var(--neomorph-shadow-light);
+      1px 1px 4px var(--neomorph-shadow-dark),
+      -1px -1px 4px var(--neomorph-shadow-light);
   }
 
   .word-interactive:active {
