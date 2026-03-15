@@ -15,6 +15,35 @@
       sizes="180x180"
       href="./public/apple-touch-icon.png"
     />
+    <script>
+      (function () {
+        const selectors = [
+          'link[rel="icon"]',
+          'link[rel="shortcut icon"]',
+          'link[rel="apple-touch-icon"]',
+        ];
+
+        const normalizeIconHref = (rawHref) => {
+          if (!rawHref || /^(https?:|data:|blob:|\/)/i.test(rawHref)) {
+            return rawHref;
+          }
+
+          let normalized = rawHref.replace(/^\.\//, "");
+          normalized = normalized.replace(/^public\//, "");
+          return `/${normalized}`;
+        };
+
+        selectors.forEach((selector) => {
+          document.querySelectorAll(selector).forEach((link) => {
+            const rawHref = link.getAttribute("href");
+            const nextHref = normalizeIconHref(rawHref);
+            if (nextHref && nextHref !== rawHref) {
+              link.setAttribute("href", nextHref);
+            }
+          });
+        });
+      })();
+    </script>
     <meta
       name="theme-color"
       content="#faf6f0"
