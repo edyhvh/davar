@@ -16,6 +16,7 @@ export interface ReadingStateV2 {
   showFullChapter: boolean;
   seferMode: boolean;
   scrollNavHintCount: number;
+  desktopScrollHintCount: number;
   lastPositionByBook: Record<string, { chapter: number; verse: number }>;
 }
 
@@ -25,6 +26,7 @@ export interface ReadingStateV1 {
   verse?: number;
   language?: "en" | "es" | "he";
   scrollNavHintCount?: number;
+  desktopScrollHintCount?: number;
 }
 
 const STORAGE_KEY = "davar.readingState";
@@ -68,6 +70,7 @@ function migrateV1toV2(v1Data: ReadingStateV1): ReadingStateV2 {
     showFullChapter: false,
     seferMode: false,
     scrollNavHintCount: v1Data.scrollNavHintCount ?? 0,
+    desktopScrollHintCount: v1Data.desktopScrollHintCount ?? 0,
     lastPositionByBook: {
       [v1Data.book ?? "Genesis"]: {
         chapter: v1Data.chapter ?? 1,
@@ -170,6 +173,7 @@ export function createDefaultReadingState(): ReadingStateV2 {
     showFullChapter: false,
     seferMode: false,
     scrollNavHintCount: 0,
+    desktopScrollHintCount: 0,
     lastPositionByBook: {
       Genesis: { chapter: 1, verse: 1 },
     },

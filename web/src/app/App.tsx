@@ -186,6 +186,11 @@ export default function App() {
     "scrollNavHintCount",
     initialState.scrollNavHintCount,
   );
+  const [desktopScrollHintCount, setDesktopScrollHintCount] =
+    usePersistedState(
+      "desktopScrollHintCount",
+      initialState.desktopScrollHintCount,
+    );
 
   // Navigation state - also persisted but with special logic for per-book tracking
   const [currentBook, setCurrentBook] = useState(initialState.book);
@@ -1064,7 +1069,16 @@ export default function App() {
       setScrollJumpActive(true);
       setScrollHintCount(scrollHintCount + 1);
     }
-  }, [scrollHintCount, setScrollHintCount]);
+
+    if (desktopScrollHintCount < 5) {
+      setDesktopScrollHintCount(desktopScrollHintCount + 1);
+    }
+  }, [
+    desktopScrollHintCount,
+    scrollHintCount,
+    setDesktopScrollHintCount,
+    setScrollHintCount,
+  ]);
 
   const handlePreviousVerse = useCallback(async () => {
     if (currentVerse > 1) {
@@ -1332,7 +1346,7 @@ export default function App() {
                 } ${scrollJumpActive ? "verse-panel-jump" : ""}`}
                 style={showFullChapter ? undefined : { height: "70vh" }}
               >
-                <div className="verse-panel-inner">
+                <div className="verse-panel-inner relative">
                   {currentVerseData ? (
                     <VerseDisplay
                       hebrewText={currentVerseData.hebrew}
@@ -1384,6 +1398,7 @@ export default function App() {
                       </p>
                     </NeumorphCard>
                   )}
+
                 </div>
               </div>
 
@@ -1561,6 +1576,13 @@ export default function App() {
       <div className="md:hidden">
         <div className="h-10" />
       </div>
+
+      {isScrollNavigationActive && desktopScrollHintCount < 5 && (
+        <div className="scroll-nav-hint" aria-live="polite">
+          <p>{t("verse.scrollNextHint")}</p>
+          {currentVerse > 1 && <p>{t("verse.scrollPreviousHint")}</p>}
+        </div>
+      )}
 
       {isMobile && (
         <BottomSheet
