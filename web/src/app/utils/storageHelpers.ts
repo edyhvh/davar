@@ -16,6 +16,7 @@ export interface ReadingStateV2 {
   showFullChapter: boolean;
   seferMode: boolean;
   scrollNavHintCount: number;
+  desktopScrollHintCount: number;
   lastPositionByBook: Record<string, { chapter: number; verse: number }>;
 }
 
@@ -25,9 +26,31 @@ export interface ReadingStateV1 {
   verse?: number;
   language?: "en" | "es" | "he";
   scrollNavHintCount?: number;
+  desktopScrollHintCount?: number;
 }
 
 const STORAGE_KEY = "davar.readingState";
+
+function resolveDefaultLanguage(): "en" | "es" | "he" {
+  if (typeof window === "undefined" || typeof navigator === "undefined") {
+    return "en";
+  }
+
+  const preferred = [navigator.language, ...(navigator.languages ?? [])]
+    .filter(
+      (value): value is string => typeof value === "string" && value.length > 0,
+    )
+    .map((value) => value.toLowerCase());
+
+  for (const locale of preferred) {
+    const primaryLanguage = locale.split("-")[0];
+    if (primaryLanguage === "es") return "es";
+    if (primaryLanguage === "he") return "he";
+    if (primaryLanguage === "en") return "en";
+  }
+
+  return "en";
+}
 
 /**
  * Migrate v1 schema to v2 schema
@@ -38,7 +61,7 @@ function migrateV1toV2(v1Data: ReadingStateV1): ReadingStateV2 {
     book: v1Data.book ?? "Genesis",
     chapter: v1Data.chapter ?? 1,
     verse: v1Data.verse ?? 1,
-    language: v1Data.language ?? "en",
+    language: v1Data.language ?? resolveDefaultLanguage(),
     theme: "light",
     showQumran: false,
     hebrewOnly: false,
@@ -47,6 +70,7 @@ function migrateV1toV2(v1Data: ReadingStateV1): ReadingStateV2 {
     showFullChapter: false,
     seferMode: false,
     scrollNavHintCount: v1Data.scrollNavHintCount ?? 0,
+    desktopScrollHintCount: v1Data.desktopScrollHintCount ?? 0,
     lastPositionByBook: {
       [v1Data.book ?? "Genesis"]: {
         chapter: v1Data.chapter ?? 1,
@@ -140,7 +164,7 @@ export function createDefaultReadingState(): ReadingStateV2 {
     book: "Genesis",
     chapter: 1,
     verse: 1,
-    language: "en",
+    language: resolveDefaultLanguage(),
     theme: "light",
     showQumran: false,
     hebrewOnly: false,
@@ -149,6 +173,7 @@ export function createDefaultReadingState(): ReadingStateV2 {
     showFullChapter: false,
     seferMode: false,
     scrollNavHintCount: 0,
+    desktopScrollHintCount: 0,
     lastPositionByBook: {
       Genesis: { chapter: 1, verse: 1 },
     },

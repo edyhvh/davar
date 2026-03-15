@@ -186,6 +186,11 @@ export default function App() {
     "scrollNavHintCount",
     initialState.scrollNavHintCount,
   );
+  const [desktopScrollHintCount, setDesktopScrollHintCount] =
+    usePersistedState(
+      "desktopScrollHintCount",
+      initialState.desktopScrollHintCount,
+    );
 
   // Navigation state - also persisted but with special logic for per-book tracking
   const [currentBook, setCurrentBook] = useState(initialState.book);
@@ -241,6 +246,7 @@ export default function App() {
   const pendingWordRef = useRef<WordResponse | null>(null);
   const [wordCardTabKey, setWordCardTabKey] = useState(0);
   const [hideNavOnScroll, setHideNavOnScroll] = useState(false);
+  const lastScrollYRef = useRef(0);
 
   const getTransliterationForLanguage = useCallback(
     (word?: WordResponse | null) => {
@@ -448,7 +454,6 @@ export default function App() {
       return;
     }
     setIsWordPanelDismissed(false);
-    setShowWordHint(false);
     setSelectedWord(word);
     if (isMobile) {
       wordSheetClosingRef.current = false;
@@ -1064,7 +1069,16 @@ export default function App() {
       setScrollJumpActive(true);
       setScrollHintCount(scrollHintCount + 1);
     }
-  }, [scrollHintCount, setScrollHintCount]);
+
+    if (desktopScrollHintCount < 5) {
+      setDesktopScrollHintCount(desktopScrollHintCount + 1);
+    }
+  }, [
+    desktopScrollHintCount,
+    scrollHintCount,
+    setDesktopScrollHintCount,
+    setScrollHintCount,
+  ]);
 
   const handlePreviousVerse = useCallback(async () => {
     if (currentVerse > 1) {
@@ -1111,6 +1125,30 @@ export default function App() {
     currentScreen === "verse" && !showFullChapter && !isMobile;
 
   useEffect(() => {
+    if (isMobile) {
+      const threshold = 24;
+      lastScrollYRef.current = window.scrollY;
+
+      const handleMobileScroll = () => {
+        const currentY = window.scrollY;
+        const delta = currentY - lastScrollYRef.current;
+
+        if (currentY <= threshold) {
+          setHideNavOnScroll(false);
+        } else if (delta > 4) {
+          setHideNavOnScroll(true);
+        } else if (delta < -4) {
+          setHideNavOnScroll(false);
+        }
+
+        lastScrollYRef.current = currentY;
+      };
+
+      handleMobileScroll();
+      window.addEventListener("scroll", handleMobileScroll, { passive: true });
+      return () => window.removeEventListener("scroll", handleMobileScroll);
+    }
+
     if (!(currentScreen === "verse" && showFullChapter && seferMode)) {
       setHideNavOnScroll(false);
       return;
@@ -1123,7 +1161,7 @@ export default function App() {
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [currentScreen, showFullChapter, seferMode]);
+  }, [currentScreen, isMobile, showFullChapter, seferMode]);
 
   useVerseScrollNavigation({
     containerRef: versePanelRef,
@@ -1151,7 +1189,7 @@ export default function App() {
       }}
     >
       <div
-        className={`sticky top-0 z-40 px-6 pt-6 transition-transform duration-300 ${
+        className={`sticky top-0 z-40 px-2 pt-4 sm:px-4 sm:pt-5 md:px-6 md:pt-6 transition-transform duration-300 ${
           hideNavOnScroll
             ? "-translate-y-full opacity-0 pointer-events-none"
             : "translate-y-0 opacity-100"
@@ -1190,8 +1228,6 @@ export default function App() {
             }}
             onVerseChange={(verse) => setCurrentVerse(verse)}
             onHomeClick={() => setCurrentScreen("home")}
-            onDonateClick={() => setCurrentScreen("donate")}
-            onFeaturesClick={() => setCurrentScreen("features")}
             onDesignSystemClick={() => setShowDesignSystem(true)}
             theme={theme}
             onThemeChange={setTheme}
@@ -1228,7 +1264,13 @@ export default function App() {
 
       <div className="px-6 pb-32 pt-6">
         <div className="max-w-7xl mx-auto">
-          {currentScreen === "home" && <HomeScreen language={language} />}
+          {currentScreen === "home" && (
+            <HomeScreen
+              language={language}
+              onFeaturesClick={() => setCurrentScreen("features")}
+              onDonateClick={() => setCurrentScreen("donate")}
+            />
+          )}
           {currentScreen === "terms" && (
             <LegalScreen
               kind="terms"
@@ -1304,7 +1346,7 @@ export default function App() {
                 } ${scrollJumpActive ? "verse-panel-jump" : ""}`}
                 style={showFullChapter ? undefined : { height: "70vh" }}
               >
-                <div className="verse-panel-inner">
+                <div className="verse-panel-inner relative">
                   {currentVerseData ? (
                     <VerseDisplay
                       hebrewText={currentVerseData.hebrew}
@@ -1348,6 +1390,13 @@ export default function App() {
                       onSwipeDown={() => {
                         void handleNextVerse();
                       }}
+                      canNavigatePrevious={
+                        currentVerse > 1 || currentChapter > 1
+                      }
+                      canNavigateNext={
+                        currentVerse < chapterVerses.length ||
+                        currentChapter < chapterCount
+                      }
                     />
                   ) : (
                     <NeumorphCard>
@@ -1356,6 +1405,7 @@ export default function App() {
                       </p>
                     </NeumorphCard>
                   )}
+
                 </div>
               </div>
 
@@ -1533,6 +1583,13 @@ export default function App() {
       <div className="md:hidden">
         <div className="h-10" />
       </div>
+
+      {isScrollNavigationActive && desktopScrollHintCount < 5 && (
+        <div className="scroll-nav-hint" aria-live="polite">
+          <p>{t("verse.scrollNextHint")}</p>
+          {currentVerse > 1 && <p>{t("verse.scrollPreviousHint")}</p>}
+        </div>
+      )}
 
       {isMobile && (
         <BottomSheet

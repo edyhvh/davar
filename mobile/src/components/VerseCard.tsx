@@ -1,13 +1,12 @@
-import { type JSX, useEffect, useMemo } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import Animated, {
-  interpolateColor,
-  useAnimatedStyle,
-  useSharedValue,
-  withRepeat,
-  withTiming,
-  Easing,
-} from "react-native-reanimated";
+import { type JSX, useMemo } from "react";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  type StyleProp,
+  type ViewStyle,
+} from "react-native";
 
 import { NeumorphCard } from "@/src/components/ui/NeumorphCard";
 import { getColors, spacing, typography } from "@/src/theme";
@@ -68,6 +67,7 @@ type VerseCardProps = {
   onWordPress?: (word: DisplayVerse["words"][number]) => void;
   onVersePress?: () => void;
   showWordHint?: boolean;
+  selectedWord?: DisplayVerse["words"][number] | null;
   variant?: "card" | "detail";
   isBesorah?: boolean;
 };
@@ -134,11 +134,44 @@ const createStyles = (
       paddingHorizontal: spacing[2],
       paddingVertical: spacing[1],
       marginHorizontal: spacing[1],
-      borderRadius: 6,
-      overflow: "hidden",
+      marginVertical: 2,
+      borderRadius: 8,
+      borderWidth: 1,
+      borderColor: colors.neomorphBorder,
+      backgroundColor: colors.neomorphBg,
+      shadowColor: colors.neomorphShadowDark,
+      shadowOffset: { width: 0, height: 1 },
+      shadowOpacity: colors.background === "#0F0E12" ? 0.28 : 0.14,
+      shadowRadius: 2,
+      elevation: 1,
     },
-    wordHintHighlight: {
-      borderWidth: 0,
+    wordHintPressable: {
+      backgroundColor: "rgba(198, 143, 85, 0.08)",
+      borderColor: "rgba(198, 143, 85, 0.26)",
+    },
+    hebrewWordPressed: {
+      backgroundColor: "rgba(198, 143, 85, 0.14)",
+      borderColor: "rgba(198, 143, 85, 0.5)",
+      shadowColor: colors.accentCopper,
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.26,
+      shadowRadius: 6,
+      elevation: 3,
+      transform: [{ translateY: -1 }],
+    },
+    selectedWordPressable: {
+      backgroundColor: "rgba(198, 143, 85, 0.32)",
+      borderColor: "rgba(198, 143, 85, 0.75)",
+      shadowColor: colors.accentCopper,
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.34,
+      shadowRadius: 7,
+      elevation: 3,
+    },
+    selectedWordPressed: {
+      backgroundColor: "rgba(198, 143, 85, 0.4)",
+      borderColor: "rgba(198, 143, 85, 0.9)",
+      shadowOpacity: 0.4,
     },
   });
 
@@ -147,6 +180,7 @@ export const VerseCard = ({
   onWordPress,
   onVersePress,
   showWordHint = false,
+  selectedWord = null,
   variant = "card",
   isBesorah = false,
 }: VerseCardProps) => {
@@ -167,32 +201,6 @@ export const VerseCard = ({
     () => createStyles(colors, hebrewFontScale),
     [colors, hebrewFontScale],
   );
-  const highlightProgress = useSharedValue(0);
-
-  useEffect(() => {
-    // Smooth continuous copper pulse - runs indefinitely
-    highlightProgress.value = withRepeat(
-      withTiming(1, { duration: 4000, easing: Easing.inOut(Easing.ease) }),
-      -1, // -1 means infinite repeats
-      true, // reverse for smooth back-and-forth pulse
-    );
-  }, [highlightProgress]);
-
-  // Subtle copper background pulse using rgba colors
-  const highlightStyle = useAnimatedStyle(() => {
-    "worklet";
-    const backgroundColor = interpolateColor(
-      highlightProgress.value,
-      [0, 0.5, 1],
-      [
-        "rgba(198, 143, 85, 0.4)", // Subtle base
-        "rgba(198, 143, 85, 0.9)", // Peak brightness
-        "rgba(198, 143, 85, 0.4)", // Back to subtle
-      ],
-    );
-    return { backgroundColor };
-  });
-
   // Spanish fallback: when the user's language is Spanish but the verse has no
   // Spanish translation available yet, we show a localised placeholder message
   // ("verse.missingSpanishTranslation") instead of an empty string so the user
@@ -211,6 +219,13 @@ export const VerseCard = ({
           const wordKey = `${verse.id}-${word.position ?? index}`;
           const isFirst = index === 0;
           const shouldHighlight = showWordHint && isFirst;
+          const currentWordPosition = word.position ?? index;
+          const selectedWordPosition = selectedWord?.position;
+          const isSelectedWord =
+            Boolean(selectedWord) &&
+            selectedWordPosition === currentWordPosition &&
+            selectedWord?.text === word.text &&
+            selectedWord?.strong === word.strong;
 
           const qumranWord = showQumran ? word.dssWord : undefined;
 
@@ -234,7 +249,12 @@ export const VerseCard = ({
               ? null
               : getPrefixSegments(displayText, word.prefixes);
 
-          const wordStyles = [styles.hebrewWordPressable];
+          const wordStyles: StyleProp<ViewStyle>[] = [styles.hebrewWordPressable];
+          if (isSelectedWord) {
+            wordStyles.push(styles.selectedWordPressable);
+          } else if (shouldHighlight) {
+            wordStyles.push(styles.wordHintPressable);
+          }
 
           const renderWordContent = () => {
             if (prefixSegments?.prefixes?.length) {
@@ -278,14 +298,12 @@ export const VerseCard = ({
                 <Pressable
                   onPress={() => onWordPress?.(word)}
                   hitSlop={8}
-                  style={wordStyles}
+                  style={({ pressed }) => [
+                    ...wordStyles,
+                    pressed ? styles.hebrewWordPressed : null,
+                    pressed && isSelectedWord ? styles.selectedWordPressed : null,
+                  ]}
                 >
-                  {shouldHighlight ? (
-                    <Animated.View
-                      pointerEvents="none"
-                      style={[StyleSheet.absoluteFillObject, highlightStyle]}
-                    />
-                  ) : null}
                   {renderWordContent()}
                 </Pressable>
               </View>
@@ -297,14 +315,12 @@ export const VerseCard = ({
               key={wordKey}
               onPress={() => onWordPress?.(word)}
               hitSlop={8}
-              style={wordStyles}
+              style={({ pressed }) => [
+                ...wordStyles,
+                pressed ? styles.hebrewWordPressed : null,
+                pressed && isSelectedWord ? styles.selectedWordPressed : null,
+              ]}
             >
-              {shouldHighlight ? (
-                <Animated.View
-                  pointerEvents="none"
-                  style={[StyleSheet.absoluteFillObject, highlightStyle]}
-                />
-              ) : null}
               {renderWordContent()}
             </Pressable>
           );

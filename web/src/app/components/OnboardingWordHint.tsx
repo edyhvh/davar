@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 interface OnboardingWordHintProps {
   word: string;
   isActive: boolean;
+  isPressed?: boolean;
   onClick: () => void;
 }
 
-export function OnboardingWordHint({ word, isActive, onClick }: OnboardingWordHintProps) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+export function OnboardingWordHint({ word, isActive, isPressed = false, onClick }: OnboardingWordHintProps) {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLSpanElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      onClick();
+    }
+  };
 
   if (!isActive) {
     return (
@@ -23,10 +25,12 @@ export function OnboardingWordHint({ word, isActive, onClick }: OnboardingWordHi
 
   return (
     <span
+      role="button"
+      tabIndex={0}
       onClick={onClick}
-      className={`cursor-pointer inline-block word-hint ${
-        mounted ? "word-hint-active" : ""
-      }`}
+      onKeyDown={handleKeyDown}
+      className={`word-interactive word-hint ${isPressed ? "word-hint-pressed" : ""}`}
+      aria-label="Select word"
     >
       {word}
     </span>

@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { OnboardingWordHint } from "./OnboardingWordHint";
 import { SwipeIndicator } from "./SwipeIndicator";
 import { FullChapterView } from "./FullChapterView";
@@ -50,6 +51,8 @@ interface VerseDisplayProps {
   selectedWord?: string | null;
   onSwipeUp?: () => void;
   onSwipeDown?: () => void;
+  canNavigatePrevious?: boolean;
+  canNavigateNext?: boolean;
   translation_footnotes?: TranslationFootnote[];
   isBesorah?: boolean;
 }
@@ -80,6 +83,8 @@ export function VerseDisplay({
   selectedWord,
   onSwipeUp,
   onSwipeDown,
+  canNavigatePrevious = false,
+  canNavigateNext = false,
   translation_footnotes,
   isBesorah = false,
 }: VerseDisplayProps) {
@@ -152,12 +157,18 @@ export function VerseDisplay({
         ? getPrefixSegments(displayText, word.prefixes)
         : null;
 
-      if (index === 0 && showOnboardingHint && !variantText) {
+      const shouldShowHintButton =
+        showOnboardingHint &&
+        !variantText &&
+        (isSelected || (!normalizedSelected && index === 0));
+
+      if (shouldShowHintButton) {
         return (
           <span key={word.position}>
             <OnboardingWordHint
               word={displayText}
               isActive={showOnboardingHint}
+              isPressed={isSelected}
               onClick={() => onWordClick(word)}
             />
             {index < sourceWords.length - 1 && " "}
@@ -169,7 +180,7 @@ export function VerseDisplay({
         <span key={word.position}>
           <span
             onClick={() => onWordClick(word)}
-            className={`cursor-pointer transition-colors ${isSelected ? "verse-highlight" : ""}`}
+            className={`word-interactive cursor-pointer ${isSelected ? "verse-highlight" : ""}`}
             style={
               variantText
                 ? {
@@ -245,6 +256,7 @@ export function VerseDisplay({
           direction: "rtl",
           color: "var(--text-hebrew)",
           lineHeight: 1.85,
+          wordSpacing: "0.24em",
         }}
       >
         <span
@@ -280,6 +292,50 @@ export function VerseDisplay({
                 })}
           </div>
         </SwipeIndicator>
+      )}
+
+      {(canNavigatePrevious || canNavigateNext) && (
+        <div
+          className={`md:hidden flex items-center justify-center gap-3 px-4 ${hebrewOnly ? "mt-2" : "-mt-3"}`}
+        >
+          {canNavigatePrevious && (
+            <button
+              type="button"
+              onClick={onSwipeUp}
+              aria-label={t("verse.previousVerse")}
+              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-[12px] font-medium transition-colors"
+              style={{
+                background: "var(--glass-surface)",
+                borderColor: "var(--glass-border)",
+                color: "var(--text-secondary)",
+                backdropFilter: "blur(8px)",
+                minHeight: "36px",
+              }}
+            >
+              <ChevronUp size={14} strokeWidth={2.25} aria-hidden="true" />
+              <span>{t("verse.previousVerse")}</span>
+            </button>
+          )}
+
+          {canNavigateNext && (
+            <button
+              type="button"
+              onClick={onSwipeDown}
+              aria-label={t("verse.nextVerse")}
+              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-[12px] font-medium transition-colors"
+              style={{
+                background: "var(--glass-surface)",
+                borderColor: "var(--glass-border)",
+                color: "var(--text-secondary)",
+                backdropFilter: "blur(8px)",
+                minHeight: "36px",
+              }}
+            >
+              <ChevronDown size={14} strokeWidth={2.25} aria-hidden="true" />
+              <span>{t("verse.nextVerse")}</span>
+            </button>
+          )}
+        </div>
       )}
     </div>
   );

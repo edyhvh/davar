@@ -25,8 +25,8 @@ export function useVerseScrollNavigation({
   const lastTriggerRef = useRef(0);
 
   useEffect(() => {
-    const node = containerRef.current;
-    if (!node || !isEnabled) return;
+    void containerRef.current;
+    if (!isEnabled) return;
 
     const handleWheel = async (event: WheelEvent) => {
       if (!isEnabled || isBlocked) return;
@@ -49,10 +49,10 @@ export function useVerseScrollNavigation({
       }
     };
 
-    node.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      node.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("wheel", handleWheel);
     };
   }, [
     containerRef,

@@ -207,6 +207,10 @@
   "verse": {
     "previousSnippet": "פסוק קודם...",
     "nextSnippet": "פסוק הבא...",
+    "previousVerse": "פסוק קודם",
+    "nextVerse": "פסוק הבא",
+    "scrollNextHint": "גלול למעלה לפסוק הבא",
+    "scrollPreviousHint": "גלול למטה לפסוק הקודם",
     "selectBookPrompt": "בחר ספר כדי להתחיל.",
     "loading": "טוען פסוקים...",
     "prefixLabel": "תחילית: {prefix}",
@@ -238,7 +242,8 @@
     "appearsIn": "מופיע ב",
     "showMore": "הצג עוד {count}",
     "properName": "שם פרטי",
-    "definitionNotAvailable": "הגדרה לא זמינה"
+    "definitionNotAvailable": "הגדרה לא זמינה",
+    "copiedToClipboard": "הועתק ללוח"
   },
   "languages": {
     "en": "אנגלית",

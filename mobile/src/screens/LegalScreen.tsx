@@ -1,19 +1,16 @@
 import { useMemo } from "react";
 import {
   Linking,
-  Pressable,
   ScrollView,
   StyleSheet,
   Text,
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useRouter } from "expo-router";
 import Markdown from "react-native-markdown-display";
 
-import { getColors, radii, spacing, typography } from "@/src/theme";
+import { getColors, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
-import { useTranslation } from "@/src/i18n/useTranslation";
 import { getLegalDoc, type LegalKind } from "../../../locales/legalContent";
 
 interface LegalScreenProps {
@@ -158,8 +155,6 @@ export function LegalScreen({ kind }: LegalScreenProps) {
     }),
     [colors, themeMode],
   );
-  const router = useRouter();
-  const { t } = useTranslation();
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>

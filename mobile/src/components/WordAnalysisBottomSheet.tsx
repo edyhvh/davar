@@ -7,9 +7,12 @@ import React, {
   useState,
 } from "react";
 import {
+  Alert,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
+  ToastAndroid,
   View,
   useWindowDimensions,
 } from "react-native";
@@ -112,6 +115,11 @@ const createStyles = (
     headerSection: {
       alignItems: "center",
       marginBottom: spacing[6],
+    },
+    headerWordPressable: {
+      paddingHorizontal: spacing[2],
+      paddingVertical: spacing[1],
+      borderRadius: radii.md,
     },
     hebrew: {
       fontFamily: typography.families.hebrewScripture,
@@ -797,6 +805,22 @@ const WordAnalysisBottomSheetComponent = (
     onClosed?.();
   }, [onClosed]);
 
+  const handleCopyWord = useCallback(async () => {
+    if (!displayHebrew || displayHebrew === "—") return;
+    try {
+      const Clipboard = await import("expo-clipboard");
+      await Clipboard.setStringAsync(displayHebrew);
+      const message = t("wordCard.copiedToClipboard");
+      if (Platform.OS === "android") {
+        ToastAndroid.show(message, ToastAndroid.SHORT);
+        return;
+      }
+      Alert.alert(message);
+    } catch {
+      Alert.alert("Clipboard module unavailable on this build.");
+    }
+  }, [displayHebrew, t]);
+
   const meaningsList = useMemo(() => {
     const normalizeForDisplay = (t: string) =>
       stripCantillation(stripNikud(t)).replace(/\//g, "").trim();
@@ -953,20 +977,25 @@ const WordAnalysisBottomSheetComponent = (
           <>
             {/* Header: Hebrew word + transliteration */}
             <View style={styles.headerSection}>
-              <Text style={[styles.hebrew, isQumranTab && styles.hebrewQumran]}>
-                {prefixSegments.prefixes.length > 0 && !isQumranTab ? (
-                  <>
-                    <Text style={{ color: colors.textSecondary }}>
-                      {prefixSegments.prefixes.join("")}
-                    </Text>
-                    <Text style={{ color: colors.textPrimary }}>
-                      {prefixSegments.root}
-                    </Text>
-                  </>
-                ) : (
-                  displayHebrew
-                )}
-              </Text>
+              <Pressable
+                onPress={handleCopyWord}
+                style={styles.headerWordPressable}
+              >
+                <Text style={[styles.hebrew, isQumranTab && styles.hebrewQumran]}>
+                  {prefixSegments.prefixes.length > 0 && !isQumranTab ? (
+                    <>
+                      <Text style={{ color: colors.textSecondary }}>
+                        {prefixSegments.prefixes.join("")}
+                      </Text>
+                      <Text style={{ color: colors.textPrimary }}>
+                        {prefixSegments.root}
+                      </Text>
+                    </>
+                  ) : (
+                    displayHebrew
+                  )}
+                </Text>
+              </Pressable>
               {wordTransliteration ? (
                 <Text style={styles.transliteration}>
                   {wordTransliteration}

@@ -3,6 +3,7 @@ import {
   Bug,
   FileText,
   Github,
+  Heart,
   Info,
   MessageCircle,
   Scale,
@@ -12,9 +13,15 @@ import { useTranslation, getSupportTelegramUrl } from "../hooks/useTranslation";
 
 interface HomeScreenProps {
   language: "en" | "es" | "he";
+  onFeaturesClick: () => void;
+  onDonateClick: () => void;
 }
 
-export function HomeScreen({ language }: HomeScreenProps) {
+export function HomeScreen({
+  language,
+  onFeaturesClick,
+  onDonateClick,
+}: HomeScreenProps) {
   const { t } = useTranslation(language);
   const sourceItems = [
     {
@@ -89,6 +96,43 @@ export function HomeScreen({ language }: HomeScreenProps) {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="flex items-center justify-center gap-3 pb-2">
+        <button
+          onClick={onFeaturesClick}
+          className="rounded-full px-4 py-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            background:
+              "linear-gradient(135deg, rgba(198,143,85,0.9), rgba(176,122,60,0.7))",
+            color: "#ffffff",
+            border: "1px solid rgba(198,143,85,0.65)",
+            boxShadow: "0 8px 20px rgba(13,39,80,0.16)",
+          }}
+          aria-label={t("navigation.openFeatures")}
+        >
+          <span className="text-[11px] tracking-[0.2em] uppercase">
+            {t("navigation.features")}
+          </span>
+        </button>
+
+        <button
+          onClick={onDonateClick}
+          className="flex items-center gap-2 rounded-full px-4 py-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            backgroundColor: "var(--accent-darker)",
+            color: "#faf4e6",
+            boxShadow: "4px 4px 10px var(--neomorph-shadow-dark)",
+          }}
+          aria-label={t("navigation.donate")}
+        >
+          <Heart className="w-3.5 h-3.5" />
+          <span className="text-[11px] tracking-[0.2em] uppercase">
+            {t("navigation.donate")}
+          </span>
+        </button>
       </div>
 
       <div className="min-h-[30vh] flex items-center justify-center">

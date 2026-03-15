@@ -1,7 +1,6 @@
 import { useMemo } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useRouter } from "expo-router";
 
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
@@ -67,7 +66,6 @@ export function SourcesScreen() {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const router = useRouter();
   const { t } = useTranslation();
 
   const sources = [
