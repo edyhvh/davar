@@ -19,6 +19,7 @@ from slowapi.middleware import SlowAPIMiddleware
 
 from app.config import settings
 from app.api.routes import books, verses, lexicon, prefixes, metadata, export
+from app.api.routes.metadata import _build_verse_counts
 from app.schemas.error import ErrorResponse
 from app.data_loaders import tanaj_loader, besorah_loader, book_mapper
 from app.services.books import BooksService
@@ -34,19 +35,6 @@ logger = logging.getLogger(__name__)
 # Initialize rate limiter
 limiter = Limiter(key_func=get_remote_address,
                   default_limits=[settings.rate_limit])
-
-
-def _build_verse_counts(chapter_counts: dict[str, list[int]]) -> dict[str, dict[str, int]]:
-    """Build verse counts map keyed by book/chapter."""
-    verse_counts: dict[str, dict[str, int]] = {}
-    for book_id, chapters in chapter_counts.items():
-        verse_counts[book_id] = {}
-        for chapter in chapters:
-            verses = tanaj_loader.get_verses(
-                book_id, chapter
-            ) or besorah_loader.get_verses(book_id, chapter)
-            verse_counts[book_id][str(chapter)] = len(verses)
-    return verse_counts
 
 
 async def _sync_ts2009_in_background(app: FastAPI):
