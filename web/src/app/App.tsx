@@ -1304,21 +1304,6 @@ export default function App() {
         </div>
       )}
 
-      {isServerWaking && currentScreen !== "connectionError" && (
-        <div className="mx-auto max-w-7xl px-6 pt-2">
-          <div
-            className="rounded-md px-3 py-2 text-sm"
-            style={{
-              backgroundColor: "var(--surface)",
-              color: "var(--text-secondary)",
-              border: "1px solid var(--border-color)",
-            }}
-          >
-            {t("common.serverWaking")}
-          </div>
-        </div>
-      )}
-
       <div className="px-6 pb-32 pt-6">
         <div className="max-w-7xl mx-auto">
           {currentScreen === "home" && (
@@ -1457,9 +1442,16 @@ export default function App() {
                     />
                   ) : (
                     <NeumorphCard>
-                      <p className="text-sm text-gray-500">
-                        {t("verse.selectBookPrompt")}
-                      </p>
+                      {isLoading || isServerWaking ? (
+                        <div className="space-y-3">
+                          <Skeleton className="mx-auto h-4 w-40" />
+                          <Skeleton className="mx-auto h-3 w-56" />
+                        </div>
+                      ) : (
+                        <p className="text-sm text-gray-500">
+                          {t("verse.selectBookPrompt")}
+                        </p>
+                      )}
                     </NeumorphCard>
                   )}
 
