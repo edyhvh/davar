@@ -5,7 +5,8 @@
     "loading": "טוען...",
     "appName": "דבר",
     "downloadOnAppStore": "הורד ב-App Store",
-    "getOnGooglePlay": "זמין ב-Google Play"
+    "getOnGooglePlay": "זמין ב-Google Play",
+    "serverWaking": "מאתחל שרת, הבקשה הראשונה עשויה להימשך רגע."
   },
   "navigation": {
     "goHome": "לדף הבית",
@@ -98,7 +99,15 @@
     "calendar": {
       "todayIs": "היום הוא",
       "dateLabel": "אביב 10",
-      "dayNames": ["א׳", "ב׳", "ג׳", "ד׳", "ה׳", "ו׳", "ש׳"],
+      "dayNames": [
+        "א׳",
+        "ב׳",
+        "ג׳",
+        "ד׳",
+        "ה׳",
+        "ו׳",
+        "ש׳"
+      ],
       "pesachLabel": "פסח",
       "pesachHebrew": "פֶּסַח"
     },

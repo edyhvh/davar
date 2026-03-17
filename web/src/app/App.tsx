@@ -1314,7 +1314,7 @@ export default function App() {
               border: "1px solid var(--border-color)",
             }}
           >
-            Waking server, first request may take a moment.
+            {t("common.serverWaking")}
           </div>
         </div>
       )}

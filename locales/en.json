@@ -5,7 +5,8 @@
     "loading": "Loading...",
     "appName": "Davar",
     "downloadOnAppStore": "Download on the App Store",
-    "getOnGooglePlay": "Get it on Google Play"
+    "getOnGooglePlay": "Get it on Google Play",
+    "serverWaking": "Waking server, first request may take a moment."
   },
   "navigation": {
     "goHome": "Go to home",
@@ -29,7 +30,7 @@
     "toggleFullChapter": "Toggle full chapter",
     "toggleSeferStyle": "Toggle sefer style",
     "swipeToNavigate": "Swipe to navigate",
-    "backToApp": "\u2190 Back to App",
+    "backToApp": "← Back to App",
     "search": "Search...",
     "searchBooks": "Search books...",
     "loadingBooks": "Loading books...",
@@ -98,7 +99,15 @@
     "calendar": {
       "todayIs": "Today is",
       "dateLabel": "Aviv 10",
-      "dayNames": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      "dayNames": [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
       "pesachLabel": "Pesach",
       "pesachHebrew": "פֶּסַח"
     },
@@ -247,8 +256,8 @@
   },
   "languages": {
     "en": "English",
-    "es": "Espa\u00f1ol",
-    "he": "\u05e2\u05d1\u05e8\u05d9\u05ea"
+    "es": "Español",
+    "he": "עברית"
   },
   "offline": {
     "dictionary": "Dictionary",
