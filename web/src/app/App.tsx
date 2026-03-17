@@ -187,11 +187,10 @@ export default function App() {
     "scrollNavHintCount",
     initialState.scrollNavHintCount,
   );
-  const [desktopScrollHintCount, setDesktopScrollHintCount] =
-    usePersistedState(
-      "desktopScrollHintCount",
-      initialState.desktopScrollHintCount,
-    );
+  const [desktopScrollHintCount, setDesktopScrollHintCount] = usePersistedState(
+    "desktopScrollHintCount",
+    initialState.desktopScrollHintCount,
+  );
 
   // Navigation state - also persisted but with special logic for per-book tracking
   const [currentBook, setCurrentBook] = useState(initialState.book);
@@ -1454,7 +1453,6 @@ export default function App() {
                       )}
                     </NeumorphCard>
                   )}
-
                 </div>
               </div>
 
