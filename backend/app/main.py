@@ -5,6 +5,8 @@ Hebrew Scripture API with authentication, caching, and DSS variants
 
 import logging
 import uuid
+import asyncio
+from time import perf_counter
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -20,6 +22,7 @@ from app.api.routes import books, verses, lexicon, prefixes, metadata, export
 from app.schemas.error import ErrorResponse
 from app.data_loaders import tanaj_loader, besorah_loader, book_mapper
 from app.services.books import BooksService
+from app.services.ts2009_sync import sync_ts2009_files
 
 # Configure logging
 logging.basicConfig(
@@ -33,38 +36,117 @@ limiter = Limiter(key_func=get_remote_address,
                   default_limits=[settings.rate_limit])
 
 
+def _build_verse_counts(chapter_counts: dict[str, list[int]]) -> dict[str, dict[str, int]]:
+    """Build verse counts map keyed by book/chapter."""
+    verse_counts: dict[str, dict[str, int]] = {}
+    for book_id, chapters in chapter_counts.items():
+        verse_counts[book_id] = {}
+        for chapter in chapters:
+            verses = tanaj_loader.get_verses(
+                book_id, chapter
+            ) or besorah_loader.get_verses(book_id, chapter)
+            verse_counts[book_id][str(chapter)] = len(verses)
+    return verse_counts
+
+
+async def _sync_ts2009_in_background(app: FastAPI):
+    """Run TS2009 sync without blocking API startup."""
+    try:
+        result = await asyncio.to_thread(sync_ts2009_files, logger)
+        app.state.ts2009_sync = {
+            "status": "ready",
+            "listed": result.listed,
+            "downloaded": result.downloaded,
+            "skipped": result.skipped,
+        }
+        logger.info(
+            "TS2009 background sync finished: listed=%s downloaded=%s skipped=%s",
+            result.listed,
+            result.downloaded,
+            result.skipped,
+        )
+    except Exception as exc:
+        app.state.ts2009_sync = {
+            "status": "failed",
+            "error": str(exc),
+        }
+        logger.error("TS2009 background sync failed: %s", exc, exc_info=True)
+
+
+async def _preload_verse_counts_in_background(app: FastAPI):
+    """Precompute verse counts after startup to reduce cold-start blocking."""
+    metadata = getattr(app.state, "preload_metadata", None) or {}
+    chapter_counts = metadata.get("chapter_counts")
+    if not isinstance(chapter_counts, dict):
+        app.state.metadata_preload_status = "failed"
+        return
+
+    try:
+        verse_counts = await asyncio.to_thread(_build_verse_counts, chapter_counts)
+        metadata["verse_counts"] = verse_counts
+        app.state.preload_metadata = metadata
+        app.state.metadata_preload_status = "ready"
+        logger.info("Finished background preload of verse counts")
+    except Exception as exc:
+        app.state.metadata_preload_status = "failed"
+        logger.error("Background verse-count preload failed: %s", exc, exc_info=True)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Preload lightweight metadata at startup."""
+    startup_started_at = perf_counter()
+
+    app.state.ts2009_sync = {"status": "disabled"}
+    app.state.ts2009_sync_task = None
+    app.state.metadata_preload_status = "running"
+    app.state.metadata_preload_task = None
+
+    if settings.supabase_url and settings.supabase_service_key:
+        app.state.ts2009_sync = {"status": "running"}
+        app.state.ts2009_sync_task = asyncio.create_task(
+            _sync_ts2009_in_background(app)
+        )
+        logger.info("Started TS2009 sync in background")
+
     books_service = BooksService(tanaj_loader, besorah_loader, book_mapper)
     try:
         books_list = books_service.get_all_books()
         books_payload = [book.model_dump() for book in books_list]
         chapter_counts: dict[str, list[int]] = {}
-        verse_counts: dict[str, dict[str, int]] = {}
 
         for book in books_list:
             book_id = book.id
             chapters = tanaj_loader.get_chapters(
                 book_id) or besorah_loader.get_chapters(book_id)
             chapter_counts[book_id] = chapters
-            verse_counts[book_id] = {}
-            for chapter in chapters:
-                verses = tanaj_loader.get_verses(
-                    book_id, chapter) or besorah_loader.get_verses(book_id, chapter)
-                verse_counts[book_id][str(chapter)] = len(verses)
 
         app.state.preload_metadata = {
             "books": books_payload,
             "chapter_counts": chapter_counts,
-            "verse_counts": verse_counts
+            "verse_counts": None,
         }
+        app.state.metadata_preload_task = asyncio.create_task(
+            _preload_verse_counts_in_background(app)
+        )
         logger.info("Preloaded metadata for %s books", len(books_payload))
     except Exception as exc:
         logger.error("Failed to preload metadata: %s", exc, exc_info=True)
         app.state.preload_metadata = None
+        app.state.metadata_preload_status = "failed"
+
+    startup_elapsed_ms = (perf_counter() - startup_started_at) * 1000
+    logger.info("Startup preload completed in %.2fms", startup_elapsed_ms)
 
     yield
+
+    sync_task = getattr(app.state, "ts2009_sync_task", None)
+    if sync_task and not sync_task.done():
+        sync_task.cancel()
+
+    metadata_task = getattr(app.state, "metadata_preload_task", None)
+    if metadata_task and not metadata_task.done():
+        metadata_task.cancel()
 
 
 # Create FastAPI app
@@ -205,7 +287,11 @@ async def general_exception_handler(request: Request, exc: Exception):
 @app.get("/health")
 async def health_check():
     """Health check endpoint"""
-    return {"status": "healthy", "version": "1.0.0"}
+    return {
+        "status": "healthy",
+        "version": "1.0.0",
+        "ts2009_sync": getattr(app.state, "ts2009_sync", {"status": "unknown"}),
+    }
 
 
 @app.get("/")

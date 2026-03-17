@@ -30,6 +30,7 @@ import {
   type VerseResponse,
   type WordResponse,
 } from "./services/verseService";
+import { warmUpApiConnection } from "./services/apiClient";
 import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
 import { stripCantillation, stripMeteg } from "./utils/hebrew";
 import {
@@ -228,6 +229,7 @@ export default function App() {
   const [chapterCount, setChapterCount] = useState(1);
   const [verseCount, setVerseCount] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
+  const [isServerWaking, setIsServerWaking] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [selectedWordAnalysis, setSelectedWordAnalysis] =
     useState<WordAnalysis | null>(null);
@@ -590,7 +592,11 @@ export default function App() {
   useEffect(() => {
     let isMounted = true;
     const loadBooks = async () => {
+      setIsServerWaking(true);
       try {
+        await warmUpApiConnection({ timeoutMs: 3500 });
+        if (!isMounted) return;
+
         const response = await getBooks();
         if (!isMounted) return;
         setBooks(response);
@@ -611,6 +617,10 @@ export default function App() {
           setCurrentScreen("connectionError");
         } else {
           setErrorMessage(t("errors.loadBooks"));
+        }
+      } finally {
+        if (isMounted) {
+          setIsServerWaking(false);
         }
       }
     };
@@ -1291,6 +1301,21 @@ export default function App() {
           }}
         >
           {besorahDisclaimerText}
+        </div>
+      )}
+
+      {isServerWaking && currentScreen !== "connectionError" && (
+        <div className="mx-auto max-w-7xl px-6 pt-2">
+          <div
+            className="rounded-md px-3 py-2 text-sm"
+            style={{
+              backgroundColor: "var(--surface)",
+              color: "var(--text-secondary)",
+              border: "1px solid var(--border-color)",
+            }}
+          >
+            Waking server, first request may take a moment.
+          </div>
         </div>
       )}
 
