@@ -1380,12 +1380,29 @@ export default function App() {
             <div className="grid gap-6 items-start md:grid-cols-[7fr_3fr]">
               <div
                 ref={versePanelRef}
-                className={`min-h-[70vh] ${showFullChapter ? "" : "flex items-center justify-center"} w-full max-w-3xl md:max-w-4xl justify-self-center verse-panel-shell ${
+                className={`min-h-[70vh] ${
+                  showFullChapter
+                    ? ""
+                    : isMobile
+                      ? "flex items-start pt-3"
+                      : "flex items-center justify-center"
+                } w-full max-w-3xl md:max-w-4xl justify-self-center verse-panel-shell ${
                   isSplitView
                     ? "verse-panel-split md:col-span-1"
                     : "verse-panel-centered md:col-span-2"
                 } ${scrollJumpActive ? "verse-panel-jump" : ""}`}
-                style={showFullChapter ? undefined : { height: "70vh" }}
+                style={
+                  showFullChapter
+                    ? undefined
+                    : isMobile
+                      ? {
+                          minHeight: "calc(100dvh - 140px)",
+                          maxHeight: "calc(100dvh - 140px)",
+                          overflowY: "auto",
+                          WebkitOverflowScrolling: "touch",
+                        }
+                      : { height: "70vh" }
+                }
               >
                 <div className="verse-panel-inner relative">
                   {currentVerseData ? (
