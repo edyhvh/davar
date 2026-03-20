@@ -1225,6 +1225,7 @@ export default function App() {
       className="min-h-screen"
       style={{
         backgroundColor: "var(--background)",
+        minHeight: isMobile ? "100dvh" : undefined,
         height: isScrollNavigationActive ? "100vh" : undefined,
         overflow: isScrollNavigationActive ? "hidden" : undefined,
       }}
@@ -1303,7 +1304,7 @@ export default function App() {
         </div>
       )}
 
-      <div className="px-6 pb-32 pt-6">
+      <div className="px-6 pb-10 md:pb-32 pt-6">
         <div className="max-w-7xl mx-auto">
           {currentScreen === "home" && (
             <HomeScreen
@@ -1395,12 +1396,7 @@ export default function App() {
                   showFullChapter
                     ? undefined
                     : isMobile
-                      ? {
-                          minHeight: "calc(100dvh - 140px)",
-                          maxHeight: "calc(100dvh - 140px)",
-                          overflowY: "auto",
-                          WebkitOverflowScrolling: "touch",
-                        }
+                      ? undefined
                       : { height: "70vh" }
                 }
               >
