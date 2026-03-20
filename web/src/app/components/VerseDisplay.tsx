@@ -273,11 +273,7 @@ export function VerseDisplay({
 
       {/* Translation - Only show if not Hebrew Only mode */}
       {!hebrewOnly && (
-        <SwipeIndicator
-          onSwipeUp={onSwipeUp}
-          onSwipeDown={onSwipeDown}
-          label={t("navigation.swipeToNavigate")}
-        >
+        <SwipeIndicator>
           <div
             className="text-center leading-relaxed px-4 transition-all duration-500 text-[var(--text-primary)]"
             style={{
