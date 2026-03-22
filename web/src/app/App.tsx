@@ -1455,9 +1455,11 @@ export default function App() {
                   ) : (
                     <NeumorphCard>
                       {isLoading || isServerWaking ? (
-                        <div className="space-y-3">
-                          <Skeleton className="mx-auto h-4 w-40" />
-                          <Skeleton className="mx-auto h-3 w-56" />
+                        <div className="mx-auto w-fit space-y-3">
+                          <Skeleton className="h-4 w-40" />
+                          <Skeleton className="h-3 w-56" />
+                          <Skeleton className="h-4 w-48" />
+                          <Skeleton className="h-3 w-44" />
                         </div>
                       ) : (
                         <p className="text-sm text-gray-500">
