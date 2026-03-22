@@ -105,7 +105,7 @@ The backend is designed for JSON-first deployment with private TS2009 content st
 
 ### TS2009 Private Content
 
-TS2009 English translations are licensed/private and not committed to GitHub. They are stored in a private Supabase Storage bucket and synced to the runtime data directory at startup.
+TS2009 English translations are licensed/private and not committed to GitHub. They are stored in a private Supabase Storage bucket and synced to the runtime data directory in a background task after API startup.
 
 - Storage bucket: `ts2009`
 - Sync script: `scripts/sync_ts2009.py`
@@ -115,9 +115,14 @@ TS2009 English translations are licensed/private and not committed to GitHub. Th
 
 1. Create a Render web service from this GitHub repository.
 2. Set build command: (none, or pip install if needed)
-3. Set start command: `python scripts/sync_ts2009.py && uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+3. Set start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 4. Configure environment variables from `.env.example`.
 5. Set Render branch to `main`.
+
+Notes:
+- The API starts first and TS2009 files sync in the background, reducing cold-start blocking.
+- If TS2009 is not ready yet, English translation fields may be temporarily unavailable for the first requests.
+- To force a manual full sync, run: `python scripts/sync_ts2009.py`.
 
 ### Branch Strategy
 

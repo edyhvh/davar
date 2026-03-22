@@ -5,15 +5,16 @@
     "loading": "Cargando...",
     "appName": "Davar",
     "downloadOnAppStore": "Descargar en el App Store",
-    "getOnGooglePlay": "Disponible en Google Play"
+    "getOnGooglePlay": "Disponible en Google Play",
+    "serverWaking": "Iniciando servidor, la primera solicitud puede tardar un momento."
   },
   "navigation": {
     "goHome": "Ir al inicio",
     "selectBook": "Libro",
-    "selectChapter": "Cap\u00edtulo",
-    "selectVerse": "Vers\u00edculo",
-    "previousVerse": "Vers\u00edculo anterior",
-    "nextVerse": "Siguiente vers\u00edculo",
+    "selectChapter": "Capítulo",
+    "selectVerse": "Versículo",
+    "previousVerse": "Versículo anterior",
+    "nextVerse": "Siguiente versículo",
     "openFeatures": "Abrir funciones",
     "features": "Funciones",
     "donate": "Donar",
@@ -22,30 +23,30 @@
     "verseShort": "VER",
     "languageLabel": "Idioma",
     "toggleDarkTheme": "Alternar modo oscuro",
-    "toggleQumran": "Alternar variantes de Qumr\u00e1n",
+    "toggleQumran": "Alternar variantes de Qumrán",
     "toggleHebrewOnly": "Alternar solo hebreo",
     "toggleNikud": "Alternar nikud",
-    "toggleCantillation": "Alternar cantilaci\u00f3n",
-    "toggleFullChapter": "Alternar cap\u00edtulo completo",
+    "toggleCantillation": "Alternar cantilación",
+    "toggleFullChapter": "Alternar capítulo completo",
     "toggleSeferStyle": "Alternar estilo sefer",
     "swipeToNavigate": "Desliza para navegar",
-    "backToApp": "\u2190 Volver a la app",
+    "backToApp": "← Volver a la app",
     "search": "Buscar...",
     "searchBooks": "Buscar libros...",
     "loadingBooks": "Cargando libros...",
     "noBooksFound": "No se encontraron libros",
     "noResults": "No se encontraron resultados",
-    "noChapters": "No hay cap\u00edtulos disponibles",
-    "noVerses": "No hay vers\u00edculos disponibles",
+    "noChapters": "No hay capítulos disponibles",
+    "noVerses": "No hay versículos disponibles",
     "book": "Libro",
-    "verse": "Vers\u00edculo",
+    "verse": "Versículo",
     "modal": "Modal"
   },
   "settings": {
     "title": "Ajustes",
     "sections": {
       "general": "General",
-      "offline": "Sin conexi\u00f3n"
+      "offline": "Sin conexión"
     },
     "theme": {
       "title": "Tema",
@@ -55,16 +56,16 @@
       "title": "Idioma"
     },
     "qumran": {
-      "title": "Variantes de Qumr\u00e1n",
+      "title": "Variantes de Qumrán",
       "subtitle": "Mostrar texto de los Rollos del Mar Muerto"
     },
     "fullChapter": {
-      "title": "Cap\u00edtulo completo",
-      "subtitle": "Mostrar texto completo del cap\u00edtulo"
+      "title": "Capítulo completo",
+      "subtitle": "Mostrar texto completo del capítulo"
     },
     "seferStyle": {
       "title": "Estilo de libro",
-      "subtitle": "Dise\u00f1o continuo de rollo hebreo",
+      "subtitle": "Diseño continuo de rollo hebreo",
       "warningTitle": "Sefer requiere Solo hebreo",
       "warningMessage": "Activa Solo hebreo para usar el estilo Sefer."
     },
@@ -73,49 +74,57 @@
       "subtitle": "Mostrar texto solo en hebreo"
     },
     "cantillation": {
-      "title": "Cantilaci\u00f3n",
-      "subtitle": "Mostrar marcas de cantilaci\u00f3n"
+      "title": "Cantilación",
+      "subtitle": "Mostrar marcas de cantilación"
     },
     "nikud": {
       "title": "Nikud",
-      "subtitle": "Mostrar signos voc\u00e1licos"
+      "subtitle": "Mostrar signos vocálicos"
     },
     "clearStorage": {
       "title": "Borrar almacenamiento",
       "subtitle": "Restablecer ajustes y datos",
       "alertTitle": "Borrar almacenamiento",
-      "alertMessage": "Esto restablecer\u00e1 todos los ajustes y datos. La app se recargar\u00e1.",
+      "alertMessage": "Esto restablecerá todos los ajustes y datos. La app se recargará.",
       "cancel": "Cancelar",
       "confirm": "Borrar"
     },
-    "designSystemTitle": "Sistema de dise\u00f1o",
-    "designSystemDescription": "Ver componentes de dise\u00f1o",
-    "mobileDesignGuideTitle": "Gu\u00eda de dise\u00f1o m\u00f3vil",
-    "mobileDesignGuideDescription": "Ver componentes de dise\u00f1o m\u00f3vil"
+    "designSystemTitle": "Sistema de diseño",
+    "designSystemDescription": "Ver componentes de diseño",
+    "mobileDesignGuideTitle": "Guía de diseño móvil",
+    "mobileDesignGuideDescription": "Ver componentes de diseño móvil"
   },
   "home": {
     "todayIs": "Hoy es",
     "calendar": {
       "todayIs": "Hoy es",
       "dateLabel": "Aviv 10",
-      "dayNames": ["Dom", "Lun", "Mar", "Mi\u00e9", "Jue", "Vie", "S\u00e1b"],
-      "pesachLabel": "P\u00e9saj",
+      "dayNames": [
+        "Dom",
+        "Lun",
+        "Mar",
+        "Mié",
+        "Jue",
+        "Vie",
+        "Sáb"
+      ],
+      "pesachLabel": "Pésaj",
       "pesachHebrew": "פֶּסַח"
     },
     "download": {
-      "title": "Descargar sin conexi\u00f3n",
+      "title": "Descargar sin conexión",
       "downloading": "Descargando {stage} ({current}/{total})...",
-      "idle": "Toca para descargar todos los datos para uso sin conexi\u00f3n",
+      "idle": "Toca para descargar todos los datos para uso sin conexión",
       "ready": "Todos los datos descargados",
-      "updateAvailable": "Actualizaci\u00f3n disponible",
-      "delete": "Eliminar datos sin conexi\u00f3n",
-      "deleteConfirmTitle": "Eliminar datos sin conexi\u00f3n",
-      "deleteConfirmMessage": "Esto eliminar\u00e1 todos los datos descargados. Necesitar\u00e1s internet para usar la app.",
+      "updateAvailable": "Actualización disponible",
+      "delete": "Eliminar datos sin conexión",
+      "deleteConfirmTitle": "Eliminar datos sin conexión",
+      "deleteConfirmMessage": "Esto eliminará todos los datos descargados. Necesitarás internet para usar la app.",
       "deleteConfirmCancel": "Cancelar",
       "deleteConfirmOk": "Eliminar",
       "stages": {
         "hebrew": "Texto hebreo",
-        "translation": "Traducci\u00f3n",
+        "translation": "Traducción",
         "dictionary": "Diccionario",
         "dss": "Rollos del Mar Muerto"
       }
@@ -127,21 +136,21 @@
     "sourcesTitle": "Fuentes",
     "sources": {
       "hebrewTextLabel": "Texto hebreo",
-      "hebrewTextValue": "Masor\u00e9tico y Qumr\u00e1n",
+      "hebrewTextValue": "Masorético y Qumrán",
       "dictionaryLabel": "Diccionario",
       "dictionaryValue": "Strong, BDB, personalizado",
       "dictionaryNote": " (palabras seleccionadas)",
-      "englishTranslationLabel": "Traducci\u00f3n al ingl\u00e9s",
+      "englishTranslationLabel": "Traducción al inglés",
       "englishTranslationValue": "TS2009",
-      "spanishTranslationLabel": "Traducci\u00f3n al espa\u00f1ol",
+      "spanishTranslationLabel": "Traducción al español",
       "spanishTranslationValue": "TTH (principal), BES (alternativo)",
       "besorahLabel": "Besorah",
-      "besorahValue": "Traducci\u00f3n de Delitzsch"
+      "besorahValue": "Traducción de Delitzsch"
     },
     "aboutTitle": "Acerca de",
     "aboutItems": {
       "legal": "Legal",
-      "terms": "T\u00e9rminos",
+      "terms": "Términos",
       "privacy": "Privacidad",
       "support": "Soporte",
       "bug": "Bug",
@@ -152,7 +161,7 @@
       "title": "Acerca de",
       "items": {
         "legal": "Legal",
-        "terms": "T\u00e9rminos",
+        "terms": "Términos",
         "privacy": "Privacidad",
         "support": "Soporte",
         "bug": "Bug",
@@ -181,40 +190,40 @@
       "septuagint",
       "greek εὐαγγέλιον"
     ],
-    "openSourceNote": "este es un proyecto de c\u00f3digo abierto, contribuye y colabora con tus habilidades o ideas",
+    "openSourceNote": "este es un proyecto de código abierto, contribuye y colabora con tus habilidades o ideas",
     "repositoryLabel": "davar"
   },
   "errors": {
-    "uiFallbackTitle": "Algo sali\u00f3 mal",
-    "uiFallbackMessage": "Por favor, actualiza la p\u00e1gina o int\u00e9ntalo m\u00e1s tarde.",
-    "uiFallbackMessageMobile": "Por favor, reinicia la aplicaci\u00f3n.",
+    "uiFallbackTitle": "Algo salió mal",
+    "uiFallbackMessage": "Por favor, actualiza la página o inténtalo más tarde.",
+    "uiFallbackMessageMobile": "Por favor, reinicia la aplicación.",
     "loadBooks": "No se pudieron cargar los libros.",
-    "loadVerses": "No se pudieron cargar los vers\u00edculos.",
+    "loadVerses": "No se pudieron cargar los versículos.",
     "notFound": {
-      "title": "P\u00e1gina No Encontrada",
-      "message": "La p\u00e1gina que buscas no existe.",
+      "title": "Página No Encontrada",
+      "message": "La página que buscas no existe.",
       "goHome": "Ir al Inicio",
-      "goToVerse": "Ir al Vers\u00edculo"
+      "goToVerse": "Ir al Versículo"
     },
     "connection": {
-      "title": "Error de Conexi\u00f3n",
-      "message": "No se puede conectar al servidor. Por favor, verifica tu conexi\u00f3n a internet.",
+      "title": "Error de Conexión",
+      "message": "No se puede conectar al servidor. Por favor, verifica tu conexión a internet.",
       "retry": "Intentar de Nuevo",
       "goHome": "Ir al Inicio",
-      "goToVerse": "Ir al Vers\u00edculo"
+      "goToVerse": "Ir al Versículo"
     }
   },
   "verse": {
-    "previousSnippet": "Vers\u00edculo anterior...",
-    "nextSnippet": "Siguiente vers\u00edculo...",
+    "previousSnippet": "Versículo anterior...",
+    "nextSnippet": "Siguiente versículo...",
     "previousVerse": "Versículo anterior",
     "nextVerse": "Versículo siguiente",
-    "scrollNextHint": "Desliza hacia arriba para el siguiente vers\u00edculo",
-    "scrollPreviousHint": "Desliza hacia abajo para el vers\u00edculo anterior",
+    "scrollNextHint": "Desliza hacia arriba para el siguiente versículo",
+    "scrollPreviousHint": "Desliza hacia abajo para el versículo anterior",
     "selectBookPrompt": "Selecciona un libro para comenzar.",
-    "loading": "Cargando vers\u00edculos...",
+    "loading": "Cargando versículos...",
     "prefixLabel": "Prefijo: {prefix}",
-    "missingSpanishTranslation": "Por el momento no contamos con traducci\u00f3n al espa\u00f1ol de este texto, estamos trabajando en ello...",
+    "missingSpanishTranslation": "Por el momento no contamos con traducción al español de este texto, estamos trabajando en ello...",
     "besorahDisclaimer": {
       "short": "Solo referencia: el mapeo Strong de la Besorah puede tener entradas no revisadas o faltantes.",
       "modalTitle": "Aviso de mapeo de Besorah",
@@ -224,48 +233,48 @@
   },
   "wordCard": {
     "selectWord": "Selecciona una palabra",
-    "selectWordPrompt": "Selecciona una palabra para ver su an\u00e1lisis",
+    "selectWordPrompt": "Selecciona una palabra para ver su análisis",
     "close": "Cerrar significado",
     "meanings": "Significados",
-    "masoretic": "Masor\u00e9tico",
-    "qumran": "Qumr\u00e1n",
+    "masoretic": "Masorético",
+    "qumran": "Qumrán",
     "instances": "Instancias",
-    "root": "Ra\u00edz",
+    "root": "Raíz",
     "commentary": "Comentario",
-    "preposition": "Preposici\u00f3n",
+    "preposition": "Preposición",
     "tapToNavigate": "Toca para navegar",
-    "noMeanings": "A\u00fan no hay significados.",
-    "noInstances": "A\u00fan no hay instancias.",
+    "noMeanings": "Aún no hay significados.",
+    "noInstances": "Aún no hay instancias.",
     "loadingDefinitions": "Cargando definiciones...",
-    "alreadyRoot": "YA ES RA\u00cdZ",
+    "alreadyRoot": "YA ES RAÍZ",
     "appearsCount": "Aparece {count} veces",
     "appearsIn": "Aparece en",
-    "showMore": "Mostrar {count} m\u00e1s",
+    "showMore": "Mostrar {count} más",
     "properName": "Nombre propio",
     "definitionNotAvailable": "Definición no disponible",
     "copiedToClipboard": "Copiado al portapapeles"
   },
   "languages": {
-    "en": "Ingl\u00e9s",
-    "es": "Espa\u00f1ol",
+    "en": "Inglés",
+    "es": "Español",
     "he": "Hebreo"
   },
   "offline": {
     "dictionary": "Diccionario",
-    "englishTranslation": "Traducci\u00f3n al ingl\u00e9s",
-    "spanishTranslation": "Traducci\u00f3n al espa\u00f1ol",
+    "englishTranslation": "Traducción al inglés",
+    "spanishTranslation": "Traducción al español",
     "downloaded": "Descargado",
     "notDownloaded": "No descargado"
   },
   "search": {
     "title": "Buscar",
-    "subtitle": "Navega a cualquier libro, cap\u00edtulo y vers\u00edculo",
-    "tapPrompt": "Toca para seleccionar un libro, cap\u00edtulo y vers\u00edculo",
-    "goToVerse": "Ir al vers\u00edculo"
+    "subtitle": "Navega a cualquier libro, capítulo y versículo",
+    "tapPrompt": "Toca para seleccionar un libro, capítulo y versículo",
+    "goToVerse": "Ir al versículo"
   },
   "bookmarks": {
     "title": "Marcadores",
-    "emptyState": "Guarda vers\u00edculos para revisarlos aqu\u00ed."
+    "emptyState": "Guarda versículos para revisarlos aquí."
   },
   "feedback": {
     "telegramReminder": "Para comentarios y sugerencias, únete a nuestro grupo de Telegram:",
@@ -273,7 +282,7 @@
   },
   "tabs": {
     "home": "Inicio",
-    "verse": "Vers\u00edculo",
+    "verse": "Versículo",
     "settings": "Ajustes"
   }
 }

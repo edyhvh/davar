@@ -3,7 +3,7 @@
 This guide explains how to deploy the Davar web frontend to Cloudflare Pages on the free tier, using:
 
 - Custom domain from day one
-- Direct backend calls to Render production API
+- Cloudflare Pages API proxy for same-origin calls and edge caching
 - Render as backend origin
 
 ---
@@ -13,14 +13,15 @@ This guide explains how to deploy the Davar web frontend to Cloudflare Pages on 
 Flow:
 
 1. Browser loads frontend from your custom domain on Cloudflare Pages
-2. Frontend requests `https://davar.onrender.com/api/...`
-3. Render responds directly to the browser
+2. Frontend requests `/api/...` on the same origin
+3. Cloudflare Pages Function proxies to Render origin
+4. Cloudflare edge caches cacheable read endpoints
 
-Why this is simpler:
+Why this is better for cold-start impact:
 
-- Matches the existing backend production model
-- No Worker route setup required
-- Fewer moving parts for launch
+- Same-origin API requests (no browser CORS friction)
+- Edge cache serves repeated read traffic while origin is sleeping
+- Reduces user-visible impact of Render wake latency
 
 Free tier support:
 
@@ -65,16 +66,18 @@ If you only see DNS/SSL/Security, you are in the Zone dashboard, not the Pages d
 In your Pages project settings, add production environment variables:
 
 ```bash
-PUBLIC_API_BASE_URL=https://davar.onrender.com
+PUBLIC_API_BASE_URL=/api
 PUBLIC_API_KEY=your_api_key_value
 PUBLIC_NODE_ENV=production
+BACKEND_API_ORIGIN=https://davar.onrender.com
 ```
 
 Notes:
 
-- `PUBLIC_API_BASE_URL=https://davar.onrender.com` sends frontend API traffic directly to Render.
+- `PUBLIC_API_BASE_URL=/api` sends frontend API traffic through Cloudflare Pages Function.
 - Keep API key value aligned with backend expected key.
 - These values are applied at build time.
+- `BACKEND_API_ORIGIN` is used by the Pages Function at runtime.
 
 ---
 
@@ -88,11 +91,17 @@ Once active, use this exact HTTPS origin in backend CORS.
 
 ---
 
-## 6. Optional: Add API Proxy Later
+## 6. API Proxy (Implemented)
 
-For now, you can skip Workers Routes entirely.
+Pages Function route:
 
-If you later want same-origin API requests (`/api/*`) for security or observability reasons, add a Worker proxy as a second phase. This is optional and not required for production launch.
+- `web/functions/api/[[path]].ts`
+
+Behavior:
+
+- Proxies `/api/*` requests to `BACKEND_API_ORIGIN`
+- Caches selected GET/HEAD endpoints at the edge
+- Adds `X-Davar-Edge-Cache: HIT|MISS` for observability
 
 ---
 
@@ -112,7 +121,7 @@ DAVAR_ALLOWED_ORIGINS=["http://localhost:3002","http://localhost:3003","http://l
 
 Then redeploy backend.
 
-Because frontend is calling Render directly, this exact origin allowlist is required.
+Because frontend is now same-origin to Pages, Render only needs to allow the Pages/Custom-domain origin and local dev origins.
 
 ---
 
@@ -154,11 +163,12 @@ bunx wrangler pages dev dist
 
 1. Pages deployment is healthy in **Workers & Pages**
 2. Custom domain is active and serving frontend
-3. Browser API calls go to `https://davar.onrender.com/api/...`
+3. Browser API calls go to `/api/...` on your Pages domain
 4. API responses are `200`
 5. No CORS errors in browser console
 6. No CSP connect-src errors in browser console
 7. Direct navigation to deep routes still loads app (SPA fallback)
+8. Response headers include `X-Davar-Edge-Cache` for cacheable reads
 
 ---
 
@@ -181,13 +191,14 @@ bunx wrangler pages dev dist
 
 ### API calls bypass proxy
 
-1. This is expected in direct mode because no proxy is configured
-2. If you want direct mode, keep `PUBLIC_API_BASE_URL=https://davar.onrender.com`
-3. If you want proxy mode later, switch base URL to `/api` and add Worker route
+1. Confirm `PUBLIC_API_BASE_URL=/api` in Pages environment variables
+2. Confirm Pages Function exists at `web/functions/api/[[path]].ts`
+3. Rebuild/redeploy Pages after env changes
 
 ### API calls fail or go to wrong host
 
-1. Confirm `PUBLIC_API_BASE_URL=https://davar.onrender.com` in Pages environment variables
+1. Confirm `PUBLIC_API_BASE_URL=/api` in Pages environment variables
+2. Confirm `BACKEND_API_ORIGIN=https://davar.onrender.com` in Pages environment variables
 2. Rebuild/redeploy Pages after variable changes
 3. Check network tab request URL host
 

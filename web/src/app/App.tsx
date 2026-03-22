@@ -30,6 +30,7 @@ import {
   type VerseResponse,
   type WordResponse,
 } from "./services/verseService";
+import { warmUpApiConnection } from "./services/apiClient";
 import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
 import { stripCantillation, stripMeteg } from "./utils/hebrew";
 import {
@@ -186,11 +187,10 @@ export default function App() {
     "scrollNavHintCount",
     initialState.scrollNavHintCount,
   );
-  const [desktopScrollHintCount, setDesktopScrollHintCount] =
-    usePersistedState(
-      "desktopScrollHintCount",
-      initialState.desktopScrollHintCount,
-    );
+  const [desktopScrollHintCount, setDesktopScrollHintCount] = usePersistedState(
+    "desktopScrollHintCount",
+    initialState.desktopScrollHintCount,
+  );
 
   // Navigation state - also persisted but with special logic for per-book tracking
   const [currentBook, setCurrentBook] = useState(initialState.book);
@@ -228,6 +228,7 @@ export default function App() {
   const [chapterCount, setChapterCount] = useState(1);
   const [verseCount, setVerseCount] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
+  const [isServerWaking, setIsServerWaking] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [selectedWordAnalysis, setSelectedWordAnalysis] =
     useState<WordAnalysis | null>(null);
@@ -363,15 +364,25 @@ export default function App() {
       return t("common.appName");
     }
 
+    const hebrewBookName = getHebrewBookName(currentBook);
+    const chapterVerse = `${currentChapter}:${currentVerse}`;
+
     if (language === "he") {
-      return `${getHebrewBookName(currentBook)} ${currentChapter}`;
+      return `${hebrewBookName} ${chapterVerse} ${hebrewBookName}`;
     }
 
     const displayBookName = getDisplayBookName(currentBook);
-    const hebrewBookName = getHebrewBookName(currentBook);
 
-    return `${displayBookName} ${hebrewBookName} ${currentChapter}`;
-  }, [currentBook, currentChapter, currentScreen, language, books, t]);
+    return `${displayBookName} ${chapterVerse} ${hebrewBookName}`;
+  }, [
+    currentBook,
+    currentChapter,
+    currentVerse,
+    currentScreen,
+    language,
+    books,
+    t,
+  ]);
 
   useDocumentTitle(tabTitle);
 
@@ -526,6 +537,28 @@ export default function App() {
     [chapterVerses, currentVerse],
   );
 
+  const highlightedWord = useMemo(() => {
+    const candidate = selectedWord ?? lastSelectedWord;
+    if (!candidate || !currentVerseData) return null;
+
+    if (candidate.strong) {
+      const byStrong = currentVerseData.words.find(
+        (word) => word.strong === candidate.strong,
+      );
+      if (byStrong) return byStrong;
+    }
+
+    const byPosition = currentVerseData.words.find(
+      (word) => word.position === candidate.position,
+    );
+
+    if (byPosition && byPosition.text === candidate.text) {
+      return byPosition;
+    }
+
+    return null;
+  }, [currentVerseData, selectedWord, lastSelectedWord]);
+
   const selectedDssVariant = useMemo(
     () =>
       currentVerseData?.dss?.find(
@@ -558,7 +591,11 @@ export default function App() {
   useEffect(() => {
     let isMounted = true;
     const loadBooks = async () => {
+      setIsServerWaking(true);
       try {
+        await warmUpApiConnection({ timeoutMs: 3500 });
+        if (!isMounted) return;
+
         const response = await getBooks();
         if (!isMounted) return;
         setBooks(response);
@@ -579,6 +616,10 @@ export default function App() {
           setCurrentScreen("connectionError");
         } else {
           setErrorMessage(t("errors.loadBooks"));
+        }
+      } finally {
+        if (isMounted) {
+          setIsServerWaking(false);
         }
       }
     };
@@ -1184,6 +1225,7 @@ export default function App() {
       className="min-h-screen"
       style={{
         backgroundColor: "var(--background)",
+        minHeight: isMobile ? "100dvh" : undefined,
         height: isScrollNavigationActive ? "100vh" : undefined,
         overflow: isScrollNavigationActive ? "hidden" : undefined,
       }}
@@ -1262,7 +1304,7 @@ export default function App() {
         </div>
       )}
 
-      <div className="px-6 pb-32 pt-6">
+      <div className="px-6 pb-10 md:pb-32 pt-6">
         <div className="max-w-7xl mx-auto">
           {currentScreen === "home" && (
             <HomeScreen
@@ -1339,12 +1381,24 @@ export default function App() {
             <div className="grid gap-6 items-start md:grid-cols-[7fr_3fr]">
               <div
                 ref={versePanelRef}
-                className={`min-h-[70vh] ${showFullChapter ? "" : "flex items-center justify-center"} w-full max-w-3xl md:max-w-4xl justify-self-center verse-panel-shell ${
+                className={`min-h-[70vh] ${
+                  showFullChapter
+                    ? ""
+                    : isMobile
+                      ? "flex items-start pt-3"
+                      : "flex items-center justify-center"
+                } w-full max-w-3xl md:max-w-4xl justify-self-center verse-panel-shell ${
                   isSplitView
                     ? "verse-panel-split md:col-span-1"
                     : "verse-panel-centered md:col-span-2"
                 } ${scrollJumpActive ? "verse-panel-jump" : ""}`}
-                style={showFullChapter ? undefined : { height: "70vh" }}
+                style={
+                  showFullChapter
+                    ? undefined
+                    : isMobile
+                      ? undefined
+                      : { height: "70vh" }
+                }
               >
                 <div className="verse-panel-inner relative">
                   {currentVerseData ? (
@@ -1369,7 +1423,7 @@ export default function App() {
                       chapterVerses={chapterVerses}
                       words={currentVerseData.words}
                       dssVariants={currentVerseData.dss}
-                      selectedWord={selectedWord?.text ?? null}
+                      selectedWord={highlightedWord?.text ?? null}
                       isBesorah={isBesorah}
                       translation_footnotes={
                         currentVerseData.translation_footnotes
@@ -1400,12 +1454,20 @@ export default function App() {
                     />
                   ) : (
                     <NeumorphCard>
-                      <p className="text-sm text-gray-500">
-                        {t("verse.selectBookPrompt")}
-                      </p>
+                      {isLoading || isServerWaking ? (
+                        <div className="mx-auto w-fit space-y-3">
+                          <Skeleton className="h-3 w-56" />
+                          <Skeleton className="h-3 w-56" />
+                          <Skeleton className="h-3 w-56" />
+                          <Skeleton className="h-3 w-56" />
+                        </div>
+                      ) : (
+                        <p className="text-sm text-gray-500">
+                          {t("verse.selectBookPrompt")}
+                        </p>
+                      )}
                     </NeumorphCard>
                   )}
-
                 </div>
               </div>
 

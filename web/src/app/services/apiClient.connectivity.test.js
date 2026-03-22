@@ -3,13 +3,13 @@ import { describe, expect, test } from "bun:test";
 import { resolveApiClientConfig } from "./apiClient";
 
 describe("apiClient connectivity safeguards", () => {
-  test("uses production backend fallback when production API base URL is missing", () => {
+  test("uses production /api fallback when production API base URL is missing", () => {
     const config = resolveApiClientConfig({
       env: { PUBLIC_NODE_ENV: "production" },
       processEnv: {},
     });
 
-    expect(config.apiBaseUrl).toBe("https://davar.onrender.com");
+    expect(config.apiBaseUrl).toBe("/api");
     expect(config.apiBaseUrl.includes("localhost")).toBe(false);
     expect(config.usedFallbackApiBaseUrl).toBe(true);
   });
@@ -28,8 +28,16 @@ describe("apiClient connectivity safeguards", () => {
 const runLiveConnectivity = Bun.env.RUN_LIVE_CONNECTIVITY_TEST === "1";
 
 describe.if(runLiveConnectivity)("live backend connectivity", () => {
+  const resolveLiveBaseUrl = () => {
+    const configured = Bun.env.PUBLIC_API_BASE_URL;
+    if (!configured || configured === "/api") {
+      return "https://davar.onrender.com";
+    }
+    return configured;
+  };
+
   test("health endpoint is reachable", async () => {
-    const baseUrl = Bun.env.PUBLIC_API_BASE_URL || "https://davar.onrender.com";
+    const baseUrl = resolveLiveBaseUrl();
     const response = await fetch(`${baseUrl}/health`);
 
     expect(response.ok).toBe(true);
@@ -39,7 +47,7 @@ describe.if(runLiveConnectivity)("live backend connectivity", () => {
   });
 
   test("books endpoint responds with authenticated payload", async () => {
-    const baseUrl = Bun.env.PUBLIC_API_BASE_URL || "https://davar.onrender.com";
+    const baseUrl = resolveLiveBaseUrl();
     const apiKey = Bun.env.PUBLIC_API_KEY;
 
     if (!apiKey) {

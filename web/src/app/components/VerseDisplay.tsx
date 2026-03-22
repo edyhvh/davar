@@ -273,11 +273,7 @@ export function VerseDisplay({
 
       {/* Translation - Only show if not Hebrew Only mode */}
       {!hebrewOnly && (
-        <SwipeIndicator
-          onSwipeUp={onSwipeUp}
-          onSwipeDown={onSwipeDown}
-          label={t("navigation.swipeToNavigate")}
-        >
+        <SwipeIndicator>
           <div
             className="text-center leading-relaxed px-4 transition-all duration-500 text-[var(--text-primary)]"
             style={{
@@ -296,7 +292,7 @@ export function VerseDisplay({
 
       {(canNavigatePrevious || canNavigateNext) && (
         <div
-          className={`md:hidden flex items-center justify-center gap-3 px-4 ${hebrewOnly ? "mt-2" : "-mt-3"}`}
+          className={`md:hidden flex items-center justify-center gap-3 px-4 ${hebrewOnly ? "mt-8" : "mt-4"}`}
         >
           {canNavigatePrevious && (
             <button
@@ -305,10 +301,11 @@ export function VerseDisplay({
               aria-label={t("verse.previousVerse")}
               className="inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-[12px] font-medium transition-colors"
               style={{
-                background: "var(--glass-surface)",
-                borderColor: "var(--glass-border)",
+                background: "var(--neomorph-bg)",
+                borderColor: "var(--neomorph-border)",
                 color: "var(--text-secondary)",
-                backdropFilter: "blur(8px)",
+                boxShadow:
+                  "2px 2px 6px var(--neomorph-shadow-dark), -2px -2px 6px var(--neomorph-shadow-light)",
                 minHeight: "36px",
               }}
             >
@@ -324,10 +321,11 @@ export function VerseDisplay({
               aria-label={t("verse.nextVerse")}
               className="inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-[12px] font-medium transition-colors"
               style={{
-                background: "var(--glass-surface)",
-                borderColor: "var(--glass-border)",
+                background: "var(--neomorph-bg)",
+                borderColor: "var(--neomorph-border)",
                 color: "var(--text-secondary)",
-                backdropFilter: "blur(8px)",
+                boxShadow:
+                  "2px 2px 6px var(--neomorph-shadow-dark), -2px -2px 6px var(--neomorph-shadow-light)",
                 minHeight: "36px",
               }}
             >

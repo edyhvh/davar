@@ -166,7 +166,7 @@ export function NavigationBar({
           <div className="flex min-w-0 flex-1 items-center gap-1 md:gap-2">
             <button
               onClick={onHomeClick}
-              className="shrink-0 rounded-full p-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="shrink-0 rounded-full p-2 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 backgroundColor: "var(--neomorph-bg)",
@@ -181,7 +181,7 @@ export function NavigationBar({
 
             <button
               onClick={() => setOpenMenu(openMenu === "book" ? null : "book")}
-              className="flex min-w-0 flex-1 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex min-w-0 flex-1 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 boxShadow:
@@ -207,7 +207,7 @@ export function NavigationBar({
               onClick={() =>
                 setOpenMenu(openMenu === "chapter" ? null : "chapter")
               }
-              className="flex shrink-0 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex shrink-0 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 boxShadow:
@@ -226,7 +226,7 @@ export function NavigationBar({
 
             <button
               onClick={() => setOpenMenu(openMenu === "verse" ? null : "verse")}
-              className="flex shrink-0 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex shrink-0 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 boxShadow:
@@ -248,7 +248,7 @@ export function NavigationBar({
             {isDev && onDesignSystemClick && (
               <button
                 onClick={onDesignSystemClick}
-                className="shrink-0 rounded-full p-2 transition-all hover:scale-[1.05] active:scale-[0.98]"
+                className="shrink-0 rounded-full p-2 transition-all md:hover:scale-[1.05] md:active:scale-[0.98]"
                 style={{
                   backgroundColor: "var(--neomorph-bg)",
                   boxShadow:
@@ -265,7 +265,7 @@ export function NavigationBar({
               onClick={() =>
                 setOpenMenu(openMenu === "settings" ? null : "settings")
               }
-              className="shrink-0 rounded-full p-2 transition-all hover:scale-[1.05] active:scale-[0.98]"
+              className="shrink-0 rounded-full p-2 transition-all md:hover:scale-[1.05] md:active:scale-[0.98]"
               style={{
                 backgroundColor: "var(--neomorph-bg)",
                 boxShadow:
@@ -429,7 +429,7 @@ export function NavigationBar({
                 onChange={(event) =>
                   onLanguageChange(event.target.value as "en" | "es" | "he")
                 }
-                className="rounded-full px-3 py-2 text-xs text-[var(--text-primary)]"
+                className="rounded-full px-3 py-2 text-base md:text-xs text-[var(--text-primary)]"
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   backgroundColor: "var(--neomorph-bg)",
@@ -457,7 +457,7 @@ export function NavigationBar({
               value={bookSearch}
               onChange={(event) => setBookSearch(event.target.value)}
               placeholder="Search book"
-              className="w-full rounded-full px-4 py-2 text-xs text-[var(--text-primary)]"
+              className="w-full rounded-full px-4 py-2 text-base md:text-xs text-[var(--text-primary)]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 backgroundColor: "var(--neomorph-bg)",
@@ -510,7 +510,7 @@ export function NavigationBar({
               }
               placeholder={t("navigation.chapterShort")}
               inputMode="numeric"
-              className="w-full rounded-full px-4 py-2 text-xs text-[var(--text-primary)]"
+              className="w-full rounded-full px-4 py-2 text-base md:text-xs text-[var(--text-primary)]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 backgroundColor: "var(--neomorph-bg)",
@@ -553,7 +553,7 @@ export function NavigationBar({
               }
               placeholder={t("navigation.verseShort")}
               inputMode="numeric"
-              className="w-full rounded-full px-4 py-2 text-xs text-[var(--text-primary)]"
+              className="w-full rounded-full px-4 py-2 text-base md:text-xs text-[var(--text-primary)]"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 backgroundColor: "var(--neomorph-bg)",

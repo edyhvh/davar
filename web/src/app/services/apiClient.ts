@@ -24,9 +24,7 @@ export const resolveApiClientConfig = ({
     env.PUBLIC_NODE_ENV || processEnv.PUBLIC_NODE_ENV || "production";
   const isDev = publicNodeEnv === "development";
 
-  const fallbackApiUrl = isDev
-    ? "http://localhost:2220"
-    : "https://davar.onrender.com";
+  const fallbackApiUrl = isDev ? "http://localhost:2220" : "/api";
 
   const configuredApiBaseUrl =
     env.PUBLIC_API_BASE_URL || processEnv.PUBLIC_API_BASE_URL;
@@ -70,7 +68,7 @@ console.log("[Davar] API Config:", {
 if (!isDev && resolvedConfig.usedFallbackApiBaseUrl) {
   console.warn(
     "[Davar API Client] PUBLIC_API_BASE_URL is missing in production build. " +
-      "Using fallback https://davar.onrender.com. Set PUBLIC_API_BASE_URL at build time.",
+      "Using fallback /api (Cloudflare proxy). Set PUBLIC_API_BASE_URL at build time.",
   );
 }
 
@@ -95,6 +93,44 @@ interface ApiError extends Error {
   details?: unknown;
 }
 
+export type ApiWarmupResult = {
+  status: "ready" | "timeout" | "error";
+  durationMs: number;
+};
+
+export const warmUpApiConnection = async (
+  options: { timeoutMs?: number } = {},
+): Promise<ApiWarmupResult> => {
+  const timeoutMs = options.timeoutMs ?? 3500;
+  const startedAt = performance.now();
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch(`${API_BASE_URL}/health`, {
+      method: "GET",
+      headers: { "X-API-Key": API_KEY },
+      credentials: "omit",
+      cache: "no-store",
+      signal: controller.signal,
+    });
+
+    return {
+      status: response.ok ? "ready" : "error",
+      durationMs: Math.round(performance.now() - startedAt),
+    };
+  } catch (err) {
+    return {
+      status: err instanceof DOMException && err.name === "AbortError"
+        ? "timeout"
+        : "error",
+      durationMs: Math.round(performance.now() - startedAt),
+    };
+  } finally {
+    window.clearTimeout(timeoutId);
+  }
+};
+
 export const apiRequest = async <T>(
   endpoint: string,
   options: RequestInit = {},
@@ -111,18 +147,28 @@ export const apiRequest = async <T>(
 
   const url = `${API_BASE_URL}${endpoint.startsWith("/") ? endpoint : `/${endpoint}`}`;
 
+  const method = (options.method || "GET").toUpperCase();
+  const isReadOnlyRequest = method === "GET" || method === "HEAD";
+
   const headers = new Headers({
     "X-API-Key": API_KEY,
-    "Content-Type": "application/json",
-    "Cache-Control": "no-store",
     ...options.headers,
   });
+
+  if (!headers.has("Content-Type") && options.body != null) {
+    headers.set("Content-Type", "application/json");
+  }
+
+  // Let cacheable read endpoints use browser/CDN caching by default.
+  if (!headers.has("Cache-Control") && !isReadOnlyRequest) {
+    headers.set("Cache-Control", "no-store");
+  }
 
   const fetchOptions: RequestInit = {
     ...options,
     headers,
     credentials: "omit", // no cookies needed for API key auth
-    cache: "no-store",
+    cache: options.cache ?? (isReadOnlyRequest ? "default" : "no-store"),
   };
 
   try {
