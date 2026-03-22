@@ -50,6 +50,7 @@ TTH_BOOK_MAPPING = {
     "John": "iojanan",
     "Acts": "maasei_hashlijim",
     "Romans": "romanos",
+    "Revelation": "sodot",
 }
 
 TS2009_BOOK_MAPPING = {

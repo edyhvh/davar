@@ -587,6 +587,27 @@ BOOKS_INFO = {
             r'רומאים',
         ],
     },
+    'sodot': {
+        'tth_name': 'Sodot',
+        'hebrew_name': 'סודות',
+        'english_name': 'Revelation',
+        'spanish_name': 'Apocalipsis',
+        'book_code': 'revelation',
+        'expected_chapters': 22,
+        'section': 'besorah',
+        'section_hebrew': 'בשורה',
+        'section_english': 'Gospel',
+        'section_spanish': 'Evangelio',
+        'patterns': [
+            r'\*\*SODOT.*?\*\*',
+            r'Sodot.*?סודות',
+            r'__SODOT.*?סודות__',
+            r'APOCALIPSIS.*?סודות',
+            r'\*\*SODOT',
+            r'APOCALIPSIS',
+            r'סודות',
+        ],
+    },
 }
 
 # Hebrew terms dictionary
