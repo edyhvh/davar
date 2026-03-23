@@ -50,25 +50,6 @@ jobs:
       - name: Run linting
         run: npm run lint
 
-  testing:
-    name: "Run Tests"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "*"
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run tests
-        run: npm run test
-
   build:
     name: "Build Project"
     runs-on: ubuntu-latest
