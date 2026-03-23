@@ -9,7 +9,8 @@ on:
     paths: [ 'web/**' ]
 
 jobs:
-  test:
+  web_ci:
+    name: web-ci
     runs-on: ubuntu-latest
 
     steps:

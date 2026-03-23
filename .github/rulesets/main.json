@@ -25,9 +25,15 @@
         "strict_required_status_checks_policy": true,
         "required_status_checks": [
           {
-            "context": "test"
+            "context": "policy-gate"
           }
         ]
+      }
+    },
+    {
+      "type": "required_deployments",
+      "parameters": {
+        "required_deployment_environments": ["production"]
       }
     }
   ],

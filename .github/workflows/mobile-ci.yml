@@ -9,7 +9,8 @@ on:
     paths: [ 'mobile/**' ]
 
 jobs:
-  test:
+  mobile_ci:
+    name: mobile-ci
     runs-on: ubuntu-latest
 
     steps:

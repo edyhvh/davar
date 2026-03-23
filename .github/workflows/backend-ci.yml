@@ -8,7 +8,8 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  backend_ci:
+    name: backend-ci
     runs-on: ubuntu-latest
 
     steps:
