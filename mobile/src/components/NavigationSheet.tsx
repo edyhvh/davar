@@ -476,7 +476,9 @@ const NavigationSheetComponent = (
   );
 
   const getTitle = () => {
-    const selectedBookName = selectedBook ? getBookDisplayName(selectedBook) : "";
+    const selectedBookName = selectedBook
+      ? getBookDisplayName(selectedBook)
+      : "";
 
     switch (step) {
       case "book":
