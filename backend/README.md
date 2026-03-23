@@ -110,6 +110,7 @@ TS2009 English translations are licensed/private and not committed to GitHub. Th
 - Storage bucket: `ts2009`
 - Sync script: `scripts/sync_ts2009.py`
 - Requires: `DAVAR_SUPABASE_URL` and `DAVAR_SUPABASE_SERVICE_KEY`
+- Optional toggle: `DAVAR_TS2009_SYNC_ON_STARTUP` (default `true`)
 
 ### Render Deployment
 
@@ -123,6 +124,11 @@ Notes:
 - The API starts first and TS2009 files sync in the background, reducing cold-start blocking.
 - If TS2009 is not ready yet, English translation fields may be temporarily unavailable for the first requests.
 - To force a manual full sync, run: `python scripts/sync_ts2009.py`.
+
+Troubleshooting:
+- If startup logs show proxy/network errors (for example `ProxyError: 502 Bad Gateway`), set `DAVAR_TS2009_SYNC_ON_STARTUP=false` and run manual sync when network access is available.
+- Ensure `DAVAR_SUPABASE_URL` points to your Supabase project URL; the backend normalizes URL formatting for storage client compatibility.
+- In proxy-restricted environments, verify `HTTPS_PROXY`/`HTTP_PROXY` and `NO_PROXY` values.
 
 ### Branch Strategy
 
