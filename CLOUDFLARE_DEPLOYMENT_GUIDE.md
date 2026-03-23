@@ -176,7 +176,7 @@ bunx wrangler pages dev dist
 
 - [web/.env.production](web/.env.production)
 - [web/wrangler.toml](web/wrangler.toml)
-- [web/public/_redirects](web/public/_redirects)
+- [web/public/\_redirects](web/public/_redirects)
 - [plans/cloudflare-deployment-plan.md](plans/cloudflare-deployment-plan.md)
 
 ---
@@ -199,8 +199,8 @@ bunx wrangler pages dev dist
 
 1. Confirm `PUBLIC_API_BASE_URL=/api` in Pages environment variables
 2. Confirm `BACKEND_API_ORIGIN=https://davar.onrender.com` in Pages environment variables
-2. Rebuild/redeploy Pages after variable changes
-3. Check network tab request URL host
+3. Rebuild/redeploy Pages after variable changes
+4. Check network tab request URL host
 
 ### Build fails
 
