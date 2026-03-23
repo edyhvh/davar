@@ -2,33 +2,34 @@ name: Mobile CI
 
 on:
   push:
-    branches: [ main, apocalipsis ]
-    paths: [ 'mobile/**' ]
+    branches: [main, apocalipsis]
+    paths: ["mobile/**"]
   pull_request:
-    branches: [ main, apocalipsis ]
-    paths: [ 'mobile/**' ]
+    branches: [main, apocalipsis]
+    paths: ["mobile/**"]
 
 jobs:
-  test:
+  mobile_ci:
+    name: mobile-ci
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Setup Bun
-      uses: oven-sh/setup-bun@v1
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
 
-    - name: Install dependencies
-      run: |
-        cd mobile
-        bun install
+      - name: Install dependencies
+        run: |
+          cd mobile
+          bun install
 
-    - name: Run lint
-      run: |
-        cd mobile
-        bun run lint
+      - name: Run lint
+        run: |
+          cd mobile
+          bun run lint
 
-    - name: Check TypeScript
-      run: |
-        cd mobile
-        bun run typecheck
+      - name: Check TypeScript
+        run: |
+          cd mobile
+          bun run typecheck

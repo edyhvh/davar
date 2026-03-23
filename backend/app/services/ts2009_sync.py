@@ -15,9 +15,24 @@ try:
 except ImportError:  # pragma: no cover - handled at runtime in callers
     create_client = None
 
+try:
+    import httpx
+except ImportError:  # pragma: no cover - optional at import time
+    httpx = None
+
 
 TS2009_BUCKET = "ts2009"
 MANIFEST_FILE_NAME = ".sync_manifest.json"
+
+
+def _raise_network_error(exc: Exception) -> None:
+    raise RuntimeError(
+        "TS2009 sync could not reach Supabase Storage. "
+        "If you are behind a proxy, verify HTTPS_PROXY/HTTP_PROXY and NO_PROXY settings. "
+        "You can disable startup sync with DAVAR_TS2009_SYNC_ON_STARTUP=false and run "
+        "scripts/sync_ts2009.py manually when network access is available. "
+        f"Original error: {exc}"
+    ) from exc
 
 
 @dataclass
@@ -90,7 +105,14 @@ def sync_ts2009_files(logger: logging.Logger | None = None) -> Ts2009SyncResult:
 
     supabase = create_client(supabase_url, supabase_key)
     bucket = supabase.storage.from_(TS2009_BUCKET)
-    files = bucket.list()
+    try:
+        files = bucket.list()
+    except Exception as exc:
+        if httpx is not None and isinstance(exc, (httpx.ProxyError, httpx.TransportError)):
+            _raise_network_error(exc)
+        if "ProxyError" in type(exc).__name__ or "Bad Gateway" in str(exc):
+            _raise_network_error(exc)
+        raise
 
     downloaded = 0
     skipped = 0
@@ -111,7 +133,14 @@ def sync_ts2009_files(logger: logging.Logger | None = None) -> Ts2009SyncResult:
             continue
 
         log.info("Downloading TS2009 file: %s", name)
-        content = bucket.download(name)
+        try:
+            content = bucket.download(name)
+        except Exception as exc:
+            if httpx is not None and isinstance(exc, (httpx.ProxyError, httpx.TransportError)):
+                _raise_network_error(exc)
+            if "ProxyError" in type(exc).__name__ or "Bad Gateway" in str(exc):
+                _raise_network_error(exc)
+            raise
         local_file_path.write_bytes(content)
         downloaded += 1
 

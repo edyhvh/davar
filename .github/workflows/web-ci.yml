@@ -2,33 +2,34 @@ name: Web CI
 
 on:
   push:
-    branches: [ main, apocalipsis ]
-    paths: [ 'web/**' ]
+    branches: [main, apocalipsis]
+    paths: ["web/**"]
   pull_request:
-    branches: [ main, apocalipsis ]
-    paths: [ 'web/**' ]
+    branches: [main, apocalipsis]
+    paths: ["web/**"]
 
 jobs:
-  test:
+  web_ci:
+    name: web-ci
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Setup Bun
-      uses: oven-sh/setup-bun@v1
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
 
-    - name: Install dependencies
-      run: |
-        cd web
-        bun install
+      - name: Install dependencies
+        run: |
+          cd web
+          bun install
 
-    - name: Run lint
-      run: |
-        cd web
-        bun run lint
+      - name: Run lint
+        run: |
+          cd web
+          bun run lint
 
-    - name: Run build
-      run: |
-        cd web
-        bun run build
+      - name: Run build
+        run: |
+          cd web
+          bun run build

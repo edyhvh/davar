@@ -46,6 +46,7 @@ export type NavigationSheetMethods = BottomSheetMethods & {
 type BookMeta = {
   id: string;
   name: string;
+  spanishName: string;
   hebrewName: string;
 };
 
@@ -253,6 +254,7 @@ const NavigationSheetComponent = (
     [],
   );
   const themeMode = useAppStore((state: AppState) => state.themeMode);
+  const language = useAppStore((state: AppState) => state.language);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
   const snapPoints = useMemo(() => ["60%", "80%"], []);
@@ -278,6 +280,7 @@ const NavigationSheetComponent = (
         const mappedBooks = metadata.books.map((book) => ({
           id: book.id,
           name: book.name,
+          spanishName: book.spanish_name,
           hebrewName: book.hebrew_name,
         }));
         setBooksMeta(mappedBooks);
@@ -304,6 +307,17 @@ const NavigationSheetComponent = (
     [booksMeta, selectedBookId],
   );
 
+  const getBookDisplayName = useCallback(
+    (book: BookMeta) => {
+      const localizedName =
+        language === "es" && book.spanishName.trim().length > 0
+          ? book.spanishName
+          : book.name;
+      return formatBookDisplayName(localizedName);
+    },
+    [language],
+  );
+
   // Filter books by search
   const filteredBooks = useMemo(() => {
     if (!searchQuery.trim()) {
@@ -312,11 +326,13 @@ const NavigationSheetComponent = (
     const query = searchQuery.toLowerCase();
     return booksMeta.filter(
       (book) =>
+        getBookDisplayName(book).toLowerCase().includes(query) ||
         formatBookDisplayName(book.name).toLowerCase().includes(query) ||
+        formatBookDisplayName(book.spanishName).toLowerCase().includes(query) ||
         stripNikud(book.hebrewName).includes(query) ||
         book.hebrewName.includes(query),
     );
-  }, [booksMeta, searchQuery]);
+  }, [booksMeta, searchQuery, getBookDisplayName]);
 
   // Get chapters for selected book
   const chapterNumbers = useMemo(() => {
@@ -413,14 +429,12 @@ const NavigationSheetComponent = (
               : getNeumorphShadowStyle("raised", colors),
           ]}
         >
-          <Text style={styles.bookEnglish}>
-            {formatBookDisplayName(item.name)}
-          </Text>
+          <Text style={styles.bookEnglish}>{getBookDisplayName(item)}</Text>
           <Text style={styles.bookHebrew}>{stripNikud(item.hebrewName)}</Text>
         </Pressable>
       );
     },
-    [selectedBookId, handleSelectBook, styles, colors],
+    [selectedBookId, handleSelectBook, styles, colors, getBookDisplayName],
   );
 
   const renderNumberGrid = useCallback(
@@ -463,7 +477,7 @@ const NavigationSheetComponent = (
 
   const getTitle = () => {
     const selectedBookName = selectedBook
-      ? formatBookDisplayName(selectedBook.name)
+      ? getBookDisplayName(selectedBook)
       : "";
 
     switch (step) {

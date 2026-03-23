@@ -13,7 +13,6 @@ type CacheStorageWithDefault = CacheStorage & {
 
 const CACHEABLE_READ_PATH_PREFIXES = [
   "/api/v1/verses/",
-  "/api/v1/books",
   "/api/v1/metadata/preload",
 ];
 
@@ -30,11 +29,17 @@ const isCacheableReadRequest = (method: string, path: string): boolean => {
 };
 
 const buildBackendUrl = (requestUrl: URL, backendOrigin: string): URL => {
-  const target = new URL(requestUrl.pathname + requestUrl.search, backendOrigin);
+  const target = new URL(
+    requestUrl.pathname + requestUrl.search,
+    backendOrigin,
+  );
   return target;
 };
 
-const withEdgeHeaders = (response: Response, cacheStatus: "HIT" | "MISS"): Response => {
+const withEdgeHeaders = (
+  response: Response,
+  cacheStatus: "HIT" | "MISS",
+): Response => {
   const headers = new Headers(response.headers);
   headers.set("X-Davar-Edge-Cache", cacheStatus);
   if (!headers.has("Cache-Control")) {
@@ -56,12 +61,17 @@ const getEdgeCache = async (): Promise<Cache> => {
   return storage.default ?? caches.open(EDGE_CACHE_NAME);
 };
 
-export const onRequest = async (context: FunctionContext<Env>): Promise<Response> => {
+export const onRequest = async (
+  context: FunctionContext<Env>,
+): Promise<Response> => {
   const { request, env } = context;
   const incomingUrl = new URL(request.url);
   const backendOrigin = env.BACKEND_API_ORIGIN || "https://davar.onrender.com";
   const targetUrl = buildBackendUrl(incomingUrl, backendOrigin);
-  const cacheableReadRequest = isCacheableReadRequest(request.method, incomingUrl.pathname);
+  const cacheableReadRequest = isCacheableReadRequest(
+    request.method,
+    incomingUrl.pathname,
+  );
 
   const cache = await getEdgeCache();
   const cacheKey = new Request(incomingUrl.toString(), {

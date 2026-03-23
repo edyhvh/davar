@@ -59,6 +59,23 @@ class Settings(BaseSettings):
     # Supabase (for TS2009 private content sync and future user data)
     supabase_url: Optional[str] = None
     supabase_service_key: Optional[str] = None
+    ts2009_sync_on_startup: bool = True
+
+    @field_validator("supabase_url", mode="before")
+    @classmethod
+    def normalize_supabase_url(cls, v):
+        """Normalize Supabase URL to reduce storage endpoint issues."""
+        if v is None:
+            return None
+
+        raw = str(v).strip()
+        if not raw:
+            return None
+
+        if not raw.endswith("/"):
+            raw = f"{raw}/"
+
+        return raw
 
     # Data Source Paths (absolute to avoid cwd issues)
     data_path: str = str(DEFAULT_DATA_PATH)

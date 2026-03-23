@@ -176,7 +176,7 @@ bunx wrangler pages dev dist
 
 - [web/.env.production](web/.env.production)
 - [web/wrangler.toml](web/wrangler.toml)
-- [web/public/_redirects](web/public/_redirects)
+- [web/public/\_redirects](web/public/_redirects)
 - [plans/cloudflare-deployment-plan.md](plans/cloudflare-deployment-plan.md)
 
 ---
@@ -199,8 +199,8 @@ bunx wrangler pages dev dist
 
 1. Confirm `PUBLIC_API_BASE_URL=/api` in Pages environment variables
 2. Confirm `BACKEND_API_ORIGIN=https://davar.onrender.com` in Pages environment variables
-2. Rebuild/redeploy Pages after variable changes
-3. Check network tab request URL host
+3. Rebuild/redeploy Pages after variable changes
+4. Check network tab request URL host
 
 ### Build fails
 
@@ -222,3 +222,26 @@ If deployment fails:
 1. Check **Workers & Pages** deployment logs first
 2. Check Zone-level security/rule events in Cloudflare
 3. Check Render service logs
+
+---
+
+## 13. Preview Lifecycle and Deployment Statuses
+
+Cloudflare preview deployments are expected for pull requests that modify web files.
+
+Normal lifecycle events:
+
+1. PR opened or updated: a new preview deployment is created.
+2. New commit pushed to same PR: previous preview can be superseded and shown as inactive.
+3. PR merged or closed: preview deployment can be removed or marked destroyed.
+
+Important interpretation:
+
+- A preview marked destroyed after merge/close is usually expected cleanup, not a production failure.
+- Production health should be validated on the `main` deployment and custom domain, not on expired preview URLs.
+
+Canonical ownership for this repository:
+
+1. Cloudflare Pages is the only frontend deployment owner.
+2. Render is the backend deployment owner.
+3. Vercel deployment integration should remain disabled to avoid duplicate preview and production statuses.

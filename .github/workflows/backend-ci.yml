@@ -8,7 +8,8 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  backend_ci:
+    name: backend-ci
     runs-on: ubuntu-latest
 
     steps:
@@ -24,19 +25,9 @@ jobs:
           cd backend
           pip install -r requirements.txt
 
-      # - name: Run tests
-      #   run: |
-      #     cd backend
-      #     python -m pytest app/tests/ -v
-
       - name: Check linting
         run: |
           cd backend
           pip install flake8
           flake8 app/ --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 app/ --count --exit-zero --max-complexity=10 --max-line-length=88 --statistics
-
-    # - name: Check translation mappings
-    #   run: |
-    #     cd backend
-    #     python -m pytest app/tests/test_translation_mappings.py -v

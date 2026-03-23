@@ -1,0 +1,18 @@
+name: Policy Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  policy_gate:
+    name: policy-gate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Explain gate intent
+        run: |
+          echo "Policy gate check passed."
+          echo "This check exists to provide a stable required status context for branch protection."

@@ -97,7 +97,7 @@ export const mockBooks: MockBook[] = [
   { id: "john2", name: "John2", hebrewName: "יוחנן ב" },
   { id: "john3", name: "John3", hebrewName: "יוחנן ג" },
   { id: "jude", name: "Jude", hebrewName: "יהודה" },
-  { id: "revelation", name: "Revelation", hebrewName: "התגלות יוחנן" },
+  { id: "revelation", name: "Revelation", hebrewName: "סודות" },
 ];
 
 export const mockVerses: MockVerse[] = [

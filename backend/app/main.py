@@ -90,12 +90,20 @@ async def lifespan(app: FastAPI):
     app.state.metadata_preload_status = "running"
     app.state.metadata_preload_task = None
 
-    if settings.supabase_url and settings.supabase_service_key:
+    should_run_ts2009_sync = (
+        settings.ts2009_sync_on_startup
+        and settings.supabase_url
+        and settings.supabase_service_key
+    )
+
+    if should_run_ts2009_sync:
         app.state.ts2009_sync = {"status": "running"}
         app.state.ts2009_sync_task = asyncio.create_task(
             _sync_ts2009_in_background(app)
         )
         logger.info("Started TS2009 sync in background")
+    elif settings.supabase_url and settings.supabase_service_key and not settings.ts2009_sync_on_startup:
+        logger.info("TS2009 startup sync disabled by DAVAR_TS2009_SYNC_ON_STARTUP")
 
     books_service = BooksService(tanaj_loader, besorah_loader, book_mapper)
     try:
