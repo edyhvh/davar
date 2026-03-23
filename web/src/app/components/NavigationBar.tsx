@@ -111,6 +111,36 @@ export function NavigationBar({
   }, [openMenu]);
 
   useEffect(() => {
+    const isSelectionMenuOpen =
+      openMenu === "book" || openMenu === "chapter" || openMenu === "verse";
+    if (!isSelectionMenuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const previousOverscrollBehavior = document.body.style.overscrollBehavior;
+
+    document.body.style.overflow = "hidden";
+    document.body.style.overscrollBehavior = "none";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.body.style.overscrollBehavior = previousOverscrollBehavior;
+    };
+  }, [openMenu]);
+
+  useEffect(() => {
+    if (!openMenu) return;
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpenMenu(null);
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [openMenu]);
+
+  useEffect(() => {
     if (!openMenu) return;
     if (openMenu === "book") {
       setBookSearch("");
@@ -449,8 +479,32 @@ export function NavigationBar({
         </div>
       )}
 
+      {(openMenu === "book" || openMenu === "chapter" || openMenu === "verse") && (
+        <div
+          className="fixed inset-0 z-20"
+          onClick={() => setOpenMenu(null)}
+          onWheel={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+          }}
+          onTouchMove={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+          }}
+          aria-hidden="true"
+        />
+      )}
+
       {openMenu === "book" && (
-        <div className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30">
+        <div
+          className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30"
+          onWheelCapture={(event) => {
+            event.stopPropagation();
+          }}
+          onTouchMoveCapture={(event) => {
+            event.stopPropagation();
+          }}
+        >
           <div className="mb-3">
             <input
               ref={bookSearchRef}
@@ -467,7 +521,7 @@ export function NavigationBar({
               }}
             />
           </div>
-          <div className="max-h-[320px] overflow-y-auto space-y-2">
+          <div className="max-h-[320px] overflow-y-auto overscroll-contain space-y-2">
             {filteredBooks.map((item) => (
               <button
                 key={item.name}
@@ -500,7 +554,15 @@ export function NavigationBar({
       )}
 
       {openMenu === "chapter" && (
-        <div className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30">
+        <div
+          className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30"
+          onWheelCapture={(event) => {
+            event.stopPropagation();
+          }}
+          onTouchMoveCapture={(event) => {
+            event.stopPropagation();
+          }}
+        >
           <div className="mb-3">
             <input
               ref={chapterSearchRef}
@@ -520,7 +582,7 @@ export function NavigationBar({
               }}
             />
           </div>
-          <div className="grid grid-cols-5 gap-2">
+          <div className="grid grid-cols-5 gap-2 max-h-[320px] overflow-y-auto overscroll-contain">
             {filteredChapters.map((item) => (
               <button
                 key={item}
@@ -543,7 +605,15 @@ export function NavigationBar({
       )}
 
       {openMenu === "verse" && (
-        <div className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30">
+        <div
+          className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30"
+          onWheelCapture={(event) => {
+            event.stopPropagation();
+          }}
+          onTouchMoveCapture={(event) => {
+            event.stopPropagation();
+          }}
+        >
           <div className="mb-3">
             <input
               ref={verseSearchRef}
@@ -563,7 +633,7 @@ export function NavigationBar({
               }}
             />
           </div>
-          <div className="grid grid-cols-5 gap-2 max-h-[320px] overflow-y-auto">
+          <div className="grid grid-cols-5 gap-2 max-h-[320px] overflow-y-auto overscroll-contain">
             {filteredVerses.map((item) => (
               <button
                 key={item}
