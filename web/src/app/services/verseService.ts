@@ -59,7 +59,12 @@ type VerseCountResponse = {
 };
 
 export const getBooks = async (): Promise<BookResponse[]> => {
-  return apiRequest<BookResponse[]>("/api/v1/books");
+  return apiRequest<BookResponse[]>("/api/v1/books", {
+    cache: "no-store",
+    headers: {
+      "Cache-Control": "no-store",
+    },
+  });
 };
 
 export const lookupBook = async (bookName: string): Promise<BookResponse> => {
