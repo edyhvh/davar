@@ -4,7 +4,7 @@ This guide explains how to deploy the Davar web frontend to Cloudflare Pages on 
 
 - Custom domain from day one
 - Cloudflare Pages API proxy for same-origin calls and edge caching
-- Render as backend origin
+- Koyeb as backend origin
 
 ---
 
@@ -14,14 +14,14 @@ Flow:
 
 1. Browser loads frontend from your custom domain on Cloudflare Pages
 2. Frontend requests `/api/...` on the same origin
-3. Cloudflare Pages Function proxies to Render origin
+3. Cloudflare Pages Function proxies to Koyeb origin
 4. Cloudflare edge caches cacheable read endpoints
 
 Why this is better for cold-start impact:
 
 - Same-origin API requests (no browser CORS friction)
 - Edge cache serves repeated read traffic while origin is sleeping
-- Reduces user-visible impact of Render wake latency
+- Reduces user-visible impact of backend wake latency
 
 Free tier support:
 
@@ -69,7 +69,7 @@ In your Pages project settings, add production environment variables:
 PUBLIC_API_BASE_URL=/api
 PUBLIC_API_KEY=your_api_key_value
 PUBLIC_NODE_ENV=production
-BACKEND_API_ORIGIN=https://davar.onrender.com
+BACKEND_API_ORIGIN=https://api.davar.bible
 ```
 
 Notes:
@@ -105,9 +105,9 @@ Behavior:
 
 ---
 
-## 7. Update Backend CORS in Render
+## 7. Update Backend CORS in Koyeb
 
-1. Go to [Render Dashboard](https://dashboard.render.com)
+1. Go to [Koyeb Dashboard](https://app.koyeb.com)
 2. Open backend service `davar`
 3. Go to **Environment**
 4. Update `DAVAR_ALLOWED_ORIGINS`
@@ -121,7 +121,7 @@ DAVAR_ALLOWED_ORIGINS=["http://localhost:3002","http://localhost:3003","http://l
 
 Then redeploy backend.
 
-Because frontend is now same-origin to Pages, Render only needs to allow the Pages/Custom-domain origin and local dev origins.
+Because frontend is now same-origin to Pages, Koyeb only needs to allow the Pages/Custom-domain origin and local dev origins.
 
 ---
 
@@ -198,7 +198,7 @@ bunx wrangler pages dev dist
 ### API calls fail or go to wrong host
 
 1. Confirm `PUBLIC_API_BASE_URL=/api` in Pages environment variables
-2. Confirm `BACKEND_API_ORIGIN=https://davar.onrender.com` in Pages environment variables
+2. Confirm `BACKEND_API_ORIGIN=https://api.davar.bible` in Pages environment variables
 3. Rebuild/redeploy Pages after variable changes
 4. Check network tab request URL host
 
@@ -221,7 +221,7 @@ If deployment fails:
 
 1. Check **Workers & Pages** deployment logs first
 2. Check Zone-level security/rule events in Cloudflare
-3. Check Render service logs
+3. Check Koyeb service logs
 
 ---
 
@@ -243,5 +243,5 @@ Important interpretation:
 Canonical ownership for this repository:
 
 1. Cloudflare Pages is the only frontend deployment owner.
-2. Render is the backend deployment owner.
+2. Koyeb is the backend deployment owner.
 3. Vercel deployment integration should remain disabled to avoid duplicate preview and production statuses.

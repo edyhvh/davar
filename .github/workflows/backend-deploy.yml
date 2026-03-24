@@ -1,8 +1,9 @@
 name: Backend Deploy
 
 on:
+  workflow_dispatch:
   push:
-    branches: [main]
+    branches: [main, koyeb]
     paths: ["backend/**"]
 
 jobs:
@@ -10,7 +11,7 @@ jobs:
     name: backend-deploy
     runs-on: ubuntu-latest
     concurrency:
-      group: backend-deploy-main
+      group: backend-deploy-${{ github.ref_name }}
       cancel-in-progress: true
 
     steps:
@@ -26,4 +27,7 @@ jobs:
 
       - name: Notify deployment
         run: |
-          echo "Backend deployment triggered on Render via auto-deploy"
+          echo "Backend deployment source-of-truth is Koyeb Git auto-deploy"
+          echo "This workflow remains a policy and verification companion"
+          echo "Current branch: ${{ github.ref_name }}"
+          echo "Validate on branch 'koyeb' before tracking 'main' in Koyeb service settings"

@@ -29,9 +29,14 @@ const runLiveConnectivity = Bun.env.RUN_LIVE_CONNECTIVITY_TEST === "1";
 
 describe.if(runLiveConnectivity)("live backend connectivity", () => {
   const resolveLiveBaseUrl = () => {
+    const explicitTestUrl = Bun.env.KOYEB_TEST_API_BASE_URL;
+    if (explicitTestUrl && explicitTestUrl.trim().length > 0) {
+      return explicitTestUrl;
+    }
+
     const configured = Bun.env.PUBLIC_API_BASE_URL;
     if (!configured || configured === "/api") {
-      return "https://davar.onrender.com";
+      return "https://api.davar.bible";
     }
     return configured;
   };

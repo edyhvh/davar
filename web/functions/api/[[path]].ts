@@ -19,6 +19,7 @@ const CACHEABLE_READ_PATH_PREFIXES = [
 const EDGE_CACHE_MAX_AGE_SECONDS = 600;
 const EDGE_CACHE_STALE_WHILE_REVALIDATE_SECONDS = 86400;
 const EDGE_CACHE_NAME = "davar-edge-cache";
+const DEFAULT_BACKEND_API_ORIGIN = "https://api.davar.bible";
 
 const isCacheableReadRequest = (method: string, path: string): boolean => {
   if (method !== "GET" && method !== "HEAD") {
@@ -66,7 +67,8 @@ export const onRequest = async (
 ): Promise<Response> => {
   const { request, env } = context;
   const incomingUrl = new URL(request.url);
-  const backendOrigin = env.BACKEND_API_ORIGIN || "https://davar.onrender.com";
+  const backendOrigin =
+    env.BACKEND_API_ORIGIN?.trim() || DEFAULT_BACKEND_API_ORIGIN;
   const targetUrl = buildBackendUrl(incomingUrl, backendOrigin);
   const cacheableReadRequest = isCacheableReadRequest(
     request.method,

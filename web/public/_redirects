@@ -18,7 +18,7 @@
 /*.eot 200
 
 # API calls - proxy to backend (optional, if you want to avoid CORS)
-# /api/*  https://davar.onrender.com/api/:splat  200
+# /api/*  https://api.davar.bible/api/:splat  200
 
 # SPA fallback - serve index.html for all other routes
 # This must be last

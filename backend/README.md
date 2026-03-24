@@ -112,13 +112,15 @@ TS2009 English translations are licensed/private and not committed to GitHub. Th
 - Requires: `DAVAR_SUPABASE_URL` and `DAVAR_SUPABASE_SERVICE_KEY`
 - Optional toggle: `DAVAR_TS2009_SYNC_ON_STARTUP` (default `true`)
 
-### Render Deployment
+### Koyeb Deployment
 
-1. Create a Render web service from this GitHub repository.
-2. Set build command: (none, or pip install if needed)
-3. Set start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-4. Configure environment variables from `.env.example`.
-5. Set Render branch to `main`.
+1. In Koyeb, create a Web Service from this GitHub repository.
+2. Builder: `Buildpack`.
+3. Work directory: `backend` (monorepo setup).
+4. Run command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
+5. Configure environment variables from `.env.example`.
+6. Configure an HTTP health check path: `/health`.
+7. Track branch `koyeb` for validation first, then switch tracked branch to `main` for production.
 
 Notes:
 - The API starts first and TS2009 files sync in the background, reducing cold-start blocking.
@@ -138,7 +140,7 @@ Release flow:
 
 1. Merge feature branches into `main`.
 2. After approvals/checks, merge into `main`.
-3. Render auto-deploy runs from `main`.
+3. Koyeb auto-deploy runs from the tracked branch (`koyeb` during validation, then `main` after cutover).
 
 ### Environment Variables
 
