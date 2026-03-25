@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { X } from "lucide-react";
-import { apiRequest } from "../services/apiClient";
 import {
   getPrefixSegments,
   normalizeHebrew,
@@ -61,6 +60,23 @@ interface PrefixEntry {
   forms?: string[];
   notes?: Record<string, string>;
 }
+
+let prefixesPromise: Promise<Record<string, PrefixEntry>> | null = null;
+
+const loadPrefixesData = async (): Promise<Record<string, PrefixEntry>> => {
+  if (!prefixesPromise) {
+    prefixesPromise = fetch("/data/prefixes.json", { cache: "force-cache" }).then(
+      async (response) => {
+        if (!response.ok) {
+          throw new Error("Failed to load prefixes data");
+        }
+        return response.json() as Promise<Record<string, PrefixEntry>>;
+      },
+    );
+  }
+
+  return prefixesPromise;
+};
 
 export function WordCard({
   word,
@@ -191,30 +207,27 @@ export function WordCard({
   const qumranWordFontSize = `${Math.round(masoreticWordFontSizePx * 1.5)}px`;
 
   useEffect(() => {
-    const loadPrefixes = async () => {
+    const loadPrefixEntries = async () => {
       if (!displayedData.prefixes?.length) {
         setPrefixEntries({});
         return;
       }
 
-      const entries: Record<string, PrefixEntry | null> = {};
-      await Promise.all(
-        displayedData.prefixes.map(async (prefixId) => {
-          try {
-            const entry = await apiRequest<PrefixEntry>(
-              `/api/v1/prefixes/${prefixId}`,
-            );
-            entries[prefixId] = entry;
-          } catch {
-            entries[prefixId] = null;
-          }
-        }),
-      );
-
-      setPrefixEntries(entries);
+      try {
+        const allPrefixes = await loadPrefixesData();
+        const entries = Object.fromEntries(
+          displayedData.prefixes.map((prefixId) => [
+            prefixId,
+            allPrefixes[prefixId] ?? null,
+          ]),
+        ) as Record<string, PrefixEntry | null>;
+        setPrefixEntries(entries);
+      } catch {
+        setPrefixEntries({});
+      }
     };
 
-    loadPrefixes();
+    loadPrefixEntries();
   }, [displayedData.prefixes]);
 
   useEffect(() => {

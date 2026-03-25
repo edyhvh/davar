@@ -1,53 +1,139 @@
-# Davar FastAPI Backend - Manual API Testing Guide
+# Davar Static Data Architecture - Data Access Guide
 
-## 🚀 Getting Started
+## 🚀 Architecture Overview
 
-### 1. Start the Server
+**Status:** Backend eliminated. All data now served as static JSON from Cloudflare Pages. TS2009 licensed content served from Supabase Storage.
 
-First, make sure you're in the backend directory and start the server:
+### Data Sources
+
+1. **Public Data (Static JSON):** Served from `https://davar.bible/data/`
+   - OE (Masoretic/Tanaj)
+   - Delitzsch (Besorah)
+   - DSS variants
+   - Dictionary, prefixes, transliterations
+   - TTH (Spanish), BES (Spanish fallback)
+
+2. **TS2009 (Licensed):** Served from Supabase Storage
+   - Requires Supabase anon key for access
+   - Per-verse loading (not bulk bundles)
+
+### Web App Access
+- Uses `web/src/app/services/staticData.ts` for cached static file fetches
+- Uses `web/src/app/services/supabaseClient.ts` for TS2009 access
+
+### Mobile App Access
+- Downloads bundles from static URLs during offline sync
+- Uses Supabase client for TS2009 per-verse loading
+- Stores all data in local SQLite database
+
+## 📊 Data Endpoints
+
+### Static Data URLs
+```
+https://davar.bible/data/
+├── metadata.json                    # Books list, chapter/verse counts
+├── oe/{book}/{chapter}.json         # Hebrew verses (per chapter)
+├── besorah/{book}/{chapter}.json    # Delitzsch verses (per chapter)
+├── tth/{book}.json                  # TTH Spanish (per book)
+├── bes/{book}.json                  # BES Spanish fallback (per book)
+├── dss/{book}.json                  # DSS variants (per book)
+├── dict/
+│   ├── words.json                   # Full dictionary
+│   ├── roots.json                   # Root definitions
+│   └── custom_definitions.json      # Custom definitions
+├── prefixes.json                    # All prefixes (4KB)
+├── translit/{book}.json             # Transliterations (per book)
+└── bundles/
+    ├── versions.json                # Bundle version tracking
+    ├── tanaj.json                   # OE/Masoretic bundle
+    ├── besorah.json                 # Delitzsch bundle
+    ├── tth.json                     # TTH Spanish bundle
+    ├── dictionary.json              # Dictionary bundle
+    └── dss.json                     # DSS bundle
+```
+
+### Supabase TS2009 Access
+- Bucket: `ts2009`
+- Files: `{book}/{chapter}/{verse}.json`
+- Access: Via `@supabase/supabase-js` with anon key
+
+## 🧪 Testing Data Access
+
+### 1. Test Static Data
 
 ```bash
-cd backend
-uvicorn app.main:app --reload --host 0.0.0.0 --port 2220
+# Test metadata
+curl https://davar.bible/data/metadata.json
+
+# Test a Hebrew chapter (Genesis 1)
+curl https://davar.bible/data/oe/genesis/1.json
+
+# Test Spanish translation (Genesis)
+curl https://davar.bible/data/tth/genesis.json
+
+# Test dictionary
+curl https://davar.bible/data/dict/words.json
 ```
 
-You should see:
-```
-INFO:     Uvicorn running on http://0.0.0.0:2220 (Press CTRL+C to quit)
-INFO:     Application startup complete.
-```
-
-### 2. API Base URL
-```
-http://localhost:2220
-```
-
-### 3. Authentication
-
-All `/api/v1/*` endpoints require an API key in the `X-API-Key` header. Set your API key as an environment variable before running the examples:
+### 2. Test Bundle Downloads
 
 ```bash
-# Method 1: Set directly (simplest)
-export API_KEY="your-api-key-here"
+# Test bundle versions
+curl https://davar.bible/data/bundles/versions.json
+
+# Test a bundle download
+curl https://davar.bible/data/bundles/tanaj.json
 ```
 
-Or load it from your `.env` file (if it exists):
+### 3. Test Supabase TS2009 (requires anon key)
+
+```javascript
+import { createClient } from '@supabase/supabase-js'
+
+const supabase = createClient(
+  process.env.PUBLIC_SUPABASE_URL,
+  process.env.PUBLIC_SUPABASE_ANON_KEY
+)
+
+// Download TS2009 verse
+const { data } = await supabase.storage
+  .from('ts2009')
+  .download('genesis/1/1.json')
+```
+
+## 🔧 Development
+
+### Generating Static Data
 ```bash
-# Method 2: Load from .env file in backend directory
-# If you're in the project root:
-if [ -f backend/.env ]; then
-  export API_KEY=$(grep DAVAR_API_KEY backend/.env | cut -d '=' -f2)
-fi
-
-# If you're already in the backend directory:
-if [ -f .env ]; then
-  export API_KEY=$(grep DAVAR_API_KEY .env | cut -d '=' -f2)
-fi
+# From project root
+bun run generate-data
 ```
 
-**Note:** The `.env` file must exist in the `backend/` directory. If it doesn't exist, use Method 1 above or create it first (see "Generating Secure API Keys" below).
+This generates all static JSON files to `web/public/data/`.
 
-All examples below use `$API_KEY` environment variable instead of hardcoding the key.
+### Web App Development
+```bash
+cd web
+bun run dev
+```
+
+### Mobile App Development
+```bash
+cd mobile
+bun run start
+```
+
+## 📝 Migration Notes
+
+- **Backend Archived:** Original FastAPI backend moved to `archive/backend/`
+- **No API Keys:** Public data requires no authentication
+- **TS2009 Only:** Requires Supabase anon key for licensed content
+- **Caching:** Web app caches static data in memory for performance
+- **Offline First:** Mobile app downloads bundles for offline use
+
+---
+
+*This guide replaces the previous FastAPI backend testing guide.*
 
 #### 🔐 Generating Secure API Keys
 

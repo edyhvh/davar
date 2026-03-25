@@ -65,3 +65,9 @@ Join our community of developers creating universal apps.
 - If you ever need to force Bun explicitly: `bun expo start --bun`
 - Bun is usually 4–25× faster than npm for installs, so you'll notice the difference right away.
 
+## Formatting
+
+- This repository uses Biome as the formatter/linter source of truth for JS/TS files.
+- Use `bunx biome format --write .` from this `mobile/` directory when you want to format files manually.
+- Prettier is intentionally not configured at project level in this workspace.
+

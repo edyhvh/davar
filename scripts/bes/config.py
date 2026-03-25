@@ -156,7 +156,7 @@ BOOK_METADATA = {
     "John2": {"section": "besorah", "order": 63, "chapters": 1, "hebrew_name": "יוחנן ב", "hebrew_transliteration": "Yojanan Bet", "spanish_name": "Juan 2"},
     "John3": {"section": "besorah", "order": 64, "chapters": 1, "hebrew_name": "יוחנן ג", "hebrew_transliteration": "Yojanan Gimel", "spanish_name": "Juan 3"},
     "Jude": {"section": "besorah", "order": 65, "chapters": 1, "hebrew_name": "יהודה", "hebrew_transliteration": "Yehudah", "spanish_name": "Judas"},
-    "Revelation": {"section": "besorah", "order": 66, "chapters": 22, "hebrew_name": "התגלות יוחנן", "hebrew_transliteration": "Sodot", "spanish_name": "Apocalipsis"}
+    "Revelation": {"section": "besorah", "order": 66, "chapters": 22, "hebrew_name": "סודות", "hebrew_transliteration": "Sodot", "spanish_name": "Apocalipsis"}
 }
 
 # Reverse mapping for convenience

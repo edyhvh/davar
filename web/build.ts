@@ -2,6 +2,20 @@ import tailwind from "bun-plugin-tailwind";
 import { join } from "path";
 import { cpSync, existsSync, readFileSync, writeFileSync } from "fs";
 
+const generation = Bun.spawnSync([
+  "bun",
+  "../scripts/generate-static-data/index.ts",
+], {
+  cwd: import.meta.dir,
+  stdout: "inherit",
+  stderr: "inherit",
+});
+
+if (generation.exitCode !== 0) {
+  console.error("Static data generation failed.");
+  process.exit(generation.exitCode ?? 1);
+}
+
 const result = await Bun.build({
   entrypoints: ["./index.html"],
   outdir: "./dist",

@@ -38,7 +38,7 @@ import {
   removeSofPasukForDisplay,
   splitLeadingHebrewCluster,
 } from "@/src/utils/hebrew";
-import { apiRequest } from "@/src/services/api";
+import { staticDataRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
 import { useTranslation } from "@/src/i18n/useTranslation";
 import { fetchLexiconEntry, fetchPrefixEntry } from "@/src/services/database";
@@ -82,6 +82,165 @@ type WordAnalysisBottomSheetProps = {
 };
 
 type TabType = "masoretic" | "qumran" | "instances";
+
+type StaticDictionaryDefinition = {
+  text_en?: string;
+  text_es?: string;
+  source?: string;
+};
+
+type StaticDictionaryEntry = {
+  strong_number?: string;
+  lemma?: string;
+  translit_en?: string;
+  translit_es?: string;
+  definitions?: StaticDictionaryDefinition[];
+  root_ref?: string;
+  root_strong?: string;
+  occurrences?: {
+    total?: number;
+    references?: string[];
+  };
+};
+
+type StaticCustomDefinition = {
+  strong_number?: string;
+  hebrew?: string;
+  transliteration_en?: string;
+  transliteration_es?: string;
+  definitions?: StaticDictionaryDefinition[];
+  root?: string;
+  root_strong?: string;
+  manual_instances?: string[];
+};
+
+type StaticDictionaryData = {
+  words: Record<string, StaticDictionaryEntry>;
+  roots: Record<string, StaticDictionaryEntry>;
+  custom: Record<string, StaticCustomDefinition>;
+};
+
+const normalizeStrongKey = (value: string): string =>
+  value.toUpperCase().replace(/\s+/g, "");
+
+const resolveStrongKey = <T,>(
+  dictionary: Record<string, T>,
+  lookup: string,
+): string | null => {
+  if (lookup in dictionary) {
+    return lookup;
+  }
+
+  const target = normalizeStrongKey(lookup);
+  for (const key of Object.keys(dictionary)) {
+    if (normalizeStrongKey(key) === target) {
+      return key;
+    }
+  }
+
+  return null;
+};
+
+const mapStaticDefinitions = (
+  definitions: StaticDictionaryDefinition[] | undefined,
+  language: "en" | "es" | "he",
+) => {
+  const definitionLanguage = language === "es" ? "es" : "en";
+  return (definitions ?? [])
+    .map((definition) => {
+      const text =
+        definitionLanguage === "es"
+          ? (definition.text_es ?? definition.text_en)
+          : (definition.text_en ?? definition.text_es);
+      if (!text) {
+        return null;
+      }
+      return {
+        text,
+        source: definition.source ?? "static",
+        language: definitionLanguage,
+      };
+    })
+    .filter((value): value is { text: string; source: string; language: string } =>
+      value !== null,
+    );
+};
+
+const loadStaticDictionaryData = async (): Promise<StaticDictionaryData> => {
+  const [words, roots, custom] = await Promise.all([
+    staticDataRequest<Record<string, StaticDictionaryEntry>>("dict/words.json"),
+    staticDataRequest<Record<string, StaticDictionaryEntry>>("dict/roots.json"),
+    staticDataRequest<Record<string, StaticCustomDefinition>>(
+      "dict/custom_definitions.json",
+    ),
+  ]);
+
+  return { words, roots, custom };
+};
+
+const loadLexiconEntryFromStatic = async (
+  strong: string,
+  language: "en" | "es" | "he",
+): Promise<LexiconResponse | null> => {
+  const dictionary = await loadStaticDictionaryData();
+
+  const customKey = resolveStrongKey(dictionary.custom, strong);
+  if (customKey) {
+    const customEntry = dictionary.custom[customKey];
+    const rootStrong = customEntry.root_strong;
+    const rootKey = rootStrong
+      ? resolveStrongKey(dictionary.roots, rootStrong)
+      : null;
+    const rootEntry = rootKey ? dictionary.roots[rootKey] : undefined;
+
+    return {
+      strong_number: customEntry.strong_number ?? strong,
+      hebrew: customEntry.hebrew,
+      translit_en: customEntry.transliteration_en,
+      translit_es: customEntry.transliteration_es,
+      definitions: mapStaticDefinitions(customEntry.definitions, language),
+      root: customEntry.root ?? rootEntry?.lemma,
+      root_strong: rootStrong,
+      root_definitions: mapStaticDefinitions(rootEntry?.definitions, language),
+      occurrences_count: 0,
+      instances: customEntry.manual_instances ?? [],
+    };
+  }
+
+  const wordKey = resolveStrongKey(dictionary.words, strong);
+  if (!wordKey) {
+    return null;
+  }
+
+  const wordEntry = dictionary.words[wordKey];
+  const rootStrong = wordEntry.root_ref || wordEntry.root_strong;
+  const rootKey = rootStrong
+    ? resolveStrongKey(dictionary.roots, rootStrong)
+    : null;
+  const rootEntry = rootKey ? dictionary.roots[rootKey] : undefined;
+
+  return {
+    strong_number: wordEntry.strong_number ?? strong,
+    hebrew: wordEntry.lemma,
+    translit_en: wordEntry.translit_en,
+    translit_es: wordEntry.translit_es,
+    definitions: mapStaticDefinitions(wordEntry.definitions, language),
+    root: rootEntry?.lemma,
+    root_strong: rootStrong,
+    root_definitions: mapStaticDefinitions(rootEntry?.definitions, language),
+    occurrences_count: wordEntry.occurrences?.total ?? 0,
+    instances: wordEntry.occurrences?.references ?? [],
+  };
+};
+
+const loadPrefixEntryFromStatic = async (
+  prefixId: string,
+): Promise<PrefixResponse | null> => {
+  const prefixes = await staticDataRequest<Record<string, PrefixResponse>>(
+    "prefixes.json",
+  );
+  return prefixes[prefixId] ?? null;
+};
 
 const createStyles = (
   colors: ReturnType<typeof getColors>,
@@ -629,21 +788,10 @@ const WordAnalysisBottomSheetComponent = (
       }
       setIsLoading(true);
       try {
-        const params = new URLSearchParams();
-        if (language !== "he") {
-          params.set("language", language);
-        }
-        if (word?.text) {
-          params.set("hebrew", word.text);
-        }
-        const query = params.toString();
-        const url = query
-          ? `/api/v1/lexicon/${strongNumber}?${query}`
-          : `/api/v1/lexicon/${strongNumber}`;
-        const entry = await apiRequest<LexiconResponse>(url);
+        const entry = await loadLexiconEntryFromStatic(strongNumber, language);
         setLexiconEntry(entry);
       } catch {
-        // API failed — try offline SQLite fallback
+        // Static fetch failed — try offline SQLite fallback
         try {
           const offlineEntry = await fetchLexiconEntry(strongNumber);
           if (offlineEntry) {
@@ -684,21 +832,10 @@ const WordAnalysisBottomSheetComponent = (
       }
       setIsDssLoading(true);
       try {
-        const params = new URLSearchParams();
-        if (language !== "he") {
-          params.set("language", language);
-        }
-        if (word?.dssWord) {
-          params.set("hebrew", word.dssWord);
-        }
-        const query = params.toString();
-        const url = query
-          ? `/api/v1/lexicon/${dssStrongNumber}?${query}`
-          : `/api/v1/lexicon/${dssStrongNumber}`;
-        const entry = await apiRequest<LexiconResponse>(url);
+        const entry = await loadLexiconEntryFromStatic(dssStrongNumber, language);
         setDssLexiconEntry(entry);
       } catch {
-        // API failed — try offline SQLite fallback
+        // Static fetch failed — try offline SQLite fallback
         try {
           const offlineEntry = await fetchLexiconEntry(dssStrongNumber);
           if (offlineEntry) {
@@ -754,12 +891,10 @@ const WordAnalysisBottomSheetComponent = (
       await Promise.all(
         word.prefixes.map(async (prefixId) => {
           try {
-            const entry = await apiRequest<PrefixResponse>(
-              `/api/v1/prefixes/${prefixId}`,
-            );
+            const entry = await loadPrefixEntryFromStatic(prefixId);
             entries[prefixId] = entry;
           } catch {
-            // API failed — try offline SQLite fallback
+            // Static fetch failed — try offline SQLite fallback
             try {
               const offlineEntry = await fetchPrefixEntry(prefixId);
               entries[prefixId] = offlineEntry

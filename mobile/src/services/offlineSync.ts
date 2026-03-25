@@ -1,4 +1,4 @@
-import { apiRequest } from "@/src/services/api";
+import { staticBundleRequest } from "@/src/services/api";
 import {
   getBundleUpdatePlan,
   type BundleVersions,
@@ -154,7 +154,7 @@ type DssBundle = Record<string, DssBookData>;
 // ── Remote versions ────────────────────────────────────────────────────────
 
 export const fetchRemoteBundleVersions = async (): Promise<BundleVersions> => {
-  return apiRequest<BundleVersions>("/api/v1/export/versions");
+  return staticBundleRequest<BundleVersions>("versions");
 };
 
 export { getAllLocalBundleVersions };
@@ -246,9 +246,7 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
 export const downloadDictionaryBundle = async (remoteVersion?: number) => {
   await initializeDatabase();
   try {
-    const bundle = await apiRequest<DictionaryBundle>(
-      "/api/v1/export/bundle/dictionary",
-    );
+    const bundle = await staticBundleRequest<DictionaryBundle>("dictionary");
 
     // Insert lexicon entries
     const entries = buildLexiconEntries(bundle);
@@ -304,19 +302,20 @@ export const downloadTranslationBundle = async (
 ) => {
   await initializeDatabase();
 
+  // TS2009 is loaded per verse from Supabase, not as bundles, so we do not
+  // mark it as downloaded here; it remains online-only/streaming.
+  if (language === "en") {
+    return;
+  }
+
   const insertedBooks: string[] = [];
 
   try {
-    const dataset = language === "es" ? "tth" : "ts2009";
-    const bundle = await apiRequest<TranslationBundle>(
-      `/api/v1/export/bundle/${dataset}`,
-    );
+    const dataset = "tth"; // Only TTH for Spanish
+    const bundle = await staticBundleRequest<TranslationBundle>(dataset);
 
     for (const [bookId, bookData] of Object.entries(bundle.books ?? {})) {
-      const rows =
-        language === "es"
-          ? extractTthVerses(bookData as TthBookData)
-          : extractTs2009Verses(bookData as Ts2009BookData);
+      const rows = extractTthVerses(bookData as TthBookData);
 
       await insertTranslationVerses(rows, language, bookId);
       insertedBooks.push(bookId);
@@ -340,9 +339,7 @@ const downloadSingleHebrewBundle = async (
   dataset: "tanaj" | "besorah",
   remoteVersion?: number,
 ) => {
-  const bundle = await apiRequest<HebrewBundle>(
-    `/api/v1/export/bundle/${dataset}`,
-  );
+  const bundle = await staticBundleRequest<HebrewBundle>(dataset);
 
   const insertedBooks: string[] = [];
 
@@ -410,7 +407,7 @@ export const downloadDssBundle = async (remoteVersion?: number) => {
   await initializeDatabase();
 
   try {
-    const bundle = await apiRequest<DssBundle>("/api/v1/export/bundle/dss");
+    const bundle = await staticBundleRequest<DssBundle>("dss");
 
     const allVariants: {
       book: string;

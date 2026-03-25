@@ -26,17 +26,12 @@ import {
   getChapterVerses,
   getVerseCount,
   lookupBook,
+  loadLexiconEntry,
   type BookResponse,
   type VerseResponse,
   type WordResponse,
-} from "./services/verseService";
-import { warmUpApiConnection } from "./services/apiClient";
-import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
-import { stripCantillation, stripMeteg } from "./utils/hebrew";
-import {
-  getWordAnalysisByStrong,
   type WordAnalysis,
-} from "./services/lexiconService";
+} from "./services/staticData";
 import {
   usePersistedState,
   usePersistedBookPosition,
@@ -52,6 +47,8 @@ import type { ReadingStateV2 } from "./utils/storageHelpers";
 import { useTranslation } from "./hooks/useTranslation";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
 import { formatBookDisplayName } from "./utils/bookNameFormatter";
+import { stripCantillation, stripMeteg } from "./utils/hebrew";
+import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
 
 type Screen =
   | "home"
@@ -228,7 +225,6 @@ export default function App() {
   const [chapterCount, setChapterCount] = useState(1);
   const [verseCount, setVerseCount] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const [isServerWaking, setIsServerWaking] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [selectedWordAnalysis, setSelectedWordAnalysis] =
     useState<WordAnalysis | null>(null);
@@ -254,6 +250,16 @@ export default function App() {
       if (!word) return undefined;
       if (language === "en") return word.translit_en;
       if (language === "es") return word.translit_es;
+      return undefined;
+    },
+    [language],
+  );
+
+  const getAnalysisTransliterationForLanguage = useCallback(
+    (analysis?: WordAnalysis | null) => {
+      if (!analysis) return undefined;
+      if (language === "en") return analysis.translit_en;
+      if (language === "es") return analysis.translit_es;
       return undefined;
     },
     [language],
@@ -513,11 +519,6 @@ export default function App() {
         const resolved = await lookupBook(bookLabel);
         resolvedBookName = resolved.name;
       } catch (error) {
-        // Check if it's a network/connection error
-        if (error instanceof Error && error.name === "NetworkError") {
-          setCurrentScreen("connectionError");
-          return;
-        }
         console.error("Failed to normalize book label:", error);
       }
     }
@@ -591,11 +592,7 @@ export default function App() {
   useEffect(() => {
     let isMounted = true;
     const loadBooks = async () => {
-      setIsServerWaking(true);
       try {
-        await warmUpApiConnection({ timeoutMs: 3500 });
-        if (!isMounted) return;
-
         const response = await getBooks();
         if (!isMounted) return;
         setBooks(response);
@@ -611,15 +608,10 @@ export default function App() {
         }
       } catch (error) {
         if (!isMounted) return;
-        // Check if it's a network/connection error
         if (error instanceof Error && error.name === "NetworkError") {
           setCurrentScreen("connectionError");
         } else {
           setErrorMessage(t("errors.loadBooks"));
-        }
-      } finally {
-        if (isMounted) {
-          setIsServerWaking(false);
         }
       }
     };
@@ -702,7 +694,7 @@ export default function App() {
         }
       } catch (error) {
         if (!isMounted) return;
-        // Check if it's a network/connection error
+        console.error("Failed to load chapter data", error);
         if (error instanceof Error && error.name === "NetworkError") {
           setCurrentScreen("connectionError");
         } else {
@@ -823,10 +815,9 @@ export default function App() {
 
       setIsWordAnalysisLoading(true);
       try {
-        const analysis = await getWordAnalysisByStrong(
+        const analysis = await loadLexiconEntry(
           strongPart,
           language === "he" ? "en" : language,
-          selectedWord.text,
         );
         if (isMounted) {
           setSelectedWordAnalysis(analysis);
@@ -834,10 +825,7 @@ export default function App() {
         }
       } catch (error) {
         if (isMounted) {
-          // Check if it's a network/connection error
-          if (error instanceof Error && error.name === "NetworkError") {
-            setCurrentScreen("connectionError");
-          }
+          console.error("Failed to load word analysis", error);
           setSelectedWordAnalysis(null);
           setLastSelectedWordAnalysis(null);
           setIsWordAnalysisLoading(false);
@@ -875,10 +863,9 @@ export default function App() {
 
       setIsDssAnalysisLoading(true);
       try {
-        const analysis = await getWordAnalysisByStrong(
+        const analysis = await loadLexiconEntry(
           strongPart,
           language === "he" ? "en" : language,
-          selectedDssVariant?.dss_word ?? selectedWord?.text,
         );
         if (isMounted) {
           setSelectedDssAnalysis(analysis);
@@ -886,10 +873,7 @@ export default function App() {
         }
       } catch (error) {
         if (isMounted) {
-          // Check if it's a network/connection error
-          if (error instanceof Error && error.name === "NetworkError") {
-            setCurrentScreen("connectionError");
-          }
+          console.error("Failed to load DSS analysis", error);
           setSelectedDssAnalysis(null);
           setLastSelectedDssAnalysis(null);
           setIsDssAnalysisLoading(false);
@@ -907,34 +891,6 @@ export default function App() {
       setLastSelectedWord(selectedWord);
     }
   }, [selectedWord]);
-
-  // Monitor online/offline status for connection error handling
-  useEffect(() => {
-    const handleOnline = () => {
-      // When coming back online, if we're on connectionError screen, go to verse
-      if (currentScreen === "connectionError") {
-        setCurrentScreen("verse");
-      }
-    };
-
-    const handleOffline = () => {
-      // When going offline, show connection error page
-      setCurrentScreen("connectionError");
-    };
-
-    window.addEventListener("online", handleOnline);
-    window.addEventListener("offline", handleOffline);
-
-    // Check initial online status
-    if (!navigator.onLine) {
-      setCurrentScreen("connectionError");
-    }
-
-    return () => {
-      window.removeEventListener("online", handleOnline);
-      window.removeEventListener("offline", handleOffline);
-    };
-  }, [currentScreen]);
 
   useEffect(() => {
     if (selectedWordAnalysis) {
@@ -1076,6 +1032,27 @@ export default function App() {
     return () => media.removeEventListener("change", update);
   }, []);
 
+  // Online/offline event listeners
+  useEffect(() => {
+    const handleOnline = () => {
+      if (currentScreen === "connectionError") {
+        window.location.reload();
+      }
+    };
+
+    const handleOffline = () => {
+      setCurrentScreen("connectionError");
+    };
+
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, [currentScreen]);
+
   useEffect(() => {
     if (!isMobile) {
       wordSheetClosingRef.current = false;
@@ -1137,11 +1114,7 @@ export default function App() {
         setCurrentChapter(previousChapter);
         setCurrentVerse(previousVerseCount);
         return true;
-      } catch (error) {
-        // Check if it's a network/connection error
-        if (error instanceof Error && error.name === "NetworkError") {
-          setCurrentScreen("connectionError");
-        }
+      } catch {
         return false;
       }
     }
@@ -1214,11 +1187,6 @@ export default function App() {
     onNavigatePrevious: handlePreviousVerse,
     onNavigateFeedback: triggerScrollJump,
   });
-
-  const activeWordAnalysis = selectedWordAnalysis ?? lastSelectedWordAnalysis;
-
-  const wordMeanings =
-    activeWordAnalysis?.definitions?.map((item) => item.text) ?? [];
 
   return (
     <div
@@ -1347,33 +1315,7 @@ export default function App() {
 
           {currentScreen === "connectionError" && (
             <ConnectionErrorPage
-              language={language}
-              onRetry={async () => {
-                // Try to reload the data
-                try {
-                  setIsLoading(true);
-                  const response = await getBooks();
-                  setBooks(response);
-                  // If successful and we have books, go to verse screen
-                  if (response.length > 0) {
-                    // Always set to first book to ensure valid state
-                    setCurrentBook(response[0].name);
-                    setCurrentChapter(1);
-                    setCurrentVerse(1);
-                    setCurrentScreen("verse");
-                  } else {
-                    // If no books returned, stay on connection error page
-                    setCurrentScreen("connectionError");
-                  }
-                } catch (error) {
-                  // If still failing, stay on connection error page
-                  if (error instanceof Error && error.name === "NetworkError") {
-                    setCurrentScreen("connectionError");
-                  }
-                } finally {
-                  setIsLoading(false);
-                }
-              }}
+              onRetry={() => window.location.reload()}
             />
           )}
 
@@ -1454,7 +1396,7 @@ export default function App() {
                     />
                   ) : (
                     <NeumorphCard>
-                      {isLoading || isServerWaking ? (
+                      {isLoading ? (
                         <div className="mx-auto w-fit space-y-3">
                           <Skeleton className="h-3 w-56" />
                           <Skeleton className="h-3 w-56" />
@@ -1493,8 +1435,13 @@ export default function App() {
                       currentVerseData?.dss?.find(
                         (variant) => variant.position === wordForCard?.position,
                       ) ?? null;
+                    const wordMeanings =
+                      wordAnalysisForCard?.definitions?.map(
+                        (item) => item.text,
+                      ) ?? [];
                     const wordTransliteration =
-                      getTransliterationForLanguage(wordForCard);
+                      getTransliterationForLanguage(wordForCard) ??
+                      getAnalysisTransliterationForLanguage(wordAnalysisForCard);
                     const qumranTransliteration = dssAnalysisForCard
                       ? language === "en"
                         ? dssAnalysisForCard.translit_en
@@ -1546,9 +1493,7 @@ export default function App() {
                           </div>
                         ) : wordForCard && isWordPanelVisible ? (
                           <WordCard
-                            word={
-                              wordAnalysisForCard?.hebrew ?? wordForCard.text
-                            }
+                            word={wordForCard.text}
                             wordFromVerse={wordForCard.text}
                             strongNumber={wordAnalysisForCard?.strong_number}
                             qumranWord={dssVariantForCard?.dss_word}
@@ -1691,9 +1636,15 @@ export default function App() {
                   : undefined
               : undefined;
 
+            const selectedWordMeanings =
+              selectedWordAnalysis?.definitions?.map((item) => item.text) ?? [];
+            const selectedWordTransliteration =
+              getTransliterationForLanguage(selectedWord) ??
+              getAnalysisTransliterationForLanguage(selectedWordAnalysis);
+
             return (
               <WordCard
-                word={selectedWordAnalysis?.hebrew ?? selectedWord.text}
+                word={selectedWord.text}
                 wordFromVerse={selectedWord.text}
                 strongNumber={selectedWordAnalysis?.strong_number}
                 qumranWord={dssVariantForCard?.dss_word}
@@ -1716,8 +1667,8 @@ export default function App() {
                 qumranRootStrongNumber={selectedDssAnalysis?.root_strong}
                 hasQumranVariant={hasQumranVariant}
                 showQumran={showQumran}
-                transliteration={getTransliterationForLanguage(selectedWord)}
-                meanings={wordMeanings}
+                transliteration={selectedWordTransliteration}
+                meanings={selectedWordMeanings}
                 root={selectedWordAnalysis?.root}
                 rootTransliteration={
                   language === "en"
@@ -1743,7 +1694,7 @@ export default function App() {
                 onInstanceClick={handleNavigateToVerse}
                 tabResetKey={wordCardTabKey}
                 onClose={closeWordSheet}
-                isLoading={!selectedWordAnalysis}
+                isLoading={Boolean(selectedWord && isWordAnalysisLoading)}
                 isQumranLoading={Boolean(isDssAnalysisLoading)}
                 isBesorah={isBesorah}
               />

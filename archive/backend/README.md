@@ -1,4 +1,12 @@
-# Davar FastAPI Backend
+# Davar FastAPI Backend (ARCHIVED)
+
+**Status:** This backend has been eliminated as part of the static data migration. All functionality moved to static JSON files served from Cloudflare Pages + Supabase Storage for TS2009.
+
+**Archived Date:** March 2025
+
+**Reason:** Eliminated to reduce infrastructure complexity and costs. Replaced with serverless static data architecture.
+
+---
 
 A secure FastAPI backend for serving Hebrew Scripture text, translations, lexicon data, and DSS variants from JSON files.
 

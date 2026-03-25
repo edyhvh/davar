@@ -1,41 +1,57 @@
-import { Platform } from "react-native";
 import type { BookResponse } from "@/src/types/api";
 
-const DEFAULT_API_URL =
-  Platform.select({
-    android: "http://10.0.2.2:2220",
-    default: "http://localhost:2220",
-  }) ?? "http://localhost:2220";
+const STATIC_BUNDLES_BASE_URL =
+  process.env.EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL ||
+  "https://davar.bible/data/bundles";
+const STATIC_DATA_BASE_URL =
+  process.env.EXPO_PUBLIC_STATIC_DATA_BASE_URL || "https://davar.bible/data";
 
-const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL || DEFAULT_API_URL;
-const API_KEY = process.env.EXPO_PUBLIC_API_KEY;
+const staticDataCache = new Map<string, unknown>();
 
-export const apiRequest = async <T>(
-  endpoint: string,
-  options: RequestInit = {},
+export const getBooks = async (): Promise<BookResponse[]> => {
+  const metadata = await staticDataRequest<{ books: BookResponse[] }>(
+    "metadata.json",
+  );
+  return metadata.books;
+};
+
+export const staticDataRequest = async <T>(
+  relativePath: string,
 ): Promise<T> => {
-  if (!API_KEY) {
-    console.warn(
-      "EXPO_PUBLIC_API_KEY is not set; sending request without X-API-Key header.",
+  const normalizedPath = relativePath.replace(/^\/+/, "");
+  const cacheKey = normalizedPath;
+
+  if (staticDataCache.has(cacheKey)) {
+    return staticDataCache.get(cacheKey) as T;
+  }
+
+  const response = await fetch(
+    `${STATIC_DATA_BASE_URL}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`,
+  );
+
+  if (!response.ok) {
+    throw new Error(
+      `Static data request failed for ${normalizedPath} with status ${response.status}`,
     );
   }
 
-  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-    ...options,
-    headers: {
-      "Content-Type": "application/json",
-      ...(API_KEY ? { "X-API-Key": API_KEY } : {}),
-      ...options.headers,
-    },
-  });
+  const parsed = (await response.json()) as T;
+  staticDataCache.set(cacheKey, parsed as unknown);
+  return parsed;
+};
+
+export const staticBundleRequest = async <T>(
+  bundleName: string,
+): Promise<T> => {
+  const response = await fetch(
+    `${STATIC_BUNDLES_BASE_URL}/${encodeURIComponent(bundleName)}.json`,
+  );
 
   if (!response.ok) {
-    throw new Error(`API request failed with status ${response.status}`);
+    throw new Error(
+      `Static bundle request failed for ${bundleName} with status ${response.status}`,
+    );
   }
 
   return response.json() as Promise<T>;
-};
-
-export const getBooks = async (): Promise<BookResponse[]> => {
-  return apiRequest<BookResponse[]>("/api/v1/books");
 };

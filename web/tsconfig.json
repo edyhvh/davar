@@ -10,7 +10,8 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@davar/shared/*": ["../shared/*"]
     },
     "skipLibCheck": true
   },

@@ -1,50 +1,38 @@
-# Cloudflare Deployment Guide
+# Cloudflare Pages Deployment Guide
 
-This guide explains how to deploy the Davar web frontend to Cloudflare Pages on the free tier, using:
+This guide explains how to deploy the Davar web frontend to Cloudflare Pages on the free tier.
 
-- Custom domain from day one
-- Cloudflare Pages API proxy for same-origin calls and edge caching
-- Render as backend origin
+## ✅ Updated Architecture (Post-Migration)
 
----
+**Status:** Backend eliminated. Now a pure static site with:
+- Static JSON data served from Cloudflare Pages
+- TS2009 licensed content from Supabase Storage
+- No backend server required
 
-## 1. Architecture You Are Deploying
+### New Flow:
+1. Browser loads frontend from Cloudflare Pages
+2. Frontend fetches static JSON data from same origin (`/data/`)
+3. TS2009 requests go to Supabase Storage
+4. Everything served via Cloudflare's global CDN
 
-Flow:
-
-1. Browser loads frontend from your custom domain on Cloudflare Pages
-2. Frontend requests `/api/...` on the same origin
-3. Cloudflare Pages Function proxies to Render origin
-4. Cloudflare edge caches cacheable read endpoints
-
-Why this is better for cold-start impact:
-
-- Same-origin API requests (no browser CORS friction)
-- Edge cache serves repeated read traffic while origin is sleeping
-- Reduces user-visible impact of Render wake latency
-
-Free tier support:
-
-- Cloudflare Pages hosting: yes
-- Custom domain: yes
-- SSL: yes
-- Bot Fight Mode: yes
-- Basic rate limiting: yes
+### Benefits:
+- **Zero cold starts** - no server to wake up
+- **Global CDN** - instant worldwide loading
+- **Free tier** - unlimited bandwidth for static content
+- **No API proxy** - direct static file serving
 
 ---
 
-## 2. Cloudflare Navigation (Important)
+## 1. Cloudflare Navigation
 
 Cloudflare has two relevant areas:
 
 - **Workers & Pages**: deployment, build config, environment variables, custom domain for Pages project
-- **Zone Dashboard** (the menu with DNS, SSL/TLS, Security, Rules): domain-level DNS and security controls
-
-If you only see DNS/SSL/Security, you are in the Zone dashboard, not the Pages deployment view.
+- **Zone Dashboard**: domain-level DNS and security controls
 
 ---
 
-## 3. Create the Pages Project
+## 2. Create the Pages Project
 
 1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
 2. Open **Workers & Pages**
@@ -61,43 +49,39 @@ If you only see DNS/SSL/Security, you are in the Zone dashboard, not the Pages d
 
 ---
 
-## 4. Configure Pages Environment Variables
+## 3. Configure Pages Environment Variables
 
 In your Pages project settings, add production environment variables:
 
 ```bash
-PUBLIC_API_BASE_URL=/api
-PUBLIC_API_KEY=your_api_key_value
+PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 PUBLIC_NODE_ENV=production
-BACKEND_API_ORIGIN=https://davar.onrender.com
 ```
 
 Notes:
-
-- `PUBLIC_API_BASE_URL=/api` sends frontend API traffic through Cloudflare Pages Function.
-- Keep API key value aligned with backend expected key.
-- These values are applied at build time.
-- `BACKEND_API_ORIGIN` is used by the Pages Function at runtime.
+- Supabase credentials are required for TS2009 access
+- These values are applied at build time
+- No backend API configuration needed
 
 ---
 
-## 5. Add Custom Domain (Now)
+## 4. Add Custom Domain
 
 1. In Pages project, open **Custom domains**
-2. Add your domain (example: `app.yourdomain.com`)
+2. Add your domain (example: `davar.bible`)
 3. Complete DNS prompts until status is active
-
-Once active, use this exact HTTPS origin in backend CORS.
 
 ---
 
-## 6. API Proxy (Implemented)
+## 5. Data Serving
 
-Pages Function route:
+Static data is automatically served from `/data/` paths on your domain. No additional configuration needed.
 
-- `web/functions/api/[[path]].ts`
-
-Behavior:
+**Example URLs:**
+- `https://davar.bible/data/metadata.json`
+- `https://davar.bible/data/oe/genesis/1.json`
+- `https://davar.bible/data/tth/genesis.json`
 
 - Proxies `/api/*` requests to `BACKEND_API_ORIGIN`
 - Caches selected GET/HEAD endpoints at the edge

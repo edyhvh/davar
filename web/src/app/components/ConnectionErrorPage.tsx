@@ -1,56 +1,26 @@
 import React from "react";
-import { RefreshCw, WifiOff } from "lucide-react";
-import { useTranslation, type AppLanguage } from "../hooks/useTranslation";
+import { WifiOff } from "lucide-react";
 
 interface ConnectionErrorPageProps {
-  language: AppLanguage;
   onRetry?: () => void;
 }
 
-export function ConnectionErrorPage({
-  language,
-  onRetry,
-}: ConnectionErrorPageProps) {
-  const { t } = useTranslation(language);
-
+export function ConnectionErrorPage({ onRetry }: ConnectionErrorPageProps) {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center">
-      <div className="text-center px-6">
-        {/* Icon */}
-        <div className="mb-6 flex justify-center">
-          <WifiOff className="w-12 h-12 text-[var(--copper-highlight)]" />
-        </div>
-
-        {/* Title */}
-        <h1
-          className="text-xl mb-4 text-[var(--text-primary)]"
-          style={{ fontFamily: "'Jost', sans-serif" }}
+    <div className="flex min-h-screen flex-col items-center justify-center p-4 text-center">
+      <WifiOff className="mb-4 h-16 w-16 text-gray-400" />
+      <h1 className="mb-2 text-2xl font-bold">Connection Error</h1>
+      <p className="mb-6 max-w-md text-gray-600">
+        Unable to load content. Please check your internet connection and try again.
+      </p>
+      {onRetry && (
+        <button
+          onClick={onRetry}
+          className="rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-700"
         >
-          {t("errors.connection.title")}
-        </h1>
-
-        {/* Message */}
-        <p
-          className="text-sm text-[var(--text-secondary)] mb-6"
-          style={{ fontFamily: "'Arimo', sans-serif" }}
-        >
-          {t("errors.connection.message")}
-        </p>
-
-        {/* Action Buttons */}
-        <div className="flex items-center justify-center gap-3">
-          {onRetry && (
-            <button
-              onClick={onRetry}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] transition-colors"
-              style={{ fontFamily: "'Jost', sans-serif" }}
-            >
-              <RefreshCw className="w-4 h-4" />
-              {t("errors.connection.retry")}
-            </button>
-          )}
-        </div>
-      </div>
+          Retry
+        </button>
+      )}
     </div>
   );
 }
