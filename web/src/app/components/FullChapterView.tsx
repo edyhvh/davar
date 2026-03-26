@@ -113,8 +113,6 @@ export function FullChapterView({
               variantText
                 ? {
                     color: "var(--text-hebrew)",
-                    textDecoration: "underline",
-                    textDecorationThickness: "1px",
                   }
                 : undefined
             }

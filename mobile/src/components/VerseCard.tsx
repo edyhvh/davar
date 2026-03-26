@@ -128,7 +128,6 @@ const createStyles = (
       fontSize: typography.sizes.hebrewVerseMedium * hebrewScale * 1.9,
       lineHeight: typography.sizes.hebrewVerseMedium * hebrewScale * 1.5,
       color: colors.textPrimary,
-      textDecorationLine: "underline",
     },
     hebrewWordPressable: {
       paddingHorizontal: spacing[2],

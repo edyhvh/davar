@@ -190,8 +190,6 @@ export function VerseDisplay({
                     display: "inline-block",
                     verticalAlign: "middle",
                     transform: `translateY(${dssInlineBaselineShift})`,
-                    textDecoration: "underline",
-                    textDecorationThickness: "1px",
                   }
                 : undefined
             }
