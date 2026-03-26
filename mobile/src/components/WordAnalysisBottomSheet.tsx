@@ -85,6 +85,7 @@ type WordAnalysisBottomSheetProps = {
 type TabType = "masoretic" | "qumran" | "instances";
 
 type StaticDictionaryDefinition = {
+  text?: string;
   text_en?: string;
   text_es?: string;
   source?: string;
@@ -95,6 +96,8 @@ type StaticDictionaryEntry = {
   lemma?: string;
   translit_en?: string;
   translit_es?: string;
+  transliteration_en?: string;
+  transliteration_es?: string;
   definitions?: StaticDictionaryDefinition[];
   root_ref?: string;
   root_strong?: string;
@@ -151,8 +154,8 @@ const mapStaticDefinitions = (
     .map((definition) => {
       const text =
         definitionLanguage === "es"
-          ? (definition.text_es ?? definition.text_en)
-          : (definition.text_en ?? definition.text_es);
+          ? (definition.text_es ?? definition.text_en ?? definition.text)
+          : (definition.text_en ?? definition.text_es ?? definition.text);
       if (!text) {
         return null;
       }
@@ -165,6 +168,26 @@ const mapStaticDefinitions = (
     .filter((value): value is { text: string; source: string; language: string } =>
       value !== null,
     );
+};
+
+const mergeUniqueDefinitions = (
+  ...groups: Array<Array<{ text: string; source: string; language: string }>>
+): Array<{ text: string; source: string; language: string }> => {
+  const seen = new Set<string>();
+  const merged: Array<{ text: string; source: string; language: string }> = [];
+
+  for (const group of groups) {
+    for (const definition of group) {
+      const key = `${definition.source}:${definition.text.toLowerCase()}`;
+      if (seen.has(key)) {
+        continue;
+      }
+      seen.add(key);
+      merged.push(definition);
+    }
+  }
+
+  return merged;
 };
 
 const loadStaticDictionaryData = async (): Promise<StaticDictionaryData> => {
@@ -186,51 +209,88 @@ const loadLexiconEntryFromStatic = async (
   const dictionary = await loadStaticDictionaryData();
 
   const customKey = resolveStrongKey(dictionary.custom, strong);
-  if (customKey) {
-    const customEntry = dictionary.custom[customKey];
-    const rootStrong = customEntry.root_strong;
-    const rootKey = rootStrong
-      ? resolveStrongKey(dictionary.roots, rootStrong)
-      : null;
-    const rootEntry = rootKey ? dictionary.roots[rootKey] : undefined;
-
-    return {
-      strong_number: customEntry.strong_number ?? strong,
-      hebrew: customEntry.hebrew,
-      translit_en: customEntry.transliteration_en,
-      translit_es: customEntry.transliteration_es,
-      definitions: mapStaticDefinitions(customEntry.definitions, language),
-      root: customEntry.root ?? rootEntry?.lemma,
-      root_strong: rootStrong,
-      root_definitions: mapStaticDefinitions(rootEntry?.definitions, language),
-      occurrences_count: 0,
-      instances: customEntry.manual_instances ?? [],
-    };
-  }
+  const customEntry = customKey ? dictionary.custom[customKey] : undefined;
 
   const wordKey = resolveStrongKey(dictionary.words, strong);
-  if (!wordKey) {
+  const rootDictionaryKey = resolveStrongKey(dictionary.roots, strong);
+  const dictionaryEntry = wordKey
+    ? dictionary.words[wordKey]
+    : rootDictionaryKey
+      ? dictionary.roots[rootDictionaryKey]
+      : undefined;
+
+  if (!customEntry && !dictionaryEntry) {
     return null;
   }
 
-  const wordEntry = dictionary.words[wordKey];
-  const rootStrong = wordEntry.root_ref || wordEntry.root_strong;
-  const rootKey = rootStrong
-    ? resolveStrongKey(dictionary.roots, rootStrong)
-    : null;
-  const rootEntry = rootKey ? dictionary.roots[rootKey] : undefined;
+  const rootStrong =
+    customEntry?.root_strong ??
+    dictionaryEntry?.root_ref ??
+    dictionaryEntry?.root_strong;
+
+  const rootEntry = rootStrong
+    ? (() => {
+        const rootKey = resolveStrongKey(dictionary.roots, rootStrong);
+        if (rootKey) {
+          return dictionary.roots[rootKey] as
+            | StaticDictionaryEntry
+            | StaticCustomDefinition;
+        }
+        const wordRootKey = resolveStrongKey(dictionary.words, rootStrong);
+        if (wordRootKey) {
+          return dictionary.words[wordRootKey] as
+            | StaticDictionaryEntry
+            | StaticCustomDefinition;
+        }
+        const customRootKey = resolveStrongKey(dictionary.custom, rootStrong);
+        if (customRootKey) {
+          return dictionary.custom[customRootKey] as
+            | StaticDictionaryEntry
+            | StaticCustomDefinition;
+        }
+        return undefined;
+      })()
+    : undefined;
+
+  const dictionaryDefinitions = mapStaticDefinitions(
+    dictionaryEntry?.definitions,
+    language,
+  );
+  const customDefinitions = mapStaticDefinitions(customEntry?.definitions, language);
+  const definitions = mergeUniqueDefinitions(customDefinitions, dictionaryDefinitions);
+
+  const occurrenceReferences = dictionaryEntry?.occurrences?.references ?? [];
+  const manualInstances = customEntry?.manual_instances ?? [];
+  const instances = [...manualInstances, ...occurrenceReferences];
+  const hasManualInstances = manualInstances.length > 0;
+
+  const rootText = rootEntry
+    ? "lemma" in rootEntry
+      ? rootEntry.lemma
+      : "hebrew" in rootEntry
+        ? rootEntry.hebrew
+        : undefined
+    : undefined;
 
   return {
-    strong_number: wordEntry.strong_number ?? strong,
-    hebrew: wordEntry.lemma,
-    translit_en: wordEntry.translit_en,
-    translit_es: wordEntry.translit_es,
-    definitions: mapStaticDefinitions(wordEntry.definitions, language),
-    root: rootEntry?.lemma,
+    strong_number: customEntry?.strong_number ?? dictionaryEntry?.strong_number ?? strong,
+    hebrew: customEntry?.hebrew ?? dictionaryEntry?.lemma,
+    translit_en:
+      customEntry?.transliteration_en ??
+      dictionaryEntry?.translit_en ??
+      dictionaryEntry?.transliteration_en,
+    translit_es:
+      customEntry?.transliteration_es ??
+      dictionaryEntry?.translit_es ??
+      dictionaryEntry?.transliteration_es,
+    definitions,
+    root: customEntry?.root ?? rootText,
     root_strong: rootStrong,
     root_definitions: mapStaticDefinitions(rootEntry?.definitions, language),
-    occurrences_count: wordEntry.occurrences?.total ?? 0,
-    instances: wordEntry.occurrences?.references ?? [],
+    occurrences_count: hasManualInstances
+      ? instances.length
+      : (dictionaryEntry?.occurrences?.total ?? instances.length),
+    instances,
   };
 };
 
@@ -709,9 +769,9 @@ const WordAnalysisBottomSheetComponent = (
 
     const masoreticTranslit =
       language === "en"
-        ? word?.translit_en
+        ? (word?.translit_en ?? lexiconEntry?.translit_en)
         : language === "es"
-          ? word?.translit_es
+          ? (word?.translit_es ?? lexiconEntry?.translit_es)
           : undefined;
 
     if (activeTab === "qumran") {
@@ -732,6 +792,8 @@ const WordAnalysisBottomSheetComponent = (
     language,
     word?.translit_en,
     word?.translit_es,
+    lexiconEntry?.translit_en,
+    lexiconEntry?.translit_es,
     dssLexiconEntry?.translit_en,
     dssLexiconEntry?.translit_es,
     strongNumber,
