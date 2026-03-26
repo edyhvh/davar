@@ -6,14 +6,14 @@ This guide explains how to deploy the Davar web frontend to Cloudflare Pages on 
 
 **Status:** Backend eliminated. Now a pure static site with:
 - Static JSON data served from Cloudflare Pages
-- TS2009 licensed content from Supabase Storage
+- TS2009 exported at build-time into static JSON
 - No backend server required
 
 ### New Flow:
 1. Browser loads frontend from Cloudflare Pages
 2. Frontend fetches static JSON data from same origin (`/data/`)
-3. TS2009 requests go to Supabase Storage
-4. Everything served via Cloudflare's global CDN
+3. Cloudflare build pulls TS2009 from Supabase using service role secret
+4. TS2009 is served from `/data/ts2009/...` via Cloudflare CDN
 
 ### Benefits:
 - **Zero cold starts** - no server to wake up
@@ -57,10 +57,14 @@ In your Pages project settings, add production environment variables:
 PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 PUBLIC_NODE_ENV=production
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 ```
 
 Notes:
-- Supabase credentials are required for TS2009 access
+- `SUPABASE_SERVICE_ROLE_KEY` is build-time only and must never be public
+- `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` enable TS2009 static export at build time
+- Public Supabase vars can remain for fallback compatibility, but web should primarily read `/data/ts2009/*`
 - These values are applied at build time
 - No backend API configuration needed
 
@@ -82,6 +86,7 @@ Static data is automatically served from `/data/` paths on your domain. No addit
 - `https://davar.bible/data/metadata.json`
 - `https://davar.bible/data/oe/genesis/1.json`
 - `https://davar.bible/data/tth/genesis.json`
+- `https://davar.bible/data/ts2009/genesis/1.json`
 
 - Proxies `/api/*` requests to `BACKEND_API_ORIGIN`
 - Caches selected GET/HEAD endpoints at the edge

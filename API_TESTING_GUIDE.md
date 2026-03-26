@@ -45,7 +45,8 @@ https://davar.bible/data/
 ├── translit/{book}.json             # Transliterations (per book)
 └── bundles/
     ├── versions.json                # Bundle version tracking
-    ├── tanaj.json                   # OE/Masoretic bundle
+    ├── tanaj.json                   # OE split index (book list + checksums)
+    ├── tanaj/{book}.json            # OE/Masoretic per-book bundles
     ├── besorah.json                 # Delitzsch bundle
     ├── tth.json                     # TTH Spanish bundle
     ├── dictionary.json              # Dictionary bundle
@@ -81,9 +82,37 @@ curl https://davar.bible/data/dict/words.json
 # Test bundle versions
 curl https://davar.bible/data/bundles/versions.json
 
-# Test a bundle download
+# Test Tanaj split index
 curl https://davar.bible/data/bundles/tanaj.json
+
+# Test a Tanaj per-book bundle
+curl https://davar.bible/data/bundles/tanaj/genesis.json
 ```
+
+### 2.1 Diagnose HTML Instead of JSON
+
+If any `/data/...json` endpoint returns HTML (`<!doctype html>`) with status `200`, the site is serving SPA fallback instead of static data files.
+
+Quick check:
+
+```bash
+curl -i https://davar.bible/data/metadata.json | head -n 20
+```
+
+Expected:
+- `Content-Type: application/json` (or similar JSON type)
+- Body starts with `{` or `[`.
+
+Failure signature:
+- `Content-Type: text/html`
+- Body starts with `<!doctype html>`.
+
+When this happens, verify Cloudflare Pages project settings:
+- Root directory is `web`
+- Build command is `bun run build:prod`
+- Build output directory is `dist`
+- The latest deployment includes `dist/data/metadata.json`
+- Custom domain `davar.bible` points to that same Pages project/deployment
 
 ### 3. Test Supabase TS2009 (requires anon key)
 

@@ -48,6 +48,7 @@ import { useTranslation } from "./hooks/useTranslation";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
 import { formatBookDisplayName } from "./utils/bookNameFormatter";
 import { stripCantillation, stripMeteg } from "./utils/hebrew";
+import { getDssCommentaryForLanguage } from "./utils/translationConfig";
 import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
 
 type Screen =
@@ -1449,19 +1450,10 @@ export default function App() {
                           ? dssAnalysisForCard.translit_es
                           : undefined
                       : undefined;
-                    const dssCommentary = dssVariantForCard
-                      ? language === "es"
-                        ? (dssVariantForCard.comment_v2_es ??
-                          dssVariantForCard.comment_v2_en ??
-                          dssVariantForCard.comment_v2_he)
-                        : language === "he"
-                          ? (dssVariantForCard.comment_v2_he ??
-                            dssVariantForCard.comment_v2_en ??
-                            dssVariantForCard.comment_v2_es)
-                          : (dssVariantForCard.comment_v2_en ??
-                            dssVariantForCard.comment_v2_es ??
-                            dssVariantForCard.comment_v2_he)
-                      : undefined;
+                    const dssCommentary = getDssCommentaryForLanguage(
+                      language,
+                      dssVariantForCard,
+                    );
                     const dssMeanings =
                       dssAnalysisForCard?.definitions?.map(
                         (item) => item.text,
@@ -1612,19 +1604,10 @@ export default function App() {
               currentVerseData?.dss?.find(
                 (variant) => variant.position === selectedWord.position,
               ) ?? null;
-            const dssCommentary = dssVariantForCard
-              ? language === "es"
-                ? (dssVariantForCard.comment_v2_es ??
-                  dssVariantForCard.comment_v2_en ??
-                  dssVariantForCard.comment_v2_he)
-                : language === "he"
-                  ? (dssVariantForCard.comment_v2_he ??
-                    dssVariantForCard.comment_v2_en ??
-                    dssVariantForCard.comment_v2_es)
-                  : (dssVariantForCard.comment_v2_en ??
-                    dssVariantForCard.comment_v2_es ??
-                    dssVariantForCard.comment_v2_he)
-              : undefined;
+            const dssCommentary = getDssCommentaryForLanguage(
+              language,
+              dssVariantForCard,
+            );
             const dssMeanings =
               selectedDssAnalysis?.definitions?.map((item) => item.text) ?? [];
             const hasQumranVariant = Boolean(dssVariantForCard);

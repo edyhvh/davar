@@ -23,6 +23,7 @@ import { useTranslation } from "../hooks/useTranslation";
 import {
   shouldHideSuperscripts,
   getTranslationKey,
+  shouldHideTranslationText,
 } from "../utils/translationConfig";
 
 interface VerseDisplayProps {
@@ -91,6 +92,7 @@ export function VerseDisplay({
   const { t } = useTranslation(language);
   const spanishMissingTranslation = t("verse.missingSpanishTranslation");
   const hideSuperscripts = shouldHideSuperscripts(getTranslationKey(language));
+  const hideTranslationText = shouldHideTranslationText(language, hebrewOnly);
   const dssInlineFontScale = "1.70em";
   const dssInlineBaselineShift = "-0.08em";
   // Function to render Hebrew text with DSS variants
@@ -270,7 +272,7 @@ export function VerseDisplay({
       </div>
 
       {/* Translation - Only show if not Hebrew Only mode */}
-      {!hebrewOnly && (
+      {!hideTranslationText && (
         <SwipeIndicator>
           <div
             className="text-center leading-relaxed px-4 transition-all duration-500 text-[var(--text-primary)]"
@@ -290,7 +292,7 @@ export function VerseDisplay({
 
       {(canNavigatePrevious || canNavigateNext) && (
         <div
-          className={`md:hidden flex items-center justify-center gap-3 px-4 ${hebrewOnly ? "mt-8" : "mt-4"}`}
+          className={`md:hidden flex items-center justify-center gap-3 px-4 ${hideTranslationText ? "mt-8" : "mt-4"}`}
         >
           {canNavigatePrevious && (
             <button

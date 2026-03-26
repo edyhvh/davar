@@ -10,6 +10,141 @@ import {
   WEB_PUBLIC_DATA_ROOT,
 } from "./config";
 
+type Ts2009BookPayload = {
+  chapters?: unknown;
+};
+
+type Ts2009BookVerse = {
+  number?: number;
+  verse?: number;
+  translation?: unknown;
+  text?: unknown;
+};
+
+type Ts2009ChapterFile = {
+  book: string;
+  chapter: number;
+  verses: Record<string, string>;
+};
+
+type Ts2009ExportStats = {
+  books: number;
+  chapters: number;
+  verses: number;
+  skippedBooks: string[];
+};
+
+const TS2009_BOOK_FILE_MAP: Record<string, string> = {
+  genesis: "bereshit",
+  exodus: "shemoth",
+  leviticus: "wayyiqra",
+  numbers: "bemidbar",
+  deuteronomy: "debarim",
+  joshua: "yehoshua",
+  judges: "shophetim",
+  samuel1: "samuel_1",
+  samuel2: "samuel_2",
+  kings1: "kings_1",
+  kings2: "kings_2",
+  chronicles1: "chronicles_1",
+  chronicles2: "chronicles_2",
+  nehemiah: "nehemyah",
+  esther: "ester",
+  job: "iyob",
+  psalms: "tehillim",
+  ecclesiastes: "qoheleth",
+  songofsolomon: "shir_hashirim",
+  isaiah: "yeshayahu",
+  jeremiah: "yirmeyahu",
+  lamentations: "ekah",
+  ezekiel: "yehezqel",
+  obadiah: "obadyah",
+  jonah: "yonah",
+  ruth: "ruth",
+  ezra: "ezra",
+  proverbs: "mishlei",
+  daniel: "daniel",
+  hosea: "hosea",
+  joel: "yoel",
+  amos: "amos",
+  micah: "micah",
+  nahum: "nahum",
+  habakkuk: "habakkuk",
+  zephaniah: "zephaniah",
+  haggai: "haggai",
+  zechariah: "zechariah",
+  malachi: "malachi",
+  matthew: "mattithyahu",
+  mark: "marqos",
+  luke: "lugqas",
+  john: "yohanan",
+  acts: "maasei",
+  romans: "romiyim",
+  corinthians1: "corinthians_1",
+  corinthians2: "corinthians_2",
+  galatians: "galatiyim",
+  ephesians: "ephsiyim",
+  philippians: "pilipiyim",
+  colossians: "qolasim",
+  thessalonians1: "thessalonians_1",
+  thessalonians2: "thessalonians_2",
+  timothy1: "timothy_1",
+  timothy2: "timothy_2",
+  titus: "titos",
+  philemon: "pileymon",
+  hebrews: "ibrim",
+  james: "yaaqob",
+  peter1: "peter_1",
+  peter2: "peter_2",
+  john1: "john_1",
+  john2: "john_2",
+  john3: "john_3",
+  jude: "yehudah",
+  revelation: "hazon",
+};
+
+const TS2009_LEGACY_BOOK_FILE_MAP: Record<string, string> = {
+  genesis: "bereshit_genesis",
+  exodus: "shemoth_exodus",
+  leviticus: "wayyiqra_leviticus",
+  numbers: "bemidbar_numbers",
+  deuteronomy: "debarim_deuteronomy",
+  joshua: "yehoshua_joshua",
+  judges: "shophetim_judges",
+  ruth: "ruth",
+  samuel1: "shemuel_aleph_1_samuel",
+  samuel2: "shemuel_bet_2_samuel",
+  kings1: "melakim_aleph_1_kings",
+  kings2: "melakim_bet_2_kings",
+  chronicles1: "dibre_hayamim_aleph_1_chronicles",
+  chronicles2: "dibre_hayamim_bet_2_chronicles",
+  ezra: "ezra",
+  nehemiah: "nehemyah_nehemiah",
+  esther: "ester_esther",
+  job: "iyob_job",
+  psalms: "tehillim_psalms",
+  proverbs: "mishle_proverbs",
+  ecclesiastes: "qoheleth_ecclesiastes",
+  songofsolomon: "shir_hashirim_song_of_songs",
+  isaiah: "yeshayahu_isaiah",
+  jeremiah: "yirmeyahu_jeremiah",
+  lamentations: "ekah_lamentations",
+  ezekiel: "yehezqel_ezekiel",
+  daniel: "daniel_daniel",
+  hosea: "hoshea_hosea",
+  joel: "yoel_joel",
+  amos: "amos",
+  obadiah: "obadyah_obadiah",
+  jonah: "yonah_jonah",
+  micah: "mikah_micah",
+  nahum: "nahum_nahum",
+  habakkuk: "habaqqugq_habakkuk",
+  zephaniah: "tsephanyah_zephaniah",
+  haggai: "haggai_haggai",
+  zechariah: "zekaryah_zechariah",
+  malachi: "malaki_malachi",
+};
+
 type JsonValue =
   | null
   | boolean
@@ -270,6 +405,246 @@ const generateMetadata = (
 
 const getJsonSize = (value: JsonValue): number => Buffer.byteLength(JSON.stringify(value), "utf-8");
 
+const MAX_CLOUDFLARE_PAGES_ASSET_SIZE_BYTES = 25 * 1024 * 1024;
+
+type SplitBundlePart = {
+  size: number;
+  checksum: string;
+};
+
+type TanajSplitIndex = {
+  format: "split-by-book-v1";
+  books: string[];
+  parts: Record<string, SplitBundlePart>;
+  total_size: number;
+};
+
+const assertBundleFileSize = (relativePath: string, size: number): void => {
+  if (size <= MAX_CLOUDFLARE_PAGES_ASSET_SIZE_BYTES) {
+    return;
+  }
+
+  const limitMiB = (MAX_CLOUDFLARE_PAGES_ASSET_SIZE_BYTES / (1024 * 1024)).toFixed(0);
+  const actualMiB = (size / (1024 * 1024)).toFixed(1);
+  throw new Error(
+    `Generated bundle file exceeds Cloudflare Pages ${limitMiB} MiB limit: ${relativePath} (${actualMiB} MiB)`,
+  );
+};
+
+const parseTs2009VerseText = (verse: Ts2009BookVerse): string | null => {
+  if (typeof verse.translation === "string") return verse.translation;
+  if (typeof verse.text === "string") return verse.text;
+  return null;
+};
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null;
+
+const extractTs2009Chapters = (chaptersRaw: unknown): Record<number, Ts2009BookVerse[]> => {
+  const chapters: Record<number, Ts2009BookVerse[]> = {};
+
+  if (Array.isArray(chaptersRaw)) {
+    for (const [index, chapterEntry] of chaptersRaw.entries()) {
+      const chapterNumberFromIndex = index + 1;
+
+      if (Array.isArray(chapterEntry)) {
+        chapters[chapterNumberFromIndex] = chapterEntry as Ts2009BookVerse[];
+        continue;
+      }
+
+      if (!isRecord(chapterEntry)) continue;
+
+      const chapterNumber = Number(
+        chapterEntry.number ?? chapterEntry.chapter ?? chapterNumberFromIndex,
+      );
+      if (!Number.isFinite(chapterNumber)) continue;
+
+      if (Array.isArray(chapterEntry.verses)) {
+        chapters[chapterNumber] = chapterEntry.verses as Ts2009BookVerse[];
+      }
+    }
+
+    return chapters;
+  }
+
+  if (!isRecord(chaptersRaw)) {
+    return chapters;
+  }
+
+  for (const [chapterKey, chapterEntry] of Object.entries(chaptersRaw)) {
+    const chapterNumber = Number(chapterKey);
+    if (!Number.isFinite(chapterNumber)) continue;
+
+    if (Array.isArray(chapterEntry)) {
+      chapters[chapterNumber] = chapterEntry as Ts2009BookVerse[];
+      continue;
+    }
+
+    if (isRecord(chapterEntry) && Array.isArray(chapterEntry.verses)) {
+      chapters[chapterNumber] = chapterEntry.verses as Ts2009BookVerse[];
+    }
+  }
+
+  return chapters;
+};
+
+const getTs2009BookFileCandidates = (bookId: string): string[] => {
+  const mapped = TS2009_BOOK_FILE_MAP[bookId];
+  const legacyMapped = TS2009_LEGACY_BOOK_FILE_MAP[bookId];
+  const underscoreVariant = bookId.replace(/(\D)(\d+)$/, "$1_$2");
+  const stems = [mapped, legacyMapped, bookId, underscoreVariant].filter(
+    (value): value is string => Boolean(value),
+  );
+
+  const candidates: string[] = [];
+  for (const stem of stems) {
+    candidates.push(`${stem}.json`);
+    candidates.push(`ts2009/${stem}.json`);
+  }
+
+  return [...new Set(candidates)];
+};
+
+const downloadTs2009BookPayload = async (
+  supabaseUrl: string,
+  serviceRoleKey: string,
+  path: string,
+): Promise<Ts2009BookPayload | null> => {
+  const endpoint = `${supabaseUrl.replace(/\/$/, "")}/storage/v1/object/ts2009/${path}`;
+  const response = await fetch(endpoint, {
+    headers: {
+      apikey: serviceRoleKey,
+      Authorization: `Bearer ${serviceRoleKey}`,
+    },
+  });
+
+  if (!response.ok) {
+    if (response.status === 404) {
+      return null;
+    }
+    throw new Error(
+      `TS2009 download failed for ${path} (status ${response.status})`,
+    );
+  }
+
+  const payload = (await response.json()) as Ts2009BookPayload;
+  return payload;
+};
+
+const generateTs2009Chapters = async (): Promise<{
+  bundle: { books: Record<string, { chapters: number; verses: number }> };
+  stats: Ts2009ExportStats;
+} | null> => {
+  const supabaseUrl = process.env.SUPABASE_URL ?? process.env.PUBLIC_SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!supabaseUrl || !serviceRoleKey) {
+    console.warn(
+      "Skipping TS2009 static export: missing SUPABASE_URL (or PUBLIC_SUPABASE_URL) or SUPABASE_SERVICE_ROLE_KEY",
+    );
+    return null;
+  }
+
+  const ts2009OutDir = join(WEB_PUBLIC_DATA_ROOT, "ts2009");
+  await mkdir(ts2009OutDir, { recursive: true });
+
+  const stats: Ts2009ExportStats = {
+    books: 0,
+    chapters: 0,
+    verses: 0,
+    skippedBooks: [],
+  };
+
+  const bundleBooks: Record<string, { chapters: number; verses: number }> = {};
+
+  for (const canonicalBook of CANONICAL_BOOK_ORDER) {
+    const bookId = canonicalBook.toLowerCase();
+    const candidates = getTs2009BookFileCandidates(bookId);
+    let payload: Ts2009BookPayload | null = null;
+
+    for (const candidate of candidates) {
+      try {
+        payload = await downloadTs2009BookPayload(
+          supabaseUrl,
+          serviceRoleKey,
+          candidate,
+        );
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.warn(
+          `Skipping TS2009 static export due to Supabase access error: ${message}`,
+        );
+        return null;
+      }
+      if (payload) break;
+    }
+
+    if (!payload) {
+      stats.skippedBooks.push(bookId);
+      continue;
+    }
+
+    const chapters = extractTs2009Chapters(payload.chapters);
+    const chapterNumbers = Object.keys(chapters)
+      .map((value) => Number(value))
+      .filter((value) => Number.isFinite(value))
+      .sort((a, b) => a - b);
+
+    let bookVerseCount = 0;
+    let writtenChapterCount = 0;
+    for (const chapterNumber of chapterNumbers) {
+      const verses = chapters[chapterNumber] ?? [];
+      const verseMap: Record<string, string> = {};
+
+      for (const [index, verseEntry] of verses.entries()) {
+        const verseNumber = Number(
+          verseEntry.number ?? verseEntry.verse ?? index + 1,
+        );
+        if (!Number.isFinite(verseNumber)) continue;
+        const text = parseTs2009VerseText(verseEntry);
+        if (!text) continue;
+        verseMap[String(verseNumber)] = text;
+      }
+
+      if (Object.keys(verseMap).length === 0) {
+        continue;
+      }
+
+      const chapterPayload: Ts2009ChapterFile = {
+        book: bookId,
+        chapter: chapterNumber,
+        verses: verseMap,
+      };
+
+      await mkdir(join(ts2009OutDir, bookId), { recursive: true });
+      await writeFile(
+        join(ts2009OutDir, bookId, `${chapterNumber}.json`),
+        JSON.stringify(chapterPayload),
+        "utf-8",
+      );
+
+      const verseCount = Object.keys(verseMap).length;
+      stats.chapters += 1;
+      stats.verses += verseCount;
+      bookVerseCount += verseCount;
+      writtenChapterCount += 1;
+    }
+
+    if (bookVerseCount > 0) {
+      stats.books += 1;
+      bundleBooks[bookId] = {
+        chapters: writtenChapterCount,
+        verses: bookVerseCount,
+      };
+    }
+  }
+
+  return {
+    bundle: { books: bundleBooks },
+    stats,
+  };
+};
+
 const main = async (): Promise<void> => {
   await rm(WEB_PUBLIC_DATA_ROOT, { recursive: true, force: true });
   await mkdir(WEB_PUBLIC_DATA_ROOT, { recursive: true });
@@ -329,13 +704,60 @@ const main = async (): Promise<void> => {
   const bundlesDir = join(WEB_PUBLIC_DATA_ROOT, "bundles");
   await mkdir(bundlesDir, { recursive: true });
 
-  await writeFile(join(bundlesDir, "tanaj.json"), JSON.stringify(tanaj.bundle), "utf-8");
+  const tanajSplitDir = join(bundlesDir, "tanaj");
+  await mkdir(tanajSplitDir, { recursive: true });
+
+  const tanajBookIds = Object.keys(tanaj.bundle.books).sort((a, b) =>
+    a.localeCompare(b, "en"),
+  );
+  const tanajParts: Record<string, SplitBundlePart> = {};
+  let tanajTotalSize = 0;
+
+  for (const bookId of tanajBookIds) {
+    const bookBundle = tanaj.bundle.books[bookId] as JsonValue;
+    const relativePath = `data/bundles/tanaj/${bookId}.json`;
+    const size = getJsonSize(bookBundle);
+    assertBundleFileSize(relativePath, size);
+
+    tanajTotalSize += size;
+    tanajParts[bookId] = {
+      size,
+      checksum: sha256OfJson(bookBundle),
+    };
+
+    await writeFile(
+      join(tanajSplitDir, `${bookId}.json`),
+      JSON.stringify(bookBundle),
+      "utf-8",
+    );
+  }
+
+  const tanajIndex: TanajSplitIndex = {
+    format: "split-by-book-v1",
+    books: tanajBookIds,
+    parts: tanajParts,
+    total_size: tanajTotalSize,
+  };
+  assertBundleFileSize("data/bundles/tanaj.json", getJsonSize(tanajIndex as unknown as JsonValue));
+  await writeFile(
+    join(bundlesDir, "tanaj.json"),
+    JSON.stringify(tanajIndex),
+    "utf-8",
+  );
   await writeFile(
     join(bundlesDir, "besorah.json"),
     JSON.stringify(besorah.bundle),
     "utf-8",
   );
   await writeFile(join(bundlesDir, "tth.json"), JSON.stringify(tthBundle), "utf-8");
+  const ts2009Bundle = await generateTs2009Chapters();
+  if (ts2009Bundle) {
+    await writeFile(
+      join(bundlesDir, "ts2009.json"),
+      JSON.stringify(ts2009Bundle.bundle),
+      "utf-8",
+    );
+  }
   await writeFile(
     join(bundlesDir, "dictionary.json"),
     JSON.stringify(dictionaryBundle),
@@ -357,8 +779,8 @@ const main = async (): Promise<void> => {
         checksum: sha256OfJson(metadata),
       },
       tanaj: {
-        size: getJsonSize(tanaj.bundle),
-        checksum: sha256OfJson(tanaj.bundle),
+        size: tanajTotalSize,
+        checksum: sha256OfJson(tanajIndex as unknown as JsonValue),
       },
       besorah: {
         size: getJsonSize(besorah.bundle),
@@ -388,6 +810,14 @@ const main = async (): Promise<void> => {
         size: getJsonSize(BUNDLE_VERSIONS as unknown as JsonValue),
         checksum: sha256OfJson(BUNDLE_VERSIONS as unknown as JsonValue),
       },
+      ...(ts2009Bundle
+        ? {
+            ts2009: {
+              size: getJsonSize(ts2009Bundle.bundle as unknown as JsonValue),
+              checksum: sha256OfJson(ts2009Bundle.bundle as unknown as JsonValue),
+            },
+          }
+        : {}),
     },
   };
 
@@ -399,6 +829,16 @@ const main = async (): Promise<void> => {
 
   console.log("Generated static data in web/public/data");
   console.log(`books: tanaj=${Object.keys(tanaj.bundle.books).length}, besorah=${Object.keys(besorah.bundle.books).length}`);
+  if (ts2009Bundle) {
+    console.log(
+      `ts2009: books=${ts2009Bundle.stats.books}, chapters=${ts2009Bundle.stats.chapters}, verses=${ts2009Bundle.stats.verses}`,
+    );
+    if (ts2009Bundle.stats.skippedBooks.length > 0) {
+      console.warn(
+        `ts2009 skipped books: ${ts2009Bundle.stats.skippedBooks.join(", ")}`,
+      );
+    }
+  }
   console.log(`bundles: ${Object.keys(manifest.bundles).join(", ")}`);
 };
 

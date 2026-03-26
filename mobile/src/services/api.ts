@@ -1,12 +1,76 @@
 import type { BookResponse } from "@/src/types/api";
 
-const STATIC_BUNDLES_BASE_URL =
-  process.env.EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL ||
-  "https://davar.bible/data/bundles";
-const STATIC_DATA_BASE_URL =
-  process.env.EXPO_PUBLIC_STATIC_DATA_BASE_URL || "https://davar.bible/data";
+const DEV_STATIC_DATA_BASE_URL = "http://127.0.0.1:3002/data";
+const PROD_STATIC_DATA_BASE_URL = "https://davar.bible/data";
 
 const staticDataCache = new Map<string, unknown>();
+
+const normalizeBaseUrl = (url: string): string => url.replace(/\/+$/, "");
+
+const resolveStaticDataBaseUrl = (): string => {
+  const configuredDataBase = process.env.EXPO_PUBLIC_STATIC_DATA_BASE_URL?.trim();
+  if (configuredDataBase) {
+    return normalizeBaseUrl(configuredDataBase);
+  }
+
+  return __DEV__
+    ? normalizeBaseUrl(DEV_STATIC_DATA_BASE_URL)
+    : normalizeBaseUrl(PROD_STATIC_DATA_BASE_URL);
+};
+
+const resolveStaticBundlesBaseUrl = (dataBaseUrl: string): string => {
+  const configuredBundlesBase =
+    process.env.EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL?.trim();
+  if (configuredBundlesBase) {
+    return normalizeBaseUrl(configuredBundlesBase);
+  }
+
+  return `${normalizeBaseUrl(dataBaseUrl)}/bundles`;
+};
+
+const STATIC_DATA_BASE_URL = resolveStaticDataBaseUrl();
+const STATIC_BUNDLES_BASE_URL = resolveStaticBundlesBaseUrl(STATIC_DATA_BASE_URL);
+
+const truncateForError = (value: string, maxLength = 180): string => {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  if (normalized.length <= maxLength) {
+    return normalized;
+  }
+  return `${normalized.slice(0, maxLength)}...`;
+};
+
+const looksLikeHtmlPayload = (payload: string): boolean => {
+  const normalized = payload.trimStart().toLowerCase();
+  return (
+    normalized.startsWith("<!doctype") ||
+    normalized.startsWith("<html") ||
+    normalized.startsWith("<?xml")
+  );
+};
+
+const parseStaticJsonPayload = <T>(
+  payload: string,
+  requestUrl: string,
+  contentType: string,
+  resourceLabel: string,
+): T => {
+  if (looksLikeHtmlPayload(payload)) {
+    const preview = truncateForError(payload) || "[empty]";
+    throw new Error(
+      `Static ${resourceLabel} returned HTML instead of JSON: ${requestUrl} (preview: ${preview})`,
+    );
+  }
+
+  try {
+    return JSON.parse(payload) as T;
+  } catch {
+    const contentTypeLabel = contentType || "unknown";
+    const preview = truncateForError(payload) || "[empty]";
+    throw new Error(
+      `Invalid JSON for static ${resourceLabel}: ${requestUrl} (content-type: ${contentTypeLabel}, preview: ${preview})`,
+    );
+  }
+};
 
 export const getBooks = async (): Promise<BookResponse[]> => {
   const metadata = await staticDataRequest<{ books: BookResponse[] }>(
@@ -25,17 +89,25 @@ export const staticDataRequest = async <T>(
     return staticDataCache.get(cacheKey) as T;
   }
 
-  const response = await fetch(
-    `${STATIC_DATA_BASE_URL}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`,
-  );
+  const requestUrl = `${STATIC_DATA_BASE_URL}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`;
+  const response = await fetch(requestUrl);
+  const contentType = response.headers.get("content-type") || "";
+  const payload = await response.text();
 
   if (!response.ok) {
+    const contentTypeLabel = contentType || "unknown";
+    const preview = truncateForError(payload) || "[empty]";
     throw new Error(
-      `Static data request failed for ${normalizedPath} with status ${response.status}`,
+      `Static data request failed for ${normalizedPath} with status ${response.status} (url: ${requestUrl}, content-type: ${contentTypeLabel}, preview: ${preview})`,
     );
   }
 
-  const parsed = (await response.json()) as T;
+  const parsed = parseStaticJsonPayload<T>(
+    payload,
+    requestUrl,
+    contentType,
+    `data ${normalizedPath}`,
+  );
   staticDataCache.set(cacheKey, parsed as unknown);
   return parsed;
 };
@@ -43,15 +115,30 @@ export const staticDataRequest = async <T>(
 export const staticBundleRequest = async <T>(
   bundleName: string,
 ): Promise<T> => {
-  const response = await fetch(
-    `${STATIC_BUNDLES_BASE_URL}/${encodeURIComponent(bundleName)}.json`,
-  );
+  return staticBundlePathRequest<T>(`${bundleName}.json`);
+};
+
+export const staticBundlePathRequest = async <T>(
+  relativePath: string,
+): Promise<T> => {
+  const normalizedPath = relativePath.replace(/^\/+/, "");
+  const requestUrl = `${STATIC_BUNDLES_BASE_URL}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`;
+  const response = await fetch(requestUrl);
+  const contentType = response.headers.get("content-type") || "";
+  const payload = await response.text();
 
   if (!response.ok) {
+    const contentTypeLabel = contentType || "unknown";
+    const preview = truncateForError(payload) || "[empty]";
     throw new Error(
-      `Static bundle request failed for ${bundleName} with status ${response.status}`,
+      `Static bundle request failed for ${normalizedPath} with status ${response.status} (url: ${requestUrl}, content-type: ${contentTypeLabel}, preview: ${preview})`,
     );
   }
 
-  return response.json() as Promise<T>;
+  return parseStaticJsonPayload<T>(
+    payload,
+    requestUrl,
+    contentType,
+    `bundle ${normalizedPath}`,
+  );
 };

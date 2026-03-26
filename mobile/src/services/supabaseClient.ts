@@ -1,63 +1,56 @@
 import { createClient } from "@supabase/supabase-js";
 import Constants from "expo-constants";
 
-const supabaseUrl = Constants.expoConfig?.extra?.supabaseUrl;
-const supabaseAnonKey = Constants.expoConfig?.extra?.supabaseAnonKey;
+const PLACEHOLDER_SUPABASE_URL = "your-project-ref.supabase.co";
+const PLACEHOLDER_SUPABASE_KEY = "your-supabase-anon-key";
 
-const validateSupabaseConfig = (value: unknown, name: string): string => {
+const sanitizeConfigValue = (value: unknown): string | null => {
   if (typeof value !== "string") {
-    throw new Error(
-      `Invalid Supabase configuration: ${name} must be a non-empty string`,
-    );
+    return null;
   }
 
   const trimmed = value.trim();
   if (trimmed.length === 0) {
-    throw new Error(
-      `Missing Supabase configuration: ${name} is empty or whitespace`,
-    );
+    return null;
   }
 
   return trimmed;
 };
 
-const validatedSupabaseUrl = validateSupabaseConfig(supabaseUrl, "supabaseUrl");
-const validatedSupabaseAnonKey = validateSupabaseConfig(
-  supabaseAnonKey,
-  "supabaseAnonKey",
-);
+const looksLikePlaceholder = (value: string): boolean => {
+  const normalized = value.toLowerCase();
+  return (
+    normalized.includes(PLACEHOLDER_SUPABASE_URL) ||
+    normalized.includes(PLACEHOLDER_SUPABASE_KEY)
+  );
+};
 
-export const supabase = createClient(
-  validatedSupabaseUrl,
-  validatedSupabaseAnonKey,
-);
-export const fetchTs2009Translation = async (
-  book: string,
-  chapter: number,
-  verse: number,
-): Promise<string | null> => {
-  try {
-    const fileName = `${book}/${chapter}/${verse}.json`;
-    const { data, error } = await supabase.storage
-      .from("ts2009")
-      .download(fileName);
+const resolveSupabaseConfig = (): { url: string; anonKey: string } | null => {
+  const envUrl = sanitizeConfigValue(process.env.EXPO_PUBLIC_SUPABASE_URL);
+  const envAnonKey = sanitizeConfigValue(
+    process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY,
+  );
 
-    if (error) {
-      console.warn(
-        `TS2009 not available for ${book} ${chapter}:${verse}:`,
-        error,
-      );
-      return null;
-    }
+  const extraUrl = sanitizeConfigValue(Constants.expoConfig?.extra?.supabaseUrl);
+  const extraAnonKey = sanitizeConfigValue(
+    Constants.expoConfig?.extra?.supabaseAnonKey,
+  );
 
-    const content = await data.text();
-    const json = JSON.parse(content);
-    return json.translation || null;
-  } catch (error) {
-    console.warn(
-      `Failed to fetch TS2009 for ${book} ${chapter}:${verse}:`,
-      error,
-    );
+  const url = envUrl ?? extraUrl;
+  const anonKey = envAnonKey ?? extraAnonKey;
+
+  if (!url || !anonKey) {
     return null;
   }
+
+  if (looksLikePlaceholder(url) || looksLikePlaceholder(anonKey)) {
+    return null;
+  }
+
+  return { url, anonKey };
 };
+
+const supabaseConfig = resolveSupabaseConfig();
+export const supabase = supabaseConfig
+  ? createClient(supabaseConfig.url, supabaseConfig.anonKey)
+  : null;

@@ -144,6 +144,7 @@ const jsonCache = new Map<string, Promise<unknown>>();
 // In-memory cache for TS2009 translations to avoid N+1 query problem
 // Keys: `${bookId}:${chapter}:${verse}`, Values: string | null
 const ts2009Cache = new Map<string, string | null>();
+const ts2009ChapterCache = new Map<string, Promise<Map<number, string> | null>>();
 
 type StaticBase = "" | "/public" | "/web" | "/web/public";
 
@@ -274,7 +275,43 @@ const fetchCachedTs2009Translation = async (
     return ts2009Cache.get(cacheKey)!;
   }
 
-  // Fetch from Supabase and cache the result
+  const chapterKey = `${bookId}:${chapter}`;
+
+  let chapterPromise = ts2009ChapterCache.get(chapterKey);
+  if (!chapterPromise) {
+    chapterPromise = (async () => {
+      try {
+        const staticChapter = await fetchJson<{
+          verses?: Record<string, string>;
+        }>(`/data/ts2009/${bookId}/${chapter}.json`);
+
+        const verses = staticChapter.verses ?? {};
+        const verseMap = new Map<number, string>();
+        for (const [verseKey, translation] of Object.entries(verses)) {
+          const verseNumber = Number(verseKey);
+          if (!Number.isFinite(verseNumber) || typeof translation !== "string") {
+            continue;
+          }
+          verseMap.set(verseNumber, translation);
+        }
+
+        return verseMap;
+      } catch {
+        return null;
+      }
+    })();
+
+    ts2009ChapterCache.set(chapterKey, chapterPromise);
+  }
+
+  const staticChapterTranslations = await chapterPromise;
+  const staticTranslation = staticChapterTranslations?.get(verse) ?? null;
+  if (staticTranslation) {
+    ts2009Cache.set(cacheKey, staticTranslation);
+    return staticTranslation;
+  }
+
+  // Fall back to Supabase if static TS2009 chapter data is unavailable.
   const translation = await fetchTs2009Translation(bookId, chapter, verse);
   ts2009Cache.set(cacheKey, translation);
   return translation;
@@ -557,14 +594,19 @@ const mapVerse = (
 
   // Handle translation based on language
   if (!options?.hebrewOnly) {
-    if (options?.language === "en" && ts2009Translation) {
-      // Use TS2009 for English
-      response.translation = ts2009Translation;
-      response.translation_language = "en";
-    } else if (translationVerse?.bes || translationVerse?.tth) {
+    if (options?.language === "en") {
+      if (ts2009Translation) {
+        // Use TS2009 for English only.
+        response.translation = ts2009Translation;
+        response.translation_language = "en";
+      }
+    } else if (
+      options?.language === "es" &&
+      (translationVerse?.bes || translationVerse?.tth)
+    ) {
       // Use TTH/BES for Spanish or fallback
       response.translation = translationVerse.bes ?? translationVerse.tth ?? "";
-      response.translation_language = options?.language === "en" ? "en" : "es";
+      response.translation_language = "es";
       const translationFootnotes = mapTranslationFootnotes(translationVerse.footnotes);
       if (translationFootnotes.length > 0) {
         response.translation_footnotes = translationFootnotes;

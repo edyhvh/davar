@@ -10,25 +10,44 @@ import {
 } from "@/src/services/database";
 import { removeMaqafForDisplay } from "@/src/utils/hebrew";
 import { TTH_BOOK_MAPPING } from "@davar/shared/translationConfig";
-import { fetchTs2009Translation } from "./supabaseClient";
 
-// In-memory cache for TS2009 translations to avoid N+1 query problem
-const ts2009Cache = new Map<string, string | null>();
+// Chapter-level cache for TS2009 static JSON (matches web approach)
+const ts2009ChapterCache = new Map<string, Promise<Map<number, string> | null>>();
 
-const fetchCachedTs2009Translation = async (
+const fetchTs2009ChapterStatic = (
   bookId: string,
   chapter: number,
-  verse: number,
-): Promise<string | null> => {
-  const cacheKey = `${bookId}:${chapter}:${verse}`;
+): Promise<Map<number, string> | null> => {
+  const cacheKey = `${bookId}:${chapter}`;
 
-  if (ts2009Cache.has(cacheKey)) {
-    return ts2009Cache.get(cacheKey)!;
+  const cached = ts2009ChapterCache.get(cacheKey);
+  if (cached) {
+    return cached;
   }
 
-  const translation = await fetchTs2009Translation(bookId, chapter, verse);
-  ts2009Cache.set(cacheKey, translation);
-  return translation;
+  const promise = (async (): Promise<Map<number, string> | null> => {
+    try {
+      const staticChapter = await staticDataRequest<{
+        verses?: Record<string, string>;
+      }>(`ts2009/${bookId}/${chapter}.json`);
+
+      const verses = staticChapter.verses ?? {};
+      const verseMap = new Map<number, string>();
+      for (const [verseKey, translation] of Object.entries(verses)) {
+        const verseNumber = Number(verseKey);
+        if (Number.isFinite(verseNumber) && typeof translation === "string") {
+          verseMap.set(verseNumber, translation);
+        }
+      }
+
+      return verseMap;
+    } catch {
+      return null;
+    }
+  })();
+
+  ts2009ChapterCache.set(cacheKey, promise);
+  return promise;
 };
 
 export type DisplayWord = {
@@ -242,61 +261,18 @@ const loadStaticTranslationsForChapter = async (
       }
     }
   } else if (language === "en") {
-    // Load TS2009 from Supabase Storage
+    // Load TS2009 from static chapter JSON (same source as web)
     try {
-      const staticVerseNumbers = toSortedUniqueVerseNumbers(expectedVerseNumbers ?? []);
-      let verseNumbers = staticVerseNumbers;
+      const chapterMap = await fetchTs2009ChapterStatic(bookId, chapter);
 
-      if (verseNumbers.length === 0) {
-        // Fallback when static source couldn't provide verse numbers.
-        const hebrewVerses = await fetchHebrewVerses(bookId, chapter);
-        verseNumbers = toSortedUniqueVerseNumbers(hebrewVerses.map((v) => v.verse));
-      } else {
-        // Validate static/offline alignment and log mismatches for debugging.
-        try {
-          const hebrewVerses = await fetchHebrewVerses(bookId, chapter);
-          const hebrewVerseNumbers = toSortedUniqueVerseNumbers(
-            hebrewVerses.map((v) => v.verse),
-          );
-
-          const staticSet = new Set(staticVerseNumbers.map(buildVerseKey));
-          const hebrewSet = new Set(hebrewVerseNumbers.map(buildVerseKey));
-
-          const missingInStatic = hebrewVerseNumbers.filter(
-            (verse) => !staticSet.has(buildVerseKey(verse)),
-          );
-          const missingInHebrew = staticVerseNumbers.filter(
-            (verse) => !hebrewSet.has(buildVerseKey(verse)),
-          );
-
-          if (missingInStatic.length > 0 || missingInHebrew.length > 0) {
-            console.warn(
-              `Verse alignment mismatch for ${bookId} ${chapter}. Missing in static: [${missingInStatic.join(
-                ", ",
-              )}], missing in Hebrew rows: [${missingInHebrew.join(", ")}]`,
-            );
-          }
-        } catch {
-          // Validation is best-effort and should not block translation loading.
-        }
-      }
-
-      // Fetch TS2009 translations for all verses in parallel (with caching)
-      const ts2009Promises = verseNumbers.map((verse) =>
-        fetchCachedTs2009Translation(bookId, chapter, verse),
-      );
-      const ts2009Results = await Promise.all(ts2009Promises);
-
-      // Build translation map
-      verseNumbers.forEach((verseNumber, index) => {
-        const translation = ts2009Results[index];
-        if (translation) {
+      if (chapterMap) {
+        for (const [verseNumber, translation] of chapterMap) {
           translationMap.set(verseNumber, {
             text: translation,
-            footnotes: undefined, // TS2009 doesn't have footnotes in current format
+            footnotes: undefined,
           });
         }
-      });
+      }
     } catch (error) {
       console.warn(`Failed to load TS2009 translations for ${bookId} ${chapter}:`, error);
       // Fall back to SQLite below
@@ -434,6 +410,7 @@ const fetchChapterVersesStatic = async (
   const chapterSources = [`oe/${bookId}/${chapter}.json`, `besorah/${bookId}/${chapter}.json`];
 
   let sourceVerses: StaticChapterVerse[] | null = null;
+  const sourceErrors: string[] = [];
 
   for (const source of chapterSources) {
     try {
@@ -442,13 +419,21 @@ const fetchChapterVersesStatic = async (
         sourceVerses = verses;
         break;
       }
-    } catch {
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : String(error);
+      sourceErrors.push(`${source}: ${reason}`);
       // Try next source
     }
   }
 
   if (!sourceVerses || sourceVerses.length === 0) {
-    throw new Error(`No static verse data found for ${bookId} chapter ${chapter}`);
+    const details =
+      sourceErrors.length > 0
+        ? sourceErrors.join(" | ")
+        : chapterSources.join(", ");
+    throw new Error(
+      `No static verse data found for ${bookId} chapter ${chapter}. Sources tried: ${details}`,
+    );
   }
 
   const expectedVerseNumbers = toSortedUniqueVerseNumbers(
@@ -621,9 +606,14 @@ export const fetchChapterVerses = async (
     );
     try {
       return await fetchChapterVersesOffline(bookId, chapter, options);
-    } catch {
-      // Neither static nor offline worked — re-throw original static error
-      throw staticError;
+    } catch (offlineError) {
+      const staticMessage =
+        staticError instanceof Error ? staticError.message : String(staticError);
+      const offlineMessage =
+        offlineError instanceof Error ? offlineError.message : String(offlineError);
+      throw new Error(
+        `${staticMessage} | Offline fallback failed: ${offlineMessage}`,
+      );
     }
   }
 };

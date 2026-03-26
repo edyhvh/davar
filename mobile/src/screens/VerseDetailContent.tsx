@@ -522,10 +522,11 @@ export const VerseDetailContent = () => {
       sheetRef.current?.close();
 
       try {
+        const hideTranslations = language === "he";
         const verses = await fetchChapterVerses(bookId, chapter, {
-          language: language === "he" ? undefined : language,
+          language: hideTranslations ? undefined : language,
           showDss: showQumran,
-          hebrewOnly: false, // Always load translations; UI will control display
+          hebrewOnly: hideTranslations,
           isConnected,
         });
         if (!isMounted) return;

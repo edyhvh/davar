@@ -42,6 +42,7 @@ import { staticDataRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
 import { useTranslation } from "@/src/i18n/useTranslation";
 import { fetchLexiconEntry, fetchPrefixEntry } from "@/src/services/database";
+import { getDssCommentaryForLanguage } from "@/src/utils/translationConfig";
 
 type PrefixResponse = {
   id: string;
@@ -1065,17 +1066,7 @@ const WordAnalysisBottomSheetComponent = (
 
   const dssCommentary = useMemo(() => {
     if (!word) return undefined;
-    if (language === "es") {
-      return (
-        word.dssCommentaryEs ?? word.dssCommentaryEn ?? word.dssCommentaryHe
-      );
-    }
-    if (language === "he") {
-      return (
-        word.dssCommentaryHe ?? word.dssCommentaryEn ?? word.dssCommentaryEs
-      );
-    }
-    return word.dssCommentaryEn ?? word.dssCommentaryEs ?? word.dssCommentaryHe;
+    return getDssCommentaryForLanguage(language, word);
   }, [language, word]);
 
   const isQumranTab = hasDssVariant && activeTab === "qumran";

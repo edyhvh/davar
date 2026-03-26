@@ -266,7 +266,7 @@ Each function uses a simple in-memory `Map` cache and returns the same types as 
 
 | Bundle | Old Source | New Source |
 |--------|-----------|-----------|
-| tanaj | `GET /api/v1/export/bundle/tanaj` | `https://davar.bible/data/bundles/tanaj.json` |
+| tanaj | `GET /api/v1/export/bundle/tanaj` | `https://davar.bible/data/bundles/tanaj.json` (index) + `https://davar.bible/data/bundles/tanaj/{book}.json` |
 | besorah | `GET /api/v1/export/bundle/besorah` | `https://davar.bible/data/bundles/besorah.json` |
 | dictionary | `GET /api/v1/export/bundle/dictionary` | `https://davar.bible/data/bundles/dictionary.json` |
 | dss | `GET /api/v1/export/bundle/dss` | `https://davar.bible/data/bundles/dss.json` |
