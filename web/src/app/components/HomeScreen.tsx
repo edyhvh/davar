@@ -2,7 +2,7 @@ import React from "react";
 import {
   Bug,
   FileText,
-  Github,
+  GitHub,
   Heart,
   Info,
   MessageCircle,
@@ -63,7 +63,7 @@ export function HomeScreen({
     },
     {
       label: t("home.aboutItems.github"),
-      Icon: Github,
+      Icon: GitHub,
       href: "https://github.com/edyhvh/davar",
       target: "_blank",
     },

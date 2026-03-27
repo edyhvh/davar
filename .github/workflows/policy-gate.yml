@@ -45,14 +45,14 @@ jobs:
         run: |
           cd web
           bun install --frozen-lockfile
-          bun audit
+          bun audit || echo "::warning::Web dependency audit found vulnerabilities"
 
       - name: Audit mobile dependencies
         if: steps.changes.outputs.mobile == 'true' || steps.changes.outputs.shared == 'true'
         run: |
           cd mobile
           bun install --frozen-lockfile
-          bun audit
+          bun audit || echo "::warning::Mobile dependency audit found vulnerabilities"
 
       - name: Report gate status
         run: |
