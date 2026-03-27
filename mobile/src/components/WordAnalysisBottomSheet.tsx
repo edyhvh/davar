@@ -27,6 +27,7 @@ import { router } from "expo-router";
 
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
+import { formatVerseRef } from "@davar/shared/formatVerseRef";
 import type { DisplayWord } from "@/src/services/scripture";
 import {
   stripCantillation,
@@ -667,17 +668,93 @@ const bookAbbreviations: Record<string, string> = {
   Rev: "revelation",
 };
 
+const normalizedBookAbbreviations: Record<string, string> =
+  Object.entries(bookAbbreviations).reduce<Record<string, string>>(
+    (acc, [abbr, bookId]) => {
+      acc[abbr.toLowerCase()] = bookId;
+      return acc;
+    },
+    {},
+  );
+
 // Parse verse reference like "Gen 1:1" to verse ID like "genesis-1-1"
 const parseVerseReference = (ref: string): string | null => {
-  // Match patterns like "Gen 1:1", "1Sam 2:3", "Ps 119:105"
-  const match = ref.match(/^(\d?\w+)\s+(\d+):(\d+)/);
-  if (!match) return null;
+  const normalizedRef = ref.trim();
+  if (!normalizedRef) {
+    return null;
+  }
 
-  const [, bookAbbr, chapter, verse] = match;
-  const bookId = bookAbbreviations[bookAbbr];
+  // Supported formats:
+  // - Dot format from lexicon data: "gen.1.1"
+  // - Human-readable format: "Gen 1:1"
+  const dotMatch = normalizedRef.match(/^([1-3]?[A-Za-z]+)\.(\d+)\.(\d+)$/);
+  const spacedMatch = normalizedRef
+    .replace(/\s+/g, " ")
+    .match(/^([1-3]?[A-Za-z]+)\s+(\d+):(\d+)$/);
+
+  const match = dotMatch ?? spacedMatch;
+  if (!match) {
+    return null;
+  }
+
+  const [, bookAbbr, chapterValue, verseValue] = match;
+  const bookId = normalizedBookAbbreviations[bookAbbr.toLowerCase()];
   if (!bookId) return null;
 
+  const chapter = Number.parseInt(chapterValue, 10);
+  const verse = Number.parseInt(verseValue, 10);
+  if (
+    !Number.isFinite(chapter) ||
+    chapter <= 0 ||
+    !Number.isFinite(verse) ||
+    verse <= 0
+  ) {
+    return null;
+  }
+
   return `${bookId}-${chapter}-${verse}`;
+};
+
+const normalizeOfflineInstances = (occurrences: unknown): string[] => {
+  if (Array.isArray(occurrences)) {
+    return occurrences
+      .map((value) => {
+        if (typeof value === "string") {
+          return value;
+        }
+        if (value && typeof value === "object") {
+          const verse = (value as { verse?: unknown }).verse;
+          return typeof verse === "string" ? verse : null;
+        }
+        return null;
+      })
+      .filter((value): value is string => value !== null);
+  }
+
+  if (occurrences && typeof occurrences === "object") {
+    const references = (occurrences as { references?: unknown }).references;
+    if (Array.isArray(references)) {
+      return references.filter(
+        (value): value is string => typeof value === "string",
+      );
+    }
+  }
+
+  return [];
+};
+
+const getOfflineOccurrencesCount = (
+  occurrences: unknown,
+  instances: string[],
+): number => {
+  if (occurrences && typeof occurrences === "object") {
+    const total = (occurrences as { total?: unknown }).total;
+    if (typeof total === "number" && Number.isFinite(total) && total >= 0) {
+      return total;
+    }
+  }
+
+  return instances.length;
 };
 
 const WordAnalysisBottomSheetComponent = (
@@ -858,6 +935,7 @@ const WordAnalysisBottomSheetComponent = (
         try {
           const offlineEntry = await fetchLexiconEntry(strongNumber);
           if (offlineEntry) {
+            const instances = normalizeOfflineInstances(offlineEntry.occurrences);
             setLexiconEntry({
               strong_number: String(offlineEntry.strong ?? strongNumber),
               hebrew: offlineEntry.hebrew
@@ -871,8 +949,11 @@ const WordAnalysisBottomSheetComponent = (
                 ? String(offlineEntry.root_strong)
                 : undefined,
               root_definitions: [],
-              occurrences_count: 0,
-              instances: [],
+              occurrences_count: getOfflineOccurrencesCount(
+                offlineEntry.occurrences,
+                instances,
+              ),
+              instances,
             });
           } else {
             setLexiconEntry(null);
@@ -902,6 +983,7 @@ const WordAnalysisBottomSheetComponent = (
         try {
           const offlineEntry = await fetchLexiconEntry(dssStrongNumber);
           if (offlineEntry) {
+            const instances = normalizeOfflineInstances(offlineEntry.occurrences);
             setDssLexiconEntry({
               strong_number: String(offlineEntry.strong ?? dssStrongNumber),
               hebrew: offlineEntry.hebrew
@@ -915,8 +997,11 @@ const WordAnalysisBottomSheetComponent = (
                 ? String(offlineEntry.root_strong)
                 : undefined,
               root_definitions: [],
-              occurrences_count: 0,
-              instances: [],
+              occurrences_count: getOfflineOccurrencesCount(
+                offlineEntry.occurrences,
+                instances,
+              ),
+              instances,
             });
           } else {
             setDssLexiconEntry(null);
@@ -1503,8 +1588,6 @@ const WordAnalysisBottomSheetComponent = (
                           typeof instance === "string"
                             ? instance
                             : instance.verse;
-                        const cleanedRef = verseRef.replace(/\./g, "");
-                        const verseId = parseVerseReference(cleanedRef);
                         return (
                           <Pressable
                             key={`${verseRef}-${index}`}
@@ -1513,6 +1596,7 @@ const WordAnalysisBottomSheetComponent = (
                               pressed && styles.instancePillPressed,
                             ]}
                             onPress={() => {
+                              const verseId = parseVerseReference(verseRef);
                               if (verseId) {
                                 sheetRef.current?.close();
                                 router.push({
@@ -1522,7 +1606,7 @@ const WordAnalysisBottomSheetComponent = (
                               }
                             }}
                           >
-                            <Text style={styles.instanceRef}>{verseRef}</Text>
+                            <Text style={styles.instanceRef}>{formatVerseRef(verseRef, language)}</Text>
                           </Pressable>
                         );
                       })}

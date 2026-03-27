@@ -11,6 +11,7 @@ import {
   stripMeteg,
 } from "../utils/hebrew";
 import { useTranslation } from "../hooks/useTranslation";
+import { formatVerseRef } from "@davar/shared/formatVerseRef";
 
 interface WordInstance {
   verse: string;
@@ -985,7 +986,7 @@ export function WordCard({
                       color: "var(--foreground)",
                     }}
                   >
-                    {instance.verse}
+                    {formatVerseRef(instance.verse, language)}
                   </button>
                 ))
               ) : (

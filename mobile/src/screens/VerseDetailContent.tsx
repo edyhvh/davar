@@ -1,4 +1,12 @@
-import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  memo,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import {
   Alert,
   Animated,
@@ -16,7 +24,7 @@ import {
 } from "react-native-safe-area-context";
 import { useLocalSearchParams, useNavigation } from "expo-router";
 import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
-import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
+import { BottomTabBarHeightContext } from "@react-navigation/bottom-tabs";
 import type { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import type { ParamListBase } from "@react-navigation/native";
 import { VerseCard } from "@/src/components/VerseCard";
@@ -68,6 +76,7 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
 type VersePageProps = {
   item: DisplayVerse;
   pageHeight: number;
+  topPadding: number;
   showWordHint: boolean;
   isSelectedVerse: boolean;
   isBesorah: boolean;
@@ -75,11 +84,13 @@ type VersePageProps = {
   selectedWord: DisplayVerse["words"][number] | null;
   onWordPress: (word: DisplayVerse["words"][number] | null) => void;
   onBackgroundPress: () => void;
+  onScrollBegin?: () => void;
 };
 
 const VersePageComponent = ({
   item,
   pageHeight,
+  topPadding,
   showWordHint,
   isSelectedVerse,
   isBesorah,
@@ -87,10 +98,10 @@ const VersePageComponent = ({
   selectedWord,
   onWordPress,
   onBackgroundPress,
+  onScrollBegin,
 }: VersePageProps) => {
   const [contentHeight, setContentHeight] = useState(0);
   const horizontalPadding = spacing[4];
-  const topPadding = spacing[16] + spacing[12];
   const bottomPadding = spacing[8];
   const verticalPadding = topPadding + bottomPadding;
   const availableHeight = Math.max(0, pageHeight - verticalPadding);
@@ -132,6 +143,7 @@ const VersePageComponent = ({
           alwaysBounceVertical={false}
           overScrollMode="never"
           nestedScrollEnabled
+          onScrollBeginDrag={onScrollBegin}
         >
           {verseContent}
         </ScrollView>
@@ -139,8 +151,8 @@ const VersePageComponent = ({
         <View
           style={{
             flex: 1,
-            justifyContent: "center",
-            alignItems: "center",
+            justifyContent: "flex-start",
+            alignItems: "stretch",
           }}
         >
           {verseContent}
@@ -161,7 +173,8 @@ const VersePage = memo(
     prevProps.selectedWord === nextProps.selectedWord &&
     prevProps.onVersePress === nextProps.onVersePress &&
     prevProps.onWordPress === nextProps.onWordPress &&
-    prevProps.onBackgroundPress === nextProps.onBackgroundPress,
+    prevProps.onBackgroundPress === nextProps.onBackgroundPress &&
+    prevProps.onScrollBegin === nextProps.onScrollBegin,
 );
 
 export const VerseDetailContent = () => {
@@ -171,9 +184,9 @@ export const VerseDetailContent = () => {
   const { t } = useTranslation();
   const { height: screenHeight } = useWindowDimensions();
   const insets = useSafeAreaInsets();
-  const tabBarHeight = useBottomTabBarHeight();
+  const tabBarHeight = useContext(BottomTabBarHeightContext) ?? 0;
   const pageHeight = Math.max(0, screenHeight - insets.top - tabBarHeight);
-  const params = useLocalSearchParams<{ id?: string }>();
+  const params = useLocalSearchParams<{ id?: string | string[] }>();
   const currentVerseId = useAppStore((state: AppState) => state.currentVerseId);
   const setCurrentVerseId = useAppStore(
     (state: AppState) => state.setCurrentVerseId,
@@ -200,22 +213,34 @@ export const VerseDetailContent = () => {
   };
 
   const paramId = Array.isArray(params.id) ? params.id[0] : params.id;
-  const normalizedParamId = normalizeVerseId(paramId);
-  const normalizedStoreId = normalizeVerseId(currentVerseId);
-  const verseId = paramId ? normalizedParamId : normalizedStoreId;
+  const isStandaloneVerseDetailRoute = Boolean(paramId);
 
+  // Standalone screens use local state so they never touch the global store
+  const [localVerseId, setLocalVerseId] = useState(
+    () => normalizeVerseId(paramId),
+  );
+  const effectiveVerseId = isStandaloneVerseDetailRoute
+    ? localVerseId
+    : normalizeVerseId(currentVerseId);
+  const setEffectiveVerseId = isStandaloneVerseDetailRoute
+    ? setLocalVerseId
+    : setCurrentVerseId;
+
+  // Keep refs current for the onViewableItemsChanged closure
+  const effectiveVerseIdRef = useRef(effectiveVerseId);
+  const setEffectiveVerseIdRef = useRef(setEffectiveVerseId);
   useEffect(() => {
-    const nextId = paramId ? normalizedParamId : normalizedStoreId;
-    if (nextId !== currentVerseId) {
-      setCurrentVerseId(nextId);
-    }
-  }, [
-    paramId,
-    normalizedParamId,
-    normalizedStoreId,
-    currentVerseId,
-    setCurrentVerseId,
-  ]);
+    effectiveVerseIdRef.current = effectiveVerseId;
+    setEffectiveVerseIdRef.current = setEffectiveVerseId;
+  });
+
+  const verseId = effectiveVerseId;
+  const navigationRowTop = isStandaloneVerseDetailRoute
+    ? spacing[1]
+    : spacing[16];
+  const contentTopPadding = isStandaloneVerseDetailRoute
+    ? spacing[10]
+    : navigationRowTop + spacing[12];
 
   const [chapterVerses, setChapterVerses] = useState<DisplayVerse[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -266,8 +291,8 @@ export const VerseDetailContent = () => {
       viewableItems: { item: (typeof orderedVerses)[number] }[];
     }) => {
       const next = viewableItems[0]?.item;
-      if (next && next.id !== currentVerseId) {
-        setCurrentVerseId(next.id);
+      if (next && next.id !== effectiveVerseIdRef.current) {
+        setEffectiveVerseIdRef.current(next.id);
       }
     },
   );
@@ -362,7 +387,7 @@ export const VerseDetailContent = () => {
   const handleNavigationSelect = useCallback(
     (nextBookId: string, nextChapter: number, verseNum: number) => {
       const targetId = `${nextBookId}-${nextChapter}-${verseNum}`;
-      setCurrentVerseId(targetId);
+      setEffectiveVerseId(targetId);
       if (nextBookId === bookId && nextChapter === chapter) {
         const nextIndex = orderedVerses.findIndex(
           (item) => item.verse === verseNum,
@@ -375,7 +400,7 @@ export const VerseDetailContent = () => {
         }
       }
     },
-    [orderedVerses, setCurrentVerseId, bookId, chapter],
+    [orderedVerses, setEffectiveVerseId, bookId, chapter],
   );
 
   // Track when a word was just selected to prevent race condition with sheet's onClose
@@ -450,6 +475,7 @@ export const VerseDetailContent = () => {
       <VersePage
         item={item}
         pageHeight={pageHeight}
+        topPadding={contentTopPadding}
         showWordHint={showWordHint}
         isSelectedVerse={item.id === verse?.id}
         isBesorah={isBesorah}
@@ -457,10 +483,12 @@ export const VerseDetailContent = () => {
         onVersePress={handleOpenNavigationSheet}
         onWordPress={handleWordPress}
         onBackgroundPress={handleBackgroundPress}
+        onScrollBegin={handleScrollBegin}
       />
     ),
     [
       pageHeight,
+      contentTopPadding,
       showWordHint,
       verse?.id,
       isBesorah,
@@ -468,23 +496,24 @@ export const VerseDetailContent = () => {
       handleOpenNavigationSheet,
       handleWordPress,
       handleBackgroundPress,
+      handleScrollBegin,
     ],
   );
 
-  // Clear selectedWord immediately when currentVerseId changes to prevent stale word display
-  const prevVerseIdRef = useRef(currentVerseId);
+  // Clear selectedWord immediately when verse changes to prevent stale word display
+  const prevVerseIdRef = useRef(effectiveVerseId);
   useEffect(() => {
-    if (prevVerseIdRef.current !== currentVerseId) {
+    if (prevVerseIdRef.current !== effectiveVerseId) {
       const prevBookId = prevVerseIdRef.current?.split("-")[0];
-      const newBookId = currentVerseId?.split("-")[0];
+      const newBookId = effectiveVerseId?.split("-")[0];
       // Only clear if book actually changed (not just verse within same chapter)
       if (prevBookId !== newBookId) {
         setSelectedWord(null);
         sheetRef.current?.close();
       }
-      prevVerseIdRef.current = currentVerseId;
+      prevVerseIdRef.current = effectiveVerseId;
     }
-  }, [currentVerseId]);
+  }, [effectiveVerseId]);
 
   const currentLoadRef = useRef({
     bookId: "",
@@ -557,9 +586,9 @@ export const VerseDetailContent = () => {
 
   return (
     <>
-      <SafeAreaView style={styles.safeArea} edges={["top"]}>
+      <SafeAreaView style={styles.safeArea} edges={isStandaloneVerseDetailRoute ? [] : ["top"]}>
         <View style={styles.container}>
-          <View style={styles.navigationRow}>
+          <View style={[styles.navigationRow, { top: navigationRowTop }]}>
             <Animated.View
               pointerEvents={pillVisible ? "auto" : "none"}
               style={{
@@ -642,7 +671,7 @@ export const VerseDetailContent = () => {
       <WordAnalysisBottomSheet
         ref={sheetRef}
         word={selectedWord}
-        currentVerseId={currentVerseId}
+        currentVerseId={effectiveVerseId}
         isBesorah={isBesorah}
         onClosed={handleSheetClosed}
       />

@@ -100,6 +100,12 @@ export default function RootLayout() {
                     title: t("navigation.modal"),
                   }}
                 />
+                <Stack.Screen
+                  name="verse-detail"
+                  options={{
+                    title: t("navigation.instances"),
+                  }}
+                />
               </Stack>
               <StatusBar style="auto" />
             </AppProvider>
