@@ -149,8 +149,6 @@ const toSortedUniqueVerseNumbers = (values: number[]): number[] =>
     (a, b) => a - b,
   );
 
-const buildVerseKey = (verse: number): string => String(verse);
-
 const parseTranslationFootnotes = (
   rawFootnotes: unknown,
 ): TranslationFootnote[] | undefined => {

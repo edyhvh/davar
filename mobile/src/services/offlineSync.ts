@@ -288,19 +288,6 @@ const extractTthVerses = (bookData: TthBookData): TranslationRow[] => {
   return rows;
 };
 
-const extractTs2009Verses = (bookData: Ts2009BookData): TranslationRow[] => {
-  const rows: TranslationRow[] = [];
-  for (const verse of bookData.verses ?? []) {
-    rows.push({
-      chapter: verse.chapter,
-      verse: verse.verse,
-      text: verse.text ?? "",
-      footnotes: [], // ts2009 apparently has no footnotes in current bundle
-    });
-  }
-  return rows;
-};
-
 export const downloadTranslationBundle = async (
   language: "es" | "en",
   remoteVersion?: number,

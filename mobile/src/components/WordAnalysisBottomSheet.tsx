@@ -172,10 +172,10 @@ const mapStaticDefinitions = (
 };
 
 const mergeUniqueDefinitions = (
-  ...groups: Array<Array<{ text: string; source: string; language: string }>>
-): Array<{ text: string; source: string; language: string }> => {
+  ...groups: { text: string; source: string; language: string }[][]
+): { text: string; source: string; language: string }[] => {
   const seen = new Set<string>();
-  const merged: Array<{ text: string; source: string; language: string }> = [];
+  const merged: { text: string; source: string; language: string }[] = [];
 
   for (const group of groups) {
     for (const definition of group) {
