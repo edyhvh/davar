@@ -2,13 +2,13 @@ import React from "react";
 import {
   Bug,
   FileText,
-  GitHub,
   Heart,
   Info,
   MessageCircle,
   Scale,
   Shield,
 } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { useTranslation, getSupportTelegramUrl } from "../hooks/useTranslation";
 
 interface HomeScreenProps {
@@ -63,7 +63,7 @@ export function HomeScreen({
     },
     {
       label: t("home.aboutItems.github"),
-      Icon: GitHub,
+      Icon: FaGithub,
       href: "https://github.com/edyhvh/davar",
       target: "_blank",
     },

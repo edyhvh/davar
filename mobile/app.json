@@ -48,7 +48,11 @@
             "backgroundColor": "#7AA0D6"
           }
         }
-      ]
+      ],
+      "expo-font",
+      "expo-mail-composer",
+      "expo-sqlite",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true,
