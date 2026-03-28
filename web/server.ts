@@ -9,6 +9,15 @@ Bun.serve({
     const url = new URL(req.url);
     const pathname = decodeURIComponent(url.pathname);
 
+    if (pathname.startsWith("/data/")) {
+      const assetPath = pathname.startsWith("/") ? pathname.slice(1) : pathname;
+      const file = Bun.file(new URL(assetPath, distDir));
+      if (await file.exists()) {
+        return new Response(file);
+      }
+      return new Response("Not Found", { status: 404 });
+    }
+
     if (pathname !== "/" && pathname.includes(".")) {
       const assetPath = pathname.startsWith("/") ? pathname.slice(1) : pathname;
       const file = Bun.file(new URL(assetPath, distDir));

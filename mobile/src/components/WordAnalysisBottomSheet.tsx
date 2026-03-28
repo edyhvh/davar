@@ -27,6 +27,7 @@ import { router } from "expo-router";
 
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
+import { formatVerseRef } from "@davar/shared/formatVerseRef";
 import type { DisplayWord } from "@/src/services/scripture";
 import {
   stripCantillation,
@@ -38,10 +39,11 @@ import {
   removeSofPasukForDisplay,
   splitLeadingHebrewCluster,
 } from "@/src/utils/hebrew";
-import { apiRequest } from "@/src/services/api";
+import { staticDataRequest } from "@/src/services/api";
 import type { LexiconResponse } from "@/src/types/api";
 import { useTranslation } from "@/src/i18n/useTranslation";
 import { fetchLexiconEntry, fetchPrefixEntry } from "@/src/services/database";
+import { getDssCommentaryForLanguage } from "@/src/utils/translationConfig";
 
 type PrefixResponse = {
   id: string;
@@ -82,6 +84,225 @@ type WordAnalysisBottomSheetProps = {
 };
 
 type TabType = "masoretic" | "qumran" | "instances";
+
+type StaticDictionaryDefinition = {
+  text?: string;
+  text_en?: string;
+  text_es?: string;
+  source?: string;
+};
+
+type StaticDictionaryEntry = {
+  strong_number?: string;
+  lemma?: string;
+  translit_en?: string;
+  translit_es?: string;
+  transliteration_en?: string;
+  transliteration_es?: string;
+  definitions?: StaticDictionaryDefinition[];
+  root_ref?: string;
+  root_strong?: string;
+  occurrences?: {
+    total?: number;
+    references?: string[];
+  };
+};
+
+type StaticCustomDefinition = {
+  strong_number?: string;
+  hebrew?: string;
+  transliteration_en?: string;
+  transliteration_es?: string;
+  definitions?: StaticDictionaryDefinition[];
+  root?: string;
+  root_strong?: string;
+  manual_instances?: string[];
+};
+
+type StaticDictionaryData = {
+  words: Record<string, StaticDictionaryEntry>;
+  roots: Record<string, StaticDictionaryEntry>;
+  custom: Record<string, StaticCustomDefinition>;
+};
+
+const normalizeStrongKey = (value: string): string =>
+  value.toUpperCase().replace(/\s+/g, "");
+
+const resolveStrongKey = <T,>(
+  dictionary: Record<string, T>,
+  lookup: string,
+): string | null => {
+  if (lookup in dictionary) {
+    return lookup;
+  }
+
+  const target = normalizeStrongKey(lookup);
+  for (const key of Object.keys(dictionary)) {
+    if (normalizeStrongKey(key) === target) {
+      return key;
+    }
+  }
+
+  return null;
+};
+
+const mapStaticDefinitions = (
+  definitions: StaticDictionaryDefinition[] | undefined,
+  language: "en" | "es" | "he",
+) => {
+  const definitionLanguage = language === "es" ? "es" : "en";
+  return (definitions ?? [])
+    .map((definition) => {
+      const text =
+        definitionLanguage === "es"
+          ? (definition.text_es ?? definition.text_en ?? definition.text)
+          : (definition.text_en ?? definition.text_es ?? definition.text);
+      if (!text) {
+        return null;
+      }
+      return {
+        text,
+        source: definition.source ?? "static",
+        language: definitionLanguage,
+      };
+    })
+    .filter((value): value is { text: string; source: string; language: string } =>
+      value !== null,
+    );
+};
+
+const mergeUniqueDefinitions = (
+  ...groups: { text: string; source: string; language: string }[][]
+): { text: string; source: string; language: string }[] => {
+  const seen = new Set<string>();
+  const merged: { text: string; source: string; language: string }[] = [];
+
+  for (const group of groups) {
+    for (const definition of group) {
+      const key = `${definition.source}:${definition.text.toLowerCase()}`;
+      if (seen.has(key)) {
+        continue;
+      }
+      seen.add(key);
+      merged.push(definition);
+    }
+  }
+
+  return merged;
+};
+
+const loadStaticDictionaryData = async (): Promise<StaticDictionaryData> => {
+  const [words, roots, custom] = await Promise.all([
+    staticDataRequest<Record<string, StaticDictionaryEntry>>("dict/words.json"),
+    staticDataRequest<Record<string, StaticDictionaryEntry>>("dict/roots.json"),
+    staticDataRequest<Record<string, StaticCustomDefinition>>(
+      "dict/custom_definitions.json",
+    ),
+  ]);
+
+  return { words, roots, custom };
+};
+
+const loadLexiconEntryFromStatic = async (
+  strong: string,
+  language: "en" | "es" | "he",
+): Promise<LexiconResponse | null> => {
+  const dictionary = await loadStaticDictionaryData();
+
+  const customKey = resolveStrongKey(dictionary.custom, strong);
+  const customEntry = customKey ? dictionary.custom[customKey] : undefined;
+
+  const wordKey = resolveStrongKey(dictionary.words, strong);
+  const rootDictionaryKey = resolveStrongKey(dictionary.roots, strong);
+  const dictionaryEntry = wordKey
+    ? dictionary.words[wordKey]
+    : rootDictionaryKey
+      ? dictionary.roots[rootDictionaryKey]
+      : undefined;
+
+  if (!customEntry && !dictionaryEntry) {
+    return null;
+  }
+
+  const rootStrong =
+    customEntry?.root_strong ??
+    dictionaryEntry?.root_ref ??
+    dictionaryEntry?.root_strong;
+
+  const rootEntry = rootStrong
+    ? (() => {
+        const rootKey = resolveStrongKey(dictionary.roots, rootStrong);
+        if (rootKey) {
+          return dictionary.roots[rootKey] as
+            | StaticDictionaryEntry
+            | StaticCustomDefinition;
+        }
+        const wordRootKey = resolveStrongKey(dictionary.words, rootStrong);
+        if (wordRootKey) {
+          return dictionary.words[wordRootKey] as
+            | StaticDictionaryEntry
+            | StaticCustomDefinition;
+        }
+        const customRootKey = resolveStrongKey(dictionary.custom, rootStrong);
+        if (customRootKey) {
+          return dictionary.custom[customRootKey] as
+            | StaticDictionaryEntry
+            | StaticCustomDefinition;
+        }
+        return undefined;
+      })()
+    : undefined;
+
+  const dictionaryDefinitions = mapStaticDefinitions(
+    dictionaryEntry?.definitions,
+    language,
+  );
+  const customDefinitions = mapStaticDefinitions(customEntry?.definitions, language);
+  const definitions = mergeUniqueDefinitions(customDefinitions, dictionaryDefinitions);
+
+  const occurrenceReferences = dictionaryEntry?.occurrences?.references ?? [];
+  const manualInstances = customEntry?.manual_instances ?? [];
+  const instances = [...manualInstances, ...occurrenceReferences];
+  const hasManualInstances = manualInstances.length > 0;
+
+  const rootText = rootEntry
+    ? "lemma" in rootEntry
+      ? rootEntry.lemma
+      : "hebrew" in rootEntry
+        ? rootEntry.hebrew
+        : undefined
+    : undefined;
+
+  return {
+    strong_number: customEntry?.strong_number ?? dictionaryEntry?.strong_number ?? strong,
+    hebrew: customEntry?.hebrew ?? dictionaryEntry?.lemma,
+    translit_en:
+      customEntry?.transliteration_en ??
+      dictionaryEntry?.translit_en ??
+      dictionaryEntry?.transliteration_en,
+    translit_es:
+      customEntry?.transliteration_es ??
+      dictionaryEntry?.translit_es ??
+      dictionaryEntry?.transliteration_es,
+    definitions,
+    root: customEntry?.root ?? rootText,
+    root_strong: rootStrong,
+    root_definitions: mapStaticDefinitions(rootEntry?.definitions, language),
+    occurrences_count: hasManualInstances
+      ? instances.length
+      : (dictionaryEntry?.occurrences?.total ?? instances.length),
+    instances,
+  };
+};
+
+const loadPrefixEntryFromStatic = async (
+  prefixId: string,
+): Promise<PrefixResponse | null> => {
+  const prefixes = await staticDataRequest<Record<string, PrefixResponse>>(
+    "prefixes.json",
+  );
+  return prefixes[prefixId] ?? null;
+};
 
 const createStyles = (
   colors: ReturnType<typeof getColors>,
@@ -447,17 +668,93 @@ const bookAbbreviations: Record<string, string> = {
   Rev: "revelation",
 };
 
+const normalizedBookAbbreviations: Record<string, string> =
+  Object.entries(bookAbbreviations).reduce<Record<string, string>>(
+    (acc, [abbr, bookId]) => {
+      acc[abbr.toLowerCase()] = bookId;
+      return acc;
+    },
+    {},
+  );
+
 // Parse verse reference like "Gen 1:1" to verse ID like "genesis-1-1"
 const parseVerseReference = (ref: string): string | null => {
-  // Match patterns like "Gen 1:1", "1Sam 2:3", "Ps 119:105"
-  const match = ref.match(/^(\d?\w+)\s+(\d+):(\d+)/);
-  if (!match) return null;
+  const normalizedRef = ref.trim();
+  if (!normalizedRef) {
+    return null;
+  }
 
-  const [, bookAbbr, chapter, verse] = match;
-  const bookId = bookAbbreviations[bookAbbr];
+  // Supported formats:
+  // - Dot format from lexicon data: "gen.1.1"
+  // - Human-readable format: "Gen 1:1"
+  const dotMatch = normalizedRef.match(/^([1-3]?[A-Za-z]+)\.(\d+)\.(\d+)$/);
+  const spacedMatch = normalizedRef
+    .replace(/\s+/g, " ")
+    .match(/^([1-3]?[A-Za-z]+)\s+(\d+):(\d+)$/);
+
+  const match = dotMatch ?? spacedMatch;
+  if (!match) {
+    return null;
+  }
+
+  const [, bookAbbr, chapterValue, verseValue] = match;
+  const bookId = normalizedBookAbbreviations[bookAbbr.toLowerCase()];
   if (!bookId) return null;
 
+  const chapter = Number.parseInt(chapterValue, 10);
+  const verse = Number.parseInt(verseValue, 10);
+  if (
+    !Number.isFinite(chapter) ||
+    chapter <= 0 ||
+    !Number.isFinite(verse) ||
+    verse <= 0
+  ) {
+    return null;
+  }
+
   return `${bookId}-${chapter}-${verse}`;
+};
+
+const normalizeOfflineInstances = (occurrences: unknown): string[] => {
+  if (Array.isArray(occurrences)) {
+    return occurrences
+      .map((value) => {
+        if (typeof value === "string") {
+          return value;
+        }
+        if (value && typeof value === "object") {
+          const verse = (value as { verse?: unknown }).verse;
+          return typeof verse === "string" ? verse : null;
+        }
+        return null;
+      })
+      .filter((value): value is string => value !== null);
+  }
+
+  if (occurrences && typeof occurrences === "object") {
+    const references = (occurrences as { references?: unknown }).references;
+    if (Array.isArray(references)) {
+      return references.filter(
+        (value): value is string => typeof value === "string",
+      );
+    }
+  }
+
+  return [];
+};
+
+const getOfflineOccurrencesCount = (
+  occurrences: unknown,
+  instances: string[],
+): number => {
+  if (occurrences && typeof occurrences === "object") {
+    const total = (occurrences as { total?: unknown }).total;
+    if (typeof total === "number" && Number.isFinite(total) && total >= 0) {
+      return total;
+    }
+  }
+
+  return instances.length;
 };
 
 const WordAnalysisBottomSheetComponent = (
@@ -549,9 +846,9 @@ const WordAnalysisBottomSheetComponent = (
 
     const masoreticTranslit =
       language === "en"
-        ? word?.translit_en
+        ? (word?.translit_en ?? lexiconEntry?.translit_en)
         : language === "es"
-          ? word?.translit_es
+          ? (word?.translit_es ?? lexiconEntry?.translit_es)
           : undefined;
 
     if (activeTab === "qumran") {
@@ -572,6 +869,8 @@ const WordAnalysisBottomSheetComponent = (
     language,
     word?.translit_en,
     word?.translit_es,
+    lexiconEntry?.translit_en,
+    lexiconEntry?.translit_es,
     dssLexiconEntry?.translit_en,
     dssLexiconEntry?.translit_es,
     strongNumber,
@@ -629,24 +928,14 @@ const WordAnalysisBottomSheetComponent = (
       }
       setIsLoading(true);
       try {
-        const params = new URLSearchParams();
-        if (language !== "he") {
-          params.set("language", language);
-        }
-        if (word?.text) {
-          params.set("hebrew", word.text);
-        }
-        const query = params.toString();
-        const url = query
-          ? `/api/v1/lexicon/${strongNumber}?${query}`
-          : `/api/v1/lexicon/${strongNumber}`;
-        const entry = await apiRequest<LexiconResponse>(url);
+        const entry = await loadLexiconEntryFromStatic(strongNumber, language);
         setLexiconEntry(entry);
       } catch {
-        // API failed — try offline SQLite fallback
+        // Static fetch failed — try offline SQLite fallback
         try {
           const offlineEntry = await fetchLexiconEntry(strongNumber);
           if (offlineEntry) {
+            const instances = normalizeOfflineInstances(offlineEntry.occurrences);
             setLexiconEntry({
               strong_number: String(offlineEntry.strong ?? strongNumber),
               hebrew: offlineEntry.hebrew
@@ -660,8 +949,11 @@ const WordAnalysisBottomSheetComponent = (
                 ? String(offlineEntry.root_strong)
                 : undefined,
               root_definitions: [],
-              occurrences_count: 0,
-              instances: [],
+              occurrences_count: getOfflineOccurrencesCount(
+                offlineEntry.occurrences,
+                instances,
+              ),
+              instances,
             });
           } else {
             setLexiconEntry(null);
@@ -684,24 +976,14 @@ const WordAnalysisBottomSheetComponent = (
       }
       setIsDssLoading(true);
       try {
-        const params = new URLSearchParams();
-        if (language !== "he") {
-          params.set("language", language);
-        }
-        if (word?.dssWord) {
-          params.set("hebrew", word.dssWord);
-        }
-        const query = params.toString();
-        const url = query
-          ? `/api/v1/lexicon/${dssStrongNumber}?${query}`
-          : `/api/v1/lexicon/${dssStrongNumber}`;
-        const entry = await apiRequest<LexiconResponse>(url);
+        const entry = await loadLexiconEntryFromStatic(dssStrongNumber, language);
         setDssLexiconEntry(entry);
       } catch {
-        // API failed — try offline SQLite fallback
+        // Static fetch failed — try offline SQLite fallback
         try {
           const offlineEntry = await fetchLexiconEntry(dssStrongNumber);
           if (offlineEntry) {
+            const instances = normalizeOfflineInstances(offlineEntry.occurrences);
             setDssLexiconEntry({
               strong_number: String(offlineEntry.strong ?? dssStrongNumber),
               hebrew: offlineEntry.hebrew
@@ -715,8 +997,11 @@ const WordAnalysisBottomSheetComponent = (
                 ? String(offlineEntry.root_strong)
                 : undefined,
               root_definitions: [],
-              occurrences_count: 0,
-              instances: [],
+              occurrences_count: getOfflineOccurrencesCount(
+                offlineEntry.occurrences,
+                instances,
+              ),
+              instances,
             });
           } else {
             setDssLexiconEntry(null);
@@ -754,12 +1039,10 @@ const WordAnalysisBottomSheetComponent = (
       await Promise.all(
         word.prefixes.map(async (prefixId) => {
           try {
-            const entry = await apiRequest<PrefixResponse>(
-              `/api/v1/prefixes/${prefixId}`,
-            );
+            const entry = await loadPrefixEntryFromStatic(prefixId);
             entries[prefixId] = entry;
           } catch {
-            // API failed — try offline SQLite fallback
+            // Static fetch failed — try offline SQLite fallback
             try {
               const offlineEntry = await fetchPrefixEntry(prefixId);
               entries[prefixId] = offlineEntry
@@ -930,17 +1213,7 @@ const WordAnalysisBottomSheetComponent = (
 
   const dssCommentary = useMemo(() => {
     if (!word) return undefined;
-    if (language === "es") {
-      return (
-        word.dssCommentaryEs ?? word.dssCommentaryEn ?? word.dssCommentaryHe
-      );
-    }
-    if (language === "he") {
-      return (
-        word.dssCommentaryHe ?? word.dssCommentaryEn ?? word.dssCommentaryEs
-      );
-    }
-    return word.dssCommentaryEn ?? word.dssCommentaryEs ?? word.dssCommentaryHe;
+    return getDssCommentaryForLanguage(language, word);
   }, [language, word]);
 
   const isQumranTab = hasDssVariant && activeTab === "qumran";
@@ -1315,8 +1588,6 @@ const WordAnalysisBottomSheetComponent = (
                           typeof instance === "string"
                             ? instance
                             : instance.verse;
-                        const cleanedRef = verseRef.replace(/\./g, "");
-                        const verseId = parseVerseReference(cleanedRef);
                         return (
                           <Pressable
                             key={`${verseRef}-${index}`}
@@ -1325,6 +1596,7 @@ const WordAnalysisBottomSheetComponent = (
                               pressed && styles.instancePillPressed,
                             ]}
                             onPress={() => {
+                              const verseId = parseVerseReference(verseRef);
                               if (verseId) {
                                 sheetRef.current?.close();
                                 router.push({
@@ -1334,7 +1606,7 @@ const WordAnalysisBottomSheetComponent = (
                               }
                             }}
                           >
-                            <Text style={styles.instanceRef}>{verseRef}</Text>
+                            <Text style={styles.instanceRef}>{formatVerseRef(verseRef, language)}</Text>
                           </Pressable>
                         );
                       })}

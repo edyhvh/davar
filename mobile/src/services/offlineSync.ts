@@ -1,4 +1,4 @@
-import { apiRequest } from "@/src/services/api";
+import { staticBundlePathRequest, staticBundleRequest } from "@/src/services/api";
 import {
   getBundleUpdatePlan,
   type BundleVersions,
@@ -121,6 +121,11 @@ interface HebrewBundle {
   books: Record<string, HebrewBookBundle>;
 }
 
+interface TanajSplitBundleIndex {
+  format?: string;
+  books?: string[];
+}
+
 // ── DSS Bundle Types ───────────────────────────────────────────────────────
 
 interface DssDifference {
@@ -154,7 +159,7 @@ type DssBundle = Record<string, DssBookData>;
 // ── Remote versions ────────────────────────────────────────────────────────
 
 export const fetchRemoteBundleVersions = async (): Promise<BundleVersions> => {
-  return apiRequest<BundleVersions>("/api/v1/export/versions");
+  return staticBundleRequest<BundleVersions>("versions");
 };
 
 export { getAllLocalBundleVersions };
@@ -246,9 +251,7 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
 export const downloadDictionaryBundle = async (remoteVersion?: number) => {
   await initializeDatabase();
   try {
-    const bundle = await apiRequest<DictionaryBundle>(
-      "/api/v1/export/bundle/dictionary",
-    );
+    const bundle = await staticBundleRequest<DictionaryBundle>("dictionary");
 
     // Insert lexicon entries
     const entries = buildLexiconEntries(bundle);
@@ -285,38 +288,26 @@ const extractTthVerses = (bookData: TthBookData): TranslationRow[] => {
   return rows;
 };
 
-const extractTs2009Verses = (bookData: Ts2009BookData): TranslationRow[] => {
-  const rows: TranslationRow[] = [];
-  for (const verse of bookData.verses ?? []) {
-    rows.push({
-      chapter: verse.chapter,
-      verse: verse.verse,
-      text: verse.text ?? "",
-      footnotes: [], // ts2009 apparently has no footnotes in current bundle
-    });
-  }
-  return rows;
-};
-
 export const downloadTranslationBundle = async (
   language: "es" | "en",
   remoteVersion?: number,
 ) => {
   await initializeDatabase();
 
+  // TS2009 is loaded as static chapter JSON files, not as bundles, so we do
+  // not mark it as downloaded here; it remains online-only/streaming.
+  if (language === "en") {
+    return;
+  }
+
   const insertedBooks: string[] = [];
 
   try {
-    const dataset = language === "es" ? "tth" : "ts2009";
-    const bundle = await apiRequest<TranslationBundle>(
-      `/api/v1/export/bundle/${dataset}`,
-    );
+    const dataset = "tth"; // Only TTH for Spanish
+    const bundle = await staticBundleRequest<TranslationBundle>(dataset);
 
     for (const [bookId, bookData] of Object.entries(bundle.books ?? {})) {
-      const rows =
-        language === "es"
-          ? extractTthVerses(bookData as TthBookData)
-          : extractTs2009Verses(bookData as Ts2009BookData);
+      const rows = extractTthVerses(bookData as TthBookData);
 
       await insertTranslationVerses(rows, language, bookId);
       insertedBooks.push(bookId);
@@ -340,14 +331,10 @@ const downloadSingleHebrewBundle = async (
   dataset: "tanaj" | "besorah",
   remoteVersion?: number,
 ) => {
-  const bundle = await apiRequest<HebrewBundle>(
-    `/api/v1/export/bundle/${dataset}`,
-  );
-
   const insertedBooks: string[] = [];
 
   try {
-    for (const [bookId, bookData] of Object.entries(bundle.books ?? {})) {
+    const insertHebrewBook = async (bookId: string, bookData: HebrewBookBundle) => {
       const verses: {
         book: string;
         chapter: number;
@@ -371,6 +358,36 @@ const downloadSingleHebrewBundle = async (
 
       await insertHebrewVerses(verses);
       insertedBooks.push(bookId);
+    };
+
+    if (dataset === "tanaj") {
+      const tanajBundle = await staticBundleRequest<HebrewBundle | TanajSplitBundleIndex>(
+        "tanaj",
+      );
+
+      const splitBookIds =
+        Array.isArray((tanajBundle as TanajSplitBundleIndex).books)
+          ? (tanajBundle as TanajSplitBundleIndex).books
+          : null;
+
+      if (splitBookIds && splitBookIds.length > 0) {
+        for (const bookId of splitBookIds) {
+          const bookData = await staticBundlePathRequest<HebrewBookBundle>(
+            `tanaj/${bookId}.json`,
+          );
+          await insertHebrewBook(bookId, bookData);
+        }
+      } else {
+        const legacyBundle = tanajBundle as HebrewBundle;
+        for (const [bookId, bookData] of Object.entries(legacyBundle.books ?? {})) {
+          await insertHebrewBook(bookId, bookData);
+        }
+      }
+    } else {
+      const bundle = await staticBundleRequest<HebrewBundle>(dataset);
+      for (const [bookId, bookData] of Object.entries(bundle.books ?? {})) {
+        await insertHebrewBook(bookId, bookData);
+      }
     }
 
     if (remoteVersion != null) {
@@ -410,7 +427,7 @@ export const downloadDssBundle = async (remoteVersion?: number) => {
   await initializeDatabase();
 
   try {
-    const bundle = await apiRequest<DssBundle>("/api/v1/export/bundle/dss");
+    const bundle = await staticBundleRequest<DssBundle>("dss");
 
     const allVariants: {
       book: string;

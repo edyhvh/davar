@@ -14,9 +14,10 @@ Davar (דבר - "word") is a sacred, distraction-free digital tool for deep, con
 
 ### Tech Stack
 
-- Frontend: React Native + Expo
-- Backend: FastAPI + PostgreSQL
-- Offline support: via FastAPI
+- Frontend: React Native + Expo (mobile), Bun + React (web)
+- Data delivery: Static JSON on Cloudflare Pages + Supabase Storage for TS2009
+- Offline support: Mobile SQLite with static bundle sync
+- Build: Bun as JavaScript runtime and package manager
 
 ### Public vs Private Branches
 

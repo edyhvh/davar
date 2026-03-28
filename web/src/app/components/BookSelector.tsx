@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { NeumorphCard } from './NeumorphCard';
-import { getBooks } from '../services/verseService';
+import { getBooks } from '../services/staticData';
 import { formatBookDisplayName } from '../utils/bookNameFormatter';
 
 interface BookSelectorProps {

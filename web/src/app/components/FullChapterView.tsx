@@ -17,6 +17,7 @@ import { useTranslation } from "../hooks/useTranslation";
 import {
   shouldHideSuperscripts,
   getTranslationKey,
+  shouldHideTranslationText,
 } from "../utils/translationConfig";
 
 interface FullChapterViewProps {
@@ -54,6 +55,7 @@ export function FullChapterView({
   const shouldShowSefer = seferMode && hebrewOnly;
   const spanishMissingTranslation = t("verse.missingSpanishTranslation");
   const hideSuperscripts = shouldHideSuperscripts(getTranslationKey(language));
+  const hideTranslationText = shouldHideTranslationText(language, hebrewOnly);
 
   const normalizeForMatch = (text: string) => {
     let normalized = stripNikud(text);
@@ -113,8 +115,6 @@ export function FullChapterView({
               variantText
                 ? {
                     color: "var(--text-hebrew)",
-                    textDecoration: "underline",
-                    textDecorationThickness: "1px",
                   }
                 : undefined
             }
@@ -208,7 +208,7 @@ export function FullChapterView({
               </div>
 
               {/* Translation - only show if not Hebrew Only mode */}
-              {!hebrewOnly && (
+              {!hideTranslationText && (
                 <div
                   className="text-[var(--text-secondary)] leading-relaxed"
                   style={{

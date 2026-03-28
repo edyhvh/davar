@@ -2,7 +2,7 @@ import type { RefObject } from "react";
 import { useEffect, useRef } from "react";
 
 interface UseVerseScrollNavigationOptions {
-  containerRef: RefObject<HTMLElement>;
+  containerRef: RefObject<HTMLElement | null>;
   isEnabled: boolean;
   isBlocked?: boolean;
   threshold?: number;

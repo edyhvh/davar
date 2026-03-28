@@ -1,0 +1,848 @@
+import { createHash } from "crypto";
+import { mkdir, readdir, readFile, rm, writeFile } from "fs/promises";
+import { extname, join } from "path";
+import {
+  BUNDLE_VERSIONS,
+  CANONICAL_BOOK_ORDER,
+  DATA_ROOT,
+  DELITZSCH_TO_ENGLISH,
+  OE_TO_ENGLISH,
+  WEB_PUBLIC_DATA_ROOT,
+} from "./config";
+
+type Ts2009BookPayload = {
+  chapters?: unknown;
+};
+
+type Ts2009BookVerse = {
+  number?: number;
+  verse?: number;
+  translation?: unknown;
+  text?: unknown;
+};
+
+type Ts2009ChapterFile = {
+  book: string;
+  chapter: number;
+  verses: Record<string, string>;
+};
+
+type Ts2009ExportStats = {
+  books: number;
+  chapters: number;
+  verses: number;
+  skippedBooks: string[];
+};
+
+const TS2009_BOOK_FILE_MAP: Record<string, string> = {
+  genesis: "bereshit",
+  exodus: "shemoth",
+  leviticus: "wayyiqra",
+  numbers: "bemidbar",
+  deuteronomy: "debarim",
+  joshua: "yehoshua",
+  judges: "shophetim",
+  samuel1: "samuel_1",
+  samuel2: "samuel_2",
+  kings1: "kings_1",
+  kings2: "kings_2",
+  chronicles1: "chronicles_1",
+  chronicles2: "chronicles_2",
+  nehemiah: "nehemyah",
+  esther: "ester",
+  job: "iyob",
+  psalms: "tehillim",
+  ecclesiastes: "qoheleth",
+  songofsolomon: "shir_hashirim",
+  isaiah: "yeshayahu",
+  jeremiah: "yirmeyahu",
+  lamentations: "ekah",
+  ezekiel: "yehezqel",
+  obadiah: "obadyah",
+  jonah: "yonah",
+  ruth: "ruth",
+  ezra: "ezra",
+  proverbs: "mishlei",
+  daniel: "daniel",
+  hosea: "hosea",
+  joel: "yoel",
+  amos: "amos",
+  micah: "micah",
+  nahum: "nahum",
+  habakkuk: "habakkuk",
+  zephaniah: "zephaniah",
+  haggai: "haggai",
+  zechariah: "zechariah",
+  malachi: "malachi",
+  matthew: "mattithyahu",
+  mark: "marqos",
+  luke: "lugqas",
+  john: "yohanan",
+  acts: "maasei",
+  romans: "romiyim",
+  corinthians1: "corinthians_1",
+  corinthians2: "corinthians_2",
+  galatians: "galatiyim",
+  ephesians: "ephsiyim",
+  philippians: "pilipiyim",
+  colossians: "qolasim",
+  thessalonians1: "thessalonians_1",
+  thessalonians2: "thessalonians_2",
+  timothy1: "timothy_1",
+  timothy2: "timothy_2",
+  titus: "titos",
+  philemon: "pileymon",
+  hebrews: "ibrim",
+  james: "yaaqob",
+  peter1: "peter_1",
+  peter2: "peter_2",
+  john1: "john_1",
+  john2: "john_2",
+  john3: "john_3",
+  jude: "yehudah",
+  revelation: "hazon",
+};
+
+const TS2009_LEGACY_BOOK_FILE_MAP: Record<string, string> = {
+  genesis: "bereshit_genesis",
+  exodus: "shemoth_exodus",
+  leviticus: "wayyiqra_leviticus",
+  numbers: "bemidbar_numbers",
+  deuteronomy: "debarim_deuteronomy",
+  joshua: "yehoshua_joshua",
+  judges: "shophetim_judges",
+  ruth: "ruth",
+  samuel1: "shemuel_aleph_1_samuel",
+  samuel2: "shemuel_bet_2_samuel",
+  kings1: "melakim_aleph_1_kings",
+  kings2: "melakim_bet_2_kings",
+  chronicles1: "dibre_hayamim_aleph_1_chronicles",
+  chronicles2: "dibre_hayamim_bet_2_chronicles",
+  ezra: "ezra",
+  nehemiah: "nehemyah_nehemiah",
+  esther: "ester_esther",
+  job: "iyob_job",
+  psalms: "tehillim_psalms",
+  proverbs: "mishle_proverbs",
+  ecclesiastes: "qoheleth_ecclesiastes",
+  songofsolomon: "shir_hashirim_song_of_songs",
+  isaiah: "yeshayahu_isaiah",
+  jeremiah: "yirmeyahu_jeremiah",
+  lamentations: "ekah_lamentations",
+  ezekiel: "yehezqel_ezekiel",
+  daniel: "daniel_daniel",
+  hosea: "hoshea_hosea",
+  joel: "yoel_joel",
+  amos: "amos",
+  obadiah: "obadyah_obadiah",
+  jonah: "yonah_jonah",
+  micah: "mikah_micah",
+  nahum: "nahum_nahum",
+  habakkuk: "habaqqugq_habakkuk",
+  zephaniah: "tsephanyah_zephaniah",
+  haggai: "haggai_haggai",
+  zechariah: "zekaryah_zechariah",
+  malachi: "malaki_malachi",
+};
+
+type JsonValue =
+  | null
+  | boolean
+  | number
+  | string
+  | JsonValue[]
+  | { [k: string]: JsonValue };
+
+type BookMetadata = {
+  id: string;
+  name: string;
+  section: "torah" | "neviim" | "ketuvim" | "besorah";
+  chapters: number;
+  order: number;
+  hebrew_name: string;
+  hebrew_transliteration: string;
+  spanish_name: string;
+};
+
+type CanonicalBookLabels = {
+  hebrew_name: string;
+  hebrew_transliteration: string;
+  spanish_name: string;
+};
+
+const readJson = async <T>(path: string): Promise<T> => {
+  const raw = await readFile(path, "utf-8");
+  return JSON.parse(raw) as T;
+};
+
+const loadCanonicalBookLabels = async (): Promise<Record<string, CanonicalBookLabels>> => {
+  const sourcePath = join(DATA_ROOT, "..", "scripts", "bes", "config.py");
+  const source = await readFile(sourcePath, "utf-8");
+
+  const mapping: Record<string, CanonicalBookLabels> = {};
+
+  // Parse the mirrored backend BOOK_METADATA entries from scripts/bes/config.py.
+  const entryPattern = /"([^"]+)":\s*\{[^}]*"hebrew_name":\s*"([^"]+)",\s*"hebrew_transliteration":\s*"([^"]+)",\s*"spanish_name":\s*"([^"]+)"[^}]*\}/g;
+
+  for (const match of source.matchAll(entryPattern)) {
+    const [, bookName, hebrewName, hebrewTransliteration, spanishName] = match;
+    mapping[bookName] = {
+      hebrew_name: hebrewName,
+      hebrew_transliteration: hebrewTransliteration,
+      spanish_name: spanishName,
+    };
+  }
+
+  return mapping;
+};
+
+const sha256OfJson = (value: JsonValue): string => {
+  const payload = JSON.stringify(value);
+  const hash = createHash("sha256").update(payload).digest("hex");
+  return `sha256:${hash}`;
+};
+
+const listJsonFiles = async (dir: string): Promise<string[]> => {
+  const entries = await readdir(dir, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isFile() && extname(entry.name) === ".json")
+    .map((entry) => entry.name)
+    .sort((a, b) => a.localeCompare(b, "en"));
+};
+
+const asSection = (order: number): BookMetadata["section"] => {
+  if (order <= 5) return "torah";
+  if (order <= 26) return "neviim";
+  if (order <= 39) return "ketuvim";
+  return "besorah";
+};
+
+const toCanonicalBook = (name: string, source: "oe" | "delitzsch"): string => {
+  const lower = name.toLowerCase();
+  if (source === "oe") return OE_TO_ENGLISH[lower] ?? name;
+  return DELITZSCH_TO_ENGLISH[lower] ?? name;
+};
+
+const hasCanonicalBook = (name: string, source: "oe" | "delitzsch"): boolean => {
+  const lower = name.toLowerCase();
+  if (source === "oe") return Boolean(OE_TO_ENGLISH[lower]);
+  return Boolean(DELITZSCH_TO_ENGLISH[lower]);
+};
+
+const bookOrderMap = CANONICAL_BOOK_ORDER.reduce<Record<string, number>>(
+  (acc, name, index) => {
+    acc[name] = index + 1;
+    return acc;
+  },
+  {},
+);
+
+const generateHebrewChapters = async (
+  sourceDir: string,
+  outDir: string,
+  source: "oe" | "delitzsch",
+): Promise<{ bundle: { books: Record<string, { chapters: Record<string, JsonValue> }> }; counts: Record<string, Record<string, number>> }> => {
+  const folderNames = (await readdir(sourceDir, { withFileTypes: true }))
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .sort((a, b) => a.localeCompare(b, "en"));
+
+  const booksBundle: Record<string, { chapters: Record<string, JsonValue> }> = {};
+  const verseCounts: Record<string, Record<string, number>> = {};
+
+  for (const folderName of folderNames) {
+    if (!hasCanonicalBook(folderName, source)) {
+      continue;
+    }
+
+    const canonical = toCanonicalBook(folderName, source);
+    const bookId = canonical.toLowerCase();
+    const chapterFiles = await listJsonFiles(join(sourceDir, folderName));
+
+    const chapters: Record<string, JsonValue> = {};
+    const chapterVerseCounts: Record<string, number> = {};
+
+    for (const chapterFile of chapterFiles) {
+      const chapterNum = chapterFile.replace(/\.json$/i, "");
+      const inputPath = join(sourceDir, folderName, chapterFile);
+      const data = await readJson<JsonValue>(inputPath);
+
+      // Delitzsch parsed chapters are wrapped in an array with {chapter, verses}.
+      const normalized =
+        source === "delitzsch" && Array.isArray(data)
+          ? (data as Array<{ verses?: JsonValue[] }>)[0]?.verses ?? []
+          : data;
+
+      chapters[chapterNum] = normalized;
+
+      const versesLength = Array.isArray(normalized) ? normalized.length : 0;
+      chapterVerseCounts[chapterNum] = versesLength;
+
+      await mkdir(join(outDir, bookId), { recursive: true });
+      await writeFile(
+        join(outDir, bookId, `${chapterNum}.json`),
+        JSON.stringify(normalized),
+        "utf-8",
+      );
+    }
+
+    booksBundle[bookId] = { chapters };
+    verseCounts[canonical] = chapterVerseCounts;
+  }
+
+  return {
+    bundle: { books: booksBundle },
+    counts: verseCounts,
+  };
+};
+
+const generateDictionary = async (): Promise<{
+  dictionaryBundle: JsonValue;
+  prefixesById: JsonValue;
+}> => {
+  const customDefinitions = await readJson<JsonValue>(
+    join(DATA_ROOT, "dict", "lexicon", "custom_definitions.json"),
+  );
+  const roots = await readJson<JsonValue>(
+    join(DATA_ROOT, "dict", "lexicon", "roots.json"),
+  );
+  const words = await readJson<JsonValue>(
+    join(DATA_ROOT, "dict", "lexicon", "words.json"),
+  );
+
+  const prefixEntriesDir = join(DATA_ROOT, "dict", "prefixes", "entries");
+  const prefixFiles = await listJsonFiles(prefixEntriesDir);
+  const prefixes: Record<string, JsonValue> = {};
+
+  for (const file of prefixFiles) {
+    const id = file.replace(/\.json$/i, "");
+    prefixes[id] = await readJson<JsonValue>(join(prefixEntriesDir, file));
+  }
+
+  const dictOutDir = join(WEB_PUBLIC_DATA_ROOT, "dict");
+  await mkdir(dictOutDir, { recursive: true });
+  await writeFile(
+    join(dictOutDir, "custom_definitions.json"),
+    JSON.stringify(customDefinitions),
+    "utf-8",
+  );
+  await writeFile(join(dictOutDir, "roots.json"), JSON.stringify(roots), "utf-8");
+  await writeFile(join(dictOutDir, "words.json"), JSON.stringify(words), "utf-8");
+
+  const prefixesById = prefixes as JsonValue;
+  await writeFile(
+    join(WEB_PUBLIC_DATA_ROOT, "prefixes.json"),
+    JSON.stringify(prefixesById),
+    "utf-8",
+  );
+
+  return {
+    dictionaryBundle: {
+      custom_definitions: customDefinitions,
+      roots,
+      prefixes,
+    },
+    prefixesById,
+  };
+};
+
+const copyFolderJsonFiles = async (sourceDir: string, outDir: string): Promise<{ books: Record<string, JsonValue> }> => {
+  await mkdir(outDir, { recursive: true });
+  const files = await listJsonFiles(sourceDir);
+  const books: Record<string, JsonValue> = {};
+
+  for (const file of files) {
+    const data = await readJson<JsonValue>(join(sourceDir, file));
+    const stem = file.replace(/\.json$/i, "");
+    books[stem] = data;
+    await writeFile(join(outDir, file), JSON.stringify(data), "utf-8");
+  }
+
+  return { books };
+};
+
+const generateMetadata = (
+  tanajVerseCounts: Record<string, Record<string, number>>,
+  besorahVerseCounts: Record<string, Record<string, number>>,
+  bookLabels: Record<string, CanonicalBookLabels>,
+): { books: BookMetadata[]; chapter_counts: Record<string, number[]>; verse_counts: Record<string, Record<string, number>> } => {
+  const verseCounts = { ...tanajVerseCounts, ...besorahVerseCounts };
+
+  const books = Object.keys(verseCounts)
+    .map((bookName) => {
+      const order = bookOrderMap[bookName] ?? 999;
+      const chapterCount = Object.keys(verseCounts[bookName] ?? {}).length;
+      const section = asSection(order);
+      const id = bookName.toLowerCase();
+      const canonicalLabels = bookLabels[bookName];
+
+      return {
+        id,
+        name: bookName,
+        section,
+        chapters: chapterCount,
+        order,
+        hebrew_name: canonicalLabels?.hebrew_name ?? bookName,
+        hebrew_transliteration: canonicalLabels?.hebrew_transliteration ?? bookName,
+        spanish_name: canonicalLabels?.spanish_name ?? bookName,
+      } satisfies BookMetadata;
+    })
+    .sort((a, b) => a.order - b.order);
+
+  const chapterCounts: Record<string, number[]> = {};
+  for (const [bookName, perChapter] of Object.entries(verseCounts)) {
+    chapterCounts[bookName] = Object.keys(perChapter)
+      .map((n) => Number(n))
+      .sort((a, b) => a - b);
+  }
+
+  return {
+    books,
+    chapter_counts: chapterCounts,
+    verse_counts: verseCounts,
+  };
+};
+
+const getJsonSize = (value: JsonValue): number => Buffer.byteLength(JSON.stringify(value), "utf-8");
+
+const MAX_CLOUDFLARE_PAGES_ASSET_SIZE_BYTES = 25 * 1024 * 1024;
+
+type SplitBundlePart = {
+  size: number;
+  checksum: string;
+};
+
+type TanajSplitIndex = {
+  format: "split-by-book-v1";
+  books: string[];
+  parts: Record<string, SplitBundlePart>;
+  total_size: number;
+};
+
+const assertBundleFileSize = (relativePath: string, size: number): void => {
+  if (size <= MAX_CLOUDFLARE_PAGES_ASSET_SIZE_BYTES) {
+    return;
+  }
+
+  const limitMiB = (MAX_CLOUDFLARE_PAGES_ASSET_SIZE_BYTES / (1024 * 1024)).toFixed(0);
+  const actualMiB = (size / (1024 * 1024)).toFixed(1);
+  throw new Error(
+    `Generated bundle file exceeds Cloudflare Pages ${limitMiB} MiB limit: ${relativePath} (${actualMiB} MiB)`,
+  );
+};
+
+const parseTs2009VerseText = (verse: Ts2009BookVerse): string | null => {
+  if (typeof verse.translation === "string") return verse.translation;
+  if (typeof verse.text === "string") return verse.text;
+  return null;
+};
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null;
+
+const extractTs2009Chapters = (chaptersRaw: unknown): Record<number, Ts2009BookVerse[]> => {
+  const chapters: Record<number, Ts2009BookVerse[]> = {};
+
+  if (Array.isArray(chaptersRaw)) {
+    for (const [index, chapterEntry] of chaptersRaw.entries()) {
+      const chapterNumberFromIndex = index + 1;
+
+      if (Array.isArray(chapterEntry)) {
+        chapters[chapterNumberFromIndex] = chapterEntry as Ts2009BookVerse[];
+        continue;
+      }
+
+      if (!isRecord(chapterEntry)) continue;
+
+      const chapterNumber = Number(
+        chapterEntry.number ?? chapterEntry.chapter ?? chapterNumberFromIndex,
+      );
+      if (!Number.isFinite(chapterNumber)) continue;
+
+      if (Array.isArray(chapterEntry.verses)) {
+        chapters[chapterNumber] = chapterEntry.verses as Ts2009BookVerse[];
+      }
+    }
+
+    return chapters;
+  }
+
+  if (!isRecord(chaptersRaw)) {
+    return chapters;
+  }
+
+  for (const [chapterKey, chapterEntry] of Object.entries(chaptersRaw)) {
+    const chapterNumber = Number(chapterKey);
+    if (!Number.isFinite(chapterNumber)) continue;
+
+    if (Array.isArray(chapterEntry)) {
+      chapters[chapterNumber] = chapterEntry as Ts2009BookVerse[];
+      continue;
+    }
+
+    if (isRecord(chapterEntry) && Array.isArray(chapterEntry.verses)) {
+      chapters[chapterNumber] = chapterEntry.verses as Ts2009BookVerse[];
+    }
+  }
+
+  return chapters;
+};
+
+const getTs2009BookFileCandidates = (bookId: string): string[] => {
+  const mapped = TS2009_BOOK_FILE_MAP[bookId];
+  const legacyMapped = TS2009_LEGACY_BOOK_FILE_MAP[bookId];
+  const underscoreVariant = bookId.replace(/(\D)(\d+)$/, "$1_$2");
+  const stems = [mapped, legacyMapped, bookId, underscoreVariant].filter(
+    (value): value is string => Boolean(value),
+  );
+
+  const candidates: string[] = [];
+  for (const stem of stems) {
+    candidates.push(`${stem}.json`);
+    candidates.push(`ts2009/${stem}.json`);
+  }
+
+  return [...new Set(candidates)];
+};
+
+const downloadTs2009BookPayload = async (
+  supabaseUrl: string,
+  serviceRoleKey: string,
+  path: string,
+): Promise<Ts2009BookPayload | null> => {
+  const endpoint = `${supabaseUrl.replace(/\/$/, "")}/storage/v1/object/ts2009/${path}`;
+  const response = await fetch(endpoint, {
+    headers: {
+      apikey: serviceRoleKey,
+      Authorization: `Bearer ${serviceRoleKey}`,
+    },
+  });
+
+  if (!response.ok) {
+    if (response.status === 404) {
+      return null;
+    }
+    throw new Error(
+      `TS2009 download failed for ${path} (status ${response.status})`,
+    );
+  }
+
+  const payload = (await response.json()) as Ts2009BookPayload;
+  return payload;
+};
+
+const generateTs2009Chapters = async (): Promise<{
+  bundle: { books: Record<string, { chapters: number; verses: number }> };
+  stats: Ts2009ExportStats;
+} | null> => {
+  const supabaseUrl = process.env.SUPABASE_URL ?? process.env.PUBLIC_SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!supabaseUrl || !serviceRoleKey) {
+    console.warn(
+      "Skipping TS2009 static export: missing SUPABASE_URL (or PUBLIC_SUPABASE_URL) or SUPABASE_SERVICE_ROLE_KEY",
+    );
+    return null;
+  }
+
+  const ts2009OutDir = join(WEB_PUBLIC_DATA_ROOT, "ts2009");
+  await mkdir(ts2009OutDir, { recursive: true });
+
+  const stats: Ts2009ExportStats = {
+    books: 0,
+    chapters: 0,
+    verses: 0,
+    skippedBooks: [],
+  };
+
+  const bundleBooks: Record<string, { chapters: number; verses: number }> = {};
+
+  for (const canonicalBook of CANONICAL_BOOK_ORDER) {
+    const bookId = canonicalBook.toLowerCase();
+    const candidates = getTs2009BookFileCandidates(bookId);
+    let payload: Ts2009BookPayload | null = null;
+
+    for (const candidate of candidates) {
+      try {
+        payload = await downloadTs2009BookPayload(
+          supabaseUrl,
+          serviceRoleKey,
+          candidate,
+        );
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.warn(
+          `Skipping TS2009 static export due to Supabase access error: ${message}`,
+        );
+        return null;
+      }
+      if (payload) break;
+    }
+
+    if (!payload) {
+      stats.skippedBooks.push(bookId);
+      continue;
+    }
+
+    const chapters = extractTs2009Chapters(payload.chapters);
+    const chapterNumbers = Object.keys(chapters)
+      .map((value) => Number(value))
+      .filter((value) => Number.isFinite(value))
+      .sort((a, b) => a - b);
+
+    let bookVerseCount = 0;
+    let writtenChapterCount = 0;
+    for (const chapterNumber of chapterNumbers) {
+      const verses = chapters[chapterNumber] ?? [];
+      const verseMap: Record<string, string> = {};
+
+      for (const [index, verseEntry] of verses.entries()) {
+        const verseNumber = Number(
+          verseEntry.number ?? verseEntry.verse ?? index + 1,
+        );
+        if (!Number.isFinite(verseNumber)) continue;
+        const text = parseTs2009VerseText(verseEntry);
+        if (!text) continue;
+        verseMap[String(verseNumber)] = text;
+      }
+
+      if (Object.keys(verseMap).length === 0) {
+        continue;
+      }
+
+      const chapterPayload: Ts2009ChapterFile = {
+        book: bookId,
+        chapter: chapterNumber,
+        verses: verseMap,
+      };
+
+      await mkdir(join(ts2009OutDir, bookId), { recursive: true });
+      await writeFile(
+        join(ts2009OutDir, bookId, `${chapterNumber}.json`),
+        JSON.stringify(chapterPayload),
+        "utf-8",
+      );
+
+      const verseCount = Object.keys(verseMap).length;
+      stats.chapters += 1;
+      stats.verses += verseCount;
+      bookVerseCount += verseCount;
+      writtenChapterCount += 1;
+    }
+
+    if (bookVerseCount > 0) {
+      stats.books += 1;
+      bundleBooks[bookId] = {
+        chapters: writtenChapterCount,
+        verses: bookVerseCount,
+      };
+    }
+  }
+
+  return {
+    bundle: { books: bundleBooks },
+    stats,
+  };
+};
+
+const main = async (): Promise<void> => {
+  await rm(WEB_PUBLIC_DATA_ROOT, { recursive: true, force: true });
+  await mkdir(WEB_PUBLIC_DATA_ROOT, { recursive: true });
+
+  const tanaj = await generateHebrewChapters(
+    join(DATA_ROOT, "oe"),
+    join(WEB_PUBLIC_DATA_ROOT, "oe"),
+    "oe",
+  );
+
+  const besorah = await generateHebrewChapters(
+    join(DATA_ROOT, "delitzsch_parsed"),
+    join(WEB_PUBLIC_DATA_ROOT, "besorah"),
+    "delitzsch",
+  );
+
+  const tthBundle = await copyFolderJsonFiles(
+    join(DATA_ROOT, "tth_2", "json"),
+    join(WEB_PUBLIC_DATA_ROOT, "tth"),
+  );
+
+  const besBundle = await copyFolderJsonFiles(
+    join(DATA_ROOT, "bes", "json"),
+    join(WEB_PUBLIC_DATA_ROOT, "bes"),
+  );
+
+  const translitBundle = await copyFolderJsonFiles(
+    join(DATA_ROOT, "translit"),
+    join(WEB_PUBLIC_DATA_ROOT, "translit"),
+  );
+
+  const { dictionaryBundle } = await generateDictionary();
+
+  const booksDir = join(DATA_ROOT, "dss", "books");
+  const dssFiles = await listJsonFiles(booksDir);
+  const dssBooks: Record<string, JsonValue> = {};
+  await mkdir(join(WEB_PUBLIC_DATA_ROOT, "dss"), { recursive: true });
+  for (const file of dssFiles) {
+    const stem = file.replace(/\.json$/i, "");
+    dssBooks[stem] = await readJson<JsonValue>(join(booksDir, file));
+    await writeFile(
+      join(WEB_PUBLIC_DATA_ROOT, "dss", file),
+      JSON.stringify(dssBooks[stem]),
+      "utf-8",
+    );
+  }
+  const dssBundle = dssBooks as JsonValue;
+
+  const canonicalBookLabels = await loadCanonicalBookLabels();
+  const metadata = generateMetadata(tanaj.counts, besorah.counts, canonicalBookLabels);
+  await writeFile(
+    join(WEB_PUBLIC_DATA_ROOT, "metadata.json"),
+    JSON.stringify(metadata),
+    "utf-8",
+  );
+
+  const bundlesDir = join(WEB_PUBLIC_DATA_ROOT, "bundles");
+  await mkdir(bundlesDir, { recursive: true });
+
+  const tanajSplitDir = join(bundlesDir, "tanaj");
+  await mkdir(tanajSplitDir, { recursive: true });
+
+  const tanajBookIds = Object.keys(tanaj.bundle.books).sort((a, b) =>
+    a.localeCompare(b, "en"),
+  );
+  const tanajParts: Record<string, SplitBundlePart> = {};
+  let tanajTotalSize = 0;
+
+  for (const bookId of tanajBookIds) {
+    const bookBundle = tanaj.bundle.books[bookId] as JsonValue;
+    const relativePath = `data/bundles/tanaj/${bookId}.json`;
+    const size = getJsonSize(bookBundle);
+    assertBundleFileSize(relativePath, size);
+
+    tanajTotalSize += size;
+    tanajParts[bookId] = {
+      size,
+      checksum: sha256OfJson(bookBundle),
+    };
+
+    await writeFile(
+      join(tanajSplitDir, `${bookId}.json`),
+      JSON.stringify(bookBundle),
+      "utf-8",
+    );
+  }
+
+  const tanajIndex: TanajSplitIndex = {
+    format: "split-by-book-v1",
+    books: tanajBookIds,
+    parts: tanajParts,
+    total_size: tanajTotalSize,
+  };
+  assertBundleFileSize("data/bundles/tanaj.json", getJsonSize(tanajIndex as unknown as JsonValue));
+  await writeFile(
+    join(bundlesDir, "tanaj.json"),
+    JSON.stringify(tanajIndex),
+    "utf-8",
+  );
+  await writeFile(
+    join(bundlesDir, "besorah.json"),
+    JSON.stringify(besorah.bundle),
+    "utf-8",
+  );
+  await writeFile(join(bundlesDir, "tth.json"), JSON.stringify(tthBundle), "utf-8");
+  const ts2009Bundle = await generateTs2009Chapters();
+  if (ts2009Bundle) {
+    await writeFile(
+      join(bundlesDir, "ts2009.json"),
+      JSON.stringify(ts2009Bundle.bundle),
+      "utf-8",
+    );
+  }
+  await writeFile(
+    join(bundlesDir, "dictionary.json"),
+    JSON.stringify(dictionaryBundle),
+    "utf-8",
+  );
+  await writeFile(join(bundlesDir, "dss.json"), JSON.stringify(dssBundle), "utf-8");
+  await writeFile(
+    join(bundlesDir, "versions.json"),
+    JSON.stringify(BUNDLE_VERSIONS),
+    "utf-8",
+  );
+
+  const manifest = {
+    version: `${new Date().toISOString().slice(0, 10).replace(/-/g, ".")}-1`,
+    generated_at: new Date().toISOString(),
+    bundles: {
+      metadata: {
+        size: getJsonSize(metadata),
+        checksum: sha256OfJson(metadata),
+      },
+      tanaj: {
+        size: tanajTotalSize,
+        checksum: sha256OfJson(tanajIndex as unknown as JsonValue),
+      },
+      besorah: {
+        size: getJsonSize(besorah.bundle),
+        checksum: sha256OfJson(besorah.bundle),
+      },
+      tth: {
+        size: getJsonSize(tthBundle as unknown as JsonValue),
+        checksum: sha256OfJson(tthBundle as unknown as JsonValue),
+      },
+      bes: {
+        size: getJsonSize(besBundle as unknown as JsonValue),
+        checksum: sha256OfJson(besBundle as unknown as JsonValue),
+      },
+      translit: {
+        size: getJsonSize(translitBundle as unknown as JsonValue),
+        checksum: sha256OfJson(translitBundle as unknown as JsonValue),
+      },
+      dictionary: {
+        size: getJsonSize(dictionaryBundle),
+        checksum: sha256OfJson(dictionaryBundle),
+      },
+      dss: {
+        size: getJsonSize(dssBundle),
+        checksum: sha256OfJson(dssBundle),
+      },
+      versions: {
+        size: getJsonSize(BUNDLE_VERSIONS as unknown as JsonValue),
+        checksum: sha256OfJson(BUNDLE_VERSIONS as unknown as JsonValue),
+      },
+      ...(ts2009Bundle
+        ? {
+            ts2009: {
+              size: getJsonSize(ts2009Bundle.bundle as unknown as JsonValue),
+              checksum: sha256OfJson(ts2009Bundle.bundle as unknown as JsonValue),
+            },
+          }
+        : {}),
+    },
+  };
+
+  await writeFile(
+    join(WEB_PUBLIC_DATA_ROOT, "manifest.json"),
+    JSON.stringify(manifest),
+    "utf-8",
+  );
+
+  console.log("Generated static data in web/public/data");
+  console.log(`books: tanaj=${Object.keys(tanaj.bundle.books).length}, besorah=${Object.keys(besorah.bundle.books).length}`);
+  if (ts2009Bundle) {
+    console.log(
+      `ts2009: books=${ts2009Bundle.stats.books}, chapters=${ts2009Bundle.stats.chapters}, verses=${ts2009Bundle.stats.verses}`,
+    );
+    if (ts2009Bundle.stats.skippedBooks.length > 0) {
+      console.warn(
+        `ts2009 skipped books: ${ts2009Bundle.stats.skippedBooks.join(", ")}`,
+      );
+    }
+  }
+  console.log(`bundles: ${Object.keys(manifest.bundles).join(", ")}`);
+};
+
+main().catch((error) => {
+  console.error("generate-static-data failed", error);
+  process.exit(1);
+});

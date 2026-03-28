@@ -1,11 +1,56 @@
 
-  # Mobile Design System for Davar
+# Web App for Davar
 
-  This is a code bundle for Mobile Design System for Davar. The original project is available at https://www.figma.com/design/ZI4QMWZF4uaojHKSh4LA9Z/Mobile-Design-System-for-Davar.
+This is the web application package for Davar.
 
-  ## Running the code
+## Running the code
 
-  Run `npm i` to install the dependencies.
+Run `bun install` to install dependencies.
 
-  Run `npm run dev` to start the development server.
+Run `bun run dev` for production-parity local serving (builds `dist/` then serves it).
+
+Run `bun run dev:hot` for Bun HTML hot-reload mode.
+
+## Environment Setup
+
+Web TS2009 translation loading uses these public env vars:
+
+- `PUBLIC_SUPABASE_URL`
+- `PUBLIC_SUPABASE_ANON_KEY`
+
+Recommended workflow:
+
+1. Keep `.env.example` committed as the template.
+2. Set real local values in `.env` for local development.
+3. Set real production values in Cloudflare Pages environment variables.
+
+If Supabase values are missing, invalid, or placeholders, the app skips TS2009
+loading and falls back to other translation sources.
+
+### Build-time TS2009 Static Export (Cloudflare Pages)
+
+The build pipeline can export TS2009 from Supabase Storage into static CDN files
+at `public/data/ts2009/<book>/<chapter>.json`.
+
+Required build-time secrets:
+
+- `SUPABASE_URL` (or fallback to `PUBLIC_SUPABASE_URL`)
+- `SUPABASE_SERVICE_ROLE_KEY`
+
+Behavior:
+
+1. During `bun run build`, `build.ts` executes `scripts/generate-static-data/index.ts`.
+2. If both TS2009 build secrets are present, TS2009 chapter files are generated.
+3. If secrets are missing, TS2009 static export is skipped and runtime fallback remains available.
+
+Important:
+
+- Never expose `SUPABASE_SERVICE_ROLE_KEY` as a `PUBLIC_*` variable.
+- Keep service-role credentials only in Cloudflare Pages build secrets.
+
+## Formatting
+
+- This workspace uses Biome as the formatter/linter source of truth for JS/TS files.
+- Use `bun run format` in this `web/` directory to format files.
+- Prettier is intentionally not configured at project level in this workspace.
   

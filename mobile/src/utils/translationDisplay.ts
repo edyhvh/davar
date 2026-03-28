@@ -1,6 +1,7 @@
 import {
   getTranslationKey,
   shouldHideSuperscripts,
+  shouldHideTranslationText,
   type AppLanguage,
 } from "./translationConfig";
 
@@ -17,13 +18,19 @@ type TranslationDisplayInput = {
   language: AppLanguage;
   translation?: string | null;
   missingTranslationText: string;
+  hebrewOnly?: boolean;
 };
 
 export const getTranslationDisplayText = ({
   language,
   translation,
   missingTranslationText,
+  hebrewOnly = false,
 }: TranslationDisplayInput): string => {
+  if (shouldHideTranslationText(language, hebrewOnly)) {
+    return "";
+  }
+
   const baseText =
     language === "es" && !translation?.trim()
       ? missingTranslationText

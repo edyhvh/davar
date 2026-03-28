@@ -65,3 +65,41 @@ Join our community of developers creating universal apps.
 - If you ever need to force Bun explicitly: `bun expo start --bun`
 - Bun is usually 4–25× faster than npm for installs, so you'll notice the difference right away.
 
+## Formatting
+
+- This repository uses Biome as the formatter/linter source of truth for JS/TS files.
+- Use `bunx biome format --write .` from this `mobile/` directory when you want to format files manually.
+- Prettier is intentionally not configured at project level in this workspace.
+
+## Static Data Environment Setup
+
+Mobile static data endpoints are controlled by Expo public env vars:
+
+- `EXPO_PUBLIC_STATIC_DATA_BASE_URL`
+- `EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL`
+- `EXPO_PUBLIC_SUPABASE_URL`
+- `EXPO_PUBLIC_SUPABASE_ANON_KEY`
+
+Resolution order in app code:
+
+1. If `EXPO_PUBLIC_*` vars are set, those values are used.
+2. If not set:
+   - Development (`__DEV__`): `http://127.0.0.1:3002/data`
+   - Production: `https://davar.bible/data`
+
+Local setup:
+
+1. Keep `.env.example` as the committed template.
+2. Create `.env.local` for your machine-specific values.
+2. For a physical device, replace `127.0.0.1` with your machine LAN IP.
+
+Production setup:
+
+1. Define the same `EXPO_PUBLIC_*` keys in EAS build environment variables (do not commit production secrets).
+2. Point them to the production static JSON origin/path.
+
+Notes:
+
+- TS2009 translations are fetched online from Supabase Storage.
+- If Supabase env vars are missing or placeholders, TS2009 is skipped and the app falls back to other translation sources without crashing.
+

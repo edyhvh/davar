@@ -21,6 +21,7 @@ import {
   removeSofPasukForDisplay,
 } from "@/src/utils/hebrew";
 import { useTranslation } from "@/src/i18n/useTranslation";
+import { shouldHideTranslationText } from "@/src/utils/translationConfig";
 import { getTranslationDisplayText } from "@/src/utils/translationDisplay";
 
 const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
@@ -128,7 +129,6 @@ const createStyles = (
       fontSize: typography.sizes.hebrewVerseMedium * hebrewScale * 1.9,
       lineHeight: typography.sizes.hebrewVerseMedium * hebrewScale * 1.5,
       color: colors.textPrimary,
-      textDecorationLine: "underline",
     },
     hebrewWordPressable: {
       paddingHorizontal: spacing[2],
@@ -210,7 +210,9 @@ export const VerseCard = ({
     language,
     translation: verse.translation,
     missingTranslationText: missingSpanishTranslation,
+    hebrewOnly,
   });
+  const hideTranslationText = shouldHideTranslationText(language, hebrewOnly);
 
   const content = (
     <View style={variant === "detail" ? styles.containerDetail : undefined}>
@@ -326,7 +328,7 @@ export const VerseCard = ({
           );
         })}
       </View>
-      {hebrewOnly ? null : (
+      {hideTranslationText ? null : (
         <Text style={styles.translation}>
           {/<\/?em>/i.test(translationText)
             ? renderTranslationWithItalics(

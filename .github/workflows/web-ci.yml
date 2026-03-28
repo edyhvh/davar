@@ -3,10 +3,10 @@ name: Web CI
 on:
   push:
     branches: [main, apocalipsis]
-    paths: ["web/**"]
+    paths: ["web/**", "shared/**", ".github/workflows/web-ci.yml"]
   pull_request:
     branches: [main, apocalipsis]
-    paths: ["web/**"]
+    paths: ["web/**", "shared/**", ".github/workflows/web-ci.yml"]
 
 jobs:
   web_ci:

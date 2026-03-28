@@ -1,9 +1,5 @@
-import { apiRequest } from "@/src/services/api";
-import type {
-  VerseResponse,
-  TranslationFootnote,
-  WordResponse,
-} from "@/src/types/api";
+import { staticDataRequest } from "@/src/services/api";
+import type { TranslationFootnote, WordResponse } from "@/src/types/api";
 import {
   fetchHebrewVerses,
   fetchTranslationVerses,
@@ -13,6 +9,46 @@ import {
   type DssVariantRow,
 } from "@/src/services/database";
 import { removeMaqafForDisplay } from "@/src/utils/hebrew";
+import { TTH_BOOK_MAPPING } from "@davar/shared/translationConfig";
+
+// Chapter-level cache for TS2009 static JSON (matches web approach)
+const ts2009ChapterCache = new Map<string, Promise<Map<number, string> | null>>();
+
+const fetchTs2009ChapterStatic = (
+  bookId: string,
+  chapter: number,
+): Promise<Map<number, string> | null> => {
+  const cacheKey = `${bookId}:${chapter}`;
+
+  const cached = ts2009ChapterCache.get(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
+  const promise = (async (): Promise<Map<number, string> | null> => {
+    try {
+      const staticChapter = await staticDataRequest<{
+        verses?: Record<string, string>;
+      }>(`ts2009/${bookId}/${chapter}.json`);
+
+      const verses = staticChapter.verses ?? {};
+      const verseMap = new Map<number, string>();
+      for (const [verseKey, translation] of Object.entries(verses)) {
+        const verseNumber = Number(verseKey);
+        if (Number.isFinite(verseNumber) && typeof translation === "string") {
+          verseMap.set(verseNumber, translation);
+        }
+      }
+
+      return verseMap;
+    } catch {
+      return null;
+    }
+  })();
+
+  ts2009ChapterCache.set(cacheKey, promise);
+  return promise;
+};
 
 export type DisplayWord = {
   position: number;
@@ -48,35 +84,280 @@ export type DisplayVerse = {
 const formatBookName = (bookId: string) =>
   bookId.charAt(0).toUpperCase() + bookId.slice(1);
 
-// ── Shared mapping: API response → DisplayVerse[] ──────────────────────────
+type StaticChapterWord = {
+  text?: string;
+  strong?: string;
+  morph?: string;
+  prefixes?: string[];
+  translit_en?: string;
+  translit_es?: string;
+};
 
-const mapApiVersesToDisplay = (
+type StaticChapterVerse = {
+  chapter: number;
+  verse: number;
+  hebrew?: string;
+  words?: StaticChapterWord[];
+};
+
+type StaticTranslationVerse = {
+  verse: number;
+  bes?: string;
+  tth?: string;
+  text?: string;
+  footnotes?: unknown[];
+};
+
+type StaticTranslationChapter = {
+  chapter: number;
+  verses?: StaticTranslationVerse[];
+};
+
+type StaticTranslationBook = {
+  chapters?: StaticTranslationChapter[];
+};
+
+type StaticDssDifference = {
+  position: number;
+  dss_word?: string;
+  masoretic_word?: string;
+  dss_strong?: string;
+  comment_v2_en?: string;
+  comment_v2_es?: string;
+  comment_v2_he?: string;
+};
+
+type StaticDssVerse = {
+  differences?: StaticDssDifference[];
+};
+
+type StaticDssChapter = {
+  verses?: Record<string, StaticDssVerse>;
+};
+
+type StaticDssBook = {
+  chapters?: Record<string, StaticDssChapter>;
+};
+
+type TranslationEntry = {
+  text: string;
+  footnotes?: TranslationFootnote[];
+};
+
+const toSortedUniqueVerseNumbers = (values: number[]): number[] =>
+  Array.from(new Set(values.filter((value) => Number.isFinite(value) && value > 0))).sort(
+    (a, b) => a - b,
+  );
+
+const parseTranslationFootnotes = (
+  rawFootnotes: unknown,
+): TranslationFootnote[] | undefined => {
+  if (!Array.isArray(rawFootnotes) || rawFootnotes.length === 0) {
+    return undefined;
+  }
+
+  const parsed = rawFootnotes
+    .map((footnote): TranslationFootnote | null => {
+      if (typeof footnote === "string") {
+        const match = /^\[([a-z0-9]+)\]\s*(.*)$/i.exec(footnote);
+        if (!match) {
+          return {
+            marker: "",
+            number: "",
+            word: "",
+            explanation: footnote,
+          };
+        }
+
+        return {
+          marker: match[1],
+          number: "",
+          word: "",
+          explanation: match[2],
+        };
+      }
+
+      if (footnote && typeof footnote === "object") {
+        const typed = footnote as Record<string, unknown>;
+        return {
+          marker: String(typed.marker ?? ""),
+          number: String(typed.number ?? ""),
+          word: String(typed.word ?? ""),
+          explanation: String(typed.explanation ?? ""),
+        };
+      }
+
+      return null;
+    })
+    .filter((footnote): footnote is TranslationFootnote => Boolean(footnote));
+
+  return parsed.length > 0 ? parsed : undefined;
+};
+
+const loadStaticTranslationsForChapter = async (
   bookId: string,
-  verses: VerseResponse[],
+  chapter: number,
+  language?: "en" | "es",
+  hebrewOnly?: boolean,
+  expectedVerseNumbers?: number[],
+): Promise<Map<number, TranslationEntry>> => {
+  const translationMap = new Map<number, TranslationEntry>();
+
+  if (!language || hebrewOnly) {
+    return translationMap;
+  }
+
+  if (language === "es") {
+    // Try TTH_2 first (official Spanish translation)
+    const tthBookId = TTH_BOOK_MAPPING[bookId.charAt(0).toUpperCase() + bookId.slice(1)];
+    if (tthBookId) {
+      try {
+        const translationBook = await staticDataRequest<StaticTranslationBook>(
+          `tth/${tthBookId}.json`,
+        );
+
+        const chapterData = (translationBook.chapters ?? []).find(
+          (item) => item.chapter === chapter,
+        );
+
+        if (chapterData?.verses) {
+          for (const verse of chapterData.verses) {
+            const text = verse.tth ?? "";
+            translationMap.set(verse.verse, {
+              text,
+              footnotes: parseTranslationFootnotes(verse.footnotes),
+            });
+          }
+        }
+      } catch {
+        // TTH_2 not available for this book, try BES fallback below
+      }
+    }
+
+    // If TTH_2 didn't load or book not in TTH_2, try BES fallback
+    if (translationMap.size === 0) {
+      try {
+        const translationBook = await staticDataRequest<StaticTranslationBook>(
+          `bes/${bookId}.json`,
+        );
+
+        const chapterData = (translationBook.chapters ?? []).find(
+          (item) => item.chapter === chapter,
+        );
+
+        if (chapterData?.verses) {
+          for (const verse of chapterData.verses) {
+            const text = verse.bes ?? "";
+            translationMap.set(verse.verse, {
+              text,
+              footnotes: parseTranslationFootnotes(verse.footnotes),
+            });
+          }
+        }
+      } catch {
+        // Translation is optional; return SQLite fallback below when available.
+      }
+    }
+  } else if (language === "en") {
+    // Load TS2009 from static chapter JSON (same source as web)
+    try {
+      const chapterMap = await fetchTs2009ChapterStatic(bookId, chapter);
+
+      if (chapterMap) {
+        for (const [verseNumber, translation] of chapterMap) {
+          translationMap.set(verseNumber, {
+            text: translation,
+            footnotes: undefined,
+          });
+        }
+      }
+    } catch (error) {
+      console.warn(`Failed to load TS2009 translations for ${bookId} ${chapter}:`, error);
+      // Fall back to SQLite below
+    }
+  }
+
+  if (translationMap.size === 0) {
+    try {
+      const offlineRows = await fetchTranslationVerses(bookId, chapter, language);
+      for (const row of offlineRows) {
+        translationMap.set(row.verse, {
+          text: row.text ?? "",
+          footnotes: parseTranslationFootnotes(row.footnotes),
+        });
+      }
+    } catch {
+      // Leave translation map empty when offline translation isn't available.
+    }
+  }
+
+  return translationMap;
+};
+
+const loadStaticDssForChapter = async (
+  bookId: string,
+  chapter: number,
+  showDss?: boolean,
+): Promise<Map<number, StaticDssDifference[]>> => {
+  const dssMap = new Map<number, StaticDssDifference[]>();
+
+  if (!showDss) {
+    return dssMap;
+  }
+
+  try {
+    const dssBook = await staticDataRequest<StaticDssBook>(`dss/${bookId}.json`);
+    const chapterData = dssBook.chapters?.[String(chapter)];
+    const verseEntries = chapterData?.verses ?? {};
+
+    for (const [verseKey, verseData] of Object.entries(verseEntries)) {
+      const verseNumber = Number(verseKey);
+      if (!Number.isFinite(verseNumber)) {
+        continue;
+      }
+
+      const differences = (verseData.differences ?? []).filter(
+        (difference) => difference.position > 0,
+      );
+
+      if (differences.length > 0) {
+        dssMap.set(verseNumber, differences);
+      }
+    }
+  } catch {
+    // DSS variants are optional; return no variants when unavailable.
+  }
+
+  return dssMap;
+};
+
+const mapStaticVersesToDisplay = (
+  bookId: string,
+  verses: StaticChapterVerse[],
+  translationMap: Map<number, TranslationEntry>,
+  dssMap: Map<number, StaticDssDifference[]>,
+  showDss?: boolean,
 ): DisplayVerse[] => {
   return verses.map((verse) => {
-    const qumranVariants = verse.dss?.map((variant) => ({
-      position: Math.max(variant.position, 0),
-      dssWord: variant.dss_word,
-    }));
-
+    const dssVariants = showDss ? (dssMap.get(verse.verse) ?? []) : [];
     const dssVariantMap = new Map(
-      verse.dss?.map((variant) => [variant.position, variant]) ?? [],
+      dssVariants.map((variant) => [variant.position, variant]),
     );
 
-    const words = verse.words.map((word) => {
-      const dssVariant = dssVariantMap.get(word.position);
+    const sourceWords = Array.isArray(verse.words) ? verse.words : [];
+    const words: DisplayWord[] = sourceWords.map((word, index) => {
+      const position = index + 1;
+      const dssVariant = dssVariantMap.get(position);
+
       return {
-        position: word.position,
-        text: word.text,
+        position,
+        text: word.text ?? "",
         strong: word.strong,
-        prefixes: word.prefixes,
-        hasQumranVariant: word.has_dss_variant,
+        prefixes: word.prefixes ?? [],
+        hasQumranVariant: Boolean(dssVariant),
         morph: word.morph,
         translit_en: word.translit_en,
         translit_es: word.translit_es,
-        dss_translit_en: dssVariant?.dss_translit_en,
-        dss_translit_es: dssVariant?.dss_translit_es,
         dssWord: dssVariant?.dss_word,
         dssStrong: dssVariant?.dss_strong,
         dssCommentaryEn: dssVariant?.comment_v2_en,
@@ -85,19 +366,96 @@ const mapApiVersesToDisplay = (
       };
     });
 
+    const hebrewText =
+      verse.hebrew ??
+      sourceWords
+        .map((word) => word.text ?? "")
+        .filter(Boolean)
+        .join(" ");
+
+    const translationEntry = translationMap.get(verse.verse);
+
     return {
       id: `${bookId}-${verse.chapter}-${verse.verse}`,
       book: formatBookName(bookId),
       bookId,
       chapter: verse.chapter,
       verse: verse.verse,
-      hebrew: removeMaqafForDisplay(verse.hebrew),
-      translation: verse.translation ?? "",
+      hebrew: removeMaqafForDisplay(hebrewText),
+      translation: translationEntry?.text ?? "",
       words,
-      qumranVariants,
-      translation_footnotes: verse.translation_footnotes,
+      qumranVariants:
+        dssVariants.length > 0
+          ? dssVariants.map((variant) => ({
+              position: Math.max(variant.position, 0),
+              dssWord: variant.dss_word ?? "",
+            }))
+          : undefined,
+      translation_footnotes: translationEntry?.footnotes,
     };
   });
+};
+
+const fetchChapterVersesStatic = async (
+  bookId: string,
+  chapter: number,
+  options?: {
+    language?: "en" | "es";
+    showDss?: boolean;
+    hebrewOnly?: boolean;
+  },
+): Promise<DisplayVerse[]> => {
+  const chapterSources = [`oe/${bookId}/${chapter}.json`, `besorah/${bookId}/${chapter}.json`];
+
+  let sourceVerses: StaticChapterVerse[] | null = null;
+  const sourceErrors: string[] = [];
+
+  for (const source of chapterSources) {
+    try {
+      const verses = await staticDataRequest<StaticChapterVerse[]>(source);
+      if (Array.isArray(verses) && verses.length > 0) {
+        sourceVerses = verses;
+        break;
+      }
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : String(error);
+      sourceErrors.push(`${source}: ${reason}`);
+      // Try next source
+    }
+  }
+
+  if (!sourceVerses || sourceVerses.length === 0) {
+    const details =
+      sourceErrors.length > 0
+        ? sourceErrors.join(" | ")
+        : chapterSources.join(", ");
+    throw new Error(
+      `No static verse data found for ${bookId} chapter ${chapter}. Sources tried: ${details}`,
+    );
+  }
+
+  const expectedVerseNumbers = toSortedUniqueVerseNumbers(
+    sourceVerses.map((verse) => verse.verse),
+  );
+
+  const [translationMap, dssMap] = await Promise.all([
+    loadStaticTranslationsForChapter(
+      bookId,
+      chapter,
+      options?.language,
+      options?.hebrewOnly,
+      expectedVerseNumbers,
+    ),
+    loadStaticDssForChapter(bookId, chapter, options?.showDss),
+  ]);
+
+  return mapStaticVersesToDisplay(
+    bookId,
+    sourceVerses,
+    translationMap,
+    dssMap,
+    options?.showDss,
+  );
 };
 
 // ── Offline mapping: SQLite rows → DisplayVerse[] ──────────────────────────
@@ -235,31 +593,25 @@ export const fetchChapterVerses = async (
     return fetchChapterVersesOffline(bookId, chapter, options);
   }
 
-  // Try API first, fall back to SQLite on failure
+  // Try static data first, fall back to SQLite on failure
   try {
-    const params = new URLSearchParams();
-    if (options?.language) params.set("language", options.language);
-    if (options?.showDss) params.set("show_dss", "true");
-    if (options?.hebrewOnly) params.set("hebrew_only", "true");
-
-    const query = params.toString();
-    const url = query
-      ? `/api/v1/verses/${bookId}/${chapter}?${query}`
-      : `/api/v1/verses/${bookId}/${chapter}`;
-
-    const verses = await apiRequest<VerseResponse[]>(url);
-    return mapApiVersesToDisplay(bookId, verses);
-  } catch (apiError) {
-    // API failed — try offline data as fallback
+    return await fetchChapterVersesStatic(bookId, chapter, options);
+  } catch (staticError) {
+    // Static fetch failed — try offline data as fallback
     console.debug(
-      `API fetch failed for ${bookId}/${chapter}, trying offline:`,
-      apiError,
+      `Static fetch failed for ${bookId}/${chapter}, trying offline:`,
+      staticError,
     );
     try {
       return await fetchChapterVersesOffline(bookId, chapter, options);
-    } catch {
-      // Neither API nor offline worked — re-throw original API error
-      throw apiError;
+    } catch (offlineError) {
+      const staticMessage =
+        staticError instanceof Error ? staticError.message : String(staticError);
+      const offlineMessage =
+        offlineError instanceof Error ? offlineError.message : String(offlineError);
+      throw new Error(
+        `${staticMessage} | Offline fallback failed: ${offlineMessage}`,
+      );
     }
   }
 };

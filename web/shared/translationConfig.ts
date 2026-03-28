@@ -3,15 +3,6 @@
 export type AppLanguage = "en" | "es" | "he";
 export type TranslationKey = "ts2009" | "tth" | "delitzsch";
 
-type DssCommentaryInput = {
-  comment_v2_en?: string | null;
-  comment_v2_es?: string | null;
-  comment_v2_he?: string | null;
-  dssCommentaryEn?: string | null;
-  dssCommentaryEs?: string | null;
-  dssCommentaryHe?: string | null;
-};
-
 // Mapping from canonical English book names to TTH_2 Hebrew file names
 // TTH_2 covers 34 books (Torah, some Neviim, some Ketuvim, some Besorah)
 export const TTH_BOOK_MAPPING: Record<string, string> = {
@@ -68,34 +59,6 @@ export const getTranslationKey = (language: AppLanguage): TranslationKey => {
     default:
       return "ts2009"; // fallback
   }
-};
-
-export const shouldHideTranslationText = (
-  language: AppLanguage,
-  hebrewOnly = false,
-): boolean => {
-  return hebrewOnly || language === "he";
-};
-
-export const getDssCommentaryForLanguage = (
-  language: AppLanguage,
-  commentary?: DssCommentaryInput | null,
-): string | undefined => {
-  if (!commentary) return undefined;
-
-  const commentaryEn = commentary.comment_v2_en ?? commentary.dssCommentaryEn;
-  const commentaryEs = commentary.comment_v2_es ?? commentary.dssCommentaryEs;
-  const commentaryHe = commentary.comment_v2_he ?? commentary.dssCommentaryHe;
-
-  if (language === "he") {
-    return commentaryHe ?? undefined;
-  }
-
-  if (language === "es") {
-    return commentaryEs ?? commentaryEn ?? commentaryHe ?? undefined;
-  }
-
-  return commentaryEn ?? commentaryEs ?? commentaryHe ?? undefined;
 };
 
 export const shouldHideSuperscripts = (

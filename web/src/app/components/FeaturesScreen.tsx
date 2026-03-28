@@ -1,5 +1,6 @@
 import React from "react";
-import { Github, Lightbulb } from "lucide-react";
+import { Lightbulb } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { useTranslation, type AppLanguage } from "../hooks/useTranslation";
 
 interface FeaturesScreenProps {
@@ -27,7 +28,7 @@ export function FeaturesScreen({ language }: FeaturesScreenProps) {
           ))}
         </div>
         <div className="mt-6 flex items-center justify-center gap-2 text-sm text-[var(--text-secondary-muted)]">
-          <Github className="w-4 h-4" />
+          <FaGithub className="w-4 h-4" />
           <a
             href="https://github.com/edyhvh/davar"
             target="_blank"

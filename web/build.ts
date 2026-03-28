@@ -2,12 +2,35 @@ import tailwind from "bun-plugin-tailwind";
 import { join } from "path";
 import { cpSync, existsSync, readFileSync, writeFileSync } from "fs";
 
+const generation = Bun.spawnSync([
+  "bun",
+  "../scripts/generate-static-data/index.ts",
+], {
+  cwd: import.meta.dir,
+  stdout: "inherit",
+  stderr: "inherit",
+});
+
+if (generation.exitCode !== 0) {
+  console.error("Static data generation failed.");
+  process.exit(generation.exitCode ?? 1);
+}
+
 const result = await Bun.build({
   entrypoints: ["./index.html"],
   outdir: "./dist",
   publicPath: "/",
   minify: true,
   env: "PUBLIC_*",
+  // Belt-and-suspenders: force literal substitution of PUBLIC_* env vars so
+  // that import.meta.env.PUBLIC_X is guaranteed to be inlined even in Bun
+  // versions that only replace direct AST-node patterns.
+  define: {
+    "import.meta.env.PUBLIC_SUPABASE_URL": JSON.stringify(process.env.PUBLIC_SUPABASE_URL ?? ""),
+    "import.meta.env.PUBLIC_SUPABASE_ANON_KEY": JSON.stringify(process.env.PUBLIC_SUPABASE_ANON_KEY ?? ""),
+    "import.meta.env.PUBLIC_NODE_ENV": JSON.stringify(process.env.PUBLIC_NODE_ENV ?? "production"),
+    "import.meta.env.PUBLIC_STATIC_URL": JSON.stringify(process.env.PUBLIC_STATIC_URL ?? ""),
+  },
   plugins: [tailwind],
 });
 

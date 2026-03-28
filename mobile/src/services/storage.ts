@@ -135,5 +135,7 @@ export const saveBesorahDisclaimerCount = async (count: number) => {
 };
 
 export const clearStorage = async () => {
-  await AsyncStorage.multiRemove(Object.values(STORAGE_KEYS));
+  await Promise.all(
+    Object.values(STORAGE_KEYS).map((key) => AsyncStorage.removeItem(key)),
+  );
 };
