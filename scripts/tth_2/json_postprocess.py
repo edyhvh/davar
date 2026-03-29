@@ -130,7 +130,8 @@ class TTHJsonPostProcessor:
         extracted_segments = 0
 
         while True:
-            match = re.search(r'^(.*?)(?:\s*)<em>([^<]+)</em>\s*$', result, flags=re.DOTALL)
+            match = re.search(
+                r'^(.*?)(?:\s*)<em>([^<]+)</em>\s*$', result, flags=re.DOTALL)
             if not match:
                 break
 
@@ -522,7 +523,8 @@ class TTHJsonPostProcessor:
 
                 existing_subtitle = verse.get('subtitle', '').strip()
                 if existing_subtitle and self.is_valid_subtitle(existing_subtitle):
-                    verse['subtitle'] = f"{existing_subtitle} {extracted_subtitle}".strip()
+                    verse['subtitle'] = f"{existing_subtitle} {extracted_subtitle}".strip(
+                    )
                 else:
                     verse['subtitle'] = extracted_subtitle
 
@@ -635,15 +637,18 @@ class TTHJsonPostProcessor:
         print(f"  Broken italics fixed: {self.stats['broken_italics']}")
         print(f"  Italics → <em>:       {self.stats['italics_converted']}")
         print(f"  <em> spacing fixed:   {self.stats['em_spacing_fixed']}")
-        print(f"  Subtitle segments:    {self.stats['subtitle_segments_extracted']}")
-        print(f"  Subtitle verses:      {self.stats['subtitle_verses_created']}")
+        print(
+            f"  Subtitle segments:    {self.stats['subtitle_segments_extracted']}")
+        print(
+            f"  Subtitle verses:      {self.stats['subtitle_verses_created']}")
         print(
             f"  Subtitle skip (<3w):  {self.stats['subtitle_segments_skipped_wordcount']}")
         print(
             f"  Subtitle skip (lc):   {self.stats['subtitle_segments_skipped_lowercase']}")
         print(
             f"  Subtitle skip (phr):  {self.stats['subtitle_segments_skipped_phrase']}")
-        print(f"  Invalid subtitles:    {self.stats['subtitle_invalid_removed']}")
+        print(
+            f"  Invalid subtitles:    {self.stats['subtitle_invalid_removed']}")
         print(f"  Underscore artifacts: {self.stats['underscore_artifacts']}")
 
 
