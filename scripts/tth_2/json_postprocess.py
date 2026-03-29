@@ -43,6 +43,15 @@ class TTHJsonPostProcessor:
     and fix formatting issues.
     """
 
+    BLOCKED_SUBTITLE_PHRASES = (
+        'el que podía',
+        'serán los de',
+        'fiesta de las',
+        'no la verán',
+        'para que esté',
+        'de la casa',
+    )
+
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
         self.stats = {
@@ -54,9 +63,106 @@ class TTHJsonPostProcessor:
             'broken_italics': 0,
             'italics_converted': 0,
             'em_spacing_fixed': 0,
+            'subtitle_segments_extracted': 0,
+            'subtitle_verses_created': 0,
+            'subtitle_segments_skipped_wordcount': 0,
+            'subtitle_segments_skipped_lowercase': 0,
+            'subtitle_segments_skipped_phrase': 0,
+            'subtitle_invalid_removed': 0,
             'verses_processed': 0,
             'files_processed': 0,
         }
+
+    def starts_with_lowercase_latin(self, content: str) -> bool:
+        """Return True when the first Latin letter in content is lowercase."""
+        first_letter = re.search(r'[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]', content)
+        if not first_letter:
+            return False
+        letter = first_letter.group(0)
+        return letter.isalpha() and letter == letter.lower() and letter != letter.upper()
+
+    def starts_with_blocked_subtitle_phrase(self, content: str) -> bool:
+        """Return True when content starts with a known in-verse phrase."""
+        normalized = content.strip().lower()
+        return any(normalized.startswith(phrase) for phrase in self.BLOCKED_SUBTITLE_PHRASES)
+
+    def is_valid_subtitle(self, content: str) -> bool:
+        """Keep only clear heading-like subtitles and drop known false positives."""
+        cleaned = content.strip()
+        if not cleaned:
+            return False
+        if self.starts_with_lowercase_latin(cleaned):
+            return False
+        if self.starts_with_blocked_subtitle_phrase(cleaned):
+            return False
+        return True
+
+    def count_words(self, text: str) -> int:
+        """Count words in a subtitle candidate, trimming edge punctuation."""
+        if not text:
+            return 0
+
+        tokens = re.split(r'\s+', text.strip())
+        cleaned_tokens = []
+        strip_chars = '.,;:!?"' + "'" + '“”‘’()[]{}'
+        for token in tokens:
+            cleaned = token.strip(strip_chars)
+            if cleaned:
+                cleaned_tokens.append(cleaned)
+
+        return len(cleaned_tokens)
+
+    def extract_subtitle_from_italics(self, text: str) -> Tuple[str, str, int]:
+        """
+        Extract trailing italicized heading-like segments into subtitle.
+
+        This is intentionally conservative: only trailing <em>...</em> spans are
+        considered to avoid moving in-verse explanatory italics.
+
+        Returns:
+            Tuple of (updated_text, subtitle, extracted_segment_count)
+        """
+        if not text:
+            return text, '', 0
+
+        result = text.rstrip()
+        subtitle_parts: List[str] = []
+        extracted_segments = 0
+
+        while True:
+            match = re.search(r'^(.*?)(?:\s*)<em>([^<]+)</em>\s*$', result, flags=re.DOTALL)
+            if not match:
+                break
+
+            prefix = match.group(1).rstrip()
+            content = match.group(2).strip()
+            word_count = self.count_words(content)
+
+            if word_count < 3:
+                self.stats['subtitle_segments_skipped_wordcount'] += 1
+                break
+
+            if self.starts_with_lowercase_latin(content):
+                self.stats['subtitle_segments_skipped_lowercase'] += 1
+                break
+
+            if self.starts_with_blocked_subtitle_phrase(content):
+                self.stats['subtitle_segments_skipped_phrase'] += 1
+                break
+
+            subtitle_parts.insert(0, content)
+            result = prefix
+            extracted_segments += 1
+
+        if extracted_segments == 0:
+            return text, '', 0
+
+        result = re.sub(r'\s{2,}', ' ', result)
+        result = re.sub(r'\s+([,.;:!?])', r'\1', result)
+        result = result.strip()
+
+        subtitle = ' '.join(subtitle_parts).strip()
+        return result, subtitle, extracted_segments
 
     def remove_soft_hyphens(self, text: str) -> str:
         """
@@ -116,10 +222,10 @@ class TTHJsonPostProcessor:
         as literal characters in TTH JSON text.
 
         Examples:
-        - \! -> !
-        - \. -> .
-        - \[ -> [
-        - \] -> ]
+        - \\! -> !
+        - \\. -> .
+        - \\[ -> [
+        - \\] -> ]
         """
         pattern = r'\\([!\.\[\]])'
         matches = re.findall(pattern, text)
@@ -397,11 +503,28 @@ class TTHJsonPostProcessor:
         """Process a single verse entry."""
         self.stats['verses_processed'] += 1
 
+        existing_subtitle = verse.get('subtitle', '').strip()
+        if existing_subtitle and not self.is_valid_subtitle(existing_subtitle):
+            del verse['subtitle']
+            self.stats['subtitle_invalid_removed'] += 1
+
         # Process the main TTH text
         if 'tth' in verse and verse['tth']:
             verse['tth'] = self.process_text(verse['tth'])
             verse['tth'] = self.strip_embedded_footnotes_section(verse['tth'])
             verse['tth'] = self.rebalance_em_tags(verse['tth'])
+            verse['tth'], extracted_subtitle, extracted_count = self.extract_subtitle_from_italics(
+                verse['tth'])
+
+            if extracted_count > 0 and extracted_subtitle:
+                self.stats['subtitle_segments_extracted'] += extracted_count
+                self.stats['subtitle_verses_created'] += 1
+
+                existing_subtitle = verse.get('subtitle', '').strip()
+                if existing_subtitle and self.is_valid_subtitle(existing_subtitle):
+                    verse['subtitle'] = f"{existing_subtitle} {extracted_subtitle}".strip()
+                else:
+                    verse['subtitle'] = extracted_subtitle
 
         # Process footnote explanations (they may contain italics too)
         if 'footnotes' in verse:
@@ -512,6 +635,15 @@ class TTHJsonPostProcessor:
         print(f"  Broken italics fixed: {self.stats['broken_italics']}")
         print(f"  Italics → <em>:       {self.stats['italics_converted']}")
         print(f"  <em> spacing fixed:   {self.stats['em_spacing_fixed']}")
+        print(f"  Subtitle segments:    {self.stats['subtitle_segments_extracted']}")
+        print(f"  Subtitle verses:      {self.stats['subtitle_verses_created']}")
+        print(
+            f"  Subtitle skip (<3w):  {self.stats['subtitle_segments_skipped_wordcount']}")
+        print(
+            f"  Subtitle skip (lc):   {self.stats['subtitle_segments_skipped_lowercase']}")
+        print(
+            f"  Subtitle skip (phr):  {self.stats['subtitle_segments_skipped_phrase']}")
+        print(f"  Invalid subtitles:    {self.stats['subtitle_invalid_removed']}")
         print(f"  Underscore artifacts: {self.stats['underscore_artifacts']}")
 
 
