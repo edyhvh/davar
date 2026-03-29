@@ -54,7 +54,8 @@ class TTH2MdToJson:
         self.text_cleaner = get_cleaner()
 
         if not self.book_info:
-            raise ValueError(f"Book key '{book_key}' not found in books database")
+            raise ValueError(
+                f"Book key '{book_key}' not found in books database")
 
     def read_markdown(self, file_path: str) -> str:
         """Read markdown file content."""
@@ -63,14 +64,16 @@ class TTH2MdToJson:
 
     def extract_footnote_definitions(self, text: str):
         """Extract footnote definitions from document."""
-        footnote_section_match = re.search(r'##\s*Footnotes\s*\n', text, re.IGNORECASE)
+        footnote_section_match = re.search(
+            r'##\s*Footnotes\s*\n', text, re.IGNORECASE)
         if footnote_section_match:
             footnote_section = text[footnote_section_match.end():]
         else:
             footnote_section = text
 
         footnote_pattern = r'\[\^(\d+)\]:\s*(.+?)(?=\n\[|\n\n|$)'
-        matches = re.finditer(footnote_pattern, footnote_section, re.MULTILINE | re.DOTALL)
+        matches = re.finditer(
+            footnote_pattern, footnote_section, re.MULTILINE | re.DOTALL)
 
         for match in matches:
             footnote_num = match.group(1)
@@ -170,7 +173,8 @@ class TTH2MdToJson:
             ]
 
             # Check for compound terms
-            search_text = text_before[-50:] if len(text_before) > 50 else text_before
+            search_text = text_before[-50:] if len(
+                text_before) > 50 else text_before
             for term_pattern, term_name in compound_terms:
                 pattern = term_pattern + r'\s*$'
                 match = re.search(pattern, search_text, re.IGNORECASE)
@@ -192,7 +196,8 @@ class TTH2MdToJson:
         for match in matches:
             footnote_num = match.group(1)
             marker = num_to_superscript(footnote_num)
-            definition = self.footnote_definitions.get(footnote_num, f'Nota al pie {footnote_num}')
+            definition = self.footnote_definitions.get(
+                footnote_num, f'Nota al pie {footnote_num}')
 
             text_before = text[:match.start()]
             associated_word = extract_associated_word(text_before)
@@ -239,6 +244,30 @@ class TTH2MdToJson:
 
         return modified_text
 
+    def starts_inline_footnote_blob(self, lines: List[str], index: int, line: str) -> bool:
+        """
+        Detect leaked inline footnote apparatus blocks inside chapter content.
+
+        Corrupted markdown sometimes injects blocks like:
+          1.
+          [^1]: ...
+
+        between verse lines. These must be skipped during verse parsing.
+        """
+        stripped = line.strip()
+
+        # Numbered marker line followed by a footnote definition line.
+        if re.match(r'^\d+\.\s*$', stripped):
+            if index + 1 < len(lines):
+                next_line = lines[index + 1].strip()
+                if re.match(r'^\[\^\d+\]:', next_line):
+                    return True
+
+        # A standalone footnote definition inside chapter flow is also a leak.
+        if re.match(r'^\[\^\d+\]:', stripped):
+            return True
+
+        return False
 
     def parse_chapters_and_verses(self, book_text: str, verbose: bool = False) -> List[Dict[str, Any]]:
         """Parse chapters and verses from the book text."""
@@ -248,6 +277,7 @@ class TTH2MdToJson:
         current_chapter = None
         current_verses = []
         total_chapters_expected = self.book_info.get('chapters', 0)
+        skipping_inline_footnote_blob = False
 
         i = 0
         while i < len(lines):
@@ -261,6 +291,14 @@ class TTH2MdToJson:
             # Stop parsing when we reach the footnotes section
             if line.startswith('## Footnotes') or line.startswith('# Footnotes'):
                 break
+
+            # Skip malformed inline footnote blocks until the next verse/chapter marker.
+            if skipping_inline_footnote_blob:
+                if re.match(r'^\*\*(\d+)\*\*\s*$', line) or re.match(r'^\*\*(\d+)\*\*\s+.+$', line):
+                    skipping_inline_footnote_blob = False
+                else:
+                    i += 1
+                    continue
 
             # Check for chapter markers
             chapter_match = re.match(r'^\*\*(\d+)\*\*\s*$', line)
@@ -279,6 +317,13 @@ class TTH2MdToJson:
 
             # Process verses if we're in a chapter
             if current_chapter is not None:
+                # Detect and skip leaked inline apparatus before it gets appended
+                # to the previous verse body.
+                if self.starts_inline_footnote_blob(lines, i, line):
+                    skipping_inline_footnote_blob = True
+                    i += 1
+                    continue
+
                 # Look for verse markers
                 verse_match = re.match(r'^\*\*(\d+)\*\*\s*(.+)$', line)
                 if verse_match:
@@ -307,8 +352,10 @@ class TTH2MdToJson:
                     last_verse['tth'] += ' ' + line.strip()
 
                     # Re-process the verse with the additional text
-                    last_verse['tth'] = self.clean_text_preserve_comments(last_verse['tth'])
-                    last_verse['tth'], last_verse['footnotes'] = self.extract_footnotes(last_verse['tth'])
+                    last_verse['tth'] = self.clean_text_preserve_comments(
+                        last_verse['tth'])
+                    last_verse['tth'], last_verse['footnotes'] = self.extract_footnotes(
+                        last_verse['tth'])
                     last_verse['hebrew_terms'] = []
 
             i += 1
@@ -391,7 +438,8 @@ class TTH2MdToJson:
         # Parse chapters and verses (show progress for large books)
         if verbose:
             print(f"    Parsing chapters and verses...", end=' ', flush=True)
-        chapters = self.parse_chapters_and_verses(markdown_text, verbose=verbose)
+        chapters = self.parse_chapters_and_verses(
+            markdown_text, verbose=verbose)
         if verbose:
             print(f"✓")
 

@@ -430,6 +430,34 @@ class TTHJsonPostProcessor:
         self.stats['embedded_footnotes_removed'] += 1
         return text[:cut_idx].rstrip()
 
+    def strip_inline_footnote_blob(self, text: str) -> str:
+        """
+        Remove leaked inline numbered footnote apparatus from verse text.
+
+        Corrupted verses can contain long sequences like:
+        "... 1. ¹: ... 2. ²: ..."
+
+        This trims from the first apparatus marker when the verse is abnormally
+        long, keeping normal verse content intact.
+        """
+        if not text:
+            return text
+
+        if len(text) < 500:
+            return text
+
+        marker_match = re.search(r'\s\d+\.\s+[⁰¹²³⁴⁵⁶⁷⁸⁹]+:', text)
+        if not marker_match:
+            return text
+
+        # Require repeated inline markers to avoid clipping legitimate numbering.
+        marker_count = len(re.findall(r'\s\d+\.\s+[⁰¹²³⁴⁵⁶⁷⁸⁹]+:', text))
+        if marker_count < 2:
+            return text
+
+        self.stats['embedded_footnotes_removed'] += 1
+        return text[:marker_match.start()].rstrip()
+
     def rebalance_em_tags(self, text: str) -> str:
         """Drop dangling <em> or </em> tags left by malformed source markup."""
         result = text
@@ -512,6 +540,7 @@ class TTHJsonPostProcessor:
         # Process the main TTH text
         if 'tth' in verse and verse['tth']:
             verse['tth'] = self.process_text(verse['tth'])
+            verse['tth'] = self.strip_inline_footnote_blob(verse['tth'])
             verse['tth'] = self.strip_embedded_footnotes_section(verse['tth'])
             verse['tth'] = self.rebalance_em_tags(verse['tth'])
             verse['tth'], extracted_subtitle, extracted_count = self.extract_subtitle_from_italics(
