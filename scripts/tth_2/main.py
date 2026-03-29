@@ -28,29 +28,31 @@ try:
 except ImportError:
     TQDM_AVAILABLE = False
     # Fallback: simple progress indicator
+
     class tqdm:
         def __init__(self, iterable=None, desc='', total=None, **kwargs):
             self.iterable = iterable
             self.desc = desc
             self.total = total or (len(iterable) if iterable else 0)
             self.n = 0
-            
+
         def __iter__(self):
             for item in self.iterable:
                 yield item
                 self.update(1)
-                
+
         def update(self, n=1):
             self.n += n
             if self.total > 0:
                 percent = int(100 * self.n / self.total)
-                print(f"\r{self.desc}: {percent}% ({self.n}/{self.total})", end='', flush=True)
+                print(
+                    f"\r{self.desc}: {percent}% ({self.n}/{self.total})", end='', flush=True)
                 if self.n >= self.total:
                     print()
-                    
+
         def __enter__(self):
             return self
-            
+
         def __exit__(self, *args):
             pass
 
@@ -69,6 +71,7 @@ try:
     from book_splitter import split_markdown, TTH2BookSplitter
     from md_to_json import convert_book_markdown_to_json
     from json_postprocess import get_postprocessor
+    from format_validator import get_format_validator, print_book_report
     from config import BOOKS_INFO
     from section_headers import detect_section_headers_in_json
 except ImportError:
@@ -77,6 +80,7 @@ except ImportError:
     import book_splitter
     import md_to_json
     import json_postprocess
+    import format_validator
     import config
     import section_headers
     convert_docx = docx_to_md.convert_docx
@@ -84,6 +88,8 @@ except ImportError:
     TTH2BookSplitter = book_splitter.TTH2BookSplitter
     convert_book_markdown_to_json = md_to_json.convert_book_markdown_to_json
     get_postprocessor = json_postprocess.get_postprocessor
+    get_format_validator = format_validator.get_format_validator
+    print_book_report = format_validator.print_book_report
     BOOKS_INFO = config.BOOKS_INFO
     detect_section_headers_in_json = section_headers.detect_section_headers_in_json
 
@@ -115,6 +121,8 @@ USAGE:
   python main.py postprocess all          Post-process all JSON files
   python main.py validate <book>          Validate single book JSON file
   python main.py validate all             Validate all JSON files
+    python main.py validate-format <book>   Validate formatting consistency for one JSON
+    python main.py validate-format all      Validate formatting consistency for all JSON
   python main.py process <docx> [--books <book1> <book2> ...]  Process specific DOCX file for specific books
   python main.py all                      Full pipeline: split + convert + postprocess
   python main.py books                    List available books
@@ -169,7 +177,7 @@ def split_all_docx():
 
     splitter = TTH2BookSplitter()
     total_books = 0
-    
+
     # Process each DOCX file
     for docx_file in tqdm(docx_files, desc="Processing DOCX files", unit="file"):
         print(f"\n📄 {docx_file.name}")
@@ -187,7 +195,8 @@ def split_all_docx():
         # Split into per-book files
         try:
             print(f"  Extracting books:")
-            extracted = splitter.split_complete_markdown(str(temp_md_file), str(MARKDOWN_DIR), verbose=True)
+            extracted = splitter.split_complete_markdown(
+                str(temp_md_file), str(MARKDOWN_DIR), verbose=True)
             print(f"  ✓ Extracted {len(extracted)} books")
             total_books += len(extracted)
 
@@ -222,7 +231,8 @@ def convert_book_to_json(book_key: str, verbose: bool = True):
     json_file = JSON_DIR / f"{book_key}.json"
 
     try:
-        convert_book_markdown_to_json(book_key, str(markdown_file), str(json_file), verbose=verbose)
+        convert_book_markdown_to_json(book_key, str(
+            markdown_file), str(json_file), verbose=verbose)
         if verbose:
             print(f"✓ Converted {book_key} to JSON")
         return True
@@ -287,7 +297,8 @@ def postprocess_book(book_key: str, dry_run: bool = False, backup: bool = False,
 
     try:
         processor = get_postprocessor(verbose=verbose)
-        success, file_stats = processor.process_json_file(json_file, dry_run=dry_run, backup=backup)
+        success, file_stats = processor.process_json_file(
+            json_file, dry_run=dry_run, backup=backup)
         if success and verbose:
             processor.print_summary(dry_run)
         return success
@@ -307,7 +318,8 @@ def postprocess_all_books(dry_run: bool = False, backup: bool = False):
         return False
 
     processor = get_postprocessor(verbose=False)
-    success = processor.process_all_files(JSON_DIR, dry_run=dry_run, backup=backup)
+    success = processor.process_all_files(
+        JSON_DIR, dry_run=dry_run, backup=backup)
     return success
 
 
@@ -328,10 +340,12 @@ def validate_book(book_key: str, verbose: bool = True) -> bool:
         chapters = data.get('chapters', [])
 
         # Check chapter count
-        expected_chapters = BOOKS_INFO.get(book_key, {}).get('expected_chapters', 0)
+        expected_chapters = BOOKS_INFO.get(
+            book_key, {}).get('expected_chapters', 0)
         actual_chapters = len(chapters)
         if expected_chapters != actual_chapters:
-            issues.append(f"Chapter count mismatch: expected {expected_chapters}, got {actual_chapters}")
+            issues.append(
+                f"Chapter count mismatch: expected {expected_chapters}, got {actual_chapters}")
 
         # Check for empty verses and validate structure
         total_verses = 0
@@ -348,20 +362,23 @@ def validate_book(book_key: str, verbose: bool = True) -> bool:
 
                 # Check for empty verses
                 if not verse_text:
-                    issues.append(f"Empty verse: Chapter {chapter_num}, Verse {verse_num}")
+                    issues.append(
+                        f"Empty verse: Chapter {chapter_num}, Verse {verse_num}")
 
                 # Check footnote references
                 for footnote in footnotes:
                     marker = footnote.get('marker', '')
                     number = footnote.get('number', 0)
                     if not marker or number == 0:
-                        issues.append(f"Invalid footnote in Chapter {chapter_num}, Verse {verse_num}")
+                        issues.append(
+                            f"Invalid footnote in Chapter {chapter_num}, Verse {verse_num}")
 
         # Check for section headers in verse text
         section_issues = detect_section_headers_in_json(json_file)
         if section_issues:
             for chapter, verse, header in section_issues:
-                issues.append(f"Section header in verse: Chapter {chapter}, Verse {verse}: '{header}'")
+                issues.append(
+                    f"Section header in verse: Chapter {chapter}, Verse {verse}: '{header}'")
 
         if issues:
             if verbose:
@@ -373,7 +390,8 @@ def validate_book(book_key: str, verbose: bool = True) -> bool:
             return False
         else:
             if verbose:
-                print(f"✅ {book_key}: OK ({actual_chapters} chapters, {total_verses} verses)")
+                print(
+                    f"✅ {book_key}: OK ({actual_chapters} chapters, {total_verses} verses)")
             return True
 
     except Exception as e:
@@ -417,11 +435,58 @@ def validate_all_books(verbose: bool = True) -> bool:
                     total_issues += 1
 
     if verbose:
-        logger.info(f"Validation Summary: {valid_books}/{total_books} books valid")
+        logger.info(
+            f"Validation Summary: {valid_books}/{total_books} books valid")
         if total_issues > 0:
             logger.warning(f"Total issues found: {total_issues}")
 
     return valid_books == total_books
+
+
+def validate_format_book(book_key: str, verbose: bool = True) -> bool:
+    """Validate formatting consistency for a single book JSON file."""
+    json_file = JSON_DIR / f"{book_key}.json"
+    if not json_file.exists():
+        if verbose:
+            logger.error(f"JSON file not found: {json_file}")
+        return False
+
+    try:
+        validator = get_format_validator(verbose=verbose)
+        is_valid, issues, stats = validator.validate_book_file(json_file)
+        if verbose:
+            print_book_report(book_key, is_valid, issues, stats)
+        return is_valid
+    except Exception as e:
+        if verbose:
+            print(f"❌ {book_key}: Error validating format - {e}")
+        return False
+
+
+def validate_format_all_books(verbose: bool = True) -> bool:
+    """Validate formatting consistency for all JSON files."""
+    if not JSON_DIR.exists():
+        if verbose:
+            print(f"❌ JSON directory not found: {JSON_DIR}")
+        return False
+
+    validator = get_format_validator(verbose=verbose)
+    all_valid, all_stats, all_issues = validator.validate_all_books(JSON_DIR)
+
+    if verbose:
+        total_books = len(all_stats)
+        valid_books = 0
+        for book_key in sorted(all_stats.keys()):
+            issues = all_issues.get(book_key, [])
+            is_valid = len(issues) == 0
+            if is_valid:
+                valid_books += 1
+            print_book_report(book_key, is_valid, issues, all_stats[book_key])
+        print()
+        print(
+            f"Formatting Validation Summary: {valid_books}/{total_books} books valid")
+
+    return all_valid
 
 
 def process_docx_books(docx_path: str, book_keys: List[str]):
@@ -456,7 +521,8 @@ def process_docx_books(docx_path: str, book_keys: List[str]):
     # Step 2: Split specific books from markdown
     print("\nSTEP 2: Extracting books from markdown")
     try:
-        extracted = splitter.split_complete_markdown(str(temp_md_file), str(MARKDOWN_DIR), books_to_extract=book_keys, verbose=True)
+        extracted = splitter.split_complete_markdown(str(temp_md_file), str(
+            MARKDOWN_DIR), books_to_extract=book_keys, verbose=True)
         if not extracted:
             print("❌ No books were extracted")
             temp_md_file.unlink(missing_ok=True)
@@ -478,7 +544,8 @@ def process_docx_books(docx_path: str, book_keys: List[str]):
             converted += 1
 
     if converted != len(book_keys):
-        print(f"❌ Only {converted}/{len(book_keys)} books converted successfully")
+        print(
+            f"❌ Only {converted}/{len(book_keys)} books converted successfully")
         return False
 
     # Step 4: Post-process JSON files
@@ -489,7 +556,8 @@ def process_docx_books(docx_path: str, book_keys: List[str]):
             postprocessed += 1
 
     if postprocessed != len(book_keys):
-        print(f"❌ Only {postprocessed}/{len(book_keys)} books post-processed successfully")
+        print(
+            f"❌ Only {postprocessed}/{len(book_keys)} books post-processed successfully")
         return False
 
     # Step 5: Validate JSON files
@@ -500,10 +568,24 @@ def process_docx_books(docx_path: str, book_keys: List[str]):
             validated += 1
 
     if validated != len(book_keys):
-        print(f"❌ Only {validated}/{len(book_keys)} books validated successfully")
+        print(
+            f"❌ Only {validated}/{len(book_keys)} books validated successfully")
         return False
 
-    print(f"\n🎉 Successfully processed {len(book_keys)} books from {docx_file.name}!")
+    # Step 6: Validate formatting consistency
+    print("\nSTEP 6: Validating formatting consistency")
+    format_validated = 0
+    for book_key in book_keys:
+        if validate_format_book(book_key, verbose=True):
+            format_validated += 1
+
+    if format_validated != len(book_keys):
+        print(
+            f"❌ Only {format_validated}/{len(book_keys)} books passed format validation")
+        return False
+
+    print(
+        f"\n🎉 Successfully processed {len(book_keys)} books from {docx_file.name}!")
     return True
 
 
@@ -565,7 +647,8 @@ def main():
 
     elif command == 'convert':
         if len(sys.argv) < 3:
-            print("Usage: python main.py convert <book_key> or python main.py convert all")
+            print(
+                "Usage: python main.py convert <book_key> or python main.py convert all")
             sys.exit(1)
 
         book_key = sys.argv[2]
@@ -578,7 +661,8 @@ def main():
 
     elif command == 'postprocess':
         if len(sys.argv) < 3:
-            print("Usage: python main.py postprocess <book_key> or python main.py postprocess all")
+            print(
+                "Usage: python main.py postprocess <book_key> or python main.py postprocess all")
             print("Options: --dry-run, --backup")
             sys.exit(1)
 
@@ -590,12 +674,14 @@ def main():
             success = postprocess_all_books(dry_run=dry_run, backup=backup)
             sys.exit(0 if success else 1)
         else:
-            success = postprocess_book(book_key, dry_run=dry_run, backup=backup)
+            success = postprocess_book(
+                book_key, dry_run=dry_run, backup=backup)
             sys.exit(0 if success else 1)
 
     elif command == 'validate':
         if len(sys.argv) < 3:
-            print("Usage: python main.py validate <book_key> or python main.py validate all")
+            print(
+                "Usage: python main.py validate <book_key> or python main.py validate all")
             sys.exit(1)
 
         book_key = sys.argv[2]
@@ -610,14 +696,34 @@ def main():
             success = validate_book(book_key)
             sys.exit(0 if success else 1)
 
+    elif command == 'validate-format':
+        if len(sys.argv) < 3:
+            print(
+                "Usage: python main.py validate-format <book_key> or python main.py validate-format all")
+            sys.exit(1)
+
+        book_key = sys.argv[2]
+        if book_key == 'all':
+            success = validate_format_all_books()
+            sys.exit(0 if success else 1)
+        else:
+            if book_key not in BOOKS_INFO:
+                print(f"Unknown book: {book_key}")
+                print("Use 'python main.py books' to see available books")
+                sys.exit(1)
+            success = validate_format_book(book_key)
+            sys.exit(0 if success else 1)
+
     elif command == 'process':
         if len(sys.argv) < 3:
-            print("Usage: python main.py process <docx_path> [--books <book1> <book2> ...]")
-            print("If --books is not specified, attempts to infer book from DOCX filename")
+            print(
+                "Usage: python main.py process <docx_path> [--books <book1> <book2> ...]")
+            print(
+                "If --books is not specified, attempts to infer book from DOCX filename")
             sys.exit(1)
 
         docx_path = sys.argv[2]
-        
+
         # Parse --books argument
         book_keys = []
         if '--books' in sys.argv:
@@ -661,6 +767,12 @@ def main():
         print("STEP 3: Post-processing JSON (converting italics to <em>)")
         if not postprocess_all_books():
             print("❌ Pipeline failed at post-processing")
+            sys.exit(1)
+
+        print()
+        print("STEP 4: Validating formatting consistency")
+        if not validate_format_all_books(verbose=True):
+            print("❌ Pipeline failed at format validation")
             sys.exit(1)
 
         print("\n🎉 Pipeline completed successfully!")

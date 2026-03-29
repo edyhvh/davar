@@ -22,10 +22,12 @@ from pathlib import Path
 from typing import Dict, Any, List, Tuple
 
 # Default paths
-DEFAULT_JSON_DIR = Path(__file__).parent.parent.parent / "data" / "tth_2" / "json"
+DEFAULT_JSON_DIR = Path(__file__).parent.parent.parent / \
+    "data" / "tth_2" / "json"
 
 # Singleton instances
 _postprocessor_instances = {}
+
 
 def get_postprocessor(verbose: bool = False):
     """Get the singleton TTHJsonPostProcessor instance."""
@@ -47,6 +49,8 @@ class TTHJsonPostProcessor:
             'soft_hyphens': 0,
             'underscore_artifacts': 0,
             'escaped_parens': 0,
+            'escaped_special_chars': 0,
+            'embedded_footnotes_removed': 0,
             'broken_italics': 0,
             'italics_converted': 0,
             'em_spacing_fixed': 0,
@@ -75,14 +79,23 @@ class TTHJsonPostProcessor:
             (r'__\*\s*\*', ' '),              # __* * → space
             (r'\*\s*\*__', ' '),              # * *__ → space
         ]
-        
+
         result = text
         for pattern, replacement in patterns:
             matches = len(re.findall(pattern, result))
             self.stats['underscore_artifacts'] += matches
             result = re.sub(pattern, replacement, result)
-        
+
         return result
+
+    def fix_empty_italic_gaps(self, text: str) -> str:
+        """
+        Remove artifact markers like '* *' that appear as spacing placeholders
+        between words and footnote markers after conversion.
+        """
+        matches = re.findall(r'\*\s+\*', text)
+        self.stats['broken_italics'] += len(matches)
+        return re.sub(r'\*\s+\*', ' ', text)
 
     def fix_escaped_parentheses(self, text: str) -> str:
         """
@@ -92,29 +105,45 @@ class TTHJsonPostProcessor:
         # Count before fixing
         count = text.count('\\(') + text.count('\\)')
         self.stats['escaped_parens'] += count
-        
+
         # Replace escaped parens with regular ones
         result = text.replace('\\(', '(').replace('\\)', ')')
         return result
 
+    def fix_escaped_special_chars(self, text: str) -> str:
+        """
+        Remove unnecessary escaping for punctuation/brackets that should render
+        as literal characters in TTH JSON text.
+
+        Examples:
+        - \! -> !
+        - \. -> .
+        - \[ -> [
+        - \] -> ]
+        """
+        pattern = r'\\([!\.\[\]])'
+        matches = re.findall(pattern, text)
+        self.stats['escaped_special_chars'] += len(matches)
+        return re.sub(pattern, r'\1', text)
+
     def normalize_broken_italics(self, text: str) -> str:
         """
         Fix broken italic patterns before converting to <em>.
-        
+
         Patterns to fix:
         - *word * (space before closing) → *word*
         - * word* (space after opening) → *word*
         - word* *next (split markers) → word *next* or context-dependent
         """
         result = text
-        
+
         # Pattern 1: *word * → *word* (trailing space inside)
         # Match: asterisk, word chars, space, asterisk, then non-asterisk or end
         pattern1 = r'\*([A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF][A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF\-\']*)\s+\*(?=[^*]|$)'
         matches1 = len(re.findall(pattern1, result))
         self.stats['broken_italics'] += matches1
         result = re.sub(pattern1, r'*\1* ', result)
-        
+
         # Pattern 2: * word* → *word* (leading space inside)
         # Match: space or start of text, asterisk, space(s), word, asterisk
         # Use simpler pattern without variable-width lookbehind
@@ -122,13 +151,13 @@ class TTHJsonPostProcessor:
         matches2 = len(re.findall(pattern2, result))
         self.stats['broken_italics'] += matches2
         result = re.sub(pattern2, r'\1*\2*', result)
-        
+
         # Also handle at start of string
         pattern2b = r'^\*\s+([A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF][A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF\-\']*)\*'
         matches2b = len(re.findall(pattern2b, result))
         self.stats['broken_italics'] += matches2b
         result = re.sub(pattern2b, r'*\1*', result)
-        
+
         # Pattern 3: word* *next → handle split markers
         # This is trickier - often means the second word should be italic
         # Example: "bien* *todas" → "bien *todas*" (assuming todas should be italic)
@@ -137,23 +166,23 @@ class TTHJsonPostProcessor:
         self.stats['broken_italics'] += matches3
         # Keep the first word normal, make the second italic
         result = re.sub(pattern3, r'\1 *\2', result)
-        
+
         # Pattern 4: punctuation* *word (comma, period before split)
         # Example: "eso,* *pobres" → "eso, *pobres*"
         pattern4 = r'([,\.;:])\*\s+\*([A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF])'
         matches4 = len(re.findall(pattern4, result))
         self.stats['broken_italics'] += matches4
         result = re.sub(pattern4, r'\1 *\2', result)
-        
+
         # Clean up any double spaces introduced
         result = re.sub(r'  +', ' ', result)
-        
+
         return result
 
     def convert_italics_to_em(self, text: str) -> str:
         """
         Convert markdown italics *word* to HTML <em>word</em>.
-        
+
         Handles:
         - Single words: *word* → <em>word</em>
         - Multi-word: *word1 word2* → <em>word1 word2</em>
@@ -163,14 +192,14 @@ class TTHJsonPostProcessor:
         # Match: * followed by content (not starting with space), followed by *
         # Content can include: letters, numbers, spaces, punctuation, Hebrew chars
         pattern = r'\*([^*]+?)\*'
-        
+
         def replace_italic(match):
             content = match.group(1).strip()
             if content:  # Don't convert empty italics
                 self.stats['italics_converted'] += 1
                 return f'<em>{content}</em>'
             return match.group(0)
-        
+
         result = re.sub(pattern, replace_italic, text)
         return result
 
@@ -182,12 +211,12 @@ class TTHJsonPostProcessor:
         # Match *word* where word is a single word (no spaces)
         # This catches: *word*, *word*, *word*,  etc.
         pattern = r'\*([A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF][A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF\-\']*)\*'
-        
+
         def replace_single(match):
             word = match.group(1)
             self.stats['italics_converted'] += 1
             return f'<em>{word}</em>'
-        
+
         return re.sub(pattern, replace_single, text)
 
     def fix_orphan_asterisks(self, text: str) -> str:
@@ -196,22 +225,38 @@ class TTHJsonPostProcessor:
         Patterns like: word* *next → word next (remove orphan markers)
         """
         result = text
-        
+
         # Pattern: word* *word (orphan close then orphan open)
         # These are markers that didn't have matching pairs
         pattern1 = r'([A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF,\.;:]+)\*\s+\*([A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF])'
         matches1 = len(re.findall(pattern1, result))
         self.stats['broken_italics'] += matches1
         result = re.sub(pattern1, r'\1 \2', result)
-        
+
         # Pattern: remaining orphan asterisks at word boundaries
         # *word (orphan open) - if word is followed by non-asterisk
         pattern2 = r'(?<![A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF])\*([A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF][A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF\-\'\s,\.;:]*?)(?=\s|$|[,\.;:\"\'])'
         # This is tricky - we need to be careful not to remove legitimate patterns
-        
+
         # For now, just clean up the common case: word* at end or before space
         # Only if not followed by matching close
-        
+
+        return result
+
+    def strip_asterisks_around_em(self, text: str) -> str:
+        """
+        Remove leftover markdown asterisks wrapping or touching existing <em>
+        tags, e.g. *<em>...</em>* -> <em>...</em>.
+        """
+        result = text
+
+        # Full wrapper around one or more <em>...</em> segments.
+        result = re.sub(r'\*(\s*(?:<em>[^<]*</em>\s*)+)\*', r'\1', result)
+
+        # Partial wrappers touching opening/closing <em> tags.
+        result = re.sub(r'\*(?=\s*<em>)', '', result)
+        result = re.sub(r'(?<=</em>)\*', '', result)
+
         return result
 
     def fix_em_spacing(self, text: str) -> str:
@@ -250,6 +295,51 @@ class TTHJsonPostProcessor:
 
         return result
 
+    def flatten_nested_em_tags(self, text: str) -> str:
+        """Flatten accidental nested <em> tags into a single emphasis span."""
+        result = text
+        nested_pattern = re.compile(r'<em>([^<]*)<em>([^<]*)</em>([^<]*)</em>')
+        while nested_pattern.search(result):
+            result = nested_pattern.sub(r'<em>\1\2\3</em>', result)
+        return result
+
+    def strip_embedded_footnotes_section(self, text: str) -> str:
+        """
+        Remove leaked markdown footnotes sections accidentally appended to verse
+        text during conversion (e.g., "## Footnotes ...").
+        """
+        marker = '## Footnotes'
+        idx = text.find(marker)
+        if idx == -1:
+            return text
+
+        # If the marker is wrapped by runaway emphasis tags, trim from the
+        # nearest doubled <em> start right before the marker.
+        cut_idx = idx
+        runaway_em_idx = text.rfind('<em><em>', 0, idx)
+        if runaway_em_idx != -1 and (idx - runaway_em_idx) < 200:
+            cut_idx = runaway_em_idx
+
+        self.stats['embedded_footnotes_removed'] += 1
+        return text[:cut_idx].rstrip()
+
+    def rebalance_em_tags(self, text: str) -> str:
+        """Drop dangling <em> or </em> tags left by malformed source markup."""
+        result = text
+        while result.count('<em>') > result.count('</em>'):
+            pos = result.rfind('<em>')
+            if pos == -1:
+                break
+            result = result[:pos] + result[pos + 4:]
+
+        while result.count('</em>') > result.count('<em>'):
+            pos = result.find('</em>')
+            if pos == -1:
+                break
+            result = result[:pos] + result[pos + 5:]
+
+        return result
+
     def process_text(self, text: str) -> str:
         """
         Apply all processing steps to a text string.
@@ -257,65 +347,82 @@ class TTHJsonPostProcessor:
         """
         if not text or not text.strip():
             return text
-        
+
         result = text
-        
+
         # Step 1: Remove soft hyphens (clean raw text first)
         result = self.remove_soft_hyphens(result)
-        
+
         # Step 2: Fix underscore artifacts
         result = self.fix_underscore_artifacts(result)
-        
-        # Step 3: Fix escaped parentheses
+
+        # Step 3: Remove empty markdown spacer artifacts (* *)
+        result = self.fix_empty_italic_gaps(result)
+
+        # Step 4: Fix escaped parentheses
         result = self.fix_escaped_parentheses(result)
-        
-        # Step 4: Convert single-word italics FIRST (*word* → <em>word</em>)
+
+        # Step 5: Remove unnecessary escaped punctuation/brackets
+        result = self.fix_escaped_special_chars(result)
+
+        # Step 6: Convert single-word italics FIRST (*word* → <em>word</em>)
         # This handles cases like escribírte*las* correctly
         result = self.convert_single_word_italics(result)
-        
-        # Step 5: Fix orphan asterisks (word* *next patterns)
+
+        # Step 7: Fix orphan asterisks (word* *next patterns)
         result = self.fix_orphan_asterisks(result)
-        
-        # Step 6: Normalize any remaining broken italic patterns
+
+        # Step 8: Strip stray asterisks around existing <em> tags
+        result = self.strip_asterisks_around_em(result)
+
+        # Step 9: Normalize any remaining broken italic patterns
         result = self.normalize_broken_italics(result)
-        
-        # Step 7: Convert any remaining *...* to <em>...</em>
+
+        # Step 10: Convert any remaining *...* to <em>...</em>
         result = self.convert_italics_to_em(result)
 
-        # Step 8: Fix spacing around <em> tags
+        # Step 11: Fix spacing around <em> tags
         result = self.fix_em_spacing(result)
 
-        # Step 9: Clean up any remaining issues
+        # Step 12: Flatten accidental nested <em> tags
+        result = self.flatten_nested_em_tags(result)
+
+        # Step 13: Clean up any remaining issues
         result = re.sub(r'  +', ' ', result)  # Double spaces
         result = result.strip()
-        
+
         return result
 
     def process_verse(self, verse: Dict[str, Any]) -> Dict[str, Any]:
         """Process a single verse entry."""
         self.stats['verses_processed'] += 1
-        
+
         # Process the main TTH text
         if 'tth' in verse and verse['tth']:
             verse['tth'] = self.process_text(verse['tth'])
-        
+            verse['tth'] = self.strip_embedded_footnotes_section(verse['tth'])
+            verse['tth'] = self.rebalance_em_tags(verse['tth'])
+
         # Process footnote explanations (they may contain italics too)
         if 'footnotes' in verse:
             for footnote in verse['footnotes']:
                 if 'explanation' in footnote and footnote['explanation']:
-                    footnote['explanation'] = self.process_text(footnote['explanation'])
-        
+                    footnote['explanation'] = self.process_text(
+                        footnote['explanation'])
+                    footnote['explanation'] = self.rebalance_em_tags(
+                        footnote['explanation'])
+
         return verse
 
     def process_json_file(self, file_path: Path, dry_run: bool = False, backup: bool = False) -> Tuple[bool, Dict[str, Any]]:
         """
         Process a single JSON file.
-        
+
         Args:
             file_path: Path to the JSON file
             dry_run: If True, don't write changes
             backup: If True, create backup before modifying
-            
+
         Returns:
             Tuple of (success, stats_for_this_file)
         """
@@ -323,37 +430,37 @@ class TTHJsonPostProcessor:
             # Load the JSON file
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            
+
             # Track stats for this file
             file_stats_before = dict(self.stats)
-            
+
             # Process all verses in all chapters
             if 'chapters' in data:
                 for chapter in data['chapters']:
                     if 'verses' in chapter:
                         for i, verse in enumerate(chapter['verses']):
                             chapter['verses'][i] = self.process_verse(verse)
-            
+
             # Calculate changes for this file
             file_stats = {
                 key: self.stats[key] - file_stats_before[key]
                 for key in self.stats
             }
-            
+
             self.stats['files_processed'] += 1
-            
+
             if not dry_run:
                 # Create backup if requested
                 if backup:
                     backup_path = file_path.with_suffix('.json.bak')
                     shutil.copy2(file_path, backup_path)
-                
+
                 # Write the modified JSON
                 with open(file_path, 'w', encoding='utf-8') as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
-            
+
             return True, file_stats
-            
+
         except Exception as e:
             print(f"Error processing {file_path}: {e}")
             return False, {}
@@ -363,28 +470,32 @@ class TTHJsonPostProcessor:
         Process all JSON files in the directory.
         """
         json_files = sorted(json_dir.glob('*.json'))
-        
+
         if not json_files:
             print(f"No JSON files found in {json_dir}")
             return False
-        
-        print(f"{'[DRY RUN] ' if dry_run else ''}Processing {len(json_files)} JSON files...")
+
+        print(
+            f"{'[DRY RUN] ' if dry_run else ''}Processing {len(json_files)} JSON files...")
         print("=" * 60)
-        
+
         for file_path in json_files:
             book_name = file_path.stem
-            success, file_stats = self.process_json_file(file_path, dry_run, backup)
-            
+            success, file_stats = self.process_json_file(
+                file_path, dry_run, backup)
+
             if success:
-                changes = sum(v for k, v in file_stats.items() if k != 'verses_processed' and k != 'files_processed')
+                changes = sum(v for k, v in file_stats.items() if k !=
+                              'verses_processed' and k != 'files_processed')
                 if changes > 0 or self.verbose:
-                    print(f"  ✓ {book_name}: {file_stats['verses_processed']} verses, {changes} fixes")
+                    print(
+                        f"  ✓ {book_name}: {file_stats['verses_processed']} verses, {changes} fixes")
             else:
                 print(f"  ✗ {book_name}: FAILED")
-        
+
         print("=" * 60)
         self.print_summary(dry_run)
-        
+
         return True
 
     def print_summary(self, dry_run: bool = False):
@@ -395,6 +506,9 @@ class TTHJsonPostProcessor:
         print(f"  Verses processed:     {self.stats['verses_processed']}")
         print(f"  Soft hyphens removed: {self.stats['soft_hyphens']}")
         print(f"  Escaped parens fixed: {self.stats['escaped_parens']}")
+        print(f"  Escaped chars fixed:  {self.stats['escaped_special_chars']}")
+        print(
+            f"  Footnote leaks fixed: {self.stats['embedded_footnotes_removed']}")
         print(f"  Broken italics fixed: {self.stats['broken_italics']}")
         print(f"  Italics → <em>:       {self.stats['italics_converted']}")
         print(f"  <em> spacing fixed:   {self.stats['em_spacing_fixed']}")
@@ -404,7 +518,7 @@ class TTHJsonPostProcessor:
 def main():
     """Main entry point for CLI usage."""
     import argparse
-    
+
     parser = argparse.ArgumentParser(
         description='Post-process TTH2 JSON files to convert italics to <em> tags'
     )
@@ -433,11 +547,11 @@ def main():
         default=DEFAULT_JSON_DIR,
         help=f'Path to JSON directory (default: {DEFAULT_JSON_DIR})'
     )
-    
+
     args = parser.parse_args()
-    
+
     processor = TTHJsonPostProcessor(verbose=args.verbose)
-    
+
     if args.target.lower() == 'all':
         success = processor.process_all_files(
             args.json_dir,
@@ -450,7 +564,7 @@ def main():
         if not file_path.exists():
             print(f"Error: File not found: {file_path}")
             sys.exit(1)
-        
+
         print(f"{'[DRY RUN] ' if args.dry_run else ''}Processing {args.target}...")
         success, file_stats = processor.process_json_file(
             file_path,
@@ -458,7 +572,7 @@ def main():
             backup=args.backup
         )
         processor.print_summary(args.dry_run)
-    
+
     sys.exit(0 if success else 1)
 
 
