@@ -51,6 +51,8 @@ class TTH2MdToJson:
         self.book_info = BOOKS_INFO.get(book_key)
         self.hebrew_terms = HEBREW_TERMS
         self.footnote_definitions = {}
+        self.book_footnote_number_map: Dict[str, str] = {}
+        self.next_book_footnote_number = 1
         self.text_cleaner = get_cleaner()
 
         if not self.book_info:
@@ -121,6 +123,26 @@ class TTH2MdToJson:
         for line in lines:
             stripped = line.strip()
 
+            # Remove standalone bold section headers leaked from source docs.
+            # Keep numeric markers (chapter/verse labels) and any digit-led
+            # labels to avoid removing legitimate verse numbering content.
+            bold_match = re.match(r'^\*\*([^*]+)\*\*$', stripped)
+            if bold_match:
+                potential_bold_header = bold_match.group(1).strip()
+                if potential_bold_header:
+                    if re.fullmatch(r'\d+', potential_bold_header):
+                        filtered_lines.append(line)
+                        continue
+                    if re.match(r'^\d+\b', potential_bold_header):
+                        filtered_lines.append(line)
+                        continue
+
+                    words = potential_bold_header.split()
+                    has_letters = any(ch.isalpha() for ch in potential_bold_header)
+                    starts_title_case = potential_bold_header[0].isupper()
+                    if has_letters and starts_title_case and len(words) <= 12:
+                        continue
+
             # Check if this is a standalone italic line that could be a section header
             section_match = SECTION_HEADER_PATTERN.match(stripped)
             if section_match:
@@ -147,19 +169,42 @@ class TTH2MdToJson:
 
         return '\n'.join(filtered_lines)
 
+    def reset_book_footnote_numbering(self):
+        """Reset per-book footnote numbering state before parsing."""
+        self.book_footnote_number_map = {}
+        self.next_book_footnote_number = 1
+
+    def get_book_footnote_number(self, source_footnote_num: str) -> str:
+        """
+        Map source footnote IDs to stable per-book sequential numbering.
+
+        The first unique footnote reference in a book becomes 1, the next 2, etc.
+        """
+        mapped = self.book_footnote_number_map.get(source_footnote_num)
+        if mapped is not None:
+            return mapped
+
+        mapped = str(self.next_book_footnote_number)
+        self.book_footnote_number_map[source_footnote_num] = mapped
+        self.next_book_footnote_number += 1
+        return mapped
+
+    @staticmethod
+    def num_to_superscript(num_str: str) -> str:
+        """Convert numeric string to Unicode superscript representation."""
+        superscript_map = {
+            '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵',
+            '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹'
+        }
+        return ''.join(superscript_map.get(digit, digit) for digit in num_str)
+
     def extract_footnotes(self, text: str) -> Tuple[str, List[Dict[str, str]]]:
         """Extract footnotes from text and convert to superscript."""
         footnotes = []
+        seen_source_numbers = set()
 
         footnote_pattern = r'\[\^(\d+)\]'
         matches = list(re.finditer(footnote_pattern, text))
-
-        def num_to_superscript(num_str):
-            superscript_map = {
-                '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵',
-                '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹'
-            }
-            return ''.join(superscript_map.get(digit, digit) for digit in num_str)
 
         def extract_associated_word(text_before_marker: str) -> str:
             """Extract word associated with footnote."""
@@ -194,28 +239,32 @@ class TTH2MdToJson:
         # Create mapping of footnote positions and associated words
         footnote_info = {}
         for match in matches:
-            footnote_num = match.group(1)
-            marker = num_to_superscript(footnote_num)
+            source_footnote_num = match.group(1)
+            book_footnote_num = self.get_book_footnote_number(source_footnote_num)
+            marker = self.num_to_superscript(book_footnote_num)
             definition = self.footnote_definitions.get(
-                footnote_num, f'Nota al pie {footnote_num}')
+                source_footnote_num, f'Nota al pie {source_footnote_num}')
 
             text_before = text[:match.start()]
             associated_word = extract_associated_word(text_before)
 
-            footnote_info[footnote_num] = {
+            footnote_info[source_footnote_num] = {
                 'marker': marker,
+                'number': book_footnote_num,
                 'definition': definition,
-                'word': associated_word
+                'word': associated_word,
+                'source_number': source_footnote_num,
             }
 
         # Replace all footnote markers with superscripts
         def replace_footnote(match):
-            footnote_num = match.group(1)
-            info = footnote_info[footnote_num]
-            if not any(fn['number'] == footnote_num for fn in footnotes):
+            source_footnote_num = match.group(1)
+            info = footnote_info[source_footnote_num]
+            if source_footnote_num not in seen_source_numbers:
+                seen_source_numbers.add(source_footnote_num)
                 footnotes.append({
                     'marker': info['marker'],
-                    'number': footnote_num,
+                    'number': info['number'],
                     'word': info['word'],
                     'explanation': info['definition']
                 })
@@ -269,6 +318,51 @@ class TTH2MdToJson:
 
         return False
 
+    def normalize_malformed_verse_markers(self, text: str) -> str:
+        """
+        Normalize corrupted inline verse markers emitted by DOCX->MD conversion.
+
+        Example:
+          **3\* \***  ->  **3**
+        """
+        if not text:
+            return text
+
+        # Handle patterns where the closing marker became escaped stars.
+        text = re.sub(
+            r'\*\*(\d+)(?:\\\*\s+\\\*|\*\s+\*)\*\*',
+            r'**\1**',
+            text,
+        )
+        return text
+
+    def split_inline_verse_segments(self, initial_verse_num: int, verse_text: str) -> List[Tuple[int, str]]:
+        """
+        Split a verse text when additional verse markers are embedded inline.
+
+        Returns a list of (verse_number, verse_text_segment) tuples.
+        """
+        segments: List[Tuple[int, str]] = []
+        current_num = initial_verse_num
+        remaining = self.normalize_malformed_verse_markers(verse_text)
+
+        while True:
+            marker_match = re.search(r'\*\*(\d+)\*\*\s*', remaining)
+            if not marker_match:
+                final_text = remaining.strip()
+                if final_text:
+                    segments.append((current_num, final_text))
+                break
+
+            head_text = remaining[:marker_match.start()].strip()
+            if head_text:
+                segments.append((current_num, head_text))
+
+            current_num = int(marker_match.group(1))
+            remaining = remaining[marker_match.end():]
+
+        return segments
+
     def parse_chapters_and_verses(self, book_text: str, verbose: bool = False) -> List[Dict[str, Any]]:
         """Parse chapters and verses from the book text."""
         lines = book_text.split('\n')
@@ -282,6 +376,7 @@ class TTH2MdToJson:
         i = 0
         while i < len(lines):
             line = lines[i].strip()
+            line = self.normalize_malformed_verse_markers(line)
 
             # Skip empty lines
             if not line:
@@ -330,7 +425,30 @@ class TTH2MdToJson:
                     verse_num = int(verse_match.group(1))
                     verse_text = verse_match.group(2).strip()
 
-                    # Clean and process the verse
+                    for split_verse_num, split_verse_text in self.split_inline_verse_segments(verse_num, verse_text):
+                        cleaned_text = self.clean_text_preserve_comments(split_verse_text)
+                        cleaned_text, footnotes = self.extract_footnotes(cleaned_text)
+
+                        verse_entry = {
+                            'verse': split_verse_num,
+                            'tth': cleaned_text,
+                            'footnotes': footnotes,
+                            'hebrew_terms': []
+                        }
+
+                        current_verses.append(verse_entry)
+                    i += 1
+                    continue
+
+                # Handle malformed lines where verse number and initial content
+                # were wrapped together in one bold span (e.g., "**32 y** ...").
+                malformed_verse_match = re.match(r'^\*\*(\d+)\s+(.+?)\*\*\s*(.*)$', line)
+                if malformed_verse_match:
+                    verse_num = int(malformed_verse_match.group(1))
+                    verse_head = malformed_verse_match.group(2).strip()
+                    verse_tail = malformed_verse_match.group(3).strip()
+                    verse_text = f"{verse_head} {verse_tail}".strip()
+
                     verse_text = self.clean_text_preserve_comments(verse_text)
                     verse_text, footnotes = self.extract_footnotes(verse_text)
 
@@ -347,6 +465,11 @@ class TTH2MdToJson:
 
                 # Continue accumulating verse text (multi-line verses)
                 elif current_verses and line:
+                    # Never append what looks like a new verse/chapter marker.
+                    if re.match(r'^\*\*\d+\*\*', line):
+                        i += 1
+                        continue
+
                     # Add to the last verse
                     last_verse = current_verses[-1]
                     last_verse['tth'] += ' ' + line.strip()
@@ -438,6 +561,7 @@ class TTH2MdToJson:
         # Parse chapters and verses (show progress for large books)
         if verbose:
             print(f"    Parsing chapters and verses...", end=' ', flush=True)
+        self.reset_book_footnote_numbering()
         chapters = self.parse_chapters_and_verses(
             markdown_text, verbose=verbose)
         if verbose:
