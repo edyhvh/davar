@@ -228,10 +228,20 @@ class TTHJsonPostProcessor:
         - \\[ -> [
         - \\] -> ]
         """
-        pattern = r'\\([!\.\[\]])'
+        pattern = r'\\([!\.\[\]\*])'
         matches = re.findall(pattern, text)
         self.stats['escaped_special_chars'] += len(matches)
         return re.sub(pattern, r'\1', text)
+
+    def normalize_double_asterisk_markup(self, text: str) -> str:
+        """
+        Remove leftover markdown bold wrappers (**...**) while preserving content.
+        This prevents malformed sequences from interacting with italic conversion.
+        """
+        result = text
+        matches = re.findall(r'\*\*([^*]+?)\*\*', result)
+        self.stats['broken_italics'] += len(matches)
+        return re.sub(r'\*\*([^*]+?)\*\*', r' \1 ', result)
 
     def normalize_broken_italics(self, text: str) -> str:
         """
@@ -363,6 +373,24 @@ class TTHJsonPostProcessor:
         # Partial wrappers touching opening/closing <em> tags.
         result = re.sub(r'\*(?=\s*<em>)', '', result)
         result = re.sub(r'(?<=</em>)\*', '', result)
+
+        return result
+
+    def remove_orphan_asterisks(self, text: str) -> str:
+        """
+        Remove leftover orphan markdown asterisks after conversion.
+        By this stage paired italics should already be converted to <em> tags,
+        so remaining stars are usually conversion artifacts.
+        """
+        result = text
+
+        # Orphan star before punctuation/space/end.
+        result = re.sub(r'(?<=\S)\*(?=\s|$|[\.,;:!?])', '', result)
+
+        # Orphan star after whitespace or at string start before plain text.
+        # Use a captured prefix instead of variable-width look-behind for
+        # Python regex compatibility.
+        result = re.sub(r'(^|\s)\*(?=\S)', r'\1', result)
 
         return result
 
@@ -500,29 +528,35 @@ class TTHJsonPostProcessor:
         # Step 5: Remove unnecessary escaped punctuation/brackets
         result = self.fix_escaped_special_chars(result)
 
-        # Step 6: Convert single-word italics FIRST (*word* → <em>word</em>)
+        # Step 6: Normalize leftover markdown bold wrappers
+        result = self.normalize_double_asterisk_markup(result)
+
+        # Step 7: Convert single-word italics FIRST (*word* → <em>word</em>)
         # This handles cases like escribírte*las* correctly
         result = self.convert_single_word_italics(result)
 
-        # Step 7: Fix orphan asterisks (word* *next patterns)
+        # Step 8: Fix orphan asterisks (word* *next patterns)
         result = self.fix_orphan_asterisks(result)
 
-        # Step 8: Strip stray asterisks around existing <em> tags
+        # Step 9: Strip stray asterisks around existing <em> tags
         result = self.strip_asterisks_around_em(result)
 
-        # Step 9: Normalize any remaining broken italic patterns
+        # Step 10: Normalize any remaining broken italic patterns
         result = self.normalize_broken_italics(result)
 
-        # Step 10: Convert any remaining *...* to <em>...</em>
+        # Step 11: Convert any remaining *...* to <em>...</em>
         result = self.convert_italics_to_em(result)
 
-        # Step 11: Fix spacing around <em> tags
+        # Step 12: Remove orphan markdown stars left after conversion
+        result = self.remove_orphan_asterisks(result)
+
+        # Step 13: Fix spacing around <em> tags
         result = self.fix_em_spacing(result)
 
-        # Step 12: Flatten accidental nested <em> tags
+        # Step 14: Flatten accidental nested <em> tags
         result = self.flatten_nested_em_tags(result)
 
-        # Step 13: Clean up any remaining issues
+        # Step 15: Clean up any remaining issues
         result = re.sub(r'  +', ' ', result)  # Double spaces
         result = result.strip()
 
