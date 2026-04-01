@@ -1,7 +1,7 @@
 # Terms of Service for Davar
 
 **Effective Date:** February 8, 2026  
-**Last Updated:** March 1, 2026
+**Last Updated:** April 1, 2026
 
 Welcome to Davar, an open-source project providing access to the Hebrew Bible (Tanakh) in its original language and hebrew translations of the Besorah, along with select translations and study resources. The Davar mobile application (the "App") is available on the Apple App Store and Google Play Store, and the associated website is located at https://davar.bible (collectively, the "Services").
 
@@ -17,7 +17,7 @@ Some datasets (including parts of Besorah Strong's mapping) are compiled from th
 
 ## 2. User Eligibility
 
-You must be at least 12 years old (or the minimum age required in your country to consent without parental approval). The Services are not directed to children under 12.
+You must be at least 13 years old (or the minimum age required in your country to consent without parental approval). The Services are not directed to children under 13.
 
 ## 3. License to Use the Services
 

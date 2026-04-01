@@ -90,8 +90,9 @@ Resolution order in app code:
 Local setup:
 
 1. Keep `.env.example` as the committed template.
-2. Create `.env.local` for your machine-specific values.
-2. For a physical device, replace `127.0.0.1` with your machine LAN IP.
+2. Treat `.env` as safe defaults only (no real secrets, no machine-specific LAN IPs).
+3. Create `.env.local` for your machine-specific values and real Supabase keys.
+4. For a physical device, replace `127.0.0.1` with your machine LAN IP.
 
 Production setup:
 

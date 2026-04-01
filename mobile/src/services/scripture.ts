@@ -139,9 +139,47 @@ type StaticDssBook = {
   chapters?: Record<string, StaticDssChapter>;
 };
 
+type StaticTranslitWord = {
+  text?: string;
+  strong?: string;
+  translit_en?: string;
+  translit_es?: string;
+};
+
+type StaticTranslitBook = {
+  verses?: Array<{
+    chapter: number;
+    verse: number;
+    words?: StaticTranslitWord[];
+  }>;
+};
+
 type TranslationEntry = {
   text: string;
   footnotes?: TranslationFootnote[];
+};
+
+const HEBREW_MARKS_RE = /[\u0591-\u05C7]/g;
+
+const normalizeSurfaceWord = (value?: string): string =>
+  (value ?? "").replaceAll("/", "").replace(HEBREW_MARKS_RE, "");
+
+const extractBaseStrong = (value?: string): string | undefined => {
+  if (!value) return undefined;
+
+  const parts = value
+    .toUpperCase()
+    .replace(/\s+/g, "")
+    .split("/")
+    .filter(Boolean);
+
+  for (let index = parts.length - 1; index >= 0; index -= 1) {
+    if (/^[HG]\d+$/.test(parts[index])) {
+      return parts[index];
+    }
+  }
+
+  return parts.length > 0 ? parts[parts.length - 1] : undefined;
 };
 
 const toSortedUniqueVerseNumbers = (values: number[]): number[] =>
@@ -331,11 +369,62 @@ const loadStaticDssForChapter = async (
   return dssMap;
 };
 
+const loadStaticTranslitForChapter = async (
+  bookId: string,
+  chapter: number,
+): Promise<Map<number, StaticTranslitWord[]>> => {
+  try {
+    const translitBook = await staticDataRequest<StaticTranslitBook>(
+      `translit/${bookId}.json`,
+    );
+
+    const translitMap = new Map<number, StaticTranslitWord[]>();
+    for (const verseEntry of translitBook.verses ?? []) {
+      if (verseEntry.chapter !== chapter) {
+        continue;
+      }
+      translitMap.set(verseEntry.verse, verseEntry.words ?? []);
+    }
+
+    return translitMap;
+  } catch {
+    return new Map<number, StaticTranslitWord[]>();
+  }
+};
+
+const findFallbackTranslitWord = (
+  word: StaticChapterWord,
+  translitWords: StaticTranslitWord[],
+): StaticTranslitWord | undefined => {
+  const baseStrong = extractBaseStrong(word.strong);
+  const normalizedText = normalizeSurfaceWord(word.text);
+
+  if (!baseStrong && !normalizedText) {
+    return undefined;
+  }
+
+  return translitWords.find((candidate) => {
+    const candidateStrong = extractBaseStrong(candidate.strong);
+    const candidateText = normalizeSurfaceWord(candidate.text);
+
+    const strongMatches =
+      baseStrong && candidateStrong ? baseStrong === candidateStrong : false;
+    const textMatches =
+      normalizedText && candidateText ? normalizedText === candidateText : false;
+
+    if (baseStrong && !strongMatches) return false;
+    if (normalizedText && !textMatches) return false;
+
+    return strongMatches || textMatches;
+  });
+};
+
 const mapStaticVersesToDisplay = (
   bookId: string,
   verses: StaticChapterVerse[],
   translationMap: Map<number, TranslationEntry>,
   dssMap: Map<number, StaticDssDifference[]>,
+  translitMap: Map<number, StaticTranslitWord[]>,
   showDss?: boolean,
 ): DisplayVerse[] => {
   return verses.map((verse) => {
@@ -345,9 +434,14 @@ const mapStaticVersesToDisplay = (
     );
 
     const sourceWords = Array.isArray(verse.words) ? verse.words : [];
+    const translitWords = translitMap.get(verse.verse) ?? [];
+    const canMapTranslitByPosition = translitWords.length === sourceWords.length;
     const words: DisplayWord[] = sourceWords.map((word, index) => {
       const position = index + 1;
       const dssVariant = dssVariantMap.get(position);
+      const translitWord = canMapTranslitByPosition
+        ? translitWords[index]
+        : findFallbackTranslitWord(word, translitWords);
 
       return {
         position,
@@ -356,8 +450,8 @@ const mapStaticVersesToDisplay = (
         prefixes: word.prefixes ?? [],
         hasQumranVariant: Boolean(dssVariant),
         morph: word.morph,
-        translit_en: word.translit_en,
-        translit_es: word.translit_es,
+        translit_en: word.translit_en ?? translitWord?.translit_en,
+        translit_es: word.translit_es ?? translitWord?.translit_es,
         dssWord: dssVariant?.dss_word,
         dssStrong: dssVariant?.dss_strong,
         dssCommentaryEn: dssVariant?.comment_v2_en,
@@ -438,7 +532,7 @@ const fetchChapterVersesStatic = async (
     sourceVerses.map((verse) => verse.verse),
   );
 
-  const [translationMap, dssMap] = await Promise.all([
+  const [translationMap, dssMap, translitMap] = await Promise.all([
     loadStaticTranslationsForChapter(
       bookId,
       chapter,
@@ -447,6 +541,7 @@ const fetchChapterVersesStatic = async (
       expectedVerseNumbers,
     ),
     loadStaticDssForChapter(bookId, chapter, options?.showDss),
+    loadStaticTranslitForChapter(bookId, chapter),
   ]);
 
   return mapStaticVersesToDisplay(
@@ -454,6 +549,7 @@ const fetchChapterVersesStatic = async (
     sourceVerses,
     translationMap,
     dssMap,
+    translitMap,
     options?.showDss,
   );
 };
