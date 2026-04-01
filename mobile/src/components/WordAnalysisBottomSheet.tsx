@@ -191,6 +191,11 @@ const mergeUniqueDefinitions = (
   return merged;
 };
 
+const isRawDictionaryEntry = (
+  value: StaticDictionaryEntry | StaticCustomDefinition | undefined,
+): value is StaticDictionaryEntry =>
+  Boolean(value && ("lemma" in value || "root_ref" in value));
+
 const loadStaticDictionaryData = async (): Promise<StaticDictionaryData> => {
   const [words, roots, custom] = await Promise.all([
     staticDataRequest<Record<string, StaticDictionaryEntry>>("dict/words.json"),
@@ -273,6 +278,14 @@ const loadLexiconEntryFromStatic = async (
         : undefined
     : undefined;
 
+  const rootTranslitEn = isRawDictionaryEntry(rootEntry)
+    ? rootEntry.translit_en
+    : rootEntry?.transliteration_en;
+
+  const rootTranslitEs = isRawDictionaryEntry(rootEntry)
+    ? rootEntry.translit_es
+    : rootEntry?.transliteration_es;
+
   return {
     strong_number: customEntry?.strong_number ?? dictionaryEntry?.strong_number ?? strong,
     hebrew: customEntry?.hebrew ?? dictionaryEntry?.lemma,
@@ -287,6 +300,8 @@ const loadLexiconEntryFromStatic = async (
     definitions,
     root: customEntry?.root ?? rootText,
     root_strong: rootStrong,
+    root_translit_en: rootTranslitEn,
+    root_translit_es: rootTranslitEs,
     root_definitions: mapStaticDefinitions(rootEntry?.definitions, language),
     occurrences_count: hasManualInstances
       ? instances.length
