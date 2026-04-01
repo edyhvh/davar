@@ -1,4 +1,5 @@
 import type { BookResponse } from "@/src/types/api";
+import { Platform } from "react-native";
 
 const DEV_STATIC_DATA_BASE_URL = "http://127.0.0.1:3002/data";
 const PROD_STATIC_DATA_BASE_URL = "https://davar.bible/data";
@@ -7,14 +8,32 @@ const staticDataCache = new Map<string, unknown>();
 
 const normalizeBaseUrl = (url: string): string => url.replace(/\/+$/, "");
 
+const mapLoopbackForAndroidEmulator = (url: string): string => {
+  if (!__DEV__ || Platform.OS !== "android") {
+    return url;
+  }
+
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname === "127.0.0.1" || parsed.hostname === "localhost") {
+      parsed.hostname = "10.0.2.2";
+      return parsed.toString();
+    }
+  } catch {
+    return url;
+  }
+
+  return url;
+};
+
 const resolveStaticDataBaseUrl = (): string => {
   const configuredDataBase = process.env.EXPO_PUBLIC_STATIC_DATA_BASE_URL?.trim();
   if (configuredDataBase) {
-    return normalizeBaseUrl(configuredDataBase);
+    return normalizeBaseUrl(mapLoopbackForAndroidEmulator(configuredDataBase));
   }
 
   return __DEV__
-    ? normalizeBaseUrl(DEV_STATIC_DATA_BASE_URL)
+    ? normalizeBaseUrl(mapLoopbackForAndroidEmulator(DEV_STATIC_DATA_BASE_URL))
     : normalizeBaseUrl(PROD_STATIC_DATA_BASE_URL);
 };
 
@@ -22,7 +41,7 @@ const resolveStaticBundlesBaseUrl = (dataBaseUrl: string): string => {
   const configuredBundlesBase =
     process.env.EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL?.trim();
   if (configuredBundlesBase) {
-    return normalizeBaseUrl(configuredBundlesBase);
+    return normalizeBaseUrl(mapLoopbackForAndroidEmulator(configuredBundlesBase));
   }
 
   return `${normalizeBaseUrl(dataBaseUrl)}/bundles`;
