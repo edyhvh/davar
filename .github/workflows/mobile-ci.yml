@@ -8,10 +8,6 @@ on:
     branches: [main, apocalipsis]
     paths: ["mobile/**", "shared/**", ".github/workflows/mobile-ci.yml"]
 
-permissions:
-  contents: read
-  deployments: write
-
 jobs:
   mobile_ci:
     name: mobile-ci
@@ -19,28 +15,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Create development deployment
-        id: create_deployment
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const ref = context.payload.pull_request.head.sha;
-            const prNumber = context.payload.pull_request.number;
-            const { data } = await github.rest.repos.createDeployment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref,
-              environment: 'development',
-              description: `Mobile PR #${prNumber} validation`,
-              required_contexts: [],
-              auto_merge: false,
-              transient_environment: true,
-              production_environment: false,
-              payload: JSON.stringify({ app: 'mobile', pr: prNumber }),
-            });
-            core.setOutput('deployment_id', String(data.id));
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -59,19 +33,3 @@ jobs:
         run: |
           cd mobile
           bun run typecheck
-
-      - name: Finalize development deployment
-        if: always() && github.event_name == 'pull_request' && steps.create_deployment.outputs.deployment_id != ''
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const deploymentId = Number('${{ steps.create_deployment.outputs.deployment_id }}');
-            const state = '${{ job.status }}' === 'success' ? 'success' : 'failure';
-            await github.rest.repos.createDeploymentStatus({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              deployment_id: deploymentId,
-              state,
-              log_url: `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
-              description: state === 'success' ? 'Mobile PR checks passed' : 'Mobile PR checks failed',
-            });

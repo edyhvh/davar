@@ -1,15 +1,29 @@
 name: Backend Deploy
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["backend/**"]
 
 jobs:
   backend_deploy:
     name: backend-deploy
     runs-on: ubuntu-latest
+    concurrency:
+      group: backend-deploy-main
+      cancel-in-progress: true
 
     steps:
-      - name: Backend deployment deprecated
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate TS2009 files exist in storage
         run: |
-          echo "Backend deployment workflow is intentionally manual and out of scope."
-          echo "Web + mobile are the active GitHub Deployments environments."
+          # This would need Supabase CLI or API call to check bucket contents
+          # For now, placeholder - in real implementation, add Supabase CLI setup
+          echo "TS2009 storage validation placeholder"
+          # TODO: Install Supabase CLI and check bucket has expected files
+
+      - name: Notify deployment
+        run: |
+          echo "Backend deployment triggered on Render via auto-deploy"
