@@ -1,5 +1,5 @@
 import type { BookResponse } from "@/src/types/api";
-import { Platform } from "react-native";
+import { NativeModules, Platform } from "react-native";
 
 const DEV_STATIC_DATA_BASE_URL = "http://127.0.0.1:3002/data";
 const PROD_STATIC_DATA_BASE_URL = "https://davar.bible/data";
@@ -8,6 +8,33 @@ const staticDataCache = new Map<string, unknown>();
 
 const normalizeBaseUrl = (url: string): string => url.replace(/\/+$/, "");
 
+const LOOPBACK_HOSTS = new Set(["127.0.0.1", "localhost"]);
+
+const getMetroHostCandidate = (): string | null => {
+  if (!__DEV__) {
+    return null;
+  }
+
+  const scriptUrl =
+    typeof NativeModules?.SourceCode?.scriptURL === "string"
+      ? NativeModules.SourceCode.scriptURL
+      : "";
+
+  if (!scriptUrl) {
+    return null;
+  }
+
+  try {
+    const parsed = new URL(scriptUrl);
+    if (!parsed.hostname || LOOPBACK_HOSTS.has(parsed.hostname)) {
+      return null;
+    }
+    return parsed.hostname;
+  } catch {
+    return null;
+  }
+};
+
 const mapLoopbackForAndroidEmulator = (url: string): string => {
   if (!__DEV__ || Platform.OS !== "android") {
     return url;
@@ -15,7 +42,13 @@ const mapLoopbackForAndroidEmulator = (url: string): string => {
 
   try {
     const parsed = new URL(url);
-    if (parsed.hostname === "127.0.0.1" || parsed.hostname === "localhost") {
+    if (LOOPBACK_HOSTS.has(parsed.hostname)) {
+      const metroHost = getMetroHostCandidate();
+      if (metroHost) {
+        parsed.hostname = metroHost;
+        return parsed.toString();
+      }
+
       parsed.hostname = "10.0.2.2";
       return parsed.toString();
     }
@@ -50,6 +83,8 @@ const resolveStaticBundlesBaseUrl = (dataBaseUrl: string): string => {
 const STATIC_DATA_BASE_URL = resolveStaticDataBaseUrl();
 const STATIC_BUNDLES_BASE_URL = resolveStaticBundlesBaseUrl(STATIC_DATA_BASE_URL);
 
+let staticUrlDiagnosticsReported = false;
+
 const truncateForError = (value: string, maxLength = 180): string => {
   const normalized = value.replace(/\s+/g, " ").trim();
   if (normalized.length <= maxLength) {
@@ -64,6 +99,50 @@ const looksLikeHtmlPayload = (payload: string): boolean => {
     normalized.startsWith("<!doctype") ||
     normalized.startsWith("<html") ||
     normalized.startsWith("<?xml")
+  );
+};
+
+const buildNetworkHint = (requestUrl: string): string => {
+  if (!__DEV__) {
+    return "";
+  }
+
+  try {
+    const parsed = new URL(requestUrl);
+    const host = parsed.hostname;
+
+    if (Platform.OS === "android" && (host === "10.0.2.2" || LOOPBACK_HOSTS.has(host))) {
+      return " In Android dev builds on a physical device, set EXPO_PUBLIC_STATIC_DATA_BASE_URL and EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL to your machine LAN IP (example: http://192.168.1.50:3002/data).";
+    }
+  } catch {
+    return "";
+  }
+
+  return "";
+};
+
+const wrapFetchNetworkError = (
+  requestUrl: string,
+  resourceLabel: string,
+  error: unknown,
+): Error => {
+  const message =
+    error instanceof Error ? error.message : String(error ?? "unknown error");
+  const hint = buildNetworkHint(requestUrl);
+  return new Error(
+    `Static ${resourceLabel} network request failed: ${requestUrl} (${message}).${hint}`,
+  );
+};
+
+const reportStaticUrlDiagnostics = (): void => {
+  if (!__DEV__ || staticUrlDiagnosticsReported) {
+    return;
+  }
+
+  staticUrlDiagnosticsReported = true;
+  const metroHost = getMetroHostCandidate() ?? "unknown";
+  console.info(
+    `[static-data] base=${STATIC_DATA_BASE_URL} bundles=${STATIC_BUNDLES_BASE_URL} platform=${Platform.OS} metroHost=${metroHost}`,
   );
 };
 
@@ -101,6 +180,8 @@ export const getBooks = async (): Promise<BookResponse[]> => {
 export const staticDataRequest = async <T>(
   relativePath: string,
 ): Promise<T> => {
+  reportStaticUrlDiagnostics();
+
   const normalizedPath = relativePath.replace(/^\/+/, "");
   const cacheKey = normalizedPath;
 
@@ -109,7 +190,12 @@ export const staticDataRequest = async <T>(
   }
 
   const requestUrl = `${STATIC_DATA_BASE_URL}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`;
-  const response = await fetch(requestUrl);
+  let response: Response;
+  try {
+    response = await fetch(requestUrl);
+  } catch (error) {
+    throw wrapFetchNetworkError(requestUrl, `data ${normalizedPath}`, error);
+  }
   const contentType = response.headers.get("content-type") || "";
   const payload = await response.text();
 
@@ -140,9 +226,16 @@ export const staticBundleRequest = async <T>(
 export const staticBundlePathRequest = async <T>(
   relativePath: string,
 ): Promise<T> => {
+  reportStaticUrlDiagnostics();
+
   const normalizedPath = relativePath.replace(/^\/+/, "");
   const requestUrl = `${STATIC_BUNDLES_BASE_URL}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`;
-  const response = await fetch(requestUrl);
+  let response: Response;
+  try {
+    response = await fetch(requestUrl);
+  } catch (error) {
+    throw wrapFetchNetworkError(requestUrl, `bundle ${normalizedPath}`, error);
+  }
   const contentType = response.headers.get("content-type") || "";
   const payload = await response.text();
 

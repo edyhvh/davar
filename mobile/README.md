@@ -115,3 +115,21 @@ Notes:
 - TS2009 translations are fetched online from Supabase Storage.
 - If Supabase env vars are missing or placeholders, TS2009 is skipped and the app falls back to other translation sources without crashing.
 
+## Troubleshooting: Android Physical Device Cannot Load Books Metadata
+
+Symptom:
+
+- Logs show `Failed to load books metadata` with `Network request failed`.
+
+Checklist:
+
+1. Ensure phone and development machine are on the same Wi-Fi network.
+2. Use LAN-IP endpoints in local env values for physical-device testing:
+   - `EXPO_PUBLIC_STATIC_DATA_BASE_URL=http://<YOUR_LAN_IP>:3002/data`
+   - `EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL=http://<YOUR_LAN_IP>:3002/data/bundles`
+3. Do not use `127.0.0.1` or `localhost` for physical devices.
+4. Confirm `http://<YOUR_LAN_IP>:3002/data/metadata.json` opens in the phone browser.
+5. Verify your local static server is running and bound to a non-loopback interface.
+
+The app now prints a dev diagnostic line with resolved static URLs and Metro host, and network errors include actionable hints for Android physical-device setup.
+

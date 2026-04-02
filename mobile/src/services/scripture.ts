@@ -187,6 +187,17 @@ const toSortedUniqueVerseNumbers = (values: number[]): number[] =>
     (a, b) => a - b,
   );
 
+const toDssBookKey = (bookId: string): string => {
+  const dssMap: Record<string, string> = {
+    samuel1: "1samuel",
+    samuel2: "2samuel",
+    songofsolomon: "songs",
+    hosea: "hoseah",
+  };
+
+  return dssMap[bookId] ?? bookId;
+};
+
 const parseTranslationFootnotes = (
   rawFootnotes: unknown,
 ): TranslationFootnote[] | undefined => {
@@ -344,7 +355,9 @@ const loadStaticDssForChapter = async (
   }
 
   try {
-    const dssBook = await staticDataRequest<StaticDssBook>(`dss/${bookId}.json`);
+    const dssBook = await staticDataRequest<StaticDssBook>(
+      `dss/${toDssBookKey(bookId)}.json`,
+    );
     const chapterData = dssBook.chapters?.[String(chapter)];
     const verseEntries = chapterData?.verses ?? {};
 
@@ -593,7 +606,7 @@ const mapOfflineDataToDisplay = (
       .filter((word) => word && typeof word === "object")
       .map((word, index) => {
         const typedWord = word as WordResponse;
-        const position = typedWord.position ?? index;
+        const position = typedWord.position ?? index + 1;
         const dssVariant = dssPositionMap.get(position);
         const dssData = dssVariant?.data as
           | Record<string, string | undefined>

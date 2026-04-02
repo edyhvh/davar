@@ -108,7 +108,7 @@ export const typography = {
     h2: 24,
     h3: 20,
     hebrewVerse: 40,
-    hebrewVerseMedium: 40,
+    hebrewVerseMedium: 35,
     hebrewVerseLarge: 52,
     body: 16,
     bodySmall: 14,

@@ -230,6 +230,7 @@ const VersePageComponent = ({
 
   return (
     <View
+      pointerEvents={isActive ? "auto" : "none"}
       style={{
         height: pageHeight,
         width: "100%",
@@ -289,7 +290,11 @@ export const VerseDetailContent = () => {
   const { height: screenHeight } = useWindowDimensions();
   const insets = useSafeAreaInsets();
   const tabBarHeight = useContext(BottomTabBarHeightContext) ?? 0;
-  const pageHeight = Math.max(0, screenHeight - insets.top - tabBarHeight);
+  const [measuredHeight, setMeasuredHeight] = useState(0);
+  const pageHeight =
+    measuredHeight > 0
+      ? measuredHeight
+      : Math.max(0, screenHeight - insets.top - tabBarHeight);
   const params = useLocalSearchParams<{ id?: string | string[] }>();
   const currentVerseId = useAppStore((state: AppState) => state.currentVerseId);
   const setCurrentVerseId = useAppStore(
@@ -847,7 +852,17 @@ export const VerseDetailContent = () => {
   return (
     <>
       <SafeAreaView style={styles.safeArea} edges={isStandaloneVerseDetailRoute ? [] : ["top"]}>
-        <View style={styles.container}>
+        <View
+          style={styles.container}
+          onLayout={(event) => {
+            const nextHeight = event.nativeEvent.layout.height;
+            setMeasuredHeight((currentHeight) =>
+              Math.abs(currentHeight - nextHeight) > EDGE_EPSILON
+                ? nextHeight
+                : currentHeight,
+            );
+          }}
+        >
           <View style={[styles.navigationRow, { top: navigationRowTop }]}>
             <Animated.View
               pointerEvents={pillVisible ? "auto" : "none"}
