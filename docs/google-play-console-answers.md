@@ -89,3 +89,79 @@ Before clicking Submit:
 - Privacy policy URL works publicly.
 - Content rating completed (not Unrated).
 - Audience declaration aligns with legal text (13+).
+
+## 11) Store Listing Descriptions (Ready to Paste)
+
+Use these as a safe baseline for the first submission. You can refine tone later without changing policy claims.
+
+### Short Description (English)
+
+Read Tanakh with the Hebrew translation of the Besorah and Qumran references.
+
+### Short Description (Spanish)
+
+Estudia el Tanaj con la traducción hebrea de la Besorah y referencias de Qumran.
+
+### Short Description (Hebrew)
+
+קראו ולמדו את התנ"ך עם התרגום העברי של הבשורה והפניות מקומראן.
+
+### Long Description (English)
+
+Davar is a minimalist Bible study app designed for focused reading of the Hebrew Scriptures (Tanakh), the Besorah, and related study sources.
+
+Read the text in a calm, distraction-free interface built for deep study, reflection, and daily use. Davar prioritizes clarity, typography, and navigation so you can stay immersed in the text.
+
+Texts and translation support in this release include:
+- Tanakh in Hebrew
+- Besorah with Delitzsch Hebrew text
+- English translation support (including TS2009 where available)
+- Spanish translation support (including TTH and SPABES where available)
+- Qumran references and comparative study material where available
+
+Current release highlights:
+- Hebrew Scripture reading and study experience
+- Translation support for comparative reading
+- Fast navigation by book, chapter, and verse
+- No account required
+- No in-app purchases
+
+Davar is built as an open-source, non-commercial project with a strong focus on respectful design, textual study, and transparency.
+
+### Long Description (Spanish)
+
+Davar es una app minimalista de estudio bíblico diseñada para una lectura enfocada de las Escrituras Hebreas (Tanaj), la Besorah y fuentes de estudio relacionadas.
+
+Lee el texto en una interfaz tranquila y sin distracciones, creada para el estudio profundo, la reflexión y el uso diario. Davar prioriza la claridad, la tipografía y la navegación para ayudarte a mantenerte centrado en el texto.
+
+Textos y traducciones incluidas en esta versión:
+- Tanaj en hebreo
+- Besorah con texto hebreo de Delitzsch
+- Soporte de traducción al inglés (incluyendo TS2009 cuando está disponible)
+- Soporte de traducción al español (incluyendo TTH y SPABES cuando está disponible)
+- Referencias de Qumrán y material comparativo cuando está disponible
+
+Aspectos principales de esta versión:
+- Lectura y estudio de las Escrituras en hebreo
+- Soporte de traducciones para lectura comparativa
+- Navegación rápida por libro, capítulo y versículo
+- No requiere cuenta
+- Sin compras dentro de la app
+
+Davar es un proyecto abierto y no comercial, enfocado en un diseño respetuoso, el estudio textual y la transparencia.
+
+### Long Description (Hebrew)
+
+אפליקציה מינימליסטית ללימוד כתבי הקודש, שנבנתה לקריאה ממוקדת של כתבי הקודש העבריים (תנ"ך), הבשורה ומקורות לימוד נוספים
+
+האפליקציה מציעה ממשק שקט וללא הסחות דעת, המתאים ללימוד מעמיק, להתבוננות ולשימוש יומיומי. מושם בה דגש על בהירות, טיפוגרפיה טובה וניווט נוח כדי לשמור על ריכוז בטקסט
+
+הטקסטים והתמיכות בתרגום בגרסה זו כוללים:
+
+בגרסה זו כלולים טקסט התנ"ך בעברית, הבשורה עם הטקסט העברי של דליטש, תמיכה בתרגום לאנגלית (כולל TS2009 כאשר זמין), תמיכה בתרגום לספרדית (כולל TTH ו-SPABES כאשר זמין), וכן הפניות מקומראן וחומר השוואתי כאשר זמין
+
+עיקרי הגרסה הנוכחית:
+
+הגרסה הנוכחית כוללת קריאה ולימוד של כתבי הקודש בעברית, תמיכה בתרגומים לקריאה השוואתית, ניווט מהיר לפי ספר, פרק ופסוק, ללא צורך בחשבון משתמש וללא רכישות בתוך האפליקציה
+
+זהו פרויקט קוד פתוח ולא מסחרי, עם דגש על עיצוב מכבד, לימוד טקסטואלי ושקיפות (Davar)

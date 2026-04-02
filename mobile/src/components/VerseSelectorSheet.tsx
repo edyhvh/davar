@@ -2,7 +2,7 @@ import React, { useCallback, useMemo, useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
-  BottomSheetView,
+  BottomSheetScrollView,
   type BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
 import { Ionicons } from "@expo/vector-icons";
@@ -210,7 +210,12 @@ export const VerseSelectorSheet = ({
       keyboardBehavior="extend"
       keyboardBlurBehavior="none"
     >
-      <BottomSheetView style={styles.sheetContent}>
+      <BottomSheetScrollView
+        style={styles.sheetContent}
+        nestedScrollEnabled
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
+      >
         <View style={styles.header}>
           {onBack ? (
             <Pressable style={styles.backButton} onPress={handleBack}>
@@ -294,7 +299,7 @@ export const VerseSelectorSheet = ({
             })}
           </View>
         )}
-      </BottomSheetView>
+        </BottomSheetScrollView>
     </BottomSheet>
   );
 };

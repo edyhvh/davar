@@ -10,7 +10,7 @@ import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetFlatList,
-  BottomSheetView,
+  BottomSheetScrollView,
   type BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
 import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
@@ -609,7 +609,12 @@ const NavigationSheetComponent = (
           exiting={exitingAnim.duration(200)}
           style={styles.content}
         >
-          <BottomSheetView style={styles.gridContainer}>
+          <BottomSheetScrollView
+            style={styles.gridContainer}
+            nestedScrollEnabled
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+          >
             <Text style={styles.gridTitle}>
               {t("navigation.selectChapter")}
             </Text>
@@ -626,7 +631,7 @@ const NavigationSheetComponent = (
                 </Text>
               </View>
             )}
-          </BottomSheetView>
+          </BottomSheetScrollView>
         </Animated.View>
       )}
 
@@ -637,7 +642,12 @@ const NavigationSheetComponent = (
           exiting={exitingAnim.duration(200)}
           style={styles.content}
         >
-          <BottomSheetView style={styles.gridContainer}>
+          <BottomSheetScrollView
+            style={styles.gridContainer}
+            nestedScrollEnabled
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+          >
             <Text style={styles.gridTitle}>{t("navigation.selectVerse")}</Text>
             {verseNumbers.length ? (
               renderNumberGrid(
@@ -653,7 +663,7 @@ const NavigationSheetComponent = (
                 <Text style={styles.emptyText}>{t("navigation.noVerses")}</Text>
               </View>
             )}
-          </BottomSheetView>
+          </BottomSheetScrollView>
         </Animated.View>
       )}
     </BottomSheet>
