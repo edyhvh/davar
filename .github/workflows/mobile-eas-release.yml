@@ -1,0 +1,125 @@
+name: Mobile EAS Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: EAS profile
+        required: true
+        type: choice
+        options:
+          - preview
+          - production
+      platform:
+        description: Target platform
+        required: true
+        type: choice
+        options:
+          - ios
+          - android
+          - all
+      release_kind:
+        description: Release action
+        required: true
+        default: update
+        type: choice
+        options:
+          - update
+          - build
+          - build-and-submit
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  mobile_release:
+    name: mobile-eas-release
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.profile == 'production' && 'mobile-production' || 'mobile-preview' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Setup Expo and EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Validate release input combination
+        run: |
+          if [ "${{ inputs.profile }}" != "production" ] && [ "${{ inputs.release_kind }}" = "build-and-submit" ]; then
+            echo "build-and-submit is only allowed with production profile"
+            exit 1
+          fi
+
+      - name: Execute EAS release action
+        run: |
+          cd mobile
+
+          if [ "${{ inputs.release_kind }}" = "update" ]; then
+            eas update --channel "${{ inputs.profile }}" --auto --non-interactive
+          elif [ "${{ inputs.release_kind }}" = "build" ]; then
+            eas build --platform "${{ inputs.platform }}" --profile "${{ inputs.profile }}" --non-interactive --wait
+          else
+            eas build --platform "${{ inputs.platform }}" --profile production --non-interactive --wait
+            eas submit --platform "${{ inputs.platform }}" --profile production --latest --non-interactive
+          fi
+
+      - name: Create mobile deployment
+        id: create_deployment
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const envName = '${{ inputs.profile }}' === 'production' ? 'mobile-production' : 'mobile-preview';
+            const ref = context.sha;
+            const { data } = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref,
+              environment: envName,
+              description: `Mobile ${envName} release (${ '${{ inputs.release_kind }}' })`,
+              required_contexts: [],
+              auto_merge: false,
+              transient_environment: envName !== 'mobile-production',
+              production_environment: envName === 'mobile-production',
+              payload: JSON.stringify({
+                app: 'mobile',
+                profile: '${{ inputs.profile }}',
+                platform: '${{ inputs.platform }}',
+                release_kind: '${{ inputs.release_kind }}',
+              }),
+            });
+            core.setOutput('deployment_id', String(data.id));
+
+      - name: Finalize mobile deployment
+        if: always() && steps.create_deployment.outputs.deployment_id != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const deploymentId = Number('${{ steps.create_deployment.outputs.deployment_id }}');
+            const state = '${{ job.status }}' === 'success' ? 'success' : 'failure';
+            const envName = '${{ inputs.profile }}' === 'production' ? 'mobile-production' : 'mobile-preview';
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deploymentId,
+              state,
+              environment: envName,
+              log_url: `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              description: state === 'success' ? 'Mobile release completed' : 'Mobile release failed',
+            });
+
+      - name: Summarize release
+        if: always()
+        run: |
+          echo "## Mobile release summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Profile: ${{ inputs.profile }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Platform: ${{ inputs.platform }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Action: ${{ inputs.release_kind }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"

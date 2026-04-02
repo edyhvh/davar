@@ -1,0 +1,44 @@
+# Keep EAS uploads focused on the mobile app and shared runtime files.
+# This reduces archive size and upload time in this monorepo.
+
+# VCS / editor / local environment
+.git/
+.cursor/
+.vscode/
+.venv/
+.pytest_cache/
+.DS_Store
+
+# Repository areas not required for Expo mobile cloud builds
+archive/
+data/
+debug/
+design/
+docs/
+plans/
+scripts/
+tools/
+web/
+
+# Root files not required for mobile builds
+API_TESTING_GUIDE.md
+CLOUDFLARE_DEPLOYMENT_GUIDE.md
+STATIC_MIGRATION_PLAN.md
+requirements.txt
+mise.toml
+debug.log
+
+# Mobile local/build artifacts
+mobile/.expo/
+mobile/node_modules/
+mobile/app-example/
+mobile/android/.gradle/
+mobile/android/build/
+mobile/android/app/build/
+mobile/ios/Pods/
+mobile/ios/build/
+mobile/ios/DerivedData/
+mobile/.DS_Store
+
+# Keep secrets local
+mobile/secrets/

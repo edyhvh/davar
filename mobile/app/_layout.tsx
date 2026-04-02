@@ -119,5 +119,6 @@ export default function RootLayout() {
 const styles = StyleSheet.create({
   flex: {
     flex: 1,
+    backgroundColor: "#7AA0D6",
   },
 });

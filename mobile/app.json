@@ -29,7 +29,8 @@
         "SYSTEM_ALERT_WINDOW",
         "VIBRATE"
       ],
-      "package": "bible.davar"
+      "package": "bible.davar",
+      "versionCode": 4
     },
     "web": {
       "output": "static",
@@ -48,7 +49,7 @@
             "enableFullScreenImage_legacy": true
           },
           "android": {
-            "image": "./assets/images/splash-logo-android.png",
+            "image": "./assets/images/davar_nobackground.png",
             "resizeMode": "contain",
             "backgroundColor": "#7AA0D6"
           }
@@ -59,6 +60,15 @@
       "expo-sqlite",
       "expo-web-browser"
     ],
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/232e7627-d0c9-4b88-976e-b4855beb322e",
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
