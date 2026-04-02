@@ -78,7 +78,8 @@ Mobile static data endpoints are controlled by Expo public env vars:
 - `EXPO_PUBLIC_STATIC_DATA_BASE_URL`
 - `EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL`
 - `EXPO_PUBLIC_SUPABASE_URL`
-- `EXPO_PUBLIC_SUPABASE_ANON_KEY`
+- `EXPO_PUBLIC_SUPABASE_KEY` (preferred)
+- `EXPO_PUBLIC_SUPABASE_ANON_KEY` (legacy fallback)
 
 Resolution order in app code:
 
@@ -98,6 +99,16 @@ Production setup:
 
 1. Define the same `EXPO_PUBLIC_*` keys in EAS build environment variables (do not commit production secrets).
 2. Point them to the production static JSON origin/path.
+
+Supabase key precedence:
+
+1. `EXPO_PUBLIC_SUPABASE_KEY` (Supabase publishable key)
+2. `EXPO_PUBLIC_SUPABASE_ANON_KEY` (legacy fallback)
+
+Security note:
+
+- Mobile clients must use a public client key (publishable/anon).
+- Never use `SUPABASE_SERVICE_ROLE_KEY` in mobile apps.
 
 Notes:
 

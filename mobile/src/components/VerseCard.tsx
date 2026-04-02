@@ -96,6 +96,8 @@ const createStyles = (
       flexDirection: "row-reverse",
       flexWrap: "wrap",
       justifyContent: "center",
+      columnGap: spacing[2],
+      rowGap: spacing[2],
     },
     firstWordRow: {
       flexDirection: "row-reverse",
@@ -123,6 +125,7 @@ const createStyles = (
       color: colors.textPrimary,
       textAlign: "right",
       writingDirection: "rtl",
+      includeFontPadding: false,
     },
     hebrewWordQumran: {
       fontFamily: typography.families.hebrewQumran,

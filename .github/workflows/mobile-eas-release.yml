@@ -57,6 +57,77 @@ jobs:
             exit 1
           fi
 
+      - name: Preflight config and environment checks
+        run: |
+          cd mobile
+
+          if [ -z "${{ secrets.EXPO_TOKEN }}" ]; then
+            echo "EXPO_TOKEN is required for mobile releases"
+            exit 1
+          fi
+
+          runtime_line="$(grep -E '"runtimeVersion"' app.json || true)"
+          if [ -z "$runtime_line" ]; then
+            echo "runtimeVersion is missing in mobile/app.json"
+            exit 1
+          fi
+
+          if echo "$runtime_line" | grep -q '{'; then
+            echo "runtimeVersion must be a plain string for bare workflow"
+            exit 1
+          fi
+
+          required_strict_vars="EXPO_PUBLIC_STATIC_DATA_BASE_URL EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL EXPO_PUBLIC_SUPABASE_URL"
+          env_output="$(eas env:list --environment "${{ inputs.profile }}" --non-interactive 2>/dev/null || true)"
+
+          missing_strict_vars=""
+          for var_name in $required_strict_vars; do
+            if ! echo "$env_output" | grep -q "$var_name"; then
+              missing_strict_vars="$missing_strict_vars $var_name"
+            fi
+          done
+
+          has_supabase_key="false"
+          if echo "$env_output" | grep -q "EXPO_PUBLIC_SUPABASE_KEY"; then
+            has_supabase_key="true"
+          elif echo "$env_output" | grep -q "EXPO_PUBLIC_SUPABASE_ANON_KEY"; then
+            has_supabase_key="true"
+          fi
+
+          env_validation_errors=""
+          if [ -n "$missing_strict_vars" ]; then
+            env_validation_errors="$env_validation_errors Missing required variables:$missing_strict_vars"
+          fi
+          if [ "$has_supabase_key" != "true" ]; then
+            env_validation_errors="$env_validation_errors Missing Supabase key: set EXPO_PUBLIC_SUPABASE_KEY (preferred) or EXPO_PUBLIC_SUPABASE_ANON_KEY (fallback)."
+          fi
+
+          if [ -n "$env_validation_errors" ]; then
+            if [ "${{ inputs.profile }}" = "production" ]; then
+              echo "EAS environment preflight failed for production release."
+              echo "$env_validation_errors"
+              exit 1
+            fi
+
+            if [ "${{ inputs.release_kind }}" = "update" ]; then
+              echo "EAS environment preflight failed for update release."
+              echo "$env_validation_errors"
+              exit 1
+            fi
+
+            echo "Warning: EAS environment preflight issues for non-production release:"
+            echo "$env_validation_errors"
+          fi
+
+          if [ "${{ inputs.release_kind }}" = "build-and-submit" ] && [ ! -f "./secrets/google-play-service-account.json" ]; then
+            echo "Missing mobile/secrets/google-play-service-account.json required by eas submit profile"
+            exit 1
+          fi
+
+          echo "RELEASE_CHANNEL=${{ inputs.profile }}" >> "$GITHUB_ENV"
+          echo "RUNTIME_PREFLIGHT=passed" >> "$GITHUB_ENV"
+          echo "ENV_PREFLIGHT=passed" >> "$GITHUB_ENV"
+
       - name: Execute EAS release action
         run: |
           cd mobile
@@ -121,5 +192,8 @@ jobs:
           echo "## Mobile release summary" >> "$GITHUB_STEP_SUMMARY"
           echo "- Profile: ${{ inputs.profile }}" >> "$GITHUB_STEP_SUMMARY"
           echo "- Platform: ${{ inputs.platform }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Channel: ${RELEASE_CHANNEL:-${{ inputs.profile }}}" >> "$GITHUB_STEP_SUMMARY"
           echo "- Action: ${{ inputs.release_kind }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Runtime preflight: ${RUNTIME_PREFLIGHT:-failed}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Environment preflight: ${ENV_PREFLIGHT:-failed}" >> "$GITHUB_STEP_SUMMARY"
           echo "- Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"
