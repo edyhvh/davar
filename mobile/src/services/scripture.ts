@@ -147,11 +147,11 @@ type StaticTranslitWord = {
 };
 
 type StaticTranslitBook = {
-  verses?: Array<{
+  verses?: {
     chapter: number;
     verse: number;
     words?: StaticTranslitWord[];
-  }>;
+  }[];
 };
 
 type TranslationEntry = {
