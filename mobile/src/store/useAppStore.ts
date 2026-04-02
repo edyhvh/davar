@@ -2,7 +2,10 @@ import { create } from "zustand";
 
 import type { MockVerse } from "@/src/constants/mockData";
 import type { ThemeMode } from "@/src/theme";
-import type { AppLanguage } from "@/src/services/storage";
+import {
+  getDefaultLanguage,
+  type AppLanguage,
+} from "@/src/services/storage";
 import type {
   DownloadProgress,
   BundleVersions,
@@ -62,7 +65,7 @@ export const useAppStore = create<AppState>((set) => ({
     })),
   hebrewFontScale: 1,
   setHebrewFontScale: (scale) => set({ hebrewFontScale: scale }),
-  language: "en",
+  language: getDefaultLanguage(),
   setLanguage: (language) => set({ language }),
   showQumran: false,
   setShowQumran: (value) => set({ showQumran: value }),
