@@ -2,7 +2,7 @@ import React, { useCallback, useMemo } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import BottomSheet, {
   BottomSheetBackdrop,
-  BottomSheetView,
+  BottomSheetScrollView,
   type BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
 
@@ -124,7 +124,12 @@ export const NumberGridBottomSheet = ({
       keyboardBehavior="extend"
       keyboardBlurBehavior="none"
     >
-      <BottomSheetView style={styles.sheetContent}>
+      <BottomSheetScrollView
+        style={styles.sheetContent}
+        nestedScrollEnabled
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
+      >
         <Text style={styles.title}>{title}</Text>
         <View style={styles.grid}>
           {paddedNumbers.map((value, index) => {
@@ -157,7 +162,7 @@ export const NumberGridBottomSheet = ({
             );
           })}
         </View>
-      </BottomSheetView>
+      </BottomSheetScrollView>
     </BottomSheet>
   );
 };
