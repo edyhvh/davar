@@ -11,6 +11,8 @@ import {
   Alert,
   Animated,
   FlatList,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -34,7 +36,7 @@ import {
   type NavigationSheetMethods,
 } from "@/src/components/NavigationSheet";
 import { BookChapterPill } from "@/src/components/ui/BookChapterPill";
-import { getColors, spacing } from "@/src/theme";
+import { getColors, spacing, typography } from "@/src/theme";
 import { fetchMetadata } from "@/src/services/metadata";
 import type { BookResponse } from "@/src/types/api";
 import {
@@ -45,9 +47,13 @@ import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
 import {
   loadBesorahDisclaimerCount,
+  loadSwipeUpHintCount,
   saveBesorahDisclaimerCount,
+  saveSwipeUpHintCount,
 } from "@/src/services/storage";
 import { formatBookDisplayName } from "../utils/bookNameFormatter";
+
+const SWIPE_HINT_MAX_SHOWS = 5;
 
 type TabPressEvent = {
   preventDefault: () => void;
@@ -71,6 +77,20 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       zIndex: 10,
       elevation: 10,
     },
+    swipeHintRow: {
+      position: "absolute",
+      left: spacing[4],
+      right: spacing[4],
+      alignItems: "center",
+      zIndex: 12,
+      elevation: 12,
+    },
+    swipeHintText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: 10,
+      color: colors.textSecondary,
+      textAlign: "center",
+    },
   });
 
 type VersePageProps = {
@@ -78,44 +98,123 @@ type VersePageProps = {
   pageHeight: number;
   topPadding: number;
   showWordHint: boolean;
+  isActive: boolean;
   isSelectedVerse: boolean;
   isBesorah: boolean;
   onVersePress: () => void;
   selectedWord: DisplayVerse["words"][number] | null;
   onWordPress: (word: DisplayVerse["words"][number] | null) => void;
   onBackgroundPress: () => void;
+  onMetricsChange: (
+    verseId: string,
+    metrics: {
+      canScroll: boolean;
+      offsetY: number;
+      contentHeight: number;
+      viewportHeight: number;
+    },
+  ) => void;
+  onEdgeSwipe: (verseId: string, direction: "previous" | "next") => void;
   onScrollBegin?: () => void;
 };
+
+const EDGE_EPSILON = 2;
+const SWIPE_VELOCITY_THRESHOLD = 0.55;
 
 const VersePageComponent = ({
   item,
   pageHeight,
   topPadding,
   showWordHint,
+  isActive,
   isSelectedVerse,
   isBesorah,
   onVersePress,
   selectedWord,
   onWordPress,
   onBackgroundPress,
+  onMetricsChange,
+  onEdgeSwipe,
   onScrollBegin,
 }: VersePageProps) => {
   const [contentHeight, setContentHeight] = useState(0);
+  const [viewportHeight, setViewportHeight] = useState(0);
   const horizontalPadding = spacing[4];
   const bottomPadding = spacing[8];
-  const verticalPadding = topPadding + bottomPadding;
-  const availableHeight = Math.max(0, pageHeight - verticalPadding);
-  const canScroll = contentHeight > availableHeight + 1;
+  const canScroll = contentHeight > viewportHeight + EDGE_EPSILON;
+  const effectiveTopPadding = canScroll ? topPadding : spacing[6];
+
+  useEffect(() => {
+    onMetricsChange(item.id, {
+      canScroll,
+      offsetY: 0,
+      contentHeight,
+      viewportHeight,
+    });
+  }, [canScroll, contentHeight, item.id, onMetricsChange, viewportHeight]);
+
+  const handleScroll = useCallback(
+    (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+      if (!isActive) {
+        return;
+      }
+
+      onMetricsChange(item.id, {
+        canScroll,
+        offsetY: event.nativeEvent.contentOffset.y,
+        contentHeight: event.nativeEvent.contentSize.height,
+        viewportHeight: event.nativeEvent.layoutMeasurement.height,
+      });
+    },
+    [canScroll, isActive, item.id, onMetricsChange],
+  );
+
+  const handleScrollEndDrag = useCallback(
+    (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+      if (!isActive) {
+        return;
+      }
+
+      const velocityY = event.nativeEvent.velocity?.y ?? 0;
+      if (Math.abs(velocityY) < SWIPE_VELOCITY_THRESHOLD) {
+        return;
+      }
+
+      const nextCanScroll =
+        event.nativeEvent.contentSize.height >
+        event.nativeEvent.layoutMeasurement.height + EDGE_EPSILON;
+      const maxOffset = Math.max(
+        0,
+        event.nativeEvent.contentSize.height -
+          event.nativeEvent.layoutMeasurement.height,
+      );
+      const offsetY = event.nativeEvent.contentOffset.y;
+      const atTop = offsetY <= EDGE_EPSILON;
+      const atBottom = offsetY >= maxOffset - EDGE_EPSILON;
+
+      if (velocityY > SWIPE_VELOCITY_THRESHOLD && (!nextCanScroll || atBottom)) {
+        onEdgeSwipe(item.id, "next");
+        return;
+      }
+
+      if (
+        velocityY < -SWIPE_VELOCITY_THRESHOLD &&
+        (!nextCanScroll || atTop)
+      ) {
+        onEdgeSwipe(item.id, "previous");
+      }
+    },
+    [isActive, item.id, onEdgeSwipe],
+  );
 
   const verseContent = (
     <Pressable
       onPress={onBackgroundPress}
       style={{
         paddingHorizontal: horizontalPadding,
-        paddingTop: topPadding,
+        paddingTop: effectiveTopPadding,
         paddingBottom: bottomPadding,
       }}
-      onLayout={(event) => setContentHeight(event.nativeEvent.layout.height)}
     >
       <VerseCard
         verse={item}
@@ -136,28 +235,30 @@ const VersePageComponent = ({
         width: "100%",
       }}
     >
-      {canScroll ? (
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          bounces={false}
-          alwaysBounceVertical={false}
-          overScrollMode="never"
-          nestedScrollEnabled
-          onScrollBeginDrag={onScrollBegin}
-        >
-          {verseContent}
-        </ScrollView>
-      ) : (
-        <View
-          style={{
-            flex: 1,
-            justifyContent: "flex-start",
-            alignItems: "stretch",
-          }}
-        >
-          {verseContent}
-        </View>
-      )}
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        bounces={false}
+        alwaysBounceVertical={false}
+        overScrollMode="never"
+        nestedScrollEnabled={canScroll}
+        scrollEnabled={canScroll}
+        scrollEventThrottle={16}
+        onLayout={(event) => {
+          setViewportHeight(event.nativeEvent.layout.height);
+        }}
+        onContentSizeChange={(_, height) => {
+          setContentHeight(height);
+        }}
+        onScrollBeginDrag={onScrollBegin}
+        onScroll={handleScroll}
+        onScrollEndDrag={handleScrollEndDrag}
+        contentContainerStyle={{
+          minHeight: pageHeight,
+          justifyContent: canScroll ? "flex-start" : "center",
+        }}
+      >
+        {verseContent}
+      </ScrollView>
     </View>
   );
 };
@@ -168,12 +269,15 @@ const VersePage = memo(
     prevProps.item.id === nextProps.item.id &&
     prevProps.pageHeight === nextProps.pageHeight &&
     prevProps.showWordHint === nextProps.showWordHint &&
+    prevProps.isActive === nextProps.isActive &&
     prevProps.isSelectedVerse === nextProps.isSelectedVerse &&
     prevProps.isBesorah === nextProps.isBesorah &&
     prevProps.selectedWord === nextProps.selectedWord &&
     prevProps.onVersePress === nextProps.onVersePress &&
     prevProps.onWordPress === nextProps.onWordPress &&
     prevProps.onBackgroundPress === nextProps.onBackgroundPress &&
+    prevProps.onMetricsChange === nextProps.onMetricsChange &&
+    prevProps.onEdgeSwipe === nextProps.onEdgeSwipe &&
     prevProps.onScrollBegin === nextProps.onScrollBegin,
 );
 
@@ -283,7 +387,19 @@ export const VerseDetailContent = () => {
 
   const [showWordHint] = useState(false);
   const listRef = useRef<FlatList<(typeof orderedVerses)[number]>>(null);
+  const verseScrollMetricsRef = useRef<
+    Record<
+      string,
+      {
+        canScroll: boolean;
+        offsetY: number;
+        contentHeight: number;
+        viewportHeight: number;
+      }
+    >
+  >({});
   const viewabilityConfigRef = useRef({ itemVisiblePercentThreshold: 70 });
+  const [isPagerScrollEnabled, setIsPagerScrollEnabled] = useState(true);
   const onViewableItemsChanged = useRef(
     ({
       viewableItems,
@@ -303,6 +419,26 @@ export const VerseDetailContent = () => {
   >(null);
   const pillVisibility = useRef(new Animated.Value(1)).current;
   const [pillVisible, setPillVisible] = useState(true);
+  const [swipeHintCount, setSwipeHintCount] = useState(0);
+  const pagerDragStartOffsetRef = useRef<number | null>(null);
+  const pagerUserDraggingRef = useRef(false);
+
+  useEffect(() => {
+    let mounted = true;
+    const loadHintCount = async () => {
+      const count = await loadSwipeUpHintCount();
+      if (!mounted) {
+        return;
+      }
+      setSwipeHintCount(count);
+    };
+
+    void loadHintCount();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   const animatePill = useCallback(
     (nextVisible: boolean) => {
@@ -461,14 +597,124 @@ export const VerseDetailContent = () => {
     }
   }, [animatePill, pillVisible]);
 
+  const showSwipeUpHintIfEligible = useCallback(() => {
+    setSwipeHintCount((currentCount) => {
+      if (currentCount >= SWIPE_HINT_MAX_SHOWS) {
+        return currentCount;
+      }
+
+      const nextHintCount = currentCount + 1;
+      void saveSwipeUpHintCount(nextHintCount);
+      return nextHintCount;
+    });
+  }, []);
+
+  const handlePagerScrollBeginDrag = useCallback(
+    (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+      pagerUserDraggingRef.current = true;
+      pagerDragStartOffsetRef.current = event.nativeEvent.contentOffset.y;
+      handleScrollBegin();
+    },
+    [handleScrollBegin],
+  );
+
   const handleOpenNavigationSheet = useCallback(() => {
     navigationSheetRef.current?.snapToIndex(0);
   }, []);
+
+  const handleVerseMetricsChange = useCallback(
+    (
+      verseIdFromPage: string,
+      metrics: {
+        canScroll: boolean;
+        offsetY: number;
+        contentHeight: number;
+        viewportHeight: number;
+      },
+    ) => {
+      verseScrollMetricsRef.current[verseIdFromPage] = metrics;
+      if (verseIdFromPage === verse?.id) {
+        setIsPagerScrollEnabled(!metrics.canScroll);
+      }
+    },
+    [verse?.id],
+  );
+
+  const handleEdgeSwipe = useCallback(
+    (verseIdFromPage: string, direction: "previous" | "next") => {
+      if (!verse?.id || verseIdFromPage !== verse.id) {
+        return;
+      }
+
+      const activeIndex = orderedVerses.findIndex((item) => item.id === verse.id);
+      if (activeIndex < 0) {
+        return;
+      }
+
+      const nextIndex = direction === "next" ? activeIndex + 1 : activeIndex - 1;
+      if (nextIndex < 0 || nextIndex >= orderedVerses.length) {
+        return;
+      }
+
+      const nextVerse = orderedVerses[nextIndex];
+      setEffectiveVerseId(nextVerse.id);
+      listRef.current?.scrollToIndex({
+        index: nextIndex,
+        animated: true,
+      });
+
+      if (direction === "next" && swipeHintCount < SWIPE_HINT_MAX_SHOWS) {
+        showSwipeUpHintIfEligible();
+      }
+    },
+    [
+      orderedVerses,
+      setEffectiveVerseId,
+      showSwipeUpHintIfEligible,
+      swipeHintCount,
+      verse?.id,
+    ],
+  );
+
+  const handleMomentumScrollEnd = useCallback(
+    (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+      if (orderedVerses.length === 0 || pageHeight <= 0) {
+        return;
+      }
+
+      const offsetY = event.nativeEvent.contentOffset.y;
+      const rawIndex = Math.round(offsetY / pageHeight);
+      const clampedIndex = Math.max(
+        0,
+        Math.min(rawIndex, orderedVerses.length - 1),
+      );
+      const targetOffset = clampedIndex * pageHeight;
+      if (pagerUserDraggingRef.current) {
+        const startOffset = pagerDragStartOffsetRef.current;
+        const movedToNextVerse =
+          typeof startOffset === "number" && offsetY - startOffset > EDGE_EPSILON;
+        if (movedToNextVerse) {
+          showSwipeUpHintIfEligible();
+        }
+      }
+      pagerUserDraggingRef.current = false;
+      pagerDragStartOffsetRef.current = null;
+
+      if (Math.abs(offsetY - targetOffset) > EDGE_EPSILON) {
+        listRef.current?.scrollToOffset({
+          offset: targetOffset,
+          animated: true,
+        });
+      }
+    },
+    [orderedVerses.length, pageHeight, showSwipeUpHintIfEligible],
+  );
 
   const keyExtractor = useCallback(
     (item: (typeof orderedVerses)[number]) => item.id,
     [],
   );
+  const shouldShowSwipeHint = swipeHintCount < SWIPE_HINT_MAX_SHOWS;
 
   const renderVersePage = useCallback(
     ({ item }: { item: (typeof orderedVerses)[number] }) => (
@@ -477,12 +723,15 @@ export const VerseDetailContent = () => {
         pageHeight={pageHeight}
         topPadding={contentTopPadding}
         showWordHint={showWordHint}
+        isActive={item.id === verse?.id}
         isSelectedVerse={item.id === verse?.id}
         isBesorah={isBesorah}
         selectedWord={selectedWord}
         onVersePress={handleOpenNavigationSheet}
         onWordPress={handleWordPress}
         onBackgroundPress={handleBackgroundPress}
+        onMetricsChange={handleVerseMetricsChange}
+        onEdgeSwipe={handleEdgeSwipe}
         onScrollBegin={handleScrollBegin}
       />
     ),
@@ -496,9 +745,20 @@ export const VerseDetailContent = () => {
       handleOpenNavigationSheet,
       handleWordPress,
       handleBackgroundPress,
+      handleVerseMetricsChange,
+      handleEdgeSwipe,
       handleScrollBegin,
     ],
   );
+
+  useEffect(() => {
+    if (!verse?.id) {
+      setIsPagerScrollEnabled(true);
+      return;
+    }
+    const activeMetrics = verseScrollMetricsRef.current[verse.id];
+    setIsPagerScrollEnabled(!activeMetrics?.canScroll);
+  }, [verse?.id]);
 
   // Clear selectedWord immediately when verse changes to prevent stale word display
   const prevVerseIdRef = useRef(effectiveVerseId);
@@ -646,6 +906,8 @@ export const VerseDetailContent = () => {
             keyExtractor={keyExtractor}
             renderItem={renderVersePage}
             pagingEnabled
+            directionalLockEnabled
+            scrollEnabled={isPagerScrollEnabled}
             showsVerticalScrollIndicator={false}
             decelerationRate="fast"
             snapToInterval={pageHeight}
@@ -663,9 +925,23 @@ export const VerseDetailContent = () => {
             })}
             viewabilityConfig={viewabilityConfigRef.current}
             onViewableItemsChanged={onViewableItemsChanged.current}
-            onScrollBeginDrag={handleScrollBegin}
+            onScrollBeginDrag={handlePagerScrollBeginDrag}
             onMomentumScrollBegin={handleScrollBegin}
+            onMomentumScrollEnd={handleMomentumScrollEnd}
           />
+          {shouldShowSwipeHint ? (
+            <View
+              pointerEvents="none"
+              style={[
+                styles.swipeHintRow,
+                { bottom: spacing[1] },
+              ]}
+            >
+              <Text style={styles.swipeHintText}>
+                {t("verse.swipeUpNextVerseHint")}
+              </Text>
+            </View>
+          ) : null}
         </View>
       </SafeAreaView>
       <WordAnalysisBottomSheet
