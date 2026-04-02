@@ -18,6 +18,9 @@
     "build:ios": "eas build --platform ios",
     "build:android": "eas build --platform android",
     "build:all": "eas build --platform all",
+    "update:dev": "eas update --channel development",
+    "update:preview": "eas update --channel preview",
+    "update:prod": "eas update --channel production",
     "reset-project": "bun ./scripts/reset-project.js"
   },
   "dependencies": {
