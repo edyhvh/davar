@@ -115,6 +115,29 @@ Notes:
 - TS2009 translations are fetched online from Supabase Storage.
 - If Supabase env vars are missing or placeholders, TS2009 is skipped and the app falls back to other translation sources without crashing.
 
+## OTA Runtime Version Policy
+
+- `expo.runtimeVersion` in [app.json](app.json) is intentionally a plain string for Expo bare workflow compatibility.
+- Bump this string only when native compatibility changes (new/updated native modules, native config changes, SDK changes that alter native runtime expectations).
+- Do not bump it for JS-only OTA updates, or you will unnecessarily fragment update targets.
+- Keep this value aligned with release notes so build/update routing stays predictable.
+
+## EAS Channel Policy
+
+- Build profiles in [eas.json](eas.json) intentionally omit explicit channel fields.
+- EAS uses the profile name as the implicit channel, so development, preview, and production map directly without extra channel config.
+- Keep profile names stable, because renaming a profile changes its implicit update channel.
+
+## Typography QA Checklist
+
+Use this checklist after changing hebrewVerseMedium in [src/theme.ts](src/theme.ts):
+
+1. Open a verse card screen and verify Hebrew word wrapping, line spacing, and selected-word states remain visually balanced.
+2. Open the Settings slider preview and verify the sample Hebrew text scale still matches expected readability.
+3. Compare Android and iOS side by side for clipping, overlap, or unexpected row spacing regressions.
+4. Verify detail variant text density remains readable compared to card variant.
+5. Capture before and after screenshots for VerseCard and Settings preview during release QA.
+
 ## Troubleshooting: Android Physical Device Cannot Load Books Metadata
 
 Symptom:

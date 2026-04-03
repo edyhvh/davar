@@ -78,7 +78,30 @@ jobs:
           fi
 
           required_strict_vars="EXPO_PUBLIC_STATIC_DATA_BASE_URL EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL EXPO_PUBLIC_SUPABASE_URL"
-          env_output="$(eas env:list --environment "${{ inputs.profile }}" --non-interactive 2>/dev/null || true)"
+          env_output=""
+          env_list_exit=0
+          set +e
+          env_output="$(eas env:list --environment "${{ inputs.profile }}" --non-interactive 2>&1)"
+          env_list_exit=$?
+          set -e
+
+          if [ "$env_list_exit" -ne 0 ] || [ -z "$env_output" ]; then
+            env_list_error="Failed to read EAS environment '${{ inputs.profile }}' via eas env:list. Verify EXPO_TOKEN permissions and EAS access."
+            if [ -n "$env_output" ]; then
+              env_list_error="$env_list_error Command output: $env_output"
+            fi
+
+            if [ "${{ inputs.profile }}" = "production" ] || [ "${{ inputs.release_kind }}" = "update" ]; then
+              echo "$env_list_error"
+              exit 1
+            fi
+
+            echo "Warning: $env_list_error"
+            echo "ENV_PREFLIGHT=warning" >> "$GITHUB_ENV"
+            echo "RELEASE_CHANNEL=${{ inputs.profile }}" >> "$GITHUB_ENV"
+            echo "RUNTIME_PREFLIGHT=passed" >> "$GITHUB_ENV"
+            exit 0
+          fi
 
           missing_strict_vars=""
           for var_name in $required_strict_vars; do

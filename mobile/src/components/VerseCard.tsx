@@ -74,6 +74,14 @@ type VerseCardProps = {
   isBesorah?: boolean;
 };
 
+// Font-specific calibration keeps Cardo and DSS glyph metrics visually aligned
+// with the shared hebrewVerseMedium baseline across iOS and Android.
+const DETAIL_VARIANT_FONT_SCALE = 0.93;
+const HEBREW_SCRIPTURE_FONT_SIZE_MULTIPLIER = 1.0248;
+const HEBREW_SCRIPTURE_LINE_HEIGHT_MULTIPLIER = 1.5568;
+const HEBREW_QUMRAN_FONT_SIZE_MULTIPLIER = 1.87264;
+const HEBREW_QUMRAN_LINE_HEIGHT_MULTIPLIER = 1.4784;
+
 const createStyles = (
   colors: ReturnType<typeof getColors>,
   hebrewScale: number,
@@ -131,13 +139,13 @@ const createStyles = (
       fontSize:
         typography.sizes.hebrewVerseMedium *
         hebrewScale *
-        1.0248 *
-        (isDetailVariant ? 0.93 : 1),
+        HEBREW_SCRIPTURE_FONT_SIZE_MULTIPLIER *
+        (isDetailVariant ? DETAIL_VARIANT_FONT_SCALE : 1),
       lineHeight:
         typography.sizes.hebrewVerseMedium *
         hebrewScale *
-        1.5568 *
-        (isDetailVariant ? 0.93 : 1),
+        HEBREW_SCRIPTURE_LINE_HEIGHT_MULTIPLIER *
+        (isDetailVariant ? DETAIL_VARIANT_FONT_SCALE : 1),
       color: colors.textPrimary,
       textAlign: "right",
       writingDirection: "rtl",
@@ -148,13 +156,13 @@ const createStyles = (
       fontSize:
         typography.sizes.hebrewVerseMedium *
         hebrewScale *
-        1.87264 *
-        (isDetailVariant ? 0.93 : 1),
+        HEBREW_QUMRAN_FONT_SIZE_MULTIPLIER *
+        (isDetailVariant ? DETAIL_VARIANT_FONT_SCALE : 1),
       lineHeight:
         typography.sizes.hebrewVerseMedium *
         hebrewScale *
-        1.4784 *
-        (isDetailVariant ? 0.93 : 1),
+        HEBREW_QUMRAN_LINE_HEIGHT_MULTIPLIER *
+        (isDetailVariant ? DETAIL_VARIANT_FONT_SCALE : 1),
       color: colors.textPrimary,
     },
     hebrewWordPressable: {

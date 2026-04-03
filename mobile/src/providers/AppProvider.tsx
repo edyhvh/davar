@@ -63,6 +63,7 @@ const getNavigationTheme = (mode: "light" | "dark") => {
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const hasHydratedSettingsRef = useRef(false);
+  const shouldPersistSettings = () => hasHydratedSettingsRef.current;
 
   // Network connectivity monitoring
   useNetworkStatus();
@@ -206,37 +207,58 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   }, [isConnected, localBundleVersions, setOfflineUpdateAvailable]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveThemeMode(themeMode);
   }, [themeMode]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveHebrewFontScale(hebrewFontScale);
   }, [hebrewFontScale]);
 
   useEffect(() => {
-    if (!hasHydratedSettingsRef.current) {
+    if (!shouldPersistSettings()) {
       return;
     }
     saveLanguage(language);
   }, [language]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveShowQumran(showQumran);
   }, [showQumran]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveShowFullChapter(showFullChapter);
   }, [showFullChapter]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveSeferMode(seferMode);
   }, [seferMode]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveHebrewOnly(hebrewOnly);
   }, [hebrewOnly]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveBookmarks(bookmarks);
   }, [bookmarks]);
 

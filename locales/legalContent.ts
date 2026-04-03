@@ -157,7 +157,7 @@ May the use of Davar bring you closer to understanding and walking in YHVH’s e
 const EN_PRIVACY = `# Privacy Policy for Davar
 
 **Effective Date:** February 8, 2026  
-**Last Updated:** February 8, 2026
+**Last Updated:** April 1, 2026
 
 Davar (the "App" and "Website") is an open-source project providing access to the Hebrew Bible (Tanakh) in its original language. The App is available on the Apple App Store and Google Play Store, and the Website is hosted at https://davar.bible. This Privacy Policy explains our practices regarding any information when you use the App or visit the Website.
 
