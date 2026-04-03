@@ -54,12 +54,39 @@ export const saveBookmarks = async (bookmarks: string[]) => {
 
 export type AppLanguage = "en" | "es" | "he";
 
-export const loadLanguage = async (): Promise<AppLanguage> => {
-  const value = await AsyncStorage.getItem(STORAGE_KEYS.language);
-  if (value === "es" || value === "he") {
-    return value;
+const normalizeLanguage = (value: string | null | undefined): AppLanguage | null => {
+  if (!value) {
+    return null;
   }
-  return "en";
+
+  const normalized = value.toLowerCase();
+  if (normalized === "es" || normalized.startsWith("es-")) {
+    return "es";
+  }
+  if (normalized === "he" || normalized.startsWith("he-")) {
+    return "he";
+  }
+  if (normalized === "en" || normalized.startsWith("en-")) {
+    return "en";
+  }
+
+  return null;
+};
+
+export const getDefaultLanguage = (): AppLanguage => {
+  const locale = Intl.DateTimeFormat().resolvedOptions().locale;
+  return normalizeLanguage(locale) ?? "en";
+};
+
+export const loadLanguage = async (): Promise<AppLanguage> => {
+  const storedLanguage = normalizeLanguage(
+    await AsyncStorage.getItem(STORAGE_KEYS.language),
+  );
+  if (storedLanguage) {
+    return storedLanguage;
+  }
+
+  return getDefaultLanguage();
 };
 
 export const saveLanguage = async (language: AppLanguage) => {

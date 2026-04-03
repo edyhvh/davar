@@ -78,7 +78,8 @@ Mobile static data endpoints are controlled by Expo public env vars:
 - `EXPO_PUBLIC_STATIC_DATA_BASE_URL`
 - `EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL`
 - `EXPO_PUBLIC_SUPABASE_URL`
-- `EXPO_PUBLIC_SUPABASE_ANON_KEY`
+- `EXPO_PUBLIC_SUPABASE_KEY` (preferred)
+- `EXPO_PUBLIC_SUPABASE_ANON_KEY` (legacy fallback)
 
 Resolution order in app code:
 
@@ -99,8 +100,59 @@ Production setup:
 1. Define the same `EXPO_PUBLIC_*` keys in EAS build environment variables (do not commit production secrets).
 2. Point them to the production static JSON origin/path.
 
+Supabase key precedence:
+
+1. `EXPO_PUBLIC_SUPABASE_KEY` (Supabase publishable key)
+2. `EXPO_PUBLIC_SUPABASE_ANON_KEY` (legacy fallback)
+
+Security note:
+
+- Mobile clients must use a public client key (publishable/anon).
+- Never use `SUPABASE_SERVICE_ROLE_KEY` in mobile apps.
+
 Notes:
 
 - TS2009 translations are fetched online from Supabase Storage.
 - If Supabase env vars are missing or placeholders, TS2009 is skipped and the app falls back to other translation sources without crashing.
+
+## OTA Runtime Version Policy
+
+- `expo.runtimeVersion` in [app.json](app.json) is intentionally a plain string for Expo bare workflow compatibility.
+- Bump this string only when native compatibility changes (new/updated native modules, native config changes, SDK changes that alter native runtime expectations).
+- Do not bump it for JS-only OTA updates, or you will unnecessarily fragment update targets.
+- Keep this value aligned with release notes so build/update routing stays predictable.
+
+## EAS Channel Policy
+
+- Build profiles in [eas.json](eas.json) intentionally omit explicit channel fields.
+- EAS uses the profile name as the implicit channel, so development, preview, and production map directly without extra channel config.
+- Keep profile names stable, because renaming a profile changes its implicit update channel.
+
+## Typography QA Checklist
+
+Use this checklist after changing hebrewVerseMedium in [src/theme.ts](src/theme.ts):
+
+1. Open a verse card screen and verify Hebrew word wrapping, line spacing, and selected-word states remain visually balanced.
+2. Open the Settings slider preview and verify the sample Hebrew text scale still matches expected readability.
+3. Compare Android and iOS side by side for clipping, overlap, or unexpected row spacing regressions.
+4. Verify detail variant text density remains readable compared to card variant.
+5. Capture before and after screenshots for VerseCard and Settings preview during release QA.
+
+## Troubleshooting: Android Physical Device Cannot Load Books Metadata
+
+Symptom:
+
+- Logs show `Failed to load books metadata` with `Network request failed`.
+
+Checklist:
+
+1. Ensure phone and development machine are on the same Wi-Fi network.
+2. Use LAN-IP endpoints in local env values for physical-device testing:
+   - `EXPO_PUBLIC_STATIC_DATA_BASE_URL=http://<YOUR_LAN_IP>:3002/data`
+   - `EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL=http://<YOUR_LAN_IP>:3002/data/bundles`
+3. Do not use `127.0.0.1` or `localhost` for physical devices.
+4. Confirm `http://<YOUR_LAN_IP>:3002/data/metadata.json` opens in the phone browser.
+5. Verify your local static server is running and bound to a non-loopback interface.
+
+The app now prints a dev diagnostic line with resolved static URLs and Metro host, and network errors include actionable hints for Android physical-device setup.
 

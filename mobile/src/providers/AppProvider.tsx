@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useMemo } from "react";
+import React, { createContext, useEffect, useMemo, useRef } from "react";
 import {
   DarkTheme,
   DefaultTheme,
@@ -62,6 +62,9 @@ const getNavigationTheme = (mode: "light" | "dark") => {
 };
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
+  const hasHydratedSettingsRef = useRef(false);
+  const shouldPersistSettings = () => hasHydratedSettingsRef.current;
+
   // Network connectivity monitoring
   useNetworkStatus();
 
@@ -113,33 +116,37 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const hydrate = async () => {
-      const [
-        savedTheme,
-        savedScale,
-        savedBookmarks,
-        savedLanguage,
-        savedShowQumran,
-        savedShowFullChapter,
-        savedSeferMode,
-        savedHebrewOnly,
-      ] = await Promise.all([
-        loadThemeMode(),
-        loadHebrewFontScale(),
-        loadBookmarks(),
-        loadLanguage(),
-        loadShowQumran(),
-        loadShowFullChapter(),
-        loadSeferMode(),
-        loadHebrewOnly(),
-      ]);
-      setThemeMode(savedTheme);
-      setHebrewFontScale(savedScale);
-      setBookmarks(savedBookmarks);
-      setLanguage(savedLanguage as AppLanguage);
-      setShowQumran(savedShowQumran);
-      setShowFullChapter(savedShowFullChapter);
-      setHebrewOnly(savedHebrewOnly);
-      setSeferMode(savedSeferMode);
+      try {
+        const [
+          savedTheme,
+          savedScale,
+          savedBookmarks,
+          savedLanguage,
+          savedShowQumran,
+          savedShowFullChapter,
+          savedSeferMode,
+          savedHebrewOnly,
+        ] = await Promise.all([
+          loadThemeMode(),
+          loadHebrewFontScale(),
+          loadBookmarks(),
+          loadLanguage(),
+          loadShowQumran(),
+          loadShowFullChapter(),
+          loadSeferMode(),
+          loadHebrewOnly(),
+        ]);
+        setThemeMode(savedTheme);
+        setHebrewFontScale(savedScale);
+        setBookmarks(savedBookmarks);
+        setLanguage(savedLanguage as AppLanguage);
+        setShowQumran(savedShowQumran);
+        setShowFullChapter(savedShowFullChapter);
+        setHebrewOnly(savedHebrewOnly);
+        setSeferMode(savedSeferMode);
+      } finally {
+        hasHydratedSettingsRef.current = true;
+      }
     };
 
     hydrate();
@@ -200,34 +207,58 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   }, [isConnected, localBundleVersions, setOfflineUpdateAvailable]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveThemeMode(themeMode);
   }, [themeMode]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveHebrewFontScale(hebrewFontScale);
   }, [hebrewFontScale]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveLanguage(language);
   }, [language]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveShowQumran(showQumran);
   }, [showQumran]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveShowFullChapter(showFullChapter);
   }, [showFullChapter]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveSeferMode(seferMode);
   }, [seferMode]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveHebrewOnly(hebrewOnly);
   }, [hebrewOnly]);
 
   useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveBookmarks(bookmarks);
   }, [bookmarks]);
 

@@ -1,5 +1,6 @@
 import { type JSX, useMemo } from "react";
 import {
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -73,11 +74,26 @@ type VerseCardProps = {
   isBesorah?: boolean;
 };
 
+// Font-specific calibration keeps Cardo and DSS glyph metrics visually aligned
+// with the shared hebrewVerseMedium baseline across iOS and Android.
+const DETAIL_VARIANT_FONT_SCALE = 0.93;
+const HEBREW_SCRIPTURE_FONT_SIZE_MULTIPLIER = 1.0248;
+const HEBREW_SCRIPTURE_LINE_HEIGHT_MULTIPLIER = 1.5568;
+const HEBREW_QUMRAN_FONT_SIZE_MULTIPLIER = 1.87264;
+const HEBREW_QUMRAN_LINE_HEIGHT_MULTIPLIER = 1.4784;
+
 const createStyles = (
   colors: ReturnType<typeof getColors>,
   hebrewScale: number,
-) =>
-  StyleSheet.create({
+  isDetailVariant: boolean,
+) => {
+  const isDarkMode = colors.background === "#0F0E12";
+  const androidPressedBackground = isDarkMode ? "#4A3A2C" : "#D8C6B2";
+  const androidPressedBorder = isDarkMode ? "#9A7048" : "#B4834D";
+  const androidSelectedBackground = isDarkMode ? "#4F3D2D" : "#DCCBB8";
+  const androidSelectedPressedBackground = isDarkMode ? "#5D4631" : "#DAC4AC";
+
+  return StyleSheet.create({
     containerDetail: {
       alignItems: "center",
     },
@@ -96,6 +112,8 @@ const createStyles = (
       flexDirection: "row-reverse",
       flexWrap: "wrap",
       justifyContent: "center",
+      columnGap: spacing[2],
+      rowGap: spacing[2],
     },
     firstWordRow: {
       flexDirection: "row-reverse",
@@ -118,16 +136,33 @@ const createStyles = (
     },
     hebrewWord: {
       fontFamily: typography.families.hebrewScripture,
-      fontSize: typography.sizes.hebrewVerseMedium * hebrewScale * 1.0248,
-      lineHeight: typography.sizes.hebrewVerseMedium * hebrewScale * 1.5568,
+      fontSize:
+        typography.sizes.hebrewVerseMedium *
+        hebrewScale *
+        HEBREW_SCRIPTURE_FONT_SIZE_MULTIPLIER *
+        (isDetailVariant ? DETAIL_VARIANT_FONT_SCALE : 1),
+      lineHeight:
+        typography.sizes.hebrewVerseMedium *
+        hebrewScale *
+        HEBREW_SCRIPTURE_LINE_HEIGHT_MULTIPLIER *
+        (isDetailVariant ? DETAIL_VARIANT_FONT_SCALE : 1),
       color: colors.textPrimary,
       textAlign: "right",
       writingDirection: "rtl",
+      includeFontPadding: false,
     },
     hebrewWordQumran: {
       fontFamily: typography.families.hebrewQumran,
-      fontSize: typography.sizes.hebrewVerseMedium * hebrewScale * 1.87264,
-      lineHeight: typography.sizes.hebrewVerseMedium * hebrewScale * 1.4784,
+      fontSize:
+        typography.sizes.hebrewVerseMedium *
+        hebrewScale *
+        HEBREW_QUMRAN_FONT_SIZE_MULTIPLIER *
+        (isDetailVariant ? DETAIL_VARIANT_FONT_SCALE : 1),
+      lineHeight:
+        typography.sizes.hebrewVerseMedium *
+        hebrewScale *
+        HEBREW_QUMRAN_LINE_HEIGHT_MULTIPLIER *
+        (isDetailVariant ? DETAIL_VARIANT_FONT_SCALE : 1),
       color: colors.textPrimary,
     },
     hebrewWordPressable: {
@@ -156,8 +191,22 @@ const createStyles = (
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.26,
       shadowRadius: 6,
-      elevation: 3,
-      transform: [{ translateY: -1 }],
+      ...Platform.select({
+        ios: {
+          elevation: 3,
+          transform: [{ translateY: -1 }],
+        },
+        android: {
+          elevation: 1,
+          backgroundColor: androidPressedBackground,
+          borderColor: androidPressedBorder,
+          shadowOpacity: 0,
+          shadowRadius: 0,
+          shadowOffset: { width: 0, height: 0 },
+          transform: [{ translateY: 0 }],
+        },
+        default: {},
+      }),
     },
     selectedWordPressable: {
       backgroundColor: "rgba(198, 143, 85, 0.32)",
@@ -166,14 +215,35 @@ const createStyles = (
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.34,
       shadowRadius: 7,
-      elevation: 3,
+      ...Platform.select({
+        ios: { elevation: 3 },
+        android: {
+          elevation: 1,
+          backgroundColor: androidSelectedBackground,
+          shadowOpacity: 0,
+          shadowRadius: 0,
+          shadowOffset: { width: 0, height: 0 },
+        },
+        default: {},
+      }),
     },
     selectedWordPressed: {
       backgroundColor: "rgba(198, 143, 85, 0.4)",
       borderColor: "rgba(198, 143, 85, 0.9)",
       shadowOpacity: 0.4,
+      ...Platform.select({
+        android: {
+          elevation: 1,
+          backgroundColor: androidSelectedPressedBackground,
+          shadowOpacity: 0,
+          shadowRadius: 0,
+          shadowOffset: { width: 0, height: 0 },
+        },
+        default: {},
+      }),
     },
   });
+};
 
 export const VerseCard = ({
   verse,
@@ -198,8 +268,8 @@ export const VerseCard = ({
   const { t } = useTranslation();
   const colors = getColors(themeMode);
   const styles = useMemo(
-    () => createStyles(colors, hebrewFontScale),
-    [colors, hebrewFontScale],
+    () => createStyles(colors, hebrewFontScale, variant === "detail"),
+    [colors, hebrewFontScale, variant],
   );
   // Spanish fallback: when the user's language is Spanish but the verse has no
   // Spanish translation available yet, we show a localised placeholder message
@@ -229,10 +299,14 @@ export const VerseCard = ({
             selectedWord?.text === word.text &&
             selectedWord?.strong === word.strong;
 
-          const qumranWord = showQumran ? word.dssWord : undefined;
+          const hasVisibleQumranVariant = showQumran && Boolean(word.hasQumranVariant);
+          const qumranWord = hasVisibleQumranVariant ? word.dssWord : undefined;
 
           // Apply nikud and cantillation settings
-          let displayText = qumranWord ?? word.text;
+          let displayText =
+            typeof qumranWord === "string" && qumranWord.length > 0
+              ? qumranWord
+              : word.text;
           if (!showNikud) {
             displayText = stripNikud(displayText);
           }
@@ -247,7 +321,7 @@ export const VerseCard = ({
           }
 
           const prefixSegments =
-            qumranWord || !word.prefixes?.length
+            hasVisibleQumranVariant || !word.prefixes?.length
               ? null
               : getPrefixSegments(displayText, word.prefixes);
 
@@ -278,7 +352,7 @@ export const VerseCard = ({
             return (
               <Text
                 style={
-                  qumranWord
+                  hasVisibleQumranVariant
                     ? [styles.hebrewWord, styles.hebrewWordQumran]
                     : styles.hebrewWord
                 }

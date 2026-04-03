@@ -44,11 +44,33 @@ jobs:
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
 
       - name: Install dependencies
         run: |
           cd mobile
-          bun install
+          attempt=1
+          max_attempts=3
+          while [ "$attempt" -le "$max_attempts" ]; do
+            echo "bun install attempt $attempt/$max_attempts"
+            if bun install; then
+              echo "bun install succeeded"
+              break
+            fi
+
+            echo "bun install failed on attempt $attempt"
+            echo "Clearing Bun cache before retry"
+            rm -rf ~/.bun/install/cache
+
+            if [ "$attempt" -eq "$max_attempts" ]; then
+              echo "bun install failed after $max_attempts attempts"
+              exit 1
+            fi
+
+            attempt=$((attempt + 1))
+            sleep 3
+          done
 
       - name: Run lint
         run: |

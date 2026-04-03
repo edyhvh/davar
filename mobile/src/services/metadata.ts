@@ -24,7 +24,14 @@ const resolveBookId = (
 };
 
 export const fetchMetadata = async (): Promise<MetadataResponse> => {
-  const raw = await staticDataRequest<MetadataResponse>("metadata.json");
+  let raw: MetadataResponse;
+  try {
+    raw = await staticDataRequest<MetadataResponse>("metadata.json");
+  } catch (error) {
+    const message =
+      error instanceof Error ? error.message : String(error ?? "unknown error");
+    throw new Error(`Failed to fetch metadata.json (${message})`);
+  }
 
   const chapterCounts: Record<string, number[]> = {};
   const verseCounts: Record<string, Record<string, number>> = {};
