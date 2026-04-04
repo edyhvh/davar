@@ -74,7 +74,7 @@ export function SourcesScreen() {
       items: [
         {
           label: t("home.sources.hebrewTextLabel"),
-          value: "Masoretic Text and Qumran",
+          value: t("home.sources.hebrewTextValue"),
         },
       ],
     },
@@ -83,7 +83,7 @@ export function SourcesScreen() {
       items: [
         {
           label: t("home.sources.besorahLabel"),
-          value: "Delitzsch translation to Hebrew",
+          value: t("home.sources.besorahValue"),
         },
       ],
     },
@@ -92,8 +92,7 @@ export function SourcesScreen() {
       items: [
         {
           label: undefined,
-          value:
-            "Traducción Textual del Hebreo (TTH) and Biblia en Español Sencillo",
+          value: t("home.sources.spanishTranslationValue"),
         },
       ],
     },
@@ -102,7 +101,7 @@ export function SourcesScreen() {
       items: [
         {
           label: undefined,
-          value: "The Scriptures 2009",
+          value: t("home.sources.englishTranslationValue"),
         },
       ],
     },
@@ -111,7 +110,7 @@ export function SourcesScreen() {
       items: [
         {
           label: undefined,
-          value: "Strong's, Brown-Driver-Briggs and Custom definitions",
+          value: `${t("home.sources.dictionaryValue")}${t("home.sources.dictionaryNote")}`,
         },
       ],
     },
