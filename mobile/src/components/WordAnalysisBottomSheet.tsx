@@ -932,8 +932,12 @@ const WordAnalysisBottomSheetComponent = (
     if (!showNikud) {
       displayBase = stripNikud(displayBase);
     }
+    displayBase = removeMaqafForDisplay(displayBase.replace(/\//g, ""));
+    if (isBesorah) {
+      displayBase = removeSofPasukForDisplay(displayBase);
+    }
     return getPrefixSegments(displayBase, word.prefixes);
-  }, [showNikud, word?.text, word?.prefixes]);
+  }, [isBesorah, showNikud, word?.text, word?.prefixes]);
 
   useEffect(() => {
     const loadLexicon = async () => {
