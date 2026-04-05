@@ -16,6 +16,7 @@ import BottomSheet, {
 import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
 import { Ionicons } from "@expo/vector-icons";
 import Animated, { FadeIn } from "react-native-reanimated";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import {
   getColors,
@@ -133,6 +134,9 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     content: {
       flex: 1,
     },
+    list: {
+      flex: 1,
+    },
     listContent: {
       paddingHorizontal: spacing[6],
       paddingBottom: spacing[8],
@@ -165,6 +169,9 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       color: colors.textPrimary,
       textAlign: "right",
       writingDirection: "rtl",
+    },
+    gridScroll: {
+      flex: 1,
     },
     gridContainer: {
       paddingHorizontal: spacing[6],
@@ -233,6 +240,7 @@ const NavigationSheetComponent = (
   ref: React.ForwardedRef<NavigationSheetMethods>,
 ) => {
   const sheetRef = useRef<BottomSheetMethods | null>(null);
+  const insets = useSafeAreaInsets();
   const [step, setStep] = useState<Step>("book");
   const directionRef = useRef<"forward" | "back">("forward");
   const [selectedBookId, setSelectedBookId] = useState(currentBookId);
@@ -260,6 +268,7 @@ const NavigationSheetComponent = (
   const language = useAppStore((state: AppState) => state.language);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const contentBottomPadding = spacing[8] + spacing[4] + insets.bottom;
   const snapPoints = useMemo(() => ["60%", "80%"], []);
   const { t } = useTranslation();
 
@@ -598,7 +607,13 @@ const NavigationSheetComponent = (
             data={filteredBooks}
             keyExtractor={(item: BookMeta) => item.id}
             renderItem={renderBookItem}
-            contentContainerStyle={styles.listContent}
+            style={styles.list}
+            contentContainerStyle={[
+              styles.listContent,
+              {
+                paddingBottom: contentBottomPadding,
+              },
+            ]}
             showsVerticalScrollIndicator={false}
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
@@ -619,7 +634,13 @@ const NavigationSheetComponent = (
           style={styles.content}
         >
           <BottomSheetScrollView
-            style={styles.gridContainer}
+            style={styles.gridScroll}
+            contentContainerStyle={[
+              styles.gridContainer,
+              {
+                paddingBottom: contentBottomPadding,
+              },
+            ]}
             nestedScrollEnabled
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
@@ -651,7 +672,13 @@ const NavigationSheetComponent = (
           style={styles.content}
         >
           <BottomSheetScrollView
-            style={styles.gridContainer}
+            style={styles.gridScroll}
+            contentContainerStyle={[
+              styles.gridContainer,
+              {
+                paddingBottom: contentBottomPadding,
+              },
+            ]}
             nestedScrollEnabled
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
