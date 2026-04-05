@@ -353,6 +353,8 @@ export const VerseDetailContent = () => {
   // Keep refs current for the onViewableItemsChanged closure
   const effectiveVerseIdRef = useRef(effectiveVerseId);
   const setEffectiveVerseIdRef = useRef(setEffectiveVerseId);
+  // Pending verse number to scroll to after cross-book/chapter data loads
+  const pendingScrollVerseRef = useRef<number | null>(null);
   useEffect(() => {
     effectiveVerseIdRef.current = effectiveVerseId;
     setEffectiveVerseIdRef.current = setEffectiveVerseId;
@@ -426,6 +428,8 @@ export const VerseDetailContent = () => {
     }: {
       viewableItems: { item: (typeof orderedVerses)[number] }[];
     }) => {
+      // Skip updates while waiting for cross-book/chapter data to load
+      if (pendingScrollVerseRef.current !== null) return;
       const next = viewableItems[0]?.item;
       if (next && next.id !== effectiveVerseIdRef.current) {
         setEffectiveVerseIdRef.current(next.id);
@@ -545,6 +549,7 @@ export const VerseDetailContent = () => {
       const targetId = `${nextBookId}-${nextChapter}-${verseNum}`;
       setEffectiveVerseId(targetId);
       if (nextBookId === bookId && nextChapter === chapter) {
+        // Same book+chapter: data is already loaded, scroll immediately
         const nextIndex = orderedVerses.findIndex(
           (item) => item.verse === verseNum,
         );
@@ -554,6 +559,9 @@ export const VerseDetailContent = () => {
             animated: true,
           });
         }
+      } else {
+        // Different book/chapter: defer scroll until new data loads
+        pendingScrollVerseRef.current = verseNum;
       }
     },
     [orderedVerses, setEffectiveVerseId, bookId, chapter],
@@ -849,7 +857,26 @@ export const VerseDetailContent = () => {
           return;
         }
         setChapterVerses(verses);
-        // Don't auto-select a word - let user tap to select
+        // Scroll to the pending target verse after cross-book/chapter navigation
+        if (pendingScrollVerseRef.current !== null) {
+          const targetVerse = pendingScrollVerseRef.current;
+          pendingScrollVerseRef.current = null;
+          const sorted = [...verses].sort(
+            (a, b) => a.chapter - b.chapter || a.verse - b.verse,
+          );
+          const targetIndex = sorted.findIndex(
+            (item) => item.verse === targetVerse,
+          );
+          if (targetIndex >= 0) {
+            // Use requestAnimationFrame to ensure FlatList has updated with new data
+            requestAnimationFrame(() => {
+              listRef.current?.scrollToIndex({
+                index: targetIndex,
+                animated: false,
+              });
+            });
+          }
+        }
       } catch {
         if (!isMounted) return;
         setErrorMessage(t("errors.loadVerses"));
