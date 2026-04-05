@@ -1517,6 +1517,14 @@ const WordAnalysisBottomSheetComponent = (
             ) : activeTab === "qumran" ? (
               <>
                 <Text style={styles.sectionLabel}>
+                  {t("wordCard.commentary")}
+                </Text>
+                <Text style={styles.commentaryText}>
+                  {dssCommentary ?? "—"}
+                </Text>
+
+                <View style={styles.sectionDivider} />
+                <Text style={styles.sectionLabel}>
                   {t("wordCard.meanings")}
                 </Text>
                 {isDssLoading ? (
@@ -1534,14 +1542,6 @@ const WordAnalysisBottomSheetComponent = (
                     </Text>
                   ))}
                 </View>
-
-                <View style={styles.sectionDivider} />
-                <Text style={styles.sectionLabel}>
-                  {t("wordCard.commentary")}
-                </Text>
-                <Text style={styles.commentaryText}>
-                  {dssCommentary ?? "—"}
-                </Text>
 
                 <View style={styles.sectionDivider} />
                 <View style={styles.rootSection}>
