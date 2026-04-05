@@ -29,6 +29,7 @@ import { BottomTabBarHeightContext } from "@react-navigation/bottom-tabs";
 import type { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import type { ParamListBase } from "@react-navigation/native";
 import { VerseCard } from "@/src/components/VerseCard";
+import { VerseCardSkeleton } from "@/src/components/VerseCardSkeleton";
 import { WordAnalysisBottomSheet } from "@/src/components/WordAnalysisBottomSheet";
 import {
   NavigationSheet,
@@ -935,17 +936,7 @@ export const VerseDetailContent = () => {
               />
             </Animated.View>
           </View>
-          {isLoading ? (
-            <View
-              style={{ paddingHorizontal: spacing[6], paddingTop: spacing[12] }}
-            >
-              <Text
-                style={{ textAlign: "center", color: colors.textSecondary }}
-              >
-                {t("verse.loading")}
-              </Text>
-            </View>
-          ) : null}
+          {isLoading ? <VerseCardSkeleton pageHeight={pageHeight} /> : null}
           {errorMessage ? (
             <View
               style={{ paddingHorizontal: spacing[6], paddingTop: spacing[12] }}
