@@ -13,6 +13,7 @@ const STORAGE_KEYS = {
   wordHintCount: "davar.wordHintCount",
   swipeUpHintCount: "davar.swipeUpHintCount",
   besorahDisclaimerCount: "davar.besorahDisclaimerCount",
+  currentVerseId: "davar.currentVerseId",
 };
 
 export const loadThemeMode = async () => {
@@ -170,6 +171,14 @@ export const saveBesorahDisclaimerCount = async (count: number) => {
     STORAGE_KEYS.besorahDisclaimerCount,
     String(count),
   );
+};
+
+export const loadCurrentVerseId = async (): Promise<string | null> => {
+  return AsyncStorage.getItem(STORAGE_KEYS.currentVerseId);
+};
+
+export const saveCurrentVerseId = async (id: string) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.currentVerseId, id);
 };
 
 export const clearStorage = async () => {

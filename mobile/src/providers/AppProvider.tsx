@@ -10,6 +10,7 @@ import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import {
   type AppLanguage,
   loadBookmarks,
+  loadCurrentVerseId,
   loadHebrewFontScale,
   loadHebrewOnly,
   loadLanguage,
@@ -18,6 +19,7 @@ import {
   loadShowQumran,
   loadThemeMode,
   saveBookmarks,
+  saveCurrentVerseId,
   saveHebrewFontScale,
   saveHebrewOnly,
   saveLanguage,
@@ -92,6 +94,12 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const setHebrewOnly = useAppStore((state: AppState) => state.setHebrewOnly);
   const bookmarks = useAppStore((state: AppState) => state.bookmarks);
   const setBookmarks = useAppStore((state: AppState) => state.setBookmarks);
+  const currentVerseId = useAppStore(
+    (state: AppState) => state.currentVerseId,
+  );
+  const setCurrentVerseId = useAppStore(
+    (state: AppState) => state.setCurrentVerseId,
+  );
   const setLocalBundleVersions = useAppStore(
     (state: AppState) => state.setLocalBundleVersions,
   );
@@ -126,6 +134,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
           savedShowFullChapter,
           savedSeferMode,
           savedHebrewOnly,
+          savedVerseId,
         ] = await Promise.all([
           loadThemeMode(),
           loadHebrewFontScale(),
@@ -135,6 +144,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
           loadShowFullChapter(),
           loadSeferMode(),
           loadHebrewOnly(),
+          loadCurrentVerseId(),
         ]);
         setThemeMode(savedTheme);
         setHebrewFontScale(savedScale);
@@ -144,6 +154,9 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
         setShowFullChapter(savedShowFullChapter);
         setHebrewOnly(savedHebrewOnly);
         setSeferMode(savedSeferMode);
+        if (savedVerseId) {
+          setCurrentVerseId(savedVerseId);
+        }
       } finally {
         hasHydratedSettingsRef.current = true;
       }
@@ -159,6 +172,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     setShowFullChapter,
     setSeferMode,
     setHebrewOnly,
+    setCurrentVerseId,
   ]);
 
   // Load offline bundle versions from SQLite and check for updates
@@ -261,6 +275,13 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     }
     saveBookmarks(bookmarks);
   }, [bookmarks]);
+
+  useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
+    saveCurrentVerseId(currentVerseId);
+  }, [currentVerseId]);
 
   return (
     <AppThemeContext.Provider value={value}>

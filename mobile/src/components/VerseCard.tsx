@@ -68,6 +68,7 @@ type VerseCardProps = {
   verse: DisplayVerse;
   onWordPress?: (word: DisplayVerse["words"][number]) => void;
   onVersePress?: () => void;
+  onHebrewPressIn?: () => void;
   showWordHint?: boolean;
   selectedWord?: DisplayVerse["words"][number] | null;
   variant?: "card" | "detail";
@@ -249,6 +250,7 @@ export const VerseCard = ({
   verse,
   onWordPress,
   onVersePress,
+  onHebrewPressIn,
   showWordHint = false,
   selectedWord = null,
   variant = "card",
@@ -366,12 +368,14 @@ export const VerseCard = ({
             return (
               <View key={wordKey} style={styles.firstWordRow}>
                 <Pressable
+                  onPressIn={onHebrewPressIn}
                   onPress={onVersePress}
                   style={styles.verseNumberPressable}
                 >
                   <Text style={styles.verseNumber}>[{verse.verse}]</Text>
                 </Pressable>
                 <Pressable
+                  onPressIn={onHebrewPressIn}
                   onPress={() => onWordPress?.(word)}
                   hitSlop={8}
                   style={({ pressed }) => [
@@ -389,6 +393,7 @@ export const VerseCard = ({
           return (
             <Pressable
               key={wordKey}
+              onPressIn={onHebrewPressIn}
               onPress={() => onWordPress?.(word)}
               hitSlop={8}
               style={({ pressed }) => [

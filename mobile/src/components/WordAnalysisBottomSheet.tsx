@@ -125,6 +125,47 @@ type StaticDictionaryData = {
   custom: Record<string, StaticCustomDefinition>;
 };
 
+const SUFFIX_MORPH_TO_STRONG: Record<string, string> = {
+  Sp1cs: "H589",
+  Sp1cp: "H587",
+  Sp2ms: "H859",
+  Sp2fs: "H859",
+  Sp2mp: "H859",
+  Sp2fp: "H859",
+  Sp3ms: "H1931",
+  Sp3fs: "H1931",
+  Sp3mp: "H1992",
+  Sp3fp: "H2007",
+};
+
+const resolveStrongNumber = (
+  strong?: string,
+  morph?: string,
+): string | null => {
+  if (strong) {
+    const parts = strong.split("/").map((part) => part.trim());
+    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
+    if (strongPart) {
+      return strongPart;
+    }
+  }
+
+  if (!morph) {
+    return null;
+  }
+
+  const suffixPart = morph
+    .split("/")
+    .map((part) => part.trim())
+    .find((part) => /^Sp\d[cmfp][sp]$/.test(part));
+
+  if (!suffixPart) {
+    return null;
+  }
+
+  return SUFFIX_MORPH_TO_STRONG[suffixPart] ?? null;
+};
+
 const normalizeStrongKey = (value: string): string =>
   value.toUpperCase().replace(/\s+/g, "");
 
@@ -840,17 +881,11 @@ const WordAnalysisBottomSheetComponent = (
     word?.dssCommentaryHe,
   );
   const strongNumber = useMemo(() => {
-    if (!word?.strong) return null;
-    const parts = word.strong.split("/").map((part) => part.trim());
-    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
-    return strongPart ?? null;
-  }, [word?.strong]);
+    return resolveStrongNumber(word?.strong, word?.morph);
+  }, [word?.strong, word?.morph]);
 
   const dssStrongNumber = useMemo(() => {
-    if (!word?.dssStrong) return null;
-    const parts = word.dssStrong.split("/").map((part) => part.trim());
-    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
-    return strongPart ?? null;
+    return resolveStrongNumber(word?.dssStrong, undefined);
   }, [word?.dssStrong]);
   // Keep in sync with web/src/app/App.tsx transliteration selection logic.
   const wordTransliteration = useMemo(() => {
@@ -932,8 +967,12 @@ const WordAnalysisBottomSheetComponent = (
     if (!showNikud) {
       displayBase = stripNikud(displayBase);
     }
+    displayBase = removeMaqafForDisplay(displayBase.replace(/\//g, ""));
+    if (isBesorah) {
+      displayBase = removeSofPasukForDisplay(displayBase);
+    }
     return getPrefixSegments(displayBase, word.prefixes);
-  }, [showNikud, word?.text, word?.prefixes]);
+  }, [isBesorah, showNikud, word?.text, word?.prefixes]);
 
   useEffect(() => {
     const loadLexicon = async () => {
@@ -1513,6 +1552,14 @@ const WordAnalysisBottomSheetComponent = (
             ) : activeTab === "qumran" ? (
               <>
                 <Text style={styles.sectionLabel}>
+                  {t("wordCard.commentary")}
+                </Text>
+                <Text style={styles.commentaryText}>
+                  {dssCommentary ?? "—"}
+                </Text>
+
+                <View style={styles.sectionDivider} />
+                <Text style={styles.sectionLabel}>
                   {t("wordCard.meanings")}
                 </Text>
                 {isDssLoading ? (
@@ -1530,14 +1577,6 @@ const WordAnalysisBottomSheetComponent = (
                     </Text>
                   ))}
                 </View>
-
-                <View style={styles.sectionDivider} />
-                <Text style={styles.sectionLabel}>
-                  {t("wordCard.commentary")}
-                </Text>
-                <Text style={styles.commentaryText}>
-                  {dssCommentary ?? "—"}
-                </Text>
 
                 <View style={styles.sectionDivider} />
                 <View style={styles.rootSection}>

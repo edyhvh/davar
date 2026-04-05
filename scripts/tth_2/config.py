@@ -612,8 +612,6 @@ BOOKS_INFO = {
 
 # Hebrew terms dictionary
 HEBREW_TERMS = {
-    'YEHOVAH': 'Tetragrámaton - Nombre de Elohim',
-    'Yehovah': 'Tetragrámaton - Nombre de Elohim',
     'יהוה': 'Tetragrámaton - Nombre de Elohim',
     'Yeshúa': 'Jesús en hebreo',
     'Mesías': 'El Ungido, Cristo',

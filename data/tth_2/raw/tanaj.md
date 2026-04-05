@@ -32926,7 +32926,7 @@ _Tav._
 
 106.  [^106]: O, *será visto. *Heb.: _Elohim Iréh._
 
-107.  [^107]: O, *será visto. *Heb.: _Yehovah Iréh._
+107.  [^107]: O, *será visto. *Heb.: _יהוה Iréh._
 
 108.  [^108]: Siclos.
 
@@ -33244,7 +33244,7 @@ _Tav._
 
 265.  [^265]: Seré.
 
-266.  [^266]: Yehovah. El que será.
+266.  [^266]: יהוה. El que será.
 
 267.  [^267]: Hebreos.
 
@@ -33258,7 +33258,7 @@ _Tav._
 
 272.  [^272]: Lit.: _hagan._
 
-273.  [^273]: Yehovah. El que será.
+273.  [^273]: יהוה. El que será.
 
 274.  [^274]: De etimología incierta, tal vez: *Elohim Todopo­deroso, *o* Elohim de los montes, *o* Elohim Susten­tador.*
 
@@ -33326,7 +33326,7 @@ _Tav._
 
 306.  [^306]: Heb.: _Ga’oh ga’ah._
 
-307.  [^307]: Contracción de Yehovah.
+307.  [^307]: Contracción de יהוה.
 
 308.  [^308]: Poderoso.
 
@@ -33386,7 +33386,7 @@ _Tav._
 
 336.  [^336]: Fidelidad, firmeza, crianza.
 
-337.  [^337]: Yehovah es mi señal alzada.
+337.  [^337]: יהוה es mi señal alzada.
 
 338.  [^338]: O, _contra._
 

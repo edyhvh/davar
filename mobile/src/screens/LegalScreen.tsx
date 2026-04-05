@@ -12,6 +12,7 @@ import Markdown from "react-native-markdown-display";
 import { getColors, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { getLegalDoc, type LegalKind } from "../../../locales/legalContent";
+import { useTranslation } from "@/src/i18n/useTranslation";
 
 interface LegalScreenProps {
   kind: LegalKind;
@@ -92,9 +93,11 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
 
 export function LegalScreen({ kind }: LegalScreenProps) {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
+  const language = useAppStore((state: AppState) => state.language);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const doc = useMemo(() => getLegalDoc(kind), [kind]);
+  const doc = useMemo(() => getLegalDoc(kind, language), [kind, language]);
+  const { t } = useTranslation();
   const markdownStyles = useMemo(
     () => ({
       body: {
@@ -164,7 +167,7 @@ export function LegalScreen({ kind }: LegalScreenProps) {
             <Text style={styles.title}>{doc.title}</Text>
             {doc.lastUpdated && (
               <View style={styles.metaRow}>
-                <Text style={styles.metaLabel}>Last Updated</Text>
+                <Text style={styles.metaLabel}>{t("legal.lastUpdated")}</Text>
                 <Text style={styles.metaValue}>{doc.lastUpdated}</Text>
               </View>
             )}

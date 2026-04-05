@@ -15,7 +15,8 @@ import BottomSheet, {
 } from "@gorhom/bottom-sheet";
 import type { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
 import { Ionicons } from "@expo/vector-icons";
-import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
+import Animated, { FadeIn } from "react-native-reanimated";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import {
   getColors,
@@ -133,6 +134,9 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
     content: {
       flex: 1,
     },
+    list: {
+      flex: 1,
+    },
     listContent: {
       paddingHorizontal: spacing[6],
       paddingBottom: spacing[8],
@@ -165,6 +169,9 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       color: colors.textPrimary,
       textAlign: "right",
       writingDirection: "rtl",
+    },
+    gridScroll: {
+      flex: 1,
     },
     gridContainer: {
       paddingHorizontal: spacing[6],
@@ -233,7 +240,9 @@ const NavigationSheetComponent = (
   ref: React.ForwardedRef<NavigationSheetMethods>,
 ) => {
   const sheetRef = useRef<BottomSheetMethods | null>(null);
+  const insets = useSafeAreaInsets();
   const [step, setStep] = useState<Step>("book");
+  const directionRef = useRef<"forward" | "back">("forward");
   const [selectedBookId, setSelectedBookId] = useState(currentBookId);
 
   useImperativeHandle(
@@ -247,16 +256,19 @@ const NavigationSheetComponent = (
       snapToPosition: (position: number | string) =>
         sheetRef.current?.snapToPosition(position),
       openAtChapter: () => {
+        setSelectedBookId(currentBookId);
+        setSelectedChapter(currentChapter);
         setStep("chapter");
         sheetRef.current?.snapToIndex(0);
       },
     }),
-    [],
+    [currentBookId, currentChapter],
   );
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const language = useAppStore((state: AppState) => state.language);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const contentBottomPadding = spacing[8] + spacing[4] + insets.bottom;
   const snapPoints = useMemo(() => ["60%", "80%"], []);
   const { t } = useTranslation();
 
@@ -389,6 +401,7 @@ const NavigationSheetComponent = (
   );
 
   const handleBack = useCallback(() => {
+    directionRef.current = "back";
     if (step === "verse") {
       setStep("chapter");
     } else if (step === "chapter") {
@@ -396,14 +409,21 @@ const NavigationSheetComponent = (
     }
   }, [step]);
 
-  const handleSelectBook = useCallback((bookId: string) => {
-    setSelectedBookId(bookId);
-    setSearchQuery("");
-    setStep("chapter");
-  }, []);
+  const handleSelectBook = useCallback(
+    (bookId: string) => {
+      const firstChapter = chapterCounts[bookId]?.[0] ?? 1;
+      setSelectedBookId(bookId);
+      setSelectedChapter(firstChapter);
+      setSearchQuery("");
+      directionRef.current = "forward";
+      setStep("chapter");
+    },
+    [chapterCounts],
+  );
 
   const handleSelectChapter = useCallback((chapter: number) => {
     setSelectedChapter(chapter);
+    directionRef.current = "forward";
     setStep("verse");
   }, []);
 
@@ -490,8 +510,8 @@ const NavigationSheetComponent = (
     }
   };
 
-  const enteringAnim = FadeIn;
-  const exitingAnim = FadeOut;
+  const enteringAnim =
+    directionRef.current === "forward" ? FadeIn.duration(200) : undefined;
 
   return (
     <BottomSheet
@@ -580,15 +600,20 @@ const NavigationSheetComponent = (
       {step === "book" && (
         <Animated.View
           key="book-list"
-          entering={enteringAnim.duration(200)}
-          exiting={exitingAnim.duration(200)}
+          entering={enteringAnim}
           style={styles.content}
         >
           <BottomSheetFlatList
             data={filteredBooks}
             keyExtractor={(item: BookMeta) => item.id}
             renderItem={renderBookItem}
-            contentContainerStyle={styles.listContent}
+            style={styles.list}
+            contentContainerStyle={[
+              styles.listContent,
+              {
+                paddingBottom: contentBottomPadding,
+              },
+            ]}
             showsVerticalScrollIndicator={false}
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
@@ -605,12 +630,17 @@ const NavigationSheetComponent = (
       {step === "chapter" && (
         <Animated.View
           key="chapter-grid"
-          entering={enteringAnim.duration(200)}
-          exiting={exitingAnim.duration(200)}
+          entering={enteringAnim}
           style={styles.content}
         >
           <BottomSheetScrollView
-            style={styles.gridContainer}
+            style={styles.gridScroll}
+            contentContainerStyle={[
+              styles.gridContainer,
+              {
+                paddingBottom: contentBottomPadding,
+              },
+            ]}
             nestedScrollEnabled
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
@@ -621,7 +651,7 @@ const NavigationSheetComponent = (
             {chapterNumbers.length ? (
               renderNumberGrid(
                 chapterNumbers,
-                currentBookId === selectedBookId ? currentChapter : 0,
+                selectedChapter,
                 handleSelectChapter,
               )
             ) : (
@@ -638,12 +668,17 @@ const NavigationSheetComponent = (
       {step === "verse" && (
         <Animated.View
           key="verse-grid"
-          entering={enteringAnim.duration(200)}
-          exiting={exitingAnim.duration(200)}
+          entering={enteringAnim}
           style={styles.content}
         >
           <BottomSheetScrollView
-            style={styles.gridContainer}
+            style={styles.gridScroll}
+            contentContainerStyle={[
+              styles.gridContainer,
+              {
+                paddingBottom: contentBottomPadding,
+              },
+            ]}
             nestedScrollEnabled
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}

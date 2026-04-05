@@ -5,6 +5,7 @@ import BottomSheet, {
   BottomSheetScrollView,
   type BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
@@ -22,9 +23,11 @@ const COLUMN_COUNT = 5;
 const createStyles = (colors: ReturnType<typeof getColors>) =>
   StyleSheet.create({
     sheetContent: {
+      flex: 1,
+    },
+    sheetContentContainer: {
       paddingHorizontal: spacing[6],
       paddingBottom: spacing[8],
-      flex: 1,
     },
     sheetBackground: {
       backgroundColor: colors.surface,
@@ -84,9 +87,11 @@ export const NumberGridBottomSheet = ({
   selected,
   onSelect,
 }: NumberGridBottomSheetProps) => {
+  const insets = useSafeAreaInsets();
   const themeMode = useAppStore((state: AppState) => state.themeMode);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
+  const contentBottomPadding = spacing[8] + spacing[4] + insets.bottom;
   const snapPoints = useMemo(() => ["55%"], []);
 
   const paddedNumbers = useMemo(() => {
@@ -126,6 +131,12 @@ export const NumberGridBottomSheet = ({
     >
       <BottomSheetScrollView
         style={styles.sheetContent}
+        contentContainerStyle={[
+          styles.sheetContentContainer,
+          {
+            paddingBottom: contentBottomPadding,
+          },
+        ]}
         nestedScrollEnabled
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}

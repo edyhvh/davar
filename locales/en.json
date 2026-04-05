@@ -222,6 +222,8 @@
     "scrollNextHint": "Scroll up for next verse",
     "scrollPreviousHint": "Scroll down for previous verse",
     "swipeUpNextVerseHint": "Swipe up for the next verse",
+    "firstVerseToast": "This is the first verse",
+    "lastVerseToast": "This is the last verse",
     "selectBookPrompt": "Select a book to begin.",
     "loading": "Loading verses...",
     "prefixLabel": "Prefix: {prefix}",
@@ -232,6 +234,9 @@
       "modalMessage": "Besorah Strong mappings are provided for reference only. Some mappings may be unreviewed, incomplete, or unresolved.",
       "modalConfirm": "Understood"
     }
+  },
+  "legal": {
+    "lastUpdated": "Last Updated"
   },
   "wordCard": {
     "selectWord": "Select a word",
