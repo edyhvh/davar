@@ -92,9 +92,10 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
 
 export function LegalScreen({ kind }: LegalScreenProps) {
   const themeMode = useAppStore((state: AppState) => state.themeMode);
+  const language = useAppStore((state: AppState) => state.language);
   const colors = getColors(themeMode);
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const doc = useMemo(() => getLegalDoc(kind), [kind]);
+  const doc = useMemo(() => getLegalDoc(kind, language), [kind, language]);
   const markdownStyles = useMemo(
     () => ({
       body: {

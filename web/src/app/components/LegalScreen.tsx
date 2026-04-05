@@ -12,7 +12,7 @@ interface LegalScreenProps {
 
 export function LegalScreen({ kind, language, onBack }: LegalScreenProps) {
   const { t } = useTranslation(language);
-  const doc = useMemo(() => legalContent.getLegalDoc(kind), [kind]);
+  const doc = useMemo(() => legalContent.getLegalDoc(kind, language), [kind, language]);
 
   return (
     <div className="legal-page">
