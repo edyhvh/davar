@@ -13,7 +13,6 @@ import {
   FlatList,
   NativeScrollEvent,
   NativeSyntheticEvent,
-  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -104,7 +103,7 @@ type VersePageProps = {
   onVersePress: () => void;
   selectedWord: DisplayVerse["words"][number] | null;
   onWordPress: (word: DisplayVerse["words"][number] | null) => void;
-  onBackgroundPress: () => void;
+  onNonHebrewPress: () => void;
   onMetricsChange: (
     verseId: string,
     metrics: {
@@ -120,6 +119,7 @@ type VersePageProps = {
 
 const EDGE_EPSILON = 2;
 const SWIPE_VELOCITY_THRESHOLD = 0.55;
+const HEBREW_PRESS_SUPPRESSION_MS = 250;
 
 const VersePageComponent = ({
   item,
@@ -132,7 +132,7 @@ const VersePageComponent = ({
   onVersePress,
   selectedWord,
   onWordPress,
-  onBackgroundPress,
+  onNonHebrewPress,
   onMetricsChange,
   onEdgeSwipe,
   onScrollBegin,
@@ -143,6 +143,19 @@ const VersePageComponent = ({
   const bottomPadding = spacing[8];
   const canScroll = contentHeight > viewportHeight + EDGE_EPSILON;
   const effectiveTopPadding = canScroll ? topPadding : spacing[6];
+  const lastHebrewPressInRef = useRef(0);
+
+  const markHebrewPressIn = useCallback(() => {
+    lastHebrewPressInRef.current = Date.now();
+  }, []);
+
+  const handleNonHebrewAreaPress = useCallback(() => {
+    // Ignore bubbling taps immediately following Hebrew word/verse interactions.
+    if (Date.now() - lastHebrewPressInRef.current < HEBREW_PRESS_SUPPRESSION_MS) {
+      return;
+    }
+    onNonHebrewPress();
+  }, [onNonHebrewPress]);
 
   useEffect(() => {
     onMetricsChange(item.id, {
@@ -208,13 +221,15 @@ const VersePageComponent = ({
   );
 
   const verseContent = (
-    <Pressable
-      onPress={onBackgroundPress}
+    <View
       style={{
+        minHeight: pageHeight,
+        justifyContent: canScroll ? "flex-start" : "center",
         paddingHorizontal: horizontalPadding,
         paddingTop: effectiveTopPadding,
         paddingBottom: bottomPadding,
       }}
+      onTouchEnd={handleNonHebrewAreaPress}
     >
       <VerseCard
         verse={item}
@@ -224,8 +239,9 @@ const VersePageComponent = ({
         isBesorah={isBesorah}
         onVersePress={onVersePress}
         onWordPress={onWordPress}
+        onHebrewPressIn={markHebrewPressIn}
       />
-    </Pressable>
+    </View>
   );
 
   return (
@@ -255,7 +271,6 @@ const VersePageComponent = ({
         onScrollEndDrag={handleScrollEndDrag}
         contentContainerStyle={{
           minHeight: pageHeight,
-          justifyContent: canScroll ? "flex-start" : "center",
         }}
       >
         {verseContent}
@@ -276,7 +291,7 @@ const VersePage = memo(
     prevProps.selectedWord === nextProps.selectedWord &&
     prevProps.onVersePress === nextProps.onVersePress &&
     prevProps.onWordPress === nextProps.onWordPress &&
-    prevProps.onBackgroundPress === nextProps.onBackgroundPress &&
+    prevProps.onNonHebrewPress === nextProps.onNonHebrewPress &&
     prevProps.onMetricsChange === nextProps.onMetricsChange &&
     prevProps.onEdgeSwipe === nextProps.onEdgeSwipe &&
     prevProps.onScrollBegin === nextProps.onScrollBegin,
@@ -592,9 +607,9 @@ export const VerseDetailContent = () => {
     setSelectedWord(null);
   }, []);
 
-  const handleBackgroundPress = useCallback(() => {
-    animatePill(true);
-  }, [animatePill]);
+  const handleTogglePills = useCallback(() => {
+    animatePill(!pillVisible);
+  }, [animatePill, pillVisible]);
 
   const handleScrollBegin = useCallback(() => {
     if (pillVisible) {
@@ -734,7 +749,7 @@ export const VerseDetailContent = () => {
         selectedWord={selectedWord}
         onVersePress={handleOpenNavigationSheet}
         onWordPress={handleWordPress}
-        onBackgroundPress={handleBackgroundPress}
+        onNonHebrewPress={handleTogglePills}
         onMetricsChange={handleVerseMetricsChange}
         onEdgeSwipe={handleEdgeSwipe}
         onScrollBegin={handleScrollBegin}
@@ -749,7 +764,7 @@ export const VerseDetailContent = () => {
       selectedWord,
       handleOpenNavigationSheet,
       handleWordPress,
-      handleBackgroundPress,
+      handleTogglePills,
       handleVerseMetricsChange,
       handleEdgeSwipe,
       handleScrollBegin,
