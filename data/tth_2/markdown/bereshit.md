@@ -2037,7 +2037,7 @@ la cual juró a Abraham, a Itzjak y a Iaacob.
 [^104]: Pozo del juramento.
 [^105]: Oculto, inescrutable.
 [^106]: O, *será visto. *Heb.: *Elohim Iréh.*
-[^107]: O, *será visto. *Heb.: *Yehovah Iréh.*
+[^107]: O, *será visto. *Heb.: *יהוה Iréh.*
 [^108]: Siclos.
 [^109]: O, *decidido.*
 [^110]: Lit.: *Hasta, si.*

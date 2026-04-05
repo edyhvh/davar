@@ -1540,14 +1540,14 @@ Canten a יהוה porque altamente es exal­tado[^319],
 [^263]: O, *arbusto. *Así en el resto del cap.
 [^264]: Seré el que seré.
 [^265]: Seré.
-[^266]: Yehovah. El que será.
+[^266]: יהוה. El que será.
 [^267]: Hebreos.
 [^268]: O, *en vano.*
 [^269]: Levita.
 [^270]: Lit.: *Iéter*.
 [^271]: Hebreos.
 [^272]: Lit.: *hagan.*
-[^273]: Yehovah. El que será.
+[^273]: יהוה. El que será.
 [^274]: De etimología incierta, tal vez: *Elohim Todopo­deroso, *o* Elohim de los montes, *o* Elohim Susten­tador.*
 [^275]: Cananea.
 [^276]: Coreíta.
@@ -1581,7 +1581,7 @@ Canten a יהוה porque altamente es exal­tado[^319],
 [^304]: Lit.: *ha encerrado sobre ellos.*
 [^305]: Lit.: *hacia.*
 [^306]: Heb.: *Ga’oh ga’ah.*
-[^307]: Contracción de Yehovah.
+[^307]: Contracción de יהוה.
 [^308]: Poderoso.
 [^309]: O, *moraré con Él.*
 [^310]: O, *hundieron.*
@@ -1611,7 +1611,7 @@ Canten a יהוה porque altamente es exal­tado[^319],
 [^334]: Lit.: *cabeza.*
 [^335]: Lit.: *uno.*
 [^336]: Fidelidad, firmeza, crianza.
-[^337]: Yehovah es mi señal alzada.
+[^337]: יהוה es mi señal alzada.
 [^338]: O, *contra.*
 [^339]: Heb.: *Guer.*
 [^340]: O, *gentil.*

@@ -32,7 +32,7 @@
 **20** Y confesó, y no negó, y confesó: Pues, yo no soy el Mesías.  
 **21** Y le preguntaron: ¿Y qué? ¿Eliyáhu eres? Y él dijo: No soy. ¿El profeta eres? Y res-pondió: No.  
 **22** Y le dijeron: ¿Y quién eres?, para que demos respuesta a estos que nos han enviado. ¿Qué dices acerca de ti mismo?  
-**23** Y dijo: Yo soy la voz del que clama en el desierto: “¡Limpien el camino de Yehovah[^1169]\!”, como dijo Ieshaiáh[^1170] el profeta.  
+**23** Y dijo: Yo soy la voz del que clama en el desierto: “¡Limpien el camino de יהוה[^1169]\!”, como dijo Ieshaiáh[^1170] el profeta.  
 **24** Y los enviados eran de los perushim[^1171].  
 **25** Y le preguntaron, y le dijeron: ¿Y por qué sumerges si no eres el Mesías, ni Eliyáhu, ni el profeta?  
 **26** Y les respondió Iojanán, diciendo: Yo sumerjo en las aguas, pero en medio de ustedes se ha levantado *Uno* a quien no conocen.  
@@ -88,7 +88,7 @@
 
 **12** Y después de eso, descendió a Kefar Najum[^1185], Él, su madre, sus hermanos y sus discípulos, y allí estuvieron unos días, no muchos.
 
-*Yeshúa echa a los mercaderes de la casa de Yehovah*
+*Yeshúa echa a los mercaderes de la casa de יהוה*
 
 **13** Y estaba cerca el Pésaj[^1186] de los iehudim, y subió Yeshúa a Ierushaláim.  
 **14** Y halló en el Hejal[^1187] a los que vendían ovejas, bueyes y palomas; y los que intercambiaban estaban sentados.  
@@ -149,10 +149,10 @@
 
 **31** El que de arriba viene, sobre todo es; y el que de la tierra es, también de la tierra habla; y el que de los cielos viene, sobre todo es.  
 **32** Y lo que vio y escuchó, su testimonio, Él testifica; pero el hombre no lo recibe.  
-**33** Todo el que recibe su testimonio ha certificado[^1207] que Yehovah es fidedigno.  
-**34** Porque el que Elohim envió, las palabras de Yehovah habla; porque Yehovah no da el Rúaj con medida.  
+**33** Todo el que recibe su testimonio ha certificado[^1207] que יהוה es fidedigno.  
+**34** Porque el que Elohim envió, las palabras de יהוה habla; porque יהוה no da el Rúaj con medida.  
 **35** El Padre ama al Hijo, y todo dio en su mano.  
-**36** El que se afirma por el Hijo, habrá para él vida olam; pero el que no se afirma, no verá la vida, sino que el calor de la ira de Yehovah se posará sobre él.
+**36** El que se afirma por el Hijo, habrá para él vida olam; pero el que no se afirma, no verá la vida, sino que el calor de la ira de יהוה se posará sobre él.
 
 *La mujer de Shomrón*
 
@@ -327,7 +327,7 @@
 **42** Y dijeron: ¿No es este Yeshúa, hijo de Iosef, que nosotros conocemos a su padre y a su madre? ¿Y cómo dice este: “De los cielos descendí”?  
 **43** Y respondió Yeshúa, y les dijo: No murmure *ningún* hombre con su compañero.  
 **44** Ningún hombre puede venir a Mí, si mi Padre que me envió no lo trae; y Yo lo levantaré en el día postrero.  
-**45** Escrito está en los profetas: Y todos tus hijos serán enseñados por Yehovah[^1255]. Por eso, todo el que escucha del Padre y aprende, viene a Mí.  
+**45** Escrito está en los profetas: Y todos tus hijos serán enseñados por יהוה[^1255]. Por eso, todo el que escucha del Padre y aprende, viene a Mí.  
 **46** No porque *algún* hombre haya visto al Padre, sino que el que es de Elohim, Él vio al Padre.  
 **47** Amén, amén, Yo les digo: El que se afirma por Mí, habrá para él vida olam.  
 **48** Yo soy el pan de la vida.  
@@ -529,7 +529,7 @@
 **22** Y sus progenitores hablaron estas *cosas* porque temían a los iehudim; porque desde entonces habían tramado los iehudim que, si un hombre confesaba que Él era el Mesías, lo echarían de su asamblea.  
 **23** Por eso dijeron sus progenitores: Edad tiene, pregúntenle a él.
 
-**24** Y llamaron *por* segunda *vez* al hombre que había sido ciego, y le dijeron: Pon ahora gloria a Yehovah y dale confesión[^1311], sabemos que este hombre es pecador.  
+**24** Y llamaron *por* segunda *vez* al hombre que había sido ciego, y le dijeron: Pon ahora gloria a יהוה y dale confesión[^1311], sabemos que este hombre es pecador.  
 **25** Y respondió, y dijo: Si es pecador, no lo sé; una *cosa* sé, que yo era ciego y desde ahora veo.  
 **26** Y le dijeron de nuevo: ¿Qué te hizo? ¿Cómo abrió tus ojos?  
 **27** Y les respondió: Ya les dije y no escucharon. ¿Qué quieren volver a escuchar? ¿También ustedes quieren ser sus discípulos?  
@@ -630,7 +630,7 @@
 **19** Y muchos de los iehudim[^1333] habían venido a Martah y a Miriam para reconfortarlas por Eleazar su hermano.  
 **20** Y cuando Martah oyó que había venido Yeshúa, fue a su encuentro; pero Miriam *estaba* en la casa sentada.  
 **21** Y dijo Martah a Yeshúa: Adonai, ¡si hubieras estado aquí, mi hermano no estaría muerto\!  
-**22** Sin embargo, también ahora sé que todo lo que pidas de Elohim, te dará Yehovah.  
+**22** Sin embargo, también ahora sé que todo lo que pidas de Elohim, te dará יהוה.  
 **23** Y le dijo Yeshúa: Se levantará tu hermano.  
 **24** Y le dijo Martah: Sé que se levantará, en el levantamiento en el día final.  
 **25** Y le dijo Yeshúa: Yo soy el levantamiento y la vida; el que se afirma en Mí, aunque muera, vivirá.  
@@ -686,7 +686,7 @@
 
 **12** Y al día siguiente, mucha gente que había venido a la fiesta, cuando oyeron que había venido Yeshúa a Ierushaláim,  
 **13** tomaron ramas de palmeras y salieron a su encuentro, y gritaban:  
-¡Hoshana[^1341]\!¡Bendito el que viene en el Nombre de Yehovah[^1342], el Rey de Israel\!  
+¡Hoshana[^1341]\!¡Bendito el que viene en el Nombre de יהוה[^1342], el Rey de Israel\!  
 **14** Y halló Yeshúa un asnito, y se sentó sobre él, como estaba escrito:  
 **15** ¡Regocíjate mucho, hija de Tzión\! ¡Grita *de triunfo*, hija de Ierushalem\!   
 He aquí tu Rey vendrá a ti, justo y salvo es Él, afligido,   
@@ -723,7 +723,7 @@ Y estas palabras habló Yeshúa. Y fue y se ocultó de ellos.
 **38** para que se llenara la palabra de Ieshaiáhu el profeta, el que dijo:
 
 ¿Quién ha sido afirmado a nuestro dicho?   
-¿Y el brazo de Yehovah a quién se ha revelado[^1349]?
+¿Y el brazo de יהוה a quién se ha revelado[^1349]?
 
 **39** Por eso no podían afirmarse, porque incluso dijo Ieshaiáhu:
 
@@ -750,7 +750,7 @@ y con su corazón discierna, y regrese y sea sanado él[^1350].
 **13**  
  Y antes de la fiesta del Pésaj[^1352], sabía Yeshúa que había venido su tiempo para pasar de este olam al Padre; como había amado a los que eran de Él en el olam, así los amó hasta el fin.   
 **2** Y era el banquete de la tarde, y ya Ha’satán[^1353] había sido lanzado al corazón de Iehudáh, hijo de Shimón, Ish-Kariot[^1354], para entregarlo.   
-**3** Y sabía Yeshúa que todas las cosas había puesto su Padre en sus manos, y que de Elohim salió y a Yehovah iba.   
+**3** Y sabía Yeshúa que todas las cosas había puesto su Padre en sus manos, y que de Elohim salió y a יהוה iba.   
 **4** Y se levantó del banquete, y se puso sus vestiduras sobre sí, y tomó una tela de lino y la ciñó en sus lomos.   
 **5** Y después de eso, puso agua en una vasija de lavar, y comenzó a lavar los pies de los discípulos y a frotarlos con la tela de lino con que estaba ceñido.   
 **6** Y cuando vino a Shimón Kefa, entonces le dijo Kefa: Adonai, ¿Tú lavas mis pies? 7 Y respondió Yeshúa, y le dijo: Lo que Yo hago ahora, no lo sabes; pero después de esto, lo sabrás.   

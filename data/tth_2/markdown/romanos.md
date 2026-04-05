@@ -1234,7 +1234,7 @@ Saludos personales
 
 
 48.
-[^48]: Así en Mss. Oo.1.32.2 y mss. griegos, Ver. Políglota de Nuremberg dice: *obra calor de nariz de Yehovah.*
+[^48]: Así en Mss. Oo.1.32.2 y mss. griegos, Ver. Políglota de Nuremberg dice: *obra calor de nariz de יהוה.*
 
 
 49.
@@ -1923,7 +1923,7 @@ Saludos personales
 [^45]: Fidelidad, firmeza, crianza. Así en el resto del cap.
 [^46]: O, *diseñada.*
 [^47]: Véase Salmo 32:1\-2.
-[^48]: Así en Mss. Oo.1.32.2 y mss. griegos, Ver. Políglota de Nuremberg dice: *obra calor de nariz de Yehovah.*
+[^48]: Así en Mss. Oo.1.32.2 y mss. griegos, Ver. Políglota de Nuremberg dice: *obra calor de nariz de יהוה.*
 [^49]: O, *transgresión.*
 [^50]: Véase Génesis 17:5.
 [^51]: Véase Génesis 15:5.

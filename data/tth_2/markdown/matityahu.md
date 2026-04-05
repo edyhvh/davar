@@ -26,11 +26,11 @@ __MATITYÁHU \(MATEO\)__מתתיהו
 
 **18** Y el nacimiento de Yeshúa el Mesías[^5] fue así: Y sucedió que cuando estaba su madre[^6] desposada[^7] a Iosef, antes de que él la conociera[^8], ella se halló embarazada del Rúaj Ha’Kódesh[^9].
 **19** Y Iosef era un hombre justo y no deseaba habitar con ella ni exponerla para hacerla llegar a la vergüenza ni para atarla a la muerte, sin embargo, él quería encubrirla[^10].
-**20** Y cuando él pensaba en este asunto en su corazón, he aquí, el ángel de Yehovah[^11] se le apareció en un sueño, y dijo: Iosef, hijo de David, no temas tomar *a* tu mujer Miriam, porque lo que dentro de ella ha sido engendrado, del Rúaj Ha’Kódesh es.
+**20** Y cuando él pensaba en este asunto en su corazón, he aquí, el ángel de יהוה[^11] se le apareció en un sueño, y dijo: Iosef, hijo de David, no temas tomar *a* tu mujer Miriam, porque lo que dentro de ella ha sido engendrado, del Rúaj Ha’Kódesh es.
 **21** Y dará a luz un hijo, y llamarás su nombre Yeshúa[^12], porque Él salvará a su[^13] pueblo de sus torceduras[^14].
-**22** Todo esto *fue* para completar lo que fue escrito por el profeta por boca de Yehovah:
+**22** Todo esto *fue* para completar lo que fue escrito por el profeta por boca de יהוה:
 **23** He aquí, la virgen ha concebido y dará a luz un hijo, y llamará su nombre Imanuel, es decir, con nosotros *está *elohim[^15].
-**24** Y despertó Iosef de su sueño, e hizo conforme a todo lo que le había mandado el ángel de Yehovah, y tomó a su mujer.
+**24** Y despertó Iosef de su sueño, e hizo conforme a todo lo que le había mandado el ángel de יהוה, y tomó a su mujer.
 **25** Y no la conoció hasta que ella dio a luz *a *su hijo primogénito; y él llamó su nombre Yeshúa.
 
 *Visita de los observadores de las estrellas*
@@ -52,7 +52,7 @@ __MATITYÁHU \(MATEO\)__מתתיהו
 
 *Huida a Mitzráim*
 
-**13** Ellos se fueron, y he aquí, el ángel de Yehovah apareció a Iosef en un sueño, diciendo[^22]: Levántate y toma al niño y a su madre, y huye a Mitzráim[^23], y allí permanecerás hasta que yo te diga, porque Horodós buscará al niño para matarlo.
+**13** Ellos se fueron, y he aquí, el ángel de יהוה apareció a Iosef en un sueño, diciendo[^22]: Levántate y toma al niño y a su madre, y huye a Mitzráim[^23], y allí permanecerás hasta que yo te diga, porque Horodós buscará al niño para matarlo.
 **14** Entonces se levantó y tomó al niño y *a* su madre de noche y fue a Mitzráim;
 **15** y estuvo allá hasta la muerte de Horodós, para completar lo que se dijo por boca del profeta: Y de Mitzráim llamé a mi hijo[^24].
 
@@ -64,7 +64,7 @@ __MATITYÁHU \(MATEO\)__מתתיהו
 
 *Vuelta a la tierra de Israel*
 
-**19** Y sucedió que cuando murió Horodós el rey, el ángel de Yehovah apareció en un sueño a Iosef en Mitzráim,
+**19** Y sucedió que cuando murió Horodós el rey, el ángel de יהוה apareció en un sueño a Iosef en Mitzráim,
 **20** diciendo: Levántate, toma al joven y a su madre y ve a la tierra de Israel, porque han muerto los que buscaban al joven para matarlo[^29].
 **21** Y se levantó y tomó al joven y a su madre, y regresaron a la tierra de Israel.
 **22** Y oyó que Horcanós –su nombre es Arguelaos[^30]– reinaba en Iehudáh en lugar de Horodós su padre, y temió ir allá; y lo instó el ángel en un sueño[^31] y giró hacia la tierra de Galil[^32].
@@ -76,7 +76,7 @@ __MATITYÁHU \(MATEO\)__מתתיהו
 
 **1** En aquellos días vino Iojanán el inmersor enseñando en el desierto de Iehudáh.
 **2** Y dijo: ¡Dense la vuelta en teshuváh[^35], porque el reino de los cielos se acerca para venir!
-**3** Para establecer lo que se dijo por medio de Ieshaiáhu[^36] el profeta:Voz del que clama en el desierto, ¡Limpien el camino de Yehovah! allanen en el Arabáh carretera para nuestro Elohim[^37]!
+**3** Para establecer lo que se dijo por medio de Ieshaiáhu[^36] el profeta:Voz del que clama en el desierto, ¡Limpien el camino de יהוה! allanen en el Arabáh carretera para nuestro Elohim[^37]!
 **4** Y he aquí, Iojanán estaba vestido de pelo de camellos, y un cuero negro ceñía en sus lomos, y su alimento era la langosta y miel de los bosques.
 **5** Entonces salían a él desde Ierushalem y desde toda Iehudáh y desde todo el reino alrededor del Iardén[^38],
 **6** y entonces confesaban sus pecados y se sumergían en el Iardén por el dicho de él[^39].
@@ -105,13 +105,13 @@ __MATITYÁHU \(MATEO\)__מתתיהו
 **1** Entonces fue tomado Yeshúa por el Rúaj Ha’Kódesh[^53] al desierto para ser tentado[^54] por Ha’satán[^55].
 **2** Y ayunó cuarenta días y cuarenta noches, y después tuvo hambre.
 **3** Y se acercó el tentador, y le dijo: Si eres el Hijo de Elohim, di que estas piedras se vuelvan pan.
-**4** Y respondió Yeshúa, y le dijo: Está escrito que no solo por el pan vivirá el hombre, pues por todo lo que sale de la boca de Yehovah vivirá el hombre[^56].
+**4** Y respondió Yeshúa, y le dijo: Está escrito que no solo por el pan vivirá el hombre, pues por todo lo que sale de la boca de יהוה vivirá el hombre[^56].
 **5** Entonces lo tomó Ha’satán *llevándolo* a la ciudad de santidad, y lo hizo parar sobre el lugar más alto en todo el Santuario[^57],
 **6** y le dijo: Si eres el Hijo de Elohim, salta hacia abajo, porque está escrito: “Porque a sus ángeles ordenará para ti para guardarte en todos tus caminos, sobre *sus* palmas te llevarán, no sea que se golpee con una piedra tu pie[^58]”.
-**7** Y le respondió Yeshúa *por* segunda *vez*: No probarán a Yehovah su Elohim[^59].
+**7** Y le respondió Yeshúa *por* segunda *vez*: No probarán a יהוה su Elohim[^59].
 **8** Y lo llevó Ha’satán a un monte muy alto y le hizo ver todos los reinos de la tierra y su gloria,
 **9** y le dijo: Todos estos te daré si te descubres ante mí[^60].
-**10** Entonces le respondió Yeshúa: Vete, Ha’satán, porque está escrito:“A Yehovah tu Elohim temerás, y a Él servirás, *y en su Nombre jurarás[^61]*”.
+**10** Entonces le respondió Yeshúa: Vete, Ha’satán, porque está escrito:“A יהוה tu Elohim temerás, y a Él servirás, *y en su Nombre jurarás[^61]*”.
 **11** Entonces lo dejó Ha’satán, y he aquí, ángeles se acercaron a Él y le sirvieron.
 
 *Yeshúa va a Galil*
@@ -185,7 +185,7 @@ __MATITYÁHU \(MATEO\)__מתתיהו
 
 *Enseñanza sobre el juramento falso*
 
-**33** De nuevo, han oído lo que se dijo a los antiguos: “No jurarán por mi Nombre falsamente, y devolverás a Yehovah tu juramento[^104]”.
+**33** De nuevo, han oído lo que se dijo a los antiguos: “No jurarán por mi Nombre falsamente, y devolverás a יהוה tu juramento[^104]”.
 **34** Y Yo les digo que no juren en ningún asunto para mentira, ni por los cielos que es el trono de Elohim,
 **35** ni por la tierra que es el estrado de sus pies, ni por Ierushalem que es la ciudad de Elohim,
 **36** ni por tu cabeza, porque no puedes hacer un *solo* cabello blanco o negro.
@@ -390,7 +390,7 @@ Sanación de la mujer con flujo de sangre y resurrección de la hija de un capit
 **19** Y se levantó Yeshúa y fue, Él y sus discípulos con Él.
 **20** Y he aquí, una mujer *con* flujo de sangre *por *doce años vino detrás de Él y tocó el tzitzit[^191] de su vestido.
 **21** Y ella decía en su corazón: Si solamente toco su vestidura, seré sanada inmediatamente.
-**22** Y Él volteó su rostro y le dijo: Ten fuerza, hija mía, en el Nombre de Yehovah, que tu emunah[^192] es tu sanación. En aquel momento fue sanada.
+**22** Y Él volteó su rostro y le dijo: Ten fuerza, hija mía, en el Nombre de יהוה, que tu emunah[^192] es tu sanación. En aquel momento fue sanada.
 **23** Y sucedió *que* cuando entró en la casa del capitán, vio muchos hombres llorando,
 **24** y les dijo: Salgan todos ustedes afuera, y no lloren, porque la muchacha duerme, y no está muerta. Y Él era como uno que bromea a los ojos de ellos. Y decían: ¿No hemos visto que está muerta?
 **25** Y cuando los hizo salir afuera, fue hacia ella Yeshúa y tocó su mano, y se levantó la muchacha.
@@ -743,7 +743,7 @@ para que no vea con sus ojos, y con sus oídos escuche,
 **5** Pero ustedes dicen que cualquier palabra que diga el hombre a su padre y a su madre *con relación a *que con cualquier donación que él dé por causa de pecado, le será expiada la iniquidad[^297],
 **6** y no honra *a* su padre y *a* su madre. Y ustedes desprecian los dichos de EL[^298] con las reformas de ustedes.
 **7** ¡Oy, hipócritas! He aquí, Ieshaiáh[^299] profetizó de ustedes, y dijo:
-**8** “Así dijo Yehovah: Porque se acerca este pueblo con su boca y con sus labios me honra, pero su corazón se aleja de Mí,
+**8** “Así dijo יהוה: Porque se acerca este pueblo con su boca y con sus labios me honra, pero su corazón se aleja de Mí,
 **9** y su temor hacia Mí es un mandamiento de hombres aprendido[^300].
 **10** Y Yeshúa llamó a las multitudes, y les dijo: ¡Escuchen y observen!
 **11** Lo que entra a través de la boca no ensucia al hombre, sino *que* lo que sale de la boca ensucia al hombre.
@@ -1023,14 +1023,14 @@ para que no vea con sus ojos, y con sus oídos escuche,
 **8** Y muchos de la multitud extendían sus vestidos en el camino, y otros cortaban ramas de los árboles y las echaban delante de Él y detrás de Él.
 **9** Gritaban, diciendo:
 
-¡Hoshana[^408], Salvador del olam[^409]!¡Bendito el que viene en el Nombre de Yehovah[^410]!¡Hoshana nuestro Salvador,hermoso en los cielos y en la tierra[^411]!
+¡Hoshana[^408], Salvador del olam[^409]!¡Bendito el que viene en el Nombre de יהוה[^410]!¡Hoshana nuestro Salvador,hermoso en los cielos y en la tierra[^411]!
 
 **10** Y sucedió después de eso, cuando entró Yeshúa en Ierushalem, se conmocionó toda la ciudad, diciendo: ¿Quién es este?
 **11** Y *los del* pueblo se decían unos a otros[^412]: Es Yeshúa, el profeta de Natzrat, que *está* en Galil[^413].
 
-*Yeshúa echa a los mercaderes de la casa de Yehovah*
+*Yeshúa echa a los mercaderes de la casa de יהוה*
 
-**12** Y entró Yeshúa *en* la casa de Yehovah, y encontró allí *a* los compradores y *a* los ven­dedores. Y volcó los platos de las mesas y las sillas de los vendedores de palomas.
+**12** Y entró Yeshúa *en* la casa de יהוה, y encontró allí *a* los compradores y *a* los ven­dedores. Y volcó los platos de las mesas y las sillas de los vendedores de palomas.
 **13** Y les dijo: Está escrito: “Porque mi casa, casa de oración será llamada para todos los pueblos[^414]”, pero ustedes la han hecho cueva de ladrones[^415].
 **14** Y se acercaron a Él los ciegos y los cojos en el Santuario, y los sanó.
 **15** Y vinieron los grandes de los sabios y los sacerdotes para ver las maravillas que había hecho. Y los jóvenes gritaban en el Santuario, y decían: ¡Alabado sea el Hijo de El[^416]! Y los sabios se burlaron,
@@ -1072,7 +1072,7 @@ para que no vea con sus ojos, y con sus oídos escuche,
 **39** Y lo tomaron y lo sacaron de la viña, y lo mataron.
 **40** Y ahora, cuando venga el dueño de la viña, ¿qué *les *hará a ellos?
 **41** Y ellos le respondieron, diciendo: *A* los malvados los hará perecer en la maldad, y su viña dará a otros trabajadores que le darán la porción de su producto inmediatamente.
-**42** Y les dijo Yeshúa: ¿No han leído la Escritura:“La piedra que despreciaron los edificadores ha sido por cabeza del ángulo;de Yehovah ha sido esto, es sobresaliente a nuestros ojos[^429]”?
+**42** Y les dijo Yeshúa: ¿No han leído la Escritura:“La piedra que despreciaron los edificadores ha sido por cabeza del ángulo;de יהוה ha sido esto, es sobresaliente a nuestros ojos[^429]”?
 **43** Por esto Yo les digo que será arrancado el reino de los cielos de sobre ustedes, y será dado a una nación que haga fruto.
 **44** Y el que caiga sobre esta piedra será empujado; y el que caiga sobre ella será partido.
 **45** Y escucharon los grandes de los sacerdotes y los perushim[^430] sus parábolas y reconocie­ron que Él hablaba con respecto a ellos.
@@ -1118,8 +1118,8 @@ para que no vea con sus ojos, y con sus oídos escuche,
 **28** Ya que ella era de todos ellos, ¿para quién de los siete será la mujer?[^441]
 **29** Y respondió Yeshúa, y les dijo: Ustedes están errando y no entienden las Escrituras y el poder de Elohim.
 **30** En el día de la resurrección[^442], no tomarán los hombres mujeres, ni las mujeres hombres, sino *que* serán como los ángeles de Elohim *que están* en los cielos.
-**31** ¿No han leído *acerca* de la vivificación de los muertos que les dijo Yehovah:
-**32** “Yo soy Yehovah, Elohim de Abraham, Elohim de Itzjak y Elohim de Iaacob[^443]”? Y si es así, Él no es Elohim de los muertos, sino Elohim de los vivos.
+**31** ¿No han leído *acerca* de la vivificación de los muertos que les dijo יהוה:
+**32** “Yo soy יהוה, Elohim de Abraham, Elohim de Itzjak y Elohim de Iaacob[^443]”? Y si es así, Él no es Elohim de los muertos, sino Elohim de los vivos.
 **33** Y oyeron las multitudes y se asombraron de su sabiduría.
 
 *El gran mandamiento*
@@ -1127,7 +1127,7 @@ para que no vea con sus ojos, y con sus oídos escuche,
 **34** Y cuando vieron los perushim[^444] que no había respuesta de los tzedukim, se reunieron juntos;
 **35** y le preguntó un sabio para probarlo:
 **36** Rabí, di cuál es el mandamiento *más *grande que *hay* en la Torah.
-**37** Él le dijo: Y amarás a Yehovah tu Elohim con todo tu corazón, con todo tu ser y con todo lo mucho tuyo[^445].
+**37** Él le dijo: Y amarás a יהוה tu Elohim con todo tu corazón, con todo tu ser y con todo lo mucho tuyo[^445].
 **38** Este es el primer mandamiento, *el más* grande.
 **39** El segundo es semejante a este: Y amarás a tu compañero como a ti *mismo*[^446]*.*
 **40** Y sobre estos dos mandamientos cuelga toda la Torah y los profetas.
@@ -1137,7 +1137,7 @@ para que no vea con sus ojos, y con sus oídos escuche,
 **41** Y se reunieron los perushim[^447], y les preguntó Yeshúa,
 **42** diciendo: ¿Qué parecer tienen ustedes *acerca *del Mesías, e hijo *de* quién será? Y ellos le dijeron: Hijo de David.
 **43** Y les dijo: ¿Cómo *es que* lo llama David en el Rúaj Ha’Kódesh[^448], diciendo: “Amo”?
-**44** Como está escrito: “–Declaración de Yehovah a mi Amo– siéntate a mi diestra hasta que ponga a tus enemigos como taburete de tus pies[^449]”.
+**44** Como está escrito: “–Declaración de יהוה a mi Amo– siéntate a mi diestra hasta que ponga a tus enemigos como taburete de tus pies[^449]”.
 **45** Si David lo llama “Amo”, ¿cómo será su hijo?
 **46** Y no pudieron devolverle palabra; de aquí en adelante temieron preguntarle algo.
 
@@ -1433,7 +1433,7 @@ Profecía de la destrucción del Santuario
 **6** Y los grandes de los sacerdotes, cuando tomaron las monedas, dijeron: No debe ser deter­minado que pongamos estas monedas en el Santuario, porque son precio de sangre, porque fueron dadas por causa de la sangre de Yeshúa.
 **7** Y tomaron consejo y las dieron por un campo de un hombre alfarero de arcilla, para que enterraran allí *a *los extranjeros.
 **8** Y por eso lo llamaron *al *campo Tienda de Sangre[^543] hasta este día.
-**9** Entonces se cumplió la palabra de Zejariáh[^544] el profeta: Y les dije: Si es bueno en sus ojos, den mi pago; y si no, desistan. Y ellos pesaron mi pago: treinta piezas de plata. Y me dijo YEHOVAH: Échalo al alfarero –magnífico el precio con que fui apreciado por ellos[^545]–.
+**9** Entonces se cumplió la palabra de Zejariáh[^544] el profeta: Y les dije: Si es bueno en sus ojos, den mi pago; y si no, desistan. Y ellos pesaron mi pago: treinta piezas de plata. Y me dijo יהוה: Échalo al alfarero –magnífico el precio con que fui apreciado por ellos[^545]–.
 **10** Y esto es del hombre, el alfarero de arcilla, como Adonai ordenó.
 
 *Yeshúa ante Pilatos*
@@ -1518,14 +1518,14 @@ Profecía de la destrucción del Santuario
 **28**
 
 **1** Y en el primer día de la semana, cuando era temprano, vinieron Miriam Migdalit y la otra Miriam a ver el sepulcro.
-**2** Y tembló la tierra, porque un ángel de Yehovah descendió de los cielos al sepulcro y rodó la piedra y se paró.
+**2** Y tembló la tierra, porque un ángel de יהוה descendió de los cielos al sepulcro y rodó la piedra y se paró.
 **3** Y su apariencia era como el sol, y sus vestiduras como la nieve;
 **4** y de miedo a él se alarmaron los guardias y quedaron como muertos.
 **5** Y respondió el ángel y dijo a las mujeres: No teman, porque yo sé que ustedes buscan a Yeshúa, el que fue colgado.
 **6** No está aquí, porque ya vive, tal como dijo. Por eso, vengan y vean el lugar donde se levantó el Adón[^569].
 **7** Y vayan en seguida y digan a sus discípulos que ya se ha levantado allí el Adón; y Él estará delante de ustedes, y allá lo verán, como les dijo.
 **8** Y salieron las mujeres con temor del sepulcro porque habían visto al ángel, pero con gran alegría porque el Adón estaba en pie vivo; y corrieron a decir*lo* a sus discípulos.
-**9** Y ellas estaban yendo, y Yeshúa pasó delante de ellas, diciendo: ¡Yehovah las salve! Y ellas se acercaron a Él y se le inclinaron y se le postraron.
+**9** Y ellas estaban yendo, y Yeshúa pasó delante de ellas, diciendo: ¡יהוה las salve! Y ellas se acercaron a Él y se le inclinaron y se le postraron.
 **10** Entonces les dijo Yeshúa: No teman. Digan a mis hermanos que vayan a Galil[^570], y allá me verán.
 
 *Informe de los guardias*
@@ -1555,8 +1555,8 @@ Profecía de la destrucción del Santuario
 [^8]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *entrara a ella.*
 [^9]: Espíritu de Santidad; a veces como *Rúaj Ha’Kadosh.*
 [^10]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *no quería entregarla, sino que tenía en su corazón dejarla en secreto.*
-[^11]: Ms. Shem Tov omite: *de Yehovah.*
-[^12]: Salvador o Yehovah salva.
+[^11]: Ms. Shem Tov omite: *de יהוה.*
+[^12]: Salvador o יהוה salva.
 [^13]: Ms. Shem Tov dice: *mi pueblo.*
 [^14]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *pecados.*
 [^15]: Véase Isaías 7:14.
@@ -1579,7 +1579,7 @@ Profecía de la destrucción del Santuario
 [^32]: Galilea.* *
 [^33]: Nazaret.
 [^34]: *Notzrí *no es un gentilicio, por lo tanto, no es apropiado traducir: *nazareno. *Variante del heb.: *Nétzer; *retoño. Véase Isaías 11:1.
-[^35]: Retorno, arrepentimiento y vuelta. Así en Ms. Shem Tov, Ver. Políglota de Nuremberg dice: *Vuelvan a Yehovah.*
+[^35]: Retorno, arrepentimiento y vuelta. Así en Ms. Shem Tov, Ver. Políglota de Nuremberg dice: *Vuelvan a יהוה.*
 [^36]: Isaías.
 [^37]: Véase Isaías 40:3.
 [^38]: Jordán.
@@ -1648,7 +1648,7 @@ Profecía de la destrucción del Santuario
 [^101]: Así en Ver. Munster y Ver. Políglota de Nuremberg, Ms. Shem Tov omite la última frase del vers.
 [^102]: Véase Deuteronomio 24:1.
 [^103]: Así en Ver. Munster y Ver. Políglota de Nuremberg, Ms. Shem Tov dice: *Y yo les digo que todo el que deje a su mujer tiene que darle escritura de divorcio, pero por causa de adulterio, *sino* él adultera, y el que la toma a ella adultera.*
-[^104]: Véase Levítico 19:12. Ver. Munster y Ver. Políglota de Nuremberg dicen: *cumplirás tus votos a Yehovah.*
+[^104]: Véase Levítico 19:12. Ver. Munster y Ver. Políglota de Nuremberg dicen: *cumplirás tus votos a יהוה.*
 [^105]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg omiten: *en la Torah.*
 [^106]: Véase Éxodo 21:24, Levítico 24:20 y Deu­te­ronomio 19:21.
 [^107]: Así en Ver. Munster y Ver. Políglota de Nuremberg, Ms. Shem Tov dice: *no pagues mal en lugar de mal.*
@@ -2011,7 +2011,7 @@ Profecía de la destrucción del Santuario
 [^465]: Zacarías.
 [^466]: Santuario, Palacio.
 [^467]: Jerusalén.
-[^468]: Así en Ms. Shem Tov, Políglota de Nuremberg y Ver. Munster dicen: *Bendito el que viene en el Nombre de Yehovah.*
+[^468]: Así en Ms. Shem Tov, Políglota de Nuremberg y Ver. Munster dicen: *Bendito el que viene en el Nombre de יהוה.*
 [^469]: Lit.: *ellos con ellos.*
 [^470]: O, *se entumecerá.*
 [^471]: Heb.: *Besorah.*

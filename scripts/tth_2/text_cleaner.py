@@ -19,6 +19,7 @@ from typing import List, Tuple
 # Singleton instance
 _cleaner_instance = None
 
+
 def get_cleaner():
     """Get the singleton TTHTextCleaner instance."""
     global _cleaner_instance
@@ -33,7 +34,8 @@ class TTHTextCleaner:
     """
 
     # Spanish/Hebrew connectors that might get stuck to previous words
-    CONNECTORS = ['y', 'e', 'o', 'u', 'a', 'al', 'el', 'la', 'los', 'las', 'de', 'del', 'en', 'que', 'no', 'ni']
+    CONNECTORS = ['y', 'e', 'o', 'u', 'a', 'al', 'el', 'la',
+                  'los', 'las', 'de', 'del', 'en', 'que', 'no', 'ni']
 
     # Punctuation that requires space after (if followed by non-space/non-newline)
     PUNCTUATION_NEED_SPACE = [':', ';', ',', '?', '!']
@@ -138,7 +140,7 @@ class TTHTextCleaner:
 
     # Words that should NEVER be split (Hebrew/Biblical names ending with connectors)
     PROTECTED_WORDS = {
-        'Yeshúa', 'Yeshua', 'Iehudáh', 'Iehudah', 'Iehovah', 'Yehovah',
+        'Yeshúa', 'Yeshua', 'Iehudáh', 'Iehudah', 'יהוה',
         'Tzefaniah', 'Tzefaniáh', 'Malaquías', 'Malaquiah', 'Obadiah',
         'Ieshaiáhu', 'Ieshaiahu', 'Irmeiáhu', 'Irmeiahu', 'Iejezkel',
         'Zejariah', 'Zejaríah', 'Mijael', 'Mijaél', 'Gavriel', 'Gavriél',
@@ -176,7 +178,8 @@ class TTHTextCleaner:
         known_stuck_words = [
             # (stuck pattern, correct form)
             (r'\bAshdody\b', 'Ashdod y'),
-            (r'\bGuilada\b(?=\s+fin)', 'Guilad a'),  # Only when followed by "fin"
+            # Only when followed by "fin"
+            (r'\bGuilada\b(?=\s+fin)', 'Guilad a'),
             (r'\bjustoy\b', 'justo y'),
             (r'\bjovena\b', 'joven a'),
             (r'\bcasasy\b', 'casas y'),

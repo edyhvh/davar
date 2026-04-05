@@ -83,7 +83,7 @@ def detect_section_headers_in_json(json_file: Path) -> List[Tuple[int, int, str]
                         'final', 'cruz', 'ladrones', 'sepultura', 'levantó',
                         'aparición', 'dos', 'sube', 'cielos', 'presenta',
                         'santuario', 'poder', 'echa', 'mercaderes', 'casa',
-                        'yehovah', 'piedra', 'esquina', 'cabeza', 'edificada',
+                        'יהוה', 'piedra', 'esquina', 'cabeza', 'edificada',
                         'desierto', 'babilonia', 'reconstrucción', 'templo', 'palacio'
                     ]
 
