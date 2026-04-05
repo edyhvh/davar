@@ -24,7 +24,7 @@ export function LegalScreen({ kind, language, onBack }: LegalScreenProps) {
           <h1 className="legal-title">{doc.title}</h1>
           {doc.lastUpdated && (
             <div className="legal-meta">
-              <span className="legal-meta-label">Last Updated</span>
+              <span className="legal-meta-label">{t("legal.lastUpdated")}</span>
               <span className="legal-meta-value">{doc.lastUpdated}</span>
             </div>
           )}
