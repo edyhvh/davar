@@ -29,7 +29,7 @@ export function OnboardingWordHint({ word, isActive, isPressed = false, onClick 
       tabIndex={0}
       onClick={onClick}
       onKeyDown={handleKeyDown}
-      className={`word-interactive word-hint ${isPressed ? "word-hint-pressed" : ""}`}
+      className={`word-interactive word-hint ${isPressed ? "word-hint-pressed verse-highlight" : ""}`}
       aria-label="Select word"
     >
       {word}
