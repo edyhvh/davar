@@ -138,7 +138,8 @@ class TTH2MdToJson:
                         continue
 
                     words = potential_bold_header.split()
-                    has_letters = any(ch.isalpha() for ch in potential_bold_header)
+                    has_letters = any(ch.isalpha()
+                                      for ch in potential_bold_header)
                     starts_title_case = potential_bold_header[0].isupper()
                     if has_letters and starts_title_case and len(words) <= 12:
                         continue
@@ -240,7 +241,8 @@ class TTH2MdToJson:
         footnote_info = {}
         for match in matches:
             source_footnote_num = match.group(1)
-            book_footnote_num = self.get_book_footnote_number(source_footnote_num)
+            book_footnote_num = self.get_book_footnote_number(
+                source_footnote_num)
             marker = self.num_to_superscript(book_footnote_num)
             definition = self.footnote_definitions.get(
                 source_footnote_num, f'Nota al pie {source_footnote_num}')
@@ -475,8 +477,10 @@ class TTH2MdToJson:
                     verse_text = verse_match.group(2).strip()
 
                     for split_verse_num, split_verse_text in self.split_inline_verse_segments(verse_num, verse_text):
-                        cleaned_text = self.clean_text_preserve_comments(split_verse_text)
-                        cleaned_text, footnotes = self.extract_footnotes(cleaned_text)
+                        cleaned_text = self.clean_text_preserve_comments(
+                            split_verse_text)
+                        cleaned_text, footnotes = self.extract_footnotes(
+                            cleaned_text)
 
                         verse_entry = {
                             'verse': split_verse_num,
@@ -491,7 +495,8 @@ class TTH2MdToJson:
 
                 # Handle malformed lines where verse number and initial content
                 # were wrapped together in one bold span (e.g., "**32 y** ...").
-                malformed_verse_match = re.match(r'^\*\*(\d+)\s+(.+?)\*\*\s*(.*)$', line)
+                malformed_verse_match = re.match(
+                    r'^\*\*(\d+)\s+(.+?)\*\*\s*(.*)$', line)
                 if malformed_verse_match:
                     verse_num = int(malformed_verse_match.group(1))
                     verse_head = malformed_verse_match.group(2).strip()
@@ -523,7 +528,8 @@ class TTH2MdToJson:
                     # continuation line embeds a new inline verse marker
                     # (e.g. "... **11** Y ..." after verse 10 text).
                     last_verse = current_verses[-1]
-                    combined_text = f"{last_verse['tth']} {line.strip()}".strip()
+                    combined_text = f"{last_verse['tth']} {line.strip()}".strip(
+                    )
                     split_segments = self.split_inline_verse_segments(
                         last_verse['verse'], combined_text)
 

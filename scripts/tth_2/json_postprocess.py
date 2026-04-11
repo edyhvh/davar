@@ -620,7 +620,8 @@ class TTHJsonPostProcessor:
             del verse['subtitle']
             self.stats['subtitle_invalid_removed'] += 1
         elif existing_subtitle:
-            verse['subtitle'] = self.normalize_divine_name_forms(existing_subtitle)
+            verse['subtitle'] = self.normalize_divine_name_forms(
+                existing_subtitle)
 
         # Process the main TTH text
         if 'tth' in verse and verse['tth']:
