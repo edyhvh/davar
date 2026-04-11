@@ -6,7 +6,7 @@ __MARKO \(MARCOS\)__מרקו
 
 **1** Principio de la buena noticia[^572] de Yeshúa el Mesías, Hijo de Elohim.
 **2** Tal como está escrito en Ieshaiáh[^573] el profeta, diciendo:Heme aquí, envío a mi mensajero, y limpiará el camino delante de Mí[^574].
-**3** Voz del que clama en el desierto: ¡Limpien el camino de יהוה, allanen en el Arabáh carretera para nuestro Elohim[^575]!
+**3** Voz del que clama en el desierto: ¡Limpien el camino de Yehovah, allanen en el Arabáh carretera para nuestro Elohim[^575]!
 **4** Estaba Iojanán sumergiendo en el desierto y enseñando la inmersión[^576] de teshuváh[^577] para perdón de pecados.
 **5** Y salían hacia él todos *los de* la tierra de Iehudáh[^578], y los que *estaban *en Ierushalem[^579], y todos ellos eran sumergidos por él en el río Iardén[^580], y ellos confesaban sus pecados.
 **6** Y Iojanán estaba vestido de pieles de camellos, y ceñía un cinturón de cuero en sus lomos, y comía langostas y miel del bosque.
@@ -24,7 +24,7 @@ __MARKO \(MARCOS\)__מרקו
 *Yeshúa comienza a proclamar la buena noticia*
 
 **14** Y cuando fue entregado Iojanán, entró Yeshúa en Galil[^585], anunciando la buena noticia del reino de los cielos[^586],
-**15** diciendo: Se ha cumplido el tiempo, y el reino de los cielos se ha acercado, vuelvan a יהוה y crean a la buena noticia[^587].
+**15** diciendo: Se ha cumplido el tiempo, y el reino de los cielos se ha acercado, vuelvan a Yehovah y crean a la buena noticia[^587].
 
 *Llamamiento de los primeros discípulos*
 
@@ -246,7 +246,7 @@ El Dueño del Shabat
 **16** Y les contaron lo que habían visto, cómo había sido hecho al poseído por demonios, y a los cerdos.
 **17** Y comenzaron a implorarle que saliera de su territorio.
 **18** Y cuando Él subió al bote, le imploró el poseído por demonios para estar con Él.
-**19** Y Yeshúa no le permitió, sino que le dijo: Ve a tu casa y a tu parentela, y dales a conocer cómo te ha hecho יהוה, y cómo se inclinó en favor hacia ti.
+**19** Y Yeshúa no le permitió, sino que le dijo: Ve a tu casa y a tu parentela, y dales a conocer cómo te ha hecho Yehovah, y cómo se inclinó en favor hacia ti.
 **20** Y se fue, y comenzó a proclamar en las diez ciudades cómo le había hecho Yeshúa; y todos se asombraban.
 
 *La hija de Iair y la mujer con flujo de sangre*
@@ -365,12 +365,12 @@ El Dueño del Shabat
 **5** Y entonces le preguntaron los perushim y los escribas: ¿Por qué tus discípu­los no andan en los decretos de los ancianos, sino que no lavan sus manos para comer el pan?
 **6** Y Él les respondió, y les dijo: Bien profetizó Ieshaiáhu[^652] acerca de ustedes, hipócritas, como está escrito: Este pueblo con su boca y con sus labios me honra, pero su corazón se aleja de Mí,
 **7** y su temor hacia Mí es un mandamiento de hombres aprendido[^653].
-**8** Porque ustedes han abandonado el mandamiento de יהוה y guardan la tradición de los hombres: la inmersión de copas, jarros, y otras muchas *cosas *como estas hacen ustedes.
+**8** Porque ustedes han abandonado el mandamiento de Yehovah y guardan la tradición de los hombres: la inmersión de copas, jarros, y otras muchas *cosas *como estas hacen ustedes.
 **9** Y les dijo: Bien hacen cesar el mandamiento de Elohim para guar­dar sus *propios* decretos.
 **10** Porque Moshéh[^654] dijo: “Honra a tu padre y a tu madre[^655]”; y: “El que maldiga a su padre y a su madre ciertamente morirá[^656]”;
 **11** pero ustedes dicen: Si dice un hombre a su padre o a su madre: “El ofrecimiento[^657] que *venga *de mí, te beneficiará”;
 **12** y no dejan hacer más nada por su padre ni por su madre.
-**13** Siendo traidores contra la palabra de יהוה con su tradición que han entregado, y como estas muchas *cosas *hacen.
+**13** Siendo traidores contra la palabra de Yehovah con su tradición que han entregado, y como estas muchas *cosas *hacen.
 **14** Y gritó a todo el pueblo, y les dijo: ¡Escuchen todos, y consideren atentamente!
 **15** No hay nada afuera del hombre que entre en su interior lo cual pueda contaminarlo, sino que lo que sale de él, estas son las *cosas *que contaminan al hombre.
 **16** Quien tenga oídos para escuchar, escuchará.
@@ -618,8 +618,8 @@ El Dueño del Shabat
 **6** Y ellos les dijeron como Yeshúa había ordenado; y los dejaron ir.
 **7** Y llevaron el asnito a Yeshúa. Y echaron sus vestidos sobre él, y se sentó sobre él.
 **8** Y muchos tendieron sus ropas por el camino, y otros cortaron ramas de los árboles y *las *tendían por el camino.
-**9** Y los que iban delante y detrás, gritaban, diciendo: ¡Hoshana[^710]!¡Bendito el que viene en el Nombre de יהוה[^711]!
-**10** ¡Y bendito es el reino de David nuestro padre, que viene en el Nombre de יהוה!
+**9** Y los que iban delante y detrás, gritaban, diciendo: ¡Hoshana[^710]!¡Bendito el que viene en el Nombre de Yehovah[^711]!
+**10** ¡Y bendito es el reino de David nuestro padre, que viene en el Nombre de Yehovah!
 ¡Hoshana en las alturas! **11** Y entró Yeshúa en Ierushaláim[^712] y en el Hejal[^713], y miró todo alrededor. Y fue el atardecer, y salió a Bet Aniah[^714] con los doce.
 
 *La higuera sin frutos*
@@ -628,7 +628,7 @@ El Dueño del Shabat
 **13** Y vio de lejos una higuera, y había en ella hojas; y fue hacia ella para encontrar qué habría en ella; y cuando fue a ella, no encontró nada, sino hojas, porque no era tiempo de higos.
 **14** Y respondió Yeshúa, y le dijo: Desde ahora y hasta siempre, ningún hombre comerá fruto de ti. Y escucharon sus discípulos.
 
-*Yeshúa echa a los mercaderes de la casa de יהוה*
+*Yeshúa echa a los mercaderes de la casa de Yehovah*
 
 **15** Y entraron a Ierushaláim; y cuando entró Yeshúa en el Hejal, comenzó a echar a los que vendían y los que compraban en el Hejal; y las mesas de los prestamistas y deudores, y las sillas de los que vendían palomas, volcó.
 **16** Y no dejó que *ningún *hombre pase vasijas dentro del Hejal.
@@ -670,7 +670,7 @@ El Dueño del Shabat
 **8** Y lo tomaron, lo mataron y lo echaron fuera de la viña.
 **9** ¿Y qué hará el dueño de la viña? Vendrá y hará perecer a los viñadores, y dará la viña a otros.
 **10** ¿Y no han leído esta Escritura: “La piedra que despreciaron los edificadores ha sido por cabeza del ángulo;
-**11** de יהוה ha sido esto, es sobresaliente a nuestros ojos[^723]”?
+**11** de Yehovah ha sido esto, es sobresaliente a nuestros ojos[^723]”?
 **12** Y buscaban atraparlo, pero temían al pueblo, porque sabían que acerca de ellos había dicho la parábola. Y lo dejaron y se fueron.
 
 *El impuesto al César*
@@ -697,17 +697,17 @@ El Dueño del Shabat
 *El gran mandamiento*
 
 **28** Y se acercó uno de los escribas que los había oído discutir, y vio que les había respondido bien, y le preguntó: ¿Cuál es el primer mandamiento sobre todos?
-**29** Y le respondió Yeshúa: El primer mandamiento sobre todos es este: “Escucha Israel, יהוה nuestro Elohim, יהוה es uno;
-**30** y amarás a יהוה tu Elohim con todo tu corazón, con todo tu ser y con todo lo mucho tuyo[^731]”. Este es el primer mandamiento.
+**29** Y le respondió Yeshúa: El primer mandamiento sobre todos es este: “Escucha Israel, Yehovah nuestro Elohim, Yehovah es uno;
+**30** y amarás a Yehovah tu Elohim con todo tu corazón, con todo tu ser y con todo lo mucho tuyo[^731]”. Este es el primer mandamiento.
 **31** Y el segundo es semejante a este, es: “Y amarás a tu compañero como a ti *mismo[^732]”.* Man­damiento *más* grande que estos no hay.
-**32** Y le dijo el escriba: Bien, Rabí[^733], en verdad has hablado, porque uno es יהוה Elohim y no hay otro aparte de Él;
+**32** Y le dijo el escriba: Bien, Rabí[^733], en verdad has hablado, porque uno es Yehovah Elohim y no hay otro aparte de Él;
 **33** y *hay que *amarlo con todo el corazón, con todo el ser[^734] y con toda la abundancia*, *y amar al compañero como a sí *mismo*. Grande es *esto, *por encima de todas las ofrendas ascendidas y los sacrificios.
 **34** Y vio Yeshúa que con sabiduría había respondido, y le dijo: No estás lejos del reino de los cielos. Y no había ningún hombre más que llenara su corazón para preguntarle.
 
 *¿De quién es hijo el Mesías?*
 
 **35** Y respondió Yeshúa y dijo en su enseñanza en el Hejal[^735]: ¿Cómo dicen los escribas, que el Mesías es hijo de David?
-**36** Y él, David, dijo en el Rúaj Ha’Kódesh[^736]: “–Declaración de יהוה a mi Amo– siéntate a mi diestra hasta que ponga a tus enemigos como estrado de tus pies[^737]”.
+**36** Y él, David, dijo en el Rúaj Ha’Kódesh[^736]: “–Declaración de Yehovah a mi Amo– siéntate a mi diestra hasta que ponga a tus enemigos como estrado de tus pies[^737]”.
 **37** Y él, David, lo llamó “Amo”, ¿y cómo es Él su hijo? Y muchos del pueblo lo escuchaban con agrado.
 
 Advertencia contra los escribas
@@ -752,7 +752,7 @@ Profecía de la destrucción del Santuario
 **17** ¡Y oy de las embarazadas y de las que estén amamantando en aquellos días!
 **18** Hagan tefilah[^746] para que no sea su huida en invierno.
 **19** Porque aquellos días serán días de estrechez y angustia, que no han sido desde el principio de la creación que creó Elohim, hasta ahora, y no serán nunca.
-**20** Y si יהוה no hubiera acortado los días, ninguna carne se salvaría; pero por causa de los escogidos, los cuales escogió, acortó los días.
+**20** Y si Yehovah no hubiera acortado los días, ninguna carne se salvaría; pero por causa de los escogidos, los cuales escogió, acortó los días.
 **21** Y entonces, si *algún* hombre les dice: “¡He aquí, el Mesías *está* aquí!” “¡He aquí, *está *allá!”, no crean.
 **22** Porque se levantarán Mesías de mentira y profetas de mentira y darán señales y maravillas, para extraviar, si no es imposible, a los escogidos.
 **23** Y ustedes, guárdense; he aquí, me he anticipado a decirles todo.
@@ -984,7 +984,7 @@ Profecía de la destrucción del Santuario
 *Yeshúa sube a los cielos*
 
 **19** Y nuestro Adón[^809] Yeshúa, cuando les habló, fue recibido en los cielos y se sentó a la diestra de Elohim.
-**20** Y ellos salieron y anunciaron la buena noticia por toda la tierra, y יהוה *los *fortalecía, y hablaban *a *los pueblos en lugar de Él[^810] con las señales que venían. Amén.
+**20** Y ellos salieron y anunciaron la buena noticia por toda la tierra, y Yehovah *los *fortalecía, y hablaban *a *los pueblos en lugar de Él[^810] con las señales que venían. Amén.
 
 
 ## Footnotes

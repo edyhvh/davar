@@ -599,13 +599,17 @@ BOOKS_INFO = {
         'section_english': 'Gospel',
         'section_spanish': 'Evangelio',
         'patterns': [
-            r'\*\*SODOT.*?\*\*',
-            r'Sodot.*?סודות',
-            r'__SODOT.*?סודות__',
-            r'APOCALIPSIS.*?סודות',
-            r'\*\*SODOT',
-            r'APOCALIPSIS',
-            r'סודות',
+            # Canonical bold header from dedicated Sodot/Apocalipsis sources.
+            r'^\*\*\s*SODOT\s*\\?\(APOCALIPSIS\\?\)\s*\*\*\s*סודות.*$',
+            r'^__\s*SODOT\s*\\?\(APOCALIPSIS\\?\)\s*__\s*סודות.*$',
+            r'^\*\*\s*APOCALIPSIS\s*\\?\(SODOT\\?\)\s*\*\*\s*סודות.*$',
+            r'^__\s*APOCALIPSIS\s*\\?\(SODOT\\?\)\s*__\s*סודות.*$',
+            r'^\*\*\s*SODOT\s*\\?\(APOCALIPSIS\\?\)\s*\*\*.*$',
+            r'^__\s*SODOT\s*\\?\(APOCALIPSIS\\?\)\s*__.*$',
+
+            # Plain header variant produced by some DOCX conversions.
+            # Intentionally anchored to end-of-line to avoid TOC rows like "... (Apocalipsis) 12".
+            r'^Sodot\s*\\?-\s*סודות\\?\(Apocalipsis\\?\)\s*$',
         ],
     },
 }

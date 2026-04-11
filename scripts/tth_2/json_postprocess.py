@@ -29,6 +29,11 @@ DEFAULT_JSON_DIR = Path(__file__).parent.parent.parent / \
 _postprocessor_instances = {}
 
 
+def _strip_hebrew_diacritics(text: str) -> str:
+    """Remove Hebrew niqqud/cantillation marks for robust comparisons."""
+    return re.sub(r'[\u0591-\u05BD\u05BF-\u05C7]', '', text or '')
+
+
 def get_postprocessor(verbose: bool = False):
     """Get the singleton TTHJsonPostProcessor instance."""
     key = str(verbose)
@@ -52,6 +57,10 @@ class TTHJsonPostProcessor:
         'de la casa',
     )
 
+    DIVINE_NAME_BASE_FORMS = {
+        'יהוה',
+    }
+
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
         self.stats = {
@@ -69,9 +78,23 @@ class TTHJsonPostProcessor:
             'subtitle_segments_skipped_lowercase': 0,
             'subtitle_segments_skipped_phrase': 0,
             'subtitle_invalid_removed': 0,
+            'divine_name_normalized': 0,
             'verses_processed': 0,
             'files_processed': 0,
         }
+
+    def normalize_divine_name_forms(self, text: str) -> str:
+        """Normalize Latin divine-name spellings to the Hebrew form יהוה."""
+        if not text:
+            return text
+
+        pattern = re.compile(
+            r'(?<![A-Za-zÁÉÍÓÚÜÑáéíóúüñ])(?:YEHOVAH|Yehovah|IEHOVAH|Iehovah)(?![A-Za-zÁÉÍÓÚÜÑáéíóúüñ])'
+        )
+        matches = list(pattern.finditer(text))
+        if matches:
+            self.stats['divine_name_normalized'] += len(matches)
+        return pattern.sub('יהוה', text)
 
     def starts_with_lowercase_latin(self, content: str) -> bool:
         """Return True when the first Latin letter in content is lowercase."""
@@ -438,6 +461,26 @@ class TTHJsonPostProcessor:
             result = nested_pattern.sub(r'<em>\1\2\3</em>', result)
         return result
 
+    def remove_em_from_divine_name(self, text: str) -> str:
+        """
+        Remove emphasis wrappers from standalone divine-name tokens (e.g. יהוה).
+        We keep the inner punctuation/content and only drop the <em> wrapper.
+        """
+        if not text or '<em>' not in text:
+            return text
+
+        def unwrap_if_divine_name(match):
+            inner = match.group(1)
+            token = inner.strip()
+            token = re.sub(r'^[,.;:!?"\'“”‘’()\[\]{}]+', '', token)
+            token = re.sub(r'[,.;:!?"\'“”‘’()\[\]{}]+$', '', token)
+            normalized = _strip_hebrew_diacritics(token)
+            if normalized in self.DIVINE_NAME_BASE_FORMS:
+                return inner
+            return match.group(0)
+
+        return re.sub(r'<em>([^<]+)</em>', unwrap_if_divine_name, text)
+
     def strip_embedded_footnotes_section(self, text: str) -> str:
         """
         Remove leaked markdown footnotes sections accidentally appended to verse
@@ -556,7 +599,13 @@ class TTHJsonPostProcessor:
         # Step 14: Flatten accidental nested <em> tags
         result = self.flatten_nested_em_tags(result)
 
-        # Step 15: Clean up any remaining issues
+        # Step 15: Keep divine name unitalicized even if source markers wrapped it
+        result = self.remove_em_from_divine_name(result)
+
+        # Step 16: Normalize Latin divine-name forms to Hebrew
+        result = self.normalize_divine_name_forms(result)
+
+        # Step 17: Clean up any remaining issues
         result = re.sub(r'  +', ' ', result)  # Double spaces
         result = result.strip()
 
@@ -570,6 +619,8 @@ class TTHJsonPostProcessor:
         if existing_subtitle and not self.is_valid_subtitle(existing_subtitle):
             del verse['subtitle']
             self.stats['subtitle_invalid_removed'] += 1
+        elif existing_subtitle:
+            verse['subtitle'] = self.normalize_divine_name_forms(existing_subtitle)
 
         # Process the main TTH text
         if 'tth' in verse and verse['tth']:
@@ -599,6 +650,9 @@ class TTHJsonPostProcessor:
                         footnote['explanation'])
                     footnote['explanation'] = self.rebalance_em_tags(
                         footnote['explanation'])
+                if 'word' in footnote and footnote['word']:
+                    footnote['word'] = self.normalize_divine_name_forms(
+                        footnote['word'])
 
         return verse
 
@@ -712,6 +766,8 @@ class TTHJsonPostProcessor:
             f"  Subtitle skip (phr):  {self.stats['subtitle_segments_skipped_phrase']}")
         print(
             f"  Invalid subtitles:    {self.stats['subtitle_invalid_removed']}")
+        print(
+            f"  Divine names norm.:   {self.stats['divine_name_normalized']}")
         print(f"  Underscore artifacts: {self.stats['underscore_artifacts']}")
 
 

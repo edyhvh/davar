@@ -7,7 +7,7 @@
     "spanish_name": "2 Samuel",
     "section": "neviim",
     "total_chapters": 24,
-    "total_verses": 694
+    "total_verses": 695
   },
   "chapters": [
     {
@@ -15,13 +15,13 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y sucedió _que_ después de la muerte de Shaúl, David regresó de herir a Amalek; y permaneció David en Tziklag dos días.",
+          "tth": "Y sucedió <em>que</em> después de la muerte de Shaúl, David regresó de herir a Amalek; y permaneció David en Tziklag dos días.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "Y sucedió _que_ en el día tercero, he aquí, un hombre vino del campamento de Shaúl, y sus vestiduras rasgadas y tierra sobre su cabeza; y fue _que_ en su llegada a David, cayó a tierra y se inclinó.",
+          "tth": "Y sucedió <em>que</em> en el día tercero, he aquí, un hombre vino del campamento de Shaúl, y sus vestiduras rasgadas y tierra sobre su cabeza; y fue <em>que</em> en su llegada a David, cayó a tierra y se inclinó.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -45,8 +45,15 @@
         },
         {
           "verse": 6,
-          "tth": "Y dijo el joven que se lo había dado a conocer: Yo me encontraba (Lit.: Encontrar me encontraba) en el monte de Gilboa, y he aquí, <em>estaba</em> Shaúl apoyado sobre su espada; y he aquí, los carros y los señores de los jinetes lo alcanzaban.",
-          "footnotes": [],
+          "tth": "Y dijo el joven que se lo había dado a conocer: Yo me encontraba¹ en el monte de Gilboa, y he aquí, <em>estaba</em> Shaúl apoyado sobre su espada; y he aquí, los carros y los señores de los jinetes lo alcanzaban.",
+          "footnotes": [
+            {
+              "marker": "¹",
+              "number": "1",
+              "word": "encontraba",
+              "explanation": "Lit.: Encontrando, me encontraba."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -57,25 +64,39 @@
         },
         {
           "verse": 8,
-          "tth": "Y dijo a mí: “¿Quién eres tú? ” Y le dije: “Amalekí soy yo”.",
-          "footnotes": [],
+          "tth": "Y dijo a mí: “¿Quién eres tú? ” Y le dije: “Amalekí² soy yo”.",
+          "footnotes": [
+            {
+              "marker": "²",
+              "number": "2",
+              "word": "malekí",
+              "explanation": "Amalequita. Así también en vers. 13."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "Y me dijo: “Párate por favor sobre mí y mátame, porque me ha atrapado la agonía (O, convulsión), pues aún toda mi vida _está_ en mí”.",
-          "footnotes": [],
+          "tth": "Y me dijo: “Párate por favor sobre mí y mátame, porque me ha atrapado la agonía³, pues aún toda mi vida <em>está</em> en mí”.",
+          "footnotes": [
+            {
+              "marker": "³",
+              "number": "3",
+              "word": "agonía",
+              "explanation": "O, con"
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 10,
-          "tth": "Y me paré sobre él y lo maté, porque sabía que no podría vivir después de su caída. Y tomé la corona que _tenía_ sobre su cabeza y la pulsera que _estaba_ en su brazo, y los traje a mi amo aquí.",
+          "tth": "Y me paré sobre él y lo maté, porque sabía que no podría vivir después de su caída. Y tomé la corona que <em>tenía</em> sobre su cabeza y la pulsera que <em>estaba</em> en su brazo, y los traje a mi amo aquí.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 11,
-          "tth": "Y se apoderó David de sus vestiduras y las rasgó, y también todos los hombres que _estaban_ con él.",
+          "tth": "Y se apoderó David de sus vestiduras y las rasgó, y también todos los hombres que <em>estaban</em> con él.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -93,8 +114,15 @@
         },
         {
           "verse": 14,
-          "tth": "Y le dijo David: ¿Cómo no tuviste temor de enviar tu mano para destruir al ungido de יהוה?",
-          "footnotes": [],
+          "tth": "Y le dijo David: ¿Cómo no tuviste temor de enviar tu mano para destruir al ungido⁴ de יהוה?",
+          "footnotes": [
+            {
+              "marker": "⁴",
+              "number": "4",
+              "word": "ungido",
+              "explanation": "Heb.: Mashíaj. Así también en vers. 16."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -105,9 +133,10 @@
         },
         {
           "verse": 16,
-          "tth": "Y le dijo David: Tu sangre _sea_ sobre tu cabeza, porque tu boca ha respondido contra ti, diciendo: “Yo maté al ungido de יהוה”. _David entona una elegía_",
+          "tth": "Y le dijo David: Tu sangre <em>sea</em> sobre tu cabeza, porque tu boca ha respondido contra ti, diciendo: “Yo maté al ungido de יהוה”.",
           "footnotes": [],
-          "hebrew_terms": []
+          "hebrew_terms": [],
+          "subtitle": "David entona una elegía"
         },
         {
           "verse": 17,
@@ -117,25 +146,39 @@
         },
         {
           "verse": 18,
-          "tth": "Y dijo de enseñar _a_ los hijos de Iehudáh el <em>cántico del</em> arco; he aquí, _está_ escrito en el rollo de Iashar.",
-          "footnotes": [],
+          "tth": "Y dijo de enseñar <em>a</em> los hijos de Iehudáh el <em>cántico del</em> arco; he aquí, <em>está</em> escrito en el rollo de Iashar⁵.",
+          "footnotes": [
+            {
+              "marker": "⁵",
+              "number": "5",
+              "word": "Iashar",
+              "explanation": "Recto."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 19,
-          "tth": "La belleza, Israel, sobre tus alturas, ha muerto.¡Cómo han caído los poderosos!",
+          "tth": "La belleza, Israel, sobre tus alturas, ha muerto. ¡Cómo han caído los poderosos!",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 20,
-          "tth": "No lo des a conocer en Gat, ¡no lo anoticien en las afueras de Ashkelón!;¡no sea que se alegren las hijas de los pelishtim!,¡no sea que se regocijen las hijas de los incircuncisos!",
-          "footnotes": [],
+          "tth": "No lo des a conocer en Gat, ¡no lo anoticien en las afueras de Ashkelón!;¡no sea que se alegren las hijas de los pelishtim⁶!, ¡no sea que se regocijen las hijas de los incircuncisos!",
+          "footnotes": [
+            {
+              "marker": "⁶",
+              "number": "6",
+              "word": "pelishtim",
+              "explanation": "Filisteos."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 21,
-          "tth": "¡Montes de Gilboa!,no _haya_ rocío ni lluvia sobre ustedes, ni campos de contribuciones; porque allí fue aborrecido el escudo de los poderosos, el escudo de Shaúl, no ungido con aceite.",
+          "tth": "¡Montes de Gilboa!, no <em>haya</em> rocío ni lluvia sobre ustedes, ni campos de contribuciones; porque allí fue aborrecido el escudo de los poderosos,",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -188,8 +231,21 @@
         },
         {
           "verse": 2,
-          "tth": "Y subió allí David, y también sus dos mujeres, Ajinoam la izreelit y Abigail, mujer de Nabal, la carmelít.",
-          "footnotes": [],
+          "tth": "Y subió allí David, y también sus dos mujeres, Ajinoam la izreelit⁷ y Abigail, mujer de Nabal, la carmelit⁸.",
+          "footnotes": [
+            {
+              "marker": "⁷",
+              "number": "7",
+              "word": "izreelit",
+              "explanation": "Jezreelita."
+            },
+            {
+              "marker": "⁸",
+              "number": "8",
+              "word": "carmelit",
+              "explanation": "Carmelita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -272,14 +328,28 @@
         },
         {
           "verse": 16,
-          "tth": "Y se aferró cada hombre en la cabeza de su compañero, y enterró su espada en el costado de su compañero, y cayeron juntos. Y fue llamado aquel lugar Jelkat Hatzurím (Parcela de Rocas), que está en Guibeón.",
-          "footnotes": [],
+          "tth": "Y se aferró cada hombre en la cabeza de su compañero, y enterró su espada en el costado de su compañero, y cayeron juntos. Y fue llamado aquel lugar Jelkat Hatzurim⁹, que está en Guibeón.",
+          "footnotes": [
+            {
+              "marker": "⁹",
+              "number": "9",
+              "word": "Hatzurim",
+              "explanation": "Parcela de Rocas."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 17,
-          "tth": "Y la batalla fue dura extremadamente (Lit.: hasta mucho), en aquel día, y fueron golpeados Abner y los hombres de Israel delante de los siervos de David.",
-          "footnotes": [],
+          "tth": "Y la batalla fue dura extremadamente¹⁰, en aquel día, y fueron golpeados Abner y los hombres de Israel delante de los siervos de David.",
+          "footnotes": [
+            {
+              "marker": "¹⁰",
+              "number": "10",
+              "word": "extremadamente",
+              "explanation": "Lit.: hasta mucho."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -326,8 +396,15 @@
         },
         {
           "verse": 25,
-          "tth": "Y se reunieron los hijos de Biniamín detrás de Abner, y fueron como (Lit.: por) una banda, y se pararon sobre la cabeza de una colina.",
-          "footnotes": [],
+          "tth": "Y se reunieron los hijos de Biniamín detrás de Abner, y fueron como¹¹ una banda, y se pararon sobre la cabeza de una colina.",
+          "footnotes": [
+            {
+              "marker": "¹¹",
+              "number": "11",
+              "word": "como",
+              "explanation": "Lit.: por."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -344,14 +421,28 @@
         },
         {
           "verse": 28,
-          "tth": "Y sopló Ioab con el shofar (cuerno) y se paró todo el pueblo; y no persiguieron más tras de Israel, y no volvieron más a luchar.",
-          "footnotes": [],
+          "tth": "Y sopló Ioab con el shofar¹² y se paró todo el pueblo; y no persiguieron más tras de Israel, y no volvieron más a luchar.",
+          "footnotes": [
+            {
+              "marker": "¹²",
+              "number": "12",
+              "word": "shofar",
+              "explanation": "Cuerno de carnero."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 29,
-          "tth": "Y Abner y sus hombres caminaron por el Arabáh toda aquella noche, y cruzaron el Iardén, y anduvieron por todo el barranco, y llegaron a Majanáim.",
-          "footnotes": [],
+          "tth": "Y Abner y sus hombres caminaron por el Arabáh toda aquella noche, y cruzaron el Iardén¹³, y anduvieron por todo el barranco, y llegaron a Majanáim.",
+          "footnotes": [
+            {
+              "marker": "¹³",
+              "number": "13",
+              "word": "dén",
+              "explanation": "Jordán."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -379,25 +470,39 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y hubo larga guerra entre la casa de Shaúl y la casa de David; pero David iba y era más fuerte, y la casa de Shaúl, iban pero eran más pobres. Los hijos de David nacidos en Jebrón",
+          "tth": "Y hubo larga guerra entre la casa de Shaúl y la casa de David; pero David iba y se fortalecía, pero la casa de Shaúl, iban y se debilitaban. Los hijos de David nacidos en Jebrón",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "Y nacieron a David hijos en Jebrón; y fue su primogénito Amnón, de Ajinoam la izreelit;",
-          "footnotes": [],
+          "tth": "Y nacieron a David hijos en Jebrón; y fue su primogénito Amnón, de Ajinoam la izreelit¹⁴;",
+          "footnotes": [
+            {
+              "marker": "¹⁴",
+              "number": "14",
+              "word": "izreelit",
+              "explanation": "Jezreelita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 3,
-          "tth": "y el segundo fue Jileab, de Abigail, mujer de Nabal, la carmelít; y el tercero, Abshalom, hijo de Maajah, hija de Talmai, rey de Gueshur;",
-          "footnotes": [],
+          "tth": "y el segundo fue Jileab, de Abigail, mujer de Nabal, la carmelit¹⁵; y el tercero, Abshalom, hijo de Maajah, hija de Talmai, rey de Gueshur;",
+          "footnotes": [
+            {
+              "marker": "¹⁵",
+              "number": "15",
+              "word": "carmelit",
+              "explanation": "Carmelita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 4,
-          "tth": "el cuarto, Adoniyáh, hijo de Jagit; y el quinto, Shefatiáh, hijo de Abital;",
+          "tth": "el cuarto, Adoniyah, hijo de Jagit; y el quinto, Shefatiáh, hijo de Abital;",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -421,7 +526,7 @@
         },
         {
           "verse": 8,
-          "tth": "Y ardió mucho Abner por las palabras de Ishboshet, y dijo: ¿Cabeza de perro soy yo que pertenece a Iehudáh? Hoy he hecho misericordia con la casa de Shaúl tu padre, hacia sus hermanos y hacia sus amigos, y no te he alcanzado en mano de David; pero has visitado sobre mí la iniquidad de la mujer hoy.",
+          "tth": "Y ardió mucho Abner por las palabras de Ishboshet, y dijo: ¿Cabeza de perro soy yo que pertenece a Iehudáh? Hoy he hecho bondad con la casa de Shaúl tu padre, hacia sus hermanos y hacia sus amigos, y no te he alcanzado en mano de David; pero has visitado sobre mí la iniquidad de la mujer hoy.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -445,8 +550,15 @@
         },
         {
           "verse": 12,
-          "tth": "Y envió Abner mensajeros a David en su lugar, diciendo: ¿Para quién es la tierra?, diciendo: Haz (Lit.: Corta) tu pacto conmigo, y he aquí, mi mano será contigo para hacer voltear hacia ti a todo Israel.",
-          "footnotes": [],
+          "tth": "Y envió Abner mensajeros a David en su lugar, diciendo: ¿Para quién es la tierra?, diciendo: Haz¹⁶ tu pacto conmigo, y he aquí, mi mano será contigo para hacer voltear hacia ti a todo Israel.",
+          "footnotes": [
+            {
+              "marker": "¹⁶",
+              "number": "16",
+              "word": "Haz",
+              "explanation": "Lit.: Corta."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -469,20 +581,34 @@
         },
         {
           "verse": 16,
-          "tth": "Y fue con ella su esposo, yendo y llorando detrás de ella hasta Bajurím. Y le dijo Abner: Ve, vuelve. Y él volvió.",
+          "tth": "Y fue con ella su esposo, yendo y llorando detrás de ella hasta Bajurim. Y le dijo Abner: Ve, vuelve. Y él volvió.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 17,
-          "tth": "Y una palabra tuvo Abner con los ancianos de Israel, diciendo: Hace tiempo (Lit.: También ayer, también antier) que estuvieron buscando a David para que sea rey sobre ustedes.",
-          "footnotes": [],
+          "tth": "Y una palabra tuvo Abner con los ancianos de Israel, diciendo: Hace tiempo¹⁷ que estuvieron buscando a David para que sea rey sobre ustedes.",
+          "footnotes": [
+            {
+              "marker": "¹⁷",
+              "number": "17",
+              "word": "tiempo",
+              "explanation": "Lit.: También ayer, también anteayer."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 18,
-          "tth": "Y ahora, háganlo. Porque יהוה ha dicho a David, diciendo: “Por mano de David mi siervo salvará a mi pueblo Israel de la mano de los pelishtim y de la mano de todos sus enemigos.”",
-          "footnotes": [],
+          "tth": "Y ahora, háganlo. Porque יהוה ha dicho a David, diciendo: “Por mano de David mi siervo salvará a mi pueblo Israel de la mano de los pelishtim¹⁸ y de la mano de todos sus enemigos.”",
+          "footnotes": [
+            {
+              "marker": "¹⁸",
+              "number": "18",
+              "word": "pelishtim",
+              "explanation": "Filisteos."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -499,14 +625,28 @@
         },
         {
           "verse": 21,
-          "tth": "Y dijo Abner a David: Me levantaré e iré y reuniré hacia mi amo el rey a todo Israel, y harán (Lit.: cortarán) contigo un pacto, y reinarás en todo lo que desee tu ser. Y envió David a Abner, y él fue en shalom.",
-          "footnotes": [],
+          "tth": "Y dijo Abner a David: Me levantaré e iré y reuniré hacia mi amo el rey a todo Israel, y harán¹⁹ contigo un pacto, y reinarás en todo lo que desee tu ser. Y envió David a Abner, y él fue en shalom.",
+          "footnotes": [
+            {
+              "marker": "¹⁹",
+              "number": "19",
+              "word": "rán",
+              "explanation": "Lit.: cortarán."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 22,
-          "tth": "Y he aquí, los siervos de David y Ioab vinieron de la tropa, y mucho botín con ellos trajeron; pero Abner no estaba con David en Jebrón, porque él lo había enviado y se había ido en shalom.",
-          "footnotes": [],
+          "tth": "Y he aquí, los siervos de David y Ioab vinieron de la tropa, y mucho botín con ellos trajeron; pero Abner no estaba con David en Jebrón, porque él lo había enviado y se había ido en shalom²⁰.",
+          "footnotes": [
+            {
+              "marker": "²⁰",
+              "number": "20",
+              "word": "shalom",
+              "explanation": "Plenitud, ausencia de deudas."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -541,14 +681,28 @@
         },
         {
           "verse": 28,
-          "tth": "Y escuchó David después de eso, y dijo: Inocente yo y mi reino de con יהוה hasta siempre de la sangre de Abner, hijo de Ner.",
-          "footnotes": [],
+          "tth": "Y escuchó David después de eso, y dijo: Inocente yo y mi reino de con יהוה hasta el olam²¹ de la sangre de Abner, hijo de Ner.",
+          "footnotes": [
+            {
+              "marker": "²¹",
+              "number": "21",
+              "word": "olam",
+              "explanation": "Tiempo oculto, solo conocido por Elohim."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 29,
-          "tth": "Arredondee sobre la cabeza de Ioab y en toda la casa de su padre, y no será cortado de la casa de Ioab el flujo, ni leproso (heb.: metzorá) ni quien se sostenga con bastón, ni quien caiga por espada, ni falta de pan.",
-          "footnotes": [],
+          "tth": "Arredondee sobre la cabeza de Ioab y en toda la casa de su padre, y no será cortado de la casa de Ioab el flujo, ni metzorá²² ni quien se sostenga con bastón, ni quien caiga por espada, ni falta de pan.",
+          "footnotes": [
+            {
+              "marker": "²²",
+              "number": "22",
+              "word": "metzorá",
+              "explanation": "Persona que sufre tzaraat."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -571,7 +725,20 @@
         },
         {
           "verse": 33,
-          "tth": "Y entonó elegía el rey por Abner, y dijo: ¿Conforme a la muerte de un tonto (Lit.: marchito) ha muerto Abner? 34 Tus manos no estaban atadas, y tus pies no estaban presionados en cadenas de cobre; como caer delante de hijos de injusticia caíste.",
+          "tth": "Y entonó elegía el rey por Abner, y dijo: ¿Conforme a la muerte de un marchito²³ ha muerto Abner?",
+          "footnotes": [
+            {
+              "marker": "²³",
+              "number": "23",
+              "word": "to",
+              "explanation": "O, desgraciado. Heb.: Nabal."
+            }
+          ],
+          "hebrew_terms": []
+        },
+        {
+          "verse": 34,
+          "tth": "Tus manos no estaban atadas, y tus pies no estaban presionados en cadenas de cobre; como el caer delante de hijos de injusticia caíste.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -624,8 +791,15 @@
         },
         {
           "verse": 3,
-          "tth": "habían huido los beerotím a Gitaim, fueron allí forasteros hasta este día.",
-          "footnotes": [],
+          "tth": "habían huido los beerotim²⁴ a Gitaim, fueron allí forasteros hasta este día.",
+          "footnotes": [
+            {
+              "marker": "²⁴",
+              "number": "24",
+              "word": "beerotim",
+              "explanation": "Beerotitas."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -642,8 +816,15 @@
         },
         {
           "verse": 6,
-          "tth": "Y ellos (O, Y aquí) entraron hasta el medio de la casa por recogedores de trigo, y lo hirieron en el estómago; y Rejab y Baanáh, su hermano, escaparon.",
-          "footnotes": [],
+          "tth": "Y ellos²⁵ entraron hasta el medio de la casa por recogedores de trigo, y lo hirieron en el estómago; y Rejab y Baanáh, su hermano, escaparon.",
+          "footnotes": [
+            {
+              "marker": "²⁵",
+              "number": "25",
+              "word": "ellos",
+              "explanation": "O, y aquí."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -666,7 +847,7 @@
         },
         {
           "verse": 10,
-          "tth": "que cuando uno dio a conocer a mí, diciendo: “He aquí, ha muerto Shaúl”, y él era como mensajero de buenas noticias en sus ojos, y lo agarré (Lit.: agarré en él) y lo maté en Tziklag, lo cual di a él por sus buenas noticias.",
+          "tth": "que cuando uno dio a conocer a mí, diciendo: “He aquí, ha muerto Shaúl”, y él era como mensajero de buenas noticias en sus ojos, y lo agarré y lo maté en Tziklag, lo cual di a él por sus buenas noticias.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -701,8 +882,15 @@
         },
         {
           "verse": 3,
-          "tth": "Y vinieron todos los ancianos de Israel hacia el rey a Jebrón, e hizo (Lit.: y cortó) a ellos el rey David un pacto en Jebrón delante de יהוה; y ungieron a David por rey sobre Israel.",
-          "footnotes": [],
+          "tth": "Y vinieron todos los ancianos de Israel hacia el rey a Jebrón, e hizo²⁶ a ellos el rey David un pacto en Jebrón delante de יהוה; y ungieron a David por rey sobre Israel.",
+          "footnotes": [
+            {
+              "marker": "²⁶",
+              "number": "26",
+              "word": "hizo",
+              "explanation": "Lit.: y cortó."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -713,14 +901,21 @@
         },
         {
           "verse": 5,
-          "tth": "En Jebrón reinó sobre Iehudáh siete años y seis meses, y en Ierushalem reinó treinta y tres años sobre todo Israel y Iehudáh.",
+          "tth": "En Jebrón reinó sobre Iehudáh siete años y seis meses, y en Yerushaláim reinó treinta y tres años sobre todo Israel y Iehudáh.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 6,
-          "tth": "Y fue el rey, y sus hombres, a Ierushalem hacia el iebusí, habitante de la tierra, y dijeron a David, diciendo: No entrarás aquí, sino que te harán desviar los ciegos y los cojos, diciendo: “No entrará David aquí”.",
-          "footnotes": [],
+          "tth": "Y fue el rey, y sus hombres, a Yerushaláim hacia el iebusí²⁷, habitante de la tierra, y dijeron a David, diciendo: No entrarás aquí, sino que te harán desviar los ciegos y los cojos, diciendo: “No entrará David aquí”.",
+          "footnotes": [
+            {
+              "marker": "²⁷",
+              "number": "27",
+              "word": "iebusí",
+              "explanation": "Jebuseo. Así también en vers. 8."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -761,13 +956,13 @@
         },
         {
           "verse": 13,
-          "tth": "Y tomó David más concubinas y mujeres de Ierushalem después de su venida de Jebrón; y nacieron a David más hijos e hijas.",
+          "tth": "Y tomó David más concubinas y mujeres de Yerushaláim después de su venida de Jebrón; y nacieron a David más hijos e hijas.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 14,
-          "tth": "Y estos son los nombres de los nacidos a él en Ierushalem: Shamúa, Shobab, Natán y Shelomóh,",
+          "tth": "Y estos son los nombres de los nacidos a él en Yerushaláim: Shamúa, Shobab, Natán y Shelomóh,",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -797,14 +992,27 @@
         },
         {
           "verse": 19,
-          "tth": "Y preguntó David a יהוה, diciendo: ¿Subiré hacia los pelishtim? ¿Los darás en mi mano? Y dijo יהוה a David: Sube, porque ciertamente daré (Lit.: dar daré) a los pelishtim en tu mano.",
+          "tth": "Y preguntó David a יהוה, diciendo: ¿Subiré hacia los pelishtim? ¿Los darás en mi mano? Y dijo יהוה a David: Sube, porque ciertamente daré a los pelishtim en tu mano.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 20,
-          "tth": "Y entró David en Baal Peratzím, y los hirió allí David; y dijo: Abrió brecha (heb.: Paratz) יהוה hacia mis enemigos delante de mí, como brecha de aguas. Por eso llamó el nombre de aquel lugar Baal Peratzím (Señor de las Brechas).",
-          "footnotes": [],
+          "tth": "Y entró David en Baal Peratzim, y los hirió allí David; y dijo: Abrió brecha²⁸ יהוה hacia mis enemigos delante de mí, como brecha de aguas. Por eso llamó el nombre de aquel lugar Baal Peratzim²⁹.",
+          "footnotes": [
+            {
+              "marker": "²⁸",
+              "number": "28",
+              "word": "brecha",
+              "explanation": "Heb.: Paratz."
+            },
+            {
+              "marker": "²⁹",
+              "number": "29",
+              "word": "Peratzim",
+              "explanation": "Señor de las Brechas."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -815,8 +1023,21 @@
         },
         {
           "verse": 22,
-          "tth": "Y volvieron otra vez los pelishtim a subir, y se extendieron por el valle de los refaim.",
-          "footnotes": [],
+          "tth": "Y volvieron otra vez los pelishtim³⁰ a subir, y se extendieron por el valle de los refaim³¹.",
+          "footnotes": [
+            {
+              "marker": "³⁰",
+              "number": "30",
+              "word": "pelishtim",
+              "explanation": "Filisteos. Así en el resto del cap."
+            },
+            {
+              "marker": "³¹",
+              "number": "31",
+              "word": "refaim",
+              "explanation": "Refaitas; pueblo gigante. También, los demonios."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -833,7 +1054,7 @@
         },
         {
           "verse": 25,
-          "tth": "E hizo David así, como le había ordenado יהוה, y golpeó a los pelishtim desde Gueba hasta tu entrada a Guezer. David trae el arca a Ierushalem",
+          "tth": "E hizo David así, como le había ordenado יהוה, y golpeó a los pelishtim desde Gueba hasta tu entrada a Guezer. David trae el arca a Yerushaláim",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -850,8 +1071,15 @@
         },
         {
           "verse": 2,
-          "tth": "Y se levantó y fue David, y todo el pueblo que estaba con él, desde Baalei Iehudáh, para hacer subir desde allí el arca de Elohim, la cual es llamada Nombre (heb.: Shem), el Nombre de יהוה Tzebaot, quien se sienta sobre los querubines (Lit.: se sienta los querubines sobre él).",
-          "footnotes": [],
+          "tth": "Y se levantó y fue David, y todo el pueblo que estaba con él, desde Baalei Iehudáh, para hacer subir desde allí el arca de Elohim, la cual es llamada Nombre³², el Nombre de יהוה Tzebaot, quien se sienta, los querubines sobre Él.",
+          "footnotes": [
+            {
+              "marker": "³²",
+              "number": "32",
+              "word": "Nombre",
+              "explanation": "Heb.: Shem."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -880,14 +1108,21 @@
         },
         {
           "verse": 7,
-          "tth": "Y se encendió la ira de יהוה contra Uza, y lo golpeó allí Elohim por la negligencia; y murió allí con el arca de Elohim.",
+          "tth": "Y se calentó la nariz de יהוה contra Uza, y lo golpeó allí Elohim por la negligencia; y murió allí con el arca de Elohim.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 8,
-          "tth": "Y se encendió la ira de David porque estalló יהוה con brecha contra Uza, y llamó a ese lugar Peretz Uza (Brecha de Uza) hasta este día.",
-          "footnotes": [],
+          "tth": "Y se calentó David porque estalló יהוה con brecha contra Uza, y llamó a ese lugar Peretz Uza³³ hasta este día.",
+          "footnotes": [
+            {
+              "marker": "³³",
+              "number": "33",
+              "word": "Uza",
+              "explanation": "Brecha de Uza."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -898,8 +1133,15 @@
         },
         {
           "verse": 10,
-          "tth": "Y no quiso David hacer partir hacia él al arca de יהוה en la ciudad de David. Y la desvió David a la casa de Obed Edom el guití.",
-          "footnotes": [],
+          "tth": "Y no quiso David hacer partir hacia él al arca de יהוה en la ciudad de David. Y la desvió David a la casa de Obed Edom el guití³⁴.",
+          "footnotes": [
+            {
+              "marker": "³⁴",
+              "number": "34",
+              "word": "guití",
+              "explanation": "Geteo."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -928,8 +1170,21 @@
         },
         {
           "verse": 15,
-          "tth": "Y David y toda la casa de Israel hacían subir el arca de יהוה con grito (heb.: teruáh) y con voz de shofar (cuerno).",
-          "footnotes": [],
+          "tth": "Y David y toda la casa de Israel hacían subir el arca de יהוה con t’ruáh³⁵ y con voz de shofar³⁶.",
+          "footnotes": [
+            {
+              "marker": "³⁵",
+              "number": "35",
+              "word": "ruáh",
+              "explanation": "Expresión de alegría, pronunciado tanto con la voz como con un shofar."
+            },
+            {
+              "marker": "³⁶",
+              "number": "36",
+              "word": "shofar",
+              "explanation": "Cuerno de carnero."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -946,14 +1201,34 @@
         },
         {
           "verse": 18,
-          "tth": "Y terminó David de ascender la ofrenda ascendida y las retribuciones, y bendijo al pueblo en Nombre de יהוה Tzebaot.",
-          "footnotes": [],
+          "tth": "Y terminó David de ascender la ofrenda ascendida³⁷ y las retribuciones³⁸, y bendijo al pueblo en Nombre de יהוה Tzebaot.",
+          "footnotes": [
+            {
+              "marker": "³⁷",
+              "number": "37",
+              "word": "cendida",
+              "explanation": "Heb.: Oláh."
+            },
+            {
+              "marker": "³⁸",
+              "number": "38",
+              "word": "retribuciones",
+              "explanation": "Heb.: Sh’lamim."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 19,
-          "tth": "Y repartió a todo el pueblo, a toda la multitud de Israel, desde hombre y hasta mujer, a cada hombre, una hogaza de pan, una porción de dátiles (O, de carne; significado incierto) y un pastel de pasas. Y se fue todo el pueblo, cada hombre a su casa.",
-          "footnotes": [],
+          "tth": "Y repartió a todo el pueblo, a toda la multitud de Israel, desde hombre y hasta mujer, a cada hombre, una hogaza de pan, una porción de dátiles³⁹ y un pastel de pasas. Y se fue todo el pueblo, cada hombre a su casa.",
+          "footnotes": [
+            {
+              "marker": "³⁹",
+              "number": "39",
+              "word": "dátiles",
+              "explanation": "O, de carne. Significado dudoso."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1017,8 +1292,15 @@
         },
         {
           "verse": 6,
-          "tth": "Pues no he habitado en una casa desde el día que hice subir a los hijos de Israel de Mitzráim y hasta este día, y estuve andando en una tienda y en un Mishkán (Tabernáculo).",
-          "footnotes": [],
+          "tth": "Pues no he habitado en una casa desde el día que hice subir a los hijos de Israel de Mitzráim y hasta este día, y estuve andando en una tienda y en un Mishkán⁴⁰.",
+          "footnotes": [
+            {
+              "marker": "⁴⁰",
+              "number": "40",
+              "word": "Mishkán",
+              "explanation": "Tabernáculo."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1077,8 +1359,15 @@
         },
         {
           "verse": 16,
-          "tth": "Y será firme tu casa y tu reino hasta siempre delante de ti; tu trono será establecido hasta siempre’ ”.",
-          "footnotes": [],
+          "tth": "Y será firme tu casa y tu reino hasta el olam⁴¹ delante de ti; tu trono será establecido hasta el olam”.",
+          "footnotes": [
+            {
+              "marker": "⁴¹",
+              "number": "41",
+              "word": "olam",
+              "explanation": "Tiempo oculto, solo conocido por Elohim. Así también en vers. 29."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1095,7 +1384,7 @@
         },
         {
           "verse": 19,
-          "tth": "Y fue pequeño aún esto en tus ojos, Adonai יהוה, y hablaste además a la casa de tu siervo acerca de un lejano futuro. Y esta es la instrucción (heb.: Torah) del hombre, Adonai יהוה.",
+          "tth": "Y fue pequeño aún esto en tus ojos, Adonai יהוה, y hablaste además a la casa de tu siervo acerca de un lejano futuro. Y esta es la Torah del hombre, Adonai יהוה.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1119,8 +1408,15 @@
         },
         {
           "verse": 23,
-          "tth": "¿Y quién como tu pueblo, como Israel? Una nación en la tierra que fue Elohim para redimirlo por pueblo y para ponerle un nombre, y para hacer a ustedes grandeza y cosas temibles para tu tierra, delante (Lit.: del rostro) de tu pueblo que redimiste para ti de Mitzráim, naciones y sus dioses.",
-          "footnotes": [],
+          "tth": "¿Y quién como tu pueblo, como Israel? Una nación en la tierra que fue Elohim para redimirlo por pueblo y para ponerle un nombre, y para hacer a ustedes grandeza y cosas temibles para tu tierra, delante⁴² de tu pueblo que redimiste para ti de Mitzráim, naciones y sus dioses.",
+          "footnotes": [
+            {
+              "marker": "⁴²",
+              "number": "42",
+              "word": "delante",
+              "explanation": "Lit.: del rostro."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1143,8 +1439,15 @@
         },
         {
           "verse": 27,
-          "tth": "Porque Tú, יהוה Tzebaot, Elohim de Israel, has descubierto el oído de tu siervo, diciendo: “Una casa edificaré para ti”. Por eso, ha hallado tu siervo su corazón para orar a ti esta oración.",
-          "footnotes": [],
+          "tth": "Porque Tú, יהוה Tzebaot, Elohim de Israel, has descubierto el oído de tu siervo, diciendo: “Una casa edificaré para ti”. Por eso, ha hallado tu siervo su corazón para hacer tefilah⁴³ a ti esta tefilah.",
+          "footnotes": [
+            {
+              "marker": "⁴³",
+              "number": "43",
+              "word": "tefilah",
+              "explanation": "Oración, participación en juicio."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1155,7 +1458,7 @@
         },
         {
           "verse": 29,
-          "tth": "Y ahora, disponte y bendice a la casa de tu siervo, para estar siempre delante de ti; porque Tú, Adonai יהוה, has hablado y con tu bendición será bendita la casa de tu siervo para siempre.",
+          "tth": "Y ahora, disponte y bendice a la casa de tu siervo, para estar siempre delante de ti; porque Tú, Adonai יהוה, has hablado y con tu bendición será bendita la casa de tu siervo para el olam.",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -1166,8 +1469,21 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y sucedió que después de eso hirió David a los pelishtim y los humilló, y tomó David la brida de la ciudad madre (heb.: meteg haamáh) de mano de los pelishtim.",
-          "footnotes": [],
+          "tth": "Y sucedió que después de eso hirió David a los pelishtim⁴⁴ y los humilló, y tomó David la brida de la ciudad madre⁴⁵ de mano de los pelishtim.",
+          "footnotes": [
+            {
+              "marker": "⁴⁴",
+              "number": "44",
+              "word": "pelishtim",
+              "explanation": "Filisteos. Así en el resto del cap."
+            },
+            {
+              "marker": "⁴⁵",
+              "number": "45",
+              "word": "madre",
+              "explanation": "Heb.: Meteg ha’amah."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1178,14 +1494,28 @@
         },
         {
           "verse": 3,
-          "tth": "E hirió David a Hadadezer, hijo de Rejob, rey de Tzobáh, cuando iba a recuperar su poder (Lit.: su mano) en el río.",
-          "footnotes": [],
+          "tth": "E hirió David a Hadadezer, hijo de Rejob, rey de Tzobáh, cuando iba a recuperar su poder⁴⁶ en el río.",
+          "footnotes": [
+            {
+              "marker": "⁴⁶",
+              "number": "46",
+              "word": "der",
+              "explanation": "Lit.: su mano."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 4,
-          "tth": "Y tomó David de él mil carros y siete mil caballeros (Así en los Manuscritos del Mar Muerto y la versión gr., en el T.M.: mil setecientos caballeros) y veinte mil hombres a pie; y desjarretó David todos los carros, pero dejó de ellos cien carros.",
-          "footnotes": [],
+          "tth": "Y tomó David de él mil carros y siete mil caballeros⁴⁷ y veinte mil hombres a pie; y desjarretó David todos los carros, pero dejó de ellos cien carros.",
+          "footnotes": [
+            {
+              "marker": "⁴⁷",
+              "number": "47",
+              "word": "caballeros",
+              "explanation": "Así en los Manuscritos del Mar Muerto y la versión gr., en el T.M.: mil setecientos caballeros"
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1202,7 +1532,7 @@
         },
         {
           "verse": 7,
-          "tth": "Y tomó David los escudos de oro que eran para los siervos de Hadadezer, y los trajo a Ierushalem.",
+          "tth": "Y tomó David los escudos de oro que eran para los siervos de Hadadezer, y los trajo a Yerushaláim.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1220,8 +1550,15 @@
         },
         {
           "verse": 10,
-          "tth": "y envió Toi a Ioram, su hijo, hacia el rey David para preguntar a él por su shalom y para bendecirlo, porque había luchado con Hadadezer y lo había herido; porque un hombre de guerras con Toi era Hadadezer. Y había en su mano artículos de plata, artículos de oro y artículos de cobre;",
-          "footnotes": [],
+          "tth": "y envió Toi a Ioram, su hijo, hacia el rey David para preguntar a él por su shalom⁴⁸ y para bendecirlo, porque había luchado con Hadadezer y lo había herido; porque un hombre de guerras con Toi era Hadadezer. Y había en su mano artículos de plata, artículos de oro y artículos de cobre;",
+          "footnotes": [
+            {
+              "marker": "⁴⁸",
+              "number": "48",
+              "word": "shalom",
+              "explanation": "Plenitud, ausencia de deudas."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1256,8 +1593,15 @@
         },
         {
           "verse": 16,
-          "tth": "Y Ioab, hijo de Tzeruiáh, estaba sobre el ejército, y Iehoshafat, hijo de Ajilud, era registrador (Lit.: hacía recordar);",
-          "footnotes": [],
+          "tth": "Y Ioab, hijo de Tzeruiáh, estaba sobre el ejército, y Iehoshafat, hijo de Ajilud, era registrador⁴⁹;",
+          "footnotes": [
+            {
+              "marker": "⁴⁹",
+              "number": "49",
+              "word": "trador",
+              "explanation": "Lit.: recordador."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1268,7 +1612,7 @@
         },
         {
           "verse": 18,
-          "tth": "y Benaiáhu, hijo de Iehoiada, y el keretí y el peletí, y los hijos de David eran príncipes. Misericordia de David con Mefiboshet",
+          "tth": "y Benaiáhu, hijo de Iehoiada, y el keretí⁵⁰ y el peletí⁵¹, y los hijos de David eran príncipes. Bondad de David con Mefiboshet",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -1279,8 +1623,15 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y dijo David: ¿Pues, hay todavía quien haya quedado de la casa de Shaúl, y pueda hacer con él misericordia por el bien de Iehonatán?",
-          "footnotes": [],
+          "tth": "Y dijo David: ¿Pues, hay todavía quien haya quedado de la casa de Shaúl, y pueda hacer con él bondad⁵² por causa de Iehonatán?",
+          "footnotes": [
+            {
+              "marker": "⁵²",
+              "number": "52",
+              "word": "bondad",
+              "explanation": "Heb.: Jésed. Así también en los versículos 3 y 7."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1291,7 +1642,7 @@
         },
         {
           "verse": 3,
-          "tth": "Y dijo el rey: ¿No hay aún un hombre de la casa de Shaúl, y pueda hacer con él misericordia de Elohim? Y dijo Tziba al rey: Todavía hay un hijo de Iehonatán, herido de pies.",
+          "tth": "Y dijo el rey: ¿No hay aún un hombre de la casa de Shaúl, y pueda hacer con él bondad de Elohim? Y dijo Tziba al rey: Todavía hay un hijo de Iehonatán, herido de pies.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1315,8 +1666,15 @@
         },
         {
           "verse": 7,
-          "tth": "Y le dijo David: No temas, porque ciertamente haré (Lit.: haciendo, haré) contigo misericordia por el bien de Iehonatán, tu padre, y haré regresar a ti todo el campo de Shaúl, tu padre; y tú comerás pan en mi mesa perpetuamente.",
-          "footnotes": [],
+          "tth": "Y le dijo David: No temas, porque ciertamente haré⁵³ contigo bondad por el bien de Iehonatán, tu padre, y haré regresar a ti todo el campo de Shaúl, tu padre; y tú comerás pan en mi mesa continuamente.",
+          "footnotes": [
+            {
+              "marker": "⁵³",
+              "number": "53",
+              "word": "haré",
+              "explanation": "Lit.: haciendo, haré."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1351,7 +1709,7 @@
         },
         {
           "verse": 13,
-          "tth": "Y Mefiboshet habitó en Ierushalem, porque en la mesa del rey siempre él comió. Y él era cojo de sus dos pies. Los siervos de David son avergonzados",
+          "tth": "Y Mefiboshet habitó en Yerushaláim, porque en la mesa del rey siempre él comió. Y él era cojo de sus dos pies. Los siervos de David son avergonzados",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -1368,13 +1726,13 @@
         },
         {
           "verse": 2,
-          "tth": "Y dijo David: Haré misericordia con Janún, hijo de Najash, como hizo su padre conmigo misericordia. Y envió David, para consolarlo, por mano de sus siervos, por su padre. Y entraron los siervos de David en la tierra de los hijos de Amón.",
+          "tth": "Y dijo David: Haré bondad con Janún, hijo de Najash, como hizo su padre conmigo bondad. Y envió David, para confortarlo, por mano de sus siervos, por su padre. Y entraron los siervos de David en la tierra de los hijos de Amón.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 3,
-          "tth": "Y dijeron los príncipes de los hijos de Amón a Janún su amo: ¿Ha honrado David a tu padre en tus ojos porque envió a ti consoladores? ¿No a fin de examinar la ciudad, para explorarla y para derrocarla (Lit.: voltearla), ha enviado David a sus siervos hacia ti?",
+          "tth": "Y dijeron los príncipes de los hijos de Amón a Janún su amo: ¿Ha honrado David a tu padre en tus ojos porque envió a ti consoladores? ¿No a fin de examinar la ciudad, para explorarla y para derrocarla, ha enviado David a sus siervos hacia ti?",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1386,14 +1744,28 @@
         },
         {
           "verse": 5,
-          "tth": "Y lo dieron a conocer a David, y envió a encontrarlos, porque estaban los hombres muy avergonzados, y dijo el rey: Permanezcan en Ierijó hasta que haya crecido su barba, y regresarán.",
-          "footnotes": [],
+          "tth": "Y lo dieron a conocer a David, y envió a encontrarlos, porque estaban los hombres muy avergonzados, y dijo el rey: Permanezcan en Ierijó⁵⁴ hasta que haya crecido su barba, y regresarán.",
+          "footnotes": [
+            {
+              "marker": "⁵⁴",
+              "number": "54",
+              "word": "Ierijó",
+              "explanation": "Jericó."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 6,
-          "tth": "Y vieron los hijos de Amón que se habían vuelto odiosos a David, y enviaron los hijos de Amón y contrataron a Aram de Bet Rejob y a Aram de Tzobá, veinte mil de a pie, y con el rey de Maajah, mil hombres, y hombres de Tob (O, e Ish Tob), doce mil hombres.",
-          "footnotes": [],
+          "tth": "Y vieron los hijos de Amón que se habían vuelto odiosos a David, y enviaron los hijos de Amón y contrataron a Aram de Bet Rejob y a Aram de Tzobá, veinte mil de a pie, y con el rey de Maajah, mil hombres, y hombres de Tob⁵⁵, doce mil hombres.",
+          "footnotes": [
+            {
+              "marker": "⁵⁵",
+              "number": "55",
+              "word": "Tob",
+              "explanation": "O, e Ish Tob."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1440,7 +1812,7 @@
         },
         {
           "verse": 14,
-          "tth": "Y los hijos de Amón vieron que había huido Aram, y huyeron de delante de Abishai y entraron a la ciudad. Y regresó Ioab de sobre los hijos de Amón y vino a Ierushalem.",
+          "tth": "Y los hijos de Amón vieron que había huido Aram, y huyeron de delante de Abishai y entraron a la ciudad. Y regresó Ioab de sobre los hijos de Amón y vino a Yerushaláim.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1458,7 +1830,7 @@
         },
         {
           "verse": 17,
-          "tth": "Y fue dado a conocer a David, y reunió a todo Israel, y cruzó el Iardén y entró a Jelám. Y se organizaron Aram al encuentro de David, y lucharon con él.",
+          "tth": "Y fue dado a conocer a David, y reunió a todo Israel, y cruzó el Iardén y entró a Jelam. Y se organizaron Aram al encuentro de David, y lucharon con él.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1470,7 +1842,7 @@
         },
         {
           "verse": 19,
-          "tth": "Y vieron todos los reyes, siervos de Hadadezer, que habían sido heridos delante de Israel, e hicieron shalom con Israel y les sirvieron. Y tuvo temor Aram de salvar más a los hijos de Amón. David y Batsheva",
+          "tth": "Y vieron todos los reyes, siervos de Hadadezer, que habían sido heridos delante de Israel, e hicieron shalom⁵⁶ con Israel y les sirvieron. Y tuvo temor Aram de salvar más a los hijos de Amón. David y Batsheva",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -1481,7 +1853,7 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y sucedió que al regreso del año, por el tiempo de la salida de los reyes, envió David a Ioab y a sus siervos con él, y a todo Israel, y destruyeron a los hijos de Amón y confinaron a Rabáh. Pero David permaneció en Ierushalem.",
+          "tth": "Y sucedió que al regreso del año, por el tiempo de la salida de los reyes, envió David a Ioab y a sus siervos con él, y a todo Israel, y destruyeron a los hijos de Amón y confinaron a Rabáh. Pero David permaneció en Yerushaláim.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1493,8 +1865,15 @@
         },
         {
           "verse": 3,
-          "tth": "Y envió David y buscó a la mujer, y uno dijo: ¿No es esta Batsheva, hija de Eliam, mujer de Uriyah el jití?",
-          "footnotes": [],
+          "tth": "Y envió David y buscó a la mujer, y uno dijo: ¿No es esta Batsheva, hija de Eliam, mujer de Uriyah el jití⁵⁷?",
+          "footnotes": [
+            {
+              "marker": "⁵⁷",
+              "number": "57",
+              "word": "jití",
+              "explanation": "Hitita. Así en el resto del cap."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1541,13 +1920,20 @@
         },
         {
           "verse": 11,
-          "tth": "Y dijo Uriyah a David: El arca, Israel y Iehudáh habitan en enramadas (heb.: sucot), y mi amo Ioab y los siervos de mi amo sobre la faz del campo acampan. ¿Y yo iré a mi casa a comer y a beber y a acostarme con mi mujer? Por tu vida y la vida de tu ser, ¡si haría esta cosa!",
-          "footnotes": [],
+          "tth": "Y dijo Uriyah a David: El arca, Israel y Iehudáh habitan en enramadas⁵⁸, y mi amo Ioab y los siervos de mi amo sobre la faz del campo acampan. ¿Y yo iré a mi casa a comer y a beber y a acostarme con mi mujer? Por tu vida y la vida de tu ser, ¡si haría esta cosa!",
+          "footnotes": [
+            {
+              "marker": "⁵⁸",
+              "number": "58",
+              "word": "enramadas",
+              "explanation": "Heb.: Sucot."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 12,
-          "tth": "Y dijo David a Uriyah: Permanece en este lugar también hoy, y mañana te enviaré. Y permaneció Uriyah en Ierushalem en aquel día y al día siguiente.",
+          "tth": "Y dijo David a Uriyah: Permanece en este lugar también hoy, y mañana te enviaré. Y permaneció Uriyah en Yerushaláim en aquel día y al día siguiente.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1637,9 +2023,10 @@
         },
         {
           "verse": 27,
-          "tth": "Y pasó el luto; y envió David y la recogió a su casa, y ella fue para él por mujer, y dio a luz para él un hijo. Pero fue mala la cosa que hizo David en los ojos de יהוה. _Natán amonesta a David_",
+          "tth": "Y pasó el luto; y envió David y la recogió a su casa, y ella fue para él por mujer, y dio a luz para él un hijo. Pero fue mala la cosa que hizo David en los ojos de יהוה.",
           "footnotes": [],
-          "hebrew_terms": []
+          "hebrew_terms": [],
+          "subtitle": "Natán amonesta a David"
         }
       ]
     },
@@ -1666,14 +2053,21 @@
         },
         {
           "verse": 4,
-          "tth": "Y vino un viajero al hombre ricoy tuvo pena de tomar de su rebaño y de su ganado para preparar para el caminante _que_ había venido a él, y tomó a la oveja del hombre pobre y la preparó para el hombre _que_ había venido a él.",
+          "tth": "Y vino un viajero al hombre rico y tuvo pena de tomar de su rebaño y de su ganado para preparar para el caminante <em>que</em> había venido a él, y tomó a la oveja del hombre pobre y la preparó para el hombre <em>que</em> había venido a él.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 5,
-          "tth": "Y se encendió la ira de David contra el hombre mucho, y dijo a Natán: Vive יהוה, que hijo de muerte es el hombre hacedor de esto,",
-          "footnotes": [],
+          "tth": "Y se calentó la nariz de David contra el hombre mucho, y dijo a Natán: Vive יהוה, que hijo de muerte⁵⁹ es el hombre hacedor de esto,",
+          "footnotes": [
+            {
+              "marker": "⁵⁹",
+              "number": "59",
+              "word": "muerte",
+              "explanation": "Heb.: Ben ha’mávet. Que obra según la muerte."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1684,20 +2078,27 @@
         },
         {
           "verse": 7,
-          "tth": "Y dijo Natán a David: ¡Tú _eres_ el hombre! Así dice יהוה, Elohim de Israel: “Yo te ungí por rey sobre Israel, y Yo te rescaté de mano de Shaúl;",
+          "tth": "Y dijo Natán a David: ¡Tú <em>eres</em> el hombre! Así dice יהוה, Elohim de Israel: “Yo te ungí por rey sobre Israel, y Yo te rescaté de mano de Shaúl;",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 8,
-          "tth": "y di a ti la casa de tu amo y las mujeres de tu amo en tu seno, y di a ti la casa de Israel y Iehudáh; y si _hubiera sido_ poco, hubiera aumentado a ti como estas y como estas.",
+          "tth": "y di a ti la casa de tu amo y las mujeres de tu amo en tu seno, y di a ti la casa de Israel y Iehudáh; y si <em>hubiera sido</em> poco, hubiera aumentado a ti como estas y como estas.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "¿Por qué despreciaste la palabra de יהוה para hacer el mal en sus ojos? A Uriyah el jití heriste con la espada, y a su mujer has tomado para ti por mujer, y a él mataste con la espada de los hijos de Amón.",
-          "footnotes": [],
+          "tth": "¿Por qué despreciaste la palabra de יהוה para hacer el mal en sus ojos? A Uriyah el jití⁶⁰ heriste con la espada, y a su mujer has tomado para ti por mujer, y a él mataste con la espada de los hijos de Amón.",
+          "footnotes": [
+            {
+              "marker": "⁶⁰",
+              "number": "60",
+              "word": "jití",
+              "explanation": "Hitita. Así también en vers. 10."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1708,7 +2109,7 @@
         },
         {
           "verse": 11,
-          "tth": "Así dice יהוה: “He aquí, haré levantar sobre ti maldad de tu casa, y tomaré a tus mujeres a tus ojos y _las_ daré a tu compañero, y él se acostará con tu mujer a ojos de este sol.",
+          "tth": "Así dice יהוה: “He aquí, haré levantar sobre ti maldad de tu casa, y tomaré a tus mujeres a tus ojos y <em>las</em> daré a tu compañero, y él se acostará con tu mujer a ojos de este sol.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1726,8 +2127,15 @@
         },
         {
           "verse": 14,
-          "tth": "Pero, porque ciertamente has despreciado a los enemigos de יהוה (Así en el T.M. y la versión gr., en los Manuscritos del Mar Muerto: _a la palabra de יהוה_) con esta cosa, también el hijo nacido a ti, ciertamente morirá. _Muerte del hijo de David y Batsheva_",
-          "footnotes": [],
+          "tth": "Pero, porque ciertamente has despreciado a los enemigos de⁶¹ יהוה con esta cosa, también el hijo nacido a ti, ciertamente morirá.",
+          "footnotes": [
+            {
+              "marker": "⁶¹",
+              "number": "61",
+              "word": "de",
+              "explanation": "Así en el T.M. y la versión gr., en los Manuscritos del Mar Muerto: a la palabra de."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -1750,7 +2158,7 @@
         },
         {
           "verse": 18,
-          "tth": "Y sucedió _que_ en el día séptimo, murió el niño; y temieron los siervos de David de dar a conocer a él que había muerto el niño, porque decían: He aquí, cuando estaba el niño vivo, hablamos a él y no escuchó a nuestra voz. ¿Y cómo le diremos: “Ha muerto el niño”?, puede hacer mal.",
+          "tth": "Y sucedió <em>que</em> en el día séptimo, murió el niño; y temieron los siervos de David de dar a conocer a él que había muerto el niño, porque decían: He aquí, cuando estaba el niño vivo, hablamos a él y no escuchó a nuestra voz. ¿Y cómo le diremos: “Ha muerto el niño”?, puede hacer mal.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1762,13 +2170,13 @@
         },
         {
           "verse": 20,
-          "tth": "Y se levantó David de la tierra, y se lavó y se ungió y cambió su ropa; y entró _a_ la casa de יהוה y se inclinó. Y vino a su casa, y pidió, y pusieron para él pan, y comió.",
+          "tth": "Y se levantó David de la tierra, y se lavó y se ungió y cambió su ropa; y entró <em>a</em> la casa de יהוה y se inclinó. Y vino a su casa, y pidió, y pusieron para él pan, y comió.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 21,
-          "tth": "Y dijeron sus siervos a él: ¿Qué es esta cosa que has hecho? Por el bien de _que_ el niño viva, ayunaste y lloraste, pero cuando murió el niño, te levantaste y comiste pan.",
+          "tth": "Y dijeron sus siervos a él: ¿Qué es esta cosa que has hecho? Por el bien de <em>que</em> el niño viva, ayunaste y lloraste, pero cuando murió el niño, te levantaste y comiste pan.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1780,21 +2188,29 @@
         },
         {
           "verse": 23,
-          "tth": "Pero ahora, ha muerto, ¿por qué ésto, yo ayunaré? ¿Podré hacerlo volver aún? Yo iré a él, pero él no volverá a mí.",
+          "tth": "Pero ahora, ha muerto, ¿por qué esto, yo ayunaré? ¿Podré hacerlo volver aún? Yo iré a él, pero él no volverá a mí.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 24,
-          "tth": "Y consoló David a Batsheva su mujer, y vino a ella y se acostó con ella; y ella dio a luz un hijo, y él (Algunas versiones dicen: y ella) llamó su nombre Shelomóh; y יהוה lo amó.",
-          "footnotes": [],
+          "tth": "Y consoló David a Batsheva su mujer, y vino a ella y se acostó con ella; y ella dio a luz un hijo, y él⁶² llamó su nombre Shelomóh; y יהוה lo amó.",
+          "footnotes": [
+            {
+              "marker": "⁶²",
+              "number": "62",
+              "word": "él",
+              "explanation": "Algunas versiones dicen: y ella."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 25,
-          "tth": "Y envió _palabra_ por mano de Natán el profeta, y llamó su nombre Iedidiáh (Amado de יהוה), por causa de יהוה. _David captura Rabáh_",
+          "tth": "Y envió <em>palabra</em> por mano de Natán el profeta, y llamó su nombre Iedidiáh⁶³, por causa de יהוה.",
           "footnotes": [],
-          "hebrew_terms": []
+          "hebrew_terms": [],
+          "subtitle": "David captura Rabáh"
         },
         {
           "verse": 26,
@@ -1822,13 +2238,13 @@
         },
         {
           "verse": 30,
-          "tth": "Y tomó la corona de su rey de sobre su cabeza, y su peso <em>era</em> un talento de oro, y _tenía_ una piedra preciosa; y estaba sobre la cabeza de David. Y el botín de la ciudad él saco grandemente mucho.",
+          "tth": "Y tomó la corona de su rey de sobre su cabeza, y su peso <em>era</em> un talento de oro, y <em>tenía</em> una piedra preciosa; y estaba sobre la cabeza de David. Y el botín de la ciudad él saco grandemente mucho.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 31,
-          "tth": "Y al pueblo que _estaba_ en ella él sacó, y _los_ puso con cuchilla, con cortadores de hierro y con sierras de hierro, y los hizo pasar por hornos de ladrillo. Y así hizo a todas las ciudades de los hijos de Amón. Y volvió David y todo el pueblo _a_ Ierushalem. _Amnón y Tamar_",
+          "tth": "Y al pueblo que <em>estaba</em> en ella él sacó, y <em>los</em> puso con cuchilla, con cortadores de hierro y con sierras de hierro, y los hizo pasar por hornos de ladrillo. Y así hizo a todas las ciudades de los hijos de Amón. Y volvió David y todo el pueblo <em>a</em> Yerushaláim.",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -1839,7 +2255,7 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y sucedió después de eso, tenía\\ Abshalom, hijo de David, una hermana hermosa, y su nombre <em>era</em> Tamar, y la amó Amnón, hijo de David.",
+          "tth": "Y sucedió después de eso, tenía Abshalom, hijo de David, una hermana hermosa, y su nombre <em>era</em> Tamar, y la amó Amnón, hijo de David.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1905,14 +2321,28 @@
         },
         {
           "verse": 12,
-          "tth": "Pero le dijo: No, hermano mío, no me aflijas, porque no se hace así en Israel; no hagas esta locura (O, desgracia).",
-          "footnotes": [],
+          "tth": "Pero le dijo: No, hermano mío, no me aflijas, porque no se hace así en Israel; no hagas esta marchitez⁶⁴.",
+          "footnotes": [
+            {
+              "marker": "⁶⁴",
+              "number": "64",
+              "word": "marchitez",
+              "explanation": "O, corrupción. Heb.: Nebaláh."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 13,
-          "tth": "Y yo, ¿adónde haré ir mi reproche? Y tú serás como uno de los desgraciados en Israel. Y ahora, habla por favor al rey, porque no me retendrá de ti.",
-          "footnotes": [],
+          "tth": "Y yo, ¿adónde haré ir mi reproche? Y tú serás como uno de los marchitos⁶⁵ en Israel. Y ahora, habla por favor al rey, porque no me retendrá de ti.",
+          "footnotes": [
+            {
+              "marker": "⁶⁵",
+              "number": "65",
+              "word": "marchitos",
+              "explanation": "O, corrompidos. Heb.: Nebalim."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2031,7 +2461,7 @@
         },
         {
           "verse": 33,
-          "tth": "Y ahora, no ponga mi amo el rey en su corazón la palabra, diciendo: “Todos los hijos del rey han muerto”, sino que Amnón, sólo él ha muerto. Huida de Abshalom",
+          "tth": "Y ahora, no ponga mi amo el rey en su corazón la palabra, diciendo: “Todos los hijos del rey han muerto”, sino que Amnón, sólo él ha muerto.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2067,7 +2497,7 @@
         },
         {
           "verse": 39,
-          "tth": "Y anheló (Lit.: concluyó) David el rey salir hacia Abshalom, pues se había consolado por Amnón, que había muerto. Ioab promueve el regreso de Abshalom",
+          "tth": "Y concluyó David el rey salir hacia Abshalom, pues se había consolado acerca de Amnón, que había muerto. Ioab promueve el regreso de Abshalom",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -2096,8 +2526,15 @@
         },
         {
           "verse": 4,
-          "tth": "Y dijo la mujer tekoit al rey, y cayó sobre sus narices a tierra, y se inclinó, y dijo: ¡Salva el rey!",
-          "footnotes": [],
+          "tth": "Y dijo la mujer tekoit⁶⁶ al rey, y cayó sobre sus narices a tierra, y se inclinó, y dijo: ¡Salva el rey!",
+          "footnotes": [
+            {
+              "marker": "⁶⁶",
+              "number": "66",
+              "word": "tekoit",
+              "explanation": "Habitante de Tekoa. Así también en vers. 9."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2108,7 +2545,7 @@
         },
         {
           "verse": 6,
-          "tth": "Y tenía tu sierva dos hijos; y lucharon los dos en el campo y no hubo rescatador entre ellos, y golpeó el uno al otro (Lit.: uno) y lo hizo morir.",
+          "tth": "Y tenía tu sierva dos hijos; y lucharon los dos en el campo y no hubo rescatador entre ellos, y golpeó el uno al otro y lo hizo morir.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2174,8 +2611,15 @@
         },
         {
           "verse": 17,
-          "tth": "Y dijo tu sierva: “Sea, ruego, la palabra de mi amo el rey, para descanso, porque como el malaj (ángel) de Elohim, así es mi amo el rey para escuchar el bien y el mal. ¡Y יהוה tu Elohim estará contigo!",
-          "footnotes": [],
+          "tth": "Y dijo tu sierva: “Sea, ruego, la palabra de mi amo el rey, para descanso, porque como el mensajero⁶⁷ de Elohim, así es mi amo el rey para escuchar el bien y el mal. ¡Y יהוה tu Elohim estará contigo!",
+          "footnotes": [
+            {
+              "marker": "⁶⁷",
+              "number": "67",
+              "word": "mensajero",
+              "explanation": "O, ángel. Heb.: Malaj."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2210,7 +2654,7 @@
         },
         {
           "verse": 23,
-          "tth": "Y se levantó Ioab y fue a Gueshur, y trajo a Abshalom a Ierushalem.",
+          "tth": "Y se levantó Ioab y fue a Gueshur, y trajo a Abshalom a Yerushaláim.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2228,8 +2672,15 @@
         },
         {
           "verse": 26,
-          "tth": "Y cuando afeitaba su cabeza, y era al final de cada año (Lit.: de días a días) que se afeitaba, pues era pesada sobre él y se la afeitaba, y pesaba el cabello de su cabeza doscientos shekel, con la piedra del rey.",
-          "footnotes": [],
+          "tth": "Y cuando afeitaba su cabeza, y era al final de cada año⁶⁸ que se afeitaba, pues era pesada sobre él y se la afeitaba, y pesaba el cabello de su cabeza doscientos shekel, con la piedra del rey.",
+          "footnotes": [
+            {
+              "marker": "⁶⁸",
+              "number": "68",
+              "word": "año",
+              "explanation": "Lit.: de días a días."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2240,7 +2691,7 @@
         },
         {
           "verse": 28,
-          "tth": "Y habitó Abshalom en Ierushalem dos años, y el rostro del rey no vio.",
+          "tth": "Y habitó Abshalom en Yerushaláim dos años, y el rostro del rey no vio.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2252,8 +2703,15 @@
         },
         {
           "verse": 30,
-          "tth": "Y dijo a sus siervos: Miren, la porción de Ioab está al lado mío, y tiene él allí cebada; vayan y enciéndanla con fuego. Y quemaron los siervos de Abshalom la porción con fuego. [Y los siervos de Ioab vinieron a él, con sus vestiduras rasgadas, y dijeron: “Los siervos de Abshalom encendieron con fuego el campo”.] (Este párrafo no se encuentra en el Texto Masorético, pero es parte del texto en la versión griega y los Manuscritos del Mar Muerto, fragmento ‘4QSam’).",
-          "footnotes": [],
+          "tth": "Y dijo a sus siervos: Miren, la porción de Ioab está al lado mío, y tiene él allí cebada; vayan y enciéndanla con fuego. Y quemaron los siervos de Abshalom la porción con fuego. [Y los siervos de Ioab vinieron a él, con sus vestiduras rasgadas, y dijeron: “Los siervos de Abshalom encendieron con fuego el campo⁶⁹”.].",
+          "footnotes": [
+            {
+              "marker": "⁶⁹",
+              "number": "69",
+              "word": "campo",
+              "explanation": "Este párrafo no se encuentra en el T.M., pero es parte del texto en la versión griega y los Manuscritos del Mar Muerto, fragmento ‘4QSam’."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2323,25 +2781,39 @@
         },
         {
           "verse": 8,
-          "tth": "Porque un voto prometió tu siervo cuando habitaba en Gueshur, en Aram, diciendo: “Si volver, me hace volver יהוה a Ierushalem, serviré a יהוה”.",
+          "tth": "Porque un voto prometió tu siervo cuando habitaba en Gueshur, en Aram, diciendo: “Si volver, me hace volver יהוה a Yerushaláim, serviré a יהוה”.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "Y le dijo el rey: Ve en shalom. Y se levantó y fue a Jebrón.",
-          "footnotes": [],
+          "tth": "Y le dijo el rey: Ve en shalom⁷⁰. Y se levantó y fue a Jebrón.",
+          "footnotes": [
+            {
+              "marker": "⁷⁰",
+              "number": "70",
+              "word": "shalom",
+              "explanation": "Plenitud, ausencia de deudas."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 10,
-          "tth": "Pero envió Abshalom exploradores por todas las tribus de Israel, diciendo: Cuando escuchen la voz del shofar, dirán: “Reina Abshalom en Jebrón”.",
-          "footnotes": [],
+          "tth": "Pero envió Abshalom exploradores por todas las tribus de Israel, diciendo: Cuando escuchen la voz del shofar⁷¹, dirán: “Reina Abshalom en Jebrón”.",
+          "footnotes": [
+            {
+              "marker": "⁷¹",
+              "number": "71",
+              "word": "shofar",
+              "explanation": "Cuerno de carnero."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 11,
-          "tth": "Y con Abshalom fueron doscientos hombres de Ierushalem llamados; y fueron con su integridad, y no sabían ninguna cosa.",
+          "tth": "Y con Abshalom fueron doscientos hombres de Yerushaláim llamados; y fueron con su integridad, y no sabían ninguna cosa.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2359,7 +2831,7 @@
         },
         {
           "verse": 14,
-          "tth": "Y dijo David a todos sus siervos que estaban con él en Ierushalem: Levántense y huyamos, porque no habrá para nosotros escape de delante de Abshalom. Apresúrense para ir, no sea que se apresure y nos alcance, y empuje sobre nosotros la maldad y hiera la ciudad a boca de espada.",
+          "tth": "Y dijo David a todos sus siervos que estaban con él en Yerushaláim: Levántense y huyamos, porque no habrá para nosotros escape de delante de Abshalom. Apresúrense para ir, no sea que se apresure y nos alcance, y empuje sobre nosotros la maldad y hiera la ciudad a boca de espada.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2377,14 +2849,40 @@
         },
         {
           "verse": 17,
-          "tth": "Y salió el rey, y todo el pueblo a sus pies, y se pararon en Bet Hamerjak (Casa Remota).",
-          "footnotes": [],
+          "tth": "Y salió el rey, y todo el pueblo a sus pies, y se pararon en Bet Hamerjak⁷².",
+          "footnotes": [
+            {
+              "marker": "⁷²",
+              "number": "72",
+              "word": "Hamerjak",
+              "explanation": "Casa Remota."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 18,
-          "tth": "Y todos sus siervos pasaron a su mano, y todo el keretí, todo el peletí y todos los guitím, seiscientos hombres que vinieron a sus pies de Gat; pasaron sobre la faz del rey.",
-          "footnotes": [],
+          "tth": "Y todos sus siervos pasaron a su mano, y todo el keretí⁷³, todo el peletí⁷⁴ y todos los guitim⁷⁵, seiscientos hombres que vinieron a sus pies de Gat; pasaron sobre la faz del rey.",
+          "footnotes": [
+            {
+              "marker": "⁷³",
+              "number": "73",
+              "word": "keretí",
+              "explanation": "Cereteo."
+            },
+            {
+              "marker": "⁷⁴",
+              "number": "74",
+              "word": "peletí",
+              "explanation": "Peleteo."
+            },
+            {
+              "marker": "⁷⁵",
+              "number": "75",
+              "word": "guitim",
+              "explanation": "Geteos. Sing., guití. Así en el resto del cap."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2449,7 +2947,7 @@
         },
         {
           "verse": 29,
-          "tth": "E hizo volver Tzadok, y Ebiatar, al arca de Elohim a Ierushalem, y permanecieron allí.",
+          "tth": "E hizo volver Tzadok, y Ebiatar, al arca de Elohim a Yerushaláim, y permanecieron allí.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2467,8 +2965,15 @@
         },
         {
           "verse": 32,
-          "tth": "Y sucedió que David llegó hasta la cumbre que se inclinaba allí a Elohim, y he aquí, a su encuentro venía Jushai el arkí, rasgada su túnica y tierra sobre su cabeza.",
-          "footnotes": [],
+          "tth": "Y sucedió que David llegó hasta la cumbre que se inclinaba allí a Elohim, y he aquí, a su encuentro venía Jushai el arkí⁷⁶, rasgada su túnica y tierra sobre su cabeza.",
+          "footnotes": [
+            {
+              "marker": "⁷⁶",
+              "number": "76",
+              "word": "arkí",
+              "explanation": "Arquita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2497,7 +3002,7 @@
         },
         {
           "verse": 37,
-          "tth": "Y entró Jushai, amigo de David, a la ciudad, y Abshalom entró a Ierushalem. Shimei maldice a David",
+          "tth": "Y entró Jushai, amigo de David, a la ciudad, y Abshalom entró a Yerushaláim. Shimei desprecia a David",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -2508,7 +3013,7 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y David pasó un poco de la cumbre, y he aquí, Tziba, joven de Mefiboshet, venía a su encuentro, y una pareja de asnos ensillados (O, atados), y sobre ellos doscientos panes, cien racimos de pasas, cien frutas de verano y un odre de vino.",
+          "tth": "Y David pasó un poco de la cumbre, y he aquí, Tziba, joven de Mefiboshet, venía a su encuentro, y una pareja de asnos ensillados, y sobre ellos doscientos panes, cien racimos de pasas, cien frutas de verano y un odre de vino.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2520,7 +3025,7 @@
         },
         {
           "verse": 3,
-          "tth": "Y dijo el rey: ¿Y dónde está el hijo de tu amo? Y dijo Tziba al rey: He aquí, permaneció en Ierushalem, porque dijo: “Hoy devolverá a mí la casa de Israel el reino de mi padre”.",
+          "tth": "Y dijo el rey: ¿Y dónde está el hijo de tu amo? Y dijo Tziba al rey: He aquí, permaneció en Yerushaláim, porque dijo: “Hoy devolverá a mí la casa de Israel el reino de mi padre”.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2532,7 +3037,7 @@
         },
         {
           "verse": 5,
-          "tth": "Y vino el rey David hasta Bajurím, y he aquí, de allí un hombre salió, de la familia de la casa de Shaúl, y su nombre era Shimei, hijo de Guera; salió, saliendo y maldiciendo;",
+          "tth": "Y vino el rey David hasta Bajurím, y he aquí, de allí un hombre salió, de la familia de la casa de Shaúl, y su nombre era Shimei, hijo de Guera; salió, saliendo y despreciando;",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2544,7 +3049,7 @@
         },
         {
           "verse": 7,
-          "tth": "Y así decía Shimei en su maldecir: ¡Salga, salga, hombre de sangre y hombre de Belial!",
+          "tth": "Y así decía Shimei en su despreciar: ¡Salga, salga, hombre de sangre y hombre de Belial!",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2562,25 +3067,32 @@
         },
         {
           "verse": 10,
-          "tth": "Y dijo el rey: ¿Qué hay para mí y para ustedes, hijos de Tzeruiáh? Si él maldice, y si יהוה ha dicho a él: “Maldice a David”, ¿quién dirá: “Por qué has hecho así”?",
+          "tth": "Y dijo el rey: ¿Qué hay para mí y para ustedes, hijos de Tzeruiáh? Si él desprecia, y si יהוה ha dicho a él: “Desprecia a David”, ¿quién dirá: “Por qué has hecho así”?",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 11,
-          "tth": "Y dijo David a Abishai y a todos sus siervos: He aquí, mi hijo que salió de mis entrañas busca mi vida, ¿y cuánto más ahora el benieminí (benjamita)? Déjenlo tranquilo, y maldecirá, porque le dijo יהוה",
-          "footnotes": [],
+          "tth": "Y dijo David a Abishai y a todos sus siervos: He aquí, mi hijo que salió de mis entrañas busca mi vida, ¿y cuánto más ahora el benieminí⁷⁷? Déjenlo tranquilo, y despreciará, porque le dijo יהוה.",
+          "footnotes": [
+            {
+              "marker": "⁷⁷",
+              "number": "77",
+              "word": "miní",
+              "explanation": "Benjamita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 12,
-          "tth": "Quizá vea יהוה en mi iniquidad y me devuelva יהוה bien en lugar de su maldición de este día.",
+          "tth": "Quizá vea יהוה en mi iniquidad y me devuelva יהוה bien en lugar de su desprecio este día.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 13,
-          "tth": "Y fue David, y sus hombres, por el camino; y Shimei iba por el lado del monte en contraposición a él, yendo y maldiciendo, y apedreaba con piedras en contra de él y le polvoreaba con polvo.",
+          "tth": "Y fue David, y sus hombres, por el camino; y Shimei iba por el lado del monte en contraposición a él, yendo y despreciando, y apedreaba con piedras en contra de él y le polvoreaba con polvo.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2592,14 +3104,21 @@
         },
         {
           "verse": 15,
-          "tth": "Y Abshalom y todo el pueblo, los hombres de Israel, entraron a Ierushalem, y Ajitofel con él.",
+          "tth": "Y Abshalom y todo el pueblo, los hombres de Israel, entraron a Yerushaláim, y Ajitofel con él.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 16,
-          "tth": "Y sucedió cuando vino Jushai el arkí, amigo de David, a Abshalom, dijo Jushai a Abshalom: ¡Viva el rey! ¡Viva el rey!",
-          "footnotes": [],
+          "tth": "Y sucedió cuando vino Jushai el arkí⁷⁸, amigo de David, a Abshalom, dijo Jushai a Abshalom: ¡Viva el rey! ¡Viva el rey!",
+          "footnotes": [
+            {
+              "marker": "⁷⁸",
+              "number": "78",
+              "word": "arkí",
+              "explanation": "Arquita. Así también en vers. 14."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2705,14 +3224,28 @@
         },
         {
           "verse": 10,
-          "tth": "Y él, incluso hijo de valor, que su corazón es como el corazón del león, ciertamente se derretirá (Lit.: derretir se derretirá), pues sabe todo Israel que poderoso es tu padre, e hijos de valor los que están con él.",
-          "footnotes": [],
+          "tth": "Y él, incluso hijo de valor, que su corazón es como el corazón del león, ciertamente se derretirá⁷⁹, pues sabe todo Israel que poderoso es tu padre, e hijos de valor los que están con él.",
+          "footnotes": [
+            {
+              "marker": "⁷⁹",
+              "number": "79",
+              "word": "rretirá",
+              "explanation": "Lit.: derritiendo, se derretirá."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 11,
-          "tth": "Pues, yo aconsejo que se reúna completamente (Lit.: reuniendo, se reúna) junto a ti todo Israel, desde Dan y hasta Beersheva, como la arena que está en el mar, por multitud, y que tu rostro vaya al combate.",
-          "footnotes": [],
+          "tth": "Pues, yo aconsejo que se reúna completamente⁸⁰ junto a ti todo Israel, desde Dan y hasta Beersheva, como la arena que está en el mar, por multitud, y que tu rostro vaya al combate.",
+          "footnotes": [
+            {
+              "marker": "⁸⁰",
+              "number": "80",
+              "word": "mente",
+              "explanation": "Lit.: reuniendo, se reúna."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2741,8 +3274,15 @@
         },
         {
           "verse": 16,
-          "tth": "Y ahora, envíen rápidamente y den a conocer a David, diciendo: No te alojes esta noche en las llanuras del desierto, y además, cruza sin falta (Lit.: cruzar cruza), no sea que trague al rey y a todo el pueblo que está con él.",
-          "footnotes": [],
+          "tth": "Y ahora, envíen rápidamente y den a conocer a David, diciendo: No te alojes esta noche en las llanuras del desierto, y además, cruza sin falta⁸¹, no sea que trague al rey y a todo el pueblo que está con él.",
+          "footnotes": [
+            {
+              "marker": "⁸¹",
+              "number": "81",
+              "word": "falta",
+              "explanation": "Lit.: cruzando, cruza."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2753,19 +3293,26 @@
         },
         {
           "verse": 18,
-          "tth": "Pero los vio un joven y avisó a Abshalom; y se fueron los dos rápidamente y entraron a la casa de un hombre en Bajurím, y pertenecía a él un pozo en su recinto, y descendieron allí.",
+          "tth": "Pero los vio un joven y avisó a Abshalom; y se fueron los dos rápidamente y entraron a la casa de un hombre en Bajurim, y pertenecía a él un pozo en su recinto, y descendieron allí.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 19,
-          "tth": "Y tomó la mujer y extendió la manta sobre la boca del pozo y difundió sobre él grano molido (O, sémola), y no se conocía la cosa.",
-          "footnotes": [],
+          "tth": "Y tomó la mujer y extendió la manta sobre la boca del pozo y difundió sobre él grano molido⁸², y no se conocía el asunto.",
+          "footnotes": [
+            {
+              "marker": "⁸²",
+              "number": "82",
+              "word": "lido",
+              "explanation": "O, sémola."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 20,
-          "tth": "Y vinieron los siervos de Abshalom hacia la mujer a la casa, y dijeron: ¿Dónde están Ajimáatz y Iehonatán, y dijo a ellos la mujer: Han pasado el arroyo (Lit.: contenedor) de aguas. Y buscaron, pero no hallaron, y volvieron a Ierushalem. Abshalom persigue a David",
+          "tth": "Y vinieron los siervos de Abshalom hacia la mujer a la casa, y dijeron: ¿Dónde están Ajimáatz y Iehonatán, y dijo a ellos la mujer: Han pasado el arroyo⁸³ de aguas. Y buscaron, pero no hallaron, y volvieron a Yerushaláim. Abshalom persigue a David",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -2789,14 +3336,34 @@
         },
         {
           "verse": 24,
-          "tth": "Y David entró a Majanáim, y Abshalom pasó el Iardén, él y todo hombre de Israel con él.",
-          "footnotes": [],
+          "tth": "Y David entró a Majanáim, y Abshalom pasó el Iardén⁸⁴, él y todo hombre de Israel con él.",
+          "footnotes": [
+            {
+              "marker": "⁸⁴",
+              "number": "84",
+              "word": "Iardén",
+              "explanation": "Jordán."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 25,
-          "tth": "Y a Amasa puso Abshalom en lugar de Ioab sobre el ejército. Y Amasa era hijo de un hombre, y su nombre era Itrá el israelí, quien había entrado a Abigail (heb.: Abigal), hija de Najash, hermana de Tzeruiáh, madre de Ioab.",
-          "footnotes": [],
+          "tth": "Y a Amasa puso Abshalom en lugar de Ioab sobre el ejército. Y Amasa era hijo de un hombre, y su nombre era Itrá el israelí⁸⁵, quien había entrado a Abigail⁸⁶, hija de Najash, hermana de Tzeruiáh, madre de Ioab.",
+          "footnotes": [
+            {
+              "marker": "⁸⁵",
+              "number": "85",
+              "word": "israelí",
+              "explanation": "Israelita."
+            },
+            {
+              "marker": "⁸⁶",
+              "number": "86",
+              "word": "Abigail",
+              "explanation": "Heb.: Abigal."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2819,7 +3386,7 @@
         },
         {
           "verse": 29,
-          "tth": "miel, mantequilla, rebaño y queso (O, crema; significado dudoso) de ganado, trajeron a David y al pueblo que estaba con él para comer, pues dijeron: El pueblo está hambriento, cansado y sediento en el desierto. Muerte de Abshalom",
+          "tth": "miel, mantequilla, rebaño y queso⁸⁷ de ganado, trajeron a David y al pueblo que estaba con él para comer, pues dijeron: El pueblo está hambriento, cansado y sediento en el desierto. Muerte de Abshalom",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -2830,14 +3397,27 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y alistó David al pueblo que estaba con él, y puso sobre ellos jefes de miles y jefes de cientos.",
+          "tth": "Y encargó David al pueblo que estaba con él, y puso sobre ellos jefes de miles y jefes de cientos.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "Y envió David al pueblo; un tercio en mano de Ioab, un tercio en mano de Abishai, hijo de Tzeruiáh, hermano de Ioab, y un tercio en mano de Itai el guití. Y dijo el rey al pueblo: Ciertamente saldré (Lit.: Salir saldré) también yo con ustedes.",
-          "footnotes": [],
+          "tth": "Y envió David al pueblo; un tercio en mano de Ioab, un tercio en mano de Abishai, hijo de Tzeruiáh, hermano de Ioab, y un tercio en mano de Itai el guití⁸⁸. Y dijo el rey al pueblo: Ciertamente saldré⁸⁹ también yo con ustedes.",
+          "footnotes": [
+            {
+              "marker": "⁸⁸",
+              "number": "88",
+              "word": "guití",
+              "explanation": "Geteo."
+            },
+            {
+              "marker": "⁸⁹",
+              "number": "89",
+              "word": "saldré",
+              "explanation": "Lit.: saliendo, saldré."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2938,20 +3518,34 @@
         },
         {
           "verse": 19,
-          "tth": "Y Ajimáatz, hijo de Tzadok, dijo: Déjame correr, te ruego, y daré las noticias al rey, que lo ha juzgado יהוה de mano de sus enemigos.",
+          "tth": "Y Ajimáatz, hijo de Tzadok, dijo: Déjame correr, te ruego, y daré la buena nueva al rey, que lo ha juzgado יהוה de mano de sus enemigos.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 20,
-          "tth": "Pero le dijo Ioab: No eres hombre de noticias (heb.: besorah) tú este día, darás noticias en otro día; y este día no darás noticias, porque el hijo del rey ha muerto.",
-          "footnotes": [],
+          "tth": "Pero le dijo Ioab: No eres hombre de buena nueva⁹⁰ tú este día, darás la buena nueva en otro día; y este día no darás buena nueva, porque el hijo del rey ha muerto.",
+          "footnotes": [
+            {
+              "marker": "⁹⁰",
+              "number": "90",
+              "word": "nueva",
+              "explanation": "Heb.: Besorah. Así también en los versículos 25 y 27."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 21,
-          "tth": "Y dijo Ioab al cushí: Ve, da a conocer al rey lo que has visto. Y se inclinó el cushí a Ioab, y corrió.",
-          "footnotes": [],
+          "tth": "Y dijo Ioab al cushí⁹¹: Ve, da a conocer al rey lo que has visto. Y se inclinó el cushí a Ioab, y corrió.",
+          "footnotes": [
+            {
+              "marker": "⁹¹",
+              "number": "91",
+              "word": "cushí",
+              "explanation": "Cusita. Así en el resto del cap."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -2974,26 +3568,33 @@
         },
         {
           "verse": 25,
-          "tth": "Y llamó el vigilante y dio a conocer al rey. Y dijo el rey: Si está él solo hay noticias en su boca. Y continuaba yendo y se acercó.",
+          "tth": "Y llamó el vigilante y dio a conocer al rey. Y dijo el rey: Si está él solo hay buena nueva en su boca. Y continuaba yendo y se acercó.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 26,
-          "tth": "Y vio el vigilante otro hombre corriendo; y llamó el vigilante al portero, y dijo: He aquí, un hombre corre solo. Y dijo el rey: También este trae noticias.",
+          "tth": "Y vio el vigilante otro hombre corriendo; y llamó el vigilante al portero, y dijo: He aquí, un hombre corre solo. Y dijo el rey: También este trae buena nueva.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 27,
-          "tth": "Y dijo el vigilante: Yo veo el correr del primero, es como el correr de Ajimáatz, hijo de Tzadok. Y dijo el rey: Hombre bueno es este, y con buenas noticias viene.",
+          "tth": "Y dijo el vigilante: Yo veo el correr del primero, es como el correr de Ajimáatz, hijo de Tzadok. Y dijo el rey: Hombre bueno es este, y con buena noticia viene.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 28,
-          "tth": "Y llamó Ajimáatz, y dijo al rey: Shalom. Y se inclinó al rey a sus narices a tierra, y dijo: Bendito יהוה tu Elohim, que ha encerrado a los hombres que levantaban sus manos contra mi amo el rey.",
-          "footnotes": [],
+          "tth": "Y llamó Ajimáatz, y dijo al rey: Shalom⁹². Y se inclinó al rey a sus narices a tierra, y dijo: Bendito יהוה tu Elohim, que ha encerrado a los hombres que levantaban sus manos contra mi amo el rey.",
+          "footnotes": [
+            {
+              "marker": "⁹²",
+              "number": "92",
+              "word": "Shalom",
+              "explanation": "Plenitud, ausencia de deudas. Así en el resto del cap."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3075,7 +3676,7 @@
         },
         {
           "verse": 8,
-          "tth": "Y se levantó el rey y se sentó en la puerta. Y a todo el pueblo dieron a conocer, diciendo: He aquí, el rey está sentado en la puerta. Y vino todo el pueblo delante del rey.Pero Israel había huido, cada hombre a su tienda. David vuelve a Ierushalem",
+          "tth": "Y se levantó el rey y se sentó en la puerta. Y a todo el pueblo dieron a conocer, diciendo: He aquí, el rey está sentado en la puerta. Y vino todo el pueblo delante del rey.Pero Israel había huido, cada hombre a su tienda. David vuelve a Yerushaláim",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3117,14 +3718,28 @@
         },
         {
           "verse": 15,
-          "tth": "Y volvió el rey y vino hasta el Iardén. Y Iehudáh vino a Gilgal para ir al encuentro del rey, para hacer pasar al rey el Iardén.",
-          "footnotes": [],
+          "tth": "Y volvió el rey y vino hasta el Iardén⁹³. Y Iehudáh vino a Gilgal para ir al encuentro del rey, para hacer pasar al rey el Iardén.",
+          "footnotes": [
+            {
+              "marker": "⁹³",
+              "number": "93",
+              "word": "Iardén",
+              "explanation": "Jordán. Así en el resto del cap."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 16,
-          "tth": "Y se apresuró Shimei, hijo de Guerá el benieminí, que era de Bajurím; y descendió con los hombres de Iehudáh al encuentro del rey David.",
-          "footnotes": [],
+          "tth": "Y se apresuró Shimei, hijo de Guerá el benieminí⁹⁴, que era de Bajurim; y descendió con los hombres de Iehudáh al encuentro del rey David.",
+          "footnotes": [
+            {
+              "marker": "⁹⁴",
+              "number": "94",
+              "word": "ieminí",
+              "explanation": "Benjamita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3141,7 +3756,7 @@
         },
         {
           "verse": 19,
-          "tth": "Y dijo al rey: No piense para mí, amo mío, iniquidad, y no recuerdes que hizo tortuosamente tu siervo en el día que salió mi amo el rey de Ierushalem, para ponerlo el rey en su corazón.",
+          "tth": "Y dijo al rey: No piense para mí, amo mío, iniquidad, y no recuerdes que hizo tortuosamente tu siervo en el día que salió mi amo el rey de Yerushaláim, para ponerlo el rey en su corazón.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3153,14 +3768,28 @@
         },
         {
           "verse": 21,
-          "tth": "Y respondió Abishai, hijo de Tzeruiáh, y dijo: ¿A causa de ésto no morirá Shimei?, pues maldijo al ungido (heb.: mashiaj) de יהוה.",
-          "footnotes": [],
+          "tth": "Y respondió Abishai, hijo de Tzeruiáh, y dijo: ¿A causa de ésto no morirá Shimei?, pues despreció al ungido⁹⁵ de יהוה.",
+          "footnotes": [
+            {
+              "marker": "⁹⁵",
+              "number": "95",
+              "word": "ungido",
+              "explanation": "Heb.: Mashíaj."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 22,
-          "tth": "Y dijo David: ¿Qué hay para mí y para ustedes, hijos de Tzeruiáh, que son para mí hoy por adversario (heb.: satán)? ¿Hoy morirá un hombre en Israel? Pues, ¿no sé que hoy yo soy rey sobre Israel?",
-          "footnotes": [],
+          "tth": "Y dijo David: ¿Qué hay para mí y para ustedes, hijos de Tzeruiáh, que son para mí hoy por adversario⁹⁶? ¿Hoy morirá un hombre en Israel? Pues, ¿no sé que hoy yo soy rey sobre Israel?",
+          "footnotes": [
+            {
+              "marker": "⁹⁶",
+              "number": "96",
+              "word": "adversario",
+              "explanation": "Heb.: Satán."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3171,13 +3800,20 @@
         },
         {
           "verse": 24,
-          "tth": "Y Mefiboshet, hijo de Shaúl, descendió al encuentro del rey; y no se había hecho sus pies y no se había hecho su bigote, y sus vestiduras no había lavado, desde el día que se fue el rey hasta el día que vino en shalom.",
-          "footnotes": [],
+          "tth": "Y Mefiboshet, hijo de Shaúl, descendió al encuentro del rey; y no se había hecho sus pies y no se había hecho su bigote, y sus vestiduras no había lavado, desde el día que se fue el rey hasta el día que vino en shalom⁹⁷.",
+          "footnotes": [
+            {
+              "marker": "⁹⁷",
+              "number": "97",
+              "word": "shalom",
+              "explanation": "Plenitud, ausencia de deudas. Así también en vers. 30."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 25,
-          "tth": "Y sucedió que entró en Ierushalem al encuentro del rey, y le dijo el rey: ¿Por qué no fuiste conmigo, Mefiboshet?",
+          "tth": "Y sucedió que entró en Yerushaláim al encuentro del rey, y le dijo el rey: ¿Por qué no fuiste conmigo, Mefiboshet?",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3189,8 +3825,15 @@
         },
         {
           "verse": 27,
-          "tth": "Y calumnió (Lit.: fue como explorador) a tu siervo hacia mi amo el rey; pero mi amo el rey es como el malaj de Elohim; pero haz lo bueno en tus ojos.",
-          "footnotes": [],
+          "tth": "Y calumnió a tu siervo hacia mi amo el rey; pero mi amo el rey es como el mensajero⁹⁸ de Elohim; pero haz lo bueno en tus ojos.",
+          "footnotes": [
+            {
+              "marker": "⁹⁸",
+              "number": "98",
+              "word": "mensajero",
+              "explanation": "O, ángel. Heb.: Malaj."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3201,7 +3844,7 @@
         },
         {
           "verse": 29,
-          "tth": "Y le dijo el rey: ¿Por qué hablas todavía tus palabras (O, de tus cosas)? He dicho: “Tú y Tziba se repartirán el campo”.",
+          "tth": "Y le dijo el rey: ¿Por qué hablas todavía tus palabras? He dicho: “Tú y Tziba se repartirán el campo”.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3225,13 +3868,13 @@
         },
         {
           "verse": 33,
-          "tth": "Y dijo el rey a Barzilai: Tú cruza conmigo y te sostendré conmigo en Ierushalem.",
+          "tth": "Y dijo el rey a Barzilai: Tú cruza conmigo y te sostendré conmigo en Yerushaláim.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 34,
-          "tth": "Y dijo Barzilai al rey: ¿Cuántos son los días de los años de mi vida, que subiré con el rey a Ierushalem?",
+          "tth": "Y dijo Barzilai al rey: ¿Cuántos son los días de los años de mi vida, que subiré con el rey a Yerushaláim?",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3285,7 +3928,7 @@
         },
         {
           "verse": 43,
-          "tth": "Y respondió un hombre de Israel a un hombre de Iehudáh, y dijo: Diez partes (Lit.: manos) hay para mí en el rey, y también en David yo tengo más que tú; ¿y por qué me has hecho insignificante? ¿Y no fue mi palabra primera para mí para hacer volver a mi rey? Y fue más dura la palabra del hombre de Iehudáh que la palabra del hombre de Israel. Rebelión y muerte de Sheva",
+          "tth": "Y respondió un hombre de Israel a un hombre de Iehudáh, y dijo: Diez partes⁹⁹ hay para mí en el rey, y también en David yo tengo más que tú; ¿y por qué me has hecho insignificante? ¿Y no fue mi palabra primera para mí para hacer volver a mi rey? Y fue más dura la palabra del hombre de Iehudáh que la palabra del hombre de Israel. Rebelión y muerte de Sheva",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -3296,19 +3939,38 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y allí se encontraba un hombre de Belial, y su nombre era Sheva, hijo de Bijrí, un hombre ieminí (benjamita). Y sopló con el shofar y dijo: ¡No hay para nosotros parte en David, y no hay herencia para nosotros en el hijo de Ishai! ¡Cada hombre a sus tiendas, Israel!",
-          "footnotes": [],
+          "tth": "Y allí se encontraba un hombre de Belial¹⁰⁰, y su nombre era Sheva, hijo de Bijrí, un hombre ieminí¹⁰¹. Y sopló con el shofar¹⁰² y dijo: ¡No hay para nosotros parte en David, y no hay herencia para nosotros en el hijo de Ishai! ¡Cada hombre a sus tiendas, Israel!",
+          "footnotes": [
+            {
+              "marker": "¹⁰⁰",
+              "number": "100",
+              "word": "Belial",
+              "explanation": "Sin provecho."
+            },
+            {
+              "marker": "¹⁰¹",
+              "number": "101",
+              "word": "ieminí",
+              "explanation": "Benjamita."
+            },
+            {
+              "marker": "¹⁰²",
+              "number": "102",
+              "word": "far",
+              "explanation": "Cuerno de carnero."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "Y subió todo hombre de Israel de detrás de David, tras Sheva, hijo de Bijrí; pero los hombres de Iehudáh se aferraron a su rey, desde el Iardén y hasta Ierushalem.",
+          "tth": "Y subió todo hombre de Israel de detrás de David, tras Sheva, hijo de Bijrí; pero los hombres de Iehudáh se aferraron a su rey, desde el Iardén y hasta Yerushaláim.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 3,
-          "tth": "Y vino David a su casa en Ierushalem, y tomó el rey a las diez mujeres concubinas que había dejado (Lit.: hecho descansar) para guardar la casa; y las puso en la casa de guardia y las sostuvo, pero a ellas no entró. Y estuvieron confinadas (O, atadas) hasta el día de su muerte, viviendo viudas.",
+          "tth": "Y vino David a su casa en Yerushaláim, y tomó el rey a las diez mujeres concubinas que había dejado para guardar la casa; y las puso en la casa de guardia y las sostuvo, pero a ellas no entró. Y estuvieron confinadas hasta el día de su muerte, viviendo viudas.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3332,8 +3994,21 @@
         },
         {
           "verse": 7,
-          "tth": "Y salieron tras él los hombres de Ioab, y el keretí y el peletí, y todos los poderosos; y salieron de Ierushalem para perseguir tras Sheva, hijo de Bijrí.",
-          "footnotes": [],
+          "tth": "Y salieron tras él los hombres de Ioab, y el keretí¹⁰³ y el peletí¹⁰⁴, y todos los poderosos; y salieron de Yerushaláim para perseguir tras Sheva, hijo de Bijrí.",
+          "footnotes": [
+            {
+              "marker": "¹⁰³",
+              "number": "103",
+              "word": "keretí",
+              "explanation": "Cereteo."
+            },
+            {
+              "marker": "¹⁰⁴",
+              "number": "104",
+              "word": "peletí",
+              "explanation": "Peleteo. Así también en vers. 23."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3344,8 +4019,15 @@
         },
         {
           "verse": 9,
-          "tth": "Y dijo Ioab a Amasa: ¿Tienes shalom tú, hermano mío? Y agarró la mano derecha de Ioab en la barba de Amasa para besarlo.",
-          "footnotes": [],
+          "tth": "Y dijo Ioab a Amasa: ¿Tienes shalom¹⁰⁵ tú, hermano mío? Y agarró la mano derecha de Ioab en la barba de Amasa para besarlo.",
+          "footnotes": [
+            {
+              "marker": "¹⁰⁵",
+              "number": "105",
+              "word": "shalom",
+              "explanation": "Plenitud, ausencia de deudas."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3398,14 +4080,21 @@
         },
         {
           "verse": 18,
-          "tth": "Y ella dijo, diciendo: Palabra hablaban en la antigüedad, diciendo: “Pidiendo, pedirán en Abel”, y así terminaban.",
+          "tth": "Y ella dijo, diciendo: Palabra hablaban al principio, diciendo: “Pidiendo, pedirán en Abel”, y así terminaban.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 19,
-          "tth": "Yo soy de los pacíficos de fidelidad de Israel. Tú buscas hacer morir una ciudad y una madre en Israel. ¿Por qué tragarás la herencia de יהוה?",
-          "footnotes": [],
+          "tth": "Yo soy de los pacíficos de las fidelidades de Israel¹⁰⁶. Tú buscas hacer morir una ciudad y una madre en Israel. ¿Por qué tragarás la herencia de יהוה?",
+          "footnotes": [
+            {
+              "marker": "¹⁰⁶",
+              "number": "106",
+              "word": "rael",
+              "explanation": "Heb.: Sh’lumei emunei Israel."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3422,20 +4111,34 @@
         },
         {
           "verse": 22,
-          "tth": "Y vino la mujer a todo el pueblo con su sabiduría, y cortaron la cabeza de Sheva, hijo de Bijrí, y la lanzaron a Ioab. Y él sopló con el shofar y se dispersaron de sobre la ciudad, cada hombre a sus tiendas. Y Ioab regresó a Ierushalem al rey.",
+          "tth": "Y vino la mujer a todo el pueblo con su sabiduría, y cortaron la cabeza de Sheva, hijo de Bijrí, y la lanzaron a Ioab. Y él sopló con el shofar y se dispersaron de sobre la ciudad, cada hombre a sus tiendas. Y Ioab regresó a Yerushaláim al rey.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 23,
-          "tth": "Y Ioab estaba sobre todo el ejército de Israel, y Benaiáh, hijo de Iehoiada estaba sobre el keretí (heb.: kerí) y sobre el peletí.",
-          "footnotes": [],
+          "tth": "Y Ioab estaba sobre todo el ejército de Israel, y Benaiáh, hijo de Iehoiada estaba sobre el keretí¹⁰⁷ y sobre el peletí.",
+          "footnotes": [
+            {
+              "marker": "¹⁰⁷",
+              "number": "107",
+              "word": "keretí",
+              "explanation": "Cereteo. Heb.: Kerí."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 24,
-          "tth": "Y Adoram estaba sobre el servicio forzado (O, impuesto), y Iehoshafat, hijo de Ajilud, era registrador (Lit.: hacía recordar).",
-          "footnotes": [],
+          "tth": "Y Adoram estaba sobre el servicio forzado¹⁰⁸, y Iehoshafat, hijo de Ajilud, era registrador.",
+          "footnotes": [
+            {
+              "marker": "¹⁰⁸",
+              "number": "108",
+              "word": "forzado",
+              "explanation": "O, impuesto."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3446,7 +4149,7 @@
         },
         {
           "verse": 26,
-          "tth": "Y también Irá, el iairi, era sacerdote de David. Venganza de Guibeón",
+          "tth": "Y también Irá, el iairi¹⁰⁹, era sacerdote de David. Venganza de Guibeón",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -3457,25 +4160,39 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y hubo hambre en los días de David, tres años, año tras año, y buscó David el rostro de יהוה. Y dijo יהוה: Por Shaúl y por la casa de los sanguinarios, porque él hizo morir a los gibeoním.",
-          "footnotes": [],
+          "tth": "Y hubo hambre en los días de David, tres años, año tras año, y buscó David el rostro de יהוה. Y dijo יהוה: Por Shaúl y por la casa de los sanguinarios, porque él hizo morir a los gibeonim¹¹⁰.",
+          "footnotes": [
+            {
+              "marker": "¹¹⁰",
+              "number": "110",
+              "word": "gibeonim",
+              "explanation": "Gabaonitas. Así en el resto del cap."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "Y llamó el rey a los gibeoním y habló a ellos. Y los gibeoním no eran de los hijos de Israel ellos, sino que del remanente del emorí, y los hijos de Israel habían jurado a ellos, pero buscó Shaúl herirlos en su celo por los hijos de Israel y Iehudáh.",
-          "footnotes": [],
+          "tth": "Y llamó el rey a los gibeonim y habló a ellos. Y los gibeonim no eran de los hijos de Israel ellos, sino que del remanente del emorí¹¹¹, y los hijos de Israel habían jurado a ellos, pero buscó Shaúl herirlos en su celo por los hijos de Israel y Iehudáh.",
+          "footnotes": [
+            {
+              "marker": "¹¹¹",
+              "number": "111",
+              "word": "emorí",
+              "explanation": "Amorreo."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 3,
-          "tth": "Y dijo David a los gibeoním: ¿Qué haré por ustedes? ¿Y con qué expiaré?, y puedan bendecir la herencia de יהוה.",
+          "tth": "Y dijo David a los gibeonim: ¿Qué haré por ustedes? ¿Y con qué expiaré?, y puedan bendecir la herencia de יהוה.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 4,
-          "tth": "Y le dijeron los gibeoním: No hay para mí plata y oro con Shaúl y con su casa, y no hay para nosotros hombre para hacer morir en Israel. Y él dijo: Lo que ustedes digan haré por ustedes.",
+          "tth": "Y le dijeron los gibeonim: No hay para mí plata y oro con Shaúl y con su casa, y no hay para nosotros hombre para hacer morir en Israel. Y él dijo: Lo que ustedes digan haré por ustedes.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3499,19 +4216,26 @@
         },
         {
           "verse": 8,
-          "tth": "Y tomó el rey a dos de los hijos de Ritzpáh, hija de Aiáh, que había dado a luz para Shaúl, a Armoní y a Mefiboshet, y a cinco de los hijos de Mijal, hija de Shaúl, que dio a luz para Adriel, hijo de Barzilai el mejolatí.",
-          "footnotes": [],
+          "tth": "Y tomó el rey a dos de los hijos de Ritzpáh, hija de Aiáh, que había dado a luz para Shaúl, a Armoní y a Mefiboshet, y a cinco de los hijos de Mijal, hija de Shaúl, que dio a luz para Adriel, hijo de Barzilai el mejolatí¹¹².",
+          "footnotes": [
+            {
+              "marker": "¹¹²",
+              "number": "112",
+              "word": "mejolatí",
+              "explanation": "Meholatita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "Y los dio en mano de los gibeoním, y los dislocaron en el monte delante de יהוה, y cayeron los siete juntos; y ellos fueron muertos en los días de cosecha, en los primeros, el comienzo de la cosecha de cebada.",
+          "tth": "Y los dio en mano de los gibeonim, y los dislocaron en el monte delante de יהוה, y cayeron los siete juntos; y ellos fueron muertos en los días de cosecha, en los primeros, el comienzo de la cosecha de cebada.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 10,
-          "tth": "Y tomó Ritzpáh, hija de Aiáh, la tela de saco y la extendió para sí en la roca, desde el comienzo de la cosecha hasta la derramación de aguas sobre ellos del cielo; y no permitió al ave del cielo descansar sobre ellos de día, y a los animales del campo de noche.",
+          "tth": "Y tomó Ritzpáh, hija de Aiáh, la tela de saco y la extendió para sí en la roca, desde el comienzo de la cosecha hasta el derramamiento de aguas sobre ellos del cielo; y no permitió al ave del cielo descansar sobre ellos de día, y a los animales del campo de noche.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3523,8 +4247,21 @@
         },
         {
           "verse": 12,
-          "tth": "Y fue David y tomó los huesos de Shaúl y los huesos de Iehonatán su hijo de los señores de Iabesh Guilad, quienes los habían robado de la plaza (Lit.: del lugar espacioso) de Bet Shán, que los colgaron allí los pelishtim en el día que hirieron los pelishtim a Shaúl en Gilboa.",
-          "footnotes": [],
+          "tth": "Y fue David y tomó los huesos de Shaúl y los huesos de Iehonatán su hijo de los señores de Iabesh Guilad, quienes los habían robado de la plaza¹¹³ de Bet Shán, que los colgaron allí los pelishtim¹¹⁴ en el día que hirieron los pelishtim a Shaúl en Gilboa.",
+          "footnotes": [
+            {
+              "marker": "¹¹³",
+              "number": "113",
+              "word": "plaza",
+              "explanation": "Lit.: del lugar espacioso."
+            },
+            {
+              "marker": "¹¹⁴",
+              "number": "114",
+              "word": "pelishtim",
+              "explanation": "Filisteos. Así en el resto del cap."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3547,8 +4284,15 @@
         },
         {
           "verse": 16,
-          "tth": "E Ishbo Benob, que era de los nacidos de Rafáh (Gigante), y el peso de su lanza era de trescientos shekel de peso de cobre, y él ceñía una espada nueva; y él dijo de herir a David.",
-          "footnotes": [],
+          "tth": "E Ishbo Benob, que era de los nacidos de Rafáh¹¹⁵, y el peso de su lanza era de trescientos shekel de peso de cobre, y él ceñía una espada nueva; y él dijo de herir a David.",
+          "footnotes": [
+            {
+              "marker": "¹¹⁵",
+              "number": "115",
+              "word": "fáh",
+              "explanation": "Un gigante."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3565,8 +4309,21 @@
         },
         {
           "verse": 19,
-          "tth": "Y hubo más guerra en Gob con los pelishtim, e hirió Eljanán, hijo de Iarei Oreguím, bet halajmí (betlemita), a Goliat el guití; y la madera de su lanza era como un rodillo de tejedores.",
-          "footnotes": [],
+          "tth": "Y hubo más guerra en Gob con los pelishtim, e hirió Eljanán, hijo de Iarei Oreguim, bet halajmí¹¹⁶, a Goliat el guití¹¹⁷; y la madera de su lanza era como un rodillo de tejedores.",
+          "footnotes": [
+            {
+              "marker": "¹¹⁶",
+              "number": "116",
+              "word": "halajmí",
+              "explanation": "Betlemita."
+            },
+            {
+              "marker": "¹¹⁷",
+              "number": "117",
+              "word": "guití",
+              "explanation": "Geteo."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3612,14 +4369,21 @@
         },
         {
           "verse": 4,
-          "tth": "Él es alabado, llamaré a יהוה, y de mis enemigos soy salvo.",
+          "tth": "Él es alabado, llamaré a יהוה, y de mis enemigos seré salvado.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 5,
-          "tth": "Porque me rodearon las olas de la muerte, los torrentes de Belial me aterrorizaron;",
-          "footnotes": [],
+          "tth": "Porque me rodearon las olas de la muerte, los torrentes de Belial¹¹⁸ me aterrorizaron;",
+          "footnotes": [
+            {
+              "marker": "¹¹⁸",
+              "number": "118",
+              "word": "Belial",
+              "explanation": "Sin provecho."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3630,32 +4394,39 @@
         },
         {
           "verse": 7,
-          "tth": "En mi angustia llamé a יהוה, y a mi Elohim llamé; y escuchó desde su palacio mi voz, y mi clamor entró en sus oídos.",
+          "tth": "En mi estrechez llamé a יהוה, y a mi Elohim llamé; y escuchó desde su palacio mi voz, y mi clamor entró en sus oídos.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 8,
-          "tth": "Y se sacudió y tembló la tierra, y los fundamentos de los cielos se agitaron y fueron sacudidos, porque ardió para sí.",
+          "tth": "Y se sacudió y tembló la tierra, y los fundamentos de los cielos se agitaron",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "Subió humo por su nariz (O, en su ira), y el fuego de su boca consumió; carbones fueron encendidos por Él (O, por esto).",
+          "tth": "Subió humo por su nariz, y el fuego de su boca consumió; carbones fueron encendidos por Él.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 10,
-          "tth": "E inclinó los cielos y descendió, y densa nube debajo de sus pies.",
+          "tth": "E inclinará los cielos y descenderá, y densa nube debajo de sus pies.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 11,
-          "tth": "Y montó sobre un querubín (heb.: kerub), y voló; y fue visto sobre las alas del viento.",
-          "footnotes": [],
+          "tth": "Y montará sobre un querubín¹¹⁹, y volará; y será visto sobre las alas del viento.",
+          "footnotes": [
+            {
+              "marker": "¹¹⁹",
+              "number": "119",
+              "word": "querubín",
+              "explanation": "Heb.: Kerub."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3672,13 +4443,20 @@
         },
         {
           "verse": 14,
-          "tth": "Tronó desde los cielos יהוה, y Elyón dio su voz.",
-          "footnotes": [],
+          "tth": "Tronó desde los cielos יהוה, y Elyón¹²⁰ dio su voz.",
+          "footnotes": [
+            {
+              "marker": "¹²⁰",
+              "number": "120",
+              "word": "Elyón",
+              "explanation": "El Elevado."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 15,
-          "tth": "Envió flechas, y los dispersó, relámpago, y los confundió.",
+          "tth": "Y envió flechas, y los dispersó, relámpago, y los confundió.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3690,44 +4468,51 @@
         },
         {
           "verse": 17,
-          "tth": "Envió su mano desde lo alto, me tomó, me sacó de muchas aguas.",
+          "tth": "Enviará su mano desde lo alto, me tomará, me sacará de muchas aguas.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 18,
-          "tth": "Me rescató de mi enemigo fuerte, de mis aborrecedores, pues eran más fuertes que yo.",
+          "tth": "Me rescatará de mi enemigo fuerte, de mis aborrecedores, pues son más fuertes que yo.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 19,
-          "tth": "Me afrontaron en el día de mi angustia, mas fue יהוה apoyo para mí.",
+          "tth": "Me afrontaron en el día de mi angustia, pero será יהוה apoyo para mí.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 20,
-          "tth": "Y me sacó a amplitud; me rescató, porque se deleitó en mí.",
+          "tth": "Y me sacará a amplitud; me librará, porque se deleitó en mí.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 21,
-          "tth": "Me ha recompensado יהוה conforme a mi justicia, conforme a la pureza de mis manos me ha devuelto.",
+          "tth": "Me ha recompensado יהוה conforme a mi justicia,",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 22,
-          "tth": "Pues he guardado los caminos de יהוה, y no he actuado malvadamente de mi Elohim.",
+          "tth": "Pues he guardado los caminos de יהוה, y no he actuado condenablemente de mi Elohim.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 23,
-          "tth": "Pues todo su proceso legal estuvo delante mío, y sus estatutos, no me aparté de ellos.",
-          "footnotes": [],
+          "tth": "Pues todo su proceso legal¹²¹ estuvo delante mío, y sus decretos, no me aparté de ellos.",
+          "footnotes": [
+            {
+              "marker": "¹²¹",
+              "number": "121",
+              "word": "legal",
+              "explanation": "Heb.: Mishpat."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3738,25 +4523,25 @@
         },
         {
           "verse": 25,
-          "tth": "Y ha devuelto יהוה a mí conforme a mi justicia, conforme a mi pureza delante de sus ojos.",
+          "tth": "Y ha devuelto יהוה a mí conforme a mi justicia,",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 26,
-          "tth": "Con el misericordioso te muestras misericordioso, con el poderoso íntegro harás integridad;",
+          "tth": "Con el benevolente serás bondadoso, con el poderoso íntegro harás integridad;",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 27,
-          "tth": "con el puro te muestras puro, y con el perverso te muestras torcido.",
+          "tth": "con el puro te mostrarás puro, y con el perverso te mostrarás torcido.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 28,
-          "tth": "Y al pueblo pobre salvarás, pero tus ojos están sobre los altivosa quienes harás bajos.",
+          "tth": "Y al pueblo afligido salvarás, pero tus ojos están sobre los altivosa quienes harás bajos.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3774,8 +4559,21 @@
         },
         {
           "verse": 31,
-          "tth": "El, es perfecto su camino; la palabra de יהוה es refinada.Escudo es Él para todos los que buscanrefugio en Él.",
-          "footnotes": [],
+          "tth": "El¹²², es perfecto¹²³ su camino; el dicho de יהוה es refinado.Escudo es Él para todos",
+          "footnotes": [
+            {
+              "marker": "¹²²",
+              "number": "122",
+              "word": "El",
+              "explanation": "Poderoso. Así en el resto del cap."
+            },
+            {
+              "marker": "¹²³",
+              "number": "123",
+              "word": "perfecto",
+              "explanation": "O, completo. Heb.: Tamim."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3786,19 +4584,26 @@
         },
         {
           "verse": 33,
-          "tth": "El es mi refugio de poder, y liberó al íntegro en su camino (Otra lectura posible es: y puso íntegro mi camino).",
+          "tth": "El es mi refugio de poder, y puso íntegro mi camino.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 34,
-          "tth": "Él pone sus pies (Otros mss. dicen: mis pies) como las siervas, y sobre mis alturas me hace parar.",
-          "footnotes": [],
+          "tth": "Él pone sus pies¹²⁴ como las siervas, y sobre mis alturas me hace parar.",
+          "footnotes": [
+            {
+              "marker": "¹²⁴",
+              "number": "124",
+              "word": "pies",
+              "explanation": "Otros mss. dicen: mis pies."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 35,
-          "tth": "Él enseña mis manos para la batalla, y tensaron (Lit.: presionaron) un arco de cobre mis brazos.",
+          "tth": "Él enseña mis manos para la batalla, y tensaron un arco de cobre mis brazos.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3870,7 +4675,7 @@
         },
         {
           "verse": 47,
-          "tth": "Vive יהוה, y bendita es mi roca, y exaltado es el Elohim de la roca de mi salvación;",
+          "tth": "Vive יהוה, y bendita es mi roca, y exaltado será el Elohim de la roca de mi salvación;",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -3888,13 +4693,13 @@
         },
         {
           "verse": 50,
-          "tth": "Por eso te alabo, יהוה, en las naciones, y a tu Nombre cantaré.",
+          "tth": "Por eso te confieso, יהוה, en las naciones, y a tu Nombre cantaré melodías.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 51,
-          "tth": "Engrandeció la salvación de su rey, y hace misericordia a su ungido, a David y a su simiente hasta siempre. Últimas palabras de David",
+          "tth": "Engrandeció la salvación de su Rey, y hace bondad a su Mesías¹²⁵, a David y a su simiente¹²⁶ hasta el olam¹²⁷. Últimas palabras de David",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -3905,14 +4710,21 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y estas son las palabras de David, las últimas.Declaración de David, hijo de Ishai, declaración del hombre que fue levantado alto, el ungido del Elohim de Iaacoby el agradable cantante de Israel:",
+          "tth": "Y estas son las palabras de David, las últimas.Declaración de David, hijo de Ishai, declaración del hombre que fue levantado alto, el ungido del Elohim de Yaakov y el agradable cantante de Israel:",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "El Rúaj de יהוה habló en mí, y su palabra estuvo en mi lengua.",
-          "footnotes": [],
+          "tth": "El Rúaj¹²⁸ de יהוה habló en mí, y su palabra estuvo en mi lengua.",
+          "footnotes": [
+            {
+              "marker": "¹²⁸",
+              "number": "128",
+              "word": "Rúaj",
+              "explanation": "Espíritu, viento, poder."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3929,8 +4741,15 @@
         },
         {
           "verse": 5,
-          "tth": "Pues, no así mi casa con El, pero un pacto olam (de tiempo oculto) puso para mí, organizado en todo y guardado.Porque toda mi salvación y todo deleite, pues no hará brotar.",
-          "footnotes": [],
+          "tth": "Pues, no así mi casa con El¹²⁹, pero un pacto olam puso para mí, organizado en todo y guardado.Porque toda mi salvación y todo deleite, pues no hará brotar.",
+          "footnotes": [
+            {
+              "marker": "¹²⁹",
+              "number": "129",
+              "word": "El",
+              "explanation": "Poderoso."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3941,20 +4760,52 @@
         },
         {
           "verse": 7,
-          "tth": "y el hombre que tocare en ellos estará lleno con hierro y madera de lanza, y con fuego serán completamente quemados (Lit.: quemar serán quemados) en el asiento. Poderosos de David",
+          "tth": "y el hombre que tocare en ellos estará lleno con hierro y madera de lanza, y con fuego serán completamente quemados¹³⁰ en el asiento. Poderosos de David",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 8,
-          "tth": "Estos son los nombres de los poderosos que eran de David: Iosheb Bashebet tajkemoní, cabeza de los tres; él es Adino, su lanza fue sobre ochocientos hombres asesinados en una vez;",
-          "footnotes": [],
+          "tth": "Estos son los nombres de los poderosos que eran de David: Iosheb Bashebet¹³¹ tajkemoní¹³², cabeza de los tres; él es Adino, su lanza¹³³ fue sobre ochocientos hombres asesinados en una vez;",
+          "footnotes": [
+            {
+              "marker": "¹³¹",
+              "number": "131",
+              "word": "Bashebet",
+              "explanation": "O sea, el que se sienta en la silla."
+            },
+            {
+              "marker": "¹³²",
+              "number": "132",
+              "word": "tajkemoní",
+              "explanation": "Tacmonita."
+            },
+            {
+              "marker": "¹³³",
+              "number": "133",
+              "word": "lanza",
+              "explanation": "Otra lectura posible es: Adino, eznita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "y después de él, Eleazar, hijo de Dodi, hijo del ajojí, estaba entre los tres poderosos con David cuando desafiaron a los pelishtim que se habían reunido allí para la batalla y habían subido los hombres de Israel.",
-          "footnotes": [],
+          "tth": "y después de él, Eleazar, hijo de Dodi, hijo del ajojí¹³⁴, estaba entre los tres poderosos con David cuando desafiaron a los pelishtim¹³⁵ que se habían reunido allí para la batalla y habían subido los hombres de Israel.",
+          "footnotes": [
+            {
+              "marker": "¹³⁴",
+              "number": "134",
+              "word": "ajojí",
+              "explanation": "Ahohíta."
+            },
+            {
+              "marker": "¹³⁵",
+              "number": "135",
+              "word": "pelishtim",
+              "explanation": "Filisteos. Así en el resto del cap."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3965,8 +4816,15 @@
         },
         {
           "verse": 11,
-          "tth": "Y después de él fue Shamáh, hijo de Agué hararí. Y se habían reunido los pelishtim por (O, en) una comunidad, y había allí una porción de campo lleno de lentejas; y el pueblo huyó de delante de los pelishtim.",
-          "footnotes": [],
+          "tth": "Y después de él fue Shamáh, hijo de Agué hararí¹³⁶. Y se habían reunido los pelishtim por una comunidad, y había allí una porción de campo lleno de lentejas; y el pueblo huyó de delante de los pelishtim.",
+          "footnotes": [
+            {
+              "marker": "¹³⁶",
+              "number": "136",
+              "word": "rarí",
+              "explanation": "Ararita. Así también en vers. 33."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -3995,8 +4853,15 @@
         },
         {
           "verse": 16,
-          "tth": "Y se dividieron (O, se abrieron paso) los tres poderosos por el campamento de los pelishtim, y sacaron aguas del pozo de Bet Léjem que está por la puerta, y la llevaron y la trajeron a David; pero no quiso beberlas, y las derramó para יהוה.",
-          "footnotes": [],
+          "tth": "Y se dividieron¹³⁷ los tres poderosos por el campamento de los pelishtim, y sacaron aguas del pozo de Bet Léjem que está por la puerta, y la llevaron y la trajeron a David; pero no quiso beberlas, y las derramó para יהוה.",
+          "footnotes": [
+            {
+              "marker": "¹³⁷",
+              "number": "137",
+              "word": "dividieron",
+              "explanation": "O, se abrieron paso."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -4019,14 +4884,28 @@
         },
         {
           "verse": 20,
-          "tth": "Y Benaiáhu, hijo de Iehoiada, hijo de un vigoroso de grandes hechos de Kabtzeel, él hirió a dos héroes leones (Lit.: dos leones de Elohim) de Moab; y él descendió e hirió a un león en medio del pozo en un día de nieve.",
-          "footnotes": [],
+          "tth": "Y Benaiáhu, hijo de Iehoiada, hijo de un vigoroso de grandes hechos de Kabtzeel, él hirió a dos poderosos leones¹³⁸ de Moab; y él descendió e hirió a un león en medio del pozo en un día de nieve.",
+          "footnotes": [
+            {
+              "marker": "¹³⁸",
+              "number": "138",
+              "word": "leones",
+              "explanation": "Heb.: Ariel. Título referente a los valientes guerreros de las naciones."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 21,
-          "tth": "Y él hirió a un hombre mitzrí, que era de gran apariencia. Y en la mano del mitzrí había una lanza, pero él descendió a él con una vara y saqueó la lanza de la mano del mitzrí, y lo mató con la lanza de él.",
-          "footnotes": [],
+          "tth": "Y él hirió a un hombre mitzrí¹³⁹, que era de gran apariencia. Y en la mano del mitzrí había una lanza, pero él descendió a él con una vara y saqueó la lanza de la mano del mitzrí, y lo mató con la lanza de él.",
+          "footnotes": [
+            {
+              "marker": "¹³⁹",
+              "number": "139",
+              "word": "mitzrí",
+              "explanation": "Egipcio."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -4049,26 +4928,72 @@
         },
         {
           "verse": 25,
-          "tth": "Shamáh el jarodí, Eliká el jarodí,",
-          "footnotes": [],
+          "tth": "Shamáh el jarodí¹⁴⁰, Eliká el jarodí,",
+          "footnotes": [
+            {
+              "marker": "¹⁴⁰",
+              "number": "140",
+              "word": "jarodí",
+              "explanation": "Harodita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 26,
-          "tth": "Jeletz el paltí, Irá, hijo de Ikesh el tekoí,",
-          "footnotes": [],
+          "tth": "Jeletz el paltí¹⁴¹, Irá, hijo de Ikesh el tekoí¹⁴²,",
+          "footnotes": [
+            {
+              "marker": "¹⁴¹",
+              "number": "141",
+              "word": "paltí",
+              "explanation": "Paltita."
+            },
+            {
+              "marker": "¹⁴²",
+              "number": "142",
+              "word": "tekoí",
+              "explanation": "Tecoíta."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 27,
-          "tth": "Abiezer el anetotí, Mebunai el jushatí,",
-          "footnotes": [],
+          "tth": "Abiezer el anetotí¹⁴³, Mebunai el jushatí¹⁴⁴,",
+          "footnotes": [
+            {
+              "marker": "¹⁴³",
+              "number": "143",
+              "word": "anetotí",
+              "explanation": "Anatotita."
+            },
+            {
+              "marker": "¹⁴⁴",
+              "number": "144",
+              "word": "jushatí",
+              "explanation": "Husatita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 28,
-          "tth": "Tzalmón el ajojí, Maherai el netofatí,",
-          "footnotes": [],
+          "tth": "Tzalmón el ajojí¹⁴⁵, Maherai el netofatí¹⁴⁶,",
+          "footnotes": [
+            {
+              "marker": "¹⁴⁵",
+              "number": "145",
+              "word": "ajojí",
+              "explanation": "Ahohíta."
+            },
+            {
+              "marker": "¹⁴⁶",
+              "number": "146",
+              "word": "netofatí",
+              "explanation": "Netofatita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -4079,20 +5004,47 @@
         },
         {
           "verse": 30,
-          "tth": "Benaiáhu el piratoní, Hidai de los arroyos de Gaash,",
-          "footnotes": [],
+          "tth": "Benaiáhu el piratoní¹⁴⁷, Hidai de los arroyos de Gaash,",
+          "footnotes": [
+            {
+              "marker": "¹⁴⁷",
+              "number": "147",
+              "word": "piratoní",
+              "explanation": "Piratonita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 31,
-          "tth": "Abi Albón el arbatí, Azmávet el barjumí,",
-          "footnotes": [],
+          "tth": "Abi Albón el arbatí¹⁴⁸, Azmávet el barjumí¹⁴⁹,",
+          "footnotes": [
+            {
+              "marker": "¹⁴⁸",
+              "number": "148",
+              "word": "arbatí",
+              "explanation": "Arbatita."
+            },
+            {
+              "marker": "¹⁴⁹",
+              "number": "149",
+              "word": "barjumí",
+              "explanation": "Barhumita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 32,
-          "tth": "Eliajba el shaalboní, los hijos de Iashén, Iehonatán,",
-          "footnotes": [],
+          "tth": "Eliajba el shaalboní¹⁵⁰, los hijos de Iashén, Iehonatán,",
+          "footnotes": [
+            {
+              "marker": "¹⁵⁰",
+              "number": "150",
+              "word": "shaalboní",
+              "explanation": "Saalbonita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -4103,37 +5055,84 @@
         },
         {
           "verse": 34,
-          "tth": "Elifelet, hijo de Ajasbai, hijo del maajatí, Eliam, hijo de Ajitofel el guiloní,",
-          "footnotes": [],
+          "tth": "Elifelet, hijo de Ajasbai, hijo del maajatí, Eliam, hijo de Ajitofel el guiloní¹⁵¹,",
+          "footnotes": [
+            {
+              "marker": "¹⁵¹",
+              "number": "151",
+              "word": "guiloní",
+              "explanation": "Gilonita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 35,
-          "tth": "Jetzro el carmelí, Paarai el arbí,",
-          "footnotes": [],
+          "tth": "Jetzro el carmelí¹⁵², Paarai el arbí¹⁵³,",
+          "footnotes": [
+            {
+              "marker": "¹⁵²",
+              "number": "152",
+              "word": "carmelí",
+              "explanation": "Carmelita."
+            },
+            {
+              "marker": "¹⁵³",
+              "number": "153",
+              "word": "arbí",
+              "explanation": "Arbita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 36,
-          "tth": "Igal, hijo de Natán de Tzobáh, Bani el gadí,",
-          "footnotes": [],
+          "tth": "Igal, hijo de Natán de Tzobáh, Bani el gadí¹⁵⁴,",
+          "footnotes": [
+            {
+              "marker": "¹⁵⁴",
+              "number": "154",
+              "word": "gadí",
+              "explanation": "Gadita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 37,
-          "tth": "Tzelek el amoní, Najarai el beerotí, portadores de instrumentos de Ioab, hijo de Tzeruiáh,",
-          "footnotes": [],
+          "tth": "Tzelek el amoní¹⁵⁵, Najarai el beerotí¹⁵⁶, portadores de instrumentos de Ioab, hijo de Tzeruiáh,",
+          "footnotes": [
+            {
+              "marker": "¹⁵⁵",
+              "number": "155",
+              "word": "amoní",
+              "explanation": "Amonita."
+            },
+            {
+              "marker": "¹⁵⁶",
+              "number": "156",
+              "word": "beerotí",
+              "explanation": "Beerotita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 38,
-          "tth": "Irá el itrí, Gareb el itrí,",
-          "footnotes": [],
+          "tth": "Irá el itrí¹⁵⁷, Gareb el itrí,",
+          "footnotes": [
+            {
+              "marker": "¹⁵⁷",
+              "number": "157",
+              "word": "itrí",
+              "explanation": "Itrita."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 39,
-          "tth": "Uriyah el jití; todos son treinta y siete.",
+          "tth": "Uriyah el jití¹⁵⁸; todos son treinta y siete. David enumera al pueblo",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -4144,8 +5143,15 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Y volvió la ira de יהוה a encenderse en Israel, e indujo a David contra ellos, diciendo: Ve, enumera a Israel y a Iehudáh.",
-          "footnotes": [],
+          "tth": "Y volvió la nariz de יהוה a calentarse en Israel, y él indujo¹⁵⁹ a David contra ellos, diciendo: Ve, enumera a Israel y a Iehudáh.",
+          "footnotes": [
+            {
+              "marker": "¹⁵⁹",
+              "number": "159",
+              "word": "indujo",
+              "explanation": "O sea, ha’satán."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -4180,13 +5186,26 @@
         },
         {
           "verse": 7,
-          "tth": "Y vinieron a la fortaleza de Tzor y todas las ciudades del jiví y el kenaaní, y salieron al Néguev de Iehudáh, Beersheva.",
-          "footnotes": [],
+          "tth": "Y vinieron a la fortaleza de Tzor y todas las ciudades del jiví¹⁶⁰ y el kenaaní¹⁶¹, y salieron al Néguev de Iehudáh, Beersheva.",
+          "footnotes": [
+            {
+              "marker": "¹⁶⁰",
+              "number": "160",
+              "word": "jiví",
+              "explanation": "Heveo."
+            },
+            {
+              "marker": "¹⁶¹",
+              "number": "161",
+              "word": "kenaaní",
+              "explanation": "Cananeo."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 8,
-          "tth": "Y recorrieron por toda la tierra, y vinieron, al final de nueve meses y veinte días, a Ierushalem.",
+          "tth": "Y recorrieron por toda la tierra, y vinieron, al final de nueve meses y veinte días, a Yerushaláim.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -4222,7 +5241,7 @@
         },
         {
           "verse": 14,
-          "tth": "Y dijo David a Gad: Hay mucha angustia para mí. Caigamos, por favor, en mano de יהוה, porque muchas son sus misericordias, pero en mano de hombre no caigamos.",
+          "tth": "Y dijo David a Gad: Hay mucha angustia para mí. Caigamos, por favor, en mano de יהוה, porque muchas son sus bondades, pero en mano de hombre no caigamos.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -4234,8 +5253,21 @@
         },
         {
           "verse": 16,
-          "tth": "Y envió su mano el ángel (heb.: malaj) hacia Ierushalem para destruirla, pero restableció al inicio יהוה por el mal, y dijo al ángel que destruía en el pueblo: ¡Suficiente! ¡Ahora afloja tu mano! Y el ángel de יהוה estaba junto a la era de Aravnah el iebusí.",
-          "footnotes": [],
+          "tth": "Y envió su mano el ángel¹⁶² hacia Yerushaláim para destruirla, pero restableció al inicio יהוה por el mal, y dijo al ángel que destruía en el pueblo: ¡Suficiente! ¡Ahora afloja tu mano! Y el ángel de יהוה estaba junto a la era de Aravnah el iebusí¹⁶³.",
+          "footnotes": [
+            {
+              "marker": "¹⁶²",
+              "number": "162",
+              "word": "ángel",
+              "explanation": "O, mensajero. Heb.: Malaj."
+            },
+            {
+              "marker": "¹⁶³",
+              "number": "163",
+              "word": "iebusí",
+              "explanation": "Jebuseo. Así también en vers. 18."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -4282,7 +5314,7 @@
         },
         {
           "verse": 24,
-          "tth": "Pero dijo el rey a Aravnah: No, porque ciertamente compraré (Lit.: comprando compraré) de ti por un precio, y no haré ascender a יהוה mi Elohim ofrendas ascendidas gratuitamente. Y compró David la era y el ganado por plata, cincuenta shekel.",
+          "tth": "Pero dijo el rey a Aravnah: No, porque ciertamente compraré de ti por un precio, y no haré ascender a יהוה mi Elohim ofrendas ascendidas gratuitamente. Y compró David la era y el ganado por plata, cincuenta shekel.",
           "footnotes": [],
           "hebrew_terms": []
         },

@@ -166,6 +166,39 @@ def get_docx_files() -> List[Path]:
     return sorted(docx_files)
 
 
+def infer_books_for_docx(docx_file: Path) -> List[str]:
+    """
+    Infer which books should be extracted from a given DOCX source.
+
+    This avoids false-positive matches (e.g. TOC lines in tanaj.docx)
+    overwriting markdown files for books that do not belong to that source.
+    """
+    stem = docx_file.stem.lower()
+
+    # Explicit single-book sources
+    explicit_map = {
+        'apocalipsis': ['sodot'],
+        'romanos': ['romanos'],
+        'besorah': ['matityahu', 'markos', 'lukas', 'iojanan', 'maasei_hashlijim'],
+    }
+    if stem in explicit_map:
+        return explicit_map[stem]
+
+    # Section-scoped sources
+    if stem == 'tanaj':
+        allowed_sections = {'torah', 'neviim', 'ketuvim'}
+    elif stem == 'besorah':
+        allowed_sections = {'besorah'}
+    else:
+        # Unknown source name: keep current broad behavior for compatibility.
+        return list(BOOKS_INFO.keys())
+
+    return [
+        key for key, info in BOOKS_INFO.items()
+        if info.get('section') in allowed_sections
+    ]
+
+
 def split_all_docx():
     """Split all DOCX files into per-book markdown files."""
     print("Splitting DOCX files into per-book markdown...\n")
@@ -177,10 +210,19 @@ def split_all_docx():
 
     splitter = TTH2BookSplitter()
     total_books = 0
+    conversion_failures = 0
+    split_failures = 0
+    extraction_failures = 0
 
     # Process each DOCX file
     for docx_file in tqdm(docx_files, desc="Processing DOCX files", unit="file"):
         print(f"\n📄 {docx_file.name}")
+
+        books_to_extract = infer_books_for_docx(docx_file)
+        if not books_to_extract:
+            print("  ⚠️  No matching books configured for this DOCX, skipping")
+            continue
+        print(f"  Target books: {len(books_to_extract)}")
 
         # Convert DOCX to markdown
         try:
@@ -190,26 +232,56 @@ def split_all_docx():
             print("✓")
         except Exception as e:
             print(f"\n  ❌ Conversion failed: {e}")
+            conversion_failures += 1
             continue
 
         # Split into per-book files
         try:
             print(f"  Extracting books:")
             extracted = splitter.split_complete_markdown(
-                str(temp_md_file), str(MARKDOWN_DIR), verbose=True)
+                str(temp_md_file),
+                str(MARKDOWN_DIR),
+                books_to_extract=books_to_extract,
+                verbose=True,
+            )
             print(f"  ✓ Extracted {len(extracted)} books")
             total_books += len(extracted)
+
+            if len(extracted) == 0:
+                print("  ❌ No target books were extracted from this DOCX")
+                extraction_failures += 1
 
             # Clean up temporary file
             temp_md_file.unlink(missing_ok=True)
 
         except Exception as e:
             print(f"  ❌ Split failed: {e}")
+            split_failures += 1
             continue
 
     print(f"\n{'='*60}")
     print(f"✓ Split complete! Extracted {total_books} books total")
+    if conversion_failures:
+        print(f"⚠️  DOCX conversion failures: {conversion_failures}")
+    if split_failures:
+        print(f"⚠️  Split failures: {split_failures}")
+    if extraction_failures:
+        print(f"⚠️  Extraction failures: {extraction_failures}")
     print(f"{'='*60}")
+
+    # Guardrail: don't continue pipeline if nothing was actually extracted.
+    if total_books == 0:
+        print("❌ No books were extracted during split step.")
+        print("This usually means DOCX conversion failed (e.g. missing mammoth)")
+        print("or book headers did not match configured patterns.")
+        return False
+
+    # Guardrail: do not silently continue if one or more source DOCX files yielded nothing.
+    if extraction_failures > 0:
+        print("❌ One or more DOCX files produced zero extracted target books.")
+        print("Fix source headers/patterns before continuing the full pipeline.")
+        return False
+
     return True
 
 
@@ -525,6 +597,14 @@ def process_docx_books(docx_path: str, book_keys: List[str]):
             MARKDOWN_DIR), books_to_extract=book_keys, verbose=True)
         if not extracted:
             print("❌ No books were extracted")
+            temp_md_file.unlink(missing_ok=True)
+            return False
+        missing_books = [book for book in book_keys if book not in extracted]
+        if missing_books:
+            print(
+                f"❌ Failed to extract requested books: {', '.join(missing_books)}")
+            print(
+                "Check book headers/patterns in DOCX and scripts/tth_2/config.py for those books.")
             temp_md_file.unlink(missing_ok=True)
             return False
         print(f"✓ Extracted {len(extracted)} books")
