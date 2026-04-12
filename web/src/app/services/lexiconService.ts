@@ -1,9 +1,9 @@
 export type {
-  DefinitionItem,
-  WordAnalysis,
+	DefinitionItem,
+	WordAnalysis,
 } from "./staticData";
 
 export {
-  loadLexiconEntry as getWordAnalysisByStrong,
-  searchLexicon as searchWordAnalysis,
+	loadLexiconEntry as getWordAnalysisByStrong,
+	searchLexicon as searchWordAnalysis,
 } from "./staticData";

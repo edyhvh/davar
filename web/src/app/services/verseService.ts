@@ -1,1 +1,7 @@
-export type { WordResponse, DssVariant, VerseResponse, TranslationFootnote, BookResponse } from "./staticData";
+export type {
+	WordResponse,
+	DssVariant,
+	VerseResponse,
+	TranslationFootnote,
+	BookResponse,
+} from "./staticData";

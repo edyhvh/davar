@@ -4,9 +4,9 @@
 
 /* Additional global styles for Davar app */
 body {
-  font-family: "Inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: "Inter", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body,
@@ -16,287 +16,288 @@ span,
 a,
 input,
 select {
-  transition:
-    background-color 420ms ease,
-    color 420ms ease,
-    border-color 420ms ease,
-    box-shadow 420ms ease;
+	transition:
+		background-color 420ms ease,
+		color 420ms ease,
+		border-color 420ms ease,
+		box-shadow 420ms ease;
 }
 
 button,
 a,
 [role="button"],
 [data-clickable="true"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 /* Smooth scrolling */
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* Custom scrollbar for better aesthetics */
 ::-webkit-scrollbar {
-  width: 8px;
+	width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+	background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--glass-border);
-  border-radius: 4px;
+	background: var(--glass-border);
+	border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--muted-foreground);
+	background: var(--muted-foreground);
 }
 
 /* Enhanced backdrop blur support */
-@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
-  .glass-effect {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
+@supports (backdrop-filter: blur(10px)) or
+	(-webkit-backdrop-filter: blur(10px)) {
+	.glass-effect {
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+	}
 }
 
 /* RTL text support */
 [dir="rtl"] {
-  text-align: right;
-  direction: rtl;
+	text-align: right;
+	direction: rtl;
 }
 
 /* Prevent text selection on UI elements */
 button,
 .no-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* Allow text selection on content */
 .selectable {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
 }
 
 @keyframes legal-rise {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes legal-glow {
-  0% {
-    opacity: 0.35;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0.6;
-    transform: translateY(-12px);
-  }
+	0% {
+		opacity: 0.35;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0.6;
+		transform: translateY(-12px);
+	}
 }
 
 .legal-page {
-  min-height: 100vh;
-  padding-bottom: 96px;
-  background: var(--background);
-  animation: legal-rise 620ms ease-out both;
+	min-height: 100vh;
+	padding-bottom: 96px;
+	background: var(--background);
+	animation: legal-rise 620ms ease-out both;
 }
 
 .legal-hero {
-  position: relative;
-  padding: 88px 24px 36px;
+	position: relative;
+	padding: 88px 24px 36px;
 }
 
 .legal-hero::after {
-  content: none;
+	content: none;
 }
 
 .legal-hero-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 940px;
-  margin: 0 auto;
-  text-align: left;
-  display: grid;
-  gap: 12px;
+	position: relative;
+	z-index: 1;
+	max-width: 940px;
+	margin: 0 auto;
+	text-align: left;
+	display: grid;
+	gap: 12px;
 }
 
 .legal-back {
-  border: 1px solid var(--glass-border);
-  border-radius: 999px;
-  padding: 9px 18px;
-  background: transparent;
-  color: var(--text-primary);
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  transition:
-    transform 220ms ease,
-    box-shadow 220ms ease,
-    border-color 220ms ease;
-  font-family: "Jost", sans-serif;
+	border: 1px solid var(--glass-border);
+	border-radius: 999px;
+	padding: 9px 18px;
+	background: transparent;
+	color: var(--text-primary);
+	font-size: 12px;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+	transition:
+		transform 220ms ease,
+		box-shadow 220ms ease,
+		border-color 220ms ease;
+	font-family: "Jost", sans-serif;
 }
 
 .legal-back:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+	transform: translateY(-2px);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .legal-kicker {
-  font-family: "Jost", sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  margin-bottom: 4px;
+	font-family: "Jost", sans-serif;
+	font-size: 11px;
+	letter-spacing: 0.32em;
+	text-transform: uppercase;
+	color: var(--text-secondary);
+	margin-bottom: 4px;
 }
 
 .legal-title {
-  font-family: "Jost", sans-serif;
-  font-size: clamp(3rem, 5vw, 4.4rem);
-  color: var(--text-primary);
-  margin: 0;
+	font-family: "Jost", sans-serif;
+	font-size: clamp(3rem, 5vw, 4.4rem);
+	color: var(--text-primary);
+	margin: 0;
 }
 
 .legal-subtitle {
-  font-family: "Arimo", sans-serif;
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  max-width: 540px;
-  margin: 0;
-  line-height: 1.65;
+	font-family: "Arimo", sans-serif;
+	font-size: 1.05rem;
+	color: var(--text-secondary);
+	max-width: 540px;
+	margin: 0;
+	line-height: 1.65;
 }
 
 .legal-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: baseline;
-  font-family: "Arimo", sans-serif;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: baseline;
+	font-family: "Arimo", sans-serif;
+	color: var(--text-secondary);
+	font-size: 0.95rem;
 }
 
 .legal-meta-label {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.72rem; /* keep the label small */
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	font-size: 0.72rem; /* keep the label small */
 }
 
 .legal-meta-value {
-  font-weight: 700; /* stronger emphasis */
-  color: var(--text-primary);
-  font-size: 0.72rem; /* match the label size but bold */
+	font-weight: 700; /* stronger emphasis */
+	color: var(--text-primary);
+	font-size: 0.72rem; /* match the label size but bold */
 }
 
 .legal-content {
-  max-width: 940px;
-  margin: 0 auto;
-  padding: 28px 24px 0;
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 28px 24px 0;
 }
 
 .feedback-content {
-  padding-top: 0;
+	padding-top: 0;
 }
 
 .legal-divider {
-  height: 1px;
-  background: var(--border);
-  margin-bottom: 28px;
-  /* align with the hero content (compensate for .legal-content padding) */
-  margin-left: -24px;
-  width: calc(100% + 48px);
+	height: 1px;
+	background: var(--border);
+	margin-bottom: 28px;
+	/* align with the hero content (compensate for .legal-content padding) */
+	margin-left: -24px;
+	width: calc(100% + 48px);
 }
 
 .legal-status {
-  font-family: "Jost", sans-serif;
-  color: var(--text-secondary);
-  text-align: center;
-  padding: 24px 0;
+	font-family: "Jost", sans-serif;
+	color: var(--text-secondary);
+	text-align: center;
+	padding: 24px 0;
 }
 
 .legal-prose {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 12px 0 0;
-  box-shadow: none;
-  animation: legal-rise 720ms ease-out both;
-  font-family: "Arimo", sans-serif;
-  color: var(--text-primary);
-  line-height: 1.8;
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	padding: 12px 0 0;
+	box-shadow: none;
+	animation: legal-rise 720ms ease-out both;
+	font-family: "Arimo", sans-serif;
+	color: var(--text-primary);
+	line-height: 1.8;
 }
 
 .legal-prose h1,
 .legal-prose h2,
 .legal-prose h3 {
-  font-family: "Jost", sans-serif;
-  color: var(--text-primary);
-  margin-top: 40px;
-  margin-bottom: 14px;
+	font-family: "Jost", sans-serif;
+	color: var(--text-primary);
+	margin-top: 40px;
+	margin-bottom: 14px;
 }
 
 .legal-prose h1 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 .legal-prose h2 {
-  font-size: 1.55rem;
+	font-size: 1.55rem;
 }
 
 .legal-prose h3 {
-  font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
 .legal-prose p {
-  margin: 16px 0;
-  color: var(--text-primary);
+	margin: 16px 0;
+	color: var(--text-primary);
 }
 
 .legal-prose a {
-  color: var(--copper-highlight);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+	color: var(--copper-highlight);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
 }
 
 .legal-prose ul,
 .legal-prose ol {
-  padding-left: 24px;
-  margin: 16px 0;
+	padding-left: 24px;
+	margin: 16px 0;
 }
 
 .legal-prose li {
-  margin-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 .legal-prose table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 28px 0;
-  font-size: 0.95rem;
+	width: 100%;
+	border-collapse: collapse;
+	margin: 28px 0;
+	font-size: 0.95rem;
 }
 
 .legal-prose th,
 .legal-prose td {
-  border: 1px solid var(--border);
-  padding: 12px;
-  text-align: left;
-  vertical-align: top;
+	border: 1px solid var(--border);
+	padding: 12px;
+	text-align: left;
+	vertical-align: top;
 }
 
 .legal-prose th {
-  background: var(--muted);
+	background: var(--muted);
 }

@@ -3,32 +3,35 @@
 export type LegalKind = "terms" | "privacy";
 
 export type LegalDoc = {
-  title: string;
-  lastUpdated: string | null;
-  body: string;
+	title: string;
+	lastUpdated: string | null;
+	body: string;
 };
 
 type LegalContent = Record<LegalKind, string>;
 
 type LegalContentByLocale = {
-  en: LegalContent;
-  es: LegalContent;
-  he: LegalContent;
+	en: LegalContent;
+	es: LegalContent;
+	he: LegalContent;
 };
 
-const LEGAL_TITLES: Record<keyof LegalContentByLocale, Record<LegalKind, string>> = {
-  en: {
-    terms: "Terms of Service of Davar",
-    privacy: "Privacy Policy of Davar",
-  },
-  es: {
-    terms: "Términos de Servicio de Davar",
-    privacy: "Política de Privacidad de Davar",
-  },
-  he: {
-    terms: "תנאי השירות של Davar",
-    privacy: "מדיניות הפרטיות של Davar",
-  },
+const LEGAL_TITLES: Record<
+	keyof LegalContentByLocale,
+	Record<LegalKind, string>
+> = {
+	en: {
+		terms: "Terms of Service of Davar",
+		privacy: "Privacy Policy of Davar",
+	},
+	es: {
+		terms: "Términos de Servicio de Davar",
+		privacy: "Política de Privacidad de Davar",
+	},
+	he: {
+		terms: "תנאי השירות של Davar",
+		privacy: "מדיניות הפרטיות של Davar",
+	},
 };
 
 const EN_TERMS = `# Terms of Service for Davar
@@ -653,23 +656,23 @@ Davar ("האפליקציה" ו"האתר") הוא פרויקט קוד פתוח ה
 `;
 
 const LEGAL_CONTENT: LegalContentByLocale = {
-  en: {
-    terms: EN_TERMS,
-    privacy: EN_PRIVACY,
-  },
-  es: {
-    terms: ES_TERMS,
-    privacy: ES_PRIVACY,
-  },
-  he: {
-    terms: HE_TERMS,
-    privacy: HE_PRIVACY,
-  },
+	en: {
+		terms: EN_TERMS,
+		privacy: EN_PRIVACY,
+	},
+	es: {
+		terms: ES_TERMS,
+		privacy: ES_PRIVACY,
+	},
+	he: {
+		terms: HE_TERMS,
+		privacy: HE_PRIVACY,
+	},
 };
 
 export const getLegalContent = (
-  kind: LegalKind,
-  locale: keyof LegalContentByLocale = "en",
+	kind: LegalKind,
+	locale: keyof LegalContentByLocale = "en",
 ): string => LEGAL_CONTENT[locale]?.[kind] ?? LEGAL_CONTENT.en[kind];
 
 const LAST_UPDATED_REGEX = /^\*\*Last Updated:\*\*\s*(.+)$/i;
@@ -677,44 +680,44 @@ const EFFECTIVE_DATE_REGEX = /^\*\*Effective Date:\*\*\s*(.+)$/i;
 const HEADING_REGEX = /^#\s+/;
 
 const extractLastUpdated = (markdown: string): string | null => {
-  const match = markdown
-    .split("\n")
-    .map((line) => line.trim())
-    .find((line) => LAST_UPDATED_REGEX.test(line));
+	const match = markdown
+		.split("\n")
+		.map((line) => line.trim())
+		.find((line) => LAST_UPDATED_REGEX.test(line));
 
-  if (!match) return null;
-  const result = LAST_UPDATED_REGEX.exec(match);
-  return result?.[1]?.trim() ?? null;
+	if (!match) return null;
+	const result = LAST_UPDATED_REGEX.exec(match);
+	return result?.[1]?.trim() ?? null;
 };
 
 const stripHeaderLines = (markdown: string): string => {
-  const lines = markdown.split("\n");
-  const filtered = lines.filter((line) => {
-    const trimmed = line.trim();
-    if (!trimmed) return true;
-    if (HEADING_REGEX.test(trimmed)) return false;
-    if (EFFECTIVE_DATE_REGEX.test(trimmed)) return false;
-    if (LAST_UPDATED_REGEX.test(trimmed)) return false;
-    return true;
-  });
-  return filtered.join("\n").trim();
+	const lines = markdown.split("\n");
+	const filtered = lines.filter((line) => {
+		const trimmed = line.trim();
+		if (!trimmed) return true;
+		if (HEADING_REGEX.test(trimmed)) return false;
+		if (EFFECTIVE_DATE_REGEX.test(trimmed)) return false;
+		if (LAST_UPDATED_REGEX.test(trimmed)) return false;
+		return true;
+	});
+	return filtered.join("\n").trim();
 };
 
 export const getLegalDoc = (
-  kind: LegalKind,
-  locale: keyof LegalContentByLocale = "en",
+	kind: LegalKind,
+	locale: keyof LegalContentByLocale = "en",
 ): LegalDoc => {
-  const markdown = getLegalContent(kind, locale);
-  return {
-    title: LEGAL_TITLES[locale]?.[kind] ?? LEGAL_TITLES.en[kind],
-    lastUpdated: extractLastUpdated(markdown),
-    body: stripHeaderLines(markdown),
-  };
+	const markdown = getLegalContent(kind, locale);
+	return {
+		title: LEGAL_TITLES[locale]?.[kind] ?? LEGAL_TITLES.en[kind],
+		lastUpdated: extractLastUpdated(markdown),
+		body: stripHeaderLines(markdown),
+	};
 };
 
 const legalContentApi = {
-  getLegalContent,
-  getLegalDoc,
+	getLegalContent,
+	getLegalDoc,
 };
 
 export default legalContentApi;
