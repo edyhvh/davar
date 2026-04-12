@@ -1,9 +1,9 @@
-import React from "react";
+import type React from "react";
 
 interface SwipeIndicatorProps {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }
 
 export function SwipeIndicator({ children }: SwipeIndicatorProps) {
-  return <div className="relative">{children}</div>;
+	return <div className="relative">{children}</div>;
 }

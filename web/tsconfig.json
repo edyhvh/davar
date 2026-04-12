@@ -1,20 +1,20 @@
 {
-  "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "types": ["bun"],
-    "module": "Preserve",
-    "moduleResolution": "Bundler",
-    "jsx": "react-jsx",
-    "strict": true,
-    "noEmit": true,
-    "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@davar/shared/*": ["../shared/*"]
-    },
-    "skipLibCheck": true
-  },
-  "include": ["src", "server.ts", "../shared/**/*.ts"]
+	"compilerOptions": {
+		"target": "ES2022",
+		"lib": ["DOM", "DOM.Iterable", "ES2022"],
+		"types": ["bun"],
+		"module": "Preserve",
+		"moduleResolution": "Bundler",
+		"jsx": "react-jsx",
+		"strict": true,
+		"noEmit": true,
+		"ignoreDeprecations": "6.0",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"],
+			"@davar/shared/*": ["../shared/*"]
+		},
+		"skipLibCheck": true
+	},
+	"include": ["src", "server.ts", "../shared/**/*.ts"]
 }

@@ -138,7 +138,8 @@ class TTH2MdToJson:
                         continue
 
                     words = potential_bold_header.split()
-                    has_letters = any(ch.isalpha() for ch in potential_bold_header)
+                    has_letters = any(ch.isalpha()
+                                      for ch in potential_bold_header)
                     starts_title_case = potential_bold_header[0].isupper()
                     if has_letters and starts_title_case and len(words) <= 12:
                         continue
@@ -240,7 +241,8 @@ class TTH2MdToJson:
         footnote_info = {}
         for match in matches:
             source_footnote_num = match.group(1)
-            book_footnote_num = self.get_book_footnote_number(source_footnote_num)
+            book_footnote_num = self.get_book_footnote_number(
+                source_footnote_num)
             marker = self.num_to_superscript(book_footnote_num)
             definition = self.footnote_definitions.get(
                 source_footnote_num, f'Nota al pie {source_footnote_num}')
@@ -323,7 +325,7 @@ class TTH2MdToJson:
         Normalize corrupted inline verse markers emitted by DOCX->MD conversion.
 
         Example:
-          **3\* \***  ->  **3**
+                    **3\\* \\***  ->  **3**
         """
         if not text:
             return text
@@ -360,6 +362,55 @@ class TTH2MdToJson:
 
             current_num = int(marker_match.group(1))
             remaining = remaining[marker_match.end():]
+
+        expanded_segments: List[Tuple[int, str]] = []
+        for seg_num, seg_text in segments:
+            expanded_segments.extend(
+                self.split_plain_inline_verse_segments(seg_num, seg_text)
+            )
+
+        return expanded_segments
+
+    def split_plain_inline_verse_segments(self, initial_verse_num: int, verse_text: str) -> List[Tuple[int, str]]:
+        """
+        Split inline plain-number verse transitions that lost markdown markers.
+
+        Example handled conservatively:
+            "... anuncio. 11 Y entró Yeshúa ..." ->
+            [(10, "... anuncio."), (11, "Y entró Yeshúa ...")]
+
+        To avoid false positives, only split on the immediate next verse number
+        and only when followed by an uppercase Latin or Hebrew letter.
+        """
+        if not verse_text:
+            return []
+
+        segments: List[Tuple[int, str]] = []
+        current_num = initial_verse_num
+        remaining = verse_text.strip()
+
+        while True:
+            match = re.search(
+                r'\s+(\d{1,3})\s+([A-ZÁÉÍÓÚÜÑ\u0590-\u05FF])',
+                remaining,
+            )
+            if not match:
+                if remaining:
+                    segments.append((current_num, remaining.strip()))
+                break
+
+            next_num = int(match.group(1))
+            if next_num != current_num + 1:
+                if remaining:
+                    segments.append((current_num, remaining.strip()))
+                break
+
+            head = remaining[:match.start()].strip()
+            if head:
+                segments.append((current_num, head))
+
+            current_num = next_num
+            remaining = (match.group(2) + remaining[match.end():]).strip()
 
         return segments
 
@@ -426,8 +477,10 @@ class TTH2MdToJson:
                     verse_text = verse_match.group(2).strip()
 
                     for split_verse_num, split_verse_text in self.split_inline_verse_segments(verse_num, verse_text):
-                        cleaned_text = self.clean_text_preserve_comments(split_verse_text)
-                        cleaned_text, footnotes = self.extract_footnotes(cleaned_text)
+                        cleaned_text = self.clean_text_preserve_comments(
+                            split_verse_text)
+                        cleaned_text, footnotes = self.extract_footnotes(
+                            cleaned_text)
 
                         verse_entry = {
                             'verse': split_verse_num,
@@ -442,7 +495,8 @@ class TTH2MdToJson:
 
                 # Handle malformed lines where verse number and initial content
                 # were wrapped together in one bold span (e.g., "**32 y** ...").
-                malformed_verse_match = re.match(r'^\*\*(\d+)\s+(.+?)\*\*\s*(.*)$', line)
+                malformed_verse_match = re.match(
+                    r'^\*\*(\d+)\s+(.+?)\*\*\s*(.*)$', line)
                 if malformed_verse_match:
                     verse_num = int(malformed_verse_match.group(1))
                     verse_head = malformed_verse_match.group(2).strip()
@@ -470,16 +524,37 @@ class TTH2MdToJson:
                         i += 1
                         continue
 
-                    # Add to the last verse
+                    # Add to the last verse, then re-split in case this
+                    # continuation line embeds a new inline verse marker
+                    # (e.g. "... **11** Y ..." after verse 10 text).
                     last_verse = current_verses[-1]
-                    last_verse['tth'] += ' ' + line.strip()
+                    combined_text = f"{last_verse['tth']} {line.strip()}".strip(
+                    )
+                    split_segments = self.split_inline_verse_segments(
+                        last_verse['verse'], combined_text)
 
-                    # Re-process the verse with the additional text
-                    last_verse['tth'] = self.clean_text_preserve_comments(
-                        last_verse['tth'])
-                    last_verse['tth'], last_verse['footnotes'] = self.extract_footnotes(
-                        last_verse['tth'])
-                    last_verse['hebrew_terms'] = []
+                    if len(split_segments) <= 1:
+                        # Regular multiline continuation, keep existing behavior.
+                        last_verse['tth'] = self.clean_text_preserve_comments(
+                            combined_text)
+                        last_verse['tth'], last_verse['footnotes'] = self.extract_footnotes(
+                            last_verse['tth'])
+                        last_verse['hebrew_terms'] = []
+                    else:
+                        # Replace the current last verse with the re-split output.
+                        current_verses.pop()
+                        for split_verse_num, split_verse_text in split_segments:
+                            cleaned_text = self.clean_text_preserve_comments(
+                                split_verse_text)
+                            cleaned_text, footnotes = self.extract_footnotes(
+                                cleaned_text)
+
+                            current_verses.append({
+                                'verse': split_verse_num,
+                                'tth': cleaned_text,
+                                'footnotes': footnotes,
+                                'hebrew_terms': []
+                            })
 
             i += 1
 

@@ -9,7 +9,20 @@ Run `bun install` to install dependencies.
 
 Run `bun run dev` for production-parity local serving (builds `dist/` then serves it).
 
-Run `bun run dev:hot` for Bun HTML hot-reload mode.
+Run `bun run dev:hot` for Bun HTML hot-reload mode without running `build.ts`.
+It keeps the app on `http://localhost:3002`, checks static data, runs Bun HTML mode on an internal port, and serves `/data/*.json` through a local gateway.
+The gateway listens on `0.0.0.0` by default so mobile devices on the same LAN can use `http://<your-machine-ip>:3002`.
+
+### Startup Logs
+
+When using `bun run dev`, startup logs now show high-level milestone phases:
+
+- `[davar-web] phase=data-generation start|done`
+- `[davar-web] phase=bundle start|done`
+- `[davar-web] phase=assets done`
+- `[davar-web] phase=build done`
+
+`[davar-static-data]` logs mark static-data generation start/end with total duration.
 
 ## Environment Setup
 

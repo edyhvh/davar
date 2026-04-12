@@ -7,7 +7,7 @@
     "spanish_name": "Amós",
     "section": "neviim",
     "total_chapters": 10,
-    "total_verses": 166
+    "total_verses": 167
   },
   "chapters": [
     {
@@ -21,8 +21,21 @@
         },
         {
           "verse": 2,
-          "tth": "Y dijo: יהוה desde Tzión rugirá, y desde Ierushalem dará su voz; y se lamentaron los pastos de los pastores, y se secó la cima (Lit.: cabeza) del Carmel.",
-          "footnotes": [],
+          "tth": "Y dijo: יהוה desde Tzión rugirá, y desde Yerushaláim dará su voz; y se lamentaron los pastos de los pastores, y se secó la cima¹ del Carmel².",
+          "footnotes": [
+            {
+              "marker": "¹",
+              "number": "1",
+              "word": "cima",
+              "explanation": "Lit.: cabeza."
+            },
+            {
+              "marker": "²",
+              "number": "2",
+              "word": "Carmel",
+              "explanation": "Huerto fértil."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -57,8 +70,15 @@
         },
         {
           "verse": 8,
-          "tth": "Y cortaré <em>al</em> habitante de Ashdod y <em>al</em> que agarra el cetro de Ashkelón; y haré volver mi mano sobre Ekrón, y se perderá el remanente de los pelishtim –ha dicho Adonai יהוה.",
-          "footnotes": [],
+          "tth": "Y cortaré <em>al</em> habitante de Ashdod y <em>al</em> que agarra el cetro de Ashkelón; y haré volver mi mano sobre Ekrón, y se perderá el remanente de los pelishtim³ –ha dicho Adonai יהוה.",
+          "footnotes": [
+            {
+              "marker": "³",
+              "number": "3",
+              "word": "pelishtim",
+              "explanation": "Filisteos."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -75,8 +95,15 @@
         },
         {
           "verse": 11,
-          "tth": "Así ha dicho יהוה: Por tres transgresiones de Edom, y por cuatro, no lo haré volver, por perseguir él con espada a su hermano, y corrompió su compasión; y desgarró su ira para siempre (Otra lectura posible es: <em>y desgarró, para testimonio, su ira</em>), y su furor desbordante guardó perpetuamente.",
-          "footnotes": [],
+          "tth": "Así ha dicho יהוה: Por tres transgresiones de Edom, y por cuatro, no lo haré volver, por perseguir él con espada a su hermano, y corrompió su compasión; y desgarró su ira para siempre⁴, y su furor desbordante guardó perpetuamente.",
+          "footnotes": [
+            {
+              "marker": "⁴",
+              "number": "4",
+              "word": "siempre",
+              "explanation": "Otra lectura posible es: y desgarró, para testimonio, su ira."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -116,8 +143,15 @@
         },
         {
           "verse": 2,
-          "tth": "Y enviaré fuego en Moab, y consumirá los palacios de Keriot, y morirá en el tumulto (O, en estruendo) Moab, con grito, con voz de shofar.",
-          "footnotes": [],
+          "tth": "Y enviaré fuego en Moab, y consumirá los palacios de Keriot, y morirá en el tumulto Moab, con grito, con voz de shofar⁵.",
+          "footnotes": [
+            {
+              "marker": "⁵",
+              "number": "5",
+              "word": "shofar",
+              "explanation": "Cuerno de carnero."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -128,13 +162,13 @@
         },
         {
           "verse": 4,
-          "tth": "Así ha dicho יהוה: Por tres transgresiones de Iehudáh, y por cuatro, no lo haré volver, por haber despreciado ellos a la Torah de יהוה, y sus estatutos no guardaron; y los hicieron errar sus falsedades, que anduvieron sus padres detrás de ellas.",
+          "tth": "Así ha dicho יהוה: Por tres transgresiones de Iehudáh, y por cuatro, no lo haré volver, por haber despreciado ellos a la Torah de יהוה, y sus decretos no guardaron; y los hicieron errar sus falsedades, que anduvieron sus padres detrás de ellas.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 5,
-          "tth": "Y enviaré fuego en Iehudáh, y consumirá los palacios de Ierushalem.",
+          "tth": "Y enviaré fuego en Iehudáh, y consumirá los palacios de Yerushaláim.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -152,26 +186,47 @@
         },
         {
           "verse": 8,
-          "tth": "y sobre ropas retenidas en prenda (Lit.: ropas atadas; Así en el T.M., en la versión gr., <em>y de sus ropas ataron con cuerdas</em>)se inclinaron junto a todo altar, y vino de multados bebían en la casa de sus dioses.",
-          "footnotes": [],
+          "tth": "y sobre ropas retenidas en prenda⁶ se inclinaron junto a todo altar, y vino de multados bebían en la casa de sus dioses.",
+          "footnotes": [
+            {
+              "marker": "⁶",
+              "number": "6",
+              "word": "prenda",
+              "explanation": "Lit.: ropas atadas; Así en el T.M., en la versión gr.: y de sus ropas ataron con cuerdas."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "Y Yo destruí al emorí (amorreo) de delante de ellos, que como altura de cedros <em>era</em> su altura, y fuerte <em>era</em> él como los robles; y destruí su fruto desde encima y sus raíces desde abajo.",
-          "footnotes": [],
+          "tth": "Y Yo destruí al emorí⁷ de delante de ellos, que como altura de cedros <em>era</em> su altura, y fuerte <em>era</em> él como los robles; y destruí su fruto desde encima y sus raíces desde abajo.",
+          "footnotes": [
+            {
+              "marker": "⁷",
+              "number": "7",
+              "word": "emorí",
+              "explanation": "Amorreo."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 10,
-          "tth": "Y Yo <em>los</em> hice subir a ustedes de la tierra de Mitzráim, y los hice ir por el desierto cuarenta añospara poseer (O, heredar) la tierra del emorí.",
+          "tth": "Y Yo <em>los</em> hice subir a ustedes de la tierra de Mitzráim, y los hice ir por el desierto cuarenta años para poseer la tierra del emorí.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 11,
-          "tth": "Y levanté de los hijos de ustedes a profetasy de sus jóvenes a nazareos.¿No es esto así (Lit.: ¿También no es esto), hijos de Israel? –declaración de יהוה.",
-          "footnotes": [],
+          "tth": "Y levanté de los hijos de ustedes a profetas y de sus jóvenes a nazareos.¿No es esto así⁸, hijos de Israel? –declaración de יהוה.",
+          "footnotes": [
+            {
+              "marker": "⁸",
+              "number": "8",
+              "word": "así",
+              "explanation": "Lit.: ¿También no es esto…"
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -182,8 +237,21 @@
         },
         {
           "verse": 13,
-          "tth": "He aquí, Yo oprimo (O, hago tambalear; significado incierto) debajo de ustedescomo se oprime (O, se tambalea) la carreta llena de gavillas.",
-          "footnotes": [],
+          "tth": "He aquí, Yo oprimo⁹ debajo de ustedes como se oprime¹⁰la carreta llena de gavillas.",
+          "footnotes": [
+            {
+              "marker": "⁹",
+              "number": "9",
+              "word": "oprimo",
+              "explanation": "O, hago tambalear."
+            },
+            {
+              "marker": "¹⁰",
+              "number": "10",
+              "word": "oprime",
+              "explanation": "O, se tambalea."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -218,26 +286,40 @@
         },
         {
           "verse": 2,
-          "tth": "Solo a ustedes he conocido de todas las familias de la tierra; por eso visitaré (O, atenderé) sobre ustedestodas sus iniquidades (Lit.: cosas torcidas).",
+          "tth": "Solo a ustedes he conocido de todas las familias de la tierra; por eso visitaré sobre ustedestodas sus iniquidades.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 3,
-          "tth": "¿Andarán dos juntos si no se reúnen con cita previa? (Así en el T.M., en la versión gr., si no se conocen?)",
-          "footnotes": [],
+          "tth": "¿Andarán dos juntos si no se reúnen con cita previa¹¹?",
+          "footnotes": [
+            {
+              "marker": "¹¹",
+              "number": "11",
+              "word": "previa",
+              "explanation": "Así en el T.M., en la versión gr.: si no se conocen?"
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 4,
-          "tth": "¿Rugirá un león en el bosquey presa no hay para él? ¿Dará un leoncillo su voz desde su moradasi no ha atrapado algo?",
+          "tth": "¿Rugirá un león en el bosque y presa no hay para él? ¿Dará un leoncillo su voz desde su morada si no ha atrapado algo?",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 5,
-          "tth": "¿Caerá un ave sobre una trampa en la tierra, y no tiene cebo? ¿Ascenderá una trampa desde el suelosin haber atrapado nada? (Lit.: y, atrapando, no atrapó?)",
-          "footnotes": [],
+          "tth": "¿Caerá un ave sobre una trampa en la tierra, y no tiene cebo? ¿Ascenderá una trampa desde el suelo sin haber atrapado nada¹²?",
+          "footnotes": [
+            {
+              "marker": "¹²",
+              "number": "12",
+              "word": "nada",
+              "explanation": "Lit.: y, atrapando, no atrapó?"
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -248,7 +330,7 @@
         },
         {
           "verse": 7,
-          "tth": "Porque no hará Adonai יהוה nadasi no descubrió su consejo secreto a sus siervos los profetas.",
+          "tth": "Porque no hará Adonai יהוה nada si no descubrió su consejo secreto a sus siervos los profetas.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -272,32 +354,77 @@
         },
         {
           "verse": 11,
-          "tth": "Por eso, así ha dicho Adonai יהוה: Un enemigo (O, Estrechez), rodeando la tierra, y echará abajo de ti tu fuerza, y serán saqueados tus palacios.",
-          "footnotes": [],
+          "tth": "Por eso, así ha dicho Adonai יהוה: Un enemigo¹³, rodeando la tierra, y echará abajo de ti tu fuerza, y serán saqueados tus palacios.",
+          "footnotes": [
+            {
+              "marker": "¹³",
+              "number": "13",
+              "word": "enemigo",
+              "explanation": "O, estrechez."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 12,
-          "tth": "Así ha dicho יהוה: Como arranca (O, rescata) el pastor de la boca del leóndos patas o un pedazo de oreja, así serán arrancados (O, rescatados)los hijos de Israel, los que habitan en Shomrón, con un pedazo de cama y una tela de Damések de un sofá (Otra lectura posible es: los hijos de Israel que se sientan en Shomrón, en el borde de una cama y en una tela de Damések de un sofá. Así en el T.M., en la versión gr., los hijos de Israel que habitan en Samaria, al frente de una tribu, y en Damasco los sacerdotes).",
-          "footnotes": [],
+          "tth": "Así ha dicho יהוה: Como arranca¹⁴ el pastor de la boca del león dos patas o un pedazo de oreja, así serán arrancados¹⁵ los hijos de Israel, los que habitan en Shomrón, con un pedazo de cama y una tela de Damések de un sofá¹⁶.",
+          "footnotes": [
+            {
+              "marker": "¹⁴",
+              "number": "14",
+              "word": "arranca",
+              "explanation": "O, rescata."
+            },
+            {
+              "marker": "¹⁵",
+              "number": "15",
+              "word": "arrancados",
+              "explanation": "O, rescatados."
+            },
+            {
+              "marker": "¹⁶",
+              "number": "16",
+              "word": "sofá",
+              "explanation": "Otra lectura posible es: los hijos de Israel que se sientan en Shomrón, en el borde de una cama y en una tela de Damések de un sofá. Así en el T.M., en la versión gr., los hijos de Israel que habitan en Samaria, al frente de una tribu, y en Damasco los sacerdotes."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 13,
-          "tth": "¡Escuchen y repitan en la casa de Iaacob! –declaración de Adonai יהוה, Elohim de los ejércitos.",
+          "tth": "¡Escuchen y repitan en la casa de Yaakov! –declaración de Adonai יהוה, Elohim de los ejércitos.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 14,
-          "tth": "Porque en el día de mi visitar las transgresiones de Israel sobre él, visitaré sobre los altares de Betel; y serán cortados los cuernos del altary caerán a la tierra.",
+          "tth": "Porque en el día de mi visitar las transgresiones de Israel sobre él, visitaré sobre los altares de Betel; y serán cortados los cuernos del altar y caerán a la tierra.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 15,
-          "tth": "Y golpearé la casa de otoño (O, invierno)sobre (O, junto con) la casa de verano; y perecerán las casas de marfil (Lit.: del diente), y llegarán a su fin muchas casas –declaración de יהוה.",
-          "footnotes": [],
+          "tth": "Y golpearé la casa de otoño¹⁷ sobre¹⁸ la casa de verano; y perecerán las casas de marfil¹⁹, y llegarán a su fin muchas casas –declaración de יהוה.",
+          "footnotes": [
+            {
+              "marker": "¹⁷",
+              "number": "17",
+              "word": "otoño",
+              "explanation": "O, invierno."
+            },
+            {
+              "marker": "¹⁸",
+              "number": "18",
+              "word": "sobre",
+              "explanation": "O, junto con."
+            },
+            {
+              "marker": "¹⁹",
+              "number": "19",
+              "word": "marfil",
+              "explanation": "Lit.: del diente."
+            }
+          ],
           "hebrew_terms": []
         }
       ]
@@ -307,19 +434,26 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Escuchen esta palabra, vacas del Bashán, que están en el monte de Shomrón, las opresoras de pobres, las que aplastan necesitados, las que dicen a sus amos: ¡Trae ahora, y bebamos!",
+          "tth": "Escuchen esta palabra, vacas del Bashán, que están en el monte de Shomrón,",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "Ha jurado Adonai יהוה por su santidad, porque: He aquí, días vienen sobre ustedes, y Él las llevará en canastas (O, con anzuelos. Así en el T.M., en la versión gr., y las cogerán en armas), y a su posteridad en ollas de pesca.",
-          "footnotes": [],
+          "tth": "Ha jurado Adonai יהוה por su santidad, porque: He aquí, días vienen sobre ustedes, y Él las llevará en canastas²⁰, y a su posteridad en ollas de pesca.",
+          "footnotes": [
+            {
+              "marker": "²⁰",
+              "number": "20",
+              "word": "canastas",
+              "explanation": "O, con anzuelos."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 3,
-          "tth": "Y por brechas saldrán, una delante de la otra, y serán arrojadas al monte Jermón (Así en la versión gr., en el T.M., y arrojarán hacia el palacio) –declaración de יהוה.",
+          "tth": "Y por brechas saldrán, una delante de la otra, y serán arrojadas al monte Jermón –declaración de יהוה.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -331,38 +465,65 @@
         },
         {
           "verse": 5,
-          "tth": "Y quemen lo leudado en ofrenda de confesión, y proclamen ofrendas voluntarias (Así en el T.M., en la versión gr., y leyeron afuera la Torah y llamaron a confesión; tal vez, un error de texto), ¡hagan escuchar!,porque eso aman, hijos de Israel –declaración de Adonai יהוה.",
-          "footnotes": [],
+          "tth": "Y quemen lo leudado en ofrenda de confesión, y proclamen ofrendas voluntarias²¹, ¡hagan escuchar!, porque eso aman, hijos de Israel –declaración de Adonai יהוה.",
+          "footnotes": [
+            {
+              "marker": "²¹",
+              "number": "21",
+              "word": "voluntarias",
+              "explanation": "Así en el T.M., en la versión gr.: y leyeron afuera la Torah y llamaron a confesión; tal vez, un error de texto."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 6,
-          "tth": "Y también Yo les he dado a ustedes limpieza de dientes en todas sus ciudades, y falta de pan en todos sus lugares, y no han regresado hasta Mí–declaración de יהוה.",
+          "tth": "Y también Yo les he dado a ustedes limpieza de dientes en todas sus ciudades, y falta de pan en todos sus lugares, y no han regresado hasta Mí –declaración de יהוה.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 7,
-          "tth": "Y además Yo retuve de ustedes la lluviacuando aún faltaban tres meses para la siega; e hice llover sobre una ciudady sobre otra (Lit.: una) ciudad no hice llover; sobre una parte llovía, y la parte que no llovía sobre ella, se secó.",
+          "tth": "Y además Yo retuve de ustedes la lluvia cuando aún faltaban tres meses para la siega; e hice llover sobre una ciudad y sobre otra ciudad no hice llover; sobre una parte llovía, y la parte que no llovía sobre ella, se secó.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 8,
-          "tth": "E iban tambaleándose dos o tres ciudadeshacia una ciudad para beber agua, y no se saciaban; y no han regresado hasta Mí –declaración de יהוה.",
+          "tth": "E iban tambaleándose dos o tres ciudades hacia una ciudad para beber agua, y no se saciaban; y no han regresado hasta Mí –declaración de יהוה.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "Los golpeé con ardor (O, tizón o voladura)y con palidez (O, moho o ictericia); los muchos de sus jardines y sus viñedos, y sus higueras y sus olivos, comió la langosta masticadora; y no han regresado hasta Mí –declaración de יהוה.",
-          "footnotes": [],
+          "tth": "Los golpeé con ardor²² y con palidez²³; los muchos de sus jardines y sus viñedos, y sus higueras y sus olivos, comió la langosta masticadora; y no han regresado hasta Mí –declaración de יהוה.",
+          "footnotes": [
+            {
+              "marker": "²²",
+              "number": "22",
+              "word": "ardor",
+              "explanation": "O, tizón; o, voladura."
+            },
+            {
+              "marker": "²³",
+              "number": "23",
+              "word": "palidez",
+              "explanation": "O, moho; o, ictericia."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 10,
-          "tth": "Envié contra ustedes plaga en el camino de Mitzráim (Otra lectura posible es: plaga a la manera de Mitzráim), maté con espada a sus jóvenes, junto con el cautiverio de sus caballos, e hice subir el hedor de sus campamentos, ¡y en sus narices! (Otra lectura posible es: e hice subir en fuego sus campamentos, en su ira); y no regresaron hasta Mí –declaración de יהוה.",
-          "footnotes": [],
+          "tth": "Envié contra ustedes plaga en el camino de Mitzráim²⁴, maté con espada a sus jóvenes, junto con el cautiverio de sus caballos, e hice subir el hedor de sus campamentos, ¡y en sus narices!; y no regresaron hasta Mí –declaración de יהוה.",
+          "footnotes": [
+            {
+              "marker": "²⁴",
+              "number": "24",
+              "word": "Mitzráim",
+              "explanation": "Otra lectura posible es: a la manera de Mitzráim."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -379,7 +540,7 @@
         },
         {
           "verse": 13,
-          "tth": "Porque, he aquí, el Formador de los montesy el Creador del viento, el que anuncia al hombre su ungido (Así en la versión gr., en el T.M., el que anuncia al hombre cuál es su pensamiento; probablemente, un error de texto), el Hacedor del amanecer y de las tinieblas (O, el que hace tinieblas del amanecer), y el que camina sobre las alturas de la tierra; יהוה, Elohim de los ejércitos, es su Nombre. Llamado a regresar a יהוה",
+          "tth": "Porque, he aquí, el Formador de los montesy el Creador del viento, el que anuncia al hombre su ungido²⁵, el Hacedor del amanecer y de las tinieblas²⁶, y el que camina sobre las alturas de la tierra; יהוה, Elohei Tzebaot, es su Nombre. Llamado a regresar a יהוה",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -390,13 +551,13 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Escuchen esta palabra que Yo levanto sobre ustedes como elegía (O, lamentación), casa de Israel.",
+          "tth": "Escuchen esta palabra que Yo levanto sobre ustedes como elegía, casa de Israel.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "Ha caído, no se volverá a levantarla virgen de Israel; abandonada sobre su tierra, no hay quien la levante.",
+          "tth": "Ha caído, no se volverá a levantar la virgen de Israel; abandonada sobre su tierra, no hay quien la levante.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -420,26 +581,47 @@
         },
         {
           "verse": 6,
-          "tth": "¡Busquen a יהוה y vivirán!,no sea que avance como fuego, casa de Iosef, y consuma y no haya quien apague a Betel;",
+          "tth": "¡Busquen a יהוה y vivirán!, no sea que avance como fuego, casa de Iosef, y consuma y no haya quien apague a Betel;",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 7,
-          "tth": "los que cambian en ajenjo el juicio, y la justicia a tierra ponen (Así en el T.M., en la versión gr., El que ha puesto en lo alto el juicio, y la justicia en tierra ha puesto).",
-          "footnotes": [],
+          "tth": "los que cambian en ajenjo el juicio, y la justicia a tierra ponen²⁷.",
+          "footnotes": [
+            {
+              "marker": "²⁷",
+              "number": "27",
+              "word": "ponen",
+              "explanation": "Así en el T.M., en la versión gr.: El que ha puesto en lo alto el juicio, y la justicia en tierra ha puesto."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 8,
-          "tth": "El Hacedor de Kimáh y Kesil (De significado incierto, generalmente se traducen como ‘Pléyades y Orión’; según varios diccionarios, ‘kimáh’ significa ‘montón o racimo’, y ‘kesil’, ‘tonto o necio’. En cambio, la versión gr., dice: El que hace todo y transforma), y torna en mañana la sombra de muerte, y el día en noche ha hecho oscurecer; el que llama a las aguas del mary las derrama sobre la faz de la tierra; יהוה es su Nombre.",
-          "footnotes": [],
+          "tth": "El Hacedor de Kimáh y Kesil²⁸, y torna en mañana la sombra de muerte, y el día en noche ha hecho oscurecer; el que llama a las aguas del mary las derrama sobre la faz de la tierra; יהוה es su Nombre.",
+          "footnotes": [
+            {
+              "marker": "²⁸",
+              "number": "28",
+              "word": "Kesil",
+              "explanation": "De significado incierto, generalmente se traduce: Pléyades y Orión; ‘kimáh’ significa ‘montón o racimo’, y ‘kesil’, ‘indisciplinado’. En cambio, la versión gr., dice: El que hace todo y transforma."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "El que trae de repente (O, El que contiene; de etimología y significado incierto) devastación sobre el fuerte, y devastación sobre la fortaleza vendrá.",
-          "footnotes": [],
+          "tth": "El que trae de repente²⁹ devastación sobre el fuerte, y devastación sobre la fortaleza vendrá.",
+          "footnotes": [
+            {
+              "marker": "²⁹",
+              "number": "29",
+              "word": "repente",
+              "explanation": "O, el que contiene. Significado incierto."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -450,14 +632,28 @@
         },
         {
           "verse": 11,
-          "tth": "Por eso, porque pisotean (Otra lectura posible es: cobran impuesto de la granja) sobre el pobre, y dádiva de grano toman de él: casas de piedras labradas han edificado, pero no habitarán en ellas; viñas de deleite han plantado, pero no beberán su vino.",
-          "footnotes": [],
+          "tth": "Por eso, porque pisotean³⁰ sobre el pobre, y dádiva de grano toman de él: casas de piedras labradas han edificado, pero no habitarán en ellas; viñas de deleite han plantado, pero no beberán su vino.",
+          "footnotes": [
+            {
+              "marker": "³⁰",
+              "number": "30",
+              "word": "pisotean",
+              "explanation": "Otra lectura posible es: cobran impuesto de la granja."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 12,
-          "tth": "Porque Yo supe que son muchas sus transgresiones y numerosos sus pecados, ¡opresores del justo, que toman soborno (O, rescate) y a los necesitados en la puerta apartan!",
-          "footnotes": [],
+          "tth": "Porque Yo supe que son muchas sus transgresiones y numerosos sus pecados, ¡opresores del justo, que toman pago³¹ y a los necesitados en la puerta apartan!",
+          "footnotes": [
+            {
+              "marker": "³¹",
+              "number": "31",
+              "word": "pago",
+              "explanation": "Heb.: Kófer; esto es, un pago de reconciliación."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -468,19 +664,26 @@
         },
         {
           "verse": 14,
-          "tth": "Busquen el bien, y no el mal, a fin de que vivan, y estará así יהוה, Elohim de los ejércitos, con ustedes, como han dicho.",
+          "tth": "Busquen el bien, y no el mal, a fin de que vivan, y estará así יהוה, Elohei Tzebaot, con ustedes, como han dicho.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 15,
-          "tth": "Odien el mal y amen el bien, y pongan en la puerta la justicia (O, el juicio).Quizá muestre favor יהוה, Elohim de los ejércitos, al remanente de Iosef.",
-          "footnotes": [],
+          "tth": "Odien el mal y amen el bien, y pongan en la puerta el proceso legal³².Quizá muestre favor יהוה, Elohei Tzebaot, al remanente de Iosef.",
+          "footnotes": [
+            {
+              "marker": "³²",
+              "number": "32",
+              "word": "legal",
+              "explanation": "Heb.: Mishpat."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 16,
-          "tth": "Por lo tanto, así ha dicho יהוה, Elohim de los ejércitos, Adonai: En todas las plazas habrá lamento, y en las calles dirán: ¡Ay, ay! (Lit.: ¡Ho, ho!)Y llamarán al agricultor a duelo, y a lamento a los conocedores del llanto.",
+          "tth": "Por lo tanto, así ha dicho יהוה, Elohei Tzebaot, Adonai: En todas las plazas habrá lamento, y en las calles dirán: ¡Ho, ho! Y llamarán al agricultor a duelo, y a lamento a los conocedores del llanto.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -492,7 +695,7 @@
         },
         {
           "verse": 18,
-          "tth": "¡Ay de los que desean el día de יהוה! ¿Para qué les será esto, el día de יהוה? Este es oscuridad, y no luz.",
+          "tth": "¡Oy de los que desean el día de יהוה! ¿Para qué les será esto, el día de יהוה? Este es oscuridad, y no luz.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -510,13 +713,13 @@
         },
         {
           "verse": 21,
-          "tth": "Aborrezco, desprecio sus fiestas, y no oleré sus asambleas restringentes.",
+          "tth": "Aborrezco, desprecio sus fiestas, y no oleré sus asambleas retentivas.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 22,
-          "tth": "Porque, si hacen subir a Mí ofrendas ascendidas y sus ofrendas de grano, no estaré complacido; y retribución de sus animales engordadosno miraré.",
+          "tth": "Porque, si hacen subir a Mí ofrendas ascendidas y sus ofrendas de grano, no estaré complacido; y retribución de sus animales engordados no miraré.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -540,13 +743,26 @@
         },
         {
           "verse": 26,
-          "tth": "Y llevaron a Sicut, su rey (O, Y llevaron el tabernáculo de su Moloc), y a Kiyún (O sea, Saturno), sus imágenes, la estrella de sus dioses que hicieron para ustedes.",
-          "footnotes": [],
+          "tth": "Y llevaron a Sicut, su rey³³, y a Kiyún³⁴, sus imágenes, la estrella de sus dioses que hicieron para ustedes.",
+          "footnotes": [
+            {
+              "marker": "³³",
+              "number": "33",
+              "word": "rey",
+              "explanation": "O, y llevaron el tabernáculo de su Moloc."
+            },
+            {
+              "marker": "³⁴",
+              "number": "34",
+              "word": "Kiyún",
+              "explanation": "O sea, Saturno."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 27,
-          "tth": "Y los llevaré al exilio más allá de Damések –ha dicho יהוה, Elohim de los ejércitos es su Nombre. Profecía contra el orgullo de Israel",
+          "tth": "Y los llevaré al exilio más allá de Damések –ha dicho יהוה, Elohei Tzebaot es su Nombre. Profecía contra el orgullo de Israel",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -557,32 +773,59 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "¡Ay que los que están a gusto en Tzión (Así en el T.M., en la versión gr., ¡Ay de los que odian a Tzión) y los que confían en el monte de Shomrón, los distinguidos de los primero de las naciones, y vienen a ellos la casa de Israel!",
+          "tth": "¡Oy que los que están a gusto en Tzión, y los que confían en el monte de Shomrón, los distinguidos de los primero de las naciones, y vienen a ellos la casa de Israel!",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "Pasen a Calnéh y vean, y vayan desde allí a Jamat Rabáh, y desciendan a Gat de los pelishtim (filisteos).¿Son más buenos que estos reinos?,¿o es mayor su frontera que la frontera de ustedes?",
-          "footnotes": [],
+          "tth": "Pasen a Calnéh y vean, y vayan desde allí a Jamat Rabáh, y desciendan a Gat de los pelishtim³⁵.¿Son más buenos que estos reinos?, ¿o es mayor su frontera que la frontera de ustedes?",
+          "footnotes": [
+            {
+              "marker": "³⁵",
+              "number": "35",
+              "word": "pelishtim",
+              "explanation": "Filisteos."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 3,
-          "tth": "Los que apartan al día maloy acercan el asiento de violencia;",
+          "tth": "Los que apartan al día malo y acercan el asiento de violencia;",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 4,
-          "tth": "los que se acuestan sobre camas de marfil (Lit.: de diente)y se estiran sobre sus sofás, y comen corderos de rebañoy terneros del medio del establo;",
-          "footnotes": [],
+          "tth": "los que se acuestan sobre camas de marfil³⁶ y se estiran sobre sus sofás, y comen corderos de rebaño y terneros del medio del establo;",
+          "footnotes": [
+            {
+              "marker": "³⁶",
+              "number": "36",
+              "word": "marfil",
+              "explanation": "Lit.: de diente."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 5,
-          "tth": "los que parlotean (Lit.: los que esparcen palabras) al son (Lit.: a la boca) del arpa; como David, piensan para sí instrumentos de música;",
-          "footnotes": [],
+          "tth": "los que parlotean³⁷ al son³⁸ del arpa; como David, piensan para sí instrumentos de música;",
+          "footnotes": [
+            {
+              "marker": "³⁷",
+              "number": "37",
+              "word": "parlotean",
+              "explanation": "Lit.: los que esparcen palabras."
+            },
+            {
+              "marker": "³⁸",
+              "number": "38",
+              "word": "son",
+              "explanation": "Lit.: a la boca."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -593,14 +836,34 @@
         },
         {
           "verse": 7,
-          "tth": "por eso, ahora irán al exilio a la cabeza de los exiliados, y se apartará el jolgorio (O, luto) de los estirados (Otra lectura posible es: de los corrompidos, o apestosos).",
-          "footnotes": [],
+          "tth": "por eso, ahora irán al exilio a la cabeza de los exiliados, y se apartará el jolgorio³⁹ de los estirados⁴⁰.",
+          "footnotes": [
+            {
+              "marker": "³⁹",
+              "number": "39",
+              "word": "jolgorio",
+              "explanation": "O, luto."
+            },
+            {
+              "marker": "⁴⁰",
+              "number": "40",
+              "word": "estirados",
+              "explanation": "Otra lectura posible es: de los corrompidos, o apestosos. Heb.: Serujim."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 8,
-          "tth": "Ha jurado Adonai יהוה por su ser: –declaración de יהוה, Elohim de los ejércitos–Aborrezco Yo el orgullo de Iaacob, y odio sus palacios (O, ciudadelas); y he entregado la ciudad y su llenura.",
-          "footnotes": [],
+          "tth": "Ha jurado Adonai יהוה por su ser: –declaración de יהוה, Elohei Tzebaot–Aborrezco Yo el orgullo de Yaakov, y odio sus palacios⁴¹; y he entregado la ciudad y su llenura.",
+          "footnotes": [
+            {
+              "marker": "⁴¹",
+              "number": "41",
+              "word": "palacios",
+              "explanation": "O, ciudadelas."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -611,31 +874,51 @@
         },
         {
           "verse": 10,
-          "tth": "Y lo levantará su tío (O, su ser querido) y su quemador para sacar los huesos de la casa, y dirá al que está en las partes internas de la casa: ¿Aún hay alguien contigo? Y dirá: Nadie. Y él dirá: ¡Calla!, porque no hay que hacer mención del nombre de יהוה.",
-          "footnotes": [],
+          "tth": "Y lo levantará su tío⁴² y su quemador para sacar los huesos de la casa, y dirá al que está en las partes internas de la casa: ¿Aún hay alguien contigo? Y dirá: Nadie. Y él dirá: ¡Calla!, porque no hay que traer a memoria por el Nombre de יהוה.",
+          "footnotes": [
+            {
+              "marker": "⁴²",
+              "number": "42",
+              "word": "tío",
+              "explanation": "O, su ser amado."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 11,
-          "tth": "Porque, he aquí, יהוה ordena, y romperá (Lit.: golpeará) la casa grande en pedacitos, y la casa pequeña en fragmentos.",
+          "tth": "Porque, he aquí, יהוה ordena, y golpeará la casa grande en pedacitos, y la casa pequeña en fragmentos.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 12,
-          "tth": "¿Correrán por la peña los caballos, o se arará con los bueyes? Porque ustedes han convertido en veneno el juicio, y el fruto de la justicia en amargura,",
+          "tth": "¿Correrán por la peña los caballos, o se arará con los bueyes? Porque ustedes han convertido en veneno el proceso legal,",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 13,
-          "tth": "los que se alegran por nada (heb.: Lo Davar), los que dicen: ¿No hemos tomado con nuestra fuerza cuernos (heb.: Carnáim) para nosotros?",
-          "footnotes": [],
+          "tth": "los que se alegran por nada⁴³, los que dicen: ¿No hemos tomado con nuestra fuerza cuernos⁴⁴ para nosotros?",
+          "footnotes": [
+            {
+              "marker": "⁴³",
+              "number": "43",
+              "word": "nada",
+              "explanation": "Heb.: Lo davar."
+            },
+            {
+              "marker": "⁴⁴",
+              "number": "44",
+              "word": "cuernos",
+              "explanation": "Heb.: Carnáim."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 14,
-          "tth": "Pues, heme aquí, levanto sobre ustedes, casa de Israel, –declaración de יהוה, Elohim de los ejércitos–una nación, y los oprimirá desde la entrada de Jamat hasta el torrente del Arabáh. La langosta, el fuego y la plomada",
+          "tth": "Pues, heme aquí, levanto sobre ustedes, casa de Israel, –declaración de יהוה, Elohei Tzebaot–una nación, y los oprimirá desde la entrada de Jamat hasta el torrente del Arabáh. La langosta, el fuego y la plomada",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -646,13 +929,32 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "De esta manera me hizo ver Adonai יהוה: Y he aquí, Él formaba langostas en el comienzo del retoño (Lit.: del subir) de la cosecha tardía, y he aquí, la cosecha tardía era después del esquileo (O, de la siega) del rey.",
-          "footnotes": [],
+          "tth": "De esta manera me hizo ver Adonai יהוה: Y he aquí, Él formaba langostas en el comienzo del retoño⁴⁵ de la cosecha tardía, y he aquí, la cosecha tardía era después del esquileo⁴⁶ del rey.",
+          "footnotes": [
+            {
+              "marker": "⁴⁵",
+              "number": "45",
+              "word": "retoño",
+              "explanation": "Lit.: del subir."
+            },
+            {
+              "marker": "⁴⁶",
+              "number": "46",
+              "word": "esquileo",
+              "explanation": "O, de la siega."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "Y sucedió que cuando habían acabado de consumir la hierba de la tierra, dije: ¡Adonai יהוה, perdona por favor! ¿Quién levantará a Iaacob?,porque pequeño es él.3 ¡Restablece al inicio, יהוה, por esto! No será –dijo יהוה.",
+          "tth": "Y sucedió que cuando habían acabado de consumir la hierba de la tierra, dije: ¡Adonai יהוה, perdona por favor! ¿Quién levantará a Yaakov?, porque pequeño es él.",
+          "footnotes": [],
+          "hebrew_terms": []
+        },
+        {
+          "verse": 3,
+          "tth": "¡Restablece al inicio, יהוה, por esto! No será –dijo יהוה.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -664,7 +966,7 @@
         },
         {
           "verse": 5,
-          "tth": "Y dije: ¡Adonai יהוה, cesa por favor! ¿Quién levantará a Iaacob?,porque pequeño es él.",
+          "tth": "Y dije: ¡Adonai יהוה, cesa por favor! ¿Quién levantará a Yaakov?, porque pequeño es él.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -682,7 +984,7 @@
         },
         {
           "verse": 8,
-          "tth": "Y me dijo יהוה: ¿Qué ves tú, Amós? Y dije: Una plomada. Y dijo Adonai: Heme aquí, pongo una plomadaen medio de mi pueblo Israel.No volveré más a pasarlo por alto.",
+          "tth": "Y me dijo יהוה: ¿Qué ves tú, Amós? Y dije: Una plomada. Y dijo Adonai: Heme aquí, pongo una plomada en medio de mi pueblo Israel.No volveré más a pasarlo por alto.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -700,8 +1002,15 @@
         },
         {
           "verse": 11,
-          "tth": "Porque así dijo Amós: “Por la espada morirá Iarobam, e Israel ciertamente será llevado al exilio (Lit.: desnudando, será desnudado) de sobre su tierra”.",
-          "footnotes": [],
+          "tth": "Porque así dijo Amós: “Por la espada morirá Iarobam, e Israel ciertamente será llevado al exilio⁴⁷ de sobre su tierra”.",
+          "footnotes": [
+            {
+              "marker": "⁴⁷",
+              "number": "47",
+              "word": "exilio",
+              "explanation": "Lit.: desnudando, será desnudado. Así también en vers. 17."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -718,8 +1027,21 @@
         },
         {
           "verse": 14,
-          "tth": "Y respondió Amós y dijo a Amatziáh: Yo no soy profeta, ni soy hijo de profeta, porque pastor (O, boyero) soy yo y cultivador (O, recogedor) de sicomoros.",
-          "footnotes": [],
+          "tth": "Y respondió Amós y dijo a Amatziáh: Yo no soy profeta, ni soy hijo de profeta, porque pastor⁴⁸ soy yo y cultivador⁴⁹ de sicomoros.",
+          "footnotes": [
+            {
+              "marker": "⁴⁸",
+              "number": "48",
+              "word": "pastor",
+              "explanation": "O, boyero."
+            },
+            {
+              "marker": "⁴⁹",
+              "number": "49",
+              "word": "cultivador",
+              "explanation": "O, recolector."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -736,7 +1058,7 @@
         },
         {
           "verse": 17,
-          "tth": "Por eso, así ha dicho יהוה: “Tu mujer en la ciudad se prostituirá, y tus hijos y tus hijas por la espada caerán, y tu tierra por el cordel será repartida, y tú sobre tierra impura morirás. E Israel, ciertamente será llevado al exilio (Lit.: desnudando, será desnudado) de sobre su tierra”. Los juicios de Elohim",
+          "tth": "Por eso, así ha dicho יהוה: “Tu mujer en la ciudad se prostituirá, y tus hijos y tus hijas por la espada caerán, y tu tierra por el cordel será repartida, y tú sobre tierra impura morirás. E Israel, ciertamente será llevado al exilio de sobre su tierra”. Los juicios de Elohim",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -747,61 +1069,108 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "De esta manera me hizo ver Adonai יהוה: Y he aquí, una canasta de fruta de verano (heb.: káitz; así también en el vers. 2),",
-          "footnotes": [],
+          "tth": "De esta manera me hizo ver Adonai יהוה: Y he aquí, una canasta de fruta de verano⁵⁰,",
+          "footnotes": [
+            {
+              "marker": "⁵⁰",
+              "number": "50",
+              "word": "verano",
+              "explanation": "Heb.: Káitz. Así también en vers. 2."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "y Él dijo: ¿Qué ves tú, Amós? Y dije: una canasta de fruta de verano. Y me dijo יהוה: Ha llegado el fin (heb.: ketz; véase el juego de palabras entre fruta de verano ‘káitz’ y fin ‘ketz’) a mi pueblo Israel, no volveré más a pasarlo por alto.",
-          "footnotes": [],
+          "tth": "y Él dijo: ¿Qué ves tú, Amós? Y dije: una canasta de fruta de verano. Y me dijo יהוה: Ha llegado el fin⁵¹ a mi pueblo Israel, no volveré más a pasarlo por alto.",
+          "footnotes": [
+            {
+              "marker": "⁵¹",
+              "number": "51",
+              "word": "fin",
+              "explanation": "Heb.: Ketz. Véase el juego de palabras entre káitz y ketz."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 3,
-          "tth": "Y gemirán las cantoras del palacio (Otra lectura posible es: Y serán aullidos las canciones del palacio) en aquel día –declaración de Adonai יהוה. Muchos serán los cadáveres, en todo lugar serán arrojados (Lit.: ha arrojado). ¡Silencio! (Otra lectura posible es: en todo lugar serán arrojados, diciendo: ¡Silencio! O, en todo lugar serán arrojados en silencio)",
-          "footnotes": [],
+          "tth": "Y gemirán las cantoras del palacio⁵² en aquel día –declaración de Adonai יהוה. Muchos serán los cadáveres, en todo lugar serán arrojados⁵³. ¡Silencio⁵⁴!",
+          "footnotes": [
+            {
+              "marker": "⁵²",
+              "number": "52",
+              "word": "palacio",
+              "explanation": "Otra lectura posible es: Y serán aullidos las canciones del palacio."
+            },
+            {
+              "marker": "⁵³",
+              "number": "53",
+              "word": "arrojados",
+              "explanation": "Lit.: ha arrojado."
+            },
+            {
+              "marker": "⁵⁴",
+              "number": "54",
+              "word": "Silencio",
+              "explanation": "Otra lectura posible es: en todo lugar serán arrojados, diciendo: ¡Silencio! O, en todo lugar serán arrojados en silencio."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 4,
-          "tth": "Escuchen esto, los que pisotean (O, los que hacen jadear) al necesitado, y quieren hacer cesar a los afligidos de la tierra,",
-          "footnotes": [],
+          "tth": "Escuchen esto, los que pisotean⁵⁵ al necesitado, y quieren hacer cesar a los afligidos de la tierra,",
+          "footnotes": [
+            {
+              "marker": "⁵⁵",
+              "number": "55",
+              "word": "pisotean",
+              "explanation": "O, los que hacen jadear."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 5,
-          "tth": "diciendo: ¿Cuándo pasará la luna nueva, y podremos vender el grano; y el Shabat, y podremos abrir el granero de trigo, para achicar el efáh, para agrandar el shekel, y para pervertir (Lit.: torcer) las balanzas de engaño;",
+          "tth": "diciendo: ¿Cuándo pasará la luna nueva, y podremos vender el grano; y el Shabat, y podremos abrir el granero de trigo, para achicar el efáh, para agrandar el shekel, y para pervertir las balanzas de engaño;",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 6,
-          "tth": "para comprar con plata a los pobresy al necesitado por un par de sandalias, y el desecho del grano venderemos?",
+          "tth": "para comprar con plata a los pobres y al necesitado por un par de sandalias, y el desecho del grano venderemos?",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 7,
-          "tth": "Ha jurado יהוה por el orgullo de Iaacob (Otra posible traducción es: … contra la altivez de Iaacob): ¡Si me olvidare para siempre todas sus obras!",
+          "tth": "Ha jurado יהוה por el orgullo de Yaakov: ¡Si me olvidare para siempre todas sus obras!",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 8,
-          "tth": "¿Por esto no temblará la tierray se lamentará todo el que habita en ella? Y subirá como el Nilo toda ella, y será arrojada (O, y será tempestuosa), y menguará como el Nilo de Mitzráim.",
-          "footnotes": [],
+          "tth": "¿Por esto no temblará la tierra y se lamentará todo el que habita en ella? Y subirá como el Nilo toda ella, y será arrojada⁵⁶, y menguará como el Nilo de Mitzráim.",
+          "footnotes": [
+            {
+              "marker": "⁵⁶",
+              "number": "56",
+              "word": "arrojada",
+              "explanation": "O, y será tempestuosa."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "Y será que en aquel día –declaración de Adonai יהוה–haré que se ponga el sol al mediodíay haré oscurecer a la tierra en un día de luz.",
+          "tth": "Y será que en aquel día –declaración de Adonai יהוה–haré que se ponga el sol al mediodía y haré oscurecer a la tierra en un día de luz.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 10,
-          "tth": "Y tornaré sus fiestas en lutoy todas sus canciones en elegía; y haré subir sobre todos los lomos cilicio, y sobre toda cabeza, calvicie; y la pondré como luto por hijo único, y su postrer, como día amargo.",
+          "tth": "Y tornaré sus fiestas en luto y todas sus canciones en elegía; y haré subir sobre todos los lomos cilicio, y sobre toda cabeza, calvicie; y la pondré como luto por hijo único, y su postrer, como día amargo.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -825,8 +1194,15 @@
         },
         {
           "verse": 14,
-          "tth": "Los que juran por la culpa de Shomrón, y dicen: “¡Viva tu dios (heb.: Elohim), Dan! ”, y “¡Viva el camino de Beersheva! ”, caerán y no se levantarán más.",
-          "footnotes": [],
+          "tth": "Los que juran por la culpa de Shomrón, y dicen: “¡Viva tu poderoso⁵⁷, Dan! ”, y “¡Viva el camino de Beersheva! ”, caerán y no se levantarán más.",
+          "footnotes": [
+            {
+              "marker": "⁵⁷",
+              "number": "57",
+              "word": "poderoso",
+              "explanation": "Heb.: Elohim."
+            }
+          ],
           "hebrew_terms": []
         }
       ]
@@ -836,13 +1212,20 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Vi a Adonai parado sobre el altar, y dijo: Golpea los capiteles, y temblarán los umbrales, y rómpelos en la cabeza de todos.Y el resto (O, la parte final) de ellos, con la espada mataré; no huirá de ellos fugitivo, ni escapará de ellos refugiado.",
-          "footnotes": [],
+          "tth": "Vi a Adonai parado sobre el altar, y dijo: Golpea los capiteles, y temblarán los umbrales, y rómpelos en la cabeza de todos.Y el resto⁵⁸ de ellos, con la espada mataré; no huirá de ellos fugitivo, ni escapará de ellos refugiado.",
+          "footnotes": [
+            {
+              "marker": "⁵⁸",
+              "number": "58",
+              "word": "resto",
+              "explanation": "O, la parte final."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 2,
-          "tth": "Si cavan ellos hasta (Lit.: en) el Sheol, de allí mi mano los tomará; y si suben ellos a los cielos, de allí los haré bajar.",
+          "tth": "Si cavan ellos en el Sheol, de allí mi mano los tomará; y si suben ellos a los cielos, de allí los haré bajar.",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -866,26 +1249,60 @@
         },
         {
           "verse": 6,
-          "tth": "El que edifica en los cielos su ascensión (O, sus escaleras), y su bóveda sobre la tierra ha establecido; el que llama a las aguas del mary las derrama sobre la faz de la tierra; יהוה es su Nombre.",
-          "footnotes": [],
+          "tth": "El que edifica en los cielos su ascensión⁵⁹, y su bóveda sobre la tierra ha establecido; el que llama a las aguas del mary las derrama sobre la faz de la tierra; יהוה es su Nombre.",
+          "footnotes": [
+            {
+              "marker": "⁵⁹",
+              "number": "59",
+              "word": "ascensión",
+              "explanation": "O, sus escaleras."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 7,
-          "tth": "¿No son como los hijos de los cushiím (cusitas) ustedes para Mí, hijos de Israel? –declaración de יהוה.¿No hice subir a Israel de la tierra de Mitzráimy a los pelishtim (filisteos) de Caftor y a Aram de Kir?",
-          "footnotes": [],
+          "tth": "¿No son como los hijos de los cushiím⁶⁰ ustedes para Mí, hijos de Israel? –declaración de יהוה.¿No hice subir a Israel de la tierra de Mitzráimy a los pelishtim⁶¹ de Caftor y a Aram de Kir?",
+          "footnotes": [
+            {
+              "marker": "⁶⁰",
+              "number": "60",
+              "word": "cushiím",
+              "explanation": "Cusitas."
+            },
+            {
+              "marker": "⁶¹",
+              "number": "61",
+              "word": "pelishtim",
+              "explanation": "Filisteos."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 8,
-          "tth": "He aquí, los ojos de Adonai יהוה están sobre el reino pecador, y lo destruiré de sobre la faz de la tierra; sin embargo, no destruiré totalmente (Lit.: no destruyendo destruiré) a la casa de Iaacob–declaración de יהוה.",
-          "footnotes": [],
+          "tth": "He aquí, los ojos de Adonai יהוה están sobre el reino pecador, y lo destruiré de sobre la faz de la tierra; sin embargo, no destruiré totalmente⁶² a la casa de Yaakov –declaración de יהוה.",
+          "footnotes": [
+            {
+              "marker": "⁶²",
+              "number": "62",
+              "word": "totalmente",
+              "explanation": "Lit.: no, destruyendo, destruiré."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 9,
-          "tth": "Porque he aquí, Yo ordeno, y sacudiré (O, haré mover de un lado a otro)entre todas las naciones a la casa de Israel, como se sacude en el tamiz, y no caerá un guijarro (O, grano) a tierra.",
-          "footnotes": [],
+          "tth": "Porque he aquí, Yo ordeno, y sacudiré entre todas las naciones a la casa de Israel, como se sacude en el tamiz, y no caerá un guijarro⁶³ a tierra.",
+          "footnotes": [
+            {
+              "marker": "⁶³",
+              "number": "63",
+              "word": "guijarro",
+              "explanation": "O, grano."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -896,20 +1313,34 @@
         },
         {
           "verse": 11,
-          "tth": "En aquel día levantaré el tabernáculo (heb.: sucah) de David, el que está caído, y tapiaré sus brechas, y sus ruinas levantaré, y lo edificaré como en los días de antigüedad,",
-          "footnotes": [],
+          "tth": "En aquel día levantaré el tabernáculo⁶⁴ de David, el que está caído, y tapiaré sus brechas, y sus ruinas levantaré, y lo edificaré como en los días de antigüedad,",
+          "footnotes": [
+            {
+              "marker": "⁶⁴",
+              "number": "64",
+              "word": "tabernáculo",
+              "explanation": "Heb.: Sucáh."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 12,
-          "tth": "Para que me busque el resto de los hombres (Así en la versión gr., en el T.M., para que posean el resto de Edom; probablemente un error de texto.) y todas las naciones que es invocado mi Nombre sobre ellos –declaración de יהוה, el que hace esto.",
+          "tth": "Para que me busque el resto de los hombres⁶⁵ y todos los gentiles que es invocado mi Nombre sobre ellos –declaración de יהוה, el que hace esto.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 13,
-          "tth": "He aquí, días vienen –declaración de יהוה–y se acercará el arador al segador, y el que pisa las uvas al que esparce la semilla; y gotearán los montes vino dulce (O, jugo), y todas las colinas se derretirán.",
-          "footnotes": [],
+          "tth": "He aquí, días vienen –declaración de יהוה–y se acercará el arador al segador, y el que pisa las uvas al que esparce la semilla; y gotearán los montes vino dulce⁶⁶, y todas las colinas se derretirán.",
+          "footnotes": [
+            {
+              "marker": "⁶⁶",
+              "number": "66",
+              "word": "dulce",
+              "explanation": "O, jugo."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -920,7 +1351,7 @@
         },
         {
           "verse": 15,
-          "tth": "Y los plantaré sobre su tierra, y no serán arrancados más de sobre su tierraque les he dado a ellos–ha dicho יהוה tu Elohim. __OBADIÁH (ABDÍAS)__ עבדיה",
+          "tth": "Y los plantaré sobre su tierra, y no serán arrancados más de sobre su tierraque les he dado a ellos –ha dicho יהוה tu Elohim. __OBADIÁH (ABDÍAS)__ עבדיה",
           "footnotes": [],
           "hebrew_terms": []
         }
@@ -931,8 +1362,15 @@
       "verses": [
         {
           "verse": 1,
-          "tth": "Visión de Obadiáh.Así ha dicho Adonai יהוה a Edom: Un mensaje (Lit.: un oír) hemos oído de יהוה, y un mensajero entre las naciones fue enviado: ¡Levántense, y levantémonos sobre ella para la batalla!",
-          "footnotes": [],
+          "tth": "Visión de Obadiáh.Así ha dicho Adonai יהוה a Edom: Un mensaje⁶⁷ hemos oído de יהוה, y un mensajero entre las naciones fue enviado: ¡Levántense, y levantémonos sobre ella para la batalla!",
+          "footnotes": [
+            {
+              "marker": "⁶⁷",
+              "number": "67",
+              "word": "mensaje",
+              "explanation": "Lit.: un oír."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -955,7 +1393,7 @@
         },
         {
           "verse": 5,
-          "tth": "Si ladrones vinieran a ti, si devastadores de la noche, ¡cómo serías destruido!,¿no robarían lo suficiente para ellos? Si vendimiadores vinieran a ti, ¿no dejarían rebuscos?",
+          "tth": "Si ladrones vinieran a ti, si devastadores de la noche, ¡cómo serías destruido!, ¿no robarían lo suficiente para ellos? Si vendimiadores vinieran a ti, ¿no dejarían rebuscos?",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -967,8 +1405,21 @@
         },
         {
           "verse": 7,
-          "tth": "Hasta la frontera te echarontodos los hombres de tu alianza; te engañaron, pudieron contra (Lit.: para) tilos hombres de tu shalom; los que comen tu pan pondrán falsedad (O, red; significado dudoso. La versión gr. dice: acechanza) debajo de ti; no hay entendimiento en él.",
-          "footnotes": [],
+          "tth": "Hasta la frontera te echaron todos los hombres de tu alianza; te engañaron, pudieron contra⁶⁸ ti los hombres de tu shalom; los que comen tu pan pondrán falsedad⁶⁹ debajo de ti; no hay entendimiento en él.",
+          "footnotes": [
+            {
+              "marker": "⁶⁸",
+              "number": "68",
+              "word": "contra",
+              "explanation": "Lit.: para."
+            },
+            {
+              "marker": "⁶⁹",
+              "number": "69",
+              "word": "falsedad",
+              "explanation": "O, red. Significado dudoso. La versión gr. dice: acechanza."
+            }
+          ],
           "hebrew_terms": []
         },
         {
@@ -985,31 +1436,51 @@
         },
         {
           "verse": 10,
-          "tth": "Por la violencia contra tu hermano Iaacob, te cubrirá vergüenza, y serás cortado para siempre.",
+          "tth": "Por la violencia contra tu hermano Yaakov, te cubrirá vergüenza, y serás cortado para siempre.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 11,
-          "tth": "En el dia que te paraste de frente (O, en contra), en el día que cautivaban extraños su fuerza, y extranjeros entraban por su puertay sobre Ierushalem echaban goral (una piedra pequeña para tomar decisiones), tú también eras como uno de ellos.",
-          "footnotes": [],
+          "tth": "En el dia que te paraste de frente⁷⁰, en el día que cautivaban extraños su fuerza, y extranjeros entraban por su puerta y sobre Yerushaláim echaban goral⁷¹, tú también eras como uno de ellos.",
+          "footnotes": [
+            {
+              "marker": "⁷⁰",
+              "number": "70",
+              "word": "frente",
+              "explanation": "O, en contra."
+            },
+            {
+              "marker": "⁷¹",
+              "number": "71",
+              "word": "goral",
+              "explanation": "Piedrecita lanzada para tomar decisiones y designar tierras."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 12,
-          "tth": "Y no mirarás en el día de tu hermano, en el día de su extranjero; y no te alegrarás por los hijos de Iehudáhen el día de su perdición; ni agrandarás tu boca en el día de estrechez.",
+          "tth": "Y no mirarás en el día de tu hermano, en el día de su extranjero; y no te alegrarás por los hijos de Iehudáh en el día de su perdición; ni agrandarás tu boca en el día de estrechez.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 13,
-          "tth": "No entrarás por la puerta de mi puebloen el día de su calamidad.Tampoco mirarás tú en su mal, en el día de su calamidad, ni enviarás tu mano a su riqueza (O, fuerza)en el día de su calamidad.",
-          "footnotes": [],
+          "tth": "No entrarás por la puerta de mi pueblo en el día de su calamidad.Tampoco mirarás tú en su mal, en el día de su calamidad, ni enviarás tu mano a su riqueza⁷² en el día de su calamidad.",
+          "footnotes": [
+            {
+              "marker": "⁷²",
+              "number": "72",
+              "word": "riqueza",
+              "explanation": "O, fuerza."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 14,
-          "tth": "Y no te pararás en la encrucijadapara cortar a sus fugitivos, ni entregarás sus sobrevivientesen el día de estrechez. Restauración de Israel",
+          "tth": "Y no te pararás en la encrucijada para cortar a sus fugitivos, ni entregarás sus sobrevivientes en el día de estrechez. Restauración de Israel",
           "footnotes": [],
           "hebrew_terms": []
         },
@@ -1021,32 +1492,52 @@
         },
         {
           "verse": 16,
-          "tth": "Porque, como ustedes bebieron en el monte de mi santidad, beberán todas las naciones continuamente.¡Y bebieron y tragaron!,y fueron como si no hubieran sido.",
+          "tth": "Porque, como ustedes bebieron en el monte de mi santidad, beberán todas las naciones continuamente.¡Y bebieron y tragaron!, y fueron como si no hubieran sido.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 17,
-          "tth": "Y en el monte de Tzión habrá escape, y será santidad; y poseerá la casa de Iaacob sus posesiones.",
+          "tth": "Y en el monte de Tzión habrá escape, y será santidad; y poseerá la casa de Yaakov sus posesiones.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 18,
-          "tth": "Y será la casa de Iaacob un fuego, y la casa de Iosef una llama, y la casa de Esav por hojarasca.Y los quemarán y los consumirán, y no habrá sobreviviente de la casa de Esav–porque יהוה ha hablado.",
+          "tth": "Y será la casa de Yaakov un fuego, y la casa de Iosef una llama, y la casa de Esav por hojarasca. Y los quemarán y los consumirán, y no habrá sobreviviente de la casa de Esav –porque יהוה ha hablado.",
           "footnotes": [],
           "hebrew_terms": []
         },
         {
           "verse": 19,
-          "tth": "Y poseerán los del Néguev el monte de Esav, y la Shefelah (tierra baja) a los pelishtim; y poseerán el campo de Efráim y el campo de Shomrón, y Biniamín a Guilad.",
-          "footnotes": [],
+          "tth": "Y poseerán los del Néguev el monte de Esav, y la Shefelah⁷³ a los pelishtim⁷⁴; y poseerán el campo de Efráim y el campo de Shomrón, y Biniamín a Guilad.",
+          "footnotes": [
+            {
+              "marker": "⁷³",
+              "number": "73",
+              "word": "Shefelah",
+              "explanation": "Tierra Baja."
+            },
+            {
+              "marker": "⁷⁴",
+              "number": "74",
+              "word": "pelishtim",
+              "explanation": "Filisteos."
+            }
+          ],
           "hebrew_terms": []
         },
         {
           "verse": 20,
-          "tth": "Y el cautiverio de este ejército de los hijos de Israel que están con los kenaanim (cananeos) hasta Tzarefat, y el cautiverio de Ierushalem que está en Sefarad, poseerán las ciudades del Néguev.",
-          "footnotes": [],
+          "tth": "Y el cautiverio de este ejército de los hijos de Israel que están con los kenaanim⁷⁵ hasta Tzarefat, y el cautiverio de Yerushaláim que está en Sefarad, poseerán las ciudades del Néguev.",
+          "footnotes": [
+            {
+              "marker": "⁷⁵",
+              "number": "75",
+              "word": "kenaanim",
+              "explanation": "Cananeos."
+            }
+          ],
           "hebrew_terms": []
         },
         {

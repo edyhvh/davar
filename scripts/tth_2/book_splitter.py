@@ -62,6 +62,16 @@ class TTH2BookSplitter:
             raise ValueError(
                 f"Book '{book_key}' has no patterns configured in BOOKS_INFO")
 
+        def has_hebrew_on_line_or_next(idx: int, candidate_line: str) -> bool:
+            """Allow split headers where Hebrew appears on the candidate line or the immediately following line."""
+            if re.search(r'[\u0590-\u05FF]', candidate_line):
+                return True
+            if idx + 1 < len(lines):
+                next_line = lines[idx + 1].strip()
+                if next_line and re.search(r'[\u0590-\u05FF]', next_line):
+                    return True
+            return False
+
         # Find book start
         book_start = -1
         for i, line in enumerate(lines):
@@ -85,8 +95,8 @@ class TTH2BookSplitter:
                 bold_matches_book = False
                 for pattern in patterns:
                     if re.search(pattern, line_stripped, re.IGNORECASE):
-                        # Additional validation: should contain Hebrew text
-                        if re.search(r'[\u0590-\u05FF]', line_stripped):
+                        # Additional validation: should contain Hebrew text on this or the next line
+                        if has_hebrew_on_line_or_next(i, line_stripped):
                             # Skip TOC entries (lines with tab characters or page numbers)
                             if '\t' in line_stripped or re.search(r'\d{1,3}$', line_stripped.strip()):
                                 continue
@@ -99,8 +109,8 @@ class TTH2BookSplitter:
             # Try each pattern for this book
             for pattern in patterns:
                 if re.search(pattern, line_stripped, re.IGNORECASE):
-                    # Additional validation: should contain Hebrew text
-                    if re.search(r'[\u0590-\u05FF]', line_stripped):
+                    # Additional validation: should contain Hebrew text on this or the next line
+                    if has_hebrew_on_line_or_next(i, line_stripped):
                         # Skip TOC entries (lines with tab characters or page numbers)
                         if '\t' in line_stripped or re.search(r'\d{1,3}$', line_stripped.strip()):
                             continue
@@ -156,7 +166,7 @@ class TTH2BookSplitter:
                 for pattern in other_patterns:
                     if re.search(pattern, line, re.IGNORECASE):
                         # Additional validation
-                        if re.search(r'[\u0590-\u05FF]', line) or line.startswith('**'):
+                        if has_hebrew_on_line_or_next(i, line) or line.startswith('**'):
                             # Only end if it's an actual book header, not TOC
                             if line.strip().startswith('**') or '__' in line or ('\t' not in line and not re.search(r'\d{1,3}$', line.strip())):
                                 book_end = i

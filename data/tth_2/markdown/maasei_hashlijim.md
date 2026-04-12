@@ -60,7 +60,7 @@ y: su cargo tomará otro[^1434].
 
 **23** Y establecieron dos hombres: a Iosef, llamado Bar\-Shaba[^1437], y también llamado Tzadik[^1438], y a Matia.
 
-**24** E hicieron tefilah[^1439], diciendo: יהוה, Tú eres el que escudriña los corazones de todos; da integridad y haz conocer, por favor, a uno que has escogido de *estos* dos.
+**24** E hicieron tefilah[^1439], diciendo: Yehovah, Tú eres el que escudriña los corazones de todos; da integridad y haz conocer, por favor, a uno que has escogido de *estos* dos.
 
 **25** para tomar el goral[^1440] de este sacerdocio y encargo[^1441], de los cuales se ha apartado Iehudáh para ir a su lugar.
 
@@ -111,8 +111,8 @@ en aquellos días derramaré mi Rúaj y profetizarán.
 **19** Y daré maravillas en los cielos y en la tierra:
 sangre, fuego y columnas de humo en forma de palmera.
 **20** El sol se volverá en oscuridad, y la luna en sangre,
-antes de la venida del día de יהוה, grande y temible.
-**21** Y será que todo el que llame en Nombre de יהוה, será hecho escapar[^1456].
+antes de la venida del día de Yehovah, grande y temible.
+**21** Y será que todo el que llame en Nombre de Yehovah, será hecho escapar[^1456].
 
 **22** ¡Hombres hijos de Israel, escuchen mis palabras!, Yeshúa Notzrí[^1457] varón que fue visible de Elohim a ustedes, en obras poderosas, señales y maravillas que
 
@@ -157,11 +157,11 @@ antes de la venida del día de יהוה, grande y temible.
 
 
 11.
-[^11]: Ms. Shem Tov omite: *de יהוה.*
+[^11]: Ms. Shem Tov omite: *de Yehovah.*
 
 
 12.
-[^12]: Salvador o יהוה salva.
+[^12]: Salvador o Yehovah salva.
 
 
 13.
@@ -253,7 +253,7 @@ antes de la venida del día de יהוה, grande y temible.
 
 
 35.
-[^35]: Retorno, arrepentimiento y vuelta. Así en Ms. Shem Tov, Ver. Políglota de Nuremberg dice: *Vuelvan a יהוה.*
+[^35]: Retorno, arrepentimiento y vuelta. Así en Ms. Shem Tov, Ver. Políglota de Nuremberg dice: *Vuelvan a Yehovah.*
 
 
 36.
@@ -529,7 +529,7 @@ antes de la venida del día de יהוה, grande y temible.
 
 
 104.
-[^104]: Véase Levítico 19:12. Ver. Munster y Ver. Políglota de Nuremberg dicen: *cumplirás tus votos a יהוה.*
+[^104]: Véase Levítico 19:12. Ver. Munster y Ver. Políglota de Nuremberg dicen: *cumplirás tus votos a Yehovah.*
 
 
 105.
@@ -1986,7 +1986,7 @@ antes de la venida del día de יהוה, grande y temible.
 
 
 468.
-[^468]: Así en Ms. Shem Tov, Políglota de Nuremberg y Ver. Munster dicen: *Bendito el que viene en el Nombre de יהוה.*
+[^468]: Así en Ms. Shem Tov, Políglota de Nuremberg y Ver. Munster dicen: *Bendito el que viene en el Nombre de Yehovah.*
 
 
 469.
@@ -3426,7 +3426,7 @@ antes de la venida del día de יהוה, grande y temible.
 
 
 828.
-[^828]: יהוה salva.
+[^828]: Yehovah salva.
 
 
 829.
@@ -3506,7 +3506,7 @@ antes de la venida del día de יהוה, grande y temible.
 
 
 848.
-[^848]: יהוה salva.
+[^848]: Yehovah salva.
 
 
 849.
@@ -5958,8 +5958,8 @@ antes de la venida del día de יהוה, grande y temible.
 [^8]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *entrara a ella.*
 [^9]: Espíritu de Santidad; a veces como *Rúaj Ha’Kadosh.*
 [^10]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *no quería entregarla, sino que tenía en su corazón dejarla en secreto.*
-[^11]: Ms. Shem Tov omite: *de יהוה.*
-[^12]: Salvador o יהוה salva.
+[^11]: Ms. Shem Tov omite: *de Yehovah.*
+[^12]: Salvador o Yehovah salva.
 [^13]: Ms. Shem Tov dice: *mi pueblo.*
 [^14]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *pecados.*
 [^15]: Véase Isaías 7:14.
@@ -5982,7 +5982,7 @@ antes de la venida del día de יהוה, grande y temible.
 [^32]: Galilea.* *
 [^33]: Nazaret.
 [^34]: *Notzrí *no es un gentilicio, por lo tanto, no es apropiado traducir: *nazareno. *Variante del heb.: *Nétzer; *retoño. Véase Isaías 11:1.
-[^35]: Retorno, arrepentimiento y vuelta. Así en Ms. Shem Tov, Ver. Políglota de Nuremberg dice: *Vuelvan a יהוה.*
+[^35]: Retorno, arrepentimiento y vuelta. Así en Ms. Shem Tov, Ver. Políglota de Nuremberg dice: *Vuelvan a Yehovah.*
 [^36]: Isaías.
 [^37]: Véase Isaías 40:3.
 [^38]: Jordán.
@@ -6051,7 +6051,7 @@ antes de la venida del día de יהוה, grande y temible.
 [^101]: Así en Ver. Munster y Ver. Políglota de Nuremberg, Ms. Shem Tov omite la última frase del vers.
 [^102]: Véase Deuteronomio 24:1.
 [^103]: Así en Ver. Munster y Ver. Políglota de Nuremberg, Ms. Shem Tov dice: *Y yo les digo que todo el que deje a su mujer tiene que darle escritura de divorcio, pero por causa de adulterio, *sino* él adultera, y el que la toma a ella adultera.*
-[^104]: Véase Levítico 19:12. Ver. Munster y Ver. Políglota de Nuremberg dicen: *cumplirás tus votos a יהוה.*
+[^104]: Véase Levítico 19:12. Ver. Munster y Ver. Políglota de Nuremberg dicen: *cumplirás tus votos a Yehovah.*
 [^105]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg omiten: *en la Torah.*
 [^106]: Véase Éxodo 21:24, Levítico 24:20 y Deu­te­ronomio 19:21.
 [^107]: Así en Ver. Munster y Ver. Políglota de Nuremberg, Ms. Shem Tov dice: *no pagues mal en lugar de mal.*
@@ -6415,7 +6415,7 @@ antes de la venida del día de יהוה, grande y temible.
 [^465]: Zacarías.
 [^466]: Santuario, Palacio.
 [^467]: Jerusalén.
-[^468]: Así en Ms. Shem Tov, Políglota de Nuremberg y Ver. Munster dicen: *Bendito el que viene en el Nombre de יהוה.*
+[^468]: Así en Ms. Shem Tov, Políglota de Nuremberg y Ver. Munster dicen: *Bendito el que viene en el Nombre de Yehovah.*
 [^469]: Lit.: *ellos con ellos.*
 [^470]: O, *se entumecerá.*
 [^471]: Heb.: *Besorah.*
@@ -6775,7 +6775,7 @@ antes de la venida del día de יהוה, grande y temible.
 [^825]: Nazaret.
 [^826]: O sea, comprometida para casarse.
 [^827]: Paz. Lit.: Plenitud, bienestar completo. Así también en vers. 41.
-[^828]: יהוה salva.
+[^828]: Yehovah salva.
 [^829]: Altísimo. Así también en vers. 35.
 [^830]: Espíritu de Santidad.
 [^831]: Santo, apartado. Así también en vers. 49.
@@ -6795,7 +6795,7 @@ antes de la venida del día de יהוה, grande y temible.
 [^845]: Ungido.
 [^846]: O sea, *reconciliación con Elohim.*
 [^847]: Belén.
-[^848]: יהוה salva.
+[^848]: Yehovah salva.
 [^849]: Jerusalén. Así también en vers. 25.
 [^850]: Véase Éxodo 13:2, 12; Números 3:13, 8:17.
 [^851]: Véase Levítico 5:11, 12:8.

@@ -47,7 +47,7 @@
 
 *El jardín de Éden*
 
-**4** Estas son las genealogías de los cielos y la tierra cuando fueron creados, en el día que hi­zo יהוה Elohim la tie­rra y los cielos.
+**4** Estos son los nacimientos de los cielos y la tierra cuando fueron creados, en el día que hi­zo יהוה Elohim la tie­rra y los cielos.
 **5** Y todo arbusto del campo aún no había en la tierra, y toda hierba del campo aún no había brotado, porque no había hecho llover יהוה Elohim sobre la tierra, y hombre no había para trabajar la tierra.
 **6** Y un vapor[^15] subía de la tierra y regaba toda la faz del suelo.
 **7** Y formó יהוה Elohim al hombre[^16], polvo, desde el suelo[^17] –y soplará en su nariz aliento[^18] de vida– y fue el hombre un ser[^19] viviente.
@@ -55,7 +55,7 @@
 **9** E hizo brotar יהוה Elohim del suelo todo árbol deseable a la vista, y bueno para comida; y el árbol de la vida *estaba *en el medio del jardín; y el árbol del cono­cimiento, el bien y el mal.
 **10** Y un río salía de Éden para regar el jardín, y de allí se dividió y se con­virtió en cuatro cabezas.
 **11** El nombre del primero es Pishón, él rodea toda la tierra de Javiláh, que allí *hay* oro.
-**12** Y el oro de aquella tierra es bueno, allí *hay* bedelio y piedra de *shóham*[^23].
+**12** Y el oro de aquella tierra es bueno, allí *hay* bedelio y piedra de shóham[^23].
 **13** Y el nombre del río segundo es Guijón, él rodea toda la tierra de Cush.
 **14** Y el nombre del río tercero es Jidékel, él va al este de Ashur, y el río cuarto, este es Perat.
 **15** Y tomó יהוה Elohim al hombre y lo hizo descansar en el jardín de Éden, para trabajarlo y para guardarlo.
@@ -67,7 +67,7 @@
 **18** Y dijo יהוה Elohim: No es bueno el estar del hombre solo; haré para él una ayuda conforme a lo opuesto de él.
 **19** Y formó יהוה Elohim desde el suelo todo ser vivo del campo y toda ave de los cielos, y *los* hizo venir hacia el hombre para ver cómo los llamaría, y todo lo que llamó el hombre *a cada* ser viviente, ese *fue* su nombre.
 **20** Y llamó el hombre *con* nombres a toda bestia, al ave de los cielos, y a todo ser vivo del campo, pero para Adam no se halló una ayuda conforme a su opuesto.
-**21** E hizo caer יהוה Elohim un sueño pro­fundo sobre el hombre, y durmió. Y tomó una de sus costillas, y cerró la carne en* *su lugar.
+**21** E hizo caer יהוה Elohim un sueño pro­fundo sobre el hombre, y durmió. Y tomó uno de sus costados, y cerró la carne en* *su lugar.
 **22** Y construyó יהוה Elohim con* *el costado que había tomado del hombre a una mujer, y la hizo venir hacia el hombre.
 **23** Y dijo el hombre: Esta vez es hueso de mis huesos y carne de mi carne, esta se llamará mujer[^26], porque del hombre[^27] será tomada[^28] esta.
 **24** Por eso, dejará el hombre a su padre y a su madre y se adherirá a su mujer, y serán por carne única.
@@ -590,7 +590,7 @@ No temas, Abram, Yo soy es­cu­do para ti, tu recompensa *será *muy grande.
 **17** Y יהוה dijo:
 
  ¿Ocultaré Yo de Abraham lo que Yo haré?,**18** y Abraham ciertamente será[^89] una nación grande y poderosa,
- y serán bende­cidas en él todas las naciones de la tierra.
+ y serán bende­cidos en él cualquiera de los gentiles de la tierra.
 **19** Porque lo conocí a fin de que capacite a sus hijos y a su casa después de él,
  y guarden el camino de יהוה, para hacer justicia[^90] y juicio[^91],
 a fin de que traiga יהוה sobre Abraham lo que habló sobre él.
@@ -696,7 +696,7 @@ a fin de que traiga יהוה sobre Abraham lo que habló sobre él.
 **9** Y vio Sarah al hijo de Hagar, la mitzrit[^102] que le había dado a luz a Abraham, riéndose.
 **10** Y dijo a Abraham: Expulsa a esta sierva, y a su hijo, porque no será heredero el hijo de esta sierva con mi hijo, con Itzjak.
 **11** Y fue muy mala la palabra en los ojos de Abraham por causa de su hijo.
-**12** Pero dijo Elohim a Abraham: No sea malo en tus ojos por el joven y por tu sierva, todo lo que te ha dicho Sarah, escucha su voz, porque en Itzjak será llamada tu simiente.
+**12** Pero dijo Elohim a Abraham: No sea malo en tus ojos por el joven y por tu sierva, todo lo que te ha dicho Sarah, escucha su voz, porque en Itzjak será llamada para ti simiente.
 **13** Y también del hijo de la sierva una nación haré, porque tu simiente él es.
 **14** Y se levantó temprano Abraham en la ma­ñana, y tomó un pan y un odre de agua, y *los* dio a Hagar poniéndo*los* sobre su hombro, y al niño; y la envió. Y ella se fue y vagó en el desierto de Beersheva.
 **15** Y se acabó el agua del odre, y ella arrojó al niño debajo de uno de los arbustos.
@@ -745,7 +745,7 @@ Por Mí he jurado –declaración de יהוה– pues porque has hecho esta cosa
  y no has retenido a tu hijo, a tu único,**17** porque, bendiciendo, te bendigo,
  aumenta­ré grandemente tu simiente como las es­tre­­llas de los cielos
 y como la arena que es sobre la orilla del mar,
- y heredará tu simiente la puerta de sus ene­migos.**18** Y serán bendecidas en tu simiente todas las naciones de la tierra,
+ y heredará tu simiente la puerta de sus ene­migos.**18** Y serán bendecidos en tu simiente todos los gentiles de la tierra,
  debido a que has escu­cha­do mi voz.
 
 **19** Y volvió Abraham a sus jóvenes, y se le­van­­taron y fueron juntos a Beersheva, y ha­bi­taba Abraham en Beersheva.
@@ -878,30 +878,30 @@ y como la arena que es sobre la orilla del mar,
 **18** Y habitaron desde Javiláh hasta Shur, que es sobre la faz de Mitzráim, como uno va a Ashur. En frente[^112] de todos sus her­manos cayó.
 **19** Y estas *son* las generaciones de Itzjak, hijo de Abraham: Abraham engendró a Itzjak;
 **20** y era Itzjak de edad de cuarenta años cuan­do tomó a Ribkah, hija de Betuel el aramí, de Padán Aram, hermana de Labán el aramí, para él por mujer.
-**21** Y suplicó Itzjak a יהוה a la vista de su mujer, porque era estéril ella, y *como* le su­plicó a יהוה, concibió Ribkah su mujer.
-**22** Y se oprimían[^113] los hijos den­tro de ella, y ella dijo: Si es así, ¿por qué es­­to a mí? Y fue a consultar a יהוה.
-**23** Y dijo יהוה a ella: Dos naciones *hay* en tu vientre, y dos pueblos de tus entrañas se se­pararán; y un pueblo *más *que el *otro* pueblo se fortalecerá, y el mayor servirá al menor.
+**21** Y suplicó Itzjak a __יהוה__ a la vista de su mujer, porque era estéril ella, y *como* le su­plicó a יהוה, concibió Ribkah su mujer.
+**22** Y se oprimían[^113] los hijos den­tro de ella, y ella dijo: Si es así, ¿por qué es­­to a mí? Y fue a consultar a __יהוה__.
+**23** Y dijo __יהוה__ a ella: Dos naciones *hay* en tu vientre, y dos pueblos de tus entrañas se se­pararán; y un pueblo *más *que el *otro* pueblo se fortalecerá, y el Grande servirá pequeño.
 **24** Y se cumplieron sus días para dar a luz, y he aquí,* había* mellizos en su vientre.
 **25** Y salió el primero, rojizo[^114], todo peludo como una túnica, y llamaron su nombre Esav.
-**26** Y después de eso salió su hermano, y su mano agarrada en el talón de Esav, y llamó su nombre Iaacob. E Itzjak *tenía* la edad de se­sen­ta años cuando ella dio a luz a ellos.
-**27** Y crecieron los jóvenes, y era Esav un hom­bre, un sabio cazador, hombre del campo; pero Iaacob *era* un hombre íntegro, que habi­taba en tiendas.
-**28** Y amaba Itzjak a Esav porque la caza *es­taba* en su boca, pero Ribkah amaba a Iaacob.
-**29** E hirvió Iaacob un potaje, y vino Esav del campo, y él *estaba* agotado;
-**30** Y dijo Esav a Iaacob: Aliméntame por fa­vor de ese *potaje* rojo[^115], pues agotado *estoy *yo. Por eso fue lla­mado su nombre Edom[^116].
-**31** Y dijo Iaacob: Véndeme hoy tu primo­ge­nitura.
+**26** Y después de eso salió su hermano, y su mano agarrada en el talón de Esav, y llamó su nombre Yaakov. E Itzjak *tenía* la edad de se­sen­ta años cuando ella dio a luz a ellos.
+**27** Y crecieron los jóvenes, y era Esav un hom­bre, un sabio cazador, hombre del campo; pero Yaakov *era* un hombre íntegro, que habi­taba en tiendas.
+**28** Y amaba Itzjak a Esav porque la caza *es­taba* en su boca, pero Ribkah amaba a Yaakov.
+**29** E hirvió Yaakov un potaje, y vino Esav del campo, y él *estaba* agotado;
+**30** Y dijo Esav a Yaakov: Aliméntame por fa­vor de ese *potaje* rojo[^115], pues agotado *estoy *yo. Por eso fue lla­mado su nombre Edom[^116].
+**31** Y dijo Yaakov: Véndeme hoy tu primo­ge­nitura.
 **32** Y dijo Esav: He aquí, yo *estoy* yendo a la muerte, ¿y para qué es para mí la primoge­nitu­ra?
-**33** Y dijo Iaacob: Júrame hoy. Y le juró, y vendió su primogenitura a Iaacob.
-**34** Y Iaacob dio a Esav un pan y un potaje de len­tejas; y comió y bebió, y se levantó y se fue. Y despreció Esav la primogenitura.
+**33** Y dijo Yaakov: Júrame hoy. Y le juró, y vendió su primogenitura a Yaakov.
+**34** Y Yaakov dio a Esav un pan y un potaje de len­tejas; y comió y bebió, y se levantó y se fue. Y despreció Esav la primogenitura.
 
 *Itzjak y Abimélej*
 
 **26**
 
 **1** Y hubo hambre en la tierra, además del hambre primero que hubo en los días de Abraham. Y fue Itzjak a Abimélej, rey de los pelishtim, en Guerar.
-**2** Y apareció a él יהוה, y dijo: No descien­das a Mitzráim, habita en la tierra la cual te diré a ti.
+**2** Y apareció a él __יהוה__, y dijo: No descien­das a Mitzráim, habita en la tierra la cual te diré a ti.
 **3** Reside en esta tierra, y seré contigo y te ben­deciré, porque a ti y tu simiente daré todas estas tierras, y estableceré el jura­men­to que ju­ré a Abraham tu padre.
-**4** Y aumentaré tu simiente como las estre­llas del cielo, y daré a tu simiente todas estas tierras, y serán bendecidas en tu simiente todas las naciones de la tierra,
-**5** como consecuencia de que escuchó Abraham mi voz, y guardó mi guardia, mis mandamie­ntos, mis es­­ta­tutos y mis instrucciones.
+**4** Y aumentaré tu simiente como las estre­llas del cielo, y daré a tu simiente todas estas tierras, y serán bendecidos en tu simiente cualquiera de los gentiles de la tierra,
+**5** como consecuencia de que escuchó Abraham mi voz, y guardó mi guardia, mis mandamie­ntos, mis decretos y mis instrucciones.
 **6** Y habitó Itzjak en Guerar.
 **7** Y le preguntaron los hombres del lugar por su mujer, y él dijo: Mi hermana ella es. Porque temía decir: Mi mujer es. *Pensaba:* No sea que me maten los hombres del lugar por Ribkah, porque buena de apariencia ella es.
 **8** Y sucedió *que *cuando habían sido largos para él allí los días, vio Abimélej, rey de los pelishtim, a través de la ventana, y miró, y he aquí, Itzjak riendo con Ribkah su mujer.
@@ -918,14 +918,14 @@ y como la arena que es sobre la orilla del mar,
 **19** Y cavaron los siervos de Itzjak en el arroyo, y encontraron ahí un pozo de aguas vivas.
 **20** Pero pelearon los pastores de Guerar con los pastores de Itzjak, diciendo: Para nosotros es el agua. Y llamó el nombre del pozo Esek[^118], porque contendieron con él.
 **21** Y cavaron otro pozo, y pelearon también por ese, y llamó su nombre Sitnah[^119].
-**22** Y se movieron de allí y cavaron otro pozo, y no pelearon por ese, y llamó su nombre Rejovot[^120], y dijo: Porque ahora nos ha ampliado יהוה, y fructificaremos en la tierra.
+**22** Y se movieron de allí y cavaron otro pozo, y no pelearon por ese, y llamó su nombre Rejovot[^120], y dijo: Porque ahora nos ha ampliado __יהוה__, y fructificaremos en la tierra.
 **23** Y subió desde allí a Beersheva.
-**24** Y apareció a él יהוה en esa noche, y dijo: Yo soy el Elohim de Abra­ham tu padre, no temas, porque contigo Yo estoy. Y te ben­deciré y aumentaré tu simiente, a causa de Abraham mi siervo.
-**25** Y construyó allí un altar, y llamó en el Nombre de יהוה, y tendió allí su tienda; y cavaron allí los siervos de Itzjak un pozo.
+**24** Y apareció a él __יהוה__ en esa noche, y dijo: Yo soy el Elohim de Abra­ham tu padre, no temas, porque contigo Yo estoy. Y te ben­deciré y aumentaré tu simiente, a causa de Abraham mi siervo.
+**25** Y construyó allí un altar, y llamó en el Nombre de __יהוה__, y tendió allí su tienda; y cavaron allí los siervos de Itzjak un pozo.
 **26** Y Abimélej vino a él desde Guerar, y Aju­zat su amigo, y Fijol, líder de su ejér­cito.
 **27** Y les dijo Itzjak: ¿Por qué han venido a mí, ustedes que me odian y me han enviado *lejos* de ustedes?
-**28** Y ellos dijeron: Vemos claramente[^121] que ha estado יהוה contigo, y dijimos: “Haya aho­ra un juramento entre nosotros, entre nosotros y tú, y hagamos[^122] un pacto con­ti­go,
-**29**¡si harías con nosotros maldad!, como no te hemos tocado, y como hemos hecho con­ti­go sólo el bien, y te hemos enviado *lejos* en shalom[^123]; tú ahora *eres* bendito de יהוה.
+**28** Y ellos dijeron: Vemos claramente[^121] que ha estado __יהוה__ contigo, y dijimos: “Haya aho­ra un juramento entre nosotros, entre nosotros y tú, y hagamos[^122] un pacto con­ti­go,
+**29**¡si harías con nosotros maldad!, como no te hemos tocado, y como hemos hecho con­ti­go sólo el bien, y te hemos enviado *lejos* en shalom[^123]; tú ahora *eres* bendito de __יהוה__.
 **30** E hizo para ellos un banquete, y comieron y bebieron.
 **31** Y se levantaron temprano en la mañana, y juraron un hombre con su hermano, y los envió Itzjak y se fueron de él en shalom.
 **32** Y sucedió en aquel día *que* vinieron los sier­vos de Itzjak y le dieron a conocer a causa del pozo que habían cavado, y le dijeron: Hemos encon­trado agua.
@@ -940,23 +940,23 @@ y como la arena que es sobre la orilla del mar,
 **3** Ahora, lleva por favor tus herramientas, tu aljaba y tu arco, y sal al campo y caza para mí comida.
 **4** Y haz para mí delicias como yo amo, y tráemela y coma yo, con el fin de que te bendiga mi ser an­tes de que muera.
 **5** Y Ribkah estaba escuchando cuando habló Itzjak a Esav su hijo, y fue Esav al campo para cazar comida para traer.
-**6** Y Ribkah dijo a Iaacob su hijo, diciendo: He aquí, he oído a tu padre hablar a Esav tu hermano, diciendo:
-**7**“Trae para mí caza y haz para mí delicias y coma yo, y te bendiga delante de יהוה antes de mi muerte”.
+**6** Y Ribkah dijo a Yaakov su hijo, diciendo: He aquí, he oído a tu padre hablar a Esav tu hermano, diciendo:
+**7**“Trae para mí caza y haz para mí delicias y coma yo, y te bendiga delante de __יהוה__ antes de mi muerte”.
 **8** Y ahora hijo mío escucha mi voz a lo que yo te ordeno.
 **9** Ve, te ruego, al rebaño y toma para mí de allí dos cabritos de las cabras buenas, y haré con ellos delicias para tu padre, como él ama.
 **10** Y traerás a tu padre, y coma él, a fin de que te bendiga antes de su muerte.
-**11** Y dijo Iaacob a Ribkah su madre: He aquí, Esav mi hermano es hombre peludo, y yo hombre suave.
+**11** Y dijo Yaakov a Ribkah su madre: He aquí, Esav mi hermano es hombre peludo, y yo hombre suave.
 **12** Quizá me toque mi padre, y seré en sus ojos como un engañador, y haré venir sobre mí maldición y no bendición.
 **13** Y le dijo su madre: Sobre mí tu maldi­ción, hijo mío, sólo escucha mi voz y ve, tóma*lo* para mí.
 **14** Y fue, y tomó y trajo a su madre; e hizo su madre delicias como amaba su padre.
-**15** Y tomó Ribkah la ropa de Esav, su hijo mayor, las más deseadas que *tenía* con ella en la casa, y vistió a Iaacob, su hijo menor.
+**15** Y tomó Ribkah la ropa de Esav, su hijo mayor, las más deseadas que *tenía* con ella en la casa, y vistió a Yaakov, su hijo menor.
 **16** Y las pieles de los cabritos de las cabras ella vistió sobre sus manos y sobre lo suave de su cuello.
-**17** Y ella dio las delicias y el pan que había hecho en la mano de Iaacob su hijo.
+**17** Y ella dio las delicias y el pan que había hecho en la mano de Yaakov su hijo.
 **18** Y vino a su padre, y dijo: Padre mío. Y él dijo: Heme aquí, ¿quién eres tú, hijo mío?
-**19** Y dijo Iaacob a su padre: Yo soy Esav tu primogénito, he hecho como tú me hablaste. Levántate, por favor, siéntate y come de mi caza, a fin de que me bendiga tu ser.
+**19** Y dijo Yaakov a su padre: Yo soy Esav tu primogénito, he hecho como tú me hablaste. Levántate, por favor, siéntate y come de mi caza, a fin de que me bendiga tu ser.
 **20** Y dijo Itzjak a su hijo: ¿Qué es esto que has sido tan rápido para hallar*lo*, hijo mío? Y él dijo: Porque יהוה tu Elohim hizo que se encontrara de­lante de mí.
-**21** Y dijo Itzjak a Iaacob: Acércate por favor y pueda sentirte, hijo mío, ¿tú eres mi hijo Esav o no?
-**22** Y se acercó Iaacob a Itzjak su padre, y él lo sintió, y dijo: La voz *es* la voz de Iaacob, pero las manos *son* las manos de Esav.
+**21** Y dijo Itzjak a Yaakov: Acércate por favor y pueda sentirte, hijo mío, ¿tú eres mi hijo Esav o no?
+**22** Y se acercó Yaakov a Itzjak su padre, y él lo sintió, y dijo: La voz *es* la voz de Yaakov, pero las manos *son* las manos de Esav.
 **23** Y no lo reconoció, porque eran sus manos como las manos de Esav, su hermano peludo, y lo bendijo.
 **24** Y él dijo: ¿Tú eres mi hijo Esav? Y él dijo: Yo soy.
 **25** Y él dijo: Acércamela a mí, y comeré de la caza de mi hijo a fin de que te bendiga mi ser. Y la acercó a él, y comió; y trajo a él vino, y be­bió.
@@ -966,13 +966,13 @@ y como la arena que es sobre la orilla del mar,
 **28** y te dé Elohim del rocío de los cielos, y de las grosuras de la tierra, y mucho grano y mosto.
 **29** Te servirán pueblos, y se inclinarán a ti na­ciones. Sé amo para tus hermanos, y se in­clinen a ti los hijos de tu madre. Los que te mal­digan sean malditos, y los que te bendigan sean benditos.
 
-**30** Y sucedió que* *cuando terminó Itzjak de bendecir a Iaacob, y había ciertamente sa­lido Iaacob del rostro de Itzjak su padre, E­sav, su hermano, vino de su caza.
+**30** Y sucedió que* *cuando terminó Itzjak de bendecir a Yaakov, y había ciertamente sa­lido Yaakov del rostro de Itzjak su padre, E­sav, su hermano, vino de su caza.
 **31** E hizo también él delicias, y vino a su padre, y dijo a su padre: Levántese mi padre, y coma de la caza de su hijo, para que me bendiga tu ser.
 **32** Y le dijo Itzjak su padre: ¿Quién eres tú? Y él dijo: Yo soy tu hijo, tu primogénito, Esav.
 **33** Y tembló Itzjak temblor grande, en extremo. Y dijo: ¿Quién *fue* enton­ces el que cazó, y trajo a mí, y comí de todo antes de que vinieras, y lo bendije? De hecho, bendito él será.
 **34** Cuando oyó Esav las palabras de su padre, gritó un grito grande y amargo, en extremo, y dijo a su padre: ¡Bendí­ceme también a mí, padre mío!
 **35** Y él dijo: Vino tu hermano en engaño, y tomó tu bendición.
-**36** Y *Esav* dijo: ¿Es por eso que se llama su nombre Iaacob? ¡Me ha suplan­tado estas dos veces! Mi primogenitura tomó, y he aquí, ahora ha tomado mi bendición. Y él dijo: ¿No has apartado para mí una ben­di­ción?
+**36** Y *Esav* dijo: ¿Es por eso que se llama su nombre Yaakov? ¡Me ha suplan­tado estas dos veces! Mi primogenitura tomó, y he aquí, ahora ha tomado mi bendición. Y él dijo: ¿No has apartado para mí una ben­di­ción?
 **37** Y respondió Itzjak, y dijo a Esav: He aquí, amo lo he puesto para ti, y a todos sus hermanos *le *he dado a él por siervos; y *con* grano y mosto lo he sostenido. Y para ti, entonces, ¿qué haré hijo mío?
 **38** Y dijo Esav a su padre: ¿Una bendición?, ¿esa tienes padre mío? Bendíceme también a mí, padre mío. Y levantó Esav su voz y lloró.
 **39** Y respondió Itzjak su padre, y le dijo: He aquí, de las grosuras de la tierra será tu asiento, y del rocío del cielo de arriba;
@@ -980,26 +980,26 @@ y como la arena que es sobre la orilla del mar,
 
 *Rencor de Esav*
 
-**41** Y aborreció Esav a Iaacob debido a la bendición con la cual lo bendijo su padre. Y dijo Esav en su corazón: Están cerca los días de luto *por *mi padre; y mataré a Iaacob mi hermano.
-**42** Y fueron contadas a Ribkah las palabras de Esav, su hijo más grande, y ella envió a llamar a Iaacob, su hijo más joven, y le dijo: He aquí, Esav tu hermano se consuela, *concer­niente* a ti, para matarte.
+**41** Y aborreció Esav a Yaakov debido a la bendición con la cual lo bendijo su padre. Y dijo Esav en su corazón: Están cerca los días de luto *por *mi padre; y mataré a Yaakov mi hermano.
+**42** Y fueron contadas a Ribkah las palabras de Esav, su hijo más grande, y ella envió a llamar a Yaakov, su hijo más joven, y le dijo: He aquí, Esav tu hermano se consuela, *concer­niente* a ti, para matarte.
 **43** Y ahora, hijo mío, escucha mi voz, leván­tate, huye por ti, a Labán mi hermano en Jarán.
 **44** Y habita con él unos cuantos días hasta que regrese la furia de tu hermano;
 **45** Hasta que regrese la ira de tu hermano de ti, y se olvide lo que has hecho a él, y enviaré y te tomaré de allí. ¿Por qué he de ser desconsolada incluso de ustedes dos en un día?
-**46** Y dijo Ribkah a Itzjak: Estoy harta de mi vida debido a las hijas de Jet; si toma Iaacob una mujer de las hijas de Jet, como estas, de las hijas de la tierra, ¿con qué propósito *será* para mí mi vida?
+**46** Y dijo Ribkah a Itzjak: Estoy harta de mi vida debido a las hijas de Jet; si toma Yaakov una mujer de las hijas de Jet, como estas, de las hijas de la tierra, ¿con qué propósito *será* para mí mi vida?
 
 **28**
 
-**1** Y llamó Itzjak a Iaacob y lo bendijo, y le ordenó, y le dijo: No tomarás mu­jer de las hijas de Kenáan.
+**1** Y llamó Itzjak a Yaakov y lo bendijo, y le ordenó, y le dijo: No tomarás mu­jer de las hijas de Kenáan.
 **2** Levántate, ve a Padán Aram, a la casa de Betuel, padre de tu madre, y toma para ti de allí una mujer de las hijas de Labán, hermano de tu madre.
 **3** Y El Shadai te bendiga, y te haga fructífero y te multiplique, y puedas ser asamblea de pueblos.
 **4** Y dé a ti la bendición de Abraham, a ti y a tu simiente contigo, para que heredes la tierra de tus peregrinaciones, la cual dio Elohim a Abra­ham.
-**5** Y envió Itzjak a Iaacob, y se fue a Padán Aram, a Labán hijo de Betuel el aramí, her­mano de Ribkah, madre de Iaacob y Esav.
-**6** Y vio Esav que bendijo Itzjak a Iaacob, y lo envió a Padán Aram, para tomar para sí de allí una mujer, *y* como lo bendijo a él, le dio ór­denes, diciendo: No tomarás mujer de las hijas de Kenáan.
-**7** Y escuchó Iaacob a su padre y a su madre, y se fue a Padán Aram.
+**5** Y envió Itzjak a Yaakov, y se fue a Padán Aram, a Labán hijo de Betuel el aramí, her­mano de Ribkah, madre de Yaakov y Esav.
+**6** Y vio Esav que bendijo Itzjak a Yaakov, y lo envió a Padán Aram, para tomar para sí de allí una mujer, *y* como lo bendijo a él, le dio ór­denes, diciendo: No tomarás mujer de las hijas de Kenáan.
+**7** Y escuchó Yaakov a su padre y a su madre, y se fue a Padán Aram.
 **8** Y vio Esav que *eran* malvadas las hijas de Kenáan en los ojos de Itzjak su padre.
 **9** Y fue Esav a Ishmael, y tomó a Majalat, hija de Ishmael, hijo de Abraham, hermana de Nevaiot, además de las mujeres *que ya* tenía por mujer.
-**10** Y salió Iaacob de Beersheva, y fue a Jarán.
-**11** Y se encontró con el lugar, y durmió toda la noche allí, porque se ponía \(Lit.: entraba\) el sol, y tomó una de las piedras del lugar, y la puso de cabecera, y se acostó en ese lugar.
+**10** Y salió Yaakov de Beersheva, y fue a Jarán.
+**11** Y se encontró con el lugar, y durmió toda la noche allí, porque se ponía el sol, y tomó una de las piedras del lugar, y la puso de cabecera, y se acostó en ese lugar.
 **12** Y él soñó, y he aquí, una escalera colocada en la tierra, y su parte superior llegaba al cielo; y he aquí, los ángeles de Elohim subían y bajaban por ella.
 **13** Y he aquí, יהוה estaba parado sobre ella, y dijo:
 
@@ -1010,50 +1010,50 @@ y serán bendecidas en ti todas las familias de la tierra, y en tu simiente.**15
  y te haré volver a esta tierra, porque no te dejaré
 hasta que haya hecho lo que te he hablado.
 
-**16** Y despertó Iaacob de su dormir, y dijo: Verdaderamente está יהוה en este lugar y yo no lo sabía.
+**16** Y despertó Yaakov de su dormir, y dijo: Verdaderamente la existencia de יהוה *está *en este lugar y yo no lo sabía.
 **17** Y temió, y dijo: ¡Cuán impresionante es este lugar! ¡No es esto sino la casa de Elo­him, y esta es la puerta del cielo!
-**18** Y se levantó temprano Iaacob en la mañana, y tomó la piedra que había puesto como su cabecera, y la puso como pilar, y vertió aceite sobre la parte superior.
+**18** Y se levantó temprano Yaakov en la mañana, y tomó la piedra que había puesto como su cabecera, y la puso como pilar, y vertió aceite sobre la parte superior.
 **19** Y llamó el nombre de ese lugar Betel[^126], sin embargo, Luz[^127] *había sido* el nombre de la ciu­dad primeramente.
-**20** Y juró Iaacob un voto, diciendo: Si está Elohim conmigo y me guarda en este camino en que yo voy, y me da un pan para comer y ropa para vestir,
+**20** Y juró Yaakov un voto, diciendo: Si está Elohim conmigo y me guarda en este camino en que yo voy, y me da un pan para comer y ropa para vestir,
 **21** y vuelvo en shalom[^128] a la casa de mi padre, entonces será יהוה mi Elohim.
 **22** Y esta piedra que he puesto como pilar será casa de Elohim, y todo lo que *me* darás a mí, ciertamente *te *daré la décima parte a ti.
 
-*Encuentro entre Iaacob y Rajel*
+*Encuentro entre Yaakov y Rajel*
 
 **29**
 
-**1** Y levantó Iaacob sus pies, y fue a la tierra de los hijos del este.
+**1** Y levantó Yaakov sus pies, y fue a la tierra de los hijos del este.
 **2** Y miró, y he aquí un pozo en el campo, y he aquí, allí tres rebaños de ovejas acostados al lado de él, porque de aquel pozo daban de beber a los rebaños, y la piedra *era* grande sobre la boca del pozo.
 **3** Y se reunían allí todos los rebaños, y ellos rodaban la piedra de sobre la boca del pozo, y daban de beber a las ovejas, y regresaban a la piedra sobre la boca del pozo a su lugar.
-**4** Y *les *dijo a ellos Iaacob: Mis hermanos, ¿de dónde son? Y ellos dijeron: De Jarán *somos* nosotros.
+**4** Y *les *dijo a ellos Yaakov: Mis hermanos, ¿de dónde son? Y ellos dijeron: De Jarán *somos* nosotros.
 **5** Y él dijo a ellos: ¿Conocen a Labán, hijo de Najor? Y ellos dijeron: Lo conocemos.
 **6** Y él dijo a ellos: ¿Está en shalom él? Y ellos dijeron: *Está* en shalom; y he aquí, Rajel su hija viene con las ovejas.
 **7** Y él dijo: He aquí, todavía el día es grande, no es tiempo de recoger el ganado. Den de beber a las ovejas, y vayan a apacentarlas.
 **8** Pero ellos dijeron: No podemos, hasta que se junten todos los rebaños y rueden la piedra de sobre la boca del pozo, y daremos de beber a las ovejas.
 **9** Mientras él hablaba con ellos, Rajel vino con las ovejas que *eran *de su padre, pues pastora era ella.
-**10** Y sucedió cuando la vio Iaacob a Rajel, hija de Labán, hermano de su madre, y a las ovejas de Labán, hermano de su madre, se acercó Iaacob, y rodó la piedra de sobre la boca del pozo y dio de beber a las ovejas de Labán, hermano de su madre.
-**11** Y besó Iaacob a Rajel, y levantó su voz y lloró.
-**12** Y le contó Iaacob a Rajel que hermano de su padre él era, y que hijo de Ribkah él era, y ella corrió y le contó a su padre.
-**13** Y sucedió cuando escuchó Labán el informe[^129] de Iaacob, hijo de su her­ma­na, corrió a su encuentro, y lo abrazó, y lo besó, y lo trajo a su casa. Y él contó a Labán todas estas cosas.
+**10** Y sucedió cuando la vio Yaakov a Rajel, hija de Labán, hermano de su madre, y a las ovejas de Labán, hermano de su madre, se acercó Yaakov, y rodó la piedra de sobre la boca del pozo y dio de beber a las ovejas de Labán, hermano de su madre.
+**11** Y besó Yaakov a Rajel, y levantó su voz y lloró.
+**12** Y le contó Yaakov a Rajel que hermano de su padre él era, y que hijo de Ribkah él era, y ella corrió y le contó a su padre.
+**13** Y sucedió cuando escuchó Labán el informe[^129] de Yaakov, hijo de su her­ma­na, corrió a su encuentro, y lo abrazó, y lo besó, y lo trajo a su casa. Y él contó a Labán todas estas cosas.
 **14** Y le dijo Labán: Ciertamente mi hueso y mi carne eres tú. Y habitó con él un período *de* un mes.
-**15** Y dijo Labán a Iaacob: ¿Acaso porque mi hermano eres tú me servirás gratis? Infórmame cuánto *será* tu salario.
+**15** Y dijo Labán a Yaakov: ¿Acaso porque mi hermano eres tú me servirás gratis? Infórmame cuánto *será* tu salario.
 **16** Y Labán *tenía* dos hijas; el nombre de la mayor *era *Leah, y el nombre de la más joven, Rajel.
 **17** Y los ojos de Leah *eran* tiernos, pero Rajel era hermosa *de* describir, y de hermosa apa­riencia.
-**18** Y amaba Iaacob a Rajel, y dijo: Te serviré siete años por Rajel, tu hija más joven.
+**18** Y amaba Yaakov a Rajel, y dijo: Te serviré siete años por Rajel, tu hija más joven.
 **19** Y dijo Labán: Bueno *es* dártela a ti que dársela a otro hombre, permanece conmigo.
-**20** Y sirvió Iaacob por Rajel siete años, y fueron en sus ojos como pocos días, por su amor a ella.
-**21** Y dijo Iaacob a Labán: Da*me*
+**20** Y sirvió Yaakov por Rajel siete años, y fueron en sus ojos como pocos días, por su amor a ella.
+**21** Y dijo Yaakov a Labán: Da*me*
 **1** a mi mujer, porque se cumplieron mis días, y pueda entrar a ella.
 **22** Y juntó Labán a todos los hombres del lugar, e hizo un banquete.
-**23** Y sucedió *que *por la tarde, tomó a Leah su hija y la trajo a Iaacob, y él entró a ella.
+**23** Y sucedió *que *por la tarde, tomó a Leah su hija y la trajo a Yaakov, y él entró a ella.
 **24** Y dio Labán para ella a Zilpah su sierva, a Leah su hija *como* sierva.
 **25** Y sucedió* que* en la mañana, he aquí, ella era Leah, y él dijo a Labán: ¿Qué es esto que me has hecho? ¿No fue por Rajel que serví contigo? ¿Y por qué me has engañado?
 **26** Y dijo Labán: No se hace así en nuestro lugar, de dar la más joven antes de la mayor.
 **27** Completa esta semana, y te daremos a ti también a la otra por el servicio[^130] que servirás conmigo aún otros siete años.
 
-**28** Y lo hizo Iaacob así, y cumplió esa semana, y le dio a Rajel su hija, a él por mujer.
+**28** Y lo hizo Yaakov así, y cumplió esa semana, y le dio a Rajel su hija, a él por mujer.
 **29** Y dio Labán a Rajel su hija a Bilhah su sierva, a ella para sierva.
-**30** Y *Iaacob* entró también a Rajel, y amó más a Rajel que a Leah, y sirvió con él aún otros siete años.
+**30** Y *Yaakov* entró también a Rajel, y amó más a Rajel que a Leah, y sirvió con él aún otros siete años.
 **31** Y vio יהוה que *era* aborrecida Leah, y abrió su matriz; pero Rajel *era* estéril.
 **32** Y concibió Leah y dio a luz un hijo, y llamó su nombre Reubén[^131], porque ella dijo: Porque ha visto[^132] יהוה en mi an­gustia, pues ahora me amará mi esposo.
 **33** Y concibió otra vez y dio a luz un hijo, y ella dijo: Porque ha escuchado[^133] יהוה* que *aborrecida soy yo, y me ha dado tam­bién a este. Y llamó su nombre Shimeón[^134].
@@ -1064,131 +1064,131 @@ hasta que haya hecho lo que te he hablado.
 
 **30**
 
-**1** Y vio Rajel que no daba a luz para Iaacob, y tuvo celos Rajel de su her­mana, y dijo a Iaacob: Dame hijos, y si no, mo­­­­riré yo.
-**2** Y se encendió la ira de Iaacob con Rajel, y dijo: ¿*Estoy* en lugar de Elohim yo, que ha retenido de ti el fruto del vientre?
+**1** Y vio Rajel que no daba a luz para Yaakov, y tuvo celos Rajel de su her­mana, y dijo a Yaakov: Dame hijos, y si no, mo­­­­riré yo.
+**2** Y se encendió la ira de Yaakov con Rajel, y dijo: ¿*Estoy* en lugar de Elohim yo, que ha retenido de ti el fruto del vientre?
 **3** Y ella dijo: He aquí mi sierva Bilhah, entra a ella y dará a luz sobre mis rodillas, y sea construida también yo por ella.
-**4** Y ella le dio a Bilhah su sierva, por mujer, y entró a ella Iaacob.
-**5** Y concibió Bilhah y dio a luz a Iaacob un hijo.
+**4** Y ella le dio a Bilhah su sierva, por mujer, y entró a ella Yaakov.
+**5** Y concibió Bilhah y dio a luz a Yaakov un hijo.
 **6** Y dijo Rajel: Ha juzgado mi *caso*[^139]* *Elohim, y además ha es­cu­chado mi voz, y ha dado para mí un hijo. Debi­do a eso llamó su nombre Dan[^140].
-**7** Y concibió otra vez y dio a luz Bilhah, sierva de Rajel, un hijo segundo a Iaacob.
+**7** Y concibió otra vez y dio a luz Bilhah, sierva de Rajel, un hijo segundo a Yaakov.
 **8** Y dijo Rajel: Luchas[^141] de Elohim he luchado con mi hermana, de hecho he sido capaz. Y llamó su nombre Naftalí[^142].
-**9** Y vio Leah que se detuvo de parir, y tomó a Zilpah su sierva, y la dio a Iaacob por mujer.
-**10** Y dio a luz Zilpah, sierva de Leah, a Iaacob un hijo.
+**9** Y vio Leah que se detuvo de parir, y tomó a Zilpah su sierva, y la dio a Yaakov por mujer.
+**10** Y dio a luz Zilpah, sierva de Leah, a Yaakov un hijo.
 **11** Y dijo Leah: ¡Con fortuna[^143]! Y llamó su nombre Gad[^144].
-**12** Y dio a luz Zilpah, sierva de Leah, un hijo segundo a Iaacob.
+**12** Y dio a luz Zilpah, sierva de Leah, un hijo segundo a Yaakov.
 **13** Y dijo Leah: ¡Con mi felicidad[^145]!; porque me felicitarán las hijas. Y llamó su nombre Asher[^146].
 **14** Y fue Reubén en los días de cosecha de trigo, y encontró higos en el campo, y los trajo a Leah su madre, y dijo Rajel a Leah: Dame, te ruego, de los higos de tu hijo.
 **15** Pero *le *dijo a ella: ¿Es poco haber tomado a mi esposo? ¿Tomarás también los higos de mi hijo?
 
-**16** Y vino Iaacob del campo en la tarde, y salió Leah a su encuentro, y dijo: A mí debes entrar, porque, alquilando, te he alquilado por los higos de mi hijo. Y se acostó con ella en esa noche.
-**17** Y escuchó Elohim a Leah, y ella concibió, y dio a luz a Iaacob un hijo quinto.
-**18** Y dijo Leah: Ha dado Elohim mi pago[^147], ya que di mi sierva para mi esposo. Y llamó su nombre Isasjar[^148].
-**19** Y concibió otra vez Leah y dio a luz un hijo sexto a Iaacob.
+**16** Y vino Yaakov del campo en la tarde, y salió Leah a su encuentro, y dijo: A mí debes entrar, porque, alquilando, te he alquilado por los higos de mi hijo. Y se acostó con ella en esa noche.
+**17** Y escuchó Elohim a Leah, y ella concibió, y dio a luz a Yaakov un hijo quinto.
+**18** Y dijo Leah: Ha dado Elohim mi pago[^147], ya que di mi sierva para mi esposo. Y llamó su nombre Issajar[^148].
+**19** Y concibió otra vez Leah y dio a luz un hijo sexto a Yaakov.
 **20** Y dijo Leah: Me ha otorgado Elohim un regalo bueno, esta vez morará[^149] conmigo mi esposo, porque di a luz para él seis hijos. Y llamó su nombre Zebulún[^150].
 **21** Y después dio a luz una hija, y llamó su nombre Dinah.
 **22** Y recordó Elohim a Rajel, y la escuchó Elohim, y abrió su matriz.
 **23** Y ella concibió y dio a luz un hijo, y dijo: Ha removido Elohim mi vergüenza.
 **24** Y ella llamó su nombre Iosef[^151], diciendo: Añada[^152] יהוה a mí otro hijo.
 
-*Iaacob se enriquece*
+*Yaakov se enriquece*
 
-**25** Y sucedió *que *cuando dio a luz Rajel para Iaacob, dijo Iaacob a Labán: Envíame *lejos*, y yo vaya a mi lugar y a mi tierra.
+**25** Y sucedió *que *cuando dio a luz Rajel para Yaakov, dijo Yaakov a Labán: Envíame *lejos*, y yo vaya a mi lugar y a mi tierra.
 **26** Da*me* a mis mujeres y a mis hijos, los cuales he servido contigo por ellos, y déjame ir; pues, tú sabes mi servicio el cual te he servido.
 **27** Y le dijo Labán: Si, por favor, he encon­trado favor en tus ojos; he adivinado que me ha bendecido יהוה debido a ti.
 **28** Y dijo: Nómbrame tu salario, sobre mí *te* lo daré.
 **29** Pero él le dijo: Tú sabes lo que te he ser­vido, y lo que ha sido tu ganado conmigo.
 **30** Porque poco tenías para ti antes de mí, y he abierto brecha en abundancia; y te ha ben­decido יהוה a mi pie. Y ahora, ¿Cuándo pro­­duciré también yo para mi casa?
-**31** Y él dijo: ¿Qué daré para ti? Y dijo Iaacob: No me darás nada. Si haces por mí esto, vol­veré a apacentar tu rebaño *y* guardarlo.
+**31** Y él dijo: ¿Qué daré para ti? Y dijo Yaakov: No me darás nada. Si haces por mí esto, vol­veré a apacentar tu rebaño *y* guardarlo.
 **32** Pasaré por todo tu rebaño hoy, removiendo de allí toda oveja moteada y manchada y todo cordero marrón, y manchadas y moteadas entre las cabras, y *ese* será mi salario.
 **33** Y responderá por mí mi justicia en el día *de* mañana, cuando vengas acerca de mi salario delante de ti. Todos los cuales no estén motea­dos y manchados entre las cabras, y marrón entre los corderos, robados *serán* ellos conmi­go.
 **34** Y dijo Labán: He aquí, deseo *que* sea conforme a tu palabra.
 **35** Y removió en aquel día a los machos ca­bríos moteados y manchados, y a todas las ca­bras moteadas y manchadas, todo el cual *tenía* blanco en sí, y todos los marrones entre los cor­­deros, y lo dio en la mano de sus hijos.
-**36** Y puso un camino de tres días entre él y Iaacob; y Iaacob pastoreaba a los reba­ños res­tan­tes de Labán.
-**37** Y tomó para sí Iaacob varas frescas de álamo, y de almendro y plátanos, y dividió en ellos la corteza blanca, descubriendo el blanco que *era *en las varas.
+**36** Y puso un camino de tres días entre él y Yaakov; y Yaakov pastoreaba a los reba­ños res­tan­tes de Labán.
+**37** Y tomó para sí Yaakov varas frescas de álamo, y de almendro y plátanos, y dividió en ellos la corteza blanca, descubriendo el blanco que *era *en las varas.
 **38** Y colocó las varas que había dividido en los abrevaderos, en los abrevaderos de agua, en los cuales venían los rebaños a beber, en pre­sencia de los rebaños, y concebían cuando ve­nían a beber.
 **39** Y concebían los rebaños hacia las varas, y los rebaños daban a luz *crías* rayadas, motea­das y parcheadas.
-**40** Y los corderos separó Iaacob, y puso la faz de los rebaños hacia lo rayado y todo lo marrón en el rebaño de Labán, pero puso para sí los rebaños aparte; y no los puso en el rebaño de Labán.
-**41** Y sucedió por cada *vez que *concebían los rebaños más fuertes[^153], ponía Iaacob las varas a los ojos del rebaño en los abre­va­deros, para que se apareen en las varas.
-**42** Pero los débiles[^154] no *los* ponía; y eran los débiles de Labán, y los más fuertes de Iaacob.
+**40** Y los corderos separó Yaakov, y puso la faz de los rebaños hacia lo rayado y todo lo marrón en el rebaño de Labán, pero puso para sí los rebaños aparte; y no los puso en el rebaño de Labán.
+**41** Y sucedió por cada *vez que *concebían los rebaños más fuertes[^153], ponía Yaakov las varas a los ojos del rebaño en los abre­va­deros, para que se apareen en las varas.
+**42** Pero los débiles[^154] no *los* ponía; y eran los débiles de Labán, y los más fuertes de Yaakov.
 **43** Y abrió brecha el hombre grandemente mucho, y tuvo para él rebaños grandes, y sier­vas y siervos, y camellos y asnos.
 
-*Iaacob decide volver a Kenáan*
+*Yaakov decide volver a Kenáan*
 
 **31**
 
-**1** Pero escuchó *Iaacob* las palabras de los hijos de Labán, diciendo: Ha toma­do Iaacob todo lo que era de nuestro padre, y de lo que era de nuestro padre ha hecho toda esta gloria.
-**2** Y vio Iaacob el rostro de Labán, y he aquí, no era *amigable* con él como ayer *y* anteayer.
-**3** Y dijo יהוה a Iaacob: Regresa a la tierra de tus padres, y a tu tierra natal, y seré contigo.
-**4** Y envió Iaacob y llamó a Rajel y a Leah al campo, a su rebaño.
+**1** Pero escuchó *Yaakov* las palabras de los hijos de Labán, diciendo: Ha toma­do Yaakov todo lo que era de nuestro padre, y de lo que era de nuestro padre ha hecho toda esta gloria.
+**2** Y vio Yaakov el rostro de Labán, y he aquí, no era *amigable* con él como ayer *y* anteayer.
+**3** Y dijo יהוה a Yaakov: Regresa a la tierra de tus padres, y a tu tierra natal, y seré contigo.
+**4** Y envió Yaakov y llamó a Rajel y a Leah al campo, a su rebaño.
 **5** Y *les *dijo a ellas: *Puedo* ver yo el rostro de su padre, que no es hacia mí como ayer *y* an­tea­yer; pero el Elohim de mi padre ha sido con­­migo.
 **6** Y ustedes saben que con todas mis fuerzas he servido a su padre.
 **7** Y su padre me ha burlado, y cambiado mi salario diez veces, pero no le permitió Elohim hacer mal conmigo.
 **8** Si entonces decía: “Las moteadas serán tu pago”, y daba a luz todo el rebaño moteadas; y si entonces decía: “Las rayadas serán tu pago”, y daba a luz todo el rebaño rayadas.
 **9** Y ha arrebatado Elohim el ganado de su padre y *me lo *ha dado a mí.
 **10** Y sucedió en el tiempo que concebían los rebaños, levanté mis ojos y vi en un sueño; y he aquí, los machos cabríos *que* ascendían sobre el rebaño *eran* rayados, moteados y manchados.
-**11** Y me dijo el ángel del Elohim en un sue­ño: “Iaacob”; y dije: “Heme aquí”.
+**11** Y me dijo el ángel del Elohim en un sue­ño: “Yaakov”; y dije: “Heme aquí”.
 **12** Y él dijo: Levanta ahora tus ojos y ve que todos los machos cabríos que ascienden sobre el rebaño *son* rayados, moteados y manchados, pues he visto todo lo que Labán te ha estado haciendo.
 **13** Yo soy el Elohim de Betel, donde ungiste el pilar, donde me juraste un voto. Ahora leván­tate, sal de esta tierra, y vuelve a la tierra de tu nacimiento.
 **14** Y respondieron Rajel y Leah, y le dijeron: ¿Hay todavía para nosotras parte y herencia en casa de nuestro padre?
 **15**¿No *somos* consideradas extrañas por él? Porque nos ha vendido y consumido, también de­vorando nuestro dinero.
 **16** Pues, toda la riqueza que ha arrebatado Elohim de nuestro padre, para nosotras es, y para nuestros hijos; y ahora todo lo que te ha dicho Elohim, hazlo.
 
-**17** Y se levantó Iaacob, y puso a sus hijos y a sus mujeres sobre los camellos,
+**17** Y se levantó Yaakov, y puso a sus hijos y a sus mujeres sobre los camellos,
 **18** y condujo a todo su ganado y todas sus adquisiciones que había obtenido, el ganado adquirido que había obtenido en Padán Aram, para ir a Itzjak su padre, en la tierra de Kenáan.
 **19** Y *mientras* Labán había ido a trasquilar a sus ovejas, robó Rajel los ídolos que eran de su padre.
-**20** Y robó Iaacob el corazón de Labán el aramí por no informarle que huía él.
+**20** Y robó Yaakov el corazón de Labán el aramí por no informarle que huía él.
 **21** Y huyó él, y todo lo que tenía; y se levantó, y cruzó el río y puso su rostro *hacia* la montaña de Guilad.
-**22** Y fue contado a Labán en el día tercero que había huido Iaacob.
+**22** Y fue contado a Labán en el día tercero que había huido Yaakov.
 **23** Y tomó a sus hermanos consigo y lo persiguió detrás de él en un camino de siete días, y se unió a él en la montaña de Guilad.
-**24** Pero vino Elohim a Labán el aramí en un sueño esa noche, y le dijo: Guárdate, no sea que hables a Iaacob de bien hasta mal.
-**25** Y alcanzó Labán a Iaacob, y Iaacob había tendido su tienda en la montaña, y Labán tendió con sus hermanos en la montaña de Guilad.
-**26** Y dijo Labán a Iaacob: ¿Qué has hecho, has robado mi corazón y conducido a mis hijas como cautivas de espada?
+**24** Pero vino Elohim a Labán el aramí en un sueño esa noche, y le dijo: Guárdate, no sea que hables a Yaakov de bien hasta mal.
+**25** Y alcanzó Labán a Yaakov, y Yaakov había tendido su tienda en la montaña, y Labán tendió con sus hermanos en la montaña de Guilad.
+**26** Y dijo Labán a Yaakov: ¿Qué has hecho, has robado mi corazón y conducido a mis hijas como cautivas de espada?
 **27**¿Por qué secretamente huiste y me robaste, y no me contaste y yo pudiera haberte enviado con alegría y cantos, tambores y arpa?
 **28** Y no me dejaste besar a mis hijos y a mis hijas. Ahora tontamente has obrado.
-**29** Está en el poder de mi mano para hacer con ustedes mal, pero el Elohim de su padre anoche habló a mí, diciendo: Guárdate de hablar con Iaacob de bien hasta mal.
+**29** Está en el poder de mi mano para hacer con ustedes mal, pero el Elohim de su padre anoche habló a mí, diciendo: Guárdate de hablar con Yaakov de bien hasta mal.
 **30** Y ahora, caminando te has ido porque, añorando, añorabas a la casa de tu padre; *pero* ¿por qué robaste mis dioses?
-**31** Y respondió Iaacob, y dijo a Labán: Porque temí, pues dije: “No sea que me robes a tus hijas de mi parte”.
-**32** *Pero* si encuentras a alguno con tus dioses, no vivirá. En contra de nuestros hermanos re­conoce qué es tuyo conmigo, y tóma*lo* para ti. Pero no sabía Iaacob que Rajel los había ro­bado.
-**33** Y entró Labán en la tienda de Iaacob, y en la tienda de Leah, y en las tiendas de las dos siervas, pero no *los* encontró. Y salió de la tienda de Leah y entró en la tienda de Rajel.
+**31** Y respondió Yaakov, y dijo a Labán: Porque temí, pues dije: “No sea que me robes a tus hijas de mi parte”.
+**32** *Pero* si encuentras a alguno con tus dioses, no vivirá. En contra de nuestros hermanos re­conoce qué es tuyo conmigo, y tóma*lo* para ti. Pero no sabía Yaakov que Rajel los había ro­bado.
+**33** Y entró Labán en la tienda de Yaakov, y en la tienda de Leah, y en las tiendas de las dos siervas, pero no *los* encontró. Y salió de la tienda de Leah y entró en la tienda de Rajel.
 **34** Y Rajel había tomado los ídolos[^155] y los puso en las sillas de montar del camello y se sentó sobre ellas, y palpó Labán por toda la tienda, pero no *los* encontró.
 **35** Y ella dijo a su padre: No se enoje a mis o­jos mi amo porque no pueda levantarme de­lante de ti, pues la costumbre de las mujeres es para mí. Y él buscó, pero no en­contró a los ídolos.
 
-*Enojo de Iaacob contra Labán*
+*Enojo de Yaakov contra Labán*
 
-**36** Y se enojó Iaacob y disputó con Labán, y respondió Iaacob, y dijo a Labán: ¿Cuál es mi transgresión? ¿Cuál es mi pecado para que me hayas perseguido enérgicamente detrás de mí?
+**36** Y se enojó Yaakov y disputó con Labán, y respondió Yaakov, y dijo a Labán: ¿Cuál es mi transgresión? ¿Cuál es mi pecado para que me hayas perseguido enérgicamente detrás de mí?
 **37** Pues, has palpado a todos mis instrumentos, ¿qué has encontrado de todos los instrumentos de tu casa? Pon*lo* entonces en contra de mis hermanos y tus hermanos y prueben ellos entre nosotros dos.
 **38** Estos veinte años yo *estuve* contigo; tus ovejas y tus cabras no han abortado, y los carneros de tu rebaño no he comi­do.
 **39** Lo devorado *por las bestias* no traje a ti; yo soporté la pérdida. De mi mano lo demandaste, lo robado en el día y lo robado en la noche.
 **40** Estaba yo en el día, me consumía la sequedad, y el hielo en la noche, y vagaba mi dormir de mis ojos.
 **41** Estos veinte años para mí en tu casa; te serví catorce años por tus dos hijas, y seis años por tu rebaño, y has cambiado mi salario diez veces.
 **42** Si no fuera por el Elohim de mi padre A­braham, y el temor de Itzjak, *que* ha sido con­migo, pues ahora con las manos vacías me hubieras enviado. Mi angustia y el esfuerzo de mis palmas ha visto Elohim, y probó anoche.
-**43** Y respondió Labán, y dijo a Iaacob: Las hijas son mis hijas, y los hijos mis hijos, y el rebaño mi rebaño, y todo lo que tú ves mío es. Pero a mis hijas, ¿qué puedo hacer a estas hoy, o a sus hijos que ellas dieron a luz?
+**43** Y respondió Labán, y dijo a Yaakov: Las hijas son mis hijas, y los hijos mis hijos, y el rebaño mi rebaño, y todo lo que tú ves mío es. Pero a mis hijas, ¿qué puedo hacer a estas hoy, o a sus hijos que ellas dieron a luz?
 **44** Y ahora, ven, hagamos[^156] un pacto yo y tú, y sea de testigo entre mí y tú.
-**45** Y tomó Iaacob una piedra y la levantó *co­mo* pilar.
-**46** Y dijo Iaacob a sus hermanos: Recojan piedras. Y tomaron piedras e hicieron un mon­tón, y comieron allí al lado del montón.
-**47** Y lo llamó Labán ‘Iegar Sahaduta[^157]’, pero Iaacob lo llamó ‘Ga­led[^158]’.
+**45** Y tomó Yaakov una piedra y la levantó *co­mo* pilar.
+**46** Y dijo Yaakov a sus hermanos: Recojan piedras. Y tomaron piedras e hicieron un mon­tón, y comieron allí al lado del montón.
+**47** Y lo llamó Labán ‘Iegar Sahaduta[^157]’, pero Yaakov lo llamó ‘Ga­led[^158]’.
 **48** Y dijo Labán: Este montón es testigo entre mí y tú hoy. Debido a eso fue llamado su nombre Galed.
 **49** Y Mitzpah[^159], porque dijo: Vigile[^160] יהוה entre mí y tú cuando nos ha­yamos escondido uno del otro[^161].
 **50** Si afliges a mis hijas, o si tomas *otras* mu­jeres junto a mis hijas, *aunque* ningún hom­bre *esté *con nosotros, mira, Elohim es testigo entre mí y tú.
-**51** Y dijo Labán a Iaacob: He aquí este montón, y he aquí el pilar que he puesto entre mí y tú.
+**51** Y dijo Labán a Yaakov: He aquí este montón, y he aquí el pilar que he puesto entre mí y tú.
 **52** Testigo *sea* este montón, y testigo el pi­lar, que yo no pasaré hacia ti a este montón, y que tú no pasarás hacia mí a este montón y a este pilar, para *hacer* mal.
-**53** El Elohim de Abraham y el Elohim de Najor juzgue entre nosotros, el Elohim de sus padres. Y juró Iaacob por temor de su padre Itzjak.
-**54** Y ofreció Iaacob un sacrificio en la mon­taña, y llamó a sus hermanos para comer pan; y comieron pan, y pasaron la noche en la mon­taña.
+**53** El Elohim de Abraham y el Elohim de Najor juzgue entre nosotros, el Elohim de sus padres. Y juró Yaakov por temor de su padre Itzjak.
+**54** Y ofreció Yaakov un sacrificio en la mon­taña, y llamó a sus hermanos para comer pan; y comieron pan, y pasaron la noche en la mon­taña.
 **55** Y se levantó temprano Labán en la ma­ña­na, y besó a sus hijos y a sus hijas, y los bendijo. Y volvió Labán a su lugar.
 
-*Iaacob se prepara para el encuentro con Esav*
+*Yaakov se prepara para el encuentro con Esav*
 
 **32**
 
-**1** Y Iaacob procedió en su camino, y se encon­traron con él los ángeles[^162] de Elohim.
-**2** Y dijo Iaacob cuando los vio: Campamento[^163] de Elohim es este. Y llamó el nombre de ese lugar Majanáim[^164].
-**3** Y envió Iaacob mensajeros delan­te de sí a Esav su hermano, en la tierra de Seir, campo de Edom.
-**4** Y ordenó a ellos, diciendo: Así dirán a mi amo Esav: “Así dice tu siervo Iaacob: ‘Con Labán he vivido, y me retrasé *allí* hasta ahora.
+**1** Y Yaakov procedió en su camino, y se encon­traron con él los ángeles[^162] de Elohim.
+**2** Y dijo Yaakov cuando los vio: Campamento[^163] de Elohim es este. Y llamó el nombre de ese lugar Majanáim[^164].
+**3** Y envió Yaakov mensajeros delan­te de sí a Esav su hermano, en la tierra de Seir, campo de Edom.
+**4** Y ordenó a ellos, diciendo: Así dirán a mi amo Esav: “Así dice tu siervo Yaakov: ‘Con Labán he vivido, y me retrasé *allí* hasta ahora.
 **5** Y tengo para mí bueyes, y asnos y rebaños, y siervos y siervas, y he enviado a decir a mi amo, para encontrar favor en tus ojos’ ”.
-**6** Y regresaron los mensajeros a Iaacob, diciendo: Fuimos a tu hermano Esav, y tam­bién él viene en dirección tuya, y cuatrocientos hombres con él.
-**7** Y temió Iaacob mucho, y se lamentó; y di­vidió al pueblo que *estaba* con él, y el re­ba­ño, y el ganado vacuno, y los camellos, en dos cam­pamentos.
+**6** Y regresaron los mensajeros a Yaakov, diciendo: Fuimos a tu hermano Esav, y tam­bién él viene en dirección tuya, y cuatrocientos hombres con él.
+**7** Y temió Yaakov mucho, y se lamentó; y di­vidió al pueblo que *estaba* con él, y el re­ba­ño, y el ganado vacuno, y los camellos, en dos cam­pamentos.
 **8** Y él dijo: Si viene Esav a un campamento y lo golpea, será *que* el campamento que quede escapará.
-**9** Y dijo Iaacob: Elohim de mi padre Abra­ham y Elohim de mi padre Itzjak, יהוה, di­jiste a mí: “Vuelve a tu tierra, y a tu tie­rra na­tal, y haré bien contigo”,
+**9** Y dijo Yaakov: Elohim de mi padre Abra­ham y Elohim de mi padre Itzjak, יהוה, di­jiste a mí: “Vuelve a tu tierra, y a tu tie­rra na­tal, y haré bien contigo”,
 **10** pequeño soy de todas las bondades y de toda la verdad que has hecho a tu sier­vo; pues con mi bastón crucé este Iardén, y ahora me he convertido en dos campa­mentos.
 **11** Sálvame, te ruego, de la mano de mi her­mano Esav, porque temo yo a él, no sea que venga y me golpee *y a* la madre con su hijo.
 **12** Y tú dijiste: “Bondadosamente, haré bien contigo, y haré a tu simiente como la arena del mar, la cual no *se puede* contar debido a *su* multitud”.
@@ -1197,30 +1197,30 @@ hasta que haya hecho lo que te he hablado.
 **15** camellas que amamantan y sus hijos treinta, cuarenta vacas y diez toros, veinte asnas y diez asnos.
 **16** Y los dio en mano de sus siervos, cada rebaño[^165] por sí mismo, y dijo a sus siervos: Avancen delante de mí, y un espacio pongan entre rebaño y rebaño.
 **17** Y ordenó al primero, diciendo: Cuando te encuentre Esav mi hermano y te pregunte, diciendo: “¿De quién eres tú y a dónde vas, y de quién *son* estos delante de ti?”
-**18** Y dirás: “*Pertenecen* a tu siervo, a Iaacob; es un presente enviado a mi amo Esav, y he aquí, también él *viene* detrás de nosotros”.
+**18** Y dirás: “*Pertenecen* a tu siervo, a Yaakov; es un presente enviado a mi amo Esav, y he aquí, también él *viene* detrás de nosotros”.
 **19** Y ordenó también al segundo y también al tercero, y también a todos los que iban detrás del rebaño, diciendo: Conforme a estas palabras hablarán a Esav en su encuentro con él.
-**20** Y dirán: “También, he aquí, tu siervo Iaacob *viene* detrás de nosotros”. Porque dijo: Se descubrirá su rostro con el presente que va de­lante de mí. Y después entonces veré su ros­tro, qui­zá soportará mi rostro.
+**20** Y dirán: “También, he aquí, tu siervo Yaakov *viene* detrás de nosotros”. Porque dijo: Se descubrirá su rostro con el presente que va de­lante de mí. Y después entonces veré su ros­tro, qui­zá soportará mi rostro.
 **21** Y pasó el presente sobre su rostro, y él dur­mió toda aquella noche en el campamento
 
-*La lucha de Iaacob con el hombre*
+*La lucha de Yaakov con el hombre*
 
 **22** Y se levantó esa noche, y tomó a sus dos mujeres, y a sus dos siervas, y a sus once hijos, y cruzó el cruce de Iabok.
 **23** Y los tomó y los hizo cruzar el arroyo, y cruzó lo que él tenía[^166].
-**24** Y se quedó Iaacob solo, y luchó un hombre con él hasta subir el amanecer.
-**25** Y vio que no prevaleció contra él, y lo tocó en la palma de su muslo, y se dislocó la palma del muslo de Iaacob en su lucha con él.
-**26** Y él dijo: Envíame, porque sube el ama­necer. Pero él dijo: No te enviaré, más bien si me bendices.
-**27** Y le dijo: ¿Cómo es tu nombre? Y él dijo: Iaacob.
-**28** Y él dijo: No será dicho más tu nombre Iaacob[^167], sino Israel[^168], porque has luchado[^169] con Elohim y con los hombres, y has sido capaz.
-**29** Y preguntó Iaacob, y dijo: Dime por favor tu nombre. Y él dijo: ¿Por qué esto, preguntas por mi nombre? Y lo bendijo allí.
-**30** Y llamó Iaacob el nombre del lugar Penuel[^170], porque *dijo*: He visto a Elohim cara a cara y sobrevivió mi ser.
+**24** Y se quedó Yaakov solo, y se revolcó un hombre[^167] con él hasta subir el alba.
+**25** Y vio que no prevaleció contra él, y lo tocó en la palma de su muslo, y se dislocó la palma del muslo de Yaakov en su revolcarse con él.
+**26** Y él dijo: Envíame, porque sube el alba. Pero él dijo: No te enviaré[^168]; sino que Tú me bendecirás[^169].
+**27** Y él le dijo: ¿Qué es tu nombre? Y él dijo: Yaakov.
+**28** Y él dijo: No será mencionado más tu nombre, Yaakov, sino *el de* Israel, porque serás Principado con Elohim y con los hombres, y serás victorioso.
+**29** Y preguntó Yaakov, y dijo: Dime por favor tu nombre. Y él dijo: ¿Por qué esto, preguntas por mi nombre? Y Él lo bendijo allí.
+**30** Y llamó Yaakov el nombre del lugar Penuel[^170], porque *dijo*: He visto a Elohim cara a cara y sobrevivió mi ser.
 **31** Y le brilló el sol cuando cruzó Penuel, y él cojeaba en su muslo.
-**32** Por eso, no comen los hijos de Israel el tendón del nervio[^171] que está en la palma del muslo, hasta este día, porque to­có la palma del muslo de Iaacob en el tendón del nervio.
+**32** Por eso, no comen los hijos de Israel el tendón del nervio[^171] que está en la palma del muslo, hasta este día, porque to­có la palma del muslo de Yaakov en el tendón del nervio.
 
-*Reencuentro de Iaacob y Esav*
+*Reencuentro de Yaakov y Esav*
 
 **33**
 
-**1** Y levantó Iaacob sus ojos y miró, y he aquí, Esav venía y con él cuatrocientos hombres. Y dividió a los niños entre Leah y Rajel y las dos siervas.
+**1** Y levantó Yaakov sus ojos y miró, y he aquí, Esav venía y con él cuatrocientos hombres. Y dividió a los niños entre Leah y Rajel y las dos siervas.
 **2** Y estableció a las siervas y a sus niños primero, y a Leah y a sus hijos detrás, y a Ra­jel y a Iosef detrás.
 **3** Y él cruzó antes que ellos y se inclinó en tierra siete veces hasta que se acercó a su her­mano.
 **4** Y corrió Esav a su encuentro y lo abrazó, y cayó sobre su cuello y lo besó, y lloraron.
@@ -1229,18 +1229,18 @@ hasta que haya hecho lo que te he hablado.
 **7** Y se acercó también Leah y sus niños, y después se acercó Iosef y Rajel, y se incli­naron.
 **8** Y dijo *Esav*: ¿Quiénes son para ti todos *los de* este campa­mento que he encontrado? Y él dijo: Para encontrar favor en los ojos de mi amo.
 **9** Pero dijo Esav: Yo tengo mucho, herma­no mío; sea para ti lo que es para ti.
-**10** Y dijo Iaacob: No, por favor, si ahora encontré favor en tus ojos, toma mi presente de mi mano, pues por lo tanto, he visto tu rostro como viendo el rostro de Elohim, y te has complacido.
+**10** Y dijo Yaakov: No, por favor, si ahora encontré favor en tus ojos, toma mi presente de mi mano, pues por lo tanto, he visto tu rostro como viendo el rostro de Elohim, y te has complacido.
 **11** Toma, por favor, mi bendición que ha sido traída para ti, pues me ha favorecido Elohim, y porque yo tengo todo. Y le persistió, y él *lo* tomó.
 **12** Y dijo *Esav*: Sigamos viaje, y vámonos, y yo iré delante de ti.
-**13** Pero Iaacob le dijo: Mi amo sabe que los niños son tiernos, y el rebaño y el ganado *que* están amamantando, *están *sobre mí. Y golpearlos *en* un día hará que muera todo el rebaño.
+**13** Pero Yaakov le dijo: Mi amo sabe que los niños son tiernos, y el rebaño y el ganado *que* están amamantando, *están *sobre mí. Y golpearlos *en* un día hará que muera todo el rebaño.
 **14** Avance, por favor, mi amo delante de su siervo; y yo conduciré despacio, al paso del trabajo que *va* delante de mí y al paso de los niños, hasta que llegue a mi amo en Seir.
 **15** Y dijo Esav: Colocaré, por favor, contigo *parte* de la gente que *está* conmigo. Pero él dijo: ¿Para qué eso? Encuentre yo favor en los ojos de mi amo.
 **16** Y regresó en aquel día Esav a su camino a Seir­.
-**17** Y Iaacob viajó a Sucot, y cons­truyó para sí una casa, y para su ganado hizo enramadas[^172]. Por eso se llama el nom­bre del lugar Sucot.
+**17** Y Yaakov viajó a Sucot, y cons­truyó para sí una casa, y para su ganado hizo enramadas[^172]. Por eso se llama el nom­bre del lugar Sucot.
 
-*Iaacob en Shejem*
+*Yaakov en Shejem*
 
-**18** Y llegó Iaacob entero a la ciudad de Shejem, la cual *está* en la tierra de Kenáan, en su venida desde Padán Aram; y acampó antes de la ciudad.
+**18** Y llegó Yaakov entero a la ciudad de Shejem, la cual *está* en la tierra de Kenáan, en su venida desde Padán Aram; y acampó antes de la ciudad.
 **19** Y compró la parcela del campo, en la cual tendió allí su tienda, de mano de los hijos de Jamor, padre de Shejem, por cien *kesitah*[^173].
 **20** Y estableció allí un altar, y lo llamó:* *¡El, Elohim de Israel!
 **1**
@@ -1249,53 +1249,53 @@ hasta que haya hecho lo que te he hablado.
 
 **34**
 
-**1** Y salió Dinah, hija de Leah, quien había dado a luz para Iaacob, a ver a las hijas de la tierra.
+**1** Y salió Dinah, hija de Leah, quien había dado a luz para Yaakov, a ver a las hijas de la tierra.
 **2** Y la vio Shejem, hijo de Jamor, el jiví, príncipe de la tierra. Y la tomó y se acostó con ella y la afligió.
-**3** Y se adhirió su ser a Dinah, hija de Iaacob, y amó a la joven, y habló al corazón de la joven.
+**3** Y se adhirió su ser a Dinah, hija de Yaakov, y amó a la joven, y habló al corazón de la joven.
 **4** Y dijo Shejem a Jamor su padre, diciendo: Toma para mí a esta niña por mujer.
-**5** Y Iaacob escuchó que él había profa­nado a Dinah su hija, y sus hijos estaban con su ganado en el campo, y guardó silencio Iaacob hasta que vinieron.
-**6** Y salió Jamor, padre de Shejem hacia Iaacob para hablar con él.
-**7** Y los hijos de Iaacob vinieron del campo cuando oyeron. Y se entristecieron los hom­bres, y se enojaron mucho porque un acto des­pre­ciable había hecho contra Israel acos­tán­dose con la hija de Iaacob, y así no debe hacerse.
+**5** Y Yaakov escuchó que él había profa­nado a Dinah su hija, y sus hijos estaban con su ganado en el campo, y guardó silencio Yaakov hasta que vinieron.
+**6** Y salió Jamor, padre de Shejem hacia Yaakov para hablar con él.
+**7** Y los hijos de Yaakov vinieron del campo cuando oyeron. Y se entristecieron los hom­bres, y se enojaron mucho porque un acto des­pre­ciable había hecho contra Israel acos­tán­dose con la hija de Yaakov, y así no debe hacerse.
 **8** Pero habló Jamor con ellos, diciendo: Shejem, mi hijo, desea el ser de su hi­ja, denla, por favor, a él por mujer.
 **9** Cásense con nosotros; sus hijas den a nosotros, y a nuestras hijas tomaremos para us­te­des­.
 **10** Y con nosotros habitarán, y la tierra *estará* delante de ustedes. Habiten y comercien, y to­men *propiedades* en ella.
 **11** Y dijo Shejem a su padre y a los hermanos de ella: Encuentre favor en sus ojos, lo que me digan daré.
 **12** Multipliquen sobre mí mucho el precio de la novia, y regalo daré tal como me digan, pero den para mí
 **1** a la joven por mujer.
-**13** Pero respondieron los hijos de Iaacob a Shejem y a Jamor con engaño, y *les* hablaron, porque él había profanado a Dinah su hermana.
+**13** Pero respondieron los hijos de Yaakov a Shejem y a Jamor con engaño, y *les* hablaron, porque él había profanado a Dinah su hermana.
 **14** Y les dijeron: No podemos hacer esta cosa, dar a nuestra hermana a un hombre que es incircunciso, porque una vergüenza *sería *eso* *para nosotros.
 **15** Pero en esto acordaremos: Si se hacen como nosotros, sea circuncidado a ti todo va­rón.
 **16** Y daremos a nuestras hijas a ustedes, y a sus hijas tomar*emos* para nosotros, y habi­taremos con ustedes y seremos un pueblo.
 **17** Pero si no nos escuchan siendo circun­cidados, tomaremos a nuestra hija y nos ire­mos.
 **18** Y parecieron buenas sus palabras en los ojos de Jamor y Shejem, hijo de Jamor.
-**19** Y no se retrasó el joven en hacer la cosa, porque se deleitó en la hija de Iaacob. Y él era *el más* respetado de toda la casa de su padre.
+**19** Y no se retrasó el joven en hacer la cosa, porque se deleitó en la hija de Yaakov. Y él era *el más* respetado de toda la casa de su padre.
 **20** Y vinieron Jamor y Shejem su hijo al por­tón de su ciudad, y hablaron a los hombres de su ciudad, diciendo:
 **21** Estos hombres, en shalom *están* ellos con nosotros; habiten ellos en la tierra y comercien en ella, y la tierra, he aquí, es amplia de manos ante ellos. A sus hijas tomemos para nosotros por mujeres, y a nuestras hijas démos*les* a ellos.
 **22** Pero en esto acordarán los hombres para habitar con nosotros, para que seamos un pue­blo: En que sea circuncidado a nosotros todo varón, como ellos *están* circuncidados.
 **23** Su ganado y sus propiedades y todos sus animales, ¿no serán para nosotros ellos? So­lamente consintámosles, y morarán con no­so­tros.
 **24** Y escucharon a Jamor y a Shejem su hijo todos los que salían *por* el portón de su ciudad, y fue circuncidado todo varón, todos los que salían *por* el portón de su ciudad.
-**25** Y sucedió en el día tercero, mientras es­taban *con* dolores, y tomaron los dos hijos de Iaacob, Shimeón y Levi, hermanos de Dinah, ca­da hombre su espada, y entraron en la ciudad confiadamente, y mataron todo varón.
+**25** Y sucedió en el día tercero, mientras es­taban *con* dolores, y tomaron los dos hijos de Yaakov, Shimeón y Levi, hermanos de Dinah, ca­da hombre su espada, y entraron en la ciudad confiadamente, y mataron todo varón.
 **26** Y a Jamor y a Shejem su hijo mataron a bo­ca de espada, y tomaron a Dinah de la casa de Shejem, y salieron.
-**27** Los hijos de Iaacob vinieron sobre los muer­tos y saquearon la ciudad, debido a que habían profanado a su hermana.
+**27** Los hijos de Yaakov vinieron sobre los muer­tos y saquearon la ciudad, debido a que habían profanado a su hermana.
 **28** Sus ovejas, y sus vacas, y sus asnos, y lo que *había* en la ciudad, y lo que *había* en el cam­po, ellos tomaron.
 **29** Y toda su fuerza, y a todos sus niños, y a sus mujeres capturaron, y saquearon todo lo que *había* en las casas.
-**30** Y dijo Iaacob a Shimeón y a Levi: ¡Me han perturbado!, al hacerme repugnante con los ha­bitantes de la tierra, con el kenaaní y con el pe­rizí, y yo, poco \(Lit.: *muerto*\) de número, si se jun­tan contra mí y me golpean, seré destruido yo y mi casa.
+**30** Y dijo Yaakov a Shimeón y a Levi: ¡Me han perturbado!, al hacerme repugnante con los ha­bitantes de la tierra, con el kenaaní y con el pe­rizí, y yo, poco \(Lit.: *muerto*\) de número, si se jun­tan contra mí y me golpean, seré destruido yo y mi casa.
 **31** Pero ellos dijeron: ¿Como *a* una ramera ha­bía de hacer a nuestra hermana?
 
-*Iaacob en Betel*
+*Yaakov en Betel*
 
 **35**
 
-**1** Y dijo Elohim a Iaacob: Levántate, sube a Betel y habita allí; y haz allí un altar a El quien se te apa­reció en tu huida del rostro de Esav tu hermano.
-**2** Y dijo Iaacob a su casa y a todos los que *esta­ban *con él: Aparten a los dioses del ex­tranjero que *hay* entre ustedes; y purifí­quense y reem­placen sus vestidos;
+**1** Y dijo Elohim a Yaakov: Levántate, sube a Betel y habita allí; y haz allí un altar a El quien se te apa­reció en tu huida del rostro de Esav tu hermano.
+**2** Y dijo Yaakov a su casa y a todos los que *esta­ban *con él: Aparten a los dioses del ex­tranjero que *hay* entre ustedes; y purifí­quense y reem­placen sus vestidos;
 **3** y levantémonos, y subamos a Betel; y haré allí un altar a Elohim, quien me respondió en el día de mi estrechez, y ha estado conmigo en el camino que he caminado.
-**4** Y dieron a Iaacob todos los dioses del extranjero que *estaban *en sus manos, y los anillos que *tenían* en sus orejas; y los ocultó Iaacob debajo del terebinto que *estaba* junto a Shejem.
-**5** Y partieron, y hubo terror de Elohim sobre las ciudades que *estaban* alrededor de ellos, y no persiguieron detrás de los hijos de Iaacob.
-**6** Y entró Iaacob a Luz, que *está *en la tierra de Kenáan, esta es Betel, él y todo el pueblo que *estaba* con él.
+**4** Y dieron a Yaakov todos los dioses del extranjero que *estaban *en sus manos, y los anillos que *tenían* en sus orejas; y los ocultó Yaakov debajo del terebinto que *estaba* junto a Shejem.
+**5** Y partieron, y hubo terror de Elohim sobre las ciudades que *estaban* alrededor de ellos, y no persiguieron detrás de los hijos de Yaakov.
+**6** Y entró Yaakov a Luz, que *está *en la tierra de Kenáan, esta es Betel, él y todo el pueblo que *estaba* con él.
 **7** Y construyó allí un altar, y llamó al lugar El Betel[^174], porque allí se le apareció en su huida del rostro de su hermano.
 **8** Y murió Deboráh, nodriza de Ribkah, y fue enterrada debajo de Betel, bajo el roble; y fue llamado su nombre Alón Bacut[^175].
-**9** Y miró Elohim a Iaacob otra vez, en su veni­da desde Padán Aram, y lo bendijo.
-**10** Y le dijo Elohim: Tu nombre es Iaacob, no llamarás tu nombre más Iaacob, sino Israel será tu nombre. Y llamó su nombre Israel.
+**9** Y miró Elohim a Yaakov otra vez, en su veni­da desde Padán Aram, y lo bendijo.
+**10** Y le dijo Elohim: Tu nombre es Yaakov, no llamarás tu nombre más Yaakov, sino Israel será tu nombre. Y llamó su nombre Israel.
 **11** Y le dijo Elohim:
 
 Yo soy El Shadai, se fructífero y multiplícate.
@@ -1303,27 +1303,27 @@ Yo soy El Shadai, se fructífero y multiplícate.
  y a tu simiente[^176] después de ti daré la tierra.
 
 **13** Y subió de sobre él Elohim, en el lugar donde había hablado con él.
-**14** Y estableció Iaacob un pilar en el lugar donde había hablado con él, un pilar de piedra, y derramó sobre él una ofrenda derramada, y vertió sobré él aceite.
-**15** Y llamó Iaacob el nombre del lugar donde había hablado con él Elohim Betel.
+**14** Y estableció Yaakov un pilar en el lugar donde había hablado con él, un pilar de piedra, y derramó sobre él una ofrenda derramada, y vertió sobré él aceite.
+**15** Y llamó Yaakov el nombre del lugar donde había hablado con él Elohim Betel.
 **16** Y viajaron desde Betel, y había todavía una distancia de tierra para llegar a Efratah, y dio a luz Rajel y tuvo dificultad en su parto.
 **17** Y sucedió *que *en su dificultad en el parto, le dijo a ella la partera: No temas, porque tam­bién este *será* para ti un hijo.
 **18** Y sucedió *que *cuando salía su aliento, porque ella moría, ella llamó su nom­bre Ben Oní[^177], pero su padre lo llamó Biniamín[^178].
 **19** Y murió Rajel, y fue enterrada en el camino de Efratah, esta es Bet Léjem[^179].
-**20** Y estableció Iaacob un pilar sobre su en­tierro, ese es el pilar del entierro de Rajel hasta hoy.
+**20** Y estableció Yaakov un pilar sobre su en­tierro, ese es el pilar del entierro de Rajel hasta hoy.
 **21** Y viajó Israel y tendió su tienda más allá de Migdal Éder[^180].
-**22** Y sucedió *que *cuando habitaba Israel en esa tie­rra, Reubén se acostó con Bilhah, amante de su padre, y *lo* escuchó Israel. Y eran los hijos de Iaacob doce.
-**23** Hijos de Leah: El primogénito de Iaacob, Reubén, y Shimeón, y Levi, y Iehudáh, e Isasjar, y Zebulún.
+**22** Y sucedió *que *cuando habitaba Israel en esa tie­rra, Reubén se acostó con Bilhah, amante de su padre, y *lo* escuchó Israel. Y eran los hijos de Yaakov doce.
+**23** Hijos de Leah: El primogénito de Yaakov, Reubén, y Shimeón, y Levi, y Iehudáh, e Issajar, y Zebulún.
 **24** Hijos de Rajel: Iosef y Biniamín.
 **25** E hijos de Bilhah, sierva de Rajel: Dan y Naf­talí.
 **26** E hijos de Zilpah, sierva de Leah: Gad y Asher.
 
-Estos son los hijos de Iaacob que le na­cieron en Padán Aram.
+Estos son los hijos de Yaakov que le na­cieron en Padán Aram.
 
 *Muerte de Itzjak*
 
-**27** Y vino Iaacob a Itzjak su padre en Mamré, Kiriat Arba, esto es Jebrón, en donde habían ha­bitado Abraham e Itzjak.
+**27** Y vino Yaakov a Itzjak su padre en Mamré, Kiriat Arba, esto es Jebrón, en donde habían ha­bitado Abraham e Itzjak.
 **28** Y fueron los días de Itzjak ciento ochenta años.
-**29** Y expiró Itzjak y murió, y se juntó a su pueblo, viejo y saciado de días, y lo enterraron Esav y Iaacob sus hijos.
+**29** Y expiró Itzjak y murió, y se juntó a su pueblo, viejo y saciado de días, y lo enterraron Esav y Yaakov sus hijos.
 
 *Simiente de Esav*
 
@@ -1334,7 +1334,7 @@ Estos son los hijos de Iaacob que le na­cieron en Padán Aram.
 **3** Y a Basemat, hija de Ishmael, hermana de Nevaiot.
 **4** Y dio a luz Adah para Esav a Elifaz; y Basemat dio a luz a Reuel.
 **5** Y Aholivamah dio a luz a Ieúsh, a Ialam, y a Koraj. Estos son los hijos de Esav que nacieron a él en la tierra de Kenáan.
-**6** Y tomó Esav a sus mujeres, y a sus hijos, y a sus hijas, y a todas las personas de su casa, y a su ganado, y a todos los animales, y todas sus adquisiciones las cuales había comprado en la tierra de Kenáan, y fue a *otra* tierra fuera de Iaacob su hermano.
+**6** Y tomó Esav a sus mujeres, y a sus hijos, y a sus hijas, y a todas las personas de su casa, y a su ganado, y a todos los animales, y todas sus adquisiciones las cuales había comprado en la tierra de Kenáan, y fue a *otra* tierra fuera de Yaakov su hermano.
 **7** Porque fueron sus posesiones muchas para que habiten juntos, y no podía la tierra de su residencia soportarlos debido a su ganado.
 **8** Y habitó Esav en la montaña de Seir, Esav él es Edom.
 **9** Y estas son las generaciones de Esav, padre de Edom, en la montaña de Seir.
@@ -1377,8 +1377,8 @@ Estos son los hijos de Iaacob que le na­cieron en Padán Aram.
 
 **37**
 
-**1** Y habitó Iaacob en la tierra de la residencia de su padre, en la tierra de Kenáan.
-**2** Estas son las generaciones de Iaacob: Iosef *tenía* la edad de diecisiete años, era pastor con sus hermanos del rebaño; y estaba el joven con los hijos de Bilhah y con los hijos de Zilpah, mujeres de su padre. Y trajo Iosef una difama­ción de ellos a su padre.
+**1** Y habitó Yaakov en la tierra de la residencia de su padre, en la tierra de Kenáan.
+**2** Estas son las generaciones de Yaakov: Iosef *tenía* la edad de diecisiete años, era pastor con sus hermanos del rebaño; y estaba el joven con los hijos de Bilhah y con los hijos de Zilpah, mujeres de su padre. Y trajo Iosef una difama­ción de ellos a su padre.
 **3** E Israel amaba a Iosef *más* que *a* todos sus hijos, porque el hijo de su vejez era para él; Y le hizo una túnica a rayas[^182].
 **4** Y vieron sus hermanos que lo amaba su padre *más* que *a *todos sus hermanos, y lo odiaban, y no podían hablarle en shalom.
 **5** Y soñó Iosef un sueño, y le contó a sus hermanos, y más aún lo odiaban.
@@ -1410,7 +1410,7 @@ Estos son los hijos de Iaacob que le na­cieron en Padán Aram.
 **31** Y tomaron la túnica de Iosef y mataron un cabrito[^186] de las cabras, y sumer­gie­ron la túnica en la sangre;
 **32** y enviaron la túnica a rayas[^187] y la trajeron a su padre, y dijeron: Encontramos esto, reco­noce por favor la túnica, si es o no de tu hijo.
 **33** Y la reconoció, y dijo: La túnica es de mi hijo, una bestia de maldad lo comió; ¡cierta­mente despedazado *ha sido* Iosef!
-**34** Y rasgó Iaacob su vestido, y puso cilicio en su cintura, y lloró por su hijo muchos días.
+**34** Y rasgó Yaakov su vestido, y puso cilicio en su cintura, y lloró por su hijo muchos días.
 **35** Y se levantaron todos sus hijos y todas sus hijas para consolarlo, pero rehusó a ser conso­lado, y dijo: Pues, descenderé hacia mi hijo enlutado al Sheol. Y lloró por él su padre.
 **36** Y los midianim[^188] lo ven­dieron a Mitzráim, a Potifar, oficial de Faraón, ca­pitán de los guardias.
 
@@ -1424,10 +1424,10 @@ Estos son los hijos de Iaacob que le na­cieron en Padán Aram.
 **4** Y ella concibió otra vez y dio a luz un hijo, y llamó su nombre Onán.
 **5** Y ella concibió otra vez y dio a luz un hijo, y llamó su nombre Sheláh, y fue en Jeziv cuando lo dio a luz.
 **6** Y tomó Iehudáh una mujer para Er su primogénito, y su nombre *era* Tamar.
-**7** Pero fue Er, primogénito de Iehudáh, mal­vado en los ojos de יהוה, y lo mató יהוה.
+**7** Pero fue Er, primogénito de Iehudáh, mal­vado en los ojos de __יהוה__, y lo mató __יהוה__.
 **8** Y dijo Iehudáh a Onán: Entra a la mujer de tu hermano, y cumple como cuñado casándote con ella, y levanta simiente a tu hermano.
 **9** Pero sabía Onán que no sería para él la simiente, y sucedió *que* cuando entró a la mujer de su hermano, derramaba[^189] en tie­rra, para no dar simiente a su hermano.
-**10** Pero fue malo en los ojos de יהוה lo que hizo. Y lo mató también a él.
+**10** Pero fue malo en los ojos de __יהוה__ lo que hizo. Y lo mató también a él.
 **11** Y dijo Iehudáh a Tamar su nuera: Perma­nece viuda en la casa de tu padre hasta que crezca Sheláh mi hijo, porque él dijo: No sea que muera también él como sus hermanos. Y se fue Tamar, y habitaba en casa de su padre.
 **12** Y aumentaron los días y murió la hija de Shúa, mujer de Iehudáh. Y fue consolado Iehudáh, y subió por los trasquiladores de su rebaño, él y Jirah su amigo el adulamí, en Timnah.
 **13** Y le contaron a Tamar, diciendo: He aquí, tu suegro sube a Timnah a trasquilar su rebaño.
@@ -1456,10 +1456,10 @@ Estos son los hijos de Iaacob que le na­cieron en Padán Aram.
 **39**
 
 **1** Y Iosef había bajado a Mitzráim, y lo compró Potifar, oficial de Faraón, ca­pitán de los guardias, hombre mitzrí[^196], de la mano de los ishmaelim[^197], quie­nes lo habían bajado allí.
-**2** Y era יהוה con Iosef, y él fue un hombre próspero, y estaba en casa de su amo el mitzrí.
-**3** Y vio su amo que יהוה *estaba *con él, y todo lo que él hacía יהוה lo hizo próspero en su mano.
+**2** Y era __יהוה__ con Iosef, y él fue un hombre próspero, y estaba en casa de su amo el mitzrí.
+**3** Y vio su amo que __יהוה__ *estaba *con él, y todo lo que él hacía __יהוה__ lo hizo próspero en su mano.
 **4** Y encontró Iosef favor en sus ojos, y le servía, y lo hizo supervisor sobre su casa, y todo *lo que* tenía lo dio en su mano.
-**5** Y sucedió *que *desde el tiempo *en* que lo hizo supervisor de su casa y sobre todo lo que le pertenecía, bendijo יהוה la casa del mitzrí debido a Iosef, y era la bendición de יהוה en todo lo que tenía para él en la casa y en el campo.
+**5** Y sucedió *que *desde el tiempo *en* que lo hizo supervisor de su casa y sobre todo lo que le pertenecía, bendijo __יהוה__ la casa del mitzrí debido a Iosef, y era la bendición de __יהוה__ en todo lo que tenía para él en la casa y en el campo.
 **6** Y dejó todo lo que tenía en mano de Iosef, y él no sabía de nada, excepto del pan que él comía. Y era Iosef hermoso de figura y hermoso de apariencia.
 **7** Y sucedió *que *después de estas cosas, levantó la mujer de su amo sus ojos hacia Iosef, y ella *le* dijo: Acuéstate conmigo.
 **8** Pero él se rehusó, y dijo a la mujer de su amo: Mira, mi amo no sabe conmigo qué *hay* en la casa, y todo lo que tiene para él ha dado en mi mano.
@@ -1576,10 +1576,10 @@ Estos son los hijos de Iaacob que le na­cieron en Padán Aram.
 
 **42**
 
-**1** Y vio Iaacob que había grano en Mitz­r­­áim, y dijo Iaacob a sus hijos: ¿Por qué se están mirando?
+**1** Y vio Yaakov que había grano en Mitz­r­­áim, y dijo Yaakov a sus hijos: ¿Por qué se están mirando?
 **2** Y dijo: He aquí, he escuchado que hay grano en Mitzráim; desciendan allí y compren grano para nosotros allá, y podamos vivir y no morir.
 **3** Y descendieron diez hermanos de Iosef a comprar grano en Mitzráim.
-**4** Pero a Biniamín, hermano de Iosef, no envió Iaacob con sus hermanos, porque dijo: No sea que le ocurra una calamidad.
+**4** Pero a Biniamín, hermano de Iosef, no envió Yaakov con sus hermanos, porque dijo: No sea que le ocurra una calamidad.
 **5** Y fueron los hijos de Israel a comprar grano entre los que iban, porque había hambre en la tierra de Kenáan.
 **6** Y Iosef, él era el gobernador sobre la tierra; él era el que vendía grano a todo el pueblo de la tierra. Y vinieron los hermanos de Iosef y se inclinaron a él nariz en tierra.
 **7** Y vio Iosef a sus hermanos, y los reconoció, pero fue como extraño hacia ellos, y les habló duramente, y les dijo: ¿De dónde vie­nen? Y ellos dijeron: De la tierra de Kenáan para comprar comida.
@@ -1604,14 +1604,14 @@ Estos son los hijos de Iaacob que le na­cieron en Padán Aram.
 **26** Y llevaron el grano sobre sus asnos, y se fueron de allí.
 **27** Y abrió uno *de ellos* su saco para dar forraje a su asno en la posada, y vio su dinero, y he aquí, estaba en la boca de su saco.
 **28** Y dijo a sus hermanos: Ha sido devuelto mi dinero, y además, he aquí, *está* en mi saco. Y se les salió su corazón, y temblando decían un hombre a su hermano: ¿Qué es esto *que* ha hecho Elohim a nosotros?
-**29** Y vinieron a Iaacob, su padre, en la tierra de Kenáan, y le dieron a conocer todo lo que les había ocurrido, diciendo:
+**29** Y vinieron a Yaakov, su padre, en la tierra de Kenáan, y le dieron a conocer todo lo que les había ocurrido, diciendo:
 **30** Habló, el hombre amo de la tierra, a noso­tros duramente, y nos dio como espías de la tierra.
 **31** Pero le dijimos: “Íntegros *somos* noso­tros, no somos espías.
 **32** Doce hermanos *somos* nosotros, hijos de nuestro padre; uno ya no está, y el pequeño hoy *está* con nuestro padre en la tierra de Kenáan”.
 **33** Y dijo a nosotros el hombre amo de la tierra: “Por esto sabré que íntegros son uste­des: De sus hermanos uno dejen conmigo, y *para* el hambre de sus casas tomen *grano*, y váyanse;
 **34** pero traigan a su hermano, el pequeño, a mí, y sabré que no son espías ustedes, sino que son íntegros. A su hermano daré a ustedes, y en la tierra podrán comerciar”.
 **35** Y sucedió *cuando* ellos vaciaban sus sacos, he aquí, de *cada* hombre *había* un paquete de dinero en su saco; y vieron los paquetes de dinero ellos y su padre, y temieron.
-**36** Y les dijo Iaacob su padre: A mí han dejado sin hijo; Iosef *ya* no está, y Shimeón *ya* no está, ¡y a Biniamín tomarán!; sobre mí son todas *estas cosas*.
+**36** Y les dijo Yaakov su padre: A mí han dejado sin hijo; Iosef *ya* no está, y Shimeón *ya* no está, ¡y a Biniamín tomarán!; sobre mí son todas *estas cosas*.
 **37** Y dijo Reubén a su padre, diciendo: A mis dos hijos puedes matar, si no te lo traigo; pon a él en mis manos, y yo lo regresaré a ti.
 **38** Pero él dijo: No descenderá mi hijo con ustedes, pues su hermano está muerto, y él solo *me* queda. Y *si* le ocurre una calamidad en el camino en el cual van, bajarán mis canas en pena al Sheol.
 
@@ -1721,9 +1721,9 @@ Estos son los hijos de Iaacob que le na­cieron en Padán Aram.
 **22** A todos ellos, a *cada *hombre, dio mudas de vestidos, pero a Biniamín dio trescientas *piezas de* plata y cinco mudas de vestidos.
 **23** Y a su padre envió con esto: diez asnos llevando de lo bueno de Mitzráim, y diez asnas llevando grano y pan y alimentos para su padre para el camino.
 **24** Y envió a sus hermanos, y ellos se iban y él les dijo: No se enojen en el camino.
-**25** Y subieron de Mitzráim y entraron a la tierra de Kenáan, hacia Iaacob, su padre.
+**25** Y subieron de Mitzráim y entraron a la tierra de Kenáan, hacia Yaakov, su padre.
 **26** Y le dieron a conocer, diciendo: Aún Iosef vive, y porque él es gobernador de toda la tierra de Mitzráim. Y se entumeció su corazón[^223] porque no se afirmó en fidelidad por ellos.
-**27** Pero le hablaron todas las palabras de Iosef las cuales les había dicho, y vio los carros que había enviado Iosef para llevarlo, y revivió el aliento[^224] de Iaacob su padre.
+**27** Pero le hablaron todas las palabras de Iosef las cuales les había dicho, y vio los carros que había enviado Iosef para llevarlo, y revivió el aliento[^224] de Yaakov su padre.
 **28** Y dijo Israel: Suficiente, aún Iosef mi hijo vive. Iré y lo veré antes de que muera.
 
 *Israel y su familia en Mitzráim*
@@ -1731,36 +1731,36 @@ Estos son los hijos de Iaacob que le na­cieron en Padán Aram.
 **46**
 
 **1** Y viajó Israel y todo lo que era suyo, y vino a Beersheva, y ofreció sacrificios al Elohim de su padre Itzjak.
-**2** Y habló Elohim a Israel en visiones de la noche, y dijo: Iaacob, Iaacob. Y él dijo: Aquí estoy.
+**2** Y habló Elohim a Israel en visiones de la noche, y dijo: Yaakov, Yaakov. Y él dijo: Aquí estoy.
 
 **3** Y dijo: Yo soy El, el Elohim de tu padre;
  no tengas miedo de des­cender a Mitzráim,
 porque una gran na­ción te haré allí.**4** Yo descenderé contigo a Mitzráim, y Yo te haré subir también arriba.
  Y Iosef pondrá sus manos sobre tus ojos.
 
-**5** Y se levantó Iaacob de Beersheva; y lle­varon los hijos de Israel a Iaacob su padre, y a sus niños y a sus mujeres, en los carros que había enviado Faraón para llevarlo.
-**6** Y tomaron sus ganados y las posesiones que adquirieron en la tierra de Kenáan, y entró a Mitzráim Iaacob y toda su simiente con él:
+**5** Y se levantó Yaakov de Beersheva; y lle­varon los hijos de Israel a Yaakov su padre, y a sus niños y a sus mujeres, en los carros que había enviado Faraón para llevarlo.
+**6** Y tomaron sus ganados y las posesiones que adquirieron en la tierra de Kenáan, y entró a Mitzráim Yaakov y toda su simiente con él:
 **7** sus hijos y los hijos de sus hijos con él, sus hijas y las hijas de sus hijos; y toda su simiente trajo con él a Mitzráim.
-**8** Y estos son los nombres de los hijos de Israel, quien fue a Mitzráim, Iaacob y sus hijos: El primogénito de Iaacob, Reubén.
+**8** Y estos son los nombres de los hijos de Israel, quien fue a Mitzráim, Yaakov y sus hijos: El primogénito de Yaakov, Reubén.
 **9** Y los hijos de Reubén: Janoj, Falú, Jetzrón y Carmi.
 **10** Y los hijos de Shimeón: Iemuel, Iamín, Ojad, Iakín, Tzojar y Shaúl, hijo de la kenaanit.
 **11** Y los hijos de Levi: Guershón, Kehat y Merari.
 **12** Y los hijos de Iehudáh: Er, Onán, Sheláh, Péretz y Zéraj. Pero murieron Er y Onán en la tierra de Kenáan. Y eran los hijos de Péretz: Jetzrón y Jamul.
-**13** Y los hijos de Isasjar: Tola, Fuváh, Iob y Shimrón.
+**13** Y los hijos de Issajar: Tola, Fuváh, Iob y Shimrón.
 **14** Y los hijos de Zebulún: Sered, Elón y Iahlel.
-**15** Estos son los hijos de Leah, que ella dio a luz para Iaacob en Padán Aram, y Dinah su hija; todas las personas de sus hijos y sus hijas *eran* treinta y tres.
+**15** Estos son los hijos de Leah, que ella dio a luz para Yaakov en Padán Aram, y Dinah su hija; todas las personas de sus hijos y sus hijas *eran* treinta y tres.
 **16** Y los hijos de Gad: Tzifión y Jagui, Shuni y Etzbón, Eri, Arodi y Areli.
 **17** Y los hijos de Asher: Imnah, Ishvah, Ishvi, Beriah y Sheraj, hermana de ellos. Y los hijos de Beriah: Jeber y Malkiel.
-**18** Estos son los hijos de Zilpah, que dio Labán a Leah su hija, y ella dio a luz a estas para Iaacob dieciséis personas[^225].
-**19** Los hijos de Rajel, mujer de Iaacob: Iosef y Biniamín.
+**18** Estos son los hijos de Zilpah, que dio Labán a Leah su hija, y ella dio a luz a estas para Yaakov dieciséis personas[^225].
+**19** Los hijos de Rajel, mujer de Yaakov: Iosef y Biniamín.
 **20** Y nacieron a Iosef en la tierra de Mitzráim, los cuales dio a luz para él Asenat, hija de Poti Fera, sacerdote de On: Menasheh y Efráim.
 **21** Y los hijos de Biniamín: Bela y Bejer, Ashbel, Guera y Naamán, Eji, Rosh, Mupim, Jupim y Arde.
-**22** Estos son los hijos de Rajel, que dio a luz para Iaacob, todas las personas *fueron* catorce.
+**22** Estos son los hijos de Rajel, que dio a luz para Yaakov, todas las personas *fueron* catorce.
 **23** Y los hijos de Dan: Jushim.
 **24** Y los hijos de Naftalí: Iajtzeel, Guni, Ietzer y Shilem.
-**25** Estos son los hijos de Bilhah, que dio Labán a Rajel su hija, y ella dio a luz a estas para Iaacob, todas las personas *fueron* siete.
-**26** Todas las personas quienes vinieron por Iaacob a Mitzráim, que salieron de sus muslos, excepto las mujeres de los hijos de Iaacob, todas las personas *fueron* sesenta y seis.
-**27** Y los hijos de Iosef quienes nacieron a él en Mitzráim *fueron* dos personas; de la casa de Iaacob, que fueron a Mitzráim, *eran* setenta.
+**25** Estos son los hijos de Bilhah, que dio Labán a Rajel su hija, y ella dio a luz a estas para Yaakov, todas las personas *fueron* siete.
+**26** Todas las personas quienes vinieron por Yaakov a Mitzráim, que salieron de sus muslos, excepto las mujeres de los hijos de Yaakov, todas las personas *fueron* sesenta y seis.
+**27** Y los hijos de Iosef quienes nacieron a él en Mitzráim *fueron* dos personas; de la casa de Yaakov, que fueron a Mitzráim, *eran* setenta.
 **28** Y a Iehudáh él envió delante de sí hacia Iosef, para señalar delante de él a Goshén, y vinieron a la tierra de Goshén.
 **29** Y ató Iosef su carro y subió a Goshén para llamar a Israel su padre, y lo vio a él, y cayó sobre su cuello, y lloró mucho sobre su cuello.
 **30** Y dijo Israel a Iosef: Muera yo ahora, después de que he visto tu rostro, porque aún tú vives.
@@ -1781,10 +1781,10 @@ porque una gran na­ción te haré allí.**4** Yo descenderé contigo a Mitzrái
 **5** Y dijo Faraón a Iosef, diciendo: Tu padre y tus hermanos han venido a ti;
 **6** la tierra de Mitzráim delante de ti está, en lo mejor de la tierra habiten tu padre y tus her­manos; habiten en la tierra de Goshén, y si sabes y hay entre ellos hombres fuertes, nóm­bralos jefes de ganado sobre lo que es mío.
 **7** Y
-**1** trajo Iosef a Iaacob su padre y lo paró delante de Faraón, y bendijo Iaacob a Faraón.
-**8** Y dijo Faraón a Iaacob: ¿Cuántos son los días de los años de tu vida?
-**9** Y dijo Iaacob a Faraón: Los días de los años de mi residencia son ciento treinta años; pocos y malos han sido los días de los años de mi vida, y no han superado a los días de los años de la vida de mis padres en los días de su residencia.
-**10** Y bendijo Iaacob a Faraón, y salió de delante de Faraón.
+**1** trajo Iosef a Yaakov su padre y lo paró delante de Faraón, y bendijo Yaakov a Faraón.
+**8** Y dijo Faraón a Yaakov: ¿Cuántos son los días de los años de tu vida?
+**9** Y dijo Yaakov a Faraón: Los días de los años de mi residencia son ciento treinta años; pocos y malos han sido los días de los años de mi vida, y no han superado a los días de los años de la vida de mis padres en los días de su residencia.
+**10** Y bendijo Yaakov a Faraón, y salió de delante de Faraón.
 **11** Y asentó Iosef a su padre y a sus her­manos, y les dio una propiedad en la tierra de Mitzráim, en los mejor de la tierra, en la tierra de Ramesés, como había ordenado Faraón.
 **12** Y proveyó Iosef, a su padre y a sus hermanos y a toda la casa de su padre, pan de acuerdo con *el número de* sus niños.
 
@@ -1805,18 +1805,18 @@ porque una gran na­ción te haré allí.**4** Yo descenderé contigo a Mitzrái
 **25** Y ellos dijeron: ¡Nos has revivido! Ha­llemos favor a los ojos de mi amo, y seremos siervos de Faraón.
 **26** Y puso esto Iosef por ley hasta este día sobre la tierra de Mitzráim: Para Faraón* era* el quinto. Solamente la tierra de los sacerdotes, por excepción, no fue para Faraón.
 **27** Y habitó Israel en la tierra de Mitzráim, en la tierra de Goshén, y tomaron *posesión* en ella; y fueron fructíferos y se multiplicaron mucho.
-**28** Y vivió Iaacob en la tierra de Mitzráim diecisiete años. Y fueron los días de Iaacob, los años de su vida, ciento cuarenta y siete años.
+**28** Y vivió Yaakov en la tierra de Mitzráim diecisiete años. Y fueron los días de Yaakov, los años de su vida, ciento cuarenta y siete años.
 **29** Y se acercaron los días *en que* Israel moriría, y llamó a su hijo, a Iosef, y le dijo: Si por favor, he encontrado favor en tus ojos, pon por favor, tu mano debajo de mi muslo, y haz conmigo benevolencia y verdad. Te ruego, no me entierres en Mitz­ráim.
 **30** Y descansaré con mis padres, y me llevarás de Mitzráim y me enterrarás en la tumba de ellos. Y él dijo: Yo haré como tú has hablado.
 **31** Pero él dijo: Júrame*lo. *Y le juró. Y se in­clinó Israel sobre la cabecera de la cama.
 
-*Iaacob bendice a Efráim y a Menasheh*
+*Yaakov bendice a Efráim y a Menasheh*
 
 **48**
 
 **1** Y sucedió después de estas cosas, *que* *alguien* dijo a Iosef: He aquí, tu padre está enfermo. Y tomó a sus dos hijos con él, a Menasheh y a Efráim.
-**2** Y fue dado a conocer a Iaacob, y dijo: He aquí, tu hijo Iosef ha venido a ti. Y se fortaleció Israel y se sentó en la cama.
-**3** Y dijo Iaacob a Iosef: El Shadai apareció a mí en Luz, en la tierra de Kenáan, y me ben­dijo.
+**2** Y fue dado a conocer a Yaakov, y dijo: He aquí, tu hijo Iosef ha venido a ti. Y se fortaleció Israel y se sentó en la cama.
+**3** Y dijo Yaakov a Iosef: El Shadai apareció a mí en Luz, en la tierra de Kenáan, y me ben­dijo.
 **4** Y me dijo: “He aquí, te haré fructificar, y te multiplicaré, y estableceré de ti una asamblea de pueblos, y daré esta tierra a tu simiente después de ti en propiedad olam[^228]”.
 **5** Y ahora, dos hijos te han nacido en la tierra de Mitzráim, antes de que viniera a ti a Mitzráim, míos son ellos; Efráim y Menasheh, como Reubén y Shimeón, serán míos.
 **6** Pero tu tierra natal, que has engendrado después de ellos, para ti serán; por el nombre de sus hermanos serán llamados en su herencia.
@@ -1850,21 +1850,21 @@ Por ti bendecirá Israel, diciendo:
 
 **49**
 
-**1** Y llamó Iaacob a sus hijos, y dijo: Júntense, y pueda darles a conocer lo que les llamará en la posteridad de los días[^233].
-**2** Júntense y escuchen, hijos de Iaacob, y escuchen a Israel su padre:
+**1** Y llamó Yaakov a sus hijos, y dijo: Júntense, y pueda darles a conocer lo que les llamará en la posteridad de los días[^233].
+**2** Júntense y escuchen, hijos de Yaakov, y escuchen a Israel su padre:
 
 **3** Reubén, mi primogénito, mi fuerza y el principio de mi poder,
  abundante de nobleza, y abundante de poder.**4** Impetuoso como las aguas, no permanecerás,
 **5** Shimeón y Levi, hermanos; sus instrumentos de violencia *son* sus armas.
 **6** En su tribunal no entre mi ser, en su asam­blea no se una mi honor, porque en su ira ma­taron un hombre, en su deseo desarraigaron un buey.
-**7** Excluida *sea* su ira, porque es fuerte; y su sobrepaso porque es duro. Los dividiré en Iaacob, y los dispersaré en Israel.
+**7** Excluida *sea* su ira, porque es fuerte; y su sobrepaso porque es duro. Los dividiré en Yaakov, y los dispersaré en Israel.
 **8** Tú Iehudáh, te confesarán tus hermanos; tu mano en la nuca de tus enemigos; se inclinarán a ti los hijos de tu padre.
 **9** Cachorro de león es Iehudáh; de la presa, hijo mío, has subido. Se inclina, se acuesta como león y como leona, ¿quién lo despertará?
 **10** No se desviará el cetro de Iehudáh, y el le­gislar de entre sus pies,
 **11** Amarra a la vid su pollino, y a la rama roja el hijo de su asna; lava en vino sus vestidos, y en sangre de uvas su ropa.
 **12** Enrojecidos *están* sus ojos *más* que el vino,
 **13** Zebulún, a la orilla del mar habitará; y él *será* costa de naves, y su retaguardia junto a Tzidón.
-**14** Isasjar, asno de hueso, se acuesta entre los rediles.
+**14** Issajar, asno de hueso, se acuesta entre los rediles.
 **15** Y vio un descanso que era bueno, y la tierra que era placentera. Y se inclinó su hombro para tolerar y se con­virtió en trabajador por impuesto.
 **16** Dan juzgará su pueblo, como una de las tribus de Israel.
 **17** Será Dan serpiente junto al camino, víbora junto al sendero,
@@ -1876,25 +1876,25 @@ Por ti bendecirá Israel, diciendo:
 **23** Lo amargan y le disparan, y lo despreciaron los poseedores de flechas;
 **24** pero permaneció en fuerza su arco, y fueron ágiles los brazos de sus manos
 
-debido a las manos del Poderoso de Iaacob,
+debido a las manos del Poderoso de Yaakov,
  de allí es el Pastor, Roca de Israel[^238],**25** debido al El de tu padre, y te ayudará; Sha­dai te bendecirá *con* bendiciones de los cielos desde arriba,
 bendiciones del abismo que yace abajo,
  bendiciones de los pechos y del útero.**26** Las bendiciones de tu padre
  han vencido sobre las bendiciones de mis padres
-hasta el límite de las colinas del *olam*[^239],
+hasta el límite de las colinas del olam[^239],
  ¡ellas serán para la cabeza de Iosef y para la coronilla del con­sa­grado[^240] de sus hermanos!**27** Biniamín, lobo devorador; en la mañana come su presa,
  y al atardecer divide el botín.
 
-*Muerte de Iaacob*
+*Muerte de Yaakov*
 
 **28** Todas estas son las doce tribus de Israel, y esto es lo que habló a ellos su padre y los ben­dijo, a *cada* hombre que con su bendición los bendijo.
 **29** Y les ordenó, y les dijo: Yo seré juntado a mi pueblo; entiérrenme con mis padres en la cueva que *está* en el campo de Efrón el jití.
 **30** En la cueva que *está *en el campo de Majpelah, que *está *sobre la faz de Mamré, en la tierra de Kenáan, la cual compró Abraham con el campo de Efrón el jití, para propiedad de una tumba.
 **31** Allí enterraron a Abraham y a Sarah, su mujer; allí enterraron a Itzjak y a Ribkah, su mujer, y allí yo enterré a Leah.
 **32** Fueron* comprados el campo y la cueva que *hay* en él, de los hijos de Jet.
-**33** Y terminó Iaacob de ordenar a sus hijos, y juntó sus pies en la cama, y murió, y fue juntado a su pueblo.
+**33** Y terminó Yaakov de ordenar a sus hijos, y juntó sus pies en la cama, y murió, y fue juntado a su pueblo.
 
-*Entierro de Iaacob*
+*Entierro de Yaakov*
 
 **50**
 
@@ -1926,7 +1926,7 @@ hasta el límite de las colinas del *olam*[^239],
 Yo muero, pero Elohim, visitando, los visitará,
  y los hará subir de esta tierra hacia la tierra
 
-la cual juró a Abraham, a Itzjak y a Iaacob.
+la cual juró a Abraham, a Itzjak y a Yaakov.
 
 **25** Y juró Iosef a los hijos de Israel, diciendo: Visitando, *los* visitará Elohim a ustedes, y subirán mis huesos de este *lugar*.
 **26** Y murió Iosef siendo viejo de ciento diez años, y lo embalsamaron y lo pusieron en un ataúd en Mitzráim.
@@ -2037,7 +2037,7 @@ la cual juró a Abraham, a Itzjak y a Iaacob.
 [^104]: Pozo del juramento.
 [^105]: Oculto, inescrutable.
 [^106]: O, *será visto. *Heb.: *Elohim Iréh.*
-[^107]: O, *será visto. *Heb.: *יהוה Iréh.*
+[^107]: O, *será visto. *Heb.: *Yehovah Iréh.*
 [^108]: Siclos.
 [^109]: O, *decidido.*
 [^110]: Lit.: *Hasta, si.*
@@ -2097,9 +2097,9 @@ la cual juró a Abraham, a Itzjak y a Iaacob.
 [^164]: Dos campamentos.
 [^165]: Lit.: *rebaño, rebaño.*
 [^166]: Lit.: *lo que era para él.*
-[^167]: El que toma por el talón.
-[^168]: El luchará como Príncipe.
-[^169]: Heb.: *Sarita.*
+[^167]: Heb.: *Ish*. Concepto que hace referencia tanto a un personaje masculino terrenal como uno espiritual.
+[^168]: Esto dice Iaacob al *ish*.
+[^169]: Esto dice Iaacob al alba, que es Elohim.
 [^170]: O, *Peniel. *Rostro de El*. *Así también en vers. 31.
 [^171]: Heb.: *Guid ha’nasheh.*
 [^172]: Heb.: *Sucot.*

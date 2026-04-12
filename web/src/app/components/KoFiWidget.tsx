@@ -1,15 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 declare global {
-  interface Window {
-    kofiWidgetOverlay?: {
-      draw: (
-        username: string,
-        options: Record<string, string>,
-        containerId?: string,
-      ) => void;
-    };
-  }
+	interface Window {
+		kofiWidgetOverlay?: {
+			draw: (
+				username: string,
+				options: Record<string, string>,
+				containerId?: string,
+			) => void;
+		};
+	}
 }
 
 const kofiInlineStyles = `
@@ -46,79 +46,80 @@ const kofiInlineStyles = `
 `;
 
 export function KoFiWidget() {
-  const drawnRef = useRef(false);
+	const drawnRef = useRef(false);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
+	useEffect(() => {
+		if (typeof window === "undefined") return;
 
-    let isActive = true;
-    let retryTimer: number | null = null;
-    let retries = 0;
-    const maxRetries = 30;
+		let isActive = true;
+		let retryTimer: number | null = null;
+		let retries = 0;
+		const maxRetries = 30;
 
-    const draw = () => {
-      if (!window.kofiWidgetOverlay || drawnRef.current || !isActive)
-        return false;
-      try {
-        window.kofiWidgetOverlay.draw(
-          "edyhvh",
-          {
-            type: "floating-chat",
-            "floating-chat.donateButton.text": "Donate",
-            "floating-chat.donateButton.background-color": "#00b9fe",
-            "floating-chat.donateButton.text-color": "#fff",
-          },
-          "kofi-inline-container",
-        );
-        drawnRef.current = true;
-        return true;
-      } catch {
-        return false;
-      }
-    };
+		const draw = () => {
+			if (!window.kofiWidgetOverlay || drawnRef.current || !isActive)
+				return false;
+			try {
+				window.kofiWidgetOverlay.draw(
+					"edyhvh",
+					{
+						type: "floating-chat",
+						"floating-chat.donateButton.text": "Donate",
+						"floating-chat.donateButton.background-color": "#00b9fe",
+						"floating-chat.donateButton.text-color": "#fff",
+					},
+					"kofi-inline-container",
+				);
+				drawnRef.current = true;
+				return true;
+			} catch {
+				return false;
+			}
+		};
 
-    const retry = () => {
-      if (!isActive || drawnRef.current) return;
-      if (retries >= maxRetries) return;
-      retries += 1;
-      retryTimer = window.setTimeout(() => {
-        if (!draw()) retry();
-      }, 200);
-    };
+		const retry = () => {
+			if (!isActive || drawnRef.current) return;
+			if (retries >= maxRetries) return;
+			retries += 1;
+			retryTimer = window.setTimeout(() => {
+				if (!draw()) retry();
+			}, 200);
+		};
 
-    if (window.kofiWidgetOverlay && draw()) {
-      return () => {
-        isActive = false;
-      };
-    }
+		if (window.kofiWidgetOverlay && draw()) {
+			return () => {
+				isActive = false;
+			};
+		}
 
-    let script = document.getElementById(
-      "kofi-overlay-script",
-    ) as HTMLScriptElement | null;
-    if (!script) {
-      script = document.createElement("script");
-      script.id = "kofi-overlay-script";
-      script.src = "https://storage.ko-fi.com/cdn/scripts/overlay-widget.js";
-      script.async = true;
-      document.head.appendChild(script);
-    }
+		let script = document.getElementById(
+			"kofi-overlay-script",
+		) as HTMLScriptElement | null;
+		if (!script) {
+			script = document.createElement("script");
+			script.id = "kofi-overlay-script";
+			script.src = "https://storage.ko-fi.com/cdn/scripts/overlay-widget.js";
+			script.async = true;
+			document.head.appendChild(script);
+		}
 
-    const onLoad = () => {
-      if (!draw()) retry();
-    };
-    script.addEventListener("load", onLoad);
+		const onLoad = () => {
+			if (!draw()) retry();
+		};
+		script.addEventListener("load", onLoad);
 
-    return () => {
-      isActive = false;
-      script?.removeEventListener("load", onLoad);
-      if (retryTimer !== null) window.clearTimeout(retryTimer);
-    };
-  }, []);
+		return () => {
+			isActive = false;
+			script?.removeEventListener("load", onLoad);
+			if (retryTimer !== null) window.clearTimeout(retryTimer);
+		};
+	}, []);
 
-  return (
-    <>
-      <style dangerouslySetInnerHTML={{ __html: kofiInlineStyles }} />
-      <div id="kofi-inline-container" className="flex justify-center" />
-    </>
-  );
+	return (
+		<>
+			{/* biome-ignore lint/security/noDangerouslySetInnerHtml: Ko-fi widget requires injected CSS overrides for stable inline embedding. */}
+			<style dangerouslySetInnerHTML={{ __html: kofiInlineStyles }} />
+			<div id="kofi-inline-container" className="flex justify-center" />
+		</>
+	);
 }

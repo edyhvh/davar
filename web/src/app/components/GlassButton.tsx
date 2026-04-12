@@ -1,26 +1,27 @@
-import React from 'react';
+import type React from "react";
 
 interface GlassButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
-  variant?: 'primary' | 'secondary';
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  disabled?: boolean;
+	children: React.ReactNode;
+	onClick?: () => void;
+	variant?: "primary" | "secondary";
+	size?: "sm" | "md" | "lg";
+	className?: string;
+	disabled?: boolean;
 }
 
 export function GlassButton({
-  children,
-  onClick,
-  variant = 'primary',
-  size = 'md',
-  className = '',
-  disabled = false,
+	children,
+	onClick,
+	variant = "primary",
+	size = "md",
+	className = "",
+	disabled = false,
 }: GlassButtonProps) {
-  const baseClasses = 'relative overflow-hidden transition-all duration-300 rounded-2xl';
-  
-  const variantClasses = {
-    primary: `
+	const baseClasses =
+		"relative overflow-hidden transition-all duration-300 rounded-2xl";
+
+	const variantClasses = {
+		primary: `
       bg-gradient-to-br from-[var(--accent-from)] to-[var(--accent-to)]
       text-white 
       shadow-[0_8px_24px_0_rgba(0,56,184,0.25)]
@@ -29,7 +30,7 @@ export function GlassButton({
       border border-white/20
       disabled:opacity-50 disabled:cursor-not-allowed
     `,
-    secondary: `
+		secondary: `
       bg-[var(--glass-surface)] backdrop-blur-[40px]
       text-[var(--foreground)]
       border border-[var(--glass-border)]
@@ -38,29 +39,30 @@ export function GlassButton({
       active:scale-98
       disabled:opacity-50 disabled:cursor-not-allowed
     `,
-  };
+	};
 
-  const sizeClasses = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-5 py-2.5 text-base',
-    lg: 'px-7 py-3.5 text-lg',
-  };
+	const sizeClasses = {
+		sm: "px-3 py-1.5 text-sm",
+		md: "px-5 py-2.5 text-base",
+		lg: "px-7 py-3.5 text-lg",
+	};
 
-  return (
-    <button
-      onClick={onClick}
-      disabled={disabled}
-      className={`
+	return (
+		<button
+			type="button"
+			onClick={onClick}
+			disabled={disabled}
+			className={`
         ${baseClasses}
         ${variantClasses[variant]}
         ${sizeClasses[size]}
         ${className}
       `}
-      style={{ fontFamily: "'Inter', sans-serif" }}
-    >
-      {/* Inner glass highlight - NEUTRAL (no color) */}
-      <span className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/5 pointer-events-none" />
-      <span className="relative">{children}</span>
-    </button>
-  );
+			style={{ fontFamily: "'Inter', sans-serif" }}
+		>
+			{/* Inner glass highlight - NEUTRAL (no color) */}
+			<span className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/5 pointer-events-none" />
+			<span className="relative">{children}</span>
+		</button>
+	);
 }
