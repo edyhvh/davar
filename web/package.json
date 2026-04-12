@@ -5,11 +5,12 @@
 	"type": "module",
 	"scripts": {
 		"generate-data": "bun ../scripts/generate-static-data/index.ts",
+		"generate-data:ensure": "bun ./scripts/ensure-static-data.ts",
 		"build": "bun --env-file=.env ./build.ts",
 		"build:dev": "bun --env-file=.env ./build.ts",
 		"build:prod": "bun --env-file=.env.production ./build.ts",
 		"dev": "bun run build:dev && bun run serve",
-		"dev:hot": "PORT=3002 bun --env-file=.env ./index.html",
+		"dev:hot": "bun ./scripts/dev-hot.ts",
 		"serve": "bun --env-file=.env ./server.ts",
 		"test": "bun test",
 		"test:static-data": "bun test src/app/services/staticData.test.js",

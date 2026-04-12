@@ -151,6 +151,14 @@ const ts2009ChapterCache = new Map<
 
 type StaticBase = "" | "/public" | "/web" | "/web/public";
 
+const staticUrlPrefix = (
+	(
+		import.meta as ImportMeta & {
+			env?: Record<string, string | undefined>;
+		}
+	).env?.PUBLIC_STATIC_URL ?? ""
+).replace(/\/+$/, "");
+
 let preferredStaticBase: StaticBase = "";
 const STATIC_BASE_CANDIDATES: StaticBase[] = [
 	"",
@@ -168,8 +176,17 @@ const buildCandidatePaths = (path: string): string[] => {
 		preferredStaticBase,
 		...STATIC_BASE_CANDIDATES.filter((base) => base !== preferredStaticBase),
 	];
+	const localPaths = orderedBases.map((base) => `${base}${normalizedPath}`);
 
-	return orderedBases.map((base) => `${base}${normalizedPath}`);
+	if (!staticUrlPrefix) {
+		return localPaths;
+	}
+
+	const prefixedPaths = localPaths.map((candidatePath) =>
+		`${staticUrlPrefix}${candidatePath}`,
+	);
+
+	return [...new Set([...prefixedPaths, ...localPaths])];
 };
 
 const inferStaticBaseFromResolvedPath = (

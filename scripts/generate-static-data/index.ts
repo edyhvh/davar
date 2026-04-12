@@ -646,6 +646,9 @@ const generateTs2009Chapters = async (): Promise<{
 };
 
 const main = async (): Promise<void> => {
+  const generationStartedAt = Date.now();
+  console.log("[davar-static-data] phase=generate start");
+
   await rm(WEB_PUBLIC_DATA_ROOT, { recursive: true, force: true });
   await mkdir(WEB_PUBLIC_DATA_ROOT, { recursive: true });
 
@@ -840,6 +843,9 @@ const main = async (): Promise<void> => {
     }
   }
   console.log(`bundles: ${Object.keys(manifest.bundles).join(", ")}`);
+  console.log(
+    `[davar-static-data] phase=generate done duration=${((Date.now() - generationStartedAt) / 1000).toFixed(1)}s`,
+  );
 };
 
 main().catch((error) => {
