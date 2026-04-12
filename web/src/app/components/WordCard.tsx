@@ -153,6 +153,50 @@ export function WordCard({
 		Record<string, PrefixEntry | null>
 	>({});
 
+	const meaningItems = useMemo(() => {
+		const counts = new Map<string, number>();
+		return displayedData.meanings
+			.filter((m) => m?.trim())
+			.map((value) => {
+				const occurrence = (counts.get(value) ?? 0) + 1;
+				counts.set(value, occurrence);
+				return { key: `meaning-${value}-${occurrence}`, value };
+			});
+	}, [displayedData.meanings]);
+
+	const qumranMeaningItems = useMemo(() => {
+		const counts = new Map<string, number>();
+		return (displayedData.qumranMeanings ?? [])
+			.filter((m) => m?.trim())
+			.map((value) => {
+				const occurrence = (counts.get(value) ?? 0) + 1;
+				counts.set(value, occurrence);
+				return { key: `qumran-meaning-${value}-${occurrence}`, value };
+			});
+	}, [displayedData.qumranMeanings]);
+
+	const prefixItems = useMemo(() => {
+		const counts = new Map<string, number>();
+		return (displayedData.prefixes ?? []).map((prefixId) => {
+			const occurrence = (counts.get(prefixId) ?? 0) + 1;
+			counts.set(prefixId, occurrence);
+			return { key: `prefix-${prefixId}-${occurrence}`, value: prefixId };
+		});
+	}, [displayedData.prefixes]);
+
+	const instanceItems = useMemo(() => {
+		const counts = new Map<string, number>();
+		return displayedData.instances.map((instance) => {
+			const token = `${instance.verse}:${instance.text}`;
+			const occurrence = (counts.get(token) ?? 0) + 1;
+			counts.set(token, occurrence);
+			return {
+				key: `instance-${instance.verse}-${instance.text}-${occurrence}`,
+				value: instance,
+			};
+		});
+	}, [displayedData.instances]);
+
 	const formatMeaning = (text: string) => {
 		const cleaned = stripMeteg(stripCantillation(text))
 			.replace(/^[-–—]\s*/, "")
@@ -306,17 +350,7 @@ export function WordCard({
 			});
 		}
 	}, [
-		displayedData.root,
-		displayedData.rootMeaning,
-		displayedData.transliteration,
-		displayedData.word,
-		displayedData.wordFromVerse,
-		displayedData.qumranWord,
-		displayedData.qumranStrong,
-		displayedData.qumranRoot,
-		displayedData.qumranRootMeaning,
-		displayedData.qumranRootTransliteration,
-		displayedData.qumranCommentary,
+		displayedData,
 		instances,
 		isLoading,
 		meanings,
@@ -335,12 +369,6 @@ export function WordCard({
 		qumranRootMeaning,
 		qumranRootTransliteration,
 		qumranCommentary,
-		displayedData.meanings.join,
-		displayedData.prefixes,
-		displayedData.rootTransliteration,
-		displayedData.qumranTransliteration,
-		displayedData.qumranMeanings,
-		displayedData.instances.map,
 	]);
 
 	useEffect(() => {
@@ -556,13 +584,11 @@ export function WordCard({
 						>
 							{displayedData.meanings.length > 0 ? (
 								<div className="space-y-2 text-center">
-									{displayedData.meanings
-										.filter((m) => m?.trim())
-										.map((m) => (
-											<div key={m} style={{ whiteSpace: "normal" }}>
-												{formatMeaning(m).replace(/\//g, "")}
-											</div>
-										))}
+									{meaningItems.map((item) => (
+										<div key={item.key} style={{ whiteSpace: "normal" }}>
+											{formatMeaning(item.value).replace(/\//g, "")}
+										</div>
+									))}
 								</div>
 							) : (
 								t("wordCard.noMeanings")
@@ -585,7 +611,8 @@ export function WordCard({
 							>
 								{t("wordCard.preposition")}
 							</h3>
-							{displayedData.prefixes.map((prefixId, index) => {
+							{prefixItems.map((prefixItem, index) => {
+								const prefixId = prefixItem.value;
 								const entry = prefixEntries[prefixId];
 								const meanings =
 									entry?.meanings?.[language] ??
@@ -605,7 +632,7 @@ export function WordCard({
 									splitLeadingHebrewCluster(prefixText);
 
 								return (
-									<div key={prefixId} className="space-y-2">
+									<div key={prefixItem.key} className="space-y-2">
 										<div
 											style={{
 												fontFamily: "'Cardo', serif",
@@ -789,6 +816,34 @@ export function WordCard({
 								textTransform: "uppercase",
 							}}
 						>
+							{t("wordCard.commentary")}
+						</h3>
+						<div
+							style={{
+								fontFamily: "'Jost', sans-serif",
+								fontSize: "15px",
+								lineHeight: 1.6,
+								fontWeight: 400,
+								color: "var(--text-primary)",
+							}}
+							className="dark:text-[var(--text-secondary)]"
+						>
+							{displayedData.qumranCommentary || "—"}
+						</div>
+					</div>
+
+					<div className="pb-6">
+						<h3
+							className="mb-4"
+							style={{
+								fontFamily: "'Inter', sans-serif",
+								fontSize: "11px",
+								color: "var(--text-secondary)",
+								fontWeight: 700,
+								letterSpacing: "0.15em",
+								textTransform: "uppercase",
+							}}
+						>
 							{t("wordCard.meanings")}
 						</h3>
 						<div
@@ -805,45 +860,15 @@ export function WordCard({
 								t("wordCard.loadingDefinitions")
 							) : displayedData.qumranMeanings?.length ? (
 								<div className="space-y-2 text-center">
-									{displayedData.qumranMeanings
-										.filter((m) => m?.trim())
-										.map((m) => (
-											<div key={m} style={{ whiteSpace: "normal" }}>
-												{formatMeaning(m).replace(/\//g, "")}
-											</div>
-										))}
+									{qumranMeaningItems.map((item) => (
+										<div key={item.key} style={{ whiteSpace: "normal" }}>
+											{formatMeaning(item.value).replace(/\//g, "")}
+										</div>
+									))}
 								</div>
 							) : (
 								t("wordCard.noMeanings")
 							)}
-						</div>
-					</div>
-
-					<div className="pb-6">
-						<h3
-							className="mb-4"
-							style={{
-								fontFamily: "'Inter', sans-serif",
-								fontSize: "11px",
-								color: "var(--text-secondary)",
-								fontWeight: 700,
-								letterSpacing: "0.15em",
-								textTransform: "uppercase",
-							}}
-						>
-							{t("wordCard.commentary")}
-						</h3>
-						<div
-							style={{
-								fontFamily: "'Jost', sans-serif",
-								fontSize: "15px",
-								lineHeight: 1.6,
-								fontWeight: 400,
-								color: "var(--text-primary)",
-							}}
-							className="dark:text-[var(--text-secondary)]"
-						>
-							{displayedData.qumranCommentary || "—"}
 						</div>
 					</div>
 
@@ -983,11 +1008,11 @@ export function WordCard({
 						</h3>
 						<div className="grid grid-cols-3 gap-2">
 							{displayedData.instances.length > 0 ? (
-								displayedData.instances.map((instance) => (
+								instanceItems.map((item) => (
 									<button
 										type="button"
-										key={instance.verse}
-										onClick={() => onInstanceClick(instance.verse)}
+										key={item.key}
+										onClick={() => onInstanceClick(item.value.verse)}
 										className="py-4 transition-all hover:bg-[var(--primary)] hover:text-white rounded-[20px]"
 										style={{
 											backgroundColor: "var(--muted)",
@@ -997,7 +1022,7 @@ export function WordCard({
 											color: "var(--foreground)",
 										}}
 									>
-										{formatVerseRef(instance.verse, language)}
+										{formatVerseRef(item.value.verse, language)}
 									</button>
 								))
 							) : (

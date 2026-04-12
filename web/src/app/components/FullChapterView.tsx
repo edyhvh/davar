@@ -64,7 +64,12 @@ export function FullChapterView({
 	const renderVerseWords = (verse: VerseResponse) => {
 		const dssMap = new Map<number, string>();
 		verse.dss?.forEach((variant) => {
-			if (typeof variant.position !== "number" || !variant.dss_word) return;
+			if (
+				typeof variant.position !== "number" ||
+				variant.position < 0 ||
+				!variant.dss_word
+			)
+				return;
 			dssMap.set(variant.position, variant.dss_word);
 		});
 
@@ -107,22 +112,9 @@ export function FullChapterView({
 						style={
 							variantText
 								? {
-										background: "none",
-										border: "none",
-										padding: 0,
-										margin: 0,
-										font: "inherit",
-										textAlign: "inherit",
 										color: "var(--text-hebrew)",
 									}
-								: {
-										background: "none",
-										border: "none",
-										padding: 0,
-										margin: 0,
-										font: "inherit",
-										textAlign: "inherit",
-									}
+								: undefined
 						}
 					>
 						{prefixSegments?.prefixes?.length ? (

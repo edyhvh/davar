@@ -92,6 +92,13 @@ export function VerseDisplay({
 	const renderHebrewText = () => {
 		const dssMap = new Map<number, string>();
 		dssVariants?.forEach((variant) => {
+			if (
+				typeof variant.position !== "number" ||
+				variant.position < 0 ||
+				!variant.dss_word
+			) {
+				return;
+			}
 			dssMap.set(variant.position, variant.dss_word);
 		});
 
@@ -102,7 +109,7 @@ export function VerseDisplay({
 						.split(" ")
 						.filter(Boolean)
 						.map((word, index) => ({
-							position: index + 1,
+							position: index,
 							text: word,
 							text_no_nikud: word,
 							prefixes: [],
@@ -180,11 +187,6 @@ export function VerseDisplay({
 						style={
 							variantText
 								? {
-										background: "none",
-										border: "none",
-										padding: 0,
-										font: "inherit",
-										textAlign: "inherit",
 										color: "var(--text-hebrew)",
 										fontFamily: "'DeadSeaScrolls-Regular', 'Cardo', serif",
 										fontSize: dssInlineFontScale,
@@ -192,13 +194,7 @@ export function VerseDisplay({
 										verticalAlign: "middle",
 										transform: `translateY(${dssInlineBaselineShift})`,
 									}
-								: {
-										background: "none",
-										border: "none",
-										padding: 0,
-										font: "inherit",
-										textAlign: "inherit",
-									}
+								: undefined
 						}
 					>
 						{prefixSegments?.prefixes?.length ? (

@@ -1,8 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 
-// Direct import.meta.env property access is required so Bun can statically
-// inline PUBLIC_* values into the browser bundle at build time. Indirect
-// access via a variable reference is NOT replaced by the bundler.
+// Keep env reads centralized and guarded to avoid runtime crashes in dev-hot
+// environments where import.meta.env may be undefined.
 const PLACEHOLDER_SUPABASE_URL = "your-project-ref.supabase.co";
 const PLACEHOLDER_SUPABASE_KEY = "your-supabase-anon-key";
 
@@ -133,8 +132,18 @@ type Ts2009BookPayload = {
 	chapters?: unknown;
 };
 
-const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL ?? "";
-const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY ?? "";
+const env =
+	(
+		import.meta as ImportMeta & {
+			env?: {
+				PUBLIC_SUPABASE_URL?: string;
+				PUBLIC_SUPABASE_ANON_KEY?: string;
+			};
+		}
+	).env ?? {};
+
+const supabaseUrl = env.PUBLIC_SUPABASE_URL ?? "";
+const supabaseAnonKey = env.PUBLIC_SUPABASE_ANON_KEY ?? "";
 
 let supabase: ReturnType<typeof createClient> | null = null;
 let hasWarnedNetworkFailure = false;

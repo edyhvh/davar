@@ -416,16 +416,23 @@ const extractBaseStrong = (value?: string): string | undefined => {
 const mapDssDifferences = (differences?: RawDssDifference[]): DssVariant[] => {
 	if (!differences?.length) return [];
 
-	return differences.map((difference, index) => ({
-		position: difference.position ?? index,
-		dss_word: difference.dss_word ?? "",
-		masoretic_word: difference.masoretic_word ?? "",
-		comment_v2_en: difference.comment_v2_en ?? difference.commentary,
-		comment_v2_es: difference.comment_v2_es,
-		comment_v2_he: difference.comment_v2_he,
-		masoretic_strong: difference.masoretic_strong,
-		dss_strong: difference.dss_strong,
-	}));
+	return differences.map((difference, index) => {
+		const normalizedPosition =
+			typeof difference.position === "number"
+				? Math.max(0, Math.trunc(difference.position - 1))
+				: index;
+
+		return {
+			position: normalizedPosition,
+			dss_word: difference.dss_word ?? "",
+			masoretic_word: difference.masoretic_word ?? "",
+			comment_v2_en: difference.comment_v2_en ?? difference.commentary,
+			comment_v2_es: difference.comment_v2_es,
+			comment_v2_he: difference.comment_v2_he,
+			masoretic_strong: difference.masoretic_strong,
+			dss_strong: difference.dss_strong,
+		};
+	});
 };
 
 const mapTranslationFootnotes = (

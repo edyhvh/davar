@@ -34,7 +34,7 @@ export function NeumorphCard({
         ${className}
       `;
 
-	if (onClick || onMouseEnter || onMouseLeave) {
+	if (onClick) {
 		return (
 			<button
 				type="button"
@@ -50,7 +50,12 @@ export function NeumorphCard({
 	}
 
 	return (
-		<div className={classNameValue}>
+		// biome-ignore lint/a11y/noStaticElementInteractions: hover-only handlers control transient visual states
+		<div
+			className={classNameValue}
+			onMouseEnter={onMouseEnter}
+			onMouseLeave={onMouseLeave}
+		>
 			<div className="relative">{children}</div>
 		</div>
 	);

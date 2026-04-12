@@ -16,7 +16,7 @@ import { VerseDisplay } from "./components/VerseDisplay";
 import { WordCard } from "./components/WordCard";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
 import { usePersistedState } from "./hooks/usePersistedState";
-import { useTranslation } from "./hooks/useTranslation";
+import { translate, useTranslation } from "./hooks/useTranslation";
 import {
 	type BookResponse,
 	getBooks,
@@ -441,9 +441,26 @@ export default function App() {
 		}
 	}, [currentBook]);
 
+	useEffect(() => {
+		if (currentScreen === "verse") return;
+
+		wordSheetClosingRef.current = false;
+		setIsWordSheetOpen(false);
+		setIsWordPanelHovered(false);
+		setIsNavigatingWordPanel(false);
+		setShowWordSkeleton(false);
+		setSelectedWord(null);
+	}, [currentScreen]);
+
 	const closeWordSheet = useCallback(() => {
 		wordSheetClosingRef.current = true;
 		setIsWordSheetOpen(false);
+	}, []);
+
+	const logWordDebug = useCallback((...args: unknown[]) => {
+		if ((import.meta as ImportMeta & { env?: { DEV?: boolean } }).env?.DEV) {
+			console.debug("[word-debug]", ...args);
+		}
 	}, []);
 
 	const handleWordSheetAfterClose = useCallback(() => {
@@ -452,29 +469,57 @@ export default function App() {
 		setSelectedWord(null);
 	}, [isWordSheetOpen]);
 
-	const handleWordClick = (word: WordResponse) => {
-		// If same word is clicked again, close the word card
-		if (
-			selectedWord?.text === word.text &&
-			selectedWord?.strong === word.strong
-		) {
-			if (isMobile) {
-				closeWordSheet();
-			} else {
-				setIsWordPanelDismissed(true);
-				setSelectedWord(null);
-				setLastSelectedWordAnalysis(null);
-				setLastSelectedDssAnalysis(null);
+	const handleWordClick = useCallback(
+		(word: WordResponse) => {
+			logWordDebug("click", {
+				text: word.text,
+				strong: word.strong ?? null,
+				position: word.position,
+				selected: selectedWord
+					? {
+							text: selectedWord.text,
+							strong: selectedWord.strong ?? null,
+							position: selectedWord.position,
+						}
+					: null,
+			});
+
+			// If same word is clicked again, close the word card
+			if (
+				selectedWord?.text === word.text &&
+				selectedWord?.strong === word.strong &&
+				selectedWord?.position === word.position
+			) {
+				logWordDebug("click-same-word-close", {
+					text: word.text,
+					strong: word.strong ?? null,
+					position: word.position,
+				});
+				if (isMobile) {
+					closeWordSheet();
+				} else {
+					setIsWordPanelDismissed(true);
+					setSelectedWord(null);
+					setLastSelectedWordAnalysis(null);
+					setLastSelectedDssAnalysis(null);
+				}
+				return;
 			}
-			return;
-		}
-		setIsWordPanelDismissed(false);
-		setSelectedWord(word);
-		if (isMobile) {
-			wordSheetClosingRef.current = false;
-			setIsWordSheetOpen(true);
-		}
-	};
+			setIsWordPanelDismissed(false);
+			setSelectedWord(word);
+			logWordDebug("click-select-word", {
+				text: word.text,
+				strong: word.strong ?? null,
+				position: word.position,
+				isMobile,
+			});
+			if (isMobile) {
+				wordSheetClosingRef.current = false;
+				setIsWordSheetOpen(true);
+			}
+		},
+		[closeWordSheet, isMobile, logWordDebug, selectedWord],
+	);
 
 	const handleNavigateToVerse = async (verseRef: string) => {
 		const wordToPreserve = selectedWord ?? lastSelectedWord;
@@ -609,7 +654,7 @@ export default function App() {
 				if (error instanceof Error && error.name === "NetworkError") {
 					setCurrentScreen("connectionError");
 				} else {
-					setErrorMessage(t("errors.loadBooks"));
+					setErrorMessage(translate(language, "errors.loadBooks"));
 				}
 			}
 		};
@@ -617,7 +662,7 @@ export default function App() {
 		return () => {
 			isMounted = false;
 		};
-	}, [currentBook.toLowerCase, t]);
+	}, [currentBook, language]);
 
 	useEffect(() => {
 		const pending = pendingRouteRef.current;
@@ -688,7 +733,7 @@ export default function App() {
 				setVerseCount(verseCountValue);
 				setChapterVerses(verses);
 				if (verses.length > 0) {
-					setCurrentVerse(Math.min(currentVerse, verses.length));
+					setCurrentVerse((prevVerse) => Math.min(prevVerse, verses.length));
 				}
 			} catch (error) {
 				if (!isMounted) return;
@@ -696,7 +741,7 @@ export default function App() {
 				if (error instanceof Error && error.name === "NetworkError") {
 					setCurrentScreen("connectionError");
 				} else {
-					setErrorMessage(t("errors.loadVerses"));
+					setErrorMessage(translate(language, "errors.loadVerses"));
 				}
 			} finally {
 				if (isMounted) setIsLoading(false);
@@ -708,7 +753,7 @@ export default function App() {
 		return () => {
 			isMounted = false;
 		};
-	}, [currentBook, currentChapter, language, showQumran, t, currentVerse]);
+	}, [currentBook, currentChapter, language, showQumran]);
 
 	useEffect(() => {
 		if (typeof window === "undefined") return;
@@ -793,6 +838,11 @@ export default function App() {
 		let isMounted = true;
 		const loadWordAnalysis = async () => {
 			if (!selectedWord?.strong) {
+				logWordDebug("analysis-skip-no-strong", {
+					text: selectedWord?.text ?? null,
+					strong: selectedWord?.strong ?? null,
+					position: selectedWord?.position ?? null,
+				});
 				setSelectedWordAnalysis(null);
 				setLastSelectedWordAnalysis(null);
 				setIsWordAnalysisLoading(false);
@@ -805,6 +855,9 @@ export default function App() {
 				.find((part) => /^[HG]\d+$/.test(part));
 
 			if (!strongPart) {
+				logWordDebug("analysis-skip-invalid-strong", {
+					strong: selectedWord.strong,
+				});
 				setSelectedWordAnalysis(null);
 				setLastSelectedWordAnalysis(null);
 				setIsWordAnalysisLoading(false);
@@ -812,6 +865,10 @@ export default function App() {
 			}
 
 			setIsWordAnalysisLoading(true);
+			logWordDebug("analysis-load-start", {
+				strong: strongPart,
+				language,
+			});
 			try {
 				const analysis = await loadLexiconEntry(
 					strongPart,
@@ -820,9 +877,17 @@ export default function App() {
 				if (isMounted) {
 					setSelectedWordAnalysis(analysis);
 					setIsWordAnalysisLoading(false);
+					logWordDebug("analysis-load-success", {
+						strong: strongPart,
+						hasDefinitions: Boolean(analysis?.definitions?.length),
+					});
 				}
 			} catch (error) {
 				if (isMounted) {
+					logWordDebug("analysis-load-error", {
+						strong: strongPart,
+						error,
+					});
 					console.error("Failed to load word analysis", error);
 					setSelectedWordAnalysis(null);
 					setLastSelectedWordAnalysis(null);
@@ -834,7 +899,7 @@ export default function App() {
 		return () => {
 			isMounted = false;
 		};
-	}, [selectedWord, language]);
+	}, [selectedWord, language, logWordDebug]);
 
 	useEffect(() => {
 		let isMounted = true;
@@ -1462,7 +1527,7 @@ export default function App() {
 												className={`p-6 ${
 													isWordPanelActive
 														? "word-panel-open"
-														: "word-panel-closed pointer-events-none"
+														: "word-panel-closed"
 												} ${showFullChapter ? "" : "sticky top-24"} word-panel-shell ${
 													hasQumranVariant ? "word-card-qumran" : ""
 												}`}
@@ -1587,7 +1652,7 @@ export default function App() {
 				</div>
 			)}
 
-			{isMobile && (
+			{isMobile && currentScreen === "verse" && (
 				<BottomSheet
 					isOpen={isWordSheetOpen}
 					onClose={closeWordSheet}

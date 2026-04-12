@@ -82,12 +82,18 @@ export function NavigationBar({
 	const [chapterSearch, setChapterSearch] = useState("");
 	const [verseSearch, setVerseSearch] = useState("");
 	const { t } = useTranslation(language);
-	const env = import.meta.env;
+	const isRTL = language === "he";
+	const env =
+		(
+			import.meta as ImportMeta & {
+				env?: { PUBLIC_NODE_ENV?: string };
+			}
+		).env ?? {};
 	const publicNodeEnv = env.PUBLIC_NODE_ENV ?? "production";
 	const isDev = publicNodeEnv === "development";
 
 	useEffect(() => {
-		const handleClickOutside = (event: MouseEvent) => {
+		const handleClickOutside = (event: PointerEvent) => {
 			if (
 				dropdownRef.current &&
 				!dropdownRef.current.contains(event.target as Node)
@@ -97,9 +103,9 @@ export function NavigationBar({
 		};
 
 		if (openMenu) {
-			document.addEventListener("mousedown", handleClickOutside);
+			document.addEventListener("pointerdown", handleClickOutside);
 			return () =>
-				document.removeEventListener("mousedown", handleClickOutside);
+				document.removeEventListener("pointerdown", handleClickOutside);
 		}
 	}, [openMenu]);
 
@@ -478,27 +484,9 @@ export function NavigationBar({
 				</div>
 			)}
 
-			{(openMenu === "book" ||
-				openMenu === "chapter" ||
-				openMenu === "verse") && (
-				<div
-					className="fixed inset-0 z-20"
-					onClick={() => setOpenMenu(null)}
-					onWheel={(event) => {
-						event.preventDefault();
-						event.stopPropagation();
-					}}
-					onTouchMove={(event) => {
-						event.preventDefault();
-						event.stopPropagation();
-					}}
-					aria-hidden="true"
-				/>
-			)}
-
 			{openMenu === "book" && (
 				<div
-					className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30"
+					className={`absolute ${isRTL ? "right-0" : "left-0"} mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30`}
 					onWheelCapture={(event) => {
 						event.stopPropagation();
 					}}
@@ -557,7 +545,7 @@ export function NavigationBar({
 
 			{openMenu === "chapter" && (
 				<div
-					className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30"
+					className={`absolute ${isRTL ? "right-0" : "left-0"} mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30`}
 					onWheelCapture={(event) => {
 						event.stopPropagation();
 					}}
@@ -609,7 +597,7 @@ export function NavigationBar({
 
 			{openMenu === "verse" && (
 				<div
-					className="absolute left-0 mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30"
+					className={`absolute ${isRTL ? "right-0" : "left-0"} mt-4 w-[280px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-4 z-30`}
 					onWheelCapture={(event) => {
 						event.stopPropagation();
 					}}
