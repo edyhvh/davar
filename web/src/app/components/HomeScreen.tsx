@@ -98,6 +98,7 @@ export function HomeScreen({
 
 			<div className="flex items-center justify-center gap-3 pb-2">
 				<button
+					type="button"
 					onClick={onFeaturesClick}
 					className="rounded-full px-4 py-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
 					style={{
@@ -116,6 +117,7 @@ export function HomeScreen({
 				</button>
 
 				<button
+					type="button"
 					onClick={onDonateClick}
 					className="flex items-center gap-2 rounded-full px-4 py-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
 					style={{

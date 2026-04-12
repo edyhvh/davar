@@ -7,12 +7,7 @@ interface DavarLogoProps {
 	theme?: "light" | "dark";
 }
 
-export function DavarLogo({
-	size = "md",
-	variant = "default",
-	className = "",
-	theme,
-}: DavarLogoProps) {
+export function DavarLogo({ size = "md", className = "" }: DavarLogoProps) {
 	const sizes = {
 		sm: 48,
 		md: 64,

@@ -26,6 +26,7 @@ export function SplashScreen({
 			{/* Phoenician Dalet Logo with Soft Earthy Tekhelet Gradient */}
 			<div className="animate-breathe">
 				<svg
+					aria-hidden="true"
 					width="120"
 					height="120"
 					viewBox="0 0 120 120"

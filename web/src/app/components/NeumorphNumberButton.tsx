@@ -11,6 +11,7 @@ export function NeumorphNumberButton({
 }: NeumorphNumberButtonProps) {
 	return (
 		<button
+			type="button"
 			onClick={onClick}
 			className={`
         relative w-full aspect-square rounded-3xl transition-all duration-300

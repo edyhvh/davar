@@ -15,6 +15,7 @@ export function ConnectionErrorPage({ onRetry }: ConnectionErrorPageProps) {
 			</p>
 			{onRetry && (
 				<button
+					type="button"
 					onClick={onRetry}
 					className="rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-700"
 				>

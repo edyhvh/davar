@@ -33,9 +33,6 @@ interface FullChapterViewProps {
 
 export function FullChapterView({
 	verses,
-	bookName,
-	bookNameHebrew,
-	chapter,
 	language,
 	hebrewOnly,
 	seferMode = false,
@@ -103,15 +100,29 @@ export function FullChapterView({
 
 			return (
 				<span key={word.position}>
-					<span
+					<button
+						type="button"
 						onClick={() => onWordClick(word)}
 						className={`word-interactive cursor-pointer ${isSelected ? "verse-highlight" : ""}`}
 						style={
 							variantText
 								? {
+										background: "none",
+										border: "none",
+										padding: 0,
+										margin: 0,
+										font: "inherit",
+										textAlign: "inherit",
 										color: "var(--text-hebrew)",
 									}
-								: undefined
+								: {
+										background: "none",
+										border: "none",
+										padding: 0,
+										margin: 0,
+										font: "inherit",
+										textAlign: "inherit",
+									}
 						}
 					>
 						{prefixSegments?.prefixes?.length ? (
@@ -132,7 +143,7 @@ export function FullChapterView({
 						) : (
 							displayText
 						)}
-					</span>
+					</button>
 					{wordIdx < verse.words.length - 1 && " "}
 				</span>
 			);

@@ -375,6 +375,7 @@ export function WordCard({
 			<div className="flex justify-end">
 				{onClose && (
 					<button
+						type="button"
 						onClick={onClose}
 						className="rounded-full p-2 transition-all hover:scale-105 active:scale-95"
 						style={{
@@ -466,6 +467,7 @@ export function WordCard({
 			>
 				{showQumranTab && (
 					<button
+						type="button"
 						onClick={() => setActiveTab("qumran")}
 						className="py-3 transition-all rounded-full"
 						style={{
@@ -484,6 +486,7 @@ export function WordCard({
 					</button>
 				)}
 				<button
+					type="button"
 					onClick={() => setActiveTab("masoretic")}
 					className="py-3 transition-all rounded-full"
 					style={{
@@ -503,6 +506,7 @@ export function WordCard({
 					{showQumranTab ? t("wordCard.masoretic") : t("wordCard.meanings")}
 				</button>
 				<button
+					type="button"
 					onClick={() => setActiveTab("instances")}
 					className="py-3 transition-all rounded-full"
 					style={{
@@ -554,8 +558,8 @@ export function WordCard({
 								<div className="space-y-2 text-center">
 									{displayedData.meanings
 										.filter((m) => m?.trim())
-										.map((m, i) => (
-											<div key={i} style={{ whiteSpace: "normal" }}>
+										.map((m) => (
+											<div key={m} style={{ whiteSpace: "normal" }}>
 												{formatMeaning(m).replace(/\//g, "")}
 											</div>
 										))}
@@ -601,7 +605,7 @@ export function WordCard({
 									splitLeadingHebrewCluster(prefixText);
 
 								return (
-									<div key={`${prefixId}-${index}`} className="space-y-2">
+									<div key={prefixId} className="space-y-2">
 										<div
 											style={{
 												fontFamily: "'Cardo', serif",
@@ -803,8 +807,8 @@ export function WordCard({
 								<div className="space-y-2 text-center">
 									{displayedData.qumranMeanings
 										.filter((m) => m?.trim())
-										.map((m, i) => (
-											<div key={i} style={{ whiteSpace: "normal" }}>
+										.map((m) => (
+											<div key={m} style={{ whiteSpace: "normal" }}>
 												{formatMeaning(m).replace(/\//g, "")}
 											</div>
 										))}
@@ -979,9 +983,10 @@ export function WordCard({
 						</h3>
 						<div className="grid grid-cols-3 gap-2">
 							{displayedData.instances.length > 0 ? (
-								displayedData.instances.map((instance, idx) => (
+								displayedData.instances.map((instance) => (
 									<button
-										key={idx}
+										type="button"
+										key={instance.verse}
 										onClick={() => onInstanceClick(instance.verse)}
 										className="py-4 transition-all hover:bg-[var(--primary)] hover:text-white rounded-[20px]"
 										style={{

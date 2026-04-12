@@ -28,6 +28,7 @@ function RetroPillToggle({
 }) {
 	return (
 		<button
+			type="button"
 			onClick={onToggle}
 			className="relative bg-[var(--border)] rounded-full p-0.5 transition-all duration-300 flex-shrink-0"
 			style={{
@@ -77,6 +78,7 @@ function RetroOnOffButton({
 }) {
 	return (
 		<button
+			type="button"
 			onClick={disabled ? undefined : onToggle}
 			disabled={disabled}
 			aria-disabled={disabled}
@@ -138,6 +140,7 @@ function RetroOnOffButton({
 const RetroIcons = {
 	Theme: () => (
 		<svg
+			aria-hidden="true"
 			width="24"
 			height="24"
 			viewBox="0 0 24 24"
@@ -150,6 +153,7 @@ const RetroIcons = {
 	),
 	Language: () => (
 		<svg
+			aria-hidden="true"
 			width="24"
 			height="24"
 			viewBox="0 0 24 24"
@@ -174,6 +178,7 @@ const RetroIcons = {
 	),
 	Qumran: () => (
 		<svg
+			aria-hidden="true"
 			width="24"
 			height="24"
 			viewBox="0 0 24 24"
@@ -218,6 +223,7 @@ const RetroIcons = {
 	),
 	Chapter: () => (
 		<svg
+			aria-hidden="true"
 			width="24"
 			height="24"
 			viewBox="0 0 24 24"
@@ -234,6 +240,7 @@ const RetroIcons = {
 	),
 	Hebrew: () => (
 		<svg
+			aria-hidden="true"
 			width="24"
 			height="24"
 			viewBox="0 0 24 24"
@@ -250,6 +257,7 @@ const RetroIcons = {
 	),
 	Sefer: () => (
 		<svg
+			aria-hidden="true"
 			width="24"
 			height="24"
 			viewBox="0 0 24 24"
@@ -269,6 +277,7 @@ const RetroIcons = {
 	),
 	DesignSystem: () => (
 		<svg
+			aria-hidden="true"
 			width="24"
 			height="24"
 			viewBox="0 0 24 24"
@@ -316,9 +325,9 @@ const RetroIcons = {
 };
 
 const languages = [
-	{ code: "en", name: "English", nativeName: "English" },
-	{ code: "es", name: "Spanish", nativeName: "Español" },
-	{ code: "he", name: "Hebrew", nativeName: "עברית" },
+	{ code: "en" as const, name: "English", nativeName: "English" },
+	{ code: "es" as const, name: "Spanish", nativeName: "Español" },
+	{ code: "he" as const, name: "Hebrew", nativeName: "עברית" },
 ];
 
 export function SettingsScreen({
@@ -428,6 +437,7 @@ export function SettingsScreen({
 						style={{ minWidth: "140px" }}
 					>
 						<button
+							type="button"
 							onClick={() => setIsLanguageOpen(!isLanguageOpen)}
 							className="w-full bg-[var(--muted)] border-2 border-[var(--border)] rounded-[16px] px-4 py-2 flex items-center justify-between hover:bg-[var(--primary)]/10 transition-all"
 						>
@@ -438,6 +448,7 @@ export function SettingsScreen({
 								{selectedLanguage.nativeName}
 							</span>
 							<svg
+								aria-hidden="true"
 								className={`w-4 h-4 text-[var(--text-secondary)] transition-transform ${isLanguageOpen ? "rotate-180" : ""}`}
 								fill="none"
 								stroke="currentColor"
@@ -457,6 +468,7 @@ export function SettingsScreen({
 							<div className="absolute top-full left-0 right-0 mt-2 bg-[var(--background)] border-2 border-[var(--border)] rounded-[16px] shadow-lg overflow-hidden z-[100]">
 								{languages.map((lang) => (
 									<button
+										type="button"
 										key={lang.code}
 										onClick={() => {
 											onLanguageChange(lang.code);
@@ -474,6 +486,7 @@ export function SettingsScreen({
 										</span>
 										{lang.code === language && (
 											<svg
+												aria-hidden="true"
 												className="w-4 h-4 text-[var(--primary)]"
 												fill="none"
 												stroke="currentColor"
@@ -654,6 +667,7 @@ export function SettingsScreen({
 					<div className="border-t border-[var(--border)]" />
 
 					<button
+						type="button"
 						onClick={onDesignSystemClick}
 						className="px-6 py-6 flex items-center justify-between w-full hover:bg-[var(--muted)] transition-all"
 					>
@@ -687,6 +701,7 @@ export function SettingsScreen({
 					<div className="border-t border-[var(--border)]" />
 
 					<button
+						type="button"
 						onClick={onMobileDesignGuideClick}
 						className="px-6 py-6 flex items-center justify-between w-full hover:bg-[var(--muted)] transition-all"
 					>

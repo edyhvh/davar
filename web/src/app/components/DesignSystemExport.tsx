@@ -14,7 +14,6 @@ interface DesignSystemExportProps {
 export function DesignSystemExport({
 	theme,
 	onThemeChange,
-	onClose,
 	initialView = "web",
 }: DesignSystemExportProps) {
 	const [_currentView, _setCurrentView] = React.useState<"web" | "mobile">(
@@ -231,6 +230,7 @@ export function DesignSystemExport({
 					{/* Theme Toggle */}
 					<div className="flex items-center justify-center gap-4 pt-4">
 						<button
+							type="button"
 							onClick={() => onThemeChange("light")}
 							className={`flex items-center gap-2 px-6 py-3 rounded-2xl transition-all ${
 								theme === "light"
@@ -242,6 +242,7 @@ export function DesignSystemExport({
 							<span style={{ fontFamily: "'Inter', sans-serif" }}>Light</span>
 						</button>
 						<button
+							type="button"
 							onClick={() => onThemeChange("dark")}
 							className={`flex items-center gap-2 px-6 py-3 rounded-2xl transition-all ${
 								theme === "dark"
@@ -641,6 +642,7 @@ export function DesignSystemExport({
 										Primary Action
 									</NeumorphButton>
 									<button
+										type="button"
 										className="bg-[var(--accent-darker)] text-white px-6 py-3 rounded-full flex items-center gap-2 hover:scale-105 active:scale-95 transition-all shadow-[0_4px_16px_rgba(61,90,140,0.3)]"
 										style={{
 											fontFamily: "'Inter', sans-serif",

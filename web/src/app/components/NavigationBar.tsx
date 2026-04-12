@@ -82,7 +82,7 @@ export function NavigationBar({
 	const [chapterSearch, setChapterSearch] = useState("");
 	const [verseSearch, setVerseSearch] = useState("");
 	const { t } = useTranslation(language);
-	const env = (import.meta as any).env || {};
+	const env = import.meta.env;
 	const publicNodeEnv = env.PUBLIC_NODE_ENV ?? "production";
 	const isDev = publicNodeEnv === "development";
 
@@ -188,6 +188,7 @@ export function NavigationBar({
 				<div className="flex w-full items-center gap-1 md:gap-2">
 					<div className="flex min-w-0 flex-1 items-center gap-1 md:gap-2">
 						<button
+							type="button"
 							onClick={onHomeClick}
 							className="shrink-0 rounded-full p-2 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
 							style={{
@@ -203,6 +204,7 @@ export function NavigationBar({
 						</button>
 
 						<button
+							type="button"
 							onClick={() => setOpenMenu(openMenu === "book" ? null : "book")}
 							className="flex min-w-0 flex-1 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
 							style={{
@@ -227,6 +229,7 @@ export function NavigationBar({
 						</button>
 
 						<button
+							type="button"
 							onClick={() =>
 								setOpenMenu(openMenu === "chapter" ? null : "chapter")
 							}
@@ -248,6 +251,7 @@ export function NavigationBar({
 						</button>
 
 						<button
+							type="button"
 							onClick={() => setOpenMenu(openMenu === "verse" ? null : "verse")}
 							className="flex shrink-0 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
 							style={{
@@ -270,6 +274,7 @@ export function NavigationBar({
 					<div className="flex shrink-0 items-center gap-1 md:gap-2">
 						{isDev && onDesignSystemClick && (
 							<button
+								type="button"
 								onClick={onDesignSystemClick}
 								className="shrink-0 rounded-full p-2 transition-all md:hover:scale-[1.05] md:active:scale-[0.98]"
 								style={{
@@ -285,6 +290,7 @@ export function NavigationBar({
 						)}
 
 						<button
+							type="button"
 							onClick={() =>
 								setOpenMenu(openMenu === "settings" ? null : "settings")
 							}
@@ -519,6 +525,7 @@ export function NavigationBar({
 					<div className="max-h-[320px] overflow-y-auto overscroll-contain space-y-2">
 						{filteredBooks.map((item) => (
 							<button
+								type="button"
 								key={item.name}
 								onClick={() => {
 									onBookChange(item.name);
@@ -580,6 +587,7 @@ export function NavigationBar({
 					<div className="grid grid-cols-5 gap-2 max-h-[320px] overflow-y-auto overscroll-contain">
 						{filteredChapters.map((item) => (
 							<button
+								type="button"
 								key={item}
 								onClick={() => {
 									onChapterChange(item);
@@ -631,6 +639,7 @@ export function NavigationBar({
 					<div className="grid grid-cols-5 gap-2 max-h-[320px] overflow-y-auto overscroll-contain">
 						{filteredVerses.map((item) => (
 							<button
+								type="button"
 								key={item}
 								onClick={() => {
 									onVerseChange(item);

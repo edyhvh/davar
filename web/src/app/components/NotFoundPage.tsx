@@ -41,6 +41,7 @@ export function NotFoundPage({
 				{/* Go Back to Verse Button */}
 				{onGoBack ? (
 					<button
+						type="button"
 						onClick={onGoBack}
 						className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] transition-colors"
 						style={{ fontFamily: "'Jost', sans-serif" }}
@@ -50,6 +51,7 @@ export function NotFoundPage({
 					</button>
 				) : onGoHome ? (
 					<button
+						type="button"
 						onClick={onGoHome}
 						className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] transition-colors"
 						style={{ fontFamily: "'Jost', sans-serif" }}

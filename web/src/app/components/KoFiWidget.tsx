@@ -117,6 +117,7 @@ export function KoFiWidget() {
 
 	return (
 		<>
+			{/* biome-ignore lint/security/noDangerouslySetInnerHtml: Ko-fi widget requires injected CSS overrides for stable inline embedding. */}
 			<style dangerouslySetInnerHTML={{ __html: kofiInlineStyles }} />
 			<div id="kofi-inline-container" className="flex justify-center" />
 		</>

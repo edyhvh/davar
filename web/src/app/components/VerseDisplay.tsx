@@ -59,16 +59,12 @@ interface VerseDisplayProps {
 export function VerseDisplay({
 	hebrewText,
 	translation,
-	verseRef,
 	verseNumber,
 	bookName,
 	bookNameHebrew,
-	book,
 	chapter,
 	language,
 	onWordClick,
-	previousVerseSnippet,
-	nextVerseSnippet,
 	showOnboardingHint = false,
 	showQumran = false,
 	showFullChapter = false,
@@ -84,7 +80,6 @@ export function VerseDisplay({
 	onSwipeDown,
 	canNavigatePrevious = false,
 	canNavigateNext = false,
-	translation_footnotes,
 	isBesorah = false,
 }: VerseDisplayProps) {
 	const { t } = useTranslation(language);
@@ -178,12 +173,18 @@ export function VerseDisplay({
 
 			return (
 				<span key={word.position}>
-					<span
+					<button
+						type="button"
 						onClick={() => onWordClick(word)}
 						className={`word-interactive cursor-pointer ${isSelected ? "verse-highlight" : ""}`}
 						style={
 							variantText
 								? {
+										background: "none",
+										border: "none",
+										padding: 0,
+										font: "inherit",
+										textAlign: "inherit",
 										color: "var(--text-hebrew)",
 										fontFamily: "'DeadSeaScrolls-Regular', 'Cardo', serif",
 										fontSize: dssInlineFontScale,
@@ -191,7 +192,13 @@ export function VerseDisplay({
 										verticalAlign: "middle",
 										transform: `translateY(${dssInlineBaselineShift})`,
 									}
-								: undefined
+								: {
+										background: "none",
+										border: "none",
+										padding: 0,
+										font: "inherit",
+										textAlign: "inherit",
+									}
 						}
 					>
 						{prefixSegments?.prefixes?.length ? (
@@ -212,7 +219,7 @@ export function VerseDisplay({
 						) : (
 							displayText
 						)}
-					</span>
+					</button>
 					{index < sourceWords.length - 1 && " "}
 				</span>
 			);

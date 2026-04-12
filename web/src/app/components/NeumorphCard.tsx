@@ -4,8 +4,8 @@ interface NeumorphCardProps {
 	children: React.ReactNode;
 	className?: string;
 	onClick?: () => void;
-	onMouseEnter?: React.MouseEventHandler<HTMLDivElement>;
-	onMouseLeave?: React.MouseEventHandler<HTMLDivElement>;
+	onMouseEnter?: React.MouseEventHandler<HTMLElement>;
+	onMouseLeave?: React.MouseEventHandler<HTMLElement>;
 	hoverable?: boolean;
 	inset?: boolean;
 }
@@ -19,12 +19,7 @@ export function NeumorphCard({
 	hoverable = false,
 	inset = false,
 }: NeumorphCardProps) {
-	return (
-		<div
-			onClick={onClick}
-			onMouseEnter={onMouseEnter}
-			onMouseLeave={onMouseLeave}
-			className={`
+	const classNameValue = `
         relative
         bg-[var(--neomorph-bg)] 
         border border-[var(--neomorph-border)]
@@ -37,8 +32,25 @@ export function NeumorphCard({
         transition-all duration-300
         ${hoverable ? "hover:shadow-[4px_4px_12px_var(--neomorph-shadow-dark),-4px_-4px_12px_var(--neomorph-shadow-light)] hover:scale-[1.02] cursor-pointer" : ""}
         ${className}
-      `}
-		>
+      `;
+
+	if (onClick || onMouseEnter || onMouseLeave) {
+		return (
+			<button
+				type="button"
+				onClick={onClick}
+				onMouseEnter={onMouseEnter}
+				onMouseLeave={onMouseLeave}
+				className={classNameValue}
+				style={{ textAlign: "inherit" }}
+			>
+				<div className="relative">{children}</div>
+			</button>
+		);
+	}
+
+	return (
+		<div className={classNameValue}>
 			<div className="relative">{children}</div>
 		</div>
 	);

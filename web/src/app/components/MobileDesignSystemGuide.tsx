@@ -1,4 +1,3 @@
-import React from "react";
 import { NeumorphCard } from "./NeumorphCard";
 import { Smartphone } from "lucide-react";
 import { AppUXFlows } from "./AppUXFlows";
@@ -86,7 +85,7 @@ export function MobileDesignSystemGuide() {
 								<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 									<div>
 										<div className="text-[var(--text-secondary)]">
-											// Light Mode
+											{/* Light Mode */}
 										</div>
 										<div>primary: #7AA0D6</div>
 										<div>primaryDark: #6389BF</div>
@@ -99,7 +98,7 @@ export function MobileDesignSystemGuide() {
 									</div>
 									<div>
 										<div className="text-[var(--text-secondary)]">
-											// Dark Mode
+											{/* Dark Mode */}
 										</div>
 										<div>primary: #92B5E8</div>
 										<div>primaryDark: #7B9ED1</div>
@@ -125,7 +124,7 @@ export function MobileDesignSystemGuide() {
 							</h4>
 							<div className="bg-[var(--muted)] p-4 rounded-xl space-y-2 font-mono text-xs">
 								<div className="text-[var(--text-secondary)]">
-									// Font Families
+									{/* Font Families */}
 								</div>
 								<div>
 									fontHebrewScripture: "Cardo" (or SBL Hebrew, Ezra SIL)
@@ -134,7 +133,7 @@ export function MobileDesignSystemGuide() {
 								<div>fontLatinUI: "Inter" (or SF Pro for iOS)</div>
 								<div>fontLogo: "Suez One"</div>
 								<div className="text-[var(--text-secondary)] mt-3">
-									// Font Sizes (pt)
+									{/* Font Sizes (pt) */}
 								</div>
 								<div>h1: 28</div>
 								<div>h2: 24</div>
@@ -146,14 +145,14 @@ export function MobileDesignSystemGuide() {
 								<div>bodySmall: 14</div>
 								<div>caption: 12</div>
 								<div className="text-[var(--text-secondary)] mt-3">
-									// Font Weights
+									{/* Font Weights */}
 								</div>
 								<div>regular: 400</div>
 								<div>medium: 500</div>
 								<div>semibold: 600</div>
 								<div>bold: 700</div>
 								<div className="text-[var(--text-secondary)] mt-3">
-									// Line Heights
+									{/* Line Heights */}
 								</div>
 								<div>hebrewScripture: 1.8-2.0</div>
 								<div>body: 1.5</div>
@@ -178,7 +177,7 @@ export function MobileDesignSystemGuide() {
 								<div>spacing-12: 48px</div>
 								<div>spacing-16: 64px</div>
 								<div className="text-[var(--text-secondary)] mt-2">
-									// Safe Areas
+									{/* Safe Areas */}
 								</div>
 								<div>safeTop: 44px (iOS) / 24px (Android)</div>
 								<div>safeBottom: 34px (iOS) / 0px (Android)</div>
@@ -192,7 +191,7 @@ export function MobileDesignSystemGuide() {
 							</h4>
 							<div className="bg-[var(--muted)] p-4 rounded-xl space-y-2 font-mono text-xs">
 								<div className="text-[var(--text-secondary)]">
-									// Neumorphic Shadows (iOS)
+									{/* Neumorphic Shadows (iOS) */}
 								</div>
 								<div>shadowRaised: 0px 6px 12px rgba(190,190,200,0.3)</div>
 								<div>shadowLight: 0px -6px 12px rgba(255,255,255,0.7)</div>
@@ -200,7 +199,7 @@ export function MobileDesignSystemGuide() {
 									shadowPressed: inset 3px 3px 6px rgba(190,190,200,0.4)
 								</div>
 								<div className="text-[var(--text-secondary)] mt-3">
-									// Android Elevation
+									{/* Android Elevation */}
 								</div>
 								<div>elevation-1: 2dp</div>
 								<div>elevation-2: 4dp</div>
@@ -637,7 +636,9 @@ export function MobileDesignSystemGuide() {
 								Native:
 							</p>
 							<div className="bg-[var(--muted)] p-4 rounded-xl font-mono text-xs">
-								<div className="text-[var(--text-secondary)]">// theme.ts</div>
+								<div className="text-[var(--text-secondary)]">
+									{/* theme.ts */}
+								</div>
 								<div>export const colors = {"{"}</div>
 								<div className="ml-4">light: {"{"}</div>
 								<div className="ml-8">primary: '#7AA0D6',</div>
@@ -658,7 +659,7 @@ export function MobileDesignSystemGuide() {
 							<div className="bg-[var(--muted)] p-4 rounded-xl font-mono text-xs space-y-3">
 								<div>
 									<div className="text-[var(--text-secondary)]">
-										// NeumorphButton.tsx
+										{/* NeumorphButton.tsx */}
 									</div>
 									<div>
 										import {"{"} Pressable, Text, StyleSheet {"}"} from
@@ -684,7 +685,7 @@ export function MobileDesignSystemGuide() {
 								</div>
 								<div>
 									<div className="text-[var(--text-secondary)]">
-										// StyleSheet
+										{/* StyleSheet */}
 									</div>
 									<div>const styles = StyleSheet.create({"{"}</div>
 									<div className="ml-4">button: {"{"}</div>
@@ -697,7 +698,7 @@ export function MobileDesignSystemGuide() {
 										shadowOffset: {"{"} width: 6, height: 6 {"}"},
 									</div>
 									<div className="ml-8">shadowOpacity: 0.3,</div>
-									<div className="ml-8">elevation: 4, // Android</div>
+									<div className="ml-8">elevation: 4, {/* Android */}</div>
 									<div className="ml-4">{"}"},</div>
 									<div>{"}"});</div>
 								</div>
@@ -710,14 +711,14 @@ export function MobileDesignSystemGuide() {
 							</h4>
 							<div className="bg-[var(--muted)] p-4 rounded-xl font-mono text-xs">
 								<div className="text-[var(--text-secondary)]">
-									// Enable RTL
+									{/* Enable RTL */}
 								</div>
 								<div>
 									import {"{"} I18nManager {"}"} from 'react-native';
 								</div>
 								<div>I18nManager.forceRTL(true);</div>
 								<div className="mt-2 text-[var(--text-secondary)]">
-									// Per-component RTL
+									{/* Per-component RTL */}
 								</div>
 								<div>
 									{"<"}Text style={"{{"}textAlign: 'right', writingDirection:

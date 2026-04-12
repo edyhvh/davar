@@ -12,7 +12,6 @@ export function StickyNote({
 	label,
 	qumranWord,
 	masoreticWord,
-	color = "yellow",
 	isFullChapter = false,
 	onQumranClick,
 	onMasoreticClick,
@@ -65,7 +64,8 @@ export function StickyNote({
 				</div>
 
 				{/* Qumran variant word */}
-				<div
+				<button
+					type="button"
 					className="font-semibold mb-1 cursor-pointer hover:opacity-80 transition-opacity"
 					style={{
 						fontFamily: "'Cardo', serif",
@@ -73,11 +73,15 @@ export function StickyNote({
 						direction: "rtl",
 						lineHeight: 1.4,
 						color: "var(--foreground)",
+						background: "none",
+						border: "none",
+						padding: 0,
+						textAlign: "inherit",
 					}}
 					onClick={onQumranClick}
 				>
 					{qumranWord}
-				</div>
+				</button>
 
 				{/* Divider line */}
 				<div
@@ -91,7 +95,8 @@ export function StickyNote({
 				/>
 
 				{/* Masoretic word (smaller, below) */}
-				<div
+				<button
+					type="button"
 					className="text-xs cursor-pointer hover:opacity-80 transition-opacity"
 					style={{
 						fontFamily: "'Cardo', serif",
@@ -100,11 +105,15 @@ export function StickyNote({
 						lineHeight: 1.3,
 						color: "var(--foreground)",
 						opacity: 0.7,
+						background: "none",
+						border: "none",
+						padding: 0,
+						textAlign: "inherit",
 					}}
 					onClick={onMasoreticClick}
 				>
 					{masoreticWord}
-				</div>
+				</button>
 			</div>
 		</div>
 	);

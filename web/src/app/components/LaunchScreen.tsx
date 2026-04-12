@@ -6,7 +6,7 @@ interface LaunchScreenProps {
 	language: "en" | "es" | "he";
 }
 
-export function LaunchScreen({ onComplete, language }: LaunchScreenProps) {
+export function LaunchScreen({ onComplete }: LaunchScreenProps) {
 	const [opacity, setOpacity] = useState(0);
 
 	useEffect(() => {

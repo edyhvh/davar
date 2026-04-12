@@ -331,22 +331,28 @@ export default function App() {
 		parseRoutePathRef.current = parseRoutePath;
 	}, [parseRoutePath]);
 
-	const getHebrewBookName = (book: string): string => {
-		const found = books.find(
-			(item) => item.name.toLowerCase() === book.toLowerCase(),
-		);
-		return found?.hebrew_name ?? book;
-	};
+	const getHebrewBookName = useCallback(
+		(book: string): string => {
+			const found = books.find(
+				(item) => item.name.toLowerCase() === book.toLowerCase(),
+			);
+			return found?.hebrew_name ?? book;
+		},
+		[books],
+	);
 
-	const getDisplayBookName = (book: string): string => {
-		const found = books.find(
-			(item) => item.name.toLowerCase() === book.toLowerCase(),
-		);
-		if (language === "es") {
-			return formatBookDisplayName(found?.spanish_name || book);
-		}
-		return formatBookDisplayName(book);
-	};
+	const getDisplayBookName = useCallback(
+		(book: string): string => {
+			const found = books.find(
+				(item) => item.name.toLowerCase() === book.toLowerCase(),
+			);
+			if (language === "es") {
+				return formatBookDisplayName(found?.spanish_name || book);
+			}
+			return formatBookDisplayName(book);
+		},
+		[books, language],
+	);
 
 	const tabTitle = useMemo(() => {
 		if (currentScreen === "terms") {
@@ -1692,6 +1698,7 @@ export default function App() {
 					<div className="min-h-screen p-8">
 						<div className="max-w-7xl mx-auto">
 							<button
+								type="button"
 								onClick={() => setShowMobileDesignGuide(false)}
 								className="mb-8 px-6 py-3 bg-[var(--primary)] text-white rounded-full hover:scale-105 transition-all"
 								style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600 }}

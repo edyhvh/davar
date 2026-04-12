@@ -234,6 +234,7 @@ const parseStaticJson = async <T>(
 const fetchJson = async <T>(path: string): Promise<T> => {
 	// If already cached, move to end (mark as recently used)
 	if (jsonCache.has(path)) {
+		// biome-ignore lint/style/noNonNullAssertion: safe — guarded by .has() check above
 		const promise = jsonCache.get(path)!;
 		jsonCache.delete(path);
 		jsonCache.set(path, promise);
@@ -294,6 +295,7 @@ const fetchCachedTs2009Translation = async (
 
 	// Return cached value if available
 	if (ts2009Cache.has(cacheKey)) {
+		// biome-ignore lint/style/noNonNullAssertion: safe — guarded by .has() check above
 		return ts2009Cache.get(cacheKey)!;
 	}
 
