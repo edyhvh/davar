@@ -187,8 +187,6 @@ def infer_books_for_docx(docx_file: Path) -> List[str]:
     # Section-scoped sources
     if stem == 'tanaj':
         allowed_sections = {'torah', 'neviim', 'ketuvim'}
-    elif stem == 'besorah':
-        allowed_sections = {'besorah'}
     else:
         # Unknown source name: keep current broad behavior for compatibility.
         return list(BOOKS_INFO.keys())

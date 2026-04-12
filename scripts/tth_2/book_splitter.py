@@ -63,7 +63,7 @@ class TTH2BookSplitter:
                 f"Book '{book_key}' has no patterns configured in BOOKS_INFO")
 
         def has_hebrew_on_line_or_next(idx: int, candidate_line: str) -> bool:
-            """Allow split headers where Hebrew appears on the next non-empty line."""
+            """Allow split headers where Hebrew appears on the candidate line or the immediately following line."""
             if re.search(r'[\u0590-\u05FF]', candidate_line):
                 return True
             if idx + 1 < len(lines):
