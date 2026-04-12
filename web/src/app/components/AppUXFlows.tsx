@@ -1,4 +1,3 @@
-import React from "react";
 import { NeumorphCard } from "./NeumorphCard";
 
 export function AppUXFlows() {

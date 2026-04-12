@@ -1,7 +1,6 @@
-import React from "react";
 import { Lightbulb } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import { useTranslation, type AppLanguage } from "../hooks/useTranslation";
+import { type AppLanguage, useTranslation } from "../hooks/useTranslation";
 
 interface FeaturesScreenProps {
 	language: AppLanguage;

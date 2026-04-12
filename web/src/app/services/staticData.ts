@@ -1,5 +1,5 @@
-import { fetchTs2009Translation } from "./supabaseClient";
 import { TTH_BOOK_MAPPING } from "@davar/shared/translationConfig";
+import { fetchTs2009Translation } from "./supabaseClient";
 
 export interface WordResponse {
 	position: number;

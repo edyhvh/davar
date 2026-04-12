@@ -1,5 +1,7 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { formatVerseRef } from "@davar/shared/formatVerseRef";
 import { X } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "../hooks/useTranslation";
 import {
 	getPrefixSegments,
 	normalizeHebrew,
@@ -10,8 +12,6 @@ import {
 	stripCantillation,
 	stripMeteg,
 } from "../utils/hebrew";
-import { useTranslation } from "../hooks/useTranslation";
-import { formatVerseRef } from "@davar/shared/formatVerseRef";
 
 interface WordInstance {
 	verse: string;
@@ -335,6 +335,12 @@ export function WordCard({
 		qumranRootMeaning,
 		qumranRootTransliteration,
 		qumranCommentary,
+		displayedData.meanings.join,
+		displayedData.prefixes,
+		displayedData.rootTransliteration,
+		displayedData.qumranTransliteration,
+		displayedData.qumranMeanings,
+		displayedData.instances.map,
 	]);
 
 	useEffect(() => {
@@ -344,7 +350,7 @@ export function WordCard({
 
 	useEffect(() => {
 		setActiveTab(defaultTab);
-	}, [defaultTab, wordFromVerse, strongNumber, word]);
+	}, [defaultTab]);
 
 	useEffect(() => {
 		if (showQumran && showQumranTab) {
@@ -547,7 +553,7 @@ export function WordCard({
 							{displayedData.meanings.length > 0 ? (
 								<div className="space-y-2 text-center">
 									{displayedData.meanings
-										.filter((m) => m && m.trim())
+										.filter((m) => m?.trim())
 										.map((m, i) => (
 											<div key={i} style={{ whiteSpace: "normal" }}>
 												{formatMeaning(m).replace(/\//g, "")}
@@ -796,7 +802,7 @@ export function WordCard({
 							) : displayedData.qumranMeanings?.length ? (
 								<div className="space-y-2 text-center">
 									{displayedData.qumranMeanings
-										.filter((m) => m && m.trim())
+										.filter((m) => m?.trim())
 										.map((m, i) => (
 											<div key={i} style={{ whiteSpace: "normal" }}>
 												{formatMeaning(m).replace(/\//g, "")}

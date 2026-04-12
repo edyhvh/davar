@@ -1,5 +1,4 @@
-import React from "react";
-import { useTranslation, getSupportTelegramUrl } from "../hooks/useTranslation";
+import { getSupportTelegramUrl, useTranslation } from "../hooks/useTranslation";
 
 interface FeedbackScreenProps {
 	language: "en" | "es" | "he";

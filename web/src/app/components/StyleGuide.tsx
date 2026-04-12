@@ -1,6 +1,5 @@
-import React from "react";
-import { GlassCard } from "./GlassCard";
 import { DavarLogo } from "./DavarLogo";
+import { GlassCard } from "./GlassCard";
 
 export function StyleGuide() {
 	return (

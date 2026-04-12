@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import * as RechartsPrimitive from "recharts";
 import type { LegendPayload, TooltipContentProps } from "recharts";
+import * as RechartsPrimitive from "recharts";
 
 import { cn } from "./utils";
 
@@ -264,9 +264,9 @@ function ChartLegendContent({
 }: React.ComponentProps<"div"> & {
 	payload?: ReadonlyArray<LegendPayload>;
 	verticalAlign?: "top" | "bottom";
-		hideIcon?: boolean;
-		nameKey?: string;
-	}) {
+	hideIcon?: boolean;
+	nameKey?: string;
+}) {
 	void props;
 	const { config } = useChart();
 
@@ -352,9 +352,9 @@ function getPayloadConfigFromPayload(
 
 export {
 	ChartContainer,
-	ChartTooltip,
-	ChartTooltipContent,
 	ChartLegend,
 	ChartLegendContent,
 	ChartStyle,
+	ChartTooltip,
+	ChartTooltipContent,
 };

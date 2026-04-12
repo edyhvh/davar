@@ -1,19 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-import {
-	BookOpen,
-	Settings,
-	ScrollText,
-	Eye,
-	Home,
-	Paintbrush,
-} from "lucide-react";
+import { BookOpen, Home, Paintbrush, ScrollText, Settings } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { FaThList } from "react-icons/fa";
 import { LuLightbulb } from "react-icons/lu";
 import { TbAlphabetHebrew, TbLanguageHiragana } from "react-icons/tb";
-import { FaThList } from "react-icons/fa";
-import { NeumorphCard } from "./NeumorphCard";
-import { NeumorphicToggle } from "./NeumorphicToggle";
 import { useTranslation } from "../hooks/useTranslation";
 import { formatBookDisplayName } from "../utils/bookNameFormatter";
+import { NeumorphCard } from "./NeumorphCard";
+import { NeumorphicToggle } from "./NeumorphicToggle";
 
 interface NavigationBarProps {
 	book: string;

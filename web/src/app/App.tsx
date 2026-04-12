@@ -1,53 +1,43 @@
-import React, {
-	useCallback,
-	useEffect,
-	useMemo,
-	useRef,
-	useState,
-} from "react";
-import { HomeScreen } from "./components/HomeScreen";
-import { VerseDisplay } from "./components/VerseDisplay";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BottomSheet } from "./components/BottomSheet";
-import { WordCard } from "./components/WordCard";
+import { ConnectionErrorPage } from "./components/ConnectionErrorPage";
 import { DesignSystemExport } from "./components/DesignSystemExport";
+import { DonateScreen } from "./components/DonateScreen";
+import { FeaturesScreen } from "./components/FeaturesScreen";
+import { FeedbackScreen } from "./components/FeedbackScreen";
+import { HomeScreen } from "./components/HomeScreen";
+import { LegalScreen } from "./components/LegalScreen";
 import { MobileDesignSystemGuide } from "./components/MobileDesignSystemGuide";
 import { NavigationBar } from "./components/NavigationBar";
 import { NeumorphCard } from "./components/NeumorphCard";
-import { Skeleton } from "./components/ui/skeleton";
-import { DonateScreen } from "./components/DonateScreen";
-import { FeaturesScreen } from "./components/FeaturesScreen";
-import { LegalScreen } from "./components/LegalScreen";
-import { FeedbackScreen } from "./components/FeedbackScreen";
 import { NotFoundPage } from "./components/NotFoundPage";
-import { ConnectionErrorPage } from "./components/ConnectionErrorPage";
+import { Skeleton } from "./components/ui/skeleton";
+import { VerseDisplay } from "./components/VerseDisplay";
+import { WordCard } from "./components/WordCard";
+import { useDocumentTitle } from "./hooks/useDocumentTitle";
+import { usePersistedState } from "./hooks/usePersistedState";
+import { useTranslation } from "./hooks/useTranslation";
 import {
+	type BookResponse,
 	getBooks,
 	getChapterCount,
 	getChapterVerses,
 	getVerseCount,
-	lookupBook,
 	loadLexiconEntry,
-	type BookResponse,
+	lookupBook,
 	type VerseResponse,
-	type WordResponse,
 	type WordAnalysis,
+	type WordResponse,
 } from "./services/staticData";
-import {
-	usePersistedState,
-	usePersistedBookPosition,
-} from "./hooks/usePersistedState";
-import {
-	getStoredReadingState,
-	getLastPositionForBook,
-	updateLastPositionForBook,
-	createDefaultReadingState,
-	saveReadingState,
-} from "./utils/storageHelpers";
-import type { ReadingStateV2 } from "./utils/storageHelpers";
-import { useTranslation } from "./hooks/useTranslation";
-import { useDocumentTitle } from "./hooks/useDocumentTitle";
 import { formatBookDisplayName } from "./utils/bookNameFormatter";
 import { stripCantillation, stripMeteg } from "./utils/hebrew";
+import {
+	createDefaultReadingState,
+	getLastPositionForBook,
+	getStoredReadingState,
+	saveReadingState,
+	updateLastPositionForBook,
+} from "./utils/storageHelpers";
 import { getDssCommentaryForLanguage } from "./utils/translationConfig";
 import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
 
@@ -205,7 +195,7 @@ export default function App() {
 	const [isWordSheetOpen, setIsWordSheetOpen] = useState(false);
 	const wordSheetClosingRef = useRef(false);
 	const [isWordPanelDismissed, setIsWordPanelDismissed] = useState(true);
-	const [showWordHint, setShowWordHint] = useState(true);
+	const [showWordHint, _setShowWordHint] = useState(true);
 	const [isNavigatingWordPanel, setIsNavigatingWordPanel] = useState(false);
 	const [showWordSkeleton, setShowWordSkeleton] = useState(false);
 	const navigationKeyRef = useRef<string | null>(null);
@@ -226,7 +216,7 @@ export default function App() {
 	const [chapterCount, setChapterCount] = useState(1);
 	const [verseCount, setVerseCount] = useState(1);
 	const [isLoading, setIsLoading] = useState(false);
-	const [errorMessage, setErrorMessage] = useState<string | null>(null);
+	const [_errorMessage, setErrorMessage] = useState<string | null>(null);
 	const [selectedWordAnalysis, setSelectedWordAnalysis] =
 		useState<WordAnalysis | null>(null);
 	const [isWordAnalysisLoading, setIsWordAnalysisLoading] = useState(false);
@@ -387,8 +377,9 @@ export default function App() {
 		currentVerse,
 		currentScreen,
 		language,
-		books,
 		t,
+		getHebrewBookName,
+		getDisplayBookName,
 	]);
 
 	useDocumentTitle(tabTitle);
@@ -620,7 +611,7 @@ export default function App() {
 		return () => {
 			isMounted = false;
 		};
-	}, []);
+	}, [currentBook.toLowerCase, t]);
 
 	useEffect(() => {
 		const pending = pendingRouteRef.current;
@@ -711,7 +702,7 @@ export default function App() {
 		return () => {
 			isMounted = false;
 		};
-	}, [currentBook, currentChapter, language, showQumran, hebrewOnly]);
+	}, [currentBook, currentChapter, language, showQumran, t, currentVerse]);
 
 	useEffect(() => {
 		if (typeof window === "undefined") return;
@@ -885,7 +876,7 @@ export default function App() {
 		return () => {
 			isMounted = false;
 		};
-	}, [selectedDssVariant, selectedWord, language]);
+	}, [selectedDssVariant, language]);
 
 	useEffect(() => {
 		if (selectedWord) {

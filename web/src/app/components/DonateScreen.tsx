@@ -1,5 +1,4 @@
-import React from "react";
-import { useTranslation, type AppLanguage } from "../hooks/useTranslation";
+import { type AppLanguage, useTranslation } from "../hooks/useTranslation";
 import { KoFiWidget } from "./KoFiWidget";
 
 const DONATION_CONFIG = {

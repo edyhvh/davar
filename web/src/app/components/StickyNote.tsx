@@ -1,5 +1,3 @@
-import React from "react";
-
 interface StickyNoteProps {
 	label: string;
 	qumranWord: string;

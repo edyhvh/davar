@@ -1,6 +1,6 @@
-import React, { Component, type ErrorInfo, type ReactNode } from "react";
-import { getStoredReadingState } from "../utils/storageHelpers";
+import { Component, type ErrorInfo, type ReactNode } from "react";
 import { translate } from "../hooks/useTranslation";
+import { getStoredReadingState } from "../utils/storageHelpers";
 
 interface ErrorBoundaryProps {
 	children: ReactNode;

@@ -97,6 +97,6 @@ export const useTranslation = (language: AppLanguage) => {
 	};
 };
 
-export const getSupportTelegramUrl = (language: AppLanguage): string => {
+export const getSupportTelegramUrl = (_language: AppLanguage): string => {
 	return "https://t.me/davarbible";
 };

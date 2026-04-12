@@ -1,24 +1,19 @@
-import React from "react";
-import type {
-	DssVariant,
-	VerseResponse,
-	WordResponse,
-} from "../services/verseService";
+import { useTranslation } from "../hooks/useTranslation";
+import type { VerseResponse, WordResponse } from "../services/verseService";
 import {
 	getPrefixSegments,
-	stripNikud,
-	stripCantillation,
-	stripMeteg,
 	removeMaqafForDisplay,
 	removeSofPasukForDisplay,
+	stripCantillation,
+	stripMeteg,
+	stripNikud,
 } from "../utils/hebrew";
-import { renderTranslation } from "../utils/translationFormatter";
-import { useTranslation } from "../hooks/useTranslation";
 import {
-	shouldHideSuperscripts,
 	getTranslationKey,
+	shouldHideSuperscripts,
 	shouldHideTranslationText,
 } from "../utils/translationConfig";
+import { renderTranslation } from "../utils/translationFormatter";
 
 interface FullChapterViewProps {
 	verses: VerseResponse[];

@@ -1,5 +1,4 @@
-import React from "react";
-import { ChevronUp, ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface VerticalSwipeIndicatorsProps {
 	showUpIndicator?: boolean;

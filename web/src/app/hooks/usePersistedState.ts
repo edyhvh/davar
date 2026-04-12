@@ -1,8 +1,8 @@
-import { useState, useCallback, useEffect } from "react";
+import { useCallback, useState } from "react";
 import {
 	getStoredReadingState,
+	type ReadingStateV2,
 	saveReadingState,
-	ReadingStateV2,
 } from "../utils/storageHelpers";
 
 /**

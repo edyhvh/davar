@@ -1,7 +1,6 @@
-import React from "react";
+import { DavarLogo } from "./DavarLogo";
 import { GlassButton } from "./GlassButton";
 import { GlassCard } from "./GlassCard";
-import { DavarLogo } from "./DavarLogo";
 
 export function ComponentShowcase() {
 	return (

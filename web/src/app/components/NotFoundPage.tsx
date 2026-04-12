@@ -1,6 +1,5 @@
-import React from "react";
 import { AlertCircle, BookOpen } from "lucide-react";
-import { useTranslation, type AppLanguage } from "../hooks/useTranslation";
+import { type AppLanguage, useTranslation } from "../hooks/useTranslation";
 
 interface NotFoundPageProps {
 	language: AppLanguage;

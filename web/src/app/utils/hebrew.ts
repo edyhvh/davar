@@ -57,7 +57,7 @@ const PREFIX_FORMS: Record<string, string[]> = {
 const HEBREW_MARKS_REGEX = /[\u0591-\u05C7]/g;
 const HEBREW_MARKS_SINGLE = /[\u0591-\u05C7]/;
 const HEBREW_BIDI_CONTROLS =
-	/[\u200C\u200D\u200E\u200F\u202A-\u202E\u2066-\u2069]/g;
+	/(?:\u200C|\u200D|\u200E|\u200F|[\u202A-\u202E]|[\u2066-\u2069])/g;
 
 const stripHebrewMarks = (text: string) => text.replace(HEBREW_MARKS_REGEX, "");
 

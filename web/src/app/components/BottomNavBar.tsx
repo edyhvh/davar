@@ -1,4 +1,3 @@
-import React from "react";
 import { Home, Search } from "lucide-react";
 
 interface BottomNavBarProps {
@@ -17,6 +16,7 @@ export function BottomNavBar({
 					<div className="relative flex items-center justify-between pt-2">
 						{/* Home Button (Left) */}
 						<button
+							type="button"
 							onClick={onHomeClick}
 							className="p-4 rounded-full bg-[var(--background)] hover:bg-[var(--muted)] transition-all hover:scale-110 active:scale-95"
 							aria-label="Home"
@@ -26,6 +26,7 @@ export function BottomNavBar({
 
 						{/* Main Action Button - Tekhelet ACCENT ONLY */}
 						<button
+							type="button"
 							onClick={onChapterVerseClick}
 							className="relative bg-gradient-to-br from-[var(--accent-from)] to-[var(--accent-to)] p-5 rounded-full shadow-[0_8px_24px_0_rgba(65,105,225,0.35)] hover:shadow-[0_12px_32px_0_rgba(65,105,225,0.45)] hover:scale-110 active:scale-95 transition-all"
 							aria-label="Chapter & Verse"

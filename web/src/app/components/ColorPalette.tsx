@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * Davar Color Palette Documentation
  * Updated with Tekhelet (Ancient Biblical Blue) Theme

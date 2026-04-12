@@ -1,30 +1,28 @@
-import React from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { OnboardingWordHint } from "./OnboardingWordHint";
-import { SwipeIndicator } from "./SwipeIndicator";
-import { FullChapterView } from "./FullChapterView";
+import { useTranslation } from "../hooks/useTranslation";
 import type {
 	DssVariant,
+	TranslationFootnote,
 	VerseResponse,
 	WordResponse,
-	TranslationFootnote,
 } from "../services/verseService";
 import {
-	parseHebrewWord,
-	stripNikud,
-	stripCantillation,
-	stripMeteg,
 	getPrefixSegments,
 	removeMaqafForDisplay,
 	removeSofPasukForDisplay,
+	stripCantillation,
+	stripMeteg,
+	stripNikud,
 } from "../utils/hebrew";
-import { renderTranslation } from "../utils/translationFormatter";
-import { useTranslation } from "../hooks/useTranslation";
 import {
-	shouldHideSuperscripts,
 	getTranslationKey,
+	shouldHideSuperscripts,
 	shouldHideTranslationText,
 } from "../utils/translationConfig";
+import { renderTranslation } from "../utils/translationFormatter";
+import { FullChapterView } from "./FullChapterView";
+import { OnboardingWordHint } from "./OnboardingWordHint";
+import { SwipeIndicator } from "./SwipeIndicator";
 
 interface VerseDisplayProps {
 	hebrewText: string;

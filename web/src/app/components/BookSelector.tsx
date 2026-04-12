@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
-import { NeumorphCard } from "./NeumorphCard";
+import { useEffect, useState } from "react";
 import { getBooks } from "../services/staticData";
 import { formatBookDisplayName } from "../utils/bookNameFormatter";
+import { NeumorphCard } from "./NeumorphCard";
 
 interface BookSelectorProps {
 	currentBook: string;
@@ -68,6 +68,7 @@ export function BookSelector({
 						Select Book
 					</h2>
 					<button
+						type="button"
 						onClick={onClose}
 						className="relative p-3 rounded-2xl transition-all hover:scale-110 active:scale-95"
 						style={{

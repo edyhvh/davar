@@ -1,15 +1,13 @@
-import React from "react";
 import {
 	Bug,
 	FileText,
 	Heart,
 	Info,
 	MessageCircle,
-	Scale,
 	Shield,
 } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import { useTranslation, getSupportTelegramUrl } from "../hooks/useTranslation";
+import { getSupportTelegramUrl, useTranslation } from "../hooks/useTranslation";
 
 interface HomeScreenProps {
 	language: "en" | "es" | "he";

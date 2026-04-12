@@ -1,8 +1,7 @@
-import React from "react";
-import { GlassCard } from "./GlassCard";
-import { GlassButton } from "./GlassButton";
-import { DavarLogo } from "./DavarLogo";
 import { ChevronDown } from "lucide-react";
+import { DavarLogo } from "./DavarLogo";
+import { GlassButton } from "./GlassButton";
+import { GlassCard } from "./GlassCard";
 
 interface NavigationSelectorProps {
 	book: string;
@@ -14,7 +13,7 @@ interface NavigationSelectorProps {
 	onClose: () => void;
 }
 
-const books = [
+const _books = [
 	"Genesis",
 	"Exodus",
 	"Leviticus",

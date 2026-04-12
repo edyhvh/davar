@@ -1,6 +1,6 @@
+import { cpSync, existsSync, readFileSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
 import tailwind from "bun-plugin-tailwind";
-import { join } from "path";
-import { cpSync, existsSync, readFileSync, writeFileSync } from "fs";
 
 const generation = Bun.spawnSync(
 	["bun", "../scripts/generate-static-data/index.ts"],
@@ -62,7 +62,7 @@ if (existsSync(publicDir)) {
 const distIndexPath = join(distDir, "index.html");
 if (existsSync(distIndexPath)) {
 	const html = readFileSync(distIndexPath, "utf-8");
-	const normalizedHtml = html.replace(/(href|src)="\.\/([^\"]+)"/g, '$1="/$2"');
+	const normalizedHtml = html.replace(/(href|src)="\.\/([^"]+)"/g, '$1="/$2"');
 
 	if (normalizedHtml !== html) {
 		writeFileSync(distIndexPath, normalizedHtml, "utf-8");

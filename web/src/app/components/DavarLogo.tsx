@@ -1,4 +1,3 @@
-import React from "react";
 import logoImage from "../../assets/86a59e5984baacebd9e81429a4678e2e378e368b.png";
 
 interface DavarLogoProps {

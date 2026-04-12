@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
+import type React from "react";
+import { useEffect } from "react";
 
 interface BottomSheetProps {
 	isOpen: boolean;

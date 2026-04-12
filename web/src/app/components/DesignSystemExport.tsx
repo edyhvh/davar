@@ -1,17 +1,8 @@
+import { Book, Globe, Heart, Moon, Search, Settings, Sun } from "lucide-react";
 import React from "react";
 import { DavarLogo } from "./DavarLogo";
 import { NeumorphButton } from "./NeumorphButton";
 import { NeumorphCard } from "./NeumorphCard";
-import {
-	Globe,
-	Book,
-	Search,
-	Settings,
-	Sun,
-	Moon,
-	Heart,
-	Smartphone,
-} from "lucide-react";
 
 interface DesignSystemExportProps {
 	theme: "light" | "dark";
@@ -26,7 +17,7 @@ export function DesignSystemExport({
 	onClose,
 	initialView = "web",
 }: DesignSystemExportProps) {
-	const [currentView, setCurrentView] = React.useState<"web" | "mobile">(
+	const [_currentView, _setCurrentView] = React.useState<"web" | "mobile">(
 		initialView,
 	);
 

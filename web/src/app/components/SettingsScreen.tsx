@@ -1,5 +1,4 @@
 import React from "react";
-import { GlassCard } from "./GlassCard";
 import { useTranslation } from "../hooks/useTranslation";
 
 interface SettingsScreenProps {

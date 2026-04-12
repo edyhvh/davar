@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { X, ChevronLeft } from "lucide-react";
+import { ChevronLeft, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface ChapterVerseSelectorProps {
 	book: string;
@@ -65,7 +65,9 @@ export function ChapterVerseSelector({
 	return (
 		<>
 			{/* Backdrop */}
-			<div
+			<button
+				type="button"
+				aria-label="Close chapter and verse selector"
 				className="fixed inset-0 bg-black/60 backdrop-blur-xl z-40 transition-opacity duration-300"
 				onClick={onClose}
 			/>
@@ -88,6 +90,7 @@ export function ChapterVerseSelector({
 						<div className="flex items-center gap-3">
 							{selectedChapter && (
 								<button
+									type="button"
 									onClick={() => setSelectedChapter(null)}
 									className="p-1.5 -ml-2 rounded-full hover:bg-[var(--muted)] transition-colors"
 									aria-label="Back to chapters"
@@ -105,6 +108,7 @@ export function ChapterVerseSelector({
 							</h2>
 						</div>
 						<button
+							type="button"
 							onClick={onClose}
 							className="p-2 rounded-full border border-[var(--border)] hover:bg-[var(--muted)] transition-all"
 							aria-label="Close"
@@ -120,6 +124,7 @@ export function ChapterVerseSelector({
 							<div className="grid grid-cols-5 gap-3 pb-6 pt-2">
 								{chapters.map((chapter) => (
 									<button
+										type="button"
 										key={chapter}
 										onClick={() => handleChapterSelect(chapter)}
 										className={`
@@ -146,6 +151,7 @@ export function ChapterVerseSelector({
 							<div className="grid grid-cols-5 gap-3 pb-6 pt-2">
 								{verses.map((verse) => (
 									<button
+										type="button"
 										key={verse}
 										onClick={() => handleVerseSelect(verse)}
 										className={`
