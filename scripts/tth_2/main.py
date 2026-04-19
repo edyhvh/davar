@@ -310,7 +310,8 @@ def convert_book_to_json(book_key: str, verbose: bool = True):
     # Normalize known markdown wrap artifacts before conversion so reruns are stable.
     _, repaired_markers, _ = repair_books(book_keys={book_key}, verbose=False)
     if repaired_markers > 0 and verbose:
-        print(f"ℹ️  Auto-repaired {repaired_markers} false verse restart marker(s) in {book_key}.md")
+        print(
+            f"ℹ️  Auto-repaired {repaired_markers} false verse restart marker(s) in {book_key}.md")
 
     try:
         convert_book_markdown_to_json(book_key, str(
@@ -329,12 +330,14 @@ def convert_book_to_json(book_key: str, verbose: bool = True):
                 if not isinstance(verse_num, int):
                     continue
                 if previous_verse is not None and verse_num <= previous_verse:
-                    regressions.append((chapter_num, previous_verse, verse_num))
+                    regressions.append(
+                        (chapter_num, previous_verse, verse_num))
                 previous_verse = verse_num
 
         if regressions:
             if verbose:
-                print(f"❌ Failed to convert {book_key}: verse sequence regressions remain in JSON")
+                print(
+                    f"❌ Failed to convert {book_key}: verse sequence regressions remain in JSON")
                 for chapter_num, prev, cur in regressions[:10]:
                     print(f"   - Ch {chapter_num}: {cur} after {prev}")
                 if len(regressions) > 10:
@@ -368,7 +371,8 @@ def convert_all_books():
     # Global pre-convert repair to keep future reruns deterministic.
     repaired_files, repaired_markers, _ = repair_books(verbose=False)
     if repaired_markers > 0:
-        print(f"ℹ️  Auto-repaired {repaired_markers} false restart marker(s) in {repaired_files} markdown file(s).\n")
+        print(
+            f"ℹ️  Auto-repaired {repaired_markers} false restart marker(s) in {repaired_files} markdown file(s).\n")
 
     converted = 0
     failed = 0

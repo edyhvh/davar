@@ -515,7 +515,8 @@ class TTH2MdToJson:
                         ):
                             merged = f"{current_verses[-1]['tth']} {split_verse_text}".strip()
                             merged = self.clean_text_preserve_comments(merged)
-                            merged, merged_footnotes = self.extract_footnotes(merged)
+                            merged, merged_footnotes = self.extract_footnotes(
+                                merged)
                             current_verses[-1]['tth'] = merged
                             current_verses[-1]['footnotes'] = merged_footnotes
                             current_verses[-1]['hebrew_terms'] = []
@@ -565,7 +566,8 @@ class TTH2MdToJson:
                     ):
                         merged = f"{current_verses[-1]['tth']} {verse_text}".strip()
                         merged = self.clean_text_preserve_comments(merged)
-                        merged, merged_footnotes = self.extract_footnotes(merged)
+                        merged, merged_footnotes = self.extract_footnotes(
+                            merged)
                         current_verses[-1]['tth'] = merged
                         current_verses[-1]['footnotes'] = merged_footnotes
                         current_verses[-1]['hebrew_terms'] = []
