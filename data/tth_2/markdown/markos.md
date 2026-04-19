@@ -127,7 +127,7 @@ El Dueño del Shabat
 *Multitudes van detrás de Yeshúa*
 
 **7** Y
-**1** se apartó Yeshúa con sus discípulos hacia el mar, y mucha gente venía detrás de Él desde Galil, desde Iehudáh,
+se apartó Yeshúa con sus discípulos hacia el mar, y mucha gente venía detrás de Él desde Galil, desde Iehudáh,
 **8** desde Ierushalem y desde Edom, y del otro lado del Iardén, y desde Tzor y Tzidón, mucha gente; conforme oyeron cuánto había hecho, vinieron a Él.
 **9** Y dijo a sus discípulos que acercasen a Él el bote, por causa del pueblo, para que no lo oprimieran.
 **10** Porque había sanado a muchos, así que todos los que tenían plaga caían sobre Él para tocarlo;

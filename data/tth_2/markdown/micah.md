@@ -41,7 +41,7 @@ Juicio contra los opresores
 **9** A las mujeres de mi pueblo expulsaron de la casa de su placer;de sobre sus niños quitaron mi esplendor para siempre.
 **10** ¡Levántense y váyanse!, porque no es este el lugar de descansopor causa de la impureza que destruirá, y destrucción dolorosa.
 **11** Si un hombre anda
-**1** en viento y falsedad, miente: “Destilaré para ti de vino y de bebida embriagante”,sería uno que destila de este pueblo.
+en viento y falsedad, miente: “Destilaré para ti de vino y de bebida embriagante”,sería uno que destila de este pueblo.
 
 **12** Ciertamente[^3468] reuniré, Yaakov, todo tú;ciertamente[^3469] recogeré al remanente de Israel.Juntos los pondré como ovejas del redil; como rebaño en medio de su pasto,harán mucho ruido por la multitud de hombres.
 **13** Subirá el que abre brecha delante de ellos; abrirán brecha y pasarán la puerta, y saldrán por ella; y pasará su rey delante de ellos,y יהוה a su cabeza.

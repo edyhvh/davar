@@ -64,7 +64,7 @@ El descontento de Yonáh reprendido
 **4** Y dijo יהוה: ¿Haces bien en enfurecerte?
 **5** Y salió Yonáh de la ciudad y se sentó al este de la ciudad; e hizo para sí allí un cobertizo[^3448] y se sentó debajo de él en la sombra, hasta que pudiera ver qué sucede­ría en la ciudad.
 **6** Y dispuso יהוה Elohim un ricino[^3449] y subió por encima de Yonáh para ser sombra sobre su cabeza y lo librara de su mal. Y se alegró Yonáh por el ricino con gran alegría.7
-**1** Pero dispuso Elohim un gusano al subir el amanecer del día siguiente, e hirió al ricino, y se secó.
+Pero dispuso Elohim un gusano al subir el amanecer del día siguiente, e hirió al ricino, y se secó.
 **8** Y sucedió que cuando brilló el sol, dispuso Elohim un viento del este silencioso, e hirió el sol sobre la cabeza de Yonáh, y desfalleció[^3450], y pidió a su ser morirse, y dijo: ¡Mejor es mi muerte que mi vida!
 **9** Y dijo Elohim a Yonáh: ¿Haces bien en enfu­recerte por el ricino? Y él dijo: Hago bien en enfurecerme hasta la muerte.
 **10** Y dijo יהוה: Tú te apiadaste por el ricino en el que no trabajaste, ni lo hiciste crecer, que era hijo de una noche, y siendo hijo de una no­che, pereció;

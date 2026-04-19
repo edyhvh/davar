@@ -1141,7 +1141,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **3** Y había una viuda en aquella ciudad, y venía a él, diciendo: “Defiende mi causa[^1073] de mi opresor”,
 **4** pero él no quiso por un tiempo. Y después de eso, dijo en su corazón: “Aunque no temo a Elohim y al hombre no atiendo,
 **5** ciertamente,
-**1** porque esta viuda me ha cansado, la defenderé[^1074], para que no venga siempre ni me apresure”.
+porque esta viuda me ha cansado, la defenderé[^1074], para que no venga siempre ni me apresure”.
 **6** Y dijo Adonai: Escuchen lo que dijo el juez injusto.
 **7** ¿Y Elohim no defenderá[^1075] a sus escogidos, que claman a Él día y noche, y será prolongado de ira sobre ellos?
 **8** Verdaderamente Yo les digo que hará su defensa[^1076] con rapidez. Por eso, cuando venga el Ben Ha’Adam, ciertamente hallará emunah[^1077] en la tierra.
@@ -1340,7 +1340,7 @@ La ofrenda de la viuda
 **2** Y vio también a una viuda pobre echar ahí dos monedas;
 **3** y dijo: En verdad Yo les digo que esta viuda pobre echó más que todos ellos;
 **4** porque todos estos de sus sobras echaron para las ofrendas[^1116] a Elohim,
-**1** pero esta, de su escasez, echó toda posesión que ella tenía.
+pero esta, de su escasez, echó toda posesión que ella tenía.
 
 Profecía de la destrucción del Santuario
 
@@ -1489,7 +1489,7 @@ Profecía de la destrucción del Santuario
 
 **66** Y sucedió *que *en la mañana se reunieron los ancianos del pueblo, los jefes de los sacerdotes y los escribas, y lo llevaron a su asamblea,
 **67** diciendo:
-**1** Si Tú eres el Mesías, dínoslo. Y les dijo: Si les digo, no creerán;
+Si Tú eres el Mesías, dínoslo. Y les dijo: Si les digo, no creerán;
 **68** y si *les* pregunto, no me responderán ni me soltarán.
 **69** Desde ahora, el Ben Ha’Adam[^1136] estará sentado a la diestra del poder de Elohim.
 **70** Y dijeron todos: Y también, ¿Tú eres el Hijo de Elohim? Y Él les dijo: Ustedes han dicho que Yo soy.

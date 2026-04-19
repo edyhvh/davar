@@ -173,7 +173,7 @@ Impiedad de Yerushaláim y Iehudáh
 **12** Han engañado a יהוה, y dijeron: “No es Él,y no vendrá sobre nosotros mal, y espada y hambre no veremos”.
 **13** Y los profetas serán por viento, y la palabra no estará en ellos.Así se les hará a ellos.
 **14** Por eso, así dijo יהוה, Elohei Tzebaot:Porque han hablado ustedes esta palabra, heme aquí, pondré mis palabras en tu boca por fuego,
-**1** maderas, y los consumirá.
+maderas, y los consumirá.
 **15** Heme aquí, haré venir sobre ustedes una na­­ción desde lejos,
 **16** Su aljaba es como tumba abierta, todos ellos poderosos.
 **17** Y comerá tu cosecha y tu pan, comerán a tus hijos y tus hijas,comerán tu rebaño y tu ganado, comerán tus viñas y tus higueras;destrozarán las ciudades de tus fortalezas, que tú confías en ellas, con la espada.

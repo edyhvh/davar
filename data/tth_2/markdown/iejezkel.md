@@ -488,7 +488,7 @@ Parábola de las águilas y la vid
 **22** Así ha dicho Adonai יהוה: Y tomaré Yo de la copa del cedro alto y lo pondré; de la cabe­za de sus brotes tiernos arrancaré y lo plantaré Yo sobre un monte alto y exaltado.
 **23** En el monte de altura de Israel lo plantaré; llevará rama y hará fruto, y será por cedro ma­jestuoso. Y morarán debajo de él todo pájaro, toda ala en la sombra de sus ramas morarán.
 **24** Y sabrán todos los árboles del campo que Yo soy יהוה; hago bajo al árbol elevado y elevo al árbol bajo; seco al árbol fresco y hago flore­cer al
-**1** árbol seco. Yo, יהוה, he hablado y he hecho.
+árbol seco. Yo, יהוה, he hablado y he hecho.
 
 La persona que peque morirá
 

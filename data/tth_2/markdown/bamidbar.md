@@ -22,7 +22,7 @@ __BEMIDBAR \(NÚMEROS\)__במדבר
 **16** Estos son los llamados de la congregación, jefes de las tribus de sus padres; cabezas de miles de Israel *fueron* ellos.
 **17** Y tomaron Moshéh y Aharón a estos hom­bres que fueron designados por nombres;
 **18** y a toda la congregación reunieron en el *día* uno del mes segundo. Y su naci­miento
-**1** por sus familias, por las casas de sus padres, con el número de nombres, de edad de veinte años y arriba, por sus cabezas.
+por sus familias, por las casas de sus padres, con el número de nombres, de edad de veinte años y arriba, por sus cabezas.
 **19** Como había ordenado יהוה a Moshéh, los encargó en el desierto de Sinay.
 **20** Y fueron los hijos de Reubén, primogénito de Israel, sus genealogías, por sus familias, por la casa de sus padres, con el número de nom­bres, por sus cabezas, todo varón de edad de veinte años y arriba, todo el que sale *al* ejército;
 **21** los encargados de ellos, por la tribu de Reubén, *fueron *cuarenta y seis mil quinientos.
@@ -232,7 +232,7 @@ __BEMIDBAR \(NÚMEROS\)__במדבר
 **8** Pero si no hay para el hombre redentor para restituir la culpa, la culpa restituida es a יהוה, para el sacerdote, además del carnero de las reconciliaciones, con el cual se hace reconcilia­ción por él.
 **9** Y toda terumáh[^883] para todas las santidades de los hijos de Israel que acercan al sacerdote, para él será.
 **10** Y *cada* hombre,
-**1** sus santidades para él se­rán; lo que un hombre da al sacerdote, para él será.
+sus santidades para él se­rán; lo que un hombre da al sacerdote, para él será.
 
 *Sobre los celos*
 
@@ -722,7 +722,7 @@ __BEMIDBAR \(NÚMEROS\)__במדבר
 **1** Y tomó *hombres* Koraj, hijo de Itzhar, hijo de Kehat, hijo de Levi, y Datán y Abiram, hi­jos de Eliab, y On, hijo de Pelet, hijos de Reu­bén,
 **2** y se levantaron delante de Moshéh, y unos hombres de los hijos de Israel, doscientos cin­cuenta jefes de la congregación, llamados de la hora señalada, hombres de nombre.
 **3** Y se reunieron sobre Moshéh y sobre Aha­rón, y les dijeron:
-**1**¡*Es* mucho para ustedes! Porque, toda la congregación, todos ellos son san­tos, y en medio de ellos *está* יהוה. ¿Por qué se levantan sobre la asamblea de יהוה?
+¡*Es* mucho para ustedes! Porque, toda la congregación, todos ellos son san­tos, y en medio de ellos *está* יהוה. ¿Por qué se levantan sobre la asamblea de יהוה?
 **4** Y escuchó Moshéh, y cayó sobre su rostro;
 **5** y habló a Koraj y a todo su grupo, diciendo: *A* la mañana dará a conocer יהוה el que es de Él y el que es kadosh, y *lo* acercará a Él; y al que elija con Él, *lo *acercará hacia Él.
 **6** Esto hagan: Tomen para ustedes incensarios; Koraj y todo su grupo,
@@ -772,7 +772,7 @@ __BEMIDBAR \(NÚMEROS\)__במדבר
 **47** Y *lo* tomó Aharón como había hablado Mo­shéh, y corrió hacia el medio de la asamblea, y he aquí, había comenzado el golpe en el pue­blo. Y puso el incienso e hizo reconciliación por el pueblo.
 **48** Y se paró entre los muertos y los vi­vos, y se detuvo la plaga.
 **49** Y fueron los muertos por la plaga
-**1** catorce mil setecientos, aparte de los muertos por el a­sunto de Koraj.
+catorce mil setecientos, aparte de los muertos por el a­sunto de Koraj.
 **50** Y regresó Aharón a Moshéh a la entrada de la Tienda del Mo’ed, y la plaga se había dete­nido.
 
 **17**
@@ -921,7 +921,7 @@ __BEMIDBAR \(NÚMEROS\)__במדבר
 **14** Por eso dice en el Rollo de las Lu­chas de יהוה:
 
 **15** y la cascada de los arroyos que se esparce hasta el descanso de Ar, y se apoya por la fron­tera
-**1** de Moab.
+de Moab.
 
 **16** Y desde allí a Beer; este *es* el pozo[^1010] *en* el cual dijo יהוה a Moshéh: Junta al pueblo y *les *daré a ellos agua.
 **17** Entonces cantó Israel esta canción:
@@ -1022,7 +1022,7 @@ con el decreto, con sus báculos.
 **18** Y tomó su parábola, y dijo:
 
 **19** No es hombre El para que
-**1** mienta, e hijo de hombre* *para que* *se vuelva atrás. ¿Él dijo, y no lo hará?, ¿ha hablado, y no lo le­vantará?
+mienta, e hijo de hombre* *para que* *se vuelva atrás. ¿Él dijo, y no lo hará?, ¿ha hablado, y no lo le­vantará?
 **20** He aquí, de bendecir he recibido; Él bendijo, y no lo puedo retornar.
 **21** No ha visto iniquidad en Yaakov,
  y no vio carga pesada en Israel, יהוה su Elohim *está* con él,
@@ -1046,7 +1046,7 @@ con el decreto, con sus báculos.
 Declaración de Bilam, hijo de Beor, y declaración del fuerte abierto de ojos;**4** declaración del oyente de los dichos de El,
 **5**¡Cuán buenas son tus tiendas, Yaakov; tus asentamientos, Israel!
 **6** Como arroyos que se esparcen, como jardi­nes junto al río,
-**1** como cedros junto a las aguas.
+como cedros junto a las aguas.
 **7** Fluirá agua de su balde, y su simiente *estará* en muchas aguas; y se elevará* más* que Agag su rey, y se levanta­rá su reino.
 **8** El lo saca de Mitzráim; como cuernos de búfalo es para él.Consumirá las naciones, sus opresores,
  y sus huesos romperá, y *con *sus flechas* los* herirá.**9** Se agacha, se acuesta como el león y como leona, ¿quién lo levantará? El que te bendice *es* bendito, y el que te excluye, excluido.
@@ -1062,11 +1062,11 @@ Declaración de Bilam, hijo de Beor, y declaración del fuerte de ojos abiertos.
  y el que conoce el conocimiento de Elyón,
 visión del Shadai ve, caído, pero descubiertos los ojos. **17** Lo veo, pero no ahora; lo contemplo, pero no cerca;andará una estrella de Yaakov, y se levantará una vara de Israel,
  aplastará las esquinas de Moab y destruirá todos los hijos de Shet.**18** Y será Edom una posesión,
-**1** Seir, sus enemigos.E Israel, hacedor de valor.
+Seir, sus enemigos.E Israel, hacedor de valor.
 **19** Y dominará desde Yaakov, y hará perder el sobreviviente de la ciudad.
 **20** Y vio a Amalek, y tomó su parábola, y dijo:Primera de las naciones *fue* Amalek, pero su postrer *será* hasta perdición.
 **21** Y vio al keiní, y tomó su parábola, y dijo: Olam[^1023] es tu asentamiento, y puesto en ro­ca *está*
-**1** tu nido.
+tu nido.
 **22** Sino que será para quemar Káin; ¿hasta cuándo Ashur te capturará?
 **23** Y tomó su parábola, y dijo: ¡Oy! ¿Quién vivirá debido a que lo pondrá El?
 **24** Y las naves de la mano de Kitim *vendrán*,
@@ -1247,7 +1247,7 @@ visión del Shadai ve, caído, pero descubiertos los ojos. **17** Lo veo, pero n
 **9** y su ofrenda de grano, harina fina mezclada con aceite, tres décimas para el toro, dos dé­cimas para el carnero uno;
 **10** una décima, una décima para el cordero u­no, por los siete corderos;
 **11** *y*
-**1** un peludo de las cabras *para* ofrenda por el pecado, además de la ofrenda por el pecado de las reconciliaciones[^1052] y la ofrenda ascendida de la con­tinuidad y su ofrenda de grano, y sus ofrendas de­rramadas.
+un peludo de las cabras *para* ofrenda por el pecado, además de la ofrenda por el pecado de las reconciliaciones[^1052] y la ofrenda ascendida de la con­tinuidad y su ofrenda de grano, y sus ofrendas de­rramadas.
 **12** Y en el décimo quinto día del mes séptimo, convocación de santidad habrá para ustedes; cualquier trabajo de servicio no harán, y cele­brarán fiesta a __יהוה__ siete días.
 **13** Y acercarán una ofrenda ascendida, ofrenda de fue­go, olor calmante a __יהוה__: trece toros hijos de ganado, dos carneros, catorce corderos hijos de un año, completos serán;
 **14** y su ofrenda de grano, harina fina mezclada con aceite, tres décimas para el toro uno, por los trece toros, dos décimas para el carnero uno, por los dos carneros;
@@ -1404,7 +1404,7 @@ visión del Shadai ve, caído, pero descubiertos los ojos. **17** Lo veo, pero n
 **37** y los hijos de Reubén edificaron a Jesh­bón, a Elealé[^1067], y a Kiriatáim,
 **38** a Nebó y a Baal Meón, cambiaron *su* nom­bre, y a Sibmáh; y llamaron con *otros *nombres a los nombres de las ciudades que edificaron.
 **39** Y fueron los hijos de Majir, hijo de Menasheh a Guilad, y capturaron y tomaron posesión del emorí que *habitaba*
-**1** en ella.
+en ella.
 **40** Y dio Moshéh Guilad a Majir, hijo de Menasheh, y él habitó en ella.
 **41** Y Iair, hijo de Menasheh, fue y capturó sus tiendas, y las llamó Javot Iair[^1068].
 **42** Y Nobaj fue y capturó a Kenat y a sus al­deas[^1069], y llamó a esta Nobaj, en su nombre.
@@ -1449,7 +1449,7 @@ visión del Shadai ve, caído, pero descubiertos los ojos. **17** Lo veo, pero n
 **34** Y viajaron de Iotbatah y acamparon en A­bro­náh.
 **35** Y viajaron de A­bro­náh y acamparon en Etzión Gaber.
 **36** Y viajaron de
-**1** Etzión Gaber y acamparon en el desierto de Tzin, esto es Kádesh.
+Etzión Gaber y acamparon en el desierto de Tzin, esto es Kádesh.
 **37** Y viajaron de Kádesh y acamparon en Hor, la montaña, en el extremo de tierra de Edom.
 **38** Y subió Aharón el sacerdote a Hor, la montaña, por boca de יהוה, y murió allí, en el año cua­renta por la salida de los hijos de Israel de la tierra de Mitzráim, en el mes quinto, en el *día* uno del mes.
 **39** Y Aharón *tenía* la edad de ciento veintitrés años cuando murió en Hor, la montaña.
@@ -1461,8 +1461,8 @@ visión del Shadai ve, caído, pero descubiertos los ojos. **17** Lo veo, pero n
 **45** Y viajaron de Iyeím y acamparon en Dibón Gad.
 **46** Y viajaron de Dibón Gad y acamparon en Almón Diblataimah.
 **47** Y viajaron de
-**1** Almón Diblataimah
-**1** y acam­pa­ron en Harei Haabarím, delante de Nebó.
+Almón Diblataimah
+y acam­pa­ron en Harei Haabarím, delante de Nebó.
 **48** Y viajaron de Harei Haabarím y acamparon en las llanuras de Moab, por el Iardén, Ierijó.
 **49** Y acamparon junto al Iardén, desde Bet Haieshimot hasta Abel Hashitim, en las lla­nuras de Moab.
 **50** Y habló יהוה a Moshéh, en las llanuras de Moab, junto al Iardén, Ierijó, diciendo:
@@ -1494,7 +1494,7 @@ visión del Shadai ve, caído, pero descubiertos los ojos. **17** Lo veo, pero n
 **15** Las dos tribus y la media tribu han tomado su herencia de *este* lado del Iardén[^1075], Ierijó, ha­cia el este, hacia el amane­cer.
 **16** Y habló __יהוה__ a Moshéh, diciendo:
 **17** Estos son los nombres
-**1** de los hombres que heredarán para ustedes la tierra: Eleazar el sacerdote y Yehoshúa, hijo de Nun.
+de los hombres que heredarán para ustedes la tierra: Eleazar el sacerdote y Yehoshúa, hijo de Nun.
 **18** Y un jefe, un jefe de *cada* tribu tomarás pa­ra heredar la tierra.
 **19** Y estos son los nombres de los hombres: de la tribu de Iehudáh, Caleb, hijo de Iefunéh.
 **20** Y de la tribu de los hijos de Shimeón, She­muel, hijo de Amihud.
@@ -1563,7 +1563,7 @@ visión del Shadai ve, caído, pero descubiertos los ojos. **17** Lo veo, pero n
 **10** Conforme ordenó __יהוה__ a Moshéh, así hi­cieron las hijas de Tzelofjad.
 **11** Y eran Majláh, Tirtzah, Jogláh, Milcáh y Noah, las hijas de Tzelofjad, a los hijos de sus tíos por mujeres.
 **12** De las familias de los hijos de Menasheh, hijo de Iosef, fueron por mujeres, y fue su he­rencia
-**1** a la tribu de la familia de su padre.
+a la tribu de la familia de su padre.
 **13** Estos son los mandamientos y los procesos legales que ordenó __יהוה__ por mano de Moshéh a los hijos de Israel, en las llanuras de Moab, por el Iardén[^1084], Ierijó.
 
 

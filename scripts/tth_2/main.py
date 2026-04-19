@@ -36,6 +36,10 @@ except ImportError:
             self.total = total or (len(iterable) if iterable else 0)
             self.n = 0
 
+        @staticmethod
+        def write(message: str):
+            print(message)
+
         def __iter__(self):
             for item in self.iterable:
                 yield item
@@ -74,6 +78,7 @@ try:
     from format_validator import get_format_validator, print_book_report
     from config import BOOKS_INFO
     from section_headers import detect_section_headers_in_json
+    from fix_false_restart_markers import repair_books
 except ImportError:
     # Fallback for direct execution
     import docx_to_md
@@ -83,6 +88,7 @@ except ImportError:
     import format_validator
     import config
     import section_headers
+    import fix_false_restart_markers
     convert_docx = docx_to_md.convert_docx
     split_markdown = book_splitter.split_markdown
     TTH2BookSplitter = book_splitter.TTH2BookSplitter
@@ -92,6 +98,7 @@ except ImportError:
     print_book_report = format_validator.print_book_report
     BOOKS_INFO = config.BOOKS_INFO
     detect_section_headers_in_json = section_headers.detect_section_headers_in_json
+    repair_books = fix_false_restart_markers.repair_books
 
 
 # Default directories
@@ -300,9 +307,43 @@ def convert_book_to_json(book_key: str, verbose: bool = True):
 
     json_file = JSON_DIR / f"{book_key}.json"
 
+    # Normalize known markdown wrap artifacts before conversion so reruns are stable.
+    _, repaired_markers, _ = repair_books(book_keys={book_key}, verbose=False)
+    if repaired_markers > 0 and verbose:
+        print(
+            f"ℹ️  Auto-repaired {repaired_markers} false verse restart marker(s) in {book_key}.md")
+
     try:
         convert_book_markdown_to_json(book_key, str(
             markdown_file), str(json_file), verbose=verbose)
+
+        # Hard guard: converted JSON must never contain non-increasing verse order.
+        with open(json_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+
+        regressions = []
+        for chapter_data in data.get('chapters', []):
+            chapter_num = chapter_data.get('chapter', 0)
+            previous_verse = None
+            for verse_data in chapter_data.get('verses', []):
+                verse_num = verse_data.get('verse')
+                if not isinstance(verse_num, int):
+                    continue
+                if previous_verse is not None and verse_num <= previous_verse:
+                    regressions.append(
+                        (chapter_num, previous_verse, verse_num))
+                previous_verse = verse_num
+
+        if regressions:
+            if verbose:
+                print(
+                    f"❌ Failed to convert {book_key}: verse sequence regressions remain in JSON")
+                for chapter_num, prev, cur in regressions[:10]:
+                    print(f"   - Ch {chapter_num}: {cur} after {prev}")
+                if len(regressions) > 10:
+                    print(f"   ... and {len(regressions) - 10} more")
+            return False
+
         if verbose:
             print(f"✓ Converted {book_key} to JSON")
         return True
@@ -326,6 +367,12 @@ def convert_all_books():
         print("❌ No markdown files found")
         print("Run 'python main.py split' first")
         return False
+
+    # Global pre-convert repair to keep future reruns deterministic.
+    repaired_files, repaired_markers, _ = repair_books(verbose=False)
+    if repaired_markers > 0:
+        print(
+            f"ℹ️  Auto-repaired {repaired_markers} false restart marker(s) in {repaired_files} markdown file(s).\n")
 
     converted = 0
     failed = 0

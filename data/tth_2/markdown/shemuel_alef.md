@@ -7,7 +7,7 @@ __SHEMUEL ALEF \(1 SAMUEL\)__א שמואל
 **1** Y había un hombre de Ramataim Tzofím, del monte de Efráim, y su nombre *era* El­kanah, hi­jo de Ierojám, hijo de Elihú, hijo de Toju, hijo de Tzuf efratí[^1598].
 **2** Y para él *había* dos mujeres, el nombre de una *era* Janah, y el hombre de la segunda *era* Penináh; y había para Penináh niños, pero Janah no tenía niños.
 **3** Y subía este hombre de su ciudad cada año[^1599] para inclinarse y para sa­cri­ficar para יהוה
-**1** Tzebaot en Shiloh. Y allí *estaban* los dos hijos de Elí, Jofní y Pinjas, sacerdotes de יהוה.
+Tzebaot en Shiloh. Y allí *estaban* los dos hijos de Elí, Jofní y Pinjas, sacerdotes de יהוה.
 **4** Y fue el día, y sacrificó Elkanah, y dio a Pe­ni­náh su mujer y a todos sus hijos y sus hijas porciones;
 **5** pero a Janah dio una porción, una de narices, porque a Janah él amaba, pero יהוה había cerrado su matriz.
 **6** Y la hacía enojar su angustiadora, incluso *con* ira, a fin de hacerla enfurecer, porque ha­bía cerrado יהוה detrás de su matriz.
@@ -114,7 +114,7 @@ __SHEMUEL ALEF \(1 SAMUEL\)__א שמואל
 **13** Y he dado a conocer a él que juzgaré Yo a su casa hasta siempre por la iniquidad que él conoció, pues se despreciaron a sí *mismos* sus hi­jos, y no reprendió él contra ellos.
 **14** Y por lo tanto, he jurado a la casa de Elí: ¡Si fuera cubierta la iniquidad de la casa de Elí con sacrificio y con ofrenda hasta el olam!
 **15** Y se acostó Shemuel hasta la mañana; y a­brió las puertas de la casa de יהוה; y She­muel
-**1** tenía miedo de dar a conocer la visión a Elí.
+tenía miedo de dar a conocer la visión a Elí.
 **16** Pero llamó Elí a Shemuel, y dijo: Shemuel, hijo mío. Y él dijo: Heme aquí.
 **17** Y él dijo: ¿Cuál es la palabra que habló a ti? Por favor, no la ocultes de mí. Así hará a ti Elohim, y así aumentará, si ocultas de mí una cosa de toda la palabra que habló a ti.
 **18** Y le contó Shemuel todas las palabras, y no escondió de él *nada*. Y él dijo: יהוה es Él, lo bueno en sus ojos hará.
