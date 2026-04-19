@@ -70,8 +70,10 @@ class TTH2DocxConverter:
             content = match.group(2).strip()
 
             # Remove back references [↑](#footnote-ref-1)
-            content = re.sub(r'\s*\[↑\]\s*\(#footnote-ref-\d+\)\s*$', '', content)
-            content = re.sub(r'\s*\[.*?\]\s*\(#footnote-ref-\d+\)\s*\d*\.?\s*$', '', content)
+            content = re.sub(
+                r'\s*\[↑\]\s*\(#footnote-ref-\d+\)\s*$', '', content)
+            content = re.sub(
+                r'\s*\[.*?\]\s*\(#footnote-ref-\d+\)\s*\d*\.?\s*$', '', content)
 
             # Clean up any remaining HTML
             content = re.sub(r'<[^>]+>', '', content)
@@ -92,7 +94,8 @@ class TTH2DocxConverter:
         for line in lines:
             if re.match(r'\[\^\d+\]:', line):
                 # Remove any remaining back references at end of footnote lines
-                line = re.sub(r'\s*\[.*?\]\(#footnote-ref-\d+\)\s*\d*\.?\s*$', '', line)
+                line = re.sub(
+                    r'\s*\[.*?\]\(#footnote-ref-\d+\)\s*\d*\.?\s*$', '', line)
             cleaned_lines.append(line)
 
         return '\n'.join(cleaned_lines)
@@ -104,8 +107,10 @@ class TTH2DocxConverter:
         # Convert __número__ to **número** (standard verse format)
         text = re.sub(r'__\s*(\d+)\s*__', r'**\1**', text)
 
-        # Convert __ __ (empty verse marker) to **1** (first verse)
-        text = re.sub(r'__\s*__', r'**1**', text)
+        # Convert line-leading empty verse markers to **1** only when they
+        # appear as standalone markers at the start of a line.
+        # This avoids corrupting mid-verse artifacts like "Y__ __...".
+        text = re.sub(r'(?m)^__\s*__\s*', r'**1** ', text)
 
         # Convert any remaining __número__ format
         text = re.sub(r'__(\d+)__', r'**\1**', text)
@@ -144,7 +149,8 @@ class TTH2DocxConverter:
             line = re.sub(r'\\([.;:,!?])', r'\1', line)
 
             # Fix spacing around verse markers
-            line = re.sub(r'\*\*(\d+)\*\*([A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF])', r'**\1** \2', line)
+            line = re.sub(
+                r'\*\*(\d+)\*\*([A-Za-zÁÉÍÓÚáéíóúñÑ\u0590-\u05FF])', r'**\1** \2', line)
 
             cleaned_lines.append(line)
 
@@ -247,7 +253,8 @@ class TTH2DocxConverter:
             Tuple of (output_file_path, warning_messages)
         """
         if not MAMMOTH_AVAILABLE:
-            raise RuntimeError("Mammoth library is not available. Install it with: pip install mammoth")
+            raise RuntimeError(
+                "Mammoth library is not available. Install it with: pip install mammoth")
 
         # Validate input file
         if not os.path.exists(input_file):

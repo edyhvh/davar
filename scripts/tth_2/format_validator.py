@@ -10,6 +10,7 @@ Checks:
 2. Disallowed escaped punctuation/brackets (\\!, \\., \\[, \\])
 3. Unbalanced <em> tags
 4. Basic footnote marker consistency in verse text
+5. Non-increasing verse numbering inside each chapter
 """
 
 import json
@@ -17,11 +18,13 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
-DEFAULT_JSON_DIR = Path(__file__).parent.parent.parent / "data" / "tth_2" / "json"
+DEFAULT_JSON_DIR = Path(__file__).parent.parent.parent / \
+    "data" / "tth_2" / "json"
 
 DISALLOWED_ESCAPES_RE = re.compile(r'\\([!\.\[\]])')
 MARKDOWN_ITALICS_RE = re.compile(r'\*[^*]+\*')
 EM_NESTING_RE = re.compile(r'<em>\s*<em>|</em>\s*</em>')
+DIVINE_NAME_WRAPPED_RE = re.compile(r'__[^_\n]*יהוה[^_\n]*__')
 
 
 class TTHFormatValidator:
@@ -39,7 +42,8 @@ class TTHFormatValidator:
             issues.append(f"{label}: contains markdown italics markers")
 
         if DISALLOWED_ESCAPES_RE.search(text):
-            issues.append(f"{label}: contains disallowed escaped punctuation/brackets")
+            issues.append(
+                f"{label}: contains disallowed escaped punctuation/brackets")
 
         if text.count('<em>') != text.count('</em>'):
             issues.append(f"{label}: unbalanced <em> tags")
@@ -49,6 +53,10 @@ class TTHFormatValidator:
 
         if '## Footnotes' in text:
             issues.append(f"{label}: embedded footnotes section leakage")
+
+        if DIVINE_NAME_WRAPPED_RE.search(text):
+            issues.append(
+                f"{label}: contains wrapped divine-name token (__יהוה__)")
 
         return issues
 
@@ -67,16 +75,28 @@ class TTHFormatValidator:
             'nested_em_tags': 0,
             'embedded_footnotes_sections': 0,
             'footnote_marker_mismatches': 0,
+            'verse_sequence_issues': 0,
+            'wrapped_divine_name_tokens': 0,
         }
 
         for chapter in data.get('chapters', []):
             chapter_num = chapter.get('chapter', 0)
+            previous_verse_num = None
             for verse in chapter.get('verses', []):
                 verse_num = verse.get('verse', 0)
                 stats['verses_checked'] += 1
 
+                if isinstance(verse_num, int):
+                    if previous_verse_num is not None and verse_num <= previous_verse_num:
+                        stats['verse_sequence_issues'] += 1
+                        issues.append(
+                            f"Ch {chapter_num}:{verse_num} verse sequence regression after {previous_verse_num}"
+                        )
+                    previous_verse_num = verse_num
+
                 tth_text = verse.get('tth', '')
-                verse_issues = self._validate_text(tth_text, f"Ch {chapter_num}:{verse_num} verse text")
+                verse_issues = self._validate_text(
+                    tth_text, f"Ch {chapter_num}:{verse_num} verse text")
                 for issue in verse_issues:
                     issues.append(issue)
 
@@ -90,6 +110,8 @@ class TTHFormatValidator:
                     stats['nested_em_tags'] += 1
                 if '## Footnotes' in tth_text:
                     stats['embedded_footnotes_sections'] += 1
+                if DIVINE_NAME_WRAPPED_RE.search(tth_text):
+                    stats['wrapped_divine_name_tokens'] += 1
 
                 for footnote in verse.get('footnotes', []):
                     stats['footnotes_checked'] += 1
@@ -111,6 +133,8 @@ class TTHFormatValidator:
                         stats['nested_em_tags'] += 1
                     if '## Footnotes' in explanation:
                         stats['embedded_footnotes_sections'] += 1
+                    if DIVINE_NAME_WRAPPED_RE.search(explanation):
+                        stats['wrapped_divine_name_tokens'] += 1
 
                     marker = footnote.get('marker', '')
                     if marker and marker not in tth_text:
@@ -151,8 +175,13 @@ def print_book_report(book_key: str, is_valid: bool, issues: List[str], stats: D
     print(f"   - escaped special chars:    {stats['escaped_special_chars']}")
     print(f"   - unbalanced <em> tags:     {stats['unbalanced_em_tags']}")
     print(f"   - nested <em> tags:         {stats['nested_em_tags']}")
-    print(f"   - embedded footnotes text:  {stats['embedded_footnotes_sections']}")
-    print(f"   - marker mismatches:        {stats['footnote_marker_mismatches']}")
+    print(
+        f"   - embedded footnotes text:  {stats['embedded_footnotes_sections']}")
+    print(
+        f"   - marker mismatches:        {stats['footnote_marker_mismatches']}")
+    print(f"   - verse sequence issues:    {stats['verse_sequence_issues']}")
+    print(
+        f"   - wrapped divine names:     {stats['wrapped_divine_name_tokens']}")
 
     for issue in issues[:8]:
         print(f"   - {issue}")

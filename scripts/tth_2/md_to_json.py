@@ -421,6 +421,7 @@ class TTH2MdToJson:
 
         current_chapter = None
         current_verses = []
+        current_last_verse_num: Optional[int] = None
         total_chapters_expected = self.book_info.get('chapters', 0)
         skipping_inline_footnote_blob = False
 
@@ -458,6 +459,7 @@ class TTH2MdToJson:
 
                 current_chapter = int(chapter_match.group(1))
                 current_verses = []
+                current_last_verse_num = None
                 i += 1
                 continue
 
@@ -482,6 +484,13 @@ class TTH2MdToJson:
                         cleaned_text, footnotes = self.extract_footnotes(
                             cleaned_text)
 
+                        if current_last_verse_num is not None and split_verse_num <= current_last_verse_num:
+                            raise ValueError(
+                                f"Verse sequence regression in {self.book_key} chapter {current_chapter}: "
+                                f"got verse {split_verse_num} after {current_last_verse_num}. "
+                                f"Offending line: {line}"
+                            )
+
                         verse_entry = {
                             'verse': split_verse_num,
                             'tth': cleaned_text,
@@ -490,6 +499,7 @@ class TTH2MdToJson:
                         }
 
                         current_verses.append(verse_entry)
+                        current_last_verse_num = split_verse_num
                     i += 1
                     continue
 
@@ -506,6 +516,13 @@ class TTH2MdToJson:
                     verse_text = self.clean_text_preserve_comments(verse_text)
                     verse_text, footnotes = self.extract_footnotes(verse_text)
 
+                    if current_last_verse_num is not None and verse_num <= current_last_verse_num:
+                        raise ValueError(
+                            f"Verse sequence regression in {self.book_key} chapter {current_chapter}: "
+                            f"got verse {verse_num} after {current_last_verse_num}. "
+                            f"Offending line: {line}"
+                        )
+
                     verse_entry = {
                         'verse': verse_num,
                         'tth': verse_text,
@@ -514,6 +531,7 @@ class TTH2MdToJson:
                     }
 
                     current_verses.append(verse_entry)
+                    current_last_verse_num = verse_num
                     i += 1
                     continue
 

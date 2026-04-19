@@ -868,8 +868,7 @@ y como la arena que es sobre la orilla del mar,
 **9** Y lo enterraron Itzjak e Ishmael sus hijos en la cueva de Majpelah, en el campo de Efrón, hijo de Tzojar el jití, el cual es sobre la faz de Mamré,
 **10** el campo que compró Abraham de los hijos de Jet, allí fue enterrado Abraham, y Sarah su mujer.
 **11** Y sucedió *que* después de la muerte de Abra­ham, bendijo Elohim a Itzjak su hijo, y habi­taba Itzjak junto a Beer Lajay Roi.
-**12** Y
-**1** estas son las generaciones de Ishmael, hijo de Abraham, quien dio a luz Hagar la mitzrit, sierva de Sarah, a Abraham.
+**12** Y estas son las generaciones de Ishmael, hijo de Abraham, quien dio a luz Hagar la mitzrit, sierva de Sarah, a Abraham.
 **13** Y estos *son* los nombres de los hijos de Ishmael, por sus nombres por sus genera­cio­nes: El primogénito de Ishmael, Nevaiot, y Kedar, Adbeel, Mivsán,
 **14** Mishma, Dumah, Masá,
 **15** Jadar, Teimá, Ietur, Nafish, y Kedemah.
