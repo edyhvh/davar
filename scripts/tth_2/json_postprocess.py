@@ -61,6 +61,11 @@ class TTHJsonPostProcessor:
         'יהוה',
     }
 
+    TEHILIM_BOOK_DIVISION_RE = re.compile(
+        r'__\s*(LIBRO\s+(?:PRIMERO|SEGUNDO|TERCERO|CUARTO|QUINTO))\s*__',
+        flags=re.IGNORECASE,
+    )
+
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
         self.stats = {
@@ -79,9 +84,32 @@ class TTHJsonPostProcessor:
             'subtitle_segments_skipped_phrase': 0,
             'subtitle_invalid_removed': 0,
             'divine_name_normalized': 0,
+            'divine_name_markdown_wrappers_removed': 0,
+            'book_divisions_extracted': 0,
             'verses_processed': 0,
             'files_processed': 0,
         }
+
+    def extract_tehilim_book_division_marker(self, text: str) -> Tuple[str, str]:
+        """
+        Extract Tehilim book division labels from verse text.
+
+        Returns:
+            (cleaned_text, book_division_label)
+        """
+        if not text:
+            return text, ''
+
+        match = self.TEHILIM_BOOK_DIVISION_RE.search(text)
+        if not match:
+            return text, ''
+
+        book_division = match.group(1).upper().strip()
+        cleaned = (text[:match.start()] + text[match.end():]).strip()
+        cleaned = re.sub(r'\s{2,}', ' ', cleaned)
+        cleaned = re.sub(r'\s+([,.;:!?])', r'\1', cleaned)
+        self.stats['book_divisions_extracted'] += 1
+        return cleaned, book_division
 
     def normalize_divine_name_forms(self, text: str) -> str:
         """Normalize Latin divine-name spellings to the Hebrew form יהוה."""
@@ -95,6 +123,33 @@ class TTHJsonPostProcessor:
         if matches:
             self.stats['divine_name_normalized'] += len(matches)
         return pattern.sub('יהוה', text)
+
+    def remove_markdown_wrappers_from_divine_name(self, text: str) -> str:
+        """
+        Remove markdown-style double-underscore wrappers from standalone
+        divine-name tokens, while preserving inner punctuation/content.
+
+        Examples:
+        - __יהוה__ -> יהוה
+        - __יהוה__, -> יהוה,
+        - __"יהוה"__ -> "יהוה"
+        """
+        if not text or '__' not in text:
+            return text
+
+        def unwrap_if_divine_name(match):
+            inner = match.group(1)
+            token = inner.strip()
+            token = re.sub(r'^[,.;:!?"\'“”‘’()\[\]{}]+', '', token)
+            token = re.sub(r'[,.;:!?"\'“”‘’()\[\]{}]+$', '', token)
+            token = re.sub(r'^[0-9⁰¹²³⁴⁵⁶⁷⁸⁹]+\s*', '', token)
+            normalized = _strip_hebrew_diacritics(token)
+            if normalized in self.DIVINE_NAME_BASE_FORMS:
+                self.stats['divine_name_markdown_wrappers_removed'] += 1
+                return inner.strip()
+            return match.group(0)
+
+        return re.sub(r'__([^_\n]+?)__', unwrap_if_divine_name, text)
 
     def starts_with_lowercase_latin(self, content: str) -> bool:
         """Return True when the first Latin letter in content is lowercase."""
@@ -574,38 +629,41 @@ class TTHJsonPostProcessor:
         # Step 6: Normalize leftover markdown bold wrappers
         result = self.normalize_double_asterisk_markup(result)
 
-        # Step 7: Convert single-word italics FIRST (*word* → <em>word</em>)
+        # Step 7: Remove markdown wrappers from divine name tokens
+        result = self.remove_markdown_wrappers_from_divine_name(result)
+
+        # Step 8: Convert single-word italics FIRST (*word* → <em>word</em>)
         # This handles cases like escribírte*las* correctly
         result = self.convert_single_word_italics(result)
 
-        # Step 8: Fix orphan asterisks (word* *next patterns)
+        # Step 9: Fix orphan asterisks (word* *next patterns)
         result = self.fix_orphan_asterisks(result)
 
-        # Step 9: Strip stray asterisks around existing <em> tags
+        # Step 10: Strip stray asterisks around existing <em> tags
         result = self.strip_asterisks_around_em(result)
 
-        # Step 10: Normalize any remaining broken italic patterns
+        # Step 11: Normalize any remaining broken italic patterns
         result = self.normalize_broken_italics(result)
 
-        # Step 11: Convert any remaining *...* to <em>...</em>
+        # Step 12: Convert any remaining *...* to <em>...</em>
         result = self.convert_italics_to_em(result)
 
-        # Step 12: Remove orphan markdown stars left after conversion
+        # Step 13: Remove orphan markdown stars left after conversion
         result = self.remove_orphan_asterisks(result)
 
-        # Step 13: Fix spacing around <em> tags
+        # Step 14: Fix spacing around <em> tags
         result = self.fix_em_spacing(result)
 
-        # Step 14: Flatten accidental nested <em> tags
+        # Step 15: Flatten accidental nested <em> tags
         result = self.flatten_nested_em_tags(result)
 
-        # Step 15: Keep divine name unitalicized even if source markers wrapped it
+        # Step 16: Keep divine name unitalicized even if source markers wrapped it
         result = self.remove_em_from_divine_name(result)
 
-        # Step 16: Normalize Latin divine-name forms to Hebrew
+        # Step 17: Normalize Latin divine-name forms to Hebrew
         result = self.normalize_divine_name_forms(result)
 
-        # Step 17: Clean up any remaining issues
+        # Step 18: Clean up any remaining issues
         result = re.sub(r'  +', ' ', result)  # Double spaces
         result = result.strip()
 
@@ -679,10 +737,28 @@ class TTHJsonPostProcessor:
 
             # Process all verses in all chapters
             if 'chapters' in data:
-                for chapter in data['chapters']:
+                is_tehilim = file_path.stem == 'tehilim'
+                pending_book_division = ''
+
+                for chapter_index, chapter in enumerate(data['chapters']):
+                    if is_tehilim:
+                        if chapter_index == 0 and not chapter.get('book_division'):
+                            chapter['book_division'] = 'LIBRO PRIMERO'
+                        if pending_book_division:
+                            chapter['book_division'] = pending_book_division
+                            pending_book_division = ''
+
                     if 'verses' in chapter:
                         for i, verse in enumerate(chapter['verses']):
                             chapter['verses'][i] = self.process_verse(verse)
+
+                            if is_tehilim and chapter['verses'][i].get('tth'):
+                                cleaned_tth, division = self.extract_tehilim_book_division_marker(
+                                    chapter['verses'][i]['tth']
+                                )
+                                if division:
+                                    chapter['verses'][i]['tth'] = cleaned_tth
+                                    pending_book_division = division
 
             # Calculate changes for this file
             file_stats = {
@@ -769,6 +845,8 @@ class TTHJsonPostProcessor:
             f"  Invalid subtitles:    {self.stats['subtitle_invalid_removed']}")
         print(
             f"  Divine names norm.:   {self.stats['divine_name_normalized']}")
+        print(
+            f"  Book divisions moved: {self.stats['book_divisions_extracted']}")
         print(f"  Underscore artifacts: {self.stats['underscore_artifacts']}")
 
 
