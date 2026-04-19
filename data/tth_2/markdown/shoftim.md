@@ -183,7 +183,7 @@ la tierra tembló, también los cielos gotearon,
 **9** Mi corazón es para los legisladores de Israel,
 **10** Los que cabalgan en asnas blancas, los que se sientan sobre vestimentas,y los que andan por el camino, conversen.
 **11** Del sonido de los que dividen entre los a­bre­­vaderos,
-**1** de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יהוה.
+de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יהוה.
 **12** Despierta, despierta, Deboráh; despierta, despierta, habla una canción.Levántate, Barak, y captura tus cautivos, hijo de Abinoam.
 **13** Entonces descendió el sobreviviente a los majestuosos; el pueblo de יהוה descendió a mí con los poderosos;
 **14** de Efráim los radicados en Amalek,
@@ -524,7 +524,7 @@ la tierra tembló, también los cielos gotearon,
 **20** Y sucedió *que* cuando subió la llama de so­bre el altar hacia el cielo, ascendió el mensajero de יהוה en la llama del altar. Y Manóaj y su mu­jer vieron, y cayeron sobre sus rostros a tie­rra.
 **21** Y no volvió más el mensajero de יהוה a apa­recer a Manóaj y a su mujer. Entonces conoció Manóaj que el mensajero de יהוה *era* él.
 **22** Y dijo Manóaj a su mujer: ¡Muriendo, morire­mos!
-**1** Porque *a* Elohim hemos visto.
+Porque *a* Elohim hemos visto.
 **23** Pero le dijo su mujer: ¡Si hubiera deseado יהוה hacernos morir, no habría tomado de nuestras manos la ofrenda ascendida y la o­fren­da de grano[^1556], y no nos habría hecho ver to­das estas *cosas*, y como *este* tiempo, no nos habría hecho escuchar *cosa* como esta!
 **24** Y dio a luz la mujer un hijo, y llamó su nom­bre Shimshón. Y creció el niño, y lo bendijo יהוה.
 **25** Y comenzó el Rúaj[^1557] de יהוה a impulsarse en Majanéh Dan, entre Tzoráh y Eshtaol.

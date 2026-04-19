@@ -99,7 +99,7 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 **28** o se le hace saber su pecado que ha pecado, traerá *como* su ofrenda una peluda de las ca­bras, completa, hembra, por su pecado que ha pecado.
 **29** Y pondrá su mano sobre la cabeza de la ofrenda por el pecado, y sacrificará a la ofren­da por el pecado en el lugar de la ofrenda ascendida.
 **30** Y tomará el sacerdote de su sangre con su dedo, y *la* pondrá sobre los cuernos del altar
-**1** de la ofrenda ascendida, y toda la sangre *res­tante* derramará en la base del altar.
+de la ofrenda ascendida, y toda la sangre *res­tante* derramará en la base del altar.
 **31** Y toda su grasa retirará, como es retirada la grasa de sobre el sacrificio de las retribuciones; y *la* quemará el sacerdote en el altar, para olor calmante para יהוה. Y el sacerdote hará expiación por él, y será perdonado a él.
 **32** Y si un cordero él trae para ofrenda por el pecado, una hembra completa traerá.
 **33** Y apoyará su mano sobre la cabeza de la ofrenda por el pecado, y la sacrificará para ofrenda por el pecado en el lugar el cual sacrifican a la ofrenda ascendida.
@@ -134,7 +134,7 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 **2** La persona que peque y transgreda apro­pián­dose contra יהוה, y engaña a su amigo en un depósito o en algo dado en mano, o por ro­bo, o *por* *haber* explotado a su amigo,
 **3** o ha encontrado algo perdido y ha engañado en ello, y ha jurado en mentira sobre una de todas *las cosas* que puede hacer el hombre, pecando en ellas;
 **4** y
-**1** será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explotación *con* que oprimió, o el depósito que fue depositado con él, o la cosa perdida que ha encontrado,
+será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explotación *con* que oprimió, o el depósito que fue depositado con él, o la cosa perdida que ha encontrado,
 **5** o de todo por lo que ha jurado falsa­mente; y lo pagará en su totalidad[^571], y su quinta parte[^572] añadirá por eso. A quien eso le pertenece *lo* dará en el día de su ofren­da de culpa[^573].
 **6** Y su ofrenda de culpa traerá, para יהוה, un carnero completo del rebaño, conforme a tu valoración, para ofrenda de culpa, al sacerdote.
 **7** Y hará reconciliación el sacerdote por él delante de יהוה, y le será perdonado, por una de todas *las cosas* que pudo haber hecho para ser cul­pable en ella.
@@ -393,7 +393,7 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 **17** Y lo mirará el sacerdote, y he aquí, se ha vuelto el daño blanco, proclamará puro el sacerdote al *que tenía* el daño; puro es él.
 **18** Y cuando la carne tenga en su piel una ebullición, y se sane,
 **19** y haya en lugar de la ebullición una hinchazón
-**1** blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
+blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
 **20** y *la* mirará el sacerdote, y he aquí, la apariencia de ella es *más* baja que la piel, y su pelo se ha vuelto blanco, lo declarará impuro el sacerdote; es un daño de tzaraat, en la ebullición ha florecido.
 **21** Pero si la ve el sacerdote, y he aquí, no hay en ella pelo blanco, y *más* baja no está que la piel, y esta se ha oscurecido, lo encerrará el sacerdote siete días;
 **22** y si, extendiendo, se extiende en la piel, lo de­clarará impuro el sacerdote; es daño__.23 __Pero si en su lugar permanece la mancha blanca *y* no se ha extendido, la quemadura de la ebullición es esto; lo declarará puro el sacerdote.
@@ -583,7 +583,7 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 **3** Cada hombre[^730] de la casa de Israel que sacrifique un buey, o un cordero o una cabra en el campamento, o el que *lo* sacrifique fuera del campamento,
 **4** y a la entrada de la Tienda del Mo’ed[^731] no lo lleva para acercar un korbán[^732] para יהוה, delante del Mishkán de יהוה, la sangre será contada a ese hombre. Sangre ha derramado, y será cortado ese hombre de entre su pueblo.
 **5** Con el fin de que puedan traer los hijos de Israel sus sacrificios que ellos sacrificaban so­bre la faz del campo, y los traigan a יהוה
-**1** a la entrada de la Tienda del Mo’ed, al sacerdote, y los sacrifiquen *como *sacrificios de retribución[^733] para יהוה.
+a la entrada de la Tienda del Mo’ed, al sacerdote, y los sacrifiquen *como *sacrificios de retribución[^733] para יהוה.
 **6** Y rociará el sacerdote la sangre sobre el altar de יהוה *a* la entrada de la Tienda del Mo’ed, y quemará la grasa, para olor calmante para יהוה.
 **7** Y no sacrificarán más sus sacrificios a los machos cabríos *con* los cua­les ellos adulteraban detrás de ellos. Esta­tuto olam[^734] será esto para ustedes por sus gene­raciones”.
 **8** Y a ellos dirás: “Cada hombre de la casa de Israel, o del extranjero que habita entre ellos, que ascienda una ofren­da ascendida[^735] o un sacrificio,
@@ -695,7 +695,7 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 **13** Y el hombre que se acueste con varón como acostarse con mujer, abominación han hecho los dos; muriendo, morirán. Su sangre* será* en ellos.
 **14** Y el hombre que tome a una mujer y a la madre de ella, plan malvado[^763] es esto; en el fuego los quemarán, a él y a ellas, y no habrá plan malvado entre ustedes.
 **15** Y el hombre que dé su acostar con un animal, muriendo, morirá; y el animal
-**1** matarán.
+matarán.
 **16** Y la mujer que se acerque a cualquier animal para acostarse con él, matarás a la mujer y al animal, muriendo, morirán; su sangre *será* en ellos.
 **17** Y el hombre que tome a su hermana, hija de su padre o hija de su madre, y ve su desnudez, y ella ve la desnudez de él, vergüenza es esto; serán cortados ante los ojos de los hijos de su pueblo. La desnudez de su hermana ha descu­bierto, su iniquidad cargará.
 **18** Y el hombre que se acueste con una mujer adolorida *en su menstruación*, y des­cu­bre su desnudez, el flujo[^764] de ella ha despertado, y ella ha descubierto el flujo de su sangre; serán cortados los dos de entre su pue­blo.
@@ -811,7 +811,7 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 **25** Cualquier trabajo de servicio no harán, y acercarán una ofrenda de fuego a יהוה”.
 **26** Y habló יהוה a Moshéh, diciendo:
 **27** Sin embargo, en el décimo* día* del mes
-**1** sép­timo, este es el día de las reconciliaciones[^806]; una convocación de santidad será para ustedes, y afligirán sus gargantas[^807], y acer­carán una ofrenda de fuego a יהוה.
+sép­timo, este es el día de las reconciliaciones[^806]; una convocación de santidad será para ustedes, y afligirán sus gargantas[^807], y acer­carán una ofrenda de fuego a יהוה.
 **28** Y cualquier trabajo no harán en ese mismo día, porque es el día de las reconciliaciones, para cubrir sobre ustedes delante de יהוה su Elohim.
 **29** Pues, cualquier persona que no esté afligida en ese mismo día, será cortada de su pueblo.
 **30** Y toda persona que haga cualquier trabajo en ese mismo día, destruiré a esa persona de entre su pueblo.
@@ -969,8 +969,8 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 **38** Y se perderán entre las naciones y los co­merá la tierra de sus enemigos.
 **39** Y los que queden entre ustedes su pudrirán en su iniquidad en las tierras de sus enemigos; y también en las iniquidades de sus padres *que están* con ellos se pudrirán.
 **40** Y si arrojan su iniquidad y la iniquidad de sus padres, por sus infide­lidades
-**1** con* las cuales
-**1** fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
+con* las cuales
+fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 **41** también Yo andaba con ellos con frialdad, y los lleve en la tierra de sus enemigos; o *si* en verdad se humilla su corazón incircunciso, y entonces aceptan su iniquidad,
 **42** recordaré mi pacto *con* Yaakov, y también mi pacto *con* Itzjak, y también mi pacto *con *Abraham recordaré, y la tierra recordaré.
 **43** Y la tierra será abandonada debido a ellos, y satisfará sus Shabatot cuando quede desolada ella debido a ellos; pero ellos aceptarán su iniquidad, porque y a causa de que mis procesos legales aborrecieron y mis decretos despreció su ser.

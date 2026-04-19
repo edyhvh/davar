@@ -74,7 +74,7 @@ __SHEMOT \(ÉXODO\)__ שמות
 **11** Pero dijo Moshéh a Elohim: ¿Quién soy yo *para* ir a Faraón, y pues, sacar a los hijos de Israel de Mitzráim?
 **12** Y Él dijo: Porque Yo seré contigo, y ésta para ti *será *una señal que Yo te he enviado: cuando saques al pueblo de Mitzráim, servirán a Elohim en este monte.
 **13** Y dijo Moshéh a Elohim: He aquí, yo voy a los hijos de Israel, y les diré: “El Elohim de sus padres
-**1** me ha enviado a ustedes”. Y ellos me dirán: “¿Cuál es su nombre?”, ¿qué les diré?
+me ha enviado a ustedes”. Y ellos me dirán: “¿Cuál es su nombre?”, ¿qué les diré?
 **14** Y dijo Elohim a Moshéh: Ehyeh Asher Ehyeh[^264]. Y dijo: Así dirás a los hijos de Israel: Ehyeh[^265] me ha enviado a ustedes.
 **15** Y dijo además Elohim a Moshéh: Así dirás a los hijos de Israel:
 
@@ -270,7 +270,7 @@ Este es mi Nombre para siempre,
 **31** E hizo יהוה conforme a la palabra de Moshéh, y retiró la mez­cla *de insectos *de Faraón, de sus siervos y de su pueblo; no quedó uno.
 **32** Pero permaneció pesado Faraón su corazón tam­bién esta vez, y no envió al pueblo.
 
-**1** Quinta plaga: peste en el ganado*
+Quinta plaga: peste en el ganado*
 
 **9**
 
@@ -309,7 +309,7 @@ Este es mi Nombre para siempre,
 **27** Y envió Faraón y llamó a Moshéh y a Aha­rón, y* les *dijo a ellos: He pecado esta vez; יהוה es justo, y yo y mi pueblo *somos* malvados.
 **28** Pidan a יהוה, ha habido muchas voces de Elohim, y granizo. Los en­viaré, y no se quedarán más* aquí*.
 **29** Y le dijo Moshéh: Cuando salga de la ciu­dad extenderé mis palmas a יהוה; las voces cesarán y el granizo no es­tará más, para que sepas que de יהוה
-**1** es la tierra.
+es la tierra.
 **30** Pero tú y tus siervos, sé que aún no temen delante de יהוה Elohim.
 **31** Y el lino y la cebada fueron golpeados, pues la cebada *era* Abib[^288], y el lino *estaba en* caña;
 **32** pero el trigo y la espelta[^289] no fueron golpeados, pues estos son tardíos.
@@ -511,7 +511,7 @@ Cantaré a יהוה porque altamente es exal­­­tado[^306]; *al *caballo y su 
 **6** Tu diestra, יהוה, majestuosa[^312] en poder; tu diestra, יהוה, ha destrozado al enemigo.
 **7** Y en la multitud de tu grandeza destruyes a los que se levantan contra ti, envías tu ira, y los consumes como paja.
 **8** Y en el aliento de tus narices se acu­mu­laron las aguas, se pararon como un pilar de agua las corrientes[^313];
-**1** se congelaron los abismos en el corazón del mar.
+se congelaron los abismos en el corazón del mar.
 **9** Dijo el enemigo: “Perseguiré, superaré, divi­diré el botín, se saciará mi ser; vaciaré mi espada, los destruirá mi mano”.
 **10** Soplaste con tu viento, los cubrió el mar, se hundieron como plomo en las aguas majestuosas.
 **11**¿Quién como Tú entre los dioses, יהוה?
@@ -550,7 +550,7 @@ Canten a יהוה porque altamente es exal­tado[^319],
 **5** Y sucederá en el día sexto, prepararán lo que traigan, y *la porción* será doble, por encima de lo que recojan día *a* día.
 **6** Y dijo Moshéh. y Aharón. a todos los hijos de Israel: *Por* la tarde sabrán que יהוה *los *ha sa­cado a ustedes de la tierra de Mitzráim;
 **7** Y* por*
-**1** la mañana verán la gloria de יהוה, por*que* Él escucha sus murmuraciones sobre יהוה; pero nosotros, ¿qué *somos* para que se quejen sobre nosotros?
+la mañana verán la gloria de יהוה, por*que* Él escucha sus murmuraciones sobre יהוה; pero nosotros, ¿qué *somos* para que se quejen sobre nosotros?
 **8** Y dijo Moshéh: *Esto sucederá* cuando les dé יהוה por la tarde carne para comer, y pan por la mañana para saciarse; por*que* ha escuchado יהוה sus quejas que murmuran sobre Él; pero nosotros, ¿qué *somos*?, no *son *sobre nosotros sus murmuraciones, pues *son* sobre יהוה.
 **9** Y dijo Moshéh a Aharón: Di a toda la congregación de los hijos de Israel: “Acér­quen­se delante de[^324] יהוה, por­que *Él* ha escuchado sus murmuraciones”.
 **10** Y sucedió *que* cuando habló Aharón a toda la congregación de los hijos de Israel, se giraron hacia el desierto, y he aquí, la gloria de יהוה apareció en la nube.
@@ -610,7 +610,7 @@ Canten a יהוה porque altamente es exal­tado[^319],
 **18**
 
 **1** Y escuchó Itró, sacerdote
-**1** de Midián, suegro de Moshéh, todo lo que había hecho Elohim por Moshéh y por Israel su pueblo, porque sacó יהוה a Israel de Mitzráim.
+de Midián, suegro de Moshéh, todo lo que había hecho Elohim por Moshéh y por Israel su pueblo, porque sacó יהוה a Israel de Mitzráim.
 **2** Y tomó Itró, suegro de Moshéh, a Tziporáh, mujer de Moshéh, después de que la había enviado;
 **3** y a sus dos hijos, que el nombre de uno era Guershom, porque él dijo: Extranjero[^339] he sido en tierra extranjera[^340].
 **4** Y el nombre del otro era Eliezer, porque *dijo: *El Elohim de mi padre *fue* mi ayuda[^341], y me rescató de la espada de Faraón.
@@ -796,7 +796,7 @@ Canten a יהוה porque altamente es exal­tado[^319],
 **2** No estarás detrás de muchos para *hacer *males, y no responderás en una contienda incli­nándote detrás de muchos para torcer.
 **3** Y *al* débil no favorecerás[^382] en su contienda.
 **4** Cuando te encuentres un buey
-**1** de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
+de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **5** Cuando veas el asno de quien te odia acostado debajo de su carga, ¿desistirás de liberarlo? Liberando, lo liberarás con él.
 **6** No torcerás el proceso legal de tu necesitado en su contienda.
 **7** De palabra de mentira te alejarás, y *al* inocente y justificado no matarás, porque no justificaré al condenado.

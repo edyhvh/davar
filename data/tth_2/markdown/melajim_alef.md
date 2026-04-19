@@ -492,7 +492,7 @@ Shelomóh se desvía de __יהוה__
 **9** Y se enojó __יהוה__ con Shelomóh, porque había inclinado su corazón de __יהוה__, Elohim de Israel, que se le había aparecido dos veces;
 **10** y le había ordenado sobre esta cosa, para no ir tras de otros dioses, pero no guardó lo que ha­bía ordenado __יהוה__.
 
-Elohim**1** levanta adversarios a Shelomóh
+*Elohim levanta adversarios a Shelomóh*
 
 **11** Y dijo __יהוה__ a Shelomóh: Porque ha sido esto contigo, y no has guardado mi pacto y mis estatutos que he ordenado sobre ti, ciertamente arrancaré[^2029] el reino de so­bre ti, y lo daré a tu siervo.
 **12** Sin embargo, en tus días no lo haré, por causa de David tu padre, de la mano de tu hijo lo arrancaré.
@@ -598,7 +598,7 @@ Iarobam y el hombre de Elohim
 **22** y volviste, y comiste pan y bebiste agua en el lugar el cual te habló: ‘No comerás pan y no be­­be­rás agua’, no entrará tu cadáver en la tum­ba de tus padres”.
 **23** Y sucedió que después de su comer pan y después de su beber, ató el asno para él, para el profeta que lo había hecho volver.
 **24** Y se fue, y lo encontró un león en el camino y lo mató; y estuvo su cadáver tirado en el ca­mino, y el asno parado junto a él, y el león pa­rado
-**1** junto al cadáver.
+junto al cadáver.
 **25** Y he aquí, unos hombres pasaron y vieron el cadáver tirado en el camino y el león parado junto al cadáver; y fueron y hablaron en la ciu­dad en la cual el profeta anciano habitaba.
 **26** Y oyó el profeta que lo había hecho vol­­ver del camino, y dijo: El hombre de Elohim es él, que se rebeló a la boca de __יהוה__; y lo entregó __יהוה__ al león, y lo desgarró y lo mató, con­for­me a la palabra de __יהוה__ que le había ha­bla­do.
 **27** Y habló a sus hijos, diciendo: Aten para mí al asno. Y lo ataron.

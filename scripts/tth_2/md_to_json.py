@@ -414,6 +414,32 @@ class TTH2MdToJson:
 
         return segments
 
+    def should_merge_regressed_marker_as_continuation(
+        self,
+        candidate_num: int,
+        previous_num: Optional[int],
+        candidate_text: str,
+    ) -> bool:
+        """
+        Detect a known wrapped-line corruption pattern across source books.
+
+        Some lines are incorrectly emitted as a fresh "**1** ..." marker while
+        actually continuing the previous verse. Keep this extremely narrow and
+        retain strict failures for any ambiguous/non-deterministic regressions.
+        """
+        if previous_num is None or previous_num < 1:
+            return False
+
+        if candidate_num != 1:
+            return False
+
+        trimmed = candidate_text.strip()
+        if not trimmed:
+            return False
+
+        # Continuation fragments usually start with lowercase narrative text.
+        return bool(re.match(r'^[a-záéíóúñü]', trimmed, re.IGNORECASE))
+
     def parse_chapters_and_verses(self, book_text: str, verbose: bool = False) -> List[Dict[str, Any]]:
         """Parse chapters and verses from the book text."""
         lines = book_text.split('\n')
@@ -479,6 +505,22 @@ class TTH2MdToJson:
                     verse_text = verse_match.group(2).strip()
 
                     for split_verse_num, split_verse_text in self.split_inline_verse_segments(verse_num, verse_text):
+                        if (
+                            current_verses
+                            and self.should_merge_regressed_marker_as_continuation(
+                                split_verse_num,
+                                current_last_verse_num,
+                                split_verse_text,
+                            )
+                        ):
+                            merged = f"{current_verses[-1]['tth']} {split_verse_text}".strip()
+                            merged = self.clean_text_preserve_comments(merged)
+                            merged, merged_footnotes = self.extract_footnotes(merged)
+                            current_verses[-1]['tth'] = merged
+                            current_verses[-1]['footnotes'] = merged_footnotes
+                            current_verses[-1]['hebrew_terms'] = []
+                            continue
+
                         cleaned_text = self.clean_text_preserve_comments(
                             split_verse_text)
                         cleaned_text, footnotes = self.extract_footnotes(
@@ -512,6 +554,23 @@ class TTH2MdToJson:
                     verse_head = malformed_verse_match.group(2).strip()
                     verse_tail = malformed_verse_match.group(3).strip()
                     verse_text = f"{verse_head} {verse_tail}".strip()
+
+                    if (
+                        current_verses
+                        and self.should_merge_regressed_marker_as_continuation(
+                            verse_num,
+                            current_last_verse_num,
+                            verse_text,
+                        )
+                    ):
+                        merged = f"{current_verses[-1]['tth']} {verse_text}".strip()
+                        merged = self.clean_text_preserve_comments(merged)
+                        merged, merged_footnotes = self.extract_footnotes(merged)
+                        current_verses[-1]['tth'] = merged
+                        current_verses[-1]['footnotes'] = merged_footnotes
+                        current_verses[-1]['hebrew_terms'] = []
+                        i += 1
+                        continue
 
                     verse_text = self.clean_text_preserve_comments(verse_text)
                     verse_text, footnotes = self.extract_footnotes(verse_text)

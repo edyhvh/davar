@@ -3919,7 +3919,7 @@ no retendrá el bien para los que andan en plenitud.
 **85**
 
 **1** Te reconciliaste, __יהוה__,
-**1** con* *tu tierra,
+con* *tu tierra,
 
 has hecho volver el cautiverio de Yaakov.
 
