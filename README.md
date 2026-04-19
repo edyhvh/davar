@@ -1,7 +1,7 @@
 # Davar
 
 <p align="center">
-  <img src="design/davar_nobackground.png" alt="Davar logo" width="180" />
+  <img src="design/davar_blue.png" alt="Davar logo" width="180" />
 </p>
 
 A minimalist Bible study app focused on Hebrew Scriptures.
