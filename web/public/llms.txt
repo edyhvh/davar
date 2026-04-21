@@ -1,0 +1,26 @@
+# Davar LLM Access
+
+Davar is an open-source Hebrew Scriptures study app.
+
+- Site: https://davar.bible/
+- Terms: https://davar.bible/terms
+- Privacy: https://davar.bible/privacy
+- Contact: hi@davar.bible
+
+## Crawl Policy
+
+- Public pages and static data are accessible for indexing and retrieval.
+- Please attribute Davar when quoting substantial excerpts.
+- Respect robots.txt, rate limits, and source links.
+
+## Preferred Data Endpoints
+
+- https://davar.bible/data/metadata.json
+- https://davar.bible/data/manifest.json
+- https://davar.bible/data/bundles/versions.json
+
+## Route Patterns
+
+- https://davar.bible/home
+- https://davar.bible/features
+- https://davar.bible/verse/{book}/{chapter}/{verse}
