@@ -7,11 +7,11 @@ This is the web application package for Davar.
 
 Run `bun install` to install dependencies.
 
-Run `bun run dev` for production-parity local serving (builds `dist/` then serves it).
-
-Run `bun run dev:hot` for Bun HTML hot-reload mode without running `build.ts`.
+Run `bun run dev` for Bun HTML hot-reload mode without running `build.ts`.
 It keeps the app on `http://localhost:3002`, checks static data, runs Bun HTML mode on an internal port, and serves `/data/*.json` through a local gateway.
 The gateway listens on `0.0.0.0` by default so mobile devices on the same LAN can use `http://<your-machine-ip>:3002`.
+
+Run `bun run dev:static` for production-parity local serving (builds `dist/` once, then serves it).
 
 ### Startup Logs
 
