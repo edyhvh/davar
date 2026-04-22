@@ -11,6 +11,7 @@ export interface ReadingStateV2 {
 	theme: "light" | "dark";
 	showQumran: boolean;
 	hebrewOnly: boolean;
+	translationOnly: boolean;
 	showNikud: boolean;
 	showCantillation: boolean;
 	showFullChapter: boolean;
@@ -65,6 +66,7 @@ function migrateV1toV2(v1Data: ReadingStateV1): ReadingStateV2 {
 		theme: "light",
 		showQumran: false,
 		hebrewOnly: false,
+		translationOnly: false,
 		showNikud: true,
 		showCantillation: false,
 		showFullChapter: false,
@@ -168,6 +170,7 @@ export function createDefaultReadingState(): ReadingStateV2 {
 		theme: "light",
 		showQumran: false,
 		hebrewOnly: false,
+		translationOnly: false,
 		showNikud: true,
 		showCantillation: false,
 		showFullChapter: false,

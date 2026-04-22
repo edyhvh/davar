@@ -27,6 +27,7 @@
     "toggleHebrewOnly": "החלף עברית בלבד",
     "toggleNikud": "החלף ניקוד",
     "toggleCantillation": "החלף טעמי מקרא",
+    "toggleTranslationOnly": "החלף תרגום בלבד",
     "toggleFullChapter": "החלף פרק מלא",
     "toggleSeferStyle": "החלף סגנון ספר",
     "swipeToNavigate": "החלק כדי לנווט",
@@ -68,11 +69,16 @@
       "title": "סגנון ספר",
       "subtitle": "פריסת מגילה רציפה בעברית",
       "warningTitle": "סגנון ספר דורש עברית בלבד",
-      "warningMessage": "הפעל עברית בלבד כדי להשתמש בסגנון ספר."
+      "warningMessage": "הפעל עברית בלבד או תרגום בלבד כדי להשתמש בסגנון ספר."
     },
     "hebrewOnly": {
       "title": "עברית בלבד",
       "subtitle": "הצג טקסט רק בעברית"
+    },
+    "translationOnly": {
+      "title": "תרגום בלבד",
+      "subtitle": "הצג תרגום ללא עברית",
+      "disablesHebrewFeatures": "כבה תרגום בלבד כדי להשתמש באפשרויות תצוגה עבריות."
     },
     "cantillation": {
       "title": "טעמי מקרא",

@@ -163,6 +163,10 @@ export default function App() {
 		"hebrewOnly",
 		initialState.hebrewOnly,
 	);
+	const [translationOnly, setTranslationOnly] = usePersistedState(
+		"translationOnly",
+		initialState.translationOnly,
+	);
 	const [showNikud, setShowNikud] = usePersistedState(
 		"showNikud",
 		initialState.showNikud,
@@ -257,10 +261,90 @@ export default function App() {
 	);
 
 	useEffect(() => {
-		if ((!showFullChapter || !hebrewOnly) && seferMode) {
+		if (!showFullChapter && seferMode) {
 			setSeferMode(false);
 		}
-	}, [showFullChapter, hebrewOnly, seferMode, setSeferMode]);
+	}, [showFullChapter, seferMode, setSeferMode]);
+
+	useEffect(() => {
+		if (!translationOnly) return;
+
+		if (hebrewOnly) {
+			setHebrewOnly(false);
+		}
+		if (showQumran) {
+			setShowQumran(false);
+		}
+		if (showNikud) {
+			setShowNikud(false);
+		}
+		if (showCantillation) {
+			setShowCantillation(false);
+		}
+	}, [
+		translationOnly,
+		hebrewOnly,
+		showQumran,
+		showNikud,
+		showCantillation,
+		setHebrewOnly,
+		setShowQumran,
+		setShowNikud,
+		setShowCantillation,
+	]);
+
+	const handleSeferModeChange = useCallback(
+		(nextSeferMode: boolean) => {
+			if (nextSeferMode) {
+				if (!showFullChapter) {
+					setShowFullChapter(true);
+				}
+				if (!hebrewOnly && !translationOnly) {
+					setTranslationOnly(true);
+				}
+			}
+
+			setSeferMode(nextSeferMode);
+		},
+		[
+			showFullChapter,
+			hebrewOnly,
+			translationOnly,
+			setShowFullChapter,
+			setTranslationOnly,
+			setSeferMode,
+		],
+	);
+
+	const handleTranslationOnlyChange = useCallback(
+		(nextTranslationOnly: boolean) => {
+			setTranslationOnly(nextTranslationOnly);
+
+			if (nextTranslationOnly) {
+				if (!showFullChapter) {
+					setShowFullChapter(true);
+				}
+				if (!seferMode) {
+					setSeferMode(true);
+				}
+				return;
+			}
+
+			setShowNikud(true);
+			setShowQumran(true);
+			setShowFullChapter(false);
+			setSeferMode(false);
+		},
+		[
+			showFullChapter,
+			seferMode,
+			setTranslationOnly,
+			setShowNikud,
+			setShowQumran,
+			setShowFullChapter,
+			setSeferMode,
+		],
+	);
 
 	const buildRoutePath = useCallback((route: RouteState) => {
 		switch (route.screen) {
@@ -718,12 +802,19 @@ export default function App() {
 		const loadChapterData = async () => {
 			setIsLoading(true);
 			setErrorMessage(null);
+			const translationLanguage = translationOnly
+				? language === "es"
+					? "es"
+					: "en"
+				: language === "he"
+					? undefined
+					: language;
 			try {
 				const [chapterCountValue, verseCountValue, verses] = await Promise.all([
 					getChapterCount(currentBook.toLowerCase()),
 					getVerseCount(currentBook.toLowerCase(), currentChapter),
 					getChapterVerses(currentBook.toLowerCase(), currentChapter, {
-						language: language === "he" ? undefined : language,
+						language: translationLanguage,
 						showDss: showQumran,
 						hebrewOnly: false, // Always load translations; UI will control display
 					}),
@@ -753,7 +844,7 @@ export default function App() {
 		return () => {
 			isMounted = false;
 		};
-	}, [currentBook, currentChapter, language, showQumran]);
+	}, [currentBook, currentChapter, language, showQumran, translationOnly]);
 
 	useEffect(() => {
 		if (typeof window === "undefined") return;
@@ -1311,18 +1402,20 @@ export default function App() {
 						showFullChapter={showFullChapter}
 						onFullChapterChange={setShowFullChapter}
 						seferMode={seferMode}
-						onSeferModeChange={setSeferMode}
+						onSeferModeChange={handleSeferModeChange}
 						hebrewOnly={hebrewOnly}
 						onHebrewOnlyChange={setHebrewOnly}
 						showNikud={showNikud}
 						onNikudChange={setShowNikud}
 						showCantillation={showCantillation}
 						onCantillationChange={setShowCantillation}
+						translationOnly={translationOnly}
+						onTranslationOnlyChange={handleTranslationOnlyChange}
 					/>
 				</div>
 			</div>
 
-			{currentScreen === "verse" && isBesorah && (
+			{currentScreen === "verse" && isBesorah && !translationOnly && (
 				<div
 					className="fixed left-6 top-6 z-50 pointer-events-none max-w-[280px] rounded-md px-3 py-1.5 text-xs leading-snug"
 					style={{
@@ -1423,6 +1516,7 @@ export default function App() {
 											hebrewOnly={hebrewOnly}
 											showNikud={showNikud}
 											showCantillation={showCantillation}
+											translationOnly={translationOnly}
 											chapterVerses={chapterVerses}
 											words={currentVerseData.words}
 											dssVariants={currentVerseData.dss}

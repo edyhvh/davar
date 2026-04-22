@@ -1,9 +1,4 @@
 import React, { createContext, useEffect, useMemo, useRef } from "react";
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
 
 import { getColors } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
@@ -17,6 +12,7 @@ import {
   loadSeferMode,
   loadShowFullChapter,
   loadShowQumran,
+  loadTranslationOnly,
   loadThemeMode,
   saveBookmarks,
   saveCurrentVerseId,
@@ -26,6 +22,7 @@ import {
   saveSeferMode,
   saveShowFullChapter,
   saveShowQumran,
+  saveTranslationOnly,
   saveThemeMode,
 } from "@/src/services/storage";
 import { useNetworkStatus } from "@/hooks/useNetworkStatus";
@@ -44,24 +41,6 @@ export const AppThemeContext = createContext<AppTheme>({
   mode: "light",
   colors: getColors("light"),
 });
-
-const getNavigationTheme = (mode: "light" | "dark") => {
-  const colors = getColors(mode);
-  const baseTheme = mode === "dark" ? DarkTheme : DefaultTheme;
-
-  return {
-    ...baseTheme,
-    colors: {
-      ...baseTheme.colors,
-      primary: colors.primary,
-      background: colors.background,
-      card: colors.surface,
-      text: colors.textPrimary,
-      border: colors.border,
-      notification: colors.secondary,
-    },
-  };
-};
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const hasHydratedSettingsRef = useRef(false);
@@ -92,6 +71,12 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const setSeferMode = useAppStore((state: AppState) => state.setSeferMode);
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
   const setHebrewOnly = useAppStore((state: AppState) => state.setHebrewOnly);
+  const translationOnly = useAppStore(
+    (state: AppState) => state.translationOnly,
+  );
+  const setTranslationOnly = useAppStore(
+    (state: AppState) => state.setTranslationOnly,
+  );
   const bookmarks = useAppStore((state: AppState) => state.bookmarks);
   const setBookmarks = useAppStore((state: AppState) => state.setBookmarks);
   const currentVerseId = useAppStore(
@@ -134,6 +119,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
           savedShowFullChapter,
           savedSeferMode,
           savedHebrewOnly,
+          savedTranslationOnly,
           savedVerseId,
         ] = await Promise.all([
           loadThemeMode(),
@@ -144,6 +130,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
           loadShowFullChapter(),
           loadSeferMode(),
           loadHebrewOnly(),
+          loadTranslationOnly(),
           loadCurrentVerseId(),
         ]);
         setThemeMode(savedTheme);
@@ -153,6 +140,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
         setShowQumran(savedShowQumran);
         setShowFullChapter(savedShowFullChapter);
         setHebrewOnly(savedHebrewOnly);
+        setTranslationOnly(savedTranslationOnly);
         setSeferMode(savedSeferMode);
         if (savedVerseId) {
           setCurrentVerseId(savedVerseId);
@@ -172,6 +160,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     setShowFullChapter,
     setSeferMode,
     setHebrewOnly,
+    setTranslationOnly,
     setCurrentVerseId,
   ]);
 
@@ -273,6 +262,13 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     if (!shouldPersistSettings()) {
       return;
     }
+    saveTranslationOnly(translationOnly);
+  }, [translationOnly]);
+
+  useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
     saveBookmarks(bookmarks);
   }, [bookmarks]);
 
@@ -284,10 +280,6 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   }, [currentVerseId]);
 
   return (
-    <AppThemeContext.Provider value={value}>
-      <ThemeProvider value={getNavigationTheme(themeMode)}>
-        {children}
-      </ThemeProvider>
-    </AppThemeContext.Provider>
+    <AppThemeContext.Provider value={value}>{children}</AppThemeContext.Provider>
   );
 };

@@ -101,6 +101,7 @@ export const getDssCommentaryForLanguage = (
 export const shouldHideSuperscripts = (
   translationKey: TranslationKey,
 ): boolean => {
-  // TTH (Spanish) and TS2009 (English) embed footnote markers that we hide in UI
-  return translationKey === "tth" || translationKey === "ts2009";
+  // TS2009 embeds numeric superscripts that are currently not interactive in UI.
+  // TTH markers remain visible so the mobile app can render tappable footnotes.
+  return translationKey === "ts2009";
 };

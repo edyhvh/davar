@@ -22,6 +22,7 @@ interface FullChapterViewProps {
 	chapter: number;
 	language: "en" | "es" | "he";
 	hebrewOnly: boolean;
+	translationOnly?: boolean;
 	seferMode?: boolean;
 	onWordClick: (word: WordResponse) => void;
 	showQumran?: boolean;
@@ -35,6 +36,7 @@ export function FullChapterView({
 	verses,
 	language,
 	hebrewOnly,
+	translationOnly = false,
 	seferMode = false,
 	onWordClick,
 	showQumran,
@@ -44,10 +46,11 @@ export function FullChapterView({
 	isBesorah = false,
 }: FullChapterViewProps) {
 	const { t } = useTranslation(language);
-	const shouldShowSefer = seferMode && hebrewOnly;
+	const shouldShowSefer = seferMode && (hebrewOnly || translationOnly);
 	const spanishMissingTranslation = t("verse.missingSpanishTranslation");
 	const hideSuperscripts = shouldHideSuperscripts(getTranslationKey(language));
-	const hideTranslationText = shouldHideTranslationText(language, hebrewOnly);
+	const hideTranslationText =
+		shouldHideTranslationText(language, hebrewOnly) && !translationOnly;
 
 	const normalizeForMatch = (text: string) => {
 		let normalized = stripNikud(text);
@@ -147,33 +150,73 @@ export function FullChapterView({
 			{/* Chapter Verses */}
 			{shouldShowSefer ? (
 				<div className="px-2">
-					<div
-						className="leading-relaxed tracking-[0.01em]"
-						style={{
-							fontFamily: "'Cardo', serif",
-							fontSize: "48px",
-							direction: "rtl",
-							color: "var(--text-hebrew)",
-							lineHeight: 1.9,
-							letterSpacing: "0.01em",
-						}}
-					>
-						{verses.map((verse, idx) => (
-							<span key={verse.verse}>
-								<span
-									className="text-[var(--text-secondary)] opacity-40 ml-2"
-									style={{
-										fontFamily: "'Inter', sans-serif",
-										fontSize: "14px",
-									}}
-								>
-									[{idx + 1}]
+					{translationOnly ? (
+						<div className="leading-relaxed">
+							{verses.map((verse, idx) => (
+								<span key={verse.verse}>
+									<span
+										style={{
+											fontFamily: "'Inter', sans-serif",
+											fontSize: "16px",
+											letterSpacing: "0.08em",
+											textTransform: "uppercase",
+											color: "var(--text-hebrew)",
+											opacity: 0.68,
+											marginRight: "8px",
+										}}
+									>
+										{verse.verse}
+									</span>
+									<span
+										style={{
+											fontFamily: "'Inter', sans-serif",
+											fontSize: "26px",
+											color: "var(--text-hebrew)",
+											opacity: 1,
+											fontWeight: 400,
+										}}
+									>
+										{language === "es" && !(verse.translation ?? "").trim()
+											? spanishMissingTranslation
+											: renderTranslation(verse.translation ?? "", {
+													hideSuperscripts,
+													footnotes:
+														language === "es" ? verse.translation_footnotes : undefined,
+												})}
+									</span>
+									{idx < verses.length - 1 && " "}
 								</span>
-								{renderVerseWords(verse)}
-								{idx < verses.length - 1 && " "}
-							</span>
-						))}
-					</div>
+							))}
+						</div>
+					) : (
+						<div
+							className="leading-relaxed tracking-[0.01em]"
+							style={{
+								fontFamily: "'Cardo', serif",
+								fontSize: "48px",
+								direction: "rtl",
+								color: "var(--text-hebrew)",
+								lineHeight: 1.9,
+								letterSpacing: "0.01em",
+							}}
+						>
+							{verses.map((verse, idx) => (
+								<span key={verse.verse}>
+									<span
+										className="text-[var(--text-secondary)] opacity-40 ml-2"
+										style={{
+											fontFamily: "'Inter', sans-serif",
+											fontSize: "14px",
+										}}
+									>
+										[{idx + 1}]
+									</span>
+									{renderVerseWords(verse)}
+									{idx < verses.length - 1 && " "}
+								</span>
+							))}
+						</div>
+					)}
 				</div>
 			) : (
 				<div className="space-y-8 px-2">
@@ -183,44 +226,78 @@ export function FullChapterView({
 							className="space-y-3 transition-all duration-300 verse-block"
 						>
 							{/* Hebrew Text with Verse Number */}
-							<div
-								className="leading-relaxed tracking-[0.01em]"
-								style={{
-									fontFamily: "'Cardo', serif",
-									fontSize: "48px",
-									direction: "rtl",
-									color: "var(--text-hebrew)",
-									lineHeight: 1.85,
-								}}
-							>
-								<span
-									className="text-[var(--text-secondary)] opacity-40 ml-2"
+							{!translationOnly && (
+								<div
+									className="leading-relaxed tracking-[0.01em]"
 									style={{
-										fontFamily: "'Inter', sans-serif",
-										fontSize: "14px",
+										fontFamily: "'Cardo', serif",
+										fontSize: "48px",
+										direction: "rtl",
+										color: "var(--text-hebrew)",
+										lineHeight: 1.85,
 									}}
 								>
-									[{idx + 1}]
-								</span>
-								{renderVerseWords(verse)}
-							</div>
+									<span
+										className="text-[var(--text-secondary)] opacity-40 ml-2"
+										style={{
+											fontFamily: "'Inter', sans-serif",
+											fontSize: "14px",
+										}}
+									>
+										[{idx + 1}]
+									</span>
+									{renderVerseWords(verse)}
+								</div>
+							)}
 
 							{/* Translation - only show if not Hebrew Only mode */}
 							{!hideTranslationText && (
 								<div
-									className="text-[var(--text-secondary)] leading-relaxed"
+									className="leading-relaxed"
 									style={{
 										fontFamily: "'Inter', sans-serif",
-										fontSize: "15px",
+										fontSize: translationOnly ? "22px" : "15px",
+										color: translationOnly
+											? "var(--text-hebrew)"
+											: "var(--text-secondary)",
+										opacity: 1,
 									}}
 								>
-									[
-									{language === "es" && !(verse.translation ?? "").trim()
-										? spanishMissingTranslation
-										: renderTranslation(verse.translation ?? "", {
-												hideSuperscripts,
-											})}
-									]
+									{translationOnly ? (
+										<>
+											<span
+												style={{
+													fontSize: "15px",
+													letterSpacing: "0.08em",
+													textTransform: "uppercase",
+													color: "var(--text-hebrew)",
+													opacity: 0.68,
+													marginRight: "8px",
+												}}
+											>
+												{verse.verse}
+											</span>
+											{language === "es" && !(verse.translation ?? "").trim()
+												? spanishMissingTranslation
+												: renderTranslation(verse.translation ?? "", {
+														hideSuperscripts,
+														footnotes:
+															translationOnly && language === "es"
+																? verse.translation_footnotes
+																: undefined,
+													})}
+										</>
+									) : (
+										<>
+											[
+											{language === "es" && !(verse.translation ?? "").trim()
+												? spanishMissingTranslation
+												: renderTranslation(verse.translation ?? "", {
+														hideSuperscripts,
+													})}
+											]
+										</>
+									)}
 								</div>
 							)}
 						</div>
