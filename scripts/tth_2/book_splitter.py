@@ -16,6 +16,7 @@ Author: Davar Project
 """
 
 import re
+import hashlib
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Set
 try:
@@ -269,6 +270,7 @@ class TTH2BookSplitter:
         output_path.mkdir(parents=True, exist_ok=True)
 
         extracted_books = {}
+        extracted_book_hashes: Dict[str, List[str]] = {}
 
         for book_key in books_to_extract:
             try:
@@ -282,12 +284,27 @@ class TTH2BookSplitter:
                     f.write(book_text)
 
                 extracted_books[book_key] = str(output_file)
+                content_hash = hashlib.sha256(
+                    book_text.encode('utf-8')).hexdigest()
+                extracted_book_hashes.setdefault(content_hash, []).append(book_key)
                 if verbose:
                     print(f"  ✓ {book_key}")
 
             except ValueError:
                 # Silently skip books not found in this document
                 continue
+
+        duplicate_groups = [
+            sorted(book_keys)
+            for book_keys in extracted_book_hashes.values()
+            if len(book_keys) > 1
+        ]
+        if duplicate_groups:
+            collisions = '; '.join(', '.join(group) for group in duplicate_groups)
+            raise ValueError(
+                f"Detected identical extracted content across books: {collisions}. "
+                "This usually means a header pattern collision in BOOKS_INFO."
+            )
 
         return extracted_books
 

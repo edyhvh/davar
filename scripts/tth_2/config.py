@@ -266,7 +266,7 @@ BOOKS_INFO = {
         'patterns': [
             r'HOSHEA.*?הושע',
             r'__HOSHEA.*?הושע__',
-            r'הושע',
+            r'(?<![\u0590-\u05FF])הושע(?![\u0590-\u05FF])',
         ],
     },
     'ioel': {
