@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"target": "ES2022",
 		"lib": ["DOM", "DOM.Iterable", "ES2022"],
-		"types": ["bun"],
+		"types": ["bun", "node"],
 		"module": "Preserve",
 		"moduleResolution": "Bundler",
 		"jsx": "react-jsx",
@@ -16,5 +16,5 @@
 		},
 		"skipLibCheck": true
 	},
-	"include": ["src", "server.ts", "../shared/**/*.ts"]
+	"include": ["src", "scripts/**/*.ts", "server.ts", "build.ts", "../shared/**/*.ts"]
 }

@@ -13,6 +13,7 @@
 		"dev:static": "bun run build:dev && bun run serve",
 		"dev:hot": "bun ./scripts/dev-hot.ts",
 		"serve": "bun --env-file=.env ./server.ts",
+		"serve:mobile": "BUN_IDLE_TIMEOUT=0 bun --env-file=.env ./server.ts",
 		"test": "bun test",
 		"test:static-data": "bun test src/app/services/staticData.test.js",
 		"test:connectivity:supabase": "RUN_SUPABASE_CONNECTIVITY_TEST=1 bun test src/app/services/staticData.test.js",
