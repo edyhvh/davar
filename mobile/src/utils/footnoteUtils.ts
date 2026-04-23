@@ -1,5 +1,7 @@
 import type { TranslationFootnote } from "@/src/types/api";
 
+export const DEFAULT_FOOTNOTE_MARKER_COLOR = "#B4834D";
+
 export const sanitizeEmTags = (value: string): string =>
   value.replace(/<\/?em>/gi, "");
 

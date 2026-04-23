@@ -69,6 +69,7 @@ import {
   sanitizeEmTags,
   buildMarkerRegex,
   createFootnoteLookup,
+  DEFAULT_FOOTNOTE_MARKER_COLOR,
 } from "@/src/utils/footnoteUtils";
 
 const SWIPE_HINT_MAX_SHOWS = 5;
@@ -80,7 +81,7 @@ const renderTranslationSegment = (
   footnoteLookup: Map<string, TranslationFootnote>,
   onFootnotePress?: (footnote: TranslationFootnote) => void,
   isItalic = false,
-  markerColor = "#B4834D",
+  markerColor = DEFAULT_FOOTNOTE_MARKER_COLOR,
 ): ReactNode[] => {
   const sanitized = sanitizeEmTags(text);
   if (!sanitized) {
@@ -141,7 +142,7 @@ const renderTranslationFlowText = (
   translation: string,
   footnotes?: TranslationFootnote[],
   onFootnotePress?: (footnote: TranslationFootnote) => void,
-  markerColor = "#B4834D",
+  markerColor = DEFAULT_FOOTNOTE_MARKER_COLOR,
 ): ReactNode[] => {
   const footnoteLookup = createFootnoteLookup(footnotes);
   const markerRegex = buildMarkerRegex(footnoteLookup);
