@@ -1,4 +1,4 @@
-import { type JSX, type ReactNode, useMemo, useState } from "react";
+import { type ReactNode, useMemo, useState } from "react";
 import {
   Modal,
   Platform,
@@ -27,56 +27,11 @@ import {
 import { useTranslation } from "@/src/i18n/useTranslation";
 import { shouldHideTranslationText } from "@/src/utils/translationConfig";
 import { getTranslationDisplayText } from "@/src/utils/translationDisplay";
-
-const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
-
-const escapeRegex = (value: string) =>
-  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const SUPERSCRIPT_DIGITS: Record<string, string> = {
-  "0": "⁰",
-  "1": "¹",
-  "2": "²",
-  "3": "³",
-  "4": "⁴",
-  "5": "⁵",
-  "6": "⁶",
-  "7": "⁷",
-  "8": "⁸",
-  "9": "⁹",
-};
-
-const toSuperscriptNumber = (value: string): string =>
-  value
-    .split("")
-    .map((digit) => SUPERSCRIPT_DIGITS[digit] ?? digit)
-    .join("");
-
-const createFootnoteLookup = (
-  footnotes?: TranslationFootnote[],
-): Map<string, TranslationFootnote> => {
-  const lookup = new Map<string, TranslationFootnote>();
-
-  if (!footnotes?.length) {
-    return lookup;
-  }
-
-  for (const footnote of footnotes) {
-    const marker = footnote.marker.trim();
-    const number = footnote.number.trim();
-
-    if (marker) {
-      lookup.set(marker, footnote);
-      lookup.set(`[${marker}]`, footnote);
-    }
-
-    if (number) {
-      lookup.set(toSuperscriptNumber(number), footnote);
-    }
-  }
-
-  return lookup;
-};
+import {
+  sanitizeEmTags,
+  buildMarkerRegex,
+  createFootnoteLookup,
+} from "@/src/utils/footnoteUtils";
 
 type RenderTranslationOptions = {
   italicStyle: StyleProp<TextStyle>;
@@ -161,13 +116,7 @@ const renderTranslationWithItalics = (
   let match: RegExpExecArray | null;
   let index = 0;
 
-  const markers = Array.from(footnoteLookup.keys()).sort(
-    (a, b) => b.length - a.length,
-  );
-  const markerRegex =
-    markers.length > 0
-      ? new RegExp(`(${markers.map((marker) => escapeRegex(marker)).join("|")})`, "g")
-      : null;
+  const markerRegex = buildMarkerRegex(footnoteLookup);
 
   while ((match = emPattern.exec(translation)) !== null) {
     const start = match.index;

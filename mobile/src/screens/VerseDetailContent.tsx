@@ -65,58 +65,13 @@ import {
   saveSwipeUpHintCount,
 } from "@/src/services/storage";
 import { formatBookDisplayName } from "../utils/bookNameFormatter";
+import {
+  sanitizeEmTags,
+  buildMarkerRegex,
+  createFootnoteLookup,
+} from "@/src/utils/footnoteUtils";
 
 const SWIPE_HINT_MAX_SHOWS = 5;
-
-const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
-
-const escapeRegex = (value: string) =>
-  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const SUPERSCRIPT_DIGITS: Record<string, string> = {
-  "0": "⁰",
-  "1": "¹",
-  "2": "²",
-  "3": "³",
-  "4": "⁴",
-  "5": "⁵",
-  "6": "⁶",
-  "7": "⁷",
-  "8": "⁸",
-  "9": "⁹",
-};
-
-const toSuperscriptNumber = (value: string): string =>
-  value
-    .split("")
-    .map((digit) => SUPERSCRIPT_DIGITS[digit] ?? digit)
-    .join("");
-
-const createFootnoteLookup = (
-  footnotes?: TranslationFootnote[],
-): Map<string, TranslationFootnote> => {
-  const lookup = new Map<string, TranslationFootnote>();
-
-  if (!footnotes?.length) {
-    return lookup;
-  }
-
-  for (const footnote of footnotes) {
-    const marker = footnote.marker.trim();
-    const number = footnote.number.trim();
-
-    if (marker) {
-      lookup.set(marker, footnote);
-      lookup.set(`[${marker}]`, footnote);
-    }
-
-    if (number) {
-      lookup.set(toSuperscriptNumber(number), footnote);
-    }
-  }
-
-  return lookup;
-};
 
 const renderTranslationSegment = (
   text: string,
@@ -125,6 +80,7 @@ const renderTranslationSegment = (
   footnoteLookup: Map<string, TranslationFootnote>,
   onFootnotePress?: (footnote: TranslationFootnote) => void,
   isItalic = false,
+  markerColor = "#B4834D",
 ): ReactNode[] => {
   const sanitized = sanitizeEmTags(text);
   if (!sanitized) {
@@ -157,7 +113,7 @@ const renderTranslationSegment = (
           key={`${keyPrefix}-marker-${i}`}
           onPress={onFootnotePress ? () => onFootnotePress(footnote) : undefined}
           style={{
-            color: "#B4834D",
+            color: markerColor,
             fontSize: typography.sizes.caption,
           }}
         >
@@ -185,15 +141,10 @@ const renderTranslationFlowText = (
   translation: string,
   footnotes?: TranslationFootnote[],
   onFootnotePress?: (footnote: TranslationFootnote) => void,
+  markerColor = "#B4834D",
 ): ReactNode[] => {
   const footnoteLookup = createFootnoteLookup(footnotes);
-  const markers = Array.from(footnoteLookup.keys()).sort(
-    (a, b) => b.length - a.length,
-  );
-  const markerRegex =
-    markers.length > 0
-      ? new RegExp(`(${markers.map((marker) => escapeRegex(marker)).join("|")})`, "g")
-      : null;
+  const markerRegex = buildMarkerRegex(footnoteLookup);
 
   const segments: ReactNode[] = [];
   const emPattern = /<em>(.*?)<\/em>/gi;
@@ -214,6 +165,8 @@ const renderTranslationFlowText = (
           markerRegex,
           footnoteLookup,
           onFootnotePress,
+          false,
+          markerColor,
         ),
       );
     }
@@ -226,6 +179,7 @@ const renderTranslationFlowText = (
         footnoteLookup,
         onFootnotePress,
         true,
+        markerColor,
       ),
     );
 
@@ -242,6 +196,8 @@ const renderTranslationFlowText = (
         markerRegex,
         footnoteLookup,
         onFootnotePress,
+        false,
+        markerColor,
       ),
     );
   }
@@ -1294,6 +1250,7 @@ export const VerseDetailContent = () => {
                           : (item.translation ?? ""),
                         language === "es" ? item.translation_footnotes : undefined,
                         language === "es" ? setActiveFlowFootnote : undefined,
+                        colors.accentCopper,
                       )}
                       {index < orderedVerses.length - 1 ? " " : ""}
                     </Text>
