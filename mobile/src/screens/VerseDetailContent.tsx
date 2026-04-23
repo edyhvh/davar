@@ -619,7 +619,8 @@ const VersePage = memo(
     prevProps.canSwipePrevious === nextProps.canSwipePrevious &&
     prevProps.canSwipeNext === nextProps.canSwipeNext &&
     prevProps.isBesorah === nextProps.isBesorah &&
-    prevProps.selectedWord === nextProps.selectedWord &&
+    (prevProps.isSelectedVerse ? prevProps.selectedWord : null) ===
+      (nextProps.isSelectedVerse ? nextProps.selectedWord : null) &&
     prevProps.onVersePress === nextProps.onVersePress &&
     prevProps.onWordPress === nextProps.onWordPress &&
     prevProps.onNonHebrewPress === nextProps.onNonHebrewPress &&
@@ -1072,7 +1073,7 @@ export const VerseDetailContent = () => {
         canSwipePrevious={currentIndex > 0}
         canSwipeNext={currentIndex >= 0 && currentIndex < orderedVerses.length - 1}
         isBesorah={isBesorah}
-        selectedWord={selectedWord}
+        selectedWord={item.id === verse?.id ? selectedWord : null}
         onVersePress={handleOpenNavigationSheet}
         onWordPress={handleWordPress}
         onNonHebrewPress={handleTogglePills}
