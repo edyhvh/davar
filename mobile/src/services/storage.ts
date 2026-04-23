@@ -10,6 +10,7 @@ const STORAGE_KEYS = {
   showFullChapter: "davar.showFullChapter",
   seferMode: "davar.seferMode",
   hebrewOnly: "davar.hebrewOnly",
+  translationOnly: "davar.translationOnly",
   wordHintCount: "davar.wordHintCount",
   swipeUpHintCount: "davar.swipeUpHintCount",
   besorahDisclaimerCount: "davar.besorahDisclaimerCount",
@@ -138,6 +139,15 @@ export const loadHebrewOnly = async () => {
 
 export const saveHebrewOnly = async (value: boolean) => {
   await AsyncStorage.setItem(STORAGE_KEYS.hebrewOnly, String(value));
+};
+
+export const loadTranslationOnly = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.translationOnly);
+  return parseBoolean(value, false);
+};
+
+export const saveTranslationOnly = async (value: boolean) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.translationOnly, String(value));
 };
 
 export const loadWordHintCount = async () => {

@@ -27,6 +27,7 @@
     "toggleHebrewOnly": "Toggle Hebrew only",
     "toggleNikud": "Toggle nikud",
     "toggleCantillation": "Toggle cantillation",
+    "toggleTranslationOnly": "Toggle translation only",
     "toggleFullChapter": "Toggle full chapter",
     "toggleSeferStyle": "Toggle sefer style",
     "swipeToNavigate": "Swipe to navigate",
@@ -68,11 +69,16 @@
       "title": "Book Style",
       "subtitle": "Continuous Hebrew scroll layout",
       "warningTitle": "Book requires Hebrew Only",
-      "warningMessage": "Enable Hebrew Only to use Book style."
+      "warningMessage": "Enable Hebrew Only or Translation Only to use Book style."
     },
     "hebrewOnly": {
       "title": "Hebrew Only",
       "subtitle": "Show text in Hebrew only"
+    },
+    "translationOnly": {
+      "title": "Translation Only",
+      "subtitle": "Show translation without Hebrew",
+      "disablesHebrewFeatures": "Disable Translation Only to use Hebrew display options."
     },
     "cantillation": {
       "title": "Cantillation",

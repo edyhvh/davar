@@ -42,6 +42,7 @@ interface VerseDisplayProps {
 	showFullChapter?: boolean;
 	seferMode?: boolean;
 	hebrewOnly?: boolean;
+	translationOnly?: boolean;
 	showNikud?: boolean;
 	showCantillation?: boolean;
 	chapterVerses?: VerseResponse[];
@@ -70,6 +71,7 @@ export function VerseDisplay({
 	showFullChapter = false,
 	seferMode = false,
 	hebrewOnly = false,
+	translationOnly = false,
 	showNikud = true,
 	showCantillation = false,
 	chapterVerses,
@@ -80,12 +82,15 @@ export function VerseDisplay({
 	onSwipeDown,
 	canNavigatePrevious = false,
 	canNavigateNext = false,
+	translation_footnotes,
 	isBesorah = false,
 }: VerseDisplayProps) {
 	const { t } = useTranslation(language);
 	const spanishMissingTranslation = t("verse.missingSpanishTranslation");
 	const hideSuperscripts = shouldHideSuperscripts(getTranslationKey(language));
-	const hideTranslationText = shouldHideTranslationText(language, hebrewOnly);
+	const hideTranslationText =
+		shouldHideTranslationText(language, hebrewOnly) && !translationOnly;
+	const showHebrewText = !translationOnly;
 	const dssInlineFontScale = "1.70em";
 	const dssInlineBaselineShift = "-0.08em";
 	// Function to render Hebrew text with DSS variants
@@ -233,6 +238,7 @@ export function VerseDisplay({
 					chapter={chapter}
 					language={language}
 					hebrewOnly={hebrewOnly}
+					translationOnly={translationOnly}
 					seferMode={seferMode}
 					onWordClick={onWordClick}
 					showQumran={showQumran}
@@ -249,28 +255,30 @@ export function VerseDisplay({
 	return (
 		<div className="space-y-10 relative">
 			{/* Hebrew Text with Verse Number and Onboarding Hint - Large and Centered */}
-			<div
-				className="text-center leading-[2] tracking-[0.01em] relative"
-				style={{
-					fontFamily: "'Cardo', serif",
-					fontSize: "48px",
-					direction: "rtl",
-					color: "var(--text-hebrew)",
-					lineHeight: 1.85,
-					wordSpacing: "0.24em",
-				}}
-			>
-				<span
-					className="text-[var(--text-secondary)] opacity-50 ml-2"
+			{showHebrewText && (
+				<div
+					className="text-center leading-[2] tracking-[0.01em] relative"
 					style={{
-						fontFamily: "'Inter', sans-serif",
-						fontSize: "14px",
+						fontFamily: "'Cardo', serif",
+						fontSize: "48px",
+						direction: "rtl",
+						color: "var(--text-hebrew)",
+						lineHeight: 1.85,
+						wordSpacing: "0.24em",
 					}}
 				>
-					[{verseNumber}]
-				</span>
-				{renderHebrewText()}
-			</div>
+					<span
+						className="text-[var(--text-secondary)] opacity-50 ml-2"
+						style={{
+							fontFamily: "'Inter', sans-serif",
+							fontSize: "14px",
+						}}
+					>
+						[{verseNumber}]
+					</span>
+					{renderHebrewText()}
+				</div>
+			)}
 
 			{/* Translation - Only show if not Hebrew Only mode */}
 			{!hideTranslationText && (
@@ -279,13 +287,37 @@ export function VerseDisplay({
 						className="text-center leading-relaxed px-4 transition-all duration-500 text-[var(--text-primary)]"
 						style={{
 							fontFamily: "'Inter', sans-serif",
-							fontSize: "17px",
+							fontSize: translationOnly ? "26px" : "17px",
+							color: translationOnly
+								? "var(--text-hebrew)"
+								: "var(--text-primary)",
+							opacity: 1,
+							fontWeight: translationOnly ? 400 : undefined,
 						}}
 					>
+						{translationOnly && (
+							<div
+								className="mb-2"
+								style={{
+									fontFamily: "'Inter', sans-serif",
+									fontSize: "16px",
+									letterSpacing: "0.08em",
+									textTransform: "uppercase",
+									color: "var(--text-hebrew)",
+									opacity: 0.7,
+								}}
+							>
+								{verseNumber}
+							</div>
+						)}
 						{language === "es" && !translation.trim()
 							? spanishMissingTranslation
 							: renderTranslation(translation || "", {
 									hideSuperscripts,
+									footnotes:
+										translationOnly && language === "es"
+											? translation_footnotes
+											: undefined,
 								})}
 					</div>
 				</SwipeIndicator>

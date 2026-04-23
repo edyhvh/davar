@@ -266,7 +266,7 @@ BOOKS_INFO = {
         'patterns': [
             r'HOSHEA.*?הושע',
             r'__HOSHEA.*?הושע__',
-            r'הושע',
+            r'(?<![\u0590-\u05FF])הושע(?![\u0590-\u05FF])',
         ],
     },
     'ioel': {
@@ -473,6 +473,26 @@ BOOKS_INFO = {
             r'MISHLEI.*?משלי',
             r'__MISHLEI.*?משלי__',
             r'משלי',
+        ],
+    },
+    'shir_hashirim': {
+        'tth_name': 'Shir Hashirim',
+        'hebrew_name': 'שיר השירים',
+        'english_name': 'Song of Songs',
+        'spanish_name': 'Cantares',
+        'book_code': 'song_of_songs',
+        'expected_chapters': 8,
+        'section': 'ketuvim',
+        'section_hebrew': 'כתובים',
+        'section_english': 'Writings',
+        'section_spanish': 'Escritos',
+        'patterns': [
+            r'KETUVIM\s*-\s*SHIR\s*HASHIRIM.*?שיר\s*השירים',
+            r'SHIR\s*HASHIRIM.*?שיר\s*השירים',
+            r'__SHIR\s*HASHIRIM.*?שיר\s*השירים__',
+            r'CANTAR\s*DE\s*LOS\s*CANTARES.*?שיר\s*השירים',
+            r'CANTARES.*?שיר\s*השירים',
+            r'שיר\s*השירים',
         ],
     },
     'matityahu': {

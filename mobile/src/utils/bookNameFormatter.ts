@@ -8,15 +8,35 @@
 export function formatBookDisplayName(bookName: string): string {
   if (!bookName) return bookName;
 
+  const trimmedName = bookName.trim();
+
+  // Known fused variants that cannot be inferred by casing rules.
+  const fusedMap: Record<string, string> = {
+    songofsolomon: "Song of Solomon",
+    sonofsolomon: "Song of Solomon",
+  };
+  const fusedKey = trimmedName.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const mappedFusedName = fusedMap[fusedKey];
+  if (mappedFusedName) {
+    return mappedFusedName;
+  }
+
   // Match a number at the end of the string (e.g., "John1", "Corinthians2")
-  const match = bookName.match(/^(.+?)(\d+)$/);
+  const match = trimmedName.match(/^(.+?)(\d+)$/);
+
+  let normalized = trimmedName;
 
   if (match) {
     const name = match[1]; // e.g., "John", "Corinthians"
     const number = match[2]; // e.g., "1", "2"
-    return `${number} ${name}`;
+    normalized = `${number} ${name}`;
   }
 
-  // No number suffix, return as-is
-  return bookName;
+  // Add spacing for camel/pascal case names (e.g., "SongOfSolomon").
+  return normalized
+    .replace(/[_-]+/g, " ")
+    .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/\s+/g, " ")
+    .trim();
 }

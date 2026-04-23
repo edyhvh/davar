@@ -38,6 +38,8 @@ interface NavigationBarProps {
 	onNikudChange: (show: boolean) => void;
 	showCantillation: boolean;
 	onCantillationChange: (show: boolean) => void;
+	translationOnly: boolean;
+	onTranslationOnlyChange: (show: boolean) => void;
 }
 
 export function NavigationBar({
@@ -70,6 +72,8 @@ export function NavigationBar({
 	onNikudChange,
 	showCantillation,
 	onCantillationChange,
+	translationOnly,
+	onTranslationOnlyChange,
 }: NavigationBarProps) {
 	const [openMenu, setOpenMenu] = useState<
 		"settings" | "book" | "chapter" | "verse" | null
@@ -186,7 +190,13 @@ export function NavigationBar({
 	const filteredVerses = normalizedVerseSearch
 		? verses.filter((item) => String(item).startsWith(normalizedVerseSearch))
 		: verses;
-	const seferDisabled = !hebrewOnly;
+	const translationOnlyDisablesHebrewOptions = translationOnly;
+
+	useEffect(() => {
+		if (seferMode && openMenu === "verse") {
+			setOpenMenu(null);
+		}
+	}, [seferMode, openMenu]);
 
 	return (
 		<div className="relative" ref={dropdownRef}>
@@ -256,25 +266,29 @@ export function NavigationBar({
 							</span>
 						</button>
 
-						<button
-							type="button"
-							onClick={() => setOpenMenu(openMenu === "verse" ? null : "verse")}
-							className="flex shrink-0 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
-							style={{
-								fontFamily: "'Inter', sans-serif",
-								boxShadow:
-									"inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)",
-								backgroundColor: "var(--neomorph-bg)",
-							}}
-							aria-label={t("navigation.selectVerse")}
-						>
-							<span className="text-[9px] md:text-[10px] tracking-[0.15em] md:tracking-[0.2em] uppercase text-[var(--text-primary)]">
-								{t("navigation.verseShort")}
-							</span>
-							<span className="text-[10px] md:text-[11px] text-[var(--text-primary)]">
-								{verse}
-							</span>
-						</button>
+						{!seferMode && (
+							<button
+								type="button"
+								onClick={() =>
+									setOpenMenu(openMenu === "verse" ? null : "verse")
+								}
+								className="flex shrink-0 items-center gap-1 rounded-full px-2 py-1.5 md:gap-2 md:px-3 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
+								style={{
+									fontFamily: "'Inter', sans-serif",
+									boxShadow:
+										"inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)",
+									backgroundColor: "var(--neomorph-bg)",
+								}}
+								aria-label={t("navigation.selectVerse")}
+							>
+								<span className="text-[9px] md:text-[10px] tracking-[0.15em] md:tracking-[0.2em] uppercase text-[var(--text-primary)]">
+									{t("navigation.verseShort")}
+								</span>
+								<span className="text-[10px] md:text-[11px] text-[var(--text-primary)]">
+									{verse}
+								</span>
+							</button>
+						)}
 					</div>
 
 					<div className="flex shrink-0 items-center gap-1 md:gap-2">
@@ -337,7 +351,9 @@ export function NavigationBar({
 							/>
 						</div>
 
-						<div className="flex items-center justify-between">
+						<div
+							className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
+						>
 							<div className="flex items-center gap-3">
 								<ScrollText className="w-4 h-4 text-[var(--text-secondary)]" />
 								<span
@@ -351,9 +367,15 @@ export function NavigationBar({
 								enabled={showQumran}
 								onToggle={() => onQumranChange(!showQumran)}
 								ariaLabel={t("navigation.toggleQumran")}
+								disabled={translationOnlyDisablesHebrewOptions}
+								disabledReason={t(
+									"settings.translationOnly.disablesHebrewFeatures",
+								)}
 							/>
 						</div>
-						<div className="flex items-center justify-between">
+						<div
+							className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
+						>
 							<div className="flex items-center gap-3">
 								<TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
 								<span
@@ -367,10 +389,16 @@ export function NavigationBar({
 								enabled={showNikud}
 								onToggle={() => onNikudChange(!showNikud)}
 								ariaLabel={t("navigation.toggleNikud")}
+								disabled={translationOnlyDisablesHebrewOptions}
+								disabledReason={t(
+									"settings.translationOnly.disablesHebrewFeatures",
+								)}
 							/>
 						</div>
 
-						<div className="flex items-center justify-between">
+						<div
+							className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
+						>
 							<div className="flex items-center gap-3">
 								<TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
 								<span
@@ -384,6 +412,10 @@ export function NavigationBar({
 								enabled={showCantillation}
 								onToggle={() => onCantillationChange(!showCantillation)}
 								ariaLabel={t("navigation.toggleCantillation")}
+								disabled={translationOnlyDisablesHebrewOptions}
+								disabledReason={t(
+									"settings.translationOnly.disablesHebrewFeatures",
+								)}
 							/>
 						</div>
 
@@ -404,7 +436,9 @@ export function NavigationBar({
 							/>
 						</div>
 
-						<div className="flex items-center justify-between">
+						<div
+							className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
+						>
 							<div className="flex items-center gap-3">
 								<TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
 								<span
@@ -418,6 +452,27 @@ export function NavigationBar({
 								enabled={hebrewOnly}
 								onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
 								ariaLabel={t("navigation.toggleHebrewOnly")}
+								disabled={translationOnlyDisablesHebrewOptions}
+								disabledReason={t(
+									"settings.translationOnly.disablesHebrewFeatures",
+								)}
+							/>
+						</div>
+
+						<div className="flex items-center justify-between">
+							<div className="flex items-center gap-3">
+								<TbLanguageHiragana className="w-4 h-4 text-[var(--text-secondary)]" />
+								<span
+									className="text-sm text-[var(--text-primary)]"
+									style={{ fontFamily: "'Inter', sans-serif" }}
+								>
+									{t("settings.translationOnly.title")}
+								</span>
+							</div>
+							<NeumorphicToggle
+								enabled={translationOnly}
+								onToggle={() => onTranslationOnlyChange(!translationOnly)}
+								ariaLabel={t("navigation.toggleTranslationOnly")}
 							/>
 						</div>
 
@@ -432,20 +487,11 @@ export function NavigationBar({
 										{t("settings.seferStyle.title")}
 									</span>
 								</div>
-								<div className="relative group">
-									<NeumorphicToggle
-										enabled={seferMode}
-										onToggle={() => onSeferModeChange(!seferMode)}
-										ariaLabel={t("navigation.toggleSeferStyle")}
-										disabled={seferDisabled}
-										disabledReason={t("settings.seferStyle.warningMessage")}
-									/>
-									{seferDisabled && (
-										<div className="absolute right-0 mt-2 w-48 rounded-lg bg-[var(--neomorph-bg)] border border-[var(--neomorph-border)] px-3 py-2 text-[10px] text-[var(--text-secondary)] shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
-											{t("settings.seferStyle.warningMessage")}
-										</div>
-									)}
-								</div>
+								<NeumorphicToggle
+									enabled={seferMode}
+									onToggle={() => onSeferModeChange(!seferMode)}
+									ariaLabel={t("navigation.toggleSeferStyle")}
+								/>
 							</div>
 						)}
 

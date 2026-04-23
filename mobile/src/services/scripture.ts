@@ -84,6 +84,27 @@ export type DisplayVerse = {
 const formatBookName = (bookId: string) =>
   bookId.charAt(0).toUpperCase() + bookId.slice(1);
 
+const normalizeBookToken = (value: string): string =>
+  value.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+const TTH_BOOK_KEY_BY_NORMALIZED_TOKEN: Record<string, string> =
+  Object.fromEntries(
+    Object.keys(TTH_BOOK_MAPPING).map((bookKey) => [
+      normalizeBookToken(bookKey),
+      bookKey,
+    ]),
+  );
+
+const resolveTthBookId = (bookId: string): string | undefined => {
+  const canonicalKey = TTH_BOOK_KEY_BY_NORMALIZED_TOKEN[normalizeBookToken(bookId)];
+
+  if (!canonicalKey) {
+    return undefined;
+  }
+
+  return TTH_BOOK_MAPPING[canonicalKey];
+};
+
 type StaticChapterWord = {
   text?: string;
   strong?: string;
@@ -258,7 +279,7 @@ const loadStaticTranslationsForChapter = async (
 
   if (language === "es") {
     // Try TTH_2 first (official Spanish translation)
-    const tthBookId = TTH_BOOK_MAPPING[bookId.charAt(0).toUpperCase() + bookId.slice(1)];
+    const tthBookId = resolveTthBookId(bookId);
     if (tthBookId) {
       try {
         const translationBook = await staticDataRequest<StaticTranslationBook>(

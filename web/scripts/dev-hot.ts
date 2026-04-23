@@ -1,13 +1,31 @@
 import { fileURLToPath } from "node:url";
 
+type RuntimeProcess = {
+	env: Record<string, string | undefined>;
+	on: (signal: "SIGINT" | "SIGTERM", listener: () => void) => void;
+	exit: (exitCode: number) => never;
+};
+
+const runtimeProcess = process as unknown as RuntimeProcess;
+const runtimeEnv = runtimeProcess.env;
+const runtimeExit = (code: number): never => {
+	return runtimeProcess.exit(code);
+};
+
 const webRoot = fileURLToPath(new URL("../", import.meta.url));
-const staticUrl = `http://localhost:${process.env.PORT ?? "3002"}`;
-const appPort = Number(process.env.PORT ?? 3002);
-const appHost = process.env.HOST ?? "0.0.0.0";
-const htmlPort = Number(process.env.HOT_HTML_PORT ?? 3003);
+const appPort = Number(runtimeEnv.PORT ?? 3002);
+const appHost = runtimeEnv.HOST ?? "0.0.0.0";
+const htmlPort = Number(runtimeEnv.HOT_HTML_PORT ?? 3003);
+// Keep the gateway enabled by default so /data JSON is always served in hot mode.
+const useGateway = runtimeEnv.HOT_USE_GATEWAY !== "0";
+// In gateway mode, prefer same-origin data fetches so LAN/mobile clients do not
+// get pinned to localhost. HOT_STATIC_URL can still force an absolute base.
+const staticUrl =
+	runtimeEnv.HOT_STATIC_URL ??
+	(useGateway ? "" : `http://localhost:${appPort}`);
 
 console.log(
-	`[davar-web] dev:hot app-host=${appHost} app-port=${appPort} html-port=${htmlPort} static-base=http://localhost:${appPort}`,
+	`[davar-web] dev:hot app-host=${appHost} app-port=${appPort} html-port=${htmlPort} static-base=${staticUrl || "(same-origin)"} gateway=${useGateway ? "on" : "off"}`,
 );
 
 const ensure = Bun.spawnSync(["bun", "./scripts/ensure-static-data.ts"], {
@@ -17,52 +35,58 @@ const ensure = Bun.spawnSync(["bun", "./scripts/ensure-static-data.ts"], {
 });
 
 if (ensure.exitCode !== 0) {
-	process.exit(ensure.exitCode ?? 1);
+	runtimeExit(ensure.exitCode ?? 1);
 }
 
-const htmlServer = Bun.spawn(["bun", "--env-file=.env", "./index.html"], {
-	cwd: webRoot,
-	env: {
-		...process.env,
-		PORT: String(htmlPort),
-		PUBLIC_STATIC_URL: staticUrl,
+const htmlServer = Bun.spawn(
+	["bun", "--env-file=.env", "./index.html"],
+	{
+		cwd: webRoot,
+		env: {
+			...runtimeEnv,
+			PORT: String(useGateway ? htmlPort : appPort),
+			HOST: appHost,
+			PUBLIC_STATIC_URL: staticUrl,
+		},
+		stdout: "inherit",
+		stderr: "inherit",
 	},
-	stdout: "inherit",
-	stderr: "inherit",
-});
+);
 
-const gatewayServer = Bun.spawn(["bun", "./scripts/dev-hot-gateway.ts"], {
-	cwd: webRoot,
-	env: {
-		...process.env,
-		PORT: String(appPort),
-		HOST: appHost,
-		HOT_HTML_PORT: String(htmlPort),
-		HOT_HTML_HOST: "localhost",
-	},
-	stdout: "inherit",
-	stderr: "inherit",
-});
+const gatewayServer = useGateway
+	? Bun.spawn(["bun", "./scripts/dev-hot-gateway.ts"], {
+			cwd: webRoot,
+			env: {
+				...runtimeEnv,
+				PORT: String(appPort),
+				HOST: appHost,
+				HOT_HTML_PORT: String(htmlPort),
+				HOT_HTML_HOST: "localhost",
+			},
+			stdout: "inherit",
+			stderr: "inherit",
+		})
+	: null;
 
 const shutdown = () => {
 	if (!htmlServer.killed) {
 		htmlServer.kill();
 	}
-	if (!gatewayServer.killed) {
+	if (gatewayServer && !gatewayServer.killed) {
 		gatewayServer.kill();
 	}
 };
 
-process.on("SIGINT", () => {
+runtimeProcess.on("SIGINT", () => {
 	shutdown();
-	process.exit(0);
+	runtimeExit(0);
 });
 
-process.on("SIGTERM", () => {
+runtimeProcess.on("SIGTERM", () => {
 	shutdown();
-	process.exit(0);
+	runtimeExit(0);
 });
 
 const htmlExitCode = await htmlServer.exited;
 shutdown();
-process.exit(htmlExitCode);
+runtimeExit(htmlExitCode);

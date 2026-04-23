@@ -1,11 +1,13 @@
-import { type JSX, useMemo } from "react";
+import { type ReactNode, useMemo, useState } from "react";
 import {
+  Modal,
   Platform,
   Pressable,
   StyleSheet,
   Text,
   View,
   type StyleProp,
+  type TextStyle,
   type ViewStyle,
 } from "react-native";
 
@@ -13,6 +15,7 @@ import { NeumorphCard } from "@/src/components/ui/NeumorphCard";
 import { getColors, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import type { DisplayVerse } from "@/src/services/scripture";
+import type { TranslationFootnote } from "@/src/types/api";
 import {
   getPrefixSegments,
   stripCantillation,
@@ -24,18 +27,96 @@ import {
 import { useTranslation } from "@/src/i18n/useTranslation";
 import { shouldHideTranslationText } from "@/src/utils/translationConfig";
 import { getTranslationDisplayText } from "@/src/utils/translationDisplay";
+import {
+  sanitizeEmTags,
+  buildMarkerRegex,
+  createFootnoteLookup,
+} from "@/src/utils/footnoteUtils";
 
-const sanitizeEmTags = (value: string) => value.replace(/<\/?em>/gi, "");
+type RenderTranslationOptions = {
+  italicStyle: StyleProp<TextStyle>;
+  footnoteMarkerStyle: StyleProp<TextStyle>;
+  footnoteLookup: Map<string, TranslationFootnote>;
+  onFootnotePress?: (footnote: TranslationFootnote) => void;
+};
+
+const renderTextSegment = (
+  text: string,
+  keyPrefix: string,
+  markerRegex: RegExp | null,
+  footnoteLookup: Map<string, TranslationFootnote>,
+  footnoteMarkerStyle: StyleProp<TextStyle>,
+  onFootnotePress?: (footnote: TranslationFootnote) => void,
+  baseStyle?: StyleProp<TextStyle>,
+): ReactNode[] => {
+  const sanitized = sanitizeEmTags(text);
+  if (!sanitized) {
+    return [];
+  }
+
+  if (!markerRegex) {
+    return baseStyle
+      ? [
+          <Text key={`${keyPrefix}-text`} style={baseStyle}>
+            {sanitized}
+          </Text>,
+        ]
+      : [sanitized];
+  }
+
+  const pieces = sanitized.split(markerRegex);
+  const nodes: ReactNode[] = [];
+
+  for (let i = 0; i < pieces.length; i += 1) {
+    const piece = pieces[i];
+    if (!piece) {
+      continue;
+    }
+
+    const footnote = footnoteLookup.get(piece);
+    if (footnote) {
+      nodes.push(
+        <Text
+          key={`${keyPrefix}-marker-${i}`}
+          onPress={onFootnotePress ? () => onFootnotePress(footnote) : undefined}
+          style={[baseStyle, footnoteMarkerStyle]}
+        >
+          {piece}
+        </Text>,
+      );
+      continue;
+    }
+
+    if (baseStyle) {
+      nodes.push(
+        <Text key={`${keyPrefix}-text-${i}`} style={baseStyle}>
+          {piece}
+        </Text>,
+      );
+    } else {
+      nodes.push(piece);
+    }
+  }
+
+  return nodes;
+};
 
 const renderTranslationWithItalics = (
   translation: string,
-  italicStyle: object,
+  {
+    italicStyle,
+    footnoteMarkerStyle,
+    footnoteLookup,
+    onFootnotePress,
+  }: RenderTranslationOptions,
 ) => {
-  const segments: (string | JSX.Element)[] = [];
+  const segments: ReactNode[] = [];
   const emPattern = /<em>(.*?)<\/em>/gi;
   let lastIndex = 0;
   let match: RegExpExecArray | null;
   let index = 0;
+
+  const markerRegex = buildMarkerRegex(footnoteLookup);
 
   while ((match = emPattern.exec(translation)) !== null) {
     const start = match.index;
@@ -43,13 +124,28 @@ const renderTranslationWithItalics = (
     const plainText = translation.slice(lastIndex, start);
 
     if (plainText) {
-      segments.push(sanitizeEmTags(plainText));
+      segments.push(
+        ...renderTextSegment(
+          plainText,
+          `plain-${index}`,
+          markerRegex,
+          footnoteLookup,
+          footnoteMarkerStyle,
+          onFootnotePress,
+        ),
+      );
     }
 
     segments.push(
-      <Text key={`em-${index}`} style={italicStyle}>
-        {match[1]}
-      </Text>,
+      ...renderTextSegment(
+        match[1],
+        `em-${index}`,
+        markerRegex,
+        footnoteLookup,
+        footnoteMarkerStyle,
+        onFootnotePress,
+        italicStyle,
+      ),
     );
 
     lastIndex = end;
@@ -58,7 +154,16 @@ const renderTranslationWithItalics = (
 
   const trailingText = translation.slice(lastIndex);
   if (trailingText) {
-    segments.push(sanitizeEmTags(trailingText));
+    segments.push(
+      ...renderTextSegment(
+        trailingText,
+        "trailing",
+        markerRegex,
+        footnoteLookup,
+        footnoteMarkerStyle,
+        onFootnotePress,
+      ),
+    );
   }
 
   return segments;
@@ -108,6 +213,49 @@ const createStyles = (
     },
     translationItalic: {
       fontStyle: "italic",
+    },
+    translationFootnoteMarker: {
+      color: colors.accentCopper,
+      fontSize: typography.sizes.caption,
+      lineHeight: typography.sizes.caption * typography.lineHeights.body,
+    },
+    footnoteModalOverlay: {
+      flex: 1,
+      backgroundColor: "rgba(0, 0, 0, 0.35)",
+      justifyContent: "center",
+      alignItems: "center",
+      paddingHorizontal: spacing[6],
+    },
+    footnoteModalCard: {
+      width: "100%",
+      maxWidth: 420,
+      borderRadius: 14,
+      paddingHorizontal: spacing[5],
+      paddingVertical: spacing[4],
+      backgroundColor: colors.neomorphBg,
+      borderWidth: 1,
+      borderColor: colors.neomorphBorder,
+    },
+    footnoteModalHeading: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.caption,
+      color: colors.textSecondary,
+      marginBottom: spacing[2],
+      textTransform: "uppercase",
+      letterSpacing: 0.8,
+    },
+    footnoteModalWord: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      color: colors.textPrimary,
+      fontWeight: "600",
+      marginBottom: spacing[2],
+    },
+    footnoteModalText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      lineHeight: typography.sizes.body * typography.lineHeights.body,
+      color: colors.textPrimary,
     },
     hebrewRow: {
       flexDirection: "row-reverse",
@@ -262,12 +410,18 @@ export const VerseCard = ({
   );
   const showQumran = useAppStore((state: AppState) => state.showQumran);
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
+  const translationOnly = useAppStore(
+    (state: AppState) => state.translationOnly,
+  );
   const language = useAppStore((state: AppState) => state.language);
   const showCantillation = useAppStore(
     (state: AppState) => state.showCantillation,
   );
   const showNikud = useAppStore((state: AppState) => state.showNikud);
   const { t } = useTranslation();
+  const [activeFootnote, setActiveFootnote] = useState<TranslationFootnote | null>(
+    null,
+  );
   const colors = getColors(themeMode);
   const styles = useMemo(
     () => createStyles(colors, hebrewFontScale, variant === "detail"),
@@ -278,151 +432,210 @@ export const VerseCard = ({
   // ("verse.missingSpanishTranslation") instead of an empty string so the user
   // knows the translation is pending rather than missing by error.
   const missingSpanishTranslation = t("verse.missingSpanishTranslation");
+  const effectiveTranslationLanguage =
+    translationOnly && language === "he" ? "en" : language;
   const translationText = getTranslationDisplayText({
-    language,
+    language: effectiveTranslationLanguage,
     translation: verse.translation,
     missingTranslationText: missingSpanishTranslation,
-    hebrewOnly,
+    hebrewOnly: hebrewOnly && !translationOnly,
   });
-  const hideTranslationText = shouldHideTranslationText(language, hebrewOnly);
+  const hideTranslationText = shouldHideTranslationText(
+    effectiveTranslationLanguage,
+    hebrewOnly && !translationOnly,
+  );
+  const showHebrewText = !translationOnly;
+  const translationFootnoteLookup = useMemo(
+    () => createFootnoteLookup(verse.translation_footnotes),
+    [verse.translation_footnotes],
+  );
+  const canShowInteractiveFootnotes =
+    effectiveTranslationLanguage === "es" &&
+    translationFootnoteLookup.size > 0;
+  const translationStyleOverrides = translationOnly
+    ? {
+        color: colors.textPrimary,
+        opacity: 0.84,
+        fontSize: typography.sizes.body + 1,
+        lineHeight: (typography.sizes.body + 1) * typography.lineHeights.body,
+      }
+    : null;
 
   const content = (
     <View style={variant === "detail" ? styles.containerDetail : undefined}>
-      <View style={styles.hebrewRow}>
-        {verse.words.map((word, index) => {
-          const wordKey = `${verse.id}-${word.position ?? index}`;
-          const isFirst = index === 0;
-          const shouldHighlight = showWordHint && isFirst;
-          const currentWordPosition = word.position ?? index;
-          const selectedWordPosition = selectedWord?.position;
-          const isSelectedWord =
-            Boolean(selectedWord) &&
-            selectedWordPosition === currentWordPosition &&
-            selectedWord?.text === word.text &&
-            selectedWord?.strong === word.strong;
+      {showHebrewText ? (
+        <View style={styles.hebrewRow}>
+          {verse.words.map((word, index) => {
+            const wordKey = `${verse.id}-${word.position ?? index}`;
+            const isFirst = index === 0;
+            const shouldHighlight = showWordHint && isFirst;
+            const currentWordPosition = word.position ?? index;
+            const selectedWordPosition = selectedWord?.position;
+            const isSelectedWord =
+              Boolean(selectedWord) &&
+              selectedWordPosition === currentWordPosition &&
+              selectedWord?.text === word.text &&
+              selectedWord?.strong === word.strong;
 
-          const hasVisibleQumranVariant = showQumran && Boolean(word.hasQumranVariant);
-          const qumranWord = hasVisibleQumranVariant ? word.dssWord : undefined;
+            const hasVisibleQumranVariant =
+              showQumran && Boolean(word.hasQumranVariant);
+            const qumranWord = hasVisibleQumranVariant
+              ? word.dssWord
+              : undefined;
 
-          // Apply nikud and cantillation settings
-          let displayText =
-            typeof qumranWord === "string" && qumranWord.length > 0
-              ? qumranWord
-              : word.text;
-          if (!showNikud) {
-            displayText = stripNikud(displayText);
-          }
-          if (!showCantillation) {
-            displayText = stripCantillation(displayText);
-          }
-          displayText = stripMeteg(displayText);
-          displayText = displayText.replace(/\//g, "");
-          displayText = removeMaqafForDisplay(displayText);
-          if (isBesorah) {
-            displayText = removeSofPasukForDisplay(displayText);
-          }
+            let displayText =
+              typeof qumranWord === "string" && qumranWord.length > 0
+                ? qumranWord
+                : word.text;
+            if (!showNikud) {
+              displayText = stripNikud(displayText);
+            }
+            if (!showCantillation) {
+              displayText = stripCantillation(displayText);
+            }
+            displayText = stripMeteg(displayText);
+            displayText = displayText.replace(/\//g, "");
+            displayText = removeMaqafForDisplay(displayText);
+            if (isBesorah) {
+              displayText = removeSofPasukForDisplay(displayText);
+            }
 
-          const prefixSegments =
-            hasVisibleQumranVariant || !word.prefixes?.length
-              ? null
-              : getPrefixSegments(displayText, word.prefixes);
+            const prefixSegments =
+              hasVisibleQumranVariant || !word.prefixes?.length
+                ? null
+                : getPrefixSegments(displayText, word.prefixes);
 
-          const wordStyles: StyleProp<ViewStyle>[] = [styles.hebrewWordPressable];
-          if (isSelectedWord) {
-            wordStyles.push(styles.selectedWordPressable);
-          } else if (shouldHighlight) {
-            wordStyles.push(styles.wordHintPressable);
-          }
+            const wordStyles: StyleProp<ViewStyle>[] = [
+              styles.hebrewWordPressable,
+            ];
+            if (isSelectedWord) {
+              wordStyles.push(styles.selectedWordPressable);
+            } else if (shouldHighlight) {
+              wordStyles.push(styles.wordHintPressable);
+            }
 
-          const renderWordContent = () => {
-            if (prefixSegments?.prefixes?.length) {
+            const renderWordContent = () => {
+              if (prefixSegments?.prefixes?.length) {
+                return (
+                  <View style={styles.hebrewPrefixRow}>
+                    <Text
+                      style={[styles.hebrewWord, { color: colors.textSecondary }]}
+                    >
+                      {prefixSegments.prefixes.join("")}
+                    </Text>
+                    <Text
+                      style={[styles.hebrewWord, { color: colors.textPrimary }]}
+                    >
+                      {prefixSegments.root}
+                    </Text>
+                  </View>
+                );
+              }
               return (
-                <View style={styles.hebrewPrefixRow}>
-                  <Text
-                    style={[styles.hebrewWord, { color: colors.textSecondary }]}
+                <Text
+                  style={
+                    hasVisibleQumranVariant
+                      ? [styles.hebrewWord, styles.hebrewWordQumran]
+                      : styles.hebrewWord
+                  }
+                >
+                  {displayText}
+                </Text>
+              );
+            };
+
+            if (isFirst) {
+              return (
+                <View key={wordKey} style={styles.firstWordRow}>
+                  <Pressable
+                    onPressIn={onHebrewPressIn}
+                    onPress={onVersePress}
+                    style={styles.verseNumberPressable}
                   >
-                    {prefixSegments.prefixes.join("")}
-                  </Text>
-                  <Text
-                    style={[styles.hebrewWord, { color: colors.textPrimary }]}
+                    <Text style={styles.verseNumber}>[{verse.verse}]</Text>
+                  </Pressable>
+                  <Pressable
+                    onPressIn={onHebrewPressIn}
+                    onPress={() => onWordPress?.(word)}
+                    hitSlop={8}
+                    style={({ pressed }) => [
+                      ...wordStyles,
+                      pressed ? styles.hebrewWordPressed : null,
+                      pressed && isSelectedWord
+                        ? styles.selectedWordPressed
+                        : null,
+                    ]}
                   >
-                    {prefixSegments.root}
-                  </Text>
+                    {renderWordContent()}
+                  </Pressable>
                 </View>
               );
             }
+
             return (
-              <Text
-                style={
-                  hasVisibleQumranVariant
-                    ? [styles.hebrewWord, styles.hebrewWordQumran]
-                    : styles.hebrewWord
-                }
+              <Pressable
+                key={wordKey}
+                onPressIn={onHebrewPressIn}
+                onPress={() => onWordPress?.(word)}
+                hitSlop={8}
+                style={({ pressed }) => [
+                  ...wordStyles,
+                  pressed ? styles.hebrewWordPressed : null,
+                  pressed && isSelectedWord ? styles.selectedWordPressed : null,
+                ]}
               >
-                {displayText}
-              </Text>
+                {renderWordContent()}
+              </Pressable>
             );
-          };
+          })}
+        </View>
+      ) : null}
 
-          if (isFirst) {
-            return (
-              <View key={wordKey} style={styles.firstWordRow}>
-                <Pressable
-                  onPressIn={onHebrewPressIn}
-                  onPress={onVersePress}
-                  style={styles.verseNumberPressable}
-                >
-                  <Text style={styles.verseNumber}>[{verse.verse}]</Text>
-                </Pressable>
-                <Pressable
-                  onPressIn={onHebrewPressIn}
-                  onPress={() => onWordPress?.(word)}
-                  hitSlop={8}
-                  style={({ pressed }) => [
-                    ...wordStyles,
-                    pressed ? styles.hebrewWordPressed : null,
-                    pressed && isSelectedWord ? styles.selectedWordPressed : null,
-                  ]}
-                >
-                  {renderWordContent()}
-                </Pressable>
-              </View>
-            );
-          }
-
-          return (
-            <Pressable
-              key={wordKey}
-              onPressIn={onHebrewPressIn}
-              onPress={() => onWordPress?.(word)}
-              hitSlop={8}
-              style={({ pressed }) => [
-                ...wordStyles,
-                pressed ? styles.hebrewWordPressed : null,
-                pressed && isSelectedWord ? styles.selectedWordPressed : null,
-              ]}
-            >
-              {renderWordContent()}
-            </Pressable>
-          );
-        })}
-      </View>
       {hideTranslationText ? null : (
-        <Text style={styles.translation}>
-          {/<\/?em>/i.test(translationText)
-            ? renderTranslationWithItalics(
-                translationText,
-                styles.translationItalic,
-              )
-            : translationText}
+        <Text style={[styles.translation, translationStyleOverrides]}>
+          {translationOnly ? `${verse.verse} ` : ""}
+          {renderTranslationWithItalics(translationText, {
+            italicStyle: styles.translationItalic,
+            footnoteMarkerStyle: styles.translationFootnoteMarker,
+            footnoteLookup: translationFootnoteLookup,
+            onFootnotePress: canShowInteractiveFootnotes
+              ? setActiveFootnote
+              : undefined,
+          })}
         </Text>
       )}
     </View>
   );
 
-  return variant === "detail" ? (
-    content
-  ) : (
-    <NeumorphCard>{content}</NeumorphCard>
+  const wrappedContent =
+    variant === "detail" ? content : <NeumorphCard>{content}</NeumorphCard>;
+
+  return (
+    <>
+      {wrappedContent}
+      <Modal
+        animationType="fade"
+        transparent
+        visible={Boolean(activeFootnote)}
+        onRequestClose={() => setActiveFootnote(null)}
+      >
+        <Pressable
+          style={styles.footnoteModalOverlay}
+          onPress={() => setActiveFootnote(null)}
+        >
+          <Pressable
+            style={styles.footnoteModalCard}
+            onPress={(event) => event.stopPropagation()}
+          >
+            {activeFootnote?.word ? (
+              <Text style={styles.footnoteModalWord}>{activeFootnote.word}</Text>
+            ) : null}
+            <Text style={styles.footnoteModalText}>
+              {activeFootnote?.explanation ?? ""}
+            </Text>
+          </Pressable>
+        </Pressable>
+      </Modal>
+    </>
   );
 };

@@ -13,7 +13,7 @@ type DssCommentaryInput = {
 };
 
 // Mapping from canonical English book names to TTH_2 Hebrew file names
-// TTH_2 covers 34 books (Torah, some Neviim, some Ketuvim, some Besorah)
+// TTH_2 covers 35 books (Torah, some Neviim, some Ketuvim, some Besorah)
 export const TTH_BOOK_MAPPING: Record<string, string> = {
   // TORAH
   "Genesis": "bereshit",
@@ -47,6 +47,7 @@ export const TTH_BOOK_MAPPING: Record<string, string> = {
   // KETUVIM (partial in tth_2)
   "Psalms": "tehilim",
   "Proverbs": "mishlei",
+  "SongOfSolomon": "shir_hashirim",
   // BESORAH (tth_2 format)
   "Matthew": "matityahu",
   "Mark": "markos",
@@ -101,6 +102,7 @@ export const getDssCommentaryForLanguage = (
 export const shouldHideSuperscripts = (
   translationKey: TranslationKey,
 ): boolean => {
-  // TTH (Spanish) and TS2009 (English) embed footnote markers that we hide in UI
-  return translationKey === "tth" || translationKey === "ts2009";
+  // TS2009 embeds numeric superscripts that are currently not interactive in UI.
+  // TTH markers remain visible so the mobile app can render tappable footnotes.
+  return translationKey === "ts2009";
 };

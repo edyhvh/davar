@@ -1,4 +1,5 @@
 import React from "react";
+import type { TranslationFootnote } from "../services/verseService";
 
 const superscriptDigitMap: Record<string, string> = {
 	"⁰": "0",
@@ -22,11 +23,48 @@ const normalizeSuperscripts = (value: string): string =>
 		.map((char) => superscriptDigitMap[char] ?? char)
 		.join("");
 
+const toSuperscriptNumber = (value: string): string =>
+	value
+		.split("")
+		.map((char) => {
+			const match = Object.entries(superscriptDigitMap).find(
+				([, digit]) => digit === char,
+			);
+			return match?.[0] ?? char;
+		})
+		.join("");
+
+const buildFootnoteLookup = (
+	footnotes?: TranslationFootnote[],
+): Map<string, TranslationFootnote> => {
+	const lookup = new Map<string, TranslationFootnote>();
+	if (!footnotes?.length) {
+		return lookup;
+	}
+
+	for (const footnote of footnotes) {
+		const marker = footnote.marker.trim();
+		const number = footnote.number.trim();
+
+		if (marker) {
+			lookup.set(marker, footnote);
+			lookup.set(`[${marker}]`, footnote);
+		}
+
+		if (number) {
+			lookup.set(toSuperscriptNumber(number), footnote);
+		}
+	}
+
+	return lookup;
+};
+
 const renderTextSegment = (
 	text: string,
 	italic: boolean,
 	keyPrefix: string,
 	hideSuperscripts: boolean,
+	footnoteLookup: Map<string, TranslationFootnote>,
 ): React.ReactNode[] => {
 	const nodes: React.ReactNode[] = [];
 	let lastIndex = 0;
@@ -87,25 +125,96 @@ const renderTextSegment = (
 		if (!hideSuperscripts) {
 			if (match.type === "superscript") {
 				const normalized = normalizeSuperscripts(match.content);
-				nodes.push(
-					<sup
-						key={`${keyPrefix}-sup-${matchIndex}`}
-						className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
-					>
-						{normalized}
-					</sup>,
-				);
+				const footnote = footnoteLookup.get(match.content);
+				if (footnote) {
+					nodes.push(
+						<span
+							key={`${keyPrefix}-sup-${matchIndex}`}
+							className="group relative inline-flex"
+						>
+							<sup
+								className={`ml-0.5 align-super text-[0.65em] leading-none text-green-600${italic ? " italic" : ""}`}
+							>
+								{normalized}
+							</sup>
+							<span
+								className="pointer-events-none invisible absolute top-full left-1/2 z-30 mt-2 w-[min(300px,78vw)] -translate-x-1/2 rounded-lg border px-2.5 py-1.5 text-left opacity-0 shadow-xl transition-opacity group-hover:visible group-hover:opacity-100"
+								style={{
+									background: "var(--background, #f4f0e8)",
+									borderColor: "var(--neomorph-border, rgba(122, 95, 62, 0.28))",
+									color: "var(--text-primary, #2a2118)",
+									boxShadow:
+										"0 10px 24px rgba(29, 23, 17, 0.24), 0 2px 8px rgba(29, 23, 17, 0.16)",
+								}}
+							>
+								{footnote.word ? (
+									<span className="mb-1 block text-[13px] font-semibold">
+										{footnote.word}
+									</span>
+								) : null}
+								<span className="block text-[12px] leading-snug">
+									{footnote.explanation}
+								</span>
+							</span>
+						</span>,
+					);
+				} else {
+					nodes.push(
+						<sup
+							key={`${keyPrefix}-sup-${matchIndex}`}
+							className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
+						>
+							{normalized}
+						</sup>,
+					);
+				}
 			} else if (match.type === "bracket") {
 				// Render bracket footnotes as superscripts
 				const marker = match.content.slice(1, -1); // Remove brackets
-				nodes.push(
-					<sup
-						key={`${keyPrefix}-bracket-${matchIndex}`}
-						className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
-					>
-						{marker}
-					</sup>,
-				);
+				const footnote =
+					footnoteLookup.get(match.content) ?? footnoteLookup.get(marker);
+				if (footnote) {
+					nodes.push(
+						<span
+							key={`${keyPrefix}-bracket-${matchIndex}`}
+							className="group relative inline-flex"
+						>
+							<sup
+								className={`ml-0.5 align-super text-[0.65em] leading-none text-green-600${italic ? " italic" : ""}`}
+							>
+								{marker}
+							</sup>
+							<span
+								className="pointer-events-none invisible absolute top-full left-1/2 z-30 mt-2 w-[min(300px,78vw)] -translate-x-1/2 rounded-lg border px-2.5 py-1.5 text-left opacity-0 shadow-xl transition-opacity group-hover:visible group-hover:opacity-100"
+								style={{
+									background: "var(--background, #f4f0e8)",
+									borderColor: "var(--neomorph-border, rgba(122, 95, 62, 0.28))",
+									color: "var(--text-primary, #2a2118)",
+									boxShadow:
+										"0 10px 24px rgba(29, 23, 17, 0.24), 0 2px 8px rgba(29, 23, 17, 0.16)",
+								}}
+							>
+								{footnote.word ? (
+									<span className="mb-1 block text-[13px] font-semibold">
+										{footnote.word}
+									</span>
+								) : null}
+								<span className="block text-[12px] leading-snug">
+									{footnote.explanation}
+								</span>
+							</span>
+						</span>,
+					);
+				} else {
+					nodes.push(
+						<sup
+							key={`${keyPrefix}-bracket-${matchIndex}`}
+							className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
+						>
+							{marker}
+						</sup>,
+					);
+				}
 			}
 		}
 
@@ -133,11 +242,15 @@ const renderTextSegment = (
 
 export const renderTranslation = (
 	translation: string,
-	options?: { hideSuperscripts?: boolean },
+	options?: {
+		hideSuperscripts?: boolean;
+		footnotes?: TranslationFootnote[];
+	},
 ): React.ReactNode[] => {
 	if (!translation) return [];
 
-	const { hideSuperscripts = false } = options || {};
+	const { hideSuperscripts = false, footnotes } = options || {};
+	const footnoteLookup = buildFootnoteLookup(footnotes);
 	const tokens = translation
 		.split(/(<\/?em>)/i)
 		.filter((token) => token !== "");
@@ -158,7 +271,13 @@ export const renderTranslation = (
 		}
 
 		nodes.push(
-			...renderTextSegment(token, italic, `seg-${index}`, hideSuperscripts),
+			...renderTextSegment(
+				token,
+				italic,
+				`seg-${index}`,
+				hideSuperscripts,
+				footnoteLookup,
+			),
 		);
 	});
 

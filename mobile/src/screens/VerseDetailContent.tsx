@@ -1,5 +1,6 @@
 import {
   memo,
+  type ReactNode,
   useCallback,
   useContext,
   useEffect,
@@ -11,8 +12,10 @@ import {
   Alert,
   Animated,
   FlatList,
+  Modal,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  Pressable,
   Platform,
   ScrollView,
   StyleSheet,
@@ -48,7 +51,7 @@ import {
 import { BookChapterPill } from "@/src/components/ui/BookChapterPill";
 import { getColors, spacing, typography } from "@/src/theme";
 import { fetchMetadata } from "@/src/services/metadata";
-import type { BookResponse } from "@/src/types/api";
+import type { BookResponse, TranslationFootnote } from "@/src/types/api";
 import {
   fetchChapterVerses,
   type DisplayVerse,
@@ -62,8 +65,146 @@ import {
   saveSwipeUpHintCount,
 } from "@/src/services/storage";
 import { formatBookDisplayName } from "../utils/bookNameFormatter";
+import {
+  sanitizeEmTags,
+  buildMarkerRegex,
+  createFootnoteLookup,
+  DEFAULT_FOOTNOTE_MARKER_COLOR,
+} from "@/src/utils/footnoteUtils";
 
 const SWIPE_HINT_MAX_SHOWS = 5;
+
+const renderTranslationSegment = (
+  text: string,
+  keyPrefix: string,
+  markerRegex: RegExp | null,
+  footnoteLookup: Map<string, TranslationFootnote>,
+  onFootnotePress?: (footnote: TranslationFootnote) => void,
+  isItalic = false,
+  markerColor = DEFAULT_FOOTNOTE_MARKER_COLOR,
+): ReactNode[] => {
+  const sanitized = sanitizeEmTags(text);
+  if (!sanitized) {
+    return [];
+  }
+
+  if (!markerRegex) {
+    return isItalic
+      ? [
+          <Text key={`${keyPrefix}-italic`} style={{ fontStyle: "italic" }}>
+            {sanitized}
+          </Text>,
+        ]
+      : [sanitized];
+  }
+
+  const pieces = sanitized.split(markerRegex);
+  const nodes: ReactNode[] = [];
+
+  for (let i = 0; i < pieces.length; i += 1) {
+    const piece = pieces[i];
+    if (!piece) {
+      continue;
+    }
+
+    const footnote = footnoteLookup.get(piece);
+    if (footnote) {
+      nodes.push(
+        <Text
+          key={`${keyPrefix}-marker-${i}`}
+          onPress={onFootnotePress ? () => onFootnotePress(footnote) : undefined}
+          style={{
+            color: markerColor,
+            fontSize: typography.sizes.caption,
+          }}
+        >
+          {piece}
+        </Text>,
+      );
+      continue;
+    }
+
+    if (isItalic) {
+      nodes.push(
+        <Text key={`${keyPrefix}-text-${i}`} style={{ fontStyle: "italic" }}>
+          {piece}
+        </Text>,
+      );
+    } else {
+      nodes.push(piece);
+    }
+  }
+
+  return nodes;
+};
+
+const renderTranslationFlowText = (
+  translation: string,
+  footnotes?: TranslationFootnote[],
+  onFootnotePress?: (footnote: TranslationFootnote) => void,
+  markerColor = DEFAULT_FOOTNOTE_MARKER_COLOR,
+): ReactNode[] => {
+  const footnoteLookup = createFootnoteLookup(footnotes);
+  const markerRegex = buildMarkerRegex(footnoteLookup);
+
+  const segments: ReactNode[] = [];
+  const emPattern = /<em>(.*?)<\/em>/gi;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let index = 0;
+
+  while ((match = emPattern.exec(translation)) !== null) {
+    const start = match.index;
+    const end = start + match[0].length;
+
+    const plainText = translation.slice(lastIndex, start);
+    if (plainText) {
+      segments.push(
+        ...renderTranslationSegment(
+          plainText,
+          `plain-${index}`,
+          markerRegex,
+          footnoteLookup,
+          onFootnotePress,
+          false,
+          markerColor,
+        ),
+      );
+    }
+
+    segments.push(
+      ...renderTranslationSegment(
+        match[1],
+        `em-${index}`,
+        markerRegex,
+        footnoteLookup,
+        onFootnotePress,
+        true,
+        markerColor,
+      ),
+    );
+
+    lastIndex = end;
+    index += 1;
+  }
+
+  const trailingText = translation.slice(lastIndex);
+  if (trailingText) {
+    segments.push(
+      ...renderTranslationSegment(
+        trailingText,
+        "trailing",
+        markerRegex,
+        footnoteLookup,
+        onFootnotePress,
+        false,
+        markerColor,
+      ),
+    );
+  }
+
+  return segments;
+};
 
 type TabPressEvent = {
   preventDefault: () => void;
@@ -100,6 +241,68 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       fontSize: 10,
       color: colors.textSecondary,
       textAlign: "center",
+    },
+    chapterTranslationScroll: {
+      flex: 1,
+      paddingHorizontal: spacing[6],
+      paddingBottom: spacing[8],
+    },
+    chapterTranslationContent: {
+      paddingTop: spacing[16],
+      paddingBottom: spacing[16],
+    },
+    chapterTranslationFlowText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body + 1,
+      lineHeight: (typography.sizes.body + 1) * typography.lineHeights.body,
+      color: colors.textPrimary,
+      opacity: 0.84,
+    },
+    chapterTranslationVerseNumber: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.caption + 1,
+      color: colors.textPrimary,
+      opacity: 0.68,
+      letterSpacing: 0.8,
+      marginRight: spacing[1],
+    },
+    chapterFootnoteOverlay: {
+      flex: 1,
+      backgroundColor: "rgba(0, 0, 0, 0.35)",
+      justifyContent: "center",
+      alignItems: "center",
+      paddingHorizontal: spacing[6],
+    },
+    chapterFootnoteCard: {
+      width: "100%",
+      maxWidth: 420,
+      borderRadius: 14,
+      paddingHorizontal: spacing[5],
+      paddingVertical: spacing[4],
+      backgroundColor: colors.neomorphBg,
+      borderWidth: 1,
+      borderColor: colors.neomorphBorder,
+    },
+    chapterFootnoteHeading: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.caption,
+      color: colors.textSecondary,
+      marginBottom: spacing[2],
+      textTransform: "uppercase",
+      letterSpacing: 0.8,
+    },
+    chapterFootnoteWord: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      color: colors.textPrimary,
+      fontWeight: "600",
+      marginBottom: spacing[2],
+    },
+    chapterFootnoteText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      lineHeight: typography.sizes.body * typography.lineHeights.body,
+      color: colors.textPrimary,
     },
   });
 
@@ -373,7 +576,8 @@ const VersePage = memo(
     prevProps.canSwipePrevious === nextProps.canSwipePrevious &&
     prevProps.canSwipeNext === nextProps.canSwipeNext &&
     prevProps.isBesorah === nextProps.isBesorah &&
-    prevProps.selectedWord === nextProps.selectedWord &&
+    (prevProps.isSelectedVerse ? prevProps.selectedWord : null) ===
+      (nextProps.isSelectedVerse ? nextProps.selectedWord : null) &&
     prevProps.onVersePress === nextProps.onVersePress &&
     prevProps.onWordPress === nextProps.onWordPress &&
     prevProps.onNonHebrewPress === nextProps.onNonHebrewPress &&
@@ -402,6 +606,13 @@ export const VerseDetailContent = () => {
   );
   const language = useAppStore((state: AppState) => state.language);
   const showQumran = useAppStore((state: AppState) => state.showQumran);
+  const translationOnly = useAppStore(
+    (state: AppState) => state.translationOnly,
+  );
+  const showFullChapter = useAppStore(
+    (state: AppState) => state.showFullChapter,
+  );
+  const seferMode = useAppStore((state: AppState) => state.seferMode);
   const isConnected = useAppStore((state: AppState) => state.isConnected);
   const DEFAULT_VERSE_ID = "genesis-1-1";
   const normalizeVerseId = (value?: string | null) => {
@@ -457,6 +668,8 @@ export const VerseDetailContent = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [booksMeta, setBooksMeta] = useState<BookResponse[]>([]);
+  const [activeFlowFootnote, setActiveFlowFootnote] =
+    useState<TranslationFootnote | null>(null);
 
   const parseVerseId = (id: string) => {
     const [bookId, chapterValue, verseValue] = id.split("-");
@@ -491,6 +704,8 @@ export const VerseDetailContent = () => {
     () => (verse ? orderedVerses.findIndex((item) => item.id === verse.id) : 0),
     [orderedVerses, verse],
   );
+  const isTranslationBookMode =
+    translationOnly && showFullChapter && seferMode;
 
   const [showWordHint] = useState(false);
   const pageHeightRef = useRef(pageHeight);
@@ -815,7 +1030,7 @@ export const VerseDetailContent = () => {
         canSwipePrevious={currentIndex > 0}
         canSwipeNext={currentIndex >= 0 && currentIndex < orderedVerses.length - 1}
         isBesorah={isBesorah}
-        selectedWord={selectedWord}
+        selectedWord={item.id === verse?.id ? selectedWord : null}
         onVersePress={handleOpenNavigationSheet}
         onWordPress={handleWordPress}
         onNonHebrewPress={handleTogglePills}
@@ -862,6 +1077,7 @@ export const VerseDetailContent = () => {
     chapter: 0,
     language: "en" as AppState["language"],
     showQumran: false,
+    translationOnly: false,
     isConnected: true,
   });
   useEffect(() => {
@@ -871,6 +1087,7 @@ export const VerseDetailContent = () => {
       currentLoadRef.current.chapter === chapter &&
       currentLoadRef.current.language === language &&
       currentLoadRef.current.showQumran === showQumran &&
+      currentLoadRef.current.translationOnly === translationOnly &&
       currentLoadRef.current.isConnected === isConnected
     ) {
       return;
@@ -882,6 +1099,7 @@ export const VerseDetailContent = () => {
       chapter,
       language,
       showQumran,
+      translationOnly,
       isConnected,
     };
 
@@ -893,9 +1111,18 @@ export const VerseDetailContent = () => {
       sheetRef.current?.close();
 
       try {
-        const hideTranslations = language === "he";
+        const hideTranslations = !translationOnly && language === "he";
+        const translationLanguage: "en" | "es" | undefined = translationOnly
+          ? language === "es"
+            ? "es"
+            : "en"
+          : hideTranslations
+            ? undefined
+            : language === "es"
+              ? "es"
+              : "en";
         const verses = await fetchChapterVerses(bookId, chapter, {
-          language: hideTranslations ? undefined : language,
+          language: translationLanguage,
           showDss: showQumran,
           hebrewOnly: hideTranslations,
           isConnected,
@@ -906,6 +1133,7 @@ export const VerseDetailContent = () => {
           currentLoadRef.current.chapter !== chapter ||
           currentLoadRef.current.language !== language ||
           currentLoadRef.current.showQumran !== showQumran ||
+          currentLoadRef.current.translationOnly !== translationOnly ||
           currentLoadRef.current.isConnected !== isConnected
         ) {
           return;
@@ -943,7 +1171,7 @@ export const VerseDetailContent = () => {
     return () => {
       isMounted = false;
     };
-  }, [bookId, chapter, language, showQumran, isConnected, t]);
+  }, [bookId, chapter, language, showQumran, translationOnly, isConnected, t]);
 
   return (
     <>
@@ -959,7 +1187,10 @@ export const VerseDetailContent = () => {
             );
           }}
         >
-          <View style={[styles.navigationRow, { top: navigationRowTop }]}>
+          <View
+            style={[styles.navigationRow, { top: navigationRowTop }]}
+            pointerEvents="box-none"
+          >
             <Animated.View
               pointerEvents={pillVisible ? "auto" : "none"}
               style={{
@@ -1001,31 +1232,60 @@ export const VerseDetailContent = () => {
               </Text>
             </View>
           ) : null}
-          <FlatList
-            ref={listRef}
-            data={orderedVerses}
-            keyExtractor={keyExtractor}
-            renderItem={renderVersePage}
-            directionalLockEnabled
-            scrollEnabled={false}
-            showsVerticalScrollIndicator={false}
-            decelerationRate="fast"
-            snapToInterval={pageHeight}
-            snapToAlignment="start"
-            windowSize={5}
-            initialNumToRender={3}
-            maxToRenderPerBatch={4}
-            updateCellsBatchingPeriod={50}
-            initialScrollIndex={Math.max(currentIndex, 0)}
-            getItemLayout={(_, index) => ({
-              length: pageHeight,
-              offset: pageHeight * index,
-              index,
-            })}
-            viewabilityConfig={viewabilityConfigRef.current}
-            onViewableItemsChanged={onViewableItemsChanged.current}
-          />
-          {shouldShowSwipeHint ? (
+          {isTranslationBookMode ? (
+            <ScrollView
+              style={styles.chapterTranslationScroll}
+              contentContainerStyle={styles.chapterTranslationContent}
+              showsVerticalScrollIndicator={false}
+            >
+              <Pressable onPress={handleTogglePills}>
+                <Text style={styles.chapterTranslationFlowText}>
+                  {orderedVerses.map((item, index) => (
+                    <Text key={item.id}>
+                      <Text style={styles.chapterTranslationVerseNumber}>
+                        {item.verse}
+                      </Text>{" "}
+                      {renderTranslationFlowText(
+                        language === "es" && !(item.translation ?? "").trim()
+                          ? t("verse.missingSpanishTranslation")
+                          : (item.translation ?? ""),
+                        language === "es" ? item.translation_footnotes : undefined,
+                        language === "es" ? setActiveFlowFootnote : undefined,
+                        colors.accentCopper,
+                      )}
+                      {index < orderedVerses.length - 1 ? " " : ""}
+                    </Text>
+                  ))}
+                </Text>
+              </Pressable>
+            </ScrollView>
+          ) : (
+            <FlatList
+              ref={listRef}
+              data={orderedVerses}
+              keyExtractor={keyExtractor}
+              renderItem={renderVersePage}
+              directionalLockEnabled
+              scrollEnabled={false}
+              showsVerticalScrollIndicator={false}
+              decelerationRate="fast"
+              snapToInterval={pageHeight}
+              snapToAlignment="start"
+              windowSize={5}
+              initialNumToRender={3}
+              maxToRenderPerBatch={4}
+              updateCellsBatchingPeriod={50}
+              initialScrollIndex={Math.max(currentIndex, 0)}
+              getItemLayout={(_, index) => ({
+                length: pageHeight,
+                offset: pageHeight * index,
+                index,
+              })}
+              viewabilityConfig={viewabilityConfigRef.current}
+              onViewableItemsChanged={onViewableItemsChanged.current}
+            />
+          )}
+          {shouldShowSwipeHint && !isTranslationBookMode ? (
             <View
               pointerEvents="none"
               style={[
@@ -1054,6 +1314,31 @@ export const VerseDetailContent = () => {
         currentVerse={verse?.verse ?? verseNumber}
         onSelectVerse={handleNavigationSelect}
       />
+      <Modal
+        animationType="fade"
+        transparent
+        visible={Boolean(activeFlowFootnote)}
+        onRequestClose={() => setActiveFlowFootnote(null)}
+      >
+        <Pressable
+          style={styles.chapterFootnoteOverlay}
+          onPress={() => setActiveFlowFootnote(null)}
+        >
+          <Pressable
+            style={styles.chapterFootnoteCard}
+            onPress={(event) => event.stopPropagation()}
+          >
+            {activeFlowFootnote?.word ? (
+              <Text style={styles.chapterFootnoteWord}>
+                {activeFlowFootnote.word}
+              </Text>
+            ) : null}
+            <Text style={styles.chapterFootnoteText}>
+              {activeFlowFootnote?.explanation ?? ""}
+            </Text>
+          </Pressable>
+        </Pressable>
+      </Modal>
     </>
   );
 };

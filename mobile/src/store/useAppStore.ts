@@ -29,6 +29,8 @@ export type AppState = {
   setSeferMode: (value: boolean) => void;
   hebrewOnly: boolean;
   setHebrewOnly: (value: boolean) => void;
+  translationOnly: boolean;
+  setTranslationOnly: (value: boolean) => void;
   showCantillation: boolean;
   setShowCantillation: (value: boolean) => void;
   showNikud: boolean;
@@ -68,7 +70,10 @@ export const useAppStore = create<AppState>((set) => ({
   language: getDefaultLanguage(),
   setLanguage: (language) => set({ language }),
   showQumran: false,
-  setShowQumran: (value) => set({ showQumran: value }),
+  setShowQumran: (value) =>
+    set((state) => ({
+      showQumran: state.translationOnly ? false : value,
+    })),
   showFullChapter: false,
   setShowFullChapter: (value) =>
     set((state) => ({
@@ -78,18 +83,40 @@ export const useAppStore = create<AppState>((set) => ({
   seferMode: false,
   setSeferMode: (value) =>
     set((state) => ({
-      seferMode: value && state.showFullChapter && state.hebrewOnly,
+      seferMode:
+        value && state.showFullChapter && (state.hebrewOnly || state.translationOnly),
     })),
   hebrewOnly: false,
   setHebrewOnly: (value) =>
     set((state) => ({
-      hebrewOnly: value,
-      seferMode: value ? state.seferMode : false,
+      hebrewOnly: state.translationOnly ? false : value,
+      seferMode: state.translationOnly
+        ? false
+        : value
+          ? state.seferMode
+          : false,
+    })),
+  translationOnly: false,
+  setTranslationOnly: (value) =>
+    set((state) => ({
+      translationOnly: value,
+      hebrewOnly: value ? false : state.hebrewOnly,
+      showQumran: value ? false : true,
+      showCantillation: value ? false : state.showCantillation,
+      showNikud: value ? false : true,
+      showFullChapter: value ? true : false,
+      seferMode: value ? true : false,
     })),
   showCantillation: false,
-  setShowCantillation: (value) => set({ showCantillation: value }),
+  setShowCantillation: (value) =>
+    set((state) => ({
+      showCantillation: state.translationOnly ? false : value,
+    })),
   showNikud: true,
-  setShowNikud: (value) => set({ showNikud: value }),
+  setShowNikud: (value) =>
+    set((state) => ({
+      showNikud: state.translationOnly ? false : value,
+    })),
   currentVerseId: "genesis-1-1",
   setCurrentVerseId: (id) => set({ currentVerseId: id }),
   bookmarks: [],

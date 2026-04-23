@@ -101,8 +101,19 @@ export default function SettingsScreen() {
   const setLanguage = useAppStore((state: AppState) => state.setLanguage);
   const showQumran = useAppStore((state: AppState) => state.showQumran);
   const setShowQumran = useAppStore((state: AppState) => state.setShowQumran);
+  const setShowFullChapter = useAppStore(
+    (state: AppState) => state.setShowFullChapter,
+  );
+  const seferMode = useAppStore((state: AppState) => state.seferMode);
+  const setSeferMode = useAppStore((state: AppState) => state.setSeferMode);
   const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
   const setHebrewOnly = useAppStore((state: AppState) => state.setHebrewOnly);
+  const translationOnly = useAppStore(
+    (state: AppState) => state.translationOnly,
+  );
+  const setTranslationOnly = useAppStore(
+    (state: AppState) => state.setTranslationOnly,
+  );
   const showCantillation = useAppStore(
     (state: AppState) => state.showCantillation,
   );
@@ -114,6 +125,11 @@ export default function SettingsScreen() {
   const colors = getColors(themeMode);
   const { t, isRTL } = useTranslation();
   const styles = useMemo(() => createStyles(colors, isRTL), [colors, isRTL]);
+  const translationOnlyDisablesHebrewOptions = translationOnly;
+
+  const handleDisabledHebrewOptionPress = () => {
+    Alert.alert(t("settings.translationOnly.title"), t("settings.translationOnly.disablesHebrewFeatures"));
+  };
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["top"]}>
@@ -170,7 +186,12 @@ export default function SettingsScreen() {
         <View style={styles.divider} />
 
         {/* Qumran Variants */}
-        <View style={styles.row}>
+        <View
+          style={[
+            styles.row,
+            translationOnlyDisablesHebrewOptions ? { opacity: 0.55 } : null,
+          ]}
+        >
           <View style={styles.rowContent}>
             <View style={styles.iconContainer}>
               <AppIcon name="scroll" size={18} color={colors.textSecondary} />
@@ -182,16 +203,71 @@ export default function SettingsScreen() {
               </Text>
             </View>
           </View>
-          <OnOffButton value={showQumran} onChange={setShowQumran} />
+          <OnOffButton
+            value={showQumran}
+            onChange={setShowQumran}
+            disabled={translationOnlyDisablesHebrewOptions}
+            onDisabledPress={handleDisabledHebrewOptionPress}
+          />
         </View>
 
         <View style={styles.divider} />
 
-        {/* NOTE: Full Chapter and Sefer Style settings are intentionally removed
-            until the feature is ready for implementation. */}
+        {/* Translation Only */}
+        <View style={styles.row}>
+          <View style={styles.rowContent}>
+            <View style={styles.iconContainer}>
+              <AppIcon name="language" size={18} color={colors.textSecondary} />
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.label}>{t("settings.translationOnly.title")}</Text>
+              <Text style={styles.subtitle}>
+                {t("settings.translationOnly.subtitle")}
+              </Text>
+            </View>
+          </View>
+          <OnOffButton value={translationOnly} onChange={setTranslationOnly} />
+        </View>
+
+        {translationOnly ? (
+          <>
+            <View style={styles.divider} />
+
+            {/* Book Mode (Translation Only) */}
+            <View style={styles.row}>
+              <View style={styles.rowContent}>
+                <View style={styles.iconContainer}>
+                  <AppIcon name="book" size={18} color={colors.textSecondary} />
+                </View>
+                <View style={styles.textContainer}>
+                  <Text style={styles.label}>{t("settings.seferStyle.title")}</Text>
+                  <Text style={styles.subtitle}>
+                    {t("settings.seferStyle.subtitle")}
+                  </Text>
+                </View>
+              </View>
+              <OnOffButton
+                value={seferMode}
+                onChange={(nextValue) => {
+                  setShowFullChapter(nextValue);
+                  setSeferMode(nextValue);
+                }}
+              />
+            </View>
+
+            <View style={styles.divider} />
+          </>
+        ) : (
+          <View style={styles.divider} />
+        )}
 
         {/* Hebrew Only */}
-        <View style={styles.row}>
+        <View
+          style={[
+            styles.row,
+            translationOnlyDisablesHebrewOptions ? { opacity: 0.55 } : null,
+          ]}
+        >
           <View style={styles.rowContent}>
             <View style={styles.iconContainer}>
               <AppIcon name="hebrew" size={18} color={colors.textSecondary} />
@@ -203,13 +279,23 @@ export default function SettingsScreen() {
               </Text>
             </View>
           </View>
-          <OnOffButton value={hebrewOnly} onChange={setHebrewOnly} />
+          <OnOffButton
+            value={hebrewOnly}
+            onChange={setHebrewOnly}
+            disabled={translationOnlyDisablesHebrewOptions}
+            onDisabledPress={handleDisabledHebrewOptionPress}
+          />
         </View>
 
         <View style={styles.divider} />
 
         {/* Cantillation */}
-        <View style={styles.row}>
+        <View
+          style={[
+            styles.row,
+            translationOnlyDisablesHebrewOptions ? { opacity: 0.55 } : null,
+          ]}
+        >
           <View style={styles.rowContent}>
             <View style={styles.iconContainer}>
               <AppIcon name="hebrew" size={18} color={colors.textSecondary} />
@@ -226,13 +312,20 @@ export default function SettingsScreen() {
           <OnOffButton
             value={showCantillation}
             onChange={setShowCantillation}
+            disabled={translationOnlyDisablesHebrewOptions}
+            onDisabledPress={handleDisabledHebrewOptionPress}
           />
         </View>
 
         <View style={styles.divider} />
 
         {/* Nikud */}
-        <View style={styles.row}>
+        <View
+          style={[
+            styles.row,
+            translationOnlyDisablesHebrewOptions ? { opacity: 0.55 } : null,
+          ]}
+        >
           <View style={styles.rowContent}>
             <View style={styles.iconContainer}>
               <AppIcon name="hebrew" size={18} color={colors.textSecondary} />
@@ -244,7 +337,12 @@ export default function SettingsScreen() {
               </Text>
             </View>
           </View>
-          <OnOffButton value={showNikud} onChange={setShowNikud} />
+          <OnOffButton
+            value={showNikud}
+            onChange={setShowNikud}
+            disabled={translationOnlyDisablesHebrewOptions}
+            onDisabledPress={handleDisabledHebrewOptionPress}
+          />
         </View>
 
         <View style={styles.divider} />
@@ -282,6 +380,7 @@ export default function SettingsScreen() {
                       useAppStore.getState().setShowFullChapter(false);
                       useAppStore.getState().setSeferMode(false);
                       useAppStore.getState().setHebrewOnly(false);
+                      useAppStore.getState().setTranslationOnly(false);
                       useAppStore.getState().setLanguage("en");
                       if (themeMode === "dark") {
                         toggleThemeMode();

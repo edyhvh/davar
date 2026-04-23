@@ -6,9 +6,22 @@ const PROD_STATIC_DATA_BASE_URL = "https://davar.bible/data";
 
 const staticDataCache = new Map<string, unknown>();
 
+const STATIC_FETCH_TIMEOUT_MS = Number.parseInt(
+  process.env.EXPO_PUBLIC_STATIC_FETCH_TIMEOUT_MS?.trim() ||
+    (__DEV__ ? "5000" : "12000"),
+  10,
+);
+
 const normalizeBaseUrl = (url: string): string => url.replace(/\/+$/, "");
 
 const LOOPBACK_HOSTS = new Set(["127.0.0.1", "localhost"]);
+
+const uniqueUrls = (urls: string[]): string[] => {
+  const normalized = urls
+    .map((url) => normalizeBaseUrl(url))
+    .filter((url) => url.length > 0);
+  return [...new Set(normalized)];
+};
 
 const getMetroHostCandidate = (): string | null => {
   if (!__DEV__) {
@@ -35,53 +48,106 @@ const getMetroHostCandidate = (): string | null => {
   }
 };
 
-const mapLoopbackForAndroidEmulator = (url: string): string => {
+const expandAndroidLoopbackCandidates = (url: string): string[] => {
+  const normalizedInput = normalizeBaseUrl(url);
+
   if (!__DEV__ || Platform.OS !== "android") {
-    return url;
+    return [normalizedInput];
   }
 
   try {
-    const parsed = new URL(url);
+    const parsed = new URL(normalizedInput);
     if (LOOPBACK_HOSTS.has(parsed.hostname)) {
+      const candidates = [parsed.toString()];
+
+      const localhostCandidate = new URL(parsed.toString());
+      localhostCandidate.hostname = "localhost";
+      candidates.push(localhostCandidate.toString());
+
+      const loopbackCandidate = new URL(parsed.toString());
+      loopbackCandidate.hostname = "127.0.0.1";
+      candidates.push(loopbackCandidate.toString());
+
       const metroHost = getMetroHostCandidate();
       if (metroHost) {
-        parsed.hostname = metroHost;
-        return parsed.toString();
+        const metroCandidate = new URL(parsed.toString());
+        metroCandidate.hostname = metroHost;
+        candidates.push(metroCandidate.toString());
       }
 
-      parsed.hostname = "10.0.2.2";
-      return parsed.toString();
+      const emulatorCandidate = new URL(parsed.toString());
+      emulatorCandidate.hostname = "10.0.2.2";
+      candidates.push(emulatorCandidate.toString());
+
+      return uniqueUrls(candidates);
     }
   } catch {
-    return url;
+    return [normalizedInput];
   }
 
-  return url;
+  return [normalizedInput];
+};
+
+const resolveFirstStaticBaseCandidate = (url: string): string => {
+  return expandAndroidLoopbackCandidates(url)[0] ?? normalizeBaseUrl(url);
 };
 
 const resolveStaticDataBaseUrl = (): string => {
   const configuredDataBase = process.env.EXPO_PUBLIC_STATIC_DATA_BASE_URL?.trim();
   if (configuredDataBase) {
-    return normalizeBaseUrl(mapLoopbackForAndroidEmulator(configuredDataBase));
+    return resolveFirstStaticBaseCandidate(configuredDataBase);
   }
 
   return __DEV__
-    ? normalizeBaseUrl(mapLoopbackForAndroidEmulator(DEV_STATIC_DATA_BASE_URL))
+    ? resolveFirstStaticBaseCandidate(DEV_STATIC_DATA_BASE_URL)
     : normalizeBaseUrl(PROD_STATIC_DATA_BASE_URL);
+};
+
+const buildStaticDataBaseCandidates = (): string[] => {
+  const configuredDataBase = process.env.EXPO_PUBLIC_STATIC_DATA_BASE_URL?.trim();
+  const candidates = [
+    ...(configuredDataBase
+      ? expandAndroidLoopbackCandidates(configuredDataBase)
+      : []),
+    normalizeBaseUrl(PROD_STATIC_DATA_BASE_URL),
+    ...(__DEV__ ? expandAndroidLoopbackCandidates(DEV_STATIC_DATA_BASE_URL) : []),
+  ];
+
+  return uniqueUrls(candidates);
 };
 
 const resolveStaticBundlesBaseUrl = (dataBaseUrl: string): string => {
   const configuredBundlesBase =
     process.env.EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL?.trim();
   if (configuredBundlesBase) {
-    return normalizeBaseUrl(mapLoopbackForAndroidEmulator(configuredBundlesBase));
+    return resolveFirstStaticBaseCandidate(configuredBundlesBase);
   }
 
   return `${normalizeBaseUrl(dataBaseUrl)}/bundles`;
 };
 
+const buildStaticBundlesBaseCandidates = (
+  dataBaseCandidates: string[],
+): string[] => {
+  const configuredBundlesBase =
+    process.env.EXPO_PUBLIC_STATIC_BUNDLES_BASE_URL?.trim();
+
+  const candidates = [
+    ...(configuredBundlesBase
+      ? expandAndroidLoopbackCandidates(configuredBundlesBase)
+      : []),
+    ...dataBaseCandidates.map((base) => `${normalizeBaseUrl(base)}/bundles`),
+  ];
+
+  return uniqueUrls(candidates);
+};
+
 const STATIC_DATA_BASE_URL = resolveStaticDataBaseUrl();
 const STATIC_BUNDLES_BASE_URL = resolveStaticBundlesBaseUrl(STATIC_DATA_BASE_URL);
+const STATIC_DATA_BASE_CANDIDATES = buildStaticDataBaseCandidates();
+const STATIC_BUNDLES_BASE_CANDIDATES = buildStaticBundlesBaseCandidates(
+  STATIC_DATA_BASE_CANDIDATES,
+);
 
 let staticUrlDiagnosticsReported = false;
 
@@ -134,6 +200,22 @@ const wrapFetchNetworkError = (
   );
 };
 
+const fetchWithTimeout = async (requestUrl: string): Promise<Response> => {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), STATIC_FETCH_TIMEOUT_MS);
+
+  try {
+    return await fetch(requestUrl, { signal: controller.signal });
+  } catch (error) {
+    if (error instanceof Error && error.name === "AbortError") {
+      throw new Error(`Network request timed out after ${STATIC_FETCH_TIMEOUT_MS}ms`);
+    }
+    throw error;
+  } finally {
+    clearTimeout(timer);
+  }
+};
+
 const reportStaticUrlDiagnostics = (): void => {
   if (!__DEV__ || staticUrlDiagnosticsReported) {
     return;
@@ -142,7 +224,7 @@ const reportStaticUrlDiagnostics = (): void => {
   staticUrlDiagnosticsReported = true;
   const metroHost = getMetroHostCandidate() ?? "unknown";
   console.info(
-    `[static-data] base=${STATIC_DATA_BASE_URL} bundles=${STATIC_BUNDLES_BASE_URL} platform=${Platform.OS} metroHost=${metroHost}`,
+    `[static-data] base=${STATIC_DATA_BASE_URL} bundles=${STATIC_BUNDLES_BASE_URL} baseCandidates=${STATIC_DATA_BASE_CANDIDATES.join(",")} bundleCandidates=${STATIC_BUNDLES_BASE_CANDIDATES.join(",")} timeoutMs=${STATIC_FETCH_TIMEOUT_MS} platform=${Platform.OS} metroHost=${metroHost}`,
   );
 };
 
@@ -189,32 +271,46 @@ export const staticDataRequest = async <T>(
     return staticDataCache.get(cacheKey) as T;
   }
 
-  const requestUrl = `${STATIC_DATA_BASE_URL}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`;
-  let response: Response;
-  try {
-    response = await fetch(requestUrl);
-  } catch (error) {
-    throw wrapFetchNetworkError(requestUrl, `data ${normalizedPath}`, error);
-  }
-  const contentType = response.headers.get("content-type") || "";
-  const payload = await response.text();
+  const errors: string[] = [];
 
-  if (!response.ok) {
-    const contentTypeLabel = contentType || "unknown";
-    const preview = truncateForError(payload) || "[empty]";
-    throw new Error(
-      `Static data request failed for ${normalizedPath} with status ${response.status} (url: ${requestUrl}, content-type: ${contentTypeLabel}, preview: ${preview})`,
+  for (const baseUrl of STATIC_DATA_BASE_CANDIDATES) {
+    const requestUrl = `${baseUrl}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`;
+    let response: Response;
+    try {
+      response = await fetchWithTimeout(requestUrl);
+    } catch (error) {
+      errors.push(
+        wrapFetchNetworkError(requestUrl, `data ${normalizedPath}`, error)
+          .message,
+      );
+      continue;
+    }
+
+    const contentType = response.headers.get("content-type") || "";
+    const payload = await response.text();
+
+    if (!response.ok) {
+      const contentTypeLabel = contentType || "unknown";
+      const preview = truncateForError(payload) || "[empty]";
+      errors.push(
+        `Static data request failed for ${normalizedPath} with status ${response.status} (url: ${requestUrl}, content-type: ${contentTypeLabel}, preview: ${preview})`,
+      );
+      continue;
+    }
+
+    const parsed = parseStaticJsonPayload<T>(
+      payload,
+      requestUrl,
+      contentType,
+      `data ${normalizedPath}`,
     );
+    staticDataCache.set(cacheKey, parsed as unknown);
+    return parsed;
   }
 
-  const parsed = parseStaticJsonPayload<T>(
-    payload,
-    requestUrl,
-    contentType,
-    `data ${normalizedPath}`,
+  throw new Error(
+    `Static data request failed for ${normalizedPath} on all candidates: ${errors.join(" | ")}`,
   );
-  staticDataCache.set(cacheKey, parsed as unknown);
-  return parsed;
 };
 
 export const staticBundleRequest = async <T>(
@@ -229,28 +325,42 @@ export const staticBundlePathRequest = async <T>(
   reportStaticUrlDiagnostics();
 
   const normalizedPath = relativePath.replace(/^\/+/, "");
-  const requestUrl = `${STATIC_BUNDLES_BASE_URL}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`;
-  let response: Response;
-  try {
-    response = await fetch(requestUrl);
-  } catch (error) {
-    throw wrapFetchNetworkError(requestUrl, `bundle ${normalizedPath}`, error);
-  }
-  const contentType = response.headers.get("content-type") || "";
-  const payload = await response.text();
+  const errors: string[] = [];
 
-  if (!response.ok) {
-    const contentTypeLabel = contentType || "unknown";
-    const preview = truncateForError(payload) || "[empty]";
-    throw new Error(
-      `Static bundle request failed for ${normalizedPath} with status ${response.status} (url: ${requestUrl}, content-type: ${contentTypeLabel}, preview: ${preview})`,
+  for (const baseUrl of STATIC_BUNDLES_BASE_CANDIDATES) {
+    const requestUrl = `${baseUrl}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`;
+    let response: Response;
+    try {
+      response = await fetchWithTimeout(requestUrl);
+    } catch (error) {
+      errors.push(
+        wrapFetchNetworkError(requestUrl, `bundle ${normalizedPath}`, error)
+          .message,
+      );
+      continue;
+    }
+
+    const contentType = response.headers.get("content-type") || "";
+    const payload = await response.text();
+
+    if (!response.ok) {
+      const contentTypeLabel = contentType || "unknown";
+      const preview = truncateForError(payload) || "[empty]";
+      errors.push(
+        `Static bundle request failed for ${normalizedPath} with status ${response.status} (url: ${requestUrl}, content-type: ${contentTypeLabel}, preview: ${preview})`,
+      );
+      continue;
+    }
+
+    return parseStaticJsonPayload<T>(
+      payload,
+      requestUrl,
+      contentType,
+      `bundle ${normalizedPath}`,
     );
   }
 
-  return parseStaticJsonPayload<T>(
-    payload,
-    requestUrl,
-    contentType,
-    `bundle ${normalizedPath}`,
+  throw new Error(
+    `Static bundle request failed for ${normalizedPath} on all candidates: ${errors.join(" | ")}`,
   );
 };

@@ -1,8 +1,7 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 import { useEffect, useCallback } from "react";
-import { StyleSheet } from "react-native";
+import { LogBox, StyleSheet } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import "react-native-reanimated";
 import * as SplashScreen from "expo-splash-screen";
@@ -30,6 +29,20 @@ export const unstable_settings = {
 
 // Keep native splash visible while we prepare the app
 void SplashScreen.preventAutoHideAsync().catch(() => {});
+
+// React Native Animated can emit this benign dev-only warning under some
+// native-driver paths even when UI animations are working correctly.
+LogBox.ignoreLogs([
+  "Sending `onAnimatedValueUpdate` with no listeners registered.",
+]);
+
+const getFocusedRouteName = (route: unknown) => {
+  const state = (route as {
+    state?: { index?: number; routes?: Array<{ name?: string }> };
+  })?.state;
+  const index = state?.index ?? 0;
+  return state?.routes?.[index]?.name;
+};
 
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({
@@ -79,8 +92,7 @@ export default function RootLayout() {
                 <Stack.Screen
                   name="(tabs)"
                   options={({ route }) => {
-                    const focusedTab =
-                      getFocusedRouteNameFromRoute(route) ?? "home";
+                    const focusedTab = getFocusedRouteName(route) ?? "home";
                     const tabTitles: Record<string, string> = {
                       home: t("tabs.home"),
                       verse: t("tabs.verse"),

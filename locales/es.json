@@ -27,6 +27,7 @@
     "toggleHebrewOnly": "Alternar solo hebreo",
     "toggleNikud": "Alternar nikud",
     "toggleCantillation": "Alternar cantilación",
+    "toggleTranslationOnly": "Alternar solo traducción",
     "toggleFullChapter": "Alternar capítulo completo",
     "toggleSeferStyle": "Alternar estilo sefer",
     "swipeToNavigate": "Desliza para navegar",
@@ -68,11 +69,16 @@
       "title": "Estilo de libro",
       "subtitle": "Diseño continuo de rollo hebreo",
       "warningTitle": "Sefer requiere Solo hebreo",
-      "warningMessage": "Activa Solo hebreo para usar el estilo Sefer."
+      "warningMessage": "Activa Solo hebreo o Solo traducción para usar el estilo Sefer."
     },
     "hebrewOnly": {
       "title": "Solo hebreo",
       "subtitle": "Mostrar texto solo en hebreo"
+    },
+    "translationOnly": {
+      "title": "Solo traducción",
+      "subtitle": "Mostrar traducción sin hebreo",
+      "disablesHebrewFeatures": "Desactiva Solo traducción para usar opciones de visualización hebrea."
     },
     "cantillation": {
       "title": "Cantilación",
