@@ -314,10 +314,7 @@ export function VerseDisplay({
 							? spanishMissingTranslation
 							: renderTranslation(translation || "", {
 									hideSuperscripts,
-									footnotes:
-										translationOnly && language === "es"
-											? translation_footnotes
-											: undefined,
+									footnotes: translation_footnotes,
 								})}
 					</div>
 				</SwipeIndicator>

@@ -133,7 +133,7 @@ const renderTextSegment = (
 							className="group relative inline-flex"
 						>
 							<sup
-								className={`ml-0.5 align-super text-[0.65em] leading-none text-green-600${italic ? " italic" : ""}`}
+								className={`ml-0.5 align-super text-[0.55em] leading-none font-bold tabular-nums text-[#4a7c59] dark:text-[#6b9b7a]${italic ? " italic" : ""}`}
 							>
 								{normalized}
 							</sup>
@@ -180,7 +180,7 @@ const renderTextSegment = (
 							className="group relative inline-flex"
 						>
 							<sup
-								className={`ml-0.5 align-super text-[0.65em] leading-none text-green-600${italic ? " italic" : ""}`}
+								className={`ml-0.5 align-super text-[0.55em] leading-none font-bold tabular-nums text-[#4a7c59] dark:text-[#6b9b7a]${italic ? " italic" : ""}`}
 							>
 								{marker}
 							</sup>

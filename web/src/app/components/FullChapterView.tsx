@@ -180,8 +180,7 @@ export function FullChapterView({
 											? spanishMissingTranslation
 											: renderTranslation(verse.translation ?? "", {
 													hideSuperscripts,
-													footnotes:
-														language === "es" ? verse.translation_footnotes : undefined,
+													footnotes: verse.translation_footnotes,
 												})}
 									</span>
 									{idx < verses.length - 1 && " "}
@@ -281,10 +280,7 @@ export function FullChapterView({
 												? spanishMissingTranslation
 												: renderTranslation(verse.translation ?? "", {
 														hideSuperscripts,
-														footnotes:
-															translationOnly && language === "es"
-																? verse.translation_footnotes
-																: undefined,
+														footnotes: verse.translation_footnotes,
 													})}
 										</>
 									) : (
@@ -294,6 +290,7 @@ export function FullChapterView({
 												? spanishMissingTranslation
 												: renderTranslation(verse.translation ?? "", {
 														hideSuperscripts,
+														footnotes: verse.translation_footnotes,
 													})}
 											]
 										</>
