@@ -4,7 +4,7 @@ export type AppLanguage = "en" | "es" | "he";
 export type TranslationKey = "ts2009" | "tth" | "delitzsch";
 
 // Mapping from canonical English book names to TTH_2 Hebrew file names
-// TTH_2 covers 34 books (Torah, some Neviim, some Ketuvim, some Besorah)
+// TTH_2 covers 35 books (Torah, some Neviim, some Ketuvim, some Besorah)
 export const TTH_BOOK_MAPPING: Record<string, string> = {
 	// TORAH
 	Genesis: "bereshit",
@@ -38,6 +38,7 @@ export const TTH_BOOK_MAPPING: Record<string, string> = {
 	// KETUVIM (partial in tth_2)
 	Psalms: "tehilim",
 	Proverbs: "mishlei",
+	SongOfSolomon: "shir_hashirim",
 	// BESORAH (tth_2 format)
 	Matthew: "matityahu",
 	Mark: "markos",

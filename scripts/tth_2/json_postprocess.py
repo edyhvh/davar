@@ -66,6 +66,11 @@ class TTHJsonPostProcessor:
         flags=re.IGNORECASE,
     )
 
+    SHIR_HASHIRIM_ARTIFACT_RE = re.compile(
+        r'\s*Final del cántico\.\s*Inicio del cántico\.?',
+        flags=re.IGNORECASE,
+    )
+
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
         self.stats = {
@@ -259,6 +264,7 @@ class TTHJsonPostProcessor:
         """
         # Pattern: __* *__ or similar combinations
         patterns = [
+            (r'__\s+__', ' '),              # __ __ → space
             (r'__\*\s*\*__', ' '),           # __* *__ → space
             (r'\*__\*\s*\*__', '*'),          # *__* *__ → single asterisk
             (r'__\*\s*\*', ' '),              # __* * → space
@@ -601,6 +607,31 @@ class TTHJsonPostProcessor:
 
         return result
 
+    def cleanup_shir_hashirim_artifacts(self, text: str) -> str:
+        """Remove repeated chant-boundary marker artifacts leaked into verse text."""
+        if not text:
+            return text
+
+        cleaned = self.SHIR_HASHIRIM_ARTIFACT_RE.sub('', text)
+        cleaned = re.sub(r'\s{2,}', ' ', cleaned)
+        cleaned = re.sub(r'\s+([,.;:!?])', r'\1', cleaned)
+        return cleaned.strip()
+
+    def keep_single_word_emphasis_only(self, text: str) -> str:
+        """For problematic sources, unwrap <em> spans that contain more than one word."""
+        if not text or '<em>' not in text:
+            return text
+
+        def maybe_unwrap(match):
+            content = match.group(1).strip()
+            if not content:
+                return content
+            if len(content.split()) > 1:
+                return content
+            return f'<em>{content}</em>'
+
+        return re.sub(r'<em>([^<]+)</em>', maybe_unwrap, text)
+
     def process_text(self, text: str) -> str:
         """
         Apply all processing steps to a text string.
@@ -715,6 +746,17 @@ class TTHJsonPostProcessor:
 
         return verse
 
+    def apply_book_specific_cleanup(self, verse: Dict[str, Any], book_key: str) -> Dict[str, Any]:
+        """Apply scoped cleanup rules for books with known source artifacts."""
+        if 'tth' not in verse or not verse['tth']:
+            return verse
+
+        if book_key == 'shir_hashirim':
+            verse['tth'] = self.cleanup_shir_hashirim_artifacts(verse['tth'])
+            verse['tth'] = self.keep_single_word_emphasis_only(verse['tth'])
+
+        return verse
+
     def process_json_file(self, file_path: Path, dry_run: bool = False, backup: bool = False) -> Tuple[bool, Dict[str, Any]]:
         """
         Process a single JSON file.
@@ -751,6 +793,10 @@ class TTHJsonPostProcessor:
                     if 'verses' in chapter:
                         for i, verse in enumerate(chapter['verses']):
                             chapter['verses'][i] = self.process_verse(verse)
+                            chapter['verses'][i] = self.apply_book_specific_cleanup(
+                                chapter['verses'][i],
+                                file_path.stem,
+                            )
 
                             if is_tehilim and chapter['verses'][i].get('tth'):
                                 cleaned_tth, division = self.extract_tehilim_book_division_marker(

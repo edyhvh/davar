@@ -396,6 +396,25 @@ const findBook = (
 	});
 };
 
+const TTH_BOOK_KEY_BY_NORMALIZED_TOKEN: Record<string, string> =
+	Object.fromEntries(
+		Object.keys(TTH_BOOK_MAPPING).map((bookKey) => [
+			normalizeBookToken(bookKey),
+			bookKey,
+		]),
+	);
+
+const resolveTthBookId = (bookId: string): string | undefined => {
+	const canonicalKey =
+		TTH_BOOK_KEY_BY_NORMALIZED_TOKEN[normalizeBookToken(bookId)];
+
+	if (!canonicalKey) {
+		return undefined;
+	}
+
+	return TTH_BOOK_MAPPING[canonicalKey];
+};
+
 const toDssBookKey = (bookId: string): string => {
 	const dssMap: Record<string, string> = {
 		samuel1: "1samuel",
@@ -489,13 +508,32 @@ const loadCoreChapter = async (
 	}
 };
 
+const SHIR_HASHIRIM_ARTIFACT_RE =
+	/\s*Final del cántico\.\s*Inicio del cántico\.?/gi;
+
+const sanitizeShirHashirimTth = (text?: string): string | undefined => {
+	if (!text) return text;
+
+	const withoutArtifacts = text
+		.replace(SHIR_HASHIRIM_ARTIFACT_RE, "")
+		.replace(/\s{2,}/g, " ")
+		.replace(/\s+([,.;:!?])/g, "$1")
+		.trim();
+
+	// Keep emphasis only for single-token spans.
+	return withoutArtifacts.replace(/<em>([^<]+)<\/em>/g, (_match, content) => {
+		const trimmed = String(content).trim();
+		if (!trimmed) return trimmed;
+		return trimmed.split(/\s+/).length > 1 ? trimmed : `<em>${trimmed}</em>`;
+	});
+};
+
 const loadTranslationChapter = async (
 	bookId: string,
 	chapter: number,
 ): Promise<Record<number, RawTranslationVerse>> => {
 	// Try TTH_2 first (official Spanish translation)
-	const tthBookId =
-		TTH_BOOK_MAPPING[bookId.charAt(0).toUpperCase() + bookId.slice(1)];
+	const tthBookId = resolveTthBookId(bookId);
 	if (tthBookId) {
 		try {
 			const translationBook = await fetchJson<RawTranslationBook>(
@@ -506,8 +544,16 @@ const loadTranslationChapter = async (
 			);
 
 			if (chapterData) {
+				const verses =
+					tthBookId === "shir_hashirim"
+						? chapterData.verses.map((verse) => ({
+								...verse,
+								tth: sanitizeShirHashirimTth(verse.tth),
+							}))
+						: chapterData.verses;
+
 				return Object.fromEntries(
-					chapterData.verses.map((verse) => [verse.verse, verse]),
+					verses.map((verse) => [verse.verse, verse]),
 				);
 			}
 		} catch {
