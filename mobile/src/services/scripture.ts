@@ -141,11 +141,25 @@ type StaticTranslationBook = {
 type StaticDssDifference = {
   position: number;
   dss_word?: string;
+  translit_en?: string;
+  translit_es?: string;
   masoretic_word?: string;
   dss_strong?: string;
   comment_v2_en?: string;
   comment_v2_es?: string;
   comment_v2_he?: string;
+};
+
+type StaticDssTranslitVariant = {
+  chapter?: number;
+  verse?: number;
+  position?: number;
+  translit_en?: string;
+  translit_es?: string;
+};
+
+type StaticDssTranslitBook = {
+  variants?: StaticDssTranslitVariant[];
 };
 
 type StaticDssVerse = {
@@ -201,6 +215,27 @@ const extractBaseStrong = (value?: string): string | undefined => {
   }
 
   return parts.length > 0 ? parts[parts.length - 1] : undefined;
+};
+
+const countDssWordTokens = (value?: string): number => {
+  if (!value) return 0;
+
+  return value
+    .trim()
+    .replace(/[/:]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+};
+
+const isRenderableDssWord = (value?: string): value is string => {
+  if (!value) return false;
+
+  const trimmed = value.trim();
+  if (!trimmed || trimmed.toLowerCase() === "note") {
+    return false;
+  }
+
+  return countDssWordTokens(trimmed) === 1;
 };
 
 const toSortedUniqueVerseNumbers = (values: number[]): number[] =>
@@ -426,6 +461,42 @@ const loadStaticTranslitForChapter = async (
   }
 };
 
+const loadStaticDssTranslitForChapter = async (
+  bookId: string,
+  chapter: number,
+  showDss?: boolean,
+): Promise<Map<string, StaticDssTranslitVariant>> => {
+  const dssTranslitMap = new Map<string, StaticDssTranslitVariant>();
+
+  if (!showDss) {
+    return dssTranslitMap;
+  }
+
+  try {
+    const translitBook = await staticDataRequest<StaticDssTranslitBook>(
+      `translit/dss/${toDssBookKey(bookId)}.json`,
+    );
+
+    for (const variant of translitBook.variants ?? []) {
+      if (variant.chapter !== chapter) {
+        continue;
+      }
+
+      const verse = Number(variant.verse);
+      const position = Number(variant.position);
+      if (!Number.isFinite(verse) || !Number.isFinite(position) || position <= 0) {
+        continue;
+      }
+
+      dssTranslitMap.set(`${verse}:${position}`, variant);
+    }
+  } catch {
+    // DSS transliteration data is optional; fall back to standard transliteration.
+  }
+
+  return dssTranslitMap;
+};
+
 const findFallbackTranslitWord = (
   word: StaticChapterWord,
   translitWords: StaticTranslitWord[],
@@ -459,6 +530,7 @@ const mapStaticVersesToDisplay = (
   translationMap: Map<number, TranslationEntry>,
   dssMap: Map<number, StaticDssDifference[]>,
   translitMap: Map<number, StaticTranslitWord[]>,
+  dssTranslitMap: Map<string, StaticDssTranslitVariant>,
   showDss?: boolean,
 ): DisplayVerse[] => {
   return verses.map((verse) => {
@@ -473,20 +545,33 @@ const mapStaticVersesToDisplay = (
     const words: DisplayWord[] = sourceWords.map((word, index) => {
       const position = index + 1;
       const dssVariant = dssVariantMap.get(position);
+      const hasRenderableQumranVariant = Boolean(
+        dssVariant && isRenderableDssWord(dssVariant.dss_word),
+      );
       const translitWord = canMapTranslitByPosition
         ? translitWords[index]
         : findFallbackTranslitWord(word, translitWords);
+      const dssTranslit = dssTranslitMap.get(`${verse.verse}:${position}`);
+      const prefersDssTranslit = Boolean(showDss && hasRenderableQumranVariant);
+      const dssTranslitEn = dssTranslit?.translit_en ?? dssVariant?.translit_en;
+      const dssTranslitEs = dssTranslit?.translit_es ?? dssVariant?.translit_es;
 
       return {
         position,
         text: word.text ?? "",
         strong: word.strong,
         prefixes: word.prefixes ?? [],
-        hasQumranVariant: Boolean(dssVariant),
+        hasQumranVariant: hasRenderableQumranVariant,
         morph: word.morph,
-        translit_en: word.translit_en ?? translitWord?.translit_en,
-        translit_es: word.translit_es ?? translitWord?.translit_es,
-        dssWord: dssVariant?.dss_word,
+        translit_en: prefersDssTranslit
+          ? dssTranslitEn ?? word.translit_en ?? translitWord?.translit_en
+          : word.translit_en ?? translitWord?.translit_en,
+        translit_es: prefersDssTranslit
+          ? dssTranslitEs ?? word.translit_es ?? translitWord?.translit_es
+          : word.translit_es ?? translitWord?.translit_es,
+        dss_translit_en: dssTranslitEn,
+        dss_translit_es: dssTranslitEs,
+        dssWord: hasRenderableQumranVariant ? dssVariant?.dss_word : undefined,
         dssStrong: dssVariant?.dss_strong,
         dssCommentaryEn: dssVariant?.comment_v2_en,
         dssCommentaryEs: dssVariant?.comment_v2_es,
@@ -514,10 +599,12 @@ const mapStaticVersesToDisplay = (
       words,
       qumranVariants:
         dssVariants.length > 0
-          ? dssVariants.map((variant) => ({
-              position: Math.max(variant.position, 0),
-              dssWord: variant.dss_word ?? "",
-            }))
+          ? dssVariants
+              .filter((variant) => isRenderableDssWord(variant.dss_word))
+              .map((variant) => ({
+                position: Math.max(variant.position, 0),
+                dssWord: variant.dss_word ?? "",
+              }))
           : undefined,
       translation_footnotes: translationEntry?.footnotes,
     };
@@ -566,7 +653,7 @@ const fetchChapterVersesStatic = async (
     sourceVerses.map((verse) => verse.verse),
   );
 
-  const [translationMap, dssMap, translitMap] = await Promise.all([
+  const [translationMap, dssMap, translitMap, dssTranslitMap] = await Promise.all([
     loadStaticTranslationsForChapter(
       bookId,
       chapter,
@@ -576,6 +663,7 @@ const fetchChapterVersesStatic = async (
     ),
     loadStaticDssForChapter(bookId, chapter, options?.showDss),
     loadStaticTranslitForChapter(bookId, chapter),
+    loadStaticDssTranslitForChapter(bookId, chapter, options?.showDss),
   ]);
 
   return mapStaticVersesToDisplay(
@@ -584,6 +672,7 @@ const fetchChapterVersesStatic = async (
     translationMap,
     dssMap,
     translitMap,
+    dssTranslitMap,
     options?.showDss,
   );
 };
@@ -632,17 +721,29 @@ const mapOfflineDataToDisplay = (
         const dssData = dssVariant?.data as
           | Record<string, string | undefined>
           | undefined;
+        const hasRenderableQumranVariant = Boolean(
+          dssData && isRenderableDssWord(dssData.dss_word),
+        );
+        const dssTranslitEn = dssData?.translit_en ?? dssData?.dss_translit_en;
+        const dssTranslitEs = dssData?.translit_es ?? dssData?.dss_translit_es;
+        const prefersDssTranslit = hasRenderableQumranVariant;
 
         return {
           position,
           text: typedWord.text ?? "",
           strong: typedWord.strong,
           prefixes: typedWord.prefixes ?? [],
-          hasQumranVariant: Boolean(dssVariant),
+          hasQumranVariant: hasRenderableQumranVariant,
           morph: typedWord.morph,
-          translit_en: typedWord.translit_en,
-          translit_es: typedWord.translit_es,
-          dssWord: dssData?.dss_word,
+          translit_en: prefersDssTranslit
+            ? dssTranslitEn ?? typedWord.translit_en
+            : typedWord.translit_en,
+          translit_es: prefersDssTranslit
+            ? dssTranslitEs ?? typedWord.translit_es
+            : typedWord.translit_es,
+          dss_translit_en: dssTranslitEn,
+          dss_translit_es: dssTranslitEs,
+          dssWord: hasRenderableQumranVariant ? dssData?.dss_word : undefined,
           dssStrong: dssData?.dss_strong,
           dssCommentaryEn: dssData?.comment_v2_en,
           dssCommentaryEs: dssData?.comment_v2_es,
@@ -650,10 +751,14 @@ const mapOfflineDataToDisplay = (
         };
       });
 
-    const qumranVariants = dssVariants.map((dss) => ({
-      position: Math.max(dss.position, 0),
-      dssWord: (dss.data as Record<string, string>)?.dss_word ?? "",
-    }));
+    const qumranVariants = dssVariants
+      .filter((dss) =>
+        isRenderableDssWord((dss.data as Record<string, string>)?.dss_word),
+      )
+      .map((dss) => ({
+        position: Math.max(dss.position, 0),
+        dssWord: (dss.data as Record<string, string>)?.dss_word ?? "",
+      }));
 
     // Reconstruct hebrew text from words if not stored directly
     const hebrew = words

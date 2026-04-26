@@ -902,6 +902,14 @@ const WordAnalysisBottomSheetComponent = (
           : undefined;
 
     if (activeTab === "qumran") {
+      const qumranTranslitFromWord =
+        language === "en"
+          ? word?.dss_translit_en
+          : language === "es"
+            ? word?.dss_translit_es
+            : undefined;
+      if (qumranTranslitFromWord) return qumranTranslitFromWord;
+
       if (dssStrongNumber && strongNumber && dssStrongNumber === strongNumber) {
         return masoreticTranslit;
       }
@@ -919,6 +927,8 @@ const WordAnalysisBottomSheetComponent = (
     language,
     word?.translit_en,
     word?.translit_es,
+    word?.dss_translit_en,
+    word?.dss_translit_es,
     lexiconEntry?.translit_en,
     lexiconEntry?.translit_es,
     dssLexiconEntry?.translit_en,

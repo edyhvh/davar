@@ -9,6 +9,7 @@ import {
 	removeMaqafForDisplay,
 	removeSofPasukForDisplay,
 	splitLeadingHebrewCluster,
+	stripNikud,
 	stripCantillation,
 	stripMeteg,
 } from "../utils/hebrew";
@@ -139,13 +140,22 @@ export function WordCard({
 		activeTab === "qumran" && displayedData.qumranWord
 			? displayedData.qumranWord
 			: displayedData.word;
-	let displayWord = showNikud
-		? removeMaqafForDisplay(
-				normalizeHebrewDisplay(stripMeteg(stripCantillation(headerWord))),
-			)
-		: removeMaqafForDisplay(
-				normalizeHebrewDisplay(normalizeHebrew(headerWord)),
-			);
+	let displayWord =
+		activeTab === "qumran"
+			? removeMaqafForDisplay(
+					normalizeHebrewDisplay(
+						stripNikud(
+							stripMeteg(stripCantillation(headerWord.replace(/[\u05BE-]/g, " "))),
+						),
+					),
+				)
+			: showNikud
+				? removeMaqafForDisplay(
+						normalizeHebrewDisplay(stripMeteg(stripCantillation(headerWord))),
+					)
+				: removeMaqafForDisplay(
+						normalizeHebrewDisplay(normalizeHebrew(headerWord)),
+					);
 	if (isBesorah) {
 		displayWord = removeSofPasukForDisplay(displayWord);
 	}
@@ -247,9 +257,11 @@ export function WordCard({
 		: displayedData.transliteration;
 	const shouldHideTransliteration = activeStrongNumber === "H3068";
 	const qumranTextColor = "var(--qumran-text)";
+	const qumranFontFamily = "'DeadSeaScrolls-Regular', 'Cardo', serif";
 	const masoreticWordFontSizePx = 64;
 	const masoreticWordFontSize = `${masoreticWordFontSizePx}px`;
 	const qumranWordFontSize = `${Math.round(masoreticWordFontSizePx * 1.5)}px`;
+	const hasMultiWordDisplay = /\s/.test(displayWord);
 
 	useEffect(() => {
 		const loadPrefixEntries = async () => {
@@ -424,14 +436,16 @@ export function WordCard({
 				<div
 					style={{
 						fontFamily: isQumranTab
-							? "'DeadSeaScrolls-Regular', 'Cardo', serif"
+							? qumranFontFamily
 							: "'Cardo', serif",
 						fontSize: isQumranTab ? qumranWordFontSize : masoreticWordFontSize,
 						direction: "rtl",
-						lineHeight: 1.8,
-						letterSpacing: "0.05em",
+						lineHeight: isQumranTab && hasMultiWordDisplay ? 1.35 : 1.8,
+						letterSpacing:
+							isQumranTab && hasMultiWordDisplay ? "0.015em" : "0.05em",
 						fontWeight: 400,
-						wordSpacing: "0.1em",
+						wordSpacing:
+							isQumranTab && hasMultiWordDisplay ? "0.02em" : "0.1em",
 					}}
 				>
 					{prefixSegments.prefixes.length > 0 && !isQumranTab ? (
@@ -892,7 +906,7 @@ export function WordCard({
 									{displayedData.qumranRoot ? (
 										<div
 											style={{
-												fontFamily: "'Cardo', serif",
+												fontFamily: qumranFontFamily,
 												fontSize: "48px",
 												direction: "rtl",
 												color: "var(--text-hebrew)",

@@ -1,3 +1,5 @@
+/// <reference path="../../web/node_modules/@types/node/index.d.ts" />
+
 import { createHash } from "crypto";
 import { mkdir, readdir, readFile, rm, writeFile } from "fs/promises";
 import { extname, join } from "path";
@@ -645,6 +647,81 @@ const generateTs2009Chapters = async (): Promise<{
   };
 };
 
+const DSS_WORD_TOKEN_SPLIT_RE = /[\s\u05BE/-]+/u;
+
+const tokenizeDssWords = (value: unknown): string[] => {
+  if (typeof value !== "string") return [];
+
+  return value
+    .trim()
+    .replace(/[\u05C3.,;:!?()[\]{}'"`]/g, " ")
+    .split(DSS_WORD_TOKEN_SPLIT_RE)
+    .filter(Boolean);
+};
+
+const enrichDssBookForSpanReplacement = (bookData: JsonValue): JsonValue => {
+  if (!isRecord(bookData) || !isRecord(bookData.chapters)) {
+    return bookData;
+  }
+
+  const chapters = bookData.chapters as Record<string, unknown>;
+  const nextChapters: Record<string, unknown> = {};
+
+  for (const [chapterKey, chapterValue] of Object.entries(chapters)) {
+    if (!isRecord(chapterValue) || !isRecord(chapterValue.verses)) {
+      nextChapters[chapterKey] = chapterValue;
+      continue;
+    }
+
+    const verses = chapterValue.verses as Record<string, unknown>;
+    const nextVerses: Record<string, unknown> = {};
+
+    for (const [verseKey, verseValue] of Object.entries(verses)) {
+      if (!isRecord(verseValue) || !Array.isArray(verseValue.differences)) {
+        nextVerses[verseKey] = verseValue;
+        continue;
+      }
+
+      const nextDifferences = verseValue.differences.map((difference) => {
+        if (!isRecord(difference)) {
+          return difference;
+        }
+
+        const masoreticTokenCount = tokenizeDssWords(
+          difference.masoretic_word,
+        ).length;
+        const tokenCount = tokenizeDssWords(difference.dss_word).length;
+        const replacementSpan = Math.max(
+          masoreticTokenCount > 0 ? masoreticTokenCount : tokenCount,
+          1,
+        );
+
+        return {
+          ...difference,
+          token_count: tokenCount,
+          masoretic_token_count: masoreticTokenCount,
+          replacement_span: replacementSpan,
+        };
+      });
+
+      nextVerses[verseKey] = {
+        ...verseValue,
+        differences: nextDifferences,
+      };
+    }
+
+    nextChapters[chapterKey] = {
+      ...chapterValue,
+      verses: nextVerses,
+    };
+  }
+
+  return {
+    ...bookData,
+    chapters: nextChapters,
+  } as JsonValue;
+};
+
 const main = async (): Promise<void> => {
   const generationStartedAt = Date.now();
   console.log("[davar-static-data] phase=generate start");
@@ -679,6 +756,16 @@ const main = async (): Promise<void> => {
     join(WEB_PUBLIC_DATA_ROOT, "translit"),
   );
 
+  // Publish DSS transliteration variants for web Qumran mode.
+  try {
+    await copyFolderJsonFiles(
+      join(DATA_ROOT, "translit", "dss"),
+      join(WEB_PUBLIC_DATA_ROOT, "translit", "dss"),
+    );
+  } catch {
+    // DSS transliteration files are optional in some environments.
+  }
+
   const { dictionaryBundle } = await generateDictionary();
 
   const booksDir = join(DATA_ROOT, "dss", "books");
@@ -687,10 +774,12 @@ const main = async (): Promise<void> => {
   await mkdir(join(WEB_PUBLIC_DATA_ROOT, "dss"), { recursive: true });
   for (const file of dssFiles) {
     const stem = file.replace(/\.json$/i, "");
-    dssBooks[stem] = await readJson<JsonValue>(join(booksDir, file));
+    const dssBookData = await readJson<JsonValue>(join(booksDir, file));
+    const enrichedDssBook = enrichDssBookForSpanReplacement(dssBookData);
+    dssBooks[stem] = enrichedDssBook;
     await writeFile(
       join(WEB_PUBLIC_DATA_ROOT, "dss", file),
-      JSON.stringify(dssBooks[stem]),
+      JSON.stringify(enrichedDssBook),
       "utf-8",
     );
   }

@@ -1,6 +1,6 @@
 # Google Play Submission Checklist (Davar)
 
-Last updated: 2026-04-01
+Last updated: 2026-04-26
 Scope: New app submission, no in-app account creation, Android mobile release.
 
 ## 1. Hard Blockers (must be true before upload)
@@ -8,6 +8,10 @@ Scope: New app submission, no in-app account creation, Android mobile release.
 - [ ] Target API for submitted artifact is compliant for new apps.
   - Policy baseline (as of current review): new apps must target Android 15 (API 35) or higher.
   - Verify on generated artifact/manifests in release build outputs before upload.
+- [ ] If release minification/obfuscation is enabled (R8/ProGuard), upload deobfuscation file for that exact bundle version.
+  - File: `mapping.txt`
+  - Typical local path: `mobile/android/app/build/outputs/mapping/release/mapping.txt`
+  - Upload location: Play Console -> App Bundle Explorer -> selected version -> Deobfuscation files.
 - [ ] Privacy policy URL is public, active, non-PDF, and added in Play Console.
   - URL: https://davar.bible/privacy
 - [ ] Data safety form is completed and submitted.
@@ -73,3 +77,4 @@ Go only if all are true:
 - [ ] Declarations are truthful and consistent with app behavior.
 - [ ] Store metadata and legal text are internally consistent.
 - [ ] Functional smoke test passed on release candidate build.
+- [ ] Deobfuscation file uploaded for the same `versionCode` before publishing when minification is enabled.

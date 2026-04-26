@@ -90,21 +90,61 @@ export function VerseDisplay({
 	const hideSuperscripts = shouldHideSuperscripts(getTranslationKey(language));
 	const hideTranslationText =
 		shouldHideTranslationText(language, hebrewOnly) && !translationOnly;
+	const translationRenderOptions = {
+		hideSuperscripts,
+		footnotes: translation_footnotes ?? [],
+	};
 	const showHebrewText = !translationOnly;
 	const dssInlineFontScale = "1.70em";
 	const dssInlineBaselineShift = "-0.08em";
+	const isRenderableDssWord = (value?: string): value is string => {
+		if (!value) return false;
+		const normalized = value.trim();
+		if (!normalized || normalized.toLowerCase() === "note") {
+			return false;
+		}
+
+		const tokenCount = normalized
+			.replace(/[/:]/g, " ")
+			.split(/\s+/)
+			.filter(Boolean).length;
+
+		return tokenCount === 1;
+	};
+
+	const countMasoreticVariantSpan = (masoreticWord?: string): number => {
+		if (!masoreticWord) return 1;
+
+		const cleaned = removeMaqafForDisplay(masoreticWord)
+			.replace(/[/:]/g, " ")
+			.trim();
+		if (!cleaned) return 1;
+
+		const tokenCount = cleaned.split(/\s+/).filter(Boolean).length;
+		return tokenCount > 0 ? tokenCount : 1;
+	};
+
 	// Function to render Hebrew text with DSS variants
 	const renderHebrewText = () => {
-		const dssMap = new Map<number, string>();
+		const dssMap = new Map<
+			number,
+			{
+				text: string;
+				span: number;
+			}
+		>();
 		dssVariants?.forEach((variant) => {
 			if (
 				typeof variant.position !== "number" ||
 				variant.position < 0 ||
-				!variant.dss_word
+				!isRenderableDssWord(variant.dss_word)
 			) {
 				return;
 			}
-			dssMap.set(variant.position, variant.dss_word);
+			dssMap.set(variant.position, {
+				text: variant.dss_word,
+				span: countMasoreticVariantSpan(variant.masoretic_word),
+			});
 		});
 
 		const sourceWords =
@@ -133,22 +173,38 @@ export function VerseDisplay({
 			? normalizeForMatch(selectedWord)
 			: null;
 
-		return sourceWords.map((word, index) => {
-			const variantText = showQumran ? dssMap.get(word.position) : undefined;
-			const rawText = variantText ?? word.text;
+		let skipUntilIndex = -1;
 
-			// Apply nikud and cantillation settings
+		return sourceWords.map((word, index) => {
+			if (index <= skipUntilIndex) {
+				return null;
+			}
+
+			const variantEntry = showQumran ? dssMap.get(word.position) : undefined;
+			if (variantEntry) {
+				skipUntilIndex = Math.max(skipUntilIndex, index + variantEntry.span - 1);
+			}
+			const rawText = variantEntry?.text ?? word.text;
+
+			// DSS replacements are rendered unpointed to avoid glyph-level
+			// font fallback that appears as mixed DSS/Masoretic styling.
 			let displayText = rawText;
-			if (!showNikud) {
-				displayText = stripNikud(displayText);
+			if (variantEntry) {
+				displayText = displayText.replace(/[\u05BE-]/g, " ");
+				displayText = stripNikud(stripCantillation(stripMeteg(displayText)));
+			} else {
+				if (!showNikud) {
+					displayText = stripNikud(displayText);
+				}
+				if (!showCantillation) {
+					displayText = stripCantillation(displayText);
+				}
+				displayText = stripMeteg(displayText);
 			}
-			if (!showCantillation) {
-				displayText = stripCantillation(displayText);
-			}
-			displayText = stripMeteg(displayText);
 			// Remove "/" separators from display
 			displayText = displayText.replace(/\//g, "");
 			displayText = removeMaqafForDisplay(displayText);
+			displayText = displayText.replace(/\s+/g, " ").trim();
 			if (isBesorah) {
 				displayText = removeSofPasukForDisplay(displayText);
 			}
@@ -159,14 +215,14 @@ export function VerseDisplay({
 			const isSelected =
 				Boolean(normalizedSelected) && normalizedSelected === normalizedWord;
 
-			// Parse word for prefix visualization only if word has prefix data
-			const prefixSegments = word.prefixes?.length
+			// Prefix segmentation is only valid for original Masoretic words.
+			const prefixSegments = !variantEntry && word.prefixes?.length
 				? getPrefixSegments(displayText, word.prefixes)
 				: null;
 
 			const shouldShowHintButton =
 				showOnboardingHint &&
-				!variantText &&
+				!variantEntry &&
 				(isSelected || (!normalizedSelected && index === 0));
 
 			if (shouldShowHintButton) {
@@ -190,7 +246,7 @@ export function VerseDisplay({
 						onClick={() => onWordClick(word)}
 						className={`word-interactive cursor-pointer ${isSelected ? "verse-highlight" : ""}`}
 						style={
-							variantText
+							variantEntry
 								? {
 										color: "var(--text-hebrew)",
 										fontFamily: "'DeadSeaScrolls-Regular', 'Cardo', serif",
@@ -253,7 +309,7 @@ export function VerseDisplay({
 
 	// Otherwise show the single verse view
 	return (
-		<div className="space-y-10 relative">
+		<div className="space-y-10 relative pt-12 sm:pt-14">
 			{/* Hebrew Text with Verse Number and Onboarding Hint - Large and Centered */}
 			{showHebrewText && (
 				<div
@@ -312,13 +368,7 @@ export function VerseDisplay({
 						)}
 						{language === "es" && !translation.trim()
 							? spanishMissingTranslation
-							: renderTranslation(translation || "", {
-									hideSuperscripts,
-									footnotes:
-										translationOnly && language === "es"
-											? translation_footnotes
-											: undefined,
-								})}
+							: renderTranslation(translation || "", translationRenderOptions)}
 					</div>
 				</SwipeIndicator>
 			)}

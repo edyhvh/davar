@@ -260,6 +260,27 @@ export default function App() {
 		[language],
 	);
 
+	const resolveRenderableDssWord = useCallback(
+		(value?: string) => {
+			if (!value) return undefined;
+			const trimmed = value.trim();
+			if (!trimmed || trimmed.toLowerCase() === "note") {
+				return undefined;
+			}
+
+			const tokenCount = trimmed
+				.replace(/[/:]/g, " ")
+				.split(/\s+/)
+				.filter(Boolean).length;
+			if (tokenCount !== 1) {
+				return undefined;
+			}
+
+			return trimmed;
+		},
+		[],
+	);
+
 	useEffect(() => {
 		if (!showFullChapter && seferMode) {
 			setSeferMode(false);
@@ -1353,7 +1374,7 @@ export default function App() {
 			}}
 		>
 			<div
-				className={`sticky top-0 z-40 px-2 pt-4 sm:px-4 sm:pt-5 md:px-6 md:pt-6 transition-transform duration-300 ${
+				className={`sticky top-0 z-40 px-2 pt-4 pb-4 sm:px-4 sm:pt-5 sm:pb-5 md:px-6 md:pt-6 md:pb-6 transition-transform duration-300 ${
 					hideNavOnScroll
 						? "-translate-y-full opacity-0 pointer-events-none"
 						: "translate-y-0 opacity-100"
@@ -1479,9 +1500,11 @@ export default function App() {
 								ref={versePanelRef}
 								className={`min-h-[70vh] ${
 									showFullChapter
-										? ""
+										? isMobile
+											? "pt-8"
+											: ""
 										: isMobile
-											? "flex items-start pt-3"
+											? "flex items-start pt-8"
 											: "flex items-center justify-center"
 								} w-full max-w-3xl md:max-w-4xl justify-self-center verse-panel-shell ${
 									isSplitView
@@ -1590,6 +1613,9 @@ export default function App() {
 											currentVerseData?.dss?.find(
 												(variant) => variant.position === wordForCard?.position,
 											) ?? null;
+										const qumranWordForCard = resolveRenderableDssWord(
+											dssVariantForCard?.dss_word,
+										);
 										const wordMeanings =
 											wordAnalysisForCard?.definitions?.map(
 												(item) => item.text,
@@ -1599,13 +1625,22 @@ export default function App() {
 											getAnalysisTransliterationForLanguage(
 												wordAnalysisForCard,
 											);
-										const qumranTransliteration = dssAnalysisForCard
+										const qumranTransliterationFromWord = wordForCard
 											? language === "en"
-												? dssAnalysisForCard.translit_en
+												? wordForCard.dss_translit_en
 												: language === "es"
-													? dssAnalysisForCard.translit_es
+													? wordForCard.dss_translit_es
 													: undefined
 											: undefined;
+										const qumranTransliteration =
+											qumranTransliterationFromWord ??
+											(dssAnalysisForCard
+												? language === "en"
+													? dssAnalysisForCard.translit_en
+													: language === "es"
+														? dssAnalysisForCard.translit_es
+														: undefined
+												: undefined);
 										const dssCommentary = getDssCommentaryForLanguage(
 											language,
 											dssVariantForCard,
@@ -1614,7 +1649,7 @@ export default function App() {
 											dssAnalysisForCard?.definitions?.map(
 												(item) => item.text,
 											) ?? [];
-										const hasQumranVariant = Boolean(dssVariantForCard);
+										const hasQumranVariant = Boolean(qumranWordForCard);
 
 										return (
 											<NeumorphCard
@@ -1644,7 +1679,7 @@ export default function App() {
 														word={wordForCard.text}
 														wordFromVerse={wordForCard.text}
 														strongNumber={wordAnalysisForCard?.strong_number}
-														qumranWord={dssVariantForCard?.dss_word}
+																		qumranWord={qumranWordForCard}
 														qumranStrong={dssVariantForCard?.dss_strong}
 														qumranTransliteration={qumranTransliteration}
 														qumranMeanings={dssMeanings}
@@ -1760,20 +1795,30 @@ export default function App() {
 							currentVerseData?.dss?.find(
 								(variant) => variant.position === selectedWord.position,
 							) ?? null;
+						const qumranWordForCard = resolveRenderableDssWord(
+							dssVariantForCard?.dss_word,
+						);
 						const dssCommentary = getDssCommentaryForLanguage(
 							language,
 							dssVariantForCard,
 						);
 						const dssMeanings =
 							selectedDssAnalysis?.definitions?.map((item) => item.text) ?? [];
-						const hasQumranVariant = Boolean(dssVariantForCard);
-						const qumranTransliteration = selectedDssAnalysis
-							? language === "en"
-								? selectedDssAnalysis.translit_en
+						const hasQumranVariant = Boolean(qumranWordForCard);
+						const qumranTransliterationFromWord =
+							language === "en"
+								? selectedWord.dss_translit_en
 								: language === "es"
-									? selectedDssAnalysis.translit_es
-									: undefined
-							: undefined;
+									? selectedWord.dss_translit_es
+									: undefined;
+						const qumranTransliteration = selectedDssAnalysis
+							? qumranTransliterationFromWord ??
+								(language === "en"
+									? selectedDssAnalysis.translit_en
+									: language === "es"
+										? selectedDssAnalysis.translit_es
+										: undefined)
+							: qumranTransliterationFromWord;
 
 						const selectedWordMeanings =
 							selectedWordAnalysis?.definitions?.map((item) => item.text) ?? [];
@@ -1786,7 +1831,7 @@ export default function App() {
 								word={selectedWord.text}
 								wordFromVerse={selectedWord.text}
 								strongNumber={selectedWordAnalysis?.strong_number}
-								qumranWord={dssVariantForCard?.dss_word}
+								qumranWord={qumranWordForCard}
 								qumranStrong={dssVariantForCard?.dss_strong}
 								qumranTransliteration={qumranTransliteration}
 								qumranMeanings={dssMeanings}

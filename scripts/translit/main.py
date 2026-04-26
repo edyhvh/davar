@@ -101,6 +101,16 @@ def parse_args():
         help="Run without writing output files"
     )
     parser.add_argument(
+        "--use-xai-vocalization",
+        action="store_true",
+        help="For DSS corpus: add niqqud with xAI before local transliteration"
+    )
+    parser.add_argument(
+        "--max-chars-per-request",
+        type=int,
+        help="For DSS corpus: character budget per xAI request"
+    )
+    parser.add_argument(
         "--verbose",
         action="store_true",
         help="Enable verbose logging"
@@ -187,6 +197,8 @@ def main():
                 stats = transliterate_dss_book(
                     book_id=book_id,
                     dry_run=args.dry_run,
+                    use_xai_vocalization=args.use_xai_vocalization,
+                    max_chars_per_request=args.max_chars_per_request,
                 )
                 total_variants += stats.variants
                 total_failed += stats.failed

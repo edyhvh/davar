@@ -16,6 +16,12 @@ const superscriptDigitMap: Record<string, string> = {
 
 const superscriptPattern = /[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g;
 const bracketFootnotePattern = /\[([a-z0-9]+)\]/gi;
+const footnoteMarkerClass =
+	"ml-0.5 align-super relative -top-[0.06em] inline-block text-[0.5em] leading-none font-semibold tracking-[0.01em] tabular-nums text-[#9f6a2f] dark:text-[#d2a06b]";
+const fallbackMarkerClass =
+	"ml-0.5 align-super text-[0.52em] leading-none font-semibold text-[#9f6a2f] dark:text-[#d2a06b]";
+const footnoteTooltipClass =
+	"pointer-events-none invisible absolute top-full left-1/2 z-30 mt-2 w-[min(320px,82vw)] -translate-x-1/2 rounded-xl border px-3 py-2 text-left opacity-0 shadow-xl backdrop-blur-[1px] transition-opacity group-hover:visible group-hover:opacity-100";
 
 const normalizeSuperscripts = (value: string): string =>
 	value
@@ -126,22 +132,21 @@ const renderTextSegment = (
 			if (match.type === "superscript") {
 				const normalized = normalizeSuperscripts(match.content);
 				const footnote = footnoteLookup.get(match.content);
+
 				if (footnote) {
 					nodes.push(
 						<span
 							key={`${keyPrefix}-sup-${matchIndex}`}
 							className="group relative inline-flex"
 						>
-							<sup
-								className={`ml-0.5 align-super text-[0.65em] leading-none text-green-600${italic ? " italic" : ""}`}
-							>
+							<sup className={`${footnoteMarkerClass}${italic ? " italic" : ""}`}>
 								{normalized}
 							</sup>
 							<span
-								className="pointer-events-none invisible absolute top-full left-1/2 z-30 mt-2 w-[min(300px,78vw)] -translate-x-1/2 rounded-lg border px-2.5 py-1.5 text-left opacity-0 shadow-xl transition-opacity group-hover:visible group-hover:opacity-100"
+								className={footnoteTooltipClass}
 								style={{
-									background: "var(--background, #f4f0e8)",
-									borderColor: "var(--neomorph-border, rgba(122, 95, 62, 0.28))",
+									background: "var(--background, #f6f1e8)",
+									borderColor: "var(--neomorph-border, rgba(122, 95, 62, 0.35))",
 									color: "var(--text-primary, #2a2118)",
 									boxShadow:
 										"0 10px 24px rgba(29, 23, 17, 0.24), 0 2px 8px rgba(29, 23, 17, 0.16)",
@@ -162,7 +167,7 @@ const renderTextSegment = (
 					nodes.push(
 						<sup
 							key={`${keyPrefix}-sup-${matchIndex}`}
-							className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
+							className={`${fallbackMarkerClass}${italic ? " italic" : ""}`}
 						>
 							{normalized}
 						</sup>,
@@ -170,25 +175,24 @@ const renderTextSegment = (
 				}
 			} else if (match.type === "bracket") {
 				// Render bracket footnotes as superscripts
-				const marker = match.content.slice(1, -1); // Remove brackets
+				const marker = match.content.slice(1, -1);
 				const footnote =
 					footnoteLookup.get(match.content) ?? footnoteLookup.get(marker);
+
 				if (footnote) {
 					nodes.push(
 						<span
 							key={`${keyPrefix}-bracket-${matchIndex}`}
 							className="group relative inline-flex"
 						>
-							<sup
-								className={`ml-0.5 align-super text-[0.65em] leading-none text-green-600${italic ? " italic" : ""}`}
-							>
+							<sup className={`${footnoteMarkerClass}${italic ? " italic" : ""}`}>
 								{marker}
 							</sup>
 							<span
-								className="pointer-events-none invisible absolute top-full left-1/2 z-30 mt-2 w-[min(300px,78vw)] -translate-x-1/2 rounded-lg border px-2.5 py-1.5 text-left opacity-0 shadow-xl transition-opacity group-hover:visible group-hover:opacity-100"
+								className={footnoteTooltipClass}
 								style={{
-									background: "var(--background, #f4f0e8)",
-									borderColor: "var(--neomorph-border, rgba(122, 95, 62, 0.28))",
+									background: "var(--background, #f6f1e8)",
+									borderColor: "var(--neomorph-border, rgba(122, 95, 62, 0.35))",
 									color: "var(--text-primary, #2a2118)",
 									boxShadow:
 										"0 10px 24px rgba(29, 23, 17, 0.24), 0 2px 8px rgba(29, 23, 17, 0.16)",
@@ -209,7 +213,7 @@ const renderTextSegment = (
 					nodes.push(
 						<sup
 							key={`${keyPrefix}-bracket-${matchIndex}`}
-							className={`ml-0.5 align-super text-[0.65em] leading-none${italic ? " italic" : ""}`}
+							className={`${fallbackMarkerClass}${italic ? " italic" : ""}`}
 						>
 							{marker}
 						</sup>,

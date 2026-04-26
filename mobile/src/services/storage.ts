@@ -15,6 +15,8 @@ const STORAGE_KEYS = {
   swipeUpHintCount: "davar.swipeUpHintCount",
   besorahDisclaimerCount: "davar.besorahDisclaimerCount",
   currentVerseId: "davar.currentVerseId",
+  codepushCount: "davar.codepushCount",
+  lastSeenUpdateId: "davar.lastSeenUpdateId",
 };
 
 export const loadThemeMode = async () => {
@@ -189,6 +191,24 @@ export const loadCurrentVerseId = async (): Promise<string | null> => {
 
 export const saveCurrentVerseId = async (id: string) => {
   await AsyncStorage.setItem(STORAGE_KEYS.currentVerseId, id);
+};
+
+export const loadCodepushCount = async () => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.codepushCount);
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+};
+
+export const saveCodepushCount = async (count: number) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.codepushCount, String(count));
+};
+
+export const loadLastSeenUpdateId = async (): Promise<string | null> => {
+  return AsyncStorage.getItem(STORAGE_KEYS.lastSeenUpdateId);
+};
+
+export const saveLastSeenUpdateId = async (id: string) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.lastSeenUpdateId, id);
 };
 
 export const clearStorage = async () => {
