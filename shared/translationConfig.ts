@@ -7,6 +7,9 @@ type DssCommentaryInput = {
   comment_v2_en?: string | null;
   comment_v2_es?: string | null;
   comment_v2_he?: string | null;
+  commentary_v2_en?: string | null;
+  commentary_v2_es?: string | null;
+  commentary_v2_he?: string | null;
   dssCommentaryEn?: string | null;
   dssCommentaryEs?: string | null;
   dssCommentaryHe?: string | null;
@@ -84,9 +87,18 @@ export const getDssCommentaryForLanguage = (
 ): string | undefined => {
   if (!commentary) return undefined;
 
-  const commentaryEn = commentary.comment_v2_en ?? commentary.dssCommentaryEn;
-  const commentaryEs = commentary.comment_v2_es ?? commentary.dssCommentaryEs;
-  const commentaryHe = commentary.comment_v2_he ?? commentary.dssCommentaryHe;
+  const commentaryEn =
+    commentary.comment_v2_en ??
+    commentary.commentary_v2_en ??
+    commentary.dssCommentaryEn;
+  const commentaryEs =
+    commentary.comment_v2_es ??
+    commentary.commentary_v2_es ??
+    commentary.dssCommentaryEs;
+  const commentaryHe =
+    commentary.comment_v2_he ??
+    commentary.commentary_v2_he ??
+    commentary.dssCommentaryHe;
 
   if (language === "he") {
     return commentaryHe ?? undefined;

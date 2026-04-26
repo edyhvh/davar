@@ -10,12 +10,16 @@ export interface WordResponse {
 	has_dss_variant: boolean;
 	translit_en?: string;
 	translit_es?: string;
+	dss_translit_en?: string;
+	dss_translit_es?: string;
 }
 
 export interface DssVariant {
 	position: number;
 	dss_word: string;
 	masoretic_word: string;
+	dss_translit_en?: string;
+	dss_translit_es?: string;
 	comment_v2_en?: string;
 	comment_v2_es?: string;
 	comment_v2_he?: string;
@@ -101,6 +105,8 @@ type RawTranslationBook = {
 type RawDssDifference = {
 	position?: number;
 	dss_word?: string;
+	translit_en?: string;
+	translit_es?: string;
 	masoretic_word?: string;
 	commentary?: string;
 	comment_v2_en?: string;
@@ -136,6 +142,18 @@ type RawTranslitBook = {
 		verse: number;
 		words?: RawTranslitWord[];
 	}>;
+};
+
+type RawDssTranslitVariant = {
+	chapter?: number;
+	verse?: number;
+	position?: number;
+	translit_en?: string;
+	translit_es?: string;
+};
+
+type RawDssTranslitBook = {
+	variants?: RawDssTranslitVariant[];
 };
 
 const MAX_CACHE_SIZE = 100;
@@ -462,6 +480,8 @@ const mapDssDifferences = (differences?: RawDssDifference[]): DssVariant[] => {
 			position: normalizedPosition,
 			dss_word: difference.dss_word ?? "",
 			masoretic_word: difference.masoretic_word ?? "",
+			dss_translit_en: difference.translit_en,
+			dss_translit_es: difference.translit_es,
 			comment_v2_en: difference.comment_v2_en ?? difference.commentary,
 			comment_v2_es: difference.comment_v2_es,
 			comment_v2_he: difference.comment_v2_he,
@@ -625,6 +645,41 @@ const loadTranslitChapter = async (
 	}
 };
 
+const loadDssTranslitChapter = async (
+	bookId: string,
+	chapter: number,
+): Promise<Record<number, Record<number, RawDssTranslitVariant>>> => {
+	const dssBookKey = toDssBookKey(bookId);
+
+	try {
+		const translitBook = await fetchJson<RawDssTranslitBook>(
+			`/data/translit/dss/${dssBookKey}.json`,
+		);
+		const verseMap: Record<number, Record<number, RawDssTranslitVariant>> = {};
+
+		for (const variant of translitBook.variants ?? []) {
+			if (variant.chapter !== chapter) continue;
+
+			const verse = Number(variant.verse);
+			const position = Number(variant.position);
+			if (!Number.isFinite(verse) || !Number.isFinite(position) || position <= 0) {
+				continue;
+			}
+
+			if (!verseMap[verse]) {
+				verseMap[verse] = {};
+			}
+
+			// Align with WordResponse.position which is zero-based on web.
+			verseMap[verse][position - 1] = variant;
+		}
+
+		return verseMap;
+	} catch {
+		return {};
+	}
+};
+
 const findFallbackTranslitWord = (
 	word: RawWord,
 	translitWords: RawTranslitWord[],
@@ -659,6 +714,7 @@ const mapVerse = (
 	translationVerse?: RawTranslationVerse,
 	dssVerse?: RawDssVerse,
 	translitWords?: RawTranslitWord[],
+	dssTranslitByPosition?: Record<number, RawDssTranslitVariant>,
 	options?: {
 		language?: "es" | "en";
 		showDss?: boolean;
@@ -667,13 +723,22 @@ const mapVerse = (
 	ts2009Translation?: string | null,
 ): VerseResponse => {
 	const dssVariants = mapDssDifferences(dssVerse?.differences);
-	const dssPositions = new Set(dssVariants.map((variant) => variant.position));
+	const dssVariantMap = new Map(
+		dssVariants.map((variant) => [variant.position, variant]),
+	);
 	const sourceWords = rawVerse.words ?? [];
 	const canMapTranslitByPosition = translitWords
 		? translitWords.length === sourceWords.length
 		: false;
 
 	const words: WordResponse[] = sourceWords.map((word, index) => {
+		const dssVariant = dssVariantMap.get(index);
+		const dssTranslit = dssTranslitByPosition?.[index];
+		const prefersDssTranslit = Boolean(options?.showDss && dssVariant);
+		const dssTranslitEn =
+			dssTranslit?.translit_en ?? dssVariant?.dss_translit_en;
+		const dssTranslitEs =
+			dssTranslit?.translit_es ?? dssVariant?.dss_translit_es;
 		const translitWord = canMapTranslitByPosition
 			? translitWords?.[index]
 			: translitWords
@@ -686,9 +751,15 @@ const mapVerse = (
 			strong: word.strong,
 			morph: word.morph,
 			prefixes: word.prefixes ?? [],
-			has_dss_variant: dssPositions.has(index),
-			translit_en: word.translit_en ?? translitWord?.translit_en,
-			translit_es: word.translit_es ?? translitWord?.translit_es,
+			has_dss_variant: dssVariantMap.has(index),
+			translit_en: prefersDssTranslit
+				? dssTranslitEn ?? word.translit_en ?? translitWord?.translit_en
+				: word.translit_en ?? translitWord?.translit_en,
+			translit_es: prefersDssTranslit
+				? dssTranslitEs ?? word.translit_es ?? translitWord?.translit_es
+				: word.translit_es ?? translitWord?.translit_es,
+			dss_translit_en: dssTranslitEn,
+			dss_translit_es: dssTranslitEs,
 		};
 	});
 
@@ -829,7 +900,7 @@ export const getChapterVerses = async (
 
 	if (!bookEntry) return [];
 
-	const [coreVerses, translations, dssVerses, transliterations] =
+	const [coreVerses, translations, dssVerses, transliterations, dssTransliterations] =
 		await Promise.all([
 			loadCoreChapter(bookEntry, chapter),
 			options?.hebrewOnly
@@ -839,6 +910,9 @@ export const getChapterVerses = async (
 				? loadDssChapter(bookEntry.id, chapter)
 				: Promise.resolve<Record<number, RawDssVerse>>({}),
 			loadTranslitChapter(bookEntry.id, chapter),
+			options?.showDss
+				? loadDssTranslitChapter(bookEntry.id, chapter)
+				: Promise.resolve<Record<number, Record<number, RawDssTranslitVariant>>>({}),
 		]);
 
 	// If language is English, load TS2009 translations from Supabase (with caching)
@@ -861,6 +935,7 @@ export const getChapterVerses = async (
 			translations[rawVerse.verse],
 			dssVerses[rawVerse.verse],
 			transliterations[rawVerse.verse],
+			dssTransliterations[rawVerse.verse],
 			options,
 			ts2009Translations[rawVerse.verse],
 		),

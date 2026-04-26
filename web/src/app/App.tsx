@@ -260,6 +260,27 @@ export default function App() {
 		[language],
 	);
 
+	const resolveRenderableDssWord = useCallback(
+		(value?: string) => {
+			if (!value) return undefined;
+			const trimmed = value.trim();
+			if (!trimmed || trimmed.toLowerCase() === "note") {
+				return undefined;
+			}
+
+			const tokenCount = trimmed
+				.replace(/[/:]/g, " ")
+				.split(/\s+/)
+				.filter(Boolean).length;
+			if (tokenCount !== 1) {
+				return undefined;
+			}
+
+			return trimmed;
+		},
+		[],
+	);
+
 	useEffect(() => {
 		if (!showFullChapter && seferMode) {
 			setSeferMode(false);
@@ -1592,6 +1613,9 @@ export default function App() {
 											currentVerseData?.dss?.find(
 												(variant) => variant.position === wordForCard?.position,
 											) ?? null;
+										const qumranWordForCard = resolveRenderableDssWord(
+											dssVariantForCard?.dss_word,
+										);
 										const wordMeanings =
 											wordAnalysisForCard?.definitions?.map(
 												(item) => item.text,
@@ -1601,13 +1625,22 @@ export default function App() {
 											getAnalysisTransliterationForLanguage(
 												wordAnalysisForCard,
 											);
-										const qumranTransliteration = dssAnalysisForCard
+										const qumranTransliterationFromWord = wordForCard
 											? language === "en"
-												? dssAnalysisForCard.translit_en
+												? wordForCard.dss_translit_en
 												: language === "es"
-													? dssAnalysisForCard.translit_es
+													? wordForCard.dss_translit_es
 													: undefined
 											: undefined;
+										const qumranTransliteration =
+											qumranTransliterationFromWord ??
+											(dssAnalysisForCard
+												? language === "en"
+													? dssAnalysisForCard.translit_en
+													: language === "es"
+														? dssAnalysisForCard.translit_es
+														: undefined
+												: undefined);
 										const dssCommentary = getDssCommentaryForLanguage(
 											language,
 											dssVariantForCard,
@@ -1616,7 +1649,7 @@ export default function App() {
 											dssAnalysisForCard?.definitions?.map(
 												(item) => item.text,
 											) ?? [];
-										const hasQumranVariant = Boolean(dssVariantForCard);
+										const hasQumranVariant = Boolean(qumranWordForCard);
 
 										return (
 											<NeumorphCard
@@ -1646,7 +1679,7 @@ export default function App() {
 														word={wordForCard.text}
 														wordFromVerse={wordForCard.text}
 														strongNumber={wordAnalysisForCard?.strong_number}
-														qumranWord={dssVariantForCard?.dss_word}
+																		qumranWord={qumranWordForCard}
 														qumranStrong={dssVariantForCard?.dss_strong}
 														qumranTransliteration={qumranTransliteration}
 														qumranMeanings={dssMeanings}
@@ -1762,20 +1795,30 @@ export default function App() {
 							currentVerseData?.dss?.find(
 								(variant) => variant.position === selectedWord.position,
 							) ?? null;
+						const qumranWordForCard = resolveRenderableDssWord(
+							dssVariantForCard?.dss_word,
+						);
 						const dssCommentary = getDssCommentaryForLanguage(
 							language,
 							dssVariantForCard,
 						);
 						const dssMeanings =
 							selectedDssAnalysis?.definitions?.map((item) => item.text) ?? [];
-						const hasQumranVariant = Boolean(dssVariantForCard);
-						const qumranTransliteration = selectedDssAnalysis
-							? language === "en"
-								? selectedDssAnalysis.translit_en
+						const hasQumranVariant = Boolean(qumranWordForCard);
+						const qumranTransliterationFromWord =
+							language === "en"
+								? selectedWord.dss_translit_en
 								: language === "es"
-									? selectedDssAnalysis.translit_es
-									: undefined
-							: undefined;
+									? selectedWord.dss_translit_es
+									: undefined;
+						const qumranTransliteration = selectedDssAnalysis
+							? qumranTransliterationFromWord ??
+								(language === "en"
+									? selectedDssAnalysis.translit_en
+									: language === "es"
+										? selectedDssAnalysis.translit_es
+										: undefined)
+							: qumranTransliterationFromWord;
 
 						const selectedWordMeanings =
 							selectedWordAnalysis?.definitions?.map((item) => item.text) ?? [];
@@ -1788,7 +1831,7 @@ export default function App() {
 								word={selectedWord.text}
 								wordFromVerse={selectedWord.text}
 								strongNumber={selectedWordAnalysis?.strong_number}
-								qumranWord={dssVariantForCard?.dss_word}
+								qumranWord={qumranWordForCard}
 								qumranStrong={dssVariantForCard?.dss_strong}
 								qumranTransliteration={qumranTransliteration}
 								qumranMeanings={dssMeanings}

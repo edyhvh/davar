@@ -169,6 +169,16 @@ const renderTranslationWithItalics = (
   return segments;
 };
 
+const normalizeQumranHebrewForDisplay = (value: string): string => {
+  const spaced = value.replace(/[\u05BE-]/g, " ");
+  const unpointed = stripNikud(stripMeteg(stripCantillation(spaced)));
+  const normalized = removeMaqafForDisplay(unpointed.replace(/\//g, ""));
+  return normalized
+    .replace(/[^\u05D0-\u05EA\s]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+};
+
 type VerseCardProps = {
   verse: DisplayVerse;
   onWordPress?: (word: DisplayVerse["words"][number]) => void;
@@ -487,15 +497,19 @@ export const VerseCard = ({
               typeof qumranWord === "string" && qumranWord.length > 0
                 ? qumranWord
                 : word.text;
-            if (!showNikud) {
-              displayText = stripNikud(displayText);
+            if (hasVisibleQumranVariant) {
+              displayText = normalizeQumranHebrewForDisplay(displayText);
+            } else {
+              if (!showNikud) {
+                displayText = stripNikud(displayText);
+              }
+              if (!showCantillation) {
+                displayText = stripCantillation(displayText);
+              }
+              displayText = stripMeteg(displayText);
+              displayText = displayText.replace(/\//g, "");
+              displayText = removeMaqafForDisplay(displayText);
             }
-            if (!showCantillation) {
-              displayText = stripCantillation(displayText);
-            }
-            displayText = stripMeteg(displayText);
-            displayText = displayText.replace(/\//g, "");
-            displayText = removeMaqafForDisplay(displayText);
             if (isBesorah) {
               displayText = removeSofPasukForDisplay(displayText);
             }
