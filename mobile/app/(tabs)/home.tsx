@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   Alert,
   Linking,
@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
+import Constants from "expo-constants";
+import * as Updates from "expo-updates";
 
 import { AnimatedCircularProgress } from "react-native-circular-progress";
 import { AppIcon } from "@/src/components/ui/AppIcon";
@@ -21,6 +23,12 @@ import {
   getAllLocalBundleVersions,
 } from "@/src/services/offlineSync";
 import { clearAllOfflineData } from "@/src/services/database";
+import {
+  loadCodepushCount,
+  loadLastSeenUpdateId,
+  saveCodepushCount,
+  saveLastSeenUpdateId,
+} from "@/src/services/storage";
 import {
   useTranslation,
   getSupportTelegramUrl,
@@ -196,6 +204,17 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       fontSize: typography.sizes.bodySmall,
       color: "#E0E0E0",
     },
+    versionMetaContainer: {
+      alignItems: "center",
+      marginTop: spacing[5],
+      gap: spacing[1],
+    },
+    versionMetaText: {
+      fontFamily: typography.families.latinUIMedium,
+      fontSize: 11,
+      color: colors.textSecondary,
+      opacity: 0.7,
+    },
   });
 
 export default function HomeScreen() {
@@ -224,6 +243,58 @@ export default function HomeScreen() {
   const styles = useMemo(() => createStyles(colors), [colors]);
   const { t, language } = useTranslation();
   const router = useRouter();
+  const [codepushCount, setCodepushCount] = useState(0);
+  const [codepushVersion, setCodepushVersion] = useState("embedded");
+
+  const appVersion =
+    Constants.expoConfig?.version ?? Constants.nativeAppVersion ?? "1.0.0";
+  const buildNumber = Constants.nativeBuildVersion ?? "dev";
+  const runtimeVersion = Updates.runtimeVersion ?? "embedded";
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const syncCodepushMetadata = async () => {
+      try {
+        const currentUpdateId = Updates.updateId ?? "embedded";
+        const shortVersion =
+          currentUpdateId === "embedded"
+            ? "embedded"
+            : currentUpdateId.slice(0, 8);
+
+        const previousCount = await loadCodepushCount();
+        const lastSeenUpdateId = await loadLastSeenUpdateId();
+
+        let nextCount = previousCount;
+
+        if (
+          currentUpdateId !== "embedded" &&
+          currentUpdateId !== lastSeenUpdateId
+        ) {
+          nextCount = previousCount + 1;
+          await saveCodepushCount(nextCount);
+          await saveLastSeenUpdateId(currentUpdateId);
+        } else if (currentUpdateId === "embedded" && !lastSeenUpdateId) {
+          await saveLastSeenUpdateId(currentUpdateId);
+        }
+
+        if (!isMounted) {
+          return;
+        }
+
+        setCodepushCount(nextCount);
+        setCodepushVersion(shortVersion);
+      } catch (error) {
+        console.error("Failed to sync codepush metadata:", error);
+      }
+    };
+
+    void syncCodepushMetadata();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const openUrlSafely = async (url: string) => {
     try {
@@ -507,6 +578,15 @@ export default function HomeScreen() {
                 </Pressable>
               ))}
             </View>
+          </View>
+
+          <View style={styles.versionMetaContainer}>
+            <Text style={styles.versionMetaText}>
+              {`App v${appVersion} • Build ${buildNumber} • Codepush ${codepushCount}`}
+            </Text>
+            <Text style={styles.versionMetaText}>
+              {`Codepush v${codepushVersion} • Runtime ${runtimeVersion}`}
+            </Text>
           </View>
         </ScrollView>
       </View>
