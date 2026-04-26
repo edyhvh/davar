@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -17,6 +18,15 @@ from .local_translit import LocalTransliterator
 logger = logging.getLogger(__name__)
 
 MAQAF = "\u05BE"
+HEBREW_MARKS_RE = "[\u0591-\u05C7]"
+TETRAGRAMMATON = "יהוה"
+
+
+def _normalize_divine_name_translit(text: str) -> str:
+    if not text:
+        return text
+    # Ensure all transliterated forms of the tetragrammaton are normalized.
+    return text.replace("yehvah", "YHWH").replace("yhvah", "YHWH")
 
 
 @dataclass
@@ -52,6 +62,13 @@ def _transliterate_phrase(
         en_parts: List[str] = []
         es_parts: List[str] = []
         for part in parts:
+            normalized_part = part.replace("/", "")
+            # Remove Hebrew combining marks so pointed/unpointed forms match.
+            normalized_part = re.sub(HEBREW_MARKS_RE, "", normalized_part)
+            if normalized_part == TETRAGRAMMATON:
+                en_parts.append("YHWH")
+                es_parts.append("YHWH")
+                continue
             result = transliterator.transliterate_word(part)
             en_parts.append(result.translit_en)
             es_parts.append(result.translit_es)
@@ -60,53 +77,95 @@ def _transliterate_phrase(
         if es_parts:
             es_tokens.append("-".join(es_parts))
 
-    return " ".join(en_tokens), " ".join(es_tokens)
+    en_text = " ".join(en_tokens)
+    es_text = " ".join(es_tokens)
+    return _normalize_divine_name_translit(en_text), _normalize_divine_name_translit(es_text)
 
 
 def transliterate_dss_book(
     book_id: str,
     dry_run: bool = False,
+    use_xai_vocalization: bool = False,
+    max_chars_per_request: Optional[int] = None,
 ) -> DssBookStats:
     data = _load_dss_book(book_id)
     transliterator = LocalTransliterator()
     stats = DssBookStats(book_id=book_id)
 
-    variants: List[Dict] = []
+    differences_payload: List[Tuple[str, str, Dict]] = []
     chapters = data.get("chapters", {})
     for chapter_key, chapter_data in chapters.items():
         verses = chapter_data.get("verses", {})
         for verse_key, verse_data in verses.items():
             differences = verse_data.get("differences", []) or []
             for difference in differences:
-                dss_word = difference.get("dss_word", "")
-                try:
-                    translit_en, translit_es = _transliterate_phrase(
-                        transliterator, dss_word
-                    )
-                except Exception as exc:
-                    logger.warning(
-                        "Failed to transliterate DSS word '%s' in %s %s:%s: %s",
-                        dss_word,
-                        book_id,
-                        chapter_key,
-                        verse_key,
-                        exc,
-                    )
-                    stats.failed += 1
-                    translit_en, translit_es = "", ""
+                differences_payload.append((chapter_key, verse_key, difference))
 
-                variants.append(
-                    {
-                        "book": data.get("name", book_id),
-                        "chapter": int(chapter_key),
-                        "verse": int(verse_key),
-                        "position": difference.get("position", 0),
-                        "dss_word": dss_word,
-                        "translit_en": translit_en,
-                        "translit_es": translit_es,
-                    }
+    vocalized_map: Dict[str, str] = {}
+    if use_xai_vocalization and differences_payload:
+        dss_phrases = [
+            str(difference.get("dss_word", "")).strip()
+            for _, _, difference in differences_payload
+            if str(difference.get("dss_word", "")).strip()
+        ]
+
+        if dss_phrases:
+            try:
+                from .xai_vocalizer import XaiDssVocalizer
+
+                vocalizer = XaiDssVocalizer(
+                    max_chars_per_request=max_chars_per_request,
                 )
-                stats.variants += 1
+                vocalized_map = vocalizer.vocalize_phrases(dss_phrases)
+                if not dry_run:
+                    vocalizer.save_cache()
+
+                vocalizer_stats = vocalizer.get_stats()
+                logger.info(
+                    "DSS xAI vocalization stats for %s: %s",
+                    book_id,
+                    vocalizer_stats,
+                )
+            except Exception as exc:
+                logger.warning(
+                    "xAI vocalization unavailable for %s, using unpointed DSS text: %s",
+                    book_id,
+                    exc,
+                )
+
+    variants: List[Dict] = []
+    for chapter_key, verse_key, difference in differences_payload:
+        dss_word = str(difference.get("dss_word", ""))
+        vocalized_word = vocalized_map.get(dss_word, dss_word)
+        try:
+            translit_en, translit_es = _transliterate_phrase(
+                transliterator, vocalized_word
+            )
+        except Exception as exc:
+            logger.warning(
+                "Failed to transliterate DSS word '%s' in %s %s:%s: %s",
+                dss_word,
+                book_id,
+                chapter_key,
+                verse_key,
+                exc,
+            )
+            stats.failed += 1
+            translit_en, translit_es = "", ""
+
+        variants.append(
+            {
+                "book": data.get("name", book_id),
+                "chapter": int(chapter_key),
+                "verse": int(verse_key),
+                "position": difference.get("position", 0),
+                "dss_word": dss_word,
+                "dss_word_niqqud": vocalized_word,
+                "translit_en": translit_en,
+                "translit_es": translit_es,
+            }
+        )
+        stats.variants += 1
 
     output = {
         "book_id": book_id,

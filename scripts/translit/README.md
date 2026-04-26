@@ -58,6 +58,12 @@ python -m scripts.translit.main --corpus besorah --book john
 
 # DSS variants (differences only)
 python -m scripts.translit.main --corpus dss --book 1samuel
+
+# DSS variants with xAI vocalization (niqqud), then local transliteration
+python -m scripts.translit.main --corpus dss --book 1samuel --use-xai-vocalization
+
+# DSS with explicit per-request character budget for lower API call count
+python -m scripts.translit.main --corpus dss --book 1samuel --use-xai-vocalization --max-chars-per-request 12000
 ```
 
 ### Local mode (default)

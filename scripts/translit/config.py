@@ -2,6 +2,7 @@
 Configuration for per-word transliteration pipeline.
 """
 
+import os
 from pathlib import Path
 from typing import Optional
 from dotenv import load_dotenv
@@ -57,3 +58,28 @@ def safe_int(value: Optional[str], default: int) -> int:
         return int(value) if value is not None else default
     except (TypeError, ValueError):
         return default
+
+
+def safe_float(value: Optional[str], default: float) -> float:
+    try:
+        return float(value) if value is not None else default
+    except (TypeError, ValueError):
+        return default
+
+
+XAI_API_KEY = os.getenv("XAI_API_KEY")
+XAI_BASE_URL = "https://api.x.ai/v1"
+XAI_VOCALIZATION_MODEL = os.getenv("XAI_VOCALIZATION_MODEL", "grok-4-1-fast-reasoning")
+XAI_TIMEOUT_SECONDS = safe_int(os.getenv("XAI_TIMEOUT_SECONDS"), 300)
+XAI_RATE_LIMIT_DELAY_SECONDS = safe_float(
+    os.getenv("XAI_RATE_LIMIT_DELAY_SECONDS"),
+    1.0,
+)
+XAI_MAX_RETRIES = safe_int(os.getenv("XAI_MAX_RETRIES"), 3)
+XAI_RETRY_BACKOFF_BASE = safe_int(os.getenv("XAI_RETRY_BACKOFF_BASE"), 2)
+
+DSS_XAI_MAX_CHARS_PER_REQUEST = safe_int(
+    os.getenv("DSS_XAI_MAX_CHARS_PER_REQUEST"),
+    12000,
+)
+DSS_VOCALIZATION_CACHE_PATH = DSS_TRANSLIT_DIR / "vocalization_cache.json"
