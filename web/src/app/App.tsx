@@ -1353,7 +1353,7 @@ export default function App() {
 			}}
 		>
 			<div
-				className={`sticky top-0 z-40 px-2 pt-4 sm:px-4 sm:pt-5 md:px-6 md:pt-6 transition-transform duration-300 ${
+				className={`sticky top-0 z-40 px-2 pt-4 pb-4 sm:px-4 sm:pt-5 sm:pb-5 md:px-6 md:pt-6 md:pb-6 transition-transform duration-300 ${
 					hideNavOnScroll
 						? "-translate-y-full opacity-0 pointer-events-none"
 						: "translate-y-0 opacity-100"
@@ -1479,9 +1479,11 @@ export default function App() {
 								ref={versePanelRef}
 								className={`min-h-[70vh] ${
 									showFullChapter
-										? ""
+										? isMobile
+											? "pt-8"
+											: ""
 										: isMobile
-											? "flex items-start pt-3"
+											? "flex items-start pt-8"
 											: "flex items-center justify-center"
 								} w-full max-w-3xl md:max-w-4xl justify-self-center verse-panel-shell ${
 									isSplitView

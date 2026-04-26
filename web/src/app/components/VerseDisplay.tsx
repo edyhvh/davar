@@ -253,7 +253,7 @@ export function VerseDisplay({
 
 	// Otherwise show the single verse view
 	return (
-		<div className="space-y-10 relative">
+		<div className="space-y-10 relative pt-12 sm:pt-14">
 			{/* Hebrew Text with Verse Number and Onboarding Hint - Large and Centered */}
 			{showHebrewText && (
 				<div
