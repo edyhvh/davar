@@ -1,6 +1,6 @@
 # Google Play Submission Checklist (Davar)
 
-Last updated: 2026-04-01
+Last updated: 2026-04-26
 Scope: New app submission, no in-app account creation, Android mobile release.
 
 ## 1. Hard Blockers (must be true before upload)
@@ -77,4 +77,4 @@ Go only if all are true:
 - [ ] Declarations are truthful and consistent with app behavior.
 - [ ] Store metadata and legal text are internally consistent.
 - [ ] Functional smoke test passed on release candidate build.
-- [ ] Deobfuscation file uploaded for the same `versionCode` when minification is enabled.
+- [ ] Deobfuscation file uploaded for the same `versionCode` before publishing when minification is enabled.

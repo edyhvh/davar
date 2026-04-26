@@ -90,6 +90,10 @@ export function VerseDisplay({
 	const hideSuperscripts = shouldHideSuperscripts(getTranslationKey(language));
 	const hideTranslationText =
 		shouldHideTranslationText(language, hebrewOnly) && !translationOnly;
+	const translationRenderOptions = {
+		hideSuperscripts,
+		footnotes: translation_footnotes ?? [],
+	};
 	const showHebrewText = !translationOnly;
 	const dssInlineFontScale = "1.70em";
 	const dssInlineBaselineShift = "-0.08em";
@@ -364,10 +368,7 @@ export function VerseDisplay({
 						)}
 						{language === "es" && !translation.trim()
 							? spanishMissingTranslation
-							: renderTranslation(translation || "", {
-									hideSuperscripts,
-									footnotes: translation_footnotes,
-								})}
+							: renderTranslation(translation || "", translationRenderOptions)}
 					</div>
 				</SwipeIndicator>
 			)}

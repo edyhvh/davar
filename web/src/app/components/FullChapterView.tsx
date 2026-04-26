@@ -90,6 +90,12 @@ export function FullChapterView({
 		? normalizeForMatch(selectedWord)
 		: null;
 
+	const renderVerseTranslation = (verse: VerseResponse) =>
+		renderTranslation(verse.translation ?? "", {
+			hideSuperscripts,
+			footnotes: verse.translation_footnotes ?? [],
+		});
+
 	const renderVerseWords = (verse: VerseResponse) => {
 		const dssMap = new Map<
 			number,
@@ -229,10 +235,7 @@ export function FullChapterView({
 									>
 										{language === "es" && !(verse.translation ?? "").trim()
 											? spanishMissingTranslation
-											: renderTranslation(verse.translation ?? "", {
-													hideSuperscripts,
-													footnotes: verse.translation_footnotes,
-												})}
+											: renderVerseTranslation(verse)}
 									</span>
 									{idx < verses.length - 1 && " "}
 								</span>
@@ -329,20 +332,14 @@ export function FullChapterView({
 											</span>
 											{language === "es" && !(verse.translation ?? "").trim()
 												? spanishMissingTranslation
-												: renderTranslation(verse.translation ?? "", {
-														hideSuperscripts,
-														footnotes: verse.translation_footnotes,
-													})}
+												: renderVerseTranslation(verse)}
 										</>
 									) : (
 										<>
 											[
 											{language === "es" && !(verse.translation ?? "").trim()
 												? spanishMissingTranslation
-												: renderTranslation(verse.translation ?? "", {
-														hideSuperscripts,
-														footnotes: verse.translation_footnotes,
-													})}
+												: renderVerseTranslation(verse)}
 											]
 										</>
 									)}
