@@ -11,7 +11,7 @@ import logging
 import re
 import sys
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 # Add parent directory to path for utils import
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -83,16 +83,16 @@ class GrokTranslator:
     def _generate_prompt(self, texts: List[str], target_lang: str) -> str:
         """
         Generate translation prompt for batch translation.
-        
+
         Args:
             texts: List of English definition texts to translate
             target_lang: Target language code (e.g., 'es', 'pt')
-            
+
         Returns:
             Formatted prompt string
         """
         lang_name = get_language_name(target_lang) or target_lang
-        
+
         prompt = f"""Translate these Hebrew dictionary definitions from English to {lang_name}.
 Maintain technical accuracy and preserve biblical terminology.
 
@@ -103,12 +103,12 @@ Input definitions:
 """
         for i, text in enumerate(texts, 1):
             prompt += f"{i}. {text}\n"
-        
+
         prompt += "\nReturn the translations as a JSON array:"
 
         return prompt
 
-    def _generate_prompt(self, texts: List[str], target_lang: str) -> str:
+    def get_mismatch_stats(self) -> Dict[str, int]:
         """
         Get mismatch statistics for reporting.
 
@@ -205,202 +205,41 @@ Input definitions:
             logger.debug(f"Response object: {response}")
             logger.debug(f"Response dir: {[attr for attr in dir(response) if not attr.startswith('_')]}")
 
-            # Check if response has the expected structure
-            if not hasattr(response, 'output'):
-                logger.error(f"Response missing 'output' attribute: {response}")
-                raise ValueError("Invalid response structure from Grok API")
+            output_items: Any = getattr(response, "output", None)
+            response_text = getattr(response, "output_text", None)
 
-            if response.output is None:
-                logger.error("Response.output is None")
-                raise ValueError("Response output is None")
+            # Fall back to traversing output items if output_text isn't available.
+            if not isinstance(response_text, str) or not response_text.strip():
+                fragments: List[str] = []
+                if isinstance(output_items, list):
+                    for output_item in output_items:
+                        content_items = getattr(output_item, "content", None)
+                        if isinstance(content_items, list):
+                            for content_item in content_items:
+                                text_candidate = getattr(content_item, "text", None)
+                                if isinstance(text_candidate, str) and text_candidate.strip():
+                                    fragments.append(text_candidate)
 
-            if len(response.output) == 0:
-                logger.error("Response.output is empty")
-                raise ValueError("Response output is empty")
+                        direct_text = getattr(output_item, "text", None)
+                        if isinstance(direct_text, str) and direct_text.strip():
+                            fragments.append(direct_text)
 
-            output_item = response.output[0]
-            logger.debug(f"Output item: {output_item}")
-            logger.debug(f"Output item dir: {[attr for attr in dir(output_item) if not attr.startswith('_')]}")
+                if fragments:
+                    response_text = "\n".join(fragments)
 
-            # Try different ways to access content
-            content = None
-            if hasattr(output_item, 'content') and output_item.content is not None:
-                content_obj = output_item.content
-                logger.debug(f"content_obj type: {type(content_obj)}, attrs: {[attr for attr in dir(content_obj) if not attr.startswith('_')]}")
-
-                # Handle case where content is a list of ResponseOutputText objects
-                if isinstance(content_obj, list) and len(content_obj) > 0:
-                    # Take the first item and extract its text
-                    first_item = content_obj[0]
-                    if hasattr(first_item, 'text'):
-                        content = first_item.text
-                    elif hasattr(first_item, 'value'):
-                        content = first_item.value
-                    elif hasattr(first_item, 'content'):
-                        content = first_item.content
-                    elif hasattr(first_item, 'data'):
-                        content = first_item.data
-                    else:
-                        content = str(first_item)
-                # Handle single ResponseOutputText object
-                elif hasattr(content_obj, 'text'):
-                    content = content_obj.text
-                elif hasattr(content_obj, 'value'):
-                    content = content_obj.value
-                elif hasattr(content_obj, 'content'):
-                    content = content_obj.content
-                elif hasattr(content_obj, 'data'):
-                    content = content_obj.data
-                else:
-                    # Try calling the object as a string or accessing its content directly
-                    try:
-                        content = str(content_obj)
-                    except:
-                        content = repr(content_obj)
-                logger.debug(f"Found content via .content: {repr(content)}")
-            elif hasattr(output_item, 'text') and output_item.text is not None:
-                content_obj = output_item.text
-                logger.debug(f"text_obj type: {type(content_obj)}, attrs: {[attr for attr in dir(content_obj) if not attr.startswith('_')]}")
-
-                # Handle case where text is a list of ResponseOutputText objects
-                if isinstance(content_obj, list) and len(content_obj) > 0:
-                    # Take the first item and extract its text
-                    first_item = content_obj[0]
-                    if hasattr(first_item, 'text'):
-                        content = first_item.text
-                    elif hasattr(first_item, 'value'):
-                        content = first_item.value
-                    elif hasattr(first_item, 'content'):
-                        content = first_item.content
-                    elif hasattr(first_item, 'data'):
-                        content = first_item.data
-                    else:
-                        content = str(first_item)
-                # Handle single ResponseOutputText object
-                elif hasattr(content_obj, 'text'):
-                    content = content_obj.text
-                elif hasattr(content_obj, 'value'):
-                    content = content_obj.value
-                elif hasattr(content_obj, 'content'):
-                    content = content_obj.content
-                elif hasattr(content_obj, 'data'):
-                    content = content_obj.data
-                else:
-                    # Try calling the object as a string or accessing its content directly
-                    try:
-                        content = str(content_obj)
-                    except:
-                        content = repr(content_obj)
-                logger.debug(f"Found content via .text: {repr(content)}")
-            else:
-                logger.debug(f"Output item has no direct content, checking summary: {output_item}")
-
-                # Grok sometimes returns reasoning with summary containing the final answer
-                if hasattr(output_item, 'summary') and output_item.summary:
-                    logger.debug(f"Found summary in output item: {len(output_item.summary)} items")
-
-                    # Look for summary items that might contain JSON
-                    for summary_item in output_item.summary:
-                        if hasattr(summary_item, 'text'):
-                            summary_text_obj = summary_item.text
-
-                            # Handle case where summary text is a list of ResponseOutputText objects
-                            if isinstance(summary_text_obj, list) and len(summary_text_obj) > 0:
-                                # Take the first item and extract its text
-                                first_item = summary_text_obj[0]
-                                if hasattr(first_item, 'text'):
-                                    summary_text = first_item.text
-                                elif hasattr(first_item, 'value'):
-                                    summary_text = first_item.value
-                                elif hasattr(first_item, 'content'):
-                                    summary_text = first_item.content
-                                elif hasattr(first_item, 'data'):
-                                    summary_text = first_item.data
-                                else:
-                                    summary_text = str(first_item)
-                            # Handle single ResponseOutputText object
-                            elif hasattr(summary_text_obj, 'text'):
-                                summary_text = summary_text_obj.text
-                            elif hasattr(summary_text_obj, 'value'):
-                                summary_text = summary_text_obj.value
-                            elif hasattr(summary_text_obj, 'content'):
-                                summary_text = summary_text_obj.content
-                            elif hasattr(summary_text_obj, 'data'):
-                                summary_text = summary_text_obj.data
-                            else:
-                                summary_text = str(summary_text_obj)
-                            logger.debug(f"Checking summary text: {summary_text[:200]}...")
-
-                            # Look for JSON array patterns in the summary
-                            import re
-                            # Look for patterns like ["word"], ["translated"], etc.
-                            json_matches = re.findall(r'\["[^"]+"\]', summary_text)
-                            logger.debug(f"Found {len(json_matches)} potential JSON arrays in summary")
-
-                            for potential_json in json_matches:
-                                logger.debug(f"Testing potential JSON: {potential_json}")
-                                try:
-                                    # Try to parse it as JSON
-                                    parsed = json.loads(potential_json)
-                                    if isinstance(parsed, list) and len(parsed) > 0:
-                                        content = potential_json
-                                        logger.debug(f"Successfully extracted JSON from summary: {content}")
-                                        break
-                                except json.JSONDecodeError:
-                                    logger.debug(f"Could not parse as JSON: {potential_json}")
-                                    continue
-
-                            # If no clean JSON found, try broader patterns
-                            if not content:
-                                # Look for any bracketed content that might contain the answer
-                                broad_matches = re.findall(r'\[([^\]]+)\]', summary_text)
-                                for match in broad_matches:
-                                    # Clean up the match and try to make it valid JSON
-                                    cleaned = match.strip()
-                                    if ',' in cleaned:
-                                        # Multiple items
-                                        items = [item.strip().strip('"').strip("'") for item in cleaned.split(',')]
-                                        potential_json = json.dumps(items)
-                                    else:
-                                        # Single item
-                                        item = cleaned.strip('"').strip("'")
-                                        potential_json = json.dumps([item])
-
-                                    logger.debug(f"Trying cleaned JSON: {potential_json}")
-                                    try:
-                                        parsed = json.loads(potential_json)
-                                        if isinstance(parsed, list) and len(parsed) > 0:
-                                            content = potential_json
-                                            logger.debug(f"Successfully extracted cleaned JSON: {content}")
-                                            break
-                                    except json.JSONDecodeError:
-                                        continue
-
-                # Try other attributes
-                for attr in ['message', 'response', 'result', 'answer']:
-                    if hasattr(output_item, attr):
-                        possible_content = getattr(output_item, attr)
-                        if possible_content is not None:
-                            logger.debug(f"Found possible content via .{attr}: {possible_content}")
-                            content = possible_content
-                            break
-
-            if content is None:
-                logger.error(f"Could not extract content from response. Output item: {output_item}")
-                logger.error(f"Available attributes: {[attr for attr in dir(output_item) if not attr.startswith('_')]}")
+            if not isinstance(response_text, str) or not response_text.strip():
+                logger.error("Could not extract content from Grok API response: %s", response)
                 raise ValueError("Could not extract content from Grok API response")
 
-            # Ensure content is a string before calling strip()
-            if isinstance(content, list):
-                # If content is already a list, it might be the parsed translations
-                translations = content
-            else:
-                response_text = str(content).strip()
-                logger.debug(f"Extracted response text: {repr(response_text)}")
+            response_text = response_text.strip()
+            logger.debug("Extracted response text: %r", response_text[:500])
 
-                # Use robust JSON extraction from utils module
-                translations = extract_json_array_robust(response_text)
-                logger.debug(f"Successfully extracted JSON array: {len(translations) if isinstance(translations, list) else 'not a list'} items")
+            # Use robust JSON extraction from utils module
+            translations = extract_json_array_robust(response_text)
+            logger.debug(
+                "Successfully extracted JSON array: %s items",
+                len(translations) if isinstance(translations, list) else "not a list",
+            )
 
             if not isinstance(translations, list):
                 raise ValueError("Response is not a JSON array")
