@@ -41,4 +41,10 @@ Davar (דבר - "word") is a sacred, distraction-free digital tool for deep, con
 - Respect all content licensing restrictions
 - Write all code, comments, and documentation **only in English**
 
+## Assistant Communication Preference
+
+- Do not show code diffs in chat by default.
+- Summarize what changed and list affected files.
+- Show full diff output only when explicitly requested.
+
 This project is a sacred tool for profound connection with Hebrew Scriptures — balance technical excellence with spiritual sensitivity.
