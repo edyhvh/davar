@@ -353,11 +353,9 @@ export function FullChapterView({
 												: renderVerseTranslation(verse)}
 										</>
 									) : (
-										<>
-											{language === "es" && !(verse.translation ?? "").trim()
-												? spanishMissingTranslation
-												: renderVerseTranslation(verse)}
-										</>
+										language === "es" && !(verse.translation ?? "").trim()
+											? spanishMissingTranslation
+											: renderVerseTranslation(verse)
 									)}
 								</div>
 							)}

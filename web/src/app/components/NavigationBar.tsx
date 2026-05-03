@@ -195,7 +195,7 @@ export function NavigationBar({
 		});
 
 		return () => window.cancelAnimationFrame(rafId);
-	}, [openMenu, filteredBooks, book]);
+	}, [openMenu]);
 
 	const normalizedChapterSearch = chapterSearch.trim();
 	const filteredChapters = normalizedChapterSearch
