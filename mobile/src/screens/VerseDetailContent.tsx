@@ -339,7 +339,10 @@ type VersePageProps = {
   isBesorah: boolean;
   onVersePress: () => void;
   selectedWord: DisplayVerse["words"][number] | null;
-  onWordPress: (word: DisplayVerse["words"][number] | null) => void;
+  onWordPress: (
+    word: DisplayVerse["words"][number] | null,
+    verseId: string,
+  ) => void;
   onNonHebrewPress: () => void;
   onMetricsChange: (
     verseId: string,
@@ -540,7 +543,7 @@ const VersePageComponent = ({
         selectedWord={isSelectedVerse ? selectedWord : null}
         isBesorah={isBesorah}
         onVersePress={onVersePress}
-        onWordPress={onWordPress}
+        onWordPress={(word) => onWordPress(word, item.id)}
         onHebrewPressIn={markHebrewPressIn}
       />
     </View>
@@ -787,6 +790,9 @@ export const VerseDetailContent = () => {
   const [selectedWord, setSelectedWord] = useState<
     (typeof orderedVerses)[number]["words"][number] | null
   >(null);
+  const [selectedWordVerseId, setSelectedWordVerseId] = useState<string | null>(
+    null,
+  );
   const pillVisibility = useRef(new Animated.Value(1)).current;
   const [pillVisible, setPillVisible] = useState(true);
   const [swipeHintCount, setSwipeHintCount] = useState(0);
@@ -915,10 +921,11 @@ export const VerseDetailContent = () => {
   const justSelectedWordRef = useRef(false);
 
   const handleWordPress = useCallback(
-    (word: typeof selectedWord) => {
+    (word: typeof selectedWord, verseIdForWord: string) => {
       if (!word) return;
 
       const isSameWord =
+        selectedWordVerseId === verseIdForWord &&
         selectedWord?.position === word.position &&
         selectedWord?.text === word.text &&
         selectedWord?.strong === word.strong;
@@ -928,17 +935,19 @@ export const VerseDetailContent = () => {
       if (isSameWord) {
         justSelectedWordRef.current = false;
         setSelectedWord(null);
+        setSelectedWordVerseId(null);
         sheetRef.current?.close();
         return;
       }
 
       justSelectedWordRef.current = true;
       setSelectedWord(word);
+      setSelectedWordVerseId(verseIdForWord);
       if (sheetRef.current) {
         sheetRef.current.snapToIndex(0);
       }
     },
-    [selectedWord],
+    [selectedWord, selectedWordVerseId],
   );
 
   // Open the word analysis sheet whenever a word is selected
@@ -957,6 +966,7 @@ export const VerseDetailContent = () => {
     }
     // Normal close (user swiped down or tapped backdrop) - clear the selection
     setSelectedWord(null);
+    setSelectedWordVerseId(null);
   }, []);
 
   const handleTogglePills = useCallback(() => {
@@ -1097,7 +1107,7 @@ export const VerseDetailContent = () => {
         canSwipePrevious={index > 0}
         canSwipeNext={index < orderedVerses.length - 1}
         isBesorah={isBesorah}
-        selectedWord={item.id === verse?.id ? selectedWord : null}
+        selectedWord={item.id === selectedWordVerseId ? selectedWord : null}
         onVersePress={handleOpenNavigationSheet}
         onWordPress={handleWordPress}
         onNonHebrewPress={handleTogglePills}
@@ -1114,6 +1124,7 @@ export const VerseDetailContent = () => {
       orderedVerses.length,
       isBesorah,
       selectedWord,
+      selectedWordVerseId,
       handleOpenNavigationSheet,
       handleWordPress,
       handleTogglePills,
@@ -1132,6 +1143,7 @@ export const VerseDetailContent = () => {
       // Only clear if book actually changed (not just verse within same chapter)
       if (prevBookId !== newBookId) {
         setSelectedWord(null);
+        setSelectedWordVerseId(null);
         sheetRef.current?.close();
       }
       prevVerseIdRef.current = effectiveVerseId;
@@ -1172,6 +1184,7 @@ export const VerseDetailContent = () => {
     const loadVerses = async () => {
       setChapterVerses([]);
       setSelectedWord(null);
+      setSelectedWordVerseId(null);
       setIsLoading(true);
       setErrorMessage(null);
       sheetRef.current?.close();
@@ -1361,10 +1374,10 @@ export const VerseDetailContent = () => {
                       verse={item}
                       variant="detail"
                       showWordHint={false}
-                      selectedWord={item.id === verse?.id ? selectedWord : null}
+                      selectedWord={item.id === selectedWordVerseId ? selectedWord : null}
                       isBesorah={isBesorah}
                       onVersePress={handleOpenNavigationSheet}
-                      onWordPress={handleWordPress}
+                      onWordPress={(word) => handleWordPress(word, item.id)}
                     />
                   ))}
                 </View>
@@ -1414,7 +1427,7 @@ export const VerseDetailContent = () => {
       <WordAnalysisBottomSheet
         ref={sheetRef}
         word={selectedWord}
-        currentVerseId={effectiveVerseId}
+        currentVerseId={selectedWordVerseId ?? effectiveVerseId}
         isBesorah={isBesorah}
         onClosed={handleSheetClosed}
       />

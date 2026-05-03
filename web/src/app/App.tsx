@@ -60,6 +60,11 @@ type RouteState = {
 	verse?: number;
 };
 
+type WordSelectionContext = {
+	chapter: number;
+	verse: number;
+};
+
 const BOOK_ABBREVIATIONS: Record<string, string> = {
 	gen: "Genesis",
 	exod: "Exodus",
@@ -196,6 +201,8 @@ export default function App() {
 	const versePanelRef = useRef<HTMLDivElement | null>(null);
 
 	const [selectedWord, setSelectedWord] = useState<WordResponse | null>(null);
+	const [selectedWordContext, setSelectedWordContext] =
+		useState<WordSelectionContext | null>(null);
 	const [isWordSheetOpen, setIsWordSheetOpen] = useState(false);
 	const wordSheetClosingRef = useRef(false);
 	const [isWordPanelDismissed, setIsWordPanelDismissed] = useState(true);
@@ -208,6 +215,8 @@ export default function App() {
 	const [lastSelectedWord, setLastSelectedWord] = useState<WordResponse | null>(
 		null,
 	);
+	const [lastSelectedWordContext, setLastSelectedWordContext] =
+		useState<WordSelectionContext | null>(null);
 	const [lastSelectedWordAnalysis, setLastSelectedWordAnalysis] =
 		useState<WordAnalysis | null>(null);
 	const [showMobileDesignGuide, setShowMobileDesignGuide] = useState(false);
@@ -540,6 +549,7 @@ export default function App() {
 	useEffect(() => {
 		if (prevBookRef.current !== currentBook) {
 			setSelectedWord(null);
+			setSelectedWordContext(null);
 			setSelectedWordAnalysis(null);
 			setChapterVerses([]); // Clear old verses so currentVerseData becomes null
 			prevBookRef.current = currentBook;
@@ -555,6 +565,7 @@ export default function App() {
 		setIsNavigatingWordPanel(false);
 		setShowWordSkeleton(false);
 		setSelectedWord(null);
+		setSelectedWordContext(null);
 	}, [currentScreen]);
 
 	const closeWordSheet = useCallback(() => {
@@ -572,19 +583,26 @@ export default function App() {
 		if (isWordSheetOpen) return;
 		wordSheetClosingRef.current = false;
 		setSelectedWord(null);
+		setSelectedWordContext(null);
 	}, [isWordSheetOpen]);
 
 	const handleWordClick = useCallback(
-		(word: WordResponse) => {
+		(word: WordResponse, context?: WordSelectionContext) => {
+			const resolvedContext = context ?? {
+				chapter: currentChapter,
+				verse: currentVerse,
+			};
 			logWordDebug("click", {
 				text: word.text,
 				strong: word.strong ?? null,
 				position: word.position,
+				context: resolvedContext,
 				selected: selectedWord
 					? {
 							text: selectedWord.text,
 							strong: selectedWord.strong ?? null,
 							position: selectedWord.position,
+							context: selectedWordContext,
 						}
 					: null,
 			});
@@ -593,18 +611,22 @@ export default function App() {
 			if (
 				selectedWord?.text === word.text &&
 				selectedWord?.strong === word.strong &&
-				selectedWord?.position === word.position
+				selectedWord?.position === word.position &&
+				selectedWordContext?.chapter === resolvedContext.chapter &&
+				selectedWordContext?.verse === resolvedContext.verse
 			) {
 				logWordDebug("click-same-word-close", {
 					text: word.text,
 					strong: word.strong ?? null,
 					position: word.position,
+					context: resolvedContext,
 				});
 				if (isMobile) {
 					closeWordSheet();
 				} else {
 					setIsWordPanelDismissed(true);
 					setSelectedWord(null);
+					setSelectedWordContext(null);
 					setLastSelectedWordAnalysis(null);
 					setLastSelectedDssAnalysis(null);
 				}
@@ -612,10 +634,12 @@ export default function App() {
 			}
 			setIsWordPanelDismissed(false);
 			setSelectedWord(word);
+			setSelectedWordContext(resolvedContext);
 			logWordDebug("click-select-word", {
 				text: word.text,
 				strong: word.strong ?? null,
 				position: word.position,
+				context: resolvedContext,
 				isMobile,
 			});
 			if (isMobile) {
@@ -623,7 +647,15 @@ export default function App() {
 				setIsWordSheetOpen(true);
 			}
 		},
-		[closeWordSheet, isMobile, logWordDebug, selectedWord],
+		[
+			closeWordSheet,
+			currentChapter,
+			currentVerse,
+			isMobile,
+			logWordDebug,
+			selectedWord,
+			selectedWordContext,
+		],
 	);
 
 	const handleNavigateToVerse = async (verseRef: string) => {
@@ -686,34 +718,46 @@ export default function App() {
 		[chapterVerses, currentVerse],
 	);
 
-	const highlightedWord = useMemo(() => {
-		const candidate = selectedWord ?? lastSelectedWord;
-		if (!candidate || !currentVerseData) return null;
+	const selectedWordVerseData = useMemo(() => {
+		const context = selectedWordContext ?? lastSelectedWordContext;
+		if (!context) return currentVerseData;
 
-		if (candidate.strong) {
-			const byStrong = currentVerseData.words.find(
-				(word) => word.strong === candidate.strong,
-			);
-			if (byStrong) return byStrong;
+		return (
+			chapterVerses.find(
+				(item) =>
+					item.chapter === context.chapter && item.verse === context.verse,
+			) ?? currentVerseData
+		);
+	}, [
+		chapterVerses,
+		currentVerseData,
+		lastSelectedWordContext,
+		selectedWordContext,
+	]);
+
+	const highlightedWord = useMemo(
+		() => selectedWord ?? lastSelectedWord,
+		[selectedWord, lastSelectedWord],
+	);
+
+	const highlightedWordContext = useMemo(() => {
+		if (selectedWord && selectedWordContext) {
+			return selectedWordContext;
 		}
 
-		const byPosition = currentVerseData.words.find(
-			(word) => word.position === candidate.position,
-		);
-
-		if (byPosition && byPosition.text === candidate.text) {
-			return byPosition;
+		if (!selectedWord && lastSelectedWordContext) {
+			return lastSelectedWordContext;
 		}
 
 		return null;
-	}, [currentVerseData, selectedWord, lastSelectedWord]);
+	}, [selectedWord, selectedWordContext, lastSelectedWordContext]);
 
 	const selectedDssVariant = useMemo(
 		() =>
-			currentVerseData?.dss?.find(
+			selectedWordVerseData?.dss?.find(
 				(variant) => variant.position === selectedWord?.position,
 			) ?? null,
-		[currentVerseData, selectedWord],
+		[selectedWord, selectedWordVerseData],
 	);
 
 	const bookOptions = useMemo(
@@ -1068,6 +1112,12 @@ export default function App() {
 	}, [selectedWord]);
 
 	useEffect(() => {
+		if (selectedWordContext) {
+			setLastSelectedWordContext(selectedWordContext);
+		}
+	}, [selectedWordContext]);
+
+	useEffect(() => {
 		if (selectedWordAnalysis) {
 			setLastSelectedWordAnalysis(selectedWordAnalysis);
 		}
@@ -1139,6 +1189,7 @@ export default function App() {
 		setIsNavigatingWordPanel(false);
 		setIsWordPanelDismissed(true);
 		setSelectedWord(null);
+		setSelectedWordContext(null);
 	}, [currentBook, currentChapter, currentVerse, isMobile]);
 
 	useEffect(() => {
@@ -1168,9 +1219,17 @@ export default function App() {
 
 		if (matchedWord) {
 			setSelectedWord(matchedWord);
+			setSelectedWordContext({
+				chapter: currentVerseData.chapter,
+				verse: currentVerseData.verse,
+			});
 			setIsWordPanelDismissed(false);
 		} else if (fallbackWord) {
 			setSelectedWord(fallbackWord);
+			setSelectedWordContext({
+				chapter: currentVerseData.chapter,
+				verse: currentVerseData.verse,
+			});
 			setIsWordPanelDismissed(false);
 		}
 
@@ -1543,7 +1602,8 @@ export default function App() {
 											chapterVerses={chapterVerses}
 											words={currentVerseData.words}
 											dssVariants={currentVerseData.dss}
-											selectedWord={highlightedWord?.text ?? null}
+											selectedWord={highlightedWord ?? null}
+											selectedWordContext={highlightedWordContext}
 											isBesorah={isBesorah}
 											translation_footnotes={
 												currentVerseData.translation_footnotes
@@ -1603,14 +1663,27 @@ export default function App() {
 											(!isNavigatingWordPanel && !showWordSkeleton
 												? lastSelectedWord
 												: null);
+											const wordContextForCard =
+												selectedWord && selectedWordContext
+													? selectedWordContext
+													: !selectedWord && lastSelectedWordContext
+														? lastSelectedWordContext
+														: null;
 										const wordAnalysisForCard = selectedWord
 											? selectedWordAnalysis
 											: lastSelectedWordAnalysis;
 										const dssAnalysisForCard = selectedWord
 											? selectedDssAnalysis
 											: lastSelectedDssAnalysis;
+											const verseDataForWordCard = wordContextForCard
+												? chapterVerses.find(
+														(item) =>
+															item.chapter === wordContextForCard.chapter &&
+															item.verse === wordContextForCard.verse,
+													) ?? currentVerseData
+												: currentVerseData;
 										const dssVariantForCard =
-											currentVerseData?.dss?.find(
+												verseDataForWordCard?.dss?.find(
 												(variant) => variant.position === wordForCard?.position,
 											) ?? null;
 										const qumranWordForCard = resolveRenderableDssWord(
@@ -1733,6 +1806,7 @@ export default function App() {
 																setIsWordPanelDismissed(true);
 															}
 															setSelectedWord(null);
+															setSelectedWordContext(null);
 															setIsNavigatingWordPanel(false);
 															setShowWordSkeleton(false);
 															if (wordSkeletonTimerRef.current) {
@@ -1791,8 +1865,16 @@ export default function App() {
 					{(() => {
 						if (!selectedWord) return null;
 
+						const selectedWordVerseDataForSheet = selectedWordContext
+							? chapterVerses.find(
+									(item) =>
+										item.chapter === selectedWordContext.chapter &&
+										item.verse === selectedWordContext.verse,
+								) ?? currentVerseData
+							: currentVerseData;
+
 						const dssVariantForCard =
-							currentVerseData?.dss?.find(
+							selectedWordVerseDataForSheet?.dss?.find(
 								(variant) => variant.position === selectedWord.position,
 							) ?? null;
 						const qumranWordForCard = resolveRenderableDssWord(
