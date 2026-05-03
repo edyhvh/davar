@@ -182,7 +182,7 @@ class TTHJsonPostProcessor:
         if not first_letter:
             return False
         letter = first_letter.group(0)
-        return letter.isalpha() and letter == letter.lower() and letter != letter.upper()
+        return letter.islower()
 
     def starts_with_blocked_subtitle_phrase(self, content: str) -> bool:
         """Return True when content starts with a known in-verse phrase."""

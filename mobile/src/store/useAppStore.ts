@@ -103,9 +103,9 @@ export const useAppStore = create<AppState>((set) => ({
     set((state) => ({
       translationOnly: value,
       hebrewOnly: value ? false : state.hebrewOnly,
-      showQumran: value ? false : true,
+      showQumran: value ? false : state.showQumran,
       showCantillation: value ? false : state.showCantillation,
-      showNikud: value ? false : true,
+      showNikud: value ? false : state.showNikud,
       showFullChapter: value ? true : false,
       seferMode: value ? true : false,
     })),

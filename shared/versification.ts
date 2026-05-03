@@ -150,7 +150,11 @@ export const mapHebrewVerseToTranslationReference = (
   chapter: number,
   verse: number,
 ): VerseReference | null => {
-  if (!Number.isFinite(chapter) || !Number.isFinite(verse) || chapter <= 0 || verse <= 0) {
+  if (!Number.isFinite(chapter) || !Number.isFinite(verse)) {
+    return null;
+  }
+
+  if (chapter <= 0 || verse <= 0) {
     return { chapter, verse };
   }
 
