@@ -11,7 +11,7 @@ __SHEMUEL BET \(2 SAMUEL\)__ ב שמואל
 **5** Y dijo David al joven que se lo dio a cono­cer: ¿Cómo sabes que ha muerto Shaúl, y Ieho­natán su hijo?
 **6** Y dijo el joven que se lo había dado a cono­cer: Yo me encontraba[^1782] en el monte de Gilboa, y he aquí, *es­taba *Sha­úl apoyado sobre su espada; y he aquí, los carros y los señores de los jinetes lo alcan­zaban.
 **7** Y giró tras de él y me vio, y me llamó. Y di­je: “Heme aquí”.
-**8** Y dijo a mí: “¿Quién eres tú?” Y le dije: “A­malekí[^1783] soy yo”.
+**8** Y dijo a mí: “¿Quién eres tú? ” Y le dije: “A­malekí[^1783] soy yo”.
 **9** Y me dijo: “Párate por favor sobre mí y má­ta­me, porque me ha atrapado la agonía[^1784], pues aún toda mi vida *está* en mí”.
 **10** Y me paré sobre él y lo maté, porque sabía que no podría vivir después de su caída. Y to­mé la corona que *tenía* sobre su cabeza y la pul­sera que *estaba* en su brazo, y los traje a mi amo aquí.
 **11** Y se apoderó David de sus vestiduras y las rasgó, y también todos los hombres que *esta­ban* con él.
@@ -29,11 +29,11 @@ __SHEMUEL BET \(2 SAMUEL\)__ ב שמואל
 **19** La belleza, Israel, sobre tus alturas, ha muer­to. ¡Cómo han caído los poderosos!
 **20** No lo des a conocer en Gat, ¡no lo anoticien en las afueras de Ashkelón!;¡no sea que se alegren las hijas de los pelishtim[^1787]!, ¡no sea que se regocijen las hijas de los incir­cun­cisos!
 **21**¡Montes de Gilboa!, no *haya* rocío ni lluvia sobre ustedes, ni cam­pos de contribuciones;porque allí fue aborrecido el escudo de los po­derosos,
-**22** De las sangre de los muertos, de la grasa de los poderosos, el arco de Iehonatán no regresa­ba atrás,y la espada de Shaúl no volvía vacía.
-**23** Shaúl y Iehonatán, amados y agradables en sus vidas, y en su muerte no fueron separados;que las águilas fueron más rápidos, que leones fueron más fuertes.
-**24** ¡Hijas de Israel!, a Shaúl lloren, el que los vestía de escarlata con lujos,quien hacía subir adornos de oro sobre sus ves­tidos.
+**22** De las sangre de los muertos, de la grasa de los poderosos, el arco de Iehonatán no regresa­ba atrás, y la espada de Shaúl no volvía vacía.
+**23** Shaúl y Iehonatán, amados y agradables en sus vidas, y en su muerte no fueron separados; que las águilas fueron más rápidos, que leones fueron más fuertes.
+**24** ¡Hijas de Israel!, a Shaúl lloren, el que los vestía de escarlata con lujos, quien hacía subir adornos de oro sobre sus ves­tidos.
 **25** ¡Cómo han caído los poderosos en medio de la batalla! Iehonatán, sobre tus alturas asesinado.
-**26** Hay angustia en mí por ti, mi hermano Ie­ho­natán; fuiste muy agradable para mí.Más maravilloso tu amor para mí que el amor de las mujeres.
+**26** Hay angustia en mí por ti, mi hermano Ie­ho­natán; fuiste muy agradable para mí. Más maravilloso tu amor para mí que el amor de las mujeres.
 **27** ¡Cómo han caído los poderosos, y han pere­cido los instrumentos de guerra!
 
 David es nombrado rey de Iehudáh
@@ -101,7 +101,7 @@ David y Abner
 **15** Y envió Ishboshet a tomarla de con su es­po­so, de con Paltiel, hijo de Laish.
 **16** Y fue con ella su esposo, yendo y llorando detrás de ella hasta Bajurim. Y le dijo Abner: Ve, vuelve. Y él volvió.
 **17** Y una palabra tuvo Abner con los ancianos de Israel, diciendo: Hace tiempo[^1798] que estuvieron bus­cando a David para que sea rey sobre ustedes.
-**18** Y ahora, háganlo. Porque יהוה ha dicho a David, diciendo: “Por mano de David mi sier­­vo salvará a mi pueblo Israel de la mano de los pelishtim[^1799] y de la mano de todos sus enemi­gos.”
+**18** Y ahora, háganlo. Porque יהוה ha dicho a David, diciendo: “Por mano de David mi sier­­vo salvará a mi pueblo Israel de la mano de los pelishtim[^1799] y de la mano de todos sus enemi­gos. ”
 **19** Y habló también Abner a oídos de Binia­mín; y fue también Abner a hablar a oídos de David en Jebrón de todo lo que era bueno en los ojos de Israel y en los ojos de toda la casa de Biniamín.
 **20** Y vino Abner a David en Jebrón, y con él veinte hombres. E hizo David para Abner y pa­ra los hombres que estaban con él un banque­te.
 **21** Y dijo Abner a David: Me levantaré e iré y reuniré hacia mi amo el rey a todo Israel, y ha­rán[^1800] contigo un pacto, y reinarás en todo lo que desee tu ser. Y envió David a Abner, y él fue en shalom.
@@ -195,7 +195,7 @@ David trae el arca a Yerushaláim
 **12** Y fue dado a conocer a David, diciendo: Ha bendecido יהוה a la casa de Obed Edom y a todo lo que pertenece a él a causa del arca de Elohim. Y fue David e hizo subir el arca de E­lohim de la casa de Obed Edom a la ciudad de David con alegría.
 **13** Y sucedió que cuando habían marchado los portadores del arca de יהוה seis pasos, él sacrificó un buey y un animal engordado.
 **14** Y David danzaba con toda su fuerza delante de יהוה, y David ceñía un efod de lino.
-**15** Y David y toda la casa de Israel hacían su­bir el arca de יהוה con t’ruáh[^1816] y con voz de shofar[^1817].
+**15** Y David y toda la casa de Israel hacían su­bir el arca de יהוה con t'ruáh[^1816] y con voz de shofar[^1817].
 **16** Y sucedió que el arca de יהוה entró a la ciudad de David, y Mijal, hija de Shaúl, miró a través de la ventana y vio al rey David sal­tando y danzando delante de יהוה, y lo des­preció en su corazón.
 **17** E hicieron entrar al arca de יהוה y la co­locaron en su lugar en medio de la tienda que había extendido para ella David, y ascendió Da­vid ofrendas ascendidas delante de יהוה, y retribuciones.
 **18** Y terminó David de ascender la ofrenda as­cendida[^1818] y las retribuciones[^1819], y bendijo al pueblo en Nombre de יהוה Tzebaot.
@@ -215,7 +215,7 @@ La promesa de יהוה a David
 **4** Y sucedió que en aquella noche hubo palabra de יהוה a Natán, diciendo:
 **5** Ve y di a mi siervo, a David: “Así dice יהוה: ‘¿Eres tú quien edificará para Mí una ca­sa para habitar?
 **6** Pues no he habitado en una casa desde el día que hice subir a los hijos de Israel de Mitzráim y hasta este día, y estuve andando en una tien­da y en un Mishkán[^1821].
-**7** En todo lugar que he ido con todos los hijos de Israel, ¿palabra hablé a una de las tribus de Israel, que haya ordenado a pastorear a mi pue­blo, a Israel, diciendo: “¿Por qué no han edi­fi­cado pa­ra Mí una casa de cedro?” ’ ”
+**7** En todo lugar que he ido con todos los hijos de Israel, ¿palabra hablé a una de las tribus de Israel, que haya ordenado a pastorear a mi pue­blo, a Israel, diciendo: “¿Por qué no han edi­fi­cado pa­ra Mí una casa de cedro? ” ' ”
 **8** Y ahora, así dirás a mi siervo, a David: “Así dice יהוה Tzebaot: ‘Yo te tomé del pastizal, de tras el rebaño, para ser líder sobre mi pue­blo, sobre Israel.
 **9** Y he estado contigo en todo lugar que fuiste y he cortado a todos tus enemigos de delante de ti, y he hecho para ti un gran nombre, como el nombre de los grandes que hay en la tierra.
 **10** Y he puesto un lugar para mi pueblo, para Israel, y lo plantaré, y podrá habitar en su lu­gar y no se agitará más, y no volverán los hijos de injusticia a afligirlo como en la primera vez,
@@ -332,7 +332,7 @@ David y Batsheva
 **18** Y envió Ioab y dio a conocer a David todas las palabras de la guerra,
 **19** y ordenó al mensajero, diciendo: Cuando ha­­yas acabado todas las palabras de la guerra para hablar al rey,
 **20** y sucede si se sube el ardor del rey, y dice a ti: “¿Por qué se acercaron a la ciudad para lu­char? ¿No sabían que dispararían de sobre el mu­ro?
-**21** ¿Quién hirió a Abimélej, hijo de Ierube­shet? ¿No una mujer lanzó sobre él un corte de piedra de mo­li­no de sobre el muro y murió en Tebetz? ¿Por qué se acercaron al muro?” Y di­rás también: “Tu sier­vo Uriyah el jití ha muer­to”.
+**21** ¿Quién hirió a Abimélej, hijo de Ierube­shet? ¿No una mujer lanzó sobre él un corte de piedra de mo­li­no de sobre el muro y murió en Tebetz? ¿Por qué se acercaron al muro? ” Y di­rás también: “Tu sier­vo Uriyah el jití ha muer­to”.
 **22** Y fue el mensajero, y vino y dio a conocer a David todo lo que le había enviado Ioab.
 **23** Y dijo el mensajero a David: Pues, fueron poderosos sobre nosotros los hombres y salie­ron hacia nosotros al campo, pero estuvimos sobre ellos hasta la entrada de la puerta.
 **24** Y lanzaron los lanzadores hacia tus siervos desde sobre el muro; y murieron de los siervos del rey, y también tu siervo Uriyah el jití murió.
@@ -371,7 +371,7 @@ y de su ga­nado para preparar para el caminante *que* había venido a él, y to
 **19** Y vio David que sus siervos susurraban, y discernió David que había muerto el niño, y di­jo David a sus siervos: ¿Ha muerto el niño? Y ellos dijeron: Ha muerto.
 **20** Y se levantó David de la tierra, y se lavó y se ungió y cambió su ropa; y entró *a* la casa de יהוה y se inclinó. Y vino a su casa, y pidió, y pusieron para él pan, y comió.
 **21** Y dijeron sus siervos a él: ¿Qué es esta cosa que has hecho? Por el bien de *que* el niño viva, ayunaste y lloraste, pero cuando murió el niño, te levantaste y comiste pan.
-**22** Y él dijo: Cuando aún el niño vivía, ayuné y lloré, porque dije: “¿Quién sabe? ¿Me mos­tra­rá favor יהוה y vivirá el niño?”
+**22** Y él dijo: Cuando aún el niño vivía, ayuné y lloré, porque dije: “¿Quién sabe? ¿Me mos­tra­rá favor יהוה y vivirá el niño? ”
 **23** Pero ahora, ha muerto, ¿por qué esto, yo a­yu­naré? ¿Podré hacerlo volver aún? Yo iré a él, pero él no volverá a mí.
 **24** Y consoló David a Batsheva su mujer, y vi­no a ella y se acostó con ella; y ella dio a luz un hijo, y él[^1843] lla­mó su nombre Shelomóh; y יהוה lo amó.
 **25** Y envió *palabra* por mano de Natán el profeta, y llamó su nombre Iedidiáh[^1844], por causa de יהוה.
@@ -468,7 +468,7 @@ Ioab promueve el regreso de Abshalom
 **29** Y envió Abshalom a Ioab para enviarlo al rey, pero no quiso ir a él. Y envió aún por segunda vez, pero no quiso ir.
 **30** Y dijo a sus siervos: Miren, la porción de Ioab está al lado mío, y tiene él allí cebada; vayan y enciéndanla con fuego. Y quemaron los siervos de Abshalom la porción con fuego. \[Y los siervos de Ioab vinieron a él, con sus vestiduras rasgadas, y dijeron: “Los siervos de Abshalom encendieron con fuego el campo[^1850]”.\].
 **31** Y se levantó Ioab y vino a Abshalom, a la casa, y le dijo: ¿Por qué quemaron tus siervos la parcela que es mía con fuego?
-**32** Y dijo Abshalom a Ioab: He aquí, envié a ti, diciendo: “Ven aquí, y pueda enviarte al rey para decir: ‘¿Por qué he venido de Gueshur? Bueno sería para mí aún estar yo allí.’ ” Y a­ho­ra, vea yo el rostro del rey; y si hay en mí ini­quidad, me hará morir.
+**32** Y dijo Abshalom a Ioab: He aquí, envié a ti, diciendo: “Ven aquí, y pueda enviarte al rey para decir: ‘¿Por qué he venido de Gueshur? Bueno sería para mí aún estar yo allí. ' ” Y a­ho­ra, vea yo el rostro del rey; y si hay en mí ini­quidad, me hará morir.
 **33** Y vino Ioab al rey y lo dio a conocer a él, y llamó a Abshalom, y él vino al rey y se inclinó para sí sobre sus narices a tierra delante del rey. Y besó el rey a Abshalom.
 
 **15**
@@ -625,14 +625,14 @@ Ioab reprende a David
 **5** Y entró Ioab a la casa del rey, y dijo: Has mar­chitado hoy los rostros de todos tus siervos que han dejado escapar a tu vida hoy, y a la vida de tus hijos y tus hijas, la vida de tus mu­jeres y la vida de tus concubinas,
 **6** al amar a tus enemigos y al odiar a tus ama­do­res. Porque has dado a conocer hoy que no son nada para ti príncipes y siervos; porque sé hoy que si Abshalom estuviera vivo y todos no­sotros hoy estuviéramos muertos, pues en­tonces sería recto en tus ojos.
 **7** Y ahora, levántate, sal y habla al corazón de tus siervos, porque por יהוה juro que si tú no sales, ¡si se alojaría un hombre contigo esta noche!, y malo será para ti esto más que todo el mal que ha venido sobre ti desde tu juventud hasta ahora.
-**8** Y se levantó el rey y se sentó en la puerta. Y a todo el pueblo dieron a conocer, diciendo: He aquí, el rey está sentado en la puerta. Y vi­no todo el pueblo delante del rey.Pero Israel había huido, cada hombre a su tienda.
+**8** Y se levantó el rey y se sentó en la puerta. Y a todo el pueblo dieron a conocer, diciendo: He aquí, el rey está sentado en la puerta. Y vi­no todo el pueblo delante del rey. Pero Israel había huido, cada hombre a su tienda.
 
 David vuelve a Yerushaláim
 
 **9** Y sucedió que todo el pueblo contendía por todas las tribus de Israel, diciendo: El rey nos ha rescatado de la palma de nuestros enemigos y él nos ha hecho escapar de la palma de los pelishtim, pero ahora ha huido de la tierra, de junto a Abshalom.
 **10** Pero Abshalom, quien ungimos sobre no­so­tros, ha muerto en la batalla. Y ahora, ¿por qué ustedes guardan silencio de hacer regresar al rey?
 **11** Y el rey David envió a Tzadok y a Ebiatar, los sacerdotes, diciendo: Hablen a los ancianos de Iehudáh, diciendo: “¿Por qué son los últi­mos para hacer volver al rey a su casa, y la pa­labra de todo Israel ha venido al rey, a su casa?
-**12** Mis hermanos son ustedes, mi hueso y mi carne son ustedes. ¿Y por qué son los últimos para hacer volver al rey?”
+**12** Mis hermanos son ustedes, mi hueso y mi carne son ustedes. ¿Y por qué son los últimos para hacer volver al rey? ”
 **13** Y a Amasa digan: “¿No eres mi hueso y mi carne tú? Así haga a mí Elohim, y así añada, si no serás jefe del ejército delante de mí todos los días en lugar de Ioab”.
 **14** E inclinó el corazón de todo hombre de Ie­hudáh como un solo hombre, y enviaron al rey: Regresa, tú y todos tus siervos.
 **15** Y volvió el rey y vino hasta el Iardén[^1874]. Y Ie­hudáh vino a Gilgal para ir al encuentro del rey, para hacer pasar al rey el Iardén.
@@ -732,18 +732,18 @@ Venganza de Guibeón
 **4** Él es alabado, llamaré a יהוה, y de mis enemigos seré salvado.
 **5** Porque me rodearon las olas de la muerte, los torrentes de Belial[^1899] me aterrorizaron;
 **6** las cuerdas del Sheol me rodearon, me enfrentaron las trampas de la muerte.
-**7** En mi estrechez llamé a יהוה, y a mi Elohim llamé; y escuchó desde su palacio mi voz,y mi clamor entró en sus oídos.
+**7** En mi estrechez llamé a יהוה, y a mi Elohim llamé; y escuchó desde su palacio mi voz, y mi clamor entró en sus oídos.
 **8** Y se sacudió y tembló la tierra, y los fundamentos de los cielos se agitaron
-**9** Subió humo por su nariz, y el fuego de su boca consumió;carbones fueron encendidos por Él.
+**9** Subió humo por su nariz, y el fuego de su boca consumió; carbones fueron encendidos por Él.
 **10** E inclinará los cielos y descenderá, y densa nube debajo de sus pies.
 **11** Y montará sobre un querubín[^1900], y volará; y será visto sobre las alas del viento.
 **12** Y puso oscuridad alrededor de Él por caba­ñas, acumulación de aguas, espesura de nubes.
 **13** Del brillo de su frente se encendieron carbones de fuego.
 **14** Tronó desde los cielos יהוה, y Elyón[^1901] dio su voz.
 **15** Y envió flechas, y los dispersó, relámpago, y los confundió.
-**16** Y fueron vistos los canales del mar, fueron descubiertos los fundamentos del mundo por la reprensión de יהוה,por el soplo del aliento de su nariz.
+**16** Y fueron vistos los canales del mar, fueron descubiertos los fundamentos del mundo por la reprensión de יהוה, por el soplo del aliento de su nariz.
 **17** Enviará su mano desde lo alto, me tomará, me sacará de muchas aguas.
-**18** Me rescatará de mi enemigo fuerte, de mis aborrecedores,pues son más fuertes que yo.
+**18** Me rescatará de mi enemigo fuerte, de mis aborrecedores, pues son más fuertes que yo.
 **19** Me afrontaron en el día de mi angustia, pero será יהוה apoyo para mí.
 **20** Y me sacará a amplitud; me librará, porque se deleitó en mí.
 **21** Me ha recompensado יהוה conforme a mi justicia,
@@ -756,7 +756,7 @@ Venganza de Guibeón
 **28** Y al pueblo afligido salvarás, pero tus ojos están sobre los altivosa quienes harás bajos.
 **29** Porque Tú eres mi lámpara, יהוה; y יהוה hará brillar mi oscuridad.
 **30** Porque en ti correré una tropa, con mi Elohim saltaré un muro.
-**31** El[^1903], es perfecto[^1904] su camino; el dicho de יהוה es refinado.Escudo es Él para todos
+**31** El[^1903], es perfecto[^1904] su camino; el dicho de יהוה es refinado. Escudo es Él para todos
 **32** Pues, ¿quién es El, aparte de יהוה? ¿Y quién es roca, aparte de nuestro Elohim?
 **33** El es mi refugio de poder, y puso íntegro mi camino.
 **34** Él pone sus pies[^1905] como las siervas, y sobre mis alturas me hace parar.
@@ -764,29 +764,29 @@ Venganza de Guibeón
 **36** Y me has dado el escudo de tu salvación, y tu respuesta me ha engrandecido.
 **37** Has ensanchado mi paso debajo de mí, y no se han resbalado mis tobillos.
 **38** Perseguí mis enemigos, y los destruí, y no volví hasta acabarlos.
-**39** Los consumí y los atravesé, y no se le­vantaron;y cayeron debajo de mis pies.
+**39** Los consumí y los atravesé, y no se le­vantaron; y cayeron debajo de mis pies.
 **40** Y tú me has ceñido con fuerza para la ba­talla; has hecho inclinar a los que se me levantaron debajo de mí.
 **41** Y mis enemigos, has dado a mí sus cuellos, de mis aborrecedores, y los exterminé.
 **42** Miraron, pero no hubo salvador; a יהוה, pero no les respondió.
 **43** Y los pulvericé, como polvo de la tierra, como barro de las calles los aplasté, los golpeé.
-**44** Y me has hecho escapar de las contiendas de mi pueblo; me has guardado para ser cabeza de naciones;pueblo que no conocía me servirá.
+**44** Y me has hecho escapar de las contiendas de mi pueblo; me has guardado para ser cabeza de naciones; pueblo que no conocía me servirá.
 **45** Los hijos del extranjero actuaron engaño­samente hacia mí, al escuchar oído, me escuchan.
 **46** Los hijos del extranjero desvanecerán, y se ceñirán de sus encierros.
 **47** Vive יהוה, y bendita es mi roca, y exaltado será el Elohim de la roca de mi sal­vación;
 **48** El Elohim, el da venganza por mí, y hace bajar pueblos debajo de mí;
-**49** y me saca de mis enemigos; y de los que se me levantan me has exaltado,del hombre de violencias me has rescatado.
+**49** y me saca de mis enemigos; y de los que se me levantan me has exaltado, del hombre de violencias me has rescatado.
 **50** Por eso te confieso, יהוה, en las naciones, y a tu Nombre cantaré melodías.
-**51** Engrandeció la salvación de su Rey, y hace bondad a su Mesías[^1906],a David y a su simiente[^1907] hasta el olam[^1908].
+**51** Engrandeció la salvación de su Rey, y hace bondad a su Mesías[^1906], a David y a su simiente[^1907] hasta el olam[^1908].
 
 Últimas palabras de David
 
 **23**
 
-**1** Y estas son las palabras de David, las últi­mas.Declaración de David, hijo de Ishai, declaración del hombre que fue levantado alto,el ungido del Elohim de Yaakov y el agradable cantante de Israel:
+**1** Y estas son las palabras de David, las últi­mas. Declaración de David, hijo de Ishai, declaración del hombre que fue levantado alto, el ungido del Elohim de Yaakov y el agradable cantante de Israel:
 **2** El Rúaj[^1909] de יהוה habló en mí, y su palabra estuvo en mi lengua.
-**3** Dijo el Elohim de Israel, a mí habló la Roca de Israel:“El que gobierna en los hombres, justo, gobierna en el temor de Elohim,
-**4** y será como la luz de la mañana, se levantará el sol en una mañana sin nubes,del brillo de la lluvia sobre la hierba de la tierra”.
-**5** Pues, no así mi casa con El[^1910], pero un pacto olam puso para mí,organizado en todo y guardado.Porque toda mi salvación y todo deleite, pues no hará brotar.
+**3** Dijo el Elohim de Israel, a mí habló la Roca de Israel: “El que gobierna en los hombres, justo, gobierna en el temor de Elohim,
+**4** y será como la luz de la mañana, se levantará el sol en una mañana sin nubes, del brillo de la lluvia sobre la hierba de la tierra”.
+**5** Pues, no así mi casa con El[^1910], pero un pacto olam puso para mí, organizado en todo y guardado. Porque toda mi salvación y todo deleite, pues no hará brotar.
 **6** Mas los inútiles como espina fueron eli­minados, todos ellos, porque no con mano serán tomados;
 **7** y el hombre que tocare en ellos estará lleno con hierro y madera de lanza, y con fuego serán completamente quemados[^1911] en el asiento.
 
@@ -840,7 +840,7 @@ David enumera al pueblo
 **9** Y dio Ioab el número del censo del pueblo al rey; y era Israel ochocientos mil hombres va­lientes que sacaban espada, y los hombres de Iehudáh eran quinientos mil hombres.
 **10** E hirió el corazón de David a él después de eso, de contar al pueblo, y dijo David a יהוה: He pecado mucho por lo que he hecho. Pe­ro ahora, יהוה, haz pasar, te ruego, la ini­quidad de tu siervo, porque he actuado muy tontamente.
 **11** Y se levantó David por la mañana, y la pa­labra de יהוה fue a Gad el profeta, vidente de David, diciendo:
-**12** Ve, y dirás a David: Así dice יהוה: “Tres cosas Yo pongo sobre ti; escoge para ti una de ellas, y pueda hacerla a ti’ ”.
+**12** Ve, y dirás a David: Así dice יהוה: “Tres cosas Yo pongo sobre ti; escoge para ti una de ellas, y pueda hacerla a ti' ”.
 **13** Y vino Gad a David y le dio a conocer, y le di­jo: Vendrán a ti siete años de hambre en tu tierra, o tres meses huirás delante de tus an­gus­tiadores y él te persiga, o habrá tres días pes­­tilencia en tu tierra. Ahora, conoce y mira qué palabra regresaré al que me envió.
 **14** Y dijo David a Gad: Hay mucha angustia para mí. Caigamos, por favor, en mano de יהוה, porque muchas son sus bondades, pe­ro en mano de hombre no caigamos.
 **15** Y dio יהוה pestilencia en Israel desde la mañana y hasta el tiempo señalado; y murió del pueblo, desde Dan y hasta Beersheva, se­ten­ta mil hombres.
@@ -894,14 +894,14 @@ David enumera al pueblo
 [^1816]: Expresión de alegría, pronunciado tanto con la voz como con un shofar.
 [^1817]: Cuerno de carnero.
 [^1818]: Heb.: *Oláh.*
-[^1819]: Heb.: *Sh’lamim.*
+[^1819]: Heb.: *Sh'lamim.*
 [^1820]: O, *de carne. *Significado dudoso.
 [^1821]: Tabernáculo.
 [^1822]: Tiempo oculto, solo conocido por Elohim. Así también en vers. 29.
 [^1823]: Lit.: *del rostro.*
 [^1824]: Oración, participación en juicio.
 [^1825]: Filisteos. Así en el resto del cap.
-[^1826]: Heb.: *Meteg ha’amah.*
+[^1826]: Heb.: *Meteg ha'amah.*
 [^1827]: Lit.: *su mano.*
 [^1828]: Así en los Manuscritos del Mar Muerto y la versión gr., en el T.M.: *mil setecientos caballeros*
 [^1829]: Plenitud, ausencia de deudas.
@@ -915,7 +915,7 @@ David enumera al pueblo
 [^1837]: Plenitud, ausencia de deudas.
 [^1838]: Hitita. Así en el resto del cap.
 [^1839]: Heb.: *Sucot.*
-[^1840]: Heb.: *Ben ha’mávet. *Que obra según la muerte.
+[^1840]: Heb.: *Ben ha'mávet. *Que obra según la muerte.
 [^1841]: Hitita. Así también en vers. 10.
 [^1842]: Así en el T.M. y la versión gr., en los Manuscritos del Mar Muerto: *a la palabra de.*
 [^1843]: Algunas versiones dicen: *y ella.*
@@ -925,7 +925,7 @@ David enumera al pueblo
 [^1847]: Habitante de Tekoa. Así también en vers. 9.
 [^1848]: O, *ángel. *Heb.: *Malaj.*
 [^1849]: Lit.: *de días a días.*
-[^1850]: Este párrafo no se encuentra en el T.M., pero es parte del texto en la versión griega y los Manuscritos del Mar Muerto, fragmento ‘4QSam’.
+[^1850]: Este párrafo no se encuentra en el T.M., pero es parte del texto en la versión griega y los Manuscritos del Mar Muerto, fragmento ‘4QSam'.
 [^1851]: Plenitud, ausencia de deudas.
 [^1852]: Cuerno de carnero.
 [^1853]: Casa Remota.
@@ -962,7 +962,7 @@ David enumera al pueblo
 [^1884]: Cereteo.
 [^1885]: Peleteo*. *Así también en vers. 23.
 [^1886]: Plenitud, ausencia de deudas.
-[^1887]: Heb.: *Sh’lumei emunei Israel.*
+[^1887]: Heb.: *Sh'lumei emunei Israel.*
 [^1888]: Cereteo. Heb.: *Kerí.*
 [^1889]: O, *impuesto.*
 [^1890]: Jaireo.
@@ -1015,7 +1015,7 @@ David enumera al pueblo
 [^1937]: Beerotita.
 [^1938]: Itrita.
 [^1939]: Hitita.
-[^1940]: O sea, *ha’satán.*
+[^1940]: O sea, *ha'satán.*
 [^1941]: Heveo.
 [^1942]: Cananeo.
 [^1943]: O, *mensajero. *Heb.: *Malaj.*

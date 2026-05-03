@@ -6,10 +6,10 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 
 **1** En el mes octavo, en el año dos de Dare­yávesh[^3568], fue palabra de יהוה a Zejariáh, hijo de Berejiáh, hijo de Idó, el profeta, di­ciendo:
 **2** Se enojó יהוה sobre los padres de ustedes *con* enojo.
-**3** Y les dirás: “Así ha dicho יהוה Tzebaot: ‘Vuelvan a Mí’ –declaración de יהוה Tze­baot– ‘y Yo volveré a ustedes’ –ha dicho יהוה Tzebaot.
-**4** ‘No sean como sus padres, a quienes procla­maron los profetas primeros, diciendo: “Así ha dicho יהוה Tzebaot: ‘Vuelvan ahora de sus malos caminos y de sus malas acciones’ ”. Pero no escucharon ni me prestaron atención’ –declaración de יהוה.
+**3** Y les dirás: “Así ha dicho יהוה Tzebaot: ‘Vuelvan a Mí' –declaración de יהוה Tze­baot– ‘y Yo volveré a ustedes' –ha dicho יהוה Tzebaot.
+**4** ‘No sean como sus padres, a quienes procla­maron los profetas primeros, diciendo: “Así ha dicho יהוה Tzebaot: ‘Vuelvan ahora de sus malos caminos y de sus malas acciones' ”. Pero no escucharon ni me prestaron atención' –declaración de יהוה.
 **5** ‘Sus padres, ¿dónde *están* ellos? Y los profe­tas, ¿vivirán para siempre?
-**6** Sin embargo, mis palabras y mis decretos que ordené a mis siervos los profetas, ¿no alcanza­ron a sus padres? Y se volvieron y dijeron: “Co­mo planeó יהוה Tzebaot hacer*nos* a nosotros conforme a nuestros caminos y conforme a nuestras obras, así ha hecho con nosotros” ’ ”.
+**6** Sin embargo, mis palabras y mis decretos que ordené a mis siervos los profetas, ¿no alcanza­ron a sus padres? Y se volvieron y dijeron: “Co­mo planeó יהוה Tzebaot hacer*nos* a nosotros conforme a nuestros caminos y conforme a nuestras obras, así ha hecho con nosotros” ' ”.
 
 *Visión de los caballos*
 
@@ -21,9 +21,9 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 **12** Y respondió el ángel de יהוה, y dijo: ¡יהוה Tzebaot!, ¿hasta cuándo Tú no tendrás compasión de Yerushaláim y de las ciudades de Iehudáh, *con* las cuales te has enojado estos setenta años?
 **13** Y respondió יהוה al ángel que hablaba con­migo palabras buenas, palabras consoladoras.
 **14** Y me dijo el ángel que hablaba conmigo: Proclama, diciendo: “Así ha dicho יהוה Tze­baot: ‘He celado a Yerushaláim y a Tzión *con* gran celo,
-**15** y *con* gran enojo Yo estoy enojado sobre las naciones confiadas, *por*que Yo me había enoja­do un poco, pero ellas contribuyeron para mal’.
-**16** Por eso, así ha dicho יהוה: ‘Regresé a Yerushaláim con compasión; mi casa será edifi­cada en ella’ –declaración de יהוה Tzebaot– ‘y cordel será extendido sobre Yerushaláim’ ”.
-**17** Proclama de nuevo, diciendo: “Así ha dicho יהוה Tzebaot: ‘De nuevo serán esparcidas mis ciudades de bien, y consolará יהוה de nuevo a Tzión, y escogerá de nuevo a Yerushaláim’ ”.
+**15** y *con* gran enojo Yo estoy enojado sobre las naciones confiadas, *por*que Yo me había enoja­do un poco, pero ellas contribuyeron para mal'.
+**16** Por eso, así ha dicho יהוה: ‘Regresé a Yerushaláim con compasión; mi casa será edifi­cada en ella' –declaración de יהוה Tzebaot– ‘y cordel será extendido sobre Yerushaláim' ”.
+**17** Proclama de nuevo, diciendo: “Así ha dicho יהוה Tzebaot: ‘De nuevo serán esparcidas mis ciudades de bien, y consolará יהוה de nuevo a Tzión, y escogerá de nuevo a Yerushaláim' ”.
 
 *Visión de los cuernos y de los artesanos*
 
@@ -54,8 +54,8 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 
 **3**
 
-**1** Y me hizo ver a Yehoshúa, el gran sacer­dote, parado delante del ángel de יהוה, y Ha’satán[^3571] estaba parado a su dere­cha para serle de adversario.
-**2** Y dijo יהוה a Ha’satán: Te reprenderá יהוה, Ha’satán. Y te reprenderá יהוה, el que ha escogido a Yerushaláim. ¿No es este un tizón rescatado del fuego?
+**1** Y me hizo ver a Yehoshúa, el gran sacer­dote, parado delante del ángel de יהוה, y Ha'satán[^3571] estaba parado a su dere­cha para serle de adversario.
+**2** Y dijo יהוה a Ha'satán: Te reprenderá יהוה, Ha'satán. Y te reprenderá יהוה, el que ha escogido a Yerushaláim. ¿No es este un tizón rescatado del fuego?
 **3** Y Yehoshúa estaba vestido *con *vestiduras im­puras, y estaba parado delante del ángel.
 **4** Y Él respondió, y dijo a los que estaban para­dos delante de él, diciendo: Aparten las vestidu­ras impuras de sobre él. Y le dijo: Mira, he he­cho pasar de sobre ti tu iniquidad, y te estoy vis­tiendo vestiduras de armamento.
 **5** Y dije: Pongan un turbante puro sobre su ca­beza. Y pusieron un turbante puro sobre su ca­beza y le vistieron vestiduras; y el ángel de יהוה estaba parado.
@@ -69,13 +69,13 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 
 **4**
 
-**1** Y volvió el ángel que hablaba conmigo, y me despertó como *a* un hombre que es des\-pertado de su dormir.
+**1** Y volvió el ángel que hablaba conmigo, y me despertó como *a* un hombre que es despertado de su dormir.
 **2** Y me dijo: ¿Qué ves? Y dije: Veo, he aquí, una Menoráh[^3574] de oro, toda ella, y su cuenco sobre su cabeza, y sus siete lámparas sobre ella, siete, y siete tubos para las lámparas que *tiene* sobre su cabeza.
 **3** Y *había *dos olivos sobre ella, uno a la derecha del cuenco y uno sobre su izquierda.
 **4** Y respondí, y dije al ángel que hablaba con­migo, diciendo: ¿Qué son estos, mi amo?
 **5** Y respondió el ángel que hablaba conmigo, y me dijo: ¿No sabes qué son estos? Y dije: No, mi amo.
 **6** Y él respondió, y me dijo, diciendo: Esta es la palabra de יהוה a Zerubabel, diciendo: “No en fuerza ni en poder, sino en mi Rúaj[^3575]” –ha di­cho יהוה Tzebaot.
-**7** “¿Quién eres tú, monte grande? Delante de Zerubabel *serás* por llanura; y él sacará la pie­dra principal[^3576] *con* gritos de: ‘¡Favor, favor a ella!’ ”
+**7** “¿Quién eres tú, monte grande? Delante de Zerubabel *serás* por llanura; y él sacará la pie­dra principal[^3576] *con* gritos de: ‘¡Favor, favor a ella! ' ”
 **8** Y fue palabra de יהוה a mí, diciendo:
 **9** Las manos de Zerubabel cimentaron esta casa, y sus manos la completarán. Y conocerás que יהוה Tzebaot me ha enviado a ustedes.
 **10** Porque, ¿quién ha despreciado al día de las *cosas* pequeñas? Y se alegrarán y verán la piedra de estaño[^3577] en la mano de Zerubabel. Estos siete ojos de יהוה son los que andan por toda la tierra.
@@ -119,7 +119,7 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 **10** Toma lo del exilio, de Jeldai, de Tobiáh y de Iedaiáh; y ve tú en ese día y entra *en* casa de Ioshiyah, hijo de Tzefaniáh, que vinieron de Babel.
 **11** Y tomarás plata y oro y harás coronas, y *la* pondrás en la cabeza de Yehoshúa, hijo de Ieho­tzadak, el gran sacerdote.
 **12** Y le dirás, diciendo: “Así ha dicho יהוה Tzebaot, diciendo: ‘He aquí un hombre, Retoño[^3584] es su nombre, y desde su lugar retoñará y edifi­cará el Hejal[^3585] de יהוה.
-**13** Y Él edificará el Hejal de יהוה, y Él lleva­rá esplendor y se sentará y gobernará sobre su trono. Y será sacerdote sobre su trono, y consejo de shalom habrá entre ambos’ ”.
+**13** Y Él edificará el Hejal de יהוה, y Él lleva­rá esplendor y se sentará y gobernará sobre su trono. Y será sacerdote sobre su trono, y consejo de shalom habrá entre ambos' ”.
 **14** Y las coronas serán para Jélem y para Tobiáh y para Iedaiáh y para Jen, hijo de Tzefaniáh, pa­ra recuerdo en el Hejal de יהוה.
 **15** Y los lejanos vendrán y edificarán en el He­jal de יהוה. Y sabrán que יהוה Tzebaot me ha enviado a ustedes. Y sucederá si, escuchan­do, escuchan a la voz de יהוה su Elohim.
 
@@ -133,7 +133,7 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 **4** Y fue palabra de יהוה Tzebaot a mí, diciendo:
 **5** Di a todo el pueblo de la tierra y a los sacerdo­tes, diciendo: “Cuando ustedes ayunaron, la­mentándose en el quinto y séptimo *mes*, y estos setenta años, ¿realmente[^3587] ayuna­ron *por* Mí?
 **6** Y cuando comen y cuando beben, ¿no *por* us­tedes comen y *por *ustedes beben?
-**7** ¿No *son* las palabras que proclamó יהוה por mano de los profetas primeros cuando estaba Yerushaláim habitada y tranquila, y sus ciudades a su alrededor, y el Néguev[^3588] y la Shefelah[^3589] eran habitados?”
+**7** ¿No *son* las palabras que proclamó יהוה por mano de los profetas primeros cuando estaba Yerushaláim habitada y tranquila, y sus ciudades a su alrededor, y el Néguev[^3588] y la Shefelah[^3589] eran habitados? ”
 **8** Y fue palabra de יהוה a Zejariáh, diciendo:
 **9** Así ha dicho יהוה Tzebaot, diciendo: “Jui­cio de verdad juzguen, y bondad y compasión hagan, un hombre a su hermano.
 **10** Y viuda y huérfano, extranjero y pobre, no oprimirán, y maldad, *cada* hombre *a *su herma­no, no pensarán en su corazón”.
@@ -151,7 +151,7 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 **3** Así ha dicho יהוה: “Volveré a Tzión y mo­raré en medio de Yerushaláim. Y Yerushaláim será llamada Ciudad de la Verdad, y el monte de יהוה Tzebaot, Monte de la Santidad”.
 **4** Así ha dicho יהוה Tzebaot: “Aún se senta­rán ancianos y ancianas en los lugares amplios de Yerushaláim, y hombre *con* su bastón en su mano debido a la multitud de días.
 **5** Y los lugares amplios de la ciudad se llenarán de niños y niñas riendo en sus lugares amplios”.
-**6** Así ha dicho יהוה Tzebaot: “Porque será difícil en los ojos del remanente de este pueblo en aquellos días, ¿será también difícil en mis ojos?” –declaración de יהוה Tzebaot.
+**6** Así ha dicho יהוה Tzebaot: “Porque será difícil en los ojos del remanente de este pueblo en aquellos días, ¿será también difícil en mis ojos? ” –declaración de יהוה Tzebaot.
 **7** Así ha dicho יהוה Tzebaot: “Heme aquí, el que salva a mi pueblo de la tierra del amanecer y de la tierra de la puesta del sol;
 **8** y los haré venir y morarán en medio de Yerushaláim, y serán para Mí por pueblo y Yo seré para ellos por Elohim en verdad y en justicia”.
 **9** Así ha dicho יהוה Tzebaot: “Sean fuertes sus manos, los que escuchan en estos días estas palabras de boca de los profetas, que en el día que se cimentó la casa de יהוה Tzebaot, el Hejal[^3591] para edificarlo.
@@ -166,9 +166,9 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 **18** Y fue palabra de יהוה Tzebaot a mí, di­ciendo:
 **19** Así ha dicho __יהוה__ Tzebaot: “El ayuno del cuarto *mes*, el ayuno del quinto, el ayuno del séptimo y el ayuno del décimo serán para la casa de Iehudáh por gozo y por alegría y por tiempos señalados buenos. Y la verdad y el shalom amen”.
 **20** Así ha dicho __יהוה__ Tzebaot: “Aún *será* que vendrán pueblos y habitantes de muchas ciuda­des;
-**21** E irán los habitantes de una a otra, diciendo: ‘Andando, andaremos para rogar al rostro de __יהוה__ y para buscar a __יהוה__ Tzebaot. Iré yo también’.
+**21** E irán los habitantes de una a otra, diciendo: ‘Andando, andaremos para rogar al rostro de __יהוה__ y para buscar a __יהוה__ Tzebaot. Iré yo también'.
 **22** Y vendrán muchos pueblos y naciones pode­rosas para buscar a __יהוה__ Tzebaot en Yerushaláim y para rogar al rostro de __יהוה__”.
-**23** Así ha dicho __יהוה__ Tzebaot: “En aquellos días *será *que tomarán fuerte diez hombres de toda lengua de las naciones, y tomarán fuerte el borde[^3595] *del vestido *de un hombre iehudí[^3596], diciendo: ‘Iremos con ustedes, porque escuchamos *que* Elohim *está* con ustedes’ ”.
+**23** Así ha dicho __יהוה__ Tzebaot: “En aquellos días *será *que tomarán fuerte diez hombres de toda lengua de las naciones, y tomarán fuerte el borde[^3595] *del vestido *de un hombre iehudí[^3596], diciendo: ‘Iremos con ustedes, porque escuchamos *que* Elohim *está* con ustedes' ”.
 
 *Juicio contra las naciones vecinas*
 
@@ -176,22 +176,22 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 
 **1** Carga de la palabra de __יהוה__ en la tierra de Jadraj y Damések, su lugar de des­canso
 **2** y también Jamat, *que* bordea con ella; Tzor y Tzidón, porque *son* muy sabias.
-**3** Y ha edificado Tzor fortaleza para sí, y ha amontonado plata como polvoy oro como lodo de las calles.
-**4** He aquí, Adonai la desterrará, y herirá con el mar su fuerza,y ella en el fuego será consumida.
-**5** Verá Ashkelón y temerá, y Gaza, y se retorcerá mucho,y Ekrón, porque se avergonzó su confianza.Y perecerá el rey de Gaza, y Ashkelón no será habitada.
+**3** Y ha edificado Tzor fortaleza para sí, y ha amontonado plata como polvo y oro como lodo de las calles.
+**4** He aquí, Adonai la desterrará, y herirá con el mar su fuerza, y ella en el fuego será consumida.
+**5** Verá Ashkelón y temerá, y Gaza, y se retorcerá mucho, y Ekrón, porque se avergonzó su confianza. Y perecerá el rey de Gaza, y Ashkelón no será habitada.
 **6** Y habitará un bastardo en Ashdod, y cortaré el orgullo de los pelishtim.
-**7** Y apartaré sus sangres de su boca, y sus repugnancias de entre sus dientes.Y será remanente[^3597] también él para nuestro Elohim,y será como jefe en Iehudáh, y Ekrón como el iebusí[^3598].
-**8** Y acamparé en mi casa *con* guardia, por el que pasa y por el que vuelve,y no pasará más sobre ellos opresor, porque ahora he visto con mis ojos.
+**7** Y apartaré sus sangres de su boca, y sus repugnancias de entre sus dientes. Y será remanente[^3597] también él para nuestro Elohim, y será como jefe en Iehudáh, y Ekrón como el iebusí[^3598].
+**8** Y acamparé en mi casa *con* guardia, por el que pasa y por el que vuelve, y no pasará más sobre ellos opresor, porque ahora he visto con mis ojos.
 
 *Salvación de Iehudáh y Efráim*
 
-**9**¡Regocíjate mucho, hija de Tzión!¡Haz t’ruáh[^3599], hija de Yerushaláim!He aquí tu Rey vendrá a ti, justo y portador de salvación[^3600] es Él,afligido, y monta sobre un asno[^3601], y sobre un asnito hijo de asnas.
-**10** Y cortaré el carro de Efráim y el caballo de Yerushaláim,y será cortado el arco de guerra.Y hablará shalom[^3602] a los gentiles, y su dominio *será* de mar a mar,y desde el río hasta los confines de la tierra.
+**9**¡Regocíjate mucho, hija de Tzión!¡Haz t'ruáh[^3599], hija de Yerushaláim!He aquí tu Rey vendrá a ti, justo y portador de salvación[^3600] es Él,afligido, y monta sobre un asno[^3601], y sobre un asnito hijo de asnas.
+**10** Y cortaré el carro de Efráim y el caballo de Yerushaláim, y será cortado el arco de guerra. Y hablará shalom[^3602] a los gentiles, y su dominio *será* de mar a mar, y desde el río hasta los confines de la tierra.
 
 **11** También tú, en la sangre de tu pacto he enviado *libres* *a *tus prisioneros del pozoen el que no hay aguas.
-**12** Vuelvan a la fortaleza, prisioneros de la esperanza;también hoy doy a conocer *que* el doble te haré volver.
-**13** Porque tensé para Mí *a* Iehudáh *por* arco, llené *a* Efráim.Y despertaré *a* tus hijos, Tzión, contra tus hijos, Iaván[^3603],y te pondré como espada de poderoso.
-**14** Y __יהוה__ sobre ellos será visto, y saldrá como el relámpago su flecha;y Adonai __יהוה__ con el shofar soplará, e irá por las tempestades del sur.
+**12** Vuelvan a la fortaleza, prisioneros de la esperanza; también hoy doy a conocer *que* el doble te haré volver.
+**13** Porque tensé para Mí *a* Iehudáh *por* arco, llené *a* Efráim. Y despertaré *a* tus hijos, Tzión, contra tus hijos, Iaván[^3603], y te pondré como espada de poderoso.
+**14** Y __יהוה__ sobre ellos será visto, y saldrá como el relámpago su flecha; y Adonai __יהוה__ con el shofar soplará, e irá por las tempestades del sur.
 **15** __יהוה__ Tzebaot protegerá sobre ellos, y consumirán y pisotearán las piedras de honda,
 **16** Y los salvará __יהוה__ su Elohim en aquel día como rebaño de su pueblo; porque *como* piedras de una corona se levantan[^3604] sobre su tierra.
 **17** Porque, ¡cuánta su bondad y cuánta su belleza! El grano *a *los jóvenes y el mosto a las vírge­nes hará florecer[^3605].
@@ -200,24 +200,24 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 
 **10**
 
-**1** Pidan de __יהוה__ lluvia en el tiempo de lluvia tardía,__יהוה__ hace los relámpagos[^3606]; y lluvia de aguacero *les* dará a ellos,a *cada *hombre, hierba en el campo.
-**2** Porque los terafim[^3607] hablaron injusticia y los adivinos vieron visión de mentira,y sueños de falsedad hablarán, vanamente[^3608] consolarán.Por eso, andan como ovejas, estarán afligidos, porque no hay pastor.
-**3** Sobre los pastores se calentó mi nariz, y sobre los machos cabríos visitaré;porque ha visitado __יהוה__ Tzebaot a su rebaño, a la casa de Iehudáh, y los puso como caballo de su esplendor en la batalla.
+**1** Pidan de __יהוה__ lluvia en el tiempo de lluvia tardía,__יהוה__ hace los relámpagos[^3606]; y lluvia de aguacero *les* dará a ellos, a *cada *hombre, hierba en el campo.
+**2** Porque los terafim[^3607] hablaron injusticia y los adivinos vieron visión de mentira, y sueños de falsedad hablarán, vanamente[^3608] consolarán. Por eso, andan como ovejas, estarán afligidos, porque no hay pastor.
+**3** Sobre los pastores se calentó mi nariz, y sobre los machos cabríos visitaré; porque ha visitado __יהוה__ Tzebaot a su rebaño, a la casa de Iehudáh, y los puso como caballo de su esplendor en la batalla.
 **4** De Él el ángulo, de Él la clavija, de Él el arco de batalla, de Él saldrá todo opresor; juntos.
 **5** Y serán como poderosos *que* pisotean en el lodo de las calles en la batalla;
-**6** Y fortaleceré a la casa de Iehudáh, y a la casa de Iosef salvaré,y los haré volver porque los he amado, y serán como no rechazados,porque Yo *soy* __יהוה__ su Elohim, y les responderé.
-**7** Y serán como poderoso *los de *Efráim, y se alegrará su corazón como el vino;y sus hijos lo verán y se alegrarán, ¡se regocijará su corazón en __יהוה__!
-**8** Silbaré para ellos y los reuniré, porque los he rescatado,y se aumentarán como se aumentaron.
-**9** Y los sembraré en los pueblos, y en las lejanías me recordarán,y vivirán con sus hijos y volverán.
-**10** Y los haré volver de la tierra de Mitzráim, y de Ashur los reuniré;y a la tierra de Guilad y Lebanón los traeré, y no se hallará para ellos.
-**11** Y pasará por el mar *de *estrechez, y herirá en el mar las olas;y se secarán todas las profundidades del río, y será hecha descender la altivez de Ashur,y la vara de Mitzráim se apartará.
+**6** Y fortaleceré a la casa de Iehudáh, y a la casa de Iosef salvaré, y los haré volver porque los he amado, y serán como no rechazados, porque Yo *soy* __יהוה__ su Elohim, y les responderé.
+**7** Y serán como poderoso *los de *Efráim, y se alegrará su corazón como el vino; y sus hijos lo verán y se alegrarán, ¡se regocijará su corazón en __יהוה__!
+**8** Silbaré para ellos y los reuniré, porque los he rescatado, y se aumentarán como se aumentaron.
+**9** Y los sembraré en los pueblos, y en las lejanías me recordarán, y vivirán con sus hijos y volverán.
+**10** Y los haré volver de la tierra de Mitzráim, y de Ashur los reuniré; y a la tierra de Guilad y Lebanón los traeré, y no se hallará para ellos.
+**11** Y pasará por el mar *de *estrechez, y herirá en el mar las olas; y se secarán todas las profundidades del río, y será hecha descender la altivez de Ashur, y la vara de Mitzráim se apartará.
 **12** Y los fortaleceré en __יהוה__, y en su Nombre andarán –declaración de __יהוה__.
 
 **11**
 
 **1** ¡Abre, Lebanón, tus puertas, y consumirá el fuego tus cedros!
-**2** ¡Aúlla, ciprés!, porque ha caído el cedro, que los poderosos han sido devastados.¡Aúllen, robles de Bashán!, porque ha descendido el bosque fortificado.
-**3** Voz de aullido de los pastores, porque ha sido devastado su esplendor;voz de rugido de leoncillos, porque fue devastado el orgullo del Iardén[^3609].
+**2** ¡Aúlla, ciprés!, porque ha caído el cedro, que los poderosos han sido devastados. ¡Aúllen, robles de Bashán!, porque ha descendido el bosque fortificado.
+**3** Voz de aullido de los pastores, porque ha sido devastado su esplendor; voz de rugido de leoncillos, porque fue devastado el orgullo del Iardén[^3609].
 
 *El rebaño desolado*
 
@@ -234,13 +234,13 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 **14** Y corté mi segunda vara, a Joblim, para rom­per la hermandad entre Iehudáh e Israel.
 **15** Y me dijo __יהוה__: Aún toma para ti instru­mentos de un pastor tonto.
 **16** Porque he aquí, Yo levanto un pastor en la tierra *que* las que son borradas no atenderá, la joven no buscará, la quebrada no sanará, la establecida no soportará, y la carne de la engor­dada comerá y sus pezuñas arrancará.
-**17** ¡Oy del pastor tonto que abandona el rebaño!¡La espada *sea* sobre su brazo y sobre su ojo derecho!Su brazo, secándose, se secará, y su ojo derecho, oscureciéndose, se oscurecerá.
+**17** ¡Oy del pastor tonto que abandona el rebaño! ¡La espada *sea* sobre su brazo y sobre su ojo derecho! Su brazo, secándose, se secará, y su ojo derecho, oscureciéndose, se oscurecerá.
 
 *Elohim salvará a Yerushaláim*
 
 **12**
 
-**1** Carga, palabra de __יהוה__ sobre Israel.Declaración de __יהוה__, que extiende los cielos y funda la tierra, y forma el ánimo del hombre en medio de él:
+**1** Carga, palabra de __יהוה__ sobre Israel. Declaración de __יהוה__, que extiende los cielos y funda la tierra, y forma el ánimo del hombre en medio de él:
 **2** He aquí, Yo puse a Yerushaláim *como* copa de tambaleo para todos los pueblos de alrededor; y también sobre Iehudáh será, en el asedio contra Yerushaláim.
 **3** Y será en aquel día *que *pondré a Yerushaláim *como* piedra de carga pesada para todos los pue­blos; todos los que la carguen, cortando, se cor­tarán. Y se reunirán contra ella todas las nacio­nes de la tierra.
 **4** En aquel día –declaración de __יהוה__– golpea­ré todo caballo con desconcierto y su jinete con locura. Y sobre la casa de Iehudáh abriré mis ojos, y todo caballo de los pueblos golpearé con ceguera.
@@ -267,11 +267,11 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 **3** Y será *que* cuando profetice un hombre toda­vía, le dirán su padre y su madre, sus engen­drantes: ¡No vivirás, porque mentira has habla­do en Nombre de __יהוה__! Y lo traspasarán su padre y su madre, sus engendrantes, en su profe­tizar.
 **4** Y será en aquel día *que* se avergonzarán los profetas, *cada* hombre de su visión en su profe­tizar, y no se vestirán manto de pelo a fin de en­gañar.
 **5** Y dirá: “Yo no soy profeta, trabajador de la tierra soy yo, porque un hombre hizo que yo fuera comprado desde mi juventud”.
-**6** Y le dirá *uno*: “¿Qué son esas heridas entre tus manos?” Y dirá: “Es que fui herido en casa de los que me aman”.
+**6** Y le dirá *uno*: “¿Qué son esas heridas entre tus manos? ” Y dirá: “Es que fui herido en casa de los que me aman”.
 
 **7** ¡Espada, despierta contra mi pastor, y contra el varón amigo mío! –declaración de __יהוה__ Tzebaot. ¡Hiere al pastor!, y se dispersarán las ovejas, y haré volver mi mano sobre los pequeños.
-**8** Y será en toda la tierra –declaración de __יהוה__–*que* dos partes[^3624] en ella serán cortadas, expirarán;pero la tercera será dejada en ella.
-**9** Y haré entrar a la tercera en el fuego, y los refinaré conforme al refinar de la plata,y los probaré conforme al probar del oro.Él llamará en mi Nombre, y Yo le responderé;diré: “Mi pueblo es él”, y él dirá: “__יהוה__ es mi Elohim”.
+**8** Y será en toda la tierra –declaración de __יהוה__–*que* dos partes[^3624] en ella serán cortadas, expirarán; pero la tercera será dejada en ella.
+**9** Y haré entrar a la tercera en el fuego, y los refinaré conforme al refinar de la plata, y los probaré conforme al probar del oro. Él llamará en mi Nombre, y Yo le responderé; diré: “Mi pueblo es él”, y él dirá: “__יהוה__ es mi Elohim”.
 
 *El reino de *__*יהוה*__
 
@@ -309,7 +309,7 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 [^3573]: Heb.: *Tzémaj. *Un título mesiánico.
 [^3574]: Candelabro de siete brazos.
 [^3575]: Espíritu, viento, poder.
-[^3576]: O, *primera; *o, *más alta. *Heb.: *Ében Ha’rosháh.*
+[^3576]: O, *primera; *o, *más alta. *Heb.: *Ében Ha'rosháh.*
 [^3577]: O, *plomo.*
 [^3578]: Lit.: *el oro.*
 [^3579]: O, *el juramento.*
@@ -356,7 +356,7 @@ __ZEJARIÁH \(ZACARÍAS\)__ זכריה* *
 [^3620]: Espíritu, ánimo, poder.
 [^3621]: Simeita.
 [^3622]: O sea, *impureza menstrual. *Heb.: *Nidáh.*
-[^3623]: O, *inaptitud. *Heb.: *Tum’ah.*
+[^3623]: O, *inaptitud. *Heb.: *Tum'ah.*
 [^3624]: Lit.: *dos bocas.*
 [^3625]: Lit.: *desde el amanecer hasta el mar.*
 [^3626]: Región del sur.

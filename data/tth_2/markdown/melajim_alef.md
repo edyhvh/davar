@@ -19,7 +19,7 @@ __MELAJIM ALEF \(1 REYES\)__א מלכים
 **10** Pero a Natán el profeta, a Benaiáhu, a los po­derosos y a Shelomóh su hermano no llamó.
 **11** Y dijo Natán a Batsheva, madre de Shelo­móh, diciendo: ¿No escuchaste que reina Ado­ni­yáhu, hijo de Jagit, y nuestro amo David no sabe?
 **12** Y ahora, ven, te aconsejaré, por favor, un consejo, y harás escapar a tu vida y a la vida de tu hijo Shelomóh.
-**13** Ve y entra al rey David, y dirás a él: “¿No has jurado tú, mi amo el rey, a tu sierva, di­ciendo: ‘Porque Shelomóh tu hijo reinará des­pués de mí, y él se sentará sobre mi trono’? ¿Y por qué reina Adoniyáhu?”
+**13** Ve y entra al rey David, y dirás a él: “¿No has jurado tú, mi amo el rey, a tu sierva, di­ciendo: ‘Porque Shelomóh tu hijo reinará des­pués de mí, y él se sentará sobre mi trono'? ¿Y por qué reina Adoniyáhu? ”
 **14** He aquí, todavía tú estarás hablando allí con el rey, y yo entraré tras de ti y completaré tus palabras.
 **15** Y vino Batsheva al rey a la habitación. Y el rey era muy viejo, y Abishag la shunamit servía al rey.
 **16** Y se inclinó Batsheva y se postró al rey. Y dijo el rey: ¿Qué quieres[^1947]?
@@ -31,7 +31,7 @@ __MELAJIM ALEF \(1 REYES\)__א מלכים
 **22** Y he aquí, todavía ella estaba hablando con el rey, y Natán el profeta entró.
 **23** Y dieron a conocer al rey, diciendo: He a­quí Natán el profeta. Y entró delante del rey, y se inclinó al rey sobre sus narices a tierra.
 **24** Y dijo Natán: Mi amo el rey, ¿tú has dicho: “Adoniyáhu reinará después de mí, y él se sen­tará sobre mi trono”?
-**25** Porque él descendió hoy y sacrificó buey y animal engordado y rebaño en abundancia, y llamó a todos los hijos del rey, a los jefes del ejército y a Ebiatar el sacerdote, y he aquí, ellos están comiendo y bebiendo delante de él, y di­jeron: “¡Viva el rey Adoniyáhu!”
+**25** Porque él descendió hoy y sacrificó buey y animal engordado y rebaño en abundancia, y llamó a todos los hijos del rey, a los jefes del ejército y a Ebiatar el sacerdote, y he aquí, ellos están comiendo y bebiendo delante de él, y di­jeron: “¡Viva el rey Adoniyáhu! ”
 **26** Pero a mí, yo tu siervo, a Tzadok el sacerdote, a Benaiáhu, hijo de Iehoiada, y a Shelomóh tu siervo, no llamó.
 **27** O, ¿por mi amo el rey fue esta cosa, y no has hecho conocer a tus siervos quién se senta­rá sobre el trono de mi amo el rey después de él?
 
@@ -43,7 +43,7 @@ David escoge a Shelomóh para reinar
 **31** Y se inclinó Batsheva narices a tierra, y se postró al rey, y dijo: Viva mi amo el rey David para siempre.
 **32** Y dijo el rey David: Llamen para mí a Tza­dok el sacerdote, a Natán el profeta y a Benaiáhu, hijo de Iehoiada. Y entraron ellos delante del rey,
 **33** y dijo el rey a ellos: Tomen con ustedes a los siervos de su amo, y hagan montar a Shelo­móh mi hijo sobre la mula que me pertenece a mí, y háganlo descender a Gijón.
-**34** Y lo ungirá allí Tzadok el sacerdote y Natán el profeta por rey sobre Israel; y soplarán con el shofar y dirán: “¡Viva el rey Shelomóh!”
+**34** Y lo ungirá allí Tzadok el sacerdote y Natán el profeta por rey sobre Israel; y soplarán con el shofar y dirán: “¡Viva el rey Shelomóh! ”
 **35** Y subirán detrás de él, y entrará y se sentará sobre mi trono, y él reinará en mi lugar; y lo he ordenado para ser líder sobre Israel y sobre Ie­hudáh.
 **36** Y respondió Benaiáhu, hijo de Iehoiada, al rey, y dijo: ¡Amén! ¡Así dirá __יהוה__, Elohim de mi amo el rey!
 **37** Como ha estado __יהוה__ con mi amo el rey, así estará con Shelomóh, y engrandecerá más su tro­­no que el trono de mi amo el rey David.
@@ -60,7 +60,7 @@ David escoge a Shelomóh para reinar
 **48** Y también así dijo el rey: ¡Bendito es __יהוה__, Elohim de Israel!, que ha permitido hoy que él se siente sobre mi trono, y mis ojos vie­ron.
 **49** Y temblaron y se levantaron todos los lla­mados que eran para Adoniyáhu, y se fueron, ca­da hombre por su camino.
 **50** Y Adoniyáhu tuvo temor del rostro de She­lo­móh, y se levantó y se fue, y se apoderó de los cuernos del altar.
-**51** Y fue dado a conocer a Shelomóh, dicien­do: He aquí, Adoniyáhu teme al rey Shelomóh, y he aquí, se ha agarrado de los cuernos del altar, diciendo: “Que me jure hoy el rey Shelomóh: ‘¡Si mataría a su siervo con espada!’ ”
+**51** Y fue dado a conocer a Shelomóh, dicien­do: He aquí, Adoniyáhu teme al rey Shelomóh, y he aquí, se ha agarrado de los cuernos del altar, diciendo: “Que me jure hoy el rey Shelomóh: ‘¡Si mataría a su siervo con espada! ' ”
 **52** Y dijo Shelomóh: Si será por hijo de valor, no caerá un cabello de él a tierra; pero si mal­dad es hallada en él, morirá.
 **53** Y envió el rey Shelomóh y lo hicieron des­cender de sobre el altar. Y él vino y se inclinó al rey Shelomóh, y le dijo Shelomóh: Ve a tu casa.
 
@@ -75,7 +75,7 @@ Muerte de David
 **5** Y también tú sabes lo que hizo a mí Ioab, hi­jo de Tzeruiáh, lo que hizo a los dos jefes de los ejércitos de Israel, a Abner, hijo de Ner, y a Amasa, hijo de Ieter, y los mató; y puso sangre de guerra en tiempo de shalom[^1951]. Y puso sangre de guerra en su cinturón que tenía en sus lomos y en sus sandalias que tenía en sus pies.
 **6** Y harás conforme a tu sabiduría, y no hagas ca­er sus canas en shalom al Sheol.
 **7** Y a los hijos de Barzilai el guiladí[^1952] harás bondad, y estarán con los que comen de tu me­sa; pues sí se acercaron a mí cuando hui de de­lante de Abshalom tu hermano.
-**8** Y he aquí, contigo está Shimei, hijo de Gue­rá, benieminí de Bajurím; y él me despreció con enfermizo desprecio en el día de mi ida a Majanáim; pero descendió a mi encuentro al Iar­dén[^1953], y juré a él por __יהוה__, diciendo: “¡Si te mataría con espada!”
+**8** Y he aquí, contigo está Shimei, hijo de Gue­rá, benieminí de Bajurím; y él me despreció con enfermizo desprecio en el día de mi ida a Majanáim; pero descendió a mi encuentro al Iar­dén[^1953], y juré a él por __יהוה__, diciendo: “¡Si te mataría con espada! ”
 **9** Pero ahora, no lo dejes inocente, pues hom­bre sabio eres tú, y sabrás lo que harás a él, y harás descender sus canas con sangre al Sheol.
 **10** Y descansó David con sus padres, y fue en­terrado en la ciudad de David.
 **11** Y los días que reinó David sobre Israel fue­ron cuarenta años; en Jebrón reinó siete años, y en Yerushaláim reinó treinta y tres años.
@@ -100,7 +100,7 @@ Shelomóh establece su reino
 **27** Y expulsó Shelomóh a Ebiatar de ser sacerdote de __יהוה__, para cumplir la palabra de __יהוה__ que habló sobre la casa de Elí en Shiloh.
 **28** Y el informe vino hasta Ioab, porque Ioab se había vuelto tras de Adoniyáh, pero tras de Abshalom no se volvió; y huyó Ioab a la Tien­da de __יהוה__, y se apoderó de los cuernos del altar.
 **29** Y fue dado a conocer al rey Shelomóh que había huido Ioab a la Tienda de __יהוה__, y he aquí, estaba al lado del altar. Y envió Shelo­móh a Benaiáhu, hijo de Iehoiada, diciendo: Ve, golpea contra él.
-**30** Y entró Benaiáhu a la Tienda de __יהוה__, y le dijo: Así ha dicho el rey: “¡Sal!” Y él dijo: No, porque aquí moriré. Y regresó Benaiáhu al rey la palabra, diciendo: Así habló Ioab y así me respondió.
+**30** Y entró Benaiáhu a la Tienda de __יהוה__, y le dijo: Así ha dicho el rey: “¡Sal! ” Y él dijo: No, porque aquí moriré. Y regresó Benaiáhu al rey la palabra, diciendo: Así habló Ioab y así me respondió.
 **31** Y le dijo el rey: Haz como ha hablado, y gol­pea contra él y entiérralo, y harás apartar la san­gre inocente que derramó Ioab de sobre mí y de sobre la casa de mi padre.
 **32** Y hará volver __יהוה__ su sangre sobre su ca­beza, que ha golpeado contra dos hombres más justos y buenos que él y los mató con la es­pada, y mi padre David no sabía: a Abner, hi­jo de Ner, jefe del ejército de Israel, y a A­ma­sa, hijo de Ieter, jefe del ejército de Iehu­dáh.
 **33** Y volverá la sangre de ellos en la cabeza de Ioab y en la cabeza de su simiente para siem­pre; pero para David y para su simiente, para su casa y para su trono, habrá shalom hasta el olam[^1955] de con __יהוה__.
@@ -337,7 +337,7 @@ El arca es llevada al Templo
 **1** Entonces reunió Shelomóh a los ancianos de Israel, a todas las cabezas de las tribus, jefes de los padres de los hijos de Israel, hacia el rey She­lomóh en Yerushaláim, para hacer su­bir el arca del Pacto de __יהוה__ de la ciudad de Da­vid, esta es Tzión.
 **2** Y se reunieron hacia el rey Shelomóh todos los hombres de Israel, en el mes lunar de Eta­nim, en la fiesta, aquel es el mes séptimo.
 **3** Y vinieron todos los ancianos de Israel, y car­­garon los sacerdotes el arca.
-**4** Y subieron el arca de __יהוה__, la Tienda del Mo’ed[^1996] y todos los utensilios de la Santidad que estaban en la Tienda, y los subieron los sacerdotes y los leviím[^1997].
+**4** Y subieron el arca de __יהוה__, la Tienda del Mo'ed[^1996] y todos los utensilios de la Santidad que estaban en la Tienda, y los subieron los sacerdotes y los leviím[^1997].
 **5** Y el rey Shelomóh y toda la congregación de Israel reunida junto a él, estaban con él delante del arca, sacrificando rebaño y ganado que no podían ser contados y no se podían numerar por su multitud.
 **6** Y trajeron los sacerdotes el arca del Pacto de __יהוה__ a su lugar, a la habitación más interna[^1998] de la casa, a la Santidad de Santidades, debajo de las alas de los querubines.
 **7** Porque los querubines extendían las alas ha­cia el lugar del arca, y cubrían los querubines sobre el arca y sobre sus barras desde arriba.
@@ -352,7 +352,7 @@ El arca es llevada al Templo
 **16**“Desde el día que hice salir a mi pueblo, a Israel, de Mitzráim, no escogí en una ciudad de entre todas las tribus de Israel para edificar una casa para estar mi Nombre allí, pero escogí a Da­vid para estar sobre mi pueblo Israel”.
 **17** Y estuvo con el corazón de mi padre el edi­ficar una casa al Nombre de __יהוה__, Elohim de Israel.
 **18** Pero dijo __יהוה__ a David mi padre: “Por­que estuvo con tu corazón el edificar una casa a mi Nombre, bien hiciste que estuviera con tu corazón.
-**19** Pero tú no edificarás la casa, sino que tu hi­jo quien saldrá de tus lomos, él edificará la ca­sa a mi Nombre.”
+**19** Pero tú no edificarás la casa, sino que tu hi­jo quien saldrá de tus lomos, él edificará la ca­sa a mi Nombre. ”
 **20** Y levantó __יהוה__ su palabra la cual habló, y me he levantado en lugar de David mi padre y me he sentado sobre el trono de Israel, como había hablado __יהוה__, y he edificado la casa al Nom­bre de __יהוה__, Elohim de Israel.
 **21** Y puse allí un lugar para el arca, que allí está el pacto de __יהוה__ el cual hizo[^2002] con nuestros padres cuando los hizo salir de la tierra de Mitzráim.
 
@@ -415,7 +415,7 @@ Pacto de Elohim con Shelomóh
 **5** levantaré el trono de tu reino sobre Israel pa­ra siempre, como hablé a David tu padre, di­ciendo: “No será cortado de ti hombre de sobre el tro­no de Israel”.
 **6** Pero si ciertamente se vuelven ustedes y sus hijos de detrás de Mí, y no guardan mis mandamientos, mis estatutos que he puesto delante de ustedes, y van y sir­ven a otros dioses y se inclinan a ellos,
 **7** cortaré a Israel de sobre la faz de la tierra que les he dado; y la casa que he consagrado a mi Nombre la enviaré lejos de mi rostro, y será Israel por proverbio y por afrenta en todos los pueblos.
-**8** Y esta casa que es exaltada[^2013], todo el que pase por ella se horrorizará y silba­rá, y dirán: “¿Por qué ha hecho __יהוה__ así a es­ta tierra y a esta casa?”
+**8** Y esta casa que es exaltada[^2013], todo el que pase por ella se horrorizará y silba­rá, y dirán: “¿Por qué ha hecho __יהוה__ así a es­ta tierra y a esta casa? ”
 **9** Y dirán: “Porque abandonaron a __יהוה__ su Elohim, que hizo salir a sus padres de la tierra de Mitzráim, y se han aferrado a otros dioses, y se inclinaron a ellos y les sirvieron; por eso __יהוה__ ha traído sobre ellos todo este mal”.
 
 Otras actividades de Shelomóh
@@ -559,7 +559,7 @@ Muerte de Shelomóh y división del reino
 **21** Y vino Rejabam a Yerushaláim, y reunió a to­da la casa de Iehudáh y a la tribu de Binia­mín, ciento ochenta mil escogidos hacedores de guerra, para luchar con la casa de Israel y re­gresar el reino a Rejabam, hijo de Shelomóh.
 **22** Pero fue la palabra de Elohim a Shemaiáh, hombre de Elohim, diciendo:
 **23** Habla a Rejabam, hijo de Shelomóh, rey de Iehudáh, y a toda la casa de Iehudáh y Binia­mín, y al resto del pueblo, diciendo:
-**24**“Así dijo __יהוה__: ‘No subirán y no lucha­rán con sus hermanos los hijos de Israel; vuel­van, cada hombre, a su casa, porque de Mí ha sido esta cosa’ ”. Y escucharon a la palabra de __יהוה__, y se volvieron para irse conforme a la palabra de __יהוה__.
+**24**“Así dijo __יהוה__: ‘No subirán y no lucha­rán con sus hermanos los hijos de Israel; vuel­van, cada hombre, a su casa, porque de Mí ha sido esta cosa' ”. Y escucharon a la palabra de __יהוה__, y se volvieron para irse conforme a la palabra de __יהוה__.
 **25** Y edificó Iarobam a Shejem en el monte de Efráim, y habitó en ella. Y salió de allí y edifi­có Penuel.
 **26** Y dijo Iarobam en su corazón: Ahora volve­rá el reino a la casa de David
 **27** si sube este pueblo a hacer sacrificios en la casa de __יהוה__ en Yerushaláim, y se volverá el corazón de este pueblo hacia su amo, hacia Re­jabam, rey de Iehudáh, y me matarán y volve­rán a Rejabam, rey de Iehudáh.
@@ -595,7 +595,7 @@ Iarobam y el hombre de Elohim
 **19** Y volvió con él, y comió pan en su casa y be­bió agua.
 **20** Y sucedió que ellos estaban sentados a la me­sa, y fue la palabra de __יהוה__ en el profeta que lo había hecho volver;
 **21** y proclamó al hombre de Elohim que vino de Iehudáh, diciendo: Así dice __יהוה__: “Por­que te has rebelado contra la boca de __יהוה__, y no guardaste el mandamiento que te ha orde­nado __יהוה__ tu Elohim,
-**22** y volviste, y comiste pan y bebiste agua en el lugar el cual te habló: ‘No comerás pan y no be­­be­rás agua’, no entrará tu cadáver en la tum­ba de tus padres”.
+**22** y volviste, y comiste pan y bebiste agua en el lugar el cual te habló: ‘No comerás pan y no be­­be­rás agua', no entrará tu cadáver en la tum­ba de tus padres”.
 **23** Y sucedió que después de su comer pan y después de su beber, ató el asno para él, para el profeta que lo había hecho volver.
 **24** Y se fue, y lo encontró un león en el camino y lo mató; y estuvo su cadáver tirado en el ca­mino, y el asno parado junto a él, y el león pa­rado
 junto al cadáver.
@@ -627,7 +627,7 @@ Profecía de Ajiyah contra Iarobam
 **8** y arranqué el reino de la casa de David y lo di a ti, pero no has sido como mi siervo David, que guardó mis mandamientos y que anduvo de­trás de Mí con todo su corazón, para hacer sólo lo recto en mis ojos;
 **9** y más mal has hecho que todos los que fue­ron antes de ti, y fuiste e hiciste para ti otros dio­ses e imágenes fundidas para hacerme enfu­recer, y a Mí me has arrojado detrás de tus es­paldas;
 **10** por eso, he aquí, haré venir mal a la casa de Iarobam, y cortaré de Iarobam al que orina en la pared, esclavo y libre[^2041] en Israel; encenderé tras de la casa de Iarobam, como se enciende el estiércol hasta su totalidad.
-**11** El que muera de Iarobam en la ciudad, lo co­merán los perros. Y el que muera en el cam­po, lo comerán las aves del cielo; porque __יהוה__ ha hablado’ ”.
+**11** El que muera de Iarobam en la ciudad, lo co­merán los perros. Y el que muera en el cam­po, lo comerán las aves del cielo; porque __יהוה__ ha hablado' ”.
 **12** Y tú, levántate, ve a tu casa; al entrar tus pies a la ciudad, morirá el niño.
 **13** Y lo lamentará todo Israel y lo enterrarán, pues este solo entrará de Iarobam a la tumba, pues fue hallado en él algo bueno hacia __יהוה__, Elohim de Israel, en la casa de Iarobam.
 **14** Y levantará __יהוה__ para sí un rey sobre Is­rael, que cortará a la casa de Iarobam este día, y, ¿qué también ahora?
@@ -791,10 +791,10 @@ Encuentro de Eliyáhu y Ajab
 **8** Y él le dijo: Yo soy. Ve, di a tu amo: Aquí está Eliyáhu”.
 **9** Y él dijo: ¿Qué he pecado, que tú das a tu sier­vo en mano de Ajab para hacerme morir?
 **10** Vive __יהוה__ tu Elohim, ¡si hubiera nación y reino que no haya enviado mi amo allí a bus­carte!, y decían: “No está”, y hacía jurar al rei­no y a la nación que no te habían hallado.
-**11** Y ahora tú dices: “Ve, di a tu amo: ‘Aquí está Eliyáhu’ ”.
+**11** Y ahora tú dices: “Ve, di a tu amo: ‘Aquí está Eliyáhu' ”.
 **12** Y sucederá que yo me iré de ti, y el Rúaj[^2058] de __יהוה__ te llevará por donde no conozca; e iré a dar a conocer a Ajab y no te hallará, y me ma­tará; y tu siervo, he temido a __יהוה__ desde mi juventud.
 **13**¿No han dado a conocer a mi amo lo que hi­ce cuando mató Izebel a los profetas de __יהוה__, y escondí de los profetas de __יהוה__ cien hombres, de cincuenta en cincuenta hombres en la cueva, y les sustenté pan y agua?
-**14** Y ahora tú dices: “Ve, di a tu amo: ‘Aquí está Eliyáhu’ ”; y me matará.
+**14** Y ahora tú dices: “Ve, di a tu amo: ‘Aquí está Eliyáhu' ”; y me matará.
 **15** Y dijo Eliyáhu: Vive __יהוה__ Tzebaot, que me paro delante de Él, que hoy me mostraré a él.
 **16** Y fue Obadyáhu al encuentro de Ajab, y le dio a conocer; y fue Ajab al encuentro de Eli­yáhu.
 **17** Y sucedió que cuando vio Ajab a Eliyáhu, le dijo Ajab: ¿Eres tú este, perturbador de Is­rael?
@@ -868,7 +868,7 @@ Guerra contra Ben Hadad
 **2** Y envió mensajeros a Ajab, rey de Israel, a la ciudad,
 **3** y le dijo: Así dice Ben Hadad: “Tu plata y tu oro para mí son; y tus mujeres y tus hijos más buenos, para mí son ellos”.
 **4** Y respondió el rey de Israel, y dijo: Confor­me a tu palabra, mi amo el rey, para ti soy yo y todo lo que pertenece a mí.
-**5** Y volvieron los mensajeros y dijeron: Así di­ce Ben Hadad, diciendo: “Porque envié a ti, di­ciendo: ‘Tu plata y tu oro, tus mujeres y tus hi­jos, a mí darás’;
+**5** Y volvieron los mensajeros y dijeron: Así di­ce Ben Hadad, diciendo: “Porque envié a ti, di­ciendo: ‘Tu plata y tu oro, tus mujeres y tus hi­jos, a mí darás';
 **6** sino que, como a esta hora mañana enviaré a mis siervos hacia ti, y examinarán tu casa y las casas de tus siervos; y será que todo el deseo de tus ojos pondrán en su mano y lo tomarán”.
 **7** Y llamó el rey de Israel a todos los ancianos de la tierra, y dijo: Conozcan, por favor, y vean que este busca mal; pues él envió a mí por mis mujeres y por mis hijos, por mi plata y por mi oro, y no lo retuve de él.
 **8** Y le dijeron todos los ancianos y todo el pue­blo: No escuches ni consientas.
@@ -891,7 +891,7 @@ Guerra contra Ben Hadad
 **25** y tú, contarás para ti una fuerza, como la fuer­za que ha caído de ti, y caballos como los caballos y los carros como los carros. Y lucha­remos con ellos en la llanura, se verá si no nos fortalecemos más que ellos. Y escuchó a la voz de ellos, e hizo así.
 **26** Y sucedió que a la vuelta del año, alistó Ben Hadad a Aram y subió a Afek para luchar con Israel.
 **27** Y los hijos de Israel fueron alistaron y fue­ron mantenidos de provisiones, y fueron a su encuentro. Y acamparon los hijos de Israel de­lante de ellos como dos rebaños separados de cabras, pero Aram llenaba la tierra.
-**28** Y se acercó un hombre de Elohim, y dijo al rey de Israel, y dijo: Así dice יהוה: “Porque ha dicho Aram: ‘Elohim de montes es __יהוה__, pero no es Elohim de valles Él’, daré a toda es­ta gran multitud en tu mano, y sabrán que Yo soy __יהוה__”.
+**28** Y se acercó un hombre de Elohim, y dijo al rey de Israel, y dijo: Así dice יהוה: “Porque ha dicho Aram: ‘Elohim de montes es __יהוה__, pero no es Elohim de valles Él', daré a toda es­ta gran multitud en tu mano, y sabrán que Yo soy __יהוה__”.
 **29** Y acamparon estos opuestos a estos por sie­te días. Y sucedió que en el día séptimo, se a­cer­có la batalla, y golpearon los hijos de Israel a Aram, cien mil de a pie en un día.
 **30** Y huyeron los que habían quedado a Afek, a la ciu­dad, y cayó el muro sobre los veintisie­te mil hombres que quedaban. Ben Hadad hu­­yó y entró a la ciudad en una cámara interior[^2070].
 **31** Y le dijeron sus siervos: He aquí, por favor, hemos oído que los reyes de la casa de Israel, que reyes de misericordia son ellos; nos pon­dremos, por favor, cilicio[^2071] en nues­tros lomos y cuerdas en nuestras cabezas, y salgamos al rey de Israel; quizá deje vivir a tu ser.
@@ -930,7 +930,7 @@ La viña de Nabot
 **16** Y sucedió que cuando escuchó Ajab que había muerto Nabot, se levantó Ajab para des­cender a la viña de Nabot el izreelí, para po­seerla.
 **17** Y fue la palabra de __יהוה__ a Eliyáhu el tish­bí[^2078], diciendo:
 **18** Levántate, desciende al encuentro de Ajab, rey de Israel, que está en Shomrón, he aquí, es­tá en la viña de Nabot, que descendió allí para poseerla.
-**19** Y le hablarás, diciendo: “Así dijo __יהוה__: ‘¿Has asesinado, y además has tomado pose­sión?’ ” Y le hablarás, diciendo: “Así dijo __יהוה__: ‘En el lugar donde lamieron los pe­rros la sangre de Nabot, lamerán los perros tu sangre, también tú’ ”.
+**19** Y le hablarás, diciendo: “Así dijo __יהוה__: ‘¿Has asesinado, y además has tomado pose­sión? ' ” Y le hablarás, diciendo: “Así dijo __יהוה__: ‘En el lugar donde lamieron los pe­rros la sangre de Nabot, lamerán los perros tu sangre, también tú' ”.
 **20** Y dijo Ajab a Eliyáhu: ¿Me has hallado, e­ne­migo mío? Y él dijo: Te he hallado, por­que te has vendido para hacer el mal en los ojos de __יהוה__.
 **21** He aquí, traeré hacia ti mal, y consumiré des­pués de ti, y cortaré de Ajab a cada uno que orina en la pared, y esclavo y libre[^2079] en Israel;
 **22** y pondré tu casa como la casa de Iarobam, hijo de Nebat, y como la casa de Bashá, hijo de Ajiyah, por la irritación con que me has hecho enfurecer, y haz hecho pecar a Israel.
@@ -968,14 +968,14 @@ He visto a todo Israel dispersado en los mon­tes, como el rebaño que no tiene 
 
 **18** Y dijo el rey de Israel a Iehoshafat: ¿No te he dicho: “No profetizará sobre mí bien, sino que mal”?
 **19** Y dijo Micaiehu: Por eso, escucha la pala­bra de __יהוה__. He visto a __יהוה__ sentado so­bre su trono, y todo el ejército de los cielos pa­rado junto a Él, a su derecha y a su izquierda.
-**20** Y dijo __יהוה__: “¿Quién persuadirá a Ajab, y subirá y caerá en Ramot Guilad?” Y dijo este de esta manera, y este dijo de esta manera.
-**21** Y salió un espíritu y se paró delante de __יהוה__, y dijo: “Yo lo persuadiré”. Y le dijo __יהוה__: “¿Con qué?”
+**20** Y dijo __יהוה__: “¿Quién persuadirá a Ajab, y subirá y caerá en Ramot Guilad? ” Y dijo este de esta manera, y este dijo de esta manera.
+**21** Y salió un espíritu y se paró delante de __יהוה__, y dijo: “Yo lo persuadiré”. Y le dijo __יהוה__: “¿Con qué? ”
 **22** Y él dijo: “Saldré y seré espíritu de mentira en boca de todos sus profetas”. Y Él dijo: “Per­suadirás y también prevalecerás; sal y haz así”.
 **23** Y ahora, he aquí, ha puesto __יהוה__ un es­píritu de mentira en boca de todos tus profetas estos; y __יהוה__ ha hablado sobre ti mal.
 **24** Y se acercó Tzidkiyahu, hijo de Kenaanáh, y golpeó a Micaiehu en la mejilla, y dijo: ¿Cómo[^2084] es esto que pasó el Rúaj[^2085] de __יהוה__ de mí para hablarte a ti?
 **25** Y dijo Micaiehu: He aquí, tú verás en a­quel día que entrarás en una cámara interior[^2086] para esconderte.
 **26** Y dijo el rey de Israel: Toma a Micaiehu, y hazlo volver a Amón, príncipe de la ciudad, y a Ioásh, hijo del rey;
-**27** y dirás: “Así dice el rey: ‘Pongan a este en la casa de encarcelamiento, y háganle comer pan de angustia y agua de angustia hasta mi ve­nida en shalom’ ”.
+**27** y dirás: “Así dice el rey: ‘Pongan a este en la casa de encarcelamiento, y háganle comer pan de angustia y agua de angustia hasta mi ve­nida en shalom' ”.
 **28** Y dijo Micaiehu: Si en verdad vuelves[^2087] en shalom, no ha hablado __יהוה__ por mí. Y dijo: ¡Oigan, pueblos todos!
 **29** Y subió el rey de Israel, y Iehoshafat, rey de Iehudáh, a Ramot Guilad.
 **30** Y dijo el rey de Israel a Iehoshafat: Me dis­frazaré y entraré en la batalla, pero tú vístete tus vestiduras. Y se disfrazó el rey de Israel y entró en la batalla.
@@ -991,7 +991,7 @@ He visto a todo Israel dispersado en los mon­tes, como el rebaño que no tiene 
 **40** Y descansó Ajab con sus padres, y reinó Ajaz­yáhu, su hijo, en su lugar.
 **41** Y Iehoshafat, hijo de Asá, reinó sobre Iehu­dáh en el año cuatro de Ajab, rey de Israel.
 **42** Iehoshafat tenía la edad de treinta y cinco años en su reinar, y veinticinco años reinó en Yerushaláim. Y el nombre de su madre era Azu­báh, hija de Shiljí.
-**43** Y anduvo en todo el camino de Asá su pa­dre,no se desvió de él, para hacer lo recto en los ojos de __יהוה__. Sin embargo, los lugares altos no fueron apartados; todavía el pueblo sa­crificaba y quemaba incienso en los lugares al­tos.
+**43** Y anduvo en todo el camino de Asá su pa­dre, no se desvió de él, para hacer lo recto en los ojos de __יהוה__. Sin embargo, los lugares altos no fueron apartados; todavía el pueblo sa­crificaba y quemaba incienso en los lugares al­tos.
 **44** E hizo shalom Iehoshafat con el rey de Is­rael.
 **45** Y el resto de los actos de Iehoshafat, y su poder que hizo, y que luchó, ¿no están escritos en el rollo de las Palabras de los Días de los re­yes de Iehudáh?
 **46** Y el resto de los prostitutos paganos que ha­bía quedado en los días de Asá su padre, los consumió de la tierra.
@@ -1037,7 +1037,7 @@ He visto a todo Israel dispersado en los mon­tes, como el rebaño que no tiene 
 [^1974]: O, *rebajos.*
 [^1975]: O, *levantaré.*
 [^1976]: Heb.: *Debir. *Lugar donde hablaba Elo­him.
-[^1977]: Heb.: *Kódesh ha’kodashim.*
+[^1977]: Heb.: *Kódesh ha'kodashim.*
 [^1978]: Lit.: *oro cerrado.*
 [^1979]: O sea, *el mes segundo.*
 [^1980]: O sea, *el mes octavo.*
@@ -1071,7 +1071,7 @@ He visto a todo Israel dispersado en los mon­tes, como el rebaño que no tiene 
 [^2008]: Heb.: *Mishpatim.*
 [^2009]: Heb.: *Oláh.*
 [^2010]: Heb.: *Minjáh.*
-[^2011]: Heb.: *Sh’lamim.*
+[^2011]: Heb.: *Sh'lamim.*
 [^2012]: Oración, participación en juicio.
 [^2013]: Lit.: *será exaltada.*
 [^2014]: Como nada.

@@ -282,7 +282,7 @@ y se escondieron el hombre y su mujer del rostro de יהוה Elohim en medio del
 **3** Todo lo que se mueve, que es vivo, para us­tedes será por comida, como la verde hierba, he dado para ustedes todo.
 **4** Pero carne con su vida[^47], su san­gre, no comerán.
 **5** Y ciertamente la sangre de ustedes, de sus vidas, requeriré; de mano de todo animal lo requeriré. Y de mano del hombre, de mano del va­rón su hermano deman­daré la vida del hom­bre.
-**6** El que derrame sangre del hombre,por el hombre su sangre será derra­mada,porque en la imagen de Elohim hizo al hombre.
+**6** El que derrame sangre del hombre, por el hombre su sangre será derra­mada, porque en la imagen de Elohim hizo al hombre.
 **7** Y ustedes, sean fructíferos y multiplíquense, pululen en la tierra y multiplíquense en ella.
 **8** Y dijo Elohim a Nóaj y a sus hijos con él, diciendo:
 **9** Y Yo, heme aquí, establezco mi pacto con ustedes, y con su simiente des­pués de ustedes,
@@ -580,7 +580,7 @@ No temas, Abram, Yo soy es­cu­do para ti, tu recompensa *será *muy grande.
 **10** Y dijo: Ciertamente volveré[^86] a ti conforme al tiempo de vida[^87], y he aquí, un hijo *habrá* para Sarah tu mujer. Y Sarah escuchaba a la entra­da de la tienda, que estaba detrás de él.
 **11** Y Abraham y Sarah eran ancianos, entrados en días, cesado había sido a Sarah el camino conforme al de las mujeres.
 **12** Y se rio[^88] Sarah en su interior, di­ciendo: ¿Después de envejecer habrá para mí placer, y mi amo *siendo* viejo?
-**13** Y dijo יהוה a Abraham: ¿Por qué se rio Sarah?, diciendo: “¿También en verdad daré a luz, y yo* siendo* vieja?”
+**13** Y dijo יהוה a Abraham: ¿Por qué se rio Sarah?, diciendo: “¿También en verdad daré a luz, y yo* siendo* vieja? ”
 **14**¿Es maravillosa para יהוה *cualquier* co­sa? Al tiempo señalado volveré a ti, conforme al tiempo de vida, y para Sarah *habrá* un hijo.
 **15** Pero lo negó Sarah, diciendo: No me reí; porque ella tenía miedo. Y Él dijo: No, pues te reíste.
 
@@ -674,7 +674,7 @@ sus manos y trajeron a Lot hacia ellos a la casa, y la puerta cerraron.
 **10** Y dijo Abimélej a Abraham: ¿Qué has visto para que hayas hecho esta cosa?
 **11** Y dijo Abraham: Porque dije: “Sola­men­te no hay temor de Elohim en este lugar, y me matarán por cosa de mi mujer”.
 **12** Además, en verdad es mi hermana, hija de mi padre ella es, pero no la hija de mi madre, y ha sido para mí por mujer.
-**13** Y sucedió *que *cuando me hizo vagar Elo­him de la casa de mi padre, *le* dije a ella: “Esta es tu misericordia que harás conmigo: a cualquier lugar que vayamos allí, dirás de mí: ‘Mi hermano él es.’
+**13** Y sucedió *que *cuando me hizo vagar Elo­him de la casa de mi padre, *le* dije a ella: “Esta es tu misericordia que harás conmigo: a cualquier lugar que vayamos allí, dirás de mí: ‘Mi hermano él es. '
 **14** Y tomó Abimélej ovejas y ganado, y siervos y siervas, y los dio a Abraham, y le devolvió a Sarah su mujer.
 **15** Y dijo Abimélej: He aquí, mi tierra está delante de ti, en *donde sea* bueno a tus ojos habita.
 **16** Y a Sarah dijo: Mira, he dado mil *piezas de* plata a tu hermano. He aquí, esto para ti es una cobertura de ojos para todos los que *están* con­tigo y con todos; y *fue *reprendida.
@@ -831,7 +831,7 @@ y como la arena que es sobre la orilla del mar,
 **44** y ella me diga: ʽTambién tú bebe, y tam­bién para tus camellos sacaréʼ, ella es la mujer que ha designado יהוה para el hijo de mi amo”.
 **45** Yo antes de terminar de hablar en mi co­razón, y he aquí, Ribkah vino, y su cántaro so­bre su hombro, y ella descendió a la fuente y sa­có *agua*, y le dije: “Dame de be­ber por fa­vor”.
 **46** Y ella se dio prisa y bajó su cántaro de encima de ella, y dijo: “Bebe, y también *a *tus camellos daré de beber”, y bebí, y también *a* los camellos ella dio de beber.
-**47** Y le pregunté y dije: “¿Hija de quién eres tú?” Y ella dijo: “Hija de Betuel, hijo de Najor, que dio a luz para él Milcáh”; y puse el ani­llo en su nariz, y los brazaletes en sus manos.
+**47** Y le pregunté y dije: “¿Hija de quién eres tú? ” Y ella dijo: “Hija de Betuel, hijo de Najor, que dio a luz para él Milcáh”; y puse el ani­llo en su nariz, y los brazaletes en sus manos.
 **48** E incliné mi cabeza y me postré a יהוה, y bendije a יהוה, Elohim de mi amo Abraham, que me ha guiado por camino de verdad para tomar a la hija del hermano de mi amo para su hijo.
 **49** Y ahora, si han de hacer bondad y verdad con mi amo, dénmelo a conocer; y si no, dénmelo a conocer, y me vuelva a diestra o a siniestra.
 **50** Y respondieron Labán y Betuel, y dijeron: De יהוה salió esto; no podemos hablarte mal o bien.
@@ -1165,7 +1165,7 @@ a mi mujer, porque se cumplieron mis días, y pueda entrar a ella.
 **44** Y ahora, ven, hagamos[^156] un pacto yo y tú, y sea de testigo entre mí y tú.
 **45** Y tomó Yaakov una piedra y la levantó *co­mo* pilar.
 **46** Y dijo Yaakov a sus hermanos: Recojan piedras. Y tomaron piedras e hicieron un mon­tón, y comieron allí al lado del montón.
-**47** Y lo llamó Labán ‘Iegar Sahaduta[^157]’, pero Yaakov lo llamó ‘Ga­led[^158]’.
+**47** Y lo llamó Labán ‘Iegar Sahaduta[^157]', pero Yaakov lo llamó ‘Ga­led[^158]'.
 **48** Y dijo Labán: Este montón es testigo entre mí y tú hoy. Debido a eso fue llamado su nombre Galed.
 **49** Y Mitzpah[^159], porque dijo: Vigile[^160] יהוה entre mí y tú cuando nos ha­yamos escondido uno del otro[^161].
 **50** Si afliges a mis hijas, o si tomas *otras* mu­jeres junto a mis hijas, *aunque* ningún hom­bre *esté *con nosotros, mira, Elohim es testigo entre mí y tú.
@@ -1183,7 +1183,7 @@ a mi mujer, porque se cumplieron mis días, y pueda entrar a ella.
 **2** Y dijo Yaakov cuando los vio: Campamento[^163] de Elohim es este. Y llamó el nombre de ese lugar Majanáim[^164].
 **3** Y envió Yaakov mensajeros delan­te de sí a Esav su hermano, en la tierra de Seir, campo de Edom.
 **4** Y ordenó a ellos, diciendo: Así dirán a mi amo Esav: “Así dice tu siervo Yaakov: ‘Con Labán he vivido, y me retrasé *allí* hasta ahora.
-**5** Y tengo para mí bueyes, y asnos y rebaños, y siervos y siervas, y he enviado a decir a mi amo, para encontrar favor en tus ojos’ ”.
+**5** Y tengo para mí bueyes, y asnos y rebaños, y siervos y siervas, y he enviado a decir a mi amo, para encontrar favor en tus ojos' ”.
 **6** Y regresaron los mensajeros a Yaakov, diciendo: Fuimos a tu hermano Esav, y tam­bién él viene en dirección tuya, y cuatrocientos hombres con él.
 **7** Y temió Yaakov mucho, y se lamentó; y di­vidió al pueblo que *estaba* con él, y el re­ba­ño, y el ganado vacuno, y los camellos, en dos cam­pamentos.
 **8** Y él dijo: Si viene Esav a un campamento y lo golpea, será *que* el campamento que quede escapará.
@@ -1195,7 +1195,7 @@ a mi mujer, porque se cumplieron mis días, y pueda entrar a ella.
 **14** doscientas cabras y veinte machos cabríos, doscientas ovejas y veinte carneros,
 **15** camellas que amamantan y sus hijos treinta, cuarenta vacas y diez toros, veinte asnas y diez asnos.
 **16** Y los dio en mano de sus siervos, cada rebaño[^165] por sí mismo, y dijo a sus siervos: Avancen delante de mí, y un espacio pongan entre rebaño y rebaño.
-**17** Y ordenó al primero, diciendo: Cuando te encuentre Esav mi hermano y te pregunte, diciendo: “¿De quién eres tú y a dónde vas, y de quién *son* estos delante de ti?”
+**17** Y ordenó al primero, diciendo: Cuando te encuentre Esav mi hermano y te pregunte, diciendo: “¿De quién eres tú y a dónde vas, y de quién *son* estos delante de ti? ”
 **18** Y dirás: “*Pertenecen* a tu siervo, a Yaakov; es un presente enviado a mi amo Esav, y he aquí, también él *viene* detrás de nosotros”.
 **19** Y ordenó también al segundo y también al tercero, y también a todos los que iban detrás del rebaño, diciendo: Conforme a estas palabras hablarán a Esav en su encuentro con él.
 **20** Y dirán: “También, he aquí, tu siervo Yaakov *viene* detrás de nosotros”. Porque dijo: Se descubrirá su rostro con el presente que va de­lante de mí. Y después entonces veré su ros­tro, qui­zá soportará mi rostro.
@@ -1624,7 +1624,7 @@ y las siete espigas vacías arruinadas *por el* viento del este, serán siete a�
 **4** Si envías a nuestro hermano, descen­deremos y compraremos para ti comida.
 **5** Pero si tú no *lo* envías, no descenderemos; porque el hombre dijo a nosotros: “No verán mi rostro a menos que su hermano *esté* con ustedes”.
 **6** Y dijo Israel: ¿Por qué me trataron con maldad, al informar al hombre que *tenían* un hermano más?
-**7** Pero ellos dijeron: Nos preguntó inquiriendo el hombre acerca de nosotros y acerca de nuestra tierra natal, diciendo: “¿Aún su padre vive? ¿Tienen ustedes hermano?”, y nosotros le dijimos a él de acuerdo a estas palabras. ¿Sabíamos conociendo que diría: “Desciendan a su hermano?”
+**7** Pero ellos dijeron: Nos preguntó inquiriendo el hombre acerca de nosotros y acerca de nuestra tierra natal, diciendo: “¿Aún su padre vive? ¿Tienen ustedes hermano? ”, y nosotros le dijimos a él de acuerdo a estas palabras. ¿Sabíamos conociendo que diría: “Desciendan a su hermano? ”
 **8** Y dijo Iehudáh a Israel su padre: Envía al joven conmigo, y nos levantaremos e iremos, para poder vivir y no morir, tanto nosotros, como tú *y* nuestros niños.
 **9** Yo seré responsable de él; de mi mano lo demandarás. Si no lo traigo a ti y lo presento delante de ti, estaría transgrediendo a ti todos los días;
 **10** Porque si no nos hubiéramos demorado, pues, ahora habríamos vuelto esta segunda vez.
@@ -1675,7 +1675,7 @@ y las siete espigas vacías arruinadas *por el* viento del este, serán siete a�
 **16** Y dijo Iehudáh: ¿Qué podemos decir a mi amo? ¿Qué podemos hablar y cómo nos justi­ficaremos? Elohim ha descubierto la iniquidad de tus siervos; he aquí, *somos* esclavos de mi amo, tanto nosotros como en quien se ha encontrado la taza en su mano.
 **17** Pero él dijo: ¡Lejos esté de mí hacer eso! El hombre que se ha encontrado la copa en su mano, él será para mí esclavo; pero ustedes suban en shalom a su padre.
 **18** Y se acercó a él Iehudáh, y dijo: Por favor, mi amo, deja hablar por favor a tu siervo una palabra en el oído de mi amo, y no se encienda tu ira con tu siervo, pues tú *eres* como Faraón.
-**19** Mi amo preguntó a sus siervos, diciendo: “¿Tienen ustedes padre o hermano?”
+**19** Mi amo preguntó a sus siervos, diciendo: “¿Tienen ustedes padre o hermano? ”
 **20** Y dijimos a mi amo: “Tenemos nosotros un padre anciano y un niño pequeño de *su* vejez. Y su hermano *está* muerto, y queda él sólo* de los hijos* de su madre, y su padre lo ama”.
 **21** Y tú dijiste a tus siervos: “Bájenmelo, y pueda poner mis ojos sobre él”.
 **22** Y dijimos a mi amo: “No puede el joven dejar a su padre, *pues si* dejara a su padre, moriría”.
@@ -1684,7 +1684,7 @@ y las siete espigas vacías arruinadas *por el* viento del este, serán siete a�
 **25** Y dijo nuestro padre: “Regresen, compren para nosotros un poco de comida”.
 **26** Pero dijimos: “No podemos descender. Si está nuestro hermano pequeño con nosotros, descenderemos; porque no podemos ver el rostro del hombre si[^221] nuestro her­ma­no pe­que­ño no está con nosotros”.
 **27** Y dijo tu siervo mi padre a nosotros: “Ustedes saben que dos *hijos* dio a luz para mí mi mujer;
-**28** y salió el uno de mí, y dije: ‘Pero ha sido ciertamente despedazado’, y no lo he visto más aquí.
+**28** y salió el uno de mí, y dije: ‘Pero ha sido ciertamente despedazado', y no lo he visto más aquí.
 **29** Pero *si* toman también a este de mi rostro, y le ocurre una calamidad, harán descender mis canas en maldad al Sheol”.
 **30** Y ahora, cuando venga a tu siervo mi padre, y el joven no esté con nosotros, y su vida está atada en su vida,
 **31** sucederá cuando él vea que no está el joven, morirá. Y harán descender tus siervos las canas de tu siervo nuestro padre en pena al Sheol.
@@ -1706,7 +1706,7 @@ y las siete espigas vacías arruinadas *por el* viento del este, serán siete a�
 **8** Y ahora, no *fueron* ustedes los que me en­viaron aquí, sino Elohim. Y me ha pues­to por padre para Faraón, y por amo de toda su casa, y gobernador de toda la tierra de Mitzráim.
 **9** Dense prisa, y suban a mi padre, y díganle: “Así dice tu hijo Iosef: ‘Me ha puesto Elohim por amo a todo Mitzráim; desciende a mí, no te quedes parado.
 **10** Y habitarás en la tierra de Goshén, y estarás cerca de mí, tú y tus hijos y los hijos de tus hijos, y tu rebaño y tu ganado, y todo lo que es para ti.
-**11** Y proveeré para ti allí, pues aún *quedan* cinco años de hambre, no seas empobrecido tú y tu casa y todo lo que es para ti.’ ”
+**11** Y proveeré para ti allí, pues aún *quedan* cinco años de hambre, no seas empobrecido tú y tu casa y todo lo que es para ti. ' ”
 **12** Y he aquí, sus ojos ven y los ojos de mi hermano Biniamín que mi boca es la que habla a ustedes.
 **13** Y den a conocer a mi padre toda mi gloria en Mitzráim, y todo lo que han visto; y dense prisa y desciendan a mi padre aquí.
 **14** Y cayó sobre el cuello de su hermano Biniamín, y lloró; y Biniamín lloró sobre su cuello.
@@ -1765,7 +1765,7 @@ porque una gran na­ción te haré allí.**4** Yo descenderé contigo a Mitzrái
 **30** Y dijo Israel a Iosef: Muera yo ahora, después de que he visto tu rostro, porque aún tú vives.
 **31** Y dijo Iosef a sus hermanos y a la casa de su padre: Subiré e informaré a Faraón, y le diré: “Mis hermanos y la casa de mi padre que *estaban *en la tierra de Kenáan vinieron a mí.
 **32** Y los hombres *son* pastores de rebaño, pues hombres de ganado son; y sus rebaños, y sus ganados, y todo lo que tienen han traído”.
-**33** Y sucederá *que *cuando *los* llame a ustedes Faraón, y diga: “¿Cuáles son sus trabajos?”
+**33** Y sucederá *que *cuando *los* llame a ustedes Faraón, y diga: “¿Cuáles son sus trabajos? ”
 **34** Y ustedes dirán: “Hombres de ganado han sido tus siervos desde nuestra juventud hasta ahora, tanto nosotros como nuestros padres”, a fin de que puedan habitar en la tierra de Goshén; porque abominación a Mitzráim son todos los pastores de rebaño.
 
 *Los hijos de Israel en Goshén*
@@ -1901,19 +1901,19 @@ hasta el límite de las colinas del olam[^239],
 **2** Y ordenó Iosef a sus siervos, a los curadores, embalsamar a su padre; y em­balsamaron los curadores a Israel.
 **3** Y se cumplieron para él cuarenta días, por­que así se cumplieron los días del embalsama­miento. Y lo lloraron los mitzrim[^241] setenta días.
 **4** Y pasaron los días de su lloro, y habló Iosef a la casa de Faraón, diciendo: Si, por favor, he encontrado favor en sus ojos, hablen en los oídos de Faraón, diciendo:
-**5**“Mi padre me hizo jurar, diciendo: ‘He aquí, yo muero; en la tumba que cavé para mí en la tierra de Kenáan, allí me enterrarás.’ Y ahora, déjame subir, por favor, y enterraré a mi padre, y volveré”.
+**5**“Mi padre me hizo jurar, diciendo: ‘He aquí, yo muero; en la tumba que cavé para mí en la tierra de Kenáan, allí me enterrarás.' Y ahora, déjame subir, por favor, y enterraré a mi padre, y volveré”.
 **6** Y dijo Faraón: Sube y entierra a tu padre como te hizo jurar.
 **7** Y subió Iosef para enterrar a su padre, y subieron con él todos los siervos de Faraón, los ancianos de su casa, y todos los ancianos de la tierra de Mitzráim,
 **8** y toda la casa de Iosef, y sus hermanos, y la casa de su padre sólo sus niños y sus rebaños y sus ganados dejaron en la tierra de Goshén.
 **9** Y subieron con él también los carros y también los jinetes, y fue un campamento muy pesado.
 **10** Y llegaron hasta la trilla de la zarza, que *está* en dirección al Iardén, y lloraron allí con lamento muy grande y pesado. Y *Iosef* hizo allí por su padre luto siete días.
-**11** Y vieron los habitantes de la tierra, el kenaaní, el luto en la trilla de la zarza, y dijeron: Luto pesado es este para los mitzrim. Por eso su nombre fue llamado ‘Avel Mitzráim[^242]’, el cual *está* en dirección al Iardén.
+**11** Y vieron los habitantes de la tierra, el kenaaní, el luto en la trilla de la zarza, y dijeron: Luto pesado es este para los mitzrim. Por eso su nombre fue llamado ‘Avel Mitzráim[^242]', el cual *está* en dirección al Iardén.
 **12** E hicieron sus hijos para él así como les había ordenado;
 **13** y lo llevaron sus hijos a la tierra de Kenáan, y lo enterraron en la cueva del campo de Majpelah, que compró Abraham, el campo para posesión de tumba, de Efrón el jití, sobre la faz de[^243] Mamré.
 **14** Y volvió Iosef a Mitzráim, él y sus hermanos, y todos los que subieron con él para enterrar a su padre, después de enterrar a su padre.
 **15** Y vieron los hermanos de Iosef que había muerto su padre, y dijeron: ¿*Y *si nos guarda rencor Iosef y, devolviendo, nos devuelve todo el mal que le retribuimos?
 **16** Y ordenaron a Iosef, diciendo: Tu padre ordenó antes de morir, diciendo:
-**17**“Así dirán a Iosef: ‘Te ruego que soportes, por favor, la transgresión de tus hermanos y su pecado, porque mal te retribuyeron.’ ” Y ahora, soporta, por favor, la transgresión de los sier­­vos del Elohim de tu padre. Y lloró Iosef cuando le hablaron.
+**17**“Así dirán a Iosef: ‘Te ruego que soportes, por favor, la transgresión de tus hermanos y su pecado, porque mal te retribuyeron.' ” Y ahora, soporta, por favor, la transgresión de los sier­­vos del Elohim de tu padre. Y lloró Iosef cuando le hablaron.
 **18** Y fueron también sus hermanos, y cayeron delante de él, y dijeron: He aquí, para ti somos siervos.
 **19** Y les dijo Iosef: No teman, porque ¿en lugar de Elohim *estoy *yo?
 **20** Ustedes pensaron sobre mí mal, *pero* Elohim lo pensó para bien, con el fin de hacer como hoy esto, para dejar vivir mucha gente.
@@ -1960,7 +1960,7 @@ la cual juró a Abraham, a Itzjak y a Yaakov.
 [^26]: Heb.: *isháh.*
 [^27]: Heb.: *ish.*
 [^28]: O, *fue tomada.*
-[^29]: Serpiente. *Un nombre de Ha’satán. *Así en el resto del cap.
+[^29]: Serpiente. *Un nombre de Ha'satán. *Así en el resto del cap.
 [^30]: Lit.: *No muriendo morirán.*
 [^32]: Portadora de vida.
 [^33]: Heb.: *jai.*
@@ -2061,7 +2061,7 @@ la cual juró a Abraham, a Itzjak y a Yaakov.
 [^129]: Lit.: *El oír.*
 [^130]: O, *trabajo.*
 [^131]: ¡Miren, un hijo!
-[^132]: Heb.: *Ra’ah.*
+[^132]: Heb.: *Ra'ah.*
 [^133]: Heb.: *Shamá.*
 [^134]: El que escucha.
 [^135]: Heb.: *Lavá.*
@@ -2100,7 +2100,7 @@ la cual juró a Abraham, a Itzjak y a Yaakov.
 [^168]: Esto dice Iaacob al *ish*.
 [^169]: Esto dice Iaacob al alba, que es Elohim.
 [^170]: O, *Peniel. *Rostro de El*. *Así también en vers. 31.
-[^171]: Heb.: *Guid ha’nasheh.*
+[^171]: Heb.: *Guid ha'nasheh.*
 [^172]: Heb.: *Sucot.*
 [^173]: Mo­neda, unidad de valor desconocido.
 [^174]: Poderoso de la casa del Poderoso.
@@ -2132,7 +2132,7 @@ la cual juró a Abraham, a Itzjak y a Yaakov.
 [^200]: Lit.: *las sacrifiqué.*
 [^201]: Heb.: *Jésed.*
 [^202]: Hebreos.
-[^203]: Heb.: *Y’or*; seguramente el Nilo.
+[^203]: Heb.: *Y'or*; seguramente el Nilo.
 [^204]: O, *se turbó.*
 [^205]: Heb.: *Rúaj.*
 [^206]: O,* y por tu boca será besado.*
@@ -2162,7 +2162,7 @@ la cual juró a Abraham, a Itzjak y a Yaakov.
 [^230]: O, *gentiles.*
 [^231]: Otra lectura posible es: *te doy a ti Shejem, primero.*
 [^232]: Amorreo.
-[^233]: Heb.: *Ajarit Ha’yamim.*
+[^233]: Heb.: *Ajarit Ha'yamim.*
 [^236]: O, *esperaré.*
 [^237]: O, *el final.*
 [^238]: Heb.: *Eben Israel.*

@@ -1036,7 +1036,7 @@ también preparó su mesa.
 
 sobre las alas de las alturas de la ciudad:
 
-**4** “¿Quién es ingenuo?, ¡póngase aparte aquí!”
+**4** “¿Quién es ingenuo?, ¡póngase aparte aquí! ”
 
 *Al *falto de corazón le dijo:
 
@@ -1092,7 +1092,7 @@ sobre un trono *en *las alturas de la ciudad;
 
 *a *los rectos *en *sus sendas.
 
-**16** “¿Quién es ingenuo?, ¡póngase aparte aquí!”
+**16** “¿Quién es ingenuo?, ¡póngase aparte aquí! ”
 
 Y *al *falto de corazón le dijo:
 
@@ -1418,7 +1418,7 @@ pero la raíz de los justos dará.
 
 pero el justo saldrá de la estrechez.
 
-**14** Del fruto de la boca del hombre, él se sa\-ciará de bien,
+**14** Del fruto de la boca del hombre, él se saciará de bien,
 
 y el pago de las manos del hombre volverá a él.
 
@@ -1434,7 +1434,7 @@ pero el que cubre la deshonra es astuto.
 
 pero el testigo de falsedades, engaño.
 
-**18** Hay quien habla afiladamente, como puña\-ladas de espada,
+**18** Hay quien habla afiladamente, como puñaladas de espada,
 
 pero la lengua de los sabios sana.
 
@@ -1476,7 +1476,7 @@ pero la riqueza del hombre determinado es pre\-ciosa.
 
 **28** En la senda de justicia *hay *vida,
 
-pero otro camino *va *a la muerte \(El T.M. dice: u’dérej netivah al mávet, ‘y un camino, una senda, no muerte’, el texto es incierto. En la versión gr. dice, pero el camino de los vengativos va hacia la muerte\).
+pero otro camino *va *a la muerte \(El T.M. dice: u'dérej netivah al mávet, ‘y un camino, una senda, no muerte', el texto es incierto. En la versión gr. dice, pero el camino de los vengativos va hacia la muerte\).
 
 **13**
 
@@ -1530,7 +1530,7 @@ pero el que recoge con la mano, aumentará.
 
 pero árbol de vida es el deseo venidero.
 
-**13** El que despreció la palabra, se le tomará co\-mo promesa,
+**13** El que despreció la palabra, se le tomará como promesa,
 
 pero el que teme el mandamiento será retribuido.
 
@@ -1550,7 +1550,7 @@ pero el torpe esparce tontería.
 
 pero el enviado de fidelidades sanará.
 
-**18** Pobreza y desprecio *habrá para *el que re\-chaza la disciplina,
+**18** Pobreza y desprecio *habrá para *el que rechaza la disciplina,
 
 pero el que guarda la reprensión será honrado.
 
@@ -1732,7 +1732,7 @@ pero su ira desbordante será *sobre *el vergonzo\-so.
 
 pero la palabra dura hará subir la ira.
 
-**2** La lengua de los sabios hará bien *al *conoci\-miento,
+**2** La lengua de los sabios hará bien *al *conocimiento,
 
 pero la boca de los torpes hará fluir tontería.
 
@@ -1828,7 +1828,7 @@ para apartarse del Sheol abajo.
 
 pero afirmará la frontera de la viuda.
 
-**26** Abominación de יהוה son los pensa\-mientos del malo,
+**26** Abominación de יהוה son los pensamientos del malo,
 
 pero los limpios *tienen *dichos de deleite.
 
@@ -1856,7 +1856,7 @@ en cercanía de los sabios permanecerá.
 
 pero el que escucha la reprensión adquiere co\-razón.
 
-**33** El temor de יהוה es disciplina de sabi\-duría,
+**33** El temor de יהוה es disciplina de sabiduría,
 
 y antes de la honra *está* la humildad.
 
@@ -1908,11 +1908,11 @@ con juicio, no cometerá sacrilegio su boca.
 
 obra suya *son *todas las piedras de bolsillo.
 
-**12** Abominación de los reyes es hacer maldad \(Así en el T.M., en la versión gr., *abominación del rey es el que hace maldad*\),
+**12** Abominación de los reyes es hacer maldad \(Así en el T. M., en la versión gr., *abominación del rey es el que hace maldad*\),
 
 porque con justicia será afirmado el trono.
 
-**13** El agrado de los reyes \(Así en el T.M., en la versión gr., *del rey*\) son los labios de justicia,
+**13** El agrado de los reyes \(Así en el T. M., en la versión gr., *del rey*\) son los labios de justicia,
 
 y el hablar de los rectos Él ama.
 
@@ -1980,7 +1980,7 @@ y el murmurador separa *al *Jefe.
 
 y lo hace andar por camino no bueno.
 
-**30** El que guiña sus ojos, es para planear dis\-torsiones,
+**30** El que guiña sus ojos, es para planear distorsiones,
 
 el que presiona sus labios, ha consumado el mal.
 
@@ -1998,7 +1998,7 @@ pero de יהוה es todo su juicio.
 
 **17**
 
-**1** Mejor es un bocado seco y tranquili\-dad en él,
+**1** Mejor es un bocado seco y tranquilidad en él,
 
 que una casa llena de sacrificios de contienda.
 
@@ -2114,7 +2114,7 @@ y el fresco de espíritu es un hombre de enten\-dimiento.
 
 en toda obra de sabiduría quedará al descubierto.
 
-**2** El indisciplinado no se deleita en el enten\-dimiento,
+**2** El indisciplinado no se deleita en el entendimiento,
 
 sino en dejar al descubierto su corazón.
 
@@ -2130,7 +2130,7 @@ torrente que fluye, fuente de sabiduría.
 
 inclinando *al *justo en el juicio.
 
-**6** Los labios del indisciplinado vienen con con\-tienda,
+**6** Los labios del indisciplinado vienen con contienda,
 
 y su boca llama a los azotes.
 
@@ -2138,7 +2138,7 @@ y su boca llama a los azotes.
 
 y sus labios, una trampa para su vida.
 
-**8** Las palabras del murmurador son como he\-ridas \(O, *un ávido comer; *o, *incitación*\),
+**8** Las palabras del murmurador son como heridas \(O, *un ávido comer; *o, *incitación*\),
 
 y ellas descienden a las cámaras del vientre.
 
@@ -2166,7 +2166,7 @@ le es tontería y vergüenza.
 
 pero el espíritu herido, ¿quién lo soportará?
 
-**15** El corazón del entendido adquirirá conoci\-miento,
+**15** El corazón del entendido adquirirá conocimiento,
 
 y el oído de los sabios buscará el conocimien\-to.
 
@@ -2186,7 +2186,7 @@ y entre los contenciosos \(O, los poderosos\) hará separación.
 
 y las contiendas *son *como barrales de fortaleza.
 
-**20** Del fruto de la boca de un hombre se sacia\-rá su vientre,
+**20** Del fruto de la boca de un hombre se saciará su vientre,
 
 el producto de sus labios saciará.
 
@@ -2208,7 +2208,7 @@ pero hay amante *más *unido que un hermano.
 
 **19**
 
-**1** Mejor es el pobre que anda en su inte\-gridad
+**1** Mejor es el pobre que anda en su integridad
 
 *que *el perverso de labios e indisciplinado.
 
@@ -2368,7 +2368,7 @@ estoy purificado de mi pecado”?
 
 abominación de יהוה son aun ambas.
 
-**11** También por sus acciones se dejará recono\-cer el joven \(O, siervo\),
+**11** También por sus acciones se dejará reconocer el joven \(O, siervo\),
 
 si es limpia y si es recta su obra.
 
@@ -2424,7 +2424,7 @@ y balanzas de engaño, no es bueno.
 
 y el hombre, ¿cómo entenderá su camino?
 
-**25** Trampa es *al *hombre decir precipitada\-mente: Consagrado;
+**25** Trampa es *al *hombre decir precipitadamente: Consagrado;
 
 y después de los votos, reflexionar.
 
@@ -2466,7 +2466,7 @@ es *más* escogido por יהוה que el sacri\-ficio.
 
 *son *lámpara de los condenados, es pecado.
 
-**5** Los pensamientos del diligente son sola\-mente para abundancia,
+**5** Los pensamientos del diligente son solamente para abundancia,
 
 pero todo apresurado es solamente para escasez.
 
@@ -2518,7 +2518,7 @@ en la asamblea de los caídos \(heb.: *refaim*\) repo\-sará.
 
 el que ama el vino y el aceite no enriquecerá.
 
-**18** Pago por el rescate del justificado es el mal\-vado \(Véase Isaías 43:3\),
+**18** Pago por el rescate del justificado es el malvado \(Véase Isaías 43: 3\),
 
 y en lugar de los rectificados *estará *el traidor.
 
@@ -2592,7 +2592,7 @@ pero los ingenuos pasan y son multados.
 
 *son *riqueza, honra y vida.
 
-**5** Espinas *y *trampas *hay *en el camino del per\-verso,
+**5** Espinas *y *trampas *hay *en el camino del perverso,
 
 el que guarda su vida se alejará de ellas.
 
@@ -2604,7 +2604,7 @@ aunque envejezca, no se apartará de él.
 
 y el esclavo es deudor del hombre acreedor.
 
-**8** El que siembra injusticia, cosechará vacui\-dad,
+**8** El que siembra injusticia, cosechará vacuidad,
 
 y la vara de su desenfreno se consumará.
 
@@ -2620,7 +2620,7 @@ y cesarán el juicio y la vergüenza.
 
 el favor de sus labios, su amigo es el Rey.
 
-**12** Los ojos de יהוה preservan el cono\-cimiento,
+**12** Los ojos de יהוה preservan el conocimiento,
 
 pero Él tuerce las palabras del traidor.
 
@@ -2850,7 +2850,7 @@ y añade traidores entre los hombres.
 
 __Decimoctavo dicho__
 
-**29** ¿De quién es el “¡Oy!”? ¿De quién el “¡Avoy!”?
+**29** ¿De quién es el “¡Oy! ”? ¿De quién el “¡Avoy! ”?
 
 ¿De quién las contiendas? ¿De quién el parloteo?
 
@@ -3266,7 +3266,7 @@ y sin murmurador se silenciará la contienda.
 
 y el hombre de contiendas para encender riña.
 
-**22** Las palabras del murmurador son como he\-ridas \(O, *un ávido comer; *o, *incitación*\),
+**22** Las palabras del murmurador son como heridas \(O, *un ávido comer; *o, *incitación*\),
 
 y ellas descienden a las cámaras del vientre.
 
@@ -3680,7 +3680,7 @@ pobreza y riqueza no me des.
 
 Aliméntame, el pan de mi prescripción.
 
-**9** Para que no me sacie y actúe de manera de­cepcionante, y diga: “¿Quién es יהוה?”
+**9** Para que no me sacie y actúe de manera de­cepcionante, y diga: “¿Quién es יהוה? ”
 
 Y para que no me empobrezca y robe,
 
@@ -4093,7 +4093,7 @@ ella será alabada.
 
 
 29.
-[^29]: Serpiente. *Un nombre de Ha’satán. *Así en el resto del cap.
+[^29]: Serpiente. *Un nombre de Ha'satán. *Así en el resto del cap.
 
 
 30.
@@ -4505,7 +4505,7 @@ ella será alabada.
 
 
 132.
-[^132]: Heb.: *Ra’ah.*
+[^132]: Heb.: *Ra'ah.*
 
 
 133.
@@ -4661,7 +4661,7 @@ ella será alabada.
 
 
 171.
-[^171]: Heb.: *Guid ha’nasheh.*
+[^171]: Heb.: *Guid ha'nasheh.*
 
 
 172.
@@ -4789,7 +4789,7 @@ ella será alabada.
 
 
 203.
-[^203]: Heb.: *Y’or*; seguramente el Nilo.
+[^203]: Heb.: *Y'or*; seguramente el Nilo.
 
 
 204.
@@ -4909,7 +4909,7 @@ ella será alabada.
 
 
 233.
-[^233]: Heb.: *Ajarit Ha’yamim.*
+[^233]: Heb.: *Ajarit Ha'yamim.*
 
 
 234.
@@ -4977,7 +4977,7 @@ ella será alabada.
 
 
 250.
-[^250]: Heb.: *Y’or; *seguramente, el Nilo.
+[^250]: Heb.: *Y'or; *seguramente, el Nilo.
 
 
 251.
@@ -5109,7 +5109,7 @@ ella será alabada.
 
 
 283.
-[^283]: Heb.: *Y’or; *seguramente, el Nilo.
+[^283]: Heb.: *Y'or; *seguramente, el Nilo.
 
 
 284.
@@ -5189,7 +5189,7 @@ ella será alabada.
 
 
 303.
-[^303]: Heb.: *Mo’ed.*
+[^303]: Heb.: *Mo'ed.*
 
 
 304.
@@ -5201,7 +5201,7 @@ ella será alabada.
 
 
 306.
-[^306]: Heb.: *Ga’oh ga’ah.*
+[^306]: Heb.: *Ga'oh ga'ah.*
 
 
 307.
@@ -5253,7 +5253,7 @@ ella será alabada.
 
 
 319.
-[^319]: Heb.: *Ga’oh ga’ah.*
+[^319]: Heb.: *Ga'oh ga'ah.*
 
 
 320.
@@ -5377,7 +5377,7 @@ ella será alabada.
 
 
 350.
-[^350]: Heb.: *Ga’oh ga’ah.*
+[^350]: Heb.: *Ga'oh ga'ah.*
 
 
 351.
@@ -5397,7 +5397,7 @@ ella será alabada.
 
 
 355.
-[^355]: Heb.: *Le’shav.*
+[^355]: Heb.: *Le'shav.*
 
 
 356.
@@ -5465,7 +5465,7 @@ ella será alabada.
 
 
 372.
-[^372]: O, *completará. *Heb.: *Le’shalem.*
+[^372]: O, *completará. *Heb.: *Le'shalem.*
 
 
 373.
@@ -5517,7 +5517,7 @@ ella será alabada.
 
 
 385.
-[^385]: Heb.: *Jag Ha’matzot.*
+[^385]: Heb.: *Jag Ha'matzot.*
 
 
 386.
@@ -5529,7 +5529,7 @@ ella será alabada.
 
 
 388.
-[^388]: Heb.: *Jag Ha’katzir*; esto es, *Shavuot.*
+[^388]: Heb.: *Jag Ha'katzir*; esto es, *Shavuot.*
 
 
 389.
@@ -5537,7 +5537,7 @@ ella será alabada.
 
 
 390.
-[^390]: Heb.: *Jag Ha’asif*; esto es, *Sucot.*
+[^390]: Heb.: *Jag Ha'asif*; esto es, *Sucot.*
 
 
 391.
@@ -5617,7 +5617,7 @@ ella será alabada.
 
 
 410.
-[^410]: O sea, el ‘*coccus ilisis’*, de él sacaban el tinte carmesí.
+[^410]: O sea, el ‘*coccus ilisis'*, de él sacaban el tinte carmesí.
 
 
 411.
@@ -5649,7 +5649,7 @@ ella será alabada.
 
 
 418.
-[^418]: Heb.: *Kódesh Ha’kodashim.*
+[^418]: Heb.: *Kódesh Ha'kodashim.*
 
 
 419.
@@ -5777,7 +5777,7 @@ ella será alabada.
 
 
 450.
-[^450]: Heb.: *Kódesh Ha’kodashim.*
+[^450]: Heb.: *Kódesh Ha'kodashim.*
 
 
 451.
@@ -5933,7 +5933,7 @@ ella será alabada.
 
 
 489.
-[^489]: Heb.: *Mo’ed.*
+[^489]: Heb.: *Mo'ed.*
 
 
 490.
@@ -6161,7 +6161,7 @@ ella será alabada.
 
 
 546.
-[^546]: Heb.: *Va’ikrá*.
+[^546]: Heb.: *Va'ikrá*.
 
 
 547.
@@ -6213,7 +6213,7 @@ ella será alabada.
 
 
 559.
-[^559]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^559]: Heb.: *Sh'lamim. *Así en el resto del cap.
 
 
 560.
@@ -6237,7 +6237,7 @@ ella será alabada.
 
 
 565.
-[^565]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^565]: Heb.: *Sh'lamim. *Así en el resto del cap.
 
 
 566.
@@ -6277,7 +6277,7 @@ ella será alabada.
 
 
 575.
-[^575]: Heb.: *Sh’lamim. *
+[^575]: Heb.: *Sh'lamim. *
 
 
 576.
@@ -6345,7 +6345,7 @@ ella será alabada.
 
 
 592.
-[^592]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^592]: Heb.: *Sh'lamim. *Así en el resto del cap.
 
 
 593.
@@ -6401,7 +6401,7 @@ ella será alabada.
 
 
 606.
-[^606]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^606]: Heb.: *Sh'lamim. *Así en el resto del cap.
 
 
 607.
@@ -6461,7 +6461,7 @@ ella será alabada.
 
 
 621.
-[^621]: Heb.: *Sh’lamim. *
+[^621]: Heb.: *Sh'lamim. *
 
 
 622.
@@ -6645,7 +6645,7 @@ ella será alabada.
 
 
 667.
-[^667]: O, *inapta. *Heb.: *Tam’ah. *Así en el resto del cap.
+[^667]: O, *inapta. *Heb.: *Tam'ah. *Así en el resto del cap.
 
 
 668.
@@ -6677,7 +6677,7 @@ ella será alabada.
 
 
 675.
-[^675]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^675]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 
 
 676.
@@ -6709,7 +6709,7 @@ ella será alabada.
 
 
 683.
-[^683]: Heb.: *Mam’éret. *Así también en vers. 52.
+[^683]: Heb.: *Mam'éret. *Así también en vers. 52.
 
 
 684.
@@ -6729,7 +6729,7 @@ ella será alabada.
 
 
 688.
-[^688]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^688]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 
 
 689.
@@ -6789,7 +6789,7 @@ ella será alabada.
 
 
 703.
-[^703]: Heb.: *Mam’éret. *
+[^703]: Heb.: *Mam'éret. *
 
 
 704.
@@ -6805,7 +6805,7 @@ ella será alabada.
 
 
 707.
-[^707]: O, *inaptitud. *Heb.: *Tum’áh.* Así en el resto del cap.
+[^707]: O, *inaptitud. *Heb.: *Tum'áh.* Así en el resto del cap.
 
 
 708.
@@ -6869,7 +6869,7 @@ ella será alabada.
 
 
 723.
-[^723]: O, *inaptitud. *Heb.: *Tum’áh. *Así en el resto del cap.
+[^723]: O, *inaptitud. *Heb.: *Tum'áh. *Así en el resto del cap.
 
 
 724.
@@ -6909,7 +6909,7 @@ ella será alabada.
 
 
 733.
-[^733]: Heb.: *Sh’lamim.*
+[^733]: Heb.: *Sh'lamim.*
 
 
 734.
@@ -6945,7 +6945,7 @@ ella será alabada.
 
 
 742.
-[^742]: O, *inaptitud. *Heb.: *Tum’áh.*
+[^742]: O, *inaptitud. *Heb.: *Tum'áh.*
 
 
 743.
@@ -6973,7 +6973,7 @@ ella será alabada.
 
 
 749.
-[^749]: Heb.: *Sh’lamim.*
+[^749]: Heb.: *Sh'lamim.*
 
 
 750.
@@ -7121,7 +7121,7 @@ ella será alabada.
 
 
 786.
-[^786]: Heb.: *Sh’lamim.*
+[^786]: Heb.: *Sh'lamim.*
 
 
 787.
@@ -7133,7 +7133,7 @@ ella será alabada.
 
 
 789.
-[^789]: Heb.: *Mo’adim. *Así en el resto del cap.
+[^789]: Heb.: *Mo'adim. *Así en el resto del cap.
 
 
 790.
@@ -7149,11 +7149,11 @@ ella será alabada.
 
 
 793.
-[^793]: Heb.: *Mikrá Ha’kódesh. *Así en el resto del cap.
+[^793]: Heb.: *Mikrá Ha'kódesh. *Así en el resto del cap.
 
 
 794.
-[^794]: Heb.: *Jag Ha’matzot.*
+[^794]: Heb.: *Jag Ha'matzot.*
 
 
 795.
@@ -7193,7 +7193,7 @@ ella será alabada.
 
 
 804.
-[^804]: Heb.: *Sh’lamim.*
+[^804]: Heb.: *Sh'lamim.*
 
 
 805.
@@ -7201,7 +7201,7 @@ ella será alabada.
 
 
 806.
-[^806]: Heb.: *Iom Ha’kipurim.*
+[^806]: Heb.: *Iom Ha'kipurim.*
 
 
 807.
@@ -7281,7 +7281,7 @@ ella será alabada.
 
 
 826.
-[^826]: Heb.: *Iom Ha’kipurim.*
+[^826]: Heb.: *Iom Ha'kipurim.*
 
 
 827.
@@ -7469,7 +7469,7 @@ ella será alabada.
 
 
 873.
-[^873]: O sea, el ‘*coccus ilisis’*, de él sacaban el tinte carmesí.
+[^873]: O sea, el ‘*coccus ilisis'*, de él sacaban el tinte carmesí.
 
 
 874.
@@ -7569,7 +7569,7 @@ ella será alabada.
 
 
 898.
-[^898]: Heb.: *Sh’lamim. *
+[^898]: Heb.: *Sh'lamim. *
 
 
 899.
@@ -7585,15 +7585,15 @@ ella será alabada.
 
 
 902.
-[^902]: Heb.: *Ievarejejá יהוה ve’ishmereja. *
+[^902]: Heb.: *Ievarejejá יהוה ve'ishmereja. *
 
 
 903.
-[^903]: Heb.: *Ia’er יהוה panaiv eleija vijuneka. *
+[^903]: Heb.: *Ia'er יהוה panaiv eleija vijuneka. *
 
 
 904.
-[^904]: Heb.: *Isá יהוה panaiv eleija ve’iasem lejá shalom. *
+[^904]: Heb.: *Isá יהוה panaiv eleija ve'iasem lejá shalom. *
 
 
 905.
@@ -7629,7 +7629,7 @@ ella será alabada.
 
 
 913.
-[^913]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^913]: Heb.: *Sh'lamim. *Así en el resto del cap.
 
 
 914.
@@ -7657,7 +7657,7 @@ ella será alabada.
 
 
 920.
-[^920]: Heb.: *Mo’ed. *Así también en vers. 7.
+[^920]: Heb.: *Mo'ed. *Así también en vers. 7.
 
 
 921.
@@ -7741,7 +7741,7 @@ ella será alabada.
 
 
 941.
-[^941]: Heb.: *Ba’aráh.*
+[^941]: Heb.: *Ba'aráh.*
 
 
 942.
@@ -7841,7 +7841,7 @@ ella será alabada.
 
 
 966.
-[^966]: Heb.: *Mo’adim.*
+[^966]: Heb.: *Mo'adim.*
 
 
 967.
@@ -8001,7 +8001,7 @@ ella será alabada.
 
 
 1006.
-[^1006]: Heb.: *Ha’nejashim ha’serafim.*
+[^1006]: Heb.: *Ha'nejashim ha'serafim.*
 
 
 1007.
@@ -8133,7 +8133,7 @@ ella será alabada.
 
 
 1039.
-[^1039]: Heb.: *Mo’ed.*
+[^1039]: Heb.: *Mo'ed.*
 
 
 1040.
@@ -8161,11 +8161,11 @@ ella será alabada.
 
 
 1046.
-[^1046]: Heb.: *Mikrá Ha’kódesh.*
+[^1046]: Heb.: *Mikrá Ha'kódesh.*
 
 
 1047.
-[^1047]: Expresión de alegría, pronunciado tanto con la voz como con un shofar. Heb.: *Yom T’ruáh.*
+[^1047]: Expresión de alegría, pronunciado tanto con la voz como con un shofar. Heb.: *Yom T'ruáh.*
 
 
 1048.
@@ -8193,11 +8193,11 @@ ella será alabada.
 
 
 1054.
-[^1054]: Heb.: *Mo’adim.*
+[^1054]: Heb.: *Mo'adim.*
 
 
 1055.
-[^1055]: Heb.: *Sh’lamim.*
+[^1055]: Heb.: *Sh'lamim.*
 
 
 1056.
@@ -8469,7 +8469,7 @@ ella será alabada.
 
 
 1123.
-[^1123]: Heb.: *Vait’aber.*
+[^1123]: Heb.: *Vait'aber.*
 
 
 1124.
@@ -8501,7 +8501,7 @@ ella será alabada.
 
 
 1131.
-[^1131]: Heb.: *Ajarit Ha’yamim.*
+[^1131]: Heb.: *Ajarit Ha'yamim.*
 
 
 1132.
@@ -9049,7 +9049,7 @@ ella será alabada.
 
 
 1268.
-[^1268]: Lit.: *para su plenitud. *Heb.: *Le’shalmó.*
+[^1268]: Lit.: *para su plenitud. *Heb.: *Le'shalmó.*
 
 
 1269.
@@ -9061,7 +9061,7 @@ ella será alabada.
 
 
 1271.
-[^1271]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^1271]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 
 
 1272.
@@ -9189,7 +9189,7 @@ ella será alabada.
 
 
 1303.
-[^1303]: Heb.: *Ajarit Ha’yamim.*
+[^1303]: Heb.: *Ajarit Ha'yamim.*
 
 
 1304.
@@ -9385,7 +9385,7 @@ ella será alabada.
 
 
 1352.
-[^1352]: Heb.: *Kéren ha’iobel.*
+[^1352]: Heb.: *Kéren ha'iobel.*
 
 
 1353.
@@ -10561,7 +10561,7 @@ ella será alabada.
 
 
 1646.
-[^1646]: Así en la versión gr., el T.M. omite desde *‘sobre su pueblo Israel’* hasta *‘será para ti la señal de que’.*
+[^1646]: Así en la versión gr., el T.M. omite desde *‘sobre su pueblo Israel'* hasta *‘será para ti la señal de que'.*
 
 
 1647.
@@ -10581,11 +10581,11 @@ ella será alabada.
 
 
 1651.
-[^1651]: Este párrafo no se encuentra en el T.M., pero es parte del texto en los Manuscritos del Mar Muerto, fragmento ‘4QSam’.
+[^1651]: Este párrafo no se encuentra en el T.M., pero es parte del texto en los Manuscritos del Mar Muerto, fragmento ‘4QSam'.
 
 
 1652.
-[^1652]: Así en los Manuscritos del Mar Muerto y la versión gr., el T.M. omite: *‘pasó como un mes’.*
+[^1652]: Así en los Manuscritos del Mar Muerto y la versión gr., el T.M. omite: *‘pasó como un mes'.*
 
 
 1653.
@@ -10653,7 +10653,7 @@ ella será alabada.
 
 
 1669.
-[^1669]: Heb.: *Sh’lamim.*
+[^1669]: Heb.: *Sh'lamim.*
 
 
 1670.
@@ -10965,7 +10965,7 @@ ella será alabada.
 
 
 1747.
-[^1747]: Heb.: *Le’jaim.*
+[^1747]: Heb.: *Le'jaim.*
 
 
 1748.
@@ -11253,7 +11253,7 @@ ella será alabada.
 
 
 1819.
-[^1819]: Heb.: *Sh’lamim.*
+[^1819]: Heb.: *Sh'lamim.*
 
 
 1820.
@@ -11281,7 +11281,7 @@ ella será alabada.
 
 
 1826.
-[^1826]: Heb.: *Meteg ha’amah.*
+[^1826]: Heb.: *Meteg ha'amah.*
 
 
 1827.
@@ -11337,7 +11337,7 @@ ella será alabada.
 
 
 1840.
-[^1840]: Heb.: *Ben ha’mávet. *Que obra según la muerte.
+[^1840]: Heb.: *Ben ha'mávet. *Que obra según la muerte.
 
 
 1841.
@@ -11377,7 +11377,7 @@ ella será alabada.
 
 
 1850.
-[^1850]: Este párrafo no se encuentra en el T.M., pero es parte del texto en la versión griega y los Manuscritos del Mar Muerto, fragmento ‘4QSam’.
+[^1850]: Este párrafo no se encuentra en el T.M., pero es parte del texto en la versión griega y los Manuscritos del Mar Muerto, fragmento ‘4QSam'.
 
 
 1851.
@@ -11525,7 +11525,7 @@ ella será alabada.
 
 
 1887.
-[^1887]: Heb.: *Sh’lumei emunei Israel.*
+[^1887]: Heb.: *Sh'lumei emunei Israel.*
 
 
 1888.
@@ -11737,7 +11737,7 @@ ella será alabada.
 
 
 1940.
-[^1940]: O sea, *ha’satán.*
+[^1940]: O sea, *ha'satán.*
 
 
 1941.
@@ -11885,7 +11885,7 @@ ella será alabada.
 
 
 1977.
-[^1977]: Heb.: *Kódesh ha’kodashim.*
+[^1977]: Heb.: *Kódesh ha'kodashim.*
 
 
 1978.
@@ -12021,7 +12021,7 @@ ella será alabada.
 
 
 2011.
-[^2011]: Heb.: *Sh’lamim.*
+[^2011]: Heb.: *Sh'lamim.*
 
 
 2012.
@@ -12405,7 +12405,7 @@ ella será alabada.
 
 
 2107.
-[^2107]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^2107]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 
 
 2108.
@@ -12873,7 +12873,7 @@ ella será alabada.
 
 
 2224.
-[^2224]: Heb.: *Ajarit Ha’yamim.*
+[^2224]: Heb.: *Ajarit Ha'yamim.*
 
 
 2225.
@@ -13065,11 +13065,11 @@ ella será alabada.
 
 
 2272.
-[^2272]: Así en los Manuscritos del Mar Muerto, con la lectura *‘marhebáh’*, es decir, orgullo. En el T.M. dice: *‘madhebáh’*; un error de texto.
+[^2272]: Así en los Manuscritos del Mar Muerto, con la lectura *‘marhebáh'*, es decir, orgullo. En el T.M. dice: *‘madhebáh'*; un error de texto.
 
 
 2273.
-[^2273]: Brillo, hijo del alba. Título mesiánico apropiado por Ha’satán. Véase Apocalipsis 22:16.
+[^2273]: Brillo, hijo del alba. Título mesiánico apropiado por Ha'satán. Véase Apocalipsis 22:16.
 
 
 2274.
@@ -13241,7 +13241,7 @@ ella será alabada.
 
 
 2316.
-[^2316]: Heb.: *Ba’urim. *Así en el T.M., la versión gr. omite esta frase. El Targum dice: *Cuando venga la Luz de los justos.*
+[^2316]: Heb.: *Ba'urim. *Así en el T.M., la versión gr. omite esta frase. El Targum dice: *Cuando venga la Luz de los justos.*
 
 
 2317.
@@ -13261,7 +13261,7 @@ ella será alabada.
 
 
 2321.
-[^2321]: Heb.: *Ha’áretz. *Es decir, *la tierra de Israel.*
+[^2321]: Heb.: *Ha'áretz. *Es decir, *la tierra de Israel.*
 
 
 2322.
@@ -13389,7 +13389,7 @@ ella será alabada.
 
 
 2353.
-[^2353]: O, *el que sea criado en fidelidad. *Heb.: *Ma’amín.*
+[^2353]: O, *el que sea criado en fidelidad. *Heb.: *Ma'amín.*
 
 
 2354.
@@ -13445,7 +13445,7 @@ ella será alabada.
 
 
 2367.
-[^2367]: Heb.: *Va’tohu. *Así en la versión gr., y Mateo 15:9 y Marcos 7:7; en el T.M.: *Va’tehi; ‘y fue’. *
+[^2367]: Heb.: *Va'tohu. *Así en la versión gr., y Mateo 15:9 y Marcos 7:7; en el T.M.: *Va'tehi; ‘y fue'. *
 
 
 2368.
@@ -13457,7 +13457,7 @@ ella será alabada.
 
 
 2370.
-[^2370]: Heb.: *Od me’at miz’ar. *Expresión que indica la remoción de las cosas movibles para que permanezca lo inconmovible. Véase Hebreos 12:27.
+[^2370]: Heb.: *Od me'at miz'ar. *Expresión que indica la remoción de las cosas movibles para que permanezca lo inconmovible. Véase Hebreos 12:27.
 
 
 2371.
@@ -13529,7 +13529,7 @@ ella será alabada.
 
 
 2388.
-[^2388]: O sea, *el Rúaj Ha’Kódesh en Yeshúa el Mesías.*
+[^2388]: O sea, *el Rúaj Ha'Kódesh en Yeshúa el Mesías.*
 
 
 2389.
@@ -13685,7 +13685,7 @@ ella será alabada.
 
 
 2427.
-[^2427]: Así en los Manuscritos del Mar Muerto con la lectura *‘shabuti’*. En el T.M. dice: *‘shiviti’*, es decir, *‘me puse’*; un error de texto.
+[^2427]: Así en los Manuscritos del Mar Muerto con la lectura *‘shabuti'*. En el T.M. dice: *‘shiviti'*, es decir, *‘me puse'*; un error de texto.
 
 
 2428.
@@ -13705,7 +13705,7 @@ ella será alabada.
 
 
 2432.
-[^2432]: 2 Reyes 20:13 dice: *los escuchó*; heb.: *va’ishmá*, escuchó; heb.: *va’ishmaj*, se alegró.
+[^2432]: 2 Reyes 20:13 dice: *los escuchó*; heb.: *va'ishmá*, escuchó; heb.: *va'ishmaj*, se alegró.
 
 
 2433.
@@ -14673,7 +14673,7 @@ ella será alabada.
 
 
 2674.
-[^2674]: O, *a lo que no tiene sentido. *Heb.: *La’shav.*
+[^2674]: O, *a lo que no tiene sentido. *Heb.: *La'shav.*
 
 
 2675.
@@ -15245,7 +15245,7 @@ ella será alabada.
 
 
 2817.
-[^2817]: O, *esplendor. *Heb.: *Tif’aráh.*
+[^2817]: O, *esplendor. *Heb.: *Tif'aráh.*
 
 
 2818.
@@ -15273,7 +15273,7 @@ ella será alabada.
 
 
 2824.
-[^2824]: Heb.: *Pajad va’pajat va’paj. *Juego de pala­bras.
+[^2824]: Heb.: *Pajad va'pajat va'paj. *Juego de pala­bras.
 
 
 2825.
@@ -15537,7 +15537,7 @@ ella será alabada.
 
 
 2890.
-[^2890]: Significado incierto. La versión gr. traduce: *Pantokrator* \(Todopoderoso\); 1De las monta­ñas \[del acadio *shadu*, ‘*montaña’*\]. 2Susten­tador \[del hebreo *shad*, ‘*pecho*, *seno’*\]. 3Dominante \[del hebreo *shadad*, ‘*destruir’*\]. 4Fuerte, poderoso \[del árabe *shadid*, ‘*fuerte’*\].
+[^2890]: Significado incierto. La versión gr. traduce: *Pantokrator* \(Todopoderoso\); 1De las monta­ñas \[del acadio *shadu*, ‘*montaña'*\]. 2Susten­tador \[del hebreo *shad*, ‘*pecho*, *seno'*\]. 3Dominante \[del hebreo *shadad*, ‘*destruir'*\]. 4Fuerte, poderoso \[del árabe *shadid*, ‘*fuerte'*\].
 
 
 2891.
@@ -15637,7 +15637,7 @@ ella será alabada.
 
 
 2915.
-[^2915]: Heb.: *Ha’galgal.*
+[^2915]: Heb.: *Ha'galgal.*
 
 
 2916.
@@ -16813,7 +16813,7 @@ ella será alabada.
 
 
 3209.
-[^3209]: Heb.: *Mo’adim.*
+[^3209]: Heb.: *Mo'adim.*
 
 
 3210.
@@ -17025,7 +17025,7 @@ ella será alabada.
 
 
 3262.
-[^3262]: Así en el T.M., en la versión gr.: *mujer amante de lo malo y adúltera*; véase similitud gramatical entre compañero, heb.: ‘*rea’*, y malo, heb.: ‘*ra*´’.
+[^3262]: Así en el T.M., en la versión gr.: *mujer amante de lo malo y adúltera*; véase similitud gramatical entre compañero, heb.: ‘*rea'*, y malo, heb.: ‘*ra*´'.
 
 
 3263.
@@ -17349,7 +17349,7 @@ ella será alabada.
 
 
 3343.
-[^3343]: Heb.: *Moréh*; esta palabra también puede leerse como *‘maestro’.*
+[^3343]: Heb.: *Moréh*; esta palabra también puede leerse como *‘maestro'.*
 
 
 3344.
@@ -17525,7 +17525,7 @@ ella será alabada.
 
 
 3387.
-[^3387]: De significado incierto, generalmente se traduce: *Pléyades y Orión*; *‘kimáh’* significa *‘montón *o* racimo’*, y *‘kesil’*, *‘indiscipli­nado’*. En cambio, la versión gr., dice: *El que hace todo y transforma.*
+[^3387]: De significado incierto, generalmente se traduce: *Pléyades y Orión*; *‘kimáh'* significa *‘montón *o* racimo'*, y *‘kesil'*, *‘indiscipli­nado'*. En cambio, la versión gr., dice: *El que hace todo y transforma.*
 
 
 3388.
@@ -18281,7 +18281,7 @@ ella será alabada.
 
 
 3576.
-[^3576]: O, *primera; *o, *más alta. *Heb.: *Ében Ha’rosháh.*
+[^3576]: O, *primera; *o, *más alta. *Heb.: *Ében Ha'rosháh.*
 
 
 3577.
@@ -18469,7 +18469,7 @@ ella será alabada.
 
 
 3623.
-[^3623]: O, *inaptitud. *Heb.: *Tum’ah.*
+[^3623]: O, *inaptitud. *Heb.: *Tum'ah.*
 
 
 3624.
@@ -18865,7 +18865,7 @@ ella será alabada.
 
 
 3722.
-[^3722]: O sea, el *‘coccus ilisis’, *insecto del cual se extraía un tinte carmesí.
+[^3722]: O sea, el *‘coccus ilisis', *insecto del cual se extraía un tinte carmesí.
 
 
 3723.
@@ -19273,7 +19273,7 @@ ella será alabada.
 
 
 3824.
-[^3824]: O, *estúpido. *Heb.: *Ba’ar.*
+[^3824]: O, *estúpido. *Heb.: *Ba'ar.*
 
 
 3825.
@@ -19313,7 +19313,7 @@ ella será alabada.
 
 
 3834.
-[^3834]: Léase ‘día’ como un título mesiánico.
+[^3834]: Léase ‘día' como un título mesiánico.
 
 
 3835.
@@ -19465,7 +19465,7 @@ ella será alabada.
 
 
 3872.
-[^3872]: O sea, *todo el que haya recibido Rúaj Ha’Kódesh en Yeshúa el Mesías.*
+[^3872]: O sea, *todo el que haya recibido Rúaj Ha'Kódesh en Yeshúa el Mesías.*
 
 
 
@@ -19499,7 +19499,7 @@ ella será alabada.
 [^26]: Heb.: *isháh.*
 [^27]: Heb.: *ish.*
 [^28]: O, *fue tomada.*
-[^29]: Serpiente. *Un nombre de Ha’satán. *Así en el resto del cap.
+[^29]: Serpiente. *Un nombre de Ha'satán. *Así en el resto del cap.
 [^30]: Lit.: *No muriendo morirán.*
 [^31]: O, *dolor.*
 [^32]: Portadora de vida.
@@ -19602,7 +19602,7 @@ ella será alabada.
 [^129]: Lit.: *El oír.*
 [^130]: O, *trabajo.*
 [^131]: ¡Miren, un hijo!
-[^132]: Heb.: *Ra’ah.*
+[^132]: Heb.: *Ra'ah.*
 [^133]: Heb.: *Shamá.*
 [^134]: El que escucha.
 [^135]: Heb.: *Lavá.*
@@ -19641,7 +19641,7 @@ ella será alabada.
 [^168]: Esto dice Iaacob al *ish*.
 [^169]: Esto dice Iaacob al alba, que es Elohim.
 [^170]: O, *Peniel. *Rostro de El*. *Así también en vers. 31.
-[^171]: Heb.: *Guid ha’nasheh.*
+[^171]: Heb.: *Guid ha'nasheh.*
 [^172]: Heb.: *Sucot.*
 [^173]: Mo­neda, unidad de valor desconocido.
 [^174]: Poderoso de la casa del Poderoso.
@@ -19673,7 +19673,7 @@ ella será alabada.
 [^200]: Lit.: *las sacrifiqué.*
 [^201]: Heb.: *Jésed.*
 [^202]: Hebreos.
-[^203]: Heb.: *Y’or*; seguramente el Nilo.
+[^203]: Heb.: *Y'or*; seguramente el Nilo.
 [^204]: O, *se turbó.*
 [^205]: Heb.: *Rúaj.*
 [^206]: O,* y por tu boca será besado.*
@@ -19703,7 +19703,7 @@ ella será alabada.
 [^230]: O, *gentiles.*
 [^231]: Otra lectura posible es: *te doy a ti Shejem, primero.*
 [^232]: Amorreo.
-[^233]: Heb.: *Ajarit Ha’yamim.*
+[^233]: Heb.: *Ajarit Ha'yamim.*
 [^234]: O sea, el Mesías.
 [^235]: Otra lectura posible es: *Enrojecidos sus ojos por el vino y blancos sus dientes por la leche.*
 [^236]: O, *esperaré.*
@@ -19720,7 +19720,7 @@ ella será alabada.
 [^247]: Heb.: *Jaim.*
 [^248]: Hebreas. Así en el resto del cap.
 [^249]: Egipcias.
-[^250]: Heb.: *Y’or; *seguramente, el Nilo.
+[^250]: Heb.: *Y'or; *seguramente, el Nilo.
 [^251]: O, *cajón.*
 [^252]: Lit.: *mano.*
 [^253]: Hebreos. Así en el resto del cap.
@@ -19753,7 +19753,7 @@ ella será alabada.
 [^280]: O, *trucos de magia*.
 [^281]: Hebreos.
 [^282]: O, *canales.*
-[^283]: Heb.: *Y’or; *seguramente, el Nilo.
+[^283]: Heb.: *Y'or; *seguramente, el Nilo.
 [^284]: O, *extendió.*
 [^285]: Lit.: *morteros de morteros.*
 [^286]: Hebreos. Así en el resto del cap.
@@ -19773,10 +19773,10 @@ ella será alabada.
 [^300]: Instrucción.
 [^301]: O, *distingue; *o, *consagra.*
 [^302]: Punto de maduración de la cebada.
-[^303]: Heb.: *Mo’ed.*
+[^303]: Heb.: *Mo'ed.*
 [^304]: Lit.: *ha encerrado sobre ellos.*
 [^305]: Lit.: *hacia.*
-[^306]: Heb.: *Ga’oh ga’ah.*
+[^306]: Heb.: *Ga'oh ga'ah.*
 [^307]: Contracción de Yehovah.
 [^308]: Poderoso.
 [^309]: O, *moraré con Él.*
@@ -19789,7 +19789,7 @@ ella será alabada.
 [^316]: O, *quedan inmóviles.*
 [^317]: Heb.: *Mikdash.*
 [^318]: O, *vocera, anunciadora. *Heb.: *Neviáh.*
-[^319]: Heb.: *Ga’oh ga’ah.*
+[^319]: Heb.: *Ga'oh ga'ah.*
 [^320]: Heb.: *Marim.*
 [^321]: Heb.: *Maráh.*
 [^322]: Heb.: *Jukáh.*
@@ -19820,12 +19820,12 @@ ella será alabada.
 [^347]: Heb.: *Iobel.*
 [^348]: Cuerno de carnero.
 [^349]: O, *dioses postreros.*
-[^350]: Heb.: *Ga’oh ga’ah.*
+[^350]: Heb.: *Ga'oh ga'ah.*
 [^351]: Heb.: *El Kaná.*
 [^352]: O, *torcedura. *Heb.: *Avón.*
 [^353]: Heb.: *Jésed.*
 [^354]: O, *es decir.*
-[^355]: Heb.: *Le’shav.*
+[^355]: Heb.: *Le'shav.*
 [^356]: O sea, *ten presente.*
 [^357]: O, *distinguirlo.*
 [^358]: O sea, *secuestrarás.*
@@ -19842,7 +19842,7 @@ ella será alabada.
 [^369]: Heb.: *Néfesh.*
 [^370]: O sea, *pago de restitución total del daño causado.*
 [^371]: Lit.: *cobertura. *Heb.: *Kófer.*
-[^372]: O, *completará. *Heb.: *Le’shalem.*
+[^372]: O, *completará. *Heb.: *Le'shalem.*
 [^373]: Lit.: *dinero.*
 [^374]: O, *Si cavando un pozo.*
 [^375]: O, *deja quemar.*
@@ -19855,12 +19855,12 @@ ella será alabada.
 [^382]: Lit.: *adornarás.*
 [^383]: O, *recordarán; *o, *tendrán presente.*
 [^384]: Lit.: *Tres pies*. Heb.: *Regalim.*
-[^385]: Heb.: *Jag Ha’matzot.*
+[^385]: Heb.: *Jag Ha'matzot.*
 [^386]: Heb.: *Matzot.*
 [^387]: Punto de maduración de la cebada.
-[^388]: Heb.: *Jag Ha’katzir*; esto es, *Shavuot.*
+[^388]: Heb.: *Jag Ha'katzir*; esto es, *Shavuot.*
 [^389]: Heb.: *Bikurim.*
-[^390]: Heb.: *Jag Ha’asif*; esto es, *Sucot.*
+[^390]: Heb.: *Jag Ha'asif*; esto es, *Sucot.*
 [^391]: Amo, Señor.
 [^392]: Lo primero, lo mejor.
 [^393]: O, *mensajero. *Heb.: *Malaj.* Así también en vers. 23.
@@ -19880,7 +19880,7 @@ ella será alabada.
 [^407]: O sea, *de una sola pieza.*
 [^408]: Heb.: *Kikar.*
 [^409]: Tabernáculo. Así en el resto del cap.
-[^410]: O sea, el ‘*coccus ilisis’*, de él sacaban el tinte carmesí.
+[^410]: O sea, el ‘*coccus ilisis'*, de él sacaban el tinte carmesí.
 [^411]: U, *ojales.*
 [^412]: Lit.: *uno. *Así también en vers. 11.
 [^413]: Heb.: *Tajash.*
@@ -19888,7 +19888,7 @@ ella será alabada.
 [^415]: Lit.: *casas.*
 [^416]: Heb.: *Parójet.*
 [^417]: Heb.: *Kódesh.*
-[^418]: Heb.: *Kódesh Ha’kodashim.*
+[^418]: Heb.: *Kódesh Ha'kodashim.*
 [^419]: Heb.: *Mizbéaj. *Lit.: *lugar de sacrificio.*
 [^420]: O sea, *de una sola pieza.*
 [^421]: Lit.: *esquina del mar.*
@@ -19920,7 +19920,7 @@ ella será alabada.
 [^447]: O, *se quitó el recubrimiento*, esto es, *del pecado.*
 [^448]: Heb.: *Jatat. *Así en el resto del vers.
 [^449]: Heb.: *Kipurim.*
-[^450]: Heb.: *Kódesh Ha’kodashim.*
+[^450]: Heb.: *Kódesh Ha'kodashim.*
 [^451]: Unidad líquida.
 [^452]: O sea, *de una sola pieza.*
 [^453]: Heb.: *Oláh.*
@@ -19959,7 +19959,7 @@ ella será alabada.
 [^486]: Poderosos. Así en el resto del cap.
 [^487]: Heb.: *Kaná. *Así en el resto del vers.
 [^488]: Heb.: *Matzot. *Así en el resto del vers.
-[^489]: Heb.: *Mo’ed.*
+[^489]: Heb.: *Mo'ed.*
 [^490]: Punto de maduración de la cebada.
 [^491]: Semanas.
 [^492]: O sea, *Sucot.*
@@ -20016,7 +20016,7 @@ ella será alabada.
 [^543]: Sur.
 [^544]: Heb.: *Oláh*.
 [^545]: Heb.: *Minjáh*.
-[^546]: Heb.: *Va’ikrá*.
+[^546]: Heb.: *Va'ikrá*.
 [^547]: Tiempo señalado. Así en el resto del cap.
 [^548]: Ofrenda de acercamiento. Así en el resto del cap.
 [^549]: Heb.: *Tamim*. Así en el resto del cap.
@@ -20029,13 +20029,13 @@ ella será alabada.
 [^556]: Pan sin levadura.
 [^557]: Heb.: *Kódesh kodashim. *
 [^558]: Punto de maduración de la cebada.
-[^559]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^559]: Heb.: *Sh'lamim. *Así en el resto del cap.
 [^560]: Tiempo señalado*. *Así en el resto del cap.
 [^561]: Tiempo oculto, sólo conocido por Elohim.
 [^562]: Tiempo señalado*. *Así en el resto del cap.
 [^563]: Heb.: *Oláh. *Así en el resto del cap.
 [^564]: Heb.: *Jatat. *Así en el resto del cap.
-[^565]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^565]: Heb.: *Sh'lamim. *Así en el resto del cap.
 [^566]: Heb.: *Tamé. *Así en el resto del cap.
 [^567]: Heb.: *Jatat. *Así en el resto del cap.
 [^568]: Heb.: *Oláh. *Así en el resto del cap.
@@ -20045,7 +20045,7 @@ ella será alabada.
 [^572]: O sea, *un quinto.*
 [^573]: Heb.: *Asham. *Así en el resto del cap.
 [^574]: Heb.: *Oláh. *Así en el resto del cap.
-[^575]: Heb.: *Sh’lamim. *
+[^575]: Heb.: *Sh'lamim. *
 [^576]: Heb.: *Minjáh. *Así en el resto del cap.
 [^577]: Heb.: *Matzot. *
 [^578]: Santo, apartado, distinguido. Así también en vers. 16.
@@ -20062,7 +20062,7 @@ ella será alabada.
 [^589]: Heb.: *Todáh. *Así en el resto del cap.
 [^590]: Ofrenda de acercamiento*.* Así también en vers. 29.
 [^591]: Ofrenda alzada, contribución. Así en el resto del cap.
-[^592]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^592]: Heb.: *Sh'lamim. *Así en el resto del cap.
 [^593]: O, *inapta. H*eb.: *Tamé. *
 [^594]: Heb.: *Tenufáh. *Así en el resto del cap.
 [^595]: Tiempo oculto, sólo conocido por Elohim. Así también en vers. 36.
@@ -20076,7 +20076,7 @@ ella será alabada.
 [^603]: Heb.: *Ishéh. *
 [^604]: Heb.: *Jatat. *Así en el resto del cap.
 [^605]: Heb.: *Oláh. *Así en el resto del cap.
-[^606]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^606]: Heb.: *Sh'lamim. *Así en el resto del cap.
 [^607]: Heb.: *Minjáh. *Así en el resto del cap.
 [^608]: Tiempo señalado. Así también en vers. 23.
 [^609]: Ofrenda de acercamiento.
@@ -20091,7 +20091,7 @@ ella será alabada.
 [^618]: Heb.: *Minjáh. *Así en el resto del cap.
 [^619]: Heb.: *Ishéh. *Así en el resto del cap.
 [^620]: Santo, apartado, distinguido. Así también en vers. 17.
-[^621]: Heb.: *Sh’lamim. *
+[^621]: Heb.: *Sh'lamim. *
 [^622]: Ofrenda alzada, contribución.
 [^623]: Heb.: *Jatat. *Así en el resto del cap.
 [^624]: Lit.: *que hace subir el arrastre.*
@@ -20137,7 +20137,7 @@ ella será alabada.
 [^664]: Santos, apartados, distinguidos. Así también en vers. 45.
 [^665]: Santo, apartado, distinguido. Así también en vers. 45.
 [^666]: O, *insecto.*
-[^667]: O, *inapta. *Heb.: *Tam’ah. *Así en el resto del cap.
+[^667]: O, *inapta. *Heb.: *Tam'ah. *Así en el resto del cap.
 [^668]: Heb.: *Nidáh. *Así también en vers. 5.
 [^669]: O, *aptitud. *Heb.: *Tehoráh. *Así en el resto del cap.
 [^670]: O, *apartada. *Heb.: *Kódesh.*
@@ -20145,7 +20145,7 @@ ella será alabada.
 [^672]: Heb.: *Jatat.* Así también en vers. 8.
 [^673]: Tiempo señalado.
 [^674]: O, *apta. *Heb.: *Taheráh.*
-[^675]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^675]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 [^676]: O, *inapto*. Heb.: *Tamé. *Así en el resto del cap.
 [^677]: O, *apto. *Heb.: *Tahor. *Así en el resto del cap.
 [^678]: Lit.: *la vitalidad.*
@@ -20153,12 +20153,12 @@ ella será alabada.
 [^680]: Persona que sufre *tzaraat. *Así también en vers. 45.
 [^681]: O, *descuidada.*
 [^682]: O, *piel.*
-[^683]: Heb.: *Mam’éret. *Así también en vers. 52.
+[^683]: Heb.: *Mam'éret. *Así también en vers. 52.
 [^684]: Lit.: *ojo.*
 [^685]: O, *caído.*
 [^686]: Persona que sufre *tzaraat.*
 [^687]: O, *aptitud. *Heb.: *Tehoráh.*
-[^688]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^688]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 [^689]: Persona que sufre *tzaraat.*
 [^690]: O, *apto. *Heb.: *Tahor. *Así en el resto del cap.
 [^691]: Heb.: *Minjáh.* Así en el resto del cap.
@@ -20173,11 +20173,11 @@ ella será alabada.
 [^700]: O, *inapto. *Heb.: *Tamé. *Así en el resto del cap.
 [^701]: O, *enyesará.*
 [^702]: O, *enyesado.*
-[^703]: Heb.: *Mam’éret. *
+[^703]: Heb.: *Mam'éret. *
 [^704]: Desconexión del cabello; esto es, *tzaraat del pelo de la cabeza o de la barba.*
 [^705]: O sea, *flujo seminal.*
 [^706]: O, *inapto. *Heb.: *Tamé. *Así en el resto del cap.
-[^707]: O, *inaptitud. *Heb.: *Tum’áh.* Así en el resto del cap.
+[^707]: O, *inaptitud. *Heb.: *Tum'áh.* Así en el resto del cap.
 [^708]: O, *apto. *Heb.: *Tahor.* Así en el resto del vers.
 [^709]: Tiempo señalado. Así también en vers. 29.
 [^710]: Heb.: *Jatat. *Así también en vers. 30.
@@ -20193,7 +20193,7 @@ ella será alabada.
 [^720]: Tiempo señalado. Así en el resto del cap.
 [^721]: Piedrecitas lanzadas para tomar decisiones; sing.: *goral. *Así en el resto del cap.
 [^722]: Chivo expiatorio; se desconoce con exac­titud, quizá, lit.: *la cabra se fue. *Así en el resto del cap.
-[^723]: O, *inaptitud. *Heb.: *Tum’áh. *Así en el resto del cap.
+[^723]: O, *inaptitud. *Heb.: *Tum'áh. *Así en el resto del cap.
 [^724]: O sea, *un hombre destinado a esta posición y que esté convocado de antemano*
 [^725]: Santo, apartado, distinguido.
 [^726]: Tiempo oculto, sólo conocido por Elohim. Así también en los versículos 31 y 34.
@@ -20203,7 +20203,7 @@ ella será alabada.
 [^730]: Lit.: *hombre, hombre. *Así también en vers. 8.
 [^731]: Tiempo señalado. Así en el resto del cap.
 [^732]: Ofrenda de acercamiento.
-[^733]: Heb.: *Sh’lamim.*
+[^733]: Heb.: *Sh'lamim.*
 [^734]: Tiempo oculto, sólo conocido por Elohim.
 [^735]: Heb.: *Oláh. *
 [^736]: Garganta. Así en el resto del cap.
@@ -20212,14 +20212,14 @@ ella será alabada.
 [^739]: Heb.: *Mishpatim. *Así también en los versículos 5 y 26.
 [^740]: U, *hostilizar.*
 [^741]: Heb.: *Nidáh.*
-[^742]: O, *inaptitud. *Heb.: *Tum’áh.*
+[^742]: O, *inaptitud. *Heb.: *Tum'áh.*
 [^743]: O sea, *Moloc, *que quiere decir: *Rey. *Una deidad cananea.
 [^744]: Lit.: *no darás tu acostar.*
 [^745]: O, *confusión.*
 [^746]: Santos, apartados, distinguidos.
 [^747]: Santo, apartado, distinguido.
 [^748]: Plural de Shabat. Así también en vers. 30.
-[^749]: Heb.: *Sh’lamim.*
+[^749]: Heb.: *Sh'lamim.*
 [^750]: O, *repugnante.*
 [^751]: Lit.: *no acostarás.*
 [^752]: O sea, *lana y lino juntos.*
@@ -20256,15 +20256,15 @@ ella será alabada.
 [^783]: Ofrenda de acercamiento.
 [^784]: Heb.: *Oláh.*
 [^785]: O, *por su voluntad. *Así también en vers. 29.
-[^786]: Heb.: *Sh’lamim.*
+[^786]: Heb.: *Sh'lamim.*
 [^787]: Heb.: *Ishéh. *Así también en vers. 27.
 [^788]: Heb.: *Todáh.*
-[^789]: Heb.: *Mo’adim. *Así en el resto del cap.
+[^789]: Heb.: *Mo'adim. *Así en el resto del cap.
 [^790]: O, *anuncios.*
 [^791]: O, *apartamiento. *Heb.: *Kódesh.*
 [^792]: O sea, *un cese total de actividades inhe­rentes al mundo. *Así también en vers. 24.
-[^793]: Heb.: *Mikrá Ha’kódesh. *Así en el resto del cap.
-[^794]: Heb.: *Jag Ha’matzot.*
+[^793]: Heb.: *Mikrá Ha'kódesh. *Así en el resto del cap.
+[^794]: Heb.: *Jag Ha'matzot.*
 [^795]: Heb.: *Ishéh.* Así en el resto del cap.
 [^796]: Heb.: *Ómer*
 [^797]: Heb.: *Oláh. *Así también en los versículos 18 y 37.
@@ -20274,9 +20274,9 @@ ella será alabada.
 [^801]: Heb.: *Tenufáh. *Así también en los versí­culos 17 y 20.
 [^802]: Heb.: *Bikurim.*
 [^803]: Heb.: *Jatat.*
-[^804]: Heb.: *Sh’lamim.*
+[^804]: Heb.: *Sh'lamim.*
 [^805]: Expresión de alegría, pronunciado tanto con la voz como con un shofar.
-[^806]: Heb.: *Iom Ha’kipurim.*
+[^806]: Heb.: *Iom Ha'kipurim.*
 [^807]: Heb.: *Néfesh.* Así también en vers. 32.
 [^808]: Heb.: *Sucot.*
 [^809]: O, *retentiva. *Heb.: *Atzéret.*
@@ -20296,7 +20296,7 @@ ella será alabada.
 [^823]: Lit.: *no disminuirás.*
 [^824]: Cuerno de carnero.
 [^825]: Expresión de alegría, pronunciado tanto con la voz como con un shofar.
-[^826]: Heb.: *Iom Ha’kipurim.*
+[^826]: Heb.: *Iom Ha'kipurim.*
 [^827]: Jubileo. Lit.: *cuerno de carnero. *Así en el resto del cap.
 [^828]: O, *destrucción.*
 [^829]: Lit.: *días.*
@@ -20343,7 +20343,7 @@ ella será alabada.
 [^870]: Tiempo señalado. Así en el resto del cap.
 [^871]: Heb.: *Tajash.* Así en el resto del cap.
 [^872]: Heb.: *Tejélet. *Así en el resto del cap.
-[^873]: O sea, el ‘*coccus ilisis’*, de él sacaban el tinte carmesí.
+[^873]: O sea, el ‘*coccus ilisis'*, de él sacaban el tinte carmesí.
 [^874]: Candelabro.
 [^875]: Coatita. Así también en los versículos 34 y 37.
 [^876]: Gersonita. Así también en los versículos 27 y 28.
@@ -20368,13 +20368,13 @@ ella será alabada.
 [^895]: Lit.: *se caerán. *
 [^896]: Heb.: *Oláh. *
 [^897]: Heb.: *Jatat. *
-[^898]: Heb.: *Sh’lamim. *
+[^898]: Heb.: *Sh'lamim. *
 [^899]: Panes sin levadura. Así también en vers. 17.
 [^900]: Heb.: *Tenufáh.*
 [^901]: Heb.: *Terumáh. *
-[^902]: Heb.: *Ievarejejá יהוה ve’ishmereja. *
-[^903]: Heb.: *Ia’er יהוה panaiv eleija vijuneka. *
-[^904]: Heb.: *Isá יהוה panaiv eleija ve’iasem lejá shalom. *
+[^902]: Heb.: *Ievarejejá יהוה ve'ishmereja. *
+[^903]: Heb.: *Ia'er יהוה panaiv eleija vijuneka. *
+[^904]: Heb.: *Isá יהוה panaiv eleija ve'iasem lejá shalom. *
 [^905]: Ofrenda de acercamiento.* *Así en el resto del cap.
 [^906]: Tabernáculo.* *
 [^907]: Tiempo señalado.* *
@@ -20383,14 +20383,14 @@ ella será alabada.
 [^910]: Heb.: *Minjáh. *Así en el resto del cap.
 [^911]: Heb.: *Oláh. *Así en el resto del cap.
 [^912]: Heb.: *Jatat. *Así en el resto del cap.
-[^913]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^913]: Heb.: *Sh'lamim. *Así en el resto del cap.
 [^914]: Lit.: *diez, diez, la cuchara.*
 [^915]: Heb.: *Janucáh.*
 [^916]: Tiempo señalado. Así también en el cap. 8.
 [^917]: Candelabro. Así también en los versículos 3 y 4.
 [^918]: Levitas. Así en el resto del cap.
 [^919]: U, *obstáculo.*
-[^920]: Heb.: *Mo’ed. *Así también en vers. 7.
+[^920]: Heb.: *Mo'ed. *Así también en vers. 7.
 [^921]: O sea, en este caso, *persona muerta.*
 [^922]: O, *inaptos. *Heb.: *Temeim.*
 [^923]: Ofrenda de acercamiento.
@@ -20411,7 +20411,7 @@ ella será alabada.
 [^938]: Madianita.
 [^939]: Otra lectura posible es: *como los que se quejan del hambre en los ojos de.*
 [^940]: Quema.
-[^941]: Heb.: *Ba’aráh.*
+[^941]: Heb.: *Ba'aráh.*
 [^942]: Pepinos; se desconoce con exactitud.
 [^943]: Fruta egipcia, tal vez, *melón.*
 [^944]: Maná. Así también en los versículos 7 y 9.
@@ -20436,7 +20436,7 @@ ella será alabada.
 [^963]: Destrucción.
 [^964]: Heb.: *Ishéh.*
 [^965]: Heb.: *Oláh. *Así en el resto del cap.
-[^966]: Heb.: *Mo’adim.*
+[^966]: Heb.: *Mo'adim.*
 [^967]: Ofrenda de acercamiento.
 [^968]: Heb.: *Minjáh.* Así en el resto del cap.
 [^969]: Tiempo oculto, solo conocido por Elohim.
@@ -20476,7 +20476,7 @@ ella será alabada.
 [^1003]: Lit.: *se hizo corto.*
 [^1004]: Garganta, ser vivo.
 [^1005]: O, *despreciado*.
-[^1006]: Heb.: *Ha’nejashim ha’serafim.*
+[^1006]: Heb.: *Ha'nejashim ha'serafim.*
 [^1007]: Heb.: *Saraf.*
 [^1008]: Heb.: *Nejash Nejóshet.*
 [^1009]: Amorreo. Así en el resto del cap.
@@ -20509,23 +20509,23 @@ ella será alabada.
 [^1036]: O, *escuche.*
 [^1037]: Luces.
 [^1038]: Ofrenda de acercamiento.
-[^1039]: Heb.: *Mo’ed.*
+[^1039]: Heb.: *Mo'ed.*
 [^1040]: Heb.: *Ishéh.* Así en el resto del cap.
 [^1041]: Heb.: *Oláh. *Así en el resto del cap.
 [^1042]: Heb.: *Minjáh.* Así en el resto del cap.
 [^1043]: Heb.: *Jatat.* Así en el resto del cap.
 [^1044]: Heb.: *Bikurim.*
 [^1045]: Heb.: *Shavuot.*
-[^1046]: Heb.: *Mikrá Ha’kódesh.*
-[^1047]: Expresión de alegría, pronunciado tanto con la voz como con un shofar. Heb.: *Yom T’ruáh.*
+[^1046]: Heb.: *Mikrá Ha'kódesh.*
+[^1047]: Expresión de alegría, pronunciado tanto con la voz como con un shofar. Heb.: *Yom T'ruáh.*
 [^1048]: Heb.: *Oláh. *Así en el resto del cap.
 [^1049]: Heb.: *Minjáh.* Así en el resto del cap.
 [^1050]: Heb.: *Mishpat. *Así en el resto del cap.
 [^1051]: Heb.: *Néfesh.*
 [^1052]: Heb.: *Kipurim.*
 [^1053]: O, *retentiva. *Heb.: *Atzaráh.*
-[^1054]: Heb.: *Mo’adim.*
-[^1055]: Heb.: *Sh’lamim.*
+[^1054]: Heb.: *Mo'adim.*
+[^1055]: Heb.: *Sh'lamim.*
 [^1056]: Lit.: *expulsada.*
 [^1057]: O, *Reivindica la reivindicación.*
 [^1058]: Madianitas*.*
@@ -20593,7 +20593,7 @@ ella será alabada.
 [^1120]: Maacatita.
 [^1121]: O sea, *el mar Muerto*.
 [^1122]: Poderoso.
-[^1123]: Heb.: *Vait’aber.*
+[^1123]: Heb.: *Vait'aber.*
 [^1124]: Heb.: *Jukim.*
 [^1125]: Heb.: *Mishpatim.*
 [^1126]: Jordán. Así en el resto del cap.
@@ -20601,7 +20601,7 @@ ella será alabada.
 [^1128]: Heb.: *El Kaná.*
 [^1129]: Lit.: *destruyendo, serán destruidos.*
 [^1130]: Lit.: *en tu estrecho.*
-[^1131]: Heb.: *Ajarit Ha’yamim.*
+[^1131]: Heb.: *Ajarit Ha'yamim.*
 [^1132]: Poderoso.
 [^1133]: Heb.: *Rajum.*
 [^1134]: Rubenita.
@@ -20738,10 +20738,10 @@ ella será alabada.
 [^1265]: Lit.: *oreja; *es decir, *agarradera.*
 [^1266]: Santo, apartado, distinguido.
 [^1267]: Lit.:* No harás mordedura; *en sentido figu­rado.
-[^1268]: Lit.: *para su plenitud. *Heb.: *Le’shalmó.*
+[^1268]: Lit.: *para su plenitud. *Heb.: *Le'shalmó.*
 [^1269]: O, *un caso de inmoralidad sexual. *Heb.: *Ervat davar.*
 [^1270]: Lit.: *de ruptura.*
-[^1271]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^1271]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 [^1272]: Levitas.
 [^1273]: Lit.: *para exigir promesa de su promesa.*
 [^1274]: O sea, *de lo mejor. *Heb.: *Reshit.*
@@ -20773,7 +20773,7 @@ ella será alabada.
 [^1300]: O, *su forma.*
 [^1301]: Levitas.
 [^1302]: Lit.: *amargos.*
-[^1303]: Heb.: *Ajarit Ha’yamim.*
+[^1303]: Heb.: *Ajarit Ha'yamim.*
 [^1304]: Heb.: *Mishpat.*
 [^1305]: Fidelidad, firmeza, crianza.
 [^1306]: El Elevado.
@@ -20822,7 +20822,7 @@ ella será alabada.
 [^1349]: Lit.: *estaba cerrada y estaba cerrada.*
 [^1350]: Heb.: *nazir. *Derivando así, *nazareo.*
 [^1351]: Cuernos de carnero. Sing., *shofar. *Así en el resto del cap.
-[^1352]: Heb.: *Kéren ha’iobel.*
+[^1352]: Heb.: *Kéren ha'iobel.*
 [^1353]: Expresión de alegría, pronunciado tanto con la voz como con un shofar. Así también en vers. 20.
 [^1354]: Heb.: *Mishpat.*
 [^1355]: O, *dedicada.*
@@ -21116,13 +21116,13 @@ ella será alabada.
 [^1643]: Lit.: *el día tres de los días.*
 [^1644]: Benjamita.
 [^1645]: Lit.: *como el día.*
-[^1646]: Así en la versión gr., el T.M. omite desde *‘sobre su pueblo Israel’* hasta *‘será para ti la señal de que’.*
+[^1646]: Así en la versión gr., el T.M. omite desde *‘sobre su pueblo Israel'* hasta *‘será para ti la señal de que'.*
 [^1647]: Heb.: *Guibeat Elohim.*
 [^1648]: Filisteos.
 [^1649]: Espíritu, viento, poder.
 [^1650]: Lit.: *de ayer y anteayer.*
-[^1651]: Este párrafo no se encuentra en el T.M., pero es parte del texto en los Manuscritos del Mar Muerto, fragmento ‘4QSam’.
-[^1652]: Así en los Manuscritos del Mar Muerto y la versión gr., el T.M. omite: *‘pasó como un mes’.*
+[^1651]: Este párrafo no se encuentra en el T.M., pero es parte del texto en los Manuscritos del Mar Muerto, fragmento ‘4QSam'.
+[^1652]: Así en los Manuscritos del Mar Muerto y la versión gr., el T.M. omite: *‘pasó como un mes'.*
 [^1653]: Amonita.
 [^1654]: Lit.: *corta.*
 [^1655]: Lit.: *cortaré.*
@@ -21139,7 +21139,7 @@ ella será alabada.
 [^1666]: Filisteos. Así en el resto del cap.
 [^1667]: Lit.: *por el tiempo señalado que Shemuel.*
 [^1668]: Heb.: *Oláh.*
-[^1669]: Heb.: *Sh’lamim.*
+[^1669]: Heb.: *Sh'lamim.*
 [^1670]: Tiempo oculto, solo conocido por Elohim.
 [^1671]: O, *aguijada.*
 [^1672]: O, *precio.*
@@ -21217,7 +21217,7 @@ ella será alabada.
 [^1744]: Heb.: *Mashíaj.*
 [^1745]: Lit.: *reinando, reinarás.*
 [^1746]: Calebita; descendiente de Caleb.
-[^1747]: Heb.: *Le’jaim.*
+[^1747]: Heb.: *Le'jaim.*
 [^1748]: Plenitud, ausencia de deudas.
 [^1749]: Sin provecho. Así también en vers. 25.
 [^1750]: Medida de harina.
@@ -21289,14 +21289,14 @@ ella será alabada.
 [^1816]: Expresión de alegría, pronunciado tanto con la voz como con un shofar.
 [^1817]: Cuerno de carnero.
 [^1818]: Heb.: *Oláh.*
-[^1819]: Heb.: *Sh’lamim.*
+[^1819]: Heb.: *Sh'lamim.*
 [^1820]: O, *de carne. *Significado dudoso.
 [^1821]: Tabernáculo.
 [^1822]: Tiempo oculto, solo conocido por Elohim. Así también en vers. 29.
 [^1823]: Lit.: *del rostro.*
 [^1824]: Oración, participación en juicio.
 [^1825]: Filisteos. Así en el resto del cap.
-[^1826]: Heb.: *Meteg ha’amah.*
+[^1826]: Heb.: *Meteg ha'amah.*
 [^1827]: Lit.: *su mano.*
 [^1828]: Así en los Manuscritos del Mar Muerto y la versión gr., en el T.M.: *mil setecientos caballeros*
 [^1829]: Plenitud, ausencia de deudas.
@@ -21310,7 +21310,7 @@ ella será alabada.
 [^1837]: Plenitud, ausencia de deudas.
 [^1838]: Hitita. Así en el resto del cap.
 [^1839]: Heb.: *Sucot.*
-[^1840]: Heb.: *Ben ha’mávet. *Que obra según la muerte.
+[^1840]: Heb.: *Ben ha'mávet. *Que obra según la muerte.
 [^1841]: Hitita. Así también en vers. 10.
 [^1842]: Así en el T.M. y la versión gr., en los Manuscritos del Mar Muerto: *a la palabra de.*
 [^1843]: Algunas versiones dicen: *y ella.*
@@ -21320,7 +21320,7 @@ ella será alabada.
 [^1847]: Habitante de Tekoa. Así también en vers. 9.
 [^1848]: O, *ángel. *Heb.: *Malaj.*
 [^1849]: Lit.: *de días a días.*
-[^1850]: Este párrafo no se encuentra en el T.M., pero es parte del texto en la versión griega y los Manuscritos del Mar Muerto, fragmento ‘4QSam’.
+[^1850]: Este párrafo no se encuentra en el T.M., pero es parte del texto en la versión griega y los Manuscritos del Mar Muerto, fragmento ‘4QSam'.
 [^1851]: Plenitud, ausencia de deudas.
 [^1852]: Cuerno de carnero.
 [^1853]: Casa Remota.
@@ -21357,7 +21357,7 @@ ella será alabada.
 [^1884]: Cereteo.
 [^1885]: Peleteo*. *Así también en vers. 23.
 [^1886]: Plenitud, ausencia de deudas.
-[^1887]: Heb.: *Sh’lumei emunei Israel.*
+[^1887]: Heb.: *Sh'lumei emunei Israel.*
 [^1888]: Cereteo. Heb.: *Kerí.*
 [^1889]: O, *impuesto.*
 [^1890]: Jaireo.
@@ -21410,7 +21410,7 @@ ella será alabada.
 [^1937]: Beerotita.
 [^1938]: Itrita.
 [^1939]: Hitita.
-[^1940]: O sea, *ha’satán.*
+[^1940]: O sea, *ha'satán.*
 [^1941]: Heveo.
 [^1942]: Cananeo.
 [^1943]: O, *mensajero. *Heb.: *Malaj.*
@@ -21447,7 +21447,7 @@ ella será alabada.
 [^1974]: O, *rebajos.*
 [^1975]: O, *levantaré.*
 [^1976]: Heb.: *Debir. *Lugar donde hablaba Elo­him.
-[^1977]: Heb.: *Kódesh ha’kodashim.*
+[^1977]: Heb.: *Kódesh ha'kodashim.*
 [^1978]: Lit.: *oro cerrado.*
 [^1979]: O sea, *el mes segundo.*
 [^1980]: O sea, *el mes octavo.*
@@ -21481,7 +21481,7 @@ ella será alabada.
 [^2008]: Heb.: *Mishpatim.*
 [^2009]: Heb.: *Oláh.*
 [^2010]: Heb.: *Minjáh.*
-[^2011]: Heb.: *Sh’lamim.*
+[^2011]: Heb.: *Sh'lamim.*
 [^2012]: Oración, participación en juicio.
 [^2013]: Lit.: *será exaltada.*
 [^2014]: Como nada.
@@ -21577,7 +21577,7 @@ ella será alabada.
 [^2104]: Lit.: *uno aquí y uno allá.*
 [^2105]: Lit.: *luminosidad. *Heb.: *Orot.*
 [^2106]: Persona que sufre *tzaraat*.
-[^2107]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^2107]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 [^2108]: Lit.: *recogerá.*
 [^2109]: Plenitud, ausencia de deudas.
 [^2110]: Arameo.
@@ -21694,7 +21694,7 @@ ella será alabada.
 [^2221]: Fidelidad, firmeza, crianza.
 [^2222]: Heb.: *Mishpat.*
 [^2223]: Heb.: *Tzedakáh.*
-[^2224]: Heb.: *Ajarit Ha’yamim.*
+[^2224]: Heb.: *Ajarit Ha'yamim.*
 [^2225]: O, *de adivinación.*
 [^2226]: Filisteos.
 [^2227]: Heb.: *Adam.*
@@ -21742,8 +21742,8 @@ ella será alabada.
 [^2269]: Medo.
 [^2270]: Caldeos.
 [^2271]: Árabe.
-[^2272]: Así en los Manuscritos del Mar Muerto, con la lectura *‘marhebáh’*, es decir, orgullo. En el T.M. dice: *‘madhebáh’*; un error de texto.
-[^2273]: Brillo, hijo del alba. Título mesiánico apropiado por Ha’satán. Véase Apocalipsis 22:16.
+[^2272]: Así en los Manuscritos del Mar Muerto, con la lectura *‘marhebáh'*, es decir, orgullo. En el T.M. dice: *‘madhebáh'*; un error de texto.
+[^2273]: Brillo, hijo del alba. Título mesiánico apropiado por Ha'satán. Véase Apocalipsis 22:16.
 [^2274]: El Elevado.
 [^2275]: Heb.: *Nétzer.*
 [^2276]: Filistea. Así también en vers. 31.
@@ -21786,12 +21786,12 @@ ella será alabada.
 [^2313]: Así en los Manuscritos del Mar Muerto y la versión gr., en el T.M.: Cruza.
 [^2314]: Término poético referente a la tierra de Israel.
 [^2315]: Tiempo oculto, solo conocido por Elohim.
-[^2316]: Heb.: *Ba’urim. *Así en el T.M., la versión gr. omite esta frase. El Targum dice: *Cuando venga la Luz de los justos.*
+[^2316]: Heb.: *Ba'urim. *Así en el T.M., la versión gr. omite esta frase. El Targum dice: *Cuando venga la Luz de los justos.*
 [^2317]: Lit.: *un ala.*
 [^2318]: O, *gacela. *Heb.: *Tzví.*
 [^2319]: Heb.: *Éretz. *Así también en los versículos 19 y 20.
 [^2320]: Expresión de alegría, pronunciado tanto con la voz como con un shofar.
-[^2321]: Heb.: *Ha’áretz. *Es decir, *la tierra de Israel.*
+[^2321]: Heb.: *Ha'áretz. *Es decir, *la tierra de Israel.*
 [^2322]: Heb.: *Adamáh.*
 [^2323]: Heb.: *Pele.*
 [^2324]: Heb.: *‘Etzot.*
@@ -21823,7 +21823,7 @@ ella será alabada.
 [^2350]: Véase nota vers. 10.
 [^2351]: Lit.: *cortado.*
 [^2352]: Heb.: *Eben Bojan. *O sea, *una piedra de to­que \(usada para autenticar metales precio­sos\).*
-[^2353]: O, *el que sea criado en fidelidad. *Heb.: *Ma’amín.*
+[^2353]: O, *el que sea criado en fidelidad. *Heb.: *Ma'amín.*
 [^2354]: O, *no se moverá por los sentidos. *Heb.: *Iajish. *Véase raíz heb. *jash \- חש.*
 [^2355]: O, *justificación. *Heb.: *Tzedakáh.*
 [^2356]: Lit.: *lo oído.*
@@ -21837,10 +21837,10 @@ ella será alabada.
 [^2364]: Heb.: *Ariel. *Uso alternativo de la palabra. Véase Isaías 33:7.
 [^2365]: O, *se ansía.*
 [^2366]: Véase Isaías 28:15.
-[^2367]: Heb.: *Va’tohu. *Así en la versión gr., y Mateo 15:9 y Marcos 7:7; en el T.M.: *Va’tehi; ‘y fue’. *
+[^2367]: Heb.: *Va'tohu. *Así en la versión gr., y Mateo 15:9 y Marcos 7:7; en el T.M.: *Va'tehi; ‘y fue'. *
 [^2368]: O, *aprendido. *Heb.: *Melumadah.*
 [^2369]: Heb.: *Héfej. *Término referente a la idea de tornar la verdad en mentira.
-[^2370]: Heb.: *Od me’at miz’ar. *Expresión que indica la remoción de las cosas movibles para que permanezca lo inconmovible. Véase Hebreos 12:27.
+[^2370]: Heb.: *Od me'at miz'ar. *Expresión que indica la remoción de las cosas movibles para que permanezca lo inconmovible. Véase Hebreos 12:27.
 [^2371]: Huerto fructífero.
 [^2372]: O, *temerán.*
 [^2373]: O, *sequedad.*
@@ -21858,7 +21858,7 @@ ella será alabada.
 [^2385]: Otra lectura posible es: *de reprensión.*
 [^2386]: Lugar de quema, donde se sacrificaba a Molej.
 [^2387]: O, *asociación. *Heb.: *Ezráh. *Así también en vers. 2.
-[^2388]: O sea, *el Rúaj Ha’Kódesh en Yeshúa el Mesías.*
+[^2388]: O sea, *el Rúaj Ha'Kódesh en Yeshúa el Mesías.*
 [^2389]: Santo, apartado, distinguido.
 [^2390]: Poderoso.
 [^2391]: Poder, viento, ánimo.
@@ -21897,12 +21897,12 @@ ella será alabada.
 [^2424]: 2 Reyes 19:26 y Manuscritos del Mar Muerto, dicen: *y el grano arruinado antes de estar en pie.*
 [^2425]: O, *confort.*
 [^2426]: Oración, participación en juicio.
-[^2427]: Así en los Manuscritos del Mar Muerto con la lectura *‘shabuti’*. En el T.M. dice: *‘shiviti’*, es decir, *‘me puse’*; un error de texto.
+[^2427]: Así en los Manuscritos del Mar Muerto con la lectura *‘shabuti'*. En el T.M. dice: *‘shiviti'*, es decir, *‘me puse'*; un error de texto.
 [^2428]: Lit.: *cuelgan.*
 [^2429]: Plenitud, ausencia de deudas.
 [^2430]: Lit.: *por el shalom, amargura para mí, amargura.*
 [^2431]: Heb.: *Emunah.*
-[^2432]: 2 Reyes 20:13 dice: *los escuchó*; heb.: *va’ishmá*, escuchó; heb.: *va’ishmaj*, se alegró.
+[^2432]: 2 Reyes 20:13 dice: *los escuchó*; heb.: *va'ishmá*, escuchó; heb.: *va'ishmaj*, se alegró.
 [^2433]: Plenitud, ausencia de deudas.
 [^2434]: O, *estimó.*
 [^2435]: Espíritu, viento, poder.
@@ -22144,7 +22144,7 @@ ella será alabada.
 [^2671]: Lit.: *Yendo.*
 [^2672]: Heb.: *Todáh.*
 [^2673]: O, *retornaré. *Heb.: *Nijamti. *Así también en vers. 9.
-[^2674]: O, *a lo que no tiene sentido. *Heb.: *La’shav.*
+[^2674]: O, *a lo que no tiene sentido. *Heb.: *La'shav.*
 [^2675]: Tiempo oculto, solo conocido por Elohim.
 [^2676]: Lit.: *Yendo.*
 [^2677]: O, *loza.*
@@ -22287,14 +22287,14 @@ ella será alabada.
 [^2814]: Otra posible lectura es: *como el desnudo.*
 [^2815]: Heb.: *Arur.*
 [^2816]: O, *engaño. *Heb.: *Remiáh.*
-[^2817]: O, *esplendor. *Heb.: *Tif’aráh.*
+[^2817]: O, *esplendor. *Heb.: *Tif'aráh.*
 [^2818]: Lit.: *ha aplaudido.*
 [^2819]: Lit.: *desde lo suficiente de tus palabras en él.*
 [^2820]: O, *del huerto fructífero.*
 [^2821]: Lit.: *disminuida.*
 [^2822]: O, *tela de saco.*
 [^2823]: O, *águila.*
-[^2824]: Heb.: *Pajad va’pajat va’paj. *Juego de pala­bras.
+[^2824]: Heb.: *Pajad va'pajat va'paj. *Juego de pala­bras.
 [^2825]: Heb.: *Pajad.*
 [^2826]: Heb.: *Pajat.*
 [^2827]: Heb.: *Paj.*
@@ -22360,7 +22360,7 @@ ella será alabada.
 [^2887]: Heb.: *Jashmal. *Significado dudoso. Así también en vers. 27.
 [^2888]: O, *animales. *Así en el resto del cap.
 [^2889]: Lit.: *para sus.*
-[^2890]: Significado incierto. La versión gr. traduce: *Pantokrator* \(Todopoderoso\); 1De las monta­ñas \[del acadio *shadu*, ‘*montaña’*\]. 2Susten­tador \[del hebreo *shad*, ‘*pecho*, *seno’*\]. 3Dominante \[del hebreo *shadad*, ‘*destruir’*\]. 4Fuerte, poderoso \[del árabe *shadid*, ‘*fuerte’*\].
+[^2890]: Significado incierto. La versión gr. traduce: *Pantokrator* \(Todopoderoso\); 1De las monta­ñas \[del acadio *shadu*, ‘*montaña'*\]. 2Susten­tador \[del hebreo *shad*, ‘*pecho*, *seno'*\]. 3Dominante \[del hebreo *shadad*, ‘*destruir'*\]. 4Fuerte, poderoso \[del árabe *shadid*, ‘*fuerte'*\].
 [^2891]: Espíritu, viento, poder.
 [^2892]: Espíritu, viento, poder. Así en el resto del cap.
 [^2893]: Otra lectura posible es: *Y me senté donde ellos estaban sentados.*
@@ -22385,7 +22385,7 @@ ella será alabada.
 [^2912]: Lit.: *una.*
 [^2913]: Lit.: *carne.*
 [^2914]: Lit.: *para los cuatro sus ruedas.*
-[^2915]: Heb.: *Ha’galgal.*
+[^2915]: Heb.: *Ha'galgal.*
 [^2916]: O, *buitre.*
 [^2917]: Espíritu, viento, poder. Así en el resto del cap.
 [^2918]: O, *la ausencia de Torah. *Heb.: *Áven. *Gr.: *Anomía.*
@@ -22679,7 +22679,7 @@ ella será alabada.
 [^3206]: Lit.: *sobre el.*
 [^3207]: Heb.: *Nasí. *Es decir, *el que lleva la carga.* Así en el resto del cap.
 [^3208]: Pl. de *Shabat.*
-[^3209]: Heb.: *Mo’adim.*
+[^3209]: Heb.: *Mo'adim.*
 [^3210]: Así en varios mss. y en la versión gr., en el T.M.: *ellos saldrán.*
 [^3211]: Tiempo oculto, solo conocido por Elohim.
 [^3212]: Lit.: *sobre el hombro.*
@@ -22732,7 +22732,7 @@ ella será alabada.
 [^3259]: Heb.: *Lo Rujamah.*
 [^3260]: Heb.: *Lo Amí.*
 [^3261]: Heb.: *Amí atáh.*
-[^3262]: Así en el T.M., en la versión gr.: *mujer amante de lo malo y adúltera*; véase similitud gramatical entre compañero, heb.: ‘*rea’*, y malo, heb.: ‘*ra*´’.
+[^3262]: Así en el T.M., en la versión gr.: *mujer amante de lo malo y adúltera*; véase similitud gramatical entre compañero, heb.: ‘*rea'*, y malo, heb.: ‘*ra*´'.
 [^3263]: Ídolos domésticos.
 [^3264]: Otra lectura posible es: *y acudirán temblan­do hacia.*
 [^3265]: O, *se marchitará.*
@@ -22813,7 +22813,7 @@ ella será alabada.
 [^3340]: O, *del oeste.*
 [^3341]: Lit.: *porque ha acrecentado para hacer.*
 [^3342]: Lit.: *porque ha acrecentado יהוה para hacer.*
-[^3343]: Heb.: *Moréh*; esta palabra también puede leerse como *‘maestro’.*
+[^3343]: Heb.: *Moréh*; esta palabra también puede leerse como *‘maestro'.*
 [^3344]: Otra lectura posible es: *en el primer *mes*.*
 [^3345]: O, *los lagares.*
 [^3346]: Lit.: *comerán comiendo.*
@@ -22857,7 +22857,7 @@ ella será alabada.
 [^3384]: Así en la versión gr., en el T.M.: *el que anuncia al hombre cuál es su pensamiento*; probablemente, un error de texto.
 [^3385]: O, *el que hace tinieblas del amanecer.*
 [^3386]: Así en el T.M., en la versión gr.: *El que ha puesto en lo alto el juicio, y la justicia en tierra ha puesto.*
-[^3387]: De significado incierto, generalmente se traduce: *Pléyades y Orión*; *‘kimáh’* significa *‘montón *o* racimo’*, y *‘kesil’*, *‘indiscipli­nado’*. En cambio, la versión gr., dice: *El que hace todo y transforma.*
+[^3387]: De significado incierto, generalmente se traduce: *Pléyades y Orión*; *‘kimáh'* significa *‘montón *o* racimo'*, y *‘kesil'*, *‘indiscipli­nado'*. En cambio, la versión gr., dice: *El que hace todo y transforma.*
 [^3388]: O, *el que contiene. *Significado incierto.
 [^3389]: Otra lectura posible es: *cobran impuesto de la granja.*
 [^3390]: Heb.: *Kófer; *esto es, *un pago de reconci­liación.*
@@ -23046,7 +23046,7 @@ ella será alabada.
 [^3573]: Heb.: *Tzémaj. *Un título mesiánico.
 [^3574]: Candelabro de siete brazos.
 [^3575]: Espíritu, viento, poder.
-[^3576]: O, *primera; *o, *más alta. *Heb.: *Ében Ha’rosháh.*
+[^3576]: O, *primera; *o, *más alta. *Heb.: *Ében Ha'rosháh.*
 [^3577]: O, *plomo.*
 [^3578]: Lit.: *el oro.*
 [^3579]: O, *el juramento.*
@@ -23093,7 +23093,7 @@ ella será alabada.
 [^3620]: Espíritu, ánimo, poder.
 [^3621]: Simeita.
 [^3622]: O sea, *impureza menstrual. *Heb.: *Nidáh.*
-[^3623]: O, *inaptitud. *Heb.: *Tum’ah.*
+[^3623]: O, *inaptitud. *Heb.: *Tum'ah.*
 [^3624]: Lit.: *dos bocas.*
 [^3625]: Lit.: *desde el amanecer hasta el mar.*
 [^3626]: Región del sur.
@@ -23192,7 +23192,7 @@ ella será alabada.
 [^3719]: Cierva del Alba. Un título Mesiánico.
 [^3720]: Poderoso mío.
 [^3721]: Santo, apartado, distinguido.
-[^3722]: O sea, el *‘coccus ilisis’, *insecto del cual se extraía un tinte carmesí.
+[^3722]: O sea, el *‘coccus ilisis', *insecto del cual se extraía un tinte carmesí.
 [^3723]: Poderoso.
 [^3724]: Así en los Manuscritos del Mar Muerto, en el T.M.: *como león.*
 [^3725]: Piedrecita lanzada para tomar decisiones.
@@ -23294,7 +23294,7 @@ ella será alabada.
 [^3821]: La versión gr. dice: *hasta siempre.*
 [^3822]: O, *cobertura. *Heb.: *Kófer.*
 [^3823]: O, *el foso.*
-[^3824]: O, *estúpido. *Heb.: *Ba’ar.*
+[^3824]: O, *estúpido. *Heb.: *Ba'ar.*
 [^3825]: Tiempo oculto, solo conocido por Elohim. La versión gr. dice: *Su tumba es su casa para siempre.*
 [^3826]: Eternamente. O, *firme. *Así en el resto del cap.
 [^3827]: Heb.: *El.*
@@ -23304,7 +23304,7 @@ ella será alabada.
 [^3831]: La versión gr. y varias versiones antiguas dicen: *corres con él.*
 [^3832]: O, *amor entrañable.*
 [^3833]: Poderoso.
-[^3834]: Léase ‘día’ como un título mesiánico.
+[^3834]: Léase ‘día' como un título mesiánico.
 [^3835]: Eternamente. O, *firme. *Así también en vers. 6.
 [^3836]: O, *su deseo.*
 [^3837]: Significado dudoso, probablemente: *cántico calmado; *o, *tonada triste.*
@@ -23342,4 +23342,4 @@ ella será alabada.
 [^3869]: Santo, apartado, distinguido.
 [^3870]: O, *langosta. *U, *hormiga. *O, *escarcha. *Significado incierto.
 [^3871]: Otra lectura posible es: *mensajeros de cosas malas.*
-[^3872]: O sea, *todo el que haya recibido Rúaj Ha’Kódesh en Yeshúa el Mesías.*
+[^3872]: O sea, *todo el que haya recibido Rúaj Ha'Kódesh en Yeshúa el Mesías.*

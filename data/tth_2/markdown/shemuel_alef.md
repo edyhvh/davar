@@ -13,7 +13,7 @@ Tzebaot en Shiloh. Y allí *estaban* los dos hijos de Elí, Jofní y Pinjas, sac
 **6** Y la hacía enojar su angustiadora, incluso *con* ira, a fin de hacerla enfurecer, porque ha­bía cerrado יהוה detrás de su matriz.
 **7** Y así hacía año en año; siempre que ella su­bía a la casa de יהוה, así la hacía enojar. Y ella lloraba y no comía.
 **8** Y le dijo a ella Elkanah, su esposo: Janah, ¿Por qué lloras y por qué no comes? ¿Y por qué tiembla tu corazón? ¿No soy yo *más* bueno para ti que diez hijos?
-**9** Pero se levantó Janah después de comer ella en Shiloh y después de beber; y Elí, el sacer\-dote, estaba sentado sobre la silla junto al poste del palacio de יהוה.
+**9** Pero se levantó Janah después de comer ella en Shiloh y después de beber; y Elí, el sacerdote, estaba sentado sobre la silla junto al poste del palacio de יהוה.
 **10** Y ella, amargada en *su* ser, hacía tefilah[^1600] a יהוה y lloraba grandemente[^1601].
 **11** Y prometió un voto, y dijo: ¡יהוה Tze­baot!, si, mirando, ves en la aflicción de tu sier­va, y me recuerdas y no olvidas a tu sierva, darás a tu sierva simiente de hombres, y daré a יהוה todos los días de su vida, y navaja no subirá sobre su cabeza.
 **12** Y sucedió que ella aumentaba la oración delante de יהוה, y Elí guardaba su boca.
@@ -41,15 +41,15 @@ Tzebaot en Shiloh. Y allí *estaban* los dos hijos de Elí, Jofní y Pinjas, sac
 
 **2**
 
-**1** E hizo tefilah[^1605] Janah, y dijo:Se regocija mi corazón en יהוה, se elevó mi cuerno[^1606] en יהוה;se ensanchó mi boca sobre mis enemigos, porque me alegro en tu salvación.
+**1** E hizo tefilah[^1605] Janah, y dijo: Se regocija mi corazón en יהוה, se elevó mi cuerno[^1606] en יהוה; se ensanchó mi boca sobre mis enemigos, porque me alegro en tu salvación.
 **2** No hay Kadosh[^1607] como יהוה, pues, no hay aparte de ti, y no hay roca como nuestro Elohim.
-**3** No aumenten su hablar muy exaltado[^1608], saldrá orgullo de sus bocas,porque El de conocimiento es יהוה, y por Él son pesadas las acciones.
+**3** No aumenten su hablar muy exaltado[^1608], saldrá orgullo de sus bocas, porque El de conocimiento es יהוה, y por Él son pesadas las acciones.
 **4** Los arcos de los poderosos *están *destroza­dos,
-**5** Los saciados por pan se contratan, y los hambrientos cesan.Hasta la estéril da a luz *a* siete, mas la de muchos hijos es miserable.
+**5** Los saciados por pan se contratan, y los hambrientos cesan. Hasta la estéril da a luz *a* siete, mas la de muchos hijos es miserable.
 **6** יהוה hace morir y hace vivir, hace caer al Sheol y hace subir.
 **7** יהוה desposee y enriquece, humilla, también eleva.
 **8** Levanta del polvo *al* pobre, del montón de cenizas levanta *al* necesitado
-**9** Y los pies de sus benevolentes guardará, mas los condenados, en la oscuridad se acallarán,porque no por la fuerza se fortalecerá el hom­bre.
+**9** Y los pies de sus benevolentes guardará, mas los condenados, en la oscuridad se acallarán, porque no por la fuerza se fortalecerá el hom­bre.
 **10** יהוה hará inferiores *a* sus contendedo­res,
  sobre ellos en los cielos Él tronará.יהוה juzgará los confines de la tierra, y dará fuerza a su Rey,y elevará el cuerno de su Mesías[^1610].
 
@@ -73,7 +73,7 @@ Tzebaot en Shiloh. Y allí *estaban* los dos hijos de Elí, Jofní y Pinjas, sac
 
 *Elí reprende a sus hijos*
 
-**22** Y Elí *era* muy anciano, y escuchó todo lo que habían hecho sus hijos a todo Israel, y que se acostaban con las mujeres que servían *a* la entrada de la Tienda del Mo’ed[^1616].
+**22** Y Elí *era* muy anciano, y escuchó todo lo que habían hecho sus hijos a todo Israel, y que se acostaban con las mujeres que servían *a* la entrada de la Tienda del Mo'ed[^1616].
 **23** Y dijo a ellos: ¿Por qué hicieron conforme a estas co­sas, que yo escuché las cosas malas *por medio *de todo este pueblo?
 **24** No, hijos míos; porque no es bueno el in­forme que yo escuché, haciendo trasgredir *al* pueblo de יהוה.
 **25** Si peca un hombre hacia *otro* hombre, mediará por él Elohim; pero si hacia יהוה peca un hombre, ¿quién mediará por él? Pero no escucharon a la voz de su padre, porque de­seaba יהוה hacerlos morir.
@@ -90,7 +90,7 @@ Tzebaot en Shiloh. Y allí *estaban* los dos hijos de Elí, Jofní y Pinjas, sac
 **33** Pero un hombre no cortaré a ti de mi altar, para consumir tus ojos y para afligir tu ser; y toda la mayoría de tu casa, ellos morirán por la espada de los hom­bres[^1619].
 **34** Y esto para ti *será* una señal que vendrá a dos de tus hijos, a Jofní y Pinjas: en un día mo­rirán los dos.
 **35** Y haré levantar para Mí un sacerdote fiel, con­forme a lo que *hay *en mi corazón y en mi ser él hará; y edi­ficaré para él una casa firme, y él andará delan­te de mi ungido[^1620] todos los días.
-**36** Y sucederá *que* todo el que quede en tu casa vendrá para inclinarse a él por una moneda de plata y un bocado de pan, y dirá: ‘Agrégame, por favor, a uno de los sacerdocios para comer una pieza de pan’ ”.
+**36** Y sucederá *que* todo el que quede en tu casa vendrá para inclinarse a él por una moneda de plata y un bocado de pan, y dirá: ‘Agrégame, por favor, a uno de los sacerdocios para comer una pieza de pan' ”.
 
 *Elohim llama a Shemuel*
 
@@ -284,7 +284,7 @@ Shaúl es ungido rey
 **10**
 
 **1** Y tomó Shemuel una vasija de aceite y la ver­tió sobre la cabeza de él, y lo be­só, y dijo: ¿No, pues, te ha ungido יהוה sobre su pueblo Israel por líder? Y tú liderarás sobre el pueblo de יהוה, y tú lo salvarás de mano de sus enemigos alrededor. Y esta será para ti la señal de que te ha ungido יהוה sobre su heren­cia por líder[^1646]:
-**2** Cuando te vayas hoy de conmigo, hallarás dos hombres junto a la tumba de Rajel, en la frontera de Biniamín, en Tzeltzaj, y te dirán: “Han sido halladas las asnas que fuiste a bus­car; y he aquí, ha desistido tu padre de los a­sun­tos de las asnas y se preocupó por ustedes, dicien­do: ‘¿Qué haré por mi hijo?’ ”
+**2** Cuando te vayas hoy de conmigo, hallarás dos hombres junto a la tumba de Rajel, en la frontera de Biniamín, en Tzeltzaj, y te dirán: “Han sido halladas las asnas que fuiste a bus­car; y he aquí, ha desistido tu padre de los a­sun­tos de las asnas y se preocupó por ustedes, dicien­do: ‘¿Qué haré por mi hijo? ' ”
 **3** Y pasarás de allí y más allá, y vendrás al ro­ble de Tabor, y te encontrarás allí tres hombres subiendo a Elohim en Betel, uno llevando tres cabritos, uno llevando tres círculos de pan y uno llevando un odre de vino;
 **4** Y ellos te preguntarán por tu bienestar, y darán a ti dos panes, y los tomarás de sus ma­nos.
 **5** Después de eso llegarás a la Colina de Elohim[^1647], que allí están los pilares de los pelishtim[^1648]; y sucederá que cuando entres allí a la ciudad, encontrarás una banda de profetas descendiendo del lugar al­to, y delante de ellos arpa, pandero, flauta y lira, y ellos profetizarán.
@@ -329,7 +329,7 @@ Shaúl asume al reinado
 **9** Y dijeron a los mensajeros que vinieron: Así dirán a los hombres de Iabesh Guilad: “Mañana habrá para ustedes liberación cuando caliente el sol”. Y fueron los mensajeros y lo dieron a co­nocer a los hombres de Iabesh, y se alegraron.
 **10** Y dijeron los hombres de Iabesh: Mañana saldremos a ustedes y harán a nosotros conforme a todo lo bueno en sus ojos.
 **11** Y sucedió que al día siguiente, puso Shaúl al pueblo en tres cabezas; y entraron en medio del campamento en la guardia de la mañana, y golpearon a Amón hasta el calor del día. Y su­cedió que los que quedaron se dispersaron, y no quedaron de ellos dos juntos.
-**12** Y dijo el pueblo a Shemuel: ¿Quién es el que dijo: “¿Shaúl reinará sobre nosotros?”? Den a los hombres y los haremos morir.
+**12** Y dijo el pueblo a Shemuel: ¿Quién es el que dijo: “¿Shaúl reinará sobre nosotros? ”? Den a los hombres y los haremos morir.
 **13** Pero dijo Shaúl: No morirá hombre en este día, porque hoy hizo יהוה liberación de Is­rael.
 **14** Y dijo Shemuel al pueblo: Vengan y vaya­mos a Gilgal, y renovemos allí el reinado.
 **15** Y fueron, todo el pueblo, a Gilgal, e hicie­ron rey allí a Shaúl delante de יהוה en Gil­gal. Y sacrificaron allí sacrificios de retribuciones delante de יהוה; y se regocijó allí Shaúl y todos los hombres de Israel grande­mente.
@@ -591,7 +591,7 @@ Triunfo de David y del pueblo
 **53** Y regresaron los hijos de Israel de perseguir tras de los pelishtim y saquearon sus campa­mentos.
 **54** Y tomó David la cabeza del pelishtí y la lle­vó a Yerushaláim, y sus instrumentos puso en su tienda.
 **55** Y cuando vio Shaúl a David salir al encuen­tro del pelishtí, dijo a Abner, jefe del ejército: ¿Hijo de quién es este joven, Abner? Y dijo Ab­­ner: Vive tu ser, rey, ¡si sabría!
-**56** Y dijo el rey: Pregunta tú: “¿Hijo de quién es este joven?”
+**56** Y dijo el rey: Pregunta tú: “¿Hijo de quién es este joven? ”
 **57** Y cuando regresó David de herir al pelishtí, lo tomó Abner y lo trajo delante de Shaúl, y la cabeza del pelishtí en su mano.
 **58** Y le dijo Shaúl: ¿Hijo de quién eres tú, jo­ven? Y dijo David: Hijo de tu siervo Ishai, el bet halajmí[^1702].
 
@@ -659,7 +659,7 @@ Mijal salva a David
 **14** Y envió Shaúl mensajeros para tomar a Da­vid, y ella dijo: Está enfermo él.
 **15** Y envió Shaúl a los mensajeros para ver a David, diciendo: Háganlo subir en la cama ha­cia mí, para hacerlo morir.
 **16** Y entraron los mensajeros, y he aquí, los ídolos domésticos estaban en la cama, y una colcha de pe­lo de cabras a su cabecera.
-**17** Y dijo Shaúl a Mijal: ¿Por qué así me has en­gañado, y enviaste a mi enemigo y escapó? Y dijo Mijal a Shaúl: Él dijo a mí: “Envíame, ¿por qué debería hacerte morir?”
+**17** Y dijo Shaúl a Mijal: ¿Por qué así me has en­gañado, y enviaste a mi enemigo y escapó? Y dijo Mijal a Shaúl: Él dijo a mí: “Envíame, ¿por qué debería hacerte morir? ”
 **18** Y David huyó, y escapó, y fue a Shemuel, a Ramáh, y le contó todo lo que había hecho a él Shaúl. Y fue él, y Shemuel, y habitaron en Na­iot.
 **19** Y fue dado a conocer a Shaúl, diciendo: He aquí, David está en Naiot, en Ramáh.
 **20** Y envió Shaúl mensajeros para tomar a Da­vid, pero vieron al grupo de profetas profeti­zan­do, y Shemuel parado de pie sobre ellos, y fue sobre los mensajeros de Shaúl el Rúaj de E­lohim, y profetizaron también ellos.
@@ -1079,13 +1079,13 @@ Muerte de Shaúl y de sus hijos
 [^1643]: Lit.: *el día tres de los días.*
 [^1644]: Benjamita.
 [^1645]: Lit.: *como el día.*
-[^1646]: Así en la versión gr., el T.M. omite desde *‘sobre su pueblo Israel’* hasta *‘será para ti la señal de que’.*
+[^1646]: Así en la versión gr., el T.M. omite desde *‘sobre su pueblo Israel'* hasta *‘será para ti la señal de que'.*
 [^1647]: Heb.: *Guibeat Elohim.*
 [^1648]: Filisteos.
 [^1649]: Espíritu, viento, poder.
 [^1650]: Lit.: *de ayer y anteayer.*
-[^1651]: Este párrafo no se encuentra en el T.M., pero es parte del texto en los Manuscritos del Mar Muerto, fragmento ‘4QSam’.
-[^1652]: Así en los Manuscritos del Mar Muerto y la versión gr., el T.M. omite: *‘pasó como un mes’.*
+[^1651]: Este párrafo no se encuentra en el T.M., pero es parte del texto en los Manuscritos del Mar Muerto, fragmento ‘4QSam'.
+[^1652]: Así en los Manuscritos del Mar Muerto y la versión gr., el T.M. omite: *‘pasó como un mes'.*
 [^1653]: Amonita.
 [^1654]: Lit.: *corta.*
 [^1655]: Lit.: *cortaré.*
@@ -1102,7 +1102,7 @@ Muerte de Shaúl y de sus hijos
 [^1666]: Filisteos. Así en el resto del cap.
 [^1667]: Lit.: *por el tiempo señalado que Shemuel.*
 [^1668]: Heb.: *Oláh.*
-[^1669]: Heb.: *Sh’lamim.*
+[^1669]: Heb.: *Sh'lamim.*
 [^1670]: Tiempo oculto, solo conocido por Elohim.
 [^1671]: O, *aguijada.*
 [^1672]: O, *precio.*
@@ -1180,7 +1180,7 @@ Muerte de Shaúl y de sus hijos
 [^1744]: Heb.: *Mashíaj.*
 [^1745]: Lit.: *reinando, reinarás.*
 [^1746]: Calebita; descendiente de Caleb.
-[^1747]: Heb.: *Le’jaim.*
+[^1747]: Heb.: *Le'jaim.*
 [^1748]: Plenitud, ausencia de deudas.
 [^1749]: Sin provecho. Así también en vers. 25.
 [^1750]: Medida de harina.

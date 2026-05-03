@@ -320,6 +320,49 @@ class TTH2MdToJson:
 
         return False
 
+    def is_book_header_boundary_line(self, line: str) -> bool:
+        """
+        Detect a new-book header marker leaked into a per-book markdown file.
+
+        Examples seen in source artifacts:
+          __OBADIÁH (ABDÍAS)__ עבדיה
+          __IOJANÁN (JUAN)__יוחנן
+
+        We require both Latin title text and trailing Hebrew text to avoid
+        matching inline markers like __יהוה__.
+        """
+        stripped = line.strip()
+        if not stripped:
+            return False
+
+        marker_match = re.match(
+            r'^__([^_\n]{2,})__\s*([\u0590-\u05FF][\u0590-\u05FF\s]*)$', stripped)
+        if not marker_match:
+            return False
+
+        latin_title = marker_match.group(1).strip()
+        hebrew_title = marker_match.group(2).strip()
+
+        if not re.search(r'[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]', latin_title):
+            return False
+
+        own_latin_candidates = [
+            (self.book_info.get('tth_name') or '').strip(),
+            (self.book_info.get('spanish_name') or '').strip(),
+            (self.book_info.get('english_name') or '').strip(),
+        ]
+        own_hebrew = (self.book_info.get('hebrew_name') or '').strip()
+
+        latin_upper = latin_title.upper()
+        for candidate in own_latin_candidates:
+            if candidate and candidate.upper() in latin_upper:
+                return False
+
+        if own_hebrew and own_hebrew in hebrew_title:
+            return False
+
+        return True
+
     def normalize_malformed_verse_markers(self, text: str) -> str:
         """
         Normalize corrupted inline verse markers emitted by DOCX->MD conversion.
@@ -465,6 +508,10 @@ class TTH2MdToJson:
             if line.startswith('## Footnotes') or line.startswith('# Footnotes'):
                 break
 
+            # Stop parsing if a new-book header leaked into this markdown file.
+            if self.is_book_header_boundary_line(line):
+                break
+
             # Skip malformed inline footnote blocks until the next verse/chapter marker.
             if skipping_inline_footnote_blob:
                 if re.match(r'^\*\*(\d+)\*\*\s*$', line) or re.match(r'^\*\*(\d+)\*\*\s+.+$', line):
@@ -476,6 +523,14 @@ class TTH2MdToJson:
             # Check for chapter markers
             chapter_match = re.match(r'^\*\*(\d+)\*\*\s*$', line)
             if chapter_match:
+                next_chapter = int(chapter_match.group(1))
+
+                # Guard against false chapter restarts leaked by conversion
+                # artifacts (e.g. a stray "**1**" inside chapter 19).
+                if current_chapter is not None and next_chapter <= current_chapter:
+                    i += 1
+                    continue
+
                 # Save previous chapter if exists
                 if current_chapter is not None and current_verses:
                     chapters.append({
@@ -483,7 +538,7 @@ class TTH2MdToJson:
                         'verses': current_verses
                     })
 
-                current_chapter = int(chapter_match.group(1))
+                current_chapter = next_chapter
                 current_verses = []
                 current_last_verse_num = None
                 i += 1

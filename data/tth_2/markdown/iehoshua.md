@@ -87,8 +87,8 @@ en nuestras manos toda la tierra, y a­demás, se han derretido todos los habita
 **3** y ordenen a ellos, diciendo: “Tomen para us­tedes, de este *lugar* de en medio del Iardén, de la posición de los pies de los sacerdotes *donde estuvieron* firmes, doce piedras, y las harán pa­sar con ustedes, y háganlas descansar en el alo­jamiento en el cual se alojarán esta noche.
 **4** Y llamó Yehoshúa a doce hombres que había establecido[^1341] de los hijos de Isra­el, un hombre, un hombre de *cada* tribu,
 **5** Y dijo a ellos Yehoshúa: Pasen delante del arca de יהוה su Elohim hacia el medio del Iardén, y levanten para ustedes *cada* hombre una piedra sobre su hombro, por el número de las tribus de los hijos de Israel.
-**6** A fin de que sea esta una señal en medio de ustedes, porque preguntarán sus hijos mañana, diciendo: “¿Qué *son* estas piedras para uste­des?”,
-**7** y dirán a ellos: “Es que fueron cortadas las aguas del Iardén de delante del arca del Pacto de יהוה; cuando cruzó por el Iardén fueron cortadas las aguas del Iardén.” Y serán estas piedras para memorial a los hijos de Israel, has­ta siempre.
+**6** A fin de que sea esta una señal en medio de ustedes, porque preguntarán sus hijos mañana, diciendo: “¿Qué *son* estas piedras para uste­des? ”,
+**7** y dirán a ellos: “Es que fueron cortadas las aguas del Iardén de delante del arca del Pacto de יהוה; cuando cruzó por el Iardén fueron cortadas las aguas del Iardén. ” Y serán estas piedras para memorial a los hijos de Israel, has­ta siempre.
 **8** E hicieron así los hijos de Israel, como orde­nó Yehoshúa, y levantaron doce piedras de en medio del Iardén, como había hablado יהוה a Yehoshúa, por el número de las tribus de los hijos de Israel; y las hicieron pasar con ellos hacia el alojamiento, y las hicieron descansar allí.
 **9** Y doce piedras hizo levantar Yehoshúa de en medio del Iardén, debajo de la posición de los pies de los sacerdotes, llevadores del arca del Pacto, y están allí hasta este día.
 **10** Y los sacerdotes, llevadores del arca, *estu­vie­ron* parados en medio del Iardén hasta com­ple­tarse toda la palabra que había ordenado יהוה a Yehoshúa para hablar al pueblo, conforme a todo lo que había ordenado Moshéh a Yehoshúa. Y se apresuró el pueblo, y cruzaron.
@@ -102,7 +102,7 @@ en nuestras manos toda la tierra, y a­demás, se han derretido todos los habita
 **18** Y sucedió *que* cuando subieron los sacerdotes, llevadores del arca del Pacto de יהוה, de en medio del Iardén, fueron sacadas las plantas de los pies de los sacerdotes a tierra seca, y volvieron las aguas del Iardén a su lugar, y an­duvieron como ayer *y* anteayer por todas sus orillas.
 **19** Y el pueblo subió del Iardén en el décimo *día* del mes primero, y acamparon en Gilgal, en el extremo este de Ierijó.
 **20** Y a estas doce piedras que tomaron del Iardén, levantó Yehoshúa en Gilgal.
-**21** Y dijo a los hijos de Israel, diciendo: Lo que preguntarán sus hijos mañana a sus padres, diciendo: “¿Qué son estas piedras?”,
+**21** Y dijo a los hijos de Israel, diciendo: Lo que preguntarán sus hijos mañana a sus padres, diciendo: “¿Qué son estas piedras? ”,
 **22** harán saber a sus hijos, diciendo: “En tierra seca cruzó Israel este Iardén”.
 **23** Porque secó יהוה su Elohim las aguas del Iardén de delante de ustedes hasta *que *cru­zaron, como hizo יהוה su Elohim al mar de Cañas, el cual secó de delante de nosotros has­ta *que* cruzamos;
 **24** a fin de que conozcan todos los pueblos de la tierra la mano de יהוה, porque fuerte es ella, a fin de que teman ustedes a יהוה su Elohim to­dos los días.
@@ -138,12 +138,12 @@ en nuestras manos toda la tierra, y a­demás, se han derretido todos los habita
 **2** Y dijo יהוה a Yehoshúa: Mira, he dado en tu mano a Ierijó, y a su rey de los poderosos de valor.
 **3** Y rodearán la ciudad todos los hombres de guerra, rodeando la ciudad una vez. Esto harás *por* seis días.
 **4** Y siete sacerdotes llevarán siete shofarot[^1350] de cuernos de carnero delante del arca. Pero en el día séptimo rodearán la ciudad siete veces, y los sacerdotes soplarán con los shofarot[^1351].
-**5** Y sucederá *que* cuando se extiendan con el cuerno del carnero[^1352], cuando escuchen la voz del shofar, exclamará todo el pueblo una gran t’ruáh[^1353], y caerá la muralla de la ciu­dad debajo de ella; y subirá el pueblo, *cada* hombre delante de sí.
+**5** Y sucederá *que* cuando se extiendan con el cuerno del carnero[^1352], cuando escuchen la voz del shofar, exclamará todo el pueblo una gran t'ruáh[^1353], y caerá la muralla de la ciu­dad debajo de ella; y subirá el pueblo, *cada* hombre delante de sí.
 **6** Y llamó Yehoshúa, hijo de Nun, a los sacerdotes, y dijo a ellos: Lleven el arca del Pacto, y siete sacerdotes llevarán siete shofarot de cuer­nos de carnero delante del arca de יהוה.
 **7** Y dijeron al pueblo: Pasen, rodeen la ciudad, y los armados pasarán delante del arca de יהוה.
 **8** Y sucedió cuando dijo Yehoshúa al pueblo, los siete sacerdotes que llevaban los siete shofarot de cuernos de carnero delante de יהוה, pasaron y soplaron con los shofarot, y el arca del Pacto de יהוה iba detrás de ellos.
 **9** Y el armado iba delante de los sacerdotes so­pladores de las trompetas, y la retaguardia iba detrás del arca caminando y so­plando con los shofarot.
-**10** Y al pueblo ordenó Yehoshúa, diciendo: No gritarán y no harán escuchar su voz, y no sal­drá de su boca una palabra, hasta el día *que* di­ga a ustedes: “¡Exclamen!” Y exclamarán.
+**10** Y al pueblo ordenó Yehoshúa, diciendo: No gritarán y no harán escuchar su voz, y no sal­drá de su boca una palabra, hasta el día *que* di­ga a ustedes: “¡Exclamen! ” Y exclamarán.
 **11** E hizo rodear *al* arca de יהוה a la ciu­dad, rodeando una vez; y entraron *al* campa­men­to, y se alojaron en el campamento.
 **12** Y se levantó temprano Yehoshúa por la ma­ñana, y levantaron los sacerdotes el arca de יהוה.
 **13** Y los siete sacerdotes que llevaban las siete trompetas de cuernos de carnero, delante del arca de יהוה iban, caminando y soplando con los shofarot; y el armado iba delante de ellos, y la retaguardia iba detrás del arca de יהוה caminando y soplando con las trompe­as.
@@ -153,7 +153,7 @@ en nuestras manos toda la tierra, y a­demás, se han derretido todos los habita
 **17** Y será la ciudad destruida[^1355], ella y todo lo que *hay* en ella es para יהוה; sólo Rajab la ramera vivirá, ella y todos los que *están* con ella en la casa, porque ella es­con­dió a los mensajeros que enviamos.
 **18** Pero solamente, ustedes guárdense de lo de­dicado[^1356], no sea que las dediquen y las tomen de lo dedicado, y pongan al cam­pa­mento de Israel por prohibición y lo pertur­ben.
 **19** Y la plata y el oro, y los utensilios de cobre y hierro* son* santidad estos para יהוה; *en* el tesoro de יהוה entrarán.
-**20** Y exclamó el pueblo y soplaron con los shofarot; y sucedió *que* cuando escuchó el pueblo la voz del shofar, exclamó el pueblo una gran t’ruáh y la muralla cayó debajo de ella, y subió el pueblo a la ciudad, *cada* hom­bre delante de sí, y capturaron la ciudad.
+**20** Y exclamó el pueblo y soplaron con los shofarot; y sucedió *que* cuando escuchó el pueblo la voz del shofar, exclamó el pueblo una gran t'ruáh y la muralla cayó debajo de ella, y subió el pueblo a la ciudad, *cada* hom­bre delante de sí, y capturaron la ciudad.
 **21** Y destruyeron todo lo que *había* en la ciu­dad, desde hombre hasta mujer, desde joven has­ta anciano, y hasta buey, cordero y asno, a boca de espada.
 **22** Pero a los dos hombres, los que exploraron la tierra, dijo Yehoshúa: Entren *en* casa de la mu­jer ramera, y saquen de allí a la mujer y a todo lo que es de ella, como juraron a ella.
 **23** Y entraron los jóvenes exploradores y saca­ron a Rajab, a su padre, a su madre, a sus her­ma­nos, y a todo lo que *era* de ella; y a todos sus familiares sacaron, y los hicieron descansar fuera del campamento de Israel.
@@ -178,7 +178,7 @@ en nuestras manos toda la tierra, y a­demás, se han derretido todos los habita
 **10** Y dijo יהוה a Yehoshúa: ¡Levántate! ¿Por qué esto, *que* tú caíste sobre tu rostro?
 **11** Ha pecado Israel y también han traspasado mi pacto el cual les ordené; y además, tomaron de lo dedicado, y también han robado y tam­bién mintieron, y además *lo* pusieron entre sus utensilios.
 **12** Y no podrán los hijos de Israel levantarse delante de sus enemigos; el cuello girarán de­lante de sus enemigos porque ha sido por dedicado. No volveré a estar con uste­des si no destruyen lo dedicado de en medio de ustedes.
-**13** Levántate, consagra al pueblo, y dirás: “Con­­ságrense para mañana, porque así dice יהוה, Elohim de Israel: ‘*Hay* *cosa* dedicada en medio de ti, Israel. No podrás levantarte de­lante de tus enemigos hasta que quiten lo de­di­cado de en medio de ustedes’.
+**13** Levántate, consagra al pueblo, y dirás: “Con­­ságrense para mañana, porque así dice יהוה, Elohim de Israel: ‘*Hay* *cosa* dedicada en medio de ti, Israel. No podrás levantarte de­lante de tus enemigos hasta que quiten lo de­di­cado de en medio de ustedes'.
 **14** Y se acercarán en la mañana, por sus tribus, y será *que* la tribu que atrape יהוה se acer­cará por familias, y la familia que atrape יהוה se acercará por casas, y la casa que atrape יהוה se acercará por hombres.
 **15** Y será *que* el que sea atrapado con lo dedi­cado, será quemado en el fuego, él y todo lo que es de él, porque ha traspasado el pacto de יהוה, y porque ha hecho insensatez[^1365] en Israel”.
 **16** Y se levantó temprano Yehoshúa por la ma­ñana, e hizo acercar a Israel por sus tribus, y fue atrapada la tribu de Iehudáh.
@@ -250,7 +250,7 @@ en nuestras manos toda la tierra, y a­demás, se han derretido todos los habita
 **8** Y dijeron a Yehoshúa: Tus siervos *somos *no­sotros. Y dijo a ellos Yehoshúa: ¿Quiénes *son* ustedes, y de dónde vienen?
 **9** Y dijeron a él: De una tierra muy lejana han venido tus siervos, por el Nombre de יהוה tu Elohim, que hemos escuchado su fama y to­do lo que hizo en Mitzráim,
 **10** y todo lo que hizo a los dos reyes del emorí[^1376], que *estaban* en el *otro* lado del Iardén, a Sijón, rey de Jeshbón, y a Og, rey del Bashán, que *es­taba* en Ashtarot.
-**11** Y dijeron a nosotros nuestros ancianos y todos los habitantes de nuestra tierra, diciendo: “Tomen en su mano provisiones para el cami­no y vayan a su encuentro, y dirán a ellos: ‘Sus siervos *somos* nosotros; y ahora, hagan para nosotros un pacto’ ”.
+**11** Y dijeron a nosotros nuestros ancianos y todos los habitantes de nuestra tierra, diciendo: “Tomen en su mano provisiones para el cami­no y vayan a su encuentro, y dirán a ellos: ‘Sus siervos *somos* nosotros; y ahora, hagan para nosotros un pacto' ”.
 **12** Este nuestro pan *estaba* caliente *cuando* lo tomamos[^1377] de nuestras casas en el día de nuestra salida para ir hacia ustedes; pero ahora, he aquí, *está* seco, y están mancha­dos.
 **13** Y estos odres de vino que llenamos *eran* nuevos, y he aquí, *están* desgarrados; y estos vestidos nuestros y nuestras sandalias *están* desgastados debido al muy grande camino.
 **14** Y tomaron los hombres *de Israel* de sus provisiones, pero a la boca de יהוה no pre­gun­taron.
@@ -287,7 +287,7 @@ en nuestras manos toda la tierra, y a­demás, se han derretido todos los habita
 
 ¡Sol, en Guibeón *quédate *quieto; y luna, en el valle de Ayalón!
 
-**13** Y se aquietó el sol, y la luna se paró, hasta *que* se vengó la nación de sus enemigos.¿No *está* esto escrito en el rollo de Iashar[^1381] Y se paró el sol en el medio del cielo, y no se apresuró a ponerse como *por* un día completo.
+**13** Y se aquietó el sol, y la luna se paró, hasta *que* se vengó la nación de sus enemigos. ¿No *está* esto escrito en el rollo de Iashar[^1381] Y se paró el sol en el medio del cielo, y no se apresuró a ponerse como *por* un día completo.
 **14** Y no hubo como ese día antes de eso ni des­pués de eso, al escuchar יהוה a la voz de un hombre, porque יהוה luchó por Israel.
 **15** Y volvió Yehoshúa, y todo Is­rael con él, al campamento de Gilgal.
 
@@ -561,7 +561,7 @@ fue* su herencia, conforme había orde­nado __יהוה__, por mano de Moshéh, 
 
 **18**
 
-**1** Y se reunieron, toda la congregación de los hijos de Israel, *en* Shiloh, y ubi­caron allí la Tienda del Mo’ed[^1423]; y la tierra fue conquistada delante de ellos.
+**1** Y se reunieron, toda la congregación de los hijos de Israel, *en* Shiloh, y ubi­caron allí la Tienda del Mo'ed[^1423]; y la tierra fue conquistada delante de ellos.
 **2** Pero quedaban entre los hijos de Israel que no habían repartido su herencia, siete tribus.
 **3** Y dijo Yehoshúa a los hijos de Israel: ¿Hasta cuándo[^1424] ustedes se mostrarán flo­jos para entrar a poseer la tierra que dio a uste­des __יהוה__, Elohim de sus padres?
 **4** Den para ustedes tres hombres de la tribu, y los enviaré, y se levantarán e irán por la tierra, y la escri­birán de acuerdo a su herencia, y ven­drán a mí.
@@ -659,7 +659,7 @@ fue* su herencia, conforme había orde­nado __יהוה__, por mano de Moshéh, 
 **48** Esta *fue* la herencia de la tribu de los hijos de Dan, por sus familias; estas ciudades y sus aldeas.
 **49** Y terminaron de heredar la tierra por sus fronteras, y dieron los hijos de Israel una he­rencia a Yehoshúa, hijo de Nun, en medio de e­llos.
 **50** Por boca de __יהוה__, le dieron la ciudad que él pidió, Timnat Seraj, en el monte de Efráim. Y el construyó la ciudad y habitó en ella.
-**51** Estas son las herencias que dividieron en posesión Eleazar el sacerdote, Yehoshúa, hijo de Nun, y las cabezas de los padres de las tribus de los hijos de Israel, por goral, en Shiloh, delante de __יהוה__, en la entrada de la Tienda del Mo’ed[^1433]. Y terminaron de repartir la tierra.
+**51** Estas son las herencias que dividieron en posesión Eleazar el sacerdote, Yehoshúa, hijo de Nun, y las cabezas de los padres de las tribus de los hijos de Israel, por goral, en Shiloh, delante de __יהוה__, en la entrada de la Tienda del Mo'ed[^1433]. Y terminaron de repartir la tierra.
 
 *Las ciudades de refugio*
 
@@ -756,10 +756,10 @@ fue* su herencia, conforme había orde­nado __יהוה__, por mano de Moshéh, 
 **22** ¡El Elohim[^1447], __יהוה__, El Elohim, __יהוה__! Él sabe; e Israel, él sabrá. Si *fue* con rebelión y si *fue* con infidelidad contra __יהוה__, no nos salves este día.
 **23** *Si* construimos para nosotros un altar para regresar de detrás de __יהוה__, y si para hacer subir sobre él ofrenda ascendida[^1448] y o­frenda de grano[^1449], y si para hacer sobre él sacri­fi­cios de retribución, __יהוה__, Él demandará.
 **24** Pero si no, por preocupación de un asunto he­mos hecho esto, diciendo: “Mañana dirán sus hijos a nuestros hijos, diciendo: ‘¿Qué *hay* pa­ra ustedes y para __יהוה__, Elohim de Israel?
-**25** La frontera puso __יהוה__ entre nosotros y ustedes, hijos de Reubén e hijos de Gad, al Iardén; no hay para ustedes parte con __יהוה’__. Y harían cesar sus hijos a nuestros hijos para no temer a __יהוה__.
+**25** La frontera puso __יהוה__ entre nosotros y ustedes, hijos de Reubén e hijos de Gad, al Iardén; no hay para ustedes parte con __יהוה'__. Y harían cesar sus hijos a nuestros hijos para no temer a __יהוה__.
 **26** Y dijimos: “Preparémonos ahora para cons­truir el altar, no para ofrenda ascendida y no para sacrificio,
-**27** porque testigo este *será* entre nosotros y ustedes y nuestras generaciones des­pués de no­so­tros, para servir con el servicio de __יהוה__ delante de Él con nuestras ofrendas ascendi­das, con nuestros sacrificios y con nuestras retribu­ciones, y no dirán sus hijos mañana a nues­tros hijos: ‘No hay para ustedes parte con __יהוה’__ ”.
-**28** Y dijimos: “Y sucederá que dirán *esto* a no­so­tros y a nuestras generaciones mañana, pero diremos: ‘Vean la construcción[^1450] del altar de __יהוה__ que hicieron nuestros pa­dres, no para ofrendas ascendidas y no para sacri­fi­cios, porque testigo es él entre nosotros y ustedes’ ”.
+**27** porque testigo este *será* entre nosotros y ustedes y nuestras generaciones des­pués de no­so­tros, para servir con el servicio de __יהוה__ delante de Él con nuestras ofrendas ascendi­das, con nuestros sacrificios y con nuestras retribu­ciones, y no dirán sus hijos mañana a nues­tros hijos: ‘No hay para ustedes parte con __יהוה'__ ”.
+**28** Y dijimos: “Y sucederá que dirán *esto* a no­so­tros y a nuestras generaciones mañana, pero diremos: ‘Vean la construcción[^1450] del altar de __יהוה__ que hicieron nuestros pa­dres, no para ofrendas ascendidas y no para sacri­fi­cios, porque testigo es él entre nosotros y ustedes' ”.
 **29**¡Lejos *esté *de nosotros[^1451] rebelarse contra __יהוה__ y regresar hoy de detrás de __יהוה__ para construir un altar para ofrenda ascendida, para ofrenda de grano y pa­ra sacrificio, aparte del altar de __יהוה__ nues­tro Elohim que *está* delante de su Mishkán!
 **30** Y escuchó Pinjas el sacerdote, y los jefes de la congregación y las cabezas de los miles de Is­rael que *estaban* con él, las palabras que habla­ron los hijos de Reubén, los hijos de Gad y los hijos de Menasheh, y fue bueno en sus ojos.
 **31** Y dijo Pinjas, hijo de Eleazar el sacerdote, a los hijos de Reubén, a los hijos de Gad y a los hi­jos de Menasheh: Hoy sabemos que en medio de nosotros *está* __יהוה__, que no cometieron contra __יהוה__ esta infidelidad; entonces, ustedes rescataron a los hijos de Israel de la ma­no de __יהוה__.
@@ -862,7 +862,7 @@ fue* su herencia, conforme había orde­nado __יהוה__, por mano de Moshéh, 
 [^1349]: Lit.: *estaba cerrada y estaba cerrada.*
 [^1350]: Heb.: *nazir. *Derivando así, *nazareo.*
 [^1351]: Cuernos de carnero. Sing., *shofar. *Así en el resto del cap.
-[^1352]: Heb.: *Kéren ha’iobel.*
+[^1352]: Heb.: *Kéren ha'iobel.*
 [^1353]: Expresión de alegría, pronunciado tanto con la voz como con un shofar. Así también en vers. 20.
 [^1354]: Heb.: *Mishpat.*
 [^1355]: O, *dedicada.*

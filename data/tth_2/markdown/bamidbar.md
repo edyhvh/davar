@@ -4,7 +4,7 @@ __BEMIDBAR \(NÚMEROS\)__במדבר
 
 **1**
 
-**1** Y habló יהוה a Moshéh en desierto[^849] de Sinay, en la Tienda del Mo’ed[^850], en el *día* uno del mes segundo, en el año segundo de su salida de la tierra de Mitzráim[^851], di­ciendo:
+**1** Y habló יהוה a Moshéh en desierto[^849] de Sinay, en la Tienda del Mo'ed[^850], en el *día* uno del mes segundo, en el año segundo de su salida de la tierra de Mitzráim[^851], di­ciendo:
 **2** Levanta la cabeza de toda la congregación de los hijos de Israel por sus familias, por las casas de sus padres, con el número de nombres, todo varón, por sus ca­bezas;
 **3** de edad de veinte años y arriba, todo el que sale *al* ejército en Israel, los encargarán por sus ejércitos, tú y Aharón.
 **4** Y con ustedes estará cada hombre de tribu, *cada* hombre cabeza de la casa de su padre *será* él.
@@ -65,7 +65,7 @@ por sus familias, por las casas de sus padres, con el número de nombres, de eda
 **2**
 
 **1** Y habló יהוה a Moshéh y a Aharón, di­cien­do:
-**2** Cada *hombre junto a su bandera, con las in­signias de la casa de sus padres, acamparán los hijos de Israel; al frente, alrededor de la Tienda del Mo’ed[^854], acamparán.
+**2** Cada *hombre junto a su bandera, con las in­signias de la casa de sus padres, acamparán los hijos de Israel; al frente, alrededor de la Tienda del Mo'ed[^854], acamparán.
 **3** Y los que acampen al este, hacia el amane­cer, *serán los de* la bandera del cam­pa­mento de Iehudáh, por sus ejércitos. Y el jefe de los hijos de Iehudáh, Najshón, hijo de Ami­nadab;
 **4** y su ejército, y sus encargados, setenta y cuatro mil seiscientos.
 **5** Y los que acampen junto a él *será *la tribu de Issajar. Y el jefe de los hijos de Issajar, Netanel, hijo de Tzuar;
@@ -80,7 +80,7 @@ por sus familias, por las casas de sus padres, con el número de nombres, de eda
 **14** Y la tribu de Gad. Y el jefe de los hijos Gad, Eliasaf, hijo de Reuel;
 **15** y su ejército, y sus encargados, cuarenta y cin­co mil seiscientos cincuenta.
 **16** Todos los encargados del campamento de Reu­­bén: ciento cincuenta y un mil cuatrocien­tos cincuenta, por sus ejércitos. Segundos partirán ellos.
-**17** Y partirá la Tienda del Mo’ed *con *el cam­pa­­ment­o de los leviím[^855], en medio de los cam­pamentos; como acampan así partirán, *cada *hombre en su mano por sus banderas.
+**17** Y partirá la Tienda del Mo'ed *con *el cam­pa­­ment­o de los leviím[^855], en medio de los cam­pamentos; como acampan así partirán, *cada *hombre en su mano por sus banderas.
 **18** La bandera del campamento de Efráim, por sus ejércitos, *es­tará* hacia el mar. Y el jefe de los hijos de Efráim, Elishamá, hijo de Ami­­hud;
 **19** y su ejército, y sus encargados, cuarenta mil quinientos.
 **20** Y junto a él *estará *la tribu de Menasheh. Y el jefe de los hijos de Menasheh, Gamli­el, hijo de Pedahtzur;
@@ -109,8 +109,8 @@ por sus familias, por las casas de sus padres, con el número de nombres, de eda
 **4** Pero murieron Nadab y Avihu delante de יהוה cuando acercaron fuego extraño delan­te de יהוה, en el desierto de Sinay; e hijos no tuvieron para ellos. Y fueron sacerdotes Elea­zar e Itamar sobre el rostro de Aharón, su pa­dre.
 **5** Y habló יהוה a Moshéh, diciendo:
 **6** Acerca a la tribu de Levi y páralos delante de Aharón el sacerdote, y lo sirvan.
-**7** Y guardarán su guardia y la guardia de toda la congregación delante de la Tienda del Mo’ed[^856], para servir a la obra del Mishkán.
-**8** Y guardarán todos los utensilios de la Tienda del Mo’ed, y la guardia de los hijos de Israel, para servir con la obra del Mishkán.
+**7** Y guardarán su guardia y la guardia de toda la congregación delante de la Tienda del Mo'ed[^856], para servir a la obra del Mishkán.
+**8** Y guardarán todos los utensilios de la Tienda del Mo'ed, y la guardia de los hijos de Israel, para servir con la obra del Mishkán.
 **9** Y darás los leviím[^857] a Aharón y a sus hijos; dados, les son dados de entre los hijos de Israel.
 **10** Y a Aharón y a sus hijos encargarás, y guardarán su sacerdocio; pero el extraño que se acerque, morirá.
 **11** Y habló יהוה a Moshéh, diciendo:
@@ -127,7 +127,7 @@ por sus familias, por las casas de sus padres, con el número de nombres, de eda
 **22** Sus encargados por número de todo varón de edad de un mes y arriba, los encargados de ellos *fueron* siete mil quinientos.
 **23** Las familias del gershoní detrás del Mish­kán[^859] acamparán, hacia el mar.
 **24** Y el jefe de la casa paterna del gershoní era Eliasaf, hijo de Lael.
-**25** La guardia de los hijos de Guershón en la Tienda del Mo’ed *era *el Mishkán y la tienda, su cubierta, la cortina de la entrada de la Tienda del Mo’ed,
+**25** La guardia de los hijos de Guershón en la Tienda del Mo'ed *era *el Mishkán y la tienda, su cubierta, la cortina de la entrada de la Tienda del Mo'ed,
 **26** y las cortinas del patio, la cortina de la en­tra­da del patio que *está* sobre el Mishkán y sobre el altar alrededor, y sus cuerdas, para todo su servicio.
 **27** Y de Kehat *era* la familia del amramí[^860], y la familia del itzharí[^861], y la familia del jebroní[^862], y la familia del azielí[^863]; estas fueron las familias del kehatí[^864].
 **28** Por el número de todo varón de edad de un mes y arriba, *había* ocho mil seiscientos; guar­daban la guardia de la Santidad.
@@ -140,7 +140,7 @@ por sus familias, por las casas de sus padres, con el número de nombres, de eda
 **35** Y el jefe de la casa paterna de las familias de Merari era Tzuriel, hijo de Abijail. Al lado norte del Mishkán acamparán.
 **36** Y el encargo de la guardia de los hijos de Merari *eran *las tablas del Mishkán, sus barras, sus pilares, sus bases y todos sus utensilios, y todo su servicio,
 **37** y los pilares del patio alrededor, y sus ba­ses, sus estacas y sus cuerdas.
-**38** Y los que acamparán delante del Mishkán, al este, delante de la Tienda del Mo’ed, hacia el amane­cer, *eran* Moshéh y Aharón y sus hijos, guardando la guardia del Mikdash[^869], para la guardia de los hijos de Israel; pero el extranjero que se acerque, morirá.
+**38** Y los que acamparán delante del Mishkán, al este, delante de la Tienda del Mo'ed, hacia el amane­cer, *eran* Moshéh y Aharón y sus hijos, guardando la guardia del Mikdash[^869], para la guardia de los hijos de Israel; pero el extranjero que se acerque, morirá.
 **39** Todos los encargados de los leviím que encargó Moshéh y Aharón por boca de יהוה, por sus familias, todo varón de e­dad de un mes y arriba *fueron* veintidós mil.
 **40** Y dijo יהוה a Moshéh: Encarga todo pri­mogénito varón de los hijos de Israel de edad de un mes y arriba, y toma el número de sus nom­bres.
 **41** Y tomarás a los leviím para Mí, Yo soy יהוה, en lugar de todo primogénito entre los hijos de Israel, y el ganado de los leviím en lugar de todo primogénito entre el ganado de los hijos de Israel.
@@ -161,8 +161,8 @@ por sus familias, por las casas de sus padres, con el número de nombres, de eda
 
 **1** Y habló יהוה a Moshéh y a Aharón, di­cien­do:
 **2** Levanta la cabeza de los hijos de Kehat, de entre los hijos de Levi, por sus familias, por la casa de sus padres,
-**3** de edad de treinta años y arriba, hasta edad de cincuenta años, todo el que entra a la compañía para hacer el trabajo en la Tienda del Mo’ed[^870].
-**4** Este es el servicio de los hijos de Kehat en la Tienda del Mo’ed, *es* santidad de santidades:
+**3** de edad de treinta años y arriba, hasta edad de cincuenta años, todo el que entra a la compañía para hacer el trabajo en la Tienda del Mo'ed[^870].
+**4** Este es el servicio de los hijos de Kehat en la Tienda del Mo'ed, *es* santidad de santidades:
 **5** Entrarán Aharón y sus hijos, en el viaje del campamento, y descenderán la cortina de la pantalla, y cubrirán con ella el arca del Testi­mo­nio,
 **6** y pondrán sobre ella una cubierta de piel de jirafa[^871], y estirarán una ves­tidura completa­mente azul[^872] sobre ella, y pon­drán sus varas.
 **7** Y sobre la Mesa del Rostro, estirarán una ves­tidura azul, y pondrán sobre ella los cuencos, las cucharas, los tazones y los tubos *para* derramar; y el pan continuo estará sobre ella.
@@ -173,7 +173,7 @@ por sus familias, por las casas de sus padres, con el número de nombres, de eda
 **12** Y tomarán todos los utensilios del servicio con que sirven en la Santidad, y *los *pondrán en una vestidura azul, y los cubrirán con una cu­bierta de piel de jirafa, y *los *pondrán sobre la barra.
 **13** Y le quitarán las cenizas al altar y extende­rán sobre él una vestidura púrpura.
 **14** Y pondrán sobre él todos los utensilios, que sirven sobre él con ellos: los incensarios, los te­nedores, las palas y las fuentes, todos los utensilios del altar. Y estirarán sobre él una cubierta de piel de jirafa, y pondrán sus varas.
-**15** Y habiendo terminado Aharón y sus hijos de cubrir la Santidad y todos los uten­silios de la Santidad, cuando pueda partir el campamento, después de eso vendrán los hijos de Kehat para llevar*los*, pero no toquen a la santidad, *pues *morirán. Estas son las cargas de los hijos de Ke­hat en la Tienda del Mo’ed.
+**15** Y habiendo terminado Aharón y sus hijos de cubrir la Santidad y todos los uten­silios de la Santidad, cuando pueda partir el campamento, después de eso vendrán los hijos de Kehat para llevar*los*, pero no toquen a la santidad, *pues *morirán. Estas son las cargas de los hijos de Ke­hat en la Tienda del Mo'ed.
 **16** Y el encargo de Eleazar, hi­jo de Aharón el sacerdote, *será* el aceite de la ilu­minación, el incienso calmante, la ofrenda de grano continua, y el aceite de la unción. *Ten­drá* el encargo de todo el Mishkán y de todo lo que en él *hay*, con la Santidad y sus utensi­lios.
 **17** Y habló יהוה a Moshéh y a Aharón, di­ciendo:
 **18** No cortarás la tribu de las familias del ke­hatí[^875] de entre los leviím.
@@ -184,34 +184,34 @@ por sus familias, por las casas de sus padres, con el número de nombres, de eda
 
 **21** Y habló יהוה a Moshéh, diciendo:
 **22** Levanta la cabeza de los hijos de Guershón, también ellos, por la ca­sa de sus padres, por sus familias;
-**23** de edad de treinta años y arriba, hasta edad de cincuenta años los alistarás; todo el que entre a la compañía para servir *en *la obra de la Tienda del Mo’ed.
+**23** de edad de treinta años y arriba, hasta edad de cincuenta años los alistarás; todo el que entre a la compañía para servir *en *la obra de la Tienda del Mo'ed.
 **24** Este es el servicio de las familias del ger­shoní[^876], para servir y para cargar:
-**25** llevarán las cortinas del Mishkán[^877] y de la Tienda del Mo’ed, su cubierta y la cubierta de jirafa* *que *está* sobre él desde arriba, y la cortina de la entrada de la Tienda del Mo’ed,
+**25** llevarán las cortinas del Mishkán[^877] y de la Tienda del Mo'ed, su cubierta y la cubierta de jirafa* *que *está* sobre él desde arriba, y la cortina de la entrada de la Tienda del Mo'ed,
 **26** y las cortinas del patio, y la cortina de la entrada de la puerta del patio que *está* sobre el Mishkán y el altar alrededor, y sus cuerdas y todos los utensilios de su servicio; y todo lo que se deba hacer, servirán.
 **27** Por boca de Aharón y sus hijos estará todo el servicio de los hijos del gershoní, para todas sus cargas y para todo su servicio; y coman­darán sobre ellos como guardia todas sus car­gas.
-**28** Este es el servicio de las familias de los hijos del gershoní en la Tienda del Mo’ed; y su guardia *estará *en mano de Itamar, hijo de Aharón el sacerdote.
+**28** Este es el servicio de las familias de los hijos del gershoní en la Tienda del Mo'ed; y su guardia *estará *en mano de Itamar, hijo de Aharón el sacerdote.
 **29** Los hijos de Merari, por sus familias, por la casa de sus padres, los encargarás.
-**30** De edad de treinta años y arriba, hasta edad de cincuenta años los encargarás, todo el que entre a la compañía para servir con la obra de la Tienda del Mo’ed.
-**31** Y esta es la guardia de su carga, para todo su servicio en la Tienda del Mo’ed: las tablas del Mishkán, sus barras, sus pilares y sus ba­ses,
+**30** De edad de treinta años y arriba, hasta edad de cincuenta años los encargarás, todo el que entre a la compañía para servir con la obra de la Tienda del Mo'ed.
+**31** Y esta es la guardia de su carga, para todo su servicio en la Tienda del Mo'ed: las tablas del Mishkán, sus barras, sus pilares y sus ba­ses,
 **32** y las columnas del patio alrededor, y sus bases, sus estacas y sus cuerdas, para todos sus utensilios; y por nombre *les* encargarás los utensilios de la guardia de su carga.
-**33** Este es el servicio de las familias de los hijos de Merari; para todo su servicio en la Tienda del Mo’ed, por mano de Itamar, hijo de Aharón el sacerdote.
+**33** Este es el servicio de las familias de los hijos de Merari; para todo su servicio en la Tienda del Mo'ed, por mano de Itamar, hijo de Aharón el sacerdote.
 
 *Leviím en edad de servicio*
 
 **34** Y encargaron Moshéh y Aha­rón y los jefes de la congregación a los hijos del kehatí, por sus familias, y por la casa de sus padres,
-**35** de edad de treinta años y arriba, hasta edad de cincuenta años, todo el que entró a la compañía para el servicio en la Tienda del Mo’ed.
+**35** de edad de treinta años y arriba, hasta edad de cincuenta años, todo el que entró a la compañía para el servicio en la Tienda del Mo'ed.
 **36** Y fueron sus encargados, por sus familias, dos mil setecientos cincuenta.
-**37** Estos son los encargados de las familias del kehatí, todo el que servía en la Tienda del Mo’ed, que encargó Moshéh y Aharón, por boca de יהוה, por mano de Moshéh.
+**37** Estos son los encargados de las familias del kehatí, todo el que servía en la Tienda del Mo'ed, que encargó Moshéh y Aharón, por boca de יהוה, por mano de Moshéh.
 **38** Y los encargados de los hijos de Guershón, por sus familias, por la casa de sus padres,
-**39** de edad de treinta años y arriba, hasta edad de cincuenta años, todo el que entró a la compañía para el servicio en la Tienda del Mo’ed.
+**39** de edad de treinta años y arriba, hasta edad de cincuenta años, todo el que entró a la compañía para el servicio en la Tienda del Mo'ed.
 **40** Y fueron los encargados de ellos, por sus fa­milias, por la casa de sus padres, dos mil se­is­cientos treinta.
-**41** Estos son los encargados de las familias de los hijos de Guershón, todo el que servía en la Tienda del Mo’ed, que encargó Moshéh y Aharón, por boca de יהוה.
+**41** Estos son los encargados de las familias de los hijos de Guershón, todo el que servía en la Tienda del Mo'ed, que encargó Moshéh y Aharón, por boca de יהוה.
 **42** Y los encargados de las familias de los hijos de Merari, por sus familias, por la casa de sus padres,
-**43** de edad de treinta años y arriba, hasta edad de cincuenta años, todo el que entró a la compañía para el servicio en la Tienda del Mo’ed.
+**43** de edad de treinta años y arriba, hasta edad de cincuenta años, todo el que entró a la compañía para el servicio en la Tienda del Mo'ed.
 **44** Y fueron los encargados de ellos, por sus fa­mi­lias, tres mil doscientos.
 **45** Estos son los encargados de las familias de los hijos de Merari, que encargó Moshéh y Aharón, por boca de יהוה, por mano de Moshéh.
 **46** Todos los encargados que encargaron Moshéh y Aharón y los jefes de Israel, los leviím[^878], por sus familias y por la casa de sus padres,
-**47** de edad de treinta años y arriba, hasta edad de cincuenta años, todo el que entró para servir *en* la obra de servicio, y el trabajo de carga en la Tienda del Mo’ed.
+**47** de edad de treinta años y arriba, hasta edad de cincuenta años, todo el que entró para servir *en* la obra de servicio, y el trabajo de carga en la Tienda del Mo'ed.
 **48** Y fueron los encargados de ellos, ocho mil qui­nientos ochenta.
 **49** Por boca de יהוה los encargó, por mano de Moshéh, cada hombre de acuerdo a su servicio y de acuerdo a su carga; y *estos fueron* sus encargados, que ordenó יהוה a Moshéh.
 
@@ -245,9 +245,9 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **17** Y tomará el sacerdote aguas santas[^886] en un uten­silio de arcilla, y del polvo que está en el suelo del Mishkán[^887] tomará el sacerdote, y *lo *pondrá en las aguas.
 **18** Y parará el sacerdote a la mujer delante de יהוה, y descubrirá la cabeza de la mujer, y pondrá sobre las palmas de ella la ofrenda de grano del memorial, la ofrenda de grano de ce­los es esto, y en la mano del sacerdote estará el agua de las amarguras, la de exclusiones.
 **19** Y la hará jurar el sacerdote, y dirá a la mujer: ‘Si no se ha acostado hombre contigo; y si no te has desviado a la impureza, *estando *bajo tu marido, sé limpia del agua de las a­mar­guras, la de estas exclusiones.
-**20** Pero tú, que te has desviado *estando *bajo tu marido, y que te has contaminado, y ha puesto *otro *hombre en ti su emisión *de semen*, a­parte de tu marido’;
+**20** Pero tú, que te has desviado *estando *bajo tu marido, y que te has contaminado, y ha puesto *otro *hombre en ti su emisión *de semen*, a­parte de tu marido';
 **21** y hará jurar el sacerdote a la mujer con jura­mento de la exclusión, y dirá el sacerdote a la mu­jer: ‘Te dará יהוה por consecuencia y por juramento entre tu pueblo, cuando dé יהוה tu muslo *por* caída y tu vientre hinchado;
-**22** y entrarán las aguas de estas exclusiones en tus intestinos para hinchar *tu *vientre y para hacer caer* tu* muslo’, y dirá la mujer: ‘Amén, amén’.
+**22** y entrarán las aguas de estas exclusiones en tus intestinos para hinchar *tu *vientre y para hacer caer* tu* muslo', y dirá la mujer: ‘Amén, amén'.
 **23** Y escribirá estas consecuencias el sacerdote en un rollo, y *las *borrará en el agua de las amarguras.
 **24** Y dará de beber a la mujer el agua de las a­marguras, la de exclusiones, y entrará en ella el agua de las exclusiones para amar­guras.
 **25** Y tomará el sacerdote de la mano de la mujer la ofrenda de grano de los celos, y mecerá la ofrenda de grano de­lante de יהוה, y la acercará al altar;
@@ -271,15 +271,15 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **7** por su padre y por su madre, por su hermano y por su hermana, no se impurificará[^891] por ellos cuando mueran, porque la consagración de su Elohim *está *sobre su cabeza.
 **8** Todos los días de su consagración, kadosh es él para יהוה.
 **9** Pero cuando *alguien* muere[^892] sobre él, con sorpresa repentinamente, con­tamina la cabeza de su consagración[^893], y afei­ta­rá su cabeza en el día de su puri­ficación; en el día séptimo se la afeitará.
-**10** Y en el día octavo traerá dos tórtolas o dos hijos de paloma al sacerdote, a la entrada de la Tienda del Mo’ed[^894].
+**10** Y en el día octavo traerá dos tórtolas o dos hijos de paloma al sacerdote, a la entrada de la Tienda del Mo'ed[^894].
 **11** Y hará el sacerdote, una para ofrenda por el pecado, y una para ofrenda ascendida; y hará expia­ción por él, debido a que pecó, por el ser *muerto*. Y santificará su cabeza en aquel día.
 **12** Y consagrará a יהוה los días de su consagración, y traerá un cordero hijo de su año para ofrenda de culpa; pero los primeros días serán anulados[^895], pues contaminó su consagración.
-**13** Y esta es la Torah del nazir, en el día que se completen los días de su consagra­ción: la llevará a la entrada de la Tienda del Mo’ed.
+**13** Y esta es la Torah del nazir, en el día que se completen los días de su consagra­ción: la llevará a la entrada de la Tienda del Mo'ed.
 **14** Y acercará su ofrenda a יהוה, un cordero hijo de su año, completo, uno, para ofrenda ascendida[^896], y una cordera hija de su año, completa, para ofrenda por el pecado[^897], y un carnero com­pleto, para retribución[^898],
 **15** y una cesta de matzot[^899] de harina fina de hogazas mezcladas con aceite y panes planos sin levadura untados con aceite, y sus ofrendas de grano y sus ofrendas derrama­das.
 **16** Y *los *acercará el sacerdote delante de יהוה, y hará su ofrenda por el pecado y su ofrenda ascendida.
 **17** Y al carnero hará *como* sacrificio de retribu­ción para יהוה, con la cesta de matzot; y hará el sacerdote su ofrenda de grano y su ofren­da derramada.
-**18** Y se afeitará, el nazir, *en* la en­trada de la Tienda del Mo’ed, la cabeza de su consagra­ción; y tomará el cabello de la cabeza de su con­sa­gración y *lo *pondrá en el fuego que *está* debajo del sacrificio de las retribuciones.
+**18** Y se afeitará, el nazir, *en* la en­trada de la Tienda del Mo'ed, la cabeza de su consagra­ción; y tomará el cabello de la cabeza de su con­sa­gración y *lo *pondrá en el fuego que *está* debajo del sacrificio de las retribuciones.
 **19** Y tomará el sacerdote el brazo cocido del car­ne­ro, y una hogaza sin levadura de la cesta, y un pan plano sin levadura, y *los *pondrá sobre las palmas del nazir, después de que se haya afei­tado su consagración,
 **20** Y los mecerá el sacerdote *como* ofrenda mecida delante de יהוה. Santidad es esto para el sacerdote, con el seno de la ofrenda mecida[^900] y con la pierna de la ofrenda alzada[^901]; y después beberá, el nazir, el vino”.
 **21** Esta es la Torah del nazir, quien *hace *voto de su ofrenda a יהוה, por su con­sa­gración; además de lo que pueda alcanzar su mano, de acuerdo con su voto que jure, así ha­rá por la Torah de su consagración.
@@ -294,7 +294,7 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **25** hará brillar יהוה su rostro hacia ti,
  y será favorable contigo[^903];
 **26** alzará יהוה su rostro hacia ti,
- y pon­drá para ti shalom[^904].’ ”
+ y pon­drá para ti shalom[^904].' ”
 
 **27** Y pondrán mi Nombre sobre los hijos de Israel, y Yo los bendeciré.
 
@@ -304,7 +304,7 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **2** Y se acercaron los jefes de Israel, cabezas de la casa de sus padres *eran* ellos, jefes de las tribus *eran *ellos, los posicionados sobre los encargados.
 **3** Y trajeron su korbán[^905] de­lante de יהוה: seis carretas cubiertas y doce bueyes, una carreta por *cada *dos jefes, y un buey por *cada* uno. Los acercaron delante del Mishkán[^906].
 **4** Y dijo יהוה a Moshéh, diciendo:
-**5** Toma de ellos *estas cosas, *y sean para servir con la obra de la Tienda del Mo’ed[^907], y las da­rás a los leviím[^908], *cada *hombre de acuerdo con su servicio.
+**5** Toma de ellos *estas cosas, *y sean para servir con la obra de la Tienda del Mo'ed[^907], y las da­rás a los leviím[^908], *cada *hombre de acuerdo con su servicio.
 **6** Y tomó Moshéh las carretas y los bueyes, y los dio a los leviím.
 **7** Dos carretas y cuatro bueyes dio a los hijos de Guershón, de acuerdo con su servicio;
 **8** y cuatro carretas y ocho bueyes dio a los hi­jos de Merari, de acuerdo con su servicio, en mano de Itamar, hijo de Aharón el sacerdote.
@@ -388,7 +388,7 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **86** Las doce cucharas de oro llenas de incienso *pesaban* diez cada cuchara[^914], con el shekel de la Santidad; todo el oro de las cucharas *era *ciento veinte *shekel.*
 **87** Todo el ganado para la ofrenda ascendida: doce toros; doce carneros; los corderos hijos de un año, doce, y sus ofrenda de grano; y los peludos de las cabras, doce, para ofrenda por el pecado.
 **88** Y todo el ganado del sacrificio de las retribu­ciones: veinticuatro toros; sesenta carne­ros; sesenta machos cabríos; corderos hijos de un año, sesenta. Esta *fue *la dedicación[^915] del altar después de que fue ungido.
-**89** Y cuando entró Moshéh a la Tienda del Mo’ed[^916] para hablar con Él, escuchó la voz que le hablaba desde sobre la cubierta que *es­ta­ba *sobre el arca del Testimonio, de entre los dos querubines, y habló a él.
+**89** Y cuando entró Moshéh a la Tienda del Mo'ed[^916] para hablar con Él, escuchó la voz que le hablaba desde sobre la cubierta que *es­ta­ba *sobre el arca del Testimonio, de entre los dos querubines, y habló a él.
 
 *Aharón enciende las lámparas*
 
@@ -405,24 +405,24 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **6** Toma a los leviím[^918]* *de entre los hijos de Israel, y purifícalos.
 **7** Así harás a ellos para esta purificación: sobre ellos *rociarás* agua de pecado, y que ellos ha­gan pasar navaja sobre toda su carne, y laven sus vestiduras, y estarán puros.
 **8** Y tomarán ellos un toro hijo de ganado y su ofrenda de grano, harina fina mezclada con acei­te, y un toro segundo hijo de ganado toma­rás para ofrenda por el pecado.
-**9** Y acercarás a los leviím delante de la Tienda del Mo’ed; y reunirás a toda la congregación de los hijos de Israel.
+**9** Y acercarás a los leviím delante de la Tienda del Mo'ed; y reunirás a toda la congregación de los hijos de Israel.
 **10** Y acercarás a los leviím delante de יהוה, y apoyarán los hijos de Israel sus manos sobre los leviím.
 **11** Y mecerá Aharón a los leviím *como *ofren­da mecida, delante de יהוה, de los hijos de Israel; y estarán para servir al tra­ba­­jo de יהוה.
 **12** Y los leviím apoyarán sus manos sobre la cabeza de los toros, y harán a uno *como *ofren­da por el pecado y a uno *como *ofrenda ascendida a יהוה, para hacer expiación por los leviím.
 **13** Y pondrás de pie a los leviím delante de Aharón y delante de sus hijos, y los mecerá *como *ofrenda mecida para יהוה.
 **14** Y separarás a los leviím de entre los hijos de Israel, y serán para Mí los leviím.
-**15** Y después entrarán los leviím para servir a la Tienda del Mo’ed, y los purificarás, y los mecerás *como *ofrenda mecida;
+**15** Y después entrarán los leviím para servir a la Tienda del Mo'ed, y los purificarás, y los mecerás *como *ofrenda mecida;
 **16** porque dados, dados *me son* ellos a Mí de entre los hijos de Israel; en lugar de la abertura de toda matriz, los primogénitos de* *todos los hijos de Israel, los he tomado para Mí.
 **17** Porque para Mí es todo primogénito de *en­tre *los hijos de Israel, en hombre y en animal, en el día que golpeé todo primogénito en la tie­rra de Mitzráim, los santifiqué para Mí.
 **18** Y he tomado a los leviím en lugar de todo pri­mogénito de los hijos de Israel.
-**19** Y he dado a los leviím, dados a Aharón y a sus hijos de entre los hijos de Israel para servir al trabajo de los hijos de Israel en la Tienda del Mo’ed, y para hacer expiación por los hijos de Israel, y no haya entre los hijos de Israel enfermedad[^919] cuando se acerquen los hijos de Israel a la Santidad.
+**19** Y he dado a los leviím, dados a Aharón y a sus hijos de entre los hijos de Israel para servir al trabajo de los hijos de Israel en la Tienda del Mo'ed, y para hacer expiación por los hijos de Israel, y no haya entre los hijos de Israel enfermedad[^919] cuando se acerquen los hijos de Israel a la Santidad.
 **20** E hizo Moshéh, y Aharón y toda la congre­ga­ción de los hijos de Israel a los leviím conforme a todo lo que ordenó יהוה a Mo­­shéh para los leviím; así hicieron a ellos los hijos de Israel.
 **21** Y se purificaron los leviím, y lavaron sus ves­tiduras, y los meció Aharón *como *ofrenda mecida delante de יהוה; e hizo reconciliación por ellos Aharón, para purificarlos.
-**22** Y después, sí entraron los leviím para servir su trabajo en la Tienda del Mo’ed delante de Aharón y delante de sus hijos, como había or­denado יהוה a Moshéh sobre los leviím, así hicieron a ellos.
+**22** Y después, sí entraron los leviím para servir su trabajo en la Tienda del Mo'ed delante de Aharón y delante de sus hijos, como había or­denado יהוה a Moshéh sobre los leviím, así hicieron a ellos.
 **23** Y habló יהוה a Moshéh, diciendo:
-**24** Esto *es* lo que *es* para los leviím: desde e­dad de veinticinco años y arriba puede entrar a la compañía, compañía en el trabajo de la Tienda del Mo’ed.
+**24** Esto *es* lo que *es* para los leviím: desde e­dad de veinticinco años y arriba puede entrar a la compañía, compañía en el trabajo de la Tienda del Mo'ed.
 **25** Pero desde la edad de cincuenta años podrá regresar de la compañía de la obra, y no trabajará más.
-**26** Pero pueden ministrar a sus hermanos en la Tienda del Mo’ed para mantener la guardia; pero trabajar, no trabajarán. Así harás a los le­viím en sus guardias.
+**26** Pero pueden ministrar a sus hermanos en la Tienda del Mo'ed para mantener la guardia; pero trabajar, no trabajarán. Así harás a los le­viím en sus guardias.
 
 *El Pésaj*
 
@@ -461,13 +461,13 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 
 **1** Y habló יהוה a Moshéh, diciendo:
 **2** Haz para ti dos trompetas[^932] de plata, de labrado a martillo las harás. Y serán para ti para anunciar a la congregación, y para hacer viajar a los campamentos.
-**3** Y soplarán con ellas, y se reunirá hacia ti to­da la congregación, a la entrada de la Tienda del Mo’ed[^933].
+**3** Y soplarán con ellas, y se reunirá hacia ti to­da la congregación, a la entrada de la Tienda del Mo'ed[^933].
 **4** Pero si *solo* una soplan, se reunirán hacia ti los líderes cabezas de miles de Israel.
-**5** Y soplarán t’ruáh[^934], y viajarán los cam­pamentos acampados al este.
+**5** Y soplarán t'ruáh[^934], y viajarán los cam­pamentos acampados al este.
 **6** Y soplarán grito la segunda* vez*, y viajarán los campamentos acampados al sur; grito so­plarán para que ellos viajen.
 **7** Y cuando se reúna la asamblea, so­plarán, pero no hagan grito.
 **8** Y los hijos de Aharón, los sacerdotes, sopla­rán las trompetas, y será para ellos por decreto olam[^935], por sus generaciones.
-**9** Y cuando entren *a *la guerra en su tierra sobre el enemigo que los oprima, harán t’ruáh con las trompetas, y serán recordados delante de יהוה su Elohim, y serán salvados de sus enemigos.
+**9** Y cuando entren *a *la guerra en su tierra sobre el enemigo que los oprima, harán t'ruáh con las trompetas, y serán recordados delante de יהוה su Elohim, y serán salvados de sus enemigos.
 **10** Y en el día de su alegría, y en sus tiempos señalados, y en la cabeza de sus meses, sopla­rán las trompetas con sus ofrendas ascendidas, y con sus sacrificios de retribuciones, y será para ustedes por memorial delante de su Elohim; Yo soy יהוה, su Elohim.
 
 *Israel parte del Sinay*
@@ -528,11 +528,11 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **13** ¿De dónde *habrá* para mí carne para dar a todo este pueblo, pues ellos lloran sobre mí, diciendo: “Danos a nosotros carne y podamos co­mer”.
 **14** No puedo yo, solo yo, llevar a todo este pue­blo, pues es muy pesado para mí.
 **15** Y si así Tú me harás a mí, mátame por favor, máta*me *si he hallado favor en tus ojos, y no vea en mí mal.
-**16** Y dijo יהוה a Moshéh: Junta para Mí se­tenta hombres de los ancianos de Israel, quie­nes conoces que son los ancianos del pueblo y sus oficiales, y tómalos hacia la Tienda del Mo’ed, y que se coloquen allí contigo.
+**16** Y dijo יהוה a Moshéh: Junta para Mí se­tenta hombres de los ancianos de Israel, quie­nes conoces que son los ancianos del pueblo y sus oficiales, y tómalos hacia la Tienda del Mo'ed, y que se coloquen allí contigo.
 **17** Y descenderé, y hablaré contigo allí, y dele­garé del Rúaj[^945] que *está* sobre ti y *lo* pondré so­bre ellos, y cargarán contigo en la carga del pueblo, y no *la* cargarás tú, solo tú.
-**18** Y al pueblo dirás: “Conságrense para ma­ñana, y comerán carne, pues han llorado a oí­dos de יהוה, diciendo: ‘¿Quién nos dará de comer carne? Pues, bien *había *para nosotros en Mitzráim.’ Y dará יהוה a ustedes carne, y comerán.
+**18** Y al pueblo dirás: “Conságrense para ma­ñana, y comerán carne, pues han llorado a oí­dos de יהוה, diciendo: ‘¿Quién nos dará de comer carne? Pues, bien *había *para nosotros en Mitzráim. ' Y dará יהוה a ustedes carne, y comerán.
 **19** No comerán un día, ni *dos* días, ni cinco días, ni diez días, ni veinte días,
-**20** hasta un mes de días, hasta que salga de sus narices y sea a ustedes por enfermizo[^946], porque, pues, despreciaron a יהוה, que *está* en medio de ustedes, y lloraron delante de Él, diciendo: ‘¿Por qué esto, que sa­limos de Mitzráim?’ ”
+**20** hasta un mes de días, hasta que salga de sus narices y sea a ustedes por enfermizo[^946], porque, pues, despreciaron a יהוה, que *está* en medio de ustedes, y lloraron delante de Él, diciendo: ‘¿Por qué esto, que sa­limos de Mitzráim? ' ”
 **21** Y dijo Moshéh: Seiscientos mil de a pie *es* el pueblo el cual yo *estoy* en medio de él; pero Tú dijiste: “Carne daré a ellos, y comerán *por* un mes de días”.
 **22** ¿Rebaño y ganado sería sacrificado para e­llos y hubiera alcanzado a ellos? ¿O todos los peces del mar se juntarían para ellos hubiera alcanzado a ellos?
 **23** Y dijo יהוה a Moshéh: ¿Es la mano de יהוה corta? Ahora verás *si* te sucede mi pa­labra o no.
@@ -556,11 +556,11 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **1** Y hablaron Miriam y Aharón contra Mo­shéh por causa de la mujer cushit[^950] que había tomado, pues una mujer cu­shit había to­mado;
 **2** y dijeron: ¿Apenas sólo con Moshéh ha ha­blado יהוה? ¿No también con nosotros ha ha­­blado? Y escuchó יהוה.
 **3** Y el hombre Moshéh *era* humilde, más que todos los hombres que *están* sobre la faz de la tierra.
-**4** Y dijo יהוה repentinamente a Moshéh, a Aharón y a Miriam: Salgan ustedes tres a la Tienda del Mo’ed[^951]. Y salieron los tres.
+**4** Y dijo יהוה repentinamente a Moshéh, a Aharón y a Miriam: Salgan ustedes tres a la Tienda del Mo'ed[^951]. Y salieron los tres.
 **5** Y descendió יהוה en la columna de nube, y se paró *en* la entrada de la Tienda, y llamó: ¡Aharón y Miriam! Y salieron los dos,
-**6** *Y dijo: Escuchen ahora mis palabras:Si hay un profeta de ustedes, *Yo* יהוה, en una visión a él me daré a conocer;en un sueño hablaré con él.
+**6** *Y dijo: Escuchen ahora mis palabras: Si hay un profeta de ustedes, *Yo* יהוה, en una visión a él me daré a conocer; en un sueño hablaré con él.
 **7** No así mi siervo Moshéh, en toda mi casa fiel es él.
-**8** *Boca a boca hablo con él, y *con* vista y no en enigmas, y la imagen de יהוה él ve.¿Por qué no temieron hablar contra mi sier­vo, contra Moshéh?
+**8** *Boca a boca hablo con él, y *con* vista y no en enigmas, y la imagen de יהוה él ve. ¿Por qué no temieron hablar contra mi sier­vo, contra Moshéh?
 **9** *Y se calentó la nariz de יהוה contra ellos, y Él se fue.
 **10** Pero la nube se retiró de sobre la Tienda, y he aquí, Miriam *era* metzorat[^952], como la nieve. Y se giró Aharón hacia Miriam, y he aquí, *era* metzorat.
 **11** Y dijo Aharón a Moshéh: Te lo suplico, mi amo, por favor no pongas sobre nosotros *este* pecado que hemos hecho tontamente y que he­mos pecado.
@@ -623,7 +623,7 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **7** y dijeron a toda la congregación de los hijos de Israel, diciendo: La tierra la cual pasamos por ella para explorarla, *es* muy muy buena la tierra.
 **8** Si se interesa en nosotros יהוה, nos lleva­rá a esta tierra, y la dará a nosotros; es una tie­rra que fluye leche y miel.
 **9** Sólo, contra יהוה no se rebelen, y ustedes no tengan temor del pueblo de la tierra, pues nuestro pan *serán* ellos. Se retiró su sombra de sobre ellos, y יהוה *está* con nosotros, no les teman.
-**10** Pero dijo toda la congregación *que* los ape­drearan con piedras. Y la gloria de יהוה a­pa­reció en la Tienda del Mo’ed[^960] a todos los hi­jos de Israel.
+**10** Pero dijo toda la congregación *que* los ape­drearan con piedras. Y la gloria de יהוה a­pa­reció en la Tienda del Mo'ed[^960] a todos los hi­jos de Israel.
 **11** Y dijo יהוה a Moshéh: ¿Hasta cuándo me insultará este pueblo? ¿Y hasta cuándo no se afirmarán en Mí con todas las señales que he hecho entre ellos?
 **12** Los golpearé con plaga y los desheredaré, y te haré a ti una nación *más* grande y numero­sa que ellos.
 **13** Y dijo Moshéh a יהוה: Y lo escuchará Mitzráim, pues subiste con tu poder a este pueblo de entre ellos;
@@ -647,7 +647,7 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **28** Diles: “Vivo Yo” –declaración de יהוה– “¡Si no haría a ustedes conforme han hablado a mis oí­dos, así *haré*!
 **29** En este desierto caerán sus cadáveres y todos los contados de todos sus enumerados de edad de veinte años y arriba, que se han que­­jado sobre Mí.
 **30**¡Si ustedes entraran a la tierra, la cual le­vanté mi mano para ubicarlos en ella! Sino que Caleb hijo de Iefunéh, y Yehoshúa hijo de Nun.
-**31** Pero sus niños, que dijeron: ‘Por botín se­rán’, *los* haré entrar a ellos, y conocerán la tie­rra que ustedes estuvieron hartos de ella.
+**31** Pero sus niños, que dijeron: ‘Por botín se­rán', *los* haré entrar a ellos, y conocerán la tie­rra que ustedes estuvieron hartos de ella.
 **32** Pero a ustedes, sus cadáveres caerán en el de­sierto este.
 **33** Y sus hijos serán pastores en el desierto *por* cua­­renta años, y ellos cargarán las prostitucio­nes de ustedes, hasta que se completen sus ca­dá­veres en el desierto.
 **34** Con el número de los días que exploraron la tierra, cuarenta días, día por año, día por año cargarán sus iniquidades, cuarenta años; y co­nocerán mi oposición.
@@ -737,8 +737,8 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **15** Y se enojó Moshéh mucho, y dijo a יהוה: ¡No te gires hacia su ofrenda! No me he llevado un asno de ellos, y no he sido malo con ninguno de ellos.
 **16** Y dijo Moshéh a Koraj: Tú y todo tu grupo estén delante de יהוה mañana; tú, ellos y Aharón.
 **17** Y tome *cada* hombre su incensario, y pon­gan sobre ellos incienso; y acerquen delante de יהוה *cada* hombre su incensario, doscientos cincuenta incensarios; tú, Aharón y *cada* hom­bre su incensario.
-**18** *Y tomó *cada* hombre su incensario, y pu­sie­ron sobre ellos fuego, y colocaron sobre e­llos incienso; y se pararon *a* la entrada de la Tienda del Mo’ed[^978], y Moshéh y Aharón.
-**19** Y reunió sobre ellos Koraj a toda la congre­gación a la entrada de la Tienda del Mo’ed, y apareció la gloria de יהוה a toda la congre­gación.
+**18** *Y tomó *cada* hombre su incensario, y pu­sie­ron sobre ellos fuego, y colocaron sobre e­llos incienso; y se pararon *a* la entrada de la Tienda del Mo'ed[^978], y Moshéh y Aharón.
+**19** Y reunió sobre ellos Koraj a toda la congre­gación a la entrada de la Tienda del Mo'ed, y apareció la gloria de יהוה a toda la congre­gación.
 
 *Castigo de Koraj, su grupo y sus familias*
 
@@ -764,8 +764,8 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **39** Y tomó Eleazar el sacerdote los incensarios de cobre que habían acercado los que fueron que­mados, y fueron martillados *como* revestimien­to para el altar;
 **40** *es* un memorial para los hijos de Israel, con el fin de que no se acercará hombre extraño que no *sea* él de la simiente de Aharón, para a­cercar incienso delante de יהוה, y no sea co­mo Koraj y como su grupo; como habló יהוה por mano de Moshéh a él.
 **41** Pero se quejó toda la congregación de los hijos de Israel al día siguiente sobre Moshéh y sobre Aharón, diciendo: ¡Ustedes han hecho morir al pueblo de יהוה!
-**42** Y sucedió cuando se reunió la congregación sobre Moshéh y sobre Aharón, se giraron hacia la Tienda del Mo’ed, y he aquí, la nube la cu­bría, y apareció la gloria de יהוה.
-**43** Y fueron Moshéh y Aharón hacia la faz de la Tienda del Mo’ed,
+**42** Y sucedió cuando se reunió la congregación sobre Moshéh y sobre Aharón, se giraron hacia la Tienda del Mo'ed, y he aquí, la nube la cu­bría, y apareció la gloria de יהוה.
+**43** Y fueron Moshéh y Aharón hacia la faz de la Tienda del Mo'ed,
 **44** Y habló יהוה a Moshéh, diciendo:
 **45** Levántense de entre la congregación esta, y pueda consumirlos como *en* un momento. Y ca­yeron sobre sus rostros.
 **46** Y dijo Moshéh a Aharón: Toma un incensa­rio y pon sobre él fuego de sobre el altar, y co­loca incienso; y ve rápidamente hacia la con­gre­gación y haz reconciliación por ellos, porque ha salido la ira de delante de יהוה. ¡Ha comen­zado el golpe!
@@ -773,14 +773,14 @@ sus santidades para él se­rán; lo que un hombre da al sacerdote, para él ser
 **48** Y se paró entre los muertos y los vi­vos, y se detuvo la plaga.
 **49** Y fueron los muertos por la plaga
 catorce mil setecientos, aparte de los muertos por el a­sunto de Koraj.
-**50** Y regresó Aharón a Moshéh a la entrada de la Tienda del Mo’ed, y la plaga se había dete­nido.
+**50** Y regresó Aharón a Moshéh a la entrada de la Tienda del Mo'ed, y la plaga se había dete­nido.
 
 **17**
 
 **1** Y habló יהוה a Moshéh, diciendo:
 **2** Habla a los hijos de Israel y toma de ellos una vara, una vara por casa paterna: de todos los jefes, por la casa de sus padres, doce varas. *De cada* hombre, su nombre escribirás en su vara;
 **3** y el nombre de Aharón escribirás en la vara de Levi; porque *habrá* una vara para *cada* ca­be­za de la casa de sus padres.
-**4** Y las colocarás en la Tienda del Mo’ed[^980], de­lante del Testimonio, *en *la cual me reuniré a us­tedes.
+**4** Y las colocarás en la Tienda del Mo'ed[^980], de­lante del Testimonio, *en *la cual me reuniré a us­tedes.
 **5** Y será el hombre que Yo elija en él su vara, florecerá. Y disminuiré de sobre Mí las quejas de los hijos de Israel, que ellos se quejan sobre ustedes.
 **6** Y habló Moshéh a los hijos de Israel, y die­ron a él todos los jefes una vara, una por jefe, una vara por jefe, por la casa de sus padres: do­ce varas, y la vara de Aharón *estaba* entre sus varas.
 **7** Y colocó Moshéh las varas delante de יהוה en la Tienda del Testimonio.
@@ -798,9 +798,9 @@ catorce mil setecientos, aparte de los muertos por el a­sunto de Koraj.
 **1** Y dijo יהוה a Aharón: Tú y tus hi­jos, y la casa de tu padre contigo, lle­varán la iniqui­dad del Mishkán; y tú y tus hijos conti­go llevarán la iniquidad de su sa­cerdocio.
 **2** Y también a tus hermanos, la tribu[^982] de Levi, tribu de tu padre, acercarás con­ti­go, y se unan a ti, y te servirán; y tú y tus hijos con­tigo *esta­rán* delante de la Tienda del Testi­monio.
 **3** Y guardarán tu guardia y la guardia de toda la Tienda, pero a los utensilios de la Santidad y al altar no se acercarán, y no morirán; tanto ellos como ustedes.
-**4** Y se unirán a ti y guardarán la guardia de la Tienda del Mo’ed[^983], para todo el trabajo de la Tienda; pero un extraño no se acercará a uste­des.
+**4** Y se unirán a ti y guardarán la guardia de la Tienda del Mo'ed[^983], para todo el trabajo de la Tienda; pero un extraño no se acercará a uste­des.
 **5** Y guardarán la guardia de la Santidad y la guardia del altar, y no habrá más ira sobre los hijos de Israel.
-**6** Y Yo, he aquí, he tomado a sus hermanos, los leviím, de entre los hijos de Israel; *son* un regalo para ustedes, dados a יהוה, para ser­vir al trabajo de la Tienda del Mo’ed.
+**6** Y Yo, he aquí, he tomado a sus hermanos, los leviím, de entre los hijos de Israel; *son* un regalo para ustedes, dados a יהוה, para ser­vir al trabajo de la Tienda del Mo'ed.
 **7** Pero tú y tus hijos contigo guardarán su sa­cer­docio, para toda cosa del altar y a *lo que está* dentro de la cortina, y servirán. Servicio de regalo doy a su sacerdocio, pero el extraño que se acerque morirá.
 **8** Y habló יהוה a Aharón: Y Yo, he aquí, doy a ti la guardia de mis ofrendas alzadas, para todas las santidades de los hijos de Israel; a ti las he dado para unción, y a tus hijos, por decreto olam[^984].
 **9** Esto será para ti de la santidad de santidades del fuego: todas sus ofrendas, por todas sus ofrendas de grano, y por todas sus ofrendas por el pecado, y por todas sus ofrendas de culpa, que ellos regresan a Mí; santidad de santidades es para ti y para tus hijos.
@@ -818,9 +818,9 @@ catorce mil setecientos, aparte de los muertos por el a­sunto de Koraj.
 
 *Décimas partes para los leviím*
 
-**21** Y a los hijos de Levi, he aquí, he dado todo décimo en Israel por herencia, a cambio de su servicio, el cual ellos trabajan con el servicio de la Tienda del Mo’ed.
-**22** Y no se acercarán más los hijos de Israel a la Tienda del Mo’ed para cargar pecado, para morir.
-**23** Y el trabajo del leví[^988] es el servicio de la Tienda del Mo’ed, y ellos llevarán la ini­qui­dad de ellos; *será* decreto olam para sus genera­ciones, y entre los hijos de Israel no he­redarán herencia.
+**21** Y a los hijos de Levi, he aquí, he dado todo décimo en Israel por herencia, a cambio de su servicio, el cual ellos trabajan con el servicio de la Tienda del Mo'ed.
+**22** Y no se acercarán más los hijos de Israel a la Tienda del Mo'ed para cargar pecado, para morir.
+**23** Y el trabajo del leví[^988] es el servicio de la Tienda del Mo'ed, y ellos llevarán la ini­qui­dad de ellos; *será* decreto olam para sus genera­ciones, y entre los hijos de Israel no he­redarán herencia.
 **24** Porque el décimo de los hijos de Israel, el cual alzan a יהוה, ofrenda alzada he dado a los leviím por herencia; por eso dije a ellos: “Entre los hijos de Israel no heredarán herencia”.
 **25** Y habló יהוה a Moshéh, diciendo:
 **26** Y a los leviím hablarás, y les dirás: “Cuan­do tomen de los hijos de Israel el décimo que *les* he dado a ustedes de ellos por su herencia, alzarán de ellos una terumáh de יהוה, décimo de los décimos.
@@ -828,7 +828,7 @@ catorce mil setecientos, aparte de los muertos por el a­sunto de Koraj.
 **28** Así alzarán también ustedes una terumáh de יהוה de todos sus décimos que tomen de los hijos de Israel, y darán de eso una terumáh de יהוה a Aharón el sacerdote.
 **29** De todos sus presentes, alzarán cada terumáh de יהוה, de toda su grosura, su consagración de ellas”.
 **30** Y les dirás: “Cuando hayan alzado su grosura de ella, será considerado a los leviím[^989] como el producto de la trilla y como el produc­to del lagar.
-**31** Y lo comerán en cualquier lugar, ustedes y sus casas, porque salario es pa­ra ustedes a cambio de su trabajo en la Tienda del Mo’ed.
+**31** Y lo comerán en cualquier lugar, ustedes y sus casas, porque salario es pa­ra ustedes a cambio de su trabajo en la Tienda del Mo'ed.
 **32** Y no cargarán por ello pecado, cuando ha­yan alzado su grosura de ella; y las santidades de los hijos de Israel no profanarán, y no mori­rán”.
 
 *La vaca roja y la purificación*
@@ -838,7 +838,7 @@ catorce mil setecientos, aparte de los muertos por el a­sunto de Koraj.
 **1** Y habló יהוה a Moshéh y a Aha­rón, diciendo:
 **2** Este es el decreto de la Torah que ha man­dado יהוה, diciendo: “Di a los hijos de Isra­el *que* tomen para ti una vaca roja completa, que no *haya* en ella defecto, que no se haya subido sobre ella yugo.
 **3** Y la darán a Eleazar el sacerdote, y la sacará ha­cia fuera del campamento, y la sacrificará de­lante de él.
-**4** Y tomará Eleazar el sacerdote de su sangre con su dedo; y rociará, hacia el frente de la faz de la Tienda del Mo’ed[^990], de su sangre siete ve­ces.
+**4** Y tomará Eleazar el sacerdote de su sangre con su dedo; y rociará, hacia el frente de la faz de la Tienda del Mo'ed[^990], de su sangre siete ve­ces.
 **5** Y será quemada la vaca a sus ojos; su piel, su carne, su sangre y su estiércol se quemará.
 **6** Y tomará el sacerdote madera de cedro, oré­gano y gusano carmesí, y *los* lanzará al medio del fue­go de la vaca.
 **7** Y lavará sus vestiduras el sacerdote, y lavará su carne en agua, y después entrará al campa­men­to, pero será impuro el sacerdote hasta el atarde­cer.
@@ -867,7 +867,7 @@ catorce mil setecientos, aparte de los muertos por el a­sunto de Koraj.
 **3** Y peleó el pueblo con Moshéh, y dijeron, diciendo: ¡Si solo hubiéramos muerto en la muer­te de nuestros hermanos delante de יהוה!
 **4**¿Y por qué trajeron a la asamblea de יהוה a este desierto para morir allí nosotros y nues­tras bestias?
 **5**¿Y por qué nos hicieron subir de Mitzráim, para traernos a este lugar malo? ¡No es un lu­gar de semilla, higo, vid y granada, y agua no hay para beber!
-**6** Y fueron Moshéh y Aharón de delante de la asamblea hacia la entrada de la Tienda del Mo’ed[^996], y cayeron sobre sus rostros; y apareció la gloria de יהוה a ellos.
+**6** Y fueron Moshéh y Aharón de delante de la asamblea hacia la entrada de la Tienda del Mo'ed[^996], y cayeron sobre sus rostros; y apareció la gloria de יהוה a ellos.
 **7** Y habló יהוה a Moshéh, diciendo:
 **8** Toma la vara y reúne a la congregación, tú y Aharón tu hermano, y hablarán a la peña a los ojos de ellos, y dará su agua. Y sacarás para ellos agua de la peña, y darás de beber a la con­gregación y a sus bestias.
 **9** Y tomó Moshéh la vara de delante de יהוה, como le había ordenado;
@@ -1048,7 +1048,7 @@ Declaración de Bilam, hijo de Beor, y declaración del fuerte abierto de ojos;*
 **6** Como arroyos que se esparcen, como jardi­nes junto al río,
 como cedros junto a las aguas.
 **7** Fluirá agua de su balde, y su simiente *estará* en muchas aguas; y se elevará* más* que Agag su rey, y se levanta­rá su reino.
-**8** El lo saca de Mitzráim; como cuernos de búfalo es para él.Consumirá las naciones, sus opresores,
+**8** El lo saca de Mitzráim; como cuernos de búfalo es para él. Consumirá las naciones, sus opresores,
  y sus huesos romperá, y *con *sus flechas* los* herirá.**9** Se agacha, se acuesta como el león y como leona, ¿quién lo levantará? El que te bendice *es* bendito, y el que te excluye, excluido.
 
 **10** Y se calentó la nariz de Balak hacia Bilam, y aplaudió con sus palmas, y dijo Balak a Bi­lam: Para perforar *a *mis enemigos te llamé, y he aquí, bendiciendo, has bendecido estas tres veces.
@@ -1064,7 +1064,7 @@ visión del Shadai ve, caído, pero descubiertos los ojos. **17** Lo veo, pero n
  aplastará las esquinas de Moab y destruirá todos los hijos de Shet.**18** Y será Edom una posesión,
 Seir, sus enemigos.E Israel, hacedor de valor.
 **19** Y dominará desde Yaakov, y hará perder el sobreviviente de la ciudad.
-**20** Y vio a Amalek, y tomó su parábola, y dijo:Primera de las naciones *fue* Amalek, pero su postrer *será* hasta perdición.
+**20** Y vio a Amalek, y tomó su parábola, y dijo: Primera de las naciones *fue* Amalek, pero su postrer *será* hasta perdición.
 **21** Y vio al keiní, y tomó su parábola, y dijo: Olam[^1023] es tu asentamiento, y puesto en ro­ca *está*
 tu nido.
 **22** Sino que será para quemar Káin; ¿hasta cuándo Ashur te capturará?
@@ -1083,7 +1083,7 @@ tu nido.
 **3** Y se unió Israel a Baal Peor, y se calentó la nariz de יהוה contra Israel.
 **4** Y dijo יהוה a Moshéh: Toma a todos los cabezas del pueblo y cuélgalos pa­ra יהוה frente al sol, y regresará el calor de la nariz de יהוה de Israel.
 **5** Y dijo Moshéh a los jueces de Israel: Mate *cada* hombre *a* sus hombres, los que se unie­ron a Baal Peor.
-**6** Y he aquí, un hombre de los hijos de Israel vino y acercó hacia sus hermanos a una midia­nit[^1024], a los ojos de Moshéh y a los o­jos de toda la congregación de los hijos de Is­rael, y ellos lloraban *a* la entrada de la Tienda del Mo’ed[^1025].
+**6** Y he aquí, un hombre de los hijos de Israel vino y acercó hacia sus hermanos a una midia­nit[^1024], a los ojos de Moshéh y a los o­jos de toda la congregación de los hijos de Is­rael, y ellos lloraban *a* la entrada de la Tienda del Mo'ed[^1025].
 **7** Y *lo *vio Pinjas, hijo de Eleazar, hijo de Aha­rón el sacerdote, y se levantó de entre la con­grega­ción, y tomó una lanza en su mano;
 **8** y fue tras el hombre de Israel a la tienda, y perforó a los dos, al hombre de Israel y a la mu­­jer por su estómago. Y se detuvo la plaga de sobre los hijos de Israel.
 **9** Y fueron los muertos por la plaga, veinticua­tro mil.
@@ -1170,7 +1170,7 @@ tu nido.
 **27**
 
 **1** Y se acercaron las hijas de Tzelofjad, hijo de Jefer, hijo de Guilad, hijo de Ma­jir, hijo de Menasheh, por las familias de Menasheh, hijo de Iosef; y estos *eran* los nom­bres de sus hijas: Majláh, Noah, Jogláh, Milcáh y Tirtzah.
-**2** Y ellas se pararon delante de Moshéh y de­lan­te de Eleazar el sacerdote, y delante de los jefes y toda la congregación, *a* la entrada de la Tienda del Mo’ed, diciendo:
+**2** Y ellas se pararon delante de Moshéh y de­lan­te de Eleazar el sacerdote, y delante de los jefes y toda la congregación, *a* la entrada de la Tienda del Mo'ed, diciendo:
 **3** Nuestro padre murió en el desierto, y él no estuvo en medio de la asamblea que confabuló contra __יהוה__, en la asamblea de Koraj, pero en su peca­do mu­rió, e hijos no tuvo para él.
 **4** ¿Por qué se eliminará el nombre de nuestro pa­dre de entre su familia porque no *tuvo *para él hijo? Da a nosotras propiedad entre los her­manos de nuestro padre.
 **5** Y se acercó Moshéh al proceso legal delante de __יהוה__.
@@ -1236,14 +1236,14 @@ tu nido.
 
 **29**
 
-**1**“En el mes séptimo, en el *día* uno del mes, convocación de santidad habrá pa­ra ustedes; cualquier trabajo de servicio no ha­rán. Día de t’ruáh[^1047] será pa­ra ustedes.
+**1**“En el mes séptimo, en el *día* uno del mes, convocación de santidad habrá pa­ra ustedes; cualquier trabajo de servicio no ha­rán. Día de t'ruáh[^1047] será pa­ra ustedes.
 **2** Y harán una ofrenda ascendida[^1048] para olor calmante a __יהוה__: un toro hijo de ganado, un carnero, corderos hijos de un año, siete, completos;
 **3** y su ofrenda de grano[^1049], harina fina mezclada con aceite, tres décimas para el toro, dos déci­mas para el carnero,
 **4** y una décima para el cordero uno, por los sie­te corderos;
 **5** y un peludo de las cabras *para* ofrenda por el pecado, para hacer reconciliación por ustedes;
 **6** además de la ofrenda ascendida del mes y su o­frenda de grano, la ofrenda ascendida de la conti­nui­dad y su ofrenda de grano, y sus ofren­das derra­madas, conforme a su proceso legal[^1050], para olor calmante, ofrenda de fuego a __יהוה__.
 **7** Y en el décimo *día *de este mes séptimo, convocación de santidad habrá para ustedes, y a­fli­girán sus* *gargantas[^1051]; cualquier trabajo no harán.
-**8** Y acercarán una ofrenda ascendida a __יהוה__, olor calmante: un toro hijo de ganado, un car\-nero, corderos hijos de un año, siete, comple­tos se­rán para ustedes;
+**8** Y acercarán una ofrenda ascendida a __יהוה__, olor calmante: un toro hijo de ganado, un carnero, corderos hijos de un año, siete, comple­tos se­rán para ustedes;
 **9** y su ofrenda de grano, harina fina mezclada con aceite, tres décimas para el toro, dos dé­cimas para el carnero uno;
 **10** una décima, una décima para el cordero u­no, por los siete corderos;
 **11** *y*
@@ -1308,7 +1308,7 @@ un peludo de las cabras *para* ofrenda por el pecado, además de la ofrenda por 
 **3** Y habló Moshéh al pueblo, diciendo: Saquen de ustedes hombres para el ejército, y sean so­bre Midián para dar la venganza de __יהוה__ en Midián.
 **4** Mil por tribu, mil por tribu, por todas las tri­bus de Israel, enviarán al ejército.
 **5** Y fueron entregados de los miles de Israel, mil por tribu, doce mil sacados del ejército.
-**6** Y los envió Moshéh, mil por tribu, al ejército con ellos, y a Pinjas, hijo de Eleazar el sacerdote, para el ejército, y los utensilios de la Santidad, y las trompetas de t’ruáh[^1059] en su mano.
+**6** Y los envió Moshéh, mil por tribu, al ejército con ellos, y a Pinjas, hijo de Eleazar el sacerdote, para el ejército, y los utensilios de la Santidad, y las trompetas de t'ruáh[^1059] en su mano.
 **7** Y salieron sobre Midián, conforme ordenó __יהוה__ a Moshéh, y mataron *a *todo varón.
 **8** Y a los reyes de Midián mataron junto a sus muertos: a Evi, a Rekem, a Tzur, a Jur y a Re­ba, los cinco reyes de Midián; y a Bilam, hijo de Beor, mataron con espada.
 **9** Y capturaron los hijos de Israel a las mujeres de Midián y a sus niños; y todas sus bestias, to­dos sus ganados y todo su poder saquearon.
@@ -1359,7 +1359,7 @@ un peludo de las cabras *para* ofrenda por el pecado, además de la ofrenda por 
 **51** Y tomaron Moshéh y Eleazar el sacerdote el o­ro de ellos, todos utensilios de obra.
 **52** Y era todo el oro de la terumáh que elevaron a __יהוה__: dieciséis mil setecien­tos cincuenta shekel, de los jefes de miles y de los jefes de cientos.
 **53** Los hombres de guerra habían saqueado, *cada* hombre para sí.
-**54** Y tomaron Moshéh y Eleazar el sacerdote, el oro de los jefes de miles y de cientos, y lo lle­va­ron a la Tienda del Mo’ed[^1065] *como *memorial para los hijos de Israel delante de __יהוה__.
+**54** Y tomaron Moshéh y Eleazar el sacerdote, el oro de los jefes de miles y de cientos, y lo lle­va­ron a la Tienda del Mo'ed[^1065] *como *memorial para los hijos de Israel delante de __יהוה__.
 
 *Reubén y Gad piden habitar en Guilad*
 
@@ -1592,7 +1592,7 @@ a la tribu de la familia de su padre.
 [^870]: Tiempo señalado. Así en el resto del cap.
 [^871]: Heb.: *Tajash.* Así en el resto del cap.
 [^872]: Heb.: *Tejélet. *Así en el resto del cap.
-[^873]: O sea, el ‘*coccus ilisis’*, de él sacaban el tinte carmesí.
+[^873]: O sea, el ‘*coccus ilisis'*, de él sacaban el tinte carmesí.
 [^874]: Candelabro.
 [^875]: Coatita. Así también en los versículos 34 y 37.
 [^876]: Gersonita. Así también en los versículos 27 y 28.
@@ -1617,13 +1617,13 @@ a la tribu de la familia de su padre.
 [^895]: Lit.: *se caerán. *
 [^896]: Heb.: *Oláh. *
 [^897]: Heb.: *Jatat. *
-[^898]: Heb.: *Sh’lamim. *
+[^898]: Heb.: *Sh'lamim. *
 [^899]: Panes sin levadura. Así también en vers. 17.
 [^900]: Heb.: *Tenufáh.*
 [^901]: Heb.: *Terumáh. *
-[^902]: Heb.: *Ievarejejá יהוה ve’ishmereja. *
-[^903]: Heb.: *Ia’er יהוה panaiv eleija vijuneka. *
-[^904]: Heb.: *Isá יהוה panaiv eleija ve’iasem lejá shalom. *
+[^902]: Heb.: *Ievarejejá יהוה ve'ishmereja. *
+[^903]: Heb.: *Ia'er יהוה panaiv eleija vijuneka. *
+[^904]: Heb.: *Isá יהוה panaiv eleija ve'iasem lejá shalom. *
 [^905]: Ofrenda de acercamiento.* *Así en el resto del cap.
 [^906]: Tabernáculo.* *
 [^907]: Tiempo señalado.* *
@@ -1632,14 +1632,14 @@ a la tribu de la familia de su padre.
 [^910]: Heb.: *Minjáh. *Así en el resto del cap.
 [^911]: Heb.: *Oláh. *Así en el resto del cap.
 [^912]: Heb.: *Jatat. *Así en el resto del cap.
-[^913]: Heb.: *Sh’lamim. *Así en el resto del cap.
+[^913]: Heb.: *Sh'lamim. *Así en el resto del cap.
 [^914]: Lit.: *diez, diez, la cuchara.*
 [^915]: Heb.: *Janucáh.*
 [^916]: Tiempo señalado. Así también en el cap. 8.
 [^917]: Candelabro. Así también en los versículos 3 y 4.
 [^918]: Levitas. Así en el resto del cap.
 [^919]: U, *obstáculo.*
-[^920]: Heb.: *Mo’ed. *Así también en vers. 7.
+[^920]: Heb.: *Mo'ed. *Así también en vers. 7.
 [^921]: O sea, en este caso, *persona muerta.*
 [^922]: O, *inaptos. *Heb.: *Temeim.*
 [^923]: Ofrenda de acercamiento.
@@ -1660,7 +1660,7 @@ a la tribu de la familia de su padre.
 [^938]: Madianita.
 [^939]: Otra lectura posible es: *como los que se quejan del hambre en los ojos de.*
 [^940]: Quema.
-[^941]: Heb.: *Ba’aráh.*
+[^941]: Heb.: *Ba'aráh.*
 [^942]: Pepinos; se desconoce con exactitud.
 [^943]: Fruta egipcia, tal vez, *melón.*
 [^944]: Maná. Así también en los versículos 7 y 9.
@@ -1685,7 +1685,7 @@ a la tribu de la familia de su padre.
 [^963]: Destrucción.
 [^964]: Heb.: *Ishéh.*
 [^965]: Heb.: *Oláh. *Así en el resto del cap.
-[^966]: Heb.: *Mo’adim.*
+[^966]: Heb.: *Mo'adim.*
 [^967]: Ofrenda de acercamiento.
 [^968]: Heb.: *Minjáh.* Así en el resto del cap.
 [^969]: Tiempo oculto, solo conocido por Elohim.
@@ -1725,7 +1725,7 @@ a la tribu de la familia de su padre.
 [^1003]: Lit.: *se hizo corto.*
 [^1004]: Garganta, ser vivo.
 [^1005]: O, *despreciado*.
-[^1006]: Heb.: *Ha’nejashim ha’serafim.*
+[^1006]: Heb.: *Ha'nejashim ha'serafim.*
 [^1007]: Heb.: *Saraf.*
 [^1008]: Heb.: *Nejash Nejóshet.*
 [^1009]: Amorreo. Así en el resto del cap.
@@ -1756,23 +1756,23 @@ a la tribu de la familia de su padre.
 [^1036]: O, *escuche.*
 [^1037]: Luces.
 [^1038]: Ofrenda de acercamiento.
-[^1039]: Heb.: *Mo’ed.*
+[^1039]: Heb.: *Mo'ed.*
 [^1040]: Heb.: *Ishéh.* Así en el resto del cap.
 [^1041]: Heb.: *Oláh. *Así en el resto del cap.
 [^1042]: Heb.: *Minjáh.* Así en el resto del cap.
 [^1043]: Heb.: *Jatat.* Así en el resto del cap.
 [^1044]: Heb.: *Bikurim.*
 [^1045]: Heb.: *Shavuot.*
-[^1046]: Heb.: *Mikrá Ha’kódesh.*
-[^1047]: Expresión de alegría, pronunciado tanto con la voz como con un shofar. Heb.: *Yom T’ruáh.*
+[^1046]: Heb.: *Mikrá Ha'kódesh.*
+[^1047]: Expresión de alegría, pronunciado tanto con la voz como con un shofar. Heb.: *Yom T'ruáh.*
 [^1048]: Heb.: *Oláh. *Así en el resto del cap.
 [^1049]: Heb.: *Minjáh.* Así en el resto del cap.
 [^1050]: Heb.: *Mishpat. *Así en el resto del cap.
 [^1051]: Heb.: *Néfesh.*
 [^1052]: Heb.: *Kipurim.*
 [^1053]: O, *retentiva. *Heb.: *Atzaráh.*
-[^1054]: Heb.: *Mo’adim.*
-[^1055]: Heb.: *Sh’lamim.*
+[^1054]: Heb.: *Mo'adim.*
+[^1055]: Heb.: *Sh'lamim.*
 [^1056]: Lit.: *expulsada.*
 [^1057]: O, *Reivindica la reivindicación.*
 [^1058]: Madianitas*.*

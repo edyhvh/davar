@@ -5,21 +5,21 @@ __MALAJÍ \(MALAQUÍAS\)__מלאכי* *
 **1**
 
 **1** Carga, palabra de __יהוה__ a Israel por mano de Malají.
-**2** Yo los he amado –dijo __יהוה__–. Y ustedes han dicho: ¿En qué nos has amado?¿No *era* Esav hermano de Yaakov? –declaración de __יהוה__–, y amé a Yaakov,
+**2** Yo los he amado –dijo __יהוה__–. Y ustedes han dicho: ¿En qué nos has amado? ¿No *era* Esav hermano de Yaakov? –declaración de __יהוה__–, y amé a Yaakov,
 **3** y a Esav desamé, y puse sus montes *para* devastación y su herencia para los reptiles del desierto.
 **4** Porque dirá Edom: Hemos sido destrozados, pero volveremos y edificaremos las desolacio­nes. Así ha dicho __יהוה__ Tzebaot: Ellos edifi­carán y Yo derribaré. Y los llamarán frontera de maldad y el pueblo *con* el que se ha enfurecido __יהוה__ hasta siempre.
 **5** Y sus ojos *lo* verán, y ustedes dirán: Será grande __יהוה__ por encima de la frontera de Israel.
 
 *Pecado de los sacerdotes*
 
-**6** Un hijo honra *al* padre, y un siervo a su amo. Y si Yo soy Padre, ¿dónde está mi honor? Y si Yo soy Amo, ¿dónde está mi temor? –ha dicho __יהוה__ Tzebaot a ustedes, los sacerdotes que desprecian mi Nombre–. Y ustedes dicen: “¿En qué hemos despreciado tu Nombre?”
-**7** Acercan sobre mi altar pan profanado. Y uste­des dicen: “¿En qué te hemos profanado?” En que ustedes dicen: “La mesa de __יהוה__ es des­preciable”.
+**6** Un hijo honra *al* padre, y un siervo a su amo. Y si Yo soy Padre, ¿dónde está mi honor? Y si Yo soy Amo, ¿dónde está mi temor? –ha dicho __יהוה__ Tzebaot a ustedes, los sacerdotes que desprecian mi Nombre–. Y ustedes dicen: “¿En qué hemos despreciado tu Nombre? ”
+**7** Acercan sobre mi altar pan profanado. Y uste­des dicen: “¿En qué te hemos profanado? ” En que ustedes dicen: “La mesa de __יהוה__ es des­preciable”.
 **8** Y cuando acercan un ciego para sacrificar, ¿no es malo? Y cuando acercan un cojo y un enfermo, ¿no es malo? ¡Acércalo, por favor, a tu gobernador! ¿Te aceptará o levantará tu ros­tro? –ha dicho __יהוה__ Tzebaot.
 **9** Y ahora, rueguen por favor al rostro de El[^3632], y nos tendrá misericordia. ¡De la mano de ustedes ha sido esto! ¿Él levantará los rostros de uste­des? –ha dicho __יהוה__ Tzebaot.
 **10** ¡Quién *habrá* incluso entre ustedes que cie­rre las puertas, y no encendieran mi altar por nada! No hay para Mí deleite en ustedes –ha di­cho __יהוה__ Tzebaot– y ofrenda de grano no aceptaré de la mano de ustedes.
 **11** Porque desde el amanecer del sol y hasta su puesta, grande es mi Nombre entre las naciones, y en todo lugar incienso *será* acercado a mi Nombre, y ofrenda de grano limpia; porque grande es mi Nombre entre las naciones –ha di­cho __יהוה__ Tzebaot.
 **12** Y ustedes lo profanan, cuando dicen: “La mesa de Adonai es profana, y su fruto, despre­ciable su comida”.
-**13** Y dicen: “He aquí, ¡qué cansancio!” Y lo despreciaron[^3633] –ha dicho __יהוה__ Tzebaot– Y trajeron lo robado, cojo y enfermo, y trajeron la ofrenda de grano, ¿la aceptaré de la mano de ustedes? –ha dicho __יהוה__.
+**13** Y dicen: “He aquí, ¡qué cansancio! ” Y lo despreciaron[^3633] –ha dicho __יהוה__ Tzebaot– Y trajeron lo robado, cojo y enfermo, y trajeron la ofrenda de grano, ¿la aceptaré de la mano de ustedes? –ha dicho __יהוה__.
 **14** ¡Y excluido el engañoso que tiene en su reba­ño un macho y *lo* promete, pero sacrifica uno dañado a Adonai! Porque Rey Grande soy Yo –ha dicho __יהוה__ Tzebaot– y mi Nombre, temi­do entre los gentiles.
 
 **2**
@@ -40,7 +40,7 @@ __MALAJÍ \(MALAQUÍAS\)__מלאכי* *
 **11** Ha traicionado Iehudáh, y abominación se ha hecho en Israel y en Yerushaláim, porque ha pro­fanado Iehudáh la Santidad de __יהוה__ *con* que ha amado[^3637], y se ha casado *con* la hija de un dios extraño.
 **12** Cortará __יהוה__ al hombre que lo haga, *al* que está despierto y *al* que responde, de las tien­das de Yaakov, y *aunque* acerque ofrenda de grano a __יהוה__ Tzebaot.
 **13** Y esta segunda *cosa* ustedes hacen: cubrien­do de lágrimas el altar de __יהוה__, llanto y gemi­do, debido a que Él ya no mira hacia la ofrenda de grano ni *la* toma *con* aceptación[^3638] de la mano de ustedes.
-**14** Y ustedes dicen: “¿Por qué?” Porque __יהוה__ ha sido testigo entre tú y la mujer de tu juventud, a la cual tú has traicionado, ¡y ella es tu compa­ñera y la mujer de tu pacto!
+**14** Y ustedes dicen: “¿Por qué? ” Porque __יהוה__ ha sido testigo entre tú y la mujer de tu juventud, a la cual tú has traicionado, ¡y ella es tu compa­ñera y la mujer de tu pacto!
 **15** ¿Y el Único no ha hecho, y tiene carne y espí­ritu[^3639]? ¿Y qué el Único busca? ¡Una simiente de Elohim! Tengan cuidado en su espíritu[^3640], y a la mujer de tu juventud no trai­ciones.
 **16** Porque Él odia el divorcio –ha dicho __יהוה__, Elohim de Israel– y *al *que cubre de violencia sobre su vestido –ha dicho __יהוה__ Tzebaot–. Tengan cuidado en su espíri­tu, y no traicionen.
 **17** Han cansado *a *__יהוה__ con sus palabras. Y ustedes dicen: ¿En qué hemos cansado? En que dicen: Todo el que hace mal es bueno en los ojos de __יהוה__, y en ellos Él se deleita; o: ¿Dón­de está el Elohim del juicio?
@@ -58,8 +58,8 @@ __MALAJÍ \(MALAQUÍAS\)__מלאכי* *
 
 *El décimo y la terumáh*
 
-**7** Desde los días de sus padres ustedes se han desviado de mis estatutos y no los guardaron. ¡Vuelvan a Mí y Yo volveré a ustedes! –ha di­cho __יהוה__ Tzebaot. Y ustedes dicen: “¿Cómo volveremos?”
-**8** ¿Robará hombre *a* Elohim? Porque ustedes me roban. Y ustedes dicen: “¿En qué te hemos robado?” *En* el décimo y la terumáh[^3644].
+**7** Desde los días de sus padres ustedes se han desviado de mis estatutos y no los guardaron. ¡Vuelvan a Mí y Yo volveré a ustedes! –ha di­cho __יהוה__ Tzebaot. Y ustedes dicen: “¿Cómo volveremos? ”
+**8** ¿Robará hombre *a* Elohim? Porque ustedes me roban. Y ustedes dicen: “¿En qué te hemos robado? ” *En* el décimo y la terumáh[^3644].
 **9** Con exclusión ustedes han sido excluidos, y a Mí ustedes *me* roban, la nación, toda ella.
 **10** Traigan todo el décimo a la casa del almacén, y haya alimento en mi casa; y pruébenme, por favor, en esto –ha dicho __יהוה__ Tzebaot– si no les abriré las ventanas de los cielos, y derramaré para ustedes bendición hasta no *dar* abasto.
 **11** Y reprenderé por ustedes al devorador, y no les destruirá el fruto del suelo; y no será estéril[^3645] para ustedes la vid en el campo –ha dicho יהוה Tzebaot.

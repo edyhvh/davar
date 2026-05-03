@@ -5,7 +5,7 @@ __JAGAI \(HAGEO\)__חגי
 **1**
 
 **1** En el año dos de Dareyávesh el rey, en el mes sexto, en el *día* uno del mes, fue pala­bra de יהוה por mano de Jagai el profeta a Zerubabel, hijo de Shealtiel, gobernador de Ie­hudáh, y a Yehoshúa, hijo de Iehotzadak, el gran sa­cerdote, diciendo:
-**2** Así ha dicho יהוה Tzebaot, diciendo: “Este pueblo dice: ‘No ha llegado el tiempo, el tiempo de la casa de יהוה para edificarla’ ”.
+**2** Así ha dicho יהוה Tzebaot, diciendo: “Este pueblo dice: ‘No ha llegado el tiempo, el tiempo de la casa de יהוה para edificarla' ”.
 **3** Y fue palabra de יהוה por mano de Jagai el profeta, diciendo:
 **4** ¿Es tiempo para ustedes habitar en sus casas techadas, y esta casa *está* desolada?
 **5** Y ahora, así ha dicho יהוה Tzebaot: Pongan su corazón sobre sus caminos;
@@ -35,7 +35,7 @@ __JAGAI \(HAGEO\)__חגי
 **9** “Grande será la gloria de esta casa, la postrera *más* que la primera” –ha dicho יהוה Tzebaot– “y en este lugar daré shalom” –declara­ción de יהוה Tzebaot.
 **10** En *el día* veinticuatro del *mes* noveno, en el año dos de Dareyávesh, fue palabra de יהוה a Jagai el profeta, diciendo:
 **11** Así ha dicho יהוה Tzebaot: “Pide por fa­vor a los sacerdotes Torah, diciendo:
-**12** ‘He aquí, un hombre lleva carne consagrada en el ala de su vestido, y toca con su ala pan, alimento hervido, vino, aceite o cualquier comi­da, ¿será consagrada?’ ” Y respondieron los sa­cerdotes, y dijeron: No.
+**12** ‘He aquí, un hombre lleva carne consagrada en el ala de su vestido, y toca con su ala pan, alimento hervido, vino, aceite o cualquier comi­da, ¿será consagrada? ' ” Y respondieron los sa­cerdotes, y dijeron: No.
 **13** Y dijo Jagai: Si toca un impuro de cadáver[^3564] cualquiera de estas *cosas*, ¿será impura? Y respondieron los sacer­dotes, y dije­ron: Será impura.
 **14** Y respondió Jagai, y dijo: “Así es este pueblo y así es esta nación delante de Mí” –declaración de יהוה– “y así es toda obra de sus manos; y lo que acercan allí, impuro es.
 **15** Y ahora, pongan por favor sus corazones desde este día y en adelante[^3565], desde antes que se pusiera piedra sobre piedra en el Hejal[^3566] de יהוה,

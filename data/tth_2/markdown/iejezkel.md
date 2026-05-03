@@ -141,11 +141,11 @@ Profecía contra los montes de Israel
 **7** Y caerá el asesinado[^2899] en medio de ustedes, y sabrán que Yo soy יהוה.
 **8** Pero dejaré que haya[^2900] para ustedes fugitivos de espada en las naciones, cuando sean esparcidos en las tierras.
 **9** Y me recordarán los fugitivos de ustedes a Mí en las naciones que fueron llevados cauti­vos allí, que he quebrantado su corazón forni­cario que se des­vió de junto a Mí y sus ojos fornicarios detrás de sus ídolos; y sentirán re­pugnancia por sus propios rostros por los ma­les que han hecho en todas sus abominaciones.
-**10** Y sabrán que Yo soy יהוה; no por nada he hablado para hacer a ustedes este mal’ ”.
+**10** Y sabrán que Yo soy יהוה; no por nada he hablado para hacer a ustedes este mal' ”.
 **11** Así ha dicho Adonai יהוה: “Golpea con tu palma y estampa con tu pie, y di: ‘¡Ay[^2901]!, por todas las abominaciones malas de la casa de Israel, que por la espada, por el hambre y por la peste, caerán.
 **12** El lejano por la peste morirá, el cercano por la espada caerá, y el que quede y el que esté si­tiado por el hambre morirá. Y acabaré mi ira en ellos.
 **13** Y sabrán que Yo soy יהוה, cuando estén sus asesinados en medio de sus ídolos alrede­dor de sus altares, en toda colina alta, en todas las cabezas de los montes, y debajo de todo ár­bol verde y debajo de todo terebinto espeso, lugar el cual dieron allí olor agradable a todos sus ídolos.
-**14** Y extenderé mi mano sobre ellos y pondré la tierra más desolada y horrorizada que el de­sierto hacia Dibláh en todos sus asentamientos; y sabrán que Yo soy יהוה’ ”.
+**14** Y extenderé mi mano sobre ellos y pondré la tierra más desolada y horrorizada que el de­sierto hacia Dibláh en todos sus asentamientos; y sabrán que Yo soy יהוה' ”.
 
 El fin viene
 
@@ -254,21 +254,21 @@ Castigo de los príncipes malvados
 **3** los que dicen: “No está pronto el edificar ca­sas; ella es la olla y nosotros la carne”.
 **4** Por eso, profetiza sobre ellos, profetiza, hijo de hombre.
 **5** Y cayó sobre mí el Rúaj de יהוה, y me dijo: Di: “Así ha dicho יהוה: ‘Así han dicho, casa de Israel, y lo que sube de su espíritu Yo lo conozco.
-**6** Han hecho que sean muchos sus asesinados en esta ciudad, y han llenado las calles de ella de asesinados’.
+**6** Han hecho que sean muchos sus asesinados en esta ciudad, y han llenado las calles de ella de asesinados'.
 **7** Por eso, así ha dicho Adonai יהוה: ‘Sus asesinados, los que han puesto en medio de ella, ellos son la carne y ella la olla; pero a us­tedes Él los sacará de en medio de ella.
 **8** A la espada han temido, y espada haré venir sobre ustedes –declaración de Adonai יהוה.
 **9** Y los sacaré a ustedes de en medio de ella, y los daré en mano de extraños y haré contra us­tedes juicios.
 **10** Por la espada caerán; sobre la frontera de Israel los juzgaré a ustedes; y sabrán que Yo soy יהוה.
 **11** Ella no será para ustedes por olla, y ustedes no serán en medio de ella por carne; hacia la frontera de Israel los juzgaré a ustedes.
-**12** Y sabrán que Yo soy יהוה, que en mis estatutos no han andado y mis juicios no han hecho, y conforme a los juicios de las naciones que están alrededor de ustedes han hecho’ ”.
+**12** Y sabrán que Yo soy יהוה, que en mis estatutos no han andado y mis juicios no han hecho, y conforme a los juicios de las naciones que están alrededor de ustedes han hecho' ”.
 **13** Y sucedió que cuando yo profetizaba, Pela­tiáhu, hijo de Benaiáh, murió. Y caí sobre mi rostro y clamé a gran voz, y dije: ¡Ah, Adonai יהוה! Finalización haces Tú al remanente de Israel.
 
 Promesa de restauración
 
 **14** Y fue la palabra de יהוה a mí, diciendo:
 **15** Hijo de hombre, tus hermanos, tus herma­nos, los hombres de tu redención[^2919] y toda la casa de Israel, toda ella, los que han dicho a ellos los habitantes de Yerushaláim: “Aléjense de junto a יהוה; a nosotros ella ha sido dada, la tierra, para posesión”.
-**16** Por eso, di: “Así ha dicho Adonai יהוה: ‘Porque los alejé por las naciones y porque los esparcí por las tierras, pero seré para ellos por santuario pequeño en las tierras las cuales ha­bían entrado allí’ ”.
-**17** Por eso, di: “Así ha dicho Adonai יהוה: ‘Y los reuniré desde los pueblos y los recogeré desde las tierras que han sido esparcidos en ellas, y daré a ustedes la tierra de Israel’ ”.
+**16** Por eso, di: “Así ha dicho Adonai יהוה: ‘Porque los alejé por las naciones y porque los esparcí por las tierras, pero seré para ellos por santuario pequeño en las tierras las cuales ha­bían entrado allí' ”.
+**17** Por eso, di: “Así ha dicho Adonai יהוה: ‘Y los reuniré desde los pueblos y los recogeré desde las tierras que han sido esparcidos en ellas, y daré a ustedes la tierra de Israel' ”.
 **18** Y entrarán allá y apartarán todas sus repug­nancias y todas sus abominaciones de ella.
 **19** Y les daré a ellos un corazón y un ánimo[^2920] nuevo daré en medio de ustedes. Y apartaré el corazón de piedra de su carne y les daré un co­razón de carne,
 **20** a fin de que en mis decretos[^2921] anden y mis procesos legales[^2922] guarden y los hagan. Y serán para Mí por pueblo y Yo seré para ellos por Elohim.
@@ -290,8 +290,8 @@ Salida de Iejezkel en señal de la cautividad
 **6** A ojos de ellos sobre el hombro lo cargarás, en la tiniebla lo sacarás; tu rostro cubrirás y no verás la tierra, porque como señal te he dado a la casa de Israel.
 **7** E hice así como me fue ordenado. Mis uten­silios saqué como utensilios de exilio, de día; y en la tarde cavé para mí en la pared con mano; en la tiniebla lo saqué, sobre el hombro lo car­gué, a ojos de ellos.
 **8** Y fue palabra de יהוה a mí en la mañana, diciendo:
-**9** Hijo de hombre, ¿no te han dicho los de la casa de Israel, la casa de rebelión: “¿Qué haces tú?”
-**10** Diles: “Así ha dicho Adonai יהוה: ‘El príncipe es esta carga en Yerushaláim y toda la casa de Israel que están en medio de ellos’ ”.
+**9** Hijo de hombre, ¿no te han dicho los de la casa de Israel, la casa de rebelión: “¿Qué haces tú? ”
+**10** Diles: “Así ha dicho Adonai יהוה: ‘El príncipe es esta carga en Yerushaláim y toda la casa de Israel que están en medio de ellos' ”.
 **11** Di: “Yo soy señal para ustedes; como he hecho, así se hará a ellos; en el exilio, en el cautiverio, se irán”.
 **12** Y el príncipe que está en medio de ellos, en el hombro cargará en la tiniebla, y saldrá. En la pared cavarán para sacar por ella. Su rostro cu­brirá para que no vea con[^2923] los ojos él la tierra.
 **13** Y extenderé mi red sobre él y será atrapado en mi trampa. Y lo haré entrar a Babel, tierra de los casdim, pero a ella no la verá, y allí mo­rirá.
@@ -301,15 +301,15 @@ Salida de Iejezkel en señal de la cautividad
 **17** Y fue palabra de יהוה a mí, diciendo:
 **18** Hijo de hombre, tu pan con temblor come­rás y tu agua con agitación y con ansiedad be­berás.
 **19** Y dirás al pueblo de la tierra: “Así ha dicho Adonai יהוה a los habitantes de Yerushaláim, al suelo de Israel: ‘Su pan con ansiedad come­rán y su agua con horror beberán, a fin de que sea desolada su tierra de su llenura debido a la violencia de todos los que habitan en ella.
-**20** Y las ciudades habitadas serán desoladas y la tierra devastación será; y sabrán que Yo soy יהוה’ ”.
+**20** Y las ciudades habitadas serán desoladas y la tierra devastación será; y sabrán que Yo soy יהוה' ”.
 **21** Y fue palabra de יהוה a mí, diciendo:
 **22** Hijo de hombre, ¿qué parábola es esta para ustedes sobre la tierra de Israel, al decir: “Se alargarán los días y se ha perdido toda visión”?
-**23** Por eso, diles: “Así ha dicho Adonai יהוה: ‘He hecho cesar esta parábola, y no la pa­rabolizarán más en Israel’, sino que, diles: ‘Se han acercado los días y la palabra de toda vi­sión.
+**23** Por eso, diles: “Así ha dicho Adonai יהוה: ‘He hecho cesar esta parábola, y no la pa­rabolizarán más en Israel', sino que, diles: ‘Se han acercado los días y la palabra de toda vi­sión.
 **24** Pues no habrá más ninguna visión de men­tira ni encanto[^2925] suave[^2926] en medio de la casa de Israel.
-**25** Porque Yo, יהוה, hablaré; que hablaré palabra, y se hará. No se prolongará más, por­que en los días de ustedes, casa de rebelión, hablaré palabra y la haré –declaración de Ado­nai יהוה’ ”.
+**25** Porque Yo, יהוה, hablaré; que hablaré palabra, y se hará. No se prolongará más, por­que en los días de ustedes, casa de rebelión, hablaré palabra y la haré –declaración de Ado­nai יהוה' ”.
 **26** Y fue palabra de יהוה a mí, diciendo:
 **27** Hijo de hombre, he aquí, la casa de Israel dice: “La visión que él ve es para muchos días, y para tiempos lejanos él profetiza”.
-**28** Por eso, diles: “Así ha dicho Adonai יהוה: ‘No se prolongará más ninguna de mis pa­labras; que hablaré palabra, y se hará’ ” –de­claración de Adonai יהוה.
+**28** Por eso, diles: “Así ha dicho Adonai יהוה: ‘No se prolongará más ninguna de mis pa­labras; que hablaré palabra, y se hará' ” –de­claración de Adonai יהוה.
 
 Condenación de los falsos profetas
 
@@ -321,19 +321,19 @@ Condenación de los falsos profetas
 **4** Como zorros en las desolaciones tus profetas, Israel, han sido.
 **5** No han subido ustedes en las brechas, ni han cercado vallado sobre la casa de Israel, para permanecer de pie en la batalla en el día de יהוה.
 **6** Han visto falsedad y adivinación de mentira los que dicen: “Declaración de יהוה”, y יהוה no los ha enviado; y han esperado el cum­plir de la palabra.
-**7** ¿No han visto visión de falsedad y adivina­ción de mentira han hablado, y dicen: “De­claración de יהוה”, y Yo no he hablado?’ ”
+**7** ¿No han visto visión de falsedad y adivina­ción de mentira han hablado, y dicen: “De­claración de יהוה”, y Yo no he hablado? ' ”
 **8** Por eso, así ha dicho Adonai יהוה: Porque han hablado falsedad y han visto mentira, por eso, heme aquí contra ustedes –declaración de יהוה.
 **9** Y será mi mano hacia los profetas que ven falsedad y adivinan mentira. En el consejo de mi pueblo no estarán, en la escritura de la casa de Israel no serán escritos y a la tierra de Israel no entrarán; y sabrán que Yo soy Adonai יהוה.
-**10** Por tanto, y por cuanto hicieron extraviar a mi pueblo, diciendo: “¡Shalom[^2928]!”, y no hay shalom, y él edifica tabique, y helos aquí, ¡lo embadur­nan con encalado!;
+**10** Por tanto, y por cuanto hicieron extraviar a mi pueblo, diciendo: “¡Shalom[^2928]! ”, y no hay shalom, y él edifica tabique, y helos aquí, ¡lo embadur­nan con encalado!;
 **11** di a los embadurnadores de encalado, y cae­rá; habrá lluvia desbordante y ustedes, piedras de granizo, caerán, y viento de tempestad esta­llará.
-**12** Y he aquí, ha caído la pared, ¿no se dirá a ustedes: “¿Dónde está el revestimiento que embadurnaron?”
+**12** Y he aquí, ha caído la pared, ¿no se dirá a ustedes: “¿Dónde está el revestimiento que embadurnaron? ”
 **13** Por eso, así ha dicho Adonai יהוה: Y he hecho estallar viento de tempestad en mi ardor, y lluvia desbordante en mi nariz habrá, y piedras de granizo con ardor para finalización.
 **14** Y derribaré[^2929] la pared que han embadurnado con encalado, y la haré tocar tie­rra y descubriré su cimiento. Y caerá, y ustedes serán acabados en medio de ella; y sabrán que Yo soy יהוה.
 **15** Y completaré mi ardor contra la pared y contra los que la embadurnaron con encalado, y diré a ustedes: “No está la pared y no están los que la embadurnaron,
 **16** los profetas de Israel que profetizan a Yerushaláim y ven para ella visión de shalom, y no hay shalom” –declaración de Adonai יהוה.
 **17** Y tú, hijo de hombre, pon tu rostro hacia las hijas de tu pueblo que profetizan de su propio corazón, y profetiza sobre ellas,
 **18** y dirás: “Así ha dicho Adonai יהוה: ‘¡Oy de las que cosen bandas de encanto sobre todas las articulaciones de las[^2930] manos y hacen velos sobre cabeza de toda altura para cazar vidas! ¿Las vidas de mi pueblo cazarán y las vidas de ustedes dejarán vivir?
-**19** ¿Y han de profanarme ante[^2931] mi pueblo con puñados de cebadas y con bocados de pan, para hacer morir vidas que no habrían de morir y para hacer vivir vidas que no ha­brían de vivir, por mentir ustedes a mi pueblo, oidores de mentira?’ ”
+**19** ¿Y han de profanarme ante[^2931] mi pueblo con puñados de cebadas y con bocados de pan, para hacer morir vidas que no habrían de morir y para hacer vivir vidas que no ha­brían de vivir, por mentir ustedes a mi pueblo, oidores de mentira? ' ”
 **20** Por eso, así ha dicho Adonai יהוה: Heme aquí contra sus bandas de encanto, que us­te­des cazan ahí las vidas como[^2932] pája­ros; y las rasgaré de sobre sus brazos y dejaré ir a las vidas, que ustedes cazan a las vidas como pája­ros.
 **21** Y rasgaré sus velos y arrebataré a mi pue­blo de la mano de ustedes, y no serán más en su mano pa­ra presa; y sabrán que Yo soy יהוה.
 **22** Porque se ha desanimado[^2933] el corazón del jus­to con mentira, y Yo no lo he desanimado, y para fortalecer las manos del malvado para que no se vuelva de su camino malo, para dejarlo vivir.
@@ -347,7 +347,7 @@ Juicio contra los idólatras
 **2** Y fue palabra de יהוה a mí, diciendo:
 **3** Hijo de hombre, estos hombres han levan­tado sus ídolos sobre su corazón, y el tropiezo de su iniquidad han puesto en frente de sus rostros; ¿buscando, seré buscado por ellos?
 **4** Por eso, háblales, y les dirás: “Así ha dicho Adonai יהוה: ‘Cualquier hombre[^2935] de la casa de Israel que levante sus ídolos en su corazón y el tropiezo de su iniqui­dad ponga en frente de su rostro, y venga al profeta, Yo, יהוה, le responderé en ello[^2936] con la multitud de sus ídolos,
-**5** a fin de agarrar a la casa de Israel en su cora­zón, que se han separado de junto a Mí por sus ídolos, todos ellos’ ”.
+**5** a fin de agarrar a la casa de Israel en su cora­zón, que se han separado de junto a Mí por sus ídolos, todos ellos' ”.
 **6** Por eso, di a la casa de Israel: “Así ha dicho Adonai יהוה: ‘Vuélvanse y regresen de jun­to a sus ídolos, y de junto a todas sus abomina­ciones hagan regresar sus rostros.
 **7** Porque cualquier hombre de la casa de Israel y del extranjero que re­side en Israel, que se hubiere separado de de­trás de Mí y levantare sus ídolos en su corazón y el tropiezo de su iniquidad pusiere en frente de su rostro, y viniere al profeta para pregun­tarle por Mí, Yo יהוה, le responderé por Mí.
 **8** Y pondré mi rostro contra aquel hombre y lo desolaré para señal y para parábola, y lo corta­ré de en medio de mi pueblo; y sabrán que Yo soy יהוה.
@@ -363,7 +363,7 @@ Justicia del castigo de Yerushaláim
 **14** y estuvieren estos tres hombres en medio de ella, Nóaj, Da­niel y Iob, ellos, por su justicia, rescatarían su vida –declaración de Adonai יהוה.
 **15** ¡Si animal malo hiciera pasar Yo por la tie­rra y la dejara sin hijos!, y fuera desolación por no haber quien pase a causa del animal,
 **16** estos tres hombres en medio de ella, vivo Yo –declaración de Adonai יהוה–, ¡si hijos o si hijas rescataran ellos!, sólo ellos serían rescatados, y la tierra sería desolación.
-**17** O si espada hiciera venir Yo sobre aquella tierra, y dijera: “¡Espada pasará por la tierra!”, y cortara de ella hombre y bestia,
+**17** O si espada hiciera venir Yo sobre aquella tierra, y dijera: “¡Espada pasará por la tierra! ”, y cortara de ella hombre y bestia,
 **18** y estos tres hombres en medio de ella, vivo Yo –declaración de Adonai יהוה–, no resca­tarían hijos e hijas, porque ellos, sólo ellos, se­rían rescatados.
 **19** O si peste enviara Yo a aquella tierra, y de­rramara mi ardor sobre ella con sangre, para cortar de ella hombre y bestia,
 **20** y Nóaj, Daniel y Iob en medio de ella, vivo Yo –declaración de Adonai יהוה–, ¡si hijo o si hija rescataran ellos!, por su justicia, rescata­rían su vida.
@@ -393,9 +393,9 @@ Origen de Yerushaláim
 **3** y dirás: “Así ha dicho Adonai יהוה a Yerushaláim: ‘Tu origen y tu nacimien­to es de la tie­rra del kenaaní[^2939], tu padre, el emorí[^2940], y tu madre, jitit[^2941].
 **4** Y tu nacimiento, en el día de tu nacimiento no fue cortado tu ombligo, y en aguas no fuiste lavada para limpieza, y salando no fuiste sala­da y envolviendo no fuiste envuelta.
 **5** No se compadeció por ti ojo para hacer por ti una de estas cosas, para tener piedad por ti; y fuiste lanzada a la faz del campo en la aversión de tu ser en el día de tu nacimiento.
-**6** Y pasé por ti y te vi pisoteada en tus sangres. Y te dije en tus sangres: “¡Vive!” Y te dije en tus sangres: “¡Vive!”
+**6** Y pasé por ti y te vi pisoteada en tus sangres. Y te dije en tus sangres: “¡Vive! ” Y te dije en tus sangres: “¡Vive! ”
 **7** Miríada como el brote del campo Yo te puse. Y aumentaste y creciste, y viniste con adorno de adornos; tus pechos se afirmaron y tu cabe­llo brotó, pero tú estabas desnuda y descubier­ta.
-**8** Y pasé por ti y te vi, y he aquí, tu tiempo era tiempo de amores; y extendí mi borde sobre ti y cubrí tu desnudez. Te juré y entré en pacto contigo’ –declaración de Adonai יהוה– ‘y fuiste para Mí.
+**8** Y pasé por ti y te vi, y he aquí, tu tiempo era tiempo de amores; y extendí mi borde sobre ti y cubrí tu desnudez. Te juré y entré en pacto contigo' –declaración de Adonai יהוה– ‘y fuiste para Mí.
 **9** Y te lavé en las aguas, enjuagué tus sangres de sobre ti y te ungí con aceite.
 **10** Y te vestí bordado y te calcé piel de jirafa[^2942]; y te até con lino fino y te cubrí de seda.
 **11** Y te adorné ornamento y puse pulseras en tu mano y un collar en tu cuello.
@@ -413,14 +413,14 @@ Infidelidad de Yerushaláim
 **20** Y tomaste a tus hijos y a tus hijas que diste a luz para Mí y los sacrificaste para ellos para comer. ¿Pequeñez eran tus prostituciones?
 **21** ¡Y sacrificaste a mis hijos, y los diste para hacerlos pasar a ellos!
 **22** Y con todas tus abominaciones y tus prosti­tuciones no recordaste los días de tu juventud, cuando estabas desnuda y descubierta, piso­teada en tu sangre estabas.
-**23** Y sucedió que después de toda tu maldad, “¡Oy, oy de ti!” –declaración de Adonai יהוה,
+**23** Y sucedió que después de toda tu maldad, “¡Oy, oy de ti! ” –declaración de Adonai יהוה,
 **24** edificaste para ti montículo e hiciste para ti lugar alto en toda plaza;
 **25** en toda cabeza de camino edificaste tu lugar alto, e hiciste aborrecible tu belleza; y abriste tus piernas a todo el que pasaba y multiplicaste tu prostitución.
 **26** Y fornicaste hacia los hijos de Mitzráim, tus vecinos grandes de carne, y multiplicaste tu prostitución para hacerme enfurecer.
 **27** Y he aquí, extendí mi mano sobre ti y dis­minuí tu decreto. Y te di a la garganta[^2946] de tus aborrecedoras, las hijas de los pelishtim[^2947], las que se avergonzaban de tu camino de artilugio.
 **28** Y fornicaste hacia los hijos de Ashur por no haberte saciado; y fornicaste con ellos, y ade­más, ¡no te saciaste!
 **29** Y multiplicaste tu prostitución hacia la tie­rra de Kenáan[^2948], hacia los casdim[^2949], y aun en esto no te saciaste.
-**30**¡Qué débil es tu corazón’ –declaración de Adonai יהוה– ‘cuando haces todas estas co­sas, obra de mujer ramera imperiosa!
+**30**¡Qué débil es tu corazón' –declaración de Adonai יהוה– ‘cuando haces todas estas co­sas, obra de mujer ramera imperiosa!
 **31** Cuando edificaste tu montículo en la cabeza de todo camino y tu lugar alto hiciste en toda plaza, no eras como la ramera, al despreciar el pago.
 **32** ¡La mujer adúltera, en lugar de a su esposo, toma a extraños!
 **33** A todas las rameras dan regalo, pero tú dis­te tus regalos a todos tus amantes y los sobor­nabas para venir a ti de alrededor en tus prosti­tuciones.
@@ -433,7 +433,7 @@ Infidelidad de Yerushaláim
 **40** Y harán subir sobre ti una asamblea, y te apedrearán con la piedra y te cortarán con sus espadas.
 **41** Y quemarán tus casas en el fuego y harán contra ti juicios a ojos de muchas mujeres. Y te haré cesar de ser ramera, y también, pago no darás más.
 **42** Y haré descansar mi ardor en ti; se desviará mi celo de ti, y estaré tranquilo y no me enoja­ré más.
-**43** Porque no has recordado los días de tu ju­ventud, y me hiciste agitar[^2951] con todas estas cosas, y también Yo, he aquí, tu camino en tu cabeza daré –de­claración de Adonai יהוה–, y no harás el ar­tilugio con todas tus abominaciones’.
+**43** Porque no has recordado los días de tu ju­ventud, y me hiciste agitar[^2951] con todas estas cosas, y también Yo, he aquí, tu camino en tu cabeza daré –de­claración de Adonai יהוה–, y no harás el ar­tilugio con todas tus abominaciones'.
 
 Yerushaláim es como Sedom y Gamoráh
 
@@ -464,18 +464,18 @@ Parábola de las águilas y la vid
 
 **1** Y fue la palabra de יהוה a mí, diciendo:
 **2** Hijo de hombre, propón un acertijo y repre­senta parábola a la casa de Israel.
-**3** Y dirás: “Así ha dicho Adonai יהוה: ‘La gran águila, grande de alas, larga de piñón, completo plumaje que tiene bordado,vino al Lebanón y tomó la copa del cedro;
-**4** la cabeza de sus brotes jóvenes arrancó, y lo hizo entrar a una tierra de comerciante[^2958],en una ciudad de mercaderes lo puso.
-**5** Y tomó de la semilla de la tierra y la puso en campo de semilla.La tomó junto a muchas aguas, como sauce la puso.
-**6** Y brotó y fue por vid extendida, baja de altura,giradas sus ramas hacia ella, y sus raíces debajo de ella estuvieron.Y fue por vid, e hizo ramas y soltó ramajes.
+**3** Y dirás: “Así ha dicho Adonai יהוה: ‘La gran águila, grande de alas, larga de piñón, completo plumaje que tiene bordado, vino al Lebanón y tomó la copa del cedro;
+**4** la cabeza de sus brotes jóvenes arrancó, y lo hizo entrar a una tierra de comerciante[^2958], en una ciudad de mercaderes lo puso.
+**5** Y tomó de la semilla de la tierra y la puso en campo de semilla. La tomó junto a muchas aguas, como sauce la puso.
+**6** Y brotó y fue por vid extendida, baja de altura, giradas sus ramas hacia ella, y sus raíces debajo de ella estuvieron. Y fue por vid, e hizo ramas y soltó ramajes.
 
-**7** Pero había un águila grande, grande de alas y abundante de plumaje,y he aquí, esta vid dobló sus raíces hacia ella, y sus ramas envió para ella,para que la regara, desde los lechos de su plantación.
-**8** En campo bueno, en muchas aguas ella estaba plantada,para hacer ramas y para llevar fruto, para ser por vid de esplendor’ ”.
-**9** Di: “Así ha dicho Adonai יהוה: ‘¿Prosperará?¿No arrancará sus raíces y masticará su fruto?, y se secará, todas las hojas frescas de su brote se secarán.Y no en brazo grande, ni en mucho pueblo, para levantarla de sus raíces.
-**10** Y he aquí, está plantada, ¿prosperará?¿No se secará totalmente[^2959] cuando golpee contra ella el viento del este?En los lechos de su brote se secará’ ”.
+**7** Pero había un águila grande, grande de alas y abundante de plumaje, y he aquí, esta vid dobló sus raíces hacia ella, y sus ramas envió para ella, para que la regara, desde los lechos de su plantación.
+**8** En campo bueno, en muchas aguas ella estaba plantada, para hacer ramas y para llevar fruto, para ser por vid de esplendor' ”.
+**9** Di: “Así ha dicho Adonai יהוה: ‘¿Prosperará? ¿No arrancará sus raíces y masticará su fruto?, y se secará, todas las hojas frescas de su brote se secarán. Y no en brazo grande, ni en mucho pueblo, para levantarla de sus raíces.
+**10** Y he aquí, está plantada, ¿prosperará? ¿No se secará totalmente[^2959] cuando golpee contra ella el viento del este? En los lechos de su brote se secará' ”.
 
 **11** Y fue palabra de יהוה a mí, diciendo:
-**12** Di por favor a la casa de rebelión: “No saben qué son estas cosas?” Di, “He aquí, entró el rey de Babel en Yerushaláim y tomó a su rey y a sus príncipes y los llevó hacia él a Babel.
+**12** Di por favor a la casa de rebelión: “No saben qué son estas cosas? ” Di, “He aquí, entró el rey de Babel en Yerushaláim y tomó a su rey y a sus príncipes y los llevó hacia él a Babel.
 **13** Y tomó de la simiente del reino e hizo[^2960] con él un pacto y lo hizo entrar en juramento. Y a los fuertes de la tierra tomó,
 **14** para ser el reino humillado para no levan­tarse, para guardar su pacto para estar de pie.
 **15** Pero se rebeló contra él al enviar sus mensa­jeros a Mitzráim, para darle caballos y mucha gente. ¿Prosperará? ¿Escapará el hacedor de es­tas cosas? ¿Y romperá el pacto y escapará?
@@ -515,7 +515,7 @@ La persona que peque morirá
 **16** y hombre no ha oprimido, promesa no ha retenido[^2963] y robo no ha saqueado, su pan al hambriento ha dado y al desnudo cubrió con vestido,
 **17** del afligido ha regresado su mano, interés y usura no ha tomado, mis juicios ha hecho, en mis estatutos ha andado, él no morirá por la ini­quidad de su padre, ¡viviendo, vivirá!
 **18** Su padre que oprimió con opresión, robó a su hermano[^2964] y que no hizo lo bueno en medio de su pueblo, he aquí, morirá por su iniquidad.
-**19** Y ustedes han dicho: “¿Por qué no carga el hijo con la iniquidad del padre?” Y el hijo juicio y justicia ha hecho, todos mis estatutos ha guar­dado y los ha hecho, ¡viviendo, vivirá!
+**19** Y ustedes han dicho: “¿Por qué no carga el hijo con la iniquidad del padre? ” Y el hijo juicio y justicia ha hecho, todos mis estatutos ha guar­dado y los ha hecho, ¡viviendo, vivirá!
 **20** La persona que peque, esa morirá. El hijo no cargará con la iniquidad del padre y el padre no cargará con la iniquidad del hijo; justicia del justo sobre él será y maldad del condenado sobre él será.
 **21** Y el condenado que se vuelva de todo su pe­cado que ha hecho y guarde todos mis estatutos y hace juicio y justicia, ¡viviendo, vivirá!, no morirá.
 **22** Todas sus transgresiones que hizo no serán recordadas a él; por su justicia que ha hecho, vivirá.
@@ -535,19 +535,19 @@ Elegía por los príncipes de Israel
 **19**
 
 **1** Y tú, levanta elegía por los príncipes de Israel.
-**2** Y dirás:“¿Qué es tu madre? Una leona, entre leones se acostó,en medio de leoncillos crio sus cachorros.
-**3** Y ella elevó uno de sus cachorros, leoncillo fue,y aprendió a desgarrar presa, hombre comió.
-**4** Y escucharon sobre él las naciones; en el pozo de ellos fue capturado,y lo hicieron entrar con ganchos a la tierra de Mitzráim.
-**5** Y ella vio que esperaba, perdida estaba su esperanza,y tomó uno de sus cachorros, como leoncillo lo puso.
-**6** Y anduvo en medio de leones, leoncillo fue;y aprendió a desgarrar presa, hombre comió;
-**7** Y conoció sus viudas y sus ciudades asoló;y se desoló la tierra y su llenura por la voz de su rugido.
-**8** Y se pusieron sobre él las naciones alrededor de sus provincias,y extendieron sobre él su red; en el pozo de ellos fue capturado.
-**9** Y lo dieron en la jaula con ganchos y lo llevaron al rey de Babel;lo llevaron en fortalezas[^2967] a fin de que no se oyera su voz aun en los montes de Israel.
-**10** Tu madre era como vid en tu sangre, sobre aguas fue plantada;fructificó, y ramificada estaba,por las muchas aguas.
-**11** Y había para ella varas de fuerza sobre báculos de gobernantes,y se elevó su estatura sobre en medio de las espesuras,y fue vista por su altura, por la abundancia de sus ramas.
-**12** Pero fue arrancada con furor, a tierra fue arrojada,y el viento del este secó su fruto; y fueron rotas y se secaron las varas[^2968] de su fuerza, el fuego las consumió.
+**2** Y dirás: “¿Qué es tu madre? Una leona, entre leones se acostó, en medio de leoncillos crio sus cachorros.
+**3** Y ella elevó uno de sus cachorros, leoncillo fue, y aprendió a desgarrar presa, hombre comió.
+**4** Y escucharon sobre él las naciones; en el pozo de ellos fue capturado, y lo hicieron entrar con ganchos a la tierra de Mitzráim.
+**5** Y ella vio que esperaba, perdida estaba su esperanza, y tomó uno de sus cachorros, como leoncillo lo puso.
+**6** Y anduvo en medio de leones, leoncillo fue; y aprendió a desgarrar presa, hombre comió;
+**7** Y conoció sus viudas y sus ciudades asoló; y se desoló la tierra y su llenura por la voz de su rugido.
+**8** Y se pusieron sobre él las naciones alrededor de sus provincias, y extendieron sobre él su red; en el pozo de ellos fue capturado.
+**9** Y lo dieron en la jaula con ganchos y lo llevaron al rey de Babel; lo llevaron en fortalezas[^2967] a fin de que no se oyera su voz aun en los montes de Israel.
+**10** Tu madre era como vid en tu sangre, sobre aguas fue plantada; fructificó, y ramificada estaba, por las muchas aguas.
+**11** Y había para ella varas de fuerza sobre báculos de gobernantes, y se elevó su estatura sobre en medio de las espesuras, y fue vista por su altura, por la abundancia de sus ramas.
+**12** Pero fue arrancada con furor, a tierra fue arrojada, y el viento del este secó su fruto; y fueron rotas y se secaron las varas[^2968] de su fuerza, el fuego las consumió.
 **13** Y ahora está plantada en el desierto, en tierra de sequedad y sed.
-**14** Y salió fuego de su vara, sus ramas, su fruto comió,y no hubo en ella vara de fuerza, báculo para gobernar”.
+**14** Y salió fuego de su vara, sus ramas, su fruto comió, y no hubo en ella vara de fuerza, báculo para gobernar”.
 
 Elegía es esta, y será para elegía.
 
@@ -557,7 +557,7 @@ Historia de la infidelidad de Israel
 
 **1** Y sucedió en el año séptimo, en el quinto mes, en el día décimo del mes, vinieron hombres de los ancianos de Israel a consultar a יהוה, y se sentaron delante de mí.
 **2** Y fue palabra de יהוה a mí, diciendo:
-**3** Hijo de hombre, habla a los ancianos de Israel, y les dirás: “Así ha dicho Adonai יהוה: ‘A consultarme ustedes han venido? Vivo Yo, ¡si me dejaría consultar por ustedes!’ ” –declara­ción de Adonai יהוה.
+**3** Hijo de hombre, habla a los ancianos de Israel, y les dirás: “Así ha dicho Adonai יהוה: ‘A consultarme ustedes han venido? Vivo Yo, ¡si me dejaría consultar por ustedes! ' ” –declara­ción de Adonai יהוה.
 **4** ¿Los juzgarás? ¿Juzgarás, hijo de hombre? Las abominaciones de sus padres hazles saber,
 **5** Y les dirás: “Así ha dicho Adonai יהוה: ‘En el día que escogí a Israel y alcé mi mano a la simiente de la casa de Yaakov, me di a conocer a ellos en la tierra de Mitzráim, y alcé mi mano a ellos, diciendo: Yo soy יהוה, Elohim de ustedes;
 **6** en aquel día alcé mi mano a ellos para ha­cerlos salir de la tierra de Mitzráim a una tierra que Yo había explorado para ellos, que fluye leche y miel, deseable es ella para todas las tie­rras.
@@ -580,14 +580,14 @@ Historia de la infidelidad de Israel
 **23** También Yo alcé mi mano a ellos en el de­sierto para dispersarlos por las naciones y para esparcirlos por las tierras,
 **24** porque mis juicios no habían hecho y mis estatutos despreciaron y mis Shabatot profana­ron, y detrás de los ídolos de sus padres estaban sus ojos.
 **25** Y también Yo les di decretos no buenos y procesos legales que no vivirán por ellos;
-**26** Y los declaré impuros[^2972] en sus dádivas, por hacer pasar toda abertura de ma­triz por el fuego, a fin de desolarlos, a fin de que conocieran que Yo soy יהוה’ ”.
+**26** Y los declaré impuros[^2972] en sus dádivas, por hacer pasar toda abertura de ma­triz por el fuego, a fin de desolarlos, a fin de que conocieran que Yo soy יהוה' ”.
 **27** Por eso, habla a la casa de Israel, hijo de hombre, y les dirás: “Así dijo Adonai יהוה: ‘Aun en esto me han injuriado los padres de us­tedes, en traicionarme a Mí infielmente.
 **28** Y los hice entrar a la tierra que había alzado Yo mi mano para darla a ellos, pero miraron to­da colina elevada y todo árbol exuberante y sa­crificaron allí sus sacrificios y dieron allí la ve­jación de sus ofrendas, y pusieron allí sus aro­mas calmantes y derramaron allí sus libaciones.
-**29** Y les dije: “¿Qué es el lugar alto[^2973] que ustedes van allí?” Y se llamó su nombre Bamah[^2974] hasta este día’ ”.
+**29** Y les dije: “¿Qué es el lugar alto[^2973] que ustedes van allí? ” Y se llamó su nombre Bamah[^2974] hasta este día' ”.
 **30** Por eso, di a la casa de Israel: “Así ha dicho Adonai יהוה: ‘¿En el camino de sus padres ustedes se impurificarán y detrás de sus repug­nancias[^2975] ustedes fornicarán?
-**31** Y al alzar sus presentes, al hacer pa­sar a sus hijos por el fuego, ustedes se impurificaron por todos sus ídolos hasta hoy. ¿Y Yo me dejaré consultar por ustedes, casa de Israel? Vivo Yo’ –declaración de Adonai יהוה– ‘¡si me dejaría consultar por ustedes!
+**31** Y al alzar sus presentes, al hacer pa­sar a sus hijos por el fuego, ustedes se impurificaron por todos sus ídolos hasta hoy. ¿Y Yo me dejaré consultar por ustedes, casa de Israel? Vivo Yo' –declaración de Adonai יהוה– ‘¡si me dejaría consultar por ustedes!
 **32** Y lo que sube sobre sus mentes, cierta­mente no sucederá[^2976], que uste­des dicen: “Seremos como las naciones, como las familias de las tierras, al servir madera y piedra”.
-**33** Vivo Yo’ –declaración de Adonai יהוה– ‘¡si no reinaría Yo sobre ustedes, con mano fuerte, con brazo extendido y con ardor derra­mado!;
+**33** Vivo Yo' –declaración de Adonai יהוה– ‘¡si no reinaría Yo sobre ustedes, con mano fuerte, con brazo extendido y con ardor derra­mado!;
 **34** y los sacaré de los pueblos y los reuniré de las tierras que fueron esparcidos por ellas con mano fuerte, con brazo extendido y con furor derramado;
 **35** y los haré entrar al desierto de los pueblos, y haré juicio con ustedes allí cara a cara.
 **36** Como hice juicio con los padres de ustedes en el desierto de la tierra de Mitzráim, así haré juicio con ustedes –declaración de Adonai יהוה.
@@ -598,15 +598,15 @@ Historia de la infidelidad de Israel
 **41** En aroma calmante los aceptaré, cuando Yo los haya sacado de los pueblos y los haya reuni­do de las tierras que fueron esparcidos por ellas, y seré santificado en ustedes a ojos de las nacio­nes.
 **42** Y sabrán que Yo soy יהוה, cuando los ha­ga entrar a la tierra de Israel, a la tierra que alcé mi mano para darla a sus padres.
 **43** Y recordarán allí sus caminos y todas sus acciones que se han impurificado con ellas, y sentirán repugnancia en sus propios rostros por todos los males que han hecho.
-**44** Y sabrán que Yo soy יהוה, cuando haga con ustedes por causa de mi Nombre, no con­forme a sus caminos malos ni conforme a sus acciones corrompidas, casa de Israel” ’ ” –de­claración de Adonai יהוה.
+**44** Y sabrán que Yo soy יהוה, cuando haga con ustedes por causa de mi Nombre, no con­forme a sus caminos malos ni conforme a sus acciones corrompidas, casa de Israel” ' ” –de­claración de Adonai יהוה.
 
 Profecía contra el Néguev
 
 **45** Y fue palabra de יהוה a mí, diciendo:
 **46** Hijo de hombre, pon tu rostro camino hacia Teimán[^2979] y destila hacia el sur, y profetiza al bosque del campo de Néguev,
 **47** y dirás al bosque del Néguev: “Escucha la palabra de יהוה. Así dijo Adonai יהוה: ‘Heme aquí, encenderé en ti fuego y consumirá en ti todo árbol fresco y todo árbol seco; no se apagará la llama flameante, y se quemarán en ella todos los rostros, desde el Néguev hacia el norte.
-**48** Y verán, toda carne, que Yo, יהוה, lo he quemado; no se apagará’ ”.
-**49** Y dije: ¡Ah[^2980], Adonai יהוה! Ellos dicen de mí: “¿No representa parábolas él?”
+**48** Y verán, toda carne, que Yo, יהוה, lo he quemado; no se apagará' ”.
+**49** Y dije: ¡Ah[^2980], Adonai יהוה! Ellos dicen de mí: “¿No representa parábolas él? ”
 
 La espada afilada de יהוה
 
@@ -616,20 +616,20 @@ La espada afilada de יהוה
 **2** Hijo de hombre, pon tu rostro hacia Yerushaláim y destila hacia los santuarios, y profetiza hacia la tierra de Israel,
 **3** y dirás a la tierra de Israel: “Así dijo יהוה: ‘Heme aquí hacia ti, y sacaré mi espada de su vaina y cortaré de ti justo y condenado.
 **4** Porque he de cortar de ti justo y condenado, por eso saldrá mi espada de su vaina hacia toda car­ne desde el Néguev hacia el norte.
-**5** Y sabrán, toda carne, que Yo, יהוה, he sa­cado mi espada de su vaina, no volverá más’ ”.
+**5** Y sabrán, toda carne, que Yo, יהוה, he sa­cado mi espada de su vaina, no volverá más' ”.
 **6** Y tú, hijo de hombre, gime con quebranta­miento de lomos, y con amargura gemirás a ojos de ellos.
-**7** Y será que te dirán: “¿Por qué tú gimes?”, y dirás: “Por la noticia que viene, y se derretirá todo corazón y se debilitarán todas las manos, y se oscurecerá todo aliento y todas las rodillas irán como aguas. He aquí, viene y sucederá” –declaración de Adonai יהוה.
+**7** Y será que te dirán: “¿Por qué tú gimes? ”, y dirás: “Por la noticia que viene, y se derretirá todo corazón y se debilitarán todas las manos, y se oscurecerá todo aliento y todas las rodillas irán como aguas. He aquí, viene y sucederá” –declaración de Adonai יהוה.
 **8** Y fue palabra de יהוה a mí, diciendo:
 **9** Hijo de hombre, profetiza, y dirás: “Así ha dicho Adonai”. Di:
 
-**10** Para matanza de sacrificio ha sido afilada, a fin de que sea para ella relámpago ha sido pulida.¿O, nos regocijaremos? El cetro de mi hijo ha despreciado ella como todo árbol.
-**11** Y la ha dado para pulirla, para ser agarrada en la palma ella; ha sido afilada la espada, y ella ha sido pulida,para darla en mano del asesino.
-**12** Clama y aúlla, hijo de hombre, porque ella está en mi pueblo,ella está en todos los príncipes de Israel; arrojados a la espada son con mi pueblo;por eso, golpea al muslo.
+**10** Para matanza de sacrificio ha sido afilada, a fin de que sea para ella relámpago ha sido pulida. ¿O, nos regocijaremos? El cetro de mi hijo ha despreciado ella como todo árbol.
+**11** Y la ha dado para pulirla, para ser agarrada en la palma ella; ha sido afilada la espada, y ella ha sido pulida, para darla en mano del asesino.
+**12** Clama y aúlla, hijo de hombre, porque ella está en mi pueblo, ella está en todos los príncipes de Israel; arrojados a la espada son con mi pueblo; por eso, golpea al muslo.
 **13** Porque fue hecho juicio[^2981]; ¿y qué si también el cetro ella desprecia?
-**14** Y tú, hijo de hombre, profetiza y golpea palma a palma;y será duplicada la espada la tercera vez, espada de asesinados.Ella es la espada del gran asesinado, los penetrará a ellos,
-**15** a fin de derretir el corazón y multiplicar los tropezados.Sobre todas sus puertas he puesto matanza de espada. ¡Ah!, hecha para relámpago,envuelta para masacre.
-**16** ¡Unifícate! Vuélvete a la derecha; coloca, vuélvete a la izquierda,¿dónde está tu rostro establecido?
-**17** Y también Yo golpearé mi palma a mi palma y haré descansar mi ardor.Yo, יהוה, he hablado.
+**14** Y tú, hijo de hombre, profetiza y golpea palma a palma; y será duplicada la espada la tercera vez, espada de asesinados. Ella es la espada del gran asesinado, los penetrará a ellos,
+**15** a fin de derretir el corazón y multiplicar los tropezados. Sobre todas sus puertas he puesto matanza de espada. ¡Ah!, hecha para relámpago, envuelta para masacre.
+**16** ¡Unifícate! Vuélvete a la derecha; coloca, vuélvete a la izquierda, ¿dónde está tu rostro establecido?
+**17** Y también Yo golpearé mi palma a mi palma y haré descansar mi ardor. Yo, יהוה, he hablado.
 
 Caminos de la espada del rey de Babel
 
@@ -671,7 +671,7 @@ Pecado y castigo de Yerushaláim
 **13** Y he aquí, he golpeado mis palmas hacia tu ganancia injusta que has hecho y sobre tu sangre que ha habido en medio de ti.
 **14** ¿Permanecerá tu corazón o se fortalecerán tus manos para los días en que Yo actúe[^2990] conti­go? Yo, יהוה, he hablado, y haré.
 **15** Y te esparciré en las naciones y te dispersaré en las tierras, y haré terminar tu impureza de ti.
-**16** Y serás profanada en ti misma a ojos de las naciones; y sabrás que Yo soy יהוה’ ”.
+**16** Y serás profanada en ti misma a ojos de las naciones; y sabrás que Yo soy יהוה' ”.
 **17** Y fue palabra de יהוה a mí, diciendo:
 **18** Hijo de hombre, han sido para Mí los de la casa de Israel por escoria; todos ellos son cobre, estaño, hierro y plomo en medio de un horno; escorias de plata son.
 **19** Por eso, así ha dicho Adonai יהוה: “Por ser todos ustedes por escorias, por eso, heme aquí, los reuniré hacia el medio de Yerushaláim.
@@ -726,7 +726,7 @@ Parábola de las dos hermanas
 **32** Así ha dicho Adonai יהוה:
 
 **33** De embriaguez y dolor te llenarás. copa de devastación y desolación es la copa de tu hermana Shomrón.
-**34** Y la beberás y exprimirás; y sus tiestos romperás,y tus pechos arrancarás.Porque Yo he hablado”
+**34** Y la beberás y exprimirás; y sus tiestos romperás, y tus pechos arrancarás. Porque Yo he hablado”
  –declaración de Adonai יהוה.
 
 **35** Por eso, así ha dicho Adonai יהוה: “Por­que me has olvidado y me has arrojado tras tu espalda, también tú carga tu plan perverso y tus for­nicaciones”.
@@ -753,17 +753,17 @@ La olla hirviendo
 **2** Hijo de hombre, escribe para ti el nombre del día, este mismo día. Ha apoyado su peso el rey de Babel sobre Yerushaláim en este mismo día.
 **3** Representa a la casa de rebelión una parábola, y les dirás: “Así ha dicho Adonai יהוה:
 
-**4** reúne sus trozos en ella, todo trozo bueno, muslo y hombro;lo más selecto de huesos llénale.
-**5** Lo mejor del rebaño toma, y también amontona[^3015] los huesos debajo de ella;haz hervir su ebullición, también cuécelos sus huesos dentro de ella’.
+**4** reúne sus trozos en ella, todo trozo bueno, muslo y hombro; lo más selecto de huesos llénale.
+**5** Lo mejor del rebaño toma, y también amontona[^3015] los huesos debajo de ella; haz hervir su ebullición, también cuécelos sus huesos dentro de ella'.
 
-**6** Por lo tanto, así ha dicho Adonai יהוה:‘¡Oy de la ciudad de las sangres, de la olla que tiene óxido en ella,y su óxido no sale de ella!Trozo por trozo sácala; no ha caído sobre ella goral[^3016].
-**7** Porque su sangre en medio de ella ha estado, sobre sequedad de peña la puso;no la derramó sobre la tierra para cubrir sobre ella el polvo.
-**8** Para hacer subir el furor, para tomar[^3017] venganza,he dado su sangre sobre la sequedad de peña, para no ser cubierta’.
-**9** Por eso, así ha dicho Adonai יהוה:‘¡Oy de las ciudad de las sangres! También Yo haré grande el montículo.
-**10** Multiplica las maderas, enciende el fuego, termina la carne, mezcla las especias,y los huesos se quemarán.
-**11** Y hazla permanecer sobre sus brasas vacía, a fin de que se caliente,y se queme su cobre, y se derrita en medio de ella su impureza.¡Se consumirá su óxido!
-**12** De lamentos ella se cansó[^3018], y no salió de ella lo mucho de su óxido,en el fuego esté su óxido.
-**13** En tu impureza hay plan perverso. Porque te limpié, y no fuiste limpia.De tu impureza no serás limpia más hasta Yo hacer descansar mi furor en ti.
+**6** Por lo tanto, así ha dicho Adonai יהוה: ‘¡Oy de la ciudad de las sangres, de la olla que tiene óxido en ella, y su óxido no sale de ella! Trozo por trozo sácala; no ha caído sobre ella goral[^3016].
+**7** Porque su sangre en medio de ella ha estado, sobre sequedad de peña la puso; no la derramó sobre la tierra para cubrir sobre ella el polvo.
+**8** Para hacer subir el furor, para tomar[^3017] venganza, he dado su sangre sobre la sequedad de peña, para no ser cubierta'.
+**9** Por eso, así ha dicho Adonai יהוה: ‘¡Oy de las ciudad de las sangres! También Yo haré grande el montículo.
+**10** Multiplica las maderas, enciende el fuego, termina la carne, mezcla las especias, y los huesos se quemarán.
+**11** Y hazla permanecer sobre sus brasas vacía, a fin de que se caliente, y se queme su cobre, y se derrita en medio de ella su impureza. ¡Se consumirá su óxido!
+**12** De lamentos ella se cansó[^3018], y no salió de ella lo mucho de su óxido, en el fuego esté su óxido.
+**13** En tu impureza hay plan perverso. Porque te limpié, y no fuiste limpia. De tu impureza no serás limpia más hasta Yo hacer descansar mi furor en ti.
 
 **14** Yo, יהוה, he hablado. Viene y haré; no aflojaré y no tendré piedad y no retornaré. Conforme a tus caminos y conforme a tus accio­nes te juzgarán –declaración de Adonai יהוה.
 
@@ -778,7 +778,7 @@ Muerte de la mujer de Iejezkel
 **21** “Di a la casa de Israel: ‘Así ha dicho Adonai יהוה: “Heme aquí, profano mi santuario[^3020], orgullo de la fuerza de ustedes, el de­seo de sus ojos y lo compadecido de tu ser; y sus hijos y sus hijas que han abandonado, por la espada caerán.
 **22** Y harán como yo he hecho: sobre el bigote no se cubrirán y pan de hombres no comerán,
 **23** y sus turbantes estarán sobre sus cabezas y sus sandalias en sus pies. No se lamentarán y no llorarán, pero se desvanecerán en sus iniquida­des y gemirán cada hombre a su hermano.
-**24** Y será Iejezkel para ustedes para señal; con­forme a todo lo que ha hecho, harán; cuando venga, sabrán que Yo soy Adonai יהוה” ’.
+**24** Y será Iejezkel para ustedes para señal; con­forme a todo lo que ha hecho, harán; cuando venga, sabrán que Yo soy Adonai יהוה” '.
 **25** Y tú, hijo de hombre, ¿no será que en el día que tome Yo de ellos su fortaleza, gozo de su belleza, el deseo de sus ojos, la elevación de sus vidas, sus hijos y sus hijas,
 **26** en aquel día vendrá el fugitivo a ti para hacerlo escuchar a tus oídos?
 **27** En aquel día se abrirá tu boca al fugitivo, y hablarás y no te quedarás mudo más. Y serás para ellos para señal, y conocerán que Yo soy יהוה”.
@@ -789,30 +789,30 @@ Profecía contra Amón
 
 **1** Y fue palabra de יהוה a mí, diciendo:
 **2** Hijo de hombre, pon tu rostro hacia los hijos de Amón, y profetiza sobre ellos,
-**3** y dirás a los hijos de Amón: “Escuchen la palabra de Adonai יהוה. Así ha dicho Adonai יהוה: ‘Porque dijiste: “¡Ea[^3021]!” hacia mi santuario cuando fue profanado[^3022], y hacia la tierra de Israel cuando fue desolada, y hacia la casa de Iehudáh cuando fueron en el exilio,
+**3** y dirás a los hijos de Amón: “Escuchen la palabra de Adonai יהוה. Así ha dicho Adonai יהוה: ‘Porque dijiste: “¡Ea[^3021]! ” hacia mi santuario cuando fue profanado[^3022], y hacia la tierra de Israel cuando fue desolada, y hacia la casa de Iehudáh cuando fueron en el exilio,
 **4** por eso, heme aquí, te daré a los hijos del este por posesión, y asentarán sus campamentos en ti y pondrán en ti sus tiendas; ellos comerán tu fruto y ellos beberán tu leche.
-**5** y daré a Rabáh para pastizal de camellos, y a los hijos de Amón para lugar de descanso de re­baños. Y ustedes sabrán que Yo soy יהוה’.
+**5** y daré a Rabáh para pastizal de camellos, y a los hijos de Amón para lugar de descanso de re­baños. Y ustedes sabrán que Yo soy יהוה'.
 **6** Porque así ha dicho Adonai יהוה: ‘Por tu aplaudir de mano y tu golpear con el pie, y porque te alegraste en todo tu desprecio en tu ser[^3023] contra la tierra de Israel,
-**7** por eso, heme aquí, he extendido mi mano so­bre ti y te daré para saqueo a las naciones, y te cortaré de los pueblos y te haré perecer de las tierras. Te destruiré; y conocerás que Yo soy יהוה’.
+**7** por eso, heme aquí, he extendido mi mano so­bre ti y te daré para saqueo a las naciones, y te cortaré de los pueblos y te haré perecer de las tierras. Te destruiré; y conocerás que Yo soy יהוה'.
 
 Profecía contra Moab
 
 **8** Así ha dicho Adonai יהוה: ‘Por decir Moab y Seir: “He aquí, como todas las naciones es la casa de Iehudáh”,
 **9** por eso, heme aquí, abriré el hombro[^3024] de Moab, de las ciudades, de sus ciudades de su extremo, la hermosura de la tierra, Bet Haieshimot, Baal Meón y hacia Kiriatáim,
 **10** a los hijos del este con los hijos de Amón, y la daré por posesión a fin de que no sean recor­dados los hijos de Amón en las naciones.
-**11** Y en Moab haré juicios; y sabrán que Yo soy יהוה’.
+**11** Y en Moab haré juicios; y sabrán que Yo soy יהוה'.
 
 Profecía contra Edom
 
-**12** Así ha dicho Adonai יהוה: ‘Por el hacer de Edom en el tomar[^3025] venganza para la casa de Iehudáh, y han sido gravemente cul­pables y se han vengado contra ellos’,
+**12** Así ha dicho Adonai יהוה: ‘Por el hacer de Edom en el tomar[^3025] venganza para la casa de Iehudáh, y han sido gravemente cul­pables y se han vengado contra ellos',
 **13** por eso, así ha dicho Adonai יהוה: ‘Ex­tenderé mi mano sobre Edom y cortaré de ella hombre y bestia, y la daré para ruina; desde Teimán y hasta Dedán por la espada caerán.
-**14** Y daré mi venganza contra Edom en mano de mi pueblo Israel, y harán en Edom conforme a mi nariz y conforme a mi ardor; y conocerán mi venganza’ –declaración de Adonai יהוה.
+**14** Y daré mi venganza contra Edom en mano de mi pueblo Israel, y harán en Edom conforme a mi nariz y conforme a mi ardor; y conocerán mi venganza' –declaración de Adonai יהוה.
 
 Profecía contra los pelishtim
 
 **15** Así ha dicho Adonai יהוה: ‘Por hacer los pelishtim[^3026] con venganza y porque to­maron[^3027] venganza con desprecio en su ser para destruir con enemistad olam[^3028],
 **16** por eso, así ha dicho Adonai יהוה: ‘Heme aquí, extiendo mi mano sobre los pelishtim, y cortaré a los keretim[^3029] y haré perecer al resto de la costa del mar.
-**17** Y haré en ellos venganzas grandes con re­prensiones ardientes[^3030]; y sabrán que Yo soy יהוה cuando dé mi ven­ganza en ellos’ ”.
+**17** Y haré en ellos venganzas grandes con re­prensiones ardientes[^3030]; y sabrán que Yo soy יהוה cuando dé mi ven­ganza en ellos' ”.
 
 Profecía contra Tzor
 
@@ -835,8 +835,8 @@ Profecía contra Tzor
 **15** Así ha dicho Adonai יהוה a Tzor: ¿No por el sonido de tu caída, en el gemir de los tras­pasados, en el asesinar de la matanza en me­dio de ti, temblarán las islas?
 **16** Y descenderán de sobre sus tronos todos los príncipes del mar, y se apartarán sus mantos y las vestiduras de su bordado se quitarán. Tem­blores se vestirán, sobre la tierra se sentarán, y temblarán a cada momento y se horrorizarán[^3032] por ti.
 
-**17** Y levantarán por ti elegía, y te dirán:“¡Cómo has perecido, habitada de los mares, la ciudad alabada,que era fuerte en el mar!Ella y sus habitantes que dieron su terrora todos sus habitantes.
-**18** Ahora temblarán las islas en el día de tu caída;y se asustarán las islas que están en el mar por tu salida”.
+**17** Y levantarán por ti elegía, y te dirán: “¡Cómo has perecido, habitada de los mares, la ciudad alabada, que era fuerte en el mar! Ella y sus habitantes que dieron su terrora todos sus habitantes.
+**18** Ahora temblarán las islas en el día de tu caída; y se asustarán las islas que están en el mar por tu salida”.
 
 **19** Porque así ha dicho Adonai יהוה: Cuan­do Yo te dé por ciudad desolada, como las ciu­dades que no son habitadas; cuando haga subir sobre ti el abismo, y te cubran las muchas aguas,
 **20** te haré descender con los que descienden al pozo, hacia el pueblo antiguo, y te haré habitar en la tierra más baja, como las ruinas de la antigüedad, con los que descienden al pozo, a fin de que no seas habitada; y daré hermosura en la tierra de los vivos.
@@ -856,7 +856,7 @@ Lamentación sobre Tzor
 **6** De robles de Bashán hicieron tus remos; tus tablones han hecho de marfil[^3035] con cedro de las costas de Kitiim.
 **7** De lino fino con bordado de Mitzráim era tu vela para serte por estandarte; de azul y púrpura de las costas de Elisháh era tu cobertura.
 **8** Los habitantes de Tzidón y Arvad eran rema­dores para ti; tus sabios, Tzor, estaban en ti; eran tus marineros.
-**9** Los ancianos de Guebal y sus sabios estaban en ti reforzaban tus reparaciones;todas las naves del mar y sus marineros estaban en ti para negociar tus mercaderías.
+**9** Los ancianos de Guebal y sus sabios estaban en ti reforzaban tus reparaciones; todas las naves del mar y sus marineros estaban en ti para negociar tus mercaderías.
 **10** Parás, Lud y Fut eran en tu fuerza hombres de tu guerra.
  Escudo y casco colgaban en ti, ellos daban tu esplendor.
 
@@ -875,19 +875,19 @@ Lamentación sobre Tzor
 **23** Jarán, Cané y Éden, los comerciantes de She­bá, Ashur y Kilmad eran tus comerciantes.
 **24** Ellos eran tus comerciantes en vestiduras perfectas, en mantos de azul y bordado, en baú­les de telas de colores, en cordones atados y cedros[^3042] que había en tus mercados.
 
-**25** Las naves de Tarshísh eran viajeros tuyos de tu mercadería.Y fuiste llena y muy gloriosa[^3043]
+**25** Las naves de Tarshísh eran viajeros tuyos de tu mercadería. Y fuiste llena y muy gloriosa[^3043]
  en el corazón de los mares.
-**26** En muchas aguas te hicieron entrar tus remadores;a ti el viento del este te destrozó en el corazón de los mares.
-**27** Tu riqueza, tus mercancías, tu mercadería, tus navegantes y tus marineros,tus reforzadores de reparación, los negociantes de tu mercadería,y todos los hombres de tu guerra que hay en ti, y con toda tu asamblea que en medio de ti está,caerán en el corazón de los mares en el día de tu caída.
+**26** En muchas aguas te hicieron entrar tus remadores; a ti el viento del este te destrozó en el corazón de los mares.
+**27** Tu riqueza, tus mercancías, tu mercadería, tus navegantes y tus marineros, tus reforzadores de reparación, los negociantes de tu mercadería, y todos los hombres de tu guerra que hay en ti, y con toda tu asamblea que en medio de ti está, caerán en el corazón de los mares en el día de tu caída.
 **28** A la voz del grito de tus marineros temblarán las praderas.
-**29** Y descenderán de sus naves todos los que agarran el remo;los marineros y todos los navegantes del mar en la tierra se pararán;
-**30** Y harán oír por ti con su voz y gritarán con amargura.Y harán subir polvo sobre sus cabezas, en la ceniza se rodarán;
+**29** Y descenderán de sus naves todos los que agarran el remo; los marineros y todos los navegantes del mar en la tierra se pararán;
+**30** Y harán oír por ti con su voz y gritarán con amargura. Y harán subir polvo sobre sus cabezas, en la ceniza se rodarán;
 **31** Y se raparán la cabeza por ti, con calvicie, y se ceñirán cilicio[^3044], y llorarán por ti con amargura en su ser, un lamento amargo.
-**32** Y elevarán por ti en su lamentación una elegía, y cantarán endechas por ti:“¿Quién como Tzor, como la silenciosa en medio del mar?
-**33** En la salida de tus mercancías de los mares, saciabas muchos pueblos;con abundancia de tus riquezas y mercaderías enriquecías los reyes de la tierra.
+**32** Y elevarán por ti en su lamentación una elegía, y cantarán endechas por ti: “¿Quién como Tzor, como la silenciosa en medio del mar?
+**33** En la salida de tus mercancías de los mares, saciabas muchos pueblos; con abundancia de tus riquezas y mercaderías enriquecías los reyes de la tierra.
 **34** En este tiempo has sido rota por los mares en la profundidades de las aguas, tu mercadería y toda tu asamblea en medio de ti han caído.
-**35** Todos los habitantes de las islas se horrorizaron por ti;y sus reyes se estremecieron atormentada­mente, tronaron los rostros de ellos.
-**36** Los comerciantes en los pueblos silban por ti[^3045];Calamidades[^3046] has sido,y no serás hasta el olam[^3047]” ’ ”.
+**35** Todos los habitantes de las islas se horrorizaron por ti; y sus reyes se estremecieron atormentada­mente, tronaron los rostros de ellos.
+**36** Los comerciantes en los pueblos silban por ti[^3045]; Calamidades[^3046] has sido, y no serás hasta el olam[^3047]” ' ”.
 
 Profecía contra el príncipe de Tzor
 
@@ -897,22 +897,22 @@ Profecía contra el príncipe de Tzor
 **2** Hijo de hombre, di al príncipe de Tzor[^3048]: “Así ha dicho Adonai יהוה:
 
 **3** He aquí, más sabio eres tú que Daniel; nada desconocido[^3050] te es oscuro.
-**4** Con tu sabiduría y con tu entendimiento has hecho para ti fuerza,e hiciste oro y plata en tus tesoros.
-**5** Por la abundancia de tu sabiduría, con tu mercadeo,has multiplicado tu fuerza, y se ha enaltecido tu corazón por tu fuerza.
-**6** Por eso, así ha dicho Adonai יהוה:“Porque has puesto tu corazón como el corazón de Elohim,
-**7** por eso, heme aquí, traeré sobre ti extraños terribles de las naciones.Y derramarán sus espadas sobre la belleza de tu sabiduríay profanarán tu hermosura.
+**4** Con tu sabiduría y con tu entendimiento has hecho para ti fuerza, e hiciste oro y plata en tus tesoros.
+**5** Por la abundancia de tu sabiduría, con tu mercadeo, has multiplicado tu fuerza, y se ha enaltecido tu corazón por tu fuerza.
+**6** Por eso, así ha dicho Adonai יהוה: “Porque has puesto tu corazón como el corazón de Elohim,
+**7** por eso, heme aquí, traeré sobre ti extraños terribles de las naciones. Y derramarán sus espadas sobre la belleza de tu sabiduría y profanarán tu hermosura.
 **8** Al hoyo te harán descender, y morirás la muerte del asesinadoen el corazón de los mares.
-**9** ¿Ciertamente dirás: ‘Elohim soy yo’, ante el rostro de tu asesino,y tú eres hombre y no poderoso, en mano de los que te atraviesan?
-**10** Muerte de incircuncisos morirás, en mano de extraños,porque Yo he hablado –declaración de Adonai יהוה’ ”.
-**11** Y fue palabra de יהוה a mí, diciendo: Hijo de hombre, eleva una elegía sobre el rey de Tzor, y le dirás:“Así ha dicho Adonai יהוה: ‘Tú eras sellador a la medida,lleno de sabiduría y completo de belleza.
+**9** ¿Ciertamente dirás: ‘Elohim soy yo', ante el rostro de tu asesino, y tú eres hombre y no poderoso, en mano de los que te atraviesan?
+**10** Muerte de incircuncisos morirás, en mano de extraños, porque Yo he hablado –declaración de Adonai יהוה' ”.
+**11** Y fue palabra de יהוה a mí, diciendo: Hijo de hombre, eleva una elegía sobre el rey de Tzor, y le dirás: “Así ha dicho Adonai יהוה: ‘Tú eras sellador a la medida, lleno de sabiduría y completo de belleza.
 
-**13** En Éden, el jardín de Elohim, estabas; toda piedra preciosa era tu cobertura:rubí, topacio y diamante, crisólito, ónix y jaspe,zafiro, turquesa y esmeralda, y oro, el trabajo de tus panderos y tus cuencas estaba en ti, en el día de tu creaciónfueron establecidos[^3051].
-**14** Tú, querubín ungido, que cubre, y Yo te puse[^3052].En el monte de santidad de Elohim estabas, en medio de las piedras de fuego andabas.
+**13** En Éden, el jardín de Elohim, estabas; toda piedra preciosa era tu cobertura: rubí, topacio y diamante, crisólito, ónix y jaspe, zafiro, turquesa y esmeralda, y oro, el trabajo de tus panderos y tus cuencas estaba en ti, en el día de tu creaciónfueron establecidos[^3051].
+**14** Tú, querubín ungido, que cubre, y Yo te puse[^3052]. En el monte de santidad de Elohim estabas, en medio de las piedras de fuego andabas.
 **15** Completo eras tú en tus caminos desde el día de tu creaciónhasta que se halló injusticia en ti.
-**16** Por la abundancia de tu comercio llenaron tu interior de violencia, y pecaste;y te he hecho profano fuera del monte de Elohim;y te hecho perecer, querubín que cubre, de en medio de las piedras de fuego.
-**17** Se enalteció tu corazón en tu belleza; corrompiste tu sabiduría por tu hermosura.Sobre tierra te lancé, delante de reyes te dipara que puedan mirar en ti.
-**18** Por la multitud de tus iniquidades, por la injusticia de tu comercio,profanaste tus santuarios.Y he hecho salir fuego de en medio de ti, él te ha consumido;y te he dado para ceniza sobre la tierra a los ojos de todos los que te miran.
-**19** Todos los que te conocen en los pueblos se horrorizaron por ti;terrores[^3053] has sido, y no serás hasta el olam[^3054]’ ”.
+**16** Por la abundancia de tu comercio llenaron tu interior de violencia, y pecaste; y te he hecho profano fuera del monte de Elohim; y te hecho perecer, querubín que cubre, de en medio de las piedras de fuego.
+**17** Se enalteció tu corazón en tu belleza; corrompiste tu sabiduría por tu hermosura. Sobre tierra te lancé, delante de reyes te dipara que puedan mirar en ti.
+**18** Por la multitud de tus iniquidades, por la injusticia de tu comercio, profanaste tus santuarios. Y he hecho salir fuego de en medio de ti, él te ha consumido; y te he dado para ceniza sobre la tierra a los ojos de todos los que te miran.
+**19** Todos los que te conocen en los pueblos se horrorizaron por ti; terrores[^3053] has sido, y no serás hasta el olam[^3054]' ”.
 
 Profecía contra Tzidón
 
@@ -922,9 +922,9 @@ Profecía contra Tzidón
 
 ‘Heme aquí, sobre ti, Tzidón, y seré glorificado en medio de ti;y sabrán que Yo soy יהוה, cuando haga en ella juicios y sea Yo santificado en ella.**23** Y enviaré en ella pestilencia y sangre en sus calles;y caerá[^3055] el traspasado en medio de ella por la espada que está sobre ella alrededor.Y sabrán que Yo soy יהוה.
 
-**24** Y no habrá más para la casa de Israel espino punzante[^3056] ni zarza dolorosa de ninguno de los que están a su alrededor, sus despreciadores; y conocerán que Yo soy Adonai יהוה’.
+**24** Y no habrá más para la casa de Israel espino punzante[^3056] ni zarza dolorosa de ninguno de los que están a su alrededor, sus despreciadores; y conocerán que Yo soy Adonai יהוה'.
 **25** Así ha dicho Adonai יהוה: ‘Cuando Yo reúna a la casa de Israel de los pueblos en que están esparcidos, y sea Yo santificado en ellos a ojos de las naciones, se asentarán sobre su tierra la cual di a mi siervo, a Yaakov.
-**26** Y se asentarán sobre ella en seguridad; y edi­ficarán casas y plantarán viñedos y se asentarán en seguridad, cuando Yo haga juicios en todos sus despreciadores de sus alrededores. Y sabrán que Yo soy יהוה su Elohim’ ”.
+**26** Y se asentarán sobre ella en seguridad; y edi­ficarán casas y plantarán viñedos y se asentarán en seguridad, cuando Yo haga juicios en todos sus despreciadores de sus alrededores. Y sabrán que Yo soy יהוה su Elohim' ”.
 
 Profecía contra Mitzráim
 
@@ -934,20 +934,20 @@ Profecía contra Mitzráim
 **2** Hijo de hombre, pon tu rostro sobre Faraón, rey de Mitzráim, y profetiza sobre él y sobre Mitzráim, toda ella.
 **3** Habla, y dirás: “Así ha dicho Adonai יהוה:
 
-**4** Pero Yo daré ganchos en tus mandíbulas, y haré pegar el pez de tus ríos en tus escamas;y te haré subir de en medio de tus ríos, y todo pez de tus ríos en tus escamas se pegará.
-**5** Y te dejaré hacia el desierto, a ti y a todo pez de tus ríos.Sobre la faz del campo caerás, no serás reunido ni recogido.Al ser vivo de la tierra y al ave de los cielos te he dado por comida.
+**4** Pero Yo daré ganchos en tus mandíbulas, y haré pegar el pez de tus ríos en tus escamas; y te haré subir de en medio de tus ríos, y todo pez de tus ríos en tus escamas se pegará.
+**5** Y te dejaré hacia el desierto, a ti y a todo pez de tus ríos. Sobre la faz del campo caerás, no serás reunido ni recogido. Al ser vivo de la tierra y al ave de los cielos te he dado por comida.
 **6** Y sabrán todos los habitantes de Mitzráim que Yo soy יהוה, porque han sido bastón de caña para la casa de Israel.
-**7** Cuando te agarraron con la palma, te rompiste, y les partiste todo hombro;y cuando se apoyaron sobre ti, te destrozaste y les hiciste tambalear todos los lomos’.
+**7** Cuando te agarraron con la palma, te rompiste, y les partiste todo hombro; y cuando se apoyaron sobre ti, te destrozaste y les hiciste tambalear todos los lomos'.
 
 **8** Por eso, así ha dicho Adonai יהוה: ‘Heme aquí, haré venir sobre ti la espada, y cortaré de ti hombre y bestia.
-**9** Y será la tierra de Mitzráim para desolación y ruina. Y sabrán que Yo soy יהוה.Porque él dijo: El río es mío y yo lo he hecho”,
+**9** Y será la tierra de Mitzráim para desolación y ruina. Y sabrán que Yo soy יהוה. Porque él dijo: El río es mío y yo lo he hecho”,
 **10** por eso, heme aquí, hacia ti y hacia tus ríos, y daré a la tierra de Mitzráim para ruinas de se­quedad, desolación, desde Migdol hasta Sevene[^3059] y hasta la frontera de Cush.
 **11** No pasará por ella pie de hombre, y pie de bestia no pasará por ella, y no será habitada por cuarenta años.
-**12** Y daré a la tierra de Mitzráim por desolación en medio de tierras desoladas; y sus ciudades, en medio de ciudades arrasadas, serán desola­ción por cuarenta años. Y dispersaré a Mitzráim en las naciones y los esparciré por la tierras’.
+**12** Y daré a la tierra de Mitzráim por desolación en medio de tierras desoladas; y sus ciudades, en medio de ciudades arrasadas, serán desola­ción por cuarenta años. Y dispersaré a Mitzráim en las naciones y los esparciré por la tierras'.
 **13** Porque así ha dicho Adonai יהוה: ‘Al final de cuarenta años reuniré a Mitzráim de los pue­blos que fueron dispersados allí;
 **14** Y haré volver la cautividad de Mitzráim y los haré regresar a la tierra de Patros, a la tierra de su origen; y serán allí un reino humilde.
 **15** De los reinos será humilde, y no se levantará más sobre las naciones; y los haré pequeños pa­ra no dominar en las naciones.
-**16** Y no será más para la casa de Israel por con­fianza, haciendo recordar la iniquidad cuando se volvieron tras ellos. Y sabrán que Yo soy Adonai יהוה’ ”.
+**16** Y no será más para la casa de Israel por con­fianza, haciendo recordar la iniquidad cuando se volvieron tras ellos. Y sabrán que Yo soy Adonai יהוה' ”.
 **17** Y sucedió que en el año veintisiete, en el mes primero, en el día uno del mes, fue palabra de יהוה a mí, diciendo:
 **18** Hijo de hombre, Nebujadretzar, rey de Babel, hizo trabajar a su fuerza un gran servicio contra Tzor; toda cabeza quedó calva y todo hombro desnudo. Pero pago no hu­bo para él y para su fuerza de parte de Tzor por el servi­cio con que había trabajado contra ella.
 **19** Por tanto, así ha dicho Adonai יהוה: “He­me aquí, doy a Nebujadretzar, rey de Babel, la tierra de Mitzráim. Y él se llevará la multitud de ella, despojará su botín y saqueará su despojo, y será el pago para su fuerza.
@@ -959,26 +959,26 @@ La caída de Mitzráim
 **30**
 
 **1** Y fue palabra de יהוה a mí, dicien­do:
-**2** Hijo de hombre, profetiza, y dirás:“Así ha dicho Adonai יהוה: ‘Aúllen: “¡Ah del día!”
-**3** Porque cerca está el día, y cerca está el día de יהוה;día de nublado, el tiempo de las naciones será.
-**4** Y vendrá la espada en Mitzráim y habrá retorcimiento en Cush,cuando caiga el traspasado en Mitzráim, y tomen su multitud y sean derribados sus cimientos.
+**2** Hijo de hombre, profetiza, y dirás: “Así ha dicho Adonai יהוה: ‘Aúllen: “¡Ah del día! ”
+**3** Porque cerca está el día, y cerca está el día de יהוה; día de nublado, el tiempo de las naciones será.
+**4** Y vendrá la espada en Mitzráim y habrá retorcimiento en Cush, cuando caiga el traspasado en Mitzráim, y tomen su multitud y sean derribados sus cimientos.
 **5** Cush, Fut, Lud, toda la mezcla de pueblos, Cub
-**6** Así ha dicho יהוה:‘Y caerán los que apoyan a Mitzráim, y descenderá el orgullo de su fuerza;desde Migdol hasta Sevene por la espada caerán con ella’–declaración de Adonai יהוה.
-**7** Y serán desolados en medio de tierras desoladas,y sus ciudades, en medio de ciudades arrasadas estarán.
-**8** Y sabrán que Yo soy יהוה, cuando Yo dé fuego en Mitzráimy sean destrozados todos sus ayudadores.
+**6** Así ha dicho יהוה: ‘Y caerán los que apoyan a Mitzráim, y descenderá el orgullo de su fuerza; desde Migdol hasta Sevene por la espada caerán con ella'–declaración de Adonai יהוה.
+**7** Y serán desolados en medio de tierras desoladas, y sus ciudades, en medio de ciudades arrasadas estarán.
+**8** Y sabrán que Yo soy יהוה, cuando Yo dé fuego en Mitzráim y sean destrozados todos sus ayudadores.
 
-**9** En aquel día saldrán mensajeros de delante de Mí en barcos para hacer temblar a Cush la confiada; y habrá retorcimiento en ellos en el día de Mitzráim; porque he aquí, viene’.
+**9** En aquel día saldrán mensajeros de delante de Mí en barcos para hacer temblar a Cush la confiada; y habrá retorcimiento en ellos en el día de Mitzráim; porque he aquí, viene'.
 **10** Así ha dicho Adonai יהוה:
 
-**11** Él, y su pueblo con él, la terrible de las naciones,serán traídos para destruir la tierra; y sacarán sus espadas sobre Mitzráimy llenarán la tierra de traspasados.
-**12** Y pondré los ríos[^3060] por sequedad y venderé la tierra en mano de malvados;y desolaré la tierra y su llenura por mano de extraños.Yo, יהוה, he hablado’.
-**13** Así ha dicho Adonai יהוה:‘Y haré perder los ídolos y haré cesar las vanidades de Nof.Y príncipe de la tierra de Mitzráim no habrá más, y daré temor en la tierra de Mitzráim.
-**14** Y desolaré a Patros, daré fuego en Tzoany haré juicios en No.
-**15** Y derramaré mi ardor sobre Sin, fortaleza de Mitzráim;y cortaré a la multitud de No.
-**16** Y daré fuego en Mitzráim; girará retorciéndose Sin,No será desgarrada[^3061] y Nof tendrá estrecheces cada día.
-**17** Los jóvenes de On[^3062] y Pi Beset por la espada caerán,y ellas en cautiverio irán.
-**18** Y en Tajpanjés se oscurecerá el día cuando Yo rompa allí los yugos de Mitzráim,y cesará en ella el orgullo de su fuerza; a ella una nube la cubrirá,y sus hijas en cautiverio irán.
-**19** Y haré juicios en Mitzráim, y sabrán que Yo soy יהוה’ ”.
+**11** Él, y su pueblo con él, la terrible de las naciones, serán traídos para destruir la tierra; y sacarán sus espadas sobre Mitzráim y llenarán la tierra de traspasados.
+**12** Y pondré los ríos[^3060] por sequedad y venderé la tierra en mano de malvados; y desolaré la tierra y su llenura por mano de extraños. Yo, יהוה, he hablado'.
+**13** Así ha dicho Adonai יהוה: ‘Y haré perder los ídolos y haré cesar las vanidades de Nof. Y príncipe de la tierra de Mitzráim no habrá más, y daré temor en la tierra de Mitzráim.
+**14** Y desolaré a Patros, daré fuego en Tzoan y haré juicios en No.
+**15** Y derramaré mi ardor sobre Sin, fortaleza de Mitzráim; y cortaré a la multitud de No.
+**16** Y daré fuego en Mitzráim; girará retorciéndose Sin, No será desgarrada[^3061] y Nof tendrá estrecheces cada día.
+**17** Los jóvenes de On[^3062] y Pi Beset por la espada caerán, y ellas en cautiverio irán.
+**18** Y en Tajpanjés se oscurecerá el día cuando Yo rompa allí los yugos de Mitzráim, y cesará en ella el orgullo de su fuerza; a ella una nube la cubrirá, y sus hijas en cautiverio irán.
+**19** Y haré juicios en Mitzráim, y sabrán que Yo soy יהוה' ”.
 
 **20** Y sucedió que en el año once, en el mes pri­mero, en el día siete del mes, fue palabra de יהוה a mí, diciendo:
 **21** Hijo de hombre, el brazo de Faraón, rey de Mitzráim, he roto, y he aquí, no ha sido atada para poner curaciones, para poner vendaje atán­dola, fortaleciéndola para empuñar espada.
@@ -993,23 +993,23 @@ La caída de Mitzráim
 **1** Y sucedió en el undécimo año, en el ter­cer mes, en el día uno del mes, que fue pala­bra de יהוה a mí, diciendo:
 **2** Hijo de hombre, di a Faraón, rey de Mitzrá­im, y a su multitud:
 
-**3** He aquí, Ashur era un cedro en el Lebanón, bello de ramas y boscoso, sombrío y elevado de altura,y entre espesuras era su copa.
-**4** Aguas lo hicieron crecer, la profundidad lo elevó; con sus ríos iba alrededor de su plantío,y sus canales enviaba a todos los árboles del campo.
-**5** Por eso se elevó su altura más que todos los árboles del campo; y se multiplicaron sus ramas y se alargó su ramaje,por las muchas aguas en su extenderse.
-**6** En sus ramas anidaban todas las aves de los cielos, y debajo de sus ramajes parían todos los ani­males del campo,y en su sombra habitaban todas las muchas na­ciones.
+**3** He aquí, Ashur era un cedro en el Lebanón, bello de ramas y boscoso, sombrío y elevado de altura, y entre espesuras era su copa.
+**4** Aguas lo hicieron crecer, la profundidad lo elevó; con sus ríos iba alrededor de su plantío, y sus canales enviaba a todos los árboles del campo.
+**5** Por eso se elevó su altura más que todos los árboles del campo; y se multiplicaron sus ramas y se alargó su ramaje, por las muchas aguas en su extenderse.
+**6** En sus ramas anidaban todas las aves de los cielos, y debajo de sus ramajes parían todos los ani­males del campo, y en su sombra habitaban todas las muchas na­ciones.
 **7** Era hermoso en su grandeza, en la longitud de sus ramas; porque estaba su raíz en las muchas aguas.
-**8** Los cedros no lo atenuaban en el jardín de Elohim; los cipreses no eran semejantes a sus ramajesy los plátanos no eran como sus ramas.Todo árbol en el jardín de Elohim no se pare­cía a él en su hermosura.
+**8** Los cedros no lo atenuaban en el jardín de Elohim; los cipreses no eran semejantes a sus ramajes y los plátanos no eran como sus ramas. Todo árbol en el jardín de Elohim no se pare­cía a él en su hermosura.
 **9** Hermoso lo hice en la multitud de sus ramas, y le tenían celos todos los árboles del Éden que estaban en el jardín de Elohim.
 
 **10** Por tanto, así dijo Adonai יהוה: ‘Porque te elevaste en altura, y puso su copa por entre las espesuras[^3063] y se alzó su corazón en su altura,
 **11** lo daré en mano de un poderoso de las nacio­nes, él lo tratará duramente[^3064]. Conforme a su maldad lo he expulsado.
 **12** Y lo han cortado extraños, terribles de las naciones, y lo han abandonado; en los montes y en todos los valles han caído sus ramas, y han sido rotos sus ramajes en todos los cauces de la tierra; y han descendido de su sombra todos los pueblos de la tierra, y lo han abandonado.
 **13** Sobre su ruina morarán todas las aves de los cielos, y sobre sus ramas estarán todos los ani­males del campo,
-**14** a fin de que no se eleven en su altura todos los árboles de las aguas, ni pongan su copa por entre las espesuras, ni se paren sobre ellos en su altura todos los bebedores de agua. Porque todos ellos han sido entregados a la muerte, a la tierra más baja, en medio de los hijos de Adam, a los que descienden al pozo’.
+**14** a fin de que no se eleven en su altura todos los árboles de las aguas, ni pongan su copa por entre las espesuras, ni se paren sobre ellos en su altura todos los bebedores de agua. Porque todos ellos han sido entregados a la muerte, a la tierra más baja, en medio de los hijos de Adam, a los que descienden al pozo'.
 **15** Así ha dicho Adonai יהוה: ‘En el día de su descender al Sheol hice llorar, cubrí encima de él la profundidad y retuve sus ríos. Y fueron refrenadas las muchas aguas, e hice oscurecer por él al Lebanón y todos los árboles del campo por él desmayaron.
 **16** Por la voz de su caída hice temblar las naciones, cuando lo hice descender al Sheol con los que descienden al pozo; y se consolaron en la tierra más baja todos los árbo­les del Éden, lo más selecto y bueno del Leba­nón, todos los bebedores de agua.
 **17** También ellos descendieron con él al Sheol, hacia los traspasados de espada; y los que fue­ron su brazo habitaron en su sombra, en medio de las naciones.
-**18** ¿A quién te pareces entonces en gloria y en grandeza en los árboles del Éden? Mas serás de­rribado con los árboles del Éden a la tierra más baja; en medio de los incircuncisos te acostarás, con los traspasados de espada. Él es Faraón y toda su multitud’ ” –declaración de Adonai יהוה.
+**18** ¿A quién te pareces entonces en gloria y en grandeza en los árboles del Éden? Mas serás de­rribado con los árboles del Éden a la tierra más baja; en medio de los incircuncisos te acostarás, con los traspasados de espada. Él es Faraón y toda su multitud' ” –declaración de Adonai יהוה.
 
 Lamentación por Faraón y su multitud
 
@@ -1018,12 +1018,12 @@ Lamentación por Faraón y su multitud
 **1** Y sucedió en el año doce, en el mes doce, en el día uno del mes, que fue pa­labra de יהוה a mí, diciendo:
 **2** Hijo de hombre, levanta elegía por Faraón, rey de Mitzráim, y le dirás:
 
-**3** Así ha dicho Adonai יהוה:Y extenderé sobre ti mi red en asamblea de muchos pueblos,y ellos te alzarán en mi red.
-**4** Y te dejaré en la tierra, sobre la faz del campo te arrojaré,y haré morar sobre ti toda ave de los cielos, y saciaré de ti al ser vivo de toda la tierra.
+**3** Así ha dicho Adonai יהוה: Y extenderé sobre ti mi red en asamblea de muchos pueblos, y ellos te alzarán en mi red.
+**4** Y te dejaré en la tierra, sobre la faz del campo te arrojaré, y haré morar sobre ti toda ave de los cielos, y saciaré de ti al ser vivo de toda la tierra.
 **5** Y daré tu carne sobre los montes, y llenaré los valles de tu altura[^3066].
 **6** Y daré de beber a la tierra en que tú nadas[^3067] de tu sangre hacia los montes, y las corrientes se llenarán de ti.
-**7** Y cubriré, cuando te hayas apagado, los cielos,y oscureceré sus estrellas: el sol con nube lo cubriré,y la luna no hará resplandecer su luz.
-**8** Todas las luminarias de luz en los cielos oscureceré sobre ti,y daré oscuridad sobre tu tierra –declaración de Adonai יהוה.
+**7** Y cubriré, cuando te hayas apagado, los cielos, y oscureceré sus estrellas: el sol con nube lo cubriré, y la luna no hará resplandecer su luz.
+**8** Todas las luminarias de luz en los cielos oscureceré sobre ti, y daré oscuridad sobre tu tierra –declaración de Adonai יהוה.
 **9** Y haré enojar el corazón de muchos pueblos cuando Yo haga llegar
  tu quebrantamiento en las naciones, sobre tierras que no has conocido.**10** Y espantaré por ti muchos pueblos, y sus re­yes se estremecerán por ti
  con temblor cuando Yo haga volar mi espada sobre sus rostros;
@@ -1031,9 +1031,9 @@ y temblarán en todo momento, cada hombre por su vida, en el día de tu caída.
 
 **11** Porque así ha dicho Adonai יהוה: La espa­da del rey de Babel te llegará.
 **12** Con las espadas de los poderosos haré caer tu multitud,
-**13** Y haré perder a todo su ganado encima de muchas aguas; y no las enturbiará más pie de hombre,y pezuñas de bestia no las enturbiarán.
+**13** Y haré perder a todo su ganado encima de muchas aguas; y no las enturbiará más pie de hombre, y pezuñas de bestia no las enturbiarán.
 **14** Entonces haré hundir las aguas de ellos, y sus ríos como el aceite haré andar–declaración de Adonai יהוה.
-**15** Cuando Yo dé a la tierra de Mitzráim deso­lación, y la tierra sea arruinada de su llenura,cuando Yo golpee a todos los habitantes que hay en ella, sabrán que Yo soy יהוה.
+**15** Cuando Yo dé a la tierra de Mitzráim deso­lación, y la tierra sea arruinada de su llenura, cuando Yo golpee a todos los habitantes que hay en ella, sabrán que Yo soy יהוה.
 
 **16** Elegía es esta, y la cantarán con lamentos; las hijas de las naciones la cantarán con lamen­tos. Sobre Mitzráim y sobre toda su multitud la cantarán –declaración de Adonai יהוה.
 **17** Y sucedió en el año doce, en el quince del mes, que fue palabra de יהוה a mí, diciendo:
@@ -1041,7 +1041,7 @@ y temblarán en todo momento, cada hombre por su vida, en el día de tu caída.
 **18** Hijo de hombre, gime por la multitud de Mitzráim
  y hazla descender, a ella y a las hijas de las naciones poderosas,
 a la tierra más baja, con los que descienden al pozo.
-**19** “¿Más que quién eres agradable? ¡Desciende y yace con los incircuncisos!”
+**19** “¿Más que quién eres agradable? ¡Desciende y yace con los incircuncisos! ”
 
 **20** En medio de los traspasados de espada cae­rán. Espada es dada; la han arrastrado a ella y a todas sus multitudes.
 **21** Hablarán a él los fuertes de los poderosos desde el medio del Sheol junto con sus ayudadores: “Han descendido, yacen los incir­cuncisos traspasados de espada”.
@@ -1071,7 +1071,7 @@ El deber del vigilante
 **7** Y tú, hijo de hombre, como vigilante te he da­do a la casa de Israel; y escucharás de mi boca palabra, y les advertirás de mi parte.
 **8** Cuando Yo diga al condenado: “Condenado, cier­tamente morirás[^3074]”, y no hablas para advertir al condenado de su camino, aquel malvado en su iniquidad morirá, pero su sangre de tu mano buscaré.
 **9** Pero tú cuando adviertes al condenado de su ca­mino para volverse de él, pero no se vuelve de su camino, él en su iniquidad morirá, y tú habrás rescatado tu vida.
-**10** Y tú, hijo de hombre, di a la casa de Israel: “Así han hablado, diciendo: ‘¡Porque nuestras transgresiones y nuestros pecados están sobre nosotros, y por ellos nosotros nos estamos pu­driendo; ¿y cómo viviremos?’ ”
+**10** Y tú, hijo de hombre, di a la casa de Israel: “Así han hablado, diciendo: ‘¡Porque nuestras transgresiones y nuestros pecados están sobre nosotros, y por ellos nosotros nos estamos pu­driendo; ¿y cómo viviremos? ' ”
 **11** Diles: “Vivo Yo” –declaración de Adonai יהוה– “¡si me deleitaría Yo en la muerte del condenado!, sino en que se vuelva el condenado de su camino y viva. ¡Vuelvan, vuelvan de sus ca­minos malos! ¿Y por qué morirán, casa de Is­rael?
 **12** Y tú, hijo de hombre, di a los hijos de tu pue­blo: “La justicia del justo no lo rescatará en el día de su transgresión, y la maldad del condenado, no tropezará con ella en el día de su volver de su maldad; y el justo no podrá vivir por ella en el día de su pecado”.
 **13** Cuando Yo diga al justo que ciertamente[^3075] vivirá, y él se confía en su justicia y hace injusticia, todas sus justicias no serán re­cordadas, y en su injusticia que hizo, en ella mo­rirá.
@@ -1087,10 +1087,10 @@ El deber del vigilante
 **23** Y fue palabra de יהוה a mí, diciendo:
 **24** Hijo de hombre, los habitantes de estas deso­laciones sobre la tierra de Israel hablan, dicien­do: Uno era Abraham, y heredó la tierra; y no­sotros somos muchos, a nosotros fue dada la tie­rra por herencia[^3078].
 **25** Por tanto, di a ellos: “Así ha dicho Adonai יהוה: ‘Con la sangre comen, y sus ojos alzan a sus ídolos, y sangre derraman. ¿Y la tierra po­seerán?
-**26** Se paran sobre sus espadas, hacen abomina­ción, y cada hombre a la mujer de su compañero impurifican. ¿Y la tierra poseerán?’ ”
+**26** Se paran sobre sus espadas, hacen abomina­ción, y cada hombre a la mujer de su compañero impurifican. ¿Y la tierra poseerán? ' ”
 **27** Así les dirás: “Así ha dicho Adonai יהוה: ‘Vivo Yo, ¡si no caerían por la espada los que están en las desolaciones!, y el que está sobre la faz del campo al animal lo he dado para comer­lo, y los que están en las fortalezas y en las cue­vas por la peste morirán.
 **28** Y daré a la tierra desolación y horror, y cesa­rá el orgullo de su fuerza; y serán desolados los montes de Israel, por no haber quien pase por ellos.
-**29** Y sabrán que Yo soy יהוה, cuando dé a la tierra desolación y horror por todas sus abomi­naciones que han hecho’ ”.
+**29** Y sabrán que Yo soy יהוה, cuando dé a la tierra desolación y horror por todas sus abomi­naciones que han hecho' ”.
 **30** Y tú, hijo de hombre, los hijos de tu pueblo hablan de ti junto a los muros y en las entradas de las casas; y habló uno a otro, un hombre a su hermano, diciendo: Vengan, por favor, y escu­chemos qué es la palabra que salió de יהוה.
 **31** Y vienen a ti conforme la venida del pueblo, y se sientan delante de ti como pueblo mío, y escuchan tus palabras pero no las hacen, porque amores sensuales hacen ellos con su boca, pero tras su ga­nancia injusta el corazón de ellos anda.
 **32** Y he aquí, tú eres para ellos como canción de amores[^3079], hermoso de voz y bueno para tocar un instrumento: y escuchan tus palabras pero hacedores no son de ellas.
@@ -1105,11 +1105,11 @@ Profecía contra los pastores de Israel
 **3** La grosura comen ustedes y la lana se han ves­tido, la engordada sacrificaron, pero el rebaño no apacientan.
 **4** A las débiles[^3080] no han fortalecido, a la enferma no han sanado, a la quebrada no han vendado, a la extraviada no han hecho vol­ver y a la perdida no han buscado; y con fuerza las han dominado, y con opresión.
 **5** Y se dispersaron por ausencia de pastor, y han sido para comida de todo animal del cam­po; y se dispersaron.
-**6** Y se desviaron mis ovejas por todos los mon­tes y sobre toda colina alta; y sobre toda la faz de la tierra fueron dispersadas mis ovejas, y no hubo quien busque ni hubo quien pregunte por ellas’ ”.
+**6** Y se desviaron mis ovejas por todos los mon­tes y sobre toda colina alta; y sobre toda la faz de la tierra fueron dispersadas mis ovejas, y no hubo quien busque ni hubo quien pregunte por ellas' ”.
 **7** Por lo tanto, pastores, escuchen la palabra de יהוה:
 **8** Vivo Yo –declaración de Adonai יהוה–, pero[^3081] por cuanto fue mi rebaño para botín, y fueron mis ovejas para comida de todo animal del campo por no haber pastor, y no bus­caron mis pastores mi rebaño, y se apacentaron los pastores a sí mismos y a mi rebaño no apa­centaron,
 **9** por eso, los pastores escuchen la palabra de יהוה:
-**10** “Así ha dicho Adonai יהוה: ‘Heme aquí, contra los pastores, y buscaré mi rebaño de su mano y los haré cesar de apacentar el rebaño. Y no se apacentarán más los pastores a sí mismos, y rescataré mis ovejas de su boca, y no serán para ellos por comida’ ”.
+**10** “Así ha dicho Adonai יהוה: ‘Heme aquí, contra los pastores, y buscaré mi rebaño de su mano y los haré cesar de apacentar el rebaño. Y no se apacentarán más los pastores a sí mismos, y rescataré mis ovejas de su boca, y no serán para ellos por comida' ”.
 **11** Porque así ha dicho Adonai יהוה: Heme aquí Yo, y buscaré mis ovejas y las distinguiré.
 **12** Como distingue el pastor su rebaño en el día que está en medio de sus ovejas dispersas, así distinguiré mis ovejas y las rescataré de todos los lugares que fueron dispersadas allí en un día nublado y neblinoso.
 **13** Y las haré salir de los pueblos y las reuniré de las tierras; y las haré entrar a su tierra, y las apacentaré en los montes de Israel, por los cana­les y por todos los asentamientos de la tierra.
@@ -1148,21 +1148,21 @@ Profecía contra Edom
 **8** Y llenaré sus montes de sus asesinados; en tus colinas y en tus valles y en todos tus canales, los asesinados de espada caerán en ellos.
 **9** Desolaciones olam te daré, y tus ciu­dades no serán habitadas; y conocerán que Yo soy יהוה.
 **10** Porque has dicho: “Las dos naciones y las dos tierras para mí serán, y la poseeremos”, y יהוה allí estaba.
-**11** Por eso, vivo Yo’ –declaración de Adonai יהוה, ‘y haré conforme a tu ira y conforme a tu envidia que has hecho por tu odio contra ellos, y me haré conocer en ellos cuando te juz­gue.
+**11** Por eso, vivo Yo' –declaración de Adonai יהוה, ‘y haré conforme a tu ira y conforme a tu envidia que has hecho por tu odio contra ellos, y me haré conocer en ellos cuando te juz­gue.
 **12** Y sabrás que Yo, יהוה, he oído todos tus desprecios que has dicho sobre los montes de Israel, diciendo: “Está desolada, para nosotros han sido dados por comida”.
-**13** Y ustedes se han engrandecido contra Mí con su boca y han hecho abundantes contra Mí sus palabras; Yo he escuchado’.
+**13** Y ustedes se han engrandecido contra Mí con su boca y han hecho abundantes contra Mí sus palabras; Yo he escuchado'.
 **14** Así ha dicho Adonai יהוה: “Como se ale­gra[^3086] toda la tierra, desolación haré de ti.
-**15** Conforme a tu alegría por la heredad de Is­rael porque fue desolada, así te haré a ti. Deso­lación serás, monte Sheir, y todo Edom, toda ella; y sabrán que Yo soy יהוה’ ”.
+**15** Conforme a tu alegría por la heredad de Is­rael porque fue desolada, así te haré a ti. Deso­lación serás, monte Sheir, y todo Edom, toda ella; y sabrán que Yo soy יהוה' ”.
 
 Bendición de los montes de Israel
 
 **36**
 
 **1** Y tú, hijo de hombre, profetiza a los montes de Israel, y dirás: “Montes de Israel, escuchen la palabra de יהוה.
-**2** Así ha dicho Adonai יהוה: ‘Porque ha di­cho el enemigo sobre ustedes: “¡Ea[^3087]!” y: “Las alturas antiguas[^3088] han sido para noso­tros por po­se­sión”,
-**3** por eso, profetiza, y dirás: “Así ha dicho Ado­nai יהוה: ‘Por cuanto, debido a que los han desolado y aplastado a ustedes por todo alrede­dor, para ser ustedes posesión del resto de las naciones, y han sido levantados sobre el labio de la lengua y la difamación del pueblo;’ ” ’
+**2** Así ha dicho Adonai יהוה: ‘Porque ha di­cho el enemigo sobre ustedes: “¡Ea[^3087]! ” y: “Las alturas antiguas[^3088] han sido para noso­tros por po­se­sión”,
+**3** por eso, profetiza, y dirás: “Así ha dicho Ado­nai יהוה: ‘Por cuanto, debido a que los han desolado y aplastado a ustedes por todo alrede­dor, para ser ustedes posesión del resto de las naciones, y han sido levantados sobre el labio de la lengua y la difamación del pueblo; ' ” '
 **4** por lo tanto, montes de Israel, escuchen la pa­labra de Adonai יהוה. Así ha dicho Adonai יהוה a los montes y a la colinas, a los canales y a los valles, a la ruinas desoladas y a las ciu­dades abandonadas que han sido por botín y por burla del resto de las naciones que son de alre­dedor;
-**5** por eso, así ha dicho Adonai יהוה: ‘¡Si no hubiera hablado en el fuego de mi celo contra el resto de las naciones y contra todo Edom, que han dado a mi tierra para ellos mismos por po­sesión, con alegría de todo corazón, con des­precio en su ser, con el fin de poner su campo abierto para saquear’.
+**5** por eso, así ha dicho Adonai יהוה: ‘¡Si no hubiera hablado en el fuego de mi celo contra el resto de las naciones y contra todo Edom, que han dado a mi tierra para ellos mismos por po­sesión, con alegría de todo corazón, con des­precio en su ser, con el fin de poner su campo abierto para saquear'.
 **6** Por eso, profetiza sobre la tierra de Israel, y dirás a los montes y a las colinas, a los canales y a los vales: ‘Así ha dicho Adonai יהוה: “Heme aquí, en mi celo y en mi ardor he habla­do porque el insulto de las naciones han carga­do”.
 **7** Por lo tanto, así ha dicho Adonai יהוה: ‘Yo he levantado mi mano, ¡si no cargarían las na­ciones que están alrededor de ustedes, ellos, su insulto!
 **8** Y ustedes, montes de Israel, sus ramas darán y su fruto llevarán para mi pueblo Israel, porque se han acercado para venir.
@@ -1170,9 +1170,9 @@ Bendición de los montes de Israel
 **10** Y multiplicaré sobre ustedes hombres, toda la casa de Israel, toda ella; y serán habitadas las ciudades y las ruinas edificadas.
 **11** Y multiplicaré sobre ustedes hombre y bes­tia, y se multiplicarán y fructificarán. Y los haré habitar como en sus antigüedades, y haré más bien que en sus principios; y sabrán que Yo soy יהוה.
 **12** Y haré andar sobre ustedes hombres, a mi pueblo Israel. Y ellos tomarán posesión de ti, y serás a ellos por herencia, y no volverás más a privarlos de hijos”.
-**13** Así ha dicho Adonai יהוה: “Porque les di­cen a ustedes: ‘Devoradora de hombre eres tú, y tú has privado de hijos a tu nación’,
+**13** Así ha dicho Adonai יהוה: “Porque les di­cen a ustedes: ‘Devoradora de hombre eres tú, y tú has privado de hijos a tu nación',
 **14** por lo tanto, hombre no devorarás más, y tu nación no privarás de hijos[^3089] más” –declaración de Ado­nai יהוה.
-**15**‘Y no te haré oír más el insulto de las nacio­nes, y el reproche de los pueblos no cargarás más, y tu nación no harás tropezar más’ –de­claración de Adonai יהוה”.
+**15**‘Y no te haré oír más el insulto de las nacio­nes, y el reproche de los pueblos no cargarás más, y tu nación no harás tropezar más' –de­claración de Adonai יהוה”.
 **16** Y fue palabra de יהוה a mí, diciendo:
 **17** Hijo de hombre, los de la casa de Israel ha­bitaban sobre su tierra y ellos la impurifica­ron con su camino y con sus acciones; como im­pureza de la mujer menstruante[^3090] era su camino delante de Mí.
 **18** Y derramé mi ardor sobre ellos por la sangre que habían derramado sobre la tierra, y con sus ídolos la habían impurificado.
@@ -1180,7 +1180,7 @@ Bendición de los montes de Israel
 **20** Y entraron a las naciones que habían ido allí, y profanaron el Nombre de mi santidad, al decir de ellos: “Pueblo de יהוה son estos, y de su tierra han salido”.
 **21** Pero he tenido compasión por el Nombre de mi santidad, que habían profanado los de la casa de Israel en las naciones que habían ido allá.
 **22** Por eso, di a la casa de Israel: “Así ha dicho Adonai יהוה: ‘No es a causa de ustedes que Yo hago, casa de Israel, sino por el Nombre de mi santidad que han profanado ustedes en las naciones que fueron allí.
-**23** Y consagraré mi Nombre grande profanado en las naciones, el cual ustedes han profanado en medio de ellas. Y sabrán las naciones que Yo soy יהוה’ –declaración de Adonai יהוה– ‘cuando me consagre en ustedes a ojos de ellas.
+**23** Y consagraré mi Nombre grande profanado en las naciones, el cual ustedes han profanado en medio de ellas. Y sabrán las naciones que Yo soy יהוה' –declaración de Adonai יהוה– ‘cuando me consagre en ustedes a ojos de ellas.
 **24** Y los tomaré de las naciones, y los reuniré de todas las tierras y los haré venir a su propia tierra.
 **25** Y rociaré sobre ustedes aguas limpias y serán limpios; de todas sus impurezas y de todos sus ídolos los limpiaré.
 **26** Y les daré un corazón nuevo y un ánimo[^3091] nuevo daré en medio de ustedes; y quitaré el corazón de piedra de su carne y les daré un corazón de carne.
@@ -1189,13 +1189,13 @@ Bendición de los montes de Israel
 **29** Y los salvaré de todas sus impurezas; llamaré al grano y lo multiplicaré, y no daré sobre uste­des hambre.
 **30** Y multiplicaré el fruto del árbol y el produc­to del campo, a fin de que no tomen más el es­carnio del hambre en las naciones.
 **31** Y recordarán ustedes sus malos caminos y sus acciones que no eran buenas, y sentirán repugnancia en sus propios rostros por sus ini­quidades y por sus abominaciones.
-**32** Yo no hago esto a causa de ustedes’ –decla­ración de Adonai יהוה– ‘sea dado a conocer a ustedes. ¡Avergüéncense y humíllense por sus caminos, casa de Israel!’
+**32** Yo no hago esto a causa de ustedes' –decla­ración de Adonai יהוה– ‘sea dado a conocer a ustedes. ¡Avergüéncense y humíllense por sus caminos, casa de Israel! '
 **33** Así ha dicho Adonai יהוה: ‘En el día que Yo los limpie de todas sus iniquidades, haré habitar las ciudades y serán edificadas las rui­nas.
 **34** Y la tierra desolada será labrada en lugar de que sea desolación a los ojos de todo el que pa­sa.
 **35** Y dirán: “Aquella tierra desolada ha sido co­mo el jardín de Éden, y las ciudades secas, desoladas y derribadas son fortalezas habita­das”.
-**36** Y sabrán las naciones que quedan alrededor de ustedes que Yo, יהוה, he edificado los lu­gares derribados y he plantado lo que estaba de­solado. Yo, יהוה, he hablado y lo haré’.
+**36** Y sabrán las naciones que quedan alrededor de ustedes que Yo, יהוה, he edificado los lu­gares derribados y he plantado lo que estaba de­solado. Yo, יהוה, he hablado y lo haré'.
 **37** Así ha dicho Adonai יהוה: ‘Aún en esto seré buscado por la casa de Israel, para hacerlo por ellos: Les multiplicaré hombres como el rebaño.
-**38** Como rebaño de santidades, como rebaño de Yerushaláim en sus tiempos señalados, así serán las ciudades desoladas llenas de rebaño de hom­bre. Y sabrán que Yo soy יהוה’ ”.
+**38** Como rebaño de santidades, como rebaño de Yerushaláim en sus tiempos señalados, así serán las ciudades desoladas llenas de rebaño de hom­bre. Y sabrán que Yo soy יהוה' ”.
 
 Visión de los huesos secos
 
@@ -1206,23 +1206,23 @@ Visión de los huesos secos
 **3** Y Él me dijo: Hijo de hombre, ¿vivirán estos huesos? Y dije: Adonai יהוה, tú sabes.
 **4** Y me dijo: Profetiza sobre estos huesos, y les dirás: “Huesos secos, escuchen la palabra de יהוה.
 **5** Así dijo Adonai יהוה a estos huesos: ‘He aquí, Yo haré entrar en ustedes aliento[^3096], y vivirán.
-**6** Y daré sobre ustedes tendones, y haré subir sobre ustedes carne, y haré cubrir sobre ustedes piel y pondré en ustedes aliento, y vivirán; y sabrán que Yo soy יהוה.’ ”
+**6** Y daré sobre ustedes tendones, y haré subir sobre ustedes carne, y haré cubrir sobre ustedes piel y pondré en ustedes aliento, y vivirán; y sabrán que Yo soy יהוה. ' ”
 **7** Y profeticé como me fue mandado; y hubo un sonido cuando profetizaba, y he aquí, un tem­blor, y se acercaron los huesos, cada hueso ha­cia su hueso.
 **8** Y miré, y he aquí, hubo sobre ellos tendones, y carne subió, y cubrió sobre ellos la piel por encima, pero aliento no había en ellos.
-**9** Y Él me dijo: Profetiza al aliento, profetiza, hijo de hombre, y dirás al aliento: “Así ha dicho Adonai יהוה: ‘De los cuatro vientos ven, aliento, y sopla[^3097] en estos asesinados, y vivirán’ ”.
+**9** Y Él me dijo: Profetiza al aliento, profetiza, hijo de hombre, y dirás al aliento: “Así ha dicho Adonai יהוה: ‘De los cuatro vientos ven, aliento, y sopla[^3097] en estos asesinados, y vivirán' ”.
 **10** Y profeticé como Él me había ordenado, y entró en ellos el aliento, y vivieron y se pararon sobre sus pies, un ejército muy pero muy grande.
 **11** Y Él me dijo: Hijo de hombre, estos huesos son toda la casa de Israel; he aquí, ellos dicen: “Se han secado nuestros huesos y se ha perdido nuestra esperanza; nos hemos cortado a noso­tros mismos[^3098]”.
 **12** Por eso, profetiza, y les dirás: “Así ha dicho Adonai יהוה: ‘He aquí, Yo abro las tumbas de ustedes, y los haré subir de sus tumbas, pue­blo mío, y los haré entrar a la tierra de Israel.
 **13** Y sabrán que Yo soy יהוה, cuando abra sus tumbas y cuando los haga subir de sus tum­bas, pueblo mío.
-**14** Y pondré mi Rúaj en uste­des, y vivirán, y los haré descansar sobre su tie­rra. Y sabrán que Yo, יהוה, he hablado y lo he hecho’ –decla­ración de יהוה”.
+**14** Y pondré mi Rúaj en uste­des, y vivirán, y los haré descansar sobre su tie­rra. Y sabrán que Yo, יהוה, he hablado y lo he hecho' –decla­ración de יהוה”.
 
 La reunión de Iehudáh e Israel
 
 **15** Y fue palabra de יהוה a mí, diciendo:
 **16** Y tú, hijo de hombre, toma para ti una made­ra y escribe sobre ella: “Para Iehudáh y para los hijos de Israel, sus amigos”. Y toma una madera más y escribe sobre ella: “Para Iosef, vara de Efráim, y toda la casa de Israel, sus amigos”.
 **17** Y acércalas una a la otra hacia ti para ser una sola madera, y serán una en tu mano.
-**18** Y cuando te digan los hijos de tu pueblo, diciendo: “¿No nos darás a conocer qué son es­tas cosas para ti?”,
-**19** háblales: “Así ha dicho Adonai יהוה: ‘He aquí, Yo tomo la madera de Iosef que está en la mano de Efráim, y las tribus de Israel, sus ami­gos; y las pondré junto a aquella, con la madera de Iehudáh, y las haré una sola madera, y serán una en mi mano’ ”.
+**18** Y cuando te digan los hijos de tu pueblo, diciendo: “¿No nos darás a conocer qué son es­tas cosas para ti? ”,
+**19** háblales: “Así ha dicho Adonai יהוה: ‘He aquí, Yo tomo la madera de Iosef que está en la mano de Efráim, y las tribus de Israel, sus ami­gos; y las pondré junto a aquella, con la madera de Iehudáh, y las haré una sola madera, y serán una en mi mano' ”.
 **20** Y estarán las maderas, sobre las cuales escri­birás, en tu mano a ojos de ellos.
 **21** Y háblales: “Así ha dicho Adonai יהוה: ‘He aquí, Yo tomo a los hijos de Israel de entre las naciones que fueron allí, y los reuniré de al­rededor y los haré entrar a su tierra.
 **22** Y los haré una nación en la tierra, en los montes de Israel, y un rey será para todos ellos por rey; y no serán más dos naciones, ni serán divididos más en dos reinos otra vez.
@@ -1231,7 +1231,7 @@ La reunión de Iehudáh e Israel
 **25** Y habitarán sobre la tierra que di a mi siervo, a Yaakov, que habitaron en ella sus padres; y ha­bitarán sobre ella ellos y sus hijos, y los hijos de sus hijos hasta siempre; y David mi siervo será príncipe de ellos para siempre.
 **26** Y haré[^3099] para ellos un pacto de shalom; pacto olam será con ellos. Y les daré[^3100] y los multiplicaré, y daré mi santuario[^3101] en medio de ellos para siempre.
 **27** Y estará mi tabernáculo[^3102] sobre ellos, y seré para ellos por Elohim y ellos serán para Mí por pueblo.
-**28** Y sabrán las naciones que Yo, יהוה, san­tifico[^3103] a Israel, cuando esté mi santua­rio en medio de ellos para siempre’ ”.
+**28** Y sabrán las naciones que Yo, יהוה, san­tifico[^3103] a Israel, cuando esté mi santua­rio en medio de ellos para siempre' ”.
 
 Profecía contra Gog
 
@@ -1245,21 +1245,21 @@ Profecía contra Gog
 **6** Gómer y todas sus tropas[^3105], Bet To­garmáh, los extremos del norte y con todas sus tropas; muchos pueblos están contigo.
 **7** Afírma y prepárate[^3106], tú y toda tu asamblea, los que se reúnen junto a ti, y serás para ellos por guarda.
 **8** Después de[^3107] muchos días serás co­mandado; en la posteridad de los años vendrás a la tierra restaurada de la espada, reunida de muchos pueblos sobre los montes de Israel, que habían sido por desolación continua. Ella de los pueblos fue sacada, y habitan en seguridad to­dos ellos.
-**9** Y subirás como la devastación, vendrás; como nube para cubrir la tierra serás, tú y todas tus tro­pas, y muchos pueblos contigo’.
+**9** Y subirás como la devastación, vendrás; como nube para cubrir la tierra serás, tú y todas tus tro­pas, y muchos pueblos contigo'.
 **10** Así ha dicho Adonai יהוה: ‘Y sucederá en aquel día que subirán palabras sobre tu corazón y pensarás un plan malvado,
 **11** y dirás: “Subiré sobre una tierra de regiones abiertas. Iré a los tranquilos, habitantes en segu­ridad todos ellos, habitan sin muralla, y barras y puertas no tienen ellos”;
 **12** para saquear botín y para robar despojo, para volver tu mano sobre las desolaciones habita­das, y hacia un pueblo reunido de las naciones, que ha hecho ganado y adquisición, habitantes sobre el ombligo de la tierra.
-**13** Shebá y Dedán, y los comerciantes de Tar­shísh y todas sus aldeas[^3108] te dirán: “¿Para saquear botín tú has venido? ¿Para robar despojo has reunido tu asamblea, para llevar plata y oro, para tomar ganado y adquisición, para saquear gran botín?” ’ ”.
+**13** Shebá y Dedán, y los comerciantes de Tar­shísh y todas sus aldeas[^3108] te dirán: “¿Para saquear botín tú has venido? ¿Para robar despojo has reunido tu asamblea, para llevar plata y oro, para tomar ganado y adquisición, para saquear gran botín? ” ' ”.
 **14** Por lo tanto, profetiza, hijo de hombre, y di­rás a Gog: “Así ha dicho Adonai יהוה: ‘En aquel día, cuando habite mi pueblo Israel en seguridad, ¿no lo sabrás?
 **15** Y vendrás de tu lugar de los extremos del norte, tú y muchos pueblos contigo, montadores de caballos todos ellos, gran asamblea y mucha fuerza[^3109].
-**16** Y subirás sobre mi pueblo Israel como nube para cubrir la tierra. En la posteridad de los días será, y te haré venir sobre mi tierra, a fin de cono­cerme las naciones cuando Yo sea santificado en ti a ojos de ellos, Gog’.
+**16** Y subirás sobre mi pueblo Israel como nube para cubrir la tierra. En la posteridad de los días será, y te haré venir sobre mi tierra, a fin de cono­cerme las naciones cuando Yo sea santificado en ti a ojos de ellos, Gog'.
 **17** Así ha dicho Adonai יהוה: ‘¿Eres tú del que hablé en días antiguos por mano de mis siervos los profetas de Israel, los que profetizaron en aquellos días, durante años, para hacerte venir sobre ellos?
-**18** Y sucederá en aquel día, en el día de venir Gog sobre la tierra de Israel’ –declaración de Adonai יהוה– ‘que subirá mi calor en mi nariz.
-**19** Y en mi celo, en el fuego de mi desborde, he hablado: “¡Si no habría en aquel día un gran temblor sobre la tierra de Israel!”
+**18** Y sucederá en aquel día, en el día de venir Gog sobre la tierra de Israel' –declaración de Adonai יהוה– ‘que subirá mi calor en mi nariz.
+**19** Y en mi celo, en el fuego de mi desborde, he hablado: “¡Si no habría en aquel día un gran temblor sobre la tierra de Israel! ”
 **20** Y temblarán a causa de mi rostro los peces del mar, el ave de los cielos, el animal del cam­po, todo reptil que se arrastra sobre la tierra y todo hombre que está sobre la faz de la tierra; y se derrumbarán los montes, y caerán los lugares empinados, y todo muro a la tierra caerá.
-**21** Y llamaré sobre él, por todos mis montes, una espada’ –declaración de Adonai יהוה. ‘La espada de cada hombre en su hermano será.
+**21** Y llamaré sobre él, por todos mis montes, una espada' –declaración de Adonai יהוה. ‘La espada de cada hombre en su hermano será.
 **22** Y entraré en juicio con él con peste y con sangre; y lluvia desbordante, piedras de grani­zo, fuego y azufre haré llover sobre él y sobre sus tropas y sobre muchos pueblos que están con él.
-**23** Y me engrandeceré y me santificaré[^3110], y seré conocido a ojos de muchos gentiles; y sabrán que Yo soy יהוה’ ”.
+**23** Y me engrandeceré y me santificaré[^3110], y seré conocido a ojos de muchos gentiles; y sabrán que Yo soy יהוה' ”.
 
 Destrucción de Gog
 
@@ -1269,26 +1269,26 @@ Destrucción de Gog
 **2** Y te haré volver, y te conduciré[^3112], y te haré subir de los extremos del norte y te haré venir sobre los montes de Israel.
 **3** Y golpearé tu arco de tu mano izquierda, y las flechas de tu mano derecha haré caer.
 **4** Sobre los montes de Israel caerás, tú y todas tus tropas y los pueblos que están contigo. Al ave de rapiña, todo alado, y al animal del campo te daré por comida.
-**5** Sobre la faz del campo caerás, porque Yo he hablado’ –declaración de Adonai יהוה.
+**5** Sobre la faz del campo caerás, porque Yo he hablado' –declaración de Adonai יהוה.
 **6** ‘Y enviaré fuego en Magog y en los habitantes de las islas que están en seguridad; y sabrán que Yo soy יהוה.
 **7** Y el Nombre de mi santidad haré conocer en medio de mi pueblo Israel, y no dejaré profanar más el Nombre de mi santidad; y sabrán las na­ciones que Yo soy יהוה, Kadosh[^3113] en Israel.
-**8** He aquí, viene, y sucederá’ –declaración de Adonai יהוה. ‘Este es el día que he hablado.
+**8** He aquí, viene, y sucederá' –declaración de Adonai יהוה. ‘Este es el día que he hablado.
 **9** Y saldrán los habitantes de las ciudades de Is­rael y quemarán y encenderán fuego con el arma­mento, escudo y pavés, con el arco y con las fle­chas, con vara de mano y con lanza, y en­cenderán fuego con ellos durante siete años.
-**10** Y no cargarán maderas desde el campo ni las recogerán[^3114] desde los bosques, por­que con el armamento encenderán fuego; y des­pojarán a sus despojadores y saquearán a sus sa­queadores’ –declaración de Adonai יהוה.
+**10** Y no cargarán maderas desde el campo ni las recogerán[^3114] desde los bosques, por­que con el armamento encenderán fuego; y des­pojarán a sus despojadores y saquearán a sus sa­queadores' –declaración de Adonai יהוה.
 **11** ‘Y sucederá en aquel día que daré a Gog un lugar allí para sepultura en Israel, el valle de los que pasan al este del mar, y refrenará este a los que pasan; y enterrarán allí a Gog y a toda su multitud. Y lo llamarán Guei Hamón Gog[^3115].
 **12** Y los enterrarán los de la casa de Israel, a fin de limpiar la tierra, por siete meses.
-**13** Y los enterrará todo el pueblo de la tierra; y será para ellos para renombre del día en que Yo sea honrado’ –declaración de Adonai יהוה.
+**13** Y los enterrará todo el pueblo de la tierra; y será para ellos para renombre del día en que Yo sea honrado' –declaración de Adonai יהוה.
 **14** Y hombres de constancia apartarán, que pa­sen por la tierra, enterrarán con[^3116] los que pasen a los que queden sobre la faz de la tierra, para limpiarla. Al final de los siete meses exa­minarán.
 **15** Y cruzarán los que pasen por la tierra, y el que vea un hueso de hombre, edificará junto a él un marcador, hasta que lo entierren los sepul­tadores en el valle de Hamón Gog.
-**16** Y también, el nombre de la ciudad será Hamonáh[^3117]; y limpiarán la tierra’ ”.
+**16** Y también, el nombre de la ciudad será Hamonáh[^3117]; y limpiarán la tierra' ”.
 **17** Y tú, hijo de hombre, así ha dicho Adonai יהוה: “Di al ave, todo alado, y al animal del campo: ‘Reúnanse y vengan, júntense de alre­dedor sobre mi sacrificio que Yo preparo[^3118] para ustedes, un gran sacrificio sobre los montes de Israel, y comerán carne y beberán sangre.
 **18** Carne de poderosos comerán y sangre de los príncipes de la tierra beberán, carneros, corde­ros y machos cabríos, toros engordados de Ba­shán todos ellos.
 **19** Y comerán grosura para saciedad, y beberán sangre para embriaguez, de mi sacrificio que he preparado[^3119] para ustedes.
-**20** Y se saciarán sobre mi mesa de caballos y carros, de poderosos y de todo hombre de gue­rra’ –declaración de Adonai יהוה.
+**20** Y se saciarán sobre mi mesa de caballos y carros, de poderosos y de todo hombre de gue­rra' –declaración de Adonai יהוה.
 **21** ‘Y daré mi gloria en las naciones; y verán to­das las naciones mi juicio que he hecho y mi mano que he puesto en ellos.
 **22** Y sabrán los de la casa de Israel que Yo soy יהוה su Elohim desde ese día y en adelante[^3120].
 **23** Y sabrán las naciones que por su iniquidad fueron exiliados los de la casa de Is­rael, porque actuaron infielmente contra Mí; y oculté mi rostro de ellos y los di en mano de sus opresores, y cayeron por la espada todos ellos.
-**24** Conforme a su impureza y conforme a sus transgresiones he hecho con ellos, y oculté mi rostro de ellos’ ”.
+**24** Conforme a su impureza y conforme a sus transgresiones he hecho con ellos, y oculté mi rostro de ellos' ”.
 **25** Por eso, así ha dicho Adonai יהוה: Ahora haré volver el cautiverio de Yaakov, y me com­padeceré de toda la casa de Israel, y seré celoso del Nombre de mi santidad.
 **26** Y llevaron[^3121] su vergüenza y toda su infidelidad[^3122] con que fueron infieles contra Mí, en su habitar sobre su tierra en seguridad, y sin ate­rrorizador.
 **27** Cuando Yo los haga volver de los pueblos y los reúna de las tierras de sus enemigos, seré santificado en ellos a ojos de muchas naciones.
@@ -1354,7 +1354,7 @@ Visión de la casa de יהוה
 **1** Y me hizo entrar al Hejal[^3146] y midió los pilares; seis codos la anchura de un lado[^3147] y seis codos la anchura del otro lado[^3148] era el ancho de la tienda.
 **2** Y la anchura de la entrada era de diez codos, y los lados[^3149] de la entrada eran de cinco codos de un lado y cinco codos del otro. Y midió su longitud, cuarenta codos, y la anchura, veinte codos.
 **3** Y entró al interior y midió un pilar de la entra­da, dos codos, y la entrada tenía seis codos, y la anchura de la entrada, siete codos.
-**4** Y midió su longitud, tenía veinte codos, y la anchura, veinte codos hacia la faz del Hejal. Y me dijo: Este es el Kódesh Ha’Kodashim[^3150].
+**4** Y midió su longitud, tenía veinte codos, y la anchura, veinte codos hacia la faz del Hejal. Y me dijo: Este es el Kódesh Ha'Kodashim[^3150].
 **5** Y midió una pared de la casa, tenía seis codos, y la anchura de la cámara lateral[^3151] era de cuatro codos por todos lados alrededor de la casa[^3152].
 **6** Y las cámaras laterales eran cámara lateral hacia cámara lateral en tres, y treinta veces; y venían por el muro que era de la casa para las cámaras laterales, todo alrededor, para ser ase­guradas, pero no estaban aseguradas en el muro de la casa.
 **7** Y se ensanchaba y daba la vuelta hacia arriba[^3153] a las cámaras latera­les, porque el círculo de la casa era hacia arriba todo alrededor de la casa, por eso la anchura de la casa era en ascen­so. Y así la más baja subía sobre la más alta por la intermedia.
@@ -1444,14 +1444,14 @@ Deberes de los sacerdotes
 **5** Y me dijo יהוה: Hijo de hombre, pon tu corazón, mira con tus ojos y con tus oídos escu­cha todo lo que Yo te hablo de todos los estatu­tos de la casa de יהוה y de toda su Torah; y pondrás tu corazón para el ingreso de la casa y en todas las salidas del santuario.
 **6** Y dirás a la rebeldía, a la casa de Israel: “Así ha dicho Adonai יהוה: ‘¡Suficiente tienen us­tedes de todas sus abominaciones, casa de Is­rael!,
 **7** cuando hicieron entrar hijos de extranjero, in­circuncisos de corazón e incircuncisos de carne para estar en mi santuario para profanarlo, a mi casa; cuando les acercaron mi pan, grosura y sangre; ¡y rompieron mi pacto en todas sus abo­minaciones!
-**8** Y no guardaron la guardia de mis santidades, y pusieron guardadores de mi guardia en mi santuario para ustedes’.
+**8** Y no guardaron la guardia de mis santidades, y pusieron guardadores de mi guardia en mi santuario para ustedes'.
 **9** Así ha dicho Adonai יהוה: ‘Todo hijo de extranjero incircunciso de corazón e incircun­ciso de carne, no entrará a mi santuario; esto es para todo hijo de extranjero que está en medio de los hijos de Israel;
 **10** sino que, los leviím que se alejaron de Mí cuando se extravió Israel, que se extraviaron de estando conmigo tras sus ídolos, llevarán su ini­quidad.
 **11** Y serán en mi santuario servidores, haciendo supervisiones en las puertas de la casa, y serán servi­dores para la casa; ellos sacrificarán la ofrenda ascendida y el sacrificio para el pueblo, y estarán parados delante de ellos para servirlos.
-**12** Porque los sirvieron delante de sus ídolos y fueron para la casa de Israel por tropiezo de ini­quidad, por eso he alzado mi mano sobre ellos,’ –declaración de Adonai יהוה– ‘y cargarán su iniquidad.
+**12** Porque los sirvieron delante de sus ídolos y fueron para la casa de Israel por tropiezo de ini­quidad, por eso he alzado mi mano sobre ellos, ' –declaración de Adonai יהוה– ‘y cargarán su iniquidad.
 **13** Y no se acercarán a Mí para oficiar de sacer­dotes para Mí ni para acercarse a cualquiera de mis santidades, a las santidades de santidades; y llevarán su vergüenza y sus abominaciones que han hecho.
 **14** Y los daré como guardadores de la guardia de la casa, de todo su trabajo y de todo lo que se hará en ella.
-**15** Pero los sacerdotes, los leviím hijos de Tza­dok, los cuales han guardado la guardia de mi santuario cuando se extraviaron los hijos de Is­rael de estando conmigo, ellos se acercarán a Mí para servirme, y se pararán delante de Mí para acercarme grosura y sangre’ –declaración de Adonai יהוה.
+**15** Pero los sacerdotes, los leviím hijos de Tza­dok, los cuales han guardado la guardia de mi santuario cuando se extraviaron los hijos de Is­rael de estando conmigo, ellos se acercarán a Mí para servirme, y se pararán delante de Mí para acercarme grosura y sangre' –declaración de Adonai יהוה.
 **16**‘Ellos entrarán a mi santuario, y ellos se acer­carán a mi mesa para servirme y para guar­dar mi guardia.
 **17** Y será que cuando entren a las puertas del patio interior, vestiduras de lino se vestirán; y no subirá sobre ellos lana cuando sirvan en las puertas del patio interior y en la casa.
 **18** Adornos[^3183] de lino tendrán sobre su cabeza, y calzoncillos de lino tendrán sobre sus lomos; no se ceñirán con cosa que traiga sudor.
@@ -1463,7 +1463,7 @@ Deberes de los sacerdotes
 **24** Y en una pelea, ellos se pararán para juzgar, en mis juicios lo juzgarán; y mi Torah y mis es­tatutos en todos mis tiempos señalados[^3189] guardarán, y mis Shabatot[^3190] santificarán[^3191].
 **25** Y hacia muerto de hombre no irá para impu­rificarse; pero por padre, por madre, por hijo, por hija, por hermano y por hermana que no sea de hombre, se impurificarán.
 **26** Y después de su purificación, siete días con­tarán para él.
-**27** Y en el día de su entrar a la Santidad, al patio interior, para servir en la Santidad, acercará su ofrenda por el pecado’ –declaración de Adonai יהוה.
+**27** Y en el día de su entrar a la Santidad, al patio interior, para servir en la Santidad, acercará su ofrenda por el pecado' –declaración de Adonai יהוה.
 **28** ‘Y será para ellos por herencia, Yo, la heren­cia de ellos; y posesión no les darán en Israel, Yo soy su posesión.
 **29** La ofrenda de grano, la ofrenda por el pecado y la ofrenda de culpa ellos comerán; y toda cosa dedicada[^3192] en Israel, para ellos será.
 **30** Y el principio de todas las primicias de todo, y toda ofrenda alzada[^3193] de todo, de todas sus ofrendas alzadas[^3194], para los sacerdotes será. Y el principio de las masas de ustedes darán al sacerdote para hacer descansar bendición sobre tu casa.
@@ -1480,8 +1480,8 @@ Tierra de los sacerdotes
 **5** Y veinticinco mil codos de largo y diez mil de ancho será para los leviím, servidores de la casa, para ellos por posesión, con veinte habitaciones[^3199].
 **6** Y posesión de la ciudad darán, cinco mil de ancho, y de largo, veinticinco mil, correspon­diente a la terumáh[^3200] de santidad para la casa de Israel será.
 **7** Y para el príncipe habrá a ambos lados[^3201] de la terumáh de santi­dad y de la posesión de la ciudad, al frente de la terumáh de santidad y al frente de la posesión de la ciudad, desde el lado del mar hacia el mar y desde el lado del este hacia el este, y la longi­tud será correspondiente a[^3202] una de las porciones, desde la frontera del mar hacia la frontera del este.
-**8** En la tierra será para él por posesión, en Israel; y no oprimirán más mis príncipes a mi pueblo, y la tierra darán para la casa de Israel por sus tribus’.
-**9** Así ha dicho Adonai יהוה: ‘¡Suficiente para ustedes, príncipes de Israel!, violencia y devas­tación quiten, y juicio y justicia hagan. ¡Levan­ten sus actos de expulsión de sobre mi pueblo!’ –declaración de Adonai יהוה.
+**8** En la tierra será para él por posesión, en Israel; y no oprimirán más mis príncipes a mi pueblo, y la tierra darán para la casa de Israel por sus tribus'.
+**9** Así ha dicho Adonai יהוה: ‘¡Suficiente para ustedes, príncipes de Israel!, violencia y devas­tación quiten, y juicio y justicia hagan. ¡Levan­ten sus actos de expulsión de sobre mi pueblo! ' –declaración de Adonai יהוה.
 **10** ‘Balanzas de justicia, efáh de justicia y bat de justicia tendrán ustedes.
 **11** El efáh y el bat de una medida será, para llevar un décimo del jómer el bat, y una décima del jómer el efáh; por el jómer será su medida.
 **12** Y el shekel será de veinte gueráh; veinte shekel, veinticinco shekel y quince shekel, será el manéh[^3203] para ustedes.
@@ -1490,9 +1490,9 @@ Ofrendas y Tiempos Señalados
 
 **13** Esta es la terumáh que levantarán: un sexto del efáh de un jómer de trigo; y darán la sexta parte del efáh de un jómer de la cebada.
 **14** Y el estatuto del aceite, el bat del aceite, *es* la décima parte del bat del cor, *esto es*, diez bat, un jómer, porque diez bat *son* un jómer;
-**15** y un cordero del rebaño, de los doscientos de la tierra regada de Israel, para ofrenda de grano, para ofrenda ascendida y para retribuciones, para hacer reconciliación por ustedes’ –declaración de Adonai __יהוה__.
+**15** y un cordero del rebaño, de los doscientos de la tierra regada de Israel, para ofrenda de grano, para ofrenda ascendida y para retribuciones, para hacer reconciliación por ustedes' –declaración de Adonai __יהוה__.
 **16** ‘Todo el pueblo de la tierra dará[^3204] esta terumáh para el prín­cipe[^3205] en Israel.
-**17** Y a cargo del[^3206] príncipe serán las ofrendas ascendidas, la ofrenda de grano y la libación en las fiestas, en las lunas nuevas y en los Shabatot, en todos los tiempos señalados de la casa de Is­rael. Él hará la ofrenda por el pecado, la ofrenda de grano, la ofrenda ascendida y las retribuciones para hacer reconciliación por la casa de Israel’.
+**17** Y a cargo del[^3206] príncipe serán las ofrendas ascendidas, la ofrenda de grano y la libación en las fiestas, en las lunas nuevas y en los Shabatot, en todos los tiempos señalados de la casa de Is­rael. Él hará la ofrenda por el pecado, la ofrenda de grano, la ofrenda ascendida y las retribuciones para hacer reconciliación por la casa de Israel'.
 **18** Así ha dicho Adonai __יהוה__: ‘En el *mes* pri­mero, en el *día* uno del mes, tomarás un toro hijo del ganado, íntegro, y limpiarás del pecado el santuario.
 **19** Y tomará el sacerdote de la sangre de la ofrenda por el pecado y *la* pondrá en los postes de puerta de la casa, en las cuatro esquinas del zócalo del altar y sobre los postes de la puerta del patio interior.
 **20** Y así harás en el *día* siete del mes, por el hombre extraviado y por el simple. Y expiarán la casa.
@@ -1500,7 +1500,7 @@ Ofrendas y Tiempos Señalados
 **22** Y hará el príncipe en aquel día por sí mismo y por todo el pueblo de la tierra un toro de ofrenda por el pecado.
 **23** Y *en* los siete días de la fiesta hará ofrenda ascendida a __יהוה__, siete toros y siete carneros íntegros, diariamente, los siete días, y *en* ofren­da por el pecado, un peludo de las cabras diaria­mente.
 **24** Y ofrenda de grano de un efáh por toro y un efáh por carnero hará, y de aceite un hin para el efáh.
-**25** En el *mes* séptimo, en el día quince del mes, en la fiesta, hará conforme a esto los siete días, conforme a la ofrenda por el pecado, conforme a la ofrenda ascendida, conforme a la ofrenda de grano y conforme al aceite’.
+**25** En el *mes* séptimo, en el día quince del mes, en la fiesta, hará conforme a esto los siete días, conforme a la ofrenda por el pecado, conforme a la ofrenda ascendida, conforme a la ofrenda de grano y conforme al aceite'.
 
 *Las ofrendas del Príncipe*
 
@@ -1520,10 +1520,10 @@ Ofrendas y Tiempos Señalados
 **12** Y cuando haga el príncipe una ofrenda vo­luntaria, ofrenda ascendida o retribuciones a voluntariedad para __יהוה__, se abrirá para él la puerta que mira al este, y hará su ofrenda ascen­dida y sus retribuciones como hará en el día del Shabat. Y saldrá y cerrará la puerta después de su salida.
 **13** Y un cordero hijo de su año, íntegro, harás como ofrenda ascendida diariamente a __יהוה__; de mañana en mañana lo harás.
 **14** Y una ofrenda de grano harás junto a él de mañana en mañana, un sexto del efáh, y de aceite un tercio del hin para humedecer la harina fina; ofrenda de grano a __יהוה__, decreto olam[^3211] continuamente.
-**15** Y harán el cordero, la ofrenda de grano y el aceite, de mañana en mañana, ofrenda ascendi­da continua’.
+**15** Y harán el cordero, la ofrenda de grano y el aceite, de mañana en mañana, ofrenda ascendi­da continua'.
 **16** Así ha dicho Adonai __יהוה__: ‘Cuando dé el príncipe un regalo a un hombre de sus hijos, su herencia es esta, para sus hijos será; posesión de ellos es esta en herencia.
 **17** Y cuando dé un regalo de su herencia a uno de sus siervos, será de él hasta el año de la liber­tad, y volverá al príncipe. Solamente su heren­cia es de sus hijos; para ellos será.
-**18** Y no tomará el príncipe nada de la herencia del pueblo, para oprimirlos de su propiedad; de su propia propiedad hará heredar a sus hijos, a fin de que no se disperse mi pueblo, cada hom­bre de su posesión’ ”.
+**18** Y no tomará el príncipe nada de la herencia del pueblo, para oprimirlos de su propiedad; de su propia propiedad hará heredar a sus hijos, a fin de que no se disperse mi pueblo, cada hom­bre de su posesión' ”.
 **19** Y me introdujo por la entrada que está al lado[^3212] de la puerta, hacia las habitaciones de santidad, hacia los sacerdotes, las que miran al norte; y he aquí, allí había un lugar en las partes extremas[^3213] hacia el mar[^3214].
 **20** Y me dijo: Este es el lugar que cocerán allí los sacerdotes la ofrenda de culpa y la ofrenda por el pecado, en el cual hornearán la ofrenda de grano, para no sacarlas al patio exterior para santificar al pueblo.
 **21** Y me sacó al patio exterior y me hizo pasar hacia los cuatro ángulos del patio; y he aquí, en cada ángulo del patio había un patio[^3215].
@@ -1605,7 +1605,7 @@ Límites y repartición de la tierra
 [^2887]: Heb.: *Jashmal. *Significado dudoso. Así también en vers. 27.
 [^2888]: O, *animales. *Así en el resto del cap.
 [^2889]: Lit.: *para sus.*
-[^2890]: Significado incierto. La versión gr. traduce: *Pantokrator* \(Todopoderoso\); 1De las monta­ñas \[del acadio *shadu*, ‘*montaña’*\]. 2Susten­tador \[del hebreo *shad*, ‘*pecho*, *seno’*\]. 3Dominante \[del hebreo *shadad*, ‘*destruir’*\]. 4Fuerte, poderoso \[del árabe *shadid*, ‘*fuerte’*\].
+[^2890]: Significado incierto. La versión gr. traduce: *Pantokrator* \(Todopoderoso\); 1De las monta­ñas \[del acadio *shadu*, ‘*montaña'*\]. 2Susten­tador \[del hebreo *shad*, ‘*pecho*, *seno'*\]. 3Dominante \[del hebreo *shadad*, ‘*destruir'*\]. 4Fuerte, poderoso \[del árabe *shadid*, ‘*fuerte'*\].
 [^2891]: Espíritu, viento, poder.
 [^2892]: Espíritu, viento, poder. Así en el resto del cap.
 [^2893]: Otra lectura posible es: *Y me senté donde ellos estaban sentados.*
@@ -1630,7 +1630,7 @@ Límites y repartición de la tierra
 [^2912]: Lit.: *una.*
 [^2913]: Lit.: *carne.*
 [^2914]: Lit.: *para los cuatro sus ruedas.*
-[^2915]: Heb.: *Ha’galgal.*
+[^2915]: Heb.: *Ha'galgal.*
 [^2916]: O, *buitre.*
 [^2917]: Espíritu, viento, poder. Así en el resto del cap.
 [^2918]: O, *la ausencia de Torah. *Heb.: *Áven. *Gr.: *Anomía.*
@@ -1920,7 +1920,7 @@ Límites y repartición de la tierra
 [^3206]: Lit.: *sobre el.*
 [^3207]: Heb.: *Nasí. *Es decir, *el que lleva la carga.* Así en el resto del cap.
 [^3208]: Pl. de *Shabat.*
-[^3209]: Heb.: *Mo’adim.*
+[^3209]: Heb.: *Mo'adim.*
 [^3210]: Así en varios mss. y en la versión gr., en el T.M.: *ellos saldrán.*
 [^3211]: Tiempo oculto, solo conocido por Elohim.
 [^3212]: Lit.: *sobre el hombro.*

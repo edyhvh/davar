@@ -128,8 +128,8 @@ USAGE:
   python main.py postprocess all          Post-process all JSON files
   python main.py validate <book>          Validate single book JSON file
   python main.py validate all             Validate all JSON files
-    python main.py validate-format <book>   Validate formatting consistency for one JSON
-    python main.py validate-format all      Validate formatting consistency for all JSON
+    python main.py validate-format <book>   Validate formatting + structure for one JSON
+    python main.py validate-format all      Validate formatting + structure for all JSON
   python main.py process <docx> [--books <book1> <book2> ...]  Process specific DOCX file for specific books
   python main.py all                      Full pipeline: split + convert + postprocess
   python main.py books                    List available books
@@ -147,6 +147,10 @@ EXAMPLES:
 OPTIONS FOR POSTPROCESS:
   --dry-run                               Show changes without modifying files
   --backup                                Create .bak backup before modifying
+
+VALIDATE-FORMAT NOTES:
+    Uses canonical structure from web/public/data/tth/*.json
+    Checks chapter count and per-chapter verse counts in addition to formatting
 
 DIRECTORIES:
   Raw DOCX files:     data/tth_2/raw/

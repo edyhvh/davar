@@ -1,18 +1,18 @@
- \(MAASEI HASH’LIJIM\)__מעשי השליחים
+ \(MAASEI HASH'LIJIM\)__מעשי השליחים
 
-*La promesa del Rúaj Ha’Kódesh*
+*La promesa del Rúaj Ha'Kódesh*
 
 **1**
 
 **1** El primer libro he completado acerca de todas *las cosas*, mi amado Iedidiáh[^1421], que comenzó a hacer Yeshúa y a enseñar,
 
-**2** hasta el día en que fue tomado y ordenó por el Rúaj Ha’Kódesh[^1422] a los discípulos, a quienes había escogido;
+**2** hasta el día en que fue tomado y ordenó por el Rúaj Ha'Kódesh[^1422] a los discípulos, a quienes había escogido;
 
 **3** y para los cuales levantó su ser vivo, después de sus terrores y sus amarguras, con muchas señales *por *cuarenta días, apareciéndose a ellos y diciéndo*les *acerca del reino de Elohim.
 
 **4** Y reuniéndolos, les ordenó: No partir de Ierushaláim, sino permanecer y esperar el mensaje de mi Padre, el cual escucharon de Mí.
 
-**5** Porque Iojanán sumergió en las aguas, pero ustedes serán sumergidos en el Rúaj Ha’Kódesh después de días no muchos.
+**5** Porque Iojanán sumergió en las aguas, pero ustedes serán sumergidos en el Rúaj Ha'Kódesh después de días no muchos.
 
 *La ascensión*
 
@@ -20,7 +20,7 @@
 
 **7** Y les dijo: No les es adecuado conocer los tiempos y las horas que puso el Padre, Él solo, en su dominio;
 
-**8** sino que tomarán el poder del Rúaj Ha’Kódesh que vendrá a ustedes de lo alto, y serán mis testigos tanto en Ierushaláim como en toda Iehudáh y Shomrón, y hasta los confines de la tierra.
+**8** sino que tomarán el poder del Rúaj Ha'Kódesh que vendrá a ustedes de lo alto, y serán mis testigos tanto en Ierushaláim como en toda Iehudáh y Shomrón, y hasta los confines de la tierra.
 
 **9** Y cuando dijo estas *cosas*, viéndolo ellos, fue alzado y ascendido, y una nube lo tomó de sus ojos.
 
@@ -32,13 +32,13 @@
 
 **12** Entonces volvieron a Ierushaláim desde el monte que se llama monte de los Olivos, que está cerca a Ierushaláim, camino de un Shabat.
 
-**13** Y cuando entraron a la ciudad, subieron a la habitación superior, donde se estaban quedando[^1423] Kefa, Iaacob, Iojanán, Andreas, Filipos, Tomáh, Bar\-Talmai, Matityáhu, Iaacob hijo de Alfi, Shimón kanai[^1424] y Iehudáh[^1425] hijo de Iaacob.
+**13** Y cuando entraron a la ciudad, subieron a la habitación superior, donde se estaban quedando[^1423] Kefa, Iaacob, Iojanán, Andreas, Filipos, Tomáh, BarTalmai, Matityáhu, Iaacob hijo de Alfi, Shimón kanai[^1424] y Iehudáh[^1425] hijo de Iaacob.
 
 **14** Todos estos estaban permaneciendo juntos en tefilot[^1426] y en peticiones de favor, con las mujeres, y con Miriam madre de Yeshúa, y con sus hermanos.
 
 **15** Y en estos días se levantó Kefa en medio de los discípulos, y dijo \(y era la congregación de los nombres, juntos, como ciento veinte\):
 
-**16** Hombres, mis hermanos, era necesario que se llenara esta Escritura que desde antes había dicho el Rúaj Ha’Kódesh por boca de David acerca de Iehudáh[^1427], que fue el que los encaminó a los que prendieron a Yeshúa,
+**16** Hombres, mis hermanos, era necesario que se llenara esta Escritura que desde antes había dicho el Rúaj Ha'Kódesh por boca de David acerca de Iehudáh[^1427], que fue el que los encaminó a los que prendieron a Yeshúa,
 
 **17** que había sido alzada su cabeza[^1428] con nosotros y había tomado el goral[^1429] de este sacerdo­cio.
 
@@ -58,7 +58,7 @@ y: su cargo tomará otro[^1434].
 
 **22** comenzando desde la inmersión de Iojanán hasta el día *en* que fue tomado de nosotros, sea con nosotros testigo de su levantamiento[^1436] uno de estos.
 
-**23** Y establecieron dos hombres: a Iosef, llamado Bar\-Shaba[^1437], y también llamado Tzadik[^1438], y a Matia.
+**23** Y establecieron dos hombres: a Iosef, llamado BarShaba[^1437], y también llamado Tzadik[^1438], y a Matia.
 
 **24** E hicieron tefilah[^1439], diciendo: Yehovah, Tú eres el que escudriña los corazones de todos; da integridad y haz conocer, por favor, a uno que has escogido de *estos* dos.
 
@@ -66,7 +66,7 @@ y: su cargo tomará otro[^1434].
 
 **26** Y pusieron sus goralot[^1442], y cayó el goral sobre Matia, y fue contado con los once discípulos.
 
-*La entrega del Rúaj Ha’Kódesh*
+*La entrega del Rúaj Ha'Kódesh*
 
 **2**
 
@@ -76,7 +76,7 @@ y: su cargo tomará otro[^1434].
 
 **3** y aparecieron a ellos lenguas repartidas, como fuego, que se asentó sobre cada uno de ellos.
 
-**4** Y todos fueron llenados con el Rúaj Ha’Kódesh[^1445], y comenzaron a hablar en otras lenguas, conforme les dio el Rúaj para fluir.
+**4** Y todos fueron llenados con el Rúaj Ha'Kódesh[^1445], y comenzaron a hablar en otras lenguas, conforme les dio el Rúaj para fluir.
 
 **5** Y había en Ierushaláim moradores iehudim[^1446], hombres benevolentes, de todas las naciones que están debajo de los cielos.
 
@@ -149,7 +149,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 9.
-[^9]: Espíritu de Santidad; a veces como *Rúaj Ha’Kadosh.*
+[^9]: Espíritu de Santidad; a veces como *Rúaj Ha'Kadosh.*
 
 
 10.
@@ -301,7 +301,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 47.
-[^47]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *En Rúaj Ha’Kódesh y fuego.*
+[^47]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *En Rúaj Ha'Kódesh y fuego.*
 
 
 48.
@@ -1117,7 +1117,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 251.
-[^251]: Así en Ver. Munster, los demás mss. de Mateo sustituyen *‘Torah’* por *‘Nombre’.*
+[^251]: Así en Ver. Munster, los demás mss. de Mateo sustituyen *‘Torah'* por *‘Nombre'.*
 
 
 252.
@@ -1229,7 +1229,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 279.
-[^279]: El nombre de Iaacob en Ms. Shem Tov se presenta con una letra ‘*guímel’ \(g\), *repre­sentándolo en idioma extran­jero: ‘*Guimi’*. Por otro lado, según la Peshita, ‘*guímel’ *aquí significa *‘tres’*, traduciendo: *sus tres herma­nos; *omitiendo así a Iaacob.
+[^279]: El nombre de Iaacob en Ms. Shem Tov se presenta con una letra ‘*guímel' \(g\), *repre­sentándolo en idioma extran­jero: ‘*Guimi'*. Por otro lado, según la Peshita, ‘*guímel' *aquí significa *‘tres'*, traduciendo: *sus tres herma­nos; *omitiendo así a Iaacob.
 
 
 280.
@@ -1253,7 +1253,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 285.
-[^285]: Posiblemente signifique:* ‘aldeas’.*
+[^285]: Posiblemente signifique:* ‘aldeas'.*
 
 
 286.
@@ -1389,7 +1389,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 319.
-[^319]: Así solamente en Ms. Shem Tov. Filipos el tetrarca llamó a esta ciudad *‘Cesarea’, *luego pasó a formar parte de la prov. romana de Siria.
+[^319]: Así solamente en Ms. Shem Tov. Filipos el tetrarca llamó a esta ciudad *‘Cesarea', *luego pasó a formar parte de la prov. romana de Siria.
 
 
 320.
@@ -1405,7 +1405,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 323.
-[^323]: Así en Ms. Shem Tov; en heb., las palabras *‘piedra’ \(even\) *y *‘edificaré’ \(avnéh\)* se co­nectan, formándose así una *paranomasia.* Ver. Munster dice: *Tú eres Kefah, y sobre esta piedra \(aram., kefah\) edificaré mi congregación \(…\).*
+[^323]: Así en Ms. Shem Tov; en heb., las palabras *‘piedra' \(even\) *y *‘edificaré' \(avnéh\)* se co­nectan, formándose así una *paranomasia.* Ver. Munster dice: *Tú eres Kefah, y sobre esta piedra \(aram., kefah\) edificaré mi congregación \(…\).*
 
 
 324.
@@ -1433,7 +1433,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 330.
-[^330]: Heb.: *Ha’shti ve’arev; ‘Shti’ *y* ‘Arev’ *son los nombres de los hilos entrecruzados con los que se teje una tela. En la tradición judía popular, la combinación se utiliza como eufe­mismo para la forma de la cruz.
+[^330]: Heb.: *Ha'shti ve'arev; ‘Shti' *y* ‘Arev' *son los nombres de los hilos entrecruzados con los que se teje una tela. En la tradición judía popular, la combinación se utiliza como eufe­mismo para la forma de la cruz.
 
 
 331.
@@ -1461,11 +1461,11 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 337.
-[^337]: Desde *‘y le hablaban’* hasta *‘dos hombres con Él’*, aparece solamente en Ms. Shem Tov.
+[^337]: Desde *‘y le hablaban'* hasta *‘dos hombres con Él'*, aparece solamente en Ms. Shem Tov.
 
 
 338.
-[^338]: *‘Porque no se sabía lo que Él hablaba’* aparece solamente en Ms. Shem Tov.
+[^338]: *‘Porque no se sabía lo que Él hablaba'* aparece solamente en Ms. Shem Tov.
 
 
 339.
@@ -1585,11 +1585,11 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 368.
-[^368]: *‘¡Completa lo que tú me debes!’,* fue toma­do de Ver. Munster, los mss. de Shem Tov omiten esta frase.
+[^368]: *‘¡Completa lo que tú me debes!',* fue toma­do de Ver. Munster, los mss. de Shem Tov omiten esta frase.
 
 
 369.
-[^369]: *‘Y se arrodilló … diciendo’, *fue tomado de Ver. Munster, los mss. de Shem Tov omiten esta frase.
+[^369]: *‘Y se arrodilló … diciendo', *fue tomado de Ver. Munster, los mss. de Shem Tov omiten esta frase.
 
 
 370.
@@ -1705,7 +1705,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 398.
-[^398]: *‘y preguntaron … viene’ *aparece solamen­te en Ms. Shem Tov.
+[^398]: *‘y preguntaron … viene' *aparece solamen­te en Ms. Shem Tov.
 
 
 399.
@@ -2134,7 +2134,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 505.
-[^505]: Betania. *‘Bet Jananiáh’ *en Mateo 21:17.
+[^505]: Betania. *‘Bet Jananiáh' *en Mateo 21:17.
 
 
 506.
@@ -2162,7 +2162,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 512.
-[^512]: Heb.: *Jag Ha’matzot.*
+[^512]: Heb.: *Jag Ha'matzot.*
 
 
 513.
@@ -2250,7 +2250,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 534.
-[^534]: Así en el texto de los mss. de Shem Tov, que utilizan el término *‘bérej’*, es decir: *ben­dijo; *pero dicho como eufemismo, por lo tanto, se traduce como: *blasfemó *o* maldijo.*
+[^534]: Así en el texto de los mss. de Shem Tov, que utilizan el término *‘bérej'*, es decir: *ben­dijo; *pero dicho como eufemismo, por lo tanto, se traduce como: *blasfemó *o* maldijo.*
 
 
 535.
@@ -2322,15 +2322,15 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 552.
-[^552]: Heb.: *Ha’shti ve’arev; ‘Shti’ *y* ‘Arev’ *son los nombres de los hilos entrecruzados con los que se teje una tela. En la tradición judía popular, la combinación se utiliza como eufe­mismo para la forma de la cruz.
+[^552]: Heb.: *Ha'shti ve'arev; ‘Shti' *y* ‘Arev' *son los nombres de los hilos entrecruzados con los que se teje una tela. En la tradición judía popular, la combinación se utiliza como eufe­mismo para la forma de la cruz.
 
 
 553.
-[^553]: Palabra aramea que significa *‘cráneo’, *pro­veniente de la palabra hebrea *‘gulgolet’.*
+[^553]: Palabra aramea que significa *‘cráneo', *pro­veniente de la palabra hebrea *‘gulgolet'.*
 
 
 554.
-[^554]: Palabra del latín *‘calvari’,* que significa *‘cráneo’.*
+[^554]: Palabra del latín *‘calvari',* que significa *‘cráneo'.*
 
 
 555.
@@ -2534,7 +2534,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 605.
-[^605]: Heb.: *B’nei Reguesh.*
+[^605]: Heb.: *B'nei Reguesh.*
 
 
 606.
@@ -3122,7 +3122,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 752.
-[^752]: *‘El grito del gallo’* era el nombre que se le daba a la vigilia que daba entre la medianoche y las tres de la madrugada.
+[^752]: *‘El grito del gallo'* era el nombre que se le daba a la vigilia que daba entre la medianoche y las tres de la madrugada.
 
 
 753.
@@ -3254,11 +3254,11 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 785.
-[^785]: Palabra aramea que significa *‘cráneo’, *pro­veniente de la palabra hebrea *‘gulgolet’.*
+[^785]: Palabra aramea que significa *‘cráneo', *pro­veniente de la palabra hebrea *‘gulgolet'.*
 
 
 786.
-[^786]: *‘Cráneo’ *en hebreo*.*
+[^786]: *‘Cráneo' *en hebreo*.*
 
 
 787.
@@ -3314,7 +3314,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 800.
-[^800]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^800]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 
 
 801.
@@ -3330,7 +3330,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 804.
-[^804]: Heb.: *Be’ejad Ha’Shabat. *Así también en vers. 9.
+[^804]: Heb.: *Be'ejad Ha'Shabat. *Así también en vers. 9.
 
 
 805.
@@ -4322,7 +4322,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1052.
-[^1052]: Así en la mayoría de mss., Ver. Políglota de Nuremberg dice: *Lo’azer, *que significa: *Sin ayuda.*
+[^1052]: Así en la mayoría de mss., Ver. Políglota de Nuremberg dice: *Lo'azer, *que significa: *Sin ayuda.*
 
 
 1053.
@@ -4354,7 +4354,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1060.
-[^1060]: Heb.: *Le’hodot.*
+[^1060]: Heb.: *Le'hodot.*
 
 
 1061.
@@ -4602,7 +4602,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1122.
-[^1122]: Heb.: *Jag Ha’matzot.*
+[^1122]: Heb.: *Jag Ha'matzot.*
 
 
 1123.
@@ -4694,7 +4694,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1145.
-[^1145]: *‘Cráneo’ *en hebreo*.*
+[^1145]: *‘Cráneo' *en hebreo*.*
 
 
 1146.
@@ -4722,7 +4722,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1152.
-[^1152]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1152]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 
 
 1153.
@@ -4998,11 +4998,11 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1221.
-[^1221]: ‘Mesías’ en arameo; es decir, *Ungido.*
+[^1221]: ‘Mesías' en arameo; es decir, *Ungido.*
 
 
 1222.
-[^1222]: ‘Mesías’ en hebreo; es decir, *Ungido.*
+[^1222]: ‘Mesías' en hebreo; es decir, *Ungido.*
 
 
 1223.
@@ -5062,7 +5062,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1237.
-[^1237]: Heb.: *Ben Ha’Adam. *Elohim en cuerpo.
+[^1237]: Heb.: *Ben Ha'Adam. *Elohim en cuerpo.
 
 
 1238.
@@ -5710,11 +5710,11 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1399.
-[^1399]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1399]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 
 
 1400.
-[^1400]: *‘Cráneo’ *en hebreo*.*
+[^1400]: *‘Cráneo' *en hebreo*.*
 
 
 1401.
@@ -5730,7 +5730,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1404.
-[^1404]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1404]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 
 
 1405.
@@ -5746,7 +5746,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1408.
-[^1408]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1408]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 
 
 1409.
@@ -5778,7 +5778,7 @@ antes de la venida del día de Yehovah, grande y temible.
 
 
 1416.
-[^1416]: Heb.: *Adonai ve’Elohai.*
+[^1416]: Heb.: *Adonai ve'Elohai.*
 
 
 1417.
@@ -5956,7 +5956,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^6]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg añaden: *Miriam.*
 [^7]: O, comprometida para casarse.
 [^8]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *entrara a ella.*
-[^9]: Espíritu de Santidad; a veces como *Rúaj Ha’Kadosh.*
+[^9]: Espíritu de Santidad; a veces como *Rúaj Ha'Kadosh.*
 [^10]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *no quería entregarla, sino que tenía en su corazón dejarla en secreto.*
 [^11]: Ms. Shem Tov omite: *de Yehovah.*
 [^12]: Salvador o Yehovah salva.
@@ -5994,7 +5994,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^44]: El párrafo en cursiva solo aparece en el Ms. Shem Tov. Véase Lucas 3:10\-15.
 [^45]: Ms. Shem Tov dice: *en los días de teshuváh.*
 [^46]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *yo no soy digno de llevar sus sandalias.*
-[^47]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *En Rúaj Ha’Kódesh y fuego.*
+[^47]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *En Rúaj Ha'Kódesh y fuego.*
 [^48]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg dicen: *rehusaba.*
 [^49]: Así en Ver. Munster y Ver. Políglota de Nuremberg, Ms. Shem Tov dice: *Deja.*
 [^50]: Así en Ms. Shem Tov, Ver. Munster y Ver. Políglota de Nuremberg, dicen: *lo dejó.*
@@ -6198,7 +6198,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^248]: Heb.: *Adón.*
 [^249]: Fariseos.
 [^250]: Isaías.
-[^251]: Así en Ver. Munster, los demás mss. de Mateo sustituyen *‘Torah’* por *‘Nombre’.*
+[^251]: Así en Ver. Munster, los demás mss. de Mateo sustituyen *‘Torah'* por *‘Nombre'.*
 [^252]: Véase Isaías 42:1\-4.
 [^253]: O, comparación.
 [^254]: Adversario.
@@ -6226,13 +6226,13 @@ antes de la venida del día de Yehovah, grande y temible.
 [^276]: El adversario.
 [^277]: Fariseos.
 [^278]: Heb.: *jóresh.*
-[^279]: El nombre de Iaacob en Ms. Shem Tov se presenta con una letra ‘*guímel’ \(g\), *repre­sentándolo en idioma extran­jero: ‘*Guimi’*. Por otro lado, según la Peshita, ‘*guímel’ *aquí significa *‘tres’*, traduciendo: *sus tres herma­nos; *omitiendo así a Iaacob.
+[^279]: El nombre de Iaacob en Ms. Shem Tov se presenta con una letra ‘*guímel' \(g\), *repre­sentándolo en idioma extran­jero: ‘*Guimi'*. Por otro lado, según la Peshita, ‘*guímel' *aquí significa *‘tres'*, traduciendo: *sus tres herma­nos; *omitiendo así a Iaacob.
 [^280]: Firmeza, fidelidad, crianza.
 [^281]: O sea, Herodías. Así en Ms. Shem Tov, Ver. Políglota de Nuremberg dice: *Herodit*; Ver. Munster dice: *Horodosit.*
 [^282]: Lit.: *en la casa del carcelero.*
 [^283]: O, *un gran pueblo.*
 [^284]: O, *con amor intenso*; heb.: *jésed.*
-[^285]: Posiblemente signifique:* ‘aldeas’.*
+[^285]: Posiblemente signifique:* ‘aldeas'.*
 [^286]: Otra posible lectura es: *por grupos.*
 [^287]: Unidad de medida seca y líquida, equivale a un tercio de un *efáh.*
 [^288]: Firmeza, fidelidad, crianza.
@@ -6266,26 +6266,26 @@ antes de la venida del día de Yehovah, grande y temible.
 [^316]: Saduceos. Así también en vers. 12.
 [^317]: Así en Ver. Munster, Ms. Shem Tov omite este versículo.
 [^318]: Así en Ms. Shem Tov, Ver. Políglota de Nuremberg y Ver. Munster dicen: *Cesarea de Filipos.*
-[^319]: Así solamente en Ms. Shem Tov. Filipos el tetrarca llamó a esta ciudad *‘Cesarea’, *luego pasó a formar parte de la prov. romana de Siria.
+[^319]: Así solamente en Ms. Shem Tov. Filipos el tetrarca llamó a esta ciudad *‘Cesarea', *luego pasó a formar parte de la prov. romana de Siria.
 [^320]: Elías.
 [^321]: Ungido; heb.: *Mashíaj.*
 [^322]: Así solamente en Ms. Shem Tov, los demás mss. omiten: *que vino a este olam.*
-[^323]: Así en Ms. Shem Tov; en heb., las palabras *‘piedra’ \(even\) *y *‘edificaré’ \(avnéh\)* se co­nectan, formándose así una *paranomasia.* Ver. Munster dice: *Tú eres Kefah, y sobre esta piedra \(aram., kefah\) edificaré mi congregación \(…\).*
+[^323]: Así en Ms. Shem Tov; en heb., las palabras *‘piedra' \(even\) *y *‘edificaré' \(avnéh\)* se co­nectan, formándose así una *paranomasia.* Ver. Munster dice: *Tú eres Kefah, y sobre esta piedra \(aram., kefah\) edificaré mi congregación \(…\).*
 [^324]: Jerusalén.
 [^325]: Lit.: *entre Él y él.*
 [^326]: Amo, Señor.
 [^327]: El adversario.
 [^328]: Otra lectura posible es: *no me seas amargo.*
 [^329]: Contracción de Elohim. Así en vers. 27.
-[^330]: Heb.: *Ha’shti ve’arev; ‘Shti’ *y* ‘Arev’ *son los nombres de los hilos entrecruzados con los que se teje una tela. En la tradición judía popular, la combinación se utiliza como eufe­mismo para la forma de la cruz.
+[^330]: Heb.: *Ha'shti ve'arev; ‘Shti' *y* ‘Arev' *son los nombres de los hilos entrecruzados con los que se teje una tela. En la tradición judía popular, la combinación se utiliza como eufe­mismo para la forma de la cruz.
 [^331]: Tiempo oculto, sólo conocido por Elohim.
 [^332]: O, *si gana a.*
 [^333]: Valle de Hinom, en gr., Gehena.
 [^334]: Singular de Elohim. Así en Ms. Shem Tov; Ver. Políglota de Nuremberg y Ver. Munster dicen: *Hijo del Hombre.*
 [^335]: Moisés. Así también en vers. 4.
 [^336]: Elías. Así también en vers. 4.
-[^337]: Desde *‘y le hablaban’* hasta *‘dos hombres con Él’*, aparece solamente en Ms. Shem Tov.
-[^338]: *‘Porque no se sabía lo que Él hablaba’* aparece solamente en Ms. Shem Tov.
+[^337]: Desde *‘y le hablaban'* hasta *‘dos hombres con Él'*, aparece solamente en Ms. Shem Tov.
+[^338]: *‘Porque no se sabía lo que Él hablaba'* aparece solamente en Ms. Shem Tov.
 [^339]: Hijo del Hombre; un título para el Mesías*.*
 [^340]: Elías.
 [^341]: Así en Ms. Shem Tov *\(algunos consideran que la oración es una pregunta retórica\)*, Ver. Políglota de Nuremberg dice: *vendrá primero y confirmará todo;* Ver. Munster dice: *y restaurará todo.*
@@ -6315,8 +6315,8 @@ antes de la venida del día de Yehovah, grande y temible.
 [^365]: Véase Deuteronomio 19:15.
 [^366]: Aram.: *shalim. *Lit.: *consenso.*
 [^367]: Véase el contraste con Génesis 4:24.
-[^368]: *‘¡Completa lo que tú me debes!’,* fue toma­do de Ver. Munster, los mss. de Shem Tov omiten esta frase.
-[^369]: *‘Y se arrodilló … diciendo’, *fue tomado de Ver. Munster, los mss. de Shem Tov omiten esta frase.
+[^368]: *‘¡Completa lo que tú me debes!',* fue toma­do de Ver. Munster, los mss. de Shem Tov omiten esta frase.
+[^369]: *‘Y se arrodilló … diciendo', *fue tomado de Ver. Munster, los mss. de Shem Tov omiten esta frase.
 [^370]: Lit.: *casa del carcelero.*
 [^371]: Galilea.
 [^372]: Judá.
@@ -6345,7 +6345,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^395]: Así en Ms. Shem Tov, Ver. Políglota de Nuremberg y Ver. Munster dicen: *redención.*
 [^396]: Jericó.
 [^397]: Nazaret.
-[^398]: *‘y preguntaron … viene’ *aparece solamen­te en Ms. Shem Tov.
+[^398]: *‘y preguntaron … viene' *aparece solamen­te en Ms. Shem Tov.
 [^399]: Amo, Señor. Así también en vers. 33 y 21:3.
 [^400]: Firmeza, fidelidad, crianza.
 [^401]: Contracción de Elohim.
@@ -6452,14 +6452,14 @@ antes de la venida del día de Yehovah, grande y temible.
 [^502]: Judíos.
 [^503]: O, atrio.
 [^504]: Caifás.
-[^505]: Betania. *‘Bet Jananiáh’ *en Mateo 21:17.
+[^505]: Betania. *‘Bet Jananiáh' *en Mateo 21:17.
 [^506]: Lit.: reclinado.
 [^507]: Heb.: *Besorah.*
 [^508]: Tiempo oculto, sólo conocido por Elohim.
 [^509]: Así en Ms. Shem Tov, Políglota de Nuremberg y Ver. Munster dicen: *en memoria suya.*
 [^510]: Judas.
 [^511]: Así en Ms. Oo.1.32.2, Ms. Shem Tov dice: *Iscariota.*
-[^512]: Heb.: *Jag Ha’matzot.*
+[^512]: Heb.: *Jag Ha'matzot.*
 [^513]: La Pascua.
 [^514]: Maestro. Lit.: Grande, mayor.
 [^515]: Así en Ver. Políglota de Nuremberg, Ms. Shem Tov omite este versículo.
@@ -6481,7 +6481,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^531]: Fariseos. Así también en vers. 59.
 [^532]: Contracción de Elohim. Así también en los versículos 63,64 y 65.
 [^533]: El sumo sacerdote tenía prohibido rasgar sus vestiduras; véase Levítico 21:10.
-[^534]: Así en el texto de los mss. de Shem Tov, que utilizan el término *‘bérej’*, es decir: *ben­dijo; *pero dicho como eufemismo, por lo tanto, se traduce como: *blasfemó *o* maldijo.*
+[^534]: Así en el texto de los mss. de Shem Tov, que utilizan el término *‘bérej'*, es decir: *ben­dijo; *pero dicho como eufemismo, por lo tanto, se traduce como: *blasfemó *o* maldijo.*
 [^535]: Cumplimiento de Isaías 50:6.
 [^536]: Galileo.
 [^537]: Nazaret.
@@ -6499,9 +6499,9 @@ antes de la venida del día de Yehovah, grande y temible.
 [^549]: Heb.: *Shalom aleja.* Saludo común hebreo.
 [^550]: Judíos.
 [^551]: Cananeo. Así en Ms. Shem Tov, otros mss. dicen: *Shimón de Cirene.*
-[^552]: Heb.: *Ha’shti ve’arev; ‘Shti’ *y* ‘Arev’ *son los nombres de los hilos entrecruzados con los que se teje una tela. En la tradición judía popular, la combinación se utiliza como eufe­mismo para la forma de la cruz.
-[^553]: Palabra aramea que significa *‘cráneo’, *pro­veniente de la palabra hebrea *‘gulgolet’.*
-[^554]: Palabra del latín *‘calvari’,* que significa *‘cráneo’.*
+[^552]: Heb.: *Ha'shti ve'arev; ‘Shti' *y* ‘Arev' *son los nombres de los hilos entrecruzados con los que se teje una tela. En la tradición judía popular, la combinación se utiliza como eufe­mismo para la forma de la cruz.
+[^553]: Palabra aramea que significa *‘cráneo', *pro­veniente de la palabra hebrea *‘gulgolet'.*
+[^554]: Palabra del latín *‘calvari',* que significa *‘cráneo'.*
 [^555]: Piedrecita lanzada para tomar decisiones. Así en Ms. Shem Tov; Ver. Políglota de Nuremberg, Ver. Munster y mss. griegos posteriores añaden: *Reparten mis vestidos para sí, y sobre mi ropa hacen caer goral*; véase Salmo 22:18.
 [^556]: Así en Ver. Políglota de Nuremberg y Ver. Munster, Ms. Shem Tov omite este vers. Véase Salmo 22:17.
 [^557]: Contracción de Elohim. Así también en vers. 43.
@@ -6552,7 +6552,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^602]: Fariseos. Así también en cap. 3:2, 6.
 [^603]: Heb.: *Adón.*
 [^604]: Así en muchos mss., Ms. Vat.Ebr.100 dice: *Eleazar.*
-[^605]: Heb.: *B’nei Reguesh.*
+[^605]: Heb.: *B'nei Reguesh.*
 [^606]: Así en Ver. Políglota de Nuremberg, Ms. Oo.1.32.2 dice: *porque eran hijos del trueno.*
 [^607]: O, Tadeos.
 [^608]: Cananita.
@@ -6699,7 +6699,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^749]: O, ángeles.
 [^750]: O, *dominio.*
 [^751]: O, *medianoche.*
-[^752]: *‘El grito del gallo’* era el nombre que se le daba a la vigilia que daba entre la medianoche y las tres de la madrugada.
+[^752]: *‘El grito del gallo'* era el nombre que se le daba a la vigilia que daba entre la medianoche y las tres de la madrugada.
 [^753]: O, *¡Sean diligentes!*
 [^754]: Pascua.
 [^755]: Panes sin levadura. Así también en vers. 12.
@@ -6732,8 +6732,8 @@ antes de la venida del día de Yehovah, grande y temible.
 [^782]: Judíos.
 [^783]: De Cirene.
 [^784]: Así en Ver. Políglota de Nuremberg, Ms. Oo.1.32.2 di­ce: *que venía de la ciudad de su padre Alexandros.*
-[^785]: Palabra aramea que significa *‘cráneo’, *pro­veniente de la palabra hebrea *‘gulgolet’.*
-[^786]: *‘Cráneo’ *en hebreo*.*
+[^785]: Palabra aramea que significa *‘cráneo', *pro­veniente de la palabra hebrea *‘gulgolet'.*
+[^786]: *‘Cráneo' *en hebreo*.*
 [^787]: Piedrecita lanzada para tomar decisiones.
 [^788]: Judíos.
 [^789]: Véase Isaías 53:12.
@@ -6747,11 +6747,11 @@ antes de la venida del día de Yehovah, grande y temible.
 [^797]: María Magdalena. Así también en vers. 47.
 [^798]: Galilea.
 [^799]: Jerusalén.
-[^800]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^800]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 [^801]: O sea, *el Shabat de la fiesta.*
 [^802]: Los textos griegos dicen: *Arimatea.* Posi­blemen­te, *Ramáh*, lugar donde nació Samuel.
 [^803]: Lit.: *de si ya estaba muerto.*
-[^804]: Heb.: *Be’ejad Ha’Shabat. *Así también en vers. 9.
+[^804]: Heb.: *Be'ejad Ha'Shabat. *Así también en vers. 9.
 [^805]: Del heb.: *Nétzer; *retoño. Véase Isaías 11:1.
 [^806]: Tiempo oculto, sólo conocido por Elohim.
 [^807]: Buena noticia.
@@ -6999,7 +6999,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^1049]: Firmeza, fidelidad, crianza.
 [^1050]: Fariseos.
 [^1051]: O, *abominación.*
-[^1052]: Así en la mayoría de mss., Ver. Políglota de Nuremberg dice: *Lo’azer, *que significa: *Sin ayuda.*
+[^1052]: Así en la mayoría de mss., Ver. Políglota de Nuremberg dice: *Lo'azer, *que significa: *Sin ayuda.*
 [^1053]: Moisés.
 [^1054]: Firmeza, fidelidad, crianza. Así también en el resto del cap.
 [^1055]: Amo, Señor. Así también en vers. 6.
@@ -7007,7 +7007,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^1057]: Samaria.
 [^1058]: Galilea.
 [^1059]: Grande; un título para el maestro*.*
-[^1060]: Heb.: *Le’hodot.*
+[^1060]: Heb.: *Le'hodot.*
 [^1061]: Samaritano.
 [^1062]: Firmeza, fidelidad, crianza.
 [^1063]: Fariseos.
@@ -7069,7 +7069,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^1119]: Véase Daniel 7:13.
 [^1120]: Oración, participación en juicio.
 [^1121]: Santuario, Palacio. Así también en vers. 38.
-[^1122]: Heb.: *Jag Ha’matzot.*
+[^1122]: Heb.: *Jag Ha'matzot.*
 [^1123]: La Pascua. Así también en los versículos 7, 8 y 13.
 [^1124]: El adversario.
 [^1125]: Iscariote; esto es: *hombre de Kariot.*
@@ -7092,14 +7092,14 @@ antes de la venida del día de Yehovah, grande y temible.
 [^1142]: Barrabás, que significa: *Hijo del padre*.
 [^1143]: O sea, *cireneo.*
 [^1144]: Véase Oseas 10:8.
-[^1145]: *‘Cráneo’ *en hebreo*.*
+[^1145]: *‘Cráneo' *en hebreo*.*
 [^1146]: Piedrecita lanzada para tomar decisiones.
 [^1147]: Judíos.
 [^1148]: O sea, las doce del día.
 [^1149]: O sea, las tres de la tarde.
 [^1150]: Véase Salmo 31:5.
 [^1151]: Los textos griegos dicen: *Arimatea.* Posi­blemen­te, *Ramáh*, lugar donde nació Samuel.
-[^1152]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1152]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 [^1153]: Hijo del Hombre; un título para el Mesías*.*
 [^1154]: Aproximadamente, 12 km*.*
 [^1155]: Del heb.: *Nétzer; *retoño. Véase Isaías 11:1.
@@ -7168,8 +7168,8 @@ antes de la venida del día de Yehovah, grande y temible.
 [^1218]: Tiempo oculto, sólo conocido por Elohim.
 [^1219]: Otra lectura posible es: *te dije*.
 [^1220]: Espíritu, viento, aliento. Así también en vers. 24.
-[^1221]: ‘Mesías’ en arameo; es decir, *Ungido.*
-[^1222]: ‘Mesías’ en hebreo; es decir, *Ungido.*
+[^1221]: ‘Mesías' en arameo; es decir, *Ungido.*
+[^1222]: ‘Mesías' en hebreo; es decir, *Ungido.*
 [^1223]: Grande; un título para el maestro.
 [^1224]: Otros mss. dicen: *cuatro.*
 [^1225]: Tiempo oculto, sólo conocido por Elohim. Así también en vers. 42.
@@ -7184,7 +7184,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^1234]: Santuario, Palacio.
 [^1235]: Heb.: *Av; *hebraísmo que comprende lo establecido por Elohim en las palabras de la Torah y los profetas. Así en el resto del cap.
 [^1236]: Tiempo oculto, sólo conocido por Elohim. Así también en vers. 29.
-[^1237]: Heb.: *Ben Ha’Adam. *Elohim en cuerpo.
+[^1237]: Heb.: *Ben Ha'Adam. *Elohim en cuerpo.
 [^1238]: Véase Daniel 12:2.
 [^1239]: Tiempo oculto, sólo conocido por Elohim.
 [^1240]: Este vers. no aparece en un ms. antiguo.
@@ -7346,16 +7346,16 @@ antes de la venida del día de Yehovah, grande y temible.
 [^1396]: Véase Juan 10:33.
 [^1397]: O sea, *enlosado de piedras.*
 [^1398]: O sea, *altura.*
-[^1399]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
-[^1400]: *‘Cráneo’ *en hebreo*.*
+[^1399]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1400]: *‘Cráneo' *en hebreo*.*
 [^1401]: Del heb.: *Nétzer; *retoño. Véase Isaías 11:1.
 [^1402]: Piedrecita lanzada para tomar decisiones.
 [^1403]: Véase Salmo 22:18.
-[^1404]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1404]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 [^1405]: Véase Salmo 34:20.
 [^1406]: Véase Zacarías 12:10.
 [^1407]: Nicodemo.
-[^1408]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1408]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 [^1409]: Amo, Señor. Así también en el resto del cap.
 [^1410]: Judíos.
 [^1411]: Espíritu de Santidad.
@@ -7363,7 +7363,7 @@ antes de la venida del día de Yehovah, grande y temible.
 [^1413]: Gemelo. Gr.: *Didimos.*
 [^1414]: Firmeza, fidelidad, crianza.
 [^1415]: O, *portador de emunah.*
-[^1416]: Heb.: *Adonai ve’Elohai.*
+[^1416]: Heb.: *Adonai ve'Elohai.*
 [^1417]: Tiempo oculto, sólo conocido por Elohim; también: *era, tiempo*.
 [^1418]: Gemelo. Gr.: *Didimos.*
 [^1419]: Amo, Señor.

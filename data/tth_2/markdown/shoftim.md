@@ -158,7 +158,7 @@ __SHOFTIM \(JUECES\)__ שפטים
 **17** Pero Sísera huyó a pie hacia la tienda de Iael, mujer de Jeber el keiní; porque *había* shalom entre Iabín, rey de Jatzor, y la casa de Je­ber el keiní.
 **18** Y salió Iael al encuentro de Sísera, y le di­jo: Desvíate mi amo, desvíate hacia mí; no te­mas. Y se desvió hacia ella a la tienda, y ella lo cubrió con una manta.
 **19** Y él le dijo a ella: Dame de beber, por favor, un poco de agua, porque estoy sediento. Y ella abrió un odre de leche y le dio de beber; y lo cubrió.
-**20** Y él le dijo a ella: Párate *en* la entrada de la tienda, y sucede *que* si un hombre viene, y te pregunta, y dice: “¿Hay aquí un hombre?”, tú dirás: “No hay”.
+**20** Y él le dijo a ella: Párate *en* la entrada de la tienda, y sucede *que* si un hombre viene, y te pregunta, y dice: “¿Hay aquí un hombre? ”, tú dirás: “No hay”.
 **21** Pero tomó Iael, mujer de Jeber, una estaca de la tienda y puso un martillo en su mano, y fue hacia él con sigilo y enterró la estaca en su sien, y descendió en la tierra; y él estaba pro­fun­damente dormido y oscuro, y murió.
 **22** Y he aquí, Barak perseguía a Sísera, y salió Iael a su encuentro, y le dijo: Ven, y te mostra­ré al hombre que tú buscas. Y él vino hacia e­lla, y he aquí, Sísera *estaba* caído muerto, y la estaca en su sien.
 **23** Y humilló Elohim en ese día a Iabín, rey de Kenáan, delante de los hijos de Israel.
@@ -177,35 +177,35 @@ bendigan a יהוה!**3** ¡Escuchen, reyes;
  cuando mar­chaste del campo de Edom,
 la tierra tembló, también los cielos gotearon,
  también las nubes gotearon agua.**5** Los montes fluyeron delante de יהוה,
-**6** En los días de Shamgar, hijo de Anat, en los días de Iael, cesaron los caminos,y los viajeros iban *por* cami­nos torcidos.
+**6** En los días de Shamgar, hijo de Anat, en los días de Iael, cesaron los caminos, y los viajeros iban *por* cami­nos torcidos.
 **7** Cesaron los campesinos[^1500], en Israel cesaron, hasta que me levanté yo, Deboráh,
-**8** Escogió dioses nuevos; entonces la batalla *estaba a* las puertas.Escudo, si se hubiera visto, y lanza en cuarenta mil en Israel.
+**8** Escogió dioses nuevos; entonces la batalla *estaba a* las puertas. Escudo, si se hubiera visto, y lanza en cuarenta mil en Israel.
 **9** Mi corazón es para los legisladores de Israel,
-**10** Los que cabalgan en asnas blancas, los que se sientan sobre vestimentas,y los que andan por el camino, conversen.
+**10** Los que cabalgan en asnas blancas, los que se sientan sobre vestimentas, y los que andan por el camino, conversen.
 **11** Del sonido de los que dividen entre los a­bre­­vaderos,
 de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יהוה.
-**12** Despierta, despierta, Deboráh; despierta, despierta, habla una canción.Levántate, Barak, y captura tus cautivos, hijo de Abinoam.
+**12** Despierta, despierta, Deboráh; despierta, despierta, habla una canción. Levántate, Barak, y captura tus cautivos, hijo de Abinoam.
 **13** Entonces descendió el sobreviviente a los majestuosos; el pueblo de יהוה descendió a mí con los poderosos;
 **14** de Efráim los radicados en Amalek,
  detrás de ti, Biniamín, con tus pueblos;de Majir descendieron legisladores,
-**15** Y mis príncipes de Issajar *estaban* con De­boráh; e Issajar, así *también* Barak;en el valle envió a sus pies; en las divisiones de Reubén *había* grandes de­cretos de corazón.
+**15** Y mis príncipes de Issajar *estaban* con De­boráh; e Issajar, así *también* Barak; en el valle envió a sus pies; en las divisiones de Reubén *había* grandes de­cretos de corazón.
 **16** ¿Por qué te sentaste entre los rediles
-**17** Guilad en el *otro* lado del Iardén[^1502] se esta­ble­ció. Y Dan, ¿por qué se queda *en* naves?Asher se sentó a la orilla de los mares, y junto a sus bahías se estableció.
+**17** Guilad en el *otro* lado del Iardén[^1502] se esta­ble­ció. Y Dan, ¿por qué se queda *en* naves? Asher se sentó a la orilla de los mares, y junto a sus bahías se estableció.
 **18** Zebulún, pueblo *que* reprochó su ser para muerte. Y Naftalí, por las alturas del campo.
 **19** Vinieron reyes, lucharon; entonces lucharon los reyes de Kenáan en Taa­naj,
 **20** Desde los cielos lucharon las estrellas, desde sus caminos lucharon con Sísera.
-**21** El arroyo Kishón los barrió, el arroyo de sus antigüedades, el arroyo Kishón.Camina, ser mío, fuerte.
+**21** El arroyo Kishón los barrió, el arroyo de sus antigüedades, el arroyo Kishón. Camina, ser mío, fuerte.
 **22** Entonces golpearon los talones de los caba­llos por las galopadas,
  galopadas de sus pode­ro­sos.**23** “Excluyan *a* Meroz”, dijo el mensajero de יהוה,
  “excluyan, exclusión de sus habitantes;porque no vinieron a la ayuda de יהוה,
 **24** Bendita de las mujeres *es* Iael, mujer de Je­ber el keiní; de *entre* las mujeres en la tienda *sea* bendita.
 **25** Agua él pidió, leche ella dio; en taza de majestuosos ella acercó cuajada.
-**26** Su mano a la estaca ella extendió, y su dies­tra al martillo de los trabajadores. Y golpeó *a* Sísera, atravesó su cabeza;destrozó y perforó su sien.
+**26** Su mano a la estaca ella extendió, y su dies­tra al martillo de los trabajadores. Y golpeó *a* Sísera, atravesó su cabeza; destrozó y perforó su sien.
 **27** Entre sus pies él se arrodilló, cayó,
  se acos­tó, entre sus pies se arrodilló, cayó;en donde se acostó, allí cayó devastado.**28** Por la ventana observaba y sollo­zaba la ma­dre de Sísera,
  a través de la ventani­lla:“¿Por qué se avergüenza su carro a venir? ¿Por qué se retrasan los golpes de sus carros?”**29** Las sabias de sus princesas le respondían,
 **30**“¿No hallaron y reparten el botín? ¿Una matriz, *dos* matrices por *cada* cabeza de hombre; botín de *tela de *color para Sísera, botín de *tela de* color bordada, *tela de *color de bordaduras para los cuellos del botín?”
-**31** ¡Así perezcan todos tus enemigos, יהוה!; mas los que lo aman *sean* como el brillo del sol en su fuerza.Y descansó la tierra cuarenta años.
+**31** ¡Así perezcan todos tus enemigos, יהוה!; mas los que lo aman *sean* como el brillo del sol en su fuerza. Y descansó la tierra cuarenta años.
 
 *Midián oprime a Israel*
 
@@ -219,13 +219,13 @@ de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יה�
 **7** Y sucedió que gritaron los hijos de Israel a יהוה por causa de Midián,
 **8** y envió יהוה un hombre profeta a los hi­jos de Israel, y dijo a ellos: Así dice יהוה, Elohim de Israel: “Yo los hice subir de Mitz­ráim, y los hice salir de la casa de esclavos;
 **9** y los rescaté de la mano de Mitzráim y de la mano de todos sus opresores; y los expulsé de delante de ustedes, y di a ustedes su tierra;
-**10** Y dije a ustedes: ‘Yo soy יהוה su Elo­him. No temerán a los dioses del emorí[^1504] que *con* ustedes habitan en su tierra’. Pero no escu­charon a mi voz”.
+**10** Y dije a ustedes: ‘Yo soy יהוה su Elo­him. No temerán a los dioses del emorí[^1504] que *con* ustedes habitan en su tierra'. Pero no escu­charon a mi voz”.
 
 *Llamamiento de Guideón*
 
 **11** Y vino el mensajero[^1505] de יהוה, y se sentó de­ba­jo del terebinto que *está* en Ofráh, que *per­te­necía* a Ioásh, el abiezrí; y Guideón su hijo golpeaba el trigo en el lagar, para escon­der­lo[^1506] debido a Midián.
 **12** Y se le apareció el mensajero de יהוה, y le di­jo: יהוה *es* contigo, poderoso de valor.
-**13** Y le dijo Guideón: ¡Por favor, mi Amo!, está יהוה con nosotros, ¿y por qué nos ha al­canzado todo esto? ¿Y dónde *están* todas sus maravillas que han contado a nosotros nuestros padres, diciendo: “¿No de Mitzráim nos hizo subir יהוה?” Pero ahora nos ha abandonado יהוה, y nos dio en la palma de Midián.
+**13** Y le dijo Guideón: ¡Por favor, mi Amo!, está יהוה con nosotros, ¿y por qué nos ha al­canzado todo esto? ¿Y dónde *están* todas sus maravillas que han contado a nosotros nuestros padres, diciendo: “¿No de Mitzráim nos hizo subir יהוה? ” Pero ahora nos ha abandonado יהוה, y nos dio en la palma de Midián.
 **14** Y giró hacia él יהוה, y dijo: Ve con esta tu fuerza y salvarás a Israel de la palma de Mi­dián. ¿No te he enviado?
 **15** Y *le *dijo a Él: ¡Por favor, Adonai! ¿Con qué salvaré a Israel? He aquí, mi *clan de* mil[^1507] es po­bre en Menasheh, y yo el *más* joven en la casa de mi padre.
 **16** Y le dijo יהוה: Porque estaré contigo, y golpearás a Midián como *a* un hombre.
@@ -281,7 +281,7 @@ de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יה�
 **15** Y fue *que *cuando escuchó Guideón la na­rra­ción del sueño y su interpretación, se inclinó y regresó al campamento de Israel, y dijo: Le­vántense, porque ha dado יהוה en sus ma­nos el campamento de Midián.
 **16** Y dividió los trescientos hombres *en* tres cabezas, y puso trompetas en mano de todos y jarras vacías, y antorchas dentro de las jarras.
 **17** Y dijo a ellos: De mí vean, y así hagan. Y he aquí, yo llegaré al extremo del campamen­to, y sucederá que* *como yo ha­ga, así harán.
-**18** Soplaremos con el sho­far[^1522], yo y todo el que *esté* conmigo, y so­pla­­rán con los shofarot[^1523] tam­bién ustedes alrededor de todo el campamento, y digan: “¡Por יהוה y por Guideón!”.
+**18** Soplaremos con el sho­far[^1522], yo y todo el que *esté* conmigo, y so­pla­­rán con los shofarot[^1523] tam­bién ustedes alrededor de todo el campamento, y digan: “¡Por יהוה y por Guideón! ”.
 
 *Confusión y derrota de Midián*
 
@@ -311,7 +311,7 @@ de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יה�
 **12** Y huyeron Zebaj y Tzalmuná, y persiguió tras ellos; y capturó a los dos reyes de Midián, a Zebaj y a Tzalmuná, y todo el campamento estaba aterrorizado.
 **13** Y volvió Guideón, hijo de Ioásh, de la guerra desde la subida de Jeres.
 **14** Y capturó *a* un joven de los hombres de Su­cot y lo interrogó. Y *el joven* le escribió *los nombres de* los jefes de Sucot y sus ancianos, setenta y siete hombres.
-**15** Y vino a los hombres de Sucot, y dijo: He aquí, Zebaj y Tzalmuná, *de* los cuales me re­procharon, diciendo: “¿*Está *la palma de Zebaj y Tzalmuná ahora en tu mano, que daremos a tus hombres cansados pan?”
+**15** Y vino a los hombres de Sucot, y dijo: He aquí, Zebaj y Tzalmuná, *de* los cuales me re­procharon, diciendo: “¿*Está *la palma de Zebaj y Tzalmuná ahora en tu mano, que daremos a tus hombres cansados pan? ”
 **16** Y tomó a los ancianos de la ciudad, y espi­nos del desierto y los cardos, y castigó con ellos a los hombres de Sucot.
 **17** Y a la torre de Penuel derribó, y mató a los hombres de la ciudad.
 **18** Y dijo a Zebaj y a Tzalmuná: ¿De dónde *eran* los hombres que mataron en Tabor? Y di­jeron: Como *eres *tú, *así es* como *eran *ellos, uno *era* como la apariencia de hijos de rey.
@@ -338,18 +338,18 @@ de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יה�
 **9**
 
 **1** Y fue Abimélej, hijo de Ierubaal, a Shejem, a los hermanos de su madre, y les habló a ellos y a toda la familia de la casa del padre de su madre, diciendo:
-**2** Hablen, por favor, a oídos de todos los se­ñores de Shejem: “¿Qué es bueno para ustedes, el gobernar en ustedes setenta hombres de to­dos los hijos de Ierubaal, o el gobernar en us­te­des un hombre?” Y recuerden que su hueso y su carne soy yo.
+**2** Hablen, por favor, a oídos de todos los se­ñores de Shejem: “¿Qué es bueno para ustedes, el gobernar en ustedes setenta hombres de to­dos los hijos de Ierubaal, o el gobernar en us­te­des un hombre? ” Y recuerden que su hueso y su carne soy yo.
 **3** Y hablaron los hermanos de su madre sobre él a oídos de todos los señores de Shejem todas estas palabras; y se inclinó su corazón tras de Abimélej, porque dijeron: Hermano nuestro es él.
 **4** Y dieron a él setenta *piezas de* plata de la ca­sa de Baal Brit, y contrató con ellas Abimélej hombres vanidosos e imprudentes, y fueron tras de él.
 **5** Y vino *a* la casa de su padre, a Ofráh, y mató a sus hermanos, hijos de Ierubaal, setenta hom­bres, sobre una piedra. Pero permaneció Iotam, hijo de Ierubaal, el pequeño, porque se escon­dió.
 **6** Y se reunieron todos los señores de Shejem y toda la casa de Milo, y fueron e hicieron rey a Abimélej, con el roble colocado que *estaba* en Shejem.
 **7** Y lo dieron a conocer a Iotam, y fue y se pa­ró en la cabeza del monte Gerizim, y levantó su voz, y proclamó y les dijo: ¡Escúchenme señores de Shejem, y los escuchará a ustedes Elo­him!
 **8** Yendo, fueron los árboles a ungir sobre ellos un rey, y dijeron al olivo: “Reina sobre noso­tros”.
-**9** Mas les dijo el olivo: “¿Haré cesar mi gro­­sura que por mí honran *a* Elohim y *a *los hom­­bres, e ir a ondear sobre los árboles?”
+**9** Mas les dijo el olivo: “¿Haré cesar mi gro­­sura que por mí honran *a* Elohim y *a *los hom­­bres, e ir a ondear sobre los árboles? ”
 **10** Y dijeron los árboles a la higuera: “Ven tú, reina sobre nosotros”.
-**11** Mas les dijo la higuera: “¿Haré cesar mi dulzura y mi fruta buena, e ir a ondear sobre los árboles?”
+**11** Mas les dijo la higuera: “¿Haré cesar mi dulzura y mi fruta buena, e ir a ondear sobre los árboles? ”
 **12** Y dijeron los árboles a la vid: “Ven tú, rei­na sobre nosotros”.
-**13** Y les dijo la vid: “¿Haré cesar mi mos­to que alegra *a* Elohim y *a* los hombres, e ir a on­dear sobre los árboles?”
+**13** Y les dijo la vid: “¿Haré cesar mi mos­to que alegra *a* Elohim y *a* los hombres, e ir a on­dear sobre los árboles? ”
 **14** Y dijeron todos los árboles a la zarza: “Ven tú, reina sobre nosotros”.
 **15** Y dijo la zarza a los árboles: Si en verdad ustedes me ungen por rey sobre ustedes, ven­gan, refúgiense en mi sombra; y si no, salga fuego de la zarza y consuma los cedros del Le­banón”.
 **16** Y ahora, si con verdad e integridad han he­cho e hicieron rey a Abimélej, y si bien hicie­ron con Ierubaal y con su casa, y si conforme a la acción de sus manos han hecho a él,
@@ -374,7 +374,7 @@ de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יה�
 **35** Y salió Gaal, hijo de Ebed, y se paró *a* la en­trada de la puerta de la ciudad; y se levantó Abimélej y el pueblo que* estaba* con él desde la emboscada.
 **36** Y vio Gaal al pueblo, y dijo a Zebul: He aquí, un pueblo baja desde las cabezas de los montes. Pero le dijo Zebul: La sombra de los montes tú ves como hombres.
 **37** Y volvió aún Gaal a hablar, y dijo: He aquí, un pueblo baja del centro de la tierra, y una ca­beza viene del camino del roble de los adivi­nos.
-**38** Y le dijo Zebul: ¿Dónde *está* ahora tu bo­ca que dijiste: “¿Quién es Abimélej que le ser­vi­remos?” ¿No es este el pueblo que despre­ciabas a él? Sal por favor ahora y lucha con él.
+**38** Y le dijo Zebul: ¿Dónde *está* ahora tu bo­ca que dijiste: “¿Quién es Abimélej que le ser­vi­remos? ” ¿No es este el pueblo que despre­ciabas a él? Sal por favor ahora y lucha con él.
 **39** Y salió Gaal delante de los señores de Shejem, y luchó con Abimélej.
 **40** Y lo persiguió Abimélej, y huyó delante de él; y muchos cayeron muertos hasta la entrada de la puerta.
 **41** Y habitó Abimélej en Arumáh, y expulsó Ze­bul a Gaal y a sus hermanos de habitar en Shejem.
@@ -447,9 +447,9 @@ de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יה�
 **14** Pero añadió más Iftaj y envió mensajeros al rey de los hijos de Amón,
 **15** y le dijeron: Así dice Iftaj: “No tomó Is­rael la tierra de Moab y la tierra de los hijos de Amón.
 **16** Porque cuando subieron de Mitzráim, y fue Israel por el desierto hasta el mar de Cañas[^1540] y entró a Kádesh,
-**17** envió Israel mensajeros al rey de Edom, di­ciendo: ‘Déjame pasar, por favor, por tu tie­rra’, y no escuchó el rey de Edom. Y también al rey de Moab envió, pero él no consintió, y habitó Israel en Kádesh.
+**17** envió Israel mensajeros al rey de Edom, di­ciendo: ‘Déjame pasar, por favor, por tu tie­rra', y no escuchó el rey de Edom. Y también al rey de Moab envió, pero él no consintió, y habitó Israel en Kádesh.
 **18** Y fue por el desierto y rodeó la tierra de E­dom y la tierra de Moab, y vino hacia el brillo del sol de la tierra de Moab y acamparon en el *otro* lado del Arnón; pero no entraron por la frontera de Moab, porque el Arnón *era* la fron­tera de Moab.
-**19** Y envió Israel mensajeros a Sijón, rey del emorí[^1541], rey de Jeshbón, y le dijo Israel: ‘Déja­nos pasar, por favor, por tu tierra, hasta nuestro lugar’.
+**19** Y envió Israel mensajeros a Sijón, rey del emorí[^1541], rey de Jeshbón, y le dijo Israel: ‘Déja­nos pasar, por favor, por tu tierra, hasta nuestro lugar'.
 **20** Pero no confió Sijón a Israel pasar por su frontera; y reunió Sijón a todo su pueblo, y a­camparon en Iahtzah, y lucharon con Israel.
 **21** Pero dio יהוה, Elohim de Israel, a Sijón y a todo su pueblo en mano de Israel, y los gol­pearon; y heredó Israel toda la tierra del emorí, habitante de esa tierra.
 **22** Y poseyeron toda la frontera del emorí, des­de el Arnón y hasta el Iabok, y desde el de­sier­to y hasta el Iardén.
@@ -556,7 +556,7 @@ Del que come salió comida, y del fuerte salió dulzura.**1**
 **15** Y sucedió *que* en el día séptimo dijeron a la mu­jer de Shimshón: Persuade a tu marido y dará a conocer a nosotros el acertijo, no sea que *te *quememos a ti y a la casa de tu padre con fuego. ¿Para apoderarse de nosotros nos han llamado? ¿No?
 **16** Y lloró la mujer de Shimshón junto a él, y dijo: Sólo me aborreces y no me amas; has propuesto un acertijo a los hijos de mi pueblo, y a mí no *lo* diste a conocer. Y le dijo a ella: He aquí, a mi padre y a mi madre no *lo* he dado a conocer, ¿y a ti *lo* daré a conocer?
 **17** Y ella lloró junto a él los siete días que es­tuvo para ellos la fiesta. Y sucedió *que* en el día sép­timo, *lo* dio a conocer a ella, porque ella lo presionaba. Y ella dio a conocer el acertijo a los hijos de su pueblo.
-**18** Y dijeron a él los hombres de la ciudad en el día séptimo, antes de ponerse el sol: ¿Qué es *más* dulce que la miel?¿Y qué *más* fuerte que un león?Y él les dijo:Si no hubieran arado con mi novilla,no habrían encontrado mi acertijo.
+**18** Y dijeron a él los hombres de la ciudad en el día séptimo, antes de ponerse el sol: ¿Qué es *más* dulce que la miel? ¿Y qué *más* fuerte que un león? Y él les dijo: Si no hubieran arado con mi novilla, no habrían encontrado mi acertijo.
 **19** Y avanzó sobre él el Rúaj[^1561] de יהוה, y des­­cendió *a* Ashkelón e hirió de ellos *a* treinta hombres, y tomó sus despojos[^1562] y dio las mudas *de vestiduras* a los que habían dado a conocer el acertijo. Y se encendió su ira, y subió *a* la casa de su padre.
 **20** Pero fue *dada* la mujer de Shimshón a su compañero, el que *había sido* amigo para él.
 

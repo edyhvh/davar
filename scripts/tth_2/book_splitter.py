@@ -73,6 +73,25 @@ class TTH2BookSplitter:
                     return True
             return False
 
+        def looks_like_generic_book_header(candidate_line: str) -> bool:
+            """
+            Detect generic wrapped book headers even when the target book is not
+            registered in BOOKS_INFO (e.g. __OBADIÁH (ABDÍAS)__ עבדיה).
+            """
+            stripped = candidate_line.strip()
+            if not stripped:
+                return False
+
+            match = re.match(
+                r'^__([^_\n]{2,})__\s*([\u0590-\u05FF][\u0590-\u05FF\s]*)$',
+                stripped,
+            )
+            if not match:
+                return False
+
+            latin_title = match.group(1)
+            return bool(re.search(r'[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]', latin_title))
+
         # Find book start
         book_start = -1
         for i, line in enumerate(lines):
@@ -142,6 +161,11 @@ class TTH2BookSplitter:
             # Skip verse lines (avoid treating them as book headers)
             if re.match(r'^\*\*\d+\*\*', line):
                 continue
+
+            # Fallback boundary detection for unregistered book headers.
+            if looks_like_generic_book_header(line):
+                book_end = i
+                break
 
             # Check for book headers first (highest priority)
             # Only check for book headers if the line looks like a title, not a verse
@@ -286,7 +310,8 @@ class TTH2BookSplitter:
                 extracted_books[book_key] = str(output_file)
                 content_hash = hashlib.sha256(
                     book_text.encode('utf-8')).hexdigest()
-                extracted_book_hashes.setdefault(content_hash, []).append(book_key)
+                extracted_book_hashes.setdefault(
+                    content_hash, []).append(book_key)
                 if verbose:
                     print(f"  ✓ {book_key}")
 
@@ -300,7 +325,8 @@ class TTH2BookSplitter:
             if len(book_keys) > 1
         ]
         if duplicate_groups:
-            collisions = '; '.join(', '.join(group) for group in duplicate_groups)
+            collisions = '; '.join(', '.join(group)
+                                   for group in duplicate_groups)
             raise ValueError(
                 f"Detected identical extracted content across books: {collisions}. "
                 "This usually means a header pattern collision in BOOKS_INFO."

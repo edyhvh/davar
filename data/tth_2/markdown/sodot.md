@@ -42,7 +42,7 @@ __APOCALIPSIS \(SODOT\)__סודות
 
 **17** Y cuando lo vi, caí a sus pies como muerto. Y puso su mano derecha sobre mí, diciéndome: No temas, Yo soy el Primero y el Último;
 
-**18** y el que vivo, y estuve muerto, pero he aquí que vivo le’olmei olamim[^11], amén. Y tengo las llaves del Sheol y la muerte.
+**18** y el que vivo, y estuve muerto, pero he aquí que vivo le'olmei olamim[^11], amén. Y tengo las llaves del Sheol y la muerte.
 
 **19** Escribe las *cosas *que has visto, y las que son, y las que han de ser después de eso.
 
@@ -69,9 +69,9 @@ __APOCALIPSIS \(SODOT\)__סודות
 
 **8** Y al mensajero de la congregación de Smirna, escribe: Así ha dicho el Primero y el Último, el que fue muerto y vive:
 
-**9** Yo conozco tus obras, y tu estrechez, y tu pobreza –pero tú eres rico–, es decir, la blasfemia de los que dicen ser iehudim[^17] y no lo son, sino asamblea de Ha’satán[^18].
+**9** Yo conozco tus obras, y tu estrechez, y tu pobreza –pero tú eres rico–, es decir, la blasfemia de los que dicen ser iehudim[^17] y no lo son, sino asamblea de Ha'satán[^18].
 
-**10** No tengas temor de en lo que serás afligido. He aquí, Ha’satán enviará a hombres de ustedes a la cárcel para que sean examinados, y habrá para ustedes estrechez diez días. Sé firme hasta la muerte, y te daré la corona de la vida.
+**10** No tengas temor de en lo que serás afligido. He aquí, Ha'satán enviará a hombres de ustedes a la cárcel para que sean examinados, y habrá para ustedes estrechez diez días. Sé firme hasta la muerte, y te daré la corona de la vida.
 
 **11** Quien tenga oídos, escuchará lo que el Rúaj dice a las congregaciones. El que venza, no será penalizado de muerte postrera.
 
@@ -79,7 +79,7 @@ __APOCALIPSIS \(SODOT\)__סודות
 
 **12** Y al mensajero que está en la congregación de Pérgamos, escribe: Así ha dicho el que tiene la espada afilada de doble boca:
 
-**13** Yo conozco tus obras, y el lugar de tu asiento, donde está el trono de Ha’satán; y tú te aferras en mi Nombre, y no has negado mi emunah[^19], incluso en los días *en *que fue asesinado Antipas, mi testigo fiel, con ustedes, que allí mora Ha’satán.
+**13** Yo conozco tus obras, y el lugar de tu asiento, donde está el trono de Ha'satán; y tú te aferras en mi Nombre, y no has negado mi emunah[^19], incluso en los días *en *que fue asesinado Antipas, mi testigo fiel, con ustedes, que allí mora Ha'satán.
 
 **14** Pero tengo contra ti pequeñas *cosas*: porque tienes allí *a *los que se aferran a la enseñanza de Bilam, que enseñó a Balak a lanzar tropiezo delante de los hijos de Israel, para comer sacrificios de ídolos y para fornicar.
 
@@ -103,7 +103,7 @@ __APOCALIPSIS \(SODOT\)__סודות
 
 **23** Y a sus hijos mataré con muerte; y sabrán todas las congregaciones que Yo soy el que examino el corazón, pruebo los riñones, y para dar a cada hombre conforme a sus caminos[^23].
 
-**24** Y a ustedes Yo les digo, y a los otros que están en Tiátira, cuantos no están tomando esta doctrina, quienes no conocen las profundidades de Ha’satán[^24] –como ellos dicen–, no echaré sobre ustedes otra carga.
+**24** Y a ustedes Yo les digo, y a los otros que están en Tiátira, cuantos no están tomando esta doctrina, quienes no conocen las profundidades de Ha'satán[^24] –como ellos dicen–, no echaré sobre ustedes otra carga.
 
 **25** Por lo tanto, lo que hay para ustedes, aférrense a ello hasta que Yo venga.
 
@@ -137,7 +137,7 @@ __APOCALIPSIS \(SODOT\)__סודות
 
 **8** Yo conozco tus obras, he aquí, he dado delante de ti una puerta abierta, y ningún hombre podrá cerrarla, porque hay para ti pequeña fuerza pero has preservado mi Palabra y no has negado mi Nombre.
 
-**9** He aquí, Yo doy a la asamblea de Ha’satán[^33], los que se dicen ser iehudim[^34]. y no lo son, sino mentirosos. Heme aquí, hago que vengan y se postren delante de tus pies, y sabrán que Yo te he amado.
+**9** He aquí, Yo doy a la asamblea de Ha'satán[^33], los que se dicen ser iehudim[^34]. y no lo son, sino mentirosos. Heme aquí, hago que vengan y se postren delante de tus pies, y sabrán que Yo te he amado.
 
 **10** Porque has guardado la palabra de mi esperanza[^35], Yo también te guardaré de la hora de la examinación que ha de venir sobre todo el mundo[^36], para examinar a los que habitan sobre la tierra.
 
@@ -189,9 +189,9 @@ __APOCALIPSIS \(SODOT\)__סודות
 
 Santo, Santo, Santo, es יהוה Elohim Tzebaot[^53], el que fue, el que es y el que será[^54].
 
-**9** Y cuando los seres vivientes daban gloria, esplendor y confesión al que está sentado sobre el trono, al que vive le’olmei olamim[^55],
+**9** Y cuando los seres vivientes daban gloria, esplendor y confesión al que está sentado sobre el trono, al que vive le'olmei olamim[^55],
 
-**10** entonces los veinticuatro ancianos caían delante del que está sentado sobre el trono, y se postraban al que vive le’olmei olamim, y echaban sus coronas delante del trono, diciendo:
+**10** entonces los veinticuatro ancianos caían delante del que está sentado sobre el trono, y se postraban al que vive le'olmei olamim, y echaban sus coronas delante del trono, diciendo:
 
 Digno eres, יהוה, de recibir gloria, esplendor y potencia,
 
@@ -227,9 +227,9 @@ y por causa de tu voluntad son y fueron creadas[^57].
 
 **12** diciendo con gran voz: Digno es el Cordero que fue sacrificado de tomar poder, riqueza, sabiduría, potencia, gloria, ornamento y alabanza.
 
-**13** Y a toda la creación que está en los cielos y en la tierra y debajo de la tierra, y que está sobre el mar, y todo lo que hay en ellos, escuché diciendo: Al que está sentado sobre el trono y[^63] al Cordero, alabanza, gloria, ornamento y potencia le’olmei olamim[^64].
+**13** Y a toda la creación que está en los cielos y en la tierra y debajo de la tierra, y que está sobre el mar, y todo lo que hay en ellos, escuché diciendo: Al que está sentado sobre el trono y[^63] al Cordero, alabanza, gloria, ornamento y potencia le'olmei olamim[^64].
 
-**14** Y los cuatro seres vivientes decían: ¡Amén! Y los veinticuatro ancianos cayeron y se postraron al que vive le’olmei olamim.
+**14** Y los cuatro seres vivientes decían: ¡Amén! Y los veinticuatro ancianos cayeron y se postraron al que vive le'olmei olamim.
 
 *Los sellos*
 
@@ -295,7 +295,7 @@ Los 144 mil sellados
 
 **11** Y todos los mensajeros estaban parados alrededor del trono y de los ancianos y de los cuatro seres vivientes; y cayeron sobre sus rostros delante del trono, y se postraron a Elohim,
 
-**12** diciendo: ¡Amén! La bendición, la gloria, la sabiduría, la confesión, el ornamento, la fuerza y la potencia son de nuestro Elohim, le’olmei olamim[^80]. Amén.
+**12** diciendo: ¡Amén! La bendición, la gloria, la sabiduría, la confesión, el ornamento, la fuerza y la potencia son de nuestro Elohim, le'olmei olamim[^80]. Amén.
 
 **13** Y respondió uno de los ancianos, y me dijo: Estos que están vestidos de vestiduras blancas, ¿quiénes son y de dónde han venido?
 
@@ -395,7 +395,7 @@ Los 144 mil sellados
 
 **5** Y el mensajero que vi que se había puesto de pie sobre el mar y sobre la tierra, levantó su mano a los cielos,
 
-**6** y juró por el que Vive le’olmei olamim[^96], quien dio forma a los cielos y lo que *hay *en ellos, y a la tierra y lo que *hay *en ella, y el mar y lo que *hay *en él, que el tiempo no será más,
+**6** y juró por el que Vive le'olmei olamim[^96], quien dio forma a los cielos y lo que *hay *en ellos, y a la tierra y lo que *hay *en ella, y el mar y lo que *hay *en él, que el tiempo no será más,
 
 **7** sino que, en los días de la voz del séptimo mensajero, cuando él haya de soplar, se consumará el misterio de Elohim[^97], tal como Él había dado las buenas nuevas a sus siervos los profetas.
 
@@ -441,7 +441,7 @@ Los 144 mil sellados
 
 *El séptimo shofar*
 
-**15** Y sopló el séptimo mensajero, y hubo grandes voces en los cielos, diciendo: Han sido los reinos del olam[^109] para nuestro Adón y[^110] para su Mesías, y Él reinará le’olmei olamim[^111].
+**15** Y sopló el séptimo mensajero, y hubo grandes voces en los cielos, diciendo: Han sido los reinos del olam[^109] para nuestro Adón y[^110] para su Mesías, y Él reinará le'olmei olamim[^111].
 
 **16** Y los veinticuatro ancianos que estaban sentados delante de Elohim en sus sillas, cayeron sobre sus rostros y se postraron a Elohim,
 
@@ -471,13 +471,13 @@ Los 144 mil sellados
 
 **8** Y no se fortalecieron, ni tampoco su lugar fue hallado más en los cielos.
 
-**9** Y fue arrojado el gran reptil, la serpiente antigua, llamado Diábolos[^118] y Ha’satán[^119], el que hacía extraviar al mundo[^120]; fue arrojado sobre la tierra, y sus mensajeros fueron arro­jados con él.
+**9** Y fue arrojado el gran reptil, la serpiente antigua, llamado Diábolos[^118] y Ha'satán[^119], el que hacía extraviar al mundo[^120]; fue arrojado sobre la tierra, y sus mensajeros fueron arro­jados con él.
 
 **10** Y escuché una gran voz en los cielos, diciendo: Ahora ha sido la salvación, la potencia y el reino para nuestro Elohim, y el dominio para su Mesías[^121], porque fue arrojado el acusador[^122] de nuestros hermanos, el que los acusa[^123] delante de nuestro Elohim día y noche.
 
 **11** Y ellos lo han vencido por la sangre del Cordero y por la Palabra de su testimonio, y no han amado sus vidas[^124] hasta la muerte.
 
-**12** Por eso, ¡alégrense, cielos, y todos los que moran en ellos! ¡Oy de los moradores de la tierra y el mar!, porque ha descendido Ha’satán a ellos, y hay para él gran ira[^125], porque sabe que poco tiempo hay para él.
+**12** Por eso, ¡alégrense, cielos, y todos los que moran en ellos! ¡Oy de los moradores de la tierra y el mar!, porque ha descendido Ha'satán a ellos, y hay para él gran ira[^125], porque sabe que poco tiempo hay para él.
 
 **13** Y cuando vio el reptil que había sido arrojado a la tierra, persiguió a la mujer que había dado a luz al varón.
 
@@ -555,11 +555,11 @@ Los 144 mil sellados
 
 **10** también él beberá del vino del ardor de יהוה, lleno, mezclado[^145] en la copa de su nariz; y será afligido en el fuego y azufre delante de los santos mensajeros y delante del Cordero.
 
-**11** Y el humo de su aflicción subirá le’olmei olamim[^146]. Y no tendrán menujah[^147] día y noche, los que se postraron al animal y a su imagen, y los que tomaron la marca de su nombre.
+**11** Y el humo de su aflicción subirá le'olmei olamim[^146]. Y no tendrán menujah[^147] día y noche, los que se postraron al animal y a su imagen, y los que tomaron la marca de su nombre.
 
 **12** Aquí está la paciencia de los kedoshim[^148], los que guardan los mandamientos de Elohim y la emunah[^149] de Yeshúa.
 
-**13** Y escuché una voz de los cielos, diciendo: Escribe: “¡Felices los muertos que en יהוה mueren desde ahora!” “Es verdadero”, dice el Rúaj, porque descansarán de sus trabajos forzosos, porque sus obras van detrás de ellos.
+**13** Y escuché una voz de los cielos, diciendo: Escribe: “¡Felices los muertos que en יהוה mueren desde ahora! ” “Es verdadero”, dice el Rúaj, porque descansarán de sus trabajos forzosos, porque sus obras van detrás de ellos.
 
 La tierra es cosechada
 
@@ -603,7 +603,7 @@ Porque todas las naciones vendrán y se postrarán delante de ti,
 
 **6** Y salieron del Hejal los siete mensajeros que tenían las siete plagas, y estaban vestidos de lino puro y resplandeciente, y ceñidos sobre sus lomos con cinto de oro.
 
-**7** Y uno de los cuatro seres vivientes dio a los siete mensajeros siete tazones de oro, llenos del ardor de יהוה, el que vive le’olmei olamim[^159].
+**7** Y uno de los cuatro seres vivientes dio a los siete mensajeros siete tazones de oro, llenos del ardor de יהוה, el que vive le'olmei olamim[^159].
 
 **8** Y se llenó el Hejal de humo procedente de la gloria de Elohim y de su poder. Y ninguno podía entrar en el Hejal hasta que se hubiesen acabado las siete plagas de los siete mensajeros.
 
@@ -751,7 +751,7 @@ La boda del Cordero
 
 **2** Porque verdad y rectitud son sus juicios, porque ha juzgado a la gran ramera quien corrompía la tierra con sus fornicaciones, y ha vengado la sangre de sus siervos de la mano de ella.
 
-**3** Y dijeron por segunda vez: ¡Haleluyah! Y el humo de ella sube le’olmei olamim[^180].
+**3** Y dijeron por segunda vez: ¡Haleluyah! Y el humo de ella sube le'olmei olamim[^180].
 
 **4** Y cayeron los veinticuatro ancianos y los cuatro seres vivientes y se postraron a Elohim, que está sentado sobre el trono, diciendo: Amén ¡Haleluyah!
 
@@ -797,7 +797,7 @@ Los mil años
 
 **1** Y vi un a mensajero descendiendo de los cielos, que tenía la llave del abismo, y una gran cadena en su mano.
 
-**2** Y capturó al reptil[^187], a la serpiente antigua, que es Diábolos[^188] y Ha’satán[^189], y lo ató por mil años.
+**2** Y capturó al reptil[^187], a la serpiente antigua, que es Diábolos[^188] y Ha'satán[^189], y lo ató por mil años.
 
 **3** Y lo echó al abismo, y lo encerró, y puso sello sobre él, para que no extraviase más a los gentiles, hasta que se completen mil años; y después de eso, será desatado por poco tiempo.
 
@@ -807,13 +807,13 @@ Los mil años
 
 **6** ¡Feliz el hombre, y santo[^193], quien tiene parte en la primera resurrección!; sobre estos la segunda muerte no tiene dominio, sino que serán sacerdotes de Elohim, es decir, del Mesías, y reinarán con Él mil años.
 
-**7** Y cuando se completen los mil años, será desatado Ha’satán de su prisión,
+**7** Y cuando se completen los mil años, será desatado Ha'satán de su prisión,
 
 **8** y saldrá a extraviar a los gentiles en las cuatro esquinas de la tierra, a Gog y a Magog, para reunirlos para la guerra, que su número es como la arena del mar.
 
 **9** Y subieron sobre la anchura de la tierra y rodearon el campamento de los kedoshim[^194] y a la ciudad amada; y descendió fuego de parte de Elohim desde los cielos, y los consumió.
 
-**10** Y Ha’satán, el que los extraviaba, fue echado al lago de fuego y azufre, donde estaban también el animal y el profeta de mentira; y serán afligidos día y noche le’olmei olamim[^195].
+**10** Y Ha'satán, el que los extraviaba, fue echado al lago de fuego y azufre, donde estaban también el animal y el profeta de mentira; y serán afligidos día y noche le'olmei olamim[^195].
 
 *El juicio ante el gran trono blanco*
 
@@ -895,7 +895,7 @@ Los mil años
 
 **4** y ellos verán su rostro, y su Nombre *estará* sobre sus frentes.
 
-**5** Y la noche no será más; y no tendrán necesidad de luz de lámpara ni de la luz del sol, porque יהוה Elohim los iluminará; y reinarán le’olmei olamim[^213].
+**5** Y la noche no será más; y no tendrán necesidad de luz de lámpara ni de la luz del sol, porque יהוה Elohim los iluminará; y reinarán le'olmei olamim[^213].
 
 *El Adón Yeshúa viene pronto*
 
@@ -1052,7 +1052,7 @@ Los mil años
 
 
 31.
-[^31]: O, *Firme. *Heb.: *Ne’emán.*
+[^31]: O, *Firme. *Heb.: *Ne'emán.*
 
 
 32.
@@ -1084,7 +1084,7 @@ Los mil años
 
 
 39.
-[^39]: O, *Firme. *Heb.: *Ne’emán.*
+[^39]: O, *Firme. *Heb.: *Ne'emán.*
 
 
 40.
@@ -1276,7 +1276,7 @@ Los mil años
 
 
 87.
-[^87]: Heb.: *La’anah. *Gr.: *Ápsindsos.*
+[^87]: Heb.: *La'anah. *Gr.: *Ápsindsos.*
 
 
 88.
@@ -1316,7 +1316,7 @@ Los mil años
 
 
 97.
-[^97]: Heb.: *Sod ha’Elohim.*
+[^97]: Heb.: *Sod ha'Elohim.*
 
 
 98.
@@ -1664,7 +1664,7 @@ Los mil años
 
 
 184.
-[^184]: Heb.: *Devar Elohim*.* *Aram.: *Meymrá da’יהוה. *Expresión presente en el Targum que hace alusión a la corporeidad de Elohim.
+[^184]: Heb.: *Devar Elohim*.* *Aram.: *Meymrá da'יהוה. *Expresión presente en el Targum que hace alusión a la corporeidad de Elohim.
 
 
 185.
@@ -1848,7 +1848,7 @@ Los mil años
 [^28]: Espíritus, poderes, vientos.
 [^29]: Espíritu, aliento, poder. Así en el resto del cap.
 [^30]: O, *Distinguido. *Heb.: *Kadosh.*
-[^31]: O, *Firme. *Heb.: *Ne’emán.*
+[^31]: O, *Firme. *Heb.: *Ne'emán.*
 [^32]: Véase Isaías 22:22.
 [^33]: El adversario.
 [^34]: Judíos. Heb.: *iehudí*: *el que confiesa a *יהוה*.*
@@ -1856,7 +1856,7 @@ Los mil años
 [^36]: Heb.: *Tevel. *Gr.: *Oikoumene. *Tierra donde habite el pueblo de Israel.
 [^37]: Templo, Santuario.
 [^38]: Firme, Verdadero*.*
-[^39]: O, *Firme. *Heb.: *Ne’emán.*
+[^39]: O, *Firme. *Heb.: *Ne'emán.*
 [^40]: Heb.: *Emet.*
 [^41]: Lo primero, lo mejor. El origen de toda la creación, la cual fue sometida a Él.
 [^42]: Lit.: *hervido. *Así en el resto del cap.
@@ -1904,7 +1904,7 @@ Los mil años
 [^84]: Cuernos de carnero. Sing., *shofar. *Así en el resto del cap.
 [^85]: Lit.: *hacia.*
 [^86]: Oraciones, ingresos en juicio. Así también en vers. 4.
-[^87]: Heb.: *La’anah. *Gr.: *Ápsindsos.*
+[^87]: Heb.: *La'anah. *Gr.: *Ápsindsos.*
 [^88]: Así en muchos mss. antiguos. Algunos mss. posteriores dicen: *ángel.*
 [^89]: Otra lectura posible es: *y aguijones, y en sus colas tenían dominio.*
 [^90]: Perdición.
@@ -1914,7 +1914,7 @@ Los mil años
 [^94]: Éufrates.
 [^95]: O, *envuelto de nube.*
 [^96]: Es decir, *por los tiempos de los tiempos*.
-[^97]: Heb.: *Sod ha’Elohim.*
+[^97]: Heb.: *Sod ha'Elohim.*
 [^98]: O sea, *de escribir.*
 [^99]: Templo, Santuario. Así en el resto del cap.
 [^100]: O, *tela de saco.*
@@ -2001,7 +2001,7 @@ Los mil años
 [^181]: Heb.: *Halelu et Eloheinu.*
 [^182]: Santo, apartado, distinguido.
 [^183]: Espíritu, ánimo, poder.
-[^184]: Heb.: *Devar Elohim*.* *Aram.: *Meymrá da’יהוה. *Expresión presente en el Targum que hace alusión a la corporeidad de Elohim.
+[^184]: Heb.: *Devar Elohim*.* *Aram.: *Meymrá da'יהוה. *Expresión presente en el Targum que hace alusión a la corporeidad de Elohim.
 [^185]: Véase Salmo 2:9.
 [^186]: Otra lectura posible es: *al banquete del gran Elohim.*
 [^187]: Heb.: *Tanín.*

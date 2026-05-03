@@ -10,7 +10,7 @@ __ROMAIM \(ROMANOS\)__רומאים
 
 **3** sobre su Hijo[^3], el nacido de la semilla de David según la carne;
 
-**4** sobre el Hijo de Elohim, dado a conocer por la potencia del Rúaj Ha’Kódesh[^4] por el levantamiento de los muertos, Yeshúa el Mesías Adón[^5] nuestro;
+**4** sobre el Hijo de Elohim, dado a conocer por la potencia del Rúaj Ha'Kódesh[^4] por el levantamiento de los muertos, Yeshúa el Mesías Adón[^5] nuestro;
 
 **5** en el cual hemos tomado el favor y el comisionado para obediencia de la emunah[^6] en todas las naciones, sobre su Nombre.
 
@@ -277,7 +277,7 @@ Veneno de víbora hay bajo sus labios[^33].
 
 **4** y la esperanza, examinación[^59]; y la examinación, confianza[^60].
 
-**5** La confianza no avergüenza, porque el amor de Elohim fue derramado en nuestros corazones por el Rúaj Ha’Kódesh[^61] dado a nosotros.
+**5** La confianza no avergüenza, porque el amor de Elohim fue derramado en nuestros corazones por el Rúaj Ha'Kódesh[^61] dado a nosotros.
 
 **6** Y si el Mesías, cuando nosotros éramos débiles, conforme a su tiempo murió por los condenados,
 
@@ -513,7 +513,7 @@ Porque por ti somos matados todo el día,
 
 **9**
 
-**1** Verdad les hablo en el Mesías, y no miento, y mi mente da testimonio para mí en el Rúaj Ha’Kódesh[^82],
+**1** Verdad les hablo en el Mesías, y no miento, y mi mente da testimonio para mí en el Rúaj Ha'Kódesh[^82],
 
 **2** que grande es para mí la tristeza, y no hay fin para el dolor de mi corazón.
 
@@ -887,7 +887,7 @@ Que a Mí se inclinará toda rodilla
 
 **16** Por eso, no sea injuriado el bien de ustedes.
 
-**17** Porque el reino de Elohim no es comida ni bebida, sino justicia, shalom[^169] y gozo en el Rúaj Ha’Kódesh[^170].
+**17** Porque el reino de Elohim no es comida ni bebida, sino justicia, shalom[^169] y gozo en el Rúaj Ha'Kódesh[^170].
 
 **18** Porque el que en estas cosas sirve al Mesías, acepto es a Elohim, y aprobado a los hombres.
 
@@ -941,13 +941,13 @@ Alaben a __יהוה__, todos los gentiles;
 
 Y sucederá que en aquel día, la raíz de Ishai que está parada por estandarte de los pueblos, a Él los gentiles buscarán[^179].
 
-**13** Y el Elohim de la esperanza los llenará de toda alegría y shalom[^180] para ser afirmados en fidelidad, para hacerlos abundar en la esperanza en la potencia del Rúaj Ha’Kódesh[^181].
+**13** Y el Elohim de la esperanza los llenará de toda alegría y shalom[^180] para ser afirmados en fidelidad, para hacerlos abundar en la esperanza en la potencia del Rúaj Ha'Kódesh[^181].
 
 **14** Y he aquí, hermanos míos, yo confío acerca de ustedes, que están llenos de bondad, y llenos de todo conocimiento, y pueden amonestarse un hombre a su compañero.
 
 **15** Pero les he escrito, hermanos míos, en parte con atrevimiento[^182], para hacerles recordar por el favor que me es dado de Elohim,
 
-**16** para ser ministro de Yeshúa el Mesías a los gentiles, y para oficiar como sacerdote en la Besorah[^183] de Elohim, para que sea la ofrenda de los gentiles aceptada y santificada por el Rúaj Ha’Kódesh.
+**16** para ser ministro de Yeshúa el Mesías a los gentiles, y para oficiar como sacerdote en la Besorah[^183] de Elohim, para que sea la ofrenda de los gentiles aceptada y santificada por el Rúaj Ha'Kódesh.
 
 **17** Por eso hay para mí alabanza en Yeshúa el Mesías delante de Elohim.
 
@@ -979,7 +979,7 @@ Planificación de futuros viajes
 
 **29** Y sé que cuando llegue a ustedes, en plenitud de bendición de la Besorah del Mesías vendré.
 
-**30** Ruego a ustedes, hermanos míos, en nuestro Adón[^190] Yeshúa el Mesías, y por el amor del Rúaj Ha’Kódesh, que me ayuden en sus tefilot[^191] por mí a Elohim,
+**30** Ruego a ustedes, hermanos míos, en nuestro Adón[^190] Yeshúa el Mesías, y por el amor del Rúaj Ha'Kódesh, que me ayuden en sus tefilot[^191] por mí a Elohim,
 
 **31** para que sea rescatado de los rebeldes que están en Iehudáh, y que mi servicio en Ierushaláim a los kedoshim sea acepto;
 
@@ -1029,7 +1029,7 @@ Saludos personales
 
 **19** Porque la escucha de ustedes ha sido conocida por todos, por eso me alegro por ustedes; pero quiero que sean sabios para el bien e ingenuos para el mal.
 
-**20** Y el Elohim de shalom aplastará a Ha’satán[^201] pronto debajo de los pies de ustedes. El favor de nuestro Adón Yeshúa el Mesías sea con ustedes.
+**20** Y el Elohim de shalom aplastará a Ha'satán[^201] pronto debajo de los pies de ustedes. El favor de nuestro Adón Yeshúa el Mesías sea con ustedes.
 
 **21** Preguntan por el shalom de ustedes Timoteos, mi compañero de obra, y Luquios, Yasón y Sosípatros, mis parientes.
 
@@ -1043,7 +1043,7 @@ Saludos personales
 
 **26** pero que ahora ha sido descubierto, y por medio de los escritos de los profetas, conforme al mandamiento del Elohei Olam[^204], dado a conocer a todos los gentiles para la obediencia[^205] a la emunah[^206],
 
-**27** Al único sabio Elohim, por medio de Yeshúa el Mesías sea la gloria, le’olmei olamim[^207]. Amén.
+**27** Al único sabio Elohim, por medio de Yeshúa el Mesías sea la gloria, le'olmei olamim[^207]. Amén.
 
 1.
 [^1]: Heb.: *Shalíaj.*
@@ -1666,7 +1666,7 @@ Saludos personales
 
 
 156.
-[^156]: Heb.: *Po’alei Avel.*
+[^156]: Heb.: *Po'alei Avel.*
 
 
 157.
@@ -1790,7 +1790,7 @@ Saludos personales
 
 
 187.
-[^187]: Gr.: *Spanía. *Heb.: *Sh’faniyah. *Región de la Península ibérica. No confundir con heb. *Sefarad*, alusivo a *Sparda, *que es *Sardis.*
+[^187]: Gr.: *Spanía. *Heb.: *Sh'faniyah. *Región de la Península ibérica. No confundir con heb. *Sefarad*, alusivo a *Sparda, *que es *Sardis.*
 
 
 188.
@@ -2031,7 +2031,7 @@ Saludos personales
 [^153]: O, *vidas. *Heb.: *Néfesh.*
 [^154]: Lit.: *para ti para bien.*
 [^155]: O, *de la indignación.*
-[^156]: Heb.: *Po’alei Avel.*
+[^156]: Heb.: *Po'alei Avel.*
 [^157]: Lit.: *nariz.*
 [^158]: Véase Éxodo 20:13\-17; Deuteronomio 5:17\-21.
 [^159]: Véase Levítico 19:18.
@@ -2062,7 +2062,7 @@ Saludos personales
 [^184]: Espíritu, viento, poder.
 [^185]: Ilírico. Provincia romana al noroeste de Ma­ce­­donia. Hoy en día abarca principalmente Croacia, Bosnia y Herzegovina, Montenegro y una parte del norte de Albania.
 [^186]: Véase Isaías 52:15.
-[^187]: Gr.: *Spanía. *Heb.: *Sh’faniyah. *Región de la Península ibérica. No confundir con heb. *Sefarad*, alusivo a *Sparda, *que es *Sardis.*
+[^187]: Gr.: *Spanía. *Heb.: *Sh'faniyah. *Región de la Península ibérica. No confundir con heb. *Sefarad*, alusivo a *Sparda, *que es *Sardis.*
 [^188]: Santos, apartados, distinguidos.
 [^189]: Macedonia.
 [^190]: Amo, Señor.

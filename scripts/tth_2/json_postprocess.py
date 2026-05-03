@@ -21,6 +21,15 @@ import shutil
 from pathlib import Path
 from typing import Dict, Any, List, Tuple
 
+try:
+    from .text_cleaner import get_cleaner
+except ImportError:
+    try:
+        from text_cleaner import get_cleaner
+    except ImportError:
+        def get_cleaner():
+            return None
+
 # Default paths
 DEFAULT_JSON_DIR = Path(__file__).parent.parent.parent / \
     "data" / "tth_2" / "json"
@@ -73,6 +82,7 @@ class TTHJsonPostProcessor:
 
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
+        self.text_cleaner = get_cleaner()
         self.stats = {
             'soft_hyphens': 0,
             'underscore_artifacts': 0,
@@ -81,6 +91,7 @@ class TTHJsonPostProcessor:
             'embedded_footnotes_removed': 0,
             'broken_italics': 0,
             'italics_converted': 0,
+            'em_inner_whitespace_trimmed': 0,
             'em_spacing_fixed': 0,
             'subtitle_segments_extracted': 0,
             'subtitle_verses_created': 0,
@@ -91,6 +102,7 @@ class TTHJsonPostProcessor:
             'divine_name_normalized': 0,
             'divine_name_markdown_wrappers_removed': 0,
             'book_divisions_extracted': 0,
+            'stuck_final_y_fixed': 0,
             'verses_processed': 0,
             'files_processed': 0,
         }
@@ -145,8 +157,8 @@ class TTHJsonPostProcessor:
         def unwrap_if_divine_name(match):
             inner = match.group(1)
             token = inner.strip()
-            token = re.sub(r'^[,.;:!?"\'“”‘’()\[\]{}]+', '', token)
-            token = re.sub(r'[,.;:!?"\'“”‘’()\[\]{}]+$', '', token)
+            token = re.sub(r'^[,.;:!?"\'“”‘'()\[\]{}]+', '', token)
+            token = re.sub(r'[,.;:!?"\'“”‘'()\[\]{}]+$', '', token)
             token = re.sub(r'^[0-9⁰¹²³⁴⁵⁶⁷⁸⁹]+\s*', '', token)
             normalized = _strip_hebrew_diacritics(token)
             if normalized in self.DIVINE_NAME_BASE_FORMS:
@@ -187,7 +199,7 @@ class TTHJsonPostProcessor:
 
         tokens = re.split(r'\s+', text.strip())
         cleaned_tokens = []
-        strip_chars = '.,;:!?"' + "'" + '“”‘’()[]{}'
+        strip_chars = '.,;:!?"' + "'" + '“”‘'()[]{}'
         for token in tokens:
             cleaned = token.strip(strip_chars)
             if cleaned:
@@ -514,6 +526,31 @@ class TTHJsonPostProcessor:
 
         return result
 
+    def normalize_em_inner_whitespace(self, text: str) -> str:
+        """
+        Trim leading/trailing whitespace inside <em>...</em> content.
+
+        Example:
+        - <em>shekel. </em> -> <em>shekel.</em>
+        """
+        if not text or '<em>' not in text:
+            return text
+
+        def trim_inner(match):
+            inner = match.group(1)
+            trimmed = inner.strip()
+
+            if trimmed != inner:
+                self.stats['em_inner_whitespace_trimmed'] += 1
+
+            # Drop empty emphasis wrappers after trimming.
+            if not trimmed:
+                return ''
+
+            return f'<em>{trimmed}</em>'
+
+        return re.sub(r'<em>([^<]*)</em>', trim_inner, text)
+
     def flatten_nested_em_tags(self, text: str) -> str:
         """Flatten accidental nested <em> tags into a single emphasis span."""
         result = text
@@ -533,8 +570,8 @@ class TTHJsonPostProcessor:
         def unwrap_if_divine_name(match):
             inner = match.group(1)
             token = inner.strip()
-            token = re.sub(r'^[,.;:!?"\'“”‘’()\[\]{}]+', '', token)
-            token = re.sub(r'[,.;:!?"\'“”‘’()\[\]{}]+$', '', token)
+            token = re.sub(r'^[,.;:!?"\'“”‘'()\[\]{}]+', '', token)
+            token = re.sub(r'[,.;:!?"\'“”‘'()\[\]{}]+$', '', token)
             normalized = _strip_hebrew_diacritics(token)
             if normalized in self.DIVINE_NAME_BASE_FORMS:
                 return inner
@@ -685,16 +722,27 @@ class TTHJsonPostProcessor:
         # Step 14: Fix spacing around <em> tags
         result = self.fix_em_spacing(result)
 
-        # Step 15: Flatten accidental nested <em> tags
+        # Step 15: Trim accidental inner whitespace in <em>...</em> spans
+        result = self.normalize_em_inner_whitespace(result)
+
+        # Step 16: Flatten accidental nested <em> tags
         result = self.flatten_nested_em_tags(result)
 
-        # Step 16: Keep divine name unitalicized even if source markers wrapped it
+        # Step 17: Keep divine name unitalicized even if source markers wrapped it
         result = self.remove_em_from_divine_name(result)
 
-        # Step 17: Normalize Latin divine-name forms to Hebrew
+        # Step 18: Normalize Latin divine-name forms to Hebrew
         result = self.normalize_divine_name_forms(result)
 
-        # Step 18: Clean up any remaining issues
+        # Step 19: Fix glued final-y conjunction artifacts at postprocess stage
+        # too, so postprocess-only runs stay aligned with md->json cleaning.
+        if self.text_cleaner is not None:
+            before = result
+            result = self.text_cleaner.fix_stuck_final_y_conjunction(result)
+            if result != before:
+                self.stats['stuck_final_y_fixed'] += 1
+
+        # Step 20: Clean up any remaining issues
         result = re.sub(r'  +', ' ', result)  # Double spaces
         result = result.strip()
 

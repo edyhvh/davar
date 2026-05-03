@@ -4,12 +4,12 @@ __LIBRO PRIMERO__
 
 **1**
 
-**1** ¡Felicidades del hombre que no anduvo en consejo de condenados,y en camino de pecadores no se paró, y en asiento de burladores no se sentó,
+**1** ¡Felicidades del hombre que no anduvo en consejo de condenados, y en camino de pecadores no se paró, y en asiento de burladores no se sentó,
 **2** sino que en la Torah de __יהוה__* está* su deleite, y en su Torah medita de día y de noche!
-**3** Y será como árbol plantado sobre corrientes de aguas,que su fruto dará en su tiempo y su hoja no se marchitará;y todo lo que hará, prosperará.
+**3** Y será como árbol plantado sobre corrientes de aguas, que su fruto dará en su tiempo y su hoja no se marchitará; y todo lo que hará, prosperará.
 
 **4** No así los condenados, sino que *son* como la paja que la conduce el viento.
-**5** Por eso no se levantarán los condenados en el juicio,ni los pecadores en la congregación de los justificados.
+**5** Por eso no se levantarán los condenados en el juicio, ni los pecadores en la congregación de los justificados.
 
 **6** Porque conoce __יהוה__ el camino de los justificados, pero el camino de los condenados se perderá.
 
@@ -28,7 +28,7 @@ __LIBRO PRIMERO__
 
 **10** Y ahora, reyes, sean prudentes, sean corregidos, jueces de la tierra.
 **11** ¡Sirvan a __יהוה__ con temor y regocíjense con temblor!
-**12** Besen* con *pureza, no sea que se enoje y se pierdan *en *el camino,pues se encenderá un poco[^3653] su nariz. ¡Felices son todos los que se refugian en Él!
+**12** Besen* con *pureza, no sea que se enoje y se pierdan *en *el camino, pues se encenderá un poco[^3653] su nariz. ¡Felices son todos los que se refugian en Él!
 
 *Cántico de David, en su huir de delante de Abshalom, su hijo.*
 
@@ -51,9 +51,9 @@ __LIBRO PRIMERO__
 
 **4**
 
-**1** En mi llamar, respóndeme, Elohim de mi justicia.En la estrechez has sido amplio para Mí, compadécete de mí y escucha mi tefilah[^3655].
+**1** En mi llamar, respóndeme, Elohim de mi justicia. En la estrechez has sido amplio para Mí, compadécete de mí y escucha mi tefilah[^3655].
 
-**2** Hijos del hombre, ¿hasta cuándo mi honra *será* por vergüenza?¿Amarán lo vacío, buscarán la mentira? *Selah*[^3656]*.*
+**2** Hijos del hombre, ¿hasta cuándo mi honra *será* por vergüenza? ¿Amarán lo vacío, buscarán la mentira? *Selah*[^3656]*.*
 
 **3** Sepan que ha apartado __יהוה__ *al* bondadoso para sí.__יהוה__ escuchará cuando clame a Él.
 **4** Tiemblen, y no pequen; hablen en su corazón sobre su cama, y callen. *Selah.*
@@ -68,19 +68,19 @@ __LIBRO PRIMERO__
 **5**
 
 **1** *A *mis dichos da oído, __יהוה__, comprende mi ferviente clamor[^3659].
-**2** Presta atención a la voz de mi grito de ayuda, Rey mío y Elohim mío,porque a ti haré tefilah[^3660].
+**2** Presta atención a la voz de mi grito de ayuda, Rey mío y Elohim mío, porque a ti haré tefilah[^3660].
 **3** __יהוה__, de mañana escucharás mi voz, de mañana prepararé para ti, y vigilaré[^3661].
 
-**4** Porque Tú no *eres* un El[^3662] que se deleita en la maldad;no morará contigo el mal.
-**5** No se pararán los jactanciosos en frente de tus ojos;aborreces *a* todos los hacedores de vacuidad[^3663].
+**4** Porque Tú no *eres* un El[^3662] que se deleita en la maldad; no morará contigo el mal.
+**5** No se pararán los jactanciosos en frente de tus ojos; aborreces *a* todos los hacedores de vacuidad[^3663].
 **6** Harás perder *a* los que hablan mentira; hombre de sangres y engaño aborrecerá יהוה.
-**7** Mas yo, por lo mucho de tu bondad entraré *en *tu casa;me postraré al Hejal[^3664] de tu santidad en temor a ti.
+**7** Mas yo, por lo mucho de tu bondad entraré *en *tu casa; me postraré al Hejal[^3664] de tu santidad en temor a ti.
 
-**8** __יהוה__, condúceme en tu justicia debido a mis opresores;endereza delante de mí tu camino.
-**9** Porque no hay en su boca firmeza, su interior es destrucción,tumba abierta su garganta; harán suave su lengua.
-**10** ¡Decláralos culpables, Elohim!, ¡caerán por sus consejos!Por la multitud de sus transgresiones échalos, pues fueron amargos contra ti.
+**8** __יהוה__, condúceme en tu justicia debido a mis opresores; endereza delante de mí tu camino.
+**9** Porque no hay en su boca firmeza, su interior es destrucción, tumba abierta su garganta; harán suave su lengua.
+**10** ¡Decláralos culpables, Elohim!, ¡caerán por sus consejos! Por la multitud de sus transgresiones échalos, pues fueron amargos contra ti.
 
-**11** Y se alegrarán todos los que se refugian en ti, para siempre gritarán de alegría,y harás cobertura sobre ellos; y se regocijarán en ti los que aman tu Nombre.
+**11** Y se alegrarán todos los que se refugian en ti, para siempre gritarán de alegría, y harás cobertura sobre ellos; y se regocijarán en ti los que aman tu Nombre.
 
 **12** Porque Tú bendecirás *al* justificado, __יהוה__, como *con *el pavés, *con *reconciliación lo rodearás.
 
@@ -90,42 +90,42 @@ sobre la octava. Cántico de David.*
 **6**
 
 **1** __יהוה__, no en tu nariz me reprendas, ni en tu ardor me disciplines.
-**2** Inclínate con favor hacia mí, __יהוה__, pues débil soy yo;sáname, __יהוה__, porque tiemblan mis huesos.
+**2** Inclínate con favor hacia mí, __יהוה__, pues débil soy yo; sáname, __יהוה__, porque tiemblan mis huesos.
 **3** Y mi ser tiembla mucho, y Tú, __יהוה__, ¿hasta cuándo?
 
 **4** Vuélvete, __יהוה__, rescata mi ser; sálvame, debido a tu bondad.
 **5** Porque no hay en la muerte memoria de ti; en el Sheol, ¿quién te alabará?
-**6** Me he cansado en mi gemido, hago nadar en toda la noche mi cama,con mis lágrimas disuelvo mi lecho.
+**6** Me he cansado en mi gemido, hago nadar en toda la noche mi cama, con mis lágrimas disuelvo mi lecho.
 **7** Ha decaído por el dolor mi ojo, ha envejecido por todos mis opresores.
 
 **8** ¡Apártense de mí, todos los hacedores de vacuidad[^3665]!, porque ha escuchado __יהוה__ la voz de mi llanto.
 **9** Ha escuchado __יהוה__ mi súplica, __יהוה__ mi tefilah[^3666] recibirá.
-**10** Se avergonzarán y se aterrarán mucho todos mis enemigos;volverán y se avergonzarán de repente.
+**10** Se avergonzarán y se aterrarán mucho todos mis enemigos; volverán y se avergonzarán de repente.
 
 *Shigaión[^3667] de David, que cantó a *__*יהוה*__* sobre
 las palabras de Cush, benieminí[^3668].*
 
 **7**
 
-**1** יהוה, Elohim mío, en ti me he refugiado;sálvame de todos mis perseguidores, y rescátame.
+**1** יהוה, Elohim mío, en ti me he refugiado; sálvame de todos mis perseguidores, y rescátame.
 **2** No sea que desgarre como león mi ser, despedace, y no haya quien rescate.
 **3** יהוה, Elohim mío, si he hecho esto, si hay injusticia en mis palmas,
 **4** si he pagado mal *al *pacífico conmigo y arrancado *a *mi enemigo en vano,
-**5** perseguirá el enemigo mi ser, y *lo* alcanzará; y pisoteará en la tierra mi vida,y mi honra en el polvo pondrá. *Selah*[^3669].
+**5** perseguirá el enemigo mi ser, y *lo* alcanzará; y pisoteará en la tierra mi vida, y mi honra en el polvo pondrá. *Selah*[^3669].
 
-**6** ¡Levántate, יהוה, en tu nariz! Álzate por los desbordes de mis opresores,y despiértate hacia mí[^3670]; juicio has ordenado.
+**6** ¡Levántate, יהוה, en tu nariz! Álzate por los desbordes de mis opresores, y despiértate hacia mí[^3670]; juicio has ordenado.
 **7** Y la congregación de los pueblos te rodeará, y Tú en lo alto regresa sobre ella.
 
 **8** יהוה juzgará *a* los pueblos; júzgame, יהוה, conforme a mi justicia y conforme a mi integridad sobre mí.
-**9** Termine, por favor, la maldad de los condenados,y establece Tú *al* justificado, y prueba los corazones y los riñones, Elohim justo.
+**9** Termine, por favor, la maldad de los condenados, y establece Tú *al* justificado, y prueba los corazones y los riñones, Elohim justo.
 **10** Mi escudo *está* en Elohim, Salvador de los rectos de corazón.
 **11** Elohim es juez justo, y El[^3671] se enoja en todo día.
 
 **12** Si no se vuelve, su espada Él afilará; su arco Él tensó, y lo estableció;
-**13** y para sí estableció instrumentos de muerte;sus flechas, encendidas hará.
+**13** y para sí estableció instrumentos de muerte; sus flechas, encendidas hará.
 
 **14** He aquí, *con dolor* parirá injusticia, concibió cansancio y dará a luz mentira.
-**15** Un pozo ha cavado, y lo ha excavado;y cayó en el hoyo[^3672] *que* hizo.
+**15** Un pozo ha cavado, y lo ha excavado; y cayó en el hoyo[^3672] *que* hizo.
 **16** Volverá su cansancio en su cabeza, y sobre su coronilla su violencia descenderá.
 
 **17** Alabaré *a *יהוה conforme a su justicia, y cantaré *al* Nombre de יהוה Elyón.
@@ -134,12 +134,12 @@ las palabras de Cush, benieminí[^3668].*
 
 **8**
 
-**1** ¡__יהוה__, Adón[^3674] nuestro, cuán glorioso es tu Nombre en toda la tierra,que has dado tu esplendor sobre los cielos!
-**2** Por boca de niños y lactantes fundamentaste fortaleza,por causa de tus opresores, para hacer cesar *al* enemigo y *al *vengativo.
+**1** ¡__יהוה__, Adón[^3674] nuestro, cuán glorioso es tu Nombre en toda la tierra, que has dado tu esplendor sobre los cielos!
+**2** Por boca de niños y lactantes fundamentaste fortaleza, por causa de tus opresores, para hacer cesar *al* enemigo y *al *vengativo.
 
 **3** Cuando veo tus cielos, obra de tus dedos, la luna y las estrellas que afirmaste:
 **4** ¿Qué es el hombre que lo recordarás, y el hijo de Adam que lo visitarás?
-**5** ¡Lo disminuirás un poco menos que los Elohim[^3675],y gloria y esplendor le coronarás!
+**5** ¡Lo disminuirás un poco menos que los Elohim[^3675], y gloria y esplendor le coronarás!
 **6** Lo harás dominar sobre las obras de tus manos; todo lo pondrás debajo de sus pies:
 **7** ovejas y bueyes, todos ellos, y también las bestias del campo,
 **8** el ave de los cielos y los peces del mar, *que* pasan *por *los senderos de los mares.
@@ -155,24 +155,24 @@ las palabras de Cush, benieminí[^3668].*
 
 **3** En la vuelta de mis enemigos hacia atrás, tropezarán y perecerán delante de ti.
 **4** Pues Tú has hecho mi juicio y mi juzgamiento, te sentaste en el trono, Juez de justicia.
-**5** Has reprendido *a *naciones, hiciste perecer *al *condenado,borraste el nombre de ellos para siempre y siempre.
+**5** Has reprendido *a *naciones, hiciste perecer *al *condenado, borraste el nombre de ellos para siempre y siempre.
 
 **6**¡Enemigo!, ¡se acabaron las espadas[^3678] para siempre!, y las ciudades has desarraigado;se perdió su recuerdo *con *ellas.
 **7** Pero __יהוה__ para siempre permanecerá, ha establecido para el juicio su trono,
 **8** y Él juzgará *al* mundo con justicia; juzgará *a *los pueblos con rectitudes.
 **9** Y será __יהוה__ alto refugio para el oprimido, alto refugio para tiempos en estrechez.
-**10** Y confiarán en ti los que conocen tu Nombre,porque no has abandonado *a *los que te buscan, __יהוה__.
+**10** Y confiarán en ti los que conocen tu Nombre, porque no has abandonado *a *los que te buscan, __יהוה__.
 
 **11** ¡Canten a __יהוה__, que mora en Tzión!, ¡den a conocer en los pueblos sus acciones!
-**12** Porque el que requiere la sangre a ellos ha recordado,no ha olvidado el clamor de los afligidos.
-**13** Inclínate hacia mí con favor, __יהוה__; mira mi aflicción *por causa* de mis odiadores,el que me levanta de las puertas de la muerte,
+**12** Porque el que requiere la sangre a ellos ha recordado, no ha olvidado el clamor de los afligidos.
+**13** Inclínate hacia mí con favor, __יהוה__; mira mi aflicción *por causa* de mis odiadores, el que me levanta de las puertas de la muerte,
 **14** para que cuente yo todas tus alabanzas; en las puertas de la hija de Tziónme regocijaré en tu salvación.
-**15** Se han hundido las naciones en el pozo *que *hicieron;en la red la cual ocultaron, fue capturado su pie.
-**16** Se ha hecho conocer __יהוה__, juicio ha hecho.En la obra de sus palmas fue atrapado el condenado. *Higaión*[^3679]* Selah*[^3680]*.*
+**15** Se han hundido las naciones en el pozo *que *hicieron; en la red la cual ocultaron, fue capturado su pie.
+**16** Se ha hecho conocer __יהוה__, juicio ha hecho. En la obra de sus palmas fue atrapado el condenado. *Higaión*[^3679]* Selah*[^3680]*.*
 
 **17** Volverán los condenados al Sheol, todas las naciones que se olvidan de Elohim.
 **18** Pues no para siempre será olvidado el necesitado,*ni *la esperanza de los afligidos se perderá para siempre.
-**19** ¡Levántate, __יהוה__!, no se fortalecerá el hombre;serán juzgadas las naciones sobre tu rostro.
+**19** ¡Levántate, __יהוה__!, no se fortalecerá el hombre; serán juzgadas las naciones sobre tu rostro.
 **20** Pon temor, __יהוה__, para ellos; aprenderán las naciones *que *son hombres. *Selah*.
 
 **10**
@@ -180,21 +180,21 @@ las palabras de Cush, benieminí[^3668].*
 **1** ¿Por qué, __יהוה__, te paras en la lejanía, te ocultas para los tiempos en estrechez?
 **2** Con orgullo el condenado perseguirá ardientemente[^3681] *al *pobre; ¡serán atrapados en los planes que pensaron!
 
-**3** Porque se alaba el condenado por el deseo de su ser,y el codicioso maldice[^3682] *y* desprecia *a *__יהוה__.
-**4** El condenado, conforme a la altivez de su nariz no buscará;no hay Elohim *en *todos sus planes.
+**3** Porque se alaba el condenado por el deseo de su ser, y el codicioso maldice[^3682] *y* desprecia *a *__יהוה__.
+**4** El condenado, conforme a la altivez de su nariz no buscará; no hay Elohim *en *todos sus planes.
 
-**5** Son fuertes[^3683] sus caminos en todo tiempo.*En *la altura *están* tus juicios, *lejos *de delante de él.Todos sus opresores, arremeterá[^3684] contra ellos.
+**5** Son fuertes[^3683] sus caminos en todo tiempo.*En *la altura *están* tus juicios, *lejos *de delante de él. Todos sus opresores, arremeterá[^3684] contra ellos.
 
 **6** Dijo en su corazón: “No seré sacudido, por generación y generación,*en* las cuales no *estaré *en lo malo”.
 
-**7** De maldición su boca se llenó, y de engaños y violencia;debajo de su lengua, trabajo forzado e injusticia.
-**8** Se sienta al acecho de aldeas, en los escondrijos asesina *al *inocente;sus ojos al miserable acechan encubiertos.
-**9** Acecha en el escondrijo como león en su guarida;acecha para atrapar *al* afligido, atrapa *al *afligido arrastrándolo en su red.
+**7** De maldición su boca se llenó, y de engaños y violencia; debajo de su lengua, trabajo forzado e injusticia.
+**8** Se sienta al acecho de aldeas, en los escondrijos asesina *al *inocente; sus ojos al miserable acechan encubiertos.
+**9** Acecha en el escondrijo como león en su guarida; acecha para atrapar *al* afligido, atrapa *al *afligido arrastrándolo en su red.
 **10** Y aplastado se agacha, y caen en sus fuerzas los miserables.
 
-**11** Dijo en su corazón:“Se ha olvidado El[^3685]; ha ocultado su rostro, no vio nunca”.
+**11** Dijo en su corazón: “Se ha olvidado El[^3685]; ha ocultado su rostro, no vio nunca”.
 
-**12** ¡Levántate, __יהוה__!¡El, alza tu mano!, no te olvidarás de los afligidos.
+**12** ¡Levántate, __יהוה__! ¡El, alza tu mano!, no te olvidarás de los afligidos.
 
 **13**¿Por qué despreció el condenado a Elohim? Dijo en su corazón: “No requerirás”.
 **14** Has visto, porque Tú el trabajo forzado y la vejación has observado,
@@ -212,7 +212,7 @@ las palabras de Cush, benieminí[^3668].*
 **2** Porque, he aquí, los malvados tensarán arco, han preparado su flecha sobre la cuerdapara disparar en la oscuridad a los rectos de corazón.
 **3** Cuando las columnas sean derribadas, ¿qué hará el justificado?
 
-**4** __יהוה__ *está *en el Hejal de su santidad; __יהוה__, en los cielos *está *su trono;sus ojos mirarán, sus párpados examinarán *a* los hijos de Adam.
+**4** __יהוה__ *está *en el Hejal de su santidad; __יהוה__, en los cielos *está *su trono; sus ojos mirarán, sus párpados examinarán *a* los hijos de Adam.
 **5** __יהוה__ *al *justificado examinará;
 y *al *condenado y *al* que ama la violencia aborrece su ser.
 
@@ -226,9 +226,9 @@ y *al *condenado y *al* que ama la violencia aborrece su ser.
 **1** Salva, יהוה, porque llega a su fin el benevolente, porque cesan los firmes de los hijos de Adam.
 **2** Falsedad hablan *cada *hombre a su compañero, *con* labios suaves, con corazón y corazón hablan.
 **3** Cortará __יהוה__ todos los labios suaves[^3687], la lengua habladora de grandezas;
-**4** los que han dicho: “Por nuestra lengua nos fortaleceremos, nuestros labios *están *con nosotros;¿quién es Adón[^3688] para nosotros?”
+**4** los que han dicho: “Por nuestra lengua nos fortaleceremos, nuestros labios *están *con nosotros; ¿quién es Adón[^3688] para nosotros? ”
 
-**5** Por la devastación de los afligidos, por el gemido de los necesitados,ahora me levantaré, dirá __יהוה__; pondré en salvación, apareceré por él.
+**5** Por la devastación de los afligidos, por el gemido de los necesitados, ahora me levantaré, dirá __יהוה__; pondré en salvación, apareceré por él.
 
 **6** Los dichos de __יהוה__ *son *dichos puros, plata fundida en un crisol,
 **7** Tú, __יהוה__, los guardarás; nos preservarás de esta generación para siempre.
@@ -239,10 +239,10 @@ de los hijos del hombre.
 
 **13**
 
-**1** ¿Hasta cuándo, __יהוה__, me olvidarás siempre?¿Hasta cuándo esconderás tu rostro de mí?
-**2** ¿Hasta cuándo pondré consejos en mi ser, dolor en mi corazón durante el día?¿Hasta cuándo se alzará mi enemigo sobre mí?
-**3** Considera, respóndeme, __יהוה__ mi Elohim;ilumina mis ojos, no sea que duerma de muerte;
-**4** no sea que diga mi enemigo: “¡Lo vencí!”, *y* mis opresores se regocijen cuando yo sea sacudido.
+**1** ¿Hasta cuándo, __יהוה__, me olvidarás siempre? ¿Hasta cuándo esconderás tu rostro de mí?
+**2** ¿Hasta cuándo pondré consejos en mi ser, dolor en mi corazón durante el día? ¿Hasta cuándo se alzará mi enemigo sobre mí?
+**3** Considera, respóndeme, __יהוה__ mi Elohim; ilumina mis ojos, no sea que duerma de muerte;
+**4** no sea que diga mi enemigo: “¡Lo vencí! ”, *y* mis opresores se regocijen cuando yo sea sacudido.
 
 **5** Y yo en tu bondad confiaré; se regocijará mi corazón en tu salvación.
 **6** Cantaré a __יהוה__, porque recompensó sobre mí.
@@ -251,24 +251,24 @@ de los hijos del hombre.
 
 **14**
 
-**1** Dijo el marchito[^3690] en su corazón:“No hay Elohim”.Destruyeron, han hecho abominable *su* acción; no hay hacedor del bien.
-**2** __יהוה__ desde los cielos miró hacia abajo sobre los hijos de Adam,para ver si hay *alguien* prudente, que busque a Elohim.
+**1** Dijo el marchito[^3690] en su corazón: “No hay Elohim”. Destruyeron, han hecho abominable *su* acción; no hay hacedor del bien.
+**2** __יהוה__ desde los cielos miró hacia abajo sobre los hijos de Adam, para ver si hay *alguien* prudente, que busque a Elohim.
 **3** Todo se desvió, juntos se han infectado; no hay hacedor del bien, no hay aun uno.
 
 **4** ¿No conocen todos los hacedores de vacuidad, devoradores de mi pueblo *como si *comieran pan,*y a *__יהוה__ no llaman?
 **5** Allí tiemblan de terror, porque Elohim *está* en la generación del justo.
 **6** El consejo del afligido avergonzarán, por lo que __יהוה__ es su refugio.
 
-**7** ¡Quién dará de Tzión la salvación de Israel!Cuando retorne __יהוה__ el cautiverio de su pueblo,se regocijará Yaakov, se alegrará Israel.
+**7** ¡Quién dará de Tzión la salvación de Israel! Cuando retorne __יהוה__ el cautiverio de su pueblo, se regocijará Yaakov, se alegrará Israel.
 
 *Cántico de David.*
 
 **15**
 
-**1** __יהוה__, ¿quién residirá en tu tienda?¿Quién morará en el monte de tu santidad?
+**1** __יהוה__, ¿quién residirá en tu tienda? ¿Quién morará en el monte de tu santidad?
 **2** El que camina íntegro y hace justicia, y habla verdad en su corazón;
-**3** no calumnió de acuerdo a[^3691] su lengua, no hizo mal a su compañero,e insulto no levantó sobre su cercano.
-**4** Despreciado es en sus ojos el aborrecido, y a los temerosos de __יהוה__ honra.Juró para hacer mal, y no cambiará.
+**3** no calumnió de acuerdo a[^3691] su lengua, no hizo mal a su compañero, e insulto no levantó sobre su cercano.
+**4** Despreciado es en sus ojos el aborrecido, y a los temerosos de __יהוה__ honra. Juró para hacer mal, y no cambiará.
 **5** Su plata no dio con interés, y soborno contra el inocente no tomó.
 
 El hacedor de estas *cosas *no será sacudido por siempre.
@@ -278,39 +278,39 @@ El hacedor de estas *cosas *no será sacudido por siempre.
 **16**
 
 **1** Guárdame, El[^3693], pues me he refugiado en ti.
-**2** Dijiste a __יהוה__:Adonai eres Tú; mi bien no es sobre ti.
-**3** Por los apartados[^3694] que *están* en la tierra, ellos y los fuertes,todo mi deleite *está* en ellos.
-**4** Se multiplicarán sus aflicciones, *de los que *se apresuraron *tras* otro *dios*.No derramaré sus libaciones de sangre, ni llevaré sus nombres sobre mis labios.
+**2** Dijiste a __יהוה__: Adonai eres Tú; mi bien no es sobre ti.
+**3** Por los apartados[^3694] que *están* en la tierra, ellos y los fuertes, todo mi deleite *está* en ellos.
+**4** Se multiplicarán sus aflicciones, *de los que *se apresuraron *tras* otro *dios*. No derramaré sus libaciones de sangre, ni llevaré sus nombres sobre mis labios.
 
 **5** __יהוה__ es la porción de mi terreno y mi copa, Tú sostienes mi parcela[^3695].
-**6** Las cuerdas cayeron para mí en *lugares *agradables;ciertamente la herencia se hermoseó sobre mí.
+**6** Las cuerdas cayeron para mí en *lugares *agradables; ciertamente la herencia se hermoseó sobre mí.
 
 **7** Bendeciré a __יהוה__, que me aconseja; ciertamente *en* las noches me disciplinan mis riñones.
 **8** He puesto *a* __יהוה__ delante de mí siempre; porque *está* a mi diestra, no seré sacudido.
-**9** Por eso se alegró mi corazón y se regocijó mi honra;también mi carne morará en seguridad,
+**9** Por eso se alegró mi corazón y se regocijó mi honra; también mi carne morará en seguridad,
 **10** porque no abandonarás mi ser en el Sheol, no darás *a* tu benevolente el ver destrucción.
 
-**11** Me harás conocer la senda de la vida; saciedad de alegrías a tu rostro,deleites a tu diestra siempre.
+**11** Me harás conocer la senda de la vida; saciedad de alegrías a tu rostro, deleites a tu diestra siempre.
 
 *Tefilah[^3696] de David.*
 
 **17**
 
-**1** Escucha, __יהוה__, justicia;presta atención *a* mi grito;da oído *a* mi oración sin labios de engaño.
+**1** Escucha, __יהוה__, justicia; presta atención *a* mi grito; da oído *a* mi oración sin labios de engaño.
 **2** De delante de ti mi juicio saldrá, tus ojos verán rectitudes.
-**3** Has examinado mi corazón, has visitado de noche;me refinaste sin hallar *nada*; mi pensamiento no pasó mi boca[^3697]*.*
+**3** Has examinado mi corazón, has visitado de noche; me refinaste sin hallar *nada*; mi pensamiento no pasó mi boca[^3697]*.*
 **4** Para las obras del hombre, por la palabra de tus labios yo me he guardado de las sendas del violento,
 **5** sosteniéndose mis pasos en tus caminos. No fueron sacudidos mis pasos.
 
 **6** Yo te he llamado porque me responderás, El[^3698]; inclina tu oído a mí, escucha mi dicho.
-**7** Haz distintiva tu bondad,Salvador de los que se refugian de los que se levantan contra tu diestra.
+**7** Haz distintiva tu bondad, Salvador de los que se refugian de los que se levantan contra tu diestra.
 **8** Guárdame como *a* la pupila hija del ojo, en la sombra de tus alas me esconderás
 **9** del rostro de los condenados, los cuales me violentaron,*de* mis enemigos en la vida que rodean sobre mí.
 **10** Su grosura cerraron, *con* su boca hablan con altivez.
 **11** *En *nuestros pasos ahora nos han rodeado, sus ojos ponen para tender*nos* en la tierra.
-**12** Su semejanza en como león que anhela desgarrar,y como leoncillo sentado en los escondrijos.
+**12** Su semejanza en como león que anhela desgarrar, y como leoncillo sentado en los escondrijos.
 
-**13** ¡Levántate, __יהוה__!¡Ponte al frente de su rostro! ¡Haz que se incline!Haz escapar mi vida del condenado con tu espada,
+**13** ¡Levántate, __יהוה__! ¡Ponte al frente de su rostro! ¡Haz que se incline! Haz escapar mi vida del condenado con tu espada,
 **14** de los muertos, *con* tu mano, __יהוה__, de los muertos, del mundano,*que* su porción está en *esta *vida, y* *llena a tu protegido[^3699];
 el vientre de ellos, se sacian de hijos, y dejan su remanente a sus niños.
 
@@ -323,32 +323,32 @@ y de la mano de Shaúl, y dijo:*
 **18**
 
 **1** Yo te amo, __יהוה__, mi fuerza.
-**2** __יהוה__ es mi peña, mi castillo y mi escape;mi El[^3700], mi Roca, me refugiaré en Él; mi escudo y el cuerno de mi salvación,mi altura segura.
+**2** __יהוה__ es mi peña, mi castillo y mi escape; mi El[^3700], mi Roca, me refugiaré en Él; mi escudo y el cuerno de mi salvación, mi altura segura.
 **3** Alabado es, llamaré *a *__יהוה__, y de mis enemigos seré salvado.
 
 **4** Me rodearon cuerdas de muerte, y los torrentes de Belial[^3701]me aterrorizaron.
 **5** Las cuerdas del Sheol me rodearon, estuvieron enfrente de mí las trampas de muerte.
-**6** En la estrechez mía llamaré *a *__יהוה__, y a mi Elohim gritaré por ayuda;escuchará desde su Hejal[^3702] mi voz, y mi grito de ayuda delante de Él llegará a sus oídos.
+**6** En la estrechez mía llamaré *a *__יהוה__, y a mi Elohim gritaré por ayuda; escuchará desde su Hejal[^3702] mi voz, y mi grito de ayuda delante de Él llegará a sus oídos.
 
-**7** Y se sacudió y tembló la tierra; y los cimientos de los montes temblarony fueron sacudidos, porque se enojó Él.
-**8** Subió humo en su nariz, y el fuego de su boca consumió;carbones fueron encendidos de Él.
+**7** Y se sacudió y tembló la tierra; y los cimientos de los montes temblaron y fueron sacudidos, porque se enojó Él.
+**8** Subió humo en su nariz, y el fuego de su boca consumió; carbones fueron encendidos de Él.
 **9** E inclinará los cielos, y descenderá, *habiendo *tinieblas debajo de sus pies.
 **10** Y montará sobre un querubín, y volará; y planeará sobre las alas del viento.
-**11** Puso oscuridad *como *su escondite, alrededor de Él su cobertura;oscuridad de aguas, nubarrones de los cielos.
+**11** Puso oscuridad *como *su escondite, alrededor de Él su cobertura; oscuridad de aguas, nubarrones de los cielos.
 
-**12** Por el resplandor delante de Él sus nubarrones pasaron,granizo y carbones de fuego.
-**13** Y tronó en los cielos __יהוה__, y Elyón[^3703] dio su voz:granizo y carbones de fuego.
+**12** Por el resplandor delante de Él sus nubarrones pasaron, granizo y carbones de fuego.
+**13** Y tronó en los cielos __יהוה__, y Elyón[^3703] dio su voz: granizo y carbones de fuego.
 **14** Y envió sus saetas y los dispersó, y relámpagos disparó[^3704], y los aturdió.
 **15** Y fueron vistos los lechos de las aguas, y fueron descubiertos los cimientos del mundopor tu reprensión, __יהוה__, por la respiración del aliento de tu nariz.
 
 **16** Envió desde lo alto, me tomó; me sacó de las muchas aguas.
-**17** Me rescató de mi enemigo fuerte, y de mis aborrecedores,porque fueron *más* fuertes que yo.
+**17** Me rescató de mi enemigo fuerte, y de mis aborrecedores, porque fueron *más* fuertes que yo.
 **18** Me confrontaron en el día de mi angustia, pero fue __יהוה__ por sostén para mí.
 **19** Y me hizo salir a la amplitud; me rescató, porque se deleitó en mí.
 
-**20** Me recompensará __יהוה__ conforme a mi justicia;conforme a la pureza de mis manos me devolverá.
+**20** Me recompensará __יהוה__ conforme a mi justicia; conforme a la pureza de mis manos me devolverá.
 **21** Porque he guardado los caminos de __יהוה__, y no he sido condenado de mi Elohim.
-**22** Porque todos sus juicios *estaban* delante de mí,y sus decretos no aparté de mí.
+**22** Porque todos sus juicios *estaban* delante de mí, y sus decretos no aparté de mí.
 **23** Y fui íntegro con Él, y me guardé de mi iniquidad.
 **24** Y me devolvió __יהוה__ conforme a mi justicia, conforme a la pureza de mis manosdelante de sus ojos.
 
@@ -359,31 +359,31 @@ y de la mano de Shaúl, y dijo:*
 **28** Porque Tú harás brillar mi lámpara, __יהוה__; mi Elohim iluminará mi oscuridad.
 **29** Porque en ti me abalanzaré *a* *la *tropa, y con mi Elohim saltaré *la* muralla.
 
-**30** El[^3705], es completo su camino; el dicho de __יהוה__ es refinado;escudo es Él a todos los que se refugian en Él.
+**30** El[^3705], es completo su camino; el dicho de __יהוה__ es refinado; escudo es Él a todos los que se refugian en Él.
 **31** Porque, ¿quién es Eloha[^3706] excepto __יהוה__? ¿Y quién es Roca salvo nuestro Elohim?
 **32** Es El el que me ciñe de fuerza, y dio íntegro mi camino.
 **33** Él pone mis pies como *los de *las ciervas, y sobre mis alturas me hará estar de pie.
 **34** Él enseña mis manos para la batalla, y *para* tensar el arco de cobre mis brazos.
-**35** Y me darás el escudo de tu salvación; y tu diestra me sostendrá,y tu mansedumbre me multiplicará.
+**35** Y me darás el escudo de tu salvación; y tu diestra me sostendrá, y tu mansedumbre me multiplicará.
 **36** Ensancharás mis pasos debajo de mí; y no han resbalado mis tobillos.
 
-**37** Perseguí* a* mis enemigos y los alcancé;y no me volví hasta acabarlos.
+**37** Perseguí* a* mis enemigos y los alcancé; y no me volví hasta acabarlos.
 **38** Los destrocé y no pudieron levantarse, cayeron debajo de mis pies.
 **39** Y me ceñiste de fuerza para la batalla; inclinaste debajo de mí *a *los que se levantaron contra mí.
 
 **40** Y mis enemigos, me diste *su* cuello; y *a *mis aborrecedores exterminé.
 **41** Gritaron por ayuda, y no hubo salvador, a __יהוה__, y no les respondió.
-**42** Y los molí como polvo sobre la faz del viento;como lodo de las calles los vacié.
+**42** Y los molí como polvo sobre la faz del viento; como lodo de las calles los vacié.
 
-**43** Me hiciste escapar de las peleas del pueblo, me pusiste por cabeza de naciones;pueblo que no conocí, ellos me servirán.
+**43** Me hiciste escapar de las peleas del pueblo, me pusiste por cabeza de naciones; pueblo que no conocí, ellos me servirán.
 **44** Al escuchar de oído me obedecerán; hijos de extranjero me engañarán[^3707].
 **45** Hijos de extranjero se marchitarán, y temblarán de sus encerramientos.
 
 **46** ¡Vive __יהוה__! ¡Y bendita mi Roca! ¡Y exaltado será el Elohim de mi salvación!
 **47** El es el que me da venganzas, y subyugó pueblos debajo de mí;
-**48** el que me hace escapar de mis enemigos.También, de los que se levantan contra míTú me elevarás; del hombre de violencia me rescatarás.
+**48** el que me hace escapar de mis enemigos. También, de los que se levantan contra míTú me elevarás; del hombre de violencia me rescatarás.
 **49** Por eso te confesaré entre los gentiles, __יהוה__, y a tu Nombre cantaré melodías.
-**50** Él engrandece salvaciones *a *su rey, y hace bondad a su Mesías[^3708],a David y a su simiente, hasta el olam[^3709].
+**50** Él engrandece salvaciones *a *su rey, y hace bondad a su Mesías[^3708], a David y a su simiente, hasta el olam[^3709].
 
 *Para el vencedor. Cántico de David.*
 
@@ -392,9 +392,9 @@ y de la mano de Shaúl, y dijo:*
 **1** Los cielos cuentan la gloria de El[^3710], y la obra de sus manos da a conocer la expansión.
 **2** El día al día hace fluir palabra, y la noche a la noche *le* muestra conocimiento.
 **3** No hay dicho ni hay palabras, sin que se escuche su voz.
-**4** Por toda la tierra salió la voz de ellos, y por el extremo del Tevel[^3711] sus palabras.Para el sol puso tienda en ellos.
+**4** Por toda la tierra salió la voz de ellos, y por el extremo del Tevel[^3711] sus palabras. Para el sol puso tienda en ellos.
 **5** Y él como esposo sale de su cama nupcial, se regocija como fuerte al correr *por el *camino.
-**6** Desde un extremo de los cielos es su salida, y su circuito hasta los extremos de ellos;y no hay quien se esconda de su calor.
+**6** Desde un extremo de los cielos es su salida, y su circuito hasta los extremos de ellos; y no hay quien se esconda de su calor.
 
 **7** La Torah de __יהוה__ es completa, hace volver el aliento[^3712]; el testimonio de __יהוה__ es firme, hace sabio *al* simple;
 **8** los estatutos de __יהוה__ son rectos, alegran el corazón; el mandamiento de __יהוה__ es puro, ilumina los ojos.
@@ -403,7 +403,7 @@ y de la mano de Shaúl, y dijo:*
 
 **11** También tu siervo es advertido[^3713] por ellos, en guardarlos *hay* mucha recompensa.
 **12** ¿Quién discernirá *sus* errores? De los que son ocultos, límpiame.
-**13** También de los insolentes retén *a* tu siervo, no dominarán en mí.Entonces seré completo, y seré limpio de gran transgresión.
+**13** También de los insolentes retén *a* tu siervo, no dominarán en mí. Entonces seré completo, y seré limpio de gran transgresión.
 **14** Serán para deleite los dichos de mi boca y la meditación de mi corazón delante de ti,__יהוה__, mi Roca y mi Redentor.
 
 *Para el vencedor. Cántico de David.*
@@ -415,13 +415,13 @@ y de la mano de Shaúl, y dijo:*
 **3** Recordará todas tus ofrendas, y tu ofrenda ascendida hallará como grosura. *Selah*[^3714]*.*
 
 **4** Te dará conforme a tu corazón, y todo tu consejo llenará.
-**5** Cantaremos con gozo por tu salvación, y en el Nombre de nuestro Elohim alzaremos bandera.Llenará __יהוה__ todas tus peticiones.
+**5** Cantaremos con gozo por tu salvación, y en el Nombre de nuestro Elohim alzaremos bandera. Llenará __יהוה__ todas tus peticiones.
 
-**6** Ahora sé que __יהוה__ salva *a* su Mesías, le responderá desde los cielos de su santidadcon las fuerzas de salvación de su diestra.
+**6** Ahora sé que __יהוה__ salva *a* su Mesías, le responderá desde los cielos de su santidad con las fuerzas de salvación de su diestra.
 
 **7** Estos en carro, y estos en caballos; mas nosotros en el Nombre de __יהוה__ nuestro Elohim recordaremos.
 **8** Ellos se inclinaron y cayeron; pero nosotros nos hemos levantado y nos erguimos.
-**9** ¡__יהוה__, salva!El Rey nos responderá en el día de nuestro llamado.
+**9** ¡__יהוה__, salva! El Rey nos responderá en el día de nuestro llamado.
 
 *Para el vencedor. Cántico de David.*
 
@@ -429,7 +429,7 @@ y de la mano de Shaúl, y dijo:*
 
 **1** __יהוה__, en tu fuerza se alegrará el rey, y en tu salvación, ¡cuán grandemente se regocijará!
 **2** El deseo de su corazón le diste, y el anhelo de sus labios no retuviste. *Selah*[^3715]*.*
-**3** Porque te pondrás frente a él *con* bendiciones de bien;pondrás en su cabeza corona de oro puro.
+**3** Porque te pondrás frente a él *con* bendiciones de bien; pondrás en su cabeza corona de oro puro.
 **4** Vida pidió de ti, se la diste, largura de días siempre[^3716] y eternamente.
 **5** Grande es su honor en tu salvación, esplendor y ornamento pusiste[^3717] sobre él.
 **6** Porque le pondrás bendiciones para siempre; lo alegrarás en gozo con tu rostro.
@@ -459,28 +459,28 @@ y de la mano de Shaúl, y dijo:*
 **9** Porque Tú me hiciste brotar del vientre, me hiciste confiar sobre los pechos de mi madre.
 **10** Sobre ti fue arrojado desde la matriz, desde el vientre de mi madre Tú eres mi El[^3723].
 
-**11** No te alejes de mí, porque la angustia está cerca,pues no hay quien ayude.
+**11** No te alejes de mí, porque la angustia está cerca, pues no hay quien ayude.
 **12** Me han rodeado muchos toros, fuertes de Bashán me han cercado.
 **13** Abrieron sobre mí su boca, *como* león desgarrador y rugiente.
-**14** Como las aguas fui derramado, y se han separado todos mis huesos;fue mi corazón como la cera, se derritió en medio de mis entrañas.
-**15** Se secó como vasija mi fuerza, y mi lengua se pega *a* mis mandíbulas,y al polvo de muerte me has puesto.
-**16** Porque me han rodeado perros, congregación de condenados me ha cercado;han horadado[^3724] mis manos y mis pies.
+**14** Como las aguas fui derramado, y se han separado todos mis huesos; fue mi corazón como la cera, se derritió en medio de mis entrañas.
+**15** Se secó como vasija mi fuerza, y mi lengua se pega *a* mis mandíbulas, y al polvo de muerte me has puesto.
+**16** Porque me han rodeado perros, congregación de condenados me ha cercado; han horadado[^3724] mis manos y mis pies.
 **17** Contaré todos mis huesos. Ellos me observan, me miran;
 **18** reparten mis vestidos para sí, y sobre mi ropa hacen caer goral[^3725].
 
 **19** Y Tú, __יהוה__, no te alejes; fuerza mía, apresúrate a ayudarme.
 **20** Rescata de la espada mi ser, de la mano del perro mi única *vida*.
-**21** Sálvame de la boca del león y de los cuernos de los búfalos;me has respondido.
+**21** Sálvame de la boca del león y de los cuernos de los búfalos; me has respondido.
 
 **22** Contaré tu Nombre a mis hermanos, en medio de la congregación te alabaré.
-**23** ¡Temerosos de יהוה!, ¡alábenlo! ¡Toda la simiente de Yaakov!, ¡hónrenlo!¡Y tengan temor de Él, toda la simiente de Israel!
-**24** Porque no ha despreciado ni aborrecido la aflicción del afligido,ni ha escondido su rostro de él; y en su grito de ayuda hacia Él, *lo *escuchó.
+**23** ¡Temerosos de יהוה!, ¡alábenlo! ¡Toda la simiente de Yaakov!, ¡hónrenlo! ¡Y tengan temor de Él, toda la simiente de Israel!
+**24** Porque no ha despreciado ni aborrecido la aflicción del afligido, ni ha escondido su rostro de él; y en su grito de ayuda hacia Él, *lo *escuchó.
 
 **25** De ti es mi alabanza en la gran congregación; mis votos completaré delante de sus temerosos.
-**26** Comerán los afligidos y se saciarán, alabarán *a* יהוה los que lo buscan.¡Vivirá nuestro corazón para siempre!
-**27** Recordarán y volverán a יהוה todos los insignificantes de la tierra,y se postrarán delante de ti todas las familias de las naciones.
+**26** Comerán los afligidos y se saciarán, alabarán *a* יהוה los que lo buscan. ¡Vivirá nuestro corazón para siempre!
+**27** Recordarán y volverán a יהוה todos los insignificantes de la tierra, y se postrarán delante de ti todas las familias de las naciones.
 **28** Porque de יהוה es el reino, y gobierna entre los gentiles.
-**29** Comerán y se postrarán todos los gordos de la tierra;delante de Él se inclinarán todos los que descienden al polvoy *el que *su ser no puede mantener vivo.
+**29** Comerán y se postrarán todos los gordos de la tierra; delante de Él se inclinarán todos los que descienden al polvoy *el que *su ser no puede mantener vivo.
 **30** Simiente le servirá; se contará de Adonai a la generación[^3726].
 **31** Vendrán y darán a conocer su justicia a un pueblo nacido, porque Él ha hecho.
 
@@ -492,9 +492,9 @@ y de la mano de Shaúl, y dijo:*
 **2** En pastos de verde hierba me hará acostar, junto a aguas de reposos me conducirá.
 **3** Mi ser hará volver; me guiará por circuitos de justiciapor causa de su Nombre.
 
-**4** Aunque ande en valle de sombra de muerte, no temeré mal, porque Tú *estarás *conmigo;tu vara y tu cayado, ellos me restaurarán.
-**5** Prepararás delante de mí mesa frente a mis opresores;hiciste acepta[^3727] con aceite mi cabeza, mi copa es saturación.
-**6** Ciertamente[^3728] el bien y la bondad me perseguirán todos los días de mi vida,y habitaré en casa de יהוה por largura de días.
+**4** Aunque ande en valle de sombra de muerte, no temeré mal, porque Tú *estarás *conmigo; tu vara y tu cayado, ellos me restaurarán.
+**5** Prepararás delante de mí mesa frente a mis opresores; hiciste acepta[^3727] con aceite mi cabeza, mi copa es saturación.
+**6** Ciertamente[^3728] el bien y la bondad me perseguirán todos los días de mi vida, y habitaré en casa de יהוה por largura de días.
 
 *De David; un cántico.*
 
@@ -507,9 +507,9 @@ y de la mano de Shaúl, y dijo:*
 **5** Él llevará bendición de יהוה, y justicia del Elohim de su salvación.
 **6** Esta es la generación de los que lo requieren, de los que buscan tu rostro, Yaakov[^3730]. *Selah*[^3731]*.*
 
-**7** ¡Levanten, puertas, sus cabezas!¡Y sean levantadas, aberturas olam[^3732], y entrará el Rey de la gloria!
-**8** ¿Quién es este Rey de la gloria? יהוה fuerte y poderoso;יהוה poderoso de guerra.
-**9** ¡Levanten, puertas, sus cabezas!¡Y sean levantadas, aberturas olam, y entrará el Rey de la gloria!
+**7** ¡Levanten, puertas, sus cabezas! ¡Y sean levantadas, aberturas olam[^3732], y entrará el Rey de la gloria!
+**8** ¿Quién es este Rey de la gloria? יהוה fuerte y poderoso; יהוה poderoso de guerra.
+**9** ¡Levanten, puertas, sus cabezas! ¡Y sean levantadas, aberturas olam, y entrará el Rey de la gloria!
 **10** ¿Quién es este Rey de la gloria? יהוה Tzebaot, Él es el Rey de la gloria. *Selah.*
 
 *De David.*
@@ -517,13 +517,13 @@ y de la mano de Shaúl, y dijo:*
 **25**
 
 **1** Hacia ti, יהוה, elevaré mi ser.
-**2** Mi Elohim, en ti he confiado; no seré avergonzado,no se regocijarán mis enemigos por mí.
-**3** Además, todos los que esperan en ti no serán avergonzados;serán avergonzados los que en vano son traicioneros.
+**2** Mi Elohim, en ti he confiado; no seré avergonzado, no se regocijarán mis enemigos por mí.
+**3** Además, todos los que esperan en ti no serán avergonzados; serán avergonzados los que en vano son traicioneros.
 
 **4** Tus caminos, יהוה, hazme conocer, y tus sendas enséñame.
-**5** Hazme caminar en tu verdad y enséñame, porque Tú eres el Elohim de mi salvación;a ti espero todo el día.
+**5** Hazme caminar en tu verdad y enséñame, porque Tú eres el Elohim de mi salvación; a ti espero todo el día.
 **6** Recuerda tus compasiones, יהוה, y tus bondades, que desde el olam son.
-**7** Los pecados de mi juventud y mis transgresiones no recordarás;conforme a tu amor recuérdame Tú, por tu bondad, יהוה.
+**7** Los pecados de mi juventud y mis transgresiones no recordarás; conforme a tu amor recuérdame Tú, por tu bondad, יהוה.
 
 **8** Bueno y recto es יהוה; por eso, instruirá *a *los pecadores en el camino.
 **9** Hará caminar *a* los afligidos en juicio y enseñará *a *los afligidos su camino.
@@ -540,7 +540,7 @@ y de la mano de Shaúl, y dijo:*
 **17** Las estrecheces de mi corazón se ensancharon, de mis opresiones hazme salir.
 **18** Mira mi aflicción y mi esfuerzo, y carga todos mis pecados.
 **19** Mira mis enemigos, porque son muchos, y con odio de violencia me odian.
-**20** Guarda mi ser y rescátame; no seré avergonzado,porque me he refugiado en ti.
+**20** Guarda mi ser y rescátame; no seré avergonzado, porque me he refugiado en ti.
 **21** La integridad y la rectitud me preservarán, porque te he esperado.
 **22** Redime, Elohim, a Israel de todas sus estrecheces.
 
@@ -548,7 +548,7 @@ y de la mano de Shaúl, y dijo:*
 
 **26**
 
-**1** Júzgame, יהוה, porque yo en mi integridad he caminado,y en יהוה he confiado, no resbalaré.
+**1** Júzgame, יהוה, porque yo en mi integridad he caminado, y en יהוה he confiado, no resbalaré.
 **2** Examíname, יהוה, y pruébame; funde mis riñones y mi corazón.
 **3** Porque tu bondad *está* frente a mis ojos, y he caminado en tu verdad.
 **4** No me he sentado con hombres de falsedad, y con los ocultadores no iré.
@@ -566,38 +566,38 @@ y de la mano de Shaúl, y dijo:*
 
 **27**
 
-**1** יהוה es mi luz y mi salvación, ¿de quién temeré?יהוה es la fortaleza de mi vida, ¿de quién tendré miedo?
-**2** Cuando se acercaron sobre mí los malvados para comer mi carne,mis opresores y mis enemigos, ellos tropezaron y cayeron.
-**3** Si acampa contra mí un ejército, no temerá mi corazón;si se levanta contra mí guerra, en esto yo estoy confiado.
+**1** יהוה es mi luz y mi salvación, ¿de quién temeré? יהוה es la fortaleza de mi vida, ¿de quién tendré miedo?
+**2** Cuando se acercaron sobre mí los malvados para comer mi carne, mis opresores y mis enemigos, ellos tropezaron y cayeron.
+**3** Si acampa contra mí un ejército, no temerá mi corazón; si se levanta contra mí guerra, en esto yo estoy confiado.
 
-**4** Una *cosa* he pedido de יהוה, la buscaré: que habite yo en la casa de יהוה todos los días de mi vida,para mirar la delicia de יהוה, y para inquirir en su Hejal[^3738].
-**5** Porque me ocultará en su cabaña[^3739] en el día del mal;me esconderá en el secreto de su tienda.En una roca me elevará.
+**4** Una *cosa* he pedido de יהוה, la buscaré: que habite yo en la casa de יהוה todos los días de mi vida, para mirar la delicia de יהוה, y para inquirir en su Hejal[^3738].
+**5** Porque me ocultará en su cabaña[^3739] en el día del mal; me esconderá en el secreto de su tienda. En una roca me elevará.
 **6** Y ahora se levantará mi cabeza sobre mis enemigos de mi alrededor; y sacrificaré en su tienda sacrificios de grito de alegría; cantaré y entonaré para יהוה.
 
 **7** Escucha, יהוה, mi voz, llamaré, tenme favor y respóndeme.
 **8** De ti dijo mi corazón: ¡Busquen mi rostro! Tu rostro, יהוה, buscaré.
-**9** No escondas tu rostro de mí, no te desvíes con ira *de* tu siervo;mi ayuda has sido Tú.No me abandones ni me dejes, Elohim de mi salvación.
+**9** No escondas tu rostro de mí, no te desvíes con ira *de* tu siervo; mi ayuda has sido Tú. No me abandones ni me dejes, Elohim de mi salvación.
 **10** Porque mi padre y mi madre me abandonaron, pero יהוה me recogerá.
 
 **11** Enséñame, יהוה, tu camino, y guíame por senda de rectitudpor causa de los que me aprietan.
-**12** No me des en la garganta[^3740]* *de mis opresores; porque se levantaron contra mí testigos falsosy los que respiran violencia.
+**12** No me des en la garganta[^3740]* *de mis opresores; porque se levantaron contra mí testigos falsos y los que respiran violencia.
 **13** ¡*Oh* si no me hubiera afirmado para ver la bondad de יהוה en la tierra de los vivos!
 
-**14** Espera a יהוה;Fortalézcase y esfuércese tu corazón, y espera a יהוה.
+**14** Espera a יהוה; Fortalézcase y esfuércese tu corazón, y espera a יהוה.
 
 *De David.*
 
 **28**
 
-**1** A ti, יהוה, llamaré; Roca mía, no calles[^3741] de mí,no sea que te quedes en silencio de mí y me asemeje con los que descienden al hoyo.
-**2** Escucha la voz de mis súplicas en mi grito de ayuda hacia ti,en mi levantar mis manos hacia la habitación más profunda de tu Santidad.
+**1** A ti, יהוה, llamaré; Roca mía, no calles[^3741] de mí, no sea que te quedes en silencio de mí y me asemeje con los que descienden al hoyo.
+**2** Escucha la voz de mis súplicas en mi grito de ayuda hacia ti, en mi levantar mis manos hacia la habitación más profunda de tu Santidad.
 
-**3** No me arrastres con los malvados ni con los obradores de vanidad,que hablan shalom[^3742] con sus compañeros pero *hay* mal en su corazón.
-**4** Dales conforme a sus obras y conforme a la maldad de sus acciones, conforme a la hechura de sus manos dales;devuélveles su recompensa.
-**5** Porque no comprenderán las obras de יהוה ni la hechura de sus manos.Él los derribará y no los edificará.
+**3** No me arrastres con los malvados ni con los obradores de vanidad, que hablan shalom[^3742] con sus compañeros pero *hay* mal en su corazón.
+**4** Dales conforme a sus obras y conforme a la maldad de sus acciones, conforme a la hechura de sus manos dales; devuélveles su recompensa.
+**5** Porque no comprenderán las obras de יהוה ni la hechura de sus manos. Él los derribará y no los edificará.
 
 **6** ¡Bendito יהוה!, porque escuchó la voz de mis súplicas.
-**7** יהוה, mi fuerza y mi escudo, en Él ha confiado mi corazón, y soy ayudado.Y se regocijó mi corazón, y desde mi canción lo confesaré.
+**7** יהוה, mi fuerza y mi escudo, en Él ha confiado mi corazón, y soy ayudado. Y se regocijó mi corazón, y desde mi canción lo confesaré.
 **8** יהוה es la fuerza de su pueblo[^3743], y la fortaleza de salvaciones de su Mesías[^3744] es Él.
 
 **9** ¡Salva a tu pueblo y bendice a tu herencia!, y pastoréalos y llévalos hasta siempre.
@@ -609,14 +609,14 @@ y de la mano de Shaúl, y dijo:*
 **1** Den a יהוה, hijos de los poderosos[^3745], den a יהוה gloria y fuerza.
 **2** Den a יהוה el gloria de su Nombre; póstrense a יהוה en adorno de santidad.
 
-**3** Voz de יהוה sobre las aguas, el Poderoso de la gloria tronó,יהוה sobre muchas aguas.
+**3** Voz de יהוה sobre las aguas, el Poderoso de la gloria tronó, יהוה sobre muchas aguas.
 **4** Voz de יהוה con fuerza, voz de יהוה con ornamento.
 **5** La voz de יהוה rompe los cedros; y destroza יהוה a los cedros del Lebanón;
-**6** Y los hizo saltar como becerro, Lebanón y Sirión,como hijo de búfalos[^3746].
+**6** Y los hizo saltar como becerro, Lebanón y Sirión, como hijo de búfalos[^3746].
 
 **7** La voz de יהוה divide llamas de fuego.
 **8** La voz de יהוה hace temblar el desierto, hace temblar יהוה el desierto de Kadesh.
-**9** La voz de יהוה hace parir* a* las ciervas y desnuda *a *los bosques,y en su Hejal[^3747] todo dice: ¡Gloria!
+**9** La voz de יהוה hace parir* a* las ciervas y desnuda *a *los bosques, y en su Hejal[^3747] todo dice: ¡Gloria!
 
 **10** יהוה al diluvio se sentó, y se sentó יהוה, ¡es Rey por siempre!
 **11** יהוה dará fuerza a su pueblo; יהוה bendecirá a su pueblo con shalom[^3748].
@@ -631,47 +631,47 @@ y de la mano de Shaúl, y dijo:*
 **3** יהוה, has hecho subir del Sheol mi ser; me hiciste vivir de *entre *los que descienden al foso.
 
 **4** ¡Canten a יהוה sus benevolentes, y confiesen la memoria de su santidad!
-**5** Porque un momento *hay* en su nariz, *y* vida *hay* en su reconciliación[^3751];en el atardecer pasará la noche el llanto, y por la mañana, grito de alegría.
+**5** Porque un momento *hay* en su nariz, *y* vida *hay* en su reconciliación[^3751]; en el atardecer pasará la noche el llanto, y por la mañana, grito de alegría.
 
 **6** Y yo dije en mi tranquilidad: No seré sacudido por siempre.
 **7** יהוה, en tu favor has hecho permanecer mi monte fuerte; escondiste tu rostro, estuve aterrorizado.
 **8** A ti, יהוה, clamé, y a Adonai imploré favor:
-**9** ¿Qué ganancia *hay* en mi sangre en mi descender al hoyo?¿Te alabará el polvo? ¿Dará a conocer tu verdad?
+**9** ¿Qué ganancia *hay* en mi sangre en mi descender al hoyo? ¿Te alabará el polvo? ¿Dará a conocer tu verdad?
 
 **10** Escucha, יהוה, y tenme favor; יהוה, sé ayuda para mí.
-**11** Has tornado mi lamento en danza para mí, has abierto mi vestido de sacoy me ceñiste de alegría.
+**11** Has tornado mi lamento en danza para mí, has abierto mi vestido de saco y me ceñiste de alegría.
 **12** a fin de que te cante honra y no calle. יהוה, Elohim mío, para siempre te confesaré.
 
 *Para el vencedor. Cántico de David.*
 
 **31**
 
-**1** En ti, __יהוה__, me he refugiado; no seré avergonzado nunca,en tu justicia hazme escapar.
-**2** Inclina a mí tu oreja, rápidamente rescátame.Sé para mí por roca de fortaleza, por casa de baluarte para salvarme.
+**1** En ti, __יהוה__, me he refugiado; no seré avergonzado nunca, en tu justicia hazme escapar.
+**2** Inclina a mí tu oreja, rápidamente rescátame. Sé para mí por roca de fortaleza, por casa de baluarte para salvarme.
 **3** Porque mi peña y mi baluarte eres Tú, y por causa de tu Nombre me conducirás y me guiarás.
-**4** Me sacarás de la red, la cual encubrieron para mí;porque Tú eres mi fortaleza.
+**4** Me sacarás de la red, la cual encubrieron para mí; porque Tú eres mi fortaleza.
 **5** En tu mano encomendaré mi aliento; me redimiste, __יהוה__, El[^3752] de verdad.
 
-**6** He aborrecido *a *los que preservan vapores de vacuidad;y yo, hacia __יהוה__ he confiado.
-**7** Me regocijaré y me alegraré en tu bondad, *por*que has visto mi aflicción,has conocido las estrecheces de mi ser,
+**6** He aborrecido *a *los que preservan vapores de vacuidad; y yo, hacia __יהוה__ he confiado.
+**7** Me regocijaré y me alegraré en tu bondad, *por*que has visto mi aflicción, has conocido las estrecheces de mi ser,
 **8** y no me has encerrado en mano de enemigo, hiciste parar en la amplitud mis pies.
 
-**9** Inclínate en favor hacia mí, __יהוה__, porque tengo estrechez.Decayó por el sufrimiento mi ojo, mi ser y mi vientre.
-**10** Porque se consuma en dolor mi vida, y mis años en suspiros.Tropezó por mi torcedura mi fuerza, y mis huesos se debilitaron.
-**11** Debido a todos mis opresores he sido un insulto, y para mis vecinos, mucho,y espanto* *para mis conocidos; los que me ven en la calle huyen de mí.
+**9** Inclínate en favor hacia mí, __יהוה__, porque tengo estrechez. Decayó por el sufrimiento mi ojo, mi ser y mi vientre.
+**10** Porque se consuma en dolor mi vida, y mis años en suspiros. Tropezó por mi torcedura mi fuerza, y mis huesos se debilitaron.
+**11** Debido a todos mis opresores he sido un insulto, y para mis vecinos, mucho, y espanto* *para mis conocidos; los que me ven en la calle huyen de mí.
 **12** Fui olvidado como muerto, del corazón; he sido como recipiente perdido.
-**13** Porque he escuchado la calumnia de muchos, miedo *hay* por *todo* alrededor;cuando consultan juntos acerca de mí, tomar mi vida planean.
+**13** Porque he escuchado la calumnia de muchos, miedo *hay* por *todo* alrededor; cuando consultan juntos acerca de mí, tomar mi vida planean.
 
 **14** Pero yo en ti he confiado, __יהוה__, dije: Mi Elohim eres Tú.
 **15** En tu mano *están* mis tiempos; rescátame de la mano de mis enemigos y de mis perseguidores.
 **16** Haz brillar tu rostro sobre tu siervo, sálvame en tu bondad.
-**17** __יהוה__, no seré avergonzado, porque te he llamado. Serán avergonzados los malvados;serán enmudecidos hacia el Sheol.
-**18** Se callarán los labios de mentira, que hablan acerca del justo *con *arrogancia,con soberbia y desprecio.
+**17** __יהוה__, no seré avergonzado, porque te he llamado. Serán avergonzados los malvados; serán enmudecidos hacia el Sheol.
+**18** Se callarán los labios de mentira, que hablan acerca del justo *con *arrogancia, con soberbia y desprecio.
 
 **19** ¡Qué grande es tu bondad, que has preservado para tus temerosos,*que* has obrado para los que se refugian en ti frente a los hijos del hombre!
-**20** Los esconderás en el secreto de tu rostro de las bandas[^3753] del hombre;los preservarás en una cobertura[^3754] de las contiendas de las lenguas.
+**20** Los esconderás en el secreto de tu rostro de las bandas[^3753] del hombre; los preservarás en una cobertura[^3754] de las contiendas de las lenguas.
 **21** Bendito *es* __יהוה__, porque ha hecho distinguida su bondad para mí en ciudad fortificada.
-**22** Y yo dije en mi prisa: ¡Fui cortado de delante de tus ojos!Ciertamente escuchaste la voz de mis súplicas en mi grito de ayuda hacia ti.
+**22** Y yo dije en mi prisa: ¡Fui cortado de delante de tus ojos! Ciertamente escuchaste la voz de mis súplicas en mi grito de ayuda hacia ti.
 
 **23**¡Amen a __יהוה__ todos sus benevolentes! *A* los firmes preserva __יהוה__,y retribuye sobre abundancia *al *hacedor de soberbia.
 **24** ¡Fortalézcanse, y esfuércese su corazón, todos los que esperan a __יהוה__!
@@ -686,12 +686,12 @@ y de la mano de Shaúl, y dijo:*
 **3** Cuando me quedé en silencio, se desgastaron mis huesos con mi gemidotodo el día.
 **4** Porque de día y de noche era pesada sobre mí tu mano, se tornó mi savia en sequía de verano. *Selah*[^3756]*.*
 
-**5** Mi pecado te di a conocer, y mi iniquidad no oculté.Dije: Confesaré sobre mis transgresiones a __יהוה__; y Tú cargaste la iniquidad de mi pecado. *Selah.*
-**6** Por esto, hará tefilah[^3757] a ti todo benevolente en el tiempo de hallar;ciertamente, en inundación de muchas aguas, *estas *a él no *lo *alcanzarán.
+**5** Mi pecado te di a conocer, y mi iniquidad no oculté. Dije: Confesaré sobre mis transgresiones a __יהוה__; y Tú cargaste la iniquidad de mi pecado. *Selah.*
+**6** Por esto, hará tefilah[^3757] a ti todo benevolente en el tiempo de hallar; ciertamente, en inundación de muchas aguas, *estas *a él no *lo *alcanzarán.
 **7** Tú eres escondite para mí, de la estrechez me preservarás.*Con* gritos alegres de liberación me rodearás. *Selah.*
 
 **8** Yo te enseñaré a ser prudente, y te instruiré por el camino que debes caminar;*te *aconsejaré, sobre ti *está* mi ojo.
-**9** No sean como el caballo, como el mulo[^3758], *que* no tienen entendimiento[^3759];con freno y brida *son* sus atavíos para refrenar*lo*,
+**9** No sean como el caballo, como el mulo[^3758], *que* no tienen entendimiento[^3759]; con freno y brida *son* sus atavíos para refrenar*lo*,
  *para que* no se acerquen a ti.**10** Muchos son los dolores del condenado, pero el que confía en __יהוה__,benevolencia lo rodeará.
 
 **11** ¡Alégrense en __יהוה__ y regocíjense, justos! ¡Y griten de alegría, todos los rectos de corazón!
@@ -719,7 +719,7 @@ y de la mano de Shaúl, y dijo:*
 **16** No hay rey que se salve por multitud de ejército; el fuerte no escapa por la multitud de fuerza.
 **17** Falsedad es el caballo para liberación, y con la multitud de su fuerza no hará escapar.
 
-**18** He aquí, el ojo de __יהוה__ es hacia sus temerosos,hacia los que esperan a su bondad,
+**18** He aquí, el ojo de __יהוה__ es hacia sus temerosos, hacia los que esperan a su bondad,
 **19** para rescatar de la muerte su vida y para hacerlos vivir en la hambruna.
 **20** Nuestro ser[^3762] espera a __יהוה__; nuestra ayuda y nuestro escudo es Él;
 **21** Porque en Él se alegrará nuestro corazón, porque en el Nombre de su santidad hemos confiado.
@@ -748,7 +748,7 @@ y de la mano de Shaúl, y dijo:*
 **14** Desvíate del mal y haz el bien, busca el shalom[^3763] y persíguelo.
 
 **15** Los ojos de __יהוה__ son hacia los justificados, y sus oídos hacia su grito de ayuda.
-**16** El rostro de __יהוה__ es contra los hacedores del mal,para cortar de la tierra su memoria.
+**16** El rostro de __יהוה__ es contra los hacedores del mal, para cortar de la tierra su memoria.
 **17** Clamaron, y __יהוה__ escuchó, y de todas sus estrecheces los rescató.
 **18** Cercano *está *__יהוה__ a los quebrantados de corazón, y a los aplastados de ánimo Él salvará.
 
@@ -763,23 +763,23 @@ y de la mano de Shaúl, y dijo:*
 
 **1** Pelea, __יהוה__, contra mis contendientes; lucha contra los que luchan contra mí.
 **2** Agarra el escudo y el pavés, y levántate en mi ayuda.
-**3** Saca la lanza y cierra *el paso* del encuentro con mis perseguidores;di a mi ser: Tu salvación soy Yo.
+**3** Saca la lanza y cierra *el paso* del encuentro con mis perseguidores; di a mi ser: Tu salvación soy Yo.
 **4** Serán avergonzados y humillados los que buscan mi vida; se volverán atrás y tendrán vergüenza los que piensan mi mal.
 **5** Serán como paja delante del viento, y el ángel de __יהוה__ los empuja.
 **6** Será su camino oscuridad y resbaladizo, y el ángel de __יהוה__ los persigue.
-**7** Porque por nada escondieron para mí un foso de su red,por nada *lo *cavaron para mi vida.
-**8** Le llegará devastación, no sabrá; y su red, que él escondió, lo capturará;¡en la devastación, caerá en ella!
+**7** Porque por nada escondieron para mí un foso de su red, por nada *lo *cavaron para mi vida.
+**8** Le llegará devastación, no sabrá; y su red, que él escondió, lo capturará; ¡en la devastación, caerá en ella!
 
 **9** Y mi ser se regocijará en __יהוה__, se gozará en su salvación.
-**10** Todos mis huesos dirán: __יהוה__, ¿quién como Tú, que rescatas *al *afligido del *más* fuerte que él,y *al *afligido y necesitado del que lo saquea?
+**10** Todos mis huesos dirán: __יהוה__, ¿quién como Tú, que rescatas *al *afligido del *más* fuerte que él, y *al *afligido y necesitado del que lo saquea?
 **11** Se levantan testigos de violencia, *de* lo que no sé me preguntan.
 **12** Me retribuyen mal en lugar de bien, es duelo de mi ser.
-**13** Y yo, cuando estaban enfermos, mi vestido era cilicio[^3764];afligí con ayuno mi ser, y mi tefilah[^3765] sobre mi pecho volvía.
-**14** Como amigo, como mi hermano, andaba de aquí para allá;como duelo por la madre, sombrío me inclinaba.
-**15** Pero ellos en mi tropiezo se alegraron, y se reunieron;se reunieron contra mí los heridores, y yo no sabía;me desgarraban y no cesaban.
+**13** Y yo, cuando estaban enfermos, mi vestido era cilicio[^3764]; afligí con ayuno mi ser, y mi tefilah[^3765] sobre mi pecho volvía.
+**14** Como amigo, como mi hermano, andaba de aquí para allá; como duelo por la madre, sombrío me inclinaba.
+**15** Pero ellos en mi tropiezo se alegraron, y se reunieron; se reunieron contra mí los heridores, y yo no sabía; me desgarraban y no cesaban.
 **16** Con hipócritas burladores de pastel[^3766], rechinaron contra mí sus dientes.
 
-**17** Adonai, ¿cuánto *tiempo* estarás mirando?¡Haz retornar mi vida de sus devastaciones, de los leoncillos mi única *vida*!
+**17** Adonai, ¿cuánto *tiempo* estarás mirando? ¡Haz retornar mi vida de sus devastaciones, de los leoncillos mi única *vida*!
 **18** Te confesaré en la gran asamblea, en el pueblo numeroso te alabaré.
 **19** No se regocijen por mí mis enemigos de falsedad, *ni *los que me odian por nada guiñen el ojo.
 **20** Porque ellos no hablarán shalom[^3767], y contra los tranquilos de la tierrapalabras engañosas pensarán.
@@ -787,25 +787,25 @@ y de la mano de Shaúl, y dijo:*
 
 **22** Has visto, __יהוה__, no calles; Adonai, no te alejes de mí.
 **23** Despierta y espabílate para mi juicio, mi Elohim y mi Amo, para mi pleito.
-**24** Júzgame conforme a tu justicia, __יהוה__, Elohim mío,y no se alegrarán por mí.
+**24** Júzgame conforme a tu justicia, __יהוה__, Elohim mío, y no se alegrarán por mí.
 **25** No dirán en su corazón: ¡Ea, nuestra garganta[^3768]! No dirán: ¡Lo hemos tragado!
 **26** Se avergonzarán y abochornarán juntos los que se alegran de mi mal; se vestirán vergüenza y humillación los que se engrandecen sobre mí.
 
-**27** ¡Gritarán de júbilo y se alegrarán los que desean mi justicia!, y dirán siempre: ¡Se engrandecerá __יהוה__,que desea el shalom de su siervo!
+**27** ¡Gritarán de júbilo y se alegrarán los que desean mi justicia!, y dirán siempre: ¡Se engrandecerá __יהוה__, que desea el shalom de su siervo!
 **28** Y mi lengua pronunciará tu justicia, todo el día tu alabanza.
 
 *Para el vencedor. Del siervo de *__*יהוה*__*, de David.*
 
 **36**
 
-**1** Una declaración de la transgresión al condenado en medio de mi corazón;no hay temor de Elohim delante de sus ojos.
+**1** Una declaración de la transgresión al condenado en medio de mi corazón; no hay temor de Elohim delante de sus ojos.
 **2** Porque se aduló a sí *mismo* en sus ojos, para hallar su iniquidad para odiar.
 **3** Las palabras de su boca son vacuidad y engaño; se detuvo de ser prudente, de hacer bien.
-**4** Vacuidad piensa en su cama; se colocó sobre un camino no bueno;el mal no desprecia.
+**4** Vacuidad piensa en su cama; se colocó sobre un camino no bueno; el mal no desprecia.
 
 **5** __יהוה__, en los cielos *está* tu bondad, tu fidelidad hasta las nubes.
-**6** Tu justicia es como los montes de El[^3769]; tus procesos legales *son* una gran profundidad.Al hombre y al animal salvas, __יהוה__.
-**7** ¡Qué preciosa es tu bondad, Elohim!Y los hijos de Adam en la sombra de tus alas se refugiarán.
+**6** Tu justicia es como los montes de El[^3769]; tus procesos legales *son* una gran profundidad. Al hombre y al animal salvas, __יהוה__.
+**7** ¡Qué preciosa es tu bondad, Elohim! Y los hijos de Adam en la sombra de tus alas se refugiarán.
 **8** Serán saturados de la grosura de tu casa, y *del* río de tus deleites les darás de beber.
 **9** Porque contigo *está* el manantial de vida, en tu luz veremos luz.
 
@@ -824,45 +824,45 @@ y de la mano de Shaúl, y dijo:*
 **5** Encomienda a[^3772] יהוה tu camino, y confía en Él, y Él hará.
 **6** Y hará salir como la luz tu justicia, y tu juicio como el mediodía.
 
-**7** Guarda silencio ante יהוה y espéralo con paciencia; no contiendas acaloradamente por el que pros­pera en su camino,por el hombre que hace planes malvados.
+**7** Guarda silencio ante יהוה y espéralo con paciencia; no contiendas acaloradamente por el que pros­pera en su camino, por el hombre que hace planes malvados.
 **8** Suelta la ira y abandona el furor; no contiendas acaloradamente, sólo harías lo malo.
-**9** Porque los malhechores serán cortados, pero los que esperan en יהוה,ellos heredarán la tierra.
-**10** Aún un poco y no *estará* *más* el condenado, considerarás atentamente acerca de su camino,y no *será más.*
+**9** Porque los malhechores serán cortados, pero los que esperan en יהוה, ellos heredarán la tierra.
+**10** Aún un poco y no *estará* *más* el condenado, considerarás atentamente acerca de su camino, y no *será más.*
 **11** Pero los afligidos[^3773] heredarán las tierra, y se deleitarán en abundante plenitud[^3774].
 
 **12** Trama el condenado contra el justificado, y rechina contra él sus dientes.
 **13** Adonai se ríe de él, porque ve que viene su día.
-**14** Espada liberaron los malvados, y entesaron su arco,para hacer caer al afligido y necesitado, para matar a los rectos de camino.
+**14** Espada liberaron los malvados, y entesaron su arco, para hacer caer al afligido y necesitado, para matar a los rectos de camino.
 **15** Su espada entrará en su *propio* corazón, y sus arcos serán quebrados.
 
 **16** Mejor es lo poco del justificado que la multitud de muchos condenados.
 **17** Porque los brazos de los condenados serán rotos; pero sostiene *a* los justificados __יהוה__.
 **18** Conoce __יהוה__ los días de los íntegros, y su herencia para siempre será.
 **19** No serán avergonzados en el tiempo malo, y en días de hambre se saciarán.
-**20** Porque los condenados se perderán, y los enemigos de __יהוה__ *serán* como la grosura de carneros,se consumen en el humo, se consumen*.*
+**20** Porque los condenados se perderán, y los enemigos de __יהוה__ *serán* como la grosura de carneros, se consumen en el humo, se consumen*.*
 **21** Pide prestado el condenado y no paga, pero el justificado es misericordioso y da.
 **22** Porque sus bendecidos heredarán la tierra, pero sus despreciados serán cortados.
 
 **23** Por __יהוה__ los pasos del hombre son enderezados[^3775], y *en *su camino Él se deleita.
 **24** Cuando caiga, no será arrojado, porque __יהוה__ sostiene su mano.
-**25** Joven fui, ya soy viejo, y no he visto justo abandonado,ni *a *su simiente buscando pan.
+**25** Joven fui, ya soy viejo, y no he visto justo abandonado, ni *a *su simiente buscando pan.
 **26** Todo el día es misericordioso y presta, y su simiente es para bendición.
 
 **27** Apártate del mal y haz el bien, y morarás para siempre.
-**28** Porque __יהוה__ ama el proceso legal[^3776], y no abandonará a sus benevolentes,para siempre serán guardados; pero la simiente de los condenados será cortada.
+**28** Porque __יהוה__ ama el proceso legal[^3776], y no abandonará a sus benevolentes, para siempre serán guardados; pero la simiente de los condenados será cortada.
 **29** Los justificados heredarán la tierra, y morarán para siempre sobre ella.
 **30** La boca del justificado pronunciará sabiduría, y su lengua hablará el proceso legal.
 **31** La Torah de su Elohim *está* en su corazón; no tropezarán sus pasos.
 **32** Vigila el condenado al justo, y procura matarlo.
 **33** __יהוה__ no lo abandonará en su mano, ni dejará que lo condenen cuando sea juzgado.
-**34** Espera a __יהוה__, y guarda su camino, y Él te exaltará para heredar la tierra;cuando sean cortados los condenados, *lo* verás.
+**34** Espera a __יהוה__, y guarda su camino, y Él te exaltará para heredar la tierra; cuando sean cortados los condenados, *lo* verás.
 
 **35** Vi *al* condenado, violento[^3777], y se exponía como verde árbol nativo[^3778].
 **36** Y pasó, y he aquí, no estaba *más*; y lo busqué, pero no fue hallado.
 **37** Cuida *al* íntegro y mira *al *recto, porque el postrer de *ese* hombre *es *shalom[^3779].
 **38** Pero los transgresores serán destruidos juntos, el postrer de los condenados será cortado.
 **39** Y la liberación de los justos *es* de __יהוה__, Él es su fortaleza en tiempo de estrechez.
-**40** Y los ayudará __יהוה__ y los hará escapar; los hará escapar de los condenados y los salvará,porque se refugiaron en Él.
+**40** Y los ayudará __יהוה__ y los hará escapar; los hará escapar de los condenados y los salvará, porque se refugiaron en Él.
 
 *Cántico de David, para traer al recuerdo.*
 
@@ -870,17 +870,17 @@ y de la mano de Shaúl, y dijo:*
 
 **1** __יהוה__, no me reprendas[^3780] en tu rechazo, ni me disciplines en tu ardor.
 **2** Porque tus flechas descendieron en mí, y ha descendido sobre mí tu mano.
-**3** No hay integridad[^3781] en mi carne por causa de tu indignación;no hay shalom[^3782] en mis huesos por causa de mi pecado.
+**3** No hay integridad[^3781] en mi carne por causa de tu indignación; no hay shalom[^3782] en mis huesos por causa de mi pecado.
 **4** Porque mis torceduras sobrepasaron mi cabeza, como carga pesada, son *muy* pesadas para mí.
 **5** Apestan, se pudren mis heridas de látigo, a causa de mi necedad;
 **6** Me encorvé, me incliné en gran manera, todo el día ando sombrío.
-**7** Porque mis lomos están llenos de inflamación,y no hay integridad en mi carne.
+**7** Porque mis lomos están llenos de inflamación, y no hay integridad en mi carne.
 **8** Me entumecí y fui aplastado en gran manera; rugí debido al gemido de mi corazón.
 
 **9** Adonai, delante de ti está todo mi deseo, y mi suspiro no es oculto de ti.
-**10** Mi corazón da vueltas rápidamente, me abandonó mi fuerza;y la luz de mis ojos, tampoco ellos *están* conmigo.
+**10** Mi corazón da vueltas rápidamente, me abandonó mi fuerza; y la luz de mis ojos, tampoco ellos *están* conmigo.
 **11** Los que me aman y mis compañeros enfrente de mi herida permanecieron; y mis cercanos, desde lejos se pararon.
-**12** Pusieron trampas los que buscan mi vida, y los que procuran mi mal hablan destrucción,y meditan engaño todo el día.
+**12** Pusieron trampas los que buscan mi vida, y los que procuran mi mal hablan destrucción, y meditan engaño todo el día.
 
 **13** Pero yo, como el sordo, no oigo, y como el mudo *que* no abre su boca.
 **14** Y soy como el hombre que no escucha, y *que* no hay en su boca reprensiones.
@@ -888,7 +888,7 @@ y de la mano de Shaúl, y dijo:*
 **16** Porque dije: No sea que se alegren por mí cuando resbale mi pie, sobre mí se engrandecieron.
 **17** Porque yo estoy preparado para caer, y mi dolor *está* delante de mí continuamente.
 **18** Pues, mi torcedura daré a conocer; estaré ansioso por causa de mi pecado.
-**19** Y mis enemigos *están* vivos, se hicieron poderosos;y se han multiplicado los que me aborrecen *con *falsedad.
+**19** Y mis enemigos *están* vivos, se hicieron poderosos; y se han multiplicado los que me aborrecen *con *falsedad.
 **20** Y los que pagan mal en lugar de bien son mis adversarios, porque persigo lo bueno.
 **21** ¡No me abandones, __יהוה__!; Elohim mío, ¡no te alejes de mí!
 **22** Apresúrate a ayudarme, Adonai, mi liberación.
@@ -897,20 +897,20 @@ y de la mano de Shaúl, y dijo:*
 
 **39**
 
-**1** Yo dije: Guardaré mis caminos de pecar con mi lengua;guardaré mi boca *con* bozal mientras el condenado *esté* delante de mí.
+**1** Yo dije: Guardaré mis caminos de pecar con mi lengua; guardaré mi boca *con* bozal mientras el condenado *esté* delante de mí.
 **2** Enmudecí *con* silencio; estuve en silencio *incluso acerca* de lo bueno, y mi dolor se agitó.
-**3** Se calentó mi corazón en mi interior; en mi reflexión, ardió el fuego.Hablé con mi lengua:
+**3** Se calentó mi corazón en mi interior; en mi reflexión, ardió el fuego. Hablé con mi lengua:
 **4** Hazme saber, __יהוה__, mi fin, y la medida de mis días, ¿cuál es?,*y *sabré cuán efímero[^3783] soy.
-**5** He aquí, has puesto mis días *como* palmos, y la duración de mi vida es como nada delante de ti;ciertamente todo es vapor, *aun* cada hombre *cuando* está afirmado. *Selah*[^3784]*.*
-**6** Ciertamente en una sombra anda el hombre; de cierto *que* en vano[^3785] ellos rugen;él acumula y no sabe quién reunirá aquello.
+**5** He aquí, has puesto mis días *como* palmos, y la duración de mi vida es como nada delante de ti; ciertamente todo es vapor, *aun* cada hombre *cuando* está afirmado. *Selah*[^3784]*.*
+**6** Ciertamente en una sombra anda el hombre; de cierto *que* en vano[^3785] ellos rugen; él acumula y no sabe quién reunirá aquello.
 
 **7** Y ahora, ¿qué espero, Adonai? Mi esperanza está en ti.
 **8** De todas mis transgresiones rescátame; no me pongas *como* el insulto del necio.
 **9** Enmudecí, no abriré mi boca, porque Tú has obrado.
 **10** Quita de sobre mí tu golpe; por la contienda de tu mano yo me consumo.
-**11** Con reprensiones disciplinas *al* hombre por *su *iniquidad;y disuelves como la polilla su deseo; ciertamente, todo hombre es vapor. *Selah.*
+**11** Con reprensiones disciplinas *al* hombre por *su *iniquidad; y disuelves como la polilla su deseo; ciertamente, todo hombre es vapor. *Selah.*
 
-**12** Escucha mi tefilah[^3786], __יהוה__, y da oído a mi grito de ayuda;ante mis lágrimas no calles; porque extranjero soy yo junto a ti,forastero, como todos mis padres.
+**12** Escucha mi tefilah[^3786], __יהוה__, y da oído a mi grito de ayuda; ante mis lágrimas no calles; porque extranjero soy yo junto a ti, forastero, como todos mis padres.
 **13** Préstame atención, y me refrenaré[^3787], antes de que me vaya y *ya* no sea *más.*
 
 *Para el vencedor. De David, un cántico.*
@@ -918,49 +918,49 @@ y de la mano de Shaúl, y dijo:*
 **40**
 
 **1** Pacientemente esperé *a* __יהוה__, y Él se inclinó a mí y escuchó mi grito de ayuda.
-**2** Y me hizo subir del hoyo de destrucción, del fango arcilloso;y levantó sobre una peña mis pies, afirmó mis pasos.
-**3** Y Él dio en mi boca un cántico nuevo, alabanza a nuestro Elohim;muchos *lo* verán y temerán, y confiarán en __יהוה__.
+**2** Y me hizo subir del hoyo de destrucción, del fango arcilloso; y levantó sobre una peña mis pies, afirmó mis pasos.
+**3** Y Él dio en mi boca un cántico nuevo, alabanza a nuestro Elohim; muchos *lo* verán y temerán, y confiarán en __יהוה__.
 
 **4** ¡Felicidades del varón que puso *en *__יהוה__ su confianza, y no se ha vuelto a los altivos ni* a *los que se desvían *a la* falsedad!
-**5** Muchas son las maravillas que Tú has hecho, __יהוה__ mi Elohim, y tus pensamientos hacia nosotros;nadie se compara contigo; *los *anunciaré y *los *hablaré,han sido numerosos *para* contar*los.*
+**5** Muchas son las maravillas que Tú has hecho, __יהוה__ mi Elohim, y tus pensamientos hacia nosotros; nadie se compara contigo; *los *anunciaré y *los *hablaré, han sido numerosos *para* contar*los.*
 
-**6** Sacrificio y ofrenda de grano no has deseado; los oídos me abriste[^3788];ofrenda ascendida y ofrenda por el pecado no has requerido.
+**6** Sacrificio y ofrenda de grano no has deseado; los oídos me abriste[^3788]; ofrenda ascendida y ofrenda por el pecado no has requerido.
 **7** Entonces dije: He aquí, vengo; en el rollo del libro está escrito acerca de mí.
 **8** *En *hacer tu voluntad, Elohim mío, me deleito, y tu Torah *está* dentro de mis entrañas.
 
 **9** He llevado la buena noticia de justicia en la gran congregación; he aquí, mis labios no refrené,__יהוה__, Tú *lo *sabes.
-**10** Tu justicia no oculté dentro de mi corazón, tu fidelidad y tu liberación he dicho;no escondí tu bondad y tu verdad a la gran congregación.
+**10** Tu justicia no oculté dentro de mi corazón, tu fidelidad y tu liberación he dicho; no escondí tu bondad y tu verdad a la gran congregación.
 
-**11** Tú, __יהוה__, no refrenes tus compasiones[^3789] de mí;tu bondad y tu verdad continuamente me vigilarán[^3790] \(O, preservarán\).
-**12** Porque me rodearon males, hasta no tienen número; me alcanzaron mis torceduras, y no puedo ver;han sido *más* numerosas que los cabellos de mi cabeza,y mi corazón me ha abandonado.
+**11** Tú, __יהוה__, no refrenes tus compasiones[^3789] de mí; tu bondad y tu verdad continuamente me vigilarán[^3790] \(O, preservarán\).
+**12** Porque me rodearon males, hasta no tienen número; me alcanzaron mis torceduras, y no puedo ver; han sido *más* numerosas que los cabellos de mi cabeza, y mi corazón me ha abandonado.
 
 **13** Sé favorable, __יהוה__, a rescatarme; __יהוה__, apresúrate a ayudarme.
-**14** Se avergonzarán y abochornarán juntos los que buscan mi vida para destruirla;se volverán atrás y serán humillados los que desean mi mal.
+**14** Se avergonzarán y abochornarán juntos los que buscan mi vida para destruirla; se volverán atrás y serán humillados los que desean mi mal.
 **15** Serán desolados por causa de su vergüenza los que me dicen: ¡Ea, ea!
 
-**16** Se gozarán y se alegrarán en ti todos los que te buscan,dirán continuamente: ¡Engrandecido será __יהוה__! los que aman tu liberación.
-**17** Y yo, *estoy* afligido y necesitado, Adonai piensa en mí.Mi ayuda y el que me hace escapar eres Tú; Elohim mío, no te tardes.
+**16** Se gozarán y se alegrarán en ti todos los que te buscan, dirán continuamente: ¡Engrandecido será __יהוה__! los que aman tu liberación.
+**17** Y yo, *estoy* afligido y necesitado, Adonai piensa en mí. Mi ayuda y el que me hace escapar eres Tú; Elohim mío, no te tardes.
 
 *Para el vencedor. Cántico de David.*
 
 **41**
 
 **1** Feliz es el que considera al pobre, en el día malo lo rescatará __יהוה__.
-**2** __יהוה__ lo guardará y hará que viva, será feliz[^3791] en la tierra;y no lo dejarás a la voluntad de sus enemigos.
-**3** __יהוה__ lo sostendrá en el lecho de enfermedad;toda su cama diste vuelta en su enfermedad.
+**2** __יהוה__ lo guardará y hará que viva, será feliz[^3791] en la tierra; y no lo dejarás a la voluntad de sus enemigos.
+**3** __יהוה__ lo sostendrá en el lecho de enfermedad; toda su cama diste vuelta en su enfermedad.
 
 **4** Yo dije: __יהוה__, inclínate con favor a mí; sana mi ser, porque he pecado contra ti.
 **5** Mis enemigos dirán mal para mí: ¿Cuándo morirá y perecerá su nombre?
 **6** Y si *uno* viene a ver*me*, falsedad habla; su corazón reúne iniquidad para sí;*y *saldrá afuera *y* hablará.
-**7** Juntos acerca de mí susurran todos mis aborrecedores,acerca de mí piensan un mal para mí.
+**7** Juntos acerca de mí susurran todos mis aborrecedores, acerca de mí piensan un mal para mí.
 **8** Palabra[^3792] de Belial[^3793] fue derramada sobre él, y el que se acueste, no volverá a levantarse.
-**9** Incluso el hombre de mi shalom[^3794], en quien yo confiaba, el que comía de mi pan,ha engrandecido sobre mí *su* talón.
+**9** Incluso el hombre de mi shalom[^3794], en quien yo confiaba, el que comía de mi pan, ha engrandecido sobre mí *su* talón.
 
-**10** Pero Tú, __יהוה__, inclínate con favor a mí y levántame,y yo les retribuiré.
+**10** Pero Tú, __יהוה__, inclínate con favor a mí y levántame, y yo les retribuiré.
 **11** En esto sé que te deleitas en mí, que no gritará en triunfo mi enemigo contra mí.
 **12** Y yo, en mi integridad me has sostenido, y me afirmarás ante tu rostro para siempre.
 
-**13** ¡Bendito __יהוה__, Elohim de Israel,desde el olam[^3795] hasta el olam! Amén y amén.
+**13** ¡Bendito __יהוה__, Elohim de Israel, desde el olam[^3795] hasta el olam! Amén y amén.
 
 __LIBRO SEGUNDO__
 
@@ -971,34 +971,34 @@ __LIBRO SEGUNDO__
 **1** Como el ciervo anhela por los canales de aguas, así mi garganta anhela por ti, Elohim.
 **2** Mi garganta tiene sed de Elohim, del El vivo; ¿cuándo vendré y me apareceré *ante* el rostro de Elohim?
 **3** Han sido mis lágrimas para mí un pan de día y de noche, cuando me dicen todo el día: ¿Dónde *está* tu Elohim?
-**4** Estas *cosas* recordaré y derramaré sobre mí mi ser,porque pasaré con la multitud, guiándolos hasta la casa de Elohim, con voz de alegría y confesión,una multitud celebrando la fiesta.
+**4** Estas *cosas* recordaré y derramaré sobre mí mi ser, porque pasaré con la multitud, guiándolos hasta la casa de Elohim, con voz de alegría y confesión, una multitud celebrando la fiesta.
 
-**5** ¿*Por *qué te abates, ser mío, y ruges sobre mí?Espera a Elohim, porque aún lo alabaré, ¡*es* la salvación de mi rostro, y mi Elohim[^3796]!
+**5** ¿*Por *qué te abates, ser mío, y ruges sobre mí? Espera a Elohim, porque aún lo alabaré, ¡*es* la salvación de mi rostro, y mi Elohim[^3796]!
 **6** Elohim mío, sobre mí mi ser se abate; por eso te recordaré desde la tierra del Iardén[^3797]y los Jermonim[^3798], desde el monte Mitzar.
 
-**7** Un abismo llama a* otro* abismo a la voz de tus cascadas,todos tus oleajes rompedores y tus olas sobre mí pasaron.
-**8** De día comandará יהוה su bondad, y en la noche su cántico estará conmigo;haré oración al El[^3799] de mi vida.
+**7** Un abismo llama a* otro* abismo a la voz de tus cascadas, todos tus oleajes rompedores y tus olas sobre mí pasaron.
+**8** De día comandará יהוה su bondad, y en la noche su cántico estará conmigo; haré oración al El[^3799] de mi vida.
 **9** Diré a El, mi peña: ¿Por qué me has olvidado? ¿Por qué andaré sombrío, en la opresión del enemigo?
-**10** Como con una matanza en mis huesos, me insultan mis opresores,cuando me dicen todo el día: ¿Dónde *está* tu Elohim?
-**11** ¿*Por *qué te abates, ser mío, y *por *qué ruges sobre mí?Espera a Elohim, porque aún lo alabaré, ¡*es* la salvación de mi rostro, y mi Elohim!
+**10** Como con una matanza en mis huesos, me insultan mis opresores, cuando me dicen todo el día: ¿Dónde *está* tu Elohim?
+**11** ¿*Por *qué te abates, ser mío, y *por *qué ruges sobre mí? Espera a Elohim, porque aún lo alabaré, ¡*es* la salvación de mi rostro, y mi Elohim!
 
 **43**
 
-**1** [^3800]Júzgame, Elohim, y lucha mi pelea[^3801], del gentil no bondadoso,del hombre engañoso e injusto rescátame.
-**2** Porque Tú eres el Elohim de mi fortaleza, ¿por qué me has rechazado?¿Por qué andaré sombrío, en la opresión del enemigo?
+**1** [^3800]Júzgame, Elohim, y lucha mi pelea[^3801], del gentil no bondadoso, del hombre engañoso e injusto rescátame.
+**2** Porque Tú eres el Elohim de mi fortaleza, ¿por qué me has rechazado? ¿Por qué andaré sombrío, en la opresión del enemigo?
 
-**3** Envía tu luz y tu verdad; ellas me guiarán, me harán entrar al monte de tu santidad,y a tus moradas.
-**4** Y entraré al altar de Elohim, a El, la alegría de mi gozo;y te alabaré con el arpa, Elohim, mi Elohim.
+**3** Envía tu luz y tu verdad; ellas me guiarán, me harán entrar al monte de tu santidad, y a tus moradas.
+**4** Y entraré al altar de Elohim, a El, la alegría de mi gozo; y te alabaré con el arpa, Elohim, mi Elohim.
 
-**5** ¿*Por *qué te abates, garganta mía, y *por *qué ruges sobre mí?Espera a Elohim, porque aún lo alabaré, ¡*es* la salvación de mi rostro, y mi Elohim!
+**5** ¿*Por *qué te abates, garganta mía, y *por *qué ruges sobre mí? Espera a Elohim, porque aún lo alabaré, ¡*es* la salvación de mi rostro, y mi Elohim!
 
 *Para el vencedor. De los hijos de Koraj. Masquil.*
 
 **44**
 
 **1** Elohim, con nuestros oídos hemos oído, nuestros padres nos han contadola obra que hiciste en sus días, en los días de la antigüedad.
-**2** Tú *con* tu mano naciones desposeíste, y *los* plantaste a ellos.Hiciste daño a los pueblos, y* los* enviaste a ellos[^3802].
-**3** Porque no por su espada poseyeron la tierra, ni su brazo los salvó,sino tu diestra y tu brazo, y la luz de tu rostro, porque te complaciste en ellos.
+**2** Tú *con* tu mano naciones desposeíste, y *los* plantaste a ellos. Hiciste daño a los pueblos, y* los* enviaste a ellos[^3802].
+**3** Porque no por su espada poseyeron la tierra, ni su brazo los salvó, sino tu diestra y tu brazo, y la luz de tu rostro, porque te complaciste en ellos.
 
 **4** Tú eres mi Rey, Elohim; ordena salvaciones *a* Yaakov.
 **5** En ti empujaremos *a *nuestros opresores; en tu Nombre pisotearemos *a* los que se levan­tan contra nosotros.
@@ -1017,7 +1017,7 @@ __LIBRO SEGUNDO__
 
 **17** Todo esto nos ha venido, pero no te hemos olvidado, ni hemos actuado falsamente con tu pacto.
 **18** No se ha vuelto atrás nuestro corazón, ni se han apartado nuestros pasos de tu senda.
-**19** Porque nos has aplastado en el lugar *donde están* las serpientes,y has cubierto encima de nosotros con la sombra de muerte.
+**19** Porque nos has aplastado en el lugar *donde están* las serpientes, y has cubierto encima de nosotros con la sombra de muerte.
 
 **20** Si nos hubiéramos olvidado del Nombre de nuestro Elohim, y extendido nuestras palmas a un dios extraño,
 **21** ¿no examinaría esto Elohim?, porque Él conoce las cosas ocultas del corazón.
@@ -1032,46 +1032,46 @@ De los hijos de Koraj. Masquil. Canción de amores.*
 
 **45**
 
-**1** Mi corazón hierve palabra buena; al Rey digo yo mis obras;mi lengua es una pluma de rápido escriba
-**2** Te has embellecido *más* que los hijos del hombre, se derramó favor en tus labios;por eso, te ha bendecido Elohim para siempre.
+**1** Mi corazón hierve palabra buena; al Rey digo yo mis obras; mi lengua es una pluma de rápido escriba
+**2** Te has embellecido *más* que los hijos del hombre, se derramó favor en tus labios; por eso, te ha bendecido Elohim para siempre.
 
 **3** Ciñe tu espada sobre el muslo, valiente, *en* tu esplendor y tu ornamento.
 **4** Y *con *tu ornamento prospera, cabalga sobre la palabra de verdad y humildad de justicia, y te enseñará cosas temibles tu diestra.
-**5** Tus flechas son filosas; pueblos debajo de ti caerán,en el corazón de los enemigos del Rey.
+**5** Tus flechas son filosas; pueblos debajo de ti caerán, en el corazón de los enemigos del Rey.
 
 **6** Tu trono, Elohim, *es para* el olam[^3807] y la eternidad; cetro de rectitud es el cetro de tu reino.
 **7** Has amado la justicia y odiado la maldad; por eso, te ha ungido Elohim, tu Elohim,*con* aceite de gozo *más* que *a* tus compañeros.
 **8** Mirra, madera de agar *y *casia *son* todos tus vestidos; desde los palacios de marfil *con *instrumentos de cuerdas te han alegrado.
-**9** Hijas de reyes *hay* entre tus preciosas; se ha parado la reina a tu diestra,con oro de Ofir.
+**9** Hijas de reyes *hay* entre tus preciosas; se ha parado la reina a tu diestra, con oro de Ofir.
 
 **10** Escucha, hija, mira e inclina tu oído; y olvida *a *tu pueblo y la casa de tu padre.
 **11** Y deseará el rey tu hermosura, porque él es tu amo, inclínate a él.
 **12** Y la hija de Tzor *vendrá* con un presente, *ante* tu rostro rogarán los ricos del pueblo.
 
 **13** Toda gloriosa *está* la hija del rey dentro; recamado de oro *está* su vestido.
-**14** En vestidos bordados[^3808] será conducida al rey;las vírgenes *van* detrás de ella, sus compañeras, son traídas a ti.
+**14** En vestidos bordados[^3808] será conducida al rey; las vírgenes *van* detrás de ella, sus compañeras, son traídas a ti.
 **15** Serán conducidas con alegrías y regocijo, entrarán en el palacio del rey.
 
 **16** En lugar de tus padres estarán tus hijos, los pondrás por príncipes en toda la tierra.
-**17** Será recordado tu Nombre en toda generación y generación;por eso, los pueblos te alabarán para el olam y la eternidad.
+**17** Será recordado tu Nombre en toda generación y generación; por eso, los pueblos te alabarán para el olam y la eternidad.
 
 *Para el vencedor. De los hijos de Koraj.Al Alamot[^3809]. Cántico.*
 
 **46**
 
 **1** Elohim es nuestro refugio y fortaleza, ayuda en las estrecheces hallaremos sobremanera.
-**2** Por eso, no temeremos cuando sufra cambios la tierra,y cuando se deslicen los montes en el corazón de los mares;
+**2** Por eso, no temeremos cuando sufra cambios la tierra, y cuando se deslicen los montes en el corazón de los mares;
 **3** *cuando *rujan y hagan espuma sus aguas, *cuando* tiemblen los montes en su orgullo. *Selah*[^3810]*.*
 
-**4** *Hay* un río cuyos canales alegrarán la ciudad de Elohim,la santidad de las moradas de Elyón.
+**4** *Hay* un río cuyos canales alegrarán la ciudad de Elohim, la santidad de las moradas de Elyón.
 **5** Elohim *está* en medio de ella, no será sacudida; la ayudará Elohim al volver la mañana.
-**6** Rugieron las naciones, se tambalearon los reinos;dio Él su voz, se derritió la tierra.
+**6** Rugieron las naciones, se tambalearon los reinos; dio Él su voz, se derritió la tierra.
 **7** __יהוה__ Tzebaot *está* con nosotros; nuestro alto refugio, Elohim de Yaakov. *Selah.*
 
 **8** ¡Vengan! Contemplen las obras de __יהוה__, que puso desolaciones en la tierra;
-**9** quien hace cesar las guerras hasta el final de la tierra.Romperá el arco, partirá la lanza, los carros quemará en el fuego.
+**9** quien hace cesar las guerras hasta el final de la tierra. Romperá el arco, partirá la lanza, los carros quemará en el fuego.
 
-**10** Dejen de lado *sus intentos*[^3811] y sepan que Yo soy Elohim;exaltado seré en las naciones, exaltado seré en la tierra.
+**10** Dejen de lado *sus intentos*[^3811] y sepan que Yo soy Elohim; exaltado seré en las naciones, exaltado seré en la tierra.
 **11** __יהוה__ Tzebaot *está* con nosotros; nuestro alto refugio, Elohim de Yaakov. *Selah.*
 
 *Para el vencedor. De los hijos de Koraj. Cántico.*
@@ -1083,11 +1083,11 @@ De los hijos de Koraj. Masquil. Canción de amores.*
 **3** Él guiará a los pueblos debajo de nosotros, y naciones debajo de nuestros pies.
 **4** Escogerá para nosotros nuestra heredad, la majestad de Yaakov, *a *quien Él ama. *Selah*[^3813]*.*
 
-**5** Ha ascendido Elohim con t’ruáh[^3814], __יהוה__, con voz de shofar[^3815].
+**5** Ha ascendido Elohim con t'ruáh[^3814], __יהוה__, con voz de shofar[^3815].
 **6** ¡Canten a Elohim, canten! ¡Canten a nuestro Rey, canten!
 **7** Porque Rey de toda la tierra es Elohim. ¡Canten *con* entendimiento[^3816]!
 **8** Reina Elohim sobre las naciones; Elohim se sienta sobre el trono de su santidad.
-**9** Los generosos de los pueblos se han reunido, pueblo del Elohim de Abraham;porque de Elohim son los escudos de la tierra. Él es muy exaltado.
+**9** Los generosos de los pueblos se han reunido, pueblo del Elohim de Abraham; porque de Elohim son los escudos de la tierra. Él es muy exaltado.
 
 *Una canción. Cántico de los hijos de Koraj.*
 
@@ -1101,21 +1101,21 @@ De los hijos de Koraj. Masquil. Canción de amores.*
 **5** Ellos vieron, así se asombraron; se aterrorizaron y se apresuraron a huir alarmados.
 **6** Un temblor se apoderó de ellos allí, retorcimiento como la que da a luz.
 **7** Con un viento del este Tú destrozas las naves de Tarshísh.
-**8** Como *lo *hemos oído, así *lo* hemos visto en la ciudad de __יהוה__ Tzebaot,en la ciudad de nuestro Elohim.Elohim la afirmará hasta siempre. *Selah*[^3817]*.*
+**8** Como *lo *hemos oído, así *lo* hemos visto en la ciudad de __יהוה__ Tzebaot, en la ciudad de nuestro Elohim. Elohim la afirmará hasta siempre. *Selah*[^3817]*.*
 
-**9** Hemos recordado[^3818], Elohim, tu bondad,en medio de tu Hejal[^3819].
+**9** Hemos recordado[^3818], Elohim, tu bondad, en medio de tu Hejal[^3819].
 **10** Conforme a tu Nombre, Elohim, así es tu alabanza sobre los confines de la tierra; de justicia se ha llenado tu diestra.
 **11** Se alegrará el monte Tzión, se regocijarán las hijas de Iehudáha causa de tus juicios.
 **12** Caminen alrededor de Tzión, y rodéenla; cuenten sus torres;
-**13** pongan sus corazones en sus murallas, pasen entre[^3820] sus palacios,para que *lo* cuenten a la siguiente generación.
-**14** Porque Este es Elohim, nuestro Elohim siempre y eternamente;Él nos guiará sobre la muerte[^3821].
+**13** pongan sus corazones en sus murallas, pasen entre[^3820] sus palacios, para que *lo* cuenten a la siguiente generación.
+**14** Porque Este es Elohim, nuestro Elohim siempre y eternamente; Él nos guiará sobre la muerte[^3821].
 
 *Para el vencedor. De los hijos de Koraj. Cántico.*
 
 **49**
 
 **1** ¡Escuchen esto todos los pueblos!; ¡den oído todos los habitantes del mundo!,
-**2** tanto los hijos del hombre como los hijos del varón,juntos, rico y pobre.
+**2** tanto los hijos del hombre como los hijos del varón, juntos, rico y pobre.
 **3** Mi boca hablará sabiduría, y la meditación de mi corazón, entendimiento.
 **4** Inclinaré al proverbio mi oído, abriré con el arpa mi enigma.
 
@@ -1125,14 +1125,14 @@ De los hijos de Koraj. Masquil. Canción de amores.*
 **8** y costosa es la redención de la vida de ellos, y debe detenerse *de intentar* para siempre,
 **9** y vivirá aún para siempre, no verá la destrucción[^3823].
 
-**10** Porque él ve *que* los sabios morirán; juntos, el indisciplinado y el quemado[^3824], perecerán,y dejarán a otros su riqueza.
-**11** El interior de ellos, sus casas *quedarán *para el olam[^3825],sus moradas, por generación y generación; llamaron con sus nombres a sus tierras.
+**10** Porque él ve *que* los sabios morirán; juntos, el indisciplinado y el quemado[^3824], perecerán, y dejarán a otros su riqueza.
+**11** El interior de ellos, sus casas *quedarán *para el olam[^3825], sus moradas, por generación y generación; llamaron con sus nombres a sus tierras.
 **12** Mas el hombre, en* su *honor, no permanecerá; él se compara a los animales que perecen.
 
 **13** Este es el camino de ellos, su locura, y *los que son *después de ellos en sus bocas se complacerán. *Selah*[^3826]*.*
 
-**14** Como ovejas para el Sheol fueron puestos, la muerte los pastoreará,y gobernarán sobre ellos los rectos por la mañana; y su forma *será* para que* la* consuma el Sheol,desde su habitación.
-**15** Sin embargo, Elohim redimirá mi ser de la mano del Sheol,porque Él me recibirá. *Selah.*
+**14** Como ovejas para el Sheol fueron puestos, la muerte los pastoreará, y gobernarán sobre ellos los rectos por la mañana; y su forma *será* para que* la* consuma el Sheol, desde su habitación.
+**15** Sin embargo, Elohim redimirá mi ser de la mano del Sheol, porque Él me recibirá. *Selah.*
 
 **16** No temas cuando se enriquece un hombre, cuando aumenta la gloria de su casa;
 **17** Porque en su muerte no se llevará nada, no descenderá tras él su gloria.
@@ -1144,14 +1144,14 @@ De los hijos de Koraj. Masquil. Canción de amores.*
 
 **50**
 
-**1** El Poderoso[^3827], Elohim, __יהוה__, ha hablado,y llamó *a *la tierra desde el amanecer del sol hasta su puesta.
+**1** El Poderoso[^3827], Elohim, __יהוה__, ha hablado, y llamó *a *la tierra desde el amanecer del sol hasta su puesta.
 **2** Desde Tzión, plenitud de hermosura, Elohim ha brillado.
-**3** Vendrá nuestro Elohim y no callará; fuego delante de Él consumirá,y a su alrededor fue muy tempestuoso.
+**3** Vendrá nuestro Elohim y no callará; fuego delante de Él consumirá, y a su alrededor fue muy tempestuoso.
 **4** Llamará a los cielos desde arriba, y a la tierra para juzgar *a* su pueblo:
 **5** ¡Reúnanme *a* mis benevolentes, los que han hecho[^3828] mi pactosobre sacrificio.
 **6** Y darán a conocer los cielos su justicia, porque Elohim es el Juez. *Selah*[^3829]*.*
 
-**7** Escucha, pueblo mío, y hablaré, Israel, y testificaré contra ti.Elohim, tu Elohim, soy Yo.
+**7** Escucha, pueblo mío, y hablaré, Israel, y testificaré contra ti. Elohim, tu Elohim, soy Yo.
 **8** No te reprenderé por tus sacrificios y tus ofrendas ascendidas, *que están* delante de Mí continuamente.
 **9** No tomaré toro de tu casa, *ni* machos cabríos de tus apriscos.
 **10** Porque mío es todo animal del bosque, las bestias sobre mil montes.
@@ -1161,29 +1161,29 @@ De los hijos de Koraj. Masquil. Canción de amores.*
 **14** Sacrifica a Elohim confesión, y paga a Elyón[^3830] tus votos;
 **15** y llámame en el día de estrechez; y te rescataré, y tú me honrarás.
 
-**16** Pero al condenado ha dicho Elohim:¿Qué tienes tú que narrar mis decretos y tomar mi pacto en tu boca?
+**16** Pero al condenado ha dicho Elohim: ¿Qué tienes tú que narrar mis decretos y tomar mi pacto en tu boca?
 **17** Y tú aborreces la disciplina, y echas mis palabras detrás de ti.
 **18** Si ves un ladrón, te complaces con él[^3831], y con adúlteros es tu parte.
 **19** Tu boca has enviado en el mal, y tu lengua trama engaño.
 **20** Te sientas, contra tu hermano hablas; contra el hijo de tu madre das destrucción.
-**21** Estas *cosas* has hecho, y Yo he callado; imaginaste que de cierto Yo sería como tú.Te reprenderé, y *las* pondré en orden a tus ojos.
+**21** Estas *cosas* has hecho, y Yo he callado; imaginaste que de cierto Yo sería como tú. Te reprenderé, y *las* pondré en orden a tus ojos.
 
-**22** Entiendan, por favor, esto, los que se olvidan de Eloha,no sea que *los* despedace, y no haya quien rescate.
-**23** El que sacrifica confesión me honrará;y *al *que establece* su* camino, le haré ver la salvación de Elohim.
+**22** Entiendan, por favor, esto, los que se olvidan de Eloha, no sea que *los* despedace, y no haya quien rescate.
+**23** El que sacrifica confesión me honrará; y *al *que establece* su* camino, le haré ver la salvación de Elohim.
 
 *Para el vencedor. Cántico de David, cuando fue a él
 Natán el profeta, después de haber entrado en Batsheva.*
 
 **51**
 
-**1** Inclínate con favor a mí, Elohim, conforme a tu benevolencia;conforme a la multitud de tus compasiones[^3832], limpia mis transgresiones.
+**1** Inclínate con favor a mí, Elohim, conforme a tu benevolencia; conforme a la multitud de tus compasiones[^3832], limpia mis transgresiones.
 **2** Mucho lávame de mi torcedura, y de mi pecado purifícame.
 **3** Porque mis transgresiones yo conozco, y mi pecado está delante de mí continuamente.
-**4** A ti, sólo a ti *te* he fallado, y lo malo he hecho a tus ojos,a fin de que estés justificado en tu hablar, limpio en tu juzgar.
+**4** A ti, sólo a ti *te* he fallado, y lo malo he hecho a tus ojos, a fin de que estés justificado en tu hablar, limpio en tu juzgar.
 
 **5** He aquí, en iniquidad fui dado a luz, y en pecado se excitó mi madre.
-**6** He aquí, la verdad deseas, en los riñonesy en lo secreto me harás saber sabiduría.
-**7** Limpia mi pecado con orégano, y seré limpio;y lávame, y seré blanco *más* que la nieve.
+**6** He aquí, la verdad deseas, en los riñones y en lo secreto me harás saber sabiduría.
+**7** Limpia mi pecado con orégano, y seré limpio; y lávame, y seré blanco *más* que la nieve.
 **8** Hazme oír gozo y alegría, se regocijarán los huesos que has aplastado.
 **9** Oculta tu rostro de mis pecados, y todas mis iniquidades limpia.
 
@@ -1193,14 +1193,14 @@ Natán el profeta, después de haber entrado en Batsheva.*
 **12** Haz volver a mí el gozo de tu salvación, y un ánimo generoso me sostenga.
 **13** Enseñaré a los transgresores tu camino, y los pecadores volverán a ti.
 
-**14** Líbrame de sangres, Elohim, Elohim de mi liberación;gritará de alegría mi lengua *de* tu justicia.
+**14** Líbrame de sangres, Elohim, Elohim de mi liberación; gritará de alegría mi lengua *de* tu justicia.
 **15** Adonai, abre mis labios, y mi boca dará a conocer tu alabanza.
 
-**16** Porque no deseas sacrificio, y yo lo podría dar;ofrenda ascendida no quieres.
+**16** Porque no deseas sacrificio, y yo lo podría dar; ofrenda ascendida no quieres.
 **17** Los sacrificios de Elohim son el ánimo quebrantado;*al *corazón quebrantado y aplastado, Elohim, no despreciarás.
 
 **18** Haz bien con tu reconciliación a Tzión; edifica los muros de Yerushaláim.
-**19** Entonces desearás sacrificios de justicia, ofrenda ascendida y lo entero;entonces serán subidos sobre tu altar frutos.
+**19** Entonces desearás sacrificios de justicia, ofrenda ascendida y lo entero; entonces serán subidos sobre tu altar frutos.
 
 *Para el vencedor. Masquil de David, cuando fue Doeg el edomí e informó a Shaúl, y le dijo: Ha entrado David a la casa de Ajimélej.*
 
@@ -1211,18 +1211,18 @@ Natán el profeta, después de haber entrado en Batsheva.*
 **3** Has amado el mal *más* que el bien, la mentira *más* que hablar justicia. *Selah*[^3835]*.*
 **4** Has amado todas las palabras devoradoras, ¡lengua de engaño!
 
-**5** Además, El te derribará para siempre; te arrebatará y te arrancará de la tienda,y te desarraigará de la tierra de los vivos. *Selah.*
+**5** Además, El te derribará para siempre; te arrebatará y te arrancará de la tienda, y te desarraigará de la tierra de los vivos. *Selah.*
 **6** Y verán los justificados y temerán, y acerca de él se reirán:
-**7** ¡He aquí el poderoso que no puso *a* Elohim *como* su fortaleza,y *que* ha confiado en la multitud de su riqueza, y *que* se ha fortalecido en su destrucción[^3836].
+**7** ¡He aquí el poderoso que no puso *a* Elohim *como* su fortaleza, y *que* ha confiado en la multitud de su riqueza, y *que* se ha fortalecido en su destrucción[^3836].
 
-**8** Pero Yo soy como olivo verde en la casa de Elohim;he confiado en la bondad de Elohim siempre y eternamente.
+**8** Pero Yo soy como olivo verde en la casa de Elohim; he confiado en la bondad de Elohim siempre y eternamente.
 **9** Te confesaré para siempre, porque Tú hiciste, y esperaré *en *tu Nombre porque es bueno, delante de tus benevolentes.
 
 *Para el vencedor. Sobre Majalat[^3837].Masquil de David.*
 
 **53**
 
-**1** Dijo el marchito[^3838] en su cora­zón: No hay Elohim.Se han corrompido, han hecho abominaciones de injusticia; no hay quien haga el bien.
+**1** Dijo el marchito[^3838] en su cora­zón: No hay Elohim. Se han corrompido, han hecho abominaciones de injusticia; no hay quien haga el bien.
 **2** Elohim desde los cielos ha mirado sobre los hijos de Adampara ver si hay *alguien* prudente, que busque a Elohim.
 **3** Todo se desvió, juntos se han infectado; no hay hacedor del bien,
 no hay aun uno.
@@ -1230,7 +1230,7 @@ no hay aun uno.
 **4** ¿No conocen todos los hacedores de vacuidad, devoradores de mi pueblo *como si *comieran pan?,*A *Elohim no llamaron.
 **5** Allí temerán *con *temor, *donde* no había temor, porque Elohim ha esparcido los huesos del que acampaba contra ti; *los* avergonzaste, porque Elohim los despreció.
 
-**6** ¡Quién diera desde Tzión la salvación de Israel! Cuando retorne Elohim el cautiverio de su pueblo,se regocijará Yaakov, se alegrará Israel.
+**6** ¡Quién diera desde Tzión la salvación de Israel! Cuando retorne Elohim el cautiverio de su pueblo, se regocijará Yaakov, se alegrará Israel.
 
 *Para el vencedor; con instru­mentos de cuerda. Masquil de David, cuando vinieron los zifim[^3839] y dijeron a Shaúl: ¿No está David escondido junto a nosotros?*
 
@@ -1238,7 +1238,7 @@ no hay aun uno.
 
 **1** Elohim, en tu Nombre, ¡sálvame!, en tu poder, ¡júzgame!
 **2** Elohim, escucha mi oración, da oído a los dichos de mi boca.
-**3** Porque extraños se levantaron contra mí, y despiadados han buscado mi vida;no han puesto *a* Elohim delante de sí. *Selah*[^3840]*.*
+**3** Porque extraños se levantaron contra mí, y despiadados han buscado mi vida; no han puesto *a* Elohim delante de sí. *Selah*[^3840]*.*
 
 **4** He aquí, Elohim es mi ayudador; Adonai *está* con los que sostienen mi ser.
 **5** Volverá el mal a mis opresores, en tu verdad extermínalos.
@@ -1251,8 +1251,8 @@ no hay aun uno.
 **55**
 
 **1** Escucha, Elohim, mi tefilah[^3842], y no te ocultes de mi súplica.
-**2** Atiéndeme y respóndeme; inquieto estoy en mi reflexión[^3843],y estoy conturbado[^3844],
-**3** debido a la voz del enemigo, por causa de la opresión del condenado;porque han hecho caer sobre mí vacuidad,y con ira me persiguen hostilmente[^3845].
+**2** Atiéndeme y respóndeme; inquieto estoy en mi reflexión[^3843], y estoy conturbado[^3844],
+**3** debido a la voz del enemigo, por causa de la opresión del condenado; porque han hecho caer sobre mí vacuidad, y con ira me persiguen hostilmente[^3845].
 
 **4** Mi corazón se retuerce dentro de mí, y los terrores de la muerte cayeron sobre mí.
 **5** Temor y temblor vinieron en mí, y me ha cubierto el estremecimiento.
@@ -1264,21 +1264,21 @@ no hay aun uno.
 **10** Día y noche la rodean sobre sus muros; vanidad y aflicción *hay* en medio de ella.
 **11** Destrucción *hay* en medio de ella, y no se apartan de sus calles[^3847]la opresión y el engaño.
 
-**12** Porque no es un enemigo el que me insulta, *sino* lo soportaría;ni es uno que me odia el que sobre mí se ha engrandecido,*sino* me ocultaría de él;
-**13** pero *fuiste *tú, un hombre a quien tengo por igual[^3848],mi amigo, mi conocido,
+**12** Porque no es un enemigo el que me insulta, *sino* lo soportaría; ni es uno que me odia el que sobre mí se ha engrandecido,*sino* me ocultaría de él;
+**13** pero *fuiste *tú, un hombre a quien tengo por igual[^3848], mi amigo, mi conocido,
 **14** que hacíamos juntos una dulce conversación íntima,*que* en la casa de Elohim andábamos con la multitud.
-**15** Hará traer muerte sobre ellos[^3849], descenderán vivos al Sheol,porque maldades *hay* en sus moradas, en medio de ellos.
+**15** Hará traer muerte sobre ellos[^3849], descenderán vivos al Sheol, porque maldades *hay* en sus moradas, en medio de ellos.
 
 **16** *Y* yo, a Elohim llamaré, y __יהוה__ me salvará.
 **17** Tarde, mañana y mediodía reflexionaré y meditaré, y Él escuchará mi voz.
-**18** Redimió en plenitud[^3850] mi ser de la guerra *que hay* hacia mí,pues con muchos fueron contra mí.
+**18** Redimió en plenitud[^3850] mi ser de la guerra *que hay* hacia mí, pues con muchos fueron contra mí.
 
 **19** Escuchará El[^3851], y los afligirá, y el que permanece *desde* la antigüedad, *Selah,*porque no hay cambios en ellos ni temen a Elohim.
 **20** Aquel ha enviado sus manos contra los que estaban en shalom con él, ha profanado su acuerdo[^3852].
-**21** *Más* tiernas *que* la mantequilla *eran las palabras de *su boca,pero guerra *había en* su corazón; *más* suaves que el aceite *eran *sus palabras,pero ellas *eran* espadas desenvainadas.
+**21** *Más* tiernas *que* la mantequilla *eran las palabras de *su boca, pero guerra *había en* su corazón; *más* suaves que el aceite *eran *sus palabras, pero ellas *eran* espadas desenvainadas.
 
-**22** Echa sobre __יהוה__ *todo* lo que te es dado, y Él te sustentará;Él nunca dará tambaleo al justo.
-**23** Pero Tú, Elohim, los harás bajar al pozo de destrucción;los hombres de sangres y engaño no llegarán a la mitad *de la duración *de sus días;pero yo confiaré en ti.
+**22** Echa sobre __יהוה__ *todo* lo que te es dado, y Él te sustentará; Él nunca dará tambaleo al justo.
+**23** Pero Tú, Elohim, los harás bajar al pozo de destrucción; los hombres de sangres y engaño no llegarán a la mitad *de la duración *de sus días; pero yo confiaré en ti.
 
 *Para el vencedor; sobre la paloma muda en las lejanías.
 De David, un Mijtam[^3853], cuando lo capturaron los pelishtim[^3854] en Gat.*
@@ -4925,7 +4925,7 @@ a los ojos de los gentiles reveló su justificación.
 
 han visto todos los insignificantes de la tierra la sal­vación de nuestro Elohim.
 
-**4** ¡Hagan t’ruáh para יהוה, toda la tierra;
+**4** ¡Hagan t'ruáh para יהוה, toda la tierra;
 
 estallen y griten de alegría, y canten!
 
@@ -4935,7 +4935,7 @@ con lira y voz de melodía.
 
 **6** Con trompetas y voz de shofar,
 
-hagan t’ruáh delante del Rey, יהוה.
+hagan t'ruáh delante del Rey, יהוה.
 
 **7** Tronará el mar y su llenura,
 
@@ -6277,7 +6277,7 @@ por lo tanto, alzará la cabeza.
 
 **111**
 
-**1** ¡Alaben a Yah \(heb.: *Halelu\-Yah*\)!
+**1** ¡Alaben a Yah \(heb.: *HaleluYah*\)!
 
 Confesaré *a* יהוה con todo el corazón,
 
@@ -6325,7 +6325,7 @@ su alabanza permanece de pie para siempre.
 
 **112**
 
-**1** ¡Alaben a Yah \(heb.: *Halelu\-Yah*\)!
+**1** ¡Alaben a Yah \(heb.: *HaleluYah*\)!
 
 Feliz el hombre que teme a יהוה,
 
@@ -6371,7 +6371,7 @@ el deseo de los malvados perecerá.
 
 **113**
 
-**1** ¡Alaben a Yah \(heb.: *Halelu\-Yah*\)!
+**1** ¡Alaben a Yah \(heb.: *HaleluYah*\)!
 
 ¡Alaben, siervos de יהוה!,
 
@@ -6723,7 +6723,7 @@ es sobresaliente a nuestros ojos.
 
 regocijémonos y alegrémonos en él.
 
-**25** Te ruego, יהוה: ¡Hoshia\-na \(Salva, por favor\)!
+**25** Te ruego, יהוה: ¡Hoshiana \(Salva, por favor\)!
 
 Te ruego, יהוה: ¡Da éxito, por favor!
 
@@ -7479,7 +7479,7 @@ __176* *__Me he extraviado como cordero perdido,
 
 porque tus mandamientos no he olvidado.
 
-*Shir hama’alot \(Cántico de ascensiones\).*
+*Shir hama'alot \(Cántico de ascensiones\).*
 
 **120**
 
@@ -7509,7 +7509,7 @@ moro con las tiendas de Kedar!
 
 ellos *están *para la guerra.
 
-*Shir lama’alot \(Cántico para ascensiones\).*
+*Shir lama'alot \(Cántico para ascensiones\).*
 
 **121**
 
@@ -7545,7 +7545,7 @@ guardará tu ser \(heb.: *néfesh*\).
 
 desde ahora y hasta siempre.
 
-*Shir hama’alot \(Cántico de ascensiones\); *
+*Shir hama'alot \(Cántico de ascensiones\); *
 
 *de David.*
 
@@ -7591,7 +7591,7 @@ nuestro Elohim,
 
 buscaré el bien para ti.
 
-*Shir hama’alot \(Cántico de ascensiones\).*
+*Shir hama'alot \(Cántico de ascensiones\).*
 
 **123**
 
@@ -7619,7 +7619,7 @@ de la burla de los que están a gusto,
 
 del desprecio de los altivos.
 
-*Shir hama’alot \(Cántico de ascensiones\); *
+*Shir hama'alot \(Cántico de ascensiones\); *
 
 *de David.*
 
@@ -7655,7 +7655,7 @@ la trampa se rompió y nosotros escapamos.
 
 Hacedor de los cielos y la tierra.
 
-*Shir hama’alot \(Cántico de ascensiones\).*
+*Shir hama'alot \(Cántico de ascensiones\).*
 
 **125**
 
@@ -7683,7 +7683,7 @@ los llevará יהוה con los hacedores de va­cuidad.
 
 ¡Plenitud *haya* sobre Israel!
 
-*Shir hama’alot \(Cántico de ascensiones\).*
+*Shir hama'alot \(Cántico de ascensiones\).*
 
 **126**
 
@@ -7719,7 +7719,7 @@ el esparcimiento de la semilla,
 
 el que lleva sus gavillas.
 
-*Shir hama’alot \(Cántico de ascensiones\); *
+*Shir hama'alot \(Cántico de ascensiones\); *
 
 *de Shelomóh.*
 
@@ -7755,7 +7755,7 @@ no serán ellos avergonzados
 
 cuando hablen con los enemigos en la puerta.
 
-*Shir hama’alot \(Cántico de ascensiones\).*
+*Shir hama'alot \(Cántico de ascensiones\).*
 
 **128**
 
@@ -7787,7 +7787,7 @@ veas la bondad de Yerushaláim todos los días de tu vida,
 
 ¡Plenitud *haya* sobre Israel!
 
-*Shir hama’alot \(Cántico de ascensiones\).*
+*Shir hama'alot \(Cántico de ascensiones\).*
 
 **129**
 
@@ -7825,7 +7825,7 @@ La bendición de יהוה *sea* a ustedes,
 
 los bendecimos en Nombre de יהוה.
 
-*Shir hama’alot \(Cántico de ascensiones\).*
+*Shir hama'alot \(Cántico de ascensiones\).*
 
 **130**
 
@@ -7861,7 +7861,7 @@ y con Él, mucha redención.
 
 de todas sus torceduras.
 
-*Shir hama’alot \(Cántico de ascensiones\); *
+*Shir hama'alot \(Cántico de ascensiones\); *
 
 *de David.*
 
@@ -7883,7 +7883,7 @@ como destetado *está* sobre mí mi ser.
 
 desde ahora y hasta siempre.
 
-*Shir hama’alot \(Cántico de ascensiones\).*
+*Shir hama'alot \(Cántico de ascensiones\).*
 
 **132**
 
@@ -7963,7 +7963,7 @@ he preparado una lámpara para mi ungido.
 
 y sobre él florecerá su corona \(O, consagración\).
 
-*Shir hama’alot \(Cántico de ascensiones\); *
+*Shir hama'alot \(Cántico de ascensiones\); *
 
 *de David.*
 
@@ -7987,7 +7987,7 @@ porque allí mandó יהוה la bendición,
 
 vida hasta siempre.
 
-*Shir hama’alot \(Cántico de ascensiones\).*
+*Shir hama'alot \(Cántico de ascensiones\).*
 
 **134**
 
@@ -8015,7 +8015,7 @@ Alaben el Nombre de יהוה,
 
 en los patios de la casa de nuestro Elohim.
 
-**3** ¡Alaben a Yah \(heb.: *Halelu\-Yah*\)!,
+**3** ¡Alaben a Yah \(heb.: *HaleluYah*\)!,
 
 porque bueno es יהוה;
 
@@ -8885,7 +8885,7 @@ tu Elohim, Tzión, por generación y generación.
 
 **147**
 
-**1** ¡Alaben a Yah \(heb.: *Halelu\-Yah*\)!
+**1** ¡Alaben a Yah \(heb.: *HaleluYah*\)!
 
 Porque bueno es cantar *a *nuestro Elohim,
 
@@ -8975,7 +8975,7 @@ y sus juicios, ellas no los conocerán.
 
 **148**
 
-**1** ¡Alaben a Yah \(heb.: *Halelu\-Yah*\)!
+**1** ¡Alaben a Yah \(heb.: *HaleluYah*\)!
 
 ¡Alaben a יהוה desde los cielos!
 
@@ -9041,7 +9041,7 @@ para los hijos de Israel, pueblo cercano a Él.
 
 **149**
 
-**1** ¡Alaben a Yah \(heb.: *Halelu\-Yah*\)!
+**1** ¡Alaben a Yah \(heb.: *HaleluYah*\)!
 
 Canten a יהוה una canción nueva,
 
@@ -9083,7 +9083,7 @@ adorno es ello para todos sus benevolentes.
 
 **150**
 
-**1** ¡Alaben a Yah \(heb.: *Halelu\-Yah*\)!
+**1** ¡Alaben a Yah \(heb.: *HaleluYah*\)!
 
 ¡Alaben a El en su Santidad!
 
@@ -9183,7 +9183,7 @@ adorno es ello para todos sus benevolentes.
 [^3719]: Cierva del Alba. Un título Mesiánico.
 [^3720]: Poderoso mío.
 [^3721]: Santo, apartado, distinguido.
-[^3722]: O sea, el *‘coccus ilisis’, *insecto del cual se extraía un tinte carmesí.
+[^3722]: O sea, el *‘coccus ilisis', *insecto del cual se extraía un tinte carmesí.
 [^3723]: Poderoso.
 [^3724]: Así en los Manuscritos del Mar Muerto, en el T.M.: *como león.*
 [^3725]: Piedrecita lanzada para tomar decisiones.
@@ -9285,7 +9285,7 @@ adorno es ello para todos sus benevolentes.
 [^3821]: La versión gr. dice: *hasta siempre.*
 [^3822]: O, *cobertura. *Heb.: *Kófer.*
 [^3823]: O, *el foso.*
-[^3824]: O, *estúpido. *Heb.: *Ba’ar.*
+[^3824]: O, *estúpido. *Heb.: *Ba'ar.*
 [^3825]: Tiempo oculto, solo conocido por Elohim. La versión gr. dice: *Su tumba es su casa para siempre.*
 [^3826]: Eternamente. O, *firme. *Así en el resto del cap.
 [^3827]: Heb.: *El.*
@@ -9295,7 +9295,7 @@ adorno es ello para todos sus benevolentes.
 [^3831]: La versión gr. y varias versiones antiguas dicen: *corres con él.*
 [^3832]: O, *amor entrañable.*
 [^3833]: Poderoso.
-[^3834]: Léase ‘día’ como un título mesiánico.
+[^3834]: Léase ‘día' como un título mesiánico.
 [^3835]: Eternamente. O, *firme. *Así también en vers. 6.
 [^3836]: O, *su deseo.*
 [^3837]: Significado dudoso, probablemente: *cántico calmado; *o, *tonada triste.*
@@ -9333,4 +9333,4 @@ adorno es ello para todos sus benevolentes.
 [^3869]: Santo, apartado, distinguido.
 [^3870]: O, *langosta. *U, *hormiga. *O, *escarcha. *Significado incierto.
 [^3871]: Otra lectura posible es: *mensajeros de cosas malas.*
-[^3872]: O sea, *todo el que haya recibido Rúaj Ha’Kódesh en Yeshúa el Mesías.*
+[^3872]: O sea, *todo el que haya recibido Rúaj Ha'Kódesh en Yeshúa el Mesías.*

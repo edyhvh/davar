@@ -29,13 +29,13 @@ Tefilah de Yonáh
 **1** E hizo tefilah[^3438] Yonáh a יהוה su Elohim desde las entrañas del pez:
 **2** Y dijo:
 
-**3** Y me echaste a lo profundo, en el corazón de los mares,y la fluente[^3439] me rodeó; todos tus oleajes rompedores y tus olas sobre mí pasaron.
+**3** Y me echaste a lo profundo, en el corazón de los mares, y la fluente[^3439] me rodeó; todos tus oleajes rompedores y tus olas sobre mí pasaron.
 **4** Y yo dije: Fui expulsado de frente a tus ojos; sin embargo volveré a mirar hacia el Hejal[^3440] de tu santidad.
-**5** Me rodearon las aguas hasta la garganta[^3441], el abismo me rodeó,el alga[^3442] se enredó a mi cabeza.
+**5** Me rodearon las aguas hasta la garganta[^3441], el abismo me rodeó, el alga[^3442] se enredó a mi cabeza.
 **6** A los confines de los montes he descendido, la tierra puso sus barras detrás de mí para siempre; pero has hecho subir del hoyo mi vida, יהוה mi Elohim.
-**7** Cuando se envolvió en oscuridad sobre mí mi ser,a יהוה recordé; y subirá a ti mi tefilah,al Hejal de tu santidad.
+**7** Cuando se envolvió en oscuridad sobre mí mi ser, a יהוה recordé; y subirá a ti mi tefilah, al Hejal de tu santidad.
 **8** Los que prestan atención a vapores falsos su bondad abandonan;
-**9** pero yo, con voz de confesión sacrificaré a ti.Lo que prometí, pagaré. La salvación es de יהוה.
+**9** pero yo, con voz de confesión sacrificaré a ti. Lo que prometí, pagaré. La salvación es de יהוה.
 
 **10** Y habló יהוה al pez, y vomitó a Yonáh en tierra seca.
 
@@ -63,7 +63,7 @@ El descontento de Yonáh reprendido
 **3** Y ahora, יהוה, toma por favor mi aliento de mí, porque mejor es mi muerte que mi vida.
 **4** Y dijo יהוה: ¿Haces bien en enfurecerte?
 **5** Y salió Yonáh de la ciudad y se sentó al este de la ciudad; e hizo para sí allí un cobertizo[^3448] y se sentó debajo de él en la sombra, hasta que pudiera ver qué sucede­ría en la ciudad.
-**6** Y dispuso יהוה Elohim un ricino[^3449] y subió por encima de Yonáh para ser sombra sobre su cabeza y lo librara de su mal. Y se alegró Yonáh por el ricino con gran alegría.7
+**6** Y dispuso יהוה Elohim un ricino[^3449] y subió por encima de Yonáh para ser sombra sobre su cabeza y lo librara de su mal. Y se alegró Yonáh por el ricino con gran alegría. 7
 Pero dispuso Elohim un gusano al subir el amanecer del día siguiente, e hirió al ricino, y se secó.
 **8** Y sucedió que cuando brilló el sol, dispuso Elohim un viento del este silencioso, e hirió el sol sobre la cabeza de Yonáh, y desfalleció[^3450], y pidió a su ser morirse, y dijo: ¡Mejor es mi muerte que mi vida!
 **9** Y dijo Elohim a Yonáh: ¿Haces bien en enfu­recerte por el ricino? Y él dijo: Hago bien en enfurecerme hasta la muerte.
