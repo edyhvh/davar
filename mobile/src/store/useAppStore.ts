@@ -78,7 +78,9 @@ export const useAppStore = create<AppState>((set) => ({
   setShowFullChapter: (value) =>
     set((state) => ({
       showFullChapter: value,
-      seferMode: value ? state.seferMode : false,
+      seferMode: value
+        ? state.seferMode || state.hebrewOnly || state.translationOnly
+        : false,
     })),
   seferMode: false,
   setSeferMode: (value) =>
@@ -93,7 +95,7 @@ export const useAppStore = create<AppState>((set) => ({
       seferMode: state.translationOnly
         ? false
         : value
-          ? state.seferMode
+          ? state.showFullChapter || state.seferMode
           : false,
     })),
   translationOnly: false,

@@ -71,6 +71,7 @@ import {
   createFootnoteLookup,
   DEFAULT_FOOTNOTE_MARKER_COLOR,
 } from "@/src/utils/footnoteUtils";
+import { stripCantillation, stripMeteg, stripNikud } from "@/src/utils/hebrew";
 
 const SWIPE_HINT_MAX_SHOWS = 5;
 
@@ -251,6 +252,9 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       paddingTop: spacing[16],
       paddingBottom: spacing[16],
     },
+    chapterVerseList: {
+      rowGap: spacing[8],
+    },
     chapterTranslationFlowText: {
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.body + 1,
@@ -265,6 +269,23 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       opacity: 0.68,
       letterSpacing: 0.8,
       marginRight: spacing[1],
+    },
+    chapterHebrewFlowText: {
+      fontFamily: typography.families.hebrewScripture,
+      fontSize: typography.sizes.hebrewVerseMedium * 1.06,
+      lineHeight:
+        typography.sizes.hebrewVerseMedium * typography.lineHeights.hebrewScripture,
+      color: colors.textPrimary,
+      textAlign: "right",
+      writingDirection: "rtl",
+      letterSpacing: 0.3,
+    },
+    chapterHebrewVerseNumber: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.caption + 1,
+      color: colors.textPrimary,
+      opacity: 0.68,
+      letterSpacing: 0.8,
     },
     chapterFootnoteOverlay: {
       flex: 1,
@@ -609,10 +630,18 @@ export const VerseDetailContent = () => {
   const translationOnly = useAppStore(
     (state: AppState) => state.translationOnly,
   );
+  const hebrewOnly = useAppStore((state: AppState) => state.hebrewOnly);
   const showFullChapter = useAppStore(
     (state: AppState) => state.showFullChapter,
   );
   const seferMode = useAppStore((state: AppState) => state.seferMode);
+  const showNikud = useAppStore((state: AppState) => state.showNikud);
+  const showCantillation = useAppStore(
+    (state: AppState) => state.showCantillation,
+  );
+  const hebrewFontScale = useAppStore(
+    (state: AppState) => state.hebrewFontScale,
+  );
   const isConnected = useAppStore((state: AppState) => state.isConnected);
   const DEFAULT_VERSE_ID = "genesis-1-1";
   const normalizeVerseId = (value?: string | null) => {
@@ -704,12 +733,28 @@ export const VerseDetailContent = () => {
     () => (verse ? orderedVerses.findIndex((item) => item.id === verse.id) : 0),
     [orderedVerses, verse],
   );
-  const isTranslationBookMode =
-    translationOnly && showFullChapter && seferMode;
+  const isChapterFlowMode =
+    showFullChapter && seferMode && (translationOnly || hebrewOnly);
+
+  const normalizeFlowHebrew = useCallback(
+    (text: string) => {
+      let normalized = text;
+      if (!showNikud) {
+        normalized = stripNikud(normalized);
+      }
+      if (!showCantillation) {
+        normalized = stripCantillation(normalized);
+      }
+      normalized = stripMeteg(normalized);
+      return normalized.replace(/\//g, "");
+    },
+    [showCantillation, showNikud],
+  );
 
   const [showWordHint] = useState(false);
   const pageHeightRef = useRef(pageHeight);
   pageHeightRef.current = pageHeight;
+  const swipeSyncTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const listRef = useRef<FlatList<(typeof orderedVerses)[number]>>(null);
   const verseScrollMetricsRef = useRef<
     Record<
@@ -974,11 +1019,9 @@ export const VerseDetailContent = () => {
 
   const handleEdgeSwipe = useCallback(
     (verseIdFromPage: string, direction: "previous" | "next") => {
-      if (!verse?.id || verseIdFromPage !== verse.id) {
-        return;
-      }
-
-      const activeIndex = orderedVerses.findIndex((item) => item.id === verse.id);
+      const activeIndex = orderedVerses.findIndex(
+        (item) => item.id === verseIdFromPage,
+      );
       if (activeIndex < 0) {
         return;
       }
@@ -997,6 +1040,16 @@ export const VerseDetailContent = () => {
         offset: nextIndex * pageHeight,
         animated: true,
       });
+      const nextVerse = orderedVerses[nextIndex];
+      if (nextVerse) {
+        if (swipeSyncTimeoutRef.current) {
+          clearTimeout(swipeSyncTimeoutRef.current);
+        }
+        swipeSyncTimeoutRef.current = setTimeout(() => {
+          setEffectiveVerseId(nextVerse.id);
+          swipeSyncTimeoutRef.current = null;
+        }, 140);
+      }
 
       if (direction === "next" && swipeHintCount < SWIPE_HINT_MAX_SHOWS) {
         showSwipeUpHintIfEligible();
@@ -1005,12 +1058,20 @@ export const VerseDetailContent = () => {
     [
       orderedVerses,
       pageHeight,
+      setEffectiveVerseId,
       showBoundaryToast,
       showSwipeUpHintIfEligible,
       swipeHintCount,
-      verse?.id,
     ],
   );
+
+  useEffect(() => {
+    return () => {
+      if (swipeSyncTimeoutRef.current) {
+        clearTimeout(swipeSyncTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const keyExtractor = useCallback(
     (item: (typeof orderedVerses)[number]) => item.id,
@@ -1019,7 +1080,13 @@ export const VerseDetailContent = () => {
   const shouldShowSwipeHint = swipeHintCount < SWIPE_HINT_MAX_SHOWS;
 
   const renderVersePage = useCallback(
-    ({ item }: { item: (typeof orderedVerses)[number] }) => (
+    ({
+      item,
+      index,
+    }: {
+      item: (typeof orderedVerses)[number];
+      index: number;
+    }) => (
       <VersePage
         item={item}
         pageHeight={pageHeight}
@@ -1027,8 +1094,8 @@ export const VerseDetailContent = () => {
         showWordHint={showWordHint}
         isActive={item.id === verse?.id}
         isSelectedVerse={item.id === verse?.id}
-        canSwipePrevious={currentIndex > 0}
-        canSwipeNext={currentIndex >= 0 && currentIndex < orderedVerses.length - 1}
+        canSwipePrevious={index > 0}
+        canSwipeNext={index < orderedVerses.length - 1}
         isBesorah={isBesorah}
         selectedWord={item.id === verse?.id ? selectedWord : null}
         onVersePress={handleOpenNavigationSheet}
@@ -1044,7 +1111,6 @@ export const VerseDetailContent = () => {
       contentTopPadding,
       showWordHint,
       verse?.id,
-      currentIndex,
       orderedVerses.length,
       isBesorah,
       selectedWord,
@@ -1232,32 +1298,77 @@ export const VerseDetailContent = () => {
               </Text>
             </View>
           ) : null}
-          {isTranslationBookMode ? (
+          {showFullChapter ? (
             <ScrollView
               style={styles.chapterTranslationScroll}
-              contentContainerStyle={styles.chapterTranslationContent}
+              contentContainerStyle={[
+                styles.chapterTranslationContent,
+                { paddingTop: contentTopPadding },
+              ]}
               showsVerticalScrollIndicator={false}
             >
-              <Pressable onPress={handleTogglePills}>
-                <Text style={styles.chapterTranslationFlowText}>
-                  {orderedVerses.map((item, index) => (
-                    <Text key={item.id}>
-                      <Text style={styles.chapterTranslationVerseNumber}>
-                        {item.verse}
-                      </Text>{" "}
-                      {renderTranslationFlowText(
-                        language === "es" && !(item.translation ?? "").trim()
-                          ? t("verse.missingSpanishTranslation")
-                          : (item.translation ?? ""),
-                        language === "es" ? item.translation_footnotes : undefined,
-                        language === "es" ? setActiveFlowFootnote : undefined,
-                        colors.accentCopper,
-                      )}
-                      {index < orderedVerses.length - 1 ? " " : ""}
+              {isChapterFlowMode ? (
+                <Pressable onPress={handleTogglePills}>
+                  {translationOnly ? (
+                    <Text style={styles.chapterTranslationFlowText}>
+                      {orderedVerses.map((item, index) => (
+                        <Text key={item.id}>
+                          <Text style={styles.chapterTranslationVerseNumber}>
+                            [{item.verse}]
+                          </Text>{" "}
+                          {renderTranslationFlowText(
+                            language === "es" && !(item.translation ?? "").trim()
+                              ? t("verse.missingSpanishTranslation")
+                              : (item.translation ?? ""),
+                            language === "es" ? item.translation_footnotes : undefined,
+                            language === "es" ? setActiveFlowFootnote : undefined,
+                            colors.accentCopper,
+                          )}
+                          {index < orderedVerses.length - 1 ? " " : ""}
+                        </Text>
+                      ))}
                     </Text>
+                  ) : (
+                    <Text
+                      style={[
+                        styles.chapterHebrewFlowText,
+                        {
+                          fontSize: typography.sizes.hebrewVerseMedium * hebrewFontScale * 1.06,
+                          lineHeight:
+                            typography.sizes.hebrewVerseMedium *
+                            hebrewFontScale *
+                            typography.lineHeights.hebrewScripture,
+                        },
+                      ]}
+                    >
+                      {orderedVerses.map((item, index) => (
+                        <Text key={item.id}>
+                          <Text style={styles.chapterHebrewVerseNumber}>
+                            [{item.verse}]
+                          </Text>{" "}
+                          {normalizeFlowHebrew(item.hebrew)}
+                          {index < orderedVerses.length - 1 ? " " : ""}
+                        </Text>
+                      ))}
+                    </Text>
+                  )}
+                </Pressable>
+              ) : (
+                <View style={styles.chapterVerseList}>
+                  {orderedVerses.map((item) => (
+                    <VerseCard
+                      key={item.id}
+                      verse={item}
+                      variant="detail"
+                      showWordHint={false}
+                      selectedWord={item.id === verse?.id ? selectedWord : null}
+                      isBesorah={isBesorah}
+                      onVersePress={handleOpenNavigationSheet}
+                      onWordPress={handleWordPress}
+                    />
                   ))}
-                </Text>
-              </Pressable>
+                </View>
+              )}
             </ScrollView>
           ) : (
             <FlatList
@@ -1285,7 +1396,7 @@ export const VerseDetailContent = () => {
               onViewableItemsChanged={onViewableItemsChanged.current}
             />
           )}
-          {shouldShowSwipeHint && !isTranslationBookMode ? (
+          {shouldShowSwipeHint && !showFullChapter ? (
             <View
               pointerEvents="none"
               style={[

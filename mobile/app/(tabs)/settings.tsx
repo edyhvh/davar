@@ -101,6 +101,9 @@ export default function SettingsScreen() {
   const setLanguage = useAppStore((state: AppState) => state.setLanguage);
   const showQumran = useAppStore((state: AppState) => state.showQumran);
   const setShowQumran = useAppStore((state: AppState) => state.setShowQumran);
+  const showFullChapter = useAppStore(
+    (state: AppState) => state.showFullChapter,
+  );
   const setShowFullChapter = useAppStore(
     (state: AppState) => state.setShowFullChapter,
   );
@@ -126,6 +129,7 @@ export default function SettingsScreen() {
   const { t, isRTL } = useTranslation();
   const styles = useMemo(() => createStyles(colors, isRTL), [colors, isRTL]);
   const translationOnlyDisablesHebrewOptions = translationOnly;
+  const canUseSeferMode = showFullChapter && (translationOnly || hebrewOnly);
 
   const handleDisabledHebrewOptionPress = () => {
     Alert.alert(t("settings.translationOnly.title"), t("settings.translationOnly.disablesHebrewFeatures"));
@@ -213,6 +217,24 @@ export default function SettingsScreen() {
 
         <View style={styles.divider} />
 
+        {/* Full Chapter */}
+        <View style={styles.row}>
+          <View style={styles.rowContent}>
+            <View style={styles.iconContainer}>
+              <AppIcon name="book" size={18} color={colors.textSecondary} />
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.label}>{t("settings.fullChapter.title")}</Text>
+              <Text style={styles.subtitle}>
+                {t("settings.fullChapter.subtitle")}
+              </Text>
+            </View>
+          </View>
+          <OnOffButton value={showFullChapter} onChange={setShowFullChapter} />
+        </View>
+
+        <View style={styles.divider} />
+
         {/* Translation Only */}
         <View style={styles.row}>
           <View style={styles.rowContent}>
@@ -229,11 +251,11 @@ export default function SettingsScreen() {
           <OnOffButton value={translationOnly} onChange={setTranslationOnly} />
         </View>
 
-        {translationOnly ? (
+        {canUseSeferMode ? (
           <>
             <View style={styles.divider} />
 
-            {/* Book Mode (Translation Only) */}
+            {/* Book Mode */}
             <View style={styles.row}>
               <View style={styles.rowContent}>
                 <View style={styles.iconContainer}>
@@ -248,10 +270,7 @@ export default function SettingsScreen() {
               </View>
               <OnOffButton
                 value={seferMode}
-                onChange={(nextValue) => {
-                  setShowFullChapter(nextValue);
-                  setSeferMode(nextValue);
-                }}
+                onChange={setSeferMode}
               />
             </View>
 
