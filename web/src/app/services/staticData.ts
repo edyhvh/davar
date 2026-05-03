@@ -1,4 +1,9 @@
-import { TTH_BOOK_MAPPING } from "@davar/shared/translationConfig";
+import {
+	getMissingSpanishTranslationNotice,
+	getPsalmsSuperscriptionNotice,
+	TTH_BOOK_MAPPING,
+} from "../../../../shared/translationConfig";
+import { mapHebrewVerseToTranslationKey } from "../../../../shared/versification";
 import { fetchTs2009Translation } from "./supabaseClient";
 
 export interface WordResponse {
@@ -641,6 +646,64 @@ const extractBaseStrong = (value?: string): string | undefined => {
 	return parts.length > 0 ? parts[parts.length - 1] : undefined;
 };
 
+const toSortedUniqueVerseNumbers = (values: number[]): number[] =>
+	Array.from(
+		new Set(values.filter((value) => Number.isFinite(value) && value > 0)),
+	).sort((a, b) => a - b);
+
+const getRequiredTranslationChapters = (
+	bookId: string,
+	chapter: number,
+	expectedVerseNumbers?: number[],
+): number[] => {
+	const mappedChapters = new Set<number>();
+
+	for (const verseNumber of expectedVerseNumbers ?? []) {
+		const mappedKey = mapHebrewVerseToTranslationKey(bookId, chapter, verseNumber);
+		if (!mappedKey) {
+			continue;
+		}
+
+		const [mappedChapterToken] = mappedKey.split("-");
+		const mappedChapter = Number(mappedChapterToken);
+		if (Number.isFinite(mappedChapter) && mappedChapter > 0) {
+			mappedChapters.add(mappedChapter);
+		}
+	}
+
+	if (mappedChapters.size === 0) {
+		mappedChapters.add(chapter);
+	}
+
+	return [...mappedChapters].sort((a, b) => a - b);
+};
+
+const isPsalmsBook = (bookId: string): boolean =>
+	normalizeBookToken(bookId) === "psalms";
+
+const resolveTranslationText = (params: {
+	bookId: string;
+	language?: "es" | "en";
+	mappedTranslationKey: string | null;
+	translationText?: string | null;
+}): string => {
+	const { bookId, language, mappedTranslationKey, translationText } = params;
+
+	if (!language) {
+		return translationText ?? "";
+	}
+
+	if (isPsalmsBook(bookId) && mappedTranslationKey === null) {
+		return getPsalmsSuperscriptionNotice(language);
+	}
+
+	if (translationText && translationText.trim().length > 0) {
+		return translationText;
+	}
+
+	return getMissingSpanishTranslationNotice(language);
+};
+
 const mapDssDifferences = (differences?: RawDssDifference[]): DssVariant[] => {
 	if (!differences?.length) return [];
 
@@ -724,8 +787,10 @@ const sanitizeShirHashirimTth = (text?: string): string | undefined => {
 
 const loadTranslationChapter = async (
 	bookId: string,
-	chapter: number,
-): Promise<Record<number, RawTranslationVerse>> => {
+	requiredChapters: number[],
+): Promise<Record<string, RawTranslationVerse>> => {
+	const translationMap: Record<string, RawTranslationVerse> = {};
+
 	// Try TTH_2 first (official Spanish translation)
 	const tthBookId = resolveTthBookId(bookId);
 	if (tthBookId) {
@@ -733,11 +798,16 @@ const loadTranslationChapter = async (
 			const translationBook = await fetchJson<RawTranslationBook>(
 				`/data/tth/${tthBookId}.json`,
 			);
-			const chapterData = translationBook.chapters?.find(
-				(item) => item.chapter === chapter,
-			);
 
-			if (chapterData) {
+			for (const translationChapter of requiredChapters) {
+				const chapterData = translationBook.chapters?.find(
+					(item) => item.chapter === translationChapter,
+				);
+
+				if (!chapterData) {
+					continue;
+				}
+
 				const verses =
 					tthBookId === "shir_hashirim"
 						? chapterData.verses.map((verse) => ({
@@ -746,9 +816,13 @@ const loadTranslationChapter = async (
 							}))
 						: chapterData.verses;
 
-				return Object.fromEntries(
-					verses.map((verse) => [verse.verse, verse]),
-				);
+				for (const verse of verses) {
+					translationMap[`${translationChapter}-${verse.verse}`] = verse;
+				}
+			}
+
+			if (Object.keys(translationMap).length > 0) {
+				return translationMap;
 			}
 		} catch {
 			// TTH_2 not available for this book, try BES fallback below
@@ -760,17 +834,24 @@ const loadTranslationChapter = async (
 		const translationBook = await fetchJson<RawTranslationBook>(
 			`/data/bes/${bookId}.json`,
 		);
-		const chapterData = translationBook.chapters?.find(
-			(item) => item.chapter === chapter,
-		);
 
-		if (!chapterData) return {};
+		for (const translationChapter of requiredChapters) {
+			const chapterData = translationBook.chapters?.find(
+				(item) => item.chapter === translationChapter,
+			);
 
-		return Object.fromEntries(
-			chapterData.verses.map((verse) => [verse.verse, verse]),
-		);
+			if (!chapterData) {
+				continue;
+			}
+
+			for (const verse of chapterData.verses) {
+				translationMap[`${translationChapter}-${verse.verse}`] = verse;
+			}
+		}
+
+		return translationMap;
 	} catch {
-		return {};
+		return translationMap;
 	}
 };
 
@@ -884,6 +965,7 @@ const findFallbackTranslitWord = (
 };
 
 const mapVerse = (
+	bookId: string,
 	rawVerse: RawVerse,
 	translationVerse?: RawTranslationVerse,
 	dssVerse?: RawDssVerse,
@@ -895,6 +977,7 @@ const mapVerse = (
 		hebrewOnly?: boolean;
 	},
 	ts2009Translation?: string | null,
+	mappedTranslationKey?: string | null,
 ): VerseResponse => {
 	const dssVariants = mapDssDifferences(dssVerse?.differences);
 	const dssVariantMap = new Map(
@@ -946,24 +1029,33 @@ const mapVerse = (
 
 	// Handle translation based on language
 	if (!options?.hebrewOnly) {
+		const language = options?.language;
+		const baseTranslationText =
+			language === "en"
+				? ts2009Translation
+				: translationVerse?.bes ?? translationVerse?.tth;
+		const translationText = resolveTranslationText({
+			bookId,
+			language,
+			mappedTranslationKey: mappedTranslationKey ?? null,
+			translationText: baseTranslationText,
+		});
+
 		if (options?.language === "en") {
-			if (ts2009Translation) {
-				// Use TS2009 for English only.
-				response.translation = ts2009Translation;
-				response.translation_language = "en";
-			}
+			response.translation = translationText;
+			response.translation_language = "en";
 		} else if (
-			options?.language === "es" &&
-			(translationVerse?.bes || translationVerse?.tth)
+			options?.language === "es"
 		) {
-			// Use TTH/BES for Spanish or fallback
-			response.translation = translationVerse.bes ?? translationVerse.tth ?? "";
+			response.translation = translationText;
 			response.translation_language = "es";
-			const translationFootnotes = mapTranslationFootnotes(
-				translationVerse.footnotes,
-			);
-			if (translationFootnotes.length > 0) {
-				response.translation_footnotes = translationFootnotes;
+			if (translationVerse?.bes || translationVerse?.tth) {
+				const translationFootnotes = mapTranslationFootnotes(
+					translationVerse.footnotes,
+				);
+				if (translationFootnotes.length > 0) {
+					response.translation_footnotes = translationFootnotes;
+				}
 			}
 		}
 	}
@@ -1074,12 +1166,23 @@ export const getChapterVerses = async (
 
 	if (!bookEntry) return [];
 
-	const [coreVerses, translations, dssVerses, transliterations, dssTransliterations] =
+	const coreVerses = await loadCoreChapter(bookEntry, chapter);
+	const expectedVerseNumbers = toSortedUniqueVerseNumbers(
+		coreVerses.map((verse) => verse.verse),
+	);
+	const requiredTranslationChapters = options?.hebrewOnly
+		? []
+		: getRequiredTranslationChapters(
+				bookEntry.id,
+				chapter,
+				expectedVerseNumbers,
+			);
+
+	const [translations, dssVerses, transliterations, dssTransliterations] =
 		await Promise.all([
-			loadCoreChapter(bookEntry, chapter),
 			options?.hebrewOnly
-				? Promise.resolve<Record<number, RawTranslationVerse>>({})
-				: loadTranslationChapter(bookEntry.id, chapter),
+				? Promise.resolve<Record<string, RawTranslationVerse>>({})
+				: loadTranslationChapter(bookEntry.id, requiredTranslationChapters),
 			options?.showDss
 				? loadDssChapter(bookEntry.id, chapter)
 				: Promise.resolve<Record<number, RawDssVerse>>({}),
@@ -1090,30 +1193,68 @@ export const getChapterVerses = async (
 		]);
 
 	// If language is English, load TS2009 translations from Supabase (with caching)
-	let ts2009Translations: Record<number, string> = {};
+	let ts2009Translations: Record<string, string> = {};
 	if (options?.language === "en") {
-		const ts2009Promises = coreVerses.map((verse) =>
-			fetchCachedTs2009Translation(bookEntry.id, chapter, verse.verse),
+		const uniqueTranslationKeys = [
+			...new Set(
+				coreVerses
+					.map((verse) =>
+						mapHebrewVerseToTranslationKey(
+							bookEntry.id,
+							verse.chapter,
+							verse.verse,
+						),
+					)
+					.filter((key): key is string => Boolean(key)),
+			),
+		];
+
+		const ts2009Results = await Promise.all(
+			uniqueTranslationKeys.map(async (translationKey) => {
+				const [mappedChapterToken, mappedVerseToken] = translationKey.split("-");
+				const mappedChapter = Number(mappedChapterToken);
+				const mappedVerse = Number(mappedVerseToken);
+
+				if (!Number.isFinite(mappedChapter) || !Number.isFinite(mappedVerse)) {
+					return [translationKey, null] as const;
+				}
+
+				const translation = await fetchCachedTs2009Translation(
+					bookEntry.id,
+					mappedChapter,
+					mappedVerse,
+				);
+
+				return [translationKey, translation] as const;
+			}),
 		);
-		const ts2009Results = await Promise.all(ts2009Promises);
+
 		ts2009Translations = Object.fromEntries(
-			coreVerses
-				.map((verse, index) => [verse.verse, ts2009Results[index]])
-				.filter(([, translation]) => translation !== null),
+			ts2009Results.flatMap(([translationKey, translation]) =>
+				translation === null ? [] : [[translationKey, translation]],
+			),
 		);
 	}
 
-	return coreVerses.map((rawVerse) =>
-		mapVerse(
+	return coreVerses.map((rawVerse) => {
+		const translationKey = mapHebrewVerseToTranslationKey(
+			bookEntry.id,
+			rawVerse.chapter,
+			rawVerse.verse,
+		);
+
+		return mapVerse(
+			bookEntry.id,
 			rawVerse,
-			translations[rawVerse.verse],
+			translationKey ? translations[translationKey] : undefined,
 			dssVerses[rawVerse.verse],
 			transliterations[rawVerse.verse],
 			dssTransliterations[rawVerse.verse],
 			options,
-			ts2009Translations[rawVerse.verse],
-		),
-	);
+			translationKey ? ts2009Translations[translationKey] : undefined,
+			translationKey,
+		);
+	});
 };
 
 export const getVerse = async (
