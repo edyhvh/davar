@@ -6,10 +6,10 @@ Muerte de Ajazyáh
 
 **1** Y se rebeló Moab contra Israel después de la muerte de Ajab.
 **2** Y cayó Ajazyah a través de la celosía en su cámara superior que tenía en Shomrón, y en­fermó. Y envió mensajeros, y les dijo: Vayan, consulten por Baal Zebub[^2091], dios de Ekrón, si vi­viré de esta enfermedad.
-**3** Y el mensajero[^2092] de __יהוה__ habló a Eliyah el tishbí[^2093]: Levántate, sube al encuentro de los mensajeros del rey de Shomrón, y háblales: “¿No hay[^2094] Elohim en Israel que ustedes van a con­sultar por Baal Zebub, dios de Ekrón? ”
+**3** Y el mensajero[^2092] de __יהוה__ habló a Eliyah el tishbí[^2093]: Levántate, sube al encuentro de los mensajeros del rey de Shomrón, y háblales: “¿No hay[^2094] Elohim en Israel que ustedes van a con­sultar por Baal Zebub, dios de Ekrón?”
 **4** Y por eso, así dijo __יהוה__: “La cama la cual has subido allí, no bajarás de ella, porque muriendo, morirás”. Y se fue Eliyah.
 **5** Y volvieron los mensajeros a él, y les dijo: ¿Qué es esto que han vuelto?
-**6** Y ellos le dijeron: Un hombre subió a nues­tro encuentro, y nos dijo: “Vayan, vuelvan al rey que los envió, y le hablarán: ‘Así dijo __יהוה__: “¿No hay Elohim en Is­rael que tú envías a consultar por Baal Zebub, dios de Ekrón? Por eso, la cama que has su­bido allí, no bajarás de ella, porque muriendo, mo­rirás” ' ”.
+**6** Y ellos le dijeron: Un hombre subió a nues­tro encuentro, y nos dijo: “Vayan, vuelvan al rey que los envió, y le hablarán: ‘Así dijo __יהוה__: “¿No hay Elohim en Is­rael que tú envías a consultar por Baal Zebub, dios de Ekrón? Por eso, la cama que has su­bido allí, no bajarás de ella, porque muriendo, mo­rirás” ’ ”.
 **7** Y él habló a ellos: ¿Qué clase de hombre era el que subió a su encuentro y habló a ustedes estas pa­labras?
 **8** Y le dijeron: Un hombre poseedor de pelo, y un cinturón de piel ceñía en sus lomos. Y él di­jo: Eliyah el tishbí es él.
 **9** Y envió a él un jefe de cincuenta y sus cin­cuenta. Y subió a él, y he aquí, estaba sentado sobre la cabeza del monte, y le habló: Hombre de Elohim, el rey ha hablado: “Desciende”.
@@ -40,7 +40,7 @@ Elishá, el sucesor de Eliyáhu
 **11** Y sucedió que ellos iban andando y ha­blan­do, y he aquí, un carro de fuego y caballos de fuego hicieron división entre los dos. Y subió Eliyáhu en la tempestad al cielo.
 **12** Y Elishá vio, y él gritó: ¡Padre mío, padre mío, los carros de Israel y sus caballeros! Y no lo vio más. Y se apoderó de sus vestiduras y las rasgó en dos pedazos.
 **13** Y levantó el manto de Eliyáhu que se había caído de sobre él, y regresó y se paró sobre la orilla del Iardén.
-**14** Y tomó el manto de Eliyáhu que se había caí­do de sobre él, y golpeó las aguas, y dijo: ¿Dónde está __יהוה__, Elohim de Eliyáhu? Tam­­bién él golpeó las aguas, y se dividieron a­quí y allá, y cruzó Elishá.
+**14** Y tomó el manto de Eliyáhu que se había caí­do de sobre él, y golpeó las aguas, y dijo: ¿Dónde está __יהוה__, Elohim de Eliyáhu?Tam­­bién él golpeó las aguas, y se dividieron a­quí y allá, y cruzó Elishá.
 **15** Y lo vieron los hijos de los profetas que es­ta­ban en Ierijó al frente, y dijeron: Descansa el espíritu de Eliyáhu sobre Elishá. Y vi­nieron a su encuentro y se inclinaron a él a tie­rra.
 **16** Y le dijeron: He aquí, por favor, hay con tus siervos cincuenta hombres hijos de valor; irán, por favor, y buscarán a tu amo, quizás lo ha le­vantado el Rúaj de __יהוה__ y lo ha echado en uno de los montes o en uno de los valles. Y él dijo: No enviarán.
 **17** Pero le presionaron hasta avergonzarse, y él dijo: Envíenlos. Y enviaron cincuenta hombres y buscaron tres días, pero no lo hallaron.
@@ -107,7 +107,7 @@ Elishá y la shunamit
 **10** hagamos, por favor, una pequeña cámara su­perior de pared, y pongamos para él allí una cama, una mesa, una silla y un candelabro; y se­rá que cuando venga a nosotros, se desviará allí.
 **11** Y sucedió que un día, él vino por allí, y se desvió a la cámara superior y se acostó allí.
 **12** Y él dijo a Gejazi, su joven: Llama a esta shu­namit[^2102]. Y la llamó, y ella se paró delante de él.
-**13** Y le dijo: Di, por favor, a ella: “He aquí, has temblado por nosotros con todo este temblor; ¿qué haré por ti?, ¿hay pa­ra hablar por ti al rey o al jefe del ejército? ” Y ella dijo: En medio de mi pueblo yo habito.
+**13** Y le dijo: Di, por favor, a ella: “He aquí, has temblado por nosotros con todo este temblor; ¿qué haré por ti?, ¿hay pa­ra hablar por ti al rey o al jefe del ejército?” Y ella dijo: En medio de mi pueblo yo habito.
 **14** Y él dijo: ¿Y qué hay para hacer por ella? Y dijo Gejazi: Verdaderamente hijo no hay para ella, y su esposo es viejo.
 **15** Y él dijo: Llámala. Y la llamó, y ella se pa­ró en la entrada.
 **16** Y él dijo: Por este tiempo designado, conforme al tiempo de vida, tú abrazarás un hijo. Y ella dijo: No, amo mío, hombre de Elohim, no mientas a tu sierva.
@@ -120,7 +120,7 @@ Elishá y la shunamit
 **23** Y él dijo: ¿Por qué tú vas a él hoy? No es luna nueva ni Shabat. Y ella dijo: Shalom.
 **24** Y ella ensilló el asna y dijo a su joven: Con­duce y anda; no retengas por mí el montar, solo si te lo digo.
 **25** Y fue y vino al hombre de Elohim al mon­te Carmel. Y fue que cuando la vio el hombre de Elohim desde frente, dijo a Gejazi, su joven: He aquí, esa shunamit.
-**26** Ahora, corre, por favor, a su encuentro, y di a ella: “¿Hay shalom[^2103] para ti? ¿Hay shalom para tu es­poso? ¿Hay shalom para el niño? ” Y ella dijo: Hay shalom.
+**26** Ahora, corre, por favor, a su encuentro, y di a ella: “¿Hay shalom[^2103] para ti? ¿Hay shalom para tu es­poso? ¿Hay shalom para el niño?” Y ella dijo: Hay shalom.
 **27** Y ella vino al hombre de Elohim, al monte, y se aferró de sus pies. Y se acercó Gejazi para empujarla, y dijo el hombre de Elohim: Suél­tala, porque su ser amarga en ella, y __יהוה__ lo ha ocultado de mí y no me lo ha dado a cono­cer.
 **28** Y ella dijo: ¿Pedí un hijo de mi amo? ¿No he dicho: “No me engañes”?
 **29** Y él dijo a Gejazi: Ciñe tus lomos y toma mi bastón en tu mano, y vete; cuando encuentres un hombre, no lo bendigas, y cuando te bendi­ga un hombre, no le respondas; y pondrás mi bastón sobre el rostro del muchacho.
@@ -258,8 +258,8 @@ Hambre por el sitio de Aram
 *Elishá en Damések*
 
 **7** Y vino Elishá *a* Damések. Y Ben Hadad, rey de Aram, estaba enfermo, y le dieron a cono­cer, diciendo: Ha venido el hombre de Elohim hasta aquí.
-**8** Y dijo el rey a Jazael: Toma en tu mano una ofrenda y ve al encuentro del hombre de Elo­him, y consultarás a יהוה por él, diciendo: “¿Viviré de esta enfermedad? ”
-**9** Y fue Jazael a su encuentro, y tomó una o­fren­da en su mano y todo lo bueno de Damések, carga de cuarenta camellos; y vino y se paró delante de él, y dijo: Tu hijo Ben Hadad, rey de Aram, me ha enviado hacia ti, diciendo: “¿Vi­viré de esta enfermedad? ”
+**8** Y dijo el rey a Jazael: Toma en tu mano una ofrenda y ve al encuentro del hombre de Elo­him, y consultarás a יהוה por él, diciendo: “¿Viviré de esta enfermedad?”
+**9** Y fue Jazael a su encuentro, y tomó una o­fren­da en su mano y todo lo bueno de Damések, carga de cuarenta camellos; y vino y se paró delante de él, y dijo: Tu hijo Ben Hadad, rey de Aram, me ha enviado hacia ti, diciendo: “¿Vi­viré de esta enfermedad?”
 **10** Y le dijo Elishá: Ve, dile: “Ciertamente vi­virás[^2121]”; pero me ha mostrado יהוה que ciertamente morirá[^2122].
 **11** Y estableció su rostro y puso *sus ojos en él* hasta estar avergonzado; y lloró el hombre de Elohim.
 **12** Y dijo Jazael: ¿Por qué mi amo llora? Y él dijo: Porque sé que harás a los hijos de Israel maldad: sus fortalezas enviarás en fuego, sus jóvenes con la espada matarás, sus niños lanza­rás en pedazos, y sus embarazadas rasgarás.
@@ -290,7 +290,7 @@ Hambre por el sitio de Aram
 
 **1** Y Elishá el profeta llamó a uno de los hi­jos de los profetas, y le dijo: Ciñe tus lo­mos y to­ma este frasco de aceite en tu mano, y ve a Ra­mot Guilad.
 **2** Y llegarás allá, y mira allí a Iehú, hijo de Ie­ho­shafat, hijo de Nimshi. Y entrarás y harás que se levante de entre sus hermanos, y lo lle­varás a una cámara interior[^2125].
-**3** Y tomarás el frasco de aceite y lo verterás sobre su cabeza, y dirás: “Así dijo יהוה: ‘Te he ungido por rey sobre Israel' ”. Y abrirás la puerta y huirás, no esperes.
+**3** Y tomarás el frasco de aceite y lo verterás sobre su cabeza, y dirás: “Así dijo יהוה: ‘Te he ungido por rey sobre Israel’ ”. Y abrirás la puerta y huirás, no esperes.
 **4** Y fue el joven, el joven del profeta, a Ramot Guilad.
 **5** Y llegó, y he aquí, los jefes de la fuerza esta­ban sentados, y él dijo: Tengo palabra para ti, jefe. Y dijo Iehú: ¿Para quién de todos noso­tros? Y él dijo: Para ti, jefe.
 **6** Y él se levantó y entró a la casa, y vertió el aceite sobre su cabeza, y le dijo: Así dijo יהוה, Elohim de Israel: “Te he ungido por rey sobre el pueblo de יהוה, sobre Israel.
@@ -299,7 +299,7 @@ Hambre por el sitio de Aram
 **9** Y pondré a la casa de Ajab como la casa de Iarobam, hijo de Nebat, y como la casa de Ba­shá, hijo de Ajiyáh.
 **10** Y a Izebel comerán los perros en la parcela de Izreel, y nadie la enterrará”. Y él abrió la puer­ta y huyó.
 **11** Y Iehú salió a los siervos de su amo, y uno le dijo: ¿Hay shalom[^2127]? ¿Por qué vino este loco a ti? Y él les dijo: Ustedes conocen al hombre y su hablar[^2128].
-**12** Y ellos dijeron: Mentira, danos a conocer, por favor. Y él dijo: Conforme a esto y esto ha dicho a mí, diciendo: “Así dijo יהוה: ‘Te he ungido por rey sobre Israel' ”.
+**12** Y ellos dijeron: Mentira, danos a conocer, por favor. Y él dijo: Conforme a esto y esto ha dicho a mí, diciendo: “Así dijo יהוה: ‘Te he ungido por rey sobre Israel’ ”.
 **13** Y se apresuraron y tomaron cada hombre su vestidura y las pusieron debajo de él en la desnudez[^2129] de las escaleras, y so­plaron con el shofar[^2130] y dijeron: ¡Reina Iehú!
 
 Muerte de Ioram y de Ajazyáhu
@@ -307,9 +307,9 @@ Muerte de Ioram y de Ajazyáhu
 **14** Y conspiró[^2131] Iehú, hijo de Ieho­shafat, hijo de Nimshi, contra Ioram. Y Ioram estaba guardando en Ramot Guilad, él y todo Is­rael, de delante de Jazael, rey de Aram.
 **15** Pero había regresado Iehoram el rey para ser sanado en Izreel de las heridas que habían herido los aramim[^2132] cuando luchó con Jazael, rey de Aram. Y dijo Iehú: Si es su voluntad[^2133], no saldrá fugitivo de la ciu­dad para ir a darlo a conocer en Izreel.
 **16** Y montó Iehú y fue a Izreel, porque Ioram es­taba acostado allí. Y Ajazyáhu, rey de Iehu­dáh, había descendido para ver a Ioram.
-**17** Y el vigilante estaba parado sobre la torre en Izreel, y vio la multitud de Iehú cuando ve­nía, y dijo: Una multitud yo veo. Y dijo Iehoram: Toma un montador y envíalo a su encuen­tro, y dirá: “¿Hay shalom? ”
-**18** Y fue el montador de caballo a su encuen­tro, y dijo: Así dice el rey: “¿Hay shalom? ” Y dijo Iehú: ¿Qué tienes tú que ver con el shalom[^2134]? Gira hacia detrás de mí. Y dio a conocer el vigilante, diciendo: Lle­gó el mensajero hasta ellos, pero no volvió.
-**19** Y envió un segundo montador de caballo, y vino a ellos, y dijo: Así dice el rey: “¿Hay shalom? ” Y dijo Iehú: ¿Qué tienes tú que ver con el shalom? Gira ha­cia detrás de mí.
+**17** Y el vigilante estaba parado sobre la torre en Izreel, y vio la multitud de Iehú cuando ve­nía, y dijo: Una multitud yo veo. Y dijo Iehoram: Toma un montador y envíalo a su encuen­tro, y dirá: “¿Hay shalom?”
+**18** Y fue el montador de caballo a su encuen­tro, y dijo: Así dice el rey: “¿Hay shalom?” Y dijo Iehú: ¿Qué tienes tú que ver con el shalom[^2134]? Gira hacia detrás de mí. Y dio a conocer el vigilante, diciendo: Lle­gó el mensajero hasta ellos, pero no volvió.
+**19** Y envió un segundo montador de caballo, y vino a ellos, y dijo: Así dice el rey: “¿Hay shalom?” Y dijo Iehú: ¿Qué tienes tú que ver con el shalom? Gira ha­cia detrás de mí.
 **20** Y dio a conocer el vigilante, diciendo: Él lle­gó hasta ellos, pero no volvió; y la condu­cción es como la conducción de Iehú, hijo de Nimshi, porque con locura conduce.
 **21** Y dijo Iehoram: Unzan[^2135]. Y uncie­ron[^2136] su carro. Y salió Iehoram, rey de Israel, y Ajazyáhu, rey de Iehudáh, cada hombre en su carro, y salieron al encuentro de Iehú, y lo hallaron en la porción de Nabot, el iz­reelí[^2137].
 **22** Y sucedió que cuando vio Iehoram a Iehú, dijo: ¿Hay shalom, Iehú? Y dijo: ¿Qué shalom, mien­tras las fornicaciones de Izebel tu madre y sus hechicerías sean muchas?
@@ -330,7 +330,7 @@ Muerte de Izebel
 **34** Y entró, y comió y bebió, y dijo: Atiendan, por favor, a esta excluida, y entiérrenla, porque hija de rey es ella.
 **35** Y fueron para enterrarla, pero no hallaron de ella sino el cráneo, los pies y las palmas de las manos.
 **36** Y volvieron y se lo dieron a conocer. Y él dijo: Palabra de יהוה es esta, que habló por mano de su siervo Eliyáhu el tishbí, diciendo: “En la porción de Izreel comerán los perros la carne de Izebel;
-**37** y será el cadáver de Izebel como estiércol sobre la faz del campo en la porción de Izreel, que no dirán: ‘Esta es Izebel' ”.
+**37** y será el cadáver de Izebel como estiércol sobre la faz del campo en la porción de Izreel, que no dirán: ‘Esta es Izebel’ ”.
 
 Reinado de Iehú
 
@@ -642,14 +642,14 @@ Invasión de Sanjerib
 **22** Pero cuando me digan: “En יהוה nuestro Elohim confiamos”, ¿no es Él que apartó Jizkiyahu sus lugares altos y sus altares y ha dicho a Iehudáh y a Yerushaláim: “Delante de este al­tar se inclinarán en Yerushaláim”?
 **23** Y ahora, intercambia promesas, por favor, con mi amo el rey de Ashur, y te daré dos mil caballos, si eres capaz de poner para ti jinetes sobre ellos.
 **24** ¿Y cómo harás volver el rostro de un gober­na­dor de los siervos de mi amo, de los peque­ños, y confiar para ti en Mitzráim por carros y por caballeros?
-**25** Ahora, ¿Sin יהוה he subido contra este lugar para destruirlo? יהוה me dijo: “Sube contra esta tierra y destrúyela” '.
+**25** Ahora, ¿Sin יהוה he subido contra este lugar para destruirlo? יהוה me dijo: “Sube contra esta tierra y destrúyela” ’.
 **26** Y dijo Eliakim, hijo de Jilkiyahu, y Sheb­nah y Ioáj, al Rabshakéh: Habla por favor a tus siervos en lengua aramea[^2184], porque escucha­mos noso­tros, y no hables con nosotros en lengua ju­día[^2185] a oídos del pueblo que está sobre la muralla.
 **27** Y les dijo el Rabshakéh: ¿A tu amo y a ti me ha enviado mi amo a hablar estas palabras? ¿No a los hombres sentados sobre la muralla, condenados a comer sus excrementos y a be­ber sus orinas con ustedes?
 **28** Y se paró el Rabshakéh, y proclamó a gran voz en lengua judía, y habló, y dijo: ¡Oigan la palabra del gran rey, el rey de Ashur!
 **29** Así dice el rey: “No los engañe a ustedes Jizkiyahu, porque no podrá rescatarlos de su mano;
-**30** y no les haga confiar Jizkiyahu en יהוה, diciendo: ‘Ciertamente nos rescatará יהוה, y no será dada esta ciudad en mano del rey de Ashur'.
+**30** y no les haga confiar Jizkiyahu en יהוה, diciendo: ‘Ciertamente nos rescatará יהוה, y no será dada esta ciudad en mano del rey de Ashur’.
 **31** No escuchen a Jizkiyahu, porque así dice el rey de Ashur: ‘Hagan conmigo una bendición y salgan a mí, y coman cada hombre su vid y ca­da hombre su higuera, y beban cada hombre las aguas de su pozo,
-**32** hasta mi venida, y los tomaré a una tierra como su tierra, tierra de grano y mosto, tierra de pan y viñedos, tierra de olivos de aceite y miel, y vivirán y no morirán'. Pero no escu­chen a Jizkiyahu, porque los persuade, dicien­do: ‘יהוה nos rescatará'.
+**32** hasta mi venida, y los tomaré a una tierra como su tierra, tierra de grano y mosto, tierra de pan y viñedos, tierra de olivos de aceite y miel, y vivirán y no morirán’. Pero no escu­chen a Jizkiyahu, porque los persuade, dicien­do: ‘יהוה nos rescatará’.
 **33**¿En verdad han rescatado[^2186] los dioses de las naciones, alguno, a su tierra de la mano del rey de Ashur?
 **34** ¿Dónde están los dioses de Jamat y Arpad? ¿Dónde están los dioses de Sefarváim, Hená e Iváh? ¿Cuándo rescataron ellos a Shomrón de mi mano?
 **35** ¿Quién de entre todos los dioses de las tie­rras han rescatado a su tierra de mi mano, que rescatará יהוה a Yerushaláim de mi ma­no?
@@ -666,13 +666,13 @@ Jizkiyahu y Ieshaiáhu el profeta
 **4** Tal vez escuchará יהוה tu Elohim todas las palabras del Rabshakéh, que lo envió el rey de Ashur, su amo, para reprochar al Elohim vi­vo, y lo reprenderá por las palabras que ha es­cuchado יהוה tu Elohim. Levanta una ora­ción por el bien del remanente que se encuen­tra”.
 **5** Y vinieron los siervos del rey Jizkiyahu a Ie­shaiáhu,
 **6** y les dijo Ieshaiáhu: Así dirán a su amo: “Así dice יהוה: ‘No temas a causa de las pala­bras que has oído, con que me han despreciado los siervos del rey de Ashur.
-**7** He aquí, Yo pondré en él un espíritu, y oirá un rumor, y volverá a su tierra; y lo haré caer con espada en su tierra' ”.
+**7** He aquí, Yo pondré en él un espíritu, y oirá un rumor, y volverá a su tierra; y lo haré caer con espada en su tierra’ ”.
 **8** Y volvió el Rabshakéh[^2188] y halló al rey de A­shur luchando con Libnah, pues había oído que había partido de Lajish.
 **9** Y oyó sobre Tirhakah, rey de Cush, di­cien­do: He aquí, ha salido a luchar contigo. Y vol­vió y envió mensajeros a Jizkiyahu, diciendo:
-**10** Así dirán a Jizkiyahu, rey de Iehudáh, di­ciendo: “No te engañe tu Elohim, que tú con­fías en Él, diciendo: ‘No será dada Yerushaláim en mano del rey de Ashur'.
+**10** Así dirán a Jizkiyahu, rey de Iehudáh, di­ciendo: “No te engañe tu Elohim, que tú con­fías en Él, diciendo: ‘No será dada Yerushaláim en mano del rey de Ashur’.
 **11** He aquí, tú has oído lo que han hecho los reyes de Ashur a todas las tierras al destruirlas, ¿y tú serás rescatado?
 **12**¿Los rescataron los dioses de las naciones que destruyeron mis padres, a Gozán, a Jarán, Retzef, y los hijos de Éden que estaban en Te­la­sar?
-**13** ¿Dónde está el rey de Jamat y el rey de Ar­pad, y el rey de la ciudad de Sefarváim, Hená e Iváh? ”
+**13** ¿Dónde está el rey de Jamat y el rey de Ar­pad, y el rey de la ciudad de Sefarváim, Hená e Iváh?”
 **14** Y tomó Jizkiyahu las cartas de mano de los mensajeros y las leyó, y subió a la casa de יהוה, y las extendió Jizkiyahu delante de יהוה.
 **15** Y oró Jizkiyahu delante de יהוה, y dijo: ¡יהוה, Elohim de Israel!, quien está sentado sobre los querubines, Tú eres el Elohim, sólo Tú, de todos los reinos de la tierra. Tú hiciste los cielos y la tierra.
 **16** Inclina, יהוה, tu oído y escucha; abre, יהוה, tus ojos y mira; y escucha las palabras de Sanjerib que ha enviado para reprochar al Elohim vivo.
@@ -682,12 +682,12 @@ Jizkiyahu y Ieshaiáhu el profeta
 **20** Y envió Ieshaiáhu, hijo de Amotz, a Jizkiyahu, diciendo: Así dice יהוה, Elohim de Is­rael: “Lo que me has orado sobre Sanjerib, rey de Ashur, he escuchado”.
 **21** Esta es la palabra que ha hablado יהוה sobre él:
 
-**22** ¿A quién has reprochado y despreciado? ¿Y contra quién has elevado la voz y levantado altamente tus ojos? ¡Contra el Kadosh[^2189] de Israel!
-**23** Por mano de tus mensajeros has reprochado a Adonai, y has dicho: ‘Con la multitud de mis carrosyo subí a la altura de los montes, a las partes remotas del Lebanón; y cortaré la altura de sus cedros y la selección de sus cipreses, y entraré en la posada de su límite, en el bosque de su huerto.
-**24** Yo cavé, y bebí aguas extrañas, y secaré con la palma de mis piestodos los ríos del lugar sitiado[^2190]'.
+**22** ¿A quién has reprochado y despreciado? ¿Y contra quién has elevado la vozy levantado altamente tus ojos? ¡Contra el Kadosh[^2189] de Israel!
+**23** Por mano de tus mensajeros has reprochado a Adonai, y has dicho: ‘Con la multitud de mis carrosyo subí a la altura de los montes, a las partes remotas del Lebanón;y cortaré la altura de sus cedros y la selección de sus cipreses, y entraré en la posada de su límite, en el bosque de su huerto.
+**24** Yo cavé, y bebí aguas extrañas, y secaré con la palma de mis piestodos los ríos del lugar sitiado[^2190]’.
 
-**25** ¿No has oído? Desde lejos lo he hecho, desde los días de la eternidad[^2191], y lo he formado. Ahora lo he hecho venir, y serás para estrellar en montones de ruinas las ciudades fortificadas.
-**26** Y sus habitantes, cortos de mano, fueron consternados y fueron avergonzados; eran como la hierba del campo y el verde pasto,
+**25** ¿No has oído? Desde lejos lo he hecho,desde los días de la eternidad[^2191], y lo he formado. Ahora lo he hecho venir,y serás para estrellar en montones de ruinas las ciudades fortificadas.
+**26** Y sus habitantes, cortos de mano, fueron consternados y fueron avergonzados;eran como la hierba del campo y el verde pasto,
  como la hierba de los techos y el grano arruinado antes de estar en pie.**27** Pero tu sentar, tu salida y tu entrada, conozco,
  y tu conmoción hacia[^2192] Mí.**28** Porque te has conmocionado hacia Mí, y tu arrogancia[^2193] ha subido a mis oídos,y pondré mi gancho en tu nariz y mi freno en tus labios,y te haré volver por el camino en que viniste.
 
@@ -695,7 +695,7 @@ Jizkiyahu y Ieshaiáhu el profeta
 **30** Y aumentará, la escapatoria de la casa de Ie­hu­dáh, el que quede, raíces hacia abajo, y hará fruto hacia arriba.
 **31** Porque de Yerushaláim saldrá un remanente, y escapatoria desde el monte Tzión. El celo de יהוה hará esto.
 **32** Por eso, así dice יהוה sobre el rey de A­shur: ‘No entrará a esta ciudad, y no lanzará a­llí flecha; y no estará delante de ella con escu­do, y no verterá sobre ella montículo.
-**33** Por el camino que vino, por él se volverá, y a esta ciudad no entrará' –declaración de יהוה.
+**33** Por el camino que vino, por él se volverá, y a esta ciudad no entrará’ –declaración de יהוה.
 **34** Y defenderé a esta ciudad para salvarla por causa de Mí y por causa de David, mi siervo”.
 
 Muerte de Sanjerib
@@ -713,7 +713,7 @@ Enfermedad y sanación de Jizkiyahu
 **3**¡Te ruego, יהוה! Recuerda, por favor, que he andado delante de ti en verdad y con cora­zón completo, y lo bueno en tus ojos he hecho. Y lloró Jizkiyahu un gran llanto.
 **4** Y sucedió que Ieshaiáhu no había salido del patio central[^2196], y la palabra de יהוה fue a él, diciendo:
 **5** Vuelve, y dirás a Jizkiyahu, líder de mi pue­blo: “Así dijo יהוה, Elohim de David tu pa­dre: ‘He escuchado tu tefilah, he visto tus lá­grimas; heme aquí, te sanaré. En el día tercero subirás a la casa de יהוה.
-**6** Y añadiré sobre tus días quince años, y de la palma del rey de Ashur te rescataré, y a esta ciu­dad; y defenderé a esta ciudad por causa de Mí y por causa de David, mi siervo' ”.
+**6** Y añadiré sobre tus días quince años, y de la palma del rey de Ashur te rescataré, y a esta ciu­dad; y defenderé a esta ciudad por causa de Mí y por causa de David, mi siervo’ ”.
 **7** Y dijo Ieshaiáhu: Tomen una masa de pastel de higos. Y la tomaron y lo pusieron sobre la erupción, y vivió.
 **8** Y dijo Jizkiyahu a Ieshaiáhu: ¿Cuál será la señal de que me sanará יהוה y subiré en el día tercero a la casa de יהוה?
 **9** Y dijo Ieshaiáhu: Esta será para ti la señal de יהוה, que hará יהוה la cosa que ha ha­bla­do: irá la sombra diez gradas o volverá diez gradas.
@@ -793,10 +793,10 @@ Hallazgo del rollo de la Torah
 **14** Y fue Jilkiyahu el sacerdote, y Ajikam, Aj­bor, Shafán y Asaiáh, a Juldáh, la profetisa, mu­jer de Shalum, hijo de Tikváh, hijo de Jar­jás, guardia de las vestiduras; y ella habitaba en Yerushaláim en el segundo sector, y hablaron a ella.
 **15** Y ella les dijo: Así dice יהוה, Elohim de Israel: “Digan al hombre que los ha enviado a Mí:
 **16** ‘Así dice יהוה: “He aquí, Yo haré venir el mal hacia este lugar y sobre sus habitantes, todas las palabras del rollo que ha leído el rey de Iehudáh.
-**17** Porque me han abandonado y han que­mado incienso a otros dioses para hacer­me enfurecer con toda la obra de sus manos, se ha calentado mi nariz en este lugar, y no se apa­ga­rá” ' ”.
+**17** Porque me han abandonado y han que­mado incienso a otros dioses para hacer­me enfurecer con toda la obra de sus manos, se ha calentado mi nariz en este lugar, y no se apa­ga­rá” ’ ”.
 **18** Pero al rey de Iehudáh, el que los envió a consultar a יהוה, así le dirán: “Así dijo יהוה, Elohim de Israel: ‘Sobre las palabras que has escuchado,
-**19** porque se enterneció tu corazón y te humi­llaste delante de יהוה cuando escuchaste lo que hablé sobre este lugar y sobre sus habitan­tes, para ser por devastación y por deshonra, y rasgaste tus vestidos y lloraste delante de Mí, también Yo te he escuchado'–declaración de יהוה.
-**20** ‘Por eso, he aquí, Yo te reuniré con tus pa­dres, y serás reunido en tu tumba en shalom[^2201] y no verán tus ojos a todo el mal que Yo haré venir sobre este lugar' ”. Y regresaron palabra al rey.
+**19** porque se enterneció tu corazón y te humi­llaste delante de יהוה cuando escuchaste lo que hablé sobre este lugar y sobre sus habitan­tes, para ser por devastación y por deshonra, y rasgaste tus vestidos y lloraste delante de Mí, también Yo te he escuchado’–declaración de יהוה.
+**20** ‘Por eso, he aquí, Yo te reuniré con tus pa­dres, y serás reunido en tu tumba en shalom[^2201] y no verán tus ojos a todo el mal que Yo haré venir sobre este lugar’ ”. Y regresaron palabra al rey.
 
 Reformas del rey Ioshiyahu
 
@@ -927,7 +927,7 @@ Iehoiajín es honrado en Babel
 [^2104]: Lit.: *uno aquí y uno allá.*
 [^2105]: Lit.: *luminosidad. *Heb.: *Orot.*
 [^2106]: Persona que sufre *tzaraat*.
-[^2107]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^2107]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 [^2108]: Lit.: *recogerá.*
 [^2109]: Plenitud, ausencia de deudas.
 [^2110]: Arameo.

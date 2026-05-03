@@ -43,7 +43,7 @@ __SHEMOT \(ÉXODO\)__ שמות
 **10** Y creció el niño, y ella lo trajo a la hija de Faraón, y se convirtió en su hijo; y ella llamó su nombre Moshéh[^255], y dijo: Porque del agua lo he sacado[^256].
 **11** Y sucedió en aquellos días *que* había crecido Moshéh, y salió a sus hermanos y vio sus car­gas; y vio un mitzrí[^257] golpeando a un hombre ivrí[^258] de sus hermanos.
 **12** Y se volvió aquí y allá, y vio que no había hombre, y mató al mitzrí, y lo ocultó en la arena.
-**13** Y salió en el día segundo, y he aquí, dos hombres ivrim peleando, y él dijo al malvado: ¿Por qué golpeas a tu compañero?
+**13** Y salió en el día segundo, y he aquí, dos hombres ivrim peleando, y él dijo al culpable: ¿Por qué golpeas a tu compañero?
 **14** Y dijo: ¿Quién te nombró por hombre capitán y juez sobre nosotros? ¿Estás diciendo *en tu corazón* matarme como mataste al mitzrí? Y temió Moshéh, y dijo: Segu­ra­men­te es cono­cido el asunto.
 **15** Y escuchó Faraón de este asunto, y buscó para matar a Moshéh; pero huyó Moshéh del rostro de Faraón, y habitó en la tierra de Midián, y se sentó sobre un pozo.
 **16** Y el sacerdote de Midián *tenía* siete hijas, y vinieron y sacaron agua, y llenaron los abreva­deros para dar de beber al rebaño de su padre.
@@ -73,8 +73,7 @@ __SHEMOT \(ÉXODO\)__ שמות
 **10** Y ahora, ven, y te enviaré a Faraón, y sacarás a mi pueblo, los hijos de Israel, de Mitzráim.
 **11** Pero dijo Moshéh a Elohim: ¿Quién soy yo *para* ir a Faraón, y pues, sacar a los hijos de Israel de Mitzráim?
 **12** Y Él dijo: Porque Yo seré contigo, y ésta para ti *será *una señal que Yo te he enviado: cuando saques al pueblo de Mitzráim, servirán a Elohim en este monte.
-**13** Y dijo Moshéh a Elohim: He aquí, yo voy a los hijos de Israel, y les diré: “El Elohim de sus padres
-me ha enviado a ustedes”. Y ellos me dirán: “¿Cuál es su nombre?”, ¿qué les diré?
+**13** Y dijo Moshéh a Elohim: He aquí, yo voy a los hijos de Israel, y les diré: “El Elohim de sus padres__ __me ha enviado a ustedes”. Y ellos me dirán: “¿Cuál es su nombre?”, ¿qué les diré?
 **14** Y dijo Elohim a Moshéh: Ehyeh Asher Ehyeh[^264]. Y dijo: Así dirás a los hijos de Israel: Ehyeh[^265] me ha enviado a ustedes.
 **15** Y dijo además Elohim a Moshéh: Así dirás a los hijos de Israel:
 
@@ -84,7 +83,7 @@ Este es mi Nombre para siempre,
  y este mi memorial de generación en generación.
 
 **16** Ve y junta a los ancianos de Israel, y diles: “יהוה, el Elohim de sus padres ha aparecido a mí, el Elohim de Abraham, de Itzjak y de Yaakov, diciendo: ‘Visitándo*los,* los he visitado, y *he visto* lo que les han hecho a ustedes en Mitzráim.
-**17** Y he dicho: Los haré subir de la angustia de Mitzráim hacia la tierra del kenaaní, del emorí, del perizí, del jiví y del iebusí, a una tierra que fluye leche y miel. ' ”
+**17** Y he dicho: Los haré subir de la angustia de Mitzráim hacia la tierra del kenaaní, del emorí, del perizí, del jiví y del iebusí, a una tierra que fluye leche y miel.’ ”
 **18** Y ellos escucharán tu voz; e irás tú y los ancianos de Israel hacia el rey de Mitzráim, y le dirán: “יהוה, Elohim de los ivrim[^267], se ha encontrado con nosotros, y ahora déjanos ir, por favor, *por *un camino de tres días en el desierto, y podremos sacrificar para יהוה nuestro Elohim”.
 **19** Pero Yo sé que no les permitirá el rey de Mitzráim ir, si no es por mano fuerte.
 **20** Pero Yo enviaré mi mano y golpearé a Mitzráim con todas mis maravillas, las cuales haré en medio de él, y después los dejará ir.
@@ -117,7 +116,7 @@ Este es mi Nombre para siempre,
 **20** Y tomó Moshéh a su mujer y a sus hijos, y los montó sobre el asno, y regresó a la tierra de Mitzráim. Y tomó Moshéh la vara de Elohim en su mano.
 **21** Y dijo יהוה a Moshéh: Cuando vayas a regresar a Mitzráim, mira todas las maravillas que he puesto en tu mano, y las harás delante de Faraón. Pero Yo mostraré la dureza de su corazón, y no enviará al pueblo.
 **22** Y dirás a Faraón: “Así dice יהוה: ‘Mi hijo, mi primogénito es Israel.
-**23** Y te dije: “Envía a mi hijo para que me sirva”, pero te rehusaste a enviarlo. He aquí, mataré a tu hijo, tu primogénito. ' ”
+**23** Y te dije: “Envía a mi hijo para que me sirva”, pero te rehusaste a enviarlo. He aquí, mataré a tu hijo, tu primogénito.’ ”
 **24** Y sucedió en el camino, en una posada, se encontró con él יהוה y buscó matarlo.
 **25** Y tomó Tziporáh un pedernal y cortó el prepucio de su hijo, y lo alcanzó a sus pies, y dijo: Más bien un esposo de sangre eres tú para mí.
 **26** Y lo dejó. Entonces dijo ella: *Eres* esposo de sangre, por la circun­cisión.
@@ -215,17 +214,16 @@ Este es mi Nombre para siempre,
 
 **14** Y dijo יהוה a Moshéh: Es pesado el co­razón de Faraón, se rehúsa a enviar al pueblo.
 **15** Ve a Faraón en la mañana, he aquí, él sale al agua, y párate a su encuentro sobre el río, y la vara que se convirtió en serpiente tomarás en tu mano.
-**16** Y le dirás: “יהוה, Elohim de los ivrim[^281], me ha enviado a ti, diciendo: ‘Envía a mi pueblo y me servirá en el desierto. Y he aquí, hasta ahora no has escuchado. '
+**16** Y le dirás: “יהוה, Elohim de los ivrim[^281], me ha enviado a ti, diciendo: ‘Envía a mi pueblo y me servirá en el desierto. Y he aquí, hasta ahora no has escuchado.’
 **17** Así dice יהוה: ‘En esto sabrás que Yo soy יהוה, he aquí, Yo golpearé con la vara que *tengo* en mi mano sobre las aguas que *están* en el río, y se convertirán en sangre.
-**18** Y el pez que *está* en el río morirá, olerá muy mal el río, y *los de* Mitzráim aborrecerán be­­ber agua del río. ' ”
+**18** Y el pez que *está* en el río morirá, olerá muy mal el río, y *los de* Mitzráim aborrecerán be­­ber agua del río.’ ”
 **19** Y dijo יהוה a Moshéh: Di a Aharón: “Toma tu vara e inclina tu mano sobre las aguas de Mitzráim, sobre sus corrientes, sobre sus ríos[^282], y sobre sus lagos, y sobre todos sus depósitos de agua, y se convertirán en sangre; y habrá sangre en toda la tierra de Mitz­ráim, en maderas y en piedras”.
 **20** Y lo hicieron así Moshéh y Aharón, como había ordenado יהוה. Y alzó la vara y golpeó las aguas que *había* en el río a los ojos de Faraón y a los ojos de sus siervos, y se con­vir­tieron en sangre las aguas que *había* en el río.
 **21** Y el pez que *estaba* en el río murió, y olió muy mal el río, y no podían *los de* Mitzráim beber agua del río, y había sangre en toda la tierra de Mitzráim.
 **22** Pero hicieron de la misma manera los adivinos de Mitzráim con sus encantamientos; y se fortaleció el corazón de Faraón, y no los escuchó, como había hablado יהוה.
 **23** Y se giró Faraón y entró a su casa, y no puso su corazón ni aún para esto.
 **24** Y cavó todo Mitzráim en los alrededores del río *por* agua para beber, porque no podían beber del agua del río[^283].
-**25** Y se cumplieron siete días después de que golpeó יהוה al río.
-**1**
+**25** Y se cumplieron siete días después de que golpeó יהוה al río. __ __
 
 *Segunda plaga: las ranas*
 
@@ -234,7 +232,7 @@ Este es mi Nombre para siempre,
 **1** Y dijo יהוה a Moshéh: Ve a Faraón y dile: “Así dice יהוה: ‘Envía a mi pue­blo y me servirá.
 **2** Pero si rehúsas tú a enviarlos, he aquí, Yo heriré todo tu territorio con ranas.
 **3** Y se infestará el río de ranas, y subirán y entrarán en tu casa, y en tu habitación, tu sofá, y sobre tu cama, y en las casas de tus siervos y en tu pueblo, y en tus hornos y en tus artesas,
-**4** y en ti, y en tu pueblo, y en todos tus siervos subirán las ranas. ' ”
+**4** y en ti, y en tu pueblo, y en todos tus siervos subirán las ranas.’ ”
 **5** Y dijo יהוה a Moshéh: Di a Aharón: “Inclina tu mano con tu vara sobre las co­rrientes, sobre los ríos, y sobre los lagos, y haz subir a las ranas sobre la tierra de Mitzráim”.
 **6** E inclinó[^284] Aharón su mano sobre las aguas de Mitzráim, y subió la rana y cubrió la tierra de Mitzráim.
 **7** E hicieron así los adivinos con sus encan­tamientos, y subieron las ranas sobre la tierra de Mitzráim.
@@ -259,7 +257,7 @@ Este es mi Nombre para siempre,
 **20** Y dijo יהוה a Moshéh: Levántate tem­prano en la mañana y preséntate delante de Faraón, he aquí, él sale al agua, y dile: “Así dice יהוה: ‘Envía a mi pueblo y me servirá.
 **21** Porque si no envías a mi pueblo, he aquí, enviaré en ti, y en tus siervos, y en tu pueblo, y en tus casas, una mezcla *de insectos*, y se llenarán las casas de Mitzráim de la mez­cla *de insectos*, y también el suelo sobre el cual están.
 **22** Y separaré en aquel día a la tierra de Goshén, en la cual mi pueblo está ubicado, para que no haya allí mezcla *de insectos*, para que sepas que Yo, יהוה, *estoy* en medio de la tierra.
-**23** Y pondré una distinción en­tre mi pueblo y tu pueblo, mañana será esta señal. ' ”
+**23** Y pondré una distinción en­tre mi pueblo y tu pueblo, mañana será esta señal.’ ”
 **24** E hizo יהוה así, y entró una pesada mezcla *de insectos *en la casa de Faraón, y en las casas de sus siervos, y en toda la tierra de Mitzráim. Fue corrompida la tierra debido a la mezcla *de insectos*.
 **25** Y llamó Faraón a Moshéh y a Aharón, y dijo: Vayan, sacrifiquen para su Elohim en la tierra.
 **26** Pero dijo Moshéh: No es correcto que hagamos así, porque abominación de Mitzráim es sacrificar a יהוה nuestro Elohim. Si sacrificamos abominación de Mitzráim ante sus ojos, ¿No nos apedrearán?
@@ -270,14 +268,14 @@ Este es mi Nombre para siempre,
 **31** E hizo יהוה conforme a la palabra de Moshéh, y retiró la mez­cla *de insectos *de Faraón, de sus siervos y de su pueblo; no quedó uno.
 **32** Pero permaneció pesado Faraón su corazón tam­bién esta vez, y no envió al pueblo.
 
-Quinta plaga: peste en el ganado*
+*Quinta plaga: peste en el ganado*
 
 **9**
 
 **1** Y dijo יהוה a Moshéh: Ve a Faraón, y dile: “Así dice יהוה, Elohim de los ivrim[^286]: ‘Envía a mi pueblo y me servirá.
 **2** Porque si rehúsas tú enviarlos, y todavía los contienes,
 **3** he aquí, la mano de יהוה será en tu ganado que *está *en el campo, en los caballos, en los asnos, en los camellos, en las vacas y en las ovejas, *con* plaga grandemente severa.
-**4** Y separará יהוה entre el ganado de Israel y el ganado de Mitzráim, y no morirá nada* *de todo *lo que* le pertenece a los hijos de Israel. ' ”
+**4** Y separará יהוה entre el ganado de Israel y el ganado de Mitzráim, y no morirá nada* *de todo *lo que* le pertenece a los hijos de Israel.’ ”
 **5** Y puso יהוה un tiempo específico, dicien­do: Mañana hará יהוה esta cosa en la tie­rra.
 **6** E hizo יהוה esta cosa al día siguiente, y murió todo el ganado de Mitzráim, pero del ganado de los hijos de Israel, no murió *ni *uno.
 **7** Y envió Faraón *a ver*, y he aquí, no murió del ganado de Israel ni uno. Pero permaneció pe­sado el corazón de Faraón, y no envió al pue­blo.
@@ -298,7 +296,7 @@ Quinta plaga: peste en el ganado*
 **16** Pero, de hecho, para esto tú estás de pie: para mostrar en ti mi poder, y para proclamar mi Nombre en toda la tierra.
 **17** Aún resistes a[^287] mi pueblo *como* para no enviarlos.
 **18** He aquí, haré llover mañana como *a* *esta* hora granizo muy pesado, el cual no ha habido en Mitzráim desde el día de su fundación hasta ahora.
-**19** Y ahora, envía a un refugio a tu ganado. Y todo lo que tienes tú en el campo, todo hombre y animal que se encuentre en el campo y no sea recogido a la casa, caerá sobre él el granizo y morirá. ' ”
+**19** Y ahora, envía a un refugio a tu ganado. Y todo lo que tienes tú en el campo, todo hombre y animal que se encuentre en el campo y no sea recogido a la casa, caerá sobre él el granizo y morirá.’ ”
 **20** Y el que temió a la palabra de יהוה de *entre *los siervos de Faraón, hizo escapar a sus siervos y a su ganado hacia las casas,
 **21** pero el que no puso su corazón en la palabra de יהוה, dejó a sus siervos y a su ganado en el campo.
 **22** Y dijo יהוה a Moshéh: Extiende tu mano junto al cielo y haya granizo en toda la tierra de Mitzráim, sobre el hombre, y sobre la bestia, y sobre toda hierba del campo por toda la tierra de Mitzráim.
@@ -306,23 +304,21 @@ Quinta plaga: peste en el ganado*
 **24** Y hubo granizo, y fuego encendido en medio del granizo muy pesado, que no ha habido como este en toda la tierra de Mitzráim desde que se convirtió en nación.
 **25** Y golpeó el granizo por toda la tierra de Mitzráim, todo lo que *había* en el campo, desde el hombre hasta la bestia, y toda la hierba del campo golpeó el granizo, y todo árbol del campo destrozó.
 **26** Sólo en la tierra de Goshén, que allí *estaban *los hijos de Israel, no hubo granizo.
-**27** Y envió Faraón y llamó a Moshéh y a Aha­rón, y* les *dijo a ellos: He pecado esta vez; יהוה es justo, y yo y mi pueblo *somos* malvados.
+**27** Y envió Faraón y llamó a Moshéh y a Aha­rón, y* les *dijo a ellos: He pecado esta vez; יהוה es justo, y yo y mi pueblo *somos* culpables.
 **28** Pidan a יהוה, ha habido muchas voces de Elohim, y granizo. Los en­viaré, y no se quedarán más* aquí*.
-**29** Y le dijo Moshéh: Cuando salga de la ciu­dad extenderé mis palmas a יהוה; las voces cesarán y el granizo no es­tará más, para que sepas que de יהוה
-es la tierra.
+**29** Y le dijo Moshéh: Cuando salga de la ciu­dad extenderé mis palmas a יהוה; las voces cesarán y el granizo no es­tará más, para que sepas que de יהוה__ __es la tierra.
 **30** Pero tú y tus siervos, sé que aún no temen delante de יהוה Elohim.
 **31** Y el lino y la cebada fueron golpeados, pues la cebada *era* Abib[^288], y el lino *estaba en* caña;
 **32** pero el trigo y la espelta[^289] no fueron golpeados, pues estos son tardíos.
 **33** Y salió Moshéh de Faraón *y* de la ciudad; y extendió sus palmas a יהוה, y cesaron los truenos y el granizo, y la lluvia no fue vertida *sobre* la tierra.
 **34** Pero vio Faraón que había cesado la lluvia, y el granizo y el trueno, y volvió a pecar, y permaneció pesado su corazón, él y sus siervos.
-**35** Y se fortaleció el corazón de Faraón, y no envió a los hijos de Israel, como había hablado יהוה por mano de Moshéh.
-**1**
+**35** Y se fortaleció el corazón de Faraón, y no envió a los hijos de Israel, como había hablado יהוה por mano de Moshéh.__ __
 
 *Octava plaga: las langostas*
 
 **10**
 
-**1** Y dijo יהוה a Moshéh: Ve a Faraón, porque Yo he hecho pesado su corazón y el corazón de sus siervos, para poner mis señales estas en medio de él;
+**1** Y dijo יהוה a Moshéh: Ve a Faraón, porque Yo he dejado pesado su corazón y el corazón de sus siervos, para poner mis señales estas en medio de él;
 **2** y para que cuentes en los oídos de tu hijo y del hijo de tu hijo, que he hecho daño en Mitzráim, y mis señales que he puesto entre ellos, y para que sepan que Yo soy יהוה.
 **3** Y fueron Moshéh y Aharón a Faraón, y le dijeron: Así dice יהוה, Elohim de los ivrim[^290]: “¿Hasta cuándo rehusarás afligirte delan­te de Mí? Envía a mi pueblo y me servirá.
 **4** Porque si rehúsas tú enviar a mi pueblo, he aquí, traeré mañana langostas en tu territorio.
@@ -368,7 +364,7 @@ es la tierra.
 **7** Pero a cualquiera de los hijos de Israel, desde el hombre hasta la bestia, no afilará *ni *un perro su lengua, para que sepan que hace distinción יהוה entre Mitzráim e Israel”.
 **8** Y descenderán todos estos tus siervos y se inclinarán a mí, diciendo: “Sal tú y todo el pue­blo que *está* a tus pies”. Y después así sal­dré. Y *Moshéh* salió de Faraón encendido en ira.
 **9** Pero dijo יהוה a Moshéh: No los es­cu­chará Faraón, para que se multipliquen mis ma­ravillas en la tierra de Mitzráim.
-**10** Y Moshéh y Aharón hicieron todas estas ma­ravillas delante de Faraón, y fortaleció יהוה el corazón de Faraón, y no envió a los hijos de Israel de su tierra.
+**10** Y Moshéh y Aharón hicieron todas estas ma­ravillas delante de Faraón, y se hizo fuerte יהוה con el corazón de Faraón, y no envió a los hijos de Israel de su tierra.
 
 *El Pésaj*
 
@@ -399,7 +395,7 @@ es la tierra.
 **23** Y pasará יהוה para lastimar a Mitzráim, y verá la sangre sobre el dintel y sobre los dos postes de la puerta, y pasará por alto יהוה sobre la entrada, y no permitirá *que* el des­tructor entre hacia sus casas para lastimar.
 **24** Y guardarán esto por estatuto para ti y para tus hijos hasta siempre.
 **25** Y sucederá que entrarán a la tierra que *les *dará יהוה a ustedes, como ha hablado, y guar­darán este servicio.
-**26** Y sucederá que *les* dirán a ustedes sus hijos: “¿Qué es este servicio para ustedes? ”,
+**26** Y sucederá que *les* dirán a ustedes sus hijos: “¿Qué es este servicio para ustedes?”,
 **27** y ustedes dirán: “Sacrificio de Pésaj es para יהוה, quien pasó por alto sobre las casas de los hijos de Israel en Mitzráim cuando lastimó a Mitzráim, y rescató nuestras casas”. Y se inclinó el pueblo y se postró.
 **28** Y fueron y lo hicieron los hijos de Israel como había mandado יהוה a Moshéh y a Aharón, así lo hicieron.
 
@@ -449,7 +445,7 @@ es la tierra.
 **11** Y sucederá *que* cuando te lleve יהוה a la tierra del kenaaní, como* te* juró a ti y a tus padres, y te la dé,
 **12** harás pasar toda abertura de la matriz a יהוה, y todo primo­génito nacido de ani­mal que te pertenezca; los machos *serán* para יהוה.
 **13** Pero todo primogénito de asno redimirás con un cordero; y si no *lo* redimirás, de­capítalo; y todo primogénito de hombre entre tus hijos redimirás.
-**14** Y será *que *cuando te pregunte tu hijo mañana, diciendo: “¿Qué es esto? ”, le dirás: “Con fuerte mano nos sacó יהוה de Mitzráim, de la casa de esclavos.
+**14** Y será *que *cuando te pregunte tu hijo mañana, diciendo: “¿Qué es esto?”, le dirás: “Con fuerte mano nos sacó יהוה de Mitzráim, de la casa de esclavos.
 **15** Y sucedió *que *cuando se endureció Faraón a enviarnos, mató יהוה todo primogénito en la tierra de Mitzráim, desde el primogénito de hombre hasta el primogénito de bestia. Por eso yo sacrifico a יהוה toda abertura de matriz, los machos, pero todo primo­génito de mis hijos redimo”.
 **16** Y será por señal en tu mano y por frontales entre tus ojos; porque con fuerte mano nos sacó יהוה de Mitzráim.
 **17** Y sucedió *que *cuando envió Faraón al pueblo, no los guio Elohim *por* el camino de la tierra de los pelishtim, pues *estaban* cerca de él, porque dijo Elohim: A menos que sea restaurado el pueblo en su ver guerra, y se regrese a Mitzráim.
@@ -510,8 +506,7 @@ Cantaré a יהוה porque altamente es exal­­­tado[^306]; *al *caballo y su 
 **5** Los abismos los cubren; descendieron en las profundidades como una piedra.
 **6** Tu diestra, יהוה, majestuosa[^312] en poder; tu diestra, יהוה, ha destrozado al enemigo.
 **7** Y en la multitud de tu grandeza destruyes a los que se levantan contra ti, envías tu ira, y los consumes como paja.
-**8** Y en el aliento de tus narices se acu­mu­laron las aguas, se pararon como un pilar de agua las corrientes[^313];
-se congelaron los abismos en el corazón del mar.
+**8** Y en el aliento de tus narices se acu­mu­laron las aguas, se pararon como un pilar de agua las corrientes[^313];__ __se congelaron los abismos en el corazón del mar.
 **9** Dijo el enemigo: “Perseguiré, superaré, divi­diré el botín, se saciará mi ser; vaciaré mi espada, los destruirá mi mano”.
 **10** Soplaste con tu viento, los cubrió el mar, se hundieron como plomo en las aguas majestuosas.
 **11**¿Quién como Tú entre los dioses, יהוה?
@@ -549,8 +544,7 @@ Canten a יהוה porque altamente es exal­tado[^319],
 **4** Y dijo יהוה a Moshéh: He aquí, haré llover para ustedes pan del cielo; y saldrá el pueblo y recogerá cosa de un día en su día, para examinarlos si caminarán en mi Torah o no.
 **5** Y sucederá en el día sexto, prepararán lo que traigan, y *la porción* será doble, por encima de lo que recojan día *a* día.
 **6** Y dijo Moshéh. y Aharón. a todos los hijos de Israel: *Por* la tarde sabrán que יהוה *los *ha sa­cado a ustedes de la tierra de Mitzráim;
-**7** Y* por*
-la mañana verán la gloria de יהוה, por*que* Él escucha sus murmuraciones sobre יהוה; pero nosotros, ¿qué *somos* para que se quejen sobre nosotros?
+**7** Y* por*__ __la mañana verán la gloria de יהוה, por*que* Él escucha sus murmuraciones sobre יהוה; pero nosotros, ¿qué *somos* para que se quejen sobre nosotros?
 **8** Y dijo Moshéh: *Esto sucederá* cuando les dé יהוה por la tarde carne para comer, y pan por la mañana para saciarse; por*que* ha escuchado יהוה sus quejas que murmuran sobre Él; pero nosotros, ¿qué *somos*?, no *son *sobre nosotros sus murmuraciones, pues *son* sobre יהוה.
 **9** Y dijo Moshéh a Aharón: Di a toda la congregación de los hijos de Israel: “Acér­quen­se delante de[^324] יהוה, por­que *Él* ha escuchado sus murmuraciones”.
 **10** Y sucedió *que* cuando habló Aharón a toda la congregación de los hijos de Israel, se giraron hacia el desierto, y he aquí, la gloria de יהוה apareció en la nube.
@@ -609,8 +603,7 @@ la mañana verán la gloria de יהוה, por*que* Él escucha sus murmuraciones 
 
 **18**
 
-**1** Y escuchó Itró, sacerdote
-de Midián, suegro de Moshéh, todo lo que había hecho Elohim por Moshéh y por Israel su pueblo, porque sacó יהוה a Israel de Mitzráim.
+**1** Y escuchó Itró, sacerdote__ __de Midián, suegro de Moshéh, todo lo que había hecho Elohim por Moshéh y por Israel su pueblo, porque sacó יהוה a Israel de Mitzráim.
 **2** Y tomó Itró, suegro de Moshéh, a Tziporáh, mujer de Moshéh, después de que la había enviado;
 **3** y a sus dos hijos, que el nombre de uno era Guershom, porque él dijo: Extranjero[^339] he sido en tierra extranjera[^340].
 **4** Y el nombre del otro era Eliezer, porque *dijo: *El Elohim de mi padre *fue* mi ayuda[^341], y me rescató de la espada de Faraón.
@@ -795,12 +788,11 @@ de Midián, suegro de Moshéh, todo lo que había hecho Elohim por Moshéh y por
 **1** No levantarás informe[^379] falso; no pondrás tu mano con el condenado[^380] para ser testigo violento[^381].
 **2** No estarás detrás de muchos para *hacer *males, y no responderás en una contienda incli­nándote detrás de muchos para torcer.
 **3** Y *al* débil no favorecerás[^382] en su contienda.
-**4** Cuando te encuentres un buey
-de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
+**4** Cuando te encuentres un buey__ __de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **5** Cuando veas el asno de quien te odia acostado debajo de su carga, ¿desistirás de liberarlo? Liberando, lo liberarás con él.
 **6** No torcerás el proceso legal de tu necesitado en su contienda.
 **7** De palabra de mentira te alejarás, y *al* inocente y justificado no matarás, porque no justificaré al condenado.
-**8** Y soborno no tomarás, porque el soborno ciega *a* los de vista clara y distorsiona las palabras de los justificados.
+**8** Y soborno no tomarás, porque el soborno ciega *a* los de vista clara y distorsiona las pala\-bras de los justificados.
 **9** Y *al *extranjero no oprimirás; y ustedes conocen el ser del extranjero, porque extranjeros eran en la tierra de Mitzráim.
 **10** Y seis años sembrarás tu tierra y juntarás su producto;
 **11** Pero el séptimo *año* la dejarás caer, aban­donándola, y podrán comer los necesitados de tu pueblo, y lo que abunde de ellos podrán comer los animales del campo. Así harás a tu viña, a tu olivar.
@@ -808,7 +800,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **13** Y en todo lo que les he dicho, guardarán; y el nombre de otros dioses no mencionarán[^383], ni se escuchará en tu boca.
 
 **14** Tres peregrinaciones[^384] cele­bra­rán para Mí en el año.
-**15** La fiesta de los panes sin levadura[^385] guardarás. Siete días co­merás pan sin levadura[^386], como te ordené, al tiempo señalado, en el mes de Abib[^387], pues en él saliste de Mitzráim. Y no se aparecerán ante Mí vacíos.
+**15** La fiesta de los panes sin levadura[^385] guardarás. Siete días co­merás pan sin levadura[^386], como te ordené, al tiempo señalado, en el mes de Abib[^387] , pues en él saliste de Mitzráim. Y no se aparecerán ante Mí vacíos.
 **16** Y la fiesta de la cosecha[^388], de los primeros frutos[^389] de tus obras, de lo que siembres en el campo. Y la fiesta de la colección[^390] en el fin del año, cuando reúnas *el fruto* de tu obra del campo.
 **17** Tres peregrinaciones en el año se aparecerán todos tus varones delante del Adón[^391] יהוה.
 **18** No sacrificarás sobre pan leudado la sangre de mi sacrificio; y no pasará la noche la grasa de mi fiesta hasta la ma­ña­na.
@@ -977,7 +969,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 *Aceite para las lámparas*
 
 **20** Y tú, darás orden a los hijos de Israel y te traerán aceite de oliva puro, machacado, para la iluminación, para que ascienda la lámpara constantemente.
-**21** En la Tienda del Mo'ed[^423], fuera de la cortina divisora que *está *sobre el Testimonio; lo organizarán Aha­rón y sus hijos desde el atardecer hasta la ma­ñana delante de יהוה. *Será* un decreto olam[^424] para sus generaciones, de los hijos de Israel.
+**21** En la Tienda del Mo’ed[^423], fuera de la cortina divisora que *está *sobre el Testimonio; lo organizarán Aha­rón y sus hijos desde el atardecer hasta la ma­ñana delante de יהוה. *Será* un decreto olam[^424] para sus generaciones, de los hijos de Israel.
 
 *Las vestiduras sacerdotales*
 
@@ -1025,7 +1017,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **40** Para los hijos de Aharón harás túnicas, y harás para ellos fajas; y sombreros harás para ellos, para gloria y esplendor.
 **41** Y las vestirás a Aharón tu hermano, y a sus hijos con él, y los ungirás y llenarás sus manos, y los santificarás, y serán sacerdotes para Mí.
 **42** Y harás para ellos pantalones de lino para cubrir la desnudez de la carne, desde las caderas hasta los muslos serán.
-**43** Y estarán sobre Aharón y sobre sus hijos cuando entren a la Tienda del Mo'ed[^441], o cuando se acerquen al altar para ministrar en la Santidad, y no carguen ini­quidad y mueran. *Será* estatuto olam[^442] para él y para su simiente después de él.
+**43** Y estarán sobre Aharón y sobre sus hijos cuando entren a la Tienda del Mo’ed[^441], o cuando se acerquen al altar para ministrar en la Santidad, y no carguen ini­quidad y mueran. *Será* estatuto olam[^442] para él y para su simiente después de él.
 
 *Consagración de Aharón y de sus hijos*
 
@@ -1034,14 +1026,14 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **1** Y este es el asunto que les harás para consagrarlos, para que sean sacerdotes para Mí: toma un toro hijo de ganado, y dos carneros completos;
 **2** y panes sin levadura, y hogazas sin levadura mezcladas con aceite, y galletas sin levadura ungidas con aceite; de harina fina de trigo los harás.
 **3** Los pondrás en una cesta, y los acercarás en la cesta, y el toro, y los dos carneros.
-**4** Y a Aharón y sus hijos acerca a la entrada de la Tienda del Mo'ed, y los lavarás con agua.
+**4** Y a Aharón y sus hijos acerca a la entrada de la Tienda del Mo’ed, y los lavarás con agua.
 **5** Y tomarás las vestiduras, y vestirás a Aharón la túnica, el manto del efod, y el efod y el pectoral, y lo ceñirás con el diseño del efod.
 **6** Y colocarás el turbante sobre su cabeza, y pondrás la corona de santidad so­bre el turbante.
 **7** Y tomarás el aceite de la unción, y *lo *verterás sobre su cabeza, y lo ungirás.
 **8** Y a sus hijos acercarás, y les vestirás las túnicas.
 **9** Y les ceñirás las fajas *a* Aharón y sus hijos, y pon a ellos los sombreros. Y será para ellos el sacerdocio por estatuto olam; y llenarás la mano de Aharón y la mano de sus hijos.
-**10** Y acercarás el toro delante de la Tienda del Mo'ed, y apoyarán Aharón y sus hijos sus manos sobre la cabeza del toro.
-**11** Y sacrificarás el toro delante de יהוה, a la entrada de la Tienda del Mo'ed.
+**10** Y acercarás el toro delante de la Tienda del Mo’ed, y apoyarán Aharón y sus hijos sus manos sobre la cabeza del toro.
+**11** Y sacrificarás el toro delante de יהוה, a la entrada de la Tienda del Mo’ed.
 **12** Y tomarás de la sangre del toro y *la *pondrás sobre los cuernos del altar con tu dedo; y toda la sangre derramarás hacia la base del altar.
 **13** Y tomarás toda la grasa que cubre las entrañas, y el lóbulo con el hígado, y los dos riñones, y la grasa que *hay *sobre ellos, y los quemarás *sobre* el altar.
 **14** Pero la carne del toro y su piel y su estiércol, quemarás con fuego fuera del cam­pamento; es ofrenda por el pecado.
@@ -1060,9 +1052,9 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **27** Y consagrarás el pecho de la ofrenda mecida y la pierna de la ofrenda alzada[^446], lo que fue mecido y lo que fue levantado del carnero de la plenitud de lo que *es *para Aharón y de lo que *es *para sus hijos.
 **28** Y será para Aharón y para sus hijos por estatuto olam de los hijos de Israel, porque ofrenda alzada es esta; y ofrenda alzada será de los hijos de Israel, de los sacrificios de sus retribuciones, su ofrenda alzada para יהוה.
 **29** Y las vestiduras de santidad que *son* para Aharón serán para sus hijos después de él, para ungir en ellas y llenar en ellas sus manos.
-**30** Siete días las vestirá el sacerdote en su lu­gar de sus hijos, que entre a la Tienda del Mo'ed para ministrar en la Santidad.
+**30** Siete días las vestirá el sacerdote en su lu­gar de sus hijos, que entre a la Tienda del Mo’ed para ministrar en la Santidad.
 **31** Y el carnero de la plenitud tomarás y co­cerás su carne en el lugar santo.
-**32** Y comerán Aharón y sus hijos la carne del carnero y el pan que *está* en la cesta, *a* la entrada de la Tienda del Mo'ed.
+**32** Y comerán Aharón y sus hijos la carne del carnero y el pan que *está* en la cesta, *a* la entrada de la Tienda del Mo’ed.
 **33** Y las comerán, por las cuales se hizo reconciliación[^447] en ellas para llenar sus manos *y* para con­sagrarlos; pero el extranjero no *las* comerá, porque santificadas son.
 **34** Y si queda *algo *de la carne de la plenitud o del pan hasta la mañana, quemarás lo restante con fuego, no se comerá, pues santificado es.
 **35** Y harás a Aharón y a sus hijos así, conforme a todo lo que te he ordenado, siete días llenarás sus manos.
@@ -1075,9 +1067,9 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **39** El cordero uno harás por la mañana, y el cordero segundo harás entre las dos tardes;
 **40** y una décima de harina mezclada con aceite machacado, un cuarto de hin[^451], y derramarás un cuarto de hin de vino; para el cordero uno.
 **41** Y el cordero segundo harás entre las dos tardes, como la ofrenda de grano de la mañana, y como la ofrenda derramada, y harás para esta por olor calmante; ofrenda de fuego para יהוה.
-**42** Será ofrenda ascendida continuamente por sus generaciones* a* la entrada de la Tienda del Mo'ed delante de יהוה, *en* la cual me reu­niré para ustedes allí, para hablar a ti allí.
+**42** Será ofrenda ascendida continuamente por sus generaciones* a* la entrada de la Tienda del Mo’ed delante de יהוה, *en* la cual me reu­niré para ustedes allí, para hablar a ti allí.
 **43** Y me reuniré allí por los hijos de Israel, y será consagrado *el lugar* por mi gloria.
-**44** Consagraré la Tienda del Mo'ed y el altar, y a Aharón y a sus hijos consagraré, para que sean sacerdotes para Mí.
+**44** Consagraré la Tienda del Mo’ed y el altar, y a Aharón y a sus hijos consagraré, para que sean sacerdotes para Mí.
 **45** Y habitaré en medio de los hijos de Israel, y seré para ustedes por Elohim.
 **46** Y conocerán que Yo soy יהוה su Elo­him, quien los sacó de la tierra de Mitzráim para habitar Yo en medio de ellos. Yo soy יהוה su Elohim.
 
@@ -1103,14 +1095,14 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **13** Esto dará todo el que pase junto a los que sean encargados: medio shekel, por el shekel de la Santidad; veinte gueráh es un shekel. Me­dio shekel, es terumáh[^457] para יהוה.
 **14** Todo el que pase junto a los que sean encargados, de edad *de* veinte años y arriba, dará terumáh *a* יהוה.
 **15** El rico no aumentará y el pobre no dismi­nuirá del medio shekel, al dar terumáh *a* יהוה para hacer reconciliación por sus vidas.
-**16** Y tomarás el dinero de las reconciliaciones de los hijos de Israel, y lo darás por el servicio de la Tienda del Mo'ed[^458], y sea para los hijos de Israel por memorial delante de יהוה, para ha­cer reconciliación por sus vidas.
+**16** Y tomarás el dinero de las reconciliaciones de los hijos de Israel, y lo darás por el servicio de la Tienda del Mo’ed[^458], y sea para los hijos de Israel por memorial delante de יהוה, para ha­cer reconciliación por sus vidas.
 
 *La pileta de cobre*
 
 **17** Y habló יהוה a Moshéh, diciendo:
-**18** Y harás una pileta de cobre, y su base de cobre, para lavarse; y la pondrás entre la Tienda del Mo'ed y el altar, y pondrás allí agua.
+**18** Y harás una pileta de cobre, y su base de cobre, para lavarse; y la pondrás entre la Tienda del Mo’ed y el altar, y pondrás allí agua.
 **19** Y de ella se lavarán Aharón y sus hijos sus manos y sus pies.
-**20** Cuando entren a la Tienda del Mo'ed, se la­varán *con* agua, para que no mueran; o cuando se acerquen al altar a ministrar para que­mar una ofrenda de fuego[^459] a יהוה.
+**20** Cuando entren a la Tienda del Mo’ed, se la­varán *con* agua, para que no mueran; o cuando se acerquen al altar a ministrar para que­mar una ofrenda de fuego[^459] a יהוה.
 **21** Y se lavarán sus manos y sus pies, y no morirán; y será para ellos estatuto olam[^460], para él y para su simiente, por sus gene­ra­ciones.
 
 *El aceite de la unción y el incienso*
@@ -1119,7 +1111,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **23** Y tú, toma para ti especias superiores: mirra pura[^461], quinientos shekel; canela aro­mática, su mitad, doscientos cincuenta; y caña aromática, doscientos cincuenta;
 **24** y casia, quinientos shekel, por el shekel de la Santidad; y aceite de oliva, un hin.
 **25** Y harás de ello el aceite de unción sagrada; compuesto de perfume, trabajo de perfumista; aceite de unción sagrada será.
-**26** Y ungirás con él la Tienda del Mo'ed y el arca del Testimonio,
+**26** Y ungirás con él la Tienda del Mo’ed y el arca del Testimonio,
 **27** y la Mesa y todos sus utensilios, y la Me­noráh[^462] y sus utensilios, y el altar del in­cienso,
 **28** y el altar de la ofrenda ascendida[^463] y todos sus utensilios, y la pileta y su base.
 **29** Y los consagrarás, y serán santidad de santidades; todo lo que toque en ellos será san­tificado.
@@ -1129,7 +1121,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **33** El hombre que componga *otro* como este, y quien ponga de este sobre un extran­jero, será cortado de su pueblo”.
 **34** Y dijo יהוה a Moshéh: Toma para ti especias, estacte, uña aromática y gálbano, especias y olíbano puro; en partes iguales[^464] será.
 **35** Y harás de esta un incienso, preparado, obra de perfumista, sazonado, puro y consagrado.
-**36** Y molerás *parte* de esta, y pondrás de esta delante del Testimonio, en la Tienda del Mo'ed, *en *la cual me reuniré para ti allí; santi­dad de santidades será para ustedes.
+**36** Y molerás *parte* de esta, y pondrás de esta delante del Testimonio, en la Tienda del Mo’ed, *en *la cual me reuniré para ti allí; santi­dad de santidades será para ustedes.
 **37** Y el incienso que harás, en su composición no harán *otro* para ustedes, sagrado será a ti, a יהוה.
 **38** El hombre que haga *otro *como este para oler de él, será cortado de su pueblo.
 
@@ -1142,7 +1134,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **4** Para considerar diseños, para trabajar en oro y en plata y en cobre,
 **5** y en el arte de piedras para rellenar, y en el arte de madera; para trabajar en todo *tipo de *trabajo.
 **6** Y Yo, he aquí, he puesto con él a Aholiav, hijo de Ajisamaj, por la tribu[^465] de Dan; y en el corazón de todo sabio de corazón he puesto sabiduría, y podrán hacer todo lo que te he mandado:
-**7** la Tienda del Mo'ed[^466], y el arca del Tes­ti­monio, y la cubierta[^467] que *estará* sobre ella, y todos los utensilios de la Tienda,
+**7** la Tienda del Mo’ed[^466], y el arca del Tes­ti­monio, y la cubierta[^467] que *estará* sobre ella, y todos los utensilios de la Tienda,
 **8** la Mesa y sus utensilios, la Menoráh[^468] pura y todos sus utensilios, y el altar del incienso,
 **9** y el altar de la ofrenda ascendida, y todos sus utensilios, y la pileta y su base;
 **10** y las vestiduras del servicio, y las vesti­duras de la santidad para Aharón el sacerdote, y las vestiduras de sus hijos, para oficiar el sacerdocio;
@@ -1174,8 +1166,6 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **13** Recuerda a Abraham, a Itzjak y a Yaakov, tus siervos, que les juraste por Ti *mismo*, y les dijiste: “Multiplicaré su simiente como las estrellas de los cielos, y toda esta tierra de la cual he hablado, daré a su simiente, y *la* heredarán para el olam[^472]”.
 **14** Y restableció al inicio יהוה sobre el mal que había dicho que haría a su pueblo.
 
-*Moshéh rompe las tablas*
-
 **15** Y se giró y bajó Moshéh del monte, y las dos tablas del Testimonio en su mano, tablas escritas de dos de sus lados, de un *lado* y de otro[^473] ellas fueron escritas.
 **16** Y las tablas* *obra de Elohim eran, y la es­critura era escritura de Elohim grabada sobre las tablas.
 **17** Y escuchó Yehoshúa la voz del pueblo en su maldad, y dijo a Moshéh: ¡*Hay* voz de guerra en el campamento!
@@ -1205,7 +1195,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **1** Y habló יהוה a Moshéh: Ve, sube de este *lugar*, tú y el pueblo que ha subido de la tierra de Mitzráim, a la tierra la cual juré a Abraham, a Itzjak y a Yaakov, diciendo: “A tu simiente la daré”.__2* *__Y enviaré delante de ti un malaj, y expulsaré al kenaaní, al emorí, y al jití, y al perizí, al jiví y al iebusí;
 **3** a una tierra que fluye leche y miel[^476]; pues no subiré en medio de ti, porque pueblo de duro cuello *eres *tú *Israel*, no sea que te consuma en el camino.__4* *__Y escuchó el pueblo la palabra mala esta, y lloraron, y no se puso hombre sus adornos sobre sí.__5* *__Y había dicho יהוה a Moshéh: Di a los hijos de Israel: “Ustedes son un pueblo de duro cuello; *si* por un momento subiría en medio de ti, te destruiría. Y ahora, quita tus adornos de sobre ti, y pueda saber qué he de hacer a ti”.
 **6** Y se despojaron los hijos de Israel sus a­dornos desde el monte Joreb.
-**7** Y Moshéh tomaba la Tienda, y la extendía fuera del campamento, muy lejos del campa­mento; y la llamó: Tienda del Mo'ed[^477]. Y sucedía *que* todo *el que* buscaba a יהוה salía hacia la Tienda del Mo'ed, que *estaba* fuera del campamento.
+**7** Y Moshéh tomaba la Tienda, y la extendía fuera del campamento, muy lejos del campa­mento; y la llamó: Tienda del Mo’ed[^477]. Y sucedía *que* todo *el que* buscaba a יהוה salía hacia la Tienda del Mo’ed, que *estaba* fuera del campamento.
 **8** Y sucedía cuando salía Moshéh a la Tienda, se levantaba todo el pueblo y se paraba, *cada *hombre a la entrada de su tienda, y miraba detrás de Moshéh hasta entrar él a la Tienda.
 **9** Y sucedía cuando entraba Moshéh a la Tienda, descendía el pilar de nube, y se paraba a la entrada de la Tienda, y hablaba con Mo­shéh.
 **10** Y veía todo el pueblo el pilar de nube parado a la entrada de la Tienda, y se levantaba todo el pueblo y se inclinaba, *cada* hombre a la entrada de su tienda.
@@ -1256,11 +1246,9 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **27** Y dijo יהוה a Moshéh: Escribe para ti estas palabras, porque por la boca de estas palabras he hecho[^494] contigo un pacto, y con Israel.
 **28** Y estuvo allí con יהוה cuarenta días y cuarenta noches; pan no comió y agua no bebió. Y escribió sobre las tablas las palabras del pacto, las Diez Palabras.
 
- *El rostro de Moshéh brilla*
-
 **29** Y sucedió cuando descendió Moshéh del monte Sinay, y las dos tablas del Testimonio en mano de Moshéh, cuando descendió del mon­te, Moshéh no sabía que brillaba la piel de su rostro, por haber hablado con Él.
 **30** Y vio Aharón y todos los hijos de Israel a Moshéh, y he aquí, brillaba la piel de su rostro, y temieron acercarse a él.
-**31** Y llamó a ellos Moshéh, y volvieron a él Aharón y todos los dadivosos de la congregación, y habló Moshéh a ellos.
+**31** Y llamó a ellos Moshéh, y volvieron a él Aharón y todos los dadivosos de la congre\-gación, y habló Moshéh a ellos.
 **32** Y después de eso se acercaron todos los hijos de Israel, y les mandó todo lo que había hablado יהוה con él en el monte Sinay.
 **33** Y terminó Moshéh de hablar con ellos, y puso sobre su rostro un velo.
 **34** Pero entraba Moshéh delante de יהוה para hablar con Él, y se quitaba el velo hasta que salía; y hablaba a los hijos de Israel lo que se le había ordenado.
@@ -1290,7 +1278,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **18** y las estacas del Mishkán, y las estacas del patio y sus cuerdas;
 **19** las vestiduras del servicio para ministrar en la Santidad, y las vestiduras de la santidad para Aharón el sacerdote, y las vestiduras de sus hi­jos para ser sacerdote.
 **20** Y salió toda la congregación de los hijos de Israel del rostro de Moshéh.
-**21** Y vino todo hombre el cual fue levantado su corazón, y todo el que quiso donar de su intención[^502]; vinieron a contribuir *para *יהוה, para el trabajo de la Tienda del Mo'ed[^503], para todo su servicio y para las ves­tiduras de la santidad.
+**21** Y vino todo hombre el cual fue levantado su corazón, y todo el que quiso donar de su intención[^502]; vinieron a contribuir *para *יהוה, para el trabajo de la Tienda del Mo’ed[^503], para todo su servicio y para las ves­tiduras de la santidad.
 **22** Y vinieron los hombres con las mujeres, todos de generoso corazón, y trajeron anillos, anillos de nariz, anillos de sello y adornos fe­meninos, todos utensilios de oro; y todo hom­bre quiso elevar una contribución de oro para יהוה.
 **23** Y todo hombre que fue encontrado con *lana *azul, púrpura y *teñiduras de* gusano car­mesí, y lino y *pelo de* cabras, y pieles de carneros *color* rojo, y pieles de jirafa, los trajo.
 **24** Todo *el que* levantó una terumáh de plata y de cobre, trajo la terumáh *a* יהוה; y todo el que fue encontrado con madera de acacias para cualquier trabajo del servicio, la trajo.
@@ -1397,7 +1385,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **5** Y fundió cuatro anillos en los cuatro extre­mos por el tejido de cobre, *como* lugares[^513] para las varas.
 **6** E hizo las varas de madera de acacias, y las cubrió de cobre.
 **7** E hizo entrar las varas en los anillos por los lados del altar, para llevarlo con ellas. Hueco, de tablas, lo hizo.
-**8** E hizo la pileta de cobre y su base de cobre, con los espejos de las siervas que servían *a* la entrada de la Tienda del Mo'ed[^514].
+**8** E hizo la pileta de cobre y su base de cobre, con los espejos de las siervas que servían *a* la entrada de la Tienda del Mo’ed[^514].
 **9** E hizo el patio, por la esquina del Néguev, al sur; las *cortinas* entrelazadas del patio *eran* de lino entretejido, de cien codos.
 **10** Sus veinte pilares y sus veinte bases *eran* de cobre; los ganchos de los pilares y sus sujetadores *eran* de plata.
 **11** Y por la esquina norte *había* cien en codos; sus veinte pilares y sus veinte bases *eran* de cobre; los ganchos de los pilares y sus suje­tadores *eran *de plata.
@@ -1419,7 +1407,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **27** Y fueron los cien talentos de plata para fundir las bases de la Santidad y las bases de la cortina; cien bases por cien talentos, un talento por base.
 **28** Y a los mil setecientos setenta y cinco *shekel* hizo ganchos para los pilares, y cubrió sus cabezas y los sujetó.
 **29** Y el cobre de la ofrenda mecida *fue* seten­ta talentos y dos mil cuatrocientos shekel.
-**30** E hizo con eso las bases de la entrada de la Tienda del Mo'ed, y el altar de cobre y el tejido de cobre que es para este, y todos los utensilios del altar,
+**30** E hizo con eso las bases de la entrada de la Tienda del Mo’ed, y el altar de cobre y el tejido de cobre que es para este, y todos los utensilios del altar,
 **31** y las bases del patio alrededor y las bases de la puerta del patio, y todas las estacas del Mishkán, y todas las estacas del patio alre­dedor.
 
 *Vestiduras sacerdotales*
@@ -1457,7 +1445,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **29** y la faja de lino entretejido, y azul, púrpura, y gusano carmesí, obra de tejedor, como había mandado יהוה a Moshéh.
 **30** E hicieron la placa de la corona sagrada de oro puro, y escribieron sobre ella una escritura grabada de un sello: Santidad a יהוה.
 **31** Y pusieron en ella una cuerda azul para po­nerla en el turbante desde arriba, como había mandado יהוה a Moshéh.
-**32** Y fue terminado todo el trabajo del Mish­kán de la Tienda del Mo'ed[^534], e hicieron los hi­jos de Israel conforme a todo lo que había man­dado יהוה a Moshéh, así hicieron.
+**32** Y fue terminado todo el trabajo del Mish­kán de la Tienda del Mo’ed[^534], e hicieron los hi­jos de Israel conforme a todo lo que había man­dado יהוה a Moshéh, así hicieron.
 
 *Trabajo presentado a Moshéh*
 
@@ -1468,7 +1456,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **37** la Menoráh[^536] pura con sus lámparas, lámpa­ras de orden, y todos sus utensilios, y el aceite de la iluminación;
 **38** el altar de oro, y el aceite de la unción, y el incienso calmante, y la cortina de la entrada de la Tienda;
 **39** el altar de cobre y el tejido de cobre, que es para él; sus varas y todos sus utensilios; la pi­leta y su base;
-**40** las cortinas del patio, sus pilares y sus ba­ses, y la cortina para la puerta del patio, sus cuerdas, sus estacas y todos los utensilios del servicio del Mishkán, para la Tienda del Mo'ed;
+**40** las cortinas del patio, sus pilares y sus ba­ses, y la cortina para la puerta del patio, sus cuerdas, sus estacas y todos los utensilios del servicio del Mishkán, para la Tienda del Mo’ed;
 **41** las vestiduras del servicio para ministrar en la Santidad, las vestiduras de la santidad para Aharón el sacerdote, y las vestiduras para sus hijos, para que sean sacerdotes.
 **42** Conforme a todo lo que había mandado יהוה a Moshéh, así hicieron los hijos de Is­rael todo el trabajo.
 **43** Y vio Moshéh todo el trabajo, y he aquí, lo hicieron como había mandado יהוה, así hi­cie­ron; y los bendijo Moshéh.
@@ -1478,17 +1466,17 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **40**
 
 **1** Y habló יהוה a Moshéh, diciendo:
-**2** En el día del mes primero, en el pri­mero del mes, levantarás el Mishkán de la Tienda del Mo'ed.
+**2** En el día del mes primero, en el pri­mero del mes, levantarás el Mishkán de la Tienda del Mo’ed.
 **3** Y pondrás allí el arca del Testimonio, y cu­brirás sobre el arca la cortina.
 **4** Y harás entrar la Mesa y organizarás su arre­glo, y harás entrar la Menoráh[^537] y ascen­derás sus lámparas.
 **5** Y pondrás el altar de oro para el incienso delante del arca del Testimonio, y pondrás la cortina *a* la entrada del Mishkán[^538].
-**6** Y pondrás el altar de la ofrenda ascendida delante de la entrada del Mishkán de la Tienda del Mo'ed.
-**7** Y pondrás la pileta entre la Tienda del Mo'ed[^539] y el altar, y pondrás allí agua.
+**6** Y pondrás el altar de la ofrenda ascendida delante de la entrada del Mishkán de la Tienda del Mo’ed.
+**7** Y pondrás la pileta entre la Tienda del Mo’ed[^539] y el altar, y pondrás allí agua.
 **8** Y pondrás el patio alrededor, y pondrás la cortina *a *la puerta del patio.
 **9** Y tomarás el aceite de la unción, y ungirás el Mishkán y todo lo que *hay* en él, y lo consa­grarás, y todos sus utensilios, y será santidad.
 **10** Y ungirás el altar de la ofrenda ascendida, y todos sus utensilios, y consagrarás el altar, y será el altar santidad de santidades.
 **11** Y ungirás la pileta y su base, y la consa­gra­rás.
-**12** Y acercarás a Aharón y a sus hijos a la entrada de la Tienda del Mo'ed, y los lavarás con agua.
+**12** Y acercarás a Aharón y a sus hijos a la entrada de la Tienda del Mo’ed, y los lavarás con agua.
 **13** Y vestirás a Aharón las vestiduras de la santidad, y lo ungirás y lo consagrarás, y será sacerdote para Mí.
 **14** Y a sus hijos acercarás, y les vestirás las tú­nicas;
 **15** y los ungirás, como ungiste a su padre, y sean sacerdotes para Mí; y será para ser para ellos su unción por sacerdocio olam[^540], por sus gene­ra­ciones.
@@ -1498,20 +1486,20 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **19** Y extendió la Tienda sobre el Mishkán, y puso la cubierta de la Tienda sobre él, desde arriba, como había mandado יהוה a Mo­shéh.
 **20** Y tomó y puso el Testimonio en el arca, y puso las varas en el arca, y puso la cubierta sobre el arca, desde arriba.
 **21** E hizo entrar el arca en el Mishkán, puso la cortina de la cubierta[^541], y cubrió sobre el arca del Testimonio, como había mandado יהוה a Moshéh.
-**22** Y puso la Mesa en la Tienda del Mo'ed, sobre el lado[^542] norte del Mishkán, fuera de la cortina;
+**22** Y puso la Mesa en la Tienda del Mo’ed, sobre el lado[^542] norte del Mishkán, fuera de la cortina;
 **23** y organizó sobre ella preparando el pan de­lante de יהוה, como había mandado יהוה a Moshéh.
-**24** Y puso la Menoráh en la Tienda del Mo'ed, frente a la Mesa, sobre el lado del Mishkán hacia el Néguev[^543].
+**24** Y puso la Menoráh en la Tienda del Mo’ed, frente a la Mesa, sobre el lado del Mishkán hacia el Néguev[^543].
 **25** Y ascendió las lámparas delante de יהוה, como había mandado יהוה a Moshéh.
-**26** Y puso el altar de oro en la Tienda del Mo'ed, delante de la cortina;
+**26** Y puso el altar de oro en la Tienda del Mo’ed, delante de la cortina;
 **27** y quemó sobre él incienso calmante, como había mandado יהוה a Moshéh.
 **28** Y puso la cortina *a* la entrada del Mishkán,
-**29** y el altar de la ofrenda ascendida puso *a* la entrada del Mishkán de la Tienda del Mo'ed, y ascendió sobre él la ofrenda ascendida[^544] y la ofren­da de grano[^545], como había ordenado יהוה a Moshéh.
-**30** Y puso la pileta entre la Tienda del Mo'ed y el altar, y puso allí agua para lavar,
+**29** y el altar de la ofrenda ascendida puso *a* la entrada del Mishkán de la Tienda del Mo’ed, y ascendió sobre él la ofrenda ascendida[^544] y la ofren­da de grano[^545], como había ordenado יהוה a Moshéh.
+**30** Y puso la pileta entre la Tienda del Mo’ed y el altar, y puso allí agua para lavar,
 **31** y se lavaban de ella Moshéh, Aharón y sus hijos, sus manos y sus pies.
-**32** Cuando entraban a la Tienda del Mo'ed y cuando se acercaban al altar, se lavaban, como había mandado יהוה a Moshéh.
+**32** Cuando entraban a la Tienda del Mo’ed y cuando se acercaban al altar, se lavaban, como había mandado יהוה a Moshéh.
 **33** Y levantó el patio alrededor del Mishkán y del altar, y puso la cortina* por* puerta del patio, y terminó Moshéh el trabajo.
-**34** Y cubrió la nube la Tienda del Mo'ed, y la gloria de יהוה llenó el Mishkán.
-**35** Y no podía Moshéh entrar a la Tienda del Mo'ed, porque había habitado sobre ella la nube, y la gloria de יהוה llenó el Mishkán.
+**34** Y cubrió la nube la Tienda del Mo’ed, y la gloria de יהוה llenó el Mishkán.
+**35** Y no podía Moshéh entrar a la Tienda del Mo’ed, porque había habitado sobre ella la nube, y la gloria de יהוה llenó el Mishkán.
 **36** Y cuando ascendía la nube de sobre el Mishkán, viajaban los hijos de Israel, en todas sus caminatas;
 **37** pero si no ascendía la nube, no viajaban hasta el día que ascendía.
 **38** Porque la nube de יהוה *estaba* sobre el Mishkán de día, y fuego había por la noche en ella a los ojos de toda la casa de Israel, por todas sus caminatas.
@@ -1524,7 +1512,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^247]: Heb.: *Jaim.*
 [^248]: Hebreas. Así en el resto del cap.
 [^249]: Egipcias.
-[^250]: Heb.: *Y'or; *seguramente, el Nilo.
+[^250]: Heb.: *Y’or; *seguramente, el Nilo.
 [^251]: O, *cajón.*
 [^252]: Lit.: *mano.*
 [^253]: Hebreos. Así en el resto del cap.
@@ -1557,7 +1545,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^280]: O, *trucos de magia*.
 [^281]: Hebreos.
 [^282]: O, *canales.*
-[^283]: Heb.: *Y'or; *seguramente, el Nilo.
+[^283]: Heb.: *Y’or; *seguramente, el Nilo.
 [^284]: O, *extendió.*
 [^285]: Lit.: *morteros de morteros.*
 [^286]: Hebreos. Así en el resto del cap.
@@ -1577,10 +1565,10 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^300]: Instrucción.
 [^301]: O, *distingue; *o, *consagra.*
 [^302]: Punto de maduración de la cebada.
-[^303]: Heb.: *Mo'ed.*
+[^303]: Heb.: *Mo’ed.*
 [^304]: Lit.: *ha encerrado sobre ellos.*
 [^305]: Lit.: *hacia.*
-[^306]: Heb.: *Ga'oh ga'ah.*
+[^306]: Heb.: *Ga’oh ga’ah.*
 [^307]: Contracción de Yehovah.
 [^308]: Poderoso.
 [^309]: O, *moraré con Él.*
@@ -1593,7 +1581,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^316]: O, *quedan inmóviles.*
 [^317]: Heb.: *Mikdash.*
 [^318]: O, *vocera, anunciadora. *Heb.: *Neviáh.*
-[^319]: Heb.: *Ga'oh ga'ah.*
+[^319]: Heb.: *Ga’oh ga’ah.*
 [^320]: Heb.: *Marim.*
 [^321]: Heb.: *Maráh.*
 [^322]: Heb.: *Jukáh.*
@@ -1624,12 +1612,12 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^347]: Heb.: *Iobel.*
 [^348]: Cuerno de carnero.
 [^349]: O, *dioses postreros.*
-[^350]: Heb.: *Ga'oh ga'ah.*
+[^350]: Heb.: *Ga’oh ga’ah.*
 [^351]: Heb.: *El Kaná.*
 [^352]: O, *torcedura. *Heb.: *Avón.*
 [^353]: Heb.: *Jésed.*
 [^354]: O, *es decir.*
-[^355]: Heb.: *Le'shav.*
+[^355]: Heb.: *Le’shav.*
 [^356]: O sea, *ten presente.*
 [^357]: O, *distinguirlo.*
 [^358]: O sea, *secuestrarás.*
@@ -1646,7 +1634,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^369]: Heb.: *Néfesh.*
 [^370]: O sea, *pago de restitución total del daño causado.*
 [^371]: Lit.: *cobertura. *Heb.: *Kófer.*
-[^372]: O, *completará. *Heb.: *Le'shalem.*
+[^372]: O, *completará. *Heb.: *Le’shalem.*
 [^373]: Lit.: *dinero.*
 [^374]: O, *Si cavando un pozo.*
 [^375]: O, *deja quemar.*
@@ -1659,12 +1647,12 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^382]: Lit.: *adornarás.*
 [^383]: O, *recordarán; *o, *tendrán presente.*
 [^384]: Lit.: *Tres pies*. Heb.: *Regalim.*
-[^385]: Heb.: *Jag Ha'matzot.*
+[^385]: Heb.: *Jag Ha’matzot.*
 [^386]: Heb.: *Matzot.*
 [^387]: Punto de maduración de la cebada.
-[^388]: Heb.: *Jag Ha'katzir*; esto es, *Shavuot.*
+[^388]: Heb.: *Jag Ha’katzir*; esto es, *Shavuot.*
 [^389]: Heb.: *Bikurim.*
-[^390]: Heb.: *Jag Ha'asif*; esto es, *Sucot.*
+[^390]: Heb.: *Jag Ha’asif*; esto es, *Sucot.*
 [^391]: Amo, Señor.
 [^392]: Lo primero, lo mejor.
 [^393]: O, *mensajero. *Heb.: *Malaj.* Así también en vers. 23.
@@ -1684,7 +1672,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^407]: O sea, *de una sola pieza.*
 [^408]: Heb.: *Kikar.*
 [^409]: Tabernáculo. Así en el resto del cap.
-[^410]: O sea, el ‘*coccus ilisis'*, de él sacaban el tinte carmesí.
+[^410]: O sea, el ‘*coccus ilisis’*, de él sacaban el tinte carmesí.
 [^411]: U, *ojales.*
 [^412]: Lit.: *uno. *Así también en vers. 11.
 [^413]: Heb.: *Tajash.*
@@ -1692,7 +1680,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^415]: Lit.: *casas.*
 [^416]: Heb.: *Parójet.*
 [^417]: Heb.: *Kódesh.*
-[^418]: Heb.: *Kódesh Ha'kodashim.*
+[^418]: Heb.: *Kódesh Ha’kodashim.*
 [^419]: Heb.: *Mizbéaj. *Lit.: *lugar de sacrificio.*
 [^420]: O sea, *de una sola pieza.*
 [^421]: Lit.: *esquina del mar.*
@@ -1724,7 +1712,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^447]: O, *se quitó el recubrimiento*, esto es, *del pecado.*
 [^448]: Heb.: *Jatat. *Así en el resto del vers.
 [^449]: Heb.: *Kipurim.*
-[^450]: Heb.: *Kódesh Ha'kodashim.*
+[^450]: Heb.: *Kódesh Ha’kodashim.*
 [^451]: Unidad líquida.
 [^452]: O sea, *de una sola pieza.*
 [^453]: Heb.: *Oláh.*
@@ -1763,7 +1751,7 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 [^486]: Poderosos. Así en el resto del cap.
 [^487]: Heb.: *Kaná. *Así en el resto del vers.
 [^488]: Heb.: *Matzot. *Así en el resto del vers.
-[^489]: Heb.: *Mo'ed.*
+[^489]: Heb.: *Mo’ed.*
 [^490]: Punto de maduración de la cebada.
 [^491]: Semanas.
 [^492]: O sea, *Sucot.*

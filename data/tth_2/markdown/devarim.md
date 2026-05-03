@@ -18,7 +18,7 @@ __DEVARIM \(DEUTERONOMIO\)__ דברים
 **9** Y hablé a ustedes en ese tiempo, diciendo: “No puedo yo solo cargar*los* a ustedes.__10 יהוה__ su Elohim los ha multiplicado, y he aquí ustedes, hoy *son* como las estrellas del cielo, por multitud.__11 יהוה__, Elohim de sus padres, *los *au­mente a ustedes, conforme son, mil veces, y los bendi­ga como *les *ha hablado a ustedes.
 **12**¿Cómo cargaré yo solo sus problemas, sus cargas y sus disputas?
 **13** Den para ustedes hombres sabios, distin­guidos y conocedores, por sus tribus, y los pon­­dré por cabezas de ustedes”.
-**14** Y me respondieron, y dijeron: “Buena es la palabra que has hablado para hacer. ”
+**14** Y me respondieron, y dijeron: “Buena es la palabra que has hablado para hacer.”
 **15** Y tomé a las cabezas de sus tribus, hombres sabios y conocedores, y los di *como* cabezas a ustedes, jefes de miles y jefes de cientos, jefes de cincuentas y jefes de dieces, y oficiales para sus tribus.
 **16** Y ordené a sus jueces en ese tiempo, dicien­do: “Escuchen entre sus hermanos, y juzguen justamente entre un hombre y su herma­no y su extranjero.
 **17** No reconozcan los rostros en el juicio; tanto *al* pequeño como* al* grande escu­cha­rán. No tendrán miedo del rostro del hom­bre, porque el juicio[^1090] es de Elohim. Y la cosa que sea difícil para ustedes me acercarán, y lo escucharé”.
@@ -35,7 +35,7 @@ __DEVARIM \(DEUTERONOMIO\)__ דברים
 **25** Y tomaron en sus manos del fruto de la tie­rra y lo hicieron bajar hacia nosotros; y nos re­gresaron palabra, y dijeron: “Buena es la tierra que __יהוה__ nuestro Elohim da a nosotros”.
 **26** Pero no quisieron subir, y se amargaron con la boca de __יהוה__ su Elohim.
 **27** Y murmuraron en sus tiendas, y dijeron: “En el odio de __יהוה__ hacia nosotros, nos ha saca­do de la tierra de Mitzráim para darnos en ma­no de emorí, para destruirnos.
-**28**¿Adónde subiremos? Nuestros her­­­ma­nos han disuelto nuestro corazón, diciendo: ‘Es un pueblo *más* grande y elevado que nosotros; las ciudades son grandes y fortificadas en el cielo. Y además, los hijos de los anakim[^1092] vimos allí'”.
+**28**¿Adónde subiremos? Nuestros her­­­ma­nos han disuelto nuestro corazón, diciendo: ‘Es un pueblo *más* grande y elevado que nosotros; las ciudades son grandes y fortificadas en el cielo. Y además, los hijos de los anakim[^1092] vimos allí’”.
 **29** Y les dije: “No se aterroricen y no ten­­gan temor de ellos.
 **30** __יהוה__, Elohim de ustedes, va delante de ustedes, Él luchará por ustedes, como todo lo que hizo con ustedes en Mitzráim a ojos de us­tedes,
 **31** y en el desierto, donde has visto que te lle­vó __יהוה__ tu Elohim, como lleva un hombre a su hijo, por todo el camino el cual han andado has­ta llegar a este lugar”.
@@ -49,13 +49,13 @@ __DEVARIM \(DEUTERONOMIO\)__ דברים
 **36** *no la verán*, excepto Caleb, hijo de Iefunéh; él la verá, y a él daré la tierra en la cual ha an­dado, y a sus hijos, porque *estuvo *plenamente tras de Mí, __יהוה__”.
 **37** También conmigo se enojó __יהוה__ debido a ustedes, diciendo: “Tampoco tú entra­rás allí.
 **38** Yehoshúa, hijo de Nun, quien se para de­lante de ti, él entrará allí; fortalécelo, porque él la heredará para Israel.
-**39** Y sus niños, que dijeron: ‘Por botín serán', y sus hijos, quienes no conocen hoy el bien y el mal, ellos entrarán allí, y a ellos la daré, y ellos la poseerán.
+**39** Y sus niños, que dijeron: ‘Por botín serán’, y sus hijos, quienes no conocen hoy el bien y el mal, ellos entrarán allí, y a ellos la daré, y ellos la poseerán.
 **40** Y ustedes, giren para ustedes y viajen al de­sierto, *por* camino del mar de Cañas”.
 
 *Derrota en Jormáh*
 
 **41** Y respondieron, y dijeron a mí: “Pecamos ante __יהוה__; nosotros subiremos y lucharemos como todo lo que nos ordenó­ __יהוה__ nuestro Elohim”. Y ciñó *cada* hombre los utensilios de su guerra, y se prepararon para subir a la montaña.
-**42** Y dijo __יהוה__ a mí: “Di a ellos: ‘No suban, y no luchen, porque no estoy entre ustedes, y no sean derrotados delante de sus enemigos'”.
+**42** Y dijo __יהוה__ a mí: “Di a ellos: ‘No suban, y no luchen, porque no estoy entre ustedes, y no sean derrotados delante de sus enemigos’”.
 **43** Y hablé a ustedes, pero no escucharon, y se amargaron con la boca de __יהוה__, y actuaron presuntuosamente[^1093], y subieron a la montaña.
 **44** Y salió el emorí, que habitaba en la monta­ña esa, al encuentro de ustedes, y los persiguie­ron como lo hacen las abejas, y *los* aplastaron a ustedes de Seir hasta Jormáh.
 **45** Y volvieron y lloraron delante de __יהוה__, y no escuchó __יהוה__ a su voz, y no dio oídos a ustedes.
@@ -71,7 +71,7 @@ __DEVARIM \(DEUTERONOMIO\)__ דברים
 **4** Y al pueblo ordena, diciendo: ‘Ustedes pasa­rán por la frontera de sus hermanos, hijos de Esav, que habitan en Seir, y tendrán miedo de ustedes. Y cuídense mucho;
 **5** no provoquen a ellos, porque no daré a us­tedes de su tierra, hasta el pisar de una planta del pie, porque *como* herencia a Esav he dado el monte Seir.
 **6** Comida comprarán de ellos con dinero, y co­merán; y también agua comprarán de ellos con dinero, y beberán.
-**7** Pues __יהוה__ tu Elohim te bendijo en toda o­bra de tus manos; Él conoce tu caminar hacia este gran desierto. Estos cuarenta años __יהוה__ tu Elohim *ha estado* contigo, no te ha faltado una cosa' ”.
+**7** Pues __יהוה__ tu Elohim te bendijo en toda o­bra de tus manos; Él conoce tu caminar hacia este gran desierto. Estos cuarenta años __יהוה__ tu Elohim *ha estado* contigo, no te ha faltado una cosa’ ”.
 **8** Y pasamos de nuestros hermanos, hijos de Esav, que habitan en Seir, desde el camino del Arabáh, desde Elat y desde Etzión Gaber. Y gi­­ramos, y pasamos *por* el camino del desierto de Moab.
 **9** Y dijo __יהוה__ a mí: “No asedies a Moab, y no los provoquen a la guerra, porque no te daré de su tierra *por* herencia, porque a los hijos de Lot he dado Ar *por* herencia”.
 **10** Los emim[^1094] antes habían habitado en ella, un pueblo grande y numeroso, y elevado como los anakim[^1095].
@@ -244,7 +244,7 @@ __DEVARIM \(DEUTERONOMIO\)__ דברים
 **27** Acérca*te* tú y escucha todo lo que dirá __יהוה__ nuestro Elohim; y tú hablarás a nosotros todo lo que dirá __יהוה__ nuestro Elohim a ti, y escucharemos y *lo *haremos”.
 **28** Y escuchó __יהוה__ la voz de sus palabras cuando hablaron a mí, y me dijo __יהוה__: “Es­cuché la voz de las palabras de este pueblo que hablaron a ti. Fue bueno todo lo que hablaron.
 **29**¿Quién dará *para que* sean estos sus cora­zones a ellos para temerme y para guardar to­dos mis mandamientos todos los días, para que le sea bueno a ellos y a sus hijos para siempre?
-**30** Ve, di a ellos: ‘Regresen para ustedes a sus tiendas'.
+**30** Ve, di a ellos: ‘Regresen para ustedes a sus tiendas’.
 **31** Pero tú, párate aquí conmigo, y pueda ha­blar a ti todos los mandamientos, los decretos y los procesos legales que les enseñarás, y *los* hagan en la tierra que Yo doy a ellos para heredarla”.
 **32** Y guardarán para hacer conforme ordenó __יהוה__ su Elohim a ustedes; no se desvíen *a* derecha e izquierda.
 **33** En todo el camino que les ordenó __יהוה__ su Elohim andarán, a fin de que vivan y *sea* bueno a ustedes, y puedan hacer largos *sus *días* *en la tierra que heredarán.
@@ -275,7 +275,7 @@ __DEVARIM \(DEUTERONOMIO\)__ דברים
 **17** Guardando, guardarán los mandamientos de __יהוה__ su Elohim, y sus testimonios, y sus decretos que te ha ordenado.
 **18** Y harás lo recto y lo bueno en los ojos de __יהוה__, a fin de que vaya bien a ti, y puedas entrar y heredar la tierra buena que juró __יהוה__ a tus padres,
 **19** empujando a todos tus enemigos de delante de ti, como habló __יהוה__.
-**20** Cuando te pregunte tu hijo mañana, dicien­do: “¿Qué* son* los testimonios, los decretos y los procesos legales que les ordenó __יהוה__ nuestro Elohim? ”,
+**20** Cuando te pregunte tu hijo mañana, dicien­do: “¿Qué* son* los testimonios, los decretos y los procesos legales que les ordenó __יהוה__ nuestro Elohim?”,
 **21** y dirás a tu hijo: “Esclavos éramos de Fa­raón en Mitzráim, y nos hizo salir __יהוה__ de Mitzráim con mano fuerte.
 **22** Y puso __יהוה__ señales y maravillas gran­des y malas en Mitzráim, en Faraón y en toda su casa, a nuestros ojos;
 **23** y a nosotros hizo salir de allí, a fin de ha­cernos entrar para dar a nosotros la tierra que juró a nuestros padres.
@@ -286,8 +286,7 @@ __DEVARIM \(DEUTERONOMIO\)__ דברים
 
 **7**
 
-**1** Cuando te haya hecho entrar __יהוה__ tu Elo­him
-a la tierra la cual tú entrarás allí para here­darla, y haya expulsado muchas na­ciones de delante de ti: el jití, el girgashí, el emorí, el kenaaní, el perizí, el jiví y el iebusí, siete nacio­nes *más* numerosas y tremendas que tú,
+**1** Cuando te haya hecho entrar __יהוה__ tu Elo­him__ __a la tierra la cual tú entrarás allí para here­darla, y haya expulsado muchas na­ciones de delante de ti: el jití, el girgashí, el emorí, el kenaaní, el perizí, el jiví y el iebusí, siete nacio­nes *más* numerosas y tremendas que tú,
 **2** y los haya dado __יהוה__ tu Elohim delante de ti, y los hayas golpeado, habiendo destruido, los destruirás. No harás[^1159] para ellos pacto, y no los favorecerás.
 **3** Y no se casarán con ellos; tu hija no darás a su hijo, y su hija no tomarás para tu hijo.
 **4** Porque desviará a tu hijo de detrás de Mí *para que* sirva *a* otros dioses; y se calentará la nariz de __יהוה__ contra ustedes, y Él te destruirá pronto.
@@ -300,8 +299,7 @@ a la tierra la cual tú entrarás allí para here­darla, y haya expulsado mucha
 **8** pues por el amor de __יהוה__ hacia ustedes y debido a que guardó el juramento que juró a sus padres,* los* hizo salir __יהוה__ a ustedes con ma­no fuerte, y te rescató de la casa de escla­vos, de la mano de Faraón, rey de Mitzráim.
 **9** Y sabrás que __יהוה__ tu Elohim, Él es Elo­him, Elohim fiel[^1162], *que *guarda el pacto y la bondad[^1163] para los que lo aman y[^1164] para los que guardan sus mandamientos, por mil genera­ciones.
 **10** Y retribuye a los que le odian hacia su rostro, para hacerlos perecer; no se demorará con el que le odia, hacia su rostro le retribuirá.
-**11** Y guardarás los mandamientos, los decretos y los procesos legales
-que yo te ordeno hoy, para hacerlos.
+**11** Y guardarás los mandamientos, los decretos y los procesos legales__ __que yo te ordeno hoy, para hacerlos.
 
 *Bendiciones de la obediencia*
 
@@ -310,7 +308,7 @@ que yo te ordeno hoy, para hacerlos.
 **14** Bendito serás de *entre* todos los pueblos; no habrá en ti varón estéril y hembra estéril, ni en tu ganado.
 **15** Y hará desviar __יהוה__ de ti toda enferme­dad; y todas las aflicciones malas de Mitzráim que conociste no pondrá en ti, pero las pondrá en todos tus aborrecedores.
 **16** Y consumirás a todos los pueblos que __יהוה__ tu Elohim te da, no tendrá favor tu ojo sobre ellos, y no servirás a sus dioses, porque trampa *sería* esto para ti.
-**17** Cuando digas en tu corazón: “Grandes son estas naciones *más* que yo, ¿cómo seré capaz para desposeerlas? ”;
+**17** Cuando digas en tu corazón: “Grandes son estas naciones *más* que yo, ¿cómo seré capaz para desposeerlas?”;
 **18** no tengas temor de ellos, recordando, re­cuer­da lo que hizo __יהוה__ tu Elohim a Faraón y a todo Mitzráim;
 **19** las grandes pruebas que vieron tus ojos, las señales y las maravillas, y la mano fuerte y el brazo extendido *con* el cual te sacó __יהוה__ tu Elohim. Así hará __יהוה__ tu Elohim a todos los pueblos que tú tienes temor de sus rostros.
 **20** Y además, a la avispa enviará __יהוה__ tu E­lohim entre ellos, hasta perecer los que restan y los que se esconden de tu rostro.
@@ -352,7 +350,7 @@ que yo te ordeno hoy, para hacerlos.
 **9**
 
 **1** Escucha, Israel: Tú cruzarás hoy el Iardén[^1169] para entrar a tomar posesión de las na­ciones *más *grandes y numerosas que tú, ciu­dades gran­des y fortificadas al cielo;
-**2** un pueblo grande y elevado, hijos de los ana­kim[^1170], quienes tú conoces y *de quienes* tú escu­chaste: “¿Quién se afirmará delante de los hi­jos de Anak? ”
+**2** un pueblo grande y elevado, hijos de los ana­kim[^1170], quienes tú conoces y *de quienes* tú escu­chaste: “¿Quién se afirmará delante de los hi­jos de Anak?”
 **3** Y conocerás hoy que __יהוה__ tu Elohim, es Él el que pasa delante de ti *como* fuego consu­midor, Él los destruirá y Él los humillará de­lante de ti, y hará que los desposees y que los hagas perecer pronto, como habló __יהוה__ a ti.
 **4** No digas en tu corazón cuando los empuje __יהוה__ tu Elohim de delante de ti, diciendo: “Por mi justicia me ha hecho entrar __יהוה__ pa­ra heredar esta tierra”, pero por la maldad de estas naciones __יהוה__ las desposee de delante de ti.
 **5** No por tu justicia y por la rectitud de tu cora­zón tú entrarás para heredar su tierra, porque por la maldad de estas naciones __יהוה__ tu E­lo­him los desposee de delante de ti, a fin de establecer la palabra que juró __יהוה__ a tus padres, a Abraham, a Itzjak y a Yaakov.
@@ -384,7 +382,7 @@ que yo te ordeno hoy, para hacerlos.
 **25** Y caí delante de __יהוה__ los cuarenta días y cuarenta noches, que caí porque dijo __יהוה__: *Estoy* por destruirlos.
 **26** Y entré en juicio hacia __יהוה__, y dije: “Adonai __יהוה__, no destruyas tu pueblo y tu herencia, que has redimido con tu grandeza, que has hecho salir de Mitzráim con mano fuerte.
 **27** Recuerda a Tus siervos, a Abraham, a Itzjak y a Yaakov; no te gires hacia la dureza de este pueblo, y hacia su estado de condenación, y hacia su pecado.
-**28** No sea que digan *los de* la tierra que nos sacaste de allí: ‘Debido a que no fue capaz __יהוה__ de hacerlos entrar a la tierra que habló a ellos, y debido a que los odió, los ha sacado para hacerlos morir en el desierto'.
+**28** No sea que digan *los de* la tierra que nos sacaste de allí: ‘Debido a que no fue capaz __יהוה__ de hacerlos entrar a la tierra que habló a ellos, y debido a que los odió, los ha sacado para hacerlos morir en el desierto’.
 **29** Mas ellos *son* tu pueblo y tu herencia, que sacaste con tu gran fuerza y con tu brazo exten­­dido”.
 
 *Moshéh esculpe las dos tablas*
@@ -511,21 +509,17 @@ que yo te ordeno hoy, para hacerlos.
 **10** Y lo apedrearás con piedras, y muera; pues, buscó para hacerte alejar de sobre יהוה tu Elohim, quien te sacó de la tierra de Mitzráim, de la casa de esclavos.
 **11** Y todo Israel escuchará y temerá, y no vol­verá a hacer conforme a esta mala cosa en me­dio de ti.
 **12** Cuando escuches en una de tus ciudades, que יהוה tu Elohim da a ti para habitar allí, diciendo:
-**13**“Salieron hombres hijos de Belial[^1196] de en medio de ti, e hicieron alejar a los habi­tantes de su ciudad, diciendo: ‘Vamos y sir­vamos otros dioses', que no los has cono­cido”;
+**13**“Salieron hombres hijos de Belial[^1196] de en medio de ti, e hicieron alejar a los habi­tantes de su ciudad, diciendo: ‘Vamos y sir­vamos otros dioses’, que no los has cono­cido”;
 **14** y buscarás, investigarás y preguntarás ha­ciendo bien. Y he aquí, es cierta la cosa, *y* se ha hecho esta abominación en medio de ti,
 **15** hiriendo, golpearás a los habitantes de esa ciu­dad a boca de espada, destruyéndola, y con todo lo que *hay* en ella, y a su bestia a boca de espada.
 **16** Y todo su botín reunirás en medio de la pla­za, y quemarás en el fuego a la ciudad, y todo su botín completo para יהוה tu Elohim; y será un montón siempre, no se edificará más.
 **17** Y no se aferrará en tu mano nada de la pro­hibición, a fin de que regrese יהוה del enojo de su ira, y te dé bondad y te ame entrañablemente, y te haga aumentar, como juró a tus pa­dres;
-**18** porque escucharás a la voz de יהוה para guardar todos sus mandamientos que yo te or­deno
-hoy, para hacer
-lo recto en los ojos de יהוה tu Elohim.
+**18** porque escucharás a la voz de יהוה para guardar todos sus mandamientos que yo te or­deno__ __hoy, para hacer__ __lo recto en los ojos de יהוה tu Elohim.
 
 **14**
 
 **1** Hijos[^1197] ustedes *son* para יהוה su Elo­him; no se cortarán y no se harán cal­­vi­cie entre sus ojos por un muerto.
-**2** Porque pueblo kadosh[^1198] *eres* tú
-para יהוה tu Elohim; y te ha escogido יהוה
-para ser a Él por pueblo, una adquisición[^1199] de *entre* todos los pue­blos que *están* sobre la faz de la tierra.
+**2** Porque pueblo kadosh[^1198] *eres* tú__ __para יהוה tu Elohim; y te ha escogido יהוה__ __para ser a Él por pueblo, una adquisición[^1199] de *entre* todos los pue­blos que *están* sobre la faz de la tierra.
 
 *Animales puros e impuros*
 
@@ -543,8 +537,7 @@ para ser a Él por pueblo, una adquisición[^1199] de *entre* todos los pue­blo
 **14** y todo cuervo por su tipo;
 **15** y la *bat haianáh*[^1214], el *tajmas*[^1215], el *shajaf*[^1216] y el *netz*[^1217], por su tipo;
 **16** el *cos*[^1218], el *ianshuf*[^1219]* *y la *tinshamet*[^1220],
-**17** y
-la *kaat*[^1221], la *rajamáh*[^1222] y el *shálaj*[^1223],
+**17** y__ __la *kaat*[^1221], la *rajamáh*[^1222] y el *shálaj*[^1223],
 **18** y la cigüeña y la garza, por su tipo; y la abubilla y el murciélago.
 **19** Y todo insecto volador, impuro es para us­te­­­des; no se comerán.
 **20** Toda ave pura podrán comer.
@@ -618,7 +611,7 @@ la *kaat*[^1221], la *rajamáh*[^1222] y el *shálaj*[^1223],
 *Conformación de los jueces*
 
 **18** Jueces y oficiales pondrás para ti en todas tus puertas que יהוה tu Elohim *te *da a ti, por tus tribus, y juzgarán al pueblo *con *juicio jus­to.
-**19** No inclinarás la justicia, no reconocerás los ros­tros[^1237], y no tomarás soborno, porque el so­borno ciega los ojos de los sabios y distor­siona las palabras de los justos.
+**19** No inclinarás el juicio, no reconocerás los ros­tros[^1237], y no tomarás soborno, porque el so­borno ciega los ojos de los sabios y distor­siona las palabras de los justos.
 **20** Justicia, la justicia perseguirás, a fin de que vivas y heredes la tierra que יהוה tu Elohim *te *da a ti.
 **21** No plantarás para ti Asheráh, todo árbol, cer­ca del altar de יהוה tu Elohim que harás para ti.
 **22** Y no levantarás para ti pilar, lo cual odia יהוה tu Elohim.
@@ -676,7 +669,7 @@ la *kaat*[^1221], la *rajamáh*[^1222] y el *shálaj*[^1223],
 **18** Un profeta haré levantar para ellos de entre sus hermanos, como tú, y pondré mis palabras en su boca, y hablará a ellos todo lo que Yo le man­de.
 **19** Y será* que* el hombre que no escuche a mis palabras, las cuales él hablará en mi Nombre, Yo demandaré de él.
 **20** Pero el profeta que actúe insolentemente para hablar palabra en mi Nombre que no le he mandado a hablar, y el que hable en nombre de otros dioses, morirá aquel profeta”.
-**21** Y cuando digas en tu corazón: “¿Cómo co­no­ceremos la palabra que no ha hablado יהוה? ”.
+**21** Y cuando digas en tu corazón: “¿Cómo co­no­ceremos la palabra que no ha hablado יהוה?”.
 **22** El profeta que hable en Nombre de יהוה, y no sucede la palabra y no viene, esa es la palabra que no ha hablado יהוה; con insolencia[^1248] la ha hablado el profeta; no tendrás miedo de él.
 
 *Las ciudades de refugio*
@@ -714,8 +707,7 @@ la *kaat*[^1221], la *rajamáh*[^1222] y el *shálaj*[^1223],
 
 **1** Cuando salgas a la guerra sobre tus enemi­gos y veas caballo y carro, pue­blo *más *nume­ro­so que tú, no tengas temor de ellos, porque יהוה tu Elohim *está* conti­go, el que te hizo subir de la tierra de Mitzráim.
 **2** Y sucederá cuando se acerquen a la guerra, se acercará el sacerdote y hablará al pueblo,
-**3** y *les *dirá a ellos: “¡Escucha Israel, ustedes se acer­can
-hoy a la guerra sobre sus enemigos; no se ablandará su corazón, no temerán y no se a­presurarán, y no temblarán debido a sus ros­tros!
+**3** y *les *dirá a ellos: “¡Escucha Israel, ustedes se acer­can__ __hoy a la guerra sobre sus enemigos; no se ablandará su corazón, no temerán y no se a­presurarán, y no temblarán debido a sus ros­tros!
 **4** Porque יהוה su Elohim, Él va con us­tedes para luchar por ustedes con sus enemigos, para salvarlos”.
 **5** Y hablarán los oficiales al pueblo, diciendo: “¿Quién es el hombre que ha edificado una ca­sa nue­va y no la ha inaugurado[^1251]? Se irá y volverá a su casa, no sea que muera en la guerra y otro hombre la inaugure[^1252].
 **6**¿Y quién es el hombre que plantó una viña y no la ha comenzado *a comer*? Se irá y volverá a su casa, no sea que muera en la guerra y otro hombre la comience *a comer*.
@@ -785,7 +777,7 @@ hoy a la guerra sobre sus enemigos; no se ablandará su corazón, no temerán y 
 **14** y pone en ella pretextos de asuntos, y hace salir sobre ella un nombre malo, y dice: “A esta mujer tomé, y me acerqué a e­lla, pero no encontré en ella virginidad”.
 **15** Y tomará el padre de la joven, y su madre, y sacarán *pruebas* de la virginidad de la joven a los an­cianos de la ciudad, a la puerta.
 **16** Y dirá el padre de la joven a los ancianos: “A mi hija di a este hombre por mujer, y él la odió;
-**17** y he aquí, él pone pretextos de asuntos, diciendo: ‘No he encontrado a tu hija virgini­dad'. Pero estas *son las* *pruebas* de la virgini­dad de mi hija”. Y extenderán el vestido delan­te de los ancianos de la ciudad.
+**17** y he aquí, él pone pretextos de asuntos, diciendo: ‘No he encontrado a tu hija virgini­dad’. Pero estas *son las* *pruebas* de la virgini­dad de mi hija”. Y extenderán el vestido delan­te de los ancianos de la ciudad.
 **18** Y tomarán los ancianos de esa ciudad al hombre y lo castigarán,
 **19** y lo penalizarán *con* cien *shekel* de plata, y darán *esto *al padre de la joven, porque hizo sa­lir un nombre malo sobre la virgen de Israel. Y para él será por mujer, no podrá expulsarla *por *todos sus días.
 **20** Pero si verdadero es este asunto, *y* no *le* en­cuentran virginidad a la joven,
@@ -807,8 +799,7 @@ hoy a la guerra sobre sus enemigos; no se ablandará su corazón, no temerán y 
 **1** No entrará uno herido de aplastado y cor­tado el pene en la asamblea de יהוה.
 **2** No entrará bastardo[^1261] en la asamblea de יהוה, aún la generación décima, no entrará de él, en la asamblea de יהוה.
 **3** No entrará un amoní y un moabí en la asam­blea de יהוה, aún la generación décima no entrará de ellos en la asamblea de יהוה has­ta el olam[^1262],
-**4** por cosa que no fueron al encuentro de uste­des con pan y con agua en el camino, en su sa­lida
-de Mitzráim, y que contrataron contra ti a Bi­­lam, hijo de Beor, de Petor, Aram Naharáim, para hacerte excluido.
+**4** por cosa que no fueron al encuentro de uste­des con pan y con agua en el camino, en su sa­lida__ __de Mitzráim, y que contrataron contra ti a Bi­­lam, hijo de Beor, de Petor, Aram Naharáim, para hacerte excluido.
 **5** Y no quiso יהוה tu Elohim escuchar a Bi­lam, e hizo girar יהוה tu Elohim para ti el desprecio para bendición, porque te ama יהוה tu Elohim.
 **6** No investigarás el shalom[^1263] de ellos ni el bien de ellos *por* todos tus días, para el olam.
 **7** *No distorsionarás *al* edomí, porque tu hermano es él; no distorsionarás *al* mitzrí, porque habitan­te fuiste en su tierra.
@@ -824,8 +815,7 @@ de Mitzráim, y que contrataron contra ti a Bi­­lam, hijo de Beor, de Petor, A
 **17** No será prostituta pagana *ninguna* de las hi­jas de Israel; y no será prostituto pagano *nin­guno* de los hijos de Israel.
 **18** No traerás pago de prostituta y precio de un perro *a* la casa de יהוה tu Elohim para todo voto, porque abominación de יהוה tam­­­­bién son los dos.
 **19** No harás interés[^1267] a tu her­mano: interés de di­nero, inte­rés de comida, interés de cualquier co­sa que se pueda hacer interés.
-**20** A un extranjero harás interés, pero a tu her­mano
-no harás interés, a fin de que te bendiga יהוה en todo extender de tu mano sobre la tierra, la cual tú entrarás allí para heredarla.
+**20** A un extranjero harás interés, pero a tu her­mano__ __no harás interés, a fin de que te bendiga יהוה en todo extender de tu mano sobre la tierra, la cual tú entrarás allí para heredarla.
 **21** Cuando prometas un voto a יהוה tu Elo­him, no te retrasarás para pagarlo[^1268], porque demandando, lo demandará יהוה tu Elohim de ti, y será en ti pecado.
 **22** Pero cuando desistes de un voto, no será en ti pecado.
 **23** Lo que salga de tus labios guardarás y ha­rás, como prometiste a יהוה tu Elohim vo­lun­tariamente, lo cual hablaste con tu boca.
@@ -1020,7 +1010,7 @@ no harás interés, a fin de que te bendiga יהוה en todo extender de tu mano
 **64** Y te dispersará יהוה por todos los pue­blos de un extremo de la tierra hasta un extre­mo de la tierra, y servirás allí otros dioses que no conociste tú y tus padres, madera y piedra.
 **65** Y en esas naciones no estarás tranquilo, y no habrá descanso para la palma de tu pie, y te da­rá יהוה allí un corazón tembloroso, des­trucción de ojos y tristeza de ser.
 **66** Y te será tu vida colgada delante; y temerás noche y día, y no tendrás emunah[^1289] en tu vida.
-**67** Por la mañana dirás: “¡Quién dará la tarde! ” Y por la tarde dirás: “¡Quién dará la mañana! ” debido al miedo de tu corazón *con* que temerás y por la vista de tus ojos que verás.
+**67** Por la mañana dirás: “¡Quién dará la tarde!” Y por la tarde dirás: “¡Quién dará la mañana!” debido al miedo de tu corazón *con* que temerás y por la vista de tus ojos que verás.
 **68** Y te hará regresar יהוה *a* Mitzráim en barcos, por el camino que te había dicho: “No volverás más a verlo”. Y se venderán a sí mis­mos allí a sus enemigos por esclavos y por es­cla­vas, pero no habrá comprador.
 
 *El pacto hecho en Moab*
@@ -1050,9 +1040,8 @@ no harás interés, a fin de que te bendiga יהוה en todo extender de tu mano
 **21** Y lo separará יהוה para mal de to­das las tribus de Israel, conforme a todos los juramentos del pacto, escritos en el rollo de esta Torah.
 **22** Y dirá la generación siguiente, sus hijos que se levantarán después de ustedes y el extranje­ro que vendrá de tierra lejana, *cuando* vean los golpes de esta tierra y sus enfermedades que ha hecho enfermar יהוה en ella:
 **23**“Azufre y sal, incinerada *está* toda su tierra, no se siembra y no se hace brotar, y no ascien­de en ella ninguna hierba, *es* como la destru­cción de Sedom y Gamoráh, de Admáh y Tzeboim, que destruyó יהוה en su ira y en su fu­ror”.
-**24** Y dirán todas las naciones: “¿Por qué hizo יהוה así a esta tierra? ¿Qué *es* este gran ar­dor de ira? ”
-**25** Y dirán: “Porque abandonaron el pacto de יהוה, Elohim de sus padres, el cual hizo con ellos
-cuando los sacó de la tie­rra de Mitzráim.
+**24** Y dirán todas las naciones: “¿Por qué hizo יהוה así a esta tierra? ¿Qué *es* este gran ar­dor de ira?”
+**25** Y dirán: “Porque abandonaron el pacto de יהוה, Elohim de sus padres, el cual hizo con ellos__ __cuando los sacó de la tie­rra de Mitzráim.
 **26** Y fueron y sirvieron otros dioses, y se incli­naron a ellos, dioses que no conocían y *que* Él no había repartido a ellos.
 **27** Y se encendió la ira de יהוה en esta tie­rra, para traer sobre ella toda la maldición es­cri­ta en este rollo;
 **28** y los desarraigó יהוה de sobre su tierra con ira, con furor y con gran enojo, y los lanzó a otra tierra, como este día”.
@@ -1073,8 +1062,8 @@ cuando los sacó de la tie­rra de Mitzráim.
 **9** Y te hará tener exceso יהוה tu Elohim en toda obra de tu mano, en el fruto de tu vientre, en el fruto de tu bestia y en el fruto de tu suelo, para bien; porque volverá יהוה a regocijarse en ti para bien, como se regocijó en tus padres;
 **10** cuando escuches a la voz de יהוה tu Elo­him, para guardar sus mandamientos y sus decretos, la escritura en el rollo de esta Torah, porque volverás a יהוה tu Elohim con todo tu corazón y con todo tu ser.
 **11** Porque este mandamiento que yo te ordeno hoy no es difícil para ti, y no es distante.
-**12** No *está* en los cielos este, para decir: “¿Quién subirá por nosotros a los cielos y lo toma­rá para nosotros, y nos lo hará escuchar y lo haremos? ”
-**13** Y no *está* este del *otro* lado del mar, para de­cir: “¿Quién cruzará por nosotros al *otro* la­do del mar y lo tomará para nosotros, y nos lo hará escuchar y lo haremos? ”
+**12** No *está* en los cielos este, para decir: “¿Quién subirá por nosotros a los cielos y lo toma­rá para nosotros, y nos lo hará escuchar y lo haremos?”
+**13** Y no *está* este del *otro* lado del mar, para de­cir: “¿Quién cruzará por nosotros al *otro* la­do del mar y lo tomará para nosotros, y nos lo hará escuchar y lo haremos?”
 **14** Porque muy cercana a ti *está* la palabra, en tu boca y en tu corazón, para hacerla.
 **15** Mira, he puesto delante de ti hoy la vida y el bien, la muerte y el mal;
 **16** que yo te mando hoy a amar a יהוה tu E­lohim, para andar en sus caminos y para guar­dar sus mandamientos, sus decretos y sus procesos legales, y vivirás y aumentarás, y te ben­de­cirá יהוה tu Elohim en la tierra, la cual tú entras allí para heredarla.
@@ -1103,10 +1092,10 @@ cuando los sacó de la tie­rra de Mitzráim.
 **11** cuando entre todo Israel a aparecerse al rostro de יהוה tu Elohim, en el lugar que escogerá, proclamarás esta Torah ante todo Israel, a oídos de ellos.
 **12** Reúne al pueblo, los hombres y las mujeres y los niños, y tu extranjero que *habita *en tus puer­tas, a fin de que escuchen y a fin de que aprendan a temer a יהוה su Elohim, y guar­den para hacer todas las palabras de esta Torah.
 **13** Y sus hijos, que no* la* conocen, escucharán y aprenderán a temer a יהוה su Elohim to­dos los días que ustedes vivan sobre la tierra, la cual ustedes cruzan el Iardén hacia allí, para here­darla.
-**14** Y dijo יהוה a Moshéh: “He aquí, están cerca tus días para morir; llama a Yehoshúa y colóquense en la Tienda del Mo'ed[^1297], y le or­dene. Y fueron Moshéh y Yehoshúa y se colo­caron en la Tienda del Mo'ed.
+**14** Y dijo יהוה a Moshéh: “He aquí, están cerca tus días para morir; llama a Yehoshúa y colóquense en la Tienda del Mo’ed[^1297], y le or­dene. Y fueron Moshéh y Yehoshúa y se colo­caron en la Tienda del Mo’ed.
 **15** Y apareció יהוה en la Tienda en una co­lum­na de nube, y se paró la columna de nube sobre la entrada de la Tienda.
 **16** Y dijo יהוה a Moshéh, He aquí, tú des­cansarás con tus padres; y se levantará este pue­blo y fornicará tras los dioses del extran­jero de la tierra que este entra allí, en medio de él; y me dejará y romperá mi pacto, el cual he hecho[^1298] con él.
-**17** Y se encenderá mi ira contra él en ese día, y los dejaré y ocultaré mi rostro de ellos. Y será por comida, y le alcanzarán muchos males y angustias, y dirá en ese día: “¿No es porque no está mi Elohim en medio de mí *que* me han alcanzado estos males? ”
+**17** Y se encenderá mi ira contra él en ese día, y los dejaré y ocultaré mi rostro de ellos. Y será por comida, y le alcanzarán muchos males y angustias, y dirá en ese día: “¿No es porque no está mi Elohim en medio de mí *que* me han alcanzado estos males?”
 **18** Pero Yo, escondiendo, esconderé mi rostro en ese día por todo el mal que hizo, porque se giró hacia otros dioses.
 **19** Y ahora, escriban para ustedes esta canción, y enséñala a los hijos de Israel; ponla en sus bocas, a fin de que sea a Mí esta canción por testigo en los hijos de Israel.
 **20** Cuando los haga entrar a la tierra que juré a sus padres *que* fluye leche y miel, y coman y se sacien y engorden, se girarán a otros dio­ses y los servirán, y me despreciarán y romperán mi pacto.
@@ -1135,7 +1124,7 @@ cuando los sacó de la tie­rra de Mitzráim.
 **4** La Roca, completa es su acción, porque to­dos sus caminos son juicio[^1304]; El es emunah[^1305] y sin in­justicia, justo y recto es Él.
 **5** *S*e ha corrompido para *con* Él; no son sus hijos *por* su mancha, generación per­versa y torcida.
 **6**¿A יהוה pagan esto, pueblo marchito y no sabio? ¿No es Él tu padre *que* te compró?Él te hizo y te enderezó.
-**7** Recuerda los días de antaño; discierne los años de generación y generación. Pregunta *a *tu padre, y él te mostrará; *a* tus an­cia­nos, y te *lo* dirán.
+**7** Recuerda los días de antaño; discierne los años de generación y generación.Pregunta *a *tu padre, y él te mostrará; *a* tus an­cia­nos, y te *lo* dirán.
 **8** Cuando hacía heredar Elyón[^1306] *a* las naciones,
  cuando separó los hijos de Adam,
 **9** Porque la porción de יהוה es su pueblo; Yaakov es la porción de su herencia.
@@ -1158,9 +1147,9 @@ no temieron a ellos sus padres.**18** La Roca *que* te engendró descuidaste,
  y devorados con llama y destrucción amarga;dientes de bestias enviaré contra ellos,
 **25** Desde afuera desconsolará la espada, y des­de las habitaciones *habrá* terror, tanto el joven como la virgen, el mamante con el hombre de canas.
 **26** Hubiera dicho: ‘Los haré pedazos,
- haré ce­sar de la humanidad[^1312] su memoria',**27** si no fuera *por* la ira del enemigo,
+ haré ce­sar de la humanidad[^1312] su memoria’,**27** si no fuera *por* la ira del enemigo,
  no sea que se reconozcan sus enemigos,
-no sea que di­gan: ‘Nuestra mano *está* alta, y יהוה no ha hecho todo esto' ”.**28** Porque nación perdida de consejo *son* ellos,
+no sea que di­gan: ‘Nuestra mano *está* alta, y יהוה no ha hecho todo esto’ ”.**28** Porque nación perdida de consejo *son* ellos,
 **29**¡Si solo fueran sabios, y comprendieran es­to y disciernan por su postrer!
 **30**¿Cómo perseguirá uno *a* mil, y dos hacer huir *a* diez mil, sino porque su Roca los hubiera vendido y יהוה entregado a ellos?
 **31** Porque no es como nuestra Roca su roca,
@@ -1178,7 +1167,7 @@ se apresura lo prepa­rado para ellos”.**36** Porque juzgará יהוה *a* su 
 y no hay *quien* de mi mano pueda salvar.**40** Pues, levanto a los cielos mi mano,
  y digo: ‘Vivo Yo para siempre,**41** si afilo mi espada relampagueante
  y agarra en justicia mi mano,haré regresar venganza a mis enemigos,
- y a mis aborrecedores pagaré'.
+ y a mis aborrecedores pagaré’.
 
 **42** Embriagaré mis flechas de sangre, y mi es­pa­da devorará carne,
  de sangre de muerto y *de *cau­ti­­verio,
@@ -1204,7 +1193,7 @@ de la cabeza de largos cabellos del enemigo”.**43** Griten de alegría, gentil
 **33**
 
 **1** Y esta es la bendición que bendijo Mo­shéh, hombre del Elohim, a los hi­jos de Is­rael antes de su muerte.
-**2** Y dijo: יהוה de Sinay vino, e iluminó desde Seir para ellos; brilló desde el monte Parán, y vino desde *entre *miríadas de santidad; de su diestra *había* una ley de fuego para ellos.
+**2** Y dijo:יהוה de Sinay vino, e iluminó desde Seir para ellos; brilló desde el monte Parán, y vino desde *entre *miríadas de santidad;de su diestra *había* una ley de fuego para ellos.
 **3** En verdad, Él ama *a *los pueblos: todos sus santos *están* en tu mano,
 **4** Una Torah ordenó para nosotros Moshéh, una herencia *para* la asamblea[^1316] de Yaakov.
 **5** Y era rey en Ieshurún cuando fueron reuni­das las cabezas del pueblo,
@@ -1213,11 +1202,11 @@ de la cabeza de largos cabellos del enemigo”.**43** Griten de alegría, gentil
 **6** Vivirá Reubén y no morirá,
  y serán sus mor­tales *pocos *de número.
 
-**7** Y esto a Iehudáh dijo: Escucha, יהוה, la voz de Iehudáh, y a su pue­blo tráelo. Sus manos *fueron* muchas para él; y ayuda sé a causa de sus adversarios.
+**7** Y esto a Iehudáh dijo: Escucha, יהוה, la voz de Iehudáh, y a su pue­blo tráelo.Sus manos *fueron* muchas para él; y ayuda sé a causa de sus adversarios.
 
 **8** Y a Levi dijo: Tu Tumim y tu Urim *sean* para un hombre,
 tu benevolente, quien probaste en Masah,
-**9** el que dijo a su padre y a su madre: “No los veo”; y a sus hermanos no reconoció, y a sus hijos no conoció, porque escucharon tu dicho, y tu pacto guar­daron.
+**9** el que dijo a su padre y a su madre: “No los veo”;y a sus hermanos no reconoció, y a sus hijos no conoció, porque escucharon tu dicho, y tu pacto guar­daron.
 **10** Instruirán tus procesos legales a Yaakov y tu Torah a Israel. Pondrán incienso en tu nariz, y *ofrendas* com­pletas sobre tu altar.
 **11** Bendice, יהוה, su fuerza, y la acción de sus manos acepta; aplasta los lomos de los que se levantan contra él y de sus aborrecedores,
 que se levantarán[^1317].
@@ -1231,12 +1220,12 @@ del rocío, y de la profundidad que reposa debajo;**14** de lo precioso de los p
  y el favor del que habitaba en la zarza.Venga a la cabeza de Iosef
  y a la coronilla del consagrado[^1319] de sus hermanos.**17** Primogénito de su buey, majestad para él, y cuernos de búfalo *son* sus cuernos;con ellos los pueblos empujará, juntos, *hasta* el final de la tierra; y ellos son las miríadas de Efráim, y ellos los miles de Menasheh.
 
-**18** Y a Zebulún dijo: Alégrate, Zebulún, en tu salida; e Issajar, en tus tiendas.
+**18** Y a Zebulún dijo: Alégrate, Zebulún, en tu salida;e Issajar, en tus tiendas.
 **19** A* los pueblos del monte llamarán; allí sacrificarán sacrificios de justicia,
 porque de la abundancia de los mares mamarán,
  y de las *cosas* cubiertas ocultas de la arena.
 
-**20** Y a Gad dijo: Bendito el que ensancha *a* Gad; como león se asienta, y devora el brazo, tam­bién la coronilla.
+**20** Y a Gad dijo: Bendito el que ensancha *a* Gad;como león se asienta, y devora el brazo, tam­bién la coronilla.
 **21** Y vio la primera *parte* para sí,
  pues allí la porción de legislador *le* *fue *cubierta.Y vino *con* las cabezas del pueblo; la justicia de יהוה hizo,
 y sus procesos legales con Israel.
@@ -1246,10 +1235,10 @@ y sus procesos legales con Israel.
 **23** Y a Naftalí dijo: Naftalí, saciado de favor y lleno de bendición de יהוה,
 el mar y el sur poseerá.
 
-**24** Y a Asher dijo: El bendito de los hijos es Asher; sea favorecido de sus hermanos, y sumerja en aceite su pie.
+**24** Y a Asher dijo: El bendito de los hijos es Asher;sea favorecido de sus hermanos, y sumerja en aceite su pie.
 **25** Hierro y cobre *serán* tus calzados,
 **26** No hay como el Elohim de Ieshurún, cabalga los cielos en tu ayuda, y en su ma­jes­tad *están* las nubes.
-**27** Morada es el Elohim de la eternidad[^1321], y debajo *están* los brazos olam[^1322]. Y expulsó de delante de ti *al *enemigo, y dijo: “¡Destruye! ”
+**27** Morada es el Elohim de la eternidad[^1321], y debajo *están* los brazos olam[^1322].Y expulsó de delante de ti *al *enemigo, y dijo: “¡Destruye!”
 **28** Y habitó Israel seguro,
  solo *habita* la fuente de Yaakov sobre tierra de grano y mosto,
 también sus cielos gotearán ro­cío.**29** ¡Feliz tú, Israel! ¿Quién como tú, pueblo salvado por יהוה?
@@ -1262,7 +1251,7 @@ también sus cielos gotearán ro­cío.**29** ¡Feliz tú, Israel! ¿Quién como
 **1** Y subió Moshéh desde la llanura de Moab al monte Nebó, *a* la cabeza del Pisgáh, que *es­tá *sobre la faz de Ierijó, y le hizo ver יהוה toda la tierra: Guilad hasta Dan,
 **2** y todo Naftalí, la tierra de Efráim y Menasheh, y toda la tierra de Iehudáh hasta el mar úl­timo,
 **3** y el Néguev y el círculo del valle de Ierijó, ciudad de las palmeras, hasta Tzoar.
-**4** Y dijo יהוה a él: Esta es la tierra que juré a Abraham, a Itzjak y a Yaakov, diciendo: “A tu simiente la daré. ” Te he hecho ver*la* con tus ojos, pero allí no cruzarás.
+**4** Y dijo יהוה a él: Esta es la tierra que juré a Abraham, a Itzjak y a Yaakov, diciendo: “A tu simiente la daré.” Te he hecho ver*la* con tus ojos, pero allí no cruzarás.
 **5** Y murió allí Moshéh, siervo de יהוה, en la tierra de Moab, por boca de יהוה.
 **6** Y Él lo enterró en el valle, en tierra de Moab, frente Bet Peor; pero no conoce hombre su se­pultura hasta este día.
 **7** Y Moshéh *tenía* la edad de ciento veinte a­ños en su muerte, no se oscurecieron sus ojos y no huyó su frescura.
@@ -1312,7 +1301,7 @@ también sus cielos gotearán ro­cío.**29** ¡Feliz tú, Israel! ¿Quién como
 [^1120]: Maacatita.
 [^1121]: O sea, *el mar Muerto*.
 [^1122]: Poderoso.
-[^1123]: Heb.: *Vait'aber.*
+[^1123]: Heb.: *Vait’aber.*
 [^1124]: Heb.: *Jukim.*
 [^1125]: Heb.: *Mishpatim.*
 [^1126]: Jordán. Así en el resto del cap.
@@ -1320,7 +1309,7 @@ también sus cielos gotearán ro­cío.**29** ¡Feliz tú, Israel! ¿Quién como
 [^1128]: Heb.: *El Kaná.*
 [^1129]: Lit.: *destruyendo, serán destruidos.*
 [^1130]: Lit.: *en tu estrecho.*
-[^1131]: Heb.: *Ajarit Ha'yamim.*
+[^1131]: Heb.: *Ajarit Ha’yamim.*
 [^1132]: Poderoso.
 [^1133]: Heb.: *Rajum.*
 [^1134]: Rubenita.
@@ -1457,10 +1446,10 @@ también sus cielos gotearán ro­cío.**29** ¡Feliz tú, Israel! ¿Quién como
 [^1265]: Lit.: *oreja; *es decir, *agarradera.*
 [^1266]: Santo, apartado, distinguido.
 [^1267]: Lit.:* No harás mordedura; *en sentido figu­rado.
-[^1268]: Lit.: *para su plenitud. *Heb.: *Le'shalmó.*
+[^1268]: Lit.: *para su plenitud. *Heb.: *Le’shalmó.*
 [^1269]: O, *un caso de inmoralidad sexual. *Heb.: *Ervat davar.*
 [^1270]: Lit.: *de ruptura.*
-[^1271]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^1271]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 [^1272]: Levitas.
 [^1273]: Lit.: *para exigir promesa de su promesa.*
 [^1274]: O sea, *de lo mejor. *Heb.: *Reshit.*
@@ -1492,7 +1481,7 @@ también sus cielos gotearán ro­cío.**29** ¡Feliz tú, Israel! ¿Quién como
 [^1300]: O, *su forma.*
 [^1301]: Levitas.
 [^1302]: Lit.: *amargos.*
-[^1303]: Heb.: *Ajarit Ha'yamim.*
+[^1303]: Heb.: *Ajarit Ha’yamim.*
 [^1304]: Heb.: *Mishpat.*
 [^1305]: Fidelidad, firmeza, crianza.
 [^1306]: El Elevado.

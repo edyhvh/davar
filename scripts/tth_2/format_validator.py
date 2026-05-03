@@ -63,7 +63,7 @@ class TTHFormatValidator:
 
         return counts, had_reset
 
-    def _load_reference_structure(self, book_key: str) -> Tuple[Dict[int, int], List[str]]:
+    def _load_reference_structure(self, book_key: str) -> Tuple[Dict[int, int], List[str], bool]:
         """Load expected chapter/verse structure from canonical TTH JSON."""
         issues: List[str] = []
         reference_file = DEFAULT_REFERENCE_JSON_DIR / f"{book_key}.json"
@@ -71,7 +71,7 @@ class TTHFormatValidator:
         if not reference_file.exists():
             issues.append(
                 f"Structure reference missing: {reference_file.name} in web/public/data/tth")
-            return {}, issues
+            return {}, issues, False
 
         try:
             with open(reference_file, 'r', encoding='utf-8') as f:
@@ -79,7 +79,7 @@ class TTHFormatValidator:
         except Exception as e:
             issues.append(
                 f"Failed to load structure reference {reference_file.name}: {e}")
-            return {}, issues
+            return {}, issues, False
 
         expected_counts, had_reset = self._extract_monotonic_chapter_verse_counts(
             reference_data, f"reference {reference_file.name}")
@@ -94,11 +94,11 @@ class TTHFormatValidator:
             issues.append(
                 f"Structure reference {reference_file.name} has trailing chapter reset; comparison uses monotonic prefix")
 
-        return expected_counts, issues
+        return expected_counts, issues, had_reset
 
     def _validate_structure(self, book_key: str, data: Dict[str, Any], issues: List[str], stats: Dict[str, int]) -> None:
         """Validate chapter/verse counts against canonical TTH reference."""
-        expected_counts, reference_notes = self._load_reference_structure(
+        expected_counts, reference_notes, reference_had_reset = self._load_reference_structure(
             book_key)
         for note in reference_notes:
             if note.startswith("Structure reference") and "missing" in note:
@@ -118,6 +118,19 @@ class TTHFormatValidator:
 
         actual_counts, _ = self._extract_monotonic_chapter_verse_counts(
             data, f"target {book_key}.json")
+
+        # Some web/public/data/tth reference files can contain early chapter
+        # resets (e.g., 1..13, then 1..50). In that case, expected_counts is
+        # only a truncated prefix and cannot be used for chapter parity checks.
+        if reference_had_reset and actual_counts:
+            expected_last = max(expected_counts.keys()
+                                ) if expected_counts else 0
+            actual_last = max(actual_counts.keys())
+            if expected_last < actual_last:
+                if self.verbose:
+                    print(
+                        f"⚠️  {book_key}: skipping structure parity checks because reference monotonic prefix ends at chapter {expected_last} but target reaches chapter {actual_last}")
+                return
 
         expected_chapters = sorted(expected_counts.keys())
         actual_chapters = sorted(actual_counts.keys())

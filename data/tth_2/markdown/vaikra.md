@@ -4,11 +4,11 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 
 **1**
 
-**1** Y llamó[^546] a Moshéh y habló יהוה a él desde la Tienda del Mo'ed[^547], di­cien­do:
+**1** Y llamó[^546] a Moshéh y habló יהוה a él desde la Tienda del Mo’ed[^547], di­cien­do:
 **2** Habla a los hijos de Israel y di a ellos: “El hombre que acercase de ustedes un korbán[^548] a יהוה, de ani­males de ganado y del rebaño acercarán su korbán.
-**3** Si *es* ascendida su ofrenda del ganado, un macho completo[^549] acerca­rá; a la entrada de la Tienda del Mo'ed lo acer­cará, por su voluntad, delante de יהוה.
+**3** Si *es* ascendida su ofrenda del ganado, un macho completo[^549] acerca­rá; a la entrada de la Tienda del Mo’ed lo acer­cará, por su voluntad, delante de יהוה.
 **4** Y apoyará su mano sobre la cabeza de la ofrenda ascendida[^550], y será acepta a él, para reconciliación sobre él.
-**5** Y degollará al hijo de ganado delante de יהוה, y acercarán los hijos de Aharón, los sacerdotes, la sangre, y tirarán la sangre sobre el altar, alrededor, que *está a* la entrada de la Tienda del Mo'ed.
+**5** Y degollará al hijo de ganado delante de יהוה, y acercarán los hijos de Aharón, los sacerdotes, la sangre, y tirarán la sangre sobre el altar, alrededor, que *está a* la entrada de la Tienda del Mo’ed.
 **6** Y quitará la piel de la ofrenda ascendida, y lo trozará por sus piezas.
 **7** Y pondrán los hijos de Aharón el sacerdote, fuego sobre el altar, y establecerán las made­ras sobre el fuego.
 **8** Y organizarán los hijos de Aharón, los sacerdotes, las piezas, la cabeza y el sebo sobre el fuego que *está *sobre el altar.
@@ -26,7 +26,7 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 
 **2**
 
-**1**“Y la persona que acerque una ofren­da de grano[^553] para יהוה, *de* ha­rina fina se­rá su korbán[^554], y verterá sobre ella aceite, y pon­drá sobre ella incienso.
+**1** “Y la persona que acerque una ofren­da de grano[^553] para יהוה, *de* ha­rina fina se­rá su korbán[^554], y verterá sobre ella aceite, y pon­drá sobre ella incienso.
 **2** Y la traerá a los hijos de Aharón, los sa­cerdotes, y *el sacerdote* tomará un puñado de ella llenando su mano de harina fina, y del aceite con todo su incienso. Y *la *quemará el sacerdote *como* su memorial *sobre* el altar; es ofrenda de fuego[^555], olor calmante para יהוה.
 **3** Y el resto de la ofrenda de grano es para Aharón y para sus hijos; es santidad de santi­dades de las ofrendas de fuego de יהוה.
 **4** Y cuando ofrezcas una ofrenda de grano horneada en horno, será de hogazas de harina fina sin levadura, mezclado con aceite, y galletas de pan sin levadura ungidas con aceite.
@@ -47,19 +47,19 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 
 **3**
 
-**1**“Y si sacrificio de retribuciones[^559] es su ofrenda, si del ganado él acerca, si es ma­cho o hembra, completo la acer­cará delante de יהוה.
-**2** Y apoyará su mano sobre la cabeza de su ofrenda, y *la *sacrificará a la entrada de la Tienda del Mo'ed[^560], y tirarán los hijos de Aha­rón, los sacerdotes, la sangre sobre el altar, alrededor.
+**1** “Y si sacrificio de retribuciones[^559] es su ofrenda, si del ganado él acerca, si es ma­cho o hembra, completo la acer­cará delante de יהוה.
+**2** Y apoyará su mano sobre la cabeza de su ofrenda, y *la *sacrificará a la entrada de la Tienda del Mo’ed[^560], y tirarán los hijos de Aha­rón, los sacerdotes, la sangre sobre el altar, alrededor.
 **3** Y acercará, del sacrificio de las retribuciones, una ofrenda de fuego para יהוה: la grasa que cubre las entrañas y toda la grasa que *hay* sobre las entrañas,
 **4** y los dos riñones y la grasa que *está* sobre ellos, que *está* sobre los lomos, y el lóbulo con el hígado, con los riñones que retirará.
 **5** Y lo quemarán los hijos de Aharón *sobre *el altar, sobre la ofrenda ascendida que *está* sobre las maderas, que *están* en el fuego; es o­fren­da de fuego de olor calmante para יהוה.
 **6** Y si es del rebaño su ofrenda para sacrificio de retribución para יהוה, *sea* macho o hembra, completo lo acercará.
 **7** Si un cordero él acerca para su ofrenda, lo acercará delante de יהוה.
-**8** Y apoyará su mano sobre la cabeza de su ofrenda y la sacrificará delante de la Tienda del Mo'ed, y tirarán los hijos de Aharón la san­gre sobre el altar, alrededor.
+**8** Y apoyará su mano sobre la cabeza de su ofrenda y la sacrificará delante de la Tienda del Mo’ed, y tirarán los hijos de Aharón la san­gre sobre el altar, alrededor.
 **9** Y acercará, del sacrificio de las retribuciones, una ofrenda de fuego para יהוה: su grasa, la cola gruesa completa, que retirará frente a la columna vertebral, y la grasa que cubre las entrañas, y toda la grasa que *está* so­bre las entrañas,
 **10** y los dos riñones y la grasa que *está* sobre ellos, que* está* sobre los lomos, y el lóbulo \(Lit.: resto\) con el hígado, con los riñones que retirará.
 **11** Y lo quemará el sacerdote *sobre* el altar *como *comida; es ofrenda de fuego para יהוה.
 **12** Y si una cabra es su ofrenda, la acercará delante de יהוה.
-**13** Y apoyará su mano sobre su cabeza y la sacrificará delante de la Tienda del Mo'ed, y tirarán los hijos de Aharón su sangre sobre el altar, alrededor.
+**13** Y apoyará su mano sobre su cabeza y la sacrificará delante de la Tienda del Mo’ed, y tirarán los hijos de Aharón su sangre sobre el altar, alrededor.
 **14** Y acercará de ella su ofrenda *como* ofrenda de fuego para יהוה: la grasa que cubre las entrañas y toda la grasa que *está* sobre las en­trañas,
 **15** y los dos riñones y la grasa que *está *sobre ellos, que *está* sobre los lomos, y el lóbulo con el hígado, con los riñones que retirará.
 **16** Y los quemará el sacerdote *sobre* el altar *como* comida; es ofrenda de fuego para olor calmante. Toda la grasa es para יהוה.
@@ -72,21 +72,21 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 **1** Y habló יהוה a Moshéh, diciendo:
 **2** Habla a los hijos de Israel, diciendo: “La persona que peque por error, *en cual­quiera* de todos los mandamientos de יהוה que no deben hacerse, y hace alguna de estas *cosas*;
 **3** si el sacerdote ungido peca, trayendo culpa al pue­blo, acercará, por su pecado que ha pecado, un toro hijo del ganado completo para יהוה, para ofrenda por el pecado.
-**4** Y traerá al toro a la entrada de la Tienda del Mo'ed[^562] delante de יהוה, y apoyará su ma­no sobre la cabeza del toro, y sacrificará al toro delante de יהוה.
-**5** Y tomará el sacerdote ungido de la sangre del toro y la traerá a la Tienda del Mo'ed;
+**4** Y traerá al toro a la entrada de la Tienda del Mo’ed[^562] delante de יהוה, y apoyará su ma­no sobre la cabeza del toro, y sacrificará al toro delante de יהוה.
+**5** Y tomará el sacerdote ungido de la sangre del toro y la traerá a la Tienda del Mo’ed;
 **6** Y sumergirá el sacerdote su dedo en la sangre y rociará de la sangre siete veces delante de יהוה, en frente de la cortina de la Santidad.
-**7** Y pondrá el sacerdote de la sangre sobre los cuernos del altar del incienso calmante delante de יהוה, que *está* en la Tienda del Mo'ed; y toda la sangre del toro derramará en la base del altar de la ofrenda ascendida[^563], que *está* a la entrada de la Tienda del Mo'ed.
+**7** Y pondrá el sacerdote de la sangre sobre los cuernos del altar del incienso calmante delante de יהוה, que *está* en la Tienda del Mo’ed; y toda la sangre del toro derramará en la base del altar de la ofrenda ascendida[^563], que *está* a la entrada de la Tienda del Mo’ed.
 **8** Y toda la grasa del toro de la ofrenda por el pecado[^564] levantará de él: la grasa que cubre las entrañas y toda la grasa que *está* sobre las entrañas,
 **9** y los dos riñones y la grasa que *está* sobre ellos, que *está* sobre los lomos, y el lóbulo con el hígado, con los riñones que retirará,
 **10** tal como se retira del buey del sacrificio de las ofrendas de retribuciones[^565]. Y los quemará el sa­cer­dote sobre el altar de la ofrenda ascendi­da.
 **11** Y la piel del toro y toda su carne, con su cabeza y con sus piernas, sus entrañas y su estiércol,
 **12** y sacará, todo el toro, fuera del campamen­to, hacia un lugar puro, en *donde* se derraman las grosuras, y lo quemará sobre las maderas en fuego; junto a lo derramado de las grosuras será quemado.
 **13** Y si toda la congregación de Israel comete un error, y está oculto el asunto de los ojos de la asamblea, y hacen una de todas *las cosas* de los mandamientos de יהוה que no deben ha­cerse, y son culpables;
-**14** y se conoce el pecado que han pecado, res­pecto a él; acercará la asamblea un toro hijo de ganado, para ofrenda por el pecado, y lo traerán delante de la Tienda del Mo'ed.
+**14** y se conoce el pecado que han pecado, res­pecto a él; acercará la asamblea un toro hijo de ganado, para ofrenda por el pecado, y lo traerán delante de la Tienda del Mo’ed.
 **15** Y apoyarán, los ancianos de la congre­gación, sus manos sobre la cabeza del toro de­lante de יהוה, y será sacrificado el toro de­lante de יהוה.
-**16** Y traerá el sacerdote ungido de la sangre del toro hacia la Tienda del Mo'ed;
+**16** Y traerá el sacerdote ungido de la sangre del toro hacia la Tienda del Mo’ed;
 **17** y sumergirá el sacerdote su dedo desde la sangre, y *la *rociará siete veces delante de יהוה, en frente de la cortina.
-**18** Y de la sangre pondrá sobre los cuernos del altar que *está* delante de יהוה, el cual *está* en la Tienda del Mo'ed, y toda la sangre de­rra­mará en la base del altar de la ofrenda ascendida, que *está* a la entrada de la Tienda del Mo'ed.
+**18** Y de la sangre pondrá sobre los cuernos del altar que *está* delante de יהוה, el cual *está* en la Tienda del Mo’ed, y toda la sangre de­rra­mará en la base del altar de la ofrenda ascendida, que *está* a la entrada de la Tienda del Mo’ed.
 **19** Y toda su grasa elevará de él, y *lo* quemará *sobre* el altar,
 **20** y hará al toro como hizo al toro de la ofren­da por el pecado, así hará a él. Y el sacerdote hará expiación por ellos, y será perdonado a ellos.
 **21** Y sacará al toro fuera del campamento, y lo quemará como quemó al primer toro; ofrenda por el pecado de la asamblea es esta.
@@ -98,8 +98,7 @@ __VAIKRÁ \(LEVÍTICO\)__ ויקרא
 **27** Y si es una persona la que peca por error, del pueblo de la tierra, en hacer *algo contra* uno de los mandamientos de יהוה que no se debe hacer, y es culpable;
 **28** o se le hace saber su pecado que ha pecado, traerá *como* su ofrenda una peluda de las ca­bras, completa, hembra, por su pecado que ha pecado.
 **29** Y pondrá su mano sobre la cabeza de la ofrenda por el pecado, y sacrificará a la ofren­da por el pecado en el lugar de la ofrenda ascendida.
-**30** Y tomará el sacerdote de su sangre con su dedo, y *la* pondrá sobre los cuernos del altar
-de la ofrenda ascendida, y toda la sangre *res­tante* derramará en la base del altar.
+**30** Y tomará el sacerdote de su sangre con su dedo, y *la* pondrá sobre los cuernos del altar__ __de la ofrenda ascendida, y toda la sangre *res­tante* derramará en la base del altar.
 **31** Y toda su grasa retirará, como es retirada la grasa de sobre el sacrificio de las retribuciones; y *la* quemará el sacerdote en el altar, para olor calmante para יהוה. Y el sacerdote hará expiación por él, y será perdonado a él.
 **32** Y si un cordero él trae para ofrenda por el pecado, una hembra completa traerá.
 **33** Y apoyará su mano sobre la cabeza de la ofrenda por el pecado, y la sacrificará para ofrenda por el pecado en el lugar el cual sacrifican a la ofrenda ascendida.
@@ -108,7 +107,7 @@ de la ofrenda ascendida, y toda la sangre *res­tante* derramará en la base del
 
 **5**
 
-**1**“La persona que peque y escucha voz de ju­ra­mento, y es testigo o ha visto o sabe *al­go*, si no *lo* informa, cargará su iniquidad.
+**1** “La persona que peque y escucha voz de ju­ra­mento, y es testigo o ha visto o sabe *al­go*, si no *lo* informa, cargará su iniquidad.
 **2** O una persona que toque cualquier cosa im­pura, ya sea un cadáver de un animal im­puro[^566], o un cadáver de ganado impuro, o un cadáver de un reptil impuro, y esté oculto de él, y es impuro, será culpable.
 **3** O cuando toque impureza de hombre, de cualquier *cosa* de su impureza con que se con­tamine, y está oculto de él, pero *después* él *lo* sabe, será culpable.
 **4** O la persona que jure pronunciando con sus la­bios para hacer mal o para hacer bien, de cualquier *cosa* que pueda pronunciar el hom­bre con un juramento, y está oculto de él, pero *después* él *lo* sabe, será culpable por una de estas *cosas*.
@@ -133,12 +132,10 @@ de la ofrenda ascendida, y toda la sangre *res­tante* derramará en la base del
 **1** Y habló יהוה a Moshéh, diciendo:
 **2** La persona que peque y transgreda apro­pián­dose contra יהוה, y engaña a su amigo en un depósito o en algo dado en mano, o por ro­bo, o *por* *haber* explotado a su amigo,
 **3** o ha encontrado algo perdido y ha engañado en ello, y ha jurado en mentira sobre una de todas *las cosas* que puede hacer el hombre, pecando en ellas;
-**4** y
-será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explotación *con* que oprimió, o el depósito que fue depositado con él, o la cosa perdida que ha encontrado,
+**4** y__ __será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explotación *con* que oprimió, o el depósito que fue depositado con él, o la cosa perdida que ha encontrado,
 **5** o de todo por lo que ha jurado falsa­mente; y lo pagará en su totalidad[^571], y su quinta parte[^572] añadirá por eso. A quien eso le pertenece *lo* dará en el día de su ofren­da de culpa[^573].
 **6** Y su ofrenda de culpa traerá, para יהוה, un carnero completo del rebaño, conforme a tu valoración, para ofrenda de culpa, al sacerdote.
-**7** Y hará reconciliación el sacerdote por él delante de יהוה, y le será perdonado, por una de todas *las cosas* que pudo haber hecho para ser cul­pable en ella.
-**1**
+**7** Y hará reconciliación el sacerdote por él delante de יהוה, y le será perdonado, por una de todas *las cosas* que pudo haber hecho para ser cul­pable en ella.__ __
 
 *El sacerdote y los sacrificios*
 
@@ -150,7 +147,7 @@ será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explo
 **13** El fuego constantemente se mantendrá en­cen­dido en el altar; no se apagará.
 **14** Y esta es la Torah de la ofren­da de grano: la acercarán los hijos de Aharón delante de יהוה, hacia el rostro del altar.
 **15** Y elevará de ella en su puñado, de harina fi­na de la ofrenda de grano[^576], y de su aceite, y to­do el incienso que *está* sobre la ofrenda de grano, y *la* quemará *sobre* el altar; *es* olor calmante, su memorial para יהוה.
-**16** Y lo que quede de ella comerán Aharón y sus hijos; panes sin levadura[^577] se co­merá en lugar kadosh[^578]; en el patio de la Tienda del Mo'ed[^579] lo co­merán.
+**16** Y lo que quede de ella comerán Aharón y sus hijos; panes sin levadura[^577] se co­merá en lugar kadosh[^578]; en el patio de la Tienda del Mo’ed[^579] lo co­merán.
 **17** No se comerá levadura[^580]. *Como* su porción, lo he dado de mis ofrendas de fuego; es santidad de santidades, como la o­frenda por el pecado y como la ofrenda de culpa.
 **18** Todo varón entre los hijos de Aharón puede comerla; será estatuto olam[^581] para sus gene­ra­ciones, de las ofrendas encen­didas de __יהוה__. Todo el que las toque, será consagrado”.
 **19** Y habló __יהוה__ a Moshéh, diciendo:
@@ -160,15 +157,15 @@ será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explo
 **23** Y toda ofrenda de grano del sacerdote com­pletamente será *quemada*. No se comerá.
 **24** Y habló __יהוה__ a Moshéh, diciendo:
 **25** Habla a Aharón y a sus hijos, diciendo: “Esta es la Torah de la ofrenda por el pecado[^584]: en el lugar el cual será sacrificada la ofrenda ascendida, será sacrificada la ofrenda por el pecado, delante de __יהוה__; santidad de san­ti­dades es esto.
-**26** El sacerdote quien la ofrezca por el pecado la comerá. En un lugar kadosh se comerá, en el patio de la Tienda del Mo'ed.
+**26** El sacerdote quien la ofrezca por el pecado la comerá. En un lugar kadosh se comerá, en el patio de la Tienda del Mo’ed.
 **27** Todo el que toque su carne será con­sagrado; y cuando se rocíe de su sangre sobre una vestidura, lo que fue ro­ciado sobre ella lavarás en un lugar kadosh.
 **28** Y el recipiente de barro en el cual fue cocida será roto; y si en un recipiente de cobre fue cocida, se frotará y se enjuagará en agua.
 **29** Todo varón entre los sacerdotes puede co­merla; santidad de santidades es esto.
-**30** Pero cualquier ofrenda por el pecado, que fue traída de su sangre hacia la Tienda del Mo'ed para hacer reconciliación en la Santidad, no se comerá; en el fuego será quemada.
+**30** Pero cualquier ofrenda por el pecado, que fue traída de su sangre hacia la Tienda del Mo’ed para hacer reconciliación en la Santidad, no se comerá; en el fuego será quemada.
 
 **7**
 
-**1**“Y esta es la Torah de la ofrenda de culpa[^585], santidad de santidad es esto.
+**1** “Y esta es la Torah de la ofrenda de culpa[^585], santidad de santidad es esto.
 **2** En el lugar el cual sacrificarán la ofrenda ascendida[^586], sacrificarán la ofrenda de culpa, y su sangre tirará sobre el altar alrededor.
 **3** Y toda su grasa acercará de ella: su cola gruesa, la grasa que cubre las entrañas,
 **4** y los dos riñones y la grasa que *está *sobre ellos, que *está* sobre los lomos, y el lóbulo con el hígado, con los riñones que retirará.
@@ -213,8 +210,8 @@ será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explo
 
 **1** Y habló __יהוה__ a Moshéh, diciendo:
 **2** Toma a Aharón y a sus hijos con él, y las vestiduras, y el aceite de la unción, y un toro de la ofrenda por el pecado, y dos carneros, y una cesta de panes sin levadura;
-**3** y a toda la congregación reúne a la entrada de la Tienda del Mo'ed[^597].
-**4** E hizo Moshéh como le ordenó __יהוה__, y fue reunida la congregación a la entrada de la Tienda del Mo'ed.
+**3** y a toda la congregación reúne a la entrada de la Tienda del Mo’ed[^597].
+**4** E hizo Moshéh como le ordenó __יהוה__, y fue reunida la congregación a la entrada de la Tienda del Mo’ed.
 **5** Y dijo Moshéh a la congregación: Esta es la palabra que ha ordenado __יהוה__ para hacer.
 **6** Y acercó Moshéh a Aharón y a sus hijos, y los lavó con agua.
 **7** Y puso sobre él la túnica, y lo ciñó con la faja, y lo vistió con el manto, y puso sobre él el efod, y lo ciñó con el diseño del efod, y ciñó a él con eso.
@@ -241,11 +238,11 @@ será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explo
 **28** Y las tomó Moshéh desde encima de sus palmas, y *lo* quemó *en* el altar sobre la ofren­da ascendida. Eran ofrendas de plenitudes, pa­ra olor calmante, una ofrenda de fuego[^603] es, para __יהוה__.
 **29** Y tomó Moshéh el seno y lo meció *como* ofrenda mecida delante de __יהוה__; del car­nero de las plenitudes para Moshéh era, para porción, como había mandado __יהוה__ a Mo­shéh.
 **30** Y tomó Moshéh del aceite de la unción, y de la sangre que *estaba* sobre el altar, y *lo *roció sobre Aharón, sobre sus vestiduras, y sobre sus hijos, y sobre las vestiduras de sus hijos con él. Y consagró a Aharón, a sus ves­tiduras, y a sus hijos, y a las vestiduras de sus hijos con él.
-**31** Y dijo Moshéh a Aharón y a sus hijos: Cocinen la carne *en* la entrada de la Tienda del Mo'ed, y allí cómanla, y al pan que *está *en la cesta de las plenitudes, como lo he ordenado, diciendo: “Aharón y sus hijos lo comerán”.
+**31** Y dijo Moshéh a Aharón y a sus hijos: Cocinen la carne *en* la entrada de la Tienda del Mo’ed, y allí cómanla, y al pan que *está *en la cesta de las plenitudes, como lo he ordenado, diciendo: “Aharón y sus hijos lo comerán”.
 **32** Y lo que quede de la carne y del pan, en el fuego *lo* quemarán.
-**33** Y de la entrada de la Tienda del Mo'ed no saldrán *por* siete días, hasta los días completos, los días de sus plenitudes, porque* por* siete días llenará sus manos.
+**33** Y de la entrada de la Tienda del Mo’ed no saldrán *por* siete días, hasta los días completos, los días de sus plenitudes, porque* por* siete días llenará sus manos.
 **34** Conforme se ha hecho en este día ha orde­nado __יהוה__ a hacer, para hacer reconciliación por ustedes.
-**35** Y *a* la entrada de la Tienda del Mo'ed per­manecerán, día y noche *por* siete días, y guar­den la guardia de __יהוה__, y no morirán, por­que así se me ha ordenado.
+**35** Y *a* la entrada de la Tienda del Mo’ed per­manecerán, día y noche *por* siete días, y guar­den la guardia de __יהוה__, y no morirán, por­que así se me ha ordenado.
 **36** E hizo Aharón y sus hijos todas las cosas que había ordenado יהוה por mano de Moshéh.
 
 *Los primeros sacrificios de Aharón*
@@ -256,7 +253,7 @@ será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explo
 **2** Y dijo a Aharón: Toma para ti un ternero hijo del ganado para ofrenda por el pecado[^604], y un carnero para ofrenda ascendida[^605], completos, y acérca*los *delante de __יהוה__.
 **3** Y a los hijos de Israel hablarás, diciendo: “To­men un peludo de las cabras para ofrenda por el pecado, y un ternero y un cordero, de e­dad de un año, completos, para ofrenda as­cen­dida;
 **4** y un buey y un carnero para retribuciones[^606], para sacrificar delante de __יהוה__, y una ofrenda de grano[^607] mezclada con aceite, porque hoy __יהוה__ aparecerá a ustedes”.
-**5** Y tomaron lo que había mandado Moshéh hacia el frente de la Tienda del Mo'ed[^608], y se acercó toda la congregación y permaneció de pie delante de __יהוה__.
+**5** Y tomaron lo que había mandado Moshéh hacia el frente de la Tienda del Mo’ed[^608], y se acercó toda la congregación y permaneció de pie delante de __יהוה__.
 **6** Y dijo Moshéh: Esta es la palabra que ha ordenado יהוה que hagan, y aparezca a us­te­des la gloria de יהוה.
 **7** Y dijo Moshéh a Aharón: Acércate al altar y haz tu ofrenda por el pecado y tu ofrenda as­cendida, y puedas hacer reconciliación a favor de ti y a favor del pueblo; y haz el korbán[^609] del pueblo, y puedas hacer reconciliación a favor de ellos, como ha ordenado __יהוה__.
 **8** Y se acercó Aharón al altar y sacrificó al ternero de la ofrenda por el pecado, que *era* para sí *mismo*.
@@ -274,7 +271,7 @@ será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explo
 **20** y pusieron las grosuras sobre los senos; y quemó las grosuras hacia el altar.
 **21** Pero los senos y el muslo derecho meció Aharón *como* ofrenda mecida[^611] delante de __יהוה__, como había ordenado Moshéh.
 **22** Y levantó Aharón su mano hacia el pueblo y los bendijo, y descendió de hacer la ofrenda por el pecado, la ofrenda ascendida y las retribu­ciones.
-**23** Y entraron Moshéh y Aharón a la Tienda del Mo'ed, y salieron y bendijeron al pueblo, y apareció la gloria de __יהוה__ a todo el pueblo.
+**23** Y entraron Moshéh y Aharón a la Tienda del Mo’ed, y salieron y bendijeron al pueblo, y apareció la gloria de __יהוה__ a todo el pueblo.
 **24** Y salió fuego de delante de __יהוה__ y consumió sobre el altar la ofrenda ascendida y las grosuras. Y vio todo el pueblo y cantaron de alegría, y cayeron sobre sus rostros.
 
 *Nadab y Avihu *
@@ -287,12 +284,12 @@ será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explo
 **4** Y llamó Moshéh a Mishael y a Eltzafán, hijos de Uziel, tío de Aharón, y dijo a ellos: Acérquense, lleven a sus hermanos de la faz de la Santidad, hacia fuera del campamento.
 **5** Y se acercaron y los llevaron en sus túnicas hacia fuera del campamento, como había hablado Moshéh.
 **6** Y dijo Moshéh a Aharón, y a Eleazar y a Itamar, sus hijos: Sus cabezas no descubran, y sus vestiduras no rasguen, y no morirán, y sobre toda la congregación Él no estará furioso. Pero sus hermanos, toda la casa de Israel, lamentará el fuego que ha quemado יהוה.
-**7** Y de la entrada de la Tienda del Mo'ed[^612] no saldrán, no sea que mueran; porque el aceite de la unción de יהוה *está* sobre ustedes. E hicieron conforme a la palabra de Moshéh.
+**7** Y de la entrada de la Tienda del Mo’ed[^612] no saldrán, no sea que mueran; porque el aceite de la unción de יהוה *está* sobre ustedes. E hicieron conforme a la palabra de Moshéh.
 
 *Deberes de los sacerdotes*
 
 **8** Y habló יהוה a Aharón, diciendo:
-**9** Vino y embriaguez no beberán, tú y tus hijos contigo, cuando entren a la Tienda del Mo'ed, y no morirán; es decreto olam[^613] para sus gene­raciones;
+**9** Vino y embriaguez no beberán, tú y tus hijos contigo, cuando entren a la Tienda del Mo’ed, y no morirán; es decreto olam[^613] para sus gene­raciones;
 **10** y para que distingan entre lo distinguido[^614] y lo perforado[^615], entre lo impuro[^616] y lo puro[^617];
 **11** y para que enseñen a los hijos de Israel todos los estatutos que ha hablado יהוה a ellos por mano de Moshéh.
 **12** Y habló Moshéh a Aharón, y a Eleazar y a Itamar, sus hijos: Los restos tomen de la ofrenda de grano[^618] que queda de las ofrendas de fuego[^619] de יהוה, y cómanla sin levadura cerca del altar, porque santidad de santidades es.
@@ -366,7 +363,7 @@ será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explo
 **3** Y en el día octavo será circuncidada la carne de su prepucio.
 **4** Y treinta y tres días ella se quedará sentada en la sangre de su purificación[^669]; en toda *cosa *sagrada[^670] ella no to­cará, y al Santuario no entrará hasta que se completen los días de su purificación.
 **5** Pero si una niña da a luz, será impura dos semanas, como su exclusión; y setenta y seis días se quedará sentada en la sangre de su puri­ficación.
-**6** Y cuando se completen los días de su puri­ficación, por un hijo o por una hija, ella traerá un cordero hijo de un año para ofrenda ascendida[^671], y un hijo de paloma, o una tórtola, para ofrenda por el pecado[^672], hacia la entrada de la Tienda del Mo'ed[^673], al sacerdote.
+**6** Y cuando se completen los días de su puri­ficación, por un hijo o por una hija, ella traerá un cordero hijo de un año para ofrenda ascendida[^671], y un hijo de paloma, o una tórtola, para ofrenda por el pecado[^672], hacia la entrada de la Tienda del Mo’ed[^673], al sacerdote.
 **7** Y él lo acercará delante de יהוה y hará reconciliación por ella, y será pura de la fuente de su sangre. Esta es la Torah *para* la que da a luz, para un varón o para una niña.
 **8** Pero si no encuentra su mano suficiencia *pa­ra* un cordero, tomará ella dos tórtolas o dos hijos de paloma, uno para ofrenda ascendida y uno para ofrenda por el pecado; y hará reconciliación por ella el sacerdote, y ella será pura[^674]”.
 
@@ -392,11 +389,10 @@ será, cuando peque y sea culpable, regre­sará lo robado que robó, o la explo
 **16** O cuando se vuelva la carne viva, y se con­vierta en blanca, vendrá al sacerdote;
 **17** Y lo mirará el sacerdote, y he aquí, se ha vuelto el daño blanco, proclamará puro el sacerdote al *que tenía* el daño; puro es él.
 **18** Y cuando la carne tenga en su piel una ebullición, y se sane,
-**19** y haya en lugar de la ebullición una hinchazón
-blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
+**19** y haya en lugar de la ebullición una hinchazón__ __blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
 **20** y *la* mirará el sacerdote, y he aquí, la apariencia de ella es *más* baja que la piel, y su pelo se ha vuelto blanco, lo declarará impuro el sacerdote; es un daño de tzaraat, en la ebullición ha florecido.
 **21** Pero si la ve el sacerdote, y he aquí, no hay en ella pelo blanco, y *más* baja no está que la piel, y esta se ha oscurecido, lo encerrará el sacerdote siete días;
-**22** y si, extendiendo, se extiende en la piel, lo de­clarará impuro el sacerdote; es daño__. 23 __Pero si en su lugar permanece la mancha blanca *y* no se ha extendido, la quemadura de la ebullición es esto; lo declarará puro el sacerdote.
+**22** y si, extendiendo, se extiende en la piel, lo de­clarará impuro el sacerdote; es daño__.23 __Pero si en su lugar permanece la mancha blanca *y* no se ha extendido, la quemadura de la ebullición es esto; lo declarará puro el sacerdote.
 **24** O la carne, cuando tiene en su piel una quemadura de fuego, y se convierte la carne viva[^678] de la quemadura una man­­cha blanca rojiza, o blanca;
 **25** la mirará el sacerdote, y he aquí, se vuelve el pelo blanco en una mancha blanca, y la apariencia de ella es más profunda que la piel, es tzaraat; en la quemadura ha florecido; lo declarará impuro el sacerdote, es un daño de tza­raat esto.
 **26** Pero si la mira el sacerdote, y he aquí, no hay en la mancha blanca pelo blanco, y más baja no está que la piel, y esta se ha oscurecido; lo encerrará el sacerdote siete días.
@@ -446,7 +442,7 @@ blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
 **8** Y lavará, el que ha de ser purificado, sus vestiduras, y afeitará todo su pelo, y se lavará en agua, y será puro[^690]. Y después entrará al campamento, pero permanecerá fuera de su tien­da siete días.
 **9** Y sucederá en el día séptimo, se afeitará todo su pelo, su cabeza y su barba, y las cejas de sus ojos, todo su pelo se afeitará. Y lavará sus vestiduras, y lavará su carne en agua; y será puro.
 **10** Y en el día octavo tomará dos corderos completos, y una cordera hija de un año com­pleto, y tres décimas de harina fina, *como* o­fren­­da de grano[^691], mezclada con aceite, y un log[^692] de aceite;
-**11** y parará, el sacerdote que lo declarará puro, al hombre que ha de ser puro, y ellas[^693] delante de יהוה, *a* la entrada de la Tienda del Mo'ed[^694].
+**11** y parará, el sacerdote que lo declarará puro, al hombre que ha de ser puro, y ellas[^693] delante de יהוה, *a* la entrada de la Tienda del Mo’ed[^694].
 **12** Y tomará el sacerdote un cordero y lo acercará para ofrenda por el pecado[^695], con el log de aceite, y los mecerá* como* ofrenda mecida[^696] delante de יהוה.
 **13** Y sacrificará el cordero en el lugar el cual sacrifican la ofrenda por el pecado y la ofrenda ascendida[^697], en el lugar de la Santidad, porque como la ofrenda por el pecado la ofrenda de culpa[^698] es, *será* para el sacerdote; santidad de santidades es.
 **14** *Y tomará el sacerdote de la sangre de la ofrenda de culpa, y *la* pondrá el sacerdote sobre el lóbulo de la oreja del que ha de ser purificado, el derecho, y sobre el pulgar de su mano derecha, y sobre el pulgar de su pie derecho.
@@ -458,7 +454,7 @@ blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
 **20** Y ascenderá el sacerdote la ofrenda ascendida y la ofrenda de grano al altar; y hará reconciliación por él el sacerdote, y será puro.
 **21** Pero si es pobre él, y su mano no alcanza, tomará un cordero *como *ofrenda de culpa, para ofrenda mecida, para hacer reconciliación por él, y una décima de harina fina mezclada con acei­te para ofrenda de grano y un log de aceite.
 **22** Y dos tórtolas o dos hijos de paloma, que alcance su mano: y será uno ofrenda por el pecado, y uno ofrenda ascendida.
-**23** Y los traerá en el día octavo para su purifi­cación al sacerdote, a la entrada de la Tienda del Mo'ed, delante de יהוה.
+**23** Y los traerá en el día octavo para su purifi­cación al sacerdote, a la entrada de la Tienda del Mo’ed, delante de יהוה.
 **24** Y tomará el sacerdote al cordero de la ofrenda de culpa, y el log de aceite, y los mecerá el sacerdote *como* ofrenda mecida delante de יהוה.
 **25** Y sacrificará al cordero de la ofrenda de culpa, y tomará el sacerdote de la sangre de la ofrenda de culpa y *la* pondrá sobre el lóbulo de la oreja del que ha de ser purificado, el derecho, y sobre el pulgar de su mano derecha, y sobre el pulgar de su pie derecho.
 **26** Y del aceite verterá el sacerdote sobre la palma del sacerdote *mismo*, la izquierda;
@@ -514,7 +510,7 @@ blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
 **11** Y todo el que lo toque él,* el que tiene *el goteo, y sus manos no lavó con agua, lavará sus vestiduras y se bañará en agua, y será impuro hasta el atardecer.
 **12** Y un utensilio de barro, el cual toque,* el que tiene *el goteo, será roto, y todo utensilio de madera será lavado con agua.
 **13** Y cuando esté puro[^708], *el que tiene *el goteo, de su goteo, contará para sí siete días, para su purificación; y lavará sus vestiduras y bañará su carne en agua viva, y será puro.
-**14** Y en el día octavo tomará para sí dos tórtolas o dos hijos de paloma, y vendrá delante de יהוה a la entrada de la Tienda del Mo'ed[^709], y los dará al sacerdote.
+**14** Y en el día octavo tomará para sí dos tórtolas o dos hijos de paloma, y vendrá delante de יהוה a la entrada de la Tienda del Mo’ed[^709], y los dará al sacerdote.
 **15** Y los hará el sacerdote, uno *como* ofrenda por el pecado[^710] y uno *como* ofrenda ascendida[^711]. Y el sacerdote hará reconciliación por él delante de יהוה, debido a su goteo.
 **16** Y el hombre que salga de él una emisión de semen, lavará con agua toda su carne, y será impuro hasta el atardecer.
 **17** Y cualquier vestido y cualquier piel que haya sobre este una emisión de semen, se lavará con agua, y será impuro hasta el atardecer.
@@ -529,7 +525,7 @@ blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
 **26** Toda cama sobre la cual ella se acueste, todos los días de su goteo, como la cama de su exclusión será para ella; y todo utensilio sobre el cual ella se siente, impuro será, como la impureza de su exclusión.
 **27** Y todo el que las toque será impuro, y lavará sus vestiduras y se bañará en agua, y será impuro hasta el atardecer.
 **28** Y si ella *está* pura[^714] de su goteo, contará para sí siete días, y después será pura.
-**29** Y en el día octavo ella tomará para sí dos tórtolas o dos hijos de paloma, y los traerá al sacerdote, a la entrada de la Tienda del Mo'ed.
+**29** Y en el día octavo ella tomará para sí dos tórtolas o dos hijos de paloma, y los traerá al sacerdote, a la entrada de la Tienda del Mo’ed.
 **30** Y hará el sacerdote a uno ofrenda por el pe­cado, y a uno ofrenda ascendida. Y hará expia­ción por ella el sacerdote delante de יהוה, de­bido al goteo de su impureza”.
 **31** Y privarán a los hijos de Israel de su impureza, y no morirán en su im­pureza por profanar mi Mishkán[^715], el cual *está* entre ellos.
 **32** Esta es la Torah del goteo, y *para* el que sale de él una emisión de semen, impurificándose por ella;
@@ -545,7 +541,7 @@ blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
 **4** La túnica de lino sagrada se pondrá, y los pantalones de lino tendrá sobre su carne, y con una faja de lino será ceñido, y con el turbante de lino se cubrirá; vestiduras de santidad son ellas. Y lavará con agua su carne y se las vestirá.
 **5** Y de la congregación de los hijos de Israel tomará dos peludos de las cabras para ofrenda por el pecado, y un carnero para ofrenda ascendida.
 **6** Y acercará Aharón al toro *como* ofrenda por el pecado, que es para él. Y hará reconcilia­ción a favor de sí *mismo* y a favor de su casa.
-**7** Y tomará a los dos peludos y los parará delante de יהוה, *a* la entrada de la Tienda del Mo'ed[^720].
+**7** Y tomará a los dos peludos y los parará delante de יהוה, *a* la entrada de la Tienda del Mo’ed[^720].
 **8** Y pondrá Aharón sobre los dos peludos goralot[^721], un goral para יהוה y un goral para Aza­zel[^722].
 **9** Y acercará Aharón al peludo sobre el cual ascendió el goral para יהוה, y lo hará *como *ofrenda por el pecado.
 **10** Pero el peludo sobre el cual ascendió el goral para Azazel, será parado vivo delante de יהוה para hacer reconciliación sobre él, y lo enviará para Azazel al desierto.
@@ -554,14 +550,14 @@ blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
 **13** Y pondrá el incienso sobre el fuego delante de יהוה, y pueda cubrir la nube de incienso la cubierta que *está* sobre el Testimonio, y no muera.
 **14** Y tomará de la sangre del toro, y rociará con su dedo sobre la faz de la cubierta, al este, y delante de la cubierta rociará siete veces de la sangre con su dedo.
 **15** Y sacrificará al peludo de la ofrenda por el pecado que es por el pueblo, y llevará su sangre hacia dentro de la cortina, y hará con su sangre como hizo a la sangre del toro, y la rociará sobre la cubierta y delante de la cubierta.
-**16** Y hará reconciliación por la Santidad debido a la impureza[^723] de los hijos de Israel y debido a sus transgresiones, por todos sus pecados; y así hará para la Tienda del Mo'ed la cual reside con ellos en medio de su impureza.
-**17** Y ningún hombre estará en la Tienda del Mo'ed cuando él entre para hacer reconciliación en la Santidad hasta que él salga, y haga reconciliación a favor de sí, y a favor de su casa y a favor de toda la asamblea de Israel.
+**16** Y hará reconciliación por la Santidad debido a la impureza[^723] de los hijos de Israel y debido a sus transgresiones, por todos sus pecados; y así hará para la Tienda del Mo’ed la cual reside con ellos en medio de su impureza.
+**17** Y ningún hombre estará en la Tienda del Mo’ed cuando él entre para hacer reconciliación en la Santidad hasta que él salga, y haga reconciliación a favor de sí, y a favor de su casa y a favor de toda la asamblea de Israel.
 **18** Y saldrá al altar que *está *delante de יהוה, y hará reconciliación por él, y tomará de la sangre del toro y de la sangre del peludo y *la* pondrá sobre los cuernos del altar, alrededor.
 **19** Y rociará sobre él de la sangre con su dedo siete veces, y lo purificará, y lo santificará de la impureza de los hijos de Israel.
-**20** Y terminado de* hacer* reconciliación para la Santidad y para la Tienda del Mo'ed y para el altar, traerá al peludo vivo.
+**20** Y terminado de* hacer* reconciliación para la Santidad y para la Tienda del Mo’ed y para el altar, traerá al peludo vivo.
 **21** Y apoyará Aharón sus dos manos sobre la cabeza del peludo vivo y confesará sobre él todas las iniquidades de los hijos de Israel, y todas sus transgresiones, por todos sus pecados, y los pondrá sobre la cabeza del peludo, y *lo* enviará por mano de un hombre de mi tiempo[^724] al de­sierto.
 **22** Y cargará el peludo sobre sí todas sus iniquidades hacia una tierra separada; y soltará al peludo en el desierto.
-**23** Y entrará Aharón a la Tienda del Mo'ed y se quitará las vestiduras de lino que se había puesto cuando entró a la Santidad, y las colo­cará allí.
+**23** Y entrará Aharón a la Tienda del Mo’ed y se quitará las vestiduras de lino que se había puesto cuando entró a la Santidad, y las colo­cará allí.
 **24** Y lavará su carne con agua en un lugar kadosh[^725], y se pondrá sus vestiduras, y saldrá y hará su ofrenda ascendida y la ofrenda ascendida del pueblo; y hará reconciliación a favor de sí y a favor del pueblo.
 **25** Y la grasa de la ofrenda por el pecado quemará hacia el altar.
 **26** Y el que envió al peludo para Azazel lavará sus vestiduras y lavará su carne con agua, y después sí entrará al campamento.
@@ -571,7 +567,7 @@ blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
 **30** Porque en este día él hará reconciliación por ustedes para purificarlos de todos sus pecados, delante de יהוה serán puros[^728].
 **31** Shabat Shabatón[^729] será para ustedes, y afligirán sus gargantas; es decreto olam*.*
 **32** Y hará reconciliación el sacerdote al cual Él ha ungido, y quien ha llenado su mano para ser sacerdote en lugar de su padre; y se pondrá las vestiduras de lino, vestiduras de santidad;
-**33** y hará reconciliación para el Santuario de la Santidad, y para la Tienda del Mo'ed, y para el altar hará reconciliación; y por los sacerdotes y por todo el pueblo de la asamblea hará reconciliación.
+**33** y hará reconciliación para el Santuario de la Santidad, y para la Tienda del Mo’ed, y para el altar hará reconciliación; y por los sacerdotes y por todo el pueblo de la asamblea hará reconciliación.
 **34** Y será esto para ustedes por estatuto olam para hacer reconciliación por los hijos de Israel, de todos sus pecados, una *vez* en el año. E hizo conforme había ordenado יהוה a Moshéh.
 
 *Más instrucciones sobre sacrificios*
@@ -581,13 +577,12 @@ blanca, o una mancha blanca rojiza, se mostrará al sacerdote;
 **1** Y habló יהוה a Moshéh, diciendo:
 **2** Habla a Aharón y a sus hijos, y a todos los hijos de Israel, y di a ellos: “Esta es la palabra que ha ordenado יהוה, diciendo:
 **3** Cada hombre[^730] de la casa de Israel que sacrifique un buey, o un cordero o una cabra en el campamento, o el que *lo* sacrifique fuera del campamento,
-**4** y a la entrada de la Tienda del Mo'ed[^731] no lo lleva para acercar un korbán[^732] para יהוה, delante del Mishkán de יהוה, la sangre será contada a ese hombre. Sangre ha derramado, y será cortado ese hombre de entre su pueblo.
-**5** Con el fin de que puedan traer los hijos de Israel sus sacrificios que ellos sacrificaban so­bre la faz del campo, y los traigan a יהוה
-a la entrada de la Tienda del Mo'ed, al sacerdote, y los sacrifiquen *como *sacrificios de retribución[^733] para יהוה.
-**6** Y rociará el sacerdote la sangre sobre el altar de יהוה *a* la entrada de la Tienda del Mo'ed, y quemará la grasa, para olor calmante para יהוה.
+**4** y a la entrada de la Tienda del Mo’ed[^731] no lo lleva para acercar un korbán[^732] para יהוה, delante del Mishkán de יהוה, la sangre será contada a ese hombre. Sangre ha derramado, y será cortado ese hombre de entre su pueblo.
+**5** Con el fin de que puedan traer los hijos de Israel sus sacrificios que ellos sacrificaban so­bre la faz del campo, y los traigan a יהוה__ __a la entrada de la Tienda del Mo’ed, al sacerdote, y los sacrifiquen *como *sacrificios de retribución[^733] para יהוה.
+**6** Y rociará el sacerdote la sangre sobre el altar de יהוה *a* la entrada de la Tienda del Mo’ed, y quemará la grasa, para olor calmante para יהוה.
 **7** Y no sacrificarán más sus sacrificios a los machos cabríos *con* los cua­les ellos adulteraban detrás de ellos. Esta­tuto olam[^734] será esto para ustedes por sus gene­raciones”.
 **8** Y a ellos dirás: “Cada hombre de la casa de Israel, o del extranjero que habita entre ellos, que ascienda una ofren­da ascendida[^735] o un sacrificio,
-**9** y a la entrada de la Tienda del Mo'ed no lo lleva, para hacerlo para יהוה, será cortado ese hombre de su pueblo.
+**9** y a la entrada de la Tienda del Mo’ed no lo lleva, para hacerlo para יהוה, será cortado ese hombre de su pueblo.
 
 *Instrucción sobre la sangre*
 
@@ -658,7 +653,7 @@ a la entrada de la Tienda del Mo'ed, al sacerdote, y los sacrifiquen *como *sacr
 **18** No te vengarás, y no guardarás *ira* a los hijos de tu pueblo, y amarás por estar siendo tú el compañero, como tú; Yo soy יהוה.
 **19** Mis estatutos guardarán. Tu ganado no ayuntarás[^751] *con* mezclas, tu campo no sembrarás *con* mezclas *de semillas*, y vestidura de mezclas de tejido mezclado[^752] no subirás sobre ti.
 **20** Y un hombre, cuando se acueste con una mujer, *y hay* emisión de semen, y ella es una sierva, prometida para un hombre, pero ella redimiendo no ha sido redi­mida, o libertad no ha sido dada a ella, habrá supervisión; no serán mata­dos, porque no era ella libre.
-**21** Y él traerá su ofrenda de culpa[^753] a יהוה, a la entrada de la Tienda del Mo'ed[^754], un carnero de ofrenda de culpa.
+**21** Y él traerá su ofrenda de culpa[^753] a יהוה, a la entrada de la Tienda del Mo’ed[^754], un carnero de ofrenda de culpa.
 **22** Y el sacerdote hará expiación por él con el carnero de la ofrenda de culpa, delante de יהוה, por su pecado que ha pecado; y le será perdonado del pecado que ha pecado.
 **23** Y cuando entren a la tierra y planten todo árbol de comida, será incircunciso para ustedes su fruto; tres años serán para ustedes incircun­cisos, no se comerá.
 **24** Y en el año cuarto será todo su fruto santidad, alabanzas para יהוה.
@@ -694,8 +689,7 @@ a la entrada de la Tienda del Mo'ed, al sacerdote, y los sacrifiquen *como *sacr
 **12** Y el hombre que se acueste con su nuera, muriendo, morirán los dos, confusión han he­cho; su sangre *será* en ellos.
 **13** Y el hombre que se acueste con varón como acostarse con mujer, abominación han hecho los dos; muriendo, morirán. Su sangre* será* en ellos.
 **14** Y el hombre que tome a una mujer y a la madre de ella, plan malvado[^763] es esto; en el fuego los quemarán, a él y a ellas, y no habrá plan malvado entre ustedes.
-**15** Y el hombre que dé su acostar con un animal, muriendo, morirá; y el animal
-matarán.
+**15** Y el hombre que dé su acostar con un animal, muriendo, morirá; y el animal__ __matarán.
 **16** Y la mujer que se acerque a cualquier animal para acostarse con él, matarás a la mujer y al animal, muriendo, morirán; su sangre *será* en ellos.
 **17** Y el hombre que tome a su hermana, hija de su padre o hija de su madre, y ve su desnudez, y ella ve la desnudez de él, vergüenza es esto; serán cortados ante los ojos de los hijos de su pueblo. La desnudez de su hermana ha descu­bierto, su iniquidad cargará.
 **18** Y el hombre que se acueste con una mujer adolorida *en su menstruación*, y des­cu­bre su desnudez, el flujo[^764] de ella ha despertado, y ella ha descubierto el flujo de su sangre; serán cortados los dos de entre su pue­blo.
@@ -704,7 +698,7 @@ matarán.
 **21** Y el hombre que tome a la mujer de su hermano, exclusión[^765] es; la desnudez de su hermano ha descubierto. Sin hijos morirán.
 **22** Y guardarán todos mis decretos y todos mis procesos legales, y los harán, y no los vomitará la tierra la cual Yo llevo a ustedes allí, para habitar en ella.
 **23** Y no anden en los decretos de la nación que Yo enviaré lejos de delante de ustedes; porque todo esto hicieron, estoy harto de ellos.
-**24** Y dije a ustedes: ‘Ustedes heredarán su tierra, y Yo la daré a ustedes para heredarla, una tierra que fluye leche y miel'. Yo soy יהוה su Elohim, que los he separado de los pueblos.
+**24** Y dije a ustedes: ‘Ustedes heredarán su tierra, y Yo la daré a ustedes para heredarla, una tierra que fluye leche y miel’. Yo soy יהוה su Elohim, que los he separado de los pueblos.
 **25** Y diferenciarán entre el animal puro[^766] del im­puro[^767], y entre el ave impura de la pura, y no ha­rán abominables sus personas[^768] por animal, y por ave, y por todo lo que se arrastra *sobre* la tie­rra, los cuales he separado para ustedes por impuros.
 **26** Y serán para Mí kedoshim[^769], porque Kadosh[^770] soy Yo, יהוה, y los he separado de los pue­blos para que sean para Mí.
 **27** Y *si hay* hombre o mujer, que esté entre ellos, espiritista o conocedor, muriendo, mori­rán con piedra, los apedrearán. Su sangre *será* en ellos”.
@@ -807,11 +801,10 @@ matarán.
 **21** Y proclamarán en ese mismo día una convocación de santidad, será para ustedes. Cual­quier trabajo de servicio no harán, decreto olam es, en todos sus asenta­mientos, por sus generaciones.
 **22** Y cuando cosechen la cosecha de su tierra, no completarás los bordes de tu campo en tu cosecha; y la recolección de tu cosecha no recogerás, para el pobre y para el extranjero los dejarás. Yo soy יהוה su Elohim.
 **23** Y habló יהוה a Moshéh, diciendo:
-**24** Habla a los hijos de Israel, diciendo: “En el mes séptimo, en el *día* uno del mes, será para ustedes Shabat Shabatón, un memorial de t'ruáh[^805], convocación de santi­dad.
+**24** Habla a los hijos de Israel, diciendo: “En el mes séptimo, en el *día* uno del mes, será para ustedes Shabat Shabatón, un memorial de t’ruáh[^805], convocación de santi­dad.
 **25** Cualquier trabajo de servicio no harán, y acercarán una ofrenda de fuego a יהוה”.
 **26** Y habló יהוה a Moshéh, diciendo:
-**27** Sin embargo, en el décimo* día* del mes
-sép­timo, este es el día de las reconciliaciones[^806]; una convocación de santidad será para ustedes, y afligirán sus gargantas[^807], y acer­carán una ofrenda de fuego a יהוה.
+**27** Sin embargo, en el décimo* día* del mes__ __sép­timo, este es el día de las reconciliaciones[^806]; una convocación de santidad será para ustedes, y afligirán sus gargantas[^807], y acer­carán una ofrenda de fuego a יהוה.
 **28** Y cualquier trabajo no harán en ese mismo día, porque es el día de las reconciliaciones, para cubrir sobre ustedes delante de יהוה su Elohim.
 **29** Pues, cualquier persona que no esté afligida en ese mismo día, será cortada de su pueblo.
 **30** Y toda persona que haga cualquier trabajo en ese mismo día, destruiré a esa persona de entre su pueblo.
@@ -836,7 +829,7 @@ sép­timo, este es el día de las reconciliaciones[^806]; una convocación de s
 
 **1** Y habló יהוה a Moshéh, dicien­do:
 **2** Ordena a los hijos de Israel que tomen para ti aceite de oliva puro, machacado, para la iluminación, para elevar la lámpara con­­ti­nuamente.
-**3** Fuera de la cortina del Testimonio, en la Tienda del Mo'ed[^812], las organizará Aha­rón desde la tarde hasta la mañana delante de יהוה continuamente; decreto olam[^813] *será* para sus generaciones.
+**3** Fuera de la cortina del Testimonio, en la Tienda del Mo’ed[^812], las organizará Aha­rón desde la tarde hasta la mañana delante de יהוה continuamente; decreto olam[^813] *será* para sus generaciones.
 **4** Sobre la Menoráh[^814] pura organizará las lám­paras, delante de יהוה continuamente.
 **5** Y tomarás harina fina, y con ella hornearás doce hogazas, de dos décimas será la ho­gaza, *cada* una.
 **6** Y las pondrás *en *dos filas, seis en *cada* fila sobre la mesa pura delante de יהוה.
@@ -874,7 +867,7 @@ sép­timo, este es el día de las reconciliaciones[^806]; una convocación de s
 **6** Y será el Shabat de la tierra a ustedes para comida; a ti, a tu siervo, a tu sierva, a tu asalariado y a tu residente, los extranjeros con­tigo;
 **7** y a tu ganado, y a los animales que *están* en tu tierra, será todo el producto de ella para co­mer.
 **8** Y contarás para ti siete Shabatot de años, siete años siete veces, y será para ti los días de siete Shabatot de años, cuarenta y nueve a­ños.
-**9** Y harás pasar un shofar[^824] de t'ruáh[^825] en el mes séptimo, en el décimo *día* del mes, en el día de las reconciliaciones[^826], y pasarán el shofar por toda su tierra.
+**9** Y harás pasar un shofar[^824] de t’ruáh[^825] en el mes séptimo, en el décimo *día* del mes, en el día de las reconciliaciones[^826], y pasarán el shofar por toda su tierra.
 **10** Y consagrarán el año, el año cincuenta, y proclamarán libertad por la tierra, a todos sus habitantes. Será Iobel[^827]* *para ustedes, y volverá *cada* hombre a sus propiedades, y *ca­da* hombre a su familia volverá.
 **11** Iobel *será *este año, el año cincuenta será para ustedes, no sembrarán y no cosecha­rán lo que crezca por sí mismo, y no recogerás sus uvas.
 **12** Porque Iobel es, santidad será para ustedes. Del campo comerás su producto.
@@ -926,7 +919,7 @@ sép­timo, este es el día de las reconciliaciones[^806]; una convocación de s
 
 **26**
 
-**1**“No harán para ustedes ídolos, y es­cultura y pilar no levantarán para us­tedes, y piedra *con* imagen no pondrán en su tierra para inclinarse sobre ella; porque Yo soy יהוה su Elohim.
+**1** “No harán para ustedes ídolos, y es­cultura y pilar no levantarán para us­tedes, y piedra *con* imagen no pondrán en su tierra para inclinarse sobre ella; porque Yo soy יהוה su Elohim.
 **2** Mis Shabatot guardarán, y mi San­tua­rio temerán; Yo soy יהוה.
 **3** Si en mis decretos andan y mis mandamien­tos guardan y los hacen,
 **4** daré sus lluvias en su tiempo, y dará la tierra su producto, y el árbol del campo dará su fruto.
@@ -968,9 +961,7 @@ sép­timo, este es el día de las reconciliaciones[^806]; una convocación de s
 **37** Y tropezarán un hombre con su hermano como *huyendo* de delante de una espada, y nadie *los* perseguirá; y no habrá para ustedes resis­tencia delante de sus enemigos.
 **38** Y se perderán entre las naciones y los co­merá la tierra de sus enemigos.
 **39** Y los que queden entre ustedes su pudrirán en su iniquidad en las tierras de sus enemigos; y también en las iniquidades de sus padres *que están* con ellos se pudrirán.
-**40** Y si arrojan su iniquidad y la iniquidad de sus padres, por sus infide­lidades
-con* las cuales
-fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
+**40** Y si arrojan su iniquidad y la iniquidad de sus padres, por sus infide­lidades__ __*con* las cuales__ __fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 **41** también Yo andaba con ellos con frialdad, y los lleve en la tierra de sus enemigos; o *si* en verdad se humilla su corazón incircunciso, y entonces aceptan su iniquidad,
 **42** recordaré mi pacto *con* Yaakov, y también mi pacto *con* Itzjak, y también mi pacto *con *Abraham recordaré, y la tierra recordaré.
 **43** Y la tierra será abandonada debido a ellos, y satisfará sus Shabatot cuando quede desolada ella debido a ellos; pero ellos aceptarán su iniquidad, porque y a causa de que mis procesos legales aborrecieron y mis decretos despreció su ser.
@@ -1019,7 +1010,7 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 
 
 ## Footnotes
-[^546]: Heb.: *Va'ikrá*.
+[^546]: Heb.: *Va’ikrá*.
 [^547]: Tiempo señalado. Así en el resto del cap.
 [^548]: Ofrenda de acercamiento. Así en el resto del cap.
 [^549]: Heb.: *Tamim*. Así en el resto del cap.
@@ -1032,13 +1023,13 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^556]: Pan sin levadura.
 [^557]: Heb.: *Kódesh kodashim. *
 [^558]: Punto de maduración de la cebada.
-[^559]: Heb.: *Sh'lamim. *Así en el resto del cap.
+[^559]: Heb.: *Sh’lamim. *Así en el resto del cap.
 [^560]: Tiempo señalado*. *Así en el resto del cap.
 [^561]: Tiempo oculto, sólo conocido por Elohim.
 [^562]: Tiempo señalado*. *Así en el resto del cap.
 [^563]: Heb.: *Oláh. *Así en el resto del cap.
 [^564]: Heb.: *Jatat. *Así en el resto del cap.
-[^565]: Heb.: *Sh'lamim. *Así en el resto del cap.
+[^565]: Heb.: *Sh’lamim. *Así en el resto del cap.
 [^566]: Heb.: *Tamé. *Así en el resto del cap.
 [^567]: Heb.: *Jatat. *Así en el resto del cap.
 [^568]: Heb.: *Oláh. *Así en el resto del cap.
@@ -1048,7 +1039,7 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^572]: O sea, *un quinto.*
 [^573]: Heb.: *Asham. *Así en el resto del cap.
 [^574]: Heb.: *Oláh. *Así en el resto del cap.
-[^575]: Heb.: *Sh'lamim. *
+[^575]: Heb.: *Sh’lamim. *
 [^576]: Heb.: *Minjáh. *Así en el resto del cap.
 [^577]: Heb.: *Matzot. *
 [^578]: Santo, apartado, distinguido. Así también en vers. 16.
@@ -1065,7 +1056,7 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^589]: Heb.: *Todáh. *Así en el resto del cap.
 [^590]: Ofrenda de acercamiento*.* Así también en vers. 29.
 [^591]: Ofrenda alzada, contribución. Así en el resto del cap.
-[^592]: Heb.: *Sh'lamim. *Así en el resto del cap.
+[^592]: Heb.: *Sh’lamim. *Así en el resto del cap.
 [^593]: O, *inapta. H*eb.: *Tamé. *
 [^594]: Heb.: *Tenufáh. *Así en el resto del cap.
 [^595]: Tiempo oculto, sólo conocido por Elohim. Así también en vers. 36.
@@ -1079,7 +1070,7 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^603]: Heb.: *Ishéh. *
 [^604]: Heb.: *Jatat. *Así en el resto del cap.
 [^605]: Heb.: *Oláh. *Así en el resto del cap.
-[^606]: Heb.: *Sh'lamim. *Así en el resto del cap.
+[^606]: Heb.: *Sh’lamim. *Así en el resto del cap.
 [^607]: Heb.: *Minjáh. *Así en el resto del cap.
 [^608]: Tiempo señalado. Así también en vers. 23.
 [^609]: Ofrenda de acercamiento.
@@ -1094,7 +1085,7 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^618]: Heb.: *Minjáh. *Así en el resto del cap.
 [^619]: Heb.: *Ishéh. *Así en el resto del cap.
 [^620]: Santo, apartado, distinguido. Así también en vers. 17.
-[^621]: Heb.: *Sh'lamim. *
+[^621]: Heb.: *Sh’lamim. *
 [^622]: Ofrenda alzada, contribución.
 [^623]: Heb.: *Jatat. *Así en el resto del cap.
 [^624]: Lit.: *que hace subir el arrastre.*
@@ -1140,7 +1131,7 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^664]: Santos, apartados, distinguidos. Así también en vers. 45.
 [^665]: Santo, apartado, distinguido. Así también en vers. 45.
 [^666]: O, *insecto.*
-[^667]: O, *inapta. *Heb.: *Tam'ah. *Así en el resto del cap.
+[^667]: O, *inapta. *Heb.: *Tam’ah. *Así en el resto del cap.
 [^668]: Heb.: *Nidáh. *Así también en vers. 5.
 [^669]: O, *aptitud. *Heb.: *Tehoráh. *Así en el resto del cap.
 [^670]: O, *apartada. *Heb.: *Kódesh.*
@@ -1148,7 +1139,7 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^672]: Heb.: *Jatat.* Así también en vers. 8.
 [^673]: Tiempo señalado.
 [^674]: O, *apta. *Heb.: *Taheráh.*
-[^675]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^675]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 [^676]: O, *inapto*. Heb.: *Tamé. *Así en el resto del cap.
 [^677]: O, *apto. *Heb.: *Tahor. *Así en el resto del cap.
 [^678]: Lit.: *la vitalidad.*
@@ -1156,12 +1147,12 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^680]: Persona que sufre *tzaraat. *Así también en vers. 45.
 [^681]: O, *descuidada.*
 [^682]: O, *piel.*
-[^683]: Heb.: *Mam'éret. *Así también en vers. 52.
+[^683]: Heb.: *Mam’éret. *Así también en vers. 52.
 [^684]: Lit.: *ojo.*
 [^685]: O, *caído.*
 [^686]: Persona que sufre *tzaraat.*
 [^687]: O, *aptitud. *Heb.: *Tehoráh.*
-[^688]: Enfermedad de la piel; comúnmente traducido *‘lepra', *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
+[^688]: Enfermedad de la piel; comúnmente traducido *‘lepra’, *pero diferente a la enfer­medad de Hansen moderna. Así en el resto del cap.
 [^689]: Persona que sufre *tzaraat.*
 [^690]: O, *apto. *Heb.: *Tahor. *Así en el resto del cap.
 [^691]: Heb.: *Minjáh.* Así en el resto del cap.
@@ -1176,11 +1167,11 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^700]: O, *inapto. *Heb.: *Tamé. *Así en el resto del cap.
 [^701]: O, *enyesará.*
 [^702]: O, *enyesado.*
-[^703]: Heb.: *Mam'éret. *
+[^703]: Heb.: *Mam’éret. *
 [^704]: Desconexión del cabello; esto es, *tzaraat del pelo de la cabeza o de la barba.*
 [^705]: O sea, *flujo seminal.*
 [^706]: O, *inapto. *Heb.: *Tamé. *Así en el resto del cap.
-[^707]: O, *inaptitud. *Heb.: *Tum'áh.* Así en el resto del cap.
+[^707]: O, *inaptitud. *Heb.: *Tum’áh.* Así en el resto del cap.
 [^708]: O, *apto. *Heb.: *Tahor.* Así en el resto del vers.
 [^709]: Tiempo señalado. Así también en vers. 29.
 [^710]: Heb.: *Jatat. *Así también en vers. 30.
@@ -1196,7 +1187,7 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^720]: Tiempo señalado. Así en el resto del cap.
 [^721]: Piedrecitas lanzadas para tomar decisiones; sing.: *goral. *Así en el resto del cap.
 [^722]: Chivo expiatorio; se desconoce con exac­titud, quizá, lit.: *la cabra se fue. *Así en el resto del cap.
-[^723]: O, *inaptitud. *Heb.: *Tum'áh. *Así en el resto del cap.
+[^723]: O, *inaptitud. *Heb.: *Tum’áh. *Así en el resto del cap.
 [^724]: O sea, *un hombre destinado a esta posición y que esté convocado de antemano*
 [^725]: Santo, apartado, distinguido.
 [^726]: Tiempo oculto, sólo conocido por Elohim. Así también en los versículos 31 y 34.
@@ -1206,7 +1197,7 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^730]: Lit.: *hombre, hombre. *Así también en vers. 8.
 [^731]: Tiempo señalado. Así en el resto del cap.
 [^732]: Ofrenda de acercamiento.
-[^733]: Heb.: *Sh'lamim.*
+[^733]: Heb.: *Sh’lamim.*
 [^734]: Tiempo oculto, sólo conocido por Elohim.
 [^735]: Heb.: *Oláh. *
 [^736]: Garganta. Así en el resto del cap.
@@ -1215,14 +1206,14 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^739]: Heb.: *Mishpatim. *Así también en los versículos 5 y 26.
 [^740]: U, *hostilizar.*
 [^741]: Heb.: *Nidáh.*
-[^742]: O, *inaptitud. *Heb.: *Tum'áh.*
+[^742]: O, *inaptitud. *Heb.: *Tum’áh.*
 [^743]: O sea, *Moloc, *que quiere decir: *Rey. *Una deidad cananea.
 [^744]: Lit.: *no darás tu acostar.*
 [^745]: O, *confusión.*
 [^746]: Santos, apartados, distinguidos.
 [^747]: Santo, apartado, distinguido.
 [^748]: Plural de Shabat. Así también en vers. 30.
-[^749]: Heb.: *Sh'lamim.*
+[^749]: Heb.: *Sh’lamim.*
 [^750]: O, *repugnante.*
 [^751]: Lit.: *no acostarás.*
 [^752]: O sea, *lana y lino juntos.*
@@ -1259,15 +1250,15 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^783]: Ofrenda de acercamiento.
 [^784]: Heb.: *Oláh.*
 [^785]: O, *por su voluntad. *Así también en vers. 29.
-[^786]: Heb.: *Sh'lamim.*
+[^786]: Heb.: *Sh’lamim.*
 [^787]: Heb.: *Ishéh. *Así también en vers. 27.
 [^788]: Heb.: *Todáh.*
-[^789]: Heb.: *Mo'adim. *Así en el resto del cap.
+[^789]: Heb.: *Mo’adim. *Así en el resto del cap.
 [^790]: O, *anuncios.*
 [^791]: O, *apartamiento. *Heb.: *Kódesh.*
 [^792]: O sea, *un cese total de actividades inhe­rentes al mundo. *Así también en vers. 24.
-[^793]: Heb.: *Mikrá Ha'kódesh. *Así en el resto del cap.
-[^794]: Heb.: *Jag Ha'matzot.*
+[^793]: Heb.: *Mikrá Ha’kódesh. *Así en el resto del cap.
+[^794]: Heb.: *Jag Ha’matzot.*
 [^795]: Heb.: *Ishéh.* Así en el resto del cap.
 [^796]: Heb.: *Ómer*
 [^797]: Heb.: *Oláh. *Así también en los versículos 18 y 37.
@@ -1277,9 +1268,9 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^801]: Heb.: *Tenufáh. *Así también en los versí­culos 17 y 20.
 [^802]: Heb.: *Bikurim.*
 [^803]: Heb.: *Jatat.*
-[^804]: Heb.: *Sh'lamim.*
+[^804]: Heb.: *Sh’lamim.*
 [^805]: Expresión de alegría, pronunciado tanto con la voz como con un shofar.
-[^806]: Heb.: *Iom Ha'kipurim.*
+[^806]: Heb.: *Iom Ha’kipurim.*
 [^807]: Heb.: *Néfesh.* Así también en vers. 32.
 [^808]: Heb.: *Sucot.*
 [^809]: O, *retentiva. *Heb.: *Atzéret.*
@@ -1299,7 +1290,7 @@ fueron infieles contra Mí, y también que hayan an­dado conmigo con frialdad,
 [^823]: Lit.: *no disminuirás.*
 [^824]: Cuerno de carnero.
 [^825]: Expresión de alegría, pronunciado tanto con la voz como con un shofar.
-[^826]: Heb.: *Iom Ha'kipurim.*
+[^826]: Heb.: *Iom Ha’kipurim.*
 [^827]: Jubileo. Lit.: *cuerno de carnero. *Así en el resto del cap.
 [^828]: O, *destrucción.*
 [^829]: Lit.: *días.*
