@@ -5,12 +5,27 @@ const webRoot = join(import.meta.dir, "..");
 const publicDataDir = join(webRoot, "public", "data");
 const metadataPath = join(publicDataDir, "metadata.json");
 
-if (existsSync(metadataPath)) {
+const requiredTs2009Files = [
+	join(publicDataDir, "ts2009", "matthew", "1.json"),
+	join(publicDataDir, "ts2009", "galatians", "1.json"),
+	join(publicDataDir, "ts2009", "john1", "1.json"),
+	join(publicDataDir, "ts2009", "jude", "1.json"),
+	join(publicDataDir, "ts2009", "revelation", "1.json"),
+];
+
+const hasRequiredTs2009Coverage = (): boolean =>
+	requiredTs2009Files.every((path) => existsSync(path));
+
+if (existsSync(metadataPath) && hasRequiredTs2009Coverage()) {
 	console.log("[davar-web] static-data=present skip-generation");
 	process.exit(0);
 }
 
-console.log("[davar-web] static-data=missing generating");
+if (!existsSync(metadataPath)) {
+	console.log("[davar-web] static-data=missing generating");
+} else {
+	console.log("[davar-web] static-data=incomplete-ts2009 regenerating");
+}
 
 const generation = Bun.spawnSync(["bun", "../scripts/generate-static-data/index.ts"], {
 	cwd: webRoot,

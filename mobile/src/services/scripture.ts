@@ -14,6 +14,171 @@ import { TTH_BOOK_MAPPING } from "@davar/shared/translationConfig";
 // Chapter-level cache for TS2009 static JSON (matches web approach)
 const ts2009ChapterCache = new Map<string, Promise<Map<number, string> | null>>();
 
+const TS2009_BOOK_FILE_MAP: Record<string, string> = {
+  genesis: "bereshit",
+  exodus: "shemoth",
+  leviticus: "wayyiqra",
+  numbers: "bemidbar",
+  deuteronomy: "debarim",
+  joshua: "yehoshua",
+  judges: "shophetim",
+  samuel1: "samuel_1",
+  samuel2: "samuel_2",
+  kings1: "kings_1",
+  kings2: "kings_2",
+  chronicles1: "chronicles_1",
+  chronicles2: "chronicles_2",
+  nehemiah: "nehemyah",
+  esther: "ester",
+  job: "iyob",
+  psalms: "tehillim",
+  ecclesiastes: "qoheleth",
+  songofsolomon: "shir_hashirim",
+  isaiah: "yeshayahu",
+  jeremiah: "yirmeyahu",
+  lamentations: "ekah",
+  ezekiel: "yehezqel",
+  obadiah: "obadyah",
+  jonah: "yonah",
+  ruth: "ruth",
+  ezra: "ezra",
+  proverbs: "mishlei",
+  daniel: "daniel",
+  hosea: "hosea",
+  joel: "yoel",
+  amos: "amos",
+  micah: "micah",
+  nahum: "nahum",
+  habakkuk: "habakkuk",
+  zephaniah: "zephaniah",
+  haggai: "haggai",
+  zechariah: "zechariah",
+  malachi: "malachi",
+  matthew: "mattithyahu",
+  mark: "marqos",
+  luke: "lugqas",
+  john: "yohanan",
+  acts: "maasei",
+  romans: "romiyim",
+  corinthians1: "corinthians_1",
+  corinthians2: "corinthians_2",
+  galatians: "galatiyim",
+  ephesians: "ephsiyim",
+  philippians: "pilipiyim",
+  colossians: "qolasim",
+  thessalonians1: "thessalonians_1",
+  thessalonians2: "thessalonians_2",
+  timothy1: "timothy_1",
+  timothy2: "timothy_2",
+  titus: "titos",
+  philemon: "pileymon",
+  hebrews: "ibrim",
+  james: "yaaqob",
+  peter1: "peter_1",
+  peter2: "peter_2",
+  john1: "john_1",
+  john2: "john_2",
+  john3: "john_3",
+  jude: "yehudah",
+  revelation: "hazon",
+};
+
+type Ts2009BookVerse = {
+  number?: number;
+  verse?: number;
+  text?: unknown;
+  translation?: unknown;
+};
+
+type Ts2009BookChapter = {
+  number?: number;
+  chapter?: number;
+  verses?: Ts2009BookVerse[];
+};
+
+type Ts2009BookPayload = {
+  chapters?: Ts2009BookChapter[] | Record<string, Ts2009BookChapter | Ts2009BookVerse[]>;
+};
+
+const parseTs2009VerseText = (verse: Ts2009BookVerse): string | null => {
+  if (typeof verse.text === "string") return verse.text;
+  if (typeof verse.translation === "string") return verse.translation;
+  return null;
+};
+
+const extractTs2009ChapterFromBook = (
+  payload: Ts2009BookPayload,
+  chapter: number,
+): Ts2009BookVerse[] | null => {
+  const chapters = payload.chapters;
+  if (!chapters) return null;
+
+  if (Array.isArray(chapters)) {
+    const chapterMatch = chapters.find((entry) => {
+      const chapterNumber = Number(entry.number ?? entry.chapter ?? Number.NaN);
+      return Number.isFinite(chapterNumber) && chapterNumber === chapter;
+    });
+
+    return Array.isArray(chapterMatch?.verses) ? chapterMatch.verses : null;
+  }
+
+  const chapterEntry = chapters[String(chapter)];
+  if (Array.isArray(chapterEntry)) {
+    return chapterEntry;
+  }
+
+  return Array.isArray(chapterEntry?.verses) ? chapterEntry.verses : null;
+};
+
+const getTs2009BookFileCandidates = (bookId: string): string[] => {
+  const normalized = bookId.toLowerCase();
+  const mapped = TS2009_BOOK_FILE_MAP[normalized];
+  const underscoreVariant = normalized.replace(/(\D)(\d+)$/, "$1_$2");
+  const stems = [mapped, normalized, underscoreVariant].filter(
+    (stem): stem is string => Boolean(stem),
+  );
+
+  return [...new Set(stems)];
+};
+
+const fetchTs2009ChapterFromBookFile = async (
+  bookId: string,
+  chapter: number,
+): Promise<Map<number, string> | null> => {
+  for (const fileStem of getTs2009BookFileCandidates(bookId)) {
+    try {
+      const staticBook = await staticDataRequest<Ts2009BookPayload>(
+        `ts2009/${fileStem}.json`,
+      );
+
+      const chapterVerses = extractTs2009ChapterFromBook(staticBook, chapter);
+      if (!chapterVerses || chapterVerses.length === 0) {
+        continue;
+      }
+
+      const verseMap = new Map<number, string>();
+      for (const [index, verse] of chapterVerses.entries()) {
+        const verseNumber = Number(verse.number ?? verse.verse ?? index + 1);
+        const verseText = parseTs2009VerseText(verse);
+
+        if (!Number.isFinite(verseNumber) || !verseText) {
+          continue;
+        }
+
+        verseMap.set(verseNumber, verseText);
+      }
+
+      if (verseMap.size > 0) {
+        return verseMap;
+      }
+    } catch {
+      // Keep probing candidate names.
+    }
+  }
+
+  return null;
+};
+
 const fetchTs2009ChapterStatic = (
   bookId: string,
   chapter: number,
@@ -26,6 +191,8 @@ const fetchTs2009ChapterStatic = (
   }
 
   const promise = (async (): Promise<Map<number, string> | null> => {
+    let chapterMap: Map<number, string> | null = null;
+
     try {
       const staticChapter = await staticDataRequest<{
         verses?: Record<string, string>;
@@ -40,10 +207,16 @@ const fetchTs2009ChapterStatic = (
         }
       }
 
-      return verseMap;
+      chapterMap = verseMap.size > 0 ? verseMap : null;
     } catch {
-      return null;
+      // Fall back to TS2009 book files below.
     }
+
+    if (chapterMap) {
+      return chapterMap;
+    }
+
+    return fetchTs2009ChapterFromBookFile(bookId, chapter);
   })();
 
   ts2009ChapterCache.set(cacheKey, promise);

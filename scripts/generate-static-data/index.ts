@@ -533,18 +533,43 @@ const downloadTs2009BookPayload = async (
   return payload;
 };
 
+const readLocalTs2009BookPayload = async (
+  path: string,
+): Promise<Ts2009BookPayload | null> => {
+  const normalizedPath = path.replace(/^ts2009\//, "");
+  const localPath = join(DATA_ROOT, "ts2009", normalizedPath);
+
+  try {
+    return await readJson<Ts2009BookPayload>(localPath);
+  } catch (error) {
+    const code =
+      typeof error === "object" &&
+      error !== null &&
+      "code" in error &&
+      typeof (error as { code?: unknown }).code === "string"
+        ? (error as { code: string }).code
+        : "";
+
+    if (code === "ENOENT") {
+      return null;
+    }
+
+    throw error;
+  }
+};
+
 const generateTs2009Chapters = async (): Promise<{
   bundle: { books: Record<string, { chapters: number; verses: number }> };
   stats: Ts2009ExportStats;
 } | null> => {
   const supabaseUrl = process.env.SUPABASE_URL ?? process.env.PUBLIC_SUPABASE_URL;
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const hasSupabaseBuildAccess = Boolean(supabaseUrl && serviceRoleKey);
 
-  if (!supabaseUrl || !serviceRoleKey) {
+  if (!hasSupabaseBuildAccess) {
     console.warn(
-      "Skipping TS2009 static export: missing SUPABASE_URL (or PUBLIC_SUPABASE_URL) or SUPABASE_SERVICE_ROLE_KEY",
+      "TS2009 static export running from local data files only (missing SUPABASE_URL/PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY)",
     );
-    return null;
   }
 
   const ts2009OutDir = join(WEB_PUBLIC_DATA_ROOT, "ts2009");
@@ -566,25 +591,48 @@ const generateTs2009Chapters = async (): Promise<{
 
     for (const candidate of candidates) {
       try {
-        payload = await downloadTs2009BookPayload(
-          supabaseUrl,
-          serviceRoleKey,
-          candidate,
-        );
+        payload = await readLocalTs2009BookPayload(candidate);
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error);
         console.warn(
-          `Skipping TS2009 static export due to Supabase access error: ${message}`,
+          `Skipping TS2009 static export due to local file parse/access error: ${message}`,
         );
         return null;
       }
+
       if (payload) break;
+    }
+
+    if (!payload && hasSupabaseBuildAccess) {
+      for (const candidate of candidates) {
+        try {
+          payload = await downloadTs2009BookPayload(
+            supabaseUrl as string,
+            serviceRoleKey as string,
+            candidate,
+          );
+        } catch (error) {
+          const message = error instanceof Error ? error.message : String(error);
+          console.warn(
+            `Skipping TS2009 static export due to Supabase access error: ${message}`,
+          );
+          return null;
+        }
+        if (payload) break;
+      }
     }
 
     if (!payload) {
       stats.skippedBooks.push(bookId);
       continue;
     }
+
+    const mappedBookFile = TS2009_BOOK_FILE_MAP[bookId] ?? bookId;
+    await writeFile(
+      join(ts2009OutDir, `${mappedBookFile}.json`),
+      JSON.stringify(payload),
+      "utf-8",
+    );
 
     const chapters = extractTs2009Chapters(payload.chapters);
     const chapterNumbers = Object.keys(chapters)
