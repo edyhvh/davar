@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-05-04T01:44:33.689068+00:00",
+  "source_root": "/Users/jhonny/shafan",
+  "destination_root": "/Users/jhonny/davar/data/hutter/staging",
+  "dry_run": false,
+  "excluded_names": [
+    ".DS_Store",
+    "__pycache__"
+  ],
+  "mappings": [
+    {
+      "source_rel": "data/images",
+      "destination_rel": "data/images",
+      "files_copied": 11372,
+      "directories_created": 120,
+      "bytes_copied": 13167568577
+    },
+    {
+      "source_rel": "data/review",
+      "destination_rel": "data/review",
+      "files_copied": 12,
+      "directories_created": 1,
+      "bytes_copied": 6302561
+    },
+    {
+      "source_rel": "data/source",
+      "destination_rel": "data/source",
+      "files_copied": 27,
+      "directories_created": 1,
+      "bytes_copied": 9751482347
+    },
+    {
+      "source_rel": "data/temp",
+      "destination_rel": "data/temp",
+      "files_copied": 5,
+      "directories_created": 1,
+      "bytes_copied": 263217
+    },
+    {
+      "source_rel": "output",
+      "destination_rel": "output",
+      "files_copied": 101,
+      "directories_created": 3,
+      "bytes_copied": 18456761
+    },
+    {
+      "source_rel": "scripts/hebrew_images",
+      "destination_rel": "scripts/hebrew_images",
+      "files_copied": 8,
+      "directories_created": 1,
+      "bytes_copied": 100862
+    },
+    {
+      "source_rel": "scripts/images",
+      "destination_rel": "scripts/images",
+      "files_copied": 9,
+      "directories_created": 1,
+      "bytes_copied": 30655
+    },
+    {
+      "source_rel": "scripts/pdf",
+      "destination_rel": "scripts/pdf",
+      "files_copied": 7,
+      "directories_created": 1,
+      "bytes_copied": 20910
+    },
+    {
+      "source_rel": "scripts/review",
+      "destination_rel": "scripts/review",
+      "files_copied": 5,
+      "directories_created": 1,
+      "bytes_copied": 8818
+    },
+    {
+      "source_rel": "scripts/text",
+      "destination_rel": "scripts/text",
+      "files_copied": 13,
+      "directories_created": 1,
+      "bytes_copied": 79215
+    }
+  ],
+  "totals": {
+    "files_copied": 11559,
+    "directories_created": 131,
+    "bytes_copied": 22944313923
+  }
+}
