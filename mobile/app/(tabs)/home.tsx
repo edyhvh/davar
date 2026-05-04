@@ -250,6 +250,8 @@ export default function HomeScreen() {
     Constants.expoConfig?.version ?? Constants.nativeAppVersion ?? "1.0.0";
   const buildNumber = Constants.nativeBuildVersion ?? "dev";
   const runtimeVersion = Updates.runtimeVersion ?? "embedded";
+  const updateChannel = Updates.channel ?? "none";
+  const launchSource = Updates.isEmbeddedLaunch ? "embedded" : "downloaded";
 
   useEffect(() => {
     let isMounted = true;
@@ -582,10 +584,13 @@ export default function HomeScreen() {
 
           <View style={styles.versionMetaContainer}>
             <Text style={styles.versionMetaText}>
-              {`App v${appVersion} • Build ${buildNumber} • Codepush ${codepushCount}`}
+              {`App v${appVersion} • Build ${buildNumber} • OTA ${codepushCount}`}
             </Text>
             <Text style={styles.versionMetaText}>
-              {`Codepush v${codepushVersion} • Runtime ${runtimeVersion}`}
+              {`Update ${codepushVersion} • ${launchSource} • Channel ${updateChannel}`}
+            </Text>
+            <Text style={styles.versionMetaText}>
+              {`Runtime ${runtimeVersion}`}
             </Text>
           </View>
         </ScrollView>
