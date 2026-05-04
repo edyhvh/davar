@@ -183,7 +183,6 @@ la tierra tembló, también los cielos gotearon,
 **9** Mi corazón es para los legisladores de Israel,
 **10** Los que cabalgan en asnas blancas, los que se sientan sobre vestimentas,y los que andan por el camino, conversen.
 **11** Del sonido de los que dividen entre los a­bre­­vaderos,
-de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יהוה.
 **12** Despierta, despierta, Deboráh; despierta, despierta, habla una canción.Levántate, Barak, y captura tus cautivos, hijo de Abinoam.
 **13** Entonces descendió el sobreviviente a los majestuosos; el pueblo de יהוה descendió a mí con los poderosos;
 **14** de Efráim los radicados en Amalek,
@@ -523,8 +522,7 @@ de sus campesinos en Israel.Entonces descendió a las puertas el pueblo de יה�
 **19** Y tomó Manóaj el cabrito de las cabras y la ofrenda de grano, y *los* hizo subir so­bre la roca a יהוה; e hizo *algo* distinguido de hacer, y Manóaj y su mujer miraban.
 **20** Y sucedió *que* cuando subió la llama de so­bre el altar hacia el cielo, ascendió el mensajero de יהוה en la llama del altar. Y Manóaj y su mu­jer vieron, y cayeron sobre sus rostros a tie­rra.
 **21** Y no volvió más el mensajero de יהוה a apa­recer a Manóaj y a su mujer. Entonces conoció Manóaj que el mensajero de יהוה *era* él.
-**22** Y dijo Manóaj a su mujer: ¡Muriendo, morire­mos!
-Porque *a* Elohim hemos visto.
+**22** Y dijo Manóaj a su mujer: ¡Muriendo, morire­mos!__ __Porque *a* Elohim hemos visto.
 **23** Pero le dijo su mujer: ¡Si hubiera deseado יהוה hacernos morir, no habría tomado de nuestras manos la ofrenda ascendida y la o­fren­da de grano[^1556], y no nos habría hecho ver to­das estas *cosas*, y como *este* tiempo, no nos habría hecho escuchar *cosa* como esta!
 **24** Y dio a luz la mujer un hijo, y llamó su nom­bre Shimshón. Y creció el niño, y lo bendijo יהוה.
 **25** Y comenzó el Rúaj[^1557] de יהוה a impulsarse en Majanéh Dan, entre Tzoráh y Eshtaol.
@@ -551,7 +549,7 @@ Porque *a* Elohim hemos visto.
 **13** Pero si no pueden dar*lo* a conocer a mí, me da­rán ustedes treinta vestidos de lino y trein­ta mudas de vestiduras. Y les dijeron: Propón tu acertijo y escucharemos.
 **14** Y les dijo:
 
-Del que come salió comida, y del fuerte salió dulzura.**1**
+Del que come salió comida, y del fuerte salió dulzura.__ __
 
 **15** Y sucedió *que* en el día séptimo dijeron a la mu­jer de Shimshón: Persuade a tu marido y dará a conocer a nosotros el acertijo, no sea que *te *quememos a ti y a la casa de tu padre con fuego. ¿Para apoderarse de nosotros nos han llamado? ¿No?
 **16** Y lloró la mujer de Shimshón junto a él, y dijo: Sólo me aborreces y no me amas; has propuesto un acertijo a los hijos de mi pueblo, y a mí no *lo* diste a conocer. Y le dijo a ella: He aquí, a mi padre y a mi madre no *lo* he dado a conocer, ¿y a ti *lo* daré a conocer?

@@ -34,7 +34,10 @@ interface VerseDisplayProps {
 	book: string;
 	chapter: number;
 	language: "en" | "es" | "he";
-	onWordClick: (word: WordResponse) => void;
+	onWordClick: (
+		word: WordResponse,
+		context?: { chapter: number; verse: number },
+	) => void;
 	previousVerseSnippet?: string;
 	nextVerseSnippet?: string;
 	showOnboardingHint?: boolean;
@@ -48,7 +51,8 @@ interface VerseDisplayProps {
 	chapterVerses?: VerseResponse[];
 	words: WordResponse[];
 	dssVariants?: DssVariant[];
-	selectedWord?: string | null;
+	selectedWord?: Pick<WordResponse, "text" | "position" | "strong"> | null;
+	selectedWordContext?: { chapter: number; verse: number } | null;
 	onSwipeUp?: () => void;
 	onSwipeDown?: () => void;
 	canNavigatePrevious?: boolean;
@@ -78,6 +82,7 @@ export function VerseDisplay({
 	words,
 	dssVariants,
 	selectedWord,
+	selectedWordContext,
 	onSwipeUp,
 	onSwipeDown,
 	canNavigatePrevious = false,
@@ -169,9 +174,18 @@ export function VerseDisplay({
 			return normalized.replace(/\u05BE/g, "");
 		};
 
-		const normalizedSelected = selectedWord
-			? normalizeForMatch(selectedWord)
-			: null;
+		const isSelectionInCurrentVerse = selectedWordContext
+			? selectedWordContext.chapter === chapter &&
+				selectedWordContext.verse === verseNumber
+			: true;
+		const normalizedSelected =
+			selectedWord && isSelectionInCurrentVerse
+				? normalizeForMatch(selectedWord.text)
+				: null;
+		const selectedPosition =
+			selectedWord && isSelectionInCurrentVerse
+				? selectedWord.position
+				: null;
 
 		let skipUntilIndex = -1;
 
@@ -213,7 +227,9 @@ export function VerseDisplay({
 			// display text which may be a DSS variant.
 			const normalizedWord = normalizeForMatch(word.text);
 			const isSelected =
-				Boolean(normalizedSelected) && normalizedSelected === normalizedWord;
+				typeof selectedPosition === "number"
+					? selectedPosition === word.position
+					: Boolean(normalizedSelected) && normalizedSelected === normalizedWord;
 
 			// Prefix segmentation is only valid for original Masoretic words.
 			const prefixSegments = !variantEntry && word.prefixes?.length
@@ -232,7 +248,12 @@ export function VerseDisplay({
 							word={displayText}
 							isActive={showOnboardingHint}
 							isPressed={isSelected}
-							onClick={() => onWordClick(word)}
+							onClick={() =>
+								onWordClick(word, {
+									chapter,
+									verse: verseNumber,
+								})
+							}
 						/>
 						{index < sourceWords.length - 1 && " "}
 					</span>
@@ -243,7 +264,12 @@ export function VerseDisplay({
 				<span key={word.position}>
 					<button
 						type="button"
-						onClick={() => onWordClick(word)}
+						onClick={() =>
+							onWordClick(word, {
+								chapter,
+								verse: verseNumber,
+							})
+						}
 						className={`word-interactive cursor-pointer ${isSelected ? "verse-highlight" : ""}`}
 						style={
 							variantEntry
@@ -299,6 +325,7 @@ export function VerseDisplay({
 					onWordClick={onWordClick}
 					showQumran={showQumran}
 					selectedWord={selectedWord}
+					selectedWordContext={selectedWordContext}
 					showNikud={showNikud}
 					showCantillation={showCantillation}
 					isBesorah={isBesorah}

@@ -11,6 +11,7 @@ Checks:
 3. Unbalanced <em> tags
 4. Basic footnote marker consistency in verse text
 5. Non-increasing verse numbering inside each chapter
+6. Chapter/verse structural parity against canonical TTH JSON reference
 """
 
 import json
@@ -20,6 +21,8 @@ from typing import Any, Dict, List, Tuple
 
 DEFAULT_JSON_DIR = Path(__file__).parent.parent.parent / \
     "data" / "tth_2" / "json"
+DEFAULT_REFERENCE_JSON_DIR = Path(__file__).parent.parent.parent / \
+    "web" / "public" / "data" / "tth"
 
 DISALLOWED_ESCAPES_RE = re.compile(r'\\([!\.\[\]])')
 MARKDOWN_ITALICS_RE = re.compile(r'\*[^*]+\*')
@@ -32,6 +35,140 @@ class TTHFormatValidator:
 
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
+
+    def _extract_monotonic_chapter_verse_counts(self, data: Dict[str, Any], source_name: str) -> Tuple[Dict[int, int], bool]:
+        """
+        Extract chapter -> verse-count map, keeping only strictly increasing
+        chapter numbering. This avoids trailing leaked book content that resets
+        numbering (e.g., chapter 9 then chapter 1).
+        """
+        counts: Dict[int, int] = {}
+        previous_chapter = 0
+        had_reset = False
+
+        for chapter_data in data.get('chapters', []):
+            chapter_num = chapter_data.get('chapter')
+            if not isinstance(chapter_num, int) or chapter_num <= 0:
+                continue
+
+            if chapter_num <= previous_chapter:
+                had_reset = True
+                if self.verbose:
+                    print(
+                        f"⚠️  {source_name}: detected chapter reset/non-increasing marker at chapter {chapter_num}; ignoring trailing structure")
+                break
+
+            counts[chapter_num] = len(chapter_data.get('verses', []))
+            previous_chapter = chapter_num
+
+        return counts, had_reset
+
+    def _load_reference_structure(self, book_key: str) -> Tuple[Dict[int, int], List[str], bool]:
+        """Load expected chapter/verse structure from canonical TTH JSON."""
+        issues: List[str] = []
+        reference_file = DEFAULT_REFERENCE_JSON_DIR / f"{book_key}.json"
+
+        if not reference_file.exists():
+            issues.append(
+                f"Structure reference missing: {reference_file.name} in web/public/data/tth")
+            return {}, issues, False
+
+        try:
+            with open(reference_file, 'r', encoding='utf-8') as f:
+                reference_data = json.load(f)
+        except Exception as e:
+            issues.append(
+                f"Failed to load structure reference {reference_file.name}: {e}")
+            return {}, issues, False
+
+        expected_counts, had_reset = self._extract_monotonic_chapter_verse_counts(
+            reference_data, f"reference {reference_file.name}")
+
+        if not expected_counts:
+            issues.append(
+                f"Structure reference {reference_file.name} has no usable chapter data")
+
+        if had_reset:
+            # Keep this informational: structure comparison remains usable because
+            # we intentionally stop at the first reset marker.
+            issues.append(
+                f"Structure reference {reference_file.name} has trailing chapter reset; comparison uses monotonic prefix")
+
+        return expected_counts, issues, had_reset
+
+    def _validate_structure(self, book_key: str, data: Dict[str, Any], issues: List[str], stats: Dict[str, int]) -> None:
+        """Validate chapter/verse counts against canonical TTH reference."""
+        expected_counts, reference_notes, reference_had_reset = self._load_reference_structure(
+            book_key)
+        for note in reference_notes:
+            if note.startswith("Structure reference") and "missing" in note:
+                stats['structure_reference_missing'] += 1
+                issues.append(note)
+            elif note.startswith("Failed to load structure reference"):
+                stats['structure_reference_load_errors'] += 1
+                issues.append(note)
+            elif note.startswith("Structure reference") and "no usable chapter data" in note:
+                stats['structure_reference_load_errors'] += 1
+                issues.append(note)
+            else:
+                stats['structure_reference_resets_detected'] += 1
+
+        if not expected_counts:
+            return
+
+        actual_counts, _ = self._extract_monotonic_chapter_verse_counts(
+            data, f"target {book_key}.json")
+
+        # Some web/public/data/tth reference files can contain early chapter
+        # resets (e.g., 1..13, then 1..50). In that case, expected_counts is
+        # only a truncated prefix and cannot be used for chapter parity checks.
+        if reference_had_reset and actual_counts:
+            expected_last = max(expected_counts.keys()
+                                ) if expected_counts else 0
+            actual_last = max(actual_counts.keys())
+            if expected_last < actual_last:
+                if self.verbose:
+                    print(
+                        f"⚠️  {book_key}: skipping structure parity checks because reference monotonic prefix ends at chapter {expected_last} but target reaches chapter {actual_last}")
+                return
+
+        expected_chapters = sorted(expected_counts.keys())
+        actual_chapters = sorted(actual_counts.keys())
+
+        if len(expected_chapters) != len(actual_chapters):
+            stats['structure_chapter_count_mismatches'] += 1
+            issues.append(
+                f"Structure chapter count mismatch: expected {len(expected_chapters)}, got {len(actual_chapters)}"
+            )
+
+        expected_set = set(expected_chapters)
+        actual_set = set(actual_chapters)
+
+        missing_chapters = sorted(expected_set - actual_set)
+        extra_chapters = sorted(actual_set - expected_set)
+
+        for chapter_num in missing_chapters:
+            stats['structure_missing_chapters'] += 1
+            issues.append(
+                f"Structure missing chapter {chapter_num} (expected {expected_counts[chapter_num]} verses)"
+            )
+
+        for chapter_num in extra_chapters:
+            stats['structure_extra_chapters'] += 1
+            issues.append(
+                f"Structure extra chapter {chapter_num} (found {actual_counts[chapter_num]} verses)"
+            )
+
+        for chapter_num in expected_chapters:
+            if chapter_num not in actual_counts:
+                continue
+            expected_verses = expected_counts[chapter_num]
+            actual_verses = actual_counts[chapter_num]
+            if expected_verses != actual_verses:
+                stats['structure_verse_count_mismatches'] += 1
+                issues.append(
+                    f"Structure verse count mismatch at chapter {chapter_num}: expected {expected_verses}, got {actual_verses}"
+                )
 
     def _validate_text(self, text: str, label: str) -> List[str]:
         issues: List[str] = []
@@ -62,6 +199,7 @@ class TTHFormatValidator:
 
     def validate_book_file(self, file_path: Path) -> Tuple[bool, List[str], Dict[str, int]]:
         """Validate formatting of a single TTH2 JSON book file."""
+        book_key = file_path.stem
         with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
 
@@ -77,6 +215,13 @@ class TTHFormatValidator:
             'footnote_marker_mismatches': 0,
             'verse_sequence_issues': 0,
             'wrapped_divine_name_tokens': 0,
+            'structure_reference_missing': 0,
+            'structure_reference_load_errors': 0,
+            'structure_reference_resets_detected': 0,
+            'structure_chapter_count_mismatches': 0,
+            'structure_missing_chapters': 0,
+            'structure_extra_chapters': 0,
+            'structure_verse_count_mismatches': 0,
         }
 
         for chapter in data.get('chapters', []):
@@ -142,6 +287,8 @@ class TTHFormatValidator:
                         # Keep mismatch counts for diagnostics, but do not fail
                         # formatting validation on marker-reference integrity.
 
+        self._validate_structure(book_key, data, issues, stats)
+
         return len(issues) == 0, issues, stats
 
     def validate_all_books(self, json_dir: Path = DEFAULT_JSON_DIR) -> Tuple[bool, Dict[str, Dict[str, int]], Dict[str, List[str]]]:
@@ -182,6 +329,20 @@ def print_book_report(book_key: str, is_valid: bool, issues: List[str], stats: D
     print(f"   - verse sequence issues:    {stats['verse_sequence_issues']}")
     print(
         f"   - wrapped divine names:     {stats['wrapped_divine_name_tokens']}")
+    print(
+        f"   - missing references:       {stats['structure_reference_missing']}")
+    print(
+        f"   - ref load errors:          {stats['structure_reference_load_errors']}")
+    print(
+        f"   - ref reset hints:          {stats['structure_reference_resets_detected']}")
+    print(
+        f"   - chapter count mismatches: {stats['structure_chapter_count_mismatches']}")
+    print(
+        f"   - missing chapters:         {stats['structure_missing_chapters']}")
+    print(
+        f"   - extra chapters:           {stats['structure_extra_chapters']}")
+    print(
+        f"   - verse count mismatches:   {stats['structure_verse_count_mismatches']}")
 
     for issue in issues[:8]:
         print(f"   - {issue}")

@@ -43,7 +43,7 @@ __SHEMOT \(ÉXODO\)__ שמות
 **10** Y creció el niño, y ella lo trajo a la hija de Faraón, y se convirtió en su hijo; y ella llamó su nombre Moshéh[^255], y dijo: Porque del agua lo he sacado[^256].
 **11** Y sucedió en aquellos días *que* había crecido Moshéh, y salió a sus hermanos y vio sus car­gas; y vio un mitzrí[^257] golpeando a un hombre ivrí[^258] de sus hermanos.
 **12** Y se volvió aquí y allá, y vio que no había hombre, y mató al mitzrí, y lo ocultó en la arena.
-**13** Y salió en el día segundo, y he aquí, dos hombres ivrim peleando, y él dijo al malvado: ¿Por qué golpeas a tu compañero?
+**13** Y salió en el día segundo, y he aquí, dos hombres ivrim peleando, y él dijo al culpable: ¿Por qué golpeas a tu compañero?
 **14** Y dijo: ¿Quién te nombró por hombre capitán y juez sobre nosotros? ¿Estás diciendo *en tu corazón* matarme como mataste al mitzrí? Y temió Moshéh, y dijo: Segu­ra­men­te es cono­cido el asunto.
 **15** Y escuchó Faraón de este asunto, y buscó para matar a Moshéh; pero huyó Moshéh del rostro de Faraón, y habitó en la tierra de Midián, y se sentó sobre un pozo.
 **16** Y el sacerdote de Midián *tenía* siete hijas, y vinieron y sacaron agua, y llenaron los abreva­deros para dar de beber al rebaño de su padre.
@@ -73,8 +73,7 @@ __SHEMOT \(ÉXODO\)__ שמות
 **10** Y ahora, ven, y te enviaré a Faraón, y sacarás a mi pueblo, los hijos de Israel, de Mitzráim.
 **11** Pero dijo Moshéh a Elohim: ¿Quién soy yo *para* ir a Faraón, y pues, sacar a los hijos de Israel de Mitzráim?
 **12** Y Él dijo: Porque Yo seré contigo, y ésta para ti *será *una señal que Yo te he enviado: cuando saques al pueblo de Mitzráim, servirán a Elohim en este monte.
-**13** Y dijo Moshéh a Elohim: He aquí, yo voy a los hijos de Israel, y les diré: “El Elohim de sus padres
-me ha enviado a ustedes”. Y ellos me dirán: “¿Cuál es su nombre?”, ¿qué les diré?
+**13** Y dijo Moshéh a Elohim: He aquí, yo voy a los hijos de Israel, y les diré: “El Elohim de sus padres__ __me ha enviado a ustedes”. Y ellos me dirán: “¿Cuál es su nombre?”, ¿qué les diré?
 **14** Y dijo Elohim a Moshéh: Ehyeh Asher Ehyeh[^264]. Y dijo: Así dirás a los hijos de Israel: Ehyeh[^265] me ha enviado a ustedes.
 **15** Y dijo además Elohim a Moshéh: Así dirás a los hijos de Israel:
 
@@ -224,8 +223,7 @@ Este es mi Nombre para siempre,
 **22** Pero hicieron de la misma manera los adivinos de Mitzráim con sus encantamientos; y se fortaleció el corazón de Faraón, y no los escuchó, como había hablado יהוה.
 **23** Y se giró Faraón y entró a su casa, y no puso su corazón ni aún para esto.
 **24** Y cavó todo Mitzráim en los alrededores del río *por* agua para beber, porque no podían beber del agua del río[^283].
-**25** Y se cumplieron siete días después de que golpeó יהוה al río.
-**1**
+**25** Y se cumplieron siete días después de que golpeó יהוה al río. __ __
 
 *Segunda plaga: las ranas*
 
@@ -270,7 +268,7 @@ Este es mi Nombre para siempre,
 **31** E hizo יהוה conforme a la palabra de Moshéh, y retiró la mez­cla *de insectos *de Faraón, de sus siervos y de su pueblo; no quedó uno.
 **32** Pero permaneció pesado Faraón su corazón tam­bién esta vez, y no envió al pueblo.
 
-Quinta plaga: peste en el ganado*
+*Quinta plaga: peste en el ganado*
 
 **9**
 
@@ -306,23 +304,21 @@ Quinta plaga: peste en el ganado*
 **24** Y hubo granizo, y fuego encendido en medio del granizo muy pesado, que no ha habido como este en toda la tierra de Mitzráim desde que se convirtió en nación.
 **25** Y golpeó el granizo por toda la tierra de Mitzráim, todo lo que *había* en el campo, desde el hombre hasta la bestia, y toda la hierba del campo golpeó el granizo, y todo árbol del campo destrozó.
 **26** Sólo en la tierra de Goshén, que allí *estaban *los hijos de Israel, no hubo granizo.
-**27** Y envió Faraón y llamó a Moshéh y a Aha­rón, y* les *dijo a ellos: He pecado esta vez; יהוה es justo, y yo y mi pueblo *somos* malvados.
+**27** Y envió Faraón y llamó a Moshéh y a Aha­rón, y* les *dijo a ellos: He pecado esta vez; יהוה es justo, y yo y mi pueblo *somos* culpables.
 **28** Pidan a יהוה, ha habido muchas voces de Elohim, y granizo. Los en­viaré, y no se quedarán más* aquí*.
-**29** Y le dijo Moshéh: Cuando salga de la ciu­dad extenderé mis palmas a יהוה; las voces cesarán y el granizo no es­tará más, para que sepas que de יהוה
-es la tierra.
+**29** Y le dijo Moshéh: Cuando salga de la ciu­dad extenderé mis palmas a יהוה; las voces cesarán y el granizo no es­tará más, para que sepas que de יהוה__ __es la tierra.
 **30** Pero tú y tus siervos, sé que aún no temen delante de יהוה Elohim.
 **31** Y el lino y la cebada fueron golpeados, pues la cebada *era* Abib[^288], y el lino *estaba en* caña;
 **32** pero el trigo y la espelta[^289] no fueron golpeados, pues estos son tardíos.
 **33** Y salió Moshéh de Faraón *y* de la ciudad; y extendió sus palmas a יהוה, y cesaron los truenos y el granizo, y la lluvia no fue vertida *sobre* la tierra.
 **34** Pero vio Faraón que había cesado la lluvia, y el granizo y el trueno, y volvió a pecar, y permaneció pesado su corazón, él y sus siervos.
-**35** Y se fortaleció el corazón de Faraón, y no envió a los hijos de Israel, como había hablado יהוה por mano de Moshéh.
-**1**
+**35** Y se fortaleció el corazón de Faraón, y no envió a los hijos de Israel, como había hablado יהוה por mano de Moshéh.__ __
 
 *Octava plaga: las langostas*
 
 **10**
 
-**1** Y dijo יהוה a Moshéh: Ve a Faraón, porque Yo he hecho pesado su corazón y el corazón de sus siervos, para poner mis señales estas en medio de él;
+**1** Y dijo יהוה a Moshéh: Ve a Faraón, porque Yo he dejado pesado su corazón y el corazón de sus siervos, para poner mis señales estas en medio de él;
 **2** y para que cuentes en los oídos de tu hijo y del hijo de tu hijo, que he hecho daño en Mitzráim, y mis señales que he puesto entre ellos, y para que sepan que Yo soy יהוה.
 **3** Y fueron Moshéh y Aharón a Faraón, y le dijeron: Así dice יהוה, Elohim de los ivrim[^290]: “¿Hasta cuándo rehusarás afligirte delan­te de Mí? Envía a mi pueblo y me servirá.
 **4** Porque si rehúsas tú enviar a mi pueblo, he aquí, traeré mañana langostas en tu territorio.
@@ -368,7 +364,7 @@ es la tierra.
 **7** Pero a cualquiera de los hijos de Israel, desde el hombre hasta la bestia, no afilará *ni *un perro su lengua, para que sepan que hace distinción יהוה entre Mitzráim e Israel”.
 **8** Y descenderán todos estos tus siervos y se inclinarán a mí, diciendo: “Sal tú y todo el pue­blo que *está* a tus pies”. Y después así sal­dré. Y *Moshéh* salió de Faraón encendido en ira.
 **9** Pero dijo יהוה a Moshéh: No los es­cu­chará Faraón, para que se multipliquen mis ma­ravillas en la tierra de Mitzráim.
-**10** Y Moshéh y Aharón hicieron todas estas ma­ravillas delante de Faraón, y fortaleció יהוה el corazón de Faraón, y no envió a los hijos de Israel de su tierra.
+**10** Y Moshéh y Aharón hicieron todas estas ma­ravillas delante de Faraón, y se hizo fuerte יהוה con el corazón de Faraón, y no envió a los hijos de Israel de su tierra.
 
 *El Pésaj*
 
@@ -510,8 +506,7 @@ Cantaré a יהוה porque altamente es exal­­­tado[^306]; *al *caballo y su 
 **5** Los abismos los cubren; descendieron en las profundidades como una piedra.
 **6** Tu diestra, יהוה, majestuosa[^312] en poder; tu diestra, יהוה, ha destrozado al enemigo.
 **7** Y en la multitud de tu grandeza destruyes a los que se levantan contra ti, envías tu ira, y los consumes como paja.
-**8** Y en el aliento de tus narices se acu­mu­laron las aguas, se pararon como un pilar de agua las corrientes[^313];
-se congelaron los abismos en el corazón del mar.
+**8** Y en el aliento de tus narices se acu­mu­laron las aguas, se pararon como un pilar de agua las corrientes[^313];__ __se congelaron los abismos en el corazón del mar.
 **9** Dijo el enemigo: “Perseguiré, superaré, divi­diré el botín, se saciará mi ser; vaciaré mi espada, los destruirá mi mano”.
 **10** Soplaste con tu viento, los cubrió el mar, se hundieron como plomo en las aguas majestuosas.
 **11**¿Quién como Tú entre los dioses, יהוה?
@@ -549,8 +544,7 @@ Canten a יהוה porque altamente es exal­tado[^319],
 **4** Y dijo יהוה a Moshéh: He aquí, haré llover para ustedes pan del cielo; y saldrá el pueblo y recogerá cosa de un día en su día, para examinarlos si caminarán en mi Torah o no.
 **5** Y sucederá en el día sexto, prepararán lo que traigan, y *la porción* será doble, por encima de lo que recojan día *a* día.
 **6** Y dijo Moshéh. y Aharón. a todos los hijos de Israel: *Por* la tarde sabrán que יהוה *los *ha sa­cado a ustedes de la tierra de Mitzráim;
-**7** Y* por*
-la mañana verán la gloria de יהוה, por*que* Él escucha sus murmuraciones sobre יהוה; pero nosotros, ¿qué *somos* para que se quejen sobre nosotros?
+**7** Y* por*__ __la mañana verán la gloria de יהוה, por*que* Él escucha sus murmuraciones sobre יהוה; pero nosotros, ¿qué *somos* para que se quejen sobre nosotros?
 **8** Y dijo Moshéh: *Esto sucederá* cuando les dé יהוה por la tarde carne para comer, y pan por la mañana para saciarse; por*que* ha escuchado יהוה sus quejas que murmuran sobre Él; pero nosotros, ¿qué *somos*?, no *son *sobre nosotros sus murmuraciones, pues *son* sobre יהוה.
 **9** Y dijo Moshéh a Aharón: Di a toda la congregación de los hijos de Israel: “Acér­quen­se delante de[^324] יהוה, por­que *Él* ha escuchado sus murmuraciones”.
 **10** Y sucedió *que* cuando habló Aharón a toda la congregación de los hijos de Israel, se giraron hacia el desierto, y he aquí, la gloria de יהוה apareció en la nube.
@@ -609,8 +603,7 @@ la mañana verán la gloria de יהוה, por*que* Él escucha sus murmuraciones 
 
 **18**
 
-**1** Y escuchó Itró, sacerdote
-de Midián, suegro de Moshéh, todo lo que había hecho Elohim por Moshéh y por Israel su pueblo, porque sacó יהוה a Israel de Mitzráim.
+**1** Y escuchó Itró, sacerdote__ __de Midián, suegro de Moshéh, todo lo que había hecho Elohim por Moshéh y por Israel su pueblo, porque sacó יהוה a Israel de Mitzráim.
 **2** Y tomó Itró, suegro de Moshéh, a Tziporáh, mujer de Moshéh, después de que la había enviado;
 **3** y a sus dos hijos, que el nombre de uno era Guershom, porque él dijo: Extranjero[^339] he sido en tierra extranjera[^340].
 **4** Y el nombre del otro era Eliezer, porque *dijo: *El Elohim de mi padre *fue* mi ayuda[^341], y me rescató de la espada de Faraón.
@@ -795,8 +788,7 @@ de Midián, suegro de Moshéh, todo lo que había hecho Elohim por Moshéh y por
 **1** No levantarás informe[^379] falso; no pondrás tu mano con el condenado[^380] para ser testigo violento[^381].
 **2** No estarás detrás de muchos para *hacer *males, y no responderás en una contienda incli­nándote detrás de muchos para torcer.
 **3** Y *al* débil no favorecerás[^382] en su contienda.
-**4** Cuando te encuentres un buey
-de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
+**4** Cuando te encuentres un buey__ __de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **5** Cuando veas el asno de quien te odia acostado debajo de su carga, ¿desistirás de liberarlo? Liberando, lo liberarás con él.
 **6** No torcerás el proceso legal de tu necesitado en su contienda.
 **7** De palabra de mentira te alejarás, y *al* inocente y justificado no matarás, porque no justificaré al condenado.
@@ -1174,8 +1166,6 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **13** Recuerda a Abraham, a Itzjak y a Yaakov, tus siervos, que les juraste por Ti *mismo*, y les dijiste: “Multiplicaré su simiente como las estrellas de los cielos, y toda esta tierra de la cual he hablado, daré a su simiente, y *la* heredarán para el olam[^472]”.
 **14** Y restableció al inicio יהוה sobre el mal que había dicho que haría a su pueblo.
 
-*Moshéh rompe las tablas*
-
 **15** Y se giró y bajó Moshéh del monte, y las dos tablas del Testimonio en su mano, tablas escritas de dos de sus lados, de un *lado* y de otro[^473] ellas fueron escritas.
 **16** Y las tablas* *obra de Elohim eran, y la es­critura era escritura de Elohim grabada sobre las tablas.
 **17** Y escuchó Yehoshúa la voz del pueblo en su maldad, y dijo a Moshéh: ¡*Hay* voz de guerra en el campamento!
@@ -1255,8 +1245,6 @@ de tu enemigo o su asno perdido, devolviendo, lo devolverás a él.
 **26** Lo primero de los primeros frutos de tu tierra traerás a la casa de יהוה tu Elohim. No cocerás el cabrito en la leche de su *propia *madre.
 **27** Y dijo יהוה a Moshéh: Escribe para ti estas palabras, porque por la boca de estas palabras he hecho[^494] contigo un pacto, y con Israel.
 **28** Y estuvo allí con יהוה cuarenta días y cuarenta noches; pan no comió y agua no bebió. Y escribió sobre las tablas las palabras del pacto, las Diez Palabras.
-
- *El rostro de Moshéh brilla*
 
 **29** Y sucedió cuando descendió Moshéh del monte Sinay, y las dos tablas del Testimonio en mano de Moshéh, cuando descendió del mon­te, Moshéh no sabía que brillaba la piel de su rostro, por haber hablado con Él.
 **30** Y vio Aharón y todos los hijos de Israel a Moshéh, y he aquí, brillaba la piel de su rostro, y temieron acercarse a él.

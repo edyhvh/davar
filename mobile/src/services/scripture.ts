@@ -9,10 +9,180 @@ import {
   type DssVariantRow,
 } from "@/src/services/database";
 import { removeMaqafForDisplay } from "@/src/utils/hebrew";
-import { TTH_BOOK_MAPPING } from "@davar/shared/translationConfig";
+import {
+  getMissingSpanishTranslationNotice,
+  getPsalmsSuperscriptionNotice,
+  TTH_BOOK_MAPPING,
+} from "@davar/shared/translationConfig";
+import { mapHebrewVerseToTranslationKey } from "@davar/shared/versification";
 
 // Chapter-level cache for TS2009 static JSON (matches web approach)
 const ts2009ChapterCache = new Map<string, Promise<Map<number, string> | null>>();
+
+const TS2009_BOOK_FILE_MAP: Record<string, string> = {
+  genesis: "bereshit",
+  exodus: "shemoth",
+  leviticus: "wayyiqra",
+  numbers: "bemidbar",
+  deuteronomy: "debarim",
+  joshua: "yehoshua",
+  judges: "shophetim",
+  samuel1: "samuel_1",
+  samuel2: "samuel_2",
+  kings1: "kings_1",
+  kings2: "kings_2",
+  chronicles1: "chronicles_1",
+  chronicles2: "chronicles_2",
+  nehemiah: "nehemyah",
+  esther: "ester",
+  job: "iyob",
+  psalms: "tehillim",
+  ecclesiastes: "qoheleth",
+  songofsolomon: "shir_hashirim",
+  isaiah: "yeshayahu",
+  jeremiah: "yirmeyahu",
+  lamentations: "ekah",
+  ezekiel: "yehezqel",
+  obadiah: "obadyah",
+  jonah: "yonah",
+  ruth: "ruth",
+  ezra: "ezra",
+  proverbs: "mishlei",
+  daniel: "daniel",
+  hosea: "hosea",
+  joel: "yoel",
+  amos: "amos",
+  micah: "micah",
+  nahum: "nahum",
+  habakkuk: "habakkuk",
+  zephaniah: "zephaniah",
+  haggai: "haggai",
+  zechariah: "zechariah",
+  malachi: "malachi",
+  matthew: "mattithyahu",
+  mark: "marqos",
+  luke: "lugqas",
+  john: "yohanan",
+  acts: "maasei",
+  romans: "romiyim",
+  corinthians1: "corinthians_1",
+  corinthians2: "corinthians_2",
+  galatians: "galatiyim",
+  ephesians: "ephsiyim",
+  philippians: "pilipiyim",
+  colossians: "qolasim",
+  thessalonians1: "thessalonians_1",
+  thessalonians2: "thessalonians_2",
+  timothy1: "timothy_1",
+  timothy2: "timothy_2",
+  titus: "titos",
+  philemon: "pileymon",
+  hebrews: "ibrim",
+  james: "yaaqob",
+  peter1: "peter_1",
+  peter2: "peter_2",
+  john1: "john_1",
+  john2: "john_2",
+  john3: "john_3",
+  jude: "yehudah",
+  revelation: "hazon",
+};
+
+type Ts2009BookVerse = {
+  number?: number;
+  verse?: number;
+  text?: unknown;
+  translation?: unknown;
+};
+
+type Ts2009BookChapter = {
+  number?: number;
+  chapter?: number;
+  verses?: Ts2009BookVerse[];
+};
+
+type Ts2009BookPayload = {
+  chapters?: Ts2009BookChapter[] | Record<string, Ts2009BookChapter | Ts2009BookVerse[]>;
+};
+
+const parseTs2009VerseText = (verse: Ts2009BookVerse): string | null => {
+  if (typeof verse.text === "string") return verse.text;
+  if (typeof verse.translation === "string") return verse.translation;
+  return null;
+};
+
+const extractTs2009ChapterFromBook = (
+  payload: Ts2009BookPayload,
+  chapter: number,
+): Ts2009BookVerse[] | null => {
+  const chapters = payload.chapters;
+  if (!chapters) return null;
+
+  if (Array.isArray(chapters)) {
+    const chapterMatch = chapters.find((entry) => {
+      const chapterNumber = Number(entry.number ?? entry.chapter ?? Number.NaN);
+      return Number.isFinite(chapterNumber) && chapterNumber === chapter;
+    });
+
+    return Array.isArray(chapterMatch?.verses) ? chapterMatch.verses : null;
+  }
+
+  const chapterEntry = chapters[String(chapter)];
+  if (Array.isArray(chapterEntry)) {
+    return chapterEntry;
+  }
+
+  return Array.isArray(chapterEntry?.verses) ? chapterEntry.verses : null;
+};
+
+const getTs2009BookFileCandidates = (bookId: string): string[] => {
+  const normalized = bookId.toLowerCase();
+  const mapped = TS2009_BOOK_FILE_MAP[normalized];
+  const underscoreVariant = normalized.replace(/(\D)(\d+)$/, "$1_$2");
+  const stems = [mapped, normalized, underscoreVariant].filter(
+    (stem): stem is string => Boolean(stem),
+  );
+
+  return [...new Set(stems)];
+};
+
+const fetchTs2009ChapterFromBookFile = async (
+  bookId: string,
+  chapter: number,
+): Promise<Map<number, string> | null> => {
+  for (const fileStem of getTs2009BookFileCandidates(bookId)) {
+    try {
+      const staticBook = await staticDataRequest<Ts2009BookPayload>(
+        `ts2009/${fileStem}.json`,
+      );
+
+      const chapterVerses = extractTs2009ChapterFromBook(staticBook, chapter);
+      if (!chapterVerses || chapterVerses.length === 0) {
+        continue;
+      }
+
+      const verseMap = new Map<number, string>();
+      for (const [index, verse] of chapterVerses.entries()) {
+        const verseNumber = Number(verse.number ?? verse.verse ?? index + 1);
+        const verseText = parseTs2009VerseText(verse);
+
+        if (!Number.isFinite(verseNumber) || !verseText) {
+          continue;
+        }
+
+        verseMap.set(verseNumber, verseText);
+      }
+
+      if (verseMap.size > 0) {
+        return verseMap;
+      }
+    } catch {
+      // Keep probing candidate names.
+    }
+  }
+
+  return null;
+};
 
 const fetchTs2009ChapterStatic = (
   bookId: string,
@@ -26,6 +196,8 @@ const fetchTs2009ChapterStatic = (
   }
 
   const promise = (async (): Promise<Map<number, string> | null> => {
+    let chapterMap: Map<number, string> | null = null;
+
     try {
       const staticChapter = await staticDataRequest<{
         verses?: Record<string, string>;
@@ -40,10 +212,16 @@ const fetchTs2009ChapterStatic = (
         }
       }
 
-      return verseMap;
+      chapterMap = verseMap.size > 0 ? verseMap : null;
     } catch {
-      return null;
+      // Fall back to TS2009 book files below.
     }
+
+    if (chapterMap) {
+      return chapterMap;
+    }
+
+    return fetchTs2009ChapterFromBookFile(bookId, chapter);
   })();
 
   ts2009ChapterCache.set(cacheKey, promise);
@@ -103,6 +281,32 @@ const resolveTthBookId = (bookId: string): string | undefined => {
   }
 
   return TTH_BOOK_MAPPING[canonicalKey];
+};
+
+const isPsalmsBook = (bookId: string): boolean =>
+  normalizeBookToken(bookId) === "psalms";
+
+const resolveTranslationText = (params: {
+  bookId: string;
+  language?: "en" | "es";
+  mappedTranslationKey: string | null;
+  translationText?: string;
+}): string => {
+  const { bookId, language, mappedTranslationKey, translationText } = params;
+
+  if (!language) {
+    return translationText ?? "";
+  }
+
+  if (isPsalmsBook(bookId) && mappedTranslationKey === null) {
+    return getPsalmsSuperscriptionNotice(language);
+  }
+
+  if (translationText && translationText.trim().length > 0) {
+    return translationText;
+  }
+
+  return getMissingSpanishTranslationNotice(language);
 };
 
 type StaticChapterWord = {
@@ -243,6 +447,33 @@ const toSortedUniqueVerseNumbers = (values: number[]): number[] =>
     (a, b) => a - b,
   );
 
+const getRequiredTranslationChapters = (
+  bookId: string,
+  chapter: number,
+  expectedVerseNumbers?: number[],
+): number[] => {
+  const mappedChapters = new Set<number>();
+
+  for (const verseNumber of expectedVerseNumbers ?? []) {
+    const mappedKey = mapHebrewVerseToTranslationKey(bookId, chapter, verseNumber);
+    if (!mappedKey) {
+      continue;
+    }
+
+    const [mappedChapterToken] = mappedKey.split("-");
+    const mappedChapter = Number(mappedChapterToken);
+    if (Number.isFinite(mappedChapter) && mappedChapter > 0) {
+      mappedChapters.add(mappedChapter);
+    }
+  }
+
+  if (mappedChapters.size === 0) {
+    mappedChapters.add(chapter);
+  }
+
+  return [...mappedChapters].sort((a, b) => a - b);
+};
+
 const toDssBookKey = (bookId: string): string => {
   const dssMap: Record<string, string> = {
     samuel1: "1samuel",
@@ -305,8 +536,13 @@ const loadStaticTranslationsForChapter = async (
   language?: "en" | "es",
   hebrewOnly?: boolean,
   expectedVerseNumbers?: number[],
-): Promise<Map<number, TranslationEntry>> => {
-  const translationMap = new Map<number, TranslationEntry>();
+): Promise<Map<string, TranslationEntry>> => {
+  const translationMap = new Map<string, TranslationEntry>();
+  const requiredTranslationChapters = getRequiredTranslationChapters(
+    bookId,
+    chapter,
+    expectedVerseNumbers,
+  );
 
   if (!language || hebrewOnly) {
     return translationMap;
@@ -321,14 +557,18 @@ const loadStaticTranslationsForChapter = async (
           `tth/${tthBookId}.json`,
         );
 
-        const chapterData = (translationBook.chapters ?? []).find(
-          (item) => item.chapter === chapter,
-        );
+        for (const translationChapter of requiredTranslationChapters) {
+          const chapterData = (translationBook.chapters ?? []).find(
+            (item) => item.chapter === translationChapter,
+          );
 
-        if (chapterData?.verses) {
+          if (!chapterData?.verses) {
+            continue;
+          }
+
           for (const verse of chapterData.verses) {
             const text = verse.tth ?? "";
-            translationMap.set(verse.verse, {
+            translationMap.set(`${translationChapter}-${verse.verse}`, {
               text,
               footnotes: parseTranslationFootnotes(verse.footnotes),
             });
@@ -346,14 +586,18 @@ const loadStaticTranslationsForChapter = async (
           `bes/${bookId}.json`,
         );
 
-        const chapterData = (translationBook.chapters ?? []).find(
-          (item) => item.chapter === chapter,
-        );
+        for (const translationChapter of requiredTranslationChapters) {
+          const chapterData = (translationBook.chapters ?? []).find(
+            (item) => item.chapter === translationChapter,
+          );
 
-        if (chapterData?.verses) {
+          if (!chapterData?.verses) {
+            continue;
+          }
+
           for (const verse of chapterData.verses) {
             const text = verse.bes ?? "";
-            translationMap.set(verse.verse, {
+            translationMap.set(`${translationChapter}-${verse.verse}`, {
               text,
               footnotes: parseTranslationFootnotes(verse.footnotes),
             });
@@ -366,11 +610,20 @@ const loadStaticTranslationsForChapter = async (
   } else if (language === "en") {
     // Load TS2009 from static chapter JSON (same source as web)
     try {
-      const chapterMap = await fetchTs2009ChapterStatic(bookId, chapter);
+      const chapterMaps = await Promise.all(
+        requiredTranslationChapters.map(async (translationChapter) => ({
+          translationChapter,
+          chapterMap: await fetchTs2009ChapterStatic(bookId, translationChapter),
+        })),
+      );
 
-      if (chapterMap) {
+      for (const { translationChapter, chapterMap } of chapterMaps) {
+        if (!chapterMap) {
+          continue;
+        }
+
         for (const [verseNumber, translation] of chapterMap) {
-          translationMap.set(verseNumber, {
+          translationMap.set(`${translationChapter}-${verseNumber}`, {
             text: translation,
             footnotes: undefined,
           });
@@ -384,12 +637,19 @@ const loadStaticTranslationsForChapter = async (
 
   if (translationMap.size === 0) {
     try {
-      const offlineRows = await fetchTranslationVerses(bookId, chapter, language);
-      for (const row of offlineRows) {
-        translationMap.set(row.verse, {
-          text: row.text ?? "",
-          footnotes: parseTranslationFootnotes(row.footnotes),
-        });
+      const rowsByChapter = await Promise.all(
+        requiredTranslationChapters.map((translationChapter) =>
+          fetchTranslationVerses(bookId, translationChapter, language),
+        ),
+      );
+
+      for (const offlineRows of rowsByChapter) {
+        for (const row of offlineRows) {
+          translationMap.set(`${row.chapter}-${row.verse}`, {
+            text: row.text ?? "",
+            footnotes: parseTranslationFootnotes(row.footnotes),
+          });
+        }
       }
     } catch {
       // Leave translation map empty when offline translation isn't available.
@@ -527,10 +787,11 @@ const findFallbackTranslitWord = (
 const mapStaticVersesToDisplay = (
   bookId: string,
   verses: StaticChapterVerse[],
-  translationMap: Map<number, TranslationEntry>,
+  translationMap: Map<string, TranslationEntry>,
   dssMap: Map<number, StaticDssDifference[]>,
   translitMap: Map<number, StaticTranslitWord[]>,
   dssTranslitMap: Map<string, StaticDssTranslitVariant>,
+  language?: "en" | "es",
   showDss?: boolean,
 ): DisplayVerse[] => {
   return verses.map((verse) => {
@@ -586,7 +847,20 @@ const mapStaticVersesToDisplay = (
         .filter(Boolean)
         .join(" ");
 
-    const translationEntry = translationMap.get(verse.verse);
+    const translationKey = mapHebrewVerseToTranslationKey(
+      bookId,
+      verse.chapter,
+      verse.verse,
+    );
+    const translationEntry = translationKey
+      ? translationMap.get(translationKey)
+      : undefined;
+    const translationText = resolveTranslationText({
+      bookId,
+      language,
+      mappedTranslationKey: translationKey,
+      translationText: translationEntry?.text,
+    });
 
     return {
       id: `${bookId}-${verse.chapter}-${verse.verse}`,
@@ -595,7 +869,7 @@ const mapStaticVersesToDisplay = (
       chapter: verse.chapter,
       verse: verse.verse,
       hebrew: removeMaqafForDisplay(hebrewText),
-      translation: translationEntry?.text ?? "",
+      translation: translationText,
       words,
       qumranVariants:
         dssVariants.length > 0
@@ -673,6 +947,7 @@ const fetchChapterVersesStatic = async (
     dssMap,
     translitMap,
     dssTranslitMap,
+    options?.language,
     options?.showDss,
   );
 };
@@ -684,6 +959,7 @@ const mapOfflineDataToDisplay = (
   hebrewRows: HebrewVerseRow[],
   translationRows: TranslationRow[],
   dssRows: DssVariantRow[],
+  language?: "en" | "es",
 ): DisplayVerse[] => {
   // Index translations by verse number
   const translationMap = new Map<string, TranslationRow>();
@@ -702,7 +978,20 @@ const mapOfflineDataToDisplay = (
 
   return hebrewRows.map((hv) => {
     const verseKey = `${hv.chapter}-${hv.verse}`;
-    const translation = translationMap.get(verseKey);
+    const mappedTranslationKey = mapHebrewVerseToTranslationKey(
+      bookId,
+      hv.chapter,
+      hv.verse,
+    );
+    const translation = mappedTranslationKey
+      ? translationMap.get(mappedTranslationKey)
+      : undefined;
+    const translationText = resolveTranslationText({
+      bookId,
+      language,
+      mappedTranslationKey,
+      translationText: translation?.text,
+    });
     const dssVariants = dssMap.get(verseKey) ?? [];
 
     // Build DSS variant lookup by position
@@ -779,7 +1068,7 @@ const mapOfflineDataToDisplay = (
       chapter: hv.chapter,
       verse: hv.verse,
       hebrew,
-      translation: translation?.text ?? "",
+      translation: translationText,
       words,
       qumranVariants: qumranVariants.length > 0 ? qumranVariants : undefined,
       translation_footnotes: translationFootnotes,
@@ -802,15 +1091,32 @@ const fetchChapterVersesOffline = async (
     throw new Error(`No offline Hebrew data for ${bookId} chapter ${chapter}`);
   }
 
-  const translationRows = options?.language
-    ? await fetchTranslationVerses(bookId, chapter, options.language)
+  const translationLanguage = options?.language;
+  const translationRows = translationLanguage
+    ? (
+        await Promise.all(
+          getRequiredTranslationChapters(
+            bookId,
+            chapter,
+            toSortedUniqueVerseNumbers(hebrewRows.map((row) => row.verse)),
+          ).map((translationChapter) =>
+            fetchTranslationVerses(bookId, translationChapter, translationLanguage),
+          ),
+        )
+      ).flat()
     : [];
 
   const dssRows = options?.showDss
     ? await fetchDssVariants(bookId, chapter)
     : [];
 
-  return mapOfflineDataToDisplay(bookId, hebrewRows, translationRows, dssRows);
+  return mapOfflineDataToDisplay(
+    bookId,
+    hebrewRows,
+    translationRows,
+    dssRows,
+    translationLanguage,
+  );
 };
 
 export const fetchChapterVerses = async (

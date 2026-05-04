@@ -6,8 +6,7 @@ __SHEMUEL ALEF \(1 SAMUEL\)__א שמואל
 
 **1** Y había un hombre de Ramataim Tzofím, del monte de Efráim, y su nombre *era* El­kanah, hi­jo de Ierojám, hijo de Elihú, hijo de Toju, hijo de Tzuf efratí[^1598].
 **2** Y para él *había* dos mujeres, el nombre de una *era* Janah, y el hombre de la segunda *era* Penináh; y había para Penináh niños, pero Janah no tenía niños.
-**3** Y subía este hombre de su ciudad cada año[^1599] para inclinarse y para sa­cri­ficar para יהוה
-Tzebaot en Shiloh. Y allí *estaban* los dos hijos de Elí, Jofní y Pinjas, sacerdotes de יהוה.
+**3** Y subía este hombre de su ciudad cada año[^1599] para inclinarse y para sa­cri­ficar para יהוה__ __Tzebaot en Shiloh. Y allí *estaban* los dos hijos de Elí, Jofní y Pinjas, sacerdotes de יהוה.
 **4** Y fue el día, y sacrificó Elkanah, y dio a Pe­ni­náh su mujer y a todos sus hijos y sus hijas porciones;
 **5** pero a Janah dio una porción, una de narices, porque a Janah él amaba, pero יהוה había cerrado su matriz.
 **6** Y la hacía enojar su angustiadora, incluso *con* ira, a fin de hacerla enfurecer, porque ha­bía cerrado יהוה detrás de su matriz.
@@ -113,8 +112,7 @@ Tzebaot en Shiloh. Y allí *estaban* los dos hijos de Elí, Jofní y Pinjas, sac
 **12** En ese día haré levantar hacia Elí todo lo que he hablado a su casa, comenzando y ter­mi­nando.
 **13** Y he dado a conocer a él que juzgaré Yo a su casa hasta siempre por la iniquidad que él conoció, pues se despreciaron a sí *mismos* sus hi­jos, y no reprendió él contra ellos.
 **14** Y por lo tanto, he jurado a la casa de Elí: ¡Si fuera cubierta la iniquidad de la casa de Elí con sacrificio y con ofrenda hasta el olam!
-**15** Y se acostó Shemuel hasta la mañana; y a­brió las puertas de la casa de יהוה; y She­muel
-tenía miedo de dar a conocer la visión a Elí.
+**15** Y se acostó Shemuel hasta la mañana; y a­brió las puertas de la casa de יהוה; y She­muel__ __tenía miedo de dar a conocer la visión a Elí.
 **16** Pero llamó Elí a Shemuel, y dijo: Shemuel, hijo mío. Y él dijo: Heme aquí.
 **17** Y él dijo: ¿Cuál es la palabra que habló a ti? Por favor, no la ocultes de mí. Así hará a ti Elohim, y así aumentará, si ocultas de mí una cosa de toda la palabra que habló a ti.
 **18** Y le contó Shemuel todas las palabras, y no escondió de él *nada*. Y él dijo: יהוה es Él, lo bueno en sus ojos hará.
@@ -1000,7 +998,7 @@ David pelea contra Amalek
 **19** Y no faltó de ellos nada, desde el pequeño y hasta el grande, y hasta hijos e hijas y el bo­tín, e incluso todo lo que habían tomado de e­llos; todo regresó David.
 **20** Y tomó David a todo el rebaño y el ganado, los condujeron delante de aquel ganado, y de­cían: Este es el botín de David.
 **21** Y vino David a los doscientos hombres que se habían agotado para ir tras de David y per­ma­necieron en el arroyo de Besor, y salieron al encuentro de David y al encuentro del pueblo que estaba con él, y se acercó David al pueblo y preguntó a ellos por su bienestar.
-**22** Y respondió todo hombre malvado e inútil de entre los hombres que fueron con David, y dijeron: Porque no fueron conmigo, no dare­mos a ellos del botín que arrebatamos, sino pues cada hombre su mujer y sus hijos, y los conducirán y se irán.
+**22** Y respondió todo hombre condenado e inútil de entre los hombres que fueron con David, y dijeron: Porque no fueron conmigo, no dare­mos a ellos del botín que arrebatamos, sino pues cada hombre su mujer y sus hijos, y los conducirán y se irán.
 **23** Pero dijo David: No hagan así, hermanos míos, con lo que ha dado יהוה a nosotros, y nos ha guardado y ha dado a la banda que vino contra nosotros en nuestra mano.
 **24**¿Y quién escuchará a ustedes para esta co­sa? Porque conforme a la parte del que descien­de a la batalla y conforme a la parte del que per­manece con los instrumentos, juntos lo repar­tirán.
 **25** Y fue así desde aquel día y en adelante, y lo puso por estatuto y por proceso legal para Israel hasta este día.

@@ -78,7 +78,9 @@ export const useAppStore = create<AppState>((set) => ({
   setShowFullChapter: (value) =>
     set((state) => ({
       showFullChapter: value,
-      seferMode: value ? state.seferMode : false,
+      seferMode: value
+        ? state.seferMode || state.hebrewOnly || state.translationOnly
+        : false,
     })),
   seferMode: false,
   setSeferMode: (value) =>
@@ -93,7 +95,7 @@ export const useAppStore = create<AppState>((set) => ({
       seferMode: state.translationOnly
         ? false
         : value
-          ? state.seferMode
+          ? state.showFullChapter || state.seferMode
           : false,
     })),
   translationOnly: false,
@@ -101,9 +103,9 @@ export const useAppStore = create<AppState>((set) => ({
     set((state) => ({
       translationOnly: value,
       hebrewOnly: value ? false : state.hebrewOnly,
-      showQumran: value ? false : true,
+      showQumran: value ? false : state.showQumran,
       showCantillation: value ? false : state.showCantillation,
-      showNikud: value ? false : true,
+      showNikud: value ? false : state.showNikud,
       showFullChapter: value ? true : false,
       seferMode: value ? true : false,
     })),

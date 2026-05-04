@@ -21,7 +21,7 @@ __LUKAH \(LUCAS\)__לוקה
 **12** Y se asustó Zejariáhu cuando lo vio, y el temor cayó sobre él.
 **13** Y le dijo el ángel: No temas, Zejariáhu, porque tu tefilah[^817] ha sido escuchada, y Elisheva tu mujer dará a luz para ti un hijo, y llamarás su nombre Iojanán,
 **14** y habrá alegría para ti, y gozo, y muchos se alegrarán por su nacimiento.
-**15** Porque será grande delante de Yehovah, y no beberá vino ni bebida embriagante, y por el Rúaj Ha’Kódesh[^818] será lleno aún en el vientre de su madre.
+**15** Porque será grande delante de Yehovah, y no beberá vino ni bebida embriagante, y por el Rúaj Ha'Kódesh[^818] será lleno aún en el vientre de su madre.
 **16** Y a muchos de los hijos de Israel hará volver a Yehovah su Elohim.
 **17** Y él andará delante de Él en el rúaj[^819] y poder de Eliyáhu[^820], y hará volver el corazón de los padres sobre los hijos, y el corazón de los hijos sobre los padres[^821], para preparar para Yehovah un pueblo completo y recto.
 **18** Y dijo Zejariáhu al ángel: ¿En qué sabré esto? Porque yo soy anciano, y mi esposa, anciana entrada en días.
@@ -44,7 +44,7 @@ __LUKAH \(LUCAS\)__לוקה
 **32** Este será grande, y será llamado Hijo de Elyón[^829]; y le dará Yehovah Elohim el trono de David su padre;
 **33** y reinará en la casa de Iaacob para siempre; y no habrá fin para su reino.
 **34** Y dijo Miriam al ángel: ¿Cómo será hecho esto? Porque no he conocido hombre.
-**35** Y respondió el ángel, y le dijo: El Rúaj Ha’Kódesh[^830] vendrá sobre ti, y el poder de Elyón te cubrirá; y por eso, el nacido de ti *será* Kadosh[^831], será llamado Hijo de Elyón.
+**35** Y respondió el ángel, y le dijo: El Rúaj Ha'Kódesh[^830] vendrá sobre ti, y el poder de Elyón te cubrirá; y por eso, el nacido de ti *será* Kadosh[^831], será llamado Hijo de Elyón.
 **36** Y he aquí, Elisheva, tu parienta[^832], ha concebido un hijo en su vejez; y este es el mes sexto para ella, la que llamaban estéril.
 **37** Porque ninguna cosa es imposible delante de Yehovah.
 **38** Y dijo Miriam: He aquí, sierva de Yehovah soy, me sea conforme a tu palabra. Y se fue el ángel de ella.
@@ -53,7 +53,7 @@ __LUKAH \(LUCAS\)__לוקה
 
 **39** Y en aquellos días se levantó Miriam y fue a la montaña con prisa, a una ciudad de Iehudáh;
 **40** Y entró en casa de Zejariáhu y preguntó por el shalom[^833] a Elisheva.
-**41** Y sucedió que cuando escuchó Elisheva la bendición de Miriam, saltó el bebé en su vientre; y Elisheva fue llena por el Rúaj Ha’Kódesh,
+**41** Y sucedió que cuando escuchó Elisheva la bendición de Miriam, saltó el bebé en su vientre; y Elisheva fue llena por el Rúaj Ha'Kódesh,
 **42** y gritó con gran voz, y dijo: ¡Bendita tú entre las mujeres, y bendito el fruto de tu vientre!
 **43** ¿Y qué es esto para mí, que la madre de mi Adón[^834] venga a mí?
 **44** Porque, he aquí, cuando fue la voz de tu bendición a mis oídos, saltó el bebé con gozo en mi vientre.
@@ -61,14 +61,14 @@ __LUKAH \(LUCAS\)__לוקה
 **46** Y Miriam dijo:
 
 **47** y se regocija mi espíritu en el Elohim de mi salvación.
-**48** Porque Él ha mirado la aflicción de su sierva,y he aquí, desde ahora me felicitarán todas las generaciones.
+**48** Porque Él ha mirado la aflicción de su sierva, y he aquí, desde ahora me felicitarán todas las generaciones.
 **49** Porque ha hecho conmigo grandezas el Poderoso, y Kadosh es su Nombre.
 **50** Su bondad es de generación a generaciónpara los que le temen[^835].
-**51** Ha hecho cosa poderosa con su brazo;esparció a los altivos en el pensamiento de su corazón.
-**52** Hizo bajar *a* los fuertes de los tronos,y elevó a los bajos.
-**53** *A* los hambrientos Él llenó de bondades,y a los ricos envió vacíos.
-**54** Tomó a Israel, su siervo,para recordar su bondad,
-**55** tal como habló a nuestros padres,a Abraham y a su simiente para siempre.
+**51** Ha hecho cosa poderosa con su brazo; esparció a los altivos en el pensamiento de su corazón.
+**52** Hizo bajar *a* los fuertes de los tronos, y elevó a los bajos.
+**53** *A* los hambrientos Él llenó de bondades, y a los ricos envió vacíos.
+**54** Tomó a Israel, su siervo, para recordar su bondad,
+**55** tal como habló a nuestros padres, a Abraham y a su simiente para siempre.
 
 **56** Y habitó Miriam con ella como tres meses, y volvió a su casa.
 
@@ -87,19 +87,19 @@ __LUKAH \(LUCAS\)__לוקה
 
 *Profecía de Zejariáhu*
 
-**67** Y Zejariáhu su padre fue lleno por el Rúaj Ha’Kódesh[^836], y profetizó, diciendo:
-**68** Bendito es Yehovah, Elohim de Israel,porque visitó e hizo redención a su pueblo,
+**67** Y Zejariáhu su padre fue lleno por el Rúaj Ha'Kódesh[^836], y profetizó, diciendo:
+**68** Bendito es Yehovah, Elohim de Israel, porque visitó e hizo redención a su pueblo,
 **69** Y ha levantado para nosotros un cuerno de salvación en la casa de David su siervo,
 **70** tal como habló por boca de los profetas apartados que fueron desde la antigüedad;
-**71** salvación de nuestros enemigos,y de la mano de todos nuestros aborrecedores;
-**72** para hacer bondad con nuestros padres,y para recordar el pacto de su santidad,
+**71** salvación de nuestros enemigos, y de la mano de todos nuestros aborrecedores;
+**72** para hacer bondad con nuestros padres, y para recordar el pacto de su santidad,
 **73** el juramento que juró a Abraham nuestro padre para darnos,
 **74** que, rescatados de la mano de nuestros enemigos, sin temor le serviríamos,
 **75** en bondad y en justicia delante de Él, todos los días de nuestra vida.
-**76** Y tú, niño, serás llamado profeta de Elyón[^837],porque irás delante del rostro del Yehovah para preparar sus caminos;
+**76** Y tú, niño, serás llamado profeta de Elyón[^837], porque irás delante del rostro del Yehovah para preparar sus caminos;
 **77** para dar conocimiento de salvación a su pueblo, en perdón de los pecados,
-**78** por las entrañas de bondad de nuestro Elohim,con que nos visitó desde lo alto el amanecer,
-**79** para dar luz a los que habitan en oscuridad y en sombra de muerte[^838],y para rectificar nuestros pies en el camino de shalom[^839].
+**78** por las entrañas de bondad de nuestro Elohim, con que nos visitó desde lo alto el amanecer,
+**79** para dar luz a los que habitan en oscuridad y en sombra de muerte[^838], y para rectificar nuestros pies en el camino de shalom[^839].
 
 **80** Y el niño crecía; era fortalecido y esforzado por el Rúaj[^840], y estuvo en el desierto hasta el día *en* que se mostró a Israel.
 
@@ -137,8 +137,8 @@ __LUKAH \(LUCAS\)__לוקה
 **22** Y cuando se completaron los días de la purificación de ella, conforme a la Torah de Moshéh, entraron a Ierushaláim[^849] para acercarlo delante de Yehovah,
 **23** como está escrito en la Torah de Yehovah: Todo varón que abra la matriz, apartado para Yehovah será llamado[^850],
 **24** y para dar ofrenda como está escrito en la Torah de Yehovah: dos tórtolas, o dos hijos de paloma[^851].
-**25** Y he aquí, había un hombre en Ierushaláim, y su nombre *era* Shimón; y un hombre justo y temeroso de Elohim era él. Y esperaba la restauración de Israel, y el Rúaj Ha’Kódesh[^852] estaba sobre él.
-**26** Y tuvo respuesta del Rúaj Ha’Kódesh[^853], *que* no vería la muerte antes que viese al Mesías[^854] de Yehovah.
+**25** Y he aquí, había un hombre en Ierushaláim, y su nombre *era* Shimón; y un hombre justo y temeroso de Elohim era él. Y esperaba la restauración de Israel, y el Rúaj Ha'Kódesh[^852] estaba sobre él.
+**26** Y tuvo respuesta del Rúaj Ha'Kódesh[^853], *que* no vería la muerte antes que viese al Mesías[^854] de Yehovah.
 **27** Y entró en el Rúaj al Hejal[^855]; y cuando hicieron entrar su padre y su madre al niño Yeshúa, para hacer ellos según el orden de la Torah acerca de Él,
 **28** lo tomó sobre sus brazos y bendijo a Yehovah, y dijo:
 **29** Ahora envía a tu siervo, Adonai, conforme a tu palabra, en shalom[^856];
@@ -190,7 +190,7 @@ __LUKAH \(LUCAS\)__לוקה
 **13** Y les dijo: No hagan de más sobre el estatuto que les ha sido puesto.
 **14** Y le preguntaron también los hombres de guerra, diciendo: ¿y nosotros qué haremos? Y él les dijo: No aplasten a *ningún *hombre ni opriman, y soporten con sus provisiones.
 **15** Y examinaba el pueblo, y todos pensaban en sus corazones acerca de Iojanán, si él era el Mesías.
-**16** Y respondió Iojanán, y dijo a todos: Yo los sumerjo en aguas, pero vendrá uno *más* grande que yo, al que le soy pequeño para desatar la correa de sus sandalias. Él los sumergirá en el Rúaj Ha’Kódesh[^874], y en el fuego.
+**16** Y respondió Iojanán, y dijo a todos: Yo los sumerjo en aguas, pero vendrá uno *más* grande que yo, al que le soy pequeño para desatar la correa de sus sandalias. Él los sumergirá en el Rúaj Ha'Kódesh[^874], y en el fuego.
 **17** Y en su mano *está *el aventador, y limpiará su era, y reunirá el grano en su almacén y quemará la paja en el fuego que no se apagará.
 **18** Y muchas otras *cosas* él enseñaba, y anunciaba las buenas noticias al pueblo.
 **19** Pero Horodós el tetrarca[^875], cuando fue reprendido por él acerca de Herodit, mujer de Filipos su hermano, y por todos los males que había hecho Horodós,
@@ -199,7 +199,7 @@ __LUKAH \(LUCAS\)__לוקה
 *Inmersión de Yeshúa*
 
 **21** Y sucedió *que* cuando sumergía a todo el pueblo, Yeshúa también fue sumerjido; y cuando Él oró, se abrieron los cielos,
-**22** y descendió el Rúaj Ha’Kódesh en semejanza de cuerpo de paloma sobre Él; y hubo una voz de los cielos:
+**22** y descendió el Rúaj Ha'Kódesh en semejanza de cuerpo de paloma sobre Él; y hubo una voz de los cielos:
 
 Tú eres mi Hijo, mi amado, en ti me deleito.
 
@@ -226,19 +226,19 @@ Tú eres mi Hijo, mi amado, en ti me deleito.
 
 **4**
 
-**1** Y Yeshúa, lleno del Rúaj Ha’Kódesh[^877], volvió del Iardén[^878] y fue en el Rúaj[^879] al desierto
-**2** *por *cuarenta días para ser tentado por Ha’satán[^880]. Y no comió nada en aquellos días; y cuando se completaron, entonces tuvo hambre.
-**3** Y le dijo Ha’satán: Si eres el Hijo de Elohim, di a esta piedra que se convierta en pan.
+**1** Y Yeshúa, lleno del Rúaj Ha'Kódesh[^877], volvió del Iardén[^878] y fue en el Rúaj[^879] al desierto
+**2** *por *cuarenta días para ser tentado por Ha'satán[^880]. Y no comió nada en aquellos días; y cuando se completaron, entonces tuvo hambre.
+**3** Y le dijo Ha'satán: Si eres el Hijo de Elohim, di a esta piedra que se convierta en pan.
 **4** Y le respondió Yeshúa, diciendo: Está escrito: “no solo por el pan vivirá el hombre, pues por todo lo que sale de la boca de Yehovah[^881]”.
-**5** Y lo llevó Ha’satán a un monte alto, y le hizo ver todos los reinos del olam[^882] en un fluir de tiempo.
-**6** Y le dijo Ha’satán: Te daré todo este dominio y su gloria, porque a mí ha sido dado, y al que yo quiero se lo doy;
+**5** Y lo llevó Ha'satán a un monte alto, y le hizo ver todos los reinos del olam[^882] en un fluir de tiempo.
+**6** Y le dijo Ha'satán: Te daré todo este dominio y su gloria, porque a mí ha sido dado, y al que yo quiero se lo doy;
 **7** y Tú, si te postras y te inclinas a mí, serán todos tuyos.
-**8** Y le respondió, y dijo Yeshúa: Vete de detrás de Mí, Ha’satán, porque está escrito: “A Yehovah tu Elohim temerás, y a Él servirás, *y en su Nombre jurarás[^883]*”.
+**8** Y le respondió, y dijo Yeshúa: Vete de detrás de Mí, Ha'satán, porque está escrito: “A Yehovah tu Elohim temerás, y a Él servirás, *y en su Nombre jurarás[^883]*”.
 **9** Y lo llevó a Ierushaláim, y lo paró sobre la esquina del Hejal[^884], y le dijo: Si eres el Hijo de Elohim, cae de aquí abajo,
 **10** porque está escrito: “Porque a sus ángeles ordenará para ti para guardarte en todos tus caminos,
 **11** sobre *sus* palmas te llevarán, no sea que se golpee con una piedra tu pie[^885]”.
 **12** Y respondió, y le dijo Yeshúa: Está dicho: “No probarán a Yehovah su Elohim[^886]”.
-**13** Y cuando acabó Ha’satán toda su tentación, desistió de Él por un tiempo.
+**13** Y cuando acabó Ha'satán toda su tentación, desistió de Él por un tiempo.
 
 *Yeshúa va a Galil*
 
@@ -254,7 +254,7 @@ Tú eres mi Hijo, mi amado, en ti me deleito.
 **20** Y enrrolló el rollo y lo dio al asistente, y se sentó; y los ojos de todos en la congregación estaban observándolo.
 **21** Y comenzó a hablarles: Hoy se ha cumplido[^893] esta escritura en sus oídos.
 **22** Y todos daban testimonio de Él, y se asombraban por las palabras de favor que salían de su boca, y decían: ¿No es este el hijo de Iosef?
-**23** Y Él les dijo: En verdad me dirán esta parábola: “Médico, sánate a ti mismo. ¡Cuánto hemos oído que hiciste en Kefar Najum[^894]!, ¡haz también* *aquí en tu tierra!”
+**23** Y Él les dijo: En verdad me dirán esta parábola: “Médico, sánate a ti mismo. ¡Cuánto hemos oído que hiciste en Kefar Najum[^894]!, ¡haz también* *aquí en tu tierra! ”
 **24** Y dijo: En verdad Yo les digo que no hay profeta aceptado en su tierra.
 **25** Yo les digo en verdad *que *muchas viudas había en los días de Eliyáhu[^895] en Israel, cuando se cerraron los cielos *por *tres años y seis meses, cuando hubo gran hambre en toda la tierra;
 **26** pero a ninguna de ellas fue enviado Eliyáhu, sino a Tzarefat, que es de Tzidón, a una mujer viuda.
@@ -320,7 +320,7 @@ Tú eres mi Hijo, mi amado, en ti me deleito.
 **21** Y los escribas y los perushim comenzaron a pensar, diciendo: ¿Quién es este que habla blasfemias[^908]? ¿Quién puede soportar pecados sino sólo Elohim?
 **22** Y cuando Yeshúa conoció sus pensamientos, respondió, y les dijo: ¿Qué piensan en sus corazones?
 **23** ¿Qué es *más* fácil, decir: “Te son soportados tus pecados”, o decir: “Leván­tate y anda”?
-**24** Para que sepan que el Ben Ha’Adam[^909] tiene poder en la tierra para soportar los pecados –dijo al privado de miembros–: Yo te digo: Ve, levántate, toma tu camilla y ve a tu casa.
+**24** Para que sepan que el Ben Ha'Adam[^909] tiene poder en la tierra para soportar los pecados –dijo al privado de miembros–: Yo te digo: Ve, levántate, toma tu camilla y ve a tu casa.
 **25** Y al instante se levantó delante de ellos, y tomó su camilla en que había estado acostado y se fue a su casa glorificando y alabando a Yehovah.
 **26** Y el temblor se apoderó de ellos, de todos ellos, y glorificaron a Yehovah; y se llenaron de temor, diciendo: Porque hoy hemos visto maravillas.
 
@@ -351,7 +351,7 @@ Llamamiento de Levi y el banquete en su casa
 **2** Pero unos hombres de los perushim[^914] les dijeron: ¿Por qué hacen lo que no es apto hacer en el Shabat?
 **3** Y respondió Yeshúa, y les dijo: ¿No han leído esto que hizo David[^915] cuando tuvo hambre, él y los que con él estaban;
 **4** cómo entró a la casa de Yehovah y tomó el pan del Rostro[^916] y comió, y* *dio también a los que *estaban* con él, que no les era adecuado comerlo, sino solamente a los sacerdotes[^917]?
-**5** Y les dijo: El Ben Ha’Adam[^918] es Dueño[^919] del Shabat.
+**5** Y les dijo: El Ben Ha'Adam[^918] es Dueño[^919] del Shabat.
 
 *Yeshúa sana al hombre de la mano seca*
 
@@ -366,9 +366,9 @@ Llamamiento de Levi y el banquete en su casa
 
 **12** Y sucedió en aquellos días *que* Él salió al monte a hacer tefilah[^921]; y permaneció en tefilah a Elohim toda la noche.
 **13** Y fue de día, y llamó a sus discípulos, y escogió doce de ellos, a los que llamó enviados:
-**14** A Shimón, que llamó Kefa, y Andreas su hermano; Iaacob y Iojanán; Filipos y Bar\-Talmai;
+**14** A Shimón, que llamó Kefa, y Andreas su hermano; Iaacob y Iojanán; Filipos y BarTalmai;
 **15** Matityáhu, Tomáh, Iaacob* hijo de* Alfi, y Shimón, al que llamaban kanai[^922];
-**16** Iehudáh, *hijo* de Iaacob, y Iehudáh Ish\-Kariot, que fue el traidor.
+**16** Iehudáh, *hijo* de Iaacob, y Iehudáh IshKariot, que fue el traidor.
 **17** Y descendió con ellos y se paró en un lugar de llanura; y *estaba* la congregación de sus discípulos y gran multitud del pueblo de todo Iehudáh y Ierushaláim, y de la costa del mar de Tzor y Tzidón[^923],
 **18** que habían venido para escucharlo y para ser sanados de sus enfermedades; y los que eran oprimidos por espíritus impuros, y eran sanados.
 **19** Y todo el pueblo buscaba tocarlo, porque fuerza salía de Él, y sanaba *a* todos.
@@ -377,7 +377,7 @@ Llamamiento de Levi y el banquete en su casa
 
 **20** Y Él alzó sus ojos hacia sus discípulos, diciendo: Felices los pobres, porque de ustedes es el reino de Elohim.
 **21** Felices los hambrientos ahora, porque serán saciados. Felices los que lloran, porque reirán.
-**22** Felices ustedes cuando los hombres los odien, cuando los separen y los insulten, y echen su nombre como malo, por causa del Ben Ha’Adam[^924].
+**22** Felices ustedes cuando los hombres los odien, cuando los separen y los insulten, y echen su nombre como malo, por causa del Ben Ha'Adam[^924].
 **23** Alégrense en aquel día y regocíjense, he aquí, la recompensa de ustedes es mucha en los cielos, y también de esta manera sus padres hicieron a* *los profetas.
 **24** Pero, ¡oy de ustedes, ricos!, porque recibieron su consuelo[^925].
 **25** ¡Oy de ustedes los llenos, porque tendrán hambre! ¡Oy de ustedes, los que ríen!, porque se lamentarán y llorarán.
@@ -454,14 +454,14 @@ Llamamiento de Levi y el banquete en su casa
 **24** Y se fueron los mensajeros de Iojanán, y comenzó a hablar al pueblo acerca de Iojanán: ¿Qué salieron a ver en el desierto? ¿Una caña que por el viento es sacudida en las aguas?
 **25** O, ¿qué salieron a ver? ¿A un hombre vestido con vestiduras delicadas? He aquí que los que *están *con vestiduras de esplendor y en placer, en las casas de los reyes están.
 **26** O, ¿qué salieron a ver? A un profeta verdadero Yo les digo, incluso más que un profeta.
-**27** Porque este es de quien está escrito:“Heme aquí, envío a mi mensajero, y limpiará el camino delante de Mí[^936]”.
+**27** Porque este es de quien está escrito: “Heme aquí, envío a mi mensajero, y limpiará el camino delante de Mí[^936]”.
 **28** Porque Yo les digo que, entre los nacidos de mujeres, no se la levantado profeta* más* grande que Iojanán el inmersor; y el que es *más* pequeño en el reino de los cielos es *más* grande que él.
 **29** Y todo el pueblo que escuchaba, y los señores de impuestos, justificaron a Yehovah y fueron sumergidos en la inmersión de Iojanán.
 **30** Pero los perushim[^937] y los escribas de la Torah, despreciaron el consejo de Yehovah en su ser, y no fueron sumergidos por él.
 **31** Y dijo el Adón[^938]: ¿A quién compararé los hombres de esta generación, y a quién son semejantes?
 **32** Son semejantes a los muchachos que se sientan en el mercado[^939] y se llaman y se responden el uno al otro, diciendo: Les tocamos flauta, y no saltaron; entonamos canción de duelo, y no lloraron.
-**33** Cuando vino Iojanán el inmersor, no comió pan ni bebió vino, y dicen que tiene a Ha’satán[^940].
-**34** Vino también el Ben Ha’Adam[^941], que come y bebe, y dicen: “He aquí, es un hombre glotón[^942] y bebedor, compañero de los señores de impuestos y pecadores”.
+**33** Cuando vino Iojanán el inmersor, no comió pan ni bebió vino, y dicen que tiene a Ha'satán[^940].
+**34** Vino también el Ben Ha'Adam[^941], que come y bebe, y dicen: “He aquí, es un hombre glotón[^942] y bebedor, compañero de los señores de impuestos y pecadores”.
 **35** Mas la sabiduría es justificada por todos los hijos de ella.
 
 *Yeshúa en casa de Shimón*
@@ -472,7 +472,7 @@ Llamamiento de Levi y el banquete en su casa
 **39** Y cuando la vio el perush que lo había invitado, dijo en su interior: Si este fuera profeta, también sabría quién es esta y lo que se oye de ella, de la que lo está tocando, que es pecadora.
 **40** Y respondió Yeshúa, y le dijo: Shimón, tengo *algo *que decirte. Y él dijo: Di, Rabí[^945].
 **41** “Dos hombres le debían a un acreedor, uno le debía quinientos denarios y el otro cincuenta;
-**42** y cuando no tuvieron para pagarle, los favoreció *a* los dos. ¿Y quién de ellos dices que lo amará más?”
+**42** y cuando no tuvieron para pagarle, los favoreció *a* los dos. ¿Y quién de ellos dices que lo amará más? ”
 **43** Y respondió Shimón, y dijo: Yo interpreto que este al que lo favoreció más. Y Él le dijo: Rectamente has juzgado.
 **44** Y se volvió hacia la mujer, y dijo a Shimón: ¿Ves tú a la mujer? Entré a tu casa y no me diste agua para mis pies, pero ella ha lavado mis pies con lágrimas, y con los cabellos de su cabeza los ha frotado;
 **45** beso no me diste, pero ella, después que entró, no ha dejado de besar mis pies;
@@ -502,7 +502,7 @@ Llamamiento de Levi y el banquete en su casa
 **9** Y le preguntaron sus discípulos, diciendo: ¿Qué enseña esta parábola?
 **10** Y dijo: A ustedes *les* ha sido dado a conocer el misterio del reino de los cielos, pero a* *los otros, en parábolas, para que, viendo, no vean, y oyendo, no entiendan.
 **11** Y esto enseña la parábola: La semilla es la palabra de Yehovah.
-**12** Y los de sobre el camino, ellos son los que escuchan, y entonces viene Ha’satán[^950] y toma la palabra de sus corazones, para que no se afirmen y sean salvos.
+**12** Y los de sobre el camino, ellos son los que escuchan, y entonces viene Ha'satán[^950] y toma la palabra de sus corazones, para que no se afirmen y sean salvos.
 **13** Y los de sobre la peña, ellos, cuando escuchan, reciben la palabra con alegría; pero no tienen raíz, por eso, por un tiempo se afirman, pero en los tiempos de estrechez se rebelan.
 **14** Y la que cayó en los espinos, estos son los que escuchan, pero se preocupan por la riqueza, y en el placer de la vida andan, y son ahogados, y su fruto no hacen.
 **15** Y los de en la tierra buena, estos son los que con corazón bueno y agradable escuchan la palabra y la agarran, y hacen fruto de silencio[^951].
@@ -528,7 +528,7 @@ Llamamiento de Levi y el banquete en su casa
 **26** Y descendieron y llegaron a la región de los gadarim, que está al frente de Galil[^955].
 **27** Y salió a la tierra, y se encontró con Él un hombre de la ciudad que tenía demonios desde *ya *muchos tiempos, y ropa no vestía, y no estaba en una casa, sino en las tumbas.
 **28** Y cuando vio a Yeshúa, gritó y cayó a sus pies, y con gran voz dijo: ¿Qué a mí y a ti, Yeshúa, Hijo de El[^956] Elyón? ¡No me hagas desolación!
-**29** Y ordenó al espíritu impuro salir del hombre, porque por muchos tiempos lo arrebataban, y lo capturaban con grilletes y lo ataban con *cadenas de* cobre, y lo ponían en la prisión; y rompía las cadenas, y lo llevaba Ha’satán[^957] al desierto.
+**29** Y ordenó al espíritu impuro salir del hombre, porque por muchos tiempos lo arrebataban, y lo capturaban con grilletes y lo ataban con *cadenas de* cobre, y lo ponían en la prisión; y rompía las cadenas, y lo llevaba Ha'satán[^957] al desierto.
 **30** Y le preguntó Yeshúa, diciendo: ¿Cuál es tu nombre? Y dijo: Legión[^958]; porque muchos demonios habían entrado a él.
 **31** Y le pedían que no les mandara ir al abismo.
 **32** Y había allí una manada de muchos cerdos que pastaban en el monte; y le rogaron que les ordenara entrar a estos. Y les ordenó.
@@ -547,7 +547,7 @@ Llamamiento de Levi y el banquete en su casa
 **42** porque una hija única él tenía, como de doce años, y ella estaba cercana a la muerte. Y cuando fue con él, lo apretaba la mucha congregación.
 **43** Y* *una mujer que había estado enferma en su nidáh[^959] *por* doce años, la cual había gastado toda su posesión en médicos, y no había podido ser sanada por ningún hombre,
 **44** vino por detrás y tocó el borde de su vestidura, e inmediatamente paró el flujo de su sangre.
-**45** Y dijo Yeshúa: ¿Quién me tocó? Y negando todos, dijo Kefa y los que estaban con él: Maestro, mucha gente *te* aprieta y te oprime, y dices: “¿Quién me tocó?”
+**45** Y dijo Yeshúa: ¿Quién me tocó? Y negando todos, dijo Kefa y los que estaban con él: Maestro, mucha gente *te* aprieta y te oprime, y dices: “¿Quién me tocó? ”
 **46** Y dijo Yeshúa: Alguien me tocó, porque he percibido[^960] que fuerza salió de Mí.
 **47** Y cuando vio la mujer que no estaba oculta, vino con temblor y cayó a sus pies; y le dio a conocer delante de todo el pueblo su causa por la cual lo había tocado, y cómo fue sanada cuando lo tocó.
 **48** Y Él le dijo__: __Fortalécete y esfuérzate, hija mía, tu emunah[^961] te ha salvado; ve en shalom[^962].
@@ -597,11 +597,11 @@ Llamamiento de Levi y el banquete en su casa
 **19** Y respondieron, y dijeron: Iojanán el inmersor; y otros, Eliyáhu[^967]; y otros, que un profeta de los antiguos se ha levantado.
 **20** Y Él les dijo: Y ustedes, ¿quién dicen que soy Yo? Y respondió Kefa: El Mesías[^968] de Yehovah.
 **21** Y los reprendió, y les ordenó que no dijeran esto a ningún* *hombre.
-**22** *Diciendo:* Es necesario que el Ben Ha’Adam[^969] sufra muchas *cosas* y sea despreciado por los ancianos y los jefes de los sacerdotes, siendo asesinado, y en el día tercero, levan­tarse.
+**22** *Diciendo:* Es necesario que el Ben Ha'Adam[^969] sufra muchas *cosas* y sea despreciado por los ancianos y los jefes de los sacerdotes, siendo asesinado, y en el día tercero, levan­tarse.
 **23** Y dijo a todos: Si un hombre quiere venir detrás de Mí, niéguese a sí mismo y tome su cruz cada día, y venga detrás de Mí.
 **24** Porque todo el que quiera salvar su vida, la* *perderá; y el que pierda su vida por causa de Mí, él la salvará.
 **25** ¿Y qué aprovechará al hombre aun cuando ganare todo el olam[^970], si pierde su vida o si es castigado?
-**26** Porque el que se avergüence de Mí y de mis palabras, también el Ben Ha’Adam se avergonzará de él cuando venga en su gloria y en la gloria de su Padre y los ángeles santos.
+**26** Porque el que se avergüence de Mí y de mis palabras, también el Ben Ha'Adam se avergonzará de él cuando venga en su gloria y en la gloria de su Padre y los ángeles santos.
 **27** En verdad Yo les digo *que* hay aquí hombres parados que no probarán la muerte hasta que vean el reino de Elohim.
 
 *El cuerpo de Yeshúa se transforma*
@@ -629,7 +629,7 @@ Llamamiento de Levi y el banquete en su casa
 
 **43** Y se asombraron todos por la grandeza de Yehovah, y quedaron atónitos por todo lo que Él hacía. Y dijo a sus discípulos:
 
-**44** Pongan estas palabras en sus oídos[^973], porque el Ben Ha’Adam pronto será dado en manos de los hombres[^974].
+**44** Pongan estas palabras en sus oídos[^973], porque el Ben Ha'Adam pronto será dado en manos de los hombres[^974].
 **45** Y ellos no entendían esta palabra, y estaba oculta de ellos, para que no la supiesen. Y temían preguntarle sobre esta palabra.
 
 *El grande en el reino de los cielos*
@@ -647,12 +647,12 @@ Llamamiento de Levi y el banquete en su casa
 **53** Y no lo recibieron, porque su rostro estaba afirmado para ir a Ierushaláim.
 **54** Y cuando vieron sus discípulos, Iaacob y Iojanán dijeron: Amo nuestro, ¿quieres que digamos que descienda fuego de los cielos y los haga perecer, como también Eliyáhu hizo?
 **55** Y se volvió y los corrigió, diciendo: ¿No saben de qué Rúaj *son *ustedes?
-**56** Porque el Ben Ha’Adam[^976] no vino para hacer perecer las vidas de los hombres, sino para salvar. Y fueron a otra aldea.
+**56** Porque el Ben Ha'Adam[^976] no vino para hacer perecer las vidas de los hombres, sino para salvar. Y fueron a otra aldea.
 
 *Lo que requiere seguir a Yeshúa*
 
 **57** Y sucedió *que *cuando iban por el camino, le dijo uno: Iré detrás de ti, dondequiera que vayas, Adonai.
-**58** Y le dijo Yeshúa: Para las zorras hay cuevas, y para las aves de los cielos nidos, pero para el Ben Ha’Adam no hay donde ponga su cabeza.
+**58** Y le dijo Yeshúa: Para las zorras hay cuevas, y para las aves de los cielos nidos, pero para el Ben Ha'Adam no hay donde ponga su cabeza.
 **59** Y dijo a uno: Ven detrás de Mí. Pero dijo: Adonai, déjame ir primero a enterrar a mi padre.
 **60** Y le dijo Yeshúa: Deja a los muertos enterrar a sus muertos; y tú, ve por ti, y anuncia el reino de Elohim.
 
@@ -684,7 +684,7 @@ Llamamiento de Levi y el banquete en su casa
 *Regreso de los setenta*
 
 **17** Y volvieron los setenta con alegría, diciendo: Adonai, ¡aún los demonios se subyugan a nosotros en tu Nombre!
-**18** Y Él les dijo: He visto a Ha’satán, como un relámpago, cayendo de los cielos[^983].
+**18** Y Él les dijo: He visto a Ha'satán, como un relámpago, cayendo de los cielos[^983].
 **19** He aquí, Yo les he dado poder para pisar sobre las serpientes y escorpiones, y sobre todo poder del enemigo, y nada los dañará.
 **20** Pero no se alegren en esto, *en *que los espíritus se subyugan a ustedes, alégrense *en *que sus nombres estén escritos en los cielos.
 
@@ -742,7 +742,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **10** Porque todo el que pide, recibirá; y el que busca, hallará; y al que llama, se *le* abrirá.
 **11** Porque, ¿Quién entre ustedes *hay* que pide de su padre pan, y* *le da una piedra? ¿O, le pide pescado, y le da una serpiente en su lugar?
 **12** ¿O si *le *pide un huevo, le dará un escorpión?
-**13** Por eso, si ustedes que son malos, saben dar buenas dádivas a sus hijos, ¿cuánto más su Padre que *está *en los cielos dará el Rúaj Ha’Kódesh a quien se lo pida?
+**13** Por eso, si ustedes que son malos, saben dar buenas dádivas a sus hijos, ¿cuánto más su Padre que *está *en los cielos dará el Rúaj Ha'Kódesh a quien se lo pida?
 
 *Yeshúa y Baal Zebub*
 
@@ -750,7 +750,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **15** Y algunos decían: Por Baal Zebub[^996], cabeza de los demonios, saca a los demonios.
 **16** Y otros, poniéndolo a prueba, buscaban de Él una señal de los cielos.
 **17** Y cuando Él conoció sus pensamientos, les dijo: Todo reino que contra sí mismo se divide, es desolado, y una casa *que esté *contra su casa, caerá.
-**18** Y si también Ha’satán[^997] se divide contra sí mismo, ¿cómo se levantará su reino? Porque ustedes dicen que por Baal Zebub saco a los demonios.
+**18** Y si también Ha'satán[^997] se divide contra sí mismo, ¿cómo se levantará su reino? Porque ustedes dicen que por Baal Zebub saco a los demonios.
 **19** Y si Yo saco a los demonios por Baal Zebub, ¿por quién los sacan los hijos de ustedes? Por eso, ellos serán los jueces de ustedes.
 **20** Pero si por el dedo de Elohim Yo saco *a* los demonios, ciertamente ha venido a ustedes el reino de los cielos.
 **21** Si el fuerte de ejército guarda su patio[^998], en bienestar estarán todas sus posesiones.
@@ -768,7 +768,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 *La gente pide una señal*
 
 **29** Y se reunió el pueblo, y comenzó a hablar: Esta generación mala busca una señal, pero señal no le será dada, sino la señal de Ionah[^999] el profeta.
-**30** Porque como fue Ionah señal a Nineveh, así será el Ben Ha’Adam[^1000] a esta generación.
+**30** Porque como fue Ionah señal a Nineveh, así será el Ben Ha'Adam[^1000] a esta generación.
 **31** La reina de Sheba[^1001] se levantará en el juicio con los hombres de esta generación, y los declarará culpables, porque ella vino desde los confines de la tierra para escuchar la sabiduría de Shelomóh[^1002], y he aquí, *uno* mayor que Shelomoh *hay *aquí.
 **32** Los hombres de Nineveh se levantarán en el día del juicio con esta generación, y los declararán culpables, porque ellos se volvieron de su mal por la proclamación de Ionah, y he aquí, *uno* mayor que Ionah *hay *aquí.
 
@@ -811,11 +811,11 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **5** Y les mostraré a quién temerán: temerán al que tiene poder después de matar, para arrojar al Guei Hinom[^1014]; verdaderamente Yo les digo: A Él temerán.
 **6** ¿No se venden cinco pajaritos por dos monedas?, y ni uno de ellos es olvidado delante de Elohim.
 **7** Y también, los cabellos de sus cabezas, todos ellos están contados. Por eso, no teman. Porque más que muchos pajaritos son ustedes.
-**8** Yo les digo *que* todo el que me confiese delante de los hombres, el Ben Ha’Adam[^1015] lo confesará delante de los ángeles de Elohim;
+**8** Yo les digo *que* todo el que me confiese delante de los hombres, el Ben Ha'Adam[^1015] lo confesará delante de los ángeles de Elohim;
 **9** pero el que me niegue delante de los hombres, será negado delante de los ángeles de Elohim.
-**10** Y todo el que diga una palabra contra el Ben Ha’Adam, le será soportado; pero el que injurie al Rúaj Ha’Kódesh[^1016], no le será soportado.
+**10** Y todo el que diga una palabra contra el Ben Ha'Adam, le será soportado; pero el que injurie al Rúaj Ha'Kódesh[^1016], no le será soportado.
 **11** Y cuando los acerquen a los señores de las asambleas y a las grandes sinagogas, delante de las cabezas de los padres y las autoridades, no se pongan ansiosos *acerca de *cómo y qué responderán, o qué hablarán,
-**12** porque el Rúaj Ha’Kódesh les enseñará en aquel momento todo lo que necesitan hablar.
+**12** porque el Rúaj Ha'Kódesh les enseñará en aquel momento todo lo que necesitan hablar.
 
 *Advertencia contra la avaricia*
 
@@ -826,7 +826,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **17** Y pensó en su ser, diciendo: “¿Qué haré?, porque no tengo lugar donde reunir mis frutos”.
 **18** Y dijo: “Esto haré: derribaré mis almacenes y *más* grandes que ellos edificaré, y reuniré allí todo mi producto y mis bienes”.
 **19** “Y diré a mi ser: Ser, tienes todos *estos* bienes que has guardado para muchos años, descansa, come, bebe y deléitate”.
-**20** Pero Elohim le dijo: “¡Marchito! En esta noche exigirán tu vida[^1017] de ti, y todas estas *cosas* que has aparejado, ¿de quién serán?”
+**20** Pero Elohim le dijo: “¡Marchito! En esta noche exigirán tu vida[^1017] de ti, y todas estas *cosas* que has aparejado, ¿de quién serán? ”
 **21** Así es todo el que atesora para su ser y no se enriquece en Elohim.
 
 *Advertencia contra la ansiedad*
@@ -853,7 +853,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **37** ¡Felices son estos siervos que cuando viene el amo los halla despiertos! Verdaderamente Yo les digo que ceñirá sus lomos y los hará sentar a la mesa, y pasará y les servirá.
 **38** Y si viene en la segunda vigilia[^1022] o en la tercera vigilia[^1023], y *los* halla así, ¡felices estos siervos!
 **39** Sepan esto: que si* *supiera el dueño de la casa la hora en la que ha de venir el ladrón, ciertamente estaría despierto[^1024], y no permitiría cavar su casa.
-**40** Y ustedes estén listos, porque en la hora que no sepan ciertamente vendrá[^1025] el Ben Ha’Adam[^1026].
+**40** Y ustedes estén listos, porque en la hora que no sepan ciertamente vendrá[^1025] el Ben Ha'Adam[^1026].
 
 *Parábola del siervo fiel y el infiel*
 
@@ -897,7 +897,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 *La higuera sin frutos*
 
 **6** Y dijo esta parábola: Había un hombre, y tenía una higuera plantada en su viña, y entró para buscar fruto en ella, pero no *lo *halló.
-**7** Y dijo al viñero: “He aquí, tres años vine para buscar mi fruto en esta higuera, pero no *lo* hallé. Córtala. ¿Por qué engañará a la tierra?”
+**7** Y dijo al viñero: “He aquí, tres años vine para buscar mi fruto en esta higuera, pero no *lo* hallé. Córtala. ¿Por qué engañará a la tierra? ”
 **8** Y le dijo el viñero: “Amo mío, déjala aún *por* este año, hasta que cave alrededor de ella y la abone,
 **9** si hace fruto; y si no, entonces córtala”.
 
@@ -909,7 +909,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **13** Y puso sobre ella las manos, y al instante se enderezó, y glorificó a Elohim.
 **14** Y respondió un rabino de la asamblea, enfureciéndose porque Yeshúa había sanado en el día del Shabat, y dijo al pueblo: Seis días hay en que es necesario obrar, y en estos vengan y sean sanados, pero no en el día del Shabat.
 **15** Y le respondió el Adón[^1032], y dijo: Hipócritas, ¿no hay hombres entre ustedes que en el Shabat desatan su buey o su asno del establo y los llevan a beber?
-**16** Y a esta hija de Abraham, que Ha’satán[^1033] la había atado, he aquí, dieciocho años, ¿no tuvo la necesidad de ser desatada de esta atadura en el día del Shabat?
+**16** Y a esta hija de Abraham, que Ha'satán[^1033] la había atado, he aquí, dieciocho años, ¿no tuvo la necesidad de ser desatada de esta atadura en el día del Shabat?
 **17** Y cuando habló las palabras, se avergonzaron todos los que se habían levantado contra Él, pero se alegró todo el pueblo por todas las cosas honrosas que eran hechas por su mano.
 
 *Parábola del grano de mostaza*
@@ -927,7 +927,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **22** E iba por las ciudades y aldeas y enseñaba, y caminaba hacia Ierushaláim.
 **23** Y un hombre le dijo: Adonai, ¿son pocos los que son salvos? Y Él le dijo:
 **24** Luchen por entrar por la puerta cerrada[^1036], porque muchos, Yo les digo, buscarán entrar y no podrán.
-**25** Porque cuando se levante el dueño de la casa y cierre el portón, comenzarán a levantarse afuera y a golpear la puerta, diciendo: “¡Amo nuestro, Amo nuestro, ábrenos!”, y responderá, y les dirá: “No los conozco. ¿De dónde son?”.
+**25** Porque cuando se levante el dueño de la casa y cierre el portón, comenzarán a levantarse afuera y a golpear la puerta, diciendo: “¡Amo nuestro, Amo nuestro, ábrenos! ”, y responderá, y les dirá: “No los conozco. ¿De dónde son? ”.
 **26** Entonces comenzarán a decir: “Comimos delante de ti, y bebimos, y en nuestras calles enseñaste”;
 **27** y hablará, diciendo: “Yo a ustedes no los conozco. ¿De dónde son?; apártense de mí todos los hacedores de vacuidad[^1037]”.
 **28** Allí será el llanto y el rechinar de dientes, cuando vean a Abraham, Itzjak y Iaacob, y todos los profetas, en el reino de Elohim, y ustedes serán echados fuera.
@@ -940,7 +940,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **32** Y les dijo: Vayan y digan a este zorro: “He aquí, Yo saco a los demonios, y completo sanidades hoy y mañana, y en el día tercero Yo llegaré a plenitud[^1039].
 **33** Pero me es necesario caminar hoy, mañana y pasado mañana, porque no puede perecer el profeta fuera de Ierushaláim.
 **34** ¡Ierushaláim, Ierushaláim!, la que mata *a* los profetas y apedrea a aquellos que son enviados a ti. ¡Cuántas veces quise reunir a tus hijos como reúne la gallina a sus pollitos debajo de sus alas, y no quisieron!
-**35** He aquí, alejada será a ustedes su casa, desolada. Porque Yo les digo que no me verán hasta que venga el que digan: ¡Bendito el que viene en el Nombre de Yehovah[^1040]!”
+**35** He aquí, alejada será a ustedes su casa, desolada. Porque Yo les digo que no me verán hasta que venga el que digan: ¡Bendito el que viene en el Nombre de Yehovah[^1040]! ”
 
 *Yeshúa sana a un enfermo en el Shabat*
 
@@ -991,7 +991,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **32** y si no, estando todavía lejos de él, envía intercesores para pedirle por la paz?
 **33** Así, cualquiera de ustedes que no deje toda su posesión, no podrá ser mi discípulo.
 **34** Buena es la sal, pero si recae, ¿cómo salará?
-**35** Ni para la tierra ni para el muladar es apta, sino que la echan fuera.El que tenga oídos para escuchar, escuchará.
+**35** Ni para la tierra ni para el muladar es apta, sino que la echan fuera. El que tenga oídos para escuchar, escuchará.
 
 *Parábola de la oveja perdida*
 
@@ -1002,13 +1002,13 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **3** Y Él les dijo esta parábola, diciendo:
 **4** ¿Quién de ustedes que tenga cien ovejas, y se pierde de ellas un cordero, no dejará a las noventa y nueve en el desierto e irá tras la perdida hasta que la halla?
 **5** Y cuando la encuentre, la pondrá sobre sus hombros, y se alegrará;
-**6** y cuando entre a su casa, llamará a sus amigos y sus cercanos, diciendo: “¡Alégrense conmigo, porque he hallado mi oveja que se había perdido!”
+**6** y cuando entre a su casa, llamará a sus amigos y sus cercanos, diciendo: “¡Alégrense conmigo, porque he hallado mi oveja que se había perdido! ”
 **7** Yo les digo que así habrá alegría en los cielos por un pecador que se vuelve de su mal más que de noventa y nueve justos que no necesitan teshuváh.
 
 *Parábola de la moneda perdida*
 
 **8** ¿O una mujer quien tiene diez monedas[^1045], si pierde una moneda, no enciende su lámpara y barre con escoba su casa y la busca con diligencia hasta que *la* halla?
-**9** Y cuando *la *halla, entonces llama a sus amigas y sus cercanas, diciendo: “¡Alégrense conmigo, porque he hallado la moneda que había perdido!”
+**9** Y cuando *la *halla, entonces llama a sus amigas y sus cercanas, diciendo: “¡Alégrense conmigo, porque he hallado la moneda que había perdido! ”
 **10** Así, Yo les digo, habrá alegría delante de los ángeles de Elohim por un pecador que se vuelve del mal.
 
 *Parábola del hijo pródigo*
@@ -1021,14 +1021,14 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **16** Y él deseaba llenar su vientre de los residuos que los cerdos comían, y el hombre no le daba.
 **17** Y vino a sí mismo, y dijo: “¡Cuántos asalariados de mi padre tienen abundancia, pero yo perezco con hambre!
 **18** Me levantaré e iré a mi padre, y le diré: ‘Padre mío, he pecado contra los cielos y contra tu rostro;
-**19** pequeño soy yo para ser llamado tu hijo; hazme como uno de tus asalariados’ ”.
+**19** pequeño soy yo para ser llamado tu hijo; hazme como uno de tus asalariados' ”.
 **20** Y se levantó y fue a su padre. Y todavía estando lejos de él, lo vio su padre y se le estremecieron sus entrañas, y corrió y cayó sobre su cuello y lo besó.
 **21** Y el hijo le dijo: “Padre mío, he pecado contra los cielos y contra tu rostro; y no soy digno de ser llamado tu hijo”.
 **22** Y dijo el padre a sus siervos: “¡Saquen y acérquenme su principal vestido y vístanlo, y pónganle un anillo en su mano y zapatos en sus pies!
 **23** Y tomen un hijo de ganado tierno y bueno, y apresúrense a hacerlo, ¡y comamos pan, alimentemos nuestro corazón y alegrémonos!;
 **24** porque este, mi hijo, estaba muerto y vivió, estaba perdido y fue hallado”. Y comenzaron a alegrarse.
 **25** Y su hijo mayor estaba en el campo, y cuando vino y se acercó a la casa, oyó la voz del arpa y la danza.
-**26** Y llamó a uno de los jóvenes, y preguntó: “¿Qué es esto?”
+**26** Y llamó a uno de los jóvenes, y preguntó: “¿Qué es esto? ”
 **27** Y él le dijo: “Tu hermano ha venido, y tu padre ha matado un hijo de ganado tierno y bueno porque lo recibió a salvo”.
 **28** Y ardió su ira, y no quiso subir. Y su padre salió a él, y le pedía *que entrara*.
 **29** Pero él respondió a su padre: “He aquí, ¿cuántos años te he servido, y en todo tiempo no sobrepasé tu mandamiento?, y no me has dado un cabrito para alegrarme con mis amigos;
@@ -1041,12 +1041,12 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **16**
 
 **1** Y dijo a sus discípulos: Había un hombre rico, el cual tenía un mayordomo de la casa; pero su difamación vino hacia él, porque había derrochado su posesión.
-**2** Y lo llamó, y le dijo: “¿Qué es esto que yo estoy escuchando acerca de ti?” Da cuentas de la mayordomía de mi casa, porque no podrás más ser mayordomo de mi casa”.
+**2** Y lo llamó, y le dijo: “¿Qué es esto que yo estoy escuchando acerca de ti? ” Da cuentas de la mayordomía de mi casa, porque no podrás más ser mayordomo de mi casa”.
 **3** Y dijo el mayordomo de la casa: “¿Qué haré? Porque mi amo me ha quitado la mayor­domía de su casa. Cavar, no puedo; mendigar, me avergüenza.
 **4**¡Sé qué haré!, porque si me quita la mayordomía de la casa, me recibirán en sus casas”.
-**5** Y llamó solo a cada uno de los opresores de su amo, y dijo al primero: “¿Cuánto le debes a mi amo?”
+**5** Y llamó solo a cada uno de los opresores de su amo, y dijo al primero: “¿Cuánto le debes a mi amo? ”
 **6** Y él dijo: “Cien batos de aceite”. Y él le dijo: “Toma tu escritura, y siéntate rápido y escribe cincuenta”.
-**7** Y después dijo a otro: “¿Y tú cuánto le debes a mi amo?” Y él dijo: “Cien coros de trigo”. Y él le dijo: “Toma tu escritura y escribe ochenta”.
+**7** Y después dijo a otro: “¿Y tú cuánto le debes a mi amo? ” Y él dijo: “Cien coros de trigo”. Y él le dijo: “Toma tu escritura y escribe ochenta”.
 **8** Y alabó el amo al mayordomo de la casa *hijo de *Belial[^1047], porque con sabiduría había hecho. Porque los hijos de este olam[^1048] son más sabios que los hijos de la luz en sus generaciones.
 **9** Y Yo les digo: Háganse amigos de riqueza injusta, para que cuando sean faltos, sean recibidos en las tiendas de olam.
 **10** El fiel en lo pequeño, será fiel también en lo grande; y el que es injusto en lo pequeño, será injusto también en lo grande.
@@ -1069,7 +1069,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 **21** Y deseaba saciarse de las migajas que caían de la mesa del rico, y aun los perros venían le lamían sus forúnculos *y* erupciones.
 **22** Y sucedió *que *cuando murió el pobre fue llevado por los ángeles al seno de Abraham; y murió también el rico y fue sepultado.
 **23** Y cuando él estaba en el Sheol en desolaciones, alzó sus ojos y vio a Abraham desde lejos, y a Eleazar en su seno.
-**24** Y clamó, y dijo: “¡Padre mío, Abraham, ten favor hacia mí, y envía a Eleazar para que sumerja la punta de su dedo en agua y humedezca mi lengua, porque soy afligido en esta llama!”
+**24** Y clamó, y dijo: “¡Padre mío, Abraham, ten favor hacia mí, y envía a Eleazar para que sumerja la punta de su dedo en agua y humedezca mi lengua, porque soy afligido en esta llama! ”
 **25** Y dijo Abraham: “Hijo mío, recuerda que tomaste tus cosas buenas en tu vida, y Eleazar, por el contrario, sus cosas malas. Y ahora él es restaurado, y tú, doliente.
 **26** Y además de todo esto, entre nosotros y ustedes fue puesto un gran abismo, y los que quieran pasar de aquí a ustedes, no podrán, y de allí a nosotros no podrán pasar”.
 **27** Y él dijo: “Yo te pido, padre mío, que lo envíes a la casa de mi padre,
@@ -1091,7 +1091,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 
 **5** Y le dijeron los discípulos al Adón[^1055]: ¡Añade para nosotros emunah!
 
-**6** Y dijo Adonai: Si hay para ustedes emunah como un grano de mostaza, y le dicen a este sicomoro: “¡Desarráigate y plántate en el mar!”, los escucharía.
+**6** Y dijo Adonai: Si hay para ustedes emunah como un grano de mostaza, y le dicen a este sicomoro: “¡Desarráigate y plántate en el mar! ”, los escucharía.
 **7** ¿Quién de ustedes tiene un siervo que ara o pastorea, que, si vuelve del campo, le dice: “Ven enseguida y alimenta tu corazón *con *un bocado de pan”?
 **8** ¿No le dirá: “Prepara para que coma en la tarde, y ciñe tus lomos y sírveme hasta que coma y beba; y después de eso tú comerás y beberás”?
 **9**¿Acaso se anticipará al rostro de aquel siervo en agradecimiento porque hizo lo que le mandó? Yo no me imagino.
@@ -1112,16 +1112,16 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 *El reino de Elohim*
 
 **20** Y preguntó *uno *de los perushim[^1063]: ¿Cuándo vendrá el reino de Elohim? Y les respondió, y dijo: No vendrá el reino de Elohim con observación[^1064],
-**21** ni dirán: “¡Aquí está!”, o: “¡Allá está!” Porque, he aquí, el reino de Elohim está en el interior de ustedes.
-**22** Y dijo a sus discípulos: Vendrán días, y desearán ver uno de los días del Ben Ha’Adam[^1065], y no *lo* verán.
-**23** Y les dirán: “¡Aquí está!”, o: “¡Allá está!” No vayan, ni vayan detrás de ellos.
-**24** Porque como el relámpago resplandece, y todo lo que está debajo de los cielos, desde un extremo de los cielos hasta su *otro *extremo, se ilumina, así será el Ben Ha’Adam en su día.
+**21** ni dirán: “¡Aquí está! ”, o: “¡Allá está! ” Porque, he aquí, el reino de Elohim está en el interior de ustedes.
+**22** Y dijo a sus discípulos: Vendrán días, y desearán ver uno de los días del Ben Ha'Adam[^1065], y no *lo* verán.
+**23** Y les dirán: “¡Aquí está! ”, o: “¡Allá está! ” No vayan, ni vayan detrás de ellos.
+**24** Porque como el relámpago resplandece, y todo lo que está debajo de los cielos, desde un extremo de los cielos hasta su *otro *extremo, se ilumina, así será el Ben Ha'Adam en su día.
 **25** Pero antes es necesario que Él cargue[^1066] muchas *cosas*, y que sea despreciado por esta generación.
-**26** Y como sucedió en los días de Nóaj[^1067], así será en los días del Ben Ha’Adam.
+**26** Y como sucedió en los días de Nóaj[^1067], así será en los días del Ben Ha'Adam.
 **27** Comían, bebían, se daban en casamiento y tomaban para sí mujeres de todas las que escogían, hasta este mismo día *en* que entró Nóaj al arca, y vino el diluvio y pereció todo.
 **28** Asimismo cuando fue en los días de Lot: comían, bebían, compraban, vendían, plantaban, edificaban;
 **29** pero aquel día en que salió Lot de Sedom, hizo llover Yehovah fuego y azufre de los cielos y perecieron todos.
-**30** De la misma manera será en el día *en *que el Ben Ha’Adam se revele.
+**30** De la misma manera será en el día *en *que el Ben Ha'Adam se revele.
 **31** En aquel tiempo, el que esté sobre el terrado y *tenga* sus objetos en* *la casa, no descienda a tomarlos; y, asimismo, el que esté en el campo no vuelva atrás.
 **32** Recuerden a la mujer de Lot[^1068].
 **33** Porque el que busque salvar su vida, la perderá; y el que la pierda, la hará vivir.
@@ -1144,7 +1144,7 @@ a todos nuestros deudores.Y no nos hagas entrar en la prueba,sino rescátanos de
 porque esta viuda me ha cansado, la defenderé[^1074], para que no venga siempre ni me apresure”.
 **6** Y dijo Adonai: Escuchen lo que dijo el juez injusto.
 **7** ¿Y Elohim no defenderá[^1075] a sus escogidos, que claman a Él día y noche, y será prolongado de ira sobre ellos?
-**8** Verdaderamente Yo les digo que hará su defensa[^1076] con rapidez. Por eso, cuando venga el Ben Ha’Adam, ciertamente hallará emunah[^1077] en la tierra.
+**8** Verdaderamente Yo les digo que hará su defensa[^1076] con rapidez. Por eso, cuando venga el Ben Ha'Adam, ciertamente hallará emunah[^1077] en la tierra.
 
 *Parábola del perush y el publicano*
 
@@ -1179,7 +1179,7 @@ porque esta viuda me ha cansado, la defenderé[^1074], para que no venga siempre
 
 *Yeshúa anuncia su muerte y resurrección por tercera vez*
 
-**31** Y tomó a los doce, y les dijo: He aquí, nosotros subimos a Ierushaláim, y serán completados todos los escritos que *están *en los profetas acerca del Ben Ha’Adam[^1085];
+**31** Y tomó a los doce, y les dijo: He aquí, nosotros subimos a Ierushaláim, y serán completados todos los escritos que *están *en los profetas acerca del Ben Ha'Adam[^1085];
 **32** porque será dado en manos de los gentiles, y será burlado, injuriado y escupido en la cara;
 **33** y lo azotarán con látigos y lo matarán, y en el día tercero se levantará de los muertos.
 **34** Y ellos ni una de estas *cosas *entendían, y este asunto estaba oculto de ellos, y no sabían las cosas habladas.
@@ -1209,7 +1209,7 @@ porque esta viuda me ha cansado, la defenderé[^1074], para que no venga siempre
 **7** Y cuando todos vieron, murmuraron, diciendo: Hacia un hombre pecador vino a pasar la noche.
 **8** Y se paró Zaqui, y dijo al Adón: He aquí, la mitad de todas mis posesiones, Adonai, daré a los pobres, y si en alguna cosa he cometido ganancia injusta contra un hombre, devolveré cuadruplicado.
 **9** Y le dijo Yeshúa: ¡Hoy fue hecha salvación para esta casa!, por cuanto este también es hijo de Abraham.
-**10** Porque el Ben Ha’Adam[^1090] ha venido a buscar y a salvar al perdido.
+**10** Porque el Ben Ha'Adam[^1090] ha venido a buscar y a salvar al perdido.
 
 *Parábola de las minas*
 
@@ -1226,7 +1226,7 @@ porque esta viuda me ha cansado, la defenderé[^1074], para que no venga siempre
 **21** pues tuve temor de ti, porque eres hombre fuerte de rostro, tomas lo que no pusiste, y cosechas lo que no sembraste”.
 **22** Y le dijo: “De tu boca te pondré bajo juicio, siervo *hijo de *Belial[^1093]. Sabías que Yo soy hombre fuerte de rostro, que tomo lo que no puse y cosecho lo que no sembré.
 **23**¿Y por qué no diste tu plata[^1094] a la mesa *de cambistas*, y yo venía y la tomaba con ganancia?
-**24** Y a estos que estaban parados delante de Él dijo: “¡Tomen de él la mina y den*la* a este que tiene diez minas!”
+**24** Y a estos que estaban parados delante de Él dijo: “¡Tomen de él la mina y den*la* a este que tiene diez minas! ”
 **25** Y le dijeron: “Amo nuestro, él tiene diez minas”.
 **26** Yo les digo que a todo el que tiene, se le dará, y al que no tiene nada, aun esto que tiene será tomado de él.
 **27** También a estos mis enemigos, que no querían que Yo reinara sobre ellos, tráiganlos aquí y degüéllenlos delante de Mí.
@@ -1236,14 +1236,14 @@ porque esta viuda me ha cansado, la defenderé[^1074], para que no venga siempre
 **28** Y cuando dijo estas *cosas*, se anticipaba para ir, y subía a Ierushaláim.
 **29** Y sucedió *que *cuando se acercaron a Bet Pagué[^1095] y Bet Aniah[^1096], hacia el monte que se llama monte de los Olivos, envió dos de sus discípulos,
 **30** diciendo: Vayan a la aldea que está delante de ustedes, y cuando entren en ella, encontrarán un asno hijo de asna atado, sobre el cual nunca se ha sentado hombre; desátenlo y tráiganlo acá.
-**31** Y si un hombre les pregunta: “¿Por qué *lo *desatan?”, le dirán así: “Porque Adonai lo necesita”.
+**31** Y si un hombre les pregunta: “¿Por qué *lo *desatan? ”, le dirán así: “Porque Adonai lo necesita”.
 **32** Y fueron los enviados y hallaron tal como les había dicho.
 **33** Y cuando desataban al asno, les dijeron sus dueños: ¿Por qué desatan al asno?
 **34** Y ellos dijeron: Adonai lo necesita*.*
 **35** Y lo trajeron a Yeshúa, y echaron sus vestidos sobre el asno y pusieron encima a Yeshúa.
 **36** Y cuando iba, tendieron sus ropas por el camino.
 **37** Y cuando se acercaba a la bajada del monte de los Olivos, toda la multitud de los discípulos comenzó a alegrarse y a alabar a Elohim con gran voz por todas las cosas poderosas que habían visto con sus ojos,
-**38** diciendo: ¡bendito el Rey que viene en el Nombre de Yehovah[^1097]!¡Shalom[^1098] en los cielos, y honra en las alturas!
+**38** diciendo: ¡bendito el Rey que viene en el Nombre de Yehovah[^1097]! ¡Shalom[^1098] en los cielos, y honra en las alturas!
 **1**
 
 **39** Y algunos de los perushim[^1099] de la multitud le dijeron: Rabí, reprende a tus discípulos.
@@ -1274,7 +1274,7 @@ porque esta viuda me ha cansado, la defenderé[^1074], para que no venga siempre
 **2** y le hablaron, diciendo: Dinos, ¿con qué poder haces estas *cosas*, o quién es el que te dio este poder?
 **3** Y Él respondió, y les dijo: Yo les preguntaré también ahora una palabra, díganme:
 **4** La inmersión de Iojanán, ¿era de los cielos o de los hombres?
-**5** Y ellos pensaban en su ser, diciendo: Si decimos: “De los cielos”, entonces dirá: “¿Y por qué no creyeron en él?”
+**5** Y ellos pensaban en su ser, diciendo: Si decimos: “De los cielos”, entonces dirá: “¿Y por qué no creyeron en él? ”
 **6** Pero si decimos: “De los hombres”, todo el pueblo nos apedreará, porque todos estaban afirmados *en *que Iojanán era un profeta.
 **7** Y respondieron: No sabemos.
 **8** Y les dijo Yeshúa: Tampoco Yo les diré con qué poder hago estas *cosas*.
@@ -1289,7 +1289,7 @@ porque esta viuda me ha cansado, la defenderé[^1074], para que no venga siempre
 **14** Y cuando lo vieron los labradores, pensaron en su ser, diciendo: “Este es el heredero; vayamos, matémoslo, y la herencia será para nosotros”.
 **15** Y lo echaron afuera de la viña y lo mataron. ¿Y qué les hará el dueño de la viña?
 **16** Vendrá y hará perecer a estos labradores, y dará la viña a otros. Y cuando escucharon, dijeron: ¡Lejos esté de nosotros!
-**17** Y los miró, diciendo: ¿Y qué es esto que está escrito:“La piedra que despreciaron los edificadores ha sido por cabeza del ángulo[^1103]”?
+**17** Y los miró, diciendo: ¿Y qué es esto que está escrito: “La piedra que despreciaron los edificadores ha sido por cabeza del ángulo[^1103]”?
 **18** Todo el que caiga sobre esta piedra, será roto; porque sobre el que la piedra caiga, *lo* borrará y lo aplastará.
 **19** Y buscaban los sacerdotes y los escribas echar mano sobre Él en aquel momento, pero tenían temor, porque supieron que acerca de ellos había dicho esta parábola.
 
@@ -1371,7 +1371,7 @@ Profecía de la destrucción del Santuario
 
 **25** Y habrá señales en el sol, en la luna y en las estrellas, y en la tierra, opresión de las naciones, oscuridad estrecha, y la luz se oscurecerá con sus nubes; y rugirá sobre él como el rugido del mar[^1118] y como el furor de sus olas;
 **26** temblarán los hombres con temor y temblor por lo que vendrá en la tierra, porque la fuerza de los cielos será sacudida.
-**27** Y entonces verán al Ben Ha’Adam que viene con las nubes[^1119] con poder y mucha honra.
+**27** Y entonces verán al Ben Ha'Adam que viene con las nubes[^1119] con poder y mucha honra.
 **28** Y cuando comiencen a suceder todas estas *cosas*, entonces observen y levanten sus cabezas, porque estará cerca su redención.
 
 *Parábola de la higuera*
@@ -1386,7 +1386,7 @@ Profecía de la destrucción del Santuario
 
 **34** Por eso, guárdense en su ser, no sea que sus corazones sean cargados en banalidad, bebida embriagante y en la ansiedad de este olam, y repentinamente venga sobre ustedes aquel día;
 **35** porque, como un lazo, vendrá sobre todos los habitantes de la faz de toda la tierra.
-**36** Por eso, estén vigilantes en todo tiempo, y hagan tefilah[^1120] para que sean aptos para huir del rostro de todo lo que va a suceder, y estar de pie delante del Ben Ha’Adam.
+**36** Por eso, estén vigilantes en todo tiempo, y hagan tefilah[^1120] para que sean aptos para huir del rostro de todo lo que va a suceder, y estar de pie delante del Ben Ha'Adam.
 **37** Y sucedía *que *en el día enseñaba en el Hejal[^1121], y en la noche salía e iba al monte llamado monte de los Olivos.
 **38** Y todo el pueblo se levantaba temprano en la mañana e iba hacia Él al Hejal para oírlo.
 
@@ -1396,7 +1396,7 @@ Profecía de la destrucción del Santuario
 
 **1** Y se acercaba la fiesta de los panes sin levadura[^1122] que es llamada el Pésaj[^1123];
 **2** y buscaban los jefes de los sacerdotes y los escribas cómo matarlo, pero temían al pueblo.
-**3** Y entró Ha’satán[^1124] en Iehudáh, que era llamado Ish\-Kariot[^1125], y él era del número de los doce.
+**3** Y entró Ha'satán[^1124] en Iehudáh, que era llamado IshKariot[^1125], y él era del número de los doce.
 **4** Y fue y habló a los jefes de los sacerdotes y a los prefectos acerca de cómo lo entregaría en sus manos.
 **5** Y se alegraron, y le designaron plata para dar*le*.
 **6** Y confesó; y buscaba su tiempo para entregarlo en manos de ellos, sin el tumulto.
@@ -1407,7 +1407,7 @@ Profecía de la destrucción del Santuario
 **8** Y envió a Kefa y a Iojanán, diciendo: Vayan, preparen para nosotros el Pésaj para que comamos.
 **9** Y ellos le dijeron: ¿Dónde deseas que preparemos?
 **10** Y Él les dijo: He aquí, cuando entren a la ciudad, vendrá a su encuentro un hombre, y su cántaro sobre su hombro; vayan detrás de él a la casa donde entre.
-**11** Y dirán al dueño de la casa: “El Maestro te dice: ‘¿Dónde está la posada donde comeré el Pésaj con mis discípulos?’ ”
+**11** Y dirán al dueño de la casa: “El Maestro te dice: ‘¿Dónde está la posada donde comeré el Pésaj con mis discípulos? ' ”
 **12** Y él les mostrará una gran habitación superior arreglada, allí prepárenlo.
 **13** Y fueron, y hallaron tal como les había dicho; y prepararon el Pésaj.
 
@@ -1421,7 +1421,7 @@ Profecía de la destrucción del Santuario
 **19** Y tomó el pan y bendijo, y lo partió y les dio, diciendo: Este es mi cuerpo que con respecto a ustedes es dado; hagan esto para recordarme.
 **20** Y de la misma manera la copa, después que comieron, diciendo: Esta copa es el pacto renovado en mi sangre, que es derramada con respecto a ustedes.
 **21** Pero, he aquí, la mano del que me entrega está conmigo en la mesa.
-**22** Y el Ben Ha’Adam[^1127] se va, conforme está decretado, pero, ¡oy de aquel hombre por quien es entregado!
+**22** Y el Ben Ha'Adam[^1127] se va, conforme está decretado, pero, ¡oy de aquel hombre por quien es entregado!
 **23** Y ellos comenzaron a preguntar un hombre a su compañero, quién de ellos iba a hacer esto.
 
 *Los discípulos discuten sobre quién es el grande en el reino de los cielos*
@@ -1436,7 +1436,7 @@ Profecía de la destrucción del Santuario
 
 *Yeshúa anuncia la negación de Kefa*
 
-**31** Y dijo el Adón: Shimón, Shimón, he aquí, Ha’satán[^1128] ha pedido para sacudirlos como al trigo;
+**31** Y dijo el Adón: Shimón, Shimón, he aquí, Ha'satán[^1128] ha pedido para sacudirlos como al trigo;
 **32** pero Yo he mostrado favor por ti, para que no cese tu emunah[^1129]; y tú, cuando retornes, levanta a tus hermanos.
 **33** Y él le dijo: Adonai, estoy listo para entrar contigo tanto en la cárcel como en la muerte.
 **34** Y Él dijo: Yo te digo, Kefa, no gritará hoy el gallo antes que mientas tres veces que no me conoces.
@@ -1460,7 +1460,7 @@ Profecía de la destrucción del Santuario
 *Arresto de Yeshúa*
 
 **47** Aún Él hablaba, y he aquí, una multitud, y el que se llamaba Iehudáh, uno de los doce, iba delante de ellos, y se acercó a Yeshúa y lo besó; porque esta señal les había dado: Al que yo bese, este es.
-**48** Y Yeshúa le dijo: Iehudáh, ¿con un beso entregas al Ben Ha’Adam[^1133]?
+**48** Y Yeshúa le dijo: Iehudáh, ¿con un beso entregas al Ben Ha'Adam[^1133]?
 **49** Y cuando* *vieron estos que estaban con Él lo que iba a ser hecho, le dijeron: Adonai, ¿heriremos con espada?
 **50** Y uno de ellos hirió al siervo del gran sacerdote, y le cortó su oreja derecha.
 **51** Y respondió Yeshúa, y dijo: ¡Dejen, hasta aquí! Y tocó su oreja, y lo sanó.
@@ -1491,7 +1491,7 @@ Profecía de la destrucción del Santuario
 **67** diciendo:
 Si Tú eres el Mesías, dínoslo. Y les dijo: Si les digo, no creerán;
 **68** y si *les* pregunto, no me responderán ni me soltarán.
-**69** Desde ahora, el Ben Ha’Adam[^1136] estará sentado a la diestra del poder de Elohim.
+**69** Desde ahora, el Ben Ha'Adam[^1136] estará sentado a la diestra del poder de Elohim.
 **70** Y dijeron todos: Y también, ¿Tú eres el Hijo de Elohim? Y Él les dijo: Ustedes han dicho que Yo soy.
 **71** Y ellos dijeron: ¿Qué más testimonios necesitamos? Porque nosotros mismos lo hemos escuchado de su boca.
 
@@ -1522,7 +1522,7 @@ Si Tú eres el Mesías, dínoslo. Y les dijo: Si les digo, no creerán;
 **15** Ni tampoco Horodós, que *los *ha enviado a ustedes hacia Él; y he aquí, ninguna obra *hay *que* sea* de juicio de muerte para Él.
 **16** Por eso, lo castigaré y lo soltaré.
 **17** Porque tenía necesidad de soltarles uno en la fiesta.
-**18** Y gritaban todos juntos, diciendo: ¡Ciertamente cuelga[^1141] a Este, y suéltanos a Bar\-aba[^1142]!
+**18** Y gritaban todos juntos, diciendo: ¡Ciertamente cuelga[^1141] a Este, y suéltanos a Baraba[^1142]!
 **19** El cual, por murmuración que había sido hecha en la ciudad y por homicidio, había sido echado en la cárcel.
 **20** Y volvió Pilatos a hablarles, queriendo soltar a Yeshúa,
 **21** pero ellos gritaban, diciendo: ¡Cuélguenlo, cuélguenlo!
@@ -1536,7 +1536,7 @@ Si Tú eres el Mesías, dínoslo. Y les dijo: Si les digo, no creerán;
 **26** Y cuando lo llevaban, agarraron a Shimón el kirí[^1143] cuando venía del campo, y pusieron sobre él la cruz para cargar*la* detrás de Yeshúa.
 **27** E iba detrás de Él una gran multitud del* *pueblo y mujeres que lloraban y se lamentaban por Él.
 **28** Y Yeshúa se volvió hacia ellas, diciendo: Hijas de Ierushaláim, no lloren por Mí, sino lloren por ustedes y por sus hijos.
-**29** Porque, he aquí, días vendrán en que dirán: “¡Felices las estériles, y los vientres que no parieron, y los pechos que no amamantaron!”
+**29** Porque, he aquí, días vendrán en que dirán: “¡Felices las estériles, y los vientres que no parieron, y los pechos que no amamantaron! ”
 **30** Y dirán a los montes: ¡Cúbrannos!, y a las colinas: ¡Caigan sobre nosotros[^1144]!
 **31** Por lo tanto, si en el árbol verde hacen estas *cosas*, ¿qué se hará en el seco?
 **32** Y llevaban además otros dos hacedores de vacuidad con Él para colgarlos.
@@ -1587,7 +1587,7 @@ Padre, en tus manos encomiendo mi aliento[^1150].
 **4** Y estaban atónitas por esto, y he aquí, dos hombres se levantaron sobre ellas, con los vestidos relampagueantes.
 **5** Y estando ellas con temor y volviendo sus rostros a tierra, les dijeron: ¿Por qué ustedes están buscando al vivo con los muertos?
 **6** No está aquí, ¡sino que se ha levantado! Recuerden lo que Él les había hablado cuando estaba en Galil,
-**7** diciendo: Necesita el Ben Ha’Adam[^1153] ser entregado en manos de los hombres pecadores y ser colgado, y en el día tercero levantarse.
+**7** diciendo: Necesita el Ben Ha'Adam[^1153] ser entregado en manos de los hombres pecadores y ser colgado, y en el día tercero levantarse.
 **8** Y ellas recordaron sus palabras;
 **9** y se volvieron del sepulcro y dieron a conocer todas estas cosas a los once y a todos los otros.
 **10** Y eran Miriam Migdalit, Iojanah, Miriam *madre* de Iaacob, y las otras que estaban con ellas, las que decían a los discípulos estas *cosas*.
@@ -1674,9 +1674,9 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **19** Y este es el testimonio de Iojanán, cuando enviaron los iehudim[^1167] desde Ierushaláim a los sacerdotes y a los leviím[^1168] para preguntarle: ¿Quién eres tú?
 **20** Y confesó, y no negó, y confesó: Pues, yo no soy el Mesías.
-**21** Y le preguntaron: ¿Y qué? ¿Eliyáhu eres? Y él dijo: No soy. ¿El profeta eres? Y res\-pondió: No.
+**21** Y le preguntaron: ¿Y qué? ¿Eliyáhu eres? Y él dijo: No soy. ¿El profeta eres? Y respondió: No.
 **22** Y le dijeron: ¿Y quién eres?, para que demos respuesta a estos que nos han enviado. ¿Qué dices acerca de ti mismo?
-**23** Y dijo: Yo soy la voz del que clama en el desierto: “¡Limpien el camino de Yehovah[^1169]!”, como dijo Ieshaiáh[^1170] el profeta.
+**23** Y dijo: Yo soy la voz del que clama en el desierto: “¡Limpien el camino de Yehovah[^1169]! ”, como dijo Ieshaiáh[^1170] el profeta.
 **24** Y los enviados eran de los perushim[^1171].
 **25** Y le preguntaron, y le dijeron: ¿Y por qué sumerges si no eres el Mesías, ni Eliyáhu, ni el profeta?
 
@@ -1696,7 +1696,7 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **32** Y testificó Iojanán, diciendo: Porque he visto al Rúaj descendiendo de los cielos como paloma, y se posó sobre Él.
 
-**33** Y yo no lo conocía; pero el que me envió a sumergir en las aguas, Él me dijo: “Y en el que veas descender al Rúaj y posarse sobre Él, Este es el que sumerge en el Rúaj Ha’Kódesh[^1175]”.
+**33** Y yo no lo conocía; pero el que me envió a sumergir en las aguas, Él me dijo: “Y en el que veas descender al Rúaj y posarse sobre Él, Este es el que sumerge en el Rúaj Ha'Kódesh[^1175]”.
 
 **34** Y yo vi, y he testificado que Este es el Hijo de Elohim.
 
@@ -1736,7 +1736,7 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **50** Y respondió Yeshúa, y le dijo: ¿Porque te dije *que *te vi debajo de la higuera, crees? *Cosas más* grandes que estas verás.
 
-**51** Y le dijo: Amén, amén, les digo: “Desde ahora verán los cielos abiertos, y los ángeles de Elohim subiendo y bajando sobre el Ben Ha’Adam[^1182]”.
+**51** Y le dijo: Amén, amén, les digo: “Desde ahora verán los cielos abiertos, y los ángeles de Elohim subiendo y bajando sobre el Ben Ha'Adam[^1182]”.
 
 *La boda en Cané*
 
@@ -1822,9 +1822,9 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **12** Si de lo que está en la tierra Yo les hablo, y no se afirman, ¿cómo se afirmarán si les hablo de lo que está sobre los cielos de los cielos?
 
-**13** Ningún hombre ha subido a los cielos, sino el que descendió de los cielos, Este es el Ben Ha’Adam[^1199], que en los cielos está.
+**13** Ningún hombre ha subido a los cielos, sino el que descendió de los cielos, Este es el Ben Ha'Adam[^1199], que en los cielos está.
 
-**14** Y cuando Moshéh[^1200] puso el *ser *ardiente[^1201] sobre el estandarte en el desierto[^1202], así es nece\-sario que sea levantado el Ben Ha’Adam,
+**14** Y cuando Moshéh[^1200] puso el *ser *ardiente[^1201] sobre el estandarte en el desierto[^1202], así es necesario que sea levantado el Ben Ha'Adam,
 
 **15** para que todo el que se afirme por Él, no perezca, sino que tenga vida olam[^1203].
 
@@ -2149,7 +2149,7 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **26** Y les respondió Yeshúa, y dijo: Amén, amén, Yo les digo, ustedes me buscan no porque vieron las señales, sino porque comieron del pan y se saciaron.
 
-**27** Trabajen, no la comida que perece, sino la comida que se establece para vida olam[^1245], la que el Ben Ha’Adam[^1246] les dará, porque a Él selló el Padre, Elohim.
+**27** Trabajen, no la comida que perece, sino la comida que se establece para vida olam[^1245], la que el Ben Ha'Adam[^1246] les dará, porque a Él selló el Padre, Elohim.
 
 **28** Y le dijeron: ¿Qué haremos para trabajar las obras de Elohim?
 
@@ -2201,7 +2201,7 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **52** Y contendían los iehudim[^1256] entre sí, diciendo: ¿Cómo puede este darnos de comer su carne?
 
-**53** Y les dijo Yeshúa: Amén, amén, Yo les digo, si no comen la carne del Ben Ha’Adam[^1257], y si no beben de su sangre, no tendrán en ustedes mismos la vida.
+**53** Y les dijo Yeshúa: Amén, amén, Yo les digo, si no comen la carne del Ben Ha'Adam[^1257], y si no beben de su sangre, no tendrán en ustedes mismos la vida.
 
 **54** El que come mi carne y bebe mi sangre, habrá para él vida olam, y Yo lo levantaré en el día postrero.
 
@@ -2221,7 +2221,7 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **61** Y Yeshúa, sabiendo en su ser que sus discípulos murmuraban por esto, les dijo: ¿Esto los hace tropezar?
 
-**62** ¿Y si vieran al Ben Ha’Adam subir allá donde estaba primero?
+**62** ¿Y si vieran al Ben Ha'Adam subir allá donde estaba primero?
 
 **63** El Rúaj[^1260] es el que dará vida, y la carne no beneficiará nada; las palabras que Yo les hablo, Rúaj y vida son.
 
@@ -2239,7 +2239,7 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **70** Y les respondió Yeshúa: ¿No los escogí Yo a ustedes doce, y uno de ustedes es adversario[^1263]?
 
-**71** Y hablaba de Iehudáh, hijo de Shimón, Ish\-Kariot[^1264], porque este era el que lo había de entregar, y era uno de los doce.
+**71** Y hablaba de Iehudáh, hijo de Shimón, IshKariot[^1264], porque este era el que lo había de entregar, y era uno de los doce.
 
 *La fiesta de Sucot*
 
@@ -2325,7 +2325,7 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **38** Todo el que se afirma en Mí, como dice la Escritura: Ríos de aguas vivas de su vientre fluirán[^1275].
 
-**39** Y esto dijo acerca del Rúaj[^1276] que pronto iban a recibir los que se afirmen en Él, porque aún no había sido dado el Rúaj Ha’Kódesh[^1277], porque Yeshúa todavía no había sido glorifi\-cado.
+**39** Y esto dijo acerca del Rúaj[^1276] que pronto iban a recibir los que se afirmen en Él, porque aún no había sido dado el Rúaj Ha'Kódesh[^1277], porque Yeshúa todavía no había sido glorificado.
 
 **40** Y muchos del pueblo, escuchando esta palabra, dijeron: Este en verdad es el profeta[^1278].
 
@@ -2419,7 +2419,7 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **27** Y no supieron que acerca del Padre les hablaba.
 
-**28** Y les dijo Yeshúa: Cuando levanten al Ben Ha’Adam[^1297], entonces sabrán que Yo soy, y *que *de Mí nada hago, sino que como mi Padre me enseñó, esto hablo.
+**28** Y les dijo Yeshúa: Cuando levanten al Ben Ha'Adam[^1297], entonces sabrán que Yo soy, y *que *de Mí nada hago, sino que como mi Padre me enseñó, esto hablo.
 
 **29** Y el que me envió, conmigo es; no me ha dejado solo mi Padre, porque Yo su deseo hago en todo tiempo.
 
@@ -2453,7 +2453,7 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **43** Por eso no conocen mi hablar, porque no pueden escuchar mi palabra.
 
-**44** Ustedes de su padre Ha’satán[^1300] son, y los deseos de su padre quieren hacer. Él es homicida del hombre desde el principio, y en la verdad no se establece porque no hay verdad en él. Cuando habla la mentira, de su ser habla, porque mentiroso es, y el padre de las mentiras.
+**44** Ustedes de su padre Ha'satán[^1300] son, y los deseos de su padre quieren hacer. Él es homicida del hombre desde el principio, y en la verdad no se establece porque no hay verdad en él. Cuando habla la mentira, de su ser habla, porque mentiroso es, y el padre de las mentiras.
 
 **45** Y Yo, porque hablo verdad, no se afirman por Mí[^1301].
 
@@ -2463,15 +2463,15 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 *La vida en Yeshúa*
 
-**48** Y respondieron los iehudim[^1302], y le dijeron: ¿No decimos bien nosotros, que Tú eres shomroní[^1303], y que tienes a Ha’satán[^1304]?
+**48** Y respondieron los iehudim[^1302], y le dijeron: ¿No decimos bien nosotros, que Tú eres shomroní[^1303], y que tienes a Ha'satán[^1304]?
 
-**49** Y respondió Yeshúa: No tengo a Ha’satán, sino que honro a mi Padre, y ustedes me insultan.
+**49** Y respondió Yeshúa: No tengo a Ha'satán, sino que honro a mi Padre, y ustedes me insultan.
 
 **50** Porque Yo no busco mi honra; hay uno que la busca y juzga.
 
 **51** Amén, amén, les digo: Si un hombre guarda mi palabra, no saboreará la muerte nunca.
 
-**52** Y le dijeron los iehudim: Desde ahora sabemos que tienes a Ha’satán. Abraham murió, y los profetas; y Tú dices: “Si un hombre guarda mi palabra no saboreará la muerte nunca”.
+**52** Y le dijeron los iehudim: Desde ahora sabemos que tienes a Ha'satán. Abraham murió, y los profetas; y Tú dices: “Si un hombre guarda mi palabra no saboreará la muerte nunca”.
 
 **53** ¿Eres Tú *más *grande que nuestro padre Abraham, que murió? ¡Y los profetas murieron! ¿Quién te haces a ti mismo?
 
@@ -2619,9 +2619,9 @@ __IOJANÁN \(JUAN\)__יוחנן
 
 **19** Y hubo otra vez contienda entre los iehudim[^1316] por estas palabras.
 
-**20** Y muchos de ellos decían: Él tiene a Ha’satán[^1317], y está loco, ¿por qué lo escuchan?
+**20** Y muchos de ellos decían: Él tiene a Ha'satán[^1317], y está loco, ¿por qué lo escuchan?
 
-**21** Y otros decían: Estas palabras no son palabras de un hombre que tiene a Ha’satán. ¿Puede Ha’satán abrir los ojos de los ciegos?
+**21** Y otros decían: Estas palabras no son palabras de un hombre que tiene a Ha'satán. ¿Puede Ha'satán abrir los ojos de los ciegos?
 
 *Yeshúa en la fiesta de Janucá*
 
@@ -2797,9 +2797,9 @@ Yeshúa resucita a Eleazar
 
 **3** Y Miriam tomó una medida de aceite del mejor nardo, muy costoso, y ungió los pies de Yeshúa, y frotó con sus cabellos sus pies; y toda la casa se llenó del aroma del perfume.
 
-**4** Y dijo uno de sus discípulos, Iehudáh, hijo de Shimón, Ish\-Kariot[^1339], el que lo iba a entregar:
+**4** Y dijo uno de sus discípulos, Iehudáh, hijo de Shimón, IshKariot[^1339], el que lo iba a entregar:
 
-**5** ¿Por qué no se ha vendido este aceite en trescientos shekel[^1340] de plata, y dado a los necesi\-tados?
+**5** ¿Por qué no se ha vendido este aceite en trescientos shekel[^1340] de plata, y dado a los necesitados?
 
 **6** Pero esto dijo no porque tenía cuidado de los necesitados, sino porque era ladrón, y tenía la bolsa, y lo que ellos echaban en ella él cargaba.
 
@@ -2841,7 +2841,7 @@ y monta sobre un asno, y sobre un asnito hijo de asnas[^1343].
 
 **22** Vino Filipos y le dijo a Andreas; entonces, Andreas y Filipos le dijeron a Yeshúa.
 
-**23** Y les respondió Yeshúa, diciendo: Ha venido la hora *en *que será glorificado el Ben Ha’Adam[^1346].
+**23** Y les respondió Yeshúa, diciendo: Ha venido la hora *en *que será glorificado el Ben Ha'Adam[^1346].
 
 **24** Amén, amén, Yo les digo: “Si el grano de trigo no cae a tierra y muere, quedará solo; pero si muere, hará mucho fruto.
 
@@ -2865,7 +2865,7 @@ y monta sobre un asno, y sobre un asnito hijo de asnas[^1343].
 
 **33** Y esto dijo profetizando de qué muerte había de morir.
 
-**34** Y le respondió el pueblo: Nosotros escuchamos de la Torah que el Mesías será establecido para siempre. ¿Y cómo dices que es necesario que sea levantado el Ben Ha’Adam[^1348]? ¿Quién es este Ben Ha’Adam?
+**34** Y le respondió el pueblo: Nosotros escuchamos de la Torah que el Mesías será establecido para siempre. ¿Y cómo dices que es necesario que sea levantado el Ben Ha'Adam[^1348]? ¿Quién es este Ben Ha'Adam?
 
 **35** Y les dijo Yeshúa: Todavía *por *un poco de tiempo la Luz estará con ustedes. Caminen mientras esté para ustedes la Luz, para que no los agarre la oscuridad; porque el que anda en oscuridad, no sabe cómo va.
 
@@ -2915,7 +2915,7 @@ y con su corazón discierna, y regrese y sea sanado él[^1350].
 
 **1** Y antes de la fiesta del Pésaj[^1352], sabía Yeshúa que había venido su tiempo para pasar de este olam al Padre; como había amado a los que eran de Él en el olam, así los amó hasta el fin.
 
-**2** Y era el banquete de la tarde, y ya Ha’satán[^1353] había sido lanzado al corazón de Iehudáh, hijo de Shimón, Ish\-Kariot[^1354], para entregarlo.
+**2** Y era el banquete de la tarde, y ya Ha'satán[^1353] había sido lanzado al corazón de Iehudáh, hijo de Shimón, IshKariot[^1354], para entregarlo.
 
 **3** Y sabía Yeshúa que todas las cosas había puesto su Padre en sus manos, y que de Elohim salió y a Yehovah iba.
 
@@ -2963,9 +2963,9 @@ y con su corazón discierna, y regrese y sea sanado él[^1350].
 
 **25** Y acostado él al pecho de Yeshúa, le dijo: Adonai, ¿quién es este?
 
-**26** Y respondió Yeshúa: Este es, al que le daré el bocado de pan sumergido. Y sumergió el bocado de pan, y *lo *dio a Iehudáh, hijo de Shimón, Ish\-Kariot[^1358].
+**26** Y respondió Yeshúa: Este es, al que le daré el bocado de pan sumergido. Y sumergió el bocado de pan, y *lo *dio a Iehudáh, hijo de Shimón, IshKariot[^1358].
 
-**27** Y después del bocado, entonces entró en él Ha’satán[^1359]. Y le dijo Yeshúa: Lo que vas a hacer, hazlo pronto.
+**27** Y después del bocado, entonces entró en él Ha'satán[^1359]. Y le dijo Yeshúa: Lo que vas a hacer, hazlo pronto.
 
 **28** Y esto, ninguno de los que estaban sentados en la ronda entendió lo que le había dicho.
 
@@ -2973,9 +2973,9 @@ y con su corazón discierna, y regrese y sea sanado él[^1350].
 
 **30** Y cuando tomó el bocado de pan, rápidamente salió. Y era de noche.
 
-*El Ben Ha’Adam será glorificado*
+*El Ben Ha'Adam será glorificado*
 
-**31** Y cuando salió, dijo Yeshúa: Ahora será glorificado el Ben Ha’Adam[^1360], y Elohim será glorificado en Él.
+**31** Y cuando salió, dijo Yeshúa: Ahora será glorificado el Ben Ha'Adam[^1360], y Elohim será glorificado en Él.
 
 **32** Si Elohim será glorificado en Él, también Elohim lo glorificará en sí mismo, y enseguida lo glorificará.
 
@@ -3024,7 +3024,7 @@ y con su corazón discierna, y regrese y sea sanado él[^1350].
 
 **14** Si algo piden en mi Nombre, Yo *lo *haré.
 
-*La promesa del Rúaj Ha’Kódesh*
+*La promesa del Rúaj Ha'Kódesh*
 
 **15** Si ustedes me aman, también mis mandamientos guardarán.
 
@@ -3040,7 +3040,7 @@ y con su corazón discierna, y regrese y sea sanado él[^1350].
 
 **21** El que tiene mis mandamientos y el que los guarda, este es el que me ama; y el que me ama, será amado de mi Padre; y Yo lo amaré, y le revelaré mi ser.
 
-**22** Le dijo Iehudáh \(no el Ish\-Kariot\): Adonai, ¿y qué ha sucedido que vas a revelar tu ser a nosotros y no al olam?
+**22** Le dijo Iehudáh \(no el IshKariot\): Adonai, ¿y qué ha sucedido que vas a revelar tu ser a nosotros y no al olam?
 
 **23** Y respondió Yeshúa, y le dijo: Si un hombre me ama, mi palabra guardará; y mi Padre lo amará, y vendremos a él, y con él haremos morada.
 
@@ -3048,7 +3048,7 @@ y con su corazón discierna, y regrese y sea sanado él[^1350].
 
 **25** Estas palabras les he hablado estando todavía con ustedes.
 
-**26** Pero el Menajem[^1367], el Rúaj Ha’Kódesh[^1368], que lo enviará mi Padre en mi Nombre, Él les enseñará todo, y les recordará todo lo que les he hablado.
+**26** Pero el Menajem[^1367], el Rúaj Ha'Kódesh[^1368], que lo enviará mi Padre en mi Nombre, Él les enseñará todo, y les recordará todo lo que les he hablado.
 
 **27** El shalom[^1369] dejo con ustedes, mi shalom Yo les doy; no como el olam da Yo les doy; no decaiga su corazón, ni tema.
 
@@ -3128,11 +3128,11 @@ y con su corazón discierna, y regrese y sea sanado él[^1350].
 
 **4** Por eso les he hablado estas *cosas*, para que cuando vengan el tiempo, se acuerden de ello, que Yo se los había dicho; y estas *cosas *desde el principio no les dije porque con ustedes estaba.
 
-**5** Pero ahora voy al que me envió, y ninguno de ustedes me pregunta: “¿Adónde vas?”
+**5** Pero ahora voy al que me envió, y ninguno de ustedes me pregunta: “¿Adónde vas? ”
 
 **6** Pero porque les he hablado estas *cosas*, se ha llenado el corazón de ustedes con lamento.
 
-*La obra del Rúaj Ha’Kódesh*
+*La obra del Rúaj Ha'Kódesh*
 
 **7** Pero Yo la verdad les hablo, que les beneficia a ustedes que Yo me vaya, pues si Yo no me voy, tampoco el Menajem[^1374] vendrá a ustedes; pero si me voy, se los enviaré a ustedes.
 
@@ -3334,7 +3334,7 @@ Y cuando dijo esto, volvió y salió a los iehudim, y les dijo: Ni juicio de mue
 
 **39** Hay testimonio en ustedes que yo les suelto uno en el Pésaj, ¿quieren que les suelte al Rey de los iehudim?
 
-**40** Y gritaron todos *por *segunda *vez*, diciendo: ¡No, por favor, a este, sino a Bar\-aba[^1394]! Y Bar\-aba era un salteador.
+**40** Y gritaron todos *por *segunda *vez*, diciendo: ¡No, por favor, a este, sino a Baraba[^1394]! Y Baraba era un salteador.
 
 **19**
 
@@ -3362,11 +3362,11 @@ Y cuando dijo esto, volvió y salió a los iehudim, y les dijo: Ni juicio de mue
 
 **12** Y desde entonces buscó Pilatos soltarlo; pero los iehudim gritaban, diciendo: ¡Si sueltas a este, no eres amigo del César! ¡Todo el que se hace por rey, se rebela y se vuelve de detrás del César!
 
-**13** Y cuando escuchó Pilatos esta palabra, llevó a Yeshúa afuera y se sentó en el lugar alto, en el lugar llamado Lidsóstrotos[^1397], y *en *hebreo, Gebahta[^1398].
+**13** Y cuando escuchó Pilatos esta palabra, llevó a Yeshúa afuera y se sentó en el lugar alto, en el lugar llamado Lidsóstrotos[^1397], y *en *hebreo, Gebahta[^1398].
 
 **14** Y era el día de la inspección de la levadura[^1399], la tarde antes del Shabat, y era la hora sexta. Y dijo a los iehudim: He aquí, su Rey.
 
-**15** Y gritaron: ¡Quita! ¡Quita! ¡Cuélgalo! Les dijo Pilatos: ¿Colgaré a su Rey? Y respon\-dieron los jefes de los sacerdotes: ¡No tenemos rey, sino el César!
+**15** Y gritaron: ¡Quita! ¡Quita! ¡Cuélgalo! Les dijo Pilatos: ¿Colgaré a su Rey? Y respondieron los jefes de los sacerdotes: ¡No tenemos rey, sino el César!
 
 **16** Y entonces lo dio a ellos para colgar*lo*. Y tomaron a Yeshúa y se lo llevaron.
 
@@ -3478,7 +3478,7 @@ Y cuando dijo esto, volvió y salió a los iehudim, y les dijo: Ni juicio de mue
 
 **21** Y añadió Yeshúa, y les dijo: ¡Shalom a ustedes! Como me envió el Padre, así Yo los envío a ustedes.
 
-**22** Y cuando dijo esto, sopló en ellos, y les dijo: Tomen el Rúaj Ha’Kódesh[^1411].
+**22** Y cuando dijo esto, sopló en ellos, y les dijo: Tomen el Rúaj Ha'Kódesh[^1411].
 
 **23** Todos los hombres a los que les soporten[^1412] los pecados, les serán soportados; y a los que les retengan, les serán retenidos.
 
@@ -3540,19 +3540,19 @@ Yeshúa y Kefa
 
 **16** Y añadió, y le dijo por segunda vez: Shimón, hijo de Ionah, ¿me amas? Le dijo: ¡Cuánto más, Adonai, Tú sabes que te amo! Le dijo: Apacienta mi rebaño.
 
-**17** Le dijo por tercera vez: Shimón, hijo de Ionah, ¿me amas? Y se entristeció Kefa que le haya dicho por tercera vez: “¿Me amas?” Y le dijo: Adonai, Tú todo lo sabes, que yo te amo. Le dijo Yeshúa: Apacienta mi rebaño.
+**17** Le dijo por tercera vez: Shimón, hijo de Ionah, ¿me amas? Y se entristeció Kefa que le haya dicho por tercera vez: “¿Me amas? ” Y le dijo: Adonai, Tú todo lo sabes, que yo te amo. Le dijo Yeshúa: Apacienta mi rebaño.
 
 **18** Amén, amén, Yo te digo: “Cuando eras joven, ceñías tus lomos e ibas donde querías; pero cuando envejezcas, extenderás tus manos y otro te ceñirá, y te llevará adonde no quieras”.
 
 **19** Y esto dijo dando a conocer con qué muerte honraría a Elohim. Y cuando dijo estas palabras, le dijo: Ven detrás de Mí.
 
-**20** Y se giró Kefa, y vio al discípulo que Yeshúa amaba, que venía detrás de él, y era el que se había sentado en la ronda sobre el seno de Él, y había dicho: “Adonai, ¿quién es este que te entrega?”
+**20** Y se giró Kefa, y vio al discípulo que Yeshúa amaba, que venía detrás de él, y era el que se había sentado en la ronda sobre el seno de Él, y había dicho: “Adonai, ¿quién es este que te entrega? ”
 
 **21** Lo vio Kefa, y dijo a Yeshúa: Adonai, ¿y este qué?
 
 **22** Le dijo Yeshúa: Si quiero dejarlo en espera hasta que Yo venga, ¿a ti, qué? Tú, ven detrás de Mí.
 
-**23** Y salió esta palabra entre los discípulos, que aquel discípulo no moriría. Pero Yeshúa no le dijo que no moriría, sino: “Si quiero dejarlo en espera hasta que Yo venga, ¿a ti, qué?”
+**23** Y salió esta palabra entre los discípulos, que aquel discípulo no moriría. Pero Yeshúa no le dijo que no moriría, sino: “Si quiero dejarlo en espera hasta que Yo venga, ¿a ti, qué? ”
 
 **24** Este es el discípulo que testifica sobre estas *cosas* y el que escribió estas *cosas*; y sabemos que su testimonio es verdad.
 
@@ -3802,7 +3802,7 @@ __HECHOS DE LOS ENVIADOS
 [^1049]: Firmeza, fidelidad, crianza.
 [^1050]: Fariseos.
 [^1051]: O, *abominación.*
-[^1052]: Así en la mayoría de mss., Ver. Políglota de Nuremberg dice: *Lo’azer, *que significa: *Sin ayuda.*
+[^1052]: Así en la mayoría de mss., Ver. Políglota de Nuremberg dice: *Lo'azer, *que significa: *Sin ayuda.*
 [^1053]: Moisés.
 [^1054]: Firmeza, fidelidad, crianza. Así también en el resto del cap.
 [^1055]: Amo, Señor. Así también en vers. 6.
@@ -3810,7 +3810,7 @@ __HECHOS DE LOS ENVIADOS
 [^1057]: Samaria.
 [^1058]: Galilea.
 [^1059]: Grande; un título para el maestro*.*
-[^1060]: Heb.: *Le’hodot.*
+[^1060]: Heb.: *Le'hodot.*
 [^1061]: Samaritano.
 [^1062]: Firmeza, fidelidad, crianza.
 [^1063]: Fariseos.
@@ -3872,7 +3872,7 @@ __HECHOS DE LOS ENVIADOS
 [^1119]: Véase Daniel 7:13.
 [^1120]: Oración, participación en juicio.
 [^1121]: Santuario, Palacio. Así también en vers. 38.
-[^1122]: Heb.: *Jag Ha’matzot.*
+[^1122]: Heb.: *Jag Ha'matzot.*
 [^1123]: La Pascua. Así también en los versículos 7, 8 y 13.
 [^1124]: El adversario.
 [^1125]: Iscariote; esto es: *hombre de Kariot.*
@@ -3895,14 +3895,14 @@ __HECHOS DE LOS ENVIADOS
 [^1142]: Barrabás, que significa: *Hijo del padre*.
 [^1143]: O sea, *cireneo.*
 [^1144]: Véase Oseas 10:8.
-[^1145]: *‘Cráneo’ *en hebreo*.*
+[^1145]: *‘Cráneo' *en hebreo*.*
 [^1146]: Piedrecita lanzada para tomar decisiones.
 [^1147]: Judíos.
 [^1148]: O sea, las doce del día.
 [^1149]: O sea, las tres de la tarde.
 [^1150]: Véase Salmo 31:5.
 [^1151]: Los textos griegos dicen: *Arimatea.* Posi­blemen­te, *Ramáh*, lugar donde nació Samuel.
-[^1152]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1152]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 [^1153]: Hijo del Hombre; un título para el Mesías*.*
 [^1154]: Aproximadamente, 12 km*.*
 [^1155]: Del heb.: *Nétzer; *retoño. Véase Isaías 11:1.
@@ -3971,8 +3971,8 @@ __HECHOS DE LOS ENVIADOS
 [^1218]: Tiempo oculto, sólo conocido por Elohim.
 [^1219]: Otra lectura posible es: *te dije*.
 [^1220]: Espíritu, viento, aliento. Así también en vers. 24.
-[^1221]: ‘Mesías’ en arameo; es decir, *Ungido.*
-[^1222]: ‘Mesías’ en hebreo; es decir, *Ungido.*
+[^1221]: ‘Mesías' en arameo; es decir, *Ungido.*
+[^1222]: ‘Mesías' en hebreo; es decir, *Ungido.*
 [^1223]: Grande; un título para el maestro.
 [^1224]: Otros mss. dicen: *cuatro.*
 [^1225]: Tiempo oculto, sólo conocido por Elohim. Así también en vers. 42.
@@ -3987,7 +3987,7 @@ __HECHOS DE LOS ENVIADOS
 [^1234]: Santuario, Palacio.
 [^1235]: Heb.: *Av; *hebraísmo que comprende lo establecido por Elohim en las palabras de la Torah y los profetas. Así en el resto del cap.
 [^1236]: Tiempo oculto, sólo conocido por Elohim. Así también en vers. 29.
-[^1237]: Heb.: *Ben Ha’Adam. *Elohim en cuerpo.
+[^1237]: Heb.: *Ben Ha'Adam. *Elohim en cuerpo.
 [^1238]: Véase Daniel 12:2.
 [^1239]: Tiempo oculto, sólo conocido por Elohim.
 [^1240]: Este vers. no aparece en un ms. antiguo.
@@ -4149,16 +4149,16 @@ __HECHOS DE LOS ENVIADOS
 [^1396]: Véase Juan 10:33.
 [^1397]: O sea, *enlosado de piedras.*
 [^1398]: O sea, *altura.*
-[^1399]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
-[^1400]: *‘Cráneo’ *en hebreo*.*
+[^1399]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1400]: *‘Cráneo' *en hebreo*.*
 [^1401]: Del heb.: *Nétzer; *retoño. Véase Isaías 11:1.
 [^1402]: Piedrecita lanzada para tomar decisiones.
 [^1403]: Véase Salmo 22:18.
-[^1404]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1404]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 [^1405]: Véase Salmo 34:20.
 [^1406]: Véase Zacarías 12:10.
 [^1407]: Nicodemo.
-[^1408]: Heb.: *Bedikat Ha’jámetz. *Día anterior al inicio de Jag Ha’Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
+[^1408]: Heb.: *Bedikat Ha'jámetz. *Día anterior al inicio de Jag Ha'Matzot, durante el cual las casas y lugares son examinados en busca de levadura para quitarla*.*
 [^1409]: Amo, Señor. Así también en el resto del cap.
 [^1410]: Judíos.
 [^1411]: Espíritu de Santidad.
@@ -4166,7 +4166,7 @@ __HECHOS DE LOS ENVIADOS
 [^1413]: Gemelo. Gr.: *Didimos.*
 [^1414]: Firmeza, fidelidad, crianza.
 [^1415]: O, *portador de emunah.*
-[^1416]: Heb.: *Adonai ve’Elohai.*
+[^1416]: Heb.: *Adonai ve'Elohai.*
 [^1417]: Tiempo oculto, sólo conocido por Elohim; también: *era, tiempo*.
 [^1418]: Gemelo. Gr.: *Didimos.*
 [^1419]: Amo, Señor.

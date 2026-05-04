@@ -144,7 +144,7 @@ Asesinato de Ishboshet
 **8** Y trajeron la cabeza de Ishboshet a David en Jebrón, y dijeron al rey: He aquí, la cabeza de Ishboshet, hijo de Shaúl, tu enemigo, quien bus­­caba tu vida; y ha dado יהוה a mi amo el rey venganza este día de Shaúl y de su simien­te.
 **9** Y respondió David a Rejab y a Baanáh, su her­­­mano, hijos de Rimón el beerotí, y les dijo: Vive יהוה que ha redimido mi vida de toda angustia,
 **10** que cuando uno dio a conocer a mí, dicien­do: “He aquí, ha muerto Shaúl”, y él era como mensajero de buenas noticias en sus ojos, y lo agarré y lo maté en Tziklag, lo cual di a él por sus buenas noticias.
-**11**¡También cuando unos hombres malvados matan a un hombre justo en su casa sobre su cama! Y ahora, ¿No requeriré su sangre de sus manos, quemándolos de la tierra?
+**11**¡También cuando unos hombres condenados matan a un hombre justo en su casa sobre su cama! Y ahora, ¿No requeriré su sangre de sus manos, quemándolos de la tierra?
 **12** Y ordenó David a los jóvenes, y ellos los mataron y cortaron sus manos y sus pies, y los colgaron junto al estanque en Jebrón. Y la ca­beza de Ishboshet toma­ron y la enterraron en la tumba de Abner, en Jebrón.
 
 David, rey de Israel y de Iehudáh

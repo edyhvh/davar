@@ -53,8 +53,7 @@ __NEVIÍM \- YEHOSHÚA \(JOSUÉ\)__ יהושע
 **21** Y ella dijo: Conforme a sus palabras, así *sea* esto. Y los envió y se fueron; y ella ató un cor­dón escarlata en la ventana.
 **22** Y se fueron y llegaron a la montaña, y per­ma­necieron allí tres días, hasta *que* regresaron los perseguidores. Y *los* buscaron los persegui­dores por todo el camino, pero no *los* encontra­ron.
 **23** Y regresaron los dos hombres y descendie­ron de la montaña, y cruzaron, y vinieron a Yehoshúa, hijo de Nun, y contaron a él todo lo que les había acontecido.
-**24** Y dijeron a Yehoshúa: Ciertamente ha dado יהוה
-en nuestras manos toda la tierra, y a­demás, se han derretido todos los habitantes de la tierra debido a nuestros rostros.
+**24** Y dijeron a Yehoshúa: Ciertamente ha dado יהוה__ __en nuestras manos toda la tierra, y a­demás, se han derretido todos los habitantes de la tierra debido a nuestros rostros.
 
 *El paso del Iardén*
 
@@ -429,8 +428,7 @@ en nuestras manos toda la tierra, y a­demás, se han derretido todos los habita
 **14**
 
 **1** Y estos *son los territorios* que hereda­ron los hijos de Israel en la tierra de Kenáan, los cuales les repartieron por herencia Eleazar el sacerdote y Yehoshúa, hijo de Nun, y las cabezas de los padres de las tribus de los hijos de Israel;
-**2** por goral[^1403]
-fue* su herencia, conforme había orde­nado __יהוה__, por mano de Moshéh, a las nueve tri­bus y a la media tribu.
+**2** por goral[^1403]__ __*fue* su herencia, conforme había orde­nado __יהוה__, por mano de Moshéh, a las nueve tri­bus y a la media tribu.
 **3** Porque había dado Moshéh la herencia de las dos tribus y de la media tribu del *otro* lado del Iardén; y a los leviím[^1404] no dio herencia en medio de ellos.
 **4** Porque eran los hijos de Iosef dos tribus, Menasheh y Efráim; y no dieron parte a los le­viím en la tierra, sino ciudades para habitar, y sus tierra exteriores para sus ganados y para sus propiedades.
 **5** Como había ordenado __יהוה__ a Moshéh, así hicieron los hijos de Israel, y repartieron la tie­rra.

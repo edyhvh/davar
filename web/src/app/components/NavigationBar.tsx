@@ -79,6 +79,7 @@ export function NavigationBar({
 		"settings" | "book" | "chapter" | "verse" | null
 	>(null);
 	const dropdownRef = useRef<HTMLDivElement>(null);
+	const bookListRef = useRef<HTMLDivElement>(null);
 	const bookSearchRef = useRef<HTMLInputElement>(null);
 	const chapterSearchRef = useRef<HTMLInputElement>(null);
 	const verseSearchRef = useRef<HTMLInputElement>(null);
@@ -178,6 +179,23 @@ export function NavigationBar({
 				return haystack.includes(normalizedBookSearch);
 			})
 		: books;
+
+	useEffect(() => {
+		if (openMenu !== "book") return;
+
+		const rafId = window.requestAnimationFrame(() => {
+			const selectedBookButton =
+				bookListRef.current?.querySelector<HTMLButtonElement>(
+					'[data-current-book="true"]',
+				);
+			selectedBookButton?.scrollIntoView({
+				block: "center",
+				inline: "nearest",
+			});
+		});
+
+		return () => window.cancelAnimationFrame(rafId);
+	}, [openMenu]);
 
 	const normalizedChapterSearch = chapterSearch.trim();
 	const filteredChapters = normalizedChapterSearch
@@ -556,11 +574,15 @@ export function NavigationBar({
 							}}
 						/>
 					</div>
-					<div className="max-h-[320px] overflow-y-auto overscroll-contain space-y-2">
+					<div
+						ref={bookListRef}
+						className="max-h-[320px] overflow-y-auto overscroll-contain space-y-2"
+					>
 						{filteredBooks.map((item) => (
 							<button
 								type="button"
 								key={item.name}
+								data-current-book={item.name === book ? "true" : undefined}
 								onClick={() => {
 									onBookChange(item.name);
 									setOpenMenu(null);

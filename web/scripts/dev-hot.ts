@@ -28,6 +28,12 @@ console.log(
 	`[davar-web] dev:hot app-host=${appHost} app-port=${appPort} html-port=${htmlPort} static-base=${staticUrl || "(same-origin)"} gateway=${useGateway ? "on" : "off"}`,
 );
 
+if (useGateway) {
+	console.log(
+		`[davar-web] browse http://localhost:${appPort} (port ${htmlPort} is HTML upstream only and does not serve /data/*)`,
+	);
+}
+
 const ensure = Bun.spawnSync(["bun", "./scripts/ensure-static-data.ts"], {
 	cwd: webRoot,
 	stdout: "inherit",

@@ -1,4 +1,4 @@
-**1** TORAH \- BERESHIT \(GÉNESIS\)__בראשית* *
+**1** __TORAH \- BERESHIT \(GÉNESIS\)__בראשית* *
 
 *La creación*
 
@@ -85,8 +85,7 @@
 **6** Y vio la mujer que *era *bueno el árbol para comida, y que un deseo era a los ojos, y co­di­ciable, el árbol, para ser prudente. Y ella to­mó de su fruto y comió, y dio también a su esposo con ella, y él comió.
 **7** Y fueron abiertos los ojos de los dos, y co­nocieron que *estaban* desnudos ellos; y co­sieron hojas de higo e hicie­ron para sí fa­jas.
 
-**8** Y escucharon la voz de יהוה Elohim que caminaba en el jardín al viento del día;
-y se escondieron el hombre y su mujer del rostro de יהוה Elohim en medio del árbol del jar­dín.
+**8** Y escucharon la voz de יהוה Elohim que caminaba en el jardín al viento del día;__ __y se escondieron el hombre y su mujer del rostro de יהוה Elohim en medio del árbol del jar­dín.
 **9** Y llamó יהוה Elohim al hombre, y le dijo: ¿Dónde estás?
 **10** Y él dijo: Tu voz escuché en el jardín, y te­mí porque *estaba* desnudo yo, y me escondí.
 **11** Y Él dijo: ¿Quién te dio a conocer que *esta­bas* des­nu­do tú? ¿Del árbol que te mandé a no comer de él, comiste?
@@ -355,8 +354,7 @@ y se escondieron el hombre y su mujer del rostro de יהוה Elohim en medio del
 **4** Y dijeron: ¡Da *acá*!, edifiquemos para noso­tros una ciudad y una torre, y su cabeza *esté *en los cielos, y hagámonos un nombre, no sea que seamos esparcidos sobre la faz de toda la tie­rra.
 **5** Y descendió יהוה para ver la ciudad y la torre que edificaron los hijos del hombre.
 **6** Y dijo יהוה: He aquí el pueblo es uno, y su lenguaje[^53] una para todos. Y esto han comen­zado a hacer, y ahora, ¿no se deberá refrenar de ellos todo lo que traman hacer?
-**7** Da *acá*, descendamos y confundamos allí su lenguaje, que
-no escuche un hombre el lenguaje de su compañero.
+**7** Da *acá*, descendamos y confundamos allí su lenguaje, que__ __no escuche un hombre el lenguaje de su compañero.
 **8** Y los dispersó יהוה desde allí sobre la faz de toda la tierra. Y cesaron de edificar la ciu­dad.
 **9** Por eso fue llamado su nombre Babel[^54], porque allí confundió[^55] יהוה el lenguaje de toda la tierra; y de allí los dis­persó יהוה sobre la faz de toda la tierra.
 
@@ -384,8 +382,7 @@ no escuche un hombre el lenguaje de su compañero.
 
 **27** Y estas son las generaciones de Téraj. Téraj engendró a Abram, a Najor y a Harán. Y Harán engendró a Lot.
 **28** Y murió Jarán a la faz de Téraj su padre, en la tierra de su naci­miento, en Ur de los casdim.
-**29** Y tomaron Abram y Najor para ellos mu­jeres. El nombre *de*
-la mujer de Abram era Sa­rai. Y el nombre *de* la mujer de Najor era Mil­cáh, hija de Harán, padre de Milcáh, y padre de Iscáh.
+**29** Y tomaron Abram y Najor para ellos mu­jeres. El nombre *de*__ __la mujer de Abram era Sa­rai. Y el nombre *de* la mujer de Najor era Mil­cáh, hija de Harán, padre de Milcáh, y padre de Iscáh.
 **30** Y era Sarai estéril, no tenía ella niño.
 **31** Y tomó Téraj a Abram, su hijo, y a Lot hijo de Jarán, hijo de su hijo, y a Sarai su nuera, mujer de Abram, su hijo. Y salieron con ellos de Ur de los casdim[^56], para ir a la tierra de Kenáan. Y fueron a Jarán, y habita­ron allí.
 **32** Y fueron los días de Téraj doscientos cinco años, y murió Téraj en Jarán.
@@ -432,8 +429,7 @@ la mujer de Abram era Sa­rai. Y el nombre *de* la mujer de Najor era Mil­cáh,
 **6** Y no los soportó la tierra para *que pudieran *habitar juntos, porque eran muchas sus pose­siones, y no podían habitar juntos.
 **7** Y hubo disputa entre los pastores de ganado de Abram y los pastores de ganado de Lot. Y el kenaaní y el perizí en ese momento habita­ban en la tierra.
 **8** *Y dijo Abram a Lot: Por favor, no haya dis­putas entre mí y tú, y entre mis pas­tores y tus pastores, porque hombres hermanos *somos* no­sotros.
-**9**¿No está toda la tierra delante de ti? Sepára­te, por favor de sobre mí. Si *vas a* la izquier­da, iré a la derecha; y si *a* la derecha, iré a la izquierda.
-**1**
+**9**¿No está toda la tierra delante de ti? Sepára­te, por favor de sobre mí. Si *vas a* la izquier­da, iré a la derecha; y si *a* la derecha, iré a la izquierda. __ __
 **10** Y levantó Lot sus ojos, y vio todo el círculo del Iardén, el cual en su todo *estaba* regado antes de destruir יהוה a Sedom y a Gamo­ráh como el jardín de יהוה, como la tierra de Mitzráim entran­do a Tzoar.
 **11** Y escogió para sí Lot todo el círculo del Iardén, y partió Lot desde el este. Y se separa­ron un hombre de sobre su hermano.
 **12** Abram habitó en la tierra de Kenáan, y Lot habitó en las ciudades del círculo, y tendió *su *tienda hasta Sedom.
@@ -477,8 +473,7 @@ la mujer de Abram era Sa­rai. Y el nombre *de* la mujer de Najor era Mil­cáh,
 
 **21** Y dijo el rey de Sedom a Abram: Dame las personas, pero los bienes tóma*los* para ti.
 **22** Y dijo Abram al rey de Sedom: He elevado mi mano a יהוה, El Elyón, creador de los cielos y la tierra,
-**23** que*
-si desde un hilo hasta una cuerda de sandalia, si tomaría de cualquier *cosa* que es tuya, no digas: “Yo enriquecí a Abram”.
+**23** que*__ __si desde un hilo hasta una cuerda de sandalia, si tomaría de cualquier *cosa* que es tuya, no digas: “Yo enriquecí a Abram”.
 **24** Nada *será* para mí, sólo lo que comieron los jóvenes, y la porción de los hombres que fue­ron conmigo: Aner, Eshcol, y Mamré; ellos to­marán su porción.
 
 *Elohim establece su pacto con Abram*
@@ -598,9 +593,9 @@ a fin de que traiga יהוה sobre Abraham lo que habló sobre él.
 **20** Y dijo יהוה: El grito de Sedom y Gamo­ráh pues es mucho, y su pecado pues es muy pesado.
 **21** Descenderé ahora y veré *si* conforme a su grito, que ha venido a Mí, hicieron todo, y si no,* lo* sabré.
 **22** Y se dieron la vuelta de allí los hombres y fueron a Sedom, pero Abraham estaba todavía parado delante de יהוה.
-**23** Y se acercó Abraham y dijo: ¿También des­truirás al justo con el malvado?
+**23** Y se acercó Abraham y dijo: ¿También des­truirás al justificado con el condenado?
 **24** Tal vez haya cincuenta justos dentro de la ciudad, ¿también destruirás, y no soportarás al lugar por el bien de los cincuenta justos los cuales *están* en medio de ella?
-**25**¡Profanación a Ti hacer cosa como esta, matar al justo con el malvado, y sea el justo como el malvado!, ¡profanación a Ti! ¿El Juez de toda la tierra no hará juicio?
+**25**¡Profanación a Ti hacer cosa como esta, matar al justificado con el condenado, y sea el justificado como el condenado!, ¡profanación a Ti! ¿El Juez de toda la tierra no hará juicio?
 **26** Y dijo יהוה: Si encuentro en Sedom cin­cuenta justos dentro de la ciudad, soportaré a todo el lugar por el bien de ellos.
 **27** Y respondió Abraham, y dijo: He aquí, ahora he comenzado a hablar a Adonai, y yo soy polvo y ceniza.
 **28** Tal vez falten cinco de los cincuenta justos, ¿Destruirás por los cinco a toda la ciudad? Y dijo: No destruiré si encuentro allí cuarenta y cinco.
@@ -624,8 +619,7 @@ a fin de que traiga יהוה sobre Abraham lo que habló sobre él.
 **7** Y dijo: No hagan maldad, por favor, mis her­manos.
 **8** He aquí ahora tengo dos hijas, las cuales no conocieron varón, las sacaré, por favor, a uste­des, y hagan a ellas como sea bueno en sus o­jos; solamente a estos hombres no hagan na­da, porque han venido en la sombra de mi te­cho.
 **9** Y ellos dijeron: ¡Ven más acá! Y dijeron: Este[^92] vino para residir, y ya está juzgando[^93]. Ahora seremos más malos a ti que a ellos. Y presionaron contra el hombre, contra Lot, mucho, y se acer­caron para romper la puerta.
-**10** Pero enviaron los hombres
-sus manos y trajeron a Lot hacia ellos a la casa, y la puerta cerraron.
+**10** Pero enviaron los hombres__ __sus manos y trajeron a Lot hacia ellos a la casa, y la puerta cerraron.
 **11** Y a los hombres que *estaban* en la entrada de la casa golpearon con ceguera, desde el pequeño y hasta el grande, y se cansaban por *tratar de* encontrar la entrada.
 **12** Y dijeron los hombres a Lot: ¿A quién más tienes aquí? A *tu* yerno, y tus hijos y tus hijas, y todos los cuales tienes en la ciudad, saca del lugar.
 **13** Porque destruiremos nosotros este lugar, porque grande es el grito de ellos al rostro de יהוה, y nos ha enviado יהוה para des­truir­la.
@@ -819,8 +813,7 @@ y como la arena que es sobre la orilla del mar,
 **33** Y puso delante de él para comer, pero dijo: No comeré hasta que[^110] hable mis palabras. Y dijo *Labán*: Habla.
 **34** Y él dijo: Siervo de Abraham yo soy.
 **35** יהוה bendijo a mi amo mucho, y se ha engrandecido, y le ha dado ovejas y ganado, y plata y oro, y siervos y siervas, y came­llos y asnos.
-**36** Y dio a luz Sarah, mujer de mi amo, un hijo a mi amo después de su ancianidad. Y él le ha da­do todo lo que tiene.
-**1**
+**36** Y dio a luz Sarah, mujer de mi amo, un hijo a mi amo después de su ancianidad. Y él le ha da­do todo lo que tiene.__ __
 **37** Y me juró mi amo, diciendo: “No tomarás una mujer para mi hijo de las hijas del kenaaní, que yo habito en su tierra;
 **38** sino a la casa de mi padre irás, y a mi fa­milia, y tomarás una mujer para mi hijo.
 **39** Y dije a mi amo: “Quizá no irá la mujer de­trás de mí”.
@@ -868,7 +861,7 @@ y como la arena que es sobre la orilla del mar,
 **9** Y lo enterraron Itzjak e Ishmael sus hijos en la cueva de Majpelah, en el campo de Efrón, hijo de Tzojar el jití, el cual es sobre la faz de Mamré,
 **10** el campo que compró Abraham de los hijos de Jet, allí fue enterrado Abraham, y Sarah su mujer.
 **11** Y sucedió *que* después de la muerte de Abra­ham, bendijo Elohim a Itzjak su hijo, y habi­taba Itzjak junto a Beer Lajay Roi.
-**12** Y estas son las generaciones de Ishmael, hijo de Abraham, quien dio a luz Hagar la mitzrit, sierva de Sarah, a Abraham.
+**12** Y__ __estas son las generaciones de Ishmael, hijo de Abraham, quien dio a luz Hagar la mitzrit, sierva de Sarah, a Abraham.
 **13** Y estos *son* los nombres de los hijos de Ishmael, por sus nombres por sus genera­cio­nes: El primogénito de Ishmael, Nevaiot, y Kedar, Adbeel, Mivsán,
 **14** Mishma, Dumah, Masá,
 **15** Jadar, Teimá, Ietur, Nafish, y Kedemah.
@@ -1041,8 +1034,7 @@ hasta que haya hecho lo que te he hablado.
 **18** Y amaba Yaakov a Rajel, y dijo: Te serviré siete años por Rajel, tu hija más joven.
 **19** Y dijo Labán: Bueno *es* dártela a ti que dársela a otro hombre, permanece conmigo.
 **20** Y sirvió Yaakov por Rajel siete años, y fueron en sus ojos como pocos días, por su amor a ella.
-**21** Y dijo Yaakov a Labán: Da*me*
-a mi mujer, porque se cumplieron mis días, y pueda entrar a ella.
+**21** Y dijo Yaakov a Labán: Da*me*__ __a mi mujer, porque se cumplieron mis días, y pueda entrar a ella.
 **22** Y juntó Labán a todos los hombres del lugar, e hizo un banquete.
 **23** Y sucedió *que *por la tarde, tomó a Leah su hija y la trajo a Yaakov, y él entró a ella.
 **24** Y dio Labán para ella a Zilpah su sierva, a Leah su hija *como* sierva.
@@ -1241,8 +1233,7 @@ a mi mujer, porque se cumplieron mis días, y pueda entrar a ella.
 
 **18** Y llegó Yaakov entero a la ciudad de Shejem, la cual *está* en la tierra de Kenáan, en su venida desde Padán Aram; y acampó antes de la ciudad.
 **19** Y compró la parcela del campo, en la cual tendió allí su tienda, de mano de los hijos de Jamor, padre de Shejem, por cien *kesitah*[^173].
-**20** Y estableció allí un altar, y lo llamó:* *¡El, Elohim de Israel!
-**1**
+**20** Y estableció allí un altar, y lo llamó:* *¡El, Elohim de Israel! __ __
 
 *Profanación a Dinah*
 
@@ -1259,8 +1250,7 @@ a mi mujer, porque se cumplieron mis días, y pueda entrar a ella.
 **9** Cásense con nosotros; sus hijas den a nosotros, y a nuestras hijas tomaremos para us­te­des­.
 **10** Y con nosotros habitarán, y la tierra *estará* delante de ustedes. Habiten y comercien, y to­men *propiedades* en ella.
 **11** Y dijo Shejem a su padre y a los hermanos de ella: Encuentre favor en sus ojos, lo que me digan daré.
-**12** Multipliquen sobre mí mucho el precio de la novia, y regalo daré tal como me digan, pero den para mí
-a la joven por mujer.
+**12** Multipliquen sobre mí mucho el precio de la novia, y regalo daré tal como me digan, pero den para mí__ __a la joven por mujer.
 **13** Pero respondieron los hijos de Yaakov a Shejem y a Jamor con engaño, y *les* hablaron, porque él había profanado a Dinah su hermana.
 **14** Y les dijeron: No podemos hacer esta cosa, dar a nuestra hermana a un hombre que es incircunciso, porque una vergüenza *sería *eso* *para nosotros.
 **15** Pero en esto acordaremos: Si se hacen como nosotros, sea circuncidado a ti todo va­rón.
@@ -1423,7 +1413,7 @@ Estos son los hijos de Yaakov que le na­cieron en Padán Aram.
 **4** Y ella concibió otra vez y dio a luz un hijo, y llamó su nombre Onán.
 **5** Y ella concibió otra vez y dio a luz un hijo, y llamó su nombre Sheláh, y fue en Jeziv cuando lo dio a luz.
 **6** Y tomó Iehudáh una mujer para Er su primogénito, y su nombre *era* Tamar.
-**7** Pero fue Er, primogénito de Iehudáh, mal­vado en los ojos de __יהוה__, y lo mató __יהוה__.
+**7** Pero fue Er, primogénito de Iehudáh, culpable en los ojos de __יהוה__, y lo mató __יהוה__.
 **8** Y dijo Iehudáh a Onán: Entra a la mujer de tu hermano, y cumple como cuñado casándote con ella, y levanta simiente a tu hermano.
 **9** Pero sabía Onán que no sería para él la simiente, y sucedió *que* cuando entró a la mujer de su hermano, derramaba[^189] en tie­rra, para no dar simiente a su hermano.
 **10** Pero fue malo en los ojos de __יהוה__ lo que hizo. Y lo mató también a él.
@@ -1434,8 +1424,7 @@ Estos son los hijos de Yaakov que le na­cieron en Padán Aram.
 **15** Y la vio Iehudáh, y pensó que *era* una ramera, porque se había cubierto su rostro.
 **16** Y se desvió hacia ella al camino, y dijo: Ven, por favor, déjame entrar a ti. Porque no sabía que su nuera era ella. Y ella dijo: ¿Qué me darás por entrar a mí?
 **17** Y él dijo: Yo enviaré una cabra joven del rebaño. Y ella dijo: Si *me* das una garantía hasta que lo envíes.
-**18** Y él dijo: ¿Qué garantía *tengo* que darte a ti?
-Y ella dijo: Tu sello, tu cuerda y tu bastón que *tienes* en tu mano. Y *los* dio a ella, y entró a ella, y ella concibió para él.
+**18** Y él dijo: ¿Qué garantía *tengo* que darte a ti?__ __Y ella dijo: Tu sello, tu cuerda y tu bastón que *tienes* en tu mano. Y *los* dio a ella, y entró a ella, y ella concibió para él.
 **19** Y ella se levantó y se fue, y se quitó su velo de sobre ella, y se puso las ves­tiduras de su viudez.
 **20** Y envió Iehudáh la cabra joven por mano de su amigo el adulamí, para adquirir la ga­rantía de mano de la mujer, pero no la halló.
 **21** Y preguntó a los hombres del lugar de ella, diciendo: ¿Dónde *está* la ramera del templo[^191]?, ella *estaba* en Eynáim, junto al camino. Y ellos dijeron: No ha habido aquí *ninguna* ramera del templo.
@@ -1445,8 +1434,7 @@ Y ella dijo: Tu sello, tu cuerda y tu bastón que *tienes* en tu mano. Y *los* d
 **25** Cuando* ella era expulsada, ella envió a su suegro, diciendo: Del hombre a quien esto per­tenece yo estoy embarazada. Y ella dijo: Reconoce, por favor, a quién *perte­necen* el sello, la cuerda y este bastón.
 **26** Y *los* reconoció Iehudáh, y dijo: Ella es *más* justa que yo, por causa de que no le di a Sheláh, mi hijo. Y no volvió más a conocerla[^192].
 **27** Y sucedió* que* en el tiempo del parto, he aquí, *había* gemelos en su vientre.
-**28** Y sucedió
-que*, cuando daba a luz, él puso *su* mano, y *la* tomó la partera y ató en su mano *un hilo* escar­lata, diciendo: Este salió pri­mero.
+**28** Y sucedió__ __*que*, cuando daba a luz, él puso *su* mano, y *la* tomó la partera y ató en su mano *un hilo* escar­lata, diciendo: Este salió pri­mero.
 **29** Y sucedió *que* cuando regresó su mano, he aquí, salió su hermano. Y ella dijo: ¡Qué brecha[^193] has abierto sobre ti! Y llamaron su nombre Péretz[^194].
 **30** Y después salió su hermano, el cual *tenía* sobre su mano *el hilo* escarlata. Y llamaron su nombre Zaraj[^195].
 
@@ -1492,15 +1480,13 @@ que*, cuando daba a luz, él puso *su* mano, y *la* tomó la partera y ató en s
 **8** Y ellos le dijeron: Un sueño nosotros soña­mos, y no hay quien lo descifre. Y les dijo Iosef: ¿No pertenecen a Elohim las inter­pretaciones? Cuénten*melo*, por favor, a mí.
 **9** Y contó el jefe de los coperos su sueño a Iosef, y le dijo: En mi sueño* había* una vid delante de mí,
 **10** y en la vid *había* tres brotes. Y ella, cuando florecía, ascendían sus flores, y maduraron en sus racimos uvas.
-**11** Y la copa de Faraón *estaba* en mi mano; y tomé las uvas
-y las exprimí[^200] en la copa de Faraón, y puse la copa en la palma de Faraón.
+**11** Y la copa de Faraón *estaba* en mi mano; y tomé las uvas__ __y las exprimí[^200] en la copa de Faraón, y puse la copa en la palma de Faraón.
 **12** Y le dijo Iosef: Esta es su interpretación: Los tres brotes, ellos *son* tres días.
 **13** En aún tres días levantará Faraón tu cabeza, y te devolverá a tu puesto, y darás la copa de Faraón en su mano como tenías de­recho antes cuando eras su copero.
 **14** Pero acuérdate de mí contigo mismo cuando él sea bueno para ti, y haz por favor con­migo bondad[^201], y hazle memoria de mí a Faraón, y sácame de esta casa.
 **15** Porque ciertamente fui robado de la tierra de los ivrim[^202], y además, aquí no he hecho nada para que me pongan en el hoyo.
 **16** Y vio el jefe de los panaderos que era buena la interpretación, y dijo a Iosef: También yo *vi* en mi sueño, he aquí, tres canastas de pan blanco sobre mi cabeza.
-**17** Y en la canasta superior
-había* de toda comida *para* Faraón hecha para hornear, y las aves los comían de la canasta de sobre mi cabeza.
+**17** Y en la canasta superior__ __*había* de toda comida *para* Faraón hecha para hornear, y las aves los comían de la canasta de sobre mi cabeza.
 **18** Y respondió Iosef, y dijo: Esta es su interpretación: Las tres canastas, ellas *son* tres días.
 **19** En aún tres días levantará Faraón tu cabeza de sobre ti, y te colgará a ti sobre un árbol, y comerán las aves la carne de sobre ti.
 **20** Y sucedió en el día tercero, día del naci­miento de Faraón, *que *hizo un banquete para todos, y él levantó la cabeza del jefe de los coperos y la cabeza del jefe de los panaderos en medio de sus siervos.
@@ -1538,8 +1524,7 @@ había* de toda comida *para* Faraón hecha para hornear, y las aves los comían
 **24** Y tragaron las espigas flacas a las siete espigas buenas. Y dije *esto* a los magos, pero no hay quien me lo pueda dar a conocer.
 **25** Y dijo Iosef a Faraón: El sueño de Faraón uno es; lo que Elohim va a hacer ha contado a Faraón.
 **26** Las siete vacas buenas, siete años *son* ellas, y las siete espigas buenas siete años *son* ellas; el sueño uno es.
-**27** Y las siete vacas flacas y malas que su­bieron después de ellas, siete años *son* ellas,
-y las siete espigas vacías arruinadas *por el* viento del este, serán siete años de hambre.
+**27** Y las siete vacas flacas y malas que su­bieron después de ellas, siete años *son* ellas,__ __y las siete espigas vacías arruinadas *por el* viento del este, serán siete años de hambre.
 **28** Estas palabras que he dicho a Faraón, lo que Elohim va a hacer ha mostrado a Fa­raón.
 **29** He aquí, siete años vendrán de gran abun­dancia en toda la tierra de Mitzráim.
 **30** Pero se levantarán siete años de hambre después de ellos, y será olvidada toda la abundancia en la tierra de Mitzráim, y destruirá el hambre toda la tierra.
@@ -1772,15 +1757,13 @@ porque una gran na­ción te haré allí.**4** Yo descenderé contigo a Mitzrái
 
 **47**
 
-**1** Y vino Iosef y contó a Faraón, y dijo: Mi padre y mis hermanos, y sus re­baños y sus ganados, y todo lo que
-ellos tie­nen, han venido de la tierra de Kenáan, y he aquí están en la tierra de Goshén.
+**1** Y vino Iosef y contó a Faraón, y dijo: Mi padre y mis hermanos, y sus re­baños y sus ganados, y todo lo que__ __ellos tie­nen, han venido de la tierra de Kenáan, y he aquí están en la tierra de Goshén.
 **2** Y del extremo de sus hermanos él tomó cinco hombres, y los presentó delante de Faraón.
 **3** Y dijo Faraón a sus hermanos: ¿Cuáles son sus trabajos? Y ellos dijeron a Faraón: Pastores de rebaño *son* tus siervos, tanto nosotros como nuestros padres.
 **4** Y dijeron a Faraón: Para vivir en la tierra hemos venido, porque no hay pasto para el rebaño los cuales son para tus siervos, pues grave es el hambre en la tierra de Kenáan. Y ahora, deja habitar por favor *a* tus siervos en la tierra de Goshén.
 **5** Y dijo Faraón a Iosef, diciendo: Tu padre y tus hermanos han venido a ti;
 **6** la tierra de Mitzráim delante de ti está, en lo mejor de la tierra habiten tu padre y tus her­manos; habiten en la tierra de Goshén, y si sabes y hay entre ellos hombres fuertes, nóm­bralos jefes de ganado sobre lo que es mío.
-**7** Y
-trajo Iosef a Yaakov su padre y lo paró delante de Faraón, y bendijo Yaakov a Faraón.
+**7** Y__ __trajo Iosef a Yaakov su padre y lo paró delante de Faraón, y bendijo Yaakov a Faraón.
 **8** Y dijo Faraón a Yaakov: ¿Cuántos son los días de los años de tu vida?
 **9** Y dijo Yaakov a Faraón: Los días de los años de mi residencia son ciento treinta años; pocos y malos han sido los días de los años de mi vida, y no han superado a los días de los años de la vida de mis padres en los días de su residencia.
 **10** Y bendijo Yaakov a Faraón, y salió de delante de Faraón.

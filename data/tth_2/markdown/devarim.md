@@ -286,8 +286,7 @@ __DEVARIM \(DEUTERONOMIO\)__ דברים
 
 **7**
 
-**1** Cuando te haya hecho entrar __יהוה__ tu Elo­him
-a la tierra la cual tú entrarás allí para here­darla, y haya expulsado muchas na­ciones de delante de ti: el jití, el girgashí, el emorí, el kenaaní, el perizí, el jiví y el iebusí, siete nacio­nes *más* numerosas y tremendas que tú,
+**1** Cuando te haya hecho entrar __יהוה__ tu Elo­him__ __a la tierra la cual tú entrarás allí para here­darla, y haya expulsado muchas na­ciones de delante de ti: el jití, el girgashí, el emorí, el kenaaní, el perizí, el jiví y el iebusí, siete nacio­nes *más* numerosas y tremendas que tú,
 **2** y los haya dado __יהוה__ tu Elohim delante de ti, y los hayas golpeado, habiendo destruido, los destruirás. No harás[^1159] para ellos pacto, y no los favorecerás.
 **3** Y no se casarán con ellos; tu hija no darás a su hijo, y su hija no tomarás para tu hijo.
 **4** Porque desviará a tu hijo de detrás de Mí *para que* sirva *a* otros dioses; y se calentará la nariz de __יהוה__ contra ustedes, y Él te destruirá pronto.
@@ -300,8 +299,7 @@ a la tierra la cual tú entrarás allí para here­darla, y haya expulsado mucha
 **8** pues por el amor de __יהוה__ hacia ustedes y debido a que guardó el juramento que juró a sus padres,* los* hizo salir __יהוה__ a ustedes con ma­no fuerte, y te rescató de la casa de escla­vos, de la mano de Faraón, rey de Mitzráim.
 **9** Y sabrás que __יהוה__ tu Elohim, Él es Elo­him, Elohim fiel[^1162], *que *guarda el pacto y la bondad[^1163] para los que lo aman y[^1164] para los que guardan sus mandamientos, por mil genera­ciones.
 **10** Y retribuye a los que le odian hacia su rostro, para hacerlos perecer; no se demorará con el que le odia, hacia su rostro le retribuirá.
-**11** Y guardarás los mandamientos, los decretos y los procesos legales
-que yo te ordeno hoy, para hacerlos.
+**11** Y guardarás los mandamientos, los decretos y los procesos legales__ __que yo te ordeno hoy, para hacerlos.
 
 *Bendiciones de la obediencia*
 
@@ -516,16 +514,12 @@ que yo te ordeno hoy, para hacerlos.
 **15** hiriendo, golpearás a los habitantes de esa ciu­dad a boca de espada, destruyéndola, y con todo lo que *hay* en ella, y a su bestia a boca de espada.
 **16** Y todo su botín reunirás en medio de la pla­za, y quemarás en el fuego a la ciudad, y todo su botín completo para יהוה tu Elohim; y será un montón siempre, no se edificará más.
 **17** Y no se aferrará en tu mano nada de la pro­hibición, a fin de que regrese יהוה del enojo de su ira, y te dé bondad y te ame entrañablemente, y te haga aumentar, como juró a tus pa­dres;
-**18** porque escucharás a la voz de יהוה para guardar todos sus mandamientos que yo te or­deno
-hoy, para hacer
-lo recto en los ojos de יהוה tu Elohim.
+**18** porque escucharás a la voz de יהוה para guardar todos sus mandamientos que yo te or­deno__ __hoy, para hacer__ __lo recto en los ojos de יהוה tu Elohim.
 
 **14**
 
 **1** Hijos[^1197] ustedes *son* para יהוה su Elo­him; no se cortarán y no se harán cal­­vi­cie entre sus ojos por un muerto.
-**2** Porque pueblo kadosh[^1198] *eres* tú
-para יהוה tu Elohim; y te ha escogido יהוה
-para ser a Él por pueblo, una adquisición[^1199] de *entre* todos los pue­blos que *están* sobre la faz de la tierra.
+**2** Porque pueblo kadosh[^1198] *eres* tú__ __para יהוה tu Elohim; y te ha escogido יהוה__ __para ser a Él por pueblo, una adquisición[^1199] de *entre* todos los pue­blos que *están* sobre la faz de la tierra.
 
 *Animales puros e impuros*
 
@@ -543,8 +537,7 @@ para ser a Él por pueblo, una adquisición[^1199] de *entre* todos los pue­blo
 **14** y todo cuervo por su tipo;
 **15** y la *bat haianáh*[^1214], el *tajmas*[^1215], el *shajaf*[^1216] y el *netz*[^1217], por su tipo;
 **16** el *cos*[^1218], el *ianshuf*[^1219]* *y la *tinshamet*[^1220],
-**17** y
-la *kaat*[^1221], la *rajamáh*[^1222] y el *shálaj*[^1223],
+**17** y__ __la *kaat*[^1221], la *rajamáh*[^1222] y el *shálaj*[^1223],
 **18** y la cigüeña y la garza, por su tipo; y la abubilla y el murciélago.
 **19** Y todo insecto volador, impuro es para us­te­­­des; no se comerán.
 **20** Toda ave pura podrán comer.
@@ -618,7 +611,7 @@ la *kaat*[^1221], la *rajamáh*[^1222] y el *shálaj*[^1223],
 *Conformación de los jueces*
 
 **18** Jueces y oficiales pondrás para ti en todas tus puertas que יהוה tu Elohim *te *da a ti, por tus tribus, y juzgarán al pueblo *con *juicio jus­to.
-**19** No inclinarás la justicia, no reconocerás los ros­tros[^1237], y no tomarás soborno, porque el so­borno ciega los ojos de los sabios y distor­siona las palabras de los justos.
+**19** No inclinarás el juicio, no reconocerás los ros­tros[^1237], y no tomarás soborno, porque el so­borno ciega los ojos de los sabios y distor­siona las palabras de los justos.
 **20** Justicia, la justicia perseguirás, a fin de que vivas y heredes la tierra que יהוה tu Elohim *te *da a ti.
 **21** No plantarás para ti Asheráh, todo árbol, cer­ca del altar de יהוה tu Elohim que harás para ti.
 **22** Y no levantarás para ti pilar, lo cual odia יהוה tu Elohim.
@@ -714,8 +707,7 @@ la *kaat*[^1221], la *rajamáh*[^1222] y el *shálaj*[^1223],
 
 **1** Cuando salgas a la guerra sobre tus enemi­gos y veas caballo y carro, pue­blo *más *nume­ro­so que tú, no tengas temor de ellos, porque יהוה tu Elohim *está* conti­go, el que te hizo subir de la tierra de Mitzráim.
 **2** Y sucederá cuando se acerquen a la guerra, se acercará el sacerdote y hablará al pueblo,
-**3** y *les *dirá a ellos: “¡Escucha Israel, ustedes se acer­can
-hoy a la guerra sobre sus enemigos; no se ablandará su corazón, no temerán y no se a­presurarán, y no temblarán debido a sus ros­tros!
+**3** y *les *dirá a ellos: “¡Escucha Israel, ustedes se acer­can__ __hoy a la guerra sobre sus enemigos; no se ablandará su corazón, no temerán y no se a­presurarán, y no temblarán debido a sus ros­tros!
 **4** Porque יהוה su Elohim, Él va con us­tedes para luchar por ustedes con sus enemigos, para salvarlos”.
 **5** Y hablarán los oficiales al pueblo, diciendo: “¿Quién es el hombre que ha edificado una ca­sa nue­va y no la ha inaugurado[^1251]? Se irá y volverá a su casa, no sea que muera en la guerra y otro hombre la inaugure[^1252].
 **6**¿Y quién es el hombre que plantó una viña y no la ha comenzado *a comer*? Se irá y volverá a su casa, no sea que muera en la guerra y otro hombre la comience *a comer*.
@@ -807,8 +799,7 @@ hoy a la guerra sobre sus enemigos; no se ablandará su corazón, no temerán y 
 **1** No entrará uno herido de aplastado y cor­tado el pene en la asamblea de יהוה.
 **2** No entrará bastardo[^1261] en la asamblea de יהוה, aún la generación décima, no entrará de él, en la asamblea de יהוה.
 **3** No entrará un amoní y un moabí en la asam­blea de יהוה, aún la generación décima no entrará de ellos en la asamblea de יהוה has­ta el olam[^1262],
-**4** por cosa que no fueron al encuentro de uste­des con pan y con agua en el camino, en su sa­lida
-de Mitzráim, y que contrataron contra ti a Bi­­lam, hijo de Beor, de Petor, Aram Naharáim, para hacerte excluido.
+**4** por cosa que no fueron al encuentro de uste­des con pan y con agua en el camino, en su sa­lida__ __de Mitzráim, y que contrataron contra ti a Bi­­lam, hijo de Beor, de Petor, Aram Naharáim, para hacerte excluido.
 **5** Y no quiso יהוה tu Elohim escuchar a Bi­lam, e hizo girar יהוה tu Elohim para ti el desprecio para bendición, porque te ama יהוה tu Elohim.
 **6** No investigarás el shalom[^1263] de ellos ni el bien de ellos *por* todos tus días, para el olam.
 **7** *No distorsionarás *al* edomí, porque tu hermano es él; no distorsionarás *al* mitzrí, porque habitan­te fuiste en su tierra.
@@ -824,8 +815,7 @@ de Mitzráim, y que contrataron contra ti a Bi­­lam, hijo de Beor, de Petor, A
 **17** No será prostituta pagana *ninguna* de las hi­jas de Israel; y no será prostituto pagano *nin­guno* de los hijos de Israel.
 **18** No traerás pago de prostituta y precio de un perro *a* la casa de יהוה tu Elohim para todo voto, porque abominación de יהוה tam­­­­bién son los dos.
 **19** No harás interés[^1267] a tu her­mano: interés de di­nero, inte­rés de comida, interés de cualquier co­sa que se pueda hacer interés.
-**20** A un extranjero harás interés, pero a tu her­mano
-no harás interés, a fin de que te bendiga יהוה en todo extender de tu mano sobre la tierra, la cual tú entrarás allí para heredarla.
+**20** A un extranjero harás interés, pero a tu her­mano__ __no harás interés, a fin de que te bendiga יהוה en todo extender de tu mano sobre la tierra, la cual tú entrarás allí para heredarla.
 **21** Cuando prometas un voto a יהוה tu Elo­him, no te retrasarás para pagarlo[^1268], porque demandando, lo demandará יהוה tu Elohim de ti, y será en ti pecado.
 **22** Pero cuando desistes de un voto, no será en ti pecado.
 **23** Lo que salga de tus labios guardarás y ha­rás, como prometiste a יהוה tu Elohim vo­lun­tariamente, lo cual hablaste con tu boca.
@@ -1051,8 +1041,7 @@ no harás interés, a fin de que te bendiga יהוה en todo extender de tu mano
 **22** Y dirá la generación siguiente, sus hijos que se levantarán después de ustedes y el extranje­ro que vendrá de tierra lejana, *cuando* vean los golpes de esta tierra y sus enfermedades que ha hecho enfermar יהוה en ella:
 **23**“Azufre y sal, incinerada *está* toda su tierra, no se siembra y no se hace brotar, y no ascien­de en ella ninguna hierba, *es* como la destru­cción de Sedom y Gamoráh, de Admáh y Tzeboim, que destruyó יהוה en su ira y en su fu­ror”.
 **24** Y dirán todas las naciones: “¿Por qué hizo יהוה así a esta tierra? ¿Qué *es* este gran ar­dor de ira?”
-**25** Y dirán: “Porque abandonaron el pacto de יהוה, Elohim de sus padres, el cual hizo con ellos
-cuando los sacó de la tie­rra de Mitzráim.
+**25** Y dirán: “Porque abandonaron el pacto de יהוה, Elohim de sus padres, el cual hizo con ellos__ __cuando los sacó de la tie­rra de Mitzráim.
 **26** Y fueron y sirvieron otros dioses, y se incli­naron a ellos, dioses que no conocían y *que* Él no había repartido a ellos.
 **27** Y se encendió la ira de יהוה en esta tie­rra, para traer sobre ella toda la maldición es­cri­ta en este rollo;
 **28** y los desarraigó יהוה de sobre su tierra con ira, con furor y con gran enojo, y los lanzó a otra tierra, como este día”.

@@ -24,9 +24,13 @@ interface FullChapterViewProps {
 	hebrewOnly: boolean;
 	translationOnly?: boolean;
 	seferMode?: boolean;
-	onWordClick: (word: WordResponse) => void;
+	onWordClick: (
+		word: WordResponse,
+		context?: { chapter: number; verse: number },
+	) => void;
 	showQumran?: boolean;
-	selectedWord?: string | null;
+	selectedWord?: Pick<WordResponse, "text" | "position" | "strong"> | null;
+	selectedWordContext?: { chapter: number; verse: number } | null;
 	showNikud?: boolean;
 	showCantillation?: boolean;
 	isBesorah?: boolean;
@@ -41,6 +45,7 @@ export function FullChapterView({
 	onWordClick,
 	showQumran,
 	selectedWord,
+	selectedWordContext,
 	showNikud = true,
 	showCantillation = true,
 	isBesorah = false,
@@ -87,7 +92,7 @@ export function FullChapterView({
 	};
 
 	const normalizedSelected = selectedWord
-		? normalizeForMatch(selectedWord)
+		? normalizeForMatch(selectedWord.text)
 		: null;
 
 	const renderVerseTranslation = (verse: VerseResponse) =>
@@ -156,18 +161,31 @@ export function FullChapterView({
 			// Always compare against the original Masoretic word text, not the
 			// display text which may be a DSS variant.
 			const normalizedWord = normalizeForMatch(word.text);
+			const isContextMatch = Boolean(
+				selectedWordContext &&
+					selectedWordContext.chapter === verse.chapter &&
+					selectedWordContext.verse === verse.verse,
+			);
 			const isSelected =
-				Boolean(normalizedSelected) && normalizedSelected === normalizedWord;
+				isContextMatch &&
+				(typeof selectedWord?.position === "number"
+					? selectedWord.position === word.position
+					: Boolean(normalizedSelected) && normalizedSelected === normalizedWord);
 
 			const prefixSegments = !variantEntry && word.prefixes?.length
 				? getPrefixSegments(displayText, word.prefixes)
 				: null;
 
 			return (
-				<span key={word.position}>
+				<span key={`${verse.chapter}-${verse.verse}-${word.position}`}>
 					<button
 						type="button"
-						onClick={() => onWordClick(word)}
+						onClick={() =>
+							onWordClick(word, {
+								chapter: verse.chapter,
+								verse: verse.verse,
+							})
+						}
 						className={`word-interactive cursor-pointer ${isSelected ? "verse-highlight" : ""}`}
 						style={
 							variantEntry
@@ -335,13 +353,9 @@ export function FullChapterView({
 												: renderVerseTranslation(verse)}
 										</>
 									) : (
-										<>
-											[
-											{language === "es" && !(verse.translation ?? "").trim()
-												? spanishMissingTranslation
-												: renderVerseTranslation(verse)}
-											]
-										</>
+										language === "es" && !(verse.translation ?? "").trim()
+											? spanishMissingTranslation
+											: renderVerseTranslation(verse)
 									)}
 								</div>
 							)}

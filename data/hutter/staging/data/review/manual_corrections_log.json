@@ -1,0 +1,1326 @@
+{
+  "timestamp": "2026-01-14T09:37:53.370606",
+  "summary": {
+    "total_books_processed": 8,
+    "total_corrections_applied": 184,
+    "books": [
+      "hebrews",
+      "john",
+      "acts",
+      "corinthians1",
+      "james",
+      "john1",
+      "mark",
+      "thessalonians1"
+    ],
+    "moriah_corrections": 40,
+    "lena_corrections": 144,
+    "conflicts_resolved": 0
+  },
+  "corrections_by_book": {
+    "hebrews": [
+      {
+        "chapter": 2,
+        "verse": 18,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 3,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 11,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 7,
+        "verse": 19,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 9,
+        "verse": 23,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 10,
+        "verse": 23,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 11,
+        "verse": 21,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 11,
+        "verse": 35,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 11,
+        "verse": 37,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 11,
+        "verse": 40,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 1,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 13,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 18,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 19,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 20,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 21,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 24,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 25,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 9,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      }
+    ],
+    "john": [
+      {
+        "chapter": 1,
+        "verse": 15,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 2,
+        "verse": 8,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 2,
+        "verse": 10,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 2,
+        "verse": 12,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 2,
+        "verse": 15,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 7,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 13,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 42,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 9,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 35,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 36,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 37,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 39,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 40,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 6,
+        "verse": 65,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 9,
+        "verse": 14,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 9,
+        "verse": 15,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 10,
+        "verse": 5,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 10,
+        "verse": 36,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 10,
+        "verse": 37,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 10,
+        "verse": 40,
+        "source": "moriah",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      }
+    ],
+    "acts": [
+      {
+        "chapter": 1,
+        "verse": 20,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 2,
+        "verse": 30,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 5,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 10,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 11,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 20,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 22,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 6,
+        "verse": 7,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 7,
+        "verse": 30,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 7,
+        "verse": 51,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 7,
+        "verse": 54,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 9,
+        "verse": 28,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 9,
+        "verse": 34,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 11,
+        "verse": 12,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 11,
+        "verse": 26,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 5,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 6,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 7,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 8,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 9,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 10,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 50,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 12,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 13,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 14,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 15,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 16,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 18,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 15,
+        "verse": 29,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 15,
+        "verse": 30,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 15,
+        "verse": 32,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 15,
+        "verse": 39,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 11,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 29,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 30,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 31,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 33,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 34,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 17,
+        "verse": 2,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 17,
+        "verse": 3,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 17,
+        "verse": 4,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 17,
+        "verse": 5,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 17,
+        "verse": 6,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 17,
+        "verse": 11,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 17,
+        "verse": 23,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 18,
+        "verse": 3,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 19,
+        "verse": 26,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 19,
+        "verse": 31,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 19,
+        "verse": 34,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 19,
+        "verse": 37,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 20,
+        "verse": 35,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 21,
+        "verse": 28,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 21,
+        "verse": 29,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 21,
+        "verse": 30,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 21,
+        "verse": 33,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 21,
+        "verse": 34,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 21,
+        "verse": 36,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 21,
+        "verse": 37,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 21,
+        "verse": 39,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 22,
+        "verse": 17,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 23,
+        "verse": 6,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 27,
+        "verse": 3,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 27,
+        "verse": 40,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 27,
+        "verse": 41,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      }
+    ],
+    "corinthians1": [
+      {
+        "chapter": 3,
+        "verse": 10,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 13,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 16,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 12,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 6,
+        "verse": 1,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 6,
+        "verse": 2,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 6,
+        "verse": 4,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 8,
+        "verse": 1,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 9,
+        "verse": 7,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 9,
+        "verse": 12,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 10,
+        "verse": 17,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 2,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 8,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 9,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 28,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 12,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 5,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 15,
+        "verse": 40,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 15,
+        "verse": 41,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      }
+    ],
+    "james": [
+      {
+        "chapter": 2,
+        "verse": 25,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 1,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 16,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 17,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 2,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 17,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 3,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 4,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 6,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      }
+    ],
+    "john1": [
+      {
+        "chapter": 2,
+        "verse": 8,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 2,
+        "verse": 13,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 2,
+        "verse": 16,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 2,
+        "verse": 18,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 20,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 15,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 17,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      }
+    ],
+    "mark": [
+      {
+        "chapter": 3,
+        "verse": 5,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 3,
+        "verse": 9,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 7,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 19,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 25,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 7,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 37,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 41,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 6,
+        "verse": 9,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 6,
+        "verse": 10,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 6,
+        "verse": 11,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 6,
+        "verse": 12,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 6,
+        "verse": 48,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 8,
+        "verse": 29,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 9,
+        "verse": 12,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 11,
+        "verse": 21,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 12,
+        "verse": 26,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 2,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 3,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 4,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 5,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 6,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 7,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 13,
+        "verse": 8,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 3,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 24,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 25,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 27,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 28,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 14,
+        "verse": 29,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 15,
+        "verse": 4,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 15,
+        "verse": 15,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 6,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 7,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 9,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 10,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 11,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 15,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 16,
+        "verse": 17,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      }
+    ],
+    "thessalonians1": [
+      {
+        "chapter": 1,
+        "verse": 3,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 13,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 16,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 4,
+        "verse": 17,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 12,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      },
+      {
+        "chapter": 5,
+        "verse": 28,
+        "source": "lena",
+        "timestamp": "2026-01-14T09:37:53.332906",
+        "has_conflict": false
+      }
+    ]
+  }
+}

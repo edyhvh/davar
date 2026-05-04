@@ -118,3 +118,23 @@ export const shouldHideSuperscripts = (
   // TTH markers remain visible so the mobile app can render tappable footnotes.
   return translationKey === "ts2009";
 };
+
+const MISSING_SPANISH_TRANSLATION_NOTICE: Record<AppLanguage, string> = {
+  en: "At the moment we do not have a Spanish translation for this text, we are working on it...",
+  es: "Por el momento no contamos con traducción al español de este texto, estamos trabajando en ello...",
+  he: "At the moment we do not have a Spanish translation for this text, we are working on it...",
+};
+
+const PSALMS_SUPERSCRIPTION_NOTICE: Record<AppLanguage, string> = {
+  en: "This is probably a title in the translation, go to the next verse...",
+  es: "Probablemente este es un título en la traducción, ve al siguiente versículo...",
+  he: "This is probably a title in the translation, go to the next verse...",
+};
+
+export const getMissingSpanishTranslationNotice = (
+  language: AppLanguage,
+): string => MISSING_SPANISH_TRANSLATION_NOTICE[language] ?? MISSING_SPANISH_TRANSLATION_NOTICE.en;
+
+export const getPsalmsSuperscriptionNotice = (
+  language: AppLanguage,
+): string => PSALMS_SUPERSCRIPTION_NOTICE[language] ?? PSALMS_SUPERSCRIPTION_NOTICE.en;

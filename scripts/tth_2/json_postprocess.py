@@ -21,6 +21,15 @@ import shutil
 from pathlib import Path
 from typing import Dict, Any, List, Tuple
 
+try:
+    from .text_cleaner import get_cleaner
+except ImportError:
+    try:
+        from text_cleaner import get_cleaner
+    except ImportError:
+        def get_cleaner():
+            return None
+
 # Default paths
 DEFAULT_JSON_DIR = Path(__file__).parent.parent.parent / \
     "data" / "tth_2" / "json"
@@ -73,14 +82,17 @@ class TTHJsonPostProcessor:
 
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
+        self.text_cleaner = get_cleaner()
         self.stats = {
             'soft_hyphens': 0,
+            'apostrophes_normalized': 0,
             'underscore_artifacts': 0,
             'escaped_parens': 0,
             'escaped_special_chars': 0,
             'embedded_footnotes_removed': 0,
             'broken_italics': 0,
             'italics_converted': 0,
+            'em_inner_whitespace_trimmed': 0,
             'em_spacing_fixed': 0,
             'subtitle_segments_extracted': 0,
             'subtitle_verses_created': 0,
@@ -91,6 +103,7 @@ class TTHJsonPostProcessor:
             'divine_name_normalized': 0,
             'divine_name_markdown_wrappers_removed': 0,
             'book_divisions_extracted': 0,
+            'stuck_final_y_fixed': 0,
             'verses_processed': 0,
             'files_processed': 0,
         }
@@ -144,14 +157,21 @@ class TTHJsonPostProcessor:
 
         def unwrap_if_divine_name(match):
             inner = match.group(1)
-            token = inner.strip()
-            token = re.sub(r'^[,.;:!?"\'“”‘’()\[\]{}]+', '', token)
-            token = re.sub(r'[,.;:!?"\'“”‘’()\[\]{}]+$', '', token)
-            token = re.sub(r'^[0-9⁰¹²³⁴⁵⁶⁷⁸⁹]+\s*', '', token)
+            raw = inner.strip()
+            token = raw
+            token = re.sub(r"^[,.;:!?\"'“”‘’()\[\]{}]+", "", token)
+            token = re.sub(r"[,.;:!?\"'“”‘’()\[\]{}]+$", "", token)
+            token_no_num = re.sub(r'^[0-9⁰¹²³⁴⁵⁶⁷⁸⁹]+\s*', '', token)
+            had_numeric_prefix = token_no_num != token
+            token = token_no_num
             normalized = _strip_hebrew_diacritics(token)
             if normalized in self.DIVINE_NAME_BASE_FORMS:
                 self.stats['divine_name_markdown_wrappers_removed'] += 1
-                return inner.strip()
+                cleaned_inner = re.sub(
+                    r'^[0-9⁰¹²³⁴⁵⁶⁷⁸⁹]+\s*', '', raw).strip()
+                if had_numeric_prefix:
+                    return f" {cleaned_inner}"
+                return cleaned_inner
             return match.group(0)
 
         return re.sub(r'__([^_\n]+?)__', unwrap_if_divine_name, text)
@@ -162,7 +182,7 @@ class TTHJsonPostProcessor:
         if not first_letter:
             return False
         letter = first_letter.group(0)
-        return letter.isalpha() and letter == letter.lower() and letter != letter.upper()
+        return letter.islower()
 
     def starts_with_blocked_subtitle_phrase(self, content: str) -> bool:
         """Return True when content starts with a known in-verse phrase."""
@@ -187,7 +207,7 @@ class TTHJsonPostProcessor:
 
         tokens = re.split(r'\s+', text.strip())
         cleaned_tokens = []
-        strip_chars = '.,;:!?"' + "'" + '“”‘’()[]{}'
+        strip_chars = ".,;:!?\"'“”‘’()[]{}"
         for token in tokens:
             cleaned = token.strip(strip_chars)
             if cleaned:
@@ -256,6 +276,22 @@ class TTHJsonPostProcessor:
         count = text.count('\u00AD')
         self.stats['soft_hyphens'] += count
         return text.replace('\u00AD', '')
+
+    def normalize_ascii_apostrophes(self, text: str) -> str:
+        """
+        Normalize smart apostrophes to plain ASCII apostrophe.
+
+        - U+2018 LEFT SINGLE QUOTATION MARK -> '
+        - U+2019 RIGHT SINGLE QUOTATION MARK -> '
+        """
+        if not text:
+            return text
+
+        replacements = text.count('\u2018') + text.count('\u2019')
+        if replacements:
+            self.stats['apostrophes_normalized'] += replacements
+
+        return text.replace('\u2018', "'").replace('\u2019', "'")
 
     def fix_underscore_artifacts(self, text: str) -> str:
         """
@@ -514,6 +550,31 @@ class TTHJsonPostProcessor:
 
         return result
 
+    def normalize_em_inner_whitespace(self, text: str) -> str:
+        """
+        Trim leading/trailing whitespace inside <em>...</em> content.
+
+        Example:
+        - <em>shekel. </em> -> <em>shekel.</em>
+        """
+        if not text or '<em>' not in text:
+            return text
+
+        def trim_inner(match):
+            inner = match.group(1)
+            trimmed = inner.strip()
+
+            if trimmed != inner:
+                self.stats['em_inner_whitespace_trimmed'] += 1
+
+            # Drop empty emphasis wrappers after trimming.
+            if not trimmed:
+                return ''
+
+            return f'<em>{trimmed}</em>'
+
+        return re.sub(r'<em>([^<]*)</em>', trim_inner, text)
+
     def flatten_nested_em_tags(self, text: str) -> str:
         """Flatten accidental nested <em> tags into a single emphasis span."""
         result = text
@@ -533,8 +594,8 @@ class TTHJsonPostProcessor:
         def unwrap_if_divine_name(match):
             inner = match.group(1)
             token = inner.strip()
-            token = re.sub(r'^[,.;:!?"\'“”‘’()\[\]{}]+', '', token)
-            token = re.sub(r'[,.;:!?"\'“”‘’()\[\]{}]+$', '', token)
+            token = re.sub(r"^[,.;:!?\"'“”‘’()\[\]{}]+", "", token)
+            token = re.sub(r"[,.;:!?\"'“”‘’()\[\]{}]+$", "", token)
             normalized = _strip_hebrew_diacritics(token)
             if normalized in self.DIVINE_NAME_BASE_FORMS:
                 return inner
@@ -645,56 +706,70 @@ class TTHJsonPostProcessor:
         # Step 1: Remove soft hyphens (clean raw text first)
         result = self.remove_soft_hyphens(result)
 
-        # Step 2: Fix underscore artifacts
+        # Step 2: Normalize smart apostrophes to ASCII apostrophe
+        result = self.normalize_ascii_apostrophes(result)
+
+        # Step 3: Fix underscore artifacts
         result = self.fix_underscore_artifacts(result)
 
-        # Step 3: Remove empty markdown spacer artifacts (* *)
+        # Step 4: Remove empty markdown spacer artifacts (* *)
         result = self.fix_empty_italic_gaps(result)
 
-        # Step 4: Fix escaped parentheses
+        # Step 5: Fix escaped parentheses
         result = self.fix_escaped_parentheses(result)
 
-        # Step 5: Remove unnecessary escaped punctuation/brackets
+        # Step 6: Remove unnecessary escaped punctuation/brackets
         result = self.fix_escaped_special_chars(result)
 
-        # Step 6: Normalize leftover markdown bold wrappers
+        # Step 7: Normalize leftover markdown bold wrappers
         result = self.normalize_double_asterisk_markup(result)
 
-        # Step 7: Remove markdown wrappers from divine name tokens
+        # Step 8: Remove markdown wrappers from divine name tokens
         result = self.remove_markdown_wrappers_from_divine_name(result)
 
-        # Step 8: Convert single-word italics FIRST (*word* → <em>word</em>)
+        # Step 9: Convert single-word italics FIRST (*word* → <em>word</em>)
         # This handles cases like escribírte*las* correctly
         result = self.convert_single_word_italics(result)
 
-        # Step 9: Fix orphan asterisks (word* *next patterns)
+        # Step 10: Fix orphan asterisks (word* *next patterns)
         result = self.fix_orphan_asterisks(result)
 
-        # Step 10: Strip stray asterisks around existing <em> tags
+        # Step 11: Strip stray asterisks around existing <em> tags
         result = self.strip_asterisks_around_em(result)
 
-        # Step 11: Normalize any remaining broken italic patterns
+        # Step 12: Normalize any remaining broken italic patterns
         result = self.normalize_broken_italics(result)
 
-        # Step 12: Convert any remaining *...* to <em>...</em>
+        # Step 13: Convert any remaining *...* to <em>...</em>
         result = self.convert_italics_to_em(result)
 
-        # Step 13: Remove orphan markdown stars left after conversion
+        # Step 14: Remove orphan markdown stars left after conversion
         result = self.remove_orphan_asterisks(result)
 
-        # Step 14: Fix spacing around <em> tags
+        # Step 15: Fix spacing around <em> tags
         result = self.fix_em_spacing(result)
 
-        # Step 15: Flatten accidental nested <em> tags
+        # Step 16: Trim accidental inner whitespace in <em>...</em> spans
+        result = self.normalize_em_inner_whitespace(result)
+
+        # Step 17: Flatten accidental nested <em> tags
         result = self.flatten_nested_em_tags(result)
 
-        # Step 16: Keep divine name unitalicized even if source markers wrapped it
+        # Step 18: Keep divine name unitalicized even if source markers wrapped it
         result = self.remove_em_from_divine_name(result)
 
-        # Step 17: Normalize Latin divine-name forms to Hebrew
+        # Step 19: Normalize Latin divine-name forms to Hebrew
         result = self.normalize_divine_name_forms(result)
 
-        # Step 18: Clean up any remaining issues
+        # Step 20: Fix glued final-y conjunction artifacts at postprocess stage
+        # too, so postprocess-only runs stay aligned with md->json cleaning.
+        if self.text_cleaner is not None:
+            before = result
+            result = self.text_cleaner.fix_stuck_final_y_conjunction(result)
+            if result != before:
+                self.stats['stuck_final_y_fixed'] += 1
+
+        # Step 21: Clean up any remaining issues
         result = re.sub(r'  +', ' ', result)  # Double spaces
         result = result.strip()
 
@@ -709,8 +784,8 @@ class TTHJsonPostProcessor:
             del verse['subtitle']
             self.stats['subtitle_invalid_removed'] += 1
         elif existing_subtitle:
-            verse['subtitle'] = self.normalize_divine_name_forms(
-                existing_subtitle)
+            subtitle = self.normalize_ascii_apostrophes(existing_subtitle)
+            verse['subtitle'] = self.normalize_divine_name_forms(subtitle)
 
         # Process the main TTH text
         if 'tth' in verse and verse['tth']:
@@ -741,8 +816,10 @@ class TTHJsonPostProcessor:
                     footnote['explanation'] = self.rebalance_em_tags(
                         footnote['explanation'])
                 if 'word' in footnote and footnote['word']:
-                    footnote['word'] = self.normalize_divine_name_forms(
+                    normalized_word = self.normalize_ascii_apostrophes(
                         footnote['word'])
+                    footnote['word'] = self.normalize_divine_name_forms(
+                        normalized_word)
 
         return verse
 
@@ -870,6 +947,8 @@ class TTHJsonPostProcessor:
         print(f"  Files processed:      {self.stats['files_processed']}")
         print(f"  Verses processed:     {self.stats['verses_processed']}")
         print(f"  Soft hyphens removed: {self.stats['soft_hyphens']}")
+        print(
+            f"  Apostrophes normalized: {self.stats['apostrophes_normalized']}")
         print(f"  Escaped parens fixed: {self.stats['escaped_parens']}")
         print(f"  Escaped chars fixed:  {self.stats['escaped_special_chars']}")
         print(
