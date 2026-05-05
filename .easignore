@@ -30,6 +30,11 @@ debug.log
 
 # Mobile local/build artifacts
 mobile/.expo/
+mobile/.vscode/
+mobile/.env*.local
+mobile/*.apk
+mobile/dist/
+mobile/.metro-health-check*
 mobile/node_modules/
 mobile/app-example/
 mobile/android/.gradle/
