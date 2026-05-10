@@ -1484,7 +1484,7 @@ export const VerseDetailContent = () => {
                             colors.accentCopper,
                             language === "es",
                           )}
-                          {index < orderedVerses.length - 1 ? " " : ""}
+                          {index < orderedVerses.length - 1 ? "\u200E " : ""}
                         </Text>
                       ))}
                     </Text>

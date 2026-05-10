@@ -286,6 +286,14 @@ const resolveTthBookId = (bookId: string): string | undefined => {
 const isPsalmsBook = (bookId: string): boolean =>
   normalizeBookToken(bookId) === "psalms";
 
+const HEBREW_RUN_RE = /[\u0590-\u05FF]+/g;
+
+const isolateHebrewRuns = (value: string): string =>
+  value.replace(HEBREW_RUN_RE, (token) => `\u2067${token}\u2069`);
+
+const finalizeTranslationDisplayText = (value: string): string =>
+  value.trim().length > 0 ? isolateHebrewRuns(value) : value;
+
 const resolveTranslationText = (params: {
   bookId: string;
   language?: "en" | "es";
@@ -295,18 +303,22 @@ const resolveTranslationText = (params: {
   const { bookId, language, mappedTranslationKey, translationText } = params;
 
   if (!language) {
-    return translationText ?? "";
+    return finalizeTranslationDisplayText(translationText ?? "");
   }
 
   if (isPsalmsBook(bookId) && mappedTranslationKey === null) {
-    return getPsalmsSuperscriptionNotice(language);
+    return finalizeTranslationDisplayText(
+      getPsalmsSuperscriptionNotice(language),
+    );
   }
 
   if (translationText && translationText.trim().length > 0) {
-    return translationText;
+    return finalizeTranslationDisplayText(translationText);
   }
 
-  return getMissingSpanishTranslationNotice(language);
+  return finalizeTranslationDisplayText(
+    getMissingSpanishTranslationNotice(language),
+  );
 };
 
 type StaticChapterWord = {
@@ -447,15 +459,38 @@ const toSortedUniqueVerseNumbers = (values: number[]): number[] =>
     (a, b) => a - b,
   );
 
+const getTranslationLookupKey = (
+  bookId: string,
+  chapter: number,
+  verse: number,
+  language?: "en" | "es",
+): string | null => {
+  if (language !== "en") {
+    return `${chapter}-${verse}`;
+  }
+
+  return mapHebrewVerseToTranslationKey(bookId, chapter, verse);
+};
+
 const getRequiredTranslationChapters = (
   bookId: string,
   chapter: number,
+  language?: "en" | "es",
   expectedVerseNumbers?: number[],
 ): number[] => {
+  if (language !== "en") {
+    return [chapter];
+  }
+
   const mappedChapters = new Set<number>();
 
   for (const verseNumber of expectedVerseNumbers ?? []) {
-    const mappedKey = mapHebrewVerseToTranslationKey(bookId, chapter, verseNumber);
+    const mappedKey = getTranslationLookupKey(
+      bookId,
+      chapter,
+      verseNumber,
+      language,
+    );
     if (!mappedKey) {
       continue;
     }
@@ -541,6 +576,7 @@ const loadStaticTranslationsForChapter = async (
   const requiredTranslationChapters = getRequiredTranslationChapters(
     bookId,
     chapter,
+    language,
     expectedVerseNumbers,
   );
 
@@ -847,10 +883,11 @@ const mapStaticVersesToDisplay = (
         .filter(Boolean)
         .join(" ");
 
-    const translationKey = mapHebrewVerseToTranslationKey(
+    const translationKey = getTranslationLookupKey(
       bookId,
       verse.chapter,
       verse.verse,
+      language,
     );
     const translationEntry = translationKey
       ? translationMap.get(translationKey)
@@ -978,10 +1015,11 @@ const mapOfflineDataToDisplay = (
 
   return hebrewRows.map((hv) => {
     const verseKey = `${hv.chapter}-${hv.verse}`;
-    const mappedTranslationKey = mapHebrewVerseToTranslationKey(
+    const mappedTranslationKey = getTranslationLookupKey(
       bookId,
       hv.chapter,
       hv.verse,
+      language,
     );
     const translation = mappedTranslationKey
       ? translationMap.get(mappedTranslationKey)
@@ -1098,6 +1136,7 @@ const fetchChapterVersesOffline = async (
           getRequiredTranslationChapters(
             bookId,
             chapter,
+            translationLanguage,
             toSortedUniqueVerseNumbers(hebrewRows.map((row) => row.verse)),
           ).map((translationChapter) =>
             fetchTranslationVerses(bookId, translationChapter, translationLanguage),

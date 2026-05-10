@@ -651,15 +651,38 @@ const toSortedUniqueVerseNumbers = (values: number[]): number[] =>
 		new Set(values.filter((value) => Number.isFinite(value) && value > 0)),
 	).sort((a, b) => a - b);
 
+const getTranslationLookupKey = (
+	bookId: string,
+	chapter: number,
+	verse: number,
+	language?: "es" | "en",
+): string | null => {
+	if (language !== "en") {
+		return `${chapter}-${verse}`;
+	}
+
+	return mapHebrewVerseToTranslationKey(bookId, chapter, verse);
+};
+
 const getRequiredTranslationChapters = (
 	bookId: string,
 	chapter: number,
+	language?: "es" | "en",
 	expectedVerseNumbers?: number[],
 ): number[] => {
+	if (language !== "en") {
+		return [chapter];
+	}
+
 	const mappedChapters = new Set<number>();
 
 	for (const verseNumber of expectedVerseNumbers ?? []) {
-		const mappedKey = mapHebrewVerseToTranslationKey(bookId, chapter, verseNumber);
+		const mappedKey = getTranslationLookupKey(
+			bookId,
+			chapter,
+			verseNumber,
+			language,
+		);
 		if (!mappedKey) {
 			continue;
 		}
@@ -681,6 +704,14 @@ const getRequiredTranslationChapters = (
 const isPsalmsBook = (bookId: string): boolean =>
 	normalizeBookToken(bookId) === "psalms";
 
+const HEBREW_RUN_RE = /[\u0590-\u05FF]+/g;
+
+const isolateHebrewRuns = (value: string): string =>
+	value.replace(HEBREW_RUN_RE, (token) => `\u2067${token}\u2069`);
+
+const finalizeTranslationDisplayText = (value: string): string =>
+	value.trim().length > 0 ? isolateHebrewRuns(value) : value;
+
 const resolveTranslationText = (params: {
 	bookId: string;
 	language?: "es" | "en";
@@ -690,18 +721,22 @@ const resolveTranslationText = (params: {
 	const { bookId, language, mappedTranslationKey, translationText } = params;
 
 	if (!language) {
-		return translationText ?? "";
+		return finalizeTranslationDisplayText(translationText ?? "");
 	}
 
 	if (isPsalmsBook(bookId) && mappedTranslationKey === null) {
-		return getPsalmsSuperscriptionNotice(language);
+		return finalizeTranslationDisplayText(
+			getPsalmsSuperscriptionNotice(language),
+		);
 	}
 
 	if (translationText && translationText.trim().length > 0) {
-		return translationText;
+		return finalizeTranslationDisplayText(translationText);
 	}
 
-	return getMissingSpanishTranslationNotice(language);
+	return finalizeTranslationDisplayText(
+		getMissingSpanishTranslationNotice(language),
+	);
 };
 
 const mapDssDifferences = (differences?: RawDssDifference[]): DssVariant[] => {
@@ -1175,6 +1210,7 @@ export const getChapterVerses = async (
 		: getRequiredTranslationChapters(
 				bookEntry.id,
 				chapter,
+				options?.language,
 				expectedVerseNumbers,
 			);
 
@@ -1237,10 +1273,11 @@ export const getChapterVerses = async (
 	}
 
 	return coreVerses.map((rawVerse) => {
-		const translationKey = mapHebrewVerseToTranslationKey(
+		const translationKey = getTranslationLookupKey(
 			bookEntry.id,
 			rawVerse.chapter,
 			rawVerse.verse,
+			options?.language,
 		);
 
 		return mapVerse(
