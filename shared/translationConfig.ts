@@ -133,7 +133,10 @@ const PSALMS_SUPERSCRIPTION_NOTICE: Record<AppLanguage, string> = {
 
 export const getMissingSpanishTranslationNotice = (
   language: AppLanguage,
-): string => MISSING_SPANISH_TRANSLATION_NOTICE[language] ?? MISSING_SPANISH_TRANSLATION_NOTICE.en;
+): string => {
+  if (language === "en") return "";
+  return MISSING_SPANISH_TRANSLATION_NOTICE[language] ?? MISSING_SPANISH_TRANSLATION_NOTICE.es;
+};
 
 export const getPsalmsSuperscriptionNotice = (
   language: AppLanguage,

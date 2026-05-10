@@ -43,6 +43,10 @@ type ParsedVersificationEntry = {
   type: VersificationType;
   forward: Map<string, VerseReference>;
   reverse: Map<string, VerseReference>;
+  // Chapters that appear in the simple_map (i.e., have versification shifts).
+  // For superscription_shift books, verses in these chapters that have no
+  // reverse mapping are superscriptions and should return null.
+  mappedChapters: Set<number>;
 };
 
 const parsedVersificationByCode: Record<string, ParsedVersificationEntry> = {};
@@ -101,10 +105,17 @@ const parseVersificationEntry = (
     }
   }
 
+  const mappedChapters = new Set<number>();
+  for (const sourceChapterToken of Object.keys(entry.simple_map ?? {})) {
+    const ch = Number(sourceChapterToken);
+    if (Number.isFinite(ch)) mappedChapters.add(ch);
+  }
+
   return {
     type: entry.type,
     forward,
     reverse,
+    mappedChapters,
   };
 };
 
@@ -170,6 +181,12 @@ export const mapHebrewVerseToTranslationReference = (
     const mappedSource = versification.reverse.get(key);
 
     if (!mappedSource) {
+      // If this chapter is in the simple_map but has no reverse entry, the
+      // verse is a superscription line (e.g. Psalms with 2 superscription
+      // verses where only source key >= 1 appears in the map).
+      if (versification.mappedChapters.has(chapter)) {
+        return null;
+      }
       return { chapter, verse };
     }
 

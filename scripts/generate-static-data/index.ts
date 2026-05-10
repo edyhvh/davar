@@ -11,6 +11,7 @@ import {
   OE_TO_ENGLISH,
   WEB_PUBLIC_DATA_ROOT,
 } from "./config";
+import { VERSIFICATION_DATA } from "../../shared/versificationData";
 
 type Ts2009BookPayload = {
   chapters?: unknown;
@@ -558,6 +559,63 @@ const readLocalTs2009BookPayload = async (
   }
 };
 
+/**
+ * For Psalms chapters that have superscription verses in the Hebrew text,
+ * the TS2009 Supabase data stores verses with Hebrew numbering (superscription
+ * as verse 1, first real verse as verse 2, etc.). The versification system
+ * expects English numbering (verse 1 = first real verse). This function
+ * detects and corrects Hebrew-numbered verse maps for Psalms chapters.
+ */
+const normalizePsalmsVerseMap = (
+  chapter: number,
+  verseMap: Record<string, string>,
+): Record<string, string> => {
+  const psaMap = VERSIFICATION_DATA["PSA"]?.simple_map;
+  if (!psaMap) return verseMap;
+
+  const chapterMap = (psaMap as Record<string, Record<string, string>>)[String(chapter)];
+  if (!chapterMap) return verseMap;
+
+  // Find the target Hebrew verse for English verse 1 (source key "1")
+  const targetForEnglishVerse1 = chapterMap["1"];
+  if (!targetForEnglishVerse1) return verseMap;
+
+  const [, targetVerseToken] = targetForEnglishVerse1.split(":");
+  const firstRealHebrewVerse = Number(targetVerseToken);
+  if (!Number.isFinite(firstRealHebrewVerse) || firstRealHebrewVerse <= 1) return verseMap;
+
+  // superscriptionCount = number of leading Hebrew verses that are superscriptions
+  const superscriptionCount = firstRealHebrewVerse - 1;
+
+  // Count expected English verses (source keys > 0)
+  const englishVerseCount = Object.keys(chapterMap).filter(
+    (k) => Number(k) > 0,
+  ).length;
+
+  const existingKeys = Object.keys(verseMap)
+    .map(Number)
+    .filter((n) => Number.isFinite(n))
+    .sort((a, b) => a - b);
+
+  // Only renumber if the data looks Hebrew-numbered:
+  // total verses = englishVerseCount + superscriptionCount
+  if (existingKeys.length !== englishVerseCount + superscriptionCount) {
+    return verseMap;
+  }
+
+  // Renumber: drop the first superscriptionCount verses, re-key from 1
+  const normalized: Record<string, string> = {};
+  const realVerseKeys = existingKeys.slice(superscriptionCount);
+  for (const [index, hebrewKey] of realVerseKeys.entries()) {
+    const englishVerse = index + 1;
+    const text = verseMap[String(hebrewKey)];
+    if (text !== undefined) {
+      normalized[String(englishVerse)] = text;
+    }
+  }
+  return normalized;
+};
+
 const generateTs2009Chapters = async (): Promise<{
   bundle: { books: Record<string, { chapters: number; verses: number }> };
   stats: Ts2009ExportStats;
@@ -660,10 +718,15 @@ const generateTs2009Chapters = async (): Promise<{
         continue;
       }
 
+      // For Psalms, normalize Hebrew-numbered verses to English numbering
+      const normalizedVerseMap = bookId === "psalms"
+        ? normalizePsalmsVerseMap(chapterNumber, verseMap)
+        : verseMap;
+
       const chapterPayload: Ts2009ChapterFile = {
         book: bookId,
         chapter: chapterNumber,
-        verses: verseMap,
+        verses: normalizedVerseMap,
       };
 
       await mkdir(join(ts2009OutDir, bookId), { recursive: true });
@@ -673,7 +736,7 @@ const generateTs2009Chapters = async (): Promise<{
         "utf-8",
       );
 
-      const verseCount = Object.keys(verseMap).length;
+      const verseCount = Object.keys(normalizedVerseMap).length;
       stats.chapters += 1;
       stats.verses += verseCount;
       bookVerseCount += verseCount;
