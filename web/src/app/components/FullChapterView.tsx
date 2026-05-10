@@ -240,7 +240,7 @@ export function FullChapterView({
 											marginRight: "8px",
 										}}
 									>
-										{verse.verse}
+										[{verse.verse}]
 									</span>
 									<span
 										style={{
@@ -346,7 +346,7 @@ export function FullChapterView({
 													marginRight: "8px",
 												}}
 											>
-												{verse.verse}
+												[{verse.verse}]
 											</span>
 											{language === "es" && !(verse.translation ?? "").trim()
 												? spanishMissingTranslation

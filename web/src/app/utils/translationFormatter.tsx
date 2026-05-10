@@ -17,9 +17,9 @@ const superscriptDigitMap: Record<string, string> = {
 const superscriptPattern = /[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g;
 const bracketFootnotePattern = /\[([a-z0-9]+)\]/gi;
 const footnoteMarkerClass =
-	"ml-0.5 align-super relative -top-[0.06em] inline-block text-[0.5em] leading-none font-semibold tracking-[0.01em] tabular-nums text-[#9f6a2f] dark:text-[#d2a06b]";
+	"ml-0.5 align-super relative -top-[0.22em] inline-block text-[0.4em] leading-none font-semibold tracking-[0.01em] tabular-nums text-[#9f6a2f] dark:text-[#d2a06b]";
 const fallbackMarkerClass =
-	"ml-0.5 align-super text-[0.52em] leading-none font-semibold text-[#9f6a2f] dark:text-[#d2a06b]";
+	"ml-0.5 align-super relative -top-[0.22em] inline-block text-[0.4em] leading-none font-semibold tabular-nums text-[#9f6a2f] dark:text-[#d2a06b]";
 const footnoteTooltipClass =
 	"pointer-events-none invisible absolute top-full left-1/2 z-30 mt-2 w-[min(320px,82vw)] -translate-x-1/2 rounded-xl border px-3 py-2 text-left opacity-0 shadow-xl backdrop-blur-[1px] transition-opacity group-hover:visible group-hover:opacity-100";
 

@@ -390,7 +390,7 @@ export function VerseDisplay({
 									opacity: 0.7,
 								}}
 							>
-								{verseNumber}
+								[{verseNumber}]
 							</div>
 						)}
 						{language === "es" && !translation.trim()
