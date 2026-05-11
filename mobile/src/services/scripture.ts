@@ -12,9 +12,10 @@ import { removeMaqafForDisplay } from "@/src/utils/hebrew";
 import {
   getMissingSpanishTranslationNotice,
   getPsalmsSuperscriptionNotice,
+  resolveTranslationLookupKey,
+  resolveTranslationTarget,
   TTH_BOOK_MAPPING,
 } from "@davar/shared/translationConfig";
-import { mapHebrewVerseToTranslationKey } from "@davar/shared/versification";
 
 // Chapter-level cache for TS2009 static JSON (matches web approach)
 const ts2009ChapterCache = new Map<string, Promise<Map<number, string> | null>>();
@@ -298,12 +299,23 @@ const resolveTranslationText = (params: {
   bookId: string;
   language?: "en" | "es";
   mappedTranslationKey: string | null;
+  translationTitle?: string;
   translationText?: string;
 }): string => {
-  const { bookId, language, mappedTranslationKey, translationText } = params;
+  const {
+    bookId,
+    language,
+    mappedTranslationKey,
+    translationTitle,
+    translationText,
+  } = params;
 
   if (!language) {
     return finalizeTranslationDisplayText(translationText ?? "");
+  }
+
+  if (translationTitle && translationTitle.trim().length > 0) {
+    return finalizeTranslationDisplayText(translationTitle);
   }
 
   if (isPsalmsBook(bookId) && mappedTranslationKey === null) {
@@ -348,6 +360,7 @@ type StaticTranslationVerse = {
 type StaticTranslationChapter = {
   chapter: number;
   verses?: StaticTranslationVerse[];
+  title?: string;
 };
 
 type StaticTranslationBook = {
@@ -410,6 +423,11 @@ type TranslationEntry = {
   footnotes?: TranslationFootnote[];
 };
 
+type LoadedStaticTranslations = {
+  verses: Map<string, TranslationEntry>;
+  titles: Map<number, string>;
+};
+
 const HEBREW_MARKS_RE = /[\u0591-\u05C7]/g;
 
 const normalizeSurfaceWord = (value?: string): string =>
@@ -465,11 +483,7 @@ const getTranslationLookupKey = (
   verse: number,
   language?: "en" | "es",
 ): string | null => {
-  if (language !== "en") {
-    return `${chapter}-${verse}`;
-  }
-
-  return mapHebrewVerseToTranslationKey(bookId, chapter, verse);
+  return resolveTranslationLookupKey(bookId, chapter, verse, language);
 };
 
 const getRequiredTranslationChapters = (
@@ -571,8 +585,9 @@ const loadStaticTranslationsForChapter = async (
   language?: "en" | "es",
   hebrewOnly?: boolean,
   expectedVerseNumbers?: number[],
-): Promise<Map<string, TranslationEntry>> => {
+): Promise<LoadedStaticTranslations> => {
   const translationMap = new Map<string, TranslationEntry>();
+  const translationTitleMap = new Map<number, string>();
   const requiredTranslationChapters = getRequiredTranslationChapters(
     bookId,
     chapter,
@@ -581,7 +596,10 @@ const loadStaticTranslationsForChapter = async (
   );
 
   if (!language || hebrewOnly) {
-    return translationMap;
+    return {
+      verses: translationMap,
+      titles: translationTitleMap,
+    };
   }
 
   if (language === "es") {
@@ -600,6 +618,10 @@ const loadStaticTranslationsForChapter = async (
 
           if (!chapterData?.verses) {
             continue;
+          }
+
+          if (typeof chapterData.title === "string" && chapterData.title.trim()) {
+            translationTitleMap.set(translationChapter, chapterData.title.trim());
           }
 
           for (const verse of chapterData.verses) {
@@ -629,6 +651,10 @@ const loadStaticTranslationsForChapter = async (
 
           if (!chapterData?.verses) {
             continue;
+          }
+
+          if (typeof chapterData.title === "string" && chapterData.title.trim()) {
+            translationTitleMap.set(translationChapter, chapterData.title.trim());
           }
 
           for (const verse of chapterData.verses) {
@@ -692,7 +718,10 @@ const loadStaticTranslationsForChapter = async (
     }
   }
 
-  return translationMap;
+  return {
+    verses: translationMap,
+    titles: translationTitleMap,
+  };
 };
 
 const loadStaticDssForChapter = async (
@@ -824,6 +853,7 @@ const mapStaticVersesToDisplay = (
   bookId: string,
   verses: StaticChapterVerse[],
   translationMap: Map<string, TranslationEntry>,
+  translationTitleMap: Map<number, string>,
   dssMap: Map<number, StaticDssDifference[]>,
   translitMap: Map<number, StaticTranslitWord[]>,
   dssTranslitMap: Map<string, StaticDssTranslitVariant>,
@@ -883,12 +913,15 @@ const mapStaticVersesToDisplay = (
         .filter(Boolean)
         .join(" ");
 
-    const translationKey = getTranslationLookupKey(
+    const translationTarget = resolveTranslationTarget(
       bookId,
       verse.chapter,
       verse.verse,
       language,
     );
+    const translationKey = translationTarget.reference
+      ? `${translationTarget.reference.chapter}-${translationTarget.reference.verse}`
+      : null;
     const translationEntry = translationKey
       ? translationMap.get(translationKey)
       : undefined;
@@ -896,6 +929,9 @@ const mapStaticVersesToDisplay = (
       bookId,
       language,
       mappedTranslationKey: translationKey,
+      translationTitle: translationTarget.usesPsalmTitle
+        ? translationTitleMap.get(verse.chapter)
+        : undefined,
       translationText: translationEntry?.text,
     });
 
@@ -964,7 +1000,7 @@ const fetchChapterVersesStatic = async (
     sourceVerses.map((verse) => verse.verse),
   );
 
-  const [translationMap, dssMap, translitMap, dssTranslitMap] = await Promise.all([
+  const [translations, dssMap, translitMap, dssTranslitMap] = await Promise.all([
     loadStaticTranslationsForChapter(
       bookId,
       chapter,
@@ -977,10 +1013,13 @@ const fetchChapterVersesStatic = async (
     loadStaticDssTranslitForChapter(bookId, chapter, options?.showDss),
   ]);
 
+  const { verses: translationMap, titles: translationTitleMap } = translations;
+
   return mapStaticVersesToDisplay(
     bookId,
     sourceVerses,
     translationMap,
+    translationTitleMap,
     dssMap,
     translitMap,
     dssTranslitMap,
@@ -1015,12 +1054,15 @@ const mapOfflineDataToDisplay = (
 
   return hebrewRows.map((hv) => {
     const verseKey = `${hv.chapter}-${hv.verse}`;
-    const mappedTranslationKey = getTranslationLookupKey(
+    const translationTarget = resolveTranslationTarget(
       bookId,
       hv.chapter,
       hv.verse,
       language,
     );
+    const mappedTranslationKey = translationTarget.reference
+      ? `${translationTarget.reference.chapter}-${translationTarget.reference.verse}`
+      : null;
     const translation = mappedTranslationKey
       ? translationMap.get(mappedTranslationKey)
       : undefined;
@@ -1028,6 +1070,7 @@ const mapOfflineDataToDisplay = (
       bookId,
       language,
       mappedTranslationKey,
+      translationTitle: undefined,
       translationText: translation?.text,
     });
     const dssVariants = dssMap.get(verseKey) ?? [];
