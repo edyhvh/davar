@@ -1,7 +1,17 @@
 // Translation configuration utilities for footnote handling and display rules
 
+import {
+  mapHebrewVerseToTranslationReference,
+  type VerseReference,
+} from "./versification";
+
 export type AppLanguage = "en" | "es" | "he";
 export type TranslationKey = "ts2009" | "tth" | "delitzsch";
+
+export type TranslationTarget = {
+  reference: VerseReference | null;
+  usesPsalmTitle: boolean;
+};
 
 type DssCommentaryInput = {
   comment_v2_en?: string | null;
@@ -74,6 +84,66 @@ export const getTranslationKey = (language: AppLanguage): TranslationKey => {
   }
 };
 
+const normalizeBookToken = (value: string): string =>
+  value.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+const isPsalmsBook = (bookId: string): boolean =>
+  normalizeBookToken(bookId) === "psalms";
+
+export const resolveTranslationTarget = (
+  bookId: string,
+  chapter: number,
+  verse: number,
+  language?: Exclude<AppLanguage, "he">,
+): TranslationTarget => {
+  if (language === "en") {
+    return {
+      reference: mapHebrewVerseToTranslationReference(bookId, chapter, verse),
+      usesPsalmTitle: false,
+    };
+  }
+
+  if (language === "es" && isPsalmsBook(bookId)) {
+    const mappedReference = mapHebrewVerseToTranslationReference(
+      bookId,
+      chapter,
+      verse,
+    );
+
+    if (!mappedReference) {
+      return {
+        reference: null,
+        usesPsalmTitle: true,
+      };
+    }
+
+    return {
+      reference: mappedReference,
+      usesPsalmTitle: false,
+    };
+  }
+
+  return {
+    reference: { chapter, verse },
+    usesPsalmTitle: false,
+  };
+};
+
+export const resolveTranslationLookupKey = (
+  bookId: string,
+  chapter: number,
+  verse: number,
+  language?: Exclude<AppLanguage, "he">,
+): string | null => {
+  const target = resolveTranslationTarget(bookId, chapter, verse, language);
+
+  if (!target.reference) {
+    return null;
+  }
+
+  return `${target.reference.chapter}-${target.reference.verse}`;
+};
+
 export const shouldHideTranslationText = (
   language: AppLanguage,
   hebrewOnly = false,
@@ -133,7 +203,10 @@ const PSALMS_SUPERSCRIPTION_NOTICE: Record<AppLanguage, string> = {
 
 export const getMissingSpanishTranslationNotice = (
   language: AppLanguage,
-): string => MISSING_SPANISH_TRANSLATION_NOTICE[language] ?? MISSING_SPANISH_TRANSLATION_NOTICE.en;
+): string => {
+  if (language === "en") return "";
+  return MISSING_SPANISH_TRANSLATION_NOTICE[language] ?? MISSING_SPANISH_TRANSLATION_NOTICE.es;
+};
 
 export const getPsalmsSuperscriptionNotice = (
   language: AppLanguage,

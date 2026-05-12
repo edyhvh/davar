@@ -70,6 +70,10 @@ import {
   buildMarkerRegex,
   createFootnoteLookup,
   DEFAULT_FOOTNOTE_MARKER_COLOR,
+  type MarkerMatch,
+  collectMarkerMatches,
+  resolveFootnoteForMarker,
+  formatMarkerForDisplay,
 } from "@/src/utils/footnoteUtils";
 import { stripCantillation, stripMeteg, stripNikud } from "@/src/utils/hebrew";
 
@@ -83,13 +87,20 @@ const renderTranslationSegment = (
   onFootnotePress?: (footnote: TranslationFootnote) => void,
   isItalic = false,
   markerColor = DEFAULT_FOOTNOTE_MARKER_COLOR,
+  renderUnmappedSuperscripts = false,
 ): ReactNode[] => {
   const sanitized = sanitizeEmTags(text);
   if (!sanitized) {
     return [];
   }
 
-  if (!markerRegex) {
+  const markerMatches = collectMarkerMatches(
+    sanitized,
+    markerRegex,
+    renderUnmappedSuperscripts,
+  );
+
+  if (markerMatches.length === 0) {
     return isItalic
       ? [
           <Text key={`${keyPrefix}-italic`} style={{ fontStyle: "italic" }}>
@@ -98,41 +109,62 @@ const renderTranslationSegment = (
         ]
       : [sanitized];
   }
-
-  const pieces = sanitized.split(markerRegex);
   const nodes: ReactNode[] = [];
 
-  for (let i = 0; i < pieces.length; i += 1) {
-    const piece = pieces[i];
-    if (!piece) {
-      continue;
+  let lastIndex = 0;
+
+  for (let i = 0; i < markerMatches.length; i += 1) {
+    const markerMatch = markerMatches[i];
+    const plainText = sanitized.slice(lastIndex, markerMatch.start);
+    if (plainText) {
+      if (isItalic) {
+        nodes.push(
+          <Text key={`${keyPrefix}-text-${i}`} style={{ fontStyle: "italic" }}>
+            {plainText}
+          </Text>,
+        );
+      } else {
+        nodes.push(plainText);
+      }
     }
 
-    const footnote = footnoteLookup.get(piece);
-    if (footnote) {
-      nodes.push(
-        <Text
-          key={`${keyPrefix}-marker-${i}`}
-          onPress={onFootnotePress ? () => onFootnotePress(footnote) : undefined}
-          style={{
-            color: markerColor,
-            fontSize: typography.sizes.caption,
-          }}
-        >
-          {piece}
-        </Text>,
-      );
-      continue;
-    }
+    const marker = markerMatch.content;
+    const footnote = resolveFootnoteForMarker(footnoteLookup, marker);
+    const markerText = formatMarkerForDisplay(marker);
 
+    nodes.push(
+      <Text
+        key={`${keyPrefix}-marker-${i}`}
+        onPress={
+          footnote && onFootnotePress
+            ? () => onFootnotePress(footnote)
+            : undefined
+        }
+        style={{
+          color: markerColor,
+          fontSize: typography.sizes.caption,
+          lineHeight: typography.sizes.caption + 2,
+          includeFontPadding: false,
+          transform: [{ translateY: -5 }],
+        }}
+      >
+        {markerText}
+      </Text>,
+    );
+
+    lastIndex = markerMatch.end;
+  }
+
+  const trailingText = sanitized.slice(lastIndex);
+  if (trailingText) {
     if (isItalic) {
       nodes.push(
-        <Text key={`${keyPrefix}-text-${i}`} style={{ fontStyle: "italic" }}>
-          {piece}
+        <Text key={`${keyPrefix}-text-tail`} style={{ fontStyle: "italic" }}>
+          {trailingText}
         </Text>,
       );
     } else {
-      nodes.push(piece);
+      nodes.push(trailingText);
     }
   }
 
@@ -144,6 +176,7 @@ const renderTranslationFlowText = (
   footnotes?: TranslationFootnote[],
   onFootnotePress?: (footnote: TranslationFootnote) => void,
   markerColor = DEFAULT_FOOTNOTE_MARKER_COLOR,
+  renderUnmappedSuperscripts = false,
 ): ReactNode[] => {
   const footnoteLookup = createFootnoteLookup(footnotes);
   const markerRegex = buildMarkerRegex(footnoteLookup);
@@ -169,6 +202,7 @@ const renderTranslationFlowText = (
           onFootnotePress,
           false,
           markerColor,
+          renderUnmappedSuperscripts,
         ),
       );
     }
@@ -182,6 +216,7 @@ const renderTranslationFlowText = (
         onFootnotePress,
         true,
         markerColor,
+        renderUnmappedSuperscripts,
       ),
     );
 
@@ -200,6 +235,7 @@ const renderTranslationFlowText = (
         onFootnotePress,
         false,
         markerColor,
+        renderUnmappedSuperscripts,
       ),
     );
   }
@@ -1336,8 +1372,9 @@ export const VerseDetailContent = () => {
                             language === "es" ? item.translation_footnotes : undefined,
                             language === "es" ? setActiveFlowFootnote : undefined,
                             colors.accentCopper,
+                            language === "es",
                           )}
-                          {index < orderedVerses.length - 1 ? " " : ""}
+                          {index < orderedVerses.length - 1 ? "\u200E " : ""}
                         </Text>
                       ))}
                     </Text>

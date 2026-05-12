@@ -42,6 +42,11 @@ class TTH2BookSplitter:
         for book_key, info in BOOKS_INFO.items():
             self.book_patterns[book_key] = info.get('patterns', [])
 
+    @staticmethod
+    def count_chapter_markers(text: str) -> int:
+        """Count canonical chapter markers like '**1**' on standalone lines."""
+        return len(re.findall(r'^\*\*(\d+)\*\*\s*$', text, flags=re.MULTILINE))
+
     def find_book_boundaries(self, text: str, book_key: str) -> Tuple[int, int]:
         """
         Find the start and end line numbers for a specific book.
@@ -301,6 +306,16 @@ class TTH2BookSplitter:
                 # Extract book content
                 book_text = self.extract_book_section(
                     text, book_key, verbose=False)
+
+                expected_chapters = int(
+                    BOOKS_INFO.get(book_key, {}).get('expected_chapters', 0),
+                )
+                actual_chapters = self.count_chapter_markers(book_text)
+                if expected_chapters > 0 and actual_chapters < expected_chapters:
+                    raise ValueError(
+                        f"Extracted markdown for {book_key} appears truncated: "
+                        f"expected {expected_chapters} chapter markers, found {actual_chapters}."
+                    )
 
                 # Save to individual file
                 output_file = output_path / f"{book_key}.md"

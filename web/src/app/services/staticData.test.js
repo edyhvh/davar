@@ -1,4 +1,8 @@
 import { describe, expect, test } from "bun:test";
+import {
+	resolveTranslationLookupKey,
+	resolveTranslationTarget,
+} from "../../../../shared/translationConfig";
 
 const readJson = async (relativePath) => {
 	const filePath = new URL(`../../../public/${relativePath}`, import.meta.url);
@@ -81,6 +85,43 @@ describe("static data integrity", () => {
 
 		expect(words.H7363).toBeUndefined();
 		expect(roots.H7363).toBeDefined();
+	});
+
+	test("Spanish Psalms superscriptions use chapter titles and keep later verses aligned", async () => {
+		const psalms = await readJson("data/bes/psalms.json");
+		const chapter = psalms.chapters.find((item) => item.chapter === 3);
+
+		expect(chapter).toBeDefined();
+		expect(typeof chapter.title).toBe("string");
+		expect(chapter.title.length > 0).toBe(true);
+
+		const verse1Target = resolveTranslationTarget("psalms", 3, 1, "es");
+		expect(verse1Target.usesPsalmTitle).toBe(true);
+		expect(verse1Target.reference).toBeNull();
+
+		const displayedVerse1 = verse1Target.usesPsalmTitle
+			? chapter.title
+			: chapter.verses.find(
+				(item) =>
+					item.verse === verse1Target.reference?.verse,
+			)?.bes;
+		expect(displayedVerse1).toBe(chapter.title);
+
+		const verse2Target = resolveTranslationTarget("psalms", 3, 2, "es");
+		expect(verse2Target.usesPsalmTitle).toBe(false);
+		expect(verse2Target.reference).toEqual({ chapter: 3, verse: 1 });
+
+		const displayedVerse2 = chapter.verses.find(
+			(item) => item.verse === verse2Target.reference?.verse,
+		)?.bes;
+		expect(displayedVerse2).toBe(chapter.verses.find((item) => item.verse === 1)?.bes);
+	});
+
+	test("English Psalm superscriptions stay mapped while Spanish Exodus stays direct", () => {
+		expect(resolveTranslationLookupKey("psalms", 3, 1, "en")).toBeNull();
+		expect(resolveTranslationLookupKey("psalms", 3, 2, "en")).toBe("3-1");
+		expect(resolveTranslationLookupKey("exodus", 7, 26, "es")).toBe("7-26");
+		expect(resolveTranslationLookupKey("exodus", 7, 26, "en")).toBe("8-1");
 	});
 });
 

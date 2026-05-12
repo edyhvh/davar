@@ -199,6 +199,85 @@ class TTH2MdToJson:
         }
         return ''.join(superscript_map.get(digit, digit) for digit in num_str)
 
+    @staticmethod
+    def _footnote_identity(footnote: Dict[str, str]) -> str:
+        """Build a stable key used when merging footnote arrays."""
+        number = str(footnote.get('number', '')).strip()
+        marker = str(footnote.get('marker', '')).strip()
+        word = str(footnote.get('word', '')).strip().lower()
+        explanation = str(footnote.get('explanation', '')).strip().lower()
+
+        if number:
+            return f"number:{number}"
+        if marker:
+            return f"marker:{marker}"
+        if word:
+            return f"word:{word}"
+        return f"explanation:{explanation}"
+
+    def merge_verse_footnotes(
+        self,
+        existing: List[Dict[str, str]],
+        extracted: List[Dict[str, str]],
+    ) -> List[Dict[str, str]]:
+        """
+        Merge already-captured verse footnotes with newly extracted ones.
+
+        This prevents losing prior footnotes when continuation lines are
+        reparsed after markers were already converted to superscript text.
+        """
+        if not existing:
+            return extracted
+        if not extracted:
+            return existing
+
+        merged_by_key: Dict[str, Dict[str, str]] = {}
+        merge_order: List[str] = []
+
+        def add_footnote(footnote: Dict[str, str]) -> None:
+            normalized = {
+                'marker': str(footnote.get('marker', '')),
+                'number': str(footnote.get('number', '')),
+                'word': str(footnote.get('word', '')),
+                'explanation': str(footnote.get('explanation', '')),
+            }
+            key = self._footnote_identity(normalized)
+
+            if key in merged_by_key:
+                current = merged_by_key[key]
+                if not current['marker'] and normalized['marker']:
+                    current['marker'] = normalized['marker']
+                if not current['number'] and normalized['number']:
+                    current['number'] = normalized['number']
+                if not current['word'] and normalized['word']:
+                    current['word'] = normalized['word']
+                if not current['explanation'] and normalized['explanation']:
+                    current['explanation'] = normalized['explanation']
+                return
+
+            merged_by_key[key] = normalized
+            merge_order.append(key)
+
+        for footnote in existing:
+            add_footnote(footnote)
+        for footnote in extracted:
+            add_footnote(footnote)
+
+        merged = [merged_by_key[key] for key in merge_order]
+        return sorted(
+            merged,
+            key=lambda footnote: (
+                0,
+                int(footnote['number']),
+            )
+            if footnote.get('number', '').strip().isdigit()
+            else (
+                1,
+                footnote.get('marker', ''),
+                footnote.get('word', ''),
+            ),
+        )
+
     def extract_footnotes(self, text: str) -> Tuple[str, List[Dict[str, str]]]:
         """Extract footnotes from text and convert to superscript."""
         footnotes = []
@@ -573,7 +652,10 @@ class TTH2MdToJson:
                             merged, merged_footnotes = self.extract_footnotes(
                                 merged)
                             current_verses[-1]['tth'] = merged
-                            current_verses[-1]['footnotes'] = merged_footnotes
+                            current_verses[-1]['footnotes'] = self.merge_verse_footnotes(
+                                current_verses[-1].get('footnotes', []),
+                                merged_footnotes,
+                            )
                             current_verses[-1]['hebrew_terms'] = []
                             continue
 
@@ -624,7 +706,10 @@ class TTH2MdToJson:
                         merged, merged_footnotes = self.extract_footnotes(
                             merged)
                         current_verses[-1]['tth'] = merged
-                        current_verses[-1]['footnotes'] = merged_footnotes
+                        current_verses[-1]['footnotes'] = self.merge_verse_footnotes(
+                            current_verses[-1].get('footnotes', []),
+                            merged_footnotes,
+                        )
                         current_verses[-1]['hebrew_terms'] = []
                         i += 1
                         continue
@@ -669,19 +754,32 @@ class TTH2MdToJson:
 
                     if len(split_segments) <= 1:
                         # Regular multiline continuation, keep existing behavior.
+                        existing_footnotes = list(
+                            last_verse.get('footnotes', []))
                         last_verse['tth'] = self.clean_text_preserve_comments(
                             combined_text)
-                        last_verse['tth'], last_verse['footnotes'] = self.extract_footnotes(
+                        last_verse['tth'], extracted_footnotes = self.extract_footnotes(
                             last_verse['tth'])
+                        last_verse['footnotes'] = self.merge_verse_footnotes(
+                            existing_footnotes,
+                            extracted_footnotes,
+                        )
                         last_verse['hebrew_terms'] = []
                     else:
                         # Replace the current last verse with the re-split output.
-                        current_verses.pop()
+                        previous_last_verse = current_verses.pop()
                         for split_verse_num, split_verse_text in split_segments:
                             cleaned_text = self.clean_text_preserve_comments(
                                 split_verse_text)
-                            cleaned_text, footnotes = self.extract_footnotes(
+                            cleaned_text, extracted_footnotes = self.extract_footnotes(
                                 cleaned_text)
+
+                            footnotes = extracted_footnotes
+                            if split_verse_num == previous_last_verse.get('verse'):
+                                footnotes = self.merge_verse_footnotes(
+                                    previous_last_verse.get('footnotes', []),
+                                    extracted_footnotes,
+                                )
 
                             current_verses.append({
                                 'verse': split_verse_num,

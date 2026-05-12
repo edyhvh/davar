@@ -226,7 +226,7 @@ export function FullChapterView({
 			{shouldShowSefer ? (
 				<div className="px-2">
 					{translationOnly ? (
-						<div className="leading-relaxed">
+						<div className="leading-relaxed" style={{ direction: "ltr" }}>
 							{verses.map((verse, idx) => (
 								<span key={verse.verse}>
 									<span
@@ -240,7 +240,7 @@ export function FullChapterView({
 											marginRight: "8px",
 										}}
 									>
-										{verse.verse}
+										[{verse.verse}]
 									</span>
 									<span
 										style={{
@@ -249,13 +249,14 @@ export function FullChapterView({
 											color: "var(--text-hebrew)",
 											opacity: 1,
 											fontWeight: 400,
+											direction: "ltr",
 										}}
 									>
 										{language === "es" && !(verse.translation ?? "").trim()
 											? spanishMissingTranslation
 											: renderVerseTranslation(verse)}
 									</span>
-									{idx < verses.length - 1 && " "}
+									{idx < verses.length - 1 && "\u200E "}
 								</span>
 							))}
 						</div>
@@ -346,7 +347,7 @@ export function FullChapterView({
 													marginRight: "8px",
 												}}
 											>
-												{verse.verse}
+												[{verse.verse}]
 											</span>
 											{language === "es" && !(verse.translation ?? "").trim()
 												? spanishMissingTranslation
