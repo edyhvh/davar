@@ -28,6 +28,20 @@ DISALLOWED_ESCAPES_RE = re.compile(r'\\([!\.\[\]])')
 MARKDOWN_ITALICS_RE = re.compile(r'\*[^*]+\*')
 EM_NESTING_RE = re.compile(r'<em>\s*<em>|</em>\s*</em>')
 DIVINE_NAME_WRAPPED_RE = re.compile(r'__[^_\n]*יהוה[^_\n]*__')
+SUPERSCRIPT_MARKER_RE = re.compile(r'[⁰¹²³⁴⁵⁶⁷⁸⁹]+')
+
+SUPERSCRIPT_DIGITS = {
+    '0': '⁰',
+    '1': '¹',
+    '2': '²',
+    '3': '³',
+    '4': '⁴',
+    '5': '⁵',
+    '6': '⁶',
+    '7': '⁷',
+    '8': '⁸',
+    '9': '⁹',
+}
 
 
 class TTHFormatValidator:
@@ -35,6 +49,18 @@ class TTHFormatValidator:
 
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
+
+    @staticmethod
+    def _to_superscript_number(value: str) -> str:
+        """Convert plain digits into superscript marker representation."""
+        return ''.join(SUPERSCRIPT_DIGITS.get(digit, digit) for digit in value)
+
+    @staticmethod
+    def _extract_superscript_markers(text: str) -> List[str]:
+        """Collect unique superscript marker tokens from verse text."""
+        if not text:
+            return []
+        return sorted(set(match.group(0) for match in SUPERSCRIPT_MARKER_RE.finditer(text)))
 
     def _extract_monotonic_chapter_verse_counts(self, data: Dict[str, Any], source_name: str) -> Tuple[Dict[int, int], bool]:
         """
@@ -213,6 +239,7 @@ class TTHFormatValidator:
             'nested_em_tags': 0,
             'embedded_footnotes_sections': 0,
             'footnote_marker_mismatches': 0,
+            'superscript_without_footnote_entries': 0,
             'verse_sequence_issues': 0,
             'wrapped_divine_name_tokens': 0,
             'structure_reference_missing': 0,
@@ -258,6 +285,10 @@ class TTHFormatValidator:
                 if DIVINE_NAME_WRAPPED_RE.search(tth_text):
                     stats['wrapped_divine_name_tokens'] += 1
 
+                superscript_markers = self._extract_superscript_markers(
+                    tth_text)
+                available_footnote_markers = set()
+
                 for footnote in verse.get('footnotes', []):
                     stats['footnotes_checked'] += 1
                     explanation = footnote.get('explanation', '')
@@ -286,6 +317,30 @@ class TTHFormatValidator:
                         stats['footnote_marker_mismatches'] += 1
                         # Keep mismatch counts for diagnostics, but do not fail
                         # formatting validation on marker-reference integrity.
+
+                    marker_text = str(marker).strip()
+                    if marker_text:
+                        available_footnote_markers.add(marker_text)
+
+                    number_text = str(footnote.get('number', '')).strip()
+                    if number_text:
+                        available_footnote_markers.add(
+                            self._to_superscript_number(number_text),
+                        )
+
+                missing_superscript_refs = [
+                    marker
+                    for marker in superscript_markers
+                    if marker not in available_footnote_markers
+                ]
+                if missing_superscript_refs:
+                    stats['superscript_without_footnote_entries'] += len(
+                        missing_superscript_refs,
+                    )
+                    issues.append(
+                        f"Ch {chapter_num}:{verse_num} superscript markers without footnote entries: "
+                        + ", ".join(missing_superscript_refs),
+                    )
 
         self._validate_structure(book_key, data, issues, stats)
 
@@ -326,6 +381,8 @@ def print_book_report(book_key: str, is_valid: bool, issues: List[str], stats: D
         f"   - embedded footnotes text:  {stats['embedded_footnotes_sections']}")
     print(
         f"   - marker mismatches:        {stats['footnote_marker_mismatches']}")
+    print(
+        f"   - missing superscript refs: {stats['superscript_without_footnote_entries']}")
     print(f"   - verse sequence issues:    {stats['verse_sequence_issues']}")
     print(
         f"   - wrapped divine names:     {stats['wrapped_divine_name_tokens']}")

@@ -159,6 +159,8 @@ class TTHJsonPostProcessor:
             inner = match.group(1)
             raw = inner.strip()
             token = raw
+            token = re.sub(r'</?em>', '', token, flags=re.IGNORECASE)
+            token = token.replace('*', '')
             token = re.sub(r"^[,.;:!?\"'“”‘’()\[\]{}]+", "", token)
             token = re.sub(r"[,.;:!?\"'“”‘’()\[\]{}]+$", "", token)
             token_no_num = re.sub(r'^[0-9⁰¹²³⁴⁵⁶⁷⁸⁹]+\s*', '', token)
@@ -168,7 +170,10 @@ class TTHJsonPostProcessor:
             if normalized in self.DIVINE_NAME_BASE_FORMS:
                 self.stats['divine_name_markdown_wrappers_removed'] += 1
                 cleaned_inner = re.sub(
-                    r'^[0-9⁰¹²³⁴⁵⁶⁷⁸⁹]+\s*', '', raw).strip()
+                    r'</?em>', '', raw, flags=re.IGNORECASE)
+                cleaned_inner = cleaned_inner.replace('*', '')
+                cleaned_inner = re.sub(
+                    r'^[0-9⁰¹²³⁴⁵⁶⁷⁸⁹]+\s*', '', cleaned_inner).strip()
                 if had_numeric_prefix:
                     return f" {cleaned_inner}"
                 return cleaned_inner

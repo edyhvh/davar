@@ -585,10 +585,11 @@ BOOKS_INFO = {
         'section_english': 'Gospel',
         'section_spanish': 'Evangelio',
         'patterns': [
-            r'Maasei\s+Hash\'lijim.*?מעשי\s+השליחים',
-            r'__MAASEI.*?מעשי\s+השליחים__',
-            r'HECHOS.*?מעשי\s+השליחים',
-            r'מעשי\s+השליחים',
+            r'^\s*(?:__|\*\*)\s*MAASEI\s+HASH[\'’]LIJIM\s*\(?HECHOS\)?\s*(?:__|\*\*)\s*$',
+            r'^\s*(?:__|\*\*)\s*MAASEI\s+HASH[\'’]LIJIM\s*(?:__|\*\*)\s*$',
+            r'^\s*(?:__|\*\*)\s*HECHOS\s*\(?MAASEI\s+HASH[\'’]LIJIM\)?\s*(?:__|\*\*)\s*$',
+            r'^\s*MAASEI\s+HASH[\'’]LIJIM\s*\(?HECHOS\)?\s*$',
+            r'^\s*HECHOS\s*\(?MAASEI\s+HASH[\'’]LIJIM\)?\s*$',
         ],
     },
     'romanos': {
