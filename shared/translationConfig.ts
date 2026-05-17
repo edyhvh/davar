@@ -7,10 +7,16 @@ import {
 
 export type AppLanguage = "en" | "es" | "he";
 export type TranslationKey = "ts2009" | "tth" | "delitzsch";
+export type TranslationSource = "ts2009" | "tth" | "bes";
 
 export type TranslationTarget = {
   reference: VerseReference | null;
   usesPsalmTitle: boolean;
+};
+
+export type TranslationResolverOptions = {
+  language?: Exclude<AppLanguage, "he">;
+  source?: TranslationSource;
 };
 
 type DssCommentaryInput = {
@@ -84,6 +90,38 @@ export const getTranslationKey = (language: AppLanguage): TranslationKey => {
   }
 };
 
+export const resolveTranslationSource = (
+  bookId: string,
+  options?: TranslationResolverOptions,
+): TranslationSource | undefined => {
+  if (options?.source) {
+    return options.source;
+  }
+
+  const language = options?.language;
+  if (!language) {
+    return undefined;
+  }
+
+  if (language === "en") {
+    return "ts2009";
+  }
+
+  if (language === "es") {
+    const normalizedBookId = normalizeBookToken(bookId);
+    const supportsTth = Object.keys(TTH_BOOK_MAPPING).some(
+      (bookKey) => normalizeBookToken(bookKey) === normalizedBookId,
+    );
+    return supportsTth ? "tth" : "bes";
+  }
+
+  return undefined;
+};
+
+const shouldApplyVersificationMapping = (source?: TranslationSource): boolean => {
+  return source === "ts2009" || source === "tth" || source === "bes";
+};
+
 const normalizeBookToken = (value: string): string =>
   value.toLowerCase().replace(/[^a-z0-9]/g, "");
 
@@ -94,16 +132,11 @@ export const resolveTranslationTarget = (
   bookId: string,
   chapter: number,
   verse: number,
-  language?: Exclude<AppLanguage, "he">,
+  options?: TranslationResolverOptions,
 ): TranslationTarget => {
-  if (language === "en") {
-    return {
-      reference: mapHebrewVerseToTranslationReference(bookId, chapter, verse),
-      usesPsalmTitle: false,
-    };
-  }
+  const source = resolveTranslationSource(bookId, options);
 
-  if (language === "es" && isPsalmsBook(bookId)) {
+  if (shouldApplyVersificationMapping(source)) {
     const mappedReference = mapHebrewVerseToTranslationReference(
       bookId,
       chapter,
@@ -113,7 +146,7 @@ export const resolveTranslationTarget = (
     if (!mappedReference) {
       return {
         reference: null,
-        usesPsalmTitle: true,
+        usesPsalmTitle: isPsalmsBook(bookId),
       };
     }
 
@@ -133,9 +166,9 @@ export const resolveTranslationLookupKey = (
   bookId: string,
   chapter: number,
   verse: number,
-  language?: Exclude<AppLanguage, "he">,
+  options?: TranslationResolverOptions,
 ): string | null => {
-  const target = resolveTranslationTarget(bookId, chapter, verse, language);
+  const target = resolveTranslationTarget(bookId, chapter, verse, options);
 
   if (!target.reference) {
     return null;

@@ -71,7 +71,13 @@ export default function BookmarksScreen() {
                   })
                 }
               >
-                <VerseCard verse={item} />
+                <VerseCard
+                  verse={{
+                    ...item,
+                    sourceChapter: item.chapter,
+                    sourceVerse: item.verse,
+                  }}
+                />
               </Pressable>
             )}
             contentContainerStyle={styles.listContent}

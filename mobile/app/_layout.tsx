@@ -38,7 +38,7 @@ LogBox.ignoreLogs([
 
 const getFocusedRouteName = (route: unknown) => {
   const state = (route as {
-    state?: { index?: number; routes?: Array<{ name?: string }> };
+    state?: { index?: number; routes?: { name?: string }[] };
   })?.state;
   const index = state?.index ?? 0;
   return state?.routes?.[index]?.name;

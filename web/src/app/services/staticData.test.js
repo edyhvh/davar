@@ -95,7 +95,9 @@ describe("static data integrity", () => {
 		expect(typeof chapter.title).toBe("string");
 		expect(chapter.title.length > 0).toBe(true);
 
-		const verse1Target = resolveTranslationTarget("psalms", 3, 1, "es");
+		const verse1Target = resolveTranslationTarget("psalms", 3, 1, {
+			language: "es",
+		});
 		expect(verse1Target.usesPsalmTitle).toBe(true);
 		expect(verse1Target.reference).toBeNull();
 
@@ -107,7 +109,9 @@ describe("static data integrity", () => {
 			)?.bes;
 		expect(displayedVerse1).toBe(chapter.title);
 
-		const verse2Target = resolveTranslationTarget("psalms", 3, 2, "es");
+		const verse2Target = resolveTranslationTarget("psalms", 3, 2, {
+			language: "es",
+		});
 		expect(verse2Target.usesPsalmTitle).toBe(false);
 		expect(verse2Target.reference).toEqual({ chapter: 3, verse: 1 });
 
@@ -117,11 +121,22 @@ describe("static data integrity", () => {
 		expect(displayedVerse2).toBe(chapter.verses.find((item) => item.verse === 1)?.bes);
 	});
 
-	test("English Psalm superscriptions stay mapped while Spanish Exodus stays direct", () => {
-		expect(resolveTranslationLookupKey("psalms", 3, 1, "en")).toBeNull();
-		expect(resolveTranslationLookupKey("psalms", 3, 2, "en")).toBe("3-1");
-		expect(resolveTranslationLookupKey("exodus", 7, 26, "es")).toBe("7-26");
-		expect(resolveTranslationLookupKey("exodus", 7, 26, "en")).toBe("8-1");
+	test("English and Spanish both honor versification shifts", () => {
+		expect(
+			resolveTranslationLookupKey("psalms", 3, 1, { language: "en" }),
+		).toBeNull();
+		expect(
+			resolveTranslationLookupKey("psalms", 3, 2, { language: "en" }),
+		).toBe("3-1");
+		expect(
+			resolveTranslationLookupKey("exodus", 7, 26, { language: "es" }),
+		).toBe("8-1");
+		expect(
+			resolveTranslationLookupKey("exodus", 7, 26, { language: "en" }),
+		).toBe("8-1");
+		expect(
+			resolveTranslationLookupKey("hosea", 2, 25, { language: "es" }),
+		).toBe("2-23");
 	});
 });
 

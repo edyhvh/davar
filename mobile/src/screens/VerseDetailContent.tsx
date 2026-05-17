@@ -70,7 +70,6 @@ import {
   buildMarkerRegex,
   createFootnoteLookup,
   DEFAULT_FOOTNOTE_MARKER_COLOR,
-  type MarkerMatch,
   collectMarkerMatches,
   resolveFootnoteForMarker,
   formatMarkerForDisplay,
@@ -752,6 +751,22 @@ export const VerseDetailContent = () => {
   const verse =
     chapterVerses.find((item) => item.verse === verseNumber) ??
     chapterVerses[0];
+  const previousTranslationOnlyRef = useRef(translationOnly);
+
+  useEffect(() => {
+    if (
+      previousTranslationOnlyRef.current &&
+      !translationOnly &&
+      verse
+    ) {
+      setEffectiveVerseId(
+        `${verse.bookId}-${verse.sourceChapter}-${verse.sourceVerse}`,
+      );
+    }
+
+    previousTranslationOnlyRef.current = translationOnly;
+  }, [setEffectiveVerseId, translationOnly, verse]);
+
   const bookMeta = useMemo(
     () =>
       booksMeta.find((book) => book.id === (verse?.bookId ?? bookId)) ?? null,
@@ -1241,6 +1256,7 @@ export const VerseDetailContent = () => {
           showDss: showQumran,
           hebrewOnly: hideTranslations,
           isConnected,
+          referenceMode: translationOnly ? "translation" : "source",
         });
         if (!isMounted) return;
         if (
@@ -1473,6 +1489,8 @@ export const VerseDetailContent = () => {
         currentBookId={verse?.bookId ?? bookId}
         currentChapter={verse?.chapter ?? chapter}
         currentVerse={verse?.verse ?? verseNumber}
+        translationOnly={translationOnly}
+        currentChapterVerseNumbers={orderedVerses.map((item) => item.verse)}
         onSelectVerse={handleNavigationSelect}
       />
       <Modal

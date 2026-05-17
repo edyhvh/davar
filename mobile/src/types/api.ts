@@ -32,6 +32,8 @@ export type TranslationFootnote = {
 export type VerseResponse = {
   chapter: number;
   verse: number;
+  sourceChapter?: number;
+  sourceVerse?: number;
   hebrew: string;
   words: WordResponse[];
   translation?: string;

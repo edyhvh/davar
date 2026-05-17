@@ -43,6 +43,7 @@ type ParsedVersificationEntry = {
   type: VersificationType;
   forward: Map<string, VerseReference>;
   reverse: Map<string, VerseReference>;
+  sourceChaptersByTargetChapter: Map<number, Set<number>>;
   // Chapters that appear in the simple_map (i.e., have versification shifts).
   // For superscription_shift books, verses in these chapters that have no
   // reverse mapping are superscriptions and should return null.
@@ -73,6 +74,7 @@ const parseVersificationEntry = (
 ): ParsedVersificationEntry => {
   const forward = new Map<string, VerseReference>();
   const reverse = new Map<string, VerseReference>();
+  const sourceChaptersByTargetChapter = new Map<number, Set<number>>();
 
   for (const [sourceChapterToken, chapterMap] of Object.entries(entry.simple_map ?? {})) {
     const sourceChapter = Number(sourceChapterToken);
@@ -98,6 +100,11 @@ const parseVersificationEntry = (
 
       forward.set(makeRefKey(sourceRef.chapter, sourceRef.verse), targetRef);
 
+      const sourceChapters =
+        sourceChaptersByTargetChapter.get(targetRef.chapter) ?? new Set<number>();
+      sourceChapters.add(sourceRef.chapter);
+      sourceChaptersByTargetChapter.set(targetRef.chapter, sourceChapters);
+
       const reverseKey = makeRefKey(targetRef.chapter, targetRef.verse);
       if (!reverse.has(reverseKey)) {
         reverse.set(reverseKey, sourceRef);
@@ -115,6 +122,7 @@ const parseVersificationEntry = (
     type: entry.type,
     forward,
     reverse,
+    sourceChaptersByTargetChapter,
     mappedChapters,
   };
 };
@@ -211,4 +219,30 @@ export const mapHebrewVerseToTranslationKey = (
   }
 
   return `${mapped.chapter}-${mapped.verse}`;
+};
+
+export const getSourceChaptersForTranslationChapter = (
+  bookId: string,
+  translationChapter: number,
+): number[] => {
+  if (!Number.isFinite(translationChapter) || translationChapter <= 0) {
+    return [];
+  }
+
+  const versification = getParsedVersificationForBook(bookId);
+  if (!versification) {
+    return [translationChapter];
+  }
+
+  const chapters = new Set<number>();
+  chapters.add(translationChapter);
+
+  for (const sourceChapter of
+    versification.sourceChaptersByTargetChapter.get(translationChapter) ?? []) {
+    if (Number.isFinite(sourceChapter) && sourceChapter > 0) {
+      chapters.add(sourceChapter);
+    }
+  }
+
+  return [...chapters].sort((a, b) => a - b);
 };
