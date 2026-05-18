@@ -46,4 +46,6 @@ Bun.serve({
 	},
 });
 
-console.log(`[davar-web] hot-data-server listening on http://${hostname}:${port}`);
+console.log(
+	`[davar-web] hot-data-server listening on http://${hostname}:${port}`,
+);

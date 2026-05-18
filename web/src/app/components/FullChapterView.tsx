@@ -131,7 +131,10 @@ export function FullChapterView({
 
 			const variantEntry = showQumran ? dssMap.get(word.position) : undefined;
 			if (variantEntry) {
-				skipUntilIndex = Math.max(skipUntilIndex, wordIdx + variantEntry.span - 1);
+				skipUntilIndex = Math.max(
+					skipUntilIndex,
+					wordIdx + variantEntry.span - 1,
+				);
 			}
 			const rawText = variantEntry?.text ?? word.text;
 
@@ -170,11 +173,13 @@ export function FullChapterView({
 				isContextMatch &&
 				(typeof selectedWord?.position === "number"
 					? selectedWord.position === word.position
-					: Boolean(normalizedSelected) && normalizedSelected === normalizedWord);
+					: Boolean(normalizedSelected) &&
+						normalizedSelected === normalizedWord);
 
-			const prefixSegments = !variantEntry && word.prefixes?.length
-				? getPrefixSegments(displayText, word.prefixes)
-				: null;
+			const prefixSegments =
+				!variantEntry && word.prefixes?.length
+					? getPrefixSegments(displayText, word.prefixes)
+					: null;
 
 			return (
 				<span key={`${verse.chapter}-${verse.verse}-${word.position}`}>
@@ -353,10 +358,10 @@ export function FullChapterView({
 												? spanishMissingTranslation
 												: renderVerseTranslation(verse)}
 										</>
+									) : language === "es" && !(verse.translation ?? "").trim() ? (
+										spanishMissingTranslation
 									) : (
-										language === "es" && !(verse.translation ?? "").trim()
-											? spanishMissingTranslation
-											: renderVerseTranslation(verse)
+										renderVerseTranslation(verse)
 									)}
 								</div>
 							)}

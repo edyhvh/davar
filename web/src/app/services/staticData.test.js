@@ -104,9 +104,8 @@ describe("static data integrity", () => {
 		const displayedVerse1 = verse1Target.usesPsalmTitle
 			? chapter.title
 			: chapter.verses.find(
-				(item) =>
-					item.verse === verse1Target.reference?.verse,
-			)?.bes;
+					(item) => item.verse === verse1Target.reference?.verse,
+				)?.bes;
 		expect(displayedVerse1).toBe(chapter.title);
 
 		const verse2Target = resolveTranslationTarget("psalms", 3, 2, {
@@ -118,7 +117,9 @@ describe("static data integrity", () => {
 		const displayedVerse2 = chapter.verses.find(
 			(item) => item.verse === verse2Target.reference?.verse,
 		)?.bes;
-		expect(displayedVerse2).toBe(chapter.verses.find((item) => item.verse === 1)?.bes);
+		expect(displayedVerse2).toBe(
+			chapter.verses.find((item) => item.verse === 1)?.bes,
+		);
 	});
 
 	test("English and Spanish both honor versification shifts", () => {

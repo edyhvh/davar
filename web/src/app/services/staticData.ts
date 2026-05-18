@@ -1,7 +1,7 @@
 import {
 	getMissingSpanishTranslationNotice,
 	getPsalmsSuperscriptionNotice,
- resolveTranslationSource,
+	resolveTranslationSource,
 	resolveTranslationLookupKey,
 	resolveTranslationTarget,
 	TTH_BOOK_MAPPING,
@@ -324,7 +324,10 @@ const loadTs2009ChapterFromBookFile = async (
 				`/data/ts2009/${fileStem}.json`,
 			);
 
-			const chapterVerses = extractTs2009ChapterVersesFromBook(staticBook, chapter);
+			const chapterVerses = extractTs2009ChapterVersesFromBook(
+				staticBook,
+				chapter,
+			);
 			if (!chapterVerses || chapterVerses.length === 0) {
 				continue;
 			}
@@ -384,8 +387,8 @@ const buildCandidatePaths = (path: string): string[] => {
 		return localPaths;
 	}
 
-	const prefixedPaths = localPaths.map((candidatePath) =>
-		`${staticUrlPrefix}${candidatePath}`,
+	const prefixedPaths = localPaths.map(
+		(candidatePath) => `${staticUrlPrefix}${candidatePath}`,
 	);
 
 	return [...new Set([...prefixedPaths, ...localPaths])];
@@ -862,7 +865,7 @@ const sanitizeShirHashirimTth = (text?: string): string | undefined => {
 const loadTranslationChapter = async (
 	bookId: string,
 	requiredChapters: number[],
-	): Promise<LoadedTranslationChapter> => {
+): Promise<LoadedTranslationChapter> => {
 	const translationMap: Record<string, RawTranslationVerse> = {};
 	const translationTitles: Record<number, string> = {};
 
@@ -1009,7 +1012,11 @@ const loadDssTranslitChapter = async (
 
 			const verse = Number(variant.verse);
 			const position = Number(variant.position);
-			if (!Number.isFinite(verse) || !Number.isFinite(position) || position <= 0) {
+			if (
+				!Number.isFinite(verse) ||
+				!Number.isFinite(position) ||
+				position <= 0
+			) {
 				continue;
 			}
 
@@ -1106,11 +1113,11 @@ const mapVerse = (
 			prefixes: word.prefixes ?? [],
 			has_dss_variant: dssVariantMap.has(index),
 			translit_en: prefersDssTranslit
-				? dssTranslitEn ?? word.translit_en ?? translitWord?.translit_en
-				: word.translit_en ?? translitWord?.translit_en,
+				? (dssTranslitEn ?? word.translit_en ?? translitWord?.translit_en)
+				: (word.translit_en ?? translitWord?.translit_en),
 			translit_es: prefersDssTranslit
-				? dssTranslitEs ?? word.translit_es ?? translitWord?.translit_es
-				: word.translit_es ?? translitWord?.translit_es,
+				? (dssTranslitEs ?? word.translit_es ?? translitWord?.translit_es)
+				: (word.translit_es ?? translitWord?.translit_es),
 			dss_translit_en: dssTranslitEn,
 			dss_translit_es: dssTranslitEs,
 		};
@@ -1131,7 +1138,7 @@ const mapVerse = (
 		const baseTranslationText =
 			language === "en"
 				? ts2009Translation
-				: translationVerse?.bes ?? translationVerse?.tth;
+				: (translationVerse?.bes ?? translationVerse?.tth);
 		const translationText = resolveTranslationText({
 			bookId,
 			language,
@@ -1143,9 +1150,7 @@ const mapVerse = (
 		if (options?.language === "en") {
 			response.translation = translationText;
 			response.translation_language = "en";
-		} else if (
-			options?.language === "es"
-		) {
+		} else if (options?.language === "es") {
 			response.translation = translationText;
 			response.translation_language = "es";
 			if (translationVerse?.bes || translationVerse?.tth) {
@@ -1273,7 +1278,9 @@ export const getChapterVerses = async (
 		referenceMode,
 	);
 	const coreVerseChunks = await Promise.all(
-		sourceChapters.map((sourceChapter) => loadCoreChapter(bookEntry, sourceChapter)),
+		sourceChapters.map((sourceChapter) =>
+			loadCoreChapter(bookEntry, sourceChapter),
+		),
 	);
 	const coreVerses = coreVerseChunks.flat();
 
@@ -1285,7 +1292,10 @@ export const getChapterVerses = async (
 		? []
 		: getRequiredTranslationChapters(
 				bookEntry.id,
-				coreVerses.map((verse) => ({ chapter: verse.chapter, verse: verse.verse })),
+				coreVerses.map((verse) => ({
+					chapter: verse.chapter,
+					verse: verse.verse,
+				})),
 				options?.language,
 			);
 
@@ -1299,7 +1309,7 @@ export const getChapterVerses = async (
 						sourceChapters.map((sourceChapter) =>
 							loadDssChapter(bookEntry.id, sourceChapter),
 						),
-				  ).then((records) => Object.assign({}, ...records))
+					).then((records) => Object.assign({}, ...records))
 				: Promise.resolve<Record<string, RawDssVerse>>({}),
 			Promise.all(
 				sourceChapters.map((sourceChapter) =>
@@ -1311,8 +1321,10 @@ export const getChapterVerses = async (
 						sourceChapters.map((sourceChapter) =>
 							loadDssTranslitChapter(bookEntry.id, sourceChapter),
 						),
-				  ).then((records) => Object.assign({}, ...records))
-				: Promise.resolve<Record<string, Record<number, RawDssTranslitVariant>>>({}),
+					).then((records) => Object.assign({}, ...records))
+				: Promise.resolve<
+						Record<string, Record<number, RawDssTranslitVariant>>
+					>({}),
 		]);
 
 	// If language is English, load TS2009 translations from Supabase (with caching)
@@ -1335,7 +1347,8 @@ export const getChapterVerses = async (
 
 		const ts2009Results = await Promise.all(
 			uniqueTranslationKeys.map(async (translationKey) => {
-				const [mappedChapterToken, mappedVerseToken] = translationKey.split("-");
+				const [mappedChapterToken, mappedVerseToken] =
+					translationKey.split("-");
 				const mappedChapter = Number(mappedChapterToken);
 				const mappedVerse = Number(mappedVerseToken);
 
@@ -1387,7 +1400,7 @@ export const getChapterVerses = async (
 			outputVerse,
 			translationKey ? translations.verses[translationKey] : undefined,
 			translationTarget.usesPsalmTitle
-				? translations.titles[rawVerse.chapter] ?? null
+				? (translations.titles[rawVerse.chapter] ?? null)
 				: null,
 			dssVerses[verseKey],
 			transliterations[verseKey],

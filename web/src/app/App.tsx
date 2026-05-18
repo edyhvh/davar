@@ -269,26 +269,23 @@ export default function App() {
 		[language],
 	);
 
-	const resolveRenderableDssWord = useCallback(
-		(value?: string) => {
-			if (!value) return undefined;
-			const trimmed = value.trim();
-			if (!trimmed || trimmed.toLowerCase() === "note") {
-				return undefined;
-			}
+	const resolveRenderableDssWord = useCallback((value?: string) => {
+		if (!value) return undefined;
+		const trimmed = value.trim();
+		if (!trimmed || trimmed.toLowerCase() === "note") {
+			return undefined;
+		}
 
-			const tokenCount = trimmed
-				.replace(/[/:]/g, " ")
-				.split(/\s+/)
-				.filter(Boolean).length;
-			if (tokenCount !== 1) {
-				return undefined;
-			}
+		const tokenCount = trimmed
+			.replace(/[/:]/g, " ")
+			.split(/\s+/)
+			.filter(Boolean).length;
+		if (tokenCount !== 1) {
+			return undefined;
+		}
 
-			return trimmed;
-		},
-		[],
-	);
+		return trimmed;
+	}, []);
 
 	useEffect(() => {
 		if (!showFullChapter && seferMode) {
@@ -908,7 +905,19 @@ export default function App() {
 				setVerseCount(verseCountValue);
 				setChapterVerses(verses);
 				if (verses.length > 0) {
-					setCurrentVerse((prevVerse) => Math.min(prevVerse, verses.length));
+					const availableVerseNumbers = verses
+						.map((verse) => verse.verse)
+						.filter(
+							(verseNumber) => Number.isFinite(verseNumber) && verseNumber > 0,
+						);
+
+					if (availableVerseNumbers.length > 0) {
+						const availableVerseSet = new Set(availableVerseNumbers);
+						const fallbackVerse = availableVerseNumbers[0];
+						setCurrentVerse((prevVerse) =>
+							availableVerseSet.has(prevVerse) ? prevVerse : fallbackVerse,
+						);
+					}
 				}
 			} catch (error) {
 				if (!isMounted) return;
@@ -1417,15 +1426,35 @@ export default function App() {
 
 	const handleNextVerse = useCallback(async () => {
 		if (translationOnly) {
-			if (currentVerseIndex >= 0 && currentVerseIndex < chapterVerses.length - 1) {
+			if (
+				currentVerseIndex >= 0 &&
+				currentVerseIndex < chapterVerses.length - 1
+			) {
 				setCurrentVerse(chapterVerses[currentVerseIndex + 1].verse);
 				return true;
 			}
 
 			if (currentChapter < chapterCount) {
-				setCurrentChapter(currentChapter + 1);
-				setCurrentVerse(1);
-				return true;
+				try {
+					const nextChapter = currentChapter + 1;
+					const translationLanguage = language === "es" ? "es" : "en";
+					const nextChapterVerses = await getChapterVerses(
+						currentBook.toLowerCase(),
+						nextChapter,
+						{
+							language: translationLanguage,
+							showDss: showQumran,
+							hebrewOnly: false,
+							referenceMode: "translation",
+						},
+					);
+					const firstVerse = nextChapterVerses[0]?.verse ?? 1;
+					setCurrentChapter(nextChapter);
+					setCurrentVerse(firstVerse);
+					return true;
+				} catch {
+					return false;
+				}
 			}
 
 			return false;
@@ -1445,9 +1474,12 @@ export default function App() {
 	}, [
 		chapterCount,
 		chapterVerses,
+		currentBook,
 		currentChapter,
 		currentVerse,
 		currentVerseIndex,
+		language,
+		showQumran,
 		translationOnly,
 		verseCount,
 	]);
@@ -1748,27 +1780,27 @@ export default function App() {
 											(!isNavigatingWordPanel && !showWordSkeleton
 												? lastSelectedWord
 												: null);
-											const wordContextForCard =
-												selectedWord && selectedWordContext
-													? selectedWordContext
-													: !selectedWord && lastSelectedWordContext
-														? lastSelectedWordContext
-														: null;
+										const wordContextForCard =
+											selectedWord && selectedWordContext
+												? selectedWordContext
+												: !selectedWord && lastSelectedWordContext
+													? lastSelectedWordContext
+													: null;
 										const wordAnalysisForCard = selectedWord
 											? selectedWordAnalysis
 											: lastSelectedWordAnalysis;
 										const dssAnalysisForCard = selectedWord
 											? selectedDssAnalysis
 											: lastSelectedDssAnalysis;
-											const verseDataForWordCard = wordContextForCard
-												? chapterVerses.find(
-														(item) =>
-															item.chapter === wordContextForCard.chapter &&
-															item.verse === wordContextForCard.verse,
-													) ?? currentVerseData
-												: currentVerseData;
+										const verseDataForWordCard = wordContextForCard
+											? (chapterVerses.find(
+													(item) =>
+														item.chapter === wordContextForCard.chapter &&
+														item.verse === wordContextForCard.verse,
+												) ?? currentVerseData)
+											: currentVerseData;
 										const dssVariantForCard =
-												verseDataForWordCard?.dss?.find(
+											verseDataForWordCard?.dss?.find(
 												(variant) => variant.position === wordForCard?.position,
 											) ?? null;
 										const qumranWordForCard = resolveRenderableDssWord(
@@ -1837,7 +1869,7 @@ export default function App() {
 														word={wordForCard.text}
 														wordFromVerse={wordForCard.text}
 														strongNumber={wordAnalysisForCard?.strong_number}
-																		qumranWord={qumranWordForCard}
+														qumranWord={qumranWordForCard}
 														qumranStrong={dssVariantForCard?.dss_strong}
 														qumranTransliteration={qumranTransliteration}
 														qumranMeanings={dssMeanings}
@@ -1951,11 +1983,11 @@ export default function App() {
 						if (!selectedWord) return null;
 
 						const selectedWordVerseDataForSheet = selectedWordContext
-							? chapterVerses.find(
+							? (chapterVerses.find(
 									(item) =>
 										item.chapter === selectedWordContext.chapter &&
 										item.verse === selectedWordContext.verse,
-								) ?? currentVerseData
+								) ?? currentVerseData)
 							: currentVerseData;
 
 						const dssVariantForCard =
@@ -1979,12 +2011,12 @@ export default function App() {
 									? selectedWord.dss_translit_es
 									: undefined;
 						const qumranTransliteration = selectedDssAnalysis
-							? qumranTransliterationFromWord ??
+							? (qumranTransliterationFromWord ??
 								(language === "en"
 									? selectedDssAnalysis.translit_en
 									: language === "es"
 										? selectedDssAnalysis.translit_es
-										: undefined)
+										: undefined))
 							: qumranTransliterationFromWord;
 
 						const selectedWordMeanings =

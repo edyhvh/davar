@@ -27,11 +27,14 @@ if (!existsSync(metadataPath)) {
 	console.log("[davar-web] static-data=incomplete-ts2009 regenerating");
 }
 
-const generation = Bun.spawnSync(["bun", "../scripts/generate-static-data/index.ts"], {
-	cwd: webRoot,
-	stdout: "inherit",
-	stderr: "inherit",
-});
+const generation = Bun.spawnSync(
+	["bun", "../scripts/generate-static-data/index.ts"],
+	{
+		cwd: webRoot,
+		stdout: "inherit",
+		stderr: "inherit",
+	},
+);
 
 if (generation.exitCode !== 0) {
 	console.error("[davar-web] static-data=generate failed");

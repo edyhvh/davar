@@ -139,14 +139,17 @@ const renderTextSegment = (
 							key={`${keyPrefix}-sup-${matchIndex}`}
 							className="group relative inline-flex"
 						>
-							<sup className={`${footnoteMarkerClass}${italic ? " italic" : ""}`}>
+							<sup
+								className={`${footnoteMarkerClass}${italic ? " italic" : ""}`}
+							>
 								{normalized}
 							</sup>
 							<span
 								className={footnoteTooltipClass}
 								style={{
 									background: "var(--background, #f6f1e8)",
-									borderColor: "var(--neomorph-border, rgba(122, 95, 62, 0.35))",
+									borderColor:
+										"var(--neomorph-border, rgba(122, 95, 62, 0.35))",
 									color: "var(--text-primary, #2a2118)",
 									boxShadow:
 										"0 10px 24px rgba(29, 23, 17, 0.24), 0 2px 8px rgba(29, 23, 17, 0.16)",
@@ -185,14 +188,17 @@ const renderTextSegment = (
 							key={`${keyPrefix}-bracket-${matchIndex}`}
 							className="group relative inline-flex"
 						>
-							<sup className={`${footnoteMarkerClass}${italic ? " italic" : ""}`}>
+							<sup
+								className={`${footnoteMarkerClass}${italic ? " italic" : ""}`}
+							>
 								{marker}
 							</sup>
 							<span
 								className={footnoteTooltipClass}
 								style={{
 									background: "var(--background, #f6f1e8)",
-									borderColor: "var(--neomorph-border, rgba(122, 95, 62, 0.35))",
+									borderColor:
+										"var(--neomorph-border, rgba(122, 95, 62, 0.35))",
 									color: "var(--text-primary, #2a2118)",
 									boxShadow:
 										"0 10px 24px rgba(29, 23, 17, 0.24), 0 2px 8px rgba(29, 23, 17, 0.16)",
