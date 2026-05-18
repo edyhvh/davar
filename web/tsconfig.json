@@ -16,5 +16,11 @@
 		},
 		"skipLibCheck": true
 	},
-	"include": ["src", "scripts/**/*.ts", "server.ts", "build.ts", "../shared/**/*.ts"]
+	"include": [
+		"src",
+		"scripts/**/*.ts",
+		"server.ts",
+		"build.ts",
+		"../shared/**/*.ts"
+	]
 }

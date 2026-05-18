@@ -27,7 +27,10 @@ Bun.serve({
 			return new Response(file);
 		}
 
-		const upstream = new URL(url.pathname + url.search, `http://${htmlHost}:${htmlPort}`);
+		const upstream = new URL(
+			url.pathname + url.search,
+			`http://${htmlHost}:${htmlPort}`,
+		);
 		const proxiedRequest = new Request(upstream, req);
 		return fetch(proxiedRequest);
 	},

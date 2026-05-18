@@ -183,9 +183,7 @@ export function VerseDisplay({
 				? normalizeForMatch(selectedWord.text)
 				: null;
 		const selectedPosition =
-			selectedWord && isSelectionInCurrentVerse
-				? selectedWord.position
-				: null;
+			selectedWord && isSelectionInCurrentVerse ? selectedWord.position : null;
 
 		let skipUntilIndex = -1;
 
@@ -196,7 +194,10 @@ export function VerseDisplay({
 
 			const variantEntry = showQumran ? dssMap.get(word.position) : undefined;
 			if (variantEntry) {
-				skipUntilIndex = Math.max(skipUntilIndex, index + variantEntry.span - 1);
+				skipUntilIndex = Math.max(
+					skipUntilIndex,
+					index + variantEntry.span - 1,
+				);
 			}
 			const rawText = variantEntry?.text ?? word.text;
 
@@ -229,12 +230,14 @@ export function VerseDisplay({
 			const isSelected =
 				typeof selectedPosition === "number"
 					? selectedPosition === word.position
-					: Boolean(normalizedSelected) && normalizedSelected === normalizedWord;
+					: Boolean(normalizedSelected) &&
+						normalizedSelected === normalizedWord;
 
 			// Prefix segmentation is only valid for original Masoretic words.
-			const prefixSegments = !variantEntry && word.prefixes?.length
-				? getPrefixSegments(displayText, word.prefixes)
-				: null;
+			const prefixSegments =
+				!variantEntry && word.prefixes?.length
+					? getPrefixSegments(displayText, word.prefixes)
+					: null;
 
 			const shouldShowHintButton =
 				showOnboardingHint &&

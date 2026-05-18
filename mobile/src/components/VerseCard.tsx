@@ -31,7 +31,6 @@ import {
   sanitizeEmTags,
   buildMarkerRegex,
   createFootnoteLookup,
-  type MarkerMatch,
   collectMarkerMatches,
   resolveFootnoteForMarker,
   formatMarkerForDisplay,

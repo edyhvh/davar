@@ -44,20 +44,17 @@ if (ensure.exitCode !== 0) {
 	runtimeExit(ensure.exitCode ?? 1);
 }
 
-const htmlServer = Bun.spawn(
-	["bun", "--env-file=.env", "./index.html"],
-	{
-		cwd: webRoot,
-		env: {
-			...runtimeEnv,
-			PORT: String(useGateway ? htmlPort : appPort),
-			HOST: appHost,
-			PUBLIC_STATIC_URL: staticUrl,
-		},
-		stdout: "inherit",
-		stderr: "inherit",
+const htmlServer = Bun.spawn(["bun", "--env-file=.env", "./index.html"], {
+	cwd: webRoot,
+	env: {
+		...runtimeEnv,
+		PORT: String(useGateway ? htmlPort : appPort),
+		HOST: appHost,
+		PUBLIC_STATIC_URL: staticUrl,
 	},
-);
+	stdout: "inherit",
+	stderr: "inherit",
+});
 
 const gatewayServer = useGateway
 	? Bun.spawn(["bun", "./scripts/dev-hot-gateway.ts"], {

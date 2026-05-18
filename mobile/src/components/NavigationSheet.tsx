@@ -34,6 +34,8 @@ type NavigationSheetProps = {
   currentBookId: string;
   currentChapter: number;
   currentVerse: number;
+  translationOnly?: boolean;
+  currentChapterVerseNumbers?: number[];
   onSelectVerse: (bookId: string, chapter: number, verse: number) => void;
   onClose?: () => void;
 };
@@ -234,6 +236,8 @@ const NavigationSheetComponent = (
     currentBookId,
     currentChapter,
     currentVerse,
+    translationOnly = false,
+    currentChapterVerseNumbers,
     onSelectVerse,
     onClose,
   }: NavigationSheetProps,
@@ -355,10 +359,34 @@ const NavigationSheetComponent = (
 
   // Get verses for selected chapter
   const verseNumbers = useMemo(() => {
+    if (
+      translationOnly &&
+      selectedBookId === currentBookId &&
+      selectedChapter === currentChapter &&
+      Array.isArray(currentChapterVerseNumbers) &&
+      currentChapterVerseNumbers.length > 0
+    ) {
+      return Array.from(
+        new Set(
+          currentChapterVerseNumbers.filter(
+            (value) => Number.isFinite(value) && value > 0,
+          ),
+        ),
+      ).sort((a, b) => a - b);
+    }
+
     const count = verseCounts[selectedBookId]?.[String(selectedChapter)];
     if (count) return Array.from({ length: count }, (_, i) => i + 1);
     return [];
-  }, [selectedBookId, selectedChapter, verseCounts]);
+  }, [
+    currentBookId,
+    currentChapter,
+    currentChapterVerseNumbers,
+    selectedBookId,
+    selectedChapter,
+    translationOnly,
+    verseCounts,
+  ]);
 
   // Pad numbers for grid
   const padNumbers = useCallback((numbers: number[]) => {

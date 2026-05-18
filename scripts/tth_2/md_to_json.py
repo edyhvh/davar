@@ -399,6 +399,76 @@ class TTH2MdToJson:
 
         return False
 
+    def is_plain_section_header_line(self, lines: List[str], index: int, line: str) -> bool:
+        """
+        Detect unformatted standalone section headers between verse blocks.
+
+        Some source books contain section titles as plain text lines (without
+        italic markers), e.g. "Matrimonio simbólico de Hoshea". If left as-is,
+        these lines are appended to the previous verse body. We convert only
+        highly structured, isolated candidates and leave normal prose untouched.
+        """
+        stripped = line.strip()
+        if not stripped:
+            return False
+
+        # Ignore known non-header markers.
+        if stripped.startswith('#'):
+            return False
+        if stripped.startswith('*'):
+            return False
+        if re.match(r'^\*\*(\d+)\*\*(?:\s+.+)?$', stripped):
+            return False
+        if re.match(r'^\[\^\d+\]:', stripped):
+            return False
+
+        # Titles in this corpus appear isolated by blank lines.
+        prev_raw_blank = index > 0 and not lines[index - 1].strip()
+        next_raw_blank = index + \
+            1 < len(lines) and not lines[index + 1].strip()
+        if not (prev_raw_blank and next_raw_blank):
+            return False
+
+        # Context guard: must be between verse/chapter markers.
+        prev_nonempty = ''
+        for j in range(index - 1, -1, -1):
+            candidate = lines[j].strip()
+            if candidate:
+                prev_nonempty = candidate
+                break
+
+        next_nonempty = ''
+        for j in range(index + 1, len(lines)):
+            candidate = lines[j].strip()
+            if candidate:
+                next_nonempty = candidate
+                break
+
+        if not re.match(r'^\*\*\d+\*\*', prev_nonempty):
+            return False
+        if not re.match(r'^\*\*\d+\*\*(?:\s+.+)?$', next_nonempty):
+            return False
+
+        # Keep heuristic strict to avoid dropping legitimate wrapped verse prose.
+        if re.search(r'[,;:!?]', stripped):
+            return False
+        if re.search(r'\[\^\d+\]', stripped):
+            return False
+
+        words = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ'’-]+", stripped)
+        if len(words) < 2 or len(words) > 10:
+            return False
+
+        first_word = words[0]
+        if not first_word[0].isupper():
+            return False
+
+        # Narrative continuations often start with conjunctions/pronouns.
+        if first_word.lower() in {'y', 'pero', 'porque', 'pues', 'yo', 'él', 'ella', 'ellos', 'ellas', 'ustedes', 'nosotros'}:
+            return False
+
+        return True
+
     def is_book_header_boundary_line(self, line: str) -> bool:
         """
         Detect a new-book header marker leaked into a per-book markdown file.
@@ -742,6 +812,11 @@ class TTH2MdToJson:
                     if re.match(r'^\*\*\d+\*\*', line):
                         i += 1
                         continue
+
+                    # Plain standalone section headers (no markdown formatting)
+                    # should become subtitle material, not verse body text.
+                    if self.is_plain_section_header_line(lines, i, line):
+                        line = f"*{line}*"
 
                     # Add to the last verse, then re-split in case this
                     # continuation line embeds a new inline verse marker

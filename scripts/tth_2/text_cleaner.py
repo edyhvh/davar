@@ -125,7 +125,7 @@ class TTHTextCleaner:
             next_char = match.group(2)
 
             # Don't add space if next char is already punctuation, quote, or special
-            if next_char in '.,;:!?"\')}]\\*_':
+            if next_char in '.,;:!?"\')}]\\*_”’»':
                 return punct + next_char
 
             # Don't add space before closing parenthesis or brackets
@@ -139,6 +139,25 @@ class TTHTextCleaner:
             return punct + ' ' + next_char
 
         return self.punctuation_space_pattern.sub(add_space, text)
+
+    def fix_inverted_punctuation_spacing(self, text: str) -> str:
+        """
+        Normalize spacing around Spanish inverted punctuation.
+
+        Examples:
+            "¡ Elohim mío!" -> "¡Elohim mío!"
+            "¿ Quién?" -> "¿Quién?"
+            "¡Elohim mío !" -> "¡Elohim mío!"
+        """
+        result = text
+
+        # Remove spacing after opening inverted punctuation.
+        result = re.sub(r'([¡¿])\s+', r'\1', result)
+
+        # Remove spacing before closing punctuation.
+        result = re.sub(r'\s+([!?])', r'\1', result)
+
+        return result
 
     # Words that should NEVER be split (Hebrew/Biblical names ending with connectors)
     PROTECTED_WORDS = {
@@ -288,10 +307,13 @@ class TTHTextCleaner:
         # 5. Finally fix punctuation spacing
         result = self.fix_punctuation_spacing(result)
 
-        # 6. Clean up any double spaces that might have been introduced
+        # 6. Normalize spacing around inverted/question punctuation
+        result = self.fix_inverted_punctuation_spacing(result)
+
+        # 7. Clean up any double spaces that might have been introduced
         result = re.sub(r'  +', ' ', result)
 
-        # 7. Clean up spaces before punctuation
+        # 8. Clean up spaces before punctuation
         result = re.sub(r'\s+([.,;:!?])', r'\1', result)
 
         return result.strip()

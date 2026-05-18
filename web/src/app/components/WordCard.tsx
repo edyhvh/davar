@@ -145,7 +145,9 @@ export function WordCard({
 			? removeMaqafForDisplay(
 					normalizeHebrewDisplay(
 						stripNikud(
-							stripMeteg(stripCantillation(headerWord.replace(/[\u05BE-]/g, " "))),
+							stripMeteg(
+								stripCantillation(headerWord.replace(/[\u05BE-]/g, " ")),
+							),
 						),
 					),
 				)
@@ -435,9 +437,7 @@ export function WordCard({
 			<div className="text-center space-y-2 pb-6">
 				<div
 					style={{
-						fontFamily: isQumranTab
-							? qumranFontFamily
-							: "'Cardo', serif",
+						fontFamily: isQumranTab ? qumranFontFamily : "'Cardo', serif",
 						fontSize: isQumranTab ? qumranWordFontSize : masoreticWordFontSize,
 						direction: "rtl",
 						lineHeight: isQumranTab && hasMultiWordDisplay ? 1.35 : 1.8,
