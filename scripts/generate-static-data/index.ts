@@ -835,6 +835,7 @@ const enrichDssBookForSpanReplacement = (bookData: JsonValue): JsonValue => {
 
 const main = async (): Promise<void> => {
   const generationStartedAt = Date.now();
+  const shouldExportTs2009Static = process.env.EXPORT_TS2009_STATIC === "1";
   console.log("[davar-static-data] phase=generate start");
 
   await rm(WEB_PUBLIC_DATA_ROOT, { recursive: true, force: true });
@@ -953,7 +954,9 @@ const main = async (): Promise<void> => {
     "utf-8",
   );
   await writeFile(join(bundlesDir, "tth.json"), JSON.stringify(tthBundle), "utf-8");
-  const ts2009Bundle = await generateTs2009Chapters();
+  const ts2009Bundle = shouldExportTs2009Static
+    ? await generateTs2009Chapters()
+    : null;
   if (ts2009Bundle) {
     await writeFile(
       join(bundlesDir, "ts2009.json"),
@@ -1032,6 +1035,9 @@ const main = async (): Promise<void> => {
 
   console.log("Generated static data in web/public/data");
   console.log(`books: tanaj=${Object.keys(tanaj.bundle.books).length}, besorah=${Object.keys(besorah.bundle.books).length}`);
+  if (!shouldExportTs2009Static) {
+    console.log("ts2009: static export disabled; serving through private API only");
+  }
   if (ts2009Bundle) {
     console.log(
       `ts2009: books=${ts2009Bundle.stats.books}, chapters=${ts2009Bundle.stats.chapters}, verses=${ts2009Bundle.stats.verses}`,

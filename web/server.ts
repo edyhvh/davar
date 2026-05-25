@@ -1,3 +1,5 @@
+import { join } from "node:path";
+
 const port = Number(process.env.PORT ?? 3002);
 const hostname = process.env.HOST ?? "0.0.0.0";
 const runtimeEnv =
@@ -5,6 +7,21 @@ const runtimeEnv =
 const defaultIdleTimeout = runtimeEnv === "development" ? 120 : 30;
 const idleTimeout = Number(process.env.BUN_IDLE_TIMEOUT ?? defaultIdleTimeout);
 const distDir = new URL("./dist/", import.meta.url);
+const ts2009DataRoot = join(import.meta.dir, "..", "data", "ts2009");
+
+const getTs2009LocalFilePath = (pathname: string): string | null => {
+	const relativePath = pathname.slice("/api/ts2009/".length);
+	if (!relativePath || relativePath.includes("\0")) {
+		return null;
+	}
+
+	const segments = relativePath.split("/").filter(Boolean);
+	if (segments.length === 0 || segments.some((segment) => segment === "." || segment === "..")) {
+		return null;
+	}
+
+	return join(ts2009DataRoot, ...segments);
+};
 
 Bun.serve({
 	hostname,
@@ -13,6 +30,22 @@ Bun.serve({
 	async fetch(req: Request) {
 		const url = new URL(req.url);
 		const pathname = decodeURIComponent(url.pathname);
+
+		if (pathname.startsWith("/api/ts2009/")) {
+			const localFilePath = getTs2009LocalFilePath(pathname);
+			if (!localFilePath) {
+				return new Response("Not Found", { status: 404 });
+			}
+
+			const file = Bun.file(localFilePath);
+			if (!(await file.exists())) {
+				return new Response("Not Found", { status: 404 });
+			}
+
+			return new Response(file, {
+				headers: { "Content-Type": "application/json; charset=utf-8" },
+			});
+		}
 
 		if (pathname.startsWith("/data/")) {
 			const assetPath = pathname.startsWith("/") ? pathname.slice(1) : pathname;

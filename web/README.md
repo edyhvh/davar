@@ -26,40 +26,31 @@ When using `bun run dev`, startup logs now show high-level milestone phases:
 
 ## Environment Setup
 
-Web TS2009 translation loading uses these public env vars:
+Web TS2009 translation loading is now served through the same-origin
+`/api/ts2009/*` Pages Function backed by the private Cloudflare R2 bucket
+`ts2009`.
 
-- `PUBLIC_SUPABASE_URL`
-- `PUBLIC_SUPABASE_ANON_KEY`
+The web client no longer needs public Supabase credentials for TS2009.
 
-Recommended workflow:
+### TS2009 Storage And Upload
 
-1. Keep `.env.example` committed as the template.
-2. Set real local values in `.env` for local development.
-3. Set real production values in Cloudflare Pages environment variables.
+Production flow:
 
-If Supabase values are missing, invalid, or placeholders, the app skips TS2009
-loading and falls back to other translation sources.
+1. Keep the source files in `data/ts2009/`.
+2. Upload them to the private R2 bucket with `bun run upload:ts2009:r2` from `web/`.
+	The uploader is resumable and skips files that were already uploaded.
+3. Deploy the web app through the existing GitHub -> Cloudflare Pages flow.
 
-### Build-time TS2009 Static Export (Cloudflare Pages)
+At runtime:
 
-The build pipeline can export TS2009 from Supabase Storage into static CDN files
-at `public/data/ts2009/<book>/<chapter>.json`.
+- The browser requests `/api/ts2009/<book>.json`.
+- The Pages Function reads that object from the private `TS2009_BUCKET` binding.
+- TS2009 is no longer shipped in `dist/data/ts2009`.
 
-Required build-time secrets:
+For local Bun development:
 
-- `SUPABASE_URL` (or fallback to `PUBLIC_SUPABASE_URL`)
-- `SUPABASE_SERVICE_ROLE_KEY`
-
-Behavior:
-
-1. During `bun run build`, `build.ts` executes `scripts/generate-static-data/index.ts`.
-2. If both TS2009 build secrets are present, TS2009 chapter files are generated.
-3. If secrets are missing, TS2009 static export is skipped and runtime fallback remains available.
-
-Important:
-
-- Never expose `SUPABASE_SERVICE_ROLE_KEY` as a `PUBLIC_*` variable.
-- Keep service-role credentials only in Cloudflare Pages build secrets.
+- `bun run dev` and `bun run serve` expose the same `/api/ts2009/*` path.
+- Those local routes read directly from `data/ts2009/`.
 
 ## Formatting
 

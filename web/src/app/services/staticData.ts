@@ -7,7 +7,7 @@ import {
 	TTH_BOOK_MAPPING,
 } from "../../../../shared/translationConfig";
 import { getSourceChaptersForTranslationChapter } from "../../../../shared/versification";
-import { fetchTs2009Translation } from "./supabaseClient";
+import { VERSIFICATION_DATA } from "../../../../shared/versificationData";
 
 export interface WordResponse {
 	position: number;
@@ -177,12 +177,16 @@ type RawDssTranslitBook = {
 const MAX_CACHE_SIZE = 100;
 const jsonCache = new Map<string, Promise<unknown>>();
 
-// In-memory cache for TS2009 translations to avoid N+1 query problem
+// In-memory cache for TS2009 translations to avoid repeated private API reads.
 // Keys: `${bookId}:${chapter}:${verse}`, Values: string | null
 const ts2009Cache = new Map<string, string | null>();
 const ts2009ChapterCache = new Map<
 	string,
 	Promise<Map<number, string> | null>
+>();
+const ts2009BookFileCache = new Map<
+	string,
+	Promise<RawTs2009BookPayload | null>
 >();
 
 const TS2009_BOOK_FILE_MAP: Record<string, string> = {
@@ -314,40 +318,113 @@ const getTs2009BookFileCandidates = (bookId: string): string[] => {
 	return [...new Set(stems)];
 };
 
+const normalizePsalmsTs2009VerseMap = (
+	chapter: number,
+	verseMap: Record<string, string>,
+): Record<string, string> => {
+	const psaMap = VERSIFICATION_DATA.PSA?.simple_map;
+	if (!psaMap) return verseMap;
+
+	const chapterMap = (psaMap as Record<string, Record<string, string>>)[
+		String(chapter)
+	];
+	if (!chapterMap) return verseMap;
+
+	const targetForEnglishVerse1 = chapterMap["1"];
+	if (!targetForEnglishVerse1) return verseMap;
+
+	const [, targetVerseToken] = targetForEnglishVerse1.split(":");
+	const firstRealHebrewVerse = Number(targetVerseToken);
+	if (!Number.isFinite(firstRealHebrewVerse) || firstRealHebrewVerse <= 1) {
+		return verseMap;
+	}
+
+	const superscriptionCount = firstRealHebrewVerse - 1;
+	const englishVerseCount = Object.keys(chapterMap).filter(
+		(verseKey) => Number(verseKey) > 0,
+	).length;
+	const existingKeys = Object.keys(verseMap)
+		.map(Number)
+		.filter((value) => Number.isFinite(value))
+		.sort((a, b) => a - b);
+
+	if (existingKeys.length !== englishVerseCount + superscriptionCount) {
+		return verseMap;
+	}
+
+	const normalized: Record<string, string> = {};
+	const realVerseKeys = existingKeys.slice(superscriptionCount);
+	for (const [index, hebrewKey] of realVerseKeys.entries()) {
+		const englishVerse = index + 1;
+		const text = verseMap[String(hebrewKey)];
+		if (text !== undefined) {
+			normalized[String(englishVerse)] = text;
+		}
+	}
+
+	return normalized;
+};
+
+const loadTs2009BookFile = (
+	fileStem: string,
+): Promise<RawTs2009BookPayload | null> => {
+	let bookPromise = ts2009BookFileCache.get(fileStem);
+	if (!bookPromise) {
+		bookPromise = fetchJson<RawTs2009BookPayload>(
+			`/api/ts2009/${fileStem}.json`,
+		).catch(() => null);
+		ts2009BookFileCache.set(fileStem, bookPromise);
+	}
+
+	return bookPromise;
+};
+
 const loadTs2009ChapterFromBookFile = async (
 	bookId: string,
 	chapter: number,
 ): Promise<Map<number, string> | null> => {
 	for (const fileStem of getTs2009BookFileCandidates(bookId)) {
-		try {
-			const staticBook = await fetchJson<RawTs2009BookPayload>(
-				`/data/ts2009/${fileStem}.json`,
-			);
+		const staticBook = await loadTs2009BookFile(fileStem);
+		if (!staticBook) {
+			continue;
+		}
 
-			const chapterVerses = extractTs2009ChapterVersesFromBook(
-				staticBook,
-				chapter,
-			);
-			if (!chapterVerses || chapterVerses.length === 0) {
+		const chapterVerses = extractTs2009ChapterVersesFromBook(
+			staticBook,
+			chapter,
+		);
+		if (!chapterVerses || chapterVerses.length === 0) {
+			continue;
+		}
+
+		const rawVerseMap: Record<string, string> = {};
+		for (const [index, verse] of chapterVerses.entries()) {
+			const verseNumber = Number(verse.number ?? verse.verse ?? index + 1);
+			const verseText = parseTs2009BookVerseText(verse);
+			if (!Number.isFinite(verseNumber) || !verseText) {
 				continue;
 			}
 
-			const verseMap = new Map<number, string>();
-			for (const [index, verse] of chapterVerses.entries()) {
-				const verseNumber = Number(verse.number ?? verse.verse ?? index + 1);
-				const verseText = parseTs2009BookVerseText(verse);
-				if (!Number.isFinite(verseNumber) || !verseText) {
-					continue;
-				}
+			rawVerseMap[String(verseNumber)] = verseText;
+		}
 
-				verseMap.set(verseNumber, verseText);
+		const normalizedVerseMap =
+			bookId.toLowerCase() === "psalms"
+				? normalizePsalmsTs2009VerseMap(chapter, rawVerseMap)
+				: rawVerseMap;
+
+		const verseMap = new Map<number, string>();
+		for (const [verseKey, verseText] of Object.entries(normalizedVerseMap)) {
+			const verseNumber = Number(verseKey);
+			if (!Number.isFinite(verseNumber)) {
+				continue;
 			}
 
-			if (verseMap.size > 0) {
-				return verseMap;
-			}
-		} catch {
-			// Keep probing candidate file names.
+			verseMap.set(verseNumber, verseText);
+		}
+
+		if (verseMap.size > 0) {
+			return verseMap;
 		}
 	}
 
@@ -377,6 +454,10 @@ const normalizeStaticPath = (path: string): string =>
 
 const buildCandidatePaths = (path: string): string[] => {
 	const normalizedPath = normalizeStaticPath(path);
+	if (normalizedPath.startsWith("/api/")) {
+		return [normalizedPath];
+	}
+
 	const orderedBases = [
 		preferredStaticBase,
 		...STATIC_BASE_CANDIDATES.filter((base) => base !== preferredStaticBase),
@@ -465,6 +546,9 @@ const fetchJson = async <T>(path: string): Promise<T> => {
 
 	const promise = (async () => {
 		const errors: string[] = [];
+		const troubleshootingHint = normalizeStaticPath(path).startsWith("/api/")
+			? "Verify the local Bun server or deployed Pages Function serves this API route."
+			: "Verify the web app is launched from the web/ directory (bun run dev) or served from a build that includes copied public data.";
 
 		for (const resolvedPath of buildCandidatePaths(path)) {
 			try {
@@ -482,7 +566,7 @@ const fetchJson = async <T>(path: string): Promise<T> => {
 		}
 
 		throw new Error(
-			`Failed to load static data from all candidates for ${normalizeStaticPath(path)}: ${errors.join(" | ")}. Verify the web app is launched from the web/ directory (bun run dev) or served from a build that includes copied public data.`,
+			`Failed to load static data from all candidates for ${normalizeStaticPath(path)}: ${errors.join(" | ")}. ${troubleshootingHint}`,
 		);
 	})().catch((error) => {
 		jsonCache.delete(path); // Remove failed entry to allow retry
@@ -505,7 +589,7 @@ let metadataPromise: Promise<MetadataPayload> | null = null;
 let booksPromise: Promise<BookResponse[]> | null = null;
 
 /**
- * Fetches TS2009 translation with client-side caching to avoid repeated Supabase requests.
+	* Fetches TS2009 translation with client-side caching to avoid repeated API requests.
  * Uses in-memory cache with keys formatted as `${bookId}:${chapter}:${verse}`.
  */
 const fetchCachedTs2009Translation = async (
@@ -525,38 +609,7 @@ const fetchCachedTs2009Translation = async (
 
 	let chapterPromise = ts2009ChapterCache.get(chapterKey);
 	if (!chapterPromise) {
-		chapterPromise = (async () => {
-			let chapterMap: Map<number, string> | null = null;
-
-			try {
-				const staticChapter = await fetchJson<{
-					verses?: Record<string, string>;
-				}>(`/data/ts2009/${bookId}/${chapter}.json`);
-
-				const verses = staticChapter.verses ?? {};
-				const verseMap = new Map<number, string>();
-				for (const [verseKey, translation] of Object.entries(verses)) {
-					const verseNumber = Number(verseKey);
-					if (
-						!Number.isFinite(verseNumber) ||
-						typeof translation !== "string"
-					) {
-						continue;
-					}
-					verseMap.set(verseNumber, translation);
-				}
-
-				chapterMap = verseMap.size > 0 ? verseMap : null;
-			} catch {
-				// Fall back to TS2009 book files below.
-			}
-
-			if (chapterMap) {
-				return chapterMap;
-			}
-
-			return loadTs2009ChapterFromBookFile(bookId, chapter);
-		})();
+		chapterPromise = loadTs2009ChapterFromBookFile(bookId, chapter);
 
 		ts2009ChapterCache.set(chapterKey, chapterPromise);
 	}
@@ -568,10 +621,8 @@ const fetchCachedTs2009Translation = async (
 		return staticTranslation;
 	}
 
-	// Fall back to Supabase if static TS2009 chapter data is unavailable.
-	const translation = await fetchTs2009Translation(bookId, chapter, verse);
-	ts2009Cache.set(cacheKey, translation);
-	return translation;
+	ts2009Cache.set(cacheKey, null);
+	return null;
 };
 
 export const loadMetadata = async (): Promise<MetadataPayload> => {
@@ -1327,7 +1378,7 @@ export const getChapterVerses = async (
 					>({}),
 		]);
 
-	// If language is English, load TS2009 translations from Supabase (with caching)
+	// If language is English, load TS2009 translations from the private API.
 	let ts2009Translations: Record<string, string> = {};
 	if (options?.language === "en") {
 		const uniqueTranslationKeys = [

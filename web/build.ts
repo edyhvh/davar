@@ -1,6 +1,14 @@
-import { cpSync, existsSync, readFileSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import tailwind from "bun-plugin-tailwind";
+
+type RuntimeProcess = {
+	env: Record<string, string | undefined>;
+	exit: (exitCode: number) => never;
+};
+
+const runtimeProcess = process as unknown as RuntimeProcess;
+const runtimeExit = (code: number): never => runtimeProcess.exit(code);
 
 const formatSeconds = (startedAtMs: number): string => {
 	return `${((Date.now() - startedAtMs) / 1000).toFixed(1)}s`;
@@ -29,7 +37,7 @@ if (generation.exitCode !== 0) {
 	console.error(
 		`[davar-web] phase=data-generation failed duration=${formatSeconds(dataGenerationStartedAt)}`,
 	);
-	process.exit(generation.exitCode ?? 1);
+	runtimeExit(generation.exitCode ?? 1);
 }
 
 console.log("[davar-web] phase=bundle start");
@@ -45,12 +53,6 @@ const result = await Bun.build({
 	// that import.meta.env.PUBLIC_X is guaranteed to be inlined even in Bun
 	// versions that only replace direct AST-node patterns.
 	define: {
-		"import.meta.env.PUBLIC_SUPABASE_URL": JSON.stringify(
-			process.env.PUBLIC_SUPABASE_URL ?? "",
-		),
-		"import.meta.env.PUBLIC_SUPABASE_ANON_KEY": JSON.stringify(
-			process.env.PUBLIC_SUPABASE_ANON_KEY ?? "",
-		),
 		"import.meta.env.PUBLIC_NODE_ENV": JSON.stringify(
 			process.env.PUBLIC_NODE_ENV ?? "production",
 		),
@@ -68,7 +70,7 @@ if (!result.success) {
 	for (const log of result.logs) {
 		console.error(log);
 	}
-	process.exit(1);
+	runtimeExit(1);
 }
 
 console.log(
@@ -82,6 +84,11 @@ const distDir = join(import.meta.dir, "dist");
 if (existsSync(publicDir)) {
 	cpSync(publicDir, distDir, { recursive: true, force: true });
 }
+
+rmSync(join(distDir, "data", "ts2009"), { recursive: true, force: true });
+rmSync(join(distDir, "data", "bundles", "ts2009.json"), {
+	force: true,
+});
 
 console.log("[davar-web] phase=assets done");
 
