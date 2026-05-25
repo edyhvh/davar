@@ -45,9 +45,13 @@ Cloudflare has two relevant areas:
    - Project name: `davar-web`
    - Production branch: `main`
    - Root directory: `web`
-   - Build command: `bun run build`
+   - Build command: `bun install --frozen-lockfile && bun run build:prod`
    - Build output directory: `dist`
 7. Save and deploy
+
+If Pages logs show `Installing project dependencies: npm install --progress=false`,
+set `SKIP_DEPENDENCY_INSTALL=1` in the Pages project and redeploy. This repo is
+designed to install and build with Bun from the `web/` directory.
 
 ---
 
@@ -61,14 +65,20 @@ PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 PUBLIC_NODE_ENV=production
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+SKIP_DEPENDENCY_INSTALL=1
 ```
 
 Notes:
 - `SUPABASE_SERVICE_ROLE_KEY` is build-time only and must never be public
 - `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` enable TS2009 static export at build time
 - Public Supabase vars can remain for compatibility, but the web app should read same-origin TS2009 data
+- `SKIP_DEPENDENCY_INSTALL=1` prevents Cloudflare Pages from running `npm install` before the build
 - These values are applied at build time
 - No separate backend API origin is needed for TS2009
+
+Use the default Bun runtime provided by Cloudflare Pages unless you are working
+around a confirmed platform regression. The stable fix for this repo is to skip
+Pages' automatic dependency install and run the Bun install/build explicitly.
 
 Also configure the Pages binding for runtime TS2009 reads:
 
@@ -148,6 +158,7 @@ Tune this after observing real traffic.
 
 ```bash
 cd web
+bun install --frozen-lockfile
 bun --env-file=.env.production run build
 ```
 
@@ -209,9 +220,11 @@ bunx wrangler pages dev dist
 
 ```bash
 cd web
-bun install
-bun run build
+bun install --frozen-lockfile
+bun run build:prod
 ```
+3. If Pages logs show `npm install`, confirm the project `Root directory` is `web`
+4. Set `SKIP_DEPENDENCY_INSTALL=1` and redeploy so Pages does not run npm before the Bun build
 
 ---
 

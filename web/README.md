@@ -7,6 +7,13 @@ This is the web application package for Davar.
 
 Run `bun install` to install dependencies.
 
+For Cloudflare Pages, this package is intended to build with Bun from the
+`web/` directory. If Pages falls back to `npm install`, set
+`SKIP_DEPENDENCY_INSTALL=1` and use the build command
+`bun install --frozen-lockfile && bun run build:prod`.
+Do not pin `BUN_VERSION` by default; only do that as a temporary workaround for
+an identified Cloudflare runtime regression.
+
 Run `bun run dev` for Bun HTML hot-reload mode without running `build.ts`.
 It keeps the app on `http://localhost:3002`, checks static data, runs Bun HTML mode on an internal port, and serves `/data/*.json` through a local gateway.
 The gateway listens on `0.0.0.0` by default so mobile devices on the same LAN can use `http://<your-machine-ip>:3002`.
