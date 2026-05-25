@@ -8,11 +8,13 @@ This is the web application package for Davar.
 Run `bun install` to install dependencies.
 
 For Cloudflare Pages, this package is intended to build with Bun from the
-`web/` directory. If Pages falls back to `npm install`, set
-`SKIP_DEPENDENCY_INSTALL=1` and use the build command
-`bun install --frozen-lockfile && bun run build:prod`.
-Do not pin `BUN_VERSION` by default; only do that as a temporary workaround for
-an identified Cloudflare runtime regression.
+`web/` directory. Set your Pages project's **Build command** to `bun run build:cf`
+(which expands to `bun install --frozen-lockfile && bun run build:prod`) and
+**Root directory** to `web`. Set the environment variable `SKIP_DEPENDENCY_INSTALL=1`
+so Pages does not run its own npm install. Do not pin `BUN_VERSION` by default.
+See [CLOUDFLARE_DEPLOYMENT_GUIDE.md](../CLOUDFLARE_DEPLOYMENT_GUIDE.md) for the
+full required dashboard settings and the exact troubleshooting for
+"Could not resolve: react-dom/client" build failures.
 
 Run `bun run dev` for Bun HTML hot-reload mode without running `build.ts`.
 It keeps the app on `http://localhost:3002`, checks static data, runs Bun HTML mode on an internal port, and serves `/data/*.json` through a local gateway.

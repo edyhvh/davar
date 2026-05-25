@@ -9,6 +9,7 @@
 		"build": "bun --env-file=.env ./build.ts",
 		"build:dev": "bun --env-file=.env ./build.ts",
 		"build:prod": "bun --env-file=.env.production ./build.ts",
+		"build:cf": "bun install --frozen-lockfile && bun run build:prod",
 		"dev": "bun ./scripts/dev-hot.ts",
 		"dev:static": "bun run build:dev && bun run serve",
 		"dev:hot": "bun ./scripts/dev-hot.ts",

@@ -110,7 +110,7 @@ Failure signature:
 
 When this happens, verify Cloudflare Pages project settings:
 - Root directory is `web`
-- Build command is `bun run build:prod`
+- Build command is `bun run build:cf` (or the expanded `bun install --frozen-lockfile && bun run build:prod`)
 - Build output directory is `dist`
 - The latest deployment includes `dist/data/metadata.json`
 - Custom domain `davar.bible` points to that same Pages project/deployment

@@ -45,9 +45,14 @@ Cloudflare has two relevant areas:
    - Project name: `davar-web`
    - Production branch: `main`
    - Root directory: `web`
-   - Build command: `bun install --frozen-lockfile && bun run build:prod`
+   - Build command: `bun run build:cf`
    - Build output directory: `dist`
 7. Save and deploy
+
+**IMPORTANT:** The Build command and Root directory above **must** be set exactly in the
+Cloudflare Pages project dashboard (Settings → Build settings). The `build:cf` script
+guarantees `bun install --frozen-lockfile && bun run build:prod` so that
+`SKIP_DEPENDENCY_INSTALL=1` (recommended) does not leave you without node_modules.
 
 If Pages logs show `Installing project dependencies: npm install --progress=false`,
 set `SKIP_DEPENDENCY_INSTALL=1` in the Pages project and redeploy. This repo is
@@ -72,7 +77,7 @@ Notes:
 - `SUPABASE_SERVICE_ROLE_KEY` is build-time only and must never be public
 - `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` enable TS2009 static export at build time
 - Public Supabase vars can remain for compatibility, but the web app should read same-origin TS2009 data
-- `SKIP_DEPENDENCY_INSTALL=1` prevents Cloudflare Pages from running `npm install` before the build
+- `SKIP_DEPENDENCY_INSTALL=1` prevents Cloudflare Pages from running `npm install` before the build (we explicitly run `bun install` as part of the `build:cf` Build command)
 - These values are applied at build time
 - No separate backend API origin is needed for TS2009
 
@@ -154,12 +159,13 @@ Tune this after observing real traffic.
 
 ## 9. Build and Verification
 
-### Local build check
+### Local build check (matches Cloudflare production command)
 
 ```bash
 cd web
-bun install --frozen-lockfile
-bun --env-file=.env.production run build
+bun run build:cf
+# or the long form:
+# bun install --frozen-lockfile && bun --env-file=.env.production run build
 ```
 
 ### Optional local Pages preview
@@ -213,18 +219,51 @@ bunx wrangler pages dev dist
 3. Rebuild/redeploy Pages after variable changes
 4. Check network tab request URL host
 
-### Build fails
+### Build fails (e.g. "Could not resolve: react-dom/client" during phase=bundle)
 
-1. Confirm dependencies are installed with Bun in `web`
-2. Re-run build locally with:
+This is the most common failure when `SKIP_DEPENDENCY_INSTALL=1` is set.
 
+**Symptom (exact log from a recent incident):**
+```
+[davar-web] phase=bundle start
+1 | import { createRoot } from "react-dom/client";
+                               ^
+error: Could not resolve: "react-dom/client". Maybe you need to "bun install"?
+...
+[davar-web] phase=bundle failed
+```
+
+**Root cause:** `SKIP_DEPENDENCY_INSTALL=1` told Pages to skip its auto `npm install`.  
+Your **Build command** in the dashboard did not include an explicit Bun install step,  
+so `web/node_modules/` was empty (or stale after a package.json change), and Bun.build  
+could not resolve the app's runtime dependencies (react, react-dom, mui, radix, etc.).
+
+**Fix (apply in Cloudflare dashboard):**
+
+1. Go to **Workers & Pages** → your `davar-web` project → **Settings** → **Build settings** → **Edit**
+2. Set **exactly**:
+   - Root directory: `web`
+   - Build command: `bun run build:cf`
+   - Build output directory: `dist`
+3. In **Environment variables** (both Production and Preview), ensure:
+   ```
+   SKIP_DEPENDENCY_INSTALL=1
+   ```
+   (plus the other SUPABASE_* and PUBLIC_* vars)
+4. Save → **Save and Deploy** (or push a new commit to trigger).
+
+After this change, every build will explicitly run `bun install --frozen-lockfile` (via the `build:cf` script) before bundling, even with SKIP enabled.
+
+**Local reproduction of the exact CF command:**
 ```bash
 cd web
-bun install --frozen-lockfile
-bun run build:prod
+bun run build:cf
 ```
-3. If Pages logs show `npm install`, confirm the project `Root directory` is `web`
-4. Set `SKIP_DEPENDENCY_INSTALL=1` and redeploy so Pages does not run npm before the Bun build
+
+Other build-failure checks:
+- Re-run the local check above.
+- Confirm no `BUN_VERSION` override is pinned (unless you have a known-good reason).
+- After any `package.json` or `bun.lock` change, a fresh `bun install` locally + the CF rebuild is required.
 
 ---
 
