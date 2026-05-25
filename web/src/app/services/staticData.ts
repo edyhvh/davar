@@ -370,9 +370,22 @@ const loadTs2009BookFile = (
 ): Promise<RawTs2009BookPayload | null> => {
 	let bookPromise = ts2009BookFileCache.get(fileStem);
 	if (!bookPromise) {
-		bookPromise = fetchJson<RawTs2009BookPayload>(
-			`/api/ts2009/${fileStem}.json`,
-		).catch(() => null);
+		bookPromise = (async () => {
+			const candidatePaths = [
+				`/api/ts2009/${fileStem}.json`,
+				`/data/ts2009/${fileStem}.json`,
+			];
+
+			for (const candidatePath of candidatePaths) {
+				try {
+					return await fetchJson<RawTs2009BookPayload>(candidatePath);
+				} catch {
+					continue;
+				}
+			}
+
+			return null;
+		})();
 		ts2009BookFileCache.set(fileStem, bookPromise);
 	}
 

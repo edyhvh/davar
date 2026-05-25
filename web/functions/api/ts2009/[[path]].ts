@@ -57,7 +57,20 @@ const handleGet = async (context: Ts2009Context): Promise<Response> => {
 		return new Response("Not Found", { status: 404 });
 	}
 
-	const object = await context.env.TS2009_BUCKET.get(objectKey);
+	const bucket = context.env?.TS2009_BUCKET;
+	if (!bucket || typeof bucket.get !== "function") {
+		return new Response("TS2009 bucket binding is not configured", {
+			status: 503,
+		});
+	}
+
+	let object: Ts2009BucketObject | null;
+	try {
+		object = await bucket.get(objectKey);
+	} catch {
+		return new Response("TS2009 bucket read failed", { status: 503 });
+	}
+
 	if (!object?.body) {
 		return new Response("Not Found", { status: 404 });
 	}

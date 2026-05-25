@@ -30,6 +30,9 @@ Web TS2009 translation loading is now served through the same-origin
 `/api/ts2009/*` Pages Function backed by the private Cloudflare R2 bucket
 `ts2009`.
 
+Production builds also keep a bundled `/data/ts2009/*` fallback so English
+verses can still render if the Pages Function binding is unavailable.
+
 The web client no longer needs public Supabase credentials for TS2009.
 
 ### TS2009 Storage And Upload
@@ -43,9 +46,10 @@ Production flow:
 
 At runtime:
 
-- The browser requests `/api/ts2009/<book>.json`.
+- The browser requests `/api/ts2009/<book>.json` first.
 - The Pages Function reads that object from the private `TS2009_BUCKET` binding.
-- TS2009 is no longer shipped in `dist/data/ts2009`.
+- If that request fails, the client falls back to bundled `/data/ts2009/<book>.json` when present.
+- In Cloudflare Pages, configure `TS2009_BUCKET` in both Preview and Production under Settings > Bindings, then redeploy after any binding change.
 
 For local Bun development:
 

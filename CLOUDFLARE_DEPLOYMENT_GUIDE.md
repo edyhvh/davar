@@ -4,22 +4,24 @@ This guide explains how to deploy the Davar web frontend to Cloudflare Pages on 
 
 ## ✅ Updated Architecture (Post-Migration)
 
-**Status:** Backend eliminated. Now a pure static site with:
+**Status:** Backend eliminated. Now a static-first site with:
 - Static JSON data served from Cloudflare Pages
-- TS2009 exported at build-time into static JSON
-- No backend server required
+- TS2009 served through a same-origin Pages Function backed by R2
+- Bundled TS2009 static fallback available in the build output
+- No separate backend server required
 
 ### New Flow:
 1. Browser loads frontend from Cloudflare Pages
-2. Frontend fetches static JSON data from same origin (`/data/`)
-3. Cloudflare build pulls TS2009 from Supabase using service role secret
-4. TS2009 is served from `/data/ts2009/...` via Cloudflare CDN
+2. Frontend fetches core static JSON data from same origin (`/data/`)
+3. For TS2009, the frontend requests `/api/ts2009/<book>.json`
+4. The Pages Function reads that object from the `TS2009_BUCKET` R2 binding
+5. If the binding path is unavailable, the client can fall back to bundled `/data/ts2009/...`
 
 ### Benefits:
 - **Zero cold starts** - no server to wake up
 - **Global CDN** - instant worldwide loading
 - **Free tier** - unlimited bandwidth for static content
-- **No API proxy** - direct static file serving
+- **Same-origin TS2009 access** - no browser-side third-party credentials
 
 ---
 
@@ -64,9 +66,17 @@ SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 Notes:
 - `SUPABASE_SERVICE_ROLE_KEY` is build-time only and must never be public
 - `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` enable TS2009 static export at build time
-- Public Supabase vars can remain for fallback compatibility, but web should primarily read `/data/ts2009/*`
+- Public Supabase vars can remain for compatibility, but the web app should read same-origin TS2009 data
 - These values are applied at build time
-- No backend API configuration needed
+- No separate backend API origin is needed for TS2009
+
+Also configure the Pages binding for runtime TS2009 reads:
+
+1. Open **Workers & Pages** -> your Pages project -> **Settings** -> **Bindings**
+2. Add an **R2 bucket** binding named `TS2009_BUCKET`
+3. Select the `ts2009` bucket
+4. Repeat for both **Production** and **Preview** environments
+5. Redeploy after any binding change
 
 ---
 
@@ -152,12 +162,13 @@ bunx wrangler pages dev dist
 
 1. Pages deployment is healthy in **Workers & Pages**
 2. Custom domain is active and serving frontend
-3. Browser API calls go to `/api/...` on your Pages domain
-4. API responses are `200`
-5. No CORS errors in browser console
-6. No CSP connect-src errors in browser console
-7. Direct navigation to deep routes still loads app (SPA fallback)
-8. Response headers include `X-Davar-Edge-Cache` for cacheable reads
+3. `TS2009_BUCKET` is configured in both Preview and Production bindings
+4. Browser API calls go to `/api/...` on your Pages domain
+5. API responses are `200` or the bundled `/data/ts2009/...` fallback is present
+6. No CORS errors in browser console
+7. No CSP connect-src errors in browser console
+8. Direct navigation to deep routes still loads app (SPA fallback)
+9. Response headers include `X-Davar-Edge-Cache` for cacheable reads
 
 ---
 

@@ -22,6 +22,10 @@ const generation = Bun.spawnSync(
 	["bun", "../scripts/generate-static-data/index.ts"],
 	{
 		cwd: import.meta.dir,
+		env: {
+			...process.env,
+			EXPORT_TS2009_STATIC: process.env.EXPORT_TS2009_STATIC ?? "1",
+		},
 		stdout: "inherit",
 		stderr: "inherit",
 	},
@@ -85,7 +89,6 @@ if (existsSync(publicDir)) {
 	cpSync(publicDir, distDir, { recursive: true, force: true });
 }
 
-rmSync(join(distDir, "data", "ts2009"), { recursive: true, force: true });
 rmSync(join(distDir, "data", "bundles", "ts2009.json"), {
 	force: true,
 });
