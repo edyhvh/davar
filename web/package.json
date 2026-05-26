@@ -6,10 +6,10 @@
 	"scripts": {
 		"generate-data": "bun ../scripts/generate-static-data/index.ts",
 		"generate-data:ensure": "bun ./scripts/ensure-static-data.ts",
-		"build": "bun --env-file=.env ./build.ts",
+		"build": "bun install --frozen-lockfile && bun --env-file=.env ./build.ts",
 		"build:dev": "bun --env-file=.env ./build.ts",
-		"build:prod": "bun --env-file=.env.production ./build.ts",
-		"build:cf": "bun install --frozen-lockfile && bun run build:prod",
+		"build:prod": "bun install --frozen-lockfile && bun --env-file=.env.production ./build.ts",
+		"build:cf": "bun run build:prod",
 		"dev": "bun ./scripts/dev-hot.ts",
 		"dev:static": "bun run build:dev && bun run serve",
 		"dev:hot": "bun ./scripts/dev-hot.ts",
@@ -79,15 +79,15 @@
 		"sonner": "2.0.7",
 		"tailwind-merge": "3.5.0",
 		"tw-animate-css": "1.4.0",
-		"vaul": "1.1.2"
+		"vaul": "1.1.2",
+		"bun-plugin-tailwind": "0.1.2",
+		"tailwindcss": "4.2.2"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.11",
 		"@types/bun": "^1.3.14",
 		"@types/react": "19.2.14",
 		"@types/react-dom": "19.2.3",
-		"typescript": "6.0.2",
-		"bun-plugin-tailwind": "0.1.2",
-		"tailwindcss": "4.2.2"
+		"typescript": "6.0.2"
 	}
 }

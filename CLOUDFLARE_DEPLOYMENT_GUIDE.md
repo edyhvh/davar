@@ -45,14 +45,13 @@ Cloudflare has two relevant areas:
    - Project name: `davar-web`
    - Production branch: `main`
    - Root directory: `web`
-   - Build command: `bun run build:cf`
+   - Build command: `bun run build` (or `bun run build:prod` / `bun run build:cf` for production env file)
    - Build output directory: `dist`
 7. Save and deploy
 
-**IMPORTANT:** The Build command and Root directory above **must** be set exactly in the
-Cloudflare Pages project dashboard (Settings → Build settings). The `build:cf` script
-guarantees `bun install --frozen-lockfile && bun run build:prod` so that
-`SKIP_DEPENDENCY_INSTALL=1` (recommended) does not leave you without node_modules.
+**IMPORTANT:** Set **Root directory** to `web` in the Cloudflare Pages dashboard (Settings → Build settings).
+The `build` script runs `bun install --frozen-lockfile` before bundling, so
+`SKIP_DEPENDENCY_INSTALL=1` (recommended) does not leave you without `node_modules`.
 
 If Pages logs show `Installing project dependencies: npm install --progress=false`,
 set `SKIP_DEPENDENCY_INSTALL=1` in the Pages project and redeploy. This repo is
