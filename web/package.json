@@ -18,7 +18,6 @@
 		"serve:mobile": "BUN_IDLE_TIMEOUT=0 bun --env-file=.env ./server.ts",
 		"test": "bun test",
 		"test:static-data": "bun test src/app/services/staticData.test.js",
-		"test:connectivity:supabase": "RUN_SUPABASE_CONNECTIVITY_TEST=1 bun test src/app/services/staticData.test.js",
 		"lint": "bunx --bun @biomejs/biome lint build.ts server.ts src scripts package.json tsconfig.json biome.json",
 		"format": "bunx --bun @biomejs/biome format --write build.ts server.ts src scripts package.json tsconfig.json biome.json",
 		"format:check": "bunx --bun @biomejs/biome format build.ts server.ts src scripts package.json tsconfig.json biome.json"

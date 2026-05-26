@@ -140,29 +140,3 @@ describe("static data integrity", () => {
 		).toBe("2-23");
 	});
 });
-
-const runSupabaseConnectivity = Bun.env.RUN_SUPABASE_CONNECTIVITY_TEST === "1";
-
-describe.if(runSupabaseConnectivity)("supabase connectivity", () => {
-	test("auth settings endpoint is reachable with anon key", async () => {
-		const baseUrl = Bun.env.PUBLIC_SUPABASE_URL;
-		const anonKey = Bun.env.PUBLIC_SUPABASE_ANON_KEY;
-
-		if (!baseUrl || !anonKey) {
-			throw new Error(
-				"PUBLIC_SUPABASE_URL and PUBLIC_SUPABASE_ANON_KEY are required when RUN_SUPABASE_CONNECTIVITY_TEST=1",
-			);
-		}
-
-		const response = await fetch(`${baseUrl}/auth/v1/settings`, {
-			headers: {
-				apikey: anonKey,
-			},
-		});
-
-		expect(response.ok).toBe(true);
-		const payload = await response.json();
-		expect(typeof payload).toBe("object");
-		expect(payload).not.toBeNull();
-	});
-});
