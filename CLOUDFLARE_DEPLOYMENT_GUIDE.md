@@ -4,22 +4,24 @@ This guide explains how to deploy the Davar web frontend to Cloudflare Pages on 
 
 ## ✅ Updated Architecture (Post-Migration)
 
-**Status:** Backend eliminated. Now a pure static site with:
+**Status:** Backend eliminated. Now a static-first site with:
 - Static JSON data served from Cloudflare Pages
-- TS2009 exported at build-time into static JSON
-- No backend server required
+- TS2009 served through a same-origin Pages Function backed by R2
+- Bundled TS2009 static fallback available in the build output
+- No separate backend server required
 
 ### New Flow:
 1. Browser loads frontend from Cloudflare Pages
-2. Frontend fetches static JSON data from same origin (`/data/`)
-3. Cloudflare build pulls TS2009 from Supabase using service role secret
-4. TS2009 is served from `/data/ts2009/...` via Cloudflare CDN
+2. Frontend fetches core static JSON data from same origin (`/data/`)
+3. For TS2009, the frontend requests `/api/ts2009/<book>.json`
+4. The Pages Function reads that object from the `TS2009_BUCKET` R2 binding
+5. If the binding path is unavailable, the client can fall back to bundled `/data/ts2009/...`
 
 ### Benefits:
 - **Zero cold starts** - no server to wake up
 - **Global CDN** - instant worldwide loading
 - **Free tier** - unlimited bandwidth for static content
-- **No API proxy** - direct static file serving
+- **Same-origin TS2009 access** - no browser-side third-party credentials
 
 ---
 
@@ -43,9 +45,17 @@ Cloudflare has two relevant areas:
    - Project name: `davar-web`
    - Production branch: `main`
    - Root directory: `web`
-   - Build command: `bun run build`
+   - Build command: `bun run build` (or `bun run build:prod` / `bun run build:cf` for production env file)
    - Build output directory: `dist`
 7. Save and deploy
+
+**IMPORTANT:** Set **Root directory** to `web` in the Cloudflare Pages dashboard (Settings → Build settings).
+The `build` script runs `bun install --frozen-lockfile` before bundling, so
+`SKIP_DEPENDENCY_INSTALL=1` (recommended) does not leave you without `node_modules`.
+
+If Pages logs show `Installing project dependencies: npm install --progress=false`,
+set `SKIP_DEPENDENCY_INSTALL=1` in the Pages project and redeploy. This repo is
+designed to install and build with Bun from the `web/` directory.
 
 ---
 
@@ -59,14 +69,28 @@ PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 PUBLIC_NODE_ENV=production
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+SKIP_DEPENDENCY_INSTALL=1
 ```
 
 Notes:
 - `SUPABASE_SERVICE_ROLE_KEY` is build-time only and must never be public
 - `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` enable TS2009 static export at build time
-- Public Supabase vars can remain for fallback compatibility, but web should primarily read `/data/ts2009/*`
+- Public Supabase vars can remain for compatibility, but the web app should read same-origin TS2009 data
+- `SKIP_DEPENDENCY_INSTALL=1` prevents Cloudflare Pages from running `npm install` before the build (we explicitly run `bun install` as part of the `build:cf` Build command)
 - These values are applied at build time
-- No backend API configuration needed
+- No separate backend API origin is needed for TS2009
+
+Use the default Bun runtime provided by Cloudflare Pages unless you are working
+around a confirmed platform regression. The stable fix for this repo is to skip
+Pages' automatic dependency install and run the Bun install/build explicitly.
+
+Also configure the Pages binding for runtime TS2009 reads:
+
+1. Open **Workers & Pages** -> your Pages project -> **Settings** -> **Bindings**
+2. Add an **R2 bucket** binding named `TS2009_BUCKET`
+3. Select the `ts2009` bucket
+4. Repeat for both **Production** and **Preview** environments
+5. Redeploy after any binding change
 
 ---
 
@@ -134,11 +158,13 @@ Tune this after observing real traffic.
 
 ## 9. Build and Verification
 
-### Local build check
+### Local build check (matches Cloudflare production command)
 
 ```bash
 cd web
-bun --env-file=.env.production run build
+bun run build:cf
+# or the long form:
+# bun install --frozen-lockfile && bun --env-file=.env.production run build
 ```
 
 ### Optional local Pages preview
@@ -152,12 +178,13 @@ bunx wrangler pages dev dist
 
 1. Pages deployment is healthy in **Workers & Pages**
 2. Custom domain is active and serving frontend
-3. Browser API calls go to `/api/...` on your Pages domain
-4. API responses are `200`
-5. No CORS errors in browser console
-6. No CSP connect-src errors in browser console
-7. Direct navigation to deep routes still loads app (SPA fallback)
-8. Response headers include `X-Davar-Edge-Cache` for cacheable reads
+3. `TS2009_BUCKET` is configured in both Preview and Production bindings
+4. Browser API calls go to `/api/...` on your Pages domain
+5. API responses are `200` or the bundled `/data/ts2009/...` fallback is present
+6. No CORS errors in browser console
+7. No CSP connect-src errors in browser console
+8. Direct navigation to deep routes still loads app (SPA fallback)
+9. Response headers include `X-Davar-Edge-Cache` for cacheable reads
 
 ---
 
@@ -191,16 +218,51 @@ bunx wrangler pages dev dist
 3. Rebuild/redeploy Pages after variable changes
 4. Check network tab request URL host
 
-### Build fails
+### Build fails (e.g. "Could not resolve: react-dom/client" during phase=bundle)
 
-1. Confirm dependencies are installed with Bun in `web`
-2. Re-run build locally with:
+This is the most common failure when `SKIP_DEPENDENCY_INSTALL=1` is set.
 
+**Symptom (exact log from a recent incident):**
+```
+[davar-web] phase=bundle start
+1 | import { createRoot } from "react-dom/client";
+                               ^
+error: Could not resolve: "react-dom/client". Maybe you need to "bun install"?
+...
+[davar-web] phase=bundle failed
+```
+
+**Root cause:** `SKIP_DEPENDENCY_INSTALL=1` told Pages to skip its auto `npm install`.  
+Your **Build command** in the dashboard did not include an explicit Bun install step,  
+so `web/node_modules/` was empty (or stale after a package.json change), and Bun.build  
+could not resolve the app's runtime dependencies (react, react-dom, mui, radix, etc.).
+
+**Fix (apply in Cloudflare dashboard):**
+
+1. Go to **Workers & Pages** → your `davar-web` project → **Settings** → **Build settings** → **Edit**
+2. Set **exactly**:
+   - Root directory: `web`
+   - Build command: `bun run build:cf`
+   - Build output directory: `dist`
+3. In **Environment variables** (both Production and Preview), ensure:
+   ```
+   SKIP_DEPENDENCY_INSTALL=1
+   ```
+   (plus the other SUPABASE_* and PUBLIC_* vars)
+4. Save → **Save and Deploy** (or push a new commit to trigger).
+
+After this change, every build will explicitly run `bun install --frozen-lockfile` (via the `build:cf` script) before bundling, even with SKIP enabled.
+
+**Local reproduction of the exact CF command:**
 ```bash
 cd web
-bun install
-bun run build
+bun run build:cf
 ```
+
+Other build-failure checks:
+- Re-run the local check above.
+- Confirm no `BUN_VERSION` override is pinned (unless you have a known-good reason).
+- After any `package.json` or `bun.lock` change, a fresh `bun install` locally + the CF rebuild is required.
 
 ---
 

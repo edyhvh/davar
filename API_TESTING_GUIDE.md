@@ -2,7 +2,7 @@
 
 ## 🚀 Architecture Overview
 
-**Status:** Backend eliminated. All data now served as static JSON from Cloudflare Pages. TS2009 licensed content served from Supabase Storage.
+**Status:** Backend eliminated. Public data is served as static JSON from Cloudflare Pages. TS2009 licensed content is served through a private Cloudflare R2 bucket behind a Pages Function on the same origin.
 
 ### Data Sources
 
@@ -13,13 +13,13 @@
    - Dictionary, prefixes, transliterations
    - TTH (Spanish), BES (Spanish fallback)
 
-2. **TS2009 (Licensed):** Served from Supabase Storage
-   - Requires Supabase anon key for access
-   - Per-verse loading (not bulk bundles)
+2. **TS2009 (Licensed):** Served from private Cloudflare R2 via `/api/ts2009/*`
+  - Not included in public `dist/data`
+  - Accessed through a same-origin Pages Function
 
 ### Web App Access
 - Uses `web/src/app/services/staticData.ts` for cached static file fetches
-- Uses `web/src/app/services/supabaseClient.ts` for TS2009 access
+- Uses `web/functions/api/ts2009/[[path]].ts` as the protected TS2009 endpoint
 
 ### Mobile App Access
 - Downloads bundles from static URLs during offline sync
@@ -53,10 +53,11 @@ https://davar.bible/data/
     └── dss.json                     # DSS bundle
 ```
 
-### Supabase TS2009 Access
+### Private TS2009 API Access
 - Bucket: `ts2009`
-- Files: `{book}/{chapter}/{verse}.json`
-- Access: Via `@supabase/supabase-js` with anon key
+- Objects: `{book}.json` at bucket root, for example `bereshit.json`
+- Web access path: `/api/ts2009/{book}.json`
+- Access: same-origin Pages Function with private R2 binding
 
 ## 🧪 Testing Data Access
 
@@ -109,12 +110,32 @@ Failure signature:
 
 When this happens, verify Cloudflare Pages project settings:
 - Root directory is `web`
-- Build command is `bun run build:prod`
+- Build command is `bun run build:cf` (or the expanded `bun install --frozen-lockfile && bun run build:prod`)
 - Build output directory is `dist`
 - The latest deployment includes `dist/data/metadata.json`
 - Custom domain `davar.bible` points to that same Pages project/deployment
 
-### 3. Test Supabase TS2009 (requires anon key)
+### 3. Test Web TS2009 API
+
+```bash
+# Test the private same-origin API on production
+curl https://davar.bible/api/ts2009/bereshit.json
+```
+
+Expected:
+- `Content-Type: application/json`
+- Book JSON payload returned from the private R2 bucket
+
+Also verify the old public path is gone:
+
+```bash
+curl -i https://davar.bible/data/ts2009/bereshit.json
+```
+
+Expected:
+- `404` or missing file response
+
+### 4. Test Mobile Supabase TS2009 (mobile only, requires client key)
 
 ```javascript
 import { createClient } from '@supabase/supabase-js'
