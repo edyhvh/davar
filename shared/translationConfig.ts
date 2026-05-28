@@ -32,7 +32,7 @@ type DssCommentaryInput = {
 };
 
 // Mapping from canonical English book names to TTH_2 Hebrew file names
-// TTH_2 covers 35 books (Torah, some Neviim, some Ketuvim, some Besorah)
+// TTH_2 covers 36 books (Torah, some Neviim, some Ketuvim, some Besorah)
 export const TTH_BOOK_MAPPING: Record<string, string> = {
   // TORAH
   "Genesis": "bereshit",
@@ -74,6 +74,7 @@ export const TTH_BOOK_MAPPING: Record<string, string> = {
   "John": "iojanan",
   "Acts": "maasei_hashlijim",
   "Romans": "romanos",
+  "Galatians": "galatas",
   "Revelation": "sodot",
 };
 
