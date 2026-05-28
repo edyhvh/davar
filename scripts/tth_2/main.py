@@ -190,6 +190,7 @@ def infer_books_for_docx(docx_file: Path) -> List[str]:
     explicit_map = {
         'apocalipsis': ['sodot'],
         'romanos': ['romanos'],
+        'galatas': ['galatas'],
         'besorah': ['matityahu', 'markos', 'lukas', 'iojanan', 'maasei_hashlijim'],
     }
     if stem in explicit_map:

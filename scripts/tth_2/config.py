@@ -608,6 +608,23 @@ BOOKS_INFO = {
             r'רומאים',
         ],
     },
+    'galatas': {
+        'tth_name': 'Gálatas',
+        'hebrew_name': 'גלטים',
+        'english_name': 'Galatians',
+        'spanish_name': 'Gálatas',
+        'book_code': 'galatians',
+        'expected_chapters': 6,
+        'section': 'besorah',
+        'section_hebrew': 'בשורה',
+        'section_english': 'Gospel',
+        'section_spanish': 'Evangelio',
+        'patterns': [
+            r'G[ÁA]LATAS.*?גלטים',
+            r'GALATIANS.*?גלטים',
+            r'גלטים',
+        ],
+    },
     'sodot': {
         'tth_name': 'Sodot',
         'hebrew_name': 'סודות',
