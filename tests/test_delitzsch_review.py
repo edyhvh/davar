@@ -231,3 +231,37 @@ def test_apply_upsert_custom_definition_for_existing_strong(tmp_path):
     assert stats.definition_updates == 1
     assert custom["H3442"]["hebrew"] == "יֵשׁוּעַ"
     assert custom["H3442"]["definitions"][0]["text_es"] == "YHVH salva"
+
+
+def test_john1_custom_grammar_entries_have_definitions():
+    root = Path(__file__).resolve().parents[1]
+    custom_path = root / "data" / "dict" / "lexicon" / "custom_definitions.json"
+    custom = json.loads(custom_path.read_text(encoding="utf-8"))
+
+    assert custom["D0208"]["definitions"][0]["text_en"]
+    assert custom["D0208"]["definitions"][0]["text_es"]
+    assert custom["D0209"]["definitions"][0]["text_en"]
+    assert custom["D0209"]["definitions"][0]["text_es"]
+
+
+def test_john1_has_no_null_strongs_after_custom_grammar_pass():
+    root = Path(__file__).resolve().parents[1]
+    parsed_dir = root / "data" / "delitzsch_parsed" / "john1"
+    nulls = []
+
+    for chapter_path in sorted(parsed_dir.glob("*.json"), key=lambda path: int(path.stem)):
+        chapter_data = json.loads(chapter_path.read_text(encoding="utf-8"))
+        chapter = chapter_data[0]
+        for verse in chapter["verses"]:
+            for word_index, word in enumerate(verse["words"]):
+                if word.get("strong") is None:
+                    nulls.append(
+                        (
+                            chapter["chapter"],
+                            verse["verse"],
+                            word_index,
+                            word.get("text"),
+                        )
+                    )
+
+    assert nulls == []
