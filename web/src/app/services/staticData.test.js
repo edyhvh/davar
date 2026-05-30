@@ -87,6 +87,27 @@ describe("static data integrity", () => {
 		expect(roots.H7363).toBeDefined();
 	});
 
+	test("1 John 1:5 custom D0208 entry has bilingual definitions", async () => {
+		const chapter = await readJson("data/besorah/john1/1.json");
+		const customDefinitions = await readJson(
+			"data/dict/custom_definitions.json",
+		);
+
+		const verse = chapter.find(
+			(item) => item.chapter === 1 && item.verse === 5,
+		);
+		expect(verse).toBeDefined();
+		expect(verse.words.at(-1)).toMatchObject({
+			text: "בּוֹ׃",
+			strong: "D0208",
+		});
+
+		const entry = customDefinitions.D0208;
+		expect(entry).toBeDefined();
+		expect(entry.definitions[0].text_en).toContain("in him");
+		expect(entry.definitions[0].text_es).toContain("en él");
+	});
+
 	test("Spanish Psalms superscriptions use chapter titles and keep later verses aligned", async () => {
 		const psalms = await readJson("data/bes/psalms.json");
 		const chapter = psalms.chapters.find((item) => item.chapter === 3);

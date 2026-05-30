@@ -117,6 +117,12 @@ type StaticCustomDefinition = {
   root?: string;
   root_strong?: string;
   manual_instances?: string[];
+  nt_instances?: {
+    book?: string;
+    chapter?: number;
+    verse?: number;
+    text?: string;
+  }[];
 };
 
 type StaticDictionaryData = {
@@ -308,7 +314,17 @@ const loadLexiconEntryFromStatic = async (
 
   const occurrenceReferences = dictionaryEntry?.occurrences?.references ?? [];
   const manualInstances = customEntry?.manual_instances ?? [];
-  const instances = [...manualInstances, ...occurrenceReferences];
+  const ntInstances =
+    customEntry?.nt_instances
+      ?.map((instance) => {
+        if (!instance.book || !instance.chapter || !instance.verse) {
+          return null;
+        }
+        const reference = `${instance.book} ${instance.chapter}:${instance.verse}`;
+        return instance.text ? `${reference} ${instance.text}` : reference;
+      })
+      .filter((instance): instance is string => Boolean(instance)) ?? [];
+  const instances = [...manualInstances, ...ntInstances, ...occurrenceReferences];
   const hasManualInstances = manualInstances.length > 0;
 
   const rootText = rootEntry
@@ -992,39 +1008,42 @@ const WordAnalysisBottomSheetComponent = (
       }
       setIsLoading(true);
       try {
-        const entry = await loadLexiconEntryFromStatic(strongNumber, language);
-        setLexiconEntry(entry);
-      } catch {
-        // Static fetch failed — try offline SQLite fallback
+        let entry: LexiconResponse | null = null;
         try {
-          const offlineEntry = await fetchLexiconEntry(strongNumber);
-          if (offlineEntry) {
-            const instances = normalizeOfflineInstances(offlineEntry.occurrences);
-            setLexiconEntry({
-              strong_number: String(offlineEntry.strong ?? strongNumber),
-              hebrew: offlineEntry.hebrew
-                ? String(offlineEntry.hebrew)
-                : undefined,
-              definitions: Array.isArray(offlineEntry.definitions)
-                ? (offlineEntry.definitions as LexiconResponse["definitions"])
-                : [],
-              root: offlineEntry.root ? String(offlineEntry.root) : undefined,
-              root_strong: offlineEntry.root_strong
-                ? String(offlineEntry.root_strong)
-                : undefined,
-              root_definitions: [],
-              occurrences_count: getOfflineOccurrencesCount(
-                offlineEntry.occurrences,
-                instances,
-              ),
-              instances,
-            });
-          } else {
-            setLexiconEntry(null);
-          }
+          entry = await loadLexiconEntryFromStatic(strongNumber, language);
         } catch {
-          setLexiconEntry(null);
+          entry = null;
         }
+        if (!entry) {
+          try {
+            const offlineEntry = await fetchLexiconEntry(strongNumber);
+            if (offlineEntry) {
+              const instances = normalizeOfflineInstances(offlineEntry.occurrences);
+              entry = {
+                strong_number: String(offlineEntry.strong ?? strongNumber),
+                hebrew: offlineEntry.hebrew
+                  ? String(offlineEntry.hebrew)
+                  : undefined,
+                definitions: Array.isArray(offlineEntry.definitions)
+                  ? (offlineEntry.definitions as LexiconResponse["definitions"])
+                  : [],
+                root: offlineEntry.root ? String(offlineEntry.root) : undefined,
+                root_strong: offlineEntry.root_strong
+                  ? String(offlineEntry.root_strong)
+                  : undefined,
+                root_definitions: [],
+                occurrences_count: getOfflineOccurrencesCount(
+                  offlineEntry.occurrences,
+                  instances,
+                ),
+                instances,
+              };
+            }
+          } catch {
+            entry = null;
+          }
+        }
+        setLexiconEntry(entry);
       } finally {
         setIsLoading(false);
       }
@@ -1040,39 +1059,42 @@ const WordAnalysisBottomSheetComponent = (
       }
       setIsDssLoading(true);
       try {
-        const entry = await loadLexiconEntryFromStatic(dssStrongNumber, language);
-        setDssLexiconEntry(entry);
-      } catch {
-        // Static fetch failed — try offline SQLite fallback
+        let entry: LexiconResponse | null = null;
         try {
-          const offlineEntry = await fetchLexiconEntry(dssStrongNumber);
-          if (offlineEntry) {
-            const instances = normalizeOfflineInstances(offlineEntry.occurrences);
-            setDssLexiconEntry({
-              strong_number: String(offlineEntry.strong ?? dssStrongNumber),
-              hebrew: offlineEntry.hebrew
-                ? String(offlineEntry.hebrew)
-                : undefined,
-              definitions: Array.isArray(offlineEntry.definitions)
-                ? (offlineEntry.definitions as LexiconResponse["definitions"])
-                : [],
-              root: offlineEntry.root ? String(offlineEntry.root) : undefined,
-              root_strong: offlineEntry.root_strong
-                ? String(offlineEntry.root_strong)
-                : undefined,
-              root_definitions: [],
-              occurrences_count: getOfflineOccurrencesCount(
-                offlineEntry.occurrences,
-                instances,
-              ),
-              instances,
-            });
-          } else {
-            setDssLexiconEntry(null);
-          }
+          entry = await loadLexiconEntryFromStatic(dssStrongNumber, language);
         } catch {
-          setDssLexiconEntry(null);
+          entry = null;
         }
+        if (!entry) {
+          try {
+            const offlineEntry = await fetchLexiconEntry(dssStrongNumber);
+            if (offlineEntry) {
+              const instances = normalizeOfflineInstances(offlineEntry.occurrences);
+              entry = {
+                strong_number: String(offlineEntry.strong ?? dssStrongNumber),
+                hebrew: offlineEntry.hebrew
+                  ? String(offlineEntry.hebrew)
+                  : undefined,
+                definitions: Array.isArray(offlineEntry.definitions)
+                  ? (offlineEntry.definitions as LexiconResponse["definitions"])
+                  : [],
+                root: offlineEntry.root ? String(offlineEntry.root) : undefined,
+                root_strong: offlineEntry.root_strong
+                  ? String(offlineEntry.root_strong)
+                  : undefined,
+                root_definitions: [],
+                occurrences_count: getOfflineOccurrencesCount(
+                  offlineEntry.occurrences,
+                  instances,
+                ),
+                instances,
+              };
+            }
+          } catch {
+            entry = null;
+          }
+        }
+        setDssLexiconEntry(entry);
       } finally {
         setIsDssLoading(false);
       }
