@@ -108,6 +108,34 @@ describe("static data integrity", () => {
 		expect(entry.definitions[0].text_es).toContain("en él");
 	});
 
+	test("targeted proper names resolve to custom definitions", async () => {
+		const john3Chapter = await readJson("data/besorah/john3/1.json");
+		const ephesiansChapter = await readJson("data/besorah/ephesians/1.json");
+		const customDefinitions = await readJson(
+			"data/dict/custom_definitions.json",
+		);
+
+		const john3Verse = john3Chapter.find(
+			(item) => item.chapter === 1 && item.verse === 1,
+		);
+		const ephesiansVerse = ephesiansChapter.find(
+			(item) => item.chapter === 1 && item.verse === 1,
+		);
+
+		expect(john3Verse.words[2]).toMatchObject({
+			text: "גָּיוֹס",
+			strong: "D0057",
+		});
+		expect(ephesiansVerse.words[0]).toMatchObject({
+			text: "פּוֹלוֹס",
+			strong: "D0024",
+		});
+		expect(customDefinitions.D0057.definitions[0].text_en).toContain("Gaius");
+		expect(customDefinitions.D0057.definitions[0].text_es).toContain("Gayo");
+		expect(customDefinitions.D0024.definitions[0].text_en).toContain("Paul");
+		expect(customDefinitions.D0024.definitions[0].text_es).toContain("Pablo");
+	});
+
 	test("Spanish Psalms superscriptions use chapter titles and keep later verses aligned", async () => {
 		const psalms = await readJson("data/bes/psalms.json");
 		const chapter = psalms.chapters.find((item) => item.chapter === 3);

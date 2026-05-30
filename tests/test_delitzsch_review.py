@@ -265,3 +265,30 @@ def test_john1_has_no_null_strongs_after_custom_grammar_pass():
                     )
 
     assert nulls == []
+
+
+def test_targeted_proper_names_use_custom_definitions():
+    root = Path(__file__).resolve().parents[1]
+    custom_path = root / "data" / "dict" / "lexicon" / "custom_definitions.json"
+    custom = json.loads(custom_path.read_text(encoding="utf-8"))
+
+    john3 = json.loads(
+        (root / "data" / "delitzsch_parsed" / "john3" / "1.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    ephesians = json.loads(
+        (root / "data" / "delitzsch_parsed" / "ephesians" / "1.json").read_text(
+            encoding="utf-8"
+        )
+    )
+
+    assert john3[0]["verses"][0]["words"][2]["text"] == "גָּיוֹס"
+    assert john3[0]["verses"][0]["words"][2]["strong"] == "D0057"
+    assert ephesians[0]["verses"][0]["words"][0]["text"] == "פּוֹלוֹס"
+    assert ephesians[0]["verses"][0]["words"][0]["strong"] == "D0024"
+
+    assert custom["D0057"]["definitions"][0]["text_en"]
+    assert custom["D0057"]["definitions"][0]["text_es"]
+    assert custom["D0024"]["definitions"][0]["text_en"]
+    assert custom["D0024"]["definitions"][0]["text_es"]
