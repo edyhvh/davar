@@ -718,7 +718,7 @@ const extractBaseStrong = (value?: string): string | undefined => {
 		.filter(Boolean);
 
 	for (let index = parts.length - 1; index >= 0; index -= 1) {
-		if (/^[HG]\d+$/.test(parts[index])) {
+		if (/^[HGD]\d+$/.test(parts[index])) {
 			return parts[index];
 		}
 	}
@@ -1611,7 +1611,7 @@ const loadCustomDefinitions = async (): Promise<
 const normalizeStrong = (strong?: string): string | null => {
 	if (!strong) return null;
 	const cleaned = strong.trim().toUpperCase();
-	if (/^[HG]\d+$/.test(cleaned)) return cleaned;
+	if (/^[HGD]\d+$/.test(cleaned)) return cleaned;
 	return null;
 };
 

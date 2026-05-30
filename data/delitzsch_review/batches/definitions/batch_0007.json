@@ -1,0 +1,1648 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.489102+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 9,
+        "text": "הַתְּשִׁיעִית׃",
+        "strong": "Hd/H8671",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פֶטְרוֹס וְ/יוֹחָנָן עֹלִים יַחְדָּו אֶל־הַ/מִּקְדָּשׁ לְ/עֵת הַ/תְּפִלָּה בַּ/שָּׁעָה הַ/תְּשִׁיעִית׃"
+      },
+      "previous_strong": "Hd/H8671",
+      "new_strong": "H8671",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.1.9",
+        "text=הַתְּשִׁיעִית׃",
+        "prefixes=Hd",
+        "strong=H8671",
+        "lemma=תְּשִׁיעִי",
+        "definitions=ninth",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 2,
+        "text": "פִּסֵּחַ",
+        "strong": "H6455",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִישׁ אֶחָד פִּסֵּחַ מִבֶּטֶן אִמּוֹ מוּבָא שָׁמָּה אֲשֶׁר יוֹשִׁיבֻהוּ יוֹם יוֹם שַׁעַר הַ/מִּקְדָּשׁ הַ/נִּקְרָא שַׁעַר הַ/מְהֻדָּר לִ/שְׁאֹל מַתָּנוֹת מֵאֵת בָּ/אֵי הַ/מִּקְדָּשׁ׃"
+      },
+      "previous_strong": "H6455",
+      "new_strong": "H6455",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.2.2",
+        "text=פִּסֵּחַ",
+        "prefixes=none",
+        "strong=H6455",
+        "lemma=פִּסֵּחַ",
+        "definitions=lame",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 3,
+        "text": "מִבֶּטֶן",
+        "strong": "H990",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִישׁ אֶחָד פִּסֵּחַ מִבֶּטֶן אִמּוֹ מוּבָא שָׁמָּה אֲשֶׁר יוֹשִׁיבֻהוּ יוֹם יוֹם שַׁעַר הַ/מִּקְדָּשׁ הַ/נִּקְרָא שַׁעַר הַ/מְהֻדָּר לִ/שְׁאֹל מַתָּנוֹת מֵאֵת בָּ/אֵי הַ/מִּקְדָּשׁ׃"
+      },
+      "previous_strong": "H990",
+      "new_strong": "H990",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.2.3",
+        "text=מִבֶּטֶן",
+        "prefixes=none",
+        "strong=H990",
+        "lemma=בֶּטֶן",
+        "definitions=belly | body | womb",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 5,
+        "text": "מוּבָא",
+        "strong": "H5647",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִישׁ אֶחָד פִּסֵּחַ מִבֶּטֶן אִמּוֹ מוּבָא שָׁמָּה אֲשֶׁר יוֹשִׁיבֻהוּ יוֹם יוֹם שַׁעַר הַ/מִּקְדָּשׁ הַ/נִּקְרָא שַׁעַר הַ/מְהֻדָּר לִ/שְׁאֹל מַתָּנוֹת מֵאֵת בָּ/אֵי הַ/מִּקְדָּשׁ׃"
+      },
+      "previous_strong": "H5647",
+      "new_strong": "H935",
+      "confidence": 0.95,
+      "reason": "מוּבָא means “being brought”; H5647 serve/work is unrelated.",
+      "evidence": [
+        "occurrence=acts.3.2.5",
+        "text=מוּבָא",
+        "prefixes=none",
+        "strong=H5647",
+        "lemma=עָבַד",
+        "definitions=work | serve",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:2: a lame man was being brought there daily.",
+        "H935 root בוא means come/bring in."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 6,
+        "text": "שָׁמָּה",
+        "strong": "H8033",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִישׁ אֶחָד פִּסֵּחַ מִבֶּטֶן אִמּוֹ מוּבָא שָׁמָּה אֲשֶׁר יוֹשִׁיבֻהוּ יוֹם יוֹם שַׁעַר הַ/מִּקְדָּשׁ הַ/נִּקְרָא שַׁעַר הַ/מְהֻדָּר לִ/שְׁאֹל מַתָּנוֹת מֵאֵת בָּ/אֵי הַ/מִּקְדָּשׁ׃"
+      },
+      "previous_strong": "H8033",
+      "new_strong": "H8033",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.2.6",
+        "text=שָׁמָּה",
+        "prefixes=none",
+        "strong=H8033",
+        "lemma=שָׁם",
+        "definitions=there | thither",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 11,
+        "text": "שַׁעַר",
+        "strong": "H8179",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִישׁ אֶחָד פִּסֵּחַ מִבֶּטֶן אִמּוֹ מוּבָא שָׁמָּה אֲשֶׁר יוֹשִׁיבֻהוּ יוֹם יוֹם שַׁעַר הַ/מִּקְדָּשׁ הַ/נִּקְרָא שַׁעַר הַ/מְהֻדָּר לִ/שְׁאֹל מַתָּנוֹת מֵאֵת בָּ/אֵי הַ/מִּקְדָּשׁ׃"
+      },
+      "previous_strong": "H8179",
+      "new_strong": "H8179",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.2.11",
+        "text=שַׁעַר",
+        "prefixes=none",
+        "strong=H8179",
+        "lemma=שַׁעַר",
+        "definitions=gate",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 15,
+        "text": "הַמְהֻדָּר",
+        "strong": "H5115",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִישׁ אֶחָד פִּסֵּחַ מִבֶּטֶן אִמּוֹ מוּבָא שָׁמָּה אֲשֶׁר יוֹשִׁיבֻהוּ יוֹם יוֹם שַׁעַר הַ/מִּקְדָּשׁ הַ/נִּקְרָא שַׁעַר הַ/מְהֻדָּר לִ/שְׁאֹל מַתָּנוֹת מֵאֵת בָּ/אֵי הַ/מִּקְדָּשׁ׃"
+      },
+      "previous_strong": "H5115",
+      "new_strong": "H5115",
+      "confidence": 0.84,
+      "reason": "הַמְהֻדָּר names the Beautiful/ornate gate; local H5115 needs the adorn/beautify sense.",
+      "evidence": [
+        "occurrence=acts.3.2.15",
+        "text=הַמְהֻדָּר",
+        "prefixes=Hd",
+        "strong=H5115",
+        "lemma=נָוָה",
+        "definitions=dwell | beautify",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:2: the gate called Beautiful.",
+        "נווה can carry beautify/adorn in this parsed mapping."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5115",
+      "definition": {
+        "text_en": "beautify; adorn; make beautiful.",
+        "text_es": "embellecer; adornar; hacer hermoso.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 17,
+        "text": "מַתָּנוֹת",
+        "strong": "H4979",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִישׁ אֶחָד פִּסֵּחַ מִבֶּטֶן אִמּוֹ מוּבָא שָׁמָּה אֲשֶׁר יוֹשִׁיבֻהוּ יוֹם יוֹם שַׁעַר הַ/מִּקְדָּשׁ הַ/נִּקְרָא שַׁעַר הַ/מְהֻדָּר לִ/שְׁאֹל מַתָּנוֹת מֵאֵת בָּ/אֵי הַ/מִּקְדָּשׁ׃"
+      },
+      "previous_strong": "H4979",
+      "new_strong": "H4979",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.2.17",
+        "text=מַתָּנוֹת",
+        "prefixes=none",
+        "strong=H4979",
+        "lemma=מַתָּנָה",
+        "definitions=gift",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 1,
+        "text": "כִרְאֹתוֹ",
+        "strong": "H5162",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כִ/רְאֹתוֹ אֶת־פֶּטְרוֹס וְ/אֶת־יוֹחָנָן בָּ/אִים אֶל־הַ/מִּקְדָּשׁ וַ/יְבַקֵּשׁ לָ/קַחַת מֵאִתָּם צְדָקָה׃"
+      },
+      "previous_strong": "H5162",
+      "new_strong": "H7200",
+      "confidence": 0.97,
+      "reason": "כִרְאֹתוֹ means “when he saw”; H5162 is unrelated.",
+      "evidence": [
+        "occurrence=acts.3.3.1",
+        "text=כִרְאֹתוֹ",
+        "prefixes=Hk",
+        "strong=H5162",
+        "lemma=נָחַם",
+        "definitions=be sorry | console oneself",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:3: when he saw Peter and John.",
+        "H7200 root ראה means see."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 3,
+        "text": "פֶּטְרוֹס",
+        "strong": "H8050",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כִ/רְאֹתוֹ אֶת־פֶּטְרוֹס וְ/אֶת־יוֹחָנָן בָּ/אִים אֶל־הַ/מִּקְדָּשׁ וַ/יְבַקֵּשׁ לָ/קַחַת מֵאִתָּם צְדָקָה׃"
+      },
+      "previous_strong": "H8050",
+      "new_strong": "D0001",
+      "confidence": 0.98,
+      "reason": "פֶּטְרוֹס is Peter, already represented by custom entry D0001; H8050 Samuel is unrelated.",
+      "evidence": [
+        "occurrence=acts.3.3.3",
+        "text=פֶּטְרוֹס",
+        "prefixes=none",
+        "strong=H8050",
+        "lemma=שְׁמוּאֵל",
+        "definitions=Samuel | name of Ēl | great prophet, 11th cent. B.C. | in Simeon | in Issachar",
+        "codex reviewed definitions batch_0007",
+        "Repeated reviewed form פטרוס maps to D0001.",
+        "Existing H8050 is Samuel."
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0001",
+      "definition": {
+        "text_en": "Peter; apostle of Jesus.",
+        "text_es": "Pedro; apóstol de Jesús.",
+        "source": "custom",
+        "order": 2
+      },
+      "hebrew": "פטרוס",
+      "transliteration_en": "Peter",
+      "transliteration_es": "Pedro"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 9,
+        "text": "וַיְבַקֵּשׁ",
+        "strong": "Hc/H1245",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כִ/רְאֹתוֹ אֶת־פֶּטְרוֹס וְ/אֶת־יוֹחָנָן בָּ/אִים אֶל־הַ/מִּקְדָּשׁ וַ/יְבַקֵּשׁ לָ/קַחַת מֵאִתָּם צְדָקָה׃"
+      },
+      "previous_strong": "Hc/H1245",
+      "new_strong": "H1245",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.3.9",
+        "text=וַיְבַקֵּשׁ",
+        "prefixes=Hc",
+        "strong=H1245",
+        "lemma=בָּקַשׁ",
+        "definitions=seek",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 12,
+        "text": "צְדָקָה׃",
+        "strong": "H6666",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כִ/רְאֹתוֹ אֶת־פֶּטְרוֹס וְ/אֶת־יוֹחָנָן בָּ/אִים אֶל־הַ/מִּקְדָּשׁ וַ/יְבַקֵּשׁ לָ/קַחַת מֵאִתָּם צְדָקָה׃"
+      },
+      "previous_strong": "H6666",
+      "new_strong": "H6666",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.3.12",
+        "text=צְדָקָה׃",
+        "prefixes=none",
+        "strong=H6666",
+        "lemma=צְדָקָה",
+        "definitions=righteousness | righteousness | God's attribute as sovereign | righteousness | righteousness",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 4,
+        "word_index": 7,
+        "text": "הַבִּיטָה",
+        "strong": "Hd/H5027",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּסְתַּכֶּל־בּוֹ פֶּטְרוֹס וְ/גַם־יוֹחָנָן וַ/יֹּאמֶר אֵלָיו הַ/בִּיטָה אֵלֵינוּ׃"
+      },
+      "previous_strong": "Hd/H5027",
+      "new_strong": "H5027",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.4.7",
+        "text=הַבִּיטָה",
+        "prefixes=Hd",
+        "strong=H5027",
+        "lemma=נָבַט",
+        "definitions=look",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 6,
+        "word_index": 2,
+        "text": "כֶּסֶף",
+        "strong": "Hk/H3701",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר פֶּטְרוֹס כֶּ/סֶף וְ/זָהָב אֵין־לִי אֲבָל אֵת אֲשֶׁר בְּ/יָדִי אֶתְּנֶנּוּ לָךְ בְּ/שֵׁם־יֵשׁוּעַ הַ/מָּשִׁיחַ הַ/נָּצְרִי קוּם הִתְהַלֵּךְ׃"
+      },
+      "previous_strong": "Hk/H3701",
+      "new_strong": "H3701",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.6.2",
+        "text=כֶּסֶף",
+        "prefixes=Hk",
+        "strong=H3701",
+        "lemma=כֶּסֶף",
+        "definitions=silver | money | = silver ore, raw silver | silver as bright, shining | silver, as wealth",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 6,
+        "word_index": 3,
+        "text": "וְזָהָב",
+        "strong": "Hc/H2091",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר פֶּטְרוֹס כֶּ/סֶף וְ/זָהָב אֵין־לִי אֲבָל אֵת אֲשֶׁר בְּ/יָדִי אֶתְּנֶנּוּ לָךְ בְּ/שֵׁם־יֵשׁוּעַ הַ/מָּשִׁיחַ הַ/נָּצְרִי קוּם הִתְהַלֵּךְ׃"
+      },
+      "previous_strong": "Hc/H2091",
+      "new_strong": "H2091",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.6.3",
+        "text=וְזָהָב",
+        "prefixes=Hc",
+        "strong=H2091",
+        "lemma=זָהָב",
+        "definitions=gold | = gold-ore, gold in raw state | gold as wealth | gold as spoil of war | gold as merchandise",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 6,
+        "word_index": 4,
+        "text": "אֵין־",
+        "strong": "H369",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר פֶּטְרוֹס כֶּ/סֶף וְ/זָהָב אֵין־לִי אֲבָל אֵת אֲשֶׁר בְּ/יָדִי אֶתְּנֶנּוּ לָךְ בְּ/שֵׁם־יֵשׁוּעַ הַ/מָּשִׁיחַ הַ/נָּצְרִי קוּם הִתְהַלֵּךְ׃"
+      },
+      "previous_strong": "H369",
+      "new_strong": "H369",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.6.4",
+        "text=אֵין־",
+        "prefixes=none",
+        "strong=H369",
+        "lemma=אַיִן",
+        "definitions=nothing | nought | to nothing | as nothing | is not",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 10,
+        "word_index": 11,
+        "text": "הַמְהֻדָּר",
+        "strong": "H3284",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּכִּירוּ אוֹתוֹ כִּי הוּא אֲשֶׁר הָיָה ישֵׁב לִ/שְׁאֹל צְדָקָה בְּ/שַׁעַר הַ/מִּקְדָּשׁ הַ/מְהֻדָּר וַ/יִּמָּלְאוּ שַׁמָּה וְ/תִמָּהוֹן עַל־הַ/נַּעֲשָׂה לוֹ׃"
+      },
+      "previous_strong": "H3284",
+      "new_strong": "H1926",
+      "confidence": 0.9,
+      "reason": "הַמְהֻדָּר refers to the Beautiful/splendid gate; H3284 ostrich is unrelated.",
+      "evidence": [
+        "occurrence=acts.3.10.11",
+        "text=הַמְהֻדָּר",
+        "prefixes=Hd",
+        "strong=H3284",
+        "lemma=יַעֲנָה",
+        "definitions=greed | ostrich",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:10 references the Beautiful Gate.",
+        "H1926 definitions include splendour/honour."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 10,
+        "word_index": 13,
+        "text": "שַׁמָּה",
+        "strong": "H8048",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יַּכִּירוּ אוֹתוֹ כִּי הוּא אֲשֶׁר הָיָה ישֵׁב לִ/שְׁאֹל צְדָקָה בְּ/שַׁעַר הַ/מִּקְדָּשׁ הַ/מְהֻדָּר וַ/יִּמָּלְאוּ שַׁמָּה וְ/תִמָּהוֹן עַל־הַ/נַּעֲשָׂה לוֹ׃"
+      },
+      "previous_strong": "H8048",
+      "new_strong": "H8047",
+      "confidence": 0.9,
+      "reason": "שַׁמָּה here is appalment/amazement, not the proper-name entry H8048.",
+      "evidence": [
+        "occurrence=acts.3.10.13",
+        "text=שַׁמָּה",
+        "prefixes=none",
+        "strong=H8048",
+        "lemma=שַׁמָּה",
+        "definitions=in Edom | third son of Jesse | heroes of David",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:10: they were filled with amazement and bewilderment.",
+        "H8047 definitions include appalment."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 10,
+        "word_index": 14,
+        "text": "וְתִמָּהוֹן",
+        "strong": "H8541",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּכִּירוּ אוֹתוֹ כִּי הוּא אֲשֶׁר הָיָה ישֵׁב לִ/שְׁאֹל צְדָקָה בְּ/שַׁעַר הַ/מִּקְדָּשׁ הַ/מְהֻדָּר וַ/יִּמָּלְאוּ שַׁמָּה וְ/תִמָּהוֹן עַל־הַ/נַּעֲשָׂה לוֹ׃"
+      },
+      "previous_strong": "H8541",
+      "new_strong": "H8541",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.10.14",
+        "text=וְתִמָּהוֹן",
+        "prefixes=Hc",
+        "strong=H8541",
+        "lemma=תִּמָּהוֹן",
+        "definitions=bewilderment",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 11,
+        "word_index": 2,
+        "text": "מַחֲזִיק",
+        "strong": "H2388",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי הוּא מַחֲזִיק בְּ/פֶטְרוֹס וּ/בְ/יוֹחָנָן וַ/יָּרָץ אֲלֵיהֶם כָּל־הָעָם אֶל־הָ/אוּלָם הַ/נִּקְרָא אוּלָם שֶׁל־שְׁלֹמֹה וַ/יִּשְׁתּוֹמֵמוּ׃"
+      },
+      "previous_strong": "H2388",
+      "new_strong": "H2388",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.11.2",
+        "text=מַחֲזִיק",
+        "prefixes=none",
+        "strong=H2388",
+        "lemma=חָזַק",
+        "definitions=be | grow firm | strong | strengthen",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 11,
+        "word_index": 4,
+        "text": "וּבְיוֹחָנָן",
+        "strong": "H6662",
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי הוּא מַחֲזִיק בְּ/פֶטְרוֹס וּ/בְ/יוֹחָנָן וַ/יָּרָץ אֲלֵיהֶם כָּל־הָעָם אֶל־הָ/אוּלָם הַ/נִּקְרָא אוּלָם שֶׁל־שְׁלֹמֹה וַ/יִּשְׁתּוֹמֵמוּ׃"
+      },
+      "previous_strong": "H6662",
+      "new_strong": "H3076",
+      "confidence": 0.97,
+      "reason": "וּבְיוֹחָנָן is John/Johanan; H6662 righteous is unrelated.",
+      "evidence": [
+        "occurrence=acts.3.11.4",
+        "text=וּבְיוֹחָנָן",
+        "prefixes=Hc,Hb",
+        "strong=H6662",
+        "lemma=צַדִּיק",
+        "definitions=just | righteous",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:11 names Peter and John.",
+        "H3076 was reviewed as John/Johanan."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 11,
+        "word_index": 5,
+        "text": "וַיָּרָץ",
+        "strong": "Hc/H7323",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי הוּא מַחֲזִיק בְּ/פֶטְרוֹס וּ/בְ/יוֹחָנָן וַ/יָּרָץ אֲלֵיהֶם כָּל־הָעָם אֶל־הָ/אוּלָם הַ/נִּקְרָא אוּלָם שֶׁל־שְׁלֹמֹה וַ/יִּשְׁתּוֹמֵמוּ׃"
+      },
+      "previous_strong": "Hc/H7323",
+      "new_strong": "H7323",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.11.5",
+        "text=וַיָּרָץ",
+        "prefixes=Hc",
+        "strong=H7323",
+        "lemma=רוּץ",
+        "definitions=run",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 11,
+        "word_index": 10,
+        "text": "הָאוּלָם",
+        "strong": "Hd/H197",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי הוּא מַחֲזִיק בְּ/פֶטְרוֹס וּ/בְ/יוֹחָנָן וַ/יָּרָץ אֲלֵיהֶם כָּל־הָעָם אֶל־הָ/אוּלָם הַ/נִּקְרָא אוּלָם שֶׁל־שְׁלֹמֹה וַ/יִּשְׁתּוֹמֵמוּ׃"
+      },
+      "previous_strong": "Hd/H197",
+      "new_strong": "H197",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.11.10",
+        "text=הָאוּלָם",
+        "prefixes=Hd",
+        "strong=H197",
+        "lemma=אוּלָם",
+        "definitions=porch | in Solomon’s temple | in Sol.’s palace | in temple of Ezek.’s vision",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 11,
+        "word_index": 13,
+        "text": "שֶׁל־",
+        "strong": "H7945",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי הוּא מַחֲזִיק בְּ/פֶטְרוֹס וּ/בְ/יוֹחָנָן וַ/יָּרָץ אֲלֵיהֶם כָּל־הָעָם אֶל־הָ/אוּלָם הַ/נִּקְרָא אוּלָם שֶׁל־שְׁלֹמֹה וַ/יִּשְׁתּוֹמֵמוּ׃"
+      },
+      "previous_strong": "H7945",
+      "new_strong": "H7945",
+      "confidence": 0.9,
+      "reason": "שֶׁל־ is the genitive/possessive particle “of”; local H7945 has no definitions.",
+      "evidence": [
+        "occurrence=acts.3.11.13",
+        "text=שֶׁל־",
+        "prefixes=none",
+        "strong=H7945",
+        "lemma=שֶׁל",
+        "definitions=none",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:11: porch of Solomon.",
+        "של functions as of/belonging to."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7945",
+      "definition": {
+        "text_en": "of; belonging to.",
+        "text_es": "de; perteneciente a.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 11,
+        "word_index": 14,
+        "text": "שְׁלֹמֹה",
+        "strong": "H8010",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יְהִי הוּא מַחֲזִיק בְּ/פֶטְרוֹס וּ/בְ/יוֹחָנָן וַ/יָּרָץ אֲלֵיהֶם כָּל־הָעָם אֶל־הָ/אוּלָם הַ/נִּקְרָא אוּלָם שֶׁל־שְׁלֹמֹה וַ/יִּשְׁתּוֹמֵמוּ׃"
+      },
+      "previous_strong": "H8010",
+      "new_strong": "H8010",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.11.14",
+        "text=שְׁלֹמֹה",
+        "prefixes=none",
+        "strong=H8010",
+        "lemma=שְׁלֹמֹה",
+        "definitions=Solomon",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 2,
+        "text": "וַיַּעַן",
+        "strong": "Hc/H6030",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּרְא פֶּטְרוֹס וַ/יַּעַן וַ/יֹּאמֶר אֶל־הָעָם אַנְשֵׁי יִשְׂרָאֵל מָה אַתֶּם תְּמֵהִים עַל־זֹאת וּ/מַה־תִּסְתַּכְּלוּ בָ/נוּ כְּ/אִלּוּ אֲנַחְנוּ בְּ/כֹ/חֵנוּ וּ/בַ/חֲסִידוּתֵנוּ שַׂמְנוּ אֶת־זֶה מִתְהַלֵּךְ׃"
+      },
+      "previous_strong": "Hc/H6030",
+      "new_strong": "H6030",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.12.2",
+        "text=וַיַּעַן",
+        "prefixes=Hc",
+        "strong=H6030",
+        "lemma=עָנָה",
+        "definitions=answer | respond",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 15,
+        "text": "בָנוּ",
+        "strong": "Hb/H1129",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּרְא פֶּטְרוֹס וַ/יַּעַן וַ/יֹּאמֶר אֶל־הָעָם אַנְשֵׁי יִשְׂרָאֵל מָה אַתֶּם תְּמֵהִים עַל־זֹאת וּ/מַה־תִּסְתַּכְּלוּ בָ/נוּ כְּ/אִלּוּ אֲנַחְנוּ בְּ/כֹ/חֵנוּ וּ/בַ/חֲסִידוּתֵנוּ שַׂמְנוּ אֶת־זֶה מִתְהַלֵּךְ׃"
+      },
+      "previous_strong": "Hb/H1129",
+      "new_strong": "H1129",
+      "confidence": 0.42,
+      "reason": "בָנוּ is “in/at us,” a preposition with pronominal suffix; leave unresolved until suffix-token policy is settled.",
+      "evidence": [
+        "occurrence=acts.3.12.15",
+        "text=בָנוּ",
+        "prefixes=Hb",
+        "strong=H1129",
+        "lemma=בָּנָה",
+        "definitions=build",
+        "codex reviewed definitions batch_0007",
+        "Existing H1129 build is unrelated.",
+        "Token is grammatical rather than lexical."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 16,
+        "text": "כְּאִלּוּ",
+        "strong": "Hk/H432",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּרְא פֶּטְרוֹס וַ/יַּעַן וַ/יֹּאמֶר אֶל־הָעָם אַנְשֵׁי יִשְׂרָאֵל מָה אַתֶּם תְּמֵהִים עַל־זֹאת וּ/מַה־תִּסְתַּכְּלוּ בָ/נוּ כְּ/אִלּוּ אֲנַחְנוּ בְּ/כֹ/חֵנוּ וּ/בַ/חֲסִידוּתֵנוּ שַׂמְנוּ אֶת־זֶה מִתְהַלֵּךְ׃"
+      },
+      "previous_strong": "Hk/H432",
+      "new_strong": "H432",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.12.16",
+        "text=כְּאִלּוּ",
+        "prefixes=Hk",
+        "strong=H432",
+        "lemma=אִלּוּ",
+        "definitions=if | though",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 18,
+        "text": "בְּכֹחֵנוּ",
+        "strong": "H2581",
+        "prefixes": [
+          "Hb",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּרְא פֶּטְרוֹס וַ/יַּעַן וַ/יֹּאמֶר אֶל־הָעָם אַנְשֵׁי יִשְׂרָאֵל מָה אַתֶּם תְּמֵהִים עַל־זֹאת וּ/מַה־תִּסְתַּכְּלוּ בָ/נוּ כְּ/אִלּוּ אֲנַחְנוּ בְּ/כֹ/חֵנוּ וּ/בַ/חֲסִידוּתֵנוּ שַׂמְנוּ אֶת־זֶה מִתְהַלֵּךְ׃"
+      },
+      "previous_strong": "H2581",
+      "new_strong": "H3581",
+      "confidence": 0.9,
+      "reason": "בְּכֹחֵנוּ means “by our power”; H2581 favor is unrelated.",
+      "evidence": [
+        "occurrence=acts.3.12.18",
+        "text=בְּכֹחֵנוּ",
+        "prefixes=Hb,Hk",
+        "strong=H2581",
+        "lemma=חֵן",
+        "definitions=favour",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:12: as though by our own power.",
+        "H3581 lemma כח matches power/strength though local definitions need correction."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 13,
+        "word_index": 1,
+        "text": "אַבְרָהָם",
+        "strong": "H85",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵ/אלֹהֵי יַעֲקֹב אֱלֹהֵי אֲבוֹתֵינוּ הוּא פֵּאֵר אֶת־עַבְדּוֹ יֵשׁוּעַ אֲשֶׁר אַתֶּם מְסַרְתֶּם אוֹתוֹ וְ/כִ/חַשְׁתֶּם בּוֹ בִּ/פְנֵי פִילָטוֹס כְּ/שֶׁהָיָה דָן לְ/פָטְרוֹ׃"
+      },
+      "previous_strong": "H85",
+      "new_strong": "H85",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.13.1",
+        "text=אַבְרָהָם",
+        "prefixes=none",
+        "strong=H85",
+        "lemma=אַבְרָהָם",
+        "definitions=exalted father | Abram | Abraham",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 13,
+        "word_index": 3,
+        "text": "יִצְחָק",
+        "strong": "H3327",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵ/אלֹהֵי יַעֲקֹב אֱלֹהֵי אֲבוֹתֵינוּ הוּא פֵּאֵר אֶת־עַבְדּוֹ יֵשׁוּעַ אֲשֶׁר אַתֶּם מְסַרְתֶּם אוֹתוֹ וְ/כִ/חַשְׁתֶּם בּוֹ בִּ/פְנֵי פִילָטוֹס כְּ/שֶׁהָיָה דָן לְ/פָטְרוֹ׃"
+      },
+      "previous_strong": "H3327",
+      "new_strong": "H3327",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.13.3",
+        "text=יִצְחָק",
+        "prefixes=none",
+        "strong=H3327",
+        "lemma=יִצְחָק",
+        "definitions=Isaac | he laugheth",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 13,
+        "word_index": 9,
+        "text": "פֵּאֵר",
+        "strong": "H6286",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵ/אלֹהֵי יַעֲקֹב אֱלֹהֵי אֲבוֹתֵינוּ הוּא פֵּאֵר אֶת־עַבְדּוֹ יֵשׁוּעַ אֲשֶׁר אַתֶּם מְסַרְתֶּם אוֹתוֹ וְ/כִ/חַשְׁתֶּם בּוֹ בִּ/פְנֵי פִילָטוֹס כְּ/שֶׁהָיָה דָן לְ/פָטְרוֹ׃"
+      },
+      "previous_strong": "H6286",
+      "new_strong": "H6286",
+      "confidence": 0.9,
+      "reason": "פֵּאֵר means “glorified/honored”; local H6286 definitions do not expose this sense clearly.",
+      "evidence": [
+        "occurrence=acts.3.13.9",
+        "text=פֵּאֵר",
+        "prefixes=none",
+        "strong=H6286",
+        "lemma=פָּאַר",
+        "definitions=go over the boughs | beautify",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:13: God glorified his servant Jesus.",
+        "פאר can mean beautify/glorify."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6286",
+      "definition": {
+        "text_en": "glorify; honor; beautify.",
+        "text_es": "glorificar; honrar; embellecer.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 13,
+        "word_index": 17,
+        "text": "וְכִחַשְׁתֶּם",
+        "strong": "Hc/Hk/H3585",
+        "prefixes": [
+          "Hc",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵ/אלֹהֵי יַעֲקֹב אֱלֹהֵי אֲבוֹתֵינוּ הוּא פֵּאֵר אֶת־עַבְדּוֹ יֵשׁוּעַ אֲשֶׁר אַתֶּם מְסַרְתֶּם אוֹתוֹ וְ/כִ/חַשְׁתֶּם בּוֹ בִּ/פְנֵי פִילָטוֹס כְּ/שֶׁהָיָה דָן לְ/פָטְרוֹ׃"
+      },
+      "previous_strong": "Hc/Hk/H3585",
+      "new_strong": "H3584",
+      "confidence": 0.94,
+      "reason": "וְכִחַשְׁתֶּם means “you denied/disowned”; H3585 is the noun falsehood/leanness.",
+      "evidence": [
+        "occurrence=acts.3.13.17",
+        "text=וְכִחַשְׁתֶּם",
+        "prefixes=Hc,Hk",
+        "strong=H3585",
+        "lemma=כַּחַשׁ",
+        "definitions=lying | leanness",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:13: you denied him before Pilate.",
+        "H3584 root כחש covers deny/deceive/fail."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 13,
+        "word_index": 22,
+        "text": "דָן",
+        "strong": "H1835",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵ/אלֹהֵי יַעֲקֹב אֱלֹהֵי אֲבוֹתֵינוּ הוּא פֵּאֵר אֶת־עַבְדּוֹ יֵשׁוּעַ אֲשֶׁר אַתֶּם מְסַרְתֶּם אוֹתוֹ וְ/כִ/חַשְׁתֶּם בּוֹ בִּ/פְנֵי פִילָטוֹס כְּ/שֶׁהָיָה דָן לְ/פָטְרוֹ׃"
+      },
+      "previous_strong": "H1835",
+      "new_strong": "H1777",
+      "confidence": 0.94,
+      "reason": "דָן is the verb “judging/deciding”; H1835 is the proper name Dan/tribe.",
+      "evidence": [
+        "occurrence=acts.3.13.22",
+        "text=דָן",
+        "prefixes=none",
+        "strong=H1835",
+        "lemma=דָּן",
+        "definitions=judge | son of Jacob and Bilhah | the tribe of Dan | a city on northern frontier of Israel at one of the sources of the Jordan",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:13: when Pilate had decided to release him.",
+        "H1777 root דין means judge."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 13,
+        "word_index": 23,
+        "text": "לְפָטְרוֹ׃",
+        "strong": "H6362",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵ/אלֹהֵי יַעֲקֹב אֱלֹהֵי אֲבוֹתֵינוּ הוּא פֵּאֵר אֶת־עַבְדּוֹ יֵשׁוּעַ אֲשֶׁר אַתֶּם מְסַרְתֶּם אוֹתוֹ וְ/כִ/חַשְׁתֶּם בּוֹ בִּ/פְנֵי פִילָטוֹס כְּ/שֶׁהָיָה דָן לְ/פָטְרוֹ׃"
+      },
+      "previous_strong": "H6362",
+      "new_strong": "H6362",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.13.23",
+        "text=לְפָטְרוֹ׃",
+        "prefixes=Hl",
+        "strong=H6362",
+        "lemma=פָּטַר",
+        "definitions=separate | remove | set free",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 14,
+        "word_index": 7,
+        "text": "יֻחַן",
+        "strong": "H2603",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל אַתֶּם כִּ/חַשְׁתֶּם בַּ/קָּדוֹשׁ וּ/בַ/צַּדִּיק וּ/בִ/קַּשְׁתֶּם כִּי־יֻחַן לָ/כֶם אִישׁ רֹצֵחַ׃"
+      },
+      "previous_strong": "H2603",
+      "new_strong": "H2603",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.14.7",
+        "text=יֻחַן",
+        "prefixes=none",
+        "strong=H2603",
+        "lemma=חָנַן",
+        "definitions=shew favour | be gracious",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 14,
+        "word_index": 10,
+        "text": "רֹצֵחַ׃",
+        "strong": "H7523",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל אַתֶּם כִּ/חַשְׁתֶּם בַּ/קָּדוֹשׁ וּ/בַ/צַּדִּיק וּ/בִ/קַּשְׁתֶּם כִּי־יֻחַן לָ/כֶם אִישׁ רֹצֵחַ׃"
+      },
+      "previous_strong": "H7523",
+      "new_strong": "H7523",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.14.10",
+        "text=רֹצֵחַ׃",
+        "prefixes=none",
+        "strong=H7523",
+        "lemma=רָצַח",
+        "definitions=murder | slay",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 15,
+        "word_index": 1,
+        "text": "שַׂר",
+        "strong": "H8269",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֶת־שַׂר הַ/חַיִּים הֲ/רַגְתֶּם אֲשֶׁר הָ/אֱלֹהִים הֱ/קִימוֹ מִן־הַ/מֵּתִים וַ/אֲנַחְנוּ עֵדָיו׃"
+      },
+      "previous_strong": "H8269",
+      "new_strong": "H8269",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.15.1",
+        "text=שַׂר",
+        "prefixes=none",
+        "strong=H8269",
+        "lemma=שַׂר",
+        "definitions=chieftain | chief | ruler | official | captain",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 15,
+        "word_index": 3,
+        "text": "הֲרַגְתֶּם",
+        "strong": "Hd/H2026",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֶת־שַׂר הַ/חַיִּים הֲ/רַגְתֶּם אֲשֶׁר הָ/אֱלֹהִים הֱ/קִימוֹ מִן־הַ/מֵּתִים וַ/אֲנַחְנוּ עֵדָיו׃"
+      },
+      "previous_strong": "Hd/H2026",
+      "new_strong": "H2026",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.15.3",
+        "text=הֲרַגְתֶּם",
+        "prefixes=Hd",
+        "strong=H2026",
+        "lemma=הָרַג",
+        "definitions=kill | slay",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 15,
+        "word_index": 6,
+        "text": "הֱקִימוֹ",
+        "strong": "H7009",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֶת־שַׂר הַ/חַיִּים הֲ/רַגְתֶּם אֲשֶׁר הָ/אֱלֹהִים הֱ/קִימוֹ מִן־הַ/מֵּתִים וַ/אֲנַחְנוּ עֵדָיו׃"
+      },
+      "previous_strong": "H7009",
+      "new_strong": "H6965",
+      "confidence": 0.96,
+      "reason": "הֱקִימוֹ means “raised him”; H7009 is unrelated.",
+      "evidence": [
+        "occurrence=acts.3.15.6",
+        "text=הֱקִימוֹ",
+        "prefixes=Hd",
+        "strong=H7009",
+        "lemma=קִים",
+        "definitions=adversary | uprising | insurgent",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:15: God raised him from the dead.",
+        "H6965 root קום means arise/stand up."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 16,
+        "word_index": 0,
+        "text": "וּלְמַעַן",
+        "strong": "Hc/Hl/H4616",
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/מַעַן אֱמוּנַת שְׁמוֹ חִזַּק שְׁמוֹ אֶת־הָ/אִישׁ הַזֶּה אֲשֶׁר אַתֶּם רֹאִים וּ/מַכִּירִים אֹתוֹ וְ/הָ/אֱמוּנָה אֲשֶׁר לָ/נוּ עַל־יָדוֹ הִיא הֶ/עֶלְתָה־לוֹ אֶת־הָ/אֲרֻכָה הַ/זֹּאת לְ/עֵינֵי כֻ/לְּ/כֶם׃"
+      },
+      "previous_strong": "Hc/Hl/H4616",
+      "new_strong": "H4616",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.16.0",
+        "text=וּלְמַעַן",
+        "prefixes=Hc,Hl",
+        "strong=H4616",
+        "lemma=מַעַן",
+        "definitions=purpose | intent | for the sake of | on account of | to the intent",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 16,
+        "word_index": 1,
+        "text": "אֱמוּנַת",
+        "strong": "H530",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/מַעַן אֱמוּנַת שְׁמוֹ חִזַּק שְׁמוֹ אֶת־הָ/אִישׁ הַזֶּה אֲשֶׁר אַתֶּם רֹאִים וּ/מַכִּירִים אֹתוֹ וְ/הָ/אֱמוּנָה אֲשֶׁר לָ/נוּ עַל־יָדוֹ הִיא הֶ/עֶלְתָה־לוֹ אֶת־הָ/אֲרֻכָה הַ/זֹּאת לְ/עֵינֵי כֻ/לְּ/כֶם׃"
+      },
+      "previous_strong": "H530",
+      "new_strong": "H530",
+      "confidence": 0.92,
+      "reason": "אֱמוּנַת means faith/trust; local H530 definitions need the direct faith sense.",
+      "evidence": [
+        "occurrence=acts.3.16.1",
+        "text=אֱמוּנַת",
+        "prefixes=none",
+        "strong=H530",
+        "lemma=אֱמוּנָה",
+        "definitions=firmness | steadfastness | fidelity | firmness | steadiness",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:16: faith in his name.",
+        "H530 lemma אמונה."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H530",
+      "definition": {
+        "text_en": "faith; trust; faithfulness.",
+        "text_es": "fe; confianza; fidelidad.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 16,
+        "word_index": 22,
+        "text": "הָאֲרֻכָה",
+        "strong": "H748",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/מַעַן אֱמוּנַת שְׁמוֹ חִזַּק שְׁמוֹ אֶת־הָ/אִישׁ הַזֶּה אֲשֶׁר אַתֶּם רֹאִים וּ/מַכִּירִים אֹתוֹ וְ/הָ/אֱמוּנָה אֲשֶׁר לָ/נוּ עַל־יָדוֹ הִיא הֶ/עֶלְתָה־לוֹ אֶת־הָ/אֲרֻכָה הַ/זֹּאת לְ/עֵינֵי כֻ/לְּ/כֶם׃"
+      },
+      "previous_strong": "H748",
+      "new_strong": "H724",
+      "confidence": 0.96,
+      "reason": "הָאֲרֻכָה means healing/restoration; H748 is the root “be long.”",
+      "evidence": [
+        "occurrence=acts.3.16.22",
+        "text=הָאֲרֻכָה",
+        "prefixes=Hd",
+        "strong=H748",
+        "lemma=אָרַךְ",
+        "definitions=be long",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:16: this healing/restoration before your eyes.",
+        "H724 definition is healing/restoration."
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 17,
+        "word_index": 3,
+        "text": "אֲנִי",
+        "strong": "H589",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה אַחַי יֹדֵעַ אֲנִי כִּי בִ/בְלִי־דַעַת עֲשִׂיתֶם גַּם־אַתֶּם גַּם־רָאשֵׁיכֶם׃"
+      },
+      "previous_strong": "H589",
+      "new_strong": "H589",
+      "confidence": 0.95,
+      "reason": "אֲנִי is the pronoun “I”; local H589 has no definitions.",
+      "evidence": [
+        "occurrence=acts.3.17.3",
+        "text=אֲנִי",
+        "prefixes=none",
+        "strong=H589",
+        "lemma=אֲנִי",
+        "definitions=none",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:17: I know.",
+        "H589 lemma אני."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H589",
+      "definition": {
+        "text_en": "I; me.",
+        "text_es": "yo; mí.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 17,
+        "word_index": 5,
+        "text": "בִבְלִי־",
+        "strong": "Hb/H1097",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה אַחַי יֹדֵעַ אֲנִי כִּי בִ/בְלִי־דַעַת עֲשִׂיתֶם גַּם־אַתֶּם גַּם־רָאשֵׁיכֶם׃"
+      },
+      "previous_strong": "Hb/H1097",
+      "new_strong": "H1097",
+      "confidence": 0.86,
+      "reason": "בִבְלִי־ means “without”; local H1097 definitions miss the negative/prepositional sense.",
+      "evidence": [
+        "occurrence=acts.3.17.5",
+        "text=בִבְלִי־",
+        "prefixes=Hb",
+        "strong=H1097",
+        "lemma=בְּלִי",
+        "definitions=wearing out | destruction | defect | failure",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:17: you acted in ignorance, literally without knowledge.",
+        "בלי functions as without."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1097",
+      "definition": {
+        "text_en": "without; lack of.",
+        "text_es": "sin; falta de.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 17,
+        "word_index": 6,
+        "text": "דַעַת",
+        "strong": "H1847",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה אַחַי יֹדֵעַ אֲנִי כִּי בִ/בְלִי־דַעַת עֲשִׂיתֶם גַּם־אַתֶּם גַּם־רָאשֵׁיכֶם׃"
+      },
+      "previous_strong": "H1847",
+      "new_strong": "H1847",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.17.6",
+        "text=דַעַת",
+        "prefixes=none",
+        "strong=H1847",
+        "lemma=דַּעַת",
+        "definitions=knowledge | knowledge | perception | skill | of proph. knowledge",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 18,
+        "word_index": 1,
+        "text": "כָּכָה",
+        "strong": "Hk/H3602",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הָ/אֱלֹהִים כָּ/כָה מִלֵּא אֵת אֲשֶׁר־הִגִּיד מִקֶּדֶם בְּ/פִי כָל־נְבִיאָיו כִּי יְעֻנֶּה הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "Hk/H3602",
+      "new_strong": "H3602",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.18.1",
+        "text=כָּכָה",
+        "prefixes=Hk",
+        "strong=H3602",
+        "lemma=כָּכָה",
+        "definitions=thus",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 18,
+        "word_index": 5,
+        "text": "הִגִּיד",
+        "strong": "H5046",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הָ/אֱלֹהִים כָּ/כָה מִלֵּא אֵת אֲשֶׁר־הִגִּיד מִקֶּדֶם בְּ/פִי כָל־נְבִיאָיו כִּי יְעֻנֶּה הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H5046",
+      "new_strong": "H5046",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.18.5",
+        "text=הִגִּיד",
+        "prefixes=none",
+        "strong=H5046",
+        "lemma=נָגַד",
+        "definitions=be conspicuous",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 21,
+        "word_index": 1,
+        "text": "צָרִיךְ",
+        "strong": "H6862",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר צָרִיךְ כִּי יְקַבְּלֻהוּ הַ/שָּׁמַיִם עַד־יְמֵי שׁוּב כָּל־הַ/דְּבָרִים לְ/תִקּוּנָם אֲשֶׁר דִּבֶּר עֲלֵיהֶם הָ/אֱלֹהִים בְּ/פִי־נְבִיאָיו הַ/קְּדוֹשִׁים מִימֵי עוֹלָם׃"
+      },
+      "previous_strong": "H6862",
+      "new_strong": "D0116",
+      "confidence": 0.9,
+      "reason": "צָרִיךְ is the later Hebrew adjective “necessary/needed”; H6862 narrow/distress is unrelated.",
+      "evidence": [
+        "occurrence=acts.3.21.1",
+        "text=צָרִיךְ",
+        "prefixes=none",
+        "strong=H6862",
+        "lemma=צַר",
+        "definitions=narrow | tight",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:21: whom heaven must receive.",
+        "צריכ is post-biblical/later Hebrew usage better handled as custom."
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0116",
+      "definition": {
+        "text_en": "necessary; needed; must.",
+        "text_es": "necesario; requerido; debe.",
+        "source": "custom",
+        "order": 1
+      },
+      "hebrew": "צריך",
+      "transliteration_en": "tzarikh",
+      "transliteration_es": "tzarij",
+      "root": "צרך",
+      "root_strong": "H6878"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 21,
+        "word_index": 17,
+        "text": "הַקְּדוֹשִׁים",
+        "strong": "Hd/H6918",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר צָרִיךְ כִּי יְקַבְּלֻהוּ הַ/שָּׁמַיִם עַד־יְמֵי שׁוּב כָּל־הַ/דְּבָרִים לְ/תִקּוּנָם אֲשֶׁר דִּבֶּר עֲלֵיהֶם הָ/אֱלֹהִים בְּ/פִי־נְבִיאָיו הַ/קְּדוֹשִׁים מִימֵי עוֹלָם׃"
+      },
+      "previous_strong": "Hd/H6918",
+      "new_strong": "H6918",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.3.21.17",
+        "text=הַקְּדוֹשִׁים",
+        "prefixes=Hd",
+        "strong=H6918",
+        "lemma=קָדוֹשׁ",
+        "definitions=sacred | holy",
+        "codex reviewed definitions batch_0007"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 18,
+        "text": "בְּכֹחֵנוּ",
+        "strong": "H2581",
+        "prefixes": [
+          "Hb",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּרְא פֶּטְרוֹס וַ/יַּעַן וַ/יֹּאמֶר אֶל־הָעָם אַנְשֵׁי יִשְׂרָאֵל מָה אַתֶּם תְּמֵהִים עַל־זֹאת וּ/מַה־תִּסְתַּכְּלוּ בָ/נוּ כְּ/אִלּוּ אֲנַחְנוּ בְּ/כֹ/חֵנוּ וּ/בַ/חֲסִידוּתֵנוּ שַׂמְנוּ אֶת־זֶה מִתְהַלֵּךְ׃"
+      },
+      "previous_strong": "H2581",
+      "new_strong": "H3581",
+      "confidence": 0.9,
+      "reason": "H3581 is the corrected כח entry for power/strength, and the local definition is currently wrong/narrow.",
+      "evidence": [
+        "occurrence=acts.3.12.18",
+        "text=בְּכֹחֵנוּ",
+        "prefixes=Hb,Hk",
+        "strong=H2581",
+        "lemma=חֵן",
+        "definitions=favour",
+        "codex reviewed definitions batch_0007",
+        "Acts 3:12: as though by our own power.",
+        "H3581 lemma כח matches power/strength though local definitions need correction.",
+        "Definition added for כח as power/strength."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3581",
+      "definition": {
+        "text_en": "power; strength; ability.",
+        "text_es": "poder; fuerza; capacidad.",
+        "source": "delitzsch_review"
+      }
+    }
+  ]
+}

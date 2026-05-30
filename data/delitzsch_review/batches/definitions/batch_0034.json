@@ -1,0 +1,1528 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.492163+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 5,
+        "verse": 27,
+        "word_index": 7,
+        "text": "כֶּתֶם",
+        "strong": "Hk/H3800",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לַ/הֲ/קִימָהּ בְּ/כָ/בוֹד לוֹ לְ/עֵדָה אֲשֶׁר אֵין־בָּהּ כֶּ/תֶם וָ/קֶמֶט וּ/כְ/דוֹמֶה כִּי אִם־לְ/מַעַן תִּהְיֶה קְדוֹשָׁה וּ/תְמִימָה׃"
+      },
+      "previous_strong": "Hk/H3800",
+      "new_strong": "H3799",
+      "confidence": 0.9,
+      "reason": "כֶּתֶם in Ephesians 5:27 means stain/spot; H3799 כָּתַם fits the stain sense, while H3800 means gold.",
+      "evidence": [
+        "occurrence=ephesians.5.27.7",
+        "text=כֶּתֶם",
+        "prefixes=Hk",
+        "strong=H3800",
+        "lemma=כֶּתֶם",
+        "definitions=gold",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 5,
+        "verse": 33,
+        "word_index": 0,
+        "text": "וְאוּלָם",
+        "strong": "Hc/H199",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אוּלָם גַּם־אַתֶּם כָּל־אִישׁ מִכֶּם יֶאֱהַב אֶת־אִשְׁתּוֹ כְּ/נַפְשׁוֹ וְ/הָ/אִשָּׁה הִיא תִזָּהֵר וְ/תִירָא אֶת־בַּ/עְלָהּ׃"
+      },
+      "previous_strong": "Hc/H199",
+      "new_strong": "Hc/H199",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: וְאוּלָם means but/however; H199 is correct.",
+      "evidence": [
+        "occurrence=ephesians.5.33.0",
+        "text=וְאוּלָם",
+        "prefixes=Hc",
+        "strong=H199",
+        "lemma=אוּלָם",
+        "definitions=but | but indeed",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 6,
+        "verse": 6,
+        "word_index": 1,
+        "text": "בַעֲבֹדַת",
+        "strong": "H4515",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לֹא בַ/עֲבֹדַת מַרְאֵה הָ/עַיִן כִּ/מְבַקְשֵׁי חֵן בְּ/נֵי אָדָם כִּי אִם־כְּ/עַבְדֵי הַ/מָּשִׁיחַ עֹשִׂים רְצוֹן הָ/אֱלֹהִים בְּ/כָל־נַפְשָׁם׃"
+      },
+      "previous_strong": "H4515",
+      "new_strong": "H5656",
+      "confidence": 0.95,
+      "reason": "בַעֲבֹדַת means in service/work; H5656 עֲבֹדָה fits, H4515 is unrelated.",
+      "evidence": [
+        "occurrence=ephesians.6.6.1",
+        "text=בַעֲבֹדַת",
+        "prefixes=Hb",
+        "strong=H4515",
+        "lemma=מִנְעָל",
+        "definitions=none",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 6,
+        "verse": 12,
+        "word_index": 12,
+        "text": "בְּחֶשְׁכַּת",
+        "strong": "H2820",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי לֹא עִם־בָּ/שָׂר וָ/דָם מִלְחַמְתֵּנוּ כִּי עִם־שָׂרִים וְ/שַׁלִּיטִים עִם־הַ/מּשְׁלִים בְּ/חֶשְׁכַּת הָ/עוֹלָם הַזֶּה עִם־הָ/רוּחוֹת הָ/רָעוֹת אֲשֶׁר בַּ/מְּרוֹמִים׃"
+      },
+      "previous_strong": "H2820",
+      "new_strong": "H2822",
+      "confidence": 0.95,
+      "reason": "בְּחֶשְׁכַּת means in darkness; H2822 חֹשֶׁךְ fits, H2820 is unrelated.",
+      "evidence": [
+        "occurrence=ephesians.6.12.12",
+        "text=בְּחֶשְׁכַּת",
+        "prefixes=Hb",
+        "strong=H2820",
+        "lemma=חָשַׂךְ",
+        "definitions=withhold | refrain",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 6,
+        "verse": 13,
+        "word_index": 13,
+        "text": "וְלַעֲמוֹד׃",
+        "strong": "H5982",
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "עַל־כֵּן אֶחֱזוּ בִּ/כְ/לֵי־נֶשֶׁק אֱלֹהִים לְ/מַעַן תּוּכְלוּ לָ/קוּם בַּ/יּוֹם הָרָע וּ/לְ/מַלֵּא צְבָאֲכֶם וְ/לַ/עֲמוֹד׃"
+      },
+      "previous_strong": "H5982",
+      "new_strong": "H5975",
+      "confidence": 0.95,
+      "reason": "וְלַעֲמוֹד means and to stand; H5975 עָמַד fits, H5982 is pillar/column.",
+      "evidence": [
+        "occurrence=ephesians.6.13.13",
+        "text=וְלַעֲמוֹד׃",
+        "prefixes=Hc,Hl",
+        "strong=H5982",
+        "lemma=עַמּוּד",
+        "definitions=pillar | column",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 6,
+        "verse": 14,
+        "word_index": 6,
+        "text": "בְּשִׁרְיוֹן",
+        "strong": "H7176",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "עִמְדוּ־נָא חֲגוּרֵי מָתְנַיִם בָּ/אֱמֶת וּ/מְלֻבָּשִׁים בְּ/שִׁרְיוֹן הַ/צֶּדֶק׃"
+      },
+      "previous_strong": "H7176",
+      "new_strong": "H8302",
+      "confidence": 0.95,
+      "reason": "בְּשִׁרְיוֹן means breastplate/body armor; H8302 שִׁרְיוֹן fits, H7176 is unrelated.",
+      "evidence": [
+        "occurrence=ephesians.6.14.6",
+        "text=בְּשִׁרְיוֹן",
+        "prefixes=Hb",
+        "strong=H7176",
+        "lemma=קֶרֶת",
+        "definitions=town | city",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 6,
+        "verse": 16,
+        "word_index": 5,
+        "text": "מָגֵן",
+        "strong": "H4043",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַל־כָּל־אֵלֶּה תִּפְשֹוּ אֶת־מָגֵן הָ/אֱמוּנָה אֲשֶׁר תּוּכְלוּ לְ/כַ/בּוֹת בּוֹ אֶת־חִצֵּי הָ/רָשָׁע הַ/בֹּעֲרִים׃"
+      },
+      "previous_strong": "H4043",
+      "new_strong": "H4043",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: מָגֵן means shield; H4043 is correct.",
+      "evidence": [
+        "occurrence=ephesians.6.16.5",
+        "text=מָגֵן",
+        "prefixes=none",
+        "strong=H4043",
+        "lemma=מָגֵן",
+        "definitions=shield",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 6,
+        "verse": 16,
+        "word_index": 9,
+        "text": "לְכַבּוֹת",
+        "strong": "Hl/Hk/H3518",
+        "prefixes": [
+          "Hl",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַל־כָּל־אֵלֶּה תִּפְשֹוּ אֶת־מָגֵן הָ/אֱמוּנָה אֲשֶׁר תּוּכְלוּ לְ/כַ/בּוֹת בּוֹ אֶת־חִצֵּי הָ/רָשָׁע הַ/בֹּעֲרִים׃"
+      },
+      "previous_strong": "Hl/Hk/H3518",
+      "new_strong": "Hl/Hk/H3518",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: לְכַבּוֹת means to quench/extinguish; H3518 is correct.",
+      "evidence": [
+        "occurrence=ephesians.6.16.9",
+        "text=לְכַבּוֹת",
+        "prefixes=Hl,Hk",
+        "strong=H3518",
+        "lemma=כָּבָה",
+        "definitions=be quenched | extinguished | go out",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 6,
+        "verse": 16,
+        "word_index": 12,
+        "text": "חִצֵּי",
+        "strong": "H2671",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַל־כָּל־אֵלֶּה תִּפְשֹוּ אֶת־מָגֵן הָ/אֱמוּנָה אֲשֶׁר תּוּכְלוּ לְ/כַ/בּוֹת בּוֹ אֶת־חִצֵּי הָ/רָשָׁע הַ/בֹּעֲרִים׃"
+      },
+      "previous_strong": "H2671",
+      "new_strong": "H2671",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: חִצֵּי means arrows; H2671 is correct.",
+      "evidence": [
+        "occurrence=ephesians.6.16.12",
+        "text=חִצֵּי",
+        "prefixes=none",
+        "strong=H2671",
+        "lemma=חֵץ",
+        "definitions=arrow",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 6,
+        "verse": 19,
+        "word_index": 15,
+        "text": "צִיר",
+        "strong": "H6735",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/גַם־בַּ/עֲדִי לְ/מַעַן יִנָּתֶן־לִי הַ/דָּבָר בְּ/פִתְחִי פִי לְ/הַ/גִּיד בְּ/בִטָּחוֹן אֶת־סוֹד הַ/בְּשׂוֹרָה אֲשֶׁר אָנֹכִי צִיר לָהּ בְּ/מוֹסֵרוֹת׃"
+      },
+      "previous_strong": "H6735",
+      "new_strong": "H6735",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: צִיר means envoy/ambassador; H6735 is correct.",
+      "evidence": [
+        "occurrence=ephesians.6.19.15",
+        "text=צִיר",
+        "prefixes=none",
+        "strong=H6735",
+        "lemma=צִיר",
+        "definitions=envoy | messenger",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 1,
+        "verse": 2,
+        "word_index": 7,
+        "text": "בְּגָלַטְיָא׃",
+        "strong": "H4068",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כָל־הָ/אַחִים אֲשֶׁר עִמָּדִי אֶל־הַ/קְּהִלּוֹת אֲשֶׁר בְּ/גָלַטְיָא׃"
+      },
+      "previous_strong": "H4068",
+      "new_strong": "D0177",
+      "confidence": 0.98,
+      "reason": "בְּגָלַטְיָא is Galatia; H4068 is unrelated.",
+      "evidence": [
+        "occurrence=galatians.1.2.7",
+        "text=בְּגָלַטְיָא׃",
+        "prefixes=Hb",
+        "strong=H4068",
+        "lemma=מָדוֹן",
+        "definitions=none",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0177",
+      "hebrew": "גלטיא",
+      "transliteration_en": "Galatia",
+      "transliteration_es": "Galacia",
+      "definition": {
+        "text_en": "Galatia; Roman province/region in central Anatolia.",
+        "text_es": "Galacia; provincia o región romana en Anatolia central.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 1,
+        "verse": 8,
+        "word_index": 12,
+        "text": "מִבַּלְעֲדֵי",
+        "strong": "H1107",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל גַּם־אֲנַחְנוּ אוֹ־מַלְאָךְ מִן־הַ/שָּׁמַיִם אִם־יָבוֹא לְ/בַ/שֵּׂר אֶתְכֶם בְּ/שׂוֹרָה מִבַּלְעֲדֵי זֹאת אֲשֶׁר בִּ/שַּׂרְנוּ אֶתְכֶם חֵרֶם יִהְיֶה׃"
+      },
+      "previous_strong": "H1107",
+      "new_strong": "H1107",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: מִבַּלְעֲדֵי means apart from/besides; H1107 is correct.",
+      "evidence": [
+        "occurrence=galatians.1.8.12",
+        "text=מִבַּלְעֲדֵי",
+        "prefixes=none",
+        "strong=H1107",
+        "lemma=בִּלְעֲדֵי",
+        "definitions=not unto | apart from | except | without",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 12,
+        "text": "רָדַפְתִּי",
+        "strong": "H6148",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הֲלֹא־שְׁמַעְתֶּם אֶת־דַּרְכִּי אֲשֶׁר הִתְהַלַּכְתִּי מִלְּפָנִים בֵּ/ין הַ/יְּהוּדִים וְ/אֵת אֲשֶׁר־רָדַפְתִּי עַל־יֶתֶר אֶת־עֲדַת אֱלֹהִים וְ/אִבַּדְתִּיהָ׃"
+      },
+      "previous_strong": "H6148",
+      "new_strong": "H7291",
+      "confidence": 0.96,
+      "reason": "רָדַפְתִּי means I persecuted/pursued; H7291 רָדַף fits, H6148 is unrelated.",
+      "evidence": [
+        "occurrence=galatians.1.13.12",
+        "text=רָדַפְתִּי",
+        "prefixes=none",
+        "strong=H6148",
+        "lemma=עָרַב",
+        "definitions=take on pledge | give in pledge | exchange",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 8,
+        "text": "מֵרֶחֶם",
+        "strong": "H7358",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ כַּ/אֲשֶׁר הָיָה רְצוֹן הָ/אֱלֹהִים אֲשֶׁר הִבְדִּיל אֹתִי מֵרֶחֶם אִמִּי וַ/יִּקְרָאֵנִי בְּ/חַסְדּוֹ׃"
+      },
+      "previous_strong": "H7358",
+      "new_strong": "H7358",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: מֵרֶחֶם means from the womb; H7358 is correct.",
+      "evidence": [
+        "occurrence=galatians.1.15.8",
+        "text=מֵרֶחֶם",
+        "prefixes=none",
+        "strong=H7358",
+        "lemma=רֶחֶם",
+        "definitions=womb",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 1,
+        "verse": 20,
+        "word_index": 9,
+        "text": "אֲכַזֵּב׃",
+        "strong": "H3576",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲשֶׁר אֲנִי כֹ/תֵב אֲלֵיכֶם הִנֵּה נֶגֶד הָ/אֱלֹהִים כִּי לֹא אֲכַזֵּב׃"
+      },
+      "previous_strong": "H3576",
+      "new_strong": "H3576",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: אֲכַזֵּב means I lie; H3576 is correct.",
+      "evidence": [
+        "occurrence=galatians.1.20.9",
+        "text=אֲכַזֵּב׃",
+        "prefixes=none",
+        "strong=H3576",
+        "lemma=כָּזַב",
+        "definitions=lie | be a liar",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 1,
+        "verse": 21,
+        "word_index": 4,
+        "text": "גְּלִילוֹת",
+        "strong": "H1552",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַחֲרֵי־כֵן בָּ/אתִי אֶל־גְּלִילוֹת סוּרְיָא וְ/קִילִיקְיָא׃"
+      },
+      "previous_strong": "H1552",
+      "new_strong": "H1552",
+      "confidence": 0.93,
+      "reason": "Reviewed in context: גְּלִילוֹת means regions/territories; H1552 is correct.",
+      "evidence": [
+        "occurrence=galatians.1.21.4",
+        "text=גְּלִילוֹת",
+        "prefixes=none",
+        "strong=H1552",
+        "lemma=גְלִילָה",
+        "definitions=circuit | boundary | territory | Galilee",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 2,
+        "verse": 2,
+        "word_index": 20,
+        "text": "מְרוּצָתִי",
+        "strong": "H526",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וָ/אַעַל שָׁמָּה עַל־פִּי מַחֲזֶה וָ/אָשִׂים לִ/פְנֵיהֶם אֶת־הַ/בְּשׂוֹרָה אֲשֶׁר־קָרָאתִי בַ/גּוֹיִם וּ/בְ/יִחוּד שַׂמְתִּיהָ לִ/פְנֵי הַ/חֲשׁוּבִים שֶׁבָּהֶם פֶּן־תִּהְיֶה לָ/רִיק מְרוּצָתִי אֲשֶׁר אָרוּץ אוֹ־רָצְתִּי׃"
+      },
+      "previous_strong": "H526",
+      "new_strong": "H4794",
+      "confidence": 0.94,
+      "reason": "מְרוּצָתִי means my running/course; H4794 מְרוּצָה fits, H526 is unrelated.",
+      "evidence": [
+        "occurrence=galatians.2.2.20",
+        "text=מְרוּצָתִי",
+        "prefixes=none",
+        "strong=H526",
+        "lemma=אָמוֹן",
+        "definitions=master-workman | king of Judah | captain of a city | one of the line of Solomon’s servants",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 2,
+        "verse": 4,
+        "word_index": 8,
+        "text": "לְרַגֵּל",
+        "strong": "Hl/H7270",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "מִפְּנֵי אֲחֵי הַ/שֶּׁקֶר הַ/נִּכְנָסִים בַּ/סֵּתֶר בְּ/תוֹכֵנוּ אֲשֶׁר בָּ/אוּ לְ/רַגֵּל אֶת־חֵרוּתֵנוּ אֲשֶׁר־לָ/נוּ בְּ/יֵשׁוּעַ הַ/מָּשִׁיחַ לְ/מַעַן הַ/עֲבִידֵנוּ׃"
+      },
+      "previous_strong": "Hl/H7270",
+      "new_strong": "Hl/H7270",
+      "confidence": 0.9,
+      "reason": "Reviewed in context: לְרַגֵּל means to spy out; H7270 is acceptable.",
+      "evidence": [
+        "occurrence=galatians.2.4.8",
+        "text=לְרַגֵּל",
+        "prefixes=Hl",
+        "strong=H7270",
+        "lemma=רָגַל",
+        "definitions=foot it | go about",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 2,
+        "verse": 5,
+        "word_index": 13,
+        "text": "שֶׁל־",
+        "strong": "H1253",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר לֹא־סַרְנוּ לְ/מִשְׁמַעְתָּם אַף־לֹא שָׁעָה אַחַת לְ/מַעַן אֲשֶׁר תַּעֲמֹד בְּ/קִרְבְּכֶם אֲמִתָּהּ שֶׁל־הַ/בְּשׂוֹרָה׃"
+      },
+      "previous_strong": "H1253",
+      "new_strong": "D0163",
+      "confidence": 0.97,
+      "reason": "שֶׁל־ is the genitive particle “of”; reuse existing custom entry D0163, H1253 is unrelated.",
+      "evidence": [
+        "occurrence=galatians.2.5.13",
+        "text=שֶׁל־",
+        "prefixes=none",
+        "strong=H1253",
+        "lemma=בֹּר",
+        "definitions=lye | potash",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 2,
+        "verse": 7,
+        "word_index": 11,
+        "text": "כֵּיפָא",
+        "strong": "H6585",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תְּהִי לְ/הֶפֶךְ בִּ/רְאוֹתָם כִּי־הָ/פְקְדָה לִי הַ/בְּשׂוֹרָה אֶל־הָ/עֲרֵלִים כְּ/מוֹ שֶׁהָפְקַד כֵּ/יפָא אֶל־הַ/מּוּלִים׃"
+      },
+      "previous_strong": "H6585",
+      "new_strong": "D0056",
+      "confidence": 0.98,
+      "reason": "כֵּיפָא is Cephas, the Aramaic name of Peter; reuse existing custom entry D0056, H6585 is unrelated.",
+      "evidence": [
+        "occurrence=galatians.2.7.11",
+        "text=כֵּיפָא",
+        "prefixes=Hk",
+        "strong=H6585",
+        "lemma=פָּשַׂע",
+        "definitions=step | march",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 2,
+        "verse": 11,
+        "word_index": 11,
+        "text": "אָשָׁם׃",
+        "strong": "H817",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כַ/אֲשֶׁר בָּא כֵ/יפָא לְ/אַנְטִיּוֹכְיָא ה/וֹכַחְתִּי אֶל־פָּנָיו דַּרְכּוֹ מִפְּנֵי שֶׁהָיָה־בוֹ אָשָׁם׃"
+      },
+      "previous_strong": "H817",
+      "new_strong": "H817",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: אָשָׁם means blameworthy/at fault; H817 is correct.",
+      "evidence": [
+        "occurrence=galatians.2.11.11",
+        "text=אָשָׁם׃",
+        "prefixes=none",
+        "strong=H817",
+        "lemma=אָשָׁם",
+        "definitions=offence | guilt | offence | trespass | fault",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 2,
+        "verse": 15,
+        "word_index": 5,
+        "text": "חַטָּאִים",
+        "strong": "H2400",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הֵן מִזֶּרַע הַ/יְּהוּדִים אֲנַחְנוּ וְ/לֹא חַטָּאִים מִן־הַ/גּוֹיִם׃"
+      },
+      "previous_strong": "H2400",
+      "new_strong": "H2400",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: חַטָּאִים means sinners; H2400 is correct.",
+      "evidence": [
+        "occurrence=galatians.2.15.5",
+        "text=חַטָּאִים",
+        "prefixes=none",
+        "strong=H2400",
+        "lemma=חַטָּא",
+        "definitions=sinful | sinners",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 2,
+        "verse": 20,
+        "word_index": 23,
+        "text": "אֲהָבַנִי",
+        "strong": "H158",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עִם־הַ/מָּשִׁיחַ נִצְלַבְתִּי וְ/אֵין־עוֹד אָנֹכִי הַחַי כִּי אִם־הַ/מָּשִׁיחַ הוּא חַי בְּ/קִרְבִּי וַ/אֲשֶׁר אֲנִי חַי עַתָּה בַ/בָּשָׂר אֶחְיֶה בֶּ/אֱמוּנַת בֶּן־אֱלֹהִים אֲשֶׁר אֲהָבַנִי וַ/יִּתֵּן אֶת־נַפְשׁוֹ בַּ/עֲדִי׃"
+      },
+      "previous_strong": "H158",
+      "new_strong": "H158",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: אֲהָבַנִי means loved me; H158 is correct.",
+      "evidence": [
+        "occurrence=galatians.2.20.23",
+        "text=אֲהָבַנִי",
+        "prefixes=none",
+        "strong=H158",
+        "lemma=אַהַב",
+        "definitions=love",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 0,
+        "text": "אֲהָהּ",
+        "strong": "H162",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲהָהּ גָּלָטִים חַסְרֵי דָעַת מִי הִתְעָה אֶתְכֶם בִּ/כְ/שָׁפָיו מִשְּׁמֹעַ אֶל־הָ/אֱמֶת אַחֲרֵי אֲשֶׁר צֻיַּר בְּ/תוֹכְכֶם יֵשׁוּעַ הַ/מָּשִׁיחַ הַ/צָּלוּב לְ/נֶגֶד עֵינֵיכֶם׃"
+      },
+      "previous_strong": "H162",
+      "new_strong": "H162",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: אֲהָהּ means alas!/O; H162 is correct.",
+      "evidence": [
+        "occurrence=galatians.3.1.0",
+        "text=אֲהָהּ",
+        "prefixes=none",
+        "strong=H162",
+        "lemma=אֲהָהּ",
+        "definitions=alas!",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 1,
+        "text": "גָּלָטִים",
+        "strong": "H6307",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲהָהּ גָּלָטִים חַסְרֵי דָעַת מִי הִתְעָה אֶתְכֶם בִּ/כְ/שָׁפָיו מִשְּׁמֹעַ אֶל־הָ/אֱמֶת אַחֲרֵי אֲשֶׁר צֻיַּר בְּ/תוֹכְכֶם יֵשׁוּעַ הַ/מָּשִׁיחַ הַ/צָּלוּב לְ/נֶגֶד עֵינֵיכֶם׃"
+      },
+      "previous_strong": "H6307",
+      "new_strong": "D0178",
+      "confidence": 0.98,
+      "reason": "גָּלָטִים means Galatians; H6307 is unrelated.",
+      "evidence": [
+        "occurrence=galatians.3.1.1",
+        "text=גָּלָטִים",
+        "prefixes=none",
+        "strong=H6307",
+        "lemma=פַּדָּן",
+        "definitions=garden | field",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0178",
+      "hebrew": "גלטים",
+      "transliteration_en": "Galatians",
+      "transliteration_es": "Gálatas",
+      "definition": {
+        "text_en": "Galatians; people of Galatia or recipients of the letter to the Galatians.",
+        "text_es": "Gálatas; pueblo de Galacia o destinatarios de la carta a los Gálatas.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 5,
+        "text": "הִתְעָה",
+        "strong": "H8582",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲהָהּ גָּלָטִים חַסְרֵי דָעַת מִי הִתְעָה אֶתְכֶם בִּ/כְ/שָׁפָיו מִשְּׁמֹעַ אֶל־הָ/אֱמֶת אַחֲרֵי אֲשֶׁר צֻיַּר בְּ/תוֹכְכֶם יֵשׁוּעַ הַ/מָּשִׁיחַ הַ/צָּלוּב לְ/נֶגֶד עֵינֵיכֶם׃"
+      },
+      "previous_strong": "H8582",
+      "new_strong": "H8582",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הִתְעָה means misled/caused to err; H8582 is correct.",
+      "evidence": [
+        "occurrence=galatians.3.1.5",
+        "text=הִתְעָה",
+        "prefixes=none",
+        "strong=H8582",
+        "lemma=תָּעָה",
+        "definitions=err",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 6,
+        "text": "בָּכֶם",
+        "strong": "H5157",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הִנֵּה הַ/מֵּפִיק לָ/כֶם אֶת־הָ/רוּחַ וּ/פֹעֵל בָּ/כֶם גְּבוּרוֹת הֲכִי מִמַּעֲשֵׂי הַ/תּוֹרָה הוּא עֹשֶׂה אֵלֶּה אוֹ מִשְּׁמוּעַת הָ/אֱמוּנָה׃"
+      },
+      "previous_strong": "H5157",
+      "new_strong": "H5157",
+      "confidence": 0.84,
+      "reason": "בָּכֶם is a preposition plus pronominal suffix (“in/among you”); H5157 is unrelated, but this should be handled as grammar rather than forced to a lexical Strong.",
+      "evidence": [
+        "occurrence=galatians.3.5.6",
+        "text=בָּכֶם",
+        "prefixes=Hb",
+        "strong=H5157",
+        "lemma=נָחַל",
+        "definitions=get | take as a possession",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 6,
+        "word_index": 4,
+        "text": "וַתֵּחָשֵׁב",
+        "strong": "H5458",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כַּ/אֲשֶׁר הֶ/אֱמִין אַבְרָהָם בֵּ/אלֹהִים וַ/תֵּחָשֵׁב לוֹ לִ/צְדָקָה׃"
+      },
+      "previous_strong": "H5458",
+      "new_strong": "H2803",
+      "confidence": 0.95,
+      "reason": "וַתֵּחָשֵׁב means it was counted/reckoned; H2803 חָשַׁב fits, H5458 is unrelated.",
+      "evidence": [
+        "occurrence=galatians.3.6.4",
+        "text=וַתֵּחָשֵׁב",
+        "prefixes=Hc",
+        "strong=H5458",
+        "lemma=סְגוֹר",
+        "definitions=enclosure | encasement",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 10,
+        "word_index": 5,
+        "text": "הַקְּלָלָה",
+        "strong": "Hd/H7045",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי בְ/נֵי מַעֲשֵׂי הַ/תּוֹרָה תַּחַת הַ/קְּלָלָה הֵמָּה שֶׁנֶּאֱמַר אָרוּר אֲשֶׁר לֹא־יָקִים אֶת־כָּל־הַ/דְּבָרִים הַ/כְּתוּבִים בְּ/סֵפֶר הַ/תּוֹרָה לַ/עֲשׂוֹת אוֹתָם׃"
+      },
+      "previous_strong": "Hd/H7045",
+      "new_strong": "Hd/H7045",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַקְּלָלָה means the curse; H7045 is correct.",
+      "evidence": [
+        "occurrence=galatians.3.10.5",
+        "text=הַקְּלָלָה",
+        "prefixes=Hd",
+        "strong=H7045",
+        "lemma=קְלָלָה",
+        "definitions=curse",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 10,
+        "text": "וָחַי",
+        "strong": "Hc/H2425",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הַ/תּוֹרָה אֵינֶנָּה מִן־הָ/אֱמוּנָה כִּי אִם־אֲשֶׁר־יַעֲשֶׂה אֹתָם הָ/אָדָם וָ/חַי בָּ/הֶם׃"
+      },
+      "previous_strong": "Hc/H2425",
+      "new_strong": "H2421",
+      "confidence": 0.95,
+      "reason": "וָחַי means and he shall live; H2421 חָיָה fits, H2425 is not the intended entry.",
+      "evidence": [
+        "occurrence=galatians.3.12.10",
+        "text=וָחַי",
+        "prefixes=Hc",
+        "strong=H2425",
+        "lemma=חָיַי",
+        "definitions=none",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 13,
+        "word_index": 10,
+        "text": "תָּלוּי׃",
+        "strong": "H8518",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הַ/מָּשִׁיחַ פָּדָנוּ מִקִּלְלַת הַ/תּוֹרָה בִּ/הְ/יוֹתוֹ לִ/קְלָלָה בַּ/עֲדֵנוּ שֶׁנֶּאֱמַר קִלְלַת אֱלֹהִים תָּלוּי׃"
+      },
+      "previous_strong": "H8518",
+      "new_strong": "H8518",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: תָּלוּי means hanged; H8518 is correct.",
+      "evidence": [
+        "occurrence=galatians.3.13.10",
+        "text=תָּלוּי׃",
+        "prefixes=none",
+        "strong=H8518",
+        "lemma=תָּלָה",
+        "definitions=hang",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 17,
+        "word_index": 19,
+        "text": "וּשְׁלשִׁים",
+        "strong": "Hc/H7970",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/זֹאת אֲנִי אֹמֵר כִּי בְּ/רִית אֲשֶׁר קִיְּמָהּ הָ/אֱלֹהִים מֵאָז לִ/ימוֹת הַ/מָּשִׁיחַ לֹא תוּכַל הַ/תּוֹרָה אֲשֶׁר בָּ/אָה אַחֲרֵי אַרְבַּע מֵאוֹת וּ/שְׁלשִׁים שָׁנָה לְ/הָפֵר אוֹתָהּ וּ/לְ/בַטֵּל אֶת־הַ/הַבְטָחָה׃"
+      },
+      "previous_strong": "Hc/H7970",
+      "new_strong": "Hc/H7970",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: וּשְׁלשִׁים means and thirty; H7970 is correct.",
+      "evidence": [
+        "occurrence=galatians.3.17.19",
+        "text=וּשְׁלשִׁים",
+        "prefixes=Hc",
+        "strong=H7970",
+        "lemma=שְׁלוֹשִׁים",
+        "definitions=thirty | bef. n. sg. | as ordin.",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 19,
+        "word_index": 21,
+        "text": "מֵלִיץ׃",
+        "strong": "H3887",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אִם־כֵּן־הַ/תּוֹרָה מַה־הִיא מִפְּנֵי הַ/פְּשָׁעִים נוֹסָפָה עַד כִּי־יָבוֹא הַ/זֶּרַע אֲשֶׁר־לוֹ הַ/הַבְטָחָה וַ/תּוּשַׂם הַ/תּוֹרָה עַל־יְדֵי הַ/מַּלְאָכִים וּ/בְ/יַד מֵלִיץ׃"
+      },
+      "previous_strong": "H3887",
+      "new_strong": "H3887",
+      "confidence": 0.91,
+      "reason": "מֵלִיץ in Galatians 3:19 means mediator/intermediary; add the missing definition to H3887.",
+      "evidence": [
+        "occurrence=galatians.3.19.21",
+        "text=מֵלִיץ׃",
+        "prefixes=none",
+        "strong=H3887",
+        "lemma=לוּץ",
+        "definitions=none",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3887",
+      "definition": {
+        "text_en": "interpreter; mediator; intermediary.",
+        "text_es": "intérprete; mediador; intermediario.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 28,
+        "word_index": 14,
+        "text": "נְקֵבָה",
+        "strong": "H5347",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵין עוֹד לֹא יְהוּדִי וְ/לֹא יְוָנִי לֹא עֶבֶד וְ/לֹא בֶן־חוֹרִין לֹא זָכָר וְ/לֹא נְקֵבָה כִּי אַתֶּם כֻּ/לְּ/כֶם אֶחָד בַּ/מָּשִׁיחַ יֵשׁוּעַ׃"
+      },
+      "previous_strong": "H5347",
+      "new_strong": "H5347",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: נְקֵבָה means female; H5347 is correct.",
+      "evidence": [
+        "occurrence=galatians.3.28.14",
+        "text=נְקֵבָה",
+        "prefixes=none",
+        "strong=H5347",
+        "lemma=נְקֵבָה",
+        "definitions=female",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 1,
+        "word_index": 11,
+        "text": "הָעָבֶד",
+        "strong": "H2056",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנִי אֹמֵר הַ/יּוֹרֵשׁ כָּל־עֵת הֱ/יוֹתוֹ קָטֹן אֵין־הַ/בְדֵּל בֵּ/ינוֹ וּ/בֵ/ין הָעָבֶד אַף אִם־הוּא אֲדוֹן הַכֹּל׃"
+      },
+      "previous_strong": "H2056",
+      "new_strong": "H5650",
+      "confidence": 0.96,
+      "reason": "הָעָבֶד means the servant/slave; H5650 עֶבֶד fits, H2056 is unrelated.",
+      "evidence": [
+        "occurrence=galatians.4.1.11",
+        "text=הָעָבֶד",
+        "prefixes=none",
+        "strong=H2056",
+        "lemma=וָלָד",
+        "definitions=offspring | child",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 9,
+        "word_index": 12,
+        "text": "הַיְסֹדוֹת",
+        "strong": "H5659",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה אַחֲרֵי יְדַעְתֶּם אֶת־הָ/אֱלֹהִים וְ/יוֹתֵר אַחֲרֵי שֶׁנּוֹדַעְתֶּם לֵ/אלֹהִים אֵיךְ תָּשׁוּבוּ אֶל־הַ/יְסֹדוֹת הָ/רָפִים וְ/הַ/דַּלִּים הָהֵם אֲשֶׁר תִּרְצוּ לְ/הִכָּנֵעַ לָ/הֶם מֵחָדָשׁ׃"
+      },
+      "previous_strong": "H5659",
+      "new_strong": "H3247",
+      "confidence": 0.94,
+      "reason": "הַיְסֹדוֹת means the elementary principles/foundations; H3247 יְסוֹד fits, H5659 servitude is unrelated.",
+      "evidence": [
+        "occurrence=galatians.4.9.12",
+        "text=הַיְסֹדוֹת",
+        "prefixes=Hd",
+        "strong=H5659",
+        "lemma=עַבְדוּת",
+        "definitions=servitude | bondage",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 9,
+        "word_index": 14,
+        "text": "וְהַדַּלִּים",
+        "strong": "H1800",
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה אַחֲרֵי יְדַעְתֶּם אֶת־הָ/אֱלֹהִים וְ/יוֹתֵר אַחֲרֵי שֶׁנּוֹדַעְתֶּם לֵ/אלֹהִים אֵיךְ תָּשׁוּבוּ אֶל־הַ/יְסֹדוֹת הָ/רָפִים וְ/הַ/דַּלִּים הָהֵם אֲשֶׁר תִּרְצוּ לְ/הִכָּנֵעַ לָ/הֶם מֵחָדָשׁ׃"
+      },
+      "previous_strong": "H1800",
+      "new_strong": "H1800",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: וְהַדַּלִּים means weak/poor; H1800 is correct.",
+      "evidence": [
+        "occurrence=galatians.4.9.14",
+        "text=וְהַדַּלִּים",
+        "prefixes=Hc,Hd",
+        "strong=H1800",
+        "lemma=דַּל",
+        "definitions=low | weak | poor | thin",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 9,
+        "word_index": 20,
+        "text": "מֵחָדָשׁ׃",
+        "strong": "H2318",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה אַחֲרֵי יְדַעְתֶּם אֶת־הָ/אֱלֹהִים וְ/יוֹתֵר אַחֲרֵי שֶׁנּוֹדַעְתֶּם לֵ/אלֹהִים אֵיךְ תָּשׁוּבוּ אֶל־הַ/יְסֹדוֹת הָ/רָפִים וְ/הַ/דַּלִּים הָהֵם אֲשֶׁר תִּרְצוּ לְ/הִכָּנֵעַ לָ/הֶם מֵחָדָשׁ׃"
+      },
+      "previous_strong": "H2318",
+      "new_strong": "H2318",
+      "confidence": 0.9,
+      "reason": "Reviewed in context: מֵחָדָשׁ means anew/again; H2318 חָדַשׁ is acceptable.",
+      "evidence": [
+        "occurrence=galatians.4.9.20",
+        "text=מֵחָדָשׁ׃",
+        "prefixes=none",
+        "strong=H2318",
+        "lemma=חָדַשׁ",
+        "definitions=renew | repair",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 15,
+        "word_index": 2,
+        "text": "אָשְׁרְכֶם",
+        "strong": "H836",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה אַיֵּה אָשְׁרְכֶם כִּי מֵעִיד אֲנִי עֲלֵיכֶם אֲשֶׁר אִם־יְכָלְתֶּם הֱ/יִיתֶם עֹקְרִים אֶת־עֵינֵיכֶם לְ/תִתָּן לִי׃"
+      },
+      "previous_strong": "H836",
+      "new_strong": "H835",
+      "confidence": 0.94,
+      "reason": "אָשְׁרְכֶם means your blessedness/happiness; H835 אֶשֶׁר fits, H836 Asher is a proper-name entry.",
+      "evidence": [
+        "occurrence=galatians.4.15.2",
+        "text=אָשְׁרְכֶם",
+        "prefixes=none",
+        "strong=H836",
+        "lemma=אָשֵׁר",
+        "definitions=Asher | happy one | Felix | son of Jacob and Zilpah | the tribe",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 16,
+        "word_index": 1,
+        "text": "הֲנִהְיֵיתִי",
+        "strong": "H519",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה הֲ/נִהְיֵיתִי לָ/כֶם לְ/אֹיֵב בְּ/דַבְּרִי אֱמֶת אֲלֵיכֶם׃"
+      },
+      "previous_strong": "H519",
+      "new_strong": "H1961",
+      "confidence": 0.95,
+      "reason": "הֲנִהְיֵיתִי means have I become; H1961 הָיָה fits, H519 is unrelated.",
+      "evidence": [
+        "occurrence=galatians.4.16.1",
+        "text=הֲנִהְיֵיתִי",
+        "prefixes=Hd",
+        "strong=H519",
+        "lemma=אָמָה",
+        "definitions=maid | handmaid | maidservant | fig. in address",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 24,
+        "word_index": 14,
+        "text": "הָגָר׃",
+        "strong": "H1904",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וְ/הַ/דְּבָרִים הֵם לְ/רָמֶז כִּי שְׁתֵּי הַ/בְּרִיתוֹת הֵנָּה הָ/אַחַת מִן־הַר סִינַי הַ/יּוֹלֶדֶת לְ/עַבְדוּת וְ/הִיא הָגָר׃"
+      },
+      "previous_strong": "H1904",
+      "new_strong": "H1904",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הָגָר is Hagar; H1904 is correct.",
+      "evidence": [
+        "occurrence=galatians.4.24.14",
+        "text=הָגָר׃",
+        "prefixes=none",
+        "strong=H1904",
+        "lemma=הָגָר",
+        "definitions=Hagar",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 27,
+        "word_index": 2,
+        "text": "רָנִּי",
+        "strong": "H7442",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָ/תוּב רָנִּי עֲקָרָה לֹא יָלָדָה פִּצְחִי רִנָּה וְ/צַהֲלִי לֹא־חָלָה כִּי רַבִּים בְּ/נֵי־שׁוֹמֵמָה מִבְּנֵי בְ/עוּלָה׃"
+      },
+      "previous_strong": "H7442",
+      "new_strong": "H7442",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: רָנִּי means sing/shout for joy; H7442 is correct.",
+      "evidence": [
+        "occurrence=galatians.4.27.2",
+        "text=רָנִּי",
+        "prefixes=none",
+        "strong=H7442",
+        "lemma=רָנַן",
+        "definitions=give a ringing cry",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 27,
+        "word_index": 3,
+        "text": "עֲקָרָה",
+        "strong": "H6135",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָ/תוּב רָנִּי עֲקָרָה לֹא יָלָדָה פִּצְחִי רִנָּה וְ/צַהֲלִי לֹא־חָלָה כִּי רַבִּים בְּ/נֵי־שׁוֹמֵמָה מִבְּנֵי בְ/עוּלָה׃"
+      },
+      "previous_strong": "H6135",
+      "new_strong": "H6135",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: עֲקָרָה means barren woman; H6135 is correct.",
+      "evidence": [
+        "occurrence=galatians.4.27.3",
+        "text=עֲקָרָה",
+        "prefixes=none",
+        "strong=H6135",
+        "lemma=עָקָר",
+        "definitions=barren",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 27,
+        "word_index": 6,
+        "text": "פִּצְחִי",
+        "strong": "H6476",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָ/תוּב רָנִּי עֲקָרָה לֹא יָלָדָה פִּצְחִי רִנָּה וְ/צַהֲלִי לֹא־חָלָה כִּי רַבִּים בְּ/נֵי־שׁוֹמֵמָה מִבְּנֵי בְ/עוּלָה׃"
+      },
+      "previous_strong": "H6476",
+      "new_strong": "H6476",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: פִּצְחִי means break forth; H6476 is correct.",
+      "evidence": [
+        "occurrence=galatians.4.27.6",
+        "text=פִּצְחִי",
+        "prefixes=none",
+        "strong=H6476",
+        "lemma=פָּצַח",
+        "definitions=cause to break | burst forth | break forth with",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 27,
+        "word_index": 7,
+        "text": "רִנָּה",
+        "strong": "H7440",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָ/תוּב רָנִּי עֲקָרָה לֹא יָלָדָה פִּצְחִי רִנָּה וְ/צַהֲלִי לֹא־חָלָה כִּי רַבִּים בְּ/נֵי־שׁוֹמֵמָה מִבְּנֵי בְ/עוּלָה׃"
+      },
+      "previous_strong": "H7440",
+      "new_strong": "H7440",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: רִנָּה means ringing cry/song; H7440 is correct.",
+      "evidence": [
+        "occurrence=galatians.4.27.7",
+        "text=רִנָּה",
+        "prefixes=none",
+        "strong=H7440",
+        "lemma=רִנָּה",
+        "definitions=ringing cry",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 27,
+        "word_index": 8,
+        "text": "וְצַהֲלִי",
+        "strong": "Hc/H6670",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָ/תוּב רָנִּי עֲקָרָה לֹא יָלָדָה פִּצְחִי רִנָּה וְ/צַהֲלִי לֹא־חָלָה כִּי רַבִּים בְּ/נֵי־שׁוֹמֵמָה מִבְּנֵי בְ/עוּלָה׃"
+      },
+      "previous_strong": "Hc/H6670",
+      "new_strong": "Hc/H6670",
+      "confidence": 0.91,
+      "reason": "Reviewed in context: וְצַהֲלִי means cry aloud; H6670 is acceptable.",
+      "evidence": [
+        "occurrence=galatians.4.27.8",
+        "text=וְצַהֲלִי",
+        "prefixes=Hc",
+        "strong=H6670",
+        "lemma=צָהַל",
+        "definitions=neigh | cry shrilly",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 4,
+        "verse": 27,
+        "word_index": 16,
+        "text": "בְעוּלָה׃",
+        "strong": "Hb/H1166",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָ/תוּב רָנִּי עֲקָרָה לֹא יָלָדָה פִּצְחִי רִנָּה וְ/צַהֲלִי לֹא־חָלָה כִּי רַבִּים בְּ/נֵי־שׁוֹמֵמָה מִבְּנֵי בְ/עוּלָה׃"
+      },
+      "previous_strong": "Hb/H1166",
+      "new_strong": "Hb/H1166",
+      "confidence": 0.9,
+      "reason": "Reviewed in context: בְעוּלָה means married woman; H1166 is acceptable.",
+      "evidence": [
+        "occurrence=galatians.4.27.16",
+        "text=בְעוּלָה׃",
+        "prefixes=Hb",
+        "strong=H1166",
+        "lemma=בָּעַל",
+        "definitions=marry | rule over",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 5,
+        "verse": 2,
+        "word_index": 4,
+        "text": "לָכֶם",
+        "strong": "H7942",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הִנֵּה אֲנִי פוֹלוֹס אֹמֵר לָ/כֶם כִּי אִם־תִּמּוֹלוּ לֹא־יוֹעִיל לָ/כֶם הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H7942",
+      "new_strong": "H7942",
+      "confidence": 0.84,
+      "reason": "לָכֶם is a preposition plus pronominal suffix (“to/for you”); H7942 is unrelated, but this needs grammar handling rather than a lexical Strong.",
+      "evidence": [
+        "occurrence=galatians.5.2.4",
+        "text=לָכֶם",
+        "prefixes=Hl",
+        "strong=H7942",
+        "lemma=שִׁכְּרוֹן",
+        "definitions=none",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 5,
+        "verse": 10,
+        "word_index": 13,
+        "text": "עֲוֺנוֹ",
+        "strong": "H5771",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מֻבְטָח אֲנִי בָ/כֶם בָּ/אָדוֹן שֶׁלֹּא תִהְיֶה רוּחַ אַחֶרֶת עִמָּכֶם וְ/הָעֹכֵר אֶתְכֶם יִשָּׂא אֶת־עֲוֺנוֹ יִהְיֶה מִי שֶׁיִּהְיֶה׃"
+      },
+      "previous_strong": "H5771",
+      "new_strong": "H5771",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: עֲוֺנוֹ means his iniquity/guilt; H5771 is correct.",
+      "evidence": [
+        "occurrence=galatians.5.10.13",
+        "text=עֲוֺנוֹ",
+        "prefixes=none",
+        "strong=H5771",
+        "lemma=עָוֺן",
+        "definitions=iniquity | guilt | punishment of iniquity",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 5,
+        "verse": 16,
+        "word_index": 7,
+        "text": "תַּאֲוֺת",
+        "strong": "H8378",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנְנִי אֹמֵר הִתְהַלְּכוּ בָּ/רוּחַ וְ/לֹא תְמַלְאוּ אֶת־תַּאֲוֺת הַ/בָּשָׂר׃"
+      },
+      "previous_strong": "H8378",
+      "new_strong": "H8378",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: תַּאֲוֺת means desire; H8378 is correct.",
+      "evidence": [
+        "occurrence=galatians.5.16.7",
+        "text=תַּאֲוֺת",
+        "prefixes=none",
+        "strong=H8378",
+        "lemma=תַּאֲוָה",
+        "definitions=desire | thing desired",
+        "codex reviewed definitions batch_0034"
+      ],
+      "reviewer": "codex-desktop"
+    }
+  ]
+}

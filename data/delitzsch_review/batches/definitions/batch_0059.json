@@ -1,0 +1,1875 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.494879+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 2,
+        "verse": 3,
+        "word_index": 1,
+        "text": "יַתְעֶה",
+        "strong": "H3035",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַל־יַתְעֶה אֶתְכֶם אִישׁ בְּ/שׁוּם אוֹפָן כִּי לֹא־יָבֹא בְּ/טֶרֶם יִהְיֶה בָ/רִאשׁוֹנָה הַמֶּרֶד וְ/נִגְלָה אִישׁ הַ/חַטָּאָה בֶּן־הָ/אֲבַדּוֹן׃"
+      },
+      "previous_strong": "H3035",
+      "new_strong": "H8582",
+      "confidence": 0.9,
+      "reason": "יַתְעֶה means he/it will deceive or lead astray; H8582 תעה fits, while H3035 is unrelated.",
+      "evidence": [
+        "occurrence=thessalonians2.2.3.1",
+        "text=יַתְעֶה",
+        "prefixes=none",
+        "strong=H3035",
+        "lemma=יִדּוֹ",
+        "definitions=a Manassite | one of those who took foreign wives",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 3,
+        "verse": 6,
+        "word_index": 9,
+        "text": "תִּבָּדְלוּ",
+        "strong": "H7559",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנְנוּ מְצַוִּים אֶתְכֶם אַחִים בְּ/שֵׁם אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ אֲשֶׁר תִּבָּדְלוּ מִכָּל־אָח מְעַקֵּשׁ דְּרָכָיו וְ/אֵינֶנּוּ מִתְהַלֵּךְ עַל־פִּי הַ/קַּבָּלָה אֲשֶׁר קִבֵּל מֵאִתָּנוּ׃"
+      },
+      "previous_strong": "H7559",
+      "new_strong": "H914",
+      "confidence": 0.92,
+      "reason": "תִּבָּדְלוּ means separate yourselves; H914 בדל fits, while H7559 mark/inscribe is unrelated.",
+      "evidence": [
+        "occurrence=thessalonians2.3.6.9",
+        "text=תִּבָּדְלוּ",
+        "prefixes=none",
+        "strong=H7559",
+        "lemma=רָשַׁם",
+        "definitions=inscribe | note",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 3,
+        "verse": 8,
+        "word_index": 8,
+        "text": "וּתְלָאָה",
+        "strong": "Hc/H8513",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "גַּם לֹא־אָכַלְנוּ לֶ/חֶם אִישׁ חִנָּם כִּי בִ/יגִיעָה וּ/תְלָאָה לַ/יְלָה וְ/יוֹמָם הָ/יִינוּ עֲמֵלִים לְ/בִ/לְתִּי הֱ/יוֹת לְ/אִישׁ מִכֶּם לְ/מַשָּׂא׃"
+      },
+      "previous_strong": "Hc/H8513",
+      "new_strong": "H8513",
+      "confidence": 0.9,
+      "reason": "וּתְלָאָה means and toil/hardship; H8513 is correct.",
+      "evidence": [
+        "occurrence=thessalonians2.3.8.8",
+        "text=וּתְלָאָה",
+        "prefixes=Hc",
+        "strong=H8513",
+        "lemma=תְּלָאָה",
+        "definitions=weariness | hardship",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 3,
+        "verse": 9,
+        "word_index": 3,
+        "text": "לָנוּ",
+        "strong": "H8511",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לֹא בַ/עֲבוּר שֶׁאֵין־לָ/נוּ הָ/רְשׁוּת לָ/זֹאת כִּי אִם־לָ/תֵת אֹתָנוּ לָ/כֶם לְ/מוֹפֵת לָ/לֶכֶת בְּ/עִקְּבוֹתֵינוּ׃"
+      },
+      "previous_strong": "H8511",
+      "new_strong": null,
+      "confidence": 0.25,
+      "reason": "לָנוּ is a pronominal/prepositional form (“to/for us”); leave for manual grammar-policy handling rather than assigning a lexical Strong.",
+      "evidence": [
+        "occurrence=thessalonians2.3.9.3",
+        "text=לָנוּ",
+        "prefixes=Hl",
+        "strong=H8511",
+        "lemma=תָּלָא",
+        "definitions=hang",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 3,
+        "verse": 17,
+        "word_index": 8,
+        "text": "הָאִגְּרוֹת",
+        "strong": "H103",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "שְׁאֵלַת הַ/שָּלוֹם מִיָּדִי אֲנִי פוֹלוֹס וְ/הִיא הָ/אוֹת בְּ/כָל־הָ/אִגְּרוֹת כֵּן אָנֹכִי כֹ/תֵב׃"
+      },
+      "previous_strong": "H103",
+      "new_strong": "H104",
+      "confidence": 0.88,
+      "reason": "הָאִגְּרוֹת means the letters/epistles; H104 איגרא fits better than H103 gather.",
+      "evidence": [
+        "occurrence=thessalonians2.3.17.8",
+        "text=הָאִגְּרוֹת",
+        "prefixes=Hd",
+        "strong=H103",
+        "lemma=אָגַר",
+        "definitions=gather",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 2,
+        "verse": 2,
+        "word_index": 11,
+        "text": "וָישֶׁר׃",
+        "strong": "H4252",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בְּ/עַד הַ/מְּלָכִים וְ/כָל־הַ/שַּׁלִּיטִים לְ/מַעַן נִחְיֶה חַיֵּי הַ/שְׁקֵט וָ/בֶ/טַח בְּ/כָל־חֲסִידוּת וָ/ישֶׁר׃"
+      },
+      "previous_strong": "H4252",
+      "new_strong": "H3476",
+      "confidence": 0.91,
+      "reason": "וָישֶׁר means and uprightness/propriety; H3476 ישר fits, while H4252 is unrelated.",
+      "evidence": [
+        "occurrence=timothy1.2.2.11",
+        "text=וָישֶׁר׃",
+        "prefixes=Hc",
+        "strong=H4252",
+        "lemma=מַחֲלָף",
+        "definitions=knife",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 2,
+        "verse": 7,
+        "word_index": 4,
+        "text": "לְכָרוֹז",
+        "strong": "H3666",
+        "prefixes": [
+          "Hl",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר אֲנִי הָ/פְקַדְתִּי לָהּ לְ/כָ/רוֹז וּ/לְ/שָׁלִיחַ אֱמֶת אֲנִי אֹמֵר בַּ/מָּשִׁיחַ וְ/לֹא אֲשַׁקֵּר מוֹרֵה הַ/גּוֹיִם בֶּ/אֱמוּנָה וּ/בֶ/אֱמֶת׃"
+      },
+      "previous_strong": "H3666",
+      "new_strong": "H3744",
+      "confidence": 0.9,
+      "reason": "לְכָרוֹז means as/for a herald; H3744 כרוז fits, while H3666 is unrelated.",
+      "evidence": [
+        "occurrence=timothy1.2.7.4",
+        "text=לְכָרוֹז",
+        "prefixes=Hl,Hk",
+        "strong=H3666",
+        "lemma=כִּנְעָה",
+        "definitions=bundle | pack",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 2,
+        "verse": 8,
+        "word_index": 11,
+        "text": "וּמָדוֹן׃",
+        "strong": "Hc/H4066",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן רְצוֹנִי שֶׁיִּתְפַּלְלוּ הָ/אֲנָשִׁים בְּ/כָל־מָקוֹם וְ/יִשְׂאוּ יְדֵיהֶם קֹדֶשׁ בְּ/לִי־כַ/עַס וּ/מָדוֹן׃"
+      },
+      "previous_strong": "Hc/H4066",
+      "new_strong": "H4066",
+      "confidence": 0.9,
+      "reason": "וּמָדוֹן means and strife/contention; H4066 is correct.",
+      "evidence": [
+        "occurrence=timothy1.2.8.11",
+        "text=וּמָדוֹן׃",
+        "prefixes=Hc",
+        "strong=H4066",
+        "lemma=מָדוֹן",
+        "definitions=strife | contention | strife | contention | object of contention",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 2,
+        "verse": 9,
+        "word_index": 16,
+        "text": "בִפְנִינִים",
+        "strong": "H6443",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כֵן גַּם־הַ/נָּשִׁים תִּתְיַפֶּינָה בְּ/תִלְבּשֶׁת נָאָה עִם־בּ/שֶׁת פָּנִים וּ/צְנִיעוּת לֹא בְּ/מַחְלְפוֹת הָ/רֹאשׁ לֹא בְ/זָהָב לֹא בִ/פְנִינִים וְ/לֹא בְּ/מַלְבּוּשִׁים יְקָרִים׃"
+      },
+      "previous_strong": "H6443",
+      "new_strong": "H6443",
+      "confidence": 0.9,
+      "reason": "בִפְנִינִים means with pearls; H6443 is retained and needs definition coverage.",
+      "evidence": [
+        "occurrence=timothy1.2.9.16",
+        "text=בִפְנִינִים",
+        "prefixes=Hb",
+        "strong=H6443",
+        "lemma=פָּנִין",
+        "definitions=none",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 2,
+        "verse": 11,
+        "word_index": 2,
+        "text": "דּוּמָם",
+        "strong": "H1748",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הָ/אִשָּׁה תִּלְמַד דּוּמָם בְּ/כָל־הַ/כְנָעָה׃"
+      },
+      "previous_strong": "H1748",
+      "new_strong": "H1748",
+      "confidence": 0.9,
+      "reason": "דּוּמָם means silently/in silence; H1748 is correct.",
+      "evidence": [
+        "occurrence=timothy1.2.11.2",
+        "text=דּוּמָם",
+        "prefixes=none",
+        "strong=H1748",
+        "lemma=דּוּמָם",
+        "definitions=silence | stone of silence | dumb stone | in silence | silently",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 2,
+        "verse": 14,
+        "word_index": 2,
+        "text": "נִפְתָּה",
+        "strong": "H6601",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אָדָם לֹא נִפְתָּה כִּי הָ/אִשָּׁה שָׁמְעָה לְ/קוֹל הַ/מַּשִּׁיא וַ/תָּבֹא לִ/ידֵי עֲבֵרָה׃"
+      },
+      "previous_strong": "H6601",
+      "new_strong": "H6601",
+      "confidence": 0.9,
+      "reason": "נִפְתָּה means was deceived/enticed; H6601 is correct.",
+      "evidence": [
+        "occurrence=timothy1.2.14.2",
+        "text=נִפְתָּה",
+        "prefixes=none",
+        "strong=H6601",
+        "lemma=פָּתָה",
+        "definitions=be spacious | wide | open | be simple",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 3,
+        "verse": 7,
+        "word_index": 13,
+        "text": "הַמַּשְׂטִין׃",
+        "strong": "H5120",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הוּא גַם־צָרִיךְ לְ/שֵׁם טוֹב בְּ/פִי אֵלֶּה אֲשֶׁר בַּ/חוּץ פֶּן־יִפֹּל בְּ/חֶרְפָּה וּ/בְ/מוֹקֵשׁ הַ/מַּשְׂטִין׃"
+      },
+      "previous_strong": "H5120",
+      "new_strong": "H7853",
+      "confidence": 0.9,
+      "reason": "הַמַּשְׂטִין means the adversary/accuser; H7853 שטן fits, while H5120 is unrelated.",
+      "evidence": [
+        "occurrence=timothy1.3.7.13",
+        "text=הַמַּשְׂטִין׃",
+        "prefixes=Hd",
+        "strong=H5120",
+        "lemma=נוּט",
+        "definitions=dangle | shake",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 4,
+        "verse": 7,
+        "word_index": 1,
+        "text": "הִתְרַחֵק",
+        "strong": "H8625",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ הִתְרַחֵק מֵהַגָּדוֹת פְּסוּלוֹת וּ/בָ/לוֹת וְ/הַרְגֵּל עַצְמְךָ בַּ/חֲסִידוּת׃"
+      },
+      "previous_strong": "H8625",
+      "new_strong": "H7368",
+      "confidence": 0.91,
+      "reason": "הִתְרַחֵק means keep away/distance yourself; H7368 רחק fits, while H8625 is unrelated.",
+      "evidence": [
+        "occurrence=timothy1.4.7.1",
+        "text=הִתְרַחֵק",
+        "prefixes=none",
+        "strong=H8625",
+        "lemma=תְּקַל",
+        "definitions=shekel | weigh",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 4,
+        "verse": 10,
+        "word_index": 4,
+        "text": "יְגֵעִים",
+        "strong": "H3023",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי לָ/זֹאת אֲנַחְנוּ גַּם־יְגֵעִים גַּם־נֹשְׂאִים חֶרְפָּה עַל־אֲשֶׁר ה/וֹחַלְנוּ לֵ/אלֹהִים חַיִּים שֶׁהוּא הַ/מּוֹשִׁיעַ לְ/כָל־הָ/אָדָם וּ/בְ/יוֹתֵר לַ/מַּאֲמִינִים׃"
+      },
+      "previous_strong": "H3023",
+      "new_strong": "H3023",
+      "confidence": 0.9,
+      "reason": "יְגֵעִים means weary/laboring; H3023 is correct.",
+      "evidence": [
+        "occurrence=timothy1.4.10.4",
+        "text=יְגֵעִים",
+        "prefixes=none",
+        "strong=H3023",
+        "lemma=יָגֵעַ",
+        "definitions=weary | wearisome",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 5,
+        "verse": 5,
+        "word_index": 8,
+        "text": "מִבְטַחָהּ",
+        "strong": "H4009",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל הָ/אַלְמָנָה בֶ/אֱמֶת אֲשֶׁר נִשְׁאֲרָה יְחִידָה שָׂמָה אֱלֹהִים מִבְטַחָהּ וּ/מַתְמֶדֶת בִּ/תְפִלּוֹת וּ/בִ/תְחִנּוֹת לַ/יְלָה וְ/יוֹמָם׃"
+      },
+      "previous_strong": "H4009",
+      "new_strong": "H4009",
+      "confidence": 0.9,
+      "reason": "מִבְטַחָהּ means her confidence/trust; H4009 is correct.",
+      "evidence": [
+        "occurrence=timothy1.5.5.8",
+        "text=מִבְטַחָהּ",
+        "prefixes=none",
+        "strong=H4009",
+        "lemma=מִבְטָח",
+        "definitions=confidence | the act | the object | security.",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 5,
+        "verse": 11,
+        "word_index": 12,
+        "text": "חשְׁקוֹת",
+        "strong": "H2836",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל הָ/אַלְמָנוֹת הַ/צְּעִירוֹת אַל־תְּקַבֵּל כִּי בְּ/הַטּוֹת יִצְרָן אֶת־לִ/בָּן מִן־הַ/מָּשִׁיחַ חשְׁקוֹת הֵן לִ/הְ/יוֹת לְ/אִישׁ׃"
+      },
+      "previous_strong": "H2836",
+      "new_strong": "H2836",
+      "confidence": 0.9,
+      "reason": "חשְׁקוֹת means desires/attachments; H2836 is correct.",
+      "evidence": [
+        "occurrence=timothy1.5.11.12",
+        "text=חשְׁקוֹת",
+        "prefixes=none",
+        "strong=H2836",
+        "lemma=חָשַׁק",
+        "definitions=be attached to | love",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 6,
+        "verse": 3,
+        "word_index": 8,
+        "text": "הַבְּרִיאִים",
+        "strong": "H6458",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הָ/אִישׁ אֲשֶׁר יוֹרֶה תּוֹרָה אַחֶרֶת וְ/לֹא יַעֲמֹד בַּ/דְּבָרִים הַ/בְּרִיאִים שֶׁל־אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ וּ/בְ/לֶקַח הַ/חֲסִידוּת׃"
+      },
+      "previous_strong": "H6458",
+      "new_strong": "H1277",
+      "confidence": 0.92,
+      "reason": "הַבְּרִיאִים means sound/healthy; H1277 בריא fits, while H6458 carve is unrelated.",
+      "evidence": [
+        "occurrence=timothy1.6.3.8",
+        "text=הַבְּרִיאִים",
+        "prefixes=Hd",
+        "strong=H6458",
+        "lemma=פָּסַל",
+        "definitions=hew | hew into shape",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 6,
+        "verse": 4,
+        "word_index": 1,
+        "text": "עֻפְּלָה",
+        "strong": "H6075",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "נַפְשׁוֹ עֻפְּלָה וְ/לֹא יָדַע מְאוּמָה כִּי אִם־חֹלֶה הוּא בִּ/שְׁאֵלוֹת וּ/מַחֲלֹקוֹת מִלִּים הַ/מְּבִיאוֹת לִ/ידֵי קִנְאָה וּ/מְרִיבָה וְ/גִדּוּפִים וַ/חֲשָׁד רָע׃"
+      },
+      "previous_strong": "H6075",
+      "new_strong": "H6075",
+      "confidence": 0.9,
+      "reason": "עֻפְּלָה means swollen/puffed up; H6075 is retained for the swelling/root sense.",
+      "evidence": [
+        "occurrence=timothy1.6.4.1",
+        "text=עֻפְּלָה",
+        "prefixes=none",
+        "strong=H6075",
+        "lemma=עָפַל",
+        "definitions=swell",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 6,
+        "verse": 4,
+        "word_index": 12,
+        "text": "הַמְּבִיאוֹת",
+        "strong": "H1675",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "נַפְשׁוֹ עֻפְּלָה וְ/לֹא יָדַע מְאוּמָה כִּי אִם־חֹלֶה הוּא בִּ/שְׁאֵלוֹת וּ/מַחֲלֹקוֹת מִלִּים הַ/מְּבִיאוֹת לִ/ידֵי קִנְאָה וּ/מְרִיבָה וְ/גִדּוּפִים וַ/חֲשָׁד רָע׃"
+      },
+      "previous_strong": "H1675",
+      "new_strong": "H935",
+      "confidence": 0.88,
+      "reason": "הַמְּבִיאוֹת means the things bringing/leading to; H935 בוא fits, while H1675 is unrelated.",
+      "evidence": [
+        "occurrence=timothy1.6.4.12",
+        "text=הַמְּבִיאוֹת",
+        "prefixes=Hd",
+        "strong=H1675",
+        "lemma=דָּאָה",
+        "definitions=fly swiftly | dart through",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 6,
+        "verse": 20,
+        "word_index": 4,
+        "text": "הַפִּקָּדוֹן",
+        "strong": "Hd/H6487",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַתָּה טִימוֹתִיּוֹס שְׁמֹר אֶת־הַ/פִּקָּדוֹן וְ/הִתְרַחֵק מִדִּבְרֵי הֶבֶל הַ/פְּסוּלִים וּ/מִן־וִ/כּ/וּחֵי הַמַּדָּע הַ/נִּקְרָא כֵן בְּ/שָׁקֶר׃"
+      },
+      "previous_strong": "Hd/H6487",
+      "new_strong": "H6487",
+      "confidence": 0.9,
+      "reason": "הַפִּקָּדוֹן means the deposit/entrusted thing; H6487 is correct.",
+      "evidence": [
+        "occurrence=timothy1.6.20.4",
+        "text=הַפִּקָּדוֹן",
+        "prefixes=Hd",
+        "strong=H6487",
+        "lemma=פִּקָּדוֹן",
+        "definitions=deposit | store",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy2",
+        "chapter": 2,
+        "verse": 17,
+        "word_index": 1,
+        "text": "כְּרָקָב",
+        "strong": "Hk/H7538",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/שִׂיחָתָם כְּ/רָקָב תֹּאכַל סָבִיב אֲשֶׁר מֵהֶם ה/וּמְנִיּוֹס וּ/פִילִיטוֹס׃"
+      },
+      "previous_strong": "Hk/H7538",
+      "new_strong": "H7538",
+      "confidence": 0.9,
+      "reason": "כְּרָקָב means like rot/decay; H7538 is correct.",
+      "evidence": [
+        "occurrence=timothy2.2.17.1",
+        "text=כְּרָקָב",
+        "prefixes=Hk",
+        "strong=H7538",
+        "lemma=רָקָב",
+        "definitions=rottenness | decay",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy2",
+        "chapter": 2,
+        "verse": 19,
+        "word_index": 1,
+        "text": "אֵיתָן",
+        "strong": "H387",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ־אֵיתָן הוּא יְסוֹד הָ/אֱלֹהִים וְ/זֶה חוֹתָמוֹ יֹדֵעַ יְהוָֹה אֵת אֲשֶׁר־לוֹ וְ/עוֹד יָסוּר מֵעָוֶל כָּל־הַ/קּוֹרֵא אֶת־שֵׁם הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H387",
+      "new_strong": "H386",
+      "confidence": 0.9,
+      "reason": "אֵיתָן means firm/permanent; H386 has the usable definition, while H387 is an empty duplicate.",
+      "evidence": [
+        "occurrence=timothy2.2.19.1",
+        "text=אֵיתָן",
+        "prefixes=none",
+        "strong=H387",
+        "lemma=אֵיתָן",
+        "definitions=none",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy2",
+        "chapter": 3,
+        "verse": 4,
+        "word_index": 1,
+        "text": "וּפֹחֲזִים",
+        "strong": "Hc/H6348",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מֹסְרִים וּ/פֹחֲזִים וּ/גְבֹהֵי רוּחַ וְ/הֹ/לְכִים אַחֲרֵי תַעֲנוּגִים יוֹתֵר מֵאַחֲרֵי הָ/אֱלֹהִים׃"
+      },
+      "previous_strong": "Hc/H6348",
+      "new_strong": "H6348",
+      "confidence": 0.9,
+      "reason": "וּפֹחֲזִים means reckless/wanton; H6348 is correct.",
+      "evidence": [
+        "occurrence=timothy2.3.4.1",
+        "text=וּפֹחֲזִים",
+        "prefixes=Hc",
+        "strong=H6348",
+        "lemma=פָּחַז",
+        "definitions=be wanton | reckless",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy2",
+        "chapter": 3,
+        "verse": 6,
+        "word_index": 4,
+        "text": "בַּלָּאט",
+        "strong": "Hb/Hl/H3814",
+        "prefixes": [
+          "Hb",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־יֵשׁ בָּ/הֶם הַ/בָּאִים בַּ/לָּ/אט אֶל־הַ/בָּתִּים וְ/שֹׁבִים נָשִׁים טְעוּנוֹת חֲטָאִים וְ/נִתְעוֹת בְּ/תַאֲוֺת שֹׁנוֹת׃"
+      },
+      "previous_strong": "Hb/Hl/H3814",
+      "new_strong": "H3814",
+      "confidence": 0.9,
+      "reason": "בַּלָּאט means secretly/in secrecy; H3814 is correct.",
+      "evidence": [
+        "occurrence=timothy2.3.6.4",
+        "text=בַּלָּאט",
+        "prefixes=Hb,Hl",
+        "strong=H3814",
+        "lemma=לָאט",
+        "definitions=secrecy | mystery | secretly | with their mysteries",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy2",
+        "chapter": 4,
+        "verse": 1,
+        "word_index": 17,
+        "text": "וּבְמַלְכוּתוֹ׃",
+        "strong": "H8191",
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן אֲנִי מֵעִיד בְּךָ נֶגֶד הָ/אֱלֹהִים וְ/נֶגֶד אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ הַבָּא לִ/שְׁפֹּט אֶת־הַ/חַיִּים וְ/אֶת־הַ/מֵּתִים בְּ/ה/וֹפָעָתוֹ וּ/בְ/מַלְכוּתוֹ׃"
+      },
+      "previous_strong": "H8191",
+      "new_strong": "H4438",
+      "confidence": 0.93,
+      "reason": "וּבְמַלְכוּתוֹ means and in his kingdom/reign; H4438 מלכות fits, while H8191 is unrelated.",
+      "evidence": [
+        "occurrence=timothy2.4.1.17",
+        "text=וּבְמַלְכוּתוֹ׃",
+        "prefixes=Hc,Hb",
+        "strong=H8191",
+        "lemma=שַׁעְשֻׁעַ",
+        "definitions=delight",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "timothy2",
+        "chapter": 4,
+        "verse": 2,
+        "word_index": 0,
+        "text": "הַכְרֵז",
+        "strong": "H3194",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הַכְרֵז אֶת־הַ/דָּבָר וְ/הַתְמֵד בֵּ/ין בְּ/עִתּוֹ בֵּ/ין שֶׁלֹּא בְ/עִתּוֹ ה/וֹכַח וּ/גְעַר וְ/הַזְהֵר בְּ/כָל־אֹרֶךְ־רוּחַ וְ/ה/וֹרָאָה׃"
+      },
+      "previous_strong": "H3194",
+      "new_strong": "H7121",
+      "confidence": 0.91,
+      "reason": "הַכְרֵז means proclaim; H7121 קרא fits, while H3194 is unrelated.",
+      "evidence": [
+        "occurrence=timothy2.4.2.0",
+        "text=הַכְרֵז",
+        "prefixes=none",
+        "strong=H3194",
+        "lemma=יֻטָּה",
+        "definitions=none",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 1,
+        "verse": 8,
+        "word_index": 10,
+        "text": "וְכֹבֵשׁ",
+        "strong": "H8581",
+        "prefixes": [
+          "Hc",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־יְהִי מַכְנִיס אֹרְחִים וְ/אֹהֵב טוֹב וְ/צָנוּעַ וְ/צַדִּיק וְ/קָדוֹשׁ וְ/כֹ/בֵשׁ אֶת־יִצְרוֹ׃"
+      },
+      "previous_strong": "H8581",
+      "new_strong": "H3533",
+      "confidence": 0.86,
+      "reason": "וְכֹבֵשׁ means self-controlled/subduing; H3533 כבש fits better than H8581 abomination.",
+      "evidence": [
+        "occurrence=titus.1.8.10",
+        "text=וְכֹבֵשׁ",
+        "prefixes=Hc,Hk",
+        "strong=H8581",
+        "lemma=תַּעָב",
+        "definitions=none",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 1,
+        "verse": 9,
+        "word_index": 9,
+        "text": "בַּלֶּקַח",
+        "strong": "H5620",
+        "prefixes": [
+          "Hb",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מַחֲזִיק בַּ/דָּבָר הַ/נֶּאֱמָן כְּ/פִי הַ/הוֹרָאָה לְ/מַעַן יִהְיֶה בְ/כֹ/חוֹ לְ/הַ/זְהִיר בַּ/לֶּ/קַח הַ/בָּרִיא וּ/לְ/הוֹכִיחַ אֶת־הַ/מְּרִיבִים׃"
+      },
+      "previous_strong": "H5620",
+      "new_strong": "H3948",
+      "confidence": 0.91,
+      "reason": "בַּלֶּקַח means in the teaching/instruction; H3948 לקח fits, while H5620 turn aside is unrelated.",
+      "evidence": [
+        "occurrence=titus.1.9.9",
+        "text=בַּלֶּקַח",
+        "prefixes=Hb,Hl",
+        "strong=H5620",
+        "lemma=סַר",
+        "definitions=stubborn | resentful | sullen | implacable",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 15,
+        "text": "עֲצֵלִים׃",
+        "strong": "H6101",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/כְ/בָר אָמַר אֶחָד מֵהֶם נְבִיאָם אֲשֶׁר בְּ/תוֹכָם בְּ/נֵי קְרֵיטִי כֹּ/זְבִים הֵם מֵעוֹלָם וְ/חַיּוֹת רָעוֹת וּ/כְ/רֵשִׂים עֲצֵלִים׃"
+      },
+      "previous_strong": "H6101",
+      "new_strong": "H6102",
+      "confidence": 0.91,
+      "reason": "עֲצֵלִים means lazy/sluggish; H6102 עצל fits, while H6101 is a verb entry.",
+      "evidence": [
+        "occurrence=titus.1.12.15",
+        "text=עֲצֵלִים׃",
+        "prefixes=none",
+        "strong=H6101",
+        "lemma=עָצַל",
+        "definitions=be sluggish",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 2,
+        "verse": 5,
+        "word_index": 4,
+        "text": "הֲלִיכוֹת",
+        "strong": "Hd/H1979",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לִ/הְיוֹת צְנוּעוֹת וּ/טְהֹרוֹת צוֹפִיּוֹת הֲ/לִיכוֹת בֵּ/יתָן וְ/טֹבוֹת וְ/נִכְנָעוֹת לְ/בַ/עֲלֵיהֶן לְ/מַעַן לֹא־יְחֻלַּל דְּבַר הָ/אֱלֹהִים׃"
+      },
+      "previous_strong": "Hd/H1979",
+      "new_strong": "H1979",
+      "confidence": 0.9,
+      "reason": "הֲלִיכוֹת means ways/conduct; H1979 is correct.",
+      "evidence": [
+        "occurrence=titus.2.5.4",
+        "text=הֲלִיכוֹת",
+        "prefixes=Hd",
+        "strong=H1979",
+        "lemma=הֲלִיכָה",
+        "definitions=a going | way | travelling-company",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 3,
+        "text": "וְלַחֲדֹל",
+        "strong": "H1885",
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/בִלְתִּי גַדֵּף אָדָם וְ/לַ/חֲדֹל מֵרִיב וּ/לְ/הַכְרִיעַ לְ/כַף זְכוּת וּ/לְ/הִתְנַהֵג בְּ/כָל־עֲנָוָה לִ/פְנֵי כָּל־אָדָם׃"
+      },
+      "previous_strong": "H1885",
+      "new_strong": "H2308",
+      "confidence": 0.92,
+      "reason": "וְלַחֲדֹל means and to cease/refrain; H2308 חדל fits, while H1885 Dathan is unrelated.",
+      "evidence": [
+        "occurrence=titus.3.2.3",
+        "text=וְלַחֲדֹל",
+        "prefixes=Hc,Hl",
+        "strong=H1885",
+        "lemma=דָּתָן",
+        "definitions=none",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 3,
+        "verse": 10,
+        "word_index": 8,
+        "text": "שְׂטֵה",
+        "strong": "H7847",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִישׁ הַ/חוֹלֵק עַל־הָ/אֱמוּנָה אִם־הוּכַח פַּעַם וּ/שְׁתָּיִם שְׂטֵה מֵעָלָיו׃"
+      },
+      "previous_strong": "H7847",
+      "new_strong": "H7847",
+      "confidence": 0.9,
+      "reason": "שְׂטֵה means divisive/turned aside; H7847 is correct.",
+      "evidence": [
+        "occurrence=titus.3.10.8",
+        "text=שְׂטֵה",
+        "prefixes=none",
+        "strong=H7847",
+        "lemma=שָׂטָה",
+        "definitions=turn aside",
+        "codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "תעה",
+        "strong": "H8582",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "תעה"
+      },
+      "previous_strong": "H8582",
+      "new_strong": "H8582",
+      "confidence": 0.9,
+      "reason": "H8582 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8582",
+      "hebrew": "תעה",
+      "transliteration_en": "taah",
+      "transliteration_es": "taah",
+      "definition": {
+        "text_en": "err; wander; lead astray.",
+        "text_es": "errar; extraviarse; desviar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "בדל",
+        "strong": "H914",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בדל"
+      },
+      "previous_strong": "H914",
+      "new_strong": "H914",
+      "confidence": 0.9,
+      "reason": "H914 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H914",
+      "hebrew": "בדל",
+      "transliteration_en": "badal",
+      "transliteration_es": "badal",
+      "definition": {
+        "text_en": "separate; divide; set apart.",
+        "text_es": "separar; dividir; apartar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "תלאה",
+        "strong": "H8513",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "תלאה"
+      },
+      "previous_strong": "H8513",
+      "new_strong": "H8513",
+      "confidence": 0.9,
+      "reason": "H8513 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8513",
+      "hebrew": "תלאה",
+      "transliteration_en": "telaah",
+      "transliteration_es": "telaah",
+      "definition": {
+        "text_en": "toil; weariness; hardship.",
+        "text_es": "fatiga; cansancio; dificultad.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "אגרא",
+        "strong": "H104",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אגרא"
+      },
+      "previous_strong": "H104",
+      "new_strong": "H104",
+      "confidence": 0.9,
+      "reason": "H104 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H104",
+      "hebrew": "אגרא",
+      "transliteration_en": "iggera",
+      "transliteration_es": "igra",
+      "definition": {
+        "text_en": "letter; epistle; written message.",
+        "text_es": "carta; epístola; mensaje escrito.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "ישר",
+        "strong": "H3476",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "ישר"
+      },
+      "previous_strong": "H3476",
+      "new_strong": "H3476",
+      "confidence": 0.9,
+      "reason": "H3476 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3476",
+      "hebrew": "ישר",
+      "transliteration_en": "yosher",
+      "transliteration_es": "yosher",
+      "definition": {
+        "text_en": "uprightness; straightness; rightness.",
+        "text_es": "rectitud; derechura; justicia.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "כרוז",
+        "strong": "H3744",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כרוז"
+      },
+      "previous_strong": "H3744",
+      "new_strong": "H3744",
+      "confidence": 0.9,
+      "reason": "H3744 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3744",
+      "hebrew": "כרוז",
+      "transliteration_en": "karoz",
+      "transliteration_es": "karoz",
+      "definition": {
+        "text_en": "herald; proclaimer.",
+        "text_es": "heraldo; proclamador.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "מדון",
+        "strong": "H4066",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מדון"
+      },
+      "previous_strong": "H4066",
+      "new_strong": "H4066",
+      "confidence": 0.9,
+      "reason": "H4066 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4066",
+      "hebrew": "מדון",
+      "transliteration_en": "madon",
+      "transliteration_es": "madon",
+      "definition": {
+        "text_en": "strife; contention.",
+        "text_es": "contienda; disputa.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "פנין",
+        "strong": "H6443",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פנין"
+      },
+      "previous_strong": "H6443",
+      "new_strong": "H6443",
+      "confidence": 0.9,
+      "reason": "H6443 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6443",
+      "hebrew": "פנין",
+      "transliteration_en": "penin",
+      "transliteration_es": "penin",
+      "definition": {
+        "text_en": "pearl; precious coral or jewel.",
+        "text_es": "perla; coral precioso o joya.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "שטן",
+        "strong": "H7853",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שטן"
+      },
+      "previous_strong": "H7853",
+      "new_strong": "H7853",
+      "confidence": 0.9,
+      "reason": "H7853 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7853",
+      "hebrew": "שטן",
+      "transliteration_en": "satan",
+      "transliteration_es": "satan",
+      "definition": {
+        "text_en": "act as adversary; accuse; oppose.",
+        "text_es": "actuar como adversario; acusar; oponerse.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "רחק",
+        "strong": "H7368",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "רחק"
+      },
+      "previous_strong": "H7368",
+      "new_strong": "H7368",
+      "confidence": 0.9,
+      "reason": "H7368 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7368",
+      "hebrew": "רחק",
+      "transliteration_en": "rachaq",
+      "transliteration_es": "rajaq",
+      "definition": {
+        "text_en": "be far; distance oneself; keep away.",
+        "text_es": "estar lejos; distanciarse; mantenerse apartado.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "יגע",
+        "strong": "H3023",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "יגע"
+      },
+      "previous_strong": "H3023",
+      "new_strong": "H3023",
+      "confidence": 0.9,
+      "reason": "H3023 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3023",
+      "hebrew": "יגע",
+      "transliteration_en": "yag ea",
+      "transliteration_es": "yaguea",
+      "definition": {
+        "text_en": "weary; laboring; wearisome.",
+        "text_es": "cansado; trabajador; fatigoso.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "מבטח",
+        "strong": "H4009",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מבטח"
+      },
+      "previous_strong": "H4009",
+      "new_strong": "H4009",
+      "confidence": 0.9,
+      "reason": "H4009 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4009",
+      "hebrew": "מבטח",
+      "transliteration_en": "mivtach",
+      "transliteration_es": "mivtaj",
+      "definition": {
+        "text_en": "confidence; trust; security.",
+        "text_es": "confianza; seguridad; refugio.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "חשק",
+        "strong": "H2836",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "חשק"
+      },
+      "previous_strong": "H2836",
+      "new_strong": "H2836",
+      "confidence": 0.9,
+      "reason": "H2836 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2836",
+      "hebrew": "חשק",
+      "transliteration_en": "chashaq",
+      "transliteration_es": "jashaq",
+      "definition": {
+        "text_en": "desire; be attached to; love.",
+        "text_es": "desear; apegarse; amar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "בריא",
+        "strong": "H1277",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בריא"
+      },
+      "previous_strong": "H1277",
+      "new_strong": "H1277",
+      "confidence": 0.9,
+      "reason": "H1277 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1277",
+      "hebrew": "בריא",
+      "transliteration_en": "bari",
+      "transliteration_es": "bari",
+      "definition": {
+        "text_en": "healthy; sound; whole.",
+        "text_es": "sano; saludable; íntegro.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "עפל",
+        "strong": "H6075",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עפל"
+      },
+      "previous_strong": "H6075",
+      "new_strong": "H6075",
+      "confidence": 0.9,
+      "reason": "H6075 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6075",
+      "hebrew": "עפל",
+      "transliteration_en": "aphal",
+      "transliteration_es": "afal",
+      "definition": {
+        "text_en": "swell; be puffed up.",
+        "text_es": "hincharse; ensoberbecerse.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "פקדון",
+        "strong": "H6487",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פקדון"
+      },
+      "previous_strong": "H6487",
+      "new_strong": "H6487",
+      "confidence": 0.9,
+      "reason": "H6487 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6487",
+      "hebrew": "פקדון",
+      "transliteration_en": "piqqadon",
+      "transliteration_es": "pikadon",
+      "definition": {
+        "text_en": "deposit; entrusted thing; store.",
+        "text_es": "depósito; cosa encomendada; reserva.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "רקב",
+        "strong": "H7538",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "רקב"
+      },
+      "previous_strong": "H7538",
+      "new_strong": "H7538",
+      "confidence": 0.9,
+      "reason": "H7538 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7538",
+      "hebrew": "רקב",
+      "transliteration_en": "raqav",
+      "transliteration_es": "rakav",
+      "definition": {
+        "text_en": "rottenness; decay.",
+        "text_es": "podredumbre; corrupción.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "איתן",
+        "strong": "H386",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "איתן"
+      },
+      "previous_strong": "H386",
+      "new_strong": "H386",
+      "confidence": 0.9,
+      "reason": "H386 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H386",
+      "hebrew": "איתן",
+      "transliteration_en": "ethan",
+      "transliteration_es": "etan",
+      "definition": {
+        "text_en": "firm; permanent; enduring.",
+        "text_es": "firme; permanente; duradero.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "פחז",
+        "strong": "H6348",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פחז"
+      },
+      "previous_strong": "H6348",
+      "new_strong": "H6348",
+      "confidence": 0.9,
+      "reason": "H6348 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6348",
+      "hebrew": "פחז",
+      "transliteration_en": "pachaz",
+      "transliteration_es": "pajaz",
+      "definition": {
+        "text_en": "reckless; wanton; unstable.",
+        "text_es": "precipitado; desenfrenado; inestable.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "לאט",
+        "strong": "H3814",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לאט"
+      },
+      "previous_strong": "H3814",
+      "new_strong": "H3814",
+      "confidence": 0.9,
+      "reason": "H3814 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3814",
+      "hebrew": "לאט",
+      "transliteration_en": "lat",
+      "transliteration_es": "lat",
+      "definition": {
+        "text_en": "secretly; secrecy; hidden manner.",
+        "text_es": "secretamente; secreto; de manera oculta.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "מלכות",
+        "strong": "H4438",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מלכות"
+      },
+      "previous_strong": "H4438",
+      "new_strong": "H4438",
+      "confidence": 0.9,
+      "reason": "H4438 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4438",
+      "hebrew": "מלכות",
+      "transliteration_en": "malkuth",
+      "transliteration_es": "malkut",
+      "definition": {
+        "text_en": "kingdom; reign; royal power.",
+        "text_es": "reino; reinado; poder real.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "קרא",
+        "strong": "H7121",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "קרא"
+      },
+      "previous_strong": "H7121",
+      "new_strong": "H7121",
+      "confidence": 0.9,
+      "reason": "H7121 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7121",
+      "hebrew": "קרא",
+      "transliteration_en": "qara",
+      "transliteration_es": "kara",
+      "definition": {
+        "text_en": "call; proclaim; read.",
+        "text_es": "llamar; proclamar; leer.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "כבש",
+        "strong": "H3533",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כבש"
+      },
+      "previous_strong": "H3533",
+      "new_strong": "H3533",
+      "confidence": 0.9,
+      "reason": "H3533 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3533",
+      "hebrew": "כבש",
+      "transliteration_en": "kavash",
+      "transliteration_es": "kavash",
+      "definition": {
+        "text_en": "subdue; bring into control.",
+        "text_es": "someter; poner bajo control.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "לקח",
+        "strong": "H3948",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לקח"
+      },
+      "previous_strong": "H3948",
+      "new_strong": "H3948",
+      "confidence": 0.9,
+      "reason": "H3948 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3948",
+      "hebrew": "לקח",
+      "transliteration_en": "leqach",
+      "transliteration_es": "lekaj",
+      "definition": {
+        "text_en": "teaching; instruction; what is received.",
+        "text_es": "enseñanza; instrucción; lo recibido.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "עצל",
+        "strong": "H6102",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עצל"
+      },
+      "previous_strong": "H6102",
+      "new_strong": "H6102",
+      "confidence": 0.9,
+      "reason": "H6102 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6102",
+      "hebrew": "עצל",
+      "transliteration_en": "atsel",
+      "transliteration_es": "atsel",
+      "definition": {
+        "text_en": "lazy; sluggish.",
+        "text_es": "perezoso; indolente.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "הליכה",
+        "strong": "H1979",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הליכה"
+      },
+      "previous_strong": "H1979",
+      "new_strong": "H1979",
+      "confidence": 0.9,
+      "reason": "H1979 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1979",
+      "hebrew": "הליכה",
+      "transliteration_en": "halikhah",
+      "transliteration_es": "halijah",
+      "definition": {
+        "text_en": "way; conduct; going.",
+        "text_es": "camino; conducta; andar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "חדל",
+        "strong": "H2308",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "חדל"
+      },
+      "previous_strong": "H2308",
+      "new_strong": "H2308",
+      "confidence": 0.9,
+      "reason": "H2308 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2308",
+      "hebrew": "חדל",
+      "transliteration_en": "chadal",
+      "transliteration_es": "jadal",
+      "definition": {
+        "text_en": "cease; refrain; stop.",
+        "text_es": "cesar; abstenerse; dejar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "שטה",
+        "strong": "H7847",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שטה"
+      },
+      "previous_strong": "H7847",
+      "new_strong": "H7847",
+      "confidence": 0.9,
+      "reason": "H7847 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0059"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7847",
+      "hebrew": "שטה",
+      "transliteration_en": "satah",
+      "transliteration_es": "satah",
+      "definition": {
+        "text_en": "turn aside; deviate.",
+        "text_es": "desviarse; apartarse.",
+        "source": "delitzsch_review"
+      }
+    }
+  ]
+}

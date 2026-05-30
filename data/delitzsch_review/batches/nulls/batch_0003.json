@@ -1,0 +1,1479 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:26.116989+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 19,
+        "verse": 9,
+        "word_index": 27,
+        "text": "טוּרְנוּס׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ מִקְצָתָם הִקְשׁוּ אֶת־לְ/בָ/בָם וְ/לֹא הֶ/אֱמִינוּ וַ/יְדַבְּרוּ סָרָה עַל־הַ/דֶּרֶךְ הַזֶּה לִ/פְנֵי הַ/קָּהָל וַ/יָּסַר מֵהֶם וַ/יַּבְדֵּל מִתּוֹכָם אֶת־הַ/תַּלְמִידִים וַ/יְדַבֵּר אִתָּם יוֹם יוֹם בְּ/בֵית הַ/מִּדְרָשׁ שֶׁל־טוּרְנוּס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.97,
+      "reason": "טורנוס is Delitzsch transliteration of NT Tyrannus; no Hebrew Strong entry is reliable for this Greek proper name.",
+      "evidence": [
+        "Acts 19:9 school/lecture hall of Tyrannus context",
+        "proper name transliteration; create custom dictionary entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0042",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0042",
+      "definition": {
+        "text_en": "Tyrannus; owner or teacher associated with the lecture hall in Ephesus where Paul taught."
+      },
+      "hebrew": "טורנוס",
+      "transliteration_en": "Turnus",
+      "transliteration_es": "Turnus"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 19,
+        "verse": 26,
+        "word_index": 23,
+        "text": "הַנַּעֲשִׂים",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַתֶּם רֹאִים וְ/שֹׁמְעִים אֲשֶׁר לֹא בְ/אֶפְסוֹס לְ/בַ/דָּהּ כִּי־גַם כִּ/מְעַט בְּ/אַסְיָא כֻ/לָּהּ זֶה פוֹלוֹס פִּתָּה וְ/הִדִּיחַ הֲ/מוֹן עַם־רָב לֵ/אמֹר לֹא־אֱלֹהִים אֵלֶּה הַ/נַּעֲשִׂים בְּ/יָדָיִם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "הנעשים is a Niphal/passive participial form from עשה, “made/done.”",
+      "evidence": [
+        "context: not gods, the ones made by hands",
+        "local lexicon H6213 עשה = do/make"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6213",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 20,
+        "verse": 4,
+        "word_index": 13,
+        "text": "הַדַּרְבִי",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּלְכוּ אִתּוֹ עַד לְ/אַסְיָא סוֹפַטְרוֹס בֶּן־פּוּרוֹס הַ/בְּרוֹאִי וּ/מִן־הַ/תַּסְלוֹנִיקִים אֲרִסְטַרְכוֹס וּ/סְקוֹנְדוֹס וְ/גָיוֹס הַ/דַּרְבִי וְ/טִימוֹתִיּוֹס וּ/מִן־אַסְיָא טוּכִיקוֹס וּ/טְרוֹפִימוֹס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.97,
+      "reason": "הדרבי identifies Gaius as the Derbean/from Derbe; no reliable Hebrew Strong entry for the NT place/adjective.",
+      "evidence": [
+        "Acts 20:4 travel companion list",
+        "proper place/adjectival name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0043",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0043",
+      "definition": {
+        "text_en": "Derbe; a city of Lycaonia in Asia Minor."
+      },
+      "hebrew": "דרבי",
+      "transliteration_en": "Derbe",
+      "transliteration_es": "Derbe"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 20,
+        "verse": 15,
+        "word_index": 13,
+        "text": "וַנָּלֶן",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מִשָּׁם יָצָאנוּ בָ/אֳנִיָּה וַ/נִּפְגַּע מִמָּחֳרָת אֶל־מוּל כִּ/יּוֹס וּ/בַ/יּוֹם הַ/שְּׁלִישִׁי עָבַרְנוּ אֶל־סָמוֹס וַ/נָּלֶן בִּ/טְרוֹגוּלְיוֹן וּ/לְ/מָחֳרָתוֹ בָּ/אנוּ אֶל־מִילִיטוֹס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.86,
+      "reason": "ונלן is a later/common Hebrew form for lodging overnight in the travel itinerary; a custom entry avoids forcing an uncertain biblical homograph.",
+      "evidence": [
+        "Acts 20:15 travel sequence: passed to Samos and lodged at Trogyllium",
+        "form corresponds to לון/לן, spend the night"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0044",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0044",
+      "definition": {
+        "text_en": "lodge; spend the night."
+      },
+      "hebrew": "לן",
+      "transliteration_en": "lun",
+      "transliteration_es": "lun"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 20,
+        "verse": 35,
+        "word_index": 21,
+        "text": "מִשֶּׁתִּקָּח׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/כֹּל הֶ/רְאֵיתִי אֶתְכֶם כִּי כֵן עָלֵינוּ לַ/עֲמֹל וְ/לִ/תְמֹךְ אֶת־הַ/חַלָּשִׁים וְ/לִ/זְכֹּר אֶת־דִּבְרֵי הָ/אָדוֹן יֵשׁוּעַ כִּי־הוּא אָמַר טוֹב אֲשֶׁר־תִּתֵּן מִשֶּׁתִּקָּח׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "משתקח means “than to receive/take,” matching לקח take.",
+      "evidence": [
+        "context contrasts giving with receiving",
+        "local lexicon H3947 לקח = take"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3947",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 21,
+        "verse": 1,
+        "word_index": 13,
+        "text": "רוֹדוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כַּ/אֲשֶׁר נִפְרַדְנוּ מֵהֶם וַ/נֵּרֶד בָּ/אֳנִיָּה וַ/נָּבוֹא דֶּרֶךְ יְשָׁרָה אֶל־קוֹס וּ/מִמָּחֳרָת אֶל־רוֹדוֹס וּ/מִשָּׁם אֶל־פַּטָּרָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "רודוס is the NT place name Rhodes; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Acts 21:1 travel route: Cos, Rhodes, Patara",
+        "proper place name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0045",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0045",
+      "definition": {
+        "text_en": "Rhodes; an island in the eastern Mediterranean."
+      },
+      "hebrew": "רודוס",
+      "transliteration_en": "Rhodes",
+      "transliteration_es": "Rhodes"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 21,
+        "verse": 5,
+        "word_index": 21,
+        "text": "בִּרְכֵּינוּ",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי אַחֲרֵי מְלֹאת לָ/נוּ הַ/יָּמִים הָ/אֵלֶּה וַ/נֵּצֵא לָ/לֶכֶת לְ/דַרְכֵּנוּ וַ/יְלַוּוּ אֹתָנוּ כֻּ/לָּם עִם־נְשֵׁיהֶם וְ/עִם־טַפָּם עַד־מִחוּץ לָ/עִיר וַ/נִּכְרַע עַל־בִּ/רְכֵּינוּ עַל־חוֹף הַיָּם וַ/נִּתְפַּלָּל׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ברכינו means “our knees”; the expected Hebrew noun is ברך, but the available Strong mapping was absent here. Use custom noun entry to avoid uncertain homograph behavior.",
+      "evidence": [
+        "context: we knelt on our knees on the shore and prayed",
+        "form ברכינו = our knees"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0046",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0046",
+      "definition": {
+        "text_en": "knee; the part of the leg bent when kneeling."
+      },
+      "hebrew": "ברך",
+      "transliteration_en": "berekh",
+      "transliteration_es": "berekh"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 21,
+        "verse": 11,
+        "word_index": 27,
+        "text": "וְיַסְגִּירֻהוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹא אֶצְלֵנוּ וַ/יִּקַּח אֶת־אֵזוֹר פּוֹלוֹס וַ/יֶּאְסָר־בּוֹ אֶת־יָדָיו וְ/אֶת־רַגְלָיו וַ/יֹּאמֶר כֹּה אָמַר רוּחַ הַ/קֹּדֶשׁ כָּ/כָה יַאַסְרוּ הַ/יְּהוּדִים בִּ/ירוּשָׁלַיִם אֶת־הָ/אִישׁ אֲשֶׁר־לוֹ הָ/אֵזוֹר הַזֶּה וְ/יַסְגִּירֻהוּ בִּ/ידֵי הַ/גּוֹיִם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.84,
+      "reason": "ויסגירהו means “they will hand him over/deliver him up,” a causative/extended sense of סגר.",
+      "evidence": [
+        "context: deliver him into the hands of the Gentiles",
+        "local lexicon H5462 סגר = shut/close, with extended deliver-up sense"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5462",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 21,
+        "verse": 21,
+        "word_index": 13,
+        "text": "מִמּשֶׁה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הֵם שָׁמְעוּ עָלֶיךָ שְׁמוּעָה כִּי תְלַמֵּד אֶת־כָּל־הַ/יְּהוּדִים אֲשֶׁר בְּ/קֶרֶב הַ/גּוֹיִם לָ/סוּר מִמּשֶׁה בְּ/אָמְרְךָ כִּי־אֵין עֲלֵיהֶם לָ/מוּל אֶת־בְּ/נֵיהֶם וְ/לָ/לֶכֶת בְּ/חֻקּוֹת הַ/תּוֹרָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "ממשה is Moses with prefixed מן, “from Moses.”",
+      "evidence": [
+        "context: turning away from Moses",
+        "local lexicon H4872 משה = Moses"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4872",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 22,
+        "verse": 3,
+        "word_index": 15,
+        "text": "דִקְדּוּקֵי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמַר אִישׁ־יְהוּדִי אָנֹכִי נוֹלָד בְּ/טַרְסוֹס אֲשֶׁר בְּ/קִילִיקְיָא וּ/מְגֻדָּל בָּ/עִיר הַ/זֹּאת לְ/רַגְלֵי גַמְלִיאֵל וּ/מְלֻמָּד לְ/פִי דִקְדּוּקֵי תּוֹרַת אֲבוֹתֵינוּ וָ/אֱהִי מְקַנֵּא לֵ/אלֹהִים כְּ/מוֹכֶם כֻּ/לְּ/כֶם הַ/יּוֹם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "דקדוקי means exact/strict details of the ancestral law; this is a later Hebrew noun, so custom entry is clearer than an unrelated biblical code.",
+      "evidence": [
+        "context: according to the strictness/details of the law of our fathers",
+        "later Hebrew דקדוק = precision/detail"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0047",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0047",
+      "definition": {
+        "text_en": "exactness; strict detail or precision."
+      },
+      "hebrew": "דקדוק",
+      "transliteration_en": "diqduq",
+      "transliteration_es": "diqduq"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 22,
+        "verse": 5,
+        "word_index": 21,
+        "text": "וְלַהֲבִיאָם",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כַּ/אֲשֶׁר גַּם־יָעִיד עָלַי הַ/כֹּהֵן הַ/גָּדוֹל וְ/כָל הַ/זְּקֵנִים אֲשֶׁר מֵהֶם לָ/קַחְתִּי מִכְתָּבִים וָ/אֵלֵךְ אֶל־הָ/אַחִים לְ/דַמֶּשֶׂק לֶ/אֱסֹר אַף־אֶת־הַ/נִּמְצָאִים שָׁמָּה וְ/לַ/הֲבִיאָם יְרוּשָׁלַיִם לְ/מַעַן יִוָּסֵרוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.82,
+      "reason": "ולהביאם means “to bring them,” from בוא in causative bring/go in.",
+      "evidence": [
+        "context: bring the bound persons to Jerusalem",
+        "local lexicon H935 בוא = come/go in; Hiphil bring"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H935",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 22,
+        "verse": 28,
+        "word_index": 15,
+        "text": "נוֹלַדְתִּי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן שַׂר הָ/אֶלֶף אֲנִי בְּ/כֶ/סֶף רַב קָנִיתִי לִי מִשְׁפַּט הָ/אֶזְרָחוּת הַ/זֹּאת וַ/יֹּאמֶר פּוֹלוֹס וַ/אֲנִי אַף־נוֹלַדְתִּי בָהּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.93,
+      "reason": "נולדתי means “I was born,” from ילד.",
+      "evidence": [
+        "context: I was born in this citizenship",
+        "local lexicon H3205 ילד = bear/beget"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3205",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 22,
+        "verse": 29,
+        "word_index": 1,
+        "text": "הִרְפּוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אָז הִרְפּוּ מִמֶּנּוּ הָ/אֲנָשִׁים אֲשֶׁר בָּ/אוּ לְ/בָ/דְקוֹ וְ/גַם־שַׂר הָ/אֶלֶף יָרֵא בְּ/דַעְתּוֹ כִּי־רוֹמִי הוּא וְ/הוּא אָסַר אוֹתוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.86,
+      "reason": "הרפו means “they withdrew/let go,” matching רפה relax/let go.",
+      "evidence": [
+        "context: the men about to examine him backed off",
+        "local lexicon H7503 רפה = relax"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7503",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 22,
+        "verse": 30,
+        "word_index": 22,
+        "text": "פּוֹלוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מִמָּחֳרָת בִּ/קֵּשׁ לָ/דַעַת אֶל־נָכוֹן עַל־מֶה שׂטְנִים אוֹתוֹ הַ/יְּהוּדִים וַ/יַּתֵּר מוֹסְרוֹתָיו וַ/יְצַו לְ/הָ/בִיא אֶת־רָאשֵׁי הַ/כֹּהֲנִים וְ/אֶת־כָּל־הַ/סַּנְהֶדְרִין וַ/יּוֹרֶד אֶת־פּוֹלוֹס וַ/יַּעֲמִידֵהוּ בְּ/תוֹכָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פולוס is Paul; reuse existing custom entry.",
+      "evidence": [
+        "same spelling/context as earlier reviewed Paul occurrences",
+        "custom D0024 = Paul"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0024",
+      "definition": {
+        "text_en": "Paul"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 22,
+        "verse": 30,
+        "word_index": 23,
+        "text": "וַיַּעֲמִידֵהוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מִמָּחֳרָת בִּ/קֵּשׁ לָ/דַעַת אֶל־נָכוֹן עַל־מֶה שׂטְנִים אוֹתוֹ הַ/יְּהוּדִים וַ/יַּתֵּר מוֹסְרוֹתָיו וַ/יְצַו לְ/הָ/בִיא אֶת־רָאשֵׁי הַ/כֹּהֲנִים וְ/אֶת־כָּל־הַ/סַּנְהֶדְרִין וַ/יּוֹרֶד אֶת־פּוֹלוֹס וַ/יַּעֲמִידֵהוּ בְּ/תוֹכָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.85,
+      "reason": "ויעמידהו means “he set/placed him standing,” from עמד stand.",
+      "evidence": [
+        "context: brought Paul down and set him among them",
+        "local lexicon H5975 עמד = stand"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5975",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 23,
+        "verse": 21,
+        "word_index": 20,
+        "text": "יַהַרְגוּהוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַתָּה אַל־תִּשְׁמַע לָ/הֶם כִּי אֹרְבִים לוֹ מֵהֶם יוֹתֵר מֵאַרְבָּעִים אִישׁ אֲשֶׁר אָסְרוּ אִסָּר עַל־נַפְשָׁם לְ/בִ/לְתִּי אֲכֹל וּ/שְׁתוֹת בְּ/טֶרֶם יַהַרְגוּהוּ וְ/הֵמָּה עַתָּה עֹמְדִים וּ/מְחַכִּים לְ/הַ/בְטָחָתֶךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "יהרגוהו means “they will kill him,” from הרג.",
+      "evidence": [
+        "context: before they kill him",
+        "local lexicon H2026 הרג = kill/slay"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H2026",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 23,
+        "verse": 21,
+        "word_index": 24,
+        "text": "וּמְחַכִּים",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַתָּה אַל־תִּשְׁמַע לָ/הֶם כִּי אֹרְבִים לוֹ מֵהֶם יוֹתֵר מֵאַרְבָּעִים אִישׁ אֲשֶׁר אָסְרוּ אִסָּר עַל־נַפְשָׁם לְ/בִ/לְתִּי אֲכֹל וּ/שְׁתוֹת בְּ/טֶרֶם יַהַרְגוּהוּ וְ/הֵמָּה עַתָּה עֹמְדִים וּ/מְחַכִּים לְ/הַ/בְטָחָתֶךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ומחכים means “and they are waiting,” from חכה wait.",
+      "evidence": [
+        "context: they are now ready and waiting for your promise",
+        "local lexicon H2442 חכה = wait/await"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H2442",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 24,
+        "verse": 3,
+        "word_index": 21,
+        "text": "פֶלִיקְס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֵת אֲשֶׁר יָשַׁבְנוּ עַל־יָדְךָ בְּ/שָׁלוֹם רָב וַ/אֲשֶׁר נַעֲשֹוּ תַּקָּנוֹת רַבּוֹת לָ/עָם הַזֶּה בְּ/הַ/שְׁגָּחָתֶךָ נְקַבֵּל בְ/כָל־עֵת וּ/בְ/כָל־מָקוֹם בְּ/כָל־תּוֹדָה פֶלִיקְס הָ/אַדִּיר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פליקס is the NT proper name Felix; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Acts 24 address to Felix",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0048",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0048",
+      "definition": {
+        "text_en": "Felix; Roman governor of Judea before whom Paul was tried."
+      },
+      "hebrew": "פליקס",
+      "transliteration_en": "Felix",
+      "transliteration_es": "Felix"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 24,
+        "verse": 22,
+        "word_index": 15,
+        "text": "נוֹדְעוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כִּ/שְׁמֹעַ פֶלִיקְס אֶת־הַ/דְּבָרִים הָ/אֵלֶּה וַ/יְאַחֵר אֶת־דִּינָם לְ/עֵת אַחֶרֶת כִּי עִנְיְנֵי הַ/דֶּרֶךְ הַ/זֹּאת נוֹדְעוּ לוֹ הֵ/יטֵב וַ/יֹּאמֶר בְּ/רֶדֶת אֵלַי ל/וּסִיאַס שַׂר הָ/אֶלֶף אֶשְׁפֹּט עַל־דְּבַרְכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "נודעו means “were known,” from ידע know.",
+      "evidence": [
+        "context: the matters of the Way were known to him well",
+        "local lexicon H3045 ידע = know"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3045",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 24,
+        "verse": 22,
+        "word_index": 21,
+        "text": "לוּסִיאַס",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כִּ/שְׁמֹעַ פֶלִיקְס אֶת־הַ/דְּבָרִים הָ/אֵלֶּה וַ/יְאַחֵר אֶת־דִּינָם לְ/עֵת אַחֶרֶת כִּי עִנְיְנֵי הַ/דֶּרֶךְ הַ/זֹּאת נוֹדְעוּ לוֹ הֵ/יטֵב וַ/יֹּאמֶר בְּ/רֶדֶת אֵלַי ל/וּסִיאַס שַׂר הָ/אֶלֶף אֶשְׁפֹּט עַל־דְּבַרְכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "לוסיאס is the NT personal name Lysias; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Acts 24:22 Roman commander Lysias",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0049",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0049",
+      "definition": {
+        "text_en": "Lysias; Claudius Lysias, the Roman commander in Acts."
+      },
+      "hebrew": "לוסיאס",
+      "transliteration_en": "Lysias",
+      "transliteration_es": "Lysias"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 24,
+        "verse": 25,
+        "word_index": 15,
+        "text": "וְלִכְשֶׁאֶפְנֶה",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כְּ/דַבְּרוֹ עַל־הַ/צֶּדֶק וְ/הַ/פְּרִישׁוּת וְ/עַל־הַ/דִּין הֶ/עָתִיד לָ/ב/וֹא וֶ/יֶּחֱרַד פֶלִיקְס וַ/יַּעַן עַתָּה־זֶה לֵךְ וְ/לִ/כְשֶׁאֶפְנֶה אָשׁוּב לִ/קְרֹא־לָךְ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.8,
+      "reason": "ולכשאפנה means “when I have opportunity/turn aside,” from פנה turn.",
+      "evidence": [
+        "context: go for now; when I have opportunity I will call you",
+        "local lexicon H6437 פנה = turn"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6437",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 1,
+        "word_index": 1,
+        "text": "פֶסְטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹא פֶסְטוֹס אֶל־הַ/מְּדִינָה וַ/יַּעַל אַחֲרֵי שְׁלשֶׁת יָמִים מִקִּסְרִין לִ/ירוּשָׁלָיִם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פסטוס is the NT proper name Festus; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Acts 25 introduction of Festus",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0050",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0050",
+      "definition": {
+        "text_en": "Festus; Porcius Festus, Roman governor of Judea after Felix."
+      },
+      "hebrew": "פסטוס",
+      "transliteration_en": "Festus",
+      "transliteration_es": "Festus"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 3,
+        "word_index": 1,
+        "text": "בוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּפְצְרוּ־בוֹ וַ/יִּשְׁאֲלוּ מִמֶּנּוּ לַ/עֲשׂוֹת חֶסֶד עִמָּהֶם לַ/הֲ/בִיאוֹ יְרוּשָׁלָיִם וְ/הֵמָּה מִתְנַכְּלִים אֹתוֹ לַ/הֲ/מִיתוֹ בַּ/דָּרֶךְ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בו is a pronominal/prepositional form in “they pressed him”; leave unresolved until the project decides how to encode null pronominal forms.",
+      "evidence": [
+        "context: ויפצרו בו = they pressed him",
+        "manual policy case: pronominal ב + suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 4,
+        "word_index": 6,
+        "text": "בְּקִסְרִין",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן אוֹתָם פֶסְטוֹס כִּי־עָצוּר פּוֹלוֹס בְּ/קִסְרִין וְ/כִי גַם־הוּא יָשׁוּב שָׁמָּה בְּ/קָרוֹב׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "בקיסרין is Caesarea with prefixed ב; reuse existing custom entry.",
+      "evidence": [
+        "same place as prior reviewed קיסרין/Caesarea occurrences",
+        "custom D0019 = Caesarea"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0019",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0019",
+      "definition": {
+        "text_en": "Caesarea"
+      },
+      "transliteration_en": "Kaisareia",
+      "transliteration_es": "Kaisareia"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 8,
+        "word_index": 1,
+        "text": "הִצְטַדֵּק",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הוּא הִצְטַדֵּק לֵ/אמֹר לֹא־חָטָאתִי בִ/מְאוּמָה לֹא לְ/דָת הַ/יְּהוּדִים וְ/לֹא לַ/מִּקְדָּשׁ וְ/לֹא לַ/קֵּיסָר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "הצטדק means “he defended/justified himself,” from צדק.",
+      "evidence": [
+        "context: he made his defense, saying I have not sinned",
+        "local lexicon H6663 צדק = be just/righteous"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6663",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 10,
+        "word_index": 1,
+        "text": "פּוֹלוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר פּוֹלוֹס לִ/פְנֵי כִ/סֵּא מִשְׁפַּט הַ/קֵּיסַר אֲנִי עֹמֵד וְ/שָׁם נָכוֹן לִי לְ/הִשָּׁפֵט לֹא הֲ/רֵעֹתִי לַ/יְּהוּדִים כַּ/אֲשֶׁר יָדַעְתָּ הֵ/יטֵב גַּם־אָתָּה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פולוס is Paul; reuse existing custom entry.",
+      "evidence": [
+        "same spelling/context as earlier reviewed Paul occurrences",
+        "custom D0024 = Paul"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0024",
+      "definition": {
+        "text_en": "Paul"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 11,
+        "word_index": 23,
+        "text": "לְהַסְגִּירֵנִי",
+        "strong": null,
+        "prefixes": [
+          "Hl",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אִם־הֲ/רֵעֹתִי וְ/יֶשׁ־בִּי דְּבַר מִשְׁפַּט־מָוֶת בַּל־אֶחְשׂךְ נַפְשִׁי מִמָּוֶת וְ/אִם־אֵין־בִּי מְאוּמָה מִכֹּל אֲשֶׁר הֵם עֹנִים בִּי אִישׁ לֹא יוּכַל לְ/הַ/סְגִּירֵנִי אֶל־יָדָם אֶת־הַ/קֵּיסַר אֲנִי קוֹרֵא לְ/דִינִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.84,
+      "reason": "להסגירני means “to hand me over/deliver me up,” an extended causative sense of סגר.",
+      "evidence": [
+        "context: no one can hand me over to them",
+        "local lexicon H5462 סגר = shut/close, with deliver-up sense"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5462",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 12,
+        "word_index": 1,
+        "text": "פֶסְטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּוָּעֵץ פֶסְטוֹס עִם־יוֹעֲצָיו וַ/יַּעַן אֹתוֹ לֵ/אמֹר אֶת־הַ/קֵּיסַר קָרָאתָ אֶל־הַ/קֵּיסַר תֵּלֵךְ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פסטוס is Festus; reuse custom entry.",
+      "evidence": [
+        "same proper name as Acts 25:1",
+        "custom D0050 = Festus"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0050",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0050",
+      "hebrew": "פסטוס",
+      "transliteration_en": "Festus",
+      "transliteration_es": "Festus",
+      "definition": {
+        "text_en": "Festus; Porcius Festus, Roman governor of Judea after Felix."
+      }
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 13,
+        "word_index": 6,
+        "text": "וּבֶרְנִיקָה",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי אַחֲרֵי יָמִים וַ/יֵּרְדוּ הַ/מֶּלֶךְ אַגְרִפַּס וּ/בֶ/רְנִיקָה אֶל־קִסְרִין לִ/שְׁאֹל לִ/שְׁלוֹם פֶסְטוֹס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "וברניקה is Bernice with conjunction; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Acts 25:13 Agrippa and Bernice visit Festus",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0051",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0051",
+      "definition": {
+        "text_en": "Bernice; member of the Herodian dynasty who visited Festus with Agrippa."
+      },
+      "hebrew": "ברניקה",
+      "transliteration_en": "Bernice",
+      "transliteration_es": "Bernice"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 16,
+        "word_index": 13,
+        "text": "שׂטְנָיו",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וָ/אַעַן אוֹתָם כִּי אֵין מִנְהַג הָ/רוֹמִיִּים לְ/הַ/סְגִּיר אִישׁ לַ/מָּוֶת בְּ/טֶרֶם יַעֲמֹד הַ/נִּשְׂטָן לְ/נֹכַח שׂטְנָיו וְ/נִתַּן־לוֹ מָקוֹם לְ/הִצְטַדֵּק מִן־הַ/שִּׂטְנָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.83,
+      "reason": "שטניו means “his accusers/adversaries,” from שטן adversary/accuse.",
+      "evidence": [
+        "context: the accused stands face to face with his accusers",
+        "local lexicon H7853 שטן = act as adversary"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7853",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 21,
+        "word_index": 1,
+        "text": "פּוֹלוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל פּוֹלוֹס שָׁאַל לְ/הַ/נִּיחוֹ בַ/מִּשְׁמָר עַד־צֵאת מִשְׁפָּטוֹ מִלִּפְנֵי אֲגוּסְטוֹס וָ/אֲצַוֶּה לְ/שָׁמְרוֹ עַד־אֲשֶׁר אֶשְׁלַח אֹתוֹ אֶל־הַ/קֵּיסָר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פולוס is Paul; reuse existing custom entry.",
+      "evidence": [
+        "same spelling/context as earlier reviewed Paul occurrences",
+        "custom D0024 = Paul"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0024",
+      "definition": {
+        "text_en": "Paul"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 22,
+        "word_index": 1,
+        "text": "אַגְרִפַּס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אַגְרִפַּס אֶל־פֶסְטוֹס גַּם־אֲנִי חָפֵץ לִ/שְׁמֹעַ אֶת־הָ/אִישׁ וַ/יֹּאמֶר מָחָר תִּשְׁמָעֶנּוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "אגריפס is Agrippa; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Acts 25:22 Agrippa speaks with Festus",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0052",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0052",
+      "definition": {
+        "text_en": "Agrippa; Herod Agrippa II, ruler who heard Paul before Festus."
+      },
+      "hebrew": "אגריפס",
+      "transliteration_en": "Agrippa",
+      "transliteration_es": "Agrippa"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 23,
+        "word_index": 20,
+        "text": "פּוֹלוֹס׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי מִמָּחֳרָת כְּ/ב/וֹא אַגְרִפַּס וּ/בֶ/רְנִיקָה בְּ/הוֹד גָּדוֹל וַ/יָּבֹאוּ אֶל־אֻלָם הַ/מִּשְׁפָּט הֵמָּה וְ/שָׂרֵי הָ/אֶלֶף וּ/נְגִידֵי הָ/עִיר וַ/יְצַו פֶסְטוֹס וַ/יָּבִיאוּ אֶת־פּוֹלוֹס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פולוס is Paul; reuse existing custom entry.",
+      "evidence": [
+        "same spelling/context as earlier reviewed Paul occurrences",
+        "custom D0024 = Paul"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0024",
+      "definition": {
+        "text_en": "Paul"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 24,
+        "word_index": 1,
+        "text": "פֶסְטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר פֶסְטוֹס אַגְרִפַּס הַ/מֶּלֶךְ וְ/כָל־הָ/אִישִׁים אֲשֶׁר אַתֶּם פֹּה אִתָּנוּ הִנְּכֶם רֹאִים אֶת־הָ/אִישׁ אֲשֶׁר בִּ/גְלָלוֹ פָּנוּ אֵלַי כָּל־הֲ/מוֹן הַ/יְּהוּדִים גַּם־בִּ/ירוּשָׁלַיִם וְ/גַם־פֹּה וַ/יִּצְעֲקוּ כִּי־אֵינוֹ בְ/דִין שֶׁיִּחְיֶה עוֹד׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פסטוס is Festus; reuse custom entry.",
+      "evidence": [
+        "same proper name as Acts 25:1",
+        "custom D0050 = Festus"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0050",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0050",
+      "hebrew": "פסטוס",
+      "transliteration_en": "Festus",
+      "transliteration_es": "Festus",
+      "definition": {
+        "text_en": "Festus; Porcius Festus, Roman governor of Judea after Felix."
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 25,
+        "verse": 24,
+        "word_index": 29,
+        "text": "שֶׁיִּחְיֶה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר פֶסְטוֹס אַגְרִפַּס הַ/מֶּלֶךְ וְ/כָל־הָ/אִישִׁים אֲשֶׁר אַתֶּם פֹּה אִתָּנוּ הִנְּכֶם רֹאִים אֶת־הָ/אִישׁ אֲשֶׁר בִּ/גְלָלוֹ פָּנוּ אֵלַי כָּל־הֲ/מוֹן הַ/יְּהוּדִים גַּם־בִּ/ירוּשָׁלַיִם וְ/גַם־פֹּה וַ/יִּצְעֲקוּ כִּי־אֵינוֹ בְ/דִין שֶׁיִּחְיֶה עוֹד׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "שיחיה means “that he should live,” from חיה live.",
+      "evidence": [
+        "context: they cried that he should no longer live",
+        "local lexicon H2421 חיה = live"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H2421",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 26,
+        "verse": 1,
+        "word_index": 3,
+        "text": "פּוֹלוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אַגְרִפַּס אֶל־פּוֹלוֹס נִתַּן־לְךָ לְ/דַבֵּר בְּ/עַד נַפְשֶׁךָ אָז יִצְטַדֵּק פּוֹלוֹס וַ/יּוֹשֶׁט אֶת־יָדוֹ וַ/יֹּאמַר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פולוס is Paul; reuse existing custom entry.",
+      "evidence": [
+        "same spelling/context as earlier reviewed Paul occurrences",
+        "custom D0024 = Paul"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0024",
+      "definition": {
+        "text_en": "Paul"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 26,
+        "verse": 5,
+        "word_index": 9,
+        "text": "הִתְנַהַגְתִּי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי מִיָּמִים רִאשׁוֹנִים יְדָעוּנִי אִם־יִרְצוּ לְ/הָעִיד כִּי כְ/פָרוּשׁ הִתְנַהַגְתִּי עַל־פִּי הַכַּת הַ/מַּקְפֶּדֶת בְּ/יוֹתֵר בַּ/עֲבוֹדָתֵנוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.78,
+      "reason": "התנהגתי means “I conducted myself/lived,” semantically tied to הלך walk/go in a conduct-of-life idiom.",
+      "evidence": [
+        "context: I lived/conducted myself as a Pharisee",
+        "local lexicon H1980 הלך = go/walk; Hebrew idiom for conduct"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1980",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 26,
+        "verse": 7,
+        "word_index": 3,
+        "text": "שְׁבָטֵינוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲשֶׁר שְׁנֵים עָשָׂר שְׁבָטֵינוּ מְיַחֲלִים לְ/הַגִּיעַ לָהּ בְּ/עָבְדָם אֶת־יְהוָֹה תָּמִיד יוֹמָם וָ/לָ/יְלָה עַל־דְּבַר הַ/תִּקְוָה הַ/זֹּאת אַגְרִפַּס הַ/מֶּלֶךְ שׂטְנִים אוֹתִי הַ/יְּהוּדִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "שבטינו means “our tribes,” from שבט tribe.",
+      "evidence": [
+        "context: our twelve tribes",
+        "local lexicon H7626 שבט = tribe/staff"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7626",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 26,
+        "verse": 7,
+        "word_index": 17,
+        "text": "אַגְרִפַּס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲשֶׁר שְׁנֵים עָשָׂר שְׁבָטֵינוּ מְיַחֲלִים לְ/הַגִּיעַ לָהּ בְּ/עָבְדָם אֶת־יְהוָֹה תָּמִיד יוֹמָם וָ/לָ/יְלָה עַל־דְּבַר הַ/תִּקְוָה הַ/זֹּאת אַגְרִפַּס הַ/מֶּלֶךְ שׂטְנִים אוֹתִי הַ/יְּהוּדִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "אגריפס is Agrippa; reuse custom entry.",
+      "evidence": [
+        "same proper name as Acts 25:22",
+        "custom D0052 = Agrippa"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0052",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0052",
+      "hebrew": "אגריפס",
+      "transliteration_en": "Agrippa",
+      "transliteration_es": "Agrippa",
+      "definition": {
+        "text_en": "Agrippa; Herod Agrippa II, ruler who heard Paul before Festus."
+      }
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 26,
+        "verse": 10,
+        "word_index": 17,
+        "text": "הִסְכָּמְתִּי׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כַּ/אֲשֶׁר עָשִׂיתִי בִ/ירוּשָׁלָיִם וְ/גַם־קְדוֹשִׁים רַבִּים אֲנִי הִסְגַּרְתִּי לְ/בָ/תֵּי כְ/לָ/אִים בָּ/רִשְׁיוֹן אֲשֶׁר קִבַּלְתִּי מֵאֵת הַ/כֹּהֲנִים הַ/גְּדוֹלִים וּ/כְ/שֶׁנֶּהֶרְגוּ הִסְכָּמְתִּי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "הסכמתי means “I gave consent/approved”; this is a later Hebrew verb without a reliable biblical Strong equivalent for this sense.",
+      "evidence": [
+        "context: when they were put to death, I gave my vote/consent",
+        "later Hebrew הסכים = agree/consent"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0053",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0053",
+      "definition": {
+        "text_en": "agree; consent; approve."
+      },
+      "hebrew": "הסכים",
+      "transliteration_en": "hiskim",
+      "transliteration_es": "hiskim"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 26,
+        "verse": 11,
+        "word_index": 9,
+        "text": "וָאֶתְהוֹלְלָה",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/כָל־בָּ/תֵּי הַ/כְּנֵסִיּוֹת יִסַּרְתִּי אֹתָם פְּעָמִים רַבּוֹת וַ/אֲנַסְתִּים לְ/גַדֵּף וָ/אֶתְהוֹלְלָה בָּם עַד־מְאֹד וָ/אֶרְדְּפֵם עַד־לֶ/עָרִים אֲשֶׁר חוּצָה לָ/אָרֶץ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.72,
+      "reason": "ואתהוללה means “I raved/acted madly,” related to הלל in the mad/boast/rave semantic field; confidence is lower because local short definition only shows shine.",
+      "evidence": [
+        "context: exceedingly enraged against them",
+        "Biblical root הלל can include boast/rave/mad behavior in derived stems"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1984",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 26,
+        "verse": 14,
+        "word_index": 17,
+        "text": "בַּדָּרְבֹנוֹת׃",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/נִפֹּל כֻּ/לָּ/נוּ אָרְצָה וָ/אֶשְׁמַע קוֹל מִדַּבֵּר אֵלַי בְּ/לָ/שׁוֹן עִבְרִית לֵ/אמֹר שָׁאוּל שָׁאוּל לָ/מָּה תִרְדְּפֵנִי קָשֶׁה לְךָ לִ/בְ/עֹט בַּ/דָּרְבֹנוֹת׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "בדרבנות means “against the goads,” from דרבון goad.",
+      "evidence": [
+        "context: hard for you to kick against the goads",
+        "local lexicon H1861 דרבון"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1861",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 26,
+        "verse": 19,
+        "word_index": 3,
+        "text": "אַגְרִפַּס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עַל־כֵּן הַ/מֶּלֶךְ אַגְרִפַּס לֹא הִמְרֵיתִי אֶת־הַ/מַּרְאֶה אֲשֶׁר רָאִיתִי מִן־הַ/שָּׁמָיִם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "אגריפס is Agrippa; reuse custom entry.",
+      "evidence": [
+        "same proper name as Acts 25:22",
+        "custom D0052 = Agrippa"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0052",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0052",
+      "hebrew": "אגריפס",
+      "transliteration_en": "Agrippa",
+      "transliteration_es": "Agrippa",
+      "definition": {
+        "text_en": "Agrippa; Herod Agrippa II, ruler who heard Paul before Festus."
+      }
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 26,
+        "verse": 28,
+        "word_index": 3,
+        "text": "פּוֹלוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אַגְרִפַּס אֶל־פּוֹלוֹס עוֹד מְעַט וּ/פִתִּיתַנִי לִ/הְ/יוֹת נָצְרִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פולוס is Paul; reuse existing custom entry.",
+      "evidence": [
+        "same spelling/context as earlier reviewed Paul occurrences",
+        "custom D0024 = Paul"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0024",
+      "definition": {
+        "text_en": "Paul"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 26,
+        "verse": 32,
+        "word_index": 3,
+        "text": "פֶסְטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אַגְרִפַּס אֶל־פֶסְטוֹס הָ/אִישׁ הַזֶּה יוּכַל לְ/הִפָּטֵר ל/וּלֵא קָרָא אֶת־הַ/קֵּיסַר לְ/דִינוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פסטוס is Festus; reuse custom entry.",
+      "evidence": [
+        "same proper name as Acts 25:1",
+        "custom D0050 = Festus"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0050",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0050",
+      "hebrew": "פסטוס",
+      "transliteration_en": "Festus",
+      "transliteration_es": "Festus",
+      "definition": {
+        "text_en": "Festus; Porcius Festus, Roman governor of Judea after Felix."
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 28,
+        "verse": 17,
+        "word_index": 24,
+        "text": "אֲסָרוּנִי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי אַחֲרֵי שְׁלשֶׁת יָמִים וַ/יִּקְרָא פוֹלוֹס אֵלָיו אֶת־רָאשֵׁי הַ/יְּהוּדִים וַ/יִּקָּהֲלוּ אֵלָיו וַ/יֹּאמֶר אֲלֵיהֶם אֲנָשִׁים אַחִים אַף כִּי־לֹא מָעַלְתִּי מַעַל בְּ/עַמֵּנוּ וּ/בְ/חֻקּוֹת אֲבוֹתֵינוּ אֲסָרוּנִי בִ/ירוּשָׁלַיִם וַ/יִּמְסְרוּנִי לִ/ידֵי הָ/רוֹמִיִּים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "אסרוני means “they bound/imprisoned me,” from אסר.",
+      "evidence": [
+        "context: I was imprisoned in Jerusalem",
+        "local lexicon H631 אסר = bind/imprison"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H631",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 28,
+        "verse": 17,
+        "word_index": 26,
+        "text": "וַיִּמְסְרוּנִי",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי אַחֲרֵי שְׁלשֶׁת יָמִים וַ/יִּקְרָא פוֹלוֹס אֵלָיו אֶת־רָאשֵׁי הַ/יְּהוּדִים וַ/יִּקָּהֲלוּ אֵלָיו וַ/יֹּאמֶר אֲלֵיהֶם אֲנָשִׁים אַחִים אַף כִּי־לֹא מָעַלְתִּי מַעַל בְּ/עַמֵּנוּ וּ/בְ/חֻקּוֹת אֲבוֹתֵינוּ אֲסָרוּנִי בִ/ירוּשָׁלַיִם וַ/יִּמְסְרוּנִי לִ/ידֵי הָ/רוֹמִיִּים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.84,
+      "reason": "וימסרוני means “they delivered/handed me over,” from נתן in the give/put/deliver semantic field.",
+      "evidence": [
+        "context: they handed me over to the Romans",
+        "local lexicon H5414 נתן = give/put/set"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5414",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 28,
+        "verse": 17,
+        "word_index": 28,
+        "text": "הָרוֹמִיִּים׃",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי אַחֲרֵי שְׁלשֶׁת יָמִים וַ/יִּקְרָא פוֹלוֹס אֵלָיו אֶת־רָאשֵׁי הַ/יְּהוּדִים וַ/יִּקָּהֲלוּ אֵלָיו וַ/יֹּאמֶר אֲלֵיהֶם אֲנָשִׁים אַחִים אַף כִּי־לֹא מָעַלְתִּי מַעַל בְּ/עַמֵּנוּ וּ/בְ/חֻקּוֹת אֲבוֹתֵינוּ אֲסָרוּנִי בִ/ירוּשָׁלַיִם וַ/יִּמְסְרוּנִי לִ/ידֵי הָ/רוֹמִיִּים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "הרומיים means Romans; reuse existing custom entry.",
+      "evidence": [
+        "same custom entry from earlier reviewed Romans occurrence",
+        "custom D0035 = Romans"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0035",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0035",
+      "definition": {
+        "text_en": "Romans"
+      },
+      "transliteration_en": "Romaioi",
+      "transliteration_es": "Romaioi"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 16,
+        "word_index": 19,
+        "text": "וְרָשֻׁיּוֹת",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־בוֹ נִבְרָא כֹּל אֲשֶׁר בַּ/שָּׁמַיִם וַ/אֲשֶׁר בָּ/אָרֶץ כֹּל הַ/נִּרְאֶה וְ/כֹל אֲשֶׁר־אֵינֶנּוּ נִרְאֶה הֵן כִּ/סְאוֹת וּ/מֶמְשָׁלוֹת הֵן שְׂרָרוֹת וְ/רָשֻׁיּוֹת הַכֹּל נִבְרָא עַל־יָדוֹ וּ/לְ/מַעֲנוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ורשויות means “authorities”; later Hebrew/Aramaic רשות is the right semantic match and should be custom rather than forced onto a biblical homograph.",
+      "evidence": [
+        "context lists thrones, dominions, rulers, authorities",
+        "later Hebrew רשות = authority/domain"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0054",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0054",
+      "definition": {
+        "text_en": "authority; dominion; jurisdiction."
+      },
+      "hebrew": "רשות",
+      "transliteration_en": "reshut",
+      "transliteration_es": "reshut"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 11,
+        "text": "לְאַפּוֹלוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/זֹאת אֲנִי אֹמֵר כִּי אִישׁ אִישׁ מִכֶּם זֶה אֹמֵר לְ/פוֹלוֹס וְ/זֶה לְ/אַפּוֹלוֹס וְ/זֶה לְ/כֵ/יפָא וְ/זֶה לַ/מָּשִׁיחַ הִנֵּנִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "לאפולוס is Apollos with prefixed ל; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "1 Corinthians 1:12 party slogan “I am of Apollos”",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0055",
+      "changed_target": "parsed_word_and_custom_definition",
+      "new_strong": "D0055",
+      "definition": {
+        "text_en": "Apollos; an Alexandrian Jewish teacher and early emissary among the assemblies."
+      },
+      "hebrew": "אפולוס",
+      "transliteration_en": "Apollos",
+      "transliteration_es": "Apollos"
+    }
+  ]
+}

@@ -1,0 +1,1830 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.492920+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 6,
+        "word_index": 4,
+        "text": "וַיִּתְמַהְמַהּ",
+        "strong": "H1508",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כְ/שָׁמְעוֹ כִּי חָלָה וַ/יִּתְמַהְמַהּ וַ/יֵּשֶׁב יוֹמַיִם בַּ/מָּקוֹם אֲשֶׁר־הוּא שָׁם׃"
+      },
+      "previous_strong": "H1508",
+      "new_strong": "H4102",
+      "confidence": 0.94,
+      "reason": "וַיִּתְמַהְמַהּ means he delayed/tarried; H4102 מָהַהּ fits, while H1508 is unrelated.",
+      "evidence": [
+        "occurrence=john.11.6.4",
+        "text=וַיִּתְמַהְמַהּ",
+        "prefixes=Hc",
+        "strong=H1508",
+        "lemma=גִּזְרָה",
+        "definitions=cutting | separation",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 9,
+        "word_index": 12,
+        "text": "יִכָּשֵׁל",
+        "strong": "H3997",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן יֵשׁוּעַ הֲלֹא שְׁתֵּים־עֶשְׂרֵה שָׁעוֹת לַ/יּוֹם אִישׁ כִּי־יֵלֵךְ בַּ/יּוֹם לֹא יִכָּשֵׁל כִּי יִרְאֶה אוֹר הָ/עוֹלָם הַזֶּה׃"
+      },
+      "previous_strong": "H3997",
+      "new_strong": "H3782",
+      "confidence": 0.94,
+      "reason": "יִכָּשֵׁל means stumble; H3782 כָּשַל fits, while H3997 is unrelated.",
+      "evidence": [
+        "occurrence=john.11.9.12",
+        "text=יִכָּשֵׁל",
+        "prefixes=none",
+        "strong=H3997",
+        "lemma=מְבוֹאָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 28,
+        "word_index": 11,
+        "text": "הַמּוֹרֶה",
+        "strong": "Hd/H4175",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי אַחַר דַּבְּרָהּ זֹאת וַ/תֵּלֶךְ וַ/תִּקְרָא לְ/מִרְיָם אֲחוֹתָהּ בַּ/סֵּתֶר לֵ/אמֹר הִנֵּה הַ/מּוֹרֶה פֹּה וְ/קֹרֵא לָךְ׃"
+      },
+      "previous_strong": "Hd/H4175",
+      "new_strong": "H4176",
+      "confidence": 0.95,
+      "reason": "הַמּוֹרֶה means the Teacher; H4176 מוֹרֶה fits, while H4175 is rain.",
+      "evidence": [
+        "occurrence=john.11.28.11",
+        "text=הַמּוֹרֶה",
+        "prefixes=Hd",
+        "strong=H4175",
+        "lemma=מוֹרֶה",
+        "definitions=rain",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 39,
+        "word_index": 14,
+        "text": "בָּאָשׁ",
+        "strong": "H3212",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר יֵשׁוּעַ שְׂאוּ אֶת־הָ/אֶבֶן מֵעָלֶיהָ וַ/תֹּאמֶר אֵלָיו מָרְתָא אֲחוֹת הַמֵּת אֲדֹנִי הִנֵּה כְּ/בָר בָּ/אָשׁ כִּי־אַרְבָּעָה יָמִים לוֹ׃"
+      },
+      "previous_strong": "H3212",
+      "new_strong": "H887",
+      "confidence": 0.94,
+      "reason": "בָּאָשׁ means he/it stinks; H887 בָּאַשׁ fits, while H3212 is go/walk.",
+      "evidence": [
+        "occurrence=john.11.39.14",
+        "text=בָּאָשׁ",
+        "prefixes=Hb",
+        "strong=H3212",
+        "lemma=יָלַךְ",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 47,
+        "word_index": 12,
+        "text": "הַלָּזֶה",
+        "strong": "Hd/H1976",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אָז יַקְהִילוּ הַ/כֹּהֲנִים הַ/גְּדוֹלִים וְ/הַ/פְּרוּשִׁים אֶת־הַ/סַּנְהֶדְרִין וַ/יֹּאמְרוּ מַה־נַּעֲשֶׂה כִּי הָ/אִישׁ הַ/לָּזֶה עֹשֶׂה אֹתוֹת הַ/רְבֵּה׃"
+      },
+      "previous_strong": "Hd/H1976",
+      "new_strong": "H1976",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1976 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.11.47.12",
+        "text=הַלָּזֶה",
+        "prefixes=Hd",
+        "strong=H1976",
+        "lemma=הַלָּזֶה",
+        "definitions=this",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 50,
+        "word_index": 6,
+        "text": "מוּת",
+        "strong": "H4192",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אַף לֹא־תָבִינוּ כִּי טוֹב לָ/נוּ מוּת אִישׁ אֶחָד בְּ/עַד הַ/גּוֹי מֵאֲבֹד הָעָם כֻּ/לּוֹ׃"
+      },
+      "previous_strong": "H4192",
+      "new_strong": "H4191",
+      "confidence": 0.94,
+      "reason": "מוּת here is the verb to die; H4191 מוּת fits, while H4192 is not the intended verb entry.",
+      "evidence": [
+        "occurrence=john.11.50.6",
+        "text=מוּת",
+        "prefixes=none",
+        "strong=H4192",
+        "lemma=מוּת",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 54,
+        "word_index": 19,
+        "text": "אֶפְרַיִם",
+        "strong": "H669",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עַל־כֵּן לֹא־הִתְהַלֵּךְ יֵשׁוּעַ עוֹד בְּ/תוֹךְ הַ/יְּהוּדִים בַּ/גָּלוּי כִּי אִם־סָר מִשָּׁם לָ/אָרֶץ הַ/קְּרוֹבָה אֶל־הַ/מִּדְבָּר אֶל־עִיר אֶפְרַיִם וַ/יָּגָר־שָׁם עִם־תַּלְמִידָיו׃"
+      },
+      "previous_strong": "H669",
+      "new_strong": "H669",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H669 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.11.54.19",
+        "text=אֶפְרַיִם",
+        "prefixes=none",
+        "strong=H669",
+        "lemma=אֶפְרַיִם",
+        "definitions=Ephraim",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 2,
+        "word_index": 3,
+        "text": "מִשְׁתֶּה",
+        "strong": "H4960",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעֲשֹוּ־לוֹ שָׁם מִשְׁתֶּה בָּ/עָרֶב וּ/מָרְתָא מְשָׁרֶתֶת וְ/לַ/עְזָר הָיָה אֶחָד מִן־הַ/מְסֻבִּים אִתּוֹ׃"
+      },
+      "previous_strong": "H4960",
+      "new_strong": "H4960",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4960 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.12.2.3",
+        "text=מִשְׁתֶּה",
+        "prefixes=none",
+        "strong=H4960",
+        "lemma=מִשְׁתֶּה",
+        "definitions=feast | drink",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 3,
+        "word_index": 2,
+        "text": "מִרְקַחַת",
+        "strong": "H4842",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תִּקַּח מִרְיָם מִרְקַחַת נֵרְדְּ זַךְ וְ/יָקָר מְאֹד לִ/טְרָא אַחַת מִשְׁקָלָהּ וַ/תִּמְשַׁח־בָּהּ אֶת־רַגְלֵי יֵשׁוּעַ וַ/תְּנַגֵּב אֶת־רַגְלָיו בְּ/שַׂעֲרוֹתֶיהָ וְ/הַ/בַּיִת יִמָּלֵא רֵיחַ הַ/מִּרְקָחַת׃"
+      },
+      "previous_strong": "H4842",
+      "new_strong": "H4842",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4842 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.12.3.2",
+        "text=מִרְקַחַת",
+        "prefixes=none",
+        "strong=H4842",
+        "lemma=מִרְקַחַת",
+        "definitions=ointment-mixture | ointment-pot",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 3,
+        "word_index": 3,
+        "text": "נֵרְדְּ",
+        "strong": "H5373",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תִּקַּח מִרְיָם מִרְקַחַת נֵרְדְּ זַךְ וְ/יָקָר מְאֹד לִ/טְרָא אַחַת מִשְׁקָלָהּ וַ/תִּמְשַׁח־בָּהּ אֶת־רַגְלֵי יֵשׁוּעַ וַ/תְּנַגֵּב אֶת־רַגְלָיו בְּ/שַׂעֲרוֹתֶיהָ וְ/הַ/בַּיִת יִמָּלֵא רֵיחַ הַ/מִּרְקָחַת׃"
+      },
+      "previous_strong": "H5373",
+      "new_strong": "H5373",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H5373 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.12.3.3",
+        "text=נֵרְדְּ",
+        "prefixes=none",
+        "strong=H5373",
+        "lemma=נֵרְדְּ",
+        "definitions=nard",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 3,
+        "word_index": 9,
+        "text": "מִשְׁקָלָהּ",
+        "strong": "H4948",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תִּקַּח מִרְיָם מִרְקַחַת נֵרְדְּ זַךְ וְ/יָקָר מְאֹד לִ/טְרָא אַחַת מִשְׁקָלָהּ וַ/תִּמְשַׁח־בָּהּ אֶת־רַגְלֵי יֵשׁוּעַ וַ/תְּנַגֵּב אֶת־רַגְלָיו בְּ/שַׂעֲרוֹתֶיהָ וְ/הַ/בַּיִת יִמָּלֵא רֵיחַ הַ/מִּרְקָחַת׃"
+      },
+      "previous_strong": "H4948",
+      "new_strong": "H4948",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4948 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.12.3.9",
+        "text=מִשְׁקָלָהּ",
+        "prefixes=none",
+        "strong=H4948",
+        "lemma=מִשְׁקָל",
+        "definitions=weight",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 3,
+        "word_index": 18,
+        "text": "בְּשַׂעֲרוֹתֶיהָ",
+        "strong": "H8175",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תִּקַּח מִרְיָם מִרְקַחַת נֵרְדְּ זַךְ וְ/יָקָר מְאֹד לִ/טְרָא אַחַת מִשְׁקָלָהּ וַ/תִּמְשַׁח־בָּהּ אֶת־רַגְלֵי יֵשׁוּעַ וַ/תְּנַגֵּב אֶת־רַגְלָיו בְּ/שַׂעֲרוֹתֶיהָ וְ/הַ/בַּיִת יִמָּלֵא רֵיחַ הַ/מִּרְקָחַת׃"
+      },
+      "previous_strong": "H8175",
+      "new_strong": "H8181",
+      "confidence": 0.94,
+      "reason": "בְּשַׂעֲרוֹתֶיהָ means with her hair; H8181 שֵׂעָר fits, while H8175 is bristle.",
+      "evidence": [
+        "occurrence=john.12.3.18",
+        "text=בְּשַׂעֲרוֹתֶיהָ",
+        "prefixes=Hb",
+        "strong=H8175",
+        "lemma=שָׂעַר",
+        "definitions=bristle",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 5,
+        "word_index": 2,
+        "text": "נִמְכְּרָה",
+        "strong": "H8080",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מַדּוּעַ לֹא־נִמְכְּרָה הַ/מִּרְקַחַת בִּ/שְׁלשׁ מֵאוֹת דִּינָר וְ/נִתַּן לָ/עֲנִיִּים׃"
+      },
+      "previous_strong": "H8080",
+      "new_strong": "H4376",
+      "confidence": 0.95,
+      "reason": "נִמְכְּרָה means it was sold; H4376 מָכַר fits, while H8080 is unrelated.",
+      "evidence": [
+        "occurrence=john.12.5.2",
+        "text=נִמְכְּרָה",
+        "prefixes=none",
+        "strong=H8080",
+        "lemma=שָׁמַן",
+        "definitions=grow fat",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 6,
+        "word_index": 12,
+        "text": "וְכִיס",
+        "strong": "H3599",
+        "prefixes": [
+          "Hc",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הוּא לֹא־דִבֶּר אֶת־זֹאת מֵחֶמְלָתוֹ עַל־הָ/עֲנִיִּים כִּי אִם־גַּנָּב הָיָה וְ/כִ/יס הַ/כֶּסֶף אִתּוֹ וַ/יִּשָּׂא כָּל־אֲשֶׁר יָשִׂימוּ בוֹ׃"
+      },
+      "previous_strong": "H3599",
+      "new_strong": "H3599",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H3599 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.12.6.12",
+        "text=וְכִיס",
+        "prefixes=Hc,Hk",
+        "strong=H3599",
+        "lemma=כִּיס",
+        "definitions=bag | purse | from his purse | weights (v. אֶבֶן 5) Dt 25:13 Mi 6:11 Pr 16:11; | a purse",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 13,
+        "word_index": 3,
+        "text": "תְּמָרִים",
+        "strong": "H8558",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּקְחוּ בְ/יָדָם כַּ/פּוֹת תְּמָרִים וַ/יֵּצְאוּ לִ/קְרָאתוֹ וַ/יָּרִיעוּ לֵ/אמֹר ה/וֹשַׁע־נָא בָּ/רוּךְ הַבָּא בְּ/שֵׁם יְהוָֹה מֶלֶךְ יִשְׂרָאֵל׃"
+      },
+      "previous_strong": "H8558",
+      "new_strong": "H8558",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H8558 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.12.13.3",
+        "text=תְּמָרִים",
+        "prefixes=none",
+        "strong=H8558",
+        "lemma=תָּמָר",
+        "definitions=palm-tree | date-palm",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 14,
+        "word_index": 2,
+        "text": "עַיִר",
+        "strong": "H5895",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּמְצָא יֵשׁוּעַ עַיִר אֶחָד וַ/יִּרְכַּב עָלָיו כַּ/אֲשֶׁר כָּ/תוּב׃"
+      },
+      "previous_strong": "H5895",
+      "new_strong": "H5895",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H5895 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.12.14.2",
+        "text=עַיִר",
+        "prefixes=none",
+        "strong=H5895",
+        "lemma=עַיִר",
+        "definitions=male ass",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 14,
+        "word_index": 4,
+        "text": "וַיִּרְכַּב",
+        "strong": "Hc/H7392",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּמְצָא יֵשׁוּעַ עַיִר אֶחָד וַ/יִּרְכַּב עָלָיו כַּ/אֲשֶׁר כָּ/תוּב׃"
+      },
+      "previous_strong": "Hc/H7392",
+      "new_strong": "H7392",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H7392 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.12.14.4",
+        "text=וַיִּרְכַּב",
+        "prefixes=Hc",
+        "strong=H7392",
+        "lemma=רָכַב",
+        "definitions=mount and ride | ride",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 15,
+        "word_index": 12,
+        "text": "אֲתֹנוֹת׃",
+        "strong": "H860",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַל־תִּירְאִי בַּת־צִיּוֹן הִנֵּה מַלְכֵּךְ יָבוֹא לָךְ רֹכֵב עַל־עַיִר בֶּן־אֲתֹנוֹת׃"
+      },
+      "previous_strong": "H860",
+      "new_strong": "H860",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H860 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.12.15.12",
+        "text=אֲתֹנוֹת׃",
+        "prefixes=none",
+        "strong=H860",
+        "lemma=אָתוֹן",
+        "definitions=she-ass",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 24,
+        "word_index": 4,
+        "text": "לָכֶם",
+        "strong": "H4706",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אָמֵן אָמֵן אֲנִי אֹמֵר לָ/כֶם אִם לֹא־יִפֹּל גַּרְגֵּר הַחִטָּה אֶל־תּוֹךְ הָ/אֲדָמָה וָ/מֵת יִשָּׁאֵר לְ/בַ/דּוֹ וְ/כַ/אֲשֶׁר מֵת יַעֲשֶׂה פְּרִי הַ/רְבֵּה׃"
+      },
+      "previous_strong": "H4706",
+      "new_strong": "H4706",
+      "confidence": 0.35,
+      "reason": "לָכֶם is a pronominal/prepositional form (“to/for you”); leave it for manual grammar handling rather than assigning a lexical Strong.",
+      "evidence": [
+        "occurrence=john.12.24.4",
+        "text=לָכֶם",
+        "prefixes=Hl",
+        "strong=H4706",
+        "lemma=מִצְעָר",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 29,
+        "word_index": 5,
+        "text": "רַעַם",
+        "strong": "H7482",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הָעָם הָ/עֹמְדִים שָׁמָּה כְּ/שָׁמְעָם אָמְרוּ רַעַם נִשְׁמָע וַ/אֲחֵרִים אָמְרוּ מַלְאָךְ דִּבֶּר אִתּוֹ׃"
+      },
+      "previous_strong": "H7482",
+      "new_strong": "H7482",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H7482 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.12.29.5",
+        "text=רַעַם",
+        "prefixes=none",
+        "strong=H7482",
+        "lemma=רַעַם",
+        "definitions=thunder",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 1,
+        "word_index": 7,
+        "text": "שְׁעָתוֹ",
+        "strong": "H4304",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לִ/פְנֵי חַג הַ/פֶּסַח כְּ/שֶׁיָּדַע יֵשׁוּעַ כִּי בָ/אָה שְׁעָתוֹ לַ/עֲבֹר מִן־הָ/עוֹלָם הַזֶּה אֶל־אָבִיו כַּ/אֲשֶׁר אָהֵב אֶת בְּ/חִירָיו אֲשֶׁר בָּ/עוֹלָם כֵּן אֲהֵבָם עַד־הַקֵּץ׃"
+      },
+      "previous_strong": "H4304",
+      "new_strong": "H8160",
+      "confidence": 0.94,
+      "reason": "שְׁעָתוֹ means his hour/time; H8160 שָׁעָה fits, while H4304 is unrelated.",
+      "evidence": [
+        "occurrence=john.13.1.7",
+        "text=שְׁעָתוֹ",
+        "prefixes=none",
+        "strong=H4304",
+        "lemma=מִטְפַּחַת",
+        "definitions=cloak",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 1,
+        "word_index": 17,
+        "text": "בְּחִירָיו",
+        "strong": "Hb/H972",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לִ/פְנֵי חַג הַ/פֶּסַח כְּ/שֶׁיָּדַע יֵשׁוּעַ כִּי בָ/אָה שְׁעָתוֹ לַ/עֲבֹר מִן־הָ/עוֹלָם הַזֶּה אֶל־אָבִיו כַּ/אֲשֶׁר אָהֵב אֶת בְּ/חִירָיו אֲשֶׁר בָּ/עוֹלָם כֵּן אֲהֵבָם עַד־הַקֵּץ׃"
+      },
+      "previous_strong": "Hb/H972",
+      "new_strong": "H972",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H972 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.13.1.17",
+        "text=בְּחִירָיו",
+        "prefixes=Hb",
+        "strong=H972",
+        "lemma=בָּחִיר",
+        "definitions=chosen",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 5,
+        "word_index": 1,
+        "text": "יָצַק",
+        "strong": "H3332",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַחַר יָצַק מַיִם בַּ/כִּ/יּוֹר וַ/יָּחֶל לִ/רְחֹץ אֶת־רַגְלֵי תַלְמִידָיו וּ/לְ/נַגֵּב בַּ/מִּטְפַּחַת אֲשֶׁר־הוּא חָגוּר בָּהּ׃"
+      },
+      "previous_strong": "H3332",
+      "new_strong": "H3332",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H3332 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.13.5.1",
+        "text=יָצַק",
+        "prefixes=none",
+        "strong=H3332",
+        "lemma=יָצַק",
+        "definitions=pour | cast | flow",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 10,
+        "word_index": 11,
+        "text": "הָרַגְלַיִם",
+        "strong": "H7274",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֵלָיו יֵשׁוּעַ הַ/מְרֻחָץ אֵין־לוֹ לִ/רְחֹץ עוֹד כִּי אִם־אֶת־הָ/רַגְלַיִם כִּי כֻ/לּוֹ טָהוֹר הוּא וְ/אַתֶּם טְהוֹרִים אַךְ לֹא כֻ/לְּ/כֶם׃"
+      },
+      "previous_strong": "H7274",
+      "new_strong": "H7272",
+      "confidence": 0.95,
+      "reason": "הָרַגְלַיִם means the feet; H7272 רֶגֶל fits, while H7274 is unrelated.",
+      "evidence": [
+        "occurrence=john.13.10.11",
+        "text=הָרַגְלַיִם",
+        "prefixes=Hd",
+        "strong=H7274",
+        "lemma=רֹגְלִים",
+        "definitions=fullers",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 18,
+        "word_index": 15,
+        "text": "לַחְמִי",
+        "strong": "Hl/H3902",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "לֹא עַל־כֻּ/לְּ/כֶם דִּבַּרְתִּי יוֹדֵעַ אֲנִי אֶת־אֲשֶׁר בָּ/חַרְתִּי בָ/הֶם אַךְ לְ/מַעַן יִמָּלֵא הַ/כָּתוּב אוֹכֵל לַ/חְמִי הִגְדִּיל עָלַי עָקֵב׃"
+      },
+      "previous_strong": "Hl/H3902",
+      "new_strong": "H3899",
+      "confidence": 0.95,
+      "reason": "לַחְמִי means my bread; H3899 לֶחֶם fits, while H3902 is the proper name Lahmi.",
+      "evidence": [
+        "occurrence=john.13.18.15",
+        "text=לַחְמִי",
+        "prefixes=Hl",
+        "strong=H3902",
+        "lemma=לַחְמִי",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 18,
+        "word_index": 18,
+        "text": "עָקֵב׃",
+        "strong": "H6119",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לֹא עַל־כֻּ/לְּ/כֶם דִּבַּרְתִּי יוֹדֵעַ אֲנִי אֶת־אֲשֶׁר בָּ/חַרְתִּי בָ/הֶם אַךְ לְ/מַעַן יִמָּלֵא הַ/כָּתוּב אוֹכֵל לַ/חְמִי הִגְדִּיל עָלַי עָקֵב׃"
+      },
+      "previous_strong": "H6119",
+      "new_strong": "H6119",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6119 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.13.18.18",
+        "text=עָקֵב׃",
+        "prefixes=none",
+        "strong=H6119",
+        "lemma=עָקֵב",
+        "definitions=heel | footprint | hinder-part",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 20,
+        "word_index": 19,
+        "text": "שֹׁלְחִי׃",
+        "strong": "H7977",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אָמֵן אָמֵן אֲנִי אֹמֵר לָ/כֶם כִּי כָל־הַ/מְקַבֵּל אֵת אֲשֶׁר אֶשְׁלָחֵהוּ אֹתִי הוּא מְקַבֵּל וְ/הַ/מְקַבֵּל אֹתִי הוּא מְקַבֵּל אֶת־שֹׁלְחִי׃"
+      },
+      "previous_strong": "H7977",
+      "new_strong": "H7971",
+      "confidence": 0.94,
+      "reason": "שֹׁלְחִי means the one who sent me/my sender; H7971 שָׁלַח fits, while H7977 is a proper-name entry.",
+      "evidence": [
+        "occurrence=john.13.20.19",
+        "text=שֹׁלְחִי׃",
+        "prefixes=none",
+        "strong=H7977",
+        "lemma=שִׁלְחִי",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 26,
+        "word_index": 7,
+        "text": "פִּתִּי",
+        "strong": "H6595",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן יֵשׁוּעַ הִנֵּה זֶה הוּא אֲשֶׁר־אֶטְבֹּל פִּתִּי לְ/תִתּוֹ לוֹ וַ/יִּטְבֹּל אֶת־פִּתּוֹ וַ/יִּתֵּן אֶל־יְהוּדָה בֶן־שִׁמְעוֹן אִישׁ קְרִיּוֹת׃"
+      },
+      "previous_strong": "H6595",
+      "new_strong": "H6595",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6595 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.13.26.7",
+        "text=פִּתִּי",
+        "prefixes=none",
+        "strong=H6595",
+        "lemma=פַּת",
+        "definitions=fragment",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 33,
+        "word_index": 3,
+        "text": "מִזְעָר",
+        "strong": "H4213",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בָּ/נַי עוֹד־מְעַט מִזְעָר אֶהְיֶה עִמָּכֶם אַתֶּם תְּבַקְשׁוּנִי וְ/כַ/אֲשֶׁר אָמַרְתִּי אֶל־הַ/יְּהוּדִים כִּי אֶל־אֲשֶׁר אֲנִי ה/וֹלֵךְ לֹא תוּכְלוּ לָ/ב/וֹא שָׁמָּה כֵּן אֲלֵיכֶם אֹמֵר אֲנִי עָתָּה׃"
+      },
+      "previous_strong": "H4213",
+      "new_strong": "H4213",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4213 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.13.33.3",
+        "text=מִזְעָר",
+        "prefixes=none",
+        "strong=H4213",
+        "lemma=מִזְעָר",
+        "definitions=a little | a trifle | a few",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 14,
+        "verse": 6,
+        "word_index": 7,
+        "text": "וְהַחַיִּים",
+        "strong": "H21",
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֵלָיו יֵשׁוּעַ אָנֹכִי הִנְנִי הַ/דֶּרֶךְ וְ/הָ/אֱמֶת וְ/הַ/חַיִּים לֹא־יָבֹא אִישׁ אֶל־הָאָב כִּי־אִם־עַל־יָדִי׃"
+      },
+      "previous_strong": "H21",
+      "new_strong": "H2416",
+      "confidence": 0.96,
+      "reason": "וְהַחַיִּים means and the life; H2416 חַי fits, while H21 is unrelated.",
+      "evidence": [
+        "occurrence=john.14.6.7",
+        "text=וְהַחַיִּים",
+        "prefixes=Hc,Hd",
+        "strong=H21",
+        "lemma=אֲבִי",
+        "definitions=Yah | is | my | father | king of Judah, son & successor of Rehoboam",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 14,
+        "verse": 12,
+        "word_index": 15,
+        "text": "וּגְדֹלוֹת",
+        "strong": "H926",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אָמֵן אָמֵן אֲנִי אֹמֵר לָ/כֶם הַ/מַּאֲמִין בִּי יַעֲשֶׂה גַם־הוּא אֶת־הַ/מַּעֲשִׂים אֲשֶׁר אָנֹכִי עֹשֶׂה וּ/גְדֹלוֹת מֵאֵלֶּה יַעֲשֶׂה כִּי אֲנִי ה/וֹלֵךְ אֶל־אָבִי׃"
+      },
+      "previous_strong": "H926",
+      "new_strong": "H1419",
+      "confidence": 0.94,
+      "reason": "וּגְדֹלוֹת means and greater/great things; H1419 גָּדוֹל fits, while H926 is unrelated.",
+      "evidence": [
+        "occurrence=john.14.12.15",
+        "text=וּגְדֹלוֹת",
+        "prefixes=Hc",
+        "strong=H926",
+        "lemma=בָּהַל",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 14,
+        "verse": 17,
+        "word_index": 12,
+        "text": "יֵדָעֵהוּ",
+        "strong": "H7987",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־רוּחַ הָ/אֱמֶת אֲשֶׁר לֹא־יָכֹל הָ/עוֹלָם לְ/הַ/שִּׂיגוֹ בַּ/אֲשֶׁר לֹא יִרְאֵהוּ וְ/לֹא יֵדָעֵהוּ וְ/אַתֶּם יְדַעְתֶּם אֹתוֹ כִּי־אִתְּכֶם שֹׁכֵן הוּא אַף־יִהְיֶה בְּ/תוֹכֲכֶם׃"
+      },
+      "previous_strong": "H7987",
+      "new_strong": "H3045",
+      "confidence": 0.95,
+      "reason": "יֵדָעֵהוּ means know him; H3045 יָדַע fits, while H7987 is unrelated.",
+      "evidence": [
+        "occurrence=john.14.17.12",
+        "text=יֵדָעֵהוּ",
+        "prefixes=none",
+        "strong=H7987",
+        "lemma=שְׁלִי",
+        "definitions=quietness",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 14,
+        "verse": 27,
+        "word_index": 18,
+        "text": "יֵחָת׃",
+        "strong": "H2865",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שָׁלוֹם אַנִּיחַ לָ/כֶם אֶת־שְׁלוֹמִי אֶתֵּן לָ/כֶם לֹא כַּ/אֲשֶׁר יִתֵּן הָ/עוֹלָם אָנֹכִי נֹתֵן לָ/כֶם אַל־יִבָּהֵל לְ/בַ/בְכֶם וְ/אַל־יֵחָת׃"
+      },
+      "previous_strong": "H2865",
+      "new_strong": "H2865",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H2865 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.14.27.18",
+        "text=יֵחָת׃",
+        "prefixes=none",
+        "strong=H2865",
+        "lemma=חָתַת",
+        "definitions=be shattered | dismayed",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 15,
+        "verse": 2,
+        "word_index": 1,
+        "text": "שָׂרִיג",
+        "strong": "H8299",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־שָׂרִיג בִּי אֲשֶׁר אֵינֶנּוּ עֹשֶׂה־פְּרִי יְסִירֶנּוּ וַ/אֲשֶׁר יַעֲשֶׂה פְרִי יְטַהֲרֶנּוּ לְ/הַ/רְבּוֹת אֶת־פִּרְיוֹ׃"
+      },
+      "previous_strong": "H8299",
+      "new_strong": "H8299",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H8299 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.15.2.1",
+        "text=שָׂרִיג",
+        "prefixes=none",
+        "strong=H8299",
+        "lemma=שָׂרִיג",
+        "definitions=tendril | twig",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 15,
+        "verse": 16,
+        "word_index": 20,
+        "text": "מֵאָבִי",
+        "strong": "H4124",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לֹא אַתֶּם בְּ/חַרְתֶּם בִּי כִּי אִם־אָנֹכִי בָּ/חַרְתִּי בָ/כֶם וְ/הִפְקַדְתִּי אֶתְכֶם לָ/לֶכֶת וְ/לַ/עֲשֹוֹת פֶּרִי וּ/פֶרְיְכֶם יָקוּם וְ/הָיָה כֹּל אֲשֶׁר תִּשְׁאֲלוּ מֵאָבִי בִּ/שְׁמִי יִתֵּן לָ/כֶם׃"
+      },
+      "previous_strong": "H4124",
+      "new_strong": "H1",
+      "confidence": 0.94,
+      "reason": "מֵאָבִי means from my Father; H1 אָב fits, while H4124 is Moab.",
+      "evidence": [
+        "occurrence=john.15.16.20",
+        "text=מֵאָבִי",
+        "prefixes=none",
+        "strong=H4124",
+        "lemma=מוֹאָב",
+        "definitions=Moab | Moab | Moab | = nation of which Lot’s son is represented as ancestor | = territory of Moab",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 15,
+        "verse": 25,
+        "word_index": 7,
+        "text": "שְׂנֵאוּנִי׃",
+        "strong": "H8135",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ לְ/מַלֹּאת דְּבַר־הַ/כָּתוּב בְּ/תוֹרָתָם שִׂנְאַת חִנָּם שְׂנֵאוּנִי׃"
+      },
+      "previous_strong": "H8135",
+      "new_strong": "H8130",
+      "confidence": 0.94,
+      "reason": "שְׂנֵאוּנִי means they hated me; H8130 שָׂנֵא fits, while H8135 is the noun hatred.",
+      "evidence": [
+        "occurrence=john.15.25.7",
+        "text=שְׂנֵאוּנִי׃",
+        "prefixes=none",
+        "strong=H8135",
+        "lemma=שִׂנְאָה",
+        "definitions=hating | hatred",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 16,
+        "verse": 7,
+        "word_index": 16,
+        "text": "הַפְּרַקְלִיט",
+        "strong": "H536",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אוּלָם הָ/אֱמֶת אַגִּיד לָ/כֶם כִּי לֶ/כְ/תִּי אַךְ־טוֹב לָ/כֶם כִּי אִם־לֹא אֵלֵךְ לֹא־יָבֹא אֲלֵיכֶם הַ/פְּרַקְלִיט וְ/אִם־אֵלֵךְ אֶשְׁלָחֵהוּ אֲלֵיכֶם׃"
+      },
+      "previous_strong": "H536",
+      "new_strong": "D0188",
+      "confidence": 0.94,
+      "reason": "הַפְּרַקְלִיט is the NT term Paraclete/Advocate; H536 is unrelated, so use a custom entry.",
+      "evidence": [
+        "occurrence=john.16.7.16",
+        "text=הַפְּרַקְלִיט",
+        "prefixes=Hd",
+        "strong=H536",
+        "lemma=אֻמְלַל",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0188",
+      "hebrew": "פרקליט",
+      "transliteration_en": "Paraclete",
+      "transliteration_es": "Paráclito",
+      "definition": {
+        "text_en": "Paraclete; Advocate; Helper promised by Jesus.",
+        "text_es": "Paráclito; Abogado; Ayudador prometido por Jesús.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 16,
+        "verse": 20,
+        "word_index": 15,
+        "text": "עָצְבְּכֶם",
+        "strong": "H6093",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אָמֵן אָמֵן אֲנִי אֹמֵר לָ/כֶם כִּי אַתֶּם תִּבְכּוּ וּ/תְיֵלִילוּ וְ/הָ/עוֹלָם יִשְׂמָח הֵן־אַתֶּם תֵּעָצְבוּ אָכֵן עָצְבְּכֶם יֵהָפֵךְ לְ/שָׂשׂוֹן׃"
+      },
+      "previous_strong": "H6093",
+      "new_strong": "H6093",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6093 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.16.20.15",
+        "text=עָצְבְּכֶם",
+        "prefixes=none",
+        "strong=H6093",
+        "lemma=עִצָּבוֹן",
+        "definitions=pain | toil",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 16,
+        "verse": 25,
+        "word_index": 4,
+        "text": "בִּמְשָׁלִים",
+        "strong": "Hb/H4911",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־אֵלֶּה דִּבַּרְתִּי אֲלֵיכֶם בִּ/מְשָׁלִים אָכֵן שָׁעָה בָ/אָה וְ/לֹא אֲדַבֵּר עוֹד אֲלֵיכֶם בִּ/מְשָׁלִים כִּי אִם־בָּ/רוּר אֲמַלֵּל לָ/כֶם עַל־אָבִי׃"
+      },
+      "previous_strong": "Hb/H4911",
+      "new_strong": "H4912",
+      "confidence": 0.93,
+      "reason": "בִּמְשָׁלִים means in figures/parables; H4912 מָשָׁל fits the noun, while H4911 is the verb.",
+      "evidence": [
+        "occurrence=john.16.25.4",
+        "text=בִּמְשָׁלִים",
+        "prefixes=Hb",
+        "strong=H4911",
+        "lemma=מָשַׁל",
+        "definitions=represent | be like",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 17,
+        "verse": 5,
+        "word_index": 5,
+        "text": "בַּכָּבוֹד",
+        "strong": "H1846",
+        "prefixes": [
+          "Hb",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה פָאֲרֵנִי אַתָּה אָבִי עִמֶּךָ בַּ/כָּ/בוֹד אֲשֶׁר הָיָה־לִי עִמְּךָ טֶרֶם הֱ/יוֹת הָ/עוֹלָם׃"
+      },
+      "previous_strong": "H1846",
+      "new_strong": "H3519",
+      "confidence": 0.95,
+      "reason": "בַּכָּבוֹד means in/with the glory; H3519 כָּבוֹד fits, while H1846 is unrelated.",
+      "evidence": [
+        "occurrence=john.17.5.5",
+        "text=בַּכָּבוֹד",
+        "prefixes=Hb,Hk",
+        "strong=H1846",
+        "lemma=דָּעַךְ",
+        "definitions=go out | be extinguished",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 17,
+        "verse": 11,
+        "word_index": 12,
+        "text": "נְצֹר",
+        "strong": "H5341",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנִי אֵינֶנִּי עוֹד בָּ/עוֹלָם וְ/הֵם בָּ/עוֹלָם הֵמָּה וַ/אֲנִי בָּא אֵלֶיךָ אָבִי הַ/קָּדוֹשׁ נְצֹר בְּ/שִׁמְךָ אֶת־אֲשֶׁר נְתַתָּם לִי לְ/מַעַן יִהְיוּ אֶחָד כָּ/מֹנוּ׃"
+      },
+      "previous_strong": "H5341",
+      "new_strong": "H5341",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H5341 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.17.11.12",
+        "text=נְצֹר",
+        "prefixes=none",
+        "strong=H5341",
+        "lemma=נָצַר",
+        "definitions=watch | guard | keep | Watch | guard",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 1,
+        "word_index": 13,
+        "text": "קִדְרוֹן",
+        "strong": "H6939",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יְהִי כְּ/כַלּוֹת יֵשׁוּעַ לְ/דַבֵּר אֶת־הַ/דְּבָרִים הָ/אֵלֶּה וַ/יֵּצֵא הַ/חוּצָה עִם־תַּלְמִידָיו מֵעֵבֶר לְ/נַחַל קִדְרוֹן וְ/שָׁם גַּן וַ/יָּבֹא בוֹ הוּא וְ/תַלְמִידָיו׃"
+      },
+      "previous_strong": "H6939",
+      "new_strong": "H6939",
+      "confidence": 0.91,
+      "reason": "קִדְרוֹן is the Kidron in John 18; keep H6939 and add the missing proper-name definition.",
+      "evidence": [
+        "occurrence=john.18.1.13",
+        "text=קִדְרוֹן",
+        "prefixes=none",
+        "strong=H6939",
+        "lemma=קִדְרוֹן",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6939",
+      "definition": {
+        "text_en": "Kidron; ravine or brook east of Jerusalem.",
+        "text_es": "Cedrón; valle o arroyo al este de Jerusalén.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 1,
+        "word_index": 15,
+        "text": "גַּן",
+        "strong": "H1588",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כְּ/כַלּוֹת יֵשׁוּעַ לְ/דַבֵּר אֶת־הַ/דְּבָרִים הָ/אֵלֶּה וַ/יֵּצֵא הַ/חוּצָה עִם־תַּלְמִידָיו מֵעֵבֶר לְ/נַחַל קִדְרוֹן וְ/שָׁם גַּן וַ/יָּבֹא בוֹ הוּא וְ/תַלְמִידָיו׃"
+      },
+      "previous_strong": "H1588",
+      "new_strong": "H1588",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1588 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.18.1.15",
+        "text=גַּן",
+        "prefixes=none",
+        "strong=H1588",
+        "lemma=גַּן",
+        "definitions=enclosure | garden",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 3,
+        "word_index": 11,
+        "text": "בְּנֵרוֹת",
+        "strong": "H2552",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּקַּח יְהוּדָה אֶת־הַ/גְּדוּד וּ/מְשָׁרְתִים מֵאֵת הַ/כֹּהֲנִים הַ/גְּדוֹלִים וְ/הַ/פְּרוּשִׁים וַ/יָּבֹא שָׁמָּה בְּ/נֵרוֹת וּ/בְ/לַפִּידִים וּ/בִ/כְלֵי־נָשֶׁק׃"
+      },
+      "previous_strong": "H2552",
+      "new_strong": "H5216",
+      "confidence": 0.94,
+      "reason": "בְּנֵרוֹת means with lamps/torches; H5216 נִיר fits, while H2552 is unrelated.",
+      "evidence": [
+        "occurrence=john.18.3.11",
+        "text=בְּנֵרוֹת",
+        "prefixes=Hb",
+        "strong=H2552",
+        "lemma=חָמַם",
+        "definitions=be | become warm",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 10,
+        "word_index": 12,
+        "text": "הַיְמָנִית",
+        "strong": "Hd/H3233",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/שִׁמְעוֹן פֶּטְרוֹס חֶרֶב וַ/יִּשְׁלְפָהּ וַ/יַּךְ אֶת־עֶבֶד הַ/כֹּהֵן הַ/גָּדוֹל וַ/יְקַצֵּץ אֶת־אָזְנוֹ הַ/יְמָנִית וְ/שֵׁם הָ/עֶבֶד מַלְכוֹס׃"
+      },
+      "previous_strong": "Hd/H3233",
+      "new_strong": "H3233",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H3233 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.18.10.12",
+        "text=הַיְמָנִית",
+        "prefixes=Hd",
+        "strong=H3233",
+        "lemma=יְמָנִי",
+        "definitions=right hand | right",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 11,
+        "word_index": 7,
+        "text": "נְדָנָהּ",
+        "strong": "H5084",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר יֵשׁוּעַ אֶל־פֶּטְרוֹס הָשֵׁב חַרְבְּךָ אֶל־נְדָנָהּ הֲכִי לֹא־אֶשְׁתֶּה אֶת־הַ/כּוֹס אֲשֶׁר נָתַן־לִי אָבִי׃"
+      },
+      "previous_strong": "H5084",
+      "new_strong": "H5084",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H5084 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.18.11.7",
+        "text=נְדָנָהּ",
+        "prefixes=none",
+        "strong=H5084",
+        "lemma=נָדָן",
+        "definitions=sheath",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 13,
+        "word_index": 3,
+        "text": "חָנָן",
+        "strong": "H1177",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יּוֹלִיכֻהוּ בָ/רִאשׁוֹנָה אֶל־חָנָן וְ/הוּא חֹתֵן קַיָּפָא אֲשֶׁר שִׁמֵּשׁ בִּ/כְ/הֻנָּה גְדוֹלָה בַּ/שָּׁנָה הַ/הִיא׃"
+      },
+      "previous_strong": "H1177",
+      "new_strong": "D0189",
+      "confidence": 0.94,
+      "reason": "חָנָן here refers to Annas in John 18; H1177 Baal-Hanan is not the intended person.",
+      "evidence": [
+        "occurrence=john.18.13.3",
+        "text=חָנָן",
+        "prefixes=none",
+        "strong=H1177",
+        "lemma=בַּעַל חָנָן",
+        "definitions=Baal is gracious | king of Edom | a Gederite",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0189",
+      "hebrew": "חנן",
+      "transliteration_en": "Annas",
+      "transliteration_es": "Anás",
+      "definition": {
+        "text_en": "Annas; former high priest and father-in-law of Caiaphas.",
+        "text_es": "Anás; antiguo sumo sacerdote y suegro de Caifás.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 13,
+        "word_index": 5,
+        "text": "חֹתֵן",
+        "strong": "H2859",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יּוֹלִיכֻהוּ בָ/רִאשׁוֹנָה אֶל־חָנָן וְ/הוּא חֹתֵן קַיָּפָא אֲשֶׁר שִׁמֵּשׁ בִּ/כְ/הֻנָּה גְדוֹלָה בַּ/שָּׁנָה הַ/הִיא׃"
+      },
+      "previous_strong": "H2859",
+      "new_strong": "H2859",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H2859 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.18.13.5",
+        "text=חֹתֵן",
+        "prefixes=none",
+        "strong=H2859",
+        "lemma=חָתַן",
+        "definitions=wife's father | wife's mother",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 15,
+        "word_index": 16,
+        "text": "לַחֲצַר",
+        "strong": "Hl/H2691",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/שִׁמְעוֹן פֶּטְרוֹס וְ/תַלְמִיד אַחֵר הָ/לְכוּ אַחֲרֵי יֵשׁוּעַ וְ/הַ/תַּלְמִיד הַ/הוּא הָיָה נוֹדָע לַ/כֹּ/הֵן הַ/גָּדוֹל וַ/יָּבֹא עִם־יֵשׁוּעַ לַ/חֲצַר הַ/כֹּהֵן הַ/גָּדוֹל׃"
+      },
+      "previous_strong": "Hl/H2691",
+      "new_strong": "H2691",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H2691 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.18.15.16",
+        "text=לַחֲצַר",
+        "prefixes=Hl",
+        "strong=H2691",
+        "lemma=חָצֵר",
+        "definitions=enclosure | court",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 18,
+        "word_index": 4,
+        "text": "גֶּחָלִים",
+        "strong": "H1513",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הָ/עֲבָדִים וְ/הַ/מְשָׁרְתִים בִּ/עֲרוּ אֵשׁ גֶּחָלִים כִּי עֶת־קֹר הָ/יְתָה וַ/יַּעַמְדוּ־שָׁם וַ/יִּתְחַמָּמוּ וְ/גַם־פֶּטְרוֹס עֹמֵד עִמָּם וּ/מִתְחַמֵּם׃"
+      },
+      "previous_strong": "H1513",
+      "new_strong": "H1513",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1513 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=john.18.18.4",
+        "text=גֶּחָלִים",
+        "prefixes=none",
+        "strong=H1513",
+        "lemma=גֶּחֶל",
+        "definitions=coal",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 9,
+        "word_index": 12,
+        "text": "יִכָּשֵׁל",
+        "strong": "H3997",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן יֵשׁוּעַ הֲלֹא שְׁתֵּים־עֶשְׂרֵה שָׁעוֹת לַ/יּוֹם אִישׁ כִּי־יֵלֵךְ בַּ/יּוֹם לֹא יִכָּשֵׁל כִּי יִרְאֶה אוֹר הָ/עוֹלָם הַזֶּה׃"
+      },
+      "previous_strong": "H3997",
+      "new_strong": "H3782",
+      "confidence": 0.9,
+      "reason": "H3782 is the correct local Strong but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=john.11.9.12",
+        "text=יִכָּשֵׁל",
+        "prefixes=none",
+        "strong=H3997",
+        "lemma=מְבוֹאָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3782",
+      "hebrew": "כשל",
+      "transliteration_en": "stumble",
+      "transliteration_es": "tropezar",
+      "definition": {
+        "text_en": "stumble; totter; fall or fail.",
+        "text_es": "tropezar; tambalearse; caer o fallar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 39,
+        "word_index": 14,
+        "text": "בָּאָשׁ",
+        "strong": "H3212",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר יֵשׁוּעַ שְׂאוּ אֶת־הָ/אֶבֶן מֵעָלֶיהָ וַ/תֹּאמֶר אֵלָיו מָרְתָא אֲחוֹת הַמֵּת אֲדֹנִי הִנֵּה כְּ/בָר בָּ/אָשׁ כִּי־אַרְבָּעָה יָמִים לוֹ׃"
+      },
+      "previous_strong": "H3212",
+      "new_strong": "H887",
+      "confidence": 0.9,
+      "reason": "H887 is the correct local Strong but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=john.11.39.14",
+        "text=בָּאָשׁ",
+        "prefixes=Hb",
+        "strong=H3212",
+        "lemma=יָלַךְ",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H887",
+      "hebrew": "באש",
+      "transliteration_en": "stink",
+      "transliteration_es": "heder",
+      "definition": {
+        "text_en": "stink; smell bad; become offensive.",
+        "text_es": "heder; oler mal; volverse ofensivo.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 50,
+        "word_index": 6,
+        "text": "מוּת",
+        "strong": "H4192",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אַף לֹא־תָבִינוּ כִּי טוֹב לָ/נוּ מוּת אִישׁ אֶחָד בְּ/עַד הַ/גּוֹי מֵאֲבֹד הָעָם כֻּ/לּוֹ׃"
+      },
+      "previous_strong": "H4192",
+      "new_strong": "H4191",
+      "confidence": 0.9,
+      "reason": "H4191 is the correct local Strong but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=john.11.50.6",
+        "text=מוּת",
+        "prefixes=none",
+        "strong=H4192",
+        "lemma=מוּת",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4191",
+      "hebrew": "מות",
+      "transliteration_en": "die",
+      "transliteration_es": "morir",
+      "definition": {
+        "text_en": "die; be put to death; kill.",
+        "text_es": "morir; ser muerto; matar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 12,
+        "verse": 5,
+        "word_index": 2,
+        "text": "נִמְכְּרָה",
+        "strong": "H8080",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מַדּוּעַ לֹא־נִמְכְּרָה הַ/מִּרְקַחַת בִּ/שְׁלשׁ מֵאוֹת דִּינָר וְ/נִתַּן לָ/עֲנִיִּים׃"
+      },
+      "previous_strong": "H8080",
+      "new_strong": "H4376",
+      "confidence": 0.9,
+      "reason": "H4376 is the correct local Strong but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=john.12.5.2",
+        "text=נִמְכְּרָה",
+        "prefixes=none",
+        "strong=H8080",
+        "lemma=שָׁמַן",
+        "definitions=grow fat",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4376",
+      "hebrew": "מכר",
+      "transliteration_en": "sell",
+      "transliteration_es": "vender",
+      "definition": {
+        "text_en": "sell; be sold; surrender.",
+        "text_es": "vender; ser vendido; entregar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 20,
+        "word_index": 19,
+        "text": "שֹׁלְחִי׃",
+        "strong": "H7977",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אָמֵן אָמֵן אֲנִי אֹמֵר לָ/כֶם כִּי כָל־הַ/מְקַבֵּל אֵת אֲשֶׁר אֶשְׁלָחֵהוּ אֹתִי הוּא מְקַבֵּל וְ/הַ/מְקַבֵּל אֹתִי הוּא מְקַבֵּל אֶת־שֹׁלְחִי׃"
+      },
+      "previous_strong": "H7977",
+      "new_strong": "H7971",
+      "confidence": 0.9,
+      "reason": "H7971 is the correct local Strong but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=john.13.20.19",
+        "text=שֹׁלְחִי׃",
+        "prefixes=none",
+        "strong=H7977",
+        "lemma=שִׁלְחִי",
+        "definitions=none",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7971",
+      "hebrew": "שלח",
+      "transliteration_en": "send",
+      "transliteration_es": "enviar",
+      "definition": {
+        "text_en": "send; send out; dispatch.",
+        "text_es": "enviar; mandar; despachar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 14,
+        "verse": 17,
+        "word_index": 12,
+        "text": "יֵדָעֵהוּ",
+        "strong": "H7987",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־רוּחַ הָ/אֱמֶת אֲשֶׁר לֹא־יָכֹל הָ/עוֹלָם לְ/הַ/שִּׂיגוֹ בַּ/אֲשֶׁר לֹא יִרְאֵהוּ וְ/לֹא יֵדָעֵהוּ וְ/אַתֶּם יְדַעְתֶּם אֹתוֹ כִּי־אִתְּכֶם שֹׁכֵן הוּא אַף־יִהְיֶה בְּ/תוֹכֲכֶם׃"
+      },
+      "previous_strong": "H7987",
+      "new_strong": "H3045",
+      "confidence": 0.9,
+      "reason": "H3045 is the correct local Strong but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=john.14.17.12",
+        "text=יֵדָעֵהוּ",
+        "prefixes=none",
+        "strong=H7987",
+        "lemma=שְׁלִי",
+        "definitions=quietness",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3045",
+      "hebrew": "ידע",
+      "transliteration_en": "know",
+      "transliteration_es": "conocer",
+      "definition": {
+        "text_en": "know; perceive; recognize.",
+        "text_es": "conocer; percibir; reconocer.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 15,
+        "verse": 16,
+        "word_index": 20,
+        "text": "מֵאָבִי",
+        "strong": "H4124",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לֹא אַתֶּם בְּ/חַרְתֶּם בִּי כִּי אִם־אָנֹכִי בָּ/חַרְתִּי בָ/כֶם וְ/הִפְקַדְתִּי אֶתְכֶם לָ/לֶכֶת וְ/לַ/עֲשֹוֹת פֶּרִי וּ/פֶרְיְכֶם יָקוּם וְ/הָיָה כֹּל אֲשֶׁר תִּשְׁאֲלוּ מֵאָבִי בִּ/שְׁמִי יִתֵּן לָ/כֶם׃"
+      },
+      "previous_strong": "H4124",
+      "new_strong": "H1",
+      "confidence": 0.9,
+      "reason": "H1 is the correct local Strong but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=john.15.16.20",
+        "text=מֵאָבִי",
+        "prefixes=none",
+        "strong=H4124",
+        "lemma=מוֹאָב",
+        "definitions=Moab | Moab | Moab | = nation of which Lot’s son is represented as ancestor | = territory of Moab",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1",
+      "hebrew": "אב",
+      "transliteration_en": "father",
+      "transliteration_es": "padre",
+      "definition": {
+        "text_en": "father; ancestor; chief.",
+        "text_es": "padre; antepasado; jefe.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "john",
+        "chapter": 15,
+        "verse": 25,
+        "word_index": 7,
+        "text": "שְׂנֵאוּנִי׃",
+        "strong": "H8135",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ לְ/מַלֹּאת דְּבַר־הַ/כָּתוּב בְּ/תוֹרָתָם שִׂנְאַת חִנָּם שְׂנֵאוּנִי׃"
+      },
+      "previous_strong": "H8135",
+      "new_strong": "H8130",
+      "confidence": 0.9,
+      "reason": "H8130 is the correct local Strong but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=john.15.25.7",
+        "text=שְׂנֵאוּנִי׃",
+        "prefixes=none",
+        "strong=H8135",
+        "lemma=שִׂנְאָה",
+        "definitions=hating | hatred",
+        "codex reviewed definitions batch_0041"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8130",
+      "hebrew": "שנא",
+      "transliteration_en": "hate",
+      "transliteration_es": "odiar",
+      "definition": {
+        "text_en": "hate; be hostile toward.",
+        "text_es": "odiar; tener hostilidad hacia.",
+        "source": "delitzsch_review"
+      }
+    }
+  ]
+}

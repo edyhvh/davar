@@ -1,0 +1,2092 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.494235+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 25,
+        "verse": 26,
+        "word_index": 18,
+        "text": "פִזָּרְתִּי׃",
+        "strong": "H2239",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן אֲדֹנָיו וַ/יֹּאמֶר אֵלָיו הָ/עֶבֶד הָרַע וְ/הֶעָצֵל אַתָּה יָדַעְתָּ כִּי־קֹצֵר אָנֹכִי בַּ/אֲשֶׁר לֹא זָרַעְתִּי וְ/כֹ/נֵס מֵאֲשֶׁר לֹא פִזָּרְתִּי׃"
+      },
+      "previous_strong": "H2239",
+      "new_strong": "H6340",
+      "confidence": 0.94,
+      "reason": "פִזָּרְתִּי means I scattered/dispersed; H6340 פזר fits the verb, while H2239 זרת means span.",
+      "evidence": [
+        "occurrence=matthew.25.26.18",
+        "text=פִזָּרְתִּי׃",
+        "prefixes=none",
+        "strong=H2239",
+        "lemma=זֶרֶת",
+        "definitions=span",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 25,
+        "verse": 32,
+        "word_index": 12,
+        "text": "הָעַתּוּדִים׃",
+        "strong": "Hd/H6260",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/נֶאֶסְפוּ לְ/פָנָיו כָּל־הַ/גּוֹיִם וְ/הִפְרִיד בֵּ/ינוֹתָם כַּ/אֲשֶׁר יַפְרִיד הָ/רֹעֶה אֵת הַ/כְּבָשִׂים מִן־הָ/עַתּוּדִים׃"
+      },
+      "previous_strong": "Hd/H6260",
+      "new_strong": "H6260",
+      "confidence": 0.9,
+      "reason": "הָעַתּוּדִים means the he-goats; H6260 עַתּוּד is correct.",
+      "evidence": [
+        "occurrence=matthew.25.32.12",
+        "text=הָעַתּוּדִים׃",
+        "prefixes=Hd",
+        "strong=H6260",
+        "lemma=עַתּוּד",
+        "definitions=he-goat",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 26,
+        "verse": 2,
+        "word_index": 10,
+        "text": "לְהִצָּלֵב׃",
+        "strong": "H273",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַתֶּם יְדַעְתֶּם כִּי אַחֲרֵי יוֹמַיִם יִהְיֶה הַ/פָּסַח וּ/בֶן־הָ/אָדָם יִמָּסֵר לְ/הִצָּלֵב׃"
+      },
+      "previous_strong": "H273",
+      "new_strong": "D0058",
+      "confidence": 0.86,
+      "reason": "לְהִצָּלֵב means to be crucified; existing custom צלב entry covers the NT cross/crucifixion family better than unrelated H273.",
+      "evidence": [
+        "occurrence=matthew.26.2.10",
+        "text=לְהִצָּלֵב׃",
+        "prefixes=Hl",
+        "strong=H273",
+        "lemma=אַחְזַי",
+        "definitions=Yah | hath grasped | king of Isr., son of Ahab | king of Judah, son of Joram | a priest",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 26,
+        "verse": 12,
+        "word_index": 2,
+        "text": "שָׁפְכָה",
+        "strong": "H8212",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אֲשֶׁר שָׁפְכָה אֶת־הַ/שֶּׁמֶן הַזֶּה עַל־גּוּפִי לַ/חֲנֹט אוֹתִי עָשְׂתָה זֹּאת׃"
+      },
+      "previous_strong": "H8212",
+      "new_strong": "H8210",
+      "confidence": 0.95,
+      "reason": "שָׁפְכָה means she poured; H8210 שפך fits, while H8212 is an unrelated noun.",
+      "evidence": [
+        "occurrence=matthew.26.12.2",
+        "text=שָׁפְכָה",
+        "prefixes=none",
+        "strong=H8212",
+        "lemma=שׇׁפְכָה",
+        "definitions=male organ",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 26,
+        "verse": 12,
+        "word_index": 8,
+        "text": "לַחֲנֹט",
+        "strong": "Hl/H2590",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אֲשֶׁר שָׁפְכָה אֶת־הַ/שֶּׁמֶן הַזֶּה עַל־גּוּפִי לַ/חֲנֹט אוֹתִי עָשְׂתָה זֹּאת׃"
+      },
+      "previous_strong": "Hl/H2590",
+      "new_strong": "H2590",
+      "confidence": 0.9,
+      "reason": "לַחֲנֹט means for embalming/preparing burial spices; H2590 חנט is correct.",
+      "evidence": [
+        "occurrence=matthew.26.12.8",
+        "text=לַחֲנֹט",
+        "prefixes=Hl",
+        "strong=H2590",
+        "lemma=חָנַט",
+        "definitions=spice | make spicy | embalm | embalming",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 26,
+        "verse": 15,
+        "word_index": 6,
+        "text": "וַיִּשְׁקְלוּ־",
+        "strong": "Hc/H8254",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר מַה־תִּתְּנוּ לִי וְ/אֶמְסְרֶנּוּ בְ/יֶדְכֶם וַ/יִּשְׁקְלוּ־לוֹ שְׁלשִׁים כָּ/סֶף׃"
+      },
+      "previous_strong": "Hc/H8254",
+      "new_strong": "H8254",
+      "confidence": 0.9,
+      "reason": "וַיִּשְׁקְלוּ means they weighed out; H8254 שקל is correct.",
+      "evidence": [
+        "occurrence=matthew.26.15.6",
+        "text=וַיִּשְׁקְלוּ־",
+        "prefixes=Hc",
+        "strong=H8254",
+        "lemma=שָׁקַל",
+        "definitions=weigh",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 26,
+        "verse": 18,
+        "word_index": 4,
+        "text": "פְּלֹנִי",
+        "strong": "H6423",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר לְ/כוּ הָ/עִירָה אֶל־פְּלֹנִי אַלְמֹנִי וַ/אֲמַרְתֶּם אֵלָיו כֹּה אָמַר הָרַב עִתִּי קְרוֹבָה הִיא וּ/בְ/בֵיתְךָ אֶעֱשֶׂה אֶת־הַ/פֶּסַח עִם־תַּלְמִידָי׃"
+      },
+      "previous_strong": "H6423",
+      "new_strong": "H6423",
+      "confidence": 0.9,
+      "reason": "פְּלֹנִי means a certain one; H6423 is correct.",
+      "evidence": [
+        "occurrence=matthew.26.18.4",
+        "text=פְּלֹנִי",
+        "prefixes=none",
+        "strong=H6423",
+        "lemma=פְּלֹנִי",
+        "definitions=a certain one | one defined | a particular one | one not mentioned",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 26,
+        "verse": 18,
+        "word_index": 5,
+        "text": "אַלְמֹנִי",
+        "strong": "H492",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר לְ/כוּ הָ/עִירָה אֶל־פְּלֹנִי אַלְמֹנִי וַ/אֲמַרְתֶּם אֵלָיו כֹּה אָמַר הָרַב עִתִּי קְרוֹבָה הִיא וּ/בְ/בֵיתְךָ אֶעֱשֶׂה אֶת־הַ/פֶּסַח עִם־תַּלְמִידָי׃"
+      },
+      "previous_strong": "H492",
+      "new_strong": "H492",
+      "confidence": 0.9,
+      "reason": "אַלְמֹנִי means an unnamed/certain one; H492 is correct.",
+      "evidence": [
+        "occurrence=matthew.26.18.5",
+        "text=אַלְמֹנִי",
+        "prefixes=none",
+        "strong=H492",
+        "lemma=אַלְמֹנִי",
+        "definitions=some one | a certain | unspoken",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 26,
+        "verse": 24,
+        "word_index": 15,
+        "text": "יִמָּסֵר",
+        "strong": "H8371",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הֵן בֶּן־הָ/אָדָם הָ/לוֹךְ יֵלֶךְ־לוֹ כַּ/כָּתוּב עָלָיו אֲבָל אוֹי לָ/אִישׁ הַ/הוּא אֲשֶׁר עַל־יָדוֹ יִמָּסֵר בֶּן־הָ/אָדָם טוֹב לָ/אִישׁ הַ/הוּא אִם־לֹא נוֹלָד׃"
+      },
+      "previous_strong": "H8371",
+      "new_strong": "H4560",
+      "confidence": 0.9,
+      "reason": "יִמָּסֵר means will be delivered/handed over; H4560 מסר fits, while H8371 is unrelated.",
+      "evidence": [
+        "occurrence=matthew.26.24.15",
+        "text=יִמָּסֵר",
+        "prefixes=none",
+        "strong=H8371",
+        "lemma=שָׁתַת",
+        "definitions=set | appoint",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 27,
+        "verse": 9,
+        "word_index": 10,
+        "text": "אֶדֶר",
+        "strong": "H145",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אָז נִתְמַלֵּא מַה־שֶּׁנֶּאֱמַר בְּ/יַד זְכַרְיָה הַ/נָּבִיא וַ/יִּקְחוּ שְׁלשִׁים הַ/כֶּסֶף אֶדֶר הַ/יְקָר אֲשֶׁר יָקַר מֵעַל־בְּ/נֵי יִשְׂרָאֵל׃"
+      },
+      "previous_strong": "H145",
+      "new_strong": "H145",
+      "confidence": 0.9,
+      "reason": "אֶדֶר is retained; the surrounding quotation uses honor/value language and the existing H145 definition is plausible here.",
+      "evidence": [
+        "occurrence=matthew.27.9.10",
+        "text=אֶדֶר",
+        "prefixes=none",
+        "strong=H145",
+        "lemma=אֶדֶר",
+        "definitions=glory | magnificence | mantle | cloak | wide",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 27,
+        "verse": 9,
+        "word_index": 11,
+        "text": "הַיְקָר",
+        "strong": "Hd/H3366",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אָז נִתְמַלֵּא מַה־שֶּׁנֶּאֱמַר בְּ/יַד זְכַרְיָה הַ/נָּבִיא וַ/יִּקְחוּ שְׁלשִׁים הַ/כֶּסֶף אֶדֶר הַ/יְקָר אֲשֶׁר יָקַר מֵעַל־בְּ/נֵי יִשְׂרָאֵל׃"
+      },
+      "previous_strong": "Hd/H3366",
+      "new_strong": "H3366",
+      "confidence": 0.9,
+      "reason": "הַיְקָר means the precious price/value; H3366 is correct.",
+      "evidence": [
+        "occurrence=matthew.27.9.11",
+        "text=הַיְקָר",
+        "prefixes=Hd",
+        "strong=H3366",
+        "lemma=יְקָר",
+        "definitions=preciousness | price | honour",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 27,
+        "verse": 9,
+        "word_index": 13,
+        "text": "יָקַר",
+        "strong": "H1591",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אָז נִתְמַלֵּא מַה־שֶּׁנֶּאֱמַר בְּ/יַד זְכַרְיָה הַ/נָּבִיא וַ/יִּקְחוּ שְׁלשִׁים הַ/כֶּסֶף אֶדֶר הַ/יְקָר אֲשֶׁר יָקַר מֵעַל־בְּ/נֵי יִשְׂרָאֵל׃"
+      },
+      "previous_strong": "H1591",
+      "new_strong": "H3368",
+      "confidence": 0.88,
+      "reason": "יָקַר in this price/value context belongs with יקר precious/costly; H3368 fits better than unrelated H1591 theft.",
+      "evidence": [
+        "occurrence=matthew.27.9.13",
+        "text=יָקַר",
+        "prefixes=none",
+        "strong=H1591",
+        "lemma=גְּנֵבָה",
+        "definitions=thing stolen",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 27,
+        "verse": 49,
+        "word_index": 16,
+        "text": "צַלְעוֹ",
+        "strong": "H6763",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/שְׁאָר הָ/אֲנָשִׁים אָמְרוּ הַ/נִּיחוּ לוֹ וְ/נִרְאֶה אִם־יָבוֹא אֵלִיָּהוּ לְ/ה/וֹשִׁיעוֹ וְ/אִישׁ אַחֵר לָ/קַח חֲנִית וַ/יִּדְקֹר אֶת־צַלְעוֹ וַ/יֵּצְאוּ מַיִם וָ/דָם׃"
+      },
+      "previous_strong": "H6763",
+      "new_strong": "H6763",
+      "confidence": 0.9,
+      "reason": "צַלְעוֹ means his side; H6763 צֵלָע is correct.",
+      "evidence": [
+        "occurrence=matthew.27.49.16",
+        "text=צַלְעוֹ",
+        "prefixes=none",
+        "strong=H6763",
+        "lemma=צֵלָע",
+        "definitions=rib | side",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 27,
+        "verse": 64,
+        "word_index": 22,
+        "text": "הַתַּרְמִית",
+        "strong": "H7421",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן צַוֵּה־נָא וְ/יִסָּכֵר מְבוֹא הַ/קֶּבֶר עַד־הַ/יּוֹם הַ/שְּׁלִישִׁי פֶּן־יָבֹאוּ תַלְמִידָיו בַּ/לַּ/יְלָה וּ/גְנָבֻהוּ וְ/אָמְרוּ אֶל־הָעָם הִנֵּה־קָם מִן הַ/מֵּתִים וְ/הָ/יְתָה הַ/תַּרְמִית הָ/אַחֲרוֹנָה רָעָה מִן־הָ/רִאשׁוֹנָה׃"
+      },
+      "previous_strong": "H7421",
+      "new_strong": "H8649",
+      "confidence": 0.91,
+      "reason": "הַתַּרְמִית means the deceit/fraud; H8649 תרמה/treachery fits, while H7421 is Aramean.",
+      "evidence": [
+        "occurrence=matthew.27.64.22",
+        "text=הַתַּרְמִית",
+        "prefixes=Hd",
+        "strong=H7421",
+        "lemma=רַמִּי",
+        "definitions=Aramæan",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 28,
+        "verse": 4,
+        "word_index": 0,
+        "text": "וּמִפַּחְדּוֹ",
+        "strong": "H6342",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מִפַּחְדּוֹ נִבְהֲלוּ הַ/שֹּׁמְרִים וַ/יִּהְיוּ כַּ/מֵּתִים׃"
+      },
+      "previous_strong": "H6342",
+      "new_strong": "H6342",
+      "confidence": 0.9,
+      "reason": "וּמִפַּחְדּוֹ means from fear of him/it; H6342 פחד is correct.",
+      "evidence": [
+        "occurrence=matthew.28.4.0",
+        "text=וּמִפַּחְדּוֹ",
+        "prefixes=Hc",
+        "strong=H6342",
+        "lemma=פָּחַד",
+        "definitions=dread | be in dread | in awe",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 28,
+        "verse": 9,
+        "word_index": 11,
+        "text": "וַתִּגַּשְׁנָה",
+        "strong": "H1657",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הֵנָּה הֹ/לְכוֹת לְ/הַ/גִּיד לְ/תַלְמִידָיו וְ/הִנֵּה יֵשׁוּעַ נִקְרֶה אֲלֵיהֶן וַ/יֹּאמֶר שָׁלוֹם לָ/כֶן וַ/תִּגַּשְׁנָה וַ/תֹּאחַזְנָה בְ/רַגְלָיו וַ/תִּשְׁתַּחֲוֶיןָ לוֹ׃"
+      },
+      "previous_strong": "H1657",
+      "new_strong": "H5066",
+      "confidence": 0.94,
+      "reason": "וַתִּגַּשְׁנָה means they drew near/approached; H5066 נגש fits, while H1657 is Goshen.",
+      "evidence": [
+        "occurrence=matthew.28.9.11",
+        "text=וַתִּגַּשְׁנָה",
+        "prefixes=Hc",
+        "strong=H1657",
+        "lemma=גֹּשֶׁן",
+        "definitions=district in Egypt E. of lower Nile | a city—not clearly located, but on southern border of Judah.",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 1,
+        "verse": 4,
+        "word_index": 5,
+        "text": "תְגֹאַל",
+        "strong": "H6957",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לְ/נַחֲלָה אֲשֶׁר לֹא תִשָּׁחֵת וְ/לֹא תְגֹאַל וְ/לֹא תִבֹּל הַ/צְּפוּנָה בַּ/שָּׁמַיִם לָ/כֶם׃"
+      },
+      "previous_strong": "H6957",
+      "new_strong": "H1351",
+      "confidence": 0.88,
+      "reason": "תְגֹאַל in the inheritance context means be defiled; H1351 גאל defile fits, while H6957 is unrelated.",
+      "evidence": [
+        "occurrence=peter1.1.4.5",
+        "text=תְגֹאַל",
+        "prefixes=none",
+        "strong=H6957",
+        "lemma=קַו",
+        "definitions=none",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 27,
+        "text": "חָמְדוּ",
+        "strong": "H2530",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/נִגְלָה לָ/הֶם כִּי לֹא לְ/נַפְשָׁם כִּי אִם־לָ/נוּ שֵׁרְתוּ בַּ/דְּבָרִים הָהֵם אֲשֶׁר הֻגַּד לָ/כֶם עַתָּה עַל־פִּי הַ/מְבַשְּׂרִים אֶתְכֶם בְּ/רוּחַ הַ/קֹּדֶשׁ הַ/שָּׁלוּחַ מִשָּׁמַיִם דְּבָרִים אֲשֶׁר מַלְאֲכֵי אֱלֹהִים חָמְדוּ לְ/הַ/שְׁקִיף אֶל־תּוֹכָם׃"
+      },
+      "previous_strong": "H2530",
+      "new_strong": "H2530",
+      "confidence": 0.9,
+      "reason": "חָמְדוּ means desired/longed for; H2530 חמד is correct.",
+      "evidence": [
+        "occurrence=peter1.1.12.27",
+        "text=חָמְדוּ",
+        "prefixes=none",
+        "strong=H2530",
+        "lemma=חָמַד",
+        "definitions=desire | take pleasure in",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 1,
+        "verse": 22,
+        "word_index": 0,
+        "text": "זַכּוּ",
+        "strong": "H2141",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "זַכּוּ אֶת־נַפְשֹׁתֵיכֶם עַל־יְדֵי הָ/רוּחַ בְּ/שָׁמְעֲכֶם בְּ/קוֹל הָ/אֱמֶת לְ/אַהֲבַת אַחִים בְּ/לֹא חֲנֻפָּה וַ/אֲהַבְתֶּם אִישׁ אֶת־רֵעֵהוּ אַהֲבָה חֲזָקָה בְּ/לֵב טָהוֹר׃"
+      },
+      "previous_strong": "H2141",
+      "new_strong": "H2141",
+      "confidence": 0.9,
+      "reason": "זַכּוּ means were purified/made clean; H2141 זכך is correct.",
+      "evidence": [
+        "occurrence=peter1.1.22.0",
+        "text=זַכּוּ",
+        "prefixes=none",
+        "strong=H2141",
+        "lemma=זָכַךְ",
+        "definitions=be bright | clean | pure",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 2,
+        "verse": 4,
+        "word_index": 13,
+        "text": "וִיקָרָה",
+        "strong": "Hc/H3367",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר נִגַּשְׁתֶּם אֵלָיו אֶל־אֶבֶן חַיָּה אֲשֶׁר מָאֲסוּ־בָהּ בְּ/נֵי־הָ/אָדָם וְ/הִיא נִבְחָרָה וִ/יקָרָה לֵ/אלֹהִים׃"
+      },
+      "previous_strong": "Hc/H3367",
+      "new_strong": "H3368",
+      "confidence": 0.87,
+      "reason": "וִיקָרָה is precious/costly in context; H3368 יקר better fits the adjective than H3367 honor.",
+      "evidence": [
+        "occurrence=peter1.2.4.13",
+        "text=וִיקָרָה",
+        "prefixes=Hc",
+        "strong=H3367",
+        "lemma=יְקָר",
+        "definitions=honour",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 2,
+        "verse": 7,
+        "word_index": 1,
+        "text": "לָכֶם",
+        "strong": "H2278",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן לָ/כֶם הַ/מַּאֲמִינִים הַ/יְקָר אֲבָל לַ/סּוֹרְרִים הָ/אֶבֶן אֲשֶׁר מָאֲסוּ הַ/בּוֹנִים הָ/יְתָה לְ/רֹאשׁ פִּנָּה וּ/לְ/אֶבֶן נֶגֶף וּ/לְ/צוּר מִכְשֹׁל׃"
+      },
+      "previous_strong": "H2278",
+      "new_strong": null,
+      "confidence": 0.25,
+      "reason": "לָכֶם is a pronominal/prepositional form (“to/for you”); leave for manual grammar-policy handling rather than assigning a lexical Strong.",
+      "evidence": [
+        "occurrence=peter1.2.7.1",
+        "text=לָכֶם",
+        "prefixes=Hl",
+        "strong=H2278",
+        "lemma=חֲבֶרֶת",
+        "definitions=consort",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 2,
+        "verse": 7,
+        "word_index": 14,
+        "text": "נֶגֶף",
+        "strong": "H5063",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן לָ/כֶם הַ/מַּאֲמִינִים הַ/יְקָר אֲבָל לַ/סּוֹרְרִים הָ/אֶבֶן אֲשֶׁר מָאֲסוּ הַ/בּוֹנִים הָ/יְתָה לְ/רֹאשׁ פִּנָּה וּ/לְ/אֶבֶן נֶגֶף וּ/לְ/צוּר מִכְשֹׁל׃"
+      },
+      "previous_strong": "H5063",
+      "new_strong": "H5063",
+      "confidence": 0.9,
+      "reason": "נֶגֶף means stumbling/blow; H5063 is correct in the stumbling-stone phrase.",
+      "evidence": [
+        "occurrence=peter1.2.7.14",
+        "text=נֶגֶף",
+        "prefixes=none",
+        "strong=H5063",
+        "lemma=נֶגֶף",
+        "definitions=blow | striking",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 2,
+        "verse": 15,
+        "word_index": 15,
+        "text": "בָּם",
+        "strong": "H6140",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כֵן הוּא חֵפֶץ אֱלֹהִים אֲשֶׁר בַּ/עֲשׂוֹתְכֶם הַ/טּוֹב תִּסְכְּרוּ אֶת־פִּי אִוֶּלֶת הָ/אֲנָשִׁים אֲשֶׁר אֵין־בָּם דָּעַת׃"
+      },
+      "previous_strong": "H6140",
+      "new_strong": null,
+      "confidence": 0.25,
+      "reason": "בָּם is a pronominal/prepositional form (“in/by them”); leave for manual grammar-policy handling rather than assigning a lexical Strong.",
+      "evidence": [
+        "occurrence=peter1.2.15.15",
+        "text=בָּם",
+        "prefixes=none",
+        "strong=H6140",
+        "lemma=עָקַשׁ",
+        "definitions=twist",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 2,
+        "verse": 19,
+        "word_index": 6,
+        "text": "מַמְּרֹרִים",
+        "strong": "H4472",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי חֶסֶד הוּא לָ/אִישׁ אִם־יִשְׂבַּע מַמְּרֹרִים וִ/יעֻנֶּה חִנָּם לְ/מַעַן דַּעַת הָ/אֱלֹהִים׃"
+      },
+      "previous_strong": "H4472",
+      "new_strong": "H4472",
+      "confidence": 0.9,
+      "reason": "מַמְּרֹרִים means bitter pains/griefs; H4472 is plausible and only needs bilingual definition coverage.",
+      "evidence": [
+        "occurrence=peter1.2.19.6",
+        "text=מַמְּרֹרִים",
+        "prefixes=none",
+        "strong=H4472",
+        "lemma=מַמְרֹר",
+        "definitions=none",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 16,
+        "text": "אֹמֶר",
+        "strong": "H562",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כֵן אַתֶּן הַ/נָּשִׁים הִכָּנַעְנָה לִ/פְנֵי בַ/עֲלֵיכֶן לְ/מַעַן גַּם־אִם־יֵשׁ אֲשֶׁר אֵינָם שֹׁמְעִים לַ/דָּבָר יִקָּנוּ בְ/אֵין־אֹמֶר וּ/דְבָרִים עַל־יְדֵי מַעֲשֵׂי הַ/נָּשִׁים׃"
+      },
+      "previous_strong": "H562",
+      "new_strong": "H562",
+      "confidence": 0.9,
+      "reason": "אֹמֶר means word/speech; H562 is correct.",
+      "evidence": [
+        "occurrence=peter1.3.1.16",
+        "text=אֹמֶר",
+        "prefixes=none",
+        "strong=H562",
+        "lemma=אֹמֶר",
+        "definitions=utterance | speech | word",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 0,
+        "text": "וּפְאֵרְכֶן",
+        "strong": "H5486",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פְאֵרְכֶן אַל־יְהִי מִבַּחוּץ בְּ/מַחְלְפוֹת שֵׂעַר וַ/עֲדִי זָהָב וּ/לְ/בִישַׁת מַחֲלָצוֹת׃"
+      },
+      "previous_strong": "H5486",
+      "new_strong": "H6287",
+      "confidence": 0.91,
+      "reason": "וּפְאֵרְכֶן means and your adornment; H6287 פְּאֵר ornament fits, while H5486 means cease/end.",
+      "evidence": [
+        "occurrence=peter1.3.3.0",
+        "text=וּפְאֵרְכֶן",
+        "prefixes=Hc",
+        "strong=H5486",
+        "lemma=סוּף",
+        "definitions=come to an end | cease",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 9,
+        "text": "מַחֲלָצוֹת׃",
+        "strong": "H4254",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פְאֵרְכֶן אַל־יְהִי מִבַּחוּץ בְּ/מַחְלְפוֹת שֵׂעַר וַ/עֲדִי זָהָב וּ/לְ/בִישַׁת מַחֲלָצוֹת׃"
+      },
+      "previous_strong": "H4254",
+      "new_strong": "H4254",
+      "confidence": 0.9,
+      "reason": "מַחֲלָצוֹת means garments/robes; H4254 is correct.",
+      "evidence": [
+        "occurrence=peter1.3.3.9",
+        "text=מַחֲלָצוֹת׃",
+        "prefixes=none",
+        "strong=H4254",
+        "lemma=מַחֲלָצָה",
+        "definitions=robe of state | taken off",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 7,
+        "text": "הַמְיַחֲלוֹת",
+        "strong": "H2551",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כֵן הִתְקַשְּׁטוּ לְ/פָנִים גַּם־הַ/נָּשִׁים הַ/קְּדשׁוֹת הַ/מְיַחֲלוֹת לֵ/אלֹהִים בְּ/הִכָּנְעָן לִ/פְנֵי בַ/עֲלֵיהֶן׃"
+      },
+      "previous_strong": "H2551",
+      "new_strong": "H3176",
+      "confidence": 0.9,
+      "reason": "הַמְיַחֲלוֹת means those hoping/waiting; H3176 יחל fits, while H2551 compassion is unrelated.",
+      "evidence": [
+        "occurrence=peter1.3.5.7",
+        "text=הַמְיַחֲלוֹת",
+        "prefixes=Hd",
+        "strong=H2551",
+        "lemma=חֶמְלָה",
+        "definitions=compassion | mercy",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 3,
+        "verse": 11,
+        "word_index": 7,
+        "text": "שַׁוְעָתָם׃",
+        "strong": "H7775",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־עֵינֵי יְהוָֹה אֶל־צַדִּיקִים וְ/אָזְנָיו אֶל־שַׁוְעָתָם׃"
+      },
+      "previous_strong": "H7775",
+      "new_strong": "H7775",
+      "confidence": 0.9,
+      "reason": "שַׁוְעָתָם means their cry for help; H7775 is correct.",
+      "evidence": [
+        "occurrence=peter1.3.11.7",
+        "text=שַׁוְעָתָם׃",
+        "prefixes=none",
+        "strong=H7775",
+        "lemma=שַׁוְעָה",
+        "definitions=cry for help",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 3,
+        "verse": 14,
+        "word_index": 12,
+        "text": "תַעֲרִיצוּ׃",
+        "strong": "H6206",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל אַשְׁרֵיכֶם גַּם אִם־תְּעֻנּוּ לְ/מַעַן הַ/צְּדָקָה אַךְ־מוֹרָאָם לֹא־תִירְאוּ וְ/לֹא תַעֲרִיצוּ׃"
+      },
+      "previous_strong": "H6206",
+      "new_strong": "H6206",
+      "confidence": 0.9,
+      "reason": "תַעֲרִיצוּ means be terrified/fear; H6206 ערץ is correct.",
+      "evidence": [
+        "occurrence=peter1.3.14.12",
+        "text=תַעֲרִיצוּ׃",
+        "prefixes=none",
+        "strong=H6206",
+        "lemma=עָרַץ",
+        "definitions=cause to tremble | tremble",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 4,
+        "verse": 1,
+        "word_index": 9,
+        "text": "הִתְאַזְּרוּ",
+        "strong": "H247",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה כַּ/אֲשֶׁר עֻנָּה הַ/מָּשִׁיחַ בַּ/עֲדֵנוּ בַּ/בָּשָׂר כֵּן גַּם־אַתֶּם הִתְאַזְּרוּ בַּ/מַּחֲשָׁבָה הַ/הִיא כִּי הַ/מְעֻנֶּה בַ/בָּשָׂר חָדַל מֵחֲטוֹא׃"
+      },
+      "previous_strong": "H247",
+      "new_strong": "H247",
+      "confidence": 0.9,
+      "reason": "הִתְאַזְּרוּ means gird/equip yourselves; H247 אזר is correct.",
+      "evidence": [
+        "occurrence=peter1.4.1.9",
+        "text=הִתְאַזְּרוּ",
+        "prefixes=none",
+        "strong=H247",
+        "lemma=אָזַר",
+        "definitions=gird | encompass | equip",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 4,
+        "verse": 1,
+        "word_index": 13,
+        "text": "הַמְעֻנֶּה",
+        "strong": "H4470",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה כַּ/אֲשֶׁר עֻנָּה הַ/מָּשִׁיחַ בַּ/עֲדֵנוּ בַּ/בָּשָׂר כֵּן גַּם־אַתֶּם הִתְאַזְּרוּ בַּ/מַּחֲשָׁבָה הַ/הִיא כִּי הַ/מְעֻנֶּה בַ/בָּשָׂר חָדַל מֵחֲטוֹא׃"
+      },
+      "previous_strong": "H4470",
+      "new_strong": "H6031",
+      "confidence": 0.88,
+      "reason": "הַמְעֻנֶּה means the one who suffered/was afflicted; H6031 ענה afflict fits better than H4470 bitterness.",
+      "evidence": [
+        "occurrence=peter1.4.1.13",
+        "text=הַמְעֻנֶּה",
+        "prefixes=Hd",
+        "strong=H4470",
+        "lemma=מֶמֶר",
+        "definitions=bitterness",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 4,
+        "verse": 3,
+        "word_index": 11,
+        "text": "זִמָּה",
+        "strong": "H2155",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "כִּי דַיֵּנוּ עֵת הַ/חַיִּים אֲשֶׁר עָבְרָה לַ/עֲשׂוֹת כְּ/חֵפֶץ הַ/גּוֹיִם בְּ/לֶ/כְתֵּנוּ בְּ/דַרְכֵי זִמָּה וּ/בְ/תַאֲוֺת כְּ/סֹבְאֵי יַיִן וְ/זֹלְלֵי בָ/שָׂר וְ/רֹדְפֵי שֵׁכָר וְ/תוֹעֲבוֹת עֲבֹדַת הָ/אֱלִילִים׃"
+      },
+      "previous_strong": "H2155",
+      "new_strong": "H2154",
+      "confidence": 0.9,
+      "reason": "זִמָּה here is lewdness/wicked desire, not the proper name Zimmah; H2154 fits the common noun.",
+      "evidence": [
+        "occurrence=peter1.4.3.11",
+        "text=זִמָּה",
+        "prefixes=none",
+        "strong=H2155",
+        "lemma=זִמָּה",
+        "definitions=none",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 4,
+        "verse": 12,
+        "word_index": 3,
+        "text": "כּוּר",
+        "strong": "Hk/H3564",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲהוּבִים בְּ/בֹאֲכֶם בְּ/תוֹךְ כּ/וּר מַצְרֵף לְ/מַעַן נַסֹּתְכֶם אַל־נָא תִתְמָהוּ כְּ/אִלּוּ קָרָה לָ/כֶם דָּבָר זָר׃"
+      },
+      "previous_strong": "Hk/H3564",
+      "new_strong": "H3564",
+      "confidence": 0.9,
+      "reason": "כּוּר means furnace/refining pot; H3564 is correct.",
+      "evidence": [
+        "occurrence=peter1.4.12.3",
+        "text=כּוּר",
+        "prefixes=Hk",
+        "strong=H3564",
+        "lemma=כּוּר",
+        "definitions=smelting-pot | furnace",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 4,
+        "verse": 12,
+        "word_index": 4,
+        "text": "מַצְרֵף",
+        "strong": "H4715",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲהוּבִים בְּ/בֹאֲכֶם בְּ/תוֹךְ כּ/וּר מַצְרֵף לְ/מַעַן נַסֹּתְכֶם אַל־נָא תִתְמָהוּ כְּ/אִלּוּ קָרָה לָ/כֶם דָּבָר זָר׃"
+      },
+      "previous_strong": "H4715",
+      "new_strong": "H4715",
+      "confidence": 0.9,
+      "reason": "מַצְרֵף means crucible/refining instrument; H4715 is correct.",
+      "evidence": [
+        "occurrence=peter1.4.12.4",
+        "text=מַצְרֵף",
+        "prefixes=none",
+        "strong=H4715",
+        "lemma=מִצְרֵף",
+        "definitions=crucible | place | instrument of refining",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 4,
+        "verse": 12,
+        "word_index": 11,
+        "text": "קָרָה",
+        "strong": "H7135",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲהוּבִים בְּ/בֹאֲכֶם בְּ/תוֹךְ כּ/וּר מַצְרֵף לְ/מַעַן נַסֹּתְכֶם אַל־נָא תִתְמָהוּ כְּ/אִלּוּ קָרָה לָ/כֶם דָּבָר זָר׃"
+      },
+      "previous_strong": "H7135",
+      "new_strong": "H7135",
+      "confidence": 0.9,
+      "reason": "קָרָה means happened/occurred; the existing H7135 lemma matches and needs definition coverage.",
+      "evidence": [
+        "occurrence=peter1.4.12.11",
+        "text=קָרָה",
+        "prefixes=none",
+        "strong=H7135",
+        "lemma=קָרָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 5,
+        "verse": 1,
+        "word_index": 6,
+        "text": "עֲמִיתָם",
+        "strong": "H5332",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־הַ/זְּקֵנִים אֲשֶׁר בְּ/קִרְבְּכֶם אַזְהִיר אָנֹכִי עֲמִיתָם הַ/זָּקֵן וְ/עֵד עִנּוּיֵי הַ/מָּשִׁיחַ וְ/גַם־חָבֵר לַ/כָּ/בוֹד הֶ/עָתִיד לְ/הִגָּלוֹת׃"
+      },
+      "previous_strong": "H5332",
+      "new_strong": "H5997",
+      "confidence": 0.9,
+      "reason": "עֲמִיתָם means their fellow/associate; H5997 עמית fits, while H5332 juice/blood is unrelated.",
+      "evidence": [
+        "occurrence=peter1.5.1.6",
+        "text=עֲמִיתָם",
+        "prefixes=none",
+        "strong=H5332",
+        "lemma=נֵצַח",
+        "definitions=juice | blood | gore",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 5,
+        "verse": 1,
+        "word_index": 9,
+        "text": "עִנּוּיֵי",
+        "strong": "H8397",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־הַ/זְּקֵנִים אֲשֶׁר בְּ/קִרְבְּכֶם אַזְהִיר אָנֹכִי עֲמִיתָם הַ/זָּקֵן וְ/עֵד עִנּוּיֵי הַ/מָּשִׁיחַ וְ/גַם־חָבֵר לַ/כָּ/בוֹד הֶ/עָתִיד לְ/הִגָּלוֹת׃"
+      },
+      "previous_strong": "H8397",
+      "new_strong": "H6040",
+      "confidence": 0.9,
+      "reason": "עִנּוּיֵי means sufferings/afflictions; H6040 עני affliction fits, while H8397 confusion is unrelated.",
+      "evidence": [
+        "occurrence=peter1.5.1.9",
+        "text=עִנּוּיֵי",
+        "prefixes=none",
+        "strong=H8397",
+        "lemma=תֶּבֶל",
+        "definitions=confusion",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter1",
+        "chapter": 5,
+        "verse": 7,
+        "word_index": 7,
+        "text": "לָכֶם׃",
+        "strong": "H7580",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הַ/שְׁלִיכוּ עָלָיו כָּל־יְהַבְכֶם כִּי הוּא יִדְאַג לָ/כֶם׃"
+      },
+      "previous_strong": "H7580",
+      "new_strong": null,
+      "confidence": 0.25,
+      "reason": "לָכֶם is a pronominal/prepositional form (“for you”); leave for manual grammar-policy handling rather than assigning a lexical Strong.",
+      "evidence": [
+        "occurrence=peter1.5.7.7",
+        "text=לָכֶם׃",
+        "prefixes=Hl",
+        "strong=H7580",
+        "lemma=שָׁאַג",
+        "definitions=roar",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 1,
+        "verse": 3,
+        "word_index": 9,
+        "text": "וְלַחֲסִידוּת",
+        "strong": "H6623",
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בַּ/אֲשֶׁר גְּבוּרָתוֹ הָ/אֱלֹהִית נָתְנָה לָּ/נוּ אֵת כָּל־אֲשֶׁר לַ/חַיִּים וְ/לַ/חֲסִידוּת עַל־יְדֵי דַעַת הַ/קּוֹרֵא אֹתָנוּ בִּ/כְ/בוֹדוֹ וְ/חֵילוֹ׃"
+      },
+      "previous_strong": "H6623",
+      "new_strong": "H2617",
+      "confidence": 0.84,
+      "reason": "וְלַחֲסִידוּת means and to piety/godliness; H2617 חסד includes piety/kindness and is closer than H6623 interpretation.",
+      "evidence": [
+        "occurrence=peter2.1.3.9",
+        "text=וְלַחֲסִידוּת",
+        "prefixes=Hc,Hl",
+        "strong=H6623",
+        "lemma=פִּתְרוֹן",
+        "definitions=interpretation",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 1,
+        "verse": 4,
+        "word_index": 16,
+        "text": "מִכִּלְיוֹן",
+        "strong": "H3630",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר בָּ/הֶם נָתַן־לָ/נוּ הַ/בְטָחוֹת גְּדֹלוֹת מְאֹד וִ/יקָרוֹת לְ/מַעַן תִּקְחוּ עַל־יָדָן חֵלֶק בְּ/טֶבַע אֱלֹהִים בְּ/הִמָּלֶטְכֶם מִכִּלְיוֹן הַ/תַּאֲוָה אֲשֶׁר בָּ/עוֹלָם׃"
+      },
+      "previous_strong": "H3630",
+      "new_strong": "H3630",
+      "confidence": 0.9,
+      "reason": "מִכִּלְיוֹן means from corruption/destruction; H3630 כליון is correct and needs definition coverage.",
+      "evidence": [
+        "occurrence=peter2.1.4.16",
+        "text=מִכִּלְיוֹן",
+        "prefixes=none",
+        "strong=H3630",
+        "lemma=כִּלְיוֹן",
+        "definitions=none",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 1,
+        "verse": 7,
+        "word_index": 2,
+        "text": "הָאַחֲוָה",
+        "strong": "Hd/H264",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/חֲסִידוּת אֶת־הָ/אַחֲוָה וּ/בָ/אַחֲוָה אֶת־הָ/אַהֲבָה׃"
+      },
+      "previous_strong": "Hd/H264",
+      "new_strong": "H264",
+      "confidence": 0.9,
+      "reason": "הָאַחֲוָה means brotherhood; H264 is correct.",
+      "evidence": [
+        "occurrence=peter2.1.7.2",
+        "text=הָאַחֲוָה",
+        "prefixes=Hd",
+        "strong=H264",
+        "lemma=אַחֲוָה",
+        "definitions=brotherhood",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 1,
+        "verse": 9,
+        "word_index": 8,
+        "text": "קְצַר",
+        "strong": "H7116",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הָ/אִישׁ אֲשֶׁר אֵין־אֵלֶּה לּוֹ עִוֵּר הוּא קְצַר הָ/רְאוּת וְ/שָׁכֵחַ אֶת־טָהֳרָתוֹ מֵחַטֹּאתָיו הָ/רִאשֹׁנוֹת׃"
+      },
+      "previous_strong": "H7116",
+      "new_strong": "H7116",
+      "confidence": 0.9,
+      "reason": "קְצַר means short/short-sighted in context; H7116 is correct.",
+      "evidence": [
+        "occurrence=peter2.1.9.8",
+        "text=קְצַר",
+        "prefixes=none",
+        "strong=H7116",
+        "lemma=קָצֵר",
+        "definitions=short",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 1,
+        "verse": 17,
+        "word_index": 11,
+        "text": "הַדְרַת",
+        "strong": "Hd/H1927",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי לָ/קַח מֵאֵת אֱלֹהִים הָאָב יְקָר וְ/כָ/בוֹד בְּ/בֹא אֵלָיו קוֹל מִתּוֹךְ הַ/דְרַת כְּ/ב/וֹדוֹ לֵ/אמֹר זֶה בְּ/נִי יְדִידִי רָצְתָה נַפְשִׁי בּוֹ׃"
+      },
+      "previous_strong": "Hd/H1927",
+      "new_strong": "H1927",
+      "confidence": 0.9,
+      "reason": "הַדְרַת means glory/majesty; H1927 is correct.",
+      "evidence": [
+        "occurrence=peter2.1.17.11",
+        "text=הַדְרַת",
+        "prefixes=Hd",
+        "strong=H1927",
+        "lemma=הֲדָרָה",
+        "definitions=adornment | glory",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 1,
+        "verse": 19,
+        "word_index": 17,
+        "text": "אֹפֶל",
+        "strong": "H652",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה דְּבַר הַ/נְּבוּאָה יוֹתֵר קַיָּם אִתָּנוּ וַ/הֲ/טִיבֹתֶם עֲשׂוֹת אֲשֶׁר שַׁתֶּם לִ/בְּ/כֶם אֵלָיו כְּ/מוֹ אֶל־נֵר מֵאִיר בִּ/מְקוֹם אֹפֶל עַד־כִּי יִבָּקַע אוֹר הַ/יּוֹם וְ/זָרַח כּ/וֹכַב הַנֹּגַהּ בִּ/לְ/בַבְכֶם׃"
+      },
+      "previous_strong": "H652",
+      "new_strong": "H652",
+      "confidence": 0.9,
+      "reason": "אֹפֶל means darkness/gloom; H652 is correct.",
+      "evidence": [
+        "occurrence=peter2.1.19.17",
+        "text=אֹפֶל",
+        "prefixes=none",
+        "strong=H652",
+        "lemma=אֹפֶל",
+        "definitions=darkness | gloom | darkness | calamity",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 1,
+        "word_index": 13,
+        "text": "כִּתּוֹת",
+        "strong": "H7080",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/גַם־נְבִיאֵי שֶׁקֶר הָיוּ בָ/עָם כַּ/אֲשֶׁר יִהְיוּ גַם־בָּ/כֶם מוֹרֵי שֶׁקֶר אֲשֶׁר יַכְנִיסוּ כִּ/תּוֹת מַשְׁחִיתוֹת וּ/בְ/כַחֲשָׁם בַּ/מּשֵׁל אֲשֶׁר קָנָם יָבִיאוּ עַל־נַפְשָׁם כִּ/לָּ/יוֹן פִּתְאֹם׃"
+      },
+      "previous_strong": "H7080",
+      "new_strong": "D0150",
+      "confidence": 0.92,
+      "reason": "כִּתּוֹת means sects/parties; existing custom D0150 כת fits, while H7080 divination is unrelated.",
+      "evidence": [
+        "occurrence=peter2.2.1.13",
+        "text=כִּתּוֹת",
+        "prefixes=Hk",
+        "strong=H7080",
+        "lemma=קָסַם",
+        "definitions=practise divination",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 3,
+        "word_index": 1,
+        "text": "בִדּוּי",
+        "strong": "H5727",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/דִבְרֵי בִ/דּוּי יַעֲשֹוּ אֶתְכֶם לְ/מִסְחָר לָ/הֶם לְ/מַעַן בְּ/צֹעַ בָּ/צַע אֲשֶׁר מִשְׁפָּטָם מֵעוֹלָם לֹא יִתְמַהְמַהּ וְ/שִׁבְרָם לֹא יָנוּם׃"
+      },
+      "previous_strong": "H5727",
+      "new_strong": "D0203",
+      "confidence": 0.87,
+      "reason": "בִדּוּי means fabricated/feigned in “words of falsehood”; no reliable biblical Strong entry matches this NT Hebrew usage, so create a custom lexical entry.",
+      "evidence": [
+        "occurrence=peter2.2.3.1",
+        "text=בִדּוּי",
+        "prefixes=Hb",
+        "strong=H5727",
+        "lemma=עָדַן",
+        "definitions=luxuriate | delight",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0203",
+      "hebrew": "בדוי",
+      "transliteration_en": "biduy",
+      "transliteration_es": "biduy",
+      "root": "בדה",
+      "root_strong": "",
+      "definition": {
+        "text_en": "fabricated; feigned; invented falsehood.",
+        "text_es": "fabricado; fingido; falsedad inventada.",
+        "source": "custom"
+      }
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 4,
+        "word_index": 11,
+        "text": "לְקִצְבֵי",
+        "strong": "Hl/H7095",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי לֹא־חָס אֱלֹהִים עַל־הַ/מַּלְאָכִים אֲשֶׁר חָטְאוּ כִּי אִם־ה/וֹרִידָם לְ/קִצְבֵי הָ/רִים וַ/יַּסְגִּירֵם בְּ/כַ/בְלֵי אֹפֶל לְ/שָׁמְרָם לַ/מִּשְׁפָּט׃"
+      },
+      "previous_strong": "Hl/H7095",
+      "new_strong": null,
+      "confidence": 0.25,
+      "reason": "לְקִצְבֵי in “קצבי הרים” has an unclear contextual sense; keep for manual review rather than force H7095 or a custom entry.",
+      "evidence": [
+        "occurrence=peter2.2.4.11",
+        "text=לְקִצְבֵי",
+        "prefixes=Hl",
+        "strong=H7095",
+        "lemma=קֶצֶב",
+        "definitions=cut | shape | extremity",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 4,
+        "word_index": 14,
+        "text": "בְּכַבְלֵי",
+        "strong": "Hb/Hk/H3525",
+        "prefixes": [
+          "Hb",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי לֹא־חָס אֱלֹהִים עַל־הַ/מַּלְאָכִים אֲשֶׁר חָטְאוּ כִּי אִם־ה/וֹרִידָם לְ/קִצְבֵי הָ/רִים וַ/יַּסְגִּירֵם בְּ/כַ/בְלֵי אֹפֶל לְ/שָׁמְרָם לַ/מִּשְׁפָּט׃"
+      },
+      "previous_strong": "Hb/Hk/H3525",
+      "new_strong": "H3525",
+      "confidence": 0.9,
+      "reason": "בְּכַבְלֵי means in/with chains or fetters; H3525 is correct.",
+      "evidence": [
+        "occurrence=peter2.2.4.14",
+        "text=בְּכַבְלֵי",
+        "prefixes=Hb,Hk",
+        "strong=H3525",
+        "lemma=כֶּבֶל",
+        "definitions=fetter",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 10,
+        "word_index": 13,
+        "text": "בִּשְׁרִירוּת",
+        "strong": "Hb/H8307",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/יוֹתֵר אֶת־הַ/הֹלְכִים אַחֲרֵי הַ/בָּשָׂר בְּ/תַאֲוֺת תֶּבֶל וּ/בֹ/זִים אֶת־הַ/מֶּמְשָׁלָה עַזֵּי פָנִים הֹ/לְכִים בִּ/שְׁרִירוּת לִ/בָּם וְ/לֹא יֶחֶרְדוּ מֵחָרֵף אֶת־הַ/שְּׂרָרוֹת׃"
+      },
+      "previous_strong": "Hb/H8307",
+      "new_strong": "H8307",
+      "confidence": 0.9,
+      "reason": "בִּשְׁרִירוּת means stubbornness/self-will; H8307 is correct.",
+      "evidence": [
+        "occurrence=peter2.2.10.13",
+        "text=בִּשְׁרִירוּת",
+        "prefixes=Hb",
+        "strong=H8307",
+        "lemma=שְׁרִירוּת",
+        "definitions=firmness | stubbornness",
+        "codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "פזר",
+        "strong": "H6340",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פזר"
+      },
+      "previous_strong": "H6340",
+      "new_strong": "H6340",
+      "confidence": 0.9,
+      "reason": "H6340 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6340",
+      "hebrew": "פזר",
+      "transliteration_en": "pazar",
+      "transliteration_es": "pazar",
+      "definition": {
+        "text_en": "scatter; disperse; spread abroad.",
+        "text_es": "esparcir; dispersar; repartir.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "צלב",
+        "strong": "D0058",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "צלב"
+      },
+      "previous_strong": "D0058",
+      "new_strong": "D0058",
+      "confidence": 0.9,
+      "reason": "D0058 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "D0058",
+      "hebrew": "צלב",
+      "transliteration_en": "tslav",
+      "transliteration_es": "tslav",
+      "definition": {
+        "text_en": "crucify; fasten to a cross.",
+        "text_es": "crucificar; fijar en una cruz.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "שפך",
+        "strong": "H8210",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שפך"
+      },
+      "previous_strong": "H8210",
+      "new_strong": "H8210",
+      "confidence": 0.9,
+      "reason": "H8210 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8210",
+      "hebrew": "שפך",
+      "transliteration_en": "shafakh",
+      "transliteration_es": "shafaj",
+      "definition": {
+        "text_en": "pour; pour out; shed.",
+        "text_es": "derramar; verter; hacer fluir.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "מסר",
+        "strong": "H4560",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מסר"
+      },
+      "previous_strong": "H4560",
+      "new_strong": "H4560",
+      "confidence": 0.9,
+      "reason": "H4560 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4560",
+      "hebrew": "מסר",
+      "transliteration_en": "masar",
+      "transliteration_es": "masar",
+      "definition": {
+        "text_en": "deliver up; hand over; betray.",
+        "text_es": "entregar; poner en manos de otro; traicionar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "יקר",
+        "strong": "H3368",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "יקר"
+      },
+      "previous_strong": "H3368",
+      "new_strong": "H3368",
+      "confidence": 0.9,
+      "reason": "H3368 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3368",
+      "hebrew": "יקר",
+      "transliteration_en": "yaqar",
+      "transliteration_es": "yakar",
+      "definition": {
+        "text_en": "precious; costly; valuable.",
+        "text_es": "precioso; costoso; valioso.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "תרמית",
+        "strong": "H8649",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "תרמית"
+      },
+      "previous_strong": "H8649",
+      "new_strong": "H8649",
+      "confidence": 0.9,
+      "reason": "H8649 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8649",
+      "hebrew": "תרמית",
+      "transliteration_en": "tormah",
+      "transliteration_es": "tormah",
+      "definition": {
+        "text_en": "deceit; treachery; fraud.",
+        "text_es": "engaño; traición; fraude.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "נגש",
+        "strong": "H5066",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "נגש"
+      },
+      "previous_strong": "H5066",
+      "new_strong": "H5066",
+      "confidence": 0.9,
+      "reason": "H5066 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5066",
+      "hebrew": "נגש",
+      "transliteration_en": "nagash",
+      "transliteration_es": "nagash",
+      "definition": {
+        "text_en": "draw near; approach.",
+        "text_es": "acercarse; aproximarse.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "גאל",
+        "strong": "H1351",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "גאל"
+      },
+      "previous_strong": "H1351",
+      "new_strong": "H1351",
+      "confidence": 0.9,
+      "reason": "H1351 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1351",
+      "hebrew": "גאל",
+      "transliteration_en": "gaal",
+      "transliteration_es": "gaal",
+      "definition": {
+        "text_en": "defile; pollute; make unclean.",
+        "text_es": "profanar; contaminar; volver impuro.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "פאר",
+        "strong": "H6287",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פאר"
+      },
+      "previous_strong": "H6287",
+      "new_strong": "H6287",
+      "confidence": 0.9,
+      "reason": "H6287 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6287",
+      "hebrew": "פאר",
+      "transliteration_en": "peer",
+      "transliteration_es": "peer",
+      "definition": {
+        "text_en": "ornament; adornment; headdress.",
+        "text_es": "ornamento; adorno; tocado.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "יחל",
+        "strong": "H3176",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "יחל"
+      },
+      "previous_strong": "H3176",
+      "new_strong": "H3176",
+      "confidence": 0.9,
+      "reason": "H3176 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3176",
+      "hebrew": "יחל",
+      "transliteration_en": "yachal",
+      "transliteration_es": "yajal",
+      "definition": {
+        "text_en": "wait; hope; await.",
+        "text_es": "esperar; poner la esperanza; aguardar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "ממרור",
+        "strong": "H4472",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "ממרור"
+      },
+      "previous_strong": "H4472",
+      "new_strong": "H4472",
+      "confidence": 0.9,
+      "reason": "H4472 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4472",
+      "hebrew": "ממרור",
+      "transliteration_en": "mamror",
+      "transliteration_es": "mamror",
+      "definition": {
+        "text_en": "bitterness; bitter grief; bitter suffering.",
+        "text_es": "amargura; dolor amargo; sufrimiento amargo.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "ענה",
+        "strong": "H6031",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "ענה"
+      },
+      "previous_strong": "H6031",
+      "new_strong": "H6031",
+      "confidence": 0.9,
+      "reason": "H6031 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6031",
+      "hebrew": "ענה",
+      "transliteration_en": "anah",
+      "transliteration_es": "anah",
+      "definition": {
+        "text_en": "afflict; humble; suffer.",
+        "text_es": "afligir; humillar; padecer.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "זמה",
+        "strong": "H2154",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "זמה"
+      },
+      "previous_strong": "H2154",
+      "new_strong": "H2154",
+      "confidence": 0.9,
+      "reason": "H2154 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2154",
+      "hebrew": "זמה",
+      "transliteration_en": "zimmah",
+      "transliteration_es": "zimmah",
+      "definition": {
+        "text_en": "wicked plan; lewdness; shameful desire.",
+        "text_es": "plan perverso; lascivia; deseo vergonzoso.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "קרה",
+        "strong": "H7135",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "קרה"
+      },
+      "previous_strong": "H7135",
+      "new_strong": "H7135",
+      "confidence": 0.9,
+      "reason": "H7135 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7135",
+      "hebrew": "קרה",
+      "transliteration_en": "qarah",
+      "transliteration_es": "karah",
+      "definition": {
+        "text_en": "happen; occur; befall.",
+        "text_es": "suceder; ocurrir; acontecer.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "עמית",
+        "strong": "H5997",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עמית"
+      },
+      "previous_strong": "H5997",
+      "new_strong": "H5997",
+      "confidence": 0.9,
+      "reason": "H5997 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5997",
+      "hebrew": "עמית",
+      "transliteration_en": "amit",
+      "transliteration_es": "amit",
+      "definition": {
+        "text_en": "fellow; associate; companion.",
+        "text_es": "compañero; asociado; semejante.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "עני",
+        "strong": "H6040",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עני"
+      },
+      "previous_strong": "H6040",
+      "new_strong": "H6040",
+      "confidence": 0.9,
+      "reason": "H6040 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6040",
+      "hebrew": "עני",
+      "transliteration_en": "oni",
+      "transliteration_es": "oni",
+      "definition": {
+        "text_en": "affliction; suffering; misery.",
+        "text_es": "aflicción; sufrimiento; miseria.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "חסד",
+        "strong": "H2617",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "חסד"
+      },
+      "previous_strong": "H2617",
+      "new_strong": "H2617",
+      "confidence": 0.9,
+      "reason": "H2617 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2617",
+      "hebrew": "חסד",
+      "transliteration_en": "chesed",
+      "transliteration_es": "jesed",
+      "definition": {
+        "text_en": "kindness; mercy; piety.",
+        "text_es": "bondad; misericordia; piedad.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "כליון",
+        "strong": "H3630",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כליון"
+      },
+      "previous_strong": "H3630",
+      "new_strong": "H3630",
+      "confidence": 0.9,
+      "reason": "H3630 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0053"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3630",
+      "hebrew": "כליון",
+      "transliteration_en": "kilyon",
+      "transliteration_es": "kilyon",
+      "definition": {
+        "text_en": "destruction; corruption; consumption.",
+        "text_es": "destrucción; corrupción; consumición.",
+        "source": "delitzsch_review"
+      }
+    }
+  ]
+}

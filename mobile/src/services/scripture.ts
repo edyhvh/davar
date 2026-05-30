@@ -449,7 +449,7 @@ const extractBaseStrong = (value?: string): string | undefined => {
     .filter(Boolean);
 
   for (let index = parts.length - 1; index >= 0; index -= 1) {
-    if (/^[HG]\d+$/.test(parts[index])) {
+    if (/^[HGD]\d+$/.test(parts[index])) {
       return parts[index];
     }
   }

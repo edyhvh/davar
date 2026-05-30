@@ -1,0 +1,1537 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.491616+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 9,
+        "verse": 17,
+        "word_index": 13,
+        "text": "הִיא׃",
+        "strong": "H1932",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־בִּ/רְצוֹנִי אֶעֱשֶׂה־כֵּן יִהְיֶה־לִּי שָׂכָר וְ/אִם בְּ/עַל־כָּ/רְחִי פְּקֻדַּת מִשְׁמַרְתִּי הִיא׃"
+      },
+      "previous_strong": "H1932",
+      "new_strong": "H1932",
+      "confidence": 0.92,
+      "reason": "Reviewed in context: הִיא is the pronoun she/it; H1932 is acceptable.",
+      "evidence": [
+        "occurrence=corinthians1.9.17.13",
+        "text=הִיא׃",
+        "prefixes=none",
+        "strong=H1932",
+        "lemma=הוּא",
+        "definitions=he | she | it",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 9,
+        "verse": 18,
+        "word_index": 10,
+        "text": "מְחִיר",
+        "strong": "H4243",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וְ/עַתָּה מַה־הוּא שְׂכָרִי הֲלֹא זֶה שֶׁאֲבַשֵּׂר בְּ/שׂוֹרַת הַ/מָּשִׁיחַ בְּ/לֹא־מְחִיר לְ/בִ/לְתִּי הִשְׁתַּמֵּשׁ לַ/הֲנָאַת עַצְמִי בָּ/רְשׁוּת הַ/נִּתֶּנֶת־לִי בַּ/בְּשׂוֹרָה׃"
+      },
+      "previous_strong": "H4243",
+      "new_strong": "H4243",
+      "confidence": 0.9,
+      "reason": "מְחִיר means price/cost; add the missing definition to H4243.",
+      "evidence": [
+        "occurrence=corinthians1.9.18.10",
+        "text=מְחִיר",
+        "prefixes=none",
+        "strong=H4243",
+        "lemma=מְחִיר",
+        "definitions=none",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4243",
+      "definition": {
+        "text_en": "price; cost; hire value.",
+        "text_es": "precio; costo; valor de paga.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 9,
+        "verse": 24,
+        "word_index": 4,
+        "text": "הַמְּרוּצָה",
+        "strong": "Hd/H4835",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הֲלֹא יְדַעְתֶּם כִּי־רָצֵי הַ/מְּרוּצָה בְּ/אִסְטָדִין רָצִים כֻּ/לָּם וְ/רַק־אֶחָד מֵהֶם יַשִּׂיג אֶת־שְׂכַר הַ/נִּצָּחוֹן כָּ/כָה רוּצוּ לְ/מַעַן תַּשִּׂיגֻהוּ׃"
+      },
+      "previous_strong": "Hd/H4835",
+      "new_strong": "H4835",
+      "confidence": 0.9,
+      "reason": "הַמְּרוּצָה means the race/running course; add the missing definition to H4835.",
+      "evidence": [
+        "occurrence=corinthians1.9.24.4",
+        "text=הַמְּרוּצָה",
+        "prefixes=Hd",
+        "strong=H4835",
+        "lemma=מְרֻצָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4835",
+      "definition": {
+        "text_en": "race; running; course.",
+        "text_es": "carrera; correr; recorrido.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 9,
+        "verse": 25,
+        "word_index": 8,
+        "text": "כֶּתֶר",
+        "strong": "Hk/H3804",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כָל־הָ/עֹמֵד לְ/הֵאָבֵק יִנָּזֵר מִכָּל־דָּבָר הֵמָּה לָ/קַחַת כֶּ/תֶר נִפְסָד וַ/אֲנַחְנוּ לָ/קַחַת כֶּ/תֶר אֲשֶׁר אֵינֶנּוּ נִפְסָד׃"
+      },
+      "previous_strong": "Hk/H3804",
+      "new_strong": "Hk/H3804",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: כֶּתֶר means crown; H3804 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.9.25.8",
+        "text=כֶּתֶר",
+        "prefixes=Hk",
+        "strong=H3804",
+        "lemma=כֶּתֶר",
+        "definitions=crown",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 9,
+        "verse": 27,
+        "word_index": 2,
+        "text": "אֲדַכֵּא",
+        "strong": "H1792",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־אֲדַכֵּא אֶת־גּוּפִי וַ/אֲשַׁעְבְּדֶנּוּ פֶּן־אֶהְיֶה אֲנִי הַ/קּוֹרֵא לַ/אֲחֵרִים נֶאֱלָח בְּ/עַצְמִי׃"
+      },
+      "previous_strong": "H1792",
+      "new_strong": "H1792",
+      "confidence": 0.91,
+      "reason": "Reviewed in context: אֲדַכֵּא means I discipline/beat down/crush; H1792 is acceptable.",
+      "evidence": [
+        "occurrence=corinthians1.9.27.2",
+        "text=אֲדַכֵּא",
+        "prefixes=none",
+        "strong=H1792",
+        "lemma=דָּכָא",
+        "definitions=crush",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 4,
+        "word_index": 8,
+        "text": "הַצּוּר",
+        "strong": "Hd/H6697",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כֻ/לָּם שָׁתוּ מַשְׁקֶה אֶחָד רוּחָנִי כִּי שָׁתוּ מִן־הַ/צּוּר הָ/רוּחָנִי הַ/הֹלֵךְ עִמָּהֶם וְ/הַצּוּר הַ/הוּא הָיָה הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "Hd/H6697",
+      "new_strong": "Hd/H6697",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַצּוּר means the rock; H6697 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.10.4.8",
+        "text=הַצּוּר",
+        "prefixes=Hd",
+        "strong=H6697",
+        "lemma=צוּר",
+        "definitions=rock | cliff",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 4,
+        "word_index": 12,
+        "text": "וְהַצּוּר",
+        "strong": "H4324",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כֻ/לָּם שָׁתוּ מַשְׁקֶה אֶחָד רוּחָנִי כִּי שָׁתוּ מִן־הַ/צּוּר הָ/רוּחָנִי הַ/הֹלֵךְ עִמָּהֶם וְ/הַצּוּר הַ/הוּא הָיָה הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H4324",
+      "new_strong": "H6697",
+      "confidence": 0.96,
+      "reason": "וְהַצּוּר means and the rock; H6697 צוּר fits, H4324 is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.10.4.12",
+        "text=וְהַצּוּר",
+        "prefixes=Hc",
+        "strong=H4324",
+        "lemma=מִיכָל",
+        "definitions=none",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 5,
+        "word_index": 5,
+        "text": "וּפִגְרֵיהֶם",
+        "strong": "Hc/H6297",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל בְּ/רֻבָּם לֹא רָצָה הָ/אֱלֹהִים וּ/פִגְרֵיהֶם נָפְלוּ בַ/מִּדְבָּר׃"
+      },
+      "previous_strong": "Hc/H6297",
+      "new_strong": "Hc/H6297",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: וּפִגְרֵיהֶם means their corpses; H6297 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.10.5.5",
+        "text=וּפִגְרֵיהֶם",
+        "prefixes=Hc",
+        "strong=H6297",
+        "lemma=פֶּגֶר",
+        "definitions=corpse | carcass",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 6,
+        "word_index": 4,
+        "text": "לְמָשָׁל",
+        "strong": "Hl/H4912",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כָל־זֹאת הָ/יְתָה־לָּ/נוּ לְ/מָשָׁל לְ/בִ/לְתִּי הִתְאַוֹּת לְ/רָעָה כַּ/אֲשֶׁר הִתְאַוּוּ גַּם־הֵמָּה׃"
+      },
+      "previous_strong": "Hl/H4912",
+      "new_strong": "Hl/H4912",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: לְמָשָׁל means as an example/parable; H4912 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.10.6.4",
+        "text=לְמָשָׁל",
+        "prefixes=Hl",
+        "strong=H4912",
+        "lemma=מָשָׁל",
+        "definitions=proverb | parable | parallelism",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 6,
+        "word_index": 9,
+        "text": "הִתְאַוּוּ",
+        "strong": "H183",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כָל־זֹאת הָ/יְתָה־לָּ/נוּ לְ/מָשָׁל לְ/בִ/לְתִּי הִתְאַוֹּת לְ/רָעָה כַּ/אֲשֶׁר הִתְאַוּוּ גַּם־הֵמָּה׃"
+      },
+      "previous_strong": "H183",
+      "new_strong": "H183",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: הִתְאַוּוּ means they desired/lusted; H183 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.10.6.9",
+        "text=הִתְאַוּוּ",
+        "prefixes=none",
+        "strong=H183",
+        "lemma=אָוָה",
+        "definitions=incline | desire",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 7,
+        "word_index": 8,
+        "text": "שֶׁכָּתוּב",
+        "strong": "H3782",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לֹא תִהְיוּ עֹבְדֵי אֱלִילִים כַּ/אֲשֶׁר הָיוּ מִקְצָתָם כְּ/מוֹ שֶׁכָּתוּב וַ/יֵּשֶׁב הָעָם לֶ/אֱכֹל וְ/שָׁתוֹ וַ/יָּקֻמוּ לְ/צַחֵק׃"
+      },
+      "previous_strong": "H3782",
+      "new_strong": "H3789",
+      "confidence": 0.95,
+      "reason": "שֶׁכָּתוּב means as/that it is written; H3789 כָּתַב fits, H3782 is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.10.7.8",
+        "text=שֶׁכָּתוּב",
+        "prefixes=none",
+        "strong=H3782",
+        "lemma=כָּשַׁל",
+        "definitions=stumble | stagger | totter",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 7,
+        "word_index": 14,
+        "text": "לְצַחֵק׃",
+        "strong": "Hl/H6711",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לֹא תִהְיוּ עֹבְדֵי אֱלִילִים כַּ/אֲשֶׁר הָיוּ מִקְצָתָם כְּ/מוֹ שֶׁכָּתוּב וַ/יֵּשֶׁב הָעָם לֶ/אֱכֹל וְ/שָׁתוֹ וַ/יָּקֻמוּ לְ/צַחֵק׃"
+      },
+      "previous_strong": "Hl/H6711",
+      "new_strong": "Hl/H6711",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: לְצַחֵק means to laugh/play; H6711 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.10.7.14",
+        "text=לְצַחֵק׃",
+        "prefixes=Hl",
+        "strong=H6711",
+        "lemma=צָחַק",
+        "definitions=laugh",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 9,
+        "word_index": 8,
+        "text": "הַנְּחָשִׁים׃",
+        "strong": "Hd/H5175",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לֹא־נְנַסֶּה אֶת־הַ/מָּשִׁיחַ כַּ/אֲשֶׁר נִסּוּהוּ מִקְצָתָם וַ/יְאַבְּדוּם הַ/נְּחָשִׁים׃"
+      },
+      "previous_strong": "Hd/H5175",
+      "new_strong": "Hd/H5175",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַנְּחָשִׁים means the serpents; H5175 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.10.9.8",
+        "text=הַנְּחָשִׁים׃",
+        "prefixes=Hd",
+        "strong=H5175",
+        "lemma=נָחָשׁ",
+        "definitions=serpent | serpent | bronze image of serpent | fleeing serpent",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 13,
+        "word_index": 26,
+        "text": "הַנִּסָּיוֹן",
+        "strong": "H5510",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "עֲדַיִן לֹא־בָא עֲלֵיכֶם נִסָּיוֹן אַחֵר בִּ/לְ/תִּי אִם־נִסְיוֹן בְּ/נֵי אָדָם כִּי־נֶאֱמָן הוּא הָ/אֱלֹהִים אֲשֶׁר לֹא יַנִּיחַ לְ/נַסּוֹת אֶתְכֶם לְ/מַעְלָה מִיכָלְתְּכֶם כִּי אִם־יִתֵּן עִם־הַ/נִּסָּיוֹן גַּם־תוֹצְאֹתָיו כְּ/דֵי שֶׁתּוּכְלוּ שְׂאֵת׃"
+      },
+      "previous_strong": "H5510",
+      "new_strong": "H5254",
+      "confidence": 0.89,
+      "reason": "הַנִּסָּיוֹן means the trial/temptation; H5254 נָסָה is the testing root, H5510 Sivan is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.10.13.26",
+        "text=הַנִּסָּיוֹן",
+        "prefixes=Hd",
+        "strong=H5510",
+        "lemma=סִיוָן",
+        "definitions=Sîwān",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 13,
+        "word_index": 28,
+        "text": "תוֹצְאֹתָיו",
+        "strong": "H8444",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עֲדַיִן לֹא־בָא עֲלֵיכֶם נִסָּיוֹן אַחֵר בִּ/לְ/תִּי אִם־נִסְיוֹן בְּ/נֵי אָדָם כִּי־נֶאֱמָן הוּא הָ/אֱלֹהִים אֲשֶׁר לֹא יַנִּיחַ לְ/נַסּוֹת אֶתְכֶם לְ/מַעְלָה מִיכָלְתְּכֶם כִּי אִם־יִתֵּן עִם־הַ/נִּסָּיוֹן גַּם־תוֹצְאֹתָיו כְּ/דֵי שֶׁתּוּכְלוּ שְׂאֵת׃"
+      },
+      "previous_strong": "H8444",
+      "new_strong": "H8444",
+      "confidence": 0.9,
+      "reason": "Reviewed in context: תוֹצְאֹתָיו means its outcome/way out; H8444 is acceptable.",
+      "evidence": [
+        "occurrence=corinthians1.10.13.28",
+        "text=תוֹצְאֹתָיו",
+        "prefixes=none",
+        "strong=H8444",
+        "lemma=תּוֹצָאָה",
+        "definitions=outgoing | extremity | source | escape",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 16,
+        "word_index": 0,
+        "text": "כּוֹס",
+        "strong": "Hk/H3563",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כּ/וֹס הַ/בְּרָכָה אֲשֶׁר אֲנַחְנוּ מְבָרְכִים הֲלֹא הִיא הִתְחַבְּרוּת דַּם הַ/מָּשִׁיחַ וְ/הַ/לֶּחֶם אֲשֶׁר אֲנַחְנוּ בֹ/צְעִים הֲלֹא הוּא הִתְחַבְּרוּת גּוּף הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "Hk/H3563",
+      "new_strong": "Hk/H3563",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: כּוֹס means cup; H3563 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.10.16.0",
+        "text=כּוֹס",
+        "prefixes=Hk",
+        "strong=H3563",
+        "lemma=כּוֹס",
+        "definitions=cup",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 16,
+        "word_index": 1,
+        "text": "הַבְּרָכָה",
+        "strong": "Hd/H1293",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "כּ/וֹס הַ/בְּרָכָה אֲשֶׁר אֲנַחְנוּ מְבָרְכִים הֲלֹא הִיא הִתְחַבְּרוּת דַּם הַ/מָּשִׁיחַ וְ/הַ/לֶּחֶם אֲשֶׁר אֲנַחְנוּ בֹ/צְעִים הֲלֹא הוּא הִתְחַבְּרוּת גּוּף הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "Hd/H1293",
+      "new_strong": "Hd/H1293",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַבְּרָכָה means blessing; H1293 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.10.16.1",
+        "text=הַבְּרָכָה",
+        "prefixes=Hd",
+        "strong=H1293",
+        "lemma=בְּרָכָה",
+        "definitions=blessing | blessing | source of blessing | blessing | prosperity",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 10,
+        "verse": 20,
+        "word_index": 5,
+        "text": "לַשֵּׁדִים",
+        "strong": "Hl/H7700",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֶלָּא אֵת אֲשֶׁר־יִזְבְּחוּ הַ/גּוֹיִם לַ/שֵּׁדִים הֵם זֹבְחִים וְ/לֹא לֵ/אלֹהִים וַ/אֲנִי לֹא אֶחְפֹּץ הֱ/יֹתְכֶם חֲבֵרִים לַ/שֵּׁדִים׃"
+      },
+      "previous_strong": "Hl/H7700",
+      "new_strong": "Hl/H7700",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: לַשֵּׁדִים means to demons; H7700 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.10.20.5",
+        "text=לַשֵּׁדִים",
+        "prefixes=Hl",
+        "strong=H7700",
+        "lemma=שֵׁד",
+        "definitions=demon",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 2,
+        "word_index": 14,
+        "text": "מָסַרְתִּי",
+        "strong": "H3680",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַל־זֹאת אֲנִי מְשַׁבַּח אֶתְכֶם אֶחָי כִּי־זְכַרְתֶּם אֹתִי בַּ/כֹּל לִ/שְׁמֹר אֶת־הַ/קַּבָּלוֹת כַּ/אֲשֶׁר מָסַרְתִּי לָ/כֶם׃"
+      },
+      "previous_strong": "H3680",
+      "new_strong": "H4560",
+      "confidence": 0.96,
+      "reason": "מָסַרְתִּי means I delivered/handed down; H4560 מָסַר fits, H3680 is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.11.2.14",
+        "text=מָסַרְתִּי",
+        "prefixes=none",
+        "strong=H3680",
+        "lemma=כָּסָה",
+        "definitions=cover",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 5,
+        "word_index": 7,
+        "text": "פָרוּעַ",
+        "strong": "H6544",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כָל־אִשָּׁה אֲשֶׁר תִּתְפַּלֵּל אוֹ תִתְנַבֵּא וְ/רֹאשָׁהּ פָרוּעַ מְבַזָּה הִיא אֶת־רֹאשָׁהּ יַעַן בָּ/זֶה הִיא כְּ/מוֹ מְגֻלָּחָה׃"
+      },
+      "previous_strong": "H6544",
+      "new_strong": "H6544",
+      "confidence": 0.88,
+      "reason": "פָרוּעַ in this context means uncovered/loose; add this sense to H6544.",
+      "evidence": [
+        "occurrence=corinthians1.11.5.7",
+        "text=פָרוּעַ",
+        "prefixes=none",
+        "strong=H6544",
+        "lemma=פָּרַע",
+        "definitions=act as leader | lead",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6544",
+      "definition": {
+        "text_en": "let loose; uncovered; unrestrained.",
+        "text_es": "suelto; descubierto; sin restricción.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 6,
+        "word_index": 8,
+        "text": "בִּזָּיוֹן",
+        "strong": "Hb/H963",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הָ/אִשָּׁה אִם־לֹא תִתְכַּסֶּה גַּם תִּתְגַלָּח וְ/אִם־בִּ/זָּיוֹן הוּא לָ/אִשָּׁה לְ/הִכָּסֵם אוֹ לְ/הִתְגַּלֵּחַ תִּתְכַּסֶּה׃"
+      },
+      "previous_strong": "Hb/H963",
+      "new_strong": "Hb/H963",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: בִּזָּיוֹן means disgrace/contempt; H963 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.11.6.8",
+        "text=בִּזָּיוֹן",
+        "prefixes=Hb",
+        "strong=H963",
+        "lemma=בִּזָּיוֹן",
+        "definitions=contempt",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 14,
+        "word_index": 11,
+        "text": "פֶּרַע",
+        "strong": "H6545",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אוֹ הֲלֹא גַם־הַטֶּבַע בְּ/עַצְמוֹ יְלַמֵּד אֶתְכֶם כִּי אִישׁ אֲשֶׁר יְגַדֵּל פֶּרַע שְׂעַר רֹאשׁוֹ חֶרְפָּה הִיא לוֹ׃"
+      },
+      "previous_strong": "H6545",
+      "new_strong": "H6545",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: פֶּרַע means long hair/locks; H6545 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.11.14.11",
+        "text=פֶּרַע",
+        "prefixes=none",
+        "strong=H6545",
+        "lemma=פֶּרַע",
+        "definitions=long hair | locks",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 14,
+        "word_index": 12,
+        "text": "שְׂעַר",
+        "strong": "H8181",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אוֹ הֲלֹא גַם־הַטֶּבַע בְּ/עַצְמוֹ יְלַמֵּד אֶתְכֶם כִּי אִישׁ אֲשֶׁר יְגַדֵּל פֶּרַע שְׂעַר רֹאשׁוֹ חֶרְפָּה הִיא לוֹ׃"
+      },
+      "previous_strong": "H8181",
+      "new_strong": "H8181",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: שְׂעַר means hair; H8181 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.11.14.12",
+        "text=שְׂעַר",
+        "prefixes=none",
+        "strong=H8181",
+        "lemma=שֵׂעָר",
+        "definitions=hair",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 14,
+        "word_index": 14,
+        "text": "חֶרְפָּה",
+        "strong": "H2781",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אוֹ הֲלֹא גַם־הַטֶּבַע בְּ/עַצְמוֹ יְלַמֵּד אֶתְכֶם כִּי אִישׁ אֲשֶׁר יְגַדֵּל פֶּרַע שְׂעַר רֹאשׁוֹ חֶרְפָּה הִיא לוֹ׃"
+      },
+      "previous_strong": "H2781",
+      "new_strong": "H2781",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: חֶרְפָּה means shame/reproach; H2781 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.11.14.14",
+        "text=חֶרְפָּה",
+        "prefixes=none",
+        "strong=H2781",
+        "lemma=חֶרְפָּה",
+        "definitions=reproach | taunt | reproach | shame | disgrace",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 15,
+        "word_index": 5,
+        "text": "פְּאֵר",
+        "strong": "H6287",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל הָ/אִשָּׁה כִּי תְגַדֵּל שַׂעְרָהּ פְּאֵר הוּא לָהּ כִּי־נִתַּן לָהּ הַשֵּׂעָר לְ/צָנִיף׃"
+      },
+      "previous_strong": "H6287",
+      "new_strong": "H6287",
+      "confidence": 0.92,
+      "reason": "Reviewed in context: פְּאֵר means ornament/glory; H6287 is acceptable.",
+      "evidence": [
+        "occurrence=corinthians1.11.15.5",
+        "text=פְּאֵר",
+        "prefixes=none",
+        "strong=H6287",
+        "lemma=פְּאֵר",
+        "definitions=head-dress | turban | ornament",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 15,
+        "word_index": 12,
+        "text": "לְצָנִיף׃",
+        "strong": "H6797",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל הָ/אִשָּׁה כִּי תְגַדֵּל שַׂעְרָהּ פְּאֵר הוּא לָהּ כִּי־נִתַּן לָהּ הַשֵּׂעָר לְ/צָנִיף׃"
+      },
+      "previous_strong": "H6797",
+      "new_strong": "H6797",
+      "confidence": 0.91,
+      "reason": "Reviewed in context: לְצָנִיף means for a covering/turban; H6797 is acceptable.",
+      "evidence": [
+        "occurrence=corinthians1.11.15.12",
+        "text=לְצָנִיף׃",
+        "prefixes=Hl",
+        "strong=H6797",
+        "lemma=צָנִיף",
+        "definitions=turban",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 18,
+        "word_index": 9,
+        "text": "וּמִקְצָתוֹ",
+        "strong": "H4562",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי בָ/רִאשׁוֹנָה שָׁמַעְתִּי שֶׁיֵּשׁ מַחֲלֹקוֹת בֵּ/ינֵיכֶם כַּ/אֲשֶׁר תִּוָּעֲדוּ בַ/קָּהָל וּ/מִקְצָתוֹ אֲנִי מַאֲמִין׃"
+      },
+      "previous_strong": "H4562",
+      "new_strong": "H7097",
+      "confidence": 0.9,
+      "reason": "וּמִקְצָתוֹ means and part of it/partly; H7097 קָצֶה fits the portion/end sense better than H4562.",
+      "evidence": [
+        "occurrence=corinthians1.11.18.9",
+        "text=וּמִקְצָתוֹ",
+        "prefixes=Hc",
+        "strong=H4562",
+        "lemma=מָסֹרֶת",
+        "definitions=bond of the covenant",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 21,
+        "word_index": 9,
+        "text": "יִרְעַב",
+        "strong": "H7456",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָל־אֶחָד מַקְדִּים לָ/קַחַת סְעוּדָתוֹ בְּ/עֵת הָ/אֲכִילָה וְ/זֶה יִרְעַב וְ/זֶה יִשְׁתַּכָּר׃"
+      },
+      "previous_strong": "H7456",
+      "new_strong": "H7456",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: יִרְעַב means is hungry; H7456 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.11.21.9",
+        "text=יִרְעַב",
+        "prefixes=none",
+        "strong=H7456",
+        "lemma=רָעֵב",
+        "definitions=be hungry",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 21,
+        "word_index": 11,
+        "text": "יִשְׁתַּכָּר׃",
+        "strong": "H8280",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָל־אֶחָד מַקְדִּים לָ/קַחַת סְעוּדָתוֹ בְּ/עֵת הָ/אֲכִילָה וְ/זֶה יִרְעַב וְ/זֶה יִשְׁתַּכָּר׃"
+      },
+      "previous_strong": "H8280",
+      "new_strong": "H7937",
+      "confidence": 0.95,
+      "reason": "יִשְׁתַּכָּר means becomes drunk; H7937 שָׁכַר fits, H8280 is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.11.21.11",
+        "text=יִשְׁתַּכָּר׃",
+        "prefixes=none",
+        "strong=H8280",
+        "lemma=שָׂרָה",
+        "definitions=persist | exert oneself | persevere",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 29,
+        "word_index": 12,
+        "text": "הִפְלָה",
+        "strong": "H6395",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הָ/אֹכֵל וְ/הַשֹּׁתֶה שֶׁלֹּא כָ/רָאוּי אֹכֵל וְ/שֹׁתֶה דִּין לְ/נַפְשׁוֹ יַעַן אֲשֶׁר לֹא־הִפְלָה אֶת־גּוּף הָ/אָדוֹן׃"
+      },
+      "previous_strong": "H6395",
+      "new_strong": "H6395",
+      "confidence": 0.9,
+      "reason": "Reviewed in context: הִפְלָה means distinguished/discerned; H6395 is acceptable.",
+      "evidence": [
+        "occurrence=corinthians1.11.29.12",
+        "text=הִפְלָה",
+        "prefixes=none",
+        "strong=H6395",
+        "lemma=פָּלָה",
+        "definitions=be separated | distinct",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 34,
+        "word_index": 7,
+        "text": "לְאַשְׁמָה",
+        "strong": "Hl/H819",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כִי־יִרְעַב אִישׁ יֹאכַל בְּ/בֵיתוֹ פֶּן־תִּקָּהֲלוּ לְ/אַשְׁמָה וְ/יֶתֶר הַ/דְּבָרִים אֲתַקֵּן בְּ/בֹאִי׃"
+      },
+      "previous_strong": "Hl/H819",
+      "new_strong": "Hl/H819",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: לְאַשְׁמָה means to guilt/condemnation; H819 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.11.34.7",
+        "text=לְאַשְׁמָה",
+        "prefixes=Hl",
+        "strong=H819",
+        "lemma=אַשְׁמָה",
+        "definitions=wrong-doing | guiltiness | doing wrong | committing a trespass of offence | becoming guilty",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 11,
+        "verse": 34,
+        "word_index": 8,
+        "text": "וְיֶתֶר",
+        "strong": "Hc/H3499",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כִי־יִרְעַב אִישׁ יֹאכַל בְּ/בֵיתוֹ פֶּן־תִּקָּהֲלוּ לְ/אַשְׁמָה וְ/יֶתֶר הַ/דְּבָרִים אֲתַקֵּן בְּ/בֹאִי׃"
+      },
+      "previous_strong": "Hc/H3499",
+      "new_strong": "Hc/H3499",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: וְיֶתֶר means and the rest/remainder; H3499 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.11.34.8",
+        "text=וְיֶתֶר",
+        "prefixes=Hc",
+        "strong=H3499",
+        "lemma=יֶתֶר",
+        "definitions=remainder | excellence | excess",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 1,
+        "word_index": 0,
+        "text": "וּבְעִנְיַן",
+        "strong": "H3637",
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/עִנְיַן מַתְּנוֹת הָ/רוּחַ אֶחָי לֹא־אֲכַחֵד מִכֶּם דָּבָר׃"
+      },
+      "previous_strong": "H3637",
+      "new_strong": "H6045",
+      "confidence": 0.94,
+      "reason": "וּבְעִנְיַן means concerning the matter; H6045 עִנְיָן fits, H3637 is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.12.1.0",
+        "text=וּבְעִנְיַן",
+        "prefixes=Hc,Hb",
+        "strong=H3637",
+        "lemma=כָּלַם",
+        "definitions=be humiliated | humiliate",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 2,
+        "word_index": 7,
+        "text": "אִלְּמִים",
+        "strong": "H483",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הֲלֹא יְדַעְתֶּם כִּי בִּ/הְ/יֹתְכֶם גּוֹיִם אַחֲרֵי אֱלִילִים אִלְּמִים ה/וּבַלְתֶּם כַּ/אֲשֶׁר נִמְשַׁכְתֶּם׃"
+      },
+      "previous_strong": "H483",
+      "new_strong": "H483",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: אִלְּמִים means mute/unable to speak; H483 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.12.2.7",
+        "text=אִלְּמִים",
+        "prefixes=none",
+        "strong=H483",
+        "lemma=אִלֵּם",
+        "definitions=dumb | unable to speak",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 3,
+        "word_index": 12,
+        "text": "חֵרֶם",
+        "strong": "H2764",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן אוֹדִיעַ אֶתְכֶם כִּי אֵין אִישׁ דֹּבֵר בְּ/רוּחַ אֱלֹהִים אֲשֶׁר יֹאמַר יֵשׁוּעַ חֵרֶם הוּא וְ/לֹא יוּכַל אִישׁ לִ/קְרֹא לְ/יֵשׁוּעַ אָדוֹן בִּ/לְ/תִּי אִם־בְּ/רוּחַ הַ/קֹּדֶשׁ׃"
+      },
+      "previous_strong": "H2764",
+      "new_strong": "H2764",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: חֵרֶם means accursed/devoted thing; H2764 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.12.3.12",
+        "text=חֵרֶם",
+        "prefixes=none",
+        "strong=H2764",
+        "lemma=חֵרֶם",
+        "definitions=devoted thing | devotion | ban",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 7,
+        "word_index": 4,
+        "text": "לּוֹ",
+        "strong": "H1276",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/כָל־אִישׁ וָ/אִישׁ נִתְּנָה־לּוֹ הִתְגַּלּוּת הָ/רוּחַ לְ/ה/וֹעִיל׃"
+      },
+      "previous_strong": "H1276",
+      "new_strong": "H1276",
+      "confidence": 0.84,
+      "reason": "לּוֹ is a preposition/pronominal form (“to him/it”); H1276 is unrelated, but this should be grammar handling rather than a lexical Strong.",
+      "evidence": [
+        "occurrence=corinthians1.12.7.4",
+        "text=לּוֹ",
+        "prefixes=none",
+        "strong=H1276",
+        "lemma=בֵּרִי",
+        "definitions=none",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 8,
+        "word_index": 7,
+        "text": "דִּבּוּר",
+        "strong": "H690",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הָ/אֶחָד נִתַּן־לוֹ עַל־יְדֵי הָ/רוּחַ דִּבּוּר הַ/חָכְמָה וּ/לְ/אַחֵר דִּבּוּר הַ/דַּעַת כְּ/פִי הָ/רוּחַ הַ/הוּא׃"
+      },
+      "previous_strong": "H690",
+      "new_strong": "H1697",
+      "confidence": 0.9,
+      "reason": "דִּבּוּר means speech/utterance; H1697 דָּבָר covers speech/word, H690 is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.12.8.7",
+        "text=דִּבּוּר",
+        "prefixes=none",
+        "strong=H690",
+        "lemma=אֲרָא",
+        "definitions=none",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 10,
+        "word_index": 12,
+        "text": "וּלְאַחֵר",
+        "strong": "H7381",
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/אַחֵר לִ/פְעֹל גְּבוּרוֹת וּ/לְ/אַחֵר נְבוּאָה וּ/לְ/אַחֵר לְ/הַ/בְחִין בֵּ/ין הָ/רוּחוֹת וּ/לְ/אַחֵר מִינֵי לְ/שֹׁנוֹת וּ/לְ/אַחֵר בִּ/אוּר לְ/שֹׁנוֹת׃"
+      },
+      "previous_strong": "H7381",
+      "new_strong": "H312",
+      "confidence": 0.95,
+      "reason": "וּלְאַחֵר means and to another; H312 אַחֵר fits, H7381 is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.12.10.12",
+        "text=וּלְאַחֵר",
+        "prefixes=Hc,Hl",
+        "strong=H7381",
+        "lemma=רֵיחַ",
+        "definitions=scent | odour | breath",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 10,
+        "word_index": 14,
+        "text": "לְשֹׁנוֹת׃",
+        "strong": "H7500",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/אַחֵר לִ/פְעֹל גְּבוּרוֹת וּ/לְ/אַחֵר נְבוּאָה וּ/לְ/אַחֵר לְ/הַ/בְחִין בֵּ/ין הָ/רוּחוֹת וּ/לְ/אַחֵר מִינֵי לְ/שֹׁנוֹת וּ/לְ/אַחֵר בִּ/אוּר לְ/שֹׁנוֹת׃"
+      },
+      "previous_strong": "H7500",
+      "new_strong": "H3956",
+      "confidence": 0.96,
+      "reason": "לְשֹׁנוֹת means tongues/languages; H3956 לָשׁוֹן fits, H7500 is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.12.10.14",
+        "text=לְשֹׁנוֹת׃",
+        "prefixes=Hl",
+        "strong=H7500",
+        "lemma=רִפְאוּת",
+        "definitions=healing",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 13,
+        "word_index": 19,
+        "text": "הָשְׁקִינוּ׃",
+        "strong": "H7014",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי בְּ/רוּחַ אֶחָד נִטְבַּלְנוּ כֻ/לָּ/נוּ לְ/גוּף אֶחָד אִם־יְהוּדִים אִם־יְוָנִים אִם־עֲבָדִים אִם־בְּ/נֵי חוֹרִין וְ/כֻ/לָּנוּ לְ/רוּחַ אֶחָד הָ/שְׁקִינוּ׃"
+      },
+      "previous_strong": "H7014",
+      "new_strong": "H8248",
+      "confidence": 0.95,
+      "reason": "הָשְׁקִינוּ means we/they were made to drink; H8248 שָׁקָה fits, H7014 is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.12.13.19",
+        "text=הָשְׁקִינוּ׃",
+        "prefixes=Hd",
+        "strong=H7014",
+        "lemma=קַיִן",
+        "definitions=gent. tribe of Moses’ father-in-law | loc. in S. Judah",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 17,
+        "word_index": 10,
+        "text": "שֶׁמַע",
+        "strong": "H8087",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אִם־הַ/גּוּף כֻּ/לּוֹ יִהְיֶה עַיִן אַיֵּה הַשֶּׁמַע וְ/אִם־כֻּ/לּוֹ יִהְיֶה שֶׁמַע אַיֵּה הָרֵיחַ׃"
+      },
+      "previous_strong": "H8087",
+      "new_strong": "H8088",
+      "confidence": 0.94,
+      "reason": "שֶׁמַע means hearing; H8088 שֵׁמַע fits, H8087 is a proper-name entry.",
+      "evidence": [
+        "occurrence=corinthians1.12.17.10",
+        "text=שֶׁמַע",
+        "prefixes=none",
+        "strong=H8087",
+        "lemma=שֶׁמַע",
+        "definitions=in Judah | in Reuben | in Benj. | post-ex.",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 18,
+        "word_index": 4,
+        "text": "הָאֵבָרִים",
+        "strong": "Hd/H47",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה הָ/אֱלֹהִים שָׁת אֶת־הָ/אֵבָרִים כָּל־אֶחָד וְ/אֶחָד מֵהֶם בַּ/גּוּף כְּ/פִי רְצוֹנוֹ׃"
+      },
+      "previous_strong": "Hd/H47",
+      "new_strong": "D0167",
+      "confidence": 0.93,
+      "reason": "הָאֵבָרִים means body members/limbs; H47 is unrelated and H83 is wing/pinion, so use a custom lexical entry.",
+      "evidence": [
+        "occurrence=corinthians1.12.18.4",
+        "text=הָאֵבָרִים",
+        "prefixes=Hd",
+        "strong=H47",
+        "lemma=אַבִּיר",
+        "definitions=mighty | valiant",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0167",
+      "hebrew": "איבר",
+      "transliteration_en": "body member",
+      "transliteration_es": "miembro del cuerpo",
+      "definition": {
+        "text_en": "body member; limb; organ.",
+        "text_es": "miembro del cuerpo; extremidad; órgano.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 21,
+        "word_index": 20,
+        "text": "לָכֶן׃",
+        "strong": "H3653",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הָ/עַיִן לֹא־תוּכַל דַּבֵּר אֶל־הַיָּד לֵ/אמֹר לֹא אֶצְטָרֵךְ לָךְ וְ/גַם־הָ/רֹאשׁ לֹא־יוּכַל דַּבֵּר אֶל־הָ/רַגְלַיִם לֵ/אמֹר לֹא אֶצְטָרֵךְ לָ/כֶן׃"
+      },
+      "previous_strong": "H3653",
+      "new_strong": "H3653",
+      "confidence": 0.84,
+      "reason": "לָכֶן is a preposition/pronominal form in context; H3653 is unrelated, but this should be handled as grammar rather than forced to a lexical Strong.",
+      "evidence": [
+        "occurrence=corinthians1.12.21.20",
+        "text=לָכֶן׃",
+        "prefixes=Hl",
+        "strong=H3653",
+        "lemma=כֵּן",
+        "definitions=base | pedestal | office",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 22,
+        "word_index": 1,
+        "text": "לְהֶפֶךְ",
+        "strong": "Hl/H2016",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי לְ/הֶפֶךְ אֵבָרֵי הַ/גּוּף הַ/נִּרְאִים רָפִים הֵם־לָ/נוּ לְ/צֹרֶךְ בְּ/יוֹתֵר׃"
+      },
+      "previous_strong": "Hl/H2016",
+      "new_strong": "Hl/H2016",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: לְהֶפֶךְ means on the contrary/opposite; H2016 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.12.22.1",
+        "text=לְהֶפֶךְ",
+        "prefixes=Hl",
+        "strong=H2016",
+        "lemma=הֶפֶךְ",
+        "definitions=the contrary | contrariness | perversity | the contrary | opposite thing",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 26,
+        "word_index": 1,
+        "text": "יִכְאַב",
+        "strong": "H3510",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִם־יִכְאַב אֵבָר אֶחָד יִכְאֲבוּ אִתּוֹ כָּל־הָ/אֵבָרִים וְ/אִם־יְכֻבָּד אֵבָר אֶחָד יִשְׂמְחוּ אִתּוֹ כָּל־הָ/אֵבָרִים׃"
+      },
+      "previous_strong": "H3510",
+      "new_strong": "H3510",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: יִכְאַב means suffers pain; H3510 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.12.26.1",
+        "text=יִכְאַב",
+        "prefixes=none",
+        "strong=H3510",
+        "lemma=כָּאַב",
+        "definitions=be in pain",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 12,
+        "verse": 30,
+        "word_index": 2,
+        "text": "רְפֻאוֹת",
+        "strong": "H7499",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הַ/לְכֻלָּם מַתְּנוֹת רְפֻאוֹת הֲ/כֻלָּם מְדַבְּרִים בִּ/לְ/שֹׁנוֹת הֲ/כֻלָּם מְפָרְשֵׁי לְ/שֹׁנוֹת׃"
+      },
+      "previous_strong": "H7499",
+      "new_strong": "H7499",
+      "confidence": 0.92,
+      "reason": "Reviewed in context: רְפֻאוֹת means healings/remedies; H7499 is acceptable.",
+      "evidence": [
+        "occurrence=corinthians1.12.30.2",
+        "text=רְפֻאוֹת",
+        "prefixes=none",
+        "strong=H7499",
+        "lemma=רְפֻאָה",
+        "definitions=remedy | medicine",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 13,
+        "verse": 1,
+        "word_index": 13,
+        "text": "תְּרוּעָה׃",
+        "strong": "H8643",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אִם־בִּ/לְ/שֹׁנוֹת אֲנָשִׁים וּ/מַלְאָכִים אֲדַבֵּר וְ/אֵין בִּי הָ/אַהֲבָה הָ/יִיתִי כִּ/נְחשֶׁת הֹמָה אוֹ כְּ/צִלְצַל תְּרוּעָה׃"
+      },
+      "previous_strong": "H8643",
+      "new_strong": "H8643",
+      "confidence": 0.91,
+      "reason": "Reviewed in context: תְּרוּעָה means a noisy blast/sounding; H8643 is acceptable.",
+      "evidence": [
+        "occurrence=corinthians1.13.1.13",
+        "text=תְּרוּעָה׃",
+        "prefixes=none",
+        "strong=H8643",
+        "lemma=תְּרוּעָה",
+        "definitions=shout | blast of war | alarm | joy",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 13,
+        "verse": 2,
+        "word_index": 2,
+        "text": "לִּי",
+        "strong": "H4007",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כִי תִהְיֶה־לִּי נְבוּאָה וְ/אֵדַע כָּל־הַ/סּוֹדוֹת וְ/כָל־הַ/דָּעַת וְ/כִי תִהְיֶה־לִּי כָּל־הָ/אֱמוּנָה עַד כִּי־אַעְתִּיק הָ/רִים וְ/אֵין־בִּי הָ/אַהֲבָה הָ/יִיתִי כְּ/אָיִן׃"
+      },
+      "previous_strong": "H4007",
+      "new_strong": "H4007",
+      "confidence": 0.84,
+      "reason": "לִּי is a preposition/pronominal form (“to me/for me”); H4007 is unrelated, but this should be grammar handling rather than a lexical Strong.",
+      "evidence": [
+        "occurrence=corinthians1.13.2.2",
+        "text=לִּי",
+        "prefixes=none",
+        "strong=H4007",
+        "lemma=מַבָּט",
+        "definitions=expectation",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 13,
+        "verse": 2,
+        "word_index": 16,
+        "text": "אַעְתִּיק",
+        "strong": "H6266",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כִי תִהְיֶה־לִּי נְבוּאָה וְ/אֵדַע כָּל־הַ/סּוֹדוֹת וְ/כָל־הַ/דָּעַת וְ/כִי תִהְיֶה־לִּי כָּל־הָ/אֱמוּנָה עַד כִּי־אַעְתִּיק הָ/רִים וְ/אֵין־בִּי הָ/אַהֲבָה הָ/יִיתִי כְּ/אָיִן׃"
+      },
+      "previous_strong": "H6266",
+      "new_strong": "H6275",
+      "confidence": 0.92,
+      "reason": "אַעְתִּיק means I move/remove; H6275 עָתַק fits, H6266 adjective is unrelated.",
+      "evidence": [
+        "occurrence=corinthians1.13.2.16",
+        "text=אַעְתִּיק",
+        "prefixes=none",
+        "strong=H6266",
+        "lemma=עָתִיק",
+        "definitions=eminent | surpassing | choice",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "corinthians1",
+        "chapter": 13,
+        "verse": 3,
+        "word_index": 9,
+        "text": "לִשְׂרֵפָה",
+        "strong": "Hl/H8316",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִם־אֲחַלֵּק אֶת־כָּל־הוֹנִי וְ/אִם־אֶתֵּן אֶת־גּוּפִי לִ/שְׂרֵפָה וְ/אֵין־בִּי הָ/אַהֲבָה כָּל־זֹאת לֹא תוֹעִילֵנִי׃"
+      },
+      "previous_strong": "Hl/H8316",
+      "new_strong": "Hl/H8316",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: לִשְׂרֵפָה means for burning; H8316 is correct.",
+      "evidence": [
+        "occurrence=corinthians1.13.3.9",
+        "text=לִשְׂרֵפָה",
+        "prefixes=Hl",
+        "strong=H8316",
+        "lemma=שְׂרֵפָה",
+        "definitions=burning",
+        "codex reviewed definitions batch_0029"
+      ],
+      "reviewer": "codex-desktop"
+    }
+  ]
+}

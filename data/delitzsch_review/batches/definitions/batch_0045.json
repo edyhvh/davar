@@ -1,0 +1,1898 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.493345+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 4,
+        "word_index": 12,
+        "text": "לָצוּד׃",
+        "strong": "Hl/H6679",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְכַל לְ/דַבֵּר וַ/יֹּאמֶר אֶל־שִׁמְעוֹן ה/וֹלִיכָה אֶל־עֹמֶק הַיָּם וְ/ה/וֹרִידוּ אֶת־מִכְמְרוֹתֵיכֶם לָ/צוּד׃"
+      },
+      "previous_strong": "Hl/H6679",
+      "new_strong": "H6679",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6679 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.5.4.12",
+        "text=לָצוּד׃",
+        "prefixes=Hl",
+        "strong=H6679",
+        "lemma=צוּד",
+        "definitions=hunt",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 9,
+        "word_index": 9,
+        "text": "צֵיד",
+        "strong": "H6718",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי שַׁמָּה הֶ/חֱזִיקָה אוֹתוֹ וְ/אֶת־כֹּל אֲשֶׁר אִתּוֹ עַל־צֵיד הַ/דָּגִים אֲשֶׁר צָדוּ׃"
+      },
+      "previous_strong": "H6718",
+      "new_strong": "H6718",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6718 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.5.9.9",
+        "text=צֵיד",
+        "prefixes=none",
+        "strong=H6718",
+        "lemma=צַיִד",
+        "definitions=hunting | game",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 12,
+        "word_index": 7,
+        "text": "צָרַעַת",
+        "strong": "H6883",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בִּ/הְ/יוֹתוֹ בְּ/אַחַת הֶ/עָרִים וְ/הִנֵּה־אִישׁ מָלֵא צָרַעַת וַ/יַּרְא אֶת־יֵשׁוּעַ וַ/יִּפֹּל עַל־פָּנָיו וַ/יִּתְחַנֵּן אֵלָיו לֵ/אמֹר אֲדֹנִי אִם־תַּחְפֹּץ תּוּכַל לְ/טַהֲרֵנִי׃"
+      },
+      "previous_strong": "H6883",
+      "new_strong": "H6883",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6883 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.5.12.7",
+        "text=צָרַעַת",
+        "prefixes=none",
+        "strong=H6883",
+        "lemma=צָרַעַת",
+        "definitions=leprosy",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 12,
+        "word_index": 21,
+        "text": "לְטַהֲרֵנִי׃",
+        "strong": "H2039",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בִּ/הְ/יוֹתוֹ בְּ/אַחַת הֶ/עָרִים וְ/הִנֵּה־אִישׁ מָלֵא צָרַעַת וַ/יַּרְא אֶת־יֵשׁוּעַ וַ/יִּפֹּל עַל־פָּנָיו וַ/יִּתְחַנֵּן אֵלָיו לֵ/אמֹר אֲדֹנִי אִם־תַּחְפֹּץ תּוּכַל לְ/טַהֲרֵנִי׃"
+      },
+      "previous_strong": "H2039",
+      "new_strong": "H2891",
+      "confidence": 0.95,
+      "reason": "לְטַהֲרֵנִי means to cleanse/purify me; H2891 טָהֵר fits, while H2039 is Haran.",
+      "evidence": [
+        "occurrence=luke.5.12.21",
+        "text=לְטַהֲרֵנִי׃",
+        "prefixes=Hl",
+        "strong=H2039",
+        "lemma=הָרָן",
+        "definitions=mountaineer | son of Teraḥ, brother of Abraham and father of Lot | a Levite (Gershonite)",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 14,
+        "word_index": 8,
+        "text": "וְהֵרָאֵה",
+        "strong": "H8465",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּעַד בּוֹ לְ/בִ/לְתִּי סַפֵּר לְ/אִישׁ כִּי אִם־לֵךְ וְ/הֵרָאֵה אֶל־הַ/כֹּהֵן וְ/הַ/קְרֵב קָרְבָּן עַל־טָהֳרָתְךָ כַּ/אֲשֶׁר צִוָּה משֶׁה לְ/עֵדוּת לָ/הֶם׃"
+      },
+      "previous_strong": "H8465",
+      "new_strong": "H7200",
+      "confidence": 0.94,
+      "reason": "וְהֵרָאֵה means show yourself/be seen; H7200 רָאָה fits, while H8465 is unrelated.",
+      "evidence": [
+        "occurrence=luke.5.14.8",
+        "text=וְהֵרָאֵה",
+        "prefixes=Hc",
+        "strong=H8465",
+        "lemma=תַּחַן",
+        "definitions=none",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 19,
+        "word_index": 10,
+        "text": "עַרְשׂוֹ",
+        "strong": "H6210",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לֹא־מָצְאוּ דֶרֶךְ לְ/הַ/כְנִיסוֹ מֵרֹב הָעָם וַ/יַּעֲלוּ הַ/גָּגָה וַ/יּוֹרִידֻהוּ וְ/אֶת־עַרְשׂוֹ בֵּ/ין הָ/רְעָפִים לְ/תוֹךְ הַ/בַּיִת לִ/פְנֵי יֵשׁוּעַ׃"
+      },
+      "previous_strong": "H6210",
+      "new_strong": "H6210",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6210 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.5.19.10",
+        "text=עַרְשׂוֹ",
+        "prefixes=none",
+        "strong=H6210",
+        "lemma=עֶרֶשׂ",
+        "definitions=couch | divan",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 36,
+        "word_index": 23,
+        "text": "יִשְׁוֶה",
+        "strong": "H3438",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְדַבֵּר אֲלֵיהֶם גַּם אֶת־הַ/מָּשָׁל הַזֶּה אֵין אִישׁ מַעֲלֶה טְלַאי שֶׁל־בֶּ/גֶד חָדָשׁ עַל־בֶּ/גֶד בָּ/ל/וּי כִּי אָז גַּם הֶ/חָדָשׁ יִקָּרֵעַ וְ/גַם לֹא־יִשְׁוֶה הַ/טְּלַאי הֶ/חָדָשׁ לַ/בָּ/לוּי׃"
+      },
+      "previous_strong": "H3438",
+      "new_strong": "H7737",
+      "confidence": 0.92,
+      "reason": "יִשְׁוֶה means agree/match/be equal; H7737 שָׁוָה fits, while H3438 is a proper-name entry.",
+      "evidence": [
+        "occurrence=luke.5.36.23",
+        "text=יִשְׁוֶה",
+        "prefixes=none",
+        "strong=H3438",
+        "lemma=יִשְׁוָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 37,
+        "word_index": 6,
+        "text": "בָּלִים",
+        "strong": "Hb/Hl/H1087",
+        "prefixes": [
+          "Hb",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵין אִישׁ נֹתֵן יַיִן חָדָשׁ בְּ/נֹאדוֹת בָּ/לִ/ים כִּי אָז הַ/יַּיִן הֶ/חָדָשׁ יְבַקַּע אֶת־הַ/נֹּאדוֹת וְ/הוּא יִשָּׁפֵךְ וְ/הַ/נֹּאדוֹת יֹאבֵדוּ׃"
+      },
+      "previous_strong": "Hb/Hl/H1087",
+      "new_strong": "H1087",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1087 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.5.37.6",
+        "text=בָּלִים",
+        "prefixes=Hb,Hl",
+        "strong=H1087",
+        "lemma=בָּלֶה",
+        "definitions=worn out",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 37,
+        "word_index": 11,
+        "text": "יְבַקַּע",
+        "strong": "H1234",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵין אִישׁ נֹתֵן יַיִן חָדָשׁ בְּ/נֹאדוֹת בָּ/לִ/ים כִּי אָז הַ/יַּיִן הֶ/חָדָשׁ יְבַקַּע אֶת־הַ/נֹּאדוֹת וְ/הוּא יִשָּׁפֵךְ וְ/הַ/נֹּאדוֹת יֹאבֵדוּ׃"
+      },
+      "previous_strong": "H1234",
+      "new_strong": "H1234",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1234 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.5.37.11",
+        "text=יְבַקַּע",
+        "prefixes=none",
+        "strong=H1234",
+        "lemma=בָּקַע",
+        "definitions=cleave | break open | through",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 1,
+        "word_index": 4,
+        "text": "הָעֹמֶר",
+        "strong": "Hd/H6016",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בַּ/שַּׁבָּת הַ/שֵּׁנִית לִ/סְפִירַת הָ/עֹמֶר עָבַר בֵּ/ין הַ/קָּמָה וַ/יִּקְטְפוּ תַלְמִידָיו מְלִילֹת וַ/יִּפְרְכוּ אֹתָן בִּ/ידֵיהֶם וַ/יֹּאכֵלוּ׃"
+      },
+      "previous_strong": "Hd/H6016",
+      "new_strong": "H6016",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6016 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.1.4",
+        "text=הָעֹמֶר",
+        "prefixes=Hd",
+        "strong=H6016",
+        "lemma=עֹמֶר",
+        "definitions=sheaf",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 1,
+        "word_index": 10,
+        "text": "מְלִילֹת",
+        "strong": "H4425",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בַּ/שַּׁבָּת הַ/שֵּׁנִית לִ/סְפִירַת הָ/עֹמֶר עָבַר בֵּ/ין הַ/קָּמָה וַ/יִּקְטְפוּ תַלְמִידָיו מְלִילֹת וַ/יִּפְרְכוּ אֹתָן בִּ/ידֵיהֶם וַ/יֹּאכֵלוּ׃"
+      },
+      "previous_strong": "H4425",
+      "new_strong": "H4425",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4425 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.1.10",
+        "text=מְלִילֹת",
+        "prefixes=none",
+        "strong=H4425",
+        "lemma=מְלִילָה",
+        "definitions=ear",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 2,
+        "word_index": 12,
+        "text": "מֻתָּר",
+        "strong": "H1745",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/יֵשׁ מִן־הַ/פְּרוּשִׁים אֲשֶׁר אָמְרוּ אֲלֵיהֶם לָ/מָה אַתֶּם עֹשִׂים אֵת אֲשֶׁר אֵינֶנּוּ מֻתָּר לַ/עֲשׂוֹת בַּ/שַּׁבָּת׃"
+      },
+      "previous_strong": "H1745",
+      "new_strong": "D0195",
+      "confidence": 0.9,
+      "reason": "מֻתָּר means permitted/allowed in this context; H1745 is unrelated, so use a custom entry.",
+      "evidence": [
+        "occurrence=luke.6.2.12",
+        "text=מֻתָּר",
+        "prefixes=none",
+        "strong=H1745",
+        "lemma=דּוּמָה",
+        "definitions=silence | oracle of silence",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0195",
+      "hebrew": "מותר",
+      "transliteration_en": "permitted",
+      "transliteration_es": "permitido",
+      "definition": {
+        "text_en": "permitted; allowed; lawful.",
+        "text_es": "permitido; permitido por la ley; lícito.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 6,
+        "word_index": 11,
+        "text": "יָבְשָׁה",
+        "strong": "H3001",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בְּ/שַׁבָּת אַחֶרֶת בָּא אֶל־בֵּ/ית הַ/כְּנֵסֶת וַ/יְלַמֵּד וְ/שָׁם אִישׁ אֲשֶׁר יָבְשָׁה יָדוֹ הַ/יְמָנִית׃"
+      },
+      "previous_strong": "H3001",
+      "new_strong": "H3001",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H3001 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.6.11",
+        "text=יָבְשָׁה",
+        "prefixes=none",
+        "strong=H3001",
+        "lemma=יָבֵשׁ",
+        "definitions=be dry | dried up | withered",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 8,
+        "word_index": 9,
+        "text": "יְבֵשָׁה",
+        "strong": "H3002",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הוּא יָדַע אֶת־מַחְשְׁבוֹתָם וַ/יֹּאמֶר אֶל־הָ/אִישׁ אֲשֶׁר יָדוֹ יְבֵשָׁה קוּם וַ/עֲמוֹד בַּ/תָּוֶךְ וַ/יָּקָם וַ/יַּעֲמֹד׃"
+      },
+      "previous_strong": "H3002",
+      "new_strong": "H3002",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H3002 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.8.9",
+        "text=יְבֵשָׁה",
+        "prefixes=none",
+        "strong=H3002",
+        "lemma=יָבֵשׁ",
+        "definitions=dry | dried",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 14,
+        "word_index": 5,
+        "text": "פֶּטְרוֹס",
+        "strong": "H6375",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־שִׁמְעוֹן אֲשֶׁר גַּם־קְרָאוֹ פֶּטְרוֹס וְ/אֶת־אַנְדְּרַי אָחִיו אֶת־יַעֲקֹב וְ/אֵת יוֹחָנָן אֵת פִילִפּוֹס וְ/אֵת בַּר־תַּלְמָי׃"
+      },
+      "previous_strong": "H6375",
+      "new_strong": "D0001",
+      "confidence": 0.95,
+      "reason": "פֶּטְרוֹס is Peter; reuse existing custom D0001 rather than H6375.",
+      "evidence": [
+        "occurrence=luke.6.14.5",
+        "text=פֶּטְרוֹס",
+        "prefixes=none",
+        "strong=H6375",
+        "lemma=פִּיק",
+        "definitions=tottering of knees",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 14,
+        "word_index": 7,
+        "text": "אַנְדְּרַי",
+        "strong": "H2658",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־שִׁמְעוֹן אֲשֶׁר גַּם־קְרָאוֹ פֶּטְרוֹס וְ/אֶת־אַנְדְּרַי אָחִיו אֶת־יַעֲקֹב וְ/אֵת יוֹחָנָן אֵת פִילִפּוֹס וְ/אֵת בַּר־תַּלְמָי׃"
+      },
+      "previous_strong": "H2658",
+      "new_strong": "D0196",
+      "confidence": 0.94,
+      "reason": "אַנְדְּרַי is Andrew; H2658 is unrelated, so use a custom NT name entry.",
+      "evidence": [
+        "occurrence=luke.6.14.7",
+        "text=אַנְדְּרַי",
+        "prefixes=none",
+        "strong=H2658",
+        "lemma=חָפַר",
+        "definitions=dig | search for",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0196",
+      "hebrew": "אנדרי",
+      "transliteration_en": "Andrew",
+      "transliteration_es": "Andrés",
+      "definition": {
+        "text_en": "Andrew; apostle of Jesus and brother of Peter.",
+        "text_es": "Andrés; apóstol de Jesús y hermano de Pedro.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 21,
+        "word_index": 6,
+        "text": "הַבֹּכִים",
+        "strong": "H5095",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַשְׁרֵיכֶם הָ/רְעֵבִים כָּ/עֵת כִּי תִשְׂבָּעוּ אַשְׁרֵיכֶם הַ/בֹּכִים כָּ/עֵת כִּי תִשְׂחָקוּ׃"
+      },
+      "previous_strong": "H5095",
+      "new_strong": "H1058",
+      "confidence": 0.94,
+      "reason": "הַבֹּכִים means those who weep; H1058 בָּכָה fits, while H5095 is unrelated.",
+      "evidence": [
+        "occurrence=luke.6.21.6",
+        "text=הַבֹּכִים",
+        "prefixes=Hd",
+        "strong=H5095",
+        "lemma=נָהַל",
+        "definitions=lead | guide to a watering-place | and cuase to rest there | bring to a station | place of rest",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 21,
+        "word_index": 9,
+        "text": "תִשְׂחָקוּ׃",
+        "strong": "H7832",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַשְׁרֵיכֶם הָ/רְעֵבִים כָּ/עֵת כִּי תִשְׂבָּעוּ אַשְׁרֵיכֶם הַ/בֹּכִים כָּ/עֵת כִּי תִשְׂחָקוּ׃"
+      },
+      "previous_strong": "H7832",
+      "new_strong": "H7832",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H7832 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.21.9",
+        "text=תִשְׂחָקוּ׃",
+        "prefixes=none",
+        "strong=H7832",
+        "lemma=שָׂחַק",
+        "definitions=laugh",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 34,
+        "word_index": 19,
+        "text": "בְּשָׁוֶה׃",
+        "strong": "H2012",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִם־תַּלְווּ אֶת־הָ/אֲנָשִׁים אֲשֶׁר תְּקַוּוּ לְ/קַבֵּל מֵהֶם מַה־הוּא חַסְדְּכֶם גַּם הַ/חַטָּאִים מַלְוִים אֶת־הַ/חַטָּאִים לְ/מַעַן יוּשַׁב לָ/הֶם בְּ/שָׁוֶה׃"
+      },
+      "previous_strong": "H2012",
+      "new_strong": "H7737",
+      "confidence": 0.92,
+      "reason": "בְּשָׁוֶה means equally/in the same measure; H7737 שָׁוָה fits, while H2012 is unrelated.",
+      "evidence": [
+        "occurrence=luke.6.34.19",
+        "text=בְּשָׁוֶה׃",
+        "prefixes=Hb",
+        "strong=H2012",
+        "lemma=הֵנַע",
+        "definitions=none",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 35,
+        "word_index": 18,
+        "text": "לְשֹׁכְחֵי",
+        "strong": "H2610",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל אֶהֱבוּ אֶת־אֹיְבֵיכֶם וְ/הֵ/יטִיבוּ וְ/הַלְווּ מִבְּלִי תוֹחֶלֶת וִ/יהִי שְׂכַרְכֶם רַב וִ/הְ/יִיתֶם בְּ/נֵי עֶלְיוֹן כִּי טוֹב הוּא גַּם־לְ/שֹׁכְחֵי טוֹבָה וְ/לָ/רָעִים׃"
+      },
+      "previous_strong": "H2610",
+      "new_strong": "H7911",
+      "confidence": 0.92,
+      "reason": "לְשֹׁכְחֵי means to those who forget/ungrateful ones in context; H7911 שָׁכַח fits, while H2610 is unrelated.",
+      "evidence": [
+        "occurrence=luke.6.35.18",
+        "text=לְשֹׁכְחֵי",
+        "prefixes=Hl",
+        "strong=H2610",
+        "lemma=חָנֵף",
+        "definitions=be polluted | profane",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 38,
+        "word_index": 17,
+        "text": "יִמַּד",
+        "strong": "H4058",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "תְּנוּ וְ/תִנָּתֵן לָ/כֶם מִדָּה טוֹבָה דְּחוּקָה וּ/גְדוּשָׁה וּ/מֻשְׁפָּעָה יִתְּנוּ אֶל־חֵיקְכֶם כִּי בַ/מִּדָּה אֲשֶׁר אַתֶּם מוֹדְדִים בָּהּ יִמַּד לָ/כֶם׃"
+      },
+      "previous_strong": "H4058",
+      "new_strong": "H4058",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4058 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.38.17",
+        "text=יִמַּד",
+        "prefixes=none",
+        "strong=H4058",
+        "lemma=מָדַד",
+        "definitions=measure",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 41,
+        "word_index": 10,
+        "text": "הַקּוֹרָה",
+        "strong": "Hd/H6982",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לָ/מָּה זֶּה אַתָּה רֹאֶה אֶת־הַ/קֵּיסָם אֲשֶׁר בְּ/עֵין אָחִיךָ וְ/אֶת־הַ/קּוֹרָה בְּ/עֵינְךָ לֹא תַבִּיט׃"
+      },
+      "previous_strong": "Hd/H6982",
+      "new_strong": "H6982",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6982 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.41.10",
+        "text=הַקּוֹרָה",
+        "prefixes=Hd",
+        "strong=H6982",
+        "lemma=קוֹרָה",
+        "definitions=rafter | beam | meeting",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 44,
+        "word_index": 14,
+        "text": "עֵנָב",
+        "strong": "H6025",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָל־עֵץ נִכַּר בְּ/פִרְיוֹ כִּי אֵין אֹסְפִים תְּאֵנִים מִן־הַ/קֹּצִים אַף אֵין־בֹּ/צְרִים עֵנָב מִן־הַ/סְּנֶה׃"
+      },
+      "previous_strong": "H6025",
+      "new_strong": "H6025",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6025 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.44.14",
+        "text=עֵנָב",
+        "prefixes=none",
+        "strong=H6025",
+        "lemma=עֵנָב",
+        "definitions=grape",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 45,
+        "word_index": 17,
+        "text": "מִשִּׁפְעַת",
+        "strong": "H8229",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הָ/אִישׁ הַ/טּוֹב מֵאוֹצַר לְ/בָ/בוֹ הַ/טּוֹב מֵפִיק אֶת־הַ/טּוֹב וְ/הָ/אִישׁ הָרַע מֵאוֹצַר לְ/בָ/בוֹ הָרַע מֵפִיק אֶת־הָרָע כִּי־מִשִּׁפְעַת הַלֵּב יְמַלֵּל פִּיהוּ׃"
+      },
+      "previous_strong": "H8229",
+      "new_strong": "H8229",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H8229 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.45.17",
+        "text=מִשִּׁפְעַת",
+        "prefixes=none",
+        "strong=H8229",
+        "lemma=שִׁפְעָה",
+        "definitions=abundance | quantity",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 48,
+        "word_index": 12,
+        "text": "הַשֶּׁטֶף",
+        "strong": "Hd/H7858",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "דּוֹמֶה הוּא לְ/אִישׁ בֹּ/נֶה־בַּ/יִת אֲשֶׁר הֶ/עְמִיק לַ/חְפֹּר וַ/יְיַסְּדוֹ עַל־הַ/סָּלַע וּ/כְ/בוֹא הַ/שֶּׁטֶף פָּרַץ הַ/נָּהָר בַּ/בַּיִת הַ/הוּא וְ/לֹא יָכֹל לַ/הֲ/נִיעוֹ כִּי עַל־הַ/סֶּלַע יְסוֹדוֹ וְ/טוֹב מִבְנֵהוּ׃"
+      },
+      "previous_strong": "Hd/H7858",
+      "new_strong": "H7858",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H7858 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.48.12",
+        "text=הַשֶּׁטֶף",
+        "prefixes=Hd",
+        "strong=H7858",
+        "lemma=שֶׁטֶף",
+        "definitions=flood",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 48,
+        "word_index": 25,
+        "text": "מִבְנֵהוּ׃",
+        "strong": "H4011",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "דּוֹמֶה הוּא לְ/אִישׁ בֹּ/נֶה־בַּ/יִת אֲשֶׁר הֶ/עְמִיק לַ/חְפֹּר וַ/יְיַסְּדוֹ עַל־הַ/סָּלַע וּ/כְ/בוֹא הַ/שֶּׁטֶף פָּרַץ הַ/נָּהָר בַּ/בַּיִת הַ/הוּא וְ/לֹא יָכֹל לַ/הֲ/נִיעוֹ כִּי עַל־הַ/סֶּלַע יְסוֹדוֹ וְ/טוֹב מִבְנֵהוּ׃"
+      },
+      "previous_strong": "H4011",
+      "new_strong": "H4011",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4011 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.6.48.25",
+        "text=מִבְנֵהוּ׃",
+        "prefixes=none",
+        "strong=H4011",
+        "lemma=מִבְנֶה",
+        "definitions=structure | like the structure of a city",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 3,
+        "word_index": 2,
+        "text": "שֵׁמַע",
+        "strong": "H8088",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּשְׁמַע אֶת־שֵׁמַע יֵשׁוּעַ וַ/יִּשְׁלַח אֵלָיו מִזִּקְנֵי הַ/יְּהוּדִים וַ/יִּשְׁאַל מֵאִתּוֹ לָ/ב/וֹא וּ/לְ/הוֹשִׁיעַ אֶת־עַבְדּוֹ׃"
+      },
+      "previous_strong": "H8088",
+      "new_strong": "H8088",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H8088 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.3.2",
+        "text=שֵׁמַע",
+        "prefixes=none",
+        "strong=H8088",
+        "lemma=שֵׁמַע",
+        "definitions=hearing | sound",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 4,
+        "word_index": 3,
+        "text": "וַיִּתְחַנְנוּ־",
+        "strong": "H5382",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ אֶל־יֵשׁוּעַ וַ/יִּתְחַנְנוּ־לוֹ מְאֹד וַ/יֹּאמְרוּ רָאוּי הוּא אֲשֶׁר תַּעֲשֶׂה בַּ/קָּשָׁתוֹ׃"
+      },
+      "previous_strong": "H5382",
+      "new_strong": "H2603",
+      "confidence": 0.94,
+      "reason": "וַיִּתְחַנְנוּ means they pleaded/entreated; H2603 חָנַן fits, while H5382 is unrelated.",
+      "evidence": [
+        "occurrence=luke.7.4.3",
+        "text=וַיִּתְחַנְנוּ־",
+        "prefixes=Hc",
+        "strong=H5382",
+        "lemma=נָשָׁה",
+        "definitions=forget",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 4,
+        "word_index": 11,
+        "text": "בַּקָּשָׁתוֹ׃",
+        "strong": "Hb/H1246",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ אֶל־יֵשׁוּעַ וַ/יִּתְחַנְנוּ־לוֹ מְאֹד וַ/יֹּאמְרוּ רָאוּי הוּא אֲשֶׁר תַּעֲשֶׂה בַּ/קָּשָׁתוֹ׃"
+      },
+      "previous_strong": "Hb/H1246",
+      "new_strong": "H1246",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1246 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.4.11",
+        "text=בַּקָּשָׁתוֹ׃",
+        "prefixes=Hb",
+        "strong=H1246",
+        "lemma=בַּקָּשָׁה",
+        "definitions=request | entreaty",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 5,
+        "word_index": 6,
+        "text": "לָנוּ",
+        "strong": "H8058",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אֹהֵב עַמֵּנוּ הוּא וְ/הוּא בָ/נָה־לָ/נוּ אֶת־בֵּ/ית הַ/כְּנֵסֶת׃"
+      },
+      "previous_strong": "H8058",
+      "new_strong": "H8058",
+      "confidence": 0.35,
+      "reason": "לָנוּ is a pronominal/prepositional form (“to/for us”); leave it for manual grammar handling rather than assigning a lexical Strong.",
+      "evidence": [
+        "occurrence=luke.7.5.6",
+        "text=לָנוּ",
+        "prefixes=Hl",
+        "strong=H8058",
+        "lemma=שָׁמַט",
+        "definitions=let drop",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 6,
+        "word_index": 21,
+        "text": "תַטְרִיחַ",
+        "strong": "H4962",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּלֶךְ אִתָּם יֵשׁוּעַ וַ/יְהִי כַּ/אֲשֶׁר קָרַב אֶל־הַ/בַּיִת וַ/יִּשְׁלַח אֵלָיו שַׂר־הַ/מֵּאָה עַל־יְדֵי רֵעָיו לֵ/אמֹר לוֹ בִּי אֲדֹנִי אַל־נָא תַטְרִיחַ אֶת־עַצְמְךָ כִּי אֵינֶנִּי רָאוּי שֶׁתָּבוֹא בְּ/צֵל קוֹרָתִי׃"
+      },
+      "previous_strong": "H4962",
+      "new_strong": "D0197",
+      "confidence": 0.88,
+      "reason": "תַטְרִיחַ means trouble/bother; no reliable biblical Strong entry exists for this later Hebrew verb, so use a custom entry.",
+      "evidence": [
+        "occurrence=luke.7.6.21",
+        "text=תַטְרִיחַ",
+        "prefixes=none",
+        "strong=H4962",
+        "lemma=מַת",
+        "definitions=male | man | males | men | usu. less emphasis on sex",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0197",
+      "hebrew": "טרח",
+      "transliteration_en": "trouble",
+      "transliteration_es": "molestar",
+      "definition": {
+        "text_en": "trouble; bother; burden with effort.",
+        "text_es": "molestar; importunar; cargar con esfuerzo.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 7,
+        "word_index": 14,
+        "text": "וְיֵרָפֵא",
+        "strong": "H7540",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/עֲבוּר זֹאת גַּם־אֶת עַצְמִי לֹא חָשַׁבְתִּי רָאוּי לָ/ב/וֹא אֵלֶיךָ אַךְ דַּבֶּר־נָא דָבָר וְ/יֵרָפֵא נַעֲרִי׃"
+      },
+      "previous_strong": "H7540",
+      "new_strong": "H7495",
+      "confidence": 0.95,
+      "reason": "וְיֵרָפֵא means and he will be healed; H7495 רָפָא fits, while H7540 is unrelated.",
+      "evidence": [
+        "occurrence=luke.7.7.14",
+        "text=וְיֵרָפֵא",
+        "prefixes=Hc",
+        "strong=H7540",
+        "lemma=רָקַד",
+        "definitions=skip about",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 7,
+        "word_index": 15,
+        "text": "נַעֲרִי׃",
+        "strong": "H6969",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/עֲבוּר זֹאת גַּם־אֶת עַצְמִי לֹא חָשַׁבְתִּי רָאוּי לָ/ב/וֹא אֵלֶיךָ אַךְ דַּבֶּר־נָא דָבָר וְ/יֵרָפֵא נַעֲרִי׃"
+      },
+      "previous_strong": "H6969",
+      "new_strong": "H5288",
+      "confidence": 0.93,
+      "reason": "נַעֲרִי means my servant/boy; H5288 נַעַר fits, while H6969 is unrelated.",
+      "evidence": [
+        "occurrence=luke.7.7.15",
+        "text=נַעֲרִי׃",
+        "prefixes=none",
+        "strong=H6969",
+        "lemma=קוּן",
+        "definitions=none",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 13,
+        "word_index": 3,
+        "text": "נִכְמְרוּ",
+        "strong": "H3648",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כִ/רְאוֹת אוֹתָהּ הָ/אָדוֹן נִכְמְרוּ רַחֲמָיו עָלֶיהָ וַ/יֹּאמֶר לָהּ אַל־תִּבְכִּי׃"
+      },
+      "previous_strong": "H3648",
+      "new_strong": "H3648",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H3648 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.13.3",
+        "text=נִכְמְרוּ",
+        "prefixes=none",
+        "strong=H3648",
+        "lemma=כָּמַר",
+        "definitions=grow warm | tender | be | grow hot",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 16,
+        "word_index": 2,
+        "text": "רְעָדָה",
+        "strong": "H7461",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תֹּאחֶז כֻּ/לָּם רְעָדָה וַ/יְשַׁבְּחוּ אֶת־הָ/אֱלֹהִים וַ/יֹּאמְרוּ כִּי־נָבִיא גָדוֹל קָם בְּ/קִרְבֵּנוּ וְ/כִי־פָקַד הָ/אֱלֹהִים אֶת־עַמּוֹ׃"
+      },
+      "previous_strong": "H7461",
+      "new_strong": "H7461",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H7461 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.16.2",
+        "text=רְעָדָה",
+        "prefixes=none",
+        "strong=H7461",
+        "lemma=רַעַד",
+        "definitions=trembling",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 22,
+        "word_index": 19,
+        "text": "וְחֵרְשִׁים",
+        "strong": "Hc/H2795",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן יֵשׁוּעַ וַ/יֹּאמֶר לָ/הֶם לְ/כוּ וְ/הַ/גִּידוּ לְ/יוֹחָנָן אֵת אֲשֶׁר רְאִיתֶם וַ/אֲשֶׁר שְׁמַעְתֶּם כִּי עִוְרִים רֹאִים וּ/פִסְחִים מִתְהַלְּכִים וּ/מְצֹרָעִים מְטֹהָרִים וְ/חֵרְשִׁים שׁוֹמְעִים וּ/מֵתִים קָמִים וַ/עֲנִיִּים מִתְבַּשְּׂרִים׃"
+      },
+      "previous_strong": "Hc/H2795",
+      "new_strong": "H2795",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H2795 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.22.19",
+        "text=וְחֵרְשִׁים",
+        "prefixes=Hc",
+        "strong=H2795",
+        "lemma=חֵרֵשׁ",
+        "definitions=deaf",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 22,
+        "word_index": 20,
+        "text": "שׁוֹמְעִים",
+        "strong": "H7372",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן יֵשׁוּעַ וַ/יֹּאמֶר לָ/הֶם לְ/כוּ וְ/הַ/גִּידוּ לְ/יוֹחָנָן אֵת אֲשֶׁר רְאִיתֶם וַ/אֲשֶׁר שְׁמַעְתֶּם כִּי עִוְרִים רֹאִים וּ/פִסְחִים מִתְהַלְּכִים וּ/מְצֹרָעִים מְטֹהָרִים וְ/חֵרְשִׁים שׁוֹמְעִים וּ/מֵתִים קָמִים וַ/עֲנִיִּים מִתְבַּשְּׂרִים׃"
+      },
+      "previous_strong": "H7372",
+      "new_strong": "H8085",
+      "confidence": 0.95,
+      "reason": "שׁוֹמְעִים means hear; H8085 שָׁמַע fits, while H7372 is unrelated.",
+      "evidence": [
+        "occurrence=luke.7.22.20",
+        "text=שׁוֹמְעִים",
+        "prefixes=none",
+        "strong=H7372",
+        "lemma=רָטַב",
+        "definitions=be moist",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 25,
+        "word_index": 9,
+        "text": "עֲדָנִים",
+        "strong": "H5730",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִם־לֹא מַה־זֶּה יְצָאתֶם לִ/רְאוֹת הַ/אִישׁ לָ/ב/וּשׁ בִּ/גְדֵי עֲדָנִים הִנֵּה הַ/מְלֻבָּשִׁים בִּ/גְדֵי תִפְאֶרֶת וְ/הַ/מְעֻנָּגִים בְּ/חַצְרוֹת הַ/מְּלָכִים הֵמָּה׃"
+      },
+      "previous_strong": "H5730",
+      "new_strong": "H5730",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H5730 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.25.9",
+        "text=עֲדָנִים",
+        "prefixes=none",
+        "strong=H5730",
+        "lemma=עֵדֶן",
+        "definitions=luxury | dainty | delight",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 30,
+        "word_index": 4,
+        "text": "נִאֲצוּ",
+        "strong": "H5006",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ־הַ/פְּרוּשִׁים וּ/בַ/עֲלֵי הַ/תּוֹרָה נִאֲצוּ אֶת־עֲצַת הָ/אֱלֹהִים עַל־נַפְשָׁם וְ/לֹא נִטְבְּלוּ עַל־יָדוֹ׃"
+      },
+      "previous_strong": "H5006",
+      "new_strong": "H5006",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H5006 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.30.4",
+        "text=נִאֲצוּ",
+        "prefixes=none",
+        "strong=H5006",
+        "lemma=נָאַץ",
+        "definitions=contemn | spurn",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 32,
+        "word_index": 4,
+        "text": "בַּשּׁוּק",
+        "strong": "Hb/H7784",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "דֹּמִים הֵם לַ/יְלָדִים הַ/יּשְׁבִים בַּ/שּׁוּק וְ/קֹרְאִים זֶה אֶל־זֶה וְ/אֹמְרִים חִלַּלְנוּ לָ/כֶם בַּ/חֲלִילִים וְ/לֹא רִקַּדְתֶּם קוֹנַנּוּ לָ/כֶם קִינָה וְ/לֹא בְ/כִ/יתֶם׃"
+      },
+      "previous_strong": "Hb/H7784",
+      "new_strong": "H7784",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H7784 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.32.4",
+        "text=בַּשּׁוּק",
+        "prefixes=Hb",
+        "strong=H7784",
+        "lemma=שׁוּק",
+        "definitions=street",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 32,
+        "word_index": 17,
+        "text": "קִינָה",
+        "strong": "H7015",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "דֹּמִים הֵם לַ/יְלָדִים הַ/יּשְׁבִים בַּ/שּׁוּק וְ/קֹרְאִים זֶה אֶל־זֶה וְ/אֹמְרִים חִלַּלְנוּ לָ/כֶם בַּ/חֲלִילִים וְ/לֹא רִקַּדְתֶּם קוֹנַנּוּ לָ/כֶם קִינָה וְ/לֹא בְ/כִ/יתֶם׃"
+      },
+      "previous_strong": "H7015",
+      "new_strong": "H7015",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H7015 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.32.17",
+        "text=קִינָה",
+        "prefixes=none",
+        "strong=H7015",
+        "lemma=קִינָה",
+        "definitions=elegy | dirge",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 34,
+        "word_index": 8,
+        "text": "זוֹלֵל",
+        "strong": "H2151",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בָא בֶן־הָ/אָדָם וְ/הוּא אֹכֵל וְ/שֹׁתֶה וַ/אֲמַרְתֶּם הִנֵּה זוֹלֵל וְ/סֹבֵא וְ/רֵעַ לְ/מוֹכְסִים וּ/לְ/חַטָּאִים׃"
+      },
+      "previous_strong": "H2151",
+      "new_strong": "H2151",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H2151 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.34.8",
+        "text=זוֹלֵל",
+        "prefixes=none",
+        "strong=H2151",
+        "lemma=זָלַל",
+        "definitions=shake",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 34,
+        "word_index": 9,
+        "text": "וְסֹבֵא",
+        "strong": "Hc/H5435",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בָא בֶן־הָ/אָדָם וְ/הוּא אֹכֵל וְ/שֹׁתֶה וַ/אֲמַרְתֶּם הִנֵּה זוֹלֵל וְ/סֹבֵא וְ/רֵעַ לְ/מוֹכְסִים וּ/לְ/חַטָּאִים׃"
+      },
+      "previous_strong": "Hc/H5435",
+      "new_strong": "H5435",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H5435 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.34.9",
+        "text=וְסֹבֵא",
+        "prefixes=Hc",
+        "strong=H5435",
+        "lemma=סֹבֶא",
+        "definitions=drink | liquor",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 37,
+        "word_index": 13,
+        "text": "פַּךְ־",
+        "strong": "H6378",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה אִשָּׁה אַחַת בָּ/עִיר וְ/הִיא חֹטֵאת שָׁמְעָה כִּי־הוּא מֵסֵב בֵּ/ית הַ/פָּרוּשׁ וַ/תָּבֵא פַּךְ־שֶׁמֶן הַ/מּוֹר׃"
+      },
+      "previous_strong": "H6378",
+      "new_strong": "H6378",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6378 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.37.13",
+        "text=פַּךְ־",
+        "prefixes=none",
+        "strong=H6378",
+        "lemma=פַּךְ",
+        "definitions=vial | flask",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 38,
+        "word_index": 13,
+        "text": "וַתִּשַּׁק",
+        "strong": "Hc/H5401",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תַּעֲמֹד לְ/רַגְלָיו מֵאַחֲרָיו וַ/תֵּבְךְּ וַ/תָּחֶל לְ/הַ/רְטִיב אֶת־רַגְלָיו בִּ/דְמָעוֹת וַ/תְּנַגֵּב אֹתָן בְּ/שַׂעֲרוֹת רֹאשָׁהּ וַ/תִּשַּׁק אֶת־רַגְלָיו וַ/תִּמְשַׁח אֹתָן בַּ/שָּׁמֶן׃"
+      },
+      "previous_strong": "Hc/H5401",
+      "new_strong": "H5401",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H5401 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.7.38.13",
+        "text=וַתִּשַּׁק",
+        "prefixes=Hc",
+        "strong=H5401",
+        "lemma=נָשַׁק",
+        "definitions=kiss",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 8,
+        "verse": 2,
+        "word_index": 5,
+        "text": "וּמֵחֳלָיִים",
+        "strong": "H1451",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/נָשִׁים אֲשֶׁר נִרְפְּאוּ מֵרוּחוֹת רָעוֹת וּ/מֵחֳלָיִים מִרְיָם הַ/נִּקְרָאָה מַגְדָּלִית אֲשֶׁר גֹּרְשׁוּ מִמֶּנָּה שִׁבְעָה שֵׁדִים׃"
+      },
+      "previous_strong": "H1451",
+      "new_strong": "H2483",
+      "confidence": 0.94,
+      "reason": "וּמֵחֳלָיִים means and from sicknesses; H2483 חֳלִי fits, while H1451 is unrelated.",
+      "evidence": [
+        "occurrence=luke.8.2.5",
+        "text=וּמֵחֳלָיִים",
+        "prefixes=Hc",
+        "strong=H1451",
+        "lemma=גְּדֵרִי",
+        "definitions=none",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 8,
+        "verse": 3,
+        "word_index": 0,
+        "text": "וְיוֹחָנָה",
+        "strong": "H3446",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/יוֹחָנָה אֵשֶׁת כּ/וּזָא סוֹכֵן ה/וֹרְדוֹס וְ/שׁוֹשַׁנָּה וַ/אֲחֵרוֹת רַבּוֹת אֲשֶׁר שֵׁרְתֻהוּ מִנִּכְסֵיהֶן׃"
+      },
+      "previous_strong": "H3446",
+      "new_strong": "D0198",
+      "confidence": 0.94,
+      "reason": "וְיוֹחָנָה is Johanna; H3446 is unrelated, so use a custom NT name entry.",
+      "evidence": [
+        "occurrence=luke.8.3.0",
+        "text=וְיוֹחָנָה",
+        "prefixes=Hc",
+        "strong=H3446",
+        "lemma=יִשְׂחָק",
+        "definitions=none",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0198",
+      "hebrew": "יוחנה",
+      "transliteration_en": "Johanna",
+      "transliteration_es": "Juana",
+      "definition": {
+        "text_en": "Johanna; woman who supported Jesus’ ministry in Luke 8.",
+        "text_es": "Juana; mujer que apoyó el ministerio de Jesús en Lucas 8.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 8,
+        "verse": 14,
+        "word_index": 8,
+        "text": "וַיָּמֹכּוּ",
+        "strong": "Hc/H4355",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲשֶׁר נָפַל בֵּ/ין הַ/קֹּצִים הֵם הַ/שֹּׁמְעִים וְ/ה/וֹלְכִים לָ/הֶם וַ/יָּמֹכּוּ בִּ/דְאָגוֹת וּ/בְ/עשֶׁר וּ/בְ/תַאֲוֺת הַ/חַיִּים וּ/פְרִי לֹא־יְשַׁוּוּ לָ/מוֹ׃"
+      },
+      "previous_strong": "Hc/H4355",
+      "new_strong": "H4355",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4355 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.8.14.8",
+        "text=וַיָּמֹכּוּ",
+        "prefixes=Hc",
+        "strong=H4355",
+        "lemma=מָכַךְ",
+        "definitions=be low | humiliated",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 8,
+        "verse": 16,
+        "word_index": 3,
+        "text": "נֵר",
+        "strong": "H5369",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וְ/אֵין־אִישׁ מַדְלִיק נֵר אֲשֶׁר יְכַסֶּה אוֹתוֹ בִּ/כְ/לִי אוֹ יְשִׂימֵהוּ תַּחַת הַ/מִּטָּה כִּי אִם־עַל־הַ/מְּנוֹרָה יַעֲלֵהוּ לְ/מַעַן יִרְאוּ כָּל־בָּ/אֵי הַ/בַּיִת אֶת־הָ/אוֹר׃"
+      },
+      "previous_strong": "H5369",
+      "new_strong": "H5216",
+      "confidence": 0.94,
+      "reason": "נֵר means lamp; H5216 נִיר/נֵר fits, while H5369 is the proper name Ner.",
+      "evidence": [
+        "occurrence=luke.8.16.3",
+        "text=נֵר",
+        "prefixes=none",
+        "strong=H5369",
+        "lemma=נֵר",
+        "definitions=father of Abner | father of Kish",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 8,
+        "verse": 29,
+        "word_index": 21,
+        "text": "וְנִדְחַף",
+        "strong": "H1765",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי צִוָּה אֶת־הָ/רוּחַ הַ/טָּמֵא לָ/צֵאת מִן־הָ/אִישׁ כִּי יָמִים רַבִּים חָטַף אֹתוֹ וְ/נֶאֱסַר בָּ/אזִקִּים וְ/נִשְׁמַר בַּ/כְּ/בָלִים וְ/הָיָה בְּ/נַתְּקוֹ אֶת־הַ/מּוֹסֵרוֹת וְ/נִדְחַף בְּ/יַד הַשֵּׁד אֶל־הַ/מִּדְבָּרוֹת׃"
+      },
+      "previous_strong": "H1765",
+      "new_strong": "H1765",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1765 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.8.29.21",
+        "text=וְנִדְחַף",
+        "prefixes=Hc",
+        "strong=H1765",
+        "lemma=דָּחַף",
+        "definitions=drive | hasten",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 12,
+        "word_index": 21,
+        "text": "לְטַהֲרֵנִי׃",
+        "strong": "H2039",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בִּ/הְ/יוֹתוֹ בְּ/אַחַת הֶ/עָרִים וְ/הִנֵּה־אִישׁ מָלֵא צָרַעַת וַ/יַּרְא אֶת־יֵשׁוּעַ וַ/יִּפֹּל עַל־פָּנָיו וַ/יִּתְחַנֵּן אֵלָיו לֵ/אמֹר אֲדֹנִי אִם־תַּחְפֹּץ תּוּכַל לְ/טַהֲרֵנִי׃"
+      },
+      "previous_strong": "H2039",
+      "new_strong": "H2891",
+      "confidence": 0.9,
+      "reason": "H2891 is the correct Strong for this form but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=luke.5.12.21",
+        "text=לְטַהֲרֵנִי׃",
+        "prefixes=Hl",
+        "strong=H2039",
+        "lemma=הָרָן",
+        "definitions=mountaineer | son of Teraḥ, brother of Abraham and father of Lot | a Levite (Gershonite)",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2891",
+      "hebrew": "טהר",
+      "transliteration_en": "cleanse",
+      "transliteration_es": "purificar",
+      "definition": {
+        "text_en": "be clean; cleanse; purify.",
+        "text_es": "estar limpio; limpiar; purificar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 14,
+        "word_index": 8,
+        "text": "וְהֵרָאֵה",
+        "strong": "H8465",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּעַד בּוֹ לְ/בִ/לְתִּי סַפֵּר לְ/אִישׁ כִּי אִם־לֵךְ וְ/הֵרָאֵה אֶל־הַ/כֹּהֵן וְ/הַ/קְרֵב קָרְבָּן עַל־טָהֳרָתְךָ כַּ/אֲשֶׁר צִוָּה משֶׁה לְ/עֵדוּת לָ/הֶם׃"
+      },
+      "previous_strong": "H8465",
+      "new_strong": "H7200",
+      "confidence": 0.9,
+      "reason": "H7200 is the correct Strong for this form but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=luke.5.14.8",
+        "text=וְהֵרָאֵה",
+        "prefixes=Hc",
+        "strong=H8465",
+        "lemma=תַּחַן",
+        "definitions=none",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7200",
+      "hebrew": "ראה",
+      "transliteration_en": "see",
+      "transliteration_es": "ver",
+      "definition": {
+        "text_en": "see; look; appear; show.",
+        "text_es": "ver; mirar; aparecer; mostrar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 36,
+        "word_index": 23,
+        "text": "יִשְׁוֶה",
+        "strong": "H3438",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְדַבֵּר אֲלֵיהֶם גַּם אֶת־הַ/מָּשָׁל הַזֶּה אֵין אִישׁ מַעֲלֶה טְלַאי שֶׁל־בֶּ/גֶד חָדָשׁ עַל־בֶּ/גֶד בָּ/ל/וּי כִּי אָז גַּם הֶ/חָדָשׁ יִקָּרֵעַ וְ/גַם לֹא־יִשְׁוֶה הַ/טְּלַאי הֶ/חָדָשׁ לַ/בָּ/לוּי׃"
+      },
+      "previous_strong": "H3438",
+      "new_strong": "H7737",
+      "confidence": 0.9,
+      "reason": "H7737 is the correct Strong for this form but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=luke.5.36.23",
+        "text=יִשְׁוֶה",
+        "prefixes=none",
+        "strong=H3438",
+        "lemma=יִשְׁוָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7737",
+      "hebrew": "שוה",
+      "transliteration_en": "be equal",
+      "transliteration_es": "igualar",
+      "definition": {
+        "text_en": "be equal; be like; compare; agree.",
+        "text_es": "ser igual; asemejarse; comparar; concordar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 21,
+        "word_index": 6,
+        "text": "הַבֹּכִים",
+        "strong": "H5095",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַשְׁרֵיכֶם הָ/רְעֵבִים כָּ/עֵת כִּי תִשְׂבָּעוּ אַשְׁרֵיכֶם הַ/בֹּכִים כָּ/עֵת כִּי תִשְׂחָקוּ׃"
+      },
+      "previous_strong": "H5095",
+      "new_strong": "H1058",
+      "confidence": 0.9,
+      "reason": "H1058 is the correct Strong for this form but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=luke.6.21.6",
+        "text=הַבֹּכִים",
+        "prefixes=Hd",
+        "strong=H5095",
+        "lemma=נָהַל",
+        "definitions=lead | guide to a watering-place | and cuase to rest there | bring to a station | place of rest",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1058",
+      "hebrew": "בכה",
+      "transliteration_en": "weep",
+      "transliteration_es": "llorar",
+      "definition": {
+        "text_en": "weep; mourn; lament.",
+        "text_es": "llorar; lamentar; hacer duelo.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 34,
+        "word_index": 19,
+        "text": "בְּשָׁוֶה׃",
+        "strong": "H2012",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִם־תַּלְווּ אֶת־הָ/אֲנָשִׁים אֲשֶׁר תְּקַוּוּ לְ/קַבֵּל מֵהֶם מַה־הוּא חַסְדְּכֶם גַּם הַ/חַטָּאִים מַלְוִים אֶת־הַ/חַטָּאִים לְ/מַעַן יוּשַׁב לָ/הֶם בְּ/שָׁוֶה׃"
+      },
+      "previous_strong": "H2012",
+      "new_strong": "H7737",
+      "confidence": 0.9,
+      "reason": "H7737 is the correct Strong for this form but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=luke.6.34.19",
+        "text=בְּשָׁוֶה׃",
+        "prefixes=Hb",
+        "strong=H2012",
+        "lemma=הֵנַע",
+        "definitions=none",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7737",
+      "hebrew": "שוה",
+      "transliteration_en": "be equal",
+      "transliteration_es": "igualar",
+      "definition": {
+        "text_en": "be equal; be like; compare; agree.",
+        "text_es": "ser igual; asemejarse; comparar; concordar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 35,
+        "word_index": 18,
+        "text": "לְשֹׁכְחֵי",
+        "strong": "H2610",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל אֶהֱבוּ אֶת־אֹיְבֵיכֶם וְ/הֵ/יטִיבוּ וְ/הַלְווּ מִבְּלִי תוֹחֶלֶת וִ/יהִי שְׂכַרְכֶם רַב וִ/הְ/יִיתֶם בְּ/נֵי עֶלְיוֹן כִּי טוֹב הוּא גַּם־לְ/שֹׁכְחֵי טוֹבָה וְ/לָ/רָעִים׃"
+      },
+      "previous_strong": "H2610",
+      "new_strong": "H7911",
+      "confidence": 0.9,
+      "reason": "H7911 is the correct Strong for this form but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=luke.6.35.18",
+        "text=לְשֹׁכְחֵי",
+        "prefixes=Hl",
+        "strong=H2610",
+        "lemma=חָנֵף",
+        "definitions=be polluted | profane",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7911",
+      "hebrew": "שכח",
+      "transliteration_en": "forget",
+      "transliteration_es": "olvidar",
+      "definition": {
+        "text_en": "forget; be oblivious.",
+        "text_es": "olvidar; pasar por alto.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 4,
+        "word_index": 3,
+        "text": "וַיִּתְחַנְנוּ־",
+        "strong": "H5382",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ אֶל־יֵשׁוּעַ וַ/יִּתְחַנְנוּ־לוֹ מְאֹד וַ/יֹּאמְרוּ רָאוּי הוּא אֲשֶׁר תַּעֲשֶׂה בַּ/קָּשָׁתוֹ׃"
+      },
+      "previous_strong": "H5382",
+      "new_strong": "H2603",
+      "confidence": 0.9,
+      "reason": "H2603 is the correct Strong for this form but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=luke.7.4.3",
+        "text=וַיִּתְחַנְנוּ־",
+        "prefixes=Hc",
+        "strong=H5382",
+        "lemma=נָשָׁה",
+        "definitions=forget",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2603",
+      "hebrew": "חנן",
+      "transliteration_en": "plead",
+      "transliteration_es": "suplicar",
+      "definition": {
+        "text_en": "show favor; be gracious; plead; make supplication.",
+        "text_es": "mostrar favor; ser misericordioso; suplicar; implorar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 7,
+        "word_index": 14,
+        "text": "וְיֵרָפֵא",
+        "strong": "H7540",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/עֲבוּר זֹאת גַּם־אֶת עַצְמִי לֹא חָשַׁבְתִּי רָאוּי לָ/ב/וֹא אֵלֶיךָ אַךְ דַּבֶּר־נָא דָבָר וְ/יֵרָפֵא נַעֲרִי׃"
+      },
+      "previous_strong": "H7540",
+      "new_strong": "H7495",
+      "confidence": 0.9,
+      "reason": "H7495 is the correct Strong for this form but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=luke.7.7.14",
+        "text=וְיֵרָפֵא",
+        "prefixes=Hc",
+        "strong=H7540",
+        "lemma=רָקַד",
+        "definitions=skip about",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7495",
+      "hebrew": "רפא",
+      "transliteration_en": "heal",
+      "transliteration_es": "sanar",
+      "definition": {
+        "text_en": "heal; cure; make whole.",
+        "text_es": "sanar; curar; restaurar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 22,
+        "word_index": 20,
+        "text": "שׁוֹמְעִים",
+        "strong": "H7372",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן יֵשׁוּעַ וַ/יֹּאמֶר לָ/הֶם לְ/כוּ וְ/הַ/גִּידוּ לְ/יוֹחָנָן אֵת אֲשֶׁר רְאִיתֶם וַ/אֲשֶׁר שְׁמַעְתֶּם כִּי עִוְרִים רֹאִים וּ/פִסְחִים מִתְהַלְּכִים וּ/מְצֹרָעִים מְטֹהָרִים וְ/חֵרְשִׁים שׁוֹמְעִים וּ/מֵתִים קָמִים וַ/עֲנִיִּים מִתְבַּשְּׂרִים׃"
+      },
+      "previous_strong": "H7372",
+      "new_strong": "H8085",
+      "confidence": 0.9,
+      "reason": "H8085 is the correct Strong for this form but lacks a generated lexicon word file or usable bilingual definition.",
+      "evidence": [
+        "occurrence=luke.7.22.20",
+        "text=שׁוֹמְעִים",
+        "prefixes=none",
+        "strong=H7372",
+        "lemma=רָטַב",
+        "definitions=be moist",
+        "codex reviewed definitions batch_0045"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8085",
+      "hebrew": "שמע",
+      "transliteration_en": "hear",
+      "transliteration_es": "oír",
+      "definition": {
+        "text_en": "hear; listen; obey.",
+        "text_es": "oír; escuchar; obedecer.",
+        "source": "delitzsch_review"
+      }
+    }
+  ]
+}

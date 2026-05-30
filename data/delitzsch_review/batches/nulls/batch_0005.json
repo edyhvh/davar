@@ -1,0 +1,1358 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:26.117233+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 1,
+        "verse": 10,
+        "word_index": 15,
+        "text": "שֶּׁבָּאָרֶץ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עַל־דְּבַר הַ/נְהָגָתוֹ בִּ/מְלֹאת הָ/עִתִּים לְ/קַבֵּץ אֶת־הַכֹּל תַּחַת הַ/מָּשִׁיחַ הֵן מַה־שֶּׁבַּשָּׁמַיִם הֵן מַה־שֶּׁבָּאָרֶץ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "שבארץ means “that which is on/in the earth,” from ארץ.",
+      "evidence": [
+        "context contrasts things in heaven and on earth",
+        "local lexicon H776 ארץ = earth/land"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H776",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 14,
+        "text": "כְּשֶׁהֶאֱמַנְתֶּם",
+        "strong": null,
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲשֶׁר גַּם־אַתֶּם נְטוּעִים בּוֹ אַחֲרֵי שָׁמְעֲכֶם דְּבַר הָ/אֱמֶת אֶת־בְּ/שׂוֹרַת יְשׁוּעַתְכֶם וַ/אֲשֶׁר בּוֹ כְּ/שֶׁהֶאֱמַנְתֶּם גַּם־נֶחְתַּמְתֶּם בְּ/רוּחַ הַ/הַבְטָחָה רוּחַ הַ/קֹּדֶשׁ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "כשהאמנתם means “when you believed,” from אמן.",
+      "evidence": [
+        "context: after hearing the gospel and believing",
+        "local lexicon H539 אמן = confirm/support; believe in derived stem"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H539",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 2,
+        "verse": 11,
+        "word_index": 13,
+        "text": "שֶׁהִיא",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עַל־כֵּן זִכְרוּ כִּי־אַתֶּם הַ/גּוֹיִם בַּ/בָּשָׂר הַ/נִּקְרָאִים עֲרֵלִים בְּ/פִי הַ/נִּקְרָאִים בְּ/נֵי הַ/מִּילָה שֶׁהִיא מַעֲשֵׂה יָדַיִם בַּ/בָּשָׂר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "שהיא means “which is/she is,” from הוא/היא pronoun.",
+      "evidence": [
+        "context: circumcision which is made by hands",
+        "local lexicon H1931 הוא = he/she/it"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1931",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 12,
+        "text": "וְלִנְבִיאָיו",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר בַּ/דּוֹרֹת הָ/רִאשׁוֹנִים לֹא נוֹדַע לִ/בְ/נֵי אָדָם כַּ/אֲשֶׁר נִגְלָה עַתָּה לִ/שְׁלִיחָיו הַ/קְּדשִׁים וְ/לִ/נְבִיאָיו בָּ/רוּחַ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "ולנביאיו means “and to his prophets,” from נביא.",
+      "evidence": [
+        "context: revealed to his holy apostles and prophets",
+        "local lexicon H5030 נביא = prophet"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5030",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 1,
+        "verse": 21,
+        "word_index": 5,
+        "text": "סוּרְיָא",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַחֲרֵי־כֵן בָּ/אתִי אֶל־גְּלִילוֹת סוּרְיָא וְ/קִילִיקְיָא׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "סוריא is Syria; no reliable Hebrew Strong entry for this NT place name.",
+      "evidence": [
+        "Galatians 1:21 regions of Syria and Cilicia",
+        "proper place name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0065",
+      "new_strong": "D0065",
+      "hebrew": "סוריא",
+      "transliteration_en": "Syria",
+      "transliteration_es": "Syria",
+      "definition": {
+        "text_en": "Syria; Roman province/region north of Judea."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 2,
+        "verse": 12,
+        "word_index": 14,
+        "text": "וּפוֹרֵשׁ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי לִ/פְנֵי בֹא אֲנָשִׁים מֵאֵת יַעֲקֹב הָיָה אֹכֵל עִם־הַ/גּוֹיִם יַחְדָּו וּ/כְ/בֹאָם הָיָה מִתְרַחֵק וּ/פוֹרֵשׁ מֵהֶם מִיִּרְאָתוֹ אֶת־בְּ/נֵי הַ/מִּילָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "ופורש means “withdrawing/separating,” from פרד.",
+      "evidence": [
+        "context: Peter withdrew and separated himself",
+        "local lexicon H6504 פרד = divide/separate"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6504",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 2,
+        "verse": 14,
+        "word_index": 23,
+        "text": "תַכְרִיחַ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אָכֵן בִּ/רְאוֹתִי אֵת אֲשֶׁר לֹא יִשְּׁרוּ לֶ/כֶת כַּ/אֲמִתָּהּ שֶׁל־הַ/בְּשׂוֹרָה אָמַרְתִּי אֶל־כֵּ/יפָא בִּ/פְנֵי־כֹל אִם־אַתָּה הַ/יְּהוּדִי תִּתְנַהֵג כְּ/נָכְרִי וְ/לֹא כִ/יהוּדִי לָ/מָּה תַכְרִיחַ אֶת־הַ/גּוֹיִם לְ/הִתְנַהֵג כַּ/יְּהוּדִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "תכריח means “you compel/force”; this is later Hebrew כרח/הכריח and should be custom rather than forced onto a weak biblical equivalent.",
+      "evidence": [
+        "context: why do you compel Gentiles to live as Jews?",
+        "later Hebrew הכרח/הכריח = force/compel"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0066",
+      "new_strong": "D0066",
+      "hebrew": "הכריח",
+      "transliteration_en": "hikhriakh",
+      "transliteration_es": "hikhriakh",
+      "definition": {
+        "text_en": "force; compel; coerce."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 17,
+        "text": "הַצָּלוּב",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲהָהּ גָּלָטִים חַסְרֵי דָעַת מִי הִתְעָה אֶתְכֶם בִּ/כְ/שָׁפָיו מִשְּׁמֹעַ אֶל־הָ/אֱמֶת אַחֲרֵי אֲשֶׁר צֻיַּר בְּ/תוֹכְכֶם יֵשׁוּעַ הַ/מָּשִׁיחַ הַ/צָּלוּב לְ/נֶגֶד עֵינֵיכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "הצלוב means “the crucified one”; reuse custom crucifixion entry.",
+      "evidence": [
+        "context: Jesus Christ portrayed as crucified",
+        "custom D0006 = crucify/crucified"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0006",
+      "new_strong": "D0006",
+      "hebrew": "צלב",
+      "transliteration_en": "tslav",
+      "transliteration_es": "tslav",
+      "definition": {
+        "text_en": "crucify; put to death on a cross."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 3,
+        "verse": 15,
+        "word_index": 14,
+        "text": "יְפֵרֶנָּה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַחַי לְ/פִי דֶרֶךְ־אָדָם אֲדַבֵּר אֲפִלּוּ בְּ/רִית שֶׁל־בֶּן־אָדָם אִם־מְקֻיֶּמֶת הִיא לֹא יְפֵרֶנָּה אִישׁ גַּם לֹא־יוֹסִיף עָלֶיהָ דָּבָר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "יפרנה means “annul/break it,” from פרר.",
+      "evidence": [
+        "context: no one annuls a confirmed covenant",
+        "local lexicon H6565 פרר = break/frustrate"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6565",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 5,
+        "verse": 11,
+        "word_index": 14,
+        "text": "הַצְּלָב׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנִי אַחַי אִם־אַכְרִיז עוֹד הַ/מִּילָה עַל־מָה אֶהְיֶה נִרְדָּף הֲלֹא אָז מְבֻטָּל מִכְשׁוֹל הַצְּלָב׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "הצלב means “the cross”; reuse custom cross noun entry.",
+      "evidence": [
+        "context: offense/stumbling block of the cross",
+        "custom D0058 = cross"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0058",
+      "new_strong": "D0058",
+      "hebrew": "צלב",
+      "transliteration_en": "tslav",
+      "transliteration_es": "tslav",
+      "definition": {
+        "text_en": "cross; instrument of crucifixion."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 6,
+        "verse": 1,
+        "word_index": 10,
+        "text": "תְּקִימֻהוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶחָי גַּם כִּי־יִתָּפֵשׂ אִישׁ מִכֶּם בַּ/עֲבֵרָה אַתֶּם אַנְשֵׁי הָ/רוּחַ תְּקִימֻהוּ בְּ/רוּחַ עֲנָוָה וְ/הִשָּׁמֵר לְ/נַפְשְׁךָ פֶּן־תָּבֹא לִ/ידֵי־נִסָּיוֹן גַּם־אָתָּה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "תקימהו means “restore/set him upright,” from קום in a causative/restore sense.",
+      "evidence": [
+        "context: restore such a person in a spirit of gentleness",
+        "local lexicon H6965 קום = arise/stand"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6965",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 6,
+        "verse": 4,
+        "word_index": 10,
+        "text": "תְהִלָּתוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל יִבְחַן כָּל־אִישׁ אֶת־מַעֲשֵׂהוּ וְ/אָז לוֹ לְ/בַ/דּוֹ תִּהְיֶה תְהִלָּתוֹ וְ/לֹא לְ/נֶגֶד אַחֵר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "תהלתו means “his boasting/praise,” from תהלה.",
+      "evidence": [
+        "context: then he will have his boast in himself alone",
+        "local lexicon H8416 תהלה = praise"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H8416",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 6,
+        "verse": 9,
+        "word_index": 10,
+        "text": "נִרְפֶּה׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנַחְנוּ אַל־נִלְאֶה בַּ/עֲשׂוֹת הַ/טּוֹב כִּי־נִקְצֹר בְּ/עִתּוֹ אִם־לֹא נִרְפֶּה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "נרפה means “let us not grow weary/relax,” from רפה.",
+      "evidence": [
+        "context: do not grow weary in doing good",
+        "local lexicon H7503 רפה = relax/sink"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7503",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 6,
+        "verse": 13,
+        "word_index": 10,
+        "text": "שֶׁתִּמּוֹלוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי גַם־הֵם הַ/נִּמּוֹלִים אֵינָם שֹׁמְרִים אֶת־הַ/תּוֹרָה אֶלָּא רְצוֹנָם שֶׁתִּמּוֹלוּ לְ/מַעַן יִתְהַלְלוּ בִּ/בְשַׂרְכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "שתמולו means “that you be circumcised,” from מול.",
+      "evidence": [
+        "context: they want you to be circumcised",
+        "local lexicon H4135 מול = circumcise"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4135",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "galatians",
+        "chapter": 6,
+        "verse": 14,
+        "word_index": 15,
+        "text": "נִצְלָב",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אָנֹכִי חָלִילָה לִּי מֵהִתְהַלֵּל זוּלָתִי בִּ/צְלָב אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ אֲשֶׁר־בּוֹ הָ/עוֹלָם נִצְלַב־לִי וַ/אֲנִי נִצְלָב לָ/עוֹלָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "נצלב means “I have been crucified”; reuse custom crucifixion entry.",
+      "evidence": [
+        "context: world crucified to me and I to the world",
+        "custom D0006 = crucify/crucified"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0006",
+      "new_strong": "D0006",
+      "hebrew": "צלב",
+      "transliteration_en": "tslav",
+      "transliteration_es": "tslav",
+      "definition": {
+        "text_en": "crucify; put to death on a cross."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 1,
+        "verse": 3,
+        "word_index": 4,
+        "text": "יֵשׁוּתוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הוּא זֹהַר כְּ/ב/וֹדוֹ וְ/צֶלֶם יֵשׁוּתוֹ וְ/נוֹשֵׂא כֹל בִּ/דְבַר גְּבוּרָתוֹ וְ/אַחֲרֵי עֲשׂתוֹ בְ/נַפְשׁוֹ טָהֳרַת חַטֹּאתֵינוּ יָשַׁב לִ/ימִין הַ/גְּדֻלָּה בַּ/מְּרוֹמִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ישותו means “his being/substance”; this is later/philosophical Hebrew vocabulary and needs custom handling.",
+      "evidence": [
+        "context: image/imprint of his being",
+        "later Hebrew ישות = being/substance"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0067",
+      "new_strong": "D0067",
+      "hebrew": "ישות",
+      "transliteration_en": "yeshut",
+      "transliteration_es": "yeshut",
+      "definition": {
+        "text_en": "being; substance; essential nature."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 1,
+        "verse": 5,
+        "word_index": 15,
+        "text": "לּוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אֶל־מִי מִן־הַ/מַּלְאָכִים אָמַר מֵעוֹלָם בְּ/נִי אַתָּה אֲנִי הַ/יּוֹם יְלִדְתִּיךָ וְ/עוֹד אֲנִי אֶהְיֶה־לּוֹ לְ/אָב וְ/הוּא יִהְיֶה־לִּי לְ/בֵן׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "לו is a pronominal dative “to him”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "quotation: I will be to him a father",
+        "manual policy case: ל + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 1,
+        "verse": 5,
+        "word_index": 19,
+        "text": "לִּי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אֶל־מִי מִן־הַ/מַּלְאָכִים אָמַר מֵעוֹלָם בְּ/נִי אַתָּה אֲנִי הַ/יּוֹם יְלִדְתִּיךָ וְ/עוֹד אֲנִי אֶהְיֶה־לּוֹ לְ/אָב וְ/הוּא יִהְיֶה־לִּי לְ/בֵן׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "לי is a pronominal dative “to me”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "quotation: he shall be to me a son",
+        "manual policy case: ל + first-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 1,
+        "verse": 6,
+        "word_index": 0,
+        "text": "וּבַהֲבִיאוֹ",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/הֲבִיאוֹ אֶת־הַ/בְּכוֹר שֵׁנִית לָ/עוֹלָם אֹמֵר וְ/הִשְׁתַּחֲווּ־לוֹ כָּל־אֱלֹהִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.86,
+      "reason": "ובהביאו means “when he brings,” from בוא in causative bring.",
+      "evidence": [
+        "context: when he brings the firstborn into the world",
+        "local lexicon H935 בוא = come/go in; Hiphil bring"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H935",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 2,
+        "verse": 3,
+        "word_index": 12,
+        "text": "מִתְּחִלָּה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֵיךְ נִמָּלֵט אֲנַחְנוּ אִם־לֹא נָשִׂים לֵב לִ/תְשׁוּעָה גְדוֹלָה אֲשֶׁר כָּ/זֹאת הַ/נֶּאֱמָרָה מִתְּחִלָּה בְּ/פִי הָ/אָדוֹן וַ/תְּקֻיַּם־לָ/נוּ עַל־יְדֵי שֹׁמְעֶיהָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "מתחלה means “from the beginning/at first,” from תחלה.",
+      "evidence": [
+        "context: first spoken by the Lord",
+        "local lexicon H8462 תחלה = beginning"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H8462",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 2,
+        "verse": 8,
+        "word_index": 18,
+        "text": "הוּשַׁת",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הִנֵּה בַּ/אֲשֶׁר שָׁת כֹּל תַּחְתָּיו לֹא־הִשְׁאִיר דָּבָר שֶׁלֹּא־שָׁת תַּחְתָּיו וְ/עַתָּה זֶה לֹא רָאִינוּ עֲדַיִן כִּי־כֹל הוּשַׁת תַּחְתָּיו׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.86,
+      "reason": "הושת means “was put/set,” from שית set/put.",
+      "evidence": [
+        "context: everything was subjected/put under him",
+        "local lexicon H7896 שית = put/set"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7896",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 2,
+        "verse": 18,
+        "word_index": 9,
+        "text": "הַמְנֻסִּים׃",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי בַ/אֲשֶׁר הוּא בְ/עַצְמוֹ עֻנָּה וְ/נִתְנַסֶּה יָכֹל לַ/עֲזֹר אֶת־הַ/מְנֻסִּים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "המנסים means “the tempted/tested,” from נסה.",
+      "evidence": [
+        "context: he can help those being tempted",
+        "local lexicon H5254 נסה = test/try"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5254",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 11,
+        "text": "הוֹדָיָתֵנוּ",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן אַחַי הַ/קְּדוֹשִׁים חֲבֵרִים לַ/קְּרִיאָה שֶׁל־מַעְלָה הַ/בִּיטוּ אֶל־הַ/שָּׁלִיחַ וְ/כֹ/הֵן ה/וֹדָיָתֵנוּ הַ/גָּדוֹל אֶל־הַ/מָּשִׁיחַ יֵשׁוּעַ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.82,
+      "reason": "הודייתנו means “our confession/acknowledgment,” closest to תודה/הודה thanksgiving/confession.",
+      "evidence": [
+        "context: apostle and high priest of our confession",
+        "local lexicon H8426 תודה = thanksgiving/praise"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H8426",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 3,
+        "text": "מִמּשֶׁה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־כָ/ב/וֹד גָּדוֹל מִמּשֶׁה נָחַל־זֶה כַּ/אֲשֶׁר בֹּ/נֵה הַ/בַּיִת חָשׁוּב יוֹתֵר מִן־הַ/בָּיִת׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "ממשה is Moses with prefixed מן, “than Moses.”",
+      "evidence": [
+        "context: greater glory than Moses",
+        "local lexicon H4872 משה = Moses"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4872",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 3,
+        "verse": 6,
+        "word_index": 11,
+        "text": "וּבִתְהִלַּת",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל הַ/מָּשִׁיחַ הוּא הַבֵּן עַל־בֵּ/יתוֹ וַ/אֲנַחְנוּ בֵ/יתוֹ אִם־נַחֲזִיק בַּ/בִּטָּחוֹן וּ/בִ/תְהִלַּת הַ/תִּקְוָה וְ/לֹא־נַרְפֶּנָּה עַד־הַקֵּץ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ובתהלת means “and the boasting/praise of,” from תהלה.",
+      "evidence": [
+        "context: confidence and boasting of hope",
+        "local lexicon H8416 תהלה = praise"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H8416",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 3,
+        "verse": 14,
+        "word_index": 8,
+        "text": "נַרְפֶּנָּה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי נִתְחַבַּרְנוּ לַ/מָּשִׁיחַ אִם־נַחֲזִיק בְּ/רֵאשִׁית הַ/בִּטְחָה וְ/לֹא נַרְפֶּנָּה עַד־הַקֵּץ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "נרפנה means “let us not relax/let go,” from רפה.",
+      "evidence": [
+        "context: hold the beginning of confidence firm to the end",
+        "local lexicon H7503 רפה = relax"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7503",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 3,
+        "verse": 17,
+        "word_index": 8,
+        "text": "פִגְרֵיהֶם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/מִי הִתְקוֹטֵט אַרְבָּעִים שָׁנָה הֲלֹא בַ/חַטָּאִים אֲשֶׁר נָפְלוּ פִגְרֵיהֶם בַּ/מִּדְבָּר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "פגריהם means “their corpses,” from פגר.",
+      "evidence": [
+        "context: their corpses fell in the wilderness",
+        "local lexicon H6297 פגר = corpse/carcass"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6297",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 3,
+        "verse": 18,
+        "word_index": 8,
+        "text": "לַסּוֹרְרִים׃",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/מִי נִשְׁבַּע לְ/בִ/לְתִּי־בֹא אֶל־מְנוּחָתוֹ אִם־לֹא לַ/סּוֹרְרִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "לסוררים means “to the rebellious,” from סרר.",
+      "evidence": [
+        "context: those who were disobedient/rebellious did not enter",
+        "local lexicon H5637 סרר = stubborn/rebellious"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5637",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 4,
+        "verse": 3,
+        "word_index": 20,
+        "text": "הִוָּסֵד",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי בָּ/אֵי הַ/מְּנוּחָה אֲנַחְנוּ הַ/מַּאֲמִינִים כְּ/מוֹ שֶׁאָמַר אֲשֶׁר־נִשְׁבַּעְתִּי בְ/אַפִּי אִם־יְבֹאוּן אֶל־מְנוּחָתִי אַף כִּי נִגְמְרוּ מַעֲשֵׂי יְהוָֹה מֵעֵת הִוָּסֵד הָ/עוֹלָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "הוסד means “foundation/founding,” from יסד.",
+      "evidence": [
+        "context: from the foundation of the world",
+        "local lexicon H3245 יסד = establish/found"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3245",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 4,
+        "verse": 12,
+        "word_index": 18,
+        "text": "לָמוֹחַ",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־דְבַר הָ/אֱלֹהִים חַי הוּא וּ/פֹעֵל גְּבוּרוֹת וְ/חַד מֵחֶרֶב פִּיפִיּוֹת וְ/נִכְנָס עַד־לְ/הַ/בְדִּיל בֵּ/ין־נֶפֶשׁ לָ/רוּחַ וּ/בֵ/ין הַ/דְּבָקִים לָ/מוֹחַ וּ/בֹ/חֵן מַחְשְׁבוֹת לֵ/בָב וּ/מְזִמּוֹתָיו׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "למוח means “to the marrow,” from מוח.",
+      "evidence": [
+        "context: joints and marrow",
+        "local lexicon H4221 מוח = marrow"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4221",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 4,
+        "verse": 12,
+        "word_index": 22,
+        "text": "וּמְזִמּוֹתָיו׃",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־דְבַר הָ/אֱלֹהִים חַי הוּא וּ/פֹעֵל גְּבוּרוֹת וְ/חַד מֵחֶרֶב פִּיפִיּוֹת וְ/נִכְנָס עַד־לְ/הַ/בְדִּיל בֵּ/ין־נֶפֶשׁ לָ/רוּחַ וּ/בֵ/ין הַ/דְּבָקִים לָ/מוֹחַ וּ/בֹ/חֵן מַחְשְׁבוֹת לֵ/בָב וּ/מְזִמּוֹתָיו׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ומזימותיו means “and its intentions/plans,” from זממה/זמה.",
+      "evidence": [
+        "context: thoughts and intentions of the heart",
+        "local lexicon H2154 זמה = plan/device"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H2154",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 4,
+        "verse": 15,
+        "word_index": 15,
+        "text": "כָּמוֹנוּ",
+        "strong": null,
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אֵין לָ/נוּ כֹּ/הֵן גָּדוֹל אֲשֶׁר לֹא־יוּכַל לְ/הִצְטָעֵר עַל־חֳלָיֵינוּ כִּי אִם־הַ/מְנֻסֶּה בַ/כֹּל כָּ/מוֹנוּ אַךְ בְּ/לִי־חֵטְא׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "כמונו means “like us,” from כמו.",
+      "evidence": [
+        "context: tempted in every way like us",
+        "local lexicon H3644 כמו = like"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3644",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 5,
+        "verse": 7,
+        "word_index": 12,
+        "text": "שֶׁיָּכוֹל",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר בִּ/ימֵי הֱ/יוֹתוֹ בַ/בָּשָׂר הִקְרִיב תְּפִלּוֹת וְ/תַחֲנוּנִים בִּ/צְעָקָה גְדוֹלָה וּ/בִ/דְמָעוֹת לִ/פְנֵי מִי־שֶׁיָּכוֹל לְ/ה/וֹשִׁיעוֹ מִמָּוֶת וַ/יֵּעָתֶר־לוֹ מִפְּנֵי יִרְאָתוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "שיכול means “who is able,” from יכל.",
+      "evidence": [
+        "context: the one able to save him from death",
+        "local lexicon H3201 יכל = be able"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3201",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 5,
+        "verse": 14,
+        "word_index": 11,
+        "text": "מְנֻסִּים",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ לַ/שְּׁלֵמִים הַ/מַּאֲכָל הַ/בָּרִיא אֲשֶׁר עַל־פִּי הַ/הַרְגֵל יֵשׁ לָ/הֶם חוּשִׁים מְנֻסִּים לְ/הַ/בְדִּיל בֵּ/ין־טוֹב לָ/רָע׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "מנסים means “trained/tested,” from נסה.",
+      "evidence": [
+        "context: senses trained by practice",
+        "local lexicon H5254 נסה = test/try"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5254",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 3,
+        "word_index": 19,
+        "text": "בִּכְהֻנָּתוֹ",
+        "strong": null,
+        "prefixes": [
+          "Hb",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בְּ/אֵין־אָב בְּ/אֵין־אֵם בְּ/אֵין יַחַשׂ וּ/לְ/יָמָיו אֵין תְּחִלָּה וּ/לְ/חַיָּיו אֵין סוֹף כִּי אִם־נִדְמֶה לְ/בֶן־הָ/אֱלֹהִים הוּא עוֹמֵד בִּ/כְ/הֻנָּתוֹ לָ/נֶצַח׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "בכהנתו means “in his priesthood,” from כהן.",
+      "evidence": [
+        "context: he remains in his priesthood forever",
+        "local lexicon H3548 כהן = priest"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3548",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 6,
+        "word_index": 14,
+        "text": "לּוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲשֶׁר אֵינֶנּוּ מִתְיַחֵשׂ לְ/מִשְׁפַּחְתָּם הוּא לָ/קַח אֶת־הַ/מַּעֲשֵׂר מִן־אַבְרָהָם וַ/יְבָרֶךְ אֶת־אֲשֶׁר הָ/יְתָה־לּוֹ הַ/הַבְטָחָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "לו is a pronominal dative “to him”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "context: to whom the promises belonged",
+        "manual policy case: ל + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 16,
+        "word_index": 13,
+        "text": "נִפְסָקִים׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר אֵינֶנּוּ עַל־פִּי חֻקַּת בָּ/שָׂר וָ/דָם אֶלָּא עַל־פִּי כֹחַ חַיִּים בִּ/לְ/תִּי נִפְסָקִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "נפסקים means “ceasing/ending”; this is later Hebrew פסק and no reliable biblical Strong code fits the lexical form.",
+      "evidence": [
+        "context: power of an indestructible/unceasing life",
+        "later Hebrew פסק = stop/cease"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0068",
+      "new_strong": "D0068",
+      "hebrew": "פסק",
+      "transliteration_en": "pasak",
+      "transliteration_es": "pasak",
+      "definition": {
+        "text_en": "cease; stop; come to an end."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 8,
+        "verse": 3,
+        "word_index": 7,
+        "text": "מְנָחוֹת",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָל־כֹּ/הֵן גָּדוֹל הוּא מֻפְקָד לְ/הַ/קְרִיב מְנָחוֹת וּ/זְבָחִים וְ/עַל־כֵּן צָרִיךְ שֶׁיִּהְיֶה גַם־לָ/זֶה דָּבָר לְ/הַ/קְרִיב׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "מנחות means offerings/gifts, from מנחה.",
+      "evidence": [
+        "context: every high priest appointed to offer gifts and sacrifices",
+        "local lexicon H4503 מנחה = gift/offering"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4503",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 8,
+        "verse": 9,
+        "word_index": 18,
+        "text": "בָּחַלְתִּי",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לֹא כַ/בְּ/רִית אֲשֶׁר כָּ/רַתִּי אֶת־אֲבוֹתָם בְּ/יוֹם הֶ/חֱזִיקִי בְ/יָדָם לְ/ה/וֹצִיאָם מֵאֶרֶץ מִצְרָיִם אֲשֶׁר־הֵמָּה הֵ/פֵרוּ אֶת־בְּ/רִיתִי וְ/אָנֹכִי בָּ/חַלְתִּי בָם נְאֻם־יְהוָֹה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "בחלתי means “I rejected/loathed,” from בחל.",
+      "evidence": [
+        "context: they broke my covenant and I rejected/loathed them",
+        "local lexicon H973 בחל = feel loathing"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H973",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 8,
+        "verse": 11,
+        "word_index": 17,
+        "text": "לְמִקְּטַנָּם",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לֹא יְלַמְּדוּ עוֹד אִישׁ אֶת־רֵעֵהוּ וְ/אִישׁ אֶת־אָחִיו לֵ/אמֹר דְּעוּ אֶת־יְהוָֹה כִּי כ/וּלָּם יֵדְעוּ אוֹתִי לְ/מִקְּטַנָּם וְ/עַד־גְּדוֹלָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "למקטנם means “from their least/smallest,” from קטן.",
+      "evidence": [
+        "context: from the least to the greatest",
+        "local lexicon H6996 קטן = small"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6996",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 28,
+        "word_index": 15,
+        "text": "לַמְחַכִּים",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כֵּן־הֻקְרַב הַ/מָּשִׁיחַ פַּעַם אַחַת לְ/מַעַן שְׂאֵת חֲטָאֵי רַבִּים וּ/פַעַם שֵׁנִית יֵרָאֶה בְ/לִי־חֵטְא לִ/ישׁוּעָה לַ/מְחַכִּים לוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.93,
+      "reason": "למחכים means “to those waiting,” from חכה.",
+      "evidence": [
+        "context: those who await him",
+        "local lexicon H2442 חכה = wait/await"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H2442",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 11,
+        "verse": 6,
+        "word_index": 21,
+        "text": "לְדֹרְשָׁיו׃",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/לִי אֱמוּנָה לֹא־יוּכַל אִישׁ לִ/הְ/יוֹת רָצוּי אֶל־הָ/אֱלֹהִים כִּי כָל־הַ/קָּרֵב אֵלָיו צָרִיךְ לְ/הַ/אֲמִין כִּי־יֵשׁ אֱלֹהִים וּ/גְמוּל הוּא מֵשִׁיב לְ/דֹרְשָׁיו׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "לדרשיו means “to those who seek him,” from דרש.",
+      "evidence": [
+        "context: rewarder of those who seek him",
+        "local lexicon H1875 דרש = seek"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1875",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 12,
+        "verse": 24,
+        "word_index": 7,
+        "text": "הַהַזָּאָה",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֶל־יֵשׁוּעַ מֵלִיץ הַ/בְּרִית הַ/חֲדָשָׁה וְ/אֶל־דַּם הַ/הַזָּאָה הַ/מֵּיטִיב דַּבֵּר מִדַּם־הָבֶל׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "ההזאה means “the sprinkling,” from נזה.",
+      "evidence": [
+        "context: blood of sprinkling",
+        "local lexicon H5137 נזה = sprinkle/spatter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5137",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 13,
+        "verse": 9,
+        "word_index": 15,
+        "text": "הוֹעִילוּ",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַל־תִּנּוֹעוּ בְּ/תוֹרוֹת שֹׁנוֹת וְ/זָרוֹת כִּי טוֹב לְ/כ/וֹנֵן לִ/בֵּ/נוּ בַּ/חֶסֶד וְ/לֹא בְּ/עִנְיְנֵי מַאֲכָל אֲשֶׁר לֹא ה/וֹעִילוּ לַ/מִּתְהַלְּכִים בָּ/הֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "הועילו means “profited/benefited,” from יעל.",
+      "evidence": [
+        "context: foods did not benefit those occupied with them",
+        "local lexicon H3276 יעל = profit/avail"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3276",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 13,
+        "verse": 9,
+        "word_index": 16,
+        "text": "לַמִּתְהַלְּכִים",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַל־תִּנּוֹעוּ בְּ/תוֹרוֹת שֹׁנוֹת וְ/זָרוֹת כִּי טוֹב לְ/כ/וֹנֵן לִ/בֵּ/נוּ בַּ/חֶסֶד וְ/לֹא בְּ/עִנְיְנֵי מַאֲכָל אֲשֶׁר לֹא ה/וֹעִילוּ לַ/מִּתְהַלְּכִים בָּ/הֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "למתהלכים means “to those walking/conducting themselves,” from הלך.",
+      "evidence": [
+        "context: those walking in/occupied with these food regulations",
+        "local lexicon H1980 הלך = go/walk"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1980",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 14,
+        "word_index": 13,
+        "text": "הֲתוּכַל",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַחַי מַה־יּוֹעִיל לְ/אִישׁ אִם־יֹאמַר כִּי יֶשׁ־לוֹ אֱמוּנָה וּ/מַעֲשִׂים אֵין בּוֹ הֲ/תוּכַל הָ/אֱמוּנָה לְ/ה/וֹשִׁיעוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "התוכל means “can/is able,” from יכל.",
+      "evidence": [
+        "context: can that faith save him?",
+        "local lexicon H3201 יכל = be able"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3201",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 18,
+        "word_index": 18,
+        "text": "אַרְאֲךָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ־יֹאמַר אִישׁ אַתָּה יֶשׁ־לְךָ אֱמוּנָה וַ/אֲנִי יֶשׁ־לִי מַעֲשִׂים הַ/רְאֵנִי נָא אֶת־אֱמוּנָתְךָ בִּ/בְלִי מַעֲשֶׂיךָ וַ/אֲנִי אַרְאֲךָ מִתּוֹךְ מַעֲשַׂי אֶת־אֱמוּנָתִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "אראך means “I will show you,” from ראה.",
+      "evidence": [
+        "context: I will show you my faith by my works",
+        "local lexicon H7200 ראה = see/show"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7200",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 1,
+        "word_index": 8,
+        "text": "הַמִּתְגָּרוֹת",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "מֵאַיִן הַ/מִּלְחָמוֹת וְ/הַ/מְּדָנִים אֲשֶׁר בֵּ/ינֵיכֶם הֲלֹא מִתּוֹךְ הַ/תַּאֲוֺת הַ/מִּתְגָּרוֹת בְּ/אֵבָרֵיכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "המתגרות means “warring/stirring up conflict,” from גרה.",
+      "evidence": [
+        "context: passions that wage war in your members",
+        "local lexicon H1624 גרה = stir up/engage in strife"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1624",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 1,
+        "verse": 46,
+        "word_index": 9,
+        "text": "פִילִפּוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֵלָיו נְתַנְאֵל הֲ/מִנְּצֶרֶת תֵּצֵא־לָ/נוּ טוֹבָה וַ/יֹּאמֶר אֵלָיו פִילִפּוֹס בֹּא וּ/רְאֵה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פיליפוס is the NT proper name Philip; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "John 1:46 Philip says “come and see”",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0069",
+      "new_strong": "D0069",
+      "hebrew": "פיליפוס",
+      "transliteration_en": "Philip",
+      "transliteration_es": "Philip",
+      "definition": {
+        "text_en": "Philip; disciple of Jesus who invited Nathanael to come and see."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 2,
+        "verse": 15,
+        "word_index": 17,
+        "text": "שֻׁלְחֲנֹתֵיהֶם׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּקַּח חֲבָלִים וַ/יְעַבְּתֵם לְ/שׁוֹט וַ/יְגָרֶשׁ כֻּ/לָּם מִן־הַ/מִּקְדָּשׁ וְ/אֵת הַ/צֹּאן וְ/אֵת הַ/בָּקָר וַ/יְפַזֵּר אֶת־מְעוֹת הַ/שֻּׁלְחָנִים וַ/יַּהֲפֹךְ שֻׁלְחֲנֹתֵיהֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "שלחנתיהם means “their tables,” from שלחן.",
+      "evidence": [
+        "context: he overturned the tables of the money changers",
+        "local lexicon H7979 שלחן = table"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7979",
+      "changed_target": "parsed_word"
+    }
+  ]
+}

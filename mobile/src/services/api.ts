@@ -109,8 +109,8 @@ const buildStaticDataBaseCandidates = (): string[] => {
     ...(configuredDataBase
       ? expandAndroidLoopbackCandidates(configuredDataBase)
       : []),
-    normalizeBaseUrl(PROD_STATIC_DATA_BASE_URL),
     ...(__DEV__ ? expandAndroidLoopbackCandidates(DEV_STATIC_DATA_BASE_URL) : []),
+    normalizeBaseUrl(PROD_STATIC_DATA_BASE_URL),
   ];
 
   return uniqueUrls(candidates);

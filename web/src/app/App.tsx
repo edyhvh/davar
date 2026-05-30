@@ -1036,7 +1036,7 @@ export default function App() {
 			const strongPart = selectedWord.strong
 				.split("/")
 				.map((part) => part.trim())
-				.find((part) => /^[HG]\d+$/.test(part));
+				.find((part) => /^[HGD]\d+$/.test(part));
 
 			if (!strongPart) {
 				logWordDebug("analysis-skip-invalid-strong", {
@@ -1099,7 +1099,7 @@ export default function App() {
 			const strongPart = dssStrong
 				.split("/")
 				.map((part) => part.trim())
-				.find((part) => /^[HG]\d+$/.test(part));
+				.find((part) => /^[HGD]\d+$/.test(part));
 
 			if (!strongPart) {
 				setSelectedDssAnalysis(null);

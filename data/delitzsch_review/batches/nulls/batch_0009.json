@@ -1,0 +1,1432 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:26.117652+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "mark",
+        "chapter": 16,
+        "verse": 5,
+        "word_index": 10,
+        "text": "עוֹטֶה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תָּבֹאנָה אֶל־תּוֹךְ הַ/קָּבֶר וַ/תִּרְאֶינָה בָּ/חוּר אֶחָד ישֵׁב מִיָּמִין וְ/הוּא עוֹטֶה שִׂמְלָה לְ/בָ/נָה וַ/תִּשְׁתּוֹמַמְנָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "עוטה means “clothed/wearing,” from עטה.",
+      "evidence": [
+        "context: young man wearing a white garment",
+        "local lexicon H5844 עטה = wrap/enwrap oneself"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5844",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "mark",
+        "chapter": 16,
+        "verse": 6,
+        "word_index": 10,
+        "text": "הַנִּצְלָב",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֲלֵיהֶן אַל־תִּשְׁתּוֹמַמְנָה אֶת־יֵשׁוּעַ הַ/נָּצְרִי אַתֶּן מְבַקְשׁוֹת אֵת הַ/נִּצְלָב הוּא קָם אֵינֶנּוּ פֹה הִנֵּה־זֶה הַ/מָּקוֹם אֲשֶׁר הִשְׁכִּיבֻהוּ בוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "הנצלב means “the crucified one”; reuse custom crucifixion entry.",
+      "evidence": [
+        "context: Jesus the Nazarene, the crucified one",
+        "custom D0006 = crucify"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0006",
+      "new_strong": "D0006",
+      "hebrew": "צלב",
+      "transliteration_en": "tslav",
+      "transliteration_es": "tslav",
+      "definition": {
+        "text_en": "crucify; put to death on a cross.",
+        "text_es": "crucificar; dar muerte en una cruz."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "mark",
+        "chapter": 16,
+        "verse": 6,
+        "word_index": 20,
+        "text": "בוֹ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֲלֵיהֶן אַל־תִּשְׁתּוֹמַמְנָה אֶת־יֵשׁוּעַ הַ/נָּצְרִי אַתֶּן מְבַקְשׁוֹת אֵת הַ/נִּצְלָב הוּא קָם אֵינֶנּוּ פֹה הִנֵּה־זֶה הַ/מָּקוֹם אֲשֶׁר הִשְׁכִּיבֻהוּ בוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בו is a pronominal phrase “in it/him”; leave unresolved until pronoun/preposition policy is set.",
+      "evidence": [
+        "context: place where they laid him",
+        "manual policy case: ב + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "mark",
+        "chapter": 16,
+        "verse": 8,
+        "word_index": 2,
+        "text": "וַתִּבְרַחְנָה",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תְּמַהֵרְנָה לָ/צֵאת וַ/תִּבְרַחְנָה מִן־הַ/קֶּבֶר כִּי אֲחָזָתַן רְעָדָה וְ/תִמָּהוֹן וְ/לֹא־הִגִּידוּ דָבָר לְ/אִישׁ כִּי יָרֵאוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ותברחנה means “they fled,” from ברח.",
+      "evidence": [
+        "context: they fled from the tomb",
+        "local lexicon H1272 ברח = flee"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1272",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 1,
+        "text": "גְּלוֹתָם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַחֲרֵי גְּלוֹתָם בָּ/בֶלָה ה/וֹלִיד יְכָנְיָהוּ אֶת שְׁאַלְתִּיאֵל וּ/שְׁאַלְתִּיאֵל ה/וֹלִיד אֶת־זְרֻבָּבֶל׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "גלותם means “their exile/deportation,” from גלה.",
+      "evidence": [
+        "context: after the exile to Babylon",
+        "local lexicon H1540 גלה = uncover/remove/exile"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1540",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 1,
+        "verse": 20,
+        "word_index": 15,
+        "text": "מִכְּנוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הוּא חשֵׁב כָּ/זֹאת וְ/הִנֵּה מַלְאַךְ יְהוָֹה נִרְאָה אֵלָיו בַּ/חֲלוֹם וַ/יֹּאמַר יוֹסֵף בֶּן־דָּוִד אַל־תִּירָא מִכְּנוֹס אֵלֶיךָ אֵת מִרְיָם אִשְׁתֶּךָ כִּי אֲשֶׁר הֹרָה בָהּ מֵרוּחַ הַ/קֹּדֶשׁ הוּא׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "מכנוס means “to take/gather in,” from כנס.",
+      "evidence": [
+        "context: do not fear to take Mary your wife",
+        "local lexicon H3664 כנס = gather/collect"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3664",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 2,
+        "verse": 1,
+        "word_index": 14,
+        "text": "יְרוּשָׁלָיְמָה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כַּ/אֲשֶׁר נוֹלַד יֵשׁוּעַ בְּ/בֵית־לֶ/חֶם יְהוּדָה בִּ/ימֵי ה/וֹרְדוֹס הַ/מֶּלֶךְ וַ/יָּבֹאוּ מְגוּשִׁים מֵאֶרֶץ מִזְרָח יְרוּשָׁלָיְמָה לֵ/אמֹר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "ירושלימה is Jerusalem with directional ending.",
+      "evidence": [
+        "context: came to Jerusalem",
+        "local lexicon H3389 ירושלים = Jerusalem"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3389",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 2,
+        "verse": 11,
+        "word_index": 15,
+        "text": "אוֹצְרוֹתָם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הַ/בַּיְתָה וַ/יִּמְצְאוּ אֶת־הַ/יֶּלֶד עִם־מִרְיָם אִמּוֹ וַ/יִּפְּלוּ עַל־פְּנֵיהֶם וַ/יִּשְׁתַּחֲווּ־לוֹ וַ/יִּפְתְּחוּ אֶת־אוֹצְרוֹתָם וַ/יַּקְרִיבוּ לוֹ מִנְחָה זָהָב וּ/לְ/בוֹנָה וָ/מֹר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "אוצרותם means “their treasures,” from אוצר.",
+      "evidence": [
+        "context: opening their treasures they offered gifts",
+        "local lexicon H214 אוצר = treasure/storehouse"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H214",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 2,
+        "verse": 12,
+        "word_index": 0,
+        "text": "וַיְצֻוּוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְצֻוּוּ בַ/חֲלוֹם לְ/בִ/לְתִּי שׁוּב אֶל־ה/וֹרְדוֹס וַ/יֵּלְכוּ בְּ/דֶרֶךְ אַחֵר אֶל־אַרְצָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "ויצוו means “they were warned/commanded,” from צוה.",
+      "evidence": [
+        "context: warned in a dream not to return to Herod",
+        "local lexicon H6680 צוה = command/charge"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6680",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 2,
+        "verse": 13,
+        "word_index": 27,
+        "text": "הוֹרְדוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הֵם הָ/לְכוּ מִשָּׁם וְ/הִנֵּה מַלְאַךְ יְהוָֹה נִרְאָה אֶל־יוֹסֵף בַּ/חֲלוֹם לֵ/אמֹר קוּם קַח אֶת־הַ/יֶּלֶד וְ/אֶת־אִמּוֹ וּ/בְ/רַח־לְךָ מִצְרַיְמָה וֶ/הְיֵה־שָׁם עַד־אֲשֶׁר אֹמַר אֵלֶיךָ כִּי ה/וֹרְדוֹס צֹדֶה אֶת־הַ/יֶּלֶד לְ/אַבְּדוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "הורדוס is Herod; reuse custom entry.",
+      "evidence": [
+        "same proper name as earlier reviewed Herod occurrences",
+        "custom D0025 = Herod"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0025",
+      "new_strong": "D0025",
+      "hebrew": "הורדוס",
+      "transliteration_en": "Herod",
+      "transliteration_es": "Herod",
+      "definition": {
+        "text_en": "Herod; ruler from the Herodian dynasty.",
+        "text_es": "Herodes; gobernante de la dinastía herodiana."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 2,
+        "verse": 15,
+        "word_index": 4,
+        "text": "הוֹרְדוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי־שָׁם עַד־מוֹת ה/וֹרְדוֹס לְ/מַלֹּאת אֵת אֲשֶׁר דִּבֶּר יְהוָֹה בְּ/יַד הַ/נָּבִיא לֵ/אמֹר מִמִּצְרַיִם קָרָאתִי לִ/בְ/נִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "הורדוס is Herod; reuse custom entry.",
+      "evidence": [
+        "same proper name as earlier reviewed Herod occurrences",
+        "custom D0025 = Herod"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0025",
+      "new_strong": "D0025",
+      "hebrew": "הורדוס",
+      "transliteration_en": "Herod",
+      "transliteration_es": "Herod",
+      "definition": {
+        "text_en": "Herod; ruler from the Herodian dynasty.",
+        "text_es": "Herodes; gobernante de la dinastía herodiana."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 2,
+        "verse": 16,
+        "word_index": 4,
+        "text": "בוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּרְא ה/וֹרְדוֹס כִּי הֵתֵלּוּ בוֹ הַ/מְּגוּשִׁים וַ/יִּקְצֹף מְאֹד וַ/יִּשְׁלַח וַ/יָּמֶת אֶת־כָּל־הַ/יְלָדִים אֲשֶׁר בְּ/בֵית־לֶ/חֶם וּ/בְ/כָל־גְּבוּלֶיהָ מִבֶּן־שְׁנָתַיִם וּ/לְ/מָטָּה כְּ/פִי הָעֵת אֲשֶׁר חֲקָרָהּ מִפִּי הַ/מְּגוּשִׁים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בו is a pronominal phrase “by him”; leave unresolved until pronoun/preposition policy is set.",
+      "evidence": [
+        "context: the magi had tricked him",
+        "manual policy case: ב + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 2,
+        "verse": 22,
+        "word_index": 6,
+        "text": "הוֹרְדוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/כְ/שָׁמְעוֹ כִּי אַרְקְלוֹס מָלַךְ בִּ/יהוּדָה תַּחַת ה/וֹרְדוֹס אָבִיו יָרֵא לָ/לֶכֶת שָׁמָּה וַ/יְצֻוֶּה בַ/חֲלוֹם וַ/יֵּלֶךְ לוֹ אֶל־אַרְצוֹת הַ/גָּלִיל׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "הורדוס is Herod; reuse custom entry.",
+      "evidence": [
+        "same proper name as earlier reviewed Herod occurrences",
+        "custom D0025 = Herod"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0025",
+      "new_strong": "D0025",
+      "hebrew": "הורדוס",
+      "transliteration_en": "Herod",
+      "transliteration_es": "Herod",
+      "definition": {
+        "text_en": "Herod; ruler from the Herodian dynasty.",
+        "text_es": "Herodes; gobernante de la dinastía herodiana."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 3,
+        "verse": 7,
+        "word_index": 11,
+        "text": "הַצִּפְעוֹנִים",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כִ/רְאוֹתוֹ רַבִּים מִן־הַ/פְּרוּשִׁים וְ/הַ/צַּדּוּקִים נִגָּשִׁים לִ/טְבִילָתוֹ וַ/יֹּאמֶר לָ/הֶם יַלְדֵי הַ/צִּפְעוֹנִים מִי הִשְׂכִּיל אֶתְכֶם לְ/הִמָּלֵט מִןִ־הַ/קֶּצֶף הַבָּא׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "הצפעונים means “vipers/serpents,” from צפע.",
+      "evidence": [
+        "context: brood of vipers",
+        "local lexicon H6848 צפע = serpent"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6848",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 3,
+        "verse": 10,
+        "word_index": 1,
+        "text": "הוּשַׂם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/כְ/בָר הוּשַׂם הַ/גַּרְזֶן עַל־שֹׁרֶשׁ הָ/עֵצִים וְ/הִנֵּה כָל־עֵץ אֲשֶׁר אֵינֶנּוּ עֹשֶׂה פְּרִי טוֹב יִגָּדַע וְ/יֻשְׁלַךְ בָּ/אֵשׁ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "הושם means “is laid/placed,” from שום.",
+      "evidence": [
+        "context: axe is laid to the root",
+        "local lexicon H7760 שום = put/place/set"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7760",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 4,
+        "verse": 9,
+        "word_index": 8,
+        "text": "תִּקֹּד",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֵלָיו אֶת־כֹּל־זֹאת לְךָ אֶתְּנֶּנָּה אִם־תִּקֹּד וְ/תִשְׁתַּחֲוֶה לִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "תקד means “bow down,” from קדד.",
+      "evidence": [
+        "context: bow down and worship me",
+        "local lexicon H6915 קדד = bow down"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6915",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 4,
+        "verse": 9,
+        "word_index": 9,
+        "text": "וְתִשְׁתַּחֲוֶה",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֵלָיו אֶת־כֹּל־זֹאת לְךָ אֶתְּנֶּנָּה אִם־תִּקֹּד וְ/תִשְׁתַּחֲוֶה לִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "ותשתחוה means “and worship/bow down,” from שחה.",
+      "evidence": [
+        "context: bow down and worship me",
+        "local lexicon H7812 שחה = bow down"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7812",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 4,
+        "verse": 18,
+        "word_index": 13,
+        "text": "פֶטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/הִתְהַלֵּךְ יֵשׁוּעַ עַל־יַד יַם־הַ/גָּלִיל וַ/יַּרְא שְׁנֵי אֲנָשִׁים אַחִים אֶת־שִׁמְעוֹן הַ/נִּקְרָא פֶטְרוֹס וְ/אֶת אַנְדְּרַי אָחִיו וְ/הֵמָּה מַשְׁלִיכִים מְצוֹדָה בַּ/יָּם כִּי דַיָּגִים הָיוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פטרוס is Peter; reuse custom entry.",
+      "evidence": [
+        "same proper name as earlier reviewed Peter occurrences",
+        "custom D0001 = Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "new_strong": "D0001",
+      "hebrew": "פטרוס",
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros",
+      "definition": {
+        "text_en": "Peter; apostle of Jesus.",
+        "text_es": "Pedro; apóstol de Jesús."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 4,
+        "verse": 21,
+        "word_index": 21,
+        "text": "מִכְמְרוֹתָם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כְּ/עָבְרוֹ מִשָּׁם וַ/יַּרְא שְׁנֵי אֲנָשִׁים אַחִים אֲחֵרִים אֶת־יַעֲקֹב בֶּן־זַבְדַּי וְ/אֶת־יוֹחָנָן אָחִיו בָּ/אֳנִיָּה עִם־זַבְדַּי אֲבִיהֶם מְתַקְּנִים אֶת־מִכְמְרוֹתָם וַ/יִּקְרָא אֲלֵיהֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "מכמרותם means “their nets,” from מכמרת.",
+      "evidence": [
+        "context: mending their nets",
+        "local lexicon H4365 מכמרת = net"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4365",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 4,
+        "verse": 24,
+        "word_index": 13,
+        "text": "וּמַכְאוֹבִים",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּצֵא שִׁמְעוֹ בְּ/כָל־אֶרֶץ סוּרְיָא וַ/יָּבִיאוּ אֵלָיו אֵת כָּל־הַ/חוֹלִים הַ/מְעֻנִּים בְּ/כָל־חֳלָיִם וּ/מַכְאוֹבִים וַ/אֲחוּזֵי שֵׁדִים וּ/מֻכֵּי יָרֵחַ וּ/נְכֵי אֵבָרִים וַ/יִּרְפָּאֵם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "ומכאובים means “and pains,” from מכאוב.",
+      "evidence": [
+        "context: diseases and pains",
+        "local lexicon H4341 מכאוב = pain"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4341",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 4,
+        "verse": 24,
+        "word_index": 20,
+        "text": "וַיִּרְפָּאֵם׃",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּצֵא שִׁמְעוֹ בְּ/כָל־אֶרֶץ סוּרְיָא וַ/יָּבִיאוּ אֵלָיו אֵת כָּל־הַ/חוֹלִים הַ/מְעֻנִּים בְּ/כָל־חֳלָיִם וּ/מַכְאוֹבִים וַ/אֲחוּזֵי שֵׁדִים וּ/מֻכֵּי יָרֵחַ וּ/נְכֵי אֵבָרִים וַ/יִּרְפָּאֵם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "וירפאם means “he healed them,” from רפא.",
+      "evidence": [
+        "context: he healed them",
+        "local lexicon H7495 רפא = heal"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7495",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 5,
+        "verse": 19,
+        "word_index": 21,
+        "text": "אוֹתָן",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן מִי אֲשֶׁר יָפֵר אַחַת מִן־הַ/מִּצְוֺת הַ/קְּטַנּוֹת הָ/אֵלֶּה וְ/כֵן יְלַמֵּד אֶת־בְּ/נֵי הָ/אָדָם קָטוֹן יִקָּרֵא בְּ/מַלְכוּת הַ/שָּׁמָיִם וַ/אֲשֶׁר יַעֲשֶׂה וִ/ילַמֵּד אוֹתָן הוּא גָּדוֹל יִקָּרֵא בְּ/מַלְכוּת הַ/שָּׁמָיִם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "אותן is an object pronoun “them”; leave unresolved until pronoun encoding policy is set.",
+      "evidence": [
+        "context: does and teaches them",
+        "manual policy case: standalone object pronoun"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 5,
+        "verse": 20,
+        "word_index": 6,
+        "text": "תִרְבֶּה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אֲנִי אֹמֵר לָ/כֶם אִם לֹא־תִרְבֶּה צִדְקַתְכֶם מִצִּדְקַת הַ/סּוֹפְרִים וְ/הַ/פְּרוּשִׁים לֹא תָבֹאוּ אֶל־מַלְכוּת הַ/שָּׁמָיִם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "תרבה means “will exceed/be greater,” from רבה.",
+      "evidence": [
+        "context: unless your righteousness exceeds",
+        "local lexicon H7235 רבה = be/become many"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7235",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 5,
+        "verse": 22,
+        "word_index": 18,
+        "text": "רֵקָא",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל אֲנִי אֹמֵר לָ/כֶם כָּל־אֲשֶׁר יִקְצֹף עַל־אָחִיו חִנָּם מְחֻיָּב הוּא לְ/בֵ/ית דִּין וַ/אֲשֶׁר יֹאמַר אֶל־אָחִיו רֵקָא מְחֻיָּב הוּא לְ/סַנְהֶדְרִין וַ/אֲשֶׁר יֹאמַר אַתָּה הַנָּבָל מְחֻיָּב לְ/אֵשׁ גֵּיהִנֹּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "רקא is the Aramaic insult Raca; custom entry is clearer than generic “empty.”",
+      "evidence": [
+        "Matthew 5:22 insult addressed to a brother",
+        "Aramaic/NT insult; custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0089",
+      "new_strong": "D0089",
+      "hebrew": "ריקא",
+      "transliteration_en": "Raca",
+      "transliteration_es": "Raca",
+      "definition": {
+        "text_en": "Raca; Aramaic insult meaning empty-headed or worthless.",
+        "text_es": "Raca; insulto arameo que significa vacío o inútil."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 5,
+        "verse": 22,
+        "word_index": 21,
+        "text": "לְסַנְהֶדְרִין",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל אֲנִי אֹמֵר לָ/כֶם כָּל־אֲשֶׁר יִקְצֹף עַל־אָחִיו חִנָּם מְחֻיָּב הוּא לְ/בֵ/ית דִּין וַ/אֲשֶׁר יֹאמַר אֶל־אָחִיו רֵקָא מְחֻיָּב הוּא לְ/סַנְהֶדְרִין וַ/אֲשֶׁר יֹאמַר אַתָּה הַנָּבָל מְחֻיָּב לְ/אֵשׁ גֵּיהִנֹּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "לסנהדרין is Sanhedrin with prefixed ל; reuse custom entry.",
+      "evidence": [
+        "same council term as earlier reviewed Sanhedrin occurrence",
+        "custom D0008 = Sanhedrin"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0008",
+      "new_strong": "D0008",
+      "hebrew": "סנהדרין",
+      "transliteration_en": "Sanhedrin",
+      "transliteration_es": "Sanhedrin",
+      "definition": {
+        "text_en": "Sanhedrin; Jewish council or court.",
+        "text_es": "Sanedrín; consejo o tribunal judío."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 5,
+        "verse": 22,
+        "word_index": 28,
+        "text": "גֵּיהִנֹּם׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל אֲנִי אֹמֵר לָ/כֶם כָּל־אֲשֶׁר יִקְצֹף עַל־אָחִיו חִנָּם מְחֻיָּב הוּא לְ/בֵ/ית דִּין וַ/אֲשֶׁר יֹאמַר אֶל־אָחִיו רֵקָא מְחֻיָּב הוּא לְ/סַנְהֶדְרִין וַ/אֲשֶׁר יֹאמַר אַתָּה הַנָּבָל מְחֻיָּב לְ/אֵשׁ גֵּיהִנֹּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "גיהנם is Gehenna; NT/Jewish term needs custom entry.",
+      "evidence": [
+        "Matthew 5:22 fire of Gehenna",
+        "proper theological place/term; custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0090",
+      "new_strong": "D0090",
+      "hebrew": "גיהנם",
+      "transliteration_en": "Gehenna",
+      "transliteration_es": "Gehenna",
+      "definition": {
+        "text_en": "Gehenna; place/image of final judgment or fiery punishment.",
+        "text_es": "Gehena; lugar o imagen del juicio final o castigo de fuego."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 5,
+        "verse": 29,
+        "word_index": 19,
+        "text": "גֵּיהִנֹּם׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִם תַּכְשִׁילְךָ עֵין יְמִינְךָ נַקֵּר אוֹתָהּ וְ/הַ/שְׁלֵךְ מִמֶּךָּ כִּי טוֹב לְךָ אֲשֶׁר יֹאבַד אֶחָד מֵאֵבָרֶיךָ מֵרֶדֶת כָּל־גּוּפְךָ אֶל־גֵּיהִנֹּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "גיהנם is Gehenna; reuse custom entry.",
+      "evidence": [
+        "same term as Matthew 5:22",
+        "custom D0090 = Gehenna"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0090",
+      "new_strong": "D0090",
+      "hebrew": "גיהנם",
+      "transliteration_en": "Gehenna",
+      "transliteration_es": "Gehenna",
+      "definition": {
+        "text_en": "Gehenna; place/image of final judgment or fiery punishment.",
+        "text_es": "Gehena; lugar o imagen del juicio final o castigo de fuego."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 5,
+        "verse": 30,
+        "word_index": 19,
+        "text": "גֵּיהִנֹּם׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִם־יָדְךָ הַ/יְמָנִית תַּכְשִׁילְךָ קַצֵּץ אוֹתָהּ וְ/הַ/שְׁלֵךְ מִמֶּךָּ כִּי טוֹב לְךָ אֲשֶׁר יֹאבַד אֶחָד מֵאֵבָרֶיךָ מֵרֶדֶת כָּל־גּוּפְךָ אֶל־גֵּיהִנֹּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "גיהנם is Gehenna; reuse custom entry.",
+      "evidence": [
+        "same term as Matthew 5:22",
+        "custom D0090 = Gehenna"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0090",
+      "new_strong": "D0090",
+      "hebrew": "גיהנם",
+      "transliteration_en": "Gehenna",
+      "transliteration_es": "Gehenna",
+      "definition": {
+        "text_en": "Gehenna; place/image of final judgment or fiery punishment.",
+        "text_es": "Gehena; lugar o imagen del juicio final o castigo de fuego."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 5,
+        "verse": 36,
+        "word_index": 6,
+        "text": "בִּיכָלְתְּךָ",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַף בְּ/רֹאשְׁךָ אַל־תִּשָּׁבֵעַ כִּי־אֵין בִּ/יכָלְתְּךָ לַ/הֲפֹךְ שֵׂעָר אֶחָד לְ/לָבָן אוֹ לְ/שָׁחֹר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ביכלתך means “in your ability/power,” from יכל.",
+      "evidence": [
+        "context: it is not in your power to make one hair white or black",
+        "local lexicon H3201 יכל = be able"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3201",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 6,
+        "verse": 6,
+        "word_index": 18,
+        "text": "יִגְמְלֶךָ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַתָּה כִּי תִתְפַּלֵּל בּ/וֹא בְ/חֶדְרְךָ וּ/סְגֹר דְּלָתְךָ בַּ/עַדְךָ וְ/הִתְפַּלֵּל אֶל־אָבִיךָ אֲשֶׁר בַּ/סָּתֶר וְ/אָבִיךָ הָ/רֹאֶה בַּ/מִּסְתָּרִים הוּא בַּ/גָּלוּי יִגְמְלֶךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "יגמלך means “will reward/repay you,” from גמל.",
+      "evidence": [
+        "context: your Father will reward you openly",
+        "local lexicon H1580 גמל = deal out/repay"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1580",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 7,
+        "verse": 4,
+        "word_index": 12,
+        "text": "בְּעֵינֶךָ׃",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵיךְ תֹּאמַר אֶל־אָחִיךָ הַ/נִּיחָה לִּי וְ/אָסִירָה אֶת־הַ/קֵּיסָם מֵעֵינֶךָ וְ/הִנֵּה הַ/קּוֹרָה בְּ/עֵינֶךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "בעינך means “in your eye,” from עין.",
+      "evidence": [
+        "context: beam in your eye",
+        "local lexicon H5869 עין = eye"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5869",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 7,
+        "verse": 5,
+        "word_index": 12,
+        "text": "הַקֵּיסָם",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הֶחָנֵף הָסֵר בָּ/רִאשׁוֹנָה אֶת־הַ/קּוֹרָה מֵעֵינֶךָ וְ/אַחֲרֵי כֵן רָאֹה תִרְאֶה לְ/הָ/סִיר אֶת־הַ/קֵּיסָם מֵעֵין אָחִיךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "הקיסם means speck/splinter; reuse custom entry.",
+      "evidence": [
+        "same image as Luke 6:42",
+        "custom D0082 = speck/splinter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0082",
+      "new_strong": "D0082",
+      "hebrew": "קיסם",
+      "transliteration_en": "qisam",
+      "transliteration_es": "qisam",
+      "definition": {
+        "text_en": "speck; splinter; small bit of wood.",
+        "text_es": "mota; astilla; pequeño fragmento de madera."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 8,
+        "verse": 28,
+        "word_index": 17,
+        "text": "רַגְזָנִים",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כְּ/בֹ/אוֹ אֶל־עֵבֶר הַיָּם אֶל־אֶרֶץ הַ/גַּדְרִיִּם וַ/יִּפְגְּשׁוּהוּ שְׁנֵי אֲנָשִׁים אֲחוּזֵי שֵׁדִים יֹצְאִים מִבָּתֵּי הַ/קְּבָרוֹת וְ/הֵמָּה רַגְזָנִים מְאֹד עַד אֲשֶׁר לֹא־יָכֹל אִישׁ לַ/עֲבֹר בַּ/דֶּרֶךְ הַ/הוּא׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "רגזנים means fierce/agitated, from רגז.",
+      "evidence": [
+        "context: demonized men were exceedingly fierce",
+        "local lexicon H7264 רגז = be agitated/quiver"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7264",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 9,
+        "verse": 6,
+        "word_index": 19,
+        "text": "מִטָּתְךָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ לְ/מַעַן תֵּדְעוּן כִּי בֶן־הָ/אָדָם יֶשׁ־לוֹ הַ/שָּׁלְטָן בָּ/אָרֶץ לִ/סְלֹחַ חֲטָאִים וַ/יֹּאמֶר אֶל־נְכֵה הָ/אֵבָרִים קוּם שָׂא אֶת־מִטָּתְךָ וְ/לֶךְ־לְךָ אֶל־בֵּ/יתֶךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "מטתך means “your bed,” from מטה.",
+      "evidence": [
+        "context: take your bed and go home",
+        "local lexicon H4296 מטה = couch/bed"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4296",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 9,
+        "verse": 17,
+        "word_index": 14,
+        "text": "נוֹתְנִים",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵין נוֹתְנִים יַיִן חָדָשׁ בְּ/נֹאדוֹת בָּ/לִ/ים פֶּן־יִבָּקְעוּ הַ/נֹּאדוֹת וְ/הַ/יַּיִן יִשָּׁפֵךְ וְ/הַ/נֹּאדוֹת יֹאבֵדוּ אֲבָל נוֹתְנִים אֶת־הַ/יַּיִן הֶ/חָדָשׁ בְּ/נֹאדוֹת חֲדָשִׁים וּ/שְׁנֵיהֶם יַחְדָּו יִשָּׁמֵרוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "נותנים means “they put,” from נתן.",
+      "evidence": [
+        "context: new wine is put into new wineskins",
+        "local lexicon H5414 נתן = give/put/set"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5414",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 10,
+        "verse": 28,
+        "word_index": 23,
+        "text": "בְּגֵיהִנֹּם׃",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַל־תִּירְאוּ מִן־הַ/הֹרְגִים אֶת־הַ/גּוּף וְ/אֶת־הַ/נֶּפֶשׁ לֹא־יוּכְלוּ לַ/הֲרֹג אַךְ תִּירְאוּ אֵת אֲשֶׁר־יוּכַל לְ/אַבֵּד גַּם אֶת־הַ/נֶּפֶשׁ גַּם אֶת־הַ/גּוּף בְּ/גֵיהִנֹּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "בגיהנם is Gehenna with prefixed ב; reuse custom entry.",
+      "evidence": [
+        "same term as Matthew 5:22",
+        "custom D0090 = Gehenna"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0090",
+      "new_strong": "D0090",
+      "hebrew": "גיהנם",
+      "transliteration_en": "Gehenna",
+      "transliteration_es": "Gehenna",
+      "definition": {
+        "text_en": "Gehenna; place/image of final judgment or fiery punishment.",
+        "text_es": "Gehena; lugar o imagen del juicio final o castigo de fuego."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 11,
+        "verse": 25,
+        "word_index": 16,
+        "text": "וְהַנְּבוֹנִים",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בָּ/עֵת הַ/הִיא עָנָה יֵשׁוּעַ וְ/אָמַר אוֹדְךָ אָבִי אֲדוֹן הַ/שָּׁמַיִם וְ/הָ/אָרֶץ כִּי הִסְתַּרְתָּ אֶת־אֵלֶּה מִן־הַ/חֲכָמִים וְ/הַ/נְּבוֹנִים וְ/גִלִּיתָם לָ/עוֹלָלִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "והנבונים means “and the understanding,” from בין.",
+      "evidence": [
+        "context: hidden from wise and understanding",
+        "local lexicon H995 בין = discern/understand"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H995",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 11,
+        "verse": 25,
+        "word_index": 17,
+        "text": "וְגִלִּיתָם",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בָּ/עֵת הַ/הִיא עָנָה יֵשׁוּעַ וְ/אָמַר אוֹדְךָ אָבִי אֲדוֹן הַ/שָּׁמַיִם וְ/הָ/אָרֶץ כִּי הִסְתַּרְתָּ אֶת־אֵלֶּה מִן־הַ/חֲכָמִים וְ/הַ/נְּבוֹנִים וְ/גִלִּיתָם לָ/עוֹלָלִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "וגליתם means “and revealed them,” from גלה.",
+      "evidence": [
+        "context: revealed them to little children",
+        "local lexicon H1540 גלה = uncover/reveal"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1540",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 12,
+        "verse": 34,
+        "word_index": 1,
+        "text": "הַצִּפְעוֹנִים",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "יַלְדֵי הַ/צִּפְעוֹנִים אֵיכָה תוּכְלוּ לְ/מַלֵּל טוֹב וְ/אַתֶּם רָעִים כִּי־מִשִּׁפְעַת הַלֵּב יְמַלֵּל הַפֶּה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "הצפעונים means “vipers/serpents,” from צפע.",
+      "evidence": [
+        "context: brood of vipers",
+        "local lexicon H6848 צפע = serpent"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6848",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 12,
+        "verse": 37,
+        "word_index": 1,
+        "text": "מִדְּבָרֶיךָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי מִדְּבָרֶיךָ תִּצָּדֵק וּ/מִדְּבָרֶיךָ תְּחֻיָּב׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "מדבריך means “from/by your words,” from דבר.",
+      "evidence": [
+        "context: by your words you will be justified",
+        "local lexicon H1697 דבר = word/speech"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1697",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 13,
+        "verse": 17,
+        "word_index": 22,
+        "text": "שְׁמָעוּהוּ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־אָמֵן אֹמֵר אֲנִי לָ/כֶם נְבִיאִים וְ/צַדִּיקִים רַבִּים נִכְסְפוּ לִ/רְאוֹת אֵת אֲשֶׁר אַתֶּם רֹאִים וְ/לֹא רָאוּהוּ וְ/לִ/שְׁמֹעַ אֵת אֲשֶׁר אַתֶּם שֹׁמְעִים וְ/לֹא שְׁמָעוּהוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "שמעוהו means “they heard it,” from שמע.",
+      "evidence": [
+        "context: hear what you hear, and did not hear it",
+        "local lexicon H8085 שמע = hear"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H8085",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 13,
+        "verse": 30,
+        "word_index": 19,
+        "text": "לְשָׂרְפָם",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הַ/נִּיחוּ אֹתָם וְ/יִגְדְּלוּ שְׁנֵיהֶם יַחַד עַד־הַ/קָּצִיר וְ/הָיָה בְּ/עֵת הַ/קָּצִיר אֹמַר לַ/קּוֹצְרִים לַ/קְּטוּ בָ/רִאשׁוֹנָה אֶת־הַ/זּוּנִין וְ/אִגְדוּ אֹתָם אֲגֻדּוֹת לְ/שָׂרְפָם וְ/אֵת הַ/חִטִּים אִסְפוּ לְ/אוֹצָרִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "לשרפם means “to burn them,” from שרף.",
+      "evidence": [
+        "context: bind the weeds to burn them",
+        "local lexicon H8313 שרף = burn"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H8313",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 14,
+        "verse": 3,
+        "word_index": 12,
+        "text": "פִילִפּוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי ה/וֹרְדוֹס תָּפַשׂ אֶת־יוֹחָנָן וַ/יַּאַסְרֵהוּ וַ/יְשִׂימֵהוּ בְּ/בֵית הַסֹּהַר בִּ/גְלַל ה/וֹרוֹדְיָה אֵשֶׁת פִילִפּוֹס אָחִיו׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פיליפוס is Philip; reuse custom entry.",
+      "evidence": [
+        "same proper name as earlier Philip occurrences",
+        "custom D0069 = Philip"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0069",
+      "new_strong": "D0069",
+      "hebrew": "פיליפוס",
+      "transliteration_en": "Philip",
+      "transliteration_es": "Philip",
+      "definition": {
+        "text_en": "Philip; NT personal name.",
+        "text_es": "Felipe; nombre personal del Nuevo Testamento."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 15,
+        "verse": 15,
+        "word_index": 1,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן פֶּטְרוֹס וַ/יֹּאמֶר אֵלָיו בָּ/אֵר לָ/נוּ אֶת־הַ/מָּשָׁל הַזֶּה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פטרוס is Peter; reuse custom entry.",
+      "evidence": [
+        "same proper name as earlier Peter occurrences",
+        "custom D0001 = Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "new_strong": "D0001",
+      "hebrew": "פטרוס",
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros",
+      "definition": {
+        "text_en": "Peter; apostle of Jesus.",
+        "text_es": "Pedro; apóstol de Jesús."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 15,
+        "verse": 30,
+        "word_index": 15,
+        "text": "וַיִּרְפָּאֵם׃",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ אֵלָיו הֲ/מוֹן עַם רָב וְ/עִמָּהֶם פִּסְּחִים עִוְרִים חֵרְשִׁים קִטְּעִים וְ/רַבִּים כָּ/הֵמָּה וַ/יַּנִּיחוּם לְ/רַגְלֵי יֵשׁוּעַ וַ/יִּרְפָּאֵם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "וירפאם means “he healed them,” from רפא.",
+      "evidence": [
+        "context: he healed them",
+        "local lexicon H7495 רפא = heal"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7495",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 16,
+        "verse": 13,
+        "word_index": 7,
+        "text": "פִילִפּוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כְּ/ב/וֹא יֵשׁוּעַ אֶל־גְּלִילוֹת קִיסְרִין שֶׁל־פִילִפּוֹס וַ/יִּשְׁאַל אֶת־תַּלְמִידָיו לֵ/אמֹר מָה־אֹמְרִים הָ/אֲנָשִׁים עָלַי מִי הוּא בֶּן־הָ/אָדָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פיליפוס is Philip in Caesarea Philippi; reuse custom entry.",
+      "evidence": [
+        "Caesarea Philippi place-name component",
+        "custom D0069 = Philip"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0069",
+      "new_strong": "D0069",
+      "hebrew": "פיליפוס",
+      "transliteration_en": "Philip",
+      "transliteration_es": "Philip",
+      "definition": {
+        "text_en": "Philip; NT personal name.",
+        "text_es": "Felipe; nombre personal del Nuevo Testamento."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 16,
+        "verse": 22,
+        "word_index": 1,
+        "text": "פֶטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּקָּחֵהוּ פֶטְרוֹס וַ/יָּחֶל לִ/גְעָר־בּוֹ לֵ/אמֹר חָלִילָה לְךָ אֲדֹנִי אַל־יְהִי־לְךָ כָּ/זֹאת׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פטרוס is Peter; reuse custom entry.",
+      "evidence": [
+        "same proper name as earlier Peter occurrences",
+        "custom D0001 = Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "new_strong": "D0001",
+      "hebrew": "פטרוס",
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros",
+      "definition": {
+        "text_en": "Peter; apostle of Jesus.",
+        "text_es": "Pedro; apóstol de Jesús."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 17,
+        "verse": 27,
+        "word_index": 24,
+        "text": "בוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ לְ/מַעַן לֹא־נִהְיֶה לָ/הֶם לְ/מִכְשׁוֹל לֵךְ אֶל־הַיָּם וְ/הִשְׁלַכְתָּ אֶל־תּוֹכוֹ חַכָּה וְ/אֶת־הַדָּג הָ/רִאשׁוֹן אֲשֶׁר יַעֲלֶה שָׂאֵהוּ וְ/כַ/אֲשֶׁר תִּפְתַּח אֶת־פִּיו תִּמְצָא בוֹ אִסְתִּירָא אוֹתוֹ קַח־לְךָ וְ/נָתַתָּ לָ/הֶם בַּ/עֲדִי וּ/בַ/עֲדֶךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בו is a pronominal phrase “in it”; leave unresolved until pronoun/preposition policy is set.",
+      "evidence": [
+        "context: open its mouth and find in it a coin",
+        "manual policy case: ב + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 17,
+        "verse": 27,
+        "word_index": 32,
+        "text": "וּבַעֲדֶךָ׃",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ לְ/מַעַן לֹא־נִהְיֶה לָ/הֶם לְ/מִכְשׁוֹל לֵךְ אֶל־הַיָּם וְ/הִשְׁלַכְתָּ אֶל־תּוֹכוֹ חַכָּה וְ/אֶת־הַדָּג הָ/רִאשׁוֹן אֲשֶׁר יַעֲלֶה שָׂאֵהוּ וְ/כַ/אֲשֶׁר תִּפְתַּח אֶת־פִּיו תִּמְצָא בוֹ אִסְתִּירָא אוֹתוֹ קַח־לְךָ וְ/נָתַתָּ לָ/הֶם בַּ/עֲדִי וּ/בַ/עֲדֶךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "ובעדך is a prepositional phrase “and for you”; leave unresolved until pronoun/preposition policy is set.",
+      "evidence": [
+        "context: for me and for you",
+        "manual policy case: בעד + second-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "matthew",
+        "chapter": 18,
+        "verse": 8,
+        "word_index": 15,
+        "text": "קִטֵּעַ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִם־תַּכְשִׁילְךָ יָדְךָ אוֹ רַגְלְךָ קַצֵּץ אוֹתָהּ וְ/הַ/שְׁלֵךְ מִמֶּךָּ טוֹב לְךָ לָ/ב/וֹא לַ/חַיִּים פִּסֵּחַ אוֹ קִטֵּעַ מִהְיוֹת לְךָ שְׁתֵּי יָדַיִם אוֹ־שְׁתֵּי רַגְלַיִם וְ/תֻשְׁלַךְ אֶל־אֵשׁ עוֹלָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "קטע means maimed/cut off; custom entry better captures the adjective than generic cutting roots.",
+      "evidence": [
+        "context: enter life lame or maimed",
+        "later Hebrew/adjectival form קטע = maimed"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0091",
+      "new_strong": "D0091",
+      "hebrew": "קטע",
+      "transliteration_en": "qittea",
+      "transliteration_es": "qittea",
+      "definition": {
+        "text_en": "maimed; having a limb cut off.",
+        "text_es": "mutilado; con un miembro amputado."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    }
+  ]
+}

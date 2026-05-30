@@ -1,0 +1,1639 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.493247+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 8,
+        "text": "הֶעָקֹב",
+        "strong": "Hd/H6121",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־גֶּיא יִנָּשֵׂא וְ/כָל־הַר וְ/גִבְעָה יִשְׁפָּלוּ וְ/הָיָה הֶ/עָקֹב לְ/מִישׁוֹר וְ/הָ/רְכָסִים לְ/בִ/קְעָה׃"
+      },
+      "previous_strong": "Hd/H6121",
+      "new_strong": "H6121",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6121 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.5.8",
+        "text=הֶעָקֹב",
+        "prefixes=Hd",
+        "strong=H6121",
+        "lemma=עָקֹב",
+        "definitions=insidious | deceitful | foot-tracked",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 9,
+        "text": "לְמִישׁוֹר",
+        "strong": "Hl/H4334",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־גֶּיא יִנָּשֵׂא וְ/כָל־הַר וְ/גִבְעָה יִשְׁפָּלוּ וְ/הָיָה הֶ/עָקֹב לְ/מִישׁוֹר וְ/הָ/רְכָסִים לְ/בִ/קְעָה׃"
+      },
+      "previous_strong": "Hl/H4334",
+      "new_strong": "H4334",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4334 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.5.9",
+        "text=לְמִישׁוֹר",
+        "prefixes=Hl",
+        "strong=H4334",
+        "lemma=מִישׁוֹר",
+        "definitions=level place | uprightness",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 10,
+        "text": "וְהָרְכָסִים",
+        "strong": "Hc/Hd/H7406",
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־גֶּיא יִנָּשֵׂא וְ/כָל־הַר וְ/גִבְעָה יִשְׁפָּלוּ וְ/הָיָה הֶ/עָקֹב לְ/מִישׁוֹר וְ/הָ/רְכָסִים לְ/בִ/קְעָה׃"
+      },
+      "previous_strong": "Hc/Hd/H7406",
+      "new_strong": "H7406",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H7406 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.5.10",
+        "text=וְהָרְכָסִים",
+        "prefixes=Hc,Hd",
+        "strong=H7406",
+        "lemma=רֶכֶס",
+        "definitions=roughness | binding | know | impassable | chain",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 11,
+        "text": "לְבִקְעָה׃",
+        "strong": "Hl/Hb/H1237",
+        "prefixes": [
+          "Hl",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־גֶּיא יִנָּשֵׂא וְ/כָל־הַר וְ/גִבְעָה יִשְׁפָּלוּ וְ/הָיָה הֶ/עָקֹב לְ/מִישׁוֹר וְ/הָ/רְכָסִים לְ/בִ/קְעָה׃"
+      },
+      "previous_strong": "Hl/Hb/H1237",
+      "new_strong": "H1237",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1237 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.5.11",
+        "text=לְבִקְעָה׃",
+        "prefixes=Hl,Hb",
+        "strong=H1237",
+        "lemma=בִּקְעָה",
+        "definitions=valley | plain | valley | plain",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 7,
+        "word_index": 16,
+        "text": "הַקֶּצֶף",
+        "strong": "Hd/H7110",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֶל־הֲ/מוֹן הָעָם הַ/יֹּצְאִים לְ/הִטָּבֵל עַל־יָדוֹ אַתֶּם יַלְדֵי הַ/צִּפְעוֹנִים מִי הוֹרָה אֶתְכֶם לְ/הִמָּלֵט מִפְּנֵי הַ/קֶּצֶף הַבָּא׃"
+      },
+      "previous_strong": "Hd/H7110",
+      "new_strong": "H7110",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H7110 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.7.16",
+        "text=הַקֶּצֶף",
+        "prefixes=Hd",
+        "strong=H7110",
+        "lemma=קֶצֶף",
+        "definitions=wrath",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 9,
+        "word_index": 2,
+        "text": "הַגַּרְזֶן",
+        "strong": "Hd/H1631",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/כְ/בָר הוּשַׂם הַ/גַּרְזֶן עַל־שֹׁרֶשׁ הָ/עֵצִים וְ/הִנֵּה כָל־עֵץ אֲשֶׁר אֵינֶנּוּ עֹשֶׂה פְּרִי טוֹב יִגָּדַע וְ/הֻ/שְׁלַךְ בָּ/אֵשׁ׃"
+      },
+      "previous_strong": "Hd/H1631",
+      "new_strong": "H1631",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1631 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.9.2",
+        "text=הַגַּרְזֶן",
+        "prefixes=Hd",
+        "strong=H1631",
+        "lemma=גַּרְזֶן",
+        "definitions=axe | pick | pick-axe",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 2,
+        "text": "מוֹכְסִים",
+        "strong": "H4371",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ גַם־מוֹכְסִים לְ/הִטָּבֵל וַ/יֹּאמְרוּ אֵלָיו רַבִּי מַה־נַּעֲשֶׂה׃"
+      },
+      "previous_strong": "H4371",
+      "new_strong": "H4371",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4371 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.12.2",
+        "text=מוֹכְסִים",
+        "prefixes=none",
+        "strong=H4371",
+        "lemma=מֶכֶס",
+        "definitions=computation | proportion to be paid | tax",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 14,
+        "word_index": 14,
+        "text": "תַּלְשִׁינוּ",
+        "strong": "H3960",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּשְׁאָלֻהוּ גַּם־אַנְשֵׁי הַ/צָּבָא לֵ/אמֹר וַ/אֲנַחְנוּ מַה־נַּעֲשֶׂה וַ/יֹּאמֶר אֲלֵיהֶם אִישׁ אַל־תַּעַשְׁקוּ וְ/אַל־תַּלְשִׁינוּ אִישׁ וִ/יהִי־דַי לָ/כֶם בִּ/שְׂכַרְכֶם׃"
+      },
+      "previous_strong": "H3960",
+      "new_strong": "H3960",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H3960 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.14.14",
+        "text=תַּלְשִׁינוּ",
+        "prefixes=none",
+        "strong=H3960",
+        "lemma=לָשַׁן",
+        "definitions=use the tongue | slander",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 23,
+        "word_index": 11,
+        "text": "עֵלִי׃",
+        "strong": "H5941",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הוּא יֵשׁוּעַ בְּ/הַחִלּוֹ הָיָה כְּ/בֶן־שְׁלשִׁים שָׁנָה וַ/יַּחְשְׁבֻהוּ לְ/בֶן־יוֹסֵף בֶּן־עֵלִי׃"
+      },
+      "previous_strong": "H5941",
+      "new_strong": "H5941",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H5941 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.23.11",
+        "text=עֵלִי׃",
+        "prefixes=none",
+        "strong=H5941",
+        "lemma=עֵלִי",
+        "definitions=Eli",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 25,
+        "word_index": 1,
+        "text": "מַתִּתְיָה",
+        "strong": "H4993",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־מַתִּתְיָה בֶּן־אָמוֹץ בֶּן־נַחוּם בֶּן־חֶסְלִי בֶּן־נַגָּי׃"
+      },
+      "previous_strong": "H4993",
+      "new_strong": "H4993",
+      "confidence": 0.88,
+      "reason": "מַתִּתְיָה is a reliable Mattathias form; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.25.1",
+        "text=מַתִּתְיָה",
+        "prefixes=none",
+        "strong=H4993",
+        "lemma=מַתִּתְיָה",
+        "definitions=a Levitical musician | Levitical name | attendant of Ezra | one of those who took strange wives",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4993",
+      "definition": {
+        "text_en": "Mattathias; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Matatías; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 25,
+        "word_index": 3,
+        "text": "אָמוֹץ",
+        "strong": "H531",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בֶּן־מַתִּתְיָה בֶּן־אָמוֹץ בֶּן־נַחוּם בֶּן־חֶסְלִי בֶּן־נַגָּי׃"
+      },
+      "previous_strong": "H531",
+      "new_strong": "H531",
+      "confidence": 0.88,
+      "reason": "אָמוֹץ is reliable as H531; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.25.3",
+        "text=אָמוֹץ",
+        "prefixes=none",
+        "strong=H531",
+        "lemma=אָמוֹץ",
+        "definitions=none",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H531",
+      "definition": {
+        "text_en": "Amoz/Amos; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Amós; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 27,
+        "word_index": 5,
+        "text": "זְרֻבָּבֶל",
+        "strong": "H2216",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־יוֹחָנָן בֶּן־רֵישָׁא בֶּן־זְרֻבָּבֶל בֶּן־שְׁאַלְתִּיאֵל בֶּן־נֵרִי׃"
+      },
+      "previous_strong": "H2216",
+      "new_strong": "H2216",
+      "confidence": 0.9,
+      "reason": "זְרֻבָּבֶל is reliable as H2216; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.27.5",
+        "text=זְרֻבָּבֶל",
+        "prefixes=none",
+        "strong=H2216",
+        "lemma=זְרֻבָּבֶל",
+        "definitions=none",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2216",
+      "definition": {
+        "text_en": "Zerubbabel; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Zorobabel; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 27,
+        "word_index": 7,
+        "text": "שְׁאַלְתִּיאֵל",
+        "strong": "H7597",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־יוֹחָנָן בֶּן־רֵישָׁא בֶּן־זְרֻבָּבֶל בֶּן־שְׁאַלְתִּיאֵל בֶּן־נֵרִי׃"
+      },
+      "previous_strong": "H7597",
+      "new_strong": "H7597",
+      "confidence": 0.88,
+      "reason": "שְׁאַלְתִּיאֵל is reliable as H7597; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.27.7",
+        "text=שְׁאַלְתִּיאֵל",
+        "prefixes=none",
+        "strong=H7597",
+        "lemma=שְׁאַלְתִּיאֵל",
+        "definitions=I have asked | of God",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7597",
+      "definition": {
+        "text_en": "Shealtiel; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Salatiel; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 27,
+        "word_index": 9,
+        "text": "נֵרִי׃",
+        "strong": "H5216",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בֶּן־יוֹחָנָן בֶּן־רֵישָׁא בֶּן־זְרֻבָּבֶל בֶּן־שְׁאַלְתִּיאֵל בֶּן־נֵרִי׃"
+      },
+      "previous_strong": "H5216",
+      "new_strong": "D0194",
+      "confidence": 0.9,
+      "reason": "נֵרִי in Luke 3 is the genealogy name Neri; H5216 means lamp and should not carry this NT personal name.",
+      "evidence": [
+        "occurrence=luke.3.27.9",
+        "text=נֵרִי׃",
+        "prefixes=none",
+        "strong=H5216",
+        "lemma=נִיר",
+        "definitions=lamp",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0194",
+      "hebrew": "נרי",
+      "transliteration_en": "Neri",
+      "transliteration_es": "Nerí",
+      "definition": {
+        "text_en": "Neri; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Nerí; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 28,
+        "word_index": 9,
+        "text": "עֵר׃",
+        "strong": "H6147",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בֶּן־מַלְכִּי בֶּן־אַדִּי בֶּן־קוֹסָם בֶּן־אֶלְמְדָם בֶּן־עֵר׃"
+      },
+      "previous_strong": "H6147",
+      "new_strong": "H6147",
+      "confidence": 0.88,
+      "reason": "עֵר is reliable as H6147; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.28.9",
+        "text=עֵר׃",
+        "prefixes=none",
+        "strong=H6147",
+        "lemma=עֵר",
+        "definitions=eldest son of Judah | son of Judah’s son Shelah",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6147",
+      "definition": {
+        "text_en": "Er; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Er; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 29,
+        "word_index": 3,
+        "text": "אֱלִיעֶזֶר",
+        "strong": "H461",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בֶּן־יוֹסֵי בֶּן־אֱלִיעֶזֶר בֶּן־יוֹרִים בֶּן־מַתָּת בֶּן־לֵ/וִי׃"
+      },
+      "previous_strong": "H461",
+      "new_strong": "H461",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H461 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.29.3",
+        "text=אֱלִיעֶזֶר",
+        "prefixes=none",
+        "strong=H461",
+        "lemma=אֱלִיעֶזֶר",
+        "definitions=God is help | Abraham’s steward, a Damascene | son of Moses | Benjamite | several priests",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 30,
+        "word_index": 9,
+        "text": "אֶלְיָקִים׃",
+        "strong": "H471",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בֶּן־שִׁמְעוֹן בֶּן־יְהוּדָה בֶּן־יוֹסֵף בֶּן־יוֹנָם בֶּן־אֶלְיָקִים׃"
+      },
+      "previous_strong": "H471",
+      "new_strong": "H471",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H471 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.30.9",
+        "text=אֶלְיָקִים׃",
+        "prefixes=none",
+        "strong=H471",
+        "lemma=אֶלְיָקִים",
+        "definitions=God sets up | Hezekiah’s prefect of the palace | son of Josiah, made king by Pharaoh",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 31,
+        "word_index": 5,
+        "text": "מַתַּתָּה",
+        "strong": "H4992",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־מַלְיָא בֶּן־מִינָא בֶּן־מַתַּתָּה בֶּן־נָתָן בֶּן־דָּוִד׃"
+      },
+      "previous_strong": "H4992",
+      "new_strong": "H4992",
+      "confidence": 0.88,
+      "reason": "מַתַּתָּה is reliable as H4992; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.31.5",
+        "text=מַתַּתָּה",
+        "prefixes=none",
+        "strong=H4992",
+        "lemma=מַתַּתָּה",
+        "definitions=none",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4992",
+      "definition": {
+        "text_en": "Mattatha; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Matata; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 31,
+        "word_index": 7,
+        "text": "נָתָן",
+        "strong": "H5416",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־מַלְיָא בֶּן־מִינָא בֶּן־מַתַּתָּה בֶּן־נָתָן בֶּן־דָּוִד׃"
+      },
+      "previous_strong": "H5416",
+      "new_strong": "H5416",
+      "confidence": 0.9,
+      "reason": "נָתָן is reliable as H5416; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.31.7",
+        "text=נָתָן",
+        "prefixes=none",
+        "strong=H5416",
+        "lemma=נָתָן",
+        "definitions=a son of David | the prophet of David’s time | father of one of David’s heroes | father of officers of Solomon | name in Judah",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5416",
+      "definition": {
+        "text_en": "Nathan; son of David and ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Natán; hijo de David y antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 32,
+        "word_index": 3,
+        "text": "עוֹבֵד",
+        "strong": "H5744",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בֶּן־יִשַׁי בֶּן־עוֹבֵד בֶּן־בֹּ/עַז בֶּן־שַׂלְמוֹן בֶּן־נַחְשׁוֹן׃"
+      },
+      "previous_strong": "H5744",
+      "new_strong": "H5744",
+      "confidence": 0.88,
+      "reason": "עוֹבֵד is reliable as H5744; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.32.3",
+        "text=עוֹבֵד",
+        "prefixes=none",
+        "strong=H5744",
+        "lemma=עוֹבֵד",
+        "definitions=worshipper | son of Boaz and Ruth | names in Judah | a mighty man of David | a doorkeeper",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5744",
+      "definition": {
+        "text_en": "Obed; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Obed; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 32,
+        "word_index": 9,
+        "text": "נַחְשׁוֹן׃",
+        "strong": "H5177",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־יִשַׁי בֶּן־עוֹבֵד בֶּן־בֹּ/עַז בֶּן־שַׂלְמוֹן בֶּן־נַחְשׁוֹן׃"
+      },
+      "previous_strong": "H5177",
+      "new_strong": "H5177",
+      "confidence": 0.9,
+      "reason": "נַחְשׁוֹן is reliable as H5177; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.32.9",
+        "text=נַחְשׁוֹן׃",
+        "prefixes=none",
+        "strong=H5177",
+        "lemma=נַחְשׁוֹן",
+        "definitions=none",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5177",
+      "definition": {
+        "text_en": "Nahshon; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Naasón; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 33,
+        "word_index": 1,
+        "text": "עַמִּינָדָב",
+        "strong": "H5992",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בֶּן־עַמִּינָדָב בֶּן־אֲרָם בֶּן־חֶצְרוֹן בֶּן־פֶּרֶץ בֶּן־יְהוּדָה׃"
+      },
+      "previous_strong": "H5992",
+      "new_strong": "H5992",
+      "confidence": 0.88,
+      "reason": "עַמִּינָדָב is reliable as H5992; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.33.1",
+        "text=עַמִּינָדָב",
+        "prefixes=none",
+        "strong=H5992",
+        "lemma=עַמִּינָדָב",
+        "definitions=my kinsman is noble | Aaron’s father-in-law | Levites",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5992",
+      "definition": {
+        "text_en": "Amminadab; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Aminadab; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 33,
+        "word_index": 5,
+        "text": "חֶצְרוֹן",
+        "strong": "H2696",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־עַמִּינָדָב בֶּן־אֲרָם בֶּן־חֶצְרוֹן בֶּן־פֶּרֶץ בֶּן־יְהוּדָה׃"
+      },
+      "previous_strong": "H2696",
+      "new_strong": "H2696",
+      "confidence": 0.88,
+      "reason": "חֶצְרוֹן is reliable as H2696; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.33.5",
+        "text=חֶצְרוֹן",
+        "prefixes=none",
+        "strong=H2696",
+        "lemma=חֶצְרוֹן",
+        "definitions=place in extreme south of Judah | another town of Judah in south | son of Reuben | son of Pereṣ and grandson of Judah",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2696",
+      "definition": {
+        "text_en": "Hezron; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Jezrón; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 33,
+        "word_index": 7,
+        "text": "פֶּרֶץ",
+        "strong": "H6556",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בֶּן־עַמִּינָדָב בֶּן־אֲרָם בֶּן־חֶצְרוֹן בֶּן־פֶּרֶץ בֶּן־יְהוּדָה׃"
+      },
+      "previous_strong": "H6556",
+      "new_strong": "H6556",
+      "confidence": 0.88,
+      "reason": "פֶּרֶץ is reliable as H6556; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.33.7",
+        "text=פֶּרֶץ",
+        "prefixes=none",
+        "strong=H6556",
+        "lemma=פֶּרֶץ",
+        "definitions=bursting forth | breach",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6556",
+      "definition": {
+        "text_en": "Perez; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Fares; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 34,
+        "word_index": 7,
+        "text": "תֶּרַח",
+        "strong": "H8646",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־יַעֲקֹב בֶּן־יִצְחָק בֶּן־אַבְרָהָם בֶּן־תֶּרַח בֶּן־נָחוֹר׃"
+      },
+      "previous_strong": "H8646",
+      "new_strong": "H8646",
+      "confidence": 0.88,
+      "reason": "תֶּרַח is reliable as H8646; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.34.7",
+        "text=תֶּרַח",
+        "prefixes=none",
+        "strong=H8646",
+        "lemma=תֶּרַח",
+        "definitions=m. father of Abraham | loc. station of Exodus journey",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8646",
+      "definition": {
+        "text_en": "Terah; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Taré; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 34,
+        "word_index": 9,
+        "text": "נָחוֹר׃",
+        "strong": "H5152",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־יַעֲקֹב בֶּן־יִצְחָק בֶּן־אַבְרָהָם בֶּן־תֶּרַח בֶּן־נָחוֹר׃"
+      },
+      "previous_strong": "H5152",
+      "new_strong": "H5152",
+      "confidence": 0.88,
+      "reason": "נָחוֹר is reliable as H5152; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.34.9",
+        "text=נָחוֹר׃",
+        "prefixes=none",
+        "strong=H5152",
+        "lemma=נָחוֹר",
+        "definitions=father of Teraḥ | son of Teraḥ and brother of Abr.",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5152",
+      "definition": {
+        "text_en": "Nahor; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Nacor; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 35,
+        "word_index": 1,
+        "text": "שְׂרוּג",
+        "strong": "H8286",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־שְׂרוּג בֶּן־רְעוּ בֶּן־פֶּלֶג בֶּן־עֵבֶר בֶּן־שָׁלַח׃"
+      },
+      "previous_strong": "H8286",
+      "new_strong": "H8286",
+      "confidence": 0.9,
+      "reason": "שְׂרוּג is reliable as H8286; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.35.1",
+        "text=שְׂרוּג",
+        "prefixes=none",
+        "strong=H8286",
+        "lemma=שְׂרוּג",
+        "definitions=none",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8286",
+      "definition": {
+        "text_en": "Serug; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Serug; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 35,
+        "word_index": 3,
+        "text": "רְעוּ",
+        "strong": "H7466",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־שְׂרוּג בֶּן־רְעוּ בֶּן־פֶּלֶג בֶּן־עֵבֶר בֶּן־שָׁלַח׃"
+      },
+      "previous_strong": "H7466",
+      "new_strong": "H7466",
+      "confidence": 0.9,
+      "reason": "רְעוּ is reliable as H7466; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.35.3",
+        "text=רְעוּ",
+        "prefixes=none",
+        "strong=H7466",
+        "lemma=רְעוּ",
+        "definitions=none",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7466",
+      "definition": {
+        "text_en": "Reu; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Reú; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 35,
+        "word_index": 5,
+        "text": "פֶּלֶג",
+        "strong": "H6389",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־שְׂרוּג בֶּן־רְעוּ בֶּן־פֶּלֶג בֶּן־עֵבֶר בֶּן־שָׁלַח׃"
+      },
+      "previous_strong": "H6389",
+      "new_strong": "H6389",
+      "confidence": 0.9,
+      "reason": "פֶּלֶג is reliable as H6389; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.35.5",
+        "text=פֶּלֶג",
+        "prefixes=none",
+        "strong=H6389",
+        "lemma=פֶּלֶג",
+        "definitions=none",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6389",
+      "definition": {
+        "text_en": "Peleg; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Peleg; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 36,
+        "word_index": 1,
+        "text": "קֵינָן",
+        "strong": "H7018",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־קֵינָן בֶּן־אַרְפַּכְשַׁד בֶּן־שֵׁם בֶּן־נֹחַ בֶּן־לָ/מֶךְ׃"
+      },
+      "previous_strong": "H7018",
+      "new_strong": "H7018",
+      "confidence": 0.9,
+      "reason": "קֵינָן is reliable as H7018; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.36.1",
+        "text=קֵינָן",
+        "prefixes=none",
+        "strong=H7018",
+        "lemma=קֵינָן",
+        "definitions=none",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7018",
+      "definition": {
+        "text_en": "Cainan/Kenan; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Cainán/Quenán; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 36,
+        "word_index": 3,
+        "text": "אַרְפַּכְשַׁד",
+        "strong": "H775",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בֶּן־קֵינָן בֶּן־אַרְפַּכְשַׁד בֶּן־שֵׁם בֶּן־נֹחַ בֶּן־לָ/מֶךְ׃"
+      },
+      "previous_strong": "H775",
+      "new_strong": "H775",
+      "confidence": 0.9,
+      "reason": "אַרְפַּכְשַׁד is reliable as H775; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.36.3",
+        "text=אַרְפַּכְשַׁד",
+        "prefixes=none",
+        "strong=H775",
+        "lemma=אַרְפַּכְשַׁד",
+        "definitions=none",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H775",
+      "definition": {
+        "text_en": "Arphaxad; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Arfaxad; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 36,
+        "word_index": 9,
+        "text": "לָמֶךְ׃",
+        "strong": "Hl/H3929",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־קֵינָן בֶּן־אַרְפַּכְשַׁד בֶּן־שֵׁם בֶּן־נֹחַ בֶּן־לָ/מֶךְ׃"
+      },
+      "previous_strong": "Hl/H3929",
+      "new_strong": "H3929",
+      "confidence": 0.88,
+      "reason": "לָמֶךְ is reliable as H3929; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.36.9",
+        "text=לָמֶךְ׃",
+        "prefixes=Hl",
+        "strong=H3929",
+        "lemma=לֶמֶךְ",
+        "definitions=son of מְתוּשָׁאֵל (Cainite) | son of מְתוּשֶׁלַח (Sethite)",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3929",
+      "definition": {
+        "text_en": "Lamech; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Lamec; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 37,
+        "word_index": 1,
+        "text": "מְתוּשֶׁלַח",
+        "strong": "H4968",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־מְתוּשֶׁלַח בֶּן־חֲנוֹךְ בֶּן־יֶרֶד בֶּן־מַהֲלַלְאֵל בֶּן־קֵינָן׃"
+      },
+      "previous_strong": "H4968",
+      "new_strong": "H4968",
+      "confidence": 0.88,
+      "reason": "מְתוּשֶׁלַח is reliable as H4968; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.37.1",
+        "text=מְתוּשֶׁלַח",
+        "prefixes=none",
+        "strong=H4968",
+        "lemma=מְתוּשֶׁלַח",
+        "definitions=man of the dart",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4968",
+      "definition": {
+        "text_en": "Methuselah; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Matusalén; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 37,
+        "word_index": 5,
+        "text": "יֶרֶד",
+        "strong": "H3382",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־מְתוּשֶׁלַח בֶּן־חֲנוֹךְ בֶּן־יֶרֶד בֶּן־מַהֲלַלְאֵל בֶּן־קֵינָן׃"
+      },
+      "previous_strong": "H3382",
+      "new_strong": "H3382",
+      "confidence": 0.88,
+      "reason": "יֶרֶד is reliable as H3382; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.37.5",
+        "text=יֶרֶד",
+        "prefixes=none",
+        "strong=H3382",
+        "lemma=יֶרֶד",
+        "definitions=son of Mehall’ēl, fourth generation from Seth | man of Judah",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3382",
+      "definition": {
+        "text_en": "Jared; ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Jared; antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 37,
+        "word_index": 7,
+        "text": "מַהֲלַלְאֵל",
+        "strong": "H4111",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־מְתוּשֶׁלַח בֶּן־חֲנוֹךְ בֶּן־יֶרֶד בֶּן־מַהֲלַלְאֵל בֶּן־קֵינָן׃"
+      },
+      "previous_strong": "H4111",
+      "new_strong": "H4111",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H4111 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.3.37.7",
+        "text=מַהֲלַלְאֵל",
+        "prefixes=none",
+        "strong=H4111",
+        "lemma=מַהֲלַלְאֵל",
+        "definitions=praise of God | great-grandson of Seth | a man of Judah",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 38,
+        "word_index": 3,
+        "text": "שֵׁת",
+        "strong": "H8352",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בֶּן־אֱנוֹשׁ בֶּן־שֵׁת בֶּן־אָדָם בֶּן־אֱלֹהִים׃"
+      },
+      "previous_strong": "H8352",
+      "new_strong": "H8352",
+      "confidence": 0.9,
+      "reason": "שֵׁת is reliable as H8352; add the Luke genealogy definition.",
+      "evidence": [
+        "occurrence=luke.3.38.3",
+        "text=שֵׁת",
+        "prefixes=none",
+        "strong=H8352",
+        "lemma=שֵׁת",
+        "definitions=none",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8352",
+      "definition": {
+        "text_en": "Seth; son of Adam and ancestor in the genealogy of Jesus in Luke 3.",
+        "text_es": "Set; hijo de Adán y antepasado en la genealogía de Jesús en Lucas 3.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 5,
+        "word_index": 4,
+        "text": "גָּבֹהַּ",
+        "strong": "H1364",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעֲלֵהוּ הַ/שָּׂטָן עַל־הַר גָּבֹהַּ וַ/יַּרְאֵהוּ בְּ/רֶגַע אֶחָד אֵת כָּל־מַמְלְכוֹת תֵּבֵל׃"
+      },
+      "previous_strong": "H1364",
+      "new_strong": "H1364",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1364 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.4.5.4",
+        "text=גָּבֹהַּ",
+        "prefixes=none",
+        "strong=H1364",
+        "lemma=גָּבֹהַּ",
+        "definitions=high | exalted | high | lofty | tall",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 7,
+        "word_index": 6,
+        "text": "לָּךְ׃",
+        "strong": "H2545",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה אִם־תִּשְׁתַּחֲוֶה לְ/פָנָי הַכֹּל יִהְיֶה־לָּךְ׃"
+      },
+      "previous_strong": "H2545",
+      "new_strong": "H2545",
+      "confidence": 0.35,
+      "reason": "לָּךְ is a pronominal/prepositional form (“to/for you”); leave it for manual grammar handling rather than assigning a lexical Strong.",
+      "evidence": [
+        "occurrence=luke.4.7.6",
+        "text=לָּךְ׃",
+        "prefixes=none",
+        "strong=H2545",
+        "lemma=חֲמוֹת",
+        "definitions=husband’s mother",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 14,
+        "word_index": 7,
+        "text": "שָׁמְעוֹ",
+        "strong": "H8089",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּשָׁב יֵשׁוּעַ בִּ/גְבוּרַת הָ/רוּחַ אֶל־הַ/גָּלִיל וַ/יֵּצֵא שָׁמְעוֹ בְּ/כָל־הַ/כִּכָּר׃"
+      },
+      "previous_strong": "H8089",
+      "new_strong": "H8089",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H8089 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.4.14.7",
+        "text=שָׁמְעוֹ",
+        "prefixes=none",
+        "strong=H8089",
+        "lemma=שֹׁמַע",
+        "definitions=report",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 19,
+        "word_index": 6,
+        "text": "דְּרוֹר",
+        "strong": "H1865",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שְׁלָחַנִי לַ/חֲבשׁ לְ/נִשְׁבְּרֵי־לֵב לִ/קְרֹא לִ/שְׁבוּיִם דְּרוֹר וּ/לְ/עִוְרִים פְּקַח־קוֹחַ לְ/שַׁלַּח רְצוּצִים חָפְשִׁים לִ/קְרֹא שְׁנַת־רָצוֹן לַ/יהוָֹה׃"
+      },
+      "previous_strong": "H1865",
+      "new_strong": "H1865",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1865 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.4.19.6",
+        "text=דְּרוֹר",
+        "prefixes=none",
+        "strong=H1865",
+        "lemma=דְּרוֹר",
+        "definitions=a flowing | free run | liberty | myrrh of flowing | proclaim liberty",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 19,
+        "word_index": 9,
+        "text": "קוֹחַ",
+        "strong": "H6495",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שְׁלָחַנִי לַ/חֲבשׁ לְ/נִשְׁבְּרֵי־לֵב לִ/קְרֹא לִ/שְׁבוּיִם דְּרוֹר וּ/לְ/עִוְרִים פְּקַח־קוֹחַ לְ/שַׁלַּח רְצוּצִים חָפְשִׁים לִ/קְרֹא שְׁנַת־רָצוֹן לַ/יהוָֹה׃"
+      },
+      "previous_strong": "H6495",
+      "new_strong": "H6495",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H6495 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.4.19.9",
+        "text=קוֹחַ",
+        "prefixes=none",
+        "strong=H6495",
+        "lemma=פְּקַח־קוֹחַ",
+        "definitions=opening | wide | complete",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 19,
+        "word_index": 11,
+        "text": "רְצוּצִים",
+        "strong": "H7533",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שְׁלָחַנִי לַ/חֲבשׁ לְ/נִשְׁבְּרֵי־לֵב לִ/קְרֹא לִ/שְׁבוּיִם דְּרוֹר וּ/לְ/עִוְרִים פְּקַח־קוֹחַ לְ/שַׁלַּח רְצוּצִים חָפְשִׁים לִ/קְרֹא שְׁנַת־רָצוֹן לַ/יהוָֹה׃"
+      },
+      "previous_strong": "H7533",
+      "new_strong": "H7533",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H7533 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.4.19.11",
+        "text=רְצוּצִים",
+        "prefixes=none",
+        "strong=H7533",
+        "lemma=רָצַץ",
+        "definitions=crush",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 26,
+        "word_index": 7,
+        "text": "צָרְפַתָה",
+        "strong": "H6886",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וְ/לֹא־נִשְׁלַח אֵלִיָּהוּ אֶל־אַחַת מֵהֵנָּה זוּלָתִי צָרְפַתָה אֲשֶׁר לְ/צִידוֹן אֶל־אִשָּׁה אַלְמָנָה׃"
+      },
+      "previous_strong": "H6886",
+      "new_strong": "H6886",
+      "confidence": 0.9,
+      "reason": "צָרְפַתָה is reliable as H6886; add the Luke-context place definition.",
+      "evidence": [
+        "occurrence=luke.4.26.7",
+        "text=צָרְפַתָה",
+        "prefixes=none",
+        "strong=H6886",
+        "lemma=צָרְפַת",
+        "definitions=smelting",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6886",
+      "definition": {
+        "text_en": "Zarephath; Phoenician town near Sidon mentioned in Luke 4.",
+        "text_es": "Sarepta; ciudad fenicia cerca de Sidón mencionada en Lucas 4.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 27,
+        "word_index": 5,
+        "text": "אֱלִישָׁע",
+        "strong": "H477",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מְצֹרָעִים רַבִּים הָיוּ בְ/יִשְׂרָאֵל בִּ/ימֵי אֱלִישָׁע הַ/נָּבִיא וְ/לֹא טֹהַר אֶחָד מֵהֶם זוּלָתִי נַעֲמָן הָ/אֲרַמִּי׃"
+      },
+      "previous_strong": "H477",
+      "new_strong": "H477",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H477 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.4.27.5",
+        "text=אֱלִישָׁע",
+        "prefixes=none",
+        "strong=H477",
+        "lemma=אֱלִישָׁע",
+        "definitions=God is salvation",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 27,
+        "word_index": 12,
+        "text": "נַעֲמָן",
+        "strong": "H5283",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וּ/מְצֹרָעִים רַבִּים הָיוּ בְ/יִשְׂרָאֵל בִּ/ימֵי אֱלִישָׁע הַ/נָּבִיא וְ/לֹא טֹהַר אֶחָד מֵהֶם זוּלָתִי נַעֲמָן הָ/אֲרַמִּי׃"
+      },
+      "previous_strong": "H5283",
+      "new_strong": "H5283",
+      "confidence": 0.9,
+      "reason": "נַעֲמָן is reliable as H5283; add the Luke-context personal-name definition.",
+      "evidence": [
+        "occurrence=luke.4.27.12",
+        "text=נַעֲמָן",
+        "prefixes=none",
+        "strong=H5283",
+        "lemma=נַעֲמָן",
+        "definitions=son of Benj. | Aramaean general",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5283",
+      "definition": {
+        "text_en": "Naaman; Aramean commander healed in the days of Elisha, mentioned in Luke 4.",
+        "text_es": "Naamán; comandante arameo sanado en tiempos de Eliseo, mencionado en Lucas 4.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 27,
+        "word_index": 13,
+        "text": "הָאֲרַמִּי׃",
+        "strong": "Hd/H761",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מְצֹרָעִים רַבִּים הָיוּ בְ/יִשְׂרָאֵל בִּ/ימֵי אֱלִישָׁע הַ/נָּבִיא וְ/לֹא טֹהַר אֶחָד מֵהֶם זוּלָתִי נַעֲמָן הָ/אֲרַמִּי׃"
+      },
+      "previous_strong": "Hd/H761",
+      "new_strong": "H761",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H761 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.4.27.13",
+        "text=הָאֲרַמִּי׃",
+        "prefixes=Hd",
+        "strong=H761",
+        "lemma=אֲרַמִּי",
+        "definitions=Aramæan",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 29,
+        "word_index": 8,
+        "text": "גַּב",
+        "strong": "H1354",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּקוּמוּ וַ/יַּדִּיחוּ אֹתוֹ אֶל־מִחוּץ לָ/עִיר וַ/יְבִיאֻהוּ עַד־גַּב הָהָר אֲשֶׁר נִבְנְתָה עִירָם עָלָיו לְ/מַעַן הַ/שְׁלִיכוֹ מָטָּה׃"
+      },
+      "previous_strong": "H1354",
+      "new_strong": "H1354",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H1354 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.4.29.8",
+        "text=גַּב",
+        "prefixes=none",
+        "strong=H1354",
+        "lemma=גַב",
+        "definitions=back | back | mound | boss | bulwarks",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 4,
+        "verse": 42,
+        "word_index": 7,
+        "text": "חָרְבָּה",
+        "strong": "H2723",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּצֵא וַ/יֵּלֶךְ־לוֹ כְּ/אוֹר הַ/בֹּקֶר אֶל־מְקוֹם חָרְבָּה וַ/הֲ/מוֹן הָעָם בִּ/קְשֻׁהוּ וַ/יָּבֹאוּ עָדָיו וַ/יִּפְצְרוּ־בוֹ לְ/בִ/לְתִּי סוּר מֵהֶם׃"
+      },
+      "previous_strong": "H2723",
+      "new_strong": "H2723",
+      "confidence": 0.98,
+      "reason": "Existing Strong assignment H2723 matches the Delitzsch form and local context.",
+      "evidence": [
+        "occurrence=luke.4.42.7",
+        "text=חָרְבָּה",
+        "prefixes=none",
+        "strong=H2723",
+        "lemma=חׇרְבָּה",
+        "definitions=waste | desolation | ruin",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 2,
+        "word_index": 12,
+        "text": "הַמִּכְמֹרוֹת׃",
+        "strong": "H7491",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּרְא שְׁתֵּי אֳנִיּוֹת עֹמְדוֹת עַל־יַד הַיָּם וְ/הַ/דַּיָּגִים יָצְאוּ מֵהֶן וַ/יִּרְחֲצוּ אֵת הַ/מִּכְמֹרוֹת׃"
+      },
+      "previous_strong": "H7491",
+      "new_strong": "H4365",
+      "confidence": 0.95,
+      "reason": "הַמִּכְמֹרוֹת means the nets; H4365 מִכְמֶרֶת fits, while H7491 is unrelated.",
+      "evidence": [
+        "occurrence=luke.5.2.12",
+        "text=הַמִּכְמֹרוֹת׃",
+        "prefixes=Hd",
+        "strong=H7491",
+        "lemma=רָעַף",
+        "definitions=trickle | drip",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 3,
+        "word_index": 4,
+        "text": "הָאֳנִיּוֹת",
+        "strong": "H4997",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּרֶד אֶל־אַחַת מִן־הָ/אֳנִיּוֹת אֲשֶׁר הִיא לְ/שִׁמְעוֹן וַ/יְבַקֵּשׁ מִמֶּנּוּ לְ/ה/וֹלִיכוֹ מְעַט מִן־הַ/יַּבָּשָׁה אֶל־הַיָּם וַ/יֵּשֶׁב וַ/יְלַמֵּד אֶת־הָעָם מִתּוֹךְ הָ/אֳנִיָּה׃"
+      },
+      "previous_strong": "H4997",
+      "new_strong": "H591",
+      "confidence": 0.95,
+      "reason": "הָאֳנִיּוֹת means the boats/ships; H591 אֳנִיָּה fits, while H4997 is skin-bottle.",
+      "evidence": [
+        "occurrence=luke.5.3.4",
+        "text=הָאֳנִיּוֹת",
+        "prefixes=Hd",
+        "strong=H4997",
+        "lemma=נֹאד",
+        "definitions=skin-bottle | skin",
+        "codex reviewed definitions batch_0044"
+      ],
+      "reviewer": "codex-desktop"
+    }
+  ]
+}

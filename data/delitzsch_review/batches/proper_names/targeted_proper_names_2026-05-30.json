@@ -1,0 +1,50 @@
+{
+  "decisions": [
+    {
+      "action": "create_custom_entry",
+      "custom_key": "D0057",
+      "occurrence": {
+        "book": "john3",
+        "chapter": 1,
+        "verse": 1,
+        "word_index": 2,
+        "text": "גָּיוֹס",
+        "strong": "H7291"
+      },
+      "previous_strong": "H7291",
+      "definition": {
+        "text_en": "Gaius; a believer associated with Paul and John.",
+        "text_es": "Gayo; creyente asociado con Pablo y Juan."
+      },
+      "confidence": 0.98,
+      "reason": "Greek proper name in Delitzsch text; existing D0057 custom entry already represents Gaius and should be used instead of the unrelated Hebrew H7291 lookup.",
+      "evidence": [
+        "3 John 1:1 addresses Gaius by name.",
+        "Existing custom entry D0057 is the project proper-name entry for גיוס / Gaius."
+      ]
+    },
+    {
+      "action": "create_custom_entry",
+      "custom_key": "D0024",
+      "occurrence": {
+        "book": "ephesians",
+        "chapter": 1,
+        "verse": 1,
+        "word_index": 0,
+        "text": "פּוֹלוֹס",
+        "strong": "H336"
+      },
+      "previous_strong": "H336",
+      "definition": {
+        "text_en": "Paul; apostle to the nations.",
+        "text_es": "Pablo; apóstol a las naciones."
+      },
+      "confidence": 0.99,
+      "reason": "Epistle opening names Paul; existing D0024 custom entry already represents פּוֹלוֹס / Paul and should be used instead of the unrelated Hebrew H336 lookup.",
+      "evidence": [
+        "Ephesians 1:1 opens with Paul as the sender.",
+        "Existing custom entry D0024 is the project proper-name entry for פּוֹלוֹס / Paul."
+      ]
+    }
+  ]
+}

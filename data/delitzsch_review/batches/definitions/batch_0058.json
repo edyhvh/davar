@@ -1,0 +1,2253 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.494777+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 5,
+        "verse": 10,
+        "word_index": 15,
+        "text": "נִרְצִינוּ׃",
+        "strong": "H7518",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־נִרְצִינוּ לֵ/אלֹהִים בְּ/מוֹת בְּ/נוֹ בִּ/הְ/יוֹתֵנוּ אֹיְבִים אַף כִּי־נִוָּשַׁע עַתָּה בְּ/חַיָּיו אַחֲרֵי אֲשֶׁר נִרְצִינוּ׃"
+      },
+      "previous_strong": "H7518",
+      "new_strong": "H7521",
+      "confidence": 0.9,
+      "reason": "נִרְצִינוּ means we were accepted/reconciled; H7521 רצה fits, while H7518 runner is unrelated.",
+      "evidence": [
+        "occurrence=romans.5.10.15",
+        "text=נִרְצִינוּ׃",
+        "prefixes=none",
+        "strong=H7518",
+        "lemma=רַץ",
+        "definitions=piece | bar",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 6,
+        "verse": 5,
+        "word_index": 3,
+        "text": "בְּדִמְיוֹן",
+        "strong": "H2787",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־נִדְבַּקְנוּ בְּ/דִמְיוֹן מוֹתוֹ אָכֵן גַּם־נִהְיֶה דְבוּקִים לִ/תְחִיָּתוֹ׃"
+      },
+      "previous_strong": "H2787",
+      "new_strong": "H1823",
+      "confidence": 0.92,
+      "reason": "בְּדִמְיוֹן means in likeness/similitude; H1823 דמות fits, while H2787 burn is unrelated.",
+      "evidence": [
+        "occurrence=romans.6.5.3",
+        "text=בְּדִמְיוֹן",
+        "prefixes=Hb",
+        "strong=H2787",
+        "lemma=חָרַר",
+        "definitions=be hot | scorched | burn",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 7,
+        "verse": 1,
+        "word_index": 10,
+        "text": "תִּשְׁלֹט",
+        "strong": "H7981",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אוֹ הֲלֹא יְדַעְתֶּם אֶחָי וּ/לְ/יֹדְעֵי הַ/תּוֹרָה אָנֹכִי מְדַבֵּר כִּי הַ/תּוֹרָה תִּשְׁלֹט עַל־הָ/אָדָם כָּל־יְמֵי חַיָּיו׃"
+      },
+      "previous_strong": "H7981",
+      "new_strong": "H7980",
+      "confidence": 0.92,
+      "reason": "תִּשְׁלֹט means it rules/has mastery; H7980 שלט fits, while H7981 is an Aramaic noun entry.",
+      "evidence": [
+        "occurrence=romans.7.1.10",
+        "text=תִּשְׁלֹט",
+        "prefixes=none",
+        "strong=H7981",
+        "lemma=שְׁלֵט",
+        "definitions=have power | rule",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 7,
+        "verse": 2,
+        "word_index": 11,
+        "text": "הַבַּעַל",
+        "strong": "Hd/H1168",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "כִּי אִשָּׁה בְ/עֻלַת־בַּ/עַל קְשׁוּרָה הִיא בְּ/אִישָׁהּ כְּ/פִי הַ/תּוֹרָה בְּ/חַיָּיו וּ/בְ/מוֹת הַ/בַּעַל פְּטוּרָה הִיא מִתּוֹרַת בַּ/עְלָהּ׃"
+      },
+      "previous_strong": "Hd/H1168",
+      "new_strong": "H1167",
+      "confidence": 0.92,
+      "reason": "הַבַּעַל means the husband; H1167 בעל fits, while H1168 is a place/name entry.",
+      "evidence": [
+        "occurrence=romans.7.2.11",
+        "text=הַבַּעַל",
+        "prefixes=Hd",
+        "strong=H1168",
+        "lemma=בַּעַל",
+        "definitions=owner | lord | owner | husband | citizens",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 8,
+        "verse": 20,
+        "word_index": 1,
+        "text": "נִכְבְּשָׁה",
+        "strong": "H3533",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־נִכְבְּשָׁה הַ/בְּרִיאָה לַ/הֶבֶל לֹא מֵרְצוֹנָהּ כִּי אִם־לְ/מַעַן הַכֹּבֵשׁ אֹתָהּ אֱלֵי־תִקְוָה׃"
+      },
+      "previous_strong": "H3533",
+      "new_strong": "H3533",
+      "confidence": 0.9,
+      "reason": "נִכְבְּשָׁה means was subjected/subdued; H3533 is correct.",
+      "evidence": [
+        "occurrence=romans.8.20.1",
+        "text=נִכְבְּשָׁה",
+        "prefixes=none",
+        "strong=H3533",
+        "lemma=כָּבַשׁ",
+        "definitions=subdue | bring into bondage",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 8,
+        "verse": 35,
+        "word_index": 8,
+        "text": "מַשְׂטֵמָה",
+        "strong": "H4895",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מִי יַפְרִידֵנוּ מֵאַהֲבַת הַ/מָּשִׁיחַ הֲצָרָה אוֹ מְצוּקָה אוֹ מַשְׂטֵמָה אוֹ רָעָב אִם־עֶרְיָה אוֹ סַכָּנָה אוֹ־חָרֶב׃"
+      },
+      "previous_strong": "H4895",
+      "new_strong": "H4895",
+      "confidence": 0.9,
+      "reason": "מַשְׂטֵמָה means hostility/animosity; H4895 is correct.",
+      "evidence": [
+        "occurrence=romans.8.35.8",
+        "text=מַשְׂטֵמָה",
+        "prefixes=none",
+        "strong=H4895",
+        "lemma=מַשְׂטֵמָה",
+        "definitions=animosity",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 8,
+        "verse": 35,
+        "word_index": 12,
+        "text": "עֶרְיָה",
+        "strong": "H6181",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מִי יַפְרִידֵנוּ מֵאַהֲבַת הַ/מָּשִׁיחַ הֲצָרָה אוֹ מְצוּקָה אוֹ מַשְׂטֵמָה אוֹ רָעָב אִם־עֶרְיָה אוֹ סַכָּנָה אוֹ־חָרֶב׃"
+      },
+      "previous_strong": "H6181",
+      "new_strong": "H6181",
+      "confidence": 0.9,
+      "reason": "עֶרְיָה means nakedness; H6181 is correct.",
+      "evidence": [
+        "occurrence=romans.8.35.12",
+        "text=עֶרְיָה",
+        "prefixes=none",
+        "strong=H6181",
+        "lemma=עֶרְיָה",
+        "definitions=nakedness",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 9,
+        "verse": 3,
+        "word_index": 10,
+        "text": "שְׁאֵרִי",
+        "strong": "H7607",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי מִי־יִתֵּן הֱ/יוֹתִי אֲנִי מָחֳרָם מִן־הַ/מָּשִׁיחַ בְּ/עַד אַחַי שְׁאֵרִי וּ/בְ/שָׂרִי׃"
+      },
+      "previous_strong": "H7607",
+      "new_strong": "H7607",
+      "confidence": 0.9,
+      "reason": "שְׁאֵרִי means my flesh/kin; H7607 is correct.",
+      "evidence": [
+        "occurrence=romans.9.3.10",
+        "text=שְׁאֵרִי",
+        "prefixes=none",
+        "strong=H7607",
+        "lemma=שְׁאֵר",
+        "definitions=flesh | flesh | as food | flesh- | relation",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 9,
+        "verse": 9,
+        "word_index": 8,
+        "text": "וּלְשָׂרָה",
+        "strong": "Hc/Hl/H8283",
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "כִּי־דְבַר הַ/בְטָחָה הוּא מַה־שֶּׁנֶּאֱמַר לַ/מּוֹעֵד אָשׁוּב וּ/לְ/שָׂרָה בֵן׃"
+      },
+      "previous_strong": "Hc/Hl/H8283",
+      "new_strong": "H8283",
+      "confidence": 0.9,
+      "reason": "וּלְשָׂרָה is and to Sarah; H8283 is correct.",
+      "evidence": [
+        "occurrence=romans.9.9.8",
+        "text=וּלְשָׂרָה",
+        "prefixes=Hc,Hl",
+        "strong=H8283",
+        "lemma=שָׂרָה",
+        "definitions=princess",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 9,
+        "verse": 11,
+        "word_index": 15,
+        "text": "בְחִירָתוֹ",
+        "strong": "H2194",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי בְ/טֶרֶם יֻלְּדוּ בָ/נֶיהָ וְ/עוֹד לֹא־עָשֹוּ טוֹב אוֹ־רָע לְ/מַעַן תָּקוּם עֲצַת הָ/אֱלֹהִים כְּ/פִי בְ/חִירָתוֹ לֹא מִתּוֹךְ מַעֲשִׂים כִּי אִם־כִּ/רְצוֹן הַ/קֹּרֵא׃"
+      },
+      "previous_strong": "H2194",
+      "new_strong": "H977",
+      "confidence": 0.9,
+      "reason": "בְחִירָתוֹ means his choice/election; H977 בחר fits, while H2194 indignation is unrelated.",
+      "evidence": [
+        "occurrence=romans.9.11.15",
+        "text=בְחִירָתוֹ",
+        "prefixes=Hb",
+        "strong=H2194",
+        "lemma=זָעַם",
+        "definitions=be indignant",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 9,
+        "verse": 16,
+        "word_index": 14,
+        "text": "הַמְרַחֵם׃",
+        "strong": "H5062",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַל־כֵּן אֵין הַ/דָּבָר לֹא־בְ/יַד הָ/רֹצֶה וְ/לֹא־בְ/יַד הָרָץ כִּי אִם־בְּ/יַד הָ/אֱלֹהִים הַ/מְרַחֵם׃"
+      },
+      "previous_strong": "H5062",
+      "new_strong": "H7355",
+      "confidence": 0.93,
+      "reason": "הַמְרַחֵם means the one showing mercy; H7355 רחם fits, while H5062 strike is unrelated.",
+      "evidence": [
+        "occurrence=romans.9.16.14",
+        "text=הַמְרַחֵם׃",
+        "prefixes=Hd",
+        "strong=H5062",
+        "lemma=נָגַף",
+        "definitions=strike | smite",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 9,
+        "verse": 20,
+        "word_index": 10,
+        "text": "יֵצֶר",
+        "strong": "H3336",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אָמְנָם בֶּן־אָדָם מִי אַתָּה אֲשֶׁר תָּרִיב אֶת־הָ/אֱלֹהִים הֲ/יֹאמַר יֵצֶר לְ/יֹצְרוֹ לָ/מָּה כָּ/כָה עֲשִׂיתָנִי׃"
+      },
+      "previous_strong": "H3336",
+      "new_strong": "H3336",
+      "confidence": 0.9,
+      "reason": "יֵצֶר means thing formed/framed; H3336 is correct.",
+      "evidence": [
+        "occurrence=romans.9.20.10",
+        "text=יֵצֶר",
+        "prefixes=none",
+        "strong=H3336",
+        "lemma=יֵצֶר",
+        "definitions=form | framing | purpose | pottery | form of a graven image",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 9,
+        "verse": 21,
+        "word_index": 5,
+        "text": "הַחֹמֶר",
+        "strong": "Hd/H2563",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אִם־אֵין רְשׁוּת לַ/יֹּצֵר עַל־הַ/חֹמֶר לַ/עֲשׂוֹת מִגֹּלֶם אֶחָד כְּ/לִי אֶחָד לְ/כָ/בוֹד וְ/אֶחָד לְ/קָלוֹן׃"
+      },
+      "previous_strong": "Hd/H2563",
+      "new_strong": "H2563",
+      "confidence": 0.9,
+      "reason": "הַחֹמֶר means the clay/material; H2563 is correct.",
+      "evidence": [
+        "occurrence=romans.9.21.5",
+        "text=הַחֹמֶר",
+        "prefixes=Hd",
+        "strong=H2563",
+        "lemma=חֹמֶר",
+        "definitions=cement | mortar | clay",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 9,
+        "verse": 21,
+        "word_index": 13,
+        "text": "לְקָלוֹן׃",
+        "strong": "H7036",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אִם־אֵין רְשׁוּת לַ/יֹּצֵר עַל־הַ/חֹמֶר לַ/עֲשׂוֹת מִגֹּלֶם אֶחָד כְּ/לִי אֶחָד לְ/כָ/בוֹד וְ/אֶחָד לְ/קָלוֹן׃"
+      },
+      "previous_strong": "H7036",
+      "new_strong": "H7036",
+      "confidence": 0.9,
+      "reason": "לְקָלוֹן means for dishonor; H7036 is correct.",
+      "evidence": [
+        "occurrence=romans.9.21.13",
+        "text=לְקָלוֹן׃",
+        "prefixes=Hl",
+        "strong=H7036",
+        "lemma=קָלוֹן",
+        "definitions=ignominy | dishonour",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 9,
+        "verse": 27,
+        "word_index": 17,
+        "text": "חָרוּץ",
+        "strong": "H2742",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וִ/ישַׁעְיָהוּ קָרָא בְּ/קוֹלוֹ עַל־יִשְׂרָאֵל כִּי אִם־יִהְיֶה מִסְפַּר בְּ/נֵי יִשְׂרָאֵל כְּ/חוֹל הַיָּם שְׁאָר יָשׁוּב בּוֹ כִּ/לָּ/יוֹן חָרוּץ שֹׁטֵף צְדָקָה׃"
+      },
+      "previous_strong": "H2742",
+      "new_strong": "H2742",
+      "confidence": 0.9,
+      "reason": "חָרוּץ means determined/decisive in the remnant phrase; H2742 is plausible and retained.",
+      "evidence": [
+        "occurrence=romans.9.27.17",
+        "text=חָרוּץ",
+        "prefixes=none",
+        "strong=H2742",
+        "lemma=חֲרוּץ",
+        "definitions=sharp | diligent",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 9,
+        "verse": 29,
+        "word_index": 9,
+        "text": "שָׂרִיד",
+        "strong": "H8300",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כַ/אֲשֶׁר אָמַר יְשַׁעְיָהוּ לְ/פָנִים ל/וּלֵי יְהוָֹה צְבָאוֹת ה/וֹתִיר לָ/נוּ שָׂרִיד כִּ/מְעָט כִּ/סְדֹם הָ/יִינוּ לַ/עֲמֹרָה דָּמִינוּ׃"
+      },
+      "previous_strong": "H8300",
+      "new_strong": "H8300",
+      "confidence": 0.9,
+      "reason": "שָׂרִיד means survivor/remnant; H8300 is correct.",
+      "evidence": [
+        "occurrence=romans.9.29.9",
+        "text=שָׂרִיד",
+        "prefixes=none",
+        "strong=H8300",
+        "lemma=שָׂרִיד",
+        "definitions=survivor",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 9,
+        "verse": 33,
+        "word_index": 6,
+        "text": "וְצוּר",
+        "strong": "Hc/H6698",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "כַּ/כָּתוּב הִנְנִי יִסַּד בְּ/צִיּוֹן אֶבֶן נֶגֶף וְ/צוּר מִכְשׁוֹל וְ/כָל־הַ/מַּאֲמִין בּוֹ לֹא יֵבוֹשׁ׃"
+      },
+      "previous_strong": "Hc/H6698",
+      "new_strong": "H6697",
+      "confidence": 0.92,
+      "reason": "וְצוּר means and a rock; H6697 צור is the common rock entry, while H6698 is a proper-name entry.",
+      "evidence": [
+        "occurrence=romans.9.33.6",
+        "text=וְצוּר",
+        "prefixes=Hc",
+        "strong=H6698",
+        "lemma=צוּר",
+        "definitions=Rock | a prince of Midian | Gibeonite",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 10,
+        "verse": 19,
+        "word_index": 4,
+        "text": "יָדָע",
+        "strong": "H3047",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וְ/אֹמַר הֲכִי יִשְׂרָאֵל לֹא יָדָע הִנֵּה־כְ/בָר משֶׁה אָמַר אֲנִי אַקְנִיאֲכֶם בְּ/לֹא־עָם בְּ/גוֹי נָבָל אַכְעִיסְכֶם׃"
+      },
+      "previous_strong": "H3047",
+      "new_strong": "H3045",
+      "confidence": 0.93,
+      "reason": "יָדָע means did he know/know; H3045 ידע fits, while H3047 is a proper-name entry.",
+      "evidence": [
+        "occurrence=romans.10.19.4",
+        "text=יָדָע",
+        "prefixes=none",
+        "strong=H3047",
+        "lemma=יָדָע",
+        "definitions=the knowing | shrewd on",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 10,
+        "verse": 19,
+        "word_index": 14,
+        "text": "נָבָל",
+        "strong": "H5036",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֹמַר הֲכִי יִשְׂרָאֵל לֹא יָדָע הִנֵּה־כְ/בָר משֶׁה אָמַר אֲנִי אַקְנִיאֲכֶם בְּ/לֹא־עָם בְּ/גוֹי נָבָל אַכְעִיסְכֶם׃"
+      },
+      "previous_strong": "H5036",
+      "new_strong": "H5036",
+      "confidence": 0.9,
+      "reason": "נָבָל means foolish/senseless; H5036 is correct.",
+      "evidence": [
+        "occurrence=romans.10.19.14",
+        "text=נָבָל",
+        "prefixes=none",
+        "strong=H5036",
+        "lemma=נָבָל",
+        "definitions=foolish | senseless | ignoble | disgraceful | fool",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 11,
+        "verse": 1,
+        "word_index": 4,
+        "text": "זָנַח",
+        "strong": "H2186",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/כֵן אֹמֵר אֲנִי הֲכִי זָנַח הָ/אֱלֹהִים אֶת־עַמּוֹ חָלִילָה כִּי גַם־אָנֹכִי בֶּן־יִשְׂרָאֵל מִזֶּרַע אַבְרָהָם לְ/מַטֵּה בִ/נְיָמִין׃"
+      },
+      "previous_strong": "H2186",
+      "new_strong": "H2186",
+      "confidence": 0.9,
+      "reason": "זָנַח means reject/spurn; H2186 is correct.",
+      "evidence": [
+        "occurrence=romans.11.1.4",
+        "text=זָנַח",
+        "prefixes=none",
+        "strong=H2186",
+        "lemma=זָנַח",
+        "definitions=reject | spurn",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 11,
+        "verse": 7,
+        "word_index": 14,
+        "text": "הִשְׁמִינוּ",
+        "strong": "H8065",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה מַה־הוּא אֵת אֲשֶׁר־בִּ/קֵּשׁ יִשְׂרָאֵל לֹא הִשִּׂיג רַק הַ/נִּבְחָרִים הֵם הִשִּׂיגוּ וְ/הַ/נִּשְׁאָרִים הִשְׁמִינוּ לְ/בָ/בָם׃"
+      },
+      "previous_strong": "H8065",
+      "new_strong": "H8080",
+      "confidence": 0.88,
+      "reason": "הִשְׁמִינוּ means they were made fat/dull; H8080 שמן fits, while H8065 is an Aramaic adjective entry.",
+      "evidence": [
+        "occurrence=romans.11.7.14",
+        "text=הִשְׁמִינוּ",
+        "prefixes=none",
+        "strong=H8065",
+        "lemma=שָׁמַיִן",
+        "definitions=heavens",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 11,
+        "verse": 9,
+        "word_index": 7,
+        "text": "וּלְמוֹקֵשׁ",
+        "strong": "Hc/Hl/H4170",
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/דָוִד הוּא אֹמֵר יְהִי־שֻׁלְחָנָם לְ/פַח וּ/לְ/רֶשֶׁת וּ/לְ/מוֹקֵשׁ וּ/לְ/שִׁלּוּמִים לָ/הֶם׃"
+      },
+      "previous_strong": "Hc/Hl/H4170",
+      "new_strong": "H4170",
+      "confidence": 0.9,
+      "reason": "וּלְמוֹקֵשׁ means and for a snare; H4170 is correct.",
+      "evidence": [
+        "occurrence=romans.11.9.7",
+        "text=וּלְמוֹקֵשׁ",
+        "prefixes=Hc,Hl",
+        "strong=H4170",
+        "lemma=מוֹקֵשׁ",
+        "definitions=a bait | lure | a snare",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 11,
+        "verse": 10,
+        "word_index": 0,
+        "text": "תֶּחְשַׁכְנָה",
+        "strong": "H2821",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "תֶּחְשַׁכְנָה עֵינֵיהֶם מֵרְאוֹת וּ/מָתְנֵיהֶם תָּמִיד הַ/מְעַד׃"
+      },
+      "previous_strong": "H2821",
+      "new_strong": "H2821",
+      "confidence": 0.9,
+      "reason": "תֶּחְשַׁכְנָה means let them grow dark; H2821 is correct.",
+      "evidence": [
+        "occurrence=romans.11.10.0",
+        "text=תֶּחְשַׁכְנָה",
+        "prefixes=none",
+        "strong=H2821",
+        "lemma=חָשַׁךְ",
+        "definitions=be | grow dark",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 11,
+        "verse": 14,
+        "word_index": 2,
+        "text": "לְהַקְנִיא",
+        "strong": "H6921",
+        "prefixes": [
+          "Hl",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לוּ אוּכַל לְ/הַ/קְנִיא אֶת־עַמִּי־בְּ/שָׂרִי וּ/לְ/הוֹשִׁיעַ מִקְצָתָם׃"
+      },
+      "previous_strong": "H6921",
+      "new_strong": "H7065",
+      "confidence": 0.92,
+      "reason": "לְהַקְנִיא means to provoke to jealousy; H7065 קנא fits, while H6921 east wind is unrelated.",
+      "evidence": [
+        "occurrence=romans.11.14.2",
+        "text=לְהַקְנִיא",
+        "prefixes=Hl,Hd",
+        "strong=H6921",
+        "lemma=קָדִים",
+        "definitions=East | east wind",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 11,
+        "verse": 16,
+        "word_index": 1,
+        "text": "הַתְּרוּמָה",
+        "strong": "Hd/H8641",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִם־הַ/תְּרוּמָה קֹדֶשׁ כֵּן גַּם־הָעִסָּה וְ/אִם־הַ/שֹּׁרֶשׁ קֹדֶשׁ כֵּן גַּם־הָ/עֲנָפִים׃"
+      },
+      "previous_strong": "Hd/H8641",
+      "new_strong": "H8641",
+      "confidence": 0.9,
+      "reason": "הַתְּרוּמָה means the first-offering/contribution; H8641 is correct.",
+      "evidence": [
+        "occurrence=romans.11.16.1",
+        "text=הַתְּרוּמָה",
+        "prefixes=Hd",
+        "strong=H8641",
+        "lemma=תְּרוּמָה",
+        "definitions=contribution | offering | lifted off | separated",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 12,
+        "verse": 20,
+        "word_index": 13,
+        "text": "חֹתֶה",
+        "strong": "H2846",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן אִם־רָעֵב שׂנַאֲךָ הַ/אֲכִילֵהוּ לָ/חֶם וְ/אִם־צָמֵא הַ/שְׁקֵהוּ מָיִם כִּי גֶחָלִים אַתָּה חֹתֶה עַל־רֹאשׁוֹ׃"
+      },
+      "previous_strong": "H2846",
+      "new_strong": "H2846",
+      "confidence": 0.9,
+      "reason": "חֹתֶה means heaping/snatching coals; H2846 is correct.",
+      "evidence": [
+        "occurrence=romans.12.20.13",
+        "text=חֹתֶה",
+        "prefixes=none",
+        "strong=H2846",
+        "lemma=חָתָה",
+        "definitions=snatch up",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 13,
+        "verse": 2,
+        "word_index": 11,
+        "text": "דִּינָם׃",
+        "strong": "H1376",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן כָּל־הַ/מִּתְקוֹמֵם לָ/רָשׁוּת מֹרֵד הוּא בְּ/צִוּוּי הָ/אֱלֹהִים וְ/הַ/מֹּרְדִים יִשְׂאוּ אֶת־דִּינָם׃"
+      },
+      "previous_strong": "H1376",
+      "new_strong": "H1779",
+      "confidence": 0.9,
+      "reason": "דִּינָם means their judgment/condemnation; H1779 דין fits, while H1376 lord is unrelated.",
+      "evidence": [
+        "occurrence=romans.13.2.11",
+        "text=דִּינָם׃",
+        "prefixes=none",
+        "strong=H1376",
+        "lemma=גְּבִיר",
+        "definitions=lord",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 13,
+        "verse": 4,
+        "word_index": 13,
+        "text": "לְחִנָּם",
+        "strong": "H4172",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־מְשַׁמֶּשֶׁת אֱלֹהִים הִיא לְ/טוֹב לָךְ אַךְ אִם־הָרַע תַּעֲשֶׂה יְרָא כִּי לֹא לְ/חִנָּם חֲגֻרַת־חֶרֶב הִיא כִּי־מְשַׁמֶּשֶׁת אֱלֹהִים הִיא נֹקֶמֶת בְּ/קֶצֶף מִכָּל־עֹשֵׂה הָרָע׃"
+      },
+      "previous_strong": "H4172",
+      "new_strong": "H2600",
+      "confidence": 0.92,
+      "reason": "לְחִנָּם means in vain/for nothing; H2600 חנם fits, while H4172 fear is unrelated.",
+      "evidence": [
+        "occurrence=romans.13.4.13",
+        "text=לְחִנָּם",
+        "prefixes=Hl",
+        "strong=H4172",
+        "lemma=מוֹרָא",
+        "definitions=fear | fear | terror | reverence | object of reverence",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 14,
+        "verse": 2,
+        "word_index": 7,
+        "text": "וְהֶחָלוּשׁ",
+        "strong": "H969",
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "יֵשׁ מַאֲמִין כִּי נָכוֹן לֶ/אֱכֹל כָּל־דָּבָר וְ/הֶ/חָלוּשׁ יֹאכַל רַק אֶת־הַ/יָּרָק׃"
+      },
+      "previous_strong": "H969",
+      "new_strong": "H2470",
+      "confidence": 0.9,
+      "reason": "וְהֶחָלוּשׁ means and the weak one; H2470 חלה be weak/sick fits, while H969 tested is unrelated.",
+      "evidence": [
+        "occurrence=romans.14.2.7",
+        "text=וְהֶחָלוּשׁ",
+        "prefixes=Hc,Hd",
+        "strong=H969",
+        "lemma=בָּחוֹן",
+        "definitions=assayer",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 14,
+        "verse": 3,
+        "word_index": 2,
+        "text": "יִבֶז",
+        "strong": "H5606",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הָ/אֹכֵל אַל־יִבֶז אֶת־אֲשֶׁר לֹא יֹאכֵל וַ/אֲשֶׁר לֹא יֹאכַל אַל־יָדִין אֶת־הָ/אֹכֵל כִּי־קִבֵּל אֹתוֹ הָ/אֱלֹהִים׃"
+      },
+      "previous_strong": "H5606",
+      "new_strong": "H959",
+      "confidence": 0.92,
+      "reason": "יִבֶז means let him despise; H959 בזה fits, while H5606 clap/suffice is unrelated.",
+      "evidence": [
+        "occurrence=romans.14.3.2",
+        "text=יִבֶז",
+        "prefixes=none",
+        "strong=H5606",
+        "lemma=סָפַק",
+        "definitions=slap | clap",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 14,
+        "verse": 5,
+        "word_index": 9,
+        "text": "שָׁוִים",
+        "strong": "H936",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "יֵשׁ מַבְדִּיל בֵּ/ין־יוֹם לְ/יוֹם וְ/יֵשׁ אֲשֶׁר כָּל־הַ/יָּמִים שָׁוִים בְּ/עֵינָיו וִ/יהִי כָל־אִישׁ נָכוֹן בְּ/דַעְתּוֹ׃"
+      },
+      "previous_strong": "H936",
+      "new_strong": "H7737",
+      "confidence": 0.88,
+      "reason": "שָׁוִים means equal/alike; H7737 שוה fits, while H936 contempt is unrelated.",
+      "evidence": [
+        "occurrence=romans.14.5.9",
+        "text=שָׁוִים",
+        "prefixes=none",
+        "strong=H936",
+        "lemma=בּוּז",
+        "definitions=despise",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 15,
+        "verse": 1,
+        "word_index": 1,
+        "text": "הַחֲזָקִים",
+        "strong": "H5841",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עָלֵינוּ הַ/חֲזָקִים לָ/שֵׂאת חֻלְשׁוֹת הַ/כּשְׁלִים וְ/אַל־נְבַקֵּשׁ הֲנָאַת עַצְמֵנוּ׃"
+      },
+      "previous_strong": "H5841",
+      "new_strong": "H5794",
+      "confidence": 0.9,
+      "reason": "הַחֲזָקִים means the strong/mighty; H5794 עז fits, while H5841 is a gentilic/proper entry.",
+      "evidence": [
+        "occurrence=romans.15.1.1",
+        "text=הַחֲזָקִים",
+        "prefixes=Hd",
+        "strong=H5841",
+        "lemma=עַזָּתִי",
+        "definitions=none",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 15,
+        "verse": 1,
+        "word_index": 4,
+        "text": "הַכּשְׁלִים",
+        "strong": "H2858",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עָלֵינוּ הַ/חֲזָקִים לָ/שֵׂאת חֻלְשׁוֹת הַ/כּשְׁלִים וְ/אַל־נְבַקֵּשׁ הֲנָאַת עַצְמֵנוּ׃"
+      },
+      "previous_strong": "H2858",
+      "new_strong": "H3782",
+      "confidence": 0.86,
+      "reason": "הַכּשְׁלִים means the stumbling/weak ones; H3782 כשל fits better than unrelated H2858 signet.",
+      "evidence": [
+        "occurrence=romans.15.1.4",
+        "text=הַכּשְׁלִים",
+        "prefixes=Hd",
+        "strong=H2858",
+        "lemma=חֹתֶמֶת",
+        "definitions=signet-ring",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 15,
+        "verse": 4,
+        "word_index": 11,
+        "text": "בְּסַבְלָנוּת",
+        "strong": "H6280",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָל־אֲשֶׁר נִכְתַּב מִלְּפָנִים לְ/לַמְּדֵנוּ נִכְתָּב לְ/מַעַן תִּהְיֶה־לָּ/נוּ תִקְוָה בְּ/סַבְלָנוּת וּ/בְ/תַנְחוּמוֹת הַ/כְּתוּבִים׃"
+      },
+      "previous_strong": "H6280",
+      "new_strong": "D0104",
+      "confidence": 0.93,
+      "reason": "בְּסַבְלָנוּת means in patience/endurance; existing custom D0104 סבלנות fits, while H6280 abundance is unrelated.",
+      "evidence": [
+        "occurrence=romans.15.4.11",
+        "text=בְּסַבְלָנוּת",
+        "prefixes=Hb",
+        "strong=H6280",
+        "lemma=עָתַר",
+        "definitions=be abundant",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 15,
+        "verse": 4,
+        "word_index": 12,
+        "text": "וּבְתַנְחוּמוֹת",
+        "strong": "H791",
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָל־אֲשֶׁר נִכְתַּב מִלְּפָנִים לְ/לַמְּדֵנוּ נִכְתָּב לְ/מַעַן תִּהְיֶה־לָּ/נוּ תִקְוָה בְּ/סַבְלָנוּת וּ/בְ/תַנְחוּמוֹת הַ/כְּתוּבִים׃"
+      },
+      "previous_strong": "H791",
+      "new_strong": "H5150",
+      "confidence": 0.9,
+      "reason": "וּבְתַנְחוּמוֹת means and by comforts/encouragements; H5150 נחום comfort fits, while H791 is unrelated.",
+      "evidence": [
+        "occurrence=romans.15.4.12",
+        "text=וּבְתַנְחוּמוֹת",
+        "prefixes=Hc,Hb",
+        "strong=H791",
+        "lemma=אַשְׁבֵּעַ",
+        "definitions=none",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 15,
+        "verse": 11,
+        "word_index": 8,
+        "text": "הָאֻמִּים׃",
+        "strong": "Hd/H523",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אוֹמֵר הַ/לְלוּ אֶת־יְהוָֹה כָּל־גּוֹיִם שַׁבְּחוּהוּ כָּל־הָ/אֻמִּים׃"
+      },
+      "previous_strong": "Hd/H523",
+      "new_strong": "H523",
+      "confidence": 0.9,
+      "reason": "הָאֻמִּים means the peoples/nations; H523 is correct.",
+      "evidence": [
+        "occurrence=romans.15.11.8",
+        "text=הָאֻמִּים׃",
+        "prefixes=Hd",
+        "strong=H523",
+        "lemma=אֻמַּה",
+        "definitions=tribe | people",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 16,
+        "verse": 1,
+        "word_index": 2,
+        "text": "לָכֶם",
+        "strong": "H3488",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנְנִי מַזְכִּיר לָ/כֶם לְ/טוֹב אֶת־פּוּבִי אֲחוֹתֵנוּ שֶׁהִיא מְשַׁמֶּשֶׁת הַ/קְּהִלָּה אֲשֶׁר בְּ/קַנְכְּרָי׃"
+      },
+      "previous_strong": "H3488",
+      "new_strong": null,
+      "confidence": 0.25,
+      "reason": "לָכֶם is a pronominal/prepositional form (“to/for you”); leave for manual grammar-policy handling rather than assigning a lexical Strong.",
+      "evidence": [
+        "occurrence=romans.16.1.2",
+        "text=לָכֶם",
+        "prefixes=Hl",
+        "strong=H3488",
+        "lemma=יְתִב",
+        "definitions=sit | dwell",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 16,
+        "verse": 18,
+        "word_index": 15,
+        "text": "נֹעַם",
+        "strong": "H5278",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אֲנָשִׁים אֲשֶׁר כָּ/אֵלֶּה אֵינָם עֹבְדִים אֶת־אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ כִּי אִם־אֶת־כְּ/רֵשָׂם וּ/בְ/אִמְרֵי נֹעַם וּ/שְׂפַת חֲלָקוֹת יַתְעוּ אֶת־לֵב הַ/פְּתָאִים׃"
+      },
+      "previous_strong": "H5278",
+      "new_strong": "H5278",
+      "confidence": 0.9,
+      "reason": "נֹעַם means pleasantness/charm; H5278 is correct.",
+      "evidence": [
+        "occurrence=romans.16.18.15",
+        "text=נֹעַם",
+        "prefixes=none",
+        "strong=H5278",
+        "lemma=נֹעַם",
+        "definitions=delightfulness | pleasantness | delightfulness | name of one of two symbol. staves Zc 11:7, 10. | pleasantness",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 16,
+        "verse": 18,
+        "word_index": 16,
+        "text": "וּשְׂפַת",
+        "strong": "H8239",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אֲנָשִׁים אֲשֶׁר כָּ/אֵלֶּה אֵינָם עֹבְדִים אֶת־אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ כִּי אִם־אֶת־כְּ/רֵשָׂם וּ/בְ/אִמְרֵי נֹעַם וּ/שְׂפַת חֲלָקוֹת יַתְעוּ אֶת־לֵב הַ/פְּתָאִים׃"
+      },
+      "previous_strong": "H8239",
+      "new_strong": "H8193",
+      "confidence": 0.92,
+      "reason": "וּשְׂפַת means and lip/speech; H8193 שפה fits, while H8239 set is unrelated.",
+      "evidence": [
+        "occurrence=romans.16.18.16",
+        "text=וּשְׂפַת",
+        "prefixes=Hc",
+        "strong=H8239",
+        "lemma=שָׁפַת",
+        "definitions=set",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 1,
+        "verse": 6,
+        "word_index": 13,
+        "text": "חֶדְוַת",
+        "strong": "H2304",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַתֶּם הֱ/יִיתֶם הֹ/לְכִים בְּ/עִקְּבוֹתֵינוּ וּ/בְ/עִקְּבוֹת אֲדֹנֵינוּ בְּ/קַבֶּלְכֶם אֶת־הַ/דָּבָר בְּ/תוֹךְ לַ/חַץ רָב עִם־חֶדְוַת רוּחַ הַ/קֹּדֶשׁ׃"
+      },
+      "previous_strong": "H2304",
+      "new_strong": "H2304",
+      "confidence": 0.9,
+      "reason": "חֶדְוַת means joy/gladness; H2304 is correct.",
+      "evidence": [
+        "occurrence=thessalonians1.1.6.13",
+        "text=חֶדְוַת",
+        "prefixes=none",
+        "strong=H2304",
+        "lemma=חֶדְוָה",
+        "definitions=joy",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 2,
+        "verse": 8,
+        "word_index": 14,
+        "text": "נַפְשֹׁתֵינוּ",
+        "strong": "H340",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/חַבְּבֵנוּ כָ/כָה אֶתְכֶם חָפַצְנוּ לָ/תֵת לָ/כֶם לֹא לְ/בַד אֶת־בְּ/שׂוֹרַת הָ/אֱלֹהִים כִּי־גַם אֶת־נַפְשֹׁתֵינוּ יַעַן כִּי־הֱ/יִיתֶם חֲבִיבִים עָלֵינוּ׃"
+      },
+      "previous_strong": "H340",
+      "new_strong": "H5315",
+      "confidence": 0.94,
+      "reason": "נַפְשֹׁתֵינוּ means our souls/lives; H5315 נפש fits, while H340 enemy is unrelated.",
+      "evidence": [
+        "occurrence=thessalonians1.2.8.14",
+        "text=נַפְשֹׁתֵינוּ",
+        "prefixes=none",
+        "strong=H340",
+        "lemma=אָיַב",
+        "definitions=be hostile to | enemy",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 5,
+        "text": "לְהִתְאַפֵּק",
+        "strong": "Hl/H662",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַל־כֵּן לֹא יָכֹלְנוּ עוֹד לְ/הִתְאַפֵּק וַ/נִּוָּעֵץ לְ/הִוָּתֵר לְ/בַ/דֵּנוּ בְּ/אַתִּינָס׃"
+      },
+      "previous_strong": "Hl/H662",
+      "new_strong": "H662",
+      "confidence": 0.9,
+      "reason": "לְהִתְאַפֵּק means to restrain/endure; H662 אפק is correct.",
+      "evidence": [
+        "occurrence=thessalonians1.3.1.5",
+        "text=לְהִתְאַפֵּק",
+        "prefixes=Hl",
+        "strong=H662",
+        "lemma=אָפַק",
+        "definitions=hold | be strong | force | compel oneself | restrain oneself",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 4,
+        "verse": 3,
+        "word_index": 8,
+        "text": "הַזְּנוּת׃",
+        "strong": "H6052",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי רְצוֹן הָ/אֱלֹהִים הִיא קְדֻשַּׁתְכֶם אֲשֶׁר תִּתְרַחֲקוּ מִן־הַ/זְּנוּת׃"
+      },
+      "previous_strong": "H6052",
+      "new_strong": "H2184",
+      "confidence": 0.92,
+      "reason": "הַזְּנוּת means fornication/sexual immorality; H2184 זנות fits, while H6052 cloud is unrelated.",
+      "evidence": [
+        "occurrence=thessalonians1.4.3.8",
+        "text=הַזְּנוּת׃",
+        "prefixes=Hd",
+        "strong=H6052",
+        "lemma=עָנָן",
+        "definitions=none",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 4,
+        "verse": 11,
+        "word_index": 2,
+        "text": "בְּנַחַת",
+        "strong": "Hb/H5183",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "וְ/תִשְׁתַּדְּלוּ לָ/שֶׁבֶת בְּ/נַחַת וְ/תַעֲשֹוּ אִישׁ מְלַאכְתּוֹ בַּ/עֲמַל יְדֵיכֶם כַּ/אֲשֶׁר צִוִּינוּ אֶתְכֶם׃"
+      },
+      "previous_strong": "Hb/H5183",
+      "new_strong": "H5183",
+      "confidence": 0.9,
+      "reason": "בְּנַחַת means in quietness/rest; H5183 is correct.",
+      "evidence": [
+        "occurrence=thessalonians1.4.11.2",
+        "text=בְּנַחַת",
+        "prefixes=Hb",
+        "strong=H5183",
+        "lemma=נַחַת",
+        "definitions=quietness | rest",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 5,
+        "verse": 3,
+        "word_index": 4,
+        "text": "וְשַׁלְוָה",
+        "strong": "Hc/H7962",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי בְּ/עֵת אָמְרָם שָׁלוֹם וְ/שַׁלְוָה יָבֹא עֲלֵיהֶם הַ/שֶּׁבֶר פִּתְאֹם כַּ/חֲבָלִים עַל־הֶהָרָה וְ/לֹא יוּכְלוּ לְ/הִמָּלֵט׃"
+      },
+      "previous_strong": "Hc/H7962",
+      "new_strong": "H7962",
+      "confidence": 0.9,
+      "reason": "וְשַׁלְוָה means and ease/security; H7962 is correct.",
+      "evidence": [
+        "occurrence=thessalonians1.5.3.4",
+        "text=וְשַׁלְוָה",
+        "prefixes=Hc",
+        "strong=H7962",
+        "lemma=שַׁלְוָה",
+        "definitions=quietness | ease",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 5,
+        "verse": 3,
+        "word_index": 7,
+        "text": "הַשֶּׁבֶר",
+        "strong": "Hd/H7668",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי בְּ/עֵת אָמְרָם שָׁלוֹם וְ/שַׁלְוָה יָבֹא עֲלֵיהֶם הַ/שֶּׁבֶר פִּתְאֹם כַּ/חֲבָלִים עַל־הֶהָרָה וְ/לֹא יוּכְלוּ לְ/הִמָּלֵט׃"
+      },
+      "previous_strong": "Hd/H7668",
+      "new_strong": "H7667",
+      "confidence": 0.9,
+      "reason": "הַשֶּׁבֶר means the destruction/breaking; H7667 has the usable noun definition, while H7668 is an empty duplicate.",
+      "evidence": [
+        "occurrence=thessalonians1.5.3.7",
+        "text=הַשֶּׁבֶר",
+        "prefixes=Hd",
+        "strong=H7668",
+        "lemma=שֶׁבֶר",
+        "definitions=corn | grain",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 5,
+        "verse": 8,
+        "word_index": 7,
+        "text": "שִׁרְיוֹן",
+        "strong": "H8302",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנַחְנוּ בְּ/נֵי הַ/יּוֹם נִנָּזְרָה־נָּא וְ/נִלְבַּשׁ אֶת־שִׁרְיוֹן הָ/אֱמוּנָה וְ/הָ/אַהֲבָה וְ/כַ/כּוֹבַע אֶת־תִּקְוַת הַ/יְשׁוּעָה׃"
+      },
+      "previous_strong": "H8302",
+      "new_strong": "H8302",
+      "confidence": 0.9,
+      "reason": "שִׁרְיוֹן means breastplate/armor; H8302 is correct.",
+      "evidence": [
+        "occurrence=thessalonians1.5.8.7",
+        "text=שִׁרְיוֹן",
+        "prefixes=none",
+        "strong=H8302",
+        "lemma=שִׁרְיוֹן",
+        "definitions=body-armour",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 5,
+        "verse": 8,
+        "word_index": 10,
+        "text": "וְכַכּוֹבַע",
+        "strong": "H3553",
+        "prefixes": [
+          "Hc",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנַחְנוּ בְּ/נֵי הַ/יּוֹם נִנָּזְרָה־נָּא וְ/נִלְבַּשׁ אֶת־שִׁרְיוֹן הָ/אֱמוּנָה וְ/הָ/אַהֲבָה וְ/כַ/כּוֹבַע אֶת־תִּקְוַת הַ/יְשׁוּעָה׃"
+      },
+      "previous_strong": "H3553",
+      "new_strong": "H3553",
+      "confidence": 0.9,
+      "reason": "וְכַכּוֹבַע means and like a helmet; H3553 is correct.",
+      "evidence": [
+        "occurrence=thessalonians1.5.8.10",
+        "text=וְכַכּוֹבַע",
+        "prefixes=Hc,Hk",
+        "strong=H3553",
+        "lemma=כּוֹבַע",
+        "definitions=helmet",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 1,
+        "verse": 8,
+        "word_index": 1,
+        "text": "לֶהָבָה",
+        "strong": "Hl/H3852",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בְּ/אֵשׁ לֶ/הָבָה לְ/הָ/שִׁיב נָקָם לַ/אֲשֶׁר לֹא־יָדְעוּ אֶת־הָ/אֱלֹהִים וְ/לֹא שָׁמְעוּ לִ/בְ/שׂוֹרַת אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "Hl/H3852",
+      "new_strong": "H3852",
+      "confidence": 0.9,
+      "reason": "לֶהָבָה means flame; H3852 is correct.",
+      "evidence": [
+        "occurrence=thessalonians2.1.8.1",
+        "text=לֶהָבָה",
+        "prefixes=Hl",
+        "strong=H3852",
+        "lemma=לֶהָבָה",
+        "definitions=flame | point | head",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 1,
+        "verse": 9,
+        "word_index": 9,
+        "text": "גְּאוֹנוֹ׃",
+        "strong": "H1347",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר יִשְׂאוּ מִשְׁפַּט אָבְדַּן עוֹלָם מֵאֵת פְּנֵי הָ/אָדוֹן וּ/מֵהֲדַר גְּאוֹנוֹ׃"
+      },
+      "previous_strong": "H1347",
+      "new_strong": "H1347",
+      "confidence": 0.9,
+      "reason": "גְּאוֹנוֹ means his majesty/excellence; H1347 is correct.",
+      "evidence": [
+        "occurrence=thessalonians2.1.9.9",
+        "text=גְּאוֹנוֹ׃",
+        "prefixes=none",
+        "strong=H1347",
+        "lemma=גָּאוֹן",
+        "definitions=exaltation | exaltation | majesty | excellence | pride",
+        "codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "רצה",
+        "strong": "H7521",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "רצה"
+      },
+      "previous_strong": "H7521",
+      "new_strong": "H7521",
+      "confidence": 0.9,
+      "reason": "H7521 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7521",
+      "hebrew": "רצה",
+      "transliteration_en": "ratsah",
+      "transliteration_es": "ratsah",
+      "definition": {
+        "text_en": "accept favorably; be pleased with; reconcile.",
+        "text_es": "aceptar favorablemente; agradarse; reconciliar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "דמות",
+        "strong": "H1823",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "דמות"
+      },
+      "previous_strong": "H1823",
+      "new_strong": "H1823",
+      "confidence": 0.9,
+      "reason": "H1823 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1823",
+      "hebrew": "דמות",
+      "transliteration_en": "demuth",
+      "transliteration_es": "demut",
+      "definition": {
+        "text_en": "likeness; similitude.",
+        "text_es": "semejanza; similitud.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "שלט",
+        "strong": "H7980",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שלט"
+      },
+      "previous_strong": "H7980",
+      "new_strong": "H7980",
+      "confidence": 0.9,
+      "reason": "H7980 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7980",
+      "hebrew": "שלט",
+      "transliteration_en": "shalat",
+      "transliteration_es": "shalat",
+      "definition": {
+        "text_en": "rule; have mastery; dominate.",
+        "text_es": "gobernar; tener dominio; dominar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "בחר",
+        "strong": "H977",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בחר"
+      },
+      "previous_strong": "H977",
+      "new_strong": "H977",
+      "confidence": 0.9,
+      "reason": "H977 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H977",
+      "hebrew": "בחר",
+      "transliteration_en": "bachar",
+      "transliteration_es": "bajar",
+      "definition": {
+        "text_en": "choose; elect; select.",
+        "text_es": "escoger; elegir; seleccionar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "רחם",
+        "strong": "H7355",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "רחם"
+      },
+      "previous_strong": "H7355",
+      "new_strong": "H7355",
+      "confidence": 0.9,
+      "reason": "H7355 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7355",
+      "hebrew": "רחם",
+      "transliteration_en": "racham",
+      "transliteration_es": "rajam",
+      "definition": {
+        "text_en": "have compassion; show mercy; love.",
+        "text_es": "tener compasión; mostrar misericordia; amar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "צור",
+        "strong": "H6697",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "צור"
+      },
+      "previous_strong": "H6697",
+      "new_strong": "H6697",
+      "confidence": 0.9,
+      "reason": "H6697 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6697",
+      "hebrew": "צור",
+      "transliteration_en": "tsur",
+      "transliteration_es": "tsur",
+      "definition": {
+        "text_en": "rock; cliff.",
+        "text_es": "roca; peñasco.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "ידע",
+        "strong": "H3045",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "ידע"
+      },
+      "previous_strong": "H3045",
+      "new_strong": "H3045",
+      "confidence": 0.9,
+      "reason": "H3045 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3045",
+      "hebrew": "ידע",
+      "transliteration_en": "yada",
+      "transliteration_es": "yada",
+      "definition": {
+        "text_en": "know; perceive.",
+        "text_es": "saber; conocer; percibir.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "שמן",
+        "strong": "H8080",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שמן"
+      },
+      "previous_strong": "H8080",
+      "new_strong": "H8080",
+      "confidence": 0.9,
+      "reason": "H8080 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8080",
+      "hebrew": "שמן",
+      "transliteration_en": "shamen",
+      "transliteration_es": "shamen",
+      "definition": {
+        "text_en": "grow fat; become dull/fat.",
+        "text_es": "engordar; volverse insensible o pesado.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "דין",
+        "strong": "H1779",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "דין"
+      },
+      "previous_strong": "H1779",
+      "new_strong": "H1779",
+      "confidence": 0.9,
+      "reason": "H1779 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1779",
+      "hebrew": "דין",
+      "transliteration_en": "din",
+      "transliteration_es": "din",
+      "definition": {
+        "text_en": "judgment; condemnation; legal cause.",
+        "text_es": "juicio; condenación; causa legal.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "חנם",
+        "strong": "H2600",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "חנם"
+      },
+      "previous_strong": "H2600",
+      "new_strong": "H2600",
+      "confidence": 0.9,
+      "reason": "H2600 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2600",
+      "hebrew": "חנם",
+      "transliteration_en": "chinnam",
+      "transliteration_es": "jinam",
+      "definition": {
+        "text_en": "for nothing; in vain; without cause.",
+        "text_es": "gratis; en vano; sin causa.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "חלה",
+        "strong": "H2470",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "חלה"
+      },
+      "previous_strong": "H2470",
+      "new_strong": "H2470",
+      "confidence": 0.9,
+      "reason": "H2470 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2470",
+      "hebrew": "חלה",
+      "transliteration_en": "chalah",
+      "transliteration_es": "jalah",
+      "definition": {
+        "text_en": "be weak; be sick.",
+        "text_es": "estar débil; estar enfermo.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "בזה",
+        "strong": "H959",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בזה"
+      },
+      "previous_strong": "H959",
+      "new_strong": "H959",
+      "confidence": 0.9,
+      "reason": "H959 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H959",
+      "hebrew": "בזה",
+      "transliteration_en": "bazah",
+      "transliteration_es": "bazah",
+      "definition": {
+        "text_en": "despise; hold in contempt.",
+        "text_es": "despreciar; tener en poco.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "כשל",
+        "strong": "H3782",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כשל"
+      },
+      "previous_strong": "H3782",
+      "new_strong": "H3782",
+      "confidence": 0.9,
+      "reason": "H3782 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3782",
+      "hebrew": "כשל",
+      "transliteration_en": "kashal",
+      "transliteration_es": "kashal",
+      "definition": {
+        "text_en": "stumble; stagger; be weak.",
+        "text_es": "tropezar; tambalear; ser débil.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "נחום",
+        "strong": "H5150",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "נחום"
+      },
+      "previous_strong": "H5150",
+      "new_strong": "H5150",
+      "confidence": 0.9,
+      "reason": "H5150 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5150",
+      "hebrew": "נחום",
+      "transliteration_en": "nichum",
+      "transliteration_es": "nijum",
+      "definition": {
+        "text_en": "comfort; consolation; compassion.",
+        "text_es": "consuelo; consolación; compasión.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "שפה",
+        "strong": "H8193",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שפה"
+      },
+      "previous_strong": "H8193",
+      "new_strong": "H8193",
+      "confidence": 0.9,
+      "reason": "H8193 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8193",
+      "hebrew": "שפה",
+      "transliteration_en": "saphah",
+      "transliteration_es": "safah",
+      "definition": {
+        "text_en": "lip; speech; language.",
+        "text_es": "labio; habla; lengua.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "חדוה",
+        "strong": "H2304",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "חדוה"
+      },
+      "previous_strong": "H2304",
+      "new_strong": "H2304",
+      "confidence": 0.9,
+      "reason": "H2304 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2304",
+      "hebrew": "חדוה",
+      "transliteration_en": "chedvah",
+      "transliteration_es": "jedvah",
+      "definition": {
+        "text_en": "joy; gladness.",
+        "text_es": "gozo; alegría.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "זנות",
+        "strong": "H2184",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "זנות"
+      },
+      "previous_strong": "H2184",
+      "new_strong": "H2184",
+      "confidence": 0.9,
+      "reason": "H2184 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2184",
+      "hebrew": "זנות",
+      "transliteration_en": "zenuth",
+      "transliteration_es": "zenut",
+      "definition": {
+        "text_en": "fornication; sexual immorality.",
+        "text_es": "fornicación; inmoralidad sexual.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "נחת",
+        "strong": "H5183",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "נחת"
+      },
+      "previous_strong": "H5183",
+      "new_strong": "H5183",
+      "confidence": 0.9,
+      "reason": "H5183 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5183",
+      "hebrew": "נחת",
+      "transliteration_en": "nachath",
+      "transliteration_es": "najat",
+      "definition": {
+        "text_en": "quietness; rest.",
+        "text_es": "quietud; descanso.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "שלוה",
+        "strong": "H7962",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שלוה"
+      },
+      "previous_strong": "H7962",
+      "new_strong": "H7962",
+      "confidence": 0.9,
+      "reason": "H7962 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7962",
+      "hebrew": "שלוה",
+      "transliteration_en": "shalvah",
+      "transliteration_es": "shalvah",
+      "definition": {
+        "text_en": "ease; security; quietness.",
+        "text_es": "tranquilidad; seguridad; quietud.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "שבר",
+        "strong": "H7667",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שבר"
+      },
+      "previous_strong": "H7667",
+      "new_strong": "H7667",
+      "confidence": 0.9,
+      "reason": "H7667 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7667",
+      "hebrew": "שבר",
+      "transliteration_en": "shever",
+      "transliteration_es": "shever",
+      "definition": {
+        "text_en": "breaking; destruction; ruin.",
+        "text_es": "quebrantamiento; destrucción; ruina.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "כובע",
+        "strong": "H3553",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כובע"
+      },
+      "previous_strong": "H3553",
+      "new_strong": "H3553",
+      "confidence": 0.9,
+      "reason": "H3553 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3553",
+      "hebrew": "כובע",
+      "transliteration_en": "kova",
+      "transliteration_es": "kova",
+      "definition": {
+        "text_en": "helmet.",
+        "text_es": "casco.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "להבה",
+        "strong": "H3852",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "להבה"
+      },
+      "previous_strong": "H3852",
+      "new_strong": "H3852",
+      "confidence": 0.9,
+      "reason": "H3852 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3852",
+      "hebrew": "להבה",
+      "transliteration_en": "lehavah",
+      "transliteration_es": "lehavah",
+      "definition": {
+        "text_en": "flame; blaze.",
+        "text_es": "llama; llamarada.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "גאון",
+        "strong": "H1347",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "גאון"
+      },
+      "previous_strong": "H1347",
+      "new_strong": "H1347",
+      "confidence": 0.9,
+      "reason": "H1347 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0058"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1347",
+      "hebrew": "גאון",
+      "transliteration_en": "gaon",
+      "transliteration_es": "gaon",
+      "definition": {
+        "text_en": "majesty; excellence; pride.",
+        "text_es": "majestad; excelencia; orgullo.",
+        "source": "delitzsch_review"
+      }
+    }
+  ]
+}
