@@ -1,0 +1,1312 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:15:24.105293+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 1,
+        "word_index": 9,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "הֵן הַ/מַּאֲמָר הָ/רִאשׁוֹן תְּאוֹפִילוֹס עֲשִׂיתִיהוּ עַל־כֹּל אֲשֶׁר הֵחֵל יֵשׁוּעַ לַ/עֲשֹוֹת וּ/לְ/לַמֵּד׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.1.1.9",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 10,
+        "word_index": 0,
+        "text": "וַיַּבִּיטוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּבִּיטוּ אַחֲרָיו הַ/שָּׁמַיְמָה בְּ/עָבְרוֹ וְ/הִנֵּה שְׁנֵי אֲנָשִׁים לְ/ב/וּשֵׁי בַ/דִּים נִצָּבִים עֲלֵיהֶם׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.1.10.0",
+        "text=וַיַּבִּיטוּ",
+        "prefixes=Hc"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 11,
+        "word_index": 9,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יֹּאמְרוּ אַתֶּם אַנְשֵׁי הַ/גָּלִיל מַה־תַּעַמְדוּ פֹה וְ/עֵינֵיכֶם הַ/שָּׁמַיְמָה יֵשׁוּעַ זֶה אֲשֶׁר לֻ/קַּח מֵאִתְּכֶם הַ/שָּׁמַיְמָה כֵּן בּ/וֹא יָבוֹא כַּ/אֲשֶׁר רְאִיתֶם אֹתוֹ עֹלֶה הַ/שָּׁמָיְמָה׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.1.11.9",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 9,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.1.13.9",
+        "text=פֶּטְרוֹס",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 14,
+        "text": "וְתוֹמָא",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.1.13.14",
+        "text=וְתוֹמָא",
+        "prefixes=Hc"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 14,
+        "word_index": 13,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "כָּל־אֵלֶּה הָיוּ שֹׁקְדִים יַחְדָּו בְּ/לֵב אֶחָד לְ/הִתְפַּלֵּל וּ/לְ/הִתְחַנֵּן וְ/עִמָּהֶם הַ/נָּשִׁים וּ/מִרְיָם אֵם יֵשׁוּעַ וְ/גַם־אֶחָיו׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.1.14.13",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 16,
+        "word_index": 23,
+        "text": "יֵשׁוּעַ׃",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אֲנָשִׁים אַחִים מִן־הַצֹּרֶךְ הָיָה כִּי יִמָּלֵא הַ/כָּתוּב הַ/הוּא אֲשֶׁר דִּבֶּר מִקֶּדֶם רוּחַ הַ/קֹּדֶשׁ בְּ/פִי דָוִד עַל־יְהוּדָה אֲשֶׁר הָיָה מוֹלִיךְ אֶת־תֹּפְשֵׂי יֵשׁוּעַ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.1.16.23",
+        "text=יֵשׁוּעַ׃",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 17,
+        "word_index": 2,
+        "text": "נִמְנֶה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־הָיָה נִמְנֶה אִתָּנוּ וְ/זָכָה בְּ/גוֹרַל הַ/שֵּׁרוּת הַזֶּה׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.1.17.2",
+        "text=נִמְנֶה",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 20,
+        "word_index": 9,
+        "text": "בָהּ",
+        "strong": "H2657",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "כִּי כָ/תוּב בְּ/סֵפֶר תְּהִלִּים תְּהִי־טִירָתוֹ נְשַׁמָּה וְ/אַל־יְהִי בָהּ ישֵׁב וּ/פְקֻדָּתוֹ יִקַּח אַחֵר׃"
+      },
+      "previous_strong": "H2657",
+      "new_strong": "H2657",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H2657, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.1.20.9",
+        "text=בָהּ",
+        "prefixes=none",
+        "strong=H2657"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 21,
+        "word_index": 15,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וְ/עַל־כֵּן מִן־הַצֹּרֶךְ כִּי מִן־הָ/אֲנָשִׁים הָ/אֵלֶּה אֲשֶׁר הִתְהַלְּכוּ אִתָּנוּ כָּל־יְמֵי הֱ/יוֹת אֲדֹנֵינוּ יֵשׁוּעַ יוֹצֵא וָ/בָא לְ/פָנֵינוּ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.1.21.15",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 23,
+        "word_index": 9,
+        "text": "יוּסְטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעֲמִידוּ שְׁנַיִם אֶת־יוֹסֵף הַ/נִּקְרָא בַר־שַׁבָּא וְ/הוּא מְכֻנֶּה יוּסְטוֹס וְ/אֵת מַתִּיָּה׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.1.23.9",
+        "text=יוּסְטוֹס",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 2,
+        "word_index": 15,
+        "text": "בוֹ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי פִתְאֹם קוֹל רַעַשׁ מִן־הַ/שָּׁמַיִם כְּ/קוֹל רוּחַ סְעָרָה וַ/יְמַלֵּא אֶת־כָּל־הַ/בַּיִת אֲשֶׁר יָשְׁבוּ בוֹ׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.2.2.15",
+        "text=בוֹ׃",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 9,
+        "word_index": 8,
+        "text": "פָּנְטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פַּרְתִּיִּים וּ/מָדִים וְ/עֵילָמִים וְ/ישְׁבֵי אֲרַם נַהֲרָיִם יְהוּדָה וְ/קַפּוּדְקִיָּה פָּנְטוֹס וְ/אַסְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.2.9.8",
+        "text=פָּנְטוֹס",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 10,
+        "word_index": 8,
+        "text": "קוּרִינִי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פְּרוּגְיָא וּ/פַמְפּוּלְיָא מִצְרַיִם וְ/חֶבֶל ל/וּב אֲשֶׁר עַל־יַד קוּרִינִי וְ/הַ/בָּאִים מֵרוֹמִי גַּם־יְהוּדִים גַּם־גֵּרִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.2.10.8",
+        "text=קוּרִינִי",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 22,
+        "word_index": 5,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אַנְשֵׁי יִשְׂרָאֵל שִׁמְעוּ הַ/דְּבָרִים הָ/אֵלֶּה יֵשׁוּעַ הַ/נָּצְרִי הָ/אִישׁ אֲשֶׁר נֶאֱמַן לָ/כֶם מֵאֵת הָ/אֱלֹהִים בִּ/גְבוּרוֹת וּ/בְ/מוֹפְתִים וּ/בְ/אֹתוֹת אֲשֶׁר הָ/אֱלֹהִים עָשָׂה עַל־יָדוֹ בְּ/תוֹכֲכֶם כַּ/אֲשֶׁר יְדַעְתֶּם גַּם־אַתֶּם׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.2.22.5",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 29,
+        "word_index": 15,
+        "text": "וּקְבוּרָתוֹ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲנָשִׁים אַחִים הַ/נִּיחוּ לִי וַ/אֲדַבְּרָה בְּ/אָזְנֵי כֻ/לְּ/כֶם עַל־דָּוִד אָבִינוּ אֲשֶׁר גַּם־מֵת גַּם־נִקְבַּר וּ/קְבוּרָתוֹ אִתָּנוּ הִיא עַד־הַ/יּוֹם הַזֶּה׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.2.29.15",
+        "text=וּקְבוּרָתוֹ",
+        "prefixes=Hc"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 32,
+        "word_index": 1,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אֶת־יֵשׁוּעַ זֶה הֵ/קִים אֱלֹהִים מִן־הַ/מֵּתִים וַ/אֲנַחְנוּ כֻ/לָּ/נוּ עֵדָיו׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.2.32.1",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 36,
+        "word_index": 12,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "לָ/כֵן יֵדַע־נָא בֵּ/ית יִשְׂרָאֵל כֻּ/לּוֹ כִּי לְ/אָדוֹן וּ/לְ/מָשִׁיחַ שָׂמוֹ הָ/אֱלֹהִים אֶת־יֵשׁוּעַ זֶה אֲשֶׁר צְלַבְתֶּם׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.2.36.12",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 36,
+        "word_index": 15,
+        "text": "צְלַבְתֶּם׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן יֵדַע־נָא בֵּ/ית יִשְׂרָאֵל כֻּ/לּוֹ כִּי לְ/אָדוֹן וּ/לְ/מָשִׁיחַ שָׂמוֹ הָ/אֱלֹהִים אֶת־יֵשׁוּעַ זֶה אֲשֶׁר צְלַבְתֶּם׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.2.36.15",
+        "text=צְלַבְתֶּם׃",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 38,
+        "word_index": 11,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יֹּאמֶר פֶּטְרוֹס אֲלֵיהֶם שׁוּבוּ מִדַּרְכֵיכֶם וְ/הִטָּבְלוּ כָּל־אִישׁ מִכֶּם עַל־שֵׁם יֵשׁוּעַ הַ/מָּשִׁיחַ לִ/סְלִיחַת חֲטָאֵיכֶם וְ/קִבַּלְתֶּם אֶת־מַתְּנַת רוּחַ הַ/קֹּדֶשׁ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.2.38.11",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 39,
+        "word_index": 8,
+        "text": "קֹרֵא",
+        "strong": "H6981",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "כִּי לָ/כֶם הַ/הַבְטָחָה וְ/לִ/בְנֵיכֶם וּ/לְ/כֹל הָ/רְחוֹקִים לְ/כָל־אֲשֶׁר קֹרֵא יְהוָֹה אֱלֹהֵינוּ׃"
+      },
+      "previous_strong": "H6981",
+      "new_strong": "H6981",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H6981, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.2.39.8",
+        "text=קֹרֵא",
+        "prefixes=none",
+        "strong=H6981"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 42,
+        "word_index": 8,
+        "text": "בְּצִיעַת",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּהְיוּ שֹׁקְדִים עַל־תּוֹרַת הַ/שְּׁלִיחִים וְ/עַל־הַ/הִתְחַבְּרוּת וְ/עַל־בְּ/צִיעַת הַ/לֶּחֶם וְ/עַל־הַ/תְּפִלָּה׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.2.42.8",
+        "text=בְּצִיעַת",
+        "prefixes=Hb"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 47,
+        "word_index": 20,
+        "text": "הַנּוֹשָׁעִים׃",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאכְלוּ מְזוֹנָם בְּ/גִילָה וּ/בְ/תֹם לֵ/בָב וַ/יְשַׁבְּחוּ אֶת־הָ/אֱלֹהִים וַ/יִּמְצְאוּ חֵן בְּ/עֵינֵי כָל־הָעָם וְ/הָ/אָדוֹן ה/וֹסִיף יוֹם יוֹם עַל־הָ/עֵדָה אֶת־הַ/נּוֹשָׁעִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.2.47.20",
+        "text=הַנּוֹשָׁעִים׃",
+        "prefixes=Hd"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 4,
+        "word_index": 2,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּסְתַּכֶּל־בּוֹ פֶּטְרוֹס וְ/גַם־יוֹחָנָן וַ/יֹּאמֶר אֵלָיו הַ/בִּיטָה אֵלֵינוּ׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.3.4.2",
+        "text=פֶּטְרוֹס",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 6,
+        "word_index": 13,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יֹּאמֶר פֶּטְרוֹס כֶּ/סֶף וְ/זָהָב אֵין־לִי אֲבָל אֵת אֲשֶׁר בְּ/יָדִי אֶתְּנֶנּוּ לָךְ בְּ/שֵׁם־יֵשׁוּעַ הַ/מָּשִׁיחַ הַ/נָּצְרִי קוּם הִתְהַלֵּךְ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.3.6.13",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 10,
+        "word_index": 16,
+        "text": "הַנַּעֲשָׂה",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּכִּירוּ אוֹתוֹ כִּי הוּא אֲשֶׁר הָיָה ישֵׁב לִ/שְׁאֹל צְדָקָה בְּ/שַׁעַר הַ/מִּקְדָּשׁ הַ/מְהֻדָּר וַ/יִּמָּלְאוּ שַׁמָּה וְ/תִמָּהוֹן עַל־הַ/נַּעֲשָׂה לוֹ׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.3.10.16",
+        "text=הַנַּעֲשָׂה",
+        "prefixes=Hd"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 19,
+        "text": "וּבַחֲסִידוּתֵנוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּרְא פֶּטְרוֹס וַ/יַּעַן וַ/יֹּאמֶר אֶל־הָעָם אַנְשֵׁי יִשְׂרָאֵל מָה אַתֶּם תְּמֵהִים עַל־זֹאת וּ/מַה־תִּסְתַּכְּלוּ בָ/נוּ כְּ/אִלּוּ אֲנַחְנוּ בְּ/כֹ/חֵנוּ וּ/בַ/חֲסִידוּתֵנוּ שַׂמְנוּ אֶת־זֶה מִתְהַלֵּךְ׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.3.12.19",
+        "text=וּבַחֲסִידוּתֵנוּ",
+        "prefixes=Hc,Hb"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 13,
+        "word_index": 12,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵ/אלֹהֵי יַעֲקֹב אֱלֹהֵי אֲבוֹתֵינוּ הוּא פֵּאֵר אֶת־עַבְדּוֹ יֵשׁוּעַ אֲשֶׁר אַתֶּם מְסַרְתֶּם אוֹתוֹ וְ/כִ/חַשְׁתֶּם בּוֹ בִּ/פְנֵי פִילָטוֹס כְּ/שֶׁהָיָה דָן לְ/פָטְרוֹ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.3.13.12",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 13,
+        "word_index": 20,
+        "text": "פִילָטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵ/אלֹהֵי יַעֲקֹב אֱלֹהֵי אֲבוֹתֵינוּ הוּא פֵּאֵר אֶת־עַבְדּוֹ יֵשׁוּעַ אֲשֶׁר אַתֶּם מְסַרְתֶּם אוֹתוֹ וְ/כִ/חַשְׁתֶּם בּוֹ בִּ/פְנֵי פִילָטוֹס כְּ/שֶׁהָיָה דָן לְ/פָטְרוֹ׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.3.13.20",
+        "text=פִילָטוֹס",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 16,
+        "word_index": 19,
+        "text": "הֶעֶלְתָה־",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/מַעַן אֱמוּנַת שְׁמוֹ חִזַּק שְׁמוֹ אֶת־הָ/אִישׁ הַזֶּה אֲשֶׁר אַתֶּם רֹאִים וּ/מַכִּירִים אֹתוֹ וְ/הָ/אֱמוּנָה אֲשֶׁר לָ/נוּ עַל־יָדוֹ הִיא הֶ/עֶלְתָה־לוֹ אֶת־הָ/אֲרֻכָה הַ/זֹּאת לְ/עֵינֵי כֻ/לְּ/כֶם׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.3.16.19",
+        "text=הֶעֶלְתָה־",
+        "prefixes=Hd"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 20,
+        "word_index": 13,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "לְ/מַעַן אֲשֶׁר־יָבֹאוּ יְמֵי רְוָחָה מִלִּפְנֵי יְהוָֹה וְ/יִשְׁלַח אֶת־אֲשֶׁר בִּ/שְׂרוֹ מִקֶּדֶם אֶת־יֵשׁוּעַ הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.3.20.13",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 26,
+        "word_index": 6,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "לָ/כֶם בָּ/רִאשׁוֹנָה הֶ/עֱמִיד הָ/אֱלֹהִים אֶת־עַבְדוֹ יֵשׁוּעַ וַ/יִּשְׁלָחֵהוּ לְ/בָ/רֵךְ אֶתְכֶם בְּ/שׁוּבְכֶם כָּל־אִישׁ מֵרֹעַ מַעַלְלֵיכֶם׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.3.26.6",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 2,
+        "word_index": 9,
+        "text": "בְיֵשׁוּעַ",
+        "strong": "Hb/H3442",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "כִּי־חָרָה לָ/הֶם עַל־אֲשֶׁר לִ/מְּדוּ אֶת־הָעָם וְ/הִגִּידוּ בְ/יֵשׁוּעַ אֶת־תְּחִיַּת הַ/מֵּתִים׃"
+      },
+      "previous_strong": "Hb/H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.4.2.9",
+        "text=בְיֵשׁוּעַ",
+        "prefixes=Hb",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 10,
+        "word_index": 7,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "יִוָּדַע לְ/כֻ/לְּכֶם וּ/לְ/כָל־עַם יִשְׂרָאֵל כִּי־בְ/שֵׁם יֵשׁוּעַ הַ/מָּשִׁיחַ הַ/נָּצְרִי אֲשֶׁר צְלַבְתֶּם אוֹתוֹ וַ/אֲשֶׁר הָ/אֱלֹהִים הֱ/קִימוֹ מִן־הַ/מֵּתִים כִּי־בִ/שְׁמוֹ עֹמֵד זֶה לִ/פְנֵיכֶם בָּ/רִיא׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.4.10.7",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 12,
+        "word_index": 13,
+        "text": "נִוָּשֵׁעַ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵין הַ/יְשׁוּעָה בְּ/אַחֵר וְ/אֵין תַּחַת הַ/שָּׁמַיִם שֵׁם אַחֵר הַ/נִּתָּן לִ/בְ/נֵי אָדָם אֲשֶׁר־בּוֹ נִוָּשֵׁעַ׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.4.12.13",
+        "text=נִוָּשֵׁעַ׃",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 13,
+        "word_index": 18,
+        "text": "וַיַּכִּירוּם",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כַּ/אֲשֶׁר רָאוּ אֶת־בִּ/טְחוֹן לִ/בָּם שֶׁל־פֶּטְרוֹס וְ/יוֹחָנָן וְ/הֵ/בִינוּ כִּי הֶ/דְיוֹטוֹת וְ/לֹא בַ/עֲלֵי חָכְמָה הֵמָּה וַ/יִּתְמְהוּ עֲלֵיהֶם וַ/יַּכִּירוּם כִּי הִתְהַלְּכוּ עִם־יֵשׁוּעַ׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.4.13.18",
+        "text=וַיַּכִּירוּם",
+        "prefixes=Hc"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 13,
+        "word_index": 22,
+        "text": "יֵשׁוּעַ׃",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יְהִי כַּ/אֲשֶׁר רָאוּ אֶת־בִּ/טְחוֹן לִ/בָּם שֶׁל־פֶּטְרוֹס וְ/יוֹחָנָן וְ/הֵ/בִינוּ כִּי הֶ/דְיוֹטוֹת וְ/לֹא בַ/עֲלֵי חָכְמָה הֵמָּה וַ/יִּתְמְהוּ עֲלֵיהֶם וַ/יַּכִּירוּם כִּי הִתְהַלְּכוּ עִם־יֵשׁוּעַ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.4.13.22",
+        "text=יֵשׁוּעַ׃",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 18,
+        "word_index": 10,
+        "text": "יֵשׁוּעַ׃",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יִּקְרְאוּ אֹתָם וַ/יְצַוּוּם אֲשֶׁר לֹא־יְדַבְּרוּ דָבָר וְ/לֹא יְלַמְּדוּ בְּ/שֵׁם יֵשׁוּעַ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.4.18.10",
+        "text=יֵשׁוּעַ׃",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 21,
+        "word_index": 19,
+        "text": "הַנַּעֲשָׂה׃",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יּוֹסִיפוּ לִ/גְעָר־בָּם וַ/יִּפְטְרוּ אֹתָם בַּ/אֲשֶׁר לֹא־מָצְאוּ דָבָר לַ/עֲנוֹשׁ אֹתָם מִפְּנֵי הָעָם כִּי כֻ/לָּם מְהַלְלִים אֶת־הָ/אֱלֹהִים עַל־הַ/נַּעֲשָׂה׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.4.21.19",
+        "text=הַנַּעֲשָׂה׃",
+        "prefixes=Hd"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 27,
+        "word_index": 13,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "כִּי אָמְנָם נוֹסְדוּ בָּ/עִיר הַ/זֹּאת ה/וֹרְדוֹס וּ/פָנְטִיּוֹס פִּילָטוֹס עִם־הַ/גּוֹיִם וּ/לְ/אֻמֵּי יִשְׂרָאֵל עַל־יֵשׁוּעַ עַבְדְּךָ הַ/קָּדוֹשׁ אֲשֶׁר מָשָׁחְתָּ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.4.27.13",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 30,
+        "word_index": 8,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "בִּ/נְטֹתְךָ אֶת־יָדְךָ לְ/מַרְפֵּא וְ/לָ/תֵת אֹתוֹת וּ/מוֹפְתִים בְּ/שֵׁם יֵשׁוּעַ עַבְדְּךָ הַ/קָּדוֹשׁ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.4.30.8",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 32,
+        "word_index": 21,
+        "text": "בְּשֻׁתָּפוּת׃",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/קְהַל הַ/מַּאֲמִינִים הָיָה לָ/הֶם לֵב אֶחָד וְ/נֶפֶשׁ אַחַת וְ/אֵין אִישׁ מֵהֶם אוֹמֵר עַל־אֲשֶׁר בְּ/יָדוֹ לִי הוּא כִּי הַכֹּל הָיָה לָ/הֶם בְּ/שֻׁתָּפוּת׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.4.32.21",
+        "text=בְּשֻׁתָּפוּת׃",
+        "prefixes=Hb"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 33,
+        "word_index": 7,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וּ/בִ/גְבוּרָה גְדוֹלָה יָעִידוּ הַ/שְּׁלִיחִים עַל־תְּקוּמַת הָ/אָדוֹן יֵשׁוּעַ וְ/חֶסֶד גָּדוֹל נִמְשַׁךְ לְ/כֻ/לָּם׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.4.33.7",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 5,
+        "verse": 21,
+        "word_index": 18,
+        "text": "הַסַּנְהֶדְרִין",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הֵם כְּ/שָׁמְעָם אֶת־זֹאת בָּ/אוּ אֶל־הַ/מִּקְדָּשׁ בִּ/הְ/יוֹת הַ/בֹּקֶר וַ/יְלַמְּדוּ שָׁם וַ/יָּבֹא הַ/כֹּהֵן הַ/גָּדוֹל וַ/אֲשֶׁר אִתּוֹ וַ/יִּקְרְאוּ אֶל־הַ/סַּנְהֶדְרִין וְ/אֶל־כָּל־זִקְנֵי בְ/נֵי יִשְׂרָאֵל וַ/יִּשְׁלְחוּ אֶל־בֵּ/ית הָ/אֲסוּרִים לְ/הָ/בִיא אֹתָם׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.5.21.18",
+        "text=הַסַּנְהֶדְרִין",
+        "prefixes=Hd"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 5,
+        "verse": 30,
+        "word_index": 4,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אֱלֹהֵי אֲבוֹתֵינוּ הֵ/קִים אֶת־יֵשׁוּעַ אֲשֶׁר שְׁלַחְתֶּם יֶדְכֶם בּוֹ וַ/תִּתְלוּ אוֹתוֹ עַל־הָעֵץ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.5.30.4",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 5,
+        "verse": 40,
+        "word_index": 12,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יִּשְׁמְעוּ אֵלָיו וַ/יִּקְרְאוּ אֶת־הַ/שְּׁלִיחִים וַ/יַּלְקוּ אֹתָם וַ/יְצַוּוּ אֲשֶׁר לֹא יְדַבְּרוּ בְּ/שֵׁם יֵשׁוּעַ וַ/יִּפְטְרוּ אוֹתָם׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.5.40.12",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 5,
+        "verse": 42,
+        "word_index": 10,
+        "text": "יֵשׁוּעַ",
+        "strong": "H3442",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וְ/כָל־הַ/יּוֹם לֹא חָדְלוּ לְ/לַמֵּד בַּ/מִּקְדָּשׁ וּ/בַ/בָּתִּים וּ/לְ/בַשֵּׂר אֶת־בְּ/שׂוֹרַת יֵשׁוּעַ הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H3442",
+      "new_strong": "H3442",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3442, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.5.42.10",
+        "text=יֵשׁוּעַ",
+        "prefixes=none",
+        "strong=H3442"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "proper_name_missing_definition",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 1,
+        "word_index": 8,
+        "text": "הַיְּוָנִים",
+        "strong": "Hd/H3125",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "בַּ/יָּמִים הָהֵם כַּ/אֲשֶׁר רָב מִסְפַּר הַ/תַּלְמִידִים הָ/יְתָה תְּלוּנַת הַ/יְּוָנִים עַל־הָ/עִבְרִיִּים עַל־אֲשֶׁר הֶ/עְלִימוּ עֵינֵיהֶם מֵאַלְמְנוֹתֵיהֶם לְ/בִ/לְתִּי־תֵת לָ/הֶן יוֹם יוֹם אֶת־אֲרוּחָתָן׃"
+      },
+      "previous_strong": "Hd/H3125",
+      "new_strong": "H3125",
+      "confidence": 0.8,
+      "reason": "Proper-name occurrence points to H3125, but the lexicon entry has no definitions",
+      "evidence": [
+        "occurrence=acts.6.1.8",
+        "text=הַיְּוָנִים",
+        "prefixes=Hd",
+        "strong=H3125"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 5,
+        "word_index": 16,
+        "text": "פְּרוֹכוֹרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּיטַב הַ/דָּבָר לִ/פְנֵי כָל־הֶ/הָמוֹן וַ/יִּבְחֲרוּ אֶת־אִסְטְפָנוֹס אִישׁ מָלֵא אֱמוּנָה וְ/רוּחַ הַ/קֹּדֶשׁ וְ/אֶת־פִילִפּוֹס וְ/אֶת־פְּרוֹכוֹרוֹס וְ/אֶת־נִיקָנוֹר וְ/אֶת־טִימוֹן וְ/אֶת־פַּרְמְנָס וְ/אֶת־נִיקְלָס גֵּר אַנְטְיוֹכְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.6.5.16",
+        "text=פְּרוֹכוֹרוֹס",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 5,
+        "word_index": 18,
+        "text": "נִיקָנוֹר",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּיטַב הַ/דָּבָר לִ/פְנֵי כָל־הֶ/הָמוֹן וַ/יִּבְחֲרוּ אֶת־אִסְטְפָנוֹס אִישׁ מָלֵא אֱמוּנָה וְ/רוּחַ הַ/קֹּדֶשׁ וְ/אֶת־פִילִפּוֹס וְ/אֶת־פְּרוֹכוֹרוֹס וְ/אֶת־נִיקָנוֹר וְ/אֶת־טִימוֹן וְ/אֶת־פַּרְמְנָס וְ/אֶת־נִיקְלָס גֵּר אַנְטְיוֹכְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Parsed word has no Strong assignment",
+      "evidence": [
+        "occurrence=acts.6.5.18",
+        "text=נִיקָנוֹר",
+        "prefixes=none"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    }
+  ]
+}

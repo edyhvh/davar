@@ -1,0 +1,1496 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:26.116582+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 10,
+        "word_index": 0,
+        "text": "וַיַּבִּיטוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּבִּיטוּ אַחֲרָיו הַ/שָּׁמַיְמָה בְּ/עָבְרוֹ וְ/הִנֵּה שְׁנֵי אֲנָשִׁים לְ/ב/וּשֵׁי בַ/דִּים נִצָּבִים עֲלֵיהֶם׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H5027",
+      "confidence": 0.82,
+      "reason": "Hebrew verb ויביטו from נבט, \"look/gaze\", matching context \"looked after him toward heaven\".",
+      "evidence": [
+        "occurrence=acts.1.10.0",
+        "normalized stem points to נבט semantic look/gaze",
+        "lexicon H5027 נָבַט = look"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 9,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0001",
+      "confidence": 0.98,
+      "reason": "Greek proper name Petros in the apostle list; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.1.13.9",
+        "verse context lists apostles",
+        "surface form פטרוס transliterates Petros/Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "definition": {
+        "text_en": "Peter",
+        "text_es": "Pedro"
+      },
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 14,
+        "text": "וְתוֹמָא",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0002",
+      "confidence": 0.98,
+      "reason": "Greek/Aramaic proper name Thomas in the apostle list; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.1.13.14",
+        "verse context lists apostles",
+        "surface form תומא transliterates Thomas"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0002",
+      "definition": {
+        "text_en": "Thomas",
+        "text_es": "Tomás"
+      },
+      "transliteration_en": "Thomas",
+      "transliteration_es": "Tomas"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 17,
+        "word_index": 2,
+        "text": "נִמְנֶה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־הָיָה נִמְנֶה אִתָּנוּ וְ/זָכָה בְּ/גוֹרַל הַ/שֵּׁרוּת הַזֶּה׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H4487",
+      "confidence": 0.78,
+      "reason": "נמנה means was numbered/counted among us; root מנה corresponds to H4487 count/number/reckon.",
+      "evidence": [
+        "occurrence=acts.1.17.2",
+        "context: he was numbered with us",
+        "lexicon H4487 מָנָה = count, number, reckon"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 23,
+        "word_index": 9,
+        "text": "יוּסְטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעֲמִידוּ שְׁנַיִם אֶת־יוֹסֵף הַ/נִּקְרָא בַר־שַׁבָּא וְ/הוּא מְכֻנֶּה יוּסְטוֹס וְ/אֵת מַתִּיָּה׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0003",
+      "confidence": 0.98,
+      "reason": "Latin/Roman cognomen Justus applied to Joseph Barsabbas; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.1.23.9",
+        "context: Joseph called Barsabbas, surnamed Justus",
+        "surface form יוסטוס transliterates Justus"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0003",
+      "definition": {
+        "text_en": "Justus",
+        "text_es": "Justo"
+      },
+      "transliteration_en": "Justus",
+      "transliteration_es": "Justus"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 2,
+        "word_index": 15,
+        "text": "בוֹ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי פִתְאֹם קוֹל רַעַשׁ מִן־הַ/שָּׁמַיִם כְּ/קוֹל רוּחַ סְעָרָה וַ/יְמַלֵּא אֶת־כָּל־הַ/בַּיִת אֲשֶׁר יָשְׁבוּ בוֹ׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Pronominal form בו means \"in it/him\"; parsed prefixes are empty, so assigning a single lexical key needs a policy decision for preposition+suffix forms.",
+      "evidence": [
+        "occurrence=acts.2.2.15",
+        "text=בוֹ׃",
+        "prefixes=none",
+        "manual_policy_needed=true"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 9,
+        "word_index": 8,
+        "text": "פָּנְטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פַּרְתִּיִּים וּ/מָדִים וְ/עֵילָמִים וְ/ישְׁבֵי אֲרַם נַהֲרָיִם יְהוּדָה וְ/קַפּוּדְקִיָּה פָּנְטוֹס וְ/אַסְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0004",
+      "confidence": 0.98,
+      "reason": "Geographical proper name Pontus in Acts 2:9; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.2.9.8",
+        "context lists regions in Acts 2:9",
+        "surface form פנטוס transliterates Pontus"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0004",
+      "definition": {
+        "text_en": "Pontus",
+        "text_es": "Ponto"
+      },
+      "transliteration_en": "Pontus",
+      "transliteration_es": "Pontus"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 10,
+        "word_index": 8,
+        "text": "קוּרִינִי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פְּרוּגְיָא וּ/פַמְפּוּלְיָא מִצְרַיִם וְ/חֶבֶל ל/וּב אֲשֶׁר עַל־יַד קוּרִינִי וְ/הַ/בָּאִים מֵרוֹמִי גַּם־יְהוּדִים גַּם־גֵּרִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0005",
+      "confidence": 0.98,
+      "reason": "Geographical proper name Cyrene in the phrase Libya near Cyrene; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.2.10.8",
+        "context: parts of Libya near Cyrene",
+        "surface form קוריני transliterates Cyrene"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0005",
+      "definition": {
+        "text_en": "Cyrene",
+        "text_es": "Cirene"
+      },
+      "transliteration_en": "Cyrene",
+      "transliteration_es": "Cirene"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 29,
+        "word_index": 15,
+        "text": "וּקְבוּרָתוֹ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲנָשִׁים אַחִים הַ/נִּיחוּ לִי וַ/אֲדַבְּרָה בְּ/אָזְנֵי כֻ/לְּ/כֶם עַל־דָּוִד אָבִינוּ אֲשֶׁר גַּם־מֵת גַּם־נִקְבַּר וּ/קְבוּרָתוֹ אִתָּנוּ הִיא עַד־הַ/יּוֹם הַזֶּה׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H6900",
+      "confidence": 0.84,
+      "reason": "וקבורתו means and his burial/grave; noun קבורה corresponds to H6900 burial/grave.",
+      "evidence": [
+        "occurrence=acts.2.29.15",
+        "context: David died and was buried, and his tomb/burial is with us",
+        "lexicon H6900 קְבוּרָה = grave, burial"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 36,
+        "word_index": 15,
+        "text": "צְלַבְתֶּם׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לָ/כֵן יֵדַע־נָא בֵּ/ית יִשְׂרָאֵל כֻּ/לּוֹ כִּי לְ/אָדוֹן וּ/לְ/מָשִׁיחַ שָׂמוֹ הָ/אֱלֹהִים אֶת־יֵשׁוּעַ זֶה אֲשֶׁר צְלַבְתֶּם׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0006",
+      "confidence": 0.9,
+      "reason": "צלב is the Delitzsch verb for crucify; no matching Biblical Hebrew Strong entry for this post-biblical verb was found.",
+      "evidence": [
+        "occurrence=acts.2.36.15",
+        "context: Jesus whom you crucified",
+        "lexicon search found no suitable צלב Strong entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0006",
+      "definition": {
+        "text_en": "crucify",
+        "text_es": "crucificar"
+      },
+      "transliteration_en": "tsalav",
+      "transliteration_es": "tsalav"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 42,
+        "word_index": 8,
+        "text": "בְּצִיעַת",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּהְיוּ שֹׁקְדִים עַל־תּוֹרַת הַ/שְּׁלִיחִים וְ/עַל־הַ/הִתְחַבְּרוּת וְ/עַל־בְּ/צִיעַת הַ/לֶּחֶם וְ/עַל־הַ/תְּפִלָּה׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H1214",
+      "confidence": 0.82,
+      "reason": "בציעת הלחם means breaking of bread; root בצע corresponds to H1214 cut/break off.",
+      "evidence": [
+        "occurrence=acts.2.42.8",
+        "context: breaking of bread",
+        "lexicon H1214 בָּצַע = cut off, break off"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 2,
+        "verse": 47,
+        "word_index": 20,
+        "text": "הַנּוֹשָׁעִים׃",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאכְלוּ מְזוֹנָם בְּ/גִילָה וּ/בְ/תֹם לֵ/בָב וַ/יְשַׁבְּחוּ אֶת־הָ/אֱלֹהִים וַ/יִּמְצְאוּ חֵן בְּ/עֵינֵי כָל־הָעָם וְ/הָ/אָדוֹן ה/וֹסִיף יוֹם יוֹם עַל־הָ/עֵדָה אֶת־הַ/נּוֹשָׁעִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H3467",
+      "confidence": 0.86,
+      "reason": "הנושעים means the saved/being saved; root ישע corresponds to H3467 deliver/save.",
+      "evidence": [
+        "occurrence=acts.2.47.20",
+        "context: those being saved added to the assembly",
+        "lexicon H3467 יָשַׁע = deliver"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 4,
+        "word_index": 2,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּסְתַּכֶּל־בּוֹ פֶּטְרוֹס וְ/גַם־יוֹחָנָן וַ/יֹּאמֶר אֵלָיו הַ/בִּיטָה אֵלֵינוּ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0001",
+      "confidence": 0.98,
+      "reason": "Repeated Greek proper name Peter; use the same Davar custom lexicon key.",
+      "evidence": [
+        "occurrence=acts.3.4.2",
+        "surface form פטרוס transliterates Petros/Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "definition": {
+        "text_en": "Peter",
+        "text_es": "Pedro"
+      },
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 10,
+        "word_index": 16,
+        "text": "הַנַּעֲשָׂה",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּכִּירוּ אוֹתוֹ כִּי הוּא אֲשֶׁר הָיָה ישֵׁב לִ/שְׁאֹל צְדָקָה בְּ/שַׁעַר הַ/מִּקְדָּשׁ הַ/מְהֻדָּר וַ/יִּמָּלְאוּ שַׁמָּה וְ/תִמָּהוֹן עַל־הַ/נַּעֲשָׂה לוֹ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H6213",
+      "confidence": 0.86,
+      "reason": "הנעשה means what was done/happened; root עשה corresponds to H6213 do/make.",
+      "evidence": [
+        "occurrence=acts.3.10.16",
+        "context: what had happened/done to him",
+        "lexicon H6213 עָשָׂה = do, make"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 19,
+        "text": "וּבַחֲסִידוּתֵנוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּרְא פֶּטְרוֹס וַ/יַּעַן וַ/יֹּאמֶר אֶל־הָעָם אַנְשֵׁי יִשְׂרָאֵל מָה אַתֶּם תְּמֵהִים עַל־זֹאת וּ/מַה־תִּסְתַּכְּלוּ בָ/נוּ כְּ/אִלּוּ אֲנַחְנוּ בְּ/כֹ/חֵנוּ וּ/בַ/חֲסִידוּתֵנוּ שַׂמְנוּ אֶת־זֶה מִתְהַלֵּךְ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H2623",
+      "confidence": 0.72,
+      "reason": "בחסידותנו means by our piety/godliness; related to חסיד, H2623 kind/pious.",
+      "evidence": [
+        "occurrence=acts.3.12.19",
+        "context contrasts our own power or piety",
+        "lexicon H2623 חָסִיד = kind, pious"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 13,
+        "word_index": 20,
+        "text": "פִילָטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵ/אלֹהֵי יַעֲקֹב אֱלֹהֵי אֲבוֹתֵינוּ הוּא פֵּאֵר אֶת־עַבְדּוֹ יֵשׁוּעַ אֲשֶׁר אַתֶּם מְסַרְתֶּם אוֹתוֹ וְ/כִ/חַשְׁתֶּם בּוֹ בִּ/פְנֵי פִילָטוֹס כְּ/שֶׁהָיָה דָן לְ/פָטְרוֹ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0021",
+      "confidence": 0.98,
+      "reason": "Roman proper name Pilate; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.3.13.20",
+        "context: before Pilate",
+        "surface form פילטוס transliterates Pilate"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0021",
+      "definition": {
+        "text_en": "Pilate",
+        "text_es": "Pilato"
+      },
+      "transliteration_en": "Pilate",
+      "transliteration_es": "Pilato"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 3,
+        "verse": 16,
+        "word_index": 19,
+        "text": "הֶעֶלְתָה־",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/מַעַן אֱמוּנַת שְׁמוֹ חִזַּק שְׁמוֹ אֶת־הָ/אִישׁ הַזֶּה אֲשֶׁר אַתֶּם רֹאִים וּ/מַכִּירִים אֹתוֹ וְ/הָ/אֱמוּנָה אֲשֶׁר לָ/נוּ עַל־יָדוֹ הִיא הֶ/עֶלְתָה־לוֹ אֶת־הָ/אֲרֻכָה הַ/זֹּאת לְ/עֵינֵי כֻ/לְּ/כֶם׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H5927",
+      "confidence": 0.76,
+      "reason": "העלתה in this context means brought up/restored; root עלה corresponds to H5927 go up/bring up.",
+      "evidence": [
+        "occurrence=acts.3.16.19",
+        "context: brought/restored healing to him",
+        "lexicon H5927 עָלָה = go up, ascend"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 12,
+        "word_index": 13,
+        "text": "נִוָּשֵׁעַ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵין הַ/יְשׁוּעָה בְּ/אַחֵר וְ/אֵין תַּחַת הַ/שָּׁמַיִם שֵׁם אַחֵר הַ/נִּתָּן לִ/בְ/נֵי אָדָם אֲשֶׁר־בּוֹ נִוָּשֵׁעַ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H3467",
+      "confidence": 0.86,
+      "reason": "נושע means be saved; root ישע corresponds to H3467 deliver/save.",
+      "evidence": [
+        "occurrence=acts.4.12.13",
+        "context: by which we must be saved",
+        "lexicon H3467 יָשַׁע = deliver"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 13,
+        "word_index": 18,
+        "text": "וַיַּכִּירוּם",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כַּ/אֲשֶׁר רָאוּ אֶת־בִּ/טְחוֹן לִ/בָּם שֶׁל־פֶּטְרוֹס וְ/יוֹחָנָן וְ/הֵ/בִינוּ כִּי הֶ/דְיוֹטוֹת וְ/לֹא בַ/עֲלֵי חָכְמָה הֵמָּה וַ/יִּתְמְהוּ עֲלֵיהֶם וַ/יַּכִּירוּם כִּי הִתְהַלְּכוּ עִם־יֵשׁוּעַ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H5234",
+      "confidence": 0.78,
+      "reason": "ויכירום means they recognized them; root נכר corresponds to H5234 recognize/acknowledge.",
+      "evidence": [
+        "occurrence=acts.4.13.18",
+        "context: they recognized them as having been with Jesus",
+        "lexicon H5234 נָכַר = act/treat as foreign, recognize by context"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 21,
+        "word_index": 19,
+        "text": "הַנַּעֲשָׂה׃",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יּוֹסִיפוּ לִ/גְעָר־בָּם וַ/יִּפְטְרוּ אֹתָם בַּ/אֲשֶׁר לֹא־מָצְאוּ דָבָר לַ/עֲנוֹשׁ אֹתָם מִפְּנֵי הָעָם כִּי כֻ/לָּם מְהַלְלִים אֶת־הָ/אֱלֹהִים עַל־הַ/נַּעֲשָׂה׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H6213",
+      "confidence": 0.86,
+      "reason": "הנעשה means what was done; root עשה corresponds to H6213 do/make.",
+      "evidence": [
+        "occurrence=acts.4.21.19",
+        "context: glorifying God for what had been done",
+        "lexicon H6213 עָשָׂה = do, make"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 4,
+        "verse": 32,
+        "word_index": 21,
+        "text": "בְּשֻׁתָּפוּת׃",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/קְהַל הַ/מַּאֲמִינִים הָיָה לָ/הֶם לֵב אֶחָד וְ/נֶפֶשׁ אַחַת וְ/אֵין אִישׁ מֵהֶם אוֹמֵר עַל־אֲשֶׁר בְּ/יָדוֹ לִי הוּא כִּי הַכֹּל הָיָה לָ/הֶם בְּ/שֻׁתָּפוּת׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0007",
+      "confidence": 0.9,
+      "reason": "שותפות is a post-biblical Hebrew noun for partnership/common sharing; no matching Biblical Hebrew Strong entry was found.",
+      "evidence": [
+        "occurrence=acts.4.32.21",
+        "context: all things were held in common",
+        "lexicon search found no suitable שותפות Strong entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0007",
+      "definition": {
+        "text_en": "partnership, common sharing",
+        "text_es": "participación, comunión de bienes"
+      },
+      "transliteration_en": "shutafut",
+      "transliteration_es": "shutafut"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 5,
+        "verse": 21,
+        "word_index": 18,
+        "text": "הַסַּנְהֶדְרִין",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הֵם כְּ/שָׁמְעָם אֶת־זֹאת בָּ/אוּ אֶל־הַ/מִּקְדָּשׁ בִּ/הְ/יוֹת הַ/בֹּקֶר וַ/יְלַמְּדוּ שָׁם וַ/יָּבֹא הַ/כֹּהֵן הַ/גָּדוֹל וַ/אֲשֶׁר אִתּוֹ וַ/יִּקְרְאוּ אֶל־הַ/סַּנְהֶדְרִין וְ/אֶל־כָּל־זִקְנֵי בְ/נֵי יִשְׂרָאֵל וַ/יִּשְׁלְחוּ אֶל־בֵּ/ית הָ/אֲסוּרִים לְ/הָ/בִיא אֹתָם׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0008",
+      "confidence": 0.98,
+      "reason": "Sanhedrin is a loanword/institution name in the NT context; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.5.21.18",
+        "context: council and elders of Israel",
+        "surface form סנהדרין transliterates Sanhedrin"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0008",
+      "definition": {
+        "text_en": "Sanhedrin",
+        "text_es": "Sanedrín"
+      },
+      "transliteration_en": "Sanhedrin",
+      "transliteration_es": "Sanhedrin"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 5,
+        "word_index": 16,
+        "text": "פְּרוֹכוֹרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּיטַב הַ/דָּבָר לִ/פְנֵי כָל־הֶ/הָמוֹן וַ/יִּבְחֲרוּ אֶת־אִסְטְפָנוֹס אִישׁ מָלֵא אֱמוּנָה וְ/רוּחַ הַ/קֹּדֶשׁ וְ/אֶת־פִילִפּוֹס וְ/אֶת־פְּרוֹכוֹרוֹס וְ/אֶת־נִיקָנוֹר וְ/אֶת־טִימוֹן וְ/אֶת־פַּרְמְנָס וְ/אֶת־נִיקְלָס גֵּר אַנְטְיוֹכְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0009",
+      "confidence": 0.98,
+      "reason": "Greek proper name Prochorus in Acts 6:5; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.6.5.16",
+        "context lists the seven chosen men",
+        "surface form פרוכורוס transliterates Prochorus"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0009",
+      "definition": {
+        "text_en": "Prochorus",
+        "text_es": "Prócoro"
+      },
+      "transliteration_en": "Prochorus",
+      "transliteration_es": "Prochorus"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 5,
+        "word_index": 18,
+        "text": "נִיקָנוֹר",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּיטַב הַ/דָּבָר לִ/פְנֵי כָל־הֶ/הָמוֹן וַ/יִּבְחֲרוּ אֶת־אִסְטְפָנוֹס אִישׁ מָלֵא אֱמוּנָה וְ/רוּחַ הַ/קֹּדֶשׁ וְ/אֶת־פִילִפּוֹס וְ/אֶת־פְּרוֹכוֹרוֹס וְ/אֶת־נִיקָנוֹר וְ/אֶת־טִימוֹן וְ/אֶת־פַּרְמְנָס וְ/אֶת־נִיקְלָס גֵּר אַנְטְיוֹכְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0010",
+      "confidence": 0.98,
+      "reason": "Greek proper name Nicanor in Acts 6:5; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.6.5.18",
+        "context lists the seven chosen men",
+        "surface form ניקנור transliterates Nicanor"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0010",
+      "definition": {
+        "text_en": "Nicanor",
+        "text_es": "Nicanor"
+      },
+      "transliteration_en": "Nicanor",
+      "transliteration_es": "Nicanor"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 5,
+        "word_index": 20,
+        "text": "טִימוֹן",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּיטַב הַ/דָּבָר לִ/פְנֵי כָל־הֶ/הָמוֹן וַ/יִּבְחֲרוּ אֶת־אִסְטְפָנוֹס אִישׁ מָלֵא אֱמוּנָה וְ/רוּחַ הַ/קֹּדֶשׁ וְ/אֶת־פִילִפּוֹס וְ/אֶת־פְּרוֹכוֹרוֹס וְ/אֶת־נִיקָנוֹר וְ/אֶת־טִימוֹן וְ/אֶת־פַּרְמְנָס וְ/אֶת־נִיקְלָס גֵּר אַנְטְיוֹכְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0011",
+      "confidence": 0.98,
+      "reason": "Greek proper name Timon in Acts 6:5; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.6.5.20",
+        "context lists the seven chosen men",
+        "surface form טימון transliterates Timon"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0011",
+      "definition": {
+        "text_en": "Timon",
+        "text_es": "Timón"
+      },
+      "transliteration_en": "Timon",
+      "transliteration_es": "Timon"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 5,
+        "word_index": 22,
+        "text": "פַּרְמְנָס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּיטַב הַ/דָּבָר לִ/פְנֵי כָל־הֶ/הָמוֹן וַ/יִּבְחֲרוּ אֶת־אִסְטְפָנוֹס אִישׁ מָלֵא אֱמוּנָה וְ/רוּחַ הַ/קֹּדֶשׁ וְ/אֶת־פִילִפּוֹס וְ/אֶת־פְּרוֹכוֹרוֹס וְ/אֶת־נִיקָנוֹר וְ/אֶת־טִימוֹן וְ/אֶת־פַּרְמְנָס וְ/אֶת־נִיקְלָס גֵּר אַנְטְיוֹכְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0012",
+      "confidence": 0.98,
+      "reason": "Greek proper name Parmenas in Acts 6:5; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.6.5.22",
+        "context lists the seven chosen men",
+        "surface form פרמנס transliterates Parmenas"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0012",
+      "definition": {
+        "text_en": "Parmenas",
+        "text_es": "Parmenas"
+      },
+      "transliteration_en": "Parmenas",
+      "transliteration_es": "Parmenas"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 5,
+        "word_index": 24,
+        "text": "נִיקְלָס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּיטַב הַ/דָּבָר לִ/פְנֵי כָל־הֶ/הָמוֹן וַ/יִּבְחֲרוּ אֶת־אִסְטְפָנוֹס אִישׁ מָלֵא אֱמוּנָה וְ/רוּחַ הַ/קֹּדֶשׁ וְ/אֶת־פִילִפּוֹס וְ/אֶת־פְּרוֹכוֹרוֹס וְ/אֶת־נִיקָנוֹר וְ/אֶת־טִימוֹן וְ/אֶת־פַּרְמְנָס וְ/אֶת־נִיקְלָס גֵּר אַנְטְיוֹכְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0013",
+      "confidence": 0.98,
+      "reason": "Greek proper name Nicolas in Acts 6:5; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.6.5.24",
+        "context lists the seven chosen men",
+        "surface form ניקלס transliterates Nicolas"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0013",
+      "definition": {
+        "text_en": "Nicolas",
+        "text_es": "Nicolás"
+      },
+      "transliteration_en": "Nicolas",
+      "transliteration_es": "Nicolas"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 5,
+        "word_index": 26,
+        "text": "אַנְטְיוֹכְיָא׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּיטַב הַ/דָּבָר לִ/פְנֵי כָל־הֶ/הָמוֹן וַ/יִּבְחֲרוּ אֶת־אִסְטְפָנוֹס אִישׁ מָלֵא אֱמוּנָה וְ/רוּחַ הַ/קֹּדֶשׁ וְ/אֶת־פִילִפּוֹס וְ/אֶת־פְּרוֹכוֹרוֹס וְ/אֶת־נִיקָנוֹר וְ/אֶת־טִימוֹן וְ/אֶת־פַּרְמְנָס וְ/אֶת־נִיקְלָס גֵּר אַנְטְיוֹכְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0014",
+      "confidence": 0.98,
+      "reason": "Geographical proper name Antioch; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.6.5.26",
+        "context: proselyte of Antioch",
+        "surface form אנטיוכיא transliterates Antioch"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0014",
+      "definition": {
+        "text_en": "Antioch",
+        "text_es": "Antioquía"
+      },
+      "transliteration_en": "Antioch",
+      "transliteration_es": "Antiochia"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 8,
+        "word_index": 0,
+        "text": "וְאִסְטְפָנוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִסְטְפָנוֹס מָלֵא אֱמוּנָה וּ/גְבוּרָה וַ/יַּעַשׂ אֹתוֹת וּ/מוֹפְתִים גְּדוֹלִים בְּ/קֶרֶב הָעָם׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0015",
+      "confidence": 0.98,
+      "reason": "Greek proper name Stephen; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.6.8.0",
+        "surface form אסטפנוס transliterates Stephanos/Stephen"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0015",
+      "definition": {
+        "text_en": "Stephen",
+        "text_es": "Esteban"
+      },
+      "transliteration_en": "Stephen",
+      "transliteration_es": "Estefanos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 9,
+        "word_index": 10,
+        "text": "וַאֲלֶכְסַנְדְּרִיִּים",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּקוּמוּ אֲנָשִׁים מִבֵּית־הַ/כְּנֵסֶת הַ/נִּקְרָא עַל־שֵׁם הַ/לִּיבַרְטִינִים וְ/שֶׁל־קוּרִינִים וַ/אֲלֶכְסַנְדְּרִיִּים וּ/מִן־בְּ/נֵי קִילִיקְיָא וְ/אַסְיָא וַ/יִּתְוַכְּחוּ עִם־אִסְטְפָנוֹס׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0016",
+      "confidence": 0.96,
+      "reason": "Ethnic/geographical name Alexandrians; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.6.9.10",
+        "context lists synagogue groups",
+        "surface form אלכסנדריים transliterates Alexandrians"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0016",
+      "definition": {
+        "text_en": "Alexandrians",
+        "text_es": "Alejandrinos"
+      },
+      "transliteration_en": "Alexandrians",
+      "transliteration_es": "Alexandriim"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 9,
+        "word_index": 13,
+        "text": "קִילִיקְיָא",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּקוּמוּ אֲנָשִׁים מִבֵּית־הַ/כְּנֵסֶת הַ/נִּקְרָא עַל־שֵׁם הַ/לִּיבַרְטִינִים וְ/שֶׁל־קוּרִינִים וַ/אֲלֶכְסַנְדְּרִיִּים וּ/מִן־בְּ/נֵי קִילִיקְיָא וְ/אַסְיָא וַ/יִּתְוַכְּחוּ עִם־אִסְטְפָנוֹס׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0017",
+      "confidence": 0.98,
+      "reason": "Geographical proper name Cilicia; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.6.9.13",
+        "context lists regions",
+        "surface form קיליקיא transliterates Cilicia"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0017",
+      "definition": {
+        "text_en": "Cilicia",
+        "text_es": "Cilicia"
+      },
+      "transliteration_en": "Cilicia",
+      "transliteration_es": "Cilicia"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 9,
+        "word_index": 17,
+        "text": "אִסְטְפָנוֹס׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּקוּמוּ אֲנָשִׁים מִבֵּית־הַ/כְּנֵסֶת הַ/נִּקְרָא עַל־שֵׁם הַ/לִּיבַרְטִינִים וְ/שֶׁל־קוּרִינִים וַ/אֲלֶכְסַנְדְּרִיִּים וּ/מִן־בְּ/נֵי קִילִיקְיָא וְ/אַסְיָא וַ/יִּתְוַכְּחוּ עִם־אִסְטְפָנוֹס׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0015",
+      "confidence": 0.98,
+      "reason": "Repeated Greek proper name Stephen; use the same Davar custom lexicon key.",
+      "evidence": [
+        "occurrence=acts.6.9.17",
+        "surface form אסטפנוס transliterates Stephanos/Stephen"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0015",
+      "definition": {
+        "text_en": "Stephen",
+        "text_es": "Esteban"
+      },
+      "transliteration_en": "Stephen",
+      "transliteration_es": "Estefanos"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 11,
+        "word_index": 0,
+        "text": "וַיָּסִיתוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּסִיתוּ בוֹ אֲנָשִׁים אֹמְרִים שָׁמַעְנוּ אֹתוֹ מְדַבֵּר גִּדּוּפִים בְּ/משֶׁה וּ/בֵ/אלֹהִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H5496",
+      "confidence": 0.82,
+      "reason": "ויסיתו means they incited/instigated; root סות corresponds to H5496 incite/allure/instigate.",
+      "evidence": [
+        "occurrence=acts.6.11.0",
+        "context: they stirred up men to speak accusations",
+        "lexicon H5496 סוּת = incite, allure, instigate"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 12,
+        "word_index": 0,
+        "text": "וַיְעוֹרְרוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְעוֹרְרוּ אֶת־הָעָם וְ/אֶת־הַ/זְּקֵנִים וְ/הַ/סּוֹפְרִים וַ/יָּקוּמוּ עָלָיו וַ/יַּחְטְפֻהוּ וַ/יְבִיאֻהוּ לִ/פְנֵי הַ/סַּנְהֶדְרִין׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H5782",
+      "confidence": 0.78,
+      "reason": "ויעוררו means they roused/stirred up; root עור corresponds to H5782 rouse/awake.",
+      "evidence": [
+        "occurrence=acts.6.12.0",
+        "context: stirred up the people, elders, and scribes",
+        "lexicon H5782 עוּר = rouse oneself, awake"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 15,
+        "word_index": 0,
+        "text": "וַיִּסְתַּכְּלוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּסְתַּכְּלוּ בוֹ כָּל־הַ/יּשְׁבִים בַּ/סַּנְהֶדְרִין וַ/יִּרְאוּ אֶת־פָּנָיו כִּ/פְנֵי מַלְאַךְ אֱלֹהִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0018",
+      "confidence": 0.88,
+      "reason": "הסתכל is a post-biblical Hebrew verb for looking intently; no matching Biblical Hebrew Strong entry was found.",
+      "evidence": [
+        "occurrence=acts.6.15.0",
+        "context: all sitting in the Sanhedrin looked at him",
+        "lexicon search found no suitable הסתכל Strong entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0018",
+      "definition": {
+        "text_en": "look intently",
+        "text_es": "mirar fijamente"
+      },
+      "transliteration_en": "histakel",
+      "transliteration_es": "histakel"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 6,
+        "verse": 15,
+        "word_index": 4,
+        "text": "בַּסַּנְהֶדְרִין",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּסְתַּכְּלוּ בוֹ כָּל־הַ/יּשְׁבִים בַּ/סַּנְהֶדְרִין וַ/יִּרְאוּ אֶת־פָּנָיו כִּ/פְנֵי מַלְאַךְ אֱלֹהִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0008",
+      "confidence": 0.98,
+      "reason": "Repeated Sanhedrin loanword/institution name; use the same Davar custom lexicon key.",
+      "evidence": [
+        "occurrence=acts.6.15.4",
+        "surface form סנהדרין transliterates Sanhedrin"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0008",
+      "definition": {
+        "text_en": "Sanhedrin",
+        "text_es": "Sanedrín"
+      },
+      "transliteration_en": "Sanhedrin",
+      "transliteration_es": "Sanhedrin"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 8,
+        "verse": 27,
+        "word_index": 14,
+        "text": "גְּנָזֶיהָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּקָם וַ/יֵּלַךְ וְ/הִנֵּה אִישׁ כּ/וּשִׁי וְ/הוּא סָרִיס וְ/שַׁלִּיט לְ/קַנְדַּק מַלְכַּת־כּ/וּשׁ וּ/מְמֻנֶּה עַל־כָּל־גְּנָזֶיהָ אֲשֶׁר עָלָה אֶל־יְרוּשָׁלַיִם לְ/הִשְׁתַּחֲוֺת׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H1595",
+      "confidence": 0.76,
+      "reason": "גנזיה means her treasuries/treasures; noun גנז corresponds to H1595 chests/treasury.",
+      "evidence": [
+        "occurrence=acts.8.27.14",
+        "context: appointed over all her treasures",
+        "lexicon H1595 גֶּנֶז = chests, treasury"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 9,
+        "verse": 5,
+        "word_index": 14,
+        "text": "בַּדָּרְבֹנוֹת׃",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר מִי אַתָּה אֲדֹנִי וַ/יֹּאמֶר הָ/אָדוֹן אָנֹכִי יֵשׁוּעַ אֲשֶׁר אַתָּה רוֹדֵף קָשֶׁה לְךָ לִ/בְ/עֹט בַּ/דָּרְבֹנוֹת׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H1861",
+      "confidence": 0.8,
+      "reason": "דרבנות means goads; H1861 דָּרְבוֹן is the Biblical noun for goad.",
+      "evidence": [
+        "occurrence=acts.9.5.14",
+        "context: hard for you to kick against the goads",
+        "lexicon H1861 דָּרְבוֹן"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 9,
+        "verse": 17,
+        "word_index": 22,
+        "text": "וְתִרְאֶה",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּלֶךְ חֲנַנְיָה וַ/יָּבֹא הַ/בָּיְתָה וַ/יָּשֶׂם אֶת־יָדָיו עָלָיו וַ/יֹּאמַר שָׁאוּל אָחִי הָ/אָדוֹן יֵשׁוּעַ הַ/נִּרְאֶה אֵלֶיךָ בַּ/דֶּרֶךְ אֲשֶׁר־בָּ/אתָ בָּהּ שְׁלָחַנִי לְ/מַעַן תָּשׁוּב וְ/תִרְאֶה וְ/תִמָּלֵא רוּחַ הַ/קֹּדֶשׁ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H7200",
+      "confidence": 0.82,
+      "reason": "ותראה means see/regain sight; root ראה corresponds to H7200 see.",
+      "evidence": [
+        "occurrence=acts.9.17.22",
+        "context: so that you may see again and be filled",
+        "lexicon H7200 רָאָה = see"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 9,
+        "verse": 38,
+        "word_index": 14,
+        "text": "בוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לֹד קְרוֹבָה הִיא לְ/יָפוֹ וַ/יִּשְׁמְעוּ הַ/תַּלְמִידִים כִּי־פֶטְרוֹס שָׁם וַ/יִּשְׁלְחוּ אֵלָיו שְׁנֵי אֲנָשִׁים וַ/יִּפְצְרוּ־בוֹ לְ/בִ/לְתִּי הֵעָצֵל לַ/עֲבֹר אֲלֵיהֶם׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Pronominal form בו means \"in him/it\"; parsed prefixes are empty, so assigning a single lexical key needs a policy decision for preposition+suffix forms.",
+      "evidence": [
+        "occurrence=acts.9.38.14",
+        "text=בוֹ",
+        "prefixes=none",
+        "manual_policy_needed=true"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 9,
+        "verse": 39,
+        "word_index": 12,
+        "text": "בּוֹכִיּוֹת",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּקָם פֶּטְרוֹס וַ/יֵּלֶךְ אִתָּם וּ/בְ/בֹאוֹ הֶ/עֱלֻהוּ אֶל־הָ/עֲלִיָּה וַ/תִּגַּשְׁנָה אֵלָיו כָּל־הָ/אַלְמָנוֹת בּ/וֹכִיּוֹת וּ/מַרְאוֹת לוֹ אֵת הַ/כֻּתֳּנֹת וְ/אֵת הַ/בְּגָדִים אֲשֶׁר עָשְׂתָה צְבִיָּה בְּ/עוֹדָהּ עִמָּהֶן׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "בוכיות likely means weeping women/ones, but prefix parsing treats ב as a prefix and may conflate the participle with preposition; needs manual morphology review before assigning H1058.",
+      "evidence": [
+        "occurrence=acts.9.39.12",
+        "text=בּוֹכִיּוֹת",
+        "prefixes=Hb",
+        "manual_policy_needed=true"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 9,
+        "verse": 40,
+        "word_index": 20,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יּוֹצֵא פֶטְרוֹס אֶת־כֻּ/לָּם הַ/חוּצָה וַ/יִּכְרַע עַל־בִּ/רְכָּיו וַ/יִּתְפַּלֵּל וַ/יִּפֶן אֶל־גְּוִיָּתָהּ וַ/יֹּאמֶר טָבִיתָא קוּמִי וַ/תִּפְתַּח אֶת־עֵינֶיהָ וַ/תֵּרֶא אֶת־פֶּטְרוֹס וַ/תִּתְעוֹדָד׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0001",
+      "confidence": 0.98,
+      "reason": "Repeated Greek proper name Peter; use the same Davar custom lexicon key.",
+      "evidence": [
+        "occurrence=acts.9.40.20",
+        "surface form פטרוס transliterates Petros/Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "definition": {
+        "text_en": "Peter",
+        "text_es": "Pedro"
+      },
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 10,
+        "verse": 5,
+        "word_index": 11,
+        "text": "פֶטְרוֹס׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה שְׁלַח־לְךָ אֲנָשִׁים אֶל־יָפוֹ וְ/הָבֵא אֵלֶיךָ אֶת־שִׁמְעוֹן הַ/מְכֻנֶּה פֶטְרוֹס׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0001",
+      "confidence": 0.98,
+      "reason": "Repeated Greek proper name Peter; use the same Davar custom lexicon key.",
+      "evidence": [
+        "occurrence=acts.10.5.11",
+        "surface form פטרוס transliterates Petros/Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "definition": {
+        "text_en": "Peter",
+        "text_es": "Pedro"
+      },
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 10,
+        "verse": 33,
+        "word_index": 18,
+        "text": "צֻוֵּיתָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וָ/אֲמַהֵר וָ/אֶשְׁלַח אֵלֶיךָ וְ/אַתָּה הֵ/יטַבְתָּ לַ/עֲשׂוֹת אֲשֶׁר־בָּ/אתָ אֵלָי וְ/הִנְנוּ כֻּ/לָּ/נוּ פֹה לִ/פְנֵי הָ/אֱלֹהִים לִ/שְׁמֹעַ אֶת־כָּל־אֲשֶׁר צֻוֵּיתָ מֵאֵת יְהוָֹה׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H6680",
+      "confidence": 0.86,
+      "reason": "צוית means you were commanded; root צוה corresponds to H6680 command/charge.",
+      "evidence": [
+        "occurrence=acts.10.33.18",
+        "context: all that you were commanded by YHWH",
+        "lexicon H6680 צָוָה = command, charge"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 10,
+        "verse": 39,
+        "word_index": 11,
+        "text": "בְּהוֹקִיעָם",
+        "strong": null,
+        "prefixes": [
+          "Hb",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנַחְנוּ עֵדִים עַל־כָּל־אֲשֶׁר עָשָׂה בְּ/אֶרֶץ הַ/יְּהוּדִים וּ/בִ/ירוּשָׁלָיִם וַ/אֲשֶׁר הֲ/רָגֻהוּ בְּ/ה/וֹקִיעָם אֹתוֹ עַל־הָעֵץ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H3363",
+      "confidence": 0.8,
+      "reason": "בהוקיעם means by hanging/impaling him; root יקע corresponds to H3363 be dislocated/alienated and is used for public exposure/impalement sense.",
+      "evidence": [
+        "occurrence=acts.10.39.11",
+        "context: hanged him on the tree",
+        "lexicon H3363 יָקַע"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 11,
+        "verse": 5,
+        "word_index": 16,
+        "text": "וַתּוּרַד",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "מִתְפַּלֵּל הָ/יִיתִי בְּ/עִיר יָפוֹ וָ/אֵרָדַם וָ/אֵרֶא מַרְאֶה וְ/הִנֵּה־כְ/לִי כִּ/דְמוּת מִטְפַּחַת־בַּד גְּדוֹלָה יוֹרֵד מִן־הַ/שָּׁמַיִם וַ/תּוּרַד בְּ/אַרְבַּע כַּ/נְפוֹתֶיהָ וַ/תָּבֹא עָדָי׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H3381",
+      "confidence": 0.84,
+      "reason": "ותורד means it was lowered/brought down; root ירד corresponds to H3381 go down/descend.",
+      "evidence": [
+        "occurrence=acts.11.5.16",
+        "context: sheet lowered from heaven",
+        "lexicon H3381 יָרַד = come/go down, descend"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 11,
+        "verse": 11,
+        "word_index": 14,
+        "text": "מִקִּסְרִין׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה כְ/רֶגַע שְׁלשָׁה אֲנָשִׁים עֹמְדִים עַל־פֶּתַח הַ/בַּיִת אֲשֶׁר אָנֹכִי שָׁם וְ/הֵמָּה שְׁלוּחִים אֵלַי מִקִּסְרִין׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0019",
+      "confidence": 0.98,
+      "reason": "Geographical proper name Caesarea; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.11.11.14",
+        "context: men sent from Caesarea",
+        "surface form קיסרין transliterates Caesarea"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0019",
+      "definition": {
+        "text_en": "Caesarea",
+        "text_es": "Cesarea"
+      },
+      "transliteration_en": "Caesarea",
+      "transliteration_es": "Cesarea"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 11,
+        "verse": 13,
+        "word_index": 19,
+        "text": "פֶטְרוֹס׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּגֶּד־לָ/נוּ אֵת אֲשֶׁר־רָאָה הַ/מַּלְאָךְ נִצָּב בְּ/בֵיתוֹ וְ/אֹמֵר אֵלָיו שְׁלַח אֶל־יָפוֹ אֲנָשִׁים וּ/קְרָא אֵלֶיךָ אֶת־שִׁמְעוֹן הַ/מְכֻנֶּה פֶטְרוֹס׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0001",
+      "confidence": 0.98,
+      "reason": "Repeated Greek proper name Peter; use the same Davar custom lexicon key.",
+      "evidence": [
+        "occurrence=acts.11.13.19",
+        "surface form פטרוס transliterates Petros/Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "definition": {
+        "text_en": "Peter",
+        "text_es": "Pedro"
+      },
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 11,
+        "verse": 19,
+        "word_index": 11,
+        "text": "פִינוּקְיָא",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הַ/נְּפוֹצִים מִפְּנֵי הַ/צָּרָה אֲשֶׁר הָ/יְתָה עַל־אוֹדֹת אִסְטְפָנוֹס הָ/לְכוּ וָ/בָ/אוּ עַד־פִינוּקְיָא וְ/קַפְרוֹס וְ/אַנְטְיוֹכְיָא וְ/לֹא דִבְּרוּ אֶת־הַ/דָּבָר כִּי אִם־אֶל־הַ/יְּהוּדִים לְ/בַ/דָּם׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0020",
+      "confidence": 0.98,
+      "reason": "Geographical proper name Phoenicia; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.11.19.11",
+        "context lists Phoenicia, Cyprus, and Antioch",
+        "surface form פינוקיא transliterates Phoenicia"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0020",
+      "definition": {
+        "text_en": "Phoenicia",
+        "text_es": "Fenicia"
+      },
+      "transliteration_en": "Phoenicia",
+      "transliteration_es": "Fenicia"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 11,
+        "verse": 22,
+        "word_index": 11,
+        "text": "אַנְטְיוֹכְיָא׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּשָּׁמַע הַ/דָּבָר בְּ/אָזְנֵי הַ/קְּהִלָּה אֲשֶׁר בִּ/ירוּשָׁלָיִם וַ/יִּשְׁלְחוּ אֶת־בַּר־נַבָּא אֶל־אַנְטְיוֹכְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0014",
+      "confidence": 0.98,
+      "reason": "Repeated geographical proper name Antioch; use the same Davar custom lexicon key.",
+      "evidence": [
+        "occurrence=acts.11.22.11",
+        "surface form אנטיוכיא transliterates Antioch"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0014",
+      "definition": {
+        "text_en": "Antioch",
+        "text_es": "Antioquía"
+      },
+      "transliteration_en": "Antioch",
+      "transliteration_es": "Antiochia"
+    }
+  ]
+}

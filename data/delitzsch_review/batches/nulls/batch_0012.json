@@ -1,0 +1,920 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:26.117966+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 15,
+        "verse": 14,
+        "word_index": 15,
+        "text": "וְתוּכְלוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה אַחַי מֻבְטָח אֲנִי בָּ/כֶם כִּי גַם־אַתֶּם בְּ/עַצְמְכֶם מְלֵאֵי אַהֲבַת חֶסֶד מְלֵאִים כָּל־דַּעַת וְ/תוּכְלוּ לְ/ה/וֹכִיחַ אִישׁ אֶת־רֵעֵהוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "ותוכלו means “and you are able,” from יכל.",
+      "evidence": [
+        "context: able to admonish one another",
+        "local lexicon H3201 יכל = be able"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3201",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 15,
+        "verse": 23,
+        "word_index": 10,
+        "text": "נִכְסַפְתִּי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל כָּ/עֵת אֲשֶׁר אֵין־עוֹד מָקוֹם לִי בַּ/גְּלִילוֹת הָ/אֵלֶּה וְ/נִכְסֹף נִכְסַפְתִּי לָ/בֹא אֲלֵיכֶם זֶה שָׁנִים רַבּוֹת׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "נכספתי means “I have longed,” from כסף in longing sense.",
+      "evidence": [
+        "context: longing for many years to come to you",
+        "local lexicon H3700 כסף = long"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3700",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 16,
+        "verse": 21,
+        "word_index": 0,
+        "text": "טִימוֹתִיּוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "טִימוֹתִיּוֹס חֲבֵרִי וְ/ל/וּקְיוֹס וְ/יָסוֹן וְ/סוֹסְפַּטְרוֹס קְרוֹבַי שֹׁאֲלִים לִ/שְׁלוֹמְכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "טימותיוס is Timothy; reuse custom entry.",
+      "evidence": [
+        "Romans 16:21 Timothy my coworker",
+        "custom D0093 = Timothy"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0093",
+      "new_strong": "D0093",
+      "hebrew": "טימותיוס",
+      "transliteration_en": "Timothy",
+      "transliteration_es": "Timothy",
+      "definition": {
+        "text_en": "Timothy; coworker of Paul.",
+        "text_es": "Timoteo; colaborador de Pablo."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "romans",
+        "chapter": 16,
+        "verse": 23,
+        "word_index": 0,
+        "text": "גָּיוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "גָּיוֹס הַ/מְאָרֵחַ אוֹתִי וְ/אֵת כָּל־הַ/קְּהִלָּה שֹׁאֵל לִ/שְׁלוֹמְכֶם אֲרַסְטוֹס סֹכֵן הָ/עִיר וּ/קְוַרְטוֹס אָחִינוּ שֹׁאֲלִים לִ/שְׁלוֹמְכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "גיוס is Gaius; reuse custom entry.",
+      "evidence": [
+        "Romans 16:23 Gaius host of Paul",
+        "custom D0057 = Gaius"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0057",
+      "new_strong": "D0057",
+      "hebrew": "גיוס",
+      "transliteration_en": "Gaius",
+      "transliteration_es": "Gaius",
+      "definition": {
+        "text_en": "Gaius; a Christian associated with Paul.",
+        "text_es": "Gayo; cristiano asociado con Pablo."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 2,
+        "verse": 15,
+        "word_index": 7,
+        "text": "נְבִיאֵיהֶם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר אַף־הֵ/מִיתוּ אֶת־הָ/אָדוֹן יֵשׁוּעַ וְ/אֶת־נְבִיאֵיהֶם וְ/אוֹתָנוּ רָדָפוּ וְ/אֵינָם טוֹבִים בְּ/עֵינֵי אֱלֹהִים וְ/אֹיְבִים לְ/כָל־אָדָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "נביאיהם means “their prophets,” from נביא.",
+      "evidence": [
+        "context: killed the Lord Jesus and their prophets",
+        "local lexicon H5030 נביא = prophet"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5030",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 6,
+        "text": "וַנִּוָּעֵץ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַל־כֵּן לֹא יָכֹלְנוּ עוֹד לְ/הִתְאַפֵּק וַ/נִּוָּעֵץ לְ/הִוָּתֵר לְ/בַ/דֵּנוּ בְּ/אַתִּינָס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "ונוועץ means “we resolved/decided,” from יעץ.",
+      "evidence": [
+        "context: we resolved to be left alone in Athens",
+        "local lexicon H3289 יעץ = advise/counsel"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3289",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 7,
+        "text": "לְהִוָּתֵר",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַל־כֵּן לֹא יָכֹלְנוּ עוֹד לְ/הִתְאַפֵּק וַ/נִּוָּעֵץ לְ/הִוָּתֵר לְ/בַ/דֵּנוּ בְּ/אַתִּינָס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "להותר means “to be left/remain,” from יתר.",
+      "evidence": [
+        "context: to be left alone in Athens",
+        "local lexicon H3498 יתר = remain over"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3498",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 17,
+        "text": "יְגִיעָתֵנוּ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/עֲבוּר כֵּן לֹא־יָכֹלְתִּי עוֹד לְ/הִתְאַפֵּק וָ/אֶשְׁלַח לָ/דַעַת אֱמוּנַתְכֶם כִּי אָמַרְתִּי פֶּן־נִסָּה אֶתְכֶם הַ/מְנַסֶּה וְ/הָ/יְתָה לָ/רִיק יְגִיעָתֵנוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "יגיעתנו means “our labor,” from עמל/יגיעה semantic field; H5999 is the local labor term.",
+      "evidence": [
+        "context: lest our labor be in vain",
+        "local lexicon H5999 עמל = labor/toil"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5999",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 4,
+        "verse": 6,
+        "word_index": 9,
+        "text": "נוֹקֵם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לֹא־יַעֲשֹׁק אִישׁ וְ/יוֹנֶה אֶת־אָחִיו בְּ/מַשָּׂא וּ/מַתָּן כִּי־נוֹקֵם יְהוָֹה עַל־כָּל־זֹאת כַּ/אֲשֶׁר כְּ/בָר אָמַרְנוּ וְ/הַ/עִידֹנוּ לָ/כֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "נוקם means “avenger,” from נקם.",
+      "evidence": [
+        "context: the Lord is avenger in all these things",
+        "local lexicon H5358 נקם = avenge"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5358",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 4,
+        "verse": 11,
+        "word_index": 0,
+        "text": "וְתִשְׁתַּדְּלוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/תִשְׁתַּדְּלוּ לָ/שֶׁבֶת בְּ/נַחַת וְ/תַעֲשֹוּ אִישׁ מְלַאכְתּוֹ בַּ/עֲמַל יְדֵיכֶם כַּ/אֲשֶׁר צִוִּינוּ אֶתְכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "ותשתדלו means “make it your ambition/endeavor”; later Hebrew השתדל is best represented as custom.",
+      "evidence": [
+        "context: endeavor to live quietly",
+        "later Hebrew השתדל = strive/endeavor"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0103",
+      "new_strong": "D0103",
+      "hebrew": "השתדל",
+      "transliteration_en": "hishtadel",
+      "transliteration_es": "hishtadel",
+      "definition": {
+        "text_en": "make an effort; strive; endeavor.",
+        "text_es": "esforzarse; procurar; empeñarse."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians1",
+        "chapter": 4,
+        "verse": 11,
+        "word_index": 9,
+        "text": "צִוִּינוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/תִשְׁתַּדְּלוּ לָ/שֶׁבֶת בְּ/נַחַת וְ/תַעֲשֹוּ אִישׁ מְלַאכְתּוֹ בַּ/עֲמַל יְדֵיכֶם כַּ/אֲשֶׁר צִוִּינוּ אֶתְכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "צוינו means “we commanded,” from צוה.",
+      "evidence": [
+        "context: as we commanded you",
+        "local lexicon H6680 צוה = command"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6680",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 1,
+        "verse": 4,
+        "word_index": 9,
+        "text": "סַבְלָנוּתְכֶם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עַד כִּי־נִתְהַלֵּל בָּ/כֶם אַף־אֲנַחְנוּ בִּ/קְהִלּוֹת אֱלֹהִים עַל־סַבְלָנוּתְכֶם וְ/עַל־אֱמוּנַתְכֶם בְּ/כָל־הָ/רְדִיפוֹת וּ/בְ/כָל־הַ/לַּחַץ אֲשֶׁר סְבַלְתֶּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "סבלנותכם means “your endurance/patience”; later Hebrew noun should be custom.",
+      "evidence": [
+        "context: your endurance and faith in persecutions",
+        "later Hebrew סבלנות = patience/endurance"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0104",
+      "new_strong": "D0104",
+      "hebrew": "סבלנות",
+      "transliteration_en": "savlanut",
+      "transliteration_es": "savlanut",
+      "definition": {
+        "text_en": "patience; endurance; steadfastness under pressure.",
+        "text_es": "paciencia; perseverancia; constancia bajo presión."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 9,
+        "text": "בוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לְ/מַעַן יִכָּבֵד בָּ/כֶם שֵׁם יֵשׁוּעַ הַ/מָּשִׁיחַ אֲדֹנֵינוּ וְ/אַתֶּם תִּכָּבְדוּ בוֹ עַל־פִּי חֶסֶד אֱלֹהֵינוּ וַ/אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בו is a pronominal phrase “in him”; leave unresolved until pronoun/preposition policy is set.",
+      "evidence": [
+        "context: you will be glorified in him",
+        "manual policy case: ב + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 3,
+        "verse": 4,
+        "word_index": 11,
+        "text": "נְצַוֶּה׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנַחְנוּ בְּ/טוּחִים עֲלֵיכֶם בַּ/אֲדֹנֵינוּ כִּי־תַעֲשֹוּ וְ/גַם־תּוֹסִיפוּ לַ/עֲשׂוֹת אֶת אֲשֶׁר נְצַוֶּה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "נצוה means “we command,” from צוה.",
+      "evidence": [
+        "context: the things we command",
+        "local lexicon H6680 צוה = command"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6680",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "thessalonians2",
+        "chapter": 3,
+        "verse": 11,
+        "word_index": 11,
+        "text": "וּמְבַלִּים",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי שָׁמַעְנוּ שֶׁיֵּשׁ בָּ/כֶם אֲנָשִׁים הַ/מְעַקְּשִׁים אֶת־דַּרְכֵיהֶם וְ/אֵינָם עֹבְדִים מְאוּמָה וּ/מְבַלִּים יְמֵיהֶם בַּ/הֲ/בָלִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.82,
+      "reason": "ומבלים means “wasting/idling away,” from בלה wear out/waste; confidence lower for later idiom.",
+      "evidence": [
+        "context: not working, wasting their days in idle matters",
+        "local lexicon H1086 בלה = wear out/waste"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1086",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 5,
+        "verse": 11,
+        "word_index": 7,
+        "text": "יִצְרָן",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל הָ/אַלְמָנוֹת הַ/צְּעִירוֹת אַל־תְּקַבֵּל כִּי בְּ/הַטּוֹת יִצְרָן אֶת־לִ/בָּן מִן־הַ/מָּשִׁיחַ חשְׁקוֹת הֵן לִ/הְ/יוֹת לְ/אִישׁ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.82,
+      "reason": "יצרן refers to inclination/desire; H3336 יצר is closest local entry though confidence is lower.",
+      "evidence": [
+        "context: when their desire turns them away from Messiah",
+        "local lexicon H3336 יצר = form/purpose/inclination"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3336",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 5,
+        "verse": 12,
+        "word_index": 0,
+        "text": "וְדִינָן",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/דִינָן עֲלֵיהֶן כִּי בָ/גְדוּ בֶּ/אֱמוּנָתָן הָ/רִאשׁוֹנָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ודינן means “and their judgment/condemnation,” from דין.",
+      "evidence": [
+        "context: they have judgment because they abandoned first faith",
+        "local lexicon H1780 דין = judgment"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1780",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 6,
+        "verse": 2,
+        "word_index": 20,
+        "text": "הַמִּשְׁתַּדְּלִים",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵלֶּה אֲשֶׁר אֲדֹנֵיהֶם בְּ/נֵי אֱמוּנָה אַל־יָקֵלּוּ אֹתָם עַל־הֱ/יוֹתָם אַחִים כִּי אִם־יַעַבְדוּם בְּ/יוֹתֵר בַּ/עֲבוּר כִּי־מַאֲמִינִים וַ/אֲהוּבִים הֵם הַ/מִּשְׁתַּדְּלִים לִ/גְמֹל חָסֶד אֶת־זֹאת תְּלַמֵּד וּ/תְצַוֶּה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "המשתדלים means “those devoting themselves/endeavoring”; reuse custom השתדל entry.",
+      "evidence": [
+        "context: believers who devote themselves to good service",
+        "custom D0103 = strive/endeavor"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0103",
+      "new_strong": "D0103",
+      "hebrew": "השתדל",
+      "transliteration_en": "hishtadel",
+      "transliteration_es": "hishtadel",
+      "definition": {
+        "text_en": "make an effort; strive; endeavor.",
+        "text_es": "esforzarse; procurar; empeñarse."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 6,
+        "verse": 2,
+        "word_index": 26,
+        "text": "וּתְצַוֶּה׃",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵלֶּה אֲשֶׁר אֲדֹנֵיהֶם בְּ/נֵי אֱמוּנָה אַל־יָקֵלּוּ אֹתָם עַל־הֱ/יוֹתָם אַחִים כִּי אִם־יַעַבְדוּם בְּ/יוֹתֵר בַּ/עֲבוּר כִּי־מַאֲמִינִים וַ/אֲהוּבִים הֵם הַ/מִּשְׁתַּדְּלִים לִ/גְמֹל חָסֶד אֶת־זֹאת תְּלַמֵּד וּ/תְצַוֶּה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "ותצוה means “and command,” from צוה.",
+      "evidence": [
+        "context: teach and command these things",
+        "local lexicon H6680 צוה = command"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6680",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 6,
+        "verse": 13,
+        "word_index": 15,
+        "text": "פָּנְטִיּוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הִנְנִי מְצַוְּךָ נֶגֶד הָ/אֱלֹהִים הַ/מְחַיֶּה אֶת־כֹּל וְ/נֶגֶד הַ/מָּשִׁיחַ יֵשׁוּעַ אֲשֶׁר הֵ/עִיד הַ/הוֹדָאָה הַ/יָּפָה לִ/פְנֵי פָּנְטִיּוֹס פִּילָטוֹס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פנטיוס is Pontius; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "1 Timothy 6:13 before Pontius Pilate",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0105",
+      "new_strong": "D0105",
+      "hebrew": "פונטיוס",
+      "transliteration_en": "Pontius",
+      "transliteration_es": "Pontius",
+      "definition": {
+        "text_en": "Pontius; Roman family name of Pontius Pilate.",
+        "text_es": "Poncio; nombre romano de familia de Poncio Pilato."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 6,
+        "verse": 15,
+        "word_index": 1,
+        "text": "יַרְאֶנָּה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר יַרְאֶנָּה בְ/עִתָּהּ הַ/מְבֹרָךְ וְ/הַ/שַּׁלִּיט לְ/בַ/דּוֹ מֶלֶךְ הַ/מְּלָכִים וַ/אֲדֹנֵי הָ/אֲדֹנִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "יראנה means “he will show/reveal it,” from ראה.",
+      "evidence": [
+        "context: which he will show in its time",
+        "local lexicon H7200 ראה = see/show"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7200",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy1",
+        "chapter": 6,
+        "verse": 20,
+        "word_index": 1,
+        "text": "טִימוֹתִיּוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַתָּה טִימוֹתִיּוֹס שְׁמֹר אֶת־הַ/פִּקָּדוֹן וְ/הִתְרַחֵק מִדִּבְרֵי הֶבֶל הַ/פְּסוּלִים וּ/מִן־וִ/כּ/וּחֵי הַמַּדָּע הַ/נִּקְרָא כֵן בְּ/שָׁקֶר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "טימותיוס is Timothy; reuse custom entry.",
+      "evidence": [
+        "1 Timothy direct address to Timothy",
+        "custom D0093 = Timothy"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0093",
+      "new_strong": "D0093",
+      "hebrew": "טימותיוס",
+      "transliteration_en": "Timothy",
+      "transliteration_es": "Timothy",
+      "definition": {
+        "text_en": "Timothy; coworker of Paul.",
+        "text_es": "Timoteo; colaborador de Pablo."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy2",
+        "chapter": 4,
+        "verse": 8,
+        "word_index": 20,
+        "text": "הוֹפָעָתוֹ׃",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מֵעַתָּה שָׁמוּר לִי כֶּ/תֶר הַ/צְּדָקָה אֲשֶׁר בַּ/יּוֹם הַ/הוּא יִתְּנֶנּוּ לִי הָ/אָדוֹן הַ/שֹּׁפֵט הַ/צַּדִּיק וְ/לֹא־לִי לְ/בַ/דִּי כִּי־גַם לְ/כָל־אֹהֲבֵי ה/וֹפָעָתוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "הופעתו means “his appearing”; later Hebrew הופעה should be custom.",
+      "evidence": [
+        "context: those who love his appearing",
+        "later Hebrew הופעה = appearance/manifestation"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0106",
+      "new_strong": "D0106",
+      "hebrew": "הופעה",
+      "transliteration_en": "hofaah",
+      "transliteration_es": "hofaah",
+      "definition": {
+        "text_en": "appearing; manifestation.",
+        "text_es": "aparición; manifestación."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy2",
+        "chapter": 4,
+        "verse": 10,
+        "word_index": 1,
+        "text": "דִימָס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־דִימָס עֲזָבַנִי בְּ/אַהֲבָתוֹ אֶת־הָ/עוֹלָם הַזֶּה וַ/יֵּלֶךְ־לוֹ לְ/תַסְלוֹנִיקִי וּ/קְרִיסְקִיס הָלַךְ לְ/גָלַטְיָא וְ/טִיטוֹס לְ/דַלְמָטְיָא׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "דימס is the NT proper name Demas; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "2 Timothy 4:10 Demas deserted me",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0107",
+      "new_strong": "D0107",
+      "hebrew": "דימס",
+      "transliteration_en": "Demas",
+      "transliteration_es": "Demas",
+      "definition": {
+        "text_en": "Demas; coworker who deserted Paul.",
+        "text_es": "Demas; colaborador que abandonó a Pablo."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy2",
+        "chapter": 4,
+        "verse": 12,
+        "word_index": 1,
+        "text": "טוּכִיקוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־טוּכִיקוֹס שָׁלַחְתִּי לְ/אֶפְסוֹס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "טוכיקוס is the NT proper name Tychicus; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "2 Timothy 4:12 Tychicus sent to Ephesus",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0108",
+      "new_strong": "D0108",
+      "hebrew": "טוכיקוס",
+      "transliteration_en": "Tychicus",
+      "transliteration_es": "Tychicus",
+      "definition": {
+        "text_en": "Tychicus; coworker and messenger of Paul.",
+        "text_es": "Tíquico; colaborador y mensajero de Pablo."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "timothy2",
+        "chapter": 4,
+        "verse": 13,
+        "word_index": 8,
+        "text": "בְּבוֹאֶךָ",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־הַ/מְּעִיל שֶׁהִנַּחְתִּי בִ/טְרוֹאַס אֵצֶל קַרְפּוֹס הֲ/בִיאֶהוּ אִתְּךָ בְּ/בוֹאֶךָ וְ/אַף אֶת־הַ/סְּפָרִים וּ/בִ/פְרָט אֶת־הַ/מְּגִלּוֹת שֶׁל־קְלָף׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "בבואך means “when you come,” from בוא.",
+      "evidence": [
+        "context: when you come, bring the cloak",
+        "local lexicon H935 בוא = come"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H935",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 1,
+        "verse": 4,
+        "word_index": 16,
+        "text": "מוֹשִׁיעֵנוּ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶל־טִיטוֹס בְּ/נוֹ הָ/אֲמִתִּי לְ/פִי אֱמוּנָה אֶחָת חֶסֶד וְ/רַחֲמִים וְ/שָׁלוֹם מֵאֵת הָ/אֱלֹהִים אָבִינוּ וַ/אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ מוֹשִׁיעֵנוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "מושיענו means “our Savior,” from ישע.",
+      "evidence": [
+        "context: Jesus Christ our Savior",
+        "local lexicon H3467 ישע = save/deliver"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3467",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 1,
+        "verse": 5,
+        "word_index": 2,
+        "text": "בִקְרֵיטִי",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לָ/זֹאת עֲזַבְתִּיךָ בִ/קְרֵיטִי לְ/מַעַן תַּשְׁלִים אֶת־הֶחָסֵר וְ/תָשִׂים זְקֵנִים בְּ/כָל־עִיר וָ/עִיר כַּ/אֲשֶׁר צִוִּיתִיךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "בקריטי is Crete with prefixed ב; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Titus 1:5 left you in Crete",
+        "proper place name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0109",
+      "new_strong": "D0109",
+      "hebrew": "קריטי",
+      "transliteration_en": "Crete",
+      "transliteration_es": "Crete",
+      "definition": {
+        "text_en": "Crete; Mediterranean island where Titus ministered.",
+        "text_es": "Creta; isla mediterránea donde Tito ministró."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 2,
+        "verse": 10,
+        "word_index": 15,
+        "text": "מוֹשִׁיעֵנוּ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לֹא־יִמְעֲלוּ מַעַל כִּי אִם־יַרְאוּ כָּל־אֱמוּנָה טוֹבָה לְ/מַעַן יְפָאֲרוּ בַ/כֹּל אֶת־לֶ/קַח אֱלֹהֵינוּ מוֹשִׁיעֵנוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "מושיענו means “our Savior,” from ישע.",
+      "evidence": [
+        "context: God our Savior",
+        "local lexicon H3467 ישע = save/deliver"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3467",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 13,
+        "text": "וּמִתְהַלְּכִים",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי גַם־אֲנַחְנוּ הָ/יִינוּ מִלְּפָנִים חַסְרֵי דַעַת וְ/סוֹרְרִים וְ/תוֹעִים וַ/עֲבָדִים לְ/תַאֲוֺת וְ/לִ/תְשׁוּקוֹת שֹׁנוֹת וּ/מִתְהַלְּכִים בְּ/רִשְׁעָה וְ/קִנְאָה וּ/שְׂנוּאִים וְ/שׂנְאִים אִישׁ אֶת־אָחִיו׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "ומתהלכים means “walking/living,” from הלך.",
+      "evidence": [
+        "context: living in malice and envy",
+        "local lexicon H1980 הלך = walk/go"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1980",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 3,
+        "verse": 8,
+        "word_index": 21,
+        "text": "וּמוֹעִיל",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "נֶאֱמָן הוּא הַ/דָּבָר וְ/רֹצֶה אֲנִי כִּי תְקַיֵּם אֶת־אֵלֶּה לְ/מַעַן אֲשֶׁר יִשְׁתַּדְּלוּ הַ/מַּאֲמִינִים לֵ/אלֹהִים לַ/עֲסֹק בְּ/מַעֲשִׂים טוֹבִים עֲשׂוֹת כָּ/אֵלֶּה טוֹב הוּא וּ/מוֹעִיל לָ/אָדָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "ומועיל means “and profitable,” from יעל.",
+      "evidence": [
+        "context: good and profitable for people",
+        "local lexicon H3276 יעל = profit/benefit"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3276",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "titus",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 13,
+        "text": "גָמַרְתִּי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כַּ/אֲשֶׁר אֶשְׁלַח אֵלֶיךָ אֶת־אַרְטְמָס אוֹ אֶת־טוּכִיקוֹס תְּמַהֵר לָ/ב/וֹא אֵלַי לְ/נִיקָפֹּלִיס כִּי־גָמַרְתִּי בְ/לִ/בִּי לָ/שֶׁבֶת שָׁם בִּ/ימֵי הַ/סְּתָיו׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "גמרתי means “I have decided/resolved,” from גמר.",
+      "evidence": [
+        "context: I have decided to spend the winter there",
+        "local lexicon H1584 גמר = complete/finish; later resolved sense"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1584",
+      "changed_target": "parsed_word"
+    }
+  ]
+}

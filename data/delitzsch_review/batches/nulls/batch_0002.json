@@ -1,0 +1,1556 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:26.116883+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 11,
+        "verse": 25,
+        "word_index": 5,
+        "text": "טַרְסוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּלֶךְ בַּר־נַבָּא מִשָּׁם אֶל־טַרְסוֹס לְ/בַ/קֵּשׁ אֶת־שָׁאוּל וַ/יִּמְצָא אֹתוֹ וַ/יְבִיאֵהוּ אֶל־אַנְטְיוֹכְיָה׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0022",
+      "confidence": 0.98,
+      "reason": "Tarsus is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.11.25.5",
+        "text=טַרְסוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0022",
+      "definition": {
+        "text_en": "Tarsus",
+        "text_es": "Tarso"
+      },
+      "transliteration_en": "Tarsos",
+      "transliteration_es": "Tarsos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 11,
+        "verse": 26,
+        "word_index": 11,
+        "text": "בְּאַנְטְיוֹכְיָא",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּהְיוּ ישְׁבִים יַחַד בַּ/קְּהִלָּה שָׁנָה תְמִימָה וּ/מְלַמְּדִים עַם רָב אָז ה/וּחַל בְּ/אַנְטְיוֹכְיָא לִ/קְרֹא אֶת־הַ/תַּלְמִידִים בְּ/שֵׁם מְשִׁיחִיִּים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0014",
+      "confidence": 0.98,
+      "reason": "Antioch is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.11.26.11",
+        "text=בְּאַנְטְיוֹכְיָא",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0014",
+      "definition": {
+        "text_en": "Antioch",
+        "text_es": "Antioquía"
+      },
+      "transliteration_en": "Antiochia",
+      "transliteration_es": "Antiochia"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 12,
+        "verse": 3,
+        "word_index": 10,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּרְא כִּי־טוֹב הַ/דָּבָר בְּ/עֵינֵי הַ/יְּהוּדִים וַ/יּוֹסֶף לִ/תְפֹּשׂ גַּם־אֶת־פֶּטְרוֹס וְ/הַ/יָּמִים יְמֵי חַג־הַ/מַּצּוֹת׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0001",
+      "confidence": 0.98,
+      "reason": "Peter is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.12.3.10",
+        "text=פֶּטְרוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "definition": {
+        "text_en": "Peter",
+        "text_es": "Pedro"
+      },
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 12,
+        "verse": 6,
+        "word_index": 10,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בַּ/לַּ/יְלָה הַ/הוּא אֲשֶׁר אָמַר ה/וֹרְדוֹס לַ/הֲ/בִיאוֹ מָחָר לְ/דִין וַ/יִּישַׁן פֶּטְרוֹס בֵּ/ין־שְׁנֵי אַנְשֵׁי צָבָא וְ/הוּא אָסוּר בִּ/שְׁנַיִם אֲזִקִּים וְ/שֹׁמְרֵי הַ/פֶּתַח שֹׁמְרִים אֶת־הַ/מִּשְׁמָר׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0001",
+      "confidence": 0.98,
+      "reason": "Peter is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.12.6.10",
+        "text=פֶּטְרוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "definition": {
+        "text_en": "Peter",
+        "text_es": "Pedro"
+      },
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 12,
+        "verse": 7,
+        "word_index": 11,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה מַלְאַךְ יְהוָֹה נִצָּב עָלָיו וְ/אוֹר נָגַהּ בַּ/חֶדֶר וַ/יִּסְפֹּק עַל־יֶרֶךְ פֶּטְרוֹס וַ/יְעִירֵהוּ לֵ/אמֹר קוּם מְהֵרָה וַ/יִּפְּלוּ מוֹסְרוֹתָיו מֵעַל יָדָיו׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0001",
+      "confidence": 0.98,
+      "reason": "Peter is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.12.7.11",
+        "text=פֶּטְרוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "definition": {
+        "text_en": "Peter",
+        "text_es": "Pedro"
+      },
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 12,
+        "verse": 10,
+        "word_index": 11,
+        "text": "בוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַבְרוּ דֶּרֶךְ הַ/מִּשְׁמֶרֶת הָ/רִאשׁוֹנָה וְ/הַ/שְּׁנִיָּה וַ/יָּבֹאוּ עַד־שַׁעַר הַ/בַּרְזֶל אֲשֶׁר יֵצְאוּ בוֹ הָ/עִירָה וַ/יִּפָּתַח הַ/שַּׁעַר לִ/פְנֵיהֶם מֵאֵלָיו וַ/יֵּצְאוּ הַ/חוּצָה וַ/יֵּלְכוּ מַהֲלַךְ רְחוֹב אֶחָד וְ/הַ/מַּלְאָךְ סָר מֵעָלָיו פִּתְאֹם׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Pronominal form בו means \"through/in it\"; parsed prefixes are empty, so assigning a single lexical key needs a policy decision for preposition+suffix forms.",
+      "evidence": [
+        "occurrence=acts.12.10.11",
+        "text=בוֹ",
+        "prefixes=none",
+        "manual_policy_needed=true"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 12,
+        "verse": 11,
+        "word_index": 15,
+        "text": "וַיְפַלְּטֵנִי",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בְּ/שׁוּבוֹ אֶל־דַּעְתּוֹ וַ/יֹּאמֶר פֶּטְרוֹס עַתָּה זֶה יָדַעְתִּי בֶ/אֱמֶת כִּי הָ/אֱלֹהִים שָׁלַח אֶת־מַלְאָכוֹ וַ/יְפַלְּטֵנִי מִיַּד ה/וֹרְדוֹס וּ/מִכָּל־מְזִמַּת עַם הַ/יְּהוּדִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H6403",
+      "confidence": 0.84,
+      "reason": "ויפלטני means he delivered/rescued me; root פלט corresponds to H6403 escape/deliver.",
+      "evidence": [
+        "lexicon H6403 פלט = escape",
+        "context: delivered me from Herod"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 12,
+        "verse": 12,
+        "word_index": 11,
+        "text": "מַרְקוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הוּא חשֵׁב כָּ/זֹאת וְ/הוּא בָא עַד־בֵּ/ית מִרְיָם אֵם יוֹחָנָן הַ/מְכֻנֶּה מַרְקוֹס אֲשֶׁר נִקְהֲלוּ־שָׁם רַבִּים וְ/הֵם מִתְפַּלְלִים יָחַד׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0023",
+      "confidence": 0.98,
+      "reason": "Mark is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.12.12.11",
+        "text=מַרְקוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0023",
+      "definition": {
+        "text_en": "Mark",
+        "text_es": "Marcos"
+      },
+      "transliteration_en": "Markos",
+      "transliteration_es": "Markos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 12,
+        "verse": 17,
+        "word_index": 1,
+        "text": "רָמַז",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הוּא רָמַז לָ/הֶם בְּ/יָדוֹ לַ/חֲשׁוֹת וַ/יְסַפֵּר לָ/הֶם אֵת אֲשֶׁר־ה/וֹצִיאוֹ הָ/אָדוֹן מִן־הַ/מִּשְׁמָר וַ/יֹּאמֶר הַ/גִּידוּ אֶת־זֹאת לְ/יַעֲקֹב וְ/לָ/אַחִים וַ/יֵּצֵא וַ/יֵּלֶךְ־לוֹ לְ/מָקוֹם אַחֵר׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0028",
+      "confidence": 0.86,
+      "reason": "רמז means to signal/gesture; no suitable Biblical Hebrew Strong entry for this post-biblical verb was found.",
+      "evidence": [
+        "occurrence=acts.12.17.1",
+        "text=רָמַז",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0028",
+      "definition": {
+        "text_en": "signal, gesture",
+        "text_es": "hacer señas, indicar con gesto"
+      },
+      "transliteration_en": "ramaz",
+      "transliteration_es": "ramaz"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 12,
+        "verse": 18,
+        "word_index": 10,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הַ/בֹּקֶר אוֹר וּ/מְבוּכָה לֹא־קְטַנָּה הָ/יְתָה בֵּ/ין אַנְשֵׁי הַ/צָּבָא עַל־פֶּטְרוֹס מֶה־הָיָה לוֹ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0001",
+      "confidence": 0.98,
+      "reason": "Peter is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.12.18.10",
+        "text=פֶּטְרוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "definition": {
+        "text_en": "Peter",
+        "text_es": "Pedro"
+      },
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 12,
+        "verse": 20,
+        "word_index": 24,
+        "text": "אַרְצוֹתָם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵיבָה הָ/יְתָה בֵּ/ין ה/וֹרְדוֹס וּ/בֵ/ין בְּ/נֵי־צוֹר וְ/צִידוֹן וַ/יָּבֹאוּ אֵלָיו בְּ/לֵב אֶחָד וַ/יְפַתּוּ אֶת־בְּ/לַ/סְטוֹס אֲשֶׁר עַל־חֲדַר הַ/מֶּלֶךְ וַ/יְבַקְשׁוּ שָׁלוֹם יַעַן לָ/קְחוּ מִחְיַת אַרְצוֹתָם מֵאֶרֶץ הַ/מֶּלֶךְ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H776",
+      "confidence": 0.78,
+      "reason": "ארצותם means their lands/country; noun ארץ corresponds to H776 land/earth.",
+      "evidence": [
+        "lexicon H776 ארץ = land, earth",
+        "context: their country was fed from the king’s country"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 12,
+        "verse": 21,
+        "word_index": 11,
+        "text": "וַיַּטֵּף",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בַּ/יּוֹם הַ/מּוּעָד וַ/יִּלְבַּשׁ ה/וֹרְדוֹס לְ/ב/וּשׁ מַלְכוּת וַ/יֵּשֶׁב עַל־כִּ/סֵּא הַ/מִּשְׁפָּט וַ/יַּטֵּף אֲלֵיהֶם אִמְרָתוֹ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0029",
+      "confidence": 0.78,
+      "reason": "ויטף is used here for delivering an address; the Biblical נטף “drip/drop” is not the intended lexical sense, so this needs a custom Delitzsch entry.",
+      "evidence": [
+        "occurrence=acts.12.21.11",
+        "text=וַיַּטֵּף",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0029",
+      "definition": {
+        "text_en": "deliver a formal address",
+        "text_es": "pronunciar un discurso"
+      },
+      "transliteration_en": "hitif",
+      "transliteration_es": "hitif"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 13,
+        "verse": 1,
+        "word_index": 19,
+        "text": "הוֹרְדוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנָשִׁים נְבִיאִים וּ/מְלַמְּדִים הָיוּ בְ/אַנְטְיוֹכְיָא בַּ/קְּהִלָּה אֲשֶׁר־בָּהּ בַּר־נַבָּא וְ/שִׁמְעוֹן הַ/נִּקְרָא נִיגַר וְ/ל/וּקְיוֹס הַ/קּוּרִינִי וּ/מְנַחֵם אֲשֶׁר גֻּדַּל עִם־ה/וֹרְדוֹס שַׂר־הָרֹבַע וְ/שָׁאוּל׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0025",
+      "confidence": 0.98,
+      "reason": "Herod is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.13.1.19",
+        "text=הוֹרְדוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0025",
+      "definition": {
+        "text_en": "Herod",
+        "text_es": "Herodes"
+      },
+      "transliteration_en": "Herod",
+      "transliteration_es": "Herod"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 13,
+        "verse": 11,
+        "word_index": 24,
+        "text": "לְהוֹלִיכוֹ",
+        "strong": null,
+        "prefixes": [
+          "Hl",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה הִנֵּה יַד־יְהוָֹה בְּךָ וְ/הָ/יִיתָ עִוֵּר וְ/לֹא תִרְאֶה אֶת־הַ/שֶּׁמֶשׁ עַד־עֵת מוֹעֵד וַ/תִּפֹּל עָלָיו פִּתְאֹם אֲפֵלָה וַ/חֲשֵׁכָה וַ/יִּפֶן הֵנָּה וָ/הֵנָּה וַ/יְבַקֵּשׁ אִישׁ לְ/ה/וֹלִיכוֹ בְ/יָדוֹ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H1980",
+      "confidence": 0.72,
+      "reason": "להוליכו means to lead/bring him by hand; הוליך is causative of הלך, H1980 go/walk.",
+      "evidence": [
+        "context: seeking someone to lead him by the hand",
+        "lexicon H1980 הלך = go, come, walk"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 13,
+        "verse": 43,
+        "word_index": 16,
+        "text": "וַיַּזְהִירוּם",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/רַבִּים מִן־הַ/יְּהוּדִים וּ/מִגֵּרֵי הַ/צֶּדֶק הָ/לְכוּ אַחֲרֵי פוֹלוֹס וּ/בַר־נַבָּא בְּ/הִפָּרֵד הַ/קָּהָל וְ/הֵמָּה דִּבְּרוּ עַל־לִ/בָּם וַ/יַּזְהִירוּם לַ/עֲמֹד בְּ/חֶסֶד הָ/אֱלֹהִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H2094",
+      "confidence": 0.78,
+      "reason": "ויזהירום means they warned/admonished them; root זהר corresponds to H2094 and later Hebrew warning/admonition sense.",
+      "evidence": [
+        "context: urged/warned them to continue in God’s grace",
+        "lexicon H2094 זהר = be light/shining, root used for warning in later Hebrew"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 6,
+        "word_index": 4,
+        "text": "לוּקוֹנְיָא",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּוָּדַע לָ/הֶם וַ/יִּבְרְחוּ לְ/עָרֵי ל/וּקוֹנְיָא אֶל־ל/וּסְטְרָא וְ/דַרְבִי וּ/סְבִיבוֹתָן׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0026",
+      "confidence": 0.98,
+      "reason": "Lycaonia is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.14.6.4",
+        "text=לוּקוֹנְיָא",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0026",
+      "definition": {
+        "text_en": "Lycaonia",
+        "text_es": "Licaonia"
+      },
+      "transliteration_en": "Lycaonia",
+      "transliteration_es": "Lycaonia"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 8,
+        "word_index": 4,
+        "text": "בְלוּסְטְרָא",
+        "strong": null,
+        "prefixes": [
+          "Hb",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִישׁ נְכֵה רַגְלַיִם הָיָה בְ/ל/וּסְטְרָא וְ/הוּא ישֵׁב פִּסֵּחַ מִבֶּטֶן אִמּוֹ וְ/לֹא הָלַךְ מִיָּמָיו׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0027",
+      "confidence": 0.98,
+      "reason": "Lystra is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.14.8.4",
+        "text=בְלוּסְטְרָא",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0027",
+      "definition": {
+        "text_en": "Lystra",
+        "text_es": "Listra"
+      },
+      "transliteration_en": "Lystra",
+      "transliteration_es": "Lystra"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 9,
+        "word_index": 2,
+        "text": "פּוֹלוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּשְׁמַע אֶת־פּוֹלוֹס מְדַבֵּר וְ/הוּא הִסְתַּכֵּל בּוֹ וַ/יַּרְא כִּי־אֱמוּנָה בוֹ לְ/הִוָּשֵׁעַ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0024",
+      "confidence": 0.98,
+      "reason": "Paul is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.14.9.2",
+        "text=פּוֹלוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "definition": {
+        "text_en": "Paul",
+        "text_es": "Pablo"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 12,
+        "word_index": 4,
+        "text": "וּלְפוֹלוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּקְרְאוּ לְ/בַר־נַבָּא בֵּל וּ/לְ/פוֹלוֹס קָרְאוּ הֶ/רְמִיס בַּ/אֲשֶׁר הוּא רֹאשׁ הַ/מְדַבְּרִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0024",
+      "confidence": 0.98,
+      "reason": "Paul is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.14.12.4",
+        "text=וּלְפוֹלוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "definition": {
+        "text_en": "Paul",
+        "text_es": "Pablo"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 14,
+        "word_index": 4,
+        "text": "פּוֹלוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כִּ/שְׁמֹעַ זֹאת הַ/שְּׁלִיחִים פּוֹלוֹס וּ/בַר־נַבָּא וַ/יִּקְרְעוּ אֶת־בִּ/גְדֵיהֶם וַ/יָּרוּצוּ אֶל־תּוֹךְ־הָעָם׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0024",
+      "confidence": 0.98,
+      "reason": "Paul is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.14.14.4",
+        "text=פּוֹלוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "definition": {
+        "text_en": "Paul",
+        "text_es": "Pablo"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 19,
+        "word_index": 4,
+        "text": "אַנְטְיוֹכְיָא",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ שָׁמָּה יְהוּדִים מִן־אַנְטְיוֹכְיָא וּ/מִן־אִיקָנְיוֹן וַ/יָּסִיתוּ אֶת־הָעָם וַ/יִּרְגְּמוּ אֶת־פּוֹלוֹס בָּ/אֲבָנִים וַ/יִּסְחָבֻהוּ חוּצָה לָ/עִיר בְּ/חָשְׁבָם כִּי מֵת׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0014",
+      "confidence": 0.98,
+      "reason": "Antioch is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.14.19.4",
+        "text=אַנְטְיוֹכְיָא",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0014",
+      "definition": {
+        "text_en": "Antioch",
+        "text_es": "Antioquía"
+      },
+      "transliteration_en": "Antiochia",
+      "transliteration_es": "Antiochia"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 19,
+        "word_index": 14,
+        "text": "וַיִּסְחָבֻהוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ שָׁמָּה יְהוּדִים מִן־אַנְטְיוֹכְיָא וּ/מִן־אִיקָנְיוֹן וַ/יָּסִיתוּ אֶת־הָעָם וַ/יִּרְגְּמוּ אֶת־פּוֹלוֹס בָּ/אֲבָנִים וַ/יִּסְחָבֻהוּ חוּצָה לָ/עִיר בְּ/חָשְׁבָם כִּי מֵת׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H5498",
+      "confidence": 0.84,
+      "reason": "ויסחבוהו means they dragged him; root סחב corresponds to H5498 drag.",
+      "evidence": [
+        "lexicon H5498 סחב = drag",
+        "context: dragged him outside the city"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 21,
+        "word_index": 13,
+        "text": "וְאַנְטְיוֹכְיָא׃",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְבַשְּׂרוּ אֶת־הַ/בְּשׂוֹרָה בָּ/עִיר הַ/הִיא וְ/אַחֲרֵי הַ/עֲמִידָם תַּלְמִידִים הַ/רְבֵּה שָׁבוּ אֶל־ל/וּסְטְרָא וְ/אִיקָנְיוֹן וְ/אַנְטְיוֹכְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0014",
+      "confidence": 0.98,
+      "reason": "Antioch is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.14.21.13",
+        "text=וְאַנְטְיוֹכְיָא׃",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0014",
+      "definition": {
+        "text_en": "Antioch",
+        "text_es": "Antioquía"
+      },
+      "transliteration_en": "Antiochia",
+      "transliteration_es": "Antiochia"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 22,
+        "word_index": 4,
+        "text": "וַיַּזְהִירוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְחַזְּקוּ אֶת־נַפְשׁוֹת הַ/תַּלְמִידִים וַ/יַּזְהִירוּ אֹתָם לַ/עֲמֹד בָּ/אֱמוּנָה וְ/כִי רַק־בְּ/צָרוֹת רַבּוֹת בּ/וֹא נָבוֹא אֶל־מַלְכוּת הָ/אֱלֹהִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H2094",
+      "confidence": 0.78,
+      "reason": "ויזהירו means they warned/admonished; root זהר corresponds to H2094 and later Hebrew warning/admonition sense.",
+      "evidence": [
+        "context: admonished them to continue in the faith",
+        "lexicon H2094 זהר = be light/shining, root used for warning in later Hebrew"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 23,
+        "word_index": 13,
+        "text": "בוֹ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּבְחֲרוּ לָ/הֶם זְקֵנִים בְּ/כָל־קְהִלָּה וּ/קְהִלָּה וַ/יִּתְפַּלְלוּ וַ/יָּצוּמוּ וַ/יַּפְקִידוּם בְּ/יַד הָ/אָדוֹן אֲשֶׁר הֶ/אֱמִינוּ בוֹ׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Pronominal form בו means \"in whom/him\"; parsed prefixes are empty, so assigning a single lexical key needs a policy decision for preposition+suffix forms.",
+      "evidence": [
+        "occurrence=acts.14.23.13",
+        "text=בוֹ׃",
+        "prefixes=none",
+        "manual_policy_needed=true"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 24,
+        "word_index": 4,
+        "text": "פַּמְפּוּלְיָא׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַבְרוּ בְּ/פִיסִדְיָא וַ/יָּבֹאוּ אֶל־פַּמְפּוּלְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0030",
+      "confidence": 0.98,
+      "reason": "Pamphylia is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.14.24.4",
+        "text=פַּמְפּוּלְיָא׃",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0030",
+      "definition": {
+        "text_en": "Pamphylia",
+        "text_es": "Panfilia"
+      },
+      "transliteration_en": "Pamphylia",
+      "transliteration_es": "Pamphylia"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 25,
+        "word_index": 4,
+        "text": "בְּפַרְגִי",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּשְׁמִיעוּ אֶת־דְּבַר יְהוָֹה בְּ/פַרְגִי וַ/יֵּרְדוּ אֶל־אַטַּלְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0031",
+      "confidence": 0.98,
+      "reason": "Perga is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.14.25.4",
+        "text=בְּפַרְגִי",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0031",
+      "definition": {
+        "text_en": "Perga",
+        "text_es": "Perge"
+      },
+      "transliteration_en": "Perga",
+      "transliteration_es": "Perga"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 14,
+        "verse": 26,
+        "word_index": 4,
+        "text": "אַנְטְיוֹכְיָא",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מִשָּׁם בָּ/אוּ בָ/אֳנִיָּה אֶל־אַנְטְיוֹכְיָא אֲשֶׁר נִמְסְרוּ־שָׁם לְ/חֶסֶד אֱלֹהִים עַל־הַ/מְּלָאכָה אֲשֶׁר מִלְאוּ אֹתָהּ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0014",
+      "confidence": 0.98,
+      "reason": "Antioch is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.14.26.4",
+        "text=אַנְטְיוֹכְיָא",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0014",
+      "definition": {
+        "text_en": "Antioch",
+        "text_es": "Antioquía"
+      },
+      "transliteration_en": "Antiochia",
+      "transliteration_es": "Antiochia"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 15,
+        "verse": 22,
+        "word_index": 24,
+        "text": "סִילָא",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּיטַב בְּ/עֵינֵי הַ/שְּׁלִיחִים וְ/הַ/זְּקֵנִים עִם־כָּל־הַ/קָּהָל לִ/בְ/חֹר מֵהֶם אֲנָשִׁים וְ/לִ/שְׁלֹחַ אֹתָם אֶל־אַנְטְיוֹכְיָא עִם־פּוֹלוֹס וּ/בַר־נַבָּא אֶת־יְהוּדָה הַ/מְכֻנֶּה בַּר־שַׁבָּא וְ/אֶת־סִילָא אַנְשֵׁי־שֵׁם בֵּ/ין הָ/אַחִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0032",
+      "confidence": 0.98,
+      "reason": "Silas is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.15.22.24",
+        "text=סִילָא",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0032",
+      "definition": {
+        "text_en": "Silas",
+        "text_es": "Silas"
+      },
+      "transliteration_en": "Silas",
+      "transliteration_es": "Silas"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 15,
+        "verse": 23,
+        "word_index": 17,
+        "text": "וּבְקִילִיקְיָא׃",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּכְתְּבוּ וַ/יִּשְׁלְחוּ עַל־יָדָם לֵ/אמֹר אֲנַחְנוּ הַ/שְּׁלִיחִים וְ/הַ/זְּקֵנִים וְ/הָ/אַחִים שֹׁאֲלִים לִ/שְׁלוֹם הָ/אַחִים אֲשֶׁר מִן־הַ/גּוֹיִם בְּ/אַנְטְיוֹכְיָא וּ/בְ/סוּרְיָא וּ/בְ/קִילִיקְיָא׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0017",
+      "confidence": 0.98,
+      "reason": "Cilicia is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.15.23.17",
+        "text=וּבְקִילִיקְיָא׃",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0017",
+      "definition": {
+        "text_en": "Cilicia",
+        "text_es": "Cilicia"
+      },
+      "transliteration_en": "Cilicia",
+      "transliteration_es": "Cilicia"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 15,
+        "verse": 24,
+        "word_index": 19,
+        "text": "צִוִּינוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "יַעַן וּ/בְ/יַעַן שָׁמַעְנוּ כִּי יָצְאוּ מֵאִתָּנוּ מְבַלְבְּלִים אֶתְכֶם וּ/מְקַלְקְלִים נַפְשֹׁתֵיכֶם בִּ/דְבָרִים בְּ/אָמְרָם לָ/כֶם לְ/הִמּוֹל וְ/לִ/שְׁמֹר אֶת־הַ/תּוֹרָה אֲשֶׁר לֹא צִוִּינוּ אוֹתָם׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H6680",
+      "confidence": 0.86,
+      "reason": "צוינו means we commanded; root צוה corresponds to H6680 command/charge.",
+      "evidence": [
+        "lexicon H6680 צוה = command, charge",
+        "context: we gave no such command"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 16,
+        "verse": 11,
+        "word_index": 12,
+        "text": "נַפּוֹלִיס׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/נֵּצֵא מִן־טְרוֹאַס וַ/נֵּרֶד בָּ/אֳנִיָּה וַ/נָּבֹא דֶּרֶךְ יְשָׁרָה אֶל־סַמּוֹתְרַקְיָא וּ/מִמָּחֳרָת אֶל־נַפּוֹלִיס׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0033",
+      "confidence": 0.98,
+      "reason": "Neapolis is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.16.11.12",
+        "text=נַפּוֹלִיס׃",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0033",
+      "definition": {
+        "text_en": "Neapolis",
+        "text_es": "Neápolis"
+      },
+      "transliteration_en": "Neapolis",
+      "transliteration_es": "Neapolis"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 16,
+        "verse": 13,
+        "word_index": 13,
+        "text": "כְּמִנְהָגָם",
+        "strong": null,
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/יוֹם הַ/שַּׁבָּת יָצָאנוּ אֶל־מִחוּץ לָ/עִיר אֶל־יַד הַ/נָּהָר אֲשֶׁר־שָׁם מְקוֹם תְּפִלָּה כְּ/מִנְהָגָם וַ/נֵּשֶׁב וַ/נְּדַבֵּר אֶל־הַ/נָּשִׁים הַ/נִּקְהָלוֹת שָׁמָּה׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0034",
+      "confidence": 0.88,
+      "reason": "מנהג is a later Hebrew noun for custom/practice; no suitable Biblical Hebrew Strong entry was found.",
+      "evidence": [
+        "occurrence=acts.16.13.13",
+        "text=כְּמִנְהָגָם",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0034",
+      "definition": {
+        "text_en": "custom, practice",
+        "text_es": "costumbre, práctica"
+      },
+      "transliteration_en": "minhag",
+      "transliteration_es": "minhag"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 16,
+        "verse": 17,
+        "word_index": 13,
+        "text": "הַמּוֹדִיעִים",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תֵּלֶךְ אַחֲרֵי פוֹלוֹס וְ/אַחֲרֵינוּ הָ/לוֹךְ וְ/קָרוֹא לֵ/אמֹר הָ/אֲנָשִׁים הָ/אֵלֶּה עַבְדֵי אֵל עֶלְיוֹן הֵמָּה הַ/מּוֹדִיעִים אֹתָנוּ אֹרַח הַ/יְשׁוּעָה׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H3045",
+      "confidence": 0.8,
+      "reason": "המודיעים means making known/declaring; root ידע corresponds to H3045 know/make known.",
+      "evidence": [
+        "context: declaring to us the way of salvation",
+        "lexicon H3045 ידע = know"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 16,
+        "verse": 37,
+        "word_index": 13,
+        "text": "רוֹמִיִּים",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר פּוֹלוֹס אֲלֵיהֶם הַכֵּה הִכּוּנוּ נֶגֶד כָּל־הָעָם בְּ/לֹא־דִין וּ/מִשְׁפָּט וַ/אֲנַחְנוּ אֲנָשִׁים רוֹמִיִּים וַ/יַּשְׁלִיכוּ אֹתָנוּ בַּ/מִּשְׁמָר וְ/עַתָּה בַּ/סֵּתֶר יְגָרְשׁוּנוּ אַל־נָא כִּי אִם־יָבֹאוּ הֵמָּה וְ/יוֹצִיאוּנוּ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0035",
+      "confidence": 0.98,
+      "reason": "Romans is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.16.37.13",
+        "text=רוֹמִיִּים",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0035",
+      "definition": {
+        "text_en": "Romans",
+        "text_es": "Romanos"
+      },
+      "transliteration_en": "Romiyim",
+      "transliteration_es": "Romiyim"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 16,
+        "verse": 37,
+        "word_index": 26,
+        "text": "וְיוֹצִיאוּנוּ׃",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר פּוֹלוֹס אֲלֵיהֶם הַכֵּה הִכּוּנוּ נֶגֶד כָּל־הָעָם בְּ/לֹא־דִין וּ/מִשְׁפָּט וַ/אֲנַחְנוּ אֲנָשִׁים רוֹמִיִּים וַ/יַּשְׁלִיכוּ אֹתָנוּ בַּ/מִּשְׁמָר וְ/עַתָּה בַּ/סֵּתֶר יְגָרְשׁוּנוּ אַל־נָא כִּי אִם־יָבֹאוּ הֵמָּה וְ/יוֹצִיאוּנוּ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H3318",
+      "confidence": 0.86,
+      "reason": "ויוציאונו means let them bring us out; root יצא corresponds to H3318 go/come out.",
+      "evidence": [
+        "lexicon H3318 יצא = go/come out",
+        "context: let them come and bring us out"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 17,
+        "verse": 2,
+        "word_index": 0,
+        "text": "וּפוֹלוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פוֹלוֹס נִכְנַס אֲלֵיהֶם כְּ/מִשְׁפָּטוֹ וְ/שָׁלשׁ שַׁבָּתוֹת דִּבֶּר עִמָּהֶם בְּ/דִבְרֵי הַ/כְּתוּבִים׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0024",
+      "confidence": 0.98,
+      "reason": "Paul is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.17.2.0",
+        "text=וּפוֹלוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "definition": {
+        "text_en": "Paul",
+        "text_es": "Pablo"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 17,
+        "verse": 7,
+        "word_index": 0,
+        "text": "וְיָסוֹן",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/יָסוֹן אָסַף אֹתָם אֶל־בֵּ/יתוֹ וְ/הֵם כֻּ/לָּם עֹשִׂים נֶגֶד חֻקֵּי הַ/קֵּיסַר בְּ/אָמְרָם כִּי יֶשׁ־מֶלֶךְ אַחֵר וְ/הוּא יֵשׁוּעַ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0036",
+      "confidence": 0.98,
+      "reason": "Jason is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.17.7.0",
+        "text=וְיָסוֹן",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0036",
+      "definition": {
+        "text_en": "Jason",
+        "text_es": "Jasón"
+      },
+      "transliteration_en": "Jason",
+      "transliteration_es": "Jason"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 17,
+        "verse": 8,
+        "word_index": 0,
+        "text": "וַיַּחֲרִידוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּחֲרִידוּ אֶת־הָעָם וְ/אֶת־רָאשֵׁי הָ/עִיר אֲשֶׁר שָׁמְעוּ אֶת־זֹאת׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H2729",
+      "confidence": 0.82,
+      "reason": "ויחרידו means they troubled/alarmed; root חרד corresponds to H2729 tremble/be terrified.",
+      "evidence": [
+        "lexicon H2729 חרד = tremble, be terrified",
+        "context: they disturbed the crowd and city rulers"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 17,
+        "verse": 15,
+        "word_index": 0,
+        "text": "וְהַמְלַוִּים",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הַ/מְלַוִּים אֶת־פּוֹלוֹס ה/וֹלִיכֻהוּ עַד־אַתִּינַס וַ/יְקַבְּלוּ מִצְוָתוֹ אֶל־סִילָא וְ/טִימוֹתִיּוֹס כִּי־ב/וֹא יָבֹאוּ אֵלָיו בִּ/מְהֵרָה וַ/יֵּלֵכוּ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "H3867",
+      "confidence": 0.78,
+      "reason": "המלווים means those accompanying/escorting; root לוה corresponds to H3867 join/be joined.",
+      "evidence": [
+        "context: those escorting Paul",
+        "lexicon H3867 לוה = join, be joined"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 18,
+        "verse": 2,
+        "word_index": 14,
+        "text": "פְּרִיסְקִילָה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּמְצָא יְהוּדִי נוֹלָד בְּ/פוֹנְטוֹס וּ/שְׁמוֹ עֲקִילַס אֲשֶׁר זֶה מִקָּרוֹב בָּא מִן־אִיטַלְיָא הוּא וְ/אִשְׁתּוֹ פְּרִיסְקִילָה מִפְּנֵי אֲשֶׁר צִוָּה קְלוֹדְיוֹס אֶת־כָּל־הַ/יְּהוּדִים לָ/סוּר מֵעִיר רוֹמִי׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0037",
+      "confidence": 0.98,
+      "reason": "Priscilla is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.18.2.14",
+        "text=פְּרִיסְקִילָה",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0037",
+      "definition": {
+        "text_en": "Priscilla",
+        "text_es": "Priscila"
+      },
+      "transliteration_en": "Priscilla",
+      "transliteration_es": "Priscilla"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 18,
+        "verse": 2,
+        "word_index": 18,
+        "text": "קְלוֹדְיוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּמְצָא יְהוּדִי נוֹלָד בְּ/פוֹנְטוֹס וּ/שְׁמוֹ עֲקִילַס אֲשֶׁר זֶה מִקָּרוֹב בָּא מִן־אִיטַלְיָא הוּא וְ/אִשְׁתּוֹ פְּרִיסְקִילָה מִפְּנֵי אֲשֶׁר צִוָּה קְלוֹדְיוֹס אֶת־כָּל־הַ/יְּהוּדִים לָ/סוּר מֵעִיר רוֹמִי׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0038",
+      "confidence": 0.98,
+      "reason": "Claudius is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.18.2.18",
+        "text=קְלוֹדְיוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0038",
+      "definition": {
+        "text_en": "Claudius",
+        "text_es": "Claudio"
+      },
+      "transliteration_en": "Claudius",
+      "transliteration_es": "Claudius"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 18,
+        "verse": 5,
+        "word_index": 1,
+        "text": "סִילָא",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/כְ/בוֹא סִילָא וְ/טִימוֹתִיּוֹס מִמַּקְדּוֹנְיָא הָיָה פוֹלוֹס מִתְאַמֵּץ בָּ/רוּחַ לְ/הָעִיד אֶל־הַ/יְּהוּדִים כִּי יֵשׁוּעַ הוּא הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0032",
+      "confidence": 0.98,
+      "reason": "Silas is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.18.5.1",
+        "text=סִילָא",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0032",
+      "definition": {
+        "text_en": "Silas",
+        "text_es": "Silas"
+      },
+      "transliteration_en": "Silas",
+      "transliteration_es": "Silas"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 18,
+        "verse": 6,
+        "word_index": 15,
+        "text": "לִּי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כַּ/אֲשֶׁר הִתְקוֹמְמוּ וְ/גִדְּפוּ וַ/יְנַעֵר אֶת־בְּ/גָדָיו וַ/יֹּאמֶר אֲלֵיהֶם דַּמְכֶם בְּ/רָאשֵׁיכֶם וְ/אָנֹכִי נָקִי מֵעַתָּה אֵלְכָה־לִּי אֶל־הַ/גּוֹיִם׃"
+      },
+      "previous_strong": null,
+      "new_strong": null,
+      "confidence": 0.0,
+      "reason": "Pronominal/idiomatic לי means \"for/to me\" in אלכה־לי; needs policy for whether standalone ל+suffix gets H3808, H589, or custom handling.",
+      "evidence": [
+        "occurrence=acts.18.6.15",
+        "text=לִּי",
+        "prefixes=none",
+        "manual_policy_needed=true"
+      ],
+      "reviewer": "codex-delitzsch-review"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 18,
+        "verse": 8,
+        "word_index": 0,
+        "text": "וּקְרִיסְפּוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/קְרִיסְפּוֹס רֹאשׁ הַ/כְּנֵסֶת הֶ/אֱמִין בָּ/אָדוֹן הוּא וְ/כָל־בֵּ/יתוֹ וְ/גַם קוֹרִנְתִּים רַבִּים בְּ/שָׁמְעָם הֶ/אֱמִינוּ וַ/יִּטָּבֵלוּ׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0039",
+      "confidence": 0.98,
+      "reason": "Crispus is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.18.8.0",
+        "text=וּקְרִיסְפּוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0039",
+      "definition": {
+        "text_en": "Crispus",
+        "text_es": "Crispo"
+      },
+      "transliteration_en": "Crispus",
+      "transliteration_es": "Crispus"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 18,
+        "verse": 18,
+        "word_index": 0,
+        "text": "וּפוֹלוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פוֹלוֹס יָשַׁב שָׁם עוֹד יָמִים רַבִּים וַ/יִּפָּרֵד מִן־הָ/אַחִים וַ/יֵּרֶד בָּ/אֳנִיָּה לָ/לֶכֶת אֶל־סוּרְיָא וְ/אִתּוֹ פְּרִיסְקִילָה וַ/עֲקִילַס וַ/יְגַלַּח אֶת־רֹאשׁוֹ בְּ/קַנְכְּרַי כִּי נֶדֶר עָלָיו׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0024",
+      "confidence": 0.98,
+      "reason": "Paul is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.18.18.0",
+        "text=וּפוֹלוֹס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0024",
+      "definition": {
+        "text_en": "Paul",
+        "text_es": "Pablo"
+      },
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Paulos"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 18,
+        "verse": 18,
+        "word_index": 15,
+        "text": "פְּרִיסְקִילָה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פוֹלוֹס יָשַׁב שָׁם עוֹד יָמִים רַבִּים וַ/יִּפָּרֵד מִן־הָ/אַחִים וַ/יֵּרֶד בָּ/אֳנִיָּה לָ/לֶכֶת אֶל־סוּרְיָא וְ/אִתּוֹ פְּרִיסְקִילָה וַ/עֲקִילַס וַ/יְגַלַּח אֶת־רֹאשׁוֹ בְּ/קַנְכְּרַי כִּי נֶדֶר עָלָיו׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0037",
+      "confidence": 0.98,
+      "reason": "Priscilla is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.18.18.15",
+        "text=פְּרִיסְקִילָה",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0037",
+      "definition": {
+        "text_en": "Priscilla",
+        "text_es": "Priscila"
+      },
+      "transliteration_en": "Priscilla",
+      "transliteration_es": "Priscilla"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 18,
+        "verse": 18,
+        "word_index": 16,
+        "text": "וַעֲקִילַס",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פוֹלוֹס יָשַׁב שָׁם עוֹד יָמִים רַבִּים וַ/יִּפָּרֵד מִן־הָ/אַחִים וַ/יֵּרֶד בָּ/אֳנִיָּה לָ/לֶכֶת אֶל־סוּרְיָא וְ/אִתּוֹ פְּרִיסְקִילָה וַ/עֲקִילַס וַ/יְגַלַּח אֶת־רֹאשׁוֹ בְּ/קַנְכְּרַי כִּי נֶדֶר עָלָיו׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0040",
+      "confidence": 0.98,
+      "reason": "Aquila is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.18.18.16",
+        "text=וַעֲקִילַס",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0040",
+      "definition": {
+        "text_en": "Aquila",
+        "text_es": "Aquila"
+      },
+      "transliteration_en": "Aquila",
+      "transliteration_es": "Aquila"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 18,
+        "verse": 21,
+        "word_index": 23,
+        "text": "אֶפְסוֹס׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־נִפְרַד מֵהֶם בְּ/אָמְרוֹ מְחֻיָּב אֲנִי לָ/חֹג אֶת־הֶחָג הַבָּא בִּ/ירוּשָׁלַיִם וְ/אַחֲרֵי־כֵן אָשׁוּבָה אֲלֵיכֶם אִם־יִרְצֶה יְהוָֹה וַ/יֵּלֶךְ־לוֹ בָ/אֳנִיָּה מִן־אֶפְסוֹס׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0041",
+      "confidence": 0.98,
+      "reason": "Ephesus is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.18.21.23",
+        "text=אֶפְסוֹס׃",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0041",
+      "definition": {
+        "text_en": "Ephesus",
+        "text_es": "Éfeso"
+      },
+      "transliteration_en": "Ephesus",
+      "transliteration_es": "Ephesus"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 18,
+        "verse": 26,
+        "word_index": 10,
+        "text": "וּפְרִיסְקִילָה",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הוּא הֵחֵל לִ/קְרֹא בְּ/בֵית הַ/כְּנֵסֶת בְּ/בִטְחוֹן לֵ/בָב וַ/יִּשְׁמְעוּ אֹתוֹ עֲקִילַס וּ/פְרִיסְקִילָה וַ/יִּקָּחֻהוּ אֲלֵיהֶם וַ/יּוֹסִיפוּ לְ/הַ/גִּיד לוֹ אֶת־דֶּרֶךְ הָ/אֱלֹהִים בַּ/אֵר הֵ/יטֵב׃"
+      },
+      "previous_strong": null,
+      "new_strong": "D0037",
+      "confidence": 0.98,
+      "reason": "Priscilla is a NT proper name/place or loanword; no Hebrew Strong entry is suitable.",
+      "evidence": [
+        "occurrence=acts.18.26.10",
+        "text=וּפְרִיסְקִילָה",
+        "NT Delitzsch proper-name/place review"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0037",
+      "definition": {
+        "text_en": "Priscilla",
+        "text_es": "Priscila"
+      },
+      "transliteration_en": "Priscilla",
+      "transliteration_es": "Priscilla"
+    }
+  ]
+}

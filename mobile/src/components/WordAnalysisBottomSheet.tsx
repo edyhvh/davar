@@ -144,7 +144,7 @@ const resolveStrongNumber = (
 ): string | null => {
   if (strong) {
     const parts = strong.split("/").map((part) => part.trim());
-    const strongPart = parts.find((part) => /^[HG]\d+$/.test(part));
+    const strongPart = parts.find((part) => /^[HGD]\d+$/.test(part));
     if (strongPart) {
       return strongPart;
     }

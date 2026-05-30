@@ -1,0 +1,1542 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.491194+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 28,
+        "verse": 11,
+        "word_index": 13,
+        "text": "דִּגְלָהּ",
+        "strong": "H3402",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַחֲרֵי שְׁלשֶׁת חֳדָשִׁים עָבַרְנוּ מִשָּׁם בָּ/אֳנִיָּה אֲלֶכְסַנְדְּרִית אֲשֶׁר יָשְׁבָה בָ/אִי בִּ/ימֵי הַסְּתָו וְ/אוֹת דִּגְלָהּ הַ/תְּאוֹמִים׃"
+      },
+      "previous_strong": "H3402",
+      "new_strong": "H1714",
+      "confidence": 0.92,
+      "reason": "דִּגְלָהּ means its sign/banner/figurehead; H1714 דֶּגֶל fits, H3402 is unrelated.",
+      "evidence": [
+        "occurrence=acts.28.11.13",
+        "text=דִּגְלָהּ",
+        "prefixes=none",
+        "strong=H3402",
+        "lemma=יָרִיב",
+        "definitions=he contendeth | taketh | part | conducteth | case",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 28,
+        "verse": 11,
+        "word_index": 14,
+        "text": "הַתְּאוֹמִים׃",
+        "strong": "H8380",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַחֲרֵי שְׁלשֶׁת חֳדָשִׁים עָבַרְנוּ מִשָּׁם בָּ/אֳנִיָּה אֲלֶכְסַנְדְּרִית אֲשֶׁר יָשְׁבָה בָ/אִי בִּ/ימֵי הַסְּתָו וְ/אוֹת דִּגְלָהּ הַ/תְּאוֹמִים׃"
+      },
+      "previous_strong": "H8380",
+      "new_strong": "H8380",
+      "confidence": 0.92,
+      "reason": "הַתְּאוֹמִים means the twins; local H8380 had no definition.",
+      "evidence": [
+        "occurrence=acts.28.11.14",
+        "text=הַתְּאוֹמִים׃",
+        "prefixes=Hd",
+        "strong=H8380",
+        "lemma=תָּאוֹם",
+        "definitions=none",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8380",
+      "definition": {
+        "text_en": "twin; twins.",
+        "text_es": "gemelo; gemelos.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 28,
+        "verse": 17,
+        "word_index": 20,
+        "text": "מַעַל",
+        "strong": "H4603",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי אַחֲרֵי שְׁלשֶׁת יָמִים וַ/יִּקְרָא פוֹלוֹס אֵלָיו אֶת־רָאשֵׁי הַ/יְּהוּדִים וַ/יִּקָּהֲלוּ אֵלָיו וַ/יֹּאמֶר אֲלֵיהֶם אֲנָשִׁים אַחִים אַף כִּי־לֹא מָעַלְתִּי מַעַל בְּ/עַמֵּנוּ וּ/בְ/חֻקּוֹת אֲבוֹתֵינוּ אֲסָרוּנִי בִ/ירוּשָׁלַיִם וַ/יִּמְסְרוּנִי לִ/ידֵי הָ/רוֹמִיִּים׃"
+      },
+      "previous_strong": "H4603",
+      "new_strong": "H4603",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for מַעַל.",
+      "evidence": [
+        "occurrence=acts.28.17.20",
+        "text=מַעַל",
+        "prefixes=none",
+        "strong=H4603",
+        "lemma=מָעַל",
+        "definitions=act unfaithfully | treacherously",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 28,
+        "verse": 19,
+        "word_index": 3,
+        "text": "וָאֵאָנֵס",
+        "strong": "Hc/H597",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הַ/יְּהוּדִים קָמוּ־בִי וָ/אֵאָנֵס לִ/קְרֹא אֶת־הַ/קֵּיסַר לְ/דִינִי אַךְ אֵין־נַפְשִׁי לִ/שְׂטוֹן אֶת־עַמִּי בְּ/דָבָר׃"
+      },
+      "previous_strong": "Hc/H597",
+      "new_strong": "Hc/H597",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for וָאֵאָנֵס.",
+      "evidence": [
+        "occurrence=acts.28.19.3",
+        "text=וָאֵאָנֵס",
+        "prefixes=Hc",
+        "strong=H597",
+        "lemma=אָנַס",
+        "definitions=compel | constrain",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 28,
+        "verse": 27,
+        "word_index": 1,
+        "text": "שָׁמֵן",
+        "strong": "H8082",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי שָׁמֵן לֵב הָעָם הַזֶּה וְ/אָזְנָיו כָּ/בְ/דוּ וְ/אֶת־עֵינָיו הֵשַׁע פֶּן־יִרְאֶה בְ/עֵינָיו וּ/בְ/אָזְנָיו יִשְׁמַע וּ/לְ/בָבוֹ יָבִין וְ/שָׁב וּ/רְפָאתִיו׃"
+      },
+      "previous_strong": "H8082",
+      "new_strong": "H8082",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for שָׁמֵן.",
+      "evidence": [
+        "occurrence=acts.28.27.1",
+        "text=שָׁמֵן",
+        "prefixes=none",
+        "strong=H8082",
+        "lemma=שָׁמֵן",
+        "definitions=fat | robust",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 28,
+        "verse": 30,
+        "word_index": 6,
+        "text": "שָׂכַר־",
+        "strong": "H7936",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פוֹלוֹס יָשַׁב שְׁנָתַיִם יָמִים בְּ/בֵיתוֹ אֲשֶׁר שָׂכַר־לוֹ וַ/יְקַבֵּל אֵת כָּל־הַ/בָּאִים אֵלָיו׃"
+      },
+      "previous_strong": "H7936",
+      "new_strong": "H7936",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for שָׂכַר־.",
+      "evidence": [
+        "occurrence=acts.28.30.6",
+        "text=שָׂכַר־",
+        "prefixes=none",
+        "strong=H7936",
+        "lemma=שָׂכַר",
+        "definitions=hire",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 1,
+        "word_index": 0,
+        "text": "פּוֹלוֹס",
+        "strong": "H225",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פּוֹלוֹס שְׁלִיחַ יֵשׁוּעַ הַ/מָּשִׁיחַ בִּ/רְצוֹן אֱלֹהִים וְ/טִימוֹתִיּוֹס אָחִינוּ׃"
+      },
+      "previous_strong": "H225",
+      "new_strong": "D0024",
+      "confidence": 0.98,
+      "reason": "פּוֹלוֹס is Paul; reuse existing custom entry D0024.",
+      "evidence": [
+        "occurrence=colossians.1.1.0",
+        "text=פּוֹלוֹס",
+        "prefixes=none",
+        "strong=H225",
+        "lemma=אוּת",
+        "definitions=consent | agree",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0024",
+      "hebrew": "פולוס",
+      "transliteration_en": "Paulos",
+      "transliteration_es": "Pablo",
+      "definition": {
+        "text_en": "Paul; apostle to the nations.",
+        "text_es": "Pablo; apóstol a las naciones.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 1,
+        "word_index": 1,
+        "text": "שְׁלִיחַ",
+        "strong": "H7972",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פּוֹלוֹס שְׁלִיחַ יֵשׁוּעַ הַ/מָּשִׁיחַ בִּ/רְצוֹן אֱלֹהִים וְ/טִימוֹתִיּוֹס אָחִינוּ׃"
+      },
+      "previous_strong": "H7972",
+      "new_strong": "H7972",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for שְׁלִיחַ.",
+      "evidence": [
+        "occurrence=colossians.1.1.1",
+        "text=שְׁלִיחַ",
+        "prefixes=none",
+        "strong=H7972",
+        "lemma=שְׁלַח",
+        "definitions=send",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 2,
+        "word_index": 1,
+        "text": "הַקְּדשִׁים",
+        "strong": "Hd/H6942",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֶל־הַ/קְּדשִׁים וְ/הָ/אַחִים הַ/נֶּאֱמָנִים בַּ/מָּשִׁיחַ אֲשֶׁר הֵם בְּ/קוֹלַסָּא חֶסֶד לָ/כֶם וְ/שָׁלוֹם מֵאֵת הָ/אֱלֹהִים אָבִינוּ וַ/אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "Hd/H6942",
+      "new_strong": "Hd/H6942",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for הַקְּדשִׁים.",
+      "evidence": [
+        "occurrence=colossians.1.2.1",
+        "text=הַקְּדשִׁים",
+        "prefixes=Hd",
+        "strong=H6942",
+        "lemma=קָדַשׁ",
+        "definitions=be set apart | consecrated",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 2,
+        "word_index": 7,
+        "text": "בְּקוֹלַסָּא",
+        "strong": "H2331",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֶל־הַ/קְּדשִׁים וְ/הָ/אַחִים הַ/נֶּאֱמָנִים בַּ/מָּשִׁיחַ אֲשֶׁר הֵם בְּ/קוֹלַסָּא חֶסֶד לָ/כֶם וְ/שָׁלוֹם מֵאֵת הָ/אֱלֹהִים אָבִינוּ וַ/אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H2331",
+      "new_strong": "D0160",
+      "confidence": 0.98,
+      "reason": "בְּקוֹלַסָּא is Colossae; H2331 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.1.2.7",
+        "text=בְּקוֹלַסָּא",
+        "prefixes=Hb",
+        "strong=H2331",
+        "lemma=חָוָה",
+        "definitions=tell | declare",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0160",
+      "hebrew": "קולסא",
+      "transliteration_en": "Colossae",
+      "transliteration_es": "Colosas",
+      "definition": {
+        "text_en": "Colossae; city in Phrygia addressed in Colossians.",
+        "text_es": "Colosas; ciudad de Frigia destinataria de Colosenses.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 3,
+        "word_index": 10,
+        "text": "מִתְפַּלְּלִים",
+        "strong": "H2637",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "נוֹדֶה לֵ/אלֹהִים אֲבִי אֲדֹנֵינוּ יֵשׁוּעַ הַ/מָּשִׁיחַ בְּ/כָל עֵת אֲשֶׁר אֲנַחְנוּ מִתְפַּלְּלִים בַּ/עַדְכֶם׃"
+      },
+      "previous_strong": "H2637",
+      "new_strong": "H6419",
+      "confidence": 0.96,
+      "reason": "מִתְפַּלְּלִים means praying; H6419 פָּלַל fits, H2637 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.1.3.10",
+        "text=מִתְפַּלְּלִים",
+        "prefixes=none",
+        "strong=H2637",
+        "lemma=חָסֵר",
+        "definitions=lack | need | be lacking | decrease",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 6,
+        "word_index": 15,
+        "text": "וְהִכַּרְתֶּם",
+        "strong": "H1970",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר בָּ/אָה אֲלֵיכֶם וְ/גַם לְ/כָל־הָ/עוֹלָם וְ/תִפְרֶה וְ/תִרְבֶּה כְּ/מוֹ גַם־בְּ/תוֹכֲכֶם לְ/מִן־הַ/יּוֹם אֲשֶׁר שְׁמַעְתֶּם וְ/הִכַּרְתֶּם בֶּ/אֱמֶת אֶת־חֶסֶד אֱלֹהִים׃"
+      },
+      "previous_strong": "H1970",
+      "new_strong": "H5234",
+      "confidence": 0.94,
+      "reason": "וְהִכַּרְתֶּם means you knew/recognized; H5234 נָכַר fits, H1970 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.1.6.15",
+        "text=וְהִכַּרְתֶּם",
+        "prefixes=Hc",
+        "strong=H1970",
+        "lemma=הָכַר",
+        "definitions=ye cause me to wonder | ye deal hardly with me | wrong me",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 7,
+        "word_index": 1,
+        "text": "לְמַדְתֶּם",
+        "strong": "H5475",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כַּ/אֲשֶׁר לְ/מַדְתֶּם מִן־אֶפַּפְרָס חֲבֵרֵנוּ הֶ/חָבִיב אֲשֶׁר־הוּא מְשָׁרֵת נֶאֱמָן בַּ/עַדְכֶם לַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H5475",
+      "new_strong": "H3925",
+      "confidence": 0.96,
+      "reason": "לְמַדְתֶּם means you learned; H3925 לָמַד fits, H5475 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.1.7.1",
+        "text=לְמַדְתֶּם",
+        "prefixes=Hl",
+        "strong=H5475",
+        "lemma=סוֹד",
+        "definitions=council | counsel",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 7,
+        "word_index": 5,
+        "text": "הֶחָבִיב",
+        "strong": "H6488",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כַּ/אֲשֶׁר לְ/מַדְתֶּם מִן־אֶפַּפְרָס חֲבֵרֵנוּ הֶ/חָבִיב אֲשֶׁר־הוּא מְשָׁרֵת נֶאֱמָן בַּ/עַדְכֶם לַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H6488",
+      "new_strong": "H1730",
+      "confidence": 0.9,
+      "reason": "הֶחָבִיב means beloved/dear; H1730 דּוֹד fits, H6488 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.1.7.5",
+        "text=הֶחָבִיב",
+        "prefixes=Hd",
+        "strong=H6488",
+        "lemma=פְּקִדֻת",
+        "definitions=oversight | sentinel",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 9,
+        "word_index": 13,
+        "text": "שֶׁתִּמָּלְאוּ",
+        "strong": "H1848",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בַּ/עֲבוּר זֹאת גַּם־אֲנַחְנוּ לְ/מִן־הַ/יּוֹם אֲשֶׁר שְׁמַעֲנוּהָ לֹא חָדַלְנוּ לְ/הִתְפַּלֵּל בַּ/עַדְכֶם וּ/לְ/בַקֵּשׁ שֶׁתִּמָּלְאוּ דַעַת רְצוֹן הָ/אֱלֹהִים בְּ/כָל־חָכְמָה וּ/תְבוּנָה רוּחָנִית׃"
+      },
+      "previous_strong": "H1848",
+      "new_strong": "H4390",
+      "confidence": 0.96,
+      "reason": "שֶׁתִּמָּלְאוּ means that you may be filled; H4390 מָלֵא fits, H1848 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.1.9.13",
+        "text=שֶׁתִּמָּלְאוּ",
+        "prefixes=none",
+        "strong=H1848",
+        "lemma=דׇּפִי",
+        "definitions=blemish | fault | against thy mother’s son thou dost allege a fault",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 9,
+        "word_index": 19,
+        "text": "וּתְבוּנָה",
+        "strong": "Hc/H8394",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בַּ/עֲבוּר זֹאת גַּם־אֲנַחְנוּ לְ/מִן־הַ/יּוֹם אֲשֶׁר שְׁמַעֲנוּהָ לֹא חָדַלְנוּ לְ/הִתְפַּלֵּל בַּ/עַדְכֶם וּ/לְ/בַקֵּשׁ שֶׁתִּמָּלְאוּ דַעַת רְצוֹן הָ/אֱלֹהִים בְּ/כָל־חָכְמָה וּ/תְבוּנָה רוּחָנִית׃"
+      },
+      "previous_strong": "Hc/H8394",
+      "new_strong": "H8394",
+      "confidence": 0.9,
+      "reason": "וּתְבוּנָה means understanding; local H8394 had no definition.",
+      "evidence": [
+        "occurrence=colossians.1.9.19",
+        "text=וּתְבוּנָה",
+        "prefixes=Hc",
+        "strong=H8394",
+        "lemma=תָּבוּן",
+        "definitions=none",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8394",
+      "definition": {
+        "text_en": "understanding; discernment.",
+        "text_es": "entendimiento; discernimiento.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 10,
+        "word_index": 11,
+        "text": "וְלִרְבוֹת",
+        "strong": "H3249",
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לְ/הִתְהַלֵּךְ כַּ/טּוֹב בְּ/עֵינֵי הָ/אָדוֹן וּ/כְ/כָל־רְצוֹנוֹ וְ/לַ/עֲשׂוֹת פְּרִי בְּ/כָל־מַעֲשֶׂה טוֹב וְ/לִ/רְבוֹת בְּ/דַעַת אֱלֹהִים׃"
+      },
+      "previous_strong": "H3249",
+      "new_strong": "H7235",
+      "confidence": 0.96,
+      "reason": "וְלִרְבוֹת means to increase; H7235 רָבָה fits, H3249 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.1.10.11",
+        "text=וְלִרְבוֹת",
+        "prefixes=Hc,Hl",
+        "strong=H3249",
+        "lemma=יָסוּר",
+        "definitions=none",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 11,
+        "word_index": 7,
+        "text": "וְאֹרֶךְ",
+        "strong": "Hc/H753",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לְ/הִתְחַזֵּק בְּ/כָל־כֹּחַ כִּ/גְבוּרַת כְּ/ב/וֹדוֹ לְ/כָל־סַבְלָנוּת וְ/אֹרֶךְ רוּחַ עִם־שִׂמְחָה׃"
+      },
+      "previous_strong": "Hc/H753",
+      "new_strong": "Hc/H753",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for וְאֹרֶךְ.",
+      "evidence": [
+        "occurrence=colossians.1.11.7",
+        "text=וְאֹרֶךְ",
+        "prefixes=Hc",
+        "strong=H753",
+        "lemma=אֹרֶךְ",
+        "definitions=length | length | of time | forbearance | self-restraint",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 3,
+        "text": "מִמֶּמְשֶׁלֶת",
+        "strong": "H4474",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר הוּא חִלְּצָנוּ מִמֶּמְשֶׁלֶת הַ/חשֶׁךְ וְ/הֶ/עֱבִירָנוּ לְ/מַלְכוּת בֶּן־אַהֲבָתוֹ׃"
+      },
+      "previous_strong": "H4474",
+      "new_strong": "H4474",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for מִמֶּמְשֶׁלֶת.",
+      "evidence": [
+        "occurrence=colossians.1.13.3",
+        "text=מִמֶּמְשֶׁלֶת",
+        "prefixes=none",
+        "strong=H4474",
+        "lemma=מִמְשָׁל",
+        "definitions=dominion | ruler",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 6,
+        "text": "נִבְרָא׃",
+        "strong": "H1254",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הוּא צֶלֶם הָ/אֱלֹהִים הַ/נֶּעְלָם וּ/בְ/כוֹר כָּל־נִבְרָא׃"
+      },
+      "previous_strong": "H1254",
+      "new_strong": "H1254",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for נִבְרָא׃.",
+      "evidence": [
+        "occurrence=colossians.1.15.6",
+        "text=נִבְרָא׃",
+        "prefixes=none",
+        "strong=H1254",
+        "lemma=בָּרָא",
+        "definitions=shape | create",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 16,
+        "word_index": 18,
+        "text": "שְׂרָרוֹת",
+        "strong": "H8323",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־בוֹ נִבְרָא כֹּל אֲשֶׁר בַּ/שָּׁמַיִם וַ/אֲשֶׁר בָּ/אָרֶץ כֹּל הַ/נִּרְאֶה וְ/כֹל אֲשֶׁר־אֵינֶנּוּ נִרְאֶה הֵן כִּ/סְאוֹת וּ/מֶמְשָׁלוֹת הֵן שְׂרָרוֹת וְ/רָשֻׁיּוֹת הַכֹּל נִבְרָא עַל־יָדוֹ וּ/לְ/מַעֲנוֹ׃"
+      },
+      "previous_strong": "H8323",
+      "new_strong": "H8323",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for שְׂרָרוֹת.",
+      "evidence": [
+        "occurrence=colossians.1.16.18",
+        "text=שְׂרָרוֹת",
+        "prefixes=none",
+        "strong=H8323",
+        "lemma=שָׂרַר",
+        "definitions=be | act as | prince | rule",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 22,
+        "word_index": 12,
+        "text": "מוּם",
+        "strong": "H3971",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עַתָּה רִצָּה אֶתְכֶם בְּ/גוּף בְּ/שָׂרוֹ עַל־יְדֵי מוֹתוֹ לְ/הַ/עֲמִידְכֶם לְ/פָנָיו קְדשִׁים וּ/בְ/לִי־מוּם וָ/דֹפִי׃"
+      },
+      "previous_strong": "H3971",
+      "new_strong": "H3971",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for מוּם.",
+      "evidence": [
+        "occurrence=colossians.1.22.12",
+        "text=מוּם",
+        "prefixes=none",
+        "strong=H3971",
+        "lemma=מאוּם",
+        "definitions=blemish | defect",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 26,
+        "word_index": 4,
+        "text": "נִסְתָּר",
+        "strong": "H5641",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־הַסּוֹד אֲשֶׁר הָיָה נִסְתָּר מֵעוֹלָמִים וּ/מִדּוֹר וָ/דוֹר וְ/עַתָּה נִגְלָה לִ/קְדוֹשָׁיו׃"
+      },
+      "previous_strong": "H5641",
+      "new_strong": "H5641",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for נִסְתָּר.",
+      "evidence": [
+        "occurrence=colossians.1.26.4",
+        "text=נִסְתָּר",
+        "prefixes=none",
+        "strong=H5641",
+        "lemma=סָתַר",
+        "definitions=hide | conceal",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 29,
+        "word_index": 3,
+        "text": "עָמֵל",
+        "strong": "H6001",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בָ/זֹאת אַף־אֲנִי עָמֵל וְ/נִלְחָם כְּ/פִי־פְעֻלַּת כֹּ/חוֹ הַ/פֹּעֵל בִּי בִּ/גְבוּרָה׃"
+      },
+      "previous_strong": "H6001",
+      "new_strong": "H6001",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for עָמֵל.",
+      "evidence": [
+        "occurrence=colossians.1.29.3",
+        "text=עָמֵל",
+        "prefixes=none",
+        "strong=H6001",
+        "lemma=עָמֵל",
+        "definitions=laborer | sufferer",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 1,
+        "verse": 29,
+        "word_index": 6,
+        "text": "פְעֻלַּת",
+        "strong": "H6468",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בָ/זֹאת אַף־אֲנִי עָמֵל וְ/נִלְחָם כְּ/פִי־פְעֻלַּת כֹּ/חוֹ הַ/פֹּעֵל בִּי בִּ/גְבוּרָה׃"
+      },
+      "previous_strong": "H6468",
+      "new_strong": "H6468",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for פְעֻלַּת.",
+      "evidence": [
+        "occurrence=colossians.1.29.6",
+        "text=פְעֻלַּת",
+        "prefixes=none",
+        "strong=H6468",
+        "lemma=פְּעֻלָּה",
+        "definitions=work | recompense",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 1,
+        "word_index": 4,
+        "text": "הַקְּרָב",
+        "strong": "H1741",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הִנְנִי מוֹדִיעַ אֶתְכֶם גֹּדֶל הַקְּרָב אֲשֶׁר בְּ/קִרְבִּי עַל־אֹדוֹתֵיכֶם וְ/עַל־אוֹדֹת אַנְשֵׁי ל/וּדְקְיָא וְ/עַל־כֹּל אֲשֶׁר לֹא־רָאוּ אֶת־פָּנַי בַּ/בָּשָׂר׃"
+      },
+      "previous_strong": "H1741",
+      "new_strong": "H7128",
+      "confidence": 0.92,
+      "reason": "הַקְּרָב means struggle/conflict; H7128 קְרָב fits, H1741 illness is unrelated.",
+      "evidence": [
+        "occurrence=colossians.2.1.4",
+        "text=הַקְּרָב",
+        "prefixes=none",
+        "strong=H1741",
+        "lemma=דְּוַי",
+        "definitions=illness",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 2,
+        "word_index": 10,
+        "text": "לְהַשְׂכִּיל",
+        "strong": "Hl/Hd/H7919",
+        "prefixes": [
+          "Hl",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לְ/מַעַן יְנֻחֲמוּ לִ/בּ/וֹתָם וְ/נִקְשְׁרוּ יַחַד בְּ/אַהֲבָה וּ/לְ/כָל־עשֶׁר דַּעַת נְכוֹנָה לְ/הַ/שְׂכִּיל סוֹד הָ/אֱלֹהִים אָבִינוּ וְ/סוֹד הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "Hl/Hd/H7919",
+      "new_strong": "Hl/Hd/H7919",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for לְהַשְׂכִּיל.",
+      "evidence": [
+        "occurrence=colossians.2.2.10",
+        "text=לְהַשְׂכִּיל",
+        "prefixes=Hl,Hd",
+        "strong=H7919",
+        "lemma=שָׂכַל",
+        "definitions=be prudent",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 3,
+        "word_index": 4,
+        "text": "אֹצְרוֹת",
+        "strong": "H214",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר צְפוּנִים בּוֹ כָּל־אֹצְרוֹת הַ/חָכְמָה וְ/הַדָּעַת׃"
+      },
+      "previous_strong": "H214",
+      "new_strong": "H214",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for אֹצְרוֹת.",
+      "evidence": [
+        "occurrence=colossians.2.3.4",
+        "text=אֹצְרוֹת",
+        "prefixes=none",
+        "strong=H214",
+        "lemma=אוֹצָר",
+        "definitions=treasure | store | treasury | storehouse",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 3,
+        "word_index": 6,
+        "text": "וְהַדָּעַת׃",
+        "strong": "H4055",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר צְפוּנִים בּוֹ כָּל־אֹצְרוֹת הַ/חָכְמָה וְ/הַדָּעַת׃"
+      },
+      "previous_strong": "H4055",
+      "new_strong": "H1847",
+      "confidence": 0.96,
+      "reason": "וְהַדָּעַת means knowledge; H1847 דַּעַת fits, H4055 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.2.3.6",
+        "text=וְהַדָּעַת׃",
+        "prefixes=Hc",
+        "strong=H4055",
+        "lemma=מַד",
+        "definitions=measure | cloth garment | extended | wide",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 4,
+        "word_index": 7,
+        "text": "יַטְעֶה",
+        "strong": "H8220",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/זֹאת אֹמֵר אֲנִי לָ/כֶם לְ/מַעַן אֲשֶׁר־לֹא יַטְעֶה אֶתְכֶם אִישׁ בְּ/שִׂפְתֵי חֲלָקוֹת׃"
+      },
+      "previous_strong": "H8220",
+      "new_strong": "H2937",
+      "confidence": 0.94,
+      "reason": "יַטְעֶה means mislead/lead astray; H2937 טָעָה fits, H8220 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.2.4.7",
+        "text=יַטְעֶה",
+        "prefixes=none",
+        "strong=H8220",
+        "lemma=שִׁפְלוּת",
+        "definitions=sinking",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 4,
+        "word_index": 11,
+        "text": "חֲלָקוֹת׃",
+        "strong": "H2513",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/זֹאת אֹמֵר אֲנִי לָ/כֶם לְ/מַעַן אֲשֶׁר־לֹא יַטְעֶה אֶתְכֶם אִישׁ בְּ/שִׂפְתֵי חֲלָקוֹת׃"
+      },
+      "previous_strong": "H2513",
+      "new_strong": "H2514",
+      "confidence": 0.93,
+      "reason": "חֲלָקוֹת means smooth/flattering words; H2514 חֲלַקָּה fits better than H2513 portion.",
+      "evidence": [
+        "occurrence=colossians.2.4.11",
+        "text=חֲלָקוֹת׃",
+        "prefixes=none",
+        "strong=H2513",
+        "lemma=חֶלְקָה",
+        "definitions=portion",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 5,
+        "word_index": 14,
+        "text": "תְּכוּנַתְכֶם",
+        "strong": "H5900",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי גַּם־אִם בִּ/בְשָׂרִי אֲנִי רָחוֹק מִכֶּם הִנֵּה בְ/רוּחִי אֲנִי אֶצְלְכֶם וְ/אֶשְׂמַח בִּ/רְאֹתִי אֶת־תְּכוּנַתְכֶם וְ/חֹזֶק אֱמוּנַתְכֶם בַּ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H5900",
+      "new_strong": "H8498",
+      "confidence": 0.92,
+      "reason": "תְּכוּנַתְכֶם means your order/arrangement; H8498 תְּכוּנָה fits, H5900 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.2.5.14",
+        "text=תְּכוּנַתְכֶם",
+        "prefixes=none",
+        "strong=H5900",
+        "lemma=עִירוּ",
+        "definitions=none",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 7,
+        "word_index": 0,
+        "text": "מְשֹׁרָשִׁים",
+        "strong": "H8328",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מְשֹׁרָשִׁים וְ/נִבְנִים בּוֹ וְ/קַיָּמִים בָּ/אֱמוּנָה כַּ/אֲשֶׁר לֻ/מַּדְתֶּם וּ/מַרְבִּים בְּ/תוֹדָה בָּהּ׃"
+      },
+      "previous_strong": "H8328",
+      "new_strong": "H8328",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for מְשֹׁרָשִׁים.",
+      "evidence": [
+        "occurrence=colossians.2.7.0",
+        "text=מְשֹׁרָשִׁים",
+        "prefixes=none",
+        "strong=H8328",
+        "lemma=שֶׁרֶשׁ",
+        "definitions=root",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 8,
+        "word_index": 0,
+        "text": "הִזָּהֲרוּ",
+        "strong": "H7213",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הִזָּהֲרוּ פֶּן־יוֹלִיךְ אִישׁ אֶתְכֶם שׁוֹלָל בְּ/פִילֹסוֹפְיָה וּ/בְ/מַדּוּחֵי שָׁוְא לְ/פִי קַבָּלַת בְּ/נֵי הָ/אָדָם וִ/יסֹדוֹת הָ/עוֹלָם וְ/לֹא עַל־פִּי הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H7213",
+      "new_strong": "H2094",
+      "confidence": 0.94,
+      "reason": "הִזָּהֲרוּ means beware/take heed; H2094 זָהַר fits, H7213 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.2.8.0",
+        "text=הִזָּהֲרוּ",
+        "prefixes=none",
+        "strong=H7213",
+        "lemma=רָאַם",
+        "definitions=rise",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 8,
+        "word_index": 5,
+        "text": "שׁוֹלָל",
+        "strong": "H7758",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הִזָּהֲרוּ פֶּן־יוֹלִיךְ אִישׁ אֶתְכֶם שׁוֹלָל בְּ/פִילֹסוֹפְיָה וּ/בְ/מַדּוּחֵי שָׁוְא לְ/פִי קַבָּלַת בְּ/נֵי הָ/אָדָם וִ/יסֹדוֹת הָ/עוֹלָם וְ/לֹא עַל־פִּי הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H7758",
+      "new_strong": "H7997",
+      "confidence": 0.92,
+      "reason": "שׁוֹלָל means taking spoil/carrying off; H7997 שָׁלַל fits, H7758 barefoot is unrelated.",
+      "evidence": [
+        "occurrence=colossians.2.8.5",
+        "text=שׁוֹלָל",
+        "prefixes=none",
+        "strong=H7758",
+        "lemma=שׁוֹלָל",
+        "definitions=barefoot",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 9,
+        "word_index": 5,
+        "text": "מְלֹא",
+        "strong": "H4393",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי בוֹ בְּ/גוּפוֹ שֹׁכֵן כָּל־מְלֹא הָ/אֱלָהוּת וּ/בוֹ אַתֶּם נִמְלָאִים׃"
+      },
+      "previous_strong": "H4393",
+      "new_strong": "H4393",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for מְלֹא.",
+      "evidence": [
+        "occurrence=colossians.2.9.5",
+        "text=מְלֹא",
+        "prefixes=none",
+        "strong=H4393",
+        "lemma=מְלֹא",
+        "definitions=fulness | that which fills | fulness | mass | multitude",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 10,
+        "word_index": 5,
+        "text": "וְשָׁלְטָן׃",
+        "strong": "Hc/H7985",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר הוּא רֹאשׁ כָּל־שְׂרָרָה וְ/שָׁלְטָן׃"
+      },
+      "previous_strong": "Hc/H7985",
+      "new_strong": "Hc/H7985",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for וְשָׁלְטָן׃.",
+      "evidence": [
+        "occurrence=colossians.2.10.5",
+        "text=וְשָׁלְטָן׃",
+        "prefixes=Hc",
+        "strong=H7985",
+        "lemma=שׇׁלְטָן",
+        "definitions=dominion",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 11,
+        "word_index": 10,
+        "text": "הַחוֹטֵא",
+        "strong": "H1231",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בוֹ אַתֶּם גַּם־נִמּוֹלִים מִילָה שֶׁלֹּא בְ/יָדָיִם בְּ/הַ/פְשָׁטַת גּוּף הַ/בָּשָׂר הַ/חוֹטֵא הִיא מִילַת הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": "H1231",
+      "new_strong": "H2398",
+      "confidence": 0.95,
+      "reason": "הַחוֹטֵא means sinful/sinning; H2398 חָטָא fits, H1231 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.2.11.10",
+        "text=הַחוֹטֵא",
+        "prefixes=Hd",
+        "strong=H1231",
+        "lemma=בֻּקִּי",
+        "definitions=a Danite chief Nu 34:22. | a descendant of Aaron",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 13,
+        "word_index": 8,
+        "text": "בִּסְלֹחַ",
+        "strong": "H6035",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "גַּם־אֶתְכֶם הַ/מֵּתִים בַּ/פְּשָׁעִים וּ/בְ/עָרְלַת בְּ/שַׂרְכֶם הֶ/חֱיָה אִתּוֹ בִּ/סְלֹחַ לָ/כֶם אֶת־כָּל־פִּשְׁעֵיכֶם׃"
+      },
+      "previous_strong": "H6035",
+      "new_strong": "H5545",
+      "confidence": 0.96,
+      "reason": "בִּסְלֹחַ means forgiving; H5545 סָלַח fits, H6035 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.2.13.8",
+        "text=בִּסְלֹחַ",
+        "prefixes=Hb",
+        "strong=H6035",
+        "lemma=עָנָו",
+        "definitions=poor | afflicted | humble | meek",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 14,
+        "word_index": 5,
+        "text": "בְּחֻקֹּתָיו",
+        "strong": "H3247",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּמְחַק אֶת־הַשְּׁטָר הַ/מֵּעִיד בָּ/נוּ בְּ/חֻקֹּתָיו אֲשֶׁר הָיָה נֶגְדֵּנוּ וַ/יִּשָּׂאֵהוּ מִתּוֹכֵנוּ וַ/יִּתְקָעֵהוּ בַּ/צְּלָב׃"
+      },
+      "previous_strong": "H3247",
+      "new_strong": "H2706",
+      "confidence": 0.94,
+      "reason": "בְּחֻקֹּתָיו means in its statutes/ordinances; H2706 חֹק fits, H3247 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.2.14.5",
+        "text=בְּחֻקֹּתָיו",
+        "prefixes=Hb",
+        "strong=H3247",
+        "lemma=יְסוֹד",
+        "definitions=foundation | base",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 14,
+        "word_index": 11,
+        "text": "וַיִּתְקָעֵהוּ",
+        "strong": "Hc/H8628",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּמְחַק אֶת־הַשְּׁטָר הַ/מֵּעִיד בָּ/נוּ בְּ/חֻקֹּתָיו אֲשֶׁר הָיָה נֶגְדֵּנוּ וַ/יִּשָּׂאֵהוּ מִתּוֹכֵנוּ וַ/יִּתְקָעֵהוּ בַּ/צְּלָב׃"
+      },
+      "previous_strong": "Hc/H8628",
+      "new_strong": "Hc/H8628",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for וַיִּתְקָעֵהוּ.",
+      "evidence": [
+        "occurrence=colossians.2.14.11",
+        "text=וַיִּתְקָעֵהוּ",
+        "prefixes=Hc",
+        "strong=H8628",
+        "lemma=תָּקַע",
+        "definitions=thrust | clap | give a blow | blast",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 16,
+        "word_index": 8,
+        "text": "מַאֲכָל",
+        "strong": "H3978",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עַל־כֵּן לֹא־יָדִין אִישׁ אֶתְכֶם עַל־דְּבַר מַאֲכָל וּ/מַשְׁקֶה אוֹ־בְ/עִנְיַן הַ/מּוֹעֲדִים וְ/רָאשֵׁי חֳדָשִׁים וְ/שַׁבָּתוֹת׃"
+      },
+      "previous_strong": "H3978",
+      "new_strong": "H3978",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for מַאֲכָל.",
+      "evidence": [
+        "occurrence=colossians.2.16.8",
+        "text=מַאֲכָל",
+        "prefixes=none",
+        "strong=H3978",
+        "lemma=מַאֲכָל",
+        "definitions=food",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 16,
+        "word_index": 9,
+        "text": "וּמַשְׁקֶה",
+        "strong": "Hc/H4945",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "עַל־כֵּן לֹא־יָדִין אִישׁ אֶתְכֶם עַל־דְּבַר מַאֲכָל וּ/מַשְׁקֶה אוֹ־בְ/עִנְיַן הַ/מּוֹעֲדִים וְ/רָאשֵׁי חֳדָשִׁים וְ/שַׁבָּתוֹת׃"
+      },
+      "previous_strong": "Hc/H4945",
+      "new_strong": "H4945",
+      "confidence": 0.9,
+      "reason": "וּמַשְׁקֶה means drink/beverage; local H4945 only listed cupbearer.",
+      "evidence": [
+        "occurrence=colossians.2.16.9",
+        "text=וּמַשְׁקֶה",
+        "prefixes=Hc",
+        "strong=H4945",
+        "lemma=מַשְׁקֶה",
+        "definitions=butler | cup-bearer",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4945",
+      "definition": {
+        "text_en": "drink; beverage.",
+        "text_es": "bebida.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 2,
+        "verse": 18,
+        "word_index": 19,
+        "text": "גַּאֲוָה",
+        "strong": "H1346",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַל־תִּתְּנוּ לְ/אִישׁ לַ/עֲקֹב אֶתְכֶם עַל־יְדֵי שִׁפְלוּת רוּחַ וַ/עֲבוֹדַת מַלְאָכִים הַ/מְהַלֵּךְ בִּ/דְבָרִים אֲשֶׁר לֹא רָאוּ עֵינָיו וּ/מָלֵא רוּחַ גַּאֲוָה עַל־לֹא־דָבָר מִשֵּׂכֶל בְּ/שָׂרוֹ׃"
+      },
+      "previous_strong": "H1346",
+      "new_strong": "H1346",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and context; existing Strong assignment is acceptable for גַּאֲוָה.",
+      "evidence": [
+        "occurrence=colossians.2.18.19",
+        "text=גַּאֲוָה",
+        "prefixes=none",
+        "strong=H1346",
+        "lemma=גַּאֲוָה",
+        "definitions=majesty | pride | rising up | swelling | majesty",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 1,
+        "text": "מַתֶּם",
+        "strong": "H1546",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־מַתֶּם וְ/חַיֵּיכֶם צְפוּנִים עִם־הַ/מָּשִׁיחַ בֵּ/אלֹהִים׃"
+      },
+      "previous_strong": "H1546",
+      "new_strong": "H4191",
+      "confidence": 0.96,
+      "reason": "מַתֶּם means you died; H4191 מוּת fits, H1546 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.3.3.1",
+        "text=מַתֶּם",
+        "prefixes=none",
+        "strong=H1546",
+        "lemma=גָּלוּת",
+        "definitions=exile",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 2,
+        "text": "וְחַיֵּיכֶם",
+        "strong": "H3668",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־מַתֶּם וְ/חַיֵּיכֶם צְפוּנִים עִם־הַ/מָּשִׁיחַ בֵּ/אלֹהִים׃"
+      },
+      "previous_strong": "H3668",
+      "new_strong": "H2416",
+      "confidence": 0.94,
+      "reason": "וְחַיֵּיכֶם means your life/lives; H2416 חַי fits, H3668 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.3.3.2",
+        "text=וְחַיֵּיכֶם",
+        "prefixes=Hc",
+        "strong=H3668",
+        "lemma=כְּנַעֲנָה",
+        "definitions=father of proph. Zedekiah | a Benjamite",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 7,
+        "text": "הַזְּנוּת",
+        "strong": "H8013",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "עַל־כֵּן תְּמוֹתְתוּ אֶת־אֵבָרֵיכֶם בָּ/אָרֶץ אֶת־הַ/זְּנוּת וְ/הַ/טֻּמְאָה וְ/הַזִּמָּה וְ/הַ/תַּאֲוֺת הָ/רָעוֹת וּ/נְטוֹת אַחֲרֵי הַבֶּצַע אֲשֶׁר הִיא עֲבוֹדַת אֱלִילִים׃"
+      },
+      "previous_strong": "H8013",
+      "new_strong": "H2184",
+      "confidence": 0.96,
+      "reason": "הַזְּנוּת means sexual immorality/fornication; H2184 זְנוּת fits, H8013 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.3.5.7",
+        "text=הַזְּנוּת",
+        "prefixes=Hd",
+        "strong=H8013",
+        "lemma=שְׁלֹמוֹת",
+        "definitions=Levites | son (appar.) of Rehob. | head of post-ex. family",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 10,
+        "text": "וְהַתַּאֲוֺת",
+        "strong": "H4852",
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "עַל־כֵּן תְּמוֹתְתוּ אֶת־אֵבָרֵיכֶם בָּ/אָרֶץ אֶת־הַ/זְּנוּת וְ/הַ/טֻּמְאָה וְ/הַזִּמָּה וְ/הַ/תַּאֲוֺת הָ/רָעוֹת וּ/נְטוֹת אַחֲרֵי הַבֶּצַע אֲשֶׁר הִיא עֲבוֹדַת אֱלִילִים׃"
+      },
+      "previous_strong": "H4852",
+      "new_strong": "H8378",
+      "confidence": 0.96,
+      "reason": "וְהַתַּאֲוֺת means desires/lusts; H8378 תַּאֲוָה fits, H4852 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.3.5.10",
+        "text=וְהַתַּאֲוֺת",
+        "prefixes=Hc,Hd",
+        "strong=H4852",
+        "lemma=מֵשָׁא",
+        "definitions=none",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 12,
+        "text": "וּנְטוֹת",
+        "strong": "H6037",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "עַל־כֵּן תְּמוֹתְתוּ אֶת־אֵבָרֵיכֶם בָּ/אָרֶץ אֶת־הַ/זְּנוּת וְ/הַ/טֻּמְאָה וְ/הַזִּמָּה וְ/הַ/תַּאֲוֺת הָ/רָעוֹת וּ/נְטוֹת אַחֲרֵי הַבֶּצַע אֲשֶׁר הִיא עֲבוֹדַת אֱלִילִים׃"
+      },
+      "previous_strong": "H6037",
+      "new_strong": "H5186",
+      "confidence": 0.86,
+      "reason": "וּנְטוֹת means inclinations/bendings; H5186 נָטָה fits, H6037 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.3.5.12",
+        "text=וּנְטוֹת",
+        "prefixes=Hc",
+        "strong=H6037",
+        "lemma=עַנְוָה",
+        "definitions=humility",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "colossians",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 14,
+        "text": "הַבֶּצַע",
+        "strong": "H7891",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עַל־כֵּן תְּמוֹתְתוּ אֶת־אֵבָרֵיכֶם בָּ/אָרֶץ אֶת־הַ/זְּנוּת וְ/הַ/טֻּמְאָה וְ/הַזִּמָּה וְ/הַ/תַּאֲוֺת הָ/רָעוֹת וּ/נְטוֹת אַחֲרֵי הַבֶּצַע אֲשֶׁר הִיא עֲבוֹדַת אֱלִילִים׃"
+      },
+      "previous_strong": "H7891",
+      "new_strong": "H1215",
+      "confidence": 0.96,
+      "reason": "הַבֶּצַע means greed/covetous gain; H1215 בֶּצַע fits, H7891 is unrelated.",
+      "evidence": [
+        "occurrence=colossians.3.5.14",
+        "text=הַבֶּצַע",
+        "prefixes=none",
+        "strong=H7891",
+        "lemma=שִׁיר",
+        "definitions=sing",
+        "codex reviewed definitions batch_0025"
+      ],
+      "reviewer": "codex-desktop"
+    }
+  ]
+}

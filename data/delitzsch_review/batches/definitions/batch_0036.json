@@ -1,0 +1,1574 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.492387+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 6,
+        "verse": 10,
+        "word_index": 10,
+        "text": "אַהֲבַתְכֶם",
+        "strong": "H8265",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הָ/אֱלֹהִים לֹא־יְעַוֵּת צֶדֶק לִ/שְׁכֹּחַ אֶת־מַעֲשֵׂיכֶם וְ/אֶת־עֲמַל אַהֲבַתְכֶם אֲשֶׁר הֶ/רְאֵיתֶם לִ/שְׁמוֹ שֶׁשֵּׁרַתֶּם וְ/עוֹדְכֶם מְשָׁרְתִים אֶת־הַ/קְּדשִׁים׃"
+      },
+      "previous_strong": "H8265",
+      "new_strong": "H160",
+      "confidence": 0.96,
+      "reason": "אַהֲבַתְכֶם means your love; H160 אַהֲבָה fits, H8265 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.6.10.10",
+        "text=אַהֲבַתְכֶם",
+        "prefixes=none",
+        "strong=H8265",
+        "lemma=שָׂקַר",
+        "definitions=ogle",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 6,
+        "verse": 10,
+        "word_index": 12,
+        "text": "הֶרְאֵיתֶם",
+        "strong": "H580",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הָ/אֱלֹהִים לֹא־יְעַוֵּת צֶדֶק לִ/שְׁכֹּחַ אֶת־מַעֲשֵׂיכֶם וְ/אֶת־עֲמַל אַהֲבַתְכֶם אֲשֶׁר הֶ/רְאֵיתֶם לִ/שְׁמוֹ שֶׁשֵּׁרַתֶּם וְ/עוֹדְכֶם מְשָׁרְתִים אֶת־הַ/קְּדשִׁים׃"
+      },
+      "previous_strong": "H580",
+      "new_strong": "H7200",
+      "confidence": 0.95,
+      "reason": "הֶרְאֵיתֶם means you showed; H7200 רָאָה fits, H580 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.6.10.12",
+        "text=הֶרְאֵיתֶם",
+        "prefixes=Hd",
+        "strong=H580",
+        "lemma=אֲנוּ",
+        "definitions=we",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 6,
+        "verse": 14,
+        "word_index": 5,
+        "text": "אַרְבֶּה",
+        "strong": "H697",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמַר כִּי־בָ/רֵךְ אֲבָרֶכְךָ וְ/הַ/רְבָּה אַרְבֶּה אוֹתָךְ׃"
+      },
+      "previous_strong": "H697",
+      "new_strong": "H7235",
+      "confidence": 0.96,
+      "reason": "אַרְבֶּה means I will multiply; H7235 רָבָה fits, H697 locust is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.6.14.5",
+        "text=אַרְבֶּה",
+        "prefixes=none",
+        "strong=H697",
+        "lemma=אַרְבֶּה",
+        "definitions=locust",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 6,
+        "verse": 19,
+        "word_index": 9,
+        "text": "לַפָּרֹכֶת׃",
+        "strong": "Hl/H6532",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר־הִיא לְ/נַפְשֵׁנוּ לְ/עוֹגִין נָכוֹן וְ/חָזָק וּ/מַגִּיעַ אֶל־מִבֵּית לַ/פָּרֹכֶת׃"
+      },
+      "previous_strong": "Hl/H6532",
+      "new_strong": "Hl/H6532",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: לַפָּרֹכֶת means to/inside the veil; H6532 is correct.",
+      "evidence": [
+        "occurrence=hebrews.6.19.9",
+        "text=לַפָּרֹכֶת׃",
+        "prefixes=Hl",
+        "strong=H6532",
+        "lemma=פֹּרֶכֶת",
+        "definitions=curtain | that which habitually shuts off",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 2,
+        "word_index": 4,
+        "text": "מַעֲשֵׂר",
+        "strong": "H4643",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲשֶׁר חָלַק־לוֹ אַבְרָהָם מַעֲשֵׂר מִכֹּל שְׁמוֹ יְפֹרָשׁ מֶלֶךְ הַ/צֶּדֶק וְ/עוֹד מֶלֶךְ שָׁלֵם הוּא מֶלֶךְ הַ/שָּׁלוֹם׃"
+      },
+      "previous_strong": "H4643",
+      "new_strong": "H4643",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: מַעֲשֵׂר means tithe/tenth; H4643 is correct.",
+      "evidence": [
+        "occurrence=hebrews.7.2.4",
+        "text=מַעֲשֵׂר",
+        "prefixes=none",
+        "strong=H4643",
+        "lemma=מַעֲשֵׂר",
+        "definitions=tenth part | tithe",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 3,
+        "word_index": 14,
+        "text": "נִדְמֶה",
+        "strong": "H1820",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בְּ/אֵין־אָב בְּ/אֵין־אֵם בְּ/אֵין יַחַשׂ וּ/לְ/יָמָיו אֵין תְּחִלָּה וּ/לְ/חַיָּיו אֵין סוֹף כִּי אִם־נִדְמֶה לְ/בֶן־הָ/אֱלֹהִים הוּא עוֹמֵד בִּ/כְ/הֻנָּתוֹ לָ/נֶצַח׃"
+      },
+      "previous_strong": "H1820",
+      "new_strong": "H1819",
+      "confidence": 0.93,
+      "reason": "נִדְמֶה means resembling/being made like; H1819 דָּמָה fits better than H1820 cease/destroy.",
+      "evidence": [
+        "occurrence=hebrews.7.3.14",
+        "text=נִדְמֶה",
+        "prefixes=none",
+        "strong=H1820",
+        "lemma=דָּמָה",
+        "definitions=cease | cause to cease | cut off | destroy",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 4,
+        "word_index": 13,
+        "text": "הַשָּׁלָל׃",
+        "strong": "Hd/H7998",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "רְאוּ עַתָּה מַה־גָּדוֹל הוּא אֲשֶׁר גַּם־אַבְרָהָם אָבִינוּ נָתַן־לוֹ מַעֲשֵׂר מֵרֵאשִׁית הַ/שָּׁלָל׃"
+      },
+      "previous_strong": "Hd/H7998",
+      "new_strong": "Hd/H7998",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַשָּׁלָל means the spoil/plunder; H7998 is correct.",
+      "evidence": [
+        "occurrence=hebrews.7.4.13",
+        "text=הַשָּׁלָל׃",
+        "prefixes=Hd",
+        "strong=H7998",
+        "lemma=שָׁלָל",
+        "definitions=prey | spoil | plunder | booty",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 5,
+        "word_index": 7,
+        "text": "הַכְּהֻנָּה",
+        "strong": "Hd/H3550",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הֶן־אֵלֶּה מִבְּנֵי לֵ/וִי אֲשֶׁר נָחֲלוּ אֶת־הַ/כְּהֻנָּה יֵשׁ־לָ/הֶם חֹק עַל־פִּי הַ/תּוֹרָה לָ/קַחַת אֶת־הַ/מַּעַשְׂרוֹת מִן־הָעָם מִן־אֲחֵיהֶם אֲשֶׁר אַף־הֵם יֹצְאֵי יֶרֶךְ אַבְרָהָם׃"
+      },
+      "previous_strong": "Hd/H3550",
+      "new_strong": "Hd/H3550",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַכְּהֻנָּה means the priesthood; H3550 is correct.",
+      "evidence": [
+        "occurrence=hebrews.7.5.7",
+        "text=הַכְּהֻנָּה",
+        "prefixes=Hd",
+        "strong=H3550",
+        "lemma=כְּהֻנָּה",
+        "definitions=priesthood",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 8,
+        "word_index": 4,
+        "text": "לֹקְחִים",
+        "strong": "H5626",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פֹה בְּ/נֵי אָדָם שֶׁיָּמוּתוּ לֹ/קְחִים אֶת־הַ/מַּעֲשֵׂר אֲבָל שָׁם לֹ/קְחוֹ מִי שֶׁהוּעַד עָלָיו כִּי הוּא חָי׃"
+      },
+      "previous_strong": "H5626",
+      "new_strong": "H3947",
+      "confidence": 0.95,
+      "reason": "לֹקְחִים means taking/receiving; H3947 לָקַח fits, H5626 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.7.8.4",
+        "text=לֹקְחִים",
+        "prefixes=Hl",
+        "strong=H5626",
+        "lemma=סִרָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 9,
+        "word_index": 0,
+        "text": "וְיִתָּכֵן",
+        "strong": "H6366",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/יִתָּכֵן ל/וֹמַר כִּי גַם־לֵ/וִי הַ/לֹּקֵחַ אֶת־הַ/מַּעַשְׂרוֹת הָיָה מְעַשֵּׂר בַּ/עְשֵׂר אַבְרָהָם׃"
+      },
+      "previous_strong": "H6366",
+      "new_strong": "D0180",
+      "confidence": 0.92,
+      "reason": "וְיִתָּכֵן means it may be/it is possible; H6366 is unrelated and this usage is better handled as custom.",
+      "evidence": [
+        "occurrence=hebrews.7.9.0",
+        "text=וְיִתָּכֵן",
+        "prefixes=Hc",
+        "strong=H6366",
+        "lemma=פֵּיָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0180",
+      "hebrew": "יתכן",
+      "transliteration_en": "it may be",
+      "transliteration_es": "puede ser",
+      "definition": {
+        "text_en": "it may be; it is possible; perhaps.",
+        "text_es": "puede ser; es posible; quizá.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 9,
+        "word_index": 10,
+        "text": "בַּעְשֵׂר",
+        "strong": "Hb/H6237",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/יִתָּכֵן ל/וֹמַר כִּי גַם־לֵ/וִי הַ/לֹּקֵחַ אֶת־הַ/מַּעַשְׂרוֹת הָיָה מְעַשֵּׂר בַּ/עְשֵׂר אַבְרָהָם׃"
+      },
+      "previous_strong": "Hb/H6237",
+      "new_strong": "Hb/H6237",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: בַּעְשֵׂר means in/through tithing; H6237 is correct.",
+      "evidence": [
+        "occurrence=hebrews.7.9.10",
+        "text=בַּעְשֵׂר",
+        "prefixes=Hb",
+        "strong=H6237",
+        "lemma=עָשַׂר",
+        "definitions=tale the tenth of | tithe",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 14,
+        "word_index": 5,
+        "text": "זָרַח",
+        "strong": "H2226",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "כִּי גָלוּי לַ/כֹּל אֲשֶׁר אֲדֹנֵינוּ זָרַח מִיהוּדָה מִן־הַ/שֵּׁבֶט אֲשֶׁר משֶׁה לֹא־דִבֶּר אֵלָיו דָּבָר עַל־הַ/כְּהֻנָּה׃"
+      },
+      "previous_strong": "H2226",
+      "new_strong": "H2224",
+      "confidence": 0.95,
+      "reason": "זָרַח means arose/sprang from; H2224 זָרַח fits, H2226 is a proper-name entry.",
+      "evidence": [
+        "occurrence=hebrews.7.14.5",
+        "text=זָרַח",
+        "prefixes=none",
+        "strong=H2226",
+        "lemma=זֶרַח",
+        "definitions=son of Judah and Tamar | Edomites | Levites | head of Simeonite family | a Cushite",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 18,
+        "word_index": 6,
+        "text": "חֲלוּשָׁה",
+        "strong": "H2476",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בַּ/עֲבוּר כִּי הַ/מִּצְוָה הַ/קֹּדֶמֶת ה/וּסָרָה בִּ/הְ/יוֹתָהּ חֲלוּשָׁה וְ/קִצְרַת־יָד מֵהוֹעִיל׃"
+      },
+      "previous_strong": "H2476",
+      "new_strong": "H2476",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: חֲלוּשָׁה means weakness; H2476 is correct.",
+      "evidence": [
+        "occurrence=hebrews.7.18.6",
+        "text=חֲלוּשָׁה",
+        "prefixes=none",
+        "strong=H2476",
+        "lemma=חֲלוּשָׁה",
+        "definitions=weakness | prostration",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 7,
+        "verse": 25,
+        "word_index": 17,
+        "text": "לְהַפְגִּיעַ",
+        "strong": "H4918",
+        "prefixes": [
+          "Hl",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר עַל־כֵּן יוּכַל גַּם־לְ/ה/וֹשִׁיעַ בַּ/כֹּל וָ/כֹל אֶת־הַ/נִּגָּשִׁים עַל־יָדוֹ לֵ/אלֹהִים כִּי חַי־הוּא תָמִיד לְ/הַ/פְגִּיעַ בַּ/עֲדָם׃"
+      },
+      "previous_strong": "H4918",
+      "new_strong": "H6293",
+      "confidence": 0.92,
+      "reason": "לְהַפְגִּיעַ means to intercede/appeal; H6293 פָּגַע fits, H4918 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.7.25.17",
+        "text=לְהַפְגִּיעַ",
+        "prefixes=Hl,Hd",
+        "strong=H4918",
+        "lemma=מְשֻׁלָּם",
+        "definitions=grandfather of Shaphan | son of Zerub. | in Benj. | in Gad | wall-builders",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 8,
+        "verse": 4,
+        "word_index": 12,
+        "text": "הַקָּרְבָּנוֹת",
+        "strong": "H7054",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה אִלּוּ הָיָה בָ/אָרֶץ לֹא הָיָה כֹּ/הֵן כִּי יֶשׁ־פֹּה הַ/כֹּהֲנִים הַ/מַּקְרִיבִים הַ/קָּרְבָּנוֹת לְ/פִי הַ/תּוֹרָה׃"
+      },
+      "previous_strong": "H7054",
+      "new_strong": "H7133",
+      "confidence": 0.96,
+      "reason": "הַקָּרְבָּנוֹת means the offerings/sacrifices; H7133 קָרְבָּן fits, H7054 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.8.4.12",
+        "text=הַקָּרְבָּנוֹת",
+        "prefixes=Hd",
+        "strong=H7054",
+        "lemma=קָמָה",
+        "definitions=standing grain",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 8,
+        "verse": 13,
+        "word_index": 10,
+        "text": "וּמַזְקִין",
+        "strong": "H2204",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הִנֵּה בְ/אָמְרוֹ בְּ/רִית חֲדָשָׁה יִשֵּׁן אֶת־הָ/רִאשׁוֹנָה וּ/מַה־שֶּׁהוּא נוֹשָׁן וּ/מַזְקִין קָרוֹב הוּא אֶל־קִצּוֹ׃"
+      },
+      "previous_strong": "H2204",
+      "new_strong": "H2204",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: וּמַזְקִין means growing old; H2204 is correct.",
+      "evidence": [
+        "occurrence=hebrews.8.13.10",
+        "text=וּמַזְקִין",
+        "prefixes=Hc",
+        "strong=H2204",
+        "lemma=זָקֵן",
+        "definitions=be | become old",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 2,
+        "word_index": 6,
+        "text": "הַמְּנוֹרָה",
+        "strong": "Hd/H4501",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־ה/וּקַם הַ/מִּשְׁכָּן הַ/חִיצוֹן אֲשֶׁר־בּוֹ הַ/מְּנוֹרָה וְ/הַ/שֻּׁלְחָן וּ/מַעֲרֶכֶת הַ/לֶּחֶם וְ/הוּא נִקְרָא קֹדֶשׁ׃"
+      },
+      "previous_strong": "Hd/H4501",
+      "new_strong": "Hd/H4501",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַמְּנוֹרָה means the lampstand; H4501 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.2.6",
+        "text=הַמְּנוֹרָה",
+        "prefixes=Hd",
+        "strong=H4501",
+        "lemma=מְנוֹרָה",
+        "definitions=lampstand | in private house | lampstands | lampstand",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 2,
+        "word_index": 8,
+        "text": "וּמַעֲרֶכֶת",
+        "strong": "Hc/H4635",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־ה/וּקַם הַ/מִּשְׁכָּן הַ/חִיצוֹן אֲשֶׁר־בּוֹ הַ/מְּנוֹרָה וְ/הַ/שֻּׁלְחָן וּ/מַעֲרֶכֶת הַ/לֶּחֶם וְ/הוּא נִקְרָא קֹדֶשׁ׃"
+      },
+      "previous_strong": "Hc/H4635",
+      "new_strong": "Hc/H4635",
+      "confidence": 0.91,
+      "reason": "Reviewed in context: וּמַעֲרֶכֶת means arrangement/row; H4635 is acceptable.",
+      "evidence": [
+        "occurrence=hebrews.9.2.8",
+        "text=וּמַעֲרֶכֶת",
+        "prefixes=Hc",
+        "strong=H4635",
+        "lemma=מַעֲרֶכֶת",
+        "definitions=row | line",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 4,
+        "word_index": 4,
+        "text": "לִקְטֹרֶת",
+        "strong": "Hl/H7004",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר־לוֹ מִזְבַּח הַ/זָּהָב לִ/קְטֹרֶת וַ/אֲרוֹן הַ/בְּרִית מְצֻפֶּה זָהָב כֻּ/לּוֹ וּ/בוֹ צִנְצֶנֶת זָהָב אֲשֶׁר הַמָּן בְּ/תוֹכָהּ וּ/מַטֵּה אַהֲרֹן אֲשֶׁר פָּרַח וְ/ל/וּחוֹת הַ/בְּרִית׃"
+      },
+      "previous_strong": "Hl/H7004",
+      "new_strong": "Hl/H7004",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: לִקְטֹרֶת means for incense; H7004 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.4.4",
+        "text=לִקְטֹרֶת",
+        "prefixes=Hl",
+        "strong=H7004",
+        "lemma=קְטֹרֶת",
+        "definitions=smoke | odour of | sacrifice | incense",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 4,
+        "word_index": 5,
+        "text": "וַאֲרוֹן",
+        "strong": "Hc/H727",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר־לוֹ מִזְבַּח הַ/זָּהָב לִ/קְטֹרֶת וַ/אֲרוֹן הַ/בְּרִית מְצֻפֶּה זָהָב כֻּ/לּוֹ וּ/בוֹ צִנְצֶנֶת זָהָב אֲשֶׁר הַמָּן בְּ/תוֹכָהּ וּ/מַטֵּה אַהֲרֹן אֲשֶׁר פָּרַח וְ/ל/וּחוֹת הַ/בְּרִית׃"
+      },
+      "previous_strong": "Hc/H727",
+      "new_strong": "Hc/H727",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: וַאֲרוֹן means and the ark/chest; H727 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.4.5",
+        "text=וַאֲרוֹן",
+        "prefixes=Hc",
+        "strong=H727",
+        "lemma=אָרוֹן",
+        "definitions=chest | ark | chest | sarcophagus | mummy-case",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 4,
+        "word_index": 7,
+        "text": "מְצֻפֶּה",
+        "strong": "H6823",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר־לוֹ מִזְבַּח הַ/זָּהָב לִ/קְטֹרֶת וַ/אֲרוֹן הַ/בְּרִית מְצֻפֶּה זָהָב כֻּ/לּוֹ וּ/בוֹ צִנְצֶנֶת זָהָב אֲשֶׁר הַמָּן בְּ/תוֹכָהּ וּ/מַטֵּה אַהֲרֹן אֲשֶׁר פָּרַח וְ/ל/וּחוֹת הַ/בְּרִית׃"
+      },
+      "previous_strong": "H6823",
+      "new_strong": "H6823",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: מְצֻפֶּה means overlaid/covered; H6823 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.4.7",
+        "text=מְצֻפֶּה",
+        "prefixes=none",
+        "strong=H6823",
+        "lemma=צָפָה",
+        "definitions=lay out | lay over",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 4,
+        "word_index": 11,
+        "text": "צִנְצֶנֶת",
+        "strong": "H6803",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר־לוֹ מִזְבַּח הַ/זָּהָב לִ/קְטֹרֶת וַ/אֲרוֹן הַ/בְּרִית מְצֻפֶּה זָהָב כֻּ/לּוֹ וּ/בוֹ צִנְצֶנֶת זָהָב אֲשֶׁר הַמָּן בְּ/תוֹכָהּ וּ/מַטֵּה אַהֲרֹן אֲשֶׁר פָּרַח וְ/ל/וּחוֹת הַ/בְּרִית׃"
+      },
+      "previous_strong": "H6803",
+      "new_strong": "H6803",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: צִנְצֶנֶת means jar; H6803 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.4.11",
+        "text=צִנְצֶנֶת",
+        "prefixes=none",
+        "strong=H6803",
+        "lemma=צִנְצֶנֶת",
+        "definitions=jar",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 4,
+        "word_index": 14,
+        "text": "הַמָּן",
+        "strong": "H4478",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר־לוֹ מִזְבַּח הַ/זָּהָב לִ/קְטֹרֶת וַ/אֲרוֹן הַ/בְּרִית מְצֻפֶּה זָהָב כֻּ/לּוֹ וּ/בוֹ צִנְצֶנֶת זָהָב אֲשֶׁר הַמָּן בְּ/תוֹכָהּ וּ/מַטֵּה אַהֲרֹן אֲשֶׁר פָּרַח וְ/ל/וּחוֹת הַ/בְּרִית׃"
+      },
+      "previous_strong": "H4478",
+      "new_strong": "H4478",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַמָּן means the manna; H4478 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.4.14",
+        "text=הַמָּן",
+        "prefixes=none",
+        "strong=H4478",
+        "lemma=מָן",
+        "definitions=manna",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 4,
+        "word_index": 16,
+        "text": "וּמַטֵּה",
+        "strong": "Hc/H4294",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר־לוֹ מִזְבַּח הַ/זָּהָב לִ/קְטֹרֶת וַ/אֲרוֹן הַ/בְּרִית מְצֻפֶּה זָהָב כֻּ/לּוֹ וּ/בוֹ צִנְצֶנֶת זָהָב אֲשֶׁר הַמָּן בְּ/תוֹכָהּ וּ/מַטֵּה אַהֲרֹן אֲשֶׁר פָּרַח וְ/ל/וּחוֹת הַ/בְּרִית׃"
+      },
+      "previous_strong": "Hc/H4294",
+      "new_strong": "Hc/H4294",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: וּמַטֵּה means and the rod/staff; H4294 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.4.16",
+        "text=וּמַטֵּה",
+        "prefixes=Hc",
+        "strong=H4294",
+        "lemma=מַטֶּה",
+        "definitions=staff | rod | shaft | branch | tribe",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 4,
+        "word_index": 19,
+        "text": "פָּרַח",
+        "strong": "H6524",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲשֶׁר־לוֹ מִזְבַּח הַ/זָּהָב לִ/קְטֹרֶת וַ/אֲרוֹן הַ/בְּרִית מְצֻפֶּה זָהָב כֻּ/לּוֹ וּ/בוֹ צִנְצֶנֶת זָהָב אֲשֶׁר הַמָּן בְּ/תוֹכָהּ וּ/מַטֵּה אַהֲרֹן אֲשֶׁר פָּרַח וְ/ל/וּחוֹת הַ/בְּרִית׃"
+      },
+      "previous_strong": "H6524",
+      "new_strong": "H6524",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: פָּרַח means budded/blossomed; H6524 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.4.19",
+        "text=פָּרַח",
+        "prefixes=none",
+        "strong=H6524",
+        "lemma=פָּרַח",
+        "definitions=bud | sprout | shoot",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 5,
+        "word_index": 4,
+        "text": "הַסֹּכְכִים",
+        "strong": "H2598",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מִמַּעַל לוֹ כְּ/רוּבֵי הַ/כָּבוֹד הַ/סֹּכְכִים עַל־הַ/כַּפֹּרֶת לֹא נְדַבֵּר כָּ/עֵת עַל־כָּל־אֶחָד מֵהֶם בִּ/פְרָט׃"
+      },
+      "previous_strong": "H2598",
+      "new_strong": "H5526",
+      "confidence": 0.95,
+      "reason": "הַסֹּכְכִים means overshadowing/covering; H5526 סָכַךְ fits, H2598 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.9.5.4",
+        "text=הַסֹּכְכִים",
+        "prefixes=Hd",
+        "strong=H2598",
+        "lemma=חֲנֻכָּה",
+        "definitions=dedication | consecration",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 5,
+        "word_index": 14,
+        "text": "בִּפְרָט׃",
+        "strong": "H6527",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מִמַּעַל לוֹ כְּ/רוּבֵי הַ/כָּבוֹד הַ/סֹּכְכִים עַל־הַ/כַּפֹּרֶת לֹא נְדַבֵּר כָּ/עֵת עַל־כָּל־אֶחָד מֵהֶם בִּ/פְרָט׃"
+      },
+      "previous_strong": "H6527",
+      "new_strong": "H6527",
+      "confidence": 0.86,
+      "reason": "בִּפְרָט means particularly/in detail; add this specific-detail sense to H6527.",
+      "evidence": [
+        "occurrence=hebrews.9.5.14",
+        "text=בִּפְרָט׃",
+        "prefixes=Hb",
+        "strong=H6527",
+        "lemma=פָּרַט",
+        "definitions=divide | chant",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6527",
+      "definition": {
+        "text_en": "in detail; particularly; separately.",
+        "text_es": "en detalle; particularmente; por separado.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 7,
+        "word_index": 21,
+        "text": "שִׁגְגוֹת",
+        "strong": "H3883",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֶל־הַ/מִּשְׁכָּן אֲשֶׁר לִ/פְנִים מִמֶּנּוּ בָּא שָׁמָּה הַ/כֹּהֵן הַ/גָּדוֹל לְ/בַ/דּוֹ פַּעַם אַחַת בַּ/שָּׁנָה לֹא בִ/בְלִי־דָם אֲשֶׁר יַקְרִיב בְּ/עַד נַפְשׁוֹ וּ/בְ/עַד שִׁגְגוֹת הָעָם׃"
+      },
+      "previous_strong": "H3883",
+      "new_strong": "H7684",
+      "confidence": 0.96,
+      "reason": "שִׁגְגוֹת means errors/sins of ignorance; H7684 שְׁגָגָה fits, H3883 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.9.7.21",
+        "text=שִׁגְגוֹת",
+        "prefixes=none",
+        "strong=H3883",
+        "lemma=לוּל",
+        "definitions=shaft | enclosed space | with steps | ladder",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 9,
+        "word_index": 1,
+        "text": "מָשָׁל",
+        "strong": "H4913",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וְ/הוּא מָשָׁל עַל־הָעֵת הַהֹוָה אֲשֶׁר בָּהּ מַקְרִיבִים מְנָחוֹת וּ/זְבָחִים אֲשֶׁר לֹא־יוּכְלוּ לְ/הַ/שְׁלִים אֶת־לְ/בַב הָ/עֹבֵד׃"
+      },
+      "previous_strong": "H4913",
+      "new_strong": "H4912",
+      "confidence": 0.94,
+      "reason": "מָשָׁל means parable/symbol; H4912 מָשָׁל fits, H4913 lacks the needed definition.",
+      "evidence": [
+        "occurrence=hebrews.9.9.1",
+        "text=מָשָׁל",
+        "prefixes=none",
+        "strong=H4913",
+        "lemma=מָשָׁל",
+        "definitions=none",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 11,
+        "word_index": 18,
+        "text": "כְּלוֹמַר",
+        "strong": "H4751",
+        "prefixes": [
+          "Hk",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל הַ/מָּשִׁיחַ בְּ/בֹאוֹ לִ/הְ/יוֹת כֹּ/הֵן גָּדוֹל לַ/טֹּבוֹת הָ/עֲתִידוֹת עָבַר בְּ/תוֹךְ הַ/מִּשְׁכָּן הַ/מְעֻלֶּה בִּ/גְדֻלָּה וּ/שְׁלֵמוּת אֲשֶׁר לֹא־נַעֲשָׂה בְ/יָדַיִם כְּ/ל/וֹמַר אֲשֶׁר אֵינֶנּוּ בִּ/כְ/לַל הַ/בְּרִיאָה הַ/זֹּאת׃"
+      },
+      "previous_strong": "H4751",
+      "new_strong": "D0181",
+      "confidence": 0.94,
+      "reason": "כְּלוֹמַר means that is/meaning; H4751 is unrelated and this connector should be custom.",
+      "evidence": [
+        "occurrence=hebrews.9.11.18",
+        "text=כְּלוֹמַר",
+        "prefixes=Hk,Hl",
+        "strong=H4751",
+        "lemma=מַר",
+        "definitions=bitter | bitterness",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0181",
+      "hebrew": "כלומר",
+      "transliteration_en": "that is",
+      "transliteration_es": "es decir",
+      "definition": {
+        "text_en": "that is; meaning; in other words.",
+        "text_es": "es decir; o sea; en otras palabras.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 13,
+        "word_index": 3,
+        "text": "הַפָּרִים",
+        "strong": "Hd/H6499",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־דַּם הַ/פָּרִים וְ/הַ/שְּׂעִירִים וְ/אֵפֶר הַ/פָּרָה אֲשֶׁר יֻזֶּה עַל־הַ/טְּמֵאִים יְקַדְּשֵׁם לְ/טָהֳרַת גּוּפָם׃"
+      },
+      "previous_strong": "Hd/H6499",
+      "new_strong": "Hd/H6499",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַפָּרִים means the bulls; H6499 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.13.3",
+        "text=הַפָּרִים",
+        "prefixes=Hd",
+        "strong=H6499",
+        "lemma=פַּר",
+        "definitions=young bull | steer",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 13,
+        "word_index": 5,
+        "text": "וְאֵפֶר",
+        "strong": "H6675",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־דַּם הַ/פָּרִים וְ/הַ/שְּׂעִירִים וְ/אֵפֶר הַ/פָּרָה אֲשֶׁר יֻזֶּה עַל־הַ/טְּמֵאִים יְקַדְּשֵׁם לְ/טָהֳרַת גּוּפָם׃"
+      },
+      "previous_strong": "H6675",
+      "new_strong": "H665",
+      "confidence": 0.96,
+      "reason": "וְאֵפֶר means and ashes; H665 אֵפֶר fits, H6675 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.9.13.5",
+        "text=וְאֵפֶר",
+        "prefixes=Hc",
+        "strong=H6675",
+        "lemma=צוֹאָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 13,
+        "word_index": 6,
+        "text": "הַפָּרָה",
+        "strong": "Hd/H6510",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־דַּם הַ/פָּרִים וְ/הַ/שְּׂעִירִים וְ/אֵפֶר הַ/פָּרָה אֲשֶׁר יֻזֶּה עַל־הַ/טְּמֵאִים יְקַדְּשֵׁם לְ/טָהֳרַת גּוּפָם׃"
+      },
+      "previous_strong": "Hd/H6510",
+      "new_strong": "Hd/H6510",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַפָּרָה means the heifer/cow; H6510 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.13.6",
+        "text=הַפָּרָה",
+        "prefixes=Hd",
+        "strong=H6510",
+        "lemma=פָּרָה",
+        "definitions=heifer | cow",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 15,
+        "word_index": 18,
+        "text": "לִפְדּוֹת",
+        "strong": "Hl/H6299",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/עֲבוּר זֹאת הוּא גַם־מֵלִיץ לִ/בְ/רִית חֲדָשָׁה לְ/מַעַן אֲשֶׁר־יִירְשׁוּ הַ/מְקֹרָאִים אֶת־הַ/בְטָחַת נַחֲלַת עוֹלָם אַחֲרֵי אֲשֶׁר־מֵת לִ/פְדּוֹת מִן־הַ/פְּשָׁעִים אֲשֶׁר נַעֲשֹוּ תַּחַת הַ/בְּרִית הָ/רִאשׁוֹנָה׃"
+      },
+      "previous_strong": "Hl/H6299",
+      "new_strong": "Hl/H6299",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: לִפְדּוֹת means to redeem/ransom; H6299 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.15.18",
+        "text=לִפְדּוֹת",
+        "prefixes=Hl",
+        "strong=H6299",
+        "lemma=פָּדָה",
+        "definitions=ransom",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 19,
+        "word_index": 18,
+        "text": "וְאֵזוֹב",
+        "strong": "Hc/H231",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כְּ/כַלּוֹת משֶׁה לְ/הַ/גִּיד לְ/כָל־הָעָם אֶת־כָּל־הַ/מִּצְוֺת כַּ/תּוֹרָה לָ/קַח דַּם הָ/עֲגָלִים וְ/הַ/שְּׂעִירִים עִם־מַיִם וְ/תוֹלַעַת שָׁנִי וְ/אֵזוֹב וַ/יִּזְרֹק עַל־הַ/סֵּפֶר וְ/עַל כָּל־הָעָם׃"
+      },
+      "previous_strong": "Hc/H231",
+      "new_strong": "Hc/H231",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: וְאֵזוֹב means and hyssop; H231 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.19.18",
+        "text=וְאֵזוֹב",
+        "prefixes=Hc",
+        "strong=H231",
+        "lemma=אֵזוֹב",
+        "definitions=hyssop",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 9,
+        "verse": 19,
+        "word_index": 19,
+        "text": "וַיִּזְרֹק",
+        "strong": "Hc/H2236",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כְּ/כַלּוֹת משֶׁה לְ/הַ/גִּיד לְ/כָל־הָעָם אֶת־כָּל־הַ/מִּצְוֺת כַּ/תּוֹרָה לָ/קַח דַּם הָ/עֲגָלִים וְ/הַ/שְּׂעִירִים עִם־מַיִם וְ/תוֹלַעַת שָׁנִי וְ/אֵזוֹב וַ/יִּזְרֹק עַל־הַ/סֵּפֶר וְ/עַל כָּל־הָעָם׃"
+      },
+      "previous_strong": "Hc/H2236",
+      "new_strong": "Hc/H2236",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: וַיִּזְרֹק means he sprinkled/threw; H2236 is correct.",
+      "evidence": [
+        "occurrence=hebrews.9.19.19",
+        "text=וַיִּזְרֹק",
+        "prefixes=Hc",
+        "strong=H2236",
+        "lemma=זָרַק",
+        "definitions=to toss | throw | scatter abundantly",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 1,
+        "word_index": 13,
+        "text": "לְהַשְׁלִים",
+        "strong": "H7075",
+        "prefixes": [
+          "Hl",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הַ/תּוֹרָה בִּ/הְ/יוֹת בָּהּ צֵל הַ/טֹּבוֹת הָ/עֲתִידוֹת וְ/לֹא מַרְאֵה עֶצֶם הַ/דְּבָרִים אֵין בִּ/יכָלְתָּהּ לְ/הַ/שְׁלִים אֶת־הַ/קְּרֵבִים בַּ/קָּרְבָּנוֹת הָהֵם אֲשֶׁר יַקְרִיבוּ תָמִיד מִדֵּי שָׁנָה בְ/שָׁנָה׃"
+      },
+      "previous_strong": "H7075",
+      "new_strong": "H7999",
+      "confidence": 0.95,
+      "reason": "לְהַשְׁלִים means to complete/perfect; H7999 שָׁלַם fits, H7075 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.10.1.13",
+        "text=לְהַשְׁלִים",
+        "prefixes=Hl,Hd",
+        "strong=H7075",
+        "lemma=קִנְיָן",
+        "definitions=thing got | acquired | acquisition",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 6,
+        "word_index": 0,
+        "text": "עוֹלָה",
+        "strong": "H5930",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עוֹלָה וְ/חַטָּאָה לֹא שָׁאָלְתָּ׃"
+      },
+      "previous_strong": "H5930",
+      "new_strong": "H5930",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: עוֹלָה means burnt offering; H5930 is correct.",
+      "evidence": [
+        "occurrence=hebrews.10.6.0",
+        "text=עוֹלָה",
+        "prefixes=none",
+        "strong=H5930",
+        "lemma=עֹלָה",
+        "definitions=whole burnt-offering",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 7,
+        "word_index": 4,
+        "text": "בִּמְגִלַּת־",
+        "strong": "Hb/H4039",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אָז אָמַרְתִּי הִנֵּה־בָ/אתִי בִּ/מְגִלַּת־סֵפֶר כָּ/תוּב עָלַי לַ/עֲשׂוֹת רְצוֹנְךָ אֱלֹהָי׃"
+      },
+      "previous_strong": "Hb/H4039",
+      "new_strong": "Hb/H4039",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: בִּמְגִלַּת means in the scroll/roll; H4039 is correct.",
+      "evidence": [
+        "occurrence=hebrews.10.7.4",
+        "text=בִּמְגִלַּת־",
+        "prefixes=Hb",
+        "strong=H4039",
+        "lemma=מְגִלָּה",
+        "definitions=roll",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 10,
+        "word_index": 0,
+        "text": "וּבָרָצוֹן",
+        "strong": "H2393",
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בָ/רָצוֹן הַזֶּה מְקֻדָּשִׁים אֲנַחְנוּ עַל־יְדֵי הַ/קְרָבַת קָרְבַּן גּוּף יֵשׁוּעַ הַ/מָּשִׁיחַ בְּ/פַעַם אֶחָת׃"
+      },
+      "previous_strong": "H2393",
+      "new_strong": "H7522",
+      "confidence": 0.95,
+      "reason": "וּבָרָצוֹן means and by will; H7522 רָצוֹן fits, H2393 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.10.10.0",
+        "text=וּבָרָצוֹן",
+        "prefixes=Hc,Hb",
+        "strong=H2393",
+        "lemma=חֶזְקָה",
+        "definitions=strength | force",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 25,
+        "word_index": 4,
+        "text": "כְּמִנְהַג",
+        "strong": "Hk/H4491",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַל־נַעֲזֹב אֶת־כְּ/נֵסִיָּתֵנוּ כְּ/מִנְהַג קְצָת אֲנָשִׁים כִּי אִם־נוֹכִיחַ אִישׁ אֶת־אָחִיו וּ/בְ/יוֹתֵר בִּ/רְאֹתְכֶם כִּי־קָרוֹב הַ/יּוֹם׃"
+      },
+      "previous_strong": "Hk/H4491",
+      "new_strong": "D0182",
+      "confidence": 0.93,
+      "reason": "כְּמִנְהַג means according to custom/habit; H4491 charioteering is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.10.25.4",
+        "text=כְּמִנְהַג",
+        "prefixes=Hk",
+        "strong=H4491",
+        "lemma=מִנְהָג",
+        "definitions=driving | charioteering",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0182",
+      "hebrew": "מנהג",
+      "transliteration_en": "custom",
+      "transliteration_es": "costumbre",
+      "definition": {
+        "text_en": "custom; habit; usual practice.",
+        "text_es": "costumbre; hábito; práctica habitual.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 26,
+        "word_index": 3,
+        "text": "בְזָדוֹן",
+        "strong": "Hb/H2087",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־נֶחֱטָא בְ/זָדוֹן אַחֲרֵי אֲשֶׁר קִבַּלְנוּ דַּעַת הָ/אֱמֶת לֹא־יִשָּׁאֵר עוֹד זֶבַח קָרְבָּן לְ/כַ/פֵּר עַל־הַ/חֵטְא׃"
+      },
+      "previous_strong": "Hb/H2087",
+      "new_strong": "Hb/H2087",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: בְזָדוֹן means deliberately/presumptuously; H2087 is correct.",
+      "evidence": [
+        "occurrence=hebrews.10.26.3",
+        "text=בְזָדוֹן",
+        "prefixes=Hb",
+        "strong=H2087",
+        "lemma=זָדוֹן",
+        "definitions=insolence | presumptuousness",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 27,
+        "word_index": 2,
+        "text": "בִּעוּתֵי",
+        "strong": "Hb/H1161",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־בִּ/עוּתֵי הַ/דִּין הֶ/עָתִיד וְ/אֵשׁ קִנְאָה אֲשֶׁר תֹּאכַל אֶת־הַ/צֹּרְרִים׃"
+      },
+      "previous_strong": "Hb/H1161",
+      "new_strong": "Hb/H1161",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: בִּעוּתֵי means fearful/terrifying; H1161 is correct.",
+      "evidence": [
+        "occurrence=hebrews.10.27.2",
+        "text=בִּעוּתֵי",
+        "prefixes=Hb",
+        "strong=H1161",
+        "lemma=בִּעוּתִים",
+        "definitions=terrors | alarms",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 30,
+        "word_index": 5,
+        "text": "נָקָם",
+        "strong": "H5359",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־יָדַעְנוּ אֶת־הָ/אֹמֵר לִי נָקָם וְ/שִׁלֵּם אָמַר יְהוָֹה וְ/עוֹד כִּי־יָדִין יְהוָֹה עַמּוֹ׃"
+      },
+      "previous_strong": "H5359",
+      "new_strong": "H5359",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: נָקָם means vengeance; H5359 is correct.",
+      "evidence": [
+        "occurrence=hebrews.10.30.5",
+        "text=נָקָם",
+        "prefixes=none",
+        "strong=H5359",
+        "lemma=נָקָם",
+        "definitions=vengeance",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 30,
+        "word_index": 6,
+        "text": "וְשִׁלֵּם",
+        "strong": "Hc/H8005",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־יָדַעְנוּ אֶת־הָ/אֹמֵר לִי נָקָם וְ/שִׁלֵּם אָמַר יְהוָֹה וְ/עוֹד כִּי־יָדִין יְהוָֹה עַמּוֹ׃"
+      },
+      "previous_strong": "Hc/H8005",
+      "new_strong": "Hc/H8005",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: וְשִׁלֵּם means and recompense/repay; H8005 is correct.",
+      "evidence": [
+        "occurrence=hebrews.10.30.6",
+        "text=וְשִׁלֵּם",
+        "prefixes=Hc",
+        "strong=H8005",
+        "lemma=שִׁלֵּם",
+        "definitions=recompense",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 34,
+        "word_index": 16,
+        "text": "וְקַיָּם",
+        "strong": "Hc/H7011",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הִצְטָעַרְתֶּם עַל־מוֹסֵרָי וּ/גְזֵלַת רְכוּשְׁכֶם סְבַלְתֶּם בְּ/שִׂמְחָה מִדַּעְתְּכֶם בְּ/נַפְשְׁכֶם שֶׁיֵּשׁ־לָ/כֶם בַּ/שָּׁמַיִם קִנְיָן טוֹב מִמֶּנּוּ וְ/קַיָּם לָ/עַד׃"
+      },
+      "previous_strong": "Hc/H7011",
+      "new_strong": "Hc/H7011",
+      "confidence": 0.92,
+      "reason": "Reviewed in context: וְקַיָּם means enduring/lasting; H7011 is acceptable.",
+      "evidence": [
+        "occurrence=hebrews.10.34.16",
+        "text=וְקַיָּם",
+        "prefixes=Hc",
+        "strong=H7011",
+        "lemma=קַיָּם",
+        "definitions=enduring",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 10,
+        "verse": 39,
+        "word_index": 4,
+        "text": "הַנְּסוֹגִים",
+        "strong": "Hd/H5472",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אָמְנָם אֲנַחְנוּ אֵינֶנּוּ מִן־הַ/נְּסוֹגִים אָחוֹר לְ/אָבְדָם כִּי אִם־מִן־הַ/מַּאֲמִינִים לְ/הַצָּלַת הַ/נֶּפֶשׁ׃"
+      },
+      "previous_strong": "Hd/H5472",
+      "new_strong": "Hd/H5472",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: הַנְּסוֹגִים means those shrinking/drawing back; H5472 is correct.",
+      "evidence": [
+        "occurrence=hebrews.10.39.4",
+        "text=הַנְּסוֹגִים",
+        "prefixes=Hd",
+        "strong=H5472",
+        "lemma=סוּג",
+        "definitions=move away | backslide",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 11,
+        "verse": 1,
+        "word_index": 3,
+        "text": "חֹסֶן",
+        "strong": "H2633",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הָ/אֱמוּנָה הִיא חֹסֶן הַ/בִּטָּחוֹן בַּ/מְקֻוֶּה וְ/ה/וֹכָחַת דְּבָרִים לֹא נִרְאִים׃"
+      },
+      "previous_strong": "H2633",
+      "new_strong": "H2633",
+      "confidence": 0.88,
+      "reason": "חֹסֶן in Hebrews 11:1 means assurance/substance/confidence; add this contextual sense to H2633.",
+      "evidence": [
+        "occurrence=hebrews.11.1.3",
+        "text=חֹסֶן",
+        "prefixes=none",
+        "strong=H2633",
+        "lemma=חֹסֶן",
+        "definitions=wealth | treasure",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2633",
+      "definition": {
+        "text_en": "assurance; firmness; substance; confidence.",
+        "text_es": "seguridad; firmeza; sustancia; confianza.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 11,
+        "verse": 1,
+        "word_index": 6,
+        "text": "וְהוֹכָחַת",
+        "strong": "H6822",
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הָ/אֱמוּנָה הִיא חֹסֶן הַ/בִּטָּחוֹן בַּ/מְקֻוֶּה וְ/ה/וֹכָחַת דְּבָרִים לֹא נִרְאִים׃"
+      },
+      "previous_strong": "H6822",
+      "new_strong": "H3198",
+      "confidence": 0.91,
+      "reason": "וְהוֹכָחַת means proof/conviction; H3198 יָכַח fits, H6822 is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.11.1.6",
+        "text=וְהוֹכָחַת",
+        "prefixes=Hc,Hd",
+        "strong=H6822",
+        "lemma=צָפָה",
+        "definitions=look out | about | spy | keep watch",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "hebrews",
+        "chapter": 11,
+        "verse": 3,
+        "word_index": 12,
+        "text": "הַנֶּעְלָם׃",
+        "strong": "H8123",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בָּ/אֱמוּנָה נָבִין כִּי־הָ/עוֹלָמוֹת נַעֲשֹוּ בִּ/דְבַר הָ/אֱלֹהִים לְ/מַעַן אֲשֶׁר יֵצֵא הַ/נִּרְאֶה מִן־הַ/נֶּעְלָם׃"
+      },
+      "previous_strong": "H8123",
+      "new_strong": "H5956",
+      "confidence": 0.96,
+      "reason": "הַנֶּעְלָם means the unseen/hidden; H5956 עָלַם fits, H8123 Samson is unrelated.",
+      "evidence": [
+        "occurrence=hebrews.11.3.12",
+        "text=הַנֶּעְלָם׃",
+        "prefixes=Hd",
+        "strong=H8123",
+        "lemma=שִׁמְשׁוֹן",
+        "definitions=Samson",
+        "codex reviewed definitions batch_0036"
+      ],
+      "reviewer": "codex-desktop"
+    }
+  ]
+}

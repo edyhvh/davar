@@ -1,0 +1,1417 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:26.117436+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 21,
+        "verse": 20,
+        "word_index": 23,
+        "text": "יִמְסְרֶךָּ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּפֶן פֶּטְרוֹס וַ/יַּרְא אֶת־הַ/תַּלְמִיד אֲשֶׁר יֵשׁוּעַ אֲהֵבוֹ הֹלֵךְ אַחֲרֵיהֶם הוּא הַנֹּפֵל עַל־לִ/בּוֹ בְּ/עֵת הַ/סְּעוּדָה וְ/גַם־שָׁאַל אֲדֹנִי מִי הוּא־זֶה אֲשֶׁר יִמְסְרֶךָּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ימסרך means “will hand you over/betray you”; מסר is later Hebrew and should be custom rather than forced onto נתן.",
+      "evidence": [
+        "context: who is the one who will betray/hand you over?",
+        "later Hebrew מסר = hand over/deliver"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0083",
+      "new_strong": "D0083",
+      "hebrew": "מסר",
+      "transliteration_en": "masar",
+      "transliteration_es": "masar",
+      "definition": {
+        "text_en": "deliver; hand over; betray.",
+        "text_es": "entregar; poner en manos de otro; traicionar."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john1",
+        "chapter": 1,
+        "verse": 2,
+        "word_index": 2,
+        "text": "וַנֵּרֵא",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הַ/חַיִּים נִגְלוּ וַ/נֵּרֵא וּ/מְעִידִים אֲנַחְנוּ וּ/מוֹדִיעִים לָ/כֶם אֶת־חַיֵּי הָ/עוֹלָם אֲשֶׁר הָיוּ עִם־הָאָב וְ/נִגְלוּ לָ/נוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ונרא means “we saw/it appeared,” from ראה.",
+      "evidence": [
+        "context: the life was manifested and we saw it",
+        "local lexicon H7200 ראה = see"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7200",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john1",
+        "chapter": 2,
+        "verse": 27,
+        "word_index": 29,
+        "text": "בוֹ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַתֶּם הַ/מִּשְׁחָה אֲשֶׁר קִבַּלְתֶּם מֵאִתּוֹ עֹמֶדֶת בָּ/כֶם וְ/לֹא תִצְטָרְכוּ לְ/אִישׁ אֲשֶׁר יְלַמֶּדְכֶם כִּי אִם־כַּ/אֲשֶׁר תְּלַמֵּד אֶתְכֶם הַ/מִּשְׁחָה בְּ/כָל־דָּבָר הִיא הָ/אֱמֶת וְ/אֵינֶנָּה כָ/זָב וְ/כַ/אֲשֶׁר לִ/מְּדָה אֶתְכֶם כֵּן תַּעַמְדוּ בוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בו is a pronominal phrase “in him”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "context: abide in him",
+        "manual policy case: ב + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john1",
+        "chapter": 3,
+        "verse": 7,
+        "word_index": 2,
+        "text": "יַתְעֶה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בָּ/נַי אַל־יַתְעֶה אֶתְכֶם אִישׁ הָ/עֹשֶׂה צְדָקָה צַדִּיק הוּא כַּ/אֲשֶׁר הוּא צַדִּיק׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "יתעה means “let him deceive/lead astray,” from תעה.",
+      "evidence": [
+        "context: let no one deceive you",
+        "local lexicon H8582 תעה = err/wander"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H8582",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john1",
+        "chapter": 3,
+        "verse": 15,
+        "word_index": 14,
+        "text": "בוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־הַשּׂנֵא אֶת אָחִיו רֹצֵחַ נֶפֶשׁ הוּא וִ/ידַעְתֶּם כִּי כָל־רֹצֵחַ נֶפֶשׁ לֹא יִתְקַיְמוּ־בוֹ חַיֵּי עוֹלָמִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בו is a pronominal phrase “in him”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "context: eternal life does not remain in him",
+        "manual policy case: ב + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john1",
+        "chapter": 5,
+        "verse": 4,
+        "word_index": 8,
+        "text": "וֶאֱמוּנָתֵנוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־כֹל הַ/נּוֹלָד מֵאֵת הָ/אֱלֹהִים מְנַצֵּחַ אֶת־הָ/עוֹלָם וֶ/אֱמוּנָתֵנוּ הַ/נִּצָּחוֹן הַ/מְנַצֵּחַ אֶת־הָ/עוֹלָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "ואמונתנו means “and our faith,” from אמונה.",
+      "evidence": [
+        "context: this is the victory, our faith",
+        "local lexicon H530 אמונה = faithfulness/faith"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H530",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john2",
+        "chapter": 1,
+        "verse": 4,
+        "word_index": 5,
+        "text": "מִתְהַלְּכִים",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שָׂמַחְתִּי לִ/מְאֹד כִּי־מָצָאתִי מִבָּנַיִךְ מִתְהַלְּכִים בָּ/אֱמֶת כַּ/מִּצְוָה אֲשֶׁר קִבַּלְנוּ מֵאֵת הָאָב׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "מתהלכים means “walking/conducting themselves,” from הלך.",
+      "evidence": [
+        "context: walking in truth",
+        "local lexicon H1980 הלך = go/walk"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1980",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john2",
+        "chapter": 1,
+        "verse": 8,
+        "word_index": 5,
+        "text": "פְּעֻלָּתֵנוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הִשָּׁמְרוּ לָ/כֶם פֶּן־תֹּאבַד מִמֶּנּוּ פְּעֻלָּתֵנוּ כִּי אִם־נִקַּח מְלֹא שְׂכָרֵנוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "פעלתנו means “our work,” from פעלה.",
+      "evidence": [
+        "context: do not lose what we worked for",
+        "local lexicon H6468 פעלה = work/recompense"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6468",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john3",
+        "chapter": 1,
+        "verse": 2,
+        "word_index": 12,
+        "text": "בְּנַפְשֶׁךָ׃",
+        "strong": null,
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "חֲבִיבִי חֶפְצִי הוּא כִּי יִיטַב לְךָ בְּ/כָל־דָּבָר וְ/תֶחֱזָק כַּ/אֲשֶׁר־טוֹב לְךָ בְּ/נַפְשֶׁךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "בנפשך means “in your soul/life,” from נפש.",
+      "evidence": [
+        "context: as it is well with your soul",
+        "local lexicon H5315 נפש = soul/life"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5315",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john3",
+        "chapter": 1,
+        "verse": 4,
+        "word_index": 4,
+        "text": "מִלִּשְׁמֹעַ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֵין לִי שִׂמְחָה גְדוֹלָה מִלִּשְׁמֹעַ אֶת־אֲשֶׁר בָּ/נַי יִתְהַלְּכוּ בָּ/אֱמֶת׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "מלשמע means “than hearing,” from שמע.",
+      "evidence": [
+        "context: no greater joy than hearing",
+        "local lexicon H8085 שמע = hear"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H8085",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john3",
+        "chapter": 1,
+        "verse": 9,
+        "word_index": 5,
+        "text": "דִּיּוֹטְרִיפַס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲנִי כָ/תַבְתִּי אֶל־הַ/קְּהִלָּה אַךְ דִּיּוֹטְרִיפַס הַ/מִּתְאַוֶּה לִ/הְ/יוֹת עֲלֵיהֶם לְ/רֹאשׁ אֵינֶנּוּ מְקַבֵּל אֹתָנוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "דיוטריפס is the NT proper name Diotrephes; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "3 John 9 names Diotrephes",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0075",
+      "new_strong": "D0075",
+      "hebrew": "דיוטריפס",
+      "transliteration_en": "Diotrephes",
+      "transliteration_es": "Diotrephes",
+      "definition": {
+        "text_en": "Diotrephes; man criticized in 3 John for seeking preeminence.",
+        "text_es": "Diótrefes; hombre criticado en 3 Juan por buscar preeminencia."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john3",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 1,
+        "text": "דִּימֶטְרִיּוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עַל־דִּימֶטְרִיּוֹס הֵ/עִידוּ הַכֹּל וְ/גַם־הָ/אֱמֶת עַצְמָהּ וְ/גַם־אֲנַחְנוּ מְעִידִים עָלָיו וִ/ידַעְתֶּם כִּי עֵדוּתֵנוּ הִיא נֶאֱמָנָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "דימטריוס is the NT proper name Demetrius; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "3 John 12 names Demetrius",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0076",
+      "new_strong": "D0076",
+      "hebrew": "דימטריוס",
+      "transliteration_en": "Demetrius",
+      "transliteration_es": "Demetrius",
+      "definition": {
+        "text_en": "Demetrius; man commended in 3 John.",
+        "text_es": "Demetrio; hombre recomendado en 3 Juan."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 1,
+        "verse": 3,
+        "word_index": 12,
+        "text": "תְּאוֹפִילוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "חָשַׁבְתִּי לְ/טוֹב גַּם־אֲנִי הַבֹּחֵן כָּל־הַ/דְּבָרִים הֵ/יטֵב מֵרֵאשִׁיתָם לְ/כָ/תְבָם אֵלֶיךָ בַּ/סֵּדֶר תְּאוֹפִילוֹס הָ/אַדִּיר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "תאופילוס is the NT proper name Theophilus; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Luke 1:3 address to Theophilus",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0077",
+      "new_strong": "D0077",
+      "hebrew": "תאופילוס",
+      "transliteration_en": "Theophilus",
+      "transliteration_es": "Theophilus",
+      "definition": {
+        "text_en": "Theophilus; recipient addressed by Luke.",
+        "text_es": "Teófilo; destinatario a quien Lucas dirige su escrito."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 1,
+        "verse": 20,
+        "word_index": 17,
+        "text": "לְמוֹעֲדָם׃",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה תֵאָלֵם וְ/לֹא תוּכַל לְ/דַבֵּר עַד־הַ/יּוֹם אֲשֶׁר תִּהְיֶה זֹּאת תַּחַת כִּי־לֹא הֶ/אֱמַנְתָּ בִּ/דְבָרַי אֲשֶׁר יִמָּלְאוּ לְ/מוֹעֲדָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "למועדם means “at their appointed time,” from מועד.",
+      "evidence": [
+        "context: words fulfilled in their time",
+        "local lexicon H4150 מועד = appointed time"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4150",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 2,
+        "verse": 4,
+        "word_index": 18,
+        "text": "וּמִמִּשְׁפַּחְתּוֹ׃",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַל גַּם־יוֹסֵף מִן־הַ/גָּלִיל מֵעִיר נְצֶרֶת אֶל־יְהוּדָה לְ/עִיר דָּוִד הַ/נִּקְרָאָה בֵ/ית־לָ/חֶם כִּי־הָיָה מִבֵּית דָּוִד וּ/מִמִּשְׁפַּחְתּוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "וממשפחתו means “and from his family/clan,” from משפחה.",
+      "evidence": [
+        "context: of the house and family of David",
+        "local lexicon H4940 משפחה = family/clan"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4940",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 2,
+        "verse": 15,
+        "word_index": 20,
+        "text": "הוֹדִיעָנוּ",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כַּ/אֲשֶׁר עָלוּ מֵעֲלֵיהֶם הַ/מַּלְאָכִים הַ/שָּׁמָיְמָה וַ/יֹּאמְרוּ הָ/רֹעִים אִישׁ אֶל־רֵעֵהוּ נַעְבְּרָה־נָּא עַד בֵּ/ית־לֶ/חֶם וְ/נִרְאֶה הַ/מַּעֲשֶׂה הַזֶּה אֲשֶׁר ה/וֹדִיעָנוּ יְהוָֹה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "הודיענו means “made known to us,” from ידע in Hiphil.",
+      "evidence": [
+        "context: the thing the Lord made known to us",
+        "local lexicon H3045 ידע = know"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3045",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 11,
+        "text": "וְהוֹרְדוֹס",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בִּ/שְׁנַת חֲמֵשׁ עֶשְׂרֵה לְ/מַלְכוּת הַ/קֵּיסַר טִיבַרְיוֹס בִּ/הְ/יוֹת פּוֹנְטִיּוֹס פִּילָטוֹס נְצִיב בִּ/יהוּדָה וְ/ה/וֹרְדוֹס שַׂר־רֹבַע עַל־הַ/גָּלִיל וְ/אָחִיו פִילִפּוֹס שַׂר־רֹבַע עַל־מְדִינוֹת יְטוּר וְ/טַרְכוֹנָה וְ/ל/וּסָנִיָּס שַׂר־רֹבַע עַל־אֲבִילִין׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "והורדוס is Herod with conjunction; reuse custom entry.",
+      "evidence": [
+        "Luke 3:1 Herod tetrarch of Galilee",
+        "custom D0025 = Herod"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0025",
+      "new_strong": "D0025",
+      "hebrew": "הורדוס",
+      "transliteration_en": "Herod",
+      "transliteration_es": "Herod",
+      "definition": {
+        "text_en": "Herod; ruler from the Herodian dynasty.",
+        "text_es": "Herodes; gobernante de la dinastía herodiana."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 23,
+        "text": "וְטַרְכוֹנָה",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בִּ/שְׁנַת חֲמֵשׁ עֶשְׂרֵה לְ/מַלְכוּת הַ/קֵּיסַר טִיבַרְיוֹס בִּ/הְ/יוֹת פּוֹנְטִיּוֹס פִּילָטוֹס נְצִיב בִּ/יהוּדָה וְ/ה/וֹרְדוֹס שַׂר־רֹבַע עַל־הַ/גָּלִיל וְ/אָחִיו פִילִפּוֹס שַׂר־רֹבַע עַל־מְדִינוֹת יְטוּר וְ/טַרְכוֹנָה וְ/ל/וּסָנִיָּס שַׂר־רֹבַע עַל־אֲבִילִין׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "וטרכונה is Trachonitis; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Luke 3:1 Iturea and Trachonitis context",
+        "proper place name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0078",
+      "new_strong": "D0078",
+      "hebrew": "טרכונה",
+      "transliteration_en": "Trachonitis",
+      "transliteration_es": "Trachonitis",
+      "definition": {
+        "text_en": "Trachonitis; region northeast of Galilee ruled by Philip.",
+        "text_es": "Traconítide; región al noreste de Galilea gobernada por Felipe."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 24,
+        "text": "וְלוּסָנִיָּס",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "בִּ/שְׁנַת חֲמֵשׁ עֶשְׂרֵה לְ/מַלְכוּת הַ/קֵּיסַר טִיבַרְיוֹס בִּ/הְ/יוֹת פּוֹנְטִיּוֹס פִּילָטוֹס נְצִיב בִּ/יהוּדָה וְ/ה/וֹרְדוֹס שַׂר־רֹבַע עַל־הַ/גָּלִיל וְ/אָחִיו פִילִפּוֹס שַׂר־רֹבַע עַל־מְדִינוֹת יְטוּר וְ/טַרְכוֹנָה וְ/ל/וּסָנִיָּס שַׂר־רֹבַע עַל־אֲבִילִין׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "ולוסניאס is Lysanias; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Luke 3:1 Lysanias tetrarch of Abilene",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0079",
+      "new_strong": "D0079",
+      "hebrew": "לוסניאס",
+      "transliteration_en": "Lysanias",
+      "transliteration_es": "Lysanias",
+      "definition": {
+        "text_en": "Lysanias; tetrarch associated with Abilene in Luke 3.",
+        "text_es": "Lisanias; tetrarca asociado con Abilene en Lucas 3."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 28,
+        "text": "אֲבִילִין׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בִּ/שְׁנַת חֲמֵשׁ עֶשְׂרֵה לְ/מַלְכוּת הַ/קֵּיסַר טִיבַרְיוֹס בִּ/הְ/יוֹת פּוֹנְטִיּוֹס פִּילָטוֹס נְצִיב בִּ/יהוּדָה וְ/ה/וֹרְדוֹס שַׂר־רֹבַע עַל־הַ/גָּלִיל וְ/אָחִיו פִילִפּוֹס שַׂר־רֹבַע עַל־מְדִינוֹת יְטוּר וְ/טַרְכוֹנָה וְ/ל/וּסָנִיָּס שַׂר־רֹבַע עַל־אֲבִילִין׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "אבילין is Abilene; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Luke 3:1 Abilene region",
+        "proper place name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0080",
+      "new_strong": "D0080",
+      "hebrew": "אבילין",
+      "transliteration_en": "Abilene",
+      "transliteration_es": "Abilene",
+      "definition": {
+        "text_en": "Abilene; region associated with Lysanias in Luke 3.",
+        "text_es": "Abilene; región asociada con Lisanias en Lucas 3."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 7,
+        "word_index": 10,
+        "text": "הַצִּפְעוֹנִים",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֶל־הֲ/מוֹן הָעָם הַ/יֹּצְאִים לְ/הִטָּבֵל עַל־יָדוֹ אַתֶּם יַלְדֵי הַ/צִּפְעוֹנִים מִי הוֹרָה אֶתְכֶם לְ/הִמָּלֵט מִפְּנֵי הַ/קֶּצֶף הַבָּא׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "הצפעונים means “vipers/serpents,” from צפע.",
+      "evidence": [
+        "context: brood of vipers",
+        "local lexicon H6848 צפע = serpent"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6848",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 19,
+        "word_index": 10,
+        "text": "הוֹרוֹדְיָה",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/ה/וֹרְדוֹס שַׂר־רֹבַע הַ/מְּדִינָה אֲשֶׁר הוּכַח עַל־יָדוֹ עַל־אֹדוֹת ה/וֹרוֹדְיָה אֵשֶׁת אָחִיו פִילִפּוֹס וְ/עַל־אֹדוֹת כָּל־הָרָע אֲשֶׁר עָשָׂה ה/וֹרְדוֹס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "הורודיה is Herodias; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "Luke 3:19 Herodias, wife of his brother Philip",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0081",
+      "new_strong": "D0081",
+      "hebrew": "הורודיה",
+      "transliteration_en": "Herodias",
+      "transliteration_es": "Herodias",
+      "definition": {
+        "text_en": "Herodias; wife of Herod’s brother Philip.",
+        "text_es": "Herodías; mujer del hermano de Herodes, Felipe."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 19,
+        "word_index": 13,
+        "text": "פִילִפּוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/ה/וֹרְדוֹס שַׂר־רֹבַע הַ/מְּדִינָה אֲשֶׁר הוּכַח עַל־יָדוֹ עַל־אֹדוֹת ה/וֹרוֹדְיָה אֵשֶׁת אָחִיו פִילִפּוֹס וְ/עַל־אֹדוֹת כָּל־הָרָע אֲשֶׁר עָשָׂה ה/וֹרְדוֹס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פיליפוס is Philip; reuse custom entry.",
+      "evidence": [
+        "Luke 3:19 Philip, Herod’s brother",
+        "custom D0069 = Philip"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0069",
+      "new_strong": "D0069",
+      "hebrew": "פיליפוס",
+      "transliteration_en": "Philip",
+      "transliteration_es": "Philip",
+      "definition": {
+        "text_en": "Philip; NT personal name.",
+        "text_es": "Felipe; nombre personal del Nuevo Testamento."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 3,
+        "verse": 19,
+        "word_index": 20,
+        "text": "הוֹרְדוֹס׃",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/ה/וֹרְדוֹס שַׂר־רֹבַע הַ/מְּדִינָה אֲשֶׁר הוּכַח עַל־יָדוֹ עַל־אֹדוֹת ה/וֹרוֹדְיָה אֵשֶׁת אָחִיו פִילִפּוֹס וְ/עַל־אֹדוֹת כָּל־הָרָע אֲשֶׁר עָשָׂה ה/וֹרְדוֹס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "הורדוס is Herod; reuse custom entry.",
+      "evidence": [
+        "same proper name as Luke 3:1",
+        "custom D0025 = Herod"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0025",
+      "new_strong": "D0025",
+      "hebrew": "הורדוס",
+      "transliteration_en": "Herod",
+      "transliteration_es": "Herod",
+      "definition": {
+        "text_en": "Herod; ruler from the Herodian dynasty.",
+        "text_es": "Herodes; gobernante de la dinastía herodiana."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 5,
+        "verse": 24,
+        "word_index": 22,
+        "text": "עַרְשְׂךָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ לְ/מַעַן תֵּדְעוּן כִּי בֶן־הָ/אָדָם יֶשׁ־לוֹ הַ/שָּׁלְטָן בָּ/אָרֶץ לִ/סְלֹחַ חֲטָאִים וַ/יֹּאמֶר אֶל־נְכֵה הָ/אֵבָרִים אֹמֵר אֲנִי אֵלֶיךָ קוּם וְ/שָׂא אֶת־עַרְשְׂךָ וְ/לֶךְ־לְךָ אֶל־בֵּ/יתֶךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "ערשך means “your bed/couch,” from ערש.",
+      "evidence": [
+        "context: take up your bed and go home",
+        "local lexicon H6210 ערש = couch"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6210",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 38,
+        "word_index": 15,
+        "text": "מוֹדְדִים",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "תְּנוּ וְ/תִנָּתֵן לָ/כֶם מִדָּה טוֹבָה דְּחוּקָה וּ/גְדוּשָׁה וּ/מֻשְׁפָּעָה יִתְּנוּ אֶל־חֵיקְכֶם כִּי בַ/מִּדָּה אֲשֶׁר אַתֶּם מוֹדְדִים בָּהּ יִמַּד לָ/כֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "מודדִים means “measuring,” from מדד.",
+      "evidence": [
+        "context: with the measure you measure",
+        "local lexicon H4058 מדד = measure"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4058",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 6,
+        "verse": 42,
+        "word_index": 29,
+        "text": "הַקֵּיסָם",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֵיךְ תֹּאמַר אֶל־אָחִיךָ אָחִי הַ/נִּיחָה לִּי וְ/אָסִירָה אֶת־הַ/קֵּיסָם אֲשֶׁר בְּ/עֵינֶךָ וְ/אֵינְךָ רֹאֶה אֶת־הַ/קּוֹרָה אֲשֶׁר בְּ/עֵינֶךָ הֶחָנֵף הָסֵר בָּ/רִאשׁוֹנָה אֶת־הַ/קּוֹרָה מֵעֵינְךָ וְ/אַחַר רָאֹה תִרְאֶה לְ/הָ/סִיר אֶת־הַ/קֵּיסָם אֲשֶׁר בְּ/עֵין אָחִיךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "הקיסם means speck/splinter; no suitable biblical Strong entry is present.",
+      "evidence": [
+        "context: remove the speck from your brother’s eye",
+        "later Hebrew קיסם = splinter/toothpick"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0082",
+      "new_strong": "D0082",
+      "hebrew": "קיסם",
+      "transliteration_en": "qisam",
+      "transliteration_es": "qisam",
+      "definition": {
+        "text_en": "speck; splinter; small bit of wood.",
+        "text_es": "mota; astilla; pequeño fragmento de madera."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 6,
+        "word_index": 27,
+        "text": "שֶׁתָּבוֹא",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּלֶךְ אִתָּם יֵשׁוּעַ וַ/יְהִי כַּ/אֲשֶׁר קָרַב אֶל־הַ/בַּיִת וַ/יִּשְׁלַח אֵלָיו שַׂר־הַ/מֵּאָה עַל־יְדֵי רֵעָיו לֵ/אמֹר לוֹ בִּי אֲדֹנִי אַל־נָא תַטְרִיחַ אֶת־עַצְמְךָ כִּי אֵינֶנִּי רָאוּי שֶׁתָּבוֹא בְּ/צֵל קוֹרָתִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "שתבוא means “that you come,” from בוא.",
+      "evidence": [
+        "context: I am not worthy that you come under my roof",
+        "local lexicon H935 בוא = come"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H935",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 7,
+        "verse": 6,
+        "word_index": 29,
+        "text": "קוֹרָתִי׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּלֶךְ אִתָּם יֵשׁוּעַ וַ/יְהִי כַּ/אֲשֶׁר קָרַב אֶל־הַ/בַּיִת וַ/יִּשְׁלַח אֵלָיו שַׂר־הַ/מֵּאָה עַל־יְדֵי רֵעָיו לֵ/אמֹר לוֹ בִּי אֲדֹנִי אַל־נָא תַטְרִיחַ אֶת־עַצְמְךָ כִּי אֵינֶנִּי רָאוּי שֶׁתָּבוֹא בְּ/צֵל קוֹרָתִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "קורתי means “my roof/beam,” from קורה.",
+      "evidence": [
+        "context: under my roof",
+        "local lexicon H6982 קורה = beam/rafter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6982",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 8,
+        "verse": 13,
+        "word_index": 17,
+        "text": "יִסֹּגוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲשֶׁר עַל־הַ/סֶּלַע הֵם הַ/מְקַבְּלִים בְּ/שִׂמְחָה אֶת־הַ/דָּבָר בְּ/שָׁמְעָם וְ/שֹׁרֶשׁ אֵין לָ/הֶם רַק לְ/שָׁעָה מַאֲמִינִים וּ/בְ/עֵת הַ/נִּסָּיוֹן יִסֹּגוּ אָחוֹר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "יסגו means “they draw back/fall away,” from סוג.",
+      "evidence": [
+        "context: in time of testing they fall away",
+        "local lexicon H5472 סוג = move away/backslide"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5472",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 10,
+        "verse": 10,
+        "word_index": 11,
+        "text": "רְחוֹבוֹתֶיהָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כָל־עִיר אֲשֶׁר תָּבֹאוּ בָהּ וְ/לֹא יְקַבְּלוּ אֶתְכֶם צְאוּ לָ/כֶם אֶל־רְחוֹבוֹתֶיהָ וְ/אִמְרוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "רחובותיה means “its streets/squares,” from רחוב.",
+      "evidence": [
+        "context: go out into its streets",
+        "local lexicon H7339 רחוב = broad place/street"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7339",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 10,
+        "verse": 27,
+        "word_index": 11,
+        "text": "מְאֹדְךָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן וַ/יֹּאמַר וְ/אָהַבְתָּ אֵת יְהוָֹה אֱלֹהֶיךָ בְּ/כָל־לְ/בָ/בְךָ וּ/בְ/כָל־נַפְשְׁךָ וּ/בְ/כָל־מְאֹדְךָ וּ/בְ/כָל־מַדָּעֲךָ וְ/אֶת־רֵעֲךָ כָּ/מוֹךָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "מאדך means “your strength/might,” from מאד.",
+      "evidence": [
+        "context: with all your heart, soul, strength, and mind",
+        "local lexicon H3966 מאד = muchness/force/abundance"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3966",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 10,
+        "verse": 30,
+        "word_index": 12,
+        "text": "הִפְשִׁיטֻהוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן יֵשׁוּעַ וַ/יֹּאמַר אִישׁ אֶחָד יָרַד מִירוּשָׁלַיִם לִ/ירִיחוֹ וְ/נָפַל בִּ/ידֵי שֹׁדְדִים וְ/הֵם הִפְשִׁיטֻהוּ וְ/גַם פְּצָעֻהוּ וַ/יַּעַזְבוּ אוֹתוֹ בֵּ/ין חַיִּים לָ/מָוֶת וַ/יֵּלְכוּ לָ/הֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "הפשיטוהו means “they stripped him,” from פשט.",
+      "evidence": [
+        "context: robbers stripped and wounded him",
+        "local lexicon H6584 פשט = strip off"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6584",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 10,
+        "verse": 34,
+        "word_index": 11,
+        "text": "וַיּוֹלִיכֵהוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּגַּשׁ אֵלָיו וַ/יֶּחְבַּשׁ אֶת־פְּצָעָיו וַ/יְסוּכֵם בְּ/שֶׁמֶן וַ/יָיִן וַ/יַּעֲלֵהוּ עַל־בְּ/הֶ/מְתּוֹ וַ/יּוֹלִיכֵהוּ אֶל־הַ/מָּלוֹן וַ/יְכַלְכְּלֵהוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "ויוליכהו means “he led/brought him,” from הלך in causative.",
+      "evidence": [
+        "context: brought him to an inn",
+        "local lexicon H1980 הלך = go/walk"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1980",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 11,
+        "verse": 24,
+        "word_index": 22,
+        "text": "מִשָּם׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הָ/רוּחַ הַ/טְּמֵאָה אַחֲרֵי צֵאתָהּ מִן־הָ/אָדָם תְּשׁוֹטֵט בִּ/מְקֹמוֹת צִיָּה לְ/בַ/קֶּשׁ־לָהּ מְנוּחָה וְ/לֹא תִמְצָא אָז תֹּאמַר אָשׁוּבָה־נָּא אֶל־בֵּ/יתִי אֲשֶׁר יָצָאתִי מִשָּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "משם means “from there,” from שם.",
+      "evidence": [
+        "context: my house from which I came out",
+        "local lexicon H8033 שם = there/thither"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H8033",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 11,
+        "verse": 46,
+        "word_index": 22,
+        "text": "מֵאֶצְבְּעוֹתֵיכֶם׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אוֹי גַּם־לָ/כֶם בַּ/עֲלֵי הַ/תּוֹרָה כִּי עֹמְסִים אַתֶּם עַל־בְּ/נֵי הָ/אָדָם מַשָּׂאוֹת כְּ/בֵ/דִים מִסְּבֹל וְ/אַתֶּם בְּ/עַצְמְכֶם אֵינְכֶם נֹגְעִים בַּ/מַּשָּׂאוֹת גַּם־בְּ/אַחַת מֵאֶצְבְּעוֹתֵיכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "מאצבעותיכם means “with/from your fingers,” from אצבע.",
+      "evidence": [
+        "context: you do not touch the burdens with one of your fingers",
+        "local lexicon H676 אצבע = finger"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H676",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 12,
+        "verse": 58,
+        "word_index": 19,
+        "text": "יִמְסָרְךָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כַּ/אֲשֶׁר תֵּלֵךְ אֶל־הַשַּׂר עִם־אִישׁ רִיבֶךָ בְּ/עוֹדְךָ בַ/דֶּרֶךְ הִשְׁתַּדֵּל לְ/הִנָּצֵל מִמֶּנּוּ פֶּן־יִסְחַב אוֹתְךָ אֶל־הַ/שֹּׁפֵט וְ/הַ/שֹּׁפֵט יִמְסָרְךָ אֶל־הַ/שּׁוֹטֵר וְ/הַ/שּׁוֹטֵר יַשְׁלִיכְךָ אֶל־בֵּ/ית הַ/כֶּלֶא׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "ימסרך means “he will hand you over”; reuse custom מסר entry.",
+      "evidence": [
+        "context: judge hands you over to the officer",
+        "custom D0083 = deliver/hand over"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0083",
+      "new_strong": "D0083",
+      "hebrew": "מסר",
+      "transliteration_en": "masar",
+      "transliteration_es": "masar",
+      "definition": {
+        "text_en": "deliver; hand over; betray.",
+        "text_es": "entregar; poner en manos de otro; traicionar."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 13,
+        "verse": 1,
+        "word_index": 10,
+        "text": "פִּילָטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ אֲנָשִׁים בָּ/עֵת הַ/הִיא וַ/יַּגִּידוּ לוֹ עַל־דְּבַר הַ/גְּלִילִים אֲשֶׁר פִּילָטוֹס עֵרַב דָּמָם עִם־זִבְחֵיהֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פילטוס is Pilate; reuse custom entry.",
+      "evidence": [
+        "same proper name as prior Pilate occurrences",
+        "custom D0021 = Pilate"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0021",
+      "new_strong": "D0021",
+      "hebrew": "פילטוס",
+      "transliteration_en": "Pilate",
+      "transliteration_es": "Pilate",
+      "definition": {
+        "text_en": "Pilate; Roman governor who authorized Jesus’ crucifixion.",
+        "text_es": "Pilato; gobernador romano que autorizó la crucifixión de Jesús."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 13,
+        "verse": 12,
+        "word_index": 10,
+        "text": "מֵחָלְיֵךְ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בִּ/רְאוֹת אֹתָהּ יֵשׁוּעַ וַ/יִּקְרָא אֵלֶיהָ וַ/יֹּאמֶר לָהּ אִשָּׁה הֵ/חָלְצִי מֵחָלְיֵךְ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "מחליך means “from your sickness,” from חלי.",
+      "evidence": [
+        "context: woman, you are freed from your sickness",
+        "local lexicon H2483 חלי = sickness"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H2483",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 13,
+        "verse": 15,
+        "word_index": 18,
+        "text": "וְיוֹלִיכֵהוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן הָ/אָדוֹן וַ/יֹּאמֶר אֵלָיו הֶחָנֵף אִישׁ אִישׁ מִכֶּם הֲלֹא יַתִּיר בַּ/שַּׁבָּת אֶת־שׁוֹרוֹ אוֹ אֶת־חֲמֹרוֹ מִן־הָ/אֵבוּס וְ/יוֹלִיכֵהוּ לְ/הַ/שְׁקֹתוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "ויוליכהו means “he leads it away,” from הלך in causative.",
+      "evidence": [
+        "context: lead ox or donkey away to water",
+        "local lexicon H1980 הלך = go/walk"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1980",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 13,
+        "verse": 34,
+        "word_index": 21,
+        "text": "כְּנָפֶיהָ",
+        "strong": null,
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "יְרוּשָׁלַיִם יְרוּשָׁלַיִם הַ/הֹרֶגֶת אֶת־הַ/נְּבִיאִים וְ/הַ/סֹּקֶלֶת אֶת־הַ/נִּשְׁלָחִים אֵלֶיהָ כַּ/מֶּה פְעָמִים חָפַצְתִּי לְ/קַבֵּץ אֶת־בָּ/נַיִךְ כַּ/אֲשֶׁר תְּקַבֵּץ הַ/תַּרְנְגֹלֶת אֶת־אֶפְרוֹחֶיהָ תַּחַת כְּ/נָפֶיהָ וְ/אַתֶּם לֹא אֲבִיתֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "כנפיה means “her wings,” from כנף.",
+      "evidence": [
+        "context: hen gathers chicks under her wings",
+        "local lexicon H3671 כנף = wing"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3671",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 14,
+        "verse": 12,
+        "word_index": 18,
+        "text": "וְלִקְרוֹבֶיךָ",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/גַם אֶל־הָ/אִישׁ אֲשֶׁר קָרָא אוֹתוֹ אָמַר כִּי תַעֲשֶׂה סְעוּדַת צָהֳרַיִם אוֹ סְעוּדַת עָרֶב אַל־תִּקְרָא לְ/אֹהֲבֶיךָ וּ/לְ/אַחֶיךָ וְ/לִ/קְרוֹבֶיךָ וְ/לִ/שְׁכֵנֶיךָ הָ/עֲשִׁירִים פֶּן־יִקְרְאוּ לְךָ גַּם־הֵמָּה וְ/הָיָה לְךָ לְ/שִׁלּוּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "ולקרוביך means “and your relatives/near ones,” from קרוב.",
+      "evidence": [
+        "context: friends, brothers, relatives, rich neighbors",
+        "local lexicon H7138 קרוב = near/nearest/neighbor"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7138",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 14,
+        "verse": 12,
+        "word_index": 19,
+        "text": "וְלִשְׁכֵנֶיךָ",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/גַם אֶל־הָ/אִישׁ אֲשֶׁר קָרָא אוֹתוֹ אָמַר כִּי תַעֲשֶׂה סְעוּדַת צָהֳרַיִם אוֹ סְעוּדַת עָרֶב אַל־תִּקְרָא לְ/אֹהֲבֶיךָ וּ/לְ/אַחֶיךָ וְ/לִ/קְרוֹבֶיךָ וְ/לִ/שְׁכֵנֶיךָ הָ/עֲשִׁירִים פֶּן־יִקְרְאוּ לְךָ גַּם־הֵמָּה וְ/הָיָה לְךָ לְ/שִׁלּוּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "ולשכניך means “and your neighbors,” from שכן.",
+      "evidence": [
+        "context: rich neighbors",
+        "local lexicon H7934 שכן = neighbor/inhabitant"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7934",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 14,
+        "verse": 21,
+        "word_index": 18,
+        "text": "חוּצוֹתֶיהָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹא הָ/עֶבֶד וַ/יַּגֵּד אֶת־הַ/דְּבָרִים הָ/אֵלֶּה לַ/אדֹנָיו וַ/יִּקְצֹף בַּ/עַל הַ/בַּיִת וַ/יֹּאמֶר לְ/עַבְדּוֹ מַהֵר צֵא אֶל־רְחֹבוֹת הָ/עִיר וְ/אֶל־חוּצוֹתֶיהָ וְ/הָבֵא הֵנָּה אֶת־הָ/עֲנִיִּים וְ/אֶת־הַ/נִּשְׁבָּרִים וְ/אֶת־הַ/עִוְרִים וְ/אֶת־הַ/פִּסְחִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "חוצותיה means “its streets/outside places,” from חוץ.",
+      "evidence": [
+        "context: streets and lanes of the city",
+        "local lexicon H2351 חוץ = outside/street"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H2351",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 15,
+        "verse": 7,
+        "word_index": 19,
+        "text": "יִצְטָרְכוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲנִי אֹמֵר לָ/כֶם כִּי־כֵן תִּהְיֶה שִׂמְחָה בַּ/שָּׁמַיִם עַל־חוֹטֵא אֶחָד הַשָּׁב יוֹתֵר מֵעַל־תִּשְׁעִים וְ/תִשְׁעָה צַדִּיקִים אֲשֶׁר לֹא־יִצְטָרְכוּ לִ/תְשׁוּבָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "יצטרכו means “will need”; reuse custom later-Hebrew צריך entry.",
+      "evidence": [
+        "context: righteous persons who need no repentance",
+        "custom D0063 = need/require"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0063",
+      "new_strong": "D0063",
+      "hebrew": "צריך",
+      "transliteration_en": "tsarikh",
+      "transliteration_es": "tsarikh",
+      "definition": {
+        "text_en": "need; require; be obliged.",
+        "text_es": "necesitar; requerir; estar obligado."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 15,
+        "verse": 8,
+        "word_index": 21,
+        "text": "תִמְצָאֵהוּ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אוֹ מִי הָ/אִשָּׁה אֲשֶׁר־לָהּ עֲשָׂרָה דַרְכְּמוֹנִים וְ/אָבַד לָהּ דַּרְכְּמוֹן אֶחָד וְ/לֹא־תַדְלִיק נֵר וּ/תְטַאטֵא אֶת־הַ/בַּיִת וּ/תְחַפֵּשׂ הֵ/יטֵב עַד כִּי־תִמְצָאֵהוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "תמצאהו means “she finds it,” from מצא.",
+      "evidence": [
+        "context: search until she finds it",
+        "local lexicon H4672 מצא = find"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4672",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 15,
+        "verse": 13,
+        "word_index": 18,
+        "text": "סוֹבְאִים",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי מִקֵּץ יָמִים וַ/יֶּאֱסֹף הַבֵּן הַ/צָּעִיר אֶת־הַכֹּל וַ/יֵּלֶךְ אֶל־אֶרֶץ רְחוֹקָה וְ/שָׁם פִּזַּר אֶת־רְכֻשׁוֹ וַ/יֵּלֶךְ בְּ/דֶרֶךְ סוֹבְאִים וְ/זוֹלְלִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "סובאים means “drunkards/drinking riotously,” from סבא.",
+      "evidence": [
+        "context: wasteful living with drinking and gluttony",
+        "local lexicon H5433 סבא = drunkards/drink largely"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5433",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 15,
+        "verse": 13,
+        "word_index": 19,
+        "text": "וְזוֹלְלִים׃",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי מִקֵּץ יָמִים וַ/יֶּאֱסֹף הַבֵּן הַ/צָּעִיר אֶת־הַכֹּל וַ/יֵּלֶךְ אֶל־אֶרֶץ רְחוֹקָה וְ/שָׁם פִּזַּר אֶת־רְכֻשׁוֹ וַ/יֵּלֶךְ בְּ/דֶרֶךְ סוֹבְאִים וְ/זוֹלְלִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.82,
+      "reason": "וזוללים means “and gluttons/profligates,” from זלל.",
+      "evidence": [
+        "context: riotous living with drunkards and gluttons",
+        "local lexicon H2151 זלל = be vile/worthless in semantic field of prodigality"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H2151",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 15,
+        "verse": 15,
+        "word_index": 10,
+        "text": "שְׂדוֹתָיו",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּלֶךְ וַ/יִּדְבַּק בְּ/אֶחָד מִבְּנֵי הַ/מְּדִינָה בָּ/אָרֶץ הַ/הִיא וַ/יִּשְׁלַח אוֹתוֹ אֶל־שְׂדוֹתָיו לִ/רְעוֹת חֲזִירִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "שדותיו means “his fields,” from שדה.",
+      "evidence": [
+        "context: he sent him into his fields to feed pigs",
+        "local lexicon H7704 שדה = field"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7704",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "luke",
+        "chapter": 15,
+        "verse": 29,
+        "word_index": 15,
+        "text": "מִצְוָתֶךָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן וַ/יֹּאמֶר אֶל־אָבִיו הִנֵּה זֶה שָׁנִים רַבּוֹת אֲנִי עֹבֵד אֹתְךָ וּ/מִיָּמַי לֹא עָבַרְתִּי אֶת־מִצְוָתֶךָ וּ/מִיָּמַי לֹא־נָתַתָּ לִּי גְּדִי לְ/מַעַן אָשִׂישׂ עִם־רֵעָי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "מצותך means “your commandment,” from מצוה.",
+      "evidence": [
+        "context: I never transgressed your commandment",
+        "local lexicon H4687 מצוה = commandment"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4687",
+      "changed_target": "parsed_word"
+    }
+  ]
+}

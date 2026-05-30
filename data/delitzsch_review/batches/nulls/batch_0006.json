@@ -1,0 +1,1376 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:26.117335+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 5,
+        "verse": 18,
+        "word_index": 18,
+        "text": "וַיִּדַּמֶּה",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אָז יוֹסִיפוּ הַ/יְּהוּדִים לְ/בַ/קֵּשׁ אֶת־נַפְשׁוֹ כִּי מִלְּבַד אֲשֶׁר חִלֵּל אֶת־הַ/שַּׁבָּת עוֹד אָמַר כִּי הָ/אֱלֹהִים הוּא אָבִיו וַ/יִּדַּמֶּה לֵ/אלֹהִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "וידמה means “he made himself equal/like,” from דמה resemble/be like.",
+      "evidence": [
+        "context: making himself equal with God",
+        "local lexicon H1819 דמה = be like/resemble"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H1819",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 6,
+        "verse": 21,
+        "word_index": 0,
+        "text": "וַיּוֹאִילוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יּוֹאִילוּ לָ/קַחַת אֹתוֹ אֶל־הָ/אֳנִיָּה וְ/רֶגַע הִגִּיעָה הָ/אֳנִיָּה לָ/אָרֶץ אֲשֶׁר הֵם הֹ/לְכִים שָׁמָּה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ויואילו means “they were willing/pleased,” from יעל in avail/consent sense.",
+      "evidence": [
+        "context: they were willing to take him into the boat",
+        "local lexicon H3276 יעל = profit/avail/benefit"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3276",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 6,
+        "verse": 27,
+        "word_index": 17,
+        "text": "בוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַל־תַּעַמְלוּ בְּ/מַאֲכָל אֲשֶׁר יֹאבַד כִּי אִם־בַּ/מַּאֲכָל הַקַּיָּם לְ/חַיֵּי עוֹלָמִים אֲשֶׁר בֶּן־הָ/אָדָם יִתְּנֶנּוּ לָ/כֶם כִּי־בוֹ חָתַם חוֹתָמוֹ אָבִיו הָ/אֱלֹהִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בו is a pronominal phrase “on/in him”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "context: on him the Father has set his seal",
+        "manual policy case: ב + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 6,
+        "verse": 41,
+        "word_index": 0,
+        "text": "וַיִּלֹּנוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּלֹּנוּ עָלָיו הַ/יְּהוּדִים עַל־אָמְרוֹ אָנֹכִי הוּא הַ/לֶּחֶם הַיֹּרֵד מִן־הַ/שָּׁמָיִם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "וילנו means “they murmured/complained,” from לון.",
+      "evidence": [
+        "context: the Jews grumbled about him",
+        "local lexicon H3885 לון = lodge; also murmur in biblical usage"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3885",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 6,
+        "verse": 52,
+        "word_index": 0,
+        "text": "וַיִּתְוַכְּחוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּתְוַכְּחוּ הַ/יְּהוּדִים אִישׁ עִם־רֵעֵהוּ לֵ/אמֹר אֵיכָה יוּכַל זֶה לָ/תֶת־לָ/נוּ אֶת־בְּ/שָׂרוֹ לֶ/אֱכֹל׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "ויתוכחו means “they disputed/argued,” from יכח.",
+      "evidence": [
+        "context: the Jews disputed with one another",
+        "local lexicon H3198 יכח = decide/adjudge/prove"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3198",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 7,
+        "verse": 23,
+        "word_index": 15,
+        "text": "רִפֵּאתִי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה אִם־יִמּוֹל זָכָר בַּ/שַּׁבָּת לְ/מַעַן אֲשֶׁר לֹא־תוּפַר תּוֹרַת משֶׁה מַה־תִּקְצְפוּ עָלַי כִּי רִפֵּאתִי אִישׁ כֻּ/לּוֹ בַּ/שַּׁבָּת׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "רפאתי means “I healed,” from רפא.",
+      "evidence": [
+        "context: I healed a whole man on the Sabbath",
+        "local lexicon H7495 רפא = heal"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7495",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 7,
+        "verse": 26,
+        "word_index": 10,
+        "text": "רָאשֵׁינוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה הוּא דֹּבֵר בַּ/גָּלוּי וְ/לֹא יִגְעֲרוּ בּוֹ הַאַף אֻמְנָם יָדְעוּ רָאשֵׁינוּ כִּי־בֶ/אֱמֶת זֶה הוּא הַ/מָּשִׁיחַ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ראשינו means “our rulers/leaders,” from ראש head/chief.",
+      "evidence": [
+        "context: have our rulers really known?",
+        "local lexicon H7218 ראש = head/top"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7218",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 7,
+        "verse": 35,
+        "word_index": 10,
+        "text": "נִמְצָאֵהוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמְרוּ הַ/יְּהוּדִים אִישׁ אֶל־רֵעֵהוּ אָנָה יֵלֵךְ זֶה וַ/אֲנַחְנוּ לֹא נִמְצָאֵהוּ הֲכִי יֵלֵךְ אֶל־הַ/נְּפוֹצִים בֵּ/ין הַ/יְּוָנִים וִ/ילַמֵּד אַנְשֵׁי יָוָן׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "נמצאהו means “we will find him,” from מצא.",
+      "evidence": [
+        "context: where will he go that we will not find him?",
+        "local lexicon H4672 מצא = find"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4672",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 7,
+        "verse": 37,
+        "word_index": 15,
+        "text": "וְיִשְׁתֶּה׃",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי בְּ/יוֹם הֶחָג הָ/אַחֲרוֹן הַ/גָּדוֹל עָמַד יֵשׁוּעַ וַ/יִּקְרָא לֵ/אמֹר אִישׁ כִּי יִצְמָא יָבֹא־נָא אֵלַי וְ/יִשְׁתֶּה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "וישתה means “and drink,” from שתה.",
+      "evidence": [
+        "context: let him come to me and drink",
+        "local lexicon H8354 שתה = drink"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H8354",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 10,
+        "verse": 10,
+        "word_index": 15,
+        "text": "סִפְקָם׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הַ/גַּנָּב לֹא יָבוֹא כִּי אִם־לִ/גְנוֹב וְ/לַ/הֲרוֹג וּ/לְ/אַבֵּד וַ/אֲנִי בָ/אתִי לְ/בַ/עֲבוּר הָ/בִיא לָ/הֶם חַיִּים וּ/מְלֹא סִפְקָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ספקם means “their sufficiency/abundance”; this is later Hebrew usage and should be custom.",
+      "evidence": [
+        "context: life and fullness/sufficiency",
+        "later Hebrew ספק = sufficiency/enough"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0070",
+      "new_strong": "D0070",
+      "hebrew": "ספק",
+      "transliteration_en": "sefeq",
+      "transliteration_es": "sefeq",
+      "definition": {
+        "text_en": "sufficiency; enough; adequate supply.",
+        "text_es": "suficiencia; lo suficiente; provisión adecuada."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 10,
+        "verse": 12,
+        "word_index": 19,
+        "text": "וְיָפִיץ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הַ/שָּׂכִיר אֲשֶׁר לֹא רֹעֶה הוּא וְ/הַצֹּאן לֹא־לוֹ הֵנָּה בִּ/רְאוֹתוֹ כִּי־בָא הַזְּאֵב יַעֲזֹב אֶת־הַ/צֹּאן וָ/נָס וְ/הַזְּאֵב יַחֲטֹף וְ/יָפִיץ אֶת־הַ/צֹּאן׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "ויפיץ means “he scatters,” from פוץ.",
+      "evidence": [
+        "context: wolf snatches and scatters the sheep",
+        "local lexicon H6327 פוץ = disperse/scatter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6327",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 10,
+        "verse": 32,
+        "word_index": 15,
+        "text": "תִּסְקְלֻנִי׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן אֹתָם יֵשׁוּעַ מַעֲשִׂים טוֹבִים רַבִּים הֶ/רְאֵיתִי אֶתְכֶם מֵאֵת אָבִי עַל־אֵיזֶה מִן־הַ/מַּעֲשִׂים הָהֵם תִּסְקְלֻנִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "תסקלני means “you stone me,” from סקל.",
+      "evidence": [
+        "context: for which work do you stone me?",
+        "local lexicon H5619 סקל = stone"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5619",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 10,
+        "verse": 38,
+        "word_index": 15,
+        "text": "בוֹ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִם־עָשִׂיתִי וְ/לֹא־תַאֲמִינוּ לִי הַ/אֲמִינוּ־נָא לְ/מַעֲשָׂי לְ/מַעַן תֵּדְעוּ וְ/תַאֲמִינוּ כִּי־בִי הָאָב וַ/אֲנִי בוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בו is a pronominal phrase “in him”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "context: the Father is in me and I in him",
+        "manual policy case: ב + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 2,
+        "word_index": 7,
+        "text": "הַמֹּר",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הִיא מִרְיָם אֲשֶׁר מָשְׁחָה אֶת־הָ/אָדוֹן בְּ/שֶׁמֶן הַמֹּר וַ/תְּנַגֵּב אֶת־רַגְלָיו בְּ/שַׂעֲרוֹתֶיהָ וְ/עַתָּה לַ/עְזָר אָחִיהָ חָלָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "המר means “the myrrh/perfume,” from מר.",
+      "evidence": [
+        "context: Mary anointed the Lord with perfumed oil",
+        "local lexicon H4753 מור = myrrh"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4753",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 3,
+        "word_index": 0,
+        "text": "וַתִּשְׁלַחְנָה",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תִּשְׁלַחְנָה אַחְיוֹתָיו אֵלָיו לֵ/אמֹר אֲדֹנִי הִנֵּה זֶה אֲשֶׁר אָהַבְתָּ חֹלֶה הוּא׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "ותשלחנה means “they sent,” from שלח.",
+      "evidence": [
+        "context: his sisters sent to him",
+        "local lexicon H7971 שלח = send"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7971",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 42,
+        "word_index": 15,
+        "text": "בִי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנִי יָדַעְתִּי כִּי בְ/כָל־עֵת תַּעֲנֵנִי אוּלָם בַּ/עֲבוּר הָעָם הַזֶּה אֲשֶׁר סְבִיבוֹתַי דִּבַּרְתִּי לְ/מַעַן יַאֲמִינוּ בִי כִּי אַתָּה שְׁלַחְתָּנִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בי is a pronominal phrase “in me”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "context: that they may believe in me",
+        "manual policy case: ב + first-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 11,
+        "verse": 44,
+        "word_index": 7,
+        "text": "לוּטִים",
+        "strong": null,
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֵּצֵא הַמֵּת וְ/יָדָיו וְ/רַגְלָיו כְּ/רוּכֹת בְּ/תַכְרִיכִין וּ/פָנָיו ל/וּטִים בְּ/מִטְפָּחַת וַ/יֹּאמֶר אֲלֵיהֶם יֵשׁוּעַ הַ/תִּירוּ אֹתוֹ וְ/יֵלֵךְ לְ/דַרְכּוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "לוטים means “wrapped/enveloped,” from לוט.",
+      "evidence": [
+        "context: face wrapped with a cloth",
+        "local lexicon H3874 לוט = wrap/enwrap"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3874",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 22,
+        "word_index": 0,
+        "text": "וַיַּבִּיטוּ",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּבִּיטוּ תַלְמִידָיו אִישׁ אֶל־רֵעֵהוּ וַ/יִּתְמְהוּ לָ/דַעַת עַל־מִי דִבֵּר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "ויביטו means “they looked,” from נבט.",
+      "evidence": [
+        "context: disciples looked at one another",
+        "local lexicon H5027 נבט = look"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5027",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 24,
+        "word_index": 0,
+        "text": "וַיִּרְמָז־",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּרְמָז־לוֹ שִׁמְעוֹן פֶּטְרוֹס לִ/דְרשׁ מִי־הוּא זֶה אֲשֶׁר דִּבֶּר עָלָיו׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "וירמז means “he signaled”; reuse custom רמז entry.",
+      "evidence": [
+        "context: Simon Peter signaled to him",
+        "custom D0028 = signal/gesture"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0028",
+      "new_strong": "D0028",
+      "hebrew": "רמז",
+      "transliteration_en": "remez",
+      "transliteration_es": "remez",
+      "definition": {
+        "text_en": "signal; gesture; hint.",
+        "text_es": "señal; gesto; indicio."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 13,
+        "verse": 38,
+        "word_index": 15,
+        "text": "הַתַּרְנְגֹל",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן אֹתוֹ יֵשׁוּעַ הֲכִי־תִתֵּן נַפְשְׁךָ בְּ/עַד נַפְשִׁי אָמֵן אָמֵן אֲנִי אֹמֵר לָךְ בְּ/טֶרֶם יִקְרָא הַ/תַּרְנְגֹל תְּכַחֵשׁ בִּי שָׁלשׁ פְּעָמִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "התרנגול is rooster; this common later Hebrew word has no reliable biblical Strong entry.",
+      "evidence": [
+        "context: before the rooster crows",
+        "custom entry for later Hebrew animal term"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0071",
+      "new_strong": "D0071",
+      "hebrew": "תרנגול",
+      "transliteration_en": "tarnegol",
+      "transliteration_es": "tarnegol",
+      "definition": {
+        "text_en": "rooster; cock.",
+        "text_es": "gallo."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 14,
+        "verse": 23,
+        "word_index": 17,
+        "text": "מְעוֹנָתֵנוּ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַן יֵשׁוּעַ וַ/יֹּאמֶר אֵלָיו אִישׁ כִּי יֶאֱהָבַנִי יִשְׁמֹר אֶת־דְּבָרִי וְ/אָבִי יֶאֱהַב אֹתוֹ וְ/נָבוֹאָה אֵלָיו וְ/נָשִׂים אֶצְלוֹ מְעוֹנָתֵנוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "מעונתנו means “our dwelling/abode,” from מעון.",
+      "evidence": [
+        "context: we will make our dwelling with him",
+        "local lexicon H4583 מעון = dwelling/habitation"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4583",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 14,
+        "verse": 26,
+        "word_index": 0,
+        "text": "וְהַפְּרַקְלִיט",
+        "strong": null,
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הַ/פְּרַקְלִיט רוּחַ הַ/קֹּדֶשׁ אֲשֶׁר־יִשְׁלָחֶנּוּ אָבִי בִּ/שְׁמִי הוּא יְלַמֶּדְכֶם אֶת־כֹּל וְ/יַזְכִּירְכֶם אֶת־כֹּל אֲשֶׁר־הִגַּדְתִּי לָ/כֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "הפרקליט is the transliterated NT term Paraclete; no Hebrew Strong entry is reliable.",
+      "evidence": [
+        "John 14:26 identifies the Paraclete as the Holy Spirit",
+        "Greek/NT technical term; custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0072",
+      "new_strong": "D0072",
+      "hebrew": "פרקליט",
+      "transliteration_en": "Paraclete",
+      "transliteration_es": "Paraclete",
+      "definition": {
+        "text_en": "Paraclete; advocate, helper, or comforter.",
+        "text_es": "Paráclito; abogado, ayudador o consolador."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 15,
+        "verse": 6,
+        "word_index": 10,
+        "text": "וְיַשְׁלִיכוּם",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אִישׁ אֲשֶׁר לֹא יַעֲמֹד בִּי יֻשְׁלַךְ כַּ/שָּׂרִיג הַ/חוּצָה וְ/יִיבָשׁ וְ/יִלְקְטוּם וְ/יַשְׁלִיכוּם אֶל־תּוֹךְ הָאֵשׁ וְ/הָיָה לְ/בָ/עֵר׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "וישליכום means “they cast/throw them,” from שלך.",
+      "evidence": [
+        "context: branches are thrown into the fire",
+        "local lexicon H7993 שלך = throw/cast"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7993",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 16,
+        "verse": 2,
+        "word_index": 1,
+        "text": "יְנַדּוּ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הִנֵּה יְנַדּוּ אֶתְכֶם וְ/אַף בָּ/אָה הַ/שָּׁעָה אֲשֶׁר כָּל־הֹרֵג אֶתְכֶם יְדַמֶּה לְ/הַ/קְרִיב עֲבוֹדָה לֵ/אלֹהִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "ינדו means “they will banish/excommunicate,” from נדח/נדה banish thrust away.",
+      "evidence": [
+        "context: they will put you out of the synagogue",
+        "local lexicon H5080 נדח = banish/thrust away"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5080",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 16,
+        "verse": 14,
+        "word_index": 1,
+        "text": "יְפָאֲרֵנִי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הוּא יְפָאֲרֵנִי כִּי מִשֶּׁלִּי יִקַּח וְ/יַגִּיד לָ/כֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "יפארני means “he will glorify me,” from פאר.",
+      "evidence": [
+        "context: he will glorify me",
+        "local lexicon H6286 פאר = beautify/glorify"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6286",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 17,
+        "verse": 1,
+        "word_index": 18,
+        "text": "יְפָאֲרֶךָּ׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־אֵלֶּה דִּבֶּר יֵשׁוּעַ וַ/יִּשָּׂא עֵינָיו הַ/שָּׁמַיְמָה וַ/יֹּאמַר אָבִי הִנֵּה־בָ/אָה הַ/שָּׁעָה פָּאֵר אֶת־בִּ/נְךָ לְ/מַעַן גַּם־בִּ/נְךָ יְפָאֲרֶךָּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "יפארך means “he will glorify you,” from פאר.",
+      "evidence": [
+        "context: glorify your Son so the Son may glorify you",
+        "local lexicon H6286 פאר = beautify/glorify"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6286",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 17,
+        "verse": 2,
+        "word_index": 2,
+        "text": "לּוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כַּ/אֲשֶׁר נָתַתָּ לּוֹ הַ/שָּׁלְטָן עַל־כָּל־בָּ/שָׂר לְ/מַעַן יִתֵּן חַיֵּי עוֹלָמִים לְ/כֹל אֲשֶׁר־נָתַתָּ לּוֹ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "לו is a pronominal dative “to him”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "context: you gave him authority",
+        "manual policy case: ל + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 17,
+        "verse": 4,
+        "word_index": 4,
+        "text": "פָעָלְךָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲנִי פֵּאַרְתִּיךָ בָ/אָרֶץ כִּ/לִּ/יתִי פָעָלְךָ אֲשֶׁר צִוִּיתַנִי לַ/עֲשׂוֹת׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "פעלך means “your work,” from פעל.",
+      "evidence": [
+        "context: I completed the work you gave me to do",
+        "local lexicon H6466 פעל = do/make"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H6466",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 17,
+        "verse": 5,
+        "word_index": 4,
+        "text": "עִמֶּךָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה פָאֲרֵנִי אַתָּה אָבִי עִמֶּךָ בַּ/כָּ/בוֹד אֲשֶׁר הָיָה־לִי עִמְּךָ טֶרֶם הֱ/יוֹת הָ/עוֹלָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "עמך is “with you”; leave unresolved until pronoun/preposition encoding policy is set for standalone suffix forms.",
+      "evidence": [
+        "context: glorify me with yourself",
+        "manual policy case: עם + second-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 17,
+        "verse": 8,
+        "word_index": 4,
+        "text": "לִּי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הַ/דְּבָרִים אֲשֶׁר נָתַתָּ לִּי נָתַתִּי לָ/הֶם וְ/הֵם קִבְּלוּם וַ/יַּכִּירוּ בֶ/אֱמֶת כִּי מֵעִמְּךָ יָצָאתִי וַ/יַּאֲמִינוּ כִּי אַתָּה שְׁלַחְתָּנִי׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "לי is a pronominal dative “to me”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "context: the words you gave me",
+        "manual policy case: ל + first-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 17,
+        "verse": 15,
+        "word_index": 4,
+        "text": "תִּקָּחֵם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לֹא אַעְתִּיר לְךָ אֲשֶׁר תִּקָּחֵם מִן־הָ/עוֹלָם רַק שֶׁתִּצְּרֵם מִן־הָרָע׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "תקחם means “you take them,” from לקח.",
+      "evidence": [
+        "context: not that you take them out of the world",
+        "local lexicon H3947 לקח = take"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3947",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 17,
+        "verse": 24,
+        "word_index": 19,
+        "text": "לִּי",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אָבִי חָפַצְתִּי כִּי גַם־הֵם אֲשֶׁר נְתַתָּם לִי יִהְיוּ עִמִּי בַּ/אֲשֶׁר אֶהְיֶה אָנִי לְ/מַעַן יֶחֱזוּ אֶת־כְּ/ב/וֹדִי אֲשֶׁר נָתַתָּ לִּי כִּי אֲהַבְתַּנִי לִ/פְנֵי מוֹסְדוֹת עוֹלָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "לי is a pronominal dative “to me”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "context: the glory you gave me",
+        "manual policy case: ל + first-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 17,
+        "verse": 26,
+        "word_index": 4,
+        "text": "וְאוֹסִיף",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנִי ה/וֹדַעְתִּים אֶת־שִׁמְךָ וְ/אוֹסִיף לְ/ה/וֹדִיעָם לְ/מַעַן תִּהְיֶה־בָּם הָ/אַהֲבָה אֲשֶׁר אֲהַבְתָּנִי וַ/אֲנִי אֶהְיֶה בָ/הֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "ואוסיף means “and I will continue/add,” from יסף.",
+      "evidence": [
+        "context: I made known your name and will continue to make it known",
+        "local lexicon H3254 יסף = add"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3254",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 10,
+        "word_index": 15,
+        "text": "מַלְכוֹס׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/שִׁמְעוֹן פֶּטְרוֹס חֶרֶב וַ/יִּשְׁלְפָהּ וַ/יַּךְ אֶת־עֶבֶד הַ/כֹּהֵן הַ/גָּדוֹל וַ/יְקַצֵּץ אֶת־אָזְנוֹ הַ/יְמָנִית וְ/שֵׁם הָ/עֶבֶד מַלְכוֹס׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "מלכוס is the NT proper name Malchus; no reliable Hebrew Strong entry.",
+      "evidence": [
+        "John 18:10 names the servant Malchus",
+        "proper personal name; create custom entry"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0073",
+      "new_strong": "D0073",
+      "hebrew": "מלכוס",
+      "transliteration_en": "Malchus",
+      "transliteration_es": "Malchus",
+      "definition": {
+        "text_en": "Malchus; servant of the high priest whose ear Peter cut off.",
+        "text_es": "Malco; siervo del sumo sacerdote a quien Pedro le cortó la oreja."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 16,
+        "word_index": 15,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פֶטְרוֹס עָמַד מִחוּץ לַ/פָּתַח וַ/יֵּצֵא הַ/תַּלְמִיד הָ/אַחֵר הַ/מְיֻדָּע לַ/כֹּ/הֵן הַ/גָּדוֹל וַ/יְדַבֵּר אֶל־הַ/שֹּׁעֶרֶת וַ/יָּבֵא אֶת־פֶּטְרוֹס פְּנִימָה׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פטרוס is Peter; reuse custom entry.",
+      "evidence": [
+        "same name as earlier reviewed Peter occurrences",
+        "custom D0001 = Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "new_strong": "D0001",
+      "hebrew": "פטרוס",
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros",
+      "definition": {
+        "text_en": "Peter; apostle of Jesus.",
+        "text_es": "Pedro; apóstol de Jesús."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 18,
+        "verse": 38,
+        "word_index": 18,
+        "text": "בוֹ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֵלָיו פִּילָטוֹס מָה הִיא הָ/אֱמֶת וְ/אַחֲרֵי דַּבְּרוֹ זֹאת יָצָא שֵׁנִית אֶל־הַ/יְּהוּדִים וַ/יֹּאמֶר אֲלֵיהֶם אֲנִי לֹא־מָצָאתִי בוֹ כָּל־עָוֺן׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.0,
+      "reason": "בו is a pronominal phrase “in him”; leave unresolved until pronoun/preposition encoding policy is set.",
+      "evidence": [
+        "context: I find no guilt in him",
+        "manual policy case: ב + third-person suffix"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "changed_target": "review_note"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 19,
+        "verse": 23,
+        "word_index": 28,
+        "text": "מִלְּמַעְלָה",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי כַּ/אֲשֶׁר צָלְבוּ אַנְשֵׁי הַ/צָּבָא אֶת־יֵשׁוּעַ וַ/יִּקְחוּ אֶת־בְּ/גָדָיו וַ/יְחַלְּקוּם לְ/אַרְבָּעָה חֲלָקִים לְ/אִישׁ אִישׁ חֵלֶק אֶחָד וְ/גַם אֶת־כֻּ/תָּנְתּוֹ וְ/הַ/כֻּתֹּנֶת לֹא־הָ/יְתָה תְפוּרָה כִּי אִם־מַעֲשֵׂה אֹרֵג מִלְּמַעְלָה וְ/עַד־קָצֶהָ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.94,
+      "reason": "מלמעלה means “from above/top,” from מעל.",
+      "evidence": [
+        "context: woven from above throughout",
+        "local lexicon H4605 מעל = above/upward"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4605",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 19,
+        "verse": 31,
+        "word_index": 22,
+        "text": "שׁוֹקֵיהֶם",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/מַעַן לֹא תִשָּׁאַרְנָה הַ/גְּוִיּוֹת עַל־הַצְּלָב בְּ/יוֹם הַ/שַּׁבָּת כִּי־עֶרֶב שַׁבָּת הָיָה וְ/גָדוֹל יוֹם הַ/שַּׁבָּת הַ/הוּא שָׁאֲלוּ הַ/יְּהוּדִים מִן־פִּילָטוֹס לְ/שַׁבֵּר אֶת־שׁוֹקֵיהֶם וּ/לְ/הוֹרִיד אֹתָם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "שוקיהם means “their legs,” from שוק.",
+      "evidence": [
+        "context: break their legs",
+        "local lexicon H7785 שוק = leg"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H7785",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 19,
+        "verse": 38,
+        "word_index": 24,
+        "text": "פִּילָטוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי אַחֲרֵי־כֵן בָּא יוֹסֵף הָ/רָמָתִי וְ/הוּא תַּלְמִיד יֵשׁוּעַ אַךְ־בַּ/סֵּתֶר מִפְּנֵי הַ/יְּהוּדִים וַ/יִּשְׁאַל מֵאֵת פִּילָטוֹס אֲשֶׁר יִתְּנֵהוּ לָ/שֵׂאת אֶת־גּוּפַת יֵשׁוּעַ וַ/יַּנַּח לוֹ פִּילָטוֹס וַ/יָּבֹא וַ/יִּשָּׂא אֶת־גּוּפַת יֵשׁוּעַ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פילטוס is Pilate; reuse custom entry.",
+      "evidence": [
+        "same name as earlier reviewed Pilate occurrence",
+        "custom D0021 = Pilate"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0021",
+      "new_strong": "D0021",
+      "hebrew": "פילטוס",
+      "transliteration_en": "Pilate",
+      "transliteration_es": "Pilate",
+      "definition": {
+        "text_en": "Pilate; Roman governor who authorized Jesus’ crucifixion.",
+        "text_es": "Pilato; gobernador romano que autorizó la crucifixión de Jesús."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 20,
+        "verse": 6,
+        "word_index": 10,
+        "text": "הַתַּכְרִיכִין",
+        "strong": null,
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹא שִׁמְעוֹן פֶּטְרוֹס אַחֲרָיו וְ/הוּא נִכְנַס אֶל־הַ/קָּבֶר וַ/יַּרְא אֶת־הַ/תַּכְרִיכִין מֻנָּחִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "התכריכין means burial cloths/linen wrappings; this is later Hebrew and should be custom.",
+      "evidence": [
+        "context: burial cloths lying in the tomb",
+        "custom entry for later Hebrew burial term"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0074",
+      "new_strong": "D0074",
+      "hebrew": "תכריך",
+      "transliteration_en": "takhrikh",
+      "transliteration_es": "takhrikh",
+      "definition": {
+        "text_en": "burial cloth; linen wrapping for a corpse.",
+        "text_es": "lienzo funerario; envoltura de lino para un cadáver."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 20,
+        "verse": 6,
+        "word_index": 11,
+        "text": "מֻנָּחִים׃",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹא שִׁמְעוֹן פֶּטְרוֹס אַחֲרָיו וְ/הוּא נִכְנַס אֶל־הַ/קָּבֶר וַ/יַּרְא אֶת־הַ/תַּכְרִיכִין מֻנָּחִים׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.88,
+      "reason": "מונחים means “lying/resting/laid,” from נוח.",
+      "evidence": [
+        "context: burial cloths lying there",
+        "local lexicon H5117 נוח = rest"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H5117",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 20,
+        "verse": 7,
+        "word_index": 11,
+        "text": "מְקֻפֶּלֶת",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הַ/מִּטְפַּחַת אֲשֶׁר הָ/יְתָה עַל־רֹאשׁוֹ אֵינֶנָּה מֻנַּחַת אֵצֶל הַ/תַּכְרִיכִין כִּי אִם־מְקֻפֶּלֶת לְ/בַ/דָּהּ בִּ/מְקוֹמָהּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.92,
+      "reason": "מקפלת means “folded,” from כפל.",
+      "evidence": [
+        "context: face cloth folded by itself",
+        "local lexicon H3717 כפל = double/fold"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3717",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 20,
+        "verse": 12,
+        "word_index": 14,
+        "text": "מְרַאֲשׁוֹתָיו",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/תֵּרֶא שְׁנֵי מַלְאָכִים לְ/ב/וּשֵׁי לְ/בָ/נִים ישְׁבִים בִּ/מְקוֹם אֲשֶׁר־שָׂמוּ שָׁם אֶת־גּוּפַת יֵשׁוּעַ אֶחָד מְרַאֲשׁוֹתָיו וְ/אֶחָד מַרְגְּלוֹתָיו׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.86,
+      "reason": "מראשותיו means “at his head,” from מראשה/head-place.",
+      "evidence": [
+        "context: one angel at the head and one at the feet",
+        "local lexicon H4763 מראשה"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H4763",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 20,
+        "verse": 17,
+        "word_index": 26,
+        "text": "וֵאלֹהֵיכֶם׃",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר אֵלֶיהָ יֵשׁוּעַ אַל־תִּגְּעִי בִי כִּי עוֹד לֹא עָלִיתִי אֶל־אָבִי אַךְ לְ/כִי־נָא אֶל־אַחַי וְ/אִמְרִי אֲלֵיהֶם אֲנִי עֹלֶה אֶל־אָבִי וַ/אֲבִיכֶם וְ/אֶל־אֱלֹהַי וֵ/אלֹהֵיכֶם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.96,
+      "reason": "ואלוהיכם means “and your God,” from אלהים.",
+      "evidence": [
+        "context: my God and your God",
+        "local lexicon H430 אלהים = God"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H430",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 21,
+        "verse": 2,
+        "word_index": 2,
+        "text": "וְתוֹמָא",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "שִׁמְעוֹן פֶּטְרוֹס וְ/תוֹמָא הַ/נִּקְרָא דִידוּמוֹס וּ/נְתַנְאֵל מִקָּנָה אֲשֶׁר בְּ/אֶרֶץ הַ/גָּלִיל וּ/בְ/נֵי זַבְדַּי וְ/עוֹד שְׁנַיִם אֲחֵרִים מִתַּלְמִידָיו יָשְׁבוּ יַחְדָּו׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "ותומא is Thomas with conjunction; reuse custom entry.",
+      "evidence": [
+        "John 21:2 Thomas called Didymus",
+        "custom D0002 = Thomas"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0002",
+      "new_strong": "D0002",
+      "hebrew": "תומא",
+      "transliteration_en": "Thomas",
+      "transliteration_es": "Thomas",
+      "definition": {
+        "text_en": "Thomas; disciple of Jesus, also called Didymus.",
+        "text_es": "Tomás; discípulo de Jesús, también llamado Dídimo."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 21,
+        "verse": 7,
+        "word_index": 14,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר הַ/תַּלְמִיד הַ/הוּא אֲשֶׁר יֵשׁוּעַ אֲהֵבוֹ אֶל־פֶּטְרוֹס זֶה הוּא הָ/אָדוֹן וַ/יְהִי כִּ/שְׁמֹעַ שִׁמְעוֹן פֶּטְרוֹס כִּי הוּא הָ/אָדוֹן וַ/יַּחְגֹּר אֶת־מְעִילוֹ כִּי עֵירֹם הָיָה וַ/יַּטֵל עַצְמוֹ אֶל־הַיָּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פטרוס is Peter; reuse custom entry.",
+      "evidence": [
+        "same name as earlier reviewed Peter occurrences",
+        "custom D0001 = Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "new_strong": "D0001",
+      "hebrew": "פטרוס",
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros",
+      "definition": {
+        "text_en": "Peter; apostle of Jesus.",
+        "text_es": "Pedro; apóstol de Jesús."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 21,
+        "verse": 7,
+        "word_index": 24,
+        "text": "וַיַּטֵל",
+        "strong": null,
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יֹּאמֶר הַ/תַּלְמִיד הַ/הוּא אֲשֶׁר יֵשׁוּעַ אֲהֵבוֹ אֶל־פֶּטְרוֹס זֶה הוּא הָ/אָדוֹן וַ/יְהִי כִּ/שְׁמֹעַ שִׁמְעוֹן פֶּטְרוֹס כִּי הוּא הָ/אָדוֹן וַ/יַּחְגֹּר אֶת־מְעִילוֹ כִּי עֵירֹם הָיָה וַ/יַּטֵל עַצְמוֹ אֶל־הַיָּם׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.9,
+      "reason": "ויטל means “he cast/threw,” from טול.",
+      "evidence": [
+        "context: he threw himself into the sea",
+        "local lexicon H2904 טול = hurl/cast"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H2904",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 21,
+        "verse": 11,
+        "word_index": 2,
+        "text": "פֶּטְרוֹס",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַל שִׁמְעוֹן פֶּטְרוֹס וַ/יִּמְשֹׁךְ אֶת־הַ/מִּכְמֹרֶת אֶל־הַ/יַּבָּשָׁה וְ/הִיא מְלֵאָה דָּגִים גְּדוֹלִים מֵאָה וַ/חֲמִשִּׁים וּ/שְׁלשָׁה וְ/לֹא נִקְרְעָה הַ/מִּכְמֹרֶת אַף־כִּי רַבִּים הָיוּ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.98,
+      "reason": "פטרוס is Peter; reuse custom entry.",
+      "evidence": [
+        "same name as earlier reviewed Peter occurrences",
+        "custom D0001 = Peter"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "custom_key": "D0001",
+      "new_strong": "D0001",
+      "hebrew": "פטרוס",
+      "transliteration_en": "Petros",
+      "transliteration_es": "Petros",
+      "definition": {
+        "text_en": "Peter; apostle of Jesus.",
+        "text_es": "Pedro; apóstol de Jesús."
+      },
+      "changed_target": "parsed_word_and_custom_definition"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 21,
+        "verse": 18,
+        "word_index": 20,
+        "text": "כַפֶּיךָ",
+        "strong": null,
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אָמֵן אָמֵן אֲנִי אֹמֵר לָךְ בִּ/הְיֹתְךָ צָעִיר לְ/יָמִים אַתָּה חָגַרְתָּ אֶת־עַצְמְךָ וַ/תֵּלֶךְ אֶל־אֲשֶׁר חָפַצְתָּ וְ/הָיָה כַּ/אֲשֶׁר תִּזְקַן וּ/פָרַשְׂתָּ כַ/פֶּיךָ וְ/אַחֵר יַחְגָּרְךָ וּ/נְשָׂאֲךָ אֶל־אֲשֶׁר לֹא תֶחְפָּץ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "כפיך means “your hands/palms,” from כף.",
+      "evidence": [
+        "context: you will stretch out your hands",
+        "local lexicon H3709 כף = palm/hand"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H3709",
+      "changed_target": "parsed_word"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "null_strong",
+      "occurrence": {
+        "book": "john",
+        "chapter": 21,
+        "verse": 18,
+        "word_index": 22,
+        "text": "יַחְגָּרְךָ",
+        "strong": null,
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אָמֵן אָמֵן אֲנִי אֹמֵר לָךְ בִּ/הְיֹתְךָ צָעִיר לְ/יָמִים אַתָּה חָגַרְתָּ אֶת־עַצְמְךָ וַ/תֵּלֶךְ אֶל־אֲשֶׁר חָפַצְתָּ וְ/הָיָה כַּ/אֲשֶׁר תִּזְקַן וּ/פָרַשְׂתָּ כַ/פֶּיךָ וְ/אַחֵר יַחְגָּרְךָ וּ/נְשָׂאֲךָ אֶל־אֲשֶׁר לֹא תֶחְפָּץ׃"
+      },
+      "previous_strong": null,
+      "confidence": 0.95,
+      "reason": "יחגרך means “he will gird/dress you,” from חגר.",
+      "evidence": [
+        "context: another will gird you",
+        "local lexicon H2296 חגר = gird"
+      ],
+      "reviewer": "codex-delitzsch-review",
+      "new_strong": "H2296",
+      "changed_target": "parsed_word"
+    }
+  ]
+}

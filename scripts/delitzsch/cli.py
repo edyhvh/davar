@@ -10,9 +10,9 @@ from pathlib import Path
 if __package__ in (None, ""):
     scripts_dir = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(scripts_dir))
-    from delitzsch.commands import audit, normalize, run
+    from delitzsch.commands import audit, normalize, review, run
 else:
-    from .commands import audit, normalize, run
+    from .commands import audit, normalize, review, run
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -25,6 +25,7 @@ def build_parser() -> argparse.ArgumentParser:
     run.register_subcommand(subparsers)
     audit.register_subcommand(subparsers)
     normalize.register_subcommand(subparsers)
+    review.register_subcommand(subparsers)
 
     return parser
 

@@ -1,0 +1,1590 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.488643+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 0,
+        "text": "וַיִּפְנוּ",
+        "strong": "Hc/H6437",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּפְנוּ וַ/יֵּלְכוּ יְרוּשָׁלַיְמָה מִן־הָהָר הַ/נִּקְרָא הַר הַ/זֵּיתִים וְ/הוּא קָרוֹב לִ/ירוּשָׁלַיִם דֶּרֶךְ תְּחוּם שַׁבָּת׃"
+      },
+      "previous_strong": "Hc/H6437",
+      "new_strong": "H6437",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.12.0",
+        "text=וַיִּפְנוּ",
+        "prefixes=Hc",
+        "strong=H6437",
+        "lemma=פָּנָה",
+        "definitions=turn",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 1,
+        "text": "וַיֵּלְכוּ",
+        "strong": "Hc/H1980",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּפְנוּ וַ/יֵּלְכוּ יְרוּשָׁלַיְמָה מִן־הָהָר הַ/נִּקְרָא הַר הַ/זֵּיתִים וְ/הוּא קָרוֹב לִ/ירוּשָׁלַיִם דֶּרֶךְ תְּחוּם שַׁבָּת׃"
+      },
+      "previous_strong": "Hc/H1980",
+      "new_strong": "H1980",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.12.1",
+        "text=וַיֵּלְכוּ",
+        "prefixes=Hc",
+        "strong=H1980",
+        "lemma=הָלַךְ",
+        "definitions=go | come | walk",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 4,
+        "text": "הָהָר",
+        "strong": "H2022",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּפְנוּ וַ/יֵּלְכוּ יְרוּשָׁלַיְמָה מִן־הָהָר הַ/נִּקְרָא הַר הַ/זֵּיתִים וְ/הוּא קָרוֹב לִ/ירוּשָׁלַיִם דֶּרֶךְ תְּחוּם שַׁבָּת׃"
+      },
+      "previous_strong": "H2022",
+      "new_strong": "H2022",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.12.4",
+        "text=הָהָר",
+        "prefixes=none",
+        "strong=H2022",
+        "lemma=הַר",
+        "definitions=mountain | hill | hill-country | mountain | hill",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 5,
+        "text": "הַנִּקְרָא",
+        "strong": "Hd/H7121",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּפְנוּ וַ/יֵּלְכוּ יְרוּשָׁלַיְמָה מִן־הָהָר הַ/נִּקְרָא הַר הַ/זֵּיתִים וְ/הוּא קָרוֹב לִ/ירוּשָׁלַיִם דֶּרֶךְ תְּחוּם שַׁבָּת׃"
+      },
+      "previous_strong": "Hd/H7121",
+      "new_strong": "H7121",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.12.5",
+        "text=הַנִּקְרָא",
+        "prefixes=Hd",
+        "strong=H7121",
+        "lemma=קָרָא",
+        "definitions=call | proclaim | read",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 7,
+        "text": "הַזֵּיתִים",
+        "strong": "Hd/H2132",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּפְנוּ וַ/יֵּלְכוּ יְרוּשָׁלַיְמָה מִן־הָהָר הַ/נִּקְרָא הַר הַ/זֵּיתִים וְ/הוּא קָרוֹב לִ/ירוּשָׁלַיִם דֶּרֶךְ תְּחוּם שַׁבָּת׃"
+      },
+      "previous_strong": "Hd/H2132",
+      "new_strong": "H2132",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.12.7",
+        "text=הַזֵּיתִים",
+        "prefixes=Hd",
+        "strong=H2132",
+        "lemma=זַיִת",
+        "definitions=olive-tree | olive | olive-tree | olives | in designations of place",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 8,
+        "text": "וְהוּא",
+        "strong": "Hc/H1931",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּפְנוּ וַ/יֵּלְכוּ יְרוּשָׁלַיְמָה מִן־הָהָר הַ/נִּקְרָא הַר הַ/זֵּיתִים וְ/הוּא קָרוֹב לִ/ירוּשָׁלַיִם דֶּרֶךְ תְּחוּם שַׁבָּת׃"
+      },
+      "previous_strong": "Hc/H1931",
+      "new_strong": "H1931",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.12.8",
+        "text=וְהוּא",
+        "prefixes=Hc",
+        "strong=H1931",
+        "lemma=הוּא",
+        "definitions=he | she | it | he | she",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 11,
+        "text": "דֶּרֶךְ",
+        "strong": "H1870",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּפְנוּ וַ/יֵּלְכוּ יְרוּשָׁלַיְמָה מִן־הָהָר הַ/נִּקְרָא הַר הַ/זֵּיתִים וְ/הוּא קָרוֹב לִ/ירוּשָׁלַיִם דֶּרֶךְ תְּחוּם שַׁבָּת׃"
+      },
+      "previous_strong": "H1870",
+      "new_strong": "H1870",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.12.11",
+        "text=דֶּרֶךְ",
+        "prefixes=none",
+        "strong=H1870",
+        "lemma=דֶּרֶךְ",
+        "definitions=way | road | distance | journey | manner",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 13,
+        "text": "שַׁבָּת׃",
+        "strong": "H7676",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּפְנוּ וַ/יֵּלְכוּ יְרוּשָׁלַיְמָה מִן־הָהָר הַ/נִּקְרָא הַר הַ/זֵּיתִים וְ/הוּא קָרוֹב לִ/ירוּשָׁלַיִם דֶּרֶךְ תְּחוּם שַׁבָּת׃"
+      },
+      "previous_strong": "H7676",
+      "new_strong": "H7676",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.12.13",
+        "text=שַׁבָּת׃",
+        "prefixes=none",
+        "strong=H7676",
+        "lemma=שַׁבָּת",
+        "definitions=Sabbath | sabbath | day of atonement | sabbath year | week",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 1,
+        "text": "הָעִירָה",
+        "strong": "Hd/H5892",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": "Hd/H5892",
+      "new_strong": "H5892",
+      "confidence": 0.95,
+      "reason": "הָעִירָה means “to/into the city”; local H5892 definitions omit the city sense.",
+      "evidence": [
+        "occurrence=acts.1.13.1",
+        "text=הָעִירָה",
+        "prefixes=Hd",
+        "strong=H5892",
+        "lemma=עִיר",
+        "definitions=excitement",
+        "codex reviewed definitions batch_0003",
+        "Acts 1:13: they entered the city.",
+        "H5892 lemma עיר is the common city noun."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5892",
+      "definition": {
+        "text_en": "city; town.",
+        "text_es": "ciudad; pueblo.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 4,
+        "text": "הָעֲלִיָּה",
+        "strong": "Hd/H5944",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": "Hd/H5944",
+      "new_strong": "H5944",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.13.4",
+        "text=הָעֲלִיָּה",
+        "prefixes=Hd",
+        "strong=H5944",
+        "lemma=עֲלִיָּה",
+        "definitions=roof-chamber",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 7,
+        "text": "ישְׁבִים",
+        "strong": "H3427",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": "H3427",
+      "new_strong": "H3427",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.13.7",
+        "text=ישְׁבִים",
+        "prefixes=none",
+        "strong=H3427",
+        "lemma=יָשַׁב",
+        "definitions=sit | remain | dwell",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 10,
+        "text": "וְיַעֲקֹב",
+        "strong": "Hc/H3290",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": "Hc/H3290",
+      "new_strong": "H3290",
+      "confidence": 0.94,
+      "reason": "יַעֲקֹב represents Jacob/James in the apostolic name list; local definition should include the NT English form.",
+      "evidence": [
+        "occurrence=acts.1.13.10",
+        "text=וְיַעֲקֹב",
+        "prefixes=Hc",
+        "strong=H3290",
+        "lemma=יַעֲקֹב",
+        "definitions=Jacob | as n.pr.m. | as n.pr.gent.",
+        "codex reviewed definitions batch_0003",
+        "Acts 1:13 names the apostle James.",
+        "H3290 lemma יעקב is Jacob/James."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3290",
+      "definition": {
+        "text_en": "Jacob; James.",
+        "text_es": "Jacob; Jacobo; Santiago.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 15,
+        "text": "בַּר־",
+        "strong": "H1247",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": "H1247",
+      "new_strong": "H1247",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.13.15",
+        "text=בַּר־",
+        "prefixes=none",
+        "strong=H1247",
+        "lemma=בַּר",
+        "definitions=son",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 16,
+        "text": "תַּלְמַי",
+        "strong": "H8526",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": "H8526",
+      "new_strong": "H8526",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.13.16",
+        "text=תַּלְמַי",
+        "prefixes=none",
+        "strong=H8526",
+        "lemma=תַּלְמַי",
+        "definitions=king of Geshur, father-in-law of David | a son of Anaḳ",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 19,
+        "text": "בֶּן־",
+        "strong": "H1121",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": "H1121",
+      "new_strong": "H1121",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.13.19",
+        "text=בֶּן־",
+        "prefixes=none",
+        "strong=H1121",
+        "lemma=בֵּן",
+        "definitions=son | son | children | youth | young men",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 20,
+        "text": "חַלְפַי",
+        "strong": "H2498",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": "H2498",
+      "new_strong": "D0113",
+      "confidence": 0.94,
+      "reason": "חַלְפַי is Alphaeus in the apostolic name list; H2498 is the verb חלף and is not the name.",
+      "evidence": [
+        "occurrence=acts.1.13.20",
+        "text=חַלְפַי",
+        "prefixes=none",
+        "strong=H2498",
+        "lemma=חָלַף",
+        "definitions=pass on | away | pass through",
+        "codex reviewed definitions batch_0003",
+        "Acts 1:13: James son of Alphaeus.",
+        "Existing H2498 means pass on/pass away."
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0113",
+      "definition": {
+        "text_en": "Alphaeus; father of James named among the apostles.",
+        "text_es": "Alfeo; padre de Jacobo/Santiago mencionado entre los apóstoles.",
+        "source": "custom",
+        "order": 1
+      },
+      "hebrew": "חלפי",
+      "transliteration_en": "Alphaeus",
+      "transliteration_es": "Alfeo"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 21,
+        "text": "וְשִׁמְעוֹן",
+        "strong": "Hc/H8095",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": "Hc/H8095",
+      "new_strong": "H8095",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.13.21",
+        "text=וְשִׁמְעוֹן",
+        "prefixes=Hc",
+        "strong=H8095",
+        "lemma=שִׁמְעוֹן",
+        "definitions=second son of Jacob and Leah | tribal name | post-ex. Jew with foreign wife",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 13,
+        "word_index": 22,
+        "text": "הַקַּנָּא",
+        "strong": "H8610",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּבֹאוּ הָ/עִירָה וַ/יַּעֲלוּ אֶל־הָ/עֲלִיָּה אֲשֶׁר הָיוּ ישְׁבִים בָּהּ פֶּטְרוֹס וְ/יַעֲקֹב וְ/יוֹחָנָן וְ/אַנְדְּרַי פִילִפּוֹס וְ/תוֹמָא בַּר־תַּלְמַי וּ/מַתַּי יַעֲקֹב בֶּן־חַלְפַי וְ/שִׁמְעוֹן הַקַּנָּא וִ/יהוּדָה בֶּן־יַעֲקֹב׃"
+      },
+      "previous_strong": "H8610",
+      "new_strong": "D0086",
+      "confidence": 0.96,
+      "reason": "הַקַּנָּא is the epithet “the Zealot,” already represented by custom entry D0086; H8610 is unrelated.",
+      "evidence": [
+        "occurrence=acts.1.13.22",
+        "text=הַקַּנָּא",
+        "prefixes=none",
+        "strong=H8610",
+        "lemma=תָּפַשׂ",
+        "definitions=lay hold of | wield",
+        "codex reviewed definitions batch_0003",
+        "Acts 1:13 identifies Simon the Zealot.",
+        "D0086 was previously created for קנאי/Zealot."
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0086",
+      "definition": {
+        "text_en": "Zealot; one marked by zeal, used as an epithet for Simon.",
+        "text_es": "zelote; alguien caracterizado por celo, usado como epíteto de Simón.",
+        "source": "custom",
+        "order": 1
+      },
+      "hebrew": "קנאי",
+      "transliteration_en": "Zealot",
+      "transliteration_es": "zelote",
+      "root": "קנא"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 14,
+        "word_index": 3,
+        "text": "שֹׁקְדִים",
+        "strong": "H8245",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־אֵלֶּה הָיוּ שֹׁקְדִים יַחְדָּו בְּ/לֵב אֶחָד לְ/הִתְפַּלֵּל וּ/לְ/הִתְחַנֵּן וְ/עִמָּהֶם הַ/נָּשִׁים וּ/מִרְיָם אֵם יֵשׁוּעַ וְ/גַם־אֶחָיו׃"
+      },
+      "previous_strong": "H8245",
+      "new_strong": "H8245",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.14.3",
+        "text=שֹׁקְדִים",
+        "prefixes=none",
+        "strong=H8245",
+        "lemma=שָׁקַד",
+        "definitions=watch | wake",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 14,
+        "word_index": 5,
+        "text": "בְּלֵב",
+        "strong": "Hb/H3820",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־אֵלֶּה הָיוּ שֹׁקְדִים יַחְדָּו בְּ/לֵב אֶחָד לְ/הִתְפַּלֵּל וּ/לְ/הִתְחַנֵּן וְ/עִמָּהֶם הַ/נָּשִׁים וּ/מִרְיָם אֵם יֵשׁוּעַ וְ/גַם־אֶחָיו׃"
+      },
+      "previous_strong": "Hb/H3820",
+      "new_strong": "H3820",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.14.5",
+        "text=בְּלֵב",
+        "prefixes=Hb",
+        "strong=H3820",
+        "lemma=לֵב",
+        "definitions=inner man | mind | will | heart | in the midst of the sea",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 14,
+        "word_index": 6,
+        "text": "אֶחָד",
+        "strong": "H259",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־אֵלֶּה הָיוּ שֹׁקְדִים יַחְדָּו בְּ/לֵב אֶחָד לְ/הִתְפַּלֵּל וּ/לְ/הִתְחַנֵּן וְ/עִמָּהֶם הַ/נָּשִׁים וּ/מִרְיָם אֵם יֵשׁוּעַ וְ/גַם־אֶחָיו׃"
+      },
+      "previous_strong": "H259",
+      "new_strong": "H259",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.14.6",
+        "text=אֶחָד",
+        "prefixes=none",
+        "strong=H259",
+        "lemma=אֶחָד",
+        "definitions=one | one | each | every | a certain",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 14,
+        "word_index": 7,
+        "text": "לְהִתְפַּלֵּל",
+        "strong": "Hl/H6419",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־אֵלֶּה הָיוּ שֹׁקְדִים יַחְדָּו בְּ/לֵב אֶחָד לְ/הִתְפַּלֵּל וּ/לְ/הִתְחַנֵּן וְ/עִמָּהֶם הַ/נָּשִׁים וּ/מִרְיָם אֵם יֵשׁוּעַ וְ/גַם־אֶחָיו׃"
+      },
+      "previous_strong": "Hl/H6419",
+      "new_strong": "H6419",
+      "confidence": 0.92,
+      "reason": "לְהִתְפַּלֵּל is “to pray”; local H6419 definitions only show the underlying interpose/intervene sense.",
+      "evidence": [
+        "occurrence=acts.1.14.7",
+        "text=לְהִתְפַּלֵּל",
+        "prefixes=Hl",
+        "strong=H6419",
+        "lemma=פָּלַל",
+        "definitions=intervene | interpose",
+        "codex reviewed definitions batch_0003",
+        "Acts 1:14: they devoted themselves to prayer.",
+        "פלל in hitpael is the standard verb for praying."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6419",
+      "definition": {
+        "text_en": "pray; intercede.",
+        "text_es": "orar; interceder.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 14,
+        "word_index": 10,
+        "text": "הַנָּשִׁים",
+        "strong": "Hd/H802",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־אֵלֶּה הָיוּ שֹׁקְדִים יַחְדָּו בְּ/לֵב אֶחָד לְ/הִתְפַּלֵּל וּ/לְ/הִתְחַנֵּן וְ/עִמָּהֶם הַ/נָּשִׁים וּ/מִרְיָם אֵם יֵשׁוּעַ וְ/גַם־אֶחָיו׃"
+      },
+      "previous_strong": "Hd/H802",
+      "new_strong": "H802",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.14.10",
+        "text=הַנָּשִׁים",
+        "prefixes=Hd",
+        "strong=H802",
+        "lemma=אִשָּׁה",
+        "definitions=woman | wife | female | woman | Wife",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 14,
+        "word_index": 11,
+        "text": "וּמִרְיָם",
+        "strong": "Hc/H4813",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "כָּל־אֵלֶּה הָיוּ שֹׁקְדִים יַחְדָּו בְּ/לֵב אֶחָד לְ/הִתְפַּלֵּל וּ/לְ/הִתְחַנֵּן וְ/עִמָּהֶם הַ/נָּשִׁים וּ/מִרְיָם אֵם יֵשׁוּעַ וְ/גַם־אֶחָיו׃"
+      },
+      "previous_strong": "Hc/H4813",
+      "new_strong": "H4813",
+      "confidence": 0.96,
+      "reason": "מִרְיָם is Mary/Miriam; local H4813 should include the NT Mary form.",
+      "evidence": [
+        "occurrence=acts.1.14.11",
+        "text=וּמִרְיָם",
+        "prefixes=Hc",
+        "strong=H4813",
+        "lemma=מִרְיָם",
+        "definitions=f. sister of Moses Aaron | m. (prob.) a Judahite",
+        "codex reviewed definitions batch_0003",
+        "Acts 1:14: Mary the mother of Jesus.",
+        "H4813 lemma מרים is Miriam/Mary."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4813",
+      "definition": {
+        "text_en": "Mary; Miriam.",
+        "text_es": "María; Miriam.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 14,
+        "word_index": 12,
+        "text": "אֵם",
+        "strong": "H517",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־אֵלֶּה הָיוּ שֹׁקְדִים יַחְדָּו בְּ/לֵב אֶחָד לְ/הִתְפַּלֵּל וּ/לְ/הִתְחַנֵּן וְ/עִמָּהֶם הַ/נָּשִׁים וּ/מִרְיָם אֵם יֵשׁוּעַ וְ/גַם־אֶחָיו׃"
+      },
+      "previous_strong": "H517",
+      "new_strong": "H517",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.14.12",
+        "text=אֵם",
+        "prefixes=none",
+        "strong=H517",
+        "lemma=אֵם",
+        "definitions=mother | mother | fig. of Deborah as caring for her people | dam | point of departure",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 14,
+        "word_index": 15,
+        "text": "אֶחָיו׃",
+        "strong": "H251",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כָּל־אֵלֶּה הָיוּ שֹׁקְדִים יַחְדָּו בְּ/לֵב אֶחָד לְ/הִתְפַּלֵּל וּ/לְ/הִתְחַנֵּן וְ/עִמָּהֶם הַ/נָּשִׁים וּ/מִרְיָם אֵם יֵשׁוּעַ וְ/גַם־אֶחָיו׃"
+      },
+      "previous_strong": "H251",
+      "new_strong": "H251",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.14.15",
+        "text=אֶחָיו׃",
+        "prefixes=none",
+        "strong=H251",
+        "lemma=אָח",
+        "definitions=brother | brother | indef. = relative | fig. of resemblance | one … another",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 2,
+        "text": "קָם",
+        "strong": "H6965",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/יָּמִים הָ/אֵלֶּה קָם פֶּטְרוֹס בְּ/תוֹךְ הַ/תַּלְמִידִים וּ/מִסְפַּר שְׁמוֹת הַ/נִּקְהָלִים יַחַד כְּ/מֵאָה וְ/עֶשְׂרִים וַ/יֹּאמַר׃"
+      },
+      "previous_strong": "H6965",
+      "new_strong": "H6965",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.15.2",
+        "text=קָם",
+        "prefixes=none",
+        "strong=H6965",
+        "lemma=קוּם",
+        "definitions=arise | stand up | stand",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 4,
+        "text": "בְּתוֹךְ",
+        "strong": "Hb/H8432",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/יָּמִים הָ/אֵלֶּה קָם פֶּטְרוֹס בְּ/תוֹךְ הַ/תַּלְמִידִים וּ/מִסְפַּר שְׁמוֹת הַ/נִּקְהָלִים יַחַד כְּ/מֵאָה וְ/עֶשְׂרִים וַ/יֹּאמַר׃"
+      },
+      "previous_strong": "Hb/H8432",
+      "new_strong": "H8432",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.15.4",
+        "text=בְּתוֹךְ",
+        "prefixes=Hb",
+        "strong=H8432",
+        "lemma=תָּוֶךְ",
+        "definitions=midst",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 5,
+        "text": "הַתַּלְמִידִים",
+        "strong": "Hd/H8527",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/יָּמִים הָ/אֵלֶּה קָם פֶּטְרוֹס בְּ/תוֹךְ הַ/תַּלְמִידִים וּ/מִסְפַּר שְׁמוֹת הַ/נִּקְהָלִים יַחַד כְּ/מֵאָה וְ/עֶשְׂרִים וַ/יֹּאמַר׃"
+      },
+      "previous_strong": "Hd/H8527",
+      "new_strong": "H8527",
+      "confidence": 0.95,
+      "reason": "הַתַּלְמִידִים means disciples; local H8527 only says scholar.",
+      "evidence": [
+        "occurrence=acts.1.15.5",
+        "text=הַתַּלְמִידִים",
+        "prefixes=Hd",
+        "strong=H8527",
+        "lemma=תַּלְמִיד",
+        "definitions=scholar",
+        "codex reviewed definitions batch_0003",
+        "Acts 1:15 refers to the gathered disciples.",
+        "H8527 lemma תלמיד."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8527",
+      "definition": {
+        "text_en": "disciple; pupil; learner.",
+        "text_es": "discípulo; alumno; aprendiz.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 6,
+        "text": "וּמִסְפַּר",
+        "strong": "Hc/H4557",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/יָּמִים הָ/אֵלֶּה קָם פֶּטְרוֹס בְּ/תוֹךְ הַ/תַּלְמִידִים וּ/מִסְפַּר שְׁמוֹת הַ/נִּקְהָלִים יַחַד כְּ/מֵאָה וְ/עֶשְׂרִים וַ/יֹּאמַר׃"
+      },
+      "previous_strong": "Hc/H4557",
+      "new_strong": "H4557",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.15.6",
+        "text=וּמִסְפַּר",
+        "prefixes=Hc",
+        "strong=H4557",
+        "lemma=מִסְפָּר",
+        "definitions=number | tale",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 7,
+        "text": "שְׁמוֹת",
+        "strong": "H8034",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/יָּמִים הָ/אֵלֶּה קָם פֶּטְרוֹס בְּ/תוֹךְ הַ/תַּלְמִידִים וּ/מִסְפַּר שְׁמוֹת הַ/נִּקְהָלִים יַחַד כְּ/מֵאָה וְ/עֶשְׂרִים וַ/יֹּאמַר׃"
+      },
+      "previous_strong": "H8034",
+      "new_strong": "H8034",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.15.7",
+        "text=שְׁמוֹת",
+        "prefixes=none",
+        "strong=H8034",
+        "lemma=שֵׁם",
+        "definitions=name | of river, beasts, city, i.e. exact designation of it | usu. of pers. | reputation | esp. as giving a man a kind of posthumous life, esp. in his sons",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 8,
+        "text": "הַנִּקְהָלִים",
+        "strong": "Hd/H6950",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/יָּמִים הָ/אֵלֶּה קָם פֶּטְרוֹס בְּ/תוֹךְ הַ/תַּלְמִידִים וּ/מִסְפַּר שְׁמוֹת הַ/נִּקְהָלִים יַחַד כְּ/מֵאָה וְ/עֶשְׂרִים וַ/יֹּאמַר׃"
+      },
+      "previous_strong": "Hd/H6950",
+      "new_strong": "H6950",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.15.8",
+        "text=הַנִּקְהָלִים",
+        "prefixes=Hd",
+        "strong=H6950",
+        "lemma=קָהַל",
+        "definitions=assemble as a",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 11,
+        "text": "וְעֶשְׂרִים",
+        "strong": "Hc/H6242",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בַ/יָּמִים הָ/אֵלֶּה קָם פֶּטְרוֹס בְּ/תוֹךְ הַ/תַּלְמִידִים וּ/מִסְפַּר שְׁמוֹת הַ/נִּקְהָלִים יַחַד כְּ/מֵאָה וְ/עֶשְׂרִים וַ/יֹּאמַר׃"
+      },
+      "previous_strong": "Hc/H6242",
+      "new_strong": "H6242",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.15.11",
+        "text=וְעֶשְׂרִים",
+        "prefixes=Hc",
+        "strong=H6242",
+        "lemma=עֶשְׂרִים",
+        "definitions=twenty",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 16,
+        "word_index": 6,
+        "text": "יִמָּלֵא",
+        "strong": "H4390",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲנָשִׁים אַחִים מִן־הַצֹּרֶךְ הָיָה כִּי יִמָּלֵא הַ/כָּתוּב הַ/הוּא אֲשֶׁר דִּבֶּר מִקֶּדֶם רוּחַ הַ/קֹּדֶשׁ בְּ/פִי דָוִד עַל־יְהוּדָה אֲשֶׁר הָיָה מוֹלִיךְ אֶת־תֹּפְשֵׂי יֵשׁוּעַ׃"
+      },
+      "previous_strong": "H4390",
+      "new_strong": "H4390",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.16.6",
+        "text=יִמָּלֵא",
+        "prefixes=none",
+        "strong=H4390",
+        "lemma=מָלֵא",
+        "definitions=be full | fill",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 16,
+        "word_index": 7,
+        "text": "הַכָּתוּב",
+        "strong": "Hd/H3789",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲנָשִׁים אַחִים מִן־הַצֹּרֶךְ הָיָה כִּי יִמָּלֵא הַ/כָּתוּב הַ/הוּא אֲשֶׁר דִּבֶּר מִקֶּדֶם רוּחַ הַ/קֹּדֶשׁ בְּ/פִי דָוִד עַל־יְהוּדָה אֲשֶׁר הָיָה מוֹלִיךְ אֶת־תֹּפְשֵׂי יֵשׁוּעַ׃"
+      },
+      "previous_strong": "Hd/H3789",
+      "new_strong": "H3789",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.16.7",
+        "text=הַכָּתוּב",
+        "prefixes=Hd",
+        "strong=H3789",
+        "lemma=כָּתַב",
+        "definitions=write",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 16,
+        "word_index": 11,
+        "text": "מִקֶּדֶם",
+        "strong": "H6924",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲנָשִׁים אַחִים מִן־הַצֹּרֶךְ הָיָה כִּי יִמָּלֵא הַ/כָּתוּב הַ/הוּא אֲשֶׁר דִּבֶּר מִקֶּדֶם רוּחַ הַ/קֹּדֶשׁ בְּ/פִי דָוִד עַל־יְהוּדָה אֲשֶׁר הָיָה מוֹלִיךְ אֶת־תֹּפְשֵׂי יֵשׁוּעַ׃"
+      },
+      "previous_strong": "H6924",
+      "new_strong": "H6924",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.16.11",
+        "text=מִקֶּדֶם",
+        "prefixes=none",
+        "strong=H6924",
+        "lemma=קֶדֶם",
+        "definitions=eastward | front | front | East | eastward",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 16,
+        "word_index": 14,
+        "text": "בְּפִי",
+        "strong": "Hb/H6310",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֲנָשִׁים אַחִים מִן־הַצֹּרֶךְ הָיָה כִּי יִמָּלֵא הַ/כָּתוּב הַ/הוּא אֲשֶׁר דִּבֶּר מִקֶּדֶם רוּחַ הַ/קֹּדֶשׁ בְּ/פִי דָוִד עַל־יְהוּדָה אֲשֶׁר הָיָה מוֹלִיךְ אֶת־תֹּפְשֵׂי יֵשׁוּעַ׃"
+      },
+      "previous_strong": "Hb/H6310",
+      "new_strong": "H6310",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.16.14",
+        "text=בְּפִי",
+        "prefixes=Hb",
+        "strong=H6310",
+        "lemma=פֶּה",
+        "definitions=mouth | mouth | external organ | much oftener, as organ of speech, of man | as laughing; panting",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 16,
+        "word_index": 15,
+        "text": "דָוִד",
+        "strong": "H1732",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אֲנָשִׁים אַחִים מִן־הַצֹּרֶךְ הָיָה כִּי יִמָּלֵא הַ/כָּתוּב הַ/הוּא אֲשֶׁר דִּבֶּר מִקֶּדֶם רוּחַ הַ/קֹּדֶשׁ בְּ/פִי דָוִד עַל־יְהוּדָה אֲשֶׁר הָיָה מוֹלִיךְ אֶת־תֹּפְשֵׂי יֵשׁוּעַ׃"
+      },
+      "previous_strong": "H1732",
+      "new_strong": "H1732",
+      "confidence": 0.94,
+      "reason": "דָוִד is David; add a bilingual proper-name definition for coverage.",
+      "evidence": [
+        "occurrence=acts.1.16.15",
+        "text=דָוִד",
+        "prefixes=none",
+        "strong=H1732",
+        "lemma=דָּוִד",
+        "definitions=David",
+        "codex reviewed definitions batch_0003",
+        "Acts 1:16 refers to David as the speaker of Scripture.",
+        "H1732 lemma דוד."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1732",
+      "definition": {
+        "text_en": "David; king of Israel.",
+        "text_es": "David; rey de Israel.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 17,
+        "word_index": 3,
+        "text": "אִתָּנוּ",
+        "strong": "H854",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־הָיָה נִמְנֶה אִתָּנוּ וְ/זָכָה בְּ/גוֹרַל הַ/שֵּׁרוּת הַזֶּה׃"
+      },
+      "previous_strong": "H854",
+      "new_strong": "H854",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.17.3",
+        "text=אִתָּנוּ",
+        "prefixes=none",
+        "strong=H854",
+        "lemma=אֵת",
+        "definitions=proximity | from the surroundings | belongings of | from close proximity to | together with",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 17,
+        "word_index": 5,
+        "text": "בְּגוֹרַל",
+        "strong": "Hb/H1486",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי־הָיָה נִמְנֶה אִתָּנוּ וְ/זָכָה בְּ/גוֹרַל הַ/שֵּׁרוּת הַזֶּה׃"
+      },
+      "previous_strong": "Hb/H1486",
+      "new_strong": "H1486",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.17.5",
+        "text=בְּגוֹרַל",
+        "prefixes=Hb",
+        "strong=H1486",
+        "lemma=גּוֹרָל",
+        "definitions=lot | lot | lot | thing assigned | apportioned",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 18,
+        "word_index": 2,
+        "text": "קָנָה־",
+        "strong": "H7069",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה הוּא קָנָה־לוֹ שָׂדֶה בִּ/מְחִיר הָ/רִשְׁעָה וַ/יִּפֹּל עַל־פָּנָיו אַרְצָה וַ/יִּבָּקַע בַּ/תָּוֶךְ וַ/יִּשָּׁפְכוּ כָּל־מֵעָיו׃"
+      },
+      "previous_strong": "H7069",
+      "new_strong": "H7069",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.18.2",
+        "text=קָנָה־",
+        "prefixes=none",
+        "strong=H7069",
+        "lemma=קָנָה",
+        "definitions=get | acquire",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 18,
+        "word_index": 4,
+        "text": "שָׂדֶה",
+        "strong": "H7704",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה הוּא קָנָה־לוֹ שָׂדֶה בִּ/מְחִיר הָ/רִשְׁעָה וַ/יִּפֹּל עַל־פָּנָיו אַרְצָה וַ/יִּבָּקַע בַּ/תָּוֶךְ וַ/יִּשָּׁפְכוּ כָּל־מֵעָיו׃"
+      },
+      "previous_strong": "H7704",
+      "new_strong": "H7704",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.18.4",
+        "text=שָׂדֶה",
+        "prefixes=none",
+        "strong=H7704",
+        "lemma=שָׂדֶה",
+        "definitions=field | field | land | land",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 18,
+        "word_index": 5,
+        "text": "בִּמְחִיר",
+        "strong": "Hb/H4242",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה הוּא קָנָה־לוֹ שָׂדֶה בִּ/מְחִיר הָ/רִשְׁעָה וַ/יִּפֹּל עַל־פָּנָיו אַרְצָה וַ/יִּבָּקַע בַּ/תָּוֶךְ וַ/יִּשָּׁפְכוּ כָּל־מֵעָיו׃"
+      },
+      "previous_strong": "Hb/H4242",
+      "new_strong": "H4242",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.18.5",
+        "text=בִּמְחִיר",
+        "prefixes=Hb",
+        "strong=H4242",
+        "lemma=מְחִיר",
+        "definitions=price | hire | placed in front | presented | offered",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 18,
+        "word_index": 6,
+        "text": "הָרִשְׁעָה",
+        "strong": "Hd/H7564",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה הוּא קָנָה־לוֹ שָׂדֶה בִּ/מְחִיר הָ/רִשְׁעָה וַ/יִּפֹּל עַל־פָּנָיו אַרְצָה וַ/יִּבָּקַע בַּ/תָּוֶךְ וַ/יִּשָּׁפְכוּ כָּל־מֵעָיו׃"
+      },
+      "previous_strong": "Hd/H7564",
+      "new_strong": "H7564",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.18.6",
+        "text=הָרִשְׁעָה",
+        "prefixes=Hd",
+        "strong=H7564",
+        "lemma=רִשְׁעָה",
+        "definitions=wickedness",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 18,
+        "word_index": 7,
+        "text": "וַיִּפֹּל",
+        "strong": "Hc/H5307",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה הוּא קָנָה־לוֹ שָׂדֶה בִּ/מְחִיר הָ/רִשְׁעָה וַ/יִּפֹּל עַל־פָּנָיו אַרְצָה וַ/יִּבָּקַע בַּ/תָּוֶךְ וַ/יִּשָּׁפְכוּ כָּל־מֵעָיו׃"
+      },
+      "previous_strong": "Hc/H5307",
+      "new_strong": "H5307",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.18.7",
+        "text=וַיִּפֹּל",
+        "prefixes=Hc",
+        "strong=H5307",
+        "lemma=נָפַל",
+        "definitions=fall | lie",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 18,
+        "word_index": 15,
+        "text": "מֵעָיו׃",
+        "strong": "H4578",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה הוּא קָנָה־לוֹ שָׂדֶה בִּ/מְחִיר הָ/רִשְׁעָה וַ/יִּפֹּל עַל־פָּנָיו אַרְצָה וַ/יִּבָּקַע בַּ/תָּוֶךְ וַ/יִּשָּׁפְכוּ כָּל־מֵעָיו׃"
+      },
+      "previous_strong": "H4578",
+      "new_strong": "H4578",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.18.15",
+        "text=מֵעָיו׃",
+        "prefixes=none",
+        "strong=H4578",
+        "lemma=מֵעֶה",
+        "definitions=internal organs | inward parts | intestines | bowels | belly",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 19,
+        "word_index": 14,
+        "text": "הַדָּם׃",
+        "strong": "H1818",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/גַם־נוֹדְעָה זֹאת לְ/כָל־ישְׁבֵי יְרוּשָׁלָיִם וַ/יִּקָּרֵא בִ/שְׂפָתָם לַ/שָּׂדֶה הַ/הוּא חֲקַל דְּמָא הוּא שְׂדֵה הַדָּם׃"
+      },
+      "previous_strong": "H1818",
+      "new_strong": "H1818",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.19.14",
+        "text=הַדָּם׃",
+        "prefixes=none",
+        "strong=H1818",
+        "lemma=דָּם",
+        "definitions=blood | blood | usually blood become visible | blood used with religious significance | fig. of wine",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 20,
+        "word_index": 2,
+        "text": "בְּסֵפֶר",
+        "strong": "Hb/H5612",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָ/תוּב בְּ/סֵפֶר תְּהִלִּים תְּהִי־טִירָתוֹ נְשַׁמָּה וְ/אַל־יְהִי בָהּ ישֵׁב וּ/פְקֻדָּתוֹ יִקַּח אַחֵר׃"
+      },
+      "previous_strong": "Hb/H5612",
+      "new_strong": "H5612",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.20.2",
+        "text=בְּסֵפֶר",
+        "prefixes=Hb",
+        "strong=H5612",
+        "lemma=סֵפֶר",
+        "definitions=missive | missive | legal document | book | scroll",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 20,
+        "word_index": 6,
+        "text": "נְשַׁמָּה",
+        "strong": "H8074",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָ/תוּב בְּ/סֵפֶר תְּהִלִּים תְּהִי־טִירָתוֹ נְשַׁמָּה וְ/אַל־יְהִי בָהּ ישֵׁב וּ/פְקֻדָּתוֹ יִקַּח אַחֵר׃"
+      },
+      "previous_strong": "H8074",
+      "new_strong": "H8074",
+      "confidence": 0.94,
+      "reason": "Reviewed against local lemma/definition and Acts context; existing Strong assignment is acceptable.",
+      "evidence": [
+        "occurrence=acts.1.20.6",
+        "text=נְשַׁמָּה",
+        "prefixes=none",
+        "strong=H8074",
+        "lemma=שָׁמֵם",
+        "definitions=be desolated | appalled",
+        "codex reviewed definitions batch_0003"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "acts",
+        "chapter": 1,
+        "verse": 20,
+        "word_index": 7,
+        "text": "וְאַל־",
+        "strong": "Hc/H408",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי כָ/תוּב בְּ/סֵפֶר תְּהִלִּים תְּהִי־טִירָתוֹ נְשַׁמָּה וְ/אַל־יְהִי בָהּ ישֵׁב וּ/פְקֻדָּתוֹ יִקַּח אַחֵר׃"
+      },
+      "previous_strong": "Hc/H408",
+      "new_strong": "H408",
+      "confidence": 0.95,
+      "reason": "וְאַל־ is the negative particle “and let not/do not”; local H408 has no definitions.",
+      "evidence": [
+        "occurrence=acts.1.20.7",
+        "text=וְאַל־",
+        "prefixes=Hc",
+        "strong=H408",
+        "lemma=אַל",
+        "definitions=none",
+        "codex reviewed definitions batch_0003",
+        "Acts 1:20 quote: let no one dwell there.",
+        "H408 lemma אל is a negative particle."
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H408",
+      "definition": {
+        "text_en": "not; do not; let not.",
+        "text_es": "no; no hagas; que no.",
+        "source": "delitzsch_review"
+      }
+    }
+  ]
+}

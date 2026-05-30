@@ -1,0 +1,1550 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.492590+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 5,
+        "word_index": 9,
+        "text": "בִּנְדִיבָה",
+        "strong": "H3490",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אִישׁ מִכֶּם כִּי יֶחְסַר חָכְמָה יְבַקְשֶׁנָּה מֵאֱלֹהִים הַ/נּוֹתֵן לַ/כֹּל בִּ/נְדִיבָה וּ/בְ/אֵין גְּעָרָה וְ/תִנָּתֵן לוֹ׃"
+      },
+      "previous_strong": "H3490",
+      "new_strong": "H5082",
+      "confidence": 0.94,
+      "reason": "בִּנְדִיבָה means generously/liberally; H5082 נְדִיבָה fits, H3490 is unrelated.",
+      "evidence": [
+        "occurrence=james.1.5.9",
+        "text=בִּנְדִיבָה",
+        "prefixes=Hb",
+        "strong=H3490",
+        "lemma=יָתוֹם",
+        "definitions=orphan",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 6,
+        "word_index": 8,
+        "text": "דּוֹמֶה",
+        "strong": "H1819",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "רַק יְבַקֵּשׁ בֶּ/אֱמוּנָה וּ/בִ/בְלִי סָפֵק כִּי־בַ/עַל סָפֵק דּוֹמֶה לְ/גַלֵּי הַיָּם הַסֹּעֵר וְ/הַ/נִּגְרָשׁ׃"
+      },
+      "previous_strong": "H1819",
+      "new_strong": "H1819",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: דּוֹמֶה means resembling/like; H1819 is correct.",
+      "evidence": [
+        "occurrence=james.1.6.8",
+        "text=דּוֹמֶה",
+        "prefixes=none",
+        "strong=H1819",
+        "lemma=דָּמָה",
+        "definitions=be like | resemble",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 10,
+        "word_index": 5,
+        "text": "כְּצִיץ",
+        "strong": "Hk/H6731",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הֶ/עָשִׁיר יִתְהַלֵּל בְּ/שִׁפְלוּתוֹ כִּי יַעֲבֹר כְּ/צִיץ הֶ/חָצִיר׃"
+      },
+      "previous_strong": "Hk/H6731",
+      "new_strong": "Hk/H6731",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: כְּצִיץ means like a flower/blossom; H6731 is correct.",
+      "evidence": [
+        "occurrence=james.1.10.5",
+        "text=כְּצִיץ",
+        "prefixes=Hk",
+        "strong=H6731",
+        "lemma=צִיץ",
+        "definitions=blossom | flower | shining thing",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 11,
+        "word_index": 13,
+        "text": "יִבּוֹל",
+        "strong": "H5034",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי זָרַח הַ/שֶּׁמֶשׁ בְּ/חַמָּתוֹ וַ/יְיַבֵּשׁ אֶת־הֶ/חָצִיר וַ/יִּבֹּל צִיצוֹ וְ/חֶסֶד מַרְאֵהוּ אָבָד כֵּן יִבּוֹל הֶ/עָשִׁיר בַּ/הֲ/לִיכוֹתָיו׃"
+      },
+      "previous_strong": "H5034",
+      "new_strong": "H5034",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: יִבּוֹל means it withers/fades; H5034 is correct.",
+      "evidence": [
+        "occurrence=james.1.11.13",
+        "text=יִבּוֹל",
+        "prefixes=none",
+        "strong=H5034",
+        "lemma=נָבֵל",
+        "definitions=sink | drop down | languish | wither and fall | fade",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 12,
+        "word_index": 8,
+        "text": "עֲטֶרֶת",
+        "strong": "H5850",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַשְׁרֵי הָ/אִישׁ הָ/עֹמֵד בְּ/נִסְיוֹנוֹ כִּי כַּ/אֲשֶׁר נִבְחַן יִשָּׂא עֲטֶרֶת הַ/חַיִּים אֲשֶׁר־הִבְטִיחַ יְהוָֹה לְ/אֹהֲבָיו׃"
+      },
+      "previous_strong": "H5850",
+      "new_strong": "H5850",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: עֲטֶרֶת means crown; H5850 is correct.",
+      "evidence": [
+        "occurrence=james.1.12.8",
+        "text=עֲטֶרֶת",
+        "prefixes=none",
+        "strong=H5850",
+        "lemma=עֲטָרָה",
+        "definitions=crown | wreath | of idol-image | of silver and gold | fig. of honour",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 3,
+        "text": "הַתַּאֲוָה",
+        "strong": "Hd/H6914",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "וְ/אַחֲרֵי־כֵן הָרְתָה הַ/תַּאֲוָה וַ/תֵּלֶד חֵטְא וְ/הַ/חֵטְא כִּי נִשְׁלַם יוֹלִיד אֶת־הַ/מָּוֶת׃"
+      },
+      "previous_strong": "Hd/H6914",
+      "new_strong": "H8378",
+      "confidence": 0.96,
+      "reason": "הַתַּאֲוָה means the desire/lust; H8378 תַּאֲוָה fits, H6914 is a place-name.",
+      "evidence": [
+        "occurrence=james.1.15.3",
+        "text=הַתַּאֲוָה",
+        "prefixes=Hd",
+        "strong=H6914",
+        "lemma=קִבְרוֹת הַתַּאֲוָה",
+        "definitions=the graves of desire",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 16,
+        "word_index": 1,
+        "text": "תִּתְעוּ",
+        "strong": "H8259",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַל־תִּתְעוּ אַחַי אֲהוּבָי׃"
+      },
+      "previous_strong": "H8259",
+      "new_strong": "H8582",
+      "confidence": 0.95,
+      "reason": "תִּתְעוּ means do not be deceived/err; H8582 תָּעָה fits, H8259 is unrelated.",
+      "evidence": [
+        "occurrence=james.1.16.1",
+        "text=תִּתְעוּ",
+        "prefixes=none",
+        "strong=H8259",
+        "lemma=שָׁקַף",
+        "definitions=overhang | look out | down",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 18,
+        "word_index": 9,
+        "text": "בִּכּוּרֵי",
+        "strong": "Hb/Hk/H1061",
+        "prefixes": [
+          "Hb",
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הוּא בְ/חֶפְצוֹ יָלַד אוֹתָנוּ בִּ/דְבַר הָ/אֱמֶת לִ/הְ/יוֹתֵנוּ כְּ/מוֹ רֵאשִׁית בִּ/כּ/וּרֵי יְצוּרָיו׃"
+      },
+      "previous_strong": "Hb/Hk/H1061",
+      "new_strong": "Hb/Hk/H1061",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: בִּכּוּרֵי means firstfruits; H1061 is correct.",
+      "evidence": [
+        "occurrence=james.1.18.9",
+        "text=בִּכּוּרֵי",
+        "prefixes=Hb,Hk",
+        "strong=H1061",
+        "lemma=בִּכּוּר",
+        "definitions=first-fruits",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 19,
+        "word_index": 7,
+        "text": "מָהִיר",
+        "strong": "H4106",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עַל־זֹאת אַחַי אֲהוּבַי יְהִי כָל־אִישׁ מָהִיר לִ/שְׁמֹעַ קָשֶׁה לְ/דַבֵּר וְ/קָשֶׁה לִ/כְ/עוֹס׃"
+      },
+      "previous_strong": "H4106",
+      "new_strong": "H4106",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: מָהִיר means swift/quick; H4106 is correct.",
+      "evidence": [
+        "occurrence=james.1.19.7",
+        "text=מָהִיר",
+        "prefixes=none",
+        "strong=H4106",
+        "lemma=מָהִיר",
+        "definitions=quick | prompt | ready | skilled",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 23,
+        "word_index": 13,
+        "text": "תֹּאַר",
+        "strong": "H8388",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הָ/אִישׁ אֲשֶׁר רַק־שֹׁמֵעַ אֶת־הַ/דָּבָר וְ/לֹא עֹשֵׂהוּ נִמְשָׁל לְ/אִישׁ מַבִּיט אֶת־תֹּאַר הֲ/וָיָתוֹ בְּ/מַרְאָה׃"
+      },
+      "previous_strong": "H8388",
+      "new_strong": "H8389",
+      "confidence": 0.94,
+      "reason": "תֹּאַר means appearance/form; H8389 תֹּאַר fits better than the verb H8388.",
+      "evidence": [
+        "occurrence=james.1.23.13",
+        "text=תֹּאַר",
+        "prefixes=none",
+        "strong=H8388",
+        "lemma=תָּאַר",
+        "definitions=incline | draw in outline | trace out",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 23,
+        "word_index": 14,
+        "text": "הֲוָיָתוֹ",
+        "strong": "H8420",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הָ/אִישׁ אֲשֶׁר רַק־שֹׁמֵעַ אֶת־הַ/דָּבָר וְ/לֹא עֹשֵׂהוּ נִמְשָׁל לְ/אִישׁ מַבִּיט אֶת־תֹּאַר הֲ/וָיָתוֹ בְּ/מַרְאָה׃"
+      },
+      "previous_strong": "H8420",
+      "new_strong": "D0183",
+      "confidence": 0.88,
+      "reason": "הֲוָיָתוֹ means his natural being/appearance; no reliable biblical Strong entry carries this later Hebrew noun sense.",
+      "evidence": [
+        "occurrence=james.1.23.14",
+        "text=הֲוָיָתוֹ",
+        "prefixes=Hd",
+        "strong=H8420",
+        "lemma=תָּו",
+        "definitions=mark",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0183",
+      "hebrew": "הויה",
+      "transliteration_en": "being/existence",
+      "transliteration_es": "ser/existencia",
+      "definition": {
+        "text_en": "being; existence; natural state.",
+        "text_es": "ser; existencia; estado natural.",
+        "source": "custom",
+        "order": 2
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 24,
+        "word_index": 9,
+        "text": "תָּאֳרוֹ׃",
+        "strong": "H8389",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי הִבִּיט אֶל־מַרְאֵהוּ וַ/יֵּלֶךְ לוֹ וּ/בְ/רֶגַע שָׁכַח מַה־תָּאֳרוֹ׃"
+      },
+      "previous_strong": "H8389",
+      "new_strong": "H8389",
+      "confidence": 0.95,
+      "reason": "תָּאֳרוֹ means his appearance/form; H8389 תֹּאַר fits.",
+      "evidence": [
+        "occurrence=james.1.24.9",
+        "text=תָּאֳרוֹ׃",
+        "prefixes=none",
+        "strong=H8389",
+        "lemma=תֹּאַר",
+        "definitions=outline | form",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 26,
+        "word_index": 9,
+        "text": "רֶסֶן",
+        "strong": "H7449",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "אִישׁ מִכֶּם אִם־יְדַמֶּה לִ/הְ/יוֹת עֹבֵד אֱלֹהִים וְ/אֵינֶנּוּ שָׂם רֶסֶן לִ/לְשֹׁנוֹ כִּי אִם־מַתְעֶה הוּא אֶת־לְ/בָ/בוֹ עֲבֹדָתוֹ אַךְ־לָ/רִיק תִּהְיֶה׃"
+      },
+      "previous_strong": "H7449",
+      "new_strong": "H7449",
+      "confidence": 0.91,
+      "reason": "רֶסֶן means bridle; add the missing definition to H7449.",
+      "evidence": [
+        "occurrence=james.1.26.9",
+        "text=רֶסֶן",
+        "prefixes=none",
+        "strong=H7449",
+        "lemma=רֶסֶן",
+        "definitions=none",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7449",
+      "definition": {
+        "text_en": "bridle; restraint.",
+        "text_es": "freno; brida; restricción.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 27,
+        "word_index": 7,
+        "text": "לְבַקֵּר",
+        "strong": "Hl/Hb/H1239",
+        "prefixes": [
+          "Hl",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "זֹאת הָ/עֲבוֹדָה הַ/טְּהוֹרָה וְ/הַבָּרָה לִ/פְנֵי הָ/אֱלֹהִים אָבִינוּ לְ/בַ/קֵּר אֶת־הַ/יְתוֹמִים וְ/הָ/אַלְמָנוֹת בְּ/לַ/חֲצָם וְ/לִ/שְׁמֹר אֶת־עַצְמוֹ נָקִי מֵחֶלְאַת הָ/עוֹלָם׃"
+      },
+      "previous_strong": "Hl/Hb/H1239",
+      "new_strong": "Hl/Hb/H1239",
+      "confidence": 0.91,
+      "reason": "Reviewed in context: לְבַקֵּר means to visit/look after; H1239 is acceptable.",
+      "evidence": [
+        "occurrence=james.1.27.7",
+        "text=לְבַקֵּר",
+        "prefixes=Hl,Hb",
+        "strong=H1239",
+        "lemma=בָּקַר",
+        "definitions=inquire | seek",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 1,
+        "verse": 27,
+        "word_index": 16,
+        "text": "מֵחֶלְאַת",
+        "strong": "H2456",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "זֹאת הָ/עֲבוֹדָה הַ/טְּהוֹרָה וְ/הַבָּרָה לִ/פְנֵי הָ/אֱלֹהִים אָבִינוּ לְ/בַ/קֵּר אֶת־הַ/יְתוֹמִים וְ/הָ/אַלְמָנוֹת בְּ/לַ/חֲצָם וְ/לִ/שְׁמֹר אֶת־עַצְמוֹ נָקִי מֵחֶלְאַת הָ/עוֹלָם׃"
+      },
+      "previous_strong": "H2456",
+      "new_strong": "H2458",
+      "confidence": 0.88,
+      "reason": "מֵחֶלְאַת means from stain/pollution; add the missing definition to H2458.",
+      "evidence": [
+        "occurrence=james.1.27.16",
+        "text=מֵחֶלְאַת",
+        "prefixes=none",
+        "strong=H2456",
+        "lemma=חָלָא",
+        "definitions=be sick | diseased",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2458",
+      "definition": {
+        "text_en": "stain; rust; corrosion; pollution.",
+        "text_es": "mancha; herrumbre; corrosión; contaminación.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 2,
+        "word_index": 13,
+        "text": "מִכְלוֹל",
+        "strong": "H4358",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־יָבוֹא אִישׁ לְ/בֵ/ית כְּ/נֵסַתְכֶם וְ/טַבְּעֹת זָהָב עַל־יָדָיו וְ/הוּא לָ/ב/וּשׁ לְ/בֻ/שֵׁי מִכְלוֹל וְ/גַם־אִישׁ עָנִי יָבֹא שָׁמָּה וּ/בִ/גְדוֹ מְטֻנָּף׃"
+      },
+      "previous_strong": "H4358",
+      "new_strong": "H4358",
+      "confidence": 0.9,
+      "reason": "Reviewed in context: מִכְלוֹל means fine/gorgeous attire; H4358 is acceptable.",
+      "evidence": [
+        "occurrence=james.2.2.13",
+        "text=מִכְלוֹל",
+        "prefixes=none",
+        "strong=H4358",
+        "lemma=מִכְלוֹל",
+        "definitions=perfection | gorgeous attire",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 2,
+        "word_index": 16,
+        "text": "עָנִי",
+        "strong": "H6041",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־יָבוֹא אִישׁ לְ/בֵ/ית כְּ/נֵסַתְכֶם וְ/טַבְּעֹת זָהָב עַל־יָדָיו וְ/הוּא לָ/ב/וּשׁ לְ/בֻ/שֵׁי מִכְלוֹל וְ/גַם־אִישׁ עָנִי יָבֹא שָׁמָּה וּ/בִ/גְדוֹ מְטֻנָּף׃"
+      },
+      "previous_strong": "H6041",
+      "new_strong": "H6041",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: עָנִי means poor; H6041 is correct.",
+      "evidence": [
+        "occurrence=james.2.2.16",
+        "text=עָנִי",
+        "prefixes=none",
+        "strong=H6041",
+        "lemma=עָנִי",
+        "definitions=poor | afflicted | humble",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 2,
+        "word_index": 19,
+        "text": "וּבִגְדוֹ",
+        "strong": "H1408",
+        "prefixes": [
+          "Hc",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־יָבוֹא אִישׁ לְ/בֵ/ית כְּ/נֵסַתְכֶם וְ/טַבְּעֹת זָהָב עַל־יָדָיו וְ/הוּא לָ/ב/וּשׁ לְ/בֻ/שֵׁי מִכְלוֹל וְ/גַם־אִישׁ עָנִי יָבֹא שָׁמָּה וּ/בִ/גְדוֹ מְטֻנָּף׃"
+      },
+      "previous_strong": "H1408",
+      "new_strong": "H899",
+      "confidence": 0.96,
+      "reason": "וּבִגְדוֹ means and his garment; H899 בֶּגֶד fits, H1408 is unrelated.",
+      "evidence": [
+        "occurrence=james.2.2.19",
+        "text=וּבִגְדוֹ",
+        "prefixes=Hc,Hb",
+        "strong=H1408",
+        "lemma=גַּד",
+        "definitions=fortune | good fortune | god of fortune",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 2,
+        "word_index": 20,
+        "text": "מְטֻנָּף׃",
+        "strong": "H2936",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אִם־יָבוֹא אִישׁ לְ/בֵ/ית כְּ/נֵסַתְכֶם וְ/טַבְּעֹת זָהָב עַל־יָדָיו וְ/הוּא לָ/ב/וּשׁ לְ/בֻ/שֵׁי מִכְלוֹל וְ/גַם־אִישׁ עָנִי יָבֹא שָׁמָּה וּ/בִ/גְדוֹ מְטֻנָּף׃"
+      },
+      "previous_strong": "H2936",
+      "new_strong": "H2936",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: מְטֻנָּף means filthy/defiled; H2936 is correct.",
+      "evidence": [
+        "occurrence=james.2.2.20",
+        "text=מְטֻנָּף׃",
+        "prefixes=none",
+        "strong=H2936",
+        "lemma=טָנַף",
+        "definitions=soil | defile",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 3,
+        "word_index": 0,
+        "text": "וּפְנִיתֶם",
+        "strong": "H6324",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פְנִיתֶם אֶל־הַ/לָּבוּשׁ לְ/בֻ/שֵׁי מִכְלוֹל וַ/אֲמַרְתֶּם לוֹ שֶׁב־לְךָ הֵנָּה בְּ/טוֹב וְ/לֶ/עָנִי תֹאמְרוּ עֲמָד־שָׁם אוֹ שֶׁב־פֹּה מִתַּחַת לַ/הֲדֹם רַגְלָי׃"
+      },
+      "previous_strong": "H6324",
+      "new_strong": "H6437",
+      "confidence": 0.94,
+      "reason": "וּפְנִיתֶם means and you turn/pay attention; H6437 פָּנָה fits, H6324 is unrelated.",
+      "evidence": [
+        "occurrence=james.2.3.0",
+        "text=וּפְנִיתֶם",
+        "prefixes=Hc",
+        "strong=H6324",
+        "lemma=פּוּנִי",
+        "definitions=none",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 3,
+        "word_index": 7,
+        "text": "שֶׁב־",
+        "strong": "H626",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/פְנִיתֶם אֶל־הַ/לָּבוּשׁ לְ/בֻ/שֵׁי מִכְלוֹל וַ/אֲמַרְתֶּם לוֹ שֶׁב־לְךָ הֵנָּה בְּ/טוֹב וְ/לֶ/עָנִי תֹאמְרוּ עֲמָד־שָׁם אוֹ שֶׁב־פֹּה מִתַּחַת לַ/הֲדֹם רַגְלָי׃"
+      },
+      "previous_strong": "H626",
+      "new_strong": "H3427",
+      "confidence": 0.95,
+      "reason": "שֶׁב־ means sit; H3427 יָשַׁב fits, H626 is unrelated.",
+      "evidence": [
+        "occurrence=james.2.3.7",
+        "text=שֶׁב־",
+        "prefixes=none",
+        "strong=H626",
+        "lemma=אֲסֵפָה",
+        "definitions=a collecting | gathering",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 9,
+        "word_index": 8,
+        "text": "כְּעֹבְרִים",
+        "strong": "H5682",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אוּלָם אִם־תִּשְׂאוּ פָנִים תֶּחֶטְאוּ בְּ/מַעֲשֵׂיכֶם וְ/הַ/תּוֹרָה תוֹכִיחֲכֶם כְּ/עֹבְרִים אוֹתָהּ׃"
+      },
+      "previous_strong": "H5682",
+      "new_strong": "H5674",
+      "confidence": 0.95,
+      "reason": "כְּעֹבְרִים means as transgressors; H5674 עָבַר fits, H5682 is a place-name.",
+      "evidence": [
+        "occurrence=james.2.9.8",
+        "text=כְּעֹבְרִים",
+        "prefixes=Hk",
+        "strong=H5682",
+        "lemma=עֲבָרִים",
+        "definitions=‛Abarim | regions beyond",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 13,
+        "word_index": 9,
+        "text": "יִתְגָּאֶה",
+        "strong": "H6109",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אֵין חֶסֶד בַּ/דִּין לַ/אֲשֶׁר לֹא־עָשָׂה חָסֶד וְ/הַ/חֶסֶד יִתְגָּאֶה עַל־הַ/דִּין׃"
+      },
+      "previous_strong": "H6109",
+      "new_strong": "H1342",
+      "confidence": 0.91,
+      "reason": "יִתְגָּאֶה means triumphs/boasts over; H1342 גָּאָה fits, H6109 is unrelated.",
+      "evidence": [
+        "occurrence=james.2.13.9",
+        "text=יִתְגָּאֶה",
+        "prefixes=none",
+        "strong=H6109",
+        "lemma=עׇצְמָה",
+        "definitions=might",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 2,
+        "verse": 19,
+        "word_index": 6,
+        "text": "הֱטִיבוֹתָ",
+        "strong": "Hd/H2895",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַתָּה מַאֲמִין כִּי הָ/אֱלֹהִים אֶחָד הוּא הֱ/טִיבוֹתָ גַּם הַ/שֵּׁדִים מַאֲמִינִים בּוֹ וְ/רֹעֲדִים׃"
+      },
+      "previous_strong": "Hd/H2895",
+      "new_strong": "Hd/H2895",
+      "confidence": 0.91,
+      "reason": "Reviewed in context: הֱטִיבוֹתָ means you have done well; H2895 is acceptable.",
+      "evidence": [
+        "occurrence=james.2.19.6",
+        "text=הֱטִיבוֹתָ",
+        "prefixes=Hd",
+        "strong=H2895",
+        "lemma=טוֹב",
+        "definitions=pleasing | good",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 3,
+        "word_index": 2,
+        "text": "הַסּוּסִים",
+        "strong": "Hd/H5483",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הִנֵּה בְּ/פִי הַ/סּוּסִים נָשִׂים אֶת־הָרֶסֶן לְ/מַעַן אֲשֶׁר יִשָּׁמְעוּ לָ/נוּ וְ/נִהַגְנוּ בוֹ אֵת כָּל־גְּוִיָּתָם׃"
+      },
+      "previous_strong": "Hd/H5483",
+      "new_strong": "H5483",
+      "confidence": 0.91,
+      "reason": "הַסּוּסִים means the horses; add the horse sense to H5483.",
+      "evidence": [
+        "occurrence=james.3.3.2",
+        "text=הַסּוּסִים",
+        "prefixes=Hd",
+        "strong=H5483",
+        "lemma=סוּס",
+        "definitions=swallow | swift",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5483",
+      "definition": {
+        "text_en": "horse.",
+        "text_es": "caballo.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 4,
+        "word_index": 11,
+        "text": "מָשׁוֹט",
+        "strong": "H4880",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הִנֵּה הָ/אֳנִיּוֹת אַף־כִּי גְדֹלוֹת הֵנָּה וְ/רוּחוֹת קָשׁוֹת יֶהְדְּפוּן יִנְהַג אֹתָן מָשׁוֹט קָטֹן אֶל־כֹּל אֲשֶׁר־יַחְפֹּץ הַ/חֹבֵל כֵּן גַּם־הַ/לָּשׁוֹן אֵבָר קָטֹן הִיא וּ/גְדֹלוֹת תְּדַבֵּר׃"
+      },
+      "previous_strong": "H4880",
+      "new_strong": "H4880",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: מָשׁוֹט means rudder/oar; H4880 is correct.",
+      "evidence": [
+        "occurrence=james.3.4.11",
+        "text=מָשׁוֹט",
+        "prefixes=none",
+        "strong=H4880",
+        "lemma=מָשׁוֹט",
+        "definitions=oar",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 3,
+        "text": "הַיַּעַר",
+        "strong": "Hd/H3293",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "רְאֵה מַה־גָּדוֹל הַ/יַּעַר וְ/אֵשׁ קְטַנָּה תַּבְעִירֶנּוּ גַּם־הַ/לָּשׁוֹן אֵשׁ הִיא עוֹלָם מָלֵא עַוְלָה׃"
+      },
+      "previous_strong": "Hd/H3293",
+      "new_strong": "Hd/H3293",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַיַּעַר means the forest/wood; H3293 is correct.",
+      "evidence": [
+        "occurrence=james.3.5.3",
+        "text=הַיַּעַר",
+        "prefixes=Hd",
+        "strong=H3293",
+        "lemma=יַעַר",
+        "definitions=wood | forest | thicket",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 6,
+        "word_index": 2,
+        "text": "נִצֶּבֶת",
+        "strong": "H4966",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כֵּן הַ/לָּשׁוֹן נִצֶּבֶת בֵּ/ין אֵבָרֵינוּ הַ/מַּגְאֶלֶת אֶת־כָּל הַ/גּוּף וּ/מְלַהֶטֶת אֶת־גַּלְגַּל הֲ/וָיָתֵנוּ וְ/הִיא לְ/הוּטָה בְּ/אֵשׁ גֵּיהִנֹּם׃"
+      },
+      "previous_strong": "H4966",
+      "new_strong": "H5324",
+      "confidence": 0.94,
+      "reason": "נִצֶּבֶת means is set/stands; H5324 נָצַב fits, H4966 is unrelated.",
+      "evidence": [
+        "occurrence=james.3.6.2",
+        "text=נִצֶּבֶת",
+        "prefixes=none",
+        "strong=H4966",
+        "lemma=מָתוֹק",
+        "definitions=sweet | sweetness",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 6,
+        "word_index": 15,
+        "text": "בְּאֵשׁ",
+        "strong": "Hb/H888",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "כֵּן הַ/לָּשׁוֹן נִצֶּבֶת בֵּ/ין אֵבָרֵינוּ הַ/מַּגְאֶלֶת אֶת־כָּל הַ/גּוּף וּ/מְלַהֶטֶת אֶת־גַּלְגַּל הֲ/וָיָתֵנוּ וְ/הִיא לְ/הוּטָה בְּ/אֵשׁ גֵּיהִנֹּם׃"
+      },
+      "previous_strong": "Hb/H888",
+      "new_strong": "H784",
+      "confidence": 0.96,
+      "reason": "בְּאֵשׁ means with/by fire; H784 אֵשׁ fits, H888 is unrelated.",
+      "evidence": [
+        "occurrence=james.3.6.15",
+        "text=בְּאֵשׁ",
+        "prefixes=Hb",
+        "strong=H888",
+        "lemma=בְּאֵשׁ",
+        "definitions=be evil | bad | it was evil | displeasing | to him",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 11,
+        "word_index": 4,
+        "text": "מִמּוֹצָא",
+        "strong": "H4161",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הֲ/יַבִּיעַ הַ/מַּעְיָן מְתוּקִים וּ/מָרִים מִמּוֹצָא אֶחָד׃"
+      },
+      "previous_strong": "H4161",
+      "new_strong": "H4161",
+      "confidence": 0.94,
+      "reason": "Reviewed in context: מִמּוֹצָא means from the source/outflow; H4161 is correct.",
+      "evidence": [
+        "occurrence=james.3.11.4",
+        "text=מִמּוֹצָא",
+        "prefixes=none",
+        "strong=H4161",
+        "lemma=מוֹצָא",
+        "definitions=place | act of going forth | issue | export | source",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 3,
+        "text": "הַתְּאֵנָה",
+        "strong": "Hd/H8384",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַחַי הֲ/יוּכַל עֵץ הַ/תְּאֵנָה לְ/ה/וֹצִיא זֵיתִים אוֹ הֲ/תוּכַל הַ/גֶּפֶן לְ/ה/וֹצִיא תְּאֵנִים כֵּן גַּם־מַעְיָן אֶחָד לֹא יוּכַל נְבֹעַ מַיִם מְלוּחִים וּ/מְתוּקִים׃"
+      },
+      "previous_strong": "Hd/H8384",
+      "new_strong": "H8384",
+      "confidence": 0.91,
+      "reason": "הַתְּאֵנָה means the fig tree; add the missing definition to H8384.",
+      "evidence": [
+        "occurrence=james.3.12.3",
+        "text=הַתְּאֵנָה",
+        "prefixes=Hd",
+        "strong=H8384",
+        "lemma=תְּאֵן",
+        "definitions=none",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8384",
+      "definition": {
+        "text_en": "fig tree.",
+        "text_es": "higuera.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 8,
+        "text": "הַגֶּפֶן",
+        "strong": "Hd/H1612",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַחַי הֲ/יוּכַל עֵץ הַ/תְּאֵנָה לְ/ה/וֹצִיא זֵיתִים אוֹ הֲ/תוּכַל הַ/גֶּפֶן לְ/ה/וֹצִיא תְּאֵנִים כֵּן גַּם־מַעְיָן אֶחָד לֹא יוּכַל נְבֹעַ מַיִם מְלוּחִים וּ/מְתוּקִים׃"
+      },
+      "previous_strong": "Hd/H1612",
+      "new_strong": "Hd/H1612",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: הַגֶּפֶן means the vine; H1612 is correct.",
+      "evidence": [
+        "occurrence=james.3.12.8",
+        "text=הַגֶּפֶן",
+        "prefixes=Hd",
+        "strong=H1612",
+        "lemma=גֶּפֶן",
+        "definitions=vine",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 13,
+        "text": "מַעְיָן",
+        "strong": "H4599",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַחַי הֲ/יוּכַל עֵץ הַ/תְּאֵנָה לְ/ה/וֹצִיא זֵיתִים אוֹ הֲ/תוּכַל הַ/גֶּפֶן לְ/ה/וֹצִיא תְּאֵנִים כֵּן גַּם־מַעְיָן אֶחָד לֹא יוּכַל נְבֹעַ מַיִם מְלוּחִים וּ/מְתוּקִים׃"
+      },
+      "previous_strong": "H4599",
+      "new_strong": "H4599",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: מַעְיָן means spring/fountain; H4599 is correct.",
+      "evidence": [
+        "occurrence=james.3.12.13",
+        "text=מַעְיָן",
+        "prefixes=none",
+        "strong=H4599",
+        "lemma=מַעְיָן",
+        "definitions=spring",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 17,
+        "text": "נְבֹעַ",
+        "strong": "H4395",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַחַי הֲ/יוּכַל עֵץ הַ/תְּאֵנָה לְ/ה/וֹצִיא זֵיתִים אוֹ הֲ/תוּכַל הַ/גֶּפֶן לְ/ה/וֹצִיא תְּאֵנִים כֵּן גַּם־מַעְיָן אֶחָד לֹא יוּכַל נְבֹעַ מַיִם מְלוּחִים וּ/מְתוּקִים׃"
+      },
+      "previous_strong": "H4395",
+      "new_strong": "H5042",
+      "confidence": 0.94,
+      "reason": "נְבֹעַ means to pour forth/spring up; H5042 נָבַע fits, H4395 is unrelated.",
+      "evidence": [
+        "occurrence=james.3.12.17",
+        "text=נְבֹעַ",
+        "prefixes=none",
+        "strong=H4395",
+        "lemma=מְלֵאָה",
+        "definitions=fulness | full produce",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 19,
+        "text": "מְלוּחִים",
+        "strong": "H4408",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַחַי הֲ/יוּכַל עֵץ הַ/תְּאֵנָה לְ/ה/וֹצִיא זֵיתִים אוֹ הֲ/תוּכַל הַ/גֶּפֶן לְ/ה/וֹצִיא תְּאֵנִים כֵּן גַּם־מַעְיָן אֶחָד לֹא יוּכַל נְבֹעַ מַיִם מְלוּחִים וּ/מְתוּקִים׃"
+      },
+      "previous_strong": "H4408",
+      "new_strong": "H4417",
+      "confidence": 0.9,
+      "reason": "מְלוּחִים means salty; H4417 מֶלַח fits better than H4408 mallow.",
+      "evidence": [
+        "occurrence=james.3.12.19",
+        "text=מְלוּחִים",
+        "prefixes=none",
+        "strong=H4408",
+        "lemma=מַלּוּחַ",
+        "definitions=mallow",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 3,
+        "verse": 17,
+        "word_index": 25,
+        "text": "חֲנֻפָּה׃",
+        "strong": "H2613",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל הַ/חָכְמָה אֲשֶׁר מִמַּעַל בָּ/רִאשׁוֹנָה צְנוּעָה הִיא אַף־אֹהֶבֶת שָׁלוֹם וּ/מַכְרַעַת לְ/כַף־זְכוּת וְ/אֵינֶנָּה עֹמֶדֶת עַל־דַּעְתָּהּ וּ/מְלֵאָה רַחֲמִים וּ/פְרִי טוֹב בְּ/לֹא־לֵב וָ/לֵב וּ/בְ/לִי חֲנֻפָּה׃"
+      },
+      "previous_strong": "H2613",
+      "new_strong": "H2612",
+      "confidence": 0.89,
+      "reason": "חֲנֻפָּה means hypocrisy/partiality; H2612 חֹנֶף fits, H2613 is related but not the intended lexical entry.",
+      "evidence": [
+        "occurrence=james.3.17.25",
+        "text=חֲנֻפָּה׃",
+        "prefixes=none",
+        "strong=H2613",
+        "lemma=חֲנֻפָה",
+        "definitions=profaneness | pollution",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 1,
+        "word_index": 0,
+        "text": "מֵאַיִן",
+        "strong": "H370",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מֵאַיִן הַ/מִּלְחָמוֹת וְ/הַ/מְּדָנִים אֲשֶׁר בֵּ/ינֵיכֶם הֲלֹא מִתּוֹךְ הַ/תַּאֲוֺת הַ/מִּתְגָּרוֹת בְּ/אֵבָרֵיכֶם׃"
+      },
+      "previous_strong": "H370",
+      "new_strong": "H370",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: מֵאַיִן means whence/from where; H370 is correct.",
+      "evidence": [
+        "occurrence=james.4.1.0",
+        "text=מֵאַיִן",
+        "prefixes=none",
+        "strong=H370",
+        "lemma=אַיִן",
+        "definitions=whence?",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 1,
+        "word_index": 2,
+        "text": "וְהַמְּדָנִים",
+        "strong": "Hc/Hd/H4084",
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "מֵאַיִן הַ/מִּלְחָמוֹת וְ/הַ/מְּדָנִים אֲשֶׁר בֵּ/ינֵיכֶם הֲלֹא מִתּוֹךְ הַ/תַּאֲוֺת הַ/מִּתְגָּרוֹת בְּ/אֵבָרֵיכֶם׃"
+      },
+      "previous_strong": "Hc/Hd/H4084",
+      "new_strong": "H4079",
+      "confidence": 0.94,
+      "reason": "וְהַמְּדָנִים means quarrels/disputes; H4079 מִדְיָן fits, H4084 is Midianite.",
+      "evidence": [
+        "occurrence=james.4.1.2",
+        "text=וְהַמְּדָנִים",
+        "prefixes=Hc,Hd",
+        "strong=H4084",
+        "lemma=מִדְיָנִי",
+        "definitions=Midianite",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 2,
+        "word_index": 1,
+        "text": "מִתְאַוִּים",
+        "strong": "H56",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַתֶּם מִתְאַוִּים וְ/אֵין לָ/כֶם תְּרַצְּחוּ וּ/תְקַנְאוּ וְ/הַשֵּׂג לֹא תַשִּׂיגוּ תָּרִיבוּ וְ/תִלָּחֲמוּ וְ/אֵין לָ/כֶם יַעַן אֲשֶׁר לֹא־הִתְפַּלַּלְתֶּם׃"
+      },
+      "previous_strong": "H56",
+      "new_strong": "H183",
+      "confidence": 0.95,
+      "reason": "מִתְאַוִּים means you desire/lust; H183 אָוָה fits, H56 is unrelated.",
+      "evidence": [
+        "occurrence=james.4.2.1",
+        "text=מִתְאַוִּים",
+        "prefixes=none",
+        "strong=H56",
+        "lemma=אָבַל",
+        "definitions=mourn",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 2,
+        "word_index": 5,
+        "text": "וּתְקַנְאוּ",
+        "strong": "H3135",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַתֶּם מִתְאַוִּים וְ/אֵין לָ/כֶם תְּרַצְּחוּ וּ/תְקַנְאוּ וְ/הַשֵּׂג לֹא תַשִּׂיגוּ תָּרִיבוּ וְ/תִלָּחֲמוּ וְ/אֵין לָ/כֶם יַעַן אֲשֶׁר לֹא־הִתְפַּלַּלְתֶּם׃"
+      },
+      "previous_strong": "H3135",
+      "new_strong": "H7065",
+      "confidence": 0.95,
+      "reason": "וּתְקַנְאוּ means and you envy/are jealous; H7065 קָנָא fits, H3135 is unrelated.",
+      "evidence": [
+        "occurrence=james.4.2.5",
+        "text=וּתְקַנְאוּ",
+        "prefixes=Hc",
+        "strong=H3135",
+        "lemma=יוֹעָשׁ",
+        "definitions=hath aided | a Benjamite, son of Becher | an officer under David",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 2,
+        "word_index": 6,
+        "text": "וְהַשֵּׂג",
+        "strong": "H6397",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַתֶּם מִתְאַוִּים וְ/אֵין לָ/כֶם תְּרַצְּחוּ וּ/תְקַנְאוּ וְ/הַשֵּׂג לֹא תַשִּׂיגוּ תָּרִיבוּ וְ/תִלָּחֲמוּ וְ/אֵין לָ/כֶם יַעַן אֲשֶׁר לֹא־הִתְפַּלַּלְתֶּם׃"
+      },
+      "previous_strong": "H6397",
+      "new_strong": "H5381",
+      "confidence": 0.94,
+      "reason": "וְהַשֵּׂג means and obtain/reach; H5381 נָשַׂג fits, H6397 is unrelated.",
+      "evidence": [
+        "occurrence=james.4.2.6",
+        "text=וְהַשֵּׂג",
+        "prefixes=Hc",
+        "strong=H6397",
+        "lemma=פְּלוֹנִי",
+        "definitions=none",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "needs_manual_review",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 2,
+        "word_index": 12,
+        "text": "לָכֶם",
+        "strong": "H5503",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַתֶּם מִתְאַוִּים וְ/אֵין לָ/כֶם תְּרַצְּחוּ וּ/תְקַנְאוּ וְ/הַשֵּׂג לֹא תַשִּׂיגוּ תָּרִיבוּ וְ/תִלָּחֲמוּ וְ/אֵין לָ/כֶם יַעַן אֲשֶׁר לֹא־הִתְפַּלַּלְתֶּם׃"
+      },
+      "previous_strong": "H5503",
+      "new_strong": "H5503",
+      "confidence": 0.84,
+      "reason": "לָכֶם is a preposition plus pronominal suffix (“to/for you”); H5503 is unrelated, but this needs grammar handling rather than a lexical Strong.",
+      "evidence": [
+        "occurrence=james.4.2.12",
+        "text=לָכֶם",
+        "prefixes=Hl",
+        "strong=H5503",
+        "lemma=סָחַר",
+        "definitions=go around | about | travel about in",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 3,
+        "word_index": 11,
+        "text": "בְּתַאֲוֺתֵיכֶם׃",
+        "strong": "H8377",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הֵן אַתֶּם מְבַקְשִׁים וְ/אֵינְכֶם מְקַבְּלִים עַל־אֲשֶׁר תִּתְפַּלְלוּ בְ/רָעָה לְ/מַעַן תְּבַלּוּ בְּ/תַאֲוֺתֵיכֶם׃"
+      },
+      "previous_strong": "H8377",
+      "new_strong": "H8378",
+      "confidence": 0.96,
+      "reason": "בְּתַאֲוֺתֵיכֶם means in your desires; H8378 תַּאֲוָה fits, H8377 is unrelated.",
+      "evidence": [
+        "occurrence=james.4.3.11",
+        "text=בְּתַאֲוֺתֵיכֶם׃",
+        "prefixes=Hb",
+        "strong=H8377",
+        "lemma=תְּאוֹ",
+        "definitions=antelope",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 5,
+        "word_index": 2,
+        "text": "בְנַפְשְׁכֶם",
+        "strong": "H6350",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אוֹ הַ/תְדַמּוּ בְ/נַפְשְׁכֶם כִּי לָ/רִיק אָמַר הַ/כָּתוּב בְּ/קִנְאָה יִתְאַוֶּה לָ/רוּחַ הַשֹּׁכֵן בְּ/קִרְבֵּנוּ׃"
+      },
+      "previous_strong": "H6350",
+      "new_strong": "H5315",
+      "confidence": 0.94,
+      "reason": "בְנַפְשְׁכֶם means in yourselves/your life; H5315 נֶפֶשׁ fits, H6350 is unrelated.",
+      "evidence": [
+        "occurrence=james.4.5.2",
+        "text=בְנַפְשְׁכֶם",
+        "prefixes=Hb",
+        "strong=H6350",
+        "lemma=פַּחֲזוּת",
+        "definitions=recklessness | extravagance",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 13,
+        "word_index": 0,
+        "text": "הוֹי",
+        "strong": "H1945",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הוֹי הָ/אֹמְרִים נֵלְכָה הַ/יּוֹם וּ/מָחָר לְ/עִיר פְּלוֹנִית אַלְמוֹנִית וְ/נַעֲשֶׂה־שָּׁם שָׁנָה אַחַת לִ/סְחֹר בָּהּ וּ/לְ/הַרְבּוֹת רֶוַח׃"
+      },
+      "previous_strong": "H1945",
+      "new_strong": "H1945",
+      "confidence": 0.91,
+      "reason": "Reviewed in context: הוֹי means come now/alas; H1945 is acceptable.",
+      "evidence": [
+        "occurrence=james.4.13.0",
+        "text=הוֹי",
+        "prefixes=none",
+        "strong=H1945",
+        "lemma=הוֹי",
+        "definitions=Ah | Alas | Ha",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 13,
+        "word_index": 15,
+        "text": "רֶוַח׃",
+        "strong": "H7305",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הוֹי הָ/אֹמְרִים נֵלְכָה הַ/יּוֹם וּ/מָחָר לְ/עִיר פְּלוֹנִית אַלְמוֹנִית וְ/נַעֲשֶׂה־שָּׁם שָׁנָה אַחַת לִ/סְחֹר בָּהּ וּ/לְ/הַרְבּוֹת רֶוַח׃"
+      },
+      "previous_strong": "H7305",
+      "new_strong": "H7305",
+      "confidence": 0.9,
+      "reason": "Reviewed in context: רֶוַח means profit/gain; H7305 is acceptable.",
+      "evidence": [
+        "occurrence=james.4.13.15",
+        "text=רֶוַח׃",
+        "prefixes=none",
+        "strong=H7305",
+        "lemma=רֶוַח",
+        "definitions=space | interval | respite | relief",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 4,
+        "verse": 14,
+        "word_index": 16,
+        "text": "כָּלָה",
+        "strong": "Hk/H3617",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לֹא תֵדְעוּ מַה־יֵּלֵד יוֹם מָחָר כִּי מֶה חַיֵּיכֶם עָשָׁן הֵם אֲשֶׁר נִרְאָה כִּ/מְעַט־רֶגַע וְ/אַחַר כָּ/לָה וַ/יֵּלַךְ׃"
+      },
+      "previous_strong": "Hk/H3617",
+      "new_strong": "Hk/H3617",
+      "confidence": 0.88,
+      "reason": "Reviewed in context: כָּלָה means vanishes/comes to an end; H3617 is acceptable.",
+      "evidence": [
+        "occurrence=james.4.14.16",
+        "text=כָּלָה",
+        "prefixes=Hk",
+        "strong=H3617",
+        "lemma=כָּלָה",
+        "definitions=completion | complete destruction | consumption | annihilation",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 5,
+        "verse": 1,
+        "word_index": 1,
+        "text": "הָעֲשִׁירִים",
+        "strong": "H2426",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הוֹי הָ/עֲשִׁירִים בְּ/כוּ וְ/הֵ/ילִילוּ עַל־הַ/צָּרוֹת אֲשֶׁר תָּבֹאנָה עֲלֵיכֶם׃"
+      },
+      "previous_strong": "H2426",
+      "new_strong": "H6223",
+      "confidence": 0.96,
+      "reason": "הָעֲשִׁירִים means the rich; H6223 עָשִׁיר fits, H2426 is unrelated.",
+      "evidence": [
+        "occurrence=james.5.1.1",
+        "text=הָעֲשִׁירִים",
+        "prefixes=Hd",
+        "strong=H2426",
+        "lemma=חֵיל",
+        "definitions=rampart | fortress",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 5,
+        "verse": 1,
+        "word_index": 3,
+        "text": "וְהֵילִילוּ",
+        "strong": "Hc/Hd/H3213",
+        "prefixes": [
+          "Hc",
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הוֹי הָ/עֲשִׁירִים בְּ/כוּ וְ/הֵ/ילִילוּ עַל־הַ/צָּרוֹת אֲשֶׁר תָּבֹאנָה עֲלֵיכֶם׃"
+      },
+      "previous_strong": "Hc/Hd/H3213",
+      "new_strong": "Hc/Hd/H3213",
+      "confidence": 0.95,
+      "reason": "Reviewed in context: וְהֵילִילוּ means howl; H3213 is correct.",
+      "evidence": [
+        "occurrence=james.5.1.3",
+        "text=וְהֵילִילוּ",
+        "prefixes=Hc,Hd",
+        "strong=H3213",
+        "lemma=יָלַל",
+        "definitions=howl | make a howling",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "add_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "james",
+        "chapter": 5,
+        "verse": 3,
+        "word_index": 3,
+        "text": "חֶלְאָה",
+        "strong": "H2458",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "זְהַבְכֶם וְ/כַ/סְפְּכֶם כִּ/סָּתַם חֶלְאָה וְ/הָ/יְתָה חֶלְאָתָם בָּ/כֶם לְ/עֵדוּת וְ/אָכְלָה כְּ/מוֹ־אֵשׁ אֶת־בְּ/שַׂרְכֶם אֲצַרְתֶּם לָ/כֶם אוֹצָרוֹת בְּ/קֵץ הַ/יָּמִים׃"
+      },
+      "previous_strong": "H2458",
+      "new_strong": "H2458",
+      "confidence": 0.9,
+      "reason": "חֶלְאָה means rust/corrosion; add the missing definition to H2458.",
+      "evidence": [
+        "occurrence=james.5.3.3",
+        "text=חֶלְאָה",
+        "prefixes=none",
+        "strong=H2458",
+        "lemma=חֶלְאָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0038"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2458",
+      "definition": {
+        "text_en": "stain; rust; corrosion; pollution.",
+        "text_es": "mancha; herrumbre; corrosión; contaminación.",
+        "source": "delitzsch_review"
+      }
+    }
+  ]
+}

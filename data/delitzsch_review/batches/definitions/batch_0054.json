@@ -1,0 +1,2355 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-29T14:27:39.494341+00:00",
+  "instructions": "Edit decisions in this file, then run review apply. Supported actions: set_strong, add_definition, upsert_custom_definition, create_custom_entry, needs_manual_review, skip.",
+  "decisions": [
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 14,
+        "word_index": 17,
+        "text": "הַמְּאֵרָה׃",
+        "strong": "Hd/H3994",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "עֵינַיִם לָ/הֶם מְלֵאוֹת נִאֻפִים אֲשֶׁר לֹא תֶחְדַּלְנָה מֵחֲטוֹא וְ/אֶת־נַפְשׁוֹת הַ/פְּתָאִים יְצוֹדֵדוּ וְ/לֵב מְלֻמַּד־בֶּ/צַע לָ/הֶם בְּ/נֵי הַ/מְּאֵרָה׃"
+      },
+      "previous_strong": "Hd/H3994",
+      "new_strong": "H3994",
+      "confidence": 0.9,
+      "reason": "הַמְּאֵרָה means the curse; H3994 מארה is correct.",
+      "evidence": [
+        "occurrence=peter2.2.14.17",
+        "text=הַמְּאֵרָה׃",
+        "prefixes=Hd",
+        "strong=H3994",
+        "lemma=מְאֵרָה",
+        "definitions=a curse",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 15,
+        "word_index": 9,
+        "text": "בְּעוֹר",
+        "strong": "Hb/H1160",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "אֶת־הַ/דֶּרֶךְ הַ/יָּשָׁר עָזְבוּ וַ/יִּתְעוּ וַ/יֵּלְכוּ בְּ/דֶרֶךְ בִּ/לְ/עָם בֶּן־בְּ/עוֹר אֲשֶׁר אָהֵב שְׂכַר הָ/עַוְלָה׃"
+      },
+      "previous_strong": "Hb/H1160",
+      "new_strong": "H1160",
+      "confidence": 0.9,
+      "reason": "בְּעוֹר is Beor, father of Balaam; H1160 is the proper-name entry.",
+      "evidence": [
+        "occurrence=peter2.2.15.9",
+        "text=בְּעוֹר",
+        "prefixes=Hb",
+        "strong=H1160",
+        "lemma=בְּעוֹר",
+        "definitions=a burning | torch | father of Balaam | father of a king of Edom",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 17,
+        "word_index": 0,
+        "text": "בְּאֵרוֹת",
+        "strong": "Hb/H881",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "בְּ/אֵרוֹת בְּ/לִי־מַיִם הֵמָּה עָבִים נִדָּפִים בִּ/סְעָרָה אֲשֶׁר שָׁמוּר לָ/הֶם חשֶׁךְ־אֲפֵלָה לְ/עוֹלָם׃"
+      },
+      "previous_strong": "Hb/H881",
+      "new_strong": "H875",
+      "confidence": 0.93,
+      "reason": "בְּאֵרוֹת here means wells/springs without water; H875 באר is correct, while H881 is the proper place-name Beeroth.",
+      "evidence": [
+        "occurrence=peter2.2.17.0",
+        "text=בְּאֵרוֹת",
+        "prefixes=Hb",
+        "strong=H881",
+        "lemma=בְּאֵרוֹת",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 17,
+        "word_index": 4,
+        "text": "עָבִים",
+        "strong": "H5645",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בְּ/אֵרוֹת בְּ/לִי־מַיִם הֵמָּה עָבִים נִדָּפִים בִּ/סְעָרָה אֲשֶׁר שָׁמוּר לָ/הֶם חשֶׁךְ־אֲפֵלָה לְ/עוֹלָם׃"
+      },
+      "previous_strong": "H5645",
+      "new_strong": "H5645",
+      "confidence": 0.9,
+      "reason": "עָבִים means clouds/mists; H5645 עב is correct.",
+      "evidence": [
+        "occurrence=peter2.2.17.4",
+        "text=עָבִים",
+        "prefixes=none",
+        "strong=H5645",
+        "lemma=עָב",
+        "definitions=dark cloud | cloud-mass | thicket",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 21,
+        "word_index": 15,
+        "text": "הַמְּסוּרָה",
+        "strong": "H7515",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "טוֹב הָיָה לָ/הֶם לֹא לָ/דַעַת אֶת־דֶּרֶךְ הַ/צְּדָקָה מֵאֲשֶׁר יְדָעֻהוּ וְ/נָסֹגוּ אָחוֹר מִן־הַ/מִּצְוָה הַ/קְּדוֹשָׁה הַ/מְּסוּרָה לָ/הֶם׃"
+      },
+      "previous_strong": "H7515",
+      "new_strong": "D0083",
+      "confidence": 0.84,
+      "reason": "הַמְּסוּרָה means the commandment/tradition handed over; existing custom D0083 מסר covers delivered/handed over, while H7515 is unrelated.",
+      "evidence": [
+        "occurrence=peter2.2.21.15",
+        "text=הַמְּסוּרָה",
+        "prefixes=Hd",
+        "strong=H7515",
+        "lemma=רָפַשׂ",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 22,
+        "word_index": 9,
+        "text": "קֵאוֹ",
+        "strong": "H6892",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּקֶר לָ/הֶם כַּ/אֲשֶׁר יֹאמַר מְשַׁל הָ/אֱמֶת הַ/כֶּלֶב שָׁב עַל־קֵאוֹ וְ/הַ/חֲזִיר עֹלֶה מִן־הָ/רַחְצָה לְ/הִתְגֹּלֵל בָּ/רָפֶשׁ׃"
+      },
+      "previous_strong": "H6892",
+      "new_strong": "H6892",
+      "confidence": 0.9,
+      "reason": "קֵאוֹ means its vomit; H6892 קֵא is correct.",
+      "evidence": [
+        "occurrence=peter2.2.22.9",
+        "text=קֵאוֹ",
+        "prefixes=none",
+        "strong=H6892",
+        "lemma=קֵא",
+        "definitions=what is vomited up | vomit",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 2,
+        "verse": 22,
+        "word_index": 13,
+        "text": "הָרַחְצָה",
+        "strong": "Hd/H7367",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יִּקֶר לָ/הֶם כַּ/אֲשֶׁר יֹאמַר מְשַׁל הָ/אֱמֶת הַ/כֶּלֶב שָׁב עַל־קֵאוֹ וְ/הַ/חֲזִיר עֹלֶה מִן־הָ/רַחְצָה לְ/הִתְגֹּלֵל בָּ/רָפֶשׁ׃"
+      },
+      "previous_strong": "Hd/H7367",
+      "new_strong": "H7367",
+      "confidence": 0.9,
+      "reason": "הָרַחְצָה means the washing; H7367 רחצה is correct and needs definition coverage.",
+      "evidence": [
+        "occurrence=peter2.2.22.13",
+        "text=הָרַחְצָה",
+        "prefixes=Hd",
+        "strong=H7367",
+        "lemma=רַחְצָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 10,
+        "text": "אָעִיר",
+        "strong": "H2937",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "זֹאת הִיא הָ/אִגֶּרֶת הַ/שֵּׁנִית אֲשֶׁר אֲנִי כֹ/תֵב אֲלֵיכֶם אֲהוּבִים וּ/בִ/שְׁתֵּיהֶן אָעִיר בְּ/דֶרֶךְ הַ/זְכָּרָה אֶת־תֻּמַּת לְ/בַ/בְכֶם׃"
+      },
+      "previous_strong": "H2937",
+      "new_strong": "H5782",
+      "confidence": 0.92,
+      "reason": "אָעִיר means I stir up/awaken; H5782 עור fits, while H2937 means wander/err.",
+      "evidence": [
+        "occurrence=peter2.3.1.10",
+        "text=אָעִיר",
+        "prefixes=none",
+        "strong=H2937",
+        "lemma=טָעָה",
+        "definitions=wander | stray",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 0,
+        "text": "לִזְכֹּר",
+        "strong": "H2441",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לִ/זְכֹּר אֶת־הַ/דְּבָרִים הַ/נֶּאֱמָרִים מִקֶּדֶם בִּ/ידֵי הַ/נְּבִיאִים הַ/קְּדשִׁים וְ/אֶת־מִצְוַת אֲדֹנֵינוּ וּ/מוֹשִׁיעֵנוּ אֲשֶׁר נִתְּנָה בְ/יָדֵנוּ הַ/שְּׁלִיחִים׃"
+      },
+      "previous_strong": "H2441",
+      "new_strong": "H2142",
+      "confidence": 0.95,
+      "reason": "לִזְכֹּר means to remember; H2142 זכר fits, while H2441 is palate.",
+      "evidence": [
+        "occurrence=peter2.3.2.0",
+        "text=לִזְכֹּר",
+        "prefixes=Hl",
+        "strong=H2441",
+        "lemma=חֵךְ",
+        "definitions=palate | roof of mouth | gums",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 11,
+        "text": "וּמוֹשִׁיעֵנוּ",
+        "strong": "H1894",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לִ/זְכֹּר אֶת־הַ/דְּבָרִים הַ/נֶּאֱמָרִים מִקֶּדֶם בִּ/ידֵי הַ/נְּבִיאִים הַ/קְּדשִׁים וְ/אֶת־מִצְוַת אֲדֹנֵינוּ וּ/מוֹשִׁיעֵנוּ אֲשֶׁר נִתְּנָה בְ/יָדֵנוּ הַ/שְּׁלִיחִים׃"
+      },
+      "previous_strong": "H1894",
+      "new_strong": "H3467",
+      "confidence": 0.9,
+      "reason": "וּמוֹשִׁיעֵנוּ means and our Savior/deliverer; H3467 ישע deliver/save fits, while H1894 is unrelated.",
+      "evidence": [
+        "occurrence=peter2.3.2.11",
+        "text=וּמוֹשִׁיעֵנוּ",
+        "prefixes=Hc",
+        "strong=H1894",
+        "lemma=הֹבֶן",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 3,
+        "verse": 11,
+        "word_index": 4,
+        "text": "יָמוּגוּ",
+        "strong": "H2439",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/עַתָּה אִם־כָּל־אֵלֶּה יָמוּגוּ מַה־מְּאֹד חַיָּבִים אַתֶּם לְ/הִתְהַלֵּךְ בִּ/קְדֻשָּׁה וּ/בַ/חֲסִידוּת׃"
+      },
+      "previous_strong": "H2439",
+      "new_strong": "H4127",
+      "confidence": 0.9,
+      "reason": "יָמוּגוּ means will melt/dissolve; H4127 מוג fits, while H2439 haste is unrelated.",
+      "evidence": [
+        "occurrence=peter2.3.11.4",
+        "text=יָמוּגוּ",
+        "prefixes=none",
+        "strong=H2439",
+        "lemma=חִישׁ",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 3,
+        "verse": 12,
+        "word_index": 13,
+        "text": "וְנָמַסּוּ׃",
+        "strong": "Hc/H4549",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/חַכּוֹת לְ/בֹא יוֹם־יְהוָֹה וּ/לְ/הָחִישׁ אֹתוֹ אֲשֶׁר בִּ/גְלָלוֹ הַ/שָּׁמַיִם יָמוּגוּ בָ/אֵשׁ וְ/הַ/יְסֹדוֹת יְבֹעֲרוּ וְ/נָמַסּוּ׃"
+      },
+      "previous_strong": "Hc/H4549",
+      "new_strong": "H4549",
+      "confidence": 0.9,
+      "reason": "וְנָמַסּוּ means and they will melt/dissolve; H4549 מסס is correct.",
+      "evidence": [
+        "occurrence=peter2.3.12.13",
+        "text=וְנָמַסּוּ׃",
+        "prefixes=Hc",
+        "strong=H4549",
+        "lemma=מָסַס",
+        "definitions=dissolve | melt",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "peter2",
+        "chapter": 3,
+        "verse": 16,
+        "word_index": 21,
+        "text": "לְאָבְדַן",
+        "strong": "H12",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/כֵן בְּ/כָל־אִגְּרוֹתָיו בְּ/דַבְּרוֹ־שָׁם עַל־אֵלֶּה וּ/בָ/הֶן יֵשׁ דְּבָרִים קְשֵׁי הַ/הֲבָנָה וְ/הַ/בֹּעֲרִים וְ/הַ/פְּתָאִים יַהַפְכוּ אֹתָם כַּ/אֲשֶׁר גַּם־יַעֲשֹוּ לַ/כְּ/תָבִים הָ/אֲחֵרִים לְ/אָבְדַן נַפְשָׁם׃"
+      },
+      "previous_strong": "H12",
+      "new_strong": "H12",
+      "confidence": 0.9,
+      "reason": "לְאָבְדַן means to destruction; H12 אבדן is correct.",
+      "evidence": [
+        "occurrence=peter2.3.16.21",
+        "text=לְאָבְדַן",
+        "prefixes=Hl",
+        "strong=H12",
+        "lemma=אַבְדָן",
+        "definitions=destruction",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "create_custom_entry",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philemon",
+        "chapter": 1,
+        "verse": 2,
+        "word_index": 1,
+        "text": "אַפִּיָּה",
+        "strong": "H612",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אֶל־אַפִּיָּה הָ/אֲהוּבָה וְ/אֶל־אַרְכִפּוֹס חֲבֵר מִלְחֲמֹתֵינוּ וְ/אֶל־הַ/קְּהִלָּה אֲשֶׁר בְּ/בֵיתֶךָ׃"
+      },
+      "previous_strong": "H612",
+      "new_strong": "D0204",
+      "confidence": 0.88,
+      "reason": "אַפִּיָּה is the NT proper name Apphia; no reliable Hebrew Strong entry matches it, so create a custom proper-name entry.",
+      "evidence": [
+        "occurrence=philemon.1.2.1",
+        "text=אַפִּיָּה",
+        "prefixes=none",
+        "strong=H612",
+        "lemma=אֵסוּר",
+        "definitions=band | bond",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "custom_key": "D0204",
+      "hebrew": "אפיה",
+      "transliteration_en": "Apphia",
+      "transliteration_es": "Afia",
+      "root": "",
+      "root_strong": "",
+      "definition": {
+        "text_en": "Apphia, a woman greeted with Philemon and Archippus.",
+        "text_es": "Afia, mujer saludada junto con Filemón y Arquipo.",
+        "source": "custom"
+      }
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 1,
+        "verse": 3,
+        "word_index": 3,
+        "text": "זָכְרִי",
+        "strong": "H4006",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אוֹדֶה לֵ/אלֹהָי מִדֵּי זָכְרִי אֶתְכֶם׃"
+      },
+      "previous_strong": "H4006",
+      "new_strong": "H2143",
+      "confidence": 0.91,
+      "reason": "זָכְרִי means my remembrance; H2143 זכר remembrance fits, while H4006 choice is unrelated.",
+      "evidence": [
+        "occurrence=philippians.1.3.3",
+        "text=זָכְרִי",
+        "prefixes=none",
+        "strong=H4006",
+        "lemma=מִבְחָר",
+        "definitions=choice",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 1,
+        "verse": 18,
+        "word_index": 5,
+        "text": "אוֹפָן",
+        "strong": "H212",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ מַה־בְּ/כָךְ הֲלֹא בְ/כָל־אוֹפָן אִם בַּ/עֲלִילָה אוֹ בֶ/אֱמֶת יֻגַּד הַ/מָּשִׁיחַ וַ/אֲנִי הִנְנִי שָׂמֵחַ בָּ/זֹאת וְ/גַם אֶשְׂמָח׃"
+      },
+      "previous_strong": "H212",
+      "new_strong": "H212",
+      "confidence": 0.9,
+      "reason": "אוֹפָן means manner/way; H212 אופן is correct.",
+      "evidence": [
+        "occurrence=philippians.1.18.5",
+        "text=אוֹפָן",
+        "prefixes=none",
+        "strong=H212",
+        "lemma=אוֹפָן",
+        "definitions=wheel",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 2,
+        "verse": 8,
+        "word_index": 7,
+        "text": "מִיתַת",
+        "strong": "H3509",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּשְׁפֵּל אֶת־נַפְשׁוֹ וַ/יִּכָּנַע עַד־מָוֶת עַד־מִיתַת הַ/צְּלִיבָה׃"
+      },
+      "previous_strong": "H3509",
+      "new_strong": "H4194",
+      "confidence": 0.95,
+      "reason": "מִיתַת means death of; H4194 מות is correct, while H3509 is unrelated.",
+      "evidence": [
+        "occurrence=philippians.2.8.7",
+        "text=מִיתַת",
+        "prefixes=none",
+        "strong=H3509",
+        "lemma=יְתֵת",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 2,
+        "verse": 15,
+        "word_index": 11,
+        "text": "עִקֵּשׁ",
+        "strong": "H6142",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לְ/מַעַן תִּהְיוּ נְקִיִּים וּ/טְהוֹרִים בְּ/נֵי אֱלֹהִים לֹא־מוּם בָּם בְּ/תוֹךְ דּוֹר עִקֵּשׁ וּ/פְתַלְתֹּל אֲשֶׁר־תָּאִירוּ בֵ/ינֵיהֶם כִּ/מְאוֹרוֹת בָּ/עוֹלָם׃"
+      },
+      "previous_strong": "H6142",
+      "new_strong": "H6142",
+      "confidence": 0.9,
+      "reason": "עִקֵּשׁ means crooked/perverse; H6142 עקש is correct.",
+      "evidence": [
+        "occurrence=philippians.2.15.11",
+        "text=עִקֵּשׁ",
+        "prefixes=none",
+        "strong=H6142",
+        "lemma=עִקֵּשׁ",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 2,
+        "verse": 15,
+        "word_index": 16,
+        "text": "כִּמְאוֹרוֹת",
+        "strong": "H3974",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "לְ/מַעַן תִּהְיוּ נְקִיִּים וּ/טְהוֹרִים בְּ/נֵי אֱלֹהִים לֹא־מוּם בָּם בְּ/תוֹךְ דּוֹר עִקֵּשׁ וּ/פְתַלְתֹּל אֲשֶׁר־תָּאִירוּ בֵ/ינֵיהֶם כִּ/מְאוֹרוֹת בָּ/עוֹלָם׃"
+      },
+      "previous_strong": "H3974",
+      "new_strong": "H3974",
+      "confidence": 0.9,
+      "reason": "כִּמְאוֹרוֹת means like lights/luminaries; H3974 מאור is correct.",
+      "evidence": [
+        "occurrence=philippians.2.15.16",
+        "text=כִּמְאוֹרוֹת",
+        "prefixes=Hk",
+        "strong=H3974",
+        "lemma=מָאוֹר",
+        "definitions=luminary",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 3,
+        "verse": 1,
+        "word_index": 11,
+        "text": "לָטֹרַח",
+        "strong": "Hl/H2960",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/בְ/כֵן אַחַי שִׂמְחוּ בַ/אֲדֹנֵינוּ הֵן־לִ/כְ/תֹּב וְ/לִ/שְׁנוֹת כָּ/זֹאת אֲלֵיכֶם עָלַי אֵינֶנּוּ לָ/טֹרַח וְ/לָ/כֶם הוּא לְ/חִזּוּק׃"
+      },
+      "previous_strong": "Hl/H2960",
+      "new_strong": "H2960",
+      "confidence": 0.9,
+      "reason": "לָטֹרַח means as trouble/burden; H2960 טרח is correct.",
+      "evidence": [
+        "occurrence=philippians.3.1.11",
+        "text=לָטֹרַח",
+        "prefixes=Hl",
+        "strong=H2960",
+        "lemma=טֹרַח",
+        "definitions=burden",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 3,
+        "verse": 2,
+        "word_index": 5,
+        "text": "הַפֹּעֲלִים",
+        "strong": "H4570",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הִזָּהֲרוּ מִן־הַ/כְּלָבִים הִזָּהֲרוּ מִן־הַ/פֹּעֲלִים הָ/רָעִים הִזָּהֲרוּ מִן־הַ/חִתּוּךְ בַּ/בָּשָׂר׃"
+      },
+      "previous_strong": "H4570",
+      "new_strong": "H6466",
+      "confidence": 0.92,
+      "reason": "הַפֹּעֲלִים means the workers/doers; H6466 פעל fits, while H4570 path/track is unrelated.",
+      "evidence": [
+        "occurrence=philippians.3.2.5",
+        "text=הַפֹּעֲלִים",
+        "prefixes=Hd",
+        "strong=H4570",
+        "lemma=מַעְגָּל",
+        "definitions=entrenchment | track",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 3,
+        "verse": 4,
+        "word_index": 11,
+        "text": "לִבְטֹחַ",
+        "strong": "H8102",
+        "prefixes": [
+          "Hl",
+          "Hb"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אַף כִּי־גַם־לִי יֵשׁ לִ/בְ/טֹחַ בַּ/בָּשָׂר וְ/אִם־יַחְשֹׁב אִישׁ שֶׁיּוּכַל לִ/בְ/טֹחַ בַּ/בָּשָׂר הִנֵּה אֲנִי יוֹתֵר מִמֶּנּוּ׃"
+      },
+      "previous_strong": "H8102",
+      "new_strong": "H982",
+      "confidence": 0.93,
+      "reason": "לִבְטֹחַ means to trust; H982 בטח fits, while H8102 is unrelated.",
+      "evidence": [
+        "occurrence=philippians.3.4.11",
+        "text=לִבְטֹחַ",
+        "prefixes=Hl,Hb",
+        "strong=H8102",
+        "lemma=שֶׁמֶץ",
+        "definitions=whisper",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 3,
+        "verse": 8,
+        "word_index": 20,
+        "text": "לִסְחִי",
+        "strong": "H5501",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/גַם עוֹדֶנִּי חשֵׁב אֶת כֻּ/לָּן לְ/חֶסְרוֹן לְ/עֻמַּת מַעֲלַת יְדִיעַת יֵשׁוּעַ הַ/מָּשִׁיחַ אֲדֹנִי אֲשֶׁר בַּ/עֲבוּרוֹ חִסַּרְתִּי אֶת־נַפְשִׁי מִכָּל־אֵלֶּה וָ/אֶחְשְׁבֵם לִ/סְחִי לְ/הַ/רְוִיחַ אֶת־הַ/מָּשִׁיחַ וּ/לְ/הִמָּצֵא בוֹ׃"
+      },
+      "previous_strong": "H5501",
+      "new_strong": "H5501",
+      "confidence": 0.9,
+      "reason": "לִסְחִי means as refuse/offscouring; H5501 סחי is correct.",
+      "evidence": [
+        "occurrence=philippians.3.8.20",
+        "text=לִסְחִי",
+        "prefixes=Hl",
+        "strong=H5501",
+        "lemma=סְחִי",
+        "definitions=offscouring",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 4,
+        "verse": 12,
+        "word_index": 4,
+        "text": "לְהוֹתִיר",
+        "strong": "Hl/Hd/H1956",
+        "prefixes": [
+          "Hl",
+          "Hd"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "יָדַעְתִּי לֵ/עָנוֹת אַף יָדַעְתִּי לְ/ה/וֹתִיר מְחֻנָּךְ אֲנִי בְּ/כָל־עִנְיָן וְ/אוֹפָן הֵן לִ/שְׂבֹּעַ הֵן לִ/רְעֹב הֵן לְ/ה/וֹתִיר הֵן לַ/חֲסֹר׃"
+      },
+      "previous_strong": "Hl/Hd/H1956",
+      "new_strong": "H3498",
+      "confidence": 0.9,
+      "reason": "לְהוֹתִיר means to have abundance/remain over; H3498 יתר fits, while H1956 is not the right lexical target.",
+      "evidence": [
+        "occurrence=philippians.4.12.4",
+        "text=לְהוֹתִיר",
+        "prefixes=Hl,Hd",
+        "strong=H1956",
+        "lemma=הוֹתִיר",
+        "definitions=abundance | superabundance",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 4,
+        "verse": 15,
+        "word_index": 18,
+        "text": "עֶזְרָה",
+        "strong": "H5834",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/יֹדְעִים גַּם־אַתֶּם פִילִפִּיִּים כִּי־בְ/רֵאשִׁית הַ/בְּשׂוֹרָה כְּ/צֵאתִי מִמַּקְדּוֹנְיָא לֹא־הִתְחַבְּרָה לִי אַחַת מִן־הַ/קְּהִלּוֹת בִּ/דְבַר מַתַּן וְ/קַבָּלַת עֶזְרָה כִּי אִם־אַתֶּם בִּ/לְ/בָד׃"
+      },
+      "previous_strong": "H5834",
+      "new_strong": "H5833",
+      "confidence": 0.92,
+      "reason": "עֶזְרָה means help/assistance here, not the proper name Ezra; H5833 is correct, while H5834 is a proper-name entry.",
+      "evidence": [
+        "occurrence=philippians.4.15.18",
+        "text=עֶזְרָה",
+        "prefixes=none",
+        "strong=H5834",
+        "lemma=עֶזְרָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "philippians",
+        "chapter": 4,
+        "verse": 18,
+        "word_index": 20,
+        "text": "עָרֵב",
+        "strong": "H6156",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/אֲנִי קִבַּלְתִּי אֶת־הַכֹּל וְ/יֶשׁ־לִי דַּי וְ/ה/וֹתֵר וַ/אֲנִי נִמְלֵאתִי רֵיחַ נִיחֹחַ בְּ/קַבְּלִי מִידֵי אֶפַּפְרוֹדִיטוֹס אֶת־כֹּל אֲשֶׁר־שְׁלַחְתֶּם זֶבַח עָרֵב וְ/רָצוּי לֵ/אלֹהִים׃"
+      },
+      "previous_strong": "H6156",
+      "new_strong": "H6156",
+      "confidence": 0.9,
+      "reason": "עָרֵב means sweet/pleasant; H6156 ערב is correct.",
+      "evidence": [
+        "occurrence=philippians.4.18.20",
+        "text=עָרֵב",
+        "prefixes=none",
+        "strong=H6156",
+        "lemma=עָרֵב",
+        "definitions=sweet | pleasant",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 1,
+        "verse": 6,
+        "word_index": 2,
+        "text": "לִמְלָכִים",
+        "strong": "H651",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יַּעַשׂ אֹתָנוּ לִ/מְלָכִים וְ/כֹ/הֲנִים לֵ/אלֹהִים אָבִיו לוֹ הַ/כָּבוֹד וְ/הָעֹז לְ/עוֹלְמֵי עוֹלָמִים אָמֵן׃"
+      },
+      "previous_strong": "H651",
+      "new_strong": "H4428",
+      "confidence": 0.95,
+      "reason": "לִמְלָכִים means to/for kings; H4428 מלך is correct, while H651 is unrelated.",
+      "evidence": [
+        "occurrence=revelation.1.6.2",
+        "text=לִמְלָכִים",
+        "prefixes=Hl",
+        "strong=H651",
+        "lemma=אָפֵל",
+        "definitions=gloomy",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 1,
+        "verse": 7,
+        "word_index": 4,
+        "text": "הָעֲנָנִים",
+        "strong": "H7322",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "הִנֵּה הוּא בָא עִם־הָ/עֲנָנִים וְ/רָאֲתָה אֹתוֹ כָּל־עַיִן גַּם־אֵלֶּה אֲשֶׁר דְּקָרֻהוּ וְ/סָפְדוּ עָלָיו כָּל־מִשְׁפְּחוֹת הָ/אָרֶץ כֵּן יִהְיֶה אָמֵן׃"
+      },
+      "previous_strong": "H7322",
+      "new_strong": "H6051",
+      "confidence": 0.95,
+      "reason": "הָעֲנָנִים means the clouds; H6051 ענן is correct, while H7322 is unrelated.",
+      "evidence": [
+        "occurrence=revelation.1.7.4",
+        "text=הָעֲנָנִים",
+        "prefixes=Hd",
+        "strong=H7322",
+        "lemma=רוּף",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 1,
+        "verse": 14,
+        "word_index": 3,
+        "text": "כְּצֶמֶר",
+        "strong": "H6785",
+        "prefixes": [
+          "Hk"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/רֹאשׁוֹ וּ/שְׂעָרוֹ לְ/בָ/נִים כְּ/צֶמֶר צַחַר כַּ/שָּׁלֶג וְ/עֵינָיו כְּ/לַ/בַּת אֵשׁ׃"
+      },
+      "previous_strong": "H6785",
+      "new_strong": "H6785",
+      "confidence": 0.9,
+      "reason": "כְּצֶמֶר means like wool; H6785 צמר is correct.",
+      "evidence": [
+        "occurrence=revelation.1.14.3",
+        "text=כְּצֶמֶר",
+        "prefixes=Hk",
+        "strong=H6785",
+        "lemma=צֶמֶר",
+        "definitions=wool",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 0,
+        "text": "וּמַרְגְּלֹתָיו",
+        "strong": "Hc/H4772",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מַרְגְּלֹתָיו כְּ/עֵין נְחשֶׁת קָלָל כִּ/צְרוּפוֹת בַּ/כּ/וּר וְ/קוֹלוֹ כְּ/קוֹל מַיִם רַבִּים׃"
+      },
+      "previous_strong": "Hc/H4772",
+      "new_strong": "H7272",
+      "confidence": 0.91,
+      "reason": "וּמַרְגְּלֹתָיו means and his feet; H7272 רגל fits better than H4772, which is a derivative place-at-the-feet noun.",
+      "evidence": [
+        "occurrence=revelation.1.15.0",
+        "text=וּמַרְגְּלֹתָיו",
+        "prefixes=Hc",
+        "strong=H4772",
+        "lemma=מַרְגְלָה",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 1,
+        "verse": 15,
+        "word_index": 3,
+        "text": "קָלָל",
+        "strong": "H7044",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מַרְגְּלֹתָיו כְּ/עֵין נְחשֶׁת קָלָל כִּ/צְרוּפוֹת בַּ/כּ/וּר וְ/קוֹלוֹ כְּ/קוֹל מַיִם רַבִּים׃"
+      },
+      "previous_strong": "H7044",
+      "new_strong": "H7044",
+      "confidence": 0.9,
+      "reason": "קָלָל means burnished/bright/light; H7044 is plausible in the bronze imagery.",
+      "evidence": [
+        "occurrence=revelation.1.15.3",
+        "text=קָלָל",
+        "prefixes=none",
+        "strong=H7044",
+        "lemma=קָלָל",
+        "definitions=burnished | light | quick",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 1,
+        "verse": 16,
+        "word_index": 10,
+        "text": "חַדָּה",
+        "strong": "H2299",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יְהִי־לוֹ בְּ/יַד־יְמִינוֹ שִׁבְעָה כּ/וֹכָבִים וּ/מִפִּיו יוֹצֵאת חֶרֶב פִּיפִיּוֹת חַדָּה וּ/פָנָיו כַּ/שֶּׁמֶשׁ הַ/מֵּאִיר בִּ/גְבוּרָתוֹ׃"
+      },
+      "previous_strong": "H2299",
+      "new_strong": "H2299",
+      "confidence": 0.9,
+      "reason": "חַדָּה means sharp; H2299 חד is correct.",
+      "evidence": [
+        "occurrence=revelation.1.16.10",
+        "text=חַדָּה",
+        "prefixes=none",
+        "strong=H2299",
+        "lemma=חַד",
+        "definitions=sharp",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 1,
+        "verse": 20,
+        "word_index": 17,
+        "text": "וְשֶׁבַע",
+        "strong": "Hc/H7652",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "אֶת־סוֹד שִׁבְעַת הַ/כּוֹכָבִים אֲשֶׁר רָאִיתָ בִּ/ימִינִי וְ/אֶת־שֶׁבַע מְנֹרוֹת הַ/זָּהָב שִׁבְעַת הַ/כּוֹכָבִים הֵם מַלְאֲכֵי שֶׁבַע הַ/קְּהִלּוֹת וְ/שֶׁבַע הַ/מְּנֹרוֹת אֲשֶׁר רָאִיתָ שֶׁבַע קְהִלּוֹת הֵנָּה׃"
+      },
+      "previous_strong": "Hc/H7652",
+      "new_strong": "H7651",
+      "confidence": 0.94,
+      "reason": "וְשֶׁבַע means and seven; H7651 is the numeral, while H7652 is a place-name entry.",
+      "evidence": [
+        "occurrence=revelation.1.20.17",
+        "text=וְשֶׁבַע",
+        "prefixes=Hc",
+        "strong=H7652",
+        "lemma=שֶׁבַע",
+        "definitions=in Benj. | in Gad",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 2,
+        "verse": 3,
+        "word_index": 5,
+        "text": "סַבְלָנוּת",
+        "strong": "H5310",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/אַתָּה נָשָׂאתָ הַ/רְבֵּה וְ/יֶשׁ־לְךָ סַבְלָנוּת וּ/לְ/מַעַן שְׁמִי לֹא יָעָפְתָּ׃"
+      },
+      "previous_strong": "H5310",
+      "new_strong": "D0104",
+      "confidence": 0.93,
+      "reason": "סַבְלָנוּת means patience/endurance; existing custom D0104 סבלנות fits, while H5310 scatter is unrelated.",
+      "evidence": [
+        "occurrence=revelation.2.3.5",
+        "text=סַבְלָנוּת",
+        "prefixes=none",
+        "strong=H5310",
+        "lemma=נָפַץ",
+        "definitions=shatter",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 2,
+        "verse": 5,
+        "word_index": 15,
+        "text": "וְנָסַחְתִּי",
+        "strong": "H8583",
+        "prefixes": [
+          "Hc"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "זְכֹר אֵפוֹא אֵי־מִזֶּה נָפַלְתָּ וְ/שׁוּבָה וַ/עֲשֵׂה מַעֲשֶׂיךָ הָ/רִאשׁוֹנִים וְ/אִם־לֹא הִנְנִי בָא עָלֶיךָ מַהֵר וְ/נָסַחְתִּי מְנוֹרָתְךָ מִמְּקוֹמָהּ אִם־לֹא תָשׁוּב׃"
+      },
+      "previous_strong": "H8583",
+      "new_strong": "H5255",
+      "confidence": 0.88,
+      "reason": "וְנָסַחְתִּי means I will remove/tear away; H5255 נסח fits, while H8583 is unrelated.",
+      "evidence": [
+        "occurrence=revelation.2.5.15",
+        "text=וְנָסַחְתִּי",
+        "prefixes=Hc",
+        "strong=H8583",
+        "lemma=תֹּעוּ",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 2,
+        "verse": 6,
+        "word_index": 5,
+        "text": "תִשְׂנָא",
+        "strong": "H8133",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אֲבָל זֹאת הִיא לָךְ כִּי תִשְׂנָא אֶת־מַעֲשֵׂי הַ/נִּיקְלָסִיִּים אֲשֶׁר שְׂנֵאתִים גַּם־אָנִי׃"
+      },
+      "previous_strong": "H8133",
+      "new_strong": "H8130",
+      "confidence": 0.95,
+      "reason": "תִשְׂנָא means you hate; H8130 שנא is the Hebrew verb, while H8133 is the Aramaic entry.",
+      "evidence": [
+        "occurrence=revelation.2.6.5",
+        "text=תִשְׂנָא",
+        "prefixes=none",
+        "strong=H8133",
+        "lemma=שְׁנָא",
+        "definitions=change",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 2,
+        "verse": 10,
+        "word_index": 14,
+        "text": "תְּנֻסּוּ",
+        "strong": "H1595",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַל־תִּירָא אֶת־אֲשֶׁר עָלֶיךָ לִ/סְבֹּל הִנֵּה עָתִיד הַ/מַּלְשִׁין לְ/הַ/שְׁלִיךְ מִכֶּם לְ/בֵ/ית הַ/מִּשְׁמָר לְ/מַעַן תְּנֻסּוּ וִ/הְ/יִיתֶם בַּ/צָּרָה עֲשֶׂרֶת יָמִים הֱיֵה נֶאֱמָן עַד־מָוֶת וְ/אֶתְּנָה לְךָ עֲטֶרֶת הַ/חַיִּים׃"
+      },
+      "previous_strong": "H1595",
+      "new_strong": "H5254",
+      "confidence": 0.9,
+      "reason": "תְּנֻסּוּ means you will be tested/tried; H5254 נסה fits, while H1595 treasure is unrelated.",
+      "evidence": [
+        "occurrence=revelation.2.10.14",
+        "text=תְּנֻסּוּ",
+        "prefixes=none",
+        "strong=H1595",
+        "lemma=גֶּנֶז",
+        "definitions=chests | treasury",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 2,
+        "verse": 14,
+        "word_index": 15,
+        "text": "בָּלָק",
+        "strong": "Hb/H1111",
+        "prefixes": [
+          "Hb"
+        ],
+        "possible_proper_name": true,
+        "hebrew": "אַךְ־מְעַט יֶשׁ־לִי עָלֶיךָ כִּי־שָׁם עִמְּךָ אֲנָשִׁים דְּבֵקִים בְּ/תוֹרַת בִּ/לְ/עָם אֲשֶׁר הוֹרָה אֶת־בָּ/לָק לָ/תֵת מִכְשׁוֹל לִ/פְנֵי בְ/נֵי יִשְׂרָאֵל לֶ/אֱכֹל מִזִּבְחֵי אֱלִילִים וְ/לִ/זְנוֹת׃"
+      },
+      "previous_strong": "Hb/H1111",
+      "new_strong": "H1111",
+      "confidence": 0.9,
+      "reason": "בָּלָק is Balak; H1111 is the proper-name entry.",
+      "evidence": [
+        "occurrence=revelation.2.14.15",
+        "text=בָּלָק",
+        "prefixes=Hb",
+        "strong=H1111",
+        "lemma=בָּלָק",
+        "definitions=devastator",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 2,
+        "verse": 20,
+        "word_index": 9,
+        "text": "אִיזֶבֶל",
+        "strong": "H348",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "אַךְ־מְעַט יֶשׁ־לִי עָלֶיךָ כִּי תַנִּיחַ אֶת־הָ/אִשָּׁה אִיזֶבֶל הָ/אֹמֶרֶת כִּי־הִיא נְבִיאָה לְ/לַמֵּד וּ/לְ/הַתְעוֹת אֶת־עֲבָדַי לִ/זְנוֹת וְ/לֶ/אֱכֹל זִבְחֵי אֱלִילִים׃"
+      },
+      "previous_strong": "H348",
+      "new_strong": "H348",
+      "confidence": 0.9,
+      "reason": "אִיזֶבֶל is Jezebel; H348 is the proper-name entry.",
+      "evidence": [
+        "occurrence=revelation.2.20.9",
+        "text=אִיזֶבֶל",
+        "prefixes=none",
+        "strong=H348",
+        "lemma=אִיזֶבֶל",
+        "definitions=none",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 2,
+        "verse": 23,
+        "word_index": 10,
+        "text": "כְּלָיוֹת",
+        "strong": "Hk/Hl/H3629",
+        "prefixes": [
+          "Hk",
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/הָ/רַגְתִּי בַ/מָּוֶת אֶת־בָּ/נֶיהָ וְ/יָדְעוּ כָל־הַ/קְּהִלּוֹת כִּי אֲנִי חֹקֵר כְּ/לָ/יוֹת וָ/לֵב וְ/נָתַתִּי לָ/כֶם לְ/כָל־אִישׁ כִּ/פְרִי מַעֲלָלָיו׃"
+      },
+      "previous_strong": "Hk/Hl/H3629",
+      "new_strong": "H3629",
+      "confidence": 0.9,
+      "reason": "כְּלָיוֹת means kidneys, idiomatically inner parts; H3629 is correct.",
+      "evidence": [
+        "occurrence=revelation.2.23.10",
+        "text=כְּלָיוֹת",
+        "prefixes=Hk,Hl",
+        "strong=H3629",
+        "lemma=כִּלְיָה",
+        "definitions=kidneys",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 3,
+        "verse": 5,
+        "word_index": 5,
+        "text": "אֶמְחֶה",
+        "strong": "H4229",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "הַ/מְנַצֵּחַ יִלְבַּשׁ בְּ/גָדִים לְ/בָ/נִים וְ/לֹא אֶמְחֶה אֶת־שְׁמוֹ מִסֵּפֶר הַ/חַיִּים וְ/אוֹדֶה שְׁמוֹ לִ/פְנֵי אָבִי וְ/לִ/פְנֵי מַלְאָכָיו׃"
+      },
+      "previous_strong": "H4229",
+      "new_strong": "H4229",
+      "confidence": 0.9,
+      "reason": "אֶמְחֶה means I will wipe out/blot out; H4229 מחה is correct.",
+      "evidence": [
+        "occurrence=revelation.3.5.5",
+        "text=אֶמְחֶה",
+        "prefixes=none",
+        "strong=H4229",
+        "lemma=מָחָה",
+        "definitions=wipe | wipe out",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 3,
+        "verse": 15,
+        "word_index": 14,
+        "text": "חָם׃",
+        "strong": "H2526",
+        "prefixes": [],
+        "possible_proper_name": true,
+        "hebrew": "יָדַעְתִּי אֶת־מַעֲשֶׂיךָ כִּי לֹא קַר וְ/לֹא חַם אַתָּה מִי־יִתֵּן וְ/הָ/יִיתָ קַר אוֹ־חָם׃"
+      },
+      "previous_strong": "H2526",
+      "new_strong": "H2525",
+      "confidence": 0.93,
+      "reason": "חָם here means hot, not Ham; H2525 is the adjective, while H2526 is the proper-name entry.",
+      "evidence": [
+        "occurrence=revelation.3.15.14",
+        "text=חָם׃",
+        "prefixes=none",
+        "strong=H2526",
+        "lemma=חָם",
+        "definitions=Ham | a name (coll.) for Egyptians",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 3,
+        "verse": 17,
+        "word_index": 5,
+        "text": "אוֹן",
+        "strong": "H202",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כִּי אָמַרְתָּ אַךְ עָשַׁרְתִּי מָצָאתִי אוֹן לִי וְ/לֹא חָסַרְתִּי כֹּל וְ/לֹא יָדַעְתָּ כִּי־אֻמְלַל אַתָּה וְ/דַוָּי וְ/עָנִי וְ/עִוֵּר וְ/עֵרֹם׃"
+      },
+      "previous_strong": "H202",
+      "new_strong": "H202",
+      "confidence": 0.9,
+      "reason": "אוֹן means wealth/strength in the boast of riches; H202 is correct.",
+      "evidence": [
+        "occurrence=revelation.3.17.5",
+        "text=אוֹן",
+        "prefixes=none",
+        "strong=H202",
+        "lemma=אוֹן",
+        "definitions=vigour | wealth | manly vigor | strength | wealth",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 4,
+        "verse": 4,
+        "word_index": 6,
+        "text": "הַכִּסְאוֹת",
+        "strong": "H3677",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/סָבִיב לַ/כִּ/סֵּא אַרְבָּעָה וְ/עֶשְׂרִים כִּ/סְאוֹת וְ/עַל־הַ/כִּסְאוֹת רָאִיתִי אֵת אַרְבָּעָה וְ/עֶשְׂרִים הַ/זְּקֵנִים ישְׁבִים וְ/הֵם לְ/בֻ/שֵׁי בְ/גָדִים לְ/בָ/נִים וְ/עַטְרוֹת זָהָב בְּ/רָאשֵׁיהֶם׃"
+      },
+      "previous_strong": "H3677",
+      "new_strong": "H3678",
+      "confidence": 0.94,
+      "reason": "הַכִּסְאוֹת means the thrones/seats; H3678 כסא is correct, while H3677 means full moon.",
+      "evidence": [
+        "occurrence=revelation.4.4.6",
+        "text=הַכִּסְאוֹת",
+        "prefixes=Hd",
+        "strong=H3677",
+        "lemma=כֶּסֶא",
+        "definitions=full moon",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "set_strong",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 4,
+        "verse": 5,
+        "word_index": 7,
+        "text": "לַפִּידֵי",
+        "strong": "H6365",
+        "prefixes": [
+          "Hl"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וּ/מִן־הַ/כִּסֵּא יוֹצְאִים בְּ/רָקִים וּ/רְעָמִים וְ/קוֹלוֹת וְ/שִׁבְעָה לַ/פִּידֵי אֵשׁ בֹּ/עֲרִים לִ/פְנֵי הַ/כִּסֵּא אֲשֶׁר־הֵם שִׁבְעָה רוּחוֹת הָ/אֱלֹהִים׃"
+      },
+      "previous_strong": "H6365",
+      "new_strong": "H3940",
+      "confidence": 0.93,
+      "reason": "לַפִּידֵי means torches/flames; H3940 לפיד is correct, while H6365 is unrelated.",
+      "evidence": [
+        "occurrence=revelation.4.5.7",
+        "text=לַפִּידֵי",
+        "prefixes=Hl",
+        "strong=H6365",
+        "lemma=פִּיד",
+        "definitions=ruin | disaster",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 4,
+        "verse": 6,
+        "word_index": 3,
+        "text": "זְכוּכִית",
+        "strong": "H2137",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לִ/פְנֵי הַ/כִּסֵּא יַם זְכוּכִית כְּ/עֵין הַ/קָּרַח וּ/בֵ/ין הַ/כִּסֵּא וְ/סָבִיב לַ/כִּ/סֵּא אַרְבַּע חַיּוֹת מְלֵאוֹת עֵינַיִם מִלִּפְנֵיהֶם וּ/מֵאֲחֹרֵיהֶם׃"
+      },
+      "previous_strong": "H2137",
+      "new_strong": "H2137",
+      "confidence": 0.9,
+      "reason": "זְכוּכִית means glass; H2137 is correct.",
+      "evidence": [
+        "occurrence=revelation.4.6.3",
+        "text=זְכוּכִית",
+        "prefixes=none",
+        "strong=H2137",
+        "lemma=זְכוּכִית",
+        "definitions=glass",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 4,
+        "verse": 6,
+        "word_index": 5,
+        "text": "הַקָּרַח",
+        "strong": "Hd/H7140",
+        "prefixes": [
+          "Hd"
+        ],
+        "possible_proper_name": false,
+        "hebrew": "וְ/לִ/פְנֵי הַ/כִּסֵּא יַם זְכוּכִית כְּ/עֵין הַ/קָּרַח וּ/בֵ/ין הַ/כִּסֵּא וְ/סָבִיב לַ/כִּ/סֵּא אַרְבַּע חַיּוֹת מְלֵאוֹת עֵינַיִם מִלִּפְנֵיהֶם וּ/מֵאֲחֹרֵיהֶם׃"
+      },
+      "previous_strong": "Hd/H7140",
+      "new_strong": "H7140",
+      "confidence": 0.9,
+      "reason": "הַקָּרַח means ice/crystal-like ice; H7140 קרח is correct.",
+      "evidence": [
+        "occurrence=revelation.4.6.5",
+        "text=הַקָּרַח",
+        "prefixes=Hd",
+        "strong=H7140",
+        "lemma=קֶרַח",
+        "definitions=frost | ice",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 4,
+        "verse": 7,
+        "word_index": 16,
+        "text": "מְעוֹפֵף׃",
+        "strong": "H5774",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/דְמוּת הַ/חַיָּה הָ/רִאשׁוֹנָה כְּ/אַרְיֵה וְ/הַחַיָּה הַ/שֵּׁנִית כְּ/שׁוֹר וּ/פְנֵי הַ/חַיָּה הַ/שְּׁלִישִׁית כִּ/פְנֵי אָדָם וּ/דְמוּת הַ/חַיָּה הָ/רְבִיעִית כְּ/נֶשֶׁר מְעוֹפֵף׃"
+      },
+      "previous_strong": "H5774",
+      "new_strong": "H5774",
+      "confidence": 0.9,
+      "reason": "מְעוֹפֵף means flying; H5774 עוף is correct.",
+      "evidence": [
+        "occurrence=revelation.4.7.16",
+        "text=מְעוֹפֵף׃",
+        "prefixes=none",
+        "strong=H5774",
+        "lemma=עוּף",
+        "definitions=fly",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 4,
+        "verse": 8,
+        "word_index": 12,
+        "text": "דֳּמִי",
+        "strong": "H1824",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וּ/לְ/כָל־אַחַת מֵאַרְבַּע הַ/חַיּוֹת שֵׁשׁ כְּ/נָפַיִם מִסָּבִיב וְ/לִ/פְנִימָה הֵנָּה מְלֵאוֹת עֵינָיִם וְ/אֵין־דֳּמִי לָ/הֶן יוֹמָם וָ/לַ/יְלָה וְ/אֹמְרוֹת קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהוָֹה אֱלֹהִים צְבָאוֹת הָיָה וְ/הֹוֶה וְ/יָבוֹא׃"
+      },
+      "previous_strong": "H1824",
+      "new_strong": "H1824",
+      "confidence": 0.9,
+      "reason": "דֳּמִי means rest/quiet; H1824 is correct in “no rest”.",
+      "evidence": [
+        "occurrence=revelation.4.8.12",
+        "text=דֳּמִי",
+        "prefixes=none",
+        "strong=H1824",
+        "lemma=דְּמִי",
+        "definitions=cessation | quiet | pause | rest",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "skip",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 5,
+        "verse": 9,
+        "word_index": 1,
+        "text": "שִׁיר",
+        "strong": "H7892",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "וַ/יָּשִׁירוּ שִׁיר חָדָשׁ לֵ/אמֹר לְךָ נָאֶה לָ/קַחַת אֶת־הַ/סֵּפֶר וְ/לִ/פְתֹּחַ אֶת־חוֹתָמָיו כִּי אַתָּה נִשְׁחַטְתָּ וּ/בְ/דָמְךָ קְנִיתָנוּ לֵ/אלֹהִים מִכָּל־מִשְׁפָּחָה וְ/לָ/שׁוֹן וְ/כָל־עַם וָ/גוֹי׃"
+      },
+      "previous_strong": "H7892",
+      "new_strong": "H7892",
+      "confidence": 0.9,
+      "reason": "שִׁיר means song; H7892 is correct.",
+      "evidence": [
+        "occurrence=revelation.5.9.1",
+        "text=שִׁיר",
+        "prefixes=none",
+        "strong=H7892",
+        "lemma=שִׁיר",
+        "definitions=song",
+        "codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop"
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "בעור",
+        "strong": "H1160",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בעור"
+      },
+      "previous_strong": "H1160",
+      "new_strong": "H1160",
+      "confidence": 0.9,
+      "reason": "H1160 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1160",
+      "hebrew": "בעור",
+      "transliteration_en": "Beor",
+      "transliteration_es": "Beor",
+      "definition": {
+        "text_en": "Beor, father of Balaam.",
+        "text_es": "Beor, padre de Balaam.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "באר",
+        "strong": "H875",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "באר"
+      },
+      "previous_strong": "H875",
+      "new_strong": "H875",
+      "confidence": 0.9,
+      "reason": "H875 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H875",
+      "hebrew": "באר",
+      "transliteration_en": "be’er",
+      "transliteration_es": "beer",
+      "definition": {
+        "text_en": "well; spring; pit.",
+        "text_es": "pozo; manantial; cisterna.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "רחצה",
+        "strong": "H7367",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "רחצה"
+      },
+      "previous_strong": "H7367",
+      "new_strong": "H7367",
+      "confidence": 0.9,
+      "reason": "H7367 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7367",
+      "hebrew": "רחצה",
+      "transliteration_en": "rachtsah",
+      "transliteration_es": "rajtsah",
+      "definition": {
+        "text_en": "washing; bathing.",
+        "text_es": "lavamiento; baño.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "עור",
+        "strong": "H5782",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עור"
+      },
+      "previous_strong": "H5782",
+      "new_strong": "H5782",
+      "confidence": 0.9,
+      "reason": "H5782 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5782",
+      "hebrew": "עור",
+      "transliteration_en": "ur",
+      "transliteration_es": "ur",
+      "definition": {
+        "text_en": "awake; rouse; stir up.",
+        "text_es": "despertar; avivar; incitar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "זכר",
+        "strong": "H2142",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "זכר"
+      },
+      "previous_strong": "H2142",
+      "new_strong": "H2142",
+      "confidence": 0.9,
+      "reason": "H2142 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2142",
+      "hebrew": "זכר",
+      "transliteration_en": "zakar",
+      "transliteration_es": "zajar",
+      "definition": {
+        "text_en": "remember; call to mind.",
+        "text_es": "recordar; traer a la memoria.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "ישע",
+        "strong": "H3467",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "ישע"
+      },
+      "previous_strong": "H3467",
+      "new_strong": "H3467",
+      "confidence": 0.9,
+      "reason": "H3467 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3467",
+      "hebrew": "ישע",
+      "transliteration_en": "yasha",
+      "transliteration_es": "yasha",
+      "definition": {
+        "text_en": "save; deliver; rescue.",
+        "text_es": "salvar; librar; rescatar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "מוג",
+        "strong": "H4127",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מוג"
+      },
+      "previous_strong": "H4127",
+      "new_strong": "H4127",
+      "confidence": 0.9,
+      "reason": "H4127 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4127",
+      "hebrew": "מוג",
+      "transliteration_en": "mug",
+      "transliteration_es": "mug",
+      "definition": {
+        "text_en": "melt; dissolve; faint away.",
+        "text_es": "derretirse; disolverse; desfallecer.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "זכר",
+        "strong": "H2143",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "זכר"
+      },
+      "previous_strong": "H2143",
+      "new_strong": "H2143",
+      "confidence": 0.9,
+      "reason": "H2143 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2143",
+      "hebrew": "זכר",
+      "transliteration_en": "zeker",
+      "transliteration_es": "zejer",
+      "definition": {
+        "text_en": "remembrance; memorial.",
+        "text_es": "recuerdo; memoria; memorial.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "מות",
+        "strong": "H4194",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מות"
+      },
+      "previous_strong": "H4194",
+      "new_strong": "H4194",
+      "confidence": 0.9,
+      "reason": "H4194 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4194",
+      "hebrew": "מות",
+      "transliteration_en": "maveth",
+      "transliteration_es": "mavet",
+      "definition": {
+        "text_en": "death; state of death.",
+        "text_es": "muerte; estado de muerte.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "פעל",
+        "strong": "H6466",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "פעל"
+      },
+      "previous_strong": "H6466",
+      "new_strong": "H6466",
+      "confidence": 0.9,
+      "reason": "H6466 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6466",
+      "hebrew": "פעל",
+      "transliteration_en": "paal",
+      "transliteration_es": "paal",
+      "definition": {
+        "text_en": "work; act; do.",
+        "text_es": "obrar; actuar; hacer.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "בטח",
+        "strong": "H982",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בטח"
+      },
+      "previous_strong": "H982",
+      "new_strong": "H982",
+      "confidence": 0.9,
+      "reason": "H982 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H982",
+      "hebrew": "בטח",
+      "transliteration_en": "batach",
+      "transliteration_es": "bataj",
+      "definition": {
+        "text_en": "trust; rely on; feel secure.",
+        "text_es": "confiar; apoyarse; sentirse seguro.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "יתר",
+        "strong": "H3498",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "יתר"
+      },
+      "previous_strong": "H3498",
+      "new_strong": "H3498",
+      "confidence": 0.9,
+      "reason": "H3498 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3498",
+      "hebrew": "יתר",
+      "transliteration_en": "yathar",
+      "transliteration_es": "yatar",
+      "definition": {
+        "text_en": "remain; be left over; abound.",
+        "text_es": "quedar; sobrar; abundar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "עזרה",
+        "strong": "H5833",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "עזרה"
+      },
+      "previous_strong": "H5833",
+      "new_strong": "H5833",
+      "confidence": 0.9,
+      "reason": "H5833 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5833",
+      "hebrew": "עזרה",
+      "transliteration_en": "ezrah",
+      "transliteration_es": "ezrah",
+      "definition": {
+        "text_en": "help; assistance; aid.",
+        "text_es": "ayuda; asistencia; auxilio.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "מלך",
+        "strong": "H4428",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "מלך"
+      },
+      "previous_strong": "H4428",
+      "new_strong": "H4428",
+      "confidence": 0.9,
+      "reason": "H4428 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H4428",
+      "hebrew": "מלך",
+      "transliteration_en": "melek",
+      "transliteration_es": "melej",
+      "definition": {
+        "text_en": "king; ruler.",
+        "text_es": "rey; gobernante.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "ענן",
+        "strong": "H6051",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "ענן"
+      },
+      "previous_strong": "H6051",
+      "new_strong": "H6051",
+      "confidence": 0.9,
+      "reason": "H6051 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H6051",
+      "hebrew": "ענן",
+      "transliteration_en": "anan",
+      "transliteration_es": "anan",
+      "definition": {
+        "text_en": "cloud; cloud-mass.",
+        "text_es": "nube; masa de nubes.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "רגל",
+        "strong": "H7272",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "רגל"
+      },
+      "previous_strong": "H7272",
+      "new_strong": "H7272",
+      "confidence": 0.9,
+      "reason": "H7272 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7272",
+      "hebrew": "רגל",
+      "transliteration_en": "regel",
+      "transliteration_es": "regel",
+      "definition": {
+        "text_en": "foot; feet.",
+        "text_es": "pie; pies.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "שבע",
+        "strong": "H7651",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שבע"
+      },
+      "previous_strong": "H7651",
+      "new_strong": "H7651",
+      "confidence": 0.9,
+      "reason": "H7651 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H7651",
+      "hebrew": "שבע",
+      "transliteration_en": "sheva",
+      "transliteration_es": "sheva",
+      "definition": {
+        "text_en": "seven.",
+        "text_es": "siete.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "נסח",
+        "strong": "H5255",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "נסח"
+      },
+      "previous_strong": "H5255",
+      "new_strong": "H5255",
+      "confidence": 0.9,
+      "reason": "H5255 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5255",
+      "hebrew": "נסח",
+      "transliteration_en": "nasach",
+      "transliteration_es": "nasaj",
+      "definition": {
+        "text_en": "pull away; remove; tear away.",
+        "text_es": "arrancar; quitar; separar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "שנא",
+        "strong": "H8130",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "שנא"
+      },
+      "previous_strong": "H8130",
+      "new_strong": "H8130",
+      "confidence": 0.9,
+      "reason": "H8130 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H8130",
+      "hebrew": "שנא",
+      "transliteration_en": "sane",
+      "transliteration_es": "sane",
+      "definition": {
+        "text_en": "hate; be hostile to.",
+        "text_es": "odiar; aborrecer; ser hostil.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "נסה",
+        "strong": "H5254",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "נסה"
+      },
+      "previous_strong": "H5254",
+      "new_strong": "H5254",
+      "confidence": 0.9,
+      "reason": "H5254 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H5254",
+      "hebrew": "נסה",
+      "transliteration_en": "nasah",
+      "transliteration_es": "nasah",
+      "definition": {
+        "text_en": "test; try; prove.",
+        "text_es": "probar; poner a prueba; comprobar.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "בלק",
+        "strong": "H1111",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "בלק"
+      },
+      "previous_strong": "H1111",
+      "new_strong": "H1111",
+      "confidence": 0.9,
+      "reason": "H1111 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H1111",
+      "hebrew": "בלק",
+      "transliteration_en": "Balak",
+      "transliteration_es": "Balak",
+      "definition": {
+        "text_en": "Balak, king of Moab.",
+        "text_es": "Balac, rey de Moab.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "איזבל",
+        "strong": "H348",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "איזבל"
+      },
+      "previous_strong": "H348",
+      "new_strong": "H348",
+      "confidence": 0.9,
+      "reason": "H348 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H348",
+      "hebrew": "איזבל",
+      "transliteration_en": "Jezebel",
+      "transliteration_es": "Jezabel",
+      "definition": {
+        "text_en": "Jezebel, infamous queen/name used for a corrupting figure.",
+        "text_es": "Jezabel, reina infame/nombre usado para una figura corruptora.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "כליה",
+        "strong": "H3629",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כליה"
+      },
+      "previous_strong": "H3629",
+      "new_strong": "H3629",
+      "confidence": 0.9,
+      "reason": "H3629 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3629",
+      "hebrew": "כליה",
+      "transliteration_en": "kilyah",
+      "transliteration_es": "kilyah",
+      "definition": {
+        "text_en": "kidneys; inner parts.",
+        "text_es": "riñones; partes internas.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "חם",
+        "strong": "H2525",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "חם"
+      },
+      "previous_strong": "H2525",
+      "new_strong": "H2525",
+      "confidence": 0.9,
+      "reason": "H2525 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H2525",
+      "hebrew": "חם",
+      "transliteration_en": "cham",
+      "transliteration_es": "jam",
+      "definition": {
+        "text_en": "hot; warm.",
+        "text_es": "caliente; ardiente.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "כסא",
+        "strong": "H3678",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "כסא"
+      },
+      "previous_strong": "H3678",
+      "new_strong": "H3678",
+      "confidence": 0.9,
+      "reason": "H3678 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3678",
+      "hebrew": "כסא",
+      "transliteration_en": "kisse",
+      "transliteration_es": "kise",
+      "definition": {
+        "text_en": "seat; throne.",
+        "text_es": "asiento; trono.",
+        "source": "delitzsch_review"
+      }
+    },
+    {
+      "action": "upsert_custom_definition",
+      "issue_type": "definition_review",
+      "occurrence": {
+        "book": "revelation",
+        "chapter": 0,
+        "verse": 0,
+        "word_index": 0,
+        "text": "לפיד",
+        "strong": "H3940",
+        "prefixes": [],
+        "possible_proper_name": false,
+        "hebrew": "לפיד"
+      },
+      "previous_strong": "H3940",
+      "new_strong": "H3940",
+      "confidence": 0.9,
+      "reason": "H3940 needs/benefits from a concise bilingual Delitzsch-review definition.",
+      "evidence": [
+        "supplemental bilingual definition from codex reviewed definitions batch_0054"
+      ],
+      "reviewer": "codex-desktop",
+      "strong": "H3940",
+      "hebrew": "לפיד",
+      "transliteration_en": "lappid",
+      "transliteration_es": "lapid",
+      "definition": {
+        "text_en": "torch; flame.",
+        "text_es": "antorcha; llama.",
+        "source": "delitzsch_review"
+      }
+    }
+  ]
+}
