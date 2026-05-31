@@ -8,16 +8,28 @@
   "translit_es": "jeshebon",
   "definitions": [
     {
+      "text_en": "reckoning",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0"
+    },
+    {
+      "text_en": "account",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0"
+    },
+    {
       "text_en": "account; reckoning; calculation.",
       "text_es": "cuenta; rendición de cuentas; cálculo.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 3,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 37,

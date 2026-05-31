@@ -8,16 +8,28 @@
   "translit_es": "avaebuah",
   "definitions": [
     {
+      "text_en": "blisters",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0"
+    },
+    {
+      "text_en": "boils",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0"
+    },
+    {
       "text_en": "sores; boils; inflammatory eruptions.",
       "text_es": "llagas; úlceras; erupciones inflamadas.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 3,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 2,

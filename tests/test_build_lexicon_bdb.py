@@ -5,14 +5,18 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from scripts.dict.build_lexicon import extract_bdb_definitions_with_sense
+from scripts.dict.build_lexicon import (
+    extract_bdb_definitions_with_sense,
+    preserve_existing_definition_metadata,
+)
+from scripts.dict.audit_missing_senses import gloss_matches, normalize_gloss
 from scripts.dict import validator
 
 
 BDB_NS = "http://openscriptures.github.com/morphhb/namespace"
 
 
-def test_extract_bdb_definitions_prefers_primary_homonym_and_keeps_senses():
+def test_extract_bdb_definitions_keeps_all_lexical_index_homonyms_and_senses():
     bdb_root = ET.fromstring(
         f"""
         <bdb xmlns="{BDB_NS}">
@@ -63,8 +67,8 @@ def test_extract_bdb_definitions_prefers_primary_homonym_and_keeps_senses():
         "make much",
         "many",
         "make great",
+        "shoot",
     ]
-    assert "shoot" not in texts
     assert all(text not in texts for text in ["be", "become", "much", "great"])
 
 
@@ -120,3 +124,58 @@ def test_validator_flags_fragmented_main_bdb_definitions(tmp_path, monkeypatch):
 
     assert result["count"] == 1
     assert result["samples"][0]["strong_number"] == "H7235"
+
+
+def test_missing_sense_audit_matches_normalized_glosses():
+    assert normalize_gloss("act (ruinously) corruptly") == "act corruptly"
+    assert gloss_matches("collection", {"collection, collected mass"})
+    assert not gloss_matches("collection", {"hope"})
+
+
+def test_rebuild_preserves_reviewed_definitions_and_existing_translations():
+    generated = [
+        {"text_en": "watch", "source": "bdb", "order": 1, "sense": "0"},
+        {"text_en": "guard", "source": "bdb", "order": 2, "sense": "0"},
+    ]
+    existing = [
+        {
+            "text_en": "watch",
+            "text_es": "vigilia",
+            "source": "bdb",
+            "order": 1,
+            "sense": "0",
+        },
+        {
+            "text_en": "watch; night watch period.",
+            "text_es": "vigilia; período de guardia nocturna.",
+            "source": "delitzsch_review",
+            "order": 2,
+            "sense": "0",
+        },
+    ]
+
+    merged = preserve_existing_definition_metadata(generated, existing)
+
+    assert merged[0]["text_es"] == "vigilia"
+    assert merged[2] == {
+        "text_en": "watch; night watch period.",
+        "text_es": "vigilia; período de guardia nocturna.",
+        "source": "delitzsch_review",
+        "order": 3,
+        "sense": "0",
+    }
+
+
+def test_rebuild_preserves_translations_for_collapsed_bdb_phrases():
+    generated = [
+        {"text_en": "put, place, set", "source": "bdb", "order": 1, "sense": "0"},
+    ]
+    existing = [
+        {"text_en": "put", "text_es": "poner", "source": "bdb", "order": 1, "sense": "0"},
+        {"text_en": "place", "text_es": "colocar", "source": "bdb", "order": 2, "sense": "0"},
+        {"text_en": "set", "text_es": "poner", "source": "bdb", "order": 3, "sense": "0"},
+    ]
+
+    merged = preserve_existing_definition_metadata(generated, existing)
+
+    assert merged[0]["text_es"] == "poner; colocar; poner"

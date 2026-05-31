@@ -8,16 +8,28 @@
   "translit_es": "peleg",
   "definitions": [
     {
+      "text_en": "channel",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0"
+    },
+    {
+      "text_en": "canal",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0"
+    },
+    {
       "text_en": "Peleg; ancestor in the genealogy of Jesus in Luke 3.",
       "text_es": "Peleg; antepasado en la genealogía de Jesús en Lucas 3.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 3,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 7,
