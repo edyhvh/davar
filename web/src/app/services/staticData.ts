@@ -1730,7 +1730,8 @@ const toWordAnalysis = (
 	const rootStrong =
 		customEntry?.root_strong ??
 		dictionaryEntry?.root_ref ??
-		dictionaryEntry?.root_strong;
+		dictionaryEntry?.root_strong ??
+		(dictionaryEntry ? strongNumber : undefined);
 	const rootEntry = getRootEntry(rootStrong, words, roots, custom);
 
 	const rootDefinitions = mergeUniqueDefinitions(

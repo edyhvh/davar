@@ -3,6 +3,7 @@ import {
 	resolveTranslationLookupKey,
 	resolveTranslationTarget,
 } from "../../../../shared/translationConfig";
+import { loadLexiconEntry } from "./staticData";
 
 const readJson = async (relativePath) => {
 	const filePath = new URL(`../../../public/${relativePath}`, import.meta.url);
@@ -85,6 +86,39 @@ describe("static data integrity", () => {
 
 		expect(words.H7363).toBeUndefined();
 		expect(roots.H7363).toBeDefined();
+	});
+
+	test("lexicon analysis maps entries without root_ref to self-root", async () => {
+		const originalFetch = globalThis.fetch;
+		globalThis.fetch = async (input) => {
+			const url = String(input);
+			const path = url.startsWith("/") ? url.slice(1) : url;
+			const filePath = new URL(`../../../public/${path}`, import.meta.url);
+			const file = Bun.file(filePath);
+			return new Response(await file.text(), {
+				headers: { "content-type": "application/json" },
+			});
+		};
+
+		try {
+			const rootEntry = await loadLexiconEntry("H1730", "en");
+			expect(rootEntry).toMatchObject({
+				strong_number: "H1730",
+				hebrew: "דּוֹד",
+				root: "דּוֹד",
+				root_strong: "H1730",
+			});
+
+			const derivedEntry = await loadLexiconEntry("H1732", "en");
+			expect(derivedEntry).toMatchObject({
+				strong_number: "H1732",
+				hebrew: "דָּוִד",
+				root: "דּוֹד",
+				root_strong: "H1730",
+			});
+		} finally {
+			globalThis.fetch = originalFetch;
+		}
 	});
 
 	test("1 John 1:5 custom D0208 entry has bilingual definitions", async () => {

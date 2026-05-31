@@ -241,12 +241,14 @@ export function WordCard({
 	const hasRootInfo = Boolean(
 		displayedData.root ||
 			displayedData.rootTransliteration ||
-			displayedData.rootMeaning,
+			displayedData.rootMeaning ||
+			rootStrongNumber,
 	);
 	const hasQumranRootInfo = Boolean(
 		displayedData.qumranRoot ||
 			displayedData.qumranRootTransliteration ||
-			displayedData.qumranRootMeaning,
+			displayedData.qumranRootMeaning ||
+			qumranRootStrongNumber,
 	);
 	const showQumranTab = hasQumranVariant;
 	const defaultTab = showQumran && showQumranTab ? "qumran" : "masoretic";

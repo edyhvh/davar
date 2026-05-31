@@ -236,9 +236,18 @@ const buildLexiconEntries = (bundle: DictionaryBundle): LexiconResponse[] => {
         entry.strong_number != null ? String(entry.strong_number) : "",
       hebrew: entry.lemma != null ? String(entry.lemma) : undefined,
       definitions,
-      root: entry.root != null ? String(entry.root) : undefined,
+      root:
+        entry.root != null
+          ? String(entry.root)
+          : entry.lemma != null
+            ? String(entry.lemma)
+            : undefined,
       root_strong:
-        entry.root_strong != null ? String(entry.root_strong) : undefined,
+        entry.root_strong != null
+          ? String(entry.root_strong)
+          : entry.strong_number != null
+            ? String(entry.strong_number)
+            : undefined,
       root_definitions: [],
       occurrences_count: entry.occurrences_count ?? 0,
       instances: [],
