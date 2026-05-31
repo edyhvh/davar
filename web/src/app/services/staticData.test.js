@@ -121,6 +121,33 @@ describe("static data integrity", () => {
 		}
 	});
 
+	test("QA lexicon examples include Spanish definitions", async () => {
+		const words = await readJson("data/dict/words.json");
+		const roots = await readJson("data/dict/roots.json");
+
+		expect(words.H4723.definitions.map((definition) => definition.text_es)).toEqual([
+			"esperanza",
+			"colección",
+			"masa reunida",
+		]);
+		expect(roots.H7235.definitions.at(-1)).toMatchObject({
+			text_en: "shoot",
+			text_es: "brote",
+		});
+		expect(words.H1730.definitions.map((definition) => definition.text_es)).toEqual([
+			"amado",
+			"amor",
+			"tío",
+		]);
+		expect(words.H1732.definitions.slice(0, 5).map((definition) => definition.text_es)).toEqual([
+			"olla",
+			"jarra",
+			"olla",
+			"caldera",
+			"cesta",
+		]);
+	});
+
 	test("1 John 1:5 custom D0208 entry has bilingual definitions", async () => {
 		const chapter = await readJson("data/besorah/john1/1.json");
 		const customDefinitions = await readJson(
