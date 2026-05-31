@@ -271,8 +271,10 @@ def extract_bdb_definitions_with_sense(
     bdb_ids = lexical_index.get("strong_to_bdb", {}).get(strong_number, [])
     bdb_to_def = lexical_index.get("bdb_to_def", {})
 
-    # Try direct search first (if extraction module available)
-    if EXTRACTION_AVAILABLE and extract_from_bdb:
+    # Prefer LexicalIndex-selected XML entries when available. The legacy
+    # extractor can return only top-level <def> fragments and miss nested BDB
+    # sense glosses for entries such as H7235.
+    if not bdb_ids and EXTRACTION_AVAILABLE and extract_from_bdb:
         bdb_data = extract_from_bdb(hebrew_word)
 
     # If direct search fails or module not available, search manually in XML
@@ -326,10 +328,7 @@ def extract_bdb_definitions_with_sense(
                 def extract_senses_recursive(sense_elem: ET.Element, parent_path: str = ""):
                     """Recursively extract senses with complete paths"""
                     current_path = sense_elem.get('n', '')
-                    if not current_path:
-                        return
-
-                    sense_path = f"{parent_path}{current_path}" if parent_path else current_path
+                    sense_path = f"{parent_path}{current_path}" if current_path and parent_path else current_path or parent_path
 
                     # Check if this sense has nested senses
                     nested_senses = sense_elem.findall('./bdb:sense', NS)
@@ -351,10 +350,12 @@ def extract_bdb_definitions_with_sense(
                                 sense_texts = [sense_text]
 
                     # Only add this sense if it has definitions and no nested senses,
-                    # OR if it has definitions AND nested senses (meaningful parent sense)
+                    # OR if it has definitions AND nested senses (meaningful parent sense).
+                    # Unnumbered stem wrappers (Qal/Pi/Hiph) use sense "0" for direct
+                    # defs and pass their parent path through to numbered children.
                     if sense_texts and (not has_nested or direct_defs):
                         entry_data['senses'].append({
-                            "number": sense_path,
+                            "number": sense_path or "0",
                             "definitions": sense_texts
                         })
 
@@ -494,9 +495,14 @@ def extract_bdb_definitions_with_sense(
             main_defs = bdb_entry['definitions']
             bdb_id = bdb_entry.get('id', '')
 
-            # Only use LexicalIndex override when there are MULTIPLE BDB entries for this Strong's number
-            # This avoids collapsing valid single-word synonyms from a single BDB entry
-            if valid_bdb_count > 1 and is_single_word_fragments(main_defs) and bdb_id and bdb_id in bdb_to_def:
+            # Use LexicalIndex gloss when BDB's top-level <def> values are
+            # fragment tokens from one gloss (e.g. "be", "become", "much").
+            if (
+                is_single_word_fragments(main_defs)
+                and bdb_id
+                and bdb_id in bdb_to_def
+                and len(bdb_to_def[bdb_id].split()) > 1
+            ):
                 # Use LexicalIndex <def> as the single main definition
                 lex_gloss = bdb_to_def[bdb_id]
                 def_key = ("0", lex_gloss.lower())
@@ -656,12 +662,18 @@ def build_lexicon_entry(strong_number: str, bdb_root, update_existing: bool = Fa
         output_draft = config.LEXICON_DRAFT_DIR
         output_roots = config.LEXICON_ROOTS_DIR
 
-    # Check if entry exists
-    entry_file = output_draft / f"{strong_number}.json"
+    # Check if entry exists. Update mode must look in both directories because
+    # roots are saved under roots/ and words under words/.
     existing_entry = {}
-    if entry_file.exists() and update_existing and not testing_mode:
-        with open(entry_file, 'r', encoding='utf-8') as f:
-            existing_entry = json.load(f)
+    if update_existing and not testing_mode:
+        for entry_file in (
+            output_draft / f"{strong_number}.json",
+            output_roots / f"{strong_number}.json",
+        ):
+            if entry_file.exists():
+                with open(entry_file, 'r', encoding='utf-8') as f:
+                    existing_entry = json.load(f)
+                break
 
     if strong_number not in strongs_data:
         return {}
