@@ -3,7 +3,7 @@ import {
 	resolveTranslationLookupKey,
 	resolveTranslationTarget,
 } from "../../../../shared/translationConfig";
-import { loadLexiconEntry } from "./staticData";
+import { getChapterVerses, loadLexiconEntry } from "./staticData";
 
 const readJson = async (relativePath) => {
 	const filePath = new URL(`../../../public/${relativePath}`, import.meta.url);
@@ -230,6 +230,32 @@ describe("static data integrity", () => {
 		expect(displayedVerse2).toBe(
 			chapter.verses.find((item) => item.verse === 1)?.bes,
 		);
+	});
+
+	test("Spanish Deuteronomy partial TTH gaps use normalized TTH text", async () => {
+		const originalFetch = globalThis.fetch;
+		globalThis.fetch = async (input) => {
+			const url = String(input);
+			const path = url.startsWith("/") ? url.slice(1) : url;
+			const filePath = new URL(`../../../public/${path}`, import.meta.url);
+			const file = Bun.file(filePath);
+			return new Response(await file.text(), {
+				headers: { "content-type": "application/json" },
+			});
+		};
+
+		try {
+			const verses = await getChapterVerses("deuteronomy", 1, {
+				language: "es",
+			});
+			const verse10 = verses.find((item) => item.verse === 10);
+
+			expect(verse10?.translation).toBe(
+				"\u2067יהוה\u2069 su Elohim los ha multiplicado, y he aquí ustedes, hoy <em>son</em> como las estrellas del cielo, por multitud.",
+			);
+		} finally {
+			globalThis.fetch = originalFetch;
+		}
 	});
 
 	test("English and Spanish both honor versification shifts", () => {

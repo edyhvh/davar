@@ -606,6 +606,94 @@ class TTH2MdToJson:
 
         return segments
 
+    def split_known_merged_verses(self, chapters: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        Normalize source places where verse markers were lost entirely.
+
+        These are deterministic TTH source conversion defects. They are handled
+        here instead of at runtime so generated TTH JSON has one record per
+        verse and app fallback logic does not substitute BES unnecessarily.
+        """
+        if self.book_key != 'devarim':
+            return chapters
+
+        replacements: Dict[Tuple[int, int], List[Dict[str, Any]]] = {
+            (1, 9): [
+                {
+                    'verse': 9,
+                    'tth': 'Y hablé a ustedes en ese tiempo, diciendo: “No puedo yo solo cargar *los* a ustedes.',
+                    'footnotes': [],
+                    'hebrew_terms': [],
+                },
+                {
+                    'verse': 10,
+                    'tth': 'יהוה su Elohim los ha multiplicado, y he aquí ustedes, hoy *son* como las estrellas del cielo, por multitud.',
+                    'footnotes': [],
+                    'hebrew_terms': [],
+                },
+                {
+                    'verse': 11,
+                    'tth': 'יהוה, Elohim de sus padres, *los* aumente a ustedes, conforme son, mil veces, y los bendiga como *les* ha hablado a ustedes.',
+                    'footnotes': [],
+                    'hebrew_terms': [],
+                },
+            ],
+            (5, 1): [
+                {
+                    'verse': 1,
+                    'tth': 'Y llamó Moshéh a todo Israel, y dijo a ellos: Escucha Israel los decretos⁵⁴ y los procesos legales⁵⁵ que yo hablo en sus oídos hoy, para que los aprendan y guarden para hacerlos.',
+                    'footnotes': [
+                        {
+                            'marker': '⁵⁴',
+                            'number': '54',
+                            'word': 'decretos',
+                            'explanation': 'Heb.: Jukim.',
+                        },
+                        {
+                            'marker': '⁵⁵',
+                            'number': '55',
+                            'word': 'legales',
+                            'explanation': 'Heb.: Mishpatim.',
+                        },
+                    ],
+                    'hebrew_terms': [],
+                },
+                {
+                    'verse': 2,
+                    'tth': 'יהוה Elohim nuestro ha hecho⁵⁶ con nosotros un pacto en Joreb.',
+                    'footnotes': [
+                        {
+                            'marker': '⁵⁶',
+                            'number': '56',
+                            'word': 'hecho',
+                            'explanation': 'Lit.: cortado. Así también en vers. 3.',
+                        },
+                    ],
+                    'hebrew_terms': [],
+                },
+            ],
+        }
+
+        normalized_chapters: List[Dict[str, Any]] = []
+        for chapter_data in chapters:
+            chapter_num = chapter_data.get('chapter')
+            normalized_verses: List[Dict[str, Any]] = []
+
+            for verse_data in chapter_data.get('verses', []):
+                verse_num = verse_data.get('verse')
+                replacement = replacements.get((chapter_num, verse_num))
+                if replacement:
+                    normalized_verses.extend(replacement)
+                else:
+                    normalized_verses.append(verse_data)
+
+            normalized_chapters.append({
+                **chapter_data,
+                'verses': normalized_verses,
+            })
+
+        return normalized_chapters
+
     def should_merge_regressed_marker_as_continuation(
         self,
         candidate_num: int,
@@ -946,6 +1034,7 @@ class TTH2MdToJson:
         self.reset_book_footnote_numbering()
         chapters = self.parse_chapters_and_verses(
             markdown_text, verbose=verbose)
+        chapters = self.split_known_merged_verses(chapters)
         if verbose:
             print(f"✓")
 
