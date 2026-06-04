@@ -8,16 +8,51 @@
   "translit_es": "mideyan",
   "definitions": [
     {
+      "text_en": "strife",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "contienda"
+    },
+    {
+      "text_en": "contention",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "contienda"
+    },
+    {
+      "text_en": "strife",
+      "source": "bdb",
+      "order": 3,
+      "sense": "1",
+      "text_es": "contienda"
+    },
+    {
+      "text_en": "contention",
+      "source": "bdb",
+      "order": 4,
+      "sense": "1",
+      "text_es": "contienda"
+    },
+    {
+      "text_en": "object of contention",
+      "source": "bdb",
+      "order": 5,
+      "sense": "2",
+      "text_es": "objeto de contienda"
+    },
+    {
       "text_en": "contentions; disputes; strife.",
       "text_es": "contiendas; disputas; conflictos.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 6,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 3,

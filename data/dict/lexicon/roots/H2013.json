@@ -8,16 +8,37 @@
   "translit_es": "hasah",
   "definitions": [
     {
+      "text_en": "hush!",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "¡silencio!"
+    },
+    {
+      "text_en": "keep silence",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "guardar silencio"
+    },
+    {
+      "text_en": "stilled",
+      "source": "bdb",
+      "order": 3,
+      "sense": "0",
+      "text_es": "silenciado"
+    },
+    {
       "text_en": "silence; quiet; hush.",
       "text_es": "silenciar; callar; hacer guardar silencio.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 4,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 8,

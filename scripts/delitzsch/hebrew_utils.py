@@ -8,6 +8,10 @@ from typing import Tuple, Optional
 
 # Unicode ranges for Hebrew nikud (vowel points and accents)
 NIKUD_PATTERN = re.compile(r'[\u0591-\u05BD\u05BF-\u05C7]')
+HEBREW_MARK_PATTERN = re.compile(r'[\u0591-\u05BD\u05BF-\u05C7]')
+SIN_DOT = '\u05c2'
+HOLEM = '\u05b9'
+SHIN = '\u05e9'
 
 # Hebrew final forms mapping for normalization
 FINAL_FORMS = {
@@ -20,6 +24,30 @@ FINAL_FORMS = {
 
 # Maqaf (Hebrew hyphen) character
 MAQAF = '\u05be'
+
+
+def _previous_hebrew_base(text: str, mark_index: int) -> Optional[str]:
+    """Return the base Hebrew letter that owns a combining mark."""
+    for index in range(mark_index - 1, -1, -1):
+        char = text[index]
+        if HEBREW_MARK_PATTERN.fullmatch(char):
+            continue
+        return char
+    return None
+
+
+def normalize_delitzsch_holem(text: str) -> str:
+    """
+    Replace Delitzsch's corrupted sin-dot-as-holem encoding.
+
+    The source text frequently uses U+05C2 where Hebrew needs U+05B9. Keep
+    U+05C2 only when it belongs to shin (שׂ), where it is a real sin dot.
+    """
+    chars = list(text)
+    for index, char in enumerate(chars):
+        if char == SIN_DOT and _previous_hebrew_base(text, index) != SHIN:
+            chars[index] = HOLEM
+    return ''.join(chars)
 
 
 def strip_nikud(text):

@@ -8,16 +8,30 @@
   "translit_es": "rejov",
   "definitions": [
     {
+      "text_en": "broad open place",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "lugar amplio y abierto"
+    },
+    {
+      "text_en": "plaza",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "plaza"
+    },
+    {
       "text_en": "street; broad place; public square.",
       "text_es": "calle; lugar ancho; plaza pública.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 3,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 41,

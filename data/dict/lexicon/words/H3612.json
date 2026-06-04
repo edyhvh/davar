@@ -6,10 +6,31 @@
   "transliteration": "Kâlêb",
   "translit_en": "kalev",
   "translit_es": "kalev",
-  "definitions": [],
+  "definitions": [
+    {
+      "text_en": "dog",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "perro"
+    },
+    {
+      "text_en": "my sheep-dogs",
+      "source": "bdb",
+      "order": 2,
+      "sense": "a"
+    },
+    {
+      "text_en": "a dead dog",
+      "source": "bdb",
+      "order": 3,
+      "sense": "b",
+      "text_es": "un perro muerto"
+    }
+  ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 35,

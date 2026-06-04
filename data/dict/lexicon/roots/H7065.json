@@ -8,16 +8,64 @@
   "translit_es": "kana",
   "definitions": [
     {
+      "text_en": "be jealous",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "tener celos"
+    },
+    {
+      "text_en": "zealous",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0"
+    },
+    {
+      "text_en": "be jealous of",
+      "source": "bdb",
+      "order": 3,
+      "sense": "1",
+      "text_es": "tener celos de"
+    },
+    {
+      "text_en": "be envious of",
+      "source": "bdb",
+      "order": 4,
+      "sense": "2",
+      "text_es": "tener envidia de"
+    },
+    {
+      "text_en": "be zealous",
+      "source": "bdb",
+      "order": 5,
+      "sense": "3",
+      "text_es": "ser celoso"
+    },
+    {
+      "text_en": "excite to jealous anger",
+      "source": "bdb",
+      "order": 6,
+      "sense": "4",
+      "text_es": "provocar a celos"
+    },
+    {
+      "text_en": "provoke to jealous anger",
+      "source": "bdb",
+      "order": 7,
+      "sense": "0",
+      "text_es": "provocar a celos"
+    },
+    {
       "text_en": "be jealous; envy; be zealous.",
       "text_es": "tener celos; envidiar; ser celoso.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 8,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 28,

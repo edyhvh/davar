@@ -612,6 +612,8 @@ const loadStaticTranslationsForChapter = async (
 ): Promise<LoadedStaticTranslations> => {
   const translationMap = new Map<string, TranslationEntry>();
   const translationTitleMap = new Map<number, string>();
+  const hasTranslationText = (entry?: TranslationEntry): boolean =>
+    Boolean(entry?.text.trim());
   const requiredTranslationChapters = getRequiredTranslationChapters(
     bookId,
     sourceVerses.map((verse) => ({ chapter: verse.chapter, verse: verse.verse })),
@@ -660,37 +662,42 @@ const loadStaticTranslationsForChapter = async (
       }
     }
 
-    // If TTH_2 didn't load or book not in TTH_2, try BES fallback
-    if (translationMap.size === 0) {
-      try {
-        const translationBook = await staticDataRequest<StaticTranslationBook>(
-          `bes/${bookId}.json`,
+    // Fill genuinely missing TTH verses from BES.
+    try {
+      const translationBook = await staticDataRequest<StaticTranslationBook>(
+        `bes/${bookId}.json`,
+      );
+
+      for (const translationChapter of requiredTranslationChapters) {
+        const chapterData = (translationBook.chapters ?? []).find(
+          (item) => item.chapter === translationChapter,
         );
 
-        for (const translationChapter of requiredTranslationChapters) {
-          const chapterData = (translationBook.chapters ?? []).find(
-            (item) => item.chapter === translationChapter,
-          );
+        if (!chapterData?.verses) {
+          continue;
+        }
 
-          if (!chapterData?.verses) {
-            continue;
-          }
+        if (
+          !translationTitleMap.has(translationChapter) &&
+          typeof chapterData.title === "string" &&
+          chapterData.title.trim()
+        ) {
+          translationTitleMap.set(translationChapter, chapterData.title.trim());
+        }
 
-          if (typeof chapterData.title === "string" && chapterData.title.trim()) {
-            translationTitleMap.set(translationChapter, chapterData.title.trim());
-          }
-
-          for (const verse of chapterData.verses) {
+        for (const verse of chapterData.verses) {
+          const key = `${translationChapter}-${verse.verse}`;
+          if (!hasTranslationText(translationMap.get(key))) {
             const text = verse.bes ?? "";
-            translationMap.set(`${translationChapter}-${verse.verse}`, {
+            translationMap.set(key, {
               text,
               footnotes: parseTranslationFootnotes(verse.footnotes),
             });
           }
         }
-      } catch {
-        // Translation is optional; return SQLite fallback below when available.
       }
+    } catch {
+      // Translation is optional; return SQLite fallback below when available.
     }
   } else if (language === "en") {
     // Load TS2009 from static chapter JSON (same source as web)

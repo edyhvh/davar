@@ -6,10 +6,32 @@
   "transliteration": "Geshem",
   "translit_en": "geshem",
   "translit_es": "geshem",
-  "definitions": [],
+  "definitions": [
+    {
+      "text_en": "be rained upon",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "recibir lluvia"
+    },
+    {
+      "text_en": "cause",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "causar"
+    },
+    {
+      "text_en": "send rain",
+      "source": "bdb",
+      "order": 3,
+      "sense": "0",
+      "text_es": "enviar lluvia"
+    }
+  ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 4,

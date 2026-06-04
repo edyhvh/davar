@@ -256,13 +256,40 @@ def check_empty_senses(bdb_root) -> Dict:
 
 def check_incomplete_sense_hierarchy() -> Dict:
     """
-    Check for files with incomplete sense hierarchy (e.g., 'a' instead of '1a')
-    
-    NOTE: Single-letter senses at top level (e.g., 'a', 'b', 'c') are VALID in BDB XML
-    when they are top-level senses. We only flag them if they appear alongside
-    numeric senses, which suggests they should be hierarchical.
+    Check for files with BDB sense values that are not present in source XML.
+
+    Single-letter senses can be valid top-level BDB senses even when numeric
+    senses also exist elsewhere in the same mapped Strong's entry. Validate
+    against the source BDB paths instead of guessing from the generated values.
     """
+    from build_lexicon import find_bdb_entry_by_id, load_lexical_index
+
+    lexical_index = load_lexical_index()
+    strong_to_bdb = lexical_index.get("strong_to_bdb", {})
+    bdb_root = load_bdb_xml()
     files_with_incomplete = []
+
+    def bdb_sense_paths(strong_number: str) -> Set[str]:
+        paths = {"0"}
+        if bdb_root is None:
+            return paths
+
+        def process_sense_recursive(sense_elem: ET.Element, parent_path: str = ""):
+            current_n = sense_elem.get("n", "")
+            sense_path = f"{parent_path}{current_n}" if current_n and parent_path else current_n or parent_path
+            if sense_path:
+                paths.add(sense_path)
+            for nested_sense in sense_elem.findall('./bdb:sense', NS):
+                process_sense_recursive(nested_sense, sense_path)
+
+        for bdb_id in strong_to_bdb.get(strong_number, []):
+            entry = find_bdb_entry_by_id(bdb_root, bdb_id)
+            if entry is None:
+                continue
+            for sense in entry.findall('./bdb:sense', NS):
+                process_sense_recursive(sense)
+
+        return paths
     
     for filepath in list(config.LEXICON_WORDS_DIR.glob("H*.json")) + list(config.LEXICON_ROOTS_DIR.glob("H*.json")):
         try:
@@ -273,30 +300,20 @@ def check_incomplete_sense_hierarchy() -> Dict:
             if not definitions:
                 continue
             
-            # Get all BDB senses
-            bdb_senses = [d.get('sense', '') for d in definitions if d.get('source') == 'bdb']
-            
-            # Check if we have numeric senses (excluding "0" which is our convention for main defs)
-            # and single-letter senses. Single letters are valid as top-level senses,
-            # but if they appear with numeric senses (1, 2, 3...), they should be hierarchical
-            has_numeric_sense = any(s and s[0].isdigit() and s != "0" for s in bdb_senses)
-            has_single_letter = any(s and len(s) == 1 and s.isalpha() and s.islower() for s in bdb_senses)
-            
-            # Only flag if we have BOTH numeric senses (1+) and single-letter senses
-            # (meaning single letters are likely nested, not top-level)
-            # Note: "0" + single letters is VALID (single letters are top-level senses)
-            if has_numeric_sense and has_single_letter:
-                # Find the problematic definitions
-                for defn in definitions:
-                    if defn.get('source') == 'bdb':
-                        sense = defn.get('sense', '')
-                        if sense and len(sense) == 1 and sense.isalpha() and sense.islower():
-                            files_with_incomplete.append({
-                                'file': filepath.name,
-                                'sense': sense,
-                                'definition': defn.get('text', '')[:50]
-                            })
-                            break
+            strong_number = data.get("strong_number", filepath.stem)
+            valid_paths = bdb_sense_paths(strong_number)
+
+            for defn in definitions:
+                if defn.get('source') != 'bdb':
+                    continue
+                sense = defn.get('sense', '')
+                if sense and sense not in valid_paths:
+                    files_with_incomplete.append({
+                        'file': filepath.name,
+                        'sense': sense,
+                        'definition': (defn.get('text_en') or defn.get('text') or '')[:50]
+                    })
+                    break
         except Exception:
             pass
     
@@ -306,8 +323,95 @@ def check_incomplete_sense_hierarchy() -> Dict:
     }
 
 
+def check_fragmented_main_bdb_definitions() -> Dict:
+    """Check for sense 0 BDB definitions that are only single-word fragments."""
+    from build_lexicon import find_bdb_entry_by_id, load_lexical_index
+
+    lexical_index = load_lexical_index()
+    strong_to_bdb = lexical_index.get("strong_to_bdb", {})
+    bdb_to_def = lexical_index.get("bdb_to_def", {})
+    bdb_root = load_bdb_xml()
+    files_with_fragments = []
+
+    def definition_text(defn: Dict) -> str:
+        return (defn.get("text_en") or defn.get("text") or "").strip()
+
+    def is_single_word(text: str) -> bool:
+        return bool(text) and len(text.split()) == 1 and "," not in text and ";" not in text
+
+    def primary_bdb_ids(strong_number: str) -> List[str]:
+        bdb_ids = strong_to_bdb.get(strong_number, [])
+        if not bdb_ids or bdb_root is None:
+            return bdb_ids
+
+        entries = []
+        for bdb_id in bdb_ids:
+            entry = find_bdb_entry_by_id(bdb_root, bdb_id)
+            if entry is not None:
+                entries.append(entry)
+
+        if len(entries) <= 1:
+            return [entry.get("id", "") for entry in entries] or bdb_ids
+
+        mod_to_entries = {}
+        for entry in entries:
+            mod = entry.get("mod", "I")
+            mod_to_entries.setdefault(mod, []).append(entry)
+
+        if "I" in mod_to_entries:
+            selected = mod_to_entries["I"]
+        elif "" in mod_to_entries:
+            selected = mod_to_entries[""]
+        else:
+            selected = mod_to_entries[sorted(mod_to_entries.keys())[0]]
+
+        return [entry.get("id", "") for entry in selected]
+
+    def has_combined_primary_lexical_gloss(strong_number: str) -> bool:
+        return any(
+            len(bdb_to_def.get(bdb_id, "").strip().split()) > 1
+            for bdb_id in primary_bdb_ids(strong_number)
+        )
+
+    for filepath in list(config.LEXICON_WORDS_DIR.glob("H*.json")) + list(config.LEXICON_ROOTS_DIR.glob("H*.json")):
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+
+            strong_number = data.get("strong_number", filepath.stem)
+            sense_zero_defs = [
+                definition_text(defn)
+                for defn in data.get("definitions", [])
+                if defn.get("source") == "bdb" and defn.get("sense") == "0"
+            ]
+            sense_zero_defs = [text for text in sense_zero_defs if text]
+
+            if (
+                len(sense_zero_defs) >= 3
+                and all(is_single_word(text) for text in sense_zero_defs)
+                and has_combined_primary_lexical_gloss(strong_number)
+            ):
+                files_with_fragments.append({
+                    "file": filepath.name,
+                    "strong_number": strong_number,
+                    "definitions": sense_zero_defs[:8],
+                })
+        except Exception:
+            pass
+
+    return {
+        'count': len(files_with_fragments),
+        'samples': files_with_fragments[:10]
+    }
+
+
 def check_etymological_definitions(bdb_root) -> Dict:
     """Check for entries with etymological-looking definitions"""
+    from build_lexicon import find_bdb_entry_by_id, load_lexical_index
+
+    lexical_index = load_lexical_index()
+    strong_to_bdb = lexical_index.get("strong_to_bdb", {})
+
     etymological_patterns = [
         r'^(strong|be in front|go to and fro|stretch out|reach after|swear)',
         r'^(the one whom|trepide confugere)',
@@ -342,7 +446,7 @@ def check_etymological_definitions(bdb_root) -> Dict:
             
             for defn in definitions:
                 if defn.get('source') == 'bdb':
-                    def_text = defn.get('text', '')
+                    def_text = defn.get('text_en') or defn.get('text') or ''
                     sense = defn.get('sense', '')
                     
                     if looks_etymological(def_text) and sense == "0":
@@ -359,20 +463,25 @@ def check_etymological_definitions(bdb_root) -> Dict:
                     'reason': f"{etymological_count} etymological-looking definitions",
                     'examples': etymological_defs[:3]
                 })
-            elif sense_0_count >= 5 and bdb_root:
-                # Check if BDB entry has main definitions
-                # Import here to avoid circular dependency
-                from build_lexicon import find_bdb_entry
-                bdb_entry = find_bdb_entry(hebrew_word, bdb_root)
-                if bdb_entry:
-                    main_defs = bdb_entry.findall('./bdb:def', NS)
-                    if len(main_defs) == 0:
-                        files_with_etymological.append({
-                            'file': filepath.name,
-                            'strong_number': data.get('strong_number', filepath.stem),
-                            'reason': f"{sense_0_count} sense '0' definitions but BDB has no main defs",
-                            'examples': []
-                        })
+            elif sense_0_count >= 5 and bdb_root is not None:
+                strong_number = data.get('strong_number', filepath.stem)
+                source_has_main_defs = False
+
+                for bdb_id in strong_to_bdb.get(strong_number, []):
+                    bdb_entry = find_bdb_entry_by_id(bdb_root, bdb_id)
+                    if bdb_entry is None:
+                        continue
+                    if bdb_entry.findall('./bdb:def', NS):
+                        source_has_main_defs = True
+                        break
+
+                if strong_to_bdb.get(strong_number) and not source_has_main_defs:
+                    files_with_etymological.append({
+                        'file': filepath.name,
+                        'strong_number': strong_number,
+                        'reason': f"{sense_0_count} sense '0' definitions but mapped BDB has no main defs",
+                        'examples': []
+                    })
         except Exception:
             pass
     
@@ -459,7 +568,7 @@ def main():
     bdb_root = load_bdb_xml()
     print(f"   ✅ Strong's entries: {len(strongs_data)}")
     print(f"   ✅ Strong's references: {len(strong_refs)}")
-    print(f"   ✅ BDB XML: {'Loaded' if bdb_root else 'Not found'}")
+    print(f"   ✅ BDB XML: {'Loaded' if bdb_root is not None else 'Not found'}")
     
     # Get all files
     print("\n📁 Scanning files...")
@@ -474,11 +583,13 @@ def main():
     empty_senses = check_empty_senses(bdb_root)
     missing_fields = check_missing_fields()
     incomplete_senses = check_incomplete_sense_hierarchy()
+    fragmented_defs = check_fragmented_main_bdb_definitions()
     etymological_defs = check_etymological_definitions(bdb_root)
     missing_defs = check_missing_definitions()
     
     print(f"   Files with empty sense strings: {empty_senses['count']}")
     print(f"   Files with incomplete sense hierarchy: {incomplete_senses['count']}")
+    print(f"   Files with fragmented BDB main definitions: {fragmented_defs['count']}")
     print(f"   Files with etymological definitions: {etymological_defs['count']}")
     print(f"   Files missing occurrences: {missing_fields['missing_occurrences']}")
     print(f"   Files missing sources: {missing_fields['missing_sources']}")
@@ -489,6 +600,12 @@ def main():
         print("\n⚠️  Sample incomplete sense hierarchy:")
         for sample in incomplete_senses['samples'][:5]:
             print(f"      {sample['file']}: sense='{sample['sense']}' ({sample['definition']})")
+
+    if fragmented_defs['count'] > 0:
+        print("\n⚠️  Sample fragmented BDB main definitions:")
+        for sample in fragmented_defs['samples'][:5]:
+            examples = ", ".join(sample['definitions'][:5])
+            print(f"      {sample['file']}: {examples}")
     
     if etymological_defs['count'] > 0:
         print("\n⚠️  Sample etymological definitions:")
@@ -578,6 +695,7 @@ def main():
     
     print("\n🔍 SENSE HIERARCHY VALIDATION:")
     print(f"   Files with incomplete sense hierarchy: {incomplete_senses['count']}")
+    print(f"   Files with fragmented BDB main definitions: {fragmented_defs['count']}")
     print(f"   Files with etymological definitions: {etymological_defs['count']}")
     
     print("\n📚 DEFINITIONS VALIDATION:")
@@ -614,4 +732,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -103,9 +103,11 @@ def load_lexical_index() -> Dict:
         Dictionary with two keys:
         - 'strong_to_bdb': Maps Strong's numbers to list of BDB ids
         - 'bdb_to_def': Maps BDB ids to LexicalIndex <def> text
+        - 'bdb_to_pos': Maps BDB ids to LexicalIndex part of speech
+        - 'strong_bdb_to_defs': Maps Strong's+BDB ids to all LexicalIndex defs
     """
     if not config.LEXICAL_INDEX.exists():
-        return {"strong_to_bdb": {}, "bdb_to_def": {}}
+        return {"strong_to_bdb": {}, "bdb_to_def": {}, "bdb_to_pos": {}, "strong_bdb_to_defs": {}}
 
     try:
         tree = ET.parse(config.LEXICAL_INDEX)
@@ -114,10 +116,13 @@ def load_lexical_index() -> Dict:
         li_ns = {'li': 'http://openscriptures.github.com/morphhb/namespace'}
         strong_to_bdb: Dict[str, List[str]] = {}
         bdb_to_def: Dict[str, str] = {}
+        bdb_to_pos: Dict[str, str] = {}
+        strong_bdb_to_defs: Dict[str, Dict[str, List[str]]] = {}
 
         for entry in root.findall('.//li:entry', li_ns):
             xref = entry.find('li:xref', li_ns)
             def_elem = entry.find('li:def', li_ns)
+            pos_elem = entry.find('li:pos', li_ns)
 
             if xref is not None:
                 strong = xref.get('strong')
@@ -125,6 +130,10 @@ def load_lexical_index() -> Dict:
 
                 if strong and bdb:
                     strong_key = f"H{strong}"
+                    pos = pos_elem.text.strip() if pos_elem is not None and pos_elem.text else ""
+
+                    if pos == "Np":
+                        continue
 
                     # Build strong_to_bdb mapping
                     if strong_key not in strong_to_bdb:
@@ -134,12 +143,23 @@ def load_lexical_index() -> Dict:
 
                     # Build bdb_to_def mapping (capture the <def> text for this BDB entry)
                     if def_elem is not None and def_elem.text and bdb:
-                        bdb_to_def[bdb] = def_elem.text.strip()
+                        gloss = def_elem.text.strip()
+                        bdb_to_def.setdefault(bdb, gloss)
+                        strong_bdb_to_defs.setdefault(strong_key, {}).setdefault(bdb, [])
+                        if gloss not in strong_bdb_to_defs[strong_key][bdb]:
+                            strong_bdb_to_defs[strong_key][bdb].append(gloss)
+                    if pos:
+                        bdb_to_pos[bdb] = pos
 
-        return {"strong_to_bdb": strong_to_bdb, "bdb_to_def": bdb_to_def}
+        return {
+            "strong_to_bdb": strong_to_bdb,
+            "bdb_to_def": bdb_to_def,
+            "bdb_to_pos": bdb_to_pos,
+            "strong_bdb_to_defs": strong_bdb_to_defs,
+        }
     except Exception as e:
         print(f"Error loading lexical index: {e}")
-        return {"strong_to_bdb": {}, "bdb_to_def": {}}
+        return {"strong_to_bdb": {}, "bdb_to_def": {}, "bdb_to_pos": {}, "strong_bdb_to_defs": {}}
 
 
 def normalize_definition_text(text: str) -> str:
@@ -268,11 +288,15 @@ def extract_bdb_definitions_with_sense(
     hebrew_normalized = re.sub(r'[\u0591-\u05C7]', '', hebrew_word)
 
     bdb_data = None
+    using_lexical_mapped_entries = False
     bdb_ids = lexical_index.get("strong_to_bdb", {}).get(strong_number, [])
     bdb_to_def = lexical_index.get("bdb_to_def", {})
+    strong_bdb_to_defs = lexical_index.get("strong_bdb_to_defs", {})
 
-    # Try direct search first (if extraction module available)
-    if EXTRACTION_AVAILABLE and extract_from_bdb:
+    # Prefer LexicalIndex-selected XML entries when available. The legacy
+    # extractor can return only top-level <def> fragments and miss nested BDB
+    # sense glosses for entries such as H7235.
+    if not bdb_ids and EXTRACTION_AVAILABLE and extract_from_bdb:
         bdb_data = extract_from_bdb(hebrew_word)
 
     # If direct search fails or module not available, search manually in XML
@@ -326,10 +350,7 @@ def extract_bdb_definitions_with_sense(
                 def extract_senses_recursive(sense_elem: ET.Element, parent_path: str = ""):
                     """Recursively extract senses with complete paths"""
                     current_path = sense_elem.get('n', '')
-                    if not current_path:
-                        return
-
-                    sense_path = f"{parent_path}{current_path}" if parent_path else current_path
+                    sense_path = f"{parent_path}{current_path}" if current_path and parent_path else current_path or parent_path
 
                     # Check if this sense has nested senses
                     nested_senses = sense_elem.findall('./bdb:sense', NS)
@@ -351,10 +372,12 @@ def extract_bdb_definitions_with_sense(
                                 sense_texts = [sense_text]
 
                     # Only add this sense if it has definitions and no nested senses,
-                    # OR if it has definitions AND nested senses (meaningful parent sense)
+                    # OR if it has definitions AND nested senses (meaningful parent sense).
+                    # Unnumbered stem wrappers (Qal/Pi/Hiph) use sense "0" for direct
+                    # defs and pass their parent path through to numbered children.
                     if sense_texts and (not has_nested or direct_defs):
                         entry_data['senses'].append({
-                            "number": sense_path,
+                            "number": sense_path or "0",
                             "definitions": sense_texts
                         })
 
@@ -375,28 +398,8 @@ def extract_bdb_definitions_with_sense(
                 entry = find_bdb_entry_by_id(bdb_root, bdb_id)
                 if entry is not None:
                     bdb_entries.append(entry)
+            using_lexical_mapped_entries = bool(bdb_entries)
             
-            # HOMONYM FIX: Prioritize mod="I" entries over mod="II"+ (homonyms)
-            # When multiple BDB entries exist for a Strong's number, prefer the primary sense
-            if len(bdb_entries) > 1:
-                # Group entries by mod attribute
-                mod_to_entries = {}
-                for entry in bdb_entries:
-                    mod = entry.get('mod', 'I')  # Default to "I" if not specified
-                    if mod not in mod_to_entries:
-                        mod_to_entries[mod] = []
-                    mod_to_entries[mod].append(entry)
-                
-                # Prioritize: mod="I" > no mod > mod="II" > mod="III" > etc.
-                if 'I' in mod_to_entries:
-                    bdb_entries = mod_to_entries['I']
-                elif '' in mod_to_entries:  # Entries without mod attribute
-                    bdb_entries = mod_to_entries['']
-                else:
-                    # If only secondary homonyms exist, use lowest number (II before III)
-                    sorted_mods = sorted(mod_to_entries.keys())
-                    bdb_entries = mod_to_entries[sorted_mods[0]]
-
             # Fallback to old method if not found
             if not bdb_entries:
                 # First try without root entries (normal case)
@@ -464,6 +467,33 @@ def extract_bdb_definitions_with_sense(
             return None
         return ", ".join(cleaned)
 
+    def definition_represents(gloss: str) -> bool:
+        normalized = normalize_definition_text(gloss)
+        if not normalized:
+            return False
+
+        normalized_parts = {
+            part.strip()
+            for part in re.split(r"[,;]", normalized)
+            if part.strip()
+        }
+        for existing in definitions:
+            current = normalize_definition_text(existing.get("text_en", ""))
+            if not current:
+                continue
+            if normalized == current or normalized in current or current in normalized:
+                return True
+
+            current_parts = {
+                part.strip()
+                for part in re.split(r"[,;]", current)
+                if part.strip()
+            }
+            if normalized_parts and current_parts and normalized_parts <= current_parts:
+                return True
+
+        return False
+
     # Count valid BDB entries to determine if we should use LexicalIndex override
     valid_bdb_count = 0
     for bdb_entry in bdb_entries_data:
@@ -472,7 +502,7 @@ def extract_bdb_definitions_with_sense(
         bdb_hebrew = bdb_entry.get('hebrew', '')
         if bdb_hebrew:
             bdb_normalized = re.sub(r'[\u0591-\u05C7]', '', bdb_hebrew)
-            if bdb_normalized != hebrew_normalized:
+            if not using_lexical_mapped_entries and bdb_normalized != hebrew_normalized:
                 if hebrew_normalized not in bdb_normalized or len(bdb_normalized) > len(hebrew_normalized) + 2:
                     continue
         valid_bdb_count += 1
@@ -485,7 +515,7 @@ def extract_bdb_definitions_with_sense(
         bdb_hebrew = bdb_entry.get('hebrew', '')
         if bdb_hebrew:
             bdb_normalized = re.sub(r'[\u0591-\u05C7]', '', bdb_hebrew)
-            if bdb_normalized != hebrew_normalized:
+            if not using_lexical_mapped_entries and bdb_normalized != hebrew_normalized:
                 if hebrew_normalized not in bdb_normalized or len(bdb_normalized) > len(hebrew_normalized) + 2:
                     continue
 
@@ -494,9 +524,14 @@ def extract_bdb_definitions_with_sense(
             main_defs = bdb_entry['definitions']
             bdb_id = bdb_entry.get('id', '')
 
-            # Only use LexicalIndex override when there are MULTIPLE BDB entries for this Strong's number
-            # This avoids collapsing valid single-word synonyms from a single BDB entry
-            if valid_bdb_count > 1 and is_single_word_fragments(main_defs) and bdb_id and bdb_id in bdb_to_def:
+            # Use LexicalIndex gloss when BDB's top-level <def> values are
+            # fragment tokens from one gloss (e.g. "be", "become", "much").
+            if (
+                is_single_word_fragments(main_defs)
+                and bdb_id
+                and bdb_id in bdb_to_def
+                and len(bdb_to_def[bdb_id].split()) > 1
+            ):
                 # Use LexicalIndex <def> as the single main definition
                 lex_gloss = bdb_to_def[bdb_id]
                 def_key = ("0", lex_gloss.lower())
@@ -551,6 +586,21 @@ def extract_bdb_definitions_with_sense(
                                 final_sense = sense_num if sense_num else sense_mapping.get(def_text, "0")
                                 definitions.append(create_definition(defn, "bdb", order, final_sense))
                                 order += 1
+
+        bdb_id = bdb_entry.get('id', '')
+        lex_glosses = strong_bdb_to_defs.get(strong_number, {}).get(bdb_id, [])
+        if not lex_glosses and bdb_id in bdb_to_def:
+            lex_glosses = [bdb_to_def[bdb_id]]
+        for lex_gloss in lex_glosses:
+            if not using_lexical_mapped_entries or not lex_gloss or definition_represents(lex_gloss):
+                continue
+            def_key = ("li", normalize_definition_text(lex_gloss))
+            if def_key not in seen:
+                seen.add(def_key)
+                def_text = normalize_definition_text(lex_gloss)
+                sense = sense_mapping.get(def_text, "0")
+                definitions.append(create_definition(lex_gloss, "bdb", order, sense))
+                order += 1
 
     return definitions
 
@@ -632,6 +682,104 @@ def determine_sources(definitions: list) -> Dict[str, bool]:
     return sources
 
 
+def _definition_key(definition: Dict) -> tuple:
+    """Return a stable identity for matching regenerated definitions."""
+    return (
+        definition.get('source', ''),
+        definition.get('text_en') or definition.get('text') or '',
+        definition.get('sense', ''),
+    )
+
+
+def _collapsed_translation(
+    definition: Dict,
+    existing_definitions: List[Dict],
+    language_field: str,
+) -> str:
+    """Build a translation for comma-collapsed regenerated definitions."""
+    text = definition.get('text_en') or definition.get('text') or ''
+    if ',' not in text:
+        return ''
+
+    parts = [part.strip() for part in text.split(',') if part.strip()]
+    if len(parts) < 2:
+        return ''
+
+    translations = []
+    for part in parts:
+        match = next(
+            (
+                existing
+                for existing in existing_definitions
+                if existing.get('source') == definition.get('source')
+                and existing.get('sense', '') == definition.get('sense', '')
+                and (existing.get('text_en') or existing.get('text') or '') == part
+                and existing.get(language_field)
+            ),
+            None,
+        )
+        if not match:
+            return ''
+        translations.append(match[language_field])
+
+    return '; '.join(translations)
+
+
+def preserve_existing_definition_metadata(
+    generated_definitions: List[Dict],
+    existing_definitions: List[Dict],
+) -> List[Dict]:
+    """Preserve reviewed definitions and existing translations during rebuilds."""
+    existing_by_key = {_definition_key(definition): definition for definition in existing_definitions}
+    merged = []
+
+    for definition in generated_definitions:
+        updated = definition.copy()
+        existing = existing_by_key.get(_definition_key(definition))
+        if existing:
+            for key, value in existing.items():
+                if key.startswith('text_') and key != 'text_en' and value and key not in updated:
+                    updated[key] = value
+        for key in ('text_es', 'text_pt'):
+            if key not in updated:
+                collapsed = _collapsed_translation(definition, existing_definitions, key)
+                if collapsed:
+                    updated[key] = collapsed
+        merged.append(updated)
+
+    seen = {
+        (
+            definition.get('source', ''),
+            definition.get('text_en') or definition.get('text') or '',
+            definition.get('text_es', ''),
+            definition.get('sense', ''),
+        )
+        for definition in merged
+    }
+    next_order = max([int(definition.get('order', 0)) for definition in merged] or [0]) + 1
+
+    for definition in existing_definitions:
+        if definition.get('source') != 'delitzsch_review':
+            continue
+
+        key = (
+            definition.get('source', ''),
+            definition.get('text_en') or definition.get('text') or '',
+            definition.get('text_es', ''),
+            definition.get('sense', ''),
+        )
+        if key in seen:
+            continue
+
+        preserved = definition.copy()
+        preserved['order'] = next_order
+        next_order += 1
+        merged.append(preserved)
+        seen.add(key)
+
+    return merged
+
+
 def build_lexicon_entry(strong_number: str, bdb_root, update_existing: bool = False, testing_mode: bool = False) -> Dict:
     """
     Build a complete lexicon entry for a Strong's number
@@ -656,12 +804,18 @@ def build_lexicon_entry(strong_number: str, bdb_root, update_existing: bool = Fa
         output_draft = config.LEXICON_DRAFT_DIR
         output_roots = config.LEXICON_ROOTS_DIR
 
-    # Check if entry exists
-    entry_file = output_draft / f"{strong_number}.json"
+    # Check if entry exists. Update mode must look in both directories because
+    # roots are saved under roots/ and words under words/.
     existing_entry = {}
-    if entry_file.exists() and update_existing and not testing_mode:
-        with open(entry_file, 'r', encoding='utf-8') as f:
-            existing_entry = json.load(f)
+    if update_existing and not testing_mode:
+        for entry_file in (
+            output_draft / f"{strong_number}.json",
+            output_roots / f"{strong_number}.json",
+        ):
+            if entry_file.exists():
+                with open(entry_file, 'r', encoding='utf-8') as f:
+                    existing_entry = json.load(f)
+                break
 
     if strong_number not in strongs_data:
         return {}
@@ -692,6 +846,13 @@ def build_lexicon_entry(strong_number: str, bdb_root, update_existing: bool = Fa
     if bdb_definitions:
         entry["sources"]["bdb"] = True
         entry["definitions"].extend(bdb_definitions)
+
+    if existing_entry.get("definitions"):
+        entry["definitions"] = preserve_existing_definition_metadata(
+            entry["definitions"],
+            existing_entry.get("definitions", []),
+        )
+        entry["sources"] = determine_sources(entry["definitions"])
 
     # Add occurrences
     refs_data = None

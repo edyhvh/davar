@@ -8,16 +8,30 @@
   "translit_es": "eder",
   "definitions": [
     {
+      "text_en": "flock",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "rebaño"
+    },
+    {
+      "text_en": "herd",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "manada"
+    },
+    {
       "text_en": "herd; flock, especially of animals.",
       "text_es": "piara; rebaño o manada, especialmente de animales.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 3,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 3,

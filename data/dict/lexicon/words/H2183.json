@@ -8,16 +8,43 @@
   "translit_es": "zanun",
   "definitions": [
     {
+      "text_en": "fornication",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "fornicación"
+    },
+    {
+      "text_en": "sexual",
+      "source": "bdb",
+      "order": 2,
+      "sense": "a",
+      "text_es": "sexual"
+    },
+    {
+      "text_en": "international",
+      "source": "bdb",
+      "order": 3,
+      "sense": "b",
+      "text_es": "internacional"
+    },
+    {
+      "text_en": "religious",
+      "source": "bdb",
+      "order": 4,
+      "sense": "c"
+    },
+    {
       "text_en": "fornication; sexual immorality; whoredom.",
       "text_es": "fornicación; inmoralidad sexual; prostitución.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 5,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 10,
