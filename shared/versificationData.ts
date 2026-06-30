@@ -1,5 +1,5 @@
 // Generated from shafan versification.json for deterministic local mapping.
-// Source: https://raw.githubusercontent.com/edyhvh/shafan/main/data/versification/versification.json
+// Source: https://raw.githubusercontent.com/edyehoshua/shafan/main/data/versification/versification.json
 
 export type VersificationType = "verse_differences" | "chapter_shift" | "superscription_shift";
 

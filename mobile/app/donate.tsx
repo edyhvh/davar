@@ -16,10 +16,10 @@ import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
 
 const DONATION_CONFIG = {
-  githubSponsor: "https://github.com/sponsors/edyhvh",
-  kofi: "https://ko-fi.com/P5P31IPYA3",
-  telegram: "https://t.me/edyhvh",
-  telegramHandle: "@edyhvh",
+  githubSponsor: "https://github.com/sponsors/edyehoshua",
+  kofi: "https://ko-fi.com/edyehoshua",
+  telegram: "https://t.me/edyehoshua",
+  telegramHandle: "@edyehoshua",
 };
 
 const createStyles = (colors: ReturnType<typeof getColors>) =>

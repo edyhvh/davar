@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OWNER="${1:-edyhvh}"
+OWNER="${1:-edyehoshua}"
 REPO="${2:-davar}"
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 RULESET_DIR="$ROOT_DIR/.github/rulesets"

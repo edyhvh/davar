@@ -61,7 +61,7 @@ export function KoFiWidget() {
 				return false;
 			try {
 				window.kofiWidgetOverlay.draw(
-					"edyhvh",
+					"edyehoshua",
 					{
 						type: "floating-chat",
 						"floating-chat.donateButton.text": "Donate",

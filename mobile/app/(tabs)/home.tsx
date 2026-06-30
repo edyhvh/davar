@@ -548,14 +548,14 @@ export default function HomeScreen() {
                     icon: "bug",
                     onPress: () =>
                       void openUrlSafely(
-                        "https://github.com/edyhvh/davar/issues/new",
+                        "https://github.com/edyehoshua/davar/issues/new",
                       ),
                   },
                   {
                     label: t("home.about.items.github"),
                     icon: "github",
                     onPress: () =>
-                      void openUrlSafely("https://github.com/edyhvh/davar"),
+                      void openUrlSafely("https://github.com/edyehoshua/davar"),
                   },
                   {
                     label: t("home.about.items.feedback"),
