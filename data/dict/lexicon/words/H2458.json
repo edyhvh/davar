@@ -8,16 +8,29 @@
   "translit_es": "jeleah",
   "definitions": [
     {
+      "text_en": "rust",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0"
+    },
+    {
+      "text_en": "filth",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "inmundicia"
+    },
+    {
       "text_en": "stain; rust; corrosion; pollution.",
       "text_es": "mancha; herrumbre; corrosión; contaminación.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 3,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 2,

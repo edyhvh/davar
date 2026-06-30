@@ -932,6 +932,8 @@ const loadTranslationChapter = async (
 ): Promise<LoadedTranslationChapter> => {
 	const translationMap: Record<string, RawTranslationVerse> = {};
 	const translationTitles: Record<number, string> = {};
+	const hasTranslationText = (verse?: RawTranslationVerse): boolean =>
+		Boolean(verse?.tth?.trim() || verse?.bes?.trim());
 
 	// Try TTH_2 first (official Spanish translation)
 	const tthBookId = resolveTthBookId(bookId);
@@ -966,19 +968,12 @@ const loadTranslationChapter = async (
 					translationMap[`${translationChapter}-${verse.verse}`] = verse;
 				}
 			}
-
-			if (Object.keys(translationMap).length > 0) {
-				return {
-					verses: translationMap,
-					titles: translationTitles,
-				};
-			}
 		} catch {
 			// TTH_2 not available for this book, try BES fallback below
 		}
 	}
 
-	// Try BES fallback
+	// Fill genuinely missing TTH verses from BES.
 	try {
 		const translationBook = await fetchJson<RawTranslationBook>(
 			`/data/bes/${bookId}.json`,
@@ -993,12 +988,19 @@ const loadTranslationChapter = async (
 				continue;
 			}
 
-			if (typeof chapterData.title === "string" && chapterData.title.trim()) {
+			if (
+				!translationTitles[translationChapter] &&
+				typeof chapterData.title === "string" &&
+				chapterData.title.trim()
+			) {
 				translationTitles[translationChapter] = chapterData.title.trim();
 			}
 
 			for (const verse of chapterData.verses) {
-				translationMap[`${translationChapter}-${verse.verse}`] = verse;
+				const key = `${translationChapter}-${verse.verse}`;
+				if (!hasTranslationText(translationMap[key])) {
+					translationMap[key] = verse;
+				}
 			}
 		}
 
@@ -1730,7 +1732,8 @@ const toWordAnalysis = (
 	const rootStrong =
 		customEntry?.root_strong ??
 		dictionaryEntry?.root_ref ??
-		dictionaryEntry?.root_strong;
+		dictionaryEntry?.root_strong ??
+		(dictionaryEntry ? strongNumber : undefined);
 	const rootEntry = getRootEntry(rootStrong, words, roots, custom);
 
 	const rootDefinitions = mergeUniqueDefinitions(

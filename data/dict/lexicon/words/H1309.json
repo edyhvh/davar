@@ -8,16 +8,49 @@
   "translit_es": "besorah",
   "definitions": [
     {
+      "text_en": "tidings",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "noticias"
+    },
+    {
+      "text_en": "good tidings",
+      "source": "bdb",
+      "order": 2,
+      "sense": "1"
+    },
+    {
+      "text_en": "tidings",
+      "source": "bdb",
+      "order": 3,
+      "sense": "2",
+      "text_es": "noticias"
+    },
+    {
+      "text_en": "news",
+      "source": "bdb",
+      "order": 4,
+      "sense": "2",
+      "text_es": "noticias"
+    },
+    {
+      "text_en": "reward for good tidings",
+      "source": "bdb",
+      "order": 5,
+      "sense": "3"
+    },
+    {
       "text_en": "good news; gospel; report of good tidings.",
       "text_es": "buenas noticias; evangelio; anuncio de buenas nuevas.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 6,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 6,

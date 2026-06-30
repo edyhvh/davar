@@ -279,7 +279,10 @@ const loadLexiconEntryFromStatic = async (
   const rootStrong =
     customEntry?.root_strong ??
     dictionaryEntry?.root_ref ??
-    dictionaryEntry?.root_strong;
+    dictionaryEntry?.root_strong ??
+    (dictionaryEntry
+      ? (customEntry?.strong_number ?? dictionaryEntry?.strong_number ?? strong)
+      : undefined);
 
   const rootEntry = rootStrong
     ? (() => {
@@ -1541,7 +1544,9 @@ const WordAnalysisBottomSheetComponent = (
                 {/* Root section */}
                 <View style={styles.rootSection}>
                   <Text style={styles.sectionLabel}>{t("wordCard.root")}</Text>
-                  {lexiconEntry?.root || word?.root ? (
+                  {lexiconEntry?.root ||
+                  word?.root ||
+                  lexiconEntry?.root_strong ? (
                     <>
                       <Text style={styles.rootHebrew}>
                         {(lexiconEntry?.root ?? word?.root ?? "").replace(

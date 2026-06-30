@@ -6,10 +6,32 @@
   "transliteration": "mâtsôwr",
   "translit_en": "matzor",
   "translit_es": "matzor",
-  "definitions": [],
+  "definitions": [
+    {
+      "text_en": "siege-enclosure",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "cerco de asedio"
+    },
+    {
+      "text_en": "siege",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "asedio"
+    },
+    {
+      "text_en": "entrenchment",
+      "source": "bdb",
+      "order": 3,
+      "sense": "0",
+      "text_es": "atrincheramiento"
+    }
+  ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 4,

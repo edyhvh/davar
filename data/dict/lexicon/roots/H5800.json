@@ -8,22 +8,95 @@
   "translit_es": "azav",
   "definitions": [
     {
-      "text_en": "leave",
+      "text_en": "restore",
       "source": "bdb",
       "order": 1,
-      "sense": "0"
+      "sense": "0",
+      "text_es": "restaurar"
+    },
+    {
+      "text_en": "repair",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "reparar"
+    },
+    {
+      "text_en": "leave, forsake, loose",
+      "source": "bdb",
+      "order": 3,
+      "sense": "0",
+      "text_es": "dejar, abandonar, soltar"
+    },
+    {
+      "text_en": "leave",
+      "source": "bdb",
+      "order": 4,
+      "sense": "1",
+      "text_es": "dejar"
+    },
+    {
+      "text_en": "leave",
+      "source": "bdb",
+      "order": 5,
+      "sense": "2",
+      "text_es": "dejar"
+    },
+    {
+      "text_en": "abandon",
+      "source": "bdb",
+      "order": 6,
+      "sense": "2",
+      "text_es": "abandonar"
     },
     {
       "text_en": "forsake",
       "source": "bdb",
-      "order": 2,
-      "sense": "0"
+      "order": 7,
+      "sense": "2",
+      "text_es": "abandonar"
     },
     {
-      "text_en": "loose",
+      "text_en": "let loose",
       "source": "bdb",
-      "order": 3,
-      "sense": "0"
+      "order": 8,
+      "sense": "3",
+      "text_es": "soltar"
+    },
+    {
+      "text_en": "set free",
+      "source": "bdb",
+      "order": 9,
+      "sense": "3",
+      "text_es": "liberar"
+    },
+    {
+      "text_en": "let go",
+      "source": "bdb",
+      "order": 10,
+      "sense": "3",
+      "text_es": "soltar"
+    },
+    {
+      "text_en": "be left to",
+      "source": "bdb",
+      "order": 11,
+      "sense": "1",
+      "text_es": "ser dejado a"
+    },
+    {
+      "text_en": "be forsaken",
+      "source": "bdb",
+      "order": 12,
+      "sense": "2",
+      "text_es": "ser abandonado"
+    },
+    {
+      "text_en": "be deserted",
+      "source": "bdb",
+      "order": 13,
+      "sense": "0",
+      "text_es": "ser abandonado"
     }
   ],
   "sources": {

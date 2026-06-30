@@ -8,16 +8,70 @@
   "translit_es": "biletiy",
   "definitions": [
     {
+      "text_en": "failure",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "fracaso"
+    },
+    {
+      "text_en": "not",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "no"
+    },
+    {
+      "text_en": "except",
+      "source": "bdb",
+      "order": 3,
+      "sense": "0",
+      "text_es": "excepto"
+    },
+    {
+      "text_en": "not",
+      "source": "bdb",
+      "order": 4,
+      "sense": "1",
+      "text_es": "no"
+    },
+    {
+      "text_en": "not",
+      "source": "bdb",
+      "order": 5,
+      "sense": "2",
+      "text_es": "no"
+    },
+    {
+      "text_en": "except",
+      "source": "bdb",
+      "order": 6,
+      "sense": "2",
+      "text_es": "excepto"
+    },
+    {
+      "text_en": "conj. (likewise after a neg., expressed or implied)",
+      "source": "bdb",
+      "order": 7,
+      "sense": "3"
+    },
+    {
+      "text_en": "With preps.",
+      "source": "bdb",
+      "order": 8,
+      "sense": "4"
+    },
+    {
       "text_en": "not; without; so as not to.",
       "text_es": "no; sin; para no.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 9,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 107,

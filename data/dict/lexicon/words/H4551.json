@@ -8,16 +8,32 @@
   "translit_es": "masa",
   "definitions": [
     {
-      "text_en": "quarry",
+      "text_en": "missile",
       "source": "bdb",
       "order": 1,
-      "sense": "0"
+      "sense": "0",
+      "text_es": "proyectil"
+    },
+    {
+      "text_en": "dart",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "dardo"
+    },
+    {
+      "text_en": "quarry",
+      "source": "bdb",
+      "order": 3,
+      "sense": "0",
+      "text_es": "cantera"
     },
     {
       "text_en": "quarrying",
       "source": "bdb",
-      "order": 2,
-      "sense": "0"
+      "order": 4,
+      "sense": "0",
+      "text_es": "explotación de canteras"
     }
   ],
   "sources": {

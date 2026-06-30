@@ -3,6 +3,7 @@ import {
 	resolveTranslationLookupKey,
 	resolveTranslationTarget,
 } from "../../../../shared/translationConfig";
+import { getChapterVerses, loadLexiconEntry } from "./staticData";
 
 const readJson = async (relativePath) => {
 	const filePath = new URL(`../../../public/${relativePath}`, import.meta.url);
@@ -87,6 +88,66 @@ describe("static data integrity", () => {
 		expect(roots.H7363).toBeDefined();
 	});
 
+	test("lexicon analysis maps entries without root_ref to self-root", async () => {
+		const originalFetch = globalThis.fetch;
+		globalThis.fetch = async (input) => {
+			const url = String(input);
+			const path = url.startsWith("/") ? url.slice(1) : url;
+			const filePath = new URL(`../../../public/${path}`, import.meta.url);
+			const file = Bun.file(filePath);
+			return new Response(await file.text(), {
+				headers: { "content-type": "application/json" },
+			});
+		};
+
+		try {
+			const rootEntry = await loadLexiconEntry("H1730", "en");
+			expect(rootEntry).toMatchObject({
+				strong_number: "H1730",
+				hebrew: "דּוֹד",
+				root: "דּוֹד",
+				root_strong: "H1730",
+			});
+
+			const derivedEntry = await loadLexiconEntry("H1732", "en");
+			expect(derivedEntry).toMatchObject({
+				strong_number: "H1732",
+				hebrew: "דָּוִד",
+				root: "דּוֹד",
+				root_strong: "H1730",
+			});
+		} finally {
+			globalThis.fetch = originalFetch;
+		}
+	});
+
+	test("QA lexicon examples include Spanish definitions", async () => {
+		const words = await readJson("data/dict/words.json");
+		const roots = await readJson("data/dict/roots.json");
+
+		expect(words.H4723.definitions.map((definition) => definition.text_es)).toEqual([
+			"esperanza",
+			"colección",
+			"masa reunida",
+		]);
+		expect(roots.H7235.definitions.at(-1)).toMatchObject({
+			text_en: "shoot",
+			text_es: "brote",
+		});
+		expect(words.H1730.definitions.map((definition) => definition.text_es)).toEqual([
+			"amado",
+			"amor",
+			"tío",
+		]);
+		expect(words.H1732.definitions.slice(0, 5).map((definition) => definition.text_es)).toEqual([
+			"olla",
+			"jarra",
+			"olla",
+			"caldera",
+			"cesta",
+		]);
+	});
+
 	test("1 John 1:5 custom D0208 entry has bilingual definitions", async () => {
 		const chapter = await readJson("data/besorah/john1/1.json");
 		const customDefinitions = await readJson(
@@ -169,6 +230,32 @@ describe("static data integrity", () => {
 		expect(displayedVerse2).toBe(
 			chapter.verses.find((item) => item.verse === 1)?.bes,
 		);
+	});
+
+	test("Spanish Deuteronomy partial TTH gaps use normalized TTH text", async () => {
+		const originalFetch = globalThis.fetch;
+		globalThis.fetch = async (input) => {
+			const url = String(input);
+			const path = url.startsWith("/") ? url.slice(1) : url;
+			const filePath = new URL(`../../../public/${path}`, import.meta.url);
+			const file = Bun.file(filePath);
+			return new Response(await file.text(), {
+				headers: { "content-type": "application/json" },
+			});
+		};
+
+		try {
+			const verses = await getChapterVerses("deuteronomy", 1, {
+				language: "es",
+			});
+			const verse10 = verses.find((item) => item.verse === 10);
+
+			expect(verse10?.translation).toBe(
+				"\u2067יהוה\u2069 su Elohim los ha multiplicado, y he aquí ustedes, hoy <em>son</em> como las estrellas del cielo, por multitud.",
+			);
+		} finally {
+			globalThis.fetch = originalFetch;
+		}
 	});
 
 	test("English and Spanish both honor versification shifts", () => {

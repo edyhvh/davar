@@ -8,22 +8,81 @@
   "translit_es": "lvn",
   "definitions": [
     {
-      "text_en": "lodge",
+      "text_en": "murmur",
       "source": "bdb",
       "order": 1,
-      "sense": "0"
+      "sense": "0",
+      "text_es": "murmurar"
+    },
+    {
+      "text_en": "cause to murmur",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "hacer murmurar"
+    },
+    {
+      "text_en": "lodge",
+      "source": "bdb",
+      "order": 3,
+      "sense": "0",
+      "text_es": "alojar"
     },
     {
       "text_en": "pass the night",
       "source": "bdb",
-      "order": 2,
-      "sense": "0"
+      "order": 4,
+      "sense": "0",
+      "text_es": "pasar la noche"
     },
     {
       "text_en": "abide",
       "source": "bdb",
-      "order": 3,
-      "sense": "0"
+      "order": 5,
+      "sense": "0",
+      "text_es": "morar"
+    },
+    {
+      "text_en": "lodge",
+      "source": "bdb",
+      "order": 6,
+      "sense": "1",
+      "text_es": "alojar"
+    },
+    {
+      "text_en": "pass the night",
+      "source": "bdb",
+      "order": 7,
+      "sense": "1",
+      "text_es": "pasar la noche"
+    },
+    {
+      "text_en": "abide",
+      "source": "bdb",
+      "order": 8,
+      "sense": "2",
+      "text_es": "morar"
+    },
+    {
+      "text_en": "remain",
+      "source": "bdb",
+      "order": 9,
+      "sense": "2",
+      "text_es": "permanecer"
+    },
+    {
+      "text_en": "cause to rest",
+      "source": "bdb",
+      "order": 10,
+      "sense": "0",
+      "text_es": "hacer descansar"
+    },
+    {
+      "text_en": "dwell",
+      "source": "bdb",
+      "order": 11,
+      "sense": "0",
+      "text_es": "habitar"
     }
   ],
   "sources": {

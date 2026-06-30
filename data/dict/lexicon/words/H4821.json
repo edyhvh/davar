@@ -8,16 +8,30 @@
   "translit_es": "miremah",
   "definitions": [
     {
+      "text_en": "deceit",
+      "source": "bdb",
+      "order": 1,
+      "sense": "0",
+      "text_es": "engaño"
+    },
+    {
+      "text_en": "treachery",
+      "source": "bdb",
+      "order": 2,
+      "sense": "0",
+      "text_es": "traición"
+    },
+    {
       "text_en": "deceit; fraud; treachery.",
       "text_es": "engaño; fraude; traición.",
       "source": "delitzsch_review",
-      "order": 1,
+      "order": 3,
       "sense": "0"
     }
   ],
   "sources": {
     "strongs": false,
-    "bdb": false
+    "bdb": true
   },
   "occurrences": {
     "total": 1,
