@@ -1,0 +1,82 @@
+# Hutter Hebrew Pipeline
+
+This package contains Davar-side tooling for the Elias Hutter Hebrew extraction work.
+
+## Current State
+
+- Migrated Shafan assets live under `data/hutter/staging/`.
+- Existing JSON output is page-oriented: each verse includes `source_files`, usually one cropped page image like `000002.png`.
+- The new experiment starts from that JSON and divides each page image into verse-level image candidates.
+
+## Verse Image Experiment
+
+Create a manifest only:
+
+```bash
+python -m scripts.hutter.verse_images matthew --manifest-only
+```
+
+Audit source mappings and structural edge cases without reading image pixels:
+
+```bash
+python -m scripts.hutter.verse_images all --audit-only
+```
+
+Create verse crops and a manifest:
+
+```bash
+python -m scripts.hutter.verse_images matthew
+```
+
+Preview one source page:
+
+```bash
+python -m scripts.hutter.verse_images matthew --source-files 000002.png
+```
+
+Compute crop boxes without writing cropped image files:
+
+```bash
+python -m scripts.hutter.verse_images all --crop-plan-only
+```
+
+Process every Hutter book that has both images and JSON:
+
+```bash
+python -m scripts.hutter.verse_images all
+```
+
+Outputs:
+
+```text
+data/hutter/verse_images/<book>/*.png
+data/hutter/manifests/<book>_verse_images.json
+```
+
+Build the repeatable review report and local contact sheets:
+
+```bash
+python -m scripts.hutter.review_verse_images
+```
+
+Review outputs:
+
+```text
+data/hutter/review_reports/verse_image_review.json
+data/hutter/review_reports/sheets/shortest_crops.png
+data/hutter/review_reports/sheets/highest_edge_crops.png
+data/hutter/review_reports/sheets/first_last_by_book.png
+```
+
+The review report also records source availability. As of this pass, the only
+books processable by the verse-image pipeline are the books that have both
+`staging/output/<book>.json` and `staging/data/images/hebrew_images/<book>/`.
+The Old Testament JSON files currently have no local Hutter image folders in
+this staging tree, and `laodikim` currently has local images but no matching
+JSON source mapping.
+
+The cropper currently uses the existing transcription JSON as the verse/page assignment source of truth. It does not call external OCR. It reads PNG pixels locally, detects the Hebrew column's vertical ruling lines, detects horizontal whitespace gaps in that Hebrew column area, and cuts column-width verse bands with padding so Hebrew content is not clipped. Pages that begin at verse 1 get extra header handling; pages that begin mid-chapter keep the top scan permissive so early verse text is preserved. Crop manifests also record structural notes for first verses, last verses, chapter-transition pages, and basic scan-quality metrics when pixel analysis is enabled.
+
+Important limitation: this removes neighboring side columns, but some Hutter pages also include a Latin/Spanish gloss directly inside the Hebrew column under the Hebrew text. Those in-column gloss lines are still present in the current crops. Do not treat these as strict Hebrew-only crops until a second pass trims each verse band down to the Hebrew glyph block itself.
+
+Use `--manifest-only` when reviewing source mappings without checking file existence. Use `--audit-only` when reviewing source mappings, missing images, first/last verse cases, and chapter transitions without reading image pixels. Use `--crop-plan-only` when validating segmentation on targeted pages before generating cropped PNGs.

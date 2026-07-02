@@ -1,0 +1,3014 @@
+{
+  "book": "john1",
+  "entry_count": 105,
+  "statuses": {
+    "cropped": 105
+  },
+  "entries": [
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 1,
+      "source_file": "000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000002.png",
+      "output_image": "data/hutter/verse_images/john1/001_001_000002.png",
+      "crop_box": {
+        "left": 82,
+        "top": 400,
+        "right": 625,
+        "bottom": 748
+      },
+      "status": "cropped",
+      "notes": [
+        "page_starts_at_first_verse:1:1",
+        "image_size:740x2200",
+        "image_luma_mean:191.0",
+        "image_dark_ratio:0.2118",
+        "image_warmth:44.6",
+        "image_quality:yellowed_scan",
+        "hebrew_column:88-619",
+        "analysis_x:125-518",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:418-1964",
+        "cut_lines:730,1061,1378,1658"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 2,
+      "source_file": "000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000002.png",
+      "output_image": "data/hutter/verse_images/john1/001_002_000002.png",
+      "crop_box": {
+        "left": 82,
+        "top": 712,
+        "right": 625,
+        "bottom": 1079
+      },
+      "status": "cropped",
+      "notes": [
+        "page_starts_at_first_verse:1:1",
+        "image_size:740x2200",
+        "image_luma_mean:191.0",
+        "image_dark_ratio:0.2118",
+        "image_warmth:44.6",
+        "image_quality:yellowed_scan",
+        "hebrew_column:88-619",
+        "analysis_x:125-518",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:418-1964",
+        "cut_lines:730,1061,1378,1658"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 3,
+      "source_file": "000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000002.png",
+      "output_image": "data/hutter/verse_images/john1/001_003_000002.png",
+      "crop_box": {
+        "left": 82,
+        "top": 1043,
+        "right": 625,
+        "bottom": 1396
+      },
+      "status": "cropped",
+      "notes": [
+        "page_starts_at_first_verse:1:1",
+        "image_size:740x2200",
+        "image_luma_mean:191.0",
+        "image_dark_ratio:0.2118",
+        "image_warmth:44.6",
+        "image_quality:yellowed_scan",
+        "hebrew_column:88-619",
+        "analysis_x:125-518",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:418-1964",
+        "cut_lines:730,1061,1378,1658"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 4,
+      "source_file": "000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000002.png",
+      "output_image": "data/hutter/verse_images/john1/001_004_000002.png",
+      "crop_box": {
+        "left": 82,
+        "top": 1360,
+        "right": 625,
+        "bottom": 1676
+      },
+      "status": "cropped",
+      "notes": [
+        "page_starts_at_first_verse:1:1",
+        "image_size:740x2200",
+        "image_luma_mean:191.0",
+        "image_dark_ratio:0.2118",
+        "image_warmth:44.6",
+        "image_quality:yellowed_scan",
+        "hebrew_column:88-619",
+        "analysis_x:125-518",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:418-1964",
+        "cut_lines:730,1061,1378,1658"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 5,
+      "source_file": "000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000002.png",
+      "output_image": "data/hutter/verse_images/john1/001_005_000002.png",
+      "crop_box": {
+        "left": 82,
+        "top": 1640,
+        "right": 625,
+        "bottom": 1982
+      },
+      "status": "cropped",
+      "notes": [
+        "page_starts_at_first_verse:1:1",
+        "image_size:740x2200",
+        "image_luma_mean:191.0",
+        "image_dark_ratio:0.2118",
+        "image_warmth:44.6",
+        "image_quality:yellowed_scan",
+        "hebrew_column:88-619",
+        "analysis_x:125-518",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:418-1964",
+        "cut_lines:730,1061,1378,1658"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 6,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000004.png",
+      "output_image": "data/hutter/verse_images/john1/001_006_000004.png",
+      "crop_box": {
+        "left": 104,
+        "top": 46,
+        "right": 648,
+        "bottom": 442
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:1:6,1:7,1:8,1:9,1:10,2:1",
+        "page_contains_last_verse:1:10",
+        "image_size:930x2102",
+        "image_luma_mean:195.3",
+        "image_dark_ratio:0.1556",
+        "image_warmth:50.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:110-642",
+        "analysis_x:147-605",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:64-1979",
+        "cut_lines:424,747,998,1262,1577"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 7,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000004.png",
+      "output_image": "data/hutter/verse_images/john1/001_007_000004.png",
+      "crop_box": {
+        "left": 104,
+        "top": 406,
+        "right": 648,
+        "bottom": 765
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:1:6,1:7,1:8,1:9,1:10,2:1",
+        "page_contains_last_verse:1:10",
+        "image_size:930x2102",
+        "image_luma_mean:195.3",
+        "image_dark_ratio:0.1556",
+        "image_warmth:50.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:110-642",
+        "analysis_x:147-605",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:64-1979",
+        "cut_lines:424,747,998,1262,1577"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 8,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000004.png",
+      "output_image": "data/hutter/verse_images/john1/001_008_000004.png",
+      "crop_box": {
+        "left": 104,
+        "top": 729,
+        "right": 648,
+        "bottom": 1016
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:1:6,1:7,1:8,1:9,1:10,2:1",
+        "page_contains_last_verse:1:10",
+        "image_size:930x2102",
+        "image_luma_mean:195.3",
+        "image_dark_ratio:0.1556",
+        "image_warmth:50.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:110-642",
+        "analysis_x:147-605",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:64-1979",
+        "cut_lines:424,747,998,1262,1577"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 9,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000004.png",
+      "output_image": "data/hutter/verse_images/john1/001_009_000004.png",
+      "crop_box": {
+        "left": 104,
+        "top": 980,
+        "right": 648,
+        "bottom": 1280
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:1:6,1:7,1:8,1:9,1:10,2:1",
+        "page_contains_last_verse:1:10",
+        "image_size:930x2102",
+        "image_luma_mean:195.3",
+        "image_dark_ratio:0.1556",
+        "image_warmth:50.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:110-642",
+        "analysis_x:147-605",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:64-1979",
+        "cut_lines:424,747,998,1262,1577"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 1,
+      "verse": 10,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000004.png",
+      "output_image": "data/hutter/verse_images/john1/001_010_000004.png",
+      "crop_box": {
+        "left": 104,
+        "top": 1244,
+        "right": 648,
+        "bottom": 1595
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:1:6,1:7,1:8,1:9,1:10,2:1",
+        "page_contains_last_verse:1:10",
+        "image_size:930x2102",
+        "image_luma_mean:195.3",
+        "image_dark_ratio:0.1556",
+        "image_warmth:50.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:110-642",
+        "analysis_x:147-605",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:64-1979",
+        "cut_lines:424,747,998,1262,1577"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 1,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000004.png",
+      "output_image": "data/hutter/verse_images/john1/002_001_000004.png",
+      "crop_box": {
+        "left": 104,
+        "top": 1559,
+        "right": 648,
+        "bottom": 1997
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:1:6,1:7,1:8,1:9,1:10,2:1",
+        "page_contains_last_verse:1:10",
+        "image_size:930x2102",
+        "image_luma_mean:195.3",
+        "image_dark_ratio:0.1556",
+        "image_warmth:50.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:110-642",
+        "analysis_x:147-605",
+        "dark_threshold:160",
+        "whitespace_threshold:19",
+        "content_y:64-1979",
+        "cut_lines:424,747,998,1262,1577"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 2,
+      "source_file": "000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "output_image": "data/hutter/verse_images/john1/002_002_000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 35,
+        "right": 623,
+        "bottom": 345
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:198.3",
+        "image_dark_ratio:0.1531",
+        "image_warmth:36.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:84-617",
+        "analysis_x:121-518",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:53-1990",
+        "cut_lines:327,616,1005,1339,1695"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 3,
+      "source_file": "000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "output_image": "data/hutter/verse_images/john1/002_003_000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 309,
+        "right": 623,
+        "bottom": 634
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:198.3",
+        "image_dark_ratio:0.1531",
+        "image_warmth:36.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:84-617",
+        "analysis_x:121-518",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:53-1990",
+        "cut_lines:327,616,1005,1339,1695"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 4,
+      "source_file": "000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "output_image": "data/hutter/verse_images/john1/002_004_000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 598,
+        "right": 623,
+        "bottom": 1023
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:198.3",
+        "image_dark_ratio:0.1531",
+        "image_warmth:36.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:84-617",
+        "analysis_x:121-518",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:53-1990",
+        "cut_lines:327,616,1005,1339,1695"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 5,
+      "source_file": "000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "output_image": "data/hutter/verse_images/john1/002_005_000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 987,
+        "right": 623,
+        "bottom": 1357
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:198.3",
+        "image_dark_ratio:0.1531",
+        "image_warmth:36.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:84-617",
+        "analysis_x:121-518",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:53-1990",
+        "cut_lines:327,616,1005,1339,1695"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 6,
+      "source_file": "000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "output_image": "data/hutter/verse_images/john1/002_006_000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 1321,
+        "right": 623,
+        "bottom": 1713
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:198.3",
+        "image_dark_ratio:0.1531",
+        "image_warmth:36.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:84-617",
+        "analysis_x:121-518",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:53-1990",
+        "cut_lines:327,616,1005,1339,1695"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 7,
+      "source_file": "000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "output_image": "data/hutter/verse_images/john1/002_007_000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 1677,
+        "right": 623,
+        "bottom": 2008
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:198.3",
+        "image_dark_ratio:0.1531",
+        "image_warmth:36.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:84-617",
+        "analysis_x:121-518",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:53-1990",
+        "cut_lines:327,616,1005,1339,1695"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 8,
+      "source_file": "000011.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000011.png",
+      "output_image": "data/hutter/verse_images/john1/002_008_000011.png",
+      "crop_box": {
+        "left": 91,
+        "top": 44,
+        "right": 641,
+        "bottom": 420
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:760x2200",
+        "image_luma_mean:200.1",
+        "image_dark_ratio:0.1266",
+        "image_warmth:48.0",
+        "image_quality:yellowed_scan",
+        "hebrew_column:97-635",
+        "analysis_x:135-532",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:62-1988",
+        "cut_lines:402,682,976,1327,1666",
+        "Verse 8: First word unclear due to print quality",
+        "Verse 8: Multiple Nikud marks difficult to distinguish with certainty"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 9,
+      "source_file": "000011.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000011.png",
+      "output_image": "data/hutter/verse_images/john1/002_009_000011.png",
+      "crop_box": {
+        "left": 91,
+        "top": 384,
+        "right": 641,
+        "bottom": 700
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:760x2200",
+        "image_luma_mean:200.1",
+        "image_dark_ratio:0.1266",
+        "image_warmth:48.0",
+        "image_quality:yellowed_scan",
+        "hebrew_column:97-635",
+        "analysis_x:135-532",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:62-1988",
+        "cut_lines:402,682,976,1327,1666"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 10,
+      "source_file": "000011.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000011.png",
+      "output_image": "data/hutter/verse_images/john1/002_010_000011.png",
+      "crop_box": {
+        "left": 91,
+        "top": 664,
+        "right": 641,
+        "bottom": 994
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:760x2200",
+        "image_luma_mean:200.1",
+        "image_dark_ratio:0.1266",
+        "image_warmth:48.0",
+        "image_quality:yellowed_scan",
+        "hebrew_column:97-635",
+        "analysis_x:135-532",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:62-1988",
+        "cut_lines:402,682,976,1327,1666"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 11,
+      "source_file": "000011.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000011.png",
+      "output_image": "data/hutter/verse_images/john1/002_011_000011.png",
+      "crop_box": {
+        "left": 91,
+        "top": 958,
+        "right": 641,
+        "bottom": 1345
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:760x2200",
+        "image_luma_mean:200.1",
+        "image_dark_ratio:0.1266",
+        "image_warmth:48.0",
+        "image_quality:yellowed_scan",
+        "hebrew_column:97-635",
+        "analysis_x:135-532",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:62-1988",
+        "cut_lines:402,682,976,1327,1666"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 12,
+      "source_file": "000011.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000011.png",
+      "output_image": "data/hutter/verse_images/john1/002_012_000011.png",
+      "crop_box": {
+        "left": 91,
+        "top": 1309,
+        "right": 641,
+        "bottom": 1684
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:760x2200",
+        "image_luma_mean:200.1",
+        "image_dark_ratio:0.1266",
+        "image_warmth:48.0",
+        "image_quality:yellowed_scan",
+        "hebrew_column:97-635",
+        "analysis_x:135-532",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:62-1988",
+        "cut_lines:402,682,976,1327,1666"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 13,
+      "source_file": "000011.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000011.png",
+      "output_image": "data/hutter/verse_images/john1/002_013_000011.png",
+      "crop_box": {
+        "left": 91,
+        "top": 1648,
+        "right": 641,
+        "bottom": 2006
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:760x2200",
+        "image_luma_mean:200.1",
+        "image_dark_ratio:0.1266",
+        "image_warmth:48.0",
+        "image_quality:yellowed_scan",
+        "hebrew_column:97-635",
+        "analysis_x:135-532",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:62-1988",
+        "cut_lines:402,682,976,1327,1666",
+        "Verse 13: Complex verse spanning multiple lines, word boundaries verified but some Nikud marks compressed"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 14,
+      "source_file": "000013.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000013.png",
+      "output_image": "data/hutter/verse_images/john1/002_014_000013.png",
+      "crop_box": {
+        "left": 95,
+        "top": 40,
+        "right": 641,
+        "bottom": 551
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:930x2146",
+        "image_luma_mean:196.5",
+        "image_dark_ratio:0.1571",
+        "image_warmth:44.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:101-635",
+        "analysis_x:138-598",
+        "dark_threshold:160",
+        "whitespace_threshold:28",
+        "content_y:58-1989",
+        "cut_lines:533,902,1204,1583"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 15,
+      "source_file": "000013.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000013.png",
+      "output_image": "data/hutter/verse_images/john1/002_015_000013.png",
+      "crop_box": {
+        "left": 95,
+        "top": 515,
+        "right": 641,
+        "bottom": 920
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:930x2146",
+        "image_luma_mean:196.5",
+        "image_dark_ratio:0.1571",
+        "image_warmth:44.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:101-635",
+        "analysis_x:138-598",
+        "dark_threshold:160",
+        "whitespace_threshold:28",
+        "content_y:58-1989",
+        "cut_lines:533,902,1204,1583"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 16,
+      "source_file": "000013.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000013.png",
+      "output_image": "data/hutter/verse_images/john1/002_016_000013.png",
+      "crop_box": {
+        "left": 95,
+        "top": 884,
+        "right": 641,
+        "bottom": 1222
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:930x2146",
+        "image_luma_mean:196.5",
+        "image_dark_ratio:0.1571",
+        "image_warmth:44.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:101-635",
+        "analysis_x:138-598",
+        "dark_threshold:160",
+        "whitespace_threshold:28",
+        "content_y:58-1989",
+        "cut_lines:533,902,1204,1583",
+        "הַתְּבֶשֶׁר - unclear vocalization",
+        "תַּאֲוָה - repetitive text structure unclear"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 17,
+      "source_file": "000013.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000013.png",
+      "output_image": "data/hutter/verse_images/john1/002_017_000013.png",
+      "crop_box": {
+        "left": 95,
+        "top": 1186,
+        "right": 641,
+        "bottom": 1601
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:930x2146",
+        "image_luma_mean:196.5",
+        "image_dark_ratio:0.1571",
+        "image_warmth:44.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:101-635",
+        "analysis_x:138-598",
+        "dark_threshold:160",
+        "whitespace_threshold:28",
+        "content_y:58-1989",
+        "cut_lines:533,902,1204,1583"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 18,
+      "source_file": "000013.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000013.png",
+      "output_image": "data/hutter/verse_images/john1/002_018_000013.png",
+      "crop_box": {
+        "left": 95,
+        "top": 1565,
+        "right": 641,
+        "bottom": 2007
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:930x2146",
+        "image_luma_mean:196.5",
+        "image_dark_ratio:0.1571",
+        "image_warmth:44.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:101-635",
+        "analysis_x:138-598",
+        "dark_threshold:160",
+        "whitespace_threshold:28",
+        "content_y:58-1989",
+        "cut_lines:533,902,1204,1583",
+        "מָשִׁיחַ - possible dagesh in shin unclear",
+        "שְׁקָדִים - unusual word form"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 19,
+      "source_file": "000015.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000015.png",
+      "output_image": "data/hutter/verse_images/john1/002_019_000015.png",
+      "crop_box": {
+        "left": 83,
+        "top": 34,
+        "right": 630,
+        "bottom": 386
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.1",
+        "image_dark_ratio:0.1722",
+        "image_warmth:42.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-624",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:24",
+        "content_y:52-1974",
+        "cut_lines:368,681,989,1297,1611"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 20,
+      "source_file": "000015.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000015.png",
+      "output_image": "data/hutter/verse_images/john1/002_020_000015.png",
+      "crop_box": {
+        "left": 83,
+        "top": 350,
+        "right": 630,
+        "bottom": 699
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.1",
+        "image_dark_ratio:0.1722",
+        "image_warmth:42.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-624",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:24",
+        "content_y:52-1974",
+        "cut_lines:368,681,989,1297,1611"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 21,
+      "source_file": "000015.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000015.png",
+      "output_image": "data/hutter/verse_images/john1/002_021_000015.png",
+      "crop_box": {
+        "left": 83,
+        "top": 663,
+        "right": 630,
+        "bottom": 1007
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.1",
+        "image_dark_ratio:0.1722",
+        "image_warmth:42.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-624",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:24",
+        "content_y:52-1974",
+        "cut_lines:368,681,989,1297,1611"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 22,
+      "source_file": "000015.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000015.png",
+      "output_image": "data/hutter/verse_images/john1/002_022_000015.png",
+      "crop_box": {
+        "left": 83,
+        "top": 971,
+        "right": 630,
+        "bottom": 1315
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.1",
+        "image_dark_ratio:0.1722",
+        "image_warmth:42.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-624",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:24",
+        "content_y:52-1974",
+        "cut_lines:368,681,989,1297,1611"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 23,
+      "source_file": "000015.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000015.png",
+      "output_image": "data/hutter/verse_images/john1/002_023_000015.png",
+      "crop_box": {
+        "left": 83,
+        "top": 1279,
+        "right": 630,
+        "bottom": 1629
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.1",
+        "image_dark_ratio:0.1722",
+        "image_warmth:42.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-624",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:24",
+        "content_y:52-1974",
+        "cut_lines:368,681,989,1297,1611"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 24,
+      "source_file": "000015.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000015.png",
+      "output_image": "data/hutter/verse_images/john1/002_024_000015.png",
+      "crop_box": {
+        "left": 83,
+        "top": 1593,
+        "right": 630,
+        "bottom": 1992
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.1",
+        "image_dark_ratio:0.1722",
+        "image_warmth:42.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-624",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:24",
+        "content_y:52-1974",
+        "cut_lines:368,681,989,1297,1611"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 25,
+      "source_file": "000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "output_image": "data/hutter/verse_images/john1/002_025_000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 37,
+        "right": 663,
+        "bottom": 365
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:2:25,2:26,2:27,2:28,2:29,3:1",
+        "page_contains_last_verse:2:29",
+        "image_size:930x2102",
+        "image_luma_mean:196.7",
+        "image_dark_ratio:0.1496",
+        "image_warmth:46.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:119-657",
+        "analysis_x:157-619",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:55-1983",
+        "cut_lines:347,779,1005,1268,1594"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 26,
+      "source_file": "000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "output_image": "data/hutter/verse_images/john1/002_026_000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 329,
+        "right": 663,
+        "bottom": 797
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:2:25,2:26,2:27,2:28,2:29,3:1",
+        "page_contains_last_verse:2:29",
+        "image_size:930x2102",
+        "image_luma_mean:196.7",
+        "image_dark_ratio:0.1496",
+        "image_warmth:46.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:119-657",
+        "analysis_x:157-619",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:55-1983",
+        "cut_lines:347,779,1005,1268,1594"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 27,
+      "source_file": "000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "output_image": "data/hutter/verse_images/john1/002_027_000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 761,
+        "right": 663,
+        "bottom": 1023
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:2:25,2:26,2:27,2:28,2:29,3:1",
+        "page_contains_last_verse:2:29",
+        "image_size:930x2102",
+        "image_luma_mean:196.7",
+        "image_dark_ratio:0.1496",
+        "image_warmth:46.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:119-657",
+        "analysis_x:157-619",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:55-1983",
+        "cut_lines:347,779,1005,1268,1594"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 28,
+      "source_file": "000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "output_image": "data/hutter/verse_images/john1/002_028_000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 987,
+        "right": 663,
+        "bottom": 1286
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:2:25,2:26,2:27,2:28,2:29,3:1",
+        "page_contains_last_verse:2:29",
+        "image_size:930x2102",
+        "image_luma_mean:196.7",
+        "image_dark_ratio:0.1496",
+        "image_warmth:46.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:119-657",
+        "analysis_x:157-619",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:55-1983",
+        "cut_lines:347,779,1005,1268,1594"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 2,
+      "verse": 29,
+      "source_file": "000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "output_image": "data/hutter/verse_images/john1/002_029_000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 1250,
+        "right": 663,
+        "bottom": 1612
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:2:25,2:26,2:27,2:28,2:29,3:1",
+        "page_contains_last_verse:2:29",
+        "image_size:930x2102",
+        "image_luma_mean:196.7",
+        "image_dark_ratio:0.1496",
+        "image_warmth:46.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:119-657",
+        "analysis_x:157-619",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:55-1983",
+        "cut_lines:347,779,1005,1268,1594"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 1,
+      "source_file": "000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "output_image": "data/hutter/verse_images/john1/003_001_000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 1576,
+        "right": 663,
+        "bottom": 2001
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:2:25,2:26,2:27,2:28,2:29,3:1",
+        "page_contains_last_verse:2:29",
+        "image_size:930x2102",
+        "image_luma_mean:196.7",
+        "image_dark_ratio:0.1496",
+        "image_warmth:46.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:119-657",
+        "analysis_x:157-619",
+        "dark_threshold:160",
+        "whitespace_threshold:15",
+        "content_y:55-1983",
+        "cut_lines:347,779,1005,1268,1594"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 2,
+      "source_file": "000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "output_image": "data/hutter/verse_images/john1/003_002_000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 46,
+        "right": 627,
+        "bottom": 396
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.0",
+        "image_dark_ratio:0.1755",
+        "image_warmth:41.1",
+        "image_quality:yellowed_scan",
+        "hebrew_column:78-621",
+        "analysis_x:116-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:64-1997",
+        "cut_lines:378,650,918,1166,1464,1739"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 3,
+      "source_file": "000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "output_image": "data/hutter/verse_images/john1/003_003_000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 360,
+        "right": 627,
+        "bottom": 668
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.0",
+        "image_dark_ratio:0.1755",
+        "image_warmth:41.1",
+        "image_quality:yellowed_scan",
+        "hebrew_column:78-621",
+        "analysis_x:116-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:64-1997",
+        "cut_lines:378,650,918,1166,1464,1739"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 4,
+      "source_file": "000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "output_image": "data/hutter/verse_images/john1/003_004_000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 632,
+        "right": 627,
+        "bottom": 936
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.0",
+        "image_dark_ratio:0.1755",
+        "image_warmth:41.1",
+        "image_quality:yellowed_scan",
+        "hebrew_column:78-621",
+        "analysis_x:116-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:64-1997",
+        "cut_lines:378,650,918,1166,1464,1739"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 5,
+      "source_file": "000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "output_image": "data/hutter/verse_images/john1/003_005_000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 900,
+        "right": 627,
+        "bottom": 1184
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.0",
+        "image_dark_ratio:0.1755",
+        "image_warmth:41.1",
+        "image_quality:yellowed_scan",
+        "hebrew_column:78-621",
+        "analysis_x:116-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:64-1997",
+        "cut_lines:378,650,918,1166,1464,1739"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 6,
+      "source_file": "000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "output_image": "data/hutter/verse_images/john1/003_006_000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 1148,
+        "right": 627,
+        "bottom": 1482
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.0",
+        "image_dark_ratio:0.1755",
+        "image_warmth:41.1",
+        "image_quality:yellowed_scan",
+        "hebrew_column:78-621",
+        "analysis_x:116-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:64-1997",
+        "cut_lines:378,650,918,1166,1464,1739"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 7,
+      "source_file": "000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "output_image": "data/hutter/verse_images/john1/003_007_000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 1446,
+        "right": 627,
+        "bottom": 1757
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.0",
+        "image_dark_ratio:0.1755",
+        "image_warmth:41.1",
+        "image_quality:yellowed_scan",
+        "hebrew_column:78-621",
+        "analysis_x:116-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:64-1997",
+        "cut_lines:378,650,918,1166,1464,1739"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 8,
+      "source_file": "000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "output_image": "data/hutter/verse_images/john1/003_008_000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 1721,
+        "right": 627,
+        "bottom": 2015
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.0",
+        "image_dark_ratio:0.1755",
+        "image_warmth:41.1",
+        "image_quality:yellowed_scan",
+        "hebrew_column:78-621",
+        "analysis_x:116-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:64-1997",
+        "cut_lines:378,650,918,1166,1464,1739"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 9,
+      "source_file": "000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "output_image": "data/hutter/verse_images/john1/003_009_000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 27,
+        "right": 637,
+        "bottom": 326
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1743",
+        "image_warmth:42.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:85-631",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:45-1986",
+        "cut_lines:308,588,852,1121,1439,1655"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 10,
+      "source_file": "000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "output_image": "data/hutter/verse_images/john1/003_010_000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 290,
+        "right": 637,
+        "bottom": 606
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1743",
+        "image_warmth:42.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:85-631",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:45-1986",
+        "cut_lines:308,588,852,1121,1439,1655"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 11,
+      "source_file": "000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "output_image": "data/hutter/verse_images/john1/003_011_000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 570,
+        "right": 637,
+        "bottom": 870
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1743",
+        "image_warmth:42.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:85-631",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:45-1986",
+        "cut_lines:308,588,852,1121,1439,1655"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 12,
+      "source_file": "000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "output_image": "data/hutter/verse_images/john1/003_012_000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 834,
+        "right": 637,
+        "bottom": 1139
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1743",
+        "image_warmth:42.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:85-631",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:45-1986",
+        "cut_lines:308,588,852,1121,1439,1655"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 13,
+      "source_file": "000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "output_image": "data/hutter/verse_images/john1/003_013_000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 1103,
+        "right": 637,
+        "bottom": 1457
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1743",
+        "image_warmth:42.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:85-631",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:45-1986",
+        "cut_lines:308,588,852,1121,1439,1655"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 14,
+      "source_file": "000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "output_image": "data/hutter/verse_images/john1/003_014_000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 1421,
+        "right": 637,
+        "bottom": 1673
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1743",
+        "image_warmth:42.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:85-631",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:45-1986",
+        "cut_lines:308,588,852,1121,1439,1655"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 15,
+      "source_file": "000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "output_image": "data/hutter/verse_images/john1/003_015_000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 1637,
+        "right": 637,
+        "bottom": 2004
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1743",
+        "image_warmth:42.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:85-631",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:45-1986",
+        "cut_lines:308,588,852,1121,1439,1655"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 16,
+      "source_file": "000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "output_image": "data/hutter/verse_images/john1/003_016_000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 26,
+        "right": 639,
+        "bottom": 368
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:197.7",
+        "image_dark_ratio:0.1640",
+        "image_warmth:38.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-633",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:44-1974",
+        "cut_lines:350,620,890,1147,1439,1708"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 17,
+      "source_file": "000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "output_image": "data/hutter/verse_images/john1/003_017_000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 332,
+        "right": 639,
+        "bottom": 638
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:197.7",
+        "image_dark_ratio:0.1640",
+        "image_warmth:38.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-633",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:44-1974",
+        "cut_lines:350,620,890,1147,1439,1708"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 18,
+      "source_file": "000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "output_image": "data/hutter/verse_images/john1/003_018_000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 602,
+        "right": 639,
+        "bottom": 908
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:197.7",
+        "image_dark_ratio:0.1640",
+        "image_warmth:38.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-633",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:44-1974",
+        "cut_lines:350,620,890,1147,1439,1708"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 19,
+      "source_file": "000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "output_image": "data/hutter/verse_images/john1/003_019_000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 872,
+        "right": 639,
+        "bottom": 1165
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:197.7",
+        "image_dark_ratio:0.1640",
+        "image_warmth:38.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-633",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:44-1974",
+        "cut_lines:350,620,890,1147,1439,1708"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 20,
+      "source_file": "000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "output_image": "data/hutter/verse_images/john1/003_020_000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1129,
+        "right": 639,
+        "bottom": 1457
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:197.7",
+        "image_dark_ratio:0.1640",
+        "image_warmth:38.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-633",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:44-1974",
+        "cut_lines:350,620,890,1147,1439,1708",
+        "Verse 20: Third word - character after Mem appears to be Resh (יִרְאֵב), though the shape is slightly unclear"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 21,
+      "source_file": "000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "output_image": "data/hutter/verse_images/john1/003_021_000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1421,
+        "right": 639,
+        "bottom": 1726
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:197.7",
+        "image_dark_ratio:0.1640",
+        "image_warmth:38.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-633",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:44-1974",
+        "cut_lines:350,620,890,1147,1439,1708"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 22,
+      "source_file": "000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "output_image": "data/hutter/verse_images/john1/003_022_000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1690,
+        "right": 639,
+        "bottom": 1992
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:197.7",
+        "image_dark_ratio:0.1640",
+        "image_warmth:38.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-633",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:44-1974",
+        "cut_lines:350,620,890,1147,1439,1708"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 23,
+      "source_file": "000025.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000025.png",
+      "output_image": "data/hutter/verse_images/john1/003_023_000025.png",
+      "crop_box": {
+        "left": 92,
+        "top": 37,
+        "right": 646,
+        "bottom": 410
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:3:23,3:24,4:1,4:2,4:3",
+        "page_contains_last_verse:3:24",
+        "image_size:930x2102",
+        "image_luma_mean:201.6",
+        "image_dark_ratio:0.1550",
+        "image_warmth:38.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:98-640",
+        "analysis_x:136-602",
+        "dark_threshold:160",
+        "whitespace_threshold:14",
+        "content_y:55-1988",
+        "cut_lines:392,823,1213,1496"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 3,
+      "verse": 24,
+      "source_file": "000025.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000025.png",
+      "output_image": "data/hutter/verse_images/john1/003_024_000025.png",
+      "crop_box": {
+        "left": 92,
+        "top": 374,
+        "right": 646,
+        "bottom": 841
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:3:23,3:24,4:1,4:2,4:3",
+        "page_contains_last_verse:3:24",
+        "image_size:930x2102",
+        "image_luma_mean:201.6",
+        "image_dark_ratio:0.1550",
+        "image_warmth:38.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:98-640",
+        "analysis_x:136-602",
+        "dark_threshold:160",
+        "whitespace_threshold:14",
+        "content_y:55-1988",
+        "cut_lines:392,823,1213,1496"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 1,
+      "source_file": "000025.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000025.png",
+      "output_image": "data/hutter/verse_images/john1/004_001_000025.png",
+      "crop_box": {
+        "left": 92,
+        "top": 805,
+        "right": 646,
+        "bottom": 1231
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:3:23,3:24,4:1,4:2,4:3",
+        "page_contains_last_verse:3:24",
+        "image_size:930x2102",
+        "image_luma_mean:201.6",
+        "image_dark_ratio:0.1550",
+        "image_warmth:38.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:98-640",
+        "analysis_x:136-602",
+        "dark_threshold:160",
+        "whitespace_threshold:14",
+        "content_y:55-1988",
+        "cut_lines:392,823,1213,1496"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 2,
+      "source_file": "000025.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000025.png",
+      "output_image": "data/hutter/verse_images/john1/004_002_000025.png",
+      "crop_box": {
+        "left": 92,
+        "top": 1195,
+        "right": 646,
+        "bottom": 1514
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:3:23,3:24,4:1,4:2,4:3",
+        "page_contains_last_verse:3:24",
+        "image_size:930x2102",
+        "image_luma_mean:201.6",
+        "image_dark_ratio:0.1550",
+        "image_warmth:38.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:98-640",
+        "analysis_x:136-602",
+        "dark_threshold:160",
+        "whitespace_threshold:14",
+        "content_y:55-1988",
+        "cut_lines:392,823,1213,1496"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 3,
+      "source_file": "000025.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000025.png",
+      "output_image": "data/hutter/verse_images/john1/004_003_000025.png",
+      "crop_box": {
+        "left": 92,
+        "top": 1478,
+        "right": 646,
+        "bottom": 2006
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:3:23,3:24,4:1,4:2,4:3",
+        "page_contains_last_verse:3:24",
+        "image_size:930x2102",
+        "image_luma_mean:201.6",
+        "image_dark_ratio:0.1550",
+        "image_warmth:38.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:98-640",
+        "analysis_x:136-602",
+        "dark_threshold:160",
+        "whitespace_threshold:14",
+        "content_y:55-1988",
+        "cut_lines:392,823,1213,1496"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 4,
+      "source_file": "000027.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000027.png",
+      "output_image": "data/hutter/verse_images/john1/004_004_000027.png",
+      "crop_box": {
+        "left": 80,
+        "top": 43,
+        "right": 635,
+        "bottom": 367
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:202.4",
+        "image_dark_ratio:0.1632",
+        "image_warmth:38.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-629",
+        "analysis_x:124-518",
+        "dark_threshold:160",
+        "whitespace_threshold:29",
+        "content_y:61-1994",
+        "cut_lines:349,645,914,1211,1416,1734"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 5,
+      "source_file": "000027.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000027.png",
+      "output_image": "data/hutter/verse_images/john1/004_005_000027.png",
+      "crop_box": {
+        "left": 80,
+        "top": 331,
+        "right": 635,
+        "bottom": 663
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:202.4",
+        "image_dark_ratio:0.1632",
+        "image_warmth:38.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-629",
+        "analysis_x:124-518",
+        "dark_threshold:160",
+        "whitespace_threshold:29",
+        "content_y:61-1994",
+        "cut_lines:349,645,914,1211,1416,1734"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 6,
+      "source_file": "000027.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000027.png",
+      "output_image": "data/hutter/verse_images/john1/004_006_000027.png",
+      "crop_box": {
+        "left": 80,
+        "top": 627,
+        "right": 635,
+        "bottom": 932
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:202.4",
+        "image_dark_ratio:0.1632",
+        "image_warmth:38.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-629",
+        "analysis_x:124-518",
+        "dark_threshold:160",
+        "whitespace_threshold:29",
+        "content_y:61-1994",
+        "cut_lines:349,645,914,1211,1416,1734"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 7,
+      "source_file": "000027.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000027.png",
+      "output_image": "data/hutter/verse_images/john1/004_007_000027.png",
+      "crop_box": {
+        "left": 80,
+        "top": 896,
+        "right": 635,
+        "bottom": 1229
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:202.4",
+        "image_dark_ratio:0.1632",
+        "image_warmth:38.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-629",
+        "analysis_x:124-518",
+        "dark_threshold:160",
+        "whitespace_threshold:29",
+        "content_y:61-1994",
+        "cut_lines:349,645,914,1211,1416,1734"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 8,
+      "source_file": "000027.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000027.png",
+      "output_image": "data/hutter/verse_images/john1/004_008_000027.png",
+      "crop_box": {
+        "left": 80,
+        "top": 1193,
+        "right": 635,
+        "bottom": 1434
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:202.4",
+        "image_dark_ratio:0.1632",
+        "image_warmth:38.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-629",
+        "analysis_x:124-518",
+        "dark_threshold:160",
+        "whitespace_threshold:29",
+        "content_y:61-1994",
+        "cut_lines:349,645,914,1211,1416,1734"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 9,
+      "source_file": "000027.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000027.png",
+      "output_image": "data/hutter/verse_images/john1/004_009_000027.png",
+      "crop_box": {
+        "left": 80,
+        "top": 1398,
+        "right": 635,
+        "bottom": 1752
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:202.4",
+        "image_dark_ratio:0.1632",
+        "image_warmth:38.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-629",
+        "analysis_x:124-518",
+        "dark_threshold:160",
+        "whitespace_threshold:29",
+        "content_y:61-1994",
+        "cut_lines:349,645,914,1211,1416,1734"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 10,
+      "source_file": "000027.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000027.png",
+      "output_image": "data/hutter/verse_images/john1/004_010_000027.png",
+      "crop_box": {
+        "left": 80,
+        "top": 1716,
+        "right": 635,
+        "bottom": 2012
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:202.4",
+        "image_dark_ratio:0.1632",
+        "image_warmth:38.9",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-629",
+        "analysis_x:124-518",
+        "dark_threshold:160",
+        "whitespace_threshold:29",
+        "content_y:61-1994",
+        "cut_lines:349,645,914,1211,1416,1734"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 11,
+      "source_file": "000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "output_image": "data/hutter/verse_images/john1/004_011_000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 37,
+        "right": 626,
+        "bottom": 392
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:199.9",
+        "image_dark_ratio:0.1628",
+        "image_warmth:40.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:77-620",
+        "analysis_x:115-518",
+        "dark_threshold:160",
+        "whitespace_threshold:22",
+        "content_y:55-1988",
+        "cut_lines:374,657,921,1196,1484,1712"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 12,
+      "source_file": "000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "output_image": "data/hutter/verse_images/john1/004_012_000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 356,
+        "right": 626,
+        "bottom": 675
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:199.9",
+        "image_dark_ratio:0.1628",
+        "image_warmth:40.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:77-620",
+        "analysis_x:115-518",
+        "dark_threshold:160",
+        "whitespace_threshold:22",
+        "content_y:55-1988",
+        "cut_lines:374,657,921,1196,1484,1712"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 13,
+      "source_file": "000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "output_image": "data/hutter/verse_images/john1/004_013_000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 639,
+        "right": 626,
+        "bottom": 939
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:199.9",
+        "image_dark_ratio:0.1628",
+        "image_warmth:40.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:77-620",
+        "analysis_x:115-518",
+        "dark_threshold:160",
+        "whitespace_threshold:22",
+        "content_y:55-1988",
+        "cut_lines:374,657,921,1196,1484,1712"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 14,
+      "source_file": "000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "output_image": "data/hutter/verse_images/john1/004_014_000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 903,
+        "right": 626,
+        "bottom": 1214
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:199.9",
+        "image_dark_ratio:0.1628",
+        "image_warmth:40.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:77-620",
+        "analysis_x:115-518",
+        "dark_threshold:160",
+        "whitespace_threshold:22",
+        "content_y:55-1988",
+        "cut_lines:374,657,921,1196,1484,1712"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 15,
+      "source_file": "000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "output_image": "data/hutter/verse_images/john1/004_015_000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 1178,
+        "right": 626,
+        "bottom": 1502
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:199.9",
+        "image_dark_ratio:0.1628",
+        "image_warmth:40.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:77-620",
+        "analysis_x:115-518",
+        "dark_threshold:160",
+        "whitespace_threshold:22",
+        "content_y:55-1988",
+        "cut_lines:374,657,921,1196,1484,1712",
+        "יְהוָֹדֶה - unusual form, possibly יוֹדֶה or variant"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 16,
+      "source_file": "000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "output_image": "data/hutter/verse_images/john1/004_016_000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 1466,
+        "right": 626,
+        "bottom": 1730
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:199.9",
+        "image_dark_ratio:0.1628",
+        "image_warmth:40.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:77-620",
+        "analysis_x:115-518",
+        "dark_threshold:160",
+        "whitespace_threshold:22",
+        "content_y:55-1988",
+        "cut_lines:374,657,921,1196,1484,1712"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 17,
+      "source_file": "000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "output_image": "data/hutter/verse_images/john1/004_017_000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 1694,
+        "right": 626,
+        "bottom": 2006
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:199.9",
+        "image_dark_ratio:0.1628",
+        "image_warmth:40.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:77-620",
+        "analysis_x:115-518",
+        "dark_threshold:160",
+        "whitespace_threshold:22",
+        "content_y:55-1988",
+        "cut_lines:374,657,921,1196,1484,1712",
+        "נִּתְרֵֽי - possibly נִבְטֵי or variant form"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 18,
+      "source_file": "000031.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000031.png",
+      "output_image": "data/hutter/verse_images/john1/004_018_000031.png",
+      "crop_box": {
+        "left": 83,
+        "top": 42,
+        "right": 627,
+        "bottom": 420
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:4:18,4:19,4:20,4:21,5:1,5:2",
+        "page_contains_last_verse:4:21",
+        "image_size:740x2200",
+        "image_luma_mean:186.4",
+        "image_dark_ratio:0.1709",
+        "image_warmth:41.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-621",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:60-2000",
+        "cut_lines:402,710,1054,1366,1680"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 19,
+      "source_file": "000031.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000031.png",
+      "output_image": "data/hutter/verse_images/john1/004_019_000031.png",
+      "crop_box": {
+        "left": 83,
+        "top": 384,
+        "right": 627,
+        "bottom": 728
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:4:18,4:19,4:20,4:21,5:1,5:2",
+        "page_contains_last_verse:4:21",
+        "image_size:740x2200",
+        "image_luma_mean:186.4",
+        "image_dark_ratio:0.1709",
+        "image_warmth:41.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-621",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:60-2000",
+        "cut_lines:402,710,1054,1366,1680"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 20,
+      "source_file": "000031.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000031.png",
+      "output_image": "data/hutter/verse_images/john1/004_020_000031.png",
+      "crop_box": {
+        "left": 83,
+        "top": 692,
+        "right": 627,
+        "bottom": 1072
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:4:18,4:19,4:20,4:21,5:1,5:2",
+        "page_contains_last_verse:4:21",
+        "image_size:740x2200",
+        "image_luma_mean:186.4",
+        "image_dark_ratio:0.1709",
+        "image_warmth:41.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-621",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:60-2000",
+        "cut_lines:402,710,1054,1366,1680"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 4,
+      "verse": 21,
+      "source_file": "000031.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000031.png",
+      "output_image": "data/hutter/verse_images/john1/004_021_000031.png",
+      "crop_box": {
+        "left": 83,
+        "top": 1036,
+        "right": 627,
+        "bottom": 1384
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:4:18,4:19,4:20,4:21,5:1,5:2",
+        "page_contains_last_verse:4:21",
+        "image_size:740x2200",
+        "image_luma_mean:186.4",
+        "image_dark_ratio:0.1709",
+        "image_warmth:41.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-621",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:60-2000",
+        "cut_lines:402,710,1054,1366,1680"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 1,
+      "source_file": "000031.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000031.png",
+      "output_image": "data/hutter/verse_images/john1/005_001_000031.png",
+      "crop_box": {
+        "left": 83,
+        "top": 1348,
+        "right": 627,
+        "bottom": 1698
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:4:18,4:19,4:20,4:21,5:1,5:2",
+        "page_contains_last_verse:4:21",
+        "image_size:740x2200",
+        "image_luma_mean:186.4",
+        "image_dark_ratio:0.1709",
+        "image_warmth:41.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-621",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:60-2000",
+        "cut_lines:402,710,1054,1366,1680"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 2,
+      "source_file": "000031.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000031.png",
+      "output_image": "data/hutter/verse_images/john1/005_002_000031.png",
+      "crop_box": {
+        "left": 83,
+        "top": 1662,
+        "right": 627,
+        "bottom": 2018
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:4:18,4:19,4:20,4:21,5:1,5:2",
+        "page_contains_last_verse:4:21",
+        "image_size:740x2200",
+        "image_luma_mean:186.4",
+        "image_dark_ratio:0.1709",
+        "image_warmth:41.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:89-621",
+        "analysis_x:126-518",
+        "dark_threshold:160",
+        "whitespace_threshold:21",
+        "content_y:60-2000",
+        "cut_lines:402,710,1054,1366,1680"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 3,
+      "source_file": "000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "output_image": "data/hutter/verse_images/john1/005_003_000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 43,
+        "right": 637,
+        "bottom": 360
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:190.9",
+        "image_dark_ratio:0.1600",
+        "image_warmth:44.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-631",
+        "analysis_x:131-518",
+        "dark_threshold:160",
+        "whitespace_threshold:16",
+        "content_y:61-1988",
+        "cut_lines:342,733,1002,1349,1633"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 4,
+      "source_file": "000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "output_image": "data/hutter/verse_images/john1/005_004_000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 324,
+        "right": 637,
+        "bottom": 751
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:190.9",
+        "image_dark_ratio:0.1600",
+        "image_warmth:44.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-631",
+        "analysis_x:131-518",
+        "dark_threshold:160",
+        "whitespace_threshold:16",
+        "content_y:61-1988",
+        "cut_lines:342,733,1002,1349,1633"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 5,
+      "source_file": "000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "output_image": "data/hutter/verse_images/john1/005_005_000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 715,
+        "right": 637,
+        "bottom": 1020
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:190.9",
+        "image_dark_ratio:0.1600",
+        "image_warmth:44.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-631",
+        "analysis_x:131-518",
+        "dark_threshold:160",
+        "whitespace_threshold:16",
+        "content_y:61-1988",
+        "cut_lines:342,733,1002,1349,1633"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 6,
+      "source_file": "000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "output_image": "data/hutter/verse_images/john1/005_006_000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 984,
+        "right": 637,
+        "bottom": 1367
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:190.9",
+        "image_dark_ratio:0.1600",
+        "image_warmth:44.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-631",
+        "analysis_x:131-518",
+        "dark_threshold:160",
+        "whitespace_threshold:16",
+        "content_y:61-1988",
+        "cut_lines:342,733,1002,1349,1633"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 7,
+      "source_file": "000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "output_image": "data/hutter/verse_images/john1/005_007_000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1331,
+        "right": 637,
+        "bottom": 1651
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:190.9",
+        "image_dark_ratio:0.1600",
+        "image_warmth:44.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-631",
+        "analysis_x:131-518",
+        "dark_threshold:160",
+        "whitespace_threshold:16",
+        "content_y:61-1988",
+        "cut_lines:342,733,1002,1349,1633"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 8,
+      "source_file": "000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "output_image": "data/hutter/verse_images/john1/005_008_000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1615,
+        "right": 637,
+        "bottom": 2006
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:190.9",
+        "image_dark_ratio:0.1600",
+        "image_warmth:44.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-631",
+        "analysis_x:131-518",
+        "dark_threshold:160",
+        "whitespace_threshold:16",
+        "content_y:61-1988",
+        "cut_lines:342,733,1002,1349,1633"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 9,
+      "source_file": "000035.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000035.png",
+      "output_image": "data/hutter/verse_images/john1/005_009_000035.png",
+      "crop_box": {
+        "left": 90,
+        "top": 54,
+        "right": 625,
+        "bottom": 407
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.8",
+        "image_dark_ratio:0.1508",
+        "image_warmth:42.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:96-619",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:72-2011",
+        "cut_lines:389,738,1028,1337,1669"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 10,
+      "source_file": "000035.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000035.png",
+      "output_image": "data/hutter/verse_images/john1/005_010_000035.png",
+      "crop_box": {
+        "left": 90,
+        "top": 371,
+        "right": 625,
+        "bottom": 756
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.8",
+        "image_dark_ratio:0.1508",
+        "image_warmth:42.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:96-619",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:72-2011",
+        "cut_lines:389,738,1028,1337,1669"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 11,
+      "source_file": "000035.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000035.png",
+      "output_image": "data/hutter/verse_images/john1/005_011_000035.png",
+      "crop_box": {
+        "left": 90,
+        "top": 720,
+        "right": 625,
+        "bottom": 1046
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.8",
+        "image_dark_ratio:0.1508",
+        "image_warmth:42.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:96-619",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:72-2011",
+        "cut_lines:389,738,1028,1337,1669"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 12,
+      "source_file": "000035.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000035.png",
+      "output_image": "data/hutter/verse_images/john1/005_012_000035.png",
+      "crop_box": {
+        "left": 90,
+        "top": 1010,
+        "right": 625,
+        "bottom": 1355
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.8",
+        "image_dark_ratio:0.1508",
+        "image_warmth:42.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:96-619",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:72-2011",
+        "cut_lines:389,738,1028,1337,1669"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 13,
+      "source_file": "000035.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000035.png",
+      "output_image": "data/hutter/verse_images/john1/005_013_000035.png",
+      "crop_box": {
+        "left": 90,
+        "top": 1319,
+        "right": 625,
+        "bottom": 1687
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.8",
+        "image_dark_ratio:0.1508",
+        "image_warmth:42.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:96-619",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:72-2011",
+        "cut_lines:389,738,1028,1337,1669"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 14,
+      "source_file": "000035.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000035.png",
+      "output_image": "data/hutter/verse_images/john1/005_014_000035.png",
+      "crop_box": {
+        "left": 90,
+        "top": 1651,
+        "right": 625,
+        "bottom": 2029
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:196.8",
+        "image_dark_ratio:0.1508",
+        "image_warmth:42.4",
+        "image_quality:yellowed_scan",
+        "hebrew_column:96-619",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:20",
+        "content_y:72-2011",
+        "cut_lines:389,738,1028,1337,1669"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 15,
+      "source_file": "000037.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000037.png",
+      "output_image": "data/hutter/verse_images/john1/005_015_000037.png",
+      "crop_box": {
+        "left": 80,
+        "top": 39,
+        "right": 626,
+        "bottom": 522
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.7",
+        "image_dark_ratio:0.1510",
+        "image_warmth:44.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-620",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:57-1997",
+        "cut_lines:504,892,1291,1673"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 16,
+      "source_file": "000037.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000037.png",
+      "output_image": "data/hutter/verse_images/john1/005_016_000037.png",
+      "crop_box": {
+        "left": 80,
+        "top": 486,
+        "right": 626,
+        "bottom": 910
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.7",
+        "image_dark_ratio:0.1510",
+        "image_warmth:44.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-620",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:57-1997",
+        "cut_lines:504,892,1291,1673"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 17,
+      "source_file": "000037.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000037.png",
+      "output_image": "data/hutter/verse_images/john1/005_017_000037.png",
+      "crop_box": {
+        "left": 80,
+        "top": 874,
+        "right": 626,
+        "bottom": 1309
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.7",
+        "image_dark_ratio:0.1510",
+        "image_warmth:44.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-620",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:57-1997",
+        "cut_lines:504,892,1291,1673"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 18,
+      "source_file": "000037.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000037.png",
+      "output_image": "data/hutter/verse_images/john1/005_018_000037.png",
+      "crop_box": {
+        "left": 80,
+        "top": 1273,
+        "right": 626,
+        "bottom": 1691
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.7",
+        "image_dark_ratio:0.1510",
+        "image_warmth:44.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-620",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:57-1997",
+        "cut_lines:504,892,1291,1673"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 19,
+      "source_file": "000037.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000037.png",
+      "output_image": "data/hutter/verse_images/john1/005_019_000037.png",
+      "crop_box": {
+        "left": 80,
+        "top": 1655,
+        "right": 626,
+        "bottom": 2015
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:192.7",
+        "image_dark_ratio:0.1510",
+        "image_warmth:44.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:86-620",
+        "analysis_x:123-518",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:57-1997",
+        "cut_lines:504,892,1291,1673"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 20,
+      "source_file": "000039.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000039.png",
+      "output_image": "data/hutter/verse_images/john1/005_020_000039.png",
+      "crop_box": {
+        "left": 193,
+        "top": 45,
+        "right": 750,
+        "bottom": 452
+      },
+      "status": "cropped",
+      "notes": [
+        "page_contains_last_verse:5:21",
+        "image_size:880x2102",
+        "image_luma_mean:205.4",
+        "image_dark_ratio:0.0872",
+        "image_warmth:45.6",
+        "image_quality:yellowed_scan",
+        "trimmed_trailing_blank:1996->771",
+        "hebrew_column:199-744",
+        "analysis_x:237-616",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:63-771",
+        "cut_lines:434"
+      ]
+    },
+    {
+      "book": "john1",
+      "chapter": 5,
+      "verse": 21,
+      "source_file": "000039.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000039.png",
+      "output_image": "data/hutter/verse_images/john1/005_021_000039.png",
+      "crop_box": {
+        "left": 193,
+        "top": 416,
+        "right": 750,
+        "bottom": 789
+      },
+      "status": "cropped",
+      "notes": [
+        "page_contains_last_verse:5:21",
+        "image_size:880x2102",
+        "image_luma_mean:205.4",
+        "image_dark_ratio:0.0872",
+        "image_warmth:45.6",
+        "image_quality:yellowed_scan",
+        "trimmed_trailing_blank:1996->771",
+        "hebrew_column:199-744",
+        "analysis_x:237-616",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:63-771",
+        "cut_lines:434"
+      ]
+    }
+  ]
+}
