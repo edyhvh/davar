@@ -14,9 +14,9 @@
       "output_image": "data/hutter/verse_images/jude/001_001_000002.png",
       "crop_box": {
         "left": 69,
-        "top": 436,
+        "top": 422,
         "right": 558,
-        "bottom": 865
+        "bottom": 748
       },
       "status": "cropped",
       "notes": [
@@ -32,6 +32,7 @@
         "whitespace_threshold:22",
         "content_y:454-1987",
         "cut_lines:847,1229,1672",
+        "manual_cut_override:730,930,1390",
         "Word after 'וְנִקְדָּשִׁים' is unclear - appears to be 'רִבְשׁוּעַ' but may be 'וּבְיֵשׁוּעַ'",
         "Final word appears incomplete - 'וְהָמַּח' may continue on next line"
       ]
@@ -45,38 +46,9 @@
       "output_image": "data/hutter/verse_images/jude/001_002_000002.png",
       "crop_box": {
         "left": 69,
-        "top": 829,
+        "top": 712,
         "right": 558,
-        "bottom": 1247
-      },
-      "status": "cropped",
-      "notes": [
-        "page_starts_at_first_verse:1:1",
-        "image_size:740x2200",
-        "image_luma_mean:198.8",
-        "image_dark_ratio:0.1904",
-        "image_warmth:36.5",
-        "image_quality:yellowed_scan",
-        "hebrew_column:75-552",
-        "analysis_x:108-518",
-        "dark_threshold:160",
-        "whitespace_threshold:22",
-        "content_y:454-1987",
-        "cut_lines:847,1229,1672"
-      ]
-    },
-    {
-      "book": "jude",
-      "chapter": 1,
-      "verse": 3,
-      "source_file": "000002.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/jude/000002.png",
-      "output_image": "data/hutter/verse_images/jude/001_003_000002.png",
-      "crop_box": {
-        "left": 69,
-        "top": 1211,
-        "right": 558,
-        "bottom": 1690
+        "bottom": 948
       },
       "status": "cropped",
       "notes": [
@@ -92,6 +64,37 @@
         "whitespace_threshold:22",
         "content_y:454-1987",
         "cut_lines:847,1229,1672",
+        "manual_cut_override:730,930,1390"
+      ]
+    },
+    {
+      "book": "jude",
+      "chapter": 1,
+      "verse": 3,
+      "source_file": "000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/jude/000002.png",
+      "output_image": "data/hutter/verse_images/jude/001_003_000002.png",
+      "crop_box": {
+        "left": 69,
+        "top": 912,
+        "right": 558,
+        "bottom": 1408
+      },
+      "status": "cropped",
+      "notes": [
+        "page_starts_at_first_verse:1:1",
+        "image_size:740x2200",
+        "image_luma_mean:198.8",
+        "image_dark_ratio:0.1904",
+        "image_warmth:36.5",
+        "image_quality:yellowed_scan",
+        "hebrew_column:75-552",
+        "analysis_x:108-518",
+        "dark_threshold:160",
+        "whitespace_threshold:22",
+        "content_y:454-1987",
+        "cut_lines:847,1229,1672",
+        "manual_cut_override:730,930,1390",
         "Word 'בְּרַצּוֹתִי' - Dagesh in Tsade uncertain",
         "Word 'בְּלַהַּ' appears unusual - may be 'בְּלָהַּ'",
         "Word 'נֹחֲבָה' unclear - may be 'נָדָבָה' or similar",
@@ -107,9 +110,9 @@
       "output_image": "data/hutter/verse_images/jude/001_004_000002.png",
       "crop_box": {
         "left": 69,
-        "top": 1654,
+        "top": 1372,
         "right": 558,
-        "bottom": 2005
+        "bottom": 1928
       },
       "status": "cropped",
       "notes": [
@@ -125,6 +128,7 @@
         "whitespace_threshold:22",
         "content_y:454-1987",
         "cut_lines:847,1229,1672",
+        "manual_cut_override:730,930,1390",
         "Word 'הַתְּשׁוּעָה' - first letter may be 'חֶ' not 'הַ'",
         "Word 'לְזִמָּה' - Dagesh in Mem uncertain"
       ]

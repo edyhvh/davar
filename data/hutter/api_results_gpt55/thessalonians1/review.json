@@ -1,8 +1,8 @@
 {
   "book": "thessalonians1",
-  "raw_result_count": 90,
+  "raw_result_count": 95,
   "result_count": 89,
-  "batch_count": 10,
+  "batch_count": 11,
   "status_counts": {
     "ok": 89
   },
@@ -11,15 +11,15 @@
     "low": 21,
     "medium": 67
   },
-  "needs_review_count": 72,
-  "likely_crop_issue_count": 24,
+  "needs_review_count": 68,
+  "likely_crop_issue_count": 20,
   "likely_ocr_issue_count": 48,
-  "no_hebrew_marks_count": 1,
-  "empty_text_count": 1,
+  "no_hebrew_marks_count": 0,
+  "empty_text_count": 0,
   "usage": {
-    "input_tokens": 29128,
-    "output_tokens": 16255,
-    "total_tokens": 45383
+    "input_tokens": 30421,
+    "output_tokens": 16966,
+    "total_tokens": 47387
   },
   "needs_review": [
     {
@@ -559,44 +559,12 @@
       "hebrew_text": "וֵאלֹהֵי הַשָּׁלוֹם הוּא יְקַדֵּשׁ אֶתְכֶם לְכָלִילָה וְכָל־רוּחֲכֶם וְנַפְשְׁכֶם וּגְוִיָּתְכֶם בְּכֻלּוֹ תָּמִים לְבִיאַת אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ"
     },
     {
-      "id": "thessalonians1.5.24.000030",
-      "confidence": "medium",
-      "has_hebrew_marks": true,
-      "notes": "Verse split across adjacent crop; lower portion partly cut.",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_024_000030.png",
-      "hebrew_text": "נֶאֱמָן הוּא הַקֹּרֵא לָכֶם אֲשֶׁר גַּם יַעֲשֶׂה׃"
-    },
-    {
-      "id": "thessalonians1.5.25.000030",
-      "confidence": "medium",
-      "has_hebrew_marks": true,
-      "notes": "Target verse visible in following crop; pointing somewhat unclear.",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_025_000030.png",
-      "hebrew_text": "אַחַי הִתְפַּלְלוּ עָלֵינוּ׃"
-    },
-    {
-      "id": "thessalonians1.5.26.000030",
-      "confidence": "medium",
-      "has_hebrew_marks": true,
-      "notes": "Verse split between crops 7 and 8; pointing partly unclear.",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_026_000030.png",
-      "hebrew_text": "שַׁאֲלוּ לְשָׁלוֹם לְאַחִים כֻּלָּם בִּנְשִׁיקַת הַקֹּדֶשׁ׃"
-    },
-    {
       "id": "thessalonians1.5.27.000030",
-      "confidence": "medium",
-      "has_hebrew_marks": true,
-      "notes": "Verse split across crops 8 and 9; some pointing/letters partly unclear.",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_027_000030.png",
-      "hebrew_text": "מַשְׁבִּיעֲכֶם בַּיהוָה אֲשֶׁר תִּקְרְאוּ אֶת־אִגֶּרֶת הַזֹּאת בְּאָזְנֵי כָּל־אַחִים הַקְּדוֹשִׁים׃"
-    },
-    {
-      "id": "thessalonians1.5.28.000030",
       "confidence": "low",
-      "has_hebrew_marks": false,
-      "notes": "Supplied crop shows Spanish translation of verse 27 and no visible Hebrew for verse 28. No Hebrew pointing marks were returned; review against the image.",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_028_000030.png",
-      "hebrew_text": ""
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and wording are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/thessalonians1/005_027_000030.png",
+      "hebrew_text": "מַשְׁבִּיעֲכֶם בַּיהוָה אֲשֶׁר הַמִּקְרָא אֶת־הָאִגֶּרֶת הַזֹּאת בְּאָזְנֵי כָּל־אַחִים הַקְּדוֹשִׁים׃"
     }
   ],
   "likely_crop_issues": [
@@ -734,39 +702,11 @@
       "hebrew_text": "וֵאלֹהֵי הַשָּׁלוֹם הוּא יְקַדֵּשׁ אֶתְכֶם לְכָלִילָה וְכָל־רוּחֲכֶם וְנַפְשְׁכֶם וּגְוִיָּתְכֶם בְּכֻלּוֹ תָּמִים לְבִיאַת אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ"
     },
     {
-      "id": "thessalonians1.5.24.000030",
-      "confidence": "medium",
-      "notes": "Verse split across adjacent crop; lower portion partly cut.",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_024_000030.png",
-      "hebrew_text": "נֶאֱמָן הוּא הַקֹּרֵא לָכֶם אֲשֶׁר גַּם יַעֲשֶׂה׃"
-    },
-    {
-      "id": "thessalonians1.5.25.000030",
-      "confidence": "medium",
-      "notes": "Target verse visible in following crop; pointing somewhat unclear.",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_025_000030.png",
-      "hebrew_text": "אַחַי הִתְפַּלְלוּ עָלֵינוּ׃"
-    },
-    {
-      "id": "thessalonians1.5.26.000030",
-      "confidence": "medium",
-      "notes": "Verse split between crops 7 and 8; pointing partly unclear.",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_026_000030.png",
-      "hebrew_text": "שַׁאֲלוּ לְשָׁלוֹם לְאַחִים כֻּלָּם בִּנְשִׁיקַת הַקֹּדֶשׁ׃"
-    },
-    {
       "id": "thessalonians1.5.27.000030",
-      "confidence": "medium",
-      "notes": "Verse split across crops 8 and 9; some pointing/letters partly unclear.",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_027_000030.png",
-      "hebrew_text": "מַשְׁבִּיעֲכֶם בַּיהוָה אֲשֶׁר תִּקְרְאוּ אֶת־אִגֶּרֶת הַזֹּאת בְּאָזְנֵי כָּל־אַחִים הַקְּדוֹשִׁים׃"
-    },
-    {
-      "id": "thessalonians1.5.28.000030",
       "confidence": "low",
-      "notes": "Supplied crop shows Spanish translation of verse 27 and no visible Hebrew for verse 28. No Hebrew pointing marks were returned; review against the image.",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_028_000030.png",
-      "hebrew_text": ""
+      "notes": "Some pointing and wording are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/thessalonians1/005_027_000030.png",
+      "hebrew_text": "מַשְׁבִּיעֲכֶם בַּיהוָה אֲשֶׁר הַמִּקְרָא אֶת־הָאִגֶּרֶת הַזֹּאת בְּאָזְנֵי כָּל־אַחִים הַקְּדוֹשִׁים׃"
     }
   ]
 }

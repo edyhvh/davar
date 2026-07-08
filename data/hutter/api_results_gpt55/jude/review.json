@@ -1,57 +1,57 @@
 {
   "book": "jude",
-  "raw_result_count": 26,
+  "raw_result_count": 30,
   "result_count": 25,
-  "batch_count": 4,
+  "batch_count": 5,
   "status_counts": {
     "ok": 25
   },
   "confidence_counts": {
-    "low": 6,
-    "medium": 19
+    "low": 5,
+    "medium": 20
   },
   "needs_review_count": 25,
-  "likely_crop_issue_count": 13,
-  "likely_ocr_issue_count": 12,
-  "no_hebrew_marks_count": 2,
-  "empty_text_count": 1,
+  "likely_crop_issue_count": 11,
+  "likely_ocr_issue_count": 14,
+  "no_hebrew_marks_count": 0,
+  "empty_text_count": 0,
   "usage": {
-    "input_tokens": 10532,
-    "output_tokens": 4336,
-    "total_tokens": 14868
+    "input_tokens": 12034,
+    "output_tokens": 4771,
+    "total_tokens": 16805
   },
   "needs_review": [
     {
       "id": "jude.1.1.000002",
-      "confidence": "low",
-      "has_hebrew_marks": false,
-      "notes": "Verse partly obscured/cropped; pointing not confidently preserved. No Hebrew pointing marks were returned; review against the image.",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Right edge/initial words partly obscured; pointing not fully reliable.",
       "output_image": "data/hutter/verse_images/jude/001_001_000002.png",
-      "hebrew_text": "יהודה עבד ישוע המשיח אחי יעקב לאשר נקראו ונשמרים לאלהים האב בקדושים ישוע המשיח"
+      "hebrew_text": "יהודה עבד ישוע המשיח ואחי יעקב לאשר לאלהים האב מקדשים ובישוע המשיח נקראים ונצרים המה׃"
     },
     {
       "id": "jude.1.2.000002",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Image crop is partial and includes neighboring Hebrew; some pointing is difficult to confirm.",
+      "notes": "Verse crop is partial/narrow; final word appears on next line.",
       "output_image": "data/hutter/verse_images/jude/001_002_000002.png",
-      "hebrew_text": "הָרַחֲמִים וְשָׁלוֹם וְאַהֲבָה יִמָּלְאוּ לָכֶם"
+      "hebrew_text": "החנּה לכם ושלום ואהבה ירבה׃"
     },
     {
       "id": "jude.1.3.000002",
       "confidence": "low",
       "has_hebrew_marks": true,
-      "notes": "Crop cuts the verse on both sides; several words uncertain and pointing not confidently preserved.",
+      "notes": "Text is blurry/cropped and several words or letters are uncertain; niqqud not confidently preserved.",
       "output_image": "data/hutter/verse_images/jude/001_003_000002.png",
-      "hebrew_text": "אהובי במליצה אנשים אשר נכספו אל משפט הזה אשר נפש את־החלה וכתבים לצלותם ולבטחה אשר לכדו יהוה אלהים"
+      "hebrew_text": "אהובי בהיותי בכל החרבה לעשות לכתוב אליכם על ישועתנו כלל נאמנתי כי לצרך לכם לכתוב אליכם את־הנחמתי אליכם במלחמת היותה פעם אחת לקדושים׃"
     },
     {
       "id": "jude.1.4.000002",
       "confidence": "low",
-      "has_hebrew_marks": false,
-      "notes": "Target Hebrew verse is not visible in crop; only neighboring Hebrew and Spanish text appear. No Hebrew pointing marks were returned; review against the image.",
+      "has_hebrew_marks": true,
+      "notes": "Left/right edges and some words are cut or unclear; transcription uncertain and pointing not confidently preserved.",
       "output_image": "data/hutter/verse_images/jude/001_004_000002.png",
-      "hebrew_text": ""
+      "hebrew_text": "כי־באו במרמה אנשים אשר היו מקדם אל־משפט הזה רשומים אשר נפש את־החנן אלהינו הפכים לצלולתם ולמענה את אשר לבדו יהוה אלהים ואדנינו ישוע המשיח מכחשים׃"
     },
     {
       "id": "jude.1.5.000004",
@@ -224,32 +224,18 @@
   ],
   "likely_crop_issues": [
     {
-      "id": "jude.1.1.000002",
-      "confidence": "low",
-      "notes": "Verse partly obscured/cropped; pointing not confidently preserved. No Hebrew pointing marks were returned; review against the image.",
-      "output_image": "data/hutter/verse_images/jude/001_001_000002.png",
-      "hebrew_text": "יהודה עבד ישוע המשיח אחי יעקב לאשר נקראו ונשמרים לאלהים האב בקדושים ישוע המשיח"
-    },
-    {
       "id": "jude.1.2.000002",
       "confidence": "medium",
-      "notes": "Image crop is partial and includes neighboring Hebrew; some pointing is difficult to confirm.",
+      "notes": "Verse crop is partial/narrow; final word appears on next line.",
       "output_image": "data/hutter/verse_images/jude/001_002_000002.png",
-      "hebrew_text": "הָרַחֲמִים וְשָׁלוֹם וְאַהֲבָה יִמָּלְאוּ לָכֶם"
+      "hebrew_text": "החנּה לכם ושלום ואהבה ירבה׃"
     },
     {
       "id": "jude.1.3.000002",
       "confidence": "low",
-      "notes": "Crop cuts the verse on both sides; several words uncertain and pointing not confidently preserved.",
+      "notes": "Text is blurry/cropped and several words or letters are uncertain; niqqud not confidently preserved.",
       "output_image": "data/hutter/verse_images/jude/001_003_000002.png",
-      "hebrew_text": "אהובי במליצה אנשים אשר נכספו אל משפט הזה אשר נפש את־החלה וכתבים לצלותם ולבטחה אשר לכדו יהוה אלהים"
-    },
-    {
-      "id": "jude.1.4.000002",
-      "confidence": "low",
-      "notes": "Target Hebrew verse is not visible in crop; only neighboring Hebrew and Spanish text appear. No Hebrew pointing marks were returned; review against the image.",
-      "output_image": "data/hutter/verse_images/jude/001_004_000002.png",
-      "hebrew_text": ""
+      "hebrew_text": "אהובי בהיותי בכל החרבה לעשות לכתוב אליכם על ישועתנו כלל נאמנתי כי לצרך לכם לכתוב אליכם את־הנחמתי אליכם במלחמת היותה פעם אחת לקדושים׃"
     },
     {
       "id": "jude.1.10.000006",

@@ -495,9 +495,9 @@
       "output_image": "data/hutter/verse_images/colossians/001_018_000008.png",
       "crop_box": {
         "left": 73,
-        "top": 46,
+        "top": 142,
         "right": 625,
-        "bottom": 359
+        "bottom": 448
       },
       "status": "cropped",
       "notes": [
@@ -511,7 +511,8 @@
         "dark_threshold:160",
         "whitespace_threshold:17",
         "content_y:64-1977",
-        "cut_lines:341,627,929,1358,1715"
+        "cut_lines:341,627,929,1358,1715",
+        "manual_cut_override:430,625,950,1185,1465"
       ]
     },
     {
@@ -523,9 +524,9 @@
       "output_image": "data/hutter/verse_images/colossians/001_019_000008.png",
       "crop_box": {
         "left": 73,
-        "top": 323,
+        "top": 412,
         "right": 625,
-        "bottom": 645
+        "bottom": 643
       },
       "status": "cropped",
       "notes": [
@@ -539,7 +540,8 @@
         "dark_threshold:160",
         "whitespace_threshold:17",
         "content_y:64-1977",
-        "cut_lines:341,627,929,1358,1715"
+        "cut_lines:341,627,929,1358,1715",
+        "manual_cut_override:430,625,950,1185,1465"
       ]
     },
     {
@@ -551,9 +553,9 @@
       "output_image": "data/hutter/verse_images/colossians/001_020_000008.png",
       "crop_box": {
         "left": 73,
-        "top": 609,
+        "top": 607,
         "right": 625,
-        "bottom": 947
+        "bottom": 968
       },
       "status": "cropped",
       "notes": [
@@ -567,7 +569,8 @@
         "dark_threshold:160",
         "whitespace_threshold:17",
         "content_y:64-1977",
-        "cut_lines:341,627,929,1358,1715"
+        "cut_lines:341,627,929,1358,1715",
+        "manual_cut_override:430,625,950,1185,1465"
       ]
     },
     {
@@ -579,9 +582,9 @@
       "output_image": "data/hutter/verse_images/colossians/001_021_000008.png",
       "crop_box": {
         "left": 73,
-        "top": 911,
+        "top": 932,
         "right": 625,
-        "bottom": 1376
+        "bottom": 1203
       },
       "status": "cropped",
       "notes": [
@@ -595,7 +598,8 @@
         "dark_threshold:160",
         "whitespace_threshold:17",
         "content_y:64-1977",
-        "cut_lines:341,627,929,1358,1715"
+        "cut_lines:341,627,929,1358,1715",
+        "manual_cut_override:430,625,950,1185,1465"
       ]
     },
     {
@@ -607,9 +611,9 @@
       "output_image": "data/hutter/verse_images/colossians/001_022_000008.png",
       "crop_box": {
         "left": 73,
-        "top": 1340,
+        "top": 1167,
         "right": 625,
-        "bottom": 1733
+        "bottom": 1483
       },
       "status": "cropped",
       "notes": [
@@ -623,7 +627,8 @@
         "dark_threshold:160",
         "whitespace_threshold:17",
         "content_y:64-1977",
-        "cut_lines:341,627,929,1358,1715"
+        "cut_lines:341,627,929,1358,1715",
+        "manual_cut_override:430,625,950,1185,1465"
       ]
     },
     {
@@ -635,9 +640,9 @@
       "output_image": "data/hutter/verse_images/colossians/001_023_000008.png",
       "crop_box": {
         "left": 73,
-        "top": 1697,
+        "top": 1447,
         "right": 625,
-        "bottom": 1995
+        "bottom": 1918
       },
       "status": "cropped",
       "notes": [
@@ -651,7 +656,8 @@
         "dark_threshold:160",
         "whitespace_threshold:17",
         "content_y:64-1977",
-        "cut_lines:341,627,929,1358,1715"
+        "cut_lines:341,627,929,1358,1715",
+        "manual_cut_override:430,625,950,1185,1465"
       ]
     },
     {
@@ -1348,9 +1354,9 @@
       "output_image": "data/hutter/verse_images/colossians/002_019_000018.png",
       "crop_box": {
         "left": 63,
-        "top": 53,
+        "top": 152,
         "right": 614,
-        "bottom": 416
+        "bottom": 518
       },
       "status": "cropped",
       "notes": [
@@ -1367,6 +1373,7 @@
         "whitespace_threshold:12",
         "content_y:71-2000",
         "cut_lines:398,778,1092,1403,1595",
+        "manual_cut_override:500,770,930,1180,1540",
         "Verse 19: Final word before Sof Pasuq unclear - appears to be אֱלֹהִים but ink quality makes final verification difficult"
       ]
     },
@@ -1379,99 +1386,9 @@
       "output_image": "data/hutter/verse_images/colossians/002_020_000018.png",
       "crop_box": {
         "left": 63,
-        "top": 380,
+        "top": 482,
         "right": 614,
-        "bottom": 796
-      },
-      "status": "cropped",
-      "notes": [
-        "page_chapter_transition:2:19,2:20,2:21,2:22,2:23,3:1",
-        "page_contains_last_verse:2:23",
-        "image_size:740x2200",
-        "image_luma_mean:196.1",
-        "image_dark_ratio:0.1526",
-        "image_warmth:45.8",
-        "image_quality:yellowed_scan",
-        "hebrew_column:69-608",
-        "analysis_x:107-518",
-        "dark_threshold:160",
-        "whitespace_threshold:12",
-        "content_y:71-2000",
-        "cut_lines:398,778,1092,1403,1595"
-      ]
-    },
-    {
-      "book": "colossians",
-      "chapter": 2,
-      "verse": 21,
-      "source_file": "000018.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/colossians/000018.png",
-      "output_image": "data/hutter/verse_images/colossians/002_021_000018.png",
-      "crop_box": {
-        "left": 63,
-        "top": 760,
-        "right": 614,
-        "bottom": 1110
-      },
-      "status": "cropped",
-      "notes": [
-        "page_chapter_transition:2:19,2:20,2:21,2:22,2:23,3:1",
-        "page_contains_last_verse:2:23",
-        "image_size:740x2200",
-        "image_luma_mean:196.1",
-        "image_dark_ratio:0.1526",
-        "image_warmth:45.8",
-        "image_quality:yellowed_scan",
-        "hebrew_column:69-608",
-        "analysis_x:107-518",
-        "dark_threshold:160",
-        "whitespace_threshold:12",
-        "content_y:71-2000",
-        "cut_lines:398,778,1092,1403,1595"
-      ]
-    },
-    {
-      "book": "colossians",
-      "chapter": 2,
-      "verse": 22,
-      "source_file": "000018.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/colossians/000018.png",
-      "output_image": "data/hutter/verse_images/colossians/002_022_000018.png",
-      "crop_box": {
-        "left": 63,
-        "top": 1074,
-        "right": 614,
-        "bottom": 1421
-      },
-      "status": "cropped",
-      "notes": [
-        "page_chapter_transition:2:19,2:20,2:21,2:22,2:23,3:1",
-        "page_contains_last_verse:2:23",
-        "image_size:740x2200",
-        "image_luma_mean:196.1",
-        "image_dark_ratio:0.1526",
-        "image_warmth:45.8",
-        "image_quality:yellowed_scan",
-        "hebrew_column:69-608",
-        "analysis_x:107-518",
-        "dark_threshold:160",
-        "whitespace_threshold:12",
-        "content_y:71-2000",
-        "cut_lines:398,778,1092,1403,1595"
-      ]
-    },
-    {
-      "book": "colossians",
-      "chapter": 2,
-      "verse": 23,
-      "source_file": "000018.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/colossians/000018.png",
-      "output_image": "data/hutter/verse_images/colossians/002_023_000018.png",
-      "crop_box": {
-        "left": 63,
-        "top": 1385,
-        "right": 614,
-        "bottom": 1613
+        "bottom": 788
       },
       "status": "cropped",
       "notes": [
@@ -1488,6 +1405,100 @@
         "whitespace_threshold:12",
         "content_y:71-2000",
         "cut_lines:398,778,1092,1403,1595",
+        "manual_cut_override:500,770,930,1180,1540"
+      ]
+    },
+    {
+      "book": "colossians",
+      "chapter": 2,
+      "verse": 21,
+      "source_file": "000018.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/colossians/000018.png",
+      "output_image": "data/hutter/verse_images/colossians/002_021_000018.png",
+      "crop_box": {
+        "left": 63,
+        "top": 752,
+        "right": 614,
+        "bottom": 948
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:2:19,2:20,2:21,2:22,2:23,3:1",
+        "page_contains_last_verse:2:23",
+        "image_size:740x2200",
+        "image_luma_mean:196.1",
+        "image_dark_ratio:0.1526",
+        "image_warmth:45.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:69-608",
+        "analysis_x:107-518",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:71-2000",
+        "cut_lines:398,778,1092,1403,1595",
+        "manual_cut_override:500,770,930,1180,1540"
+      ]
+    },
+    {
+      "book": "colossians",
+      "chapter": 2,
+      "verse": 22,
+      "source_file": "000018.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/colossians/000018.png",
+      "output_image": "data/hutter/verse_images/colossians/002_022_000018.png",
+      "crop_box": {
+        "left": 63,
+        "top": 912,
+        "right": 614,
+        "bottom": 1198
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:2:19,2:20,2:21,2:22,2:23,3:1",
+        "page_contains_last_verse:2:23",
+        "image_size:740x2200",
+        "image_luma_mean:196.1",
+        "image_dark_ratio:0.1526",
+        "image_warmth:45.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:69-608",
+        "analysis_x:107-518",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:71-2000",
+        "cut_lines:398,778,1092,1403,1595",
+        "manual_cut_override:500,770,930,1180,1540"
+      ]
+    },
+    {
+      "book": "colossians",
+      "chapter": 2,
+      "verse": 23,
+      "source_file": "000018.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/colossians/000018.png",
+      "output_image": "data/hutter/verse_images/colossians/002_023_000018.png",
+      "crop_box": {
+        "left": 63,
+        "top": 1162,
+        "right": 614,
+        "bottom": 1558
+      },
+      "status": "cropped",
+      "notes": [
+        "page_chapter_transition:2:19,2:20,2:21,2:22,2:23,3:1",
+        "page_contains_last_verse:2:23",
+        "image_size:740x2200",
+        "image_luma_mean:196.1",
+        "image_dark_ratio:0.1526",
+        "image_warmth:45.8",
+        "image_quality:yellowed_scan",
+        "hebrew_column:69-608",
+        "analysis_x:107-518",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:71-2000",
+        "cut_lines:398,778,1092,1403,1595",
+        "manual_cut_override:500,770,930,1180,1540",
         "Verse 23: Multiple words with complex nikud - יִקְרָה and לְשָׂבְעַת require careful verification"
       ]
     },
@@ -1500,9 +1511,9 @@
       "output_image": "data/hutter/verse_images/colossians/003_001_000018.png",
       "crop_box": {
         "left": 63,
-        "top": 1577,
+        "top": 1522,
         "right": 614,
-        "bottom": 2018
+        "bottom": 1923
       },
       "status": "cropped",
       "notes": [
@@ -1519,6 +1530,7 @@
         "whitespace_threshold:12",
         "content_y:71-2000",
         "cut_lines:398,778,1092,1403,1595",
+        "manual_cut_override:500,770,930,1180,1540",
         "Verse 1: Word מְחֻיִּם has complex vocalization that requires verification"
       ]
     },

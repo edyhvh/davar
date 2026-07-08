@@ -1,23 +1,24 @@
 {
   "book": "thessalonians2",
+  "raw_result_count": 54,
   "result_count": 47,
-  "batch_count": 5,
+  "batch_count": 7,
   "status_counts": {
     "ok": 47
   },
   "confidence_counts": {
-    "low": 15,
-    "medium": 32
+    "low": 12,
+    "medium": 35
   },
-  "needs_review_count": 40,
-  "likely_crop_issue_count": 10,
-  "likely_ocr_issue_count": 30,
-  "no_hebrew_marks_count": 1,
-  "empty_text_count": 1,
+  "needs_review_count": 41,
+  "likely_crop_issue_count": 8,
+  "likely_ocr_issue_count": 33,
+  "no_hebrew_marks_count": 0,
+  "empty_text_count": 0,
   "usage": {
-    "input_tokens": 14931,
-    "output_tokens": 8210,
-    "total_tokens": 23141
+    "input_tokens": 17369,
+    "output_tokens": 9501,
+    "total_tokens": 26870
   },
   "needs_review": [
     {
@@ -254,27 +255,35 @@
     },
     {
       "id": "thessalonians2.3.1.000012",
-      "confidence": "low",
+      "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Crop appears to show verse number 2, not requested verse 1.",
+      "notes": "Some pointing is difficult to distinguish in the crop.",
       "output_image": "data/hutter/verse_images/thessalonians2/003_001_000012.png",
-      "hebrew_text": "וַאֲשֶׁר נִמָּלֵט מֵאֲנָשֵׁי בְלִיַּעַל הָרָעִים כִּי־אֵינֶנָּה לְכֻלָּם הָאֱמוּנָה׃"
+      "hebrew_text": "וְהַנִּשְׁאָר הִתְפַּלְלוּ נָא אַחַי עָלֵינוּ אֲשֶׁר דְּבַר יְהוָה יָרוּץ עַד־מְהֵרָה וְיִכָּבֵד כְּמוֹ גַּם אֲלֵיכֶם׃"
     },
     {
-      "id": "thessalonians2.3.6.000012",
-      "confidence": "low",
+      "id": "thessalonians2.3.2.000012",
+      "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Verse text is partly cut off at bottom and continues from preceding crop context.",
-      "output_image": "data/hutter/verse_images/thessalonians2/003_006_000012.png",
-      "hebrew_text": "כי אתם ידעתם איך צריך להדמות לנו כי־לא התהלכנו אתכם להרע׃"
+      "notes": "Pointing and one or more letters are somewhat unclear due to image quality.",
+      "output_image": "data/hutter/verse_images/thessalonians2/003_002_000012.png",
+      "hebrew_text": "וַאֲשֶׁר נִמָּלֵט מֵאַנְשֵׁי בְלִיַּעַל הָרָעִים כִּי־אֵינֶנָּה לְכֻלָּם הָאֱמוּנָה׃"
     },
     {
-      "id": "thessalonians2.3.7.000012",
-      "confidence": "low",
-      "has_hebrew_marks": false,
-      "notes": "Image contains only the end of neighboring Hebrew text and non-Hebrew translation; target verse is not visible. No Hebrew pointing marks were returned; review against the image.",
-      "output_image": "data/hutter/verse_images/thessalonians2/003_007_000012.png",
-      "hebrew_text": ""
+      "id": "thessalonians2.3.3.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points and exact consonants in the final phrase are difficult to verify.",
+      "output_image": "data/hutter/verse_images/thessalonians2/003_003_000012.png",
+      "hebrew_text": "וְנֶאֱמָן הוּא יְהוָה אֲשֶׁר יִסְעָדְכֶם וְיִצָּרְכֶם מֵרָע׃"
+    },
+    {
+      "id": "thessalonians2.3.4.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "The beginning of the line and several pointing marks are unclear.",
+      "output_image": "data/hutter/verse_images/thessalonians2/003_004_000012.png",
+      "hebrew_text": "וּבְטַחְנוּ בַּיהוָה עֲלֵיכֶם כִּי אֶת־אֲשֶׁר צִוִּינוּ לָכֶם גַּם עֹשִׂים אַתֶּם וְגַם תַּעֲשׂוּ׃"
     },
     {
       "id": "thessalonians2.3.9.000014",
@@ -372,24 +381,10 @@
     },
     {
       "id": "thessalonians2.3.1.000012",
-      "confidence": "low",
-      "notes": "Crop appears to show verse number 2, not requested verse 1.",
+      "confidence": "medium",
+      "notes": "Some pointing is difficult to distinguish in the crop.",
       "output_image": "data/hutter/verse_images/thessalonians2/003_001_000012.png",
-      "hebrew_text": "וַאֲשֶׁר נִמָּלֵט מֵאֲנָשֵׁי בְלִיַּעַל הָרָעִים כִּי־אֵינֶנָּה לְכֻלָּם הָאֱמוּנָה׃"
-    },
-    {
-      "id": "thessalonians2.3.6.000012",
-      "confidence": "low",
-      "notes": "Verse text is partly cut off at bottom and continues from preceding crop context.",
-      "output_image": "data/hutter/verse_images/thessalonians2/003_006_000012.png",
-      "hebrew_text": "כי אתם ידעתם איך צריך להדמות לנו כי־לא התהלכנו אתכם להרע׃"
-    },
-    {
-      "id": "thessalonians2.3.7.000012",
-      "confidence": "low",
-      "notes": "Image contains only the end of neighboring Hebrew text and non-Hebrew translation; target verse is not visible. No Hebrew pointing marks were returned; review against the image.",
-      "output_image": "data/hutter/verse_images/thessalonians2/003_007_000012.png",
-      "hebrew_text": ""
+      "hebrew_text": "וְהַנִּשְׁאָר הִתְפַּלְלוּ נָא אַחַי עָלֵינוּ אֲשֶׁר דְּבַר יְהוָה יָרוּץ עַד־מְהֵרָה וְיִכָּבֵד כְּמוֹ גַּם אֲלֵיכֶם׃"
     },
     {
       "id": "thessalonians2.3.9.000014",

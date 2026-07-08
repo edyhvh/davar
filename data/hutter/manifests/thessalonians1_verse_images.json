@@ -2433,129 +2433,9 @@
       "output_image": "data/hutter/verse_images/thessalonians1/005_024_000030.png",
       "crop_box": {
         "left": 197,
-        "top": 36,
+        "top": 122,
         "right": 748,
-        "bottom": 235
-      },
-      "status": "cropped",
-      "notes": [
-        "page_contains_last_verse:5:28",
-        "image_size:870x2102",
-        "image_luma_mean:217.6",
-        "image_dark_ratio:0.0829",
-        "image_warmth:37.1",
-        "image_quality:yellowed_scan",
-        "trimmed_trailing_blank:1988->759",
-        "hebrew_column:203-742",
-        "analysis_x:241-609",
-        "dark_threshold:160",
-        "whitespace_threshold:12",
-        "content_y:54-759",
-        "cut_lines:217,320,474,614"
-      ]
-    },
-    {
-      "book": "thessalonians1",
-      "chapter": 5,
-      "verse": 25,
-      "source_file": "000030.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/thessalonians1/000030.png",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_025_000030.png",
-      "crop_box": {
-        "left": 197,
-        "top": 199,
-        "right": 748,
-        "bottom": 338
-      },
-      "status": "cropped",
-      "notes": [
-        "page_contains_last_verse:5:28",
-        "image_size:870x2102",
-        "image_luma_mean:217.6",
-        "image_dark_ratio:0.0829",
-        "image_warmth:37.1",
-        "image_quality:yellowed_scan",
-        "trimmed_trailing_blank:1988->759",
-        "hebrew_column:203-742",
-        "analysis_x:241-609",
-        "dark_threshold:160",
-        "whitespace_threshold:12",
-        "content_y:54-759",
-        "cut_lines:217,320,474,614"
-      ]
-    },
-    {
-      "book": "thessalonians1",
-      "chapter": 5,
-      "verse": 26,
-      "source_file": "000030.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/thessalonians1/000030.png",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_026_000030.png",
-      "crop_box": {
-        "left": 197,
-        "top": 302,
-        "right": 748,
-        "bottom": 492
-      },
-      "status": "cropped",
-      "notes": [
-        "page_contains_last_verse:5:28",
-        "image_size:870x2102",
-        "image_luma_mean:217.6",
-        "image_dark_ratio:0.0829",
-        "image_warmth:37.1",
-        "image_quality:yellowed_scan",
-        "trimmed_trailing_blank:1988->759",
-        "hebrew_column:203-742",
-        "analysis_x:241-609",
-        "dark_threshold:160",
-        "whitespace_threshold:12",
-        "content_y:54-759",
-        "cut_lines:217,320,474,614"
-      ]
-    },
-    {
-      "book": "thessalonians1",
-      "chapter": 5,
-      "verse": 27,
-      "source_file": "000030.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/thessalonians1/000030.png",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_027_000030.png",
-      "crop_box": {
-        "left": 197,
-        "top": 456,
-        "right": 748,
-        "bottom": 632
-      },
-      "status": "cropped",
-      "notes": [
-        "page_contains_last_verse:5:28",
-        "image_size:870x2102",
-        "image_luma_mean:217.6",
-        "image_dark_ratio:0.0829",
-        "image_warmth:37.1",
-        "image_quality:yellowed_scan",
-        "trimmed_trailing_blank:1988->759",
-        "hebrew_column:203-742",
-        "analysis_x:241-609",
-        "dark_threshold:160",
-        "whitespace_threshold:12",
-        "content_y:54-759",
-        "cut_lines:217,320,474,614"
-      ]
-    },
-    {
-      "book": "thessalonians1",
-      "chapter": 5,
-      "verse": 28,
-      "source_file": "000030.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/thessalonians1/000030.png",
-      "output_image": "data/hutter/verse_images/thessalonians1/005_028_000030.png",
-      "crop_box": {
-        "left": 197,
-        "top": 596,
-        "right": 748,
-        "bottom": 777
+        "bottom": 328
       },
       "status": "cropped",
       "notes": [
@@ -2572,6 +2452,131 @@
         "whitespace_threshold:12",
         "content_y:54-759",
         "cut_lines:217,320,474,614",
+        "manual_cut_override:310,410,540,740"
+      ]
+    },
+    {
+      "book": "thessalonians1",
+      "chapter": 5,
+      "verse": 25,
+      "source_file": "000030.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/thessalonians1/000030.png",
+      "output_image": "data/hutter/verse_images/thessalonians1/005_025_000030.png",
+      "crop_box": {
+        "left": 197,
+        "top": 292,
+        "right": 748,
+        "bottom": 428
+      },
+      "status": "cropped",
+      "notes": [
+        "page_contains_last_verse:5:28",
+        "image_size:870x2102",
+        "image_luma_mean:217.6",
+        "image_dark_ratio:0.0829",
+        "image_warmth:37.1",
+        "image_quality:yellowed_scan",
+        "trimmed_trailing_blank:1988->759",
+        "hebrew_column:203-742",
+        "analysis_x:241-609",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:54-759",
+        "cut_lines:217,320,474,614",
+        "manual_cut_override:310,410,540,740"
+      ]
+    },
+    {
+      "book": "thessalonians1",
+      "chapter": 5,
+      "verse": 26,
+      "source_file": "000030.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/thessalonians1/000030.png",
+      "output_image": "data/hutter/verse_images/thessalonians1/005_026_000030.png",
+      "crop_box": {
+        "left": 197,
+        "top": 392,
+        "right": 748,
+        "bottom": 558
+      },
+      "status": "cropped",
+      "notes": [
+        "page_contains_last_verse:5:28",
+        "image_size:870x2102",
+        "image_luma_mean:217.6",
+        "image_dark_ratio:0.0829",
+        "image_warmth:37.1",
+        "image_quality:yellowed_scan",
+        "trimmed_trailing_blank:1988->759",
+        "hebrew_column:203-742",
+        "analysis_x:241-609",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:54-759",
+        "cut_lines:217,320,474,614",
+        "manual_cut_override:310,410,540,740"
+      ]
+    },
+    {
+      "book": "thessalonians1",
+      "chapter": 5,
+      "verse": 27,
+      "source_file": "000030.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/thessalonians1/000030.png",
+      "output_image": "data/hutter/verse_images/thessalonians1/005_027_000030.png",
+      "crop_box": {
+        "left": 197,
+        "top": 522,
+        "right": 748,
+        "bottom": 758
+      },
+      "status": "cropped",
+      "notes": [
+        "page_contains_last_verse:5:28",
+        "image_size:870x2102",
+        "image_luma_mean:217.6",
+        "image_dark_ratio:0.0829",
+        "image_warmth:37.1",
+        "image_quality:yellowed_scan",
+        "trimmed_trailing_blank:1988->759",
+        "hebrew_column:203-742",
+        "analysis_x:241-609",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:54-759",
+        "cut_lines:217,320,474,614",
+        "manual_cut_override:310,410,540,740"
+      ]
+    },
+    {
+      "book": "thessalonians1",
+      "chapter": 5,
+      "verse": 28,
+      "source_file": "000030.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/thessalonians1/000030.png",
+      "output_image": "data/hutter/verse_images/thessalonians1/005_028_000030.png",
+      "crop_box": {
+        "left": 197,
+        "top": 722,
+        "right": 748,
+        "bottom": 948
+      },
+      "status": "cropped",
+      "notes": [
+        "page_contains_last_verse:5:28",
+        "image_size:870x2102",
+        "image_luma_mean:217.6",
+        "image_dark_ratio:0.0829",
+        "image_warmth:37.1",
+        "image_quality:yellowed_scan",
+        "trimmed_trailing_blank:1988->759",
+        "hebrew_column:203-742",
+        "analysis_x:241-609",
+        "dark_threshold:160",
+        "whitespace_threshold:12",
+        "content_y:54-759",
+        "cut_lines:217,320,474,614",
+        "manual_cut_override:310,410,540,740",
         "חֲנוֹתֵנוּ - First word unclear, may be intended as חֶנְתּוֹ or חֶנְתַנוּ",
         "פְּכֻלְּכֶם - Unusual form with prefix פְּ, may be עִמְּכֻלְּכֶם"
       ]

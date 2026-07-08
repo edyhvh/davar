@@ -1,24 +1,25 @@
 {
   "book": "colossians",
+  "raw_result_count": 107,
   "result_count": 95,
-  "batch_count": 13,
+  "batch_count": 16,
   "status_counts": {
     "ok": 95
   },
   "confidence_counts": {
     "high": 3,
-    "low": 15,
-    "medium": 77
+    "low": 11,
+    "medium": 81
   },
   "needs_review_count": 90,
-  "likely_crop_issue_count": 36,
-  "likely_ocr_issue_count": 54,
-  "no_hebrew_marks_count": 2,
-  "empty_text_count": 2,
+  "likely_crop_issue_count": 33,
+  "likely_ocr_issue_count": 57,
+  "no_hebrew_marks_count": 0,
+  "empty_text_count": 0,
   "usage": {
-    "input_tokens": 32070,
-    "output_tokens": 16352,
-    "total_tokens": 48422
+    "input_tokens": 36337,
+    "output_tokens": 18166,
+    "total_tokens": 54503
   },
   "needs_review": [
     {
@@ -161,49 +162,49 @@
       "id": "colossians.1.18.000008",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Some pointing and the word גוית/גויה are difficult to confirm from crop.",
+      "notes": "Some pointing/cantillation-like marks are small and partially unclear.",
       "output_image": "data/hutter/verse_images/colossians/001_018_000008.png",
-      "hebrew_text": "וְהוּא הוּא רֹאשׁ גּוּיַת הָעֵדָה שֶׁהוּא רֵאשִׁית בְּכוֹר מֵמֵתִים לִהְיוֹת בְּכֻלָּם רִאשׁוֹן׃"
+      "hebrew_text": "וְהוּא הוּא רֹאשׁ גּוּפַת הָעֵדָה שֶׁהוּא רֵאשִׁית בְּכוֹר מִמֵּתִים לִהְיוֹת בַּכֹּל רִאשׁוֹן׃"
     },
     {
       "id": "colossians.1.19.000008",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Short verse; pointing/maqaf partly uncertain.",
+      "notes": "Verse is clear overall, but some diacritics are uncertain.",
       "output_image": "data/hutter/verse_images/colossians/001_019_000008.png",
-      "hebrew_text": "כִּי־בוֹ חָפֵץ לִשְׁכוֹן כָּל־מְלֹא׃"
+      "hebrew_text": "כִּי־בּוֹ חָפֵץ לִשְׁכּוֹן כָּל־מְלֹא׃"
     },
     {
       "id": "colossians.1.20.000008",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Several vowels/marks are hard to distinguish.",
+      "notes": "Several vowel points/marks are difficult to verify exactly from the crop.",
       "output_image": "data/hutter/verse_images/colossians/001_020_000008.png",
-      "hebrew_text": "וּבְיָדוֹ לְהַחֲלוֹת אֶת־כֻּלָּם אֶל־נַפְשׁוֹ מְשֻׁלָּם בְּדָמֵי צְלָבוֹ בּוֹ גַּם אֲשֶׁר בָּאָרֶץ וְגַם אֲשֶׁר בַּשָּׁמַיִם׃"
+      "hebrew_text": "וּבְיָדוֹ לְהַחֲלִיף אֶת־כֻּלָּם אֶל־נַפְשׁוֹ מַשְׁלִים בְּדָמֵי צְלִיבוֹ בּוֹ גַּם אֲשֶׁר בָּאָרֶץ וְגַם אֲשֶׁר בַּשָּׁמַיִם׃"
     },
     {
       "id": "colossians.1.21.000008",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Neighboring verse visible but excluded; pointing/marks uncertain.",
+      "notes": "Pointing is partially unclear; transcription of consonants is more certain.",
       "output_image": "data/hutter/verse_images/colossians/001_021_000008.png",
-      "hebrew_text": "וְאַתֶּם בְּהֱיוֹתְכֶם לְפָנִים זָרִים מוּזָרִים וְאוֹיְבִים בִּלְבַבְכֶם בְּמַעֲשִׂים רָעִים׃"
+      "hebrew_text": "וְאַתֶּם בִּהְיוֹתְכֶם לְפָנִים זָרִים מְנֻדִּים וְאוֹיְבִים בְּלִבְּכֶם בְּמַעֲשִׂים רָעִים׃"
     },
     {
       "id": "colossians.1.22.000008",
-      "confidence": "low",
+      "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Image appears to contain verse 23 text despite requested id verse 22; transcription uncertain.",
+      "notes": "Some pointing/marks are difficult to preserve confidently.",
       "output_image": "data/hutter/verse_images/colossians/001_022_000008.png",
-      "hebrew_text": "אַךְ הֶעֱמִידוּ בָּאֱמוּנָה מְיֻסָדִים מוּסָד מוּסַד הַמַּאֲמִין לֹא יָחוּשׁ מִטּוֹבָה הַבְּשׂוֹרָה אֲשֶׁר שְׁמַעְתֶּם הַנִּקְרָאָה בְּכָל הַבְּרִיאָה אֲשֶׁר תַּחַת הַשָּׁמַיִם לַאֲשֶׁר אֲנִי פוֹלוֹס"
+      "hebrew_text": "וכעת החליף אתכם בגופ הבשר במותו להקימכם קדושים ותמימים ונקיים לעיני פניו׃"
     },
     {
       "id": "colossians.1.23.000008",
-      "confidence": "low",
-      "has_hebrew_marks": false,
-      "notes": "No target Hebrew verse text visible in crop; only Spanish and small neighboring Hebrew fragment. No Hebrew pointing marks were returned; review against the image.",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words and pointing are uncertain due to image clarity.",
       "output_image": "data/hutter/verse_images/colossians/001_023_000008.png",
-      "hebrew_text": ""
+      "hebrew_text": "אם תעמדו באמונה מיסדים מוסדי מוסד המאמין לא יזוז מתקות הבשורה אשר שמעתם והקריאת בכל הבריאה אשר תחת השמים לאשר אני פולוס משרת׃"
     },
     {
       "id": "colossians.1.24.000010",
@@ -401,41 +402,41 @@
       "id": "colossians.2.19.000018",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Some vowels and one or two letters are uncertain due to print quality.",
+      "notes": "Pointing/marks and a few letters are uncertain.",
       "output_image": "data/hutter/verse_images/colossians/002_019_000018.png",
-      "hebrew_text": "וְלֹא לֶאֱחֹז אֶת־הָרֹאשׁ אֲשֶׁר מִמֶּנּוּ כָּל־הַגְּוִיָּה בְּדֶבֶק וּדְחִיָּה מְחֻבָּרָה וְנֶאֱפָדָה הִיא לְגִדּוּל לְמַרְבָּה אֱלֹהִים׃"
+      "hebrew_text": "ולא לאחוז את־ראש אשר ממנו כל־הגוייה בדבק נחייה מרכבה ונאחזת היא לפרות למרכבה אלהים׃"
     },
     {
       "id": "colossians.2.20.000018",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Pointing is somewhat uncertain.",
+      "notes": "Pointing/marks not fully preserved confidently.",
       "output_image": "data/hutter/verse_images/colossians/002_020_000018.png",
-      "hebrew_text": "וְאִם מֵתֶם עִם הַמָּשִׁיחַ מִיסוֹדוֹת הָעוֹלָם וּמַדּוּעַ כְּמוֹ חַיִּים בָּעוֹלָם תִּשְׁתַּעְבָּדוּ׃"
+      "hebrew_text": "ואם מתם עם המשיח מיסודות העולם ומדוע כמו חייתכם בעולם תשפטון׃"
     },
     {
       "id": "colossians.2.22.000018",
-      "confidence": "low",
+      "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Image appears to include verse number 23 despite requested id 2.22; transcription follows visible Hebrew, but several words are uncertain.",
+      "notes": "Some vowel points and the word בְּבִצּוּעָם are slightly unclear.",
       "output_image": "data/hutter/verse_images/colossians/002_022_000018.png",
-      "hebrew_text": "הֲלֹא־אֵף לִהְיוֹת לָהֶם דְּבַר חָכְמָה בְּדִמְיוֹת עֲנָוָה וְיִרְאַת אֱלֹהִים וְלַעֲנוֹת אֶת־בָּשָׂר לֹא בִּיקַרְתָּ אַחַת לְשָׂבְעַת הַבָּשָׂר׃"
+      "hebrew_text": "אֲשֶׁר כֻּלָּם לְאָבְדָה בְּבִצּוּעָם כְּמִצְוַת וּלְמוּדֵי הָאֲנָשִׁים׃"
     },
     {
       "id": "colossians.2.23.000018",
-      "confidence": "low",
-      "has_hebrew_marks": false,
-      "notes": "Crop contains only non-Hebrew Spanish text for this verse; target Hebrew is not visible. No Hebrew pointing marks were returned; review against the image.",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several words/points are difficult to read exactly.",
       "output_image": "data/hutter/verse_images/colossians/002_023_000018.png",
-      "hebrew_text": ""
+      "hebrew_text": "הֵנָּה לִרְאוֹת לָהֶם דְּבַר חָכְמָה בְּרִימַת עִנּוּה וְיִרְאַת אֱלֹהִים וּלְעַנּוֹת אֶת־בָּשָׂר לֹא בִיקָרָה אוֹתָהּ לְשָׂבְעַת הַבָּשָׂר׃"
     },
     {
       "id": "colossians.3.1.000018",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Some pointing/cantillation-like marks are uncertain.",
+      "notes": "Some pointing is uncertain due to image resolution.",
       "output_image": "data/hutter/verse_images/colossians/003_001_000018.png",
-      "hebrew_text": "וְאִם קַמְתֶּם מִמֵּתִים עִם הַמָּשִׁיחַ גַּם אֶת־אֲשֶׁר לְמַעְלָה תְּבַקְשׁוּ אֲשֶׁר שָׁם הַמָּשִׁיחַ הוּא יוֹשֵׁב לִימִין אֱלֹהִים׃"
+      "hebrew_text": "וְאִם קוּמַתֶּם מִמָּתִים עִם הַמָּשִׁיחַ גַּם אֶת־אֲשֶׁר לְמַעְלָה תְּבַקְּשׁוּ אֲשֶׁר שָׁם הַמָּשִׁיחַ הוּא יוֹשֵׁב לִימִין אֱלֹהִים׃"
     },
     {
       "id": "colossians.3.2.000020",
@@ -779,25 +780,11 @@
       "hebrew_text": "לְהִתְהַלֵּךְ אֶת־יְהוָה בְּדֶרֶךְ וּבְכֹל חֶפְצִי בְּכָל מַעֲשֶׂה טוֹב וְלַעֲשׂוֹת פִּרְיָם וְלִרְבּוֹת בְּדַעַת אֱלֹהִים׃"
     },
     {
-      "id": "colossians.1.18.000008",
+      "id": "colossians.1.20.000008",
       "confidence": "medium",
-      "notes": "Some pointing and the word גוית/גויה are difficult to confirm from crop.",
-      "output_image": "data/hutter/verse_images/colossians/001_018_000008.png",
-      "hebrew_text": "וְהוּא הוּא רֹאשׁ גּוּיַת הָעֵדָה שֶׁהוּא רֵאשִׁית בְּכוֹר מֵמֵתִים לִהְיוֹת בְּכֻלָּם רִאשׁוֹן׃"
-    },
-    {
-      "id": "colossians.1.21.000008",
-      "confidence": "medium",
-      "notes": "Neighboring verse visible but excluded; pointing/marks uncertain.",
-      "output_image": "data/hutter/verse_images/colossians/001_021_000008.png",
-      "hebrew_text": "וְאַתֶּם בְּהֱיוֹתְכֶם לְפָנִים זָרִים מוּזָרִים וְאוֹיְבִים בִּלְבַבְכֶם בְּמַעֲשִׂים רָעִים׃"
-    },
-    {
-      "id": "colossians.1.23.000008",
-      "confidence": "low",
-      "notes": "No target Hebrew verse text visible in crop; only Spanish and small neighboring Hebrew fragment. No Hebrew pointing marks were returned; review against the image.",
-      "output_image": "data/hutter/verse_images/colossians/001_023_000008.png",
-      "hebrew_text": ""
+      "notes": "Several vowel points/marks are difficult to verify exactly from the crop.",
+      "output_image": "data/hutter/verse_images/colossians/001_020_000008.png",
+      "hebrew_text": "וּבְיָדוֹ לְהַחֲלִיף אֶת־כֻּלָּם אֶל־נַפְשׁוֹ מַשְׁלִים בְּדָמֵי צְלִיבוֹ בּוֹ גַּם אֲשֶׁר בָּאָרֶץ וְגַם אֲשֶׁר בַּשָּׁמַיִם׃"
     },
     {
       "id": "colossians.2.1.000012",
@@ -882,13 +869,6 @@
       "notes": "Top line partly includes continuation from previous verse/crop edge; several words and points are uncertain.",
       "output_image": "data/hutter/verse_images/colossians/002_018_000016.png",
       "hebrew_text": "אִישׁ לֹא יָדִין לְהַשִּׁיא וְלִלְבַב אֶת־נַפְשְׁכֶם חָפֵץ לְהַלֵּךְ בַּעֲנָוָה וּבַעֲבוֹדַת הַמַּלְאָכִים אֲשֶׁר לֹא רָאָה שָׁוא מִרְבֶּה בְּחַכְמַת לִבּוֹ׃"
-    },
-    {
-      "id": "colossians.2.23.000018",
-      "confidence": "low",
-      "notes": "Crop contains only non-Hebrew Spanish text for this verse; target Hebrew is not visible. No Hebrew pointing marks were returned; review against the image.",
-      "output_image": "data/hutter/verse_images/colossians/002_023_000018.png",
-      "hebrew_text": ""
     },
     {
       "id": "colossians.3.2.000020",

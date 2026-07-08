@@ -1,25 +1,25 @@
 {
   "book": "revelation",
-  "raw_result_count": 410,
+  "raw_result_count": 416,
   "result_count": 399,
-  "batch_count": 43,
+  "batch_count": 45,
   "status_counts": {
     "ok": 399
   },
   "confidence_counts": {
     "high": 17,
-    "low": 39,
-    "medium": 343
+    "low": 37,
+    "medium": 345
   },
   "needs_review_count": 259,
-  "likely_crop_issue_count": 98,
-  "likely_ocr_issue_count": 161,
-  "no_hebrew_marks_count": 2,
-  "empty_text_count": 2,
+  "likely_crop_issue_count": 93,
+  "likely_ocr_issue_count": 166,
+  "no_hebrew_marks_count": 0,
+  "empty_text_count": 0,
   "usage": {
-    "input_tokens": 144241,
-    "output_tokens": 76710,
-    "total_tokens": 220951
+    "input_tokens": 146534,
+    "output_tokens": 77980,
+    "total_tokens": 224514
   },
   "needs_review": [
     {
@@ -976,51 +976,51 @@
     },
     {
       "id": "revelation.12.1.000072",
-      "confidence": "low",
-      "has_hebrew_marks": false,
-      "notes": "The crop shows verse 12:2 and part of 12:3, not the requested verse 12:1. No Hebrew pointing marks were returned; review against the image.",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to verify from the crop.",
       "output_image": "data/hutter/verse_images/revelation/012_001_000072.png",
-      "hebrew_text": ""
+      "hebrew_text": "וְאוֹת גָּדוֹל נִרְאָה בַּשָּׁמַיִם אִשָּׁה מִתְכַּסָּה בַשֶּׁמֶשׁ וְלְבָנָה תַּחַת רַגְלֶיהָ עַל־רֹאשָׁהּ עֲטָרָה מִשְׁנֵים עָשָׂר כּוֹכָבִים׃"
     },
     {
       "id": "revelation.12.2.000072",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Crop appears to show only the end of the preceding Hebrew verse; target verse text may be missing or cut off.",
+      "notes": "Pointing is partially unclear.",
       "output_image": "data/hutter/verse_images/revelation/012_002_000072.png",
-      "hebrew_text": "וְעַל־רָאשָׁיו שֶׁבַע עֲטָרוֹת"
+      "hebrew_text": "וְהָרָה הִיא וְצָעֲקָה חֵלֶה וּשְׁמֹמָה לָלֶדֶת׃"
     },
     {
       "id": "revelation.12.3.000072",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Image text corresponds to the verse about the dragon's tail and may include only part of target due to crop boundaries.",
+      "notes": "Several niqqud/marks and exact letters are hard to confirm.",
       "output_image": "data/hutter/verse_images/revelation/012_003_000072.png",
-      "hebrew_text": "כּוֹכְבֵי הַשָּׁמַיִם וַיַּשְׁלִיכֵם אַרְצָה וְהַתַּנִּין קָם לִפְנֵי הָאִשָּׁה הָעֲתִידָה לָלֶדֶת אֲשֶׁר אִם תֵּלֵד יֹאכַל יִבְלַע אֶת־בְּנָהּ"
+      "hebrew_text": "וַיֵּרָאֶה אוֹת אַחֵר בַּשָּׁמַיִם וְהִנֵּה תַנִּין אָדוֹם גָּדוֹל לְרָאשָׁיו לֹו שִׁבְעָה רָאשִׁים וְעֶשֶׂר קְרָנוֹת וְעַל־רֹאשָׁיו שֶׁבַע עֲטָרוֹת׃"
     },
     {
       "id": "revelation.12.4.000072",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Crop appears to contain the following verse text rather than target verse 4; bottom may be cut.",
+      "notes": "Some pointing and final words are difficult to verify from the image.",
       "output_image": "data/hutter/verse_images/revelation/012_004_000072.png",
-      "hebrew_text": "וַתֵּלֶד בֵּן זָכָר אֲשֶׁר עָתִיד לִרְעוֹת אֶת־כָּל־הַגּוֹיִם בְּשֵׁבֶט בַּרְזֶל וַתִּחָטֵף בְּנוֹ אֶל־אֱלֹהִים"
+      "hebrew_text": "וְזוֹנְבּוֹ סָחַב אֶת־שְׁלִישִׁית כּוֹכְבֵי הַשָּׁמַיִם וַיַּשְׁלִיכֵם אַרְצָה וְהַתַּנִּין קָם לִפְנֵי הָאִשָּׁה הָעֲתִידָה לָלֶדֶת אֲשֶׁר אִם תֵּלֵד יֹאכַל בִּבְעַת אֶת־בְּנָהּ׃"
     },
     {
       "id": "revelation.12.5.000072",
       "confidence": "medium",
       "has_hebrew_marks": true,
-      "notes": "Image Hebrew is labeled verse 6 in crop and may not be the requested target verse.",
+      "notes": "Some niqqud uncertain.",
       "output_image": "data/hutter/verse_images/revelation/012_005_000072.png",
-      "hebrew_text": "וַתִּבְרַח הָאִשָּׁה אֶל־הַמִּדְבָּר אֲשֶׁר שָׁם הָיָה לָהּ מָקוֹם נָכוֹן מֵאֱלֹהִים אֲשֶׁר יְכַלְכְּלֶהָ יָמִים אֶלֶף וּמָאתַיִם וְשִׁשִּׁים"
+      "hebrew_text": "וַתֵּלֶד בֵּן זָכָר אֲשֶׁר עָתִיד לְהַרְעוֹת אֶת־כָּל־הַגּוֹיִם בְּשֵׁבֶט בַּרְזֶל וַיֻּחַטֵּף בְּנָהּ אֶל־אֱלֹהִים וְאֶל־כִּסְאוֹ׃"
     },
     {
       "id": "revelation.12.6.000072",
-      "confidence": "low",
-      "has_hebrew_marks": false,
-      "notes": "No Hebrew verse text visible in the crop; only non-Hebrew text is present. No Hebrew pointing marks were returned; review against the image.",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Opening word and some vowel points uncertain.",
       "output_image": "data/hutter/verse_images/revelation/012_006_000072.png",
-      "hebrew_text": ""
+      "hebrew_text": "וְהַבָּרַח הָאִשָּׁה אֶל־הַמִּדְבָּר אֲשֶׁר שָׁם הָיָה לָהּ מָקוֹם מוּכָן מֵאֱלֹהִים אֲשֶׁר יְכַלְכְּלֻהָ יָמִים אֶלֶף וּמָאתַיִם וְשִׁשִּׁים׃"
     },
     {
       "id": "revelation.12.9.000074",
@@ -2441,45 +2441,10 @@
     },
     {
       "id": "revelation.12.1.000072",
-      "confidence": "low",
-      "notes": "The crop shows verse 12:2 and part of 12:3, not the requested verse 12:1. No Hebrew pointing marks were returned; review against the image.",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to verify from the crop.",
       "output_image": "data/hutter/verse_images/revelation/012_001_000072.png",
-      "hebrew_text": ""
-    },
-    {
-      "id": "revelation.12.2.000072",
-      "confidence": "medium",
-      "notes": "Crop appears to show only the end of the preceding Hebrew verse; target verse text may be missing or cut off.",
-      "output_image": "data/hutter/verse_images/revelation/012_002_000072.png",
-      "hebrew_text": "וְעַל־רָאשָׁיו שֶׁבַע עֲטָרוֹת"
-    },
-    {
-      "id": "revelation.12.3.000072",
-      "confidence": "medium",
-      "notes": "Image text corresponds to the verse about the dragon's tail and may include only part of target due to crop boundaries.",
-      "output_image": "data/hutter/verse_images/revelation/012_003_000072.png",
-      "hebrew_text": "כּוֹכְבֵי הַשָּׁמַיִם וַיַּשְׁלִיכֵם אַרְצָה וְהַתַּנִּין קָם לִפְנֵי הָאִשָּׁה הָעֲתִידָה לָלֶדֶת אֲשֶׁר אִם תֵּלֵד יֹאכַל יִבְלַע אֶת־בְּנָהּ"
-    },
-    {
-      "id": "revelation.12.4.000072",
-      "confidence": "medium",
-      "notes": "Crop appears to contain the following verse text rather than target verse 4; bottom may be cut.",
-      "output_image": "data/hutter/verse_images/revelation/012_004_000072.png",
-      "hebrew_text": "וַתֵּלֶד בֵּן זָכָר אֲשֶׁר עָתִיד לִרְעוֹת אֶת־כָּל־הַגּוֹיִם בְּשֵׁבֶט בַּרְזֶל וַתִּחָטֵף בְּנוֹ אֶל־אֱלֹהִים"
-    },
-    {
-      "id": "revelation.12.5.000072",
-      "confidence": "medium",
-      "notes": "Image Hebrew is labeled verse 6 in crop and may not be the requested target verse.",
-      "output_image": "data/hutter/verse_images/revelation/012_005_000072.png",
-      "hebrew_text": "וַתִּבְרַח הָאִשָּׁה אֶל־הַמִּדְבָּר אֲשֶׁר שָׁם הָיָה לָהּ מָקוֹם נָכוֹן מֵאֱלֹהִים אֲשֶׁר יְכַלְכְּלֶהָ יָמִים אֶלֶף וּמָאתַיִם וְשִׁשִּׁים"
-    },
-    {
-      "id": "revelation.12.6.000072",
-      "confidence": "low",
-      "notes": "No Hebrew verse text visible in the crop; only non-Hebrew text is present. No Hebrew pointing marks were returned; review against the image.",
-      "output_image": "data/hutter/verse_images/revelation/012_006_000072.png",
-      "hebrew_text": ""
+      "hebrew_text": "וְאוֹת גָּדוֹל נִרְאָה בַּשָּׁמַיִם אִשָּׁה מִתְכַּסָּה בַשֶּׁמֶשׁ וְלְבָנָה תַּחַת רַגְלֶיהָ עַל־רֹאשָׁהּ עֲטָרָה מִשְׁנֵים עָשָׂר כּוֹכָבִים׃"
     },
     {
       "id": "revelation.12.9.000074",
