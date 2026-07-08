@@ -55,6 +55,16 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def latest_by_id(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    latest: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        row_id = str(row.get("id", ""))
+        if not row_id:
+            continue
+        latest[row_id] = row
+    return list(latest.values())
+
+
 def has_marks(text: str) -> bool:
     return any(character in HEBREW_MARKS for character in text)
 
@@ -71,7 +81,8 @@ def main() -> int:
     batches_path = results_dir / "batches.jsonl"
     output_path = args.output.expanduser().resolve() if args.output else results_dir / "review.json"
 
-    rows = load_jsonl(results_path)
+    raw_rows = load_jsonl(results_path)
+    rows = latest_by_id(raw_rows)
     batches = load_jsonl(batches_path) if batches_path.exists() else []
 
     status_counts: Counter[str] = Counter(str(row.get("status")) for row in rows)
@@ -95,6 +106,7 @@ def main() -> int:
 
     report = {
         "book": args.book,
+        "raw_result_count": len(raw_rows),
         "result_count": len(rows),
         "batch_count": len(batches),
         "status_counts": dict(sorted(status_counts.items())),
