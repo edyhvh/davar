@@ -1,0 +1,265 @@
+{
+  "book_count": 9,
+  "totals": {
+    "manifest_verse_count": 1499,
+    "result_count": 1499,
+    "raw_result_count": 1515,
+    "retry_row_count": 16,
+    "pending_count": 1,
+    "batch_count": 159,
+    "needs_review_count": 1093,
+    "likely_crop_issue_count": 411,
+    "likely_ocr_issue_count": 682,
+    "no_hebrew_marks_count": 20,
+    "empty_text_count": 12,
+    "total_tokens": 744701,
+    "input_tokens": 486280,
+    "output_tokens": 258421
+  },
+  "status_counts": {
+    "missing_in_response": 1,
+    "ok": 1498
+  },
+  "confidence_counts": {
+    "high": 70,
+    "low": 237,
+    "medium": 1192
+  },
+  "books": [
+    {
+      "book": "colossians",
+      "manifest_verse_count": 95,
+      "result_count": 95,
+      "raw_result_count": 95,
+      "retry_row_count": 0,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 13,
+      "needs_review_count": 90,
+      "likely_crop_issue_count": 36,
+      "likely_ocr_issue_count": 54,
+      "no_hebrew_marks_count": 2,
+      "empty_text_count": 2,
+      "total_tokens": 48422,
+      "input_tokens": 32070,
+      "output_tokens": 16352,
+      "status_counts": {
+        "ok": 95
+      },
+      "confidence_counts": {
+        "high": 3,
+        "low": 15,
+        "medium": 77
+      }
+    },
+    {
+      "book": "ephesians",
+      "manifest_verse_count": 155,
+      "result_count": 155,
+      "raw_result_count": 155,
+      "retry_row_count": 0,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 16,
+      "needs_review_count": 133,
+      "likely_crop_issue_count": 44,
+      "likely_ocr_issue_count": 89,
+      "no_hebrew_marks_count": 3,
+      "empty_text_count": 2,
+      "total_tokens": 72780,
+      "input_tokens": 46332,
+      "output_tokens": 26448,
+      "status_counts": {
+        "ok": 155
+      },
+      "confidence_counts": {
+        "high": 2,
+        "low": 42,
+        "medium": 111
+      }
+    },
+    {
+      "book": "galatians",
+      "manifest_verse_count": 149,
+      "result_count": 149,
+      "raw_result_count": 149,
+      "retry_row_count": 0,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 15,
+      "needs_review_count": 87,
+      "likely_crop_issue_count": 35,
+      "likely_ocr_issue_count": 52,
+      "no_hebrew_marks_count": 1,
+      "empty_text_count": 1,
+      "total_tokens": 71628,
+      "input_tokens": 47400,
+      "output_tokens": 24228,
+      "status_counts": {
+        "ok": 149
+      },
+      "confidence_counts": {
+        "high": 23,
+        "low": 16,
+        "medium": 110
+      }
+    },
+    {
+      "book": "james",
+      "manifest_verse_count": 108,
+      "result_count": 108,
+      "raw_result_count": 108,
+      "retry_row_count": 0,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 11,
+      "needs_review_count": 93,
+      "likely_crop_issue_count": 34,
+      "likely_ocr_issue_count": 59,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 50927,
+      "input_tokens": 33043,
+      "output_tokens": 17884,
+      "status_counts": {
+        "ok": 108
+      },
+      "confidence_counts": {
+        "high": 4,
+        "low": 18,
+        "medium": 86
+      }
+    },
+    {
+      "book": "jude",
+      "manifest_verse_count": 25,
+      "result_count": 25,
+      "raw_result_count": 25,
+      "retry_row_count": 0,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 3,
+      "needs_review_count": 25,
+      "likely_crop_issue_count": 12,
+      "likely_ocr_issue_count": 13,
+      "no_hebrew_marks_count": 3,
+      "empty_text_count": 1,
+      "total_tokens": 13334,
+      "input_tokens": 9147,
+      "output_tokens": 4187,
+      "status_counts": {
+        "ok": 25
+      },
+      "confidence_counts": {
+        "low": 7,
+        "medium": 18
+      }
+    },
+    {
+      "book": "revelation",
+      "manifest_verse_count": 399,
+      "result_count": 399,
+      "raw_result_count": 410,
+      "retry_row_count": 11,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 43,
+      "needs_review_count": 259,
+      "likely_crop_issue_count": 98,
+      "likely_ocr_issue_count": 161,
+      "no_hebrew_marks_count": 2,
+      "empty_text_count": 2,
+      "total_tokens": 220951,
+      "input_tokens": 144241,
+      "output_tokens": 76710,
+      "status_counts": {
+        "ok": 399
+      },
+      "confidence_counts": {
+        "high": 17,
+        "low": 39,
+        "medium": 343
+      }
+    },
+    {
+      "book": "romans",
+      "manifest_verse_count": 432,
+      "result_count": 432,
+      "raw_result_count": 437,
+      "retry_row_count": 5,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 44,
+      "needs_review_count": 294,
+      "likely_crop_issue_count": 118,
+      "likely_ocr_issue_count": 176,
+      "no_hebrew_marks_count": 6,
+      "empty_text_count": 1,
+      "total_tokens": 198835,
+      "input_tokens": 130549,
+      "output_tokens": 68286,
+      "status_counts": {
+        "ok": 432
+      },
+      "confidence_counts": {
+        "high": 20,
+        "low": 64,
+        "medium": 348
+      }
+    },
+    {
+      "book": "thessalonians1",
+      "manifest_verse_count": 89,
+      "result_count": 89,
+      "raw_result_count": 89,
+      "retry_row_count": 0,
+      "pending_count": 1,
+      "pending_ids": [
+        "thessalonians1.5.19.000028"
+      ],
+      "batch_count": 9,
+      "needs_review_count": 72,
+      "likely_crop_issue_count": 24,
+      "likely_ocr_issue_count": 48,
+      "no_hebrew_marks_count": 2,
+      "empty_text_count": 2,
+      "total_tokens": 44683,
+      "input_tokens": 28567,
+      "output_tokens": 16116,
+      "status_counts": {
+        "missing_in_response": 1,
+        "ok": 88
+      },
+      "confidence_counts": {
+        "high": 1,
+        "low": 21,
+        "medium": 67
+      }
+    },
+    {
+      "book": "thessalonians2",
+      "manifest_verse_count": 47,
+      "result_count": 47,
+      "raw_result_count": 47,
+      "retry_row_count": 0,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 5,
+      "needs_review_count": 40,
+      "likely_crop_issue_count": 10,
+      "likely_ocr_issue_count": 30,
+      "no_hebrew_marks_count": 1,
+      "empty_text_count": 1,
+      "total_tokens": 23141,
+      "input_tokens": 14931,
+      "output_tokens": 8210,
+      "status_counts": {
+        "ok": 47
+      },
+      "confidence_counts": {
+        "low": 15,
+        "medium": 32
+      }
+    }
+  ]
+}

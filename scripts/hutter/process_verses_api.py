@@ -211,7 +211,7 @@ def completed_ids(results_path: Path) -> set[str]:
             row = json.loads(line)
         except json.JSONDecodeError:
             continue
-        if row.get("status") == "ok" and row.get("hebrew_text"):
+        if row.get("status") == "ok":
             completed.add(str(row.get("id")))
     return completed
 

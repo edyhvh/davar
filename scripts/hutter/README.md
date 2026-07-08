@@ -103,10 +103,17 @@ Review the API output:
 .venv/bin/python -m scripts.hutter.review_api_results colossians
 ```
 
+Summarize all processed GPT OCR books and compare them to their manifests:
+
+```bash
+.venv/bin/python -m scripts.hutter.summarize_api_results --results-root data/hutter/api_results_gpt55
+```
+
 Outputs:
 
 ```text
 data/hutter/api_results/<book>/batches.jsonl
 data/hutter/api_results/<book>/results.jsonl
 data/hutter/api_results/<book>/review.json
+data/hutter/api_results_gpt55/summary.json
 ```
