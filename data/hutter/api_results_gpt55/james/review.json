@@ -1,0 +1,1009 @@
+{
+  "book": "james",
+  "result_count": 108,
+  "batch_count": 11,
+  "status_counts": {
+    "ok": 108
+  },
+  "confidence_counts": {
+    "high": 4,
+    "low": 18,
+    "medium": 86
+  },
+  "needs_review_count": 93,
+  "likely_crop_issue_count": 34,
+  "likely_ocr_issue_count": 59,
+  "no_hebrew_marks_count": 0,
+  "empty_text_count": 0,
+  "usage": {
+    "input_tokens": 33043,
+    "output_tokens": 17884,
+    "total_tokens": 50927
+  },
+  "needs_review": [
+    {
+      "id": "james.1.1.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/james/001_001_000002.png",
+      "hebrew_text": "יעקב עבד אלהים ואדנינו ישוע המשיח לשני עשר שבטי ישראל אשר בתפוצה שלום׃"
+    },
+    {
+      "id": "james.1.2.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/james/001_002_000002.png",
+      "hebrew_text": "לשמחה גדולה תחשבו לכם אחי אם תפלו במסות במחלפות׃"
+    },
+    {
+      "id": "james.1.3.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/james/001_003_000002.png",
+      "hebrew_text": "וידעתם כי בחן אמונתכם פועל את דממה׃"
+    },
+    {
+      "id": "james.1.4.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse begins slightly cut off by crop; pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/james/001_004_000002.png",
+      "hebrew_text": "ולדממה יהיה לה מעשה שלם ותממים אשר תהיו תמימים וישרים לא חסרים כל דבר׃"
+    },
+    {
+      "id": "james.1.5.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/001_005_000002.png",
+      "hebrew_text": "אם איש מכם חסר חכמה ישאל מאלהים הנותן לכלם בעשר ולא מחרף הוא ותנתן לו׃"
+    },
+    {
+      "id": "james.1.6.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Hebrew text partially inferred from visible crop; pointing not preserved.",
+      "output_image": "data/hutter/verse_images/james/001_006_000002.png",
+      "hebrew_text": "ישאל באמונה ולא ינכר למדות כי המנכר דומה לגלי הים הנדפים ברוח ומתנדפים׃"
+    },
+    {
+      "id": "james.1.7.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/james/001_007_000004.png",
+      "hebrew_text": "לכן לא יחשב אדם ההוא כי יקח מאומה מיהוה׃"
+    },
+    {
+      "id": "james.1.8.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/james/001_008_000004.png",
+      "hebrew_text": "איש מנכר ומחלף נע ונד הוא בכל דרכיו׃"
+    },
+    {
+      "id": "james.1.9.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not preserved.",
+      "output_image": "data/hutter/verse_images/james/001_009_000004.png",
+      "hebrew_text": "ויתהולל אח ענו ברום נפשו׃"
+    },
+    {
+      "id": "james.1.10.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks uncertain; adjacent verse visible below ignored.",
+      "output_image": "data/hutter/verse_images/james/001_010_000004.png",
+      "hebrew_text": "והעשיר בשפל נפשו כי כציץ חציר יבש ונבל׃"
+    },
+    {
+      "id": "james.1.11.000004",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Image is blurry and verse appears partly cut at top; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/james/001_011_000004.png",
+      "hebrew_text": "אָשֶׁר הָאִישׁ מֵעָדִיו בְּמַסָּה כִּי־בַּאֲשֶׁר יִבַּח יִקַּח אֶת־עֲטָתוֹ תָּהוֹם אֲשֶׁר תָּאמִיר יָהוּה לְאֹהֲבָיו׃"
+    },
+    {
+      "id": "james.1.12.000004",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Only upper part of verse visible; text continues into next crop.",
+      "output_image": "data/hutter/verse_images/james/001_012_000004.png",
+      "hebrew_text": "אִישׁ אִם בְּמַסָּה לֹא יֹאמַר כִּי־נִסָּה אוֹתוֹ אֱלֹהִים כִּי"
+    },
+    {
+      "id": "james.1.13.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning likely continues from preceding crop; target verse boundary uncertain.",
+      "output_image": "data/hutter/verse_images/james/001_013_000004.png",
+      "hebrew_text": "הָאֱלֹהִים אֵינֶנּוּ מְנַסֶּה אֶת־הָרָעִים כִּי־אֶת־אִישׁ לֹא אֶחָד מְנַסֶּה הוּא׃"
+    },
+    {
+      "id": "james.1.14.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse begins above crop; only ending visible.",
+      "output_image": "data/hutter/verse_images/james/001_014_000004.png",
+      "hebrew_text": "בְּמַסָּה אוֹתוֹ מוֹשְׁכוֹ וּמְסִיתוֹ הַתַּאֲוָה בְּנַפְשׁוֹ׃"
+    },
+    {
+      "id": "james.1.15.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/glyphs uncertain due to blur.",
+      "output_image": "data/hutter/verse_images/james/001_015_000006.png",
+      "hebrew_text": "וְאַחַר הָרָה הַתַּאֲוָה וְיָלְדָה חֵטְא וְהַחֵטְא אִם מָלְאָה מוֹלִידָה אֶת־הַמָּוֶת׃"
+    },
+    {
+      "id": "james.1.17.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several vowels/letters uncertain in middle line.",
+      "output_image": "data/hutter/verse_images/james/001_017_000006.png",
+      "hebrew_text": "כָּל־מַתָּנָה טוֹבָה וְכָל־מַתָּן שָׁלֵמָה מִמַּעַל־הִיא יוֹרֶדֶת מֵאָבִי הָאוֹרוֹת אֲשֶׁר עִמּוֹ אֵינֶנָּה חֲלִיפָה אוֹ צֵל־תַּחֲלִיפָה׃"
+    },
+    {
+      "id": "james.1.18.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud uncertain.",
+      "output_image": "data/hutter/verse_images/james/001_018_000006.png",
+      "hebrew_text": "כִּי־הוּא אָבָה וְהוֹלִיד אוֹתָנוּ בִּדְבַר אֱמֶת לִהְיוֹתֵנוּ רֵאשִׁית בְּרִיאָתָיו׃"
+    },
+    {
+      "id": "james.1.19.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning partly cropped; vowels uncertain.",
+      "output_image": "data/hutter/verse_images/james/001_019_000006.png",
+      "hebrew_text": "לָכֵן אַחַי אֲהוּבַי יְהִי־כָּל־הָאָדָם מְמַהֵר לִשְׁמֹעַ מְאַחֵר לְדַבֵּר וְאַחֵר אַפָּיִם׃"
+    },
+    {
+      "id": "james.1.21.000006",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Only a small left-edge fragment of the Hebrew verse is visible; most of the target verse is cut off.",
+      "output_image": "data/hutter/verse_images/james/001_021_000006.png",
+      "hebrew_text": "לְנַפְשֹׁתֵיכֶם"
+    },
+    {
+      "id": "james.1.27.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final phrase is somewhat unclear in the image.",
+      "output_image": "data/hutter/verse_images/james/001_027_000008.png",
+      "hebrew_text": "עֲבֹדָה טְהוֹרָה וּבְלִי־מוּם לִפְנֵי אֱלֹהִים וְאָבִינוּ זֹאת הִיא לִפְקֹד אֶת־יְתוֹמִים וְאַלְמָנוֹת בְּצָרָתָם לִנְצֹר אֶת־נַפְשׁוֹ בָּהֶם וּשֹׁר מִן־הָעוֹלָם"
+    },
+    {
+      "id": "james.2.1.000010",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Image appears to show only the end of verse 1 or possibly neighboring text; target verse likely cut off.",
+      "output_image": "data/hutter/verse_images/james/002_001_000010.png",
+      "hebrew_text": "אִם זָהָב וּבִבְדֵי קֹדֶשׁ וְגַם יָבוֹא אִישׁ מִסְכֵּן בִּכְלָאִים וּמְטֻלָּאוֹת"
+    },
+    {
+      "id": "james.2.4.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Target verse appears mixed/cut; image label may not match visible Hebrew (content resembles following verse).",
+      "output_image": "data/hutter/verse_images/james/002_004_000010.png",
+      "hebrew_text": "שִׁמְעוּ נָא אַחַי אֲהוּבַי הֲלֹא בָחַר אֱלֹהִים אֶת מִסְכְּנֵי הָעוֹלָם הַזֶּה הָעֲשִׁירִים בֶּאֱמוּנָה וְהֵמָּה לִבְנֵי נַחֲלַת הַמַּלְכוּת אֲשֶׁר הֶאֱמִיר"
+    },
+    {
+      "id": "james.2.5.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Only final Hebrew word of target verse visible; most of verse is Spanish/non-Hebrew.",
+      "output_image": "data/hutter/verse_images/james/002_005_000010.png",
+      "hebrew_text": "לְאֹהֲבָיו"
+    },
+    {
+      "id": "james.2.10.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse is split/cropped with top line from previous continuation; some words uncertain.",
+      "output_image": "data/hutter/verse_images/james/002_010_000012.png",
+      "hebrew_text": "וַאֲשֶׁר יִשְׁמֹר אֶת־כָּל הַתּוֹרָה וְיָעֹף בְּמִצְוָה אַחַת חוֹב כֹּל הַמִּצְוָה נִהְיֶה"
+    },
+    {
+      "id": "james.2.13.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Hebrew verse appears in previous crop area; provided image contains only Spanish text for this verse.",
+      "output_image": "data/hutter/verse_images/james/002_013_000012.png",
+      "hebrew_text": "כִּי־מִשְׁפָּט בְּלִי חֶסֶד לַאֲשֶׁר לֹא עָשָׂה חֶסֶד וּמִתְהַלֵּל הַחֶסֶד עַל־הַמִּשְׁפָּט"
+    },
+    {
+      "id": "james.2.14.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and some glyphs are small/blurry.",
+      "output_image": "data/hutter/verse_images/james/002_014_000014.png",
+      "hebrew_text": "מַה־יוֹעִיל אַחַי אִם יֹאמַר אִישׁ כִּי יֵשׁ לוֹ אֱמוּנָה וְלֹא הָיוּ לוֹ הַמַּעֲשִׂים הֲתּוּכַל הָאֱמוּנָה לְהוֹשִׁיעוֹ׃"
+    },
+    {
+      "id": "james.2.15.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partly unclear.",
+      "output_image": "data/hutter/verse_images/james/002_015_000014.png",
+      "hebrew_text": "וְאִם אָח אוֹ אָחוֹת עֲרוּמִים הֵם וְחָסְרוּ לֶחֶם דְּבַר־יוֹם׃"
+    },
+    {
+      "id": "james.2.16.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several vowel points are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/james/002_016_000014.png",
+      "hebrew_text": "וְאִישׁ מִכֶּם יֹאמַר אֲלֵיהֶם לְכוּ לָכֶם בְּשָׁלוֹם הִתְחַמְּמוּ וְשִׂבְעוּ וְלֹא תִּתְּנוּ לָהֶם צָרְכֵי גְוִיָּתָם מַה יוֹעִיל לָהֶם׃"
+    },
+    {
+      "id": "james.2.17.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial word and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/002_017_000014.png",
+      "hebrew_text": "כֵּנָה גַּם הָאֱמוּנָה אִם לֹא יִהְיוּ לָהּ מַעֲשִׂים מֵתָה הִיא בְּנַפְשָׁהּ׃"
+    },
+    {
+      "id": "james.2.18.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and some small letters are unclear.",
+      "output_image": "data/hutter/verse_images/james/002_018_000014.png",
+      "hebrew_text": "אַךְ יֹאמַר אִישׁ אַתָּה יֶשׁ־לְךָ אֱמוּנָה וַאֲנִי הָיוּ לִי הַמַּעֲשִׂים הַרְאֵנִי אֶת־אֱמוּנָתְךָ בְּלִי מַעֲשֶׂיךָ וַאֲנִי אַרְאֶה לְךָ אֱמוּנָתִי בְּמַעֲשַׂי׃"
+    },
+    {
+      "id": "james.2.19.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Right edge/points are partly indistinct.",
+      "output_image": "data/hutter/verse_images/james/002_019_000014.png",
+      "hebrew_text": "אַתָּה מַאֲמִין כִּי־יְהוָה אֱלֹהִים יְהוָה אֶחָד מֵיטִיב אַתָּה לַעֲשׂוֹת גַּם הַשֵּׁדִים מַאֲמִינִים וְשֹׁעֲרִים׃"
+    },
+    {
+      "id": "james.2.20.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning of line is slightly cropped/unclear.",
+      "output_image": "data/hutter/verse_images/james/002_020_000014.png",
+      "hebrew_text": "וְאִם תֹּאבֶה לָדַעַת הָאֱנוֹשׁ הַשָּׁוְא כִּי־הָאֱמוּנָה בְּלִי מַעֲשֶׂיהָ מֵתָה הִיא׃"
+    },
+    {
+      "id": "james.2.21.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points uncertain.",
+      "output_image": "data/hutter/verse_images/james/002_021_000016.png",
+      "hebrew_text": "אַבְרָהָם אָבִינוּ הֲלֹא בְּמַעֲשִׂים נִצְדַּק בְּהַעֲלוֹתוֹ אֶת־יִצְחָק בְּנוֹ עַל־הַמִּזְבֵּחַ׃"
+    },
+    {
+      "id": "james.2.22.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Second word/pointing may need verification.",
+      "output_image": "data/hutter/verse_images/james/002_022_000016.png",
+      "hebrew_text": "וְרָאִיתָ אֵת כִּי־הָאֱמוּנָה עָזְרָה לְמַעֲשָׂיו וּבַמַּעֲשִׂים נִשְׁלְמָה הָאֱמוּנָה׃"
+    },
+    {
+      "id": "james.2.23.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and first verb are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/james/002_023_000016.png",
+      "hebrew_text": "וַיְמַלֵּא הַכָּתוּב לֵאמֹר אַבְרָהָם הֶאֱמִין לֵאלֹהִים וַתֵּחָשְׁבֶה לוֹ צְדָקָה וְרֵעַ אֱלֹהִים נִקְרָא׃"
+    },
+    {
+      "id": "james.2.24.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/james/002_024_000016.png",
+      "hebrew_text": "וּרְאִים אַתֶּם כִּי מִמַּעֲשִׂים יִצְדַּק הָאָדָם וְלֹא הָאֱמוּנָה לְבַדּ׃"
+    },
+    {
+      "id": "james.2.25.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and some small marks are uncertain.",
+      "output_image": "data/hutter/verse_images/james/002_025_000016.png",
+      "hebrew_text": "וְגַם כֵּן רָחָב אִשָּׁה זוֹנָה הֲלֹא מִמַּעֲשִׂים נִצְדְּקָה בְּקַבְּלָה אֶת־הַמַּלְאָכִים וּבְדֶרֶךְ אַחֵר מְשַׁלְּחָה׃"
+    },
+    {
+      "id": "james.2.26.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud not fully clear.",
+      "output_image": "data/hutter/verse_images/james/002_026_000016.png",
+      "hebrew_text": "כִּי כַּאֲשֶׁר הַגּוּף בִּלְתִּי רוּחַ מֵתָה הִיא כֵּן גַּם הָאֱמוּנָה בְּלִי מַעֲשִׂים מֵתָה הִיא׃"
+    },
+    {
+      "id": "james.3.1.000016",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing are uncertain due to blur/crop.",
+      "output_image": "data/hutter/verse_images/james/003_001_000016.png",
+      "hebrew_text": "אַל־יִהְיוּ מְלַמְּדִים רַבִּים בָּכֶם יוֹדְעִים כִּי בְּמִשְׁפָּט גָּדוֹל מְאַחֲרִים נִשָּׂא׃"
+    },
+    {
+      "id": "james.3.2.000018",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Left edge is cut off; some words/points uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_002_000018.png",
+      "hebrew_text": "כִּי רַבִּים נֶכְשָׁלִים כֻּלָּנוּ וְאִם אִישׁ לֹא יִגּוֹף בְּדָבָר זֶה הוּא אִישׁ תָּמִים כִּי־יָכוֹל לִבְלוֹם אֶת־כָּל־גּוּפוֹ׃"
+    },
+    {
+      "id": "james.3.3.000018",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Beginning/left side partially cut and several letters unclear.",
+      "output_image": "data/hutter/verse_images/james/003_003_000018.png",
+      "hebrew_text": "הִנֵּה שׁוֹלְחִים אֲנַחְנוּ אֶת־מֶתֶג וָרֶסֶן בְּפִי־סוּס לְמַעַן יִשְׁמַע לָנוּ וְאֶת־כָּל־גּוּפָם מוֹלִיכִים אֲנַחְנוּ׃"
+    },
+    {
+      "id": "james.3.4.000018",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Right/left cropping and blurry pointing make transcription uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_004_000018.png",
+      "hebrew_text": "הִנֵּה גַּם הָאֳנִיּוֹת אַף כִּי גְדֹלוֹת וּמְרוּחוֹת גְּדוֹלוֹת נִדָּחוֹת וְנַהֲגוֹת אַךְ בְּעֵץ קָטֹן הַסֹּבֵב שָׁמָּה אֲשֶׁר יִרְאֶנָּה הַמֶּלַח׃"
+    },
+    {
+      "id": "james.3.5.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and one or more words are uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_005_000018.png",
+      "hebrew_text": "כָּכָה גַּם הַלָּשׁוֹן נִהְיָה קָטוֹן וּמִתְהַלֵּל הִנֵּה אֵשׁ מְעַט מָה יַעַר מַבְעִיר׃"
+    },
+    {
+      "id": "james.3.6.000018",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse partly cut; several words and points uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_006_000018.png",
+      "hebrew_text": "הַלָּשׁוֹן אֵשׁ הִיא וְעוֹלָם הָרָעָה כֵּן הַלָּשׁוֹן אֲשֶׁר בְּאֵיבָרֵינוּ מְטַמְּאָה אֶת־גּוּפֵנוּ וּמַבְעֶרֶת אֶת־גַּלְגַּל תּוֹלְדֹתֵינוּ וּמֻבְעָר גַּם הוּא בְּאֵשׁ גֵּיהִנֹּם׃"
+    },
+    {
+      "id": "james.3.7.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Lower edge close to text; pointing not fully certain.",
+      "output_image": "data/hutter/verse_images/james/003_007_000020.png",
+      "hebrew_text": "כִּי כָל־מִין הַבְּהֵמָה וָעוֹף הַשָּׁמַיִם וָרֶמֶשׂ וַאֲשֶׁר בַּיָּמִים נִדָּמִים וְנִדְמוּ בְּדַעַת בְּנֵי אָדָם׃"
+    },
+    {
+      "id": "james.3.8.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks and final word are somewhat unclear in crop.",
+      "output_image": "data/hutter/verse_images/james/003_008_000020.png",
+      "hebrew_text": "אַךְ אֶת־הַלָשׁוֹן כָּל־אִישׁ מִבְּנֵי אָדָם לֹא יוּכַל לִדְמוֹם כִּי־רָעָה לֹא לְבִלּוּם מְלֵאָה בְרֹאשׁ מֵמִית אָכֵן׃"
+    },
+    {
+      "id": "james.3.9.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/marks unclear.",
+      "output_image": "data/hutter/verse_images/james/003_009_000020.png",
+      "hebrew_text": "בָּהּ נְבָרֵךְ אֶת־אֱלֹהִים אָבִינוּ וּבָהּ נְקַלֵּל אֶת־בְּנֵי אָדָם אֲשֶׁר בְּצֶלֶם כְּדְמוּת אֱלֹהִים נַעֲשׂוּ׃"
+    },
+    {
+      "id": "james.3.10.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is faint/uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_010_000020.png",
+      "hebrew_text": "מִפֶּה אֶחָד יֹצְאָה בְרָכָה וּקְלָלָה לֹא נָאֶה אַחַי לִהְיוֹת כַּדְּבָרִים הָאֵלֶּה׃"
+    },
+    {
+      "id": "james.3.11.000020",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "First word and several vowels/marks are uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_011_000020.png",
+      "hebrew_text": "הֲהֵלֶךְ בְּאֵר מַיִם לָהּ בְּמוֹצָאָהּ מָתוֹק וּמָרוֹר׃"
+    },
+    {
+      "id": "james.3.12.000020",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse partly cropped at top/left; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_012_000020.png",
+      "hebrew_text": "הֲתּוּכַל אַחַי הַתְּאֵנָה לַעֲשׂוֹת זֵיתִים אוֹ־הַגֶּפֶן תְּאֵנִים כֵּן בְּאֵר לֹא אַחַת הַעֲשֵׂמִי־הַמֶּלַח וּמֵי־הַמָּתוֹק׃"
+    },
+    {
+      "id": "james.3.13.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/marks are unclear.",
+      "output_image": "data/hutter/verse_images/james/003_013_000020.png",
+      "hebrew_text": "מִי־הָאִישׁ חָכָם וְנָבוֹן בָּכֶם יַגֵּד מֵהֲלִיכָה טוֹבָה אֶת־מַעֲשָׂיו בַּעֲנָוָה חָכְמָה׃"
+    },
+    {
+      "id": "james.3.14.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_014_000022.png",
+      "hebrew_text": "וְאִם יֵשׁ לָכֶם קִנְאָה מָרָה וּמְרִיבָה בִּלְבַבְכֶם אַל־תִּתְהַלָּלוּ וְאַל תְּדַבְּרוּ עַל־אֱמֶת׃"
+    },
+    {
+      "id": "james.3.15.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/word division partly uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_015_000022.png",
+      "hebrew_text": "כִּי הַחָכְמָה הַזֹּאת אֵינֶנָּה בָּאָה מִמַּעְלָה כִּי־מֵאָרֶץ הִיא מִנַּפְשְׁכֶם מִן הַשָּׂטָן׃"
+    },
+    {
+      "id": "james.3.16.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/points unclear.",
+      "output_image": "data/hutter/verse_images/james/003_016_000022.png",
+      "hebrew_text": "כִּי־אֵיפֹה קִנְאָה וּמְרִיבָה שָׁם הַדָּחָה וְכָל־מַעֲשֶׂה שָׁוְא׃"
+    },
+    {
+      "id": "james.3.17.000022",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Crop spans several lines with uncertain words and pointing; needs verification.",
+      "output_image": "data/hutter/verse_images/james/003_017_000022.png",
+      "hebrew_text": "וְהַחָכְמָה אֲשֶׁר מִלְמַעְלָה בָּרִאשֹׁנָה זַכָּה הִיא וְאַחֲרֵי־כֵן מְבַקֵּשׁ שָׁלוֹם וְנִדְבָהּ סַלְחָה שְׁמֵעָה לִיקָרָה מְלֵאָה חֶסֶד וְרַחֲמִים וּמְלֵאָה מַעֲשִׂים טוֹבִים לֹא מִתְחַנֶּפֶת וְבְלִי־חֵיךְ וּמִרְמָה׃"
+    },
+    {
+      "id": "james.3.18.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing partially unclear in crop.",
+      "output_image": "data/hutter/verse_images/james/003_018_000022.png",
+      "hebrew_text": "וּפְרִי הַצְּדָקָה בְּשָׁלוֹם נִזְרָע לְעֹשֵׂה שָׁלוֹם׃"
+    },
+    {
+      "id": "james.4.1.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial/top portion slightly cut and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_001_000022.png",
+      "hebrew_text": "מֵאַיִן מִלְחָמוֹת וּמַצּוֹת בֵּינֵיכֶם הֲלֹא מִפֹּה מִנְּפָשׁוֹתֵיכֶם הַלּוֹחֲמוֹת בְּאֵבְרֵיכֶם׃"
+    },
+    {
+      "id": "james.4.2.000022",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse begins in neighboring crop; visible crop is partial and pointing/words uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_002_000022.png",
+      "hebrew_text": "וְלֹא תָשִׂיגוּ הִנְּכֶם נִלְחָמִים וְנִרְגָּנִים וְלֹא יִהְיֶה לָכֶם עַל־כִּי־לֹא שֹׁאֲלִים אַתֶּם׃"
+    },
+    {
+      "id": "james.4.3.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge slightly cropped; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_003_000024.png",
+      "hebrew_text": "גַּם שֹׁאֲלִים אַתֶּם וְלֹא תִקְחוּ כִּי־בְרָעָה שֹׁאֲלִים אַתֶּם אֲשֶׁר בְּתַאֲוַת נַפְשְׁכֶם תְּבַלְּעוּ׃"
+    },
+    {
+      "id": "james.4.4.000024",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Left side of several lines cropped; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_004_000024.png",
+      "hebrew_text": "הַמְנָאֲפִים וְהַמְנָאֲפוֹת הֲלֹא יְדַעְתֶּם כִּי־אַהֲבַת הָעוֹלָם אֵיבַת אֱלֹהִים הִיא לָכֵן כָּל־אֲשֶׁר יֹאהַב לִהְיוֹת רֵעַ הָעוֹלָם אֹיֵב אֱלֹהִים הוּא׃"
+    },
+    {
+      "id": "james.4.5.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_005_000024.png",
+      "hebrew_text": "הֲתַחְשְׁבוּ כִּי־שָׁוְא אֹמֵר הַכְּתָב לְשִׁנְאָה מִתְאַוֶּה הָרוּחַ אֲשֶׁר שָׁכְנָה בָּכֶם׃"
+    },
+    {
+      "id": "james.4.6.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge slightly cropped; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_006_000024.png",
+      "hebrew_text": "אֲבָל גְּדוֹלָה יִתֵּן חֵן לָנוּ עַל־כֵּן אָמַר אֱלֹהִים לַלֵּצִים הוּא יָלִיץ וְלַעֲנָוִים יִתֶּן חֵן׃"
+    },
+    {
+      "id": "james.4.7.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing unclear.",
+      "output_image": "data/hutter/verse_images/james/004_007_000024.png",
+      "hebrew_text": "לָכֵן הִכָּנְעוּ לִפְנֵי־אֱלֹהִים וְהִתְקוֹמְמוּ עַל־הַשָּׂטָן וְיִבְרַח מִמְּכֶם׃"
+    },
+    {
+      "id": "james.4.8.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning partly in preceding line/crop; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_008_000024.png",
+      "hebrew_text": "קִרְבוּ אֶל־אֱלֹהִים וְיִקְרַב אֲלֵיכֶם טַהֲרוּ יְדֵיכֶם חַטָּאִים וְקַדְּשׁוּ אֶת־לְבַבְכֶם אֲשֶׁר לָכֶם רוּחַ מְרַמִּים׃"
+    },
+    {
+      "id": "james.4.9.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing partially unclear.",
+      "output_image": "data/hutter/verse_images/james/004_009_000024.png",
+      "hebrew_text": "חִזְרוּ שַׂקִּים וְהִתְאַבְּלוּ בְּכוּ בְּכִי סִפְדוּ וְהֵילִילוּ שְׂחוֹקְכֶם יֵהָפֵךְ לְאֵבֶל וְשִׂמְחַתְכֶם לְיָגוֹן׃"
+    },
+    {
+      "id": "james.4.10.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letter details are slightly blurry.",
+      "output_image": "data/hutter/verse_images/james/004_010_000026.png",
+      "hebrew_text": "הִתְעַנּוּ לִפְנֵי יְהוָה יְרִימְאֶתְ־כֶם"
+    },
+    {
+      "id": "james.4.11.000026",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Dense pointed text is blurry; several vowels and possibly words uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_011_000026.png",
+      "hebrew_text": "אַל־הַלְשִׁינוּ אִישׁ אֶת־רֵעֵהוּ אַחַי כִּי־מַלְשִׁינִי בְסֵתֶר אָחִיךָ וְשֹׁפֵט אֶת־אָחִיךָ מַלְשִׁינִי הַתּוֹרָה וְשֹׁפֵט אֶת־הַתּוֹרָה אִם וְשֹׁפֵט אֶת הַתּוֹרָה אֵינְךָ עֹשֵׂה הַתּוֹרָה כִּי־אִם שֹׁפֵט"
+    },
+    {
+      "id": "james.4.12.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse appears cut off at bottom; only visible target text transcribed.",
+      "output_image": "data/hutter/verse_images/james/004_012_000026.png",
+      "hebrew_text": "כִּי־אֶחָד הוּא מְחֹקֵק אֲשֶׁר יָכֹל לְהוֹשִׁיעַ וּלְאַבֵּד וּמִי־אַתָּה"
+    },
+    {
+      "id": "james.4.13.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/pointing uncertain due to blur.",
+      "output_image": "data/hutter/verse_images/james/004_013_000026.png",
+      "hebrew_text": "אוֹי לָכֶם הָאֹמְרִים הַיּוֹם אוֹ מָחָר נֵלֵךְ אֶל־אַחַת הֶעָרִים וְנִגָּרָה לָנוּ שָׁם שָׁנָה אַחַת וְנִסְחַר וְנַרְבִּיעַ בֶּצַע"
+    },
+    {
+      "id": "james.4.14.000026",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing are uncertain in the lower line.",
+      "output_image": "data/hutter/verse_images/james/004_014_000026.png",
+      "hebrew_text": "אֲשֶׁר לֹא־יֹדְעִים אַתֶּם מַה יִהְיֶה לְמָחָר וּמָה חַיֵּיכֶם הֲלֹא אֵד הַנִּרְאֶה מְעַט וְכֶעָנָן בֹּקֶר וְנָפַל מִשָּׁמַיִם הֵילָךְ"
+    },
+    {
+      "id": "james.4.15.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few letters uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_015_000026.png",
+      "hebrew_text": "אֲשֶׁר תַּחְתֶּיהָ יִהְיֶה לָכֶם לֵאמֹר אִם יִרְצֶה יְהוָה אוּלַי אִם נִהְיֶה וְנַעֲשֶׂה זֹאת וְזֹאת"
+    },
+    {
+      "id": "james.4.16.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_016_000026.png",
+      "hebrew_text": "וְעַתָּה מִתְהַלְלִים בְּגַאֲוַתְכֶם כָּל־תְּהִלָּה כָזֹאת רָעָה הִיא"
+    },
+    {
+      "id": "james.4.17.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final phrase/pointing somewhat unclear.",
+      "output_image": "data/hutter/verse_images/james/004_017_000028.png",
+      "hebrew_text": "כִּי־אֲשֶׁר יֹדֵעַ לַעֲשׂוֹת טוֹב וְלֹא עֹשֵׂה חֵטְאָה לֹא דָמִי בְּרֹאשׁוֹ"
+    },
+    {
+      "id": "james.5.1.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and the word after על are uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_001_000028.png",
+      "hebrew_text": "אוֹי לָכֶם הָעֲשִׁירִים בְּכוּ וְהֵילִילוּ עַל־הַשֹּׁאָה הַבָּאָה עֲלֵיכֶם"
+    },
+    {
+      "id": "james.5.2.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partially unclear.",
+      "output_image": "data/hutter/verse_images/james/005_002_000028.png",
+      "hebrew_text": "עָשְׁרְכֶם נָמַק וּבִגְדֵיכֶם יְכַלּוּ עָשׁ יֹאכְלֵם"
+    },
+    {
+      "id": "james.5.3.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation marks are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/james/005_003_000028.png",
+      "hebrew_text": "זְהַבְכֶם וְכַסְפְכֶם עָשׁוּ מַשְׁחִית וְהָיָה לָהֶם לְעֵדוּת וְיֹאכַל אֶת־בְּשַׂרְכֶם כְּמוֹ אֵשׁ אֲשֶׁר אֲצַרְתֶּם לָכֶם לְאַחֲרִית הַיָּמִים׃"
+    },
+    {
+      "id": "james.5.4.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word near the line break are somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_004_000028.png",
+      "hebrew_text": "הִנֵּה שְׂכַר הַפֹּעֲלִים אֲשֶׁר קָצְרוּ אֶת־אַרְצְכֶם הַשָּׁכוּל מִכֶּם קוֹרֵא וְצַעֲקַת הַקּוֹצְרִים בָּאָה אֶל־אָזְנֵי יְהוָה צְבָאוֹת׃"
+    },
+    {
+      "id": "james.5.5.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud is indistinct.",
+      "output_image": "data/hutter/verse_images/james/005_005_000028.png",
+      "hebrew_text": "וְהִתְעַדַּנְתֶּם עַל־הָאָרֶץ וְהִתְעַנַּגְתֶּם הֲאֲכַלְתֶּם אֶת־לִבּוֹתֵיכֶם כְּמוֹ בְּיוֹם זִבְחָה׃"
+    },
+    {
+      "id": "james.5.6.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final phrase and pointing are somewhat hard to confirm.",
+      "output_image": "data/hutter/verse_images/james/005_006_000028.png",
+      "hebrew_text": "חִיַּבְתֶּם וַהֲרַגְתֶּם אֶת־הַצַּדִּיק אֲשֶׁר לֹא הֵקִים עֲלֵיכֶם׃"
+    },
+    {
+      "id": "james.5.7.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top/left edge and several vowel marks are indistinct.",
+      "output_image": "data/hutter/verse_images/james/005_007_000030.png",
+      "hebrew_text": "לָכֵן דֹּמּוּ לַיהוָה אַחַי עַד־בּוֹא אֲדֹנָי הִנֵּה הָאִכָּר מְקַוֶּה אֶל־יְקַר פְּרִי הָאֲדָמָה וּמְחַכֶּה לוֹ עַד־יִקַּח גֶּשֶׁם יוֹרֶה וּמַלְקוֹשׁ׃"
+    },
+    {
+      "id": "james.5.8.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing partly uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_008_000030.png",
+      "hebrew_text": "וְדֹמּוּ לְכֶם חַזְּקוּ וְאַמְּצוּ אֶת־לְבַבְכֶם כִּי־בִיאַת יְהוָה קְרוֹבָה הִיא׃"
+    },
+    {
+      "id": "james.5.9.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some marks above the first line are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/james/005_009_000030.png",
+      "hebrew_text": "אַל־תִּתְאוֹנְנוּ בֵינֵיכֶם אַחַי פֶּן תִּשָּׁפְטוּ הִנֵּה הַשֹּׁפֵט קָם לִפְנֵי הַשַּׁעַר׃"
+    },
+    {
+      "id": "james.5.10.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse partly overlaps visually with adjacent verse; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_010_000030.png",
+      "hebrew_text": "אַחַי קְחוּ לָכֶם אֶת־הַנְּבִיאִים לְמוֹפֵת עָנוֹת וְדֻמָּה אֲשֶׁר דִּבְּרוּ בְּשֵׁם יְהוָה׃"
+    },
+    {
+      "id": "james.5.11.000030",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Image shows neighboring text and verse boundary is unclear; several words/points uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_011_000030.png",
+      "hebrew_text": "הִנֵּה מְאַשְּׁרִים אֲנַחְנוּ אֹתָם כִּי־הִכִּילוּ יְכֹלֶת אֶת־דֻּמָּה אִיּוֹב שְׁמַעְתֶּם וְאֶת־אַחֲרִיתוֹ אֲשֶׁר נָתַן לוֹ יְהוָה רְאִיתֶם כִּי־רַב חֶסֶד וְרַחֲמִים יְהוָה׃"
+    },
+    {
+      "id": "james.5.12.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is cropped; several vowel marks and first words are uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_012_000030.png",
+      "hebrew_text": "וְעַל־כָּל־דְּבָרִים אַחַי אַל־תִּשָּׁבְעוּ לֹא בַשָּׁמַיִם וְלֹא בָאָרֶץ וְלֹא בְּאֵלֶּה אַחֶרֶת וִיהִי דִּבְרְכֶם כֵּן כֵּן וְאֵין אֵין פֶּן תִּפְּלוּ בְּמִשְׁפָּט׃"
+    },
+    {
+      "id": "james.5.13.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/james/005_013_000032.png",
+      "hebrew_text": "אִם מְעֻנֶּה אִישׁ בָּכֶם יִתְפַּלֵּל אִם טוֹב לֵב הוּא יְזַמֵּר׃"
+    },
+    {
+      "id": "james.5.14.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing in several words is faint/unclear.",
+      "output_image": "data/hutter/verse_images/james/005_014_000032.png",
+      "hebrew_text": "אִם חוֹלֶה אִישׁ בָּכֶם יִקְרָא אֶת־זִקְנֵי הָעֵדָה וְיִתְפַּלְלוּ עָלָיו וְיִמְשְׁחוּהוּ בְשֶׁמֶן בְּשֵׁם יְהוָה׃"
+    },
+    {
+      "id": "james.5.15.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/cantillation-like marks are uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_015_000032.png",
+      "hebrew_text": "וּתְפִלַּת הָאֱמוּנָה תּוֹשִׁיעַ אֶת־הַחוֹלֶה וִיקִימֶנּוּ יְהוָה וְאִם עָשָׂה חֲטָאִים יִנָּשֵׂא לוֹ׃"
+    },
+    {
+      "id": "james.5.16.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Line is legible but pointing is partly unclear.",
+      "output_image": "data/hutter/verse_images/james/005_016_000032.png",
+      "hebrew_text": "וְהִתְוַדּוּ אִישׁ לְרֵעֵהוּ אֶת־חֲטָאֵיכֶם וְהִתְפַּלְּלוּ אִישׁ עַל־אָחִיו אֲשֶׁר תִּוָּשֵׁעוּ כִּי־רַב כֹּחַ בִּתְפִלַּת הַצַּדִּיק שֶׁהִיא לָנֶצַח׃"
+    },
+    {
+      "id": "james.5.17.000032",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and vowels are uncertain in this crop.",
+      "output_image": "data/hutter/verse_images/james/005_017_000032.png",
+      "hebrew_text": "אֵלִיָּהוּ הָיָה אִישׁ כְּעָנוּ כָּמוֹנוּ וְהִתְפַּלְּלוֹ הִתְפַּלֵּל מְחִלָּה שֶׁלֹּא מָטָר וּמָטָר לֹא הָיָה עַל־הָאָרֶץ בְּמָלוֹשׁ שָׁנִים וְשִׁשָּׁה חֳדָשִׁים׃"
+    },
+    {
+      "id": "james.5.18.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is somewhat faint.",
+      "output_image": "data/hutter/verse_images/james/005_018_000032.png",
+      "hebrew_text": "עוֹד הִתְפַּלֵּל וְהַשָּׁמַיִם נָתְנוּ אֶת־הַגֶּשֶׁם וְהָאָרֶץ נָתְנָה אֶת־יְבוּלָהּ׃"
+    },
+    {
+      "id": "james.5.19.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word pointing/letters are slightly unclear.",
+      "output_image": "data/hutter/verse_images/james/005_019_000034.png",
+      "hebrew_text": "אַחַי אִם־אִישׁ בָּכֶם יִתְעֶה מִדֶּרֶךְ־אֱמֶת וְאִישׁ יְשׁוֹבְבֶנּוּ׃"
+    },
+    {
+      "id": "james.5.20.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse begins in prior crop; transcription uses visible Hebrew, with some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_020_000034.png",
+      "hebrew_text": "יֵדַע כִּי־כָל אֲשֶׁר מְשׁוֹבֵב אֶת־הַחֹטֵא מִטָּעוּת דַּרְכּוֹ יוֹשִׁיעַ אֶת־נַפְשׁוֹ מִמָּוֶת וִיכַסֶּה רֹב־הַחֲטָאִים׃"
+    }
+  ],
+  "likely_crop_issues": [
+    {
+      "id": "james.1.4.000002",
+      "confidence": "medium",
+      "notes": "Verse begins slightly cut off by crop; pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/james/001_004_000002.png",
+      "hebrew_text": "ולדממה יהיה לה מעשה שלם ותממים אשר תהיו תמימים וישרים לא חסרים כל דבר׃"
+    },
+    {
+      "id": "james.1.6.000002",
+      "confidence": "medium",
+      "notes": "Hebrew text partially inferred from visible crop; pointing not preserved.",
+      "output_image": "data/hutter/verse_images/james/001_006_000002.png",
+      "hebrew_text": "ישאל באמונה ולא ינכר למדות כי המנכר דומה לגלי הים הנדפים ברוח ומתנדפים׃"
+    },
+    {
+      "id": "james.1.10.000004",
+      "confidence": "medium",
+      "notes": "Pointing/marks uncertain; adjacent verse visible below ignored.",
+      "output_image": "data/hutter/verse_images/james/001_010_000004.png",
+      "hebrew_text": "והעשיר בשפל נפשו כי כציץ חציר יבש ונבל׃"
+    },
+    {
+      "id": "james.1.12.000004",
+      "confidence": "low",
+      "notes": "Only upper part of verse visible; text continues into next crop.",
+      "output_image": "data/hutter/verse_images/james/001_012_000004.png",
+      "hebrew_text": "אִישׁ אִם בְּמַסָּה לֹא יֹאמַר כִּי־נִסָּה אוֹתוֹ אֱלֹהִים כִּי"
+    },
+    {
+      "id": "james.1.13.000004",
+      "confidence": "medium",
+      "notes": "Beginning likely continues from preceding crop; target verse boundary uncertain.",
+      "output_image": "data/hutter/verse_images/james/001_013_000004.png",
+      "hebrew_text": "הָאֱלֹהִים אֵינֶנּוּ מְנַסֶּה אֶת־הָרָעִים כִּי־אֶת־אִישׁ לֹא אֶחָד מְנַסֶּה הוּא׃"
+    },
+    {
+      "id": "james.1.14.000004",
+      "confidence": "medium",
+      "notes": "Verse begins above crop; only ending visible.",
+      "output_image": "data/hutter/verse_images/james/001_014_000004.png",
+      "hebrew_text": "בְּמַסָּה אוֹתוֹ מוֹשְׁכוֹ וּמְסִיתוֹ הַתַּאֲוָה בְּנַפְשׁוֹ׃"
+    },
+    {
+      "id": "james.1.19.000006",
+      "confidence": "medium",
+      "notes": "Beginning partly cropped; vowels uncertain.",
+      "output_image": "data/hutter/verse_images/james/001_019_000006.png",
+      "hebrew_text": "לָכֵן אַחַי אֲהוּבַי יְהִי־כָּל־הָאָדָם מְמַהֵר לִשְׁמֹעַ מְאַחֵר לְדַבֵּר וְאַחֵר אַפָּיִם׃"
+    },
+    {
+      "id": "james.1.21.000006",
+      "confidence": "low",
+      "notes": "Only a small left-edge fragment of the Hebrew verse is visible; most of the target verse is cut off.",
+      "output_image": "data/hutter/verse_images/james/001_021_000006.png",
+      "hebrew_text": "לְנַפְשֹׁתֵיכֶם"
+    },
+    {
+      "id": "james.2.1.000010",
+      "confidence": "low",
+      "notes": "Image appears to show only the end of verse 1 or possibly neighboring text; target verse likely cut off.",
+      "output_image": "data/hutter/verse_images/james/002_001_000010.png",
+      "hebrew_text": "אִם זָהָב וּבִבְדֵי קֹדֶשׁ וְגַם יָבוֹא אִישׁ מִסְכֵּן בִּכְלָאִים וּמְטֻלָּאוֹת"
+    },
+    {
+      "id": "james.2.5.000010",
+      "confidence": "medium",
+      "notes": "Only final Hebrew word of target verse visible; most of verse is Spanish/non-Hebrew.",
+      "output_image": "data/hutter/verse_images/james/002_005_000010.png",
+      "hebrew_text": "לְאֹהֲבָיו"
+    },
+    {
+      "id": "james.2.10.000012",
+      "confidence": "medium",
+      "notes": "Verse is split/cropped with top line from previous continuation; some words uncertain.",
+      "output_image": "data/hutter/verse_images/james/002_010_000012.png",
+      "hebrew_text": "וַאֲשֶׁר יִשְׁמֹר אֶת־כָּל הַתּוֹרָה וְיָעֹף בְּמִצְוָה אַחַת חוֹב כֹּל הַמִּצְוָה נִהְיֶה"
+    },
+    {
+      "id": "james.2.13.000012",
+      "confidence": "medium",
+      "notes": "Hebrew verse appears in previous crop area; provided image contains only Spanish text for this verse.",
+      "output_image": "data/hutter/verse_images/james/002_013_000012.png",
+      "hebrew_text": "כִּי־מִשְׁפָּט בְּלִי חֶסֶד לַאֲשֶׁר לֹא עָשָׂה חֶסֶד וּמִתְהַלֵּל הַחֶסֶד עַל־הַמִּשְׁפָּט"
+    },
+    {
+      "id": "james.2.20.000014",
+      "confidence": "medium",
+      "notes": "Beginning of line is slightly cropped/unclear.",
+      "output_image": "data/hutter/verse_images/james/002_020_000014.png",
+      "hebrew_text": "וְאִם תֹּאבֶה לָדַעַת הָאֱנוֹשׁ הַשָּׁוְא כִּי־הָאֱמוּנָה בְּלִי מַעֲשֶׂיהָ מֵתָה הִיא׃"
+    },
+    {
+      "id": "james.2.24.000016",
+      "confidence": "medium",
+      "notes": "Some pointing is difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/james/002_024_000016.png",
+      "hebrew_text": "וּרְאִים אַתֶּם כִּי מִמַּעֲשִׂים יִצְדַּק הָאָדָם וְלֹא הָאֱמוּנָה לְבַדּ׃"
+    },
+    {
+      "id": "james.3.1.000016",
+      "confidence": "low",
+      "notes": "Several words and pointing are uncertain due to blur/crop.",
+      "output_image": "data/hutter/verse_images/james/003_001_000016.png",
+      "hebrew_text": "אַל־יִהְיוּ מְלַמְּדִים רַבִּים בָּכֶם יוֹדְעִים כִּי בְּמִשְׁפָּט גָּדוֹל מְאַחֲרִים נִשָּׂא׃"
+    },
+    {
+      "id": "james.3.2.000018",
+      "confidence": "low",
+      "notes": "Left edge is cut off; some words/points uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_002_000018.png",
+      "hebrew_text": "כִּי רַבִּים נֶכְשָׁלִים כֻּלָּנוּ וְאִם אִישׁ לֹא יִגּוֹף בְּדָבָר זֶה הוּא אִישׁ תָּמִים כִּי־יָכוֹל לִבְלוֹם אֶת־כָּל־גּוּפוֹ׃"
+    },
+    {
+      "id": "james.3.4.000018",
+      "confidence": "low",
+      "notes": "Right/left cropping and blurry pointing make transcription uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_004_000018.png",
+      "hebrew_text": "הִנֵּה גַּם הָאֳנִיּוֹת אַף כִּי גְדֹלוֹת וּמְרוּחוֹת גְּדוֹלוֹת נִדָּחוֹת וְנַהֲגוֹת אַךְ בְּעֵץ קָטֹן הַסֹּבֵב שָׁמָּה אֲשֶׁר יִרְאֶנָּה הַמֶּלַח׃"
+    },
+    {
+      "id": "james.3.8.000020",
+      "confidence": "medium",
+      "notes": "Pointing/marks and final word are somewhat unclear in crop.",
+      "output_image": "data/hutter/verse_images/james/003_008_000020.png",
+      "hebrew_text": "אַךְ אֶת־הַלָשׁוֹן כָּל־אִישׁ מִבְּנֵי אָדָם לֹא יוּכַל לִדְמוֹם כִּי־רָעָה לֹא לְבִלּוּם מְלֵאָה בְרֹאשׁ מֵמִית אָכֵן׃"
+    },
+    {
+      "id": "james.3.12.000020",
+      "confidence": "low",
+      "notes": "Verse partly cropped at top/left; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/james/003_012_000020.png",
+      "hebrew_text": "הֲתּוּכַל אַחַי הַתְּאֵנָה לַעֲשׂוֹת זֵיתִים אוֹ־הַגֶּפֶן תְּאֵנִים כֵּן בְּאֵר לֹא אַחַת הַעֲשֵׂמִי־הַמֶּלַח וּמֵי־הַמָּתוֹק׃"
+    },
+    {
+      "id": "james.3.17.000022",
+      "confidence": "low",
+      "notes": "Crop spans several lines with uncertain words and pointing; needs verification.",
+      "output_image": "data/hutter/verse_images/james/003_017_000022.png",
+      "hebrew_text": "וְהַחָכְמָה אֲשֶׁר מִלְמַעְלָה בָּרִאשֹׁנָה זַכָּה הִיא וְאַחֲרֵי־כֵן מְבַקֵּשׁ שָׁלוֹם וְנִדְבָהּ סַלְחָה שְׁמֵעָה לִיקָרָה מְלֵאָה חֶסֶד וְרַחֲמִים וּמְלֵאָה מַעֲשִׂים טוֹבִים לֹא מִתְחַנֶּפֶת וְבְלִי־חֵיךְ וּמִרְמָה׃"
+    },
+    {
+      "id": "james.3.18.000022",
+      "confidence": "medium",
+      "notes": "Pointing partially unclear in crop.",
+      "output_image": "data/hutter/verse_images/james/003_018_000022.png",
+      "hebrew_text": "וּפְרִי הַצְּדָקָה בְּשָׁלוֹם נִזְרָע לְעֹשֵׂה שָׁלוֹם׃"
+    },
+    {
+      "id": "james.4.2.000022",
+      "confidence": "low",
+      "notes": "Verse begins in neighboring crop; visible crop is partial and pointing/words uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_002_000022.png",
+      "hebrew_text": "וְלֹא תָשִׂיגוּ הִנְּכֶם נִלְחָמִים וְנִרְגָּנִים וְלֹא יִהְיֶה לָכֶם עַל־כִּי־לֹא שֹׁאֲלִים אַתֶּם׃"
+    },
+    {
+      "id": "james.4.3.000024",
+      "confidence": "medium",
+      "notes": "Left edge slightly cropped; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_003_000024.png",
+      "hebrew_text": "גַּם שֹׁאֲלִים אַתֶּם וְלֹא תִקְחוּ כִּי־בְרָעָה שֹׁאֲלִים אַתֶּם אֲשֶׁר בְּתַאֲוַת נַפְשְׁכֶם תְּבַלְּעוּ׃"
+    },
+    {
+      "id": "james.4.4.000024",
+      "confidence": "low",
+      "notes": "Left side of several lines cropped; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_004_000024.png",
+      "hebrew_text": "הַמְנָאֲפִים וְהַמְנָאֲפוֹת הֲלֹא יְדַעְתֶּם כִּי־אַהֲבַת הָעוֹלָם אֵיבַת אֱלֹהִים הִיא לָכֵן כָּל־אֲשֶׁר יֹאהַב לִהְיוֹת רֵעַ הָעוֹלָם אֹיֵב אֱלֹהִים הוּא׃"
+    },
+    {
+      "id": "james.4.6.000024",
+      "confidence": "medium",
+      "notes": "Left edge slightly cropped; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_006_000024.png",
+      "hebrew_text": "אֲבָל גְּדוֹלָה יִתֵּן חֵן לָנוּ עַל־כֵּן אָמַר אֱלֹהִים לַלֵּצִים הוּא יָלִיץ וְלַעֲנָוִים יִתֶּן חֵן׃"
+    },
+    {
+      "id": "james.4.8.000024",
+      "confidence": "medium",
+      "notes": "Beginning partly in preceding line/crop; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/004_008_000024.png",
+      "hebrew_text": "קִרְבוּ אֶל־אֱלֹהִים וְיִקְרַב אֲלֵיכֶם טַהֲרוּ יְדֵיכֶם חַטָּאִים וְקַדְּשׁוּ אֶת־לְבַבְכֶם אֲשֶׁר לָכֶם רוּחַ מְרַמִּים׃"
+    },
+    {
+      "id": "james.4.12.000026",
+      "confidence": "medium",
+      "notes": "Verse appears cut off at bottom; only visible target text transcribed.",
+      "output_image": "data/hutter/verse_images/james/004_012_000026.png",
+      "hebrew_text": "כִּי־אֶחָד הוּא מְחֹקֵק אֲשֶׁר יָכֹל לְהוֹשִׁיעַ וּלְאַבֵּד וּמִי־אַתָּה"
+    },
+    {
+      "id": "james.5.3.000028",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation marks are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/james/005_003_000028.png",
+      "hebrew_text": "זְהַבְכֶם וְכַסְפְכֶם עָשׁוּ מַשְׁחִית וְהָיָה לָהֶם לְעֵדוּת וְיֹאכַל אֶת־בְּשַׂרְכֶם כְּמוֹ אֵשׁ אֲשֶׁר אֲצַרְתֶּם לָכֶם לְאַחֲרִית הַיָּמִים׃"
+    },
+    {
+      "id": "james.5.10.000030",
+      "confidence": "medium",
+      "notes": "Verse partly overlaps visually with adjacent verse; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_010_000030.png",
+      "hebrew_text": "אַחַי קְחוּ לָכֶם אֶת־הַנְּבִיאִים לְמוֹפֵת עָנוֹת וְדֻמָּה אֲשֶׁר דִּבְּרוּ בְּשֵׁם יְהוָה׃"
+    },
+    {
+      "id": "james.5.11.000030",
+      "confidence": "low",
+      "notes": "Image shows neighboring text and verse boundary is unclear; several words/points uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_011_000030.png",
+      "hebrew_text": "הִנֵּה מְאַשְּׁרִים אֲנַחְנוּ אֹתָם כִּי־הִכִּילוּ יְכֹלֶת אֶת־דֻּמָּה אִיּוֹב שְׁמַעְתֶּם וְאֶת־אַחֲרִיתוֹ אֲשֶׁר נָתַן לוֹ יְהוָה רְאִיתֶם כִּי־רַב חֶסֶד וְרַחֲמִים יְהוָה׃"
+    },
+    {
+      "id": "james.5.12.000030",
+      "confidence": "medium",
+      "notes": "Top of verse is cropped; several vowel marks and first words are uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_012_000030.png",
+      "hebrew_text": "וְעַל־כָּל־דְּבָרִים אַחַי אַל־תִּשָּׁבְעוּ לֹא בַשָּׁמַיִם וְלֹא בָאָרֶץ וְלֹא בְּאֵלֶּה אַחֶרֶת וִיהִי דִּבְרְכֶם כֵּן כֵּן וְאֵין אֵין פֶּן תִּפְּלוּ בְּמִשְׁפָּט׃"
+    },
+    {
+      "id": "james.5.13.000032",
+      "confidence": "medium",
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/james/005_013_000032.png",
+      "hebrew_text": "אִם מְעֻנֶּה אִישׁ בָּכֶם יִתְפַּלֵּל אִם טוֹב לֵב הוּא יְזַמֵּר׃"
+    },
+    {
+      "id": "james.5.17.000032",
+      "confidence": "low",
+      "notes": "Several words and vowels are uncertain in this crop.",
+      "output_image": "data/hutter/verse_images/james/005_017_000032.png",
+      "hebrew_text": "אֵלִיָּהוּ הָיָה אִישׁ כְּעָנוּ כָּמוֹנוּ וְהִתְפַּלְּלוֹ הִתְפַּלֵּל מְחִלָּה שֶׁלֹּא מָטָר וּמָטָר לֹא הָיָה עַל־הָאָרֶץ בְּמָלוֹשׁ שָׁנִים וְשִׁשָּׁה חֳדָשִׁים׃"
+    },
+    {
+      "id": "james.5.20.000034",
+      "confidence": "medium",
+      "notes": "Verse begins in prior crop; transcription uses visible Hebrew, with some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/james/005_020_000034.png",
+      "hebrew_text": "יֵדַע כִּי־כָל אֲשֶׁר מְשׁוֹבֵב אֶת־הַחֹטֵא מִטָּעוּת דַּרְכּוֹ יוֹשִׁיעַ אֶת־נַפְשׁוֹ מִמָּוֶת וִיכַסֶּה רֹב־הַחֲטָאִים׃"
+    }
+  ]
+}

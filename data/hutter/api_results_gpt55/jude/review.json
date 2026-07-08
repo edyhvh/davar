@@ -1,0 +1,310 @@
+{
+  "book": "jude",
+  "result_count": 25,
+  "batch_count": 3,
+  "status_counts": {
+    "ok": 25
+  },
+  "confidence_counts": {
+    "low": 7,
+    "medium": 18
+  },
+  "needs_review_count": 25,
+  "likely_crop_issue_count": 12,
+  "likely_ocr_issue_count": 13,
+  "no_hebrew_marks_count": 3,
+  "empty_text_count": 1,
+  "usage": {
+    "input_tokens": 9147,
+    "output_tokens": 4187,
+    "total_tokens": 13334
+  },
+  "needs_review": [
+    {
+      "id": "jude.1.1.000002",
+      "confidence": "low",
+      "has_hebrew_marks": false,
+      "notes": "Verse partly obscured/cropped; pointing not confidently preserved. No Hebrew pointing marks were returned; review against the image.",
+      "output_image": "data/hutter/verse_images/jude/001_001_000002.png",
+      "hebrew_text": "יהודה עבד ישוע המשיח אחי יעקב לאשר נקראו ונשמרים לאלהים האב בקדושים ישוע המשיח"
+    },
+    {
+      "id": "jude.1.2.000002",
+      "confidence": "low",
+      "has_hebrew_marks": false,
+      "notes": "Only visible portion transcribed; verse text appears cut/mixed with surrounding text and pointing not confidently preserved. No Hebrew pointing marks were returned; review against the image.",
+      "output_image": "data/hutter/verse_images/jude/001_002_000002.png",
+      "hebrew_text": "החסד לכם ושלום ואהבה"
+    },
+    {
+      "id": "jude.1.3.000002",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Crop cuts the verse on both sides; several words uncertain and pointing not confidently preserved.",
+      "output_image": "data/hutter/verse_images/jude/001_003_000002.png",
+      "hebrew_text": "אהובי במליצה אנשים אשר נכספו אל משפט הזה אשר נפש את־החלה וכתבים לצלותם ולבטחה אשר לכדו יהוה אלהים"
+    },
+    {
+      "id": "jude.1.4.000002",
+      "confidence": "low",
+      "has_hebrew_marks": false,
+      "notes": "Target Hebrew verse is not visible in crop; only neighboring Hebrew and Spanish text appear. No Hebrew pointing marks were returned; review against the image.",
+      "output_image": "data/hutter/verse_images/jude/001_004_000002.png",
+      "hebrew_text": ""
+    },
+    {
+      "id": "jude.1.5.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing not preserved; one word near end uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_005_000004.png",
+      "hebrew_text": "ותחפצי להודיע אתכם כי ידעתם פעם אחת את־זאת כי־יהוה (אלהים ישוע) בהושיעו את־עמו מארץ מצרים שולח אבד אותם אשר לא האמינו"
+    },
+    {
+      "id": "jude.1.6.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing not preserved; final word uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_006_000004.png",
+      "hebrew_text": "ואת־המלאכים אשר לא נצרו את־משלהם כי־אם עזבו את־ביתם למשפט יום גדול באסורי עולם תחת האפל ונצרם"
+    },
+    {
+      "id": "jude.1.7.000004",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words uncertain; pointing not preserved.",
+      "output_image": "data/hutter/verse_images/jude/001_007_000004.png",
+      "hebrew_text": "כי־סדום ועמורה והערים אשר סביבתיהן כמוהם וזנו והלכו אחרי בשר אחר הושמו לראות מששל ומשפט והראו אש עולם נשאים"
+    },
+    {
+      "id": "jude.1.8.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing not preserved; one word uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_008_000004.png",
+      "hebrew_text": "וגם כן האלה בחלמים יהיו שוכבים את־הבשר מטמאים את־הממשלה מונאים ואת־הכבודים מקללים"
+    },
+    {
+      "id": "jude.1.9.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse partly cut; pointing not preserved and a few words uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_009_000004.png",
+      "hebrew_text": "ומיכאל ראש המלאכים כאשר היה לו ריב ויתוכח עם השטן על־גויה משה לא מלאו לבו לריבו במשפט הכלה כי־אם אמר יגער יהוה בך השטן"
+    },
+    {
+      "id": "jude.1.10.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing not preserved; some words uncertain due to crop/print clarity.",
+      "output_image": "data/hutter/verse_images/jude/001_010_000006.png",
+      "hebrew_text": "והמה את־אשר לא ידעו מקללים ואשר טבעות כבהמה בערוה מבינים באלה נשחתים"
+    },
+    {
+      "id": "jude.1.11.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge slightly cropped; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_011_000006.png",
+      "hebrew_text": "אוֹי לָהֶם כִּי בְדֶרֶךְ קַיִן הָלְכוּ וּבִתְעַת בִּלְעָם בְּשָׂכָר נִשְׁטְפוּ וּבְמֶרִי קֹרַח אָבָדוּ׃"
+    },
+    {
+      "id": "jude.1.12.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several words at left edge are partially cropped; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_012_000006.png",
+      "hebrew_text": "הֵמָּה הֵם בְּמִזְבְּחֵיכֶם מוּמִים אֹכְלֵי לֶחֶם בְּלִי יִרְאָה רֹעֵי נַפְשׁוֹתָם עָנָנִים בְּלִי מַיִם הַמִּתְהַפְּכִים בְּרוּחוֹת עֵצֵי סְתָו בְּלִי־פְרִי פַּעֲמַיִם מֵתִים נֶעֱקָרִים׃"
+    },
+    {
+      "id": "jude.1.13.000006",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Blurry and unusual spelling/marks; several words uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_013_000006.png",
+      "hebrew_text": "גַּלֵּי יָם רֹגֵל וְסֹעֵר מְמִיאִים אֶת־בֹּשֶׁת נַפְשָׁם כְּכֹכְבֵי לֶכֶת לַאֲשֶׁר נִצַּד אֲפֵל חֹשֶׁךְ צַלְמָוֶת לְעוֹלָם׃"
+    },
+    {
+      "id": "jude.1.14.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and final phrase uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_014_000006.png",
+      "hebrew_text": "וַיִּנָּבֵא עַל־הָאֵלֶּה חֲנוֹךְ הַשְּׁבִיעִי מֵאָדָם לֵאמֹר הִנֵּה בָא יְהוָה אֱלֹהִים בְּרִבְבוֹתָיו כָּל־קְדֹשִׁים עִמּוֹ׃"
+    },
+    {
+      "id": "jude.1.15.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top/left parts cropped; beginning and some words inferred from visible text.",
+      "output_image": "data/hutter/verse_images/jude/001_015_000008.png",
+      "hebrew_text": "לַעֲשׂוֹת מִשְׁפָּט עַל־כֻּלָּם וּלְהוֹכִיחַ אֶת־כָּל־רְשָׁעֵיהֶם עַל כָּל־מַעֲשֵׂי רִשְׁעָתָם אֲשֶׁר רָשְׁעוּ וְעַל־כָּל־הַקָּשׁוֹת אֲשֶׁר דִּבְּרוּ עָלָיו חַטָּאִים רְשָׁעִים׃"
+    },
+    {
+      "id": "jude.1.16.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Lower part of verse partly cut in crop; transcription partly uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_016_000008.png",
+      "hebrew_text": "אֵלֶּה הֵם מְלִינִים מְנַאֲפִים הַהֹלְכִים בְּתַאֲוַת נַפְשׁוֹתָם וּפִיהֶם דִּבֶּר בְּגֵאוּת נֹשְׂאֵי פָנִים בַּעֲבוּר הַשֹּׁחַד׃"
+    },
+    {
+      "id": "jude.1.17.000008",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse is cut off at bottom; only visible Hebrew transcribed.",
+      "output_image": "data/hutter/verse_images/jude/001_017_000008.png",
+      "hebrew_text": "וְאַתֶּם אֲהוּבַי זִכְרוּ דְבָרִים הַמְדֻבָּרִים מִקֶּדֶם מִשְּׁלִיחֵי"
+    },
+    {
+      "id": "jude.1.18.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge and some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_018_000008.png",
+      "hebrew_text": "אֲשֶׁר אָמְרוּ לָכֶם כִּי בְאַחֲרוֹן יִהְיוּ לֵצִים אֲשֶׁר יֵלְכוּ בְּמַאֲוֵי רִשְׁעוֹת נַפְשׁוֹתָם׃"
+    },
+    {
+      "id": "jude.1.19.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some characters and pointing uncertain due to blur.",
+      "output_image": "data/hutter/verse_images/jude/001_019_000008.png",
+      "hebrew_text": "אֵלֶּה הֵם אֲשֶׁר יִתְפָּרָדוּ מִמֶּנּוּ אַנְשֵׁי נַפְשׁוֹתָם רוּחַ אֱלֹהִים אֵין לָמוֹ׃"
+    },
+    {
+      "id": "jude.1.20.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge cropped; first word/maqaf and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_020_000008.png",
+      "hebrew_text": "וְאַתֶּם אֲהוּבַי בְּנוּ אֶת־נַפְשׁוֹתֵיכֶם עַל־אֱמוּנַתְכֶם הַקְּדוֹשָׁה וְהִתְפַּלְלוּ בְּרוּחַ הַקֹּדֶשׁ׃"
+    },
+    {
+      "id": "jude.1.21.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing partly difficult to verify from image.",
+      "output_image": "data/hutter/verse_images/jude/001_021_000010.png",
+      "hebrew_text": "שִׁמְרוּ אֶת־נַפְשֹׁתֵיכֶם בְּאַהֲבַת אֱלֹהִים וְקַוּוּ אֶת־רַחֲמֵי אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ לְחַיֵּי עוֹלָם׃"
+    },
+    {
+      "id": "jude.1.22.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/points uncertain in crop.",
+      "output_image": "data/hutter/verse_images/jude/001_022_000010.png",
+      "hebrew_text": "וְהַלְבִּינוּ בֵּין־הָאֵלֶּה אֲשֶׁר יִתְרוֹנְנוּ׃"
+    },
+    {
+      "id": "jude.1.23.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse appears in image 2; transcription includes uncertain pointing.",
+      "output_image": "data/hutter/verse_images/jude/001_023_000010.png",
+      "hebrew_text": "וּבֵין הָאֵלֶּה אֲשֶׁר בְּיִרְאָה הוֹשִׁיעוּ וּמֵאֵשׁ הַצִּילוּ וְשָׂנְאוּ אֶת־כְּתֹנֶת אֲשֶׁר בָּהּ מוּם לַבָּשָׂר׃"
+    },
+    {
+      "id": "jude.1.24.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing uncertain; target verse visible in image 3.",
+      "output_image": "data/hutter/verse_images/jude/001_024_000010.png",
+      "hebrew_text": "וְלוֹ אֲשֶׁר יָכוֹל לְנַצֵּר אֶתְכֶם בְּלִי נֶגַע וּלְהַעֲמִידְכֶם לִפְנֵי כְבוֹדוֹ תְמִימִים בְּלִי־מוּם בְּעַלִּיצוּת׃"
+    },
+    {
+      "id": "jude.1.25.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Image 5 contains only Spanish and colophon; Hebrew verse appears in image 4. Pointing and a few forms uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_025_000010.png",
+      "hebrew_text": "אֲשֶׁר לְבַדּוֹ חָכָם לֵאלֹהִים וּלְמוֹשִׁיעֵנוּ בְּיֵשׁוּעַ הַמָּשִׁיחַ אֲדֹנֵינוּ כָבוֹד גְּדֻלָּה כֹּחַ הַגְּבֻרָה בְּקֶדֶמֶת כָּל־עוֹלָם וְעַתָּה וּלְכָל־עוֹלָמִים אָמֵן׃"
+    }
+  ],
+  "likely_crop_issues": [
+    {
+      "id": "jude.1.1.000002",
+      "confidence": "low",
+      "notes": "Verse partly obscured/cropped; pointing not confidently preserved. No Hebrew pointing marks were returned; review against the image.",
+      "output_image": "data/hutter/verse_images/jude/001_001_000002.png",
+      "hebrew_text": "יהודה עבד ישוע המשיח אחי יעקב לאשר נקראו ונשמרים לאלהים האב בקדושים ישוע המשיח"
+    },
+    {
+      "id": "jude.1.3.000002",
+      "confidence": "low",
+      "notes": "Crop cuts the verse on both sides; several words uncertain and pointing not confidently preserved.",
+      "output_image": "data/hutter/verse_images/jude/001_003_000002.png",
+      "hebrew_text": "אהובי במליצה אנשים אשר נכספו אל משפט הזה אשר נפש את־החלה וכתבים לצלותם ולבטחה אשר לכדו יהוה אלהים"
+    },
+    {
+      "id": "jude.1.4.000002",
+      "confidence": "low",
+      "notes": "Target Hebrew verse is not visible in crop; only neighboring Hebrew and Spanish text appear. No Hebrew pointing marks were returned; review against the image.",
+      "output_image": "data/hutter/verse_images/jude/001_004_000002.png",
+      "hebrew_text": ""
+    },
+    {
+      "id": "jude.1.10.000006",
+      "confidence": "medium",
+      "notes": "Pointing not preserved; some words uncertain due to crop/print clarity.",
+      "output_image": "data/hutter/verse_images/jude/001_010_000006.png",
+      "hebrew_text": "והמה את־אשר לא ידעו מקללים ואשר טבעות כבהמה בערוה מבינים באלה נשחתים"
+    },
+    {
+      "id": "jude.1.11.000006",
+      "confidence": "medium",
+      "notes": "Left edge slightly cropped; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_011_000006.png",
+      "hebrew_text": "אוֹי לָהֶם כִּי בְדֶרֶךְ קַיִן הָלְכוּ וּבִתְעַת בִּלְעָם בְּשָׂכָר נִשְׁטְפוּ וּבְמֶרִי קֹרַח אָבָדוּ׃"
+    },
+    {
+      "id": "jude.1.12.000006",
+      "confidence": "medium",
+      "notes": "Several words at left edge are partially cropped; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_012_000006.png",
+      "hebrew_text": "הֵמָּה הֵם בְּמִזְבְּחֵיכֶם מוּמִים אֹכְלֵי לֶחֶם בְּלִי יִרְאָה רֹעֵי נַפְשׁוֹתָם עָנָנִים בְּלִי מַיִם הַמִּתְהַפְּכִים בְּרוּחוֹת עֵצֵי סְתָו בְּלִי־פְרִי פַּעֲמַיִם מֵתִים נֶעֱקָרִים׃"
+    },
+    {
+      "id": "jude.1.15.000008",
+      "confidence": "medium",
+      "notes": "Top/left parts cropped; beginning and some words inferred from visible text.",
+      "output_image": "data/hutter/verse_images/jude/001_015_000008.png",
+      "hebrew_text": "לַעֲשׂוֹת מִשְׁפָּט עַל־כֻּלָּם וּלְהוֹכִיחַ אֶת־כָּל־רְשָׁעֵיהֶם עַל כָּל־מַעֲשֵׂי רִשְׁעָתָם אֲשֶׁר רָשְׁעוּ וְעַל־כָּל־הַקָּשׁוֹת אֲשֶׁר דִּבְּרוּ עָלָיו חַטָּאִים רְשָׁעִים׃"
+    },
+    {
+      "id": "jude.1.16.000008",
+      "confidence": "medium",
+      "notes": "Lower part of verse partly cut in crop; transcription partly uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_016_000008.png",
+      "hebrew_text": "אֵלֶּה הֵם מְלִינִים מְנַאֲפִים הַהֹלְכִים בְּתַאֲוַת נַפְשׁוֹתָם וּפִיהֶם דִּבֶּר בְּגֵאוּת נֹשְׂאֵי פָנִים בַּעֲבוּר הַשֹּׁחַד׃"
+    },
+    {
+      "id": "jude.1.17.000008",
+      "confidence": "low",
+      "notes": "Verse is cut off at bottom; only visible Hebrew transcribed.",
+      "output_image": "data/hutter/verse_images/jude/001_017_000008.png",
+      "hebrew_text": "וְאַתֶּם אֲהוּבַי זִכְרוּ דְבָרִים הַמְדֻבָּרִים מִקֶּדֶם מִשְּׁלִיחֵי"
+    },
+    {
+      "id": "jude.1.20.000008",
+      "confidence": "medium",
+      "notes": "Left edge cropped; first word/maqaf and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_020_000008.png",
+      "hebrew_text": "וְאַתֶּם אֲהוּבַי בְּנוּ אֶת־נַפְשׁוֹתֵיכֶם עַל־אֱמוּנַתְכֶם הַקְּדוֹשָׁה וְהִתְפַּלְלוּ בְּרוּחַ הַקֹּדֶשׁ׃"
+    },
+    {
+      "id": "jude.1.22.000010",
+      "confidence": "medium",
+      "notes": "Some letters/points uncertain in crop.",
+      "output_image": "data/hutter/verse_images/jude/001_022_000010.png",
+      "hebrew_text": "וְהַלְבִּינוּ בֵּין־הָאֵלֶּה אֲשֶׁר יִתְרוֹנְנוּ׃"
+    },
+    {
+      "id": "jude.1.25.000010",
+      "confidence": "medium",
+      "notes": "Image 5 contains only Spanish and colophon; Hebrew verse appears in image 4. Pointing and a few forms uncertain.",
+      "output_image": "data/hutter/verse_images/jude/001_025_000010.png",
+      "hebrew_text": "אֲשֶׁר לְבַדּוֹ חָכָם לֵאלֹהִים וּלְמוֹשִׁיעֵנוּ בְּיֵשׁוּעַ הַמָּשִׁיחַ אֲדֹנֵינוּ כָבוֹד גְּדֻלָּה כֹּחַ הַגְּבֻרָה בְּקֶדֶמֶת כָּל־עוֹלָם וְעַתָּה וּלְכָל־עוֹלָמִים אָמֵן׃"
+    }
+  ]
+}
