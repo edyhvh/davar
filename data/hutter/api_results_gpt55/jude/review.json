@@ -1,23 +1,24 @@
 {
   "book": "jude",
+  "raw_result_count": 26,
   "result_count": 25,
-  "batch_count": 3,
+  "batch_count": 4,
   "status_counts": {
     "ok": 25
   },
   "confidence_counts": {
-    "low": 7,
-    "medium": 18
+    "low": 6,
+    "medium": 19
   },
   "needs_review_count": 25,
-  "likely_crop_issue_count": 12,
-  "likely_ocr_issue_count": 13,
-  "no_hebrew_marks_count": 3,
+  "likely_crop_issue_count": 13,
+  "likely_ocr_issue_count": 12,
+  "no_hebrew_marks_count": 2,
   "empty_text_count": 1,
   "usage": {
-    "input_tokens": 9147,
-    "output_tokens": 4187,
-    "total_tokens": 13334
+    "input_tokens": 10532,
+    "output_tokens": 4336,
+    "total_tokens": 14868
   },
   "needs_review": [
     {
@@ -30,11 +31,11 @@
     },
     {
       "id": "jude.1.2.000002",
-      "confidence": "low",
-      "has_hebrew_marks": false,
-      "notes": "Only visible portion transcribed; verse text appears cut/mixed with surrounding text and pointing not confidently preserved. No Hebrew pointing marks were returned; review against the image.",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Image crop is partial and includes neighboring Hebrew; some pointing is difficult to confirm.",
       "output_image": "data/hutter/verse_images/jude/001_002_000002.png",
-      "hebrew_text": "החסד לכם ושלום ואהבה"
+      "hebrew_text": "הָרַחֲמִים וְשָׁלוֹם וְאַהֲבָה יִמָּלְאוּ לָכֶם"
     },
     {
       "id": "jude.1.3.000002",
@@ -228,6 +229,13 @@
       "notes": "Verse partly obscured/cropped; pointing not confidently preserved. No Hebrew pointing marks were returned; review against the image.",
       "output_image": "data/hutter/verse_images/jude/001_001_000002.png",
       "hebrew_text": "יהודה עבד ישוע המשיח אחי יעקב לאשר נקראו ונשמרים לאלהים האב בקדושים ישוע המשיח"
+    },
+    {
+      "id": "jude.1.2.000002",
+      "confidence": "medium",
+      "notes": "Image crop is partial and includes neighboring Hebrew; some pointing is difficult to confirm.",
+      "output_image": "data/hutter/verse_images/jude/001_002_000002.png",
+      "hebrew_text": "הָרַחֲמִים וְשָׁלוֹם וְאַהֲבָה יִמָּלְאוּ לָכֶם"
     },
     {
       "id": "jude.1.3.000002",

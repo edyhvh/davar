@@ -1,8 +1,8 @@
 {
   "book": "romans",
-  "raw_result_count": 437,
+  "raw_result_count": 440,
   "result_count": 432,
-  "batch_count": 44,
+  "batch_count": 45,
   "status_counts": {
     "ok": 432
   },
@@ -12,14 +12,14 @@
     "medium": 348
   },
   "needs_review_count": 294,
-  "likely_crop_issue_count": 118,
-  "likely_ocr_issue_count": 176,
-  "no_hebrew_marks_count": 6,
+  "likely_crop_issue_count": 119,
+  "likely_ocr_issue_count": 175,
+  "no_hebrew_marks_count": 3,
   "empty_text_count": 1,
   "usage": {
-    "input_tokens": 130549,
-    "output_tokens": 68286,
-    "total_tokens": 198835
+    "input_tokens": 133904,
+    "output_tokens": 68839,
+    "total_tokens": 202743
   },
   "needs_review": [
     {
@@ -1417,10 +1417,10 @@
     {
       "id": "romans.10.16.000084",
       "confidence": "medium",
-      "has_hebrew_marks": false,
-      "notes": "Niqqud/marks visible but not fully preserved. No Hebrew pointing marks were returned; review against the image.",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are hard to distinguish in the crop.",
       "output_image": "data/hutter/verse_images/romans/010_016_000084.png",
-      "hebrew_text": "אך כי לא כלם שמעו לבשורה גם ישעיה אמר יהוה מי האמין לשמעתנו"
+      "hebrew_text": "אַךְ כִּי לֹא כֻלָּם שָׁמְעוּ לַבְּשׂוֹרָה כִּי יְשַׁעְיָהוּ אָמַר יְהוָה מִי הֶאֱמִין לִשְׁמוּעָתֵנוּ׃"
     },
     {
       "id": "romans.10.17.000086",
@@ -1433,18 +1433,18 @@
     {
       "id": "romans.10.18.000086",
       "confidence": "medium",
-      "has_hebrew_marks": false,
-      "notes": "Niqqud/marks visible but not fully preserved. No Hebrew pointing marks were returned; review against the image.",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/cantillation-like marks are partially unclear.",
       "output_image": "data/hutter/verse_images/romans/010_018_000086.png",
-      "hebrew_text": "כי אם אומר אני הלא שמעו כי בכל הארץ יצא קולם ובקצה תבל מליהם"
+      "hebrew_text": "כִּי אִם אוֹמַר אֲנִי הֲלֹא שָׁמְעוּ כִּי בְכָל הָאָרֶץ יָצָא קוֹלָם וּבִקְצֵה תֵבֵל מִלֵּיהֶם׃"
     },
     {
       "id": "romans.10.19.000086",
       "confidence": "medium",
-      "has_hebrew_marks": false,
-      "notes": "Niqqud/marks visible but not fully preserved. No Hebrew pointing marks were returned; review against the image.",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel and accent marks are difficult to verify exactly.",
       "output_image": "data/hutter/verse_images/romans/010_019_000086.png",
-      "hebrew_text": "אך אומר אני הלא ידע ישראל משה הראשון אומר ואני אקניאם בלא עם בגוי נבל אכעיסם"
+      "hebrew_text": "אַךְ אוֹמַר אֲנִי הֲלֹא יָדַע יִשְׂרָאֵל מֹשֶׁה הָרִאשׁוֹן אָמַר אֲנִי אַקְנִיאֵם בְּלֹא עָם בְּגוֹי נָבָל אַכְעִיסֵם׃"
     },
     {
       "id": "romans.10.20.000086",
@@ -2921,6 +2921,13 @@
       "notes": "Only visible Hebrew portion of target verse; preceding line likely continued from prior crop. No Hebrew pointing marks were returned; review against the image.",
       "output_image": "data/hutter/verse_images/romans/010_015_000084.png",
       "hebrew_text": "מבשר טוב משמיע ישועה"
+    },
+    {
+      "id": "romans.10.16.000084",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation-like marks are hard to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/010_016_000084.png",
+      "hebrew_text": "אַךְ כִּי לֹא כֻלָּם שָׁמְעוּ לַבְּשׂוֹרָה כִּי יְשַׁעְיָהוּ אָמַר יְהוָה מִי הֶאֱמִין לִשְׁמוּעָתֵנוּ׃"
     },
     {
       "id": "romans.10.20.000086",

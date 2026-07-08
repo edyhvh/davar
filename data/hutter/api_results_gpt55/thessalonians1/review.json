@@ -1,10 +1,10 @@
 {
   "book": "thessalonians1",
+  "raw_result_count": 90,
   "result_count": 89,
-  "batch_count": 9,
+  "batch_count": 10,
   "status_counts": {
-    "missing_in_response": 1,
-    "ok": 88
+    "ok": 89
   },
   "confidence_counts": {
     "high": 1,
@@ -14,12 +14,12 @@
   "needs_review_count": 72,
   "likely_crop_issue_count": 24,
   "likely_ocr_issue_count": 48,
-  "no_hebrew_marks_count": 2,
-  "empty_text_count": 2,
+  "no_hebrew_marks_count": 1,
+  "empty_text_count": 1,
   "usage": {
-    "input_tokens": 28567,
-    "output_tokens": 16116,
-    "total_tokens": 44683
+    "input_tokens": 29128,
+    "output_tokens": 16255,
+    "total_tokens": 45383
   },
   "needs_review": [
     {
@@ -521,10 +521,10 @@
     {
       "id": "thessalonians1.5.19.000028",
       "confidence": "low",
-      "has_hebrew_marks": false,
-      "notes": "The model response did not include this verse id.",
+      "has_hebrew_marks": true,
+      "notes": "Image appears to show verse 18 text and not clearly the requested verse 19; transcription of visible Hebrew only, pointing not confidently preserved.",
       "output_image": "data/hutter/verse_images/thessalonians1/005_019_000028.png",
-      "hebrew_text": ""
+      "hebrew_text": "ואת רוח אלהים בנשוע המשיח בכם׃"
     },
     {
       "id": "thessalonians1.5.20.000028",

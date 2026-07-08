@@ -95,6 +95,16 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--limit", type=int, default=None, help="Maximum number of unprocessed verse images.")
     parser.add_argument("--offset", type=int, default=0, help="Skip this many manifest entries before processing.")
+    parser.add_argument(
+        "--ids",
+        help="Comma-separated verse ids to process, for example romans.10.16.000084,romans.10.18.000086.",
+    )
+    parser.add_argument(
+        "--ids-file",
+        type=Path,
+        default=None,
+        help="Text file with one verse id per line. Blank lines and # comments are ignored.",
+    )
     parser.add_argument("--batch-size", type=int, default=3, help="Images per API request.")
     parser.add_argument("--max-width", type=int, default=1400, help="Downscale wider crops to this width.")
     parser.add_argument("--jpeg-quality", type=int, default=88, help="JPEG quality for API upload images.")
@@ -198,6 +208,19 @@ def load_manifest(book: str, manifest_root: Path) -> list[VerseImage]:
             )
         )
     return images
+
+
+def load_requested_ids(ids: str | None, ids_file: Path | None) -> set[str] | None:
+    requested: set[str] = set()
+    if ids:
+        requested.update(item.strip() for item in ids.split(",") if item.strip())
+    if ids_file is not None:
+        for line in ids_file.expanduser().read_text(encoding="utf-8").splitlines():
+            clean = line.strip()
+            if not clean or clean.startswith("#"):
+                continue
+            requested.add(clean)
+    return requested or None
 
 
 def completed_ids(results_path: Path) -> set[str]:
@@ -408,7 +431,14 @@ def main() -> int:
     batches_path = results_dir / "batches.jsonl"
 
     all_images = load_manifest(args.book, manifest_root)
+    requested_ids = load_requested_ids(args.ids, args.ids_file)
     selected = all_images[args.offset :]
+    if requested_ids is not None:
+        known_ids = {item.id for item in all_images}
+        unknown_ids = sorted(requested_ids - known_ids)
+        if unknown_ids:
+            raise SystemExit(f"Unknown ids for {args.book}: {', '.join(unknown_ids)}")
+        selected = [item for item in selected if item.id in requested_ids]
     done = completed_ids(results_path) if not args.force else set()
     pending = [item for item in selected if item.id not in done]
     if args.limit is not None:
