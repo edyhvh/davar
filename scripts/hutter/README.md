@@ -80,3 +80,33 @@ The cropper currently uses the existing transcription JSON as the verse/page ass
 Important limitation: this removes neighboring side columns, but some Hutter pages also include a Latin/Spanish gloss directly inside the Hebrew column under the Hebrew text. Those in-column gloss lines are still present in the current crops. Do not treat these as strict Hebrew-only crops until a second pass trims each verse band down to the Hebrew glyph block itself.
 
 Use `--manifest-only` when reviewing source mappings without checking file existence. Use `--audit-only` when reviewing source mappings, missing images, first/last verse cases, and chapter transitions without reading image pixels. Use `--crop-plan-only` when validating segmentation on targeted pages before generating cropped PNGs.
+
+## API OCR Pilot
+
+Run a small dry run before spending API tokens:
+
+```bash
+.venv/bin/python -m scripts.hutter.process_verses_api colossians --limit 6 --batch-size 3 --dry-run
+```
+
+Process a small batch with checkpointing:
+
+```bash
+.venv/bin/python -m scripts.hutter.process_verses_api colossians --limit 6 --batch-size 3
+```
+
+The runner loads `OPENAI_API_KEY` from the environment or repo `.env`, compresses verse crops before upload, writes raw batch responses plus normalized per-verse rows, and skips already completed verse ids on later runs. Use `--ocr-preprocess --scale 2 --image-format png` only for targeted retries where niqqud fidelity is poor; it can cost materially more tokens per image.
+
+Review the API output:
+
+```bash
+.venv/bin/python -m scripts.hutter.review_api_results colossians
+```
+
+Outputs:
+
+```text
+data/hutter/api_results/<book>/batches.jsonl
+data/hutter/api_results/<book>/results.jsonl
+data/hutter/api_results/<book>/review.json
+```

@@ -1,0 +1,45 @@
+{
+  "book": "colossians",
+  "result_count": 6,
+  "batch_count": 2,
+  "status_counts": {
+    "ok": 6
+  },
+  "confidence_counts": {
+    "high": 6
+  },
+  "needs_review_count": 3,
+  "no_hebrew_marks_count": 3,
+  "empty_text_count": 0,
+  "usage": {
+    "input_tokens": 2817,
+    "output_tokens": 872,
+    "total_tokens": 3689
+  },
+  "needs_review": [
+    {
+      "id": "colossians.1.1.000002",
+      "confidence": "high",
+      "has_hebrew_marks": false,
+      "notes": "",
+      "output_image": "data/hutter/verse_images/colossians/001_001_000002.png",
+      "hebrew_text": "פאולוס שליח ישוע המשיח בחפץ אלהים וטימותאוס תאום"
+    },
+    {
+      "id": "colossians.1.2.000002",
+      "confidence": "high",
+      "has_hebrew_marks": false,
+      "notes": "",
+      "output_image": "data/hutter/verse_images/colossians/001_002_000002.png",
+      "hebrew_text": "לאשר בקולסים קדושים נאמנים לאחים במשיח"
+    },
+    {
+      "id": "colossians.1.3.000002",
+      "confidence": "high",
+      "has_hebrew_marks": false,
+      "notes": "",
+      "output_image": "data/hutter/verse_images/colossians/001_003_000002.png",
+      "hebrew_text": "תודה לכם ושלום מאלוהים אבינו ואדונינו ישוע המשיח"
+    }
+  ]
+}
