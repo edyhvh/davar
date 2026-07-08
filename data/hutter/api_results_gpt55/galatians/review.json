@@ -1,0 +1,968 @@
+{
+  "book": "galatians",
+  "result_count": 149,
+  "batch_count": 15,
+  "status_counts": {
+    "ok": 149
+  },
+  "confidence_counts": {
+    "high": 23,
+    "low": 16,
+    "medium": 110
+  },
+  "needs_review_count": 87,
+  "likely_crop_issue_count": 35,
+  "likely_ocr_issue_count": 52,
+  "no_hebrew_marks_count": 1,
+  "empty_text_count": 1,
+  "usage": {
+    "input_tokens": 47400,
+    "output_tokens": 24228,
+    "total_tokens": 71628
+  },
+  "needs_review": [
+    {
+      "id": "galatians.1.1.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to preserve exactly.",
+      "output_image": "data/hutter/verse_images/galatians/001_001_000002.png",
+      "hebrew_text": "פולוס שליח לא מאנשים ולא ביד־אדם כי אם ביד־ישוע המשיח ואלהים האב המקימו ממתים׃"
+    },
+    {
+      "id": "galatians.1.2.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/001_002_000002.png",
+      "hebrew_text": "וכל אחי אשר עמי בקהלות גלטיה׃"
+    },
+    {
+      "id": "galatians.1.3.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing uncertain; first word may be difficult.",
+      "output_image": "data/hutter/verse_images/galatians/001_003_000002.png",
+      "hebrew_text": "החנה לכם ושלום מאלהים אבי אדנינו ישוע המשיח׃"
+    },
+    {
+      "id": "galatians.1.4.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/galatians/001_004_000002.png",
+      "hebrew_text": "הנתן את־נפשו על־חטאתינו להצילנו מעולם רע הזה כרצון אלהים אבינו׃"
+    },
+    {
+      "id": "galatians.1.6.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/001_006_000002.png",
+      "hebrew_text": "תמהתי כי־כרגע תשובו לאחור מאשר קרא אתכם בחסד המשיח אל־בשורה אחרת׃"
+    },
+    {
+      "id": "galatians.1.7.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/001_007_000004.png",
+      "hebrew_text": "אשר היא איננה אחרת כי אם אשר היו אנשים המחרדים אתכם וחפצים להפך את־בשורת המשיח׃"
+    },
+    {
+      "id": "galatians.1.8.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/001_008_000004.png",
+      "hebrew_text": "אך אם גם אנחנו או־מלאך משמים יבשר אתכם מאשר בשרנו אתכם יחרם׃"
+    },
+    {
+      "id": "galatians.1.9.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/001_009_000004.png",
+      "hebrew_text": "כאשר אמרנו גם כן עתה אוסיף לאמר אם איש יבשר אתכם מאשר קבלתם חרם הוא׃"
+    },
+    {
+      "id": "galatians.1.10.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks uncertain; some wording may need review.",
+      "output_image": "data/hutter/verse_images/galatians/001_010_000004.png",
+      "hebrew_text": "אם מעט אפתה את האנשים או את האלהים או אבקש לטוב בעיני האנשים ואם עוד איטב בעיני האנשים עבד המשיח לא אהיה׃"
+    },
+    {
+      "id": "galatians.1.13.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "End of verse appears cut off at bottom of crop.",
+      "output_image": "data/hutter/verse_images/galatians/001_013_000006.png",
+      "hebrew_text": "כִּי יְדַעְתֶּם אֶת־הֲלִיכוֹתַי אֲשֶׁר בִּיהוּדִים כִּי־עַל־יֶתֶר רָדַפְתִּי אֶת־קְהַל אֱלֹהִים"
+    },
+    {
+      "id": "galatians.1.14.000006",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/points are unclear and lower text may continue beyond crop.",
+      "output_image": "data/hutter/verse_images/galatians/001_014_000006.png",
+      "hebrew_text": "וְרָהַבְתִּי בְּדֶרֶךְ הַיְּהוּדִים עַל־כָּל־דּוֹרִי וּמִשְׁפַּחְתִּי עַל־יֶתֶר הָיִיתִי מְקַנֵּא בְּמַסֹּרֶת"
+    },
+    {
+      "id": "galatians.1.15.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse likely continues below crop.",
+      "output_image": "data/hutter/verse_images/galatians/001_015_000006.png",
+      "hebrew_text": "וְכַאֲשֶׁר חָפֵץ לֵאלֹהִים אֲשֶׁר הִפְרִידַנִי מִבֶּטֶן אִמִּי וַיִּקְרָאנִי"
+    },
+    {
+      "id": "galatians.1.17.000006",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/001_017_000006.png",
+      "hebrew_text": "וְלֹא עָלִיתִי יְרוּשָׁלַיְמָה אֶל־אֲשֶׁר מִלְּפָנַי הָיוּ שְׁלִיחִים כִּי אִם הָלַכְתִּי בָּעֲרָב וָאָשׁוּב לָשׁוּב בְּדַמָּשֶׂק׃"
+    },
+    {
+      "id": "galatians.1.23.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Bottom/right portion appears partly cropped; final word uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/001_023_000008.png",
+      "hebrew_text": "אַךְ שׁוֹמְעִים הָיוּ לְבַדָּם כִּי אֲשֶׁר רוֹדְפֵנוּ מִלְּפָנִים מְבַשֵּׂר אֶת־הָאֱמוּנָה אֲשֶׁר מִקֶּדֶם דָּרַךְ׃"
+    },
+    {
+      "id": "galatians.2.2.000008",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Hebrew verse is only partially visible at top of crop; transcription relies on visible fragments and is uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/002_002_000008.png",
+      "hebrew_text": "וְעָלִיתִי בְּחָזוֹן אֱלֹהִים וְסִפַּרְתִּי לָהֶם אֶת־הַבְּשׂוֹרָה אֲשֶׁר בִּשַּׂרְתִּי בַּגּוֹיִם וּלְבַד לְרֹאשִׁים פֶּן לַטֹּא יָצַתִּי אוֹ אָרוּץ׃"
+    },
+    {
+      "id": "galatians.2.5.000010",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several pointed forms are uncertain, especially near the start of the verse.",
+      "output_image": "data/hutter/verse_images/galatians/002_005_000010.png",
+      "hebrew_text": "לַאֲשֶׁר לֹא לָמֵּא הַשָּׁעָה נִכְנַעְנוּ תַּחַת עֻלָּם לְקוּם אֱמֶת הַבְּשׂוֹרָה בְּקִרְבְּכֶם׃"
+    },
+    {
+      "id": "galatians.2.6.000010",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse is readable but several words/points are uncertain due to print quality.",
+      "output_image": "data/hutter/verse_images/galatians/002_006_000010.png",
+      "hebrew_text": "וּמֵאֵלֶּה אֲשֶׁר רְאוּיִם לִהְיוֹת מְאֻמֶּה בְּמַה מִלְּפָנִים הָיוּ לֹא יִסְכַּר לִי כִּי־אֵין עִם יְהוָה אֱלֹהֵינוּ עַוְלָה וּמַשֹּׂא פָנִים וּמִקַּח שֹׁחַד כִּי הָרֹאִים מְאֻמָּה לֹא הוֹסִיפוּ לִי׃"
+    },
+    {
+      "id": "galatians.2.9.000012",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse crop is cut off at bottom/right; transcription may be incomplete.",
+      "output_image": "data/hutter/verse_images/galatians/002_009_000012.png",
+      "hebrew_text": "וּבְדַעְתָּם אֶת־הַמַּתָּנָה לִי יַעֲקֹב וְכֵיפָה וְיוֹחָנָן הָרְאוּיִם כִּי עַמּוּדִים הֵמָּה נָתְנוּ אֶת־יְמִינִי הַחֲבֵרִי לִי וּלְבַרְנַבָּא אֲשֶׁר נְבַשֵּׂר אֶת־"
+    },
+    {
+      "id": "galatians.2.17.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and one word are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/galatians/002_017_000014.png",
+      "hebrew_text": "וְאִם מְבַקְשִׁים אֲנַחְנוּ לְהִצָּדֵק בַּמָּשִׁיחַ נִמְצָא גַּם אֲנַחְנוּ חַטָּאִים בֶּאֱמֶת הַמָּשִׁיחַ עֶבֶד חֵטְא הוּא חָלִילָה׃"
+    },
+    {
+      "id": "galatians.2.18.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and final phrase are somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/002_018_000014.png",
+      "hebrew_text": "וְאִם אֵלֶּה אֲשֶׁר הֲרַסְתִּי אוֹסִיף לִבְנוֹת מַרְדֶּה אֲנִי עָלַי־נַפְשִׁי כִּי עַבְרִי אֲנִי־מִצְוָה׃"
+    },
+    {
+      "id": "galatians.2.19.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/002_019_000016.png",
+      "hebrew_text": "כִּי־אֲנִי בַּתּוֹרָה מַתִּי לַתּוֹרָה לִחְיוֹתִי לֵאלֹהִים נִצְלַב עִם הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "galatians.2.20.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing uncertain in several words.",
+      "output_image": "data/hutter/verse_images/galatians/002_020_000016.png",
+      "hebrew_text": "וְחַי אָנִי אַךְ עוֹד לֹא אָנֹכִי כִּי חַי בִּי הַמָּשִׁיחַ וַאֲשֶׁר חַי אָנִי עַתָּה בַבָּשָׂר בֶּאֱמוּנַת בֶּן־אֱלֹהִים חַי אָנֹכִי אֲשֶׁר אֲהֵבַנִי וְנָתַן אֶת־נַפְשׁוֹ עָלָי׃"
+    },
+    {
+      "id": "galatians.2.21.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud uncertain; first word/phrase should be reviewed.",
+      "output_image": "data/hutter/verse_images/galatians/002_021_000016.png",
+      "hebrew_text": "אֵינֶנִּי מוֹאֵס אֶת־מַתְּנַת אֱלֹהִים וְאִם בַּתּוֹרָה הַצְּדָקָה הוּא אָז חִנָּם מֵת־הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "galatians.3.1.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several words and vowel points are uncertain due to print quality.",
+      "output_image": "data/hutter/verse_images/galatians/003_001_000016.png",
+      "hebrew_text": "אוֹי לָכֶם הַגָּלָטִים כִּי לֹא תֵדְעוּ וְלֹא תָבִינוּ מִי־זֶה מַרְאֹת עֵינֵיכֶם מִתְהַשְׁפִּיל לְבִלְתִּי מִשְׁמֹעַ לֶאֱמֶת וְהִנֵּה לְעֵינֵיכֶם נִכְתַּב יֵשׁוּעַ הַמָּשִׁיחַ וּבָכֶם נִצְלַב׃"
+    },
+    {
+      "id": "galatians.3.2.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial and middle words/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/003_002_000016.png",
+      "hebrew_text": "זֹאת לְבַדָּה חָפַצְתִּי לִלְמֹד מִכֶּם הַמִּמַּעֲשֵׂי הַתּוֹרָה לְקַחְתֶּם אֶת־רוּחַ אוֹ־מִשְּׁמֹעַ הָאֱמוּנָה׃"
+    },
+    {
+      "id": "galatians.3.3.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some consonants and pointing uncertain in the second line.",
+      "output_image": "data/hutter/verse_images/galatians/003_003_000016.png",
+      "hebrew_text": "הֲכָכָה לֹא תֵדְעוּ וְלֹא תָבִינוּ מִתְחַל בָּרוּחַ עַתָּה לִכְלוֹת בַּבָּשָׂר׃"
+    },
+    {
+      "id": "galatians.3.4.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge of verse appears slightly cropped; first word may be incomplete.",
+      "output_image": "data/hutter/verse_images/galatians/003_004_000018.png",
+      "hebrew_text": "כַּמָּה הַחֲלֹתֶם חִנָּם אִם גַּם חִנָּם׃"
+    },
+    {
+      "id": "galatians.3.5.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words/pointing uncertain, especially near line starts.",
+      "output_image": "data/hutter/verse_images/galatians/003_005_000018.png",
+      "hebrew_text": "וְהוּא אֲשֶׁר נָתַן לָכֶם אֶת־הָרוּחַ וּפֹעַל גְּבוּרוֹת בָּכֶם הֲמִמַּעֲלֵי הַתּוֹרָה אוֹ מִשְּׁמֹעַ הָאֱמוּנָה הוּא׃"
+    },
+    {
+      "id": "galatians.3.10.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Hebrew text not visible in provided crop; transcription inferred from adjacent image context and may need review.",
+      "output_image": "data/hutter/verse_images/galatians/003_010_000018.png",
+      "hebrew_text": "כִּי כֻלָּם אֲשֶׁר מִמַּעֲשֵׂי הַתּוֹרָה הֵם תַּחַת הָאָלָה כִּי־נִכְתַּב אָרוּר כָּל־אֲשֶׁר לֹא יָקוּם בְּכָל־הַכְּתוּבִים בְּסֵפֶר הַתּוֹרָה לַעֲשׂוֹתָם׃"
+    },
+    {
+      "id": "galatians.3.11.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some printed wording/pointing is unclear in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/003_011_000020.png",
+      "hebrew_text": "וְכִי־בַתּוֹרָה אִישׁ לֹא אֶחָד יִצְדַּק לִפְנֵי אֱלֹהִים בָּלוּי הוּא כִּי־צַדִּיק בֶּאֱמוּנָתוֹ יִחְיֶה׃"
+    },
+    {
+      "id": "galatians.3.13.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word form are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/galatians/003_013_000020.png",
+      "hebrew_text": "הַמָּשִׁיחַ פָדָה אוֹתָנוּ מִמְּאָלַת הַתּוֹרָה וְהָיָה עָלֵינוּ מְאָלָה כִּי נִכְתַּב כִּי־קִלְלַת אֱלֹהִים תָּלוּי עַל־הָעֵץ׃"
+    },
+    {
+      "id": "galatians.3.14.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words/pointing are uncertain due to image resolution.",
+      "output_image": "data/hutter/verse_images/galatians/003_014_000020.png",
+      "hebrew_text": "אֲשֶׁר תָּבוֹא עַל־הַגּוֹיִם בִּרְכַּת אַבְרָהָם בְּיֵשׁוּעַ הַמָּשִׁיחַ וַאֲשֶׁר נִקַּח אֶת־שֶׁבַעַת הָרוּחַ בֶּאֱמוּנָה׃"
+    },
+    {
+      "id": "galatians.3.15.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning appears partly above the crop; printed pointing/wording may need review.",
+      "output_image": "data/hutter/verse_images/galatians/003_015_000020.png",
+      "hebrew_text": "אַחַי כְּמִנְהַג הָאָדָם אֹמֵר אֲנִי לָכֶם כְּמוֹ בְּרִית צַוָּאַת הָאָדָם אִישׁ לֹא מוֹאַס וְלֹא מְחַקֵּק׃"
+    },
+    {
+      "id": "galatians.3.16.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Only the end of the Hebrew verse is visible in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/003_016_000020.png",
+      "hebrew_text": "וּלְזַרְעֲךָ אֲשֶׁר הוּא הַמָּשִׁיחַ"
+    },
+    {
+      "id": "galatians.3.17.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Bottom line is partly cut off; final word is completed from visible continuation in next crop.",
+      "output_image": "data/hutter/verse_images/galatians/003_017_000022.png",
+      "hebrew_text": "וְזֹאת אֹמַר אֲנִי כִּי אֶת בְּרִית הַנְּכוֹנָה מִלְּפָנִים מֵאֱלֹהִים לְמָשִׁיחַ הִיא אֲשֶׁר אַחֲרֵי אַרְבַּע מֵאוֹת שְׁלֹשִׁים שָׁנָה נְתָנָה הַתּוֹרָה לֹא תְמַאם לְהָנִיא אֶת־הַשְּׁבֻעָה"
+    },
+    {
+      "id": "galatians.3.22.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Right and lower parts of the verse are partly cropped; transcription may be incomplete.",
+      "output_image": "data/hutter/verse_images/galatians/003_022_000024.png",
+      "hebrew_text": "כִּי־אִם הִסְגִּיר הַכְּתָב אֶת כֻּלָּם תַּחַת הַחֲטָאָה אֲשֶׁר הַשְּׁבֻעָה בֶּאֱמוּנַת יֵשׁוּעַ הַמָּשִׁיחַ תִּנָּתֵן"
+    },
+    {
+      "id": "galatians.3.23.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse begins at visible line, with continuation above/below partly split across crop.",
+      "output_image": "data/hutter/verse_images/galatians/003_023_000024.png",
+      "hebrew_text": "וּבְטֶרֶם בָּאָה הָאֱמוּנָה תַּחַת הַתּוֹרָה נְצוּרִים וּסְגוּרִים אֲנַחְנוּ לָאֱמוּנָה הָעֲתִידָה לְהִגָּלוֹת׃"
+    },
+    {
+      "id": "galatians.3.26.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partly unclear in crop.",
+      "output_image": "data/hutter/verse_images/galatians/003_026_000024.png",
+      "hebrew_text": "כִּי כֻלְּכֶם בְּנֵי אֱלֹהִים אַתֶּם בֶּאֱמוּנָה בְּיֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "galatians.3.27.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and word boundaries are difficult to verify.",
+      "output_image": "data/hutter/verse_images/galatians/003_027_000024.png",
+      "hebrew_text": "כִּי כֻלְּכֶם אֲשֶׁר בַּמָּשִׁיחַ נִטְבַּלְתֶּם אֶת־הַמָּשִׁיחַ לְבַשְׁתֶּם׃"
+    },
+    {
+      "id": "galatians.3.28.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is partially cropped; transcription of first line may need review.",
+      "output_image": "data/hutter/verse_images/galatians/003_028_000024.png",
+      "hebrew_text": "אֵינֶנּוּ פֹה יְהוּדִי וְאֵינֶנּוּ יְוָנִי אֵינֶנּוּ עֶבֶד וְאֵינֶנּוּ חָפְשִׁי אֵינֶנּוּ זָכָר וְאֵינֶנּוּ נְקֵבָה כִּי כֻלְּכֶם אֶחָד אַתֶּם בְּיֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "galatians.3.29.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is unclear.",
+      "output_image": "data/hutter/verse_images/galatians/003_029_000026.png",
+      "hebrew_text": "וְאִם אַתֶּם לַמָּשִׁיחַ אֲמִנָם זֶרַע אַבְרָהָם אַתֶּם וּבְשְׁבוּעָה יוֹרְשֵׁי־הַנַּחֲלָה׃"
+    },
+    {
+      "id": "galatians.4.1.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud and exact letters in first words require review.",
+      "output_image": "data/hutter/verse_images/galatians/004_001_000026.png",
+      "hebrew_text": "וְאֹמַר אֲנִי כַּמָּה עֵת הַיּוֹרֵשׁ עוֹלֵל הוּא בְּמְאוּמָה לֹא נִפְרָשׁ מֵעֶבֶד אַף כִּי אֲדוֹן־כֹּל הוּא׃"
+    },
+    {
+      "id": "galatians.4.2.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Exact vocalization and one word are uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/004_002_000026.png",
+      "hebrew_text": "כִּי אִם תַּחַת הָאֹמְנִים וּבַעֲלֵי הַפְּקִידִים עַד זְמַנֵּי הָאָב׃"
+    },
+    {
+      "id": "galatians.4.3.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is not fully clear.",
+      "output_image": "data/hutter/verse_images/galatians/004_003_000026.png",
+      "hebrew_text": "כָּכָה גַּם אֲנַחְנוּ בִּהְיוֹתֵנוּ עוֹלְלִים תַּחַת יְסוֹדוֹת הָעוֹלָם הָיִינוּ עֲבָדִים עֲבוֹדָה׃"
+    },
+    {
+      "id": "galatians.4.4.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words and niqqud are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/galatians/004_004_000026.png",
+      "hebrew_text": "וּכְאֲשֶׁר בָּא מְלֹא הָעִתִּים אֵת שָׁלַח אֱלֹהִים אֶת־בְּנוֹ הַיְלוּד מֵאִשָּׁה וְהָיָה תַּחַת הַתּוֹרָה׃"
+    },
+    {
+      "id": "galatians.4.5.000026",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse is hard to read; several words uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/004_005_000026.png",
+      "hebrew_text": "לִפְדוֹת לַאֲשֶׁר תַּחַת הַתּוֹרָה אֲשֶׁר נִקַּח אֶת־מִמֶּנּוּ וְנִקְחָה הַבָּנִים׃"
+    },
+    {
+      "id": "galatians.4.6.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and final phrase need review.",
+      "output_image": "data/hutter/verse_images/galatians/004_006_000026.png",
+      "hebrew_text": "וְכִי־בָנִים אַתֶּם שָׁלַח אֱלֹהִים אֶת־רוּחַ בְּנוֹ בְּלִבּוֹתֵיכֶם הַצֹּעֲקָה אַבָּא אָבִי׃"
+    },
+    {
+      "id": "galatians.4.9.000028",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse appears cut off at bottom/right; final words continue beyond crop.",
+      "output_image": "data/hutter/verse_images/galatians/004_009_000028.png",
+      "hebrew_text": "וְעַתָּה כִּי יוֹדְעֵי אֱלֹהִים אַתֶּם אוֹ יוֹתֵר נוֹדָעִים מֵאֱלֹהִים אֵיכָכָה תָשׁוּבוּ לְהִתְהַפֵּךְ אֶל־הַיְסוֹדוֹת נְחָלָה וּמְסֻכָּנוֹת אֲשֶׁר"
+    },
+    {
+      "id": "galatians.4.14.000030",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Left edge of first line slightly cut; transcription of opening word/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/004_014_000030.png",
+      "hebrew_text": "וְאֶת־מַסֹּתִי אֲשֶׁר הִיא בִּבְשָׂרִי לֹא בְזִיתֶם וְלֹא תִעַבְתֶּם כִּי אִם כְּמַלְאַךְ אֱלֹהִים קִבַּלְתֶּנִי כְיֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "galatians.4.15.000030",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Top/bottom of verse partially cropped; some words and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/004_015_000030.png",
+      "hebrew_text": "וְאַיֵּה חֶסֶדְכֶם הָרִאשׁוֹנִים כִּי־מֵעִיד אֲנִי עֲלֵיכֶם אִם לֹא יְכָלְתִּי יָכֹלָה כִּי אֶת־עֵינֵיכֶם נְקַרְתֶּם וּנְתַתֶּם לִי׃"
+    },
+    {
+      "id": "galatians.4.17.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to verify in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/004_017_000030.png",
+      "hebrew_text": "כִּי מְקַנְּאִים הֵמָּה בָּכֶם לֹא הֵיטֵב כִּי־אִם חוֹשְׁבִים וְחַתְּכֶם וּלְהַרְחִיק אֶתְכֶם אֲשֶׁר תְּקַנְּאוּ בָּם׃"
+    },
+    {
+      "id": "galatians.4.20.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "One word near the right edge/ink blot is slightly unclear.",
+      "output_image": "data/hutter/verse_images/galatians/004_020_000030.png",
+      "hebrew_text": "וְחָפַצְתִּי לִהְיוֹת עִמָּכֶם מַעַתָּה וְלַשְׁנוֹת אֶת־קוֹלִי כִּי־מִתְעַצֵּת אֲנִי עֲלֵיכֶם׃"
+    },
+    {
+      "id": "galatians.4.21.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Header present above; Hebrew verse text is clear overall but pointing is somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/004_021_000032.png",
+      "hebrew_text": "אִמְרוּ לִי אַתֶּם אֲשֶׁר תַּחַת הַתּוֹרָה תֶּחְפְצוּ לִהְיוֹת הֲאֶת־הַתּוֹרָה אֵינְכֶם שֹׁמְעִים׃"
+    },
+    {
+      "id": "galatians.4.23.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word/pointing is somewhat unclear.",
+      "output_image": "data/hutter/verse_images/galatians/004_023_000032.png",
+      "hebrew_text": "כִּי־אֲשֶׁר מִן־הָאָמָה כְּבָשָׂר נוֹלָד וַאֲשֶׁר מִגְּבִירָה בִּשְׁבוּעָה׃"
+    },
+    {
+      "id": "galatians.4.25.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word form are not fully certain.",
+      "output_image": "data/hutter/verse_images/galatians/004_025_000032.png",
+      "hebrew_text": "כִּי־הָגָר הַר סִינַי הוּא בְּעֶרֶב וּמַגִּיעַ הַיּוֹם לִירוּשָׁלִַם הָעוֹבְדָה אֶת־בָּנֶיהָ׃"
+    },
+    {
+      "id": "galatians.4.27.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is small and some marks are uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/004_027_000034.png",
+      "hebrew_text": "כִּי נִכְתַב רָנִּי עֲקָרָה לֹא יָלָדָה פִּצְחִי רִנָּה וְצַהֲלִי לֹא חָלָה כִּי־רַבִּים בְּנֵי שׁוֹמֵמָה מִבְּנֵי בְעִילָה׃"
+    },
+    {
+      "id": "galatians.4.28.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word and some vocalization uncertain due to image clarity.",
+      "output_image": "data/hutter/verse_images/galatians/004_028_000034.png",
+      "hebrew_text": "וַאֲנַחְנוּ אַחַי כְּיִצְחָק בְּנֵי הַשְּׁבֻעַת הָיִינוּ׃"
+    },
+    {
+      "id": "galatians.4.29.000034",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words/points are unclear; transcription needs review.",
+      "output_image": "data/hutter/verse_images/galatians/004_029_000034.png",
+      "hebrew_text": "אֲבָל כַּאֲשֶׁר אָז אֲשֶׁר בַּבָּשָׂר יָלַד הוּא רָדַף אֹתוֹ אֲשֶׁר בָּרוּחַ כְּהַגַּם הַיּוֹם׃"
+    },
+    {
+      "id": "galatians.4.30.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and wording around the final line is uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/004_030_000034.png",
+      "hebrew_text": "אַךְ מָה אוֹמֵר הַכְּתָב גָּרֵשׁ הָאָמָה וְאֶת־בְּנָהּ כִּי־לֹא יִירַשׁ בֶּן־הָאָמָה הוּא עִם בְּנֵי עִם־יִצְחָק שֶׁהוּא בֶּן־הַגְּבִירָה׃"
+    },
+    {
+      "id": "galatians.5.1.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse slightly cropped; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_001_000034.png",
+      "hebrew_text": "לָכֵן עִמְדוּ בַּחֹפֶשׁ אֲשֶׁר בָּהּ חִפֵּשׁ אֹתָנוּ הַמָּשִׁיחַ וְאַל תּוֹסִיפוּ עוֹד לָבִיא אֶת־צַוָּארְכֶם בְּעֹל הָעַבְדוּת׃"
+    },
+    {
+      "id": "galatians.5.2.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Name spelling and some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_002_000036.png",
+      "hebrew_text": "הִנְנִי פוֹלוֹס אוֹמֵר לָכֶם אִם הִמּוֹלוּ כִּי־אָז הַמָּשִׁיחַ לֹא יוֹעִיל לָכֶם׃"
+    },
+    {
+      "id": "galatians.5.3.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing partly uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_003_000036.png",
+      "hebrew_text": "וְעוֹד מֵעִיד אָנֹכִי לְכָל־אָדָם הַנִּמּוֹל כִּי חוֹב הוּא כָּל־הַתּוֹרָה לַעֲשׂוֹתָהּ׃"
+    },
+    {
+      "id": "galatians.5.4.000036",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Wording and vocalization are uncertain in several places.",
+      "output_image": "data/hutter/verse_images/galatians/005_004_000036.png",
+      "hebrew_text": "כִּי־מִן־הַמָּשִׁיחַ הֻרְחַקְנוּ כֻּלְּכֶם אֲשֶׁר בַּתּוֹרָה תִּצְטַדְּקוּ וּמֵהַחֶסֶד הַמָּשִׁיחַ נְפַלְתֶּם׃"
+    },
+    {
+      "id": "galatians.5.5.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_005_000036.png",
+      "hebrew_text": "וַאֲנַחְנוּ בְּרוּחַ בֶּאֱמוּנָה אֶת־תִּקְוַת הַצְּדָקָה קִוִּינוּ׃"
+    },
+    {
+      "id": "galatians.5.6.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "lower line partly cut off; final words may continue outside crop",
+      "output_image": "data/hutter/verse_images/galatians/005_006_000036.png",
+      "hebrew_text": "כִּי בִּישׁוּעַ הַמָּשִׁיחַ אֲרָלָה מַעֲבִיר הַמִּילָה וְאֵינֶהָ הָעֲלָה כִּי אִם הָאֱמוּנָה אֲשֶׁר פָּעֲלָה"
+    },
+    {
+      "id": "galatians.5.7.000036",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "verse is cut off at bottom; only visible Hebrew transcribed",
+      "output_image": "data/hutter/verse_images/galatians/005_007_000036.png",
+      "hebrew_text": "רַצְתֶּם הֵיטֵב מִי הוֹחִיר"
+    },
+    {
+      "id": "galatians.5.10.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "some letters/pointing uncertain due to blur",
+      "output_image": "data/hutter/verse_images/galatians/005_010_000038.png",
+      "hebrew_text": "אֲנִי בָּטַחְתִּי עֲלֵיכֶם בַּיהֹוָה כִּי מְאוּמָה לֹא אַחֶרֶת הַשְׂכִּילוּ וַאֲשֶׁר יְעַכֵּלְכֶם יִסְבֹּל אֶת־מִשְׁפָּטוֹ אִישׁ מִי־יְהִי"
+    },
+    {
+      "id": "galatians.5.11.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "some pointing and one word form uncertain",
+      "output_image": "data/hutter/verse_images/galatians/005_011_000038.png",
+      "hebrew_text": "וַאֲנִי אַחַי אִם עוֹדֶנִּי הַמִּילָה מְבַשֵּׂר מַה־עוֹד נִרְדָּף אָנִי אָמְנָם הֻבַּל מִכְשׁוֹל הַצָּלָב"
+    },
+    {
+      "id": "galatians.5.12.000038",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "several words are uncertain; print is blurred",
+      "output_image": "data/hutter/verse_images/galatians/005_012_000038.png",
+      "hebrew_text": "מִי־יִתֵּן וְיִכָּרְתוּ מִמְּגַד עֵינֵי יְהוָה כָּל־אֲשֶׁר יְסַחֲפִיכֶם מֵאֱמוּנַתְכֶם"
+    },
+    {
+      "id": "galatians.5.13.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "some vocalization uncertain",
+      "output_image": "data/hutter/verse_images/galatians/005_013_000038.png",
+      "hebrew_text": "כִּי אַתֶּם בַּחָפְשָׁה נִקְרָאתֶם אַחַי אַךְ לִבְדְכֶם לֹא תִּשְׂאוּ אֶת־הַחָפְשִׁים לְתַאֲוָה הַבָּשָׂר כִּי אִם אִישׁ אִישׁ בְּאַהֲבָה עִבְדוּ לְרֵעֵהוּ"
+    },
+    {
+      "id": "galatians.5.14.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "some pointing uncertain",
+      "output_image": "data/hutter/verse_images/galatians/005_014_000038.png",
+      "hebrew_text": "כִּי כָּל־הַתּוֹרָה בְּדָבָר אֶחָד מְמֻלָּאָה אֲשֶׁר הֶאֱהַב אֶת־רֵעֲךָ כְּמוֹ אֶת־נַפְשֶׁךָ"
+    },
+    {
+      "id": "galatians.5.15.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "some letters and pointing uncertain due to image quality",
+      "output_image": "data/hutter/verse_images/galatians/005_015_000038.png",
+      "hebrew_text": "וְאִם תִּשְּׁכוּ וְהַאֲכֹלוּ אִישׁ אֶת־רֵעֵהוּ רְאוּ פֶּן כֻּלְכֶם אִישׁ מֵרֵעֵהוּ תִּסָּפוּ"
+    },
+    {
+      "id": "galatians.5.16.000040",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/005_016_000040.png",
+      "hebrew_text": "לָכֵן אֹמַר אֲנִי הִתְהַלֵךְ אֶת־רוּחַ וְאַתָּה תַאֲוַת הַבָּשָׂר אַל־תְּשַלֵּמוּ׃"
+    },
+    {
+      "id": "galatians.5.17.000040",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word near line end are uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_017_000040.png",
+      "hebrew_text": "כִּי הַבָּשָׂר מִתְאַוֶּה עַל־הָרוּחַ וְהָרוּחַ מִתְאַוֶּה עַל־הַבָּשָׂר כִּי אֵיבָה וּשְׂטָנָה בֵּינֵיהֶם לְמַעַן אֲשֶׁר לֹא הָאֵב לַעֲשׂוֹת תַּעֲשׂוּ׃"
+    },
+    {
+      "id": "galatians.5.19.000040",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is partly close to crop edge; some words/points uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_019_000040.png",
+      "hebrew_text": "וְנוֹדָעִים הֵן מַעֲשֵׂי הַבָּשָׂר כְּמֹהֵם וְנִאוּף זְנוּת טֻמְאָה פֶשַׁע׃"
+    },
+    {
+      "id": "galatians.5.20.000040",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse numbering in image appears adjacent; transcription follows visible Hebrew for requested verse, but some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_020_000040.png",
+      "hebrew_text": "עֲבוֹדָה זָרָה כְּשָׁפִים אֵיבָה מְרִיבָה קִנְאָה חֲרוֹן אַף מַצָּה פְּלָגָה חַבּוּרוֹת׃"
+    },
+    {
+      "id": "galatians.5.21.000040",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Hebrew portion is split with bottom visible before Spanish; verse may be partly cropped at top.",
+      "output_image": "data/hutter/verse_images/galatians/005_021_000040.png",
+      "hebrew_text": "שִׁכְרוּן מְחוֹלוֹת וּזוֹלְלִים וְדֹמֵיהֶם אֲשֶׁר אֲנִי מְדַבֵּר אֲלֵיכֶם כְּמוֹ הִקְדַּמְתִּי לְדַבֵּר כִּי כָּל־פֹּעֲלֵי־הַדְּבָרִים כָּאֵלֶּה אֶת־מַלְכוּת אֱלֹהִים לֹא יִירָשׁוּ׃"
+    },
+    {
+      "id": "galatians.5.23.000042",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several niqqud marks and final phrase are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/galatians/005_023_000042.png",
+      "hebrew_text": "אֱמוּנָה עֲנוָה וְצִנְעָה לְהִתְאַפֵּק עַל־הַדְּבָרִים כָּאֵלֶּה לֹא יֵשׁ הַתּוֹרָה׃"
+    },
+    {
+      "id": "galatians.5.24.000042",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "One long dash/spacing between אֶת and following word; some letters and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_024_000042.png",
+      "hebrew_text": "וַאֲשֶׁר הֵיוּ לַמָּשִׁיחַ הוֹקִיעוּ אֶת בְּשָׂרָם אֶת־בְּעֲו‍ֹתֵיהֶם וּמַאֲוַיֵּיהֶם׃"
+    },
+    {
+      "id": "galatians.5.26.000042",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Image appears to show Galatians 6:1 Hebrew under 5:26 id; bottom line is cut off.",
+      "output_image": "data/hutter/verse_images/galatians/005_026_000042.png",
+      "hebrew_text": "אַחַי אִם שָׁגָה אָדָם בְּשְׁגִיאָה אַחַת אַף אַתֶּם אֲשֶׁר בְּנֵי הָרוּחַ הַתְּקִינוּ אֹתוֹ בְּרוּחַ עֲנָוָה וְהִשָּׁמֵר"
+    },
+    {
+      "id": "galatians.6.1.000042",
+      "confidence": "low",
+      "has_hebrew_marks": false,
+      "notes": "Crop contains only the tail of Hebrew from preceding image/verse and Spanish; target verse not fully visible. No Hebrew pointing marks were returned; review against the image.",
+      "output_image": "data/hutter/verse_images/galatians/006_001_000042.png",
+      "hebrew_text": ""
+    },
+    {
+      "id": "galatians.6.7.000044",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse begins in lower part of image and continues into next crop.",
+      "output_image": "data/hutter/verse_images/galatians/006_007_000044.png",
+      "hebrew_text": "אַל־תִּטְעוּ כִּי אֱלֹהִים לֹא מְהֻתָּל כִּי אֲשֶׁר יִזְרַע הָאָדָם אֹתוֹ יִקְצֹר"
+    },
+    {
+      "id": "galatians.6.8.000044",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top line may include continuation from previous verse; transcription follows visible target verse as best possible.",
+      "output_image": "data/hutter/verse_images/galatians/006_008_000044.png",
+      "hebrew_text": "כִּי הַזֹּרֵעַ בִּבְשָׂרוֹ מִבְּשָׂרוֹ יִקְצֹר אֶת־הַשְׁחָתָה וְהַזֹּרֵעַ בְּרוּחַ מֵרוּחַ יִקְצֹר אֶת־חַיֵּי עוֹלָם"
+    },
+    {
+      "id": "galatians.6.12.000046",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one or two letters are somewhat unclear in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/006_012_000046.png",
+      "hebrew_text": "כָּל־אֲשֶׁר חָפְצוּ לְהִתְהַלֵּל בְּבָשָׂר אֵלֶּה יְאַלְצוּנְכֶם לְהִמּוֹל לְבַד לְבִלְתִּי בְּמִרְדַּף הַמָּשִׁיחַ תִּרְדְּפוּ׃"
+    },
+    {
+      "id": "galatians.6.15.000046",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "First line contains unclear word/pointing; verify מְאֻכֶּת.",
+      "output_image": "data/hutter/verse_images/galatians/006_015_000046.png",
+      "hebrew_text": "כִּי בְיֵשׁוּעַ הַמָּשִׁיחַ אֵינֶנָּה מְאֻכֶּת הַמִּילָה וְגַם אֵינֶנָּה הָעֲרָלָה כִּי־אִם בְּרִיאַת חֲדָשָׁה׃"
+    },
+    {
+      "id": "galatians.6.16.000048",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Left edge of verse appears cut off and several words/points are uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/006_016_000048.png",
+      "hebrew_text": "וּבְמָה בִשְׁבִיל הַזֶּה מְהַלְכִים שָׁלוֹם עֲלֵיהֶם וְתַחַף וְעַל יִשְׂרָאֵל אֱלֹהִים׃"
+    },
+    {
+      "id": "galatians.6.17.000048",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge slightly cropped; first word may be partially cut.",
+      "output_image": "data/hutter/verse_images/galatians/006_017_000048.png",
+      "hebrew_text": "וְעַל־הַדְּבָרִים הָאֵלֶּה אִישׁ לֹא יַגִּיעֵנִי כִּי סוֹבֵל אֲנִי אֶת־רִשְׁמֵי אֲדֹנֵינוּ יֵשׁוּעַ בְּגוּפִי׃"
+    }
+  ],
+  "likely_crop_issues": [
+    {
+      "id": "galatians.1.13.000006",
+      "confidence": "medium",
+      "notes": "End of verse appears cut off at bottom of crop.",
+      "output_image": "data/hutter/verse_images/galatians/001_013_000006.png",
+      "hebrew_text": "כִּי יְדַעְתֶּם אֶת־הֲלִיכוֹתַי אֲשֶׁר בִּיהוּדִים כִּי־עַל־יֶתֶר רָדַפְתִּי אֶת־קְהַל אֱלֹהִים"
+    },
+    {
+      "id": "galatians.1.14.000006",
+      "confidence": "low",
+      "notes": "Some letters/points are unclear and lower text may continue beyond crop.",
+      "output_image": "data/hutter/verse_images/galatians/001_014_000006.png",
+      "hebrew_text": "וְרָהַבְתִּי בְּדֶרֶךְ הַיְּהוּדִים עַל־כָּל־דּוֹרִי וּמִשְׁפַּחְתִּי עַל־יֶתֶר הָיִיתִי מְקַנֵּא בְּמַסֹּרֶת"
+    },
+    {
+      "id": "galatians.1.15.000006",
+      "confidence": "medium",
+      "notes": "Verse likely continues below crop.",
+      "output_image": "data/hutter/verse_images/galatians/001_015_000006.png",
+      "hebrew_text": "וְכַאֲשֶׁר חָפֵץ לֵאלֹהִים אֲשֶׁר הִפְרִידַנִי מִבֶּטֶן אִמִּי וַיִּקְרָאנִי"
+    },
+    {
+      "id": "galatians.1.17.000006",
+      "confidence": "low",
+      "notes": "Several words are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/001_017_000006.png",
+      "hebrew_text": "וְלֹא עָלִיתִי יְרוּשָׁלַיְמָה אֶל־אֲשֶׁר מִלְּפָנַי הָיוּ שְׁלִיחִים כִּי אִם הָלַכְתִּי בָּעֲרָב וָאָשׁוּב לָשׁוּב בְּדַמָּשֶׂק׃"
+    },
+    {
+      "id": "galatians.1.23.000008",
+      "confidence": "medium",
+      "notes": "Bottom/right portion appears partly cropped; final word uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/001_023_000008.png",
+      "hebrew_text": "אַךְ שׁוֹמְעִים הָיוּ לְבַדָּם כִּי אֲשֶׁר רוֹדְפֵנוּ מִלְּפָנִים מְבַשֵּׂר אֶת־הָאֱמוּנָה אֲשֶׁר מִקֶּדֶם דָּרַךְ׃"
+    },
+    {
+      "id": "galatians.2.2.000008",
+      "confidence": "low",
+      "notes": "Hebrew verse is only partially visible at top of crop; transcription relies on visible fragments and is uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/002_002_000008.png",
+      "hebrew_text": "וְעָלִיתִי בְּחָזוֹן אֱלֹהִים וְסִפַּרְתִּי לָהֶם אֶת־הַבְּשׂוֹרָה אֲשֶׁר בִּשַּׂרְתִּי בַּגּוֹיִם וּלְבַד לְרֹאשִׁים פֶּן לַטֹּא יָצַתִּי אוֹ אָרוּץ׃"
+    },
+    {
+      "id": "galatians.2.9.000012",
+      "confidence": "low",
+      "notes": "Verse crop is cut off at bottom/right; transcription may be incomplete.",
+      "output_image": "data/hutter/verse_images/galatians/002_009_000012.png",
+      "hebrew_text": "וּבְדַעְתָּם אֶת־הַמַּתָּנָה לִי יַעֲקֹב וְכֵיפָה וְיוֹחָנָן הָרְאוּיִם כִּי עַמּוּדִים הֵמָּה נָתְנוּ אֶת־יְמִינִי הַחֲבֵרִי לִי וּלְבַרְנַבָּא אֲשֶׁר נְבַשֵּׂר אֶת־"
+    },
+    {
+      "id": "galatians.2.17.000014",
+      "confidence": "medium",
+      "notes": "Some pointing and one word are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/galatians/002_017_000014.png",
+      "hebrew_text": "וְאִם מְבַקְשִׁים אֲנַחְנוּ לְהִצָּדֵק בַּמָּשִׁיחַ נִמְצָא גַּם אֲנַחְנוּ חַטָּאִים בֶּאֱמֶת הַמָּשִׁיחַ עֶבֶד חֵטְא הוּא חָלִילָה׃"
+    },
+    {
+      "id": "galatians.3.4.000018",
+      "confidence": "medium",
+      "notes": "Left edge of verse appears slightly cropped; first word may be incomplete.",
+      "output_image": "data/hutter/verse_images/galatians/003_004_000018.png",
+      "hebrew_text": "כַּמָּה הַחֲלֹתֶם חִנָּם אִם גַּם חִנָּם׃"
+    },
+    {
+      "id": "galatians.3.10.000018",
+      "confidence": "medium",
+      "notes": "Hebrew text not visible in provided crop; transcription inferred from adjacent image context and may need review.",
+      "output_image": "data/hutter/verse_images/galatians/003_010_000018.png",
+      "hebrew_text": "כִּי כֻלָּם אֲשֶׁר מִמַּעֲשֵׂי הַתּוֹרָה הֵם תַּחַת הָאָלָה כִּי־נִכְתַּב אָרוּר כָּל־אֲשֶׁר לֹא יָקוּם בְּכָל־הַכְּתוּבִים בְּסֵפֶר הַתּוֹרָה לַעֲשׂוֹתָם׃"
+    },
+    {
+      "id": "galatians.3.11.000020",
+      "confidence": "medium",
+      "notes": "Some printed wording/pointing is unclear in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/003_011_000020.png",
+      "hebrew_text": "וְכִי־בַתּוֹרָה אִישׁ לֹא אֶחָד יִצְדַּק לִפְנֵי אֱלֹהִים בָּלוּי הוּא כִּי־צַדִּיק בֶּאֱמוּנָתוֹ יִחְיֶה׃"
+    },
+    {
+      "id": "galatians.3.15.000020",
+      "confidence": "medium",
+      "notes": "Beginning appears partly above the crop; printed pointing/wording may need review.",
+      "output_image": "data/hutter/verse_images/galatians/003_015_000020.png",
+      "hebrew_text": "אַחַי כְּמִנְהַג הָאָדָם אֹמֵר אֲנִי לָכֶם כְּמוֹ בְּרִית צַוָּאַת הָאָדָם אִישׁ לֹא מוֹאַס וְלֹא מְחַקֵּק׃"
+    },
+    {
+      "id": "galatians.3.16.000020",
+      "confidence": "medium",
+      "notes": "Only the end of the Hebrew verse is visible in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/003_016_000020.png",
+      "hebrew_text": "וּלְזַרְעֲךָ אֲשֶׁר הוּא הַמָּשִׁיחַ"
+    },
+    {
+      "id": "galatians.3.17.000022",
+      "confidence": "medium",
+      "notes": "Bottom line is partly cut off; final word is completed from visible continuation in next crop.",
+      "output_image": "data/hutter/verse_images/galatians/003_017_000022.png",
+      "hebrew_text": "וְזֹאת אֹמַר אֲנִי כִּי אֶת בְּרִית הַנְּכוֹנָה מִלְּפָנִים מֵאֱלֹהִים לְמָשִׁיחַ הִיא אֲשֶׁר אַחֲרֵי אַרְבַּע מֵאוֹת שְׁלֹשִׁים שָׁנָה נְתָנָה הַתּוֹרָה לֹא תְמַאם לְהָנִיא אֶת־הַשְּׁבֻעָה"
+    },
+    {
+      "id": "galatians.3.22.000024",
+      "confidence": "medium",
+      "notes": "Right and lower parts of the verse are partly cropped; transcription may be incomplete.",
+      "output_image": "data/hutter/verse_images/galatians/003_022_000024.png",
+      "hebrew_text": "כִּי־אִם הִסְגִּיר הַכְּתָב אֶת כֻּלָּם תַּחַת הַחֲטָאָה אֲשֶׁר הַשְּׁבֻעָה בֶּאֱמוּנַת יֵשׁוּעַ הַמָּשִׁיחַ תִּנָּתֵן"
+    },
+    {
+      "id": "galatians.3.23.000024",
+      "confidence": "medium",
+      "notes": "Verse begins at visible line, with continuation above/below partly split across crop.",
+      "output_image": "data/hutter/verse_images/galatians/003_023_000024.png",
+      "hebrew_text": "וּבְטֶרֶם בָּאָה הָאֱמוּנָה תַּחַת הַתּוֹרָה נְצוּרִים וּסְגוּרִים אֲנַחְנוּ לָאֱמוּנָה הָעֲתִידָה לְהִגָּלוֹת׃"
+    },
+    {
+      "id": "galatians.3.26.000024",
+      "confidence": "medium",
+      "notes": "Pointing is partly unclear in crop.",
+      "output_image": "data/hutter/verse_images/galatians/003_026_000024.png",
+      "hebrew_text": "כִּי כֻלְּכֶם בְּנֵי אֱלֹהִים אַתֶּם בֶּאֱמוּנָה בְּיֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "galatians.3.28.000024",
+      "confidence": "medium",
+      "notes": "Top of verse is partially cropped; transcription of first line may need review.",
+      "output_image": "data/hutter/verse_images/galatians/003_028_000024.png",
+      "hebrew_text": "אֵינֶנּוּ פֹה יְהוּדִי וְאֵינֶנּוּ יְוָנִי אֵינֶנּוּ עֶבֶד וְאֵינֶנּוּ חָפְשִׁי אֵינֶנּוּ זָכָר וְאֵינֶנּוּ נְקֵבָה כִּי כֻלְּכֶם אֶחָד אַתֶּם בְּיֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "galatians.4.9.000028",
+      "confidence": "low",
+      "notes": "Verse appears cut off at bottom/right; final words continue beyond crop.",
+      "output_image": "data/hutter/verse_images/galatians/004_009_000028.png",
+      "hebrew_text": "וְעַתָּה כִּי יוֹדְעֵי אֱלֹהִים אַתֶּם אוֹ יוֹתֵר נוֹדָעִים מֵאֱלֹהִים אֵיכָכָה תָשׁוּבוּ לְהִתְהַפֵּךְ אֶל־הַיְסוֹדוֹת נְחָלָה וּמְסֻכָּנוֹת אֲשֶׁר"
+    },
+    {
+      "id": "galatians.4.15.000030",
+      "confidence": "low",
+      "notes": "Top/bottom of verse partially cropped; some words and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/004_015_000030.png",
+      "hebrew_text": "וְאַיֵּה חֶסֶדְכֶם הָרִאשׁוֹנִים כִּי־מֵעִיד אֲנִי עֲלֵיכֶם אִם לֹא יְכָלְתִּי יָכֹלָה כִּי אֶת־עֵינֵיכֶם נְקַרְתֶּם וּנְתַתֶּם לִי׃"
+    },
+    {
+      "id": "galatians.4.17.000030",
+      "confidence": "medium",
+      "notes": "Some pointing/letters are difficult to verify in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/004_017_000030.png",
+      "hebrew_text": "כִּי מְקַנְּאִים הֵמָּה בָּכֶם לֹא הֵיטֵב כִּי־אִם חוֹשְׁבִים וְחַתְּכֶם וּלְהַרְחִיק אֶתְכֶם אֲשֶׁר תְּקַנְּאוּ בָּם׃"
+    },
+    {
+      "id": "galatians.5.1.000034",
+      "confidence": "medium",
+      "notes": "Top of verse slightly cropped; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_001_000034.png",
+      "hebrew_text": "לָכֵן עִמְדוּ בַּחֹפֶשׁ אֲשֶׁר בָּהּ חִפֵּשׁ אֹתָנוּ הַמָּשִׁיחַ וְאַל תּוֹסִיפוּ עוֹד לָבִיא אֶת־צַוָּארְכֶם בְּעֹל הָעַבְדוּת׃"
+    },
+    {
+      "id": "galatians.5.6.000036",
+      "confidence": "medium",
+      "notes": "lower line partly cut off; final words may continue outside crop",
+      "output_image": "data/hutter/verse_images/galatians/005_006_000036.png",
+      "hebrew_text": "כִּי בִּישׁוּעַ הַמָּשִׁיחַ אֲרָלָה מַעֲבִיר הַמִּילָה וְאֵינֶהָ הָעֲלָה כִּי אִם הָאֱמוּנָה אֲשֶׁר פָּעֲלָה"
+    },
+    {
+      "id": "galatians.5.7.000036",
+      "confidence": "low",
+      "notes": "verse is cut off at bottom; only visible Hebrew transcribed",
+      "output_image": "data/hutter/verse_images/galatians/005_007_000036.png",
+      "hebrew_text": "רַצְתֶּם הֵיטֵב מִי הוֹחִיר"
+    },
+    {
+      "id": "galatians.5.16.000040",
+      "confidence": "medium",
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/005_016_000040.png",
+      "hebrew_text": "לָכֵן אֹמַר אֲנִי הִתְהַלֵךְ אֶת־רוּחַ וְאַתָּה תַאֲוַת הַבָּשָׂר אַל־תְּשַלֵּמוּ׃"
+    },
+    {
+      "id": "galatians.5.19.000040",
+      "confidence": "medium",
+      "notes": "Top of verse is partly close to crop edge; some words/points uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_019_000040.png",
+      "hebrew_text": "וְנוֹדָעִים הֵן מַעֲשֵׂי הַבָּשָׂר כְּמֹהֵם וְנִאוּף זְנוּת טֻמְאָה פֶשַׁע׃"
+    },
+    {
+      "id": "galatians.5.20.000040",
+      "confidence": "medium",
+      "notes": "Verse numbering in image appears adjacent; transcription follows visible Hebrew for requested verse, but some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/005_020_000040.png",
+      "hebrew_text": "עֲבוֹדָה זָרָה כְּשָׁפִים אֵיבָה מְרִיבָה קִנְאָה חֲרוֹן אַף מַצָּה פְּלָגָה חַבּוּרוֹת׃"
+    },
+    {
+      "id": "galatians.5.21.000040",
+      "confidence": "medium",
+      "notes": "Hebrew portion is split with bottom visible before Spanish; verse may be partly cropped at top.",
+      "output_image": "data/hutter/verse_images/galatians/005_021_000040.png",
+      "hebrew_text": "שִׁכְרוּן מְחוֹלוֹת וּזוֹלְלִים וְדֹמֵיהֶם אֲשֶׁר אֲנִי מְדַבֵּר אֲלֵיכֶם כְּמוֹ הִקְדַּמְתִּי לְדַבֵּר כִּי כָּל־פֹּעֲלֵי־הַדְּבָרִים כָּאֵלֶּה אֶת־מַלְכוּת אֱלֹהִים לֹא יִירָשׁוּ׃"
+    },
+    {
+      "id": "galatians.5.26.000042",
+      "confidence": "medium",
+      "notes": "Image appears to show Galatians 6:1 Hebrew under 5:26 id; bottom line is cut off.",
+      "output_image": "data/hutter/verse_images/galatians/005_026_000042.png",
+      "hebrew_text": "אַחַי אִם שָׁגָה אָדָם בְּשְׁגִיאָה אַחַת אַף אַתֶּם אֲשֶׁר בְּנֵי הָרוּחַ הַתְּקִינוּ אֹתוֹ בְּרוּחַ עֲנָוָה וְהִשָּׁמֵר"
+    },
+    {
+      "id": "galatians.6.1.000042",
+      "confidence": "low",
+      "notes": "Crop contains only the tail of Hebrew from preceding image/verse and Spanish; target verse not fully visible. No Hebrew pointing marks were returned; review against the image.",
+      "output_image": "data/hutter/verse_images/galatians/006_001_000042.png",
+      "hebrew_text": ""
+    },
+    {
+      "id": "galatians.6.7.000044",
+      "confidence": "medium",
+      "notes": "Verse begins in lower part of image and continues into next crop.",
+      "output_image": "data/hutter/verse_images/galatians/006_007_000044.png",
+      "hebrew_text": "אַל־תִּטְעוּ כִּי אֱלֹהִים לֹא מְהֻתָּל כִּי אֲשֶׁר יִזְרַע הָאָדָם אֹתוֹ יִקְצֹר"
+    },
+    {
+      "id": "galatians.6.8.000044",
+      "confidence": "medium",
+      "notes": "Top line may include continuation from previous verse; transcription follows visible target verse as best possible.",
+      "output_image": "data/hutter/verse_images/galatians/006_008_000044.png",
+      "hebrew_text": "כִּי הַזֹּרֵעַ בִּבְשָׂרוֹ מִבְּשָׂרוֹ יִקְצֹר אֶת־הַשְׁחָתָה וְהַזֹּרֵעַ בְּרוּחַ מֵרוּחַ יִקְצֹר אֶת־חַיֵּי עוֹלָם"
+    },
+    {
+      "id": "galatians.6.12.000046",
+      "confidence": "medium",
+      "notes": "Pointing and one or two letters are somewhat unclear in the crop.",
+      "output_image": "data/hutter/verse_images/galatians/006_012_000046.png",
+      "hebrew_text": "כָּל־אֲשֶׁר חָפְצוּ לְהִתְהַלֵּל בְּבָשָׂר אֵלֶּה יְאַלְצוּנְכֶם לְהִמּוֹל לְבַד לְבִלְתִּי בְּמִרְדַּף הַמָּשִׁיחַ תִּרְדְּפוּ׃"
+    },
+    {
+      "id": "galatians.6.16.000048",
+      "confidence": "low",
+      "notes": "Left edge of verse appears cut off and several words/points are uncertain.",
+      "output_image": "data/hutter/verse_images/galatians/006_016_000048.png",
+      "hebrew_text": "וּבְמָה בִשְׁבִיל הַזֶּה מְהַלְכִים שָׁלוֹם עֲלֵיהֶם וְתַחַף וְעַל יִשְׂרָאֵל אֱלֹהִים׃"
+    },
+    {
+      "id": "galatians.6.17.000048",
+      "confidence": "medium",
+      "notes": "Left edge slightly cropped; first word may be partially cut.",
+      "output_image": "data/hutter/verse_images/galatians/006_017_000048.png",
+      "hebrew_text": "וְעַל־הַדְּבָרִים הָאֵלֶּה אִישׁ לֹא יַגִּיעֵנִי כִּי סוֹבֵל אֲנִי אֶת־רִשְׁמֵי אֲדֹנֵינוּ יֵשׁוּעַ בְּגוּפִי׃"
+    }
+  ]
+}
