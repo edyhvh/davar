@@ -1,5 +1,5 @@
 {
-  "item_count": 702,
+  "item_count": 854,
   "purpose": "Rows here have Hebrew text and marks but were flagged by the model as uncertain. Review these after crop repairs so we avoid paid reruns for cases that only need text validation.",
   "items": [
     {
@@ -323,6 +323,261 @@
         "top": 618,
         "right": 645,
         "bottom": 997
+      }
+    },
+    {
+      "id": "hebrews.2.1.000006",
+      "book": "hebrews",
+      "source_file": "000006.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several words and vowels are unclear in the image; transcription may contain errors.",
+      "hebrew_text": "עַל־כֵּן שָׁנָה לָּנוּ הֵיטֵב עֲלֵיהֶם יִתֵּר לְהַקְשִׁיב לַאֲשֶׁר שָׁמַעְנוּ פֶּן נִלוֹז בְּמַעְגְּלוֹתֵינוּ",
+      "output_image": "data/hutter/verse_images/hebrews/002_001_000006.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000006.png",
+      "crop_box": {
+        "left": 76,
+        "top": 788,
+        "right": 637,
+        "bottom": 1201
+      }
+    },
+    {
+      "id": "hebrews.3.13.000016",
+      "book": "hebrews",
+      "source_file": "000016.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Top/right portions are clipped and several words/pointing are uncertain.",
+      "hebrew_text": "כִּי־הִתְנַחֲמוּ אִישׁ אֶת־רֵעֵהוּ לְכָל־יוֹם בְּעוֹדֶנּוּ נִקְרָא הַיּוֹם פֶּן־יִקְשֶׁה אִישׁ מִמֶּכֶם בְּתַעֲלַת חַטָּאָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/003_013_000016.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000016.png",
+      "crop_box": {
+        "left": 58,
+        "top": 597,
+        "right": 569,
+        "bottom": 899
+      }
+    },
+    {
+      "id": "hebrews.5.8.000026",
+      "book": "hebrews",
+      "source_file": "000026.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Final word and some pointing are unclear; transcription requires review.",
+      "hebrew_text": "וְאַף כִּי־בֶּן־אֱלֹהִים הוּא אַךְ בַּעֲנוֹתָיו לָמַד אֶת־דָּמָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/005_008_000026.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000026.png",
+      "crop_box": {
+        "left": 105,
+        "top": 393,
+        "right": 658,
+        "bottom": 747
+      }
+    },
+    {
+      "id": "hebrews.6.6.000030",
+      "book": "hebrews",
+      "source_file": "000030.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Some pointed letters and one or more words are difficult to read clearly.",
+      "hebrew_text": "וְנָפְלוּ מִמַּעֲמָדָם כִּי עוֹד יוּכְלוּ לְהִתְחַדֵּשׁ אֶל־הַתְּשׁוּבָה כִּי־מַקְרִיעִים לְנַפְשָׁם בְּמַכְלִימִים אֶת־בֶּן־הָאֱלֹהִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/006_006_000030.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000030.png",
+      "crop_box": {
+        "left": 99,
+        "top": 322,
+        "right": 658,
+        "bottom": 674
+      }
+    },
+    {
+      "id": "hebrews.6.9.000030",
+      "book": "hebrews",
+      "source_file": "000030.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "End of verse and some pointing are uncertain.",
+      "hebrew_text": "וּבְטוּחִים עֲלֵיכֶם אַחַי טוֹבָה מִזֶּה הַקְּרוֹבָה לִישׁוּעָה אַף כִּי כָּזֹאת דִּבַּר׃",
+      "output_image": "data/hutter/verse_images/hebrews/006_009_000030.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000030.png",
+      "crop_box": {
+        "left": 99,
+        "top": 1302,
+        "right": 658,
+        "bottom": 1671
+      }
+    },
+    {
+      "id": "hebrews.7.6.000036",
+      "book": "hebrews",
+      "source_file": "000036.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several words and vowel marks are unclear/blurry.",
+      "hebrew_text": "וַאֲשֶׁר אַרְנֵי מִתְיַחֲדָהֶם עִשַּׂר אֶת־אַבְרָהָם וַיְבָרֵךְ אֹתוֹ אֲשֶׁר הָיוּ לוֹ אִמְרֵי הַשְּׁבוּעָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_006_000036.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000036.png",
+      "crop_box": {
+        "left": 73,
+        "top": 1030,
+        "right": 627,
+        "bottom": 1377
+      }
+    },
+    {
+      "id": "hebrews.9.22.000054",
+      "book": "hebrews",
+      "source_file": "000054.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Verse begins at top edge and is partly obscured/cut; final word and some pointing uncertain.",
+      "hebrew_text": "וְכִמְעַט כָּל־דְּבָרִים בַּתּוֹרָה יְטֹהֲרוּ בַדָּם וּבְלִי שְׁפִיכַת הַדָּם לֹא יִהְיֶה כַּפָּרִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/009_022_000054.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000054.png",
+      "crop_box": {
+        "left": 85,
+        "top": 1451,
+        "right": 631,
+        "bottom": 1771
+      }
+    },
+    {
+      "id": "hebrews.10.13.000060",
+      "book": "hebrews",
+      "source_file": "000060.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several letters/vowels are blurry; transcription uncertain.",
+      "hebrew_text": "וְהִמְנַשֵּׂא מֵעַתָּה הוּא עַד־יָשִׁיתוּ אֹיְבָיו הֲדֹם לְרַגְלָיו׃",
+      "output_image": "data/hutter/verse_images/hebrews/010_013_000060.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000060.png",
+      "crop_box": {
+        "left": 101,
+        "top": 1426,
+        "right": 633,
+        "bottom": 1758
+      }
+    },
+    {
+      "id": "hebrews.10.32.000066",
+      "book": "hebrews",
+      "source_file": "000066.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several words and vowel points are hard to read; transcription uncertain.",
+      "hebrew_text": "וּזְכְרוּ לְיָמִים הָרִאשֹׁנִים אֲשֶׁר הֵאֹרוּ וַתִּלְחֲמוּ מִלְחָמָה גְּדוֹל נְתוּזִים נֶאֱמָצִים בָּעִנּוּיִם׃",
+      "output_image": "data/hutter/verse_images/hebrews/010_032_000066.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000066.png",
+      "crop_box": {
+        "left": 97,
+        "top": 1032,
+        "right": 681,
+        "bottom": 1399
+      }
+    },
+    {
+      "id": "hebrews.11.13.000072",
+      "book": "hebrews",
+      "source_file": "000072.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several words and pointing marks are blurry/uncertain, especially middle lines.",
+      "hebrew_text": "בֶּאֱמוּנָה מֵתוּ כֻּלָּם אֲשֶׁר לֹא לָקְחוּ אֶת־דִּבְרֵי הַהַבְטָחָה כִּי־אִם מֵרָחוֹק רָאוּם אוֹתָם וַיַּאֲמִינוּם וַיְשַׁמְּחוּם וּמוֹדִים לִהְיוֹת כִּי־גֵרִים הֵמָּה עַל־הָאָרֶץ׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_013_000072.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000072.png",
+      "crop_box": {
+        "left": 68,
+        "top": 1254,
+        "right": 618,
+        "bottom": 1703
+      }
+    },
+    {
+      "id": "hebrews.11.35.000078",
+      "book": "hebrews",
+      "source_file": "000078.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Left/right edges and pointing are unclear; transcription may contain uncertain words.",
+      "hebrew_text": "נָשִׁים לָקְחוּ מֵתֵיהֶן בִּתְחִיָּה וַאֲחֵרִים הֻקְעוּ וְלֹא בִקְשׁוּ הַפְלָטָה לְמַצֹא אֶת־הַתְּקוּמָה טוֹבָה מִזֶּה׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_035_000078.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000078.png",
+      "crop_box": {
+        "left": 95,
+        "top": 1687,
+        "right": 610,
+        "bottom": 2000
+      }
+    },
+    {
+      "id": "hebrews.12.3.000082",
+      "book": "hebrews",
+      "source_file": "000082.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Lower portion is partly cut and pointing/letters are uncertain.",
+      "hebrew_text": "חִשְׁבוּ וְהִתְבּוֹנְנוּ בְּנַפְשְׁכֶם בַּמָּה נָגַע מִכָּה וּבִזָּיוֹן וּמַמָּרָה הוּא בְּרוּחַ מֵחֲטָאִים פֶּן תִּעֲפוּ בְּנַפְשְׁכֶם וְתִגָּעוּ",
+      "output_image": "data/hutter/verse_images/hebrews/012_003_000082.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000082.png",
+      "crop_box": {
+        "left": 63,
+        "top": 402,
+        "right": 635,
+        "bottom": 722
+      }
+    },
+    {
+      "id": "hebrews.12.6.000082",
+      "book": "hebrews",
+      "source_file": "000082.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Short verse visible, but several pointed forms are uncertain.",
+      "hebrew_text": "כִּי־אֵת־אֲשֶׁר יֶאֱהַב יְהוָה יוֹכִיחַ וְכָאַב אֶת כָּל יִרְצֶה",
+      "output_image": "data/hutter/verse_images/hebrews/012_006_000082.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000082.png",
+      "crop_box": {
+        "left": 63,
+        "top": 1265,
+        "right": 635,
+        "bottom": 1621
+      }
+    },
+    {
+      "id": "hebrews.13.4.000092",
+      "book": "hebrews",
+      "source_file": "000092.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Text is blurry/overprinted; several words and pointing are uncertain.",
+      "hebrew_text": "מטה המשטב נחל־בקר בכלם ונשואי כל־מום כי את־קדשים ומנאפים ישפט יהוה׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_004_000092.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000092.png",
+      "crop_box": {
+        "left": 105,
+        "top": 6,
+        "right": 656,
+        "bottom": 390
+      }
+    },
+    {
+      "id": "hebrews.13.5.000092",
+      "book": "hebrews",
+      "source_file": "000092.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several glyphs and vowels are uncertain due to blur and print quality.",
+      "hebrew_text": "בדרככם לא תבקשו כסף יהי לכם בממים למענכם כי־הוא אמר לא ארפך ולא אעזבך׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_005_000092.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000092.png",
+      "crop_box": {
+        "left": 105,
+        "top": 354,
+        "right": 656,
+        "bottom": 693
       }
     },
     {
@@ -4522,6 +4777,2335 @@
         "top": 1646,
         "right": 652,
         "bottom": 2011
+      }
+    },
+    {
+      "id": "hebrews.1.2.000002",
+      "book": "hebrews",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partly unclear.",
+      "hebrew_text": "אֲשֶׁר שָׂמוֹ לְיוֹרֵשׁ כֹּל אֲשֶׁר בּוֹ בָּרָא אֶת הָעוֹלָמִים",
+      "output_image": "data/hutter/verse_images/hebrews/001_002_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000002.png",
+      "crop_box": {
+        "left": 99,
+        "top": 792,
+        "right": 654,
+        "bottom": 1106
+      }
+    },
+    {
+      "id": "hebrews.1.4.000002",
+      "book": "hebrews",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points and final word are uncertain.",
+      "hebrew_text": "כְּפִי מְאֹד יוֹתֵר טוֹב נִהְיָה מִמַּלְאָכִים כַּמָּה יוֹתֵר הִגְדִּיל שֵׁם עַל־שְׁמָם בְּנַחֲלָתוֹ",
+      "output_image": "data/hutter/verse_images/hebrews/001_004_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000002.png",
+      "crop_box": {
+        "left": 99,
+        "top": 1379,
+        "right": 654,
+        "bottom": 1699
+      }
+    },
+    {
+      "id": "hebrews.1.5.000002",
+      "book": "hebrews",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and first phrase are difficult to confirm.",
+      "hebrew_text": "כִּי לְמִי הַמַּלְאָכִים כֹּל־עִתָּם אָמַר יְהוָה בְּנִי אַתָּה אֲנִי הַיּוֹם יְלִדְתִּיךָ וְעוֹד אֲנִי אֶהְיֶה לּוֹ לְאָב וְהוּא יִהְיֶה לִי לְבֵן",
+      "output_image": "data/hutter/verse_images/hebrews/001_005_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000002.png",
+      "crop_box": {
+        "left": 99,
+        "top": 1663,
+        "right": 654,
+        "bottom": 2037
+      }
+    },
+    {
+      "id": "hebrews.1.8.000004",
+      "book": "hebrews",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and the initial word forms are uncertain.",
+      "hebrew_text": "אֶל אֶל־בְּנִי כִּסְאֲךָ אֱלֹהִים עוֹלָם וָעֶד שֵׁבֶט מִישׁוֹר שֵׁבֶט מַלְכוּתֶךָ׃",
+      "output_image": "data/hutter/verse_images/hebrews/001_008_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000004.png",
+      "crop_box": {
+        "left": 72,
+        "top": 556,
+        "right": 626,
+        "bottom": 877
+      }
+    },
+    {
+      "id": "hebrews.1.13.000006",
+      "book": "hebrews",
+      "source_file": "000006.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vocalization/cantillation marks are unclear.",
+      "hebrew_text": "אֶל־מִי־מִן הַמַּלְאָכִים אמר בְּכָל עֵת שֵׁב לִימִינִי עַד־אָשִׁית אֹיְבֶיךָ הֲדֹם לְרַגְלֶיךָ",
+      "output_image": "data/hutter/verse_images/hebrews/001_013_000006.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000006.png",
+      "crop_box": {
+        "left": 76,
+        "top": 30,
+        "right": 637,
+        "bottom": 462
+      }
+    },
+    {
+      "id": "hebrews.1.14.000006",
+      "book": "hebrews",
+      "source_file": "000006.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partially uncertain; final punctuation mark ignored.",
+      "hebrew_text": "הֲלֹא כֻלָּם רוּחוֹת מְשָׁרְתִים שְׁלוּחָה לְשָׁרֵת בַּעֲבוּר הָאֵלֶּה אֲשֶׁר עֲתִידִים לְנַחַל אֶת הַיְשׁוּעָה",
+      "output_image": "data/hutter/verse_images/hebrews/001_014_000006.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000006.png",
+      "crop_box": {
+        "left": 76,
+        "top": 426,
+        "right": 637,
+        "bottom": 824
+      }
+    },
+    {
+      "id": "hebrews.2.2.000006",
+      "book": "hebrews",
+      "source_file": "000006.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and one word uncertain due to image quality.",
+      "hebrew_text": "וְאִם הַדָּבָר אֲשֶׁר מְדֻבַּר בְּמַלְאָכִים הָיָה נָכוֹן וְעַל־כָּל־בֶּגֶד וּסְרָה בָּאָה שַׁלֻּמַת צֶדֶק",
+      "output_image": "data/hutter/verse_images/hebrews/002_002_000006.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000006.png",
+      "crop_box": {
+        "left": 76,
+        "top": 1165,
+        "right": 637,
+        "bottom": 1609
+      }
+    },
+    {
+      "id": "hebrews.2.4.000008",
+      "book": "hebrews",
+      "source_file": "000008.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud uncertain.",
+      "hebrew_text": "וְאֱלֹהִים הֵעִיד בְּאוֹתוֹת וּמֹפְתִים וּגְבוּרוֹת רַבּוֹת וּבְמַתָּנוֹת רוּחַ הַקֹּדֶשׁ כִּרְצוֹנוֹ",
+      "output_image": "data/hutter/verse_images/hebrews/002_004_000008.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000008.png",
+      "crop_box": {
+        "left": 87,
+        "top": 41,
+        "right": 642,
+        "bottom": 342
+      }
+    },
+    {
+      "id": "hebrews.2.5.000008",
+      "book": "hebrews",
+      "source_file": "000008.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing on several words uncertain.",
+      "hebrew_text": "כִּי־לֹא שָׁת תַּחַת רַגְלֵי הַמַּלְאָכִים אֶת־עוֹלָם הַבָּא אֲשֶׁר דִּבַּרְנוּ עָלָיו",
+      "output_image": "data/hutter/verse_images/hebrews/002_005_000008.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000008.png",
+      "crop_box": {
+        "left": 87,
+        "top": 306,
+        "right": 642,
+        "bottom": 682
+      }
+    },
+    {
+      "id": "hebrews.2.6.000008",
+      "book": "hebrews",
+      "source_file": "000008.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud/cantillation-like marks uncertain.",
+      "hebrew_text": "כִּי־הֵעִיד אִישׁ בְּמָקוֹם פְּלֹנִי לֵאמֹר מָה אֱנוֹשׁ כִּי־תִזְכְּרֶנּוּ וּבֶן־אָדָם כִּי־תִפְקְדֶנּוּ",
+      "output_image": "data/hutter/verse_images/hebrews/002_006_000008.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000008.png",
+      "crop_box": {
+        "left": 87,
+        "top": 646,
+        "right": 642,
+        "bottom": 1040
+      }
+    },
+    {
+      "id": "hebrews.2.7.000008",
+      "book": "hebrews",
+      "source_file": "000008.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Top of verse is partly cut and pointing/marks are difficult to verify.",
+      "hebrew_text": "כָּל שַׁתָּה תַּחַת רַגְלָיו וּבַאֲשֶׁר כֹּל שַׁתָּה תַּחְתָּיו אַחַד לֹא הִשְׁאִיר אֲשֶׁר לֹא הוּשַׁת תַּחְתָּיו",
+      "output_image": "data/hutter/verse_images/hebrews/002_007_000008.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000008.png",
+      "crop_box": {
+        "left": 87,
+        "top": 1004,
+        "right": 642,
+        "bottom": 1384
+      }
+    },
+    {
+      "id": "hebrews.2.8.000008",
+      "book": "hebrews",
+      "source_file": "000008.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Only the visible Hebrew for the target verse is transcribed; surrounding Hebrew/Spanish ignored.",
+      "hebrew_text": "כִּי כָּל־דְּבָרִים הוּשְׁתָּה תַּחְתָּיו",
+      "output_image": "data/hutter/verse_images/hebrews/002_008_000008.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000008.png",
+      "crop_box": {
+        "left": 87,
+        "top": 1348,
+        "right": 642,
+        "bottom": 1668
+      }
+    },
+    {
+      "id": "hebrews.2.10.000010",
+      "book": "hebrews",
+      "source_file": "000010.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Left edge of lines is slightly cut; pointing uncertain in places.",
+      "hebrew_text": "כִּי־שָׁוָה לוֹ אֲשֶׁר בַּעֲבוּרוֹ כָּל־דְּבָרִים וַאֲשֶׁר מִן כָּל־דְּבָרִים וַאֲשֶׁר מֵבִיא בָנִים רַבִּים לִכְבֹד לְהַשְׁלִים אֶת־נָשִׂיא יְשׁוּעָתָם בְּעֹנִי",
+      "output_image": "data/hutter/verse_images/hebrews/002_010_000010.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000010.png",
+      "crop_box": {
+        "left": 70,
+        "top": 48,
+        "right": 628,
+        "bottom": 404
+      }
+    },
+    {
+      "id": "hebrews.2.11.000010",
+      "book": "hebrews",
+      "source_file": "000010.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowels/marks are hard to distinguish from print noise.",
+      "hebrew_text": "כִּי הַמְקַדֵּשׁ וְהַמְּקֻדָּשִׁים בְּאֶחָד כֻּלָּם עַל־כֵּן לֹא הִתְבּוֹשׁ לִקְרֹא לָהֶם אַחִים",
+      "output_image": "data/hutter/verse_images/hebrews/002_011_000010.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000010.png",
+      "crop_box": {
+        "left": 70,
+        "top": 368,
+        "right": 628,
+        "bottom": 769
+      }
+    },
+    {
+      "id": "hebrews.2.13.000010",
+      "book": "hebrews",
+      "source_file": "000010.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and some small marks are not fully clear.",
+      "hebrew_text": "עוֹד אֲנִי אֶחְסֶה בּוֹ וְעוֹד הִנֵּה אָנֹכִי הַיְלָדִים אֲשֶׁר נָתַן לִי יְהוָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/002_013_000010.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000010.png",
+      "crop_box": {
+        "left": 70,
+        "top": 1021,
+        "right": 628,
+        "bottom": 1404
+      }
+    },
+    {
+      "id": "hebrews.2.15.000010",
+      "book": "hebrews",
+      "source_file": "000010.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and a word boundary/maqaf are uncertain.",
+      "hebrew_text": "וַיְפַלְּטֵמוֹ כֻּלָּם אֲשֶׁר בְּיִרְאַת הַמָּוֶת בְּכָל־חַיֵּיהֶם נְתוּנִים הָיוּ לַעֲבֹדָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/002_015_000010.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000010.png",
+      "crop_box": {
+        "left": 70,
+        "top": 1667,
+        "right": 628,
+        "bottom": 2017
+      }
+    },
+    {
+      "id": "hebrews.2.16.000012",
+      "book": "hebrews",
+      "source_file": "000012.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partially unclear; header ignored.",
+      "hebrew_text": "כִּי־לֹא בְכָל דָּבָר לָקַח אֶת־הַמַלְאָכִים כִּי אִם אֶת־זֶרַע אַבְרָהָם לָקַח׃",
+      "output_image": "data/hutter/verse_images/hebrews/002_016_000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000012.png",
+      "crop_box": {
+        "left": 73,
+        "top": 36,
+        "right": 628,
+        "bottom": 358
+      }
+    },
+    {
+      "id": "hebrews.2.17.000012",
+      "book": "hebrews",
+      "source_file": "000012.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is small/blurry in places; transcription of niqqud may need review.",
+      "hebrew_text": "לָכֵן שָׁוָה לוֹ בַּכֹּל דְּבָרִים לְהִדַּמּוֹת לְאַחָיו לִהְיוֹת חָנוּן וְרַחוּם כֹּהֵן גָּדוֹל נֶאֱמָן לִפְנֵי אֱלֹהִים לְכַפֵּר עַל־עֲוֹנֹת הָעָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/002_017_000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000012.png",
+      "crop_box": {
+        "left": 73,
+        "top": 322,
+        "right": 628,
+        "bottom": 670
+      }
+    },
+    {
+      "id": "hebrews.2.18.000012",
+      "book": "hebrews",
+      "source_file": "000012.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points are difficult to distinguish.",
+      "hebrew_text": "כִּי בַּאֲשֶׁר נִגַּע מִמֶּנּוּ מַעֲנֶה וּמְנֻסֶּה הוּא יָכֹל לַעֲזוֹר לַמְנֻסִּים׃",
+      "output_image": "data/hutter/verse_images/hebrews/002_018_000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000012.png",
+      "crop_box": {
+        "left": 73,
+        "top": 634,
+        "right": 628,
+        "bottom": 1025
+      }
+    },
+    {
+      "id": "hebrews.3.1.000012",
+      "book": "hebrews",
+      "source_file": "000012.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and a few consonants are slightly unclear.",
+      "hebrew_text": "לָכֵן אַחַי הַקְּדוֹשִׁים חַבְרֵי קְרִיאַת הַשָּׁמַיִם הַבִּיטוּ אֶת־שָׁלִיחַ וְכֹהֵן רֹאשׁ הוֹדָתֵנוּ אֶת־יֵשׁוּעַ הַמָּשִׁיחַ׃",
+      "output_image": "data/hutter/verse_images/hebrews/003_001_000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000012.png",
+      "crop_box": {
+        "left": 73,
+        "top": 989,
+        "right": 628,
+        "bottom": 1321
+      }
+    },
+    {
+      "id": "hebrews.3.2.000012",
+      "book": "hebrews",
+      "source_file": "000012.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Vowel marks are partly unclear.",
+      "hebrew_text": "אֲשֶׁר נֶאֱמָן הוּא לְעֹשֵׂהוּ כְּמוֹ גַּם מֹשֶׁה בְּכָל־בֵּיתוֹ׃",
+      "output_image": "data/hutter/verse_images/hebrews/003_002_000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000012.png",
+      "crop_box": {
+        "left": 73,
+        "top": 1285,
+        "right": 628,
+        "bottom": 1618
+      }
+    },
+    {
+      "id": "hebrews.3.3.000012",
+      "book": "hebrews",
+      "source_file": "000012.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/word details are small and may need verification.",
+      "hebrew_text": "כִּי כָבוֹד גָּדוֹל יֵשׁ לָזֶה מִמֹּשֶׁה כְּמוֹ יוֹתֵר יֵשׁ־כָּבוֹד לְבֹנֵה בַּיִת מִן הַבַּיִת׃",
+      "output_image": "data/hutter/verse_images/hebrews/003_003_000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000012.png",
+      "crop_box": {
+        "left": 73,
+        "top": 1582,
+        "right": 628,
+        "bottom": 2003
+      }
+    },
+    {
+      "id": "hebrews.3.10.000014",
+      "book": "hebrews",
+      "source_file": "000014.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/marks are difficult to distinguish clearly.",
+      "hebrew_text": "לָכֵן אֶקּוֹט בַּדּוֹר וָאֹמַר עַם תֹּעֵי לֵבָב הֵם וְהֵם לֹא יָדְעוּ דְּרָכַי׃",
+      "output_image": "data/hutter/verse_images/hebrews/003_010_000014.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000014.png",
+      "crop_box": {
+        "left": 70,
+        "top": 1597,
+        "right": 626,
+        "bottom": 2036
+      }
+    },
+    {
+      "id": "hebrews.3.9.000014",
+      "book": "hebrews",
+      "source_file": "000014.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/cantillation marks are small and uncertain.",
+      "hebrew_text": "אֲשֶׁר נִסּוּנִי אֲבוֹתֵיכֶם בְּחָנוּנִי גַּם רָאוּ מַעֲלַי אַרְבָּעִים שָׁנָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/003_009_000014.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000014.png",
+      "crop_box": {
+        "left": 70,
+        "top": 1392,
+        "right": 626,
+        "bottom": 1633
+      }
+    },
+    {
+      "id": "hebrews.3.15.000016",
+      "book": "hebrews",
+      "source_file": "000016.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Initial word and some pointing are uncertain.",
+      "hebrew_text": "כְּאֹמֶר הַיּוֹם אִם בְּקֹלֹו תִּשְׁמְעוּ אַל־תַּקְשׁוּ לְבַבְכֶם כִּמְרִיבָה",
+      "output_image": "data/hutter/verse_images/hebrews/003_015_000016.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000016.png",
+      "crop_box": {
+        "left": 58,
+        "top": 1115,
+        "right": 569,
+        "bottom": 1403
+      }
+    },
+    {
+      "id": "hebrews.3.18.000018",
+      "book": "hebrews",
+      "source_file": "000018.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing uncertain; nearby header and verse number ignored.",
+      "hebrew_text": "וּלְמִי נִשְׁבַּע לֹא לָבוֹא לִמְנוּחָתוֹ כִּי־אִם לַמַּמְרִים",
+      "output_image": "data/hutter/verse_images/hebrews/003_018_000018.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000018.png",
+      "crop_box": {
+        "left": 81,
+        "top": 57,
+        "right": 640,
+        "bottom": 394
+      }
+    },
+    {
+      "id": "hebrews.4.11.000020",
+      "book": "hebrews",
+      "source_file": "000020.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Final word and some niqqud are uncertain.",
+      "hebrew_text": "לָכֵן נְמַהֵר לָבוֹא אֶל־מְנוּחָה הַזֹּאת פֶּן־אִישׁ יִכָּשֵׁל לַאֲשֶׁר יִפֹּל בַּחֵטְא הַסָּטָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/004_011_000020.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000020.png",
+      "crop_box": {
+        "left": 55,
+        "top": 1645,
+        "right": 613,
+        "bottom": 2018
+      }
+    },
+    {
+      "id": "hebrews.4.6.000020",
+      "book": "hebrews",
+      "source_file": "000020.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and one word near line break are slightly unclear.",
+      "hebrew_text": "וְכִי־עוֹד נִשְׁאַר לָבֹא אֲנָשִׁים אֵלֶיהָ וַאֲשֶׁר בָּרִאשׁוֹנָה הִתְבַּשְּׂרוּ לֹא בָאוּ כִּי־לֹא הֶאֱמִינוּ׃",
+      "output_image": "data/hutter/verse_images/hebrews/004_006_000020.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000020.png",
+      "crop_box": {
+        "left": 55,
+        "top": 317,
+        "right": 613,
+        "bottom": 649
+      }
+    },
+    {
+      "id": "hebrews.4.7.000020",
+      "book": "hebrews",
+      "source_file": "000020.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several vowel/cantillation-like marks are difficult to distinguish.",
+      "hebrew_text": "עוֹדֶנּוּ אָסַף יוֹם אֶחָד הַיּוֹם בְּדָוִד לֵאמֹר אַחֲרֵי עֵת כְּמוֹ בַּאֲשֶׁר נֶאֱמַר הַיּוֹם אִם בְּקוֹלוֹ תִשְׁמְעוּ אַל־תַּקְשׁוּ לְבַבְכֶם׃",
+      "output_image": "data/hutter/verse_images/hebrews/004_007_000020.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000020.png",
+      "crop_box": {
+        "left": 55,
+        "top": 613,
+        "right": 613,
+        "bottom": 870
+      }
+    },
+    {
+      "id": "hebrews.4.12.000022",
+      "book": "hebrews",
+      "source_file": "000022.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some words/pointing are difficult to distinguish due to print quality.",
+      "hebrew_text": "כִּי־חַי דְּבַר אֱלֹהִים וְרַב־כֹּחַ וּגְבוֹהַ וְחָדוּד מִכָּל־חֶרֶב פִּיפִיּוֹת וּמַגִּיעַ עַד־הַבְדֵּל נֶפֶשׁ וְרוּחַ דְּבֵק בָּשָׂר וּמֹחַ עַצְמוֹת חוֹקֵר וְיוֹדֵעַ מַחְשְׁבוֹת לֵב וּמְזִמּוֹת כִּלְיוֹת הֲיָתָה לְאִישׁ כְּדַרְכּוֹ כְּפְרִי מַעֲלָלָיו׃",
+      "output_image": "data/hutter/verse_images/hebrews/004_012_000022.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000022.png",
+      "crop_box": {
+        "left": 54,
+        "top": 49,
+        "right": 600,
+        "bottom": 547
+      }
+    },
+    {
+      "id": "hebrews.4.13.000022",
+      "book": "hebrews",
+      "source_file": "000022.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several niqqud marks are unclear.",
+      "hebrew_text": "וּבְרִיאָה לֹא אַחַת נֶעְלְמָה מֵעֵינֵי הַכֹּל עֲרוּמִים וּגְלוּיִים בְּעֵינֵי אֲשֶׁר עָלָיו מְדַבְּרִים אֲנַחְנוּ׃",
+      "output_image": "data/hutter/verse_images/hebrews/004_013_000022.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000022.png",
+      "crop_box": {
+        "left": 54,
+        "top": 511,
+        "right": 600,
+        "bottom": 896
+      }
+    },
+    {
+      "id": "hebrews.4.14.000022",
+      "book": "hebrews",
+      "source_file": "000022.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Beginning and final phrase visible, but some pointing/letters may be uncertain.",
+      "hebrew_text": "יֵשׁ־לָנוּ כֹּהֵן רֹאשׁ גָּדוֹל אֲשֶׁר עָבַר אֶת־הַשָּׁמַיִם יֵשׁוּעַ בֶּן אֱלֹהִים נֹאחֲזָה אֶת־הַהוֹדָאָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/004_014_000022.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000022.png",
+      "crop_box": {
+        "left": 54,
+        "top": 860,
+        "right": 600,
+        "bottom": 1287
+      }
+    },
+    {
+      "id": "hebrews.4.16.000022",
+      "book": "hebrews",
+      "source_file": "000022.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some words/points near line breaks are blurry; transcription may need verification.",
+      "hebrew_text": "לָכֵן נִקְרַב בַּכֹּל בִּטָּחוֹן אֶל־כִּסֵּא הַתְּחוּנָּה אֲשֶׁר נִקַּח חֶסֶד וְרַחֲמִים וְנִמְצָא חֵן בְּעִנֵּינוּ לְעֵת תְּשׁוּעָתֵנוּ בְּעֵת רָצוֹן׃",
+      "output_image": "data/hutter/verse_images/hebrews/004_016_000022.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000022.png",
+      "crop_box": {
+        "left": 54,
+        "top": 1573,
+        "right": 600,
+        "bottom": 2021
+      }
+    },
+    {
+      "id": "hebrews.5.2.000024",
+      "book": "hebrews",
+      "source_file": "000024.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Image label may be mismatched with printed verse number; pointing is not fully certain.",
+      "hebrew_text": "וְעַל־כֵּן יֵשׁ צָרִיךְ כַּאֲשֶׁר עַל־הָעָם כֵּן גַּם עַל־נַפְשׁוֹ לְהַקְרִיב עַל־חֲטָאִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/005_002_000024.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000024.png",
+      "crop_box": {
+        "left": 79,
+        "top": 751,
+        "right": 630,
+        "bottom": 1057
+      }
+    },
+    {
+      "id": "hebrews.5.3.000024",
+      "book": "hebrews",
+      "source_file": "000024.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Image label may be mismatched with printed verse number 4; some pointing uncertain.",
+      "hebrew_text": "וְאִישׁ לֹא יִקַּח לְנַפְשׁוֹ אֶת־הַכָּבוֹד כִּי־אִם אֲשֶׁר נִקְרָא מֵאֱלֹהִים כְּמוֹ אַהֲרֹן׃",
+      "output_image": "data/hutter/verse_images/hebrews/005_003_000024.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000024.png",
+      "crop_box": {
+        "left": 79,
+        "top": 1021,
+        "right": 630,
+        "bottom": 1298
+      }
+    },
+    {
+      "id": "hebrews.5.11.000026",
+      "book": "hebrews",
+      "source_file": "000026.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some letters/points are unclear in the image.",
+      "hebrew_text": "אֲשֶׁר עָלָיו יֵשׁ־לָנוּ דְּבָרִים רַבִּים לְסַפֵּר מַלְדִּיכֶם אִם לֹא תִּהְיוּ נֶאֱמָנִים לִשְׁמֹעַ׃",
+      "output_image": "data/hutter/verse_images/hebrews/005_011_000026.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000026.png",
+      "crop_box": {
+        "left": 105,
+        "top": 1375,
+        "right": 658,
+        "bottom": 1757
+      }
+    },
+    {
+      "id": "hebrews.5.7.000026",
+      "book": "hebrews",
+      "source_file": "000026.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Left edge is slightly cut and some vowels/marks are uncertain.",
+      "hebrew_text": "אֲשֶׁר בִּימֵי הֱיֹתוֹ בַּשָּׂר הַתְּחִנּוֹת וּתְפִלּוֹת אֶל־אֲשֶׁר יָכוֹל לְהוֹשִׁיעוֹ מִמָּוֶת בְּקוֹל גָּדוֹל וּבִדְמָעוֹת הִקְרִיב וְנִשְׁמַע בְּיִרְאַת יְהוָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/005_007_000026.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000026.png",
+      "crop_box": {
+        "left": 105,
+        "top": 52,
+        "right": 658,
+        "bottom": 429
+      }
+    },
+    {
+      "id": "hebrews.5.9.000026",
+      "book": "hebrews",
+      "source_file": "000026.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish.",
+      "hebrew_text": "וְנִשְׁלַם הָיָה לְשׁוֹמְעֵי לְכֻלָּם דֶּרֶךְ וְעִלַּת תְּשׁוּעַת עוֹלָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/005_009_000026.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000026.png",
+      "crop_box": {
+        "left": 105,
+        "top": 711,
+        "right": 658,
+        "bottom": 1073
+      }
+    },
+    {
+      "id": "hebrews.5.13.000028",
+      "book": "hebrews",
+      "source_file": "000028.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and one word are somewhat unclear.",
+      "hebrew_text": "כִּי כָּל־הַמִּתְחַבֵּר בְּחָלָב חָסֵר לִדְבַר הַצְּדָקָה כִּי־עוֹלֵל הוּא׃",
+      "output_image": "data/hutter/verse_images/hebrews/005_013_000028.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000028.png",
+      "crop_box": {
+        "left": 54,
+        "top": 40,
+        "right": 619,
+        "bottom": 377
+      }
+    },
+    {
+      "id": "hebrews.5.14.000028",
+      "book": "hebrews",
+      "source_file": "000028.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and some small marks are difficult to verify exactly.",
+      "hebrew_text": "כִּי־מַאֲכָל חָזָק יֵשׁ לַשְׁלֵמִים לַאֲשֶׁר יֵשׁ־לָהֶם שֶׂכֶל וְתְבוּנָה לְהַבְדִּיל בֵּין טוֹב וָרָע׃",
+      "output_image": "data/hutter/verse_images/hebrews/005_014_000028.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000028.png",
+      "crop_box": {
+        "left": 54,
+        "top": 341,
+        "right": 619,
+        "bottom": 718
+      }
+    },
+    {
+      "id": "hebrews.6.1.000028",
+      "book": "hebrews",
+      "source_file": "000028.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud and small printed marks are uncertain.",
+      "hebrew_text": "עַל־כֵּן נַעֲזוֹב אֶת־דְּבַר רֵאשִׁית הַמָּשִׁיחַ וְנָבֹא אֶל־תַּכְלִית וְנִשְׁמַע סוֹף דָּבָר הַכֹּל עוֹד לֹא נָשִׂים יְסוֹד הַתְּשׁוּבָה מִמַּעֲשֵׂי מָוֶת לֶאֱמוּנָה אֶל־אֱלֹהִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/006_001_000028.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000028.png",
+      "crop_box": {
+        "left": 54,
+        "top": 682,
+        "right": 619,
+        "bottom": 1021
+      }
+    },
+    {
+      "id": "hebrews.6.2.000028",
+      "book": "hebrews",
+      "source_file": "000028.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Verse appears complete, but exact pointing is partly uncertain.",
+      "hebrew_text": "לִלְמֹד הַטְּבִילָה לְשִׂימַת יָדַיִם לִתְקוּמַת הַמֵּתִים וּלְמִשְׁפַּט הָעוֹלָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/006_002_000028.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000028.png",
+      "crop_box": {
+        "left": 54,
+        "top": 985,
+        "right": 619,
+        "bottom": 1336
+      }
+    },
+    {
+      "id": "hebrews.6.3.000028",
+      "book": "hebrews",
+      "source_file": "000028.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Small marks/pointing around words are not fully clear.",
+      "hebrew_text": "וְזֹאת נַעֲשֶׂה אִם יִרְצֶה אֱלֹהִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/006_003_000028.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000028.png",
+      "crop_box": {
+        "left": 54,
+        "top": 1300,
+        "right": 619,
+        "bottom": 1638
+      }
+    },
+    {
+      "id": "hebrews.6.4.000028",
+      "book": "hebrews",
+      "source_file": "000028.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and exact spelling of some words require review.",
+      "hebrew_text": "כִּי־בִלְתִּי יָכֹלָה אֲשֶׁר פַּעַם אַחַת נָאוֹרוּ וְטָעֲמוּ אֶת־מַתְּנַת הַשָּׁמַיִם וְהָיוּ חֶבֶרֵי רוּחַ הַקֹּדֶשׁ׃",
+      "output_image": "data/hutter/verse_images/hebrews/006_004_000028.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000028.png",
+      "crop_box": {
+        "left": 54,
+        "top": 1602,
+        "right": 619,
+        "bottom": 2005
+      }
+    },
+    {
+      "id": "hebrews.6.17.000032",
+      "book": "hebrews",
+      "source_file": "000032.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud and small marks are uncertain.",
+      "hebrew_text": "אֲשֶׁר בּוֹ עַל־יוֹתֵר חָפֵץ אֱלֹהִים לְהַגִּיד לְיוֹרְשֵׁי הַמַּאֲמָר אֶת־אֹמֶת רְצוֹנוֹ קִיֵּם בִּשְׁבוּעָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/006_017_000032.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000032.png",
+      "crop_box": {
+        "left": 82,
+        "top": 1582,
+        "right": 643,
+        "bottom": 2028
+      }
+    },
+    {
+      "id": "hebrews.6.19.000034",
+      "book": "hebrews",
+      "source_file": "000034.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "One word near the start may be uncertain due to print clarity.",
+      "hebrew_text": "אֲשֶׁר יֵשׁ לָנוּ כְּעֲגֵה נֶפֶשׁ בְּטוּחָה לֹא תָמוּט לְקִרְבָּה אֶל־פָּרֹכֶת הַפְּנִימִית׃",
+      "output_image": "data/hutter/verse_images/hebrews/006_019_000034.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000034.png",
+      "crop_box": {
+        "left": 67,
+        "top": 379,
+        "right": 622,
+        "bottom": 832
+      }
+    },
+    {
+      "id": "hebrews.6.20.000034",
+      "book": "hebrews",
+      "source_file": "000034.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish.",
+      "hebrew_text": "אֲשֶׁר בָּה הִקְדִים לָבוֹא עָלֵינוּ יֵשׁוּעַ כְּדִבְרָתִי מַלְכִּי־צֶדֶק הָיָה כֹּהֵן גָּדוֹל לְעוֹלָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/006_020_000034.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000034.png",
+      "crop_box": {
+        "left": 67,
+        "top": 796,
+        "right": 622,
+        "bottom": 1189
+      }
+    },
+    {
+      "id": "hebrews.7.2.000034",
+      "book": "hebrews",
+      "source_file": "000034.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some glyphs/points are blurry; transcription may need review.",
+      "hebrew_text": "וַיִּתֶּן לוֹ אַבְרָהָם מַעֲשֵׂר מִכֹּל אֲשֶׁר לוֹ וּבָרִאשׁוֹנָה מִתַּרְגֵּם הוּא מֶלֶךְ הַצְּדָקָה וְאַחַר גַּם מֶלֶךְ שָׁלֵם וְזֶה הוּא מֶלֶךְ הַשָּׁלוֹם׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_002_000034.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000034.png",
+      "crop_box": {
+        "left": 67,
+        "top": 1512,
+        "right": 622,
+        "bottom": 2007
+      }
+    },
+    {
+      "id": "hebrews.7.3.000036",
+      "book": "hebrews",
+      "source_file": "000036.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several niqqud/marks are unclear; possible uncertainty in וּבְדָמָה.",
+      "hebrew_text": "בְּלִי אָב בְּלִי אֵם בְּלִי תּוֹלְדוֹת לֹא יֵשׁ לוֹ רֵאשִׁית הַיָּמִים וְלֹא קֵץ הַחַיִּים וּבְדָמָה לְבֶן־אֱלֹהִים הֶעֱמִיד כֹּהֵן לְעוֹלָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_003_000036.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000036.png",
+      "crop_box": {
+        "left": 73,
+        "top": 41,
+        "right": 627,
+        "bottom": 414
+      }
+    },
+    {
+      "id": "hebrews.7.4.000036",
+      "book": "hebrews",
+      "source_file": "000036.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and final word area somewhat unclear.",
+      "hebrew_text": "וּרְאוּ מַה־אַדִּיר הוּא לַאֲשֶׁר גַּם אַבְרָהָם רֹאשׁ אֲבוֹתֵינוּ נָתַן לוֹ מַעֲשֵׂר מִכֹּל׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_004_000036.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000036.png",
+      "crop_box": {
+        "left": 73,
+        "top": 378,
+        "right": 627,
+        "bottom": 697
+      }
+    },
+    {
+      "id": "hebrews.7.8.000036",
+      "book": "hebrews",
+      "source_file": "000036.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "One word around מֻעָד/מועד and some pointing are uncertain.",
+      "hebrew_text": "וּפֹה לֹקְחִים אֶת־מַעֲשֵׂר אַנְשֵׁי מָוֶת וְשָׁם מֻעָד עָלָיו כִּי־חָי׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_008_000036.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000036.png",
+      "crop_box": {
+        "left": 73,
+        "top": 1632,
+        "right": 627,
+        "bottom": 2001
+      }
+    },
+    {
+      "id": "hebrews.7.14.000038",
+      "book": "hebrews",
+      "source_file": "000038.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Word order and pointing are partly uncertain due to print blur.",
+      "hebrew_text": "לָכֵן גָּלוּי כִּי־מִשֵּׁבֶט יְהוּדָה צָמַח אִישׁ צֶמַח אֲדֹנֵינוּ מִשֵּׁבֶט אֲשֶׁר מִמֶּנּוּ דִּבֵּר לֹא אַחַד דָּבָר מֹשֶׁה עַל־הַכְּהֻנָּה׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_014_000038.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000038.png",
+      "crop_box": {
+        "left": 101,
+        "top": 1407,
+        "right": 656,
+        "bottom": 1728
+      }
+    },
+    {
+      "id": "hebrews.7.9.000038",
+      "book": "hebrews",
+      "source_file": "000038.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and punctuation partially unclear.",
+      "hebrew_text": "וּבְאַבְרָהָם כְּמוֹ אִישׁ יֻכַּל לֵאמֹר גַּם לֵוִי הַלֹּקֵחַ אֶת־מַעֲשֵׂר מְעֻשָּׂר הוּא׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_009_000038.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000038.png",
+      "crop_box": {
+        "left": 101,
+        "top": 49,
+        "right": 656,
+        "bottom": 352
+      }
+    },
+    {
+      "id": "hebrews.7.21.000040",
+      "book": "hebrews",
+      "source_file": "000040.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud/cantillation-like marks are difficult to verify.",
+      "hebrew_text": "וְהוּא עִם הַשְׁבָּעָה בַּאֲשֶׁר דִּבֶּר אֵלָיו נִשְׁבַּע יְהוָה וְלֹא יִנָּחֵם אַתָּה כֹהֵן לְעוֹלָם עַל־דִּבְרָתִי מַלְכִּי־צֶדֶק׃)",
+      "output_image": "data/hutter/verse_images/hebrews/007_021_000040.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000040.png",
+      "crop_box": {
+        "left": 65,
+        "top": 1200,
+        "right": 622,
+        "bottom": 1492
+      }
+    },
+    {
+      "id": "hebrews.7.22.000040",
+      "book": "hebrews",
+      "source_file": "000040.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "First word and pointing somewhat uncertain.",
+      "hebrew_text": "כְּלִי עֹרֵב בְּרִית טוֹבָה נַעֲשָׂה יֵשׁוּעַ׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_022_000040.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000040.png",
+      "crop_box": {
+        "left": 65,
+        "top": 1456,
+        "right": 622,
+        "bottom": 1758
+      }
+    },
+    {
+      "id": "hebrews.7.23.000040",
+      "book": "hebrews",
+      "source_file": "000040.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some marks/letters are slightly blurry.",
+      "hebrew_text": "וּמֵאֵלֶּה רַבִּים נַעֲשׂוּ כֹּהֲנִים עַל כִּי־בְּמוֹתָם נִכְלְאוּ לַעֲמֹד׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_023_000040.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000040.png",
+      "crop_box": {
+        "left": 65,
+        "top": 1722,
+        "right": 622,
+        "bottom": 1997
+      }
+    },
+    {
+      "id": "hebrews.7.24.000042",
+      "book": "hebrews",
+      "source_file": "000042.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and small marks partly unclear.",
+      "hebrew_text": "זֶה הוּא כִּי־יַעֲמֹד לְעוֹלָם עַל־כֵּן יֵשׁ לוֹ כְּהֻנַּת כָּל־עוֹלָמִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_024_000042.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000042.png",
+      "crop_box": {
+        "left": 105,
+        "top": 34,
+        "right": 668,
+        "bottom": 396
+      }
+    },
+    {
+      "id": "hebrews.7.28.000042",
+      "book": "hebrews",
+      "source_file": "000042.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and some small marks uncertain.",
+      "hebrew_text": "כִּי־הַתּוֹרָה מְקִימָה אֲנָשִׁים לְכֹהֲנִים אֲשֶׁר יֵשׁ־לָהֶם מַחֲלָה וּדְבַר הַשְּׁבוּעָה אֲשֶׁר אַחַר הַתּוֹרָה הוּא אֶת־הַבֵּן לְעוֹלָם נִשְׁלָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/007_028_000042.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000042.png",
+      "crop_box": {
+        "left": 105,
+        "top": 1293,
+        "right": 668,
+        "bottom": 1665
+      }
+    },
+    {
+      "id": "hebrews.8.1.000042",
+      "book": "hebrews",
+      "source_file": "000042.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud uncertain due to print quality.",
+      "hebrew_text": "רֹאשׁ כָּל־דְּבָרִים זֶה הוּא יֵשׁ־לָנוּ כֹּהֵן רֹאשׁ כָּזֶה אֲשֶׁר יֹשֵׁב לִימִין כִּסֵּא הַגְּדֻלָּה בַּשָּׁמַיִם׃",
+      "output_image": "data/hutter/verse_images/hebrews/008_001_000042.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000042.png",
+      "crop_box": {
+        "left": 105,
+        "top": 1629,
+        "right": 668,
+        "bottom": 2001
+      }
+    },
+    {
+      "id": "hebrews.8.2.000044",
+      "book": "hebrews",
+      "source_file": "000044.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing/marks are small and partly unclear.",
+      "hebrew_text": "וְהוּא מְשָׁרֵת הַקָּדָשִׁים וּמִשְׁכַּן הָאֱמֶת אֲשֶׁר אָהַל יְהֹוָה וְלֹא אָדָם",
+      "output_image": "data/hutter/verse_images/hebrews/008_002_000044.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000044.png",
+      "crop_box": {
+        "left": 92,
+        "top": 29,
+        "right": 654,
+        "bottom": 402
+      }
+    },
+    {
+      "id": "hebrews.8.3.000044",
+      "book": "hebrews",
+      "source_file": "000044.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud/marks uncertain due to image quality.",
+      "hebrew_text": "כִּי כָּל־כֹּהֵן גָּדוֹל מוּקָם לְהַקְרִיב מִנְחָה וּזְבָחִים וְיֵשׁ לָזֶה אֲשֶׁר גַּם הוּא יַקְרִיב מְאוּמָה",
+      "output_image": "data/hutter/verse_images/hebrews/008_003_000044.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000044.png",
+      "crop_box": {
+        "left": 92,
+        "top": 366,
+        "right": 654,
+        "bottom": 753
+      }
+    },
+    {
+      "id": "hebrews.8.4.000044",
+      "book": "hebrews",
+      "source_file": "000044.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/marks uncertain.",
+      "hebrew_text": "וְאִם יִהְיֶה בָאָרֶץ לֹא יִהְיֶה כֹּהֵן בִּהְיוֹת כֹּהֲנִים הַמַּקְרִיבִים אֶת־הַמִּנְחָה כַּתּוֹרָה",
+      "output_image": "data/hutter/verse_images/hebrews/008_004_000044.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000044.png",
+      "crop_box": {
+        "left": 92,
+        "top": 717,
+        "right": 654,
+        "bottom": 1018
+      }
+    },
+    {
+      "id": "hebrews.8.5.000044",
+      "book": "hebrews",
+      "source_file": "000044.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Dense pointed text; several vowels/marks may be uncertain.",
+      "hebrew_text": "אֲשֶׁר בְּתַבְנִית וּבְצֵל הָאֵלֶּה אֲשֶׁר מֵעַל־הַשָּׁמַיִם יַעֲבֹדוּ כְּמוֹ דֻבַּר לְמשֶׁה בְּכַלֹּתוֹ אֶת־הַמִּשְׁכָּן וּרְאֵה אָמַר וַעֲשֵׂה כֹּל בְּתַבְנִיתָם אֲשֶׁר אַתָּה מַרְאֶה בָהָר",
+      "output_image": "data/hutter/verse_images/hebrews/008_005_000044.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000044.png",
+      "crop_box": {
+        "left": 92,
+        "top": 982,
+        "right": 654,
+        "bottom": 1347
+      }
+    },
+    {
+      "id": "hebrews.8.6.000044",
+      "book": "hebrews",
+      "source_file": "000044.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Parenthetical Hebrew included; pointing/marks partly unclear.",
+      "hebrew_text": "וְעַתָּה כַּאֲשֶׁר כְּהֻנָּה גְּדוֹלָה מֵהֶם לָקַח (יֵשׁוּעַ הַמָּשִׁיחַ) בִּגְדַלּוֹ כָּךְ יֵשׁ־לוֹ בְּרִית טוֹבָה אֲשֶׁר בְּאֲמָרוֹת טוֹבִים נִתְּנָה",
+      "output_image": "data/hutter/verse_images/hebrews/008_006_000044.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000044.png",
+      "crop_box": {
+        "left": 92,
+        "top": 1311,
+        "right": 654,
+        "bottom": 1649
+      }
+    },
+    {
+      "id": "hebrews.8.10.000046",
+      "book": "hebrews",
+      "source_file": "000046.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Vocalization is not fully clear in several words.",
+      "hebrew_text": "כִּי־זֹאת הַבְּרִית אֲשֶׁר אֶכְרֹת אֶת־בֵּית־יִשְׂרָאֵל אַחֲרֵי הַיָּמִים הָהֵם נְאֻם יְהוָה נָתַתִּי אֶת־תּוֹרָתִי בְּקִרְבָּם וְעַל־לִבָּם אֶכְתֲבֶנָּה וְהָיִיתִי לָהֶם לֵאלֹהִים וְהֵמָּה יִהְיוּ לִי לְעָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/008_010_000046.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000046.png",
+      "crop_box": {
+        "left": 71,
+        "top": 860,
+        "right": 632,
+        "bottom": 1194
+      }
+    },
+    {
+      "id": "hebrews.8.11.000046",
+      "book": "hebrews",
+      "source_file": "000046.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing is faint/uncertain.",
+      "hebrew_text": "וְלֹא יְלַמְּדוּ עוֹד אִישׁ אֶת־רֵעֵהוּ וְאִישׁ אֶת־אָחִיו לֵאמֹר דְּעוּ אֶת־יְהוָה כִּי־כֻלָּם יֵדְעוּ אֹתִי לְמִקְטַנָּם וְעַד־גְּדוֹלָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/008_011_000046.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000046.png",
+      "crop_box": {
+        "left": 71,
+        "top": 1158,
+        "right": 632,
+        "bottom": 1574
+      }
+    },
+    {
+      "id": "hebrews.8.12.000046",
+      "book": "hebrews",
+      "source_file": "000046.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and parenthetical word slightly uncertain.",
+      "hebrew_text": "כִּי אֶסְלַח לַעֲוֹנָם וּלְחַטָּאתָם (וּלְעֲוֹנָם) לֹא אֶזְכֹּר עוֹד",
+      "output_image": "data/hutter/verse_images/hebrews/008_012_000046.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000046.png",
+      "crop_box": {
+        "left": 71,
+        "top": 1538,
+        "right": 632,
+        "bottom": 1997
+      }
+    },
+    {
+      "id": "hebrews.8.8.000046",
+      "book": "hebrews",
+      "source_file": "000046.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and small marks are partly unclear.",
+      "hebrew_text": "כִּי־מוֹכִיחַ לָהֶם לֵאמֹר הִנֵּה יָמִים בָּאִים נְאֻם יְהוָה וְכָרַתִּי אֶת־בֵּית יִשְׂרָאֵל וְאֶת־בֵּית יְהוּדָה בְּרִית חֲדָשָׁה׃",
+      "output_image": "data/hutter/verse_images/hebrews/008_008_000046.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000046.png",
+      "crop_box": {
+        "left": 71,
+        "top": 34,
+        "right": 632,
+        "bottom": 504
+      }
+    },
+    {
+      "id": "hebrews.8.9.000046",
+      "book": "hebrews",
+      "source_file": "000046.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowels and small printed marks are uncertain.",
+      "hebrew_text": "לֹא כַבְּרִית אֲשֶׁר כָּרַתִּי אֶת־אֲבוֹתָם בְּיוֹם הֶחֱזִיקִי בְיָדָם לְהוֹצִיאָם מֵאֶרֶץ מִצְרָיִם אֲשֶׁר הֵמָּה הֵפֵרוּ אֶת־בְּרִיתִי וְאָנֹכִי בָּעַלְתִּי בָם נְאֻם יְהוָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/008_009_000046.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000046.png",
+      "crop_box": {
+        "left": 71,
+        "top": 468,
+        "right": 632,
+        "bottom": 896
+      }
+    },
+    {
+      "id": "hebrews.8.13.000048",
+      "book": "hebrews",
+      "source_file": "000048.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points and the word after בָּלְתָה are uncertain.",
+      "hebrew_text": "וּבְאָמְרוֹ חֲדָשׁ בִּלָּה אֶת־הָרִאשׁוֹנָה וַאֲשֶׁר בָּלְתָה עָתְשָׁנָה קְרוֹבָה הִיא לִבְלָה",
+      "output_image": "data/hutter/verse_images/hebrews/008_013_000048.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000048.png",
+      "crop_box": {
+        "left": 119,
+        "top": 31,
+        "right": 673,
+        "bottom": 356
+      }
+    },
+    {
+      "id": "hebrews.9.1.000048",
+      "book": "hebrews",
+      "source_file": "000048.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Final phrase and pointing somewhat uncertain.",
+      "hebrew_text": "וְגַם לַמִּשְׁכָּן הָרִאשׁוֹן הָיוּ לוֹ חֻקּוֹת הָעֲבוֹדָה וְחֶדְרַת הָעוֹלָם",
+      "output_image": "data/hutter/verse_images/hebrews/009_001_000048.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000048.png",
+      "crop_box": {
+        "left": 119,
+        "top": 320,
+        "right": 673,
+        "bottom": 699
+      }
+    },
+    {
+      "id": "hebrews.9.2.000048",
+      "book": "hebrews",
+      "source_file": "000048.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and word division uncertain.",
+      "hebrew_text": "כִּי כַאֲשֶׁר הוּקַם הַמִּשְׁכָּן הָרִאשׁוֹן הָיוּ בוֹ מְנוֹרַת הַשֻּׁלְחָן וְלֶחֶם הַפָּנִים הַנִּקְרָא קֹדֶשׁ",
+      "output_image": "data/hutter/verse_images/hebrews/009_002_000048.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000048.png",
+      "crop_box": {
+        "left": 119,
+        "top": 663,
+        "right": 673,
+        "bottom": 979
+      }
+    },
+    {
+      "id": "hebrews.9.3.000048",
+      "book": "hebrews",
+      "source_file": "000048.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing partially uncertain.",
+      "hebrew_text": "וְאַחֲרֵי פָּרֹכֶת הַשֵּׁנִית הָיָה אֹהֶל הַנִּקְרָא קֹדֶשׁ קֳדָשִׁים",
+      "output_image": "data/hutter/verse_images/hebrews/009_003_000048.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000048.png",
+      "crop_box": {
+        "left": 119,
+        "top": 943,
+        "right": 673,
+        "bottom": 1297
+      }
+    },
+    {
+      "id": "hebrews.9.10.000050",
+      "book": "hebrews",
+      "source_file": "000050.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points and one word division are difficult to verify.",
+      "hebrew_text": "כִּי־אִם־בִּלְבַד בְּמַאֲכָל וּבְמִשְׁתֵּה וּבַחֲלֻקַת הַטְּבִילוֹת וְצִדְקוֹת הַבָּשָׂר עַד־עֵת מֵישָׁרִים הוּשְׂמוּ עֲלֵיהֶם",
+      "output_image": "data/hutter/verse_images/hebrews/009_010_000050.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000050.png",
+      "crop_box": {
+        "left": 104,
+        "top": 1278,
+        "right": 654,
+        "bottom": 1649
+      }
+    },
+    {
+      "id": "hebrews.9.7.000050",
+      "book": "hebrews",
+      "source_file": "000050.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and the phrase around בבלי/בלי דם are difficult to verify.",
+      "hebrew_text": "וּבַמִּשְׁכָּן הַשֵּׁנִי פַּעַם־אַחַת בַּשָּׁנָה רֹאשׁ הַכֹּהֵן לְבַדּוֹ וְלֹא בְבְלִי דָם אֲשֶׁר הִקְרִיב עַל־נַפְשׁוֹ וְעַל־שִׁגְגוֹת הָעָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/009_007_000050.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000050.png",
+      "crop_box": {
+        "left": 104,
+        "top": 380,
+        "right": 654,
+        "bottom": 723
+      }
+    },
+    {
+      "id": "hebrews.9.8.000050",
+      "book": "hebrews",
+      "source_file": "000050.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several words/points are blurry, especially in the first line.",
+      "hebrew_text": "וּבָזֹאת גִּלָּה מִגִּידַת רוּחַ הַקֹּדֶשׁ כִּי־לֹא נִגְלָה דֶּרֶךְ הַקֳּדָשִׁים בְּעוֹדֶנּוּ עָמוּד אֹהֶל הָרִאשׁוֹן בִּמְקוֹמוֹ׃",
+      "output_image": "data/hutter/verse_images/hebrews/009_008_000050.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000050.png",
+      "crop_box": {
+        "left": 104,
+        "top": 687,
+        "right": 654,
+        "bottom": 1023
+      }
+    },
+    {
+      "id": "hebrews.9.12.000052",
+      "book": "hebrews",
+      "source_file": "000052.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud/marks indistinct.",
+      "hebrew_text": "וְלֹא בְּדַם עַתּוּדִים וַעֲגָלִים כִּי־אִם בְּדָם נַפְשׁוֹ בָּא בְּפַעַם אַחַת אֶל־הַקֹּדֶשׁ וַיִּמְצָא פְּדוּת עוֹלָם",
+      "output_image": "data/hutter/verse_images/hebrews/009_012_000052.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000052.png",
+      "crop_box": {
+        "left": 89,
+        "top": 59,
+        "right": 641,
+        "bottom": 426
+      }
+    },
+    {
+      "id": "hebrews.9.13.000052",
+      "book": "hebrews",
+      "source_file": "000052.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is not fully clear in several words.",
+      "hebrew_text": "וְאִם דַּם הַפָּרִים וְעַתּוּדִים וְאֵפֶר הַפָּרָה זֹרֵק מְקַדֵּשׁ וּמְטַהֵר אֶת־הַטְּמֵאִים בְּטֻמְאַת הַבָּשָׂר",
+      "output_image": "data/hutter/verse_images/hebrews/009_013_000052.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000052.png",
+      "crop_box": {
+        "left": 89,
+        "top": 390,
+        "right": 641,
+        "bottom": 818
+      }
+    },
+    {
+      "id": "hebrews.9.15.000052",
+      "book": "hebrews",
+      "source_file": "000052.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and a few consonants are somewhat unclear.",
+      "hebrew_text": "עַל־כֵּן בְּרִית הַחֲדָשָׁה אִישׁ בֵּינַיִם הוּא אֲשֶׁר אִם הָיְתָה לְמָוֶת נַפְשׁוֹ לְכַפֵּר עֲוֹנִים אֲשֶׁר הָיוּ בִּבְרִית הָרִאשׁוֹנָה הַקְּרוּאִים יִקְחוּ אֶת־שְׁבוּעַת נַחֲלַת עוֹלָמִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/009_015_000052.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000052.png",
+      "crop_box": {
+        "left": 89,
+        "top": 1219,
+        "right": 641,
+        "bottom": 1596
+      }
+    },
+    {
+      "id": "hebrews.9.17.000054",
+      "book": "hebrews",
+      "source_file": "000054.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Image is blurred/overprinted; pointing is uncertain.",
+      "hebrew_text": "כִּי־כָל־בְּרִית נְכוֹנָה הִיא בַּמֵּתִים וּבְעוֹד חַי הַמְקַיֵּם אֵת־בְּרִית אֵינֶנָּה עַל מְכוֹנָהּ׃",
+      "output_image": "data/hutter/verse_images/hebrews/009_017_000054.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000054.png",
+      "crop_box": {
+        "left": 85,
+        "top": 59,
+        "right": 631,
+        "bottom": 365
+      }
+    },
+    {
+      "id": "hebrews.9.19.000054",
+      "book": "hebrews",
+      "source_file": "000054.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/cantillation-like marks are faint and difficult to verify exactly.",
+      "hebrew_text": "כִּי בְּאֲשֶׁר סֵפֶר מֹשֶׁה לָעָם אֶת־כָּל־דִּבְרֵי יְהוָה וְאֵת כָּל־הַמִּשְׁפָּטִים לָקַח אֶת־הַדָּם הַפָּרִים וְהַשְׂעִירִים אֶת־הַמַּיִם וְאֵזוֹב וּסְפַר הַבְּרִית וַיִּזְרֹק עַל־כָּל־הָעָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/009_019_000054.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000054.png",
+      "crop_box": {
+        "left": 85,
+        "top": 590,
+        "right": 631,
+        "bottom": 945
+      }
+    },
+    {
+      "id": "hebrews.9.20.000054",
+      "book": "hebrews",
+      "source_file": "000054.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Hebrew is legible, but some vocalization marks are faint.",
+      "hebrew_text": "וַיֹּאמֶר הִנֵּה דַּם הַבְּרִית אֲשֶׁר כָּרַת יְהוָה עִמָּכֶם׃",
+      "output_image": "data/hutter/verse_images/hebrews/009_020_000054.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000054.png",
+      "crop_box": {
+        "left": 85,
+        "top": 909,
+        "right": 631,
+        "bottom": 1206
+      }
+    },
+    {
+      "id": "hebrews.9.25.000056",
+      "book": "hebrews",
+      "source_file": "000056.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud and hyphenation uncertain.",
+      "hebrew_text": "לֹא כִּי־בְפָעָמִים רַבּוֹת מַקְרִיב אֶת־נַפְשׁוֹ כְּכֹהֵן הַגָּדוֹל בָּא אֶל־קֹדֶשׁ הַקֳּדָשִׁים בַּשָּׁנָה בְּדָם אַחֵר׃",
+      "output_image": "data/hutter/verse_images/hebrews/009_025_000056.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000056.png",
+      "crop_box": {
+        "left": 86,
+        "top": 420,
+        "right": 646,
+        "bottom": 808
+      }
+    },
+    {
+      "id": "hebrews.9.26.000056",
+      "book": "hebrews",
+      "source_file": "000056.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Opening parenthesis is printed; omitted as non-verse punctuation uncertain. Some vowels are uncertain.",
+      "hebrew_text": "וְאִם־כֵּן הָיָה־צָרִיךְ בְּפָעָמִים רַבּוֹת לְעַנּוֹת מֵרֵאשִׁית הָעוֹלָם וְעַתָּה פַעַם אַחַת בְּתַכְלִית הָעוֹלָמִים לְכַפֵּר עָוֹן בְּזֶבַח נַפְשׁוֹ נִגְלָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/009_026_000056.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000056.png",
+      "crop_box": {
+        "left": 86,
+        "top": 772,
+        "right": 646,
+        "bottom": 1170
+      }
+    },
+    {
+      "id": "hebrews.9.28.000056",
+      "book": "hebrews",
+      "source_file": "000056.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and final word vowels uncertain.",
+      "hebrew_text": "כֵּן הַמָּשִׁיחַ פַּעַם אַחַת הָעֳלָה לְכַפֵּר עַל־עֲוֹנוֹת רַבִּים וְשֵׁנִית בְּלֹא חֵטְא יֵרָאֶה לַאֲשֶׁר יְקַוּוּ בוֹ לִישׁוּעָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/009_028_000056.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000056.png",
+      "crop_box": {
+        "left": 86,
+        "top": 1532,
+        "right": 646,
+        "bottom": 1996
+      }
+    },
+    {
+      "id": "hebrews.10.12.000060",
+      "book": "hebrews",
+      "source_file": "000060.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points are indistinct.",
+      "hebrew_text": "וְזֶה הוּא בְּהַקְרִיבוֹ אֶת־זֶבַח אֶחָד עַל־הַחַטָּאִים לְעוֹלָם יָשַׁב לִימִין אֱלֹהִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/010_012_000060.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000060.png",
+      "crop_box": {
+        "left": 101,
+        "top": 1156,
+        "right": 633,
+        "bottom": 1462
+      }
+    },
+    {
+      "id": "hebrews.10.14.000060",
+      "book": "hebrews",
+      "source_file": "000060.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partly unclear.",
+      "hebrew_text": "כִּי־בְקָרְבָּן אֶחָד שִׁלֵּם לְעוֹלָם אֶת־הַמְקֻדָּשִׁים׃",
+      "output_image": "data/hutter/verse_images/hebrews/010_014_000060.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000060.png",
+      "crop_box": {
+        "left": 101,
+        "top": 1722,
+        "right": 633,
+        "bottom": 2014
+      }
+    },
+    {
+      "id": "hebrews.10.15.000062",
+      "book": "hebrews",
+      "source_file": "000062.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing is faint; header ignored.",
+      "hebrew_text": "וּמְעִידָה לָנוּ גַּם רוּחַ הַקֹּדֶשׁ לֵאמֹר׃",
+      "output_image": "data/hutter/verse_images/hebrews/010_015_000062.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000062.png",
+      "crop_box": {
+        "left": 77,
+        "top": 43,
+        "right": 630,
+        "bottom": 370
+      }
+    },
+    {
+      "id": "hebrews.10.17.000062",
+      "book": "hebrews",
+      "source_file": "000062.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud/cantillation-like marks are not fully clear.",
+      "hebrew_text": "כִּי אֶסְלַח לַעֲוֹנָם וּלְחַטָּאתָם לֹא אֶזְכֹּר עוֹד",
+      "output_image": "data/hutter/verse_images/hebrews/010_017_000062.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000062.png",
+      "crop_box": {
+        "left": 77,
+        "top": 582,
+        "right": 630,
+        "bottom": 822
+      }
+    },
+    {
+      "id": "hebrews.10.18.000062",
+      "book": "hebrews",
+      "source_file": "000062.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Unusual wording; final word and pointing are somewhat unclear.",
+      "hebrew_text": "וְאַיֵּה סְלִיחַת הָאֵלֶּה אֵינֶנָּה עוֹד מִנְחָה עַל הַחֲטָאָם",
+      "output_image": "data/hutter/verse_images/hebrews/010_018_000062.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000062.png",
+      "crop_box": {
+        "left": 77,
+        "top": 786,
+        "right": 630,
+        "bottom": 1059
+      }
+    },
+    {
+      "id": "hebrews.10.19.000062",
+      "book": "hebrews",
+      "source_file": "000062.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and small supralinear marks are difficult to distinguish exactly.",
+      "hebrew_text": "וְכִי־יֵשׁ לָנוּ אַחַי בִּטָּחוֹן לָבֹא אֶת הַקֹּדֶשׁ בְּדַם יֵשׁוּעַ",
+      "output_image": "data/hutter/verse_images/hebrews/010_019_000062.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000062.png",
+      "crop_box": {
+        "left": 77,
+        "top": 1023,
+        "right": 630,
+        "bottom": 1270
+      }
+    },
+    {
+      "id": "hebrews.10.20.000062",
+      "book": "hebrews",
+      "source_file": "000062.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some letters/pointing are uncertain due to print quality; verse 21 below ignored.",
+      "hebrew_text": "שֶׁהִיא דֶּרֶךְ הַחַיִּים הַחֲדָשָׁה אֲשֶׁר אֲנָהּ חִדֵּשׁ לָנוּ בְּפָרֹכֶת וְזֹאת הִיא בְּבְשָׂרוֹ",
+      "output_image": "data/hutter/verse_images/hebrews/010_020_000062.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000062.png",
+      "crop_box": {
+        "left": 77,
+        "top": 1234,
+        "right": 630,
+        "bottom": 1478
+      }
+    },
+    {
+      "id": "hebrews.10.23.000064",
+      "book": "hebrews",
+      "source_file": "000064.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Left edge slightly cut; one word near left margin is partly clipped.",
+      "hebrew_text": "נַחֲזִיק אֶת־הַתּוֹדָה מִתִּקְוָתֵנוּ וְלֹא נָמוּט כִּי־נֶאֱמָן הוּא הַמַּאֲמִיר׃",
+      "output_image": "data/hutter/verse_images/hebrews/010_023_000064.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000064.png",
+      "crop_box": {
+        "left": 83,
+        "top": 38,
+        "right": 622,
+        "bottom": 363
+      }
+    },
+    {
+      "id": "hebrews.10.25.000064",
+      "book": "hebrews",
+      "source_file": "000064.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several pointed words are difficult to distinguish confidently from the image.",
+      "hebrew_text": "וְלֹא נַעֲזֹב אֶת־קְהִלָּה כְּמִשְׁפַּט פְּתָעָה הָאֲנָשִׁים כִּי־אִם מְנַחֵם אִישׁ אֶת־אָחִיו וְכָכָה יוֹתֵר כַּאֲשֶׁר תִּרְאוּ לִקְרֹב אֶת־הַיּוֹם׃",
+      "output_image": "data/hutter/verse_images/hebrews/010_025_000064.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000064.png",
+      "crop_box": {
+        "left": 83,
+        "top": 658,
+        "right": 622,
+        "bottom": 1059
+      }
+    },
+    {
+      "id": "hebrews.10.35.000068",
+      "book": "hebrews",
+      "source_file": "000068.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points/marks are unclear.",
+      "hebrew_text": "לָכֵן אַל הַשְׁלִיכוּ אֶת־בִּטְחֲכֶם אֲשֶׁר יֶשׁ־לָהּ גְּמוּלָה רַבָּה׃",
+      "output_image": "data/hutter/verse_images/hebrews/010_035_000068.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000068.png",
+      "crop_box": {
+        "left": 61,
+        "top": 32,
+        "right": 618,
+        "bottom": 311
+      }
+    },
+    {
+      "id": "hebrews.10.38.000068",
+      "book": "hebrews",
+      "source_file": "000068.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowels/cantillation-like marks are faint.",
+      "hebrew_text": "וְצַדִּיק בֶּאֱמוּנָתוֹ יִחְיֶה וְאִם עָפְלָה לֹא יָשְׁרָה נַפְשׁוֹ בּוֹ",
+      "output_image": "data/hutter/verse_images/hebrews/010_038_000068.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000068.png",
+      "crop_box": {
+        "left": 61,
+        "top": 763,
+        "right": 618,
+        "bottom": 957
+      }
+    },
+    {
+      "id": "hebrews.10.39.000068",
+      "book": "hebrews",
+      "source_file": "000068.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and the word after בני־ are somewhat unclear.",
+      "hebrew_text": "וַאֲנַחְנוּ לֹא הָיִינוּ בְּנֵי־הָעָפֶל לַאֲבֵדָה כִּי־אִם בְּנֵי־אֱמוּנָה לִקְנוֹת אֶת־הַנֶּפֶשׁ",
+      "output_image": "data/hutter/verse_images/hebrews/010_039_000068.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000068.png",
+      "crop_box": {
+        "left": 61,
+        "top": 921,
+        "right": 618,
+        "bottom": 1243
+      }
+    },
+    {
+      "id": "hebrews.11.1.000068",
+      "book": "hebrews",
+      "source_file": "000068.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and the form of the final word are slightly unclear.",
+      "hebrew_text": "וְהִנֵּה אֱמוּנָה קִיּוּם הַמִּקְוֶה הִיא וְתוֹכַחַת אֱמֶת הַדְּבָרִים לֹא נִרְאִים",
+      "output_image": "data/hutter/verse_images/hebrews/011_001_000068.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000068.png",
+      "crop_box": {
+        "left": 61,
+        "top": 1207,
+        "right": 618,
+        "bottom": 1482
+      }
+    },
+    {
+      "id": "hebrews.11.3.000068",
+      "book": "hebrews",
+      "source_file": "000068.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Verse spans both images; some pointing/marks are small and partly unclear.",
+      "hebrew_text": "בֶּאֱמוּנָה מְבִינִים אֲנַחְנוּ כִּי נָכוֹן הָעוֹלָם בִּדְבַר אֱלֹהִים כִּי מִבְּכָל־מָה נִרְאָה נַעֲשָׂה כָל־אֲשֶׁר נִרְאָם׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_003_000068.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000068.png",
+      "crop_box": {
+        "left": 61,
+        "top": 1734,
+        "right": 618,
+        "bottom": 1984
+      }
+    },
+    {
+      "id": "hebrews.11.4.000070",
+      "book": "hebrews",
+      "source_file": "000070.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud and small marks are difficult to verify.",
+      "hebrew_text": "בֶּאֱמוּנָה מִנְחָה גְדוֹלָה הֶבֶל מִקַּיִן הֵבִיא לֵאלֹהִים אֲשֶׁר עָלֶיהָ הוּעַד כִּי צַדִּיק הוּא וֵאלֹהִים הוּא הֵעִיד עַל־מִנְחָתוֹ כִּי בַּעֲבוּרָהּ מֵת עוֹדֶנּוּ מְדַבֵּר׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_004_000070.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000070.png",
+      "crop_box": {
+        "left": 71,
+        "top": 33,
+        "right": 639,
+        "bottom": 464
+      }
+    },
+    {
+      "id": "hebrews.11.5.000070",
+      "book": "hebrews",
+      "source_file": "000070.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and some small printed marks uncertain.",
+      "hebrew_text": "בֶּאֱמוּנָה נִקַּח חֲנוֹךְ וְלֹא רָאָה אֶת־הַמָּוֶת וְאֵינֶנּוּ כִּי־לָקַח אֹתוֹ אֱלֹהִים וְטֶרֶם נִקַּח הוּעַד כִּי הִתְהַלֵּךְ אֶת־הָאֱלֹהִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_005_000070.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000070.png",
+      "crop_box": {
+        "left": 71,
+        "top": 428,
+        "right": 639,
+        "bottom": 824
+      }
+    },
+    {
+      "id": "hebrews.11.6.000070",
+      "book": "hebrews",
+      "source_file": "000070.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points and final word are not fully clear.",
+      "hebrew_text": "כִּי־בִּלְתִּי יְכוֹלָה הִיא בִּלְתִּי אֱמוּנָה לְהִתְהַלֵּךְ אֶת־הָאֱלֹהִים כִּי צָרִיךְ לוֹ אֲשֶׁר יִקְרַב אֶל־אֱלֹהִים לְהַאֲמִין כִּי־יְהוָה הוּא וְגֹמֵל עַל־אֲשֶׁר יְבַקְשׁוּהוּ׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_006_000070.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000070.png",
+      "crop_box": {
+        "left": 71,
+        "top": 788,
+        "right": 639,
+        "bottom": 1291
+      }
+    },
+    {
+      "id": "hebrews.11.7.000070",
+      "book": "hebrews",
+      "source_file": "000070.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Top of verse slightly cut; some pointing/letters uncertain.",
+      "hebrew_text": "בְּאֱמוּנָה נֹחַ נִזְהָר עַל־הַדְּבָרִים אֲשֶׁר עוֹד לֹא נִרְאֻהוּ בְּיִרְאָה אֱלֹהִים וְהוּא עָשָׂה תֵּבָה הַיָּכָה לְתְשׁוּעַ בֵּיתוֹ אֲשֶׁר בָּהּ שָׁפַט אֶת־הָעוֹלָם וַיְהִי־יוֹרֵשׁ הַצְּדָקָה אֲשֶׁר הִיא בָּאֱמוּנָה׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_007_000070.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000070.png",
+      "crop_box": {
+        "left": 71,
+        "top": 1255,
+        "right": 639,
+        "bottom": 1663
+      }
+    },
+    {
+      "id": "hebrews.11.10.000072",
+      "book": "hebrews",
+      "source_file": "000072.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing on several words is difficult to confirm from image.",
+      "hebrew_text": "כִּי־קִוָּה אֶל־עִיר אֲשֶׁר לָהּ יְסוֹד מְיַסֵּד וְעֹשֶׂהָּ אֱלֹהִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_010_000072.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000072.png",
+      "crop_box": {
+        "left": 68,
+        "top": 313,
+        "right": 618,
+        "bottom": 643
+      }
+    },
+    {
+      "id": "hebrews.11.11.000072",
+      "book": "hebrews",
+      "source_file": "000072.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several words/points are unclear; especially final phrase.",
+      "hebrew_text": "בְּאֱמוּנָה שָׂרָה גַּם הִיא לָקְחָה כֹּחַ לְהָרוֹת אַחַר הַמּוֹעֵד עַל־עֵת קוֹמָתָהּ יָלְדָה כִּי־הֶאֱמִינָה בְּנֶאֱמָן הוּא הַמַּאֲמִיר׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_011_000072.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000072.png",
+      "crop_box": {
+        "left": 68,
+        "top": 607,
+        "right": 618,
+        "bottom": 965
+      }
+    },
+    {
+      "id": "hebrews.11.9.000072",
+      "book": "hebrews",
+      "source_file": "000072.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some letters and niqqud are blurry; transcription may need verification.",
+      "hebrew_text": "בְּאֱמוּנָה גָּר הָיָה בְּאֶרֶץ הַשְׁבֻעָה הַנָּכְרִיָּה יָשַׁב בְּאָהֳלִים אֶת יִצְחָק וְיַעֲקֹב בְּנֵי נַחֲלַת הַשְׁבֻעָתוֹ׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_009_000072.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000072.png",
+      "crop_box": {
+        "left": 68,
+        "top": 38,
+        "right": 618,
+        "bottom": 349
+      }
+    },
+    {
+      "id": "hebrews.11.16.000074",
+      "book": "hebrews",
+      "source_file": "000074.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and one middle word are uncertain due to print quality.",
+      "hebrew_text": "וְעַתָּה מְחַכִּים עִיר טוֹבָה מִמֶּנָּה וְזֹאת הִיא עִיר הַשָּׁמַיִם לָכֵן לֹא מִתְבּוֹשֵׁשׁ בָּהֶם אֱלֹהִים לְהִקָּרֵא אֱלֹהֵיהֶם כִּי־הֵכִין לָהֶם אֶת־הָעִיר׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_016_000074.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000074.png",
+      "crop_box": {
+        "left": 79,
+        "top": 309,
+        "right": 630,
+        "bottom": 659
+      }
+    },
+    {
+      "id": "hebrews.11.21.000074",
+      "book": "hebrews",
+      "source_file": "000074.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Parenthesized final word and some vowel points are slightly unclear.",
+      "hebrew_text": "בֶּאֱמוּנָה יַעֲקֹב בְּמוֹתוֹ בֵּרַךְ לְכָל אִישׁ מִבְּנֵי יוֹסֵף וַיִּשְׁתַּחוּ יִשְׂרָאֵל עַל־רֹאשׁ (הַמַּטֶּה׃)",
+      "output_image": "data/hutter/verse_images/hebrews/011_021_000074.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000074.png",
+      "crop_box": {
+        "left": 79,
+        "top": 1646,
+        "right": 630,
+        "bottom": 1999
+      }
+    },
+    {
+      "id": "hebrews.11.28.000076",
+      "book": "hebrews",
+      "source_file": "000076.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and final word are somewhat unclear.",
+      "hebrew_text": "בֶּאֱמוּנָה עָשָׂה הַפֶּסַח וּשְׁפִיכַת־הַדָּם פֶּן יִהְיֶה הַמַּכֶּה אֶת־כָּל־בְּכוֹר יִגַּע בָּמוֹ",
+      "output_image": "data/hutter/verse_images/hebrews/011_028_000076.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000076.png",
+      "crop_box": {
+        "left": 75,
+        "top": 1633,
+        "right": 627,
+        "bottom": 1999
+      }
+    },
+    {
+      "id": "hebrews.11.30.000078",
+      "book": "hebrews",
+      "source_file": "000078.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud and one word reading uncertain.",
+      "hebrew_text": "בֶּאֱמוּנָה נָפְלָה חוֹמַת יְרִיחוֹ מִתַּחְתֶּיהָ בַּאֲשֶׁר סָבְבוּ אֶת־הָעִיר יוֹם הַשְׁבִיעִי",
+      "output_image": "data/hutter/verse_images/hebrews/011_030_000078.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000078.png",
+      "crop_box": {
+        "left": 95,
+        "top": 316,
+        "right": 610,
+        "bottom": 634
+      }
+    },
+    {
+      "id": "hebrews.11.33.000078",
+      "book": "hebrews",
+      "source_file": "000078.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "OCR uncertainty in several vowels/marks; verse appears complete.",
+      "hebrew_text": "אֲשֶׁר בֶּאֱמוּנָה כָּבְשׁוּ מַמְלָכוֹת פָּעֲלוּ צְדָקָה הֶחֱזִיקוּ בִּשְׁבוּעָה סָתְמוּ פִּי הָאֲרָיוֹת׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_033_000078.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000078.png",
+      "crop_box": {
+        "left": 95,
+        "top": 1096,
+        "right": 610,
+        "bottom": 1413
+      }
+    },
+    {
+      "id": "hebrews.11.36.000080",
+      "book": "hebrews",
+      "source_file": "000080.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some letters/vowels are uncertain due to print quality.",
+      "hebrew_text": "וַאֲחֵרִים נִסָּה קָלוֹן לָצוֹן וּמַסֵּר הַשּׁוֹטִים לָקְחוּ וְעוֹד אִיזִקִים אֲסוּרִים וּמַסְגֵּרוֹת׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_036_000080.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000080.png",
+      "crop_box": {
+        "left": 75,
+        "top": 29,
+        "right": 630,
+        "bottom": 401
+      }
+    },
+    {
+      "id": "hebrews.11.38.000080",
+      "book": "hebrews",
+      "source_file": "000080.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/marks uncertain.",
+      "hebrew_text": "אשר לא שוה להם העולם תועים בציי ובמדבר בהרים במערות בנקרות הסלעים׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_038_000080.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000080.png",
+      "crop_box": {
+        "left": 75,
+        "top": 670,
+        "right": 630,
+        "bottom": 1033
+      }
+    },
+    {
+      "id": "hebrews.11.39.000080",
+      "book": "hebrews",
+      "source_file": "000080.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing/marks not fully preserved.",
+      "hebrew_text": "וכל־האלה אף־כי העידו באמונה לא קבלו את־ההבטחה׃",
+      "output_image": "data/hutter/verse_images/hebrews/011_039_000080.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000080.png",
+      "crop_box": {
+        "left": 75,
+        "top": 997,
+        "right": 630,
+        "bottom": 1382
+      }
+    },
+    {
+      "id": "hebrews.12.4.000082",
+      "book": "hebrews",
+      "source_file": "000082.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points and one word are uncertain due to print quality.",
+      "hebrew_text": "כִּי־עַד הֲדֹם לֹא עֲמַדְתֶּם לְהִלָּחֵם עַל־הַחֵטְא",
+      "output_image": "data/hutter/verse_images/hebrews/012_004_000082.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000082.png",
+      "crop_box": {
+        "left": 63,
+        "top": 686,
+        "right": 635,
+        "bottom": 1017
+      }
+    },
+    {
+      "id": "hebrews.12.7.000082",
+      "book": "hebrews",
+      "source_file": "000082.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and one verb form are uncertain due to blur.",
+      "hebrew_text": "לָכֵן תַּעֲמֹדוּ בַּמוּסָר כִּי־כְבָנִים מְקָרֵב לָכֶם אֱלֹהִים אֶת־נַפְשׁוֹ וּמִי־הַבֵּן אֲשֶׁר לֹא יְכִיחֶנּוּ אָבִיו׃",
+      "output_image": "data/hutter/verse_images/hebrews/012_007_000082.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000082.png",
+      "crop_box": {
+        "left": 63,
+        "top": 1585,
+        "right": 635,
+        "bottom": 2000
+      }
+    },
+    {
+      "id": "hebrews.12.11.000084",
+      "book": "hebrews",
+      "source_file": "000084.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partly unclear; transcription should be reviewed against image.",
+      "hebrew_text": "וְכָל־מוּסָר בְּעֵת קְרָה לֹא נִרְאָה לִהְיוֹת שִׂמְחָה כִּי־אִם דַּאֲגָה וּבְאַחֲרִיתָהּ יִתֵּן פְּרִי־שָׁלוֹם וּצְדָקָה לַאֲשֶׁר יִגָּעוּ בוֹ׃",
+      "output_image": "data/hutter/verse_images/hebrews/012_011_000084.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000084.png",
+      "crop_box": {
+        "left": 132,
+        "top": 921,
+        "right": 776,
+        "bottom": 1307
+      }
+    },
+    {
+      "id": "hebrews.12.14.000086",
+      "book": "hebrews",
+      "source_file": "000086.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Divine-name pointing and several marks are somewhat unclear.",
+      "hebrew_text": "בַּקְּשׁוּ שָׁלוֹם וּמִרְדְּפוּ עִם כֻּלָּם וְאֶת־הַקֹּדֶשׁ אֲשֶׁר בִּלְעָדָיו אִישׁ לֹא יִרְאֶה אֶת־יְהוָֹה׃",
+      "output_image": "data/hutter/verse_images/hebrews/012_014_000086.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000086.png",
+      "crop_box": {
+        "left": 86,
+        "top": 45,
+        "right": 635,
+        "bottom": 423
+      }
+    },
+    {
+      "id": "hebrews.12.15.000086",
+      "book": "hebrews",
+      "source_file": "000086.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partly unclear in the image.",
+      "hebrew_text": "וּשְׁמֹרוּ פֶּן יֶחְסַר לְאִישׁ הַחֶסֶד אֱלֹהִים פֶּן יֵשׁ בָּכֶם שֹׁרֶשׁ מָרָה רֹאשׁ וְלַעֲנָה וּבוֹ יִטַּמְּאוּ רַבִּים׃",
+      "output_image": "data/hutter/verse_images/hebrews/012_015_000086.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000086.png",
+      "crop_box": {
+        "left": 86,
+        "top": 387,
+        "right": 635,
+        "bottom": 709
+      }
+    },
+    {
+      "id": "hebrews.12.16.000086",
+      "book": "hebrews",
+      "source_file": "000086.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud and maqaf placement are difficult to confirm.",
+      "hebrew_text": "פֶּן אִישׁ מְנָאֵף אוֹ־אִישׁ מְחַלֵּל כְּמוֹ עֵשָׂו אֲשֶׁר מָכַר בְּלֶחֶם וְנָזִיד עֲדָשִׁים אֶת־בְּכֹרָתוֹ׃",
+      "output_image": "data/hutter/verse_images/hebrews/012_016_000086.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000086.png",
+      "crop_box": {
+        "left": 86,
+        "top": 673,
+        "right": 635,
+        "bottom": 975
+      }
+    },
+    {
+      "id": "hebrews.12.18.000086",
+      "book": "hebrews",
+      "source_file": "000086.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and several small marks are not fully certain.",
+      "hebrew_text": "כִּי־לֹא קְרַבְתֶּם לְעֲלֹת בְּהַר הַנִּגַּע בְּאֵשׁ וּבְעָנָן בְּעָשָׁן וּבַחֹשֶׁךְ וּבְרָקִים וְעָנָן כָּבֵד׃",
+      "output_image": "data/hutter/verse_images/hebrews/012_018_000086.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000086.png",
+      "crop_box": {
+        "left": 86,
+        "top": 1274,
+        "right": 635,
+        "bottom": 1690
+      }
+    },
+    {
+      "id": "hebrews.12.20.000088",
+      "book": "hebrews",
+      "source_file": "000088.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Final parenthesized phrase and pointing are somewhat unclear.",
+      "hebrew_text": "כִּי־לֹא יָכְלוּ לְהָכִיל מַה מְצַוֶּה אִם־בְּהֵמָה אִם־אִישׁ וְנָגַע בָּהָר יָד סָקוֹל יִסָּקֵל אוֹ־יָרֹה יִיָּרֶה׃",
+      "output_image": "data/hutter/verse_images/hebrews/012_020_000088.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000088.png",
+      "crop_box": {
+        "left": 80,
+        "top": 38,
+        "right": 633,
+        "bottom": 385
+      }
+    },
+    {
+      "id": "hebrews.12.21.000088",
+      "book": "hebrews",
+      "source_file": "000088.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "First word and pointing may be uncertain due to print quality.",
+      "hebrew_text": "וְכִי־חֲדָדָה הִיא הַמַּרְאָה וַיֹּאמֶר גַּם מֹשֶׁה מָלֵא אֲנִי חֲרָדָה וָרַעַד׃",
+      "output_image": "data/hutter/verse_images/hebrews/012_021_000088.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000088.png",
+      "crop_box": {
+        "left": 80,
+        "top": 349,
+        "right": 633,
+        "bottom": 667
+      }
+    },
+    {
+      "id": "hebrews.12.22.000088",
+      "book": "hebrews",
+      "source_file": "000088.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/cantillation-like marks are small and uncertain.",
+      "hebrew_text": "כִּי־אַתֶּם קְרַבְתֶּם אֶל־הַר צִיּוֹן וְאֶל־עִיר אֵל־חַי אֶל־יְרוּשָׁלַיִם אֲשֶׁר מֵעַל־הַשָּׁמַיִם אֶל־עֲדַת רִבְבוֹת הַמַּלְאָכִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/012_022_000088.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000088.png",
+      "crop_box": {
+        "left": 80,
+        "top": 631,
+        "right": 633,
+        "bottom": 1070
+      }
+    },
+    {
+      "id": "hebrews.12.25.000088",
+      "book": "hebrews",
+      "source_file": "000088.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some words/pointing are uncertain due to print quality.",
+      "hebrew_text": "רְאוּ הִשָּׁמְרוּ מִן הַמְּדַבֵּר עַל־אֲשֶׁר מֵרְדוּ עַל־הַמְדַבֵּר אִם בָּאָרֶץ לֹא־יָכְלוּ לָנוּס כַּמָּה יֹתֵר אֲנַחְנוּ אִם נִמְרֹד עַל־אֲשֶׁר מִשָּׁמַיִם מְדַבֵּר אֵלֵינוּ׃",
+      "output_image": "data/hutter/verse_images/hebrews/012_025_000088.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000088.png",
+      "crop_box": {
+        "left": 80,
+        "top": 1601,
+        "right": 633,
+        "bottom": 2011
+      }
+    },
+    {
+      "id": "hebrews.13.2.000090",
+      "book": "hebrews",
+      "source_file": "000090.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and one word division uncertain.",
+      "hebrew_text": "אַל־תִּשְׁכְּחוּ לָלוּן אֶת־הָאֹרְחִים בְּרוּחַ נְדִיבָה כִּי־בְדָבָר הַזֶּה אֲנָשִׁים בְּלִי דַעַת הֵלִינוּ אֶת הַמַּלְאָכִים׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_002_000090.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000090.png",
+      "crop_box": {
+        "left": 109,
+        "top": 1394,
+        "right": 661,
+        "bottom": 1698
+      }
+    },
+    {
+      "id": "hebrews.13.6.000092",
+      "book": "hebrews",
+      "source_file": "000092.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing/marks not confidently preserved exactly.",
+      "hebrew_text": "כך נאמר בבטחון יהוה לי בעזרתי לא אירא מה־יעשה לי אדם׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_006_000092.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000092.png",
+      "crop_box": {
+        "left": 105,
+        "top": 657,
+        "right": 656,
+        "bottom": 1046
+      }
+    },
+    {
+      "id": "hebrews.13.7.000092",
+      "book": "hebrews",
+      "source_file": "000092.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and a few letters are somewhat uncertain from the image.",
+      "hebrew_text": "זכרו למנהיגים אשר דברו אליכם את־דבר אלהים הביטו בדרך הליכותם ולכו בעקבות אמונתם׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_007_000092.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000092.png",
+      "crop_box": {
+        "left": 105,
+        "top": 1010,
+        "right": 656,
+        "bottom": 1367
+      }
+    },
+    {
+      "id": "hebrews.13.9.000092",
+      "book": "hebrews",
+      "source_file": "000092.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several vowel points and small diacritics are uncertain.",
+      "hebrew_text": "בְּלִמּוּדִים מִתְחַלְפִים מְחֻדָּשִׁים לֹא תִתְנֹעָעוּ כִּי־טוֹב בְּחֶסֶד לְסַעֵד לְבַבְכֶם וְלֹא בְּמַאֲכָלִים אֲשֶׁר לֹא הוֹעִילוּ לַהֹלְכִים בָּם׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_009_000092.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000092.png",
+      "crop_box": {
+        "left": 105,
+        "top": 1507,
+        "right": 656,
+        "bottom": 2009
+      }
+    },
+    {
+      "id": "hebrews.13.14.000094",
+      "book": "hebrews",
+      "source_file": "000094.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Verse appears split across lines; some glyphs/points are unclear.",
+      "hebrew_text": "כִּי־לֹא יֵשׁ־לָנוּ פֹּה עִיר עֹמֶדֶת כִּי־אִם מְבַקְּשִׁים וַאֲנַחְנוּ אֶת־עֲתִידָה",
+      "output_image": "data/hutter/verse_images/hebrews/013_014_000094.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000094.png",
+      "crop_box": {
+        "left": 102,
+        "top": 1136,
+        "right": 617,
+        "bottom": 1413
+      }
+    },
+    {
+      "id": "hebrews.13.15.000094",
+      "book": "hebrews",
+      "source_file": "000094.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partially blurry; transcription may need verification.",
+      "hebrew_text": "לָכֵן בְּיָדוֹ נַעֲלֶה זֶבַח הוֹדָיָה בְּכָל עֵת לֵאלֹהִים זֶה הוּא אֲמַר פְּרִי שְׂפָתַיִם לְהוֹדוֹת לִשְׁמוֹ",
+      "output_image": "data/hutter/verse_images/hebrews/013_015_000094.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000094.png",
+      "crop_box": {
+        "left": 102,
+        "top": 1377,
+        "right": 617,
+        "bottom": 1669
+      }
+    },
+    {
+      "id": "hebrews.13.16.000094",
+      "book": "hebrews",
+      "source_file": "000094.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Right edge/pointing and final word area are somewhat unclear.",
+      "hebrew_text": "אַךְ לַעֲשׂוֹת טוֹבָה וּלְצְדָקָה לֹא תִּשְׁכָּחוּ כִּי־בִזְבָחִים כָּאֵלֶּה רוֹצֶה אֱלֹהִים",
+      "output_image": "data/hutter/verse_images/hebrews/013_016_000094.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000094.png",
+      "crop_box": {
+        "left": 102,
+        "top": 1633,
+        "right": 617,
+        "bottom": 1988
+      }
+    },
+    {
+      "id": "hebrews.13.20.000096",
+      "book": "hebrews",
+      "source_file": "000096.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several niqqud/cantillation-like marks are faint.",
+      "hebrew_text": "וֵאלֹהֵי הַשָּׁלוֹם אֲשֶׁר הֶעֱלָה מִמֵּתִים אֶת־רוֹעֵה צֹאן הַגָּדוֹל בְּדָמֵי בְּרִית עוֹלָם אֶת־אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_020_000096.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000096.png",
+      "crop_box": {
+        "left": 69,
+        "top": 1023,
+        "right": 627,
+        "bottom": 1353
+      }
+    },
+    {
+      "id": "hebrews.13.21.000096",
+      "book": "hebrews",
+      "source_file": "000096.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and small marks are not fully certain.",
+      "hebrew_text": "יָכִין אֶתְכֶם בְּכָל־מַעֲשֶׂה טוֹב לַעֲשׂוֹת אֶת־רְצוֹנוֹ הָעֹשֶׂה בָכֶם מַה רָצוּי לְפָנָיו בְּיֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר לוֹ הַכָּבוֹד לְעוֹלְמֵי עוֹלָמִים אָמֵן׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_021_000096.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000096.png",
+      "crop_box": {
+        "left": 69,
+        "top": 1317,
+        "right": 627,
+        "bottom": 1715
+      }
+    },
+    {
+      "id": "hebrews.13.22.000096",
+      "book": "hebrews",
+      "source_file": "000096.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some words and vowels are hard to read in the scan.",
+      "hebrew_text": "וְשׁוֹאֵל אֲנִי מִכֶּם אַחַי הֲכִילוּ אֶת־דְּבָרֵי הַנֶּחָמָה כִּי בִּמְעָרִים כָּתַבְתִּי אֲלֵיכֶם׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_022_000096.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000096.png",
+      "crop_box": {
+        "left": 69,
+        "top": 1679,
+        "right": 627,
+        "bottom": 2002
+      }
+    },
+    {
+      "id": "hebrews.13.24.000098",
+      "book": "hebrews",
+      "source_file": "000098.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and final word are somewhat unclear.",
+      "hebrew_text": "שְׁאֲלוּ בְשָׁלוֹם אֶת־כָּל־פְּקִידֵיכֶם וְאֶת־כָּל־הַקְּדוֹשִׁים שֹׁאֲלוּ לִשְׁלוֹמְכֶם אֲשֶׁר הֵמָּה בְּאִיטַלְיָא׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_024_000098.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000098.png",
+      "crop_box": {
+        "left": 68,
+        "top": 415,
+        "right": 750,
+        "bottom": 772
+      }
+    },
+    {
+      "id": "hebrews.13.25.000098",
+      "book": "hebrews",
+      "source_file": "000098.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points are faint/uncertain.",
+      "hebrew_text": "הַחֶסֶד עִם כֻּלְּכֶם אָמֵן׃",
+      "output_image": "data/hutter/verse_images/hebrews/013_025_000098.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/hebrews/000098.png",
+      "crop_box": {
+        "left": 68,
+        "top": 736,
+        "right": 750,
+        "bottom": 1065
       }
     },
     {

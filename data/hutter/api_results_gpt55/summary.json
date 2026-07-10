@@ -1,28 +1,28 @@
 {
-  "book_count": 9,
+  "book_count": 10,
   "totals": {
-    "manifest_verse_count": 1499,
-    "result_count": 1499,
-    "raw_result_count": 1596,
-    "retry_row_count": 97,
+    "manifest_verse_count": 1802,
+    "result_count": 1802,
+    "raw_result_count": 1904,
+    "retry_row_count": 102,
     "pending_count": 0,
-    "batch_count": 182,
-    "needs_review_count": 1091,
-    "likely_crop_issue_count": 389,
-    "likely_ocr_issue_count": 702,
+    "batch_count": 244,
+    "needs_review_count": 1342,
+    "likely_crop_issue_count": 488,
+    "likely_ocr_issue_count": 854,
     "no_hebrew_marks_count": 0,
     "empty_text_count": 0,
-    "total_tokens": 789530,
-    "input_tokens": 517861,
-    "output_tokens": 271669
+    "total_tokens": 950461,
+    "input_tokens": 625646,
+    "output_tokens": 324815
   },
   "status_counts": {
-    "ok": 1499
+    "ok": 1802
   },
   "confidence_counts": {
-    "high": 70,
-    "low": 221,
-    "medium": 1208
+    "high": 81,
+    "low": 264,
+    "medium": 1457
   },
   "books": [
     {
@@ -101,6 +101,32 @@
         "high": 23,
         "low": 15,
         "medium": 111
+      }
+    },
+    {
+      "book": "hebrews",
+      "manifest_verse_count": 303,
+      "result_count": 303,
+      "raw_result_count": 308,
+      "retry_row_count": 5,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 62,
+      "needs_review_count": 251,
+      "likely_crop_issue_count": 99,
+      "likely_ocr_issue_count": 152,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 160931,
+      "input_tokens": 107785,
+      "output_tokens": 53146,
+      "status_counts": {
+        "ok": 303
+      },
+      "confidence_counts": {
+        "high": 11,
+        "low": 43,
+        "medium": 249
       }
     },
     {
