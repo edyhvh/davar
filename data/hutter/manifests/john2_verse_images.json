@@ -332,9 +332,9 @@
       "output_image": "data/hutter/verse_images/john2/001_012_000006.png",
       "crop_box": {
         "left": 123,
-        "top": 28,
+        "top": 132,
         "right": 672,
-        "bottom": 384
+        "bottom": 578
       },
       "status": "cropped",
       "notes": [
@@ -351,6 +351,7 @@
         "whitespace_threshold:12",
         "content_y:46-727",
         "cut_lines:366",
+        "manual_cut_override:560",
         "First word unclear - appears to be לִבְחֻרֶת",
         "Multiple words difficult to parse due to print quality",
         "Vowel marks inconsistent or unclear in several positions"
@@ -365,9 +366,9 @@
       "output_image": "data/hutter/verse_images/john2/001_013_000006.png",
       "crop_box": {
         "left": 123,
-        "top": 348,
+        "top": 542,
         "right": 672,
-        "bottom": 745
+        "bottom": 778
       },
       "status": "cropped",
       "notes": [
@@ -384,6 +385,7 @@
         "whitespace_threshold:12",
         "content_y:46-727",
         "cut_lines:366",
+        "manual_cut_override:560",
         "Very short verse - appears incomplete or fragmentary",
         "Print quality degraded"
       ]

@@ -1,5 +1,5 @@
 {
-  "item_count": 854,
+  "item_count": 940,
   "purpose": "Rows here have Hebrew text and marks but were flagged by the model as uncertain. Review these after crop repairs so we avoid paid reruns for cases that only need text validation.",
   "items": [
     {
@@ -680,6 +680,142 @@
         "top": 1159,
         "right": 619,
         "bottom": 1476
+      }
+    },
+    {
+      "id": "john1.3.14.000021",
+      "book": "john1",
+      "source_file": "000021.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several words/points are unclear, especially near the end.",
+      "hebrew_text": "אֲנַחְנוּ יָדַעְנוּ כִּי־הֶחֱלַפְנוּ מִמָּוֶת אֶל־הַחַיִּים כִּי־אֹהֲבִים אֲנַחְנוּ אֶת־אַחֵינוּ אֲשֶׁר לֹא אֹהֵב אֶת־אָחִיו מְעוֹדֶד בַּמָּוֶת׃",
+      "output_image": "data/hutter/verse_images/john1/003_014_000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 1372,
+        "right": 637,
+        "bottom": 1658
+      }
+    },
+    {
+      "id": "john1.3.15.000021",
+      "book": "john1",
+      "source_file": "000021.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Blurry and some glyphs/pointing are uncertain.",
+      "hebrew_text": "כָּל־שׂוֹנֵא אָחִיו מְרַצֵחַ הוּא וִידַעְתֶּם כִּי־כָל־מְרַצֵחַ לֹא יֵשׁ־לוֹ חַיֵּי עוֹלָם לְהִתְעוֹדֵד בְּנַפְשׁוֹ׃",
+      "output_image": "data/hutter/verse_images/john1/003_015_000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 1622,
+        "right": 637,
+        "bottom": 1968
+      }
+    },
+    {
+      "id": "john1.3.24.000025",
+      "book": "john1",
+      "source_file": "000025.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several words are uncertain due to print quality and unusual spelling.",
+      "hebrew_text": "וְהַשֹּׁמֵר אֶת־מִצְוֹתָיו מְעֹדֵד כִּי הוּא בּוֹ וְבוֹאֶת יוֹדְעִים אֲנַחְנוּ כִּי־מְעֹדֵד בָּנוּ מֵרוּחַ אֲשֶׁר נָתַן לָנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/003_024_000025.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000025.png",
+      "crop_box": {
+        "left": 92,
+        "top": 374,
+        "right": 646,
+        "bottom": 841
+      }
+    },
+    {
+      "id": "john1.4.12.000029",
+      "book": "john1",
+      "source_file": "000029.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several words and marks are blurry/uncertain, especially mid-verse.",
+      "hebrew_text": "אֶת־אֱלֹהִים אִישׁ בְּכָל עֵת לֹא רָאָה אִם נֶאֱהַב אִישׁ אֶת־רֵעֵהוּ אָז־מֵעוֹדֵד אֱלֹהִים בָּנוּ וְאַהֲבָתוֹ שְׁלֵמָה הִיא בָּנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/004_012_000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 352,
+        "right": 626,
+        "bottom": 678
+      }
+    },
+    {
+      "id": "john1.5.6.000033",
+      "book": "john1",
+      "source_file": "000033.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several words/parenthetical insertions and pointing are difficult to read confidently.",
+      "hebrew_text": "זֶה הוּא הַבָּא בַמַּיִם (וְדָם) אָדָם יֵשׁוּעַ הַמָּשִׁיחַ אֵינֶנּוּ בַמַּיִם לְבַד כִּי־בַמַּיִם וּבַדָּם וְרוּחַ מְעִידָה (כִּי־הַמָּשִׁיחַ) אֱמֶת הוּא׃",
+      "output_image": "data/hutter/verse_images/john1/005_006_000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 984,
+        "right": 637,
+        "bottom": 1367
+      }
+    },
+    {
+      "id": "john1.5.11.000035",
+      "book": "john1",
+      "source_file": "000035.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Bottom line is partially cut/unclear; final words especially uncertain.",
+      "hebrew_text": "וְזֹאת הִיא הָעֵדוּת כִּי־הָאֱלֹהִים נָתַן לָנוּ אֶת־חַיֵּי עוֹלָם וְהַחַיִּים הָאֵלֶּה הָיוּם בְּבֵּן׃",
+      "output_image": "data/hutter/verse_images/john1/005_011_000035.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000035.png",
+      "crop_box": {
+        "left": 90,
+        "top": 720,
+        "right": 625,
+        "bottom": 1046
+      }
+    },
+    {
+      "id": "john3.1.10.000004",
+      "book": "john3",
+      "source_file": "000004.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Dense verse with multiple uncertain words/pointing; transcription should be checked against image.",
+      "hebrew_text": "עַל־כֵּן אִם אָבוֹא אֶזְכֹּר אֶת־מַעֲשָׂיו אֲשֶׁר עָשָׂה בִּדְבָרִים רָעִים מַלְשִׁין אֹתָנוּ וְלֹא יִשְׂבַּע לוֹ דַי בָּאֵלֶּה וְהוּא לֹא מְקַבֵּל אֶת־הָאַחִים וַאֲשֶׁר מְהָאוּים מְלֹאֵם וּמִלְּעָדָם מַשְׁלִיכָם׃",
+      "output_image": "data/hutter/verse_images/john3/001_010_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
+      "crop_box": {
+        "left": 75,
+        "top": 772,
+        "right": 624,
+        "bottom": 1298
+      }
+    },
+    {
+      "id": "john3.1.9.000004",
+      "book": "john3",
+      "source_file": "000004.png",
+      "confidence": "low",
+      "needs_review": true,
+      "notes": "Several letters/words and pointing are uncertain due to image quality.",
+      "hebrew_text": "כָּתַבְתִּי אֶל־הָעֵדָה כִּי־אִם וּמְאַתֵּר לִהְיוֹת רֹאשׁ דִּיוֹטְרְפִיס אֵינֶנּוּ מְקַבֵּל אוֹתָנוּ׃",
+      "output_image": "data/hutter/verse_images/john3/001_009_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
+      "crop_box": {
+        "left": 75,
+        "top": 542,
+        "right": 624,
+        "bottom": 808
       }
     },
     {
@@ -8007,6 +8143,1332 @@
         "top": 41,
         "right": 735,
         "bottom": 488
+      }
+    },
+    {
+      "id": "john1.1.1.000002",
+      "book": "john1",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/marks are difficult to verify due to image quality.",
+      "hebrew_text": "אֲשֶׁר הָיָה מֵרֵאשִׁת אֲשֶׁר שָׁמַעְנוּ וְרָאִינוּ בְּעֵינֵינוּ אֲשֶׁר הִבַּטְנוּ וְיָדֵינוּ הִמִּישׁוּ עַל דְּבַר הַחַיִּים׃",
+      "output_image": "data/hutter/verse_images/john1/001_001_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000002.png",
+      "crop_box": {
+        "left": 82,
+        "top": 400,
+        "right": 625,
+        "bottom": 748
+      }
+    },
+    {
+      "id": "john1.1.3.000002",
+      "book": "john1",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and a few word forms are uncertain from the image.",
+      "hebrew_text": "אֲשֶׁר רָאִינוּ וְשָׁמַעְנוּ מְבַשְּׂרִים אֲנַחְנוּ אֶתְכֶם אֲשֶׁר גַּם לָכֶם תִּהְיֶה חֶבְרָה עִמָּנוּ וְחֶבְרָתֵנוּ עִם הָאָב וְעִם בֵּן יֵשׁוּעַ הַמָּשִׁיחַ׃",
+      "output_image": "data/hutter/verse_images/john1/001_003_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000002.png",
+      "crop_box": {
+        "left": 82,
+        "top": 1043,
+        "right": 625,
+        "bottom": 1396
+      }
+    },
+    {
+      "id": "john1.1.4.000002",
+      "book": "john1",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Exact pointing is partially uncertain.",
+      "hebrew_text": "וְאֶת־הָאֵלֶּה כֹּתְבִים אֲנַחְנוּ אֲלֵיכֶם אֲשֶׁר תִּמָּלֵא שִׂמְחַתְכֶם׃",
+      "output_image": "data/hutter/verse_images/john1/001_004_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000002.png",
+      "crop_box": {
+        "left": 82,
+        "top": 1360,
+        "right": 625,
+        "bottom": 1676
+      }
+    },
+    {
+      "id": "john1.1.10.000004",
+      "book": "john1",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and final word vocalization are not fully certain.",
+      "hebrew_text": "אִם נֹאמַר כִּי־לֹא חָטָאנוּ נַעֲשֶׂה אוֹתוֹ לְכָזָב וּדְבָרוֹ אֵינֶנּוּ בָנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/001_010_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000004.png",
+      "crop_box": {
+        "left": 104,
+        "top": 1244,
+        "right": 648,
+        "bottom": 1595
+      }
+    },
+    {
+      "id": "john1.1.7.000004",
+      "book": "john1",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and a few letters/marks are unclear in the image.",
+      "hebrew_text": "וְאִם נִתְהַלֵּךְ בָּאוֹר כְּמוֹהוּ יֵשׁ בָּאוֹר אֲזַי־לָנוּ חֶבְרָה בֵּינֵינוּ וְדַם יֵשׁוּעַ הַמָּשִׁיחַ בְּנוֹ יְטַהֲרֵנוּ מִכָּל חֵטְא׃",
+      "output_image": "data/hutter/verse_images/john1/001_007_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000004.png",
+      "crop_box": {
+        "left": 104,
+        "top": 406,
+        "right": 648,
+        "bottom": 765
+      }
+    },
+    {
+      "id": "john1.1.8.000004",
+      "book": "john1",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vocalization and the verb form are uncertain.",
+      "hebrew_text": "אִם נֹאמַר כִּי־לֹא יֶשׁ־לָנוּ חַטָּאָה נַעֲתֶה אֶת־נַפְשֵׁנוּ וֶאֱמֶת אֵינֶנָּה בָּנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/001_008_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000004.png",
+      "crop_box": {
+        "left": 104,
+        "top": 729,
+        "right": 648,
+        "bottom": 1016
+      }
+    },
+    {
+      "id": "john1.1.9.000004",
+      "book": "john1",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud and exact spelling are hard to confirm.",
+      "hebrew_text": "אִם נַגִּידָה אֶת־חַטֹּאתֵינוּ נֶאֱמָן וְצַדִּיק הוּא לָשֵׂאת לָנוּ אֶת־הַחֲטָאִים וִיטַהֲרֵנוּ מִכָּל־רִשְׁעָה׃",
+      "output_image": "data/hutter/verse_images/john1/001_009_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000004.png",
+      "crop_box": {
+        "left": 104,
+        "top": 980,
+        "right": 648,
+        "bottom": 1280
+      }
+    },
+    {
+      "id": "john1.2.2.000009",
+      "book": "john1",
+      "source_file": "000009.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/marks and first word are slightly unclear.",
+      "hebrew_text": "וְהוּא הָיָה כֹפֶר עַל־חַטּאתֵינוּ וְלֹא לְבַד עַל־חַטּאתֵינוּ כִּי־אִם עַל־חַטּאת כָּל־הָעוֹלָם׃",
+      "output_image": "data/hutter/verse_images/john1/002_002_000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 142,
+        "right": 623,
+        "bottom": 448
+      }
+    },
+    {
+      "id": "john1.2.3.000009",
+      "book": "john1",
+      "source_file": "000009.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Initial word/lettering at left edge and some pointing are unclear.",
+      "hebrew_text": "וּבָזֹאת יֹדְעִים אֲנַחְנוּ כִּי יְדַעְנוּהוּ אִם נִשְׁמֹר אֶת־מִצְוֹתָיו׃",
+      "output_image": "data/hutter/verse_images/john1/002_003_000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 412,
+        "right": 623,
+        "bottom": 638
+      }
+    },
+    {
+      "id": "john1.2.4.000009",
+      "book": "john1",
+      "source_file": "000009.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some consonants and pointing are uncertain, especially near line breaks.",
+      "hebrew_text": "הָאֹמֵר יְדַעְתִּיו וְאֶת־מִצְוֹתָיו אֵינֶנּוּ שֹׁמֵר כֹּזֵב הוּא וּבָאִישׁ הַהוּא לֹא יֵשׁ־אֱמֶת׃",
+      "output_image": "data/hutter/verse_images/john1/002_004_000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 602,
+        "right": 623,
+        "bottom": 898
+      }
+    },
+    {
+      "id": "john1.2.5.000009",
+      "book": "john1",
+      "source_file": "000009.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and final phrase are somewhat unclear.",
+      "hebrew_text": "וַאֲשֶׁר יִשְׁמֹר אֶת־דְּבָרוֹ בֶּאֱמֶת בּוֹ בָאִישׁ אַהֲבַת אֱלֹהִים נִשְׁלְמָה הִיא בָּזֹאת יֹדְעִים אֲנַחְנוּ כִּי־בוֹ הוֹיִם אֲנַחְנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/002_005_000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 862,
+        "right": 623,
+        "bottom": 1228
+      }
+    },
+    {
+      "id": "john1.2.6.000009",
+      "book": "john1",
+      "source_file": "000009.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some words/pointing uncertain, especially middle and final terms.",
+      "hebrew_text": "הָאֹמֵר לַעֲמוֹד בּוֹ יִשְׁוֶה לוֹ לְהִתְהַלֵּךְ כַּהֲלִיכוֹתָיו בִּדְרָכָיו בְּמַסִּלֹּתָיו בְּעִקְּבוֹתָיו׃",
+      "output_image": "data/hutter/verse_images/john1/002_006_000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 1192,
+        "right": 623,
+        "bottom": 1488
+      }
+    },
+    {
+      "id": "john1.2.7.000009",
+      "book": "john1",
+      "source_file": "000009.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/marks are small and not fully certain.",
+      "hebrew_text": "אַחַי אֵינֶנִי כוֹתֵב אֲלֵיכֶם אֶת מִצְוָה חֲדָשָׁה כִי־אִם מִצְוָה יְשָׁנָה אֲשֶׁר הָיְתָה לָכֶם מֵרֵאשִׁית הַמִצְוָה הַיְשָׁנָה יִשׁ־הַדָבָר אֲשֶׁר שְׁמַעְתֶּם מֵרֵאשִׁית׃",
+      "output_image": "data/hutter/verse_images/john1/002_007_000009.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000009.png",
+      "crop_box": {
+        "left": 78,
+        "top": 1452,
+        "right": 623,
+        "bottom": 1958
+      }
+    },
+    {
+      "id": "john1.2.10.000011",
+      "book": "john1",
+      "source_file": "000011.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and the word after את are uncertain due to blur/print; needs verification.",
+      "hebrew_text": "הָאֹהֵב אֶת אָחִיו מְעוֹדֵד בָּאוֹר וּמִכְשׁוֹל אֵינֶנִי בוֹ",
+      "output_image": "data/hutter/verse_images/john1/002_010_000011.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000011.png",
+      "crop_box": {
+        "left": 91,
+        "top": 664,
+        "right": 641,
+        "bottom": 994
+      }
+    },
+    {
+      "id": "john1.2.15.000013",
+      "book": "john1",
+      "source_file": "000013.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partly uncertain.",
+      "hebrew_text": "אַל־תֶּאֱהַבוּ אֶת־הָעוֹלָם וְלֹא אֶת־דִּבְרֵי־הָעוֹלָם אִם יֶאֱהַב אִישׁ אֶת־הָעוֹלָם אַהֲבַת הָאָב אֵינֶנָּה בוֹ׃",
+      "output_image": "data/hutter/verse_images/john1/002_015_000013.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000013.png",
+      "crop_box": {
+        "left": 95,
+        "top": 682,
+        "right": 641,
+        "bottom": 998
+      }
+    },
+    {
+      "id": "john1.2.16.000013",
+      "book": "john1",
+      "source_file": "000013.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points and one word reading are uncertain.",
+      "hebrew_text": "כִּי־כָּל אֲשֶׁר בָּעוֹלָם תַּאֲוַת הַבָּשָׂר הוּא וְתַאֲוַת עֵינַיִם וְרַאֲוַת הַחַיִּים אֵינֶנָּה מִן־הָאָב כִּי־אִם מִן הָעוֹלָם׃",
+      "output_image": "data/hutter/verse_images/john1/002_016_000013.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000013.png",
+      "crop_box": {
+        "left": 95,
+        "top": 962,
+        "right": 641,
+        "bottom": 1348
+      }
+    },
+    {
+      "id": "john1.2.17.000013",
+      "book": "john1",
+      "source_file": "000013.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Final word punctuation and pointing are somewhat unclear.",
+      "hebrew_text": "וְהָעוֹלָם עֹבֵר וְתַאֲוָתוֹ הָעֹשֶׂה אֶת רְצוֹן אֱלֹהִים יָקוּם לְעוֹלָם׃",
+      "output_image": "data/hutter/verse_images/john1/002_017_000013.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000013.png",
+      "crop_box": {
+        "left": 95,
+        "top": 1312,
+        "right": 641,
+        "bottom": 1538
+      }
+    },
+    {
+      "id": "john1.2.18.000013",
+      "book": "john1",
+      "source_file": "000013.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish confidently.",
+      "hebrew_text": "בָּנַי עֵת קֵץ הִיא וְכַאֲשֶׁר שְׁמַעְתֶּם כִּי־יָבֹא מָשִׁיחַ שָׁקֶר וְעַתָּה מְשִׁיחֵי שֶׁקֶר רַבִּים הָיוּ מִזֹּאת יוֹדְעִים אֲנַחְנוּ כִּי־עֵת קֵץ הִיא",
+      "output_image": "data/hutter/verse_images/john1/002_018_000013.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000013.png",
+      "crop_box": {
+        "left": 95,
+        "top": 1502,
+        "right": 641,
+        "bottom": 1958
+      }
+    },
+    {
+      "id": "john1.2.19.000015",
+      "book": "john1",
+      "source_file": "000015.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Left edge and pointing are partly unclear.",
+      "hebrew_text": "מֵעִמָּנוּ יָצְאוּ אַךְ לֹא הָיוּ מֵעִמָּנוּ וְאִם הָיוּ מִמֶּנּוּ בֶאֱמֶת קָמוּ עִמָּנוּ כִּי־אִם אֲשֶׁר נִגְלוּ כִּי־כֻלָּם לֹא הָיוּ מֵעִמָּנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/002_019_000015.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000015.png",
+      "crop_box": {
+        "left": 83,
+        "top": 34,
+        "right": 630,
+        "bottom": 386
+      }
+    },
+    {
+      "id": "john1.2.22.000015",
+      "book": "john1",
+      "source_file": "000015.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and small marks are difficult to distinguish.",
+      "hebrew_text": "מִי־הוּא הַכֹּזֵב הֲלֹא הַמְכַחֵשׁ כִּי־יֵשׁוּעַ אֲדֹנֵנוּ הַמָּשִׁיחַ זֶה הוּא אוֹיֵב הַמָּשִׁיחַ הַמְכַחֵשׁ אֶת־הָאָב וְאֶת־הַבֵּן׃",
+      "output_image": "data/hutter/verse_images/john1/002_022_000015.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000015.png",
+      "crop_box": {
+        "left": 83,
+        "top": 971,
+        "right": 630,
+        "bottom": 1315
+      }
+    },
+    {
+      "id": "john1.2.23.000015",
+      "book": "john1",
+      "source_file": "000015.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Parentheses are printed around part of the verse; Hebrew pointing is partly unclear.",
+      "hebrew_text": "כָּל־אֲשֶׁר מְכַחֵשׁ אֶת־הַבֵּן לֹא יֶשׁ־לוֹ הָאָב וְהַמִּתְוַדֶּה אֶת־הַבֵּן גַּם יֶשׁ לוֹ הָאָב׃",
+      "output_image": "data/hutter/verse_images/john1/002_023_000015.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000015.png",
+      "crop_box": {
+        "left": 83,
+        "top": 1279,
+        "right": 630,
+        "bottom": 1629
+      }
+    },
+    {
+      "id": "john1.2.25.000017",
+      "book": "john1",
+      "source_file": "000017.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/letters in middle word uncertain due to image blur.",
+      "hebrew_text": "וְזאת הִיא הַבְטָחָה אֲשֶׁר הוּא בָטוּר אֹתָנוּ חַיֵי עוֹלָם :",
+      "output_image": "data/hutter/verse_images/john1/002_025_000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 152,
+        "right": 663,
+        "bottom": 378
+      }
+    },
+    {
+      "id": "john1.2.26.000017",
+      "book": "john1",
+      "source_file": "000017.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Final phrase spelling/pointing uncertain.",
+      "hebrew_text": "אֶת־הָאֵלֶה כָתַבְתִּי אֲלֵיכֶם עַל־מַתְעֵיכֶם :",
+      "output_image": "data/hutter/verse_images/john1/002_026_000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 342,
+        "right": 663,
+        "bottom": 548
+      }
+    },
+    {
+      "id": "john1.2.27.000017",
+      "book": "john1",
+      "source_file": "000017.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several words and pointing uncertain due to small/blurry print.",
+      "hebrew_text": "וְהַמִּשְׁחָה אֲשֶׁר לְקַחְתֶּם מִמֶּנּוּ תַּעֲמֹד בָּכֶם וְלֹא הַצָּרִיךְ אֲשֶׁר אִישׁ יְלַמֶּדְכֶם כִּי־אִם אַךְ הַמִּשְׁחָה הוֹאת מְלַמְּדָה אֶתְכֶם עַל־כֹּל וֶאֱמֶת הִיא וְאֵינֶנָּה כָזָב וּכְמוֹ לִמְּדַתְכֶם עִמְדוּ בָּהּ :",
+      "output_image": "data/hutter/verse_images/john1/002_027_000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 512,
+        "right": 663,
+        "bottom": 1018
+      }
+    },
+    {
+      "id": "john1.2.28.000017",
+      "book": "john1",
+      "source_file": "000017.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and one verb form uncertain.",
+      "hebrew_text": "וְעַתָּה בָּנַי עִמְדוּ בּוֹ אֲשֶׁר אִם יִגָּלֶה תְּהִי לָנוּ בִּטָּחוֹן וְלֹא נֵבוֹשׁ מִמֶּנּוּ בְּבוֹאוֹ :",
+      "output_image": "data/hutter/verse_images/john1/002_028_000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 982,
+        "right": 663,
+        "bottom": 1298
+      }
+    },
+    {
+      "id": "john1.2.29.000017",
+      "book": "john1",
+      "source_file": "000017.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing uncertain in several words.",
+      "hebrew_text": "אִם תֵּדְעוּ כִּי־צַדִּיק הוּא דְּעוּ כִּי־כָּל־הָעֹשֶׂה אֶת־צְדָקָה נוֹלַד מִמֶּנּוּ :",
+      "output_image": "data/hutter/verse_images/john1/002_029_000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 1262,
+        "right": 663,
+        "bottom": 1588
+      }
+    },
+    {
+      "id": "john1.3.1.000017",
+      "book": "john1",
+      "source_file": "000017.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud/cantillation-like marks are difficult to distinguish.",
+      "hebrew_text": "חֲזּוּ כַמָּה אַהֲבָה נָתַן לָנוּ הָאָב אֲשֶׁר בְּנֵי אֱלֹהִים נִקָּרֵא בַּעֲבוּר זֹאת הָעוֹלָם אֵינֶנּוּ יוֹדֵעַ אוֹתָנוּ כִּי־לֹא יְדָעוֹ׃",
+      "output_image": "data/hutter/verse_images/john1/003_001_000017.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000017.png",
+      "crop_box": {
+        "left": 113,
+        "top": 1552,
+        "right": 663,
+        "bottom": 1938
+      }
+    },
+    {
+      "id": "john1.3.2.000019",
+      "book": "john1",
+      "source_file": "000019.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and a few letter/mark details are not fully certain.",
+      "hebrew_text": "אֲהוּבַי עַתָּה הוֹיִים אֲנַחְנוּ בְּנֵי אֱלֹהִים וְעַד־הֵנָּה לֹא נִגְלָה מַה־נִהְיֶה יָדַעְנוּ אִם יִגָּלֶה כִּי־דּוֹמִים לוֹ נִהְיֶה כִּי־נִרְאֶהוּ בְּפָנִים אֶל־פָּנִים כָּמֹהוּ",
+      "output_image": "data/hutter/verse_images/john1/003_002_000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 152,
+        "right": 627,
+        "bottom": 548
+      }
+    },
+    {
+      "id": "john1.3.4.000019",
+      "book": "john1",
+      "source_file": "000019.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Exact pointing on several words is uncertain.",
+      "hebrew_text": "כָּל־אֲשֶׁר עֹשֶׂה אֶת־הַחֵטְא גַּם עֹשֶׂה אֶת־הָעַוְלָה וְהַחֵטְא עַוְלָה הִיא",
+      "output_image": "data/hutter/verse_images/john1/003_004_000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 757,
+        "right": 627,
+        "bottom": 1018
+      }
+    },
+    {
+      "id": "john1.3.5.000019",
+      "book": "john1",
+      "source_file": "000019.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Final phrase and pointing are somewhat unclear.",
+      "hebrew_text": "יְדַעְתֶּם כִּי־הוּא נִגְלָה לָשֵׂאת אֶת־חַטֹּאתֵינוּ וְחֵטְאֵה אֵינֶנּוּ בוֹ",
+      "output_image": "data/hutter/verse_images/john1/003_005_000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 982,
+        "right": 627,
+        "bottom": 1188
+      }
+    },
+    {
+      "id": "john1.3.6.000019",
+      "book": "john1",
+      "source_file": "000019.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partly difficult to distinguish.",
+      "hebrew_text": "כָּל־אֲשֶׁר עֹמֵד בּוֹ אֵינֶנּוּ חוֹטֵא כָּל־אֲשֶׁר חוֹטֵא לֹא רָאָה אֹתוֹ וְלֹא יְדָעוֹ׃",
+      "output_image": "data/hutter/verse_images/john1/003_006_000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 1152,
+        "right": 627,
+        "bottom": 1428
+      }
+    },
+    {
+      "id": "john1.3.8.000019",
+      "book": "john1",
+      "source_file": "000019.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several pointed forms are uncertain.",
+      "hebrew_text": "הָעֹשֶׂה חֲטָאָה מִשֵּׁד הוּא כִּי־מֵרֵאשִׁית חָטָא הַשָּׂטָן לְזֹאת נִגְלָה בֶּן־אֱלֹהִים אֲשֶׁר יַפְרֶה אֶת־מַעֲשֵׂי הַשָּׂטָן׃",
+      "output_image": "data/hutter/verse_images/john1/003_008_000019.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000019.png",
+      "crop_box": {
+        "left": 72,
+        "top": 1622,
+        "right": 627,
+        "bottom": 1958
+      }
+    },
+    {
+      "id": "john1.3.10.000021",
+      "book": "john1",
+      "source_file": "000021.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partially unclear.",
+      "hebrew_text": "בְּזֹאת נִגְלִים בְּנֵי־אֱלֹהִים וּבְנֵי הַשָּׂטָן כָּל־אֲשֶׁר לֹא עֹשֶׂה צְדָקָה אֵינֶנּוּ מֵאֱלֹהִים וַאֲשֶׁר לֹא אֹהֵב אֶת־אָחִיו׃",
+      "output_image": "data/hutter/verse_images/john1/003_010_000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 412,
+        "right": 637,
+        "bottom": 698
+      }
+    },
+    {
+      "id": "john1.3.12.000021",
+      "book": "john1",
+      "source_file": "000021.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and some small marks are uncertain.",
+      "hebrew_text": "לֹא כְּמוֹ קַיִן אֲשֶׁר מֵרָע הָיָה וְהָרַג אֶת־אָחִיו וְעַל־מָה הָרְגוֹ עַל־כִּי־מַעֲשָׂיו רָעִים הָיוּ וּמַעֲשֵׂי אָחִיו צַדִּיקִים׃",
+      "output_image": "data/hutter/verse_images/john1/003_012_000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 907,
+        "right": 637,
+        "bottom": 1248
+      }
+    },
+    {
+      "id": "john1.3.13.000021",
+      "book": "john1",
+      "source_file": "000021.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/letters are faint; transcription may need review.",
+      "hebrew_text": "אַל־תִּתְמְהוּ אַחַי אִם יִשְׂנָאֲכֶם הָעוֹלָם׃",
+      "output_image": "data/hutter/verse_images/john1/003_013_000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 1212,
+        "right": 637,
+        "bottom": 1408
+      }
+    },
+    {
+      "id": "john1.3.9.000021",
+      "book": "john1",
+      "source_file": "000021.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowels and one word form are uncertain.",
+      "hebrew_text": "כָּל־אֲשֶׁר נִלַּד מֵאֱלֹהִים אֶת־הַחֲטָאת לֹא עֹשֶׂה כִּי־זַרְעוֹ מְעֻדָּד בּוֹ וְלֹא יוּכַל לַחֲטֹא כִּי־מֵאֱלֹהִים נִלַּד הוּא׃",
+      "output_image": "data/hutter/verse_images/john1/003_009_000021.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000021.png",
+      "crop_box": {
+        "left": 79,
+        "top": 132,
+        "right": 637,
+        "bottom": 448
+      }
+    },
+    {
+      "id": "john1.3.17.000023",
+      "book": "john1",
+      "source_file": "000023.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and one or two letters are somewhat unclear.",
+      "hebrew_text": "וַאֲשֶׁר יֵשׁ־לוֹ קִנְיַן הָעוֹלָם וְיִרְאֶה אֶת־אָחִיו כִּי־חָסֵר הוּא וְיִסְגֹּר אֶת־רַחֲמָיו מִמֶּנּוּ אַיֵּכָה עֹמֶדֶת אַהֲבַת אֱלֹהִים בּוֹ׃",
+      "output_image": "data/hutter/verse_images/john1/003_017_000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 432,
+        "right": 639,
+        "bottom": 798
+      }
+    },
+    {
+      "id": "john1.3.18.000023",
+      "book": "john1",
+      "source_file": "000023.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Initial word and some pointing are not fully clear.",
+      "hebrew_text": "בָּנַי אַל־נֶאֱהַב בְּדָבָר וְלֹא בְּלָשׁוֹן כִּי־אִם בְּמַעֲשֶׂה וּבֶאֱמֶת׃",
+      "output_image": "data/hutter/verse_images/john1/003_018_000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 762,
+        "right": 639,
+        "bottom": 958
+      }
+    },
+    {
+      "id": "john1.3.19.000023",
+      "book": "john1",
+      "source_file": "000023.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/letter forms are blurry.",
+      "hebrew_text": "וּבְזֹאת נֵדַע כִּי־מֵאֱמֶת הָיִינוּ אֲנַחְנוּ וּנַשְׁקִיט אֶת לְבָבֵנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/003_019_000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 922,
+        "right": 639,
+        "bottom": 1208
+      }
+    },
+    {
+      "id": "john1.3.20.000023",
+      "book": "john1",
+      "source_file": "000023.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Printed word after לְבָבֵנוּ is uncertain; pointing is partly unclear.",
+      "hebrew_text": "וְאִם לְבָבֵנוּ יְחַב אֹתָנוּ כַּמָּה גָּדוֹל הָאֱלֹהִים מִלְּבָבֵנוּ וְיֹדֵעַ אֶת־כָּל דְּבָרִים׃",
+      "output_image": "data/hutter/verse_images/john1/003_020_000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1172,
+        "right": 639,
+        "bottom": 1448
+      }
+    },
+    {
+      "id": "john1.3.21.000023",
+      "book": "john1",
+      "source_file": "000023.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/cantillation-like marks are small and uncertain.",
+      "hebrew_text": "אֲהוּבַי אִם לִבֵּנוּ לֹא יַרְשִׁיעַ אֹתָנוּ בִּטָּחוֹן נִבְטַח אֶל־אֱלֹהִים׃",
+      "output_image": "data/hutter/verse_images/john1/003_021_000023.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000023.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1412,
+        "right": 639,
+        "bottom": 1678
+      }
+    },
+    {
+      "id": "john1.3.23.000025",
+      "book": "john1",
+      "source_file": "000025.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and small marks are difficult to distinguish.",
+      "hebrew_text": "וְזֹאת הִיא מִצְוָתוֹ אֲשֶׁר נַאֲמִין בְּשֵׁם בְּנוֹ יֵשׁוּעַ הַמָּשִׁיחַ וְנֶאֱהַב אִישׁ אֶת־אָחִיו כַּאֲשֶׁר צִוָּה אֹתָנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/003_023_000025.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000025.png",
+      "crop_box": {
+        "left": 92,
+        "top": 37,
+        "right": 646,
+        "bottom": 410
+      }
+    },
+    {
+      "id": "john1.4.1.000025",
+      "book": "john1",
+      "source_file": "000025.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and exact spelling of some forms are somewhat uncertain.",
+      "hebrew_text": "אֲהוּבַי אַל־תַּאֲמִינוּ לְכָל־רוּחַ כִּי־אִם בְּחֲנוּ אֶת־רוּחוֹת אִם מֵאֱלֹהִים הֵנָּה כִּי־נְבִיאֵי שְׁקָרִים רַבִּים בָּאוּ בָעוֹלָם׃",
+      "output_image": "data/hutter/verse_images/john1/004_001_000025.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000025.png",
+      "crop_box": {
+        "left": 92,
+        "top": 805,
+        "right": 646,
+        "bottom": 1231
+      }
+    },
+    {
+      "id": "john1.4.2.000025",
+      "book": "john1",
+      "source_file": "000025.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud and exact vowel marks are hard to verify.",
+      "hebrew_text": "בְּזֹאת נוֹדְעַת רוּחַ אֱלֹהִים כָּל־רוּחַ הַמּוֹדָה כִּי־יֵשׁוּעַ הַמָּשִׁיחַ בָּא בְּבָשָׂר מֵאֱלֹהִים הִיא׃",
+      "output_image": "data/hutter/verse_images/john1/004_002_000025.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000025.png",
+      "crop_box": {
+        "left": 92,
+        "top": 1195,
+        "right": 646,
+        "bottom": 1514
+      }
+    },
+    {
+      "id": "john1.4.3.000025",
+      "book": "john1",
+      "source_file": "000025.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing and small marks are difficult to verify exactly.",
+      "hebrew_text": "וְכָל־רוּחַ אֲשֶׁר אֵינֶנָּה מַגִּידָה יֵשׁוּעַ הַמָּשִׁיחַ לֹא בָא בְּבָשָׂר אֵינֶנָּה מֵאֱלֹהִים וְזֹאת הִיא רוּחַ מְשִׁיחַ שֶׁקֶר אֲשֶׁר שְׁמַעְתֶּם כִּי הַבּוֹא וְעַתָּה בָעוֹלָם הוּא׃",
+      "output_image": "data/hutter/verse_images/john1/004_003_000025.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000025.png",
+      "crop_box": {
+        "left": 92,
+        "top": 1478,
+        "right": 646,
+        "bottom": 2006
+      }
+    },
+    {
+      "id": "john1.4.5.000027",
+      "book": "john1",
+      "source_file": "000027.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing on several words is not fully clear.",
+      "hebrew_text": "אֵלֶּה מֵעוֹלָם הֵמָּה עַל־כֵּן מֵעוֹלָם מְדַבְּרִים וְהָעוֹלָם שֹׁמֵעַ בְּקוֹלָם׃",
+      "output_image": "data/hutter/verse_images/john1/004_005_000027.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000027.png",
+      "crop_box": {
+        "left": 80,
+        "top": 331,
+        "right": 635,
+        "bottom": 663
+      }
+    },
+    {
+      "id": "john1.4.7.000027",
+      "book": "john1",
+      "source_file": "000027.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and one or two small marks are difficult to confirm exactly.",
+      "hebrew_text": "אֲהוּבַי נֶאֱהַב נָא אִישׁ אֶת־רֵעֵהוּ כִּי־הָאַהֲבָה מֵאֱלֹהִים הִיא כָּל־אֲשֶׁר אוֹהֵב אֶת רֵעֵהוּ מֵאֱלֹהִים נוֹלַד וְיֹדֵעַ אֶת־אֱלֹהִים׃",
+      "output_image": "data/hutter/verse_images/john1/004_007_000027.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000027.png",
+      "crop_box": {
+        "left": 80,
+        "top": 896,
+        "right": 635,
+        "bottom": 1229
+      }
+    },
+    {
+      "id": "john1.4.9.000027",
+      "book": "john1",
+      "source_file": "000027.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some niqqud and hyphenation are unclear; final word may need verification.",
+      "hebrew_text": "בָּזֹאת נִגְלְתָה אַהֲבַת־אֱלֹהִים בָּנוּ כִּי־שָׁלַח אֱלֹהִים אֶת־בְּנוֹ יְחִידוֹ אֶל־הָעוֹלָם אֲשֶׁר נִחְיֶה בְּיָדוֹ׃",
+      "output_image": "data/hutter/verse_images/john1/004_009_000027.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000027.png",
+      "crop_box": {
+        "left": 80,
+        "top": 1398,
+        "right": 635,
+        "bottom": 1752
+      }
+    },
+    {
+      "id": "john1.4.11.000029",
+      "book": "john1",
+      "source_file": "000029.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and some letters slightly unclear.",
+      "hebrew_text": "אֲהוּבַי אִם כֹּה אֲהָבָנוּ אֱלֹהִים גַּם־אֲנַחְנוּ חוֹבִים לְאָהֹב אִישׁ אֶת־רֵעֵהוּ׃",
+      "output_image": "data/hutter/verse_images/john1/004_011_000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 152,
+        "right": 626,
+        "bottom": 388
+      }
+    },
+    {
+      "id": "john1.4.13.000029",
+      "book": "john1",
+      "source_file": "000029.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Possible uncertainty in the word after כי due to print clarity.",
+      "hebrew_text": "בָּזֹאת יָדַעְנוּ כִּי־בְּעוֹדֵד בּוֹ וְהוּא בָּנוּ כִּי־מֵרוּחוֹ נָתַן לָנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/004_013_000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 642,
+        "right": 626,
+        "bottom": 848
+      }
+    },
+    {
+      "id": "john1.4.16.000029",
+      "book": "john1",
+      "source_file": "000029.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowels and word division/maqaf placement are uncertain.",
+      "hebrew_text": "וַאֲנַחְנוּ הֶאֱמַנּוּ יָדַעְנוּ אֶת־אַהֲבָה אֲשֶׁר יֵשׁ־לֵאלֹהִים אֵלֵינוּ הָאֱלֹהִים הוּא אַהֲבָה וְהָעוֹמֵד בְּאַהֲבָה עַמּוֹ בֵּאלֹהִים וֵאלֹהִים בּוֹ׃",
+      "output_image": "data/hutter/verse_images/john1/004_016_000029.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000029.png",
+      "crop_box": {
+        "left": 71,
+        "top": 1242,
+        "right": 626,
+        "bottom": 1598
+      }
+    },
+    {
+      "id": "john1.5.2.000031",
+      "book": "john1",
+      "source_file": "000031.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/marks are small and partly unclear.",
+      "hebrew_text": "בְּזֹאת יָדַעְנוּ כִּי־אָהַבְנוּ אֶת־אֱלֹהִים כַּאֲשֶׁר נֶאֱהַב אֶת־אֱלֹהִים וְאֶת־מִצְוֹתָיו נִשְׁמֹר׃",
+      "output_image": "data/hutter/verse_images/john1/005_002_000031.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000031.png",
+      "crop_box": {
+        "left": 83,
+        "top": 1662,
+        "right": 627,
+        "bottom": 2018
+      }
+    },
+    {
+      "id": "john1.5.3.000033",
+      "book": "john1",
+      "source_file": "000033.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and small supralinear marks are not fully clear.",
+      "hebrew_text": "כִּי־זֹאת הִיא אַהֲבַת אֱלֹהִים אֲשֶׁר נִשְׁמֹר אֶת־מִצְוֹתָיו וּמִצְוֹתָיו אֵינָן כְּבֵדוֹת הֵנָּה׃",
+      "output_image": "data/hutter/verse_images/john1/005_003_000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 43,
+        "right": 637,
+        "bottom": 360
+      }
+    },
+    {
+      "id": "john1.5.4.000033",
+      "book": "john1",
+      "source_file": "000033.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowels/marks and one word form are slightly uncertain.",
+      "hebrew_text": "כִּי כָל־אֲשֶׁר נוֹלַד מֵאֱלֹהִים זָכָה עַל־הָעוֹלָם וְהַנִּצָּח הַגֹּבֵר עַל־הָעוֹלָם הִיא אֱמוּנָתֵנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/005_004_000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 324,
+        "right": 637,
+        "bottom": 751
+      }
+    },
+    {
+      "id": "john1.5.5.000033",
+      "book": "john1",
+      "source_file": "000033.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and maqaf details are somewhat unclear.",
+      "hebrew_text": "מִי־זֶה הוּא הַגֹּבֵר עַל־הָעוֹלָם הֲלֹא הַמַּאֲמִין כִּי־יֵשׁוּעַ בֶּן־הָאֱלֹהִים הוּא׃",
+      "output_image": "data/hutter/verse_images/john1/005_005_000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 715,
+        "right": 637,
+        "bottom": 1020
+      }
+    },
+    {
+      "id": "john1.5.7.000033",
+      "book": "john1",
+      "source_file": "000033.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/marks are faint.",
+      "hebrew_text": "כִּי שְׁלֹשָׁה הֵם הַמְּעִידִים בַּשָּׁמַיִם הָאָב הַדָּבָר וְרוּחַ הַקֹּדֶשׁ וּשְׁלֹשָׁה הָאֵלֶּה אֶחָד הֵמָּה׃",
+      "output_image": "data/hutter/verse_images/john1/005_007_000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1331,
+        "right": 637,
+        "bottom": 1651
+      }
+    },
+    {
+      "id": "john1.5.8.000033",
+      "book": "john1",
+      "source_file": "000033.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowel points and small marks are difficult to verify.",
+      "hebrew_text": "וְשָׁלֹשׁ הֵמָּה הַמְּעִידִים בָּאָרֶץ הָרוּחַ וְהַמַּיִם וְהַדָּם וּשְׁלֹשׁ הָאֵלֶּה לְאֶחָד הֵמָּה׃",
+      "output_image": "data/hutter/verse_images/john1/005_008_000033.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000033.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1615,
+        "right": 637,
+        "bottom": 2006
+      }
+    },
+    {
+      "id": "john1.5.13.000035",
+      "book": "john1",
+      "source_file": "000035.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and some small marks are uncertain.",
+      "hebrew_text": "אֶת־הָאֵלֶּה כָּתַבְתִּי לַמַּאֲמִינִים בְּשֵׁם בֶּן־אֱלֹהִים אֲשֶׁר תֵּדְעוּ כִּי־יֵשׁ לָכֶם חַיֵּי עוֹלָם וַאֲשֶׁר תַּאֲמִינוּ בְּשֵׁם־בֶּן־אֱלֹהִים׃",
+      "output_image": "data/hutter/verse_images/john1/005_013_000035.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000035.png",
+      "crop_box": {
+        "left": 90,
+        "top": 1319,
+        "right": 625,
+        "bottom": 1687
+      }
+    },
+    {
+      "id": "john1.5.14.000035",
+      "book": "john1",
+      "source_file": "000035.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several niqqud/marks are hard to verify.",
+      "hebrew_text": "וְזֹאת הִיא הַבִּטָּחוֹן אֲשֶׁר־יֵשׁ לָנוּ אֵלָיו אִם בֶּאֱמוּנָה נִשְׁאַל מִמֶּנּוּ כִּרְצוֹנוֹ שֹׁמֵעַ אֵלֵינוּ׃",
+      "output_image": "data/hutter/verse_images/john1/005_014_000035.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000035.png",
+      "crop_box": {
+        "left": 90,
+        "top": 1651,
+        "right": 625,
+        "bottom": 2029
+      }
+    },
+    {
+      "id": "john1.5.9.000035",
+      "book": "john1",
+      "source_file": "000035.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Header ignored; some pointing/letters are faint.",
+      "hebrew_text": "אִם אֶת־עֵדוּת בְּנֵי אָדָם נִקַּח עֵדוּת אֱלֹהִים גְּדוֹלָה הִיא מִמֶּנָּה כִּי־זֹאת הִיא עֵדוּת אֱלֹהִים אֲשֶׁר הֵעִידָה עַל־בְּנוֹ׃",
+      "output_image": "data/hutter/verse_images/john1/005_009_000035.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000035.png",
+      "crop_box": {
+        "left": 90,
+        "top": 54,
+        "right": 625,
+        "bottom": 407
+      }
+    },
+    {
+      "id": "john1.5.15.000037",
+      "book": "john1",
+      "source_file": "000037.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Left edge is slightly cut; pointing/marks uncertain.",
+      "hebrew_text": "אִם יָדַעְנוּ כִּי־שֹׁמֵעַ אֵלֵינוּ בְּכָל־אֲשֶׁר נִשְׁאַל מִמֶּנּוּ גַּם יָדַעְנוּ כִּי לָקַחְנוּ אֶת־כָּל־מִשְׁאַלוֹת לִבֵּנוּ׃",
+      "output_image": "data/hutter/verse_images/john1/005_015_000037.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000037.png",
+      "crop_box": {
+        "left": 80,
+        "top": 39,
+        "right": 626,
+        "bottom": 522
+      }
+    },
+    {
+      "id": "john1.5.16.000037",
+      "book": "john1",
+      "source_file": "000037.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some words/pointing are difficult to confirm from the image.",
+      "hebrew_text": "אִם אִישׁ יוֹדֵעַ כִּי־אָחִיו חוֹטֵא אֶת־הַחֲטָאָה לֹא לְמוֹת יִשְׁאַל יִתֵּן לוֹ אֶת־הַחַיִּים אֶת הָאֵלֶּה אֲשֶׁר חוֹטְאִים לֹא לְמוֹת יֵשׁ־חֲטָאָה לְמוֹת עָלֶיהָ אֵינֶנִּי אֹמַר לִשְׁאַל׃",
+      "output_image": "data/hutter/verse_images/john1/005_016_000037.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000037.png",
+      "crop_box": {
+        "left": 80,
+        "top": 486,
+        "right": 626,
+        "bottom": 910
+      }
+    },
+    {
+      "id": "john1.5.19.000037",
+      "book": "john1",
+      "source_file": "000037.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is somewhat blurred.",
+      "hebrew_text": "יָדַעְנוּ כִּי־מֵאֱלֹהִים אֲנַחְנוּ וְהָעוֹלָם כֻּלּוֹ בָרָע הוּשָׂם׃",
+      "output_image": "data/hutter/verse_images/john1/005_019_000037.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000037.png",
+      "crop_box": {
+        "left": 80,
+        "top": 1655,
+        "right": 626,
+        "bottom": 2015
+      }
+    },
+    {
+      "id": "john1.5.20.000039",
+      "book": "john1",
+      "source_file": "000039.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Several niqqud/marks are small or blurred; transcription may need verification.",
+      "hebrew_text": "יָדַעְנוּ כִּי־בֶן־הָאֱלֹהִים בָּא וְנָתַן לָנוּ אֶת־תְּבוּנָה אֲשֶׁר נֵדַע אֶת אֱלֹהֵי אֱמֶת וִהְיֵינוּ אֲנַחְנוּ בֶּאֱמֶת בִּבְנוֹ בְּיֵשׁוּעַ הַמָּשִׁיחַ זֶה הוּא אֱלֹהֵי אֱמֶת וְחַיֵּי עוֹלָם׃",
+      "output_image": "data/hutter/verse_images/john1/005_020_000039.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000039.png",
+      "crop_box": {
+        "left": 193,
+        "top": 45,
+        "right": 750,
+        "bottom": 452
+      }
+    },
+    {
+      "id": "john1.5.21.000039",
+      "book": "john1",
+      "source_file": "000039.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partly unclear in the image.",
+      "hebrew_text": "בָּנַי שִׁמְרוּ נַפְשְׁכֶם מֵאֱלִילִים אָמֵן׃",
+      "output_image": "data/hutter/verse_images/john1/005_021_000039.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john1/000039.png",
+      "crop_box": {
+        "left": 193,
+        "top": 416,
+        "right": 750,
+        "bottom": 789
+      }
+    },
+    {
+      "id": "john2.1.1.000002",
+      "book": "john2",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/marks are difficult to confirm due to low resolution and overprint.",
+      "hebrew_text": "הַזָּקֵן לַגְּבִירָה הַנִּבְחֶרֶת וְלִבְנֶיהָ אֲשֶׁר אֲנִי אֹהֵב בֶּאֱמֶת וְלֹא אֲנִי לְבַדִּי כִּי אִם כָּל־יֹדְעֵי אֱמֶת׃",
+      "output_image": "data/hutter/verse_images/john2/001_001_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john2/000002.png",
+      "crop_box": {
+        "left": 111,
+        "top": 409,
+        "right": 661,
+        "bottom": 742
+      }
+    },
+    {
+      "id": "john2.1.2.000002",
+      "book": "john2",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Final word and some niqqud are not fully sharp.",
+      "hebrew_text": "בַּעֲבוּר אֱמֶת אֲשֶׁר עוֹמֶדֶת בָּנוּ וְתִהְיֶה עִמָּנוּ לְעוֹלָם׃",
+      "output_image": "data/hutter/verse_images/john2/001_002_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john2/000002.png",
+      "crop_box": {
+        "left": 111,
+        "top": 706,
+        "right": 661,
+        "bottom": 1096
+      }
+    },
+    {
+      "id": "john2.1.3.000002",
+      "book": "john2",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Verse spans lower portion of image 2 and top of image 3; some pointing uncertain.",
+      "hebrew_text": "יְהִי עִמָּכֶם חֶסֶד וְרַחֲמִים שָׁלוֹם מֵאֱלֹהִים הָאָב וּמֵאֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ בֶּן־הָאָב בֶּאֱמֶת וּבְאַהֲבָה׃",
+      "output_image": "data/hutter/verse_images/john2/001_003_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john2/000002.png",
+      "crop_box": {
+        "left": 111,
+        "top": 1060,
+        "right": 661,
+        "bottom": 1395
+      }
+    },
+    {
+      "id": "john2.1.10.000004",
+      "book": "john2",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Final word and some vowel points are difficult to confirm.",
+      "hebrew_text": "אִם־יָבֹא אִישׁ אֲלֵיכֶם וְלֹא יָבִיא אֲלֵיכֶם אֶת־הַתּוֹרָה הַזֹּאת לֹא תִּקָּחֻהוּ הַבַּיְתָה וְלִשְׁלוֹמוֹ לֹא שָׁאֵל׃",
+      "output_image": "data/hutter/verse_images/john2/001_010_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john2/000004.png",
+      "crop_box": {
+        "left": 72,
+        "top": 1310,
+        "right": 623,
+        "bottom": 1639
+      }
+    },
+    {
+      "id": "john2.1.11.000004",
+      "book": "john2",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to verify exactly.",
+      "hebrew_text": "כִּי הַשּׁוֹאֵל לִשְׁלוֹמוֹ מִתְחַבֵּר עִם מַעֲשָׂיו הָרָעִים ( וְהִנֵּה אָמַרְתִּי לָכֶם מִקֶּדֶם פֶּן תֵּבוֹשׁוּ בְּיוֹם יְהוָה )",
+      "output_image": "data/hutter/verse_images/john2/001_011_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john2/000004.png",
+      "crop_box": {
+        "left": 72,
+        "top": 1603,
+        "right": 623,
+        "bottom": 2017
+      }
+    },
+    {
+      "id": "john2.1.7.000004",
+      "book": "john2",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Some vowels/marks and one word form are not fully clear.",
+      "hebrew_text": "כִּי־מַתְעִים רַבִּים יָצְאוּ בָעוֹלָם אֲשֶׁר לֹא מוֹדִים אֶת יֵשׁוּעַ הַמָּשִׁיחַ כִּי בָא בְּבָשָׂר זֶה הוּא הַמַּתְעֶה וְאוֹיֵב הַמָּשִׁיחַ׃",
+      "output_image": "data/hutter/verse_images/john2/001_007_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john2/000004.png",
+      "crop_box": {
+        "left": 72,
+        "top": 356,
+        "right": 623,
+        "bottom": 709
+      }
+    },
+    {
+      "id": "john2.1.8.000004",
+      "book": "john2",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Exact pointing/word division near מִן־לְאַבֵּד is uncertain.",
+      "hebrew_text": "הִשָּׁמְרוּ לָכֶם מִן־לְאַבֵּד מַה־פָּעַלְנוּ כִּי־אִם שָׂכָר מָלֵא נִקַּח׃",
+      "output_image": "data/hutter/verse_images/john2/001_008_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john2/000004.png",
+      "crop_box": {
+        "left": 72,
+        "top": 673,
+        "right": 623,
+        "bottom": 1019
+      }
+    },
+    {
+      "id": "john2.1.9.000004",
+      "book": "john2",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Uncertain transcription of the repeated verb and pointing.",
+      "hebrew_text": "כָּל־אֲשֶׁר עוֹבֵר וְלֹא מְעוֹדֵד בְּתוֹרַת הַמָּשִׁיחַ לֹא יֶשׁ־לוֹ אֱלֹהִים הַמְּעוֹדֵד בְּתוֹרַת הַמָּשִׁיחַ גַּם הָאָב גַּם הַבֵּן יֶשׁ־לוֹ׃",
+      "output_image": "data/hutter/verse_images/john2/001_009_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john2/000004.png",
+      "crop_box": {
+        "left": 72,
+        "top": 983,
+        "right": 623,
+        "bottom": 1346
+      }
+    },
+    {
+      "id": "john2.1.13.000006",
+      "book": "john2",
+      "source_file": "000006.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing is partially unclear; transcription may need review.",
+      "hebrew_text": "שֹׁאֲלוּ לִשְׁלוֹמְךָ בְּנֵי אֲחֹתֶךָ הַבְּחִירָה אָמֵן׃",
+      "output_image": "data/hutter/verse_images/john2/001_013_000006.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john2/000006.png",
+      "crop_box": {
+        "left": 123,
+        "top": 542,
+        "right": 672,
+        "bottom": 778
+      }
+    },
+    {
+      "id": "john3.1.1.000002",
+      "book": "john3",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Left edge slightly cuts preceding/initial area; transcription based on visible Hebrew.",
+      "hebrew_text": "זָקֵן לְגָאִיוֹס לִידִידִי אֲשֶׁר אֲנִי אֹהֲבוֹ בֶּאֱמֶת׃",
+      "output_image": "data/hutter/verse_images/john3/001_001_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000002.png",
+      "crop_box": {
+        "left": 115,
+        "top": 412,
+        "right": 759,
+        "bottom": 628
+      }
+    },
+    {
+      "id": "john3.1.4.000002",
+      "book": "john3",
+      "source_file": "000002.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "First word begins near left edge and pointing is somewhat unclear.",
+      "hebrew_text": "שִׂמְחָה גְדוֹלָה אֵינֶנָּה לִי מִשָּׁמְעִי כִּי־בָנַי בֶּאֱמֶת מִתְהַלְּכִים׃",
+      "output_image": "data/hutter/verse_images/john3/001_004_000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000002.png",
+      "crop_box": {
+        "left": 115,
+        "top": 1152,
+        "right": 759,
+        "bottom": 1398
+      }
+    },
+    {
+      "id": "john3.1.11.000004",
+      "book": "john3",
+      "source_file": "000004.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing/marks are partly uncertain.",
+      "hebrew_text": "אֲהוּבִי אַל־תִּלְמְדָה אַחֲרֵי רָעָה כִּי־אִם אַחֲרֵי טוֹבָה עֹשֵׂה טוֹב מֵאֱלֹהִים הוּא עֹשֵׂה רָע לֹא רָאָה אֶת־פְּנֵי־אֱלֹהִים׃",
+      "output_image": "data/hutter/verse_images/john3/001_011_000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
+      "crop_box": {
+        "left": 75,
+        "top": 1262,
+        "right": 624,
+        "bottom": 1598
+      }
+    },
+    {
+      "id": "john3.1.15.000006",
+      "book": "john3",
+      "source_file": "000006.png",
+      "confidence": "medium",
+      "needs_review": true,
+      "notes": "Pointing and some final letters are blurred; transcription should be checked.",
+      "hebrew_text": "שָׁלוֹם לָךְ שְׁאַל לִשְׁלוֹמְךָ הָרֵעִים שְׁאַל לְשָׁלוֹם לְרֵעִים בִּשְׁמוֹתָם׃",
+      "output_image": "data/hutter/verse_images/john3/001_015_000006.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000006.png",
+      "crop_box": {
+        "left": 104,
+        "top": 508,
+        "right": 651,
+        "bottom": 764
       }
     },
     {

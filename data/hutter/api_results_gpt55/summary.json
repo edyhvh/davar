@@ -1,28 +1,28 @@
 {
-  "book_count": 10,
+  "book_count": 13,
   "totals": {
-    "manifest_verse_count": 1802,
-    "result_count": 1802,
-    "raw_result_count": 1904,
-    "retry_row_count": 102,
+    "manifest_verse_count": 1935,
+    "result_count": 1935,
+    "raw_result_count": 2096,
+    "retry_row_count": 161,
     "pending_count": 0,
-    "batch_count": 244,
-    "needs_review_count": 1342,
-    "likely_crop_issue_count": 488,
-    "likely_ocr_issue_count": 854,
+    "batch_count": 286,
+    "needs_review_count": 1464,
+    "likely_crop_issue_count": 524,
+    "likely_ocr_issue_count": 940,
     "no_hebrew_marks_count": 0,
     "empty_text_count": 0,
-    "total_tokens": 950461,
-    "input_tokens": 625646,
-    "output_tokens": 324815
+    "total_tokens": 1053166,
+    "input_tokens": 692981,
+    "output_tokens": 360185
   },
   "status_counts": {
-    "ok": 1802
+    "ok": 1935
   },
   "confidence_counts": {
-    "high": 81,
-    "low": 264,
-    "medium": 1457
+    "high": 83,
+    "low": 275,
+    "medium": 1577
   },
   "books": [
     {
@@ -153,6 +153,81 @@
         "high": 4,
         "low": 18,
         "medium": 86
+      }
+    },
+    {
+      "book": "john1",
+      "manifest_verse_count": 105,
+      "result_count": 105,
+      "raw_result_count": 150,
+      "retry_row_count": 45,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 31,
+      "needs_review_count": 95,
+      "likely_crop_issue_count": 24,
+      "likely_ocr_issue_count": 71,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 79749,
+      "input_tokens": 51886,
+      "output_tokens": 27863,
+      "status_counts": {
+        "ok": 105
+      },
+      "confidence_counts": {
+        "high": 2,
+        "low": 7,
+        "medium": 96
+      }
+    },
+    {
+      "book": "john2",
+      "manifest_verse_count": 13,
+      "result_count": 13,
+      "raw_result_count": 15,
+      "retry_row_count": 2,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 4,
+      "needs_review_count": 13,
+      "likely_crop_issue_count": 4,
+      "likely_ocr_issue_count": 9,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 8645,
+      "input_tokens": 5689,
+      "output_tokens": 2956,
+      "status_counts": {
+        "ok": 13
+      },
+      "confidence_counts": {
+        "medium": 13
+      }
+    },
+    {
+      "book": "john3",
+      "manifest_verse_count": 15,
+      "result_count": 15,
+      "raw_result_count": 27,
+      "retry_row_count": 12,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 7,
+      "needs_review_count": 14,
+      "likely_crop_issue_count": 8,
+      "likely_ocr_issue_count": 6,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 14311,
+      "input_tokens": 9760,
+      "output_tokens": 4551,
+      "status_counts": {
+        "ok": 15
+      },
+      "confidence_counts": {
+        "low": 4,
+        "medium": 11
       }
     },
     {

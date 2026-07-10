@@ -14,9 +14,9 @@
       "output_image": "data/hutter/verse_images/john3/001_001_000002.png",
       "crop_box": {
         "left": 115,
-        "top": 416,
+        "top": 412,
         "right": 759,
-        "bottom": 636
+        "bottom": 628
       },
       "status": "cropped",
       "notes": [
@@ -32,7 +32,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:434-1993",
-        "cut_lines:618,881,1164,1481,1727"
+        "cut_lines:618,881,1164,1481,1727",
+        "manual_cut_override:610,870,1170,1380,1620"
       ]
     },
     {
@@ -44,9 +45,9 @@
       "output_image": "data/hutter/verse_images/john3/001_002_000002.png",
       "crop_box": {
         "left": 115,
-        "top": 600,
+        "top": 592,
         "right": 759,
-        "bottom": 899
+        "bottom": 888
       },
       "status": "cropped",
       "notes": [
@@ -62,7 +63,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:434-1993",
-        "cut_lines:618,881,1164,1481,1727"
+        "cut_lines:618,881,1164,1481,1727",
+        "manual_cut_override:610,870,1170,1380,1620"
       ]
     },
     {
@@ -74,9 +76,9 @@
       "output_image": "data/hutter/verse_images/john3/001_003_000002.png",
       "crop_box": {
         "left": 115,
-        "top": 863,
+        "top": 852,
         "right": 759,
-        "bottom": 1182
+        "bottom": 1188
       },
       "status": "cropped",
       "notes": [
@@ -92,7 +94,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:434-1993",
-        "cut_lines:618,881,1164,1481,1727"
+        "cut_lines:618,881,1164,1481,1727",
+        "manual_cut_override:610,870,1170,1380,1620"
       ]
     },
     {
@@ -104,9 +107,9 @@
       "output_image": "data/hutter/verse_images/john3/001_004_000002.png",
       "crop_box": {
         "left": 115,
-        "top": 1146,
+        "top": 1152,
         "right": 759,
-        "bottom": 1499
+        "bottom": 1398
       },
       "status": "cropped",
       "notes": [
@@ -122,7 +125,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:434-1993",
-        "cut_lines:618,881,1164,1481,1727"
+        "cut_lines:618,881,1164,1481,1727",
+        "manual_cut_override:610,870,1170,1380,1620"
       ]
     },
     {
@@ -134,9 +138,9 @@
       "output_image": "data/hutter/verse_images/john3/001_005_000002.png",
       "crop_box": {
         "left": 115,
-        "top": 1463,
+        "top": 1362,
         "right": 759,
-        "bottom": 1745
+        "bottom": 1638
       },
       "status": "cropped",
       "notes": [
@@ -152,7 +156,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:434-1993",
-        "cut_lines:618,881,1164,1481,1727"
+        "cut_lines:618,881,1164,1481,1727",
+        "manual_cut_override:610,870,1170,1380,1620"
       ]
     },
     {
@@ -164,9 +169,9 @@
       "output_image": "data/hutter/verse_images/john3/001_006_000002.png",
       "crop_box": {
         "left": 115,
-        "top": 1709,
+        "top": 1602,
         "right": 759,
-        "bottom": 2011
+        "bottom": 1948
       },
       "status": "cropped",
       "notes": [
@@ -182,7 +187,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:434-1993",
-        "cut_lines:618,881,1164,1481,1727"
+        "cut_lines:618,881,1164,1481,1727",
+        "manual_cut_override:610,870,1170,1380,1620"
       ]
     },
     {
@@ -194,93 +200,9 @@
       "output_image": "data/hutter/verse_images/john3/001_007_000004.png",
       "crop_box": {
         "left": 75,
-        "top": 36,
+        "top": 152,
         "right": 624,
-        "bottom": 366
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:189.2",
-        "image_dark_ratio:0.1735",
-        "image_warmth:45.3",
-        "image_quality:yellowed_scan",
-        "hebrew_column:81-618",
-        "analysis_x:118-518",
-        "dark_threshold:160",
-        "whitespace_threshold:26",
-        "content_y:54-1964",
-        "cut_lines:348,715,1013,1287,1637"
-      ]
-    },
-    {
-      "book": "john3",
-      "chapter": 1,
-      "verse": 8,
-      "source_file": "000004.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
-      "output_image": "data/hutter/verse_images/john3/001_008_000004.png",
-      "crop_box": {
-        "left": 75,
-        "top": 330,
-        "right": 624,
-        "bottom": 733
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:189.2",
-        "image_dark_ratio:0.1735",
-        "image_warmth:45.3",
-        "image_quality:yellowed_scan",
-        "hebrew_column:81-618",
-        "analysis_x:118-518",
-        "dark_threshold:160",
-        "whitespace_threshold:26",
-        "content_y:54-1964",
-        "cut_lines:348,715,1013,1287,1637"
-      ]
-    },
-    {
-      "book": "john3",
-      "chapter": 1,
-      "verse": 9,
-      "source_file": "000004.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
-      "output_image": "data/hutter/verse_images/john3/001_009_000004.png",
-      "crop_box": {
-        "left": 75,
-        "top": 697,
-        "right": 624,
-        "bottom": 1031
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:189.2",
-        "image_dark_ratio:0.1735",
-        "image_warmth:45.3",
-        "image_quality:yellowed_scan",
-        "hebrew_column:81-618",
-        "analysis_x:118-518",
-        "dark_threshold:160",
-        "whitespace_threshold:26",
-        "content_y:54-1964",
-        "cut_lines:348,715,1013,1287,1637"
-      ]
-    },
-    {
-      "book": "john3",
-      "chapter": 1,
-      "verse": 10,
-      "source_file": "000004.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
-      "output_image": "data/hutter/verse_images/john3/001_010_000004.png",
-      "crop_box": {
-        "left": 75,
-        "top": 995,
-        "right": 624,
-        "bottom": 1305
+        "bottom": 378
       },
       "status": "cropped",
       "notes": [
@@ -295,6 +217,94 @@
         "whitespace_threshold:26",
         "content_y:54-1964",
         "cut_lines:348,715,1013,1287,1637",
+        "manual_cut_override:360,560,790,1280,1580"
+      ]
+    },
+    {
+      "book": "john3",
+      "chapter": 1,
+      "verse": 8,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
+      "output_image": "data/hutter/verse_images/john3/001_008_000004.png",
+      "crop_box": {
+        "left": 75,
+        "top": 342,
+        "right": 624,
+        "bottom": 578
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:189.2",
+        "image_dark_ratio:0.1735",
+        "image_warmth:45.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:81-618",
+        "analysis_x:118-518",
+        "dark_threshold:160",
+        "whitespace_threshold:26",
+        "content_y:54-1964",
+        "cut_lines:348,715,1013,1287,1637",
+        "manual_cut_override:360,560,790,1280,1580"
+      ]
+    },
+    {
+      "book": "john3",
+      "chapter": 1,
+      "verse": 9,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
+      "output_image": "data/hutter/verse_images/john3/001_009_000004.png",
+      "crop_box": {
+        "left": 75,
+        "top": 542,
+        "right": 624,
+        "bottom": 808
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:189.2",
+        "image_dark_ratio:0.1735",
+        "image_warmth:45.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:81-618",
+        "analysis_x:118-518",
+        "dark_threshold:160",
+        "whitespace_threshold:26",
+        "content_y:54-1964",
+        "cut_lines:348,715,1013,1287,1637",
+        "manual_cut_override:360,560,790,1280,1580"
+      ]
+    },
+    {
+      "book": "john3",
+      "chapter": 1,
+      "verse": 10,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
+      "output_image": "data/hutter/verse_images/john3/001_010_000004.png",
+      "crop_box": {
+        "left": 75,
+        "top": 772,
+        "right": 624,
+        "bottom": 1298
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:189.2",
+        "image_dark_ratio:0.1735",
+        "image_warmth:45.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:81-618",
+        "analysis_x:118-518",
+        "dark_threshold:160",
+        "whitespace_threshold:26",
+        "content_y:54-1964",
+        "cut_lines:348,715,1013,1287,1637",
+        "manual_cut_override:360,560,790,1280,1580",
         "Verse 10: Complex line with potential multi-word ambiguity in middle section"
       ]
     },
@@ -307,37 +317,9 @@
       "output_image": "data/hutter/verse_images/john3/001_011_000004.png",
       "crop_box": {
         "left": 75,
-        "top": 1269,
+        "top": 1262,
         "right": 624,
-        "bottom": 1655
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:189.2",
-        "image_dark_ratio:0.1735",
-        "image_warmth:45.3",
-        "image_quality:yellowed_scan",
-        "hebrew_column:81-618",
-        "analysis_x:118-518",
-        "dark_threshold:160",
-        "whitespace_threshold:26",
-        "content_y:54-1964",
-        "cut_lines:348,715,1013,1287,1637"
-      ]
-    },
-    {
-      "book": "john3",
-      "chapter": 1,
-      "verse": 12,
-      "source_file": "000004.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
-      "output_image": "data/hutter/verse_images/john3/001_012_000004.png",
-      "crop_box": {
-        "left": 75,
-        "top": 1619,
-        "right": 624,
-        "bottom": 1982
+        "bottom": 1598
       },
       "status": "cropped",
       "notes": [
@@ -352,6 +334,36 @@
         "whitespace_threshold:26",
         "content_y:54-1964",
         "cut_lines:348,715,1013,1287,1637",
+        "manual_cut_override:360,560,790,1280,1580"
+      ]
+    },
+    {
+      "book": "john3",
+      "chapter": 1,
+      "verse": 12,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/john3/000004.png",
+      "output_image": "data/hutter/verse_images/john3/001_012_000004.png",
+      "crop_box": {
+        "left": 75,
+        "top": 1562,
+        "right": 624,
+        "bottom": 1938
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:189.2",
+        "image_dark_ratio:0.1735",
+        "image_warmth:45.3",
+        "image_quality:yellowed_scan",
+        "hebrew_column:81-618",
+        "analysis_x:118-518",
+        "dark_threshold:160",
+        "whitespace_threshold:26",
+        "content_y:54-1964",
+        "cut_lines:348,715,1013,1287,1637",
+        "manual_cut_override:360,560,790,1280,1580",
         "Verse 12: Word boundaries in middle section require careful verification"
       ]
     },
