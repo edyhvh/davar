@@ -1,28 +1,28 @@
 {
-  "book_count": 13,
+  "book_count": 15,
   "totals": {
-    "manifest_verse_count": 1935,
-    "result_count": 1935,
-    "raw_result_count": 2096,
-    "retry_row_count": 161,
+    "manifest_verse_count": 2101,
+    "result_count": 2101,
+    "raw_result_count": 2348,
+    "retry_row_count": 247,
     "pending_count": 0,
-    "batch_count": 286,
-    "needs_review_count": 1464,
-    "likely_crop_issue_count": 524,
-    "likely_ocr_issue_count": 940,
+    "batch_count": 338,
+    "needs_review_count": 1622,
+    "likely_crop_issue_count": 567,
+    "likely_ocr_issue_count": 1055,
     "no_hebrew_marks_count": 0,
     "empty_text_count": 0,
-    "total_tokens": 1053166,
-    "input_tokens": 692981,
-    "output_tokens": 360185
+    "total_tokens": 1194416,
+    "input_tokens": 786196,
+    "output_tokens": 408220
   },
   "status_counts": {
-    "ok": 1935
+    "ok": 2101
   },
   "confidence_counts": {
-    "high": 83,
-    "low": 275,
-    "medium": 1577
+    "high": 89,
+    "low": 303,
+    "medium": 1709
   },
   "books": [
     {
@@ -253,6 +253,57 @@
       "confidence_counts": {
         "low": 5,
         "medium": 20
+      }
+    },
+    {
+      "book": "peter1",
+      "manifest_verse_count": 105,
+      "result_count": 105,
+      "raw_result_count": 153,
+      "retry_row_count": 48,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 31,
+      "needs_review_count": 97,
+      "likely_crop_issue_count": 22,
+      "likely_ocr_issue_count": 75,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 83806,
+      "input_tokens": 55443,
+      "output_tokens": 28363,
+      "status_counts": {
+        "ok": 105
+      },
+      "confidence_counts": {
+        "high": 6,
+        "low": 14,
+        "medium": 85
+      }
+    },
+    {
+      "book": "peter2",
+      "manifest_verse_count": 61,
+      "result_count": 61,
+      "raw_result_count": 99,
+      "retry_row_count": 38,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 21,
+      "needs_review_count": 61,
+      "likely_crop_issue_count": 21,
+      "likely_ocr_issue_count": 40,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 57444,
+      "input_tokens": 37772,
+      "output_tokens": 19672,
+      "status_counts": {
+        "ok": 61
+      },
+      "confidence_counts": {
+        "low": 14,
+        "medium": 47
       }
     },
     {

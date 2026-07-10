@@ -14,9 +14,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_001_000002.png",
       "crop_box": {
         "left": 121,
-        "top": 430,
+        "top": 412,
         "right": 880,
-        "bottom": 769
+        "bottom": 768
       },
       "status": "cropped",
       "notes": [
@@ -31,7 +31,8 @@
         "dark_threshold:160",
         "whitespace_threshold:59",
         "content_y:448-1980",
-        "cut_lines:751,1108,1372,1653"
+        "cut_lines:751,1108,1372,1653",
+        "manual_cut_override:750,970,1280,1650"
       ]
     },
     {
@@ -43,9 +44,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_002_000002.png",
       "crop_box": {
         "left": 121,
-        "top": 733,
+        "top": 732,
         "right": 880,
-        "bottom": 1126
+        "bottom": 988
       },
       "status": "cropped",
       "notes": [
@@ -60,7 +61,8 @@
         "dark_threshold:160",
         "whitespace_threshold:59",
         "content_y:448-1980",
-        "cut_lines:751,1108,1372,1653"
+        "cut_lines:751,1108,1372,1653",
+        "manual_cut_override:750,970,1280,1650"
       ]
     },
     {
@@ -72,9 +74,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_003_000002.png",
       "crop_box": {
         "left": 121,
-        "top": 1090,
+        "top": 952,
         "right": 880,
-        "bottom": 1390
+        "bottom": 1298
       },
       "status": "cropped",
       "notes": [
@@ -89,7 +91,8 @@
         "dark_threshold:160",
         "whitespace_threshold:59",
         "content_y:448-1980",
-        "cut_lines:751,1108,1372,1653"
+        "cut_lines:751,1108,1372,1653",
+        "manual_cut_override:750,970,1280,1650"
       ]
     },
     {
@@ -101,9 +104,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_004_000002.png",
       "crop_box": {
         "left": 121,
-        "top": 1354,
+        "top": 1262,
         "right": 880,
-        "bottom": 1671
+        "bottom": 1668
       },
       "status": "cropped",
       "notes": [
@@ -118,7 +121,8 @@
         "dark_threshold:160",
         "whitespace_threshold:59",
         "content_y:448-1980",
-        "cut_lines:751,1108,1372,1653"
+        "cut_lines:751,1108,1372,1653",
+        "manual_cut_override:750,970,1280,1650"
       ]
     },
     {
@@ -130,9 +134,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_005_000002.png",
       "crop_box": {
         "left": 121,
-        "top": 1635,
+        "top": 1632,
         "right": 880,
-        "bottom": 1998
+        "bottom": 1948
       },
       "status": "cropped",
       "notes": [
@@ -147,7 +151,8 @@
         "dark_threshold:160",
         "whitespace_threshold:59",
         "content_y:448-1980",
-        "cut_lines:751,1108,1372,1653"
+        "cut_lines:751,1108,1372,1653",
+        "manual_cut_override:750,970,1280,1650"
       ]
     },
     {
@@ -159,9 +164,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_006_000004.png",
       "crop_box": {
         "left": 101,
-        "top": 38,
+        "top": 152,
         "right": 662,
-        "bottom": 425
+        "bottom": 418
       },
       "status": "cropped",
       "notes": [
@@ -175,7 +180,8 @@
         "dark_threshold:160",
         "whitespace_threshold:14",
         "content_y:56-1977",
-        "cut_lines:407,759,1033,1329,1647"
+        "cut_lines:407,759,1033,1329,1647",
+        "manual_cut_override:400,610,910,1270,1660"
       ]
     },
     {
@@ -187,9 +193,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_007_000004.png",
       "crop_box": {
         "left": 101,
-        "top": 389,
+        "top": 382,
         "right": 662,
-        "bottom": 777
+        "bottom": 628
       },
       "status": "cropped",
       "notes": [
@@ -203,7 +209,8 @@
         "dark_threshold:160",
         "whitespace_threshold:14",
         "content_y:56-1977",
-        "cut_lines:407,759,1033,1329,1647"
+        "cut_lines:407,759,1033,1329,1647",
+        "manual_cut_override:400,610,910,1270,1660"
       ]
     },
     {
@@ -215,9 +222,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_008_000004.png",
       "crop_box": {
         "left": 101,
-        "top": 741,
+        "top": 592,
         "right": 662,
-        "bottom": 1051
+        "bottom": 928
       },
       "status": "cropped",
       "notes": [
@@ -231,7 +238,8 @@
         "dark_threshold:160",
         "whitespace_threshold:14",
         "content_y:56-1977",
-        "cut_lines:407,759,1033,1329,1647"
+        "cut_lines:407,759,1033,1329,1647",
+        "manual_cut_override:400,610,910,1270,1660"
       ]
     },
     {
@@ -243,9 +251,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_009_000004.png",
       "crop_box": {
         "left": 101,
-        "top": 1015,
+        "top": 892,
         "right": 662,
-        "bottom": 1347
+        "bottom": 1288
       },
       "status": "cropped",
       "notes": [
@@ -259,7 +267,8 @@
         "dark_threshold:160",
         "whitespace_threshold:14",
         "content_y:56-1977",
-        "cut_lines:407,759,1033,1329,1647"
+        "cut_lines:407,759,1033,1329,1647",
+        "manual_cut_override:400,610,910,1270,1660"
       ]
     },
     {
@@ -271,9 +280,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_010_000004.png",
       "crop_box": {
         "left": 101,
-        "top": 1311,
+        "top": 1252,
         "right": 662,
-        "bottom": 1665
+        "bottom": 1678
       },
       "status": "cropped",
       "notes": [
@@ -287,7 +296,8 @@
         "dark_threshold:160",
         "whitespace_threshold:14",
         "content_y:56-1977",
-        "cut_lines:407,759,1033,1329,1647"
+        "cut_lines:407,759,1033,1329,1647",
+        "manual_cut_override:400,610,910,1270,1660"
       ]
     },
     {
@@ -299,9 +309,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_011_000004.png",
       "crop_box": {
         "left": 101,
-        "top": 1629,
+        "top": 1642,
         "right": 662,
-        "bottom": 1995
+        "bottom": 1938
       },
       "status": "cropped",
       "notes": [
@@ -315,7 +325,8 @@
         "dark_threshold:160",
         "whitespace_threshold:14",
         "content_y:56-1977",
-        "cut_lines:407,759,1033,1329,1647"
+        "cut_lines:407,759,1033,1329,1647",
+        "manual_cut_override:400,610,910,1270,1660"
       ]
     },
     {
@@ -327,9 +338,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_012_000006.png",
       "crop_box": {
         "left": 80,
-        "top": 54,
+        "top": 152,
         "right": 637,
-        "bottom": 402
+        "bottom": 468
       },
       "status": "cropped",
       "notes": [
@@ -343,7 +354,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:72-2028",
-        "cut_lines:384,699,1105,1431,1750"
+        "cut_lines:384,699,1105,1431,1750",
+        "manual_cut_override:450,680,950,1190,1590"
       ]
     },
     {
@@ -355,9 +367,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_013_000006.png",
       "crop_box": {
         "left": 80,
-        "top": 366,
+        "top": 432,
         "right": 637,
-        "bottom": 717
+        "bottom": 698
       },
       "status": "cropped",
       "notes": [
@@ -371,7 +383,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:72-2028",
-        "cut_lines:384,699,1105,1431,1750"
+        "cut_lines:384,699,1105,1431,1750",
+        "manual_cut_override:450,680,950,1190,1590"
       ]
     },
     {
@@ -383,9 +396,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_014_000006.png",
       "crop_box": {
         "left": 80,
-        "top": 681,
+        "top": 662,
         "right": 637,
-        "bottom": 1123
+        "bottom": 968
       },
       "status": "cropped",
       "notes": [
@@ -399,7 +412,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:72-2028",
-        "cut_lines:384,699,1105,1431,1750"
+        "cut_lines:384,699,1105,1431,1750",
+        "manual_cut_override:450,680,950,1190,1590"
       ]
     },
     {
@@ -411,9 +425,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_015_000006.png",
       "crop_box": {
         "left": 80,
-        "top": 1087,
+        "top": 932,
         "right": 637,
-        "bottom": 1449
+        "bottom": 1208
       },
       "status": "cropped",
       "notes": [
@@ -427,7 +441,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:72-2028",
-        "cut_lines:384,699,1105,1431,1750"
+        "cut_lines:384,699,1105,1431,1750",
+        "manual_cut_override:450,680,950,1190,1590"
       ]
     },
     {
@@ -439,9 +454,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_016_000006.png",
       "crop_box": {
         "left": 80,
-        "top": 1413,
+        "top": 1172,
         "right": 637,
-        "bottom": 1768
+        "bottom": 1608
       },
       "status": "cropped",
       "notes": [
@@ -455,7 +470,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:72-2028",
-        "cut_lines:384,699,1105,1431,1750"
+        "cut_lines:384,699,1105,1431,1750",
+        "manual_cut_override:450,680,950,1190,1590"
       ]
     },
     {
@@ -467,9 +483,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_017_000006.png",
       "crop_box": {
         "left": 80,
-        "top": 1732,
+        "top": 1572,
         "right": 637,
-        "bottom": 2046
+        "bottom": 1948
       },
       "status": "cropped",
       "notes": [
@@ -483,7 +499,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:72-2028",
-        "cut_lines:384,699,1105,1431,1750"
+        "cut_lines:384,699,1105,1431,1750",
+        "manual_cut_override:450,680,950,1190,1590"
       ]
     },
     {
@@ -495,9 +512,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_018_000008.png",
       "crop_box": {
         "left": 78,
-        "top": 49,
+        "top": 152,
         "right": 637,
-        "bottom": 430
+        "bottom": 408
       },
       "status": "cropped",
       "notes": [
@@ -513,7 +530,8 @@
         "dark_threshold:160",
         "whitespace_threshold:18",
         "content_y:67-2028",
-        "cut_lines:412,852,1250,1636"
+        "cut_lines:412,852,1250,1636",
+        "manual_cut_override:390,850,1090,1450"
       ]
     },
     {
@@ -525,9 +543,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_019_000008.png",
       "crop_box": {
         "left": 78,
-        "top": 394,
+        "top": 372,
         "right": 637,
-        "bottom": 870
+        "bottom": 868
       },
       "status": "cropped",
       "notes": [
@@ -543,7 +561,8 @@
         "dark_threshold:160",
         "whitespace_threshold:18",
         "content_y:67-2028",
-        "cut_lines:412,852,1250,1636"
+        "cut_lines:412,852,1250,1636",
+        "manual_cut_override:390,850,1090,1450"
       ]
     },
     {
@@ -555,9 +574,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_020_000008.png",
       "crop_box": {
         "left": 78,
-        "top": 834,
+        "top": 832,
         "right": 637,
-        "bottom": 1268
+        "bottom": 1108
       },
       "status": "cropped",
       "notes": [
@@ -573,7 +592,8 @@
         "dark_threshold:160",
         "whitespace_threshold:18",
         "content_y:67-2028",
-        "cut_lines:412,852,1250,1636"
+        "cut_lines:412,852,1250,1636",
+        "manual_cut_override:390,850,1090,1450"
       ]
     },
     {
@@ -585,9 +605,9 @@
       "output_image": "data/hutter/verse_images/peter2/001_021_000008.png",
       "crop_box": {
         "left": 78,
-        "top": 1232,
+        "top": 1072,
         "right": 637,
-        "bottom": 1654
+        "bottom": 1468
       },
       "status": "cropped",
       "notes": [
@@ -603,7 +623,8 @@
         "dark_threshold:160",
         "whitespace_threshold:18",
         "content_y:67-2028",
-        "cut_lines:412,852,1250,1636"
+        "cut_lines:412,852,1250,1636",
+        "manual_cut_override:390,850,1090,1450"
       ]
     },
     {
@@ -615,9 +636,9 @@
       "output_image": "data/hutter/verse_images/peter2/002_001_000008.png",
       "crop_box": {
         "left": 78,
-        "top": 1618,
+        "top": 1432,
         "right": 637,
-        "bottom": 2046
+        "bottom": 1938
       },
       "status": "cropped",
       "notes": [
@@ -633,7 +654,8 @@
         "dark_threshold:160",
         "whitespace_threshold:18",
         "content_y:67-2028",
-        "cut_lines:412,852,1250,1636"
+        "cut_lines:412,852,1250,1636",
+        "manual_cut_override:390,850,1090,1450"
       ]
     },
     {
@@ -952,10 +974,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/peter2/000014.png",
       "output_image": "data/hutter/verse_images/peter2/002_013_000014.png",
       "crop_box": {
-        "left": 116,
-        "top": 44,
-        "right": 668,
-        "bottom": 487
+        "left": 62,
+        "top": 152,
+        "right": 722,
+        "bottom": 638
       },
       "status": "cropped",
       "notes": [
@@ -965,11 +987,12 @@
         "image_warmth:42.9",
         "image_quality:yellowed_scan",
         "hebrew_column:122-662",
-        "analysis_x:160-624",
+        "analysis_x:114-651",
         "dark_threshold:160",
-        "whitespace_threshold:29",
+        "whitespace_threshold:35",
         "content_y:62-1998",
-        "cut_lines:469,876,1200,1593"
+        "cut_lines:469,876,1200,1593",
+        "manual_cut_override:620,980,1280,1580"
       ]
     },
     {
@@ -980,10 +1003,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/peter2/000014.png",
       "output_image": "data/hutter/verse_images/peter2/002_014_000014.png",
       "crop_box": {
-        "left": 116,
-        "top": 451,
-        "right": 668,
-        "bottom": 894
+        "left": 62,
+        "top": 602,
+        "right": 722,
+        "bottom": 998
       },
       "status": "cropped",
       "notes": [
@@ -993,11 +1016,12 @@
         "image_warmth:42.9",
         "image_quality:yellowed_scan",
         "hebrew_column:122-662",
-        "analysis_x:160-624",
+        "analysis_x:114-651",
         "dark_threshold:160",
-        "whitespace_threshold:29",
+        "whitespace_threshold:35",
         "content_y:62-1998",
-        "cut_lines:469,876,1200,1593"
+        "cut_lines:469,876,1200,1593",
+        "manual_cut_override:620,980,1280,1580"
       ]
     },
     {
@@ -1008,10 +1032,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/peter2/000014.png",
       "output_image": "data/hutter/verse_images/peter2/002_015_000014.png",
       "crop_box": {
-        "left": 116,
-        "top": 858,
-        "right": 668,
-        "bottom": 1218
+        "left": 62,
+        "top": 962,
+        "right": 722,
+        "bottom": 1298
       },
       "status": "cropped",
       "notes": [
@@ -1021,11 +1045,12 @@
         "image_warmth:42.9",
         "image_quality:yellowed_scan",
         "hebrew_column:122-662",
-        "analysis_x:160-624",
+        "analysis_x:114-651",
         "dark_threshold:160",
-        "whitespace_threshold:29",
+        "whitespace_threshold:35",
         "content_y:62-1998",
-        "cut_lines:469,876,1200,1593"
+        "cut_lines:469,876,1200,1593",
+        "manual_cut_override:620,980,1280,1580"
       ]
     },
     {
@@ -1036,10 +1061,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/peter2/000014.png",
       "output_image": "data/hutter/verse_images/peter2/002_016_000014.png",
       "crop_box": {
-        "left": 116,
-        "top": 1182,
-        "right": 668,
-        "bottom": 1611
+        "left": 62,
+        "top": 1262,
+        "right": 722,
+        "bottom": 1598
       },
       "status": "cropped",
       "notes": [
@@ -1049,11 +1074,12 @@
         "image_warmth:42.9",
         "image_quality:yellowed_scan",
         "hebrew_column:122-662",
-        "analysis_x:160-624",
+        "analysis_x:114-651",
         "dark_threshold:160",
-        "whitespace_threshold:29",
+        "whitespace_threshold:35",
         "content_y:62-1998",
-        "cut_lines:469,876,1200,1593"
+        "cut_lines:469,876,1200,1593",
+        "manual_cut_override:620,980,1280,1580"
       ]
     },
     {
@@ -1064,10 +1090,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/peter2/000014.png",
       "output_image": "data/hutter/verse_images/peter2/002_017_000014.png",
       "crop_box": {
-        "left": 116,
-        "top": 1575,
-        "right": 668,
-        "bottom": 2016
+        "left": 62,
+        "top": 1562,
+        "right": 722,
+        "bottom": 1948
       },
       "status": "cropped",
       "notes": [
@@ -1077,11 +1103,12 @@
         "image_warmth:42.9",
         "image_quality:yellowed_scan",
         "hebrew_column:122-662",
-        "analysis_x:160-624",
+        "analysis_x:114-651",
         "dark_threshold:160",
-        "whitespace_threshold:29",
+        "whitespace_threshold:35",
         "content_y:62-1998",
-        "cut_lines:469,876,1200,1593"
+        "cut_lines:469,876,1200,1593",
+        "manual_cut_override:620,980,1280,1580"
       ]
     },
     {
@@ -1238,9 +1265,9 @@
       "output_image": "data/hutter/verse_images/peter2/003_001_000018.png",
       "crop_box": {
         "left": 104,
-        "top": 460,
+        "top": 152,
         "right": 674,
-        "bottom": 691
+        "bottom": 478
       },
       "status": "cropped",
       "notes": [
@@ -1255,7 +1282,8 @@
         "dark_threshold:160",
         "whitespace_threshold:25",
         "content_y:478-2016",
-        "cut_lines:673,965,1266,1506,1730"
+        "cut_lines:673,965,1266,1506,1730",
+        "manual_cut_override:460,790,1050,1400,1750"
       ]
     },
     {
@@ -1267,9 +1295,9 @@
       "output_image": "data/hutter/verse_images/peter2/003_002_000018.png",
       "crop_box": {
         "left": 104,
-        "top": 655,
+        "top": 442,
         "right": 674,
-        "bottom": 983
+        "bottom": 808
       },
       "status": "cropped",
       "notes": [
@@ -1284,7 +1312,8 @@
         "dark_threshold:160",
         "whitespace_threshold:25",
         "content_y:478-2016",
-        "cut_lines:673,965,1266,1506,1730"
+        "cut_lines:673,965,1266,1506,1730",
+        "manual_cut_override:460,790,1050,1400,1750"
       ]
     },
     {
@@ -1296,9 +1325,9 @@
       "output_image": "data/hutter/verse_images/peter2/003_003_000018.png",
       "crop_box": {
         "left": 104,
-        "top": 947,
+        "top": 772,
         "right": 674,
-        "bottom": 1284
+        "bottom": 1068
       },
       "status": "cropped",
       "notes": [
@@ -1313,7 +1342,8 @@
         "dark_threshold:160",
         "whitespace_threshold:25",
         "content_y:478-2016",
-        "cut_lines:673,965,1266,1506,1730"
+        "cut_lines:673,965,1266,1506,1730",
+        "manual_cut_override:460,790,1050,1400,1750"
       ]
     },
     {
@@ -1325,9 +1355,9 @@
       "output_image": "data/hutter/verse_images/peter2/003_004_000018.png",
       "crop_box": {
         "left": 104,
-        "top": 1248,
+        "top": 1032,
         "right": 674,
-        "bottom": 1524
+        "bottom": 1418
       },
       "status": "cropped",
       "notes": [
@@ -1342,7 +1372,8 @@
         "dark_threshold:160",
         "whitespace_threshold:25",
         "content_y:478-2016",
-        "cut_lines:673,965,1266,1506,1730"
+        "cut_lines:673,965,1266,1506,1730",
+        "manual_cut_override:460,790,1050,1400,1750"
       ]
     },
     {
@@ -1354,9 +1385,9 @@
       "output_image": "data/hutter/verse_images/peter2/003_005_000018.png",
       "crop_box": {
         "left": 104,
-        "top": 1488,
+        "top": 1382,
         "right": 674,
-        "bottom": 1748
+        "bottom": 1768
       },
       "status": "cropped",
       "notes": [
@@ -1371,7 +1402,8 @@
         "dark_threshold:160",
         "whitespace_threshold:25",
         "content_y:478-2016",
-        "cut_lines:673,965,1266,1506,1730"
+        "cut_lines:673,965,1266,1506,1730",
+        "manual_cut_override:460,790,1050,1400,1750"
       ]
     },
     {
@@ -1383,9 +1415,9 @@
       "output_image": "data/hutter/verse_images/peter2/003_006_000018.png",
       "crop_box": {
         "left": 104,
-        "top": 1712,
+        "top": 1732,
         "right": 674,
-        "bottom": 2034
+        "bottom": 1968
       },
       "status": "cropped",
       "notes": [
@@ -1400,7 +1432,8 @@
         "dark_threshold:160",
         "whitespace_threshold:25",
         "content_y:478-2016",
-        "cut_lines:673,965,1266,1506,1730"
+        "cut_lines:673,965,1266,1506,1730",
+        "manual_cut_override:460,790,1050,1400,1750"
       ]
     },
     {
