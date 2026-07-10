@@ -14,9 +14,9 @@
       "output_image": "data/hutter/verse_images/philemon/001_001_000002.png",
       "crop_box": {
         "left": 68,
-        "top": 429,
+        "top": 432,
         "right": 624,
-        "bottom": 718
+        "bottom": 708
       },
       "status": "cropped",
       "notes": [
@@ -31,7 +31,8 @@
         "dark_threshold:160",
         "whitespace_threshold:12",
         "content_y:447-2015",
-        "cut_lines:700,976,1247,1501,1756"
+        "cut_lines:700,976,1247,1501,1756",
+        "manual_cut_override:690,970,1180,1370,1640"
       ]
     },
     {
@@ -43,9 +44,9 @@
       "output_image": "data/hutter/verse_images/philemon/001_002_000002.png",
       "crop_box": {
         "left": 68,
-        "top": 682,
+        "top": 672,
         "right": 624,
-        "bottom": 994
+        "bottom": 988
       },
       "status": "cropped",
       "notes": [
@@ -60,7 +61,8 @@
         "dark_threshold:160",
         "whitespace_threshold:12",
         "content_y:447-2015",
-        "cut_lines:700,976,1247,1501,1756"
+        "cut_lines:700,976,1247,1501,1756",
+        "manual_cut_override:690,970,1180,1370,1640"
       ]
     },
     {
@@ -72,9 +74,9 @@
       "output_image": "data/hutter/verse_images/philemon/001_003_000002.png",
       "crop_box": {
         "left": 68,
-        "top": 958,
+        "top": 952,
         "right": 624,
-        "bottom": 1265
+        "bottom": 1198
       },
       "status": "cropped",
       "notes": [
@@ -89,7 +91,8 @@
         "dark_threshold:160",
         "whitespace_threshold:12",
         "content_y:447-2015",
-        "cut_lines:700,976,1247,1501,1756"
+        "cut_lines:700,976,1247,1501,1756",
+        "manual_cut_override:690,970,1180,1370,1640"
       ]
     },
     {
@@ -101,9 +104,9 @@
       "output_image": "data/hutter/verse_images/philemon/001_004_000002.png",
       "crop_box": {
         "left": 68,
-        "top": 1229,
+        "top": 1162,
         "right": 624,
-        "bottom": 1519
+        "bottom": 1388
       },
       "status": "cropped",
       "notes": [
@@ -118,7 +121,8 @@
         "dark_threshold:160",
         "whitespace_threshold:12",
         "content_y:447-2015",
-        "cut_lines:700,976,1247,1501,1756"
+        "cut_lines:700,976,1247,1501,1756",
+        "manual_cut_override:690,970,1180,1370,1640"
       ]
     },
     {
@@ -130,9 +134,9 @@
       "output_image": "data/hutter/verse_images/philemon/001_005_000002.png",
       "crop_box": {
         "left": 68,
-        "top": 1483,
+        "top": 1352,
         "right": 624,
-        "bottom": 1774
+        "bottom": 1658
       },
       "status": "cropped",
       "notes": [
@@ -147,7 +151,8 @@
         "dark_threshold:160",
         "whitespace_threshold:12",
         "content_y:447-2015",
-        "cut_lines:700,976,1247,1501,1756"
+        "cut_lines:700,976,1247,1501,1756",
+        "manual_cut_override:690,970,1180,1370,1640"
       ]
     },
     {
@@ -159,9 +164,9 @@
       "output_image": "data/hutter/verse_images/philemon/001_006_000002.png",
       "crop_box": {
         "left": 68,
-        "top": 1738,
+        "top": 1622,
         "right": 624,
-        "bottom": 2033
+        "bottom": 1968
       },
       "status": "cropped",
       "notes": [
@@ -176,7 +181,8 @@
         "dark_threshold:160",
         "whitespace_threshold:12",
         "content_y:447-2015",
-        "cut_lines:700,976,1247,1501,1756"
+        "cut_lines:700,976,1247,1501,1756",
+        "manual_cut_override:690,970,1180,1370,1640"
       ]
     },
     {
@@ -187,10 +193,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/philemon/000004.png",
       "output_image": "data/hutter/verse_images/philemon/001_007_000004.png",
       "crop_box": {
-        "left": 96,
-        "top": 70,
-        "right": 616,
-        "bottom": 394
+        "left": 42,
+        "top": 152,
+        "right": 670,
+        "bottom": 478
       },
       "status": "cropped",
       "notes": [
@@ -200,11 +206,12 @@
         "image_warmth:41.0",
         "image_quality:yellowed_scan",
         "hebrew_column:102-610",
-        "analysis_x:137-518",
+        "analysis_x:92-518",
         "dark_threshold:160",
-        "whitespace_threshold:20",
-        "content_y:88-2027",
-        "cut_lines:376,584,819,1047,1272,1566,1846"
+        "whitespace_threshold:24",
+        "content_y:88-2028",
+        "cut_lines:378,584,822,1047,1272,1550,1846",
+        "manual_cut_override:460,650,930,1100,1280,1430,1650"
       ]
     },
     {
@@ -215,10 +222,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/philemon/000004.png",
       "output_image": "data/hutter/verse_images/philemon/001_008_000004.png",
       "crop_box": {
-        "left": 96,
-        "top": 358,
-        "right": 616,
-        "bottom": 602
+        "left": 42,
+        "top": 442,
+        "right": 670,
+        "bottom": 668
       },
       "status": "cropped",
       "notes": [
@@ -228,11 +235,12 @@
         "image_warmth:41.0",
         "image_quality:yellowed_scan",
         "hebrew_column:102-610",
-        "analysis_x:137-518",
+        "analysis_x:92-518",
         "dark_threshold:160",
-        "whitespace_threshold:20",
-        "content_y:88-2027",
-        "cut_lines:376,584,819,1047,1272,1566,1846"
+        "whitespace_threshold:24",
+        "content_y:88-2028",
+        "cut_lines:378,584,822,1047,1272,1550,1846",
+        "manual_cut_override:460,650,930,1100,1280,1430,1650"
       ]
     },
     {
@@ -243,10 +251,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/philemon/000004.png",
       "output_image": "data/hutter/verse_images/philemon/001_009_000004.png",
       "crop_box": {
-        "left": 96,
-        "top": 566,
-        "right": 616,
-        "bottom": 837
+        "left": 42,
+        "top": 632,
+        "right": 670,
+        "bottom": 948
       },
       "status": "cropped",
       "notes": [
@@ -256,11 +264,12 @@
         "image_warmth:41.0",
         "image_quality:yellowed_scan",
         "hebrew_column:102-610",
-        "analysis_x:137-518",
+        "analysis_x:92-518",
         "dark_threshold:160",
-        "whitespace_threshold:20",
-        "content_y:88-2027",
-        "cut_lines:376,584,819,1047,1272,1566,1846"
+        "whitespace_threshold:24",
+        "content_y:88-2028",
+        "cut_lines:378,584,822,1047,1272,1550,1846",
+        "manual_cut_override:460,650,930,1100,1280,1430,1650"
       ]
     },
     {
@@ -271,10 +280,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/philemon/000004.png",
       "output_image": "data/hutter/verse_images/philemon/001_010_000004.png",
       "crop_box": {
-        "left": 96,
-        "top": 801,
-        "right": 616,
-        "bottom": 1065
+        "left": 42,
+        "top": 912,
+        "right": 670,
+        "bottom": 1118
       },
       "status": "cropped",
       "notes": [
@@ -284,11 +293,12 @@
         "image_warmth:41.0",
         "image_quality:yellowed_scan",
         "hebrew_column:102-610",
-        "analysis_x:137-518",
+        "analysis_x:92-518",
         "dark_threshold:160",
-        "whitespace_threshold:20",
-        "content_y:88-2027",
-        "cut_lines:376,584,819,1047,1272,1566,1846"
+        "whitespace_threshold:24",
+        "content_y:88-2028",
+        "cut_lines:378,584,822,1047,1272,1550,1846",
+        "manual_cut_override:460,650,930,1100,1280,1430,1650"
       ]
     },
     {
@@ -299,10 +309,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/philemon/000004.png",
       "output_image": "data/hutter/verse_images/philemon/001_011_000004.png",
       "crop_box": {
-        "left": 96,
-        "top": 1029,
-        "right": 616,
-        "bottom": 1290
+        "left": 42,
+        "top": 1082,
+        "right": 670,
+        "bottom": 1298
       },
       "status": "cropped",
       "notes": [
@@ -312,11 +322,12 @@
         "image_warmth:41.0",
         "image_quality:yellowed_scan",
         "hebrew_column:102-610",
-        "analysis_x:137-518",
+        "analysis_x:92-518",
         "dark_threshold:160",
-        "whitespace_threshold:20",
-        "content_y:88-2027",
-        "cut_lines:376,584,819,1047,1272,1566,1846",
+        "whitespace_threshold:24",
+        "content_y:88-2028",
+        "cut_lines:378,584,822,1047,1272,1550,1846",
+        "manual_cut_override:460,650,930,1100,1280,1430,1650",
         "Verse 11 text appears damaged or unclear in places"
       ]
     },
@@ -328,10 +339,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/philemon/000004.png",
       "output_image": "data/hutter/verse_images/philemon/001_012_000004.png",
       "crop_box": {
-        "left": 96,
-        "top": 1254,
-        "right": 616,
-        "bottom": 1584
+        "left": 42,
+        "top": 1262,
+        "right": 670,
+        "bottom": 1448
       },
       "status": "cropped",
       "notes": [
@@ -341,11 +352,12 @@
         "image_warmth:41.0",
         "image_quality:yellowed_scan",
         "hebrew_column:102-610",
-        "analysis_x:137-518",
+        "analysis_x:92-518",
         "dark_threshold:160",
-        "whitespace_threshold:20",
-        "content_y:88-2027",
-        "cut_lines:376,584,819,1047,1272,1566,1846"
+        "whitespace_threshold:24",
+        "content_y:88-2028",
+        "cut_lines:378,584,822,1047,1272,1550,1846",
+        "manual_cut_override:460,650,930,1100,1280,1430,1650"
       ]
     },
     {
@@ -356,10 +368,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/philemon/000004.png",
       "output_image": "data/hutter/verse_images/philemon/001_013_000004.png",
       "crop_box": {
-        "left": 96,
-        "top": 1548,
-        "right": 616,
-        "bottom": 1864
+        "left": 42,
+        "top": 1412,
+        "right": 670,
+        "bottom": 1668
       },
       "status": "cropped",
       "notes": [
@@ -369,11 +381,12 @@
         "image_warmth:41.0",
         "image_quality:yellowed_scan",
         "hebrew_column:102-610",
-        "analysis_x:137-518",
+        "analysis_x:92-518",
         "dark_threshold:160",
-        "whitespace_threshold:20",
-        "content_y:88-2027",
-        "cut_lines:376,584,819,1047,1272,1566,1846"
+        "whitespace_threshold:24",
+        "content_y:88-2028",
+        "cut_lines:378,584,822,1047,1272,1550,1846",
+        "manual_cut_override:460,650,930,1100,1280,1430,1650"
       ]
     },
     {
@@ -384,10 +397,10 @@
       "source_image": "data/hutter/staging/data/images/hebrew_images/philemon/000004.png",
       "output_image": "data/hutter/verse_images/philemon/001_014_000004.png",
       "crop_box": {
-        "left": 96,
-        "top": 1828,
-        "right": 616,
-        "bottom": 2045
+        "left": 42,
+        "top": 1632,
+        "right": 670,
+        "bottom": 1968
       },
       "status": "cropped",
       "notes": [
@@ -397,11 +410,12 @@
         "image_warmth:41.0",
         "image_quality:yellowed_scan",
         "hebrew_column:102-610",
-        "analysis_x:137-518",
+        "analysis_x:92-518",
         "dark_threshold:160",
-        "whitespace_threshold:20",
-        "content_y:88-2027",
-        "cut_lines:376,584,819,1047,1272,1566,1846"
+        "whitespace_threshold:24",
+        "content_y:88-2028",
+        "cut_lines:378,584,822,1047,1272,1550,1846",
+        "manual_cut_override:460,650,930,1100,1280,1430,1650"
       ]
     },
     {

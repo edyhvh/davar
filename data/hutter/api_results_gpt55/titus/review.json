@@ -1,0 +1,447 @@
+{
+  "book": "titus",
+  "raw_result_count": 67,
+  "result_count": 46,
+  "batch_count": 15,
+  "status_counts": {
+    "ok": 46
+  },
+  "confidence_counts": {
+    "low": 8,
+    "medium": 38
+  },
+  "needs_review_count": 42,
+  "likely_crop_issue_count": 12,
+  "likely_ocr_issue_count": 30,
+  "no_hebrew_marks_count": 1,
+  "empty_text_count": 0,
+  "usage": {
+    "input_tokens": 23142,
+    "output_tokens": 11966,
+    "total_tokens": 35108
+  },
+  "needs_review": [
+    {
+      "id": "titus.1.1.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": false,
+      "notes": "Hebrew points/marks are visible but not fully preserved. No Hebrew pointing marks were returned; review against the image.",
+      "output_image": "data/hutter/verse_images/titus/001_001_000002.png",
+      "hebrew_text": "פולוס עבד אלהים ושליח ישוע המשיח באמונה בחירי אלהים וידיעת האמת אשר היא ביראת אלהים"
+    },
+    {
+      "id": "titus.1.2.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing visible but not fully preserved; one word may be uncertain.",
+      "output_image": "data/hutter/verse_images/titus/001_002_000002.png",
+      "hebrew_text": "אל־שכר חיי עולם אשר הנדר אלהי אמת מעתות מעולם׃"
+    },
+    {
+      "id": "titus.1.3.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse partly cut; pointing visible but not fully preserved.",
+      "output_image": "data/hutter/verse_images/titus/001_003_000002.png",
+      "hebrew_text": "וגלה בעתו את־דברו בקריאה אשר הפקדה בידי במצות מושיענו אלהים׃"
+    },
+    {
+      "id": "titus.1.4.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing visible but not fully preserved; beginning may be partially influenced by neighboring crop boundary.",
+      "output_image": "data/hutter/verse_images/titus/001_004_000002.png",
+      "hebrew_text": "לטיטוס לבני נאמן כאמונה חבר חסד רחמים שלום מאלהים האב ומאדנינו ישוע המשיח ומושיענו׃"
+    },
+    {
+      "id": "titus.1.5.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Only lower portion of Hebrew visible in crop; pointing visible but not fully preserved.",
+      "output_image": "data/hutter/verse_images/titus/001_005_000002.png",
+      "hebrew_text": "על־כן עזבתיך בקריטא לישר מה נשאר ולהקים מעיר ועירה את־זקני העדה כמו צויתיך׃"
+    },
+    {
+      "id": "titus.1.6.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/titus/001_006_000004.png",
+      "hebrew_text": "אִם יֵשׁ־בִּלְתִּי חוֹבָה אִישׁ אִשָּׁה אַחַת וִיהְיוּ לוֹ בָנִים נֶאֱמָנִים לֹא בְחִיוּב הוֹלֵלִים אוֹ סוֹרְרִים"
+    },
+    {
+      "id": "titus.1.7.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/marks and one or two words are uncertain from the crop.",
+      "output_image": "data/hutter/verse_images/titus/001_007_000004.png",
+      "hebrew_text": "כִּי־יֶשֶׁה לִפְקִיד לִהְיוֹת בְּלִי־מום כְּבֶן־מֶשֶׁק בֵּית אֱלֹהִים לֹא עַז פָּנִים לֹא כַּעַס וּמַכְעִיס לֹא זֹלֵל וְסוֹבֵא לֹא מַכֶּה בְּאַכְזָרִיוּת לֹא בֹצֵעַ בֶּצַע"
+    },
+    {
+      "id": "titus.1.8.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Hebrew word before צדיק is uncertain; pointing is not fully clear.",
+      "output_image": "data/hutter/verse_images/titus/001_008_000004.png",
+      "hebrew_text": "כִּי־אִם אֹהֵב הֵלֶךְ אֹהֵב טוב עָנוּךְ צַדִּיק קָדוֹשׁ מִתְאַפֵּק"
+    },
+    {
+      "id": "titus.1.9.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and the word הרפואה are uncertain.",
+      "output_image": "data/hutter/verse_images/titus/001_009_000004.png",
+      "hebrew_text": "אֹחֵז בֶּאֱמֶת הַדָּבָר אֲשֶׁר הוּא בִּלְמֹד אֲשֶׁר יוכל לְנַחֵם בַּתּוֹרָה הָרְפוּאָה לְהָשִׁיב דָּבָר וּלְהוֹכִיחַ אֶת־מִתְקוֹמְמָיו"
+    },
+    {
+      "id": "titus.1.10.000004",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is cropped/continues from previous image area and several words are uncertain.",
+      "output_image": "data/hutter/verse_images/titus/001_010_000004.png",
+      "hebrew_text": "כִּי־רַבִּים הֵם רוּחִי בְּנֵי בְּעֵינֵה מֹרִים אֲשֶׁר בְּשִׂפְתֵי שֶׁקֶר דֹבְרִים עַל־צְדִיק עָמֹק בְּגֵאָה וְרַבּוּ מְתֵי־הָעָם וְעַל־יֶתֶר מִמּוּלֵי הָעָם"
+    },
+    {
+      "id": "titus.1.11.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/titus/001_011_000004.png",
+      "hebrew_text": "אֲשֶׁר יִשָּׂה לָהֶם לַחֲסֹם פִּימּוֹ אֲשֶׁר גַּם בָּתִּים כְּלִילִים הוֹפְכִים מְלַמְּדִים אֲשֶׁר לֹא שָׁוֶה לְמַעַן לְבֶצַע בָּצַע׃"
+    },
+    {
+      "id": "titus.1.12.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial word and some niqqud are not fully clear.",
+      "output_image": "data/hutter/verse_images/titus/001_012_000006.png",
+      "hebrew_text": "אָמַר אִישׁ פִּלְמוֹנִי מֵהֶם וּנְבִיאֵמוֹ קְרֵטִים תָּמִיד כּוֹזְבִים בְּהֵמוֹת רָעוֹת בְּטְנֵי־הֶבֶל׃"
+    },
+    {
+      "id": "titus.1.13.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points and the final word pointing are uncertain.",
+      "output_image": "data/hutter/verse_images/titus/001_013_000006.png",
+      "hebrew_text": "הָעֵדָה הַזֹּאת אֱמֶת הִיא וּבַעֲבוּר כֵּן הוֹכִיחֵמוֹ בְּקָשֶׁה לִהְיוֹתָם שְׁלֵמִים בֶּאֱמוּנָה׃"
+    },
+    {
+      "id": "titus.1.14.000006",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words/points are unclear; transcription may contain errors.",
+      "output_image": "data/hutter/verse_images/titus/001_014_000006.png",
+      "hebrew_text": "מִן לְבִיטוֹ אֶל־שְׁטִיוֹת הַיְּהוּדִים וְאֶל־מִצְוֹת הָאֲנָשִׁים הַשָּׁנִים דְּבַר אֱמֶת׃"
+    },
+    {
+      "id": "titus.1.15.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and the word before גַּם מַדָּעָם are uncertain.",
+      "output_image": "data/hutter/verse_images/titus/001_015_000006.png",
+      "hebrew_text": "כָּל־דְּבָרִים טְהוֹרִים לַטְּהוֹרִים וְלִטְמֵאִים וְלֹא מַאֲמִינִים אַחַד לֹא טָהוֹר כִּי־אִם טְמֵאִים גַּם שִׂכְלָם גַּם מַדָּעָם׃"
+    },
+    {
+      "id": "titus.1.16.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/marks are small and uncertain.",
+      "output_image": "data/hutter/verse_images/titus/001_016_000006.png",
+      "hebrew_text": "מוֹדִים כִּי־יָדְעוּ אֱלֹהִים הֵמָּה אַךְ בְּמַעֲשֵׂיו יְכַחֲשׁוּהוּ שׂנוּאִים הֵמָּה סוֹרְרִים וּמוֹרִים וּצְלָחִים אֶל־כָּל־מַעֲשֵׂה טוֹב:"
+    },
+    {
+      "id": "titus.2.1.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several vowel points are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/titus/002_001_000006.png",
+      "hebrew_text": "אַךְ הַמֵּלֵל מַה־יָּשֶׁה לְתוֹרָה שְׁלֵמָה:"
+    },
+    {
+      "id": "titus.2.2.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some consonants and pointing are uncertain due to print quality.",
+      "output_image": "data/hutter/verse_images/titus/002_002_000008.png",
+      "hebrew_text": "זְקֵנִים לִהְיוֹתָם מְמֻעָדִים לְשֵׂכֶל תְּמִימִים נְבוֹנִים שְׁלֵמִים בֶּאֱמוּנָה בְּאַהֲבָה בְּדַמְיָה:"
+    },
+    {
+      "id": "titus.2.3.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few letters are not fully clear.",
+      "output_image": "data/hutter/verse_images/titus/002_003_000008.png",
+      "hebrew_text": "וּזְקֵנוֹת כְּמוֹ־כֵן לִהְיוֹתָם בְּהֲדָרָה קֹדֶשׁ לֹא מַכְלִימוֹת לֹא זוֹלְלוֹת וְסוֹבְאוֹת כִּי־אִם מְלַמְּדוֹת טוֹבָה:"
+    },
+    {
+      "id": "titus.2.4.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points uncertain.",
+      "output_image": "data/hutter/verse_images/titus/002_004_000008.png",
+      "hebrew_text": "אֲשֶׁר הַלְמֵדָה אֶת־הַנְּעָרוֹת חָכְמָה נְבֹנָה לֶאֱהֹב אֶת אִישָׁהּ וּבָנֶיהָ:"
+    },
+    {
+      "id": "titus.2.5.000008",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some pointed words are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/titus/002_005_000008.png",
+      "hebrew_text": "לִהְיוֹת נְבוֹנוֹת קְדשׁוֹת נְשֵׁי חַיִל בַּבַּיִת טוֹבָה וְנִצָּמָה נִלְוֹת אֶל־אֲנָשֵׁיהֶן הַשְׁתַּקְתָהּ נִגְמָה יִמָּשֵׁל בָּהֶן בֵּן יְנָאֵץ דְּבַר אֱלֹהִים׃"
+    },
+    {
+      "id": "titus.2.7.000008",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several letters/points are uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/titus/002_007_000008.png",
+      "hebrew_text": "וּבְכָל־דְּבָרִים אֶת־נַפְשְׁךָ הָשֵׂם לְדֻמַת מַעֲשִׂים טוֹבִים בְּלִמּוּד בְּלִי שַׁחַת בְּתֹם וְיֹשֶׁר וִיקָר שְׁתִיקָה׃"
+    },
+    {
+      "id": "titus.2.10.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and small marks are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/titus/002_010_000010.png",
+      "hebrew_text": "וְלֹא גֹנְבֵי כִּי אִם כָּל־אֱמוּנָה טוֹבָה בְּכָל דָּבָר אֲשֶׁר יְהַדְרוּ אֶת־תּוֹרַת מוֹשִׁיעֵנוּ אֱלֹהִים בְּכָל־דְּבָרִים׃"
+    },
+    {
+      "id": "titus.2.11.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing on several words is not fully clear.",
+      "output_image": "data/hutter/verse_images/titus/002_011_000010.png",
+      "hebrew_text": "כִּי נִגְלְתָה חֶסֶד אֱלֹהִים לְהוֹשִׁיעַ כָּל בְּנֵי־אָדָם׃"
+    },
+    {
+      "id": "titus.2.12.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several vowel points and one word near the line break are uncertain.",
+      "output_image": "data/hutter/verse_images/titus/002_012_000010.png",
+      "hebrew_text": "הַמְלַמְּדָה אֹתָנוּ לִכְחֹשׁ בָּרֶשַׁע וּמַאֲוַיֵּי הָעוֹלָם וְנִחְיֶה בִּתְבוּנָה בִּצְדָקָה וּבְיִרְאַת יְהוָה בָּעוֹלָם הַזֶּה׃"
+    },
+    {
+      "id": "titus.2.13.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and exact reading of the first line are uncertain.",
+      "output_image": "data/hutter/verse_images/titus/002_013_000010.png",
+      "hebrew_text": "לְקַוֵּה אֶל־אֲשֶׁר הַשֶּׂבֶר וּלְהִגָּלוֹת כְּבוֹד אֱלֹהִים הַגָּדוֹל וּמוֹשִׁיעֵנוּ יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "titus.2.14.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points and exact consonants in the middle line are uncertain.",
+      "output_image": "data/hutter/verse_images/titus/002_014_000010.png",
+      "hebrew_text": "אֲשֶׁר נָתַן אֶת־נַפְשׁוֹ עָלֵינוּ לְהוֹשִׁיעֵנוּ מִכָּל־חַטֹּאתֵינוּ וִיטַהֵר לְנַפְשׁוֹ עַם חָדָשׁ מִקְנָא לְמַעֲשִׂים טוֹבִים׃"
+    },
+    {
+      "id": "titus.2.15.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/marks are small and may be imperfect.",
+      "output_image": "data/hutter/verse_images/titus/002_015_000010.png",
+      "hebrew_text": "אֶת־אֵלֶּה דַּבֵּר נַחֵם וְהוֹכֵחַ בְּכָל־כֹּחַ וּגְבוּרָה וְאִישׁ לֹא יִבְזֶה אֹתָךְ׃"
+    },
+    {
+      "id": "titus.3.1.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks may be imperfectly transcribed.",
+      "output_image": "data/hutter/verse_images/titus/003_001_000012.png",
+      "hebrew_text": "הַזְכֵּר אוֹתָם לְהִכָּנַעַ תַּחַת שִׁלְטוֹנוֹת וּמֶמְשָׁלוֹת לְקַיֵּם לִהְיוֹתָם נְכוֹנִים אֶל־כָּל־מַעֲשֵׂה טוֹב"
+    },
+    {
+      "id": "titus.3.2.000012",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and several words are uncertain from the crop.",
+      "output_image": "data/hutter/verse_images/titus/003_002_000012.png",
+      "hebrew_text": "לְאִישׁ לֹא לְגַדֵּף לֹא לָרִיב וְלֹא לְהַבּוֹת בְּאַגָּרָה כִּי־אִם הֱיוֹת עֲנָוִים לַעֲשׂוֹת כָּל־חֶסֶד וּרַחֲמִים לְכָל־בְּנֵי אָדָם"
+    },
+    {
+      "id": "titus.3.3.000012",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and vowel marks are uncertain.",
+      "output_image": "data/hutter/verse_images/titus/003_003_000012.png",
+      "hebrew_text": "כִּי־הָיִינוּ גַם אֲנַחְנוּ בְּלִי תְּבוּנָה לֹא מַאֲמִינִים תֹּעִים עֹבְדֵי הַתַּאֲווֹת וְהַמַּחֲמַדִּים רַבִּים בְּרָעָה בְּשִׂנְאָה מְתָעֲדִים שׂוֹנְאִים וּשְׂנוּאִים אִישׁ אֶת־רֵעֵהוּ"
+    },
+    {
+      "id": "titus.3.4.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully certain.",
+      "output_image": "data/hutter/verse_images/titus/003_004_000012.png",
+      "hebrew_text": "וּבַאֲשֶׁר נִגְלָה טוֹב נֹעַם מוֹשִׁיעֵנוּ אֱלֹהִים"
+    },
+    {
+      "id": "titus.3.5.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/titus/003_005_000012.png",
+      "hebrew_text": "לֹא מִמַּעֲשֵׂי הַצְּדָקָה אֲשֶׁר עָשִׂינוּ אֲנַחְנוּ כִּי־אִם בְּרַחֲמָיו הוֹשִׁיעַנוּ בִּרְחִיצַת חֲלִיפַת חֲדָשָׁה רוּחַ הַקֹּדֶשׁ׃"
+    },
+    {
+      "id": "titus.3.6.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge/pointing is slightly unclear.",
+      "output_image": "data/hutter/verse_images/titus/003_006_000012.png",
+      "hebrew_text": "אֲשֶׁר אוֹתָהּ שָׁפַךְ עָלֵינוּ עַל־יְדֵי יֵשׁוּעַ מָשִׁיחַ הַמּוֹשִׁיעֵנוּ׃"
+    },
+    {
+      "id": "titus.3.7.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to verify exactly from the crop.",
+      "output_image": "data/hutter/verse_images/titus/003_007_000014.png",
+      "hebrew_text": "לְמַעַן נִצְדָּקִים בַּחֲסְדּוֹ נִהְיֶה יֹרְשִׁים בְּתִקְוַת חַיֵּי עוֹלָם׃"
+    },
+    {
+      "id": "titus.3.8.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few letters are slightly unclear.",
+      "output_image": "data/hutter/verse_images/titus/003_008_000014.png",
+      "hebrew_text": "נֶאֱמָן הַדָּבָר עַל־הָאֵלֶּה חָפַצְתִּי לְהַכְרִיז אֲשֶׁר יְכַוְּנוּ לִדְרוֹשׁ בָּהֶם בְּמַעֲשִׂים טוֹבִים הַמַּאֲמִינִים בֵּאלֹהִים וְאֵלֶּה הֵן טוֹבִים וּמוֹעִילִים לִבְנֵי אָדָם׃"
+    },
+    {
+      "id": "titus.3.9.000014",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing are uncertain due to blur/print quality.",
+      "output_image": "data/hutter/verse_images/titus/003_009_000014.png",
+      "hebrew_text": "קֻשְׁיוֹת רֵיקוֹת וְכְסִילֹת וְדִבְרֵי־הַיְּלִדוֹת וּמְרִיבוֹת וּמַצּוֹת עַל־הַתּוֹרָה הִשָּׁמֵר לְךָ מֵהֶן כִּי־הֶבֶל הֵן וּמְאוּמָה לֹא הוֹעִילָה׃"
+    },
+    {
+      "id": "titus.3.10.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is not fully clear.",
+      "output_image": "data/hutter/verse_images/titus/003_010_000014.png",
+      "hebrew_text": "אִישׁ כֹּפֵר פַּעַם אַחַר מוּסָר אֶחָד אוֹ שֵׁנִי הִשָּׁמֵר לְךָ מִמֶּנּוּ׃"
+    },
+    {
+      "id": "titus.3.11.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are slightly uncertain.",
+      "output_image": "data/hutter/verse_images/titus/003_011_000014.png",
+      "hebrew_text": "וְדַע כִּי־נֶהְפַּךְ אִישׁ כָּזֶה וְחוֹטֵא וְנַפְשׁוֹ נִשְׁפָּט הוּא׃"
+    },
+    {
+      "id": "titus.3.13.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters in the middle are blurry; transcription may need verification.",
+      "output_image": "data/hutter/verse_images/titus/003_013_000014.png",
+      "hebrew_text": "אֶת־זֵינָא מְלַמֵּד הַתּוֹרָה וְאַפּוֹלּוֹ בִּרְאָה שַׁלַּח מִן יֶחְסַר כָּל־דָּבָר׃"
+    },
+    {
+      "id": "titus.3.14.000016",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/titus/003_014_000016.png",
+      "hebrew_text": "וְיִלְמְדוּ אֲשֶׁר מִמֶּנּוּ לִהְיוֹת גַּם הֵם בְּמַעֲשִׂים טוֹבִים לְצָרְכָּם בְּמְצִיקָה וְיִהְיוּ בִּבְלִי־פְרִי׃"
+    },
+    {
+      "id": "titus.3.15.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is unclear in the crop; transcription preserves visible Hebrew verse text as best as possible.",
+      "output_image": "data/hutter/verse_images/titus/003_015_000016.png",
+      "hebrew_text": "שָׁאֲלוּ לִשְׁלוֹמְכֶם כֻּלָּם אֲשֶׁר אִתִּי שְׁאַל־לִשְׁלוֹם לַאֲשֶׁר אֹהֲבֵינוּ בֶּאֱמוּנָה תְּחִלָּה עִם כֻּלְּכֶם אָמֵן׃"
+    }
+  ],
+  "likely_crop_issues": [
+    {
+      "id": "titus.1.4.000002",
+      "confidence": "medium",
+      "notes": "Pointing visible but not fully preserved; beginning may be partially influenced by neighboring crop boundary.",
+      "output_image": "data/hutter/verse_images/titus/001_004_000002.png",
+      "hebrew_text": "לטיטוס לבני נאמן כאמונה חבר חסד רחמים שלום מאלהים האב ומאדנינו ישוע המשיח ומושיענו׃"
+    },
+    {
+      "id": "titus.1.5.000002",
+      "confidence": "medium",
+      "notes": "Only lower portion of Hebrew visible in crop; pointing visible but not fully preserved.",
+      "output_image": "data/hutter/verse_images/titus/001_005_000002.png",
+      "hebrew_text": "על־כן עזבתיך בקריטא לישר מה נשאר ולהקים מעיר ועירה את־זקני העדה כמו צויתיך׃"
+    },
+    {
+      "id": "titus.1.7.000004",
+      "confidence": "medium",
+      "notes": "Some niqqud/marks and one or two words are uncertain from the crop.",
+      "output_image": "data/hutter/verse_images/titus/001_007_000004.png",
+      "hebrew_text": "כִּי־יֶשֶׁה לִפְקִיד לִהְיוֹת בְּלִי־מום כְּבֶן־מֶשֶׁק בֵּית אֱלֹהִים לֹא עַז פָּנִים לֹא כַּעַס וּמַכְעִיס לֹא זֹלֵל וְסוֹבֵא לֹא מַכֶּה בְּאַכְזָרִיוּת לֹא בֹצֵעַ בֶּצַע"
+    },
+    {
+      "id": "titus.1.10.000004",
+      "confidence": "low",
+      "notes": "Top of verse is cropped/continues from previous image area and several words are uncertain.",
+      "output_image": "data/hutter/verse_images/titus/001_010_000004.png",
+      "hebrew_text": "כִּי־רַבִּים הֵם רוּחִי בְּנֵי בְּעֵינֵה מֹרִים אֲשֶׁר בְּשִׂפְתֵי שֶׁקֶר דֹבְרִים עַל־צְדִיק עָמֹק בְּגֵאָה וְרַבּוּ מְתֵי־הָעָם וְעַל־יֶתֶר מִמּוּלֵי הָעָם"
+    },
+    {
+      "id": "titus.1.11.000004",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/titus/001_011_000004.png",
+      "hebrew_text": "אֲשֶׁר יִשָּׂה לָהֶם לַחֲסֹם פִּימּוֹ אֲשֶׁר גַּם בָּתִּים כְּלִילִים הוֹפְכִים מְלַמְּדִים אֲשֶׁר לֹא שָׁוֶה לְמַעַן לְבֶצַע בָּצַע׃"
+    },
+    {
+      "id": "titus.2.5.000008",
+      "confidence": "low",
+      "notes": "Some pointed words are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/titus/002_005_000008.png",
+      "hebrew_text": "לִהְיוֹת נְבוֹנוֹת קְדשׁוֹת נְשֵׁי חַיִל בַּבַּיִת טוֹבָה וְנִצָּמָה נִלְוֹת אֶל־אֲנָשֵׁיהֶן הַשְׁתַּקְתָהּ נִגְמָה יִמָּשֵׁל בָּהֶן בֵּן יְנָאֵץ דְּבַר אֱלֹהִים׃"
+    },
+    {
+      "id": "titus.2.10.000010",
+      "confidence": "medium",
+      "notes": "Some pointing and small marks are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/titus/002_010_000010.png",
+      "hebrew_text": "וְלֹא גֹנְבֵי כִּי אִם כָּל־אֱמוּנָה טוֹבָה בְּכָל דָּבָר אֲשֶׁר יְהַדְרוּ אֶת־תּוֹרַת מוֹשִׁיעֵנוּ אֱלֹהִים בְּכָל־דְּבָרִים׃"
+    },
+    {
+      "id": "titus.3.2.000012",
+      "confidence": "low",
+      "notes": "Pointing and several words are uncertain from the crop.",
+      "output_image": "data/hutter/verse_images/titus/003_002_000012.png",
+      "hebrew_text": "לְאִישׁ לֹא לְגַדֵּף לֹא לָרִיב וְלֹא לְהַבּוֹת בְּאַגָּרָה כִּי־אִם הֱיוֹת עֲנָוִים לַעֲשׂוֹת כָּל־חֶסֶד וּרַחֲמִים לְכָל־בְּנֵי אָדָם"
+    },
+    {
+      "id": "titus.3.5.000012",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/titus/003_005_000012.png",
+      "hebrew_text": "לֹא מִמַּעֲשֵׂי הַצְּדָקָה אֲשֶׁר עָשִׂינוּ אֲנַחְנוּ כִּי־אִם בְּרַחֲמָיו הוֹשִׁיעַנוּ בִּרְחִיצַת חֲלִיפַת חֲדָשָׁה רוּחַ הַקֹּדֶשׁ׃"
+    },
+    {
+      "id": "titus.3.7.000014",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to verify exactly from the crop.",
+      "output_image": "data/hutter/verse_images/titus/003_007_000014.png",
+      "hebrew_text": "לְמַעַן נִצְדָּקִים בַּחֲסְדּוֹ נִהְיֶה יֹרְשִׁים בְּתִקְוַת חַיֵּי עוֹלָם׃"
+    },
+    {
+      "id": "titus.3.14.000016",
+      "confidence": "low",
+      "notes": "Several words and pointing are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/titus/003_014_000016.png",
+      "hebrew_text": "וְיִלְמְדוּ אֲשֶׁר מִמֶּנּוּ לִהְיוֹת גַּם הֵם בְּמַעֲשִׂים טוֹבִים לְצָרְכָּם בְּמְצִיקָה וְיִהְיוּ בִּבְלִי־פְרִי׃"
+    },
+    {
+      "id": "titus.3.15.000016",
+      "confidence": "medium",
+      "notes": "Some pointing is unclear in the crop; transcription preserves visible Hebrew verse text as best as possible.",
+      "output_image": "data/hutter/verse_images/titus/003_015_000016.png",
+      "hebrew_text": "שָׁאֲלוּ לִשְׁלוֹמְכֶם כֻּלָּם אֲשֶׁר אִתִּי שְׁאַל־לִשְׁלוֹם לַאֲשֶׁר אֹהֲבֵינוּ בֶּאֱמוּנָה תְּחִלָּה עִם כֻּלְּכֶם אָמֵן׃"
+    }
+  ]
+}

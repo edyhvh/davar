@@ -1,28 +1,28 @@
 {
-  "book_count": 15,
+  "book_count": 17,
   "totals": {
-    "manifest_verse_count": 2101,
-    "result_count": 2101,
-    "raw_result_count": 2348,
-    "retry_row_count": 247,
+    "manifest_verse_count": 2172,
+    "result_count": 2172,
+    "raw_result_count": 2462,
+    "retry_row_count": 290,
     "pending_count": 0,
-    "batch_count": 338,
-    "needs_review_count": 1622,
-    "likely_crop_issue_count": 567,
-    "likely_ocr_issue_count": 1055,
-    "no_hebrew_marks_count": 0,
+    "batch_count": 363,
+    "needs_review_count": 1687,
+    "likely_crop_issue_count": 582,
+    "likely_ocr_issue_count": 1105,
+    "no_hebrew_marks_count": 1,
     "empty_text_count": 0,
-    "total_tokens": 1194416,
-    "input_tokens": 786196,
-    "output_tokens": 408220
+    "total_tokens": 1252227,
+    "input_tokens": 824290,
+    "output_tokens": 427937
   },
   "status_counts": {
-    "ok": 2101
+    "ok": 2172
   },
   "confidence_counts": {
     "high": 89,
-    "low": 303,
-    "medium": 1709
+    "low": 313,
+    "medium": 1770
   },
   "books": [
     {
@@ -307,6 +307,31 @@
       }
     },
     {
+      "book": "philemon",
+      "manifest_verse_count": 25,
+      "result_count": 25,
+      "raw_result_count": 47,
+      "retry_row_count": 22,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 10,
+      "needs_review_count": 23,
+      "likely_crop_issue_count": 3,
+      "likely_ocr_issue_count": 20,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 22703,
+      "input_tokens": 14952,
+      "output_tokens": 7751,
+      "status_counts": {
+        "ok": 25
+      },
+      "confidence_counts": {
+        "low": 2,
+        "medium": 23
+      }
+    },
+    {
       "book": "revelation",
       "manifest_verse_count": 399,
       "result_count": 399,
@@ -407,6 +432,31 @@
       "confidence_counts": {
         "low": 12,
         "medium": 35
+      }
+    },
+    {
+      "book": "titus",
+      "manifest_verse_count": 46,
+      "result_count": 46,
+      "raw_result_count": 67,
+      "retry_row_count": 21,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 15,
+      "needs_review_count": 42,
+      "likely_crop_issue_count": 12,
+      "likely_ocr_issue_count": 30,
+      "no_hebrew_marks_count": 1,
+      "empty_text_count": 0,
+      "total_tokens": 35108,
+      "input_tokens": 23142,
+      "output_tokens": 11966,
+      "status_counts": {
+        "ok": 46
+      },
+      "confidence_counts": {
+        "low": 8,
+        "medium": 38
       }
     }
   ]
