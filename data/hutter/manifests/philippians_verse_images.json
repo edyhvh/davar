@@ -14,9 +14,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_001_000002.png",
       "crop_box": {
         "left": 99,
-        "top": 427,
+        "top": 412,
         "right": 653,
-        "bottom": 710
+        "bottom": 808
       },
       "status": "cropped",
       "notes": [
@@ -31,7 +31,8 @@
         "dark_threshold:160",
         "whitespace_threshold:15",
         "content_y:445-2010",
-        "cut_lines:692,1010,1281,1542,1777"
+        "cut_lines:692,1010,1281,1542,1777",
+        "manual_cut_override:790,1000,1180,1400,1590"
       ]
     },
     {
@@ -43,9 +44,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_002_000002.png",
       "crop_box": {
         "left": 99,
-        "top": 674,
+        "top": 772,
         "right": 653,
-        "bottom": 1028
+        "bottom": 1018
       },
       "status": "cropped",
       "notes": [
@@ -60,7 +61,8 @@
         "dark_threshold:160",
         "whitespace_threshold:15",
         "content_y:445-2010",
-        "cut_lines:692,1010,1281,1542,1777"
+        "cut_lines:692,1010,1281,1542,1777",
+        "manual_cut_override:790,1000,1180,1400,1590"
       ]
     },
     {
@@ -72,9 +74,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_003_000002.png",
       "crop_box": {
         "left": 99,
-        "top": 992,
+        "top": 982,
         "right": 653,
-        "bottom": 1299
+        "bottom": 1198
       },
       "status": "cropped",
       "notes": [
@@ -89,7 +91,8 @@
         "dark_threshold:160",
         "whitespace_threshold:15",
         "content_y:445-2010",
-        "cut_lines:692,1010,1281,1542,1777"
+        "cut_lines:692,1010,1281,1542,1777",
+        "manual_cut_override:790,1000,1180,1400,1590"
       ]
     },
     {
@@ -101,9 +104,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_004_000002.png",
       "crop_box": {
         "left": 99,
-        "top": 1263,
+        "top": 1162,
         "right": 653,
-        "bottom": 1560
+        "bottom": 1418
       },
       "status": "cropped",
       "notes": [
@@ -118,7 +121,8 @@
         "dark_threshold:160",
         "whitespace_threshold:15",
         "content_y:445-2010",
-        "cut_lines:692,1010,1281,1542,1777"
+        "cut_lines:692,1010,1281,1542,1777",
+        "manual_cut_override:790,1000,1180,1400,1590"
       ]
     },
     {
@@ -130,9 +134,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_005_000002.png",
       "crop_box": {
         "left": 99,
-        "top": 1524,
+        "top": 1382,
         "right": 653,
-        "bottom": 1795
+        "bottom": 1608
       },
       "status": "cropped",
       "notes": [
@@ -147,7 +151,8 @@
         "dark_threshold:160",
         "whitespace_threshold:15",
         "content_y:445-2010",
-        "cut_lines:692,1010,1281,1542,1777"
+        "cut_lines:692,1010,1281,1542,1777",
+        "manual_cut_override:790,1000,1180,1400,1590"
       ]
     },
     {
@@ -159,9 +164,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_006_000002.png",
       "crop_box": {
         "left": 99,
-        "top": 1759,
+        "top": 1572,
         "right": 653,
-        "bottom": 2028
+        "bottom": 1878
       },
       "status": "cropped",
       "notes": [
@@ -176,7 +181,8 @@
         "dark_threshold:160",
         "whitespace_threshold:15",
         "content_y:445-2010",
-        "cut_lines:692,1010,1281,1542,1777"
+        "cut_lines:692,1010,1281,1542,1777",
+        "manual_cut_override:790,1000,1180,1400,1590"
       ]
     },
     {
@@ -188,149 +194,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_007_000004.png",
       "crop_box": {
         "left": 77,
-        "top": 36,
+        "top": 132,
         "right": 624,
-        "bottom": 333
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:195.5",
-        "image_dark_ratio:0.1649",
-        "image_warmth:40.7",
-        "image_quality:yellowed_scan",
-        "hebrew_column:83-618",
-        "analysis_x:120-518",
-        "dark_threshold:160",
-        "whitespace_threshold:18",
-        "content_y:54-1987",
-        "cut_lines:315,543,769,1134,1414,1710"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 1,
-      "verse": 8,
-      "source_file": "000004.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
-      "output_image": "data/hutter/verse_images/philippians/001_008_000004.png",
-      "crop_box": {
-        "left": 77,
-        "top": 297,
-        "right": 624,
-        "bottom": 561
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:195.5",
-        "image_dark_ratio:0.1649",
-        "image_warmth:40.7",
-        "image_quality:yellowed_scan",
-        "hebrew_column:83-618",
-        "analysis_x:120-518",
-        "dark_threshold:160",
-        "whitespace_threshold:18",
-        "content_y:54-1987",
-        "cut_lines:315,543,769,1134,1414,1710"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 1,
-      "verse": 9,
-      "source_file": "000004.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
-      "output_image": "data/hutter/verse_images/philippians/001_009_000004.png",
-      "crop_box": {
-        "left": 77,
-        "top": 525,
-        "right": 624,
-        "bottom": 787
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:195.5",
-        "image_dark_ratio:0.1649",
-        "image_warmth:40.7",
-        "image_quality:yellowed_scan",
-        "hebrew_column:83-618",
-        "analysis_x:120-518",
-        "dark_threshold:160",
-        "whitespace_threshold:18",
-        "content_y:54-1987",
-        "cut_lines:315,543,769,1134,1414,1710"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 1,
-      "verse": 10,
-      "source_file": "000004.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
-      "output_image": "data/hutter/verse_images/philippians/001_010_000004.png",
-      "crop_box": {
-        "left": 77,
-        "top": 751,
-        "right": 624,
-        "bottom": 1152
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:195.5",
-        "image_dark_ratio:0.1649",
-        "image_warmth:40.7",
-        "image_quality:yellowed_scan",
-        "hebrew_column:83-618",
-        "analysis_x:120-518",
-        "dark_threshold:160",
-        "whitespace_threshold:18",
-        "content_y:54-1987",
-        "cut_lines:315,543,769,1134,1414,1710"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 1,
-      "verse": 11,
-      "source_file": "000004.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
-      "output_image": "data/hutter/verse_images/philippians/001_011_000004.png",
-      "crop_box": {
-        "left": 77,
-        "top": 1116,
-        "right": 624,
-        "bottom": 1432
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:195.5",
-        "image_dark_ratio:0.1649",
-        "image_warmth:40.7",
-        "image_quality:yellowed_scan",
-        "hebrew_column:83-618",
-        "analysis_x:120-518",
-        "dark_threshold:160",
-        "whitespace_threshold:18",
-        "content_y:54-1987",
-        "cut_lines:315,543,769,1134,1414,1710"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 1,
-      "verse": 12,
-      "source_file": "000004.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
-      "output_image": "data/hutter/verse_images/philippians/001_012_000004.png",
-      "crop_box": {
-        "left": 77,
-        "top": 1396,
-        "right": 624,
-        "bottom": 1728
+        "bottom": 518
       },
       "status": "cropped",
       "notes": [
@@ -345,21 +211,21 @@
         "whitespace_threshold:18",
         "content_y:54-1987",
         "cut_lines:315,543,769,1134,1414,1710",
-        "Verse 12: First word after number - appears to be וְיָרֵא but could be וְיוֹדֵעַ or similar. Ink unclear."
+        "manual_cut_override:500,700,920,1160,1420,1570"
       ]
     },
     {
       "book": "philippians",
       "chapter": 1,
-      "verse": 13,
+      "verse": 8,
       "source_file": "000004.png",
       "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
-      "output_image": "data/hutter/verse_images/philippians/001_013_000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_008_000004.png",
       "crop_box": {
         "left": 77,
-        "top": 1692,
+        "top": 482,
         "right": 624,
-        "bottom": 2005
+        "bottom": 718
       },
       "status": "cropped",
       "notes": [
@@ -373,7 +239,154 @@
         "dark_threshold:160",
         "whitespace_threshold:18",
         "content_y:54-1987",
-        "cut_lines:315,543,769,1134,1414,1710"
+        "cut_lines:315,543,769,1134,1414,1710",
+        "manual_cut_override:500,700,920,1160,1420,1570"
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 1,
+      "verse": 9,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_009_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 682,
+        "right": 624,
+        "bottom": 938
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:195.5",
+        "image_dark_ratio:0.1649",
+        "image_warmth:40.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:83-618",
+        "analysis_x:120-518",
+        "dark_threshold:160",
+        "whitespace_threshold:18",
+        "content_y:54-1987",
+        "cut_lines:315,543,769,1134,1414,1710",
+        "manual_cut_override:500,700,920,1160,1420,1570"
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 1,
+      "verse": 10,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_010_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 902,
+        "right": 624,
+        "bottom": 1178
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:195.5",
+        "image_dark_ratio:0.1649",
+        "image_warmth:40.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:83-618",
+        "analysis_x:120-518",
+        "dark_threshold:160",
+        "whitespace_threshold:18",
+        "content_y:54-1987",
+        "cut_lines:315,543,769,1134,1414,1710",
+        "manual_cut_override:500,700,920,1160,1420,1570"
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 1,
+      "verse": 11,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_011_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 1142,
+        "right": 624,
+        "bottom": 1438
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:195.5",
+        "image_dark_ratio:0.1649",
+        "image_warmth:40.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:83-618",
+        "analysis_x:120-518",
+        "dark_threshold:160",
+        "whitespace_threshold:18",
+        "content_y:54-1987",
+        "cut_lines:315,543,769,1134,1414,1710",
+        "manual_cut_override:500,700,920,1160,1420,1570"
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 1,
+      "verse": 12,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_012_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 1402,
+        "right": 624,
+        "bottom": 1588
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:195.5",
+        "image_dark_ratio:0.1649",
+        "image_warmth:40.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:83-618",
+        "analysis_x:120-518",
+        "dark_threshold:160",
+        "whitespace_threshold:18",
+        "content_y:54-1987",
+        "cut_lines:315,543,769,1134,1414,1710",
+        "manual_cut_override:500,700,920,1160,1420,1570",
+        "Verse 12: First word after number - appears to be וְיָרֵא but could be וְיוֹדֵעַ or similar. Ink unclear."
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 1,
+      "verse": 13,
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_013_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 1552,
+        "right": 624,
+        "bottom": 1968
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:195.5",
+        "image_dark_ratio:0.1649",
+        "image_warmth:40.7",
+        "image_quality:yellowed_scan",
+        "hebrew_column:83-618",
+        "analysis_x:120-518",
+        "dark_threshold:160",
+        "whitespace_threshold:18",
+        "content_y:54-1987",
+        "cut_lines:315,543,769,1134,1414,1710",
+        "manual_cut_override:500,700,920,1160,1420,1570"
       ]
     },
     {
@@ -553,9 +566,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_020_000008.png",
       "crop_box": {
         "left": 109,
-        "top": 30,
+        "top": 132,
         "right": 664,
-        "bottom": 338
+        "bottom": 558
       },
       "status": "cropped",
       "notes": [
@@ -569,7 +582,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:48-1984",
-        "cut_lines:320,610,908,1151,1443,1706"
+        "cut_lines:320,610,908,1151,1443,1706",
+        "manual_cut_override:540,730,1000,1250,1410,1740"
       ]
     },
     {
@@ -581,9 +595,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_021_000008.png",
       "crop_box": {
         "left": 109,
-        "top": 302,
+        "top": 522,
         "right": 664,
-        "bottom": 628
+        "bottom": 748
       },
       "status": "cropped",
       "notes": [
@@ -597,7 +611,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:48-1984",
-        "cut_lines:320,610,908,1151,1443,1706"
+        "cut_lines:320,610,908,1151,1443,1706",
+        "manual_cut_override:540,730,1000,1250,1410,1740"
       ]
     },
     {
@@ -609,9 +624,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_022_000008.png",
       "crop_box": {
         "left": 109,
-        "top": 592,
+        "top": 712,
         "right": 664,
-        "bottom": 926
+        "bottom": 1018
       },
       "status": "cropped",
       "notes": [
@@ -625,7 +640,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:48-1984",
-        "cut_lines:320,610,908,1151,1443,1706"
+        "cut_lines:320,610,908,1151,1443,1706",
+        "manual_cut_override:540,730,1000,1250,1410,1740"
       ]
     },
     {
@@ -637,9 +653,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_023_000008.png",
       "crop_box": {
         "left": 109,
-        "top": 890,
+        "top": 982,
         "right": 664,
-        "bottom": 1169
+        "bottom": 1268
       },
       "status": "cropped",
       "notes": [
@@ -653,7 +669,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:48-1984",
-        "cut_lines:320,610,908,1151,1443,1706"
+        "cut_lines:320,610,908,1151,1443,1706",
+        "manual_cut_override:540,730,1000,1250,1410,1740"
       ]
     },
     {
@@ -665,9 +682,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_024_000008.png",
       "crop_box": {
         "left": 109,
-        "top": 1133,
+        "top": 1232,
         "right": 664,
-        "bottom": 1461
+        "bottom": 1428
       },
       "status": "cropped",
       "notes": [
@@ -681,7 +698,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:48-1984",
-        "cut_lines:320,610,908,1151,1443,1706"
+        "cut_lines:320,610,908,1151,1443,1706",
+        "manual_cut_override:540,730,1000,1250,1410,1740"
       ]
     },
     {
@@ -693,9 +711,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_025_000008.png",
       "crop_box": {
         "left": 109,
-        "top": 1425,
+        "top": 1392,
         "right": 664,
-        "bottom": 1724
+        "bottom": 1758
       },
       "status": "cropped",
       "notes": [
@@ -709,7 +727,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:48-1984",
-        "cut_lines:320,610,908,1151,1443,1706"
+        "cut_lines:320,610,908,1151,1443,1706",
+        "manual_cut_override:540,730,1000,1250,1410,1740"
       ]
     },
     {
@@ -721,9 +740,9 @@
       "output_image": "data/hutter/verse_images/philippians/001_026_000008.png",
       "crop_box": {
         "left": 109,
-        "top": 1688,
+        "top": 1722,
         "right": 664,
-        "bottom": 2002
+        "bottom": 1968
       },
       "status": "cropped",
       "notes": [
@@ -737,7 +756,8 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:48-1984",
-        "cut_lines:320,610,908,1151,1443,1706"
+        "cut_lines:320,610,908,1151,1443,1706",
+        "manual_cut_override:540,730,1000,1250,1410,1740"
       ]
     },
     {
@@ -899,177 +919,9 @@
       "output_image": "data/hutter/verse_images/philippians/002_002_000012.png",
       "crop_box": {
         "left": 88,
-        "top": 36,
+        "top": 132,
         "right": 642,
-        "bottom": 341
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:193.7",
-        "image_dark_ratio:0.1760",
-        "image_warmth:41.2",
-        "image_quality:yellowed_scan",
-        "hebrew_column:94-636",
-        "analysis_x:132-518",
-        "dark_threshold:160",
-        "whitespace_threshold:23",
-        "content_y:54-1989",
-        "cut_lines:323,564,791,1010,1278,1540,1723"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 2,
-      "verse": 3,
-      "source_file": "000012.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
-      "output_image": "data/hutter/verse_images/philippians/002_003_000012.png",
-      "crop_box": {
-        "left": 88,
-        "top": 305,
-        "right": 642,
-        "bottom": 582
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:193.7",
-        "image_dark_ratio:0.1760",
-        "image_warmth:41.2",
-        "image_quality:yellowed_scan",
-        "hebrew_column:94-636",
-        "analysis_x:132-518",
-        "dark_threshold:160",
-        "whitespace_threshold:23",
-        "content_y:54-1989",
-        "cut_lines:323,564,791,1010,1278,1540,1723"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 2,
-      "verse": 4,
-      "source_file": "000012.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
-      "output_image": "data/hutter/verse_images/philippians/002_004_000012.png",
-      "crop_box": {
-        "left": 88,
-        "top": 546,
-        "right": 642,
-        "bottom": 809
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:193.7",
-        "image_dark_ratio:0.1760",
-        "image_warmth:41.2",
-        "image_quality:yellowed_scan",
-        "hebrew_column:94-636",
-        "analysis_x:132-518",
-        "dark_threshold:160",
-        "whitespace_threshold:23",
-        "content_y:54-1989",
-        "cut_lines:323,564,791,1010,1278,1540,1723"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 2,
-      "verse": 5,
-      "source_file": "000012.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
-      "output_image": "data/hutter/verse_images/philippians/002_005_000012.png",
-      "crop_box": {
-        "left": 88,
-        "top": 773,
-        "right": 642,
-        "bottom": 1028
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:193.7",
-        "image_dark_ratio:0.1760",
-        "image_warmth:41.2",
-        "image_quality:yellowed_scan",
-        "hebrew_column:94-636",
-        "analysis_x:132-518",
-        "dark_threshold:160",
-        "whitespace_threshold:23",
-        "content_y:54-1989",
-        "cut_lines:323,564,791,1010,1278,1540,1723"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 2,
-      "verse": 6,
-      "source_file": "000012.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
-      "output_image": "data/hutter/verse_images/philippians/002_006_000012.png",
-      "crop_box": {
-        "left": 88,
-        "top": 992,
-        "right": 642,
-        "bottom": 1296
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:193.7",
-        "image_dark_ratio:0.1760",
-        "image_warmth:41.2",
-        "image_quality:yellowed_scan",
-        "hebrew_column:94-636",
-        "analysis_x:132-518",
-        "dark_threshold:160",
-        "whitespace_threshold:23",
-        "content_y:54-1989",
-        "cut_lines:323,564,791,1010,1278,1540,1723"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 2,
-      "verse": 7,
-      "source_file": "000012.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
-      "output_image": "data/hutter/verse_images/philippians/002_007_000012.png",
-      "crop_box": {
-        "left": 88,
-        "top": 1260,
-        "right": 642,
-        "bottom": 1558
-      },
-      "status": "cropped",
-      "notes": [
-        "image_size:740x2200",
-        "image_luma_mean:193.7",
-        "image_dark_ratio:0.1760",
-        "image_warmth:41.2",
-        "image_quality:yellowed_scan",
-        "hebrew_column:94-636",
-        "analysis_x:132-518",
-        "dark_threshold:160",
-        "whitespace_threshold:23",
-        "content_y:54-1989",
-        "cut_lines:323,564,791,1010,1278,1540,1723"
-      ]
-    },
-    {
-      "book": "philippians",
-      "chapter": 2,
-      "verse": 8,
-      "source_file": "000012.png",
-      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
-      "output_image": "data/hutter/verse_images/philippians/002_008_000012.png",
-      "crop_box": {
-        "left": 88,
-        "top": 1522,
-        "right": 642,
-        "bottom": 1741
+        "bottom": 418
       },
       "status": "cropped",
       "notes": [
@@ -1084,21 +936,21 @@
         "whitespace_threshold:23",
         "content_y:54-1989",
         "cut_lines:323,564,791,1010,1278,1540,1723",
-        "verse 8 has complex structure with possible line continuation"
+        "manual_cut_override:400,670,910,990,1240,1500,1700"
       ]
     },
     {
       "book": "philippians",
       "chapter": 2,
-      "verse": 9,
+      "verse": 3,
       "source_file": "000012.png",
       "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
-      "output_image": "data/hutter/verse_images/philippians/002_009_000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_003_000012.png",
       "crop_box": {
         "left": 88,
-        "top": 1705,
+        "top": 382,
         "right": 642,
-        "bottom": 2007
+        "bottom": 688
       },
       "status": "cropped",
       "notes": [
@@ -1112,7 +964,183 @@
         "dark_threshold:160",
         "whitespace_threshold:23",
         "content_y:54-1989",
-        "cut_lines:323,564,791,1010,1278,1540,1723"
+        "cut_lines:323,564,791,1010,1278,1540,1723",
+        "manual_cut_override:400,670,910,990,1240,1500,1700"
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 2,
+      "verse": 4,
+      "source_file": "000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_004_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 652,
+        "right": 642,
+        "bottom": 928
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1760",
+        "image_warmth:41.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-636",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:54-1989",
+        "cut_lines:323,564,791,1010,1278,1540,1723",
+        "manual_cut_override:400,670,910,990,1240,1500,1700"
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 2,
+      "verse": 5,
+      "source_file": "000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_005_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 892,
+        "right": 642,
+        "bottom": 1008
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1760",
+        "image_warmth:41.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-636",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:54-1989",
+        "cut_lines:323,564,791,1010,1278,1540,1723",
+        "manual_cut_override:400,670,910,990,1240,1500,1700"
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 2,
+      "verse": 6,
+      "source_file": "000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_006_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 972,
+        "right": 642,
+        "bottom": 1258
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1760",
+        "image_warmth:41.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-636",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:54-1989",
+        "cut_lines:323,564,791,1010,1278,1540,1723",
+        "manual_cut_override:400,670,910,990,1240,1500,1700"
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 2,
+      "verse": 7,
+      "source_file": "000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_007_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1222,
+        "right": 642,
+        "bottom": 1518
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1760",
+        "image_warmth:41.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-636",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:54-1989",
+        "cut_lines:323,564,791,1010,1278,1540,1723",
+        "manual_cut_override:400,670,910,990,1240,1500,1700"
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 2,
+      "verse": 8,
+      "source_file": "000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_008_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1482,
+        "right": 642,
+        "bottom": 1718
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1760",
+        "image_warmth:41.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-636",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:54-1989",
+        "cut_lines:323,564,791,1010,1278,1540,1723",
+        "manual_cut_override:400,670,910,990,1240,1500,1700",
+        "verse 8 has complex structure with possible line continuation"
+      ]
+    },
+    {
+      "book": "philippians",
+      "chapter": 2,
+      "verse": 9,
+      "source_file": "000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_009_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1682,
+        "right": 642,
+        "bottom": 2068
+      },
+      "status": "cropped",
+      "notes": [
+        "image_size:740x2200",
+        "image_luma_mean:193.7",
+        "image_dark_ratio:0.1760",
+        "image_warmth:41.2",
+        "image_quality:yellowed_scan",
+        "hebrew_column:94-636",
+        "analysis_x:132-518",
+        "dark_threshold:160",
+        "whitespace_threshold:23",
+        "content_y:54-1989",
+        "cut_lines:323,564,791,1010,1278,1540,1723",
+        "manual_cut_override:400,670,910,990,1240,1500,1700"
       ]
     },
     {
@@ -1488,9 +1516,9 @@
       "output_image": "data/hutter/verse_images/philippians/002_023_000018.png",
       "crop_box": {
         "left": 94,
-        "top": 49,
+        "top": 132,
         "right": 648,
-        "bottom": 345
+        "bottom": 418
       },
       "status": "cropped",
       "notes": [
@@ -1504,7 +1532,8 @@
         "dark_threshold:160",
         "whitespace_threshold:22",
         "content_y:67-1997",
-        "cut_lines:327,655,920,1151,1441,1690"
+        "cut_lines:327,655,920,1151,1441,1690",
+        "manual_cut_override:400,570,900,1160,1450,1730"
       ]
     },
     {
@@ -1516,9 +1545,9 @@
       "output_image": "data/hutter/verse_images/philippians/002_024_000018.png",
       "crop_box": {
         "left": 94,
-        "top": 309,
+        "top": 382,
         "right": 648,
-        "bottom": 673
+        "bottom": 588
       },
       "status": "cropped",
       "notes": [
@@ -1532,7 +1561,8 @@
         "dark_threshold:160",
         "whitespace_threshold:22",
         "content_y:67-1997",
-        "cut_lines:327,655,920,1151,1441,1690"
+        "cut_lines:327,655,920,1151,1441,1690",
+        "manual_cut_override:400,570,900,1160,1450,1730"
       ]
     },
     {
@@ -1544,9 +1574,9 @@
       "output_image": "data/hutter/verse_images/philippians/002_025_000018.png",
       "crop_box": {
         "left": 94,
-        "top": 637,
+        "top": 552,
         "right": 648,
-        "bottom": 938
+        "bottom": 918
       },
       "status": "cropped",
       "notes": [
@@ -1560,7 +1590,8 @@
         "dark_threshold:160",
         "whitespace_threshold:22",
         "content_y:67-1997",
-        "cut_lines:327,655,920,1151,1441,1690"
+        "cut_lines:327,655,920,1151,1441,1690",
+        "manual_cut_override:400,570,900,1160,1450,1730"
       ]
     },
     {
@@ -1572,9 +1603,9 @@
       "output_image": "data/hutter/verse_images/philippians/002_026_000018.png",
       "crop_box": {
         "left": 94,
-        "top": 902,
+        "top": 882,
         "right": 648,
-        "bottom": 1169
+        "bottom": 1178
       },
       "status": "cropped",
       "notes": [
@@ -1588,7 +1619,8 @@
         "dark_threshold:160",
         "whitespace_threshold:22",
         "content_y:67-1997",
-        "cut_lines:327,655,920,1151,1441,1690"
+        "cut_lines:327,655,920,1151,1441,1690",
+        "manual_cut_override:400,570,900,1160,1450,1730"
       ]
     },
     {
@@ -1600,9 +1632,9 @@
       "output_image": "data/hutter/verse_images/philippians/002_027_000018.png",
       "crop_box": {
         "left": 94,
-        "top": 1133,
+        "top": 1142,
         "right": 648,
-        "bottom": 1459
+        "bottom": 1468
       },
       "status": "cropped",
       "notes": [
@@ -1616,7 +1648,8 @@
         "dark_threshold:160",
         "whitespace_threshold:22",
         "content_y:67-1997",
-        "cut_lines:327,655,920,1151,1441,1690"
+        "cut_lines:327,655,920,1151,1441,1690",
+        "manual_cut_override:400,570,900,1160,1450,1730"
       ]
     },
     {
@@ -1628,9 +1661,9 @@
       "output_image": "data/hutter/verse_images/philippians/002_028_000018.png",
       "crop_box": {
         "left": 94,
-        "top": 1423,
+        "top": 1432,
         "right": 648,
-        "bottom": 1708
+        "bottom": 1748
       },
       "status": "cropped",
       "notes": [
@@ -1644,7 +1677,8 @@
         "dark_threshold:160",
         "whitespace_threshold:22",
         "content_y:67-1997",
-        "cut_lines:327,655,920,1151,1441,1690"
+        "cut_lines:327,655,920,1151,1441,1690",
+        "manual_cut_override:400,570,900,1160,1450,1730"
       ]
     },
     {
@@ -1656,9 +1690,9 @@
       "output_image": "data/hutter/verse_images/philippians/002_029_000018.png",
       "crop_box": {
         "left": 94,
-        "top": 1672,
+        "top": 1712,
         "right": 648,
-        "bottom": 2015
+        "bottom": 1968
       },
       "status": "cropped",
       "notes": [
@@ -1672,7 +1706,8 @@
         "dark_threshold:160",
         "whitespace_threshold:22",
         "content_y:67-1997",
-        "cut_lines:327,655,920,1151,1441,1690"
+        "cut_lines:327,655,920,1151,1441,1690",
+        "manual_cut_override:400,570,900,1160,1450,1730"
       ]
     },
     {
@@ -2380,9 +2415,9 @@
       "output_image": "data/hutter/verse_images/philippians/004_003_000028.png",
       "crop_box": {
         "left": 85,
-        "top": 61,
+        "top": 132,
         "right": 632,
-        "bottom": 409
+        "bottom": 608
       },
       "status": "cropped",
       "notes": [
@@ -2396,7 +2431,8 @@
         "dark_threshold:160",
         "whitespace_threshold:16",
         "content_y:79-1997",
-        "cut_lines:391,699,988,1301,1668"
+        "cut_lines:391,699,988,1301,1668",
+        "manual_cut_override:590,810,1000,1340,1630"
       ]
     },
     {
@@ -2408,9 +2444,9 @@
       "output_image": "data/hutter/verse_images/philippians/004_004_000028.png",
       "crop_box": {
         "left": 85,
-        "top": 373,
+        "top": 572,
         "right": 632,
-        "bottom": 717
+        "bottom": 828
       },
       "status": "cropped",
       "notes": [
@@ -2424,7 +2460,8 @@
         "dark_threshold:160",
         "whitespace_threshold:16",
         "content_y:79-1997",
-        "cut_lines:391,699,988,1301,1668"
+        "cut_lines:391,699,988,1301,1668",
+        "manual_cut_override:590,810,1000,1340,1630"
       ]
     },
     {
@@ -2436,9 +2473,9 @@
       "output_image": "data/hutter/verse_images/philippians/004_005_000028.png",
       "crop_box": {
         "left": 85,
-        "top": 681,
+        "top": 792,
         "right": 632,
-        "bottom": 1006
+        "bottom": 1018
       },
       "status": "cropped",
       "notes": [
@@ -2452,7 +2489,8 @@
         "dark_threshold:160",
         "whitespace_threshold:16",
         "content_y:79-1997",
-        "cut_lines:391,699,988,1301,1668"
+        "cut_lines:391,699,988,1301,1668",
+        "manual_cut_override:590,810,1000,1340,1630"
       ]
     },
     {
@@ -2464,9 +2502,9 @@
       "output_image": "data/hutter/verse_images/philippians/004_006_000028.png",
       "crop_box": {
         "left": 85,
-        "top": 970,
+        "top": 982,
         "right": 632,
-        "bottom": 1319
+        "bottom": 1358
       },
       "status": "cropped",
       "notes": [
@@ -2480,7 +2518,8 @@
         "dark_threshold:160",
         "whitespace_threshold:16",
         "content_y:79-1997",
-        "cut_lines:391,699,988,1301,1668"
+        "cut_lines:391,699,988,1301,1668",
+        "manual_cut_override:590,810,1000,1340,1630"
       ]
     },
     {
@@ -2492,9 +2531,9 @@
       "output_image": "data/hutter/verse_images/philippians/004_007_000028.png",
       "crop_box": {
         "left": 85,
-        "top": 1283,
+        "top": 1322,
         "right": 632,
-        "bottom": 1686
+        "bottom": 1648
       },
       "status": "cropped",
       "notes": [
@@ -2508,7 +2547,8 @@
         "dark_threshold:160",
         "whitespace_threshold:16",
         "content_y:79-1997",
-        "cut_lines:391,699,988,1301,1668"
+        "cut_lines:391,699,988,1301,1668",
+        "manual_cut_override:590,810,1000,1340,1630"
       ]
     },
     {
@@ -2520,9 +2560,9 @@
       "output_image": "data/hutter/verse_images/philippians/004_008_000028.png",
       "crop_box": {
         "left": 85,
-        "top": 1650,
+        "top": 1612,
         "right": 632,
-        "bottom": 2015
+        "bottom": 1968
       },
       "status": "cropped",
       "notes": [
@@ -2536,7 +2576,8 @@
         "dark_threshold:160",
         "whitespace_threshold:16",
         "content_y:79-1997",
-        "cut_lines:391,699,988,1301,1668"
+        "cut_lines:391,699,988,1301,1668",
+        "manual_cut_override:590,810,1000,1340,1630"
       ]
     },
     {

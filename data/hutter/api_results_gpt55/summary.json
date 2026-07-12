@@ -1,28 +1,28 @@
 {
-  "book_count": 19,
+  "book_count": 20,
   "totals": {
-    "manifest_verse_count": 2368,
-    "result_count": 2368,
-    "raw_result_count": 2755,
-    "retry_row_count": 387,
+    "manifest_verse_count": 2472,
+    "result_count": 2472,
+    "raw_result_count": 2900,
+    "retry_row_count": 428,
     "pending_count": 0,
-    "batch_count": 423,
-    "needs_review_count": 1849,
-    "likely_crop_issue_count": 629,
-    "likely_ocr_issue_count": 1220,
+    "batch_count": 453,
+    "needs_review_count": 1934,
+    "likely_crop_issue_count": 647,
+    "likely_ocr_issue_count": 1287,
     "no_hebrew_marks_count": 2,
     "empty_text_count": 0,
-    "total_tokens": 1399044,
-    "input_tokens": 922675,
-    "output_tokens": 476369
+    "total_tokens": 1474090,
+    "input_tokens": 972359,
+    "output_tokens": 501731
   },
   "status_counts": {
-    "ok": 2368
+    "ok": 2472
   },
   "confidence_counts": {
-    "high": 94,
-    "low": 346,
-    "medium": 1928
+    "high": 101,
+    "low": 354,
+    "medium": 2017
   },
   "books": [
     {
@@ -329,6 +329,32 @@
       "confidence_counts": {
         "low": 2,
         "medium": 23
+      }
+    },
+    {
+      "book": "philippians",
+      "manifest_verse_count": 104,
+      "result_count": 104,
+      "raw_result_count": 145,
+      "retry_row_count": 41,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 30,
+      "needs_review_count": 85,
+      "likely_crop_issue_count": 18,
+      "likely_ocr_issue_count": 67,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 75046,
+      "input_tokens": 49684,
+      "output_tokens": 25362,
+      "status_counts": {
+        "ok": 104
+      },
+      "confidence_counts": {
+        "high": 7,
+        "low": 8,
+        "medium": 89
       }
     },
     {

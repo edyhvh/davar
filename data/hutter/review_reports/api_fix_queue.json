@@ -1,10 +1,10 @@
 {
-  "item_count": 1850,
-  "page_count": 383,
+  "item_count": 1935,
+  "page_count": 399,
   "category_counts": {
-    "crop_boundary": 630,
+    "crop_boundary": 648,
     "ocr_no_marks": 2,
-    "ocr_uncertain": 1218
+    "ocr_uncertain": 1285
   },
   "items": [
     {
@@ -6428,6 +6428,348 @@
       "empty_text": false,
       "notes": "Some pointing is faint/uncertain in the crop.",
       "hebrew_text": "בִּבְטָחִי עַל־שְׁמִיעָתְךָ כָּתַבְתִּי אֵלֶיךָ וְיֹדֵעַ אֲנִי כִּי־מֵאֲשֶׁר אֹמֵר אֲנִי יֹתֵר תַּעֲשֶׂה׃"
+    },
+    {
+      "id": "philippians.1.5.000002",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000002.png",
+      "output_image": "data/hutter/verse_images/philippians/001_005_000002.png",
+      "crop_box": {
+        "left": 99,
+        "top": 1382,
+        "right": 653,
+        "bottom": 1608
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing is not fully clear in the crop.",
+      "hebrew_text": "עַל־חֶבְרַתְכֶם בִּבְשׂוֹרָה מִיּוֹם רִאשׁוֹן עַד־עָתָּה׃"
+    },
+    {
+      "id": "philippians.1.12.000004",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_012_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 1402,
+        "right": 624,
+        "bottom": 1588
+      },
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Several words/points are uncertain in the crop.",
+      "hebrew_text": "מִיהַךְ אֲשֶׁר הוֹדַע אַחַי כִּי הַאֵלֶּה אֲשֶׁר אֹתִי יוֹתֵר לְצַעַד הַבְּשׂוֹרָה בָּא׃"
+    },
+    {
+      "id": "philippians.1.7.000004",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_007_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 132,
+        "right": 624,
+        "bottom": 518
+      },
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Several words/points are unclear in the crop; transcription may contain errors.",
+      "hebrew_text": "אֲכָכָה שָׁוֶה לִי לְחָשֹׁב אֶת־זֹאת עַל־כֻּלְּכֶם עַל־כִּי־הִנְּכֶם אַתֶּם בִּלְבָבִי גַּם בְּמַאֲסוּרַי גַּם בְּדִבְרֵי־אֹדוֹתַי וּבְעַצְמַת הַבְּשׂוֹרָה חֶבְרֵי חֶנָּתִי כֻּלְּכֶם׃"
+    },
+    {
+      "id": "philippians.1.22.000008",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000008.png",
+      "output_image": "data/hutter/verse_images/philippians/001_022_000008.png",
+      "crop_box": {
+        "left": 109,
+        "top": 712,
+        "right": 664,
+        "bottom": 1018
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/marks are difficult to verify exactly from the crop.",
+      "hebrew_text": "וְכִי חֲיוֹתִי בַּבָּשָׂר יִשְׁפֵּר הַמַּעֲשֶׂה אֲשֶׁר לִי לָכֵן אֵינֶנִּי יוֹדֵעַ מָה אֶבְחַר׃"
+    },
+    {
+      "id": "philippians.1.25.000008",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000008.png",
+      "output_image": "data/hutter/verse_images/philippians/001_025_000008.png",
+      "crop_box": {
+        "left": 109,
+        "top": 1392,
+        "right": 664,
+        "bottom": 1758
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some words/pointing are uncertain from the crop.",
+      "hebrew_text": "וְזֹאת בָּטוּחַ אֲנִי יוֹדֵעַ כִּי אוֹסִיף לָכֶם וְלָעֲמוֹד לְכֻלְּכֶם לְצַעֲדְכֶם וּלְשִׂמְחַת הָאֱמוּנָה׃"
+    },
+    {
+      "id": "philippians.2.1.000010",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000010.png",
+      "output_image": "data/hutter/verse_images/philippians/002_001_000010.png",
+      "crop_box": {
+        "left": 102,
+        "top": 1556,
+        "right": 659,
+        "bottom": 2014
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing and small marks are difficult to distinguish in the crop.",
+      "hebrew_text": "וְאִם יֶשׁ־בָכֶם נֶחָמָה אַחַת בְּמָשִׁיחַ אֹו הִתְחַמְּמוּת בְּאַהֲבָה אַחַת חֶבְרַת הָרוּחַ אֹו חֶסֶד אֹו רַחֲמִים"
+    },
+    {
+      "id": "philippians.2.2.000012",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_002_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 132,
+        "right": 642,
+        "bottom": 418
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/cantillation-like marks are unclear in the crop.",
+      "hebrew_text": "ומלאו את־שמחתי להיותכם יחד להיות לכם אהבה אחת בלב אחד מבינים אחת׃"
+    },
+    {
+      "id": "philippians.2.5.000012",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_005_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 892,
+        "right": 642,
+        "bottom": 1008
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Short crop; pointing/cantillation-like marks not fully preserved.",
+      "hebrew_text": "וזאת הכינו ביניכם אשר היא בישוע המשיח׃"
+    },
+    {
+      "id": "philippians.2.7.000012",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_007_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1222,
+        "right": 642,
+        "bottom": 1518
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "hebrew_text": "כִּי־אִם הִשְׁפִּיל אֶת־נַפְשׁוֹ וְתוֹרַת הָעֶבֶד לָקַח לוֹ וּבִדְמוּת הָאָדָם הָיָה וּבְצַלְמוֹ נִמְצָא כָּאָדָם׃"
+    },
+    {
+      "id": "philippians.2.17.000016",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000016.png",
+      "output_image": "data/hutter/verse_images/philippians/002_017_000016.png",
+      "crop_box": {
+        "left": 98,
+        "top": 314,
+        "right": 649,
+        "bottom": 596
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "hebrew_text": "וְאִם כִּי־אֶזָּבַח עַל־זֶבַח וַעֲבֹדַת אֱמוּנַתְכֶם אֶשְׂמַח וְחָדִיתִי עַל־כֻּלְּכֶם׃"
+    },
+    {
+      "id": "philippians.2.25.000018",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000018.png",
+      "output_image": "data/hutter/verse_images/philippians/002_025_000018.png",
+      "crop_box": {
+        "left": 94,
+        "top": 552,
+        "right": 648,
+        "bottom": 918
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing and one word near the lower line are difficult to verify from the crop.",
+      "hebrew_text": "וַחֲשַׁבְתִּי כִּי צָרִיךְ הוּא אַחִי אֶפַּפְרוֹדִיטוֹס שֶׁהוּא אַחִי עוֹזֵרִי וְחַבְרִי וּבַעַל בְּרִית מִלְחַמְתִּי וּמְלַאכְכֶם וּמְשָׁרֵת צָרְכִּי לִשְׁלוֹחַ אֲלֵיכֶם׃"
+    },
+    {
+      "id": "philippians.3.12.000024",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000024.png",
+      "output_image": "data/hutter/verse_images/philippians/003_012_000024.png",
+      "crop_box": {
+        "left": 74,
+        "top": 54,
+        "right": 627,
+        "bottom": 431
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "hebrew_text": "לֹא כִּי מֵעַתָּה לָקַחְתִּי אוֹ כִּי־תָּם שָׁלֵם אָנֹכִי אַךְ רוֹדֵף אֲנִי אִם גַּם אֹתֹו אֵת־אֲשֶׁר בּוֹ נֶאֱחַזְתִּי מִיֵּשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.3.16.000024",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000024.png",
+      "output_image": "data/hutter/verse_images/philippians/003_016_000024.png",
+      "crop_box": {
+        "left": 74,
+        "top": 1322,
+        "right": 627,
+        "bottom": 1706
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/letters are unclear in the crop.",
+      "hebrew_text": "לְכֹל אֲשֶׁר נַגִּיעַ לָלֶכֶת בְּמְסִלָּה אַחַת וּלְהָכֶם יַחַד׃"
+    },
+    {
+      "id": "philippians.4.3.000028",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000028.png",
+      "output_image": "data/hutter/verse_images/philippians/004_003_000028.png",
+      "crop_box": {
+        "left": 85,
+        "top": 132,
+        "right": 632,
+        "bottom": 608
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/cantillation-like marks and several letters are difficult to verify from the crop.",
+      "hebrew_text": "גַּם שׁוֹאֵל אֲנִי מִמְּךָ הָאָחִי בַּעַל־בְּרִיתִי הַכֵּן־אֲמֵרִי עֲזֹרָה נָא אוֹתָם אֲשֶׁר בְּבַשּׂוֹרָה יָגְעוּ וְסַבְלוּ עִמִּי עִם־קְלִימֵיס וְעִם עוֹזְרַי הָאֲחֵרִים אֲשֶׁר שְׁמוֹתָם נִכְתְּבוּ בְּסֵפֶר הַחַיִּים׃"
+    },
+    {
+      "id": "philippians.4.8.000028",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000028.png",
+      "output_image": "data/hutter/verse_images/philippians/004_008_000028.png",
+      "crop_box": {
+        "left": 85,
+        "top": 1612,
+        "right": 632,
+        "bottom": 1968
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/cantillation-like marks and a few words are not fully clear in the crop.",
+      "hebrew_text": "וְהַנִּשְׁאָר אַחַי כָּל־אֲשֶׁר אֱמֶת אֲשֶׁר צְדָקָה אֲשֶׁר קְדוֹשִׁים דְּבָרִים אֲשֶׁר לְבָבָה אוֹ אִם־מַעֲשֶׂה חַיִל אוֹ־תְּהִלָּה אוֹתָם תַּחְשְׁבוּ"
+    },
+    {
+      "id": "philippians.4.13.000030",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000030.png",
+      "output_image": "data/hutter/verse_images/philippians/004_013_000030.png",
+      "crop_box": {
+        "left": 98,
+        "top": 1346,
+        "right": 645,
+        "bottom": 1663
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Crop is partially tight; pointing uncertain.",
+      "hebrew_text": "אֶת־כָּל דְּבָרִים אוּכַל לְהָכִיל בַּאֲשֶׁר נֹתֵן לִי כֹחַ בַּמָּשִׁיחַ"
+    },
+    {
+      "id": "philippians.4.14.000030",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000030.png",
+      "output_image": "data/hutter/verse_images/philippians/004_014_000030.png",
+      "crop_box": {
+        "left": 98,
+        "top": 1627,
+        "right": 645,
+        "bottom": 2000
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Left edge slightly cropped and pointing uncertain.",
+      "hebrew_text": "לָכֵן הֵיטַבְתֶּם לַעֲשׂוֹת כִּי הִתְחַבַּרְתֶּם עִם מְצוּקָתִי"
+    },
+    {
+      "id": "philippians.4.16.000032",
+      "book": "philippians",
+      "category": "crop_boundary",
+      "priority": 4,
+      "source_file": "000032.png",
+      "output_image": "data/hutter/verse_images/philippians/004_016_000032.png",
+      "crop_box": {
+        "left": 135,
+        "top": 403,
+        "right": 708,
+        "bottom": 750
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Top line partly cropped; transcription of opening phrase inferred from visible Hebrew.",
+      "hebrew_text": "כִּי־גַם אַתֶּם לְבַדְכֶם בְּתַסְלוֹנִיקִי פַּעַם אַחַת וּשְׁתַּיִם לְצָרְכִי שְׁלַחְתֶּם"
     },
     {
       "id": "revelation.1.5.000004",
@@ -24383,6 +24725,1279 @@
       "empty_text": false,
       "notes": "Beginning word/phrase and some pointing are faint; verify against image.",
       "hebrew_text": "תִּהְיֶה אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ עִם רוּחֲכֶם אָמֵן׃"
+    },
+    {
+      "id": "philippians.1.1.000002",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000002.png",
+      "output_image": "data/hutter/verse_images/philippians/001_001_000002.png",
+      "crop_box": {
+        "left": 99,
+        "top": 412,
+        "right": 653,
+        "bottom": 808
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing and some small marks are difficult to preserve confidently.",
+      "hebrew_text": "פולוס וטימוטאוס עבדי ישוע המשיח לקדושים כלם שהם בישוע המשיח וההוים בפילפים עם־פקידים ומשרתים׃"
+    },
+    {
+      "id": "philippians.1.2.000002",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000002.png",
+      "output_image": "data/hutter/verse_images/philippians/001_002_000002.png",
+      "crop_box": {
+        "left": 99,
+        "top": 772,
+        "right": 653,
+        "bottom": 1018
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some niqqud may be uncertain.",
+      "hebrew_text": "הַחֶסֶד לָכֶם וְשָׁלוֹם מֵאֱלֹהִים אָבִינוּ וַאֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.1.3.000002",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000002.png",
+      "output_image": "data/hutter/verse_images/philippians/001_003_000002.png",
+      "crop_box": {
+        "left": 99,
+        "top": 982,
+        "right": 653,
+        "bottom": 1198
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing is only partly clear.",
+      "hebrew_text": "אוֹדֶה לֵאלֹהַי בְּכָל־זִכְרְכֶם׃"
+    },
+    {
+      "id": "philippians.1.4.000002",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000002.png",
+      "output_image": "data/hutter/verse_images/philippians/001_004_000002.png",
+      "crop_box": {
+        "left": 99,
+        "top": 1162,
+        "right": 653,
+        "bottom": 1418
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Several vowel points and small marks are uncertain.",
+      "hebrew_text": "תָּמִיד בְּכָל־הַתְּפִלּוֹתַי עַל־כֻּלְּכֶם בַּעֲשׂוֹתִי אֶת־תְּפִלָּתִי בְּשִׂמְחָה׃"
+    },
+    {
+      "id": "philippians.1.6.000002",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000002.png",
+      "output_image": "data/hutter/verse_images/philippians/001_006_000002.png",
+      "crop_box": {
+        "left": 99,
+        "top": 1572,
+        "right": 653,
+        "bottom": 1878
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/cantillation-like marks are small and uncertain.",
+      "hebrew_text": "בְּבִטְחָן אֲנִי עַל־זֹאת כִּי אֲשֶׁר הֵחֵל בָּכֶם אֶת־מַעֲשֵׂה הַטּוֹב הוּא גַּם יְכַלֶּה עַד־יוֹם יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.1.10.000004",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_010_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 902,
+        "right": 624,
+        "bottom": 1178
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing/cantillation-like marks are somewhat unclear.",
+      "hebrew_text": "לִבְחֹן אֶת־הַמּוֹעִילִים אֲשֶׁר תִּהְיוּ תְמִימִים וּבְלִי־דֹפִי בְּיוֹם הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.1.11.000004",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_011_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 1142,
+        "right": 624,
+        "bottom": 1438
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/cantillation-like marks are hard to distinguish.",
+      "hebrew_text": "מְמֻלָאִים בְּמַעֲשֵׂי הַצְּדָקָה בְּיֵשׁוּעַ הַמָּשִׁיחַ לִכְבוֹד וּתְהִלַּת אֱלֹהִים׃"
+    },
+    {
+      "id": "philippians.1.13.000004",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_013_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 1552,
+        "right": 624,
+        "bottom": 1968
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing and exact form of a few words are uncertain.",
+      "hebrew_text": "כִּי אֲשֶׁר אֲסוּרַי בַּמָּשִׁיחַ נוֹדְעוּ בְּכָל בֵּית דִּין וּבַאֲחֵרִים כֻּלָּם׃"
+    },
+    {
+      "id": "philippians.1.8.000004",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_008_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 482,
+        "right": 624,
+        "bottom": 718
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing is partially uncertain.",
+      "hebrew_text": "וְעֵדִי הוּא הָאֱלֹהִים אֵיכָכָה מִתְאַוֶּה אֲנִי אֶת־כֻּלְּכֶם בְּרַחֲמֵי יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.1.9.000004",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000004.png",
+      "output_image": "data/hutter/verse_images/philippians/001_009_000004.png",
+      "crop_box": {
+        "left": 77,
+        "top": 682,
+        "right": 624,
+        "bottom": 938
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some niqqud and one word are not fully clear.",
+      "hebrew_text": "וְזֹאת מִתְפַּלֵּל אֲנִי אֲשֶׁר אַהֲבַתְכֶם עוֹד יוֹתֵר וְעַל־יוֹתֵר תּוֹתִיר בְּדַעַת וּבְכָל־תְּבוּנָה׃"
+    },
+    {
+      "id": "philippians.1.14.000006",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000006.png",
+      "output_image": "data/hutter/verse_images/philippians/001_014_000006.png",
+      "crop_box": {
+        "left": 64,
+        "top": 26,
+        "right": 619,
+        "bottom": 382
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some niqqud and one word-form are not fully certain.",
+      "hebrew_text": "וַאֲשֶׁר רַבִּים מִן הָאַחִים בַּאֲדֹנֵינוּ יִבְטְחוּ בַּאֲסוּרַי אֲשֶׁר מְלֵאִים לִבָּם בְּכָל יִרְאָה לְדַבֵּר אֶת־הַדָּבָר׃"
+    },
+    {
+      "id": "philippians.1.15.000006",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000006.png",
+      "output_image": "data/hutter/verse_images/philippians/001_015_000006.png",
+      "crop_box": {
+        "left": 64,
+        "top": 346,
+        "right": 619,
+        "bottom": 708
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing is partly faint; transcription of וַאֲנָשִׁים/גַּם uncertain.",
+      "hebrew_text": "אֲנָשִׁים בְּשִׂנְאָה וּבְמַרִיבָה וַאֲנָשִׁים גַּם בְּטוֹב קוֹרְאִים אֶת־הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.1.16.000006",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000006.png",
+      "output_image": "data/hutter/verse_images/philippians/001_016_000006.png",
+      "crop_box": {
+        "left": 64,
+        "top": 672,
+        "right": 619,
+        "bottom": 1008
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/word division is uncertain; apparent line break around עַל־.",
+      "hebrew_text": "וַאֲשֶׁר בִּמְרִיבָה מַבְּשְׂרִים אֶת־הַמָּשִׁיחַ לֹא בְתֹם וָיֹשֶׁר כִּי־אִם חֹשְׁבִים לְהַגְדִּילִי וּלְהִתְנַפֵּל עַל־וּלְהוֹסִיף צָרָה וּמְצוּקָה עַל־אֲסוּרָי"
+    },
+    {
+      "id": "philippians.1.17.000006",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000006.png",
+      "output_image": "data/hutter/verse_images/philippians/001_017_000006.png",
+      "crop_box": {
+        "left": 64,
+        "top": 972,
+        "right": 619,
+        "bottom": 1347
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing is partly uncertain due to image resolution.",
+      "hebrew_text": "אֵלֶּה הֵם אֲשֶׁר מֵאַהֲבָה יוֹדְעִים כִּי־עַל־דְּבַר הַבְּשׂוֹרָה עוֹמֵד אָנֹכִי"
+    },
+    {
+      "id": "philippians.1.18.000006",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000006.png",
+      "output_image": "data/hutter/verse_images/philippians/001_018_000006.png",
+      "crop_box": {
+        "left": 64,
+        "top": 1311,
+        "right": 619,
+        "bottom": 1662
+      },
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Several words and vocalization marks are difficult to distinguish; transcription uncertain.",
+      "hebrew_text": "וּמָה הַנִּשְׁלָח וּבְכֹל אֹפֶן בֵּין אִם בְּעֲלִילוֹת וְאִם בֶּאֱמֶת בִּרְשׁוּת הַמָּשִׁיחַ גַּם כֵּן שׂוֹמֵחַ אָנֹכִי וְאֶשְׂמָח"
+    },
+    {
+      "id": "philippians.1.19.000006",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000006.png",
+      "output_image": "data/hutter/verse_images/philippians/001_019_000006.png",
+      "crop_box": {
+        "left": 64,
+        "top": 1626,
+        "right": 619,
+        "bottom": 1998
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Initial phrase and pointing are somewhat uncertain.",
+      "hebrew_text": "כִּי־יָדַעְתִּי כִּי וְאַתֶּם הִיא תִּהְיֶה לִי לִישׁוּעָתִי בִּתְפִלַּתְכֶם וּבְמַתַּת רוּחַ יֵשׁוּעַ הַמָּשִׁיחַ"
+    },
+    {
+      "id": "philippians.1.20.000008",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000008.png",
+      "output_image": "data/hutter/verse_images/philippians/001_020_000008.png",
+      "crop_box": {
+        "left": 109,
+        "top": 132,
+        "right": 664,
+        "bottom": 558
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Left edge slightly cut; some vowel marks are uncertain.",
+      "hebrew_text": "כְּמִתְנַתִּי וּשְׂבָרִי כִּי לֹא אֵבוֹשָׁה בְּכָל־דָּבָר כִּי־אִם בְּכָל־בִּטָּחוֹן כְּמוֹ תָמִיד כֹּה גַּם עַתָּה יִתְגַּדֵּל הַמָּשִׁיחַ בִּבְשָׂרִי אִם בְּחַיִּים וְאִם בַּמָּוֶת׃"
+    },
+    {
+      "id": "philippians.1.21.000008",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000008.png",
+      "output_image": "data/hutter/verse_images/philippians/001_021_000008.png",
+      "crop_box": {
+        "left": 109,
+        "top": 522,
+        "right": 664,
+        "bottom": 748
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing and final word form are uncertain.",
+      "hebrew_text": "כִּי־חַיּוּתִי הַמָּשִׁיחַ הוּא וּמוּתִי בִּצְעִי וְתַרְבִּיתִי׃"
+    },
+    {
+      "id": "philippians.1.23.000008",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000008.png",
+      "output_image": "data/hutter/verse_images/philippians/001_023_000008.png",
+      "crop_box": {
+        "left": 109,
+        "top": 982,
+        "right": 664,
+        "bottom": 1268
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Several pointed forms and one word are uncertain due to print quality.",
+      "hebrew_text": "כִּי הֻצַּקְתִּי שְׁתֵּיהֶן בְּתַאֲוָתִי לִנְסֹעַ וְלִהְיוֹת אֶת־הַמָּשִׁיחַ וְזֹאת יוֹתֵר וְעַל־יֶתֶר הוֹעִיל לְנַפְשִׁי׃"
+    },
+    {
+      "id": "philippians.1.24.000008",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000008.png",
+      "output_image": "data/hutter/verse_images/philippians/001_024_000008.png",
+      "crop_box": {
+        "left": 109,
+        "top": 1232,
+        "right": 664,
+        "bottom": 1428
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing is not fully certain.",
+      "hebrew_text": "אַךְ לַעֲמוֹד בְּבָשָׂר צָרִיךְ בַּעֲבֻרְכֶם׃"
+    },
+    {
+      "id": "philippians.1.26.000008",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000008.png",
+      "output_image": "data/hutter/verse_images/philippians/001_026_000008.png",
+      "crop_box": {
+        "left": 109,
+        "top": 1722,
+        "right": 664,
+        "bottom": 1968
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "First line and pointing are somewhat unclear.",
+      "hebrew_text": "לְמַעַן הֲלֻלְכֶם הוֹתִיר בִּישׁוּעַ הַמָּשִׁיחַ בִּי בְּהוֹסִיפִי לָבוֹא אֲלֵיכֶם׃"
+    },
+    {
+      "id": "philippians.1.27.000010",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000010.png",
+      "output_image": "data/hutter/verse_images/philippians/001_027_000010.png",
+      "crop_box": {
+        "left": 102,
+        "top": 37,
+        "right": 659,
+        "bottom": 545
+      },
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Several words and vowel points are uncertain due to blur and print quality.",
+      "hebrew_text": "אַךְ לְבַדְּכֶם בְּהַגָּנָה בְּשׂוֹרַת הַמָּשִׁיחַ הִתְהַלְּכוּ אֲשֶׁר אִם־אָבוֹא וְאֶרְאֶה אֶתְכֶם אוֹ־אִם אֶחֱזַק מִכֶּם אֶשְׁמַע עֲלֵיכֶם כִּי עוֹמְדִים אַתֶּם בְּרוּחַ אַחַת וּבְנֶפֶשׁ אַחַת עוֹזְרֵי בֶּאֱמוּנַת הַבְּשׂוֹרָה׃"
+    },
+    {
+      "id": "philippians.1.28.000010",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000010.png",
+      "output_image": "data/hutter/verse_images/philippians/001_028_000010.png",
+      "crop_box": {
+        "left": 102,
+        "top": 509,
+        "right": 659,
+        "bottom": 941
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing and one or two consonants are not fully clear.",
+      "hebrew_text": "וְאַל־יָבוֹא לְבַבְכֶם פַּחַד־דָּבָר עַל־מְקוֹמְמֵיכֶם כִּי אֲשֶׁר לָהֶם לְאוֹת הָאֲבָדָה הִיא לָכֶם לִישׁוּעָה וְזֹאת הִיא מֵאֱלֹהִים׃"
+    },
+    {
+      "id": "philippians.1.29.000010",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000010.png",
+      "output_image": "data/hutter/verse_images/philippians/001_029_000010.png",
+      "crop_box": {
+        "left": 102,
+        "top": 905,
+        "right": 659,
+        "bottom": 1208
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Final phrase and vocalization are somewhat unclear.",
+      "hebrew_text": "כִּי לָכֶם הוּא לֹא־לְבַד לְהַאֲמִין בּוֹ כִּי־אִם גַּם לִסְבֹּל וְלַעֲנוֹת עָלָיו׃"
+    },
+    {
+      "id": "philippians.1.30.000010",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000010.png",
+      "output_image": "data/hutter/verse_images/philippians/001_030_000010.png",
+      "crop_box": {
+        "left": 102,
+        "top": 1172,
+        "right": 659,
+        "bottom": 1592
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some vowel points are difficult to distinguish.",
+      "hebrew_text": "וְלִהְיוֹת לָכֶם מָדוֹן כְּמוֹ אֲשֶׁר רְאִיתֶם בִּי וְעַתָּה שְׁמַעְתֶּם עָלַי׃"
+    },
+    {
+      "id": "philippians.2.3.000012",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_003_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 382,
+        "right": 642,
+        "bottom": 688
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing/cantillation-like marks are not fully preserved; one word near the end is somewhat uncertain.",
+      "hebrew_text": "ומאומה לא במריבה או בגאות כי־אם בשפלה הרוח איש איש יחשב בלבו כי צעיר וקטון הוא מרעהו׃"
+    },
+    {
+      "id": "philippians.2.4.000012",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_004_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 652,
+        "right": 642,
+        "bottom": 928
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing/cantillation-like marks are visible but not fully preserved.",
+      "hebrew_text": "איש איש אל־יבקש אחד־אשר יועיל לנפשו כי־אם אחד־אשר יועיל לרעהו׃"
+    },
+    {
+      "id": "philippians.2.6.000012",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_006_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 972,
+        "right": 642,
+        "bottom": 1258
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some vowel/cantillation-like marks are unclear and not fully preserved.",
+      "hebrew_text": "אשר אף כי בדמות אלהים הוא אל לא חשב לגזול לו להיותו שוה לאלהים׃"
+    },
+    {
+      "id": "philippians.2.8.000012",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_008_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1482,
+        "right": 642,
+        "bottom": 1718
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Final word and some vowel points are uncertain.",
+      "hebrew_text": "הִשְׁפִּיל אֶת נַפְשׁוֹ וַיְהִי נִשְׁמָע עַד־הַמָּוֶת גַּם עַד־מִיתַת לְבוּנָה׃"
+    },
+    {
+      "id": "philippians.2.9.000012",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000012.png",
+      "output_image": "data/hutter/verse_images/philippians/002_009_000012.png",
+      "crop_box": {
+        "left": 88,
+        "top": 1682,
+        "right": 642,
+        "bottom": 2068
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing and exact printed forms are uncertain.",
+      "hebrew_text": "עַל־כֵּן גַּם אֱלֹהִים הֵרִים וְנִשָּׂא הַגְבִּיהַ אוֹתוֹ וַיִּתֵּן לוֹ שֵׁם אֲשֶׁר עַל־כָּל־שֵׁם׃"
+    },
+    {
+      "id": "philippians.2.10.000014",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000014.png",
+      "output_image": "data/hutter/verse_images/philippians/002_010_000014.png",
+      "crop_box": {
+        "left": 103,
+        "top": 49,
+        "right": 656,
+        "bottom": 444
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Niqqud and a few letters/marks are somewhat unclear.",
+      "hebrew_text": "לְמַעַן בְּשֵׁם יֵשׁוּעַ הַכֶּרַע כָּל־בֶּרֶךְ אֲשֶׁר בַּשָּׁמַיִם בָּאָרֶץ וּמִמַּתָּה לָאָרֶץ׃"
+    },
+    {
+      "id": "philippians.2.13.000014",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000014.png",
+      "output_image": "data/hutter/verse_images/philippians/002_013_000014.png",
+      "crop_box": {
+        "left": 103,
+        "top": 998,
+        "right": 656,
+        "bottom": 1356
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing and the word after את are uncertain.",
+      "hebrew_text": "כִּי־אֱלֹהִים הוּא הַפֹּעֵל בָּנוּ אֶת־לַחְפֹּץ וְלַכְּלוֹת כִּרְצוֹנוֹ׃"
+    },
+    {
+      "id": "philippians.2.18.000016",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000016.png",
+      "output_image": "data/hutter/verse_images/philippians/002_018_000016.png",
+      "crop_box": {
+        "left": 98,
+        "top": 560,
+        "right": 649,
+        "bottom": 874
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some vowel points are uncertain.",
+      "hebrew_text": "וְעַל־דָּבָר הַזֶּה גַּם אַתֶּם תִּשְׂמְחוּ וְחִדִּיתֶם עָלַי׃"
+    },
+    {
+      "id": "philippians.2.19.000016",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000016.png",
+      "output_image": "data/hutter/verse_images/philippians/002_019_000016.png",
+      "crop_box": {
+        "left": 98,
+        "top": 838,
+        "right": 649,
+        "bottom": 1178
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Personal name and several points are somewhat unclear.",
+      "hebrew_text": "וּמְשַׁבֵּר אֲנִי בַּאֲדֹנֵינוּ יֵשׁוּעַ לִשְׁלֹחַ אֲלֵיכֶם בִּמְהֵרָה אֶת טִימוֹתֵאוֹס אֲשֶׁר גַּם אֲנִי אֶרְוַח בְּדַעְתִּי אֶת־דִּבְרֵיכֶם׃"
+    },
+    {
+      "id": "philippians.2.20.000016",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000016.png",
+      "output_image": "data/hutter/verse_images/philippians/002_020_000016.png",
+      "crop_box": {
+        "left": 98,
+        "top": 1142,
+        "right": 649,
+        "bottom": 1414
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some wording/pointing is difficult to confirm due to blur.",
+      "hebrew_text": "כִּי־אִישׁ לֹא אֶחָד יֵשׁ־לִי בְּנַפְשִׁי כָּמֹהוּ אֲשֶׁר כָּכֶם לֵבָב יִדְאַג עֲלֵיכֶם׃"
+    },
+    {
+      "id": "philippians.2.22.000016",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000016.png",
+      "output_image": "data/hutter/verse_images/philippians/002_022_000016.png",
+      "crop_box": {
+        "left": 98,
+        "top": 1621,
+        "right": 649,
+        "bottom": 2004
+      },
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointed letters are blurry; first phrase uncertain.",
+      "hebrew_text": "וְאֶת־שִׂכְלוֹ הַתְּבוּנִי יְדַעְתֶּם כִּי כַּאֲשֶׁר בֵּן לְאָבִיו כָּכָה עָבַד עִמִּי בַּבְּשׂוֹרָה׃"
+    },
+    {
+      "id": "philippians.2.23.000018",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000018.png",
+      "output_image": "data/hutter/verse_images/philippians/002_023_000018.png",
+      "crop_box": {
+        "left": 94,
+        "top": 132,
+        "right": 648,
+        "bottom": 418
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some letters/points near the end are uncertain.",
+      "hebrew_text": "וְאוֹתוֹ מְשַׁבֵּר אֲנִי לִשְׁלֹחַ אֲלֵיכֶם כִּרְאוֹתִי אֵיךְ יִפְּלוּ דְבָרַי פִּתְאֹם׃"
+    },
+    {
+      "id": "philippians.2.24.000018",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000018.png",
+      "output_image": "data/hutter/verse_images/philippians/002_024_000018.png",
+      "crop_box": {
+        "left": 94,
+        "top": 382,
+        "right": 648,
+        "bottom": 588
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Divine name/pointing and some marks are uncertain.",
+      "hebrew_text": "וּבָטַחְתִּי בַיהוָה כִּי־גַם אֲנִי בִּמְהֵרָה אָבוֹא אֲלֵיכֶם׃"
+    },
+    {
+      "id": "philippians.2.26.000018",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000018.png",
+      "output_image": "data/hutter/verse_images/philippians/002_026_000018.png",
+      "crop_box": {
+        "left": 94,
+        "top": 882,
+        "right": 648,
+        "bottom": 1178
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing is partly unclear.",
+      "hebrew_text": "בַּאֲשֶׁר מִתְאַוֶּה הָיָה אַחַר־כֻּלְּכֶם וַיֵּדַע עַל־כִּי־שְׁמַעְתֶּם כִּי־חָלָה הוּא׃"
+    },
+    {
+      "id": "philippians.2.27.000018",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000018.png",
+      "output_image": "data/hutter/verse_images/philippians/002_027_000018.png",
+      "crop_box": {
+        "left": 94,
+        "top": 1142,
+        "right": 648,
+        "bottom": 1468
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some niqqud/cantillation-like marks are uncertain.",
+      "hebrew_text": "כִּי־חָלָה כִּמְעַט לָמֻת כִּי־אִם אֱלֹהִים חָנּוּ אַךְ לֹא אֹתוֹ לְבַדּוֹ כִּי־גַם אֹתִי פֶּן הָיָה־לִי יָגוֹן עַל־יְגוֹן׃"
+    },
+    {
+      "id": "philippians.2.28.000018",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000018.png",
+      "output_image": "data/hutter/verse_images/philippians/002_028_000018.png",
+      "crop_box": {
+        "left": 94,
+        "top": 1432,
+        "right": 648,
+        "bottom": 1748
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing and exact spelling of the final phrase are slightly unclear.",
+      "hebrew_text": "עַל כֵּן שִׁלַּחְתִּיו בִּמְהֵרָה אֲשֶׁר אִם תִּרְאֻהוּ יוֹסִיפוּ לִשְׂמֹחַ וְלִהְיוֹתִי בְּלִי־דְאָגָה׃"
+    },
+    {
+      "id": "philippians.2.29.000018",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000018.png",
+      "output_image": "data/hutter/verse_images/philippians/002_029_000018.png",
+      "crop_box": {
+        "left": 94,
+        "top": 1712,
+        "right": 648,
+        "bottom": 1968
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some vowel points and the divine-name pointing are difficult to confirm.",
+      "hebrew_text": "לָכֵן קַבְּלֻהוּ בַיהוָה עִם כָּל־שִׂמְחָה וְאֵלֶּה אֲשֶׁר כָּמֹהוּ יְקָרִים יִהְיוּ בְּעֵינֵיכֶם׃"
+    },
+    {
+      "id": "philippians.2.30.000020",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000020.png",
+      "output_image": "data/hutter/verse_images/philippians/002_030_000020.png",
+      "crop_box": {
+        "left": 111,
+        "top": 52,
+        "right": 800,
+        "bottom": 399
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing and the final words are partly uncertain due to image quality.",
+      "hebrew_text": "כִּי־בַעֲבוּר מַעֲשֵׂה הַמָּשִׁיחַ קָרַב עַד־הַמָּוֶת וְשָׂם נַפְשׁוֹ בְּיָדוֹ אֲשֶׁר יְמַלֵּא אֶת־מַחְסוֹרֵיכֶם בְּשָׁרֵת אֹתִי׃"
+    },
+    {
+      "id": "philippians.3.1.000020",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000020.png",
+      "output_image": "data/hutter/verse_images/philippians/003_001_000020.png",
+      "crop_box": {
+        "left": 111,
+        "top": 363,
+        "right": 800,
+        "bottom": 741
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing and one word are uncertain due to blur.",
+      "hebrew_text": "וְהַנִּשְׁאָר אַחַי שִׂמְחוּ בַּיהֹוָה אֶת־אַחַד לִכְתֹּב אֲלֵיכֶם אֵינֶנָּה וִיעָה לִי וְלָכֶם לְמַגֵּן׃"
+    },
+    {
+      "id": "philippians.3.3.000020",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000020.png",
+      "output_image": "data/hutter/verse_images/philippians/003_003_000020.png",
+      "crop_box": {
+        "left": 111,
+        "top": 1044,
+        "right": 800,
+        "bottom": 1382
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Several niqqud marks and exact divine-name wording are uncertain.",
+      "hebrew_text": "כִּי־אֲנַחְנוּ הֵם הַמִּילָה אֲשֶׁר בָּרוּחַ עוֹבְדִים אֱלֹהֵינוּ לַיהֹוָה וּמִתְהַלְּלִים בְּיֵשׁוּעַ הַמָּשִׁיחַ וְלֹא בּוֹטְחִים עַל־הַבָּשָׂר׃"
+    },
+    {
+      "id": "philippians.3.10.000022",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000022.png",
+      "output_image": "data/hutter/verse_images/philippians/003_010_000022.png",
+      "crop_box": {
+        "left": 111,
+        "top": 1327,
+        "right": 664,
+        "bottom": 1624
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "First word and some pointing are slightly unclear.",
+      "hebrew_text": "לָדַעַתִי וְאֶת גְּבוּרַת הֲקָמָתוֹ וְאֶת חֶבְרַת מְרוּרָיו לְהִדָּמוֹת לְמוֹתוֹ׃"
+    },
+    {
+      "id": "philippians.3.6.000022",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000022.png",
+      "output_image": "data/hutter/verse_images/philippians/003_006_000022.png",
+      "crop_box": {
+        "left": 111,
+        "top": 33,
+        "right": 664,
+        "bottom": 393
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing is small/blurred.",
+      "hebrew_text": "בְּקִנְאָת הוֹדֵף הָעֵדָה בְּצֶדֶקָה אֲשֶׁר בְּתוֹרָה הִיא הָיִיתִי תָמִים׃"
+    },
+    {
+      "id": "philippians.3.7.000022",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000022.png",
+      "output_image": "data/hutter/verse_images/philippians/003_007_000022.png",
+      "crop_box": {
+        "left": 111,
+        "top": 357,
+        "right": 664,
+        "bottom": 649
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing and one word ending are not fully clear.",
+      "hebrew_text": "אַךְ הָאֵלֶּה אֲשֶׁר הָיוּ לִי לְיִתְרוֹן אוֹתָם חָשַׁבְתִּי בַּעֲבוּר הַמָּשִׁיחַ לְחֶסְרוֹן וּלְעֹנֶשׁ׃"
+    },
+    {
+      "id": "philippians.3.8.000022",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000022.png",
+      "output_image": "data/hutter/verse_images/philippians/003_008_000022.png",
+      "crop_box": {
+        "left": 111,
+        "top": 613,
+        "right": 664,
+        "bottom": 994
+      },
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Several words/points are difficult to distinguish in the image.",
+      "hebrew_text": "וְגַם אֶת־כָּל־דְּבָרִים חָשַׁבְתִּי לִהְיוֹת לְחֶסְרוֹן וּלְעֹנֶשׁ בַּעֲבוּר יֶתֶר דַּעַת יֵשׁוּעַ הַמָּשִׁיחַ אֲדֹנֵינוּ אֲשֶׁר עָלָיו נָעַשְׂתִּי כָּל־דְּבָרִים וְחֹשֵׁב אֲנִי לִזְבָלִים לִמַעַן לִבְצֹעַ אֶת הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.3.9.000022",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000022.png",
+      "output_image": "data/hutter/verse_images/philippians/003_009_000022.png",
+      "crop_box": {
+        "left": 111,
+        "top": 958,
+        "right": 664,
+        "bottom": 1363
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some niqqud is blurred.",
+      "hebrew_text": "וְאֶמָּצֵא בוֹ בְּלֹא הֱיוֹת לִי הַצְּדָקָה אֲשֶׁר מִתּוֹרָה הִיא כִּי אִם בֶּאֱמוּנַת הַמָּשִׁיחַ הַצְּדָקָה אֲשֶׁר מֵאֱלֹהִים בֶּאֱמוּנָה׃"
+    },
+    {
+      "id": "philippians.3.13.000024",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000024.png",
+      "output_image": "data/hutter/verse_images/philippians/003_013_000024.png",
+      "crop_box": {
+        "left": 74,
+        "top": 395,
+        "right": 627,
+        "bottom": 760
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some vowels and a few consonants are uncertain due to print quality.",
+      "hebrew_text": "אַחַי אָנֹכִי חֹשֵׁב עַל־נַפְשִׁי כִּי־אֲחַזְתִּיהָ וְאַחַת יָדַעְתִּי כִּי אֲשֶׁר אַחֲרַי אֶשְׁכָּחַם וַאֲשֶׁר לְפָנַי פּוֹרֵשׂ אֲנִי אֶת־יָדַי אֲלֵיהֶם׃"
+    },
+    {
+      "id": "philippians.3.14.000024",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000024.png",
+      "output_image": "data/hutter/verse_images/philippians/003_014_000024.png",
+      "crop_box": {
+        "left": 74,
+        "top": 724,
+        "right": 627,
+        "bottom": 1088
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing and one or two words are not fully clear.",
+      "hebrew_text": "וְלָזֹאת אָנֹכִי לַמַּטָּרָה רָץ לָקַחַת אֶת־עֲטֶרֶת הַכָּבוֹד וְנִצְחוֹן קְרִיאַת אֱלֹהִים מִמַּעַל בְּיֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.3.15.000024",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000024.png",
+      "output_image": "data/hutter/verse_images/philippians/003_015_000024.png",
+      "crop_box": {
+        "left": 74,
+        "top": 1052,
+        "right": 627,
+        "bottom": 1358
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Left edge and pointing are partly unclear.",
+      "hebrew_text": "וְכֻלָּנוּ אֲשֶׁר שְׁלֵמִים אֲנַחְנוּ נִהְיֶה נֹהֲגִים אִם מְאוּמָה אַחֶרֶת תַּחְשְׁבוּ וְאוֹתָהּ יְגַלֶּה אֱלֹהִים׃"
+    },
+    {
+      "id": "philippians.3.17.000024",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000024.png",
+      "output_image": "data/hutter/verse_images/philippians/003_017_000024.png",
+      "crop_box": {
+        "left": 74,
+        "top": 1670,
+        "right": 627,
+        "bottom": 2036
+      },
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Text and pointing are partly unclear; transcription uncertain.",
+      "hebrew_text": "הֲדַמּוּ לִי הִמְשְׁלוּ אֵלַי אַחַי וּרְאוּ הַנֹּטִים וְהַבּוֹנִים אֱלֹהִים אֲשֶׁר כֵּן מִתְהַלְּכִים כַּאֲשֶׁר אֲנַחְנוּ הָיִינוּ לָכֶם לְצוּרָה׃"
+    },
+    {
+      "id": "philippians.3.18.000026",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000026.png",
+      "output_image": "data/hutter/verse_images/philippians/003_018_000026.png",
+      "crop_box": {
+        "left": 69,
+        "top": 38,
+        "right": 641,
+        "bottom": 392
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some words/pointing are uncertain.",
+      "hebrew_text": "כִּי רַבִּים מִתְהַלְּכִים אֲשֶׁר עֲלֵיהֶם רַבּוֹת אֲמַרְתִּי אֵלֵיכֶם וְעַתָּה גַּם בְּכָה אֹמַר אֲנִי וְאוֹיְבֵי צְלַב הַמָּשִׁיחַ הֵמָּה׃"
+    },
+    {
+      "id": "philippians.3.19.000026",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000026.png",
+      "output_image": "data/hutter/verse_images/philippians/003_019_000026.png",
+      "crop_box": {
+        "left": 69,
+        "top": 356,
+        "right": 641,
+        "bottom": 698
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing and a few letters are difficult to verify.",
+      "hebrew_text": "אֲשֶׁר סוֹפָם הָאֲבַדּוֹן וֵאלֹהֵיהֶם הַבֶּטֶן וּכְבוֹדָם לְבָשְׁתָּם אֲשֶׁר אֶת־דִּבְרֵי הָאָרֶץ וְהָעוֹלָם הַזֶּה יֶחְכָּמוּ׃"
+    },
+    {
+      "id": "philippians.3.20.000026",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000026.png",
+      "output_image": "data/hutter/verse_images/philippians/003_020_000026.png",
+      "crop_box": {
+        "left": 69,
+        "top": 662,
+        "right": 641,
+        "bottom": 1051
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing and final words are slightly unclear.",
+      "hebrew_text": "כִּי־עִיר מוֹשָׁבֵנוּ בַּשָּׁמַיִם הִיא אֲשֶׁר מִשָּׁם נְקַוֶּה אֶת־מוֹשִׁיעֵנוּ וַאֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.3.21.000026",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000026.png",
+      "output_image": "data/hutter/verse_images/philippians/003_021_000026.png",
+      "crop_box": {
+        "left": 69,
+        "top": 1015,
+        "right": 641,
+        "bottom": 1380
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish clearly.",
+      "hebrew_text": "אֲשֶׁר יַחֲלִיף אֶת־גְּוִיַּת עֲנוָתֵנוּ לִדְמוּת לִגְוִיַּת כְּבוֹדוֹ בְּכֹחַ הַגְּבוּרָה אֲשֶׁר יֻכַל לָשִׁית תַּחַת רַגְלָיו אֶת־כֹּל׃"
+    },
+    {
+      "id": "philippians.4.1.000026",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000026.png",
+      "output_image": "data/hutter/verse_images/philippians/004_001_000026.png",
+      "crop_box": {
+        "left": 69,
+        "top": 1344,
+        "right": 641,
+        "bottom": 1700
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Several vowel/cantillation-like marks are small and uncertain.",
+      "hebrew_text": "עַל־כֵּן אַחַי אֲהוּבַי אַנְשֵׁי חֶמְדָּתִי שִׂמְחָתִי וַעֲטַרְתִּי כֹּה עִמְדוּ בַּיהוָה יְדִידַי׃"
+    },
+    {
+      "id": "philippians.4.2.000026",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000026.png",
+      "output_image": "data/hutter/verse_images/philippians/004_002_000026.png",
+      "crop_box": {
+        "left": 69,
+        "top": 1664,
+        "right": 641,
+        "bottom": 1998
+      },
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Proper names and pointing are uncertain due to image quality.",
+      "hebrew_text": "מֵאוֹהַדְיָא שׁוֹאֵל אָנֹכִי וּלְסוּנְטִיכָא מְתַחֲנֵן אָנֹכִי לָכֶם יַחַד בַּאֲדֹנֵנוּ׃"
+    },
+    {
+      "id": "philippians.4.6.000028",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000028.png",
+      "output_image": "data/hutter/verse_images/philippians/004_006_000028.png",
+      "crop_box": {
+        "left": 85,
+        "top": 982,
+        "right": 632,
+        "bottom": 1358
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some words/pointing are uncertain due to blur and print quality.",
+      "hebrew_text": "אַל־תִּדְאָגוּ וְאַל תִּדְאגוּ בְּנַפְשְׁכֶם כִּי־אִם בְּכָל־הַתְּפִלָּה וּבְכָל־שְׁאֵלָה בְּתוֹדָה מִשְׁאֲלוֹת לִבְּכֶם הוֹדַעְנָה לִפְנֵי אֱלֹהִים׃"
+    },
+    {
+      "id": "philippians.4.7.000028",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000028.png",
+      "output_image": "data/hutter/verse_images/philippians/004_007_000028.png",
+      "crop_box": {
+        "left": 85,
+        "top": 1322,
+        "right": 632,
+        "bottom": 1648
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Pointing and a few letters are not fully clear in the image.",
+      "hebrew_text": "וְשָׁלוֹם אֱלֹהִים אֲשֶׁר גָּבַהּ עַל־כָּל־שֵׂכֶל וּתְבוּנָה יִצֹּר אֶת לִבּוֹתֵיכֶם וּמַחְשְׁבוֹתֵיכֶם בְּיֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.4.10.000030",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000030.png",
+      "output_image": "data/hutter/verse_images/philippians/004_010_000030.png",
+      "crop_box": {
+        "left": 98,
+        "top": 362,
+        "right": 645,
+        "bottom": 764
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some niqqud and small marks are difficult to distinguish.",
+      "hebrew_text": "וְשָׂמַחְתִּי בַּיהוָה מְאֹד מְאֹד כִּי בְעַתָּה הָיָה פְּרָחֲכֶם וְעָלֶה לְהָבִין עַל־דְּבָרַי אֲשֶׁר עָלָיו גַּם הֲבִינֹתֶם אַךְ חֶסְרָה לָכֶם הָעֵת"
+    },
+    {
+      "id": "philippians.4.11.000030",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000030.png",
+      "output_image": "data/hutter/verse_images/philippians/004_011_000030.png",
+      "crop_box": {
+        "left": 98,
+        "top": 728,
+        "right": 645,
+        "bottom": 1063
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Final word and pointing are uncertain.",
+      "hebrew_text": "לֹא כִּי־עַל הַחִסָּרוֹן אֹמֵר אָנֹכִי כִּי־אֲנִי לָמַדְתִּי אֵיכָה הָיָה אָנֹכִי לִהְיוֹת לְמַדִּי"
+    },
+    {
+      "id": "philippians.4.12.000030",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000030.png",
+      "output_image": "data/hutter/verse_images/philippians/004_012_000030.png",
+      "crop_box": {
+        "left": 98,
+        "top": 1027,
+        "right": 645,
+        "bottom": 1382
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some words and pointing are not fully certain.",
+      "hebrew_text": "כִּי־יָדַעְתִּי לַעֲנוֹת וְלַחְסֹר יָדַעְתִּי גַּם לְהוֹתִיר בְּכָל־דְּבָרִים מְלֻמָּד לִשְׂבֹּעַ וְלִרְעֹב לְהוֹתִיר וְלַחְסֹר"
+    },
+    {
+      "id": "philippians.4.15.000032",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000032.png",
+      "output_image": "data/hutter/verse_images/philippians/004_015_000032.png",
+      "crop_box": {
+        "left": 135,
+        "top": 61,
+        "right": 708,
+        "bottom": 439
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "Some pointing and one word near line break are uncertain.",
+      "hebrew_text": "וִידַעְתֶּם גַּם־אַתֶּם פִילִפִּים כִּי בְּרֵאשִׁית הַבְּשׂוֹרָה בַּאֲשֶׁר יָצָאתִי מִמָּקֵם עֵדָה לֹא אַחַת הִתְחַבְּרָה עִמִּי בִּדְבַר מַתָּה וּמַקָּח"
+    },
+    {
+      "id": "philippians.4.18.000032",
+      "book": "philippians",
+      "category": "ocr_uncertain",
+      "priority": 5,
+      "source_file": "000032.png",
+      "output_image": "data/hutter/verse_images/philippians/004_018_000032.png",
+      "crop_box": {
+        "left": 135,
+        "top": 1045,
+        "right": 708,
+        "bottom": 1374
+      },
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "empty_text": false,
+      "notes": "One phrase in the fourth line is difficult; possible duplication/reading uncertainty around ריח/לריח.",
+      "hebrew_text": "לָקַחְתִּי אֶת־כָּל־דְּבַרִים וְגַם הוֹתַרְתִּי עַד־מְלֹאָה בְּקַחְתִּי מֵאֶפַּפְרוֹדִיטוֹס אֶת־אֲשֶׁר שְׁלַחְתֶּם לְרֵיחַ לְרִיחַ נִיחֹחַ לְזֶבַח נִרְצֶה וְיָשָׁר בְּעֵינֵי יְהוָה"
     },
     {
       "id": "revelation.1.1.000002",
@@ -48926,6 +50541,1020 @@
       ]
     },
     {
+      "book": "philippians",
+      "source_file": "000002.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000002.png",
+      "affected_ids": [
+        "philippians.1.1.000002",
+        "philippians.1.2.000002",
+        "philippians.1.3.000002",
+        "philippians.1.4.000002",
+        "philippians.1.5.000002",
+        "philippians.1.6.000002"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.1.1.000002",
+          "chapter": 1,
+          "verse": 1,
+          "crop_box": {
+            "left": 99,
+            "top": 412,
+            "right": 653,
+            "bottom": 808
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_001_000002.png"
+        },
+        {
+          "id": "philippians.1.2.000002",
+          "chapter": 1,
+          "verse": 2,
+          "crop_box": {
+            "left": 99,
+            "top": 772,
+            "right": 653,
+            "bottom": 1018
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_002_000002.png"
+        },
+        {
+          "id": "philippians.1.3.000002",
+          "chapter": 1,
+          "verse": 3,
+          "crop_box": {
+            "left": 99,
+            "top": 982,
+            "right": 653,
+            "bottom": 1198
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_003_000002.png"
+        },
+        {
+          "id": "philippians.1.4.000002",
+          "chapter": 1,
+          "verse": 4,
+          "crop_box": {
+            "left": 99,
+            "top": 1162,
+            "right": 653,
+            "bottom": 1418
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_004_000002.png"
+        },
+        {
+          "id": "philippians.1.5.000002",
+          "chapter": 1,
+          "verse": 5,
+          "crop_box": {
+            "left": 99,
+            "top": 1382,
+            "right": 653,
+            "bottom": 1608
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_005_000002.png"
+        },
+        {
+          "id": "philippians.1.6.000002",
+          "chapter": 1,
+          "verse": 6,
+          "crop_box": {
+            "left": 99,
+            "top": 1572,
+            "right": 653,
+            "bottom": 1878
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_006_000002.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000004.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000004.png",
+      "affected_ids": [
+        "philippians.1.10.000004",
+        "philippians.1.11.000004",
+        "philippians.1.12.000004",
+        "philippians.1.13.000004",
+        "philippians.1.7.000004",
+        "philippians.1.8.000004",
+        "philippians.1.9.000004"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.1.7.000004",
+          "chapter": 1,
+          "verse": 7,
+          "crop_box": {
+            "left": 77,
+            "top": 132,
+            "right": 624,
+            "bottom": 518
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_007_000004.png"
+        },
+        {
+          "id": "philippians.1.8.000004",
+          "chapter": 1,
+          "verse": 8,
+          "crop_box": {
+            "left": 77,
+            "top": 482,
+            "right": 624,
+            "bottom": 718
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_008_000004.png"
+        },
+        {
+          "id": "philippians.1.9.000004",
+          "chapter": 1,
+          "verse": 9,
+          "crop_box": {
+            "left": 77,
+            "top": 682,
+            "right": 624,
+            "bottom": 938
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_009_000004.png"
+        },
+        {
+          "id": "philippians.1.10.000004",
+          "chapter": 1,
+          "verse": 10,
+          "crop_box": {
+            "left": 77,
+            "top": 902,
+            "right": 624,
+            "bottom": 1178
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_010_000004.png"
+        },
+        {
+          "id": "philippians.1.11.000004",
+          "chapter": 1,
+          "verse": 11,
+          "crop_box": {
+            "left": 77,
+            "top": 1142,
+            "right": 624,
+            "bottom": 1438
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_011_000004.png"
+        },
+        {
+          "id": "philippians.1.12.000004",
+          "chapter": 1,
+          "verse": 12,
+          "crop_box": {
+            "left": 77,
+            "top": 1402,
+            "right": 624,
+            "bottom": 1588
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_012_000004.png"
+        },
+        {
+          "id": "philippians.1.13.000004",
+          "chapter": 1,
+          "verse": 13,
+          "crop_box": {
+            "left": 77,
+            "top": 1552,
+            "right": 624,
+            "bottom": 1968
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_013_000004.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000008.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000008.png",
+      "affected_ids": [
+        "philippians.1.20.000008",
+        "philippians.1.21.000008",
+        "philippians.1.22.000008",
+        "philippians.1.23.000008",
+        "philippians.1.24.000008",
+        "philippians.1.25.000008",
+        "philippians.1.26.000008"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.1.20.000008",
+          "chapter": 1,
+          "verse": 20,
+          "crop_box": {
+            "left": 109,
+            "top": 132,
+            "right": 664,
+            "bottom": 558
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_020_000008.png"
+        },
+        {
+          "id": "philippians.1.21.000008",
+          "chapter": 1,
+          "verse": 21,
+          "crop_box": {
+            "left": 109,
+            "top": 522,
+            "right": 664,
+            "bottom": 748
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_021_000008.png"
+        },
+        {
+          "id": "philippians.1.22.000008",
+          "chapter": 1,
+          "verse": 22,
+          "crop_box": {
+            "left": 109,
+            "top": 712,
+            "right": 664,
+            "bottom": 1018
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_022_000008.png"
+        },
+        {
+          "id": "philippians.1.23.000008",
+          "chapter": 1,
+          "verse": 23,
+          "crop_box": {
+            "left": 109,
+            "top": 982,
+            "right": 664,
+            "bottom": 1268
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_023_000008.png"
+        },
+        {
+          "id": "philippians.1.24.000008",
+          "chapter": 1,
+          "verse": 24,
+          "crop_box": {
+            "left": 109,
+            "top": 1232,
+            "right": 664,
+            "bottom": 1428
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_024_000008.png"
+        },
+        {
+          "id": "philippians.1.25.000008",
+          "chapter": 1,
+          "verse": 25,
+          "crop_box": {
+            "left": 109,
+            "top": 1392,
+            "right": 664,
+            "bottom": 1758
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_025_000008.png"
+        },
+        {
+          "id": "philippians.1.26.000008",
+          "chapter": 1,
+          "verse": 26,
+          "crop_box": {
+            "left": 109,
+            "top": 1722,
+            "right": 664,
+            "bottom": 1968
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_026_000008.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000010.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000010.png",
+      "affected_ids": [
+        "philippians.1.27.000010",
+        "philippians.1.28.000010",
+        "philippians.1.29.000010",
+        "philippians.1.30.000010",
+        "philippians.2.1.000010"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.1.27.000010",
+          "chapter": 1,
+          "verse": 27,
+          "crop_box": {
+            "left": 102,
+            "top": 37,
+            "right": 659,
+            "bottom": 545
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_027_000010.png"
+        },
+        {
+          "id": "philippians.1.28.000010",
+          "chapter": 1,
+          "verse": 28,
+          "crop_box": {
+            "left": 102,
+            "top": 509,
+            "right": 659,
+            "bottom": 941
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_028_000010.png"
+        },
+        {
+          "id": "philippians.1.29.000010",
+          "chapter": 1,
+          "verse": 29,
+          "crop_box": {
+            "left": 102,
+            "top": 905,
+            "right": 659,
+            "bottom": 1208
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_029_000010.png"
+        },
+        {
+          "id": "philippians.1.30.000010",
+          "chapter": 1,
+          "verse": 30,
+          "crop_box": {
+            "left": 102,
+            "top": 1172,
+            "right": 659,
+            "bottom": 1592
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_030_000010.png"
+        },
+        {
+          "id": "philippians.2.1.000010",
+          "chapter": 2,
+          "verse": 1,
+          "crop_box": {
+            "left": 102,
+            "top": 1556,
+            "right": 659,
+            "bottom": 2014
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_001_000010.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000012.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000012.png",
+      "affected_ids": [
+        "philippians.2.2.000012",
+        "philippians.2.3.000012",
+        "philippians.2.4.000012",
+        "philippians.2.5.000012",
+        "philippians.2.6.000012",
+        "philippians.2.7.000012",
+        "philippians.2.8.000012",
+        "philippians.2.9.000012"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.2.2.000012",
+          "chapter": 2,
+          "verse": 2,
+          "crop_box": {
+            "left": 88,
+            "top": 132,
+            "right": 642,
+            "bottom": 418
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_002_000012.png"
+        },
+        {
+          "id": "philippians.2.3.000012",
+          "chapter": 2,
+          "verse": 3,
+          "crop_box": {
+            "left": 88,
+            "top": 382,
+            "right": 642,
+            "bottom": 688
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_003_000012.png"
+        },
+        {
+          "id": "philippians.2.4.000012",
+          "chapter": 2,
+          "verse": 4,
+          "crop_box": {
+            "left": 88,
+            "top": 652,
+            "right": 642,
+            "bottom": 928
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_004_000012.png"
+        },
+        {
+          "id": "philippians.2.5.000012",
+          "chapter": 2,
+          "verse": 5,
+          "crop_box": {
+            "left": 88,
+            "top": 892,
+            "right": 642,
+            "bottom": 1008
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_005_000012.png"
+        },
+        {
+          "id": "philippians.2.6.000012",
+          "chapter": 2,
+          "verse": 6,
+          "crop_box": {
+            "left": 88,
+            "top": 972,
+            "right": 642,
+            "bottom": 1258
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_006_000012.png"
+        },
+        {
+          "id": "philippians.2.7.000012",
+          "chapter": 2,
+          "verse": 7,
+          "crop_box": {
+            "left": 88,
+            "top": 1222,
+            "right": 642,
+            "bottom": 1518
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_007_000012.png"
+        },
+        {
+          "id": "philippians.2.8.000012",
+          "chapter": 2,
+          "verse": 8,
+          "crop_box": {
+            "left": 88,
+            "top": 1482,
+            "right": 642,
+            "bottom": 1718
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_008_000012.png"
+        },
+        {
+          "id": "philippians.2.9.000012",
+          "chapter": 2,
+          "verse": 9,
+          "crop_box": {
+            "left": 88,
+            "top": 1682,
+            "right": 642,
+            "bottom": 2068
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_009_000012.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000016.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000016.png",
+      "affected_ids": [
+        "philippians.2.17.000016",
+        "philippians.2.18.000016",
+        "philippians.2.19.000016",
+        "philippians.2.20.000016",
+        "philippians.2.22.000016"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.2.16.000016",
+          "chapter": 2,
+          "verse": 16,
+          "crop_box": {
+            "left": 98,
+            "top": 47,
+            "right": 649,
+            "bottom": 350
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_016_000016.png"
+        },
+        {
+          "id": "philippians.2.17.000016",
+          "chapter": 2,
+          "verse": 17,
+          "crop_box": {
+            "left": 98,
+            "top": 314,
+            "right": 649,
+            "bottom": 596
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_017_000016.png"
+        },
+        {
+          "id": "philippians.2.18.000016",
+          "chapter": 2,
+          "verse": 18,
+          "crop_box": {
+            "left": 98,
+            "top": 560,
+            "right": 649,
+            "bottom": 874
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_018_000016.png"
+        },
+        {
+          "id": "philippians.2.19.000016",
+          "chapter": 2,
+          "verse": 19,
+          "crop_box": {
+            "left": 98,
+            "top": 838,
+            "right": 649,
+            "bottom": 1178
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_019_000016.png"
+        },
+        {
+          "id": "philippians.2.20.000016",
+          "chapter": 2,
+          "verse": 20,
+          "crop_box": {
+            "left": 98,
+            "top": 1142,
+            "right": 649,
+            "bottom": 1414
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_020_000016.png"
+        },
+        {
+          "id": "philippians.2.21.000016",
+          "chapter": 2,
+          "verse": 21,
+          "crop_box": {
+            "left": 98,
+            "top": 1378,
+            "right": 649,
+            "bottom": 1657
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_021_000016.png"
+        },
+        {
+          "id": "philippians.2.22.000016",
+          "chapter": 2,
+          "verse": 22,
+          "crop_box": {
+            "left": 98,
+            "top": 1621,
+            "right": 649,
+            "bottom": 2004
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_022_000016.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000018.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000018.png",
+      "affected_ids": [
+        "philippians.2.23.000018",
+        "philippians.2.24.000018",
+        "philippians.2.25.000018",
+        "philippians.2.26.000018",
+        "philippians.2.27.000018",
+        "philippians.2.28.000018",
+        "philippians.2.29.000018"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.2.23.000018",
+          "chapter": 2,
+          "verse": 23,
+          "crop_box": {
+            "left": 94,
+            "top": 132,
+            "right": 648,
+            "bottom": 418
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_023_000018.png"
+        },
+        {
+          "id": "philippians.2.24.000018",
+          "chapter": 2,
+          "verse": 24,
+          "crop_box": {
+            "left": 94,
+            "top": 382,
+            "right": 648,
+            "bottom": 588
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_024_000018.png"
+        },
+        {
+          "id": "philippians.2.25.000018",
+          "chapter": 2,
+          "verse": 25,
+          "crop_box": {
+            "left": 94,
+            "top": 552,
+            "right": 648,
+            "bottom": 918
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_025_000018.png"
+        },
+        {
+          "id": "philippians.2.26.000018",
+          "chapter": 2,
+          "verse": 26,
+          "crop_box": {
+            "left": 94,
+            "top": 882,
+            "right": 648,
+            "bottom": 1178
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_026_000018.png"
+        },
+        {
+          "id": "philippians.2.27.000018",
+          "chapter": 2,
+          "verse": 27,
+          "crop_box": {
+            "left": 94,
+            "top": 1142,
+            "right": 648,
+            "bottom": 1468
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_027_000018.png"
+        },
+        {
+          "id": "philippians.2.28.000018",
+          "chapter": 2,
+          "verse": 28,
+          "crop_box": {
+            "left": 94,
+            "top": 1432,
+            "right": 648,
+            "bottom": 1748
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_028_000018.png"
+        },
+        {
+          "id": "philippians.2.29.000018",
+          "chapter": 2,
+          "verse": 29,
+          "crop_box": {
+            "left": 94,
+            "top": 1712,
+            "right": 648,
+            "bottom": 1968
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_029_000018.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000024.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000024.png",
+      "affected_ids": [
+        "philippians.3.12.000024",
+        "philippians.3.13.000024",
+        "philippians.3.14.000024",
+        "philippians.3.15.000024",
+        "philippians.3.16.000024",
+        "philippians.3.17.000024"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.3.12.000024",
+          "chapter": 3,
+          "verse": 12,
+          "crop_box": {
+            "left": 74,
+            "top": 54,
+            "right": 627,
+            "bottom": 431
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_012_000024.png"
+        },
+        {
+          "id": "philippians.3.13.000024",
+          "chapter": 3,
+          "verse": 13,
+          "crop_box": {
+            "left": 74,
+            "top": 395,
+            "right": 627,
+            "bottom": 760
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_013_000024.png"
+        },
+        {
+          "id": "philippians.3.14.000024",
+          "chapter": 3,
+          "verse": 14,
+          "crop_box": {
+            "left": 74,
+            "top": 724,
+            "right": 627,
+            "bottom": 1088
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_014_000024.png"
+        },
+        {
+          "id": "philippians.3.15.000024",
+          "chapter": 3,
+          "verse": 15,
+          "crop_box": {
+            "left": 74,
+            "top": 1052,
+            "right": 627,
+            "bottom": 1358
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_015_000024.png"
+        },
+        {
+          "id": "philippians.3.16.000024",
+          "chapter": 3,
+          "verse": 16,
+          "crop_box": {
+            "left": 74,
+            "top": 1322,
+            "right": 627,
+            "bottom": 1706
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_016_000024.png"
+        },
+        {
+          "id": "philippians.3.17.000024",
+          "chapter": 3,
+          "verse": 17,
+          "crop_box": {
+            "left": 74,
+            "top": 1670,
+            "right": 627,
+            "bottom": 2036
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_017_000024.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000028.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000028.png",
+      "affected_ids": [
+        "philippians.4.3.000028",
+        "philippians.4.6.000028",
+        "philippians.4.7.000028",
+        "philippians.4.8.000028"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.4.3.000028",
+          "chapter": 4,
+          "verse": 3,
+          "crop_box": {
+            "left": 85,
+            "top": 132,
+            "right": 632,
+            "bottom": 608
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_003_000028.png"
+        },
+        {
+          "id": "philippians.4.4.000028",
+          "chapter": 4,
+          "verse": 4,
+          "crop_box": {
+            "left": 85,
+            "top": 572,
+            "right": 632,
+            "bottom": 828
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_004_000028.png"
+        },
+        {
+          "id": "philippians.4.5.000028",
+          "chapter": 4,
+          "verse": 5,
+          "crop_box": {
+            "left": 85,
+            "top": 792,
+            "right": 632,
+            "bottom": 1018
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_005_000028.png"
+        },
+        {
+          "id": "philippians.4.6.000028",
+          "chapter": 4,
+          "verse": 6,
+          "crop_box": {
+            "left": 85,
+            "top": 982,
+            "right": 632,
+            "bottom": 1358
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_006_000028.png"
+        },
+        {
+          "id": "philippians.4.7.000028",
+          "chapter": 4,
+          "verse": 7,
+          "crop_box": {
+            "left": 85,
+            "top": 1322,
+            "right": 632,
+            "bottom": 1648
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_007_000028.png"
+        },
+        {
+          "id": "philippians.4.8.000028",
+          "chapter": 4,
+          "verse": 8,
+          "crop_box": {
+            "left": 85,
+            "top": 1612,
+            "right": 632,
+            "bottom": 1968
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_008_000028.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000030.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000030.png",
+      "affected_ids": [
+        "philippians.4.10.000030",
+        "philippians.4.11.000030",
+        "philippians.4.12.000030",
+        "philippians.4.13.000030",
+        "philippians.4.14.000030"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.4.9.000030",
+          "chapter": 4,
+          "verse": 9,
+          "crop_box": {
+            "left": 98,
+            "top": 43,
+            "right": 645,
+            "bottom": 398
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_009_000030.png"
+        },
+        {
+          "id": "philippians.4.10.000030",
+          "chapter": 4,
+          "verse": 10,
+          "crop_box": {
+            "left": 98,
+            "top": 362,
+            "right": 645,
+            "bottom": 764
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_010_000030.png"
+        },
+        {
+          "id": "philippians.4.11.000030",
+          "chapter": 4,
+          "verse": 11,
+          "crop_box": {
+            "left": 98,
+            "top": 728,
+            "right": 645,
+            "bottom": 1063
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_011_000030.png"
+        },
+        {
+          "id": "philippians.4.12.000030",
+          "chapter": 4,
+          "verse": 12,
+          "crop_box": {
+            "left": 98,
+            "top": 1027,
+            "right": 645,
+            "bottom": 1382
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_012_000030.png"
+        },
+        {
+          "id": "philippians.4.13.000030",
+          "chapter": 4,
+          "verse": 13,
+          "crop_box": {
+            "left": 98,
+            "top": 1346,
+            "right": 645,
+            "bottom": 1663
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_013_000030.png"
+        },
+        {
+          "id": "philippians.4.14.000030",
+          "chapter": 4,
+          "verse": 14,
+          "crop_box": {
+            "left": 98,
+            "top": 1627,
+            "right": 645,
+            "bottom": 2000
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_014_000030.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000032.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000032.png",
+      "affected_ids": [
+        "philippians.4.15.000032",
+        "philippians.4.16.000032",
+        "philippians.4.18.000032"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.4.15.000032",
+          "chapter": 4,
+          "verse": 15,
+          "crop_box": {
+            "left": 135,
+            "top": 61,
+            "right": 708,
+            "bottom": 439
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_015_000032.png"
+        },
+        {
+          "id": "philippians.4.16.000032",
+          "chapter": 4,
+          "verse": 16,
+          "crop_box": {
+            "left": 135,
+            "top": 403,
+            "right": 708,
+            "bottom": 750
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_016_000032.png"
+        },
+        {
+          "id": "philippians.4.17.000032",
+          "chapter": 4,
+          "verse": 17,
+          "crop_box": {
+            "left": 135,
+            "top": 714,
+            "right": 708,
+            "bottom": 1081
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_017_000032.png"
+        },
+        {
+          "id": "philippians.4.18.000032",
+          "chapter": 4,
+          "verse": 18,
+          "crop_box": {
+            "left": 135,
+            "top": 1045,
+            "right": 708,
+            "bottom": 1374
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_018_000032.png"
+        },
+        {
+          "id": "philippians.4.19.000032",
+          "chapter": 4,
+          "verse": 19,
+          "crop_box": {
+            "left": 135,
+            "top": 1338,
+            "right": 708,
+            "bottom": 1693
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_019_000032.png"
+        },
+        {
+          "id": "philippians.4.20.000032",
+          "chapter": 4,
+          "verse": 20,
+          "crop_box": {
+            "left": 135,
+            "top": 1657,
+            "right": 708,
+            "bottom": 2019
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_020_000032.png"
+        }
+      ]
+    },
+    {
       "book": "revelation",
       "source_file": "000004.png",
       "source_image": "data/hutter/staging/data/images/hebrew_images/revelation/000004.png",
@@ -65268,6 +67897,433 @@
             "bottom": 1195
           },
           "output_image": "data/hutter/verse_images/philemon/001_025_000008.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000006.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000006.png",
+      "affected_ids": [
+        "philippians.1.14.000006",
+        "philippians.1.15.000006",
+        "philippians.1.16.000006",
+        "philippians.1.17.000006",
+        "philippians.1.18.000006",
+        "philippians.1.19.000006"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.1.14.000006",
+          "chapter": 1,
+          "verse": 14,
+          "crop_box": {
+            "left": 64,
+            "top": 26,
+            "right": 619,
+            "bottom": 382
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_014_000006.png"
+        },
+        {
+          "id": "philippians.1.15.000006",
+          "chapter": 1,
+          "verse": 15,
+          "crop_box": {
+            "left": 64,
+            "top": 346,
+            "right": 619,
+            "bottom": 708
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_015_000006.png"
+        },
+        {
+          "id": "philippians.1.16.000006",
+          "chapter": 1,
+          "verse": 16,
+          "crop_box": {
+            "left": 64,
+            "top": 672,
+            "right": 619,
+            "bottom": 1008
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_016_000006.png"
+        },
+        {
+          "id": "philippians.1.17.000006",
+          "chapter": 1,
+          "verse": 17,
+          "crop_box": {
+            "left": 64,
+            "top": 972,
+            "right": 619,
+            "bottom": 1347
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_017_000006.png"
+        },
+        {
+          "id": "philippians.1.18.000006",
+          "chapter": 1,
+          "verse": 18,
+          "crop_box": {
+            "left": 64,
+            "top": 1311,
+            "right": 619,
+            "bottom": 1662
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_018_000006.png"
+        },
+        {
+          "id": "philippians.1.19.000006",
+          "chapter": 1,
+          "verse": 19,
+          "crop_box": {
+            "left": 64,
+            "top": 1626,
+            "right": 619,
+            "bottom": 1998
+          },
+          "output_image": "data/hutter/verse_images/philippians/001_019_000006.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000014.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000014.png",
+      "affected_ids": [
+        "philippians.2.10.000014",
+        "philippians.2.13.000014"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.2.10.000014",
+          "chapter": 2,
+          "verse": 10,
+          "crop_box": {
+            "left": 103,
+            "top": 49,
+            "right": 656,
+            "bottom": 444
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_010_000014.png"
+        },
+        {
+          "id": "philippians.2.11.000014",
+          "chapter": 2,
+          "verse": 11,
+          "crop_box": {
+            "left": 103,
+            "top": 408,
+            "right": 656,
+            "bottom": 734
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_011_000014.png"
+        },
+        {
+          "id": "philippians.2.12.000014",
+          "chapter": 2,
+          "verse": 12,
+          "crop_box": {
+            "left": 103,
+            "top": 698,
+            "right": 656,
+            "bottom": 1034
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_012_000014.png"
+        },
+        {
+          "id": "philippians.2.13.000014",
+          "chapter": 2,
+          "verse": 13,
+          "crop_box": {
+            "left": 103,
+            "top": 998,
+            "right": 656,
+            "bottom": 1356
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_013_000014.png"
+        },
+        {
+          "id": "philippians.2.14.000014",
+          "chapter": 2,
+          "verse": 14,
+          "crop_box": {
+            "left": 103,
+            "top": 1320,
+            "right": 656,
+            "bottom": 1708
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_014_000014.png"
+        },
+        {
+          "id": "philippians.2.15.000014",
+          "chapter": 2,
+          "verse": 15,
+          "crop_box": {
+            "left": 103,
+            "top": 1672,
+            "right": 656,
+            "bottom": 2014
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_015_000014.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000020.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000020.png",
+      "affected_ids": [
+        "philippians.2.30.000020",
+        "philippians.3.1.000020",
+        "philippians.3.3.000020"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.2.30.000020",
+          "chapter": 2,
+          "verse": 30,
+          "crop_box": {
+            "left": 111,
+            "top": 52,
+            "right": 800,
+            "bottom": 399
+          },
+          "output_image": "data/hutter/verse_images/philippians/002_030_000020.png"
+        },
+        {
+          "id": "philippians.3.1.000020",
+          "chapter": 3,
+          "verse": 1,
+          "crop_box": {
+            "left": 111,
+            "top": 363,
+            "right": 800,
+            "bottom": 741
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_001_000020.png"
+        },
+        {
+          "id": "philippians.3.2.000020",
+          "chapter": 3,
+          "verse": 2,
+          "crop_box": {
+            "left": 111,
+            "top": 705,
+            "right": 800,
+            "bottom": 1080
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_002_000020.png"
+        },
+        {
+          "id": "philippians.3.3.000020",
+          "chapter": 3,
+          "verse": 3,
+          "crop_box": {
+            "left": 111,
+            "top": 1044,
+            "right": 800,
+            "bottom": 1382
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_003_000020.png"
+        },
+        {
+          "id": "philippians.3.4.000020",
+          "chapter": 3,
+          "verse": 4,
+          "crop_box": {
+            "left": 111,
+            "top": 1346,
+            "right": 800,
+            "bottom": 1684
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_004_000020.png"
+        },
+        {
+          "id": "philippians.3.5.000020",
+          "chapter": 3,
+          "verse": 5,
+          "crop_box": {
+            "left": 111,
+            "top": 1648,
+            "right": 800,
+            "bottom": 2009
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_005_000020.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000022.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000022.png",
+      "affected_ids": [
+        "philippians.3.10.000022",
+        "philippians.3.6.000022",
+        "philippians.3.7.000022",
+        "philippians.3.8.000022",
+        "philippians.3.9.000022"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.3.6.000022",
+          "chapter": 3,
+          "verse": 6,
+          "crop_box": {
+            "left": 111,
+            "top": 33,
+            "right": 664,
+            "bottom": 393
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_006_000022.png"
+        },
+        {
+          "id": "philippians.3.7.000022",
+          "chapter": 3,
+          "verse": 7,
+          "crop_box": {
+            "left": 111,
+            "top": 357,
+            "right": 664,
+            "bottom": 649
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_007_000022.png"
+        },
+        {
+          "id": "philippians.3.8.000022",
+          "chapter": 3,
+          "verse": 8,
+          "crop_box": {
+            "left": 111,
+            "top": 613,
+            "right": 664,
+            "bottom": 994
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_008_000022.png"
+        },
+        {
+          "id": "philippians.3.9.000022",
+          "chapter": 3,
+          "verse": 9,
+          "crop_box": {
+            "left": 111,
+            "top": 958,
+            "right": 664,
+            "bottom": 1363
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_009_000022.png"
+        },
+        {
+          "id": "philippians.3.10.000022",
+          "chapter": 3,
+          "verse": 10,
+          "crop_box": {
+            "left": 111,
+            "top": 1327,
+            "right": 664,
+            "bottom": 1624
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_010_000022.png"
+        },
+        {
+          "id": "philippians.3.11.000022",
+          "chapter": 3,
+          "verse": 11,
+          "crop_box": {
+            "left": 111,
+            "top": 1588,
+            "right": 664,
+            "bottom": 1985
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_011_000022.png"
+        }
+      ]
+    },
+    {
+      "book": "philippians",
+      "source_file": "000026.png",
+      "source_image": "data/hutter/staging/data/images/hebrew_images/philippians/000026.png",
+      "affected_ids": [
+        "philippians.3.18.000026",
+        "philippians.3.19.000026",
+        "philippians.3.20.000026",
+        "philippians.3.21.000026",
+        "philippians.4.1.000026",
+        "philippians.4.2.000026"
+      ],
+      "verse_sequence": [
+        {
+          "id": "philippians.3.18.000026",
+          "chapter": 3,
+          "verse": 18,
+          "crop_box": {
+            "left": 69,
+            "top": 38,
+            "right": 641,
+            "bottom": 392
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_018_000026.png"
+        },
+        {
+          "id": "philippians.3.19.000026",
+          "chapter": 3,
+          "verse": 19,
+          "crop_box": {
+            "left": 69,
+            "top": 356,
+            "right": 641,
+            "bottom": 698
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_019_000026.png"
+        },
+        {
+          "id": "philippians.3.20.000026",
+          "chapter": 3,
+          "verse": 20,
+          "crop_box": {
+            "left": 69,
+            "top": 662,
+            "right": 641,
+            "bottom": 1051
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_020_000026.png"
+        },
+        {
+          "id": "philippians.3.21.000026",
+          "chapter": 3,
+          "verse": 21,
+          "crop_box": {
+            "left": 69,
+            "top": 1015,
+            "right": 641,
+            "bottom": 1380
+          },
+          "output_image": "data/hutter/verse_images/philippians/003_021_000026.png"
+        },
+        {
+          "id": "philippians.4.1.000026",
+          "chapter": 4,
+          "verse": 1,
+          "crop_box": {
+            "left": 69,
+            "top": 1344,
+            "right": 641,
+            "bottom": 1700
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_001_000026.png"
+        },
+        {
+          "id": "philippians.4.2.000026",
+          "chapter": 4,
+          "verse": 2,
+          "crop_box": {
+            "left": 69,
+            "top": 1664,
+            "right": 641,
+            "bottom": 1998
+          },
+          "output_image": "data/hutter/verse_images/philippians/004_002_000026.png"
         }
       ]
     },
