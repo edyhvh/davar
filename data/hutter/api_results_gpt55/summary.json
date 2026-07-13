@@ -1,28 +1,28 @@
 {
-  "book_count": 20,
+  "book_count": 22,
   "totals": {
-    "manifest_verse_count": 2472,
-    "result_count": 2472,
-    "raw_result_count": 2900,
-    "retry_row_count": 428,
+    "manifest_verse_count": 3165,
+    "result_count": 3165,
+    "raw_result_count": 3970,
+    "retry_row_count": 805,
     "pending_count": 0,
-    "batch_count": 453,
-    "needs_review_count": 1934,
-    "likely_crop_issue_count": 647,
-    "likely_ocr_issue_count": 1287,
+    "batch_count": 670,
+    "needs_review_count": 2395,
+    "likely_crop_issue_count": 773,
+    "likely_ocr_issue_count": 1622,
     "no_hebrew_marks_count": 2,
     "empty_text_count": 0,
-    "total_tokens": 1474090,
-    "input_tokens": 972359,
-    "output_tokens": 501731
+    "total_tokens": 2146264,
+    "input_tokens": 1464651,
+    "output_tokens": 681613
   },
   "status_counts": {
-    "ok": 2472
+    "ok": 3165
   },
   "confidence_counts": {
-    "high": 101,
-    "low": 354,
-    "medium": 2017
+    "high": 135,
+    "low": 402,
+    "medium": 2628
   },
   "books": [
     {
@@ -49,6 +49,58 @@
         "high": 3,
         "low": 11,
         "medium": 81
+      }
+    },
+    {
+      "book": "corinthians1",
+      "manifest_verse_count": 437,
+      "result_count": 437,
+      "raw_result_count": 693,
+      "retry_row_count": 256,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 140,
+      "needs_review_count": 264,
+      "likely_crop_issue_count": 64,
+      "likely_ocr_issue_count": 200,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 434112,
+      "input_tokens": 317611,
+      "output_tokens": 116501,
+      "status_counts": {
+        "ok": 437
+      },
+      "confidence_counts": {
+        "high": 27,
+        "low": 19,
+        "medium": 391
+      }
+    },
+    {
+      "book": "corinthians2",
+      "manifest_verse_count": 256,
+      "result_count": 256,
+      "raw_result_count": 377,
+      "retry_row_count": 121,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 77,
+      "needs_review_count": 197,
+      "likely_crop_issue_count": 62,
+      "likely_ocr_issue_count": 135,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 238062,
+      "input_tokens": 174681,
+      "output_tokens": 63381,
+      "status_counts": {
+        "ok": 256
+      },
+      "confidence_counts": {
+        "high": 7,
+        "low": 29,
+        "medium": 220
       }
     },
     {
