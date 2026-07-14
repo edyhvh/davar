@@ -10,6 +10,7 @@ from scripts.hutter.verse_images import (
     split_content_box,
     trim_content_bottom_for_trailing_blank,
 )
+from scripts.hutter.apply_crop_overrides import merge_regenerated_entries
 
 
 def test_iter_verse_pointers_groups_source_files():
@@ -39,6 +40,20 @@ def test_iter_verse_pointers_groups_source_files():
     assert list(grouped) == ["000002.png"]
     assert [(item.chapter, item.verse) for item in grouped["000002.png"]] == [(1, 1), (1, 2)]
     assert grouped["000002.png"][1].visual_uncertainty == ["check"]
+
+
+def test_targeted_regeneration_removes_stale_page_entries():
+    existing = [
+        {"book": "john", "chapter": 17, "verse": 28, "source_file": "000212.png"},
+        {"book": "john", "chapter": 18, "verse": 1, "source_file": "000214.png"},
+    ]
+    regenerated = [
+        {"book": "john", "chapter": 17, "verse": 18, "source_file": "000212.png"}
+    ]
+
+    merged = merge_regenerated_entries(existing, regenerated, {"000212.png"})
+
+    assert [(entry["chapter"], entry["verse"]) for entry in merged] == [(17, 18), (18, 1)]
 
 
 def test_choose_cut_lines_keeps_sequence_balanced():

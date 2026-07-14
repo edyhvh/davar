@@ -63,6 +63,19 @@ def load_existing_manifest(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def merge_regenerated_entries(
+    existing_entries: list[dict[str, Any]],
+    regenerated_entries: list[dict[str, Any]],
+    source_files: set[str],
+) -> list[dict[str, Any]]:
+    merged = [
+        entry for entry in existing_entries if str(entry["source_file"]) not in source_files
+    ]
+    merged.extend(regenerated_entries)
+    merged.sort(key=entry_key)
+    return merged
+
+
 def main() -> int:
     args = parse_args()
     book = args.book.lower()
@@ -94,22 +107,14 @@ def main() -> int:
         crop_overrides=load_crop_overrides(args.overrides.expanduser().resolve()),
     )
     regenerated_payloads = [asdict(entry) for entry in regenerated]
-    regenerated_by_key = {entry_key(entry): entry for entry in regenerated_payloads}
-
-    merged_entries: list[dict[str, Any]] = []
-    replaced_keys: set[tuple[str, int, int, str]] = set()
-    for entry in existing_entries:
-        key = entry_key(entry)
-        replacement = regenerated_by_key.get(key)
-        if replacement is None:
-            merged_entries.append(entry)
-            continue
-        merged_entries.append(replacement)
-        replaced_keys.add(key)
-
-    missing_replacements = sorted(set(regenerated_by_key) - replaced_keys)
-    if missing_replacements:
-        merged_entries.extend(regenerated_by_key[key] for key in missing_replacements)
+    # A source-page regeneration must also remove stale verse IDs when the
+    # upstream page mapping was corrected. Replacing by full entry key leaves
+    # obsolete records behind because the corrected chapter/verse changes it.
+    merged_entries = merge_regenerated_entries(
+        existing_entries,
+        regenerated_payloads,
+        source_files,
+    )
 
     if args.dry_run:
         output_images = [entry.output_image for entry in regenerated if entry.output_image]
