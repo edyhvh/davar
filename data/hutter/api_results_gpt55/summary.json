@@ -1,28 +1,28 @@
 {
-  "book_count": 22,
+  "book_count": 23,
   "totals": {
-    "manifest_verse_count": 3165,
-    "result_count": 3165,
-    "raw_result_count": 3970,
-    "retry_row_count": 805,
+    "manifest_verse_count": 3843,
+    "result_count": 3843,
+    "raw_result_count": 5016,
+    "retry_row_count": 1173,
     "pending_count": 0,
-    "batch_count": 670,
-    "needs_review_count": 2395,
-    "likely_crop_issue_count": 773,
-    "likely_ocr_issue_count": 1622,
+    "batch_count": 881,
+    "needs_review_count": 2938,
+    "likely_crop_issue_count": 892,
+    "likely_ocr_issue_count": 2046,
     "no_hebrew_marks_count": 2,
     "empty_text_count": 0,
-    "total_tokens": 2146264,
-    "input_tokens": 1464651,
-    "output_tokens": 681613
+    "total_tokens": 2797069,
+    "input_tokens": 1947218,
+    "output_tokens": 849851
   },
   "status_counts": {
-    "ok": 3165
+    "ok": 3843
   },
   "confidence_counts": {
-    "high": 135,
-    "low": 402,
-    "medium": 2628
+    "high": 158,
+    "low": 449,
+    "medium": 3236
   },
   "books": [
     {
@@ -305,6 +305,32 @@
       "confidence_counts": {
         "low": 5,
         "medium": 20
+      }
+    },
+    {
+      "book": "mark",
+      "manifest_verse_count": 678,
+      "result_count": 678,
+      "raw_result_count": 1046,
+      "retry_row_count": 368,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 211,
+      "needs_review_count": 543,
+      "likely_crop_issue_count": 119,
+      "likely_ocr_issue_count": 424,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 650805,
+      "input_tokens": 482567,
+      "output_tokens": 168238,
+      "status_counts": {
+        "ok": 678
+      },
+      "confidence_counts": {
+        "high": 23,
+        "low": 47,
+        "medium": 608
       }
     },
     {
