@@ -1,28 +1,28 @@
 {
-  "book_count": 24,
+  "book_count": 25,
   "totals": {
-    "manifest_verse_count": 4722,
-    "result_count": 4722,
-    "raw_result_count": 6448,
-    "retry_row_count": 1726,
+    "manifest_verse_count": 5793,
+    "result_count": 5793,
+    "raw_result_count": 7525,
+    "retry_row_count": 1732,
     "pending_count": 0,
-    "batch_count": 1171,
-    "needs_review_count": 3612,
-    "likely_crop_issue_count": 1037,
-    "likely_ocr_issue_count": 2575,
+    "batch_count": 1388,
+    "needs_review_count": 4449,
+    "likely_crop_issue_count": 1159,
+    "likely_ocr_issue_count": 3290,
     "no_hebrew_marks_count": 2,
     "empty_text_count": 0,
-    "total_tokens": 3700132,
-    "input_tokens": 2611428,
-    "output_tokens": 1088704
+    "total_tokens": 4598068,
+    "input_tokens": 3324278,
+    "output_tokens": 1273790
   },
   "status_counts": {
-    "ok": 4722
+    "ok": 5793
   },
   "confidence_counts": {
-    "high": 190,
-    "low": 484,
-    "medium": 4048
+    "high": 220,
+    "low": 512,
+    "medium": 5061
   },
   "books": [
     {
@@ -357,6 +357,32 @@
         "high": 23,
         "low": 47,
         "medium": 608
+      }
+    },
+    {
+      "book": "matthew",
+      "manifest_verse_count": 1071,
+      "result_count": 1071,
+      "raw_result_count": 1077,
+      "retry_row_count": 6,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 217,
+      "needs_review_count": 837,
+      "likely_crop_issue_count": 122,
+      "likely_ocr_issue_count": 715,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 897936,
+      "input_tokens": 712850,
+      "output_tokens": 185086,
+      "status_counts": {
+        "ok": 1071
+      },
+      "confidence_counts": {
+        "high": 30,
+        "low": 28,
+        "medium": 1013
       }
     },
     {
