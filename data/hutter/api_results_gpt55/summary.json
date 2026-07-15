@@ -1,28 +1,28 @@
 {
-  "book_count": 25,
+  "book_count": 26,
   "totals": {
-    "manifest_verse_count": 5793,
-    "result_count": 5793,
-    "raw_result_count": 7525,
-    "retry_row_count": 1732,
+    "manifest_verse_count": 6944,
+    "result_count": 6944,
+    "raw_result_count": 8678,
+    "retry_row_count": 1734,
     "pending_count": 0,
-    "batch_count": 1388,
-    "needs_review_count": 4449,
-    "likely_crop_issue_count": 1159,
-    "likely_ocr_issue_count": 3290,
+    "batch_count": 1620,
+    "needs_review_count": 5342,
+    "likely_crop_issue_count": 1292,
+    "likely_ocr_issue_count": 4050,
     "no_hebrew_marks_count": 2,
     "empty_text_count": 0,
-    "total_tokens": 4598068,
-    "input_tokens": 3324278,
-    "output_tokens": 1273790
+    "total_tokens": 5567295,
+    "input_tokens": 4098260,
+    "output_tokens": 1469035
   },
   "status_counts": {
-    "ok": 5793
+    "ok": 6944
   },
   "confidence_counts": {
-    "high": 220,
-    "low": 512,
-    "medium": 5061
+    "high": 251,
+    "low": 573,
+    "medium": 6120
   },
   "books": [
     {
@@ -331,6 +331,32 @@
       "confidence_counts": {
         "low": 5,
         "medium": 20
+      }
+    },
+    {
+      "book": "luke",
+      "manifest_verse_count": 1151,
+      "result_count": 1151,
+      "raw_result_count": 1153,
+      "retry_row_count": 2,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 232,
+      "needs_review_count": 893,
+      "likely_crop_issue_count": 133,
+      "likely_ocr_issue_count": 760,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 969227,
+      "input_tokens": 773982,
+      "output_tokens": 195245,
+      "status_counts": {
+        "ok": 1151
+      },
+      "confidence_counts": {
+        "high": 31,
+        "low": 61,
+        "medium": 1059
       }
     },
     {
