@@ -10,6 +10,7 @@ import {
 } from "@/src/services/database";
 import { removeMaqafForDisplay } from "@/src/utils/hebrew";
 import {
+  type BesorahTextVersion,
   getMissingSpanishTranslationNotice,
   getPsalmsSuperscriptionNotice,
   resolveTranslationSource,
@@ -1017,8 +1018,14 @@ const mapStaticVersesToDisplay = (
 const loadStaticSourceChapterVerses = async (
   bookId: string,
   chapter: number,
+  besorahTextVersion: BesorahTextVersion = "delitzsch",
 ): Promise<StaticChapterVerse[]> => {
-  const chapterSources = [`oe/${bookId}/${chapter}.json`, `besorah/${bookId}/${chapter}.json`];
+  const besorahSource =
+    besorahTextVersion === "hutter" ? "hutter" : "besorah";
+  const chapterSources = [
+    `oe/${bookId}/${chapter}.json`,
+    `${besorahSource}/${bookId}/${chapter}.json`,
+  ];
   const sourceErrors: string[] = [];
 
   for (const source of chapterSources) {
@@ -1048,6 +1055,7 @@ const fetchChapterVersesStatic = async (
     showDss?: boolean;
     hebrewOnly?: boolean;
     referenceMode?: ReferenceMode;
+    besorahTextVersion?: BesorahTextVersion;
   },
 ): Promise<DisplayVerse[]> => {
   const referenceMode = options?.referenceMode ?? "source";
@@ -1060,7 +1068,11 @@ const fetchChapterVersesStatic = async (
 
   const sourceVerseChunks = await Promise.all(
     sourceChapters.map((sourceChapter) =>
-      loadStaticSourceChapterVerses(bookId, sourceChapter),
+      loadStaticSourceChapterVerses(
+        bookId,
+        sourceChapter,
+        options?.besorahTextVersion ?? "delitzsch",
+      ),
     ),
   );
   const sourceVerses = sourceVerseChunks.flat();
@@ -1349,6 +1361,7 @@ export const fetchChapterVerses = async (
     hebrewOnly?: boolean;
     isConnected?: boolean;
     referenceMode?: ReferenceMode;
+    besorahTextVersion?: BesorahTextVersion;
   },
 ): Promise<DisplayVerse[]> => {
   // If explicitly offline, go straight to SQLite

@@ -1,11 +1,14 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { ThemeMode } from "@/src/theme";
+import type { BesorahTextVersion } from "@davar/shared/translationConfig";
 
 const STORAGE_KEYS = {
   themeMode: "davar.themeMode",
   hebrewFontScale: "davar.hebrewFontScale",
   bookmarks: "davar.bookmarks",
   language: "davar.language",
+  besorahTextVersion: "davar.besorahTextVersion",
+  hutterAnnouncementSeen: "davar.hutterAnnouncementSeen",
   showQumran: "davar.showQumran",
   showFullChapter: "davar.showFullChapter",
   seferMode: "davar.seferMode",
@@ -95,6 +98,24 @@ export const loadLanguage = async (): Promise<AppLanguage> => {
 
 export const saveLanguage = async (language: AppLanguage) => {
   await AsyncStorage.setItem(STORAGE_KEYS.language, language);
+};
+
+export const loadBesorahTextVersion = async (): Promise<BesorahTextVersion> => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.besorahTextVersion);
+  return value === "hutter" ? "hutter" : "delitzsch";
+};
+
+export const saveBesorahTextVersion = async (value: BesorahTextVersion) => {
+  await AsyncStorage.setItem(STORAGE_KEYS.besorahTextVersion, value);
+};
+
+export const loadHutterAnnouncementSeen = async (): Promise<boolean> => {
+  const value = await AsyncStorage.getItem(STORAGE_KEYS.hutterAnnouncementSeen);
+  return value === "true";
+};
+
+export const saveHutterAnnouncementSeen = async () => {
+  await AsyncStorage.setItem(STORAGE_KEYS.hutterAnnouncementSeen, "true");
 };
 
 const parseBoolean = (value: string | null, fallback: boolean) => {

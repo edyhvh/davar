@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import {
+	createDefaultReadingState,
 	getStoredReadingState,
 	type ReadingStateV2,
 	saveReadingState,
@@ -25,11 +26,9 @@ export function usePersistedState<K extends keyof ReadingStateV2>(
 			setValue(newValue);
 
 			// Update the entire reading state in localStorage
-			const stored = getStoredReadingState();
-			if (stored) {
-				const updated = { ...stored, [key]: newValue };
-				saveReadingState(updated);
-			}
+			const stored = getStoredReadingState() ?? createDefaultReadingState();
+			const updated = { ...stored, [key]: newValue };
+			saveReadingState(updated);
 		},
 		[key],
 	);

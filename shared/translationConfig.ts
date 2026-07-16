@@ -6,6 +6,7 @@ import {
 } from "./versification";
 
 export type AppLanguage = "en" | "es" | "he";
+export type BesorahTextVersion = "delitzsch" | "hutter";
 export type TranslationKey = "ts2009" | "tth" | "delitzsch";
 export type TranslationSource = "ts2009" | "tth" | "bes";
 

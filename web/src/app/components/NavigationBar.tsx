@@ -26,6 +26,8 @@ interface NavigationBarProps {
 	onThemeChange: (theme: "light" | "dark") => void;
 	language: "en" | "es" | "he";
 	onLanguageChange: (language: "en" | "es" | "he") => void;
+	besorahTextVersion: "delitzsch" | "hutter";
+	onBesorahTextVersionChange: (version: "delitzsch" | "hutter") => void;
 	showQumran: boolean;
 	onQumranChange: (show: boolean) => void;
 	showFullChapter: boolean;
@@ -60,6 +62,8 @@ export function NavigationBar({
 	onThemeChange,
 	language,
 	onLanguageChange,
+	besorahTextVersion,
+	onBesorahTextVersionChange,
 	showQumran,
 	onQumranChange,
 	showFullChapter,
@@ -165,6 +169,10 @@ export function NavigationBar({
 		{ code: "es", label: t("languages.es") },
 		{ code: "he", label: t("languages.he") },
 	];
+	const besorahTextVersions = [
+		{ code: "delitzsch", label: t("settings.besorahTextVersion.delitzsch") },
+		{ code: "hutter", label: t("settings.besorahTextVersion.hutter") },
+	] as const;
 
 	const chapters = Array.from({ length: chapterCount }, (_, i) => i + 1);
 	const verses = Array.from({ length: verseCount }, (_, i) => i + 1);
@@ -332,7 +340,7 @@ export function NavigationBar({
 							onClick={() =>
 								setOpenMenu(openMenu === "settings" ? null : "settings")
 							}
-							className="shrink-0 rounded-full p-2 transition-all md:hover:scale-[1.05] md:active:scale-[0.98]"
+							className="relative shrink-0 rounded-full p-2 transition-all md:hover:scale-[1.05] md:active:scale-[0.98]"
 							style={{
 								backgroundColor: "var(--neomorph-bg)",
 								boxShadow:
@@ -342,6 +350,10 @@ export function NavigationBar({
 							aria-label={t("navigation.openSettings")}
 						>
 							<Settings className="w-3 h-3 text-[var(--text-primary)]" />
+							<span
+								aria-hidden="true"
+								className="absolute right-0.5 top-0.5 h-2 w-2 rounded-full border border-[var(--neomorph-bg)] bg-[var(--primary)]"
+							/>
 						</button>
 					</div>
 				</div>
@@ -540,6 +552,47 @@ export function NavigationBar({
 								{languages.map((lang) => (
 									<option key={lang.code} value={lang.code}>
 										{lang.label}
+									</option>
+								))}
+							</select>
+						</div>
+
+						<div className="flex items-center justify-between gap-4">
+							<div className="flex items-center gap-3">
+								<ScrollText className="w-4 h-4 text-[var(--text-secondary)]" />
+								<div>
+									<div className="flex items-center gap-2">
+										<div
+											className="text-sm text-[var(--text-primary)]"
+											style={{ fontFamily: "'Inter', sans-serif" }}
+										>
+											{t("settings.besorahTextVersion.title")}
+										</div>
+										<span className="rounded-full bg-[var(--primary)] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white">
+											{t("settings.besorahTextVersion.new")}
+										</span>
+									</div>
+								</div>
+							</div>
+							<select
+								value={besorahTextVersion}
+								onChange={(event) =>
+									onBesorahTextVersionChange(
+										event.target.value as "delitzsch" | "hutter",
+									)
+								}
+								className="rounded-full px-3 py-2 text-base md:text-xs text-[var(--text-primary)]"
+								style={{
+									fontFamily: "'Inter', sans-serif",
+									backgroundColor: "var(--neomorph-bg)",
+									border: "1px solid var(--neomorph-border)",
+									boxShadow:
+										"inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)",
+								}}
+							>
+								{besorahTextVersions.map((version) => (
+									<option key={version.code} value={version.code}>
+										{version.label}
 									</option>
 								))}
 							</select>

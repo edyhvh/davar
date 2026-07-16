@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -8,7 +8,10 @@ import { OnOffButton } from "@/src/components/ui/OnOffButton";
 import { SettingsDropdown } from "@/src/components/ui/SettingsDropdown";
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
-import { clearStorage } from "@/src/services/storage";
+import {
+  clearStorage,
+  saveHutterAnnouncementSeen,
+} from "@/src/services/storage";
 import { useTranslation } from "@/src/i18n/useTranslation";
 
 const createStyles = (colors: ReturnType<typeof getColors>, isRTL: boolean) =>
@@ -82,6 +85,25 @@ const createStyles = (colors: ReturnType<typeof getColors>, isRTL: boolean) =>
       textAlign: isRTL ? "right" : "left",
       writingDirection: isRTL ? "rtl" : "ltr",
     },
+    labelRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing[2],
+    },
+    newBadge: {
+      borderRadius: 999,
+      backgroundColor: colors.accentCopper,
+      paddingHorizontal: spacing[2],
+      paddingVertical: 2,
+    },
+    newBadgeText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: 10,
+      lineHeight: 12,
+      fontWeight: typography.weights.semibold,
+      color: "#FFFFFF",
+      textTransform: "uppercase",
+    },
     subtitle: {
       fontFamily: typography.families.latinUI,
       fontSize: typography.sizes.bodySmall,
@@ -99,6 +121,12 @@ export default function SettingsScreen() {
   );
   const language = useAppStore((state: AppState) => state.language);
   const setLanguage = useAppStore((state: AppState) => state.setLanguage);
+  const besorahTextVersion = useAppStore(
+    (state: AppState) => state.besorahTextVersion,
+  );
+  const setBesorahTextVersion = useAppStore(
+    (state: AppState) => state.setBesorahTextVersion,
+  );
   const showQumran = useAppStore((state: AppState) => state.showQumran);
   const setShowQumran = useAppStore((state: AppState) => state.setShowQumran);
   const showFullChapter = useAppStore(
@@ -130,6 +158,15 @@ export default function SettingsScreen() {
   const styles = useMemo(() => createStyles(colors, isRTL), [colors, isRTL]);
   const translationOnlyDisablesHebrewOptions = translationOnly;
   const canUseSeferMode = showFullChapter && (translationOnly || hebrewOnly);
+  const handleBesorahTextVersionChange = useCallback(
+    (version: AppState["besorahTextVersion"]) => {
+      setBesorahTextVersion(version);
+      if (version === "hutter") {
+        void saveHutterAnnouncementSeen();
+      }
+    },
+    [setBesorahTextVersion],
+  );
 
   const handleDisabledHebrewOptionPress = () => {
     Alert.alert(t("settings.translationOnly.title"), t("settings.translationOnly.disablesHebrewFeatures"));
@@ -183,6 +220,43 @@ export default function SettingsScreen() {
               { label: t("languages.en"), value: "en" },
               { label: t("languages.es"), value: "es" },
               { label: t("languages.he"), value: "he" },
+            ]}
+          />
+        </View>
+
+        <View style={styles.divider} />
+
+        {/* New Testament Hebrew text */}
+        <View style={styles.row}>
+          <View style={styles.rowContent}>
+            <View style={styles.iconContainer}>
+              <AppIcon name="scroll" size={18} color={colors.textSecondary} />
+            </View>
+            <View style={styles.textContainer}>
+              <View style={styles.labelRow}>
+                <Text style={styles.label}>
+                  {t("settings.besorahTextVersion.title")}
+                </Text>
+                <View style={styles.newBadge}>
+                  <Text style={styles.newBadgeText}>
+                    {t("settings.besorahTextVersion.new")}
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+          <SettingsDropdown
+            value={besorahTextVersion}
+            onChange={handleBesorahTextVersionChange}
+            options={[
+              {
+                label: t("settings.besorahTextVersion.delitzsch"),
+                value: "delitzsch",
+              },
+              {
+                label: t("settings.besorahTextVersion.hutter"),
+                value: "hutter",
+              },
             ]}
           />
         </View>

@@ -41,6 +41,26 @@ describe("static data integrity", () => {
 		expect(matthewChapter.length > 0).toBe(true);
 	});
 
+	test("Hutter New Testament chapters are generated as a selectable source", async () => {
+		const delitzschChapter = await readJson("data/besorah/matthew/1.json");
+		const hutterChapter = await readJson("data/hutter/matthew/1.json");
+
+		expect(Array.isArray(hutterChapter)).toBe(true);
+		expect(hutterChapter.length).toBe(delitzschChapter.length);
+		expect(hutterChapter[0]).toMatchObject({
+			chapter: 1,
+			verse: 1,
+		});
+		expect(hutterChapter[0].hebrew).not.toBe(delitzschChapter[0].hebrew);
+		expect(hutterChapter[0].words[0]).toMatchObject({
+			text: "סֵפֶר",
+			strong: "H5612",
+		});
+		expect(
+			hutterChapter.flatMap((verse) => verse.words).some((word) => word.strong),
+		).toBe(true);
+	});
+
 	test("dictionary assets are available", async () => {
 		const words = await readJson("data/dict/words.json");
 		const roots = await readJson("data/dict/roots.json");
