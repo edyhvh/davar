@@ -8,10 +8,7 @@ import { OnOffButton } from "@/src/components/ui/OnOffButton";
 import { SettingsDropdown } from "@/src/components/ui/SettingsDropdown";
 import { getColors, radii, spacing, typography } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
-import {
-  clearStorage,
-  saveHutterAnnouncementSeen,
-} from "@/src/services/storage";
+import { clearStorage } from "@/src/services/storage";
 import { useTranslation } from "@/src/i18n/useTranslation";
 
 const createStyles = (colors: ReturnType<typeof getColors>, isRTL: boolean) =>
@@ -161,9 +158,6 @@ export default function SettingsScreen() {
   const handleBesorahTextVersionChange = useCallback(
     (version: AppState["besorahTextVersion"]) => {
       setBesorahTextVersion(version);
-      if (version === "hutter") {
-        void saveHutterAnnouncementSeen();
-      }
     },
     [setBesorahTextVersion],
   );

@@ -39,7 +39,10 @@ import {
 	saveReadingState,
 	updateLastPositionForBook,
 } from "./utils/storageHelpers";
-import { getDssCommentaryForLanguage } from "./utils/translationConfig";
+import {
+	getDssCommentaryForLanguage,
+	HUTTER_ANNOUNCEMENT_RELEASE,
+} from "./utils/translationConfig";
 import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
 
 type Screen =
@@ -152,10 +155,11 @@ export default function App() {
 		"besorahTextVersion",
 		initialState.besorahTextVersion,
 	);
-	const [hutterAnnouncementSeen, setHutterAnnouncementSeen] = usePersistedState(
-		"hutterAnnouncementSeen",
-		initialState.hutterAnnouncementSeen,
-	);
+	const [hutterAnnouncementRelease, setHutterAnnouncementRelease] =
+		usePersistedState(
+			"hutterAnnouncementRelease",
+			initialState.hutterAnnouncementRelease,
+		);
 	const { t, isRTL } = useTranslation(language);
 	const [showHutterAnnouncement, setShowHutterAnnouncement] = useState(false);
 
@@ -818,15 +822,19 @@ export default function App() {
 	const besorahDisclaimerText = t("verse.besorahDisclaimer.short");
 
 	useEffect(() => {
-		if (currentScreen === "verse" && isBesorah && !hutterAnnouncementSeen) {
+		if (
+			currentScreen === "verse" &&
+			isBesorah &&
+			hutterAnnouncementRelease !== HUTTER_ANNOUNCEMENT_RELEASE
+		) {
 			setShowHutterAnnouncement(true);
 		}
-	}, [currentScreen, hutterAnnouncementSeen, isBesorah]);
+	}, [currentScreen, hutterAnnouncementRelease, isBesorah]);
 
 	const dismissHutterAnnouncement = useCallback(() => {
 		setShowHutterAnnouncement(false);
-		setHutterAnnouncementSeen(true);
-	}, [setHutterAnnouncementSeen]);
+		setHutterAnnouncementRelease(HUTTER_ANNOUNCEMENT_RELEASE);
+	}, [setHutterAnnouncementRelease]);
 
 	const activateHutter = useCallback(() => {
 		setBesorahTextVersion("hutter");
@@ -836,12 +844,8 @@ export default function App() {
 	const handleBesorahTextVersionChange = useCallback(
 		(version: "delitzsch" | "hutter") => {
 			setBesorahTextVersion(version);
-			if (version === "hutter") {
-				setShowHutterAnnouncement(false);
-				setHutterAnnouncementSeen(true);
-			}
 		},
-		[setBesorahTextVersion, setHutterAnnouncementSeen],
+		[setBesorahTextVersion],
 	);
 
 	useEffect(() => {

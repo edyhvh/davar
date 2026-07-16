@@ -1,6 +1,9 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import type { ThemeMode } from "@/src/theme";
-import type { BesorahTextVersion } from "@davar/shared/translationConfig";
+import {
+  HUTTER_ANNOUNCEMENT_RELEASE,
+  type BesorahTextVersion,
+} from "@davar/shared/translationConfig";
 
 const STORAGE_KEYS = {
   themeMode: "davar.themeMode",
@@ -111,11 +114,14 @@ export const saveBesorahTextVersion = async (value: BesorahTextVersion) => {
 
 export const loadHutterAnnouncementSeen = async (): Promise<boolean> => {
   const value = await AsyncStorage.getItem(STORAGE_KEYS.hutterAnnouncementSeen);
-  return value === "true";
+  return value === HUTTER_ANNOUNCEMENT_RELEASE;
 };
 
 export const saveHutterAnnouncementSeen = async () => {
-  await AsyncStorage.setItem(STORAGE_KEYS.hutterAnnouncementSeen, "true");
+  await AsyncStorage.setItem(
+    STORAGE_KEYS.hutterAnnouncementSeen,
+    HUTTER_ANNOUNCEMENT_RELEASE,
+  );
 };
 
 const parseBoolean = (value: string | null, fallback: boolean) => {
