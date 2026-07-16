@@ -315,6 +315,8 @@ type HutterBook = {
 
 type HutterMappedWord = {
   text?: string;
+  translit_en?: string;
+  translit_es?: string;
   strong?: string;
   prefixes?: string[];
 };
@@ -389,6 +391,12 @@ const generateHutterChapters = async (): Promise<{
               .filter((word) => Boolean(word.text?.trim()))
               .map((word) => ({
                 text: word.text!.trim(),
+                ...(word.translit_en
+                  ? { translit_en: word.translit_en }
+                  : {}),
+                ...(word.translit_es
+                  ? { translit_es: word.translit_es }
+                  : {}),
                 ...(word.strong ? { strong: word.strong } : {}),
                 prefixes: word.prefixes ?? [],
               })),

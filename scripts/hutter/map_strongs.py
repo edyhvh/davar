@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 import unicodedata
 from collections import Counter, defaultdict
 from dataclasses import dataclass
@@ -10,8 +11,13 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Iterable
 
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from scripts.translit.local_translit import LocalTransliterator
+
+
 HUTTER_ROOT = REPO_ROOT / "data" / "hutter" / "staging" / "output"
 DELITZSCH_ROOT = REPO_ROOT / "data" / "delitzsch_parsed"
 TANAJ_ROOT = REPO_ROOT / "data" / "oe"
@@ -499,6 +505,7 @@ def map_book(
 ) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     hutter = load_json(HUTTER_ROOT / f"{book}.json")
     delitzsch = load_delitzsch_verses(book)
+    transliterator = LocalTransliterator()
     chapters: list[dict[str, Any]] = []
     unresolved: list[dict[str, Any]] = []
 
@@ -515,6 +522,7 @@ def map_book(
             mapped_words: list[dict[str, Any]] = []
 
             for index, word_text in enumerate(hutter_words):
+                transliteration = transliterator.transliterate_word(word_text)
                 decision = decide_from_indexes(
                     word_text,
                     manual_overrides,
@@ -544,6 +552,8 @@ def map_book(
                     mapped_words.append(
                         {
                             "text": word_text,
+                            "translit_en": transliteration.translit_en,
+                            "translit_es": transliteration.translit_es,
                             "strong": decision.strong,
                             "prefixes": list(decision.prefixes),
                             "mapping_confidence": decision.confidence,
@@ -556,6 +566,8 @@ def map_book(
                 mapped_words.append(
                     {
                         "text": word_text,
+                        "translit_en": transliteration.translit_en,
+                        "translit_es": transliteration.translit_es,
                         "prefixes": [],
                         "mapping_confidence": "unresolved",
                         "mapping_method": "unresolved",

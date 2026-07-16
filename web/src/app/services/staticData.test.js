@@ -55,7 +55,19 @@ describe("static data integrity", () => {
 		expect(hutterChapter[0].words[0]).toMatchObject({
 			text: "סֵפֶר",
 			strong: "H5612",
+			translit_en: "sefer",
+			translit_es: "sefer",
 		});
+		expect(hutterChapter[0].words[1]).toMatchObject({
+			text: "הַתּוֹלְדוֹת",
+			translit_en: "hatoledot",
+			translit_es: "hatoledot",
+		});
+		expect(
+			hutterChapter
+				.flatMap((verse) => verse.words)
+				.every((word) => word.translit_en && word.translit_es),
+		).toBe(true);
 		expect(
 			hutterChapter.flatMap((verse) => verse.words).some((word) => word.strong),
 		).toBe(true);
