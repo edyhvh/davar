@@ -3,17 +3,10 @@
 	"name": "davar-web",
 	"compatibility_date": "2026-07-16",
 	"pages_build_output_dir": "dist",
-	"vars": {
-		"PUBLIC_NODE_ENV": "production"
-	},
 	"r2_buckets": [
 		{
 			"binding": "TS2009_BUCKET",
 			"bucket_name": "ts2009"
 		}
-	],
-	"build": {
-		"command": "bun run build:cf",
-		"cwd": "."
-	}
+	]
 }
