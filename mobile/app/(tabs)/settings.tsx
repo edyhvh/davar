@@ -291,6 +291,34 @@ export default function SettingsScreen() {
 
         <View style={styles.divider} />
 
+        {/* Hebrew Only */}
+        <View
+          style={[
+            styles.row,
+            translationOnlyDisablesHebrewOptions ? { opacity: 0.55 } : null,
+          ]}
+        >
+          <View style={styles.rowContent}>
+            <View style={styles.iconContainer}>
+              <AppIcon name="hebrew" size={18} color={colors.textSecondary} />
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.label}>{t("settings.hebrewOnly.title")}</Text>
+              <Text style={styles.subtitle}>
+                {t("settings.hebrewOnly.subtitle")}
+              </Text>
+            </View>
+          </View>
+          <OnOffButton
+            value={hebrewOnly}
+            onChange={setHebrewOnly}
+            disabled={translationOnlyDisablesHebrewOptions}
+            onDisabledPress={handleDisabledHebrewOptionPress}
+          />
+        </View>
+
+        <View style={styles.divider} />
+
         {/* Full Chapter */}
         <View style={styles.row}>
           <View style={styles.rowContent}>
@@ -353,34 +381,6 @@ export default function SettingsScreen() {
         ) : (
           <View style={styles.divider} />
         )}
-
-        {/* Hebrew Only */}
-        <View
-          style={[
-            styles.row,
-            translationOnlyDisablesHebrewOptions ? { opacity: 0.55 } : null,
-          ]}
-        >
-          <View style={styles.rowContent}>
-            <View style={styles.iconContainer}>
-              <AppIcon name="hebrew" size={18} color={colors.textSecondary} />
-            </View>
-            <View style={styles.textContainer}>
-              <Text style={styles.label}>{t("settings.hebrewOnly.title")}</Text>
-              <Text style={styles.subtitle}>
-                {t("settings.hebrewOnly.subtitle")}
-              </Text>
-            </View>
-          </View>
-          <OnOffButton
-            value={hebrewOnly}
-            onChange={setHebrewOnly}
-            disabled={translationOnlyDisablesHebrewOptions}
-            onDisabledPress={handleDisabledHebrewOptionPress}
-          />
-        </View>
-
-        <View style={styles.divider} />
 
         {/* Cantillation */}
         <View

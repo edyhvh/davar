@@ -1,4 +1,4 @@
-import { staticDataRequest } from "@/src/services/api";
+import { staticDataRequest, ts2009Request } from "@/src/services/api";
 import type { TranslationFootnote, WordResponse } from "@/src/types/api";
 import {
   fetchHebrewVerses,
@@ -156,9 +156,16 @@ const fetchTs2009ChapterFromBookFile = async (
 ): Promise<Map<number, string> | null> => {
   for (const fileStem of getTs2009BookFileCandidates(bookId)) {
     try {
-      const staticBook = await staticDataRequest<Ts2009BookPayload>(
-        `ts2009/${fileStem}.json`,
-      );
+      let staticBook: Ts2009BookPayload;
+      try {
+        staticBook = await ts2009Request<Ts2009BookPayload>(
+          `${fileStem}.json`,
+        );
+      } catch {
+        staticBook = await staticDataRequest<Ts2009BookPayload>(
+          `ts2009/${fileStem}.json`,
+        );
+      }
 
       const chapterVerses = extractTs2009ChapterFromBook(staticBook, chapter);
       if (!chapterVerses || chapterVerses.length === 0) {

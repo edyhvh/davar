@@ -1,4 +1,10 @@
-import { cpSync, existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import {
+	cpSync,
+	existsSync,
+	readFileSync,
+	rmSync,
+	writeFileSync,
+} from "node:fs";
 import { join } from "node:path";
 import tailwind from "bun-plugin-tailwind";
 
@@ -9,6 +15,8 @@ type RuntimeProcess = {
 
 const runtimeProcess = process as unknown as RuntimeProcess;
 const runtimeExit = (code: number): never => runtimeProcess.exit(code);
+const publicDir = join(import.meta.dir, "public");
+const distDir = join(import.meta.dir, "dist");
 
 const formatSeconds = (startedAtMs: number): string => {
 	return `${((Date.now() - startedAtMs) / 1000).toFixed(1)}s`;
@@ -24,7 +32,7 @@ const generation = Bun.spawnSync(
 		cwd: import.meta.dir,
 		env: {
 			...process.env,
-			EXPORT_TS2009_STATIC: process.env.EXPORT_TS2009_STATIC ?? "1",
+			EXPORT_TS2009_STATIC: process.env.EXPORT_TS2009_STATIC ?? "0",
 		},
 		stdout: "inherit",
 		stderr: "inherit",
@@ -46,6 +54,7 @@ if (generation.exitCode !== 0) {
 
 console.log("[davar-web] phase=bundle start");
 const bundleStartedAt = Date.now();
+rmSync(distDir, { recursive: true, force: true });
 
 const result = await Bun.build({
 	entrypoints: ["./index.html"],
@@ -82,9 +91,6 @@ console.log(
 );
 
 // Copy public assets that aren't referenced in HTML/CSS (og-image, etc.)
-const publicDir = join(import.meta.dir, "public");
-const distDir = join(import.meta.dir, "dist");
-
 if (existsSync(publicDir)) {
 	cpSync(publicDir, distDir, { recursive: true, force: true });
 }

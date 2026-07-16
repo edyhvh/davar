@@ -449,23 +449,6 @@ export function NavigationBar({
 							/>
 						</div>
 
-						<div className="flex items-center justify-between">
-							<div className="flex items-center gap-3">
-								<FaThList className="w-4 h-4 text-[var(--text-secondary)]" />
-								<span
-									className="text-sm text-[var(--text-primary)]"
-									style={{ fontFamily: "'Inter', sans-serif" }}
-								>
-									{t("settings.fullChapter.title")}
-								</span>
-							</div>
-							<NeumorphicToggle
-								enabled={showFullChapter}
-								onToggle={() => onFullChapterChange(!showFullChapter)}
-								ariaLabel={t("navigation.toggleFullChapter")}
-							/>
-						</div>
-
 						<div
 							className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
 						>
@@ -486,6 +469,23 @@ export function NavigationBar({
 								disabledReason={t(
 									"settings.translationOnly.disablesHebrewFeatures",
 								)}
+							/>
+						</div>
+
+						<div className="flex items-center justify-between">
+							<div className="flex items-center gap-3">
+								<FaThList className="w-4 h-4 text-[var(--text-secondary)]" />
+								<span
+									className="text-sm text-[var(--text-primary)]"
+									style={{ fontFamily: "'Inter', sans-serif" }}
+								>
+									{t("settings.fullChapter.title")}
+								</span>
+							</div>
+							<NeumorphicToggle
+								enabled={showFullChapter}
+								onToggle={() => onFullChapterChange(!showFullChapter)}
+								ariaLabel={t("navigation.toggleFullChapter")}
 							/>
 						</div>
 

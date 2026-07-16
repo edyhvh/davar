@@ -353,6 +353,16 @@ export default function App() {
 		],
 	);
 
+	const handleHebrewOnlyChange = useCallback(
+		(nextHebrewOnly: boolean) => {
+			setHebrewOnly(nextHebrewOnly);
+			if (!nextHebrewOnly && !translationOnly && seferMode) {
+				setSeferMode(false);
+			}
+		},
+		[seferMode, setHebrewOnly, setSeferMode, translationOnly],
+	);
+
 	const handleTranslationOnlyChange = useCallback(
 		(nextTranslationOnly: boolean) => {
 			setTranslationOnly(nextTranslationOnly);
@@ -1650,7 +1660,7 @@ export default function App() {
 						seferMode={seferMode}
 						onSeferModeChange={handleSeferModeChange}
 						hebrewOnly={hebrewOnly}
-						onHebrewOnlyChange={setHebrewOnly}
+						onHebrewOnlyChange={handleHebrewOnlyChange}
 						showNikud={showNikud}
 						onNikudChange={setShowNikud}
 						showCantillation={showCantillation}
@@ -1772,7 +1782,7 @@ export default function App() {
 							seferMode={seferMode}
 							onSeferModeChange={handleSeferModeChange}
 							hebrewOnly={hebrewOnly}
-							onHebrewOnlyChange={setHebrewOnly}
+							onHebrewOnlyChange={handleHebrewOnlyChange}
 							onDesignSystemClick={() => setShowDesignSystem(true)}
 							onMobileDesignGuideClick={() => setShowMobileDesignGuide(true)}
 						/>
