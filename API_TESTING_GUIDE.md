@@ -22,9 +22,9 @@
 - Uses `web/functions/api/ts2009/[[path]].ts` as the protected TS2009 endpoint
 
 ### Mobile App Access
-- Downloads bundles from static URLs during offline sync
-- Uses Supabase client for TS2009 per-verse loading
-- Stores all data in local SQLite database
+- Downloads public bundles from static URLs during offline sync
+- Loads online TS2009 book files through the same R2-backed `/api/ts2009/*` endpoint as web
+- Stores downloaded offline data in the local SQLite database
 
 ## 📊 Data Endpoints
 
@@ -135,20 +135,13 @@ curl -i https://davar.bible/data/ts2009/bereshit.json
 Expected:
 - `404` or missing file response
 
-### 4. Test Mobile Supabase TS2009 (mobile only, requires client key)
+### 4. Test Mobile TS2009
 
-```javascript
-import { createClient } from '@supabase/supabase-js'
+Mobile requests the same Cloudflare endpoint and does not require a Supabase
+client key:
 
-const supabase = createClient(
-  process.env.PUBLIC_SUPABASE_URL,
-  process.env.PUBLIC_SUPABASE_ANON_KEY
-)
-
-// Download TS2009 verse
-const { data } = await supabase.storage
-  .from('ts2009')
-  .download('genesis/1/1.json')
+```bash
+curl https://davar.bible/api/ts2009/bereshit.json
 ```
 
 ## 🔧 Development
@@ -176,8 +169,8 @@ bun run start
 ## 📝 Migration Notes
 
 - **Backend Archived:** Original FastAPI backend moved to `archive/backend/`
-- **No API Keys:** Public data requires no authentication
-- **TS2009 Only:** Requires Supabase anon key for licensed content
+- **No Client API Keys:** Public data and the R2-backed TS2009 proxy require no client-side credentials
+- **TS2009 Only:** Stored privately in R2 and exposed through the Pages Function
 - **Caching:** Web app caches static data in memory for performance
 - **Offline First:** Mobile app downloads bundles for offline use
 

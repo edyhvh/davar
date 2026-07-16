@@ -6,6 +6,8 @@ interface SettingsScreenProps {
 	onThemeChange: (theme: "light" | "dark") => void;
 	language: "en" | "es" | "he";
 	onLanguageChange: (language: "en" | "es" | "he") => void;
+	besorahTextVersion: "delitzsch" | "hutter";
+	onBesorahTextVersionChange: (version: "delitzsch" | "hutter") => void;
 	showQumran: boolean;
 	onQumranChange: (show: boolean) => void;
 	showFullChapter: boolean;
@@ -335,6 +337,8 @@ export function SettingsScreen({
 	onThemeChange,
 	language,
 	onLanguageChange,
+	besorahTextVersion,
+	onBesorahTextVersionChange,
 	showQumran,
 	onQumranChange,
 	showFullChapter,
@@ -511,6 +515,48 @@ export function SettingsScreen({
 			{/* Divider */}
 			<div className="border-t border-[var(--border)]" />
 
+			{/* New Testament Hebrew text */}
+			<div className="px-6 py-6">
+				<div className="flex items-center justify-between gap-4">
+					<div className="flex items-center gap-4">
+						<div className="text-[var(--text-secondary)]">
+							<RetroIcons.Qumran />
+						</div>
+						<div className="flex items-center gap-2">
+							<div
+								className="text-lg font-semibold text-[var(--text-primary)]"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.besorahTextVersion.title")}
+							</div>
+							<span className="rounded-full bg-[var(--primary)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
+								{t("settings.besorahTextVersion.new")}
+							</span>
+						</div>
+					</div>
+					<select
+						value={besorahTextVersion}
+						onChange={(event) =>
+							onBesorahTextVersionChange(
+								event.target.value as "delitzsch" | "hutter",
+							)
+						}
+						className="min-w-[140px] rounded-[16px] border-2 border-[var(--border)] bg-[var(--muted)] px-4 py-2 text-base font-medium text-[var(--foreground)]"
+						style={{ fontFamily: "'Inter', sans-serif" }}
+					>
+						<option value="delitzsch">
+							{t("settings.besorahTextVersion.delitzsch")}
+						</option>
+						<option value="hutter">
+							{t("settings.besorahTextVersion.hutter")}
+						</option>
+					</select>
+				</div>
+			</div>
+
+			{/* Divider */}
+			<div className="border-t border-[var(--border)]" />
+
 			{/* Qumran Toggle */}
 			<div className="px-6 py-6">
 				<div className="flex items-center justify-between">
@@ -545,40 +591,6 @@ export function SettingsScreen({
 			{/* Divider */}
 			<div className="border-t border-[var(--border)]" />
 
-			{/* Full Chapter Toggle */}
-			<div className="px-6 py-6">
-				<div className="flex items-center justify-between">
-					<div className="flex items-center gap-4">
-						<div className="text-[var(--text-secondary)]">
-							<RetroIcons.Chapter />
-						</div>
-						<div>
-							<div
-								className="text-lg font-semibold text-[var(--text-primary)]"
-								style={{ fontFamily: "'Inter', sans-serif" }}
-							>
-								{t("settings.fullChapter.title")}
-							</div>
-							<div
-								className="text-sm text-[var(--text-secondary)] mt-0.5"
-								style={{ fontFamily: "'Inter', sans-serif" }}
-							>
-								{t("settings.fullChapter.subtitle")}
-							</div>
-						</div>
-					</div>
-					<RetroOnOffButton
-						isOn={showFullChapter}
-						onToggle={() => onFullChapterChange(!showFullChapter)}
-						onLabel={t("common.on")}
-						offLabel={t("common.off")}
-					/>
-				</div>
-			</div>
-
-			{/* Divider */}
-			<div className="border-t border-[var(--border)]" />
-
 			{/* Hebrew Only Toggle */}
 			<div className="px-6 py-6">
 				<div className="flex items-center justify-between">
@@ -604,6 +616,40 @@ export function SettingsScreen({
 					<RetroOnOffButton
 						isOn={hebrewOnly}
 						onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
+						onLabel={t("common.on")}
+						offLabel={t("common.off")}
+					/>
+				</div>
+			</div>
+
+			{/* Divider */}
+			<div className="border-t border-[var(--border)]" />
+
+			{/* Full Chapter Toggle */}
+			<div className="px-6 py-6">
+				<div className="flex items-center justify-between">
+					<div className="flex items-center gap-4">
+						<div className="text-[var(--text-secondary)]">
+							<RetroIcons.Chapter />
+						</div>
+						<div>
+							<div
+								className="text-lg font-semibold text-[var(--text-primary)]"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.fullChapter.title")}
+							</div>
+							<div
+								className="text-sm text-[var(--text-secondary)] mt-0.5"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.fullChapter.subtitle")}
+							</div>
+						</div>
+					</div>
+					<RetroOnOffButton
+						isOn={showFullChapter}
+						onToggle={() => onFullChapterChange(!showFullChapter)}
 						onLabel={t("common.on")}
 						offLabel={t("common.off")}
 					/>

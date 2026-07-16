@@ -44,6 +44,20 @@ const createStyles = (
       alignItems: "center",
       justifyContent: "center",
     },
+    settingsIconWrapper: {
+      position: "relative",
+    },
+    settingsNewDot: {
+      position: "absolute",
+      right: -3,
+      top: -2,
+      width: 7,
+      height: 7,
+      borderRadius: 4,
+      backgroundColor: colors.accentCopper,
+      borderWidth: 1,
+      borderColor: colors.surface,
+    },
   });
 
 export const AppNavigator = () => {
@@ -102,7 +116,10 @@ export const AppNavigator = () => {
         options={{
           title: t("tabs.settings"),
           tabBarIcon: ({ color }) => (
-            <AppIcon name="settings" color={color} size={24} />
+            <View style={styles.settingsIconWrapper}>
+              <AppIcon name="settings" color={color} size={24} />
+              <View style={styles.settingsNewDot} />
+            </View>
           ),
         }}
       />

@@ -1,0 +1,2038 @@
+{
+  "book": "corinthians2",
+  "raw_result_count": 377,
+  "result_count": 256,
+  "batch_count": 77,
+  "status_counts": {
+    "ok": 256
+  },
+  "confidence_counts": {
+    "high": 7,
+    "low": 29,
+    "medium": 220
+  },
+  "needs_review_count": 197,
+  "likely_crop_issue_count": 62,
+  "likely_ocr_issue_count": 135,
+  "no_hebrew_marks_count": 0,
+  "empty_text_count": 0,
+  "usage": {
+    "input_tokens": 174681,
+    "output_tokens": 63381,
+    "total_tokens": 238062
+  },
+  "needs_review": [
+    {
+      "id": "corinthians2.1.1.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_001_000002.png",
+      "hebrew_text": "פּוֹלוֹס שְׁלִיחַ יֵשׁוּעַ הַמָּשִׁיחַ בִּרְצוֹן אֱלֹהִים וְטִימוֹתֵאוֹס אָחִי לַעֲדַת אֱלֹהִים אֲשֶׁר הִיא בְּקוֹרִנְטוֹס עִם הַקְּדוֹשִׁים כֻּלָּם אֲשֶׁר הֵמָּה בְּכָל אַכַאיָא׃"
+    },
+    {
+      "id": "corinthians2.1.2.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial word and some niqqud are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_002_000002.png",
+      "hebrew_text": "הֲנָיָה לָכֶם וְשָׁלוֹם מֵאֱלֹהִים אָבִינוּ וּמָרֵי־יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "corinthians2.1.3.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/marks are not fully clear.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_003_000002.png",
+      "hebrew_text": "בָּרוּךְ הָאֱלֹהִים וַאֲבִי אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ אֲבִי חֶסֶד וְרַחֲמִים וֵאלֹהֵי־כָּל־נֶחָמָה׃"
+    },
+    {
+      "id": "corinthians2.1.4.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several niqqud marks and possibly one or two consonants are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_004_000002.png",
+      "hebrew_text": "הַמְנַחֵם אוֹתָנוּ בְּכָל־מְצוּקוֹתֵינוּ שֶׁנּוּכַל לְנַחֵם אוֹתָם אֲשֶׁר בְּכָל־צָרָה הֵמָּה בְּנֶחָמוֹת אֱלֹהִים אֲשֶׁר נִחַם גַּם אֲנַחְנוּ מֵאֱלֹהִים׃"
+    },
+    {
+      "id": "corinthians2.1.5.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some wording and pointing are uncertain due to print clarity.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_005_000002.png",
+      "hebrew_text": "כִּי־כְּמוֹ הוֹתִירוּ בָּנוּ צָרוֹת הַמְּצוּקוֹת הַמָּשִׁיחַ כֵּן בַּמָּשִׁיחַ יוֹתִירוּ נְחוּמוֹתֵינוּ׃"
+    },
+    {
+      "id": "corinthians2.1.6.000004",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several pointed words and marks are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_006_000004.png",
+      "hebrew_text": "וְאִם נֵצַר אֹךְ עַל־נֶחְמַתְכֶם וְעַל־יְשׁוּעַתְכֶם נֵצַר הַפְּעֻלָּה בְּדַמָּה הַפָּעוֹת הָאֵלֶּה כְּמוֹ גַם אֲנַחְנוּ מְעֻנִּים וְאִם נֻחַם עַל נֶחְמַתְכֶם וְעַל־יְשׁוּעַתְכֶם נֻחַם וְשִׂבְרֵנוּ מָקוּם עֲלֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.1.7.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/pointing in the second line are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_007_000004.png",
+      "hebrew_text": "יוֹדְעִים כִּי־כְמוֹ הֱיוֹתְכֶם חַבְרֵי הַפְּעָעוֹתִים כֵּן הֱיוּ חַבְרֵי הַנֶּחָמָה׃"
+    },
+    {
+      "id": "corinthians2.1.8.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "A few vowel points and one word boundary are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_008_000004.png",
+      "hebrew_text": "וְלֹא נֶחְדַּ מִמְּכֶם אַחֵינוּ עַל־מְצוּקָתֵנוּ אֲשֶׁר הָיְתָה לָנוּ בְּאַסְיָא כִּי עַל־יֹתֶר וְעַל־מְאֹד מְסֻבָּלִים הָיִינוּ כֵּן אֲשֶׁר קָצְנוּ בְּחַיֵּינוּ׃"
+    },
+    {
+      "id": "corinthians2.1.9.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing around several words is not fully certain.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_009_000004.png",
+      "hebrew_text": "וְעַל־כֵּן בְּנַפְשֵׁנוּ מִשְׁפַּט מָוֶת הָיָה לָנוּ בְּלִי־בָּטֹחַ עַל־נַפְשֵׁנוּ כִּי אִם עַל־אֱלֹהִים הַמֵּקִים אֶת־הַמֵּתִים׃"
+    },
+    {
+      "id": "corinthians2.1.10.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some wording/pointing is uncertain, especially mid-verse.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_010_000004.png",
+      "hebrew_text": "אֲשֶׁר הִצִּיל וּמַצִּיל אוֹתָנוּ מִמָּוֶת וּמִכָּל־דַּעַת אֲשֶׁר בּוֹ שִׂבְרֵנוּ כִּי־עוֹד יַצִּילֵנוּ׃"
+    },
+    {
+      "id": "corinthians2.1.11.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are difficult to preserve confidently.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_011_000006.png",
+      "hebrew_text": "בעזרכם אתנו בתפלותיכם אשר תהיה עלינו אשר מפנים רבים המתנה אשר בנו ברבים תהי תודה עלינו׃"
+    },
+    {
+      "id": "corinthians2.1.12.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and one word near line end are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_012_000006.png",
+      "hebrew_text": "כי הלולנו היא עדות מדענו כי בתם וישר אלהים לא בחכמת הנפש כי אם במתנת אלהים מתהלכים אנו בעולם ועַל יתר אתכם׃"
+    },
+    {
+      "id": "corinthians2.1.13.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several letters/pointing are uncertain due to blur.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_013_000006.png",
+      "hebrew_text": "כי לא כתבים אנו לכם אחרית כי אם אשר תקראו ותדעו ושבטחי כי עד קץ תדעו׃"
+    },
+    {
+      "id": "corinthians2.1.14.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and exact form of first-line word uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_014_000006.png",
+      "hebrew_text": "כמו גם ידעתונו מקצתהו כי תהללתכם היום אנחנו כמו גם אתם תהללתנו ביום אדונינו ישוע המשיח׃"
+    },
+    {
+      "id": "corinthians2.1.15.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing not preserved; exact vocalization unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_015_000006.png",
+      "hebrew_text": "ובבטחון הזאת חפצתי לבוא אליכם בראשונה אשר תהיה שנית לכם׃"
+    },
+    {
+      "id": "corinthians2.1.16.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_016_000008.png",
+      "hebrew_text": "וְהֵם לַעֲבֹר בָּכֶם וְלָשׁוּב מִכֶּם לָבוֹא אֲלֵיכֶם וּמִכֶּם לָשֶׁבֶת בִּיהוּדָה׃"
+    },
+    {
+      "id": "corinthians2.1.17.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one or two letters are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_017_000008.png",
+      "hebrew_text": "זֹאת כִּי־חָפַצְתִּי הֲלֹשׁוֹא חָשַׁבְתִּי אוֹ אֲשֶׁר חָפַצְתִּי וְבַבָּשָׂר חָפַצְתִּי לִהְיוֹת אִתִּי כֵּן כֵּן וְאַיִן אַיִן׃"
+    },
+    {
+      "id": "corinthians2.1.18.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/cantillation-like marks not fully certain.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_018_000008.png",
+      "hebrew_text": "כִּי נֶאֱמָן אֱלֹהִים כִּי דְבָרֵנוּ אֲשֶׁר הָיָה אֲלֵיכֶם לֹא הָיָה כֵּן וָאָיִן׃"
+    },
+    {
+      "id": "corinthians2.1.19.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final line may continue into next verse/crop; punctuation/ending uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_019_000008.png",
+      "hebrew_text": "כִּי־בֶן הָאֱלֹהִים יֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר בָּכֶם מִקְרָא בָּנוּ בְּסִילְוָנוּס וּבְטִימוֹתָאוֹס לֹא הָיָה כֵּן וָאָיִן כִּי אִם כֵּן וְאָמֵן"
+    },
+    {
+      "id": "corinthians2.1.20.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing marks are unclear in the image.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_020_000008.png",
+      "hebrew_text": "כִּי כַּמָּה אִמְרֵי אֱלֹהִים הֵמָּה בּוֹ כֵּן וּבוֹ אָמֵן לִכְבוֹד אֱלֹהִים בְּיָדֵינוּ׃"
+    },
+    {
+      "id": "corinthians2.1.21.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_021_000008.png",
+      "hebrew_text": "וְאֵלֹהִים הַמַּעֲמִיד אֶתְכֶם עִמָּנוּ בְּמָשִׁיחַ וּמָשַׁח אֶתְכֶם׃"
+    },
+    {
+      "id": "corinthians2.1.22.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Maqaf and some vocalization marks are partly unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_022_000008.png",
+      "hebrew_text": "וַיַּחְתֹּם אֹתָנוּ וַיִּתֵּן אֶת־עֵרָבוֹן הָרוּחַ בִּלְבָבֵנוּ׃"
+    },
+    {
+      "id": "corinthians2.2.7.000012",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks and several words are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_007_000012.png",
+      "hebrew_text": "לכן להפך יותר התנהגו ותנחמוהו ברך־פתוהו יותתרה יבלע אשר כמוהו"
+    },
+    {
+      "id": "corinthians2.2.8.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/marks uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_008_000012.png",
+      "hebrew_text": "על־כן־שואל אני ממכם לחזק בו את־אהבתכם׃"
+    },
+    {
+      "id": "corinthians2.2.9.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse appears short in crop; pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_009_000012.png",
+      "hebrew_text": "לכתובכם אם־בכלכם השמעו׃"
+    },
+    {
+      "id": "corinthians2.2.10.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top line partly from preceding crop/verse boundary; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_010_000012.png",
+      "hebrew_text": "כי למי־מאומה תחונו גם אני אחון וגם אני אם מאומה חונתי למי חונתי בעבורכם בפני המשיח׃"
+    },
+    {
+      "id": "corinthians2.2.11.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud/marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_011_000012.png",
+      "hebrew_text": "בל־יבצענו השטן כי־ידענו את־מחשבותיו׃"
+    },
+    {
+      "id": "corinthians2.2.13.000014",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some words and pointing are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_013_000014.png",
+      "hebrew_text": "לֹא נַחְתִּי שַׁת לְעֵינִי לְנַפְשִׁי הַעֲמָה כִּי לֹא מָצָאתִי אֶת־טִיטוֹס אָחִי כִּי אִם עָזַבְתִּי אֹתָם בְּשָׁלוֹם וְנָסַעְתִּי לְכִתִּים׃"
+    },
+    {
+      "id": "corinthians2.2.16.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partly unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_016_000014.png",
+      "hebrew_text": "לָאֵלֶּה רֵיחַ מָוֶת לָמוֶת וְלָאֵלֶּה רֵיחַ חַיִּים לְחַיִּים וּמִי יִכְשַׁר לָאֵלֶּה׃"
+    },
+    {
+      "id": "corinthians2.2.17.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/points are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_017_000014.png",
+      "hebrew_text": "כִּי לֹא הָיִינוּ כְּמוֹ רַבִּים הַמְמַסְּחִים אֶת־דְּבַר אֱלֹהִים כִּי אִם כְּמוֹ בְּכָל תֹּם יֹשֶׁר אַךְ אֶךְ מֵאֱלֹהִים לִפְנֵי אֱלֹהִים בַּמָּשִׁיחַ מְדַבְּרִים׃"
+    },
+    {
+      "id": "corinthians2.3.1.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few consonants are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/003_001_000016.png",
+      "hebrew_text": "נַמְחִילִים אֲנַחְנוּ עוֹד לְהִשְׁתַּבֵּחַ בְּהַלְלֵנוּ אִם נִצְטָרֵךְ כְּמוֹ אֲנָשִׁים אִגְרוֹת לָשׂוּם אֲלֵיכֶם אוֹ מִכֶּם אֶל־אֲחֵרִים׃"
+    },
+    {
+      "id": "corinthians2.3.2.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Vocalization is not fully clear.",
+      "output_image": "data/hutter/verse_images/corinthians2/003_002_000016.png",
+      "hebrew_text": "אִגַּרְתֵּנוּ אַתֶּם הִיא הַנִּכְתָּבָה בְּלִבּוֹתֵינוּ הַנּוֹדַעַת וְנִקְרָאָה מִכָּל־הָאֲנָשִׁים׃"
+    },
+    {
+      "id": "corinthians2.3.3.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words and niqqud are uncertain due to print clarity.",
+      "output_image": "data/hutter/verse_images/corinthians2/003_003_000016.png",
+      "hebrew_text": "נוֹדָעִים כִּי־אַתֶּם אִגֶּרֶת הַמָּשִׁיחַ הַמְשׁוּרֶת מִמֶּנִּי וְנִכְתְּבָה לֹא בִדְיוֹ כִּי אִם בְּרוּחַ אֵל חַי לֹא בְּלוּחוֹת הָאֶבֶן כִּי אִם בְּלוּחוֹת לִבּוֹת הַבָּשָׂר׃"
+    },
+    {
+      "id": "corinthians2.3.15.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word/pointing is somewhat unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/003_015_000020.png",
+      "hebrew_text": "כִּי אִם עַד־הַיּוֹם הַזֶּה אִם נִקְרָא משֶׁה הַמַּסְוֶה עַל־לְבָבָם יַעֲדַד׃"
+    },
+    {
+      "id": "corinthians2.3.17.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/marks and the word אֵיזֶה are not fully clear.",
+      "output_image": "data/hutter/verse_images/corinthians2/003_017_000020.png",
+      "hebrew_text": "וַיהוָה רוּחַ הוּא וְאֵיזֶה רוּחַ יְהוָה שָׁם הַחֻפְשָׁה׃"
+    },
+    {
+      "id": "corinthians2.3.18.000020",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words/pointing in the verse are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/003_018_000020.png",
+      "hebrew_text": "וַאֲנַחְנוּ כֻּלָּנוּ בְפָנִים גְּלוּיִים מַבִּיטִים אֶל־פְּנֵיּם כְּבִיט אֶת־כְּבוֹד יְהוָה וְנֶחֱלֹף לְתְמוּנָתוֹ מִכָּבוֹד אֶל־כָּבוֹד כְּמוֹ מֵרוּחַ יְהוָה׃"
+    },
+    {
+      "id": "corinthians2.4.1.000020",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some pointed words are difficult to read confidently.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_001_000020.png",
+      "hebrew_text": "עַל־כֵּן בִּרְיוֹת עִם הַחֶסֶד הַזֹּאת כְּמוֹ רֻחַמְנוּ לֹא נִמְאֹן לִשְׁמֹעַ אֶת־דְּבָרָיו׃"
+    },
+    {
+      "id": "corinthians2.4.2.000022",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and several words are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_002_000022.png",
+      "hebrew_text": "כִּי־אִם מְסִלְּדִים אֲנַחְנוּ אֶת־הַעֲצֻמוֹת הַבּשָׁה וְלֹא מְהַלְּכִים בְּעָרְמָה וְלֹא מְהִילִים אֶת־דְּבַר אֱלֹהִים כִּי אִם בְּדַעַת הָאֱמֶת מְשַׁבְּחִים אֶת־תַּהֲלוֹתֵנוּ אֶל־כָּל־מַדּוּעַ הָאֲנָשִׁים לִפְנֵי אֱלֹהִים:"
+    },
+    {
+      "id": "corinthians2.4.3.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/marks uncertain due to image resolution.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_003_000022.png",
+      "hebrew_text": "וְאִם גַּם תְּכֻסֶּה בְּשׂוֹרָתֵנוּ בָּאֹבְדִים מְכֻסָּה׃"
+    },
+    {
+      "id": "corinthians2.4.4.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several niqqud marks and one or two word readings are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_004_000022.png",
+      "hebrew_text": "בַּאֲשֶׁר אֱלֹהֵי הָעוֹלָם הַזֶּה עִוֵּר אֶת־תְּבוּנַת הָרְשָׁעִים מִנֹּגַהּ לָהֶם אוֹר בְּשׂוֹרַת כְּבוֹד הַמָּשִׁיחַ אֲשֶׁר הוּא דְּמוּת הָאֱלֹהִים׃"
+    },
+    {
+      "id": "corinthians2.4.5.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and final phrase require review.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_005_000022.png",
+      "hebrew_text": "כִּי לֹא בְּשְׂרֵנוּ אֶת נַפְשֵׁנוּ כִּי אִם אֶת יֵשׁוּעַ הַמָּשִׁיחַ אֲדוֹנֵינוּ וְכִי־אֲנוּ עַבְדֵיכֶם בְּיֵשׁוּעַ׃"
+    },
+    {
+      "id": "corinthians2.4.6.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning of verse slightly cut by crop; some vowels uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_006_000022.png",
+      "hebrew_text": "כִּי־הָאֱלֹהִים הָאֹמֵר מִחֹשֶׁךְ לְנֹגַהּ אוֹר הוּא נָגַהּ בִּלְבָבֵינוּ לְמָאוֹר דַּעַת כְּבוֹד אֱלֹהִים בִּפְנֵי יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "corinthians2.4.7.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_007_000022.png",
+      "hebrew_text": "וְיֵשׁ לָנוּ אוֹצָר הַזֶּה בִּכְלֵי יוֹצֵר אֲשֶׁר רֹב הַגְּבוּרָה יִהְיֶה לֵאלֹהִים וְלֹא מִמֶּנּוּ׃"
+    },
+    {
+      "id": "corinthians2.4.8.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one or more words may need verification.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_008_000024.png",
+      "hebrew_text": "צָרָה וּמְצוּקָה לָנוּ בְּכֹל אַךְ לֹא נִחְנַק מְעֻקָּבִים אֲנַחְנוּ אַךְ לֹא שְׁכוּלִים׃"
+    },
+    {
+      "id": "corinthians2.4.9.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud is partly unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_009_000024.png",
+      "hebrew_text": "נִרְדָּפִים וְלֹא עֲזוּבִים נְמֻכִים וְלֹא אֹבְדִים׃"
+    },
+    {
+      "id": "corinthians2.4.10.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and exact spelling are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_010_000024.png",
+      "hebrew_text": "וְתָמִיד אֶת־הַמָּוֶת אֲדֹנֵינוּ יֵשׁוּעַ בִּגְוִיֹּתֵינוּ סָבִיב סָבִיב נוֹשְׂאִים אֲשֶׁר גַּם חַיֵּי יֵשׁוּעַ בִּגְוִיֹּתֵינוּ יִגָּלֶה׃"
+    },
+    {
+      "id": "corinthians2.4.11.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Exact pointing and a few letters are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_011_000024.png",
+      "hebrew_text": "כִּי בְּעֵת הֱיוֹתֵינוּ בְּצֹאן הַהֲרֵגָה הֻשְׁלַמְנוּ בַּעֲבוּר יֵשׁוּעַ אֲשֶׁר גַּם חַיֵּי יֵשׁוּעַ יִגָּלוּ בִּבְשָׂרֵנוּ הַמֵּת׃"
+    },
+    {
+      "id": "corinthians2.4.12.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are visible but not confidently preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_012_000024.png",
+      "hebrew_text": "כן לכן המות פועל בנו והחיים בכם׃"
+    },
+    {
+      "id": "corinthians2.4.13.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are visible but not confidently preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_013_000024.png",
+      "hebrew_text": "וכי יש לנו רוח האמונה הזאת ככתוב האמנתי כי אדבר אנחנו מאמינים כי נדבר׃"
+    },
+    {
+      "id": "corinthians2.4.14.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are visible but not confidently preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_014_000026.png",
+      "hebrew_text": "יודעים כי־ההקים את־אדונינו ישוע גם אתנו בישוע יקים ויעמידנו עמכם׃"
+    },
+    {
+      "id": "corinthians2.4.15.000026",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing are uncertain in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_015_000026.png",
+      "hebrew_text": "כי כל־דברים בעבורכם אשר התרבתה המותרת בתודת הרבים הותיר לכבוד אלהים׃"
+    },
+    {
+      "id": "corinthians2.4.16.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are visible but not confidently preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_016_000026.png",
+      "hebrew_text": "ובעבור־כן לא ניעף ואם אמנם החיצון נשחת אך הפנימי מתחדש מימים לימימה׃"
+    },
+    {
+      "id": "corinthians2.4.17.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish clearly in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_017_000026.png",
+      "hebrew_text": "כִּי רֶגַע קָטֹן יִשָּׂא צָרֹתֵינוּ וּמְצִיקוֹתֵינוּ מְאֹד אֶל־יֶתֶר רָמִים וּגְדֹלִים חֶסֶד וְכָבוֹד עוֹלָם פֹּעַל לָנוּ׃"
+    },
+    {
+      "id": "corinthians2.4.18.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/marks and a few word divisions are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_018_000026.png",
+      "hebrew_text": "כִּי לֹא מַבִּיטִים אֲנַחְנוּ אֶל־הַנִּרְאִים כִּי־אִם אֶל־אֲשֶׁר לֹא נִרְאִים כִּי הַנִּרְאִים מוּזְמַנִּים הֵמָּה וַאֲשֶׁר אֵינָם נִרְאִים לְלֹא־עוֹלָמִים׃"
+    },
+    {
+      "id": "corinthians2.5.1.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is cropped; initial words and pointing are somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_001_000028.png",
+      "hebrew_text": "מִשְׁכָּנֵינוּ עַל־הָאֲדָמָה הַלֹּאת יָמוּת כִּי יֵשׁ לָנוּ בִנְיָן מֵאֱלֹהִים בֵּית עוֹלָם וְאֵינוֹ מַעֲשֵׂה יָדַיִם בַּשָּׁמַיִם׃"
+    },
+    {
+      "id": "corinthians2.5.2.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud/marks are not all confidently legible.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_002_000028.png",
+      "hebrew_text": "וּבְזֹאת מִתְאוֹנְנִים וּמְתַאֲוִים אֲנַחְנוּ לִלְבֹּשׁ אֶת־מִשְׁכָּנֵינוּ אֲשֶׁר מִשָּׁמַיִם הוּא׃"
+    },
+    {
+      "id": "corinthians2.5.3.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Short verse is legible, but pointing is partly uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_003_000028.png",
+      "hebrew_text": "אַךְ אִם לְבֻשִׁים וְלֹא עֲרוּמִים נִמָּצֵא׃"
+    },
+    {
+      "id": "corinthians2.5.4.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks and a few letters are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_004_000028.png",
+      "hebrew_text": "הנה מתאוננים נכבדים אשר עלינו לא באבה להתפשט כי אם להלבש במעיל אשר הבלע התמותה מן־החיים׃"
+    },
+    {
+      "id": "corinthians2.5.5.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is not fully clear.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_005_000028.png",
+      "hebrew_text": "ואלהים המעתיד אותנו אל־המעלה הוא והנתן לנו את־ערבון הרוח׃"
+    },
+    {
+      "id": "corinthians2.5.6.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/letters are uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_006_000028.png",
+      "hebrew_text": "לכן מבטיחים אנחנו תמיד וידעים כי בכל עת אשר נשכן בגויה נדר מאדונינו׃"
+    },
+    {
+      "id": "corinthians2.5.8.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points are unclear; top heading ignored.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_008_000030.png",
+      "hebrew_text": "מִבְטַחִים וְרוֹצִים אֲנַחְנוּ יוֹתֵר לָגוּר מִן הַגְּוִיָה וְלִשְׁכֹּן אֶל־יְהוָה׃"
+    },
+    {
+      "id": "corinthians2.5.10.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is partly cut in the crop; some pointing and words are difficult to verify.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_010_000030.png",
+      "hebrew_text": "כי צריך לכלנו להראות לפני כסא המשיח אשר יסבל איש איש את סבל גויתו כמעשהו אם טובים ואם רעים׃"
+    },
+    {
+      "id": "corinthians2.5.11.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some Hebrew at line edges and pointing are unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_011_000030.png",
+      "hebrew_text": "וכידענו את־יראת יהוה מפתים אנחנו את האנשים ולאלהים נדענו ושברתי כי גם במצפניכם נדענו׃"
+    },
+    {
+      "id": "corinthians2.5.12.000030",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and vowel marks are uncertain due to blur and cropping.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_012_000030.png",
+      "hebrew_text": "כי לא נוסיף לספר לכם את־תהלתנו כי אם נִתנה לכם את האנה להתהלל עלינו להיות לכם להשיב דבר אל־אשר בפנים ולא בלב כי אם בלב ולב ידברו׃"
+    },
+    {
+      "id": "corinthians2.5.13.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is not confidently preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_013_000030.png",
+      "hebrew_text": "ואם משטטים אנחנו לאלהים נשטט ואם מבינים אנחנו לכם נבין׃"
+    },
+    {
+      "id": "corinthians2.5.14.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_014_000030.png",
+      "hebrew_text": "כי אהבת המשיח מסיגרה אותנו לחשב את־זאת כי־אם אחד על כלם מת לכן כלם מתו׃"
+    },
+    {
+      "id": "corinthians2.5.15.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing marks uncertain; final word partly close to crop edge.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_015_000032.png",
+      "hebrew_text": "ועל־כלם מת הוא אשר החיים אינם עוד יחיו לנפשותם כי אם לאשר עליהם מת וקם ממתים׃"
+    },
+    {
+      "id": "corinthians2.5.16.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/cantillation-like marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_016_000032.png",
+      "hebrew_text": "לכן אנחנו מעת את־איש לא ידענו כבשר ואם לפנים גם את המשיח ידענו כבשר אך מעת לא עוד ידענו׃"
+    },
+    {
+      "id": "corinthians2.5.17.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/cantillation-like marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_017_000032.png",
+      "hebrew_text": "לכן אשר במשיח בריאה חדשה היא הקדמוניות עברו הנה נעשו חדשות כלנה׃"
+    },
+    {
+      "id": "corinthians2.5.18.000032",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse partly cut and several words/points uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_018_000032.png",
+      "hebrew_text": "וכל־האלה מאלהי שעשנו על־דבר כבוד שמו אשר הצילנו וכפר על־חטאותינו למען שמו לנפשו בישוע המשיח ונתן לנו את־פקדת הכפרים והחליפה׃"
+    },
+    {
+      "id": "corinthians2.5.19.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and final words are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_019_000032.png",
+      "hebrew_text": "כִּי כַּאֲשֶׁר אֱלֹהִים הָיָה בַּמָּשִׁיחַ מְחַלֶּה אֶת־הָעוֹלָם לְנַפְשׁוֹ לֹא מְחַשֵּׁב לָהֶם אֶת־חַטֹּאתָם וְהַשָּׂם בָּנוּ אֶת־דְּבַר הַפְּקֻדִים וְחִלּוּהָ"
+    },
+    {
+      "id": "corinthians2.5.20.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is close to crop edge; pointing is partially uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_020_000032.png",
+      "hebrew_text": "אֲנַחְנוּ כְּמוֹ בְּשֵׁם אֱלֹהִים הַמַּנְחִם בָּנוּ וּמִתְחַנְּנִים בְּמָשִׁיחַ הִתְחַנְּנוּ לֵאלֹהִים"
+    },
+    {
+      "id": "corinthians2.5.21.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing not confidently preserved; transcription mainly consonantal.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_021_000034.png",
+      "hebrew_text": "כי־אותו אשר לא ידע את־החטאה עלינו עשה לחטאה אשר אנחנו נהיה צדקת אלהים בו׃"
+    },
+    {
+      "id": "corinthians2.6.1.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are hard to distinguish.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_001_000034.png",
+      "hebrew_text": "וְכֵן עוֹזְרֵי אֲנַחְנוּ נִשְׁאַל מִכֶּם לֹא לָשָׁוא לָקַחַת אֶת־חֶסֶד אֱלֹהִים׃"
+    },
+    {
+      "id": "corinthians2.6.2.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are partly unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_002_000034.png",
+      "hebrew_text": "כִּי־אֹמֵר הוּא בְּעֵת רָצוֹן עֲנִיתִיךָ וּבְיוֹם יְשׁוּעָה עֲזַרְתִּיךָ הִנֵּה עַתָּה הִיא עֵת רָצוֹן הִנֵּה עַתָּה הוּא יוֹם הַיְשׁוּעָה׃"
+    },
+    {
+      "id": "corinthians2.6.3.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels and final wording uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_003_000034.png",
+      "hebrew_text": "לְאִישׁ בְּכֹל דָּבָר לֹא מְשִׂימִים מִכְשׁוֹל פֶּן הַכְּלִים הַכְּהֻנָּה׃"
+    },
+    {
+      "id": "corinthians2.6.4.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Vocalization and one word near beginning are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_004_000034.png",
+      "hebrew_text": "כִּי־אִם בְּכָל־דְּבָרִים נִתֵּן אֶת־נַפְשֵׁנוּ כְּמוֹ מְשָׁרְתֵי אֱלֹהִים בְּדַמָּה רַבָּה בְּצָרוֹת בְּרָעוֹת וּבִמְצוּקוֹת׃"
+    },
+    {
+      "id": "corinthians2.6.5.000034",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words/pointing are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_005_000034.png",
+      "hebrew_text": "בְּמַכּוֹת בְּמַטָּרוֹת בְּמְרוּחֹת וּתְלוּנוֹת בִּיגִיעוֹת בְּשִׁקּוּד בְּצוֹמוֹת׃"
+    },
+    {
+      "id": "corinthians2.6.7.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud is partly unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_007_000036.png",
+      "hebrew_text": "בְּדָבָר אֱמֶת בִּגְבוּרַת אֱלֹהִים בִּכְלֵי הַצְּדָקָה לְיָמִין וְלִשְׂמֹאל׃"
+    },
+    {
+      "id": "corinthians2.6.13.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_013_000036.png",
+      "hebrew_text": "וּמַה גְּמוּלְכֶם אֲשֶׁר תָּשִׁיבוּ לִי ) מְדַבֵּר אֲנִי אֲלֵיכֶם כְּמוֹ לְבָנִים ( הַרְחִיבוּ אֶת־לְבַבְכֶם:"
+    },
+    {
+      "id": "corinthians2.6.14.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top line begins from continuation; some niqqud uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_014_000036.png",
+      "hebrew_text": "אַל־תִּמָּשְׁכוּ יַדְּכֶם אֶת־לֹא מַאֲמִינִים כִּי מַה־חֶבְרַת הַצְּדָקָה עִם רִשְׁעָה אֵימָה חֶבְרַת הָאוֹר לַחֹשֶׁךְ:"
+    },
+    {
+      "id": "corinthians2.6.15.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and the final word are not fully clear.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_015_000038.png",
+      "hebrew_text": "וּמַה הַסְכָּמַת הַמָּשִׁיחַ אֶל־בְּלִיַּעַל אוֹ מַה חֵלֶק אִישׁ אֱמוּנִים אֶת־סוֹרֵר:"
+    },
+    {
+      "id": "corinthians2.6.16.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud and some small marks are hard to verify.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_016_000038.png",
+      "hebrew_text": "וּמַה מַתְכֹּנֶת הֵיכַל יְהוָה אֶת־הַגִּלּוּלִים וְאַתֶּם הֵיכַל אֱלֹהִים אֵל־חַי כְּמוֹ אָמַר אֱלֹהִים וְנָתַתִּי מִשְׁכָּנִי בְּתוֹכְכֶם וְהִתְהַלַּכְתִּי בְּתוֹכְכֶם וְהָיִיתִי לָכֶם לֵאלֹהִים וְאַתֶּם תִּהְיוּ לִי לְעָם:"
+    },
+    {
+      "id": "corinthians2.6.17.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points/marks uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_017_000038.png",
+      "hebrew_text": "עַל־כֵּן סוּרוּ סוּרוּ צְאוּ מִשָּׁם וְנְאֻם יְהוָה טֻמְאָה אַל־תִּגָּעוּ צְאוּ מִתּוֹכָהּ וַאֲנִי אֲקַבֵּל אֶתְכֶם:"
+    },
+    {
+      "id": "corinthians2.7.5.000040",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words/pointing are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_005_000040.png",
+      "hebrew_text": "כי כאשר באנו בכיים מקאמה לא היתה נחה לענינינו ותוגמה לפעמפנו כי אם בכל־עת מצורים בחוץ מאת ומביתנו חרדה׃"
+    },
+    {
+      "id": "corinthians2.7.7.000040",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is difficult to confirm from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_007_000040.png",
+      "hebrew_text": "אַךְ לֹא לְבַד בְּמְבוֹאוֹ כִּי אִם גַּם בַּנֶּחָמָה אֲשֶׁר נִחַם מִכֶּם בְּהַגִּידוֹ לָנוּ אֶת־אַהֲבַתְכֶם אֵלַי וְאֶת־הַמְּרוֹרִים וְאֶת־קִנְאַתְכֶם עָלַי כֵּן אֲשֶׁר שָׂמַחְתִּי עַל־יֹתֵר׃"
+    },
+    {
+      "id": "corinthians2.7.8.000040",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few small marks are not fully clear.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_008_000040.png",
+      "hebrew_text": "וְאִם הוֹגַעְתִּי אֶת־נַפְשְׁכֶם בְּאִגַּרְתִּי לֹא נִחַמְתִּי גַּם אִם אֶתְנַחֵם כִּי רֹאֶה אֲנִי כִּי־אִגֶּרֶת הַהִיא אַךְ לְשָׁעָה אַחַת הוֹגְעָה אֶת־נַפְשְׁכֶם׃"
+    },
+    {
+      "id": "corinthians2.7.9.000042",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Crop is partial/blurred and several words are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_009_000042.png",
+      "hebrew_text": "מֵעַתָּה שָׂמַחְתִּי אֲנִי לֹא כִּי נוּגִיתֶם כִּי אִם כִּי־נִדְנַחְתֶּם לִתְשׁוּבָה מֵעַתָּה כִּי נוּגִיתֶם בֵּאלֹהִים אֲשֶׁר בְּמְאוּמָה לֹא הֶעֱנַשְׁנוּ מִמֶּנּוּ"
+    },
+    {
+      "id": "corinthians2.7.10.000042",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_010_000042.png",
+      "hebrew_text": "כִּי הַחֲרָדָה אֲשֶׁר בֵּאלֹהִים הִיא מְפַעֶלֶת אֶת־תְּשׁוּבָה לִישׁוּעָה בְּלִי הִתְנַחֵמוּת וְחַרְדַת הָעוֹלָם הִיא מְפַעֶלֶת אֶת־הַמָּוֶת׃"
+    },
+    {
+      "id": "corinthians2.7.11.000042",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse is partially cropped/blurred; several words and pointing marks are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_011_000042.png",
+      "hebrew_text": "כִּי הִנֵּה הַדָּבָר הַזֶּה אֲשֶׁר בּוֹ נִכְמְרְתֶּם כֵּאלֹהִים הוֹלִיד לָכֶם אֶת־נַפְשְׁכֶם כַּמָּה פְּעֻלָּה בָּכֶם בְּעַד כִּי אַם אֶת־הִתְנַצֵּל כִּי אַם זַעַם כִּי אַם יִרְאָה כִּי אַם אַהֲבָה כִּי־אַף קִנְאָה כִּי־אַף נְקָמָה בְּכָל־דָּבָר הִתְבָּרוּ אֶת־נַפְשְׁכֶם כִּי נְקִיִּם אַתֶּם בַּמַּעַל׃"
+    },
+    {
+      "id": "corinthians2.7.12.000042",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/pointing are blurred; transcription may need checking against the image.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_012_000042.png",
+      "hebrew_text": "לָכֵן אַף כִּי כָּתַבְתִּי לָכֶם לֹא עַל־הַמְּעַוֵּל וְלֹא עַל־הַנֶּעְוָל כִּי־אִם לְהִגָּלֹה אֶת־חֲרִיצוּתֵנוּ אֲשֶׁר יֵשׁ לָנוּ עֲלֵיכֶם אֵצֶל אֱלֹהִים׃"
+    },
+    {
+      "id": "corinthians2.7.13.000044",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial words are partly close to crop/top edge; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_013_000044.png",
+      "hebrew_text": "עַל־כֵּן נִחַמְנוּ עַל־תַּנְחוּמֵיכֶם וְיֹתֵר מְאֹד שָׂמַחְנוּ עַל־שִׂמְחַת טִיטוּס כִּי רוּחַ לוֹ נָחָה מִכֻּלְּכֶם׃"
+    },
+    {
+      "id": "corinthians2.7.14.000044",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some consonants/pointing around the middle line are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_014_000044.png",
+      "hebrew_text": "וְאִם מְאוּמָה אֵלֶיךָ הִתְהַלַּלְתִּי עֲלֵיכֶם לֹא בֹשְׁתִּי כִּי אִם כְּמוֹ כָּל־דְּבָרִים בֶּאֱמֶת דִּבַּרְתִּי אֲלֵיכֶם וְכֵן הִתְהַלְּלֵנוּ אֲשֶׁר הָיָה אֶל־טִיטוּס אֱמֶת נַעֲשָׂה׃"
+    },
+    {
+      "id": "corinthians2.7.15.000044",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is hard to preserve exactly; first word may require review.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_015_000044.png",
+      "hebrew_text": "וְרַחֲמָיו יוֹתֵר נִמְכּוּ עֲלֵיכֶם בְּזָכְרוֹ יִקְהַת לְבַבְכֶם כַּאֲשֶׁר בְּיִרְאָה וּבִרְעָדָה קִבַּלְתֶּם׃"
+    },
+    {
+      "id": "corinthians2.7.16.000044",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/cantillation-like marks are small; some vocalization may be uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_016_000044.png",
+      "hebrew_text": "לָכֵן תּוֹדֶה לִי כִּי־בְּכָל־דָבָר אֲנִי בֹטֵחַ עֲלֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.8.1.000044",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some diacritics are difficult to verify exactly.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_001_000044.png",
+      "hebrew_text": "וּמוֹדִיעִים אֲנַחְנוּ לָכֶם אַחַי אֶת־חֶסֶד אֱלֹהִים הַנִּתָּנָה בְּקְהִלּוֹת הַגּוֹיִם׃"
+    },
+    {
+      "id": "corinthians2.8.2.000044",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_002_000044.png",
+      "hebrew_text": "כִּי־בְרֹב בֹחַן הַמְּצוּקָה הִיא יִתְרַת שִׂמְחָתָם וְעֹמֶק מִסְכְּנוּתָם הוֹתִיר לְעֹשֶׁר תֻּמָּם׃"
+    },
+    {
+      "id": "corinthians2.8.3.000046",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several consonants/pointing marks are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_003_000046.png",
+      "hebrew_text": "כִּי־בְכֹחָם מֵעַל אֹכֶף הֵם עַל־כֹּחָם נְדָבָה הֵמָּה׃"
+    },
+    {
+      "id": "corinthians2.8.4.000046",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are faint; transcription may need verification.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_004_000046.png",
+      "hebrew_text": "עִם תַּחֲנוּנִים רַבִּים שֹׁאֲלִים מִמֶּנּוּ לָקַחַת מִידֵיהֶם אֶת־הַמַּתָּנָה וְאֵת נְדָבוֹת הַשֵּׁרוּת אֲשֶׁר לִקְדוֹשִׁים הִנֵּה׃"
+    },
+    {
+      "id": "corinthians2.8.5.000046",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/marks are small and slightly blurred.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_005_000046.png",
+      "hebrew_text": "וְלֹא כַּאֲשֶׁר שָׁבַרְנוּ כִּי אִם אֶת־נַפְשָׁם נָתְנוּ בָרִאשׁוֹנָה לַיהוֹה וְלָנוּ בְּחֵפֶץ אֱלֹהִים׃"
+    },
+    {
+      "id": "corinthians2.8.6.000046",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word and some pointing require review due to image blur.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_006_000046.png",
+      "hebrew_text": "כֵּן אֲשֶׁר שָׁאַלְנוּ מִטִּיטוֹס אַךְ הֵחֵל כֵּן גַּם לְכַלּוֹת בָּכֶם אֶת־הַמַּתָּנָה הַזֹּאת׃"
+    },
+    {
+      "id": "corinthians2.8.7.000046",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse slightly cut/overlaps prior line; several marks are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_007_000046.png",
+      "hebrew_text": "כִּי־אִם כַּאֲשֶׁר בְּכָל מוֹתָרִים אַתֶּם בֶּאֱמוּנָה בְּדָבָר בְּדֵעָה וּבְכָל־יְגִיעָה וּבְאַהֲבַתְכֶם אֵלֵינוּ אֲשֶׁר גַּם בַּמַּתָּנָה הַזֹּאת הוֹתִירוּ׃"
+    },
+    {
+      "id": "corinthians2.8.8.000046",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is faint; word ביגיע may need review.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_008_000046.png",
+      "hebrew_text": "אֵינֶנִּי בְּמִצְוָה אֹמֵר לָכֶם כִּי אִם בִּיגִיעַ הָאֲחֵרִים וּלְבָחוֹן אֶת־אֱמֶת אַהֲבַתְכֶם׃"
+    },
+    {
+      "id": "corinthians2.8.9.000048",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_009_000048.png",
+      "hebrew_text": "כִּי־יֹדְעִים אַתֶּם אֶת־הַחֶסֶד אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ כִּי־עֲלֵיכֶם מִסְכֵּן הוּא בִּהְיוֹתוֹ עָשִׁיר אֲשֶׁר אַתֶּם בְּמִסְכְּנוּתוֹ תַּעֲשִׁירוּ׃"
+    },
+    {
+      "id": "corinthians2.8.10.000048",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and exact consonants in several words are uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_010_000048.png",
+      "hebrew_text": "וְעֵצָתִי בָּזֹאת אֶתֵּן לָכֶם כִּי וְאַתֶּם הַחֵל עֲלֵיכֶם אֲשֶׁר הַחִלּוֹתֶם מִשָּׁנָה הָרִאשׁוֹנָה לֹא לְבַד לַעֲשׂוֹת כִּי־אִם גַּם לְעָשׂוֹת׃"
+    },
+    {
+      "id": "corinthians2.8.11.000048",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and vowels are unclear; transcription may need verification.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_011_000048.png",
+      "hebrew_text": "וּמֵעַתָּה גַּם לְכַלּוֹת בְּמַעֲשֶׂה לְמַעַן כַּאֲשֶׁר הָיָה נְדָבָה לִרְאֹה לְאוֹת כֵּן גַּם לְכַלּוֹת מֵאֲשֶׁר תִּמְצָאֶנָּה יֶדְכֶם׃"
+    },
+    {
+      "id": "corinthians2.8.12.000048",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning and final word/pointing somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_012_000048.png",
+      "hebrew_text": "וְאִם רוּחַ נְדָבָה בּוֹ אִישׁ מַה־שֶּׁתִּמְצָא יָדוֹ מְקֻבָּל וְלֹא אֲשֶׁר לֹא תִּמְצָא׃"
+    },
+    {
+      "id": "corinthians2.8.13.000048",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Exact pointing and one word are uncertain from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_013_000048.png",
+      "hebrew_text": "וְלֹא אֲשֶׁר לַאֲחֵרִים נִרְפָּה וְלָכֶם מְצֻקָה כִּי אִם שִׁוָּה׃"
+    },
+    {
+      "id": "corinthians2.8.14.000048",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_014_000048.png",
+      "hebrew_text": "בָּעֵת הַהִיא יִתְרְכֶם יְמַלֵּא אֶת־חֶסְרָם אֲשֶׁר גַּם הֵם בְּעֵתָהּ יְמַלֵּא אֶת־חֶסְרְכֶם אֲשֶׁר תִּהְיֶה צְדָקָה׃"
+    },
+    {
+      "id": "corinthians2.8.15.000050",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and exact small marks require review.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_015_000050.png",
+      "hebrew_text": "כְּמוֹ בִּכְתָב וְלֹא הֶעְדִּיף הַמַּרְבֶּה וְהַמַּמְעִיט לֹא הֶחְסִיר׃"
+    },
+    {
+      "id": "corinthians2.8.16.000050",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud may be uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_016_000050.png",
+      "hebrew_text": "וְתוֹדָה לֵאלֹהִים הַנּוֹתֵן אֶת־רוּחַ נְדָבָה אַחַת עֲלֵיכֶם בְּלֵב טִיטוּס׃"
+    },
+    {
+      "id": "corinthians2.8.17.000050",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_017_000050.png",
+      "hebrew_text": "כִּי אֶת־הַנֹּחַ יִמַּנּוּ לָקַח עָלָיו נַפְשׁוֹ וְכִי־נְדִיב לֵב הוּא בְרוֹן נְדִיבָה יָצָא אֲלֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.8.18.000050",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and exact spelling should be reviewed.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_018_000050.png",
+      "hebrew_text": "וְשָׁלַחְנוּ גַּם עִמּוֹ אֶת־אָחִינוּ אֲשֶׁר יֵשׁ לוֹ תְהִלָּה בַּבְּשׂוֹרָה בְּכָל־קְהִלּוֹת׃"
+    },
+    {
+      "id": "corinthians2.8.19.000050",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Multiple words and pointing are difficult to verify from the image.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_019_000050.png",
+      "hebrew_text": "וְלֹא לְבַדּוֹ כִּי אִם נִשְׁלַח בְּאֶצְבַּעַת עָלֵינוּ מִקְּהִלּוֹת לִהְיוֹת חָבֵר מַדְרִיכֵנוּ אֶת הַמַּתָּנָה הַזֹּאת לְשֵׁרוּתֵנוּ לִכְבוֹד אֲדוֹנֵינוּ וּלְחוּשְׁכֶם בָּכֶם׃"
+    },
+    {
+      "id": "corinthians2.8.20.000050",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_020_000050.png",
+      "hebrew_text": "וְנִשְׁמֹר לָנוּ בְּזֹאת פֶּן־יַחְרִפֵנוּ אִישׁ בְּהוֹן הַזֶּה אֲשֶׁר מְשָׁרְתִים אֲנַחְנוּ׃"
+    },
+    {
+      "id": "corinthians2.8.21.000050",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and small marks are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_021_000050.png",
+      "hebrew_text": "כִּי וּמְכִינֵי טוֹבוֹת לֹא לְבַד לִפְנֵי יְהוָה כִּי אִם גַּם לִפְנֵי הָאֲנָשִׁים׃"
+    },
+    {
+      "id": "corinthians2.8.22.000052",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left/right edges slightly cropped and pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_022_000052.png",
+      "hebrew_text": "ושלחנו אתם גם את אחינו אשר בחנוהו בדברים רבים ובפעמים רבות כי במצות הוא ועתה על־יתר יהיה למצאו בבטחה גדולה אשר לו עליכם"
+    },
+    {
+      "id": "corinthians2.8.23.000052",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse appears partly cropped at left; pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_023_000052.png",
+      "hebrew_text": "ואם על־טיטום שהוא חברי ועזרי אליכם אם אחינו שליחי הקהלות לכבוד המשיח"
+    },
+    {
+      "id": "corinthians2.8.24.000052",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are small and slightly blurry.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_024_000052.png",
+      "hebrew_text": "לָכֵן אֶת־אוֹתָהּ אַהֲבַתְכֶם וְהִתְהַלּוּתֵנוּ עֲלֵיכֶם חַוּוּ אֵלֵיהֶם גַּם עַל־פְּנֵי הַקְּהִלּוֹת׃"
+    },
+    {
+      "id": "corinthians2.9.1.000052",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is somewhat unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_001_000052.png",
+      "hebrew_text": "כִּי עַל־הַהֲוָיָה אֲשֶׁר בַּקְּדוֹשִׁים הִיא אֵין צָרִיךְ לִכְתֹב אֵלֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.9.2.000052",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several vowels and one or two letters are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_002_000052.png",
+      "hebrew_text": "אֲשֶׁר עָלֶיהָ מִתְהַלֵּל אָנֹכִי בָכֶם וְהִגַּדְתִּי כִּי־גַם אֲחַיָּא עֲתִידָה הִיא מִשָּׁנָה כִּי תַעֲבֹר וְקִנְאַתְכֶם גֵּרְתָה רַבִּים׃"
+    },
+    {
+      "id": "corinthians2.9.3.000054",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Header ignored; pointing is not fully certain.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_003_000054.png",
+      "hebrew_text": "וְשָׁלַחְתִּי אֵלֵיכֶם אֶת־הָאַחִים פֶּן־הִתְהַלּוּתֵנוּ אֲשֶׁר עֲלֵיכֶם הִיא לַהֶבֶל בְּחֵלֶק הַזֶּה אֲשֶׁר דִּבַּרְתִּי נְכוֹנִים תִּהְיוּ׃"
+    },
+    {
+      "id": "corinthians2.9.4.000054",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words/pointing uncertain due to blur and unusual typography.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_004_000054.png",
+      "hebrew_text": "פֶּן אִם יָבֹאוּ עִמִּי הַמְּקִדִּים וּמָצְאוּ אֶתְכֶם בִּהְבָּלְכֶם וְהִתְבּוֹשַׁשְׁנוּ אֲנַחְנוּ (פֶּן־יֵאָמֵר אַתֶּם) בְּדָבָר־הַהִתְהַלּוּת וְהַאֲחִיזָה׃"
+    },
+    {
+      "id": "corinthians2.9.5.000054",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and wording are difficult to confirm due to blur/cropping.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_005_000054.png",
+      "hebrew_text": "לָכֵן חָשַׁבְתִּי כִּי־לְצָרֵכֶם לִשְׁאָל מֵאַחִים אֲשֶׁר יְקַדְּמוּ לָבֹא אֲלֵיכֶם וּלְהָכִין אֶת־בִּרְכַתְכֶם הַנֶּאֱמֶרֶת מִלְּפָנִים כִּי בְּכֵנָה הִיא וְלֹא־זֹאת בִּבְרָכָה וְלֹא בְּבֶצַע"
+    },
+    {
+      "id": "corinthians2.9.6.000054",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial phrase and some niqqud uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_006_000054.png",
+      "hebrew_text": "וְזֹאת רֹא הַזֹּרֵעַ בְּחִסָּרוֹן גַּם בְּחִסָּרוֹן יִקְצֹר וַאֲשֶׁר זֹרֵעַ בִּבְרָכָה גַּם בִּבְרָכָה יִקְצֹר"
+    },
+    {
+      "id": "corinthians2.9.7.000054",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/letters uncertain in blurred crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_007_000054.png",
+      "hebrew_text": "אִישׁ אִישׁ בְּעֵצָה לְבָבוֹ לֹא מִיגוֹן אוֹ מִצֹּרֶךְ כִּי־תּוֹמֵךְ בְּשִׂמְחָה אֲהֵבוֹ אֱלֹהִים"
+    },
+    {
+      "id": "corinthians2.9.8.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top/header Hebrew ignored; some text near left edge and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_008_000056.png",
+      "hebrew_text": "כִּי יָכֹל יְהוָה לְהוֹתִיר אֶת־כָּל־מַתְּנָה הַחֶסֶד בָּכֶם אֲשֶׁר בְּכָל־דָּבָר תָּמִיד יְהִי לָכֶם כָּל־דַּי לְהוֹתִירְכֶם אֶל־כָּל־מַעֲשֶׂה טוֹב"
+    },
+    {
+      "id": "corinthians2.9.9.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud and one or two letters are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_009_000056.png",
+      "hebrew_text": "כְּמוֹ נִכְתָּב פִּזַּר נָתַן לָאֶבְיוֹנִים צִדְקָתוֹ עוֹמֶדֶת לָעַד"
+    },
+    {
+      "id": "corinthians2.9.10.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks and final word are not fully clear.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_010_000056.png",
+      "hebrew_text": "והנותן זרע לזרע ולחם לאכל גם הוא יתן וירבה את־זרעכם ויפרה את־אפי צדקתכם׃"
+    },
+    {
+      "id": "corinthians2.9.11.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Vocalization and the phrase around אל־כל־תם וישר are somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_011_000056.png",
+      "hebrew_text": "לעשר בכל־דבר אל־כל־תם וישר אשר יפעל בנו את־התודה לאלהים׃"
+    },
+    {
+      "id": "corinthians2.9.12.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse partly cropped; pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_012_000056.png",
+      "hebrew_text": "כי־עבודת הכהנה הזאת לא תמלא לבד את־חסרון הקדושים כי אם גם תותיר בתודות רבות לאלהים׃"
+    },
+    {
+      "id": "corinthians2.9.13.000056",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Only lower portion of verse image visible; several words/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_013_000056.png",
+      "hebrew_text": "בבחון הצדקה הזאת מכבדים את־אלהים ביקרה הודכם לבשורת המשיח ובתם הטובה אשר אתם ואל־כלכם׃"
+    },
+    {
+      "id": "corinthians2.9.14.000058",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing not confidently preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_014_000058.png",
+      "hebrew_text": "ובתפלתם עליכם מתאוים אתכם ביתרת חנות אלהים אליכם׃"
+    },
+    {
+      "id": "corinthians2.9.15.000058",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are faint.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_015_000058.png",
+      "hebrew_text": "וְתּוֹדָה לֵאלֹהִים עַל־מַתַּת הַמַּתָּנָה לֹא יוּדַע סִפּוּרָהּ׃"
+    },
+    {
+      "id": "corinthians2.10.1.000058",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and vowels are uncertain due to blur and unusual spelling.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_001_000058.png",
+      "hebrew_text": "וַאֲנִי פוֹלוֹס מַתְחַנֵּן אֲלֵיכֶם מִלְּךָ וּבְעָנוֹת הַמָּשִׁיחַ אֲשֶׁר אֲנִי לִפְנֵיכֶם עָנִי הוּא בָכֶם וְאִם אַחַת בּוֹטֵחַ אֲנִי עֲלֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.10.2.000058",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Text is partly unclear; possible transcription errors in several words.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_002_000058.png",
+      "hebrew_text": "וְשׁוֹאֵל אֲנִי מִכֶּם מִן אִם אָבוֹא לִפְנֵיכֶם אֶצְטָרֵךְ לְהוֹפִיעַ וּבְבִטָּחוֹן לַעֲשׂוֹת אֲשֶׁר חָשַׁבְתִּי בְּאֵלֶּה הַחֹשְׁבִים כִּי־הָלַכְנוּ בַבָּשָׂר׃"
+    },
+    {
+      "id": "corinthians2.10.3.000058",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word form are somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_003_000058.png",
+      "hebrew_text": "וְאַף כִּי־בַבָּשָׂר הֹלְכִים אַךְ לֹא כַבָּשָׂר נִלְחָמִים אֲנַחְנוּ׃"
+    },
+    {
+      "id": "corinthians2.10.4.000058",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final phrase and some vowels are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_004_000058.png",
+      "hebrew_text": "כִּי־כְלֵי מִלְחַמְתֵּנוּ אֵינָם כְּלֵי־הַבָּשָׂר כִּי־אִם גִּבּוֹרִים לֵאלֹהִים לַהֲרִיסוֹת הַמְּבַצָּרוֹת לְהָרֵס אֶת־מַחְשָׁבוֹת׃"
+    },
+    {
+      "id": "corinthians2.10.5.000060",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_005_000060.png",
+      "hebrew_text": "וְאֶת־כָּל־רוּם הַמִּתְרוֹמֵם עַל־דַּעַת אֱלֹהִים וְשֹׁבֶה כָּל־תְּבוּנָה תַּחַת יִקְחַת הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "corinthians2.10.6.000060",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word form are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_006_000060.png",
+      "hebrew_text": "וְעֲתִידִים אֲנַחְנוּ לִנְקֹם כָּל־מְרִים אִם נִמְלֹא יִקְחַתְכֶם׃"
+    },
+    {
+      "id": "corinthians2.10.7.000060",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and exact word division are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_007_000060.png",
+      "hebrew_text": "אֶת אֲשֶׁר בְּפָנִים הַבִּיטוּם אִם אִישׁ יִבְטַח אֶת־נַפְשׁוֹ כִּי לַמָּשִׁיחַ הוּא גַּם זֹאת יָשׁוּב עַל־נַפְשׁוֹ כִּי־כְמוֹהוּ לַמָּשִׁיחַ כֵּן גַּם אֲנַחְנוּ לַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "corinthians2.10.8.000060",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and exact reading of first verb are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_008_000060.png",
+      "hebrew_text": "וְאִם גַּם אַחְתִּיר לְהִתְהַלֵּל עַל־שִׁלְטוֹנֵנוּ אֲשֶׁר נָתַן לָנוּ יְהוָה לְמִבְנֶה וְלֹא לַהֲרִיסְתְכֶם לֹא אֵתְבּוֹשׁ׃"
+    },
+    {
+      "id": "corinthians2.10.9.000060",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word pointing is slightly unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_009_000060.png",
+      "hebrew_text": "פֶּן אֶחְשַׁב כְּמוֹ אִישׁ מַחֲרִיד אֶתְכֶם בְּאִגְּרוֹתַי׃"
+    },
+    {
+      "id": "corinthians2.10.10.000060",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks and first line glyphs are difficult to verify from crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_010_000060.png",
+      "hebrew_text": "כִּי הָאִגְּרוֹת אָמְרוּ כְּבֵדוֹת וּגְבוּרוֹת וּפוֹחַ גּוּפֵנוּ נִקְלָה וּדְבָרוֹ נִבְזֶה הוּא׃"
+    },
+    {
+      "id": "corinthians2.10.11.000062",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Diacritics and one or two letters may need verification from a clearer image.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_011_000062.png",
+      "hebrew_text": "כִּי אִם זֹאת יַחְשֹׁב אֲשֶׁר כָּזֶה כִּי־בַּאֲשֶׁר הוֹוִים אֲנַחְנוּ בְּדָבָר בְּאִגְרוֹת בִּהְיוֹתֵנוּ רָחוֹק מִכֶּם כֵּן נִהְיֶה לִפְנֵיכֶם בְּקָרֹב׃"
+    },
+    {
+      "id": "corinthians2.10.12.000062",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several vowel points and small marks are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_012_000062.png",
+      "hebrew_text": "כִּי לֹא זֹמְמִים אֲנַחְנוּ לְהִתְחַשֵּׁב אוֹ לְהִדַּמּוֹת לְאֵלֶּה הַמַּתְהַלְלִים אֶת־נַפְשָׁם וְהֵמָּה כִּי־בְנַפְשָׁם מִתְמֹדְדִים אֶת־נַפְשָׁם וּמְדַמִּים אֶת־נַפְשָׁם לְנַפְשָׁם אֵינָם מְבִינִים׃"
+    },
+    {
+      "id": "corinthians2.10.13.000062",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_013_000062.png",
+      "hebrew_text": "וַאֲנַחְנוּ אֵינֶנּוּ עַל־הַמִּדָּה נִתְהַלֵּל כִּי־בְמִשׂוּרָה נִמְדָּה וְהִיא אֲשֶׁר בָּהּ מָדַד לָנוּ אֱלֹהִים בְּמִדָּה לִנְגֹעַ עֲדֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.10.14.000062",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters and niqqud are uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_014_000062.png",
+      "hebrew_text": "כִּי לֹא כְמוֹתִי לֹא הִגַּעְנוּ אֲלֵיכֶם רוֹדְדִים אֶת־נַפְשֵׁנוּ כִּי עֲדֵיכֶם הִגַּעְנוּ בְּבְשׂוֹרַת הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "corinthians2.10.15.000062",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one or two word forms are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_015_000062.png",
+      "hebrew_text": "לֹא עַל־הַמִּדָּה נִתְהַלֵּל בִּיגִיעַת הָאֲחֵרִים כִּי תִּקְוָה לָנוּ לְמַרְבָּה הַאֱמוּנַתְכֶם לְהִגְדִּיל בָּכֶם כְּמִדָּתֵנוּ לִיתֵרָה׃"
+    },
+    {
+      "id": "corinthians2.10.16.000064",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud and the word before לְהִתְהַלֵּל are not fully clear.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_016_000064.png",
+      "hebrew_text": "אֶת־אֲשֶׁר לְהַלָּאָה מִכֶּם לְבַשֵּׂר לֹא בְקַו אַחֵר בְּמֻכְנוֹת לְהִתְהַלֵּל׃"
+    },
+    {
+      "id": "corinthians2.10.18.000064",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and some small marks are difficult to verify from image.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_018_000064.png",
+      "hebrew_text": "כִּי אֲשֶׁר יִתְהַלֵּל בַּנֶּפֶשׁ אֵינֶנּוּ נִבְחָן כִּי אִם אֲשֶׁר יְהַלְּלוּ יְהוָה׃"
+    },
+    {
+      "id": "corinthians2.11.1.000064",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and exact first word vocalization uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_001_000064.png",
+      "hebrew_text": "מִי־יִתֵּן אֲשֶׁר הִתְאַפְּקוּ לִי מְעַט מְעַט בְּדִבְרֵי כְסִילוּת אַךְ הִתְאַפְּקוּ לִי׃"
+    },
+    {
+      "id": "corinthians2.11.2.000064",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/marks uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_002_000064.png",
+      "hebrew_text": "כִּי מְקַנֵּא אָנֹכִי לָכֶם בְּקִנְאַת־אֱלֹהִים כִּי־אֵרַשְׂתִּי אֶתְכֶם לְאִישׁ אֶחָד בִּבְתוּלָה זַכָּה לְהַקְרִיב לַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "corinthians2.11.3.000064",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse is readable but some pointing and exact letters in middle line uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_003_000064.png",
+      "hebrew_text": "כִּי יָרֵא אָנֹכִי פֶּן־רִמָּה הַנָּחָשׁ הִשָּׁא אֶת־חַוָּה בְּעָרְמֹו כָּךְ תִּהְיֶה מַחְשְׁבוֹתֵיכֶם מִן יֹשֶׁר אֲשֶׁר בַּמָּשִׁיחַ׃"
+    },
+    {
+      "id": "corinthians2.11.4.000066",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and exact form of final word uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_004_000066.png",
+      "hebrew_text": "וְאִם אִישׁ יָבוֹא וִיבַשֵּׂר אֶת־יֵשׁוּעַ אַחֵר אֲשֶׁר לֹא בִּשַּׂרְנוּ אוֹ־רוּחַ אַחֶרֶת לְקַחְתֶּם אֲשֶׁר לֹא לְקַחְתֶּם אוֹ בְּשׂוֹרָה אַחֶרֶת אֲשֶׁר לֹא לְקַחְתֶּם הֵיטֵב הִקְשִׁיבוּ׃"
+    },
+    {
+      "id": "corinthians2.11.7.000066",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/words are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_007_000066.png",
+      "hebrew_text": "אוּלַמָּה חֵטְא חָטָאתִי כִּי אֶת נַפְשִׁי עִנִּיתִי אֲשֶׁר תְּרוּמְמוּ תִּנָּשְׂאוּ וָאַגִּידְכֶם כִּי חִנָּם אֶת־בְּשׂוֹרַת אֱלֹהִים בִּשַּׂרְתִּי אֶתְכֶם׃"
+    },
+    {
+      "id": "corinthians2.11.10.000068",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and the final place-name are slightly uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_010_000068.png",
+      "hebrew_text": "יֵשׁ אֱמֶת הַמָּשִׁיחַ בִּי כִּי־תְהִלָּה הַזֹּאת לֹא תִּסָּכֵל בִּי בִּגְבוּלוֹת אַחַיָא ׃"
+    },
+    {
+      "id": "corinthians2.11.16.000068",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is partly cut in image; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_016_000068.png",
+      "hebrew_text": "עוֹדֵנִי אֹמֵר אַתִּי בַּל־יְחַשְּׁבֵנִי אִישׁ כְּמוֹ אֵינֶנָּה בִינַת אָדָם כִּי וְאִם לֹא גַּם בְּכָל קַבְּלֵנִי אֲשֶׁר מְעַט מְעַט אֶתְהַלֵּל"
+    },
+    {
+      "id": "corinthians2.11.17.000070",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are difficult to preserve confidently from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_017_000070.png",
+      "hebrew_text": "את־אשר אני מדבר אינני מדבר כיהוה כי אם כמו בסכלה בעצם התהלה הזאת׃"
+    },
+    {
+      "id": "corinthians2.11.18.000070",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are difficult to preserve confidently from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_018_000070.png",
+      "hebrew_text": "וכי־רבים מתהללים בבשר גם אני אתהלל׃"
+    },
+    {
+      "id": "corinthians2.11.19.000070",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are difficult to preserve confidently from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_019_000070.png",
+      "hebrew_text": "כי במנוחה תשמעו את־הנבלים בהיותכם חכמים׃"
+    },
+    {
+      "id": "corinthians2.11.20.000070",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are difficult to preserve confidently from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_020_000070.png",
+      "hebrew_text": "כי תשאו אם איש יעביד אתכם אם איש יבלע אם איש יקח אשר לכם אם איש יתרומם עליכם אם איש יכה אתכם בפנים׃"
+    },
+    {
+      "id": "corinthians2.11.21.000070",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing are uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_021_000070.png",
+      "hebrew_text": "כלבשת אומר אני כמו אשר חלינו בדבר הזה בכל־דבר אשר פה יום איש בסכלה מדבר אני זומם גם אנכי׃"
+    },
+    {
+      "id": "corinthians2.11.22.000070",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are not confidently preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_022_000070.png",
+      "hebrew_text": "עברים המה וגם אני בני ישראל המה וגם אני זרע אברהם המה וגם אנכי׃"
+    },
+    {
+      "id": "corinthians2.11.23.000070",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully preserved; one or more words uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_023_000070.png",
+      "hebrew_text": "משרתי המשיח המה בכל אדרך נבהלתי עמם גם יכלתי ברציעים יתרים בנגעים על יתר במסרות יותר במותים פעמים רבות׃"
+    },
+    {
+      "id": "corinthians2.11.24.000072",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_024_000072.png",
+      "hebrew_text": "מיהודים חמש פעמים ארבעים בלי אחד לקחתי׃"
+    },
+    {
+      "id": "corinthians2.11.25.000072",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_025_000072.png",
+      "hebrew_text": "שלוש פעמים נחבטתי פעם אחת נרגמתי שלוש פעמים הייתי במשבר האניה ויומם ולילה במצולות ים הייתי׃"
+    },
+    {
+      "id": "corinthians2.11.26.000072",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing/marks uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_026_000072.png",
+      "hebrew_text": "במהלכים ומסעים בשטף מים רבים במצדי הפריצים במצדי משחיתי במצדי גוים במצרים בעיר במצרים במדבר במצרים בים במצרים באחי־שקרים׃"
+    },
+    {
+      "id": "corinthians2.11.27.000072",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points/marks are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_027_000072.png",
+      "hebrew_text": "בִּיגִיעָה בִּתְלָאָה בִּשְׁקֻדָּה\nפְּעָמִים רַבּוֹת בְּצָמָא בְּצֹם\nפְּעָמִים בְּקֹר בְּעֵירֹם׃"
+    },
+    {
+      "id": "corinthians2.11.28.000072",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few consonants are not fully clear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_028_000072.png",
+      "hebrew_text": "בִּלְתִּי הַחִיצוֹנוֹת כִּי־מֵעָלַי\nיִסּוּרִים בְּכָל־יוֹם קָמִים עָלַי\nוְדַאֲגַת כָּל־הַקְּהִלּוֹת עַל־שִׁכְמִי׃"
+    },
+    {
+      "id": "corinthians2.11.29.000072",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_029_000072.png",
+      "hebrew_text": "מִי חוֹלֶה וַאֲנִי לֹא חַלּוֹתִי\nמִי נִכְשַׁל וַאֲנִי לֹא אֶקָּד׃"
+    },
+    {
+      "id": "corinthians2.11.30.000072",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing somewhat unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_030_000072.png",
+      "hebrew_text": "אִם צָרִיךְ לְהִתְהַלֵּל אֶתְהַלֵּל\nבְּחֻלְיִּי׃"
+    },
+    {
+      "id": "corinthians2.11.31.000074",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/word division partly uncertain from image.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_031_000074.png",
+      "hebrew_text": "הָאֱלֹהִים וְאָבִי אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ יוֹדֵעַ יְהוָה הַמְבֹרָךְ לְעוֹלָם כִּי־אֵינֶנִּי כֹזֵב"
+    },
+    {
+      "id": "corinthians2.12.2.000074",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_002_000074.png",
+      "hebrew_text": "יָדַעְתִּי אָדָם בַּמָּשִׁיחַ מֵאַרְבַּע עֶשְׂרֵה שָׁנָה אִם בַּגּוּפָה לֹא יָדַעְתִּי אִם מִחוּץ לַגּוּפָה גַּם לֹא יָדַעְתִּי אֱלֹהִים יוֹדֵעַ כִּי נִשָּׂאוּ כָמֹהוּ עַד שְׁלִישִׁי הַשָּׁמַיִם׃"
+    },
+    {
+      "id": "corinthians2.12.4.000074",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is partially cut; pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_004_000074.png",
+      "hebrew_text": "דברים לא ידעתי ספורת אשר לא ישה לאדם לדבר׃"
+    },
+    {
+      "id": "corinthians2.12.5.000076",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_005_000076.png",
+      "hebrew_text": "על־דבר כזה מתהלל אנכי ועל נפשי אינני מתהלל כי אם בתחלו׃"
+    },
+    {
+      "id": "corinthians2.12.6.000076",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some Hebrew pointing and one word division are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_006_000076.png",
+      "hebrew_text": "ואם אחפץ להתהלל לא אכסל כי דברי אמת אומר אנכי אך חס אני בן איש יחשבני על־אשר רואני או שומע מאומה ממני׃"
+    },
+    {
+      "id": "corinthians2.12.7.000076",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several letters/pointing uncertain due to image blur and unusual print.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_007_000076.png",
+      "hebrew_text": "וכך אתהלומם על־יתר התזיונות לבלתי נתן לי סלון בבשרי מלאך השטן המכנני באגרוף פן אתהלומם בלבי׃"
+    },
+    {
+      "id": "corinthians2.12.8.000076",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_008_000076.png",
+      "hebrew_text": "ועל־זאת שלש פעמים התחננתי לאדני לסור ממני׃"
+    },
+    {
+      "id": "corinthians2.12.9.000076",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse partly cut; transcription from visible Hebrew only.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_009_000076.png",
+      "hebrew_text": "עַל־כֵּן מִתְרַצֶּה אֲנִי בְּמַחֲלִים בְּחֶרְפּוֹת בְּצָרוֹת"
+    },
+    {
+      "id": "corinthians2.12.10.000076",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning may continue from prior line/crop; included visible target Hebrew.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_010_000076.png",
+      "hebrew_text": "בִּרְדִיפוֹת בְּמַעֲצָרִים עַל־הַמָּשִׁיחַ כִּי בַּאֲשֶׁר חָלָה אֲנִי אָז אֶגְבַּר אָנֹכִי׃"
+    },
+    {
+      "id": "corinthians2.12.14.000078",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and some letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_014_000078.png",
+      "hebrew_text": "הִנֵּה גַּם וְאַתֶּם שְׁלִישׁ וְעַתָּה אֲנִי לָבֹא אֲלֵיכֶם וְלֹא אֶכְבַּד אֶתְכֶם כִּי אֵינֶנִּי מְבַקֵּשׁ אֶת־אֲשֶׁר לָכֶם כִּי־אִם אֶתְכֶם כִּי לֹא יִשָּׂה לַבָּנִים לְהוֹצִיא לְיוֹלְדֵיהֶם כִּי אִם יִשֶּׂה לַיּוֹלְדִים לְהוֹצִיא לִבְנֵיהֶם"
+    },
+    {
+      "id": "corinthians2.12.15.000078",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points/letters uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_015_000078.png",
+      "hebrew_text": "וַאֲנִי חָפַצְתִּי לְכַלְכֵּל אֶת־נַפְשְׁכֶם וְגַם לְהִמָּךְ עַל־נַפְשֹׁתֵיכֶם אַף כִּי־עַל יֶתֶר אֹהֵב אֲנִי אֶתְכֶם וּמְעַט מֵאָהֵב אָנֹכִי"
+    },
+    {
+      "id": "corinthians2.12.16.000078",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Hebrew is somewhat blurry; transcription may contain uncertain pointing.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_016_000078.png",
+      "hebrew_text": "וִיהִי־כִי אֲנִי לֹא הִכְבַּדְתִּי אֶתְכֶם כִּי־אִם בְּרִיוֹתִי עָרוּם בְּמִרְמָה גָּנַבְתִּי אֶתְכֶם"
+    },
+    {
+      "id": "corinthians2.12.17.000080",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and the exact form of the verb are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_017_000080.png",
+      "hebrew_text": "אִם בְּאִישׁ אֶחָד אֲשֶׁר\nשְׁלַחְתִּיו אֲלֵיכֶם בִּצַּעְתִּי אֶתְכֶם׃"
+    },
+    {
+      "id": "corinthians2.13.2.000082",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_002_000082.png",
+      "hebrew_text": "וַאֲנִי עִמָּכֶם עַתָּה כֹתֵב לָאֵלֶּה אֲשֶׁר לְפָנִים חָטְאוּ וְלַאֲחֵרִים כֻּלָּם כִּי כַּאֲשֶׁר אָבוֹא עוֹד לֹא אוֹסִיף לָחוּס עֲלֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.13.3.000082",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/diacritics are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_003_000082.png",
+      "hebrew_text": "תְּבַקְשׁוּן תַּבְחֹן אֶת־הַמָּשִׁיחַ הַמְדַבֵּר בִּי אֲשֶׁר אֵינֶנּוּ חַלָּשׁ בָּכֶם כִּי אִם מַגְבִּיר בָּכֶם׃"
+    },
+    {
+      "id": "corinthians2.13.4.000082",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing are unclear; transcription may contain errors.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_004_000082.png",
+      "hebrew_text": "וְאִם נִצְלַב־וַיֵּלֶךְ הוּא בְּמַחְלָה גַּם הוּא חַי בְּגְבוּרַת אֱלֹהִים וְגַם אֲנַחְנוּ חַלָּשִׁים בּוֹ וְנִחְיֶה עִמּוֹ בִּגְבוּרַת אֱלֹהִים בָּכֶם׃"
+    },
+    {
+      "id": "corinthians2.13.5.000082",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse is partly cropped at top and some pointing is unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_005_000082.png",
+      "hebrew_text": "נַסּוּ אֶת־נַפְשְׁכֶם אִם בָּאֱמוּנָה אַתֶּם בְּחֲנוּ אֶת־נַפְשְׁכֶם הֲלֹא תֵדְעוּ אֶת־נַפְשְׁכֶם כִּי־יֵשׁוּעַ מָשִׁיחַ בָּכֶם הוּא וְאִם לֹא אָז בֶּאֱמֶת נֶאֱלַחְתֶּם׃"
+    },
+    {
+      "id": "corinthians2.13.6.000084",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_006_000084.png",
+      "hebrew_text": "וּמִשְׁבָּר אֲנִי כִּי־יוֹדְעִים אַתֶּם כִּי־אֲנַחְנוּ לֹא בֶּאֱלֹהִים"
+    },
+    {
+      "id": "corinthians2.13.7.000084",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several letters/points are uncertain due to print quality and Hutter orthography.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_007_000084.png",
+      "hebrew_text": "וּמִתְפַּלֵּל אֲנִי אֶל־אֱלֹהִי מִן־רַעַשׂוּ רָעָה גַּם לֹא אַחַת לֹא כִּי־כְּנִבְחָנִים נֵרָאֶה כִּי אִם אֲשֶׁר אַתֶּם תַּעֲשׂוּ אֶת־הַטּוֹבָה וַאֲנַחְנוּ כֶּאֱלֹהִים נִהְיֶה"
+    },
+    {
+      "id": "corinthians2.13.8.000084",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_008_000084.png",
+      "hebrew_text": "כִּי מְאוּמָה לֹא נוּכַל לַעֲשׂוֹת עַל־הָאֱמֶת כִּי־אִם חֵלֶק הָאֱמֶת׃"
+    },
+    {
+      "id": "corinthians2.13.9.000084",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse is split/cropped with upper line partly from preceding image; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_009_000084.png",
+      "hebrew_text": "כִּי־שְׂמֵחִים אֲנַחְנוּ בְּחַלְוּתֵנוּ וְאַתֶּם מְתֻקָּנִים אֲנַחְנוּ אַךְ־תַּכְלִיתְכֶם׃"
+    },
+    {
+      "id": "corinthians2.13.10.000084",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few readings are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_010_000084.png",
+      "hebrew_text": "עַל־כֵּן בִּרְחֹק מִכֶּם כָּתַבְתִּי אֶת־הָאֵלֶּה אוּלַי אָבוֹא אֲלֵיכֶם בְּחֹזֶק אֶעֱשֶׂה כְּשִׁלְטוֹן אֲשֶׁר נָתַן לִי אֲדֹנִי לְמִבְנֶה וְלֹא לַהֲרִיסוֹת׃"
+    },
+    {
+      "id": "corinthians2.13.11.000084",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial portion is near top edge/partly cut; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_011_000084.png",
+      "hebrew_text": "וּבְכָל־דָּבָר אַחַי שִׂמְחוּ הֱיוּ תְמִימֵי־דָרֶךְ וְהִתְנַחֲמוּ וְהִתְכּוֹנְנוּ יַחַד בַּקְשׁוּ שָׁלוֹם וֵאלֹהֵי־הָאַהֲבָה וְהַשָּׁלוֹם יְהִי עִמָּכֶם׃"
+    },
+    {
+      "id": "corinthians2.13.12.000086",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud are not fully clear.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_012_000086.png",
+      "hebrew_text": "שַׁאֲלוּ לְשָׁלוֹם אִישׁ לְרֵעֵהוּ בְּנֶשֶׁק הַקֹּדֶשׁ שָׁאֲלוּ לִשְׁלוֹמְכֶם כָּל־הַקְּדוֹשִׁים׃"
+    },
+    {
+      "id": "corinthians2.13.13.000086",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Text is blurry and some Hebrew letters/points are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_013_000086.png",
+      "hebrew_text": "אֵלֹהֵי הַחוֹנְנִים אַהֲבַת שֶׁבַח וְהַמַּתָּנָה מִמַּלְמַדִים עִם הַכָּפִים וּמִשְׁלַחַת בֵּית־קָדשׁ וְלֻקּם"
+    }
+  ],
+  "likely_crop_issues": [
+    {
+      "id": "corinthians2.1.1.000002",
+      "confidence": "medium",
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_001_000002.png",
+      "hebrew_text": "פּוֹלוֹס שְׁלִיחַ יֵשׁוּעַ הַמָּשִׁיחַ בִּרְצוֹן אֱלֹהִים וְטִימוֹתֵאוֹס אָחִי לַעֲדַת אֱלֹהִים אֲשֶׁר הִיא בְּקוֹרִנְטוֹס עִם הַקְּדוֹשִׁים כֻּלָּם אֲשֶׁר הֵמָּה בְּכָל אַכַאיָא׃"
+    },
+    {
+      "id": "corinthians2.1.6.000004",
+      "confidence": "low",
+      "notes": "Several pointed words and marks are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_006_000004.png",
+      "hebrew_text": "וְאִם נֵצַר אֹךְ עַל־נֶחְמַתְכֶם וְעַל־יְשׁוּעַתְכֶם נֵצַר הַפְּעֻלָּה בְּדַמָּה הַפָּעוֹת הָאֵלֶּה כְּמוֹ גַם אֲנַחְנוּ מְעֻנִּים וְאִם נֻחַם עַל נֶחְמַתְכֶם וְעַל־יְשׁוּעַתְכֶם נֻחַם וְשִׂבְרֵנוּ מָקוּם עֲלֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.1.16.000008",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation-like marks are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_016_000008.png",
+      "hebrew_text": "וְהֵם לַעֲבֹר בָּכֶם וְלָשׁוּב מִכֶּם לָבוֹא אֲלֵיכֶם וּמִכֶּם לָשֶׁבֶת בִּיהוּדָה׃"
+    },
+    {
+      "id": "corinthians2.1.19.000008",
+      "confidence": "medium",
+      "notes": "Final line may continue into next verse/crop; punctuation/ending uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_019_000008.png",
+      "hebrew_text": "כִּי־בֶן הָאֱלֹהִים יֵשׁוּעַ הַמָּשִׁיחַ אֲשֶׁר בָּכֶם מִקְרָא בָּנוּ בְּסִילְוָנוּס וּבְטִימוֹתָאוֹס לֹא הָיָה כֵּן וָאָיִן כִּי אִם כֵּן וְאָמֵן"
+    },
+    {
+      "id": "corinthians2.1.21.000008",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/001_021_000008.png",
+      "hebrew_text": "וְאֵלֹהִים הַמַּעֲמִיד אֶתְכֶם עִמָּנוּ בְּמָשִׁיחַ וּמָשַׁח אֶתְכֶם׃"
+    },
+    {
+      "id": "corinthians2.2.7.000012",
+      "confidence": "low",
+      "notes": "Pointing/marks and several words are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_007_000012.png",
+      "hebrew_text": "לכן להפך יותר התנהגו ותנחמוהו ברך־פתוהו יותתרה יבלע אשר כמוהו"
+    },
+    {
+      "id": "corinthians2.2.9.000012",
+      "confidence": "medium",
+      "notes": "Verse appears short in crop; pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_009_000012.png",
+      "hebrew_text": "לכתובכם אם־בכלכם השמעו׃"
+    },
+    {
+      "id": "corinthians2.2.10.000012",
+      "confidence": "medium",
+      "notes": "Top line partly from preceding crop/verse boundary; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_010_000012.png",
+      "hebrew_text": "כי למי־מאומה תחונו גם אני אחון וגם אני אם מאומה חונתי למי חונתי בעבורכם בפני המשיח׃"
+    },
+    {
+      "id": "corinthians2.2.13.000014",
+      "confidence": "low",
+      "notes": "Some words and pointing are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_013_000014.png",
+      "hebrew_text": "לֹא נַחְתִּי שַׁת לְעֵינִי לְנַפְשִׁי הַעֲמָה כִּי לֹא מָצָאתִי אֶת־טִיטוֹס אָחִי כִּי אִם עָזַבְתִּי אֹתָם בְּשָׁלוֹם וְנָסַעְתִּי לְכִתִּים׃"
+    },
+    {
+      "id": "corinthians2.2.16.000014",
+      "confidence": "medium",
+      "notes": "Pointing is partly unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/002_016_000014.png",
+      "hebrew_text": "לָאֵלֶּה רֵיחַ מָוֶת לָמוֶת וְלָאֵלֶּה רֵיחַ חַיִּים לְחַיִּים וּמִי יִכְשַׁר לָאֵלֶּה׃"
+    },
+    {
+      "id": "corinthians2.3.18.000020",
+      "confidence": "low",
+      "notes": "Several words/pointing in the verse are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/003_018_000020.png",
+      "hebrew_text": "וַאֲנַחְנוּ כֻּלָּנוּ בְפָנִים גְּלוּיִים מַבִּיטִים אֶל־פְּנֵיּם כְּבִיט אֶת־כְּבוֹד יְהוָה וְנֶחֱלֹף לְתְמוּנָתוֹ מִכָּבוֹד אֶל־כָּבוֹד כְּמוֹ מֵרוּחַ יְהוָה׃"
+    },
+    {
+      "id": "corinthians2.4.2.000022",
+      "confidence": "low",
+      "notes": "Pointing and several words are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_002_000022.png",
+      "hebrew_text": "כִּי־אִם מְסִלְּדִים אֲנַחְנוּ אֶת־הַעֲצֻמוֹת הַבּשָׁה וְלֹא מְהַלְּכִים בְּעָרְמָה וְלֹא מְהִילִים אֶת־דְּבַר אֱלֹהִים כִּי אִם בְּדַעַת הָאֱמֶת מְשַׁבְּחִים אֶת־תַּהֲלוֹתֵנוּ אֶל־כָּל־מַדּוּעַ הָאֲנָשִׁים לִפְנֵי אֱלֹהִים:"
+    },
+    {
+      "id": "corinthians2.4.6.000022",
+      "confidence": "medium",
+      "notes": "Beginning of verse slightly cut by crop; some vowels uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_006_000022.png",
+      "hebrew_text": "כִּי־הָאֱלֹהִים הָאֹמֵר מִחֹשֶׁךְ לְנֹגַהּ אוֹר הוּא נָגַהּ בִּלְבָבֵינוּ לְמָאוֹר דַּעַת כְּבוֹד אֱלֹהִים בִּפְנֵי יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "corinthians2.4.7.000022",
+      "confidence": "medium",
+      "notes": "Some pointing is difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_007_000022.png",
+      "hebrew_text": "וְיֵשׁ לָנוּ אוֹצָר הַזֶּה בִּכְלֵי יוֹצֵר אֲשֶׁר רֹב הַגְּבוּרָה יִהְיֶה לֵאלֹהִים וְלֹא מִמֶּנּוּ׃"
+    },
+    {
+      "id": "corinthians2.4.15.000026",
+      "confidence": "low",
+      "notes": "Several words and pointing are uncertain in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_015_000026.png",
+      "hebrew_text": "כי כל־דברים בעבורכם אשר התרבתה המותרת בתודת הרבים הותיר לכבוד אלהים׃"
+    },
+    {
+      "id": "corinthians2.4.17.000026",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish clearly in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/004_017_000026.png",
+      "hebrew_text": "כִּי רֶגַע קָטֹן יִשָּׂא צָרֹתֵינוּ וּמְצִיקוֹתֵינוּ מְאֹד אֶל־יֶתֶר רָמִים וּגְדֹלִים חֶסֶד וְכָבוֹד עוֹלָם פֹּעַל לָנוּ׃"
+    },
+    {
+      "id": "corinthians2.5.1.000028",
+      "confidence": "medium",
+      "notes": "Top of verse is cropped; initial words and pointing are somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_001_000028.png",
+      "hebrew_text": "מִשְׁכָּנֵינוּ עַל־הָאֲדָמָה הַלֹּאת יָמוּת כִּי יֵשׁ לָנוּ בִנְיָן מֵאֱלֹהִים בֵּית עוֹלָם וְאֵינוֹ מַעֲשֵׂה יָדַיִם בַּשָּׁמַיִם׃"
+    },
+    {
+      "id": "corinthians2.5.4.000028",
+      "confidence": "medium",
+      "notes": "Some pointing/marks and a few letters are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_004_000028.png",
+      "hebrew_text": "הנה מתאוננים נכבדים אשר עלינו לא באבה להתפשט כי אם להלבש במעיל אשר הבלע התמותה מן־החיים׃"
+    },
+    {
+      "id": "corinthians2.5.10.000030",
+      "confidence": "medium",
+      "notes": "Top of verse is partly cut in the crop; some pointing and words are difficult to verify.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_010_000030.png",
+      "hebrew_text": "כי צריך לכלנו להראות לפני כסא המשיח אשר יסבל איש איש את סבל גויתו כמעשהו אם טובים ואם רעים׃"
+    },
+    {
+      "id": "corinthians2.5.12.000030",
+      "confidence": "low",
+      "notes": "Several words and vowel marks are uncertain due to blur and cropping.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_012_000030.png",
+      "hebrew_text": "כי לא נוסיף לספר לכם את־תהלתנו כי אם נִתנה לכם את האנה להתהלל עלינו להיות לכם להשיב דבר אל־אשר בפנים ולא בלב כי אם בלב ולב ידברו׃"
+    },
+    {
+      "id": "corinthians2.5.15.000032",
+      "confidence": "medium",
+      "notes": "Some pointing marks uncertain; final word partly close to crop edge.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_015_000032.png",
+      "hebrew_text": "ועל־כלם מת הוא אשר החיים אינם עוד יחיו לנפשותם כי אם לאשר עליהם מת וקם ממתים׃"
+    },
+    {
+      "id": "corinthians2.5.19.000032",
+      "confidence": "medium",
+      "notes": "Some pointing and final words are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_019_000032.png",
+      "hebrew_text": "כִּי כַּאֲשֶׁר אֱלֹהִים הָיָה בַּמָּשִׁיחַ מְחַלֶּה אֶת־הָעוֹלָם לְנַפְשׁוֹ לֹא מְחַשֵּׁב לָהֶם אֶת־חַטֹּאתָם וְהַשָּׂם בָּנוּ אֶת־דְּבַר הַפְּקֻדִים וְחִלּוּהָ"
+    },
+    {
+      "id": "corinthians2.5.20.000032",
+      "confidence": "medium",
+      "notes": "Top of verse is close to crop edge; pointing is partially uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/005_020_000032.png",
+      "hebrew_text": "אֲנַחְנוּ כְּמוֹ בְּשֵׁם אֱלֹהִים הַמַּנְחִם בָּנוּ וּמִתְחַנְּנִים בְּמָשִׁיחַ הִתְחַנְּנוּ לֵאלֹהִים"
+    },
+    {
+      "id": "corinthians2.6.5.000034",
+      "confidence": "low",
+      "notes": "Several words/pointing are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_005_000034.png",
+      "hebrew_text": "בְּמַכּוֹת בְּמַטָּרוֹת בְּמְרוּחֹת וּתְלוּנוֹת בִּיגִיעוֹת בְּשִׁקּוּד בְּצוֹמוֹת׃"
+    },
+    {
+      "id": "corinthians2.6.13.000036",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_013_000036.png",
+      "hebrew_text": "וּמַה גְּמוּלְכֶם אֲשֶׁר תָּשִׁיבוּ לִי ) מְדַבֵּר אֲנִי אֲלֵיכֶם כְּמוֹ לְבָנִים ( הַרְחִיבוּ אֶת־לְבַבְכֶם:"
+    },
+    {
+      "id": "corinthians2.6.14.000036",
+      "confidence": "medium",
+      "notes": "Top line begins from continuation; some niqqud uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/006_014_000036.png",
+      "hebrew_text": "אַל־תִּמָּשְׁכוּ יַדְּכֶם אֶת־לֹא מַאֲמִינִים כִּי מַה־חֶבְרַת הַצְּדָקָה עִם רִשְׁעָה אֵימָה חֶבְרַת הָאוֹר לַחֹשֶׁךְ:"
+    },
+    {
+      "id": "corinthians2.7.5.000040",
+      "confidence": "low",
+      "notes": "Several words/pointing are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_005_000040.png",
+      "hebrew_text": "כי כאשר באנו בכיים מקאמה לא היתה נחה לענינינו ותוגמה לפעמפנו כי אם בכל־עת מצורים בחוץ מאת ומביתנו חרדה׃"
+    },
+    {
+      "id": "corinthians2.7.7.000040",
+      "confidence": "medium",
+      "notes": "Some pointing is difficult to confirm from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_007_000040.png",
+      "hebrew_text": "אַךְ לֹא לְבַד בְּמְבוֹאוֹ כִּי אִם גַּם בַּנֶּחָמָה אֲשֶׁר נִחַם מִכֶּם בְּהַגִּידוֹ לָנוּ אֶת־אַהֲבַתְכֶם אֵלַי וְאֶת־הַמְּרוֹרִים וְאֶת־קִנְאַתְכֶם עָלַי כֵּן אֲשֶׁר שָׂמַחְתִּי עַל־יֹתֵר׃"
+    },
+    {
+      "id": "corinthians2.7.9.000042",
+      "confidence": "low",
+      "notes": "Crop is partial/blurred and several words are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_009_000042.png",
+      "hebrew_text": "מֵעַתָּה שָׂמַחְתִּי אֲנִי לֹא כִּי נוּגִיתֶם כִּי אִם כִּי־נִדְנַחְתֶּם לִתְשׁוּבָה מֵעַתָּה כִּי נוּגִיתֶם בֵּאלֹהִים אֲשֶׁר בְּמְאוּמָה לֹא הֶעֱנַשְׁנוּ מִמֶּנּוּ"
+    },
+    {
+      "id": "corinthians2.7.10.000042",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_010_000042.png",
+      "hebrew_text": "כִּי הַחֲרָדָה אֲשֶׁר בֵּאלֹהִים הִיא מְפַעֶלֶת אֶת־תְּשׁוּבָה לִישׁוּעָה בְּלִי הִתְנַחֵמוּת וְחַרְדַת הָעוֹלָם הִיא מְפַעֶלֶת אֶת־הַמָּוֶת׃"
+    },
+    {
+      "id": "corinthians2.7.11.000042",
+      "confidence": "low",
+      "notes": "Verse is partially cropped/blurred; several words and pointing marks are uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_011_000042.png",
+      "hebrew_text": "כִּי הִנֵּה הַדָּבָר הַזֶּה אֲשֶׁר בּוֹ נִכְמְרְתֶּם כֵּאלֹהִים הוֹלִיד לָכֶם אֶת־נַפְשְׁכֶם כַּמָּה פְּעֻלָּה בָּכֶם בְּעַד כִּי אַם אֶת־הִתְנַצֵּל כִּי אַם זַעַם כִּי אַם יִרְאָה כִּי אַם אַהֲבָה כִּי־אַף קִנְאָה כִּי־אַף נְקָמָה בְּכָל־דָּבָר הִתְבָּרוּ אֶת־נַפְשְׁכֶם כִּי נְקִיִּם אַתֶּם בַּמַּעַל׃"
+    },
+    {
+      "id": "corinthians2.7.13.000044",
+      "confidence": "medium",
+      "notes": "Initial words are partly close to crop/top edge; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/007_013_000044.png",
+      "hebrew_text": "עַל־כֵּן נִחַמְנוּ עַל־תַּנְחוּמֵיכֶם וְיֹתֵר מְאֹד שָׂמַחְנוּ עַל־שִׂמְחַת טִיטוּס כִּי רוּחַ לוֹ נָחָה מִכֻּלְּכֶם׃"
+    },
+    {
+      "id": "corinthians2.8.2.000044",
+      "confidence": "medium",
+      "notes": "Some pointing is unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_002_000044.png",
+      "hebrew_text": "כִּי־בְרֹב בֹחַן הַמְּצוּקָה הִיא יִתְרַת שִׂמְחָתָם וְעֹמֶק מִסְכְּנוּתָם הוֹתִיר לְעֹשֶׁר תֻּמָּם׃"
+    },
+    {
+      "id": "corinthians2.8.3.000046",
+      "confidence": "low",
+      "notes": "Several consonants/pointing marks are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_003_000046.png",
+      "hebrew_text": "כִּי־בְכֹחָם מֵעַל אֹכֶף הֵם עַל־כֹּחָם נְדָבָה הֵמָּה׃"
+    },
+    {
+      "id": "corinthians2.8.9.000048",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_009_000048.png",
+      "hebrew_text": "כִּי־יֹדְעִים אַתֶּם אֶת־הַחֶסֶד אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ כִּי־עֲלֵיכֶם מִסְכֵּן הוּא בִּהְיוֹתוֹ עָשִׁיר אֲשֶׁר אַתֶּם בְּמִסְכְּנוּתוֹ תַּעֲשִׁירוּ׃"
+    },
+    {
+      "id": "corinthians2.8.13.000048",
+      "confidence": "medium",
+      "notes": "Exact pointing and one word are uncertain from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_013_000048.png",
+      "hebrew_text": "וְלֹא אֲשֶׁר לַאֲחֵרִים נִרְפָּה וְלָכֶם מְצֻקָה כִּי אִם שִׁוָּה׃"
+    },
+    {
+      "id": "corinthians2.8.14.000048",
+      "confidence": "medium",
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_014_000048.png",
+      "hebrew_text": "בָּעֵת הַהִיא יִתְרְכֶם יְמַלֵּא אֶת־חֶסְרָם אֲשֶׁר גַּם הֵם בְּעֵתָהּ יְמַלֵּא אֶת־חֶסְרְכֶם אֲשֶׁר תִּהְיֶה צְדָקָה׃"
+    },
+    {
+      "id": "corinthians2.8.17.000050",
+      "confidence": "low",
+      "notes": "Several words and pointing are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_017_000050.png",
+      "hebrew_text": "כִּי אֶת־הַנֹּחַ יִמַּנּוּ לָקַח עָלָיו נַפְשׁוֹ וְכִי־נְדִיב לֵב הוּא בְרוֹן נְדִיבָה יָצָא אֲלֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.8.20.000050",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_020_000050.png",
+      "hebrew_text": "וְנִשְׁמֹר לָנוּ בְּזֹאת פֶּן־יַחְרִפֵנוּ אִישׁ בְּהוֹן הַזֶּה אֲשֶׁר מְשָׁרְתִים אֲנַחְנוּ׃"
+    },
+    {
+      "id": "corinthians2.8.22.000052",
+      "confidence": "medium",
+      "notes": "Left/right edges slightly cropped and pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_022_000052.png",
+      "hebrew_text": "ושלחנו אתם גם את אחינו אשר בחנוהו בדברים רבים ובפעמים רבות כי במצות הוא ועתה על־יתר יהיה למצאו בבטחה גדולה אשר לו עליכם"
+    },
+    {
+      "id": "corinthians2.8.23.000052",
+      "confidence": "medium",
+      "notes": "Verse appears partly cropped at left; pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/008_023_000052.png",
+      "hebrew_text": "ואם על־טיטום שהוא חברי ועזרי אליכם אם אחינו שליחי הקהלות לכבוד המשיח"
+    },
+    {
+      "id": "corinthians2.9.1.000052",
+      "confidence": "medium",
+      "notes": "Pointing is somewhat unclear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_001_000052.png",
+      "hebrew_text": "כִּי עַל־הַהֲוָיָה אֲשֶׁר בַּקְּדוֹשִׁים הִיא אֵין צָרִיךְ לִכְתֹב אֵלֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.9.5.000054",
+      "confidence": "medium",
+      "notes": "Some pointing and wording are difficult to confirm due to blur/cropping.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_005_000054.png",
+      "hebrew_text": "לָכֵן חָשַׁבְתִּי כִּי־לְצָרֵכֶם לִשְׁאָל מֵאַחִים אֲשֶׁר יְקַדְּמוּ לָבֹא אֲלֵיכֶם וּלְהָכִין אֶת־בִּרְכַתְכֶם הַנֶּאֱמֶרֶת מִלְּפָנִים כִּי בְּכֵנָה הִיא וְלֹא־זֹאת בִּבְרָכָה וְלֹא בְּבֶצַע"
+    },
+    {
+      "id": "corinthians2.9.7.000054",
+      "confidence": "medium",
+      "notes": "Some vowels/letters uncertain in blurred crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_007_000054.png",
+      "hebrew_text": "אִישׁ אִישׁ בְּעֵצָה לְבָבוֹ לֹא מִיגוֹן אוֹ מִצֹּרֶךְ כִּי־תּוֹמֵךְ בְּשִׂמְחָה אֲהֵבוֹ אֱלֹהִים"
+    },
+    {
+      "id": "corinthians2.9.12.000056",
+      "confidence": "medium",
+      "notes": "Top of verse partly cropped; pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/corinthians2/009_012_000056.png",
+      "hebrew_text": "כי־עבודת הכהנה הזאת לא תמלא לבד את־חסרון הקדושים כי אם גם תותיר בתודות רבות לאלהים׃"
+    },
+    {
+      "id": "corinthians2.10.5.000060",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_005_000060.png",
+      "hebrew_text": "וְאֶת־כָּל־רוּם הַמִּתְרוֹמֵם עַל־דַּעַת אֱלֹהִים וְשֹׁבֶה כָּל־תְּבוּנָה תַּחַת יִקְחַת הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "corinthians2.10.10.000060",
+      "confidence": "medium",
+      "notes": "Some pointing/marks and first line glyphs are difficult to verify from crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_010_000060.png",
+      "hebrew_text": "כִּי הָאִגְּרוֹת אָמְרוּ כְּבֵדוֹת וּגְבוּרוֹת וּפוֹחַ גּוּפֵנוּ נִקְלָה וּדְבָרוֹ נִבְזֶה הוּא׃"
+    },
+    {
+      "id": "corinthians2.10.13.000062",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/010_013_000062.png",
+      "hebrew_text": "וַאֲנַחְנוּ אֵינֶנּוּ עַל־הַמִּדָּה נִתְהַלֵּל כִּי־בְמִשׂוּרָה נִמְדָּה וְהִיא אֲשֶׁר בָּהּ מָדַד לָנוּ אֱלֹהִים בְּמִדָּה לִנְגֹעַ עֲדֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.11.7.000066",
+      "confidence": "medium",
+      "notes": "Some pointing/words are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_007_000066.png",
+      "hebrew_text": "אוּלַמָּה חֵטְא חָטָאתִי כִּי אֶת נַפְשִׁי עִנִּיתִי אֲשֶׁר תְּרוּמְמוּ תִּנָּשְׂאוּ וָאַגִּידְכֶם כִּי חִנָּם אֶת־בְּשׂוֹרַת אֱלֹהִים בִּשַּׂרְתִּי אֶתְכֶם׃"
+    },
+    {
+      "id": "corinthians2.11.17.000070",
+      "confidence": "medium",
+      "notes": "Pointing/marks are difficult to preserve confidently from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_017_000070.png",
+      "hebrew_text": "את־אשר אני מדבר אינני מדבר כיהוה כי אם כמו בסכלה בעצם התהלה הזאת׃"
+    },
+    {
+      "id": "corinthians2.11.18.000070",
+      "confidence": "medium",
+      "notes": "Pointing/marks are difficult to preserve confidently from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_018_000070.png",
+      "hebrew_text": "וכי־רבים מתהללים בבשר גם אני אתהלל׃"
+    },
+    {
+      "id": "corinthians2.11.19.000070",
+      "confidence": "medium",
+      "notes": "Pointing/marks are difficult to preserve confidently from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_019_000070.png",
+      "hebrew_text": "כי במנוחה תשמעו את־הנבלים בהיותכם חכמים׃"
+    },
+    {
+      "id": "corinthians2.11.20.000070",
+      "confidence": "medium",
+      "notes": "Pointing/marks are difficult to preserve confidently from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_020_000070.png",
+      "hebrew_text": "כי תשאו אם איש יעביד אתכם אם איש יבלע אם איש יקח אשר לכם אם איש יתרומם עליכם אם איש יכה אתכם בפנים׃"
+    },
+    {
+      "id": "corinthians2.11.28.000072",
+      "confidence": "medium",
+      "notes": "Pointing and a few consonants are not fully clear in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/011_028_000072.png",
+      "hebrew_text": "בִּלְתִּי הַחִיצוֹנוֹת כִּי־מֵעָלַי\nיִסּוּרִים בְּכָל־יוֹם קָמִים עָלַי\nוְדַאֲגַת כָּל־הַקְּהִלּוֹת עַל־שִׁכְמִי׃"
+    },
+    {
+      "id": "corinthians2.12.2.000074",
+      "confidence": "low",
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_002_000074.png",
+      "hebrew_text": "יָדַעְתִּי אָדָם בַּמָּשִׁיחַ מֵאַרְבַּע עֶשְׂרֵה שָׁנָה אִם בַּגּוּפָה לֹא יָדַעְתִּי אִם מִחוּץ לַגּוּפָה גַּם לֹא יָדַעְתִּי אֱלֹהִים יוֹדֵעַ כִּי נִשָּׂאוּ כָמֹהוּ עַד שְׁלִישִׁי הַשָּׁמַיִם׃"
+    },
+    {
+      "id": "corinthians2.12.10.000076",
+      "confidence": "medium",
+      "notes": "Beginning may continue from prior line/crop; included visible target Hebrew.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_010_000076.png",
+      "hebrew_text": "בִּרְדִיפוֹת בְּמַעֲצָרִים עַל־הַמָּשִׁיחַ כִּי בַּאֲשֶׁר חָלָה אֲנִי אָז אֶגְבַּר אָנֹכִי׃"
+    },
+    {
+      "id": "corinthians2.12.14.000078",
+      "confidence": "medium",
+      "notes": "Pointing and some letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/012_014_000078.png",
+      "hebrew_text": "הִנֵּה גַּם וְאַתֶּם שְׁלִישׁ וְעַתָּה אֲנִי לָבֹא אֲלֵיכֶם וְלֹא אֶכְבַּד אֶתְכֶם כִּי אֵינֶנִּי מְבַקֵּשׁ אֶת־אֲשֶׁר לָכֶם כִּי־אִם אֶתְכֶם כִּי לֹא יִשָּׂה לַבָּנִים לְהוֹצִיא לְיוֹלְדֵיהֶם כִּי אִם יִשֶּׂה לַיּוֹלְדִים לְהוֹצִיא לִבְנֵיהֶם"
+    },
+    {
+      "id": "corinthians2.13.2.000082",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_002_000082.png",
+      "hebrew_text": "וַאֲנִי עִמָּכֶם עַתָּה כֹתֵב לָאֵלֶּה אֲשֶׁר לְפָנִים חָטְאוּ וְלַאֲחֵרִים כֻּלָּם כִּי כַּאֲשֶׁר אָבוֹא עוֹד לֹא אוֹסִיף לָחוּס עֲלֵיכֶם׃"
+    },
+    {
+      "id": "corinthians2.13.5.000082",
+      "confidence": "low",
+      "notes": "Verse is partly cropped at top and some pointing is unclear.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_005_000082.png",
+      "hebrew_text": "נַסּוּ אֶת־נַפְשְׁכֶם אִם בָּאֱמוּנָה אַתֶּם בְּחֲנוּ אֶת־נַפְשְׁכֶם הֲלֹא תֵדְעוּ אֶת־נַפְשְׁכֶם כִּי־יֵשׁוּעַ מָשִׁיחַ בָּכֶם הוּא וְאִם לֹא אָז בֶּאֱמֶת נֶאֱלַחְתֶּם׃"
+    },
+    {
+      "id": "corinthians2.13.6.000084",
+      "confidence": "medium",
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_006_000084.png",
+      "hebrew_text": "וּמִשְׁבָּר אֲנִי כִּי־יוֹדְעִים אַתֶּם כִּי־אֲנַחְנוּ לֹא בֶּאֱלֹהִים"
+    },
+    {
+      "id": "corinthians2.13.8.000084",
+      "confidence": "medium",
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_008_000084.png",
+      "hebrew_text": "כִּי מְאוּמָה לֹא נוּכַל לַעֲשׂוֹת עַל־הָאֱמֶת כִּי־אִם חֵלֶק הָאֱמֶת׃"
+    },
+    {
+      "id": "corinthians2.13.9.000084",
+      "confidence": "low",
+      "notes": "Verse is split/cropped with upper line partly from preceding image; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/corinthians2/013_009_000084.png",
+      "hebrew_text": "כִּי־שְׂמֵחִים אֲנַחְנוּ בְּחַלְוּתֵנוּ וְאַתֶּם מְתֻקָּנִים אֲנַחְנוּ אַךְ־תַּכְלִיתְכֶם׃"
+    }
+  ]
+}

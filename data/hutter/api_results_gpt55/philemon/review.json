@@ -1,0 +1,232 @@
+{
+  "book": "philemon",
+  "raw_result_count": 47,
+  "result_count": 25,
+  "batch_count": 10,
+  "status_counts": {
+    "ok": 25
+  },
+  "confidence_counts": {
+    "low": 2,
+    "medium": 23
+  },
+  "needs_review_count": 23,
+  "likely_crop_issue_count": 3,
+  "likely_ocr_issue_count": 20,
+  "no_hebrew_marks_count": 0,
+  "empty_text_count": 0,
+  "usage": {
+    "input_tokens": 14952,
+    "output_tokens": 7751,
+    "total_tokens": 22703
+  },
+  "needs_review": [
+    {
+      "id": "philemon.1.1.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are hard to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/philemon/001_001_000002.png",
+      "hebrew_text": "פּוֹלוֹס אָסִיר יֵשׁוּעַ הַמָּשִׁיחַ וְטִימֹתָאוֹס הָאָח לְפִילֵמוֹן לִידִידֵנוּ וְעֹזְרֵנוּ׃"
+    },
+    {
+      "id": "philemon.1.2.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and some letters are slightly unclear.",
+      "output_image": "data/hutter/verse_images/philemon/001_002_000002.png",
+      "hebrew_text": "וּלְאַפְיָא לִידִידָתֵנוּ וּלְאַרְכִפּוֹס שֶׁהוּא בֶּעָדֵנוּ בַּמִּלְחָמָה וּלְעֵדָה אֲשֶׁר הִיא בְּבֵיתֶךָ׃"
+    },
+    {
+      "id": "philemon.1.3.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud uncertain.",
+      "output_image": "data/hutter/verse_images/philemon/001_003_000002.png",
+      "hebrew_text": "תְּחִנָּה לָכֶם וְשָׁלוֹם מֵאֱלֹהִים אָבִינוּ וַאֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philemon.1.4.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing on a few words is uncertain.",
+      "output_image": "data/hutter/verse_images/philemon/001_004_000002.png",
+      "hebrew_text": "אוֹדֶה לֵאלֹהַי בְּכָל עֵת בְּזִכְרִי לְךָ בְּתְפִלּוֹתַי׃"
+    },
+    {
+      "id": "philemon.1.5.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some printed vowels/marks are difficult to verify exactly.",
+      "output_image": "data/hutter/verse_images/philemon/001_005_000002.png",
+      "hebrew_text": "בְּשָׁמְעִי אֶת־אַהֲבָתְךָ וֶאֱמוּנָתְךָ אֲשֶׁר יֵשׁ לְךָ אֶל־אֲדֹנֵינוּ יֵשׁוּעַ וְאֶל־כָּל־הַקְּדוֹשִׁים׃"
+    },
+    {
+      "id": "philemon.1.6.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and small marks are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/philemon/001_006_000002.png",
+      "hebrew_text": "אֲשֶׁר חֶבְרַת אֱמוּנָתְךָ הַגְבִּיר בְּדַעַת כָּל־מַעֲשֵׂה טוֹב שֶׁהוּא בָּכֶם בִּישׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philemon.1.7.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/cantillation-like marks are small and partly unclear.",
+      "output_image": "data/hutter/verse_images/philemon/001_007_000004.png",
+      "hebrew_text": "כִּי־יֵשׁ לָנוּ שִׂמְחָה גְּדוֹלָה וְנֶחָמָה עַל־אַהֲבָתְךָ כִּי רַחֲמֵי הַקְּדוֹשִׁים בָּאוּ לִמְנוּחָה בְּאַהֲבָתְךָ אָחִי׃"
+    },
+    {
+      "id": "philemon.1.8.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/marks are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/philemon/001_008_000004.png",
+      "hebrew_text": "עַל־כֵּן יֵשׁ לִי בַּמָּשִׁיחַ בִּטָּחוֹן רַבָּה לְצַוּוֹת אֹתְךָ מַה־נָּאוֶה׃"
+    },
+    {
+      "id": "philemon.1.9.000004",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words/marks are blurry; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/philemon/001_009_000004.png",
+      "hebrew_text": "וּבַעֲבוּר אַהֲבָה יוֹתֵר אֶחְנַן לְךָ לִהְיוֹתְךָ כָּמוֹנִי פּוֹלוֹם זָקֵן וְגַם עַתָּה אָסִיר יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philemon.1.10.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "First word and pointing are uncertain.",
+      "output_image": "data/hutter/verse_images/philemon/001_010_000004.png",
+      "hebrew_text": "מַחְתִּיר אֲנִי לְךָ עַל־בְּנִי אֲשֶׁר הוֹלַדְתִּי בַּאֲסוּרָי עַל־אוֹנֵסִימוֹס׃"
+    },
+    {
+      "id": "philemon.1.11.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word form are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/philemon/001_011_000004.png",
+      "hebrew_text": "אֲשֶׁר כָּעֵת לֹא הוֹעִיל לְךָ וְעַתָּה גַּם לְךָ גַּם לִי מוֹעִיל מְאֹד׃"
+    },
+    {
+      "id": "philemon.1.14.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and several letters in the lower line are unclear due to blur/print quality.",
+      "output_image": "data/hutter/verse_images/philemon/001_014_000004.png",
+      "hebrew_text": "אַךְ בְּלִי עֲצָתְךָ מְאוּמָה לֹא חָפַצְתִּי לַעֲשׂוֹת אֲשֶׁר טוּבָתְךָ בַּל־תִּהְיֶה בְּמִמְצוּקָה כִּי־אִם בִּרְצון וּנְדָבָה׃"
+    },
+    {
+      "id": "philemon.1.15.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "One word after אֲשֶׁר is unclear.",
+      "output_image": "data/hutter/verse_images/philemon/001_015_000006.png",
+      "hebrew_text": "אוּלַי עַל־זֹאת בָּרַח מִמְּךָ לְעֵת אֲשֶׁר הֲחִתּוּ לְעוֹלָם׃"
+    },
+    {
+      "id": "philemon.1.16.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and exact word forms are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/philemon/001_016_000006.png",
+      "hebrew_text": "לֹא עוֹד כְּמוֹ עֶבֶד כִּי־אִם מִתַּחַת עֶבֶד פֶּרַע בְּאָח יָדִיד לִי בִּמְאֹד כַּמָּה יוֹתֵר לְךָ גַּם בַּבָּשָׂר וְגַם בָּאָדוֹן׃"
+    },
+    {
+      "id": "philemon.1.17.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word form uncertain.",
+      "output_image": "data/hutter/verse_images/philemon/001_017_000006.png",
+      "hebrew_text": "וְאִם אֶתִּי אֲנוֹשׁ בְּעֶרְכִּי קַבְּלֵהוּ כָּמוֹנִי׃"
+    },
+    {
+      "id": "philemon.1.18.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several niqqud details are uncertain.",
+      "output_image": "data/hutter/verse_images/philemon/001_018_000006.png",
+      "hebrew_text": "וְאִם בִּמְאוּמָה הֵרַע עָלֶיךָ אוֹ־אִם חַיָּב לְךָ אוֹתָהּ לִי תַּחְשְׁבָה׃"
+    },
+    {
+      "id": "philemon.1.19.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Exact printed spelling/pointing partly uncertain.",
+      "output_image": "data/hutter/verse_images/philemon/001_019_000006.png",
+      "hebrew_text": "אֲנִי־פּוֹלוֹס כְּתַבְתִּי בְּיָדִי אֲנִי אֲשַׁלֵּם מִלִּי אֹמַר כִּי־נַפְשְׁךָ נִתְחַלָּה לִי׃"
+    },
+    {
+      "id": "philemon.1.20.000006",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Text is difficult to read; several consonants and pointing marks uncertain.",
+      "output_image": "data/hutter/verse_images/philemon/001_020_000006.png",
+      "hebrew_text": "כֵּן־אָחִי אֲנִי הוֹדִיעֵנִי אַחַד־נַפְשִׁי בָּאָדוֹן הָנִיחָה נָא אַתָּה רַחֲמַי בְּמָשִׁיחַ אֲדֹנֵינוּ׃"
+    },
+    {
+      "id": "philemon.1.21.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is faint/uncertain in the crop.",
+      "output_image": "data/hutter/verse_images/philemon/001_021_000006.png",
+      "hebrew_text": "בִּבְטָחִי עַל־שְׁמִיעָתְךָ כָּתַבְתִּי אֵלֶיךָ וְיֹדֵעַ אֲנִי כִּי־מֵאֲשֶׁר אֹמֵר אֲנִי יֹתֵר תַּעֲשֶׂה׃"
+    },
+    {
+      "id": "philemon.1.22.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several niqqud marks and final wording are difficult to verify from the image.",
+      "output_image": "data/hutter/verse_images/philemon/001_022_000008.png",
+      "hebrew_text": "וּבְאַחַד הָכִין לִי אֶת־הַמָּלוֹן כִּי־שְׂבַרְתִּי כִּי־בְּתְפִלּוֹתֵיכֶם אֶתֵּן לָכֶם׃"
+    },
+    {
+      "id": "philemon.1.23.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partially faint; transcription of the proper name may need review.",
+      "output_image": "data/hutter/verse_images/philemon/001_023_000008.png",
+      "hebrew_text": "שֹׁאֵל לִשְׁלוֹמְךָ אֶפַּפְרָא הַנִּשְׁבָּה אִתִּי בְּיֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philemon.1.24.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Proper names and pointing are somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/philemon/001_024_000008.png",
+      "hebrew_text": "מַרְקוֹס אַרִיסְטַרְכוֹס דָּאמָא לוּקָס עוֹזְרַי׃"
+    },
+    {
+      "id": "philemon.1.25.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning word/phrase and some pointing are faint; verify against image.",
+      "output_image": "data/hutter/verse_images/philemon/001_025_000008.png",
+      "hebrew_text": "תִּהְיֶה אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ עִם רוּחֲכֶם אָמֵן׃"
+    }
+  ],
+  "likely_crop_issues": [
+    {
+      "id": "philemon.1.1.000002",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are hard to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/philemon/001_001_000002.png",
+      "hebrew_text": "פּוֹלוֹס אָסִיר יֵשׁוּעַ הַמָּשִׁיחַ וְטִימֹתָאוֹס הָאָח לְפִילֵמוֹן לִידִידֵנוּ וְעֹזְרֵנוּ׃"
+    },
+    {
+      "id": "philemon.1.16.000006",
+      "confidence": "medium",
+      "notes": "Some pointing and exact word forms are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/philemon/001_016_000006.png",
+      "hebrew_text": "לֹא עוֹד כְּמוֹ עֶבֶד כִּי־אִם מִתַּחַת עֶבֶד פֶּרַע בְּאָח יָדִיד לִי בִּמְאֹד כַּמָּה יוֹתֵר לְךָ גַּם בַּבָּשָׂר וְגַם בָּאָדוֹן׃"
+    },
+    {
+      "id": "philemon.1.21.000006",
+      "confidence": "medium",
+      "notes": "Some pointing is faint/uncertain in the crop.",
+      "output_image": "data/hutter/verse_images/philemon/001_021_000006.png",
+      "hebrew_text": "בִּבְטָחִי עַל־שְׁמִיעָתְךָ כָּתַבְתִּי אֵלֶיךָ וְיֹדֵעַ אֲנִי כִּי־מֵאֲשֶׁר אֹמֵר אֲנִי יֹתֵר תַּעֲשֶׂה׃"
+    }
+  ]
+}

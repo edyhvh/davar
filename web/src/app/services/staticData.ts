@@ -1,8 +1,9 @@
 import {
+	type BesorahTextVersion,
 	getMissingSpanishTranslationNotice,
 	getPsalmsSuperscriptionNotice,
-	resolveTranslationSource,
 	resolveTranslationLookupKey,
+	resolveTranslationSource,
 	resolveTranslationTarget,
 	TTH_BOOK_MAPPING,
 } from "../../../../shared/translationConfig";
@@ -602,7 +603,7 @@ let metadataPromise: Promise<MetadataPayload> | null = null;
 let booksPromise: Promise<BookResponse[]> | null = null;
 
 /**
-	* Fetches TS2009 translation with client-side caching to avoid repeated API requests.
+ * Fetches TS2009 translation with client-side caching to avoid repeated API requests.
  * Uses in-memory cache with keys formatted as `${bookId}:${chapter}:${verse}`.
  */
 const fetchCachedTs2009Translation = async (
@@ -893,10 +894,11 @@ const mapTranslationFootnotes = (
 const loadCoreChapter = async (
 	book: BookResponse,
 	chapter: number,
+	besorahTextVersion: BesorahTextVersion = "delitzsch",
 ): Promise<RawVerse[]> => {
 	const chapterPath =
 		book.section === "besorah"
-			? `/data/besorah/${book.id}/${chapter}.json`
+			? `/data/${besorahTextVersion === "hutter" ? "hutter" : "besorah"}/${book.id}/${chapter}.json`
 			: `/data/oe/${book.id}/${chapter}.json`;
 
 	try {
@@ -1330,6 +1332,7 @@ export const getChapterVerses = async (
 		showDss?: boolean;
 		hebrewOnly?: boolean;
 		referenceMode?: ReferenceMode;
+		besorahTextVersion?: BesorahTextVersion;
 	},
 ): Promise<VerseResponse[]> => {
 	const metadata = await loadMetadata();
@@ -1345,7 +1348,11 @@ export const getChapterVerses = async (
 	);
 	const coreVerseChunks = await Promise.all(
 		sourceChapters.map((sourceChapter) =>
-			loadCoreChapter(bookEntry, sourceChapter),
+			loadCoreChapter(
+				bookEntry,
+				sourceChapter,
+				options?.besorahTextVersion ?? "delitzsch",
+			),
 		),
 	);
 	const coreVerses = coreVerseChunks.flat();

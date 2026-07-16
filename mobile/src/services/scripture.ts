@@ -1,4 +1,4 @@
-import { staticDataRequest } from "@/src/services/api";
+import { staticDataRequest, ts2009Request } from "@/src/services/api";
 import type { TranslationFootnote, WordResponse } from "@/src/types/api";
 import {
   fetchHebrewVerses,
@@ -10,6 +10,7 @@ import {
 } from "@/src/services/database";
 import { removeMaqafForDisplay } from "@/src/utils/hebrew";
 import {
+  type BesorahTextVersion,
   getMissingSpanishTranslationNotice,
   getPsalmsSuperscriptionNotice,
   resolveTranslationSource,
@@ -155,9 +156,16 @@ const fetchTs2009ChapterFromBookFile = async (
 ): Promise<Map<number, string> | null> => {
   for (const fileStem of getTs2009BookFileCandidates(bookId)) {
     try {
-      const staticBook = await staticDataRequest<Ts2009BookPayload>(
-        `ts2009/${fileStem}.json`,
-      );
+      let staticBook: Ts2009BookPayload;
+      try {
+        staticBook = await ts2009Request<Ts2009BookPayload>(
+          `${fileStem}.json`,
+        );
+      } catch {
+        staticBook = await staticDataRequest<Ts2009BookPayload>(
+          `ts2009/${fileStem}.json`,
+        );
+      }
 
       const chapterVerses = extractTs2009ChapterFromBook(staticBook, chapter);
       if (!chapterVerses || chapterVerses.length === 0) {
@@ -1017,8 +1025,14 @@ const mapStaticVersesToDisplay = (
 const loadStaticSourceChapterVerses = async (
   bookId: string,
   chapter: number,
+  besorahTextVersion: BesorahTextVersion = "delitzsch",
 ): Promise<StaticChapterVerse[]> => {
-  const chapterSources = [`oe/${bookId}/${chapter}.json`, `besorah/${bookId}/${chapter}.json`];
+  const besorahSource =
+    besorahTextVersion === "hutter" ? "hutter" : "besorah";
+  const chapterSources = [
+    `oe/${bookId}/${chapter}.json`,
+    `${besorahSource}/${bookId}/${chapter}.json`,
+  ];
   const sourceErrors: string[] = [];
 
   for (const source of chapterSources) {
@@ -1048,6 +1062,7 @@ const fetchChapterVersesStatic = async (
     showDss?: boolean;
     hebrewOnly?: boolean;
     referenceMode?: ReferenceMode;
+    besorahTextVersion?: BesorahTextVersion;
   },
 ): Promise<DisplayVerse[]> => {
   const referenceMode = options?.referenceMode ?? "source";
@@ -1060,7 +1075,11 @@ const fetchChapterVersesStatic = async (
 
   const sourceVerseChunks = await Promise.all(
     sourceChapters.map((sourceChapter) =>
-      loadStaticSourceChapterVerses(bookId, sourceChapter),
+      loadStaticSourceChapterVerses(
+        bookId,
+        sourceChapter,
+        options?.besorahTextVersion ?? "delitzsch",
+      ),
     ),
   );
   const sourceVerses = sourceVerseChunks.flat();
@@ -1349,6 +1368,7 @@ export const fetchChapterVerses = async (
     hebrewOnly?: boolean;
     isConnected?: boolean;
     referenceMode?: ReferenceMode;
+    besorahTextVersion?: BesorahTextVersion;
   },
 ): Promise<DisplayVerse[]> => {
   // If explicitly offline, go straight to SQLite

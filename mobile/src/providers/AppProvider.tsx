@@ -4,6 +4,7 @@ import { getColors } from "@/src/theme";
 import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import {
   type AppLanguage,
+  loadBesorahTextVersion,
   loadBookmarks,
   loadCurrentVerseId,
   loadHebrewFontScale,
@@ -15,6 +16,7 @@ import {
   loadTranslationOnly,
   loadThemeMode,
   saveBookmarks,
+  saveBesorahTextVersion,
   saveCurrentVerseId,
   saveHebrewFontScale,
   saveHebrewOnly,
@@ -59,6 +61,12 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   );
   const language = useAppStore((state: AppState) => state.language);
   const setLanguage = useAppStore((state: AppState) => state.setLanguage);
+  const besorahTextVersion = useAppStore(
+    (state: AppState) => state.besorahTextVersion,
+  );
+  const setBesorahTextVersion = useAppStore(
+    (state: AppState) => state.setBesorahTextVersion,
+  );
   const showQumran = useAppStore((state: AppState) => state.showQumran);
   const setShowQumran = useAppStore((state: AppState) => state.setShowQumran);
   const showFullChapter = useAppStore(
@@ -115,6 +123,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
           savedScale,
           savedBookmarks,
           savedLanguage,
+          savedBesorahTextVersion,
           savedShowQumran,
           savedShowFullChapter,
           savedSeferMode,
@@ -126,6 +135,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
           loadHebrewFontScale(),
           loadBookmarks(),
           loadLanguage(),
+          loadBesorahTextVersion(),
           loadShowQumran(),
           loadShowFullChapter(),
           loadSeferMode(),
@@ -137,6 +147,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
         setHebrewFontScale(savedScale);
         setBookmarks(savedBookmarks);
         setLanguage(savedLanguage as AppLanguage);
+        setBesorahTextVersion(savedBesorahTextVersion);
         setShowQumran(savedShowQumran);
         setShowFullChapter(savedShowFullChapter);
         setHebrewOnly(savedHebrewOnly);
@@ -156,6 +167,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     setHebrewFontScale,
     setBookmarks,
     setLanguage,
+    setBesorahTextVersion,
     setShowQumran,
     setShowFullChapter,
     setSeferMode,
@@ -229,6 +241,13 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     }
     saveLanguage(language);
   }, [language]);
+
+  useEffect(() => {
+    if (!shouldPersistSettings()) {
+      return;
+    }
+    saveBesorahTextVersion(besorahTextVersion);
+  }, [besorahTextVersion]);
 
   useEffect(() => {
     if (!shouldPersistSettings()) {

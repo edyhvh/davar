@@ -1,0 +1,12 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "davar-web",
+	"compatibility_date": "2026-07-16",
+	"pages_build_output_dir": "dist",
+	"r2_buckets": [
+		{
+			"binding": "TS2009_BUCKET",
+			"bucket_name": "ts2009"
+		}
+	]
+}

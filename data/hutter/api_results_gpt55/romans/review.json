@@ -1,0 +1,3139 @@
+{
+  "book": "romans",
+  "raw_result_count": 460,
+  "result_count": 432,
+  "batch_count": 51,
+  "status_counts": {
+    "ok": 432
+  },
+  "confidence_counts": {
+    "high": 20,
+    "low": 62,
+    "medium": 350
+  },
+  "needs_review_count": 290,
+  "likely_crop_issue_count": 113,
+  "likely_ocr_issue_count": 177,
+  "no_hebrew_marks_count": 0,
+  "empty_text_count": 0,
+  "usage": {
+    "input_tokens": 140987,
+    "output_tokens": 72312,
+    "total_tokens": 213299
+  },
+  "needs_review": [
+    {
+      "id": "romans.1.1.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to preserve exactly.",
+      "output_image": "data/hutter/verse_images/romans/001_001_000002.png",
+      "hebrew_text": "פולוס עבד ישוע המשיח נקרא שליח נבדל אל־בשורת אלהים׃"
+    },
+    {
+      "id": "romans.1.2.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/romans/001_002_000002.png",
+      "hebrew_text": "אשר מלפנים הגיד בנביאיו בכתבים הקדושים׃"
+    },
+    {
+      "id": "romans.1.3.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is partially cropped; pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/romans/001_003_000002.png",
+      "hebrew_text": "על־בנו הנולד מזרע דויד בבשר׃"
+    },
+    {
+      "id": "romans.1.4.000002",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Only the end of the verse is visible in the crop; beginning is cut off.",
+      "output_image": "data/hutter/verse_images/romans/001_004_000002.png",
+      "hebrew_text": "המוּקם ישוע משיח אדנינו׃"
+    },
+    {
+      "id": "romans.1.5.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning partly cut at top; pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/romans/001_005_000002.png",
+      "hebrew_text": "אשר בו לקחנו חן ומלאכות להקמת האמונה בכל־הגוים על שמו׃"
+    },
+    {
+      "id": "romans.1.6.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/romans/001_006_000004.png",
+      "hebrew_text": "אשר גם המה גּם אתם נקראי ישוע המשיח׃"
+    },
+    {
+      "id": "romans.1.7.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words/points uncertain due to print quality.",
+      "output_image": "data/hutter/verse_images/romans/001_007_000004.png",
+      "hebrew_text": "לכלכם אשר אתם ברומא לאהובי אלהים לקדושים הקדושים חנה לכם ושלום מאלהי אבינו ואדנינו ישוע המשיח׃"
+    },
+    {
+      "id": "romans.1.8.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing not fully preserved; one word uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_008_000004.png",
+      "hebrew_text": "בראשונה מודה אני לאלהי בישוע המשיח על־כלכם כי אמונתכם מגדה ונשמעה היא בכל־התבל׃"
+    },
+    {
+      "id": "romans.1.9.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and exact spelling uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_009_000004.png",
+      "hebrew_text": "כי עדי אלהים הוא אשר אני עבד ברוחי בבשורה בנו כי־בלתי הפוגה מזכיר אני את־שמותכם׃"
+    },
+    {
+      "id": "romans.1.10.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/romans/001_010_000004.png",
+      "hebrew_text": "תמיד בתפלותי מתחנן אני אי מתי אצליח דרכי ברצון אלהים לבוא אליכם׃"
+    },
+    {
+      "id": "romans.1.11.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/word forms uncertain in crop.",
+      "output_image": "data/hutter/verse_images/romans/001_011_000004.png",
+      "hebrew_text": "כִּי מִתְאַוֶּה אֲנִי לִרְאוֹת אֶתְכֶם לְהַשְׁפִּיעַ לָכֶם מֵאֵיזוֹ מַתָּנָה רוּחַ לְהַעֲזִיק אֶתְכֶם׃"
+    },
+    {
+      "id": "romans.1.12.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing partly uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_012_000006.png",
+      "hebrew_text": "וְאֹתָהּ הִיא לְהִנָּחֵם בָּכֶם בַּאֲשֶׁר בֵּינֵינוּ בֶּאֱמוּנַתְכֶם וּבֶאֱמוּנָתִי׃"
+    },
+    {
+      "id": "romans.1.13.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several niqqud/letters are uncertain due to blur.",
+      "output_image": "data/hutter/verse_images/romans/001_013_000006.png",
+      "hebrew_text": "לֹא אֶחְדַּל מִמְּכֶם אַחַי כִּי פְּעָמִים רַבּוֹת שַׂמְתִּי עַל־לִבִּי לָבוֹא אֲלֵיכֶם וְנִכְלָא עַד־הֵנָּה אֲשֶׁר יְהִי מֵאוֹמָה פְּרִי בִּי בָכֶם כְּמוֹ גַם בְּגוֹיִם אֲחֵרִים׃"
+    },
+    {
+      "id": "romans.1.14.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_014_000006.png",
+      "hebrew_text": "לַיְּוָנִים וְלַלֹּעֲזִים לַחֲכָמִים וְלַפְּתָיִם חוֹב אָנִי׃"
+    },
+    {
+      "id": "romans.1.15.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some word vocalization uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_015_000006.png",
+      "hebrew_text": "כָּכָה כָּל אֲשֶׁר בִּי נְדָבוֹת הִנֵּה גַּם אֶתְכֶם אֲשֶׁר בְּרוֹמָה לְבַשֵּׂר׃"
+    },
+    {
+      "id": "romans.1.16.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one phrase uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_016_000006.png",
+      "hebrew_text": "כִּי לֹא בֹשְׁתִּי עַל־בְּשׂוֹרַת הַמָּשִׁיחַ כִּי גְבוּרַת אֱלֹהִים הִיא לִישׁוּעָה לְכָל אֲשֶׁר מַאֲמִין גַּם לִיהוּדִי בָּרִאשׁוֹנָה וְגַם לְיָוָן׃"
+    },
+    {
+      "id": "romans.1.17.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_017_000006.png",
+      "hebrew_text": "כִּי־צִדְקַת אֱלֹהִים בּוֹ נִסְתָּרָה מֵאֱמוּנָה לֶאֱמוּנָה כַּאֲשֶׁר נִכְתַּב וְצַדִּיק בֶּאֱמוּנָתוֹ יִחְיֶה׃"
+    },
+    {
+      "id": "romans.1.18.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/vowels uncertain; crop is blurry.",
+      "output_image": "data/hutter/verse_images/romans/001_018_000008.png",
+      "hebrew_text": "כִּי־נִגְלָה אַף יְהוָֹה מִשָּׁמַיִם עַל־כָּל רִשְׁעָה עַל כָּל עַוְלָה הָאֲנָשִׁים הָאֹחֲזִים אֶת־אֱמֶת בְּעַוְלָתָם׃"
+    },
+    {
+      "id": "romans.1.19.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_019_000008.png",
+      "hebrew_text": "עַל־כֵּן דֵּעַת הָאֱלֹהִים גְּלוּיָה הִיא בָּהֶם כִּי־אֱלֹהִים הוֹדִיעַ לָהֶם׃"
+    },
+    {
+      "id": "romans.1.20.000008",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Blurry and several words/vowels are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_020_000008.png",
+      "hebrew_text": "כִּי מִסִּתְרֵי הַמִּבְרִיאָת הָעוֹלָם הֵמָּה בְּמַעֲשָׂיו נְבוֹנִים נִרְאוּ גַּם כֹּחוֹ אֲשֶׁר מֵעוֹלָם לוֹ וְגַם אֱלָהוּתוֹ אֲשֶׁר לֹא יוּכְלוּ לְדַבֵּר עַל־אוֹדוֹתָם׃"
+    },
+    {
+      "id": "romans.1.21.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to verify from crop.",
+      "output_image": "data/hutter/verse_images/romans/001_021_000008.png",
+      "hebrew_text": "לכן כרעתם את־אלהים אינם כִבְדוּ ולא בֵרְכוּ את אלהים כי־אם הבלו במחשבותם ונחשך לבב כסילותם׃"
+    },
+    {
+      "id": "romans.1.22.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_022_000008.png",
+      "hebrew_text": "הנקראים להיות חכמים נכסלו׃"
+    },
+    {
+      "id": "romans.1.23.000010",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Crop/print is blurry; several words and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_023_000010.png",
+      "hebrew_text": "וימירו את־כבוד אלהים אשר בלי־תמורה בתבנית סמל תמונת אדם ועוף והשמים ורמש וכל עשב ורמש׃"
+    },
+    {
+      "id": "romans.1.24.000010",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_024_000010.png",
+      "hebrew_text": "על־כן נתנם אלהים בתאות לבבם בטמאה בזל את־גויתם בנפשם׃"
+    },
+    {
+      "id": "romans.1.25.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning of verse partly from adjacent crop; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_025_000010.png",
+      "hebrew_text": "אשר המירו את־אמת אלהים בכזב ויראו ויעבדו את־הבריאה מן־הבורא הקדוש ברוך הוא לעולם ועד אמן׃"
+    },
+    {
+      "id": "romans.1.26.000010",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse text cut/mixed across crop boundary; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_026_000010.png",
+      "hebrew_text": "על־כן נתנם האלהים בתמאבות בשה כי־נשיהם המירו את־דרך הטבע להפך׃"
+    },
+    {
+      "id": "romans.1.27.000010",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Only lower portion of verse visible in provided crop; reconstructed from adjacent visible crop sections is uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_027_000010.png",
+      "hebrew_text": "וכמו כן האנשים עזבו את־דרך טבע הנשים ויחמו בתאוותיהם איש אל־רעהו הזכרים בזכרים פעלו־עול עושׂי זמה ונבלה וגם את־שכר מעשיהם וגמולתם פרעו בקרבם ובנפשם לקחו׃"
+    },
+    {
+      "id": "romans.1.28.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_028_000012.png",
+      "hebrew_text": "וכי לא אבו לדעת את־אלהים נתן אלהים להם לב סורר לעשות את־אשר לא ישוה להם׃"
+    },
+    {
+      "id": "romans.1.29.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_029_000012.png",
+      "hebrew_text": "המלאים בכל־עולה זמה רעה בצע סורים מלאי־קנאה רצח מריבה זמה ומזמה׃"
+    },
+    {
+      "id": "romans.1.30.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several letters/points uncertain due to blur.",
+      "output_image": "data/hutter/verse_images/romans/001_030_000012.png",
+      "hebrew_text": "מלחשים מלטנים משנאי אלהים אפיקים גאים הוללים מבקשי רעות לילדיהם מסוררים׃"
+    },
+    {
+      "id": "romans.1.31.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse appears to continue into next crop; transcription may include beginning of adjacent verse due to crop boundary.",
+      "output_image": "data/hutter/verse_images/romans/001_031_000012.png",
+      "hebrew_text": "בְּאֲשֶׁר אַף כִּי יָדְעוּ צִדְקַת אֱלֹהִים הֵמָּה כִּי־אֲשֶׁר כָּאֵלֶּה יַעֲשׂוּ מִשְׁפַּט מָוֶת יִהְיֶה לָהֶם לֹא יַעֲשׂוּם לְבַדָּם כִּי־אִם גַּם"
+    },
+    {
+      "id": "romans.2.1.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of Hebrew line slightly cropped/blurred; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_001_000012.png",
+      "hebrew_text": "עַל־כֵּן אַתָּה נָקִי כָּל־הָאָדָם הַשּׁוֹפֵט אֶת־נֶפֶשׁ בַּאֲשֶׁר תָּדִין אֶת־אַחֵר תַּרְשִׁיעַ אֶת־נַפְשְׁךָ כִּי אַתָּה הָאֵלֶּה אֲשֶׁר עֹשֶׂה אַף שׁוֹפֵט׃"
+    },
+    {
+      "id": "romans.2.2.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/points in final word are unclear.",
+      "output_image": "data/hutter/verse_images/romans/002_002_000014.png",
+      "hebrew_text": "כִּי־יָדַעְנוּ כִּי־מִשְׁפַּט אֱלֹהִים בְּצִדְקָה הוּא עֲלֵיהֶם אֲשֶׁר כָּאֵלֶּה מְעַלִּים׃"
+    },
+    {
+      "id": "romans.2.3.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few word divisions uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_003_000014.png",
+      "hebrew_text": "וְהַתַּחְשֹׁב זֹאת הָאָדָם הַשּׁוֹפֵט אֶת אֹתָם הָעֹשִׂים אֶת־הַדְּבָרִים כָּאֵלֶּה וְאַתָּה עֹשֶׂה אוֹתָם כִּי־אַתָּה תִּבְרַח מִמִּשְׁפַּט אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.2.4.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and one or two letters unclear.",
+      "output_image": "data/hutter/verse_images/romans/002_004_000014.png",
+      "hebrew_text": "אוֹ אֶת־עֹשֶׁר טוּבָתוֹ וְאַרְךְ אַפַּיִם תָּבוּז הֲלֹא תֵּדַע כִּי־טוּבַת אֱלֹהִים מוֹלִיכְךָ אוֹתְךָ אֶל־הַתְּשׁוּבָה׃"
+    },
+    {
+      "id": "romans.2.5.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several pointed forms are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_005_000014.png",
+      "hebrew_text": "וּבְקֹשִׁי וּבְסַרְבָּךְ לְךָ הָאֹצָר לְנַפְשְׁךָ חֲרוֹן אַף יְהוָה בְּיוֹם אַף הִגָּלוֹת מִשְׁפַּט צִדְקַת הָאֱלֹהִים׃"
+    },
+    {
+      "id": "romans.2.7.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and some word forms uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_007_000014.png",
+      "hebrew_text": "לְאֵלֶּה אֲשֶׁר בְּהַתְמָדָה מַעֲשֵׂה טוֹב אֶת־כָּבוֹד וְהָדָר וְלֹא־שְׁחִיתָה מְבַקְשִׁים אֶת־חַיֵּי עוֹלָם׃"
+    },
+    {
+      "id": "romans.2.8.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters and pointing are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/002_008_000014.png",
+      "hebrew_text": "וְלָאֵלֶּה אֲשֶׁר מְמָרִיבָה וְלֹא מַאֲמִינִים לֶאֱמֶת כִּי־אִם בֹּטְחִים בְּעַוְלָה חָרוֹן אַף יִהְיֶה׃"
+    },
+    {
+      "id": "romans.2.14.000016",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse spans crop boundary; some pointing/letters uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_014_000016.png",
+      "hebrew_text": "וְאִם הַגּוֹיִם לַאֲשֶׁר לֹא יֵשׁ לָהֶם הַתּוֹרָה מֵעַלְמָם עֹשִׂים אֶת־הַתּוֹרָה אַף כִּי לֹא יֵשׁ לָהֶם הַתּוֹרָה לְנַפְשָׁם הִיא לָהֶם לְתוֹרָה׃"
+    },
+    {
+      "id": "romans.2.15.000016",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is cut off and several words are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_015_000016.png",
+      "hebrew_text": "בְּהוֹתָם מַעֲשֵׂה הַתּוֹרָה נִכְתָּב הוּא בִּלְבָבָם בְּהָעִיד עֲלֵיהֶם מַדָּעָם אוֹ בְּחִיב מַחְשְׁבוֹתָם וְטַעֲנוֹתָם עַל־אוֹדוֹתָם׃"
+    },
+    {
+      "id": "romans.2.21.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/romans/002_021_000018.png",
+      "hebrew_text": "יֹאשֶׁר אַתָּה מְלַמֵּד אֶת־אַחֵר אֶת־נַפְשְׁךָ אֵינְךָ מְלַמֵּד הַקוֹרֵא לֹא לִגְנֹב הֲגַנֹּב׃"
+    },
+    {
+      "id": "romans.2.22.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial word and some vowel points are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_022_000018.png",
+      "hebrew_text": "הָאוֹמֵר לֹא לְנָאֵף הֲנֹאֵף הַמְתָעֵב אֶת־הָאֱלִילִים גּוֹזֵל אַתָּה בֵּית הַקֹּדֶשׁ׃"
+    },
+    {
+      "id": "romans.2.25.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points and the final verb form are not fully clear.",
+      "output_image": "data/hutter/verse_images/romans/002_025_000020.png",
+      "hebrew_text": "כִּי הַמִּילָה מוֹעִילָה הִיא אִם תַּעֲשֶׂה אֶת־הַתּוֹרָה וְאִם תִּבְגֹּד בַּתּוֹרָה אָז מִילָתְךָ לְעָרְלָה נֶהְיָה׃"
+    },
+    {
+      "id": "romans.2.27.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "One word after התורה and some pointing are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_027_000020.png",
+      "hebrew_text": "וְתִשְׁפֹּט הָעָרְלָה אֲשֶׁר מֵעַצְמָהּ אֶת הַתּוֹרָה מְכַלָּה אוֹתְךָ אֲשֶׁר אַתָּה בָאוֹת וּבְמִילָה בּוֹגֵד בַּתּוֹרָה׃"
+    },
+    {
+      "id": "romans.2.29.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/romans/002_029_000020.png",
+      "hebrew_text": "כִּי־אִם אֲשֶׁר בְּכֵסֶת יְהוּדִי הוּא וּמוּלַת הַלֵּב בְּרוּחַ וְלֹא בְּאוֹת אֲשֶׁר הַלּוּלוֹ אֵינֶנָּה מֵאֲנָשִׁים כִּי־אִם מֵאֱלֹהִים הִיא׃"
+    },
+    {
+      "id": "romans.3.1.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge slightly cropped; verse text inferred only where visible.",
+      "output_image": "data/hutter/verse_images/romans/003_001_000022.png",
+      "hebrew_text": "רַב מְאֹד בְּכָל־דֶּרֶךְ וְכָל־רִאשׁוֹנָה כִּי נִמְסְרוּ לָהֶם דִּבְרֵי אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.3.2.000022",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Crop is partly cut and several words/points are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/003_002_000022.png",
+      "hebrew_text": "מָה־הָיָה אִם אֲנָשִׁים לֹא הֶאֱמִינוּ הֲסוּדָיו יְבַטֵּל אֶת־אֱמוּנַת אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.3.3.000022",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Image id appears to correspond to Romans 3:4 content; text is cropped at edges and uncertain.",
+      "output_image": "data/hutter/verse_images/romans/003_003_000022.png",
+      "hebrew_text": "חָלִילָה וְהָיָה נֶאֱמָן וְכָל־הָאָדָם כֹּזֵב הוּא כְּמוֹ נִכְתָּב לְמַעַן תִּצְדַּק בְּדָבְרֶךָ תִּזְכֶּה בְשָׁפְטֶךָ׃"
+    },
+    {
+      "id": "romans.3.4.000022",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Image id appears shifted; target verse may not match visible Hebrew and crop is incomplete.",
+      "output_image": "data/hutter/verse_images/romans/003_004_000022.png",
+      "hebrew_text": "וְאִם־עַוְלָתְכֶם אֶת־צִדְקַת־אֱלֹהִים תָּקִים מַה־נֹּאמַר הֲחָמָס אֱלֹהִים הַחֹרֶה בְּאַפּוֹ כְּאָדָם מְדַבֵּר אָנֹכִי׃"
+    },
+    {
+      "id": "romans.3.5.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Only lower Hebrew line visible; may be start of next verse.",
+      "output_image": "data/hutter/verse_images/romans/003_005_000022.png",
+      "hebrew_text": "חָלִילָה וְאֵיכָה יִשְׁפֹּט אֱלֹהִים אֶת־הָעוֹלָם׃"
+    },
+    {
+      "id": "romans.3.6.000022",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Visible Hebrew appears to be Romans 3:7; some text cut off at bottom/right.",
+      "output_image": "data/hutter/verse_images/romans/003_006_000022.png",
+      "hebrew_text": "וְאִם אֱמֶת אֱלֹהִים בְּכָזָבִי עוֹד כִּי הוֹתִירָה אֶל־כְּבוֹדוֹ מַדּוּעַ גַּם־אֲנִי כְּמוֹ חוֹטֵא אֶשָּׁפֵט׃"
+    },
+    {
+      "id": "romans.3.7.000022",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Only the final portion of the Hebrew verse is visible above the Spanish.",
+      "output_image": "data/hutter/verse_images/romans/003_007_000022.png",
+      "hebrew_text": "עֹד אֲנִי כְּמוֹ חוֹטֵא אֶשָּׁפֵט׃"
+    },
+    {
+      "id": "romans.3.8.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse continues below crop; final words partly missing.",
+      "output_image": "data/hutter/verse_images/romans/003_008_000024.png",
+      "hebrew_text": "וְלֹא כַּאֲשֶׁר מְגַדְּפִים אֹתָנוּ וּכְמוֹ אֹמְרִים אֲנָשִׁים לֵאמֹר לָנוּ כִּי־נַעֲשֶׂה אֶת־הָרָעוֹת אֲשֶׁר תָּבֹאנָה הַטּוֹבוֹת אֲשֶׁר מִשְׁפָּטָם"
+    },
+    {
+      "id": "romans.3.9.000024",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Only a small cropped Hebrew fragment is visible; target verse appears mostly missing.",
+      "output_image": "data/hutter/verse_images/romans/003_009_000024.png",
+      "hebrew_text": "נֶשֶׁמֶשׁ הוּא׃"
+    },
+    {
+      "id": "romans.3.14.000024",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/003_014_000024.png",
+      "hebrew_text": "אֲשֶׁר פִּיהוּ מָלֵא וּמִרְמָה וָרֹךְ׃"
+    },
+    {
+      "id": "romans.3.20.000026",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Crop appears to show Hebrew from neighboring verses; target verse likely cut/mixed.",
+      "output_image": "data/hutter/verse_images/romans/003_020_000026.png",
+      "hebrew_text": "וְעַתָּה כְּבְלִי הַתּוֹרָה צִדְקַת אֱלֹהִים נִגְלָתָה הַתּוֹרָה"
+    },
+    {
+      "id": "romans.3.21.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Only the tail of the verse is visible in Hebrew; beginning is cut off.",
+      "output_image": "data/hutter/verse_images/romans/003_021_000026.png",
+      "hebrew_text": "מֵהַתּוֹרָה וּמִנְּבִיאִים"
+    },
+    {
+      "id": "romans.3.22.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are unclear.",
+      "output_image": "data/hutter/verse_images/romans/003_022_000026.png",
+      "hebrew_text": "כִּי צִדְקַת אֱלֹהִים בֶּאֱמוּנַת יֵשׁוּעַ הַמָּשִׁיחַ בְּכֻלָּם וְאֶל־כֻּלָּם הַמַּאֲמִינִים כִּי אֵינֶנָּה מִבְדָּלָה"
+    },
+    {
+      "id": "romans.3.24.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial word/points somewhat unclear.",
+      "output_image": "data/hutter/verse_images/romans/003_024_000028.png",
+      "hebrew_text": "מֻצְדָּקִים חִנָּם בְּחַסְדּוֹ בְּפְדוּת אֲשֶׁר הִיא בְּיֵשׁוּעַ הַמָּשִׁיחַ"
+    },
+    {
+      "id": "romans.3.25.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several letters and vocalization marks are uncertain due to blur/print.",
+      "output_image": "data/hutter/verse_images/romans/003_025_000028.png",
+      "hebrew_text": "אֲשֶׁר שָׂמוֹ אֱלֹהִים לְכַפֹּרֶת בֶּאֱמוּנָה בְּדָמוֹ לְהַרְאוֹת אֶת צִדְקָתוֹ בְּשִׁאתוֹ אֶת־חַטָּאת הָרִאשׁוֹנוֹת"
+    },
+    {
+      "id": "romans.3.26.000028",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Text is difficult to read; multiple words/points uncertain.",
+      "output_image": "data/hutter/verse_images/romans/003_026_000028.png",
+      "hebrew_text": "בְּדָמַת אֱלֹהִים לְהַרְאוֹת אֶת־צִדְקָתוֹ בְּעָמְדֵנוּ לִהְיוֹתוֹ צַדִּיק וּמַצְדִּיק לַאֲשֶׁר בֶּאֱמוּנַת יֵשׁוּעַ הוּא"
+    },
+    {
+      "id": "romans.3.27.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words and pointing are unclear.",
+      "output_image": "data/hutter/verse_images/romans/003_027_000028.png",
+      "hebrew_text": "וְאַיּוֹ הַמַּהֲלָל נִדְחָה מַהוּ הַתּוֹרָה הַפְּעָלִים לֹא כִּי אִם בְּתוֹרַת הָאֱמוּנָה"
+    },
+    {
+      "id": "romans.3.28.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final line/pointing partly unclear.",
+      "output_image": "data/hutter/verse_images/romans/003_028_000028.png",
+      "hebrew_text": "לָכֵן מַחְשְׁבִים אֲנַחְנוּ בֶּאֱמוּנָה לְהִצְדַּק אֶת־הָאָדָם בִּבְלִי מַעֲשֵׂי הַתּוֹרָה"
+    },
+    {
+      "id": "romans.3.29.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and the final words are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/003_029_000028.png",
+      "hebrew_text": "אוֹ אִם אֱלֹהִים אֱלֹהֵי הַיְּהוּדִים לְבַדּוֹ הֲלֹא גַם אֱלֹהֵי הַגּוֹיִם אַף כִּי הַגּוֹיִם"
+    },
+    {
+      "id": "romans.4.4.000030",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some vocalization and the word after מַעֲלִי are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/004_004_000030.png",
+      "hebrew_text": "וְהַפֹּעֵל מַעֲלִי מְחִירוֹ לֹא נֶחְשָׁב לוֹ בְּחֶסֶדָה כִּי־אִם בְּשָׂכָר׃"
+    },
+    {
+      "id": "romans.4.5.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse begins partly in prior crop; transcription combines visible portions.",
+      "output_image": "data/hutter/verse_images/romans/004_005_000030.png",
+      "hebrew_text": "וַאֲשֶׁר אֵינוֹ פֹעֵל כִּי אִם מַאֲמִין (בִּלְבָד) בְּאוֹתוֹ הַמַּצְדִּיק לָרָשָׁע תֵּחָשֵׁב־לוֹ אֱמוּנָתוֹ צְדָקָה׃"
+    },
+    {
+      "id": "romans.4.9.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters unclear in crop.",
+      "output_image": "data/hutter/verse_images/romans/004_009_000032.png",
+      "hebrew_text": "ואיך נחשבה אברוםה במילה או בערלה לא במילה כי אם בערלה׃"
+    },
+    {
+      "id": "romans.4.10.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing not fully preserved; some letters uncertain.",
+      "output_image": "data/hutter/verse_images/romans/004_010_000032.png",
+      "hebrew_text": "ואות המילה לקח להיותם הצדקה האמונה אשר בערלה להיותו אבי כל־המאמינים בערלה להחשב גם להם לצדקה׃"
+    },
+    {
+      "id": "romans.4.11.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse continues in next crop; image contains partial verse only.",
+      "output_image": "data/hutter/verse_images/romans/004_011_000032.png",
+      "hebrew_text": "ואבי המילה לאלה לא לבד אשר במילה כי־אם גם לאלה"
+    },
+    {
+      "id": "romans.4.12.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning of verse cut off; transcription is from visible continuation only.",
+      "output_image": "data/hutter/verse_images/romans/004_012_000032.png",
+      "hebrew_text": "אשר יקומו בעקבות אמונת אברהם אבינו אשר היתה לו במולה׃"
+    },
+    {
+      "id": "romans.4.13.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge slightly cropped; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/004_013_000034.png",
+      "hebrew_text": "כי השבועה איננה בתורה לאברהם או לזרעו להיותו יורש את־העולם כי־אם בצדקת האמונה׃"
+    },
+    {
+      "id": "romans.4.14.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left side cropped; first words/letters uncertain.",
+      "output_image": "data/hutter/verse_images/romans/004_014_000034.png",
+      "hebrew_text": "כי־לברם אלה אשר מתורה המה יורשים ריק האמונה ובטל השבועה׃"
+    },
+    {
+      "id": "romans.4.15.000034",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words unclear; pointing not confidently preserved.",
+      "output_image": "data/hutter/verse_images/romans/004_015_000034.png",
+      "hebrew_text": "כי התורה פועלה את־החף אך יהוה כי־באין תורה גם איננה סרה׃"
+    },
+    {
+      "id": "romans.4.16.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/004_016_000034.png",
+      "hebrew_text": "על־כן באמונה אשר בחסד ילד השבועה על כל־זרע לא לבדו על־אשר מן־התורה כי־אם גם על־אשר מאמונת אברהם אשר הוא אביכלנו׃"
+    },
+    {
+      "id": "romans.4.17.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/004_017_000034.png",
+      "hebrew_text": "כמו נכתב כי לאב־המון גוים נתתיך לפני אלהים אשר האמנה בו אשר מחיה את־המתים וקורא לאשר לא היו כהוים׃"
+    },
+    {
+      "id": "romans.4.18.000034",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters unclear.",
+      "output_image": "data/hutter/verse_images/romans/004_018_000034.png",
+      "hebrew_text": "אשר על־שבר בשבר האמין להיותו אב להמון הגוים כמו אמר כה יהיה זרעך׃"
+    },
+    {
+      "id": "romans.4.19.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse continues in next crop; final line partly cut.",
+      "output_image": "data/hutter/verse_images/romans/004_019_000036.png",
+      "hebrew_text": "וְלֹא נֶחֱלָה בֶאֱמוּנָה וְלֹא הֶשִׁיב אֶל גְּוִיָּתוֹ אֲשֶׁר מֵאָה"
+    },
+    {
+      "id": "romans.4.20.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "This crop appears to contain continuation of verse 19, despite requested id.",
+      "output_image": "data/hutter/verse_images/romans/004_020_000036.png",
+      "hebrew_text": "מֵתָה בִהְיוֹתוֹ בֶּן־מֵאָה שָׁנָה וְלֹא אֶל־מוֹת רֶחֶם שָׂרָי׃"
+    },
+    {
+      "id": "romans.4.21.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Printed verse number shown as 20; requested id may be offset.",
+      "output_image": "data/hutter/verse_images/romans/004_021_000036.png",
+      "hebrew_text": "וּבְמַאֲמַר אֱלֹהִים לֹא חָקַר בְּסָדֵי כִּי־אִם הֶחֱזִיק בֶאֱמוּנָה לָשִׂים כָּבוֹד לִיהוָה׃"
+    },
+    {
+      "id": "romans.4.22.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Crop includes end of previous verse and verse 22.",
+      "output_image": "data/hutter/verse_images/romans/004_022_000036.png",
+      "hebrew_text": "מְמַלֵּא בְּלִבּוֹ כִּי הַמְדַבֵּר יָכוֹל הוּא גַּם לַעֲשׂוֹתוֹ׃ לָכֵן נֶחְשַׁב לוֹ לִצְדָקָה׃"
+    },
+    {
+      "id": "romans.4.25.000036",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/004_025_000036.png",
+      "hebrew_text": "אֲשֶׁר מְחוּלָּל מִפְּשָׁעֵינוּ מִדַּכָּא מֵעֲוֹנֹתֵינוּ וַיָּקָם בַּעֲבוּר צִדְקָתֵנוּ׃"
+    },
+    {
+      "id": "romans.5.1.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is small/blurry.",
+      "output_image": "data/hutter/verse_images/romans/005_001_000038.png",
+      "hebrew_text": "וְכִי־מִצְדָּקִים בֶּאֱמוּנָה יֵשׁ־לָנוּ שָׁלוֹם אֶת־הָאֱלֹהִים בַּאֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "romans.5.2.000038",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and points are difficult to read confidently.",
+      "output_image": "data/hutter/verse_images/romans/005_002_000038.png",
+      "hebrew_text": "אֲשֶׁר בּוֹ גַּם מָצָאנוּ הַבִּכְעֵינֵי יְהוָה לִקְרוֹב אֵלָיו בֶּאֱמוּנָה לַחֶסֶד הַהוּא אֲשֶׁר בּוֹ עֹמְדִים אֲנַחְנוּ וּמִתְהַלְלִים בְּשֶׂבֶר כְּבוֹד־אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.5.3.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and final word may need verification.",
+      "output_image": "data/hutter/verse_images/romans/005_003_000038.png",
+      "hebrew_text": "לֹא לְבַד בְּכָבוֹד כִּי־אִם גַּם מִתְהַלְלִים אֲנַחְנוּ בַּצָּרוֹת יוֹדְעִים כִּי־הַצָּרָה פֹּעֲלָה אֶת־דְּמִיָּה׃"
+    },
+    {
+      "id": "romans.5.4.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Small pointing marks are not fully certain.",
+      "output_image": "data/hutter/verse_images/romans/005_004_000038.png",
+      "hebrew_text": "וְהַדְּמִיָּה אֶת־הַבֹּחַן וְהַבֹּחַן אֶת־הַשֶּׂבֶר׃"
+    },
+    {
+      "id": "romans.5.5.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/005_005_000038.png",
+      "hebrew_text": "הַתּוֹחָלֶת אֵינֶנּוּ מֵבִישׁ כִּי אַהֲבַת אֱלֹהִים נִשְׁפְּכָה בִּלְבָבוֹתֵינוּ בְּרוּחַ הַקֹּדֶשׁ הַנִּתְּנָה לָנוּ"
+    },
+    {
+      "id": "romans.5.6.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and small marks are partly unclear.",
+      "output_image": "data/hutter/verse_images/romans/005_006_000038.png",
+      "hebrew_text": "וְאִם הַמָּשִׁיחַ בִּהְיוֹתֵנוּ חוֹלִים בְּעִתּוֹ מֵת עַל־הָרְשָׁעִים"
+    },
+    {
+      "id": "romans.5.7.000038",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and final words are somewhat unclear in the image.",
+      "output_image": "data/hutter/verse_images/romans/005_007_000038.png",
+      "hebrew_text": "כִּי בְּדוֹחַק עַל־הַצַּדִּיק אִישׁ יָמוּת כִּי עַל־הַטּוֹב אוּלַי גַּם אִישׁ יִמָּלְאוּ לִבּוֹ לָמוּת"
+    },
+    {
+      "id": "romans.5.19.000044",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "left edge of verse is slightly cut off; some pointing uncertain",
+      "output_image": "data/hutter/verse_images/romans/005_019_000044.png",
+      "hebrew_text": "כִּי כַּאֲשֶׁר עַל־לֹא שְׁמֹעַ אָדָם אֶחָד חַטָּאִים רַבִּים נִהְיוּ כֵּן גַּם בִּקְרוֹת אֶחָד צַדִּיקִים רַבִּים יִהְיוּ׃"
+    },
+    {
+      "id": "romans.5.20.000044",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "left edge appears cut; first word/letters may be incomplete",
+      "output_image": "data/hutter/verse_images/romans/005_020_000044.png",
+      "hebrew_text": "וְהַתּוֹרָה בָּאָה אֲשֶׁר הִתְרַבָּה הָעֲוֹלָה אִם עָתְרָה הַחַטָּאָה גַּם עַל־יֶתֶר הוֹתִירָה הַחֲנִינָה׃"
+    },
+    {
+      "id": "romans.6.3.000044",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is partially cut; transcription may be incomplete.",
+      "output_image": "data/hutter/verse_images/romans/006_003_000044.png",
+      "hebrew_text": "טָבַלְנוּ בִּישׁוּעַ הַמָּשִׁיחַ בְּמוֹתוֹ טָבַלְנוּ"
+    },
+    {
+      "id": "romans.6.5.000046",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Lower part of verse is cut off; likely incomplete.",
+      "output_image": "data/hutter/verse_images/romans/006_005_000046.png",
+      "hebrew_text": "לָכֵן אִם נְטוּעִים נִהְיֶה בִּדְמוּת מוֹתוֹ גַּם בִּתְקוּמָה"
+    },
+    {
+      "id": "romans.6.6.000046",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/006_006_000046.png",
+      "hebrew_text": "וְזֹאת נֵדַע כִּי אָדָמֵנוּ הַיָּשָׁן נִצְלַב עִמּוֹ אֲשֶׁר תִּבָּטֵל גּוּפַת הַחֲטָאָה וְעוֹד לֹא נַעֲבֹד לְחַטָּאת"
+    },
+    {
+      "id": "romans.6.9.000046",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Right edge may contain a final word/mark partly cut off.",
+      "output_image": "data/hutter/verse_images/romans/006_009_000046.png",
+      "hebrew_text": "יוֹדְעִים כִּי הַמָּשִׁיחַ קָם מִמֵּתִים עוֹד לֹא יָמוּת הַמָּוֶת לֹא יִמְשֹׁל בּוֹ"
+    },
+    {
+      "id": "romans.6.12.000048",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/pointing are unclear; bottom/right edge may affect final word.",
+      "output_image": "data/hutter/verse_images/romans/006_012_000048.png",
+      "hebrew_text": "לָכֵן אַל־תִּמְלֹךְ הַחַטָּאת בְּגוּפְכֶם יָמוּת לִשְׁמוֹעַ אֹתָהּ בְּמַאֲוַיָּיו"
+    },
+    {
+      "id": "romans.6.13.000048",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning of verse appears cut off in crop; transcription starts from visible Hebrew.",
+      "output_image": "data/hutter/verse_images/romans/006_013_000048.png",
+      "hebrew_text": "הַצִּיגוּם אִישׁ אִישׁ לֵאלֹהִים כְּמוֹ חַיִּים מִמֵּתִים וְאֵת־נִתְחֵיכֶם לִכְלֵי הַצְּדָקָה לֵאלֹהִים׃"
+    },
+    {
+      "id": "romans.6.16.000048",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top portion includes continuation from preceding line; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/006_016_000048.png",
+      "hebrew_text": "הֲלֹא יְדַעְתֶּם כִּי לַאֲשֶׁר הֲכִינוּ לוֹ אֶת־נַפְשְׁכֶם לַעֲבָדִים לִשְׁמֹעַ כִּי עֲבָדָיו אַתֶּם לַאֲשֶׁר תִּשְׁמָעוּ אוֹ עַבְדֵי־הַחֵטְא לַמָּוֶת אוֹ עַבְדֵי הַשְּׁמִעָה לִצְדָקָה׃"
+    },
+    {
+      "id": "romans.6.17.000050",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words/points uncertain due to print quality.",
+      "output_image": "data/hutter/verse_images/romans/006_017_000050.png",
+      "hebrew_text": "אֲנִי תוֹדֶה לֵאלֹהִים כִּי הֱיִיתֶם עַבְדֵי הַחֲטָאָה וּשְׁמַעְתֶּם מִלְּבַב בְּצִיוּת הַמִּשְׁמוֹרֶת אֲשֶׁר בָּהּ נִמְסַרְתֶּם׃"
+    },
+    {
+      "id": "romans.6.19.000050",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several vowel points and one or two words are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/006_019_000050.png",
+      "hebrew_text": "כְּדֶרֶךְ אֱנוֹשׁ אֲדַבֵּר בַּעֲבוּר מְחִלַּת בְּשַׂרְכֶם כַּאֲשֶׁר הֲכִינוֹתֶם אֶת־נִתְחֵיכֶם לְעֶבֶד לְטֻמְאָה וּלְעָוֹן לְעַוְלָה כֵּן מֵעַת הָכִינוּ אֶת־נִתְחֵיכֶם לְעַבְדֻת הַצְּדָקָה לְקֹדֶשׁ׃"
+    },
+    {
+      "id": "romans.6.20.000050",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Wording/pointing uncertain in lower line.",
+      "output_image": "data/hutter/verse_images/romans/006_020_000050.png",
+      "hebrew_text": "וְכַאֲשֶׁר הֱיִיתֶם עַבְדֵי־הַחֲטָאָה כֵּן חָפְשִׁים הֱיִיתֶם עַבְדֵי הַצְּדָקָה׃"
+    },
+    {
+      "id": "romans.6.22.000050",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning appears cut off; likely starts above visible crop.",
+      "output_image": "data/hutter/verse_images/romans/006_022_000050.png",
+      "hebrew_text": "מֵחַטָּאָה עֲבָדִים נַעֲשִׂיתֶם לֵאלֹהִים יֵשׁ לָכֶם פְּרִי לַקֹּדֶשׁ וְאַחֲרִיתוֹ אֶת־חַיֵּי עוֹלָם׃"
+    },
+    {
+      "id": "romans.6.23.000052",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks are small; transcription may need verification.",
+      "output_image": "data/hutter/verse_images/romans/006_023_000052.png",
+      "hebrew_text": "כִּי־שְׂכַר הַחֵטְא הַמָּוֶת וּמַתַּת אֱלֹהִים חַיֵּי עוֹלָם בַּאֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "romans.7.1.000052",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/marks uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_001_000052.png",
+      "hebrew_text": "אוֹ לֹא תֵדְעוּ אַחַי כִּי לְיֹדְעֵי תּוֹרָה מְדַבֵּר אָנֹכִי כִּי־הַתּוֹרָה מוֹשֶׁלֶת בָּאָדָם בְּכָל־עֵת הַחַיִּים׃"
+    },
+    {
+      "id": "romans.7.2.000052",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is difficult in places.",
+      "output_image": "data/hutter/verse_images/romans/007_002_000052.png",
+      "hebrew_text": "כִּי אֵשֶׁת הָאִישׁ בַּעֲלַת חַיִּים אֲסוּרָה הִיא לָאִישׁ כְּהַתּוֹרָה וְאִם מֵת הָאִישׁ אָז מְחֻפְשָׁה הִיא מִתּוֹרַת הָאִישׁ׃"
+    },
+    {
+      "id": "romans.7.3.000052",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_003_000052.png",
+      "hebrew_text": "עַל־כֵּן בְּעוֹדָהּ חַי הָאִישׁ מְנָאָפֶת תִּקָּרֵא אִם־תִּהְיֶה לְאִישׁ אַחֵר וְאִם יָמוּת הָאִישׁ חָפְשִׁית הִיא מֵהַתּוֹרָה מִהְיוֹתָהּ מְנָאָפֶת אִם תִּהְיֶה לְאִישׁ אַחֵר׃"
+    },
+    {
+      "id": "romans.7.4.000052",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Small pointing/marks not fully certain.",
+      "output_image": "data/hutter/verse_images/romans/007_004_000052.png",
+      "hebrew_text": "לָכֵן אַחַי גַּם אַתֶּם הַמֵּתִים לַתּוֹרָה בְּגוּפַת הַמָּשִׁיחַ לִהְיוֹתְכֶם לְאַחֵר אֲשֶׁר קָם מִמֵּתִים לַעֲשׂוֹת פְּרִי לֵאלֹהִים׃"
+    },
+    {
+      "id": "romans.7.5.000054",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and niqqud are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/007_005_000054.png",
+      "hebrew_text": "וְכִי־הָיִינוּ בַּבָּשָׂר בִּצְעוֹתֵי הַחֲטָאוֹת אֲשֶׁר בַּתּוֹרָה פּוֹעֲלִים הָיוּ בְמַחֲנֵינוּ לַעֲשׂוֹת פְּרִי לַמָּוֶת׃"
+    },
+    {
+      "id": "romans.7.6.000054",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Text is blurry; multiple readings uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_006_000054.png",
+      "hebrew_text": "וְעַתָּה כִּי־חֻפְשְׁנוּ מֵהַתּוֹרָה אֲשֶׁר בָּהּ אֲחֻזִים מֵתְנוּ אֲשֶׁר נַעֲבֹד בְּחִדְשׁוּת הָרוּחַ וְלֹא בְּזִקְנַת הַכְּתָב׃"
+    },
+    {
+      "id": "romans.7.7.000054",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_007_000054.png",
+      "hebrew_text": "וּמָה נֹאמַר כִּי־הַתּוֹרָה חֵטְא הִיא חָלִילָה כִּי אִם אֶת־הַחֵטְא לֹא יָדַעְתִּי כִּי אִם בַּתּוֹרָה כִּי אֶת־הַחֶמְדָּה לֹא יָדַעְתִּי אִם לֹא אָמְרָה הַתּוֹרָה לֹא תַחְמֹד׃"
+    },
+    {
+      "id": "romans.7.8.000054",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud and one or two words may need review.",
+      "output_image": "data/hutter/verse_images/romans/007_008_000054.png",
+      "hebrew_text": "כִּי־הַחֵטְא מָצָא אֶת־סִבָּה בַּמִּצְוָה לִפְעֹל בִּי אֶת־כָּל־חֶמְדָּה כִּי־בְּלִי הַתּוֹרָה הַחֵטְא מֵתָה הִיא׃"
+    },
+    {
+      "id": "romans.7.9.000054",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is small and somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_009_000054.png",
+      "hebrew_text": "וַאֲנִי חָיִיתִי בְּלִי הַתּוֹרָה פַּעַם וּכְבוֹא הַמִּצְוָה אָז שָׁבָה חַיַּת הַחֵטְא׃"
+    },
+    {
+      "id": "romans.7.10.000054",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to confirm from the crop.",
+      "output_image": "data/hutter/verse_images/romans/007_010_000054.png",
+      "hebrew_text": "וַאֲנִי מֵתִי וְנִמְצָאָה לִי הַמִּצְוָה הַמְּכוּנָה לְחַיִּים כִּי לְמָוֶת הִיא׃"
+    },
+    {
+      "id": "romans.7.11.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Right/left edges and niqqud are partly unclear.",
+      "output_image": "data/hutter/verse_images/romans/007_011_000056.png",
+      "hebrew_text": "כִּי הַחַטָּאָה בַּאֲשֶׁר מָצְאָה סִבָּה בַּמִּצְוָה הִשִּׁיאַתְנִי וּבָהּ הֱמִיתַתְנִי׃"
+    },
+    {
+      "id": "romans.7.12.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points are faint.",
+      "output_image": "data/hutter/verse_images/romans/007_012_000056.png",
+      "hebrew_text": "לָכֵן הַתּוֹרָה קְדוֹשָׁה הִיא וְהַמִּצְוָה קְדוֹשָׁה צַדִּיקָה וְטוֹבָה הִיא׃"
+    },
+    {
+      "id": "romans.7.13.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Dense text; several niqqud and one or more words are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_013_000056.png",
+      "hebrew_text": "וַאֲשֶׁר טוֹבָה הִיא הָיְתָה לִי לְמָוֶת חָלִילָה כִּי־אִם אֲשֶׁר תֵּרָאֶה הַחַטָּאָה כִּי הַחַטָּאָה הִיא בַּטּוֹבָה פָעֲלָה בִּי אֶת־הַמָּוֶת לִהְיוֹת עַל־יְדֵי הַחַטָּאת חַטָּאָה בַּמִּצְוָה׃"
+    },
+    {
+      "id": "romans.7.14.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partly unclear.",
+      "output_image": "data/hutter/verse_images/romans/007_014_000056.png",
+      "hebrew_text": "כִּי יָדַעְנוּ כִּי הַתּוֹרָה רוּחַ וַאֲנִי בָשָׂר הוּא נִמְכַּר תַּחַת הַחַטָּאת׃"
+    },
+    {
+      "id": "romans.7.15.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "First phrase and some vowel points are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_015_000056.png",
+      "hebrew_text": "כִּי־אֶת־אֲשֶׁר מֹעֵל אֲנִי אֵינֶנִּי יֹדֵעַ כִּי אֵינֶנִּי עוֹשֶׂה אֲשֶׁר אֹהֵב כִּי אִם אֲשֶׁר שׂוֹנֵא אָנֹכִי׃"
+    },
+    {
+      "id": "romans.7.16.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud and exact form of one word are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_016_000056.png",
+      "hebrew_text": "וְאִם עֹשֶׂה אֲנִי אֲשֶׁר אֵינֶנִּי אֹהֵב אֶתֵּן אֲנִי לַתּוֹרָה כִּי טוֹבָה הִיא׃"
+    },
+    {
+      "id": "romans.7.17.000056",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several letters/points are faint.",
+      "output_image": "data/hutter/verse_images/romans/007_017_000056.png",
+      "hebrew_text": "וּמֵעַתָּה אֵינֶנִּי עוֹד מֹעֵל אוֹתָהּ כִּי אִם הַחַטָּאָה אֲשֶׁר שׁוֹכְנָה בִי׃"
+    },
+    {
+      "id": "romans.7.18.000058",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Crop includes verse end near lower edge; some words/niqqud uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_018_000058.png",
+      "hebrew_text": "כִּי יָדַעְתִּי כִּי אֵינֶנָּה שׁוֹכְנָה בִי זֶה הוּא בִּבְשָׂרִי הַטּוֹבָה אַךְ כִּי יֵשׁ בִּי הַתְּשׁוּקָה לַטּוֹבָה אַךְ אֶת־יְכֹלֶת מִפְעַל לַעֲשׂוֹתָהּ אֵינֶנִּי מוֹצֵא בִי׃"
+    },
+    {
+      "id": "romans.7.19.000058",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse is cut off at bottom; only visible portion transcribed.",
+      "output_image": "data/hutter/verse_images/romans/007_019_000058.png",
+      "hebrew_text": "כִּי אֶת־הַטּוֹבָה אֲשֶׁר חָפֵצִי בָהּ אֵינֶנִּי עוֹשֶׂה כִּי אִם אֶת־הָרָעָה אֲשֶׁר"
+    },
+    {
+      "id": "romans.7.20.000058",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are small and partly unclear.",
+      "output_image": "data/hutter/verse_images/romans/007_020_000058.png",
+      "hebrew_text": "אִם עֹשֶׂה אֲנִי אֵת־אֲשֶׁר אֵינֶנִּי אֹהֵבָה אֵינֶנִּי עוֹד עֹשֶׂה אֹתָהּ כִּי אִם־הַחַטָּאת אֲשֶׁר בִּי שֹׁכֶנֶת׃"
+    },
+    {
+      "id": "romans.7.21.000058",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse is legible, but some vowel points are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_021_000058.png",
+      "hebrew_text": "לָכֵן מֹצֵא אֲנִי אֶת־הַתּוֹרָה אִם חֵפְצִי לַעֲשׂוֹת אֶת־הַטּוֹבָה כִּי־דּוֹבֵק בִּי הָרָע׃"
+    },
+    {
+      "id": "romans.7.22.000058",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word pointing is partly unclear.",
+      "output_image": "data/hutter/verse_images/romans/007_022_000058.png",
+      "hebrew_text": "כִּי חָפַצְתִּי בְּתוֹרַת אֱלֹהִים בָּאָדָם הַפְּנִימִי׃"
+    },
+    {
+      "id": "romans.7.23.000058",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Crop is partial/blurred and several words/points are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_023_000058.png",
+      "hebrew_text": "וְרֹאֶה אֲנִי אֶת־תּוֹרָה אַחֶרֶת בְּאֵבָרַי הַנִּלְחָמָה עִם תּוֹרַת בִּינָתִי מַעֲבִידָה אוֹתִי בְּתוֹרַת הַחַטָּאת אֲשֶׁר הִיא בְּבְשָׂרִי׃"
+    },
+    {
+      "id": "romans.7.24.000058",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse appears in crop; some marks are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_024_000058.png",
+      "hebrew_text": "אֻמְלַל אֱנוֹשׁ אֲנִי מִי־יַצִּילֵנִי מִגְּוִיַּת הַמָּוֶת׃"
+    },
+    {
+      "id": "romans.7.25.000058",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Hebrew is mostly cut off; transcription reconstructed only from visible neighboring crop portions and may be incomplete.",
+      "output_image": "data/hutter/verse_images/romans/007_025_000058.png",
+      "hebrew_text": "מוֹדֶה אֲנִי לֵאלֹהִים בְּיֵשׁוּעַ מְשִׁיחֵנוּ אֲדוֹנֵינוּ לָכֵן אֲנִי הוּא בְּרוּחִי עֹבֵד לְתוֹרַת אֱלֹהִים וּבִבְשָׂרִי לְתוֹרַת הַחַטָּאת׃"
+    },
+    {
+      "id": "romans.8.1.000060",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Image labeled verse 8.1 but printed Hebrew begins with verse number 2; transcribed visible Hebrew only.",
+      "output_image": "data/hutter/verse_images/romans/008_001_000060.png",
+      "hebrew_text": "כִּי־תּוֹרַת רוּחַ הַחַיִּים בְּיֵשׁוּעַ מְשִׁיחִי חִפְּשָׁה אוֹתִי מִתּוֹרַת הַחַטָּאת וּמִתּוֹרַת הַמָּוֶת׃"
+    },
+    {
+      "id": "romans.8.2.000060",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Image labeled verse 8.2 but visible Hebrew starts verse number 3 and is cut off at bottom.",
+      "output_image": "data/hutter/verse_images/romans/008_002_000060.png",
+      "hebrew_text": "בַּאֲשֶׁר בְּלִי יְכֹלֶת לַתּוֹרָה בְּהִלָּחֲשָׁהּ בַּעֲבוּר הַבָּשָׂר שָׁלַח אֱלֹהִים אֶת־בְּנוֹ יְחִידוֹ בִּדְמוּת"
+    },
+    {
+      "id": "romans.8.3.000060",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "This is the continuation/end of verse 3 only; beginning appears in previous crop.",
+      "output_image": "data/hutter/verse_images/romans/008_003_000060.png",
+      "hebrew_text": "בְּשַׂר הַחַטָּאת וּבְחַטָּאת שָׁפַט אֶת־הַחַטָּאת בַּבָּשָׂר׃"
+    },
+    {
+      "id": "romans.8.4.000060",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_004_000060.png",
+      "hebrew_text": "אֲשֶׁר תְּמַלֵּא צִדְקַת הַתּוֹרָה בָּנוּ אֲשֶׁר אֲנַחְנוּ לֹא כַבָּשָׂר כִּי אִם בְּרוּחַ אֶת־אֱלֹהִים נִתְהַלֵּךְ׃"
+    },
+    {
+      "id": "romans.8.17.000064",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/008_017_000064.png",
+      "hebrew_text": "וְאִם בָּנִים אֲזַי יוֹרְשִׁים יוֹרְשֵׁי אֱלֹהִים וְחַבְּרֵי נַחֲלַת הַמָּשִׁיחַ אִם נַעֲנֶה עִמּוֹ אֲשֶׁר גַּם נְהֻדַּר עִמּוֹ׃"
+    },
+    {
+      "id": "romans.8.19.000064",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several letters/points are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_019_000064.png",
+      "hebrew_text": "כִּי תִקְוַת כָּל־הַבְּרִיאָה מְשַׁבֶּרֶת לְגִלּוּי חֲלִיפַת בְּנֵי־אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.8.20.000064",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse appears split across neighboring crop; transcription may include uncertain visible text only.",
+      "output_image": "data/hutter/verse_images/romans/008_020_000064.png",
+      "hebrew_text": "כִּי־הַבְּרִיאָה הוּשְׁפְּלָה תַּחַת הֶבֶל לֹא בִּרְצוֹנָהּ כִּי־אִם בַּעֲבוּרוֹ אֲשֶׁר שִׁעְבְּדָהּ וְתִחִיל בְּתִקְוָה׃"
+    },
+    {
+      "id": "romans.8.23.000066",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning is partly in preceding crop; combined target verse text from visible continuation, but some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_023_000066.png",
+      "hebrew_text": "אַךְ לֹא לְבַדָּהּ כִּי־אִם גַּם אֲנַחְנוּ לַאֲשֶׁר יֵשׁ לָנוּ בִּכּוּרֵי־רוּחַ וְאֲנַחְנוּ בְּנַפְשֵׁנוּ נֶאֱנָחִים וּמְקַוִּים אֲנַחְנוּ אֶת־מַתַּת הַבָּנִים אֶת־פְּדוּת גְּוִיָּתֵנוּ׃"
+    },
+    {
+      "id": "romans.8.25.000066",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to confirm.",
+      "output_image": "data/hutter/verse_images/romans/008_025_000066.png",
+      "hebrew_text": "וְאִם אֵלֶּה אֲשֶׁר לֹא רֹאִים מְקַוִּים אֲנַחְנוּ בְּדִמְמָה מְשַׁמְּרִים אֹתָהּ׃"
+    },
+    {
+      "id": "romans.8.26.000066",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few words uncertain due to blur.",
+      "output_image": "data/hutter/verse_images/romans/008_026_000066.png",
+      "hebrew_text": "וְכָכָה גַּם הָרוּחַ עוֹזֶרֶת לְחֶלְיֵנוּ כִּי אֹתָהּ אֲשֶׁר־נִתְפַּלֵּל כַּהֹגֶן לֹא יָדַעְנוּ כִּי־אִם הָרוּחַ מַעֲתִיר עָלֵינוּ בְּאָנָחָה כִּי־לֹא יָדַעְנוּ סְפָרוֹת׃"
+    },
+    {
+      "id": "romans.8.27.000068",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/marks uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_027_000068.png",
+      "hebrew_text": "כִּי־הַדּוֹרֵשׁ לְבָבוֹת וְהַמֵּבִין כָּל־יֵצֶר מַחֲשָׁבוֹת יוֹדֵעַ אֶת־שֶׁל הָרוּחַ כִּי כְּרָצוֹן אֱלֹהִים מַעֲתִיר עַל־הַקְּדוֹשִׁים׃"
+    },
+    {
+      "id": "romans.8.28.000068",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "One word near the end is uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_028_000068.png",
+      "hebrew_text": "כִּי יָדַעְנוּ כִּי לְאֹהֲבֵי אֱלֹהִים כָּל־דְּבָרִים יִפְעַל לְטוֹבָה לְאֵלֶּה אֲשֶׁר כְּעֶצֶר קְרוּאִים הֵמָּה׃"
+    },
+    {
+      "id": "romans.8.29.000068",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Vocalization and one form uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_029_000068.png",
+      "hebrew_text": "כִּי הָאֵלֶּה אֲשֶׁר מִקֶּדֶם יְדָעָם אוֹתָם עוֹד וַיַּחְתֹּם לְהִשָּׁוֹת לִדְמוּת בְּנוֹ לִהְיוֹתּוֹ בְּכוֹר בְּאַחִים רַבִּים׃"
+    },
+    {
+      "id": "romans.8.30.000068",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "First verb and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_030_000068.png",
+      "hebrew_text": "וַאֲשֶׁר מִקֶּדֶם עָדַד וְהֵם אוֹתָם גַּם קָרָא וַאֲשֶׁר קָרָא לָהֶם גַּם הִצְדִּיק וְלַאֲשֶׁר הִצְדִּיק אוֹתָם גַּם הֶאֱדִיר׃"
+    },
+    {
+      "id": "romans.8.31.000068",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing uncertain in places.",
+      "output_image": "data/hutter/verse_images/romans/008_031_000068.png",
+      "hebrew_text": "וּמָה נֹאמַר עַל־הָאֵלֶּה אִם הָאֱלֹהִים חֵלֶף אֲנַחְנוּ מִי־יוּכַל עָלֵינוּ׃"
+    },
+    {
+      "id": "romans.8.32.000068",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/niqqud uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_032_000068.png",
+      "hebrew_text": "אֲשֶׁר גַּם עַל־בְּנוֹ יְחִידוֹ לֹא חָס כִּי אִם נְתָנוֹ עַל־כֻּלָּנוּ אֵיכָכָה לֹא חָנַן אֹתָנוּ עִמּוֹ אֶת־כָּל־אֲשֶׁר לוֹ׃"
+    },
+    {
+      "id": "romans.8.33.000068",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Divine name/word form slightly uncertain from crop.",
+      "output_image": "data/hutter/verse_images/romans/008_033_000068.png",
+      "hebrew_text": "מִי־יָרִיב אֶת־בְּחִירֵי אֱלֹהִים וְיְהוָה הוּא הַמַּצְדִּיק׃"
+    },
+    {
+      "id": "romans.8.34.000070",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse appears cut off at bottom/right and several words are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_034_000070.png",
+      "hebrew_text": "מִי־הוּא זֶה הַשֹּׁפֵט יֵשׁוּעַ מָשִׁיחַ מֵת וְהַכָּבוֹד הָמַת אַךְ יוֹתֵר הָקָם מִמֵּתִים הַיּוֹשֵׁב לִימִין אֱלֹהִים אֲשֶׁר גַּם עוֹתֵר עָלֵינוּ"
+    },
+    {
+      "id": "romans.8.35.000070",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Bottom/right edge slightly cut; final word uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_035_000070.png",
+      "hebrew_text": "וּמִי יַפְרִיד אוֹתָנוּ מֵאַהֲבַת הַמָּשִׁיחַ הֲצָרָה אוֹ מְצוּקָה אוֹ רְדִיפָה אוֹ רָעָב אוֹ עֵירֹם וְעֶרְיָה"
+    },
+    {
+      "id": "romans.8.37.000070",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse crop appears to include continuation/neighboring text and the requested verse boundary is uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_037_000070.png",
+      "hebrew_text": "כִּי־בְכָל־זֹאת לֹא הַמָּוֶת וְלֹא חַיִּים וְלֹא מַלְאָכִים וְלֹא מֶמְשָׁלוֹת וְלֹא גְבוּרֹת וְלֹא הֹוֹת וְלֹא עֲתִידִים"
+    },
+    {
+      "id": "romans.8.38.000070",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "This crop appears to contain Romans 8:39 rather than 8:38.",
+      "output_image": "data/hutter/verse_images/romans/008_038_000070.png",
+      "hebrew_text": "וְלֹא רֹם וְלֹא עֹמֶק וְלֹא בְּרִיאָה אַחֶרֶת יוּכְלוּ לְהַפְרִיד אוֹתָנוּ מֵאַהֲבַת אֱלֹהִים אֲשֶׁר הִיא בְּיֵשׁוּעַ הַמָּשִׁיחַ אֲדוֹנֵנוּ"
+    },
+    {
+      "id": "romans.8.39.000070",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Crop appears to show Romans 9:1, not Romans 8:39.",
+      "output_image": "data/hutter/verse_images/romans/008_039_000070.png",
+      "hebrew_text": "אֱמֶת־אֹמַר בְּמֶלֶךְ אֵינִי מְכַזֵּב וּמֵעִיד לִי מַדָּעִי בְּרוּחַ הַקֹּדֶשׁ"
+    },
+    {
+      "id": "romans.9.8.000072",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Only a small Hebrew fragment is visible at the right edge; most of verse is not shown.",
+      "output_image": "data/hutter/verse_images/romans/009_008_000072.png",
+      "hebrew_text": "וֶרַע׃"
+    },
+    {
+      "id": "romans.9.15.000074",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Hebrew line is partially cut off at top and right/left edges in crop.",
+      "output_image": "data/hutter/verse_images/romans/009_015_000074.png",
+      "hebrew_text": "כִּי־לְמֹשֶׁה אָמַר וְחַנֹּתִי אֶת־אֲשֶׁר אָחֹן וְרִחַמְתִּי אֶת־אֲשֶׁר אֲרַחֵם׃"
+    },
+    {
+      "id": "romans.9.16.000074",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Only final Hebrew word of the verse is visible; remainder is cut off.",
+      "output_image": "data/hutter/verse_images/romans/009_016_000074.png",
+      "hebrew_text": "הַמְרַחֵם׃"
+    },
+    {
+      "id": "romans.9.20.000076",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Text is partly unclear/cropped and may include uncertain words.",
+      "output_image": "data/hutter/verse_images/romans/009_020_000076.png",
+      "hebrew_text": "לְצִדּוֹ מַה תַּעֲשֶׂה הוּא יֹאמַר לְאָב מַדּוּעַ הוֹלִיד לְאִשָׁה מַדּוּעַ חִילָלְתִּיךְ׃"
+    },
+    {
+      "id": "romans.9.21.000076",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse continues/cut off at bottom; visible portion only transcribed.",
+      "output_image": "data/hutter/verse_images/romans/009_021_000076.png",
+      "hebrew_text": "הֲלֹא יֵשׁ לַיּוֹצֵר שִׁלְטוֹן עַל הַחֹמֶר מֵעֲרִיסָה אַחַת לַעֲשׂוֹת אֶת־כְּלִי אֶחָד לְכָבוֹד וְאַחֵר"
+    },
+    {
+      "id": "romans.9.27.000078",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to preserve confidently.",
+      "output_image": "data/hutter/verse_images/romans/009_027_000078.png",
+      "hebrew_text": "וישעיהו הצעק על־ישראל אם יהיה מספר בני ישראל כחול הים שאר ישוב בו׃"
+    },
+    {
+      "id": "romans.9.28.000078",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks partly unclear.",
+      "output_image": "data/hutter/verse_images/romans/009_028_000078.png",
+      "hebrew_text": "כליון חרוץ שוטף צדקה כי כלה ונחרצה אדני יהוה צבאות עשה בקרב כל־הארץ׃"
+    },
+    {
+      "id": "romans.9.29.000078",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/romans/009_029_000078.png",
+      "hebrew_text": "וכמו נבא ישעיהו לולי יהוה צבאות הותיר לנו שריד כמעט כסדום היינו לעמרה דמינו׃"
+    },
+    {
+      "id": "romans.9.30.000080",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points/marks unclear.",
+      "output_image": "data/hutter/verse_images/romans/009_030_000080.png",
+      "hebrew_text": "ומה נאמר כי־הגוים אשר לא רדפו אחרי־הצדקה לקחו את־הצדקה רוצה לאמר ואת־צדקה מאמונה׃"
+    },
+    {
+      "id": "romans.9.31.000080",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud not confidently preserved.",
+      "output_image": "data/hutter/verse_images/romans/009_031_000080.png",
+      "hebrew_text": "וישראל הרודף אחרי צדקה התורה אל־צדקת התורה לא הגיע׃"
+    },
+    {
+      "id": "romans.9.32.000080",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some marks unclear.",
+      "output_image": "data/hutter/verse_images/romans/009_032_000080.png",
+      "hebrew_text": "מדוע זאת כי־איננו באמונה כי אם כמו מפעלי התורה הוא כי נגפו לאבן נגף׃"
+    },
+    {
+      "id": "romans.9.33.000080",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully transcribed.",
+      "output_image": "data/hutter/verse_images/romans/009_033_000080.png",
+      "hebrew_text": "כמו נכתב הנני יסד בציון אבן נגף וצור מכשול וכל־המאמין בו לא יבוש׃"
+    },
+    {
+      "id": "romans.10.1.000080",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks partly unclear.",
+      "output_image": "data/hutter/verse_images/romans/010_001_000080.png",
+      "hebrew_text": "אחי רצון לבבי והתפלתי לאלהים על־ישראל היא לישועה׃"
+    },
+    {
+      "id": "romans.10.2.000080",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/romans/010_002_000080.png",
+      "hebrew_text": "ומעיד אני להם כי יש להם קנאת אלהים אך איננה בדעה׃"
+    },
+    {
+      "id": "romans.10.3.000082",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Image is cropped/cut off on the right and bottom; transcription may be incomplete.",
+      "output_image": "data/hutter/verse_images/romans/010_003_000082.png",
+      "hebrew_text": "כי אינם יודעים את צדקת אלהים ומבקשים להם את־צדקה נפשם לצדקת אלהים לא נכנעו׃"
+    },
+    {
+      "id": "romans.10.4.000082",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge slightly cropped; pointing partly uncertain.",
+      "output_image": "data/hutter/verse_images/romans/010_004_000082.png",
+      "hebrew_text": "סוֹף הַתּוֹרָה הַמָּשִׁיחַ הוּא לִצְדָקָה לְכָל־אֲשֶׁר יַאֲמִין׃"
+    },
+    {
+      "id": "romans.10.5.000082",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Right/left edges cropped and some marks unclear.",
+      "output_image": "data/hutter/verse_images/romans/010_005_000082.png",
+      "hebrew_text": "מֹשֶׁה כָתַב עַל־הַצְּדָקָה מֵהַתּוֹרָה הִיא כִּי כָּל־אֲשֶׁר אוֹתָם הָאָדָם וָחַי בָּהֶם׃"
+    },
+    {
+      "id": "romans.10.6.000082",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse appears cropped at both edges; some words/points uncertain.",
+      "output_image": "data/hutter/verse_images/romans/010_006_000082.png",
+      "hebrew_text": "הַצְּדָקָה אֲשֶׁר מֵאֱמוּנָה הִיא אֹמֶרֶת אַל־תֹּאמַר בִּלְבָבְךָ מִי יַעֲלֶה לָנוּ הַשָּׁמַיְמָה וְזֹאת הִיא לְהוֹרִיד אֶת־הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "romans.10.7.000082",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning edge slightly cropped; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/010_007_000082.png",
+      "hebrew_text": "מִי־יֵרֵד תְּהוֹמָה וְזֹאת הִיא לְהַעֲלוֹת אֶת־הַמָּשִׁיחַ מִמֵּתִים׃"
+    },
+    {
+      "id": "romans.10.8.000082",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Crop shows only part of the Hebrew verse; transcription relies on visible fragments and is incomplete/uncertain.",
+      "output_image": "data/hutter/verse_images/romans/010_008_000082.png",
+      "hebrew_text": "קָרוֹב אֵלֶיךָ הַדָּבָר מְאֹד בְּפִיךָ וּבִלְבָבְךָ הוּא דְּבַר הָאֱמוּנָה אֲשֶׁר מְבַשְּׂרִים אֲנַחְנוּ׃"
+    },
+    {
+      "id": "romans.10.9.000082",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Top/beginning of verse cut off; only visible Hebrew transcribed as best as possible.",
+      "output_image": "data/hutter/verse_images/romans/010_009_000082.png",
+      "hebrew_text": "יֵשׁוּעַ הַמָּשִׁיחַ וְתַאֲמִין כִּי הָאֱלֹהִים הֵקִים מִמֵּתִים תִּוָּשַׁע׃"
+    },
+    {
+      "id": "romans.10.11.000084",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/word forms are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/010_011_000084.png",
+      "hebrew_text": "כִּי אָמַר הַכָּתָב כָּל קֹרֵא בְּכָל־אֲשֶׁר יַאֲמִינוּ בּוֹ לֹא יֵבֹשׁוּ׃"
+    },
+    {
+      "id": "romans.10.14.000084",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word near the end are slightly uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/romans/010_014_000084.png",
+      "hebrew_text": "וְאֵיכָכָה יִקְרָאוּ בּוֹ אֲשֶׁר לֹא הֶאֱמִינוּ וְאֵיךְ יַאֲמִינוּ בּוֹ אֲשֶׁר עָלָיו לֹא שָׁמְעוּ וְאֵיכָכָה יִשְׁמְעוּ בְּבְלִי־מְבַשֵּׂר׃"
+    },
+    {
+      "id": "romans.10.15.000084",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and the definite article in עַל־הֶהָרִים are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/010_015_000084.png",
+      "hebrew_text": "וְאֵיךְ יְבַשְּׂרוּ אִם לֹא שֻׁלָּחוּ כְּמוֹ נִכְתָּב מַה נָאוּ עַל־הֶהָרִים רַגְלֵי מְבַשֵּׂר מַשְׁמִיעַ שָׁלוֹם מְבַשֵּׂר טוֹב מַשְׁמִיעַ יְשׁוּעָה׃"
+    },
+    {
+      "id": "romans.10.16.000084",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is not fully confident in several words.",
+      "output_image": "data/hutter/verse_images/romans/010_016_000084.png",
+      "hebrew_text": "אַךְ כִּי לֹא כֻלָּם שָׁמְעוּ לִבְשׂוֹרָה גַּם יְשַׁעְיָהוּ אָמַר יְהוָה מִי הֶאֱמִין לִשְׁמוּעָתֵנוּ׃"
+    },
+    {
+      "id": "romans.10.17.000086",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final divine-name wording and some pointing are slightly uncertain from the crop.",
+      "output_image": "data/hutter/verse_images/romans/010_017_000086.png",
+      "hebrew_text": "עַל־כֵּן הָאֱמוּנָה מִשְּׁמוּעָה וְהַשְּׁמוּעָה בִּדְבַר יְהוָה׃"
+    },
+    {
+      "id": "romans.10.21.000086",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some words/pointing in the lower line are difficult to confirm from the image.",
+      "output_image": "data/hutter/verse_images/romans/010_021_000086.png",
+      "hebrew_text": "וְאֶל־יִשְׂרָאֵל אָמַר פֵּרַשְׂתִּי יָדַי כָּל־הַיּוֹם אֶל־עַם סוֹרֵר וְהוֹלְכִים הֶדֶךְ לֹא טוֹב אַחַר מַחְשְׁבֹתֵיהֶם׃"
+    },
+    {
+      "id": "romans.11.1.000086",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is difficult to verify exactly from the crop.",
+      "output_image": "data/hutter/verse_images/romans/011_001_000086.png",
+      "hebrew_text": "וְאוֹמֵר אָנֹכִי אִם מָאַס אֱלֹהִים אֶת־עַמּוֹ חָלִילָה כִּי גַם אֲנִי יִשְׂרָאֵלִי הוּא מִזֶּרַע אַבְרָהָם מִמַּטֵּה בִנְיָמִין"
+    },
+    {
+      "id": "romans.11.2.000088",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Bottom may continue beyond crop; niqqud/marks visible but not fully preserved.",
+      "output_image": "data/hutter/verse_images/romans/011_002_000088.png",
+      "hebrew_text": "לא מאם אלהים את־עמו אשר מקדם ידעו הלא ידעתם באליהו מה מדבר הכתב כאשר מתפלל אל־יהוה על־בני ישראל לאמר"
+    },
+    {
+      "id": "romans.11.3.000088",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is faint/uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_003_000088.png",
+      "hebrew_text": "יְהוָה אֶת־נְבִיאֶיךָ הָרְגוּ בֶחָרֶב וְאֶת־מִזְבְּחֹתֶיךָ הָרָסוּ וָאִוָּתֵר אֲנִי לְבַדִּי וַיְבַקְשׁוּ אֶת־נַפְשִׁי"
+    },
+    {
+      "id": "romans.11.4.000088",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse crop is cut off at bottom; only visible Hebrew transcribed.",
+      "output_image": "data/hutter/verse_images/romans/011_004_000088.png",
+      "hebrew_text": "כִּי אִם מַה אֹמֵר לוֹ דְּבַר יְהוָה הִשְׁאַרְתִּי בְיִשְׂרָאֵל שִׁבְעַת"
+    },
+    {
+      "id": "romans.11.6.000088",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few letters are somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_006_000088.png",
+      "hebrew_text": "וְאִם בְּתְחִנָּה אֵינֶנָּה עוֹד מִמַּעֲשִׂים אוֹ הַתְּחִנָּה אֵינֶנָּה עוֹד תְּחִנָּה וְאִם מִמַּעֲשִׂים אוֹ אֵינֶנָּה עוֹד מִתְּחִנָּה אוֹ הַמַּעֲשֶׂה אֵינֶנּוּ מִפְעָל עוֹד"
+    },
+    {
+      "id": "romans.11.7.000088",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels/letters unclear due to print quality.",
+      "output_image": "data/hutter/verse_images/romans/011_007_000088.png",
+      "hebrew_text": "וּמָה זֹאת אֲשֶׁר מְבַקֵּשׁ יִשְׂרָאֵל אֹתָהּ לֹא אָחַז אַךְ הַמִּבְחָר אָחַז וְהָאֲחֵרִים כָּהוּ"
+    },
+    {
+      "id": "romans.11.9.000090",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word pointing/reading uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_009_000090.png",
+      "hebrew_text": "וְדָוִד אֹמֵר יְהִי־שֻׁלְחָנָם לִפְנֵיהֶם לְפַח לְמוֹקֵשׁ לְשִׁלּוּמִים"
+    },
+    {
+      "id": "romans.11.10.000090",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud and final phrase somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_010_000090.png",
+      "hebrew_text": "תֶּחְשַׁכְנָה עֵינֵיהֶם מֵרְאוֹת מָתְנֵיהֶם תָּמִיד הַמְעַד"
+    },
+    {
+      "id": "romans.11.11.000090",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/points are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/011_011_000090.png",
+      "hebrew_text": "וָאֹמַר אַף הִנְגְפוּ לִנְפֹל חָלִילָה כִּי־אִם בְּמַעֲלָם הַיְשׁוּעָה הִיא לַגּוֹיִם לְקַנְאֹתָם"
+    },
+    {
+      "id": "romans.11.12.000090",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "One word in the middle is uncertain due to print clarity.",
+      "output_image": "data/hutter/verse_images/romans/011_012_000090.png",
+      "hebrew_text": "וְאִם מַעֲלָם הוֹן וְעֹשֶׁר הָעוֹלָם הִיא וּמִסְחָתָם הוֹן הַגּוֹיִם כַּמָּה יוֹתֵר מְלֹאָם"
+    },
+    {
+      "id": "romans.11.15.000090",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top line is partly cropped from preceding area; some words/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_015_000090.png",
+      "hebrew_text": "וְאִם מְאַסָּם חֲלִיפַת הָעוֹלָם מַה מֶקַח כִּי־אִם חַיִּים מִמֵּתִים׃"
+    },
+    {
+      "id": "romans.11.17.000092",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and final word are uncertain due to blur.",
+      "output_image": "data/hutter/verse_images/romans/011_017_000092.png",
+      "hebrew_text": "וְאִם אֲחָדִים מֵאָמִירִים נִשְׁבְּרוּ וְאַתָּה בְּהִיוֹתְךָ זַיִת־הַשָּׂדֶה נִשְׁתַּלְתָּ בָּם וְחָבֵר שֹׁרֶשׁ וָשֶׁמֶן זַיִת נִהְיָתָה׃"
+    },
+    {
+      "id": "romans.11.21.000092",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning may be partly from previous line; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_021_000092.png",
+      "hebrew_text": "כִּי אִם יְהוָה לֹא חָמַל עַל־הָאֲמִירִים אֲשֶׁר מִדֶּרֶךְ הַטֶּבַע וְהִנֵּה בְּךָ גַּם עָלֶיךָ לֹא יַחְמֹל׃"
+    },
+    {
+      "id": "romans.11.22.000092",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top/beginning is cropped; some wording and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_022_000092.png",
+      "hebrew_text": "וּרְאֵה גַּם אֶת־טוּב וְגַם אֶת־מָאוֹס הָאֱלֹהִים בְּאֵלֶּה אֲשֶׁר נָפְלוּ אֶת־הַמָּאוֹס עֲלֵיהֶם אַךְ אֶת־הַטּוּב אִם תַּעֲמֹד בַּטּוּב וְאִם לֹא גַּם אַתָּה תִּכָּרֵת׃"
+    },
+    {
+      "id": "romans.11.23.000094",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/points are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/011_023_000094.png",
+      "hebrew_text": "וְגַם הֵמָּה אִם לֹא יַעַמְדוּ לַעֲמֹד בְּחֹסֶרִים יָכוֹל יְכוֹל כִּי־כֹּל יִהְיֶה עוֹדָם שָׁנִית לִשְׁתּוֹל אֹתָם׃"
+    },
+    {
+      "id": "romans.11.24.000094",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "End punctuation/continuation partly cut off; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_024_000094.png",
+      "hebrew_text": "וְאִם אַתָּה מִזַּיִת אֲשֶׁר בְּטִבְעוֹ זַיִת הַשָּׂדֶה הוּא נִגְזַרְתָּ וְעַל־דֶּרֶךְ הַטֶּבַע נִשְׁתַּלְתָּ בְּזַיִת טוֹב כַּמָּה יוֹתֵר הָאֵלֶּה אֲשֶׁר בְּטִבְעָם הֵמָּה יִשָּׁתְלוּ בְּעַצְמָהּ"
+    },
+    {
+      "id": "romans.11.25.000094",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and vowel points are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_025_000094.png",
+      "hebrew_text": "וְהוֹדַעְתִּי אַחַי אֲחֶסֹר מִמְּסֹד הַזֶּה פֶּן תִּהְיוּ חֲכָמִים בְּעֵינֵיכֶם כִּי־עִוְרוֹן לְמִקְצָה יִשְׂרָאֵל נִהְיָה עַד־כִּי־יָבוֹא מְלֹא הַגּוֹיִם׃"
+    },
+    {
+      "id": "romans.11.26.000094",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is unclear.",
+      "output_image": "data/hutter/verse_images/romans/011_026_000094.png",
+      "hebrew_text": "וּבָזֶה יִוָּשַׁע כָּל־יִשְׂרָאֵל כְּמוֹ נִכְתַּב וּבָא לְצִיּוֹן גֹּאֵל וּלְשָׁבֵי פֶשַׁע בְּיַעֲקֹב׃"
+    },
+    {
+      "id": "romans.11.28.000094",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial word/pointing slightly unclear.",
+      "output_image": "data/hutter/verse_images/romans/011_028_000094.png",
+      "hebrew_text": "כִּי־בַבְּשׂוֹרָה אֹיְבִים בַּעֲבוּרְכֶם וּבַמִּבְחָר אֲהוּבִים בַּעֲבוּר הָאָבוֹת׃"
+    },
+    {
+      "id": "romans.11.29.000096",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_029_000096.png",
+      "hebrew_text": "כִּי לֹא יִנָּחֵם יְהוָה עַל־מַתְּנוֹת הַחֲנִינָה וּקְרִיאָתוֹ׃"
+    },
+    {
+      "id": "romans.11.30.000096",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Last word is unclear.",
+      "output_image": "data/hutter/verse_images/romans/011_030_000096.png",
+      "hebrew_text": "כִּי־כַאֲשֶׁר גַּם אַתֶּם לְפָנִים לֹא הֶאֱמַנְתֶּם בֵּאלֹהִים וְעַתָּה רֻחַמְתֶּם בַּעֲבוּר סוּרִיהֶם׃"
+    },
+    {
+      "id": "romans.11.31.000096",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Word after לְ is uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_031_000096.png",
+      "hebrew_text": "כָּכָה גַם הָאֵלֶּה לֹא הֶאֱמִינוּ לְחַנָּתְכֶם אֲשֶׁר גַּם הֵמָּה יְרֻחָמוּ׃"
+    },
+    {
+      "id": "romans.11.32.000096",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points and one word are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_032_000096.png",
+      "hebrew_text": "כִּי הִסְגִּיר יְהוָה אֶת־כֻּלָּם בִּידֵי חַטָּאָה אֲשֶׁר יְרַחֵם אֶת־כֻּלָּם׃"
+    },
+    {
+      "id": "romans.11.33.000096",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks and one word are difficult to confirm from crop.",
+      "output_image": "data/hutter/verse_images/romans/011_033_000096.png",
+      "hebrew_text": "הוֹי עֹמֶק עֹשֶׁר חָכְמַת וְדַעַת אֱלֹהִים אֲרֻכָּה כְלִי חֵקֶר מִשְׁפָּטָיו וּמַה בְּלִי דַעַת מַחְשְׁבֹת דְּרָכָיו׃"
+    },
+    {
+      "id": "romans.11.34.000096",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word/pointing uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/romans/011_034_000096.png",
+      "hebrew_text": "מִי־תָכַן אֶת־רוּחַ יְהֹוָה וְאִישׁ עֲצָתוֹ יוֹדִיעֶנּוּ אֶת־מִי יוֹעֵץ וּבִינָהוּ׃"
+    },
+    {
+      "id": "romans.11.35.000096",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and initial particle somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_035_000096.png",
+      "hebrew_text": "אוֹ־מִי־הִקְדִּים לָתֵת לוֹ וִישַׁלֵּם לוֹ׃"
+    },
+    {
+      "id": "romans.11.36.000096",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing not fully clear.",
+      "output_image": "data/hutter/verse_images/romans/011_036_000096.png",
+      "hebrew_text": "כִּי מִמֶּנּוּ וּבוֹ וְאֵלָיו הַכֹּל וְלוֹ הַכָּבוֹד לְעוֹלָמִים אָמֵן׃"
+    },
+    {
+      "id": "romans.12.1.000098",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Crop appears to start mid-verse/line and lower portion is cut off; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/romans/012_001_000098.png",
+      "hebrew_text": "וְאֶל הֲדָמָה לִבְנֵי הָעוֹלָם הַזֶּה כִּי אִם הִתְחַלְּפוּ בְּחִלֵּף חֲדָשׁ לָכֶם אֶת־נַפְשְׁכֶם מַה הִיא רָצוֹן"
+    },
+    {
+      "id": "romans.12.2.000098",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Image includes verse boundary confusion and is cut off; requested verse likely only partially visible.",
+      "output_image": "data/hutter/verse_images/romans/012_002_000098.png",
+      "hebrew_text": "כִּי אֹמַר אָנֹכִי בְּחֶנַּת הַנְּתוּנָה לִי לְכָל־אִישׁ אֲשֶׁר בָּכֶם מִהְיוֹתְכֶם"
+    },
+    {
+      "id": "romans.12.3.000098",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse likely cut off; several words/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/012_003_000098.png",
+      "hebrew_text": "יֹתֵר עַל־אֲשֶׁר שָׁוֶה לָכֶם לָחוּם כִּי אִם לְהַחְכִּים לְצְנוּעָה אִישׁ אִישׁ כְּמִדַּת הָאֱמוּנָה וְחֵלֶק לוֹ אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.12.4.000098",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some printed wording/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/012_004_000098.png",
+      "hebrew_text": "כִּי כְמוֹ בְּגְוִיָּה אֶחָת אֲנַחְנוּ רַבִּים הָיוּם לָנוּ וְלָאֵבָרִים כֻּלָּם לֹא יֵשׁ לָהֶם מַעֲשֶׂה אֶחָד׃"
+    },
+    {
+      "id": "romans.12.5.000098",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several points/letters uncertain from blur.",
+      "output_image": "data/hutter/verse_images/romans/012_005_000098.png",
+      "hebrew_text": "כֵּן רַבִּים גְּוִיָּה אַחַת אֲנַחְנוּ בַּמָּשִׁיחַ וְאִישׁ אִישׁ מִנַּת חֲבֵרוֹ הוּא׃"
+    },
+    {
+      "id": "romans.12.6.000098",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Difficult image; wording and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/012_006_000098.png",
+      "hebrew_text": "וְיֵשׁ לָכֶם מַתָּנוֹת כְּחֶלְקֵי הַחֶסֶד הַנְּתֻנָּה לָכֶם בִּפְרָשׁוֹת וְאִם נְבִיאָה הִיא כְּמִדַּת הָאֱמוּנָה׃"
+    },
+    {
+      "id": "romans.12.12.000100",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Last word uncertain; print may read a different form.",
+      "output_image": "data/hutter/verse_images/romans/012_012_000100.png",
+      "hebrew_text": "בְּתִקְוָה שְׂמֵחִים בְּצָרָה סוֹבְלִים בִּתְפִלָּה מַעֲדִים׃"
+    },
+    {
+      "id": "romans.12.16.000102",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse crop is cut off at bottom; transcription includes only visible target text and may be incomplete.",
+      "output_image": "data/hutter/verse_images/romans/012_016_000102.png",
+      "hebrew_text": "יַחַד בֵּינֵיכֶם חוֹכְמִים לֹא מַעֲמִיקִים אֶת־מַחְשְׁבוֹתֵיכֶם כִּי אִם בָּזֶה עֲנִיִּים הוֹלְכִים"
+    },
+    {
+      "id": "romans.12.17.000102",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and several letters are uncertain due to blur/crop.",
+      "output_image": "data/hutter/verse_images/romans/012_017_000102.png",
+      "hebrew_text": "לְאִישׁ לֹא מְשַׁלְּמִים רָעָה תַּחַת טוֹבָה הֱיוּמִים לְהֵיטִיב אַחֲרֵי עֵינֵי כָל־בְּנֵי אָדָם׃"
+    },
+    {
+      "id": "romans.12.18.000102",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vocalization uncertain.",
+      "output_image": "data/hutter/verse_images/romans/012_018_000102.png",
+      "hebrew_text": "אִם הוּכַל לִהְיוֹת כַּמָּה יֵשׁ בָכֶם הַשְׁלִימוּ אֶת־כָּל־בְּנֵי הָאָדָם׃"
+    },
+    {
+      "id": "romans.12.19.000102",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning of verse appears cut off; only visible target text transcribed.",
+      "output_image": "data/hutter/verse_images/romans/012_019_000102.png",
+      "hebrew_text": "כִּי־נִכְתָּב לִי נָקָם וְשִׁלֵּם אָמַר יְהוָה׃"
+    },
+    {
+      "id": "romans.12.20.000102",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is cut off; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/romans/012_020_000102.png",
+      "hebrew_text": "וְאִם צָמֵא הַשְׁקֵהוּ מָיִם בְּעֲשׂוֹתְךָ זֹאת תַּחְתֹּל־אֵשׁ אַתָּה עַל־רֹאשׁוֹ׃"
+    },
+    {
+      "id": "romans.12.21.000102",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Vocalization and some words uncertain.",
+      "output_image": "data/hutter/verse_images/romans/012_021_000102.png",
+      "hebrew_text": "אַל־הִמָּשֵׁל הָרָעָה בָּךְ כִּי אִם אַתָּה הִמָּשֵׁל בָּהּ בַּטּוֹב׃"
+    },
+    {
+      "id": "romans.13.1.000102",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/013_001_000102.png",
+      "hebrew_text": "כָּל־נֶפֶשׁ הַכָּנַע תַּחַת הָאֵלֶּה לַאֲשֶׁר יֵשׁ לָהֶם הַשִּׁלְטוֹן כִּי אִם מֵאֱלֹהִים אֵינֶנָּה שִׁלְטוֹן וְכָל־שִׁלְטוֹנוֹת אֲשֶׁר הֵמָּה תַּחַת מֵאֱלֹהִים נִפְקָדוּ׃"
+    },
+    {
+      "id": "romans.13.2.000104",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/013_002_000104.png",
+      "hebrew_text": "לָכֵן הַמִּתְקוֹמֵם עַל־הַשִּׁלְטוֹן לַהֲוָיָת אֱלֹהִים הִתְקוֹמֵם וְהַמִּתְקוֹמְמִים לְנַפְשָׁם מִשְׁפָּט יִקָּחוּ׃"
+    },
+    {
+      "id": "romans.13.3.000104",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vocalization uncertain.",
+      "output_image": "data/hutter/verse_images/romans/013_003_000104.png",
+      "hebrew_text": "כִּי הַשֹּׁלְטִים אֵינָם לְיִרְאַת הַמַּעֲשִׂים טוֹבִים כִּי אִם הָרָעִים וְאִם לֹא תִּירָאֶה אֶת־הַשִּׁלְטוֹן עֲשֵׂה טוֹב וְיִהְיֶה לְךָ כָּבוֹד מִמֶּנּוּ׃"
+    },
+    {
+      "id": "romans.13.4.000104",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing uncertain in places.",
+      "output_image": "data/hutter/verse_images/romans/013_004_000104.png",
+      "hebrew_text": "כִּי מְשָׁרֵת אֱלֹהִים הוּא לְךָ לְטוֹבָה וְאִם תַּעֲשֶׂה אֶת־הָרָעָה הִירָא כִּי אֵינֶנּוּ חִנָּם נֹשֵׂא אֶת־הֶחָרֶב כִּי מְשָׁרֵת אֱלֹהִים הוּא נֹקֵם לְחָרוֹן אַף לְפֹּעֲלֵי עָוֶל׃"
+    },
+    {
+      "id": "romans.13.5.000104",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels uncertain.",
+      "output_image": "data/hutter/verse_images/romans/013_005_000104.png",
+      "hebrew_text": "לָכֵן צָרִיךְ לְהִכָּנַע לֹא לְבַדּ בַּעֲבוּר הָאַף כִּי אִם גַּם בַּעֲבוּר הַמַּדָּע׃"
+    },
+    {
+      "id": "romans.13.6.000104",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/013_006_000104.png",
+      "hebrew_text": "עַל־כֵּן גַּם תַּעֲלוּ אֶת־הַמִּנְחָה כִּי־עַבְדֵי אֱלֹהִים הֵמָּה וְעַל־זֹאת מְנֻצָּבִים׃"
+    },
+    {
+      "id": "romans.13.7.000104",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top edge slightly cuts preceding line; target verse appears complete but pointing is uncertain.",
+      "output_image": "data/hutter/verse_images/romans/013_007_000104.png",
+      "hebrew_text": "הַבּוּ־לְכוֹל לַאֲשֶׁר הַמִּנְחָה אֶת־הַמִּנְחָה לַאֲשֶׁר הַמַּס אֶת מַס לַאֲשֶׁר הַיִּרְאָה אֶת־יִרְאָה לַאֲשֶׁר הַכָּבוֹד אֶת־כָּבוֹד׃"
+    },
+    {
+      "id": "romans.13.8.000106",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and final word vocalization not fully certain.",
+      "output_image": "data/hutter/verse_images/romans/013_008_000106.png",
+      "hebrew_text": "לְאִישׁ מְאוּמָה לֹא תַּחְבְּלוּ כִּי אִם לֶאֱהֹב אִישׁ אֶת רֵעֵהוּ כִּי אֲשֶׁר אֹהֵב אֶת־רֵעֵהוּ מִלֵּא אֶת־הַתּוֹרָה׃"
+    },
+    {
+      "id": "romans.13.9.000106",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/points are blurred; transcription may need verification.",
+      "output_image": "data/hutter/verse_images/romans/013_009_000106.png",
+      "hebrew_text": "כִּי הַמִּצְוָה הַזֹּאת לֹא תִנְאָף לֹא תִרְצָח לֹא תִגְנֹב לֹא תַעֲנֶה עֵד שֶׁקֶר לֹא תַחְמֹד וְאִם יֵשׁ מִצְוָה אַחֶרֶת בְּדָבָר הַזֶּה נִשְׁלְמָה וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ׃"
+    },
+    {
+      "id": "romans.13.10.000106",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Vocalization and wording around רעה/רעהה are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/romans/013_010_000106.png",
+      "hebrew_text": "הָאַהֲבָה לְרֵעֶה אֶת רָעָה אֵינֶנָּה עֹשָׂה לָכֵן מְלֹא הַתּוֹרָה אַהֲבָה הִיא׃"
+    },
+    {
+      "id": "romans.13.11.000106",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several pointing marks are faint/uncertain.",
+      "output_image": "data/hutter/verse_images/romans/013_011_000106.png",
+      "hebrew_text": "וְעַל־זֹאת גַּם הַדְּעוּ אֶת־הָעֵת כִּי־עֵת יֵשׁ הַשָּׁעָה לְהָקִיצֵנוּ מִשֵּׁנָה כִּי עַתָּה קְרוֹבָה הִיא לָנוּ הַיְשׁוּעָה יוֹתֵר מֵאֲשֶׁר הֶאֱמַנּוּ׃"
+    },
+    {
+      "id": "romans.13.12.000106",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Word after את may be מַעֲלֵי/מַעַלֵי; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/013_012_000106.png",
+      "hebrew_text": "הַלַּיְלָה עָבַר וְהַיּוֹם קָרֵב נַשְׁלִיכָה מִמֶּנּוּ אֶת־מַעֲלֵי־הַחֹשֶׁךְ וְנִלְבַּשׁ כְּלֵי־הָאוֹר׃"
+    },
+    {
+      "id": "romans.13.13.000106",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words are hard to read; possible transcription errors in מהולות/מסובאים.",
+      "output_image": "data/hutter/verse_images/romans/013_013_000106.png",
+      "hebrew_text": "כְּמוֹ בַיּוֹם כַּהוֹגֵן נִתְהַלֵּךְ לֹא בְּמַהוֹלוֹת וְשִׁכָּרוֹן לֹא בְּמִשְׁכָּבוֹת וּמְסוּבָּאִים לֹא בִּמְרִיבָה וְקִנְאָה׃"
+    },
+    {
+      "id": "romans.13.14.000108",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Image cuts off lower part of verse; target verse incomplete.",
+      "output_image": "data/hutter/verse_images/romans/013_014_000108.png",
+      "hebrew_text": "כִּי אִם לִבְשׁוּ אֶת־אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ וְלֹא תִדְרְשׁוּ זִלֻּלִים"
+    },
+    {
+      "id": "romans.14.1.000108",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge/top context slightly cropped; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_001_000108.png",
+      "hebrew_text": "אֶת־הַחוֹלֶה בֶּאֱמוּנָה קַבְּלוּ לֹא לְמַחְלְקוֹת הַמַּחֲשָׁבוֹת׃"
+    },
+    {
+      "id": "romans.14.2.000108",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Last word uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_002_000108.png",
+      "hebrew_text": "כִּי אֶחָד מַאֲמִין לֶאֱכֹל כָּל־דְּבָרִים וְהַחוֹלֶה יֹאכַל אֲדַשְׁקִים׃"
+    },
+    {
+      "id": "romans.14.3.000108",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse partly in preceding crop; transcription from visible Hebrew.",
+      "output_image": "data/hutter/verse_images/romans/014_003_000108.png",
+      "hebrew_text": "הָאֹכֵל לֹא יִבֶז אֹתוֹ אֲשֶׁר אֵינֶנּוּ אֹכֵל וְלַאֲשֶׁר אֵינֶנּוּ אֹכֵל לֹא יִשְׁפֹּט אֶת־הָאֹכֵל כִּי אֱלֹהִים לְקָחוֹ׃"
+    },
+    {
+      "id": "romans.14.4.000108",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and words are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/romans/014_004_000108.png",
+      "hebrew_text": "וּמִי אַתָּה כִּי תִשְׁפֹּט עֶבֶד אַחֵר לַאֲדֹנָיו יָקוּם אוֹ יִפֹּל מָה־אֵלָיו אַךְ יָקוּם כִּי יָכוֹל אֱלֹהִים לְהָקִימוֹ׃"
+    },
+    {
+      "id": "romans.14.5.000108",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse begins at top; some vowels uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_005_000108.png",
+      "hebrew_text": "וְאֶחָד מַבְדִּיל בֵּין יוֹם יוֹם וְאֶחָד כְּאַחַד מַשְׁוֶה אֶת כָּל־יוֹם אִישׁ אִישׁ בְּעַצַת נַפְשׁוֹ יִתְמַלֵּא׃"
+    },
+    {
+      "id": "romans.14.6.000108",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Only lower part of verse visible in crop; continued from previous image.",
+      "output_image": "data/hutter/verse_images/romans/014_006_000108.png",
+      "hebrew_text": "הַבּוֹחֵר אֶת־יוֹם לַיהוָה בּוֹחֵר הוּא וַאֲשֶׁר אֵינֶנּוּ בּוֹחֵר אֶת־יוֹם לַיהוָה לֹא בּוֹחֵר הָאֹכֵל לַיהוָה אֹכֵל הוּא וּמוֹדֶה לַיהוָה וַאֲשֶׁר אֵינֶנּוּ אֹכֵל לַיהוָה לֹא אֹכֵל וּמוֹדֶה לַיהוָה׃"
+    },
+    {
+      "id": "romans.14.9.000110",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning partly at top edge; some words/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_009_000110.png",
+      "hebrew_text": "כִּי עַל־זֹאת גַּם מֵת גַּם קָם הַמָּשִׁיחַ מִמֵּתִים וְשׁוּב חַי הַמָּשִׁיחַ אֲשֶׁר עַל־הַמֵּתִים וְעַל־הַחַיִּים יִמְשׁוֹל׃"
+    },
+    {
+      "id": "romans.14.10.000110",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top line slightly cut and punctuation/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_010_000110.png",
+      "hebrew_text": "וְאַתָּה מַה תִּשְׁפֹּט אֶת־אָחִיךָ אוֹ־מָה תִבְזֶה אֶת־אָחִיךָ כִּי כֻּלָּנוּ נָקוּם לְכִסֵּא הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "romans.14.11.000110",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Parenthetical phrase visible; some letters and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_011_000110.png",
+      "hebrew_text": "כִּי־נִכְתַּב חַי אָנִי נְאֻם יְהוָה כִּי־לִי תִכְרַע כָּל־בֶּרֶךְ וַאֲשֶׁר בַּשָּׁמַיִם וַאֲשֶׁר בָּאָרֶץ וַאֲשֶׁר מִתַּחַת לָאָרֶץ תִּשָּׁבַע כָּל־לָשׁוֹן׃"
+    },
+    {
+      "id": "romans.14.13.000110",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is partly in prior crop; some pointing/letters uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_013_000110.png",
+      "hebrew_text": "וְאַל־נִשְׁפֹּט עוֹד אִישׁ אֶחָד אֶת־אַחֵר כִּי־אִם זֹאת הִשָּׁפְטוּ יוֹתֵר מִךְ הִתְנוּ נֶגֶף אוֹ־מִכְשׁוֹל לַאֲחִיכֶם׃"
+    },
+    {
+      "id": "romans.14.19.000112",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse begins in upper cropped portion; some words/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_019_000112.png",
+      "hebrew_text": "עַל־כֵּן נְבַקֵּשׁ שָׁלוֹם וְהַרְבּוֹת וְהַבָּנָה בֵּינוֹתֵינוּ אִישׁ אֶת אֲשֶׁר לְחָבֵרוֹ׃"
+    },
+    {
+      "id": "romans.14.20.000112",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Start of verse partly in prior crop; transcription uses visible continuation.",
+      "output_image": "data/hutter/verse_images/romans/014_020_000112.png",
+      "hebrew_text": "אַל־נָא בַּעֲבוּר הָאֹכֶל תַּהֲרֹס אֶת־מַעֲשֵׂה אֱלֹהִים כִּי כָּל־דְּבָרִים טְהוֹרִים הֵמָּה כִּי־אִם טָמֵא הוּא לָאֱנוֹשׁ אֲשֶׁר בְּמִכְשׁוֹל אֹכֵל׃"
+    },
+    {
+      "id": "romans.14.22.000114",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/014_022_000114.png",
+      "hebrew_text": "אֶת־לְךָ הָאֱמוּנָה יְהִי לְךָ לְנַפְשְׁךָ לִפְנֵי אֱלֹהִים אַשְׁרֵי הָאִישׁ אֲשֶׁר אֵינֶנּוּ שֹׁפֵט אֶת־נַפְשׁוֹ בְּבָחֲנוֹ׃"
+    },
+    {
+      "id": "romans.14.23.000114",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/diacritic details are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_023_000114.png",
+      "hebrew_text": "וַאֲשֶׁר מְעוּכָּב בְּאָכְלוֹ נִשְׁפָּט כִּי־אֵינֶנּוּ בָּאֱמוּנָה הוּא כִּי־כָל־דָּבָר אֲשֶׁר אֵינֶנּוּ מֵאֱמוּנָה חֲטָאָה הוּא׃"
+    },
+    {
+      "id": "romans.15.1.000114",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one or more letters are slightly unclear.",
+      "output_image": "data/hutter/verse_images/romans/015_001_000114.png",
+      "hebrew_text": "וְחוֹבִים אֲנַחְנוּ הַחֲזָקִים לִסְבּוֹל אֶת־הַמַּחֲלוֹת הַחַלָּשִׁים וְלֹא לָשֵׂאת אֶת־פְּנֵי־נַפְשֵׁנוּ׃"
+    },
+    {
+      "id": "romans.15.2.000114",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word and pointing require review.",
+      "output_image": "data/hutter/verse_images/romans/015_002_000114.png",
+      "hebrew_text": "כִּי־אִישׁ אִישׁ מִמֶּנּוּ יִמְצָא חֵן בְּעֵינֵי רֵעֵהוּ לְטוֹבָה לְמִבְנֶה׃"
+    },
+    {
+      "id": "romans.15.3.000114",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and spelling are uncertain due to print quality.",
+      "output_image": "data/hutter/verse_images/romans/015_003_000114.png",
+      "hebrew_text": "כִּי גַּם הַמָּשִׁיחַ לֹא נָשָׂא אֶת־פְּנֵי־נַפְשׁוֹ כִּי־אִם כְּמוֹ בְּכָתַב וְחֶרְפוֹת חוֹרְפֶיךָ נָפְלוּ עָלָי׃"
+    },
+    {
+      "id": "romans.15.4.000116",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge is close/cut; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/015_004_000116.png",
+      "hebrew_text": "כִּי כָל־הַדְּבָרִים אֲשֶׁר מִקֶּדֶם נִכְתְּבוּ אֶל־לִמּוּדֵנוּ נִכְתְּבוּ אֲשֶׁר בְּתִקְוָה וּבְנוֹחַם הַכְּתָבִים תִּהְיֶה לָנוּ הַתִּקְוָה׃"
+    },
+    {
+      "id": "romans.15.5.000116",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Beginning and several niqqud/word details are unclear.",
+      "output_image": "data/hutter/verse_images/romans/015_005_000116.png",
+      "hebrew_text": "וֵאלֹהֵי־הַתִּקְוָה וְנֹחַם יִתֵּן לָכֶם לִהְיוֹת יַחַד בֵּינֵיכֶם כְּדִבְרֵי יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "romans.15.6.000116",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/points around divine-name phrase are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/015_006_000116.png",
+      "hebrew_text": "אֲשֶׁר בְּפֶה אֶחָד וּבְלֵב אֶחָד תְּכַבְּדוּ אֶת־יְהוָה אֲבִי־אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "romans.15.7.000116",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "First verb and pointing need review.",
+      "output_image": "data/hutter/verse_images/romans/015_007_000116.png",
+      "hebrew_text": "לָכֵן הִתְלַקְחוּ אִישׁ אֶת רֵעֵהוּ כְּמוֹ גַם הַמָּשִׁיחַ לָקַח אֶתְכֶם לִכְבוֹד אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.15.8.000116",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing are uncertain; crop quality and Hutter spelling require review.",
+      "output_image": "data/hutter/verse_images/romans/015_008_000116.png",
+      "hebrew_text": "כִּי אֹמֵר אֲנִי כִּי יֵשׁוּעַ הַמָּשִׁיחַ הָיָה מְשָׁרֵת הַמִּילָה בַּעֲבַר אֱמֶת אֱלֹהִים לָהֶם אֶת־שְׁבֻעוֹת מַטּוֹת אָמַר סֶלָה׃"
+    },
+    {
+      "id": "romans.15.9.000116",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to verify from crop.",
+      "output_image": "data/hutter/verse_images/romans/015_009_000116.png",
+      "hebrew_text": "וַאֲשֶׁר יְכַבְּדוּ הַגּוֹיִם אֶת־אֱלֹהִים עַל־רֹב חֶסֶד כְּמוֹ נִכְתָּב עַל־כֵּן אוֹדְךָ בַגּוֹיִם וּלְשִׁמְךָ אֲזַמֵּר׃"
+    },
+    {
+      "id": "romans.15.10.000116",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing partially unclear.",
+      "output_image": "data/hutter/verse_images/romans/015_010_000116.png",
+      "hebrew_text": "וְעוֹד אָמַר שִׂמְחוּ גוֹיִם לְעַמּוֹ׃"
+    },
+    {
+      "id": "romans.15.11.000118",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial page/header Hebrew ignored; pointing somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/romans/015_011_000118.png",
+      "hebrew_text": "וְעוֹד הַלְלוּ אֶת־יְהוָה כָּל־גּוֹיִם שַׁבְּחוּהוּ כָּל־הָאֻמִּים׃"
+    },
+    {
+      "id": "romans.15.12.000118",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Right/left edges and pointing are slightly unclear.",
+      "output_image": "data/hutter/verse_images/romans/015_012_000118.png",
+      "hebrew_text": "וְעוֹד אָמַר יְשַׁעְיָהוּ וְהָיָה שֹׁרֶשׁ יִשַׁי הָעֹמֵד לְנֵס עַמִּים אֵלָיו גּוֹיִם יִדְרֹשׁ׃"
+    },
+    {
+      "id": "romans.15.13.000118",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some consonants/pointing uncertain in middle line.",
+      "output_image": "data/hutter/verse_images/romans/015_013_000118.png",
+      "hebrew_text": "וֵאלֹהֵי הַתִּקְוָה יְמַלֵּא אֶתְכֶם בְּכָל שִׂמְחָה וְשָׁלוֹם לְהַאֲמִין וּלְהוֹתִיר אֶתְכֶם בַּתִּקְוָה בִּגְבוּרַת רוּחַ הַקֹּדֶשׁ׃"
+    },
+    {
+      "id": "romans.15.14.000118",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing are blurry/uncertain.",
+      "output_image": "data/hutter/verse_images/romans/015_014_000118.png",
+      "hebrew_text": "כִּי בָטַחְתִּי אַחַי בָּם אַף עֲלֵיכֶם כִּי גַם אַתֶּם הַמְלֵאוּ בְּאַהֲבַת טוֹב נִמְלָאִים בְּכָל־מַדָּע וְתוּכְלוּ לְהוֹכִיחַ אִישׁ אֶת־רֵעֵהוּ׃"
+    },
+    {
+      "id": "romans.15.15.000118",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Word forms/pointing uncertain; crop is readable but exact transcription needs review.",
+      "output_image": "data/hutter/verse_images/romans/015_015_000118.png",
+      "hebrew_text": "וּבְבִטָּחוֹן כָּתַבְתִּי אֵלֵיכֶם אַחַי מִקְצָתִי לְהוֹזִיר אֶתְכֶם בְּחֶמְלַת הַנְּתוּנָה לִי מֵאֱלֹהִים׃"
+    },
+    {
+      "id": "romans.15.16.000118",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse partly carried from previous crop; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/015_016_000118.png",
+      "hebrew_text": "לִהְיוֹתִי מְשָׁרֵת יֵשׁוּעַ הַמָּשִׁיחַ בַּגּוֹיִם מְקַדֵּשׁ אֶת־בְּשׂוֹרַת אֱלֹהִים אֲשֶׁר תְּהִי מִנְחַת הַגּוֹיִם נִרְצָה וּמְקֻדָּשָׁה בְּרוּחַ הַקֹּדֶשׁ׃"
+    },
+    {
+      "id": "romans.15.17.000120",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks unclear.",
+      "output_image": "data/hutter/verse_images/romans/015_017_000120.png",
+      "hebrew_text": "כִּי יֵשׁ לִי תְּהִלָּה בְּיֵשׁוּעַ הַמָּשִׁיחַ לִפְנֵי־אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.15.18.000120",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few letters somewhat unclear.",
+      "output_image": "data/hutter/verse_images/romans/015_018_000120.png",
+      "hebrew_text": "כִּי לֹא יִמְלָאנִי לִבִּי לְדַבֵּר עַל־אֲשֶׁר פָּעַל הַמָּשִׁיחַ בְּיָדִי לִקְרוֹת הָעַמִּים בְּדָבָר וּבְפֹעַל׃"
+    },
+    {
+      "id": "romans.15.19.000120",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/romans/015_019_000120.png",
+      "hebrew_text": "בְּכֹחַ אֹתוֹת וּמוֹפְתִים בְּגְבוּרַת רוּחַ אֱלֹהִים כָּךְ אֲשֶׁר מִירוּשָׁלַיִם סָבִיב סָבִיב עַד־אִלְלִירִיקוֹן מִלֵּאתִי אֶת בְּשׂוֹרַת הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "romans.15.20.000120",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and pointing uncertain due to blur and unusual printing.",
+      "output_image": "data/hutter/verse_images/romans/015_020_000120.png",
+      "hebrew_text": "וְנִבְרֵאתִי נִצַּחְתִּי לְבַשֵּׂר לֹא בִּמְקוֹמוֹת בַּאֲשֶׁר נִשְׁמַע שֵׁם הַמָּשִׁיחַ פֶּן־עַל־יְסוֹד אָחֵר אֶבְנֶה׃"
+    },
+    {
+      "id": "romans.15.21.000120",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and final word somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/romans/015_021_000120.png",
+      "hebrew_text": "כִּי־אִם כְּמוֹ נִכְתַּב אֲשֶׁר לֹא סֻפַּר לָהֶם רָאוּ וַאֲשֶׁר לֹא שָׁמְעוּ הִתְבּוֹנָנוּ׃"
+    },
+    {
+      "id": "romans.15.22.000120",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Short crop; pointing not fully clear.",
+      "output_image": "data/hutter/verse_images/romans/015_022_000120.png",
+      "hebrew_text": "לָכֵן נִמְנַעְתִּי רַבִּים לָבוֹא אֲלֵיכֶם׃"
+    },
+    {
+      "id": "romans.15.23.000120",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge of first/last line slightly cut; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/015_023_000120.png",
+      "hebrew_text": "וְעַתָּה כִּי־עוֹד לֹא נִשְׁאַר לִי מָקוֹם בַּגְּבוּלוֹת הָאֵלֶּה וּמִתְאַוֶּה אֲנִי לָבוֹא אֲלֵיכֶם מִשָּׁנִים רַבּוֹת׃"
+    },
+    {
+      "id": "romans.15.24.000122",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words/pointing uncertain; heading above ignored.",
+      "output_image": "data/hutter/verse_images/romans/015_024_000122.png",
+      "hebrew_text": "וְכַאֲשֶׁר אֶסַּע בְּסְפָרַד אָבוֹא אֲלֵיכֶם כִּי־מְשַׁבֵּר אֲנִי בְּעָבְרִי לִרְאוֹת אֶתְכֶם וְיֻבַלְתֶּם לְהָבִיא שָׁמָּה אִם אֶרְאֶה בָּרִאשׁוֹנָה מְעַט־מִכֶּם וּמִקְצָתְכֶם אֶתְמַלֵּא׃"
+    },
+    {
+      "id": "romans.15.25.000122",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing partly unclear.",
+      "output_image": "data/hutter/verse_images/romans/015_025_000122.png",
+      "hebrew_text": "וְעַתָּה נֹסֵעַ אֲנִי יְרוּשָׁלַיְמָה לְשָׁרֵת אֶת־הַקְּדוֹשִׁים׃"
+    },
+    {
+      "id": "romans.15.26.000122",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Unclear if place-name vowels and some words are exact.",
+      "output_image": "data/hutter/verse_images/romans/015_026_000122.png",
+      "hebrew_text": "כִּי־חָפְצוּ הַמַּקְדוֹנִים וַאֲכָיָה לַעֲשׂוֹת מַתַּת נְדָבָה וּצְדָקָה בְּמִסְכְּנֵי־הַקְּדוֹשִׁים אֲשֶׁר בִּירוּשָׁלַיִם׃"
+    },
+    {
+      "id": "romans.15.27.000122",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Parentheses and multiple words/points uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/romans/015_027_000122.png",
+      "hebrew_text": "כִּי־חָפְצוּ )גַּם חוֹבְרִים הֵמָּה( בַּאֲשֶׁר נֶהֱנוּ מִמְּנוֹת הָרוּחַ עַכְשָׁו הַגּוֹיִם כִּי חוֹבְרִים גַּם מִמְּנוֹת הַבָּשָׂר לְשָׁרֵת אוֹתָם׃"
+    },
+    {
+      "id": "romans.15.28.000122",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse partly cropped at left/right and several words uncertain.",
+      "output_image": "data/hutter/verse_images/romans/015_028_000122.png",
+      "hebrew_text": "וּבַאֲשֶׁר אֲכַלֶּה וְאֶת לָהֶם הַפְּרִי הַזֶּה אָבוֹא בָכֶם סְפָרַדָּה׃"
+    },
+    {
+      "id": "romans.15.29.000122",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Only a small Hebrew fragment is visible; most target verse is missing.",
+      "output_image": "data/hutter/verse_images/romans/015_029_000122.png",
+      "hebrew_text": "בּוֹא׃"
+    },
+    {
+      "id": "romans.16.5.000126",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse crop is cut off at bottom; transcription includes only visible Hebrew.",
+      "output_image": "data/hutter/verse_images/romans/016_005_000126.png",
+      "hebrew_text": "וְגַם לִקְהִלָּתָם בְּבֵיתָהּ לְבָרֵךְ שַׁאֲלוּ לְשָׁלוֹם לְאֶפַּנְטוֹס יְדִידִי"
+    },
+    {
+      "id": "romans.16.10.000126",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Hebrew line is partially blurred/cut and transcription of some words is uncertain.",
+      "output_image": "data/hutter/verse_images/romans/016_010_000126.png",
+      "hebrew_text": "שְׁאַלוּ לְשָׁלוֹם לַאֲשֶׁר בַּמָּשִׁיחַ בְּחִירִים שְׁאַלוּ לְשָׁלוֹם לַאֲשֶׁר בְּבֵית אַרִיסְטוֹבּוּלוֹס הֵמָּה׃"
+    },
+    {
+      "id": "romans.16.11.000126",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top of verse is slightly cropped/blurred.",
+      "output_image": "data/hutter/verse_images/romans/016_011_000126.png",
+      "hebrew_text": "שַׁאֲלוּ לִשְׁלוֹם אֲשֶׁר בְּבֵית נַרְקִסוֹס אֲשֶׁר הֵם בַּאֲדֹנֵינוּ׃"
+    },
+    {
+      "id": "romans.16.12.000128",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse continues into next crop; only visible target text transcribed.",
+      "output_image": "data/hutter/verse_images/romans/016_012_000128.png",
+      "hebrew_text": "שַׁאֲלוּ לִשְׁלוֹם לְטְרִיפֵנָא וּלְטְרוֹפְסָא הַיְגֵעַת בַּאֲדֹנֵינוּ שַׁאֲלוּ לִשְׁלוֹם לְפֶרְסִס אֲהוּבָתִי"
+    },
+    {
+      "id": "romans.16.14.000128",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some names/pointing are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/romans/016_014_000128.png",
+      "hebrew_text": "שַׁאֲלוּ לִשְׁלוֹם לַאֲסִנְקְרִיטוֹס לְפְלֵגוֹן לְהֶרְמֵס לְפַטְרוֹבָּא לְהֶרְמָא וְלָאַחִים אֲשֶׁר אִתָּם׃"
+    },
+    {
+      "id": "romans.16.15.000128",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Beginning partially obscured by preceding verse; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/016_015_000128.png",
+      "hebrew_text": "שַׁאֲלוּ לִשְׁלוֹם לְפִילוֹלוֹגוֹס וְלְיוּלְיָא וְלְנֵרֵאוֹס וְלַאֲחוֹתוֹ וּלְאוֹלִימְפָּא וְלַקְּדוֹשִׁים כֻּלָּם אֲשֶׁר אִתָּם׃"
+    },
+    {
+      "id": "romans.16.16.000128",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words and pointing are blurry.",
+      "output_image": "data/hutter/verse_images/romans/016_016_000128.png",
+      "hebrew_text": "שַׁאֲלוּ לְשָׁלוֹם אִישׁ לְרֵעֵהוּ בִּנְשִׁיקַת הַקֹּדֶשׁ שָׁאֲלוּ לָכֶם לְשָׁלוֹם הַקְּהִלּוֹת הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "romans.16.17.000128",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse spans several lines; some letters/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/016_017_000128.png",
+      "hebrew_text": "וּמַתְחַנֵּן אֲנִי לָכֶם הָאַחִים לְהִשָּׁמֵר לָכֶם מֵאֲשֶׁר אֶת הַמַּחְלֹקֶת וּמִכְשׁוֹלִים עַל־הַלִּמּוּד אֲשֶׁר אַתֶּם לִמַּדְתֶּם וְסוּרוּ מֵהֶם׃"
+    },
+    {
+      "id": "romans.16.18.000128",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Only lower part of verse visible; beginning inferred from visible text may need review.",
+      "output_image": "data/hutter/verse_images/romans/016_018_000128.png",
+      "hebrew_text": "כִּי־הָאֲנָשִׁים כָּאֵלֶּה אֵינָם עֹבְדִים לַאֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ כִּי־אִם לְבִטְנָם וּבְבִרְכוֹתָם יְפַתּוּ אֶת־לֵב הַתְּמִימִים׃"
+    },
+    {
+      "id": "romans.16.19.000130",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Verse continues below crop; final visible phrase only.",
+      "output_image": "data/hutter/verse_images/romans/016_019_000130.png",
+      "hebrew_text": "כִּי־מִשְׁמַעְתְּכֶם בְּכָל־מָקוֹם הוֹלְכָה וְגָלָה וְחֶדְוָה לִי עֲלֵיכֶם וּמִתְאַוֶּה אָנֹכִי לִהְיוֹתְכֶם חֲכָמִים לַטּוֹבָה"
+    },
+    {
+      "id": "romans.16.20.000130",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final line partly cut off; punctuation/ending uncertain.",
+      "output_image": "data/hutter/verse_images/romans/016_020_000130.png",
+      "hebrew_text": "וֵאלֹהֵי הַשָּׁלוֹם יִשְׁחֹק רֹאשׁ הַשָּׂטָן תַּחַת רַגְלֵיכֶם בִּמְהֵרָה חֶסֶד אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ אִתְּכֶם"
+    },
+    {
+      "id": "romans.16.21.000130",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are hard to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/016_021_000130.png",
+      "hebrew_text": "שֹׁאֲלִים לָכֶם לְשָׁלוֹם טִימוֹתָאוֹס עוֹזְרִי וְלוּקִיּוֹס וְיָסוֹן וְסִיפָטְרוֹס דּוֹדָי׃"
+    },
+    {
+      "id": "romans.16.22.000130",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and final word are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/romans/016_022_000130.png",
+      "hebrew_text": "שֹׁאֵל לָכֶם לְשָׁלוֹם אֲנִי טֶרְטִיּוֹס אֲשֶׁר כָּתַבְתִּי אֶת־הָאִגֶּרֶת בַּאֲדֹנֵינוּ"
+    },
+    {
+      "id": "romans.16.23.000130",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and spelling of proper names are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/016_023_000130.png",
+      "hebrew_text": "שֹׁאֵל לָכֶם לְשָׁלוֹם גָּאִיּוֹס בַּעַל־מְלוֹנִי וְכָל־הַקְּהִלָּה שֹׁאֵל לָכֶם לְשָׁלוֹם אֵרַסְטוֹס אֲשֶׁר עַל־בֵּית הָעִיר וְקַוְאַרְטוֹס אָחִינוּ׃"
+    },
+    {
+      "id": "romans.16.24.000130",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partially unclear.",
+      "output_image": "data/hutter/verse_images/romans/016_024_000130.png",
+      "hebrew_text": "חֶסֶד אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ יְהִי־עִמָּכֶם כֻּלָּכֶם אָמֵן׃"
+    },
+    {
+      "id": "romans.16.25.000130",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Verse is partly cut off at top; beginning is inferred only from visible portions and needs review.",
+      "output_image": "data/hutter/verse_images/romans/016_025_000130.png",
+      "hebrew_text": "וְלוֹ אֲשֶׁר יָכוֹל לְהַעֲמִיד אֶתְכֶם כְּבְשׂוֹרָתִי וּקְרִיאַת יֵשׁוּעַ הַמָּשִׁיחַ לְגִלּוּי הַסּוֹד הַנִּסְתָּר מֵעוֹלָם עַד הַיּוֹם הַזֶּה׃"
+    },
+    {
+      "id": "romans.16.26.000132",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and word division are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/016_026_000132.png",
+      "hebrew_text": "וְעַתָּה נִגְלָה בְּכִתְבֵי הַנְּבִיאִים בְּמִצְוַת אֱלֹהֵי־כָל־עוֹלָמִים לִהְיוֹת הָאֱמוּנָה וּלְהוֹדִיעַ בְּכָל־הַגּוֹיִם׃"
+    }
+  ],
+  "likely_crop_issues": [
+    {
+      "id": "romans.1.3.000002",
+      "confidence": "medium",
+      "notes": "Top of verse is partially cropped; pointing not fully preserved.",
+      "output_image": "data/hutter/verse_images/romans/001_003_000002.png",
+      "hebrew_text": "על־בנו הנולד מזרע דויד בבשר׃"
+    },
+    {
+      "id": "romans.1.4.000002",
+      "confidence": "low",
+      "notes": "Only the end of the verse is visible in the crop; beginning is cut off.",
+      "output_image": "data/hutter/verse_images/romans/001_004_000002.png",
+      "hebrew_text": "המוּקם ישוע משיח אדנינו׃"
+    },
+    {
+      "id": "romans.1.11.000004",
+      "confidence": "medium",
+      "notes": "Some pointing/word forms uncertain in crop.",
+      "output_image": "data/hutter/verse_images/romans/001_011_000004.png",
+      "hebrew_text": "כִּי מִתְאַוֶּה אֲנִי לִרְאוֹת אֶתְכֶם לְהַשְׁפִּיעַ לָכֶם מֵאֵיזוֹ מַתָּנָה רוּחַ לְהַעֲזִיק אֶתְכֶם׃"
+    },
+    {
+      "id": "romans.1.18.000008",
+      "confidence": "medium",
+      "notes": "Some letters/vowels uncertain; crop is blurry.",
+      "output_image": "data/hutter/verse_images/romans/001_018_000008.png",
+      "hebrew_text": "כִּי־נִגְלָה אַף יְהוָֹה מִשָּׁמַיִם עַל־כָּל רִשְׁעָה עַל כָּל עַוְלָה הָאֲנָשִׁים הָאֹחֲזִים אֶת־אֱמֶת בְּעַוְלָתָם׃"
+    },
+    {
+      "id": "romans.1.21.000008",
+      "confidence": "medium",
+      "notes": "Some pointing/letters are difficult to verify from crop.",
+      "output_image": "data/hutter/verse_images/romans/001_021_000008.png",
+      "hebrew_text": "לכן כרעתם את־אלהים אינם כִבְדוּ ולא בֵרְכוּ את אלהים כי־אם הבלו במחשבותם ונחשך לבב כסילותם׃"
+    },
+    {
+      "id": "romans.1.23.000010",
+      "confidence": "low",
+      "notes": "Crop/print is blurry; several words and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_023_000010.png",
+      "hebrew_text": "וימירו את־כבוד אלהים אשר בלי־תמורה בתבנית סמל תמונת אדם ועוף והשמים ורמש וכל עשב ורמש׃"
+    },
+    {
+      "id": "romans.1.25.000010",
+      "confidence": "medium",
+      "notes": "Beginning of verse partly from adjacent crop; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_025_000010.png",
+      "hebrew_text": "אשר המירו את־אמת אלהים בכזב ויראו ויעבדו את־הבריאה מן־הבורא הקדוש ברוך הוא לעולם ועד אמן׃"
+    },
+    {
+      "id": "romans.1.26.000010",
+      "confidence": "low",
+      "notes": "Verse text cut/mixed across crop boundary; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_026_000010.png",
+      "hebrew_text": "על־כן נתנם האלהים בתמאבות בשה כי־נשיהם המירו את־דרך הטבע להפך׃"
+    },
+    {
+      "id": "romans.1.27.000010",
+      "confidence": "low",
+      "notes": "Only lower portion of verse visible in provided crop; reconstructed from adjacent visible crop sections is uncertain.",
+      "output_image": "data/hutter/verse_images/romans/001_027_000010.png",
+      "hebrew_text": "וכמו כן האנשים עזבו את־דרך טבע הנשים ויחמו בתאוותיהם איש אל־רעהו הזכרים בזכרים פעלו־עול עושׂי זמה ונבלה וגם את־שכר מעשיהם וגמולתם פרעו בקרבם ובנפשם לקחו׃"
+    },
+    {
+      "id": "romans.1.31.000012",
+      "confidence": "medium",
+      "notes": "Verse appears to continue into next crop; transcription may include beginning of adjacent verse due to crop boundary.",
+      "output_image": "data/hutter/verse_images/romans/001_031_000012.png",
+      "hebrew_text": "בְּאֲשֶׁר אַף כִּי יָדְעוּ צִדְקַת אֱלֹהִים הֵמָּה כִּי־אֲשֶׁר כָּאֵלֶּה יַעֲשׂוּ מִשְׁפַּט מָוֶת יִהְיֶה לָהֶם לֹא יַעֲשׂוּם לְבַדָּם כִּי־אִם גַּם"
+    },
+    {
+      "id": "romans.2.1.000012",
+      "confidence": "medium",
+      "notes": "Top of Hebrew line slightly cropped/blurred; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_001_000012.png",
+      "hebrew_text": "עַל־כֵּן אַתָּה נָקִי כָּל־הָאָדָם הַשּׁוֹפֵט אֶת־נֶפֶשׁ בַּאֲשֶׁר תָּדִין אֶת־אַחֵר תַּרְשִׁיעַ אֶת־נַפְשְׁךָ כִּי אַתָּה הָאֵלֶּה אֲשֶׁר עֹשֶׂה אַף שׁוֹפֵט׃"
+    },
+    {
+      "id": "romans.2.8.000014",
+      "confidence": "medium",
+      "notes": "Some letters and pointing are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/002_008_000014.png",
+      "hebrew_text": "וְלָאֵלֶּה אֲשֶׁר מְמָרִיבָה וְלֹא מַאֲמִינִים לֶאֱמֶת כִּי־אִם בֹּטְחִים בְּעַוְלָה חָרוֹן אַף יִהְיֶה׃"
+    },
+    {
+      "id": "romans.2.14.000016",
+      "confidence": "low",
+      "notes": "Verse spans crop boundary; some pointing/letters uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_014_000016.png",
+      "hebrew_text": "וְאִם הַגּוֹיִם לַאֲשֶׁר לֹא יֵשׁ לָהֶם הַתּוֹרָה מֵעַלְמָם עֹשִׂים אֶת־הַתּוֹרָה אַף כִּי לֹא יֵשׁ לָהֶם הַתּוֹרָה לְנַפְשָׁם הִיא לָהֶם לְתוֹרָה׃"
+    },
+    {
+      "id": "romans.2.15.000016",
+      "confidence": "low",
+      "notes": "Top of verse is cut off and several words are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/002_015_000016.png",
+      "hebrew_text": "בְּהוֹתָם מַעֲשֵׂה הַתּוֹרָה נִכְתָּב הוּא בִּלְבָבָם בְּהָעִיד עֲלֵיהֶם מַדָּעָם אוֹ בְּחִיב מַחְשְׁבוֹתָם וְטַעֲנוֹתָם עַל־אוֹדוֹתָם׃"
+    },
+    {
+      "id": "romans.2.21.000018",
+      "confidence": "medium",
+      "notes": "Some pointing/letters are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/romans/002_021_000018.png",
+      "hebrew_text": "יֹאשֶׁר אַתָּה מְלַמֵּד אֶת־אַחֵר אֶת־נַפְשְׁךָ אֵינְךָ מְלַמֵּד הַקוֹרֵא לֹא לִגְנֹב הֲגַנֹּב׃"
+    },
+    {
+      "id": "romans.2.29.000020",
+      "confidence": "medium",
+      "notes": "Some pointing/letters are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/romans/002_029_000020.png",
+      "hebrew_text": "כִּי־אִם אֲשֶׁר בְּכֵסֶת יְהוּדִי הוּא וּמוּלַת הַלֵּב בְּרוּחַ וְלֹא בְּאוֹת אֲשֶׁר הַלּוּלוֹ אֵינֶנָּה מֵאֲנָשִׁים כִּי־אִם מֵאֱלֹהִים הִיא׃"
+    },
+    {
+      "id": "romans.3.1.000022",
+      "confidence": "medium",
+      "notes": "Left edge slightly cropped; verse text inferred only where visible.",
+      "output_image": "data/hutter/verse_images/romans/003_001_000022.png",
+      "hebrew_text": "רַב מְאֹד בְּכָל־דֶּרֶךְ וְכָל־רִאשׁוֹנָה כִּי נִמְסְרוּ לָהֶם דִּבְרֵי אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.3.2.000022",
+      "confidence": "low",
+      "notes": "Crop is partly cut and several words/points are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/003_002_000022.png",
+      "hebrew_text": "מָה־הָיָה אִם אֲנָשִׁים לֹא הֶאֱמִינוּ הֲסוּדָיו יְבַטֵּל אֶת־אֱמוּנַת אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.3.3.000022",
+      "confidence": "low",
+      "notes": "Image id appears to correspond to Romans 3:4 content; text is cropped at edges and uncertain.",
+      "output_image": "data/hutter/verse_images/romans/003_003_000022.png",
+      "hebrew_text": "חָלִילָה וְהָיָה נֶאֱמָן וְכָל־הָאָדָם כֹּזֵב הוּא כְּמוֹ נִכְתָּב לְמַעַן תִּצְדַּק בְּדָבְרֶךָ תִּזְכֶּה בְשָׁפְטֶךָ׃"
+    },
+    {
+      "id": "romans.3.4.000022",
+      "confidence": "low",
+      "notes": "Image id appears shifted; target verse may not match visible Hebrew and crop is incomplete.",
+      "output_image": "data/hutter/verse_images/romans/003_004_000022.png",
+      "hebrew_text": "וְאִם־עַוְלָתְכֶם אֶת־צִדְקַת־אֱלֹהִים תָּקִים מַה־נֹּאמַר הֲחָמָס אֱלֹהִים הַחֹרֶה בְּאַפּוֹ כְּאָדָם מְדַבֵּר אָנֹכִי׃"
+    },
+    {
+      "id": "romans.3.6.000022",
+      "confidence": "low",
+      "notes": "Visible Hebrew appears to be Romans 3:7; some text cut off at bottom/right.",
+      "output_image": "data/hutter/verse_images/romans/003_006_000022.png",
+      "hebrew_text": "וְאִם אֱמֶת אֱלֹהִים בְּכָזָבִי עוֹד כִּי הוֹתִירָה אֶל־כְּבוֹדוֹ מַדּוּעַ גַּם־אֲנִי כְּמוֹ חוֹטֵא אֶשָּׁפֵט׃"
+    },
+    {
+      "id": "romans.3.8.000024",
+      "confidence": "medium",
+      "notes": "Verse continues below crop; final words partly missing.",
+      "output_image": "data/hutter/verse_images/romans/003_008_000024.png",
+      "hebrew_text": "וְלֹא כַּאֲשֶׁר מְגַדְּפִים אֹתָנוּ וּכְמוֹ אֹמְרִים אֲנָשִׁים לֵאמֹר לָנוּ כִּי־נַעֲשֶׂה אֶת־הָרָעוֹת אֲשֶׁר תָּבֹאנָה הַטּוֹבוֹת אֲשֶׁר מִשְׁפָּטָם"
+    },
+    {
+      "id": "romans.3.9.000024",
+      "confidence": "low",
+      "notes": "Only a small cropped Hebrew fragment is visible; target verse appears mostly missing.",
+      "output_image": "data/hutter/verse_images/romans/003_009_000024.png",
+      "hebrew_text": "נֶשֶׁמֶשׁ הוּא׃"
+    },
+    {
+      "id": "romans.3.14.000024",
+      "confidence": "low",
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/003_014_000024.png",
+      "hebrew_text": "אֲשֶׁר פִּיהוּ מָלֵא וּמִרְמָה וָרֹךְ׃"
+    },
+    {
+      "id": "romans.3.20.000026",
+      "confidence": "low",
+      "notes": "Crop appears to show Hebrew from neighboring verses; target verse likely cut/mixed.",
+      "output_image": "data/hutter/verse_images/romans/003_020_000026.png",
+      "hebrew_text": "וְעַתָּה כְּבְלִי הַתּוֹרָה צִדְקַת אֱלֹהִים נִגְלָתָה הַתּוֹרָה"
+    },
+    {
+      "id": "romans.3.21.000026",
+      "confidence": "medium",
+      "notes": "Only the tail of the verse is visible in Hebrew; beginning is cut off.",
+      "output_image": "data/hutter/verse_images/romans/003_021_000026.png",
+      "hebrew_text": "מֵהַתּוֹרָה וּמִנְּבִיאִים"
+    },
+    {
+      "id": "romans.4.5.000030",
+      "confidence": "medium",
+      "notes": "Verse begins partly in prior crop; transcription combines visible portions.",
+      "output_image": "data/hutter/verse_images/romans/004_005_000030.png",
+      "hebrew_text": "וַאֲשֶׁר אֵינוֹ פֹעֵל כִּי אִם מַאֲמִין (בִּלְבָד) בְּאוֹתוֹ הַמַּצְדִּיק לָרָשָׁע תֵּחָשֵׁב־לוֹ אֱמוּנָתוֹ צְדָקָה׃"
+    },
+    {
+      "id": "romans.4.9.000032",
+      "confidence": "medium",
+      "notes": "Some pointing/letters unclear in crop.",
+      "output_image": "data/hutter/verse_images/romans/004_009_000032.png",
+      "hebrew_text": "ואיך נחשבה אברוםה במילה או בערלה לא במילה כי אם בערלה׃"
+    },
+    {
+      "id": "romans.4.11.000032",
+      "confidence": "medium",
+      "notes": "Verse continues in next crop; image contains partial verse only.",
+      "output_image": "data/hutter/verse_images/romans/004_011_000032.png",
+      "hebrew_text": "ואבי המילה לאלה לא לבד אשר במילה כי־אם גם לאלה"
+    },
+    {
+      "id": "romans.4.12.000032",
+      "confidence": "medium",
+      "notes": "Beginning of verse cut off; transcription is from visible continuation only.",
+      "output_image": "data/hutter/verse_images/romans/004_012_000032.png",
+      "hebrew_text": "אשר יקומו בעקבות אמונת אברהם אבינו אשר היתה לו במולה׃"
+    },
+    {
+      "id": "romans.4.13.000034",
+      "confidence": "medium",
+      "notes": "Left edge slightly cropped; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/004_013_000034.png",
+      "hebrew_text": "כי השבועה איננה בתורה לאברהם או לזרעו להיותו יורש את־העולם כי־אם בצדקת האמונה׃"
+    },
+    {
+      "id": "romans.4.14.000034",
+      "confidence": "medium",
+      "notes": "Left side cropped; first words/letters uncertain.",
+      "output_image": "data/hutter/verse_images/romans/004_014_000034.png",
+      "hebrew_text": "כי־לברם אלה אשר מתורה המה יורשים ריק האמונה ובטל השבועה׃"
+    },
+    {
+      "id": "romans.4.19.000036",
+      "confidence": "medium",
+      "notes": "Verse continues in next crop; final line partly cut.",
+      "output_image": "data/hutter/verse_images/romans/004_019_000036.png",
+      "hebrew_text": "וְלֹא נֶחֱלָה בֶאֱמוּנָה וְלֹא הֶשִׁיב אֶל גְּוִיָּתוֹ אֲשֶׁר מֵאָה"
+    },
+    {
+      "id": "romans.4.20.000036",
+      "confidence": "medium",
+      "notes": "This crop appears to contain continuation of verse 19, despite requested id.",
+      "output_image": "data/hutter/verse_images/romans/004_020_000036.png",
+      "hebrew_text": "מֵתָה בִהְיוֹתוֹ בֶּן־מֵאָה שָׁנָה וְלֹא אֶל־מוֹת רֶחֶם שָׂרָי׃"
+    },
+    {
+      "id": "romans.4.22.000036",
+      "confidence": "medium",
+      "notes": "Crop includes end of previous verse and verse 22.",
+      "output_image": "data/hutter/verse_images/romans/004_022_000036.png",
+      "hebrew_text": "מְמַלֵּא בְּלִבּוֹ כִּי הַמְדַבֵּר יָכוֹל הוּא גַּם לַעֲשׂוֹתוֹ׃ לָכֵן נֶחְשַׁב לוֹ לִצְדָקָה׃"
+    },
+    {
+      "id": "romans.5.5.000038",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/005_005_000038.png",
+      "hebrew_text": "הַתּוֹחָלֶת אֵינֶנּוּ מֵבִישׁ כִּי אַהֲבַת אֱלֹהִים נִשְׁפְּכָה בִּלְבָבוֹתֵינוּ בְּרוּחַ הַקֹּדֶשׁ הַנִּתְּנָה לָנוּ"
+    },
+    {
+      "id": "romans.5.19.000044",
+      "confidence": "low",
+      "notes": "left edge of verse is slightly cut off; some pointing uncertain",
+      "output_image": "data/hutter/verse_images/romans/005_019_000044.png",
+      "hebrew_text": "כִּי כַּאֲשֶׁר עַל־לֹא שְׁמֹעַ אָדָם אֶחָד חַטָּאִים רַבִּים נִהְיוּ כֵּן גַּם בִּקְרוֹת אֶחָד צַדִּיקִים רַבִּים יִהְיוּ׃"
+    },
+    {
+      "id": "romans.5.20.000044",
+      "confidence": "low",
+      "notes": "left edge appears cut; first word/letters may be incomplete",
+      "output_image": "data/hutter/verse_images/romans/005_020_000044.png",
+      "hebrew_text": "וְהַתּוֹרָה בָּאָה אֲשֶׁר הִתְרַבָּה הָעֲוֹלָה אִם עָתְרָה הַחַטָּאָה גַּם עַל־יֶתֶר הוֹתִירָה הַחֲנִינָה׃"
+    },
+    {
+      "id": "romans.6.3.000044",
+      "confidence": "medium",
+      "notes": "Top of verse is partially cut; transcription may be incomplete.",
+      "output_image": "data/hutter/verse_images/romans/006_003_000044.png",
+      "hebrew_text": "טָבַלְנוּ בִּישׁוּעַ הַמָּשִׁיחַ בְּמוֹתוֹ טָבַלְנוּ"
+    },
+    {
+      "id": "romans.6.5.000046",
+      "confidence": "medium",
+      "notes": "Lower part of verse is cut off; likely incomplete.",
+      "output_image": "data/hutter/verse_images/romans/006_005_000046.png",
+      "hebrew_text": "לָכֵן אִם נְטוּעִים נִהְיֶה בִּדְמוּת מוֹתוֹ גַּם בִּתְקוּמָה"
+    },
+    {
+      "id": "romans.6.6.000046",
+      "confidence": "medium",
+      "notes": "Some pointing is unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/006_006_000046.png",
+      "hebrew_text": "וְזֹאת נֵדַע כִּי אָדָמֵנוּ הַיָּשָׁן נִצְלַב עִמּוֹ אֲשֶׁר תִּבָּטֵל גּוּפַת הַחֲטָאָה וְעוֹד לֹא נַעֲבֹד לְחַטָּאת"
+    },
+    {
+      "id": "romans.6.9.000046",
+      "confidence": "medium",
+      "notes": "Right edge may contain a final word/mark partly cut off.",
+      "output_image": "data/hutter/verse_images/romans/006_009_000046.png",
+      "hebrew_text": "יוֹדְעִים כִּי הַמָּשִׁיחַ קָם מִמֵּתִים עוֹד לֹא יָמוּת הַמָּוֶת לֹא יִמְשֹׁל בּוֹ"
+    },
+    {
+      "id": "romans.6.13.000048",
+      "confidence": "medium",
+      "notes": "Beginning of verse appears cut off in crop; transcription starts from visible Hebrew.",
+      "output_image": "data/hutter/verse_images/romans/006_013_000048.png",
+      "hebrew_text": "הַצִּיגוּם אִישׁ אִישׁ לֵאלֹהִים כְּמוֹ חַיִּים מִמֵּתִים וְאֵת־נִתְחֵיכֶם לִכְלֵי הַצְּדָקָה לֵאלֹהִים׃"
+    },
+    {
+      "id": "romans.6.16.000048",
+      "confidence": "medium",
+      "notes": "Top portion includes continuation from preceding line; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/006_016_000048.png",
+      "hebrew_text": "הֲלֹא יְדַעְתֶּם כִּי לַאֲשֶׁר הֲכִינוּ לוֹ אֶת־נַפְשְׁכֶם לַעֲבָדִים לִשְׁמֹעַ כִּי עֲבָדָיו אַתֶּם לַאֲשֶׁר תִּשְׁמָעוּ אוֹ עַבְדֵי־הַחֵטְא לַמָּוֶת אוֹ עַבְדֵי הַשְּׁמִעָה לִצְדָקָה׃"
+    },
+    {
+      "id": "romans.6.22.000050",
+      "confidence": "medium",
+      "notes": "Beginning appears cut off; likely starts above visible crop.",
+      "output_image": "data/hutter/verse_images/romans/006_022_000050.png",
+      "hebrew_text": "מֵחַטָּאָה עֲבָדִים נַעֲשִׂיתֶם לֵאלֹהִים יֵשׁ לָכֶם פְּרִי לַקֹּדֶשׁ וְאַחֲרִיתוֹ אֶת־חַיֵּי עוֹלָם׃"
+    },
+    {
+      "id": "romans.7.5.000054",
+      "confidence": "low",
+      "notes": "Several words and niqqud are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/007_005_000054.png",
+      "hebrew_text": "וְכִי־הָיִינוּ בַּבָּשָׂר בִּצְעוֹתֵי הַחֲטָאוֹת אֲשֶׁר בַּתּוֹרָה פּוֹעֲלִים הָיוּ בְמַחֲנֵינוּ לַעֲשׂוֹת פְּרִי לַמָּוֶת׃"
+    },
+    {
+      "id": "romans.7.10.000054",
+      "confidence": "medium",
+      "notes": "Some pointing/letters are difficult to confirm from the crop.",
+      "output_image": "data/hutter/verse_images/romans/007_010_000054.png",
+      "hebrew_text": "וַאֲנִי מֵתִי וְנִמְצָאָה לִי הַמִּצְוָה הַמְּכוּנָה לְחַיִּים כִּי לְמָוֶת הִיא׃"
+    },
+    {
+      "id": "romans.7.18.000058",
+      "confidence": "medium",
+      "notes": "Crop includes verse end near lower edge; some words/niqqud uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_018_000058.png",
+      "hebrew_text": "כִּי יָדַעְתִּי כִּי אֵינֶנָּה שׁוֹכְנָה בִי זֶה הוּא בִּבְשָׂרִי הַטּוֹבָה אַךְ כִּי יֵשׁ בִּי הַתְּשׁוּקָה לַטּוֹבָה אַךְ אֶת־יְכֹלֶת מִפְעַל לַעֲשׂוֹתָהּ אֵינֶנִּי מוֹצֵא בִי׃"
+    },
+    {
+      "id": "romans.7.19.000058",
+      "confidence": "low",
+      "notes": "Verse is cut off at bottom; only visible portion transcribed.",
+      "output_image": "data/hutter/verse_images/romans/007_019_000058.png",
+      "hebrew_text": "כִּי אֶת־הַטּוֹבָה אֲשֶׁר חָפֵצִי בָהּ אֵינֶנִּי עוֹשֶׂה כִּי אִם אֶת־הָרָעָה אֲשֶׁר"
+    },
+    {
+      "id": "romans.7.23.000058",
+      "confidence": "low",
+      "notes": "Crop is partial/blurred and several words/points are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_023_000058.png",
+      "hebrew_text": "וְרֹאֶה אֲנִי אֶת־תּוֹרָה אַחֶרֶת בְּאֵבָרַי הַנִּלְחָמָה עִם תּוֹרַת בִּינָתִי מַעֲבִידָה אוֹתִי בְּתוֹרַת הַחַטָּאת אֲשֶׁר הִיא בְּבְשָׂרִי׃"
+    },
+    {
+      "id": "romans.7.24.000058",
+      "confidence": "medium",
+      "notes": "Top of verse appears in crop; some marks are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/007_024_000058.png",
+      "hebrew_text": "אֻמְלַל אֱנוֹשׁ אֲנִי מִי־יַצִּילֵנִי מִגְּוִיַּת הַמָּוֶת׃"
+    },
+    {
+      "id": "romans.7.25.000058",
+      "confidence": "low",
+      "notes": "Hebrew is mostly cut off; transcription reconstructed only from visible neighboring crop portions and may be incomplete.",
+      "output_image": "data/hutter/verse_images/romans/007_025_000058.png",
+      "hebrew_text": "מוֹדֶה אֲנִי לֵאלֹהִים בְּיֵשׁוּעַ מְשִׁיחֵנוּ אֲדוֹנֵינוּ לָכֵן אֲנִי הוּא בְּרוּחִי עֹבֵד לְתוֹרַת אֱלֹהִים וּבִבְשָׂרִי לְתוֹרַת הַחַטָּאת׃"
+    },
+    {
+      "id": "romans.8.2.000060",
+      "confidence": "low",
+      "notes": "Image labeled verse 8.2 but visible Hebrew starts verse number 3 and is cut off at bottom.",
+      "output_image": "data/hutter/verse_images/romans/008_002_000060.png",
+      "hebrew_text": "בַּאֲשֶׁר בְּלִי יְכֹלֶת לַתּוֹרָה בְּהִלָּחֲשָׁהּ בַּעֲבוּר הַבָּשָׂר שָׁלַח אֱלֹהִים אֶת־בְּנוֹ יְחִידוֹ בִּדְמוּת"
+    },
+    {
+      "id": "romans.8.3.000060",
+      "confidence": "medium",
+      "notes": "This is the continuation/end of verse 3 only; beginning appears in previous crop.",
+      "output_image": "data/hutter/verse_images/romans/008_003_000060.png",
+      "hebrew_text": "בְּשַׂר הַחַטָּאת וּבְחַטָּאת שָׁפַט אֶת־הַחַטָּאת בַּבָּשָׂר׃"
+    },
+    {
+      "id": "romans.8.17.000064",
+      "confidence": "low",
+      "notes": "Some pointing and letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/008_017_000064.png",
+      "hebrew_text": "וְאִם בָּנִים אֲזַי יוֹרְשִׁים יוֹרְשֵׁי אֱלֹהִים וְחַבְּרֵי נַחֲלַת הַמָּשִׁיחַ אִם נַעֲנֶה עִמּוֹ אֲשֶׁר גַּם נְהֻדַּר עִמּוֹ׃"
+    },
+    {
+      "id": "romans.8.20.000064",
+      "confidence": "low",
+      "notes": "Verse appears split across neighboring crop; transcription may include uncertain visible text only.",
+      "output_image": "data/hutter/verse_images/romans/008_020_000064.png",
+      "hebrew_text": "כִּי־הַבְּרִיאָה הוּשְׁפְּלָה תַּחַת הֶבֶל לֹא בִּרְצוֹנָהּ כִּי־אִם בַּעֲבוּרוֹ אֲשֶׁר שִׁעְבְּדָהּ וְתִחִיל בְּתִקְוָה׃"
+    },
+    {
+      "id": "romans.8.23.000066",
+      "confidence": "medium",
+      "notes": "Beginning is partly in preceding crop; combined target verse text from visible continuation, but some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_023_000066.png",
+      "hebrew_text": "אַךְ לֹא לְבַדָּהּ כִּי־אִם גַּם אֲנַחְנוּ לַאֲשֶׁר יֵשׁ לָנוּ בִּכּוּרֵי־רוּחַ וְאֲנַחְנוּ בְּנַפְשֵׁנוּ נֶאֱנָחִים וּמְקַוִּים אֲנַחְנוּ אֶת־מַתַּת הַבָּנִים אֶת־פְּדוּת גְּוִיָּתֵנוּ׃"
+    },
+    {
+      "id": "romans.8.33.000068",
+      "confidence": "medium",
+      "notes": "Divine name/word form slightly uncertain from crop.",
+      "output_image": "data/hutter/verse_images/romans/008_033_000068.png",
+      "hebrew_text": "מִי־יָרִיב אֶת־בְּחִירֵי אֱלֹהִים וְיְהוָה הוּא הַמַּצְדִּיק׃"
+    },
+    {
+      "id": "romans.8.34.000070",
+      "confidence": "low",
+      "notes": "Verse appears cut off at bottom/right and several words are uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_034_000070.png",
+      "hebrew_text": "מִי־הוּא זֶה הַשֹּׁפֵט יֵשׁוּעַ מָשִׁיחַ מֵת וְהַכָּבוֹד הָמַת אַךְ יוֹתֵר הָקָם מִמֵּתִים הַיּוֹשֵׁב לִימִין אֱלֹהִים אֲשֶׁר גַּם עוֹתֵר עָלֵינוּ"
+    },
+    {
+      "id": "romans.8.37.000070",
+      "confidence": "medium",
+      "notes": "Verse crop appears to include continuation/neighboring text and the requested verse boundary is uncertain.",
+      "output_image": "data/hutter/verse_images/romans/008_037_000070.png",
+      "hebrew_text": "כִּי־בְכָל־זֹאת לֹא הַמָּוֶת וְלֹא חַיִּים וְלֹא מַלְאָכִים וְלֹא מֶמְשָׁלוֹת וְלֹא גְבוּרֹת וְלֹא הֹוֹת וְלֹא עֲתִידִים"
+    },
+    {
+      "id": "romans.8.38.000070",
+      "confidence": "medium",
+      "notes": "This crop appears to contain Romans 8:39 rather than 8:38.",
+      "output_image": "data/hutter/verse_images/romans/008_038_000070.png",
+      "hebrew_text": "וְלֹא רֹם וְלֹא עֹמֶק וְלֹא בְּרִיאָה אַחֶרֶת יוּכְלוּ לְהַפְרִיד אוֹתָנוּ מֵאַהֲבַת אֱלֹהִים אֲשֶׁר הִיא בְּיֵשׁוּעַ הַמָּשִׁיחַ אֲדוֹנֵנוּ"
+    },
+    {
+      "id": "romans.8.39.000070",
+      "confidence": "medium",
+      "notes": "Crop appears to show Romans 9:1, not Romans 8:39.",
+      "output_image": "data/hutter/verse_images/romans/008_039_000070.png",
+      "hebrew_text": "אֱמֶת־אֹמַר בְּמֶלֶךְ אֵינִי מְכַזֵּב וּמֵעִיד לִי מַדָּעִי בְּרוּחַ הַקֹּדֶשׁ"
+    },
+    {
+      "id": "romans.9.15.000074",
+      "confidence": "medium",
+      "notes": "Hebrew line is partially cut off at top and right/left edges in crop.",
+      "output_image": "data/hutter/verse_images/romans/009_015_000074.png",
+      "hebrew_text": "כִּי־לְמֹשֶׁה אָמַר וְחַנֹּתִי אֶת־אֲשֶׁר אָחֹן וְרִחַמְתִּי אֶת־אֲשֶׁר אֲרַחֵם׃"
+    },
+    {
+      "id": "romans.9.16.000074",
+      "confidence": "medium",
+      "notes": "Only final Hebrew word of the verse is visible; remainder is cut off.",
+      "output_image": "data/hutter/verse_images/romans/009_016_000074.png",
+      "hebrew_text": "הַמְרַחֵם׃"
+    },
+    {
+      "id": "romans.9.20.000076",
+      "confidence": "low",
+      "notes": "Text is partly unclear/cropped and may include uncertain words.",
+      "output_image": "data/hutter/verse_images/romans/009_020_000076.png",
+      "hebrew_text": "לְצִדּוֹ מַה תַּעֲשֶׂה הוּא יֹאמַר לְאָב מַדּוּעַ הוֹלִיד לְאִשָׁה מַדּוּעַ חִילָלְתִּיךְ׃"
+    },
+    {
+      "id": "romans.9.21.000076",
+      "confidence": "medium",
+      "notes": "Verse continues/cut off at bottom; visible portion only transcribed.",
+      "output_image": "data/hutter/verse_images/romans/009_021_000076.png",
+      "hebrew_text": "הֲלֹא יֵשׁ לַיּוֹצֵר שִׁלְטוֹן עַל הַחֹמֶר מֵעֲרִיסָה אַחַת לַעֲשׂוֹת אֶת־כְּלִי אֶחָד לְכָבוֹד וְאַחֵר"
+    },
+    {
+      "id": "romans.10.3.000082",
+      "confidence": "low",
+      "notes": "Image is cropped/cut off on the right and bottom; transcription may be incomplete.",
+      "output_image": "data/hutter/verse_images/romans/010_003_000082.png",
+      "hebrew_text": "כי אינם יודעים את צדקת אלהים ומבקשים להם את־צדקה נפשם לצדקת אלהים לא נכנעו׃"
+    },
+    {
+      "id": "romans.10.4.000082",
+      "confidence": "medium",
+      "notes": "Left edge slightly cropped; pointing partly uncertain.",
+      "output_image": "data/hutter/verse_images/romans/010_004_000082.png",
+      "hebrew_text": "סוֹף הַתּוֹרָה הַמָּשִׁיחַ הוּא לִצְדָקָה לְכָל־אֲשֶׁר יַאֲמִין׃"
+    },
+    {
+      "id": "romans.10.5.000082",
+      "confidence": "medium",
+      "notes": "Right/left edges cropped and some marks unclear.",
+      "output_image": "data/hutter/verse_images/romans/010_005_000082.png",
+      "hebrew_text": "מֹשֶׁה כָתַב עַל־הַצְּדָקָה מֵהַתּוֹרָה הִיא כִּי כָּל־אֲשֶׁר אוֹתָם הָאָדָם וָחַי בָּהֶם׃"
+    },
+    {
+      "id": "romans.10.6.000082",
+      "confidence": "medium",
+      "notes": "Verse appears cropped at both edges; some words/points uncertain.",
+      "output_image": "data/hutter/verse_images/romans/010_006_000082.png",
+      "hebrew_text": "הַצְּדָקָה אֲשֶׁר מֵאֱמוּנָה הִיא אֹמֶרֶת אַל־תֹּאמַר בִּלְבָבְךָ מִי יַעֲלֶה לָנוּ הַשָּׁמַיְמָה וְזֹאת הִיא לְהוֹרִיד אֶת־הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "romans.10.7.000082",
+      "confidence": "medium",
+      "notes": "Beginning edge slightly cropped; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/010_007_000082.png",
+      "hebrew_text": "מִי־יֵרֵד תְּהוֹמָה וְזֹאת הִיא לְהַעֲלוֹת אֶת־הַמָּשִׁיחַ מִמֵּתִים׃"
+    },
+    {
+      "id": "romans.10.8.000082",
+      "confidence": "low",
+      "notes": "Crop shows only part of the Hebrew verse; transcription relies on visible fragments and is incomplete/uncertain.",
+      "output_image": "data/hutter/verse_images/romans/010_008_000082.png",
+      "hebrew_text": "קָרוֹב אֵלֶיךָ הַדָּבָר מְאֹד בְּפִיךָ וּבִלְבָבְךָ הוּא דְּבַר הָאֱמוּנָה אֲשֶׁר מְבַשְּׂרִים אֲנַחְנוּ׃"
+    },
+    {
+      "id": "romans.10.9.000082",
+      "confidence": "low",
+      "notes": "Top/beginning of verse cut off; only visible Hebrew transcribed as best as possible.",
+      "output_image": "data/hutter/verse_images/romans/010_009_000082.png",
+      "hebrew_text": "יֵשׁוּעַ הַמָּשִׁיחַ וְתַאֲמִין כִּי הָאֱלֹהִים הֵקִים מִמֵּתִים תִּוָּשַׁע׃"
+    },
+    {
+      "id": "romans.10.11.000084",
+      "confidence": "medium",
+      "notes": "Some pointing/word forms are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/010_011_000084.png",
+      "hebrew_text": "כִּי אָמַר הַכָּתָב כָּל קֹרֵא בְּכָל־אֲשֶׁר יַאֲמִינוּ בּוֹ לֹא יֵבֹשׁוּ׃"
+    },
+    {
+      "id": "romans.10.17.000086",
+      "confidence": "medium",
+      "notes": "Final divine-name wording and some pointing are slightly uncertain from the crop.",
+      "output_image": "data/hutter/verse_images/romans/010_017_000086.png",
+      "hebrew_text": "עַל־כֵּן הָאֱמוּנָה מִשְּׁמוּעָה וְהַשְּׁמוּעָה בִּדְבַר יְהוָה׃"
+    },
+    {
+      "id": "romans.11.1.000086",
+      "confidence": "medium",
+      "notes": "Some pointing is difficult to verify exactly from the crop.",
+      "output_image": "data/hutter/verse_images/romans/011_001_000086.png",
+      "hebrew_text": "וְאוֹמֵר אָנֹכִי אִם מָאַס אֱלֹהִים אֶת־עַמּוֹ חָלִילָה כִּי גַם אֲנִי יִשְׂרָאֵלִי הוּא מִזֶּרַע אַבְרָהָם מִמַּטֵּה בִנְיָמִין"
+    },
+    {
+      "id": "romans.11.2.000088",
+      "confidence": "medium",
+      "notes": "Bottom may continue beyond crop; niqqud/marks visible but not fully preserved.",
+      "output_image": "data/hutter/verse_images/romans/011_002_000088.png",
+      "hebrew_text": "לא מאם אלהים את־עמו אשר מקדם ידעו הלא ידעתם באליהו מה מדבר הכתב כאשר מתפלל אל־יהוה על־בני ישראל לאמר"
+    },
+    {
+      "id": "romans.11.4.000088",
+      "confidence": "medium",
+      "notes": "Verse crop is cut off at bottom; only visible Hebrew transcribed.",
+      "output_image": "data/hutter/verse_images/romans/011_004_000088.png",
+      "hebrew_text": "כִּי אִם מַה אֹמֵר לוֹ דְּבַר יְהוָה הִשְׁאַרְתִּי בְיִשְׂרָאֵל שִׁבְעַת"
+    },
+    {
+      "id": "romans.11.11.000090",
+      "confidence": "medium",
+      "notes": "Some letters/points are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/011_011_000090.png",
+      "hebrew_text": "וָאֹמַר אַף הִנְגְפוּ לִנְפֹל חָלִילָה כִּי־אִם בְּמַעֲלָם הַיְשׁוּעָה הִיא לַגּוֹיִם לְקַנְאֹתָם"
+    },
+    {
+      "id": "romans.11.15.000090",
+      "confidence": "medium",
+      "notes": "Top line is partly cropped from preceding area; some words/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_015_000090.png",
+      "hebrew_text": "וְאִם מְאַסָּם חֲלִיפַת הָעוֹלָם מַה מֶקַח כִּי־אִם חַיִּים מִמֵּתִים׃"
+    },
+    {
+      "id": "romans.11.22.000092",
+      "confidence": "medium",
+      "notes": "Top/beginning is cropped; some wording and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_022_000092.png",
+      "hebrew_text": "וּרְאֵה גַּם אֶת־טוּב וְגַם אֶת־מָאוֹס הָאֱלֹהִים בְּאֵלֶּה אֲשֶׁר נָפְלוּ אֶת־הַמָּאוֹס עֲלֵיהֶם אַךְ אֶת־הַטּוּב אִם תַּעֲמֹד בַּטּוּב וְאִם לֹא גַּם אַתָּה תִּכָּרֵת׃"
+    },
+    {
+      "id": "romans.11.23.000094",
+      "confidence": "low",
+      "notes": "Some letters/points are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/romans/011_023_000094.png",
+      "hebrew_text": "וְגַם הֵמָּה אִם לֹא יַעַמְדוּ לַעֲמֹד בְּחֹסֶרִים יָכוֹל יְכוֹל כִּי־כֹּל יִהְיֶה עוֹדָם שָׁנִית לִשְׁתּוֹל אֹתָם׃"
+    },
+    {
+      "id": "romans.11.24.000094",
+      "confidence": "medium",
+      "notes": "End punctuation/continuation partly cut off; some pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/011_024_000094.png",
+      "hebrew_text": "וְאִם אַתָּה מִזַּיִת אֲשֶׁר בְּטִבְעוֹ זַיִת הַשָּׂדֶה הוּא נִגְזַרְתָּ וְעַל־דֶּרֶךְ הַטֶּבַע נִשְׁתַּלְתָּ בְּזַיִת טוֹב כַּמָּה יוֹתֵר הָאֵלֶּה אֲשֶׁר בְּטִבְעָם הֵמָּה יִשָּׁתְלוּ בְּעַצְמָהּ"
+    },
+    {
+      "id": "romans.11.33.000096",
+      "confidence": "medium",
+      "notes": "Some pointing/marks and one word are difficult to confirm from crop.",
+      "output_image": "data/hutter/verse_images/romans/011_033_000096.png",
+      "hebrew_text": "הוֹי עֹמֶק עֹשֶׁר חָכְמַת וְדַעַת אֱלֹהִים אֲרֻכָּה כְלִי חֵקֶר מִשְׁפָּטָיו וּמַה בְּלִי דַעַת מַחְשְׁבֹת דְּרָכָיו׃"
+    },
+    {
+      "id": "romans.12.1.000098",
+      "confidence": "low",
+      "notes": "Crop appears to start mid-verse/line and lower portion is cut off; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/romans/012_001_000098.png",
+      "hebrew_text": "וְאֶל הֲדָמָה לִבְנֵי הָעוֹלָם הַזֶּה כִּי אִם הִתְחַלְּפוּ בְּחִלֵּף חֲדָשׁ לָכֶם אֶת־נַפְשְׁכֶם מַה הִיא רָצוֹן"
+    },
+    {
+      "id": "romans.12.2.000098",
+      "confidence": "low",
+      "notes": "Image includes verse boundary confusion and is cut off; requested verse likely only partially visible.",
+      "output_image": "data/hutter/verse_images/romans/012_002_000098.png",
+      "hebrew_text": "כִּי אֹמַר אָנֹכִי בְּחֶנַּת הַנְּתוּנָה לִי לְכָל־אִישׁ אֲשֶׁר בָּכֶם מִהְיוֹתְכֶם"
+    },
+    {
+      "id": "romans.12.3.000098",
+      "confidence": "low",
+      "notes": "Top of verse likely cut off; several words/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/012_003_000098.png",
+      "hebrew_text": "יֹתֵר עַל־אֲשֶׁר שָׁוֶה לָכֶם לָחוּם כִּי אִם לְהַחְכִּים לְצְנוּעָה אִישׁ אִישׁ כְּמִדַּת הָאֱמוּנָה וְחֵלֶק לוֹ אֱלֹהִים׃"
+    },
+    {
+      "id": "romans.12.16.000102",
+      "confidence": "low",
+      "notes": "Verse crop is cut off at bottom; transcription includes only visible target text and may be incomplete.",
+      "output_image": "data/hutter/verse_images/romans/012_016_000102.png",
+      "hebrew_text": "יַחַד בֵּינֵיכֶם חוֹכְמִים לֹא מַעֲמִיקִים אֶת־מַחְשְׁבוֹתֵיכֶם כִּי אִם בָּזֶה עֲנִיִּים הוֹלְכִים"
+    },
+    {
+      "id": "romans.12.17.000102",
+      "confidence": "low",
+      "notes": "Pointing and several letters are uncertain due to blur/crop.",
+      "output_image": "data/hutter/verse_images/romans/012_017_000102.png",
+      "hebrew_text": "לְאִישׁ לֹא מְשַׁלְּמִים רָעָה תַּחַת טוֹבָה הֱיוּמִים לְהֵיטִיב אַחֲרֵי עֵינֵי כָל־בְּנֵי אָדָם׃"
+    },
+    {
+      "id": "romans.12.19.000102",
+      "confidence": "medium",
+      "notes": "Beginning of verse appears cut off; only visible target text transcribed.",
+      "output_image": "data/hutter/verse_images/romans/012_019_000102.png",
+      "hebrew_text": "כִּי־נִכְתָּב לִי נָקָם וְשִׁלֵּם אָמַר יְהוָה׃"
+    },
+    {
+      "id": "romans.12.20.000102",
+      "confidence": "low",
+      "notes": "Top of verse is cut off; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/romans/012_020_000102.png",
+      "hebrew_text": "וְאִם צָמֵא הַשְׁקֵהוּ מָיִם בְּעֲשׂוֹתְךָ זֹאת תַּחְתֹּל־אֵשׁ אַתָּה עַל־רֹאשׁוֹ׃"
+    },
+    {
+      "id": "romans.13.6.000104",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/013_006_000104.png",
+      "hebrew_text": "עַל־כֵּן גַּם תַּעֲלוּ אֶת־הַמִּנְחָה כִּי־עַבְדֵי אֱלֹהִים הֵמָּה וְעַל־זֹאת מְנֻצָּבִים׃"
+    },
+    {
+      "id": "romans.13.14.000108",
+      "confidence": "low",
+      "notes": "Image cuts off lower part of verse; target verse incomplete.",
+      "output_image": "data/hutter/verse_images/romans/013_014_000108.png",
+      "hebrew_text": "כִּי אִם לִבְשׁוּ אֶת־אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ וְלֹא תִדְרְשׁוּ זִלֻּלִים"
+    },
+    {
+      "id": "romans.14.1.000108",
+      "confidence": "medium",
+      "notes": "Left edge/top context slightly cropped; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_001_000108.png",
+      "hebrew_text": "אֶת־הַחוֹלֶה בֶּאֱמוּנָה קַבְּלוּ לֹא לְמַחְלְקוֹת הַמַּחֲשָׁבוֹת׃"
+    },
+    {
+      "id": "romans.14.3.000108",
+      "confidence": "medium",
+      "notes": "Top of verse partly in preceding crop; transcription from visible Hebrew.",
+      "output_image": "data/hutter/verse_images/romans/014_003_000108.png",
+      "hebrew_text": "הָאֹכֵל לֹא יִבֶז אֹתוֹ אֲשֶׁר אֵינֶנּוּ אֹכֵל וְלַאֲשֶׁר אֵינֶנּוּ אֹכֵל לֹא יִשְׁפֹּט אֶת־הָאֹכֵל כִּי אֱלֹהִים לְקָחוֹ׃"
+    },
+    {
+      "id": "romans.14.6.000108",
+      "confidence": "medium",
+      "notes": "Only lower part of verse visible in crop; continued from previous image.",
+      "output_image": "data/hutter/verse_images/romans/014_006_000108.png",
+      "hebrew_text": "הַבּוֹחֵר אֶת־יוֹם לַיהוָה בּוֹחֵר הוּא וַאֲשֶׁר אֵינֶנּוּ בּוֹחֵר אֶת־יוֹם לַיהוָה לֹא בּוֹחֵר הָאֹכֵל לַיהוָה אֹכֵל הוּא וּמוֹדֶה לַיהוָה וַאֲשֶׁר אֵינֶנּוּ אֹכֵל לַיהוָה לֹא אֹכֵל וּמוֹדֶה לַיהוָה׃"
+    },
+    {
+      "id": "romans.14.13.000110",
+      "confidence": "medium",
+      "notes": "Top of verse is partly in prior crop; some pointing/letters uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_013_000110.png",
+      "hebrew_text": "וְאַל־נִשְׁפֹּט עוֹד אִישׁ אֶחָד אֶת־אַחֵר כִּי־אִם זֹאת הִשָּׁפְטוּ יוֹתֵר מִךְ הִתְנוּ נֶגֶף אוֹ־מִכְשׁוֹל לַאֲחִיכֶם׃"
+    },
+    {
+      "id": "romans.14.19.000112",
+      "confidence": "medium",
+      "notes": "Verse begins in upper cropped portion; some words/pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/014_019_000112.png",
+      "hebrew_text": "עַל־כֵּן נְבַקֵּשׁ שָׁלוֹם וְהַרְבּוֹת וְהַבָּנָה בֵּינוֹתֵינוּ אִישׁ אֶת אֲשֶׁר לְחָבֵרוֹ׃"
+    },
+    {
+      "id": "romans.14.20.000112",
+      "confidence": "medium",
+      "notes": "Start of verse partly in prior crop; transcription uses visible continuation.",
+      "output_image": "data/hutter/verse_images/romans/014_020_000112.png",
+      "hebrew_text": "אַל־נָא בַּעֲבוּר הָאֹכֶל תַּהֲרֹס אֶת־מַעֲשֵׂה אֱלֹהִים כִּי כָּל־דְּבָרִים טְהוֹרִים הֵמָּה כִּי־אִם טָמֵא הוּא לָאֱנוֹשׁ אֲשֶׁר בְּמִכְשׁוֹל אֹכֵל׃"
+    },
+    {
+      "id": "romans.14.22.000114",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/014_022_000114.png",
+      "hebrew_text": "אֶת־לְךָ הָאֱמוּנָה יְהִי לְךָ לְנַפְשְׁךָ לִפְנֵי אֱלֹהִים אַשְׁרֵי הָאִישׁ אֲשֶׁר אֵינֶנּוּ שֹׁפֵט אֶת־נַפְשׁוֹ בְּבָחֲנוֹ׃"
+    },
+    {
+      "id": "romans.15.8.000116",
+      "confidence": "low",
+      "notes": "Several words and pointing are uncertain; crop quality and Hutter spelling require review.",
+      "output_image": "data/hutter/verse_images/romans/015_008_000116.png",
+      "hebrew_text": "כִּי אֹמֵר אֲנִי כִּי יֵשׁוּעַ הַמָּשִׁיחַ הָיָה מְשָׁרֵת הַמִּילָה בַּעֲבַר אֱמֶת אֱלֹהִים לָהֶם אֶת־שְׁבֻעוֹת מַטּוֹת אָמַר סֶלָה׃"
+    },
+    {
+      "id": "romans.15.9.000116",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to verify from crop.",
+      "output_image": "data/hutter/verse_images/romans/015_009_000116.png",
+      "hebrew_text": "וַאֲשֶׁר יְכַבְּדוּ הַגּוֹיִם אֶת־אֱלֹהִים עַל־רֹב חֶסֶד כְּמוֹ נִכְתָּב עַל־כֵּן אוֹדְךָ בַגּוֹיִם וּלְשִׁמְךָ אֲזַמֵּר׃"
+    },
+    {
+      "id": "romans.15.15.000118",
+      "confidence": "low",
+      "notes": "Word forms/pointing uncertain; crop is readable but exact transcription needs review.",
+      "output_image": "data/hutter/verse_images/romans/015_015_000118.png",
+      "hebrew_text": "וּבְבִטָּחוֹן כָּתַבְתִּי אֵלֵיכֶם אַחַי מִקְצָתִי לְהוֹזִיר אֶתְכֶם בְּחֶמְלַת הַנְּתוּנָה לִי מֵאֱלֹהִים׃"
+    },
+    {
+      "id": "romans.15.16.000118",
+      "confidence": "medium",
+      "notes": "Top of verse partly carried from previous crop; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/romans/015_016_000118.png",
+      "hebrew_text": "לִהְיוֹתִי מְשָׁרֵת יֵשׁוּעַ הַמָּשִׁיחַ בַּגּוֹיִם מְקַדֵּשׁ אֶת־בְּשׂוֹרַת אֱלֹהִים אֲשֶׁר תְּהִי מִנְחַת הַגּוֹיִם נִרְצָה וּמְקֻדָּשָׁה בְּרוּחַ הַקֹּדֶשׁ׃"
+    },
+    {
+      "id": "romans.15.22.000120",
+      "confidence": "medium",
+      "notes": "Short crop; pointing not fully clear.",
+      "output_image": "data/hutter/verse_images/romans/015_022_000120.png",
+      "hebrew_text": "לָכֵן נִמְנַעְתִּי רַבִּים לָבוֹא אֲלֵיכֶם׃"
+    },
+    {
+      "id": "romans.15.28.000122",
+      "confidence": "low",
+      "notes": "Verse partly cropped at left/right and several words uncertain.",
+      "output_image": "data/hutter/verse_images/romans/015_028_000122.png",
+      "hebrew_text": "וּבַאֲשֶׁר אֲכַלֶּה וְאֶת לָהֶם הַפְּרִי הַזֶּה אָבוֹא בָכֶם סְפָרַדָּה׃"
+    },
+    {
+      "id": "romans.16.5.000126",
+      "confidence": "low",
+      "notes": "Verse crop is cut off at bottom; transcription includes only visible Hebrew.",
+      "output_image": "data/hutter/verse_images/romans/016_005_000126.png",
+      "hebrew_text": "וְגַם לִקְהִלָּתָם בְּבֵיתָהּ לְבָרֵךְ שַׁאֲלוּ לְשָׁלוֹם לְאֶפַּנְטוֹס יְדִידִי"
+    },
+    {
+      "id": "romans.16.11.000126",
+      "confidence": "medium",
+      "notes": "Top of verse is slightly cropped/blurred.",
+      "output_image": "data/hutter/verse_images/romans/016_011_000126.png",
+      "hebrew_text": "שַׁאֲלוּ לִשְׁלוֹם אֲשֶׁר בְּבֵית נַרְקִסוֹס אֲשֶׁר הֵם בַּאֲדֹנֵינוּ׃"
+    },
+    {
+      "id": "romans.16.12.000128",
+      "confidence": "medium",
+      "notes": "Verse continues into next crop; only visible target text transcribed.",
+      "output_image": "data/hutter/verse_images/romans/016_012_000128.png",
+      "hebrew_text": "שַׁאֲלוּ לִשְׁלוֹם לְטְרִיפֵנָא וּלְטְרוֹפְסָא הַיְגֵעַת בַּאֲדֹנֵינוּ שַׁאֲלוּ לִשְׁלוֹם לְפֶרְסִס אֲהוּבָתִי"
+    },
+    {
+      "id": "romans.16.19.000130",
+      "confidence": "medium",
+      "notes": "Verse continues below crop; final visible phrase only.",
+      "output_image": "data/hutter/verse_images/romans/016_019_000130.png",
+      "hebrew_text": "כִּי־מִשְׁמַעְתְּכֶם בְּכָל־מָקוֹם הוֹלְכָה וְגָלָה וְחֶדְוָה לִי עֲלֵיכֶם וּמִתְאַוֶּה אָנֹכִי לִהְיוֹתְכֶם חֲכָמִים לַטּוֹבָה"
+    },
+    {
+      "id": "romans.16.20.000130",
+      "confidence": "medium",
+      "notes": "Final line partly cut off; punctuation/ending uncertain.",
+      "output_image": "data/hutter/verse_images/romans/016_020_000130.png",
+      "hebrew_text": "וֵאלֹהֵי הַשָּׁלוֹם יִשְׁחֹק רֹאשׁ הַשָּׂטָן תַּחַת רַגְלֵיכֶם בִּמְהֵרָה חֶסֶד אֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ אִתְּכֶם"
+    },
+    {
+      "id": "romans.16.21.000130",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation-like marks are hard to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/romans/016_021_000130.png",
+      "hebrew_text": "שֹׁאֲלִים לָכֶם לְשָׁלוֹם טִימוֹתָאוֹס עוֹזְרִי וְלוּקִיּוֹס וְיָסוֹן וְסִיפָטְרוֹס דּוֹדָי׃"
+    },
+    {
+      "id": "romans.16.25.000130",
+      "confidence": "low",
+      "notes": "Verse is partly cut off at top; beginning is inferred only from visible portions and needs review.",
+      "output_image": "data/hutter/verse_images/romans/016_025_000130.png",
+      "hebrew_text": "וְלוֹ אֲשֶׁר יָכוֹל לְהַעֲמִיד אֶתְכֶם כְּבְשׂוֹרָתִי וּקְרִיאַת יֵשׁוּעַ הַמָּשִׁיחַ לְגִלּוּי הַסּוֹד הַנִּסְתָּר מֵעוֹלָם עַד הַיּוֹם הַזֶּה׃"
+    }
+  ]
+}

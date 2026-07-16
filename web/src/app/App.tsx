@@ -11,6 +11,7 @@ import { MobileDesignSystemGuide } from "./components/MobileDesignSystemGuide";
 import { NavigationBar } from "./components/NavigationBar";
 import { NeumorphCard } from "./components/NeumorphCard";
 import { NotFoundPage } from "./components/NotFoundPage";
+import { SettingsScreen } from "./components/SettingsScreen";
 import { Skeleton } from "./components/ui/skeleton";
 import { VerseDisplay } from "./components/VerseDisplay";
 import { WordCard } from "./components/WordCard";
@@ -147,7 +148,16 @@ export default function App() {
 		"language",
 		initialState.language,
 	);
+	const [besorahTextVersion, setBesorahTextVersion] = usePersistedState(
+		"besorahTextVersion",
+		initialState.besorahTextVersion,
+	);
+	const [hutterAnnouncementSeen, setHutterAnnouncementSeen] = usePersistedState(
+		"hutterAnnouncementSeen",
+		initialState.hutterAnnouncementSeen,
+	);
 	const { t, isRTL } = useTranslation(language);
+	const [showHutterAnnouncement, setShowHutterAnnouncement] = useState(false);
 
 	useEffect(() => {
 		currentScreenRef.current = currentScreen;
@@ -341,6 +351,16 @@ export default function App() {
 			setTranslationOnly,
 			setSeferMode,
 		],
+	);
+
+	const handleHebrewOnlyChange = useCallback(
+		(nextHebrewOnly: boolean) => {
+			setHebrewOnly(nextHebrewOnly);
+			if (!nextHebrewOnly && !translationOnly && seferMode) {
+				setSeferMode(false);
+			}
+		},
+		[seferMode, setHebrewOnly, setSeferMode, translationOnly],
 	);
 
 	const handleTranslationOnlyChange = useCallback(
@@ -595,6 +615,9 @@ export default function App() {
 
 	const handleWordClick = useCallback(
 		(word: WordResponse, context?: WordSelectionContext) => {
+			if (besorahTextVersion === "hutter" && !word.strong) {
+				return;
+			}
 			const resolvedContext = context ?? {
 				chapter: currentChapter,
 				verse: currentVerse,
@@ -655,6 +678,7 @@ export default function App() {
 			}
 		},
 		[
+			besorahTextVersion,
 			closeWordSheet,
 			currentChapter,
 			currentVerse,
@@ -794,6 +818,33 @@ export default function App() {
 	const besorahDisclaimerText = t("verse.besorahDisclaimer.short");
 
 	useEffect(() => {
+		if (currentScreen === "verse" && isBesorah && !hutterAnnouncementSeen) {
+			setShowHutterAnnouncement(true);
+		}
+	}, [currentScreen, hutterAnnouncementSeen, isBesorah]);
+
+	const dismissHutterAnnouncement = useCallback(() => {
+		setShowHutterAnnouncement(false);
+		setHutterAnnouncementSeen(true);
+	}, [setHutterAnnouncementSeen]);
+
+	const activateHutter = useCallback(() => {
+		setBesorahTextVersion("hutter");
+		dismissHutterAnnouncement();
+	}, [dismissHutterAnnouncement, setBesorahTextVersion]);
+
+	const handleBesorahTextVersionChange = useCallback(
+		(version: "delitzsch" | "hutter") => {
+			setBesorahTextVersion(version);
+			if (version === "hutter") {
+				setShowHutterAnnouncement(false);
+				setHutterAnnouncementSeen(true);
+			}
+		},
+		[setBesorahTextVersion, setHutterAnnouncementSeen],
+	);
+
+	useEffect(() => {
 		let isMounted = true;
 		const loadBooks = async () => {
 			try {
@@ -894,6 +945,7 @@ export default function App() {
 						showDss: showQumran,
 						hebrewOnly: false, // Always load translations; UI will control display
 						referenceMode: translationOnly ? "translation" : "source",
+						besorahTextVersion,
 					}),
 				]);
 
@@ -937,7 +989,14 @@ export default function App() {
 		return () => {
 			isMounted = false;
 		};
-	}, [currentBook, currentChapter, language, showQumran, translationOnly]);
+	}, [
+		besorahTextVersion,
+		currentBook,
+		currentChapter,
+		language,
+		showQumran,
+		translationOnly,
+	]);
 
 	useEffect(() => {
 		if (typeof window === "undefined") return;
@@ -1592,6 +1651,8 @@ export default function App() {
 						onThemeChange={setTheme}
 						language={language}
 						onLanguageChange={setLanguage}
+						besorahTextVersion={besorahTextVersion}
+						onBesorahTextVersionChange={handleBesorahTextVersionChange}
 						showQumran={showQumran}
 						onQumranChange={setShowQumran}
 						showFullChapter={showFullChapter}
@@ -1599,7 +1660,7 @@ export default function App() {
 						seferMode={seferMode}
 						onSeferModeChange={handleSeferModeChange}
 						hebrewOnly={hebrewOnly}
-						onHebrewOnlyChange={setHebrewOnly}
+						onHebrewOnlyChange={handleHebrewOnlyChange}
 						showNikud={showNikud}
 						onNikudChange={setShowNikud}
 						showCantillation={showCantillation}
@@ -1620,6 +1681,56 @@ export default function App() {
 					}}
 				>
 					{besorahDisclaimerText}
+				</div>
+			)}
+
+			{showHutterAnnouncement && (
+				<div
+					className="fixed inset-0 z-[120] flex items-center justify-center px-5"
+					style={{ background: "rgba(20, 16, 12, 0.45)" }}
+					role="dialog"
+					aria-modal="true"
+					aria-labelledby="hutter-announcement-title"
+				>
+					<div
+						className="relative w-full max-w-md rounded-[28px] border p-7"
+						style={{
+							background: "var(--neomorph-bg)",
+							borderColor: "var(--neomorph-border)",
+							boxShadow:
+								"12px 12px 28px var(--neomorph-shadow-dark), -8px -8px 24px var(--neomorph-shadow-light)",
+						}}
+					>
+						<button
+							type="button"
+							onClick={dismissHutterAnnouncement}
+							aria-label={t("verse.hutterAnnouncement.close")}
+							className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full text-xl text-[var(--text-secondary)] hover:bg-[var(--muted)]"
+						>
+							×
+						</button>
+						<h2
+							id="hutter-announcement-title"
+							className="pr-8 text-2xl font-semibold text-[var(--text-primary)]"
+							style={{ fontFamily: "'Inter', sans-serif" }}
+						>
+							{t("verse.hutterAnnouncement.title")}
+						</h2>
+						<p
+							className="mt-3 text-sm leading-6 text-[var(--text-secondary)]"
+							style={{ fontFamily: "'Inter', sans-serif" }}
+						>
+							{t("verse.hutterAnnouncement.message")}
+						</p>
+						<button
+							type="button"
+							onClick={activateHutter}
+							className="mt-6 w-full rounded-full bg-[var(--primary)] px-5 py-3.5 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.01] active:scale-[0.99]"
+							style={{ fontFamily: "'Inter', sans-serif" }}
+						>
+							{t("verse.hutterAnnouncement.activate")}
+						</button>
+					</div>
 				</div>
 			)}
 
@@ -1655,6 +1766,26 @@ export default function App() {
 					{currentScreen === "donate" && <DonateScreen language={language} />}
 					{currentScreen === "features" && (
 						<FeaturesScreen language={language} />
+					)}
+					{currentScreen === "settings" && (
+						<SettingsScreen
+							theme={theme}
+							onThemeChange={setTheme}
+							language={language}
+							onLanguageChange={setLanguage}
+							besorahTextVersion={besorahTextVersion}
+							onBesorahTextVersionChange={handleBesorahTextVersionChange}
+							showQumran={showQumran}
+							onQumranChange={setShowQumran}
+							showFullChapter={showFullChapter}
+							onFullChapterChange={setShowFullChapter}
+							seferMode={seferMode}
+							onSeferModeChange={handleSeferModeChange}
+							hebrewOnly={hebrewOnly}
+							onHebrewOnlyChange={handleHebrewOnlyChange}
+							onDesignSystemClick={() => setShowDesignSystem(true)}
+							onMobileDesignGuideClick={() => setShowMobileDesignGuide(true)}
+						/>
 					)}
 
 					{currentScreen === "notFound" && (

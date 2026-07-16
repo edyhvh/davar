@@ -60,8 +60,10 @@ import { useAppStore, type AppState } from "@/src/store/useAppStore";
 import { useTranslation } from "@/src/i18n/useTranslation";
 import {
   loadBesorahDisclaimerCount,
+  loadHutterAnnouncementSeen,
   loadSwipeUpHintCount,
   saveBesorahDisclaimerCount,
+  saveHutterAnnouncementSeen,
   saveSwipeUpHintCount,
 } from "@/src/services/storage";
 import { formatBookDisplayName } from "../utils/bookNameFormatter";
@@ -338,6 +340,71 @@ const createStyles = (colors: ReturnType<typeof getColors>) =>
       backgroundColor: colors.neomorphBg,
       borderWidth: 1,
       borderColor: colors.neomorphBorder,
+    },
+    hutterAnnouncementOverlay: {
+      flex: 1,
+      backgroundColor: "rgba(20, 16, 12, 0.45)",
+      alignItems: "center",
+      justifyContent: "center",
+      paddingHorizontal: spacing[6],
+    },
+    hutterAnnouncementCard: {
+      width: "100%",
+      maxWidth: 420,
+      borderRadius: 28,
+      borderWidth: 1,
+      borderColor: colors.border,
+      backgroundColor: colors.surface,
+      padding: spacing[6],
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 10 },
+      shadowOpacity: 0.18,
+      shadowRadius: 24,
+      elevation: 10,
+    },
+    hutterAnnouncementClose: {
+      position: "absolute",
+      right: spacing[4],
+      top: spacing[4],
+      width: 36,
+      height: 36,
+      borderRadius: 18,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: colors.background,
+    },
+    hutterAnnouncementCloseText: {
+      color: colors.textSecondary,
+      fontSize: 24,
+      lineHeight: 26,
+    },
+    hutterAnnouncementTitle: {
+      paddingRight: spacing[10],
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.h2,
+      fontWeight: typography.weights.semibold,
+      color: colors.textPrimary,
+    },
+    hutterAnnouncementMessage: {
+      marginTop: spacing[3],
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      lineHeight: typography.sizes.body * 1.55,
+      color: colors.textSecondary,
+    },
+    hutterAnnouncementButton: {
+      marginTop: spacing[5],
+      borderRadius: 999,
+      backgroundColor: colors.accentCopper,
+      paddingHorizontal: spacing[5],
+      paddingVertical: spacing[4],
+      alignItems: "center",
+    },
+    hutterAnnouncementButtonText: {
+      fontFamily: typography.families.latinUI,
+      fontSize: typography.sizes.body,
+      fontWeight: typography.weights.semibold,
+      color: "#FFFFFF",
     },
     chapterFootnoteHeading: {
       fontFamily: typography.families.latinUI,
@@ -664,6 +731,12 @@ export const VerseDetailContent = () => {
     (state: AppState) => state.setCurrentVerseId,
   );
   const language = useAppStore((state: AppState) => state.language);
+  const besorahTextVersion = useAppStore(
+    (state: AppState) => state.besorahTextVersion,
+  );
+  const setBesorahTextVersion = useAppStore(
+    (state: AppState) => state.setBesorahTextVersion,
+  );
   const showQumran = useAppStore((state: AppState) => state.showQumran);
   const translationOnly = useAppStore(
     (state: AppState) => state.translationOnly,
@@ -737,6 +810,8 @@ export const VerseDetailContent = () => {
   const [booksMeta, setBooksMeta] = useState<BookResponse[]>([]);
   const [activeFlowFootnote, setActiveFlowFootnote] =
     useState<TranslationFootnote | null>(null);
+  const [showHutterAnnouncement, setShowHutterAnnouncement] = useState(false);
+  const hutterAnnouncementHandledRef = useRef(false);
 
   const parseVerseId = (id: string) => {
     const [bookId, chapterValue, verseValue] = id.split("-");
@@ -774,6 +849,36 @@ export const VerseDetailContent = () => {
   );
   const isBesorah = bookMeta?.section === "besorah";
   const previousBookSectionRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!isBesorah || hutterAnnouncementHandledRef.current) {
+      return;
+    }
+
+    let isMounted = true;
+    void (async () => {
+      const hasSeenAnnouncement = await loadHutterAnnouncementSeen();
+      if (isMounted && !hasSeenAnnouncement) {
+        hutterAnnouncementHandledRef.current = true;
+        setShowHutterAnnouncement(true);
+      }
+    })();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [isBesorah]);
+
+  const dismissHutterAnnouncement = useCallback(() => {
+    hutterAnnouncementHandledRef.current = true;
+    setShowHutterAnnouncement(false);
+    void saveHutterAnnouncementSeen();
+  }, []);
+
+  const activateHutter = useCallback(() => {
+    setBesorahTextVersion("hutter");
+    dismissHutterAnnouncement();
+  }, [dismissHutterAnnouncement, setBesorahTextVersion]);
 
   const bookVerses = useMemo(() => chapterVerses, [chapterVerses]);
   const orderedVerses = useMemo(
@@ -924,6 +1029,11 @@ export const VerseDetailContent = () => {
 
     if (enteredBesorahFromTanaj) {
       void (async () => {
+        const hasSeenHutterAnnouncement = await loadHutterAnnouncementSeen();
+        if (!hasSeenHutterAnnouncement) {
+          return;
+        }
+
         const shownCount = await loadBesorahDisclaimerCount();
         if (shownCount >= 3) {
           return;
@@ -974,6 +1084,9 @@ export const VerseDetailContent = () => {
   const handleWordPress = useCallback(
     (word: typeof selectedWord, verseIdForWord: string) => {
       if (!word) return;
+      if (isBesorah && besorahTextVersion === "hutter" && !word.strong) {
+        return;
+      }
 
       const isSameWord =
         selectedWordVerseId === verseIdForWord &&
@@ -998,7 +1111,7 @@ export const VerseDetailContent = () => {
         sheetRef.current.snapToIndex(0);
       }
     },
-    [selectedWord, selectedWordVerseId],
+    [besorahTextVersion, isBesorah, selectedWord, selectedWordVerseId],
   );
 
   // Open the word analysis sheet whenever a word is selected
@@ -1207,6 +1320,7 @@ export const VerseDetailContent = () => {
     language: "en" as AppState["language"],
     showQumran: false,
     translationOnly: false,
+    besorahTextVersion: "delitzsch" as AppState["besorahTextVersion"],
     isConnected: true,
   });
   useEffect(() => {
@@ -1217,6 +1331,7 @@ export const VerseDetailContent = () => {
       currentLoadRef.current.language === language &&
       currentLoadRef.current.showQumran === showQumran &&
       currentLoadRef.current.translationOnly === translationOnly &&
+      currentLoadRef.current.besorahTextVersion === besorahTextVersion &&
       currentLoadRef.current.isConnected === isConnected
     ) {
       return;
@@ -1229,6 +1344,7 @@ export const VerseDetailContent = () => {
       language,
       showQumran,
       translationOnly,
+      besorahTextVersion,
       isConnected,
     };
 
@@ -1257,6 +1373,7 @@ export const VerseDetailContent = () => {
           hebrewOnly: hideTranslations,
           isConnected,
           referenceMode: translationOnly ? "translation" : "source",
+          besorahTextVersion,
         });
         if (!isMounted) return;
         if (
@@ -1265,6 +1382,7 @@ export const VerseDetailContent = () => {
           currentLoadRef.current.language !== language ||
           currentLoadRef.current.showQumran !== showQumran ||
           currentLoadRef.current.translationOnly !== translationOnly ||
+          currentLoadRef.current.besorahTextVersion !== besorahTextVersion ||
           currentLoadRef.current.isConnected !== isConnected
         ) {
           return;
@@ -1302,7 +1420,16 @@ export const VerseDetailContent = () => {
     return () => {
       isMounted = false;
     };
-  }, [bookId, chapter, language, showQumran, translationOnly, isConnected, t]);
+  }, [
+    besorahTextVersion,
+    bookId,
+    chapter,
+    language,
+    showQumran,
+    translationOnly,
+    isConnected,
+    t,
+  ]);
 
   return (
     <>
@@ -1493,6 +1620,40 @@ export const VerseDetailContent = () => {
         currentChapterVerseNumbers={orderedVerses.map((item) => item.verse)}
         onSelectVerse={handleNavigationSelect}
       />
+      <Modal
+        animationType="fade"
+        transparent
+        visible={showHutterAnnouncement}
+        onRequestClose={dismissHutterAnnouncement}
+      >
+        <View style={styles.hutterAnnouncementOverlay}>
+          <View style={styles.hutterAnnouncementCard}>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={t("verse.hutterAnnouncement.close")}
+              onPress={dismissHutterAnnouncement}
+              style={styles.hutterAnnouncementClose}
+            >
+              <Text style={styles.hutterAnnouncementCloseText}>×</Text>
+            </Pressable>
+            <Text style={styles.hutterAnnouncementTitle}>
+              {t("verse.hutterAnnouncement.title")}
+            </Text>
+            <Text style={styles.hutterAnnouncementMessage}>
+              {t("verse.hutterAnnouncement.message")}
+            </Text>
+            <Pressable
+              accessibilityRole="button"
+              onPress={activateHutter}
+              style={styles.hutterAnnouncementButton}
+            >
+              <Text style={styles.hutterAnnouncementButtonText}>
+                {t("verse.hutterAnnouncement.activate")}
+              </Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
       <Modal
         animationType="fade"
         transparent

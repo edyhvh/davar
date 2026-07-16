@@ -299,6 +299,126 @@ const generateHebrewChapters = async (
   };
 };
 
+type HutterVerse = {
+  number?: number;
+  text_nikud?: string;
+};
+
+type HutterChapter = {
+  number?: number;
+  verses?: HutterVerse[];
+};
+
+type HutterBook = {
+  chapters?: HutterChapter[];
+};
+
+type HutterMappedWord = {
+  text?: string;
+  translit_en?: string;
+  translit_es?: string;
+  strong?: string;
+  prefixes?: string[];
+};
+
+type HutterMappedVerse = {
+  chapter?: number;
+  verse?: number;
+  hebrew?: string;
+  words?: HutterMappedWord[];
+};
+
+type HutterMappedChapter = {
+  chapter?: number;
+  verses?: HutterMappedVerse[];
+};
+
+type HutterMappingBook = {
+  chapters?: HutterMappedChapter[];
+};
+
+const generateHutterChapters = async (): Promise<{
+  books: Record<string, { chapters: Record<string, JsonValue> }>;
+}> => {
+  const sourceDir = join(DATA_ROOT, "hutter", "staging", "output");
+  const mappingsDir = join(DATA_ROOT, "hutter", "strong_mappings");
+  const outDir = join(WEB_PUBLIC_DATA_ROOT, "hutter");
+  const files = await listJsonFiles(sourceDir);
+  const books: Record<string, { chapters: Record<string, JsonValue> }> = {};
+
+  for (const file of files) {
+    const sourceBookId = file.replace(/\.json$/i, "").toLowerCase();
+    const canonical = DELITZSCH_TO_ENGLISH[sourceBookId];
+    if (!canonical) {
+      continue;
+    }
+
+    const bookId = canonical.toLowerCase();
+    const data = await readJson<HutterBook>(join(sourceDir, file));
+    const mapping = await readJson<HutterMappingBook>(
+      join(mappingsDir, file),
+    );
+    const chapters: Record<string, JsonValue> = {};
+
+    const sourceChapterNumbers = new Set(
+      (data.chapters ?? []).map((chapter) => Number(chapter.number)),
+    );
+
+    for (const chapter of mapping.chapters ?? []) {
+      const chapterNumber = Number(chapter.chapter);
+      if (!Number.isFinite(chapterNumber) || chapterNumber <= 0) {
+        continue;
+      }
+      if (!sourceChapterNumbers.has(chapterNumber)) {
+        throw new Error(
+          `Hutter mapping chapter ${sourceBookId} ${chapterNumber} is not present in the source text`,
+        );
+      }
+
+      const verses = (chapter.verses ?? [])
+        .map((verse) => {
+          const verseNumber = Number(verse.verse);
+          const hebrew = verse.hebrew?.trim() ?? "";
+          if (!Number.isFinite(verseNumber) || verseNumber <= 0 || !hebrew) {
+            return null;
+          }
+
+          return {
+            chapter: chapterNumber,
+            verse: verseNumber,
+            hebrew,
+            words: (verse.words ?? [])
+              .filter((word) => Boolean(word.text?.trim()))
+              .map((word) => ({
+                text: word.text!.trim(),
+                ...(word.translit_en
+                  ? { translit_en: word.translit_en }
+                  : {}),
+                ...(word.translit_es
+                  ? { translit_es: word.translit_es }
+                  : {}),
+                ...(word.strong ? { strong: word.strong } : {}),
+                prefixes: word.prefixes ?? [],
+              })),
+          };
+        })
+        .filter((verse): verse is NonNullable<typeof verse> => verse !== null);
+
+      chapters[String(chapterNumber)] = verses as unknown as JsonValue;
+      await mkdir(join(outDir, bookId), { recursive: true });
+      await writeFile(
+        join(outDir, bookId, `${chapterNumber}.json`),
+        JSON.stringify(verses),
+        "utf-8",
+      );
+    }
+
+    books[bookId] = { chapters };
+  }
+
+  return { books };
+};
+
 const generateDictionary = async (): Promise<{
   dictionaryBundle: JsonValue;
   prefixesById: JsonValue;
@@ -852,6 +972,7 @@ const main = async (): Promise<void> => {
     join(WEB_PUBLIC_DATA_ROOT, "besorah"),
     "delitzsch",
   );
+  const hutter = await generateHutterChapters();
 
   const tthBundle = await copyFolderJsonFiles(
     join(DATA_ROOT, "tth_2", "json"),
@@ -953,6 +1074,11 @@ const main = async (): Promise<void> => {
     JSON.stringify(besorah.bundle),
     "utf-8",
   );
+  await writeFile(
+    join(bundlesDir, "hutter.json"),
+    JSON.stringify({ books: hutter.books }),
+    "utf-8",
+  );
   await writeFile(join(bundlesDir, "tth.json"), JSON.stringify(tthBundle), "utf-8");
   const ts2009Bundle = shouldExportTs2009Static
     ? await generateTs2009Chapters()
@@ -991,6 +1117,10 @@ const main = async (): Promise<void> => {
       besorah: {
         size: getJsonSize(besorah.bundle),
         checksum: sha256OfJson(besorah.bundle),
+      },
+      hutter: {
+        size: getJsonSize({ books: hutter.books } as unknown as JsonValue),
+        checksum: sha256OfJson({ books: hutter.books } as unknown as JsonValue),
       },
       tth: {
         size: getJsonSize(tthBundle as unknown as JsonValue),

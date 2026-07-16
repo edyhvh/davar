@@ -1,0 +1,834 @@
+{
+  "book": "philippians",
+  "raw_result_count": 145,
+  "result_count": 104,
+  "batch_count": 30,
+  "status_counts": {
+    "ok": 104
+  },
+  "confidence_counts": {
+    "high": 7,
+    "low": 8,
+    "medium": 89
+  },
+  "needs_review_count": 85,
+  "likely_crop_issue_count": 18,
+  "likely_ocr_issue_count": 67,
+  "no_hebrew_marks_count": 0,
+  "empty_text_count": 0,
+  "usage": {
+    "input_tokens": 49684,
+    "output_tokens": 25362,
+    "total_tokens": 75046
+  },
+  "needs_review": [
+    {
+      "id": "philippians.1.1.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and some small marks are difficult to preserve confidently.",
+      "output_image": "data/hutter/verse_images/philippians/001_001_000002.png",
+      "hebrew_text": "פולוס וטימוטאוס עבדי ישוע המשיח לקדושים כלם שהם בישוע המשיח וההוים בפילפים עם־פקידים ומשרתים׃"
+    },
+    {
+      "id": "philippians.1.2.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud may be uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/001_002_000002.png",
+      "hebrew_text": "הַחֶסֶד לָכֶם וְשָׁלוֹם מֵאֱלֹהִים אָבִינוּ וַאֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.1.3.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is only partly clear.",
+      "output_image": "data/hutter/verse_images/philippians/001_003_000002.png",
+      "hebrew_text": "אוֹדֶה לֵאלֹהַי בְּכָל־זִכְרְכֶם׃"
+    },
+    {
+      "id": "philippians.1.4.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several vowel points and small marks are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/001_004_000002.png",
+      "hebrew_text": "תָּמִיד בְּכָל־הַתְּפִלּוֹתַי עַל־כֻּלְּכֶם בַּעֲשׂוֹתִי אֶת־תְּפִלָּתִי בְּשִׂמְחָה׃"
+    },
+    {
+      "id": "philippians.1.5.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is not fully clear in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/001_005_000002.png",
+      "hebrew_text": "עַל־חֶבְרַתְכֶם בִּבְשׂוֹרָה מִיּוֹם רִאשׁוֹן עַד־עָתָּה׃"
+    },
+    {
+      "id": "philippians.1.6.000002",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are small and uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/001_006_000002.png",
+      "hebrew_text": "בְּבִטְחָן אֲנִי עַל־זֹאת כִּי אֲשֶׁר הֵחֵל בָּכֶם אֶת־מַעֲשֵׂה הַטּוֹב הוּא גַּם יְכַלֶּה עַד־יוֹם יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.1.7.000004",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words/points are unclear in the crop; transcription may contain errors.",
+      "output_image": "data/hutter/verse_images/philippians/001_007_000004.png",
+      "hebrew_text": "אֲכָכָה שָׁוֶה לִי לְחָשֹׁב אֶת־זֹאת עַל־כֻּלְּכֶם עַל־כִּי־הִנְּכֶם אַתֶּם בִּלְבָבִי גַּם בְּמַאֲסוּרַי גַּם בְּדִבְרֵי־אֹדוֹתַי וּבְעַצְמַת הַבְּשׂוֹרָה חֶבְרֵי חֶנָּתִי כֻּלְּכֶם׃"
+    },
+    {
+      "id": "philippians.1.8.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partially uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/001_008_000004.png",
+      "hebrew_text": "וְעֵדִי הוּא הָאֱלֹהִים אֵיכָכָה מִתְאַוֶּה אֲנִי אֶת־כֻּלְּכֶם בְּרַחֲמֵי יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.1.9.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and one word are not fully clear.",
+      "output_image": "data/hutter/verse_images/philippians/001_009_000004.png",
+      "hebrew_text": "וְזֹאת מִתְפַּלֵּל אֲנִי אֲשֶׁר אַהֲבַתְכֶם עוֹד יוֹתֵר וְעַל־יוֹתֵר תּוֹתִיר בְּדַעַת וּבְכָל־תְּבוּנָה׃"
+    },
+    {
+      "id": "philippians.1.10.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/cantillation-like marks are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/philippians/001_010_000004.png",
+      "hebrew_text": "לִבְחֹן אֶת־הַמּוֹעִילִים אֲשֶׁר תִּהְיוּ תְמִימִים וּבְלִי־דֹפִי בְּיוֹם הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.1.11.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are hard to distinguish.",
+      "output_image": "data/hutter/verse_images/philippians/001_011_000004.png",
+      "hebrew_text": "מְמֻלָאִים בְּמַעֲשֵׂי הַצְּדָקָה בְּיֵשׁוּעַ הַמָּשִׁיחַ לִכְבוֹד וּתְהִלַּת אֱלֹהִים׃"
+    },
+    {
+      "id": "philippians.1.12.000004",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words/points are uncertain in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/001_012_000004.png",
+      "hebrew_text": "מִיהַךְ אֲשֶׁר הוֹדַע אַחַי כִּי הַאֵלֶּה אֲשֶׁר אֹתִי יוֹתֵר לְצַעַד הַבְּשׂוֹרָה בָּא׃"
+    },
+    {
+      "id": "philippians.1.13.000004",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and exact form of a few words are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/001_013_000004.png",
+      "hebrew_text": "כִּי אֲשֶׁר אֲסוּרַי בַּמָּשִׁיחַ נוֹדְעוּ בְּכָל בֵּית דִּין וּבַאֲחֵרִים כֻּלָּם׃"
+    },
+    {
+      "id": "philippians.1.14.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and one word-form are not fully certain.",
+      "output_image": "data/hutter/verse_images/philippians/001_014_000006.png",
+      "hebrew_text": "וַאֲשֶׁר רַבִּים מִן הָאַחִים בַּאֲדֹנֵינוּ יִבְטְחוּ בַּאֲסוּרַי אֲשֶׁר מְלֵאִים לִבָּם בְּכָל יִרְאָה לְדַבֵּר אֶת־הַדָּבָר׃"
+    },
+    {
+      "id": "philippians.1.15.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partly faint; transcription of וַאֲנָשִׁים/גַּם uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/001_015_000006.png",
+      "hebrew_text": "אֲנָשִׁים בְּשִׂנְאָה וּבְמַרִיבָה וַאֲנָשִׁים גַּם בְּטוֹב קוֹרְאִים אֶת־הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.1.16.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/word division is uncertain; apparent line break around עַל־.",
+      "output_image": "data/hutter/verse_images/philippians/001_016_000006.png",
+      "hebrew_text": "וַאֲשֶׁר בִּמְרִיבָה מַבְּשְׂרִים אֶת־הַמָּשִׁיחַ לֹא בְתֹם וָיֹשֶׁר כִּי־אִם חֹשְׁבִים לְהַגְדִּילִי וּלְהִתְנַפֵּל עַל־וּלְהוֹסִיף צָרָה וּמְצוּקָה עַל־אֲסוּרָי"
+    },
+    {
+      "id": "philippians.1.17.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partly uncertain due to image resolution.",
+      "output_image": "data/hutter/verse_images/philippians/001_017_000006.png",
+      "hebrew_text": "אֵלֶּה הֵם אֲשֶׁר מֵאַהֲבָה יוֹדְעִים כִּי־עַל־דְּבַר הַבְּשׂוֹרָה עוֹמֵד אָנֹכִי"
+    },
+    {
+      "id": "philippians.1.18.000006",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and vocalization marks are difficult to distinguish; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/001_018_000006.png",
+      "hebrew_text": "וּמָה הַנִּשְׁלָח וּבְכֹל אֹפֶן בֵּין אִם בְּעֲלִילוֹת וְאִם בֶּאֱמֶת בִּרְשׁוּת הַמָּשִׁיחַ גַּם כֵּן שׂוֹמֵחַ אָנֹכִי וְאֶשְׂמָח"
+    },
+    {
+      "id": "philippians.1.19.000006",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Initial phrase and pointing are somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/001_019_000006.png",
+      "hebrew_text": "כִּי־יָדַעְתִּי כִּי וְאַתֶּם הִיא תִּהְיֶה לִי לִישׁוּעָתִי בִּתְפִלַּתְכֶם וּבְמַתַּת רוּחַ יֵשׁוּעַ הַמָּשִׁיחַ"
+    },
+    {
+      "id": "philippians.1.20.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge slightly cut; some vowel marks are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/001_020_000008.png",
+      "hebrew_text": "כְּמִתְנַתִּי וּשְׂבָרִי כִּי לֹא אֵבוֹשָׁה בְּכָל־דָּבָר כִּי־אִם בְּכָל־בִּטָּחוֹן כְּמוֹ תָמִיד כֹּה גַּם עַתָּה יִתְגַּדֵּל הַמָּשִׁיחַ בִּבְשָׂרִי אִם בְּחַיִּים וְאִם בַּמָּוֶת׃"
+    },
+    {
+      "id": "philippians.1.21.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and final word form are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/001_021_000008.png",
+      "hebrew_text": "כִּי־חַיּוּתִי הַמָּשִׁיחַ הוּא וּמוּתִי בִּצְעִי וְתַרְבִּיתִי׃"
+    },
+    {
+      "id": "philippians.1.22.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to verify exactly from the crop.",
+      "output_image": "data/hutter/verse_images/philippians/001_022_000008.png",
+      "hebrew_text": "וְכִי חֲיוֹתִי בַּבָּשָׂר יִשְׁפֵּר הַמַּעֲשֶׂה אֲשֶׁר לִי לָכֵן אֵינֶנִּי יוֹדֵעַ מָה אֶבְחַר׃"
+    },
+    {
+      "id": "philippians.1.23.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several pointed forms and one word are uncertain due to print quality.",
+      "output_image": "data/hutter/verse_images/philippians/001_023_000008.png",
+      "hebrew_text": "כִּי הֻצַּקְתִּי שְׁתֵּיהֶן בְּתַאֲוָתִי לִנְסֹעַ וְלִהְיוֹת אֶת־הַמָּשִׁיחַ וְזֹאת יוֹתֵר וְעַל־יֶתֶר הוֹעִיל לְנַפְשִׁי׃"
+    },
+    {
+      "id": "philippians.1.24.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is not fully certain.",
+      "output_image": "data/hutter/verse_images/philippians/001_024_000008.png",
+      "hebrew_text": "אַךְ לַעֲמוֹד בְּבָשָׂר צָרִיךְ בַּעֲבֻרְכֶם׃"
+    },
+    {
+      "id": "philippians.1.25.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words/pointing are uncertain from the crop.",
+      "output_image": "data/hutter/verse_images/philippians/001_025_000008.png",
+      "hebrew_text": "וְזֹאת בָּטוּחַ אֲנִי יוֹדֵעַ כִּי אוֹסִיף לָכֶם וְלָעֲמוֹד לְכֻלְּכֶם לְצַעֲדְכֶם וּלְשִׂמְחַת הָאֱמוּנָה׃"
+    },
+    {
+      "id": "philippians.1.26.000008",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "First line and pointing are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/philippians/001_026_000008.png",
+      "hebrew_text": "לְמַעַן הֲלֻלְכֶם הוֹתִיר בִּישׁוּעַ הַמָּשִׁיחַ בִּי בְּהוֹסִיפִי לָבוֹא אֲלֵיכֶם׃"
+    },
+    {
+      "id": "philippians.1.27.000010",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words and vowel points are uncertain due to blur and print quality.",
+      "output_image": "data/hutter/verse_images/philippians/001_027_000010.png",
+      "hebrew_text": "אַךְ לְבַדְּכֶם בְּהַגָּנָה בְּשׂוֹרַת הַמָּשִׁיחַ הִתְהַלְּכוּ אֲשֶׁר אִם־אָבוֹא וְאֶרְאֶה אֶתְכֶם אוֹ־אִם אֶחֱזַק מִכֶּם אֶשְׁמַע עֲלֵיכֶם כִּי עוֹמְדִים אַתֶּם בְּרוּחַ אַחַת וּבְנֶפֶשׁ אַחַת עוֹזְרֵי בֶּאֱמוּנַת הַבְּשׂוֹרָה׃"
+    },
+    {
+      "id": "philippians.1.28.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one or two consonants are not fully clear.",
+      "output_image": "data/hutter/verse_images/philippians/001_028_000010.png",
+      "hebrew_text": "וְאַל־יָבוֹא לְבַבְכֶם פַּחַד־דָּבָר עַל־מְקוֹמְמֵיכֶם כִּי אֲשֶׁר לָהֶם לְאוֹת הָאֲבָדָה הִיא לָכֶם לִישׁוּעָה וְזֹאת הִיא מֵאֱלֹהִים׃"
+    },
+    {
+      "id": "philippians.1.29.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final phrase and vocalization are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/philippians/001_029_000010.png",
+      "hebrew_text": "כִּי לָכֶם הוּא לֹא־לְבַד לְהַאֲמִין בּוֹ כִּי־אִם גַּם לִסְבֹּל וְלַעֲנוֹת עָלָיו׃"
+    },
+    {
+      "id": "philippians.1.30.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/philippians/001_030_000010.png",
+      "hebrew_text": "וְלִהְיוֹת לָכֶם מָדוֹן כְּמוֹ אֲשֶׁר רְאִיתֶם בִּי וְעַתָּה שְׁמַעְתֶּם עָלַי׃"
+    },
+    {
+      "id": "philippians.2.1.000010",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and small marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/002_001_000010.png",
+      "hebrew_text": "וְאִם יֶשׁ־בָכֶם נֶחָמָה אַחַת בְּמָשִׁיחַ אֹו הִתְחַמְּמוּת בְּאַהֲבָה אַחַת חֶבְרַת הָרוּחַ אֹו חֶסֶד אֹו רַחֲמִים"
+    },
+    {
+      "id": "philippians.2.2.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/002_002_000012.png",
+      "hebrew_text": "ומלאו את־שמחתי להיותכם יחד להיות לכם אהבה אחת בלב אחד מבינים אחת׃"
+    },
+    {
+      "id": "philippians.2.3.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/cantillation-like marks are not fully preserved; one word near the end is somewhat uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/002_003_000012.png",
+      "hebrew_text": "ומאומה לא במריבה או בגאות כי־אם בשפלה הרוח איש איש יחשב בלבו כי צעיר וקטון הוא מרעהו׃"
+    },
+    {
+      "id": "philippians.2.4.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing/cantillation-like marks are visible but not fully preserved.",
+      "output_image": "data/hutter/verse_images/philippians/002_004_000012.png",
+      "hebrew_text": "איש איש אל־יבקש אחד־אשר יועיל לנפשו כי־אם אחד־אשר יועיל לרעהו׃"
+    },
+    {
+      "id": "philippians.2.5.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Short crop; pointing/cantillation-like marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/philippians/002_005_000012.png",
+      "hebrew_text": "וזאת הכינו ביניכם אשר היא בישוע המשיח׃"
+    },
+    {
+      "id": "philippians.2.6.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel/cantillation-like marks are unclear and not fully preserved.",
+      "output_image": "data/hutter/verse_images/philippians/002_006_000012.png",
+      "hebrew_text": "אשר אף כי בדמות אלהים הוא אל לא חשב לגזול לו להיותו שוה לאלהים׃"
+    },
+    {
+      "id": "philippians.2.7.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/002_007_000012.png",
+      "hebrew_text": "כִּי־אִם הִשְׁפִּיל אֶת־נַפְשׁוֹ וְתוֹרַת הָעֶבֶד לָקַח לוֹ וּבִדְמוּת הָאָדָם הָיָה וּבְצַלְמוֹ נִמְצָא כָּאָדָם׃"
+    },
+    {
+      "id": "philippians.2.8.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word and some vowel points are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/002_008_000012.png",
+      "hebrew_text": "הִשְׁפִּיל אֶת נַפְשׁוֹ וַיְהִי נִשְׁמָע עַד־הַמָּוֶת גַּם עַד־מִיתַת לְבוּנָה׃"
+    },
+    {
+      "id": "philippians.2.9.000012",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and exact printed forms are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/002_009_000012.png",
+      "hebrew_text": "עַל־כֵּן גַּם אֱלֹהִים הֵרִים וְנִשָּׂא הַגְבִּיהַ אוֹתוֹ וַיִּתֵּן לוֹ שֵׁם אֲשֶׁר עַל־כָּל־שֵׁם׃"
+    },
+    {
+      "id": "philippians.2.10.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Niqqud and a few letters/marks are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/philippians/002_010_000014.png",
+      "hebrew_text": "לְמַעַן בְּשֵׁם יֵשׁוּעַ הַכֶּרַע כָּל־בֶּרֶךְ אֲשֶׁר בַּשָּׁמַיִם בָּאָרֶץ וּמִמַּתָּה לָאָרֶץ׃"
+    },
+    {
+      "id": "philippians.2.13.000014",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and the word after את are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/002_013_000014.png",
+      "hebrew_text": "כִּי־אֱלֹהִים הוּא הַפֹּעֵל בָּנוּ אֶת־לַחְפֹּץ וְלַכְּלוֹת כִּרְצוֹנוֹ׃"
+    },
+    {
+      "id": "philippians.2.17.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/philippians/002_017_000016.png",
+      "hebrew_text": "וְאִם כִּי־אֶזָּבַח עַל־זֶבַח וַעֲבֹדַת אֱמוּנַתְכֶם אֶשְׂמַח וְחָדִיתִי עַל־כֻּלְּכֶם׃"
+    },
+    {
+      "id": "philippians.2.18.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/002_018_000016.png",
+      "hebrew_text": "וְעַל־דָּבָר הַזֶּה גַּם אַתֶּם תִּשְׂמְחוּ וְחִדִּיתֶם עָלַי׃"
+    },
+    {
+      "id": "philippians.2.19.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Personal name and several points are somewhat unclear.",
+      "output_image": "data/hutter/verse_images/philippians/002_019_000016.png",
+      "hebrew_text": "וּמְשַׁבֵּר אֲנִי בַּאֲדֹנֵינוּ יֵשׁוּעַ לִשְׁלֹחַ אֲלֵיכֶם בִּמְהֵרָה אֶת טִימוֹתֵאוֹס אֲשֶׁר גַּם אֲנִי אֶרְוַח בְּדַעְתִּי אֶת־דִּבְרֵיכֶם׃"
+    },
+    {
+      "id": "philippians.2.20.000016",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some wording/pointing is difficult to confirm due to blur.",
+      "output_image": "data/hutter/verse_images/philippians/002_020_000016.png",
+      "hebrew_text": "כִּי־אִישׁ לֹא אֶחָד יֵשׁ־לִי בְּנַפְשִׁי כָּמֹהוּ אֲשֶׁר כָּכֶם לֵבָב יִדְאַג עֲלֵיכֶם׃"
+    },
+    {
+      "id": "philippians.2.22.000016",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Some pointed letters are blurry; first phrase uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/002_022_000016.png",
+      "hebrew_text": "וְאֶת־שִׂכְלוֹ הַתְּבוּנִי יְדַעְתֶּם כִּי כַּאֲשֶׁר בֵּן לְאָבִיו כָּכָה עָבַד עִמִּי בַּבְּשׂוֹרָה׃"
+    },
+    {
+      "id": "philippians.2.23.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some letters/points near the end are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/002_023_000018.png",
+      "hebrew_text": "וְאוֹתוֹ מְשַׁבֵּר אֲנִי לִשְׁלֹחַ אֲלֵיכֶם כִּרְאוֹתִי אֵיךְ יִפְּלוּ דְבָרַי פִּתְאֹם׃"
+    },
+    {
+      "id": "philippians.2.24.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Divine name/pointing and some marks are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/002_024_000018.png",
+      "hebrew_text": "וּבָטַחְתִּי בַיהוָה כִּי־גַם אֲנִי בִּמְהֵרָה אָבוֹא אֲלֵיכֶם׃"
+    },
+    {
+      "id": "philippians.2.25.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and one word near the lower line are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/philippians/002_025_000018.png",
+      "hebrew_text": "וַחֲשַׁבְתִּי כִּי צָרִיךְ הוּא אַחִי אֶפַּפְרוֹדִיטוֹס שֶׁהוּא אַחִי עוֹזֵרִי וְחַבְרִי וּבַעַל בְּרִית מִלְחַמְתִּי וּמְלַאכְכֶם וּמְשָׁרֵת צָרְכִּי לִשְׁלוֹחַ אֲלֵיכֶם׃"
+    },
+    {
+      "id": "philippians.2.26.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing is partly unclear.",
+      "output_image": "data/hutter/verse_images/philippians/002_026_000018.png",
+      "hebrew_text": "בַּאֲשֶׁר מִתְאַוֶּה הָיָה אַחַר־כֻּלְּכֶם וַיֵּדַע עַל־כִּי־שְׁמַעְתֶּם כִּי־חָלָה הוּא׃"
+    },
+    {
+      "id": "philippians.2.27.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud/cantillation-like marks are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/002_027_000018.png",
+      "hebrew_text": "כִּי־חָלָה כִּמְעַט לָמֻת כִּי־אִם אֱלֹהִים חָנּוּ אַךְ לֹא אֹתוֹ לְבַדּוֹ כִּי־גַם אֹתִי פֶּן הָיָה־לִי יָגוֹן עַל־יְגוֹן׃"
+    },
+    {
+      "id": "philippians.2.28.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and exact spelling of the final phrase are slightly unclear.",
+      "output_image": "data/hutter/verse_images/philippians/002_028_000018.png",
+      "hebrew_text": "עַל כֵּן שִׁלַּחְתִּיו בִּמְהֵרָה אֲשֶׁר אִם תִּרְאֻהוּ יוֹסִיפוּ לִשְׂמֹחַ וְלִהְיוֹתִי בְּלִי־דְאָגָה׃"
+    },
+    {
+      "id": "philippians.2.29.000018",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowel points and the divine-name pointing are difficult to confirm.",
+      "output_image": "data/hutter/verse_images/philippians/002_029_000018.png",
+      "hebrew_text": "לָכֵן קַבְּלֻהוּ בַיהוָה עִם כָּל־שִׂמְחָה וְאֵלֶּה אֲשֶׁר כָּמֹהוּ יְקָרִים יִהְיוּ בְּעֵינֵיכֶם׃"
+    },
+    {
+      "id": "philippians.2.30.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and the final words are partly uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/philippians/002_030_000020.png",
+      "hebrew_text": "כִּי־בַעֲבוּר מַעֲשֵׂה הַמָּשִׁיחַ קָרַב עַד־הַמָּוֶת וְשָׂם נַפְשׁוֹ בְּיָדוֹ אֲשֶׁר יְמַלֵּא אֶת־מַחְסוֹרֵיכֶם בְּשָׁרֵת אֹתִי׃"
+    },
+    {
+      "id": "philippians.3.1.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and one word are uncertain due to blur.",
+      "output_image": "data/hutter/verse_images/philippians/003_001_000020.png",
+      "hebrew_text": "וְהַנִּשְׁאָר אַחַי שִׂמְחוּ בַּיהֹוָה אֶת־אַחַד לִכְתֹּב אֲלֵיכֶם אֵינֶנָּה וִיעָה לִי וְלָכֶם לְמַגֵּן׃"
+    },
+    {
+      "id": "philippians.3.3.000020",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several niqqud marks and exact divine-name wording are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/003_003_000020.png",
+      "hebrew_text": "כִּי־אֲנַחְנוּ הֵם הַמִּילָה אֲשֶׁר בָּרוּחַ עוֹבְדִים אֱלֹהֵינוּ לַיהֹוָה וּמִתְהַלְּלִים בְּיֵשׁוּעַ הַמָּשִׁיחַ וְלֹא בּוֹטְחִים עַל־הַבָּשָׂר׃"
+    },
+    {
+      "id": "philippians.3.6.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing is small/blurred.",
+      "output_image": "data/hutter/verse_images/philippians/003_006_000022.png",
+      "hebrew_text": "בְּקִנְאָת הוֹדֵף הָעֵדָה בְּצֶדֶקָה אֲשֶׁר בְּתוֹרָה הִיא הָיִיתִי תָמִים׃"
+    },
+    {
+      "id": "philippians.3.7.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one word ending are not fully clear.",
+      "output_image": "data/hutter/verse_images/philippians/003_007_000022.png",
+      "hebrew_text": "אַךְ הָאֵלֶּה אֲשֶׁר הָיוּ לִי לְיִתְרוֹן אוֹתָם חָשַׁבְתִּי בַּעֲבוּר הַמָּשִׁיחַ לְחֶסְרוֹן וּלְעֹנֶשׁ׃"
+    },
+    {
+      "id": "philippians.3.8.000022",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Several words/points are difficult to distinguish in the image.",
+      "output_image": "data/hutter/verse_images/philippians/003_008_000022.png",
+      "hebrew_text": "וְגַם אֶת־כָּל־דְּבָרִים חָשַׁבְתִּי לִהְיוֹת לְחֶסְרוֹן וּלְעֹנֶשׁ בַּעֲבוּר יֶתֶר דַּעַת יֵשׁוּעַ הַמָּשִׁיחַ אֲדֹנֵינוּ אֲשֶׁר עָלָיו נָעַשְׂתִּי כָּל־דְּבָרִים וְחֹשֵׁב אֲנִי לִזְבָלִים לִמַעַן לִבְצֹעַ אֶת הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.3.9.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud is blurred.",
+      "output_image": "data/hutter/verse_images/philippians/003_009_000022.png",
+      "hebrew_text": "וְאֶמָּצֵא בוֹ בְּלֹא הֱיוֹת לִי הַצְּדָקָה אֲשֶׁר מִתּוֹרָה הִיא כִּי אִם בֶּאֱמוּנַת הַמָּשִׁיחַ הַצְּדָקָה אֲשֶׁר מֵאֱלֹהִים בֶּאֱמוּנָה׃"
+    },
+    {
+      "id": "philippians.3.10.000022",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "First word and some pointing are slightly unclear.",
+      "output_image": "data/hutter/verse_images/philippians/003_010_000022.png",
+      "hebrew_text": "לָדַעַתִי וְאֶת גְּבוּרַת הֲקָמָתוֹ וְאֶת חֶבְרַת מְרוּרָיו לְהִדָּמוֹת לְמוֹתוֹ׃"
+    },
+    {
+      "id": "philippians.3.12.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/003_012_000024.png",
+      "hebrew_text": "לֹא כִּי מֵעַתָּה לָקַחְתִּי אוֹ כִּי־תָּם שָׁלֵם אָנֹכִי אַךְ רוֹדֵף אֲנִי אִם גַּם אֹתֹו אֵת־אֲשֶׁר בּוֹ נֶאֱחַזְתִּי מִיֵּשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.3.13.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some vowels and a few consonants are uncertain due to print quality.",
+      "output_image": "data/hutter/verse_images/philippians/003_013_000024.png",
+      "hebrew_text": "אַחַי אָנֹכִי חֹשֵׁב עַל־נַפְשִׁי כִּי־אֲחַזְתִּיהָ וְאַחַת יָדַעְתִּי כִּי אֲשֶׁר אַחֲרַי אֶשְׁכָּחַם וַאֲשֶׁר לְפָנַי פּוֹרֵשׂ אֲנִי אֶת־יָדַי אֲלֵיהֶם׃"
+    },
+    {
+      "id": "philippians.3.14.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and one or two words are not fully clear.",
+      "output_image": "data/hutter/verse_images/philippians/003_014_000024.png",
+      "hebrew_text": "וְלָזֹאת אָנֹכִי לַמַּטָּרָה רָץ לָקַחַת אֶת־עֲטֶרֶת הַכָּבוֹד וְנִצְחוֹן קְרִיאַת אֱלֹהִים מִמַּעַל בְּיֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.3.15.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge and pointing are partly unclear.",
+      "output_image": "data/hutter/verse_images/philippians/003_015_000024.png",
+      "hebrew_text": "וְכֻלָּנוּ אֲשֶׁר שְׁלֵמִים אֲנַחְנוּ נִהְיֶה נֹהֲגִים אִם מְאוּמָה אַחֶרֶת תַּחְשְׁבוּ וְאוֹתָהּ יְגַלֶּה אֱלֹהִים׃"
+    },
+    {
+      "id": "philippians.3.16.000024",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/letters are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/003_016_000024.png",
+      "hebrew_text": "לְכֹל אֲשֶׁר נַגִּיעַ לָלֶכֶת בְּמְסִלָּה אַחַת וּלְהָכֶם יַחַד׃"
+    },
+    {
+      "id": "philippians.3.17.000024",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Text and pointing are partly unclear; transcription uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/003_017_000024.png",
+      "hebrew_text": "הֲדַמּוּ לִי הִמְשְׁלוּ אֵלַי אַחַי וּרְאוּ הַנֹּטִים וְהַבּוֹנִים אֱלֹהִים אֲשֶׁר כֵּן מִתְהַלְּכִים כַּאֲשֶׁר אֲנַחְנוּ הָיִינוּ לָכֶם לְצוּרָה׃"
+    },
+    {
+      "id": "philippians.3.18.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words/pointing are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/003_018_000026.png",
+      "hebrew_text": "כִּי רַבִּים מִתְהַלְּכִים אֲשֶׁר עֲלֵיהֶם רַבּוֹת אֲמַרְתִּי אֵלֵיכֶם וְעַתָּה גַּם בְּכָה אֹמַר אֲנִי וְאוֹיְבֵי צְלַב הַמָּשִׁיחַ הֵמָּה׃"
+    },
+    {
+      "id": "philippians.3.19.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few letters are difficult to verify.",
+      "output_image": "data/hutter/verse_images/philippians/003_019_000026.png",
+      "hebrew_text": "אֲשֶׁר סוֹפָם הָאֲבַדּוֹן וֵאלֹהֵיהֶם הַבֶּטֶן וּכְבוֹדָם לְבָשְׁתָּם אֲשֶׁר אֶת־דִּבְרֵי הָאָרֶץ וְהָעוֹלָם הַזֶּה יֶחְכָּמוּ׃"
+    },
+    {
+      "id": "philippians.3.20.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and final words are slightly unclear.",
+      "output_image": "data/hutter/verse_images/philippians/003_020_000026.png",
+      "hebrew_text": "כִּי־עִיר מוֹשָׁבֵנוּ בַּשָּׁמַיִם הִיא אֲשֶׁר מִשָּׁם נְקַוֶּה אֶת־מוֹשִׁיעֵנוּ וַאֲדֹנֵינוּ יֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.3.21.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks are difficult to distinguish clearly.",
+      "output_image": "data/hutter/verse_images/philippians/003_021_000026.png",
+      "hebrew_text": "אֲשֶׁר יַחֲלִיף אֶת־גְּוִיַּת עֲנוָתֵנוּ לִדְמוּת לִגְוִיַּת כְּבוֹדוֹ בְּכֹחַ הַגְּבוּרָה אֲשֶׁר יֻכַל לָשִׁית תַּחַת רַגְלָיו אֶת־כֹּל׃"
+    },
+    {
+      "id": "philippians.4.1.000026",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Several vowel/cantillation-like marks are small and uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/004_001_000026.png",
+      "hebrew_text": "עַל־כֵּן אַחַי אֲהוּבַי אַנְשֵׁי חֶמְדָּתִי שִׂמְחָתִי וַעֲטַרְתִּי כֹּה עִמְדוּ בַּיהוָה יְדִידַי׃"
+    },
+    {
+      "id": "philippians.4.2.000026",
+      "confidence": "low",
+      "has_hebrew_marks": true,
+      "notes": "Proper names and pointing are uncertain due to image quality.",
+      "output_image": "data/hutter/verse_images/philippians/004_002_000026.png",
+      "hebrew_text": "מֵאוֹהַדְיָא שׁוֹאֵל אָנֹכִי וּלְסוּנְטִיכָא מְתַחֲנֵן אָנֹכִי לָכֶם יַחַד בַּאֲדֹנֵנוּ׃"
+    },
+    {
+      "id": "philippians.4.3.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks and several letters are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/philippians/004_003_000028.png",
+      "hebrew_text": "גַּם שׁוֹאֵל אֲנִי מִמְּךָ הָאָחִי בַּעַל־בְּרִיתִי הַכֵּן־אֲמֵרִי עֲזֹרָה נָא אוֹתָם אֲשֶׁר בְּבַשּׂוֹרָה יָגְעוּ וְסַבְלוּ עִמִּי עִם־קְלִימֵיס וְעִם עוֹזְרַי הָאֲחֵרִים אֲשֶׁר שְׁמוֹתָם נִכְתְּבוּ בְּסֵפֶר הַחַיִּים׃"
+    },
+    {
+      "id": "philippians.4.6.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words/pointing are uncertain due to blur and print quality.",
+      "output_image": "data/hutter/verse_images/philippians/004_006_000028.png",
+      "hebrew_text": "אַל־תִּדְאָגוּ וְאַל תִּדְאגוּ בְּנַפְשְׁכֶם כִּי־אִם בְּכָל־הַתְּפִלָּה וּבְכָל־שְׁאֵלָה בְּתוֹדָה מִשְׁאֲלוֹת לִבְּכֶם הוֹדַעְנָה לִפְנֵי אֱלֹהִים׃"
+    },
+    {
+      "id": "philippians.4.7.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Pointing and a few letters are not fully clear in the image.",
+      "output_image": "data/hutter/verse_images/philippians/004_007_000028.png",
+      "hebrew_text": "וְשָׁלוֹם אֱלֹהִים אֲשֶׁר גָּבַהּ עַל־כָּל־שֵׂכֶל וּתְבוּנָה יִצֹּר אֶת לִבּוֹתֵיכֶם וּמַחְשְׁבוֹתֵיכֶם בְּיֵשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.4.8.000028",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing/cantillation-like marks and a few words are not fully clear in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/004_008_000028.png",
+      "hebrew_text": "וְהַנִּשְׁאָר אַחַי כָּל־אֲשֶׁר אֱמֶת אֲשֶׁר צְדָקָה אֲשֶׁר קְדוֹשִׁים דְּבָרִים אֲשֶׁר לְבָבָה אוֹ אִם־מַעֲשֶׂה חַיִל אוֹ־תְּהִלָּה אוֹתָם תַּחְשְׁבוּ"
+    },
+    {
+      "id": "philippians.4.10.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some niqqud and small marks are difficult to distinguish.",
+      "output_image": "data/hutter/verse_images/philippians/004_010_000030.png",
+      "hebrew_text": "וְשָׂמַחְתִּי בַּיהוָה מְאֹד מְאֹד כִּי בְעַתָּה הָיָה פְּרָחֲכֶם וְעָלֶה לְהָבִין עַל־דְּבָרַי אֲשֶׁר עָלָיו גַּם הֲבִינֹתֶם אַךְ חֶסְרָה לָכֶם הָעֵת"
+    },
+    {
+      "id": "philippians.4.11.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Final word and pointing are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/004_011_000030.png",
+      "hebrew_text": "לֹא כִּי־עַל הַחִסָּרוֹן אֹמֵר אָנֹכִי כִּי־אֲנִי לָמַדְתִּי אֵיכָה הָיָה אָנֹכִי לִהְיוֹת לְמַדִּי"
+    },
+    {
+      "id": "philippians.4.12.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some words and pointing are not fully certain.",
+      "output_image": "data/hutter/verse_images/philippians/004_012_000030.png",
+      "hebrew_text": "כִּי־יָדַעְתִּי לַעֲנוֹת וְלַחְסֹר יָדַעְתִּי גַּם לְהוֹתִיר בְּכָל־דְּבָרִים מְלֻמָּד לִשְׂבֹּעַ וְלִרְעֹב לְהוֹתִיר וְלַחְסֹר"
+    },
+    {
+      "id": "philippians.4.13.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Crop is partially tight; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/004_013_000030.png",
+      "hebrew_text": "אֶת־כָּל דְּבָרִים אוּכַל לְהָכִיל בַּאֲשֶׁר נֹתֵן לִי כֹחַ בַּמָּשִׁיחַ"
+    },
+    {
+      "id": "philippians.4.14.000030",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Left edge slightly cropped and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/004_014_000030.png",
+      "hebrew_text": "לָכֵן הֵיטַבְתֶּם לַעֲשׂוֹת כִּי הִתְחַבַּרְתֶּם עִם מְצוּקָתִי"
+    },
+    {
+      "id": "philippians.4.15.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Some pointing and one word near line break are uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/004_015_000032.png",
+      "hebrew_text": "וִידַעְתֶּם גַּם־אַתֶּם פִילִפִּים כִּי בְּרֵאשִׁית הַבְּשׂוֹרָה בַּאֲשֶׁר יָצָאתִי מִמָּקֵם עֵדָה לֹא אַחַת הִתְחַבְּרָה עִמִּי בִּדְבַר מַתָּה וּמַקָּח"
+    },
+    {
+      "id": "philippians.4.16.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "Top line partly cropped; transcription of opening phrase inferred from visible Hebrew.",
+      "output_image": "data/hutter/verse_images/philippians/004_016_000032.png",
+      "hebrew_text": "כִּי־גַם אַתֶּם לְבַדְכֶם בְּתַסְלוֹנִיקִי פַּעַם אַחַת וּשְׁתַּיִם לְצָרְכִי שְׁלַחְתֶּם"
+    },
+    {
+      "id": "philippians.4.18.000032",
+      "confidence": "medium",
+      "has_hebrew_marks": true,
+      "notes": "One phrase in the fourth line is difficult; possible duplication/reading uncertainty around ריח/לריח.",
+      "output_image": "data/hutter/verse_images/philippians/004_018_000032.png",
+      "hebrew_text": "לָקַחְתִּי אֶת־כָּל־דְּבַרִים וְגַם הוֹתַרְתִּי עַד־מְלֹאָה בְּקַחְתִּי מֵאֶפַּפְרוֹדִיטוֹס אֶת־אֲשֶׁר שְׁלַחְתֶּם לְרֵיחַ לְרִיחַ נִיחֹחַ לְזֶבַח נִרְצֶה וְיָשָׁר בְּעֵינֵי יְהוָה"
+    }
+  ],
+  "likely_crop_issues": [
+    {
+      "id": "philippians.1.5.000002",
+      "confidence": "medium",
+      "notes": "Pointing is not fully clear in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/001_005_000002.png",
+      "hebrew_text": "עַל־חֶבְרַתְכֶם בִּבְשׂוֹרָה מִיּוֹם רִאשׁוֹן עַד־עָתָּה׃"
+    },
+    {
+      "id": "philippians.1.7.000004",
+      "confidence": "low",
+      "notes": "Several words/points are unclear in the crop; transcription may contain errors.",
+      "output_image": "data/hutter/verse_images/philippians/001_007_000004.png",
+      "hebrew_text": "אֲכָכָה שָׁוֶה לִי לְחָשֹׁב אֶת־זֹאת עַל־כֻּלְּכֶם עַל־כִּי־הִנְּכֶם אַתֶּם בִּלְבָבִי גַּם בְּמַאֲסוּרַי גַּם בְּדִבְרֵי־אֹדוֹתַי וּבְעַצְמַת הַבְּשׂוֹרָה חֶבְרֵי חֶנָּתִי כֻּלְּכֶם׃"
+    },
+    {
+      "id": "philippians.1.12.000004",
+      "confidence": "low",
+      "notes": "Several words/points are uncertain in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/001_012_000004.png",
+      "hebrew_text": "מִיהַךְ אֲשֶׁר הוֹדַע אַחַי כִּי הַאֵלֶּה אֲשֶׁר אֹתִי יוֹתֵר לְצַעַד הַבְּשׂוֹרָה בָּא׃"
+    },
+    {
+      "id": "philippians.1.22.000008",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to verify exactly from the crop.",
+      "output_image": "data/hutter/verse_images/philippians/001_022_000008.png",
+      "hebrew_text": "וְכִי חֲיוֹתִי בַּבָּשָׂר יִשְׁפֵּר הַמַּעֲשֶׂה אֲשֶׁר לִי לָכֵן אֵינֶנִּי יוֹדֵעַ מָה אֶבְחַר׃"
+    },
+    {
+      "id": "philippians.1.25.000008",
+      "confidence": "medium",
+      "notes": "Some words/pointing are uncertain from the crop.",
+      "output_image": "data/hutter/verse_images/philippians/001_025_000008.png",
+      "hebrew_text": "וְזֹאת בָּטוּחַ אֲנִי יוֹדֵעַ כִּי אוֹסִיף לָכֶם וְלָעֲמוֹד לְכֻלְּכֶם לְצַעֲדְכֶם וּלְשִׂמְחַת הָאֱמוּנָה׃"
+    },
+    {
+      "id": "philippians.2.1.000010",
+      "confidence": "medium",
+      "notes": "Some pointing and small marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/002_001_000010.png",
+      "hebrew_text": "וְאִם יֶשׁ־בָכֶם נֶחָמָה אַחַת בְּמָשִׁיחַ אֹו הִתְחַמְּמוּת בְּאַהֲבָה אַחַת חֶבְרַת הָרוּחַ אֹו חֶסֶד אֹו רַחֲמִים"
+    },
+    {
+      "id": "philippians.2.2.000012",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation-like marks are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/002_002_000012.png",
+      "hebrew_text": "ומלאו את־שמחתי להיותכם יחד להיות לכם אהבה אחת בלב אחד מבינים אחת׃"
+    },
+    {
+      "id": "philippians.2.5.000012",
+      "confidence": "medium",
+      "notes": "Short crop; pointing/cantillation-like marks not fully preserved.",
+      "output_image": "data/hutter/verse_images/philippians/002_005_000012.png",
+      "hebrew_text": "וזאת הכינו ביניכם אשר היא בישוע המשיח׃"
+    },
+    {
+      "id": "philippians.2.7.000012",
+      "confidence": "medium",
+      "notes": "Some pointing/marks are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/002_007_000012.png",
+      "hebrew_text": "כִּי־אִם הִשְׁפִּיל אֶת־נַפְשׁוֹ וְתוֹרַת הָעֶבֶד לָקַח לוֹ וּבִדְמוּת הָאָדָם הָיָה וּבְצַלְמוֹ נִמְצָא כָּאָדָם׃"
+    },
+    {
+      "id": "philippians.2.17.000016",
+      "confidence": "medium",
+      "notes": "Some pointing is difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/philippians/002_017_000016.png",
+      "hebrew_text": "וְאִם כִּי־אֶזָּבַח עַל־זֶבַח וַעֲבֹדַת אֱמוּנַתְכֶם אֶשְׂמַח וְחָדִיתִי עַל־כֻּלְּכֶם׃"
+    },
+    {
+      "id": "philippians.2.25.000018",
+      "confidence": "medium",
+      "notes": "Some pointing and one word near the lower line are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/philippians/002_025_000018.png",
+      "hebrew_text": "וַחֲשַׁבְתִּי כִּי צָרִיךְ הוּא אַחִי אֶפַּפְרוֹדִיטוֹס שֶׁהוּא אַחִי עוֹזֵרִי וְחַבְרִי וּבַעַל בְּרִית מִלְחַמְתִּי וּמְלַאכְכֶם וּמְשָׁרֵת צָרְכִּי לִשְׁלוֹחַ אֲלֵיכֶם׃"
+    },
+    {
+      "id": "philippians.3.12.000024",
+      "confidence": "medium",
+      "notes": "Some pointing/letters are difficult to distinguish in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/003_012_000024.png",
+      "hebrew_text": "לֹא כִּי מֵעַתָּה לָקַחְתִּי אוֹ כִּי־תָּם שָׁלֵם אָנֹכִי אַךְ רוֹדֵף אֲנִי אִם גַּם אֹתֹו אֵת־אֲשֶׁר בּוֹ נֶאֱחַזְתִּי מִיֵּשׁוּעַ הַמָּשִׁיחַ׃"
+    },
+    {
+      "id": "philippians.3.16.000024",
+      "confidence": "medium",
+      "notes": "Some pointing/letters are unclear in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/003_016_000024.png",
+      "hebrew_text": "לְכֹל אֲשֶׁר נַגִּיעַ לָלֶכֶת בְּמְסִלָּה אַחַת וּלְהָכֶם יַחַד׃"
+    },
+    {
+      "id": "philippians.4.3.000028",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation-like marks and several letters are difficult to verify from the crop.",
+      "output_image": "data/hutter/verse_images/philippians/004_003_000028.png",
+      "hebrew_text": "גַּם שׁוֹאֵל אֲנִי מִמְּךָ הָאָחִי בַּעַל־בְּרִיתִי הַכֵּן־אֲמֵרִי עֲזֹרָה נָא אוֹתָם אֲשֶׁר בְּבַשּׂוֹרָה יָגְעוּ וְסַבְלוּ עִמִּי עִם־קְלִימֵיס וְעִם עוֹזְרַי הָאֲחֵרִים אֲשֶׁר שְׁמוֹתָם נִכְתְּבוּ בְּסֵפֶר הַחַיִּים׃"
+    },
+    {
+      "id": "philippians.4.8.000028",
+      "confidence": "medium",
+      "notes": "Some pointing/cantillation-like marks and a few words are not fully clear in the crop.",
+      "output_image": "data/hutter/verse_images/philippians/004_008_000028.png",
+      "hebrew_text": "וְהַנִּשְׁאָר אַחַי כָּל־אֲשֶׁר אֱמֶת אֲשֶׁר צְדָקָה אֲשֶׁר קְדוֹשִׁים דְּבָרִים אֲשֶׁר לְבָבָה אוֹ אִם־מַעֲשֶׂה חַיִל אוֹ־תְּהִלָּה אוֹתָם תַּחְשְׁבוּ"
+    },
+    {
+      "id": "philippians.4.13.000030",
+      "confidence": "medium",
+      "notes": "Crop is partially tight; pointing uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/004_013_000030.png",
+      "hebrew_text": "אֶת־כָּל דְּבָרִים אוּכַל לְהָכִיל בַּאֲשֶׁר נֹתֵן לִי כֹחַ בַּמָּשִׁיחַ"
+    },
+    {
+      "id": "philippians.4.14.000030",
+      "confidence": "medium",
+      "notes": "Left edge slightly cropped and pointing uncertain.",
+      "output_image": "data/hutter/verse_images/philippians/004_014_000030.png",
+      "hebrew_text": "לָכֵן הֵיטַבְתֶּם לַעֲשׂוֹת כִּי הִתְחַבַּרְתֶּם עִם מְצוּקָתִי"
+    },
+    {
+      "id": "philippians.4.16.000032",
+      "confidence": "medium",
+      "notes": "Top line partly cropped; transcription of opening phrase inferred from visible Hebrew.",
+      "output_image": "data/hutter/verse_images/philippians/004_016_000032.png",
+      "hebrew_text": "כִּי־גַם אַתֶּם לְבַדְכֶם בְּתַסְלוֹנִיקִי פַּעַם אַחַת וּשְׁתַּיִם לְצָרְכִי שְׁלַחְתֶּם"
+    }
+  ]
+}

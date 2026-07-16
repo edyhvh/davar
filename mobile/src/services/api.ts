@@ -3,6 +3,8 @@ import { NativeModules, Platform } from "react-native";
 
 const DEV_STATIC_DATA_BASE_URL = "http://127.0.0.1:3002/data";
 const PROD_STATIC_DATA_BASE_URL = "https://davar.bible/data";
+const DEV_TS2009_BASE_URL = "http://127.0.0.1:3002/api/ts2009";
+const PROD_TS2009_BASE_URL = "https://davar.bible/api/ts2009";
 
 const staticDataCache = new Map<string, unknown>();
 
@@ -148,6 +150,17 @@ const STATIC_DATA_BASE_CANDIDATES = buildStaticDataBaseCandidates();
 const STATIC_BUNDLES_BASE_CANDIDATES = buildStaticBundlesBaseCandidates(
   STATIC_DATA_BASE_CANDIDATES,
 );
+
+const buildTs2009BaseCandidates = (): string[] => {
+  const configuredBase = process.env.EXPO_PUBLIC_TS2009_BASE_URL?.trim();
+  return uniqueUrls([
+    ...(configuredBase ? expandAndroidLoopbackCandidates(configuredBase) : []),
+    ...(__DEV__ ? expandAndroidLoopbackCandidates(DEV_TS2009_BASE_URL) : []),
+    PROD_TS2009_BASE_URL,
+  ]);
+};
+
+const TS2009_BASE_CANDIDATES = buildTs2009BaseCandidates();
 
 let staticUrlDiagnosticsReported = false;
 
@@ -310,6 +323,54 @@ export const staticDataRequest = async <T>(
 
   throw new Error(
     `Static data request failed for ${normalizedPath} on all candidates: ${errors.join(" | ")}`,
+  );
+};
+
+export const ts2009Request = async <T>(relativePath: string): Promise<T> => {
+  const normalizedPath = relativePath.replace(/^\/+/, "");
+  const cacheKey = `ts2009:${normalizedPath}`;
+
+  if (staticDataCache.has(cacheKey)) {
+    return staticDataCache.get(cacheKey) as T;
+  }
+
+  const errors: string[] = [];
+
+  for (const baseUrl of TS2009_BASE_CANDIDATES) {
+    const requestUrl = `${baseUrl}/${encodeURIComponent(normalizedPath).replace(/%2F/g, "/")}`;
+    let response: Response;
+    try {
+      response = await fetchWithTimeout(requestUrl);
+    } catch (error) {
+      errors.push(
+        wrapFetchNetworkError(requestUrl, `TS2009 ${normalizedPath}`, error)
+          .message,
+      );
+      continue;
+    }
+
+    const contentType = response.headers.get("content-type") || "";
+    const payload = await response.text();
+
+    if (!response.ok) {
+      errors.push(
+        `TS2009 request failed for ${normalizedPath} with status ${response.status} (url: ${requestUrl}, preview: ${truncateForError(payload) || "[empty]"})`,
+      );
+      continue;
+    }
+
+    const parsed = parseStaticJsonPayload<T>(
+      payload,
+      requestUrl,
+      contentType,
+      `TS2009 ${normalizedPath}`,
+    );
+    staticDataCache.set(cacheKey, parsed as unknown);
+    return parsed;
+  }
+
+  throw new Error(
+    `TS2009 request failed for ${normalizedPath} on all candidates: ${errors.join(" | ")}`,
   );
 };
 

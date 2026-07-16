@@ -1,0 +1,697 @@
+{
+  "book_count": 26,
+  "totals": {
+    "manifest_verse_count": 6944,
+    "result_count": 6944,
+    "raw_result_count": 8678,
+    "retry_row_count": 1734,
+    "pending_count": 0,
+    "batch_count": 1620,
+    "needs_review_count": 5342,
+    "likely_crop_issue_count": 1292,
+    "likely_ocr_issue_count": 4050,
+    "no_hebrew_marks_count": 2,
+    "empty_text_count": 0,
+    "total_tokens": 5567295,
+    "input_tokens": 4098260,
+    "output_tokens": 1469035
+  },
+  "status_counts": {
+    "ok": 6944
+  },
+  "confidence_counts": {
+    "high": 251,
+    "low": 573,
+    "medium": 6120
+  },
+  "books": [
+    {
+      "book": "colossians",
+      "manifest_verse_count": 95,
+      "result_count": 95,
+      "raw_result_count": 107,
+      "retry_row_count": 12,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 16,
+      "needs_review_count": 90,
+      "likely_crop_issue_count": 33,
+      "likely_ocr_issue_count": 57,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 54503,
+      "input_tokens": 36337,
+      "output_tokens": 18166,
+      "status_counts": {
+        "ok": 95
+      },
+      "confidence_counts": {
+        "high": 3,
+        "low": 11,
+        "medium": 81
+      }
+    },
+    {
+      "book": "corinthians1",
+      "manifest_verse_count": 437,
+      "result_count": 437,
+      "raw_result_count": 693,
+      "retry_row_count": 256,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 140,
+      "needs_review_count": 264,
+      "likely_crop_issue_count": 64,
+      "likely_ocr_issue_count": 200,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 434112,
+      "input_tokens": 317611,
+      "output_tokens": 116501,
+      "status_counts": {
+        "ok": 437
+      },
+      "confidence_counts": {
+        "high": 27,
+        "low": 19,
+        "medium": 391
+      }
+    },
+    {
+      "book": "corinthians2",
+      "manifest_verse_count": 256,
+      "result_count": 256,
+      "raw_result_count": 377,
+      "retry_row_count": 121,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 77,
+      "needs_review_count": 197,
+      "likely_crop_issue_count": 62,
+      "likely_ocr_issue_count": 135,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 238062,
+      "input_tokens": 174681,
+      "output_tokens": 63381,
+      "status_counts": {
+        "ok": 256
+      },
+      "confidence_counts": {
+        "high": 7,
+        "low": 29,
+        "medium": 220
+      }
+    },
+    {
+      "book": "ephesians",
+      "manifest_verse_count": 155,
+      "result_count": 155,
+      "raw_result_count": 175,
+      "retry_row_count": 20,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 20,
+      "needs_review_count": 138,
+      "likely_crop_issue_count": 43,
+      "likely_ocr_issue_count": 95,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 82197,
+      "input_tokens": 52665,
+      "output_tokens": 29532,
+      "status_counts": {
+        "ok": 155
+      },
+      "confidence_counts": {
+        "high": 2,
+        "low": 40,
+        "medium": 113
+      }
+    },
+    {
+      "book": "galatians",
+      "manifest_verse_count": 149,
+      "result_count": 149,
+      "raw_result_count": 151,
+      "retry_row_count": 2,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 16,
+      "needs_review_count": 87,
+      "likely_crop_issue_count": 34,
+      "likely_ocr_issue_count": 53,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 73028,
+      "input_tokens": 48471,
+      "output_tokens": 24557,
+      "status_counts": {
+        "ok": 149
+      },
+      "confidence_counts": {
+        "high": 23,
+        "low": 15,
+        "medium": 111
+      }
+    },
+    {
+      "book": "hebrews",
+      "manifest_verse_count": 303,
+      "result_count": 303,
+      "raw_result_count": 308,
+      "retry_row_count": 5,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 62,
+      "needs_review_count": 251,
+      "likely_crop_issue_count": 99,
+      "likely_ocr_issue_count": 152,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 160931,
+      "input_tokens": 107785,
+      "output_tokens": 53146,
+      "status_counts": {
+        "ok": 303
+      },
+      "confidence_counts": {
+        "high": 11,
+        "low": 43,
+        "medium": 249
+      }
+    },
+    {
+      "book": "james",
+      "manifest_verse_count": 108,
+      "result_count": 108,
+      "raw_result_count": 108,
+      "retry_row_count": 0,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 11,
+      "needs_review_count": 93,
+      "likely_crop_issue_count": 34,
+      "likely_ocr_issue_count": 59,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 50927,
+      "input_tokens": 33043,
+      "output_tokens": 17884,
+      "status_counts": {
+        "ok": 108
+      },
+      "confidence_counts": {
+        "high": 4,
+        "low": 18,
+        "medium": 86
+      }
+    },
+    {
+      "book": "john",
+      "manifest_verse_count": 879,
+      "result_count": 879,
+      "raw_result_count": 1432,
+      "retry_row_count": 553,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 290,
+      "needs_review_count": 674,
+      "likely_crop_issue_count": 145,
+      "likely_ocr_issue_count": 529,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 903063,
+      "input_tokens": 664210,
+      "output_tokens": 238853,
+      "status_counts": {
+        "ok": 879
+      },
+      "confidence_counts": {
+        "high": 32,
+        "low": 35,
+        "medium": 812
+      }
+    },
+    {
+      "book": "john1",
+      "manifest_verse_count": 105,
+      "result_count": 105,
+      "raw_result_count": 150,
+      "retry_row_count": 45,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 31,
+      "needs_review_count": 95,
+      "likely_crop_issue_count": 24,
+      "likely_ocr_issue_count": 71,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 79749,
+      "input_tokens": 51886,
+      "output_tokens": 27863,
+      "status_counts": {
+        "ok": 105
+      },
+      "confidence_counts": {
+        "high": 2,
+        "low": 7,
+        "medium": 96
+      }
+    },
+    {
+      "book": "john2",
+      "manifest_verse_count": 13,
+      "result_count": 13,
+      "raw_result_count": 15,
+      "retry_row_count": 2,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 4,
+      "needs_review_count": 13,
+      "likely_crop_issue_count": 4,
+      "likely_ocr_issue_count": 9,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 8645,
+      "input_tokens": 5689,
+      "output_tokens": 2956,
+      "status_counts": {
+        "ok": 13
+      },
+      "confidence_counts": {
+        "medium": 13
+      }
+    },
+    {
+      "book": "john3",
+      "manifest_verse_count": 15,
+      "result_count": 15,
+      "raw_result_count": 27,
+      "retry_row_count": 12,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 7,
+      "needs_review_count": 14,
+      "likely_crop_issue_count": 8,
+      "likely_ocr_issue_count": 6,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 14311,
+      "input_tokens": 9760,
+      "output_tokens": 4551,
+      "status_counts": {
+        "ok": 15
+      },
+      "confidence_counts": {
+        "low": 4,
+        "medium": 11
+      }
+    },
+    {
+      "book": "jude",
+      "manifest_verse_count": 25,
+      "result_count": 25,
+      "raw_result_count": 30,
+      "retry_row_count": 5,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 5,
+      "needs_review_count": 25,
+      "likely_crop_issue_count": 11,
+      "likely_ocr_issue_count": 14,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 16805,
+      "input_tokens": 12034,
+      "output_tokens": 4771,
+      "status_counts": {
+        "ok": 25
+      },
+      "confidence_counts": {
+        "low": 5,
+        "medium": 20
+      }
+    },
+    {
+      "book": "luke",
+      "manifest_verse_count": 1151,
+      "result_count": 1151,
+      "raw_result_count": 1153,
+      "retry_row_count": 2,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 232,
+      "needs_review_count": 893,
+      "likely_crop_issue_count": 133,
+      "likely_ocr_issue_count": 760,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 969227,
+      "input_tokens": 773982,
+      "output_tokens": 195245,
+      "status_counts": {
+        "ok": 1151
+      },
+      "confidence_counts": {
+        "high": 31,
+        "low": 61,
+        "medium": 1059
+      }
+    },
+    {
+      "book": "mark",
+      "manifest_verse_count": 678,
+      "result_count": 678,
+      "raw_result_count": 1046,
+      "retry_row_count": 368,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 211,
+      "needs_review_count": 543,
+      "likely_crop_issue_count": 119,
+      "likely_ocr_issue_count": 424,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 650805,
+      "input_tokens": 482567,
+      "output_tokens": 168238,
+      "status_counts": {
+        "ok": 678
+      },
+      "confidence_counts": {
+        "high": 23,
+        "low": 47,
+        "medium": 608
+      }
+    },
+    {
+      "book": "matthew",
+      "manifest_verse_count": 1071,
+      "result_count": 1071,
+      "raw_result_count": 1077,
+      "retry_row_count": 6,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 217,
+      "needs_review_count": 837,
+      "likely_crop_issue_count": 122,
+      "likely_ocr_issue_count": 715,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 897936,
+      "input_tokens": 712850,
+      "output_tokens": 185086,
+      "status_counts": {
+        "ok": 1071
+      },
+      "confidence_counts": {
+        "high": 30,
+        "low": 28,
+        "medium": 1013
+      }
+    },
+    {
+      "book": "peter1",
+      "manifest_verse_count": 105,
+      "result_count": 105,
+      "raw_result_count": 153,
+      "retry_row_count": 48,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 31,
+      "needs_review_count": 97,
+      "likely_crop_issue_count": 22,
+      "likely_ocr_issue_count": 75,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 83806,
+      "input_tokens": 55443,
+      "output_tokens": 28363,
+      "status_counts": {
+        "ok": 105
+      },
+      "confidence_counts": {
+        "high": 6,
+        "low": 14,
+        "medium": 85
+      }
+    },
+    {
+      "book": "peter2",
+      "manifest_verse_count": 61,
+      "result_count": 61,
+      "raw_result_count": 99,
+      "retry_row_count": 38,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 21,
+      "needs_review_count": 61,
+      "likely_crop_issue_count": 21,
+      "likely_ocr_issue_count": 40,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 57444,
+      "input_tokens": 37772,
+      "output_tokens": 19672,
+      "status_counts": {
+        "ok": 61
+      },
+      "confidence_counts": {
+        "low": 14,
+        "medium": 47
+      }
+    },
+    {
+      "book": "philemon",
+      "manifest_verse_count": 25,
+      "result_count": 25,
+      "raw_result_count": 47,
+      "retry_row_count": 22,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 10,
+      "needs_review_count": 23,
+      "likely_crop_issue_count": 3,
+      "likely_ocr_issue_count": 20,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 22703,
+      "input_tokens": 14952,
+      "output_tokens": 7751,
+      "status_counts": {
+        "ok": 25
+      },
+      "confidence_counts": {
+        "low": 2,
+        "medium": 23
+      }
+    },
+    {
+      "book": "philippians",
+      "manifest_verse_count": 104,
+      "result_count": 104,
+      "raw_result_count": 145,
+      "retry_row_count": 41,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 30,
+      "needs_review_count": 85,
+      "likely_crop_issue_count": 18,
+      "likely_ocr_issue_count": 67,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 75046,
+      "input_tokens": 49684,
+      "output_tokens": 25362,
+      "status_counts": {
+        "ok": 104
+      },
+      "confidence_counts": {
+        "high": 7,
+        "low": 8,
+        "medium": 89
+      }
+    },
+    {
+      "book": "revelation",
+      "manifest_verse_count": 399,
+      "result_count": 399,
+      "raw_result_count": 416,
+      "retry_row_count": 17,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 45,
+      "needs_review_count": 259,
+      "likely_crop_issue_count": 93,
+      "likely_ocr_issue_count": 166,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 224514,
+      "input_tokens": 146534,
+      "output_tokens": 77980,
+      "status_counts": {
+        "ok": 399
+      },
+      "confidence_counts": {
+        "high": 17,
+        "low": 37,
+        "medium": 345
+      }
+    },
+    {
+      "book": "romans",
+      "manifest_verse_count": 432,
+      "result_count": 432,
+      "raw_result_count": 460,
+      "retry_row_count": 28,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 51,
+      "needs_review_count": 290,
+      "likely_crop_issue_count": 113,
+      "likely_ocr_issue_count": 177,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 213299,
+      "input_tokens": 140987,
+      "output_tokens": 72312,
+      "status_counts": {
+        "ok": 432
+      },
+      "confidence_counts": {
+        "high": 20,
+        "low": 62,
+        "medium": 350
+      }
+    },
+    {
+      "book": "thessalonians1",
+      "manifest_verse_count": 89,
+      "result_count": 89,
+      "raw_result_count": 95,
+      "retry_row_count": 6,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 11,
+      "needs_review_count": 68,
+      "likely_crop_issue_count": 20,
+      "likely_ocr_issue_count": 48,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 47387,
+      "input_tokens": 30421,
+      "output_tokens": 16966,
+      "status_counts": {
+        "ok": 89
+      },
+      "confidence_counts": {
+        "high": 1,
+        "low": 21,
+        "medium": 67
+      }
+    },
+    {
+      "book": "thessalonians2",
+      "manifest_verse_count": 47,
+      "result_count": 47,
+      "raw_result_count": 54,
+      "retry_row_count": 7,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 7,
+      "needs_review_count": 41,
+      "likely_crop_issue_count": 8,
+      "likely_ocr_issue_count": 33,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 26870,
+      "input_tokens": 17369,
+      "output_tokens": 9501,
+      "status_counts": {
+        "ok": 47
+      },
+      "confidence_counts": {
+        "low": 12,
+        "medium": 35
+      }
+    },
+    {
+      "book": "timothy1",
+      "manifest_verse_count": 113,
+      "result_count": 113,
+      "raw_result_count": 161,
+      "retry_row_count": 48,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 33,
+      "needs_review_count": 104,
+      "likely_crop_issue_count": 26,
+      "likely_ocr_issue_count": 78,
+      "no_hebrew_marks_count": 1,
+      "empty_text_count": 0,
+      "total_tokens": 80268,
+      "input_tokens": 54087,
+      "output_tokens": 26181,
+      "status_counts": {
+        "ok": 113
+      },
+      "confidence_counts": {
+        "high": 2,
+        "low": 18,
+        "medium": 93
+      }
+    },
+    {
+      "book": "timothy2",
+      "manifest_verse_count": 83,
+      "result_count": 83,
+      "raw_result_count": 132,
+      "retry_row_count": 49,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 27,
+      "needs_review_count": 58,
+      "likely_crop_issue_count": 21,
+      "likely_ocr_issue_count": 37,
+      "no_hebrew_marks_count": 0,
+      "empty_text_count": 0,
+      "total_tokens": 66549,
+      "input_tokens": 44298,
+      "output_tokens": 22251,
+      "status_counts": {
+        "ok": 83
+      },
+      "confidence_counts": {
+        "high": 3,
+        "low": 15,
+        "medium": 65
+      }
+    },
+    {
+      "book": "titus",
+      "manifest_verse_count": 46,
+      "result_count": 46,
+      "raw_result_count": 67,
+      "retry_row_count": 21,
+      "pending_count": 0,
+      "pending_ids": [],
+      "batch_count": 15,
+      "needs_review_count": 42,
+      "likely_crop_issue_count": 12,
+      "likely_ocr_issue_count": 30,
+      "no_hebrew_marks_count": 1,
+      "empty_text_count": 0,
+      "total_tokens": 35108,
+      "input_tokens": 23142,
+      "output_tokens": 11966,
+      "status_counts": {
+        "ok": 46
+      },
+      "confidence_counts": {
+        "low": 8,
+        "medium": 38
+      }
+    }
+  ]
+}

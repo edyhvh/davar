@@ -2,6 +2,7 @@ import { create } from "zustand";
 
 import type { MockVerse } from "@/src/constants/mockData";
 import type { ThemeMode } from "@/src/theme";
+import type { BesorahTextVersion } from "@davar/shared/translationConfig";
 import {
   getDefaultLanguage,
   type AppLanguage,
@@ -21,6 +22,8 @@ export type AppState = {
   setHebrewFontScale: (scale: number) => void;
   language: AppLanguage;
   setLanguage: (language: AppLanguage) => void;
+  besorahTextVersion: BesorahTextVersion;
+  setBesorahTextVersion: (version: BesorahTextVersion) => void;
   showQumran: boolean;
   setShowQumran: (value: boolean) => void;
   showFullChapter: boolean;
@@ -69,6 +72,8 @@ export const useAppStore = create<AppState>((set) => ({
   setHebrewFontScale: (scale) => set({ hebrewFontScale: scale }),
   language: getDefaultLanguage(),
   setLanguage: (language) => set({ language }),
+  besorahTextVersion: "delitzsch",
+  setBesorahTextVersion: (besorahTextVersion) => set({ besorahTextVersion }),
   showQumran: false,
   setShowQumran: (value) =>
     set((state) => ({
@@ -78,9 +83,7 @@ export const useAppStore = create<AppState>((set) => ({
   setShowFullChapter: (value) =>
     set((state) => ({
       showFullChapter: value,
-      seferMode: value
-        ? state.seferMode || state.hebrewOnly || state.translationOnly
-        : false,
+      seferMode: value ? state.seferMode : false,
     })),
   seferMode: false,
   setSeferMode: (value) =>
@@ -92,11 +95,7 @@ export const useAppStore = create<AppState>((set) => ({
   setHebrewOnly: (value) =>
     set((state) => ({
       hebrewOnly: state.translationOnly ? false : value,
-      seferMode: state.translationOnly
-        ? false
-        : value
-          ? state.showFullChapter || state.seferMode
-          : false,
+      seferMode: state.translationOnly || !value ? false : state.seferMode,
     })),
   translationOnly: false,
   setTranslationOnly: (value) =>
