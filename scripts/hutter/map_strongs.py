@@ -27,6 +27,7 @@ CUSTOM_DEFINITIONS_PATH = (
     REPO_ROOT / "data" / "dict" / "lexicon" / "custom_definitions.json"
 )
 MANUAL_OVERRIDES_PATH = REPO_ROOT / "data" / "hutter" / "strong_overrides.json"
+OCR_RESULTS_ROOT = REPO_ROOT / "data" / "hutter" / "api_results_gpt55"
 DEFAULT_OUTPUT_ROOT = REPO_ROOT / "data" / "hutter" / "strong_mappings"
 DEFAULT_REPORT_PATH = (
     REPO_ROOT / "data" / "hutter" / "review_reports" / "strong_mapping_report.json"
@@ -65,6 +66,16 @@ class MappingDecision:
     score: float
 
 
+@dataclass(frozen=True)
+class CustomFormMatch:
+    strong: str
+    prefixes: tuple[str, ...]
+    hutter_surface: str
+    custom_surface: str
+    similarity: float
+    runner_up_similarity: float
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
@@ -88,6 +99,11 @@ def parse_args() -> argparse.Namespace:
         "--include-low-confidence",
         action="store_true",
         help="Keep low-confidence fuzzy candidates as assigned mappings.",
+    )
+    parser.add_argument(
+        "--allow-coverage-regression",
+        action="store_true",
+        help="Allow --write to replace a report with a lower mapped-word count.",
     )
     return parser.parse_args()
 
@@ -197,17 +213,47 @@ def load_lexicon_lemmas() -> dict[str, Counter[str]]:
     return index
 
 
-def load_manual_overrides() -> dict[str, dict[str, Any]]:
+def load_manual_overrides() -> tuple[
+    dict[str, dict[str, Any]],
+    dict[tuple[str, int, int, str], dict[str, Any]],
+]:
     if not MANUAL_OVERRIDES_PATH.exists():
-        return {}
+        return {}, {}
     entries = load_json(MANUAL_OVERRIDES_PATH)
     overrides: dict[str, dict[str, Any]] = {}
+    contextual: dict[tuple[str, int, int, str], dict[str, Any]] = {}
     for entry in entries:
+        references = entry.get("references") or []
         for form in entry.get("forms") or []:
             normalized = normalize_hebrew(str(form))
-            if normalized:
+            if not normalized:
+                continue
+            if references:
+                for reference in references:
+                    key = (
+                        str(reference["book"]),
+                        int(reference["chapter"]),
+                        int(reference["verse"]),
+                        normalized,
+                    )
+                    contextual[key] = entry
+            else:
                 overrides[normalized] = entry
-    return overrides
+    return overrides, contextual
+
+
+def manual_override_decision(override: dict[str, Any] | None) -> MappingDecision | None:
+    if not override:
+        return None
+    prefixes = tuple(str(item) for item in override.get("prefixes") or [])
+    return MappingDecision(
+        strong=str(override["strong"]),
+        prefixes=prefixes,
+        confidence="high",
+        method="manual_override",
+        evidence=str(override.get("reason") or "Reviewed Hutter lexical assignment"),
+        score=1.0,
+    )
 
 
 def load_custom_name_forms() -> dict[str, set[str]]:
@@ -234,6 +280,148 @@ def load_custom_name_forms() -> dict[str, set[str]]:
                 if len(normalized) >= 4:
                     forms[str(strong)].add(normalized)
     return forms
+
+
+def load_contextual_custom_forms() -> dict[tuple[str, int, int], dict[str, set[str]]]:
+    custom = load_json(CUSTOM_DEFINITIONS_PATH)
+    contextual: dict[tuple[str, int, int], dict[str, set[str]]] = defaultdict(
+        lambda: defaultdict(set)
+    )
+    for strong, entry in custom.items():
+        if not str(strong).startswith("D"):
+            continue
+        lemma = normalize_hebrew(str(entry.get("hebrew") or ""))
+        for instance in entry.get("nt_instances") or []:
+            book = str(instance.get("book") or "")
+            chapter = int(instance.get("chapter") or 0)
+            verse = int(instance.get("verse") or 0)
+            if not book or not chapter or not verse:
+                continue
+            forms = contextual[(book, chapter, verse)][str(strong)]
+            if len(lemma) >= 4:
+                forms.add(lemma)
+            for _, normalized in prefix_parses(str(instance.get("text") or "")):
+                if len(normalized) >= 4:
+                    forms.add(normalized)
+    return contextual
+
+
+def best_contextual_custom_match(
+    text: str,
+    candidates: dict[str, set[str]],
+    minimum_similarity: float = 0.75,
+) -> CustomFormMatch | None:
+    matches: list[CustomFormMatch] = []
+    for strong, custom_forms in candidates.items():
+        best: tuple[float, tuple[str, ...], str, str] | None = None
+        for prefixes, hutter_surface in prefix_parses(text):
+            if len(hutter_surface) < 4:
+                continue
+            for custom_surface in custom_forms:
+                similarity = SequenceMatcher(
+                    None, hutter_surface, custom_surface
+                ).ratio()
+                candidate = (similarity, prefixes, hutter_surface, custom_surface)
+                if best is None or candidate[0] > best[0]:
+                    best = candidate
+        if best:
+            matches.append(
+                CustomFormMatch(
+                    strong=strong,
+                    prefixes=best[1],
+                    hutter_surface=best[2],
+                    custom_surface=best[3],
+                    similarity=best[0],
+                    runner_up_similarity=0.0,
+                )
+            )
+
+    matches.sort(key=lambda item: (-item.similarity, item.strong))
+    if not matches or matches[0].similarity < minimum_similarity:
+        return None
+    runner_up = matches[1].similarity if len(matches) > 1 else 0.0
+    winner = matches[0]
+    if winner.similarity < 0.9 and winner.similarity - runner_up < 0.05:
+        return None
+    return CustomFormMatch(
+        strong=winner.strong,
+        prefixes=winner.prefixes,
+        hutter_surface=winner.hutter_surface,
+        custom_surface=winner.custom_surface,
+        similarity=winner.similarity,
+        runner_up_similarity=runner_up,
+    )
+
+
+def contextual_custom_decision(
+    text: str,
+    candidates: dict[str, set[str]],
+) -> MappingDecision | None:
+    match = best_contextual_custom_match(text, candidates)
+    if not match:
+        return None
+    return MappingDecision(
+        strong=composite_strong(match.prefixes, match.strong),
+        prefixes=match.prefixes,
+        confidence="high" if match.similarity >= 0.86 else "medium",
+        method="verse_context_custom",
+        evidence=(
+            f"hutter={match.hutter_surface}; custom={match.custom_surface}; "
+            f"strong={match.strong}; similarity={match.similarity:.3f}; "
+            "evidence=same book/chapter/verse custom instance (not word position)"
+        ),
+        score=min(0.99, 0.78 + 0.2 * match.similarity),
+    )
+
+
+def build_contextual_custom_variant_index(
+    books: Iterable[str],
+    contextual_custom_forms: dict[tuple[str, int, int], dict[str, set[str]]],
+) -> dict[str, Counter[str]]:
+    variants: dict[str, Counter[str]] = defaultdict(Counter)
+    for book in sorted(books):
+        hutter = load_json(HUTTER_ROOT / f"{book}.json")
+        for chapter in hutter.get("chapters") or []:
+            chapter_number = int(chapter.get("number") or 0)
+            for verse in chapter.get("verses") or []:
+                verse_number = int(verse.get("number") or 0)
+                candidates = contextual_custom_forms.get(
+                    (book, chapter_number, verse_number), {}
+                )
+                if not candidates:
+                    continue
+                for text in split_hutter_words(str(verse.get("text_nikud") or "")):
+                    match = best_contextual_custom_match(text, candidates)
+                    if match:
+                        variants[match.hutter_surface][match.strong] += 1
+    return variants
+
+
+def contextual_custom_variant_decision(
+    text: str,
+    variant_index: dict[str, Counter[str]],
+) -> MappingDecision | None:
+    best: MappingDecision | None = None
+    for prefixes, root_surface in prefix_parses(text):
+        strong, count, quality = best_counter_value(
+            variant_index.get(root_surface, Counter())
+        )
+        if not strong or quality < 0.72:
+            continue
+        decision = MappingDecision(
+            strong=composite_strong(prefixes, strong),
+            prefixes=prefixes,
+            confidence="high" if count >= 2 else "medium",
+            method="contextual_custom_variant",
+            evidence=(
+                f"root_surface={root_surface}; strong={strong}; "
+                f"same-verse supporting occurrences={count}; quality={quality:.3f}"
+            ),
+            score=min(0.96, 0.88 + 0.06 * quality),
+        )
+        if best is None or decision.score > best.score:
+            best = decision
+    return best
 
 
 def build_indexes() -> tuple[
@@ -304,16 +492,9 @@ def decide_from_indexes(
 ) -> MappingDecision | None:
     surface = normalize_hebrew(text)
     override = manual_overrides.get(surface)
-    if override:
-        prefixes = tuple(str(item) for item in override.get("prefixes") or [])
-        return MappingDecision(
-            strong=str(override["strong"]),
-            prefixes=prefixes,
-            confidence="high",
-            method="manual_override",
-            evidence=str(override.get("reason") or "Reviewed Hutter lexical assignment"),
-            score=1.0,
-        )
+    override_decision = manual_override_decision(override)
+    if override_decision:
+        return override_decision
 
     pointed_surface = normalize_pointed_hebrew(text)
     pointed_exact, pointed_count, pointed_quality = best_counter_value(
@@ -402,6 +583,247 @@ def load_delitzsch_verses(book: str) -> dict[tuple[int, int], dict[str, Any]]:
             key = (int(verse.get("chapter") or 0), int(verse.get("verse") or 0))
             verses[key] = verse
     return verses
+
+
+def load_ocr_verses(book: str) -> dict[tuple[int, int], dict[str, Any]]:
+    path = OCR_RESULTS_ROOT / book / "results.jsonl"
+    if not path.exists():
+        return {}
+    verses: dict[tuple[int, int], dict[str, Any]] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        parts = str(row.get("id") or "").split(".")
+        if len(parts) < 3:
+            continue
+        try:
+            key = (int(parts[1]), int(parts[2]))
+        except ValueError:
+            continue
+        if str(row.get("hebrew_text") or "").strip():
+            verses[key] = row
+    return verses
+
+
+def align_similar_words(
+    source_words: list[str],
+    alternate_words: list[str],
+) -> dict[int, int]:
+    """Globally align two transcriptions of the same verse.
+
+    This is deliberately separate from Delitzsch translation alignment. Both inputs
+    represent the same Hutter source image, so token order is evidence here even when
+    an OCR pass split or omitted a word.
+    """
+    source = [normalize_hebrew(word) for word in source_words]
+    alternate = [normalize_hebrew(word) for word in alternate_words]
+    source_count = len(source)
+    alternate_count = len(alternate)
+    gap_penalty = -0.45
+    scores = [
+        [0.0 for _ in range(alternate_count + 1)]
+        for _ in range(source_count + 1)
+    ]
+    trace: list[list[str | None]] = [
+        [None for _ in range(alternate_count + 1)]
+        for _ in range(source_count + 1)
+    ]
+    for index in range(1, source_count + 1):
+        scores[index][0] = index * gap_penalty
+        trace[index][0] = "source_gap"
+    for index in range(1, alternate_count + 1):
+        scores[0][index] = index * gap_penalty
+        trace[0][index] = "alternate_gap"
+
+    for source_index in range(1, source_count + 1):
+        for alternate_index in range(1, alternate_count + 1):
+            similarity = SequenceMatcher(
+                None,
+                source[source_index - 1],
+                alternate[alternate_index - 1],
+            ).ratio()
+            options = [
+                (
+                    scores[source_index - 1][alternate_index - 1]
+                    + 2.0 * similarity
+                    - 1.0,
+                    "match",
+                ),
+                (
+                    scores[source_index - 1][alternate_index] + gap_penalty,
+                    "source_gap",
+                ),
+                (
+                    scores[source_index][alternate_index - 1] + gap_penalty,
+                    "alternate_gap",
+                ),
+            ]
+            scores[source_index][alternate_index], trace[source_index][alternate_index] = (
+                max(options, key=lambda item: item[0])
+            )
+
+    aligned: dict[int, int] = {}
+    source_index = source_count
+    alternate_index = alternate_count
+    while source_index or alternate_index:
+        operation = trace[source_index][alternate_index]
+        if operation == "match":
+            aligned[source_index - 1] = alternate_index - 1
+            source_index -= 1
+            alternate_index -= 1
+        elif operation == "source_gap":
+            source_index -= 1
+        elif operation == "alternate_gap":
+            alternate_index -= 1
+        else:
+            break
+    return aligned
+
+
+def same_verse_spelling_decision(
+    hutter_word: str,
+    delitzsch_words: list[dict[str, Any]],
+) -> MappingDecision | None:
+    matches: dict[str, tuple[float, tuple[str, ...], str, str]] = {}
+    for delitzsch_word in delitzsch_words:
+        strong = base_strong(str(delitzsch_word.get("strong") or ""))
+        if not strong:
+            continue
+        delitzsch_surface = strip_known_prefixes(
+            str(delitzsch_word.get("text") or ""),
+            delitzsch_word.get("prefixes") or [],
+        )
+        if len(delitzsch_surface) < 4:
+            continue
+        for prefixes, hutter_surface in prefix_parses(hutter_word):
+            if len(hutter_surface) < 4:
+                continue
+            similarity = SequenceMatcher(
+                None, hutter_surface, delitzsch_surface
+            ).ratio() - 0.02 * len(prefixes)
+            previous = matches.get(strong)
+            if previous is None or similarity > previous[0]:
+                matches[strong] = (
+                    similarity,
+                    prefixes,
+                    hutter_surface,
+                    delitzsch_surface,
+                )
+    ranked = sorted(
+        ((match[0], strong, *match[1:]) for strong, match in matches.items()),
+        reverse=True,
+    )
+    if not ranked or ranked[0][0] < 0.9:
+        return None
+    runner_up = ranked[1][0] if len(ranked) > 1 else 0.0
+    similarity, strong, prefixes, hutter_surface, delitzsch_surface = ranked[0]
+    if runner_up >= 0.9 and similarity - runner_up < 0.08:
+        return None
+    return MappingDecision(
+        strong=composite_strong(prefixes, strong),
+        prefixes=prefixes,
+        confidence="high" if similarity >= 0.97 else "medium",
+        method="same_verse_spelling",
+        evidence=(
+            f"hutter={hutter_surface}; delitzsch={delitzsch_surface}; "
+            f"strong={strong}; similarity={similarity:.3f}; "
+            "evidence=same verse spelling (not word position)"
+        ),
+        score=min(0.97, 0.88 + 0.09 * similarity),
+    )
+
+
+def ocr_crosscheck_decision(
+    hutter_word: str,
+    ocr_word: str,
+    ocr_confidence: str,
+    delitzsch_words: list[dict[str, Any]],
+    manual_overrides: dict[str, dict[str, Any]],
+    pointed_surface_index: dict[str, Counter[StrongCandidate]],
+    surface_index: dict[str, Counter[StrongCandidate]],
+    base_form_index: dict[str, Counter[str]],
+    lemma_index: dict[str, Counter[str]],
+    custom_name_forms: dict[str, set[str]],
+    verse_custom_forms: dict[str, set[str]],
+    contextual_custom_variants: dict[str, Counter[str]],
+) -> MappingDecision | None:
+    if ocr_confidence not in {"medium", "high"}:
+        return None
+    hutter_surface = normalize_hebrew(hutter_word)
+    ocr_surface = normalize_hebrew(ocr_word)
+    if not hutter_surface or not ocr_surface:
+        return None
+    similarity = SequenceMatcher(None, hutter_surface, ocr_surface).ratio()
+    if similarity < 0.5:
+        return None
+
+    candidates = [
+        decide_from_indexes(
+            ocr_word,
+            manual_overrides,
+            pointed_surface_index,
+            surface_index,
+            base_form_index,
+            lemma_index,
+        ),
+        contextual_custom_decision(ocr_word, verse_custom_forms),
+        contextual_custom_variant_decision(ocr_word, contextual_custom_variants),
+    ]
+    decision = max(
+        (candidate for candidate in candidates if candidate is not None),
+        key=lambda candidate: candidate.score,
+        default=None,
+    )
+    if not decision or decision.confidence == "low":
+        return None
+
+    delitzsch_strongs = {
+        base_strong(str(word.get("strong") or "")) for word in delitzsch_words
+    }
+    decision_strong = base_strong(decision.strong)
+    verse_supported = decision_strong in delitzsch_strongs
+    custom_name_ocr_similarity = max(
+        (
+            SequenceMatcher(None, ocr_surface, custom_surface).ratio()
+            for custom_surface in custom_name_forms.get(decision_strong, set())
+        ),
+        default=0.0,
+    )
+    custom_name_supported = (
+        decision_strong in custom_name_forms
+        and verse_supported
+        and min(len(hutter_surface), len(ocr_surface)) >= 4
+        and custom_name_ocr_similarity >= 0.86
+    )
+    if similarity < 0.8 and not custom_name_supported:
+        return None
+    if min(len(hutter_surface), len(ocr_surface)) < 3 and similarity < 0.9:
+        return None
+    if similarity < 0.9 and not verse_supported:
+        return None
+    confidence = (
+        "high"
+        if similarity >= 0.9 and decision.confidence == "high"
+        else "medium"
+    )
+    return MappingDecision(
+        strong=decision.strong,
+        prefixes=decision.prefixes,
+        confidence=confidence,
+        method="ocr_crosscheck",
+        evidence=(
+            f"hutter={hutter_surface}; alternate_ocr={ocr_surface}; "
+            f"similarity={similarity:.3f}; ocr_confidence={ocr_confidence}; "
+            f"candidate_method={decision.method}; "
+            f"same_verse_delitzsch_support={str(verse_supported).lower()}"
+        ),
+        score=(
+            min(0.98, 0.91 + 0.07 * similarity)
+            if verse_supported
+            else min(0.95, 0.86 + 0.09 * similarity)
+        ),
+    )
 
 
 def aligned_spelling_decision(
@@ -496,7 +918,12 @@ def align_words(
 def map_book(
     book: str,
     manual_overrides: dict[str, dict[str, Any]],
+    contextual_manual_overrides: dict[
+        tuple[str, int, int, str], dict[str, Any]
+    ],
     custom_name_forms: dict[str, set[str]],
+    contextual_custom_forms: dict[tuple[str, int, int], dict[str, set[str]]],
+    contextual_custom_variants: dict[str, Counter[str]],
     pointed_surface_index: dict[str, Counter[StrongCandidate]],
     surface_index: dict[str, Counter[StrongCandidate]],
     base_form_index: dict[str, Counter[str]],
@@ -505,6 +932,7 @@ def map_book(
 ) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     hutter = load_json(HUTTER_ROOT / f"{book}.json")
     delitzsch = load_delitzsch_verses(book)
+    ocr_verses = load_ocr_verses(book)
     transliterator = LocalTransliterator()
     chapters: list[dict[str, Any]] = []
     unresolved: list[dict[str, Any]] = []
@@ -519,11 +947,26 @@ def map_book(
             delitzsch_verse = delitzsch.get((chapter_number, verse_number), {})
             delitzsch_words = delitzsch_verse.get("words") or []
             aligned = align_words(hutter_words, delitzsch_words)
+            ocr_row = ocr_verses.get((chapter_number, verse_number), {})
+            ocr_words = split_hutter_words(str(ocr_row.get("hebrew_text") or ""))
+            ocr_alignment = align_similar_words(hutter_words, ocr_words)
+            verse_custom_forms = contextual_custom_forms.get(
+                (book, chapter_number, verse_number), {}
+            )
             mapped_words: list[dict[str, Any]] = []
 
             for index, word_text in enumerate(hutter_words):
                 transliteration = transliterator.transliterate_word(word_text)
-                decision = decide_from_indexes(
+                decision = manual_override_decision(
+                    contextual_manual_overrides.get(
+                        (
+                            book,
+                            chapter_number,
+                            verse_number,
+                            normalize_hebrew(word_text),
+                        )
+                    )
+                ) or decide_from_indexes(
                     word_text,
                     manual_overrides,
                     pointed_surface_index,
@@ -537,14 +980,51 @@ def map_book(
                 custom_name_decision = aligned_custom_name_decision(
                     word_text, aligned.get(index), custom_name_forms
                 )
-                if custom_name_decision and (
-                    decision is None or custom_name_decision.score > decision.score
+                verse_custom_decision = contextual_custom_decision(
+                    word_text, verse_custom_forms
+                )
+                custom_variant_decision = contextual_custom_variant_decision(
+                    word_text, contextual_custom_variants
+                )
+                same_verse_decision = same_verse_spelling_decision(
+                    word_text, delitzsch_words
+                )
+                ocr_index = ocr_alignment.get(index)
+                ocr_decision = (
+                    ocr_crosscheck_decision(
+                        word_text,
+                        ocr_words[ocr_index],
+                        str(ocr_row.get("confidence") or ""),
+                        delitzsch_words,
+                        manual_overrides,
+                        pointed_surface_index,
+                        surface_index,
+                        base_form_index,
+                        lemma_index,
+                        custom_name_forms,
+                        verse_custom_forms,
+                        contextual_custom_variants,
+                    )
+                    if ocr_index is not None
+                    else None
+                )
+                for custom_decision in (
+                    verse_custom_decision,
+                    custom_variant_decision,
+                    custom_name_decision,
                 ):
-                    decision = custom_name_decision
+                    if custom_decision and (
+                        decision is None or custom_decision.score > decision.score + 0.04
+                    ):
+                        decision = custom_decision
                 if aligned_decision and (
                     decision is None or aligned_decision.score > decision.score + 0.08
                 ):
                     decision = aligned_decision
+                if decision is None or (
+                    decision.confidence == "low" and not include_low_confidence
+                ):
+                    decision = ocr_decision or same_verse_decision
 
                 if decision and (
                     decision.confidence != "low" or include_low_confidence
@@ -571,6 +1051,7 @@ def map_book(
                         "prefixes": [],
                         "mapping_confidence": "unresolved",
                         "mapping_method": "unresolved",
+                        "mapping_evidence": unresolved_reason(aligned.get(index)),
                     }
                 )
                 unresolved.append(
@@ -582,6 +1063,7 @@ def map_book(
                         "text": word_text,
                         "normalized": normalize_hebrew(word_text),
                         "aligned_delitzsch_word": aligned.get(index),
+                        "reason": unresolved_reason(aligned.get(index)),
                     }
                 )
 
@@ -607,6 +1089,50 @@ def map_book(
     )
 
 
+def unresolved_reason(delitzsch_word: dict[str, Any] | None) -> str:
+    if not delitzsch_word:
+        return (
+            "No reliable attested form, lexicon lemma, custom verse-context match, "
+            "or aligned Delitzsch token; automatic assignment would be unsupported."
+        )
+    if not candidate_from_word(delitzsch_word):
+        return (
+            "The aligned Delitzsch token has no reviewed mapping, and no independent "
+            "lexical or custom evidence supports this Hutter form."
+        )
+    return (
+        "The available Delitzsch token is not a sufficiently similar spelling; "
+        "positional borrowing was rejected because wording or word order may differ."
+    )
+
+
+def build_unresolved_queue(unresolved: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for item in unresolved:
+        grouped[str(item["normalized"])].append(item)
+    queue: list[dict[str, Any]] = []
+    for normalized, occurrences in grouped.items():
+        forms = sorted({str(item["text"]) for item in occurrences})
+        reasons = Counter(str(item["reason"]) for item in occurrences)
+        queue.append(
+            {
+                "normalized": normalized,
+                "forms": forms,
+                "occurrence_count": len(occurrences),
+                "books": sorted({str(item["book"]) for item in occurrences}),
+                "reason_counts": dict(sorted(reasons.items())),
+                "first_occurrence": (
+                    f"{occurrences[0]['book']} {occurrences[0]['chapter']}:"
+                    f"{occurrences[0]['verse']}#{occurrences[0]['position']}"
+                ),
+            }
+        )
+    return sorted(
+        queue,
+        key=lambda item: (-int(item["occurrence_count"]), str(item["normalized"])),
+    )
+
+
 def main() -> int:
     args = parse_args()
     available_books = sorted(
@@ -620,18 +1146,27 @@ def main() -> int:
         raise SystemExit(f"Unknown or non-New-Testament Hutter books: {', '.join(missing)}")
 
     pointed_surface_index, surface_index, base_form_index, lemma_index = build_indexes()
-    manual_overrides = load_manual_overrides()
+    manual_overrides, contextual_manual_overrides = load_manual_overrides()
     custom_name_forms = load_custom_name_forms()
+    contextual_custom_forms = load_contextual_custom_forms()
+    contextual_custom_variants = build_contextual_custom_variant_index(
+        books, contextual_custom_forms
+    )
     output_root = args.output_root.expanduser().resolve()
     report_path = args.report.expanduser().resolve()
     all_unresolved: list[dict[str, Any]] = []
     book_summaries: list[dict[str, Any]] = []
+    mapping_method_counts: Counter[str] = Counter()
+    pending_payloads: dict[str, dict[str, Any]] = {}
 
     for book in books:
         payload, unresolved = map_book(
             book,
             manual_overrides,
+            contextual_manual_overrides,
             custom_name_forms,
+            contextual_custom_forms,
+            contextual_custom_variants,
             pointed_surface_index,
             surface_index,
             base_form_index,
@@ -647,6 +1182,10 @@ def main() -> int:
         confidence_counts = Counter(
             str(word.get("mapping_confidence") or "unresolved") for word in words
         )
+        book_method_counts = Counter(
+            str(word.get("mapping_method") or "unresolved") for word in words
+        )
+        mapping_method_counts.update(book_method_counts)
         book_summaries.append(
             {
                 "book": book,
@@ -660,16 +1199,13 @@ def main() -> int:
                     (len(words) - len(unresolved)) / len(words) if words else 0.0
                 ),
                 "confidence_counts": dict(sorted(confidence_counts.items())),
+                "mapping_method_counts": dict(sorted(book_method_counts.items())),
             }
         )
         all_unresolved.extend(unresolved)
 
         if args.write:
-            output_root.mkdir(parents=True, exist_ok=True)
-            (output_root / f"{book}.json").write_text(
-                json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n",
-                encoding="utf-8",
-            )
+            pending_payloads[book] = payload
 
     total_words = sum(item["word_count"] for item in book_summaries)
     total_unresolved = len(all_unresolved)
@@ -683,11 +1219,29 @@ def main() -> int:
             "coverage": (
                 (total_words - total_unresolved) / total_words if total_words else 0.0
             ),
+            "mapping_method_counts": dict(sorted(mapping_method_counts.items())),
         },
         "unresolved": all_unresolved,
+        "unresolved_queue": build_unresolved_queue(all_unresolved),
     }
 
     if args.write:
+        if report_path.exists() and not args.allow_coverage_regression:
+            previous = load_json(report_path)
+            previous_mapped = int(previous.get("totals", {}).get("mapped_count") or 0)
+            if report["totals"]["mapped_count"] < previous_mapped:
+                raise SystemExit(
+                    "Refusing coverage regression: "
+                    f"{report['totals']['mapped_count']} mapped words would replace "
+                    f"the existing {previous_mapped}. Pass --allow-coverage-regression "
+                    "only after review."
+                )
+        output_root.mkdir(parents=True, exist_ok=True)
+        for book, payload in pending_payloads.items():
+            (output_root / f"{book}.json").write_text(
+                json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n",
+                encoding="utf-8",
+            )
         report_path.parent.mkdir(parents=True, exist_ok=True)
         report_path.write_text(
             json.dumps(report, ensure_ascii=False, indent=2) + "\n",
