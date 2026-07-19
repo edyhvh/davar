@@ -167,6 +167,9 @@ class LexiconIndex:
         lemma = entry.get("lemma")
         if isinstance(lemma, str) and lemma:
             return normalize_hebrew(lemma)
+        hebrew = entry.get("hebrew")
+        if isinstance(hebrew, str) and hebrew:
+            return normalize_hebrew(hebrew)
         return None
 
 
@@ -387,6 +390,75 @@ def summarize_issues(issues: list[ReviewIssue]) -> dict[str, Any]:
     }
 
 
+def load_latest_decisions(log_dir: Path) -> dict[str, dict[str, Any]]:
+    """Load the latest logged review decision for each stable occurrence."""
+
+    latest: dict[str, dict[str, Any]] = {}
+    if not log_dir.exists():
+        return latest
+    for log_file in sorted(log_dir.glob("*.jsonl")):
+        with log_file.open("r", encoding="utf-8") as handle:
+            for line in handle:
+                if not line.strip():
+                    continue
+                entry = json.loads(line)
+                occurrence = entry.get("occurrence") or {}
+                try:
+                    key = (
+                        f"{occurrence['book']}.{int(occurrence['chapter'])}."
+                        f"{int(occurrence['verse'])}.{int(occurrence['word_index'])}"
+                    )
+                except (KeyError, TypeError, ValueError):
+                    continue
+                latest[key] = entry
+    return latest
+
+
+def issue_review_status(
+    issue: ReviewIssue,
+    latest_decisions: dict[str, dict[str, Any]],
+) -> str:
+    """Classify a current scan flag using its latest provenance decision."""
+
+    status = str((latest_decisions.get(issue.occurrence.key) or {}).get("status") or "")
+    return {
+        "applied": "reviewed_resolved",
+        "already_applied": "reviewed_resolved",
+        "needs_manual_review": "reviewed_manual",
+        "skipped": "reviewed_skipped",
+    }.get(status, "unreviewed")
+
+
+def partition_reviewed_issues(
+    issues: list[ReviewIssue],
+    latest_decisions: dict[str, dict[str, Any]],
+) -> tuple[list[ReviewIssue], dict[str, list[ReviewIssue]]]:
+    """Separate actionable flags from reviewed manual/skipped/resolved flags."""
+
+    unreviewed: list[ReviewIssue] = []
+    reviewed: dict[str, list[ReviewIssue]] = {}
+    for issue in issues:
+        status = issue_review_status(issue, latest_decisions)
+        if status == "unreviewed":
+            unreviewed.append(issue)
+        else:
+            reviewed.setdefault(status, []).append(issue)
+    return unreviewed, reviewed
+
+
+def summarize_reviewed_issues(
+    reviewed: dict[str, list[ReviewIssue]],
+) -> dict[str, Any]:
+    """Summarize non-actionable scan flags by their provenance classification."""
+
+    all_reviewed = [issue for issues in reviewed.values() for issue in issues]
+    summary = summarize_issues(all_reviewed)
+    summary["by_review_status"] = {
+        status: len(issues) for status, issues in sorted(reviewed.items())
+    }
+    return summary
+
+
 def summarize_decision_logs(log_dir: Path) -> dict[str, Any]:
     """Summarize applied/reviewed decision provenance logs."""
 
@@ -522,6 +594,50 @@ def _find_word(verses: list[dict[str, Any]], occurrence: dict[str, Any]) -> dict
             )
         return word
     raise ValueError(f"Verse not found for occurrence {occurrence}")
+
+
+def _apply_word_metadata(word: dict[str, Any], decision: dict[str, Any]) -> bool:
+    """Apply optional reviewed prefix and proper-name metadata changes."""
+
+    changed = False
+    if "new_prefixes" in decision:
+        prefixes = decision["new_prefixes"]
+        if not isinstance(prefixes, list) or any(
+            not isinstance(prefix, str) or prefix not in PREFIX_CODES
+            for prefix in prefixes
+        ):
+            raise ValueError(f"Invalid new_prefixes: {prefixes!r}")
+        if word.get("prefixes", []) != prefixes:
+            word["prefixes"] = prefixes
+            changed = True
+    if "new_possible_proper_name" in decision:
+        possible_proper_name = decision["new_possible_proper_name"]
+        if not isinstance(possible_proper_name, bool):
+            raise ValueError(
+                f"new_possible_proper_name must be boolean: {possible_proper_name!r}"
+            )
+        if bool(word.get("possible_proper_name", False)) != possible_proper_name:
+            word["possible_proper_name"] = possible_proper_name
+            changed = True
+    return changed
+
+
+def _refresh_verse_prefix_separators(
+    verses: list[dict[str, Any]], occurrence: dict[str, Any]
+) -> None:
+    """Keep the display Hebrew separators synchronized with reviewed prefixes."""
+
+    from ..result_formatter import ResultFormatter
+
+    verse_number = int(occurrence["verse"])
+    for verse in verses:
+        if int(verse.get("verse", 0)) != verse_number:
+            continue
+        clean_hebrew = str(verse.get("hebrew") or "").replace("/", "")
+        verse["hebrew"] = ResultFormatter(None).add_prefix_separators(
+            clean_hebrew, verse.get("words") or []
+        )
+        return
 
 
 def append_decision_log(log_dir: Path, decision: dict[str, Any], status: str, dry_run: bool) -> None:
@@ -707,9 +823,17 @@ def apply_decisions(
                 word = _find_word(verses, occurrence)
                 expected_previous = decision.get("previous_strong", occurrence.get("strong"))
                 new_strong = decision.get("new_strong")
+                metadata_changed = _apply_word_metadata(word, decision)
+                if metadata_changed:
+                    _refresh_verse_prefix_separators(verses, occurrence)
                 if word.get("strong") == new_strong:
-                    stats.skipped += 1
-                    append_decision_log(log_dir, decision, "already_applied", dry_run)
+                    if metadata_changed:
+                        changed_chapters[chapter_file] = chapter_data
+                        stats.word_updates += 1
+                        append_decision_log(log_dir, decision, "applied", dry_run)
+                    else:
+                        stats.skipped += 1
+                        append_decision_log(log_dir, decision, "already_applied", dry_run)
                     stats.log_entries += 0 if dry_run else 1
                     continue
                 if word.get("strong") != expected_previous:
@@ -736,11 +860,29 @@ def apply_decisions(
                 word = _find_word(verses, occurrence)
                 expected_previous = decision.get("previous_strong", occurrence.get("strong"))
                 custom_key = (decision.get("custom_key") or decision.get("new_strong") or "").strip().upper()
+                metadata_changed = _apply_word_metadata(word, decision)
+                if metadata_changed:
+                    _refresh_verse_prefix_separators(verses, occurrence)
                 if custom_key and word.get("strong") == custom_key:
                     _add_custom_entry(lexicon, decision)
                     changed_lexicon[lexicon.custom_definitions_path] = lexicon.load_custom_entries()
-                    stats.skipped += 1
-                    append_decision_log(log_dir, {**decision, "new_strong": custom_key}, "already_applied", dry_run)
+                    if metadata_changed:
+                        changed_chapters[chapter_file] = chapter_data
+                        stats.word_updates += 1
+                        append_decision_log(
+                            log_dir,
+                            {**decision, "new_strong": custom_key},
+                            "applied",
+                            dry_run,
+                        )
+                    else:
+                        stats.skipped += 1
+                        append_decision_log(
+                            log_dir,
+                            {**decision, "new_strong": custom_key},
+                            "already_applied",
+                            dry_run,
+                        )
                     stats.log_entries += 0 if dry_run else 1
                     continue
                 if word.get("strong") != expected_previous:

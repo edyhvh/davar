@@ -8,6 +8,10 @@ from scripts.delitzsch.review.workflow import (
     LexiconIndex,
     apply_decisions,
     iter_occurrences,
+    load_latest_decisions,
+    partition_reviewed_issues,
+    scan_issues,
+    summarize_reviewed_issues,
 )
 
 
@@ -111,6 +115,83 @@ def test_apply_dry_run_does_not_modify_chapter_or_write_log(tmp_path):
     assert stats.files_changed == 1
     assert chapter_path.read_text(encoding="utf-8") == before
     assert not log_dir.exists()
+
+
+def test_apply_set_strong_updates_reviewed_word_metadata(tmp_path):
+    parsed = tmp_path / "data" / "delitzsch_parsed"
+    lexicon_dir = tmp_path / "data" / "dict" / "lexicon" / "words"
+    log_dir = tmp_path / "data" / "delitzsch_review" / "decisions"
+    chapter_path = parsed / "matthew" / "1.json"
+    write_json(
+        chapter_path,
+        [
+            {
+                "chapter": 1,
+                "verses": [
+                    {
+                        "chapter": 1,
+                        "verse": 1,
+                        "hebrew": "לָ/חֶם",
+                        "words": [
+                            {
+                                "text": "לָחֶם",
+                                "strong": "Hl/H3433",
+                                "prefixes": ["Hl"],
+                                "possible_proper_name": True,
+                            }
+                        ],
+                    }
+                ],
+            }
+        ],
+    )
+    write_json(
+        lexicon_dir / "H3899.json",
+        {"strong_number": "H3899", "lemma": "לֶחֶם", "definitions": []},
+    )
+    decisions_path = tmp_path / "batch.json"
+    write_json(
+        decisions_path,
+        {
+            "decisions": [
+                {
+                    "action": "set_strong",
+                    "occurrence": {
+                        "book": "matthew",
+                        "chapter": 1,
+                        "verse": 1,
+                        "word_index": 0,
+                        "text": "לָחֶם",
+                        "strong": "Hl/H3433",
+                    },
+                    "previous_strong": "Hl/H3433",
+                    "new_strong": "H3899",
+                    "new_prefixes": [],
+                    "new_possible_proper_name": False,
+                }
+            ]
+        },
+    )
+
+    stats = apply_decisions(
+        decisions_path,
+        parsed,
+        LexiconIndex(lexicon_dir),
+        log_dir,
+    )
+
+    word = json.loads(chapter_path.read_text(encoding="utf-8"))[0]["verses"][0][
+        "words"
+    ][0]
+    verse = json.loads(chapter_path.read_text(encoding="utf-8"))[0]["verses"][0]
+    assert stats.word_updates == 1
+    assert word == {
+        "text": "לָחֶם",
+        "strong": "H3899",
+        "prefixes": [],
+        "possible_proper_name": False,
+    }
+    assert verse["hebrew"] == "לָחֶם"
 
 
 def test_apply_create_custom_entry_updates_word_and_custom_dictionary(tmp_path):
@@ -233,6 +314,74 @@ def test_apply_upsert_custom_definition_for_existing_strong(tmp_path):
     assert custom["H3442"]["definitions"][0]["text_es"] == "YHVH salva"
 
 
+def test_custom_entry_hebrew_is_available_as_normalized_lemma(tmp_path):
+    lexicon_dir = tmp_path / "data" / "dict" / "lexicon" / "words"
+    write_json(
+        lexicon_dir.parent / "custom_definitions.json",
+        {
+            "D0001": {
+                "strong_number": "D0001",
+                "hebrew": "תְּאוֹפִילוֹס",
+                "definitions": [{"text_en": "Theophilus"}],
+            }
+        },
+    )
+
+    lexicon = LexiconIndex(lexicon_dir)
+
+    assert lexicon.normalized_lemma("D0001") == "תאופילוס"
+
+
+def test_reviewed_manual_flags_are_not_remaining_issues(tmp_path):
+    parsed = tmp_path / "data" / "delitzsch_parsed"
+    lexicon_dir = tmp_path / "data" / "dict" / "lexicon" / "words"
+    log_dir = tmp_path / "data" / "delitzsch_review" / "decisions"
+    write_json(
+        parsed / "acts" / "1.json",
+        [
+            {
+                "chapter": 1,
+                "verses": [
+                    {
+                        "chapter": 1,
+                        "verse": 1,
+                        "hebrew": "בּוֹ",
+                        "words": [{"text": "בּוֹ", "strong": None, "prefixes": []}],
+                    }
+                ],
+            }
+        ],
+    )
+    log_dir.mkdir(parents=True)
+    (log_dir / "acts.jsonl").write_text(
+        json.dumps(
+            {
+                "status": "needs_manual_review",
+                "action": "needs_manual_review",
+                "occurrence": {
+                    "book": "acts",
+                    "chapter": 1,
+                    "verse": 1,
+                    "word_index": 0,
+                    "text": "בּוֹ",
+                },
+            },
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    issues = scan_issues(parsed, LexiconIndex(lexicon_dir))
+    latest = load_latest_decisions(log_dir)
+    remaining, reviewed = partition_reviewed_issues(issues, latest)
+
+    assert remaining == []
+    assert summarize_reviewed_issues(reviewed)["by_review_status"] == {
+        "reviewed_manual": 1
+    }
+
+
 def test_john1_custom_grammar_entries_have_definitions():
     root = Path(__file__).resolve().parents[1]
     custom_path = root / "data" / "dict" / "lexicon" / "custom_definitions.json"
@@ -242,6 +391,101 @@ def test_john1_custom_grammar_entries_have_definitions():
     assert custom["D0208"]["definitions"][0]["text_es"]
     assert custom["D0209"]["definitions"][0]["text_en"]
     assert custom["D0209"]["definitions"][0]["text_es"]
+
+
+def test_issue_119_grammar_policy_resolves_safe_null_forms():
+    root = Path(__file__).resolve().parents[1]
+    custom = json.loads(
+        (root / "data" / "dict" / "lexicon" / "custom_definitions.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    expected_instances = {
+        "D0208": 22,
+        "D0265": 8,
+        "D0266": 6,
+        "D0267": 2,
+        "D0268": 1,
+        "D0269": 1,
+        "D0270": 1,
+        "D0271": 31,
+    }
+    for key, instance_count in expected_instances.items():
+        assert custom[key]["definitions"][0]["text_en"]
+        assert custom[key]["definitions"][0]["text_es"]
+        assert len(custom[key]["nt_instances"]) == instance_count
+
+    issues = scan_issues(
+        root / "data" / "delitzsch_parsed",
+        LexiconIndex(root / "data" / "dict" / "lexicon" / "words"),
+    )
+    nulls = [issue.occurrence.text for issue in issues if issue.issue_type == "null_strong"]
+    custom_warnings = [
+        issue
+        for issue in issues
+        if issue.issue_type == "suspicious_strong"
+        and (issue.current_strong or "").split("/")[-1].startswith("D")
+    ]
+
+    assert sorted(nulls) == ["WO", "בּוֹכִיּוֹת"]
+    assert custom_warnings == []
+
+
+def test_issue_119_proper_name_review_has_no_remaining_scan_flags():
+    root = Path(__file__).resolve().parents[1]
+    parsed = root / "data" / "delitzsch_parsed"
+    lexicon = LexiconIndex(root / "data" / "dict" / "lexicon" / "words")
+    log_dir = root / "data" / "delitzsch_review" / "decisions"
+
+    issues = scan_issues(parsed, lexicon)
+    remaining, reviewed = partition_reviewed_issues(
+        issues, load_latest_decisions(log_dir)
+    )
+
+    assert remaining == []
+    assert summarize_reviewed_issues(reviewed)["by_review_status"] == {
+        "reviewed_manual": 2
+    }
+    assert all(issue.issue_type == "null_strong" for issue in issues)
+
+
+def test_issue_119_false_name_assignments_use_contextual_lexemes():
+    root = Path(__file__).resolve().parents[1]
+
+    def word(book, chapter, verse_number, word_index):
+        chapter_data = json.loads(
+            (root / "data" / "delitzsch_parsed" / book / f"{chapter}.json").read_text(
+                encoding="utf-8"
+            )
+        )[0]
+        verse = next(
+            item for item in chapter_data["verses"] if item["verse"] == verse_number
+        )
+        return verse["words"][word_index]
+
+    assert word("acts", 8, 30, 5)["strong"] == "H7121"
+    assert word("acts", 10, 10, 4) == {
+        "text": "לָחֶם",
+        "strong": "H3899",
+        "prefixes": [],
+        "possible_proper_name": False,
+    }
+    assert word("james", 1, 6, 6)["strong"] == "H1167"
+    assert word("john1", 2, 7, 15)["strong"] == "Hd/H3465"
+    assert word("mark", 9, 39, 10)["strong"] == "Hc/H3201"
+    assert word("matthew", 5, 13, 1)["strong"] == "H4417"
+    assert word("revelation", 2, 17, 18)["strong"] == "H3836"
+
+
+def test_issue_119_genuine_name_entries_have_definitions():
+    root = Path(__file__).resolve().parents[1]
+    lexicon = LexiconIndex(root / "data" / "dict" / "lexicon" / "words")
+
+    for strong in ("H3110", "H3141", "H3568", "H4023", "H4287", "H7410", "H8012"):
+        entry = lexicon.get(strong)
+        assert entry
+        assert entry["definitions"][0]["text_en"]
+        assert entry["definitions"][0]["text_es"]
 
 
 def test_john1_has_no_null_strongs_after_custom_grammar_pass():

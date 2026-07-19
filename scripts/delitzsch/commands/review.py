@@ -112,14 +112,27 @@ def collect_issues(args: argparse.Namespace) -> list[workflow.ReviewIssue]:
 
 
 def handle_scan(args: argparse.Namespace) -> int:
-    root, _, _, _ = make_context()
+    root, _, _, review = make_context()
     issues = collect_issues(args)
-    summary = workflow.summarize_issues(issues)
+    latest = workflow.load_latest_decisions(review / "decisions")
+    remaining, reviewed = workflow.partition_reviewed_issues(issues, latest)
+    summary = {
+        "remaining_issues": workflow.summarize_issues(remaining),
+        "reviewed_issues": workflow.summarize_reviewed_issues(reviewed),
+        "scan_flags": workflow.summarize_issues(issues),
+    }
     output_path = root / args.output
     output_path.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "summary": summary,
-        "issues": [asdict(issue) for issue in issues],
+        "issues": [
+            {
+                **asdict(issue),
+                "review_status": workflow.issue_review_status(issue, latest),
+                "review_action": (latest.get(issue.occurrence.key) or {}).get("action"),
+            }
+            for issue in issues
+        ],
     }
     with output_path.open("w", encoding="utf-8") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
@@ -132,6 +145,8 @@ def handle_scan(args: argparse.Namespace) -> int:
 def handle_batch(args: argparse.Namespace) -> int:
     root, _, _, review = make_context()
     issues = collect_issues(args)
+    latest = workflow.load_latest_decisions(review / "decisions")
+    issues, _ = workflow.partition_reviewed_issues(issues, latest)
     issue_types = set(args.issue_types) if args.issue_types else None
 
     if args.all:
@@ -216,8 +231,12 @@ def resolve_decisions_file(value: str, root: Path, review: Path) -> Path:
 def handle_report(args: argparse.Namespace) -> int:
     _, _, _, review = make_context()
     issues = collect_issues(args)
+    latest = workflow.load_latest_decisions(review / "decisions")
+    remaining, reviewed = workflow.partition_reviewed_issues(issues, latest)
     payload = {
-        "remaining_issues": workflow.summarize_issues(issues),
+        "remaining_issues": workflow.summarize_issues(remaining),
+        "reviewed_issues": workflow.summarize_reviewed_issues(reviewed),
+        "scan_flags": workflow.summarize_issues(issues),
         "decision_logs": workflow.summarize_decision_logs(review / "decisions"),
     }
     print(json.dumps(payload, ensure_ascii=False, indent=2))
