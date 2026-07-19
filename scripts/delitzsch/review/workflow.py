@@ -690,6 +690,10 @@ def _add_custom_entry(
             "transliteration_es": decision.get("transliteration_es", ""),
             "transliteration_en": decision.get("transliteration_en", ""),
             "is_custom": True,
+            # A Delitzsch review establishes this lexeme for its recorded
+            # occurrences. Other corpora must opt into global reuse explicitly
+            # after their own lexical review.
+            "mapping_scope": decision.get("mapping_scope", "instances_only"),
             "definitions": [],
             "root": decision.get("root", ""),
             "root_strong": decision.get("root_strong", ""),
@@ -699,6 +703,9 @@ def _add_custom_entry(
     )
     entry.setdefault("strong_number", key)
     entry.setdefault("is_custom", True)
+    entry.setdefault(
+        "mapping_scope", decision.get("mapping_scope", "instances_only")
+    )
     entry.setdefault("definitions", [])
     entry.setdefault("nt_instances", [])
 

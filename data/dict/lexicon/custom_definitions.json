@@ -28860,6 +28860,7 @@
     "transliteration_es": "bo",
     "transliteration_en": "bo",
     "is_custom": true,
+    "mapping_scope": "exact",
     "definitions": [
       {
         "text_en": "in him; in it; with him, preposition ב with third masculine singular suffix.",
@@ -29034,6 +29035,7 @@
     "transliteration_es": "banu",
     "transliteration_en": "banu",
     "is_custom": true,
+    "mapping_scope": "exact",
     "definitions": [
       {
         "text_en": "in us; among us; with us, preposition ב with first common plural suffix.",
@@ -30261,6 +30263,7 @@
     "transliteration_es": "li",
     "transliteration_en": "li",
     "is_custom": true,
+    "mapping_scope": "exact",
     "definitions": [
       {
         "text_en": "to me; for me, preposition ל with first common singular suffix.",
@@ -30337,6 +30340,7 @@
     "transliteration_es": "bi",
     "transliteration_en": "bi",
     "is_custom": true,
+    "mapping_scope": "exact",
     "definitions": [
       {
         "text_en": "in me; with me, preposition ב with first common singular suffix.",
@@ -30371,6 +30375,7 @@
     "transliteration_es": "lo",
     "transliteration_en": "lo",
     "is_custom": true,
+    "mapping_scope": "exact",
     "definitions": [
       {
         "text_en": "to him; for him, preposition ל with third masculine singular suffix.",
@@ -30433,6 +30438,7 @@
     "transliteration_es": "immekha",
     "transliteration_en": "immekha",
     "is_custom": true,
+    "mapping_scope": "exact",
     "definitions": [
       {
         "text_en": "with you, preposition עִם with second masculine singular suffix.",
@@ -30460,6 +30466,7 @@
     "transliteration_es": "otan",
     "transliteration_en": "otan",
     "is_custom": true,
+    "mapping_scope": "exact",
     "definitions": [
       {
         "text_en": "them, direct-object marker אֵת with third feminine plural suffix.",
@@ -30487,6 +30494,7 @@
     "transliteration_es": "uveadekha",
     "transliteration_en": "uveadekha",
     "is_custom": true,
+    "mapping_scope": "exact",
     "definitions": [
       {
         "text_en": "and for you; and on your behalf, conjunction ו plus בְּעַד with second masculine singular suffix.",
@@ -30514,6 +30522,7 @@
     "transliteration_es": "bah",
     "transliteration_en": "bah",
     "is_custom": true,
+    "mapping_scope": "exact",
     "definitions": [
       {
         "text_en": "in her; in it, preposition ב with third feminine singular suffix.",
@@ -30744,5 +30753,27 @@
         "text": "בָהּ"
       }
     ]
+  },
+  "D0272": {
+    "strong_number": "D0272",
+    "hebrew": "גַרְעִין",
+    "transliteration_es": "garin",
+    "transliteration_en": "garin",
+    "is_custom": true,
+    "mapping_scope": "exact",
+    "definitions": [
+      {
+        "text_en": "grain, kernel, or seed.",
+        "text_es": "grano, pepita o semilla.",
+        "source": "hutter_image_review",
+        "order": 1
+      }
+    ],
+    "root": "גרע",
+    "root_strong": "",
+    "manual_instances": [
+      "Hutter Matthew 17:20"
+    ],
+    "nt_instances": []
   }
 }

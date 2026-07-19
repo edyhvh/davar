@@ -11,10 +11,63 @@ from scripts.hutter.map_strongs import (
     build_unresolved_queue,
     contextual_custom_decision,
     contextual_custom_variant_decision,
+    decide_from_indexes,
+    load_lexicon_lemmas,
     ocr_crosscheck_decision,
     same_verse_spelling_decision,
     unresolved_reason,
 )
+
+
+def test_context_only_custom_entries_are_not_global_hutter_lemmas(
+    tmp_path, monkeypatch
+) -> None:
+    lexicon_words = tmp_path / "words"
+    lexicon_roots = tmp_path / "roots"
+    lexicon_words.mkdir()
+    lexicon_roots.mkdir()
+    custom_definitions = tmp_path / "custom_definitions.json"
+    custom_definitions.write_text(
+        json.dumps(
+            {
+                "D0001": {"hebrew": "לִי", "mapping_scope": "instances_only"},
+                "D0002": {"hebrew": "מָרְתָה", "mapping_scope": "global"},
+                # Missing scope preserves compatibility for existing reviewed
+                # corpus entries created before scoping was introduced.
+                "D0003": {"hebrew": "תַּלְמוּד"},
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr("scripts.hutter.map_strongs.LEXICON_WORDS_ROOT", lexicon_words)
+    monkeypatch.setattr("scripts.hutter.map_strongs.LEXICON_ROOTS_ROOT", lexicon_roots)
+    monkeypatch.setattr(
+        "scripts.hutter.map_strongs.CUSTOM_DEFINITIONS_PATH", custom_definitions
+    )
+
+    lemmas = load_lexicon_lemmas()
+
+    assert "לי" not in lemmas
+    assert lemmas["מרתה"] == Counter({"D0002": 2})
+    assert lemmas["תלמוד"] == Counter({"D0003": 2})
+
+
+def test_exact_custom_lemma_matches_whole_pointed_token_without_prefix_leakage() -> None:
+    exact_custom = {"לִי": Counter({"D0265": 3})}
+
+    exact = decide_from_indexes("לִי", {}, {}, {}, {}, {}, exact_custom)
+    longer = decide_from_indexes("בְּלִי", {}, {}, {}, {}, {}, exact_custom)
+    conjoined = decide_from_indexes("וּלִי", {}, {}, {}, {}, {}, exact_custom)
+
+    assert exact is not None
+    assert exact.strong == "D0265"
+    assert exact.method == "exact_custom_lemma"
+    assert longer is None
+    assert conjoined is not None
+    assert conjoined.strong == "Hc/D0265"
+    assert conjoined.prefixes == ("Hc",)
 
 
 def test_contextual_custom_mapping_handles_hutter_name_spelling_without_position() -> None:
@@ -40,6 +93,16 @@ def test_contextual_custom_mapping_rejects_ambiguous_fuzzy_names() -> None:
     )
 
     assert match is None
+
+
+def test_contextual_custom_mapping_breaks_same_entry_form_ties_deterministically() -> None:
+    match = best_contextual_custom_match(
+        "הקנא",
+        {"D0086": {"קנאי", "הקני"}},
+    )
+
+    assert match is not None
+    assert match.custom_surface == "הקני"
 
 
 def test_contextual_variant_propagates_reviewed_form_with_prefix() -> None:
@@ -144,6 +207,7 @@ def ocr_decision(
         {alternate_word: Counter({candidate: 2})},
         {},
         {},
+        {},
         custom_name_forms or {},
         verse_custom_forms or {},
         {},
@@ -228,6 +292,27 @@ def test_image_reviewed_titus_names_use_custom_mappings() -> None:
 
     assert mapped["אַרְטֵמָא"] == "D0212"
     assert mapped["בְּנִיקוֹפּוֹלִיס"] == "D0213"
+
+
+def test_short_custom_clitics_map_exactly_without_leaking_into_longer_words() -> None:
+    assert mapped_words("acts", 1, 6)["לוֹ"] == "D0266"
+    assert mapped_words("romans", 2, 12)["בְּלִי"] == "H1097"
+    assert mapped_words("romans", 12, 1)["לוֹבָה"] is None
+
+
+def test_regeneration_safety_review_repairs_clitics_and_false_inner_matches() -> None:
+    assert mapped_words("john", 4, 46)["וּבְנוֹ"] == "Hc/H1121"
+    assert mapped_words("matthew", 28, 13)["בְּשָׁכְבֵּנוּ"] == "Hb/H7901"
+    assert mapped_words("thessalonians1", 5, 11)["וּבְנוּ"] == "Hc/H1129"
+    assert mapped_words("corinthians2", 10, 2)["הָלַכְנוּ"] == "H1980"
+
+
+def test_regeneration_safety_review_uses_image_corrected_matthew_forms() -> None:
+    assert mapped_words("matthew", 17, 20)["כְּמוֹ"] == "H3644"
+    assert mapped_words("matthew", 17, 20)["גַרְעִין"] == "D0272"
+    assert mapped_words("matthew", 19, 13)["הוּגְשׁוּ"] == "H5066"
+    assert mapped_words("thessalonians1", 2, 6)["כְּמוֹ"] == "H3644"
+    assert mapped_words("titus", 1, 10)["וּבְחוֹ"] is None
 
 
 def mapped_words(

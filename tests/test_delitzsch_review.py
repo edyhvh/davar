@@ -261,6 +261,7 @@ def test_apply_create_custom_entry_updates_word_and_custom_dictionary(tmp_path):
     assert updated_chapter[0]["verses"][0]["words"][0]["strong"] == "D0001"
     assert custom["D0001"]["definitions"][0]["text_en"] == "Peter"
     assert custom["D0001"]["nt_instances"][0]["book"] == "acts"
+    assert custom["D0001"]["mapping_scope"] == "instances_only"
 
 
 def test_apply_upsert_custom_definition_for_existing_strong(tmp_path):
@@ -414,6 +415,9 @@ def test_issue_119_grammar_policy_resolves_safe_null_forms():
         assert custom[key]["definitions"][0]["text_en"]
         assert custom[key]["definitions"][0]["text_es"]
         assert len(custom[key]["nt_instances"]) == instance_count
+
+    for key in ("D0265", "D0266", "D0267", "D0268", "D0269", "D0270", "D0271"):
+        assert custom[key]["mapping_scope"] == "exact"
 
     issues = scan_issues(
         root / "data" / "delitzsch_parsed",

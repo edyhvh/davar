@@ -23,10 +23,42 @@ as a locator/cross-check and was rejected whenever it disagreed with the image.
 | After continued singleton image review | 107,710 | 103,316 | 4,394 | 95.92% |
 | After OCR-difference image review | 107,710 | 103,476 | 4,234 | 96.07% |
 | After second OCR-difference image review | 107,710 | 103,618 | 4,092 | 96.20% |
+| After regeneration-safety and clitic review | 107,710 | 103,619 | 4,091 | 96.20% |
 
 The word total changed because image-confirmed OCR repairs split or merged tokens
 differently. Relative to the issue baseline, 2,848 fewer tokens are unresolved.
-Titus, the last book below 90% during this pass, moved from 89.0% to 93.7%.
+Titus, the last book below 90% during this pass, moved from 89.0% to 93.6%.
+
+## Regeneration-safety and clitic review
+
+The Delitzsch #119 review added accurate custom definitions for short inflected
+function words such as `לִי`, `לוֹ`, `בִּי`, `בָּהּ`, and `בוֹ`. A
+plain regeneration initially treated those definitions as prefix-strippable
+global lemmas. That could map `בְּלִי` through `לִי`, map `לוֹבָה` through
+`בָּהּ`, and change more than a thousand unrelated assignments.
+
+Custom definitions now declare their reuse scope. Reviewed clitics use an
+`exact` scope that requires the complete pointed token, with only an optional
+outer conjunction allowed. Delitzsch review entries default to
+`instances_only`; globally reusable Hutter lexemes keep their existing global
+behavior. The regenerated report records 1,589 `exact_custom_lemma` mappings
+and no longer permits an embedded short form to outrank the full printed word.
+
+This also replaces widespread semantically invalid legacy assignments: `לוֹ`
+no longer maps to H7592 (ask), `לִי` no longer borrows unrelated positional
+Strong numbers, and the pointed clitics `בִּי`, `בוֹ`, `בָּהּ`, and `בָּנוּ`
+use their reviewed custom meanings. Corrected Delitzsch evidence also restores
+H7121 for `קוֹרֵא`, H3899 for `לֶחֶם`, H4417 for `מֶּלַח`, and
+H1167 for the reviewed `בַעַל` occurrences.
+
+Seven collision-prone verses were checked directly against their page images.
+The source now preserves `כִּי־הָלַכְנוּ` in 2 Corinthians 10:2,
+`כְּמוֹ גַרְעִין` in Matthew 17:20, `הוּגְשׁוּ` in Matthew
+19:13, `כְּמוֹ` in 1 Thessalonians 2:6, and the distinct son,
+sleeping, and build forms in John 4:46, Matthew 28:13, and
+1 Thessalonians 5:11. Titus 1:10 `וּבְחוֹ` remains unresolved after
+the image disproved the earlier `וּבְנוֹ` transcription; no lexical assignment was
+invented for the still-uncertain printed form.
 
 ## Second OCR-difference image review
 

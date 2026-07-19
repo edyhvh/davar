@@ -207,9 +207,39 @@ def load_lexicon_lemmas() -> dict[str, Counter[str]]:
 
     custom = load_json(CUSTOM_DEFINITIONS_PATH)
     for strong, entry in custom.items():
+        # Custom entries created for reviewed occurrences can be deliberately
+        # context-only.  Treating short inflected forms such as לִי or לוֹ as
+        # global lemmas lets them outrank well-attested Hebrew forms throughout
+        # Hutter, even though their evidence belongs to specific Delitzsch
+        # verses.  Context-only entries remain available through
+        # load_contextual_custom_forms().
+        if entry.get("mapping_scope", "global") != "global":
+            continue
         lemma = normalize_hebrew(str(entry.get("hebrew") or ""))
         if lemma:
             index[lemma][str(strong)] += 2
+    return index
+
+
+def load_exact_custom_lemmas() -> dict[str, Counter[str]]:
+    """Load reviewed custom forms that may match only a complete pointed token."""
+
+    index: dict[str, Counter[str]] = defaultdict(Counter)
+    custom = load_json(CUSTOM_DEFINITIONS_PATH)
+    for strong, entry in custom.items():
+        if entry.get("mapping_scope") != "exact":
+            continue
+        raw_forms = {
+            str(entry.get("hebrew") or ""),
+            *(
+                str(instance.get("text") or "")
+                for instance in entry.get("nt_instances") or []
+            ),
+        }
+        for raw_form in sorted(raw_forms):
+            pointed = normalize_pointed_hebrew(raw_form)
+            if pointed:
+                index[pointed][str(strong)] += 1
     return index
 
 
@@ -317,7 +347,7 @@ def best_contextual_custom_match(
         for prefixes, hutter_surface in prefix_parses(text):
             if len(hutter_surface) < 4:
                 continue
-            for custom_surface in custom_forms:
+            for custom_surface in sorted(custom_forms):
                 similarity = SequenceMatcher(
                     None, hutter_surface, custom_surface
                 ).ratio()
@@ -429,6 +459,7 @@ def build_indexes() -> tuple[
     dict[str, Counter[StrongCandidate]],
     dict[str, Counter[str]],
     dict[str, Counter[str]],
+    dict[str, Counter[str]],
 ]:
     pointed_surface_index: dict[str, Counter[StrongCandidate]] = defaultdict(Counter)
     surface_index: dict[str, Counter[StrongCandidate]] = defaultdict(Counter)
@@ -450,7 +481,13 @@ def build_indexes() -> tuple[
         if base and root_surface:
             base_form_index[root_surface][base] += 1
 
-    return pointed_surface_index, surface_index, base_form_index, load_lexicon_lemmas()
+    return (
+        pointed_surface_index,
+        surface_index,
+        base_form_index,
+        load_lexicon_lemmas(),
+        load_exact_custom_lemmas(),
+    )
 
 
 def best_counter_value[T](counter: Counter[T]) -> tuple[T | None, int, float]:
@@ -489,6 +526,7 @@ def decide_from_indexes(
     surface_index: dict[str, Counter[StrongCandidate]],
     base_form_index: dict[str, Counter[str]],
     lemma_index: dict[str, Counter[str]],
+    exact_custom_lemma_index: dict[str, Counter[str]],
 ) -> MappingDecision | None:
     surface = normalize_hebrew(text)
     override = manual_overrides.get(surface)
@@ -497,6 +535,42 @@ def decide_from_indexes(
         return override_decision
 
     pointed_surface = normalize_pointed_hebrew(text)
+    custom_exact, custom_count, custom_quality = best_counter_value(
+        exact_custom_lemma_index.get(pointed_surface, Counter())
+    )
+    exact_prefixes: tuple[str, ...] = ()
+    exact_root_surface = pointed_surface
+    if not custom_exact and pointed_surface.startswith("ו"):
+        # Permit only an outer conjunction around an exact reviewed clitic.
+        # This handles forms such as וּבוֹ without reopening generic
+        # prefix stripping for short lemmas (בְּלִי must not become
+        # Hb/D0265, for example).
+        index = 1
+        while index < len(pointed_surface) and unicodedata.combining(
+            pointed_surface[index]
+        ):
+            index += 1
+        exact_root_surface = pointed_surface[index:]
+        custom_exact, custom_count, custom_quality = best_counter_value(
+            exact_custom_lemma_index.get(exact_root_surface, Counter())
+        )
+        if custom_exact:
+            exact_prefixes = ("Hc",)
+    if custom_exact and custom_quality >= 0.9:
+        return MappingDecision(
+            strong=composite_strong(exact_prefixes, custom_exact),
+            prefixes=exact_prefixes,
+            confidence="high",
+            method="exact_custom_lemma",
+            evidence=(
+                f"pointed_surface={pointed_surface}; root_surface={exact_root_surface}; "
+                f"reviewed_custom={custom_exact}; "
+                f"forms={custom_count}; quality={custom_quality:.3f}; "
+                "scope=exact-token-only"
+            ),
+            score=1.0,
+        )
+
     pointed_exact, pointed_count, pointed_quality = best_counter_value(
         pointed_surface_index.get(pointed_surface, Counter())
     )
@@ -744,6 +818,7 @@ def ocr_crosscheck_decision(
     surface_index: dict[str, Counter[StrongCandidate]],
     base_form_index: dict[str, Counter[str]],
     lemma_index: dict[str, Counter[str]],
+    exact_custom_lemma_index: dict[str, Counter[str]],
     custom_name_forms: dict[str, set[str]],
     verse_custom_forms: dict[str, set[str]],
     contextual_custom_variants: dict[str, Counter[str]],
@@ -766,6 +841,7 @@ def ocr_crosscheck_decision(
             surface_index,
             base_form_index,
             lemma_index,
+            exact_custom_lemma_index,
         ),
         contextual_custom_decision(ocr_word, verse_custom_forms),
         contextual_custom_variant_decision(ocr_word, contextual_custom_variants),
@@ -872,7 +948,7 @@ def aligned_custom_name_decision(
     for prefixes, hutter_surface in prefix_parses(hutter_word):
         if len(hutter_surface) < 4:
             continue
-        for custom_surface in custom_name_forms[strong]:
+        for custom_surface in sorted(custom_name_forms[strong]):
             score = SequenceMatcher(None, hutter_surface, custom_surface).ratio()
             if score > best_score:
                 best_score = score
@@ -928,6 +1004,7 @@ def map_book(
     surface_index: dict[str, Counter[StrongCandidate]],
     base_form_index: dict[str, Counter[str]],
     lemma_index: dict[str, Counter[str]],
+    exact_custom_lemma_index: dict[str, Counter[str]],
     include_low_confidence: bool,
 ) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     hutter = load_json(HUTTER_ROOT / f"{book}.json")
@@ -973,6 +1050,7 @@ def map_book(
                     surface_index,
                     base_form_index,
                     lemma_index,
+                    exact_custom_lemma_index,
                 )
                 aligned_decision = aligned_spelling_decision(
                     word_text, aligned.get(index)
@@ -1001,6 +1079,7 @@ def map_book(
                         surface_index,
                         base_form_index,
                         lemma_index,
+                        exact_custom_lemma_index,
                         custom_name_forms,
                         verse_custom_forms,
                         contextual_custom_variants,
@@ -1145,7 +1224,13 @@ def main() -> int:
     if missing:
         raise SystemExit(f"Unknown or non-New-Testament Hutter books: {', '.join(missing)}")
 
-    pointed_surface_index, surface_index, base_form_index, lemma_index = build_indexes()
+    (
+        pointed_surface_index,
+        surface_index,
+        base_form_index,
+        lemma_index,
+        exact_custom_lemma_index,
+    ) = build_indexes()
     manual_overrides, contextual_manual_overrides = load_manual_overrides()
     custom_name_forms = load_custom_name_forms()
     contextual_custom_forms = load_contextual_custom_forms()
@@ -1171,6 +1256,7 @@ def main() -> int:
             surface_index,
             base_form_index,
             lemma_index,
+            exact_custom_lemma_index,
             args.include_low_confidence,
         )
         words = [
