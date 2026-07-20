@@ -231,6 +231,7 @@ def load_exact_custom_lemmas() -> dict[str, Counter[str]]:
             continue
         raw_forms = {
             str(entry.get("hebrew") or ""),
+            *(str(form) for form in entry.get("mapping_forms") or []),
             *(
                 str(instance.get("text") or "")
                 for instance in entry.get("nt_instances") or []

@@ -12,6 +12,7 @@ from scripts.hutter.map_strongs import (
     contextual_custom_decision,
     contextual_custom_variant_decision,
     decide_from_indexes,
+    load_exact_custom_lemmas,
     load_lexicon_lemmas,
     ocr_crosscheck_decision,
     same_verse_spelling_decision,
@@ -68,6 +69,36 @@ def test_exact_custom_lemma_matches_whole_pointed_token_without_prefix_leakage()
     assert conjoined is not None
     assert conjoined.strong == "Hc/D0265"
     assert conjoined.prefixes == ("Hc",)
+
+
+def test_exact_custom_lemma_loads_explicit_pointed_mapping_forms(
+    tmp_path, monkeypatch
+) -> None:
+    custom_definitions = tmp_path / "custom_definitions.json"
+    custom_definitions.write_text(
+        json.dumps(
+            {
+                "D0001": {
+                    "hebrew": "לָנוּ",
+                    "mapping_scope": "exact",
+                    "mapping_forms": ["לָּנוּ", "לְנוּ"],
+                }
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(
+        "scripts.hutter.map_strongs.CUSTOM_DEFINITIONS_PATH", custom_definitions
+    )
+
+    forms = load_exact_custom_lemmas()
+
+    assert forms == {
+        "לָנוּ": Counter({"D0001": 1}),
+        "לָּנוּ": Counter({"D0001": 1}),
+        "לְנוּ": Counter({"D0001": 1}),
+    }
 
 
 def test_contextual_custom_mapping_handles_hutter_name_spelling_without_position() -> None:
@@ -298,6 +329,18 @@ def test_short_custom_clitics_map_exactly_without_leaking_into_longer_words() ->
     assert mapped_words("acts", 1, 6)["לוֹ"] == "D0266"
     assert mapped_words("romans", 2, 12)["בְּלִי"] == "H1097"
     assert mapped_words("romans", 12, 1)["לוֹבָה"] is None
+
+
+def test_image_reviewed_pronominal_forms_use_exact_custom_mappings() -> None:
+    assert mapped_words("acts", 6, 2)["לָנוּ"] == "D0273"
+    assert mapped_words("luke", 4, 34)["לָּנוּ"] == "D0273"
+    assert mapped_words("acts", 16, 12)["לְנוּ"] == "D0273"
+    assert mapped_words("acts", 4, 29)["לְךָ"] == "D0274"
+    assert mapped_words("acts", 3, 6)["לָךְ"] == "D0275"
+    assert mapped_words("acts", 5, 8)["לָהּ"] == "D0276"
+    assert mapped_words("acts", 4, 17)["בָּהֶם"] == "D0277"
+    assert mapped_words("acts", 1, 2)["בָּם"] == "D0278"
+    assert mapped_words("acts", 22, 19)["בָּךְ"] == "D0279"
 
 
 def test_regeneration_safety_review_repairs_clitics_and_false_inner_matches() -> None:

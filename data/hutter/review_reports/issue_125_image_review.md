@@ -24,10 +24,33 @@ as a locator/cross-check and was rejected whenever it disagreed with the image.
 | After OCR-difference image review | 107,710 | 103,476 | 4,234 | 96.07% |
 | After second OCR-difference image review | 107,710 | 103,618 | 4,092 | 96.20% |
 | After regeneration-safety and clitic review | 107,710 | 103,619 | 4,091 | 96.20% |
+| After exact pronominal-form review | 107,710 | 103,619 | 4,091 | 96.20% |
 
 The word total changed because image-confirmed OCR repairs split or merged tokens
 differently. Relative to the issue baseline, 2,848 fewer tokens are unresolved.
 Titus, the last book below 90% during this pass, moved from 89.0% to 93.6%.
+
+## Exact pronominal-form review
+
+This correctness pass reviewed the recurring pointed forms for *to/for us*,
+*to/for you*, *to/for her*, and *in/among them or you*. Representative crops
+were checked directly, including Acts 1:2, 3:6, 4:17, 4:29, 5:8, 6:2,
+16:12, and 22:19, plus Luke 4:34. The scans confirm the extracted forms and
+their less common vowel-point variants.
+
+Seven exact custom entries now cover `לָנוּ` (also the printed variants
+`לָּנוּ` and `לְנוּ`), `לְךָ`, `לָךְ`, `לָהּ`, `בָּהֶם`,
+`בָּם`, and `בָּךְ`. An explicit `mapping_forms` field records these
+reviewed variants without weakening exact-token matching. Optional outer
+conjunctions remain supported, but consonant-only or embedded matches are not.
+
+The regeneration corrected 564 assignments. Coverage did not change because
+all 564 tokens already carried a Strong value, but those values were often
+semantically impossible: `לָנוּ` alone had been scattered over 51 unrelated
+Strong IDs. The reviewed exact forms now have stable definitions, and the
+`exact_custom_lemma` total increased from 1,589 to 2,153. The same image review
+also removed two stale `<unk>` markers from 1 John 4:17, restoring the printed
+`לָנוּ` and `אֲנַחְנוּ`.
 
 ## Regeneration-safety and clitic review
 
