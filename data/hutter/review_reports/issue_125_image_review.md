@@ -25,10 +25,34 @@ as a locator/cross-check and was rejected whenever it disagreed with the image.
 | After second OCR-difference image review | 107,710 | 103,618 | 4,092 | 96.20% |
 | After regeneration-safety and clitic review | 107,710 | 103,619 | 4,091 | 96.20% |
 | After exact pronominal-form review | 107,710 | 103,619 | 4,091 | 96.20% |
+| After continued inflection image review | 107,710 | 103,676 | 4,034 | 96.25% |
 
 The word total changed because image-confirmed OCR repairs split or merged tokens
-differently. Relative to the issue baseline, 2,848 fewer tokens are unresolved.
-Titus, the last book below 90% during this pass, moved from 89.0% to 93.6%.
+differently. Relative to the issue baseline, 2,906 fewer tokens are unresolved.
+Titus, the last book below 90% during this pass, moved from 89.0% to 93.7%.
+
+## Continued inflection image review
+
+This pass reviewed the strongest remaining independent-OCR and suffix-analysis
+candidates against the Hutter crops. It resolved 57 previously unresolved
+tokens across 18 books, reducing the queue from 4,091 to 4,034 without changing
+the 107,710-word corpus total.
+
+The accepted forms include image-confirmed inflections for watching, keeping,
+stoning, serving, appointing, leaving, borrowing, governing, trembling,
+working, puffing up, doubting, bearing, placing, knowing, and taking. Reviewed
+suffixed nouns cover affliction, consolation, confidence, conduct, generosity,
+possessions, storehouses, decrees, lack, lamps, and witnesses. Every lexical
+override is restricted to its reviewed verse so an unusual Hutter spelling
+cannot propagate to an unrelated context.
+
+Three genuine New Testament terms now have custom entries: D0280 for Nicodemus,
+D0281 for Tiberias, and D0282 for the Aramaic `טַלְיָא`, girl or maiden. These
+are no longer forced toward superficially similar Old Testament lemmas.
+
+The image for 2 Peter 1:19 also disproved the transcription `כּוֹכְבֵיכֶם`
+(your stars). The page clearly prints `בִּלְבַבְכֶם`, in your hearts, which is
+now restored and mapped to H3824 with only the printed ב preposition.
 
 ## Exact pronominal-form review
 

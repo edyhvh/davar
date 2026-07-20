@@ -343,6 +343,35 @@ def test_image_reviewed_pronominal_forms_use_exact_custom_mappings() -> None:
     assert mapped_words("acts", 22, 19)["בָּךְ"] == "D0279"
 
 
+def test_continued_image_review_maps_verified_inflections_and_nt_terms() -> None:
+    cases = [
+        ("acts", 14, 22, "וְהִפְקִידוּם", "Hc/H6485"),
+        ("corinthians1", 8, 1, "מִפִּיחָה", "H5301"),
+        ("galatians", 5, 6, "פּוֹעֲלָה", "H6466"),
+        ("hebrews", 10, 35, "מִבְטַחֲכֶם", "H4009"),
+        ("john", 6, 23, "מִטִּבֶרְיָס", "D0281"),
+        ("john", 11, 8, "לְרָגְמֵם", "Hl/H7275"),
+        ("john", 19, 39, "נִיקְדֵם", "D0280"),
+        ("luke", 8, 37, "וַיִּשְׁאֲלוּהוּ", "Hc/H7592"),
+        ("mark", 4, 21, "הַנִּיר", "Hd/H5369"),
+        ("matthew", 9, 25, "טַלְיָא", "D0282"),
+        ("matthew", 28, 17, "סָפֵקוּ", "D0232"),
+        ("revelation", 17, 6, "שֵׁכֹּר", "H7937"),
+        ("thessalonians1", 5, 12, "לְדַעְתְּכֶם", "Hl/H3045"),
+        ("titus", 3, 12, "לְחוֹרֵף", "Hl/H2778"),
+    ]
+
+    for book, chapter, verse, text, strong in cases:
+        assert mapped_words(book, chapter, verse)[text] == strong
+
+
+def test_image_review_corrects_second_peter_hearts_transcription() -> None:
+    words = mapped_words("peter2", 1, 19)
+
+    assert "כּֽוֹכְבֵיכֶֽם" not in words
+    assert words["בִּלְבַבְכֶֽם"] == "Hb/H3824"
+
+
 def test_regeneration_safety_review_repairs_clitics_and_false_inner_matches() -> None:
     assert mapped_words("john", 4, 46)["וּבְנוֹ"] == "Hc/H1121"
     assert mapped_words("matthew", 28, 13)["בְּשָׁכְבֵּנוּ"] == "Hb/H7901"
