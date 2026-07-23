@@ -365,6 +365,48 @@ def test_continued_image_review_maps_verified_inflections_and_nt_terms() -> None
         assert mapped_words(book, chapter, verse)[text] == strong
 
 
+def test_substantial_image_review_maps_verified_suffix_forms() -> None:
+    cases = [
+        ("acts", 14, 5, "נַגִּידֵיהֶם", "H5057"),
+        ("acts", 25, 7, "לְהַרְאוֹתָֽן", "Hl/H7200"),
+        ("acts", 26, 31, "בְּיֵינוֹתָם", "H996"),
+        ("colossians", 2, 5, "סִדְרְכֶם", "H5468"),
+        ("corinthians1", 6, 15, "גְוִיּוֹתֵיכֶם", "H1472"),
+        ("corinthians2", 8, 2, "מִסְכְּנוּתָם", "H4542"),
+        ("hebrews", 7, 6, "מֵתּוֹלְדוֹתָם", "Hm/H8435"),
+        ("john", 17, 19, "וּלְמַעֲנֵיהֶם", "Hc/Hl/H4616"),
+        ("luke", 12, 35, "וְנֵרוֹתֵיכֶם", "Hc/H5369"),
+        ("luke", 13, 10, "הָעֲדוֹתֵיהֶם", "Hd/H5712"),
+        ("matthew", 16, 13, "קֵיסַרִיָּה", "D0283"),
+        ("peter2", 1, 10, "בַּמְאַדְכֶם", "Hb/H3966"),
+        ("revelation", 4, 10, "עִטְרוֹתָם", "H5850"),
+        ("romans", 1, 24, "גְּוִיּוֹתָם", "H1472"),
+        ("timothy1", 6, 15, "בְּעִתּוֹתָיו", "Hb/H6256"),
+    ]
+
+    for book, chapter, verse, text, strong in cases:
+        assert mapped_words(book, chapter, verse)[text] == strong
+
+
+def test_substantial_image_review_maps_additional_lexical_inflections() -> None:
+    cases = [
+        ("acts", 4, 37, "מְחִירוֹ", "H4242"),
+        ("acts", 20, 15, "בָּאֳנִיָּם", "Hb/H591"),
+        ("ephesians", 4, 26, "כַּעַסְכֶם", "H3708"),
+        ("galatians", 6, 5, "סִבְלוֹ׃", "H5447"),
+        ("john", 5, 6, "מִמַּחֲלָתֶךָ", "Hm/H4244"),
+        ("luke", 2, 28, "זְרוֹעָיו", "H2220"),
+        ("luke", 19, 8, "רְכוּשִׁי", "H7399"),
+        ("matthew", 3, 12, "מִזְרֵהוּ", "H4214"),
+        ("matthew", 28, 19, "וְטָבְלוּ", "Hc/H2881"),
+        ("philippians", 1, 3, "זִכְרְכֶם", "H2143"),
+        ("revelation", 18, 11, "מִקְחוֹתָם", "H4727"),
+    ]
+
+    for book, chapter, verse, text, strong in cases:
+        assert mapped_words(book, chapter, verse)[text] == strong
+
+
 def test_image_review_corrects_second_peter_hearts_transcription() -> None:
     words = mapped_words("peter2", 1, 19)
 

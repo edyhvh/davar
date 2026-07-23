@@ -26,10 +26,33 @@ as a locator/cross-check and was rejected whenever it disagreed with the image.
 | After regeneration-safety and clitic review | 107,710 | 103,619 | 4,091 | 96.20% |
 | After exact pronominal-form review | 107,710 | 103,619 | 4,091 | 96.20% |
 | After continued inflection image review | 107,710 | 103,676 | 4,034 | 96.25% |
+| After suffix-form image review | 107,710 | 103,729 | 3,981 | 96.30% |
 
 The word total changed because image-confirmed OCR repairs split or merged tokens
-differently. Relative to the issue baseline, 2,906 fewer tokens are unresolved.
+differently. Relative to the issue baseline, 2,959 fewer tokens are unresolved.
 Titus, the last book below 90% during this pass, moved from 89.0% to 93.7%.
+
+## Suffix-form image review
+
+This pass tested remaining suffix-analysis candidates against the page crops
+before assigning a lemma. It resolved 53 tokens across 17 books, reducing the
+queue from 4,034 to 3,981 without changing the corpus text or word total.
+Accepted forms include suffixed bodies, crowns, times, genealogy, order,
+poverty, remembrance, lamps, ships, burdens, merchandise, adversaries, and
+inflections of showing, pursuing, immersing, falling, serving, and destroying.
+
+The review also exposed why mechanical suffix removal is unsafe. Acts 26:31
+`בְּיֵינוֹתָם` is visibly Hutter's `בֵּינוֹתָם`, “among themselves,”
+not “their wines”; the extracted extra yod now receives a verse-scoped H996
+mapping. The body forms in Romans 1:24 and 1 Corinthians 6:15 map to
+`גְּוִיָּה` (H1472), not the superficially similar `גּוֹי` (H1471).
+Likewise, the assembly forms in Luke 13:10 and Matthew 13:54 are not
+“testimonies.” Candidates whose extracted word was absent from the crop,
+including apparent forms in Romans 9:28 and John 19:35, were rejected.
+
+Caesarea in Matthew 16:13 now has the exact custom entry D0283. This keeps the
+place name distinct from the existing custom entry for the title Caesar.
+Every accepted lexical override is restricted to its reviewed verse.
 
 ## Continued inflection image review
 
