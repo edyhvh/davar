@@ -28,10 +28,32 @@ as a locator/cross-check and was rejected whenever it disagreed with the image.
 | After continued inflection image review | 107,710 | 103,676 | 4,034 | 96.25% |
 | After suffix-form image review | 107,710 | 103,729 | 3,981 | 96.30% |
 | After scan-backed transcription review | 107,710 | 103,791 | 3,919 | 96.36% |
+| After continued scan-backed clause review | 107,724 | 103,878 | 3,846 | 96.43% |
 
 The word total changed because image-confirmed OCR repairs split or merged tokens
-differently. Relative to the issue baseline, 3,021 fewer tokens are unresolved.
+differently. Relative to the issue baseline, 3,094 fewer tokens are unresolved.
 Titus, the last book below 90% during this pass, moved from 89.0% to 93.7%.
+
+## Continued scan-backed clause review
+
+This continuation resolved 73 additional tokens across 19 books. It reviewed
+the remaining high-confidence independent-OCR differences directly against
+Hutter's page crops, including complete clauses where the original extraction
+had collapsed or substituted several adjacent words. Regeneration changed no
+mapping outside the 53 edited verses.
+
+The restored clauses include the voice from heaven in Mark 1:11, the answer
+from the crowd in Mark 9:17, the belief and baptism statement in Mark 16:16,
+the disciples' response in Matthew 19:10, the spiritual-warfare wording in
+2 Corinthians 10:5, and the islanders' accusation in Acts 28:4. Smaller
+image-confirmed repairs restore ordinary forms such as `הָרִאשׁוֹן`,
+`הַדְּבָרִים`, `הַכָּבוֹד`, `הַשָּׁמַיִם`, and
+`הַכֹּהֲנִים`.
+
+Ambiguous candidates were still deferred. In particular, Revelation 21:2
+appears to preserve the unusual printed `הַפְּעֻדָּה`; candidates whose
+Hebrew was outside the crop or whose alternate OCR contradicted the scan were
+not normalized merely to match familiar biblical wording.
 
 ## Scan-backed transcription review
 

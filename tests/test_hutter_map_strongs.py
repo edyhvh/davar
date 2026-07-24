@@ -428,6 +428,29 @@ def test_scan_review_repairs_hutter_transcriptions_and_maps_restored_forms() -> 
         assert mapped_words(book, chapter, verse)[text] == strong
 
 
+def test_continued_scan_review_maps_restored_words_and_clauses() -> None:
+    cases = [
+        ("acts", 28, 4, "רֵעֵהוּ", "H7453"),
+        ("acts", 28, 4, "רוֹצֵחַ", "H7523"),
+        ("corinthians2", 10, 5, "הַמִּתְרוֹמֵם", "Hd/H3035"),
+        ("corinthians2", 11, 31, "הַמְבֹרָךְ", "Hd/H1288"),
+        ("john1", 1, 6, "נֹאמַר", "H559"),
+        ("luke", 21, 24, "הַגּוֹיִם", "Hd/H1471"),
+        ("mark", 1, 11, "מִשָּׁמַיִם", "Hm/H8064"),
+        ("mark", 9, 17, "הַקָּהָל", "Hd/H6951"),
+        ("mark", 16, 16, "וְנִטְבַּל", "H2881"),
+        ("mark", 16, 16, "יִשָּׁפֵט", "H8199"),
+        ("matthew", 19, 10, "הָאָדָם", "Hd/H120"),
+        ("matthew", 26, 63, "בֶּן־", "H1121"),
+        ("peter1", 1, 3, "הֶחֱזִיר", "Hd/H2386"),
+        ("peter1", 1, 3, "אוֹתָנוּ", "H853"),
+        ("romans", 11, 36, "הַכָּבוֹד", "Hd/H3519"),
+    ]
+
+    for book, chapter, verse, text, strong in cases:
+        assert mapped_words(book, chapter, verse)[text] == strong
+
+
 def test_scan_review_maps_verified_hutter_inflections() -> None:
     cases = [
         ("acts", 3, 10, "וַיִּדְעוּהוּ", "Hc/H3045"),
