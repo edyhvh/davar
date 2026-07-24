@@ -311,6 +311,7 @@ def test_image_reviewed_hutter_names_have_lexicon_definitions() -> None:
     assert definitions["D0218"]["transliteration_en"] == "naor"
     assert definitions["D0219"]["transliteration_en"] == "shel"
     assert definitions["D0220"]["transliteration_en"] == "talmud"
+    assert definitions["D0284"]["transliteration_en"] == "Cappadocia"
 
 
 def test_image_reviewed_titus_names_use_custom_mappings() -> None:
@@ -445,6 +446,28 @@ def test_continued_scan_review_maps_restored_words_and_clauses() -> None:
         ("peter1", 1, 3, "הֶחֱזִיר", "Hd/H2386"),
         ("peter1", 1, 3, "אוֹתָנוּ", "H853"),
         ("romans", 11, 36, "הַכָּבוֹד", "Hd/H3519"),
+    ]
+
+    for book, chapter, verse, text, strong in cases:
+        assert mapped_words(book, chapter, verse)[text] == strong
+
+
+def test_expanded_clause_review_maps_image_confirmed_inflections_and_names() -> None:
+    cases = [
+        ("ephesians", 4, 16, "נֶעֶרְכָה", "H6186"),
+        ("ephesians", 4, 18, "הַחֲשׁוּכִים", "Hd/H2821"),
+        ("ephesians", 4, 18, "בְּעָרְלַת", "Hb/H6190"),
+        ("galatians", 6, 14, "הוּקַעְתִּי", "H3363"),
+        ("jude", 1, 6, "הָאֹפֶל", "Hd/H652"),
+        ("jude", 1, 6, "נְצָרָם", "H5341"),
+        ("peter1", 1, 1, "כַּפָּדוֹקְיָא", "D0284"),
+        ("philippians", 4, 1, "וַעֲטָרָתִי", "Hc/H5850"),
+        ("revelation", 14, 8, "הַתַּעֲנוּגוֹת", "Hd/H8588"),
+        ("romans", 16, 18, "וּבִבְרָכוֹתָם", "Hc/Hb/H1293"),
+        ("timothy1", 5, 17, "הַיֹּגְעִים", "Hd/H3021"),
+        ("timothy2", 2, 12, "נִתְעוֹדֵד", "H5749"),
+        ("timothy2", 2, 12, "נְכַחֵשׁ", "H3584"),
+        ("timothy2", 2, 12, "יְכַחֲשֵׁנוּ", "H3584"),
     ]
 
     for book, chapter, verse, text, strong in cases:

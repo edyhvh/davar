@@ -29,10 +29,35 @@ as a locator/cross-check and was rejected whenever it disagreed with the image.
 | After suffix-form image review | 107,710 | 103,729 | 3,981 | 96.30% |
 | After scan-backed transcription review | 107,710 | 103,791 | 3,919 | 96.36% |
 | After continued scan-backed clause review | 107,724 | 103,878 | 3,846 | 96.43% |
+| After expanded scan-backed clause review | 107,726 | 103,986 | 3,740 | 96.53% |
 
 The word total changed because image-confirmed OCR repairs split or merged tokens
-differently. Relative to the issue baseline, 3,094 fewer tokens are unresolved.
+differently. Relative to the issue baseline, 3,200 fewer tokens are unresolved.
 Titus, the last book below 90% during this pass, moved from 89.0% to 93.7%.
+
+## Expanded scan-backed clause review
+
+This continuation resolved 106 additional tokens in 33 corrected verses across
+17 books. Each source change was read from Hutter's crop before regeneration;
+the independent OCR served only as a locator and pointing cross-check. The
+review restored complete clauses in Romans 16:18, Ephesians 4:16-18,
+Mark 14:68, Revelation 20:8, 1 Timothy 5:17, and 2 Timothy 2:12, among
+others.
+
+Verse-scoped overrides map 33 genuine printed inflections whose roots are
+unambiguous but which the conservative mapper could not infer safely. These
+cover blessing, laboring, darkness, hardness, denying, authority, kissing,
+teaching, affliction, judgment, anger, growth, and other ordinary forms.
+Because every override carries a reviewed reference, the unusual spelling
+cannot affect another verse.
+
+The crop for 1 Peter 1:1 also confirms Hutter's spelling
+`כַּפָּדוֹקְיָא`. Cappadocia now has exact custom entry D0284 rather
+than remaining unresolved or borrowing an unrelated Hebrew Strong number.
+Regeneration made one beneficial adjacent-verse correction: the restored
+Publius spelling in Acts 28:8 supplied enough contextual evidence to replace
+the erroneous H1990 assignment for `פּוֹבְלִיוֹס` in Acts 28:7 with
+the existing Publius entry D0024.
 
 ## Continued scan-backed clause review
 
