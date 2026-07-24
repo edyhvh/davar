@@ -27,10 +27,34 @@ as a locator/cross-check and was rejected whenever it disagreed with the image.
 | After exact pronominal-form review | 107,710 | 103,619 | 4,091 | 96.20% |
 | After continued inflection image review | 107,710 | 103,676 | 4,034 | 96.25% |
 | After suffix-form image review | 107,710 | 103,729 | 3,981 | 96.30% |
+| After scan-backed transcription review | 107,710 | 103,791 | 3,919 | 96.36% |
 
 The word total changed because image-confirmed OCR repairs split or merged tokens
-differently. Relative to the issue baseline, 2,959 fewer tokens are unresolved.
+differently. Relative to the issue baseline, 3,021 fewer tokens are unresolved.
 Titus, the last book below 90% during this pass, moved from 89.0% to 93.7%.
+
+## Scan-backed transcription review
+
+This continuation resolved 62 additional tokens across 16 books. Every source
+change was checked against Hutter's cropped page image before the Strong
+mapping was regenerated. The 48 corrected verse records repair visibly
+confused letters and word boundaries without changing the 107,710-word corpus
+total.
+
+Representative repairs include `אֲדוֹנֵינוּ` in Hebrews 7:14 instead of the
+transcribed `צִמְחֵנוּ`, `רִשְׁעָה` in Romans 1:18 instead of
+`שִׁעֲנָה`, `הַפְּרוּשִׁים` in Mark 2:18 and Matthew 19:3,
+`בְּשׂוֹרָתֵנוּ` in 1 Thessalonians 1:5, and the restored
+`וַיַּעֲבֹר וַיַּרְא` in Mark 2:14. The page also confirms
+`נָבִיא שָׁקֶר`, `וְאַרְגָּמָן`, `הַשָּׂטָן`,
+`וַיִּתְעַצְּבוּ`, and both occurrences of `יוֹעִיל` in
+Philippians 2:4.
+
+Thirteen genuine printed inflections received verse-scoped lexical mappings
+after image review. These cover choking, inheriting, finding, recognizing,
+doing, zeal, compassion, weakness, restraint, authority, an inscription, and
+Hutter's travel-bag spelling. The scope prevents unusual spellings such as
+`צִלְקוֹן` or `שְׁלוּטוֹן` from influencing unrelated verses.
 
 ## Suffix-form image review
 

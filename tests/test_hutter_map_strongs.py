@@ -407,6 +407,48 @@ def test_substantial_image_review_maps_additional_lexical_inflections() -> None:
         assert mapped_words(book, chapter, verse)[text] == strong
 
 
+def test_scan_review_repairs_hutter_transcriptions_and_maps_restored_forms() -> None:
+    cases = [
+        ("hebrews", 7, 14, "אֲדוֹנֵינוּ", "H113"),
+        ("hebrews", 8, 7, "הָרִאשׁוֹנָה", "Hd/H7223"),
+        ("mark", 2, 14, "וַיַּעֲבֹר", "Hc/H5674"),
+        ("mark", 2, 14, "וַיַּרְא", "Hc/H7200"),
+        ("mark", 2, 18, "הַפְּרוּשִׁים", "Hd/H6566"),
+        ("matthew", 26, 22, "וַיִּתְעַצְּבוּ", "Hc/H6087"),
+        ("philippians", 2, 4, "יוֹעִיל", "H3276"),
+        ("revelation", 8, 13, "בְּתוֹךְ", "Hb/H8432"),
+        ("revelation", 16, 13, "נָבִיא", "H5030"),
+        ("revelation", 17, 4, "וְאַרְגָּמָן", "Hc/H713"),
+        ("romans", 1, 18, "רִשְׁעָה", "H7564"),
+        ("romans", 9, 5, "וְהַמָּשִׁיחַ", "Hc/Hd/H4899"),
+        ("thessalonians1", 1, 5, "בְּשׂוֹרָתֵנוּ", "Hb/H1309"),
+    ]
+
+    for book, chapter, verse, text, strong in cases:
+        assert mapped_words(book, chapter, verse)[text] == strong
+
+
+def test_scan_review_maps_verified_hutter_inflections() -> None:
+    cases = [
+        ("acts", 3, 10, "וַיִּדְעוּהוּ", "Hc/H3045"),
+        ("acts", 20, 35, "הַחֲלוּשִׁים", "Hd/H2523"),
+        ("acts", 28, 31, "נִכְלָא", "H3607"),
+        ("corinthians1", 9, 18, "שְׁלוּטוֹן", "H7983"),
+        ("galatians", 3, 1, "לְבִלְתִּיכֶם", "Hl/H1115"),
+        ("john", 7, 34, "תִמְצָאוּנִי", "H4672"),
+        ("john", 19, 19, "כְּתוֹבֶת", "H3793"),
+        ("mark", 4, 7, "וַיְּחַנְּקוּהוּ", "Hc/H2614"),
+        ("mark", 6, 8, "צִלְקוֹן", "D0233"),
+        ("peter1", 3, 9, "תַּנְחִילוּ", "H5157"),
+        ("philemon", 1, 20, "רַחֲמַי", "H7356"),
+        ("revelation", 3, 19, "קְנָא", "H7065"),
+        ("romans", 7, 20, "עוֹשֶׂהוּ", "H6213"),
+    ]
+
+    for book, chapter, verse, text, strong in cases:
+        assert mapped_words(book, chapter, verse)[text] == strong
+
+
 def test_image_review_corrects_second_peter_hearts_transcription() -> None:
     words = mapped_words("peter2", 1, 19)
 
