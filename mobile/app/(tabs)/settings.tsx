@@ -257,33 +257,48 @@ export default function SettingsScreen() {
 
         <View style={styles.divider} />
 
-        {/* Qumran Variants */}
-        <View
-          style={[
-            styles.row,
-            translationOnlyDisablesHebrewOptions ? { opacity: 0.55 } : null,
-          ]}
-        >
+        {/* Full Chapter */}
+        <View style={styles.row}>
           <View style={styles.rowContent}>
             <View style={styles.iconContainer}>
-              <AppIcon name="scroll" size={18} color={colors.textSecondary} />
+              <AppIcon name="book" size={18} color={colors.textSecondary} />
             </View>
             <View style={styles.textContainer}>
-              <Text style={styles.label}>{t("settings.qumran.title")}</Text>
+              <Text style={styles.label}>{t("settings.fullChapter.title")}</Text>
               <Text style={styles.subtitle}>
-                {t("settings.qumran.subtitle")}
+                {t("settings.fullChapter.subtitle")}
               </Text>
             </View>
           </View>
-          <OnOffButton
-            value={showQumran}
-            onChange={setShowQumran}
-            disabled={translationOnlyDisablesHebrewOptions}
-            onDisabledPress={handleDisabledHebrewOptionPress}
-          />
+          <OnOffButton value={showFullChapter} onChange={setShowFullChapter} />
         </View>
 
         <View style={styles.divider} />
+
+        {canUseSeferMode ? (
+          <>
+            {/* Book Mode */}
+            <View style={styles.row}>
+              <View style={styles.rowContent}>
+                <View style={styles.iconContainer}>
+                  <AppIcon name="book" size={18} color={colors.textSecondary} />
+                </View>
+                <View style={styles.textContainer}>
+                  <Text style={styles.label}>{t("settings.seferStyle.title")}</Text>
+                  <Text style={styles.subtitle}>
+                    {t("settings.seferStyle.subtitle")}
+                  </Text>
+                </View>
+              </View>
+              <OnOffButton
+                value={seferMode}
+                onChange={setSeferMode}
+              />
+            </View>
+
+            <View style={styles.divider} />
+          </>
+        ) : null}
 
         {/* Hebrew Only */}
         <View
@@ -313,20 +328,30 @@ export default function SettingsScreen() {
 
         <View style={styles.divider} />
 
-        {/* Full Chapter */}
-        <View style={styles.row}>
+        {/* Qumran Variants */}
+        <View
+          style={[
+            styles.row,
+            translationOnlyDisablesHebrewOptions ? { opacity: 0.55 } : null,
+          ]}
+        >
           <View style={styles.rowContent}>
             <View style={styles.iconContainer}>
-              <AppIcon name="book" size={18} color={colors.textSecondary} />
+              <AppIcon name="scroll" size={18} color={colors.textSecondary} />
             </View>
             <View style={styles.textContainer}>
-              <Text style={styles.label}>{t("settings.fullChapter.title")}</Text>
+              <Text style={styles.label}>{t("settings.qumran.title")}</Text>
               <Text style={styles.subtitle}>
-                {t("settings.fullChapter.subtitle")}
+                {t("settings.qumran.subtitle")}
               </Text>
             </View>
           </View>
-          <OnOffButton value={showFullChapter} onChange={setShowFullChapter} />
+          <OnOffButton
+            value={showQumran}
+            onChange={setShowQumran}
+            disabled={translationOnlyDisablesHebrewOptions}
+            onDisabledPress={handleDisabledHebrewOptionPress}
+          />
         </View>
 
         <View style={styles.divider} />
@@ -347,34 +372,7 @@ export default function SettingsScreen() {
           <OnOffButton value={translationOnly} onChange={setTranslationOnly} />
         </View>
 
-        {canUseSeferMode ? (
-          <>
-            <View style={styles.divider} />
-
-            {/* Book Mode */}
-            <View style={styles.row}>
-              <View style={styles.rowContent}>
-                <View style={styles.iconContainer}>
-                  <AppIcon name="book" size={18} color={colors.textSecondary} />
-                </View>
-                <View style={styles.textContainer}>
-                  <Text style={styles.label}>{t("settings.seferStyle.title")}</Text>
-                  <Text style={styles.subtitle}>
-                    {t("settings.seferStyle.subtitle")}
-                  </Text>
-                </View>
-              </View>
-              <OnOffButton
-                value={seferMode}
-                onChange={setSeferMode}
-              />
-            </View>
-
-            <View style={styles.divider} />
-          </>
-        ) : (
-          <View style={styles.divider} />
-        )}
+        <View style={styles.divider} />
 
         {/* Cantillation */}
         <View

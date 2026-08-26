@@ -557,74 +557,6 @@ export function SettingsScreen({
 			{/* Divider */}
 			<div className="border-t border-[var(--border)]" />
 
-			{/* Qumran Toggle */}
-			<div className="px-6 py-6">
-				<div className="flex items-center justify-between">
-					<div className="flex items-center gap-4">
-						<div className="text-[var(--text-secondary)]">
-							<RetroIcons.Qumran />
-						</div>
-						<div>
-							<div
-								className="text-lg font-semibold text-[var(--text-primary)]"
-								style={{ fontFamily: "'Inter', sans-serif" }}
-							>
-								{t("settings.qumran.title")}
-							</div>
-							<div
-								className="text-sm text-[var(--text-secondary)] mt-0.5"
-								style={{ fontFamily: "'Inter', sans-serif" }}
-							>
-								{t("settings.qumran.subtitle")}
-							</div>
-						</div>
-					</div>
-					<RetroOnOffButton
-						isOn={showQumran}
-						onToggle={() => onQumranChange(!showQumran)}
-						onLabel={t("common.on")}
-						offLabel={t("common.off")}
-					/>
-				</div>
-			</div>
-
-			{/* Divider */}
-			<div className="border-t border-[var(--border)]" />
-
-			{/* Hebrew Only Toggle */}
-			<div className="px-6 py-6">
-				<div className="flex items-center justify-between">
-					<div className="flex items-center gap-4">
-						<div className="text-[var(--text-secondary)]">
-							<RetroIcons.Hebrew />
-						</div>
-						<div>
-							<div
-								className="text-lg font-semibold text-[var(--text-primary)]"
-								style={{ fontFamily: "'Inter', sans-serif" }}
-							>
-								{t("settings.hebrewOnly.title")}
-							</div>
-							<div
-								className="text-sm text-[var(--text-secondary)] mt-0.5"
-								style={{ fontFamily: "'Inter', sans-serif" }}
-							>
-								{t("settings.hebrewOnly.subtitle")}
-							</div>
-						</div>
-					</div>
-					<RetroOnOffButton
-						isOn={hebrewOnly}
-						onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
-						onLabel={t("common.on")}
-						offLabel={t("common.off")}
-					/>
-				</div>
-			</div>
-
-			{/* Divider */}
-			<div className="border-t border-[var(--border)]" />
-
 			{/* Full Chapter Toggle */}
 			<div className="px-6 py-6">
 				<div className="flex items-center justify-between">
@@ -702,6 +634,74 @@ export function SettingsScreen({
 					</div>
 				</>
 			)}
+
+			{/* Divider */}
+			<div className="border-t border-[var(--border)]" />
+
+			{/* Hebrew Only Toggle */}
+			<div className="px-6 py-6">
+				<div className="flex items-center justify-between">
+					<div className="flex items-center gap-4">
+						<div className="text-[var(--text-secondary)]">
+							<RetroIcons.Hebrew />
+						</div>
+						<div>
+							<div
+								className="text-lg font-semibold text-[var(--text-primary)]"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.hebrewOnly.title")}
+							</div>
+							<div
+								className="text-sm text-[var(--text-secondary)] mt-0.5"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.hebrewOnly.subtitle")}
+							</div>
+						</div>
+					</div>
+					<RetroOnOffButton
+						isOn={hebrewOnly}
+						onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
+						onLabel={t("common.on")}
+						offLabel={t("common.off")}
+					/>
+				</div>
+			</div>
+
+			{/* Divider */}
+			<div className="border-t border-[var(--border)]" />
+
+			{/* Qumran Toggle */}
+			<div className="px-6 py-6">
+				<div className="flex items-center justify-between">
+					<div className="flex items-center gap-4">
+						<div className="text-[var(--text-secondary)]">
+							<RetroIcons.Qumran />
+						</div>
+						<div>
+							<div
+								className="text-lg font-semibold text-[var(--text-primary)]"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.qumran.title")}
+							</div>
+							<div
+								className="text-sm text-[var(--text-secondary)] mt-0.5"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.qumran.subtitle")}
+							</div>
+						</div>
+					</div>
+					<RetroOnOffButton
+						isOn={showQumran}
+						onToggle={() => onQumranChange(!showQumran)}
+						onLabel={t("common.on")}
+						offLabel={t("common.off")}
+					/>
+				</div>
+			</div>
 
 			{/* Divider */}
 			<div className="border-t border-[var(--border)]" />
