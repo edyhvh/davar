@@ -105,6 +105,26 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Allow --write to replace a report with a lower mapped-word count.",
     )
+    parser.add_argument(
+        "--morphology",
+        action="store_true",
+        help=(
+            "Analyse unresolved Hutter forms with the morphology-aware candidate "
+            "generator and write a review queue + backtest report (no mapping writes)."
+        ),
+    )
+    parser.add_argument(
+        "--morphology-queue",
+        type=Path,
+        default=REPO_ROOT / "data" / "hutter" / "review_reports" / "morphology_review_queue.json",
+        help="Path to write the morphology review queue (default: data/hutter/review_reports/morphology_review_queue.json).",
+    )
+    parser.add_argument(
+        "--morphology-backtest",
+        type=Path,
+        default=REPO_ROOT / "data" / "hutter" / "review_reports" / "morphology_backtest.json",
+        help="Path to write the morphology backtest report.",
+    )
     return parser.parse_args()
 
 
@@ -1296,6 +1316,47 @@ def main() -> int:
 
     total_words = sum(item["word_count"] for item in book_summaries)
     total_unresolved = len(all_unresolved)
+
+    if args.morphology:
+        from scripts.hutter.morphology import (
+            backtest_morphology,
+            build_review_queue,
+            write_review_queue,
+        )
+
+        queue = build_review_queue(
+            all_unresolved,
+            lemma_index,
+            base_form_index,
+        )
+        write_review_queue(queue, args.morphology_queue)
+
+        # Backtest against already-reviewed mappings (every word that exists in
+        # the current strong_mappings output is considered reviewed ground truth).
+        ground_truth: list[tuple[str, str]] = []
+        for book in books:
+            mapping = load_json(DEFAULT_OUTPUT_ROOT / f"{book}.json")
+            for chapter in mapping.get("chapters") or []:
+                for verse in chapter.get("verses") or []:
+                    for word in verse.get("words") or []:
+                        strong = word.get("strong")
+                        if strong and word.get("text"):
+                            ground_truth.append((word["text"], strong))
+        backtest = backtest_morphology(
+            ground_truth,
+            lemma_index,
+            base_form_index,
+        )
+        args.morphology_backtest.parent.mkdir(parents=True, exist_ok=True)
+        args.morphology_backtest.write_text(
+            json.dumps(backtest, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        print(json.dumps({"morphology_queue": len(queue), "backtest": {k: v for k, v in backtest.items() if k != "regressions"}}, ensure_ascii=False, indent=2))
+        print(f"  queue: {args.morphology_queue}")
+        print(f"  backtest: {args.morphology_backtest}")
+        return 0
+
     report = {
         "books": book_summaries,
         "totals": {
