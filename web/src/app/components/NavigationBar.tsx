@@ -27,6 +27,7 @@ interface NavigationBarProps {
 	onChapterChange: (chapter: number) => void;
 	onVerseChange: (verse: number) => void;
 	onHomeClick: () => void;
+	onTthClick?: () => void;
 	onDesignSystemClick?: () => void;
 	theme: "light" | "dark";
 	onThemeChange: (theme: "light" | "dark") => void;
@@ -63,6 +64,7 @@ export function NavigationBar({
 	onChapterChange,
 	onVerseChange,
 	onHomeClick,
+	onTthClick,
 	onDesignSystemClick,
 	theme,
 	onThemeChange,
@@ -456,6 +458,27 @@ export function NavigationBar({
 						>
 							<Home className="w-3 h-3 text-[var(--text-primary)]" />
 						</button>
+
+						{onTthClick && (
+							<button
+								type="button"
+								onClick={onTthClick}
+								className="shrink-0 rounded-full p-2 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
+								style={{
+									fontFamily: "'Inter', sans-serif",
+									backgroundColor: "var(--neomorph-bg)",
+									border: "1px solid var(--neomorph-border)",
+									boxShadow:
+										"6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)",
+								}}
+								aria-label={t("navigation.tthOpen")}
+								title={t("navigation.tthOpen")}
+							>
+								<span className="text-[9px] font-semibold tracking-wide text-[var(--text-primary)]">
+									{t("navigation.tthSection")}
+								</span>
+							</button>
+						)}
 
 						<button
 							type="button"
