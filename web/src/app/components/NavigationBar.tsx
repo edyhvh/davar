@@ -1,5 +1,11 @@
 import { BookOpen, Home, Paintbrush, ScrollText, Settings } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import {
+	SHARED_SETTINGS_ORDER,
+	canUseSeferStyle,
+	isSeferStyleVisible,
+	type SharedSettingId,
+} from "@davar/shared/settingsOrder";
 import { FaThList } from "react-icons/fa";
 import { LuLightbulb } from "react-icons/lu";
 import { TbAlphabetHebrew, TbLanguageHiragana } from "react-icons/tb";
@@ -21,7 +27,6 @@ interface NavigationBarProps {
 	onChapterChange: (chapter: number) => void;
 	onVerseChange: (verse: number) => void;
 	onHomeClick: () => void;
-	onTthClick?: () => void;
 	onDesignSystemClick?: () => void;
 	theme: "light" | "dark";
 	onThemeChange: (theme: "light" | "dark") => void;
@@ -58,7 +63,6 @@ export function NavigationBar({
 	onChapterChange,
 	onVerseChange,
 	onHomeClick,
-	onTthClick,
 	onDesignSystemClick,
 	theme,
 	onThemeChange,
@@ -219,12 +223,218 @@ export function NavigationBar({
 		? verses.filter((item) => String(item).startsWith(normalizedVerseSearch))
 		: verses;
 	const translationOnlyDisablesHebrewOptions = translationOnly;
+	const seferEnabled = canUseSeferStyle({
+		showFullChapter,
+		hebrewOnly,
+		translationOnly,
+	});
+	const seferDisabled = !seferEnabled;
+
 
 	useEffect(() => {
 		if (seferMode && openMenu === "verse") {
 			setOpenMenu(null);
 		}
 	}, [seferMode, openMenu]);
+
+
+	const renderSharedSetting = (id: SharedSettingId): ReactNode => {
+		switch (id) {
+			case "theme":
+				return (
+					<div className="flex items-center justify-between">
+						<div className="flex items-center gap-3">
+							<LuLightbulb className="w-4 h-4 text-[var(--text-secondary)]" />
+							<span
+								className="text-sm text-[var(--text-primary)]"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.theme.title")}
+							</span>
+						</div>
+						<NeumorphicToggle
+							enabled={theme === "dark"}
+							onToggle={() =>
+								onThemeChange(theme === "light" ? "dark" : "light")
+							}
+							ariaLabel={t("navigation.toggleDarkTheme")}
+						/>
+					</div>
+				);
+			case "language":
+				return (
+					<div className="flex items-center justify-between">
+						<div className="flex items-center gap-3">
+							<TbLanguageHiragana className="w-4 h-4 text-[var(--text-secondary)]" />
+							<span
+								className="text-sm text-[var(--text-primary)]"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.language.title")}
+							</span>
+						</div>
+						<select
+							value={language}
+							onChange={(event) =>
+								onLanguageChange(event.target.value as "en" | "es" | "he")
+							}
+							className="rounded-full px-3 py-2 text-base md:text-xs text-[var(--text-primary)]"
+							style={{
+								fontFamily: "'Inter', sans-serif",
+								backgroundColor: "var(--neomorph-bg)",
+								border: "1px solid var(--neomorph-border)",
+								boxShadow:
+									"inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)",
+							}}
+						>
+							{languages.map((lang) => (
+								<option key={lang.code} value={lang.code}>
+									{lang.label}
+								</option>
+							))}
+						</select>
+					</div>
+				);
+			case "besorahTextVersion":
+				return (
+					<div className="flex items-center justify-between gap-4">
+						<div className="flex items-center gap-3">
+							<ScrollText className="w-4 h-4 text-[var(--text-secondary)]" />
+							<div>
+								<div className="flex items-center gap-2">
+									<div
+										className="text-sm text-[var(--text-primary)]"
+										style={{ fontFamily: "'Inter', sans-serif" }}
+									>
+										{t("settings.besorahTextVersion.title")}
+									</div>
+									<span className="rounded-full bg-[var(--primary)] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white">
+										{t("settings.besorahTextVersion.new")}
+									</span>
+								</div>
+							</div>
+						</div>
+						<select
+							value={besorahTextVersion}
+							onChange={(event) =>
+								onBesorahTextVersionChange(
+									event.target.value as "delitzsch" | "hutter",
+								)
+							}
+							className="rounded-full px-3 py-2 text-base md:text-xs text-[var(--text-primary)]"
+							style={{
+								fontFamily: "'Inter', sans-serif",
+								backgroundColor: "var(--neomorph-bg)",
+								border: "1px solid var(--neomorph-border)",
+								boxShadow:
+									"inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)",
+							}}
+						>
+							{besorahTextVersions.map((version) => (
+								<option key={version.code} value={version.code}>
+									{version.label}
+								</option>
+							))}
+						</select>
+					</div>
+				);
+			case "fullChapter":
+				return (
+					<div className="flex items-center justify-between">
+						<div className="flex items-center gap-3">
+							<FaThList className="w-4 h-4 text-[var(--text-secondary)]" />
+							<span
+								className="text-sm text-[var(--text-primary)]"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.fullChapter.title")}
+							</span>
+						</div>
+						<NeumorphicToggle
+							enabled={showFullChapter}
+							onToggle={() => onFullChapterChange(!showFullChapter)}
+							ariaLabel={t("navigation.toggleFullChapter")}
+						/>
+					</div>
+				);
+			case "seferStyle":
+				if (!isSeferStyleVisible(showFullChapter)) return null;
+				return (
+					<div className="flex items-center justify-between">
+						<div className="flex items-center gap-3">
+							<BookOpen className="w-4 h-4 text-[var(--text-secondary)]" />
+							<span
+								className="text-sm text-[var(--text-primary)]"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.seferStyle.title")}
+							</span>
+						</div>
+						<NeumorphicToggle
+							enabled={seferMode}
+							onToggle={() => onSeferModeChange(!seferMode)}
+							ariaLabel={t("navigation.toggleSeferStyle")}
+							disabled={seferDisabled}
+							disabledReason={t("settings.seferStyle.warningMessage")}
+						/>
+					</div>
+				);
+			case "hebrewOnly":
+				return (
+					<div
+						className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
+					>
+						<div className="flex items-center gap-3">
+							<TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
+							<span
+								className="text-sm text-[var(--text-primary)]"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.hebrewOnly.title")}
+							</span>
+						</div>
+						<NeumorphicToggle
+							enabled={hebrewOnly}
+							onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
+							ariaLabel={t("navigation.toggleHebrewOnly")}
+							disabled={translationOnlyDisablesHebrewOptions}
+							disabledReason={t(
+								"settings.translationOnly.disablesHebrewFeatures",
+							)}
+						/>
+					</div>
+				);
+			case "qumran":
+				return (
+					<div
+						className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
+					>
+						<div className="flex items-center gap-3">
+							<ScrollText className="w-4 h-4 text-[var(--text-secondary)]" />
+							<span
+								className="text-sm text-[var(--text-primary)]"
+								style={{ fontFamily: "'Inter', sans-serif" }}
+							>
+								{t("settings.qumran.title")}
+							</span>
+						</div>
+						<NeumorphicToggle
+							enabled={showQumran}
+							onToggle={() => onQumranChange(!showQumran)}
+							ariaLabel={t("navigation.toggleQumran")}
+							disabled={translationOnlyDisablesHebrewOptions}
+							disabledReason={t(
+								"settings.translationOnly.disablesHebrewFeatures",
+							)}
+						/>
+					</div>
+				);
+			default: {
+				const _exhaustive: never = id;
+				return _exhaustive;
+			}
+		}
+	};
 
 	return (
 		<div className="relative" ref={dropdownRef}>
@@ -246,27 +456,6 @@ export function NavigationBar({
 						>
 							<Home className="w-3 h-3 text-[var(--text-primary)]" />
 						</button>
-
-						{onTthClick && (
-							<button
-								type="button"
-								onClick={onTthClick}
-								className="shrink-0 rounded-full p-2 transition-all md:hover:scale-[1.02] md:active:scale-[0.98]"
-								style={{
-									fontFamily: "'Inter', sans-serif",
-									backgroundColor: "var(--neomorph-bg)",
-									border: "1px solid var(--neomorph-border)",
-									boxShadow:
-										"6px 6px 12px var(--neomorph-shadow-dark), -6px -6px 12px var(--neomorph-shadow-light)",
-								}}
-								aria-label={t("navigation.tthOpen")}
-								title={t("navigation.tthOpen")}
-							>
-								<span className="text-[9px] font-semibold tracking-wide text-[var(--text-primary)]">
-									{t("navigation.tthSection")}
-								</span>
-							</button>
-						)}
 
 						<button
 							type="button"
@@ -385,67 +574,26 @@ export function NavigationBar({
 			{openMenu === "settings" && (
 				<div className="absolute right-0 mt-4 w-[320px] rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-surface)] backdrop-blur-[16px] shadow-[0_8px_32px_0_var(--glass-shadow)] p-5 z-30">
 					<div className="space-y-5">
+						{SHARED_SETTINGS_ORDER.map((id) => {
+							const row = renderSharedSetting(id);
+							if (!row) return null;
+							return <div key={id}>{row}</div>;
+						})}
+
 						<div className="flex items-center justify-between">
 							<div className="flex items-center gap-3">
-								<LuLightbulb className="w-4 h-4 text-[var(--text-secondary)]" />
+								<TbLanguageHiragana className="w-4 h-4 text-[var(--text-secondary)]" />
 								<span
 									className="text-sm text-[var(--text-primary)]"
 									style={{ fontFamily: "'Inter', sans-serif" }}
 								>
-									{t("settings.theme.title")}
+									{t("settings.translationOnly.title")}
 								</span>
 							</div>
 							<NeumorphicToggle
-								enabled={theme === "dark"}
-								onToggle={() =>
-									onThemeChange(theme === "light" ? "dark" : "light")
-								}
-								ariaLabel={t("navigation.toggleDarkTheme")}
-							/>
-						</div>
-
-						<div
-							className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
-						>
-							<div className="flex items-center gap-3">
-								<ScrollText className="w-4 h-4 text-[var(--text-secondary)]" />
-								<span
-									className="text-sm text-[var(--text-primary)]"
-									style={{ fontFamily: "'Inter', sans-serif" }}
-								>
-									{t("settings.qumran.title")}
-								</span>
-							</div>
-							<NeumorphicToggle
-								enabled={showQumran}
-								onToggle={() => onQumranChange(!showQumran)}
-								ariaLabel={t("navigation.toggleQumran")}
-								disabled={translationOnlyDisablesHebrewOptions}
-								disabledReason={t(
-									"settings.translationOnly.disablesHebrewFeatures",
-								)}
-							/>
-						</div>
-						<div
-							className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
-						>
-							<div className="flex items-center gap-3">
-								<TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
-								<span
-									className="text-sm text-[var(--text-primary)]"
-									style={{ fontFamily: "'Inter', sans-serif" }}
-								>
-									{t("settings.nikud.title")}
-								</span>
-							</div>
-							<NeumorphicToggle
-								enabled={showNikud}
-								onToggle={() => onNikudChange(!showNikud)}
-								ariaLabel={t("navigation.toggleNikud")}
-								disabled={translationOnlyDisablesHebrewOptions}
-								disabledReason={t(
-									"settings.translationOnly.disablesHebrewFeatures",
-								)}
+								enabled={translationOnly}
+								onToggle={() => onTranslationOnlyChange(!translationOnly)}
+								ariaLabel={t("navigation.toggleTranslationOnly")}
 							/>
 						</div>
 
@@ -481,144 +629,18 @@ export function NavigationBar({
 									className="text-sm text-[var(--text-primary)]"
 									style={{ fontFamily: "'Inter', sans-serif" }}
 								>
-									{t("settings.hebrewOnly.title")}
+									{t("settings.nikud.title")}
 								</span>
 							</div>
 							<NeumorphicToggle
-								enabled={hebrewOnly}
-								onToggle={() => onHebrewOnlyChange(!hebrewOnly)}
-								ariaLabel={t("navigation.toggleHebrewOnly")}
+								enabled={showNikud}
+								onToggle={() => onNikudChange(!showNikud)}
+								ariaLabel={t("navigation.toggleNikud")}
 								disabled={translationOnlyDisablesHebrewOptions}
 								disabledReason={t(
 									"settings.translationOnly.disablesHebrewFeatures",
 								)}
 							/>
-						</div>
-
-						<div className="flex items-center justify-between">
-							<div className="flex items-center gap-3">
-								<FaThList className="w-4 h-4 text-[var(--text-secondary)]" />
-								<span
-									className="text-sm text-[var(--text-primary)]"
-									style={{ fontFamily: "'Inter', sans-serif" }}
-								>
-									{t("settings.fullChapter.title")}
-								</span>
-							</div>
-							<NeumorphicToggle
-								enabled={showFullChapter}
-								onToggle={() => onFullChapterChange(!showFullChapter)}
-								ariaLabel={t("navigation.toggleFullChapter")}
-							/>
-						</div>
-
-						<div className="flex items-center justify-between">
-							<div className="flex items-center gap-3">
-								<TbLanguageHiragana className="w-4 h-4 text-[var(--text-secondary)]" />
-								<span
-									className="text-sm text-[var(--text-primary)]"
-									style={{ fontFamily: "'Inter', sans-serif" }}
-								>
-									{t("settings.translationOnly.title")}
-								</span>
-							</div>
-							<NeumorphicToggle
-								enabled={translationOnly}
-								onToggle={() => onTranslationOnlyChange(!translationOnly)}
-								ariaLabel={t("navigation.toggleTranslationOnly")}
-							/>
-						</div>
-
-						{showFullChapter && (
-							<div className="flex items-center justify-between">
-								<div className="flex items-center gap-3">
-									<BookOpen className="w-4 h-4 text-[var(--text-secondary)]" />
-									<span
-										className="text-sm text-[var(--text-primary)]"
-										style={{ fontFamily: "'Inter', sans-serif" }}
-									>
-										{t("settings.seferStyle.title")}
-									</span>
-								</div>
-								<NeumorphicToggle
-									enabled={seferMode}
-									onToggle={() => onSeferModeChange(!seferMode)}
-									ariaLabel={t("navigation.toggleSeferStyle")}
-								/>
-							</div>
-						)}
-
-						<div className="flex items-center justify-between">
-							<div className="flex items-center gap-3">
-								<TbLanguageHiragana className="w-4 h-4 text-[var(--text-secondary)]" />
-								<span
-									className="text-sm text-[var(--text-primary)]"
-									style={{ fontFamily: "'Inter', sans-serif" }}
-								>
-									{t("navigation.languageLabel")}
-								</span>
-							</div>
-							<select
-								value={language}
-								onChange={(event) =>
-									onLanguageChange(event.target.value as "en" | "es" | "he")
-								}
-								className="rounded-full px-3 py-2 text-base md:text-xs text-[var(--text-primary)]"
-								style={{
-									fontFamily: "'Inter', sans-serif",
-									backgroundColor: "var(--neomorph-bg)",
-									border: "1px solid var(--neomorph-border)",
-									boxShadow:
-										"inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)",
-								}}
-							>
-								{languages.map((lang) => (
-									<option key={lang.code} value={lang.code}>
-										{lang.label}
-									</option>
-								))}
-							</select>
-						</div>
-
-						<div className="flex items-center justify-between gap-4">
-							<div className="flex items-center gap-3">
-								<ScrollText className="w-4 h-4 text-[var(--text-secondary)]" />
-								<div>
-									<div className="flex items-center gap-2">
-										<div
-											className="text-sm text-[var(--text-primary)]"
-											style={{ fontFamily: "'Inter', sans-serif" }}
-										>
-											{t("settings.besorahTextVersion.title")}
-										</div>
-										<span className="rounded-full bg-[var(--primary)] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white">
-											{t("settings.besorahTextVersion.new")}
-										</span>
-									</div>
-								</div>
-							</div>
-							<select
-								value={besorahTextVersion}
-								onChange={(event) =>
-									onBesorahTextVersionChange(
-										event.target.value as "delitzsch" | "hutter",
-									)
-								}
-								className="rounded-full px-3 py-2 text-base md:text-xs text-[var(--text-primary)]"
-								style={{
-									fontFamily: "'Inter', sans-serif",
-									backgroundColor: "var(--neomorph-bg)",
-									border: "1px solid var(--neomorph-border)",
-									boxShadow:
-										"inset 3px 3px 6px var(--neomorph-inset-shadow-dark), inset -3px -3px 6px var(--neomorph-inset-shadow-light)",
-								}}
-							>
-								{besorahTextVersions.map((version) => (
-									<option key={version.code} value={version.code}>
-										{version.label}
-									</option>
-								))}
-							</select>
 						</div>
 					</div>
 				</div>
