@@ -9,7 +9,10 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass
 from difflib import SequenceMatcher
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Iterable, TypeVar
+
+
+T = TypeVar("T")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
@@ -511,7 +514,7 @@ def build_indexes() -> tuple[
     )
 
 
-def best_counter_value[T](counter: Counter[T]) -> tuple[T | None, int, float]:
+def best_counter_value(counter: Counter[T]) -> tuple[T | None, int, float]:
     if not counter:
         return None, 0, 0.0
     (value, count), *rest = counter.most_common(2)
