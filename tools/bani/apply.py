@@ -51,6 +51,50 @@ class Transliterator:
         # Decompose and recompose to normalize
         return unicodedata.normalize('NFD', hebrew)
 
+    def is_silent_sheva(self, text: str, index: int) -> bool:
+        """Return whether a sheva is a medial, silent sheva.
+
+        This deliberately implements the conservative case only: a sheva
+        following a vowel-bearing consonant and preceding another
+        vowel-bearing consonant.  Word-initial and ambiguous sheva cases
+        remain vocalized by the schema's normal rules.
+        """
+        previous_letter = None
+        previous_marks = []
+        next_letter = None
+        next_marks = []
+
+        i = index - 1
+        while i >= 0 and not unicodedata.category(text[i]).startswith('L'):
+            i -= 1
+        if i >= 0:
+            previous_letter = text[i]
+            # The vowel belongs to the preceding syllable's consonant,
+            # which may be one letter earlier than the consonant carrying
+            # this sheva (e.g. מִקְוֶה).
+            previous_marks = [
+                mark for mark in text[:index]
+                if unicodedata.category(mark).startswith('M')
+            ]
+
+        i = index + 1
+        while i < len(text) and not unicodedata.category(text[i]).startswith('L'):
+            i += 1
+        if i < len(text):
+            next_letter = text[i]
+            next_marks = [
+                mark for mark in text[i + 1:]
+                if unicodedata.category(mark).startswith('M')
+            ]
+
+        vowel_marks = set(self.vowels)
+        return (
+            previous_letter is not None
+            and next_letter is not None
+            and any(mark in vowel_marks and mark != SHEVA_CHAR for mark in previous_marks)
+            and any(mark in vowel_marks and mark != SHEVA_CHAR for mark in next_marks)
+        )
+
     def split_into_syllables(self, translit: str) -> List[str]:
         """Simple syllable splitting based on vowels."""
         # This is a basic implementation - could be improved
@@ -136,7 +180,8 @@ class Transliterator:
                         # It's a combining mark (diacritic)
                         if char in self.vowels:
                             # Known vowel - transliterate it
-                            translit += self.vowels[char]
+                            if char != SHEVA_CHAR or not self.is_silent_sheva(normalized, i):
+                                translit += self.vowels[char]
                         # Otherwise skip it (dagesh, meteg, etc. are handled separately)
                         i += 1
                         continue
