@@ -237,4 +237,3 @@ const enrichDssBookForSpanReplacement = (bookData: JsonValue): JsonValue => {
 const main = async (): Promise<void> => {
   const generationStartedAt = Date.now();
   const shouldExportTs2009Static = process.env.EXPORT_TS2009_STATIC === "1";
-
