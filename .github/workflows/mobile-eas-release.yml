@@ -81,7 +81,7 @@ jobs:
           env_output=""
           env_list_exit=0
           set +e
-          env_output="$(eas env:list --environment "${{ inputs.profile }}" --non-interactive 2>&1)"
+          env_output="$(eas env:list --environment "${{ inputs.profile }}" 2>&1)"
           env_list_exit=$?
           set -e
 
