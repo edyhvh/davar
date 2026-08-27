@@ -57,6 +57,11 @@ jobs:
             exit 1
           fi
 
+      - name: Install mobile dependencies
+        run: |
+          cd mobile
+          bun install --frozen-lockfile
+
       - name: Preflight config and environment checks
         run: |
           cd mobile
