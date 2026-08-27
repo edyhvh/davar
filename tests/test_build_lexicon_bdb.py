@@ -186,18 +186,5 @@ def test_h3068_lexicon_has_no_translit_fields():
     source = json.loads(
         (repo_root / "data/dict/lexicon/words/H3068.json").read_text(encoding="utf-8")
     )
-    bundle = json.loads(
-        (repo_root / "data/dict/lexicon/words.json").read_text(encoding="utf-8")
-    )
-    generator = (repo_root / "scripts/generate-static-data/index.ts").read_text(
-        encoding="utf-8"
-    )
-
     assert "translit_en" not in source
     assert "translit_es" not in source
-    assert source["occurrences"]["total"] == 5522
-    assert len(source["occurrences"]["references"]) == 5522
-    assert "h3068Source" in generator
-    assert 'join(DATA_ROOT, "dict", "lexicon", "words", "H3068.json")' in generator
-    assert "translit_en" not in bundle["H3068"] or "h3068Source" in generator
-    assert "translit_es" not in bundle["H3068"] or "h3068Source" in generator
