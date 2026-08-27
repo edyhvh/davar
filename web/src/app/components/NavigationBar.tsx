@@ -603,20 +603,26 @@ export function NavigationBar({
 							return <div key={id}>{row}</div>;
 						})}
 
-						<div className="flex items-center justify-between">
+						<div
+							className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
+						>
 							<div className="flex items-center gap-3">
-								<TbLanguageHiragana className="w-4 h-4 text-[var(--text-secondary)]" />
+								<TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
 								<span
 									className="text-sm text-[var(--text-primary)]"
 									style={{ fontFamily: "'Inter', sans-serif" }}
 								>
-									{t("settings.translationOnly.title")}
+									{t("settings.nikud.title")}
 								</span>
 							</div>
 							<NeumorphicToggle
-								enabled={translationOnly}
-								onToggle={() => onTranslationOnlyChange(!translationOnly)}
-								ariaLabel={t("navigation.toggleTranslationOnly")}
+								enabled={showNikud}
+								onToggle={() => onNikudChange(!showNikud)}
+								ariaLabel={t("navigation.toggleNikud")}
+								disabled={translationOnlyDisablesHebrewOptions}
+								disabledReason={t(
+									"settings.translationOnly.disablesHebrewFeatures",
+								)}
 							/>
 						</div>
 
@@ -643,26 +649,20 @@ export function NavigationBar({
 							/>
 						</div>
 
-						<div
-							className={`flex items-center justify-between ${translationOnlyDisablesHebrewOptions ? "opacity-60" : ""}`}
-						>
+						<div className="flex items-center justify-between">
 							<div className="flex items-center gap-3">
-								<TbAlphabetHebrew className="w-4 h-4 text-[var(--text-secondary)]" />
+								<TbLanguageHiragana className="w-4 h-4 text-[var(--text-secondary)]" />
 								<span
 									className="text-sm text-[var(--text-primary)]"
 									style={{ fontFamily: "'Inter', sans-serif" }}
 								>
-									{t("settings.nikud.title")}
+									{t("settings.translationOnly.title")}
 								</span>
 							</div>
 							<NeumorphicToggle
-								enabled={showNikud}
-								onToggle={() => onNikudChange(!showNikud)}
-								ariaLabel={t("navigation.toggleNikud")}
-								disabled={translationOnlyDisablesHebrewOptions}
-								disabledReason={t(
-									"settings.translationOnly.disablesHebrewFeatures",
-								)}
+								enabled={translationOnly}
+								onToggle={() => onTranslationOnlyChange(!translationOnly)}
+								ariaLabel={t("navigation.toggleTranslationOnly")}
 							/>
 						</div>
 					</div>
