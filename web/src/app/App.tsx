@@ -46,3 +46,16 @@ import {
 	TTH_BOOK_MAPPING,
 } from "./utils/translationConfig";
 import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
+
+type Screen =
+	| "home"
+	| "verse"
+	| "settings"
+	| "donate"
+	| "features"
+	| "terms"
+	| "privacy"
+	| "feedback"
+	| "tth"
+	| "notFound"
+	| "connectionError";
