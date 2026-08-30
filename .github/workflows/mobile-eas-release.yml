@@ -28,6 +28,13 @@ on:
           - build
           - build-and-submit
 
+# Never overlap two publishes for the same EAS target. Keeping the older run
+# alive lets EAS finish the already-authorized operation; the second run waits
+# instead of creating a duplicate OTA/build concurrently.
+concurrency:
+  group: mobile-eas-${{ inputs.profile }}-${{ inputs.platform }}-${{ inputs.release_kind }}
+  cancel-in-progress: false
+
 permissions:
   contents: read
   deployments: write
@@ -57,6 +64,11 @@ jobs:
             exit 1
           fi
 
+      - name: Install mobile dependencies
+        run: |
+          cd mobile
+          bun install --frozen-lockfile
+
       - name: Preflight config and environment checks
         run: |
           cd mobile
@@ -81,7 +93,7 @@ jobs:
           env_output=""
           env_list_exit=0
           set +e
-          env_output="$(eas env:list --environment "${{ inputs.profile }}" --non-interactive 2>&1)"
+          env_output="$(eas env:list --environment "${{ inputs.profile }}" 2>&1)"
           env_list_exit=$?
           set -e
 
