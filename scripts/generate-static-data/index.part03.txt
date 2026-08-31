@@ -226,4 +226,3 @@ const normalizePsalmsVerseMap = (
     .map(Number)
     .filter((n) => Number.isFinite(n))
     .sort((a, b) => a - b);
-
