@@ -27,8 +27,9 @@ def load_jsonc(file_path: Path) -> Dict[str, Any]:
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Remove single-line comments (// ...)
-    content = re.sub(r'//.*?$', '', content, flags=re.MULTILINE)
+    # Remove only full-line comments; stripping every ``//`` would corrupt
+    # JSON string values such as ``https://...`` in the schema metadata.
+    content = re.sub(r'^[ \t]*//.*$', '', content, flags=re.MULTILINE)
 
     # Remove multi-line comments (/* ... */)
     content = re.sub(r'/\*.*?\*/', '', content, flags=re.DOTALL)
