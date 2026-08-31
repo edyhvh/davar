@@ -540,6 +540,11 @@ class OutputGenerator:
             if not source_instances:
                 continue
             policy = process_instances(source_instances)
+            if policy["validation_errors"]:
+                codes = ", ".join(sorted({finding["code"] for finding in policy["validation_errors"]}))
+                raise ValueError(
+                    f"instance policy validation failed for {entry.get('strong_number', 'unknown')}: {codes}"
+                )
             entry["instance_policy_version"] = policy["policy_version"]
             entry["instance_total"] = policy["instance_total"]
             entry["instance_surface_count"] = policy["instance_surface_count"]

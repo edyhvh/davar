@@ -1,4 +1,7 @@
 import sys
+import hashlib
+import json
+import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts" / "dict"))
@@ -9,6 +12,7 @@ from instance_policy import (  # noqa: E402
     process_instances,
     resolve_conflict,
 )
+from instance_policy import MISSING_POSITION, _stable_id  # noqa: E402
 
 
 def instance(number, confidence=0.5, signal=0, source_priority=0):
@@ -64,3 +68,39 @@ def test_ranking_is_independent_of_input_order_and_conflicts_are_deterministic()
     assert winner["candidate"] == "alfa"
     assert needs_review is True
     assert reason == "lexicographic_fallback"
+
+
+def test_missing_token_sorts_after_present_and_missing_id_uses_canonical_nfc_sha256():
+    present = instance(1)
+    present["word_positions"] = [2]
+    missing = instance(1)
+    missing.pop("word_positions")
+    missing["stable_id"] = ""
+    present["stable_id"] = ""
+    missing["stable_id"] = ""
+    result = process_instances([missing, present])
+    assert result["instances"][0]["word_positions"] == [2]
+    assert "word_positions" not in result["instances"][1]
+    assert MISSING_POSITION == 2**31 - 1
+
+    payload = {key: value for key, value in present.items() if key not in {"stable_id", "id", "_reference_key"}}
+    payload["book"] = payload["book"].strip()
+    payload["display"] = unicodedata.normalize("NFC", payload["display"].strip())
+    reference = ("Genesis", 1, 2, 2)
+    canonical = json.dumps(
+        {"payload": payload, "reference": reference},
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+    expected = hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+    assert _stable_id(present, reference) == expected
+
+
+def test_unknown_books_use_nfc_name_as_deterministic_tie_break():
+    first = instance(1)
+    second = instance(2)
+    first.update({"book": "Zeta", "verse": 1, "stable_id": "z"})
+    second.update({"book": "Cafe\u0301", "verse": 1, "stable_id": "a"})
+    ranked = process_instances([first, second])["instances"]
+    assert ranked[0]["book"] == unicodedata.normalize("NFC", "Cafe\u0301")

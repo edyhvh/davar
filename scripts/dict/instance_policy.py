@@ -7,12 +7,14 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from copy import deepcopy
+import hashlib
 import json
 import unicodedata
 from typing import Any, Iterable, Mapping
 
 
-POLICY_VERSION = "1.0"
+POLICY_VERSION = "1.1"
+MISSING_POSITION = 2**31 - 1
 
 
 @dataclass(frozen=True)
@@ -37,6 +39,17 @@ def _text(value: Any) -> str:
     return unicodedata.normalize("NFC", str(value).strip()) if value is not None else ""
 
 
+def _canonical(value: Any) -> Any:
+    """Return JSON-compatible data with NFC normalization applied recursively."""
+    if isinstance(value, str):
+        return unicodedata.normalize("NFC", value)
+    if isinstance(value, Mapping):
+        return {str(key): _canonical(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_canonical(item) for item in value]
+    return value
+
+
 def _number(value: Any, field: str) -> int | None:
     if isinstance(value, bool) or not isinstance(value, (int, str)):
         return None
@@ -56,7 +69,7 @@ def reference_key(instance: Mapping[str, Any]) -> tuple[Any, ...] | None:
     if not book or chapter is None or verse is None or chapter < 1 or verse < 1:
         return None
     if positions is None:
-        position_key: tuple[Any, ...] = ()
+        position_key: tuple[Any, ...] = (MISSING_POSITION,)
     elif isinstance(positions, (list, tuple)):
         position_key = tuple(_number(p, "token") for p in positions)
         if any(p is None for p in position_key):
@@ -70,7 +83,24 @@ def reference_key(instance: Mapping[str, Any]) -> tuple[Any, ...] | None:
 
 
 def _stable_id(instance: Mapping[str, Any], key: tuple[Any, ...]) -> str:
-    return _text(instance.get("stable_id", instance.get("id", ""))) or ".".join(map(str, key))
+    supplied = _text(instance.get("stable_id", instance.get("id", "")))
+    if supplied:
+        return supplied
+    source_payload = {
+        key: value for key, value in instance.items()
+        if key not in {"stable_id", "id", "_reference_key"}
+    }
+    source_payload = _canonical(source_payload)
+    for field in ("book", "display", "text", "source"):
+        if isinstance(source_payload.get(field), str):
+            source_payload[field] = source_payload[field].strip()
+    canonical = json.dumps(
+        _canonical({"payload": source_payload, "reference": key}),
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 
 
 def _confidence(instance: Mapping[str, Any]) -> float:
@@ -105,6 +135,15 @@ def _book_order(instance: Mapping[str, Any], config: InstancePolicyConfig = DEFA
         except (TypeError, ValueError):
             pass
     return config.book_order.get(_text(instance.get("book")), 10**9)
+
+
+def _ranking_reference(instance: Mapping[str, Any], key: tuple[Any, ...]) -> tuple[Any, ...]:
+    """Reference ordering with a fixed missing-token sentinel."""
+    book = _text(instance.get("book"))
+    chapter = key[1] if len(key) > 1 else MISSING_POSITION
+    verse = key[2] if len(key) > 2 else MISSING_POSITION
+    token = key[3] if len(key) > 3 else MISSING_POSITION
+    return (book, chapter, verse, token)
 
 
 def validate_instances(instances: Iterable[Mapping[str, Any]]) -> list[dict[str, Any]]:
@@ -170,7 +209,11 @@ def rank_instances(instances: Iterable[Mapping[str, Any]], config: InstancePolic
         key = item.get("_reference_key") or reference_key(item) or ("", 0, 0)
         item["_reference_key"] = key
     # Canonical book order precedes chapter/verse/token in the final tie-break.
-    return sorted(records, key=lambda x: (-_confidence(x), -_signal(x), -_source_priority(x), _book_order(x, config), x["_reference_key"][1:], _stable_id(x, x["_reference_key"])))
+    return sorted(records, key=lambda x: (
+        -_confidence(x), -_signal(x), -_source_priority(x),
+        _book_order(x, config), _ranking_reference(x, x["_reference_key"]),
+        _stable_id(x, x["_reference_key"]),
+    ))
 
 
 def classify_tier(count: int, config: InstancePolicyConfig = DEFAULT_CONFIG) -> str:
