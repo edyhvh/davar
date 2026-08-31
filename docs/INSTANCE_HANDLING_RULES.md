@@ -36,6 +36,32 @@ Before ranking, each instance is normalized without changing its source value:
 5. Reject records with missing book/chapter/verse or invalid numeric ranges and
    report them as validation findings rather than silently dropping them.
 
+### 2.1 Source key and canonical serialization
+
+The source key is a tuple serialized as a canonical JSON array:
+`[source_manifest_id, source_record_id, book, chapter, verse, token_or_index]`.
+`source_manifest_id` identifies the entry in the versioned source manifest;
+`source_record_id` is the source's stable record identifier and is `null` when
+the source does not provide one. `book` is trimmed and NFC-normalized text;
+`source_manifest_id` and `source_record_id` are trimmed ASCII identifiers;
+`chapter`, `verse`, and a present `token_or_index` are non-negative integers.
+The reference portion (`book`, `chapter`, `verse`, `token_or_index`) is the
+stable reference used for deduplication; the source fields make ties between
+otherwise identical references deterministic. Missing `source_record_id` is a
+validation finding, not permission to invent one for the source key.
+
+Canonical JSON for source keys and fallback identifiers is defined as follows:
+object keys are sorted by Unicode scalar value; strings are NFC-normalized and
+encoded as JSON strings; arrays retain their specified order; integers use
+base-10 notation; negative zero, non-finite numbers, insignificant whitespace,
+and trailing data are forbidden. The resulting UTF-8 JSON has no whitespace
+between tokens and no final newline. Implementations in every language must
+produce byte-identical output for the same normalized values. The fallback
+identifier is the lowercase hexadecimal SHA-256 digest of those UTF-8 bytes
+for the canonical object `{ "payload": normalized_source_payload,
+"reference": [book, chapter, verse, token_or_index] }` (with the same `null`
+and normalization rules above), not of a language-native object representation.
+
 The linguistic signal is a normalized number in the inclusive range `[0, 1]`.
 It is supplied by the versioned linguistic-signal extractor for the build (the
 extractor version is part of the generated report); missing or unavailable
@@ -83,6 +109,17 @@ When multiple rules produce different assignments for one instance:
 3. If still tied, prefer the result supported by more independent sources.
 4. If still tied, choose the lexicographically smallest normalized candidate
    and mark the instance `needs_review`.
+
+The source manifest defines `source_manifest_id` for every source and an
+`independence_group` for each source. IDs that are aliases or mirrors of the
+same underlying publication share one `independence_group`; genuinely
+independent publications have different groups. For a candidate, its
+independent-source count is the cardinality of the distinct, non-null
+`independence_group` values attached to the candidate's supporting source
+references after normalization and deduplication. Multiple records, rules, or
+manifest aliases in one group count once; an unknown/unlisted source counts
+zero and cannot break a tie. The count is computed from the versioned source
+manifest and recorded for every conflict candidate in the audit report.
 
 Every conflict must be retained in a machine-readable audit report with all
 candidates and the reason the winner was selected.
