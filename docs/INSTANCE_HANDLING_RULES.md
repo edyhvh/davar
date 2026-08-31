@@ -1,7 +1,7 @@
 # Dictionary Instance Handling Rules
 
 Status: design specification for issue #94
-Version: 1.0
+Version: 1.1
 
 This document defines deterministic handling for dictionary entries with many
 attested instances. It is a contract for a later implementation; it does not
@@ -26,8 +26,8 @@ version in generated reports.
 
 Before ranking, each instance is normalized without changing its source value:
 
-1. Require a stable reference key (`book`, `chapter`, `verse`, and token/index
-   when available).
+1. Require a stable reference key (`book`, `chapter`, and `verse`). Token/index
+   is optional; missing values use the explicit ordering fallback in section 3.
 2. Trim surrounding whitespace from display fields and normalize Unicode to
    NFC for comparison.
 3. Preserve the original source payload for display and audit.
@@ -36,15 +36,38 @@ Before ranking, each instance is normalized without changing its source value:
 5. Reject records with missing book/chapter/verse or invalid numeric ranges and
    report them as validation findings rather than silently dropping them.
 
+The linguistic signal is a normalized number in the inclusive range `[0, 1]`.
+It is supplied by the versioned linguistic-signal extractor for the build (the
+extractor version is part of the generated report); missing or unavailable
+signals default to `0`. Implementations must not substitute an unversioned
+model score or a source-specific score without changing this policy version.
+
 ## 3. Ranking and ordering
 
-Ranking is stable and deterministic. Sort descending by the following tuple:
+Ranking is stable and deterministic. Sort by this tuple, using descending order
+for the first three fields and ascending order for the remaining fields:
 
 1. confidence score (missing confidence is `0`),
 2. linguistic signal score,
 3. canonical-source priority,
 4. earliest canonical reference (`book_order`, chapter, verse, token/index),
 5. stable instance identifier.
+
+Canonical-source priority is an explicit integer from the versioned source
+manifest: primary canonical text = `3`, approved secondary canonical text =
+`2`, non-canonical corroborating source = `1`, and unknown/unlisted source =
+`0`. Higher values sort first; a source is never promoted merely because it
+appears earlier in a file. `book_order` is the zero-based position in the
+versioned canonical-book manifest used by the build. Books absent from that
+manifest sort after known books by normalized NFC book name, then by the
+remaining reference fields.
+
+For a missing token/index, use the stable sentinel `2^31 - 1` (after all
+present non-negative values). For an absent stable identifier, derive
+`sha256` of the canonical NFC JSON serialization of the normalized source
+payload plus its reference; retain the missing-identifier validation finding.
+This fallback is a tie-breaker only and is not a replacement for fixing the
+source data.
 
 No filesystem order, insertion order, random value, or wall-clock value may
 participate in ranking. Medium-tier presentation groups instances by canonical
@@ -106,13 +129,22 @@ represented in the audit report; unresolved conflicts remain `needs_review`.
 
 ## 8. Follow-up implementation plan
 
-Implementation must be delivered in a separate issue/PR sequence:
+The concrete execution issue is [#152](https://github.com/jhonnyisaacc/davar/issues/152),
+linked to this design by [PR #144](https://github.com/jhonnyisaacc/davar/pull/144).
+It owns implementation and release verification; this document remains the
+policy contract. Its milestones are:
 
-1. Add the shared policy constants, normalization, ranking, and conflict model.
-2. Add validator findings and deterministic JSON fixtures for each tier.
-3. Integrate the policy into dictionary generation and static export.
-4. Add client surface-set handling and verify memory/performance benchmarks.
-5. Run web/mobile regression QA and compare generated output before publishing.
+1. Policy core: shared versioned constants, normalization, validation,
+   deduplication, ranking, conflict resolution, and audit findings.
+2. Fixtures and tests: deterministic low/medium/high fixtures, fallback and
+   conflict cases, and threshold/ordering regression tests.
+3. Generation/export: integrate policy and emit version, total, and surface
+   count metadata while preserving the full instance set.
+4. Client surfaces: implement bounded interactive surfaces and full
+   background/export access through a versioned migration.
+5. Performance and release QA: benchmark 100, 1,000, and 10,000 instances,
+   run web/mobile regression QA, review report diffs, and publish only after
+   generated output is verified.
 
 Each phase must preserve the full instance set and include a report diff before
 any generated data is committed.
