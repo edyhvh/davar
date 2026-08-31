@@ -59,39 +59,47 @@ class Transliterator:
         vowel-bearing consonant.  Word-initial and ambiguous sheva cases
         remain vocalized by the schema's normal rules.
         """
-        previous_letter = None
-        previous_marks = []
-        next_letter = None
-        next_marks = []
+        def adjacent_letter(start: int, step: int) -> Optional[int]:
+            """Find the nearest Hebrew letter in one direction."""
+            i = start + step
+            while 0 <= i < len(text):
+                if unicodedata.category(text[i]).startswith('L'):
+                    return i
+                i += step
+            return None
 
-        i = index - 1
-        while i >= 0 and not unicodedata.category(text[i]).startswith('L'):
-            i -= 1
-        if i >= 0:
-            previous_letter = text[i]
-            # The vowel belongs to the preceding syllable's consonant,
-            # which may be one letter earlier than the consonant carrying
-            # this sheva (e.g. מִקְוֶה).
-            previous_marks = [
-                mark for mark in text[:index]
-                if unicodedata.category(mark).startswith('M')
-            ]
+        def attached_marks(letter_index: int) -> List[str]:
+            """Return only marks in the combining run attached to a letter."""
+            marks = []
+            i = letter_index + 1
+            while i < len(text) and unicodedata.category(text[i]).startswith('M'):
+                marks.append(text[i])
+                i += 1
+            return marks
 
-        i = index + 1
-        while i < len(text) and not unicodedata.category(text[i]).startswith('L'):
-            i += 1
-        if i < len(text):
-            next_letter = text[i]
-            next_marks = [
-                mark for mark in text[i + 1:]
-                if unicodedata.category(mark).startswith('M')
-            ]
+        previous_index = adjacent_letter(index, -1)
+        next_index = adjacent_letter(index, 1)
+        if previous_index is None or next_index is None:
+            return False
+
+        previous_marks = attached_marks(previous_index)
+        next_marks = attached_marks(next_index)
+
+        # In מִקְוֶה, the sheva is attached to ק while the vowel that
+        # licenses the closed preceding syllable is attached to מ.  Inspect
+        # that one immediately preceding consonant, but never the whole
+        # prefix (which could contain an unrelated, distant vowel).
+        if not any(mark in self.vowels and mark != SHEVA_CHAR for mark in previous_marks):
+            preceding_index = adjacent_letter(previous_index, -1)
+            previous_marks = (
+                attached_marks(preceding_index)
+                if preceding_index is not None
+                else []
+            )
 
         vowel_marks = set(self.vowels)
         return (
-            previous_letter is not None
-            and next_letter is not None
-            and any(mark in vowel_marks and mark != SHEVA_CHAR for mark in previous_marks)
+            any(mark in vowel_marks and mark != SHEVA_CHAR for mark in previous_marks)
             and any(mark in vowel_marks and mark != SHEVA_CHAR for mark in next_marks)
         )
 

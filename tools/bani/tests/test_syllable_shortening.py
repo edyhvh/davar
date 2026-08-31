@@ -35,3 +35,19 @@ def test_existing_simple_word_remains_unchanged():
 def test_qof_uses_q_in_both_language_schemas():
     assert BaniTransliterator("en").transliterate("קָוָה", "H6960") == "qaVAh"
     assert BaniTransliterator("es").transliterate("קָוָה", "H6960") == "qaVAh"
+
+
+def test_distant_prefix_vowel_does_not_make_sheva_silent():
+    transliterator = BaniTransliterator("en").transliterator
+    text = "מַבְגְדָ"
+    sheva_index = text.index("ְ", text.index("ְ") + 1)
+
+    assert transliterator.is_silent_sheva(text, sheva_index) is False
+
+
+def test_distant_suffix_vowel_does_not_make_sheva_silent():
+    transliterator = BaniTransliterator("en").transliterator
+    text = "מַבְגְדָ"
+    sheva_index = text.index("ְ")
+
+    assert transliterator.is_silent_sheva(text, sheva_index) is False
