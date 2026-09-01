@@ -13,7 +13,6 @@ import { NeumorphCard } from "./components/NeumorphCard";
 import { NotFoundPage } from "./components/NotFoundPage";
 import { SettingsScreen } from "./components/SettingsScreen";
 import { Skeleton } from "./components/ui/skeleton";
-import { TthSection } from "./components/TthSection";
 import { VerseDisplay } from "./components/VerseDisplay";
 import { WordCard } from "./components/WordCard";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
@@ -43,7 +42,6 @@ import {
 import {
 	getDssCommentaryForLanguage,
 	HUTTER_ANNOUNCEMENT_RELEASE,
-	TTH_BOOK_MAPPING,
 } from "./utils/translationConfig";
 import { useVerseScrollNavigation } from "./utils/useVerseScrollNavigation";
 
@@ -56,7 +54,6 @@ type Screen =
 	| "terms"
 	| "privacy"
 	| "feedback"
-	| "tth"
 	| "notFound"
 	| "connectionError";
 
@@ -65,8 +62,6 @@ type RouteState = {
 	book?: string;
 	chapter?: number;
 	verse?: number;
-	tthBook?: string;
-	tthChapter?: number;
 };
 
 type WordSelectionContext = {
@@ -241,10 +236,6 @@ export default function App() {
 	const [showMobileDesignGuide, setShowMobileDesignGuide] = useState(false);
 	const [showDesignSystem, setShowDesignSystem] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
-
-	// TTH section browse state (mirrored into the URL for deep links)
-	const [tthRouteBook, setTthRouteBook] = useState<string | null>(null);
-	const [tthRouteChapter, setTthRouteChapter] = useState<number | null>(null);
 
 	const [books, setBooks] = useState<BookResponse[]>([]);
 	const booksRef = useRef<BookResponse[]>([]);
@@ -434,11 +425,6 @@ export default function App() {
 				return "/features";
 			case "settings":
 				return "/settings";
-			case "tth": {
-				const tthBook = route.tthBook ? encodeURIComponent(route.tthBook) : "";
-				const tthChapter = route.tthChapter ?? 1;
-				return tthBook ? `/tth/${tthBook}/${tthChapter}` : "/tth";
-			}
 			case "verse": {
 				const book = route.book ? encodeURIComponent(route.book) : "";
 				const chapter = route.chapter ?? 1;
@@ -466,17 +452,6 @@ export default function App() {
 		if (root === "donate") return { screen: "donate" };
 		if (root === "features") return { screen: "features" };
 		if (root === "settings") return { screen: "settings" };
-
-		if (root === "tth") {
-			const decodedBook = book ? decodeURIComponent(book) : undefined;
-			const parsedChapter = chapter ? Number.parseInt(chapter, 10) : undefined;
-			return {
-				screen: "tth",
-				tthBook: decodedBook,
-				tthChapter:
-					decodedBook && !Number.isNaN(parsedChapter) ? parsedChapter : undefined,
-			};
-		}
 
 		if (root === "verse") {
 			const decodedBook = book ? decodeURIComponent(book) : undefined;
@@ -838,29 +813,6 @@ export default function App() {
 				})),
 		[books],
 	);
-	// Books that actually exist in the TTH dataset, in canonical order.
-	const tthBooks = useMemo(() => {
-		const normalizedKeys = new Set(
-			Object.keys(TTH_BOOK_MAPPING).map((key) =>
-				key.toLowerCase().replace(/[^a-z0-9]/g, ""),
-			),
-		);
-		return books
-			.filter((book) =>
-				[book.id, book.name].some((candidate) =>
-					normalizedKeys.has(
-						candidate.toLowerCase().replace(/[^a-z0-9]/g, ""),
-					),
-				),
-			)
-			.sort((a, b) => a.order - b.order)
-			.map((book) => ({
-				id: book.id,
-				name: book.name,
-				hebrew_name: book.hebrew_name,
-				spanish_name: book.spanish_name,
-			}));
-	}, [books]);
 	const currentBookMeta = useMemo(
 		() =>
 			books.find(
@@ -942,10 +894,6 @@ export default function App() {
 		}
 
 		if (pending.screen !== "verse") {
-			if (pending.screen === "tth") {
-				setTthRouteBook(pending.tthBook ?? null);
-				setTthRouteChapter(pending.tthChapter ?? null);
-			}
 			setCurrentScreen(pending.screen);
 			pendingRouteRef.current = null;
 			return;
@@ -1072,10 +1020,6 @@ export default function App() {
 			}
 
 			if (route.screen !== "verse") {
-				if (route.screen === "tth") {
-					setTthRouteBook(route.tthBook ?? null);
-					setTthRouteChapter(route.tthChapter ?? null);
-				}
 				setCurrentScreen(route.screen);
 			} else {
 				// If we're coming back from terms/privacy/feedback, go to home instead of verse
@@ -1126,8 +1070,6 @@ export default function App() {
 			book: currentBook,
 			chapter: currentChapter,
 			verse: currentVerse,
-			tthBook: tthRouteBook ?? undefined,
-			tthChapter: tthRouteChapter ?? undefined,
 		});
 
 		if (lastUrlRef.current === path) return;
@@ -1139,8 +1081,6 @@ export default function App() {
 		currentChapter,
 		currentScreen,
 		currentVerse,
-		tthRouteBook,
-		tthRouteChapter,
 	]);
 
 	useEffect(() => {
@@ -1712,11 +1652,6 @@ export default function App() {
 						}}
 						onVerseChange={(verse) => setCurrentVerse(verse)}
 						onHomeClick={() => setCurrentScreen("home")}
-						onTthClick={() => {
-							setTthRouteBook(null);
-							setTthRouteChapter(null);
-							setCurrentScreen("tth");
-						}}
 						onDesignSystemClick={() => setShowDesignSystem(true)}
 						theme={theme}
 						onThemeChange={setTheme}
@@ -1856,17 +1791,6 @@ export default function App() {
 							onHebrewOnlyChange={handleHebrewOnlyChange}
 							onDesignSystemClick={() => setShowDesignSystem(true)}
 							onMobileDesignGuideClick={() => setShowMobileDesignGuide(true)}
-						/>
-					)}
-
-					{currentScreen === "tth" && (
-						<TthSection
-							books={tthBooks}
-							language={language}
-							initialBook={tthRouteBook ?? undefined}
-							initialChapter={tthRouteChapter ?? undefined}
-							key={`${tthRouteBook ?? ""}-${tthRouteChapter ?? ""}`}
-							onBack={() => setCurrentScreen("verse")}
 						/>
 					)}
 
