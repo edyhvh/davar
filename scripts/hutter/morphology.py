@@ -139,18 +139,54 @@ def _strip_suffix(stem: str) -> list[tuple[str, tuple[str, ...], str]]:
     """Return (remaining_stem, suffixes, label) parses for a normalized stem.
 
     Tries the longest suffixes first so that e.g. ``ותם`` beats ``ת`` + ``ם``.
+    A second pass permits bounded chains such as a verbal ``ו`` ending followed
+    by an object ``ם`` suffix, while avoiding unbounded over-segmentation.
     """
+    ordered = sorted(
+        INFLECTIONAL_SUFFIXES,
+        key=lambda item: -len(normalize_hebrew(item[0])),
+    )
+    normalized_suffixes = [
+        (suffix, label, normalize_hebrew(suffix))
+        for suffix, label in ordered
+        if normalize_hebrew(suffix)
+    ]
     results: list[tuple[str, tuple[str, ...], str]] = [(stem, (), "lexical")]
-    ordered = sorted(INFLECTIONAL_SUFFIXES, key=lambda item: -len(item[0]))
-    for suffix, label in ordered:
-        if len(stem) - len(suffix) >= 2 and stem.endswith(suffix):
-            results.append((stem[: -len(suffix)], (suffix,), label))
-            # Also record the weak-root variant of the stripped stem.
-            weak_match = WEAK_ROOT_RE.search(stem[: -len(suffix)])
-            if weak_match:
-                base = stem[: -len(suffix)]
-                variant = base[: weak_match.start()] + (weak_match.group(1) or "")
-                results.append((variant, (suffix,), label + "_weak_root"))
+    seen: set[tuple[str, tuple[str, ...]]] = {(stem, ())}
+    pending: list[tuple[str, tuple[str, ...], str]] = [(stem, (), "lexical")]
+
+    for _ in range(2):
+        next_pending: list[tuple[str, tuple[str, ...], str]] = []
+        for current, suffixes, label in pending:
+            for suffix, suffix_label, normalized_suffix in normalized_suffixes:
+                if len(current) - len(normalized_suffix) < 2 or not current.endswith(
+                    normalized_suffix
+                ):
+                    continue
+                remaining = current[: -len(normalized_suffix)]
+                combined_suffixes = (suffix, *suffixes)
+                combined_label = (
+                    suffix_label if not suffixes else f"{suffix_label}+{label}"
+                )
+                key = (remaining, combined_suffixes)
+                if key not in seen:
+                    seen.add(key)
+                    candidate = (remaining, combined_suffixes, combined_label)
+                    results.append(candidate)
+                    next_pending.append(candidate)
+        pending = next_pending
+
+    # Also record weak-root variants for every segmented candidate.
+    for remaining, suffixes, label in list(results):
+        if not suffixes:
+            continue
+        weak_match = WEAK_ROOT_RE.search(remaining)
+        if weak_match:
+            variant = remaining[: weak_match.start()] + weak_match.group(1)
+            key = (variant, suffixes)
+            if key not in seen:
+                seen.add(key)
+                results.append((variant, suffixes, label + "_weak_root"))
     return results
 
 

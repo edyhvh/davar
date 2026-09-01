@@ -43,6 +43,19 @@ def test_analyze_form_detects_prefix_and_pronominal_suffix():
     assert "1cp_possessive" in labels or any("נו" in p.suffixes for p in parses)
 
 
+def test_analyze_form_normalizes_final_letters_in_plural_and_object_suffixes():
+    plural_parses = analyze_form("נִצְדָּקִים")
+    assert any(parse.stem == "נצדק" and parse.suffixes == ("ים",) for parse in plural_parses)
+
+    object_parses = analyze_form("וְיִכַבְּדוּם")
+    assert any(
+        parse.prefixes == ("Hc",)
+        and parse.stem == "יכבד"
+        and parse.suffixes == ("ו", "ם")
+        for parse in object_parses
+    )
+
+
 def test_morphology_decision_accepts_unique_prefix_plus_suffix_form():
     index = lemma_index({"דַּעַת": ["H1847"]})
     empty: dict[str, Counter[str]] = {}
