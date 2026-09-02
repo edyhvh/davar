@@ -36,6 +36,24 @@ PREFIX_CODES = {
 FINAL_TO_MEDIAL = str.maketrans({"ך": "כ", "ם": "מ", "ן": "נ", "ף": "פ", "ץ": "צ"})
 HEBREW_MARK_RE = re.compile(r"[\u0591-\u05C7]")
 NON_HEBREW_RE = re.compile(r"[^א-ת]")
+YHWH_NORMALIZED = "יהוה"
+
+
+def is_yhwh_surface(surface: str) -> bool:
+    """True when the surface is the Tetragrammaton, with or without prefixes."""
+    normalized = normalize_hebrew(surface)
+    if not normalized:
+        return False
+    if YHWH_NORMALIZED in normalized:
+        return True
+    remaining = normalized
+    for _ in range(3):
+        if remaining and remaining[0] in PREFIX_CODES:
+            remaining = remaining[1:]
+        else:
+            break
+    return remaining == YHWH_NORMALIZED
+
 
 # Pronominal / possessive / objective suffixes and common verbal endings on the
 # *normalized (unpointed, final-regularized)* stem.  Stripping these surfaces a
@@ -232,6 +250,17 @@ def morphology_decision(
     ``lemma_index`` maps normalised lemma -> Counter[Strong] and
     ``base_form_index`` maps attested normalised stem -> Counter[Strong].
     """
+    if is_yhwh_surface(surface):
+        return MorphDecision(
+            strong=None,
+            prefixes=(),
+            confidence="unresolved",
+            method="morphology",
+            evidence=f"yhwh_skip; no morphology for {normalize_hebrew(surface)}",
+            score=0.0,
+            review_status="unresolved",
+        )
+
     parsed = analyze_form(surface)
     if not parsed:
         return None
@@ -345,6 +374,7 @@ class ReviewItem:
     score: float
     parse_label: str
     reason: str
+    review_status: str
 
 
 def build_review_queue(
@@ -369,7 +399,7 @@ def build_review_queue(
             auto_accept_threshold=auto_accept_threshold,
             margin=margin,
         )
-        if decision is None or decision.review_status != "review":
+        if decision is None or decision.review_status not in ("review", "auto_accepted"):
             continue
         rows = queue.setdefault(
             normalized,
@@ -381,7 +411,12 @@ def build_review_queue(
                 prefixes=decision.prefixes,
                 score=decision.score,
                 parse_label=decision.evidence,
-                reason="ambiguous or below auto-accept threshold",
+                reason=(
+                    "auto-accepted morphology candidate"
+                    if decision.review_status == "auto_accepted"
+                    else "ambiguous or below auto-accept threshold"
+                ),
+                review_status=decision.review_status,
             )
         )
 
@@ -397,7 +432,12 @@ def build_review_queue(
                 "first_occurrence": f"{first.get('book')} {first.get('chapter')}:{first.get('verse')}#{first.get('position')}",
                 "proposed_strongs": sorted({row.strong for row in rows if row.strong}),
                 "proposed_parse": best.parse_label,
-                "reason": "morphology_review",
+                "reason": (
+                    "morphology_auto_accepted"
+                    if best.review_status == "auto_accepted"
+                    else "morphology_review"
+                ),
+                "review_status": best.review_status,
             }
         )
     return output
@@ -466,7 +506,7 @@ def write_review_queue(
     payload = {
         "queue": queue,
         "method": "morphology_analysis",
-        "note": "ambiguous morphology candidates for image review; no positional borrowing",
+        "note": "morphology candidates for image review, including auto-accepted; no positional borrowing; Tetragrammaton skipped",
     }
     with output_path.open("w", encoding="utf-8") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
