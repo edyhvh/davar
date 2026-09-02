@@ -11,6 +11,7 @@ from scripts.hutter.morphology import (
     analyze_form,
     backtest_morphology,
     build_review_queue,
+    is_yhwh_surface,
     morphology_decision,
     normalize_hebrew,
     prefix_parses,
@@ -111,18 +112,22 @@ def test_backtest_auto_accept_is_consistent_deterministic():
     assert a == b
 
 
-def test_build_review_queue_deduplicates_and_annotates():
-    index = lemma_index({"דעת": ["H1847"], "דע": ["H3045"]})
-    empty: dict[str, Counter[str]] = {}
+def test_build_review_queue_lists_auto_accepts():
+    index = lemma_index({"דעת": ["H1847"]})
+    attested = {normalize_hebrew("דעת"): Counter({"H1847": 12})}
     unresolved = [
-        {"book": "acts", "chapter": 1, "verse": 4, "position": 1, "text": "וַיִּקָּהֲלֵם"},
-        {"book": "acts", "chapter": 2, "verse": 1, "position": 2, "text": "וַיִּקָּהֲלֵם"},
+        {"book": "philemon", "chapter": 1, "verse": 1, "position": 1, "text": "בְּדַעְתֵּנוּ"},
+        {"book": "philemon", "chapter": 1, "verse": 2, "position": 1, "text": "בְּדַעְתֵּנוּ"},
         {"book": "mark", "chapter": 1, "verse": 5, "position": 3, "text": "אובג"},
     ]
-    queue = build_review_queue(unresolved, index, empty)
-    # 1 below threshold item (no stem match) -> unresolved, not in queue.
-    # Weak-root / candidate items route to review only when ambiguous.
-    assert isinstance(queue, list)
+    queue = build_review_queue(unresolved, index, attested)
+    auto = [row for row in queue if row.get("review_status") == "auto_accepted"]
+    assert auto, queue
+    assert auto[0]["normalized"] == normalize_hebrew("בְּדַעְתֵּנוּ")
+    assert auto[0]["occurrence_count"] == 2
+    assert "H1847" in auto[0]["proposed_strongs"]
+    # Unresolved surfaces stay off the queue.
+    assert all(row["normalized"] != "אובג" for row in queue)
 
 
 def test_write_review_queue_produces_valid_json(tmp_path):
@@ -145,3 +150,21 @@ def test_morphology_is_non_positional():
     d1 = morphology_decision("בְּדַעְתֵּנוּ", index, empty)
     d2 = morphology_decision("בְּדַעְתֵּנוּ", index, empty)
     assert (d1.strong if d1 else None) == (d2.strong if d2 else None)
+
+def test_yhwh_is_not_morphed():
+    index = lemma_index({"יהוה": ["H3068"], "הוה": ["H1933"], "יה": ["H3050"]})
+    empty: dict[str, Counter[str]] = {}
+    for surface in ("יהוה", "יְהֹוָה", "ויהוה", "לַיהוָה"):
+        assert is_yhwh_surface(surface)
+        decision = morphology_decision(surface, index, empty)
+        assert decision is not None
+        assert decision.strong is None
+        assert decision.review_status == "unresolved"
+        assert "yhwh_skip" in decision.evidence
+    queue = build_review_queue(
+        [{"book": "exod", "chapter": 3, "verse": 15, "position": 1, "text": "יהוה"}],
+        index,
+        empty,
+    )
+    assert queue == []
+
