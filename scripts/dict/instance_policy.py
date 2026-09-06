@@ -9,6 +9,7 @@ from dataclasses import dataclass, field
 from copy import deepcopy
 import hashlib
 import json
+import re
 import unicodedata
 from typing import Any, Iterable, Mapping
 
@@ -151,7 +152,7 @@ def validate_instances(instances: Iterable[Mapping[str, Any]]) -> list[dict[str,
     records = list(instances)
     findings: list[dict[str, Any]] = []
     seen: dict[tuple[Any, ...], int] = {}
-    payloads: dict[str, tuple[Any, ...]] = {}
+    payloads: dict[tuple[Any, ...], tuple[Any, ...]] = {}
     for index, item in enumerate(records):
         key = reference_key(item)
         if key is None:
@@ -170,12 +171,11 @@ def validate_instances(instances: Iterable[Mapping[str, Any]]) -> list[dict[str,
         if not _text(item.get("stable_id", item.get("id", ""))):
             findings.append({"code": "missing_stable_identifier", "index": index, "severity": "warning"})
         payload = tuple(sorted((str(k), json.dumps(v, ensure_ascii=False, sort_keys=True, default=str)) for k, v in item.items() if k not in {"book", "chapter", "verse", "word_positions", "token", "stable_id", "id"}))
-        if payload in payloads.values() and key is not None:
-            prior = next(k for k, v in payloads.items() if v == payload)
-            if prior != ".".join(map(str, key)):
-                findings.append({"code": "repeated_payload", "index": index, "severity": "warning"})
         if key is not None:
-            payloads[".".join(map(str, key))] = payload
+            prior = payloads.get(payload)
+            if prior is not None and prior != key:
+                findings.append({"code": "repeated_payload", "index": index, "severity": "warning"})
+            payloads.setdefault(payload, key)
     return findings
 
 
@@ -226,7 +226,20 @@ def classify_tier(count: int, config: InstancePolicyConfig = DEFAULT_CONFIG) -> 
 
 def process_instances(instances: Iterable[Mapping[str, Any]], config: InstancePolicyConfig = DEFAULT_CONFIG) -> dict[str, Any]:
     """Apply normalization, ranking, tier surface limits, and validation metadata."""
-    records = [deepcopy(dict(x)) for x in instances]
+    records = []
+    for item in instances:
+        if isinstance(item, str):
+            match = re.fullmatch(r"([^\.]+)\.(\d+)\.(\d+)(?:\.(\d+))?", item.strip())
+            if match:
+                book, chapter, verse, token = match.groups()
+                record = {"book": book, "chapter": int(chapter), "verse": int(verse), "reference": item}
+                if token is not None:
+                    record["token"] = int(token)
+            else:
+                record = {"reference": item}
+        else:
+            record = deepcopy(dict(item)) if isinstance(item, Mapping) else {"invalid_record": item}
+        records.append(record)
     conflict_findings: list[dict[str, Any]] = []
     for record in records:
         candidates = record.get("candidates")
@@ -261,5 +274,5 @@ def resolve_conflict(candidates: Iterable[Mapping[str, Any]]) -> tuple[dict[str,
         raise ValueError("at least one candidate is required")
     options.sort(key=lambda c: (-_confidence(c), -_signal(c), -int(c.get("independent_sources", c.get("source_count", 0)) or 0), _text(c.get("candidate", c.get("assignment", "")))))
     winner = options[0]
-    tied = len(options) > 1 and all((_confidence(c), _signal(c), int(c.get("independent_sources", c.get("source_count", 0)) or 0)) == (_confidence(winner), _signal(winner), int(winner.get("independent_sources", winner.get("source_count", 0)) or 0)) for c in options[1:])
+    tied = len(options) > 1 and any((_confidence(c), _signal(c), int(c.get("independent_sources", c.get("source_count", 0)) or 0)) == (_confidence(winner), _signal(winner), int(winner.get("independent_sources", winner.get("source_count", 0)) or 0)) for c in options[1:])
     return winner, tied, "lexicographic_fallback" if tied else "highest_confidence_signal_sources"

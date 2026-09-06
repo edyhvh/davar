@@ -1649,9 +1649,9 @@ const formatOccurrenceReference = (reference: string): string => {
 const formatCustomOccurrence = (instance: RawCustomInstance): string =>
 	`${instance.book} ${instance.chapter}:${instance.verse}`;
 
-const getPolicyInstances = (entry: RawCustomEntry): RawCustomInstance[] =>
-	entry.instances ??
-	entry.surface_instances ?? [
+export const getPolicyInstances = (entry: RawCustomEntry): RawCustomInstance[] =>
+	entry.surface_instances ??
+	entry.instances ?? [
 		...(entry.oe_instances ?? []),
 		...(entry.nt_instances ?? []),
 	];

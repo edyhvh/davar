@@ -104,3 +104,30 @@ def test_unknown_books_use_nfc_name_as_deterministic_tie_break():
     second.update({"book": "Cafe\u0301", "verse": 1, "stable_id": "a"})
     ranked = process_instances([first, second])["instances"]
     assert ranked[0]["book"] == unicodedata.normalize("NFC", "Cafe\u0301")
+
+def test_top_tie_requires_review_even_with_lower_ranked_candidates():
+    winner, review, reason = resolve_conflict([
+        {"candidate": "z", "confidence": .9},
+        {"candidate": "a", "confidence": .9},
+        {"candidate": "other", "confidence": .1},
+    ])
+    assert winner["candidate"] == "a"
+    assert review and reason == "lexicographic_fallback"
+
+
+def test_reference_strings_share_policy_with_custom_records():
+    result = process_instances(["john.1.2", "john.1.2", "john.1.1"])
+    assert result["is_valid"]
+    assert [x["reference"] for x in result["instances"]] == ["john.1.1", "john.1.2"]
+    assert any(x["code"] == "duplicate_reference" for x in result["findings"])
+    assert not process_instances(["john.0.1"])["is_valid"]
+
+
+def test_lexicon_export_preserves_full_references_and_bounds_surface(tmp_path):
+    from scripts.dict.lexicon.consolidate import consolidate_directory
+    references = [f"john.1.{i}" for i in range(1, 1002)]
+    (tmp_path / "H1.json").write_text(json.dumps({"strong_number": "H1", "occurrences": {"references": references}}))
+    entries, skipped, errors = consolidate_directory(tmp_path, {}, True, False)
+    assert (skipped, errors) == (0, 0)
+    assert entries["H1"]["occurrences"]["references"] == references
+    assert len(entries["H1"]["occurrences"]["surface_references"]) == 500
