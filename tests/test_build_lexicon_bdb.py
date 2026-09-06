@@ -188,3 +188,11 @@ def test_h3068_lexicon_has_no_translit_fields():
     )
     assert "translit_en" not in source
     assert "translit_es" not in source
+
+
+def test_h3068_backfill_does_not_reintroduce_display_transliteration():
+    from scripts.dict.update_transliterations import update_strong_entry
+    for strong in ("H3068", "Hb/H3068"):
+        result = update_strong_entry({"strong_number": strong, "transliteration": "Yhwh", "translit_en": "stale"})
+        assert "translit_en" not in result and "translit_es" not in result
+    assert update_strong_entry({"strong_number": "H3069", "transliteration": "Yhwh"})["translit_en"]
